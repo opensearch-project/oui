@@ -1,56 +1,67 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiButtonIcon,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
   <Fragment>
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton href="http://www.elastic.co">Link to elastic.co</EuiButton>
-      </EuiFlexItem>
+    <OuiFlexGroup gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButton href="http://www.elastic.co">Link to elastic.co</OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty href="http://www.elastic.co">
+      <OuiFlexItem grow={false}>
+        <OuiButtonEmpty href="http://www.elastic.co">
           Link to elastic.co
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </OuiButtonEmpty>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon
           href="http://www.elastic.co"
           iconType="link"
           aria-label="This is a link"
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton href="http://www.elastic.co" isDisabled>
+    <OuiFlexGroup gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButton href="http://www.elastic.co" isDisabled>
           Disabled link
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty href="http://www.elastic.co" isDisabled>
+      <OuiFlexItem grow={false}>
+        <OuiButtonEmpty href="http://www.elastic.co" isDisabled>
           Disabled empty link
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </OuiButtonEmpty>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon
           href="http://www.elastic.co"
           iconType="link"
           aria-label="This is a link"
           isDisabled
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </Fragment>
 );

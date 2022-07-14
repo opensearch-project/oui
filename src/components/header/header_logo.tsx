@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,12 +35,12 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiIcon, IconType } from '../icon';
+import { OuiIcon, IconType } from '../icon';
 import { CommonProps } from '../common';
 import { getSecureRelForTarget } from '../../services';
 import { validateHref } from '../../services/security/href_validator';
 
-export type EuiHeaderLogoProps = CommonProps &
+export type OuiHeaderLogoProps = CommonProps &
   AnchorHTMLAttributes<HTMLAnchorElement> & {
     href?: string;
     rel?: string;
@@ -42,7 +53,7 @@ export type EuiHeaderLogoProps = CommonProps &
     children?: ReactNode;
   };
 
-export const EuiHeaderLogo: FunctionComponent<EuiHeaderLogoProps> = ({
+export const OuiHeaderLogo: FunctionComponent<OuiHeaderLogoProps> = ({
   iconType = 'logoElastic',
   iconTitle = 'Elastic',
   href,
@@ -52,7 +63,7 @@ export const EuiHeaderLogo: FunctionComponent<EuiHeaderLogoProps> = ({
   className,
   ...rest
 }) => {
-  const classes = classNames('euiHeaderLogo', className);
+  const classes = classNames('ouiHeaderLogo', className);
   const secureRel = getSecureRelForTarget({ href, rel, target });
   const isHrefValid = !href || validateHref(href);
   return (
@@ -62,14 +73,14 @@ export const EuiHeaderLogo: FunctionComponent<EuiHeaderLogoProps> = ({
       target={target}
       className={classes}
       {...rest}>
-      <EuiIcon
+      <OuiIcon
         aria-label={iconTitle}
-        className="euiHeaderLogo__icon"
+        className="ouiHeaderLogo__icon"
         size="l"
         type={iconType}
       />
 
-      {children && <span className="euiHeaderLogo__text">{children}</span>}
+      {children && <span className="ouiHeaderLogo__text">{children}</span>}
     </a>
   );
 };

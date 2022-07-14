@@ -1,28 +1,39 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /* eslint-disable no-nested-ternary */
 import React, { Fragment, useState, useContext } from 'react';
 import { Chart, Partition, Settings } from '@elastic/charts';
 import { ThemeContext } from '../../components';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
 } from '../../../../src/themes/charts/themes';
 
 import {
-  EuiSpacer,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiFormRow,
-  EuiRange,
-  EuiCopy,
-  EuiSwitch,
-  EuiButton,
-  EuiRadioGroup,
-  EuiTextAlign,
-  EuiTitle,
-  EuiCode,
-  EuiButtonGroup,
-  EuiText,
+  OuiSpacer,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiFormRow,
+  OuiRange,
+  OuiCopy,
+  OuiSwitch,
+  OuiButton,
+  OuiRadioGroup,
+  OuiTextAlign,
+  OuiTitle,
+  OuiCode,
+  OuiButtonGroup,
+  OuiText,
 } from '../../../../src/components';
 
 import { ChartCard } from './shared';
@@ -31,10 +42,10 @@ import { BROWSER_DATA_2019 } from './data';
 export default () => {
   const themeContext = useContext(ThemeContext);
   const isDarkTheme = themeContext.theme.includes('dark');
-  const euiChartTheme = isDarkTheme
-    ? EUI_CHARTS_THEME_DARK
-    : EUI_CHARTS_THEME_LIGHT;
-  const euiPartitionConfig = euiChartTheme.partition;
+  const ouiChartTheme = isDarkTheme
+    ? OUI_CHARTS_THEME_DARK
+    : OUI_CHARTS_THEME_LIGHT;
+  const ouiPartitionConfig = ouiChartTheme.partition;
 
   const sliceOrderRadiosIdPrefix = 'colorType';
   const sliceOrderRadios = [
@@ -114,12 +125,12 @@ export default () => {
   const isComplicatedChart = false;
 
   const customTitle = (
-    <EuiTextAlign textAlign="center">
-      <EuiTitle size="xxs">
+    <OuiTextAlign textAlign="center">
+      <OuiTitle size="xxs">
         <h4>Distribution of the top {numSlices} browsers from 2019</h4>
-      </EuiTitle>
-      <EuiSpacer />
-    </EuiTextAlign>
+      </OuiTitle>
+      <OuiSpacer />
+    </OuiTextAlign>
   );
 
   const pieData = () => {
@@ -157,12 +168,12 @@ export default () => {
                 groupByRollup: (d) => d.browser,
                 shape: {
                   fillColor: (d) =>
-                    euiChartTheme.theme.colors.vizColors[d.sortIndex],
+                    ouiChartTheme.theme.colors.vizColors[d.sortIndex],
                 },
               },
             ]}
             config={{
-              ...euiPartitionConfig,
+              ...ouiPartitionConfig,
               emptySizeRatio: pieTypeIdSelected.includes('Donut') && 0.4,
               ...sliceOrderConfig,
             }}
@@ -170,12 +181,12 @@ export default () => {
         </Chart>
       </div>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGrid columns={3}>
-        <EuiFlexItem>
+      <OuiFlexGrid columns={3}>
+        <OuiFlexItem>
           <ChartCard title="Chart type and labels">
-            <EuiButtonGroup
+            <OuiButtonGroup
               color="primary"
               legend="Chart type"
               options={pieTypeRadios}
@@ -186,38 +197,38 @@ export default () => {
               buttonSize="compressed"
               isFullWidth
             />
-            <EuiSpacer size="m" />
-            <EuiText size="s">
+            <OuiSpacer size="m" />
+            <OuiText size="s">
               <p>
                 Show and format the values of the slices when they are not
                 percentages.
               </p>
-            </EuiText>
-            <EuiSpacer size="s" />
-            <EuiSwitch
+            </OuiText>
+            <OuiSpacer size="s" />
+            <OuiSwitch
               label="Show values"
               checked={showValues}
               onChange={(e) => setShowValues(e.target.checked)}
             />
-            <EuiSpacer size="s" />
-            <EuiSwitch
+            <OuiSpacer size="s" />
+            <OuiSwitch
               label="Show legend"
               checked={showLegend}
               onChange={(e) => setShowLegend(e.target.checked)}
             />
           </ChartCard>
-        </EuiFlexItem>
-        <EuiFlexItem>
+        </OuiFlexItem>
+        <OuiFlexItem>
           <ChartCard
             title="Number of series"
             description="Do not use too many colors in a single chart as this will hinder understanding.">
-            <EuiFormRow
+            <OuiFormRow
               helpText={
                 <span id="levelsHelp3">
                   Recommended number of series is 5 or less.
                 </span>
               }>
-              <EuiRange
+              <OuiRange
                 min={1}
                 max={10}
                 showTicks
@@ -230,46 +241,46 @@ export default () => {
                 aria-describedby="levelsHelp3"
                 aria-label="Number of series"
               />
-            </EuiFormRow>
-            <EuiFormRow>
-              <EuiSwitch
+            </OuiFormRow>
+            <OuiFormRow>
+              <OuiSwitch
                 label="Group 'Other' slices"
                 checked={numSlices <= 5 ? false : grouped}
                 onChange={onGroupChange}
                 disabled={numSlices <= 5}
               />
-            </EuiFormRow>
+            </OuiFormRow>
           </ChartCard>
-        </EuiFlexItem>
-        <EuiFlexItem>
+        </OuiFlexItem>
+        <OuiFlexItem>
           <ChartCard
             title="Slice order"
             titleSize="xxs"
             description={
               <>
                 Partition supports the specialized slice order with{' '}
-                <EuiCode className="eui-textBreakAll">
+                <OuiCode className="oui-textBreakAll">
                   specialFirstInnermostSector
-                </EuiCode>
+                </OuiCode>
                 .
               </>
             }>
-            <EuiRadioGroup
+            <OuiRadioGroup
               compressed
               options={sliceOrderRadios}
               idSelected={sliceOrderIdSelected}
               onChange={onSliceOrderChange}
             />
           </ChartCard>
-        </EuiFlexItem>
-      </EuiFlexGrid>
-      <EuiSpacer />
+        </OuiFlexItem>
+      </OuiFlexGrid>
+      <OuiSpacer />
 
-      <div className="eui-textCenter">
-        <EuiCopy
-          textToCopy={`<EuiTitle size="xxs">
+      <div className="oui-textCenter">
+        <OuiCopy
+          textToCopy={`<OuiTitle size="xxs">
   <h4>Distribution of the top ${numSlices} browsers from 2019</h4>
-</EuiTitle>
+</OuiTitle>
 <Chart size={{height: 200}}>
   ${showLegend ? '<Settings showLegend />' : ''}
   <Partition
@@ -296,19 +307,19 @@ export default () => {
       {
         groupByRollup: d => d.browser,
         shape: {
-          fillColor: d => euiChartTheme.theme.colors.vizColors[d.sortIndex],
+          fillColor: d => ouiChartTheme.theme.colors.vizColors[d.sortIndex],
         },
       },
     ]}
     config={{
-      ...euiPartitionConfig,
+      ...ouiPartitionConfig,
       ${pieTypeIdSelected.includes('Donut') ? 'emptySizeRatio: 0.4,' : ''}
       ${sliceOrderConfigText}
     }}
   />
 </Chart>`}>
           {(copy) => (
-            <EuiButton
+            <OuiButton
               fill
               onClick={copy}
               iconType="copyClipboard"
@@ -318,9 +329,9 @@ export default () => {
                   ? "It's complicated"
                   : "Bad chart, don't copy"
                 : 'Copy code of current configuration'}
-            </EuiButton>
+            </OuiButton>
           )}
-        </EuiCopy>
+        </OuiCopy>
       </div>
     </Fragment>
   );

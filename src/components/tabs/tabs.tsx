@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,25 +38,25 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
 const displayToClassNameMap = {
-  condensed: 'euiTabs--condensed',
+  condensed: 'ouiTabs--condensed',
   default: null,
 };
 
 export const DISPLAYS = keysOf(displayToClassNameMap);
 
-export type EuiTabsDisplaySizes = keyof typeof displayToClassNameMap;
+export type OuiTabsDisplaySizes = keyof typeof displayToClassNameMap;
 
 const sizeToClassNameMap = {
-  s: 'euiTabs--small',
+  s: 'ouiTabs--small',
   m: null,
-  l: 'euiTabs--large',
+  l: 'ouiTabs--large',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiTabsSizes = keyof typeof sizeToClassNameMap;
+export type OuiTabsSizes = keyof typeof sizeToClassNameMap;
 
-export type EuiTabsProps = CommonProps &
+export type OuiTabsProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * ReactNode to render as this component's content
@@ -54,18 +65,18 @@ export type EuiTabsProps = CommonProps &
     /**
      * Choose `default` or alternative `condensed` display styles
      */
-    display?: EuiTabsDisplaySizes;
+    display?: OuiTabsDisplaySizes;
     /**
      * Evenly stretches each tab to fill the
      * horizontal space
      */
     expand?: boolean;
-    size?: EuiTabsSizes;
+    size?: OuiTabsSizes;
   };
 
-export type EuiTabRef = HTMLDivElement;
+export type OuiTabRef = HTMLDivElement;
 
-export const EuiTabs = forwardRef<EuiTabRef, PropsWithChildren<EuiTabsProps>>(
+export const OuiTabs = forwardRef<OuiTabRef, PropsWithChildren<OuiTabsProps>>(
   (
     {
       children,
@@ -74,15 +85,15 @@ export const EuiTabs = forwardRef<EuiTabRef, PropsWithChildren<EuiTabsProps>>(
       expand = false,
       size = 'm',
       ...rest
-    }: PropsWithChildren<EuiTabsProps>,
+    }: PropsWithChildren<OuiTabsProps>,
     ref
   ) => {
     const classes = classNames(
-      'euiTabs',
+      'ouiTabs',
       displayToClassNameMap[display],
       sizeToClassNameMap[size],
       {
-        'euiTabs--expand': expand,
+        'ouiTabs--expand': expand,
       },
       className
     );
@@ -99,4 +110,4 @@ export const EuiTabs = forwardRef<EuiTabRef, PropsWithChildren<EuiTabsProps>>(
   }
 );
 
-EuiTabs.displayName = 'EuiTabs';
+OuiTabs.displayName = 'OuiTabs';

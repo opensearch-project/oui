@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@
 import React from 'react';
 import { requiredProps } from '../../test';
 import { mount, shallow } from 'enzyme';
-import { EuiSearchBar } from './search_bar';
+import { OuiSearchBar } from './search_bar';
 import { Query } from './query';
 import { keys } from '../../services';
 import { SearchFilterConfig } from './search_filters';
@@ -33,7 +44,7 @@ describe('SearchBar', () => {
       onChange: () => {},
     };
 
-    const component = shallow(<EuiSearchBar {...props} />);
+    const component = shallow(<OuiSearchBar {...props} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -46,7 +57,7 @@ describe('SearchBar', () => {
       toolsRight: <div>Right</div>,
     };
 
-    const component = shallow(<EuiSearchBar {...props} />);
+    const component = shallow(<OuiSearchBar {...props} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -61,7 +72,7 @@ describe('SearchBar', () => {
       onChange: () => {},
     };
 
-    const component = shallow(<EuiSearchBar {...props} />);
+    const component = shallow(<OuiSearchBar {...props} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -88,7 +99,7 @@ describe('SearchBar', () => {
       onChange: () => {},
     };
 
-    const component = shallow(<EuiSearchBar {...props} />);
+    const component = shallow(<OuiSearchBar {...props} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -98,7 +109,7 @@ describe('SearchBar', () => {
       const onChange = jest.fn();
 
       const component = mount(
-        <EuiSearchBar
+        <OuiSearchBar
           query="status:active"
           onChange={onChange}
           box={{ 'data-test-subj': 'searchbar' }}

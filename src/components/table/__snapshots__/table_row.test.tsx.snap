@@ -2,36 +2,36 @@
 
 exports[`isSelected renders true when specified 1`] = `
 <tr
-  class="euiTableRow euiTableRow-isSelected"
+  class="ouiTableRow ouiTableRow-isSelected"
 >
   <td
-    class="euiTableRowCell"
+    class="ouiTableRowCell"
   >
     <div
-      class="euiTableCellContent"
+      class="ouiTableCellContent"
     >
       <span
-        class="euiTableCellContent__text"
+        class="ouiTableCellContent__text"
       />
     </div>
   </td>
 </tr>
 `;
 
-exports[`renders EuiTableRow 1`] = `
+exports[`renders OuiTableRow 1`] = `
 <tr
   aria-label="aria-label"
-  class="euiTableRow testClass1 testClass2"
+  class="ouiTableRow testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <td
-    class="euiTableRowCell"
+    class="ouiTableRowCell"
   >
     <div
-      class="euiTableCellContent"
+      class="ouiTableCellContent"
     >
       <span
-        class="euiTableCellContent__text"
+        class="ouiTableCellContent__text"
       >
         hi
       </span>

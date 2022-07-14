@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,10 +29,10 @@
  */
 
 export {
-  EuiDescriptionList,
-  EuiDescriptionListProps,
+  OuiDescriptionList,
+  OuiDescriptionListProps,
 } from './description_list';
 
-export { EuiDescriptionListTitle } from './description_list_title';
+export { OuiDescriptionListTitle } from './description_list_title';
 
-export { EuiDescriptionListDescription } from './description_list_description';
+export { OuiDescriptionListDescription } from './description_list_description';

@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiColorStops, EuiFormRow } from '../../../../src/components';
+import { OuiColorStops, OuiFormRow } from '../../../../src/components';
 
 export default () => {
   const [emptyColorStops, setEmptyColorStops] = useState([]);
@@ -47,58 +58,58 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Empty array without `min` or `max`">
-        <EuiColorStops
+      <OuiFormRow label="Empty array without `min` or `max`">
+        <OuiColorStops
           label="Empty start"
           onChange={handleEmptyChange2}
           colorStops={emptyColorStops2}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Empty array with `min` defined">
-        <EuiColorStops
+      </OuiFormRow>
+      <OuiFormRow label="Empty array with `min` defined">
+        <OuiColorStops
           label="Empty start"
           onChange={handleEmptyChange}
           colorStops={emptyColorStops}
           min={0}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Empty array with `max` defined">
-        <EuiColorStops
+      </OuiFormRow>
+      <OuiFormRow label="Empty array with `max` defined">
+        <OuiColorStops
           label="Empty start"
           onChange={handleEmptyChange3}
           colorStops={emptyColorStops3}
           max={100}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Single stop without `min` or `max`">
-        <EuiColorStops
+      </OuiFormRow>
+      <OuiFormRow label="Single stop without `min` or `max`">
+        <OuiColorStops
           label="Single start"
           onChange={handleSingleChange}
           colorStops={singleColorStops}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Single stop with `min` defined">
-        <EuiColorStops
+      </OuiFormRow>
+      <OuiFormRow label="Single stop with `min` defined">
+        <OuiColorStops
           label="Single start"
           onChange={handleSingleChange2}
           colorStops={singleColorStops2}
           min={0}
           stopType="fixed"
         />
-      </EuiFormRow>
-      <EuiFormRow label="Single stop with `max` defined">
-        <EuiColorStops
+      </OuiFormRow>
+      <OuiFormRow label="Single stop with `max` defined">
+        <OuiColorStops
           label="Single start"
           onChange={handleSingleChange3}
           colorStops={singleColorStops3}
           max={100}
           stopType="fixed"
         />
-      </EuiFormRow>
+      </OuiFormRow>
     </React.Fragment>
   );
 };

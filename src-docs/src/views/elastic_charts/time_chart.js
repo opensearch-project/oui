@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useContext, Fragment } from 'react';
 import { ThemeContext } from '../../components';
 import {
@@ -11,17 +22,17 @@ import {
 } from '@elastic/charts';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
 } from '../../../../src/themes/charts/themes';
 
 import {
-  EuiSpacer,
-  EuiTitle,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiCopy,
-  EuiButton,
+  OuiSpacer,
+  OuiTitle,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiCopy,
+  OuiButton,
 } from '../../../../src/components';
 
 import { formatDate, dateFormatAliases } from '../../../../src/services';
@@ -53,8 +64,8 @@ export const TimeChart = () => {
 
   const isDarkTheme = themeContext.theme.includes('dark');
   const theme = isDarkTheme
-    ? EUI_CHARTS_THEME_DARK.theme
-    : EUI_CHARTS_THEME_LIGHT.theme;
+    ? OUI_CHARTS_THEME_DARK.theme
+    : OUI_CHARTS_THEME_LIGHT.theme;
 
   let ChartType = CHART_COMPONENTS[chartType];
   let ChartType2 = CHART_COMPONENTS[chartType];
@@ -67,14 +78,14 @@ export const TimeChart = () => {
 
   return (
     <Fragment>
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h2>
           Number of {!multi && 'financial '}robo-calls
           {multi && ' by type'}
         </h2>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiSpacer size="s" />
+      <OuiSpacer size="s" />
 
       <Chart size={{ height: 200 }}>
         <Settings
@@ -114,36 +125,36 @@ export const TimeChart = () => {
         <Axis id="left-axis" position="left" showGridLines />
       </Chart>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGrid columns={3}>
-        <EuiFlexItem>
+      <OuiFlexGrid columns={3}>
+        <OuiFlexItem>
           <ChartTypeCard
             type="Time series"
             onChange={onChartTypeChange}
             mixed={multi ? 'enabled' : 'disabled'}
           />
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
+        <OuiFlexItem>
           <MultiChartCard onChange={onMultiChange} />
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
+        <OuiFlexItem>
           <ChartCard
             title="Tick marks"
             description="If the tick marks all share a portion of their date (e.g. they're all on the same day) format the ticks to only display the disparate portions of the timestamp and show the common portion as the axis title."
           />
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <div className="eui-textCenter">
-        <EuiCopy
+      <div className="oui-textCenter">
+        <OuiCopy
           textToCopy={`<Chart size={{height: 200}}>
   <Settings
-    theme={isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LIGHT.theme}
+    theme={isDarkTheme ? OUI_CHARTS_THEME_DARK.theme : OUI_CHARTS_THEME_LIGHT.theme}
     showLegend={${multi}}
     ${multi ? 'legendPosition="right"' : ''}
   />
@@ -183,7 +194,7 @@ export const TimeChart = () => {
   />
 </Chart>`}>
           {(copy) => (
-            <EuiButton
+            <OuiButton
               fill
               onClick={copy}
               iconType="copyClipboard"
@@ -191,9 +202,9 @@ export const TimeChart = () => {
               {isBadChart
                 ? "Bad chart, don't copy"
                 : 'Copy code of current configuration'}
-            </EuiButton>
+            </OuiButton>
           )}
-        </EuiCopy>
+        </OuiCopy>
       </div>
     </Fragment>
   );

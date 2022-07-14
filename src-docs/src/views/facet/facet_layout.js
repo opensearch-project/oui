@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiFacetButton,
-  EuiFacetGroup,
-  EuiIcon,
-  EuiAvatar,
-  EuiTitle,
-  EuiSpacer,
+  OuiFacetButton,
+  OuiFacetGroup,
+  OuiIcon,
+  OuiAvatar,
+  OuiTitle,
+  OuiSpacer,
 } from '../../../../src/components';
 
-import { euiPaletteColorBlind } from '../../../../src/services';
+import { ouiPaletteColorBlind } from '../../../../src/services';
 
 export default () => {
   const [icon, setIcon] = useState(false);
@@ -67,42 +78,42 @@ export default () => {
       id: 'facet0',
       label: 'Simple, no icon',
       quantity: 6,
-      iconColor: euiPaletteColorBlind()[0],
+      iconColor: ouiPaletteColorBlind()[0],
       onClick: facet0Clicked,
     },
     {
       id: 'facet1',
       label: 'Label or color indicator',
       quantity: 60,
-      iconColor: euiPaletteColorBlind()[1],
+      iconColor: ouiPaletteColorBlind()[1],
       onClick: facet1Clicked,
     },
     {
       id: 'facet2',
       label: 'Disable all others',
       quantity: 600,
-      iconColor: euiPaletteColorBlind()[2],
+      iconColor: ouiPaletteColorBlind()[2],
       onClick: facet2Clicked,
     },
     {
       id: 'facet3',
       label: 'Avatars instead of icons',
       quantity: 60,
-      iconColor: euiPaletteColorBlind()[3],
+      iconColor: ouiPaletteColorBlind()[3],
       onClick: facet3Clicked,
     },
     {
       id: 'facet4',
       label: 'Show all as loading',
       quantity: 6,
-      iconColor: euiPaletteColorBlind()[4],
+      iconColor: ouiPaletteColorBlind()[4],
       onClick: facet4Clicked,
     },
     {
       id: 'facet5',
       label: 'Just here to show truncation of really long labels',
       quantity: 0,
-      iconColor: euiPaletteColorBlind()[5],
+      iconColor: ouiPaletteColorBlind()[5],
     },
   ];
 
@@ -119,13 +130,13 @@ export default () => {
         {list.map((facet) => {
           let iconNode;
           if (icon) {
-            iconNode = <EuiIcon type="dot" color={facet.iconColor} />;
+            iconNode = <OuiIcon type="dot" color={facet.iconColor} />;
           } else if (avatars) {
-            iconNode = <EuiAvatar size="s" name={facet.label} />;
+            iconNode = <OuiAvatar size="s" name={facet.label} />;
           }
 
           return (
-            <EuiFacetButton
+            <OuiFacetButton
               key={facet.id}
               id={`${facet.id}_${align}`}
               quantity={facet.quantity}
@@ -137,7 +148,7 @@ export default () => {
                 facet.onClick ? () => facet.onClick(facet.id) : undefined
               }>
               {facet.label}
-            </EuiFacetButton>
+            </OuiFacetButton>
           );
         })}
       </>
@@ -146,21 +157,21 @@ export default () => {
 
   return (
     <div>
-      <EuiTitle size="s">
+      <OuiTitle size="s">
         <h3>Vertical</h3>
-      </EuiTitle>
-      <EuiFacetGroup style={{ maxWidth: 200 }}>
+      </OuiTitle>
+      <OuiFacetGroup style={{ maxWidth: 200 }}>
         {facets('Vertical')}
-      </EuiFacetGroup>
+      </OuiFacetGroup>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiTitle size="s">
+      <OuiTitle size="s">
         <h3>Horizontal and large gutter</h3>
-      </EuiTitle>
-      <EuiFacetGroup layout="horizontal" gutterSize="l">
+      </OuiTitle>
+      <OuiFacetGroup layout="horizontal" gutterSize="l">
         {facets('Horizontal')}
-      </EuiFacetGroup>
+      </OuiFacetGroup>
     </div>
   );
 };

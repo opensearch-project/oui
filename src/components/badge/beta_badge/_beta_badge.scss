@@ -1,87 +1,98 @@
-.euiBetaBadge {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiBetaBadge {
   display: inline-block;
-  padding: 0 $euiSize;
-  border-radius: $euiSizeL;
-  box-shadow: inset 0 0 0 1px $euiBorderColor;
+  padding: 0 $ouiSize;
+  border-radius: $ouiSizeL;
+  box-shadow: inset 0 0 0 1px $ouiBorderColor;
   vertical-align: super; // if displayed inline with text
 
-  font-size: $euiFontSizeXS;
-  font-weight: $euiFontWeightBold;
+  font-size: $ouiFontSizeXS;
+  font-weight: $ouiFontWeightBold;
   text-transform: uppercase;
   letter-spacing: .05em;
-  line-height: $euiSizeL;
+  line-height: $ouiSizeL;
   text-align: center;
   white-space: nowrap;
   cursor: default;
 
   &:focus {
-    @include euiFocusRing;
+    @include ouiFocusRing;
     // Can't use `currentColor` because of possible white text, so always keep it black
-    outline-color: lightOrDarkTheme($euiColorInk, $euiColorGhost);
+    outline-color: lightOrDarkTheme($ouiColorInk, $ouiColorGhost);
     // The rounded corners of the badge doesn't match well with the outline, so push it outward
     outline-offset: 2px;
   }
 
-  &:not(.euiBetaBadge--hollow) {
+  &:not(.ouiBetaBadge--hollow) {
     box-shadow: none;
   }
 
-  &.euiBetaBadge--small {
-    @include fontSize($euiFontSize * .625);
-    line-height: $euiSize + $euiSizeXS;
-    padding: 0 $euiSizeM;
+  &.ouiBetaBadge--small {
+    @include fontSize($ouiFontSize * .625);
+    line-height: $ouiSize + $ouiSizeXS;
+    padding: 0 $ouiSizeM;
   }
 }
 
 // When it's just an icon, make it a circle
-.euiBetaBadge--iconOnly {
+.ouiBetaBadge--iconOnly {
   padding: 0;
-  width: $euiSizeL;
+  width: $ouiSizeL;
 
-  .euiBetaBadge__icon {
+  .ouiBetaBadge__icon {
     position: relative;
     margin-top: -1px;
   }
 
-  &.euiBetaBadge--small {
-    width: $euiSize + $euiSizeXS;
+  &.ouiBetaBadge--small {
+    width: $ouiSize + $ouiSizeXS;
     padding: 0;
   }
 }
 
-.euiBetaBadge--singleLetter {
+.ouiBetaBadge--singleLetter {
   padding: 0 0 0 1px;
-  width: $euiSizeL;
+  width: $ouiSizeL;
 
-  &.euiBetaBadge--small {
-    width: $euiSize + $euiSizeXS;
+  &.ouiBetaBadge--small {
+    width: $ouiSize + $ouiSizeXS;
     padding: 0 0 0 1px;
   }
 }
 
-.euiBetaBadge--subdued {
-  $backgroundColor: tint($euiColorLightShade, 30%);
+.ouiBetaBadge--subdued {
+  $backgroundColor: tint($ouiColorLightShade, 30%);
   background: $backgroundColor;
-  color: chooseLightOrDarkText($backgroundColor, $euiColorGhost, $euiColorInk);
+  color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
 
-  &.euiBetaBadge-isClickable {
-    color: chooseLightOrDarkText($backgroundColor, $euiColorGhost, $euiColorInk);
+  &.ouiBetaBadge-isClickable {
+    color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
   }
 }
 
-.euiBetaBadge--hollow {
-  &.euiBetaBadge-isClickable {
-    $backgroundColor: tint($euiColorLightShade, 30%);
-    color: chooseLightOrDarkText($backgroundColor, $euiColorGhost, $euiColorInk);
+.ouiBetaBadge--hollow {
+  &.ouiBetaBadge-isClickable {
+    $backgroundColor: tint($ouiColorLightShade, 30%);
+    color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
   }
 }
 
-.euiBetaBadge--accent {
-  $backgroundColor: $euiColorAccentText;
+.ouiBetaBadge--accent {
+  $backgroundColor: $ouiColorAccentText;
   background: $backgroundColor;
-  color: chooseLightOrDarkText($backgroundColor, $euiColorGhost, $euiColorInk);
+  color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
 
-  &.euiBetaBadge-isClickable {
-    color: chooseLightOrDarkText($backgroundColor, $euiColorGhost, $euiColorInk);
+  &.ouiBetaBadge-isClickable {
+    color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
   }
 }

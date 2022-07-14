@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 import {
-  EuiDataGrid,
-  EuiCode,
-  EuiCodeBlock,
-  EuiListGroupItem,
+  OuiDataGrid,
+  OuiCode,
+  OuiCodeBlock,
+  OuiListGroupItem,
 } from '../../../../src/components';
 
 import DataGridContainer from './container';
@@ -33,15 +44,15 @@ const dataGridColumnCellActionsSource = require('!!raw-loader!./column_cell_acti
 const dataGridColumnCellActionsHtml = renderToHtml(DataGridColumnActions);
 
 import {
-  EuiDataGridColumn,
-  EuiDataGridColumnActions,
-  EuiDataGridColumnCellAction,
-  EuiDataGridColumnCellActionProps,
-  EuiDataGridStyle,
-  EuiDataGridToolBarVisibilityOptions,
+  OuiDataGridColumn,
+  OuiDataGridColumnActions,
+  OuiDataGridColumnCellAction,
+  OuiDataGridColumnCellActionProps,
+  OuiDataGridStyle,
+  OuiDataGridToolBarVisibilityOptions,
 } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
 
-const gridSnippet = `<EuiDataGrid
+const gridSnippet = `<OuiDataGrid
   {...usualProps}
   columns={[
     // three columns are available, but restrict Avatar to 50px and don't let users resize it
@@ -58,22 +69,22 @@ const gridSnippet = `<EuiDataGrid
     showColumnSelector: false,
     additionalControls: (
       <Fragment>
-        <EuiButtonEmpty
+        <OuiButtonEmpty
           size="xs"
           iconType="bell"
           color="text"
-          className="euiDataGrid__controlBtn"
+          className="ouiDataGrid__controlBtn"
           onClick={() => {}}>
           New button
-        </EuiButtonEmpty>
-        <EuiButtonEmpty
+        </OuiButtonEmpty>
+        <OuiButtonEmpty
           size="xs"
           iconType="branch"
           color="text"
-          className="euiDataGrid__controlBtn"
+          className="ouiDataGrid__controlBtn"
           onClick={() => {}}>
           Another button
-        </EuiButtonEmpty>
+        </OuiButtonEmpty>
       </Fragment>
     )
   }}
@@ -93,35 +104,35 @@ const gridSnippet = `<EuiDataGrid
 />
 `;
 
-const controlsSnippet = `<EuiDataGrid
+const controlsSnippet = `<OuiDataGrid
   {...usualGridProps}
   toolbarVisibility={{
     // Use of a fragment for multiple items will insure proper margins
     additionalControls: (
       <Fragment>
-        <EuiButtonEmpty
+        <OuiButtonEmpty
           size="xs"
           iconType="bell"
           color="text"
-          className="euiDataGrid__controlBtn"
+          className="ouiDataGrid__controlBtn"
           onClick={() => {}}>
           New button
-        </EuiButtonEmpty>
-        <EuiButtonEmpty
+        </OuiButtonEmpty>
+        <OuiButtonEmpty
           size="xs"
           iconType="branch"
           color="text"
-          className="euiDataGrid__controlBtn"
+          className="ouiDataGrid__controlBtn"
           onClick={() => {}}>
           Another button
-        </EuiButtonEmpty>
+        </OuiButtonEmpty>
       </Fragment>
     )
   }}
 />
 `;
 
-const widthsSnippet = `<EuiDataGrid
+const widthsSnippet = `<OuiDataGrid
   {...usualGridProps}
   columns={[
     {
@@ -154,32 +165,32 @@ export const DataGridStylingExample = {
         <Fragment>
           <p>
             Styling can be passed down to the grid through the{' '}
-            <EuiCode>gridStyle</EuiCode> prop. It accepts an object that allows
+            <OuiCode>gridStyle</OuiCode> prop. It accepts an object that allows
             for customization.
           </p>
           <p>
-            The <EuiCode>toolbarVisibility</EuiCode> prop when used as a boolean
+            The <OuiCode>toolbarVisibility</OuiCode> prop when used as a boolean
             controls the visibility of the toolbar displayed above the grid.
             Using the prop as a shape, allows setting the visibility of the
             individual buttons within.
           </p>
           <p>
-            With the default settings, the <EuiCode>showStyleSelector</EuiCode>{' '}
-            setting in <EuiCode>toolbarVisibility</EuiCode> means the user has
+            With the default settings, the <OuiCode>showStyleSelector</OuiCode>{' '}
+            setting in <OuiCode>toolbarVisibility</OuiCode> means the user has
             the ability to override the padding and font size passed into{' '}
-            <EuiCode>gridStyle</EuiCode> by the engineer.
+            <OuiCode>gridStyle</OuiCode> by the engineer.
           </p>
-          <EuiCodeBlock language="javascript" paddingSize="s" isCopyable>
+          <OuiCodeBlock language="javascript" paddingSize="s" isCopyable>
             {gridSnippet}
-          </EuiCodeBlock>
+          </OuiCodeBlock>
         </Fragment>
       ),
       components: { DataGridStyling },
 
       props: {
-        EuiDataGrid,
-        EuiDataGridStyle,
-        EuiDataGridToolBarVisibilityOptions,
+        OuiDataGrid,
+        OuiDataGridStyle,
+        OuiDataGridToolBarVisibilityOptions,
       },
       demo: <DataGridStyling />,
     },
@@ -199,7 +210,7 @@ export const DataGridStylingExample = {
         <p>
           When wrapped inside a container, like a dashboard panel, the grid will
           start hiding controls and adopt a more strict flex layout. Use the
-          <EuiCode>minSizeForControls</EuiCode> prop to control the min width to
+          <OuiCode>minSizeForControls</OuiCode> prop to control the min width to
           enables/disables grid controls based on available width.
         </p>
       ),
@@ -221,12 +232,12 @@ export const DataGridStylingExample = {
       title: 'Additional controls in the toolbar',
       text: (
         <p>
-          Use the <EuiCode>toolbarVisibility.additionalControls</EuiCode> prop
+          Use the <OuiCode>toolbarVisibility.additionalControls</OuiCode> prop
           to pass additional controls to the toolbar. These will always live to
           the left of the full screen button. It will respect the{' '}
-          <EuiCode language="js">toolbarVisibility={'{false}'}</EuiCode> setting
+          <OuiCode language="js">toolbarVisibility={'{false}'}</OuiCode> setting
           and hide when appropriate. Although any node can fit in this space,
-          the recommendation is to use <strong>EuiButtonEmpty</strong>{' '}
+          the recommendation is to use <strong>OuiButtonEmpty</strong>{' '}
           components with the configuration shown in the snippet.
         </p>
       ),
@@ -252,11 +263,11 @@ export const DataGridStylingExample = {
             By default, visible columns are given equal widths to fill up
             available space in the grid and can be resized by the user to any
             desired width. There are two parameters on{' '}
-            <strong>EuiDataGridColumn</strong> to change this default behavior.{' '}
-            <EuiCode>initialWidth</EuiCode> is a numeric value providing the
+            <strong>OuiDataGridColumn</strong> to change this default behavior.{' '}
+            <OuiCode>initialWidth</OuiCode> is a numeric value providing the
             starting width of a column, in pixels. Second, the{' '}
-            <EuiCode>isResizable</EuiCode> value can be set to{' '}
-            <EuiCode>false</EuiCode> to remove the user&apos;s ability to resize
+            <OuiCode>isResizable</OuiCode> value can be set to{' '}
+            <OuiCode>false</OuiCode> to remove the user&apos;s ability to resize
             column.
           </p>
           <p>
@@ -269,8 +280,8 @@ export const DataGridStylingExample = {
       components: { DataGridColumnWidths },
       snippet: widthsSnippet,
       props: {
-        EuiDataGrid,
-        EuiDataGridColumn,
+        OuiDataGrid,
+        OuiDataGridColumn,
       },
       demo: <DataGridColumnWidths />,
     },
@@ -291,11 +302,11 @@ export const DataGridStylingExample = {
           <p>
             By default, columns provide actions for sorting, moving and hiding.
             These can be extended with custom actions. You can customize the
-            actions by setting the <EuiCode>actions</EuiCode> value of{' '}
-            <strong>EuiDataGridColumn</strong>. Setting it to{' '}
-            <EuiCode>false</EuiCode> removes the action menu displayed. You can
+            actions by setting the <OuiCode>actions</OuiCode> value of{' '}
+            <strong>OuiDataGridColumn</strong>. Setting it to{' '}
+            <OuiCode>false</OuiCode> removes the action menu displayed. You can
             configure it by passing an object of type{' '}
-            <strong>EuiDataGridColumnAction</strong>. This allows you a hide,
+            <strong>OuiDataGridColumnAction</strong>. This allows you a hide,
             configure the existing actions and add new ones.
           </p>
           <p>
@@ -308,10 +319,10 @@ export const DataGridStylingExample = {
       ),
       components: { DataGridColumnActions },
       props: {
-        EuiDataGrid,
-        EuiDataGridColumn,
-        EuiDataGridColumnActions,
-        EuiListGroupItem,
+        OuiDataGrid,
+        OuiDataGridColumn,
+        OuiDataGridColumnActions,
+        OuiListGroupItem,
       },
       demo: <DataGridColumnActions />,
     },
@@ -331,35 +342,35 @@ export const DataGridStylingExample = {
         <Fragment>
           <p>
             On top of making a cell expandable, you can add more custom actions
-            by setting <EuiCode>cellActions</EuiCode>. This contains functions
+            by setting <OuiCode>cellActions</OuiCode>. This contains functions
             called to render additional buttons in the cell and in the popover
             when expanded. Behind the scenes those are treated as a React
             components allowing hooks, context, and other React concepts to be
             used. The functions receives an argument of type
-            <code>EuiDataGridColumnCellActionProps</code>. The icons of these
+            <code>OuiDataGridColumnCellActionProps</code>. The icons of these
             actions are displayed on mouse over, and also appear in the popover
             when the cell is expanded. Note that once you&apos;ve defined the{' '}
-            <EuiCode>cellAction</EuiCode> property, the cell&apos;s
+            <OuiCode>cellAction</OuiCode> property, the cell&apos;s
             automatically expandable.
           </p>
           <p>
             Below, the email and city columns provide 1{' '}
-            <EuiCode>cellAction</EuiCode> each, while the country column
-            provides 2 <EuiCode>cellAction</EuiCode>s.
+            <OuiCode>cellAction</OuiCode> each, while the country column
+            provides 2 <OuiCode>cellAction</OuiCode>s.
             <br />
             The email column cell action closes the popover if it&apos;s
-            expanded through the <EuiCode>closePopover</EuiCode> prop.
+            expanded through the <OuiCode>closePopover</OuiCode> prop.
           </p>
         </Fragment>
       ),
       components: { DataGridColumnCellActions },
       props: {
-        EuiDataGrid,
-        EuiDataGridColumn,
-        EuiDataGridColumnActions,
-        EuiDataGridColumnCellAction,
-        EuiDataGridColumnCellActionProps,
-        EuiListGroupItem,
+        OuiDataGrid,
+        OuiDataGridColumn,
+        OuiDataGridColumnActions,
+        OuiDataGridColumnCellAction,
+        OuiDataGridColumnCellActionProps,
+        OuiListGroupItem,
       },
       demo: <DataGridColumnCellActions />,
     },

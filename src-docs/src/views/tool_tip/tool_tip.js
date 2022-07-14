@@ -1,91 +1,102 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiIcon,
-  EuiToolTip,
-  EuiLink,
-  EuiText,
-  EuiFieldText,
-  EuiSpacer,
-  EuiButton,
+  OuiIcon,
+  OuiToolTip,
+  OuiLink,
+  OuiText,
+  OuiFieldText,
+  OuiSpacer,
+  OuiButton,
 } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiText>
+    <OuiText>
       <p>
         This tooltip appears on the{' '}
-        <EuiToolTip position="top" content="Here is some tooltip text">
-          <EuiLink href="#">top</EuiLink>
-        </EuiToolTip>
+        <OuiToolTip position="top" content="Here is some tooltip text">
+          <OuiLink href="#">top</OuiLink>
+        </OuiToolTip>
       </p>
 
       <p>
         This tooltip appears on the{' '}
-        <EuiToolTip
+        <OuiToolTip
           position="left"
           title="Tooltip titles are optional"
           content="Here is some tooltip text. Lets add some more content to see how it wraps.">
-          <EuiLink href="#">left</EuiLink>
-        </EuiToolTip>{' '}
+          <OuiLink href="#">left</OuiLink>
+        </OuiToolTip>{' '}
         and includes the optional title.
       </p>
 
       <p>
         This tooltip appears on the{' '}
-        <EuiToolTip position="right" content="Here is some tooltip text">
-          <EuiLink href="#">right</EuiLink>
-        </EuiToolTip>
+        <OuiToolTip position="right" content="Here is some tooltip text">
+          <OuiLink href="#">right</OuiLink>
+        </OuiToolTip>
       </p>
 
       <p>
         This tooltip has a long delay because it might be in a repeatable
         component{' '}
-        <EuiToolTip delay="long" content="Here is some tooltip text">
-          <EuiLink href="#">wink</EuiLink>
-        </EuiToolTip>
+        <OuiToolTip delay="long" content="Here is some tooltip text">
+          <OuiLink href="#">wink</OuiLink>
+        </OuiToolTip>
       </p>
 
       <p>
         This tooltip appears on the bottom of this icon:{' '}
-        <EuiToolTip position="bottom" content="Here is some tooltip text">
-          <EuiIcon tabIndex="0" type="alert" title="Icon with tooltip" />
-        </EuiToolTip>
+        <OuiToolTip position="bottom" content="Here is some tooltip text">
+          <OuiIcon tabIndex="0" type="alert" title="Icon with tooltip" />
+        </OuiToolTip>
       </p>
-    </EuiText>
+    </OuiText>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
     <p>
-      <EuiToolTip
+      <OuiToolTip
         position="top"
         content="Here is some tooltip text"
         display="block">
-        <EuiButton fullWidth>
+        <OuiButton fullWidth>
           I am a block level tooltip, applied to a button with fullWidth
-        </EuiButton>
-      </EuiToolTip>
+        </OuiButton>
+      </OuiToolTip>
     </p>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiToolTip position="right" content="Works on anything">
-      <EuiFieldText
+    <OuiToolTip position="right" content="Works on anything">
+      <OuiFieldText
         placeholder="Hover over me"
         aria-label="ToolTip appears on hover"
       />
-    </EuiToolTip>
+    </OuiToolTip>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiToolTip
+    <OuiToolTip
       position="top"
       content={
         <p>
           Works on any kind of element &mdash; buttons, inputs, you name it!
         </p>
       }>
-      <EuiButton onClick={() => {}}>Hover me</EuiButton>
-    </EuiToolTip>
+      <OuiButton onClick={() => {}}>Hover me</OuiButton>
+    </OuiToolTip>
   </div>
 );

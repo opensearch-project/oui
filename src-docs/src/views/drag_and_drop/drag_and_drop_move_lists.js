@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import {
-  EuiDragDropContext,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiDraggable,
-  EuiDroppable,
-  EuiIcon,
-  EuiPanel,
-  euiDragDropMove,
-  euiDragDropReorder,
+  OuiDragDropContext,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiDraggable,
+  OuiDroppable,
+  OuiIcon,
+  OuiPanel,
+  ouiDragDropMove,
+  ouiDragDropReorder,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -30,7 +41,7 @@ export default () => {
     const actions = { DROPPABLE_AREA_1: setList1, DROPPABLE_AREA_2: setList2 };
     if (source && destination) {
       if (source.droppableId === destination.droppableId) {
-        const items = euiDragDropReorder(
+        const items = ouiDragDropReorder(
           lists[destination.droppableId],
           source.index,
           destination.index
@@ -40,7 +51,7 @@ export default () => {
       } else {
         const sourceId = source.droppableId;
         const destinationId = destination.droppableId;
-        const result = euiDragDropMove(
+        const result = ouiDragDropMove(
           lists[sourceId],
           lists[destinationId],
           source,
@@ -53,69 +64,69 @@ export default () => {
     }
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd}>
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiDroppable
+    <OuiDragDropContext onDragEnd={onDragEnd}>
+      <OuiFlexGroup>
+        <OuiFlexItem>
+          <OuiDroppable
             droppableId="DROPPABLE_AREA_1"
             spacing="m"
             withPanel
             grow={false}>
             {list1.length > 0 ? (
               list1.map(({ content, id }, idx) => (
-                <EuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
+                <OuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
                   {(provided, state) => (
-                    <EuiPanel>
+                    <OuiPanel>
                       {content}
                       {state.isDragging && ' ✨'}
-                    </EuiPanel>
+                    </OuiPanel>
                   )}
-                </EuiDraggable>
+                </OuiDraggable>
               ))
             ) : (
-              <EuiFlexGroup
+              <OuiFlexGroup
                 alignItems="center"
                 justifyContent="spaceAround"
                 gutterSize="none"
                 style={{ height: '100%' }}>
-                <EuiFlexItem grow={false}>
-                  <EuiIcon type="faceSad" />
-                </EuiFlexItem>
-              </EuiFlexGroup>
+                <OuiFlexItem grow={false}>
+                  <OuiIcon type="faceSad" />
+                </OuiFlexItem>
+              </OuiFlexGroup>
             )}
-          </EuiDroppable>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiDroppable
+          </OuiDroppable>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiDroppable
             droppableId="DROPPABLE_AREA_2"
             spacing="m"
             withPanel
             grow={false}>
             {list2.length > 0 ? (
               list2.map(({ content, id }, idx) => (
-                <EuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
+                <OuiDraggable spacing="m" key={id} index={idx} draggableId={id}>
                   {(provided, state) => (
-                    <EuiPanel>
+                    <OuiPanel>
                       {content}
                       {state.isDragging && ' ✨'}
-                    </EuiPanel>
+                    </OuiPanel>
                   )}
-                </EuiDraggable>
+                </OuiDraggable>
               ))
             ) : (
-              <EuiFlexGroup
+              <OuiFlexGroup
                 alignItems="center"
                 justifyContent="spaceAround"
                 gutterSize="none"
                 style={{ height: '100%' }}>
-                <EuiFlexItem grow={false}>
-                  <EuiIcon type="faceSad" />
-                </EuiFlexItem>
-              </EuiFlexGroup>
+                <OuiFlexItem grow={false}>
+                  <OuiIcon type="faceSad" />
+                </OuiFlexItem>
+              </OuiFlexGroup>
             )}
-          </EuiDroppable>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiDragDropContext>
+          </OuiDroppable>
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiDragDropContext>
   );
 };

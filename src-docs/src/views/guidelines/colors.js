@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { GuidePage } from '../../components';
 
 import {
-  EuiText,
-  EuiSpacer,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiLink,
-  EuiCode,
-  EuiTitle,
+  OuiText,
+  OuiSpacer,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiLink,
+  OuiCode,
+  OuiTitle,
 } from '../../../../src/components';
 import { ratingAA, allowedColors } from './colors/_utilities';
 import { CorePalette } from './colors/core_palette';
@@ -25,23 +36,23 @@ export default ({ selectedTheme }) => {
 
   return (
     <GuidePage title="Color guidelines">
-      <EuiText grow={false}>
-        <h2>Elastic UI builds with a very limited palette.</h2>
+      <OuiText grow={false}>
+        <h2>OpenSearch UI builds with a very limited palette.</h2>
         <p>
           We use a core set of three colors, combined with a green / orange /
           red qualitative set of three, and finally combine those against a
           six-color grayscale. Variation beyond these colors is minimal and
           always done with math manipulation against the original set.
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
       <CorePalette colors={allowedColors} theme={selectedTheme} />
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
-      <EuiText grow={false}>
+      <OuiText grow={false}>
         <h2>Variable naming</h2>
         <p>
           We use the same variable names of each color in all themes. That means
@@ -49,32 +60,32 @@ export default ({ selectedTheme }) => {
           By just changing the values of the color, and not the usages of the
           variables, we make it easier for the development multiple themes.
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
-      <EuiText grow={false}>
+      <OuiText grow={false}>
         <h2>Accessible text contrast</h2>
         <p>
-          <EuiLink href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">
+          <OuiLink href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">
             WCAG specifications
-          </EuiLink>{' '}
+          </OuiLink>{' '}
           defines specific contrast ratios between foreground text and a
           background color. The grids below display which color combinations
           pass that rating. In general you should try to use a color combination
           that is {ratingAA} or above with the exception of using large text.
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiTitle size="xs">
+      <OuiTitle size="xs">
         <h3>
           Use the slider and toggle to adjust the color combinations shown in
           the sections below.
         </h3>
-      </EuiTitle>
-      <EuiSpacer size="m" />
+      </OuiTitle>
+      <OuiSpacer size="m" />
 
       {/* This wrapping div for the sticky positioning */}
       <div>
@@ -87,11 +98,11 @@ export default ({ selectedTheme }) => {
           }}
         />
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorPrimary'}
+          color={'ouiColorPrimary'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -102,11 +113,11 @@ export default ({ selectedTheme }) => {
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorAccent'}
+          color={'ouiColorAccent'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -117,24 +128,24 @@ export default ({ selectedTheme }) => {
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorSuccess'}
+          color={'ouiColorSuccess'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
-            Also known as <EuiCode>euiColorSecondary</EuiCode>. Use this for
+            Also known as <OuiCode>ouiColorSecondary</OuiCode>. Use this for
             success graphics and <strong>additive</strong> actions.
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorWarning'}
+          color={'ouiColorWarning'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -143,11 +154,11 @@ export default ({ selectedTheme }) => {
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorDanger'}
+          color={'ouiColorDanger'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -156,11 +167,11 @@ export default ({ selectedTheme }) => {
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorEmptyShade'}
+          color={'ouiColorEmptyShade'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -176,22 +187,22 @@ export default ({ selectedTheme }) => {
             <p>
               If you need a color that is full black in{' '}
               <strong>both light and dark modes</strong>, use{' '}
-              <EuiCode>euiColorInk</EuiCode>.
+              <OuiCode>ouiColorInk</OuiCode>.
             </p>
           ) : (
             <p>
               If you need a color that is full white in{' '}
               <strong>both light and dark modes</strong>, use{' '}
-              <EuiCode>euiColorGhost</EuiCode>.
+              <OuiCode>ouiColorGhost</OuiCode>.
             </p>
           )}
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorLightestShade'}
+          color={'ouiColorLightestShade'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -201,26 +212,26 @@ export default ({ selectedTheme }) => {
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiPageBackgroundColor'}
+          color={'ouiPageBackgroundColor'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
             The background color for the whole window (body) is a slightly
-            altered version of <EuiCode>euiColorLightestShade</EuiCode> that{' '}
+            altered version of <OuiCode>ouiColorLightestShade</OuiCode> that{' '}
             <strong>does</strong> provide proper contrast for the text variant
             colors.
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorLightShade'}
+          color={'ouiColorLightShade'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -229,25 +240,25 @@ export default ({ selectedTheme }) => {
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorMediumShade'}
+          color={'ouiColorMediumShade'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
             The middle gray for all themes; this is the base for{' '}
-            <EuiCode>euiTextSubduedColor</EuiCode>. Use subdued text for hint or
+            <OuiCode>ouiTextSubduedColor</OuiCode>. Use subdued text for hint or
             inconsequential text.
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorDarkShade'}
+          color={'ouiColorDarkShade'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -256,11 +267,11 @@ export default ({ selectedTheme }) => {
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
 
         <ColorSection
-          color={'euiColorDarkestShade'}
+          color={'ouiColorDarkestShade'}
           minimumContrast={contrastValue}
           showTextVariants={showTextVariants}>
           <p>
@@ -277,42 +288,42 @@ export default ({ selectedTheme }) => {
           </p>
         </ColorSection>
 
-        <EuiSpacer size="xxl" />
+        <OuiSpacer size="xxl" />
       </div>
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
       <ColorSection
-        color={'euiColorFullShade'}
+        color={'ouiColorFullShade'}
         minimumContrast={contrastValue}
         showTextVariants={showTextVariants}>
         <p>
-          The opposite of <EuiCode>euiColorEmptyShade</EuiCode>.
+          The opposite of <OuiCode>ouiColorEmptyShade</OuiCode>.
         </p>
         {selectedThemeIsDark ? (
           <p>
             If you need a color that is full white in{' '}
             <strong>both light and dark modes</strong>, use{' '}
-            <EuiCode>euiColorGhost</EuiCode>.
+            <OuiCode>ouiColorGhost</OuiCode>.
           </p>
         ) : (
           <p>
             If you need a color that is full black in{' '}
             <strong>both light and dark modes</strong>, use{' '}
-            <EuiCode>euiColorInk</EuiCode>.
+            <OuiCode>ouiColorInk</OuiCode>.
           </p>
         )}
       </ColorSection>
 
-      <EuiSpacer size="xxl" />
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
-      <EuiText grow={false}>
+      <OuiText grow={false}>
         <h2>Categorical visualization palette</h2>
         <p>
           The following colors are color-blind safe and should be used in
           categorically seried visualizations and graphics. They are meant to be
-          contrasted against the value of <EuiCode>euiColorEmptyShade</EuiCode>{' '}
+          contrasted against the value of <OuiCode>ouiColorEmptyShade</OuiCode>{' '}
           for the current theme.
         </p>
         <p>
@@ -322,23 +333,23 @@ export default ({ selectedTheme }) => {
         </p>
         <p>
           When using the palette as a background for text (i.e. badges), use the{' '}
-          <EuiCode>_behindText</EuiCode> variant. It is a brightened version of
+          <OuiCode>_behindText</OuiCode> variant. It is a brightened version of
           the base palette to create better contrast with text.
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
           <VisPalette variant="graphic" />
-        </EuiFlexItem>
-        <EuiFlexItem>
+        </OuiFlexItem>
+        <OuiFlexItem>
           <VisPalette variant="behindText" />
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </OuiFlexItem>
+      </OuiFlexGrid>
     </GuidePage>
   );
 };

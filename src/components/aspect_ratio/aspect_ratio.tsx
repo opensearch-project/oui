@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
 
-export type EuiAspectRatioProps = HTMLAttributes<HTMLDivElement> &
+export type OuiAspectRatioProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     /**
      * Aspect ratio height. For example 9 would be widescreen video.
@@ -37,7 +48,7 @@ export type EuiAspectRatioProps = HTMLAttributes<HTMLDivElement> &
     maxWidth?: number;
   };
 
-export const EuiAspectRatio: FunctionComponent<EuiAspectRatioProps> = ({
+export const OuiAspectRatio: FunctionComponent<OuiAspectRatioProps> = ({
   children,
   className,
   height,
@@ -45,7 +56,7 @@ export const EuiAspectRatio: FunctionComponent<EuiAspectRatioProps> = ({
   maxWidth,
   ...rest
 }) => {
-  const classes = classNames('euiAspectRatio', className);
+  const classes = classNames('ouiAspectRatio', className);
 
   const paddingBottom = `${(height / width) * 100}%`;
 

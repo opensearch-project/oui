@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSearchBox render - custom placeholder and incremental 1`] = `
-<EuiFieldSearch
+exports[`OuiSearchBox render - custom placeholder and incremental 1`] = `
+<OuiFieldSearch
   aria-label="aria-label"
   className="testClass1 testClass2"
   compressed={false}
@@ -17,8 +17,8 @@ exports[`EuiSearchBox render - custom placeholder and incremental 1`] = `
 />
 `;
 
-exports[`EuiSearchBox render - no config 1`] = `
-<EuiFieldSearch
+exports[`OuiSearchBox render - no config 1`] = `
+<OuiFieldSearch
   aria-label="aria-label"
   className="testClass1 testClass2"
   compressed={false}

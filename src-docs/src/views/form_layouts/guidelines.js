@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { GuideRule, GuideRuleTitle, GuideRuleExample } from '../../components';
 
 import {
-  EuiText,
-  EuiSpacer,
-  EuiFlexItem,
-  EuiImage,
-  EuiPanel,
-  EuiTitle,
+  OuiText,
+  OuiSpacer,
+  OuiFlexItem,
+  OuiImage,
+  OuiPanel,
+  OuiTitle,
 } from '../../../../src/components';
 
 import imgFormRowToggle from '../../images/form-row--toggle.gif';
@@ -21,119 +32,119 @@ import imgFormRowPanelsGood from '../../images/form-row--06.svg';
 
 export default () => (
   <>
-    <EuiText grow={false}>
+    <OuiText grow={false}>
       <p>
         This page documents patterns for form layout, validation and how best to
         use various components.
       </p>
-    </EuiText>
-    <EuiSpacer size="xl" />
+    </OuiText>
+    <OuiSpacer size="xl" />
 
-    <EuiTitle>
+    <OuiTitle>
       <h1>Key Principles</h1>
-    </EuiTitle>
+    </OuiTitle>
 
     <GuideRule
       heading="Help users achieve success"
       description="Our form components try to be as informative and clear as possible for the user to avoid errors or confusion.">
-      <EuiFlexItem>
-        <EuiPanel>
-          <EuiText>
+      <OuiFlexItem>
+        <OuiPanel>
+          <OuiText>
             <h4>Use labels and descriptions</h4>
             <p>
               Use a label (and description if needed) for each form field. All
               form fields should be considered required unless stated alongside
               the label.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </OuiText>
+        </OuiPanel>
+      </OuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiPanel>
-          <EuiText>
+      <OuiFlexItem>
+        <OuiPanel>
+          <OuiText>
             <h4>Provide help text</h4>
             <p>
               Show validation parameters in the help text below the input. For
               example: Spaces and special characters are not allowed.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </OuiText>
+        </OuiPanel>
+      </OuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiPanel>
-          <EuiText>
+      <OuiFlexItem>
+        <OuiPanel>
+          <OuiText>
             <h4>Validate on blur</h4>
             <p>
               Validation should occur on blur from an input field. The submit
               button should be active by default, then show errors after click.
               Error messages should be specific to the situation.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </OuiText>
+        </OuiPanel>
+      </OuiFlexItem>
     </GuideRule>
 
     <GuideRule
       heading="Provide transparency"
       description="It should be clear to users what they can accomplish in each part of the form. ">
-      <EuiFlexItem>
-        <EuiPanel>
-          <EuiText>
+      <OuiFlexItem>
+        <OuiPanel>
+          <OuiText>
             <h4>Layout matters</h4>
             <p>
               A well-formatted layout makes it clear to users how to navigate
               the form. As one field is completed, it should be clear where to
               go next.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </OuiText>
+        </OuiPanel>
+      </OuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiPanel>
-          <EuiText>
+      <OuiFlexItem>
+        <OuiPanel>
+          <OuiText>
             <h4>Words matter</h4>
             <p>
               Form labels and descriptions are equally important as layout and
               should be treated with just as much care. The text should be
               specific, concise, and easy to scan.
             </p>
-          </EuiText>
-        </EuiPanel>
-      </EuiFlexItem>
+          </OuiText>
+        </OuiPanel>
+      </OuiFlexItem>
     </GuideRule>
 
     <GuideRuleTitle>Described form rows</GuideRuleTitle>
-    <EuiText>
+    <OuiText>
       <p>
-        An <strong>EuiDescribedFormRow</strong> provides an additional heading
+        An <strong>OuiDescribedFormRow</strong> provides an additional heading
         along with description text for a single input or set of input fields.
       </p>
-    </EuiText>
-    <EuiSpacer />
+    </OuiText>
+    <OuiSpacer />
 
-    <EuiPanel
+    <OuiPanel
       color="subdued"
       paddingSize="l"
       hasShadow={false}
       style={{ justifyContent: 'center', display: 'flex' }}>
-      <EuiPanel style={{ maxWidth: 520 }} paddingSize="s">
-        <EuiImage alt="eui described form row" url={imgFormRowToggle} />
-      </EuiPanel>
-    </EuiPanel>
+      <OuiPanel style={{ maxWidth: 520 }} paddingSize="s">
+        <OuiImage alt="oui described form row" url={imgFormRowToggle} />
+      </OuiPanel>
+    </OuiPanel>
 
     <GuideRule
       heading="When to use it"
       description="This component is not intended for every type of form, but typically works best in the following scenarios.">
-      <EuiFlexItem>
-        <EuiText grow={false}>
+      <OuiFlexItem>
+        <OuiText grow={false}>
           <dl>
             <dt>Forms with lengthy descriptions per input</dt>
             <dd>
               If a longer description is needed, use an{' '}
-              <strong>EuiDescribedFormRow</strong> to divide the form into a
+              <strong>OuiDescribedFormRow</strong> to divide the form into a
               column for descriptions and a column for form fields. This is so
               there is space for descriptions to aid new users, but keeps the
               form fields in a column, so frequent users can still quickly
@@ -144,21 +155,21 @@ export default () => (
             <dt>Forms with multiple inputs falling under a single heading</dt>
             <dd>
               If multiple sub-steps are needed, grouping them together using an{' '}
-              <strong>EuiDescribedFormRow</strong> helps show they are all still
+              <strong>OuiDescribedFormRow</strong> helps show they are all still
               related.
             </dd>
 
             <dt>Forms with complex nested options</dt>
             <dd>
-              An <strong>EuiDescribedFormRow</strong> is useful when there are
+              An <strong>OuiDescribedFormRow</strong> is useful when there are
               parts of the form that can be hidden and shown by the user. The
               toggle to hide and show the row should be beneath the description
               and the following form fields should be in the right column with
               the other form fields.
             </dd>
           </dl>
-        </EuiText>
-      </EuiFlexItem>
+        </OuiText>
+      </OuiFlexItem>
     </GuideRule>
 
     <GuideRule
@@ -167,17 +178,17 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="To make groupings clearer and keep the user's eye in one path, it's better to keep inputs in a single column. If multiple fields are needed, they should still remain within the column.">
-        <EuiImage alt="proper field alignment" url={imgFormRowGood} />
+        <OuiImage alt="proper field alignment" url={imgFormRowGood} />
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Avoid nesting form rows. It creates an uneven path for the user's eye to travel down the form.">
-        <EuiImage alt="incorrect field alignment" url={imgFormRowBad} />
+        <OuiImage alt="incorrect field alignment" url={imgFormRowBad} />
       </GuideRuleExample>
     </GuideRule>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
     <GuideRule
       heading="Divide the form into sections"
@@ -185,29 +196,29 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Adding visual indicators can help clearly define the sections of the form.">
-        <EuiImage alt="prop use of dividers" url={imgFormRowPanelsGood} />
+        <OuiImage alt="prop use of dividers" url={imgFormRowPanelsGood} />
       </GuideRuleExample>
       <GuideRuleExample
         type="dont"
         text="Using panels within panels creates too much visual noise and can make it confusing where sections begin and end.">
-        <EuiImage alt="incorrect use of panels" url={imgFormRowPanelsBad} />
+        <OuiImage alt="incorrect use of panels" url={imgFormRowPanelsBad} />
       </GuideRuleExample>
     </GuideRule>
 
-    <EuiSpacer />
+    <OuiSpacer />
     <GuideRule>
       <GuideRuleExample
         type="do"
         text="Add more spacing between form groups than fields within the group to better define the grouping.">
-        <EuiImage alt="proper use of spacing" url={imgFormRowSpacingGood} />
+        <OuiImage alt="proper use of spacing" url={imgFormRowSpacingGood} />
       </GuideRuleExample>
       <GuideRuleExample
         type="dont"
         text="Avoid using the same spacing between groups and individual fields. It is harder for the user to scan and understand the sections of the form.">
-        <EuiImage alt="incorrect use of spacing" url={imgFormRowSpacingBad} />
+        <OuiImage alt="incorrect use of spacing" url={imgFormRowSpacingBad} />
       </GuideRuleExample>
     </GuideRule>
 
-    <EuiSpacer size="xl" />
+    <OuiSpacer size="xl" />
   </>
 );

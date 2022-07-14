@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPage, SIZES } from './page';
+import { OuiPage, SIZES } from './page';
 
-describe('EuiPage', () => {
+describe('OuiPage', () => {
   test('is rendered', () => {
-    const component = render(<EuiPage {...requiredProps} />);
+    const component = render(<OuiPage {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +44,7 @@ describe('EuiPage', () => {
   describe('paddingSize', () => {
     SIZES.forEach((size) => {
       it(`${size} is rendered`, () => {
-        const component = render(<EuiPage paddingSize={size} />);
+        const component = render(<OuiPage paddingSize={size} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -42,7 +53,7 @@ describe('EuiPage', () => {
 
   describe('grow', () => {
     test('can be false', () => {
-      const component = render(<EuiPage grow={false} />);
+      const component = render(<OuiPage grow={false} />);
 
       expect(component).toMatchSnapshot();
     });
@@ -50,7 +61,7 @@ describe('EuiPage', () => {
 
   describe('direction', () => {
     test('can be row', () => {
-      const component = render(<EuiPage direction="row" />);
+      const component = render(<OuiPage direction="row" />);
 
       expect(component).toMatchSnapshot();
     });
@@ -58,20 +69,20 @@ describe('EuiPage', () => {
 
   describe('restrict width', () => {
     test('can be set to a default', () => {
-      const component = render(<EuiPage restrictWidth={true} />);
+      const component = render(<OuiPage restrictWidth={true} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('can be set to a custom number', () => {
-      const component = render(<EuiPage restrictWidth={1024} />);
+      const component = render(<OuiPage restrictWidth={1024} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('can be set to a custom value and does not override custom style', () => {
       const component = render(
-        <EuiPage restrictWidth="24rem" style={{ color: 'red ' }} />
+        <OuiPage restrictWidth="24rem" style={{ color: 'red ' }} />
       );
 
       expect(component).toMatchSnapshot();

@@ -1,33 +1,44 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiTreeView, EuiToken } from '../../../../src/components';
+import { OuiTreeView, OuiToken } from '../../../../src/components';
 
 export default () => {
   const items = [
     {
       label: 'transporter',
       id: 'transporter',
-      icon: <EuiToken size="xs" iconType="tokenObject" />,
+      icon: <OuiToken size="xs" iconType="tokenObject" />,
       children: [
         {
           label: 'service',
           id: 'service',
-          icon: <EuiToken size="xs" iconType="tokenString" />,
+          icon: <OuiToken size="xs" iconType="tokenString" />,
         },
         {
           label: 'auth',
           id: 'auth',
-          icon: <EuiToken size="xs" iconType="tokenObject" />,
+          icon: <OuiToken size="xs" iconType="tokenObject" />,
           children: [
             {
               label: 'user',
               id: 'user',
-              icon: <EuiToken size="xs" iconType="tokenVariable" />,
+              icon: <OuiToken size="xs" iconType="tokenVariable" />,
             },
             {
               label: 'pass',
               id: 'pass',
-              icon: <EuiToken size="xs" iconType="tokenVariable" />,
+              icon: <OuiToken size="xs" iconType="tokenVariable" />,
             },
           ],
         },
@@ -36,17 +47,17 @@ export default () => {
     {
       label: 'getContact',
       id: 'getContact',
-      icon: <EuiToken size="xs" iconType="tokenFunction" />,
+      icon: <OuiToken size="xs" iconType="tokenFunction" />,
       children: [
         {
           label: 'render',
           id: 'render',
-          icon: <EuiToken size="xs" iconType="tokenFunction" />,
+          icon: <OuiToken size="xs" iconType="tokenFunction" />,
           children: [
             {
               label: 'title',
               id: 'title',
-              icon: <EuiToken size="xs" iconType="tokenString" />,
+              icon: <OuiToken size="xs" iconType="tokenString" />,
             },
           ],
         },
@@ -55,31 +66,31 @@ export default () => {
     {
       label: 'postContact',
       id: 'postContact',
-      icon: <EuiToken size="xs" iconType="tokenFunction" />,
+      icon: <OuiToken size="xs" iconType="tokenFunction" />,
       children: [
         {
           label: 'errors',
           id: 'errors',
-          icon: <EuiToken size="xs" iconType="tokenConstant" />,
+          icon: <OuiToken size="xs" iconType="tokenConstant" />,
         },
         {
           label: 'A custom class is on this one',
           id: 'cutomClass',
-          icon: <EuiToken size="xs" iconType="tokenObject" />,
-          className: 'euiTreeView__nodeInnerExample',
+          icon: <OuiToken size="xs" iconType="tokenObject" />,
+          className: 'ouiTreeView__nodeInnerExample',
         },
       ],
     },
     {
       label: 'smokeMonster',
       id: 'smokeMonster',
-      icon: <EuiToken size="xs" iconType="tokenMethod" />,
+      icon: <OuiToken size="xs" iconType="tokenMethod" />,
     },
   ];
 
   return (
     <div style={{ width: '20rem' }}>
-      <EuiTreeView
+      <OuiTreeView
         items={items}
         display="compressed"
         expandByDefault

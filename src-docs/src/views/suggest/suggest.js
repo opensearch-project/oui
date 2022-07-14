@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiRadioGroup,
-  EuiSuggest,
-  EuiSpacer,
+  OuiRadioGroup,
+  OuiSuggest,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -64,13 +75,13 @@ export default () => {
 
   return (
     <div>
-      <EuiRadioGroup
+      <OuiRadioGroup
         options={radios}
         idSelected={radioIdSelected}
         onChange={(id) => onChange(id)}
       />
-      <EuiSpacer size="xl" />
-      <EuiSuggest
+      <OuiSpacer size="xl" />
+      <OuiSuggest
         status={status}
         onInputChange={() => {}}
         onItemClick={onItemClick}

@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useRef, useState } from 'react';
 import {
-  EuiResizableContainer,
-  EuiPanel,
-  EuiTitle,
-  EuiSpacer,
-  EuiButtonGroup,
-  EuiButtonIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
+  OuiResizableContainer,
+  OuiPanel,
+  OuiTitle,
+  OuiSpacer,
+  OuiButtonGroup,
+  OuiButtonIcon,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiText,
 } from '../../../../src/components';
 
 const toggleButtons = [
@@ -42,8 +53,8 @@ export default () => {
 
   return (
     <>
-      <div className="eui-textCenter">
-        <EuiButtonGroup
+      <div className="oui-textCenter">
+        <OuiButtonGroup
           legend="Collapsible panels"
           options={toggleButtons}
           idToSelectedMap={toggleIdToSelectedMap}
@@ -52,72 +63,72 @@ export default () => {
           type="multi"
         />
       </div>
-      <EuiSpacer />
-      <EuiResizableContainer
+      <OuiSpacer />
+      <OuiResizableContainer
         onToggleCollapsed={onCollapse}
         style={{ height: '250px' }}>
-        {(EuiResizablePanel, EuiResizableButton, { togglePanel }) => {
+        {(OuiResizablePanel, OuiResizableButton, { togglePanel }) => {
           collapseFn.current = (id, direction = 'left') =>
             togglePanel(id, { direction });
           return (
             <>
-              <EuiResizablePanel id="panel1" initialSize={30} minSize="10%">
-                <EuiPanel paddingSize="l" style={{ height: '100%' }}>
-                  <EuiTitle>
+              <OuiResizablePanel id="panel1" initialSize={30} minSize="10%">
+                <OuiPanel paddingSize="l" style={{ height: '100%' }}>
+                  <OuiTitle>
                     <p>Panel 1</p>
-                  </EuiTitle>
-                </EuiPanel>
-              </EuiResizablePanel>
+                  </OuiTitle>
+                </OuiPanel>
+              </OuiResizablePanel>
 
-              <EuiResizableButton />
+              <OuiResizableButton />
 
-              <EuiResizablePanel id="panel2" initialSize={35} minSize="50px">
-                <EuiPanel paddingSize="l" style={{ height: '100%' }}>
-                  <EuiTitle>
+              <OuiResizablePanel id="panel2" initialSize={35} minSize="50px">
+                <OuiPanel paddingSize="l" style={{ height: '100%' }}>
+                  <OuiTitle>
                     <p>Panel 2</p>
-                  </EuiTitle>
-                </EuiPanel>
-              </EuiResizablePanel>
+                  </OuiTitle>
+                </OuiPanel>
+              </OuiResizablePanel>
 
-              <EuiResizableButton />
+              <OuiResizableButton />
 
-              <EuiResizablePanel
+              <OuiResizablePanel
                 mode={['custom', { position: 'top' }]}
                 id="panel3"
                 initialSize={35}
                 minSize="10%">
-                <EuiPanel paddingSize="l" style={{ height: '100%' }}>
-                  <EuiFlexGroup
+                <OuiPanel paddingSize="l" style={{ height: '100%' }}>
+                  <OuiFlexGroup
                     justifyContent="spaceBetween"
                     alignItems="center">
-                    <EuiFlexItem>
-                      <EuiTitle>
+                    <OuiFlexItem>
+                      <OuiTitle>
                         <p>Panel 3</p>
-                      </EuiTitle>
-                    </EuiFlexItem>
-                    <EuiFlexItem grow={false}>
-                      <EuiButtonIcon
+                      </OuiTitle>
+                    </OuiFlexItem>
+                    <OuiFlexItem grow={false}>
+                      <OuiButtonIcon
                         color="text"
                         aria-label={'Toggle panel 3'}
                         iconType="menuRight"
                         onClick={() => onChange(3)}
                       />
-                    </EuiFlexItem>
-                  </EuiFlexGroup>
-                  <EuiSpacer />
-                  <EuiText size="s">
+                    </OuiFlexItem>
+                  </OuiFlexGroup>
+                  <OuiSpacer />
+                  <OuiText size="s">
                     <p>
                       This panel provides its own button for triggering
                       collapsibility but relies on the default collapsed button
                       to uncollapse.
                     </p>
-                  </EuiText>
-                </EuiPanel>
-              </EuiResizablePanel>
+                  </OuiText>
+                </OuiPanel>
+              </OuiResizablePanel>
             </>
           );
         }}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     </>
   );
 };

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,20 +31,20 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiShowForBreakpoints, EuiShowFor } from './show_for';
+import { OuiShowForBreakpoints, OuiShowFor } from './show_for';
 
-const BREAKPOINTS: EuiShowForBreakpoints[] = ['xs', 's', 'm', 'l', 'xl'];
+const BREAKPOINTS: OuiShowForBreakpoints[] = ['xs', 's', 'm', 'l', 'xl'];
 
-describe('EuiShowFor', () => {
+describe('OuiShowFor', () => {
   // @ts-ignore innerWidth might be read only but we can still override it for the sake of testing
   beforeAll(() => (window.innerWidth = 670));
   afterAll(() => 1024); // reset to jsdom's default
 
   test('renders', () => {
     const component = render(
-      <EuiShowFor sizes={['s']}>
+      <OuiShowFor sizes={['s']}>
         <span>Child</span>
-      </EuiShowFor>
+      </OuiShowFor>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,9 +53,9 @@ describe('EuiShowFor', () => {
   BREAKPOINTS.forEach((size) => {
     test(`${size} is rendered`, () => {
       const component = render(
-        <EuiShowFor sizes={[size]}>
+        <OuiShowFor sizes={[size]}>
           <span>Child</span>
-        </EuiShowFor>
+        </OuiShowFor>
       );
 
       expect(component).toMatchSnapshot();
@@ -53,9 +64,9 @@ describe('EuiShowFor', () => {
 
   test('renders for multiple breakpoints', () => {
     const component = render(
-      <EuiShowFor sizes={['s', 'l']}>
+      <OuiShowFor sizes={['s', 'l']}>
         <span>Child</span>
-      </EuiShowFor>
+      </OuiShowFor>
     );
 
     expect(component).toMatchSnapshot();
@@ -63,9 +74,9 @@ describe('EuiShowFor', () => {
 
   test('renders for "all"', () => {
     const component = render(
-      <EuiShowFor sizes={'all'}>
+      <OuiShowFor sizes={'all'}>
         <span>Child</span>
-      </EuiShowFor>
+      </OuiShowFor>
     );
 
     expect(component).toMatchSnapshot();
@@ -73,9 +84,9 @@ describe('EuiShowFor', () => {
 
   test('never renders for "none"', () => {
     const component = render(
-      <EuiShowFor sizes={'none'}>
+      <OuiShowFor sizes={'none'}>
         <span>Child</span>
-      </EuiShowFor>
+      </OuiShowFor>
     );
 
     expect(component).toMatchSnapshot();

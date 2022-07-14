@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,16 +28,16 @@
  * under the License.
  */
 
-export { EuiPageContent, EuiPageContentProps } from './page_content';
+export { OuiPageContent, OuiPageContentProps } from './page_content';
 export {
-  EuiPageContentBody,
-  EuiPageContentBodyProps,
+  OuiPageContentBody,
+  OuiPageContentBodyProps,
 } from './page_content_body';
 export {
-  EuiPageContentHeader,
-  EuiPageContentHeaderProps,
+  OuiPageContentHeader,
+  OuiPageContentHeaderProps,
 } from './page_content_header';
 export {
-  EuiPageContentHeaderSection,
-  EuiPageContentHeaderSectionProps,
+  OuiPageContentHeaderSection,
+  OuiPageContentHeaderSectionProps,
 } from './page_content_header_section';

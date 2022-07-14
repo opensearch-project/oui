@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiLink,
-  EuiHealth,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiBasicTable,
+  OuiLink,
+  OuiHealth,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../../src/components';
 
 import uniqBy from 'lodash/uniqBy';
@@ -71,16 +82,16 @@ export const Table = () => {
     }
 
     return (
-      <EuiButton color="danger" iconType="trash" onClick={onClickDelete}>
+      <OuiButton color="danger" iconType="trash" onClick={onClickDelete}>
         Delete {selectedItems.length} Users
-      </EuiButton>
+      </OuiButton>
     );
   };
 
   const renderStatus = (online) => {
     const color = online ? 'success' : 'danger';
     const label = online ? 'Online' : 'Offline';
-    return <EuiHealth color={color}>{label}</EuiHealth>;
+    return <OuiHealth color={color}>{label}</OuiHealth>;
   };
 
   const { pageOfItems, totalItemCount } = store.findUsers(
@@ -119,12 +130,12 @@ export const Table = () => {
         fullWidth: true,
       },
       render: (name, item) => (
-        <EuiFlexGroup responsive={false} alignItems="center">
-          <EuiFlexItem>
+        <OuiFlexGroup responsive={false} alignItems="center">
+          <OuiFlexItem>
             {item.firstName} {item.lastName}
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>{renderStatus(item.online)}</EuiFlexItem>
-        </EuiFlexGroup>
+          </OuiFlexItem>
+          <OuiFlexItem grow={false}>{renderStatus(item.online)}</OuiFlexItem>
+        </OuiFlexGroup>
       ),
     },
     {
@@ -134,9 +145,9 @@ export const Table = () => {
         <span>{uniqBy(items, 'github').length} users</span>
       ),
       render: (username) => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </OuiLink>
       ),
     },
     {
@@ -194,7 +205,7 @@ export const Table = () => {
   return (
     <Fragment>
       {deleteButton}
-      <EuiBasicTable
+      <OuiBasicTable
         items={pageOfItems}
         itemId="id"
         columns={columns}

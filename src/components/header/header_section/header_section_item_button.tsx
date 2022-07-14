@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,32 +36,32 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import {
-  EuiNotificationBadgeProps,
-  EuiNotificationBadge,
+  OuiNotificationBadgeProps,
+  OuiNotificationBadge,
 } from '../../badge/notification_badge/badge_notification';
-import { EuiIcon } from '../../icon';
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../../button';
-import { EuiHideFor, EuiShowFor } from '../../responsive';
+import { OuiIcon } from '../../icon';
+import { OuiButtonEmpty, OuiButtonEmptyProps } from '../../button';
+import { OuiHideFor, OuiShowFor } from '../../responsive';
 
-export type EuiHeaderSectionItemButtonProps = EuiButtonEmptyProps & {
+export type OuiHeaderSectionItemButtonProps = OuiButtonEmptyProps & {
   /**
-   * Inserts the node into a EuiBadgeNotification and places it appropriately against the button.
+   * Inserts the node into a OuiBadgeNotification and places it appropriately against the button.
    * Or pass `true` to render a simple dot
    */
-  notification?: EuiNotificationBadgeProps['children'] | boolean;
+  notification?: OuiNotificationBadgeProps['children'] | boolean;
   /**
    * Changes the color of the notification background
    */
-  notificationColor?: EuiNotificationBadgeProps['color'];
+  notificationColor?: OuiNotificationBadgeProps['color'];
 };
 
-export type EuiHeaderSectionItemButtonRef =
-  | (HTMLButtonElement & { euiAnimate: () => void })
+export type OuiHeaderSectionItemButtonRef =
+  | (HTMLButtonElement & { ouiAnimate: () => void })
   | null;
 
-export const EuiHeaderSectionItemButton = forwardRef<
-  EuiHeaderSectionItemButtonRef,
-  PropsWithChildren<EuiHeaderSectionItemButtonProps>
+export const OuiHeaderSectionItemButton = forwardRef<
+  OuiHeaderSectionItemButtonRef,
+  PropsWithChildren<OuiHeaderSectionItemButtonProps>
 >(
   (
     {
@@ -61,7 +72,7 @@ export const EuiHeaderSectionItemButton = forwardRef<
       ...rest
     },
     /**
-     * Allows for animating with .euiAnimate()
+     * Allows for animating with .ouiAnimate()
      */
     ref
   ) => {
@@ -71,12 +82,12 @@ export const EuiHeaderSectionItemButton = forwardRef<
     const animationTargetRef = useRef<HTMLSpanElement | null>(null);
 
     useImperativeHandle<
-      EuiHeaderSectionItemButtonRef,
-      EuiHeaderSectionItemButtonRef
+      OuiHeaderSectionItemButtonRef,
+      OuiHeaderSectionItemButtonRef
     >(
       ref,
       () => {
-        (buttonRef.current as any).euiAnimate = () => {
+        (buttonRef.current as any).ouiAnimate = () => {
           const keyframes: Keyframe[] = [
             { transform: 'rotate(0)', offset: 0, easing: 'ease-in-out' },
             {
@@ -191,19 +202,19 @@ export const EuiHeaderSectionItemButton = forwardRef<
             duration: 5000,
           });
         };
-        return buttonRef.current as EuiHeaderSectionItemButtonRef;
+        return buttonRef.current as OuiHeaderSectionItemButtonRef;
       },
       []
     );
 
-    const classes = classNames('euiHeaderSectionItemButton', className);
+    const classes = classNames('ouiHeaderSectionItemButton', className);
     const animationClasses = classNames([
-      'euiHeaderSectionItemButton__content',
+      'ouiHeaderSectionItemButton__content',
     ]);
 
     const notificationDot = (
-      <EuiIcon
-        className="euiHeaderSectionItemButton__notification euiHeaderSectionItemButton__notification--dot"
+      <OuiIcon
+        className="ouiHeaderSectionItemButton__notification ouiHeaderSectionItemButton__notification--dot"
         color={notificationColor}
         type="dot"
         size="l"
@@ -216,20 +227,20 @@ export const EuiHeaderSectionItemButton = forwardRef<
     } else if (notification) {
       buttonNotification = (
         <>
-          <EuiHideFor sizes={['xs']}>
-            <EuiNotificationBadge
-              className="euiHeaderSectionItemButton__notification euiHeaderSectionItemButton__notification--badge"
+          <OuiHideFor sizes={['xs']}>
+            <OuiNotificationBadge
+              className="ouiHeaderSectionItemButton__notification ouiHeaderSectionItemButton__notification--badge"
               color={notificationColor}>
               {notification}
-            </EuiNotificationBadge>
-          </EuiHideFor>
-          <EuiShowFor sizes={['xs']}>{notificationDot}</EuiShowFor>
+            </OuiNotificationBadge>
+          </OuiHideFor>
+          <OuiShowFor sizes={['xs']}>{notificationDot}</OuiShowFor>
         </>
       );
     }
 
     return (
-      <EuiButtonEmpty
+      <OuiButtonEmpty
         className={classes}
         color="text"
         buttonRef={buttonRef}
@@ -238,9 +249,9 @@ export const EuiHeaderSectionItemButton = forwardRef<
           {children}
         </span>
         {buttonNotification}
-      </EuiButtonEmpty>
+      </OuiButtonEmpty>
     );
   }
 );
 
-EuiHeaderSectionItemButton.displayName = 'EuiHeaderSectionItemButton';
+OuiHeaderSectionItemButton.displayName = 'OuiHeaderSectionItemButton';

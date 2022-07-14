@@ -15,14 +15,14 @@ here's how we would define maps for colors and sizes in a fictional `MegaMenu` c
 
 ```tsx
 // We first define the enum values as a type
-type EuiMegaMenuColor = 'primary' | 'success' | 'warning' | 'danger';
+type OuiMegaMenuColor = 'primary' | 'success' | 'warning' | 'danger';
 
 // Then we define the map for getting the appropriate class for each enum value.
-const colorToClassNameMap: { [color in EuiMegaMenuColor]: string } = {
-  primary: 'euiMegaMenu--primary',
-  success: 'euiMegaMenu--success',
-  warning: 'euiMegaMenu--warning',
-  danger: 'euiMegaMenu--danger',
+const colorToClassNameMap: { [color in OuiMegaMenuColor]: string } = {
+  primary: 'ouiMegaMenu--primary',
+  success: 'ouiMegaMenu--success',
+  warning: 'ouiMegaMenu--warning',
+  danger: 'ouiMegaMenu--danger',
 };
 
 // Then we generate the enums themselves by pulling out the keys.
@@ -33,8 +33,8 @@ This is how we define the prop types using the enums we generated in Typescript:
 
 ```tsx
 // We can refer to the enums objects for the prop types.
-export type EuiMegaMenuProps = {
-  color: EuiMegaMenuColor;
+export type OuiMegaMenuProps = {
+  color: OuiMegaMenuColor;
   isDisabled?: boolean;
   /* ... */
 };
@@ -43,7 +43,7 @@ export type EuiMegaMenuProps = {
 For the default props we can just specify the enum values we want to use in the constructor and then use the maps to generate the className for the component:
 
 ```tsx
-export const EuiMegaMenu: FunctionComponent<EuiMegaMenuProps> = ({
+export const OuiMegaMenu: FunctionComponent<OuiMegaMenuProps> = ({
   children,
   className,
   color = 'primary',
@@ -52,11 +52,11 @@ export const EuiMegaMenu: FunctionComponent<EuiMegaMenuProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiMegaMenu',
+    'ouiMegaMenu',
     colorToClassNameMap[color],
     className,
     {
-      'euiMegaMenu--isDisabled': isDisabled,
+      'ouiMegaMenu--isDisabled': isDisabled,
     },
   );
 
@@ -75,20 +75,20 @@ The main benefit behind this practice is that the consumer can specify any of
 the [DOM attributes](https://reactjs.org/docs/dom-elements.html) supported by React, including
 custom ones with the `data-` prefix.
 
-In Typescript, it makes sense to then extend the props of that element when declaring the component's type. EUI also provides a shortlist of commonly used props like `className`, `aria-label`, and `data-test-subj` that you should extend as well.
+In Typescript, it makes sense to then extend the props of that element when declaring the component's type. OUI also provides a shortlist of commonly used props like `className`, `aria-label`, and `data-test-subj` that you should extend as well.
 
 ```jsx
 import { HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
 
-export type EuiMegaMenuProps = HTMLAttributes<HTMLDivElement> &
+export type OuiMegaMenuProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
-    color: EuiMegaMenuColor;
+    color: OuiMegaMenuColor;
     isDisabled?: boolean;
     /* ... */
   };
 
-export const EuiMegaMenu: FunctionComponent<EuiMegaMenuProps> = ({
+export const OuiMegaMenu: FunctionComponent<OuiMegaMenuProps> = ({
   children,
   className,
   color = 'primary',
@@ -115,7 +115,7 @@ String literals should be used wherever possible and prioritized over booleans. 
 
 ### Booleans
 
-Generally, boolean props should have an `is` prefix, e.g. `isPlaceholder` or `isReadOnly`. The exception to this is when the prop matches an existing HTML attribute such as `disabled`; to avoid confusion the prop name should align with the HTML specification. Mirroring the attributes this way makes the most sense when the component is a thin wrapper around an existing HTML element, e.g. EuiButton -> `<button>` and EuiRadio ->   `<input type="radio">`.
+Generally, boolean props should have an `is` prefix, e.g. `isPlaceholder` or `isReadOnly`. The exception to this is when the prop matches an existing HTML attribute such as `disabled`; to avoid confusion the prop name should align with the HTML specification. Mirroring the attributes this way makes the most sense when the component is a thin wrapper around an existing HTML element, e.g. OuiButton -> `<button>` and OuiRadio ->   `<input type="radio">`.
 
 ### Event handlers
 

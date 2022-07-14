@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +31,7 @@
 import React, { createElement } from 'react';
 // Importing seemingly unused types from `unified` because the definitions
 // are exported for two versions of TypeScript (3.4, 4.0) and implicit
-// imports during eui.d.ts generation default to the incorrect version (3.4).
+// imports during oui.d.ts generation default to the incorrect version (3.4).
 // Explicit imports here resolve the version mismatch.
 import {
   Plugin,
@@ -45,11 +56,11 @@ import highlight from './remark/remark_prismjs';
 import * as MarkdownTooltip from './markdown_tooltip';
 import * as MarkdownCheckbox from './markdown_checkbox';
 import { markdownLinkValidator } from './markdown_link_validator';
-import { EuiMarkdownEditorUiPlugin } from './../markdown_types';
-import { EuiLink } from '../../link';
-import { EuiCodeBlock, EuiCode } from '../../code';
+import { OuiMarkdownEditorUiPlugin } from './../markdown_types';
+import { OuiLink } from '../../link';
+import { OuiCodeBlock, OuiCode } from '../../code';
 
-export const getDefaultEuiMarkdownParsingPlugins = (): PluggableList => [
+export const getDefaultOuiMarkdownParsingPlugins = (): PluggableList => [
   [markdown, {}],
   [highlight, {}],
   [emoji, { emoticon: true }],
@@ -58,7 +69,7 @@ export const getDefaultEuiMarkdownParsingPlugins = (): PluggableList => [
   [markdownLinkValidator, {}],
 ];
 
-export const defaultParsingPlugins = getDefaultEuiMarkdownParsingPlugins();
+export const defaultParsingPlugins = getDefaultOuiMarkdownParsingPlugins();
 
 const unknownHandler: Handler = (h, node) => {
   return h(node, node.type, node, all(h, node));
@@ -69,7 +80,7 @@ export interface Rehype2ReactOptions {
   [key: string]: any;
 }
 
-export const getDefaultEuiMarkdownProcessingPlugins = (): [
+export const getDefaultOuiMarkdownProcessingPlugins = (): [
   [Plugin, Remark2RehypeOptions], // first is well known
   [typeof rehype2react, Rehype2ReactOptions], // second is well known
   ...PluggableList // any additional are generic
@@ -87,13 +98,13 @@ export const getDefaultEuiMarkdownProcessingPlugins = (): [
     {
       createElement: createElement,
       components: {
-        a: EuiLink,
+        a: OuiLink,
         code: (props: any) =>
           // If there are linebreaks use codeblock, otherwise code
           /\r|\n/.exec(props.children) ? (
-            <EuiCodeBlock fontSize="m" paddingSize="s" {...props} />
+            <OuiCodeBlock fontSize="m" paddingSize="s" {...props} />
           ) : (
-            <EuiCode {...props} />
+            <OuiCode {...props} />
           ),
         tooltipPlugin: MarkdownTooltip.renderer,
         checkboxPlugin: MarkdownCheckbox.renderer,
@@ -102,13 +113,13 @@ export const getDefaultEuiMarkdownProcessingPlugins = (): [
   ],
 ];
 
-export const defaultProcessingPlugins = getDefaultEuiMarkdownProcessingPlugins();
+export const defaultProcessingPlugins = getDefaultOuiMarkdownProcessingPlugins();
 
-export const getDefaultEuiMarkdownUiPlugins = (): EuiMarkdownEditorUiPlugin[] => {
+export const getDefaultOuiMarkdownUiPlugins = (): OuiMarkdownEditorUiPlugin[] => {
   const array = [MarkdownTooltip.plugin];
-  // @ts-ignore __originatedFromEui is a custom property
-  array.__originatedFromEui = true;
+  // @ts-ignore __originatedFromOui is a custom property
+  array.__originatedFromOui = true;
   return array;
 };
 
-export const defaultUiPlugins = getDefaultEuiMarkdownUiPlugins();
+export const defaultUiPlugins = getDefaultOuiMarkdownUiPlugins();

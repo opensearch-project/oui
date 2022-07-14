@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,12 +29,12 @@
  */
 
 import React, { ReactElement } from 'react';
-import { EuiDataGridFocusedCell, EuiDataGridSorting } from './data_grid_types';
+import { OuiDataGridFocusedCell, OuiDataGridSorting } from './data_grid_types';
 
 export interface DataGridFocusContextShape {
-  setFocusedCell: (cell: EuiDataGridFocusedCell) => void;
+  setFocusedCell: (cell: OuiDataGridFocusedCell) => void;
   onFocusUpdate: (
-    cell: EuiDataGridFocusedCell,
+    cell: OuiDataGridFocusedCell,
     updateFocus: Function
   ) => () => void;
 }
@@ -36,7 +47,7 @@ export const DataGridFocusContext = React.createContext<
 });
 
 export const DataGridSortingContext = React.createContext<
-  EuiDataGridSorting | undefined
+  OuiDataGridSorting | undefined
 >(undefined);
 
 export interface DataGridWrapperRowsContentsShape {

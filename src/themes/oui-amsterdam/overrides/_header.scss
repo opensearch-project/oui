@@ -1,0 +1,120 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@import '../global_styling/mixins/button';
+
+.ouiHeader {
+  height: $ouiHeaderHeight;
+  padding-left: $ouiSizeS;
+  padding-right: $ouiSizeS;
+}
+
+// Remove borders without deleting the prop just yet
+.ouiHeaderSectionItem:after {
+  display: none !important; // sass-lint:disable-line no-important
+}
+
+.ouiHeaderLogo {
+  @include ouiBreakpoint('xs') {
+    padding-left: $ouiSizeXS;
+  }
+
+  padding-left: $ouiSizeS;
+  padding-right: $ouiSizeS;
+  min-width: $ouiHeaderChildSize;
+}
+
+.ouiHeaderLogo__text {
+  @include ouiTitle('xxs');
+}
+
+.ouiHeader--default + .ouiHeader--default {
+  border-top: $ouiBorderThin;
+}
+
+// Breadcrumbs
+
+.ouiHeaderBreadcrumbs {
+  font-size: $ouiFontSizeXS;
+  line-height: $ouiSize;
+  margin-left: $ouiSizeS;
+  margin-right: $ouiSizeS;
+
+  // No separators
+  .ouiBreadcrumbSeparator {
+    display: none !important; // sass-lint:disable-line no-important
+  }
+
+  // Only the header breadcrumbs get the new Amsterdam style so that there can
+  // still be default text only breadcrumbs for places like OuiControlBar
+  .ouiBreadcrumb {
+    @include ouiButtonDefaultStyle($ouiTextColor);
+    line-height: $ouiSize;
+    font-weight: $ouiFontWeightMedium;
+    padding: $ouiSizeXS $ouiSize;
+    clip-path: polygon(0 0, calc(100% - #{$ouiSizeS}) 0, 100% 50%, calc(100% - #{$ouiSizeS}) 100%, 0 100%, $ouiSizeS 50%);
+
+    &:focus {
+      @include ouiFocusRing(null, 'inner');
+
+      &:focus-visible {
+        // Turn radius and clip path off when in focus so the focus ring looks correct
+        border-radius: 0;
+        clip-path: none;
+      }
+    }
+
+    // If it's a link the easiest way to detect is via our .ouiLink class since it can accept either href or onClick
+    // Also helps to add specificity for overriding hover state
+    &.ouiBreadcrumb--collapsed,
+    &.ouiLink {
+      @include ouiButtonDefaultStyle($ouiColorPrimary);
+
+      &:hover,
+      &:focus {
+        color: $ouiColorPrimary;
+      }
+    }
+
+    &.ouiBreadcrumb--collapsed .ouiLink {
+      &,
+      &:hover,
+      &:focus {
+        color: $ouiColorPrimary;
+      }
+    }
+
+    &:not(.ouiBreadcrumb--last) {
+      margin-right: -$ouiSizeXS;
+    }
+
+    &:first-child {
+      padding-left: $ouiSizeM;
+      border-radius: $ouiBorderRadius 0 0 $ouiBorderRadius;
+      clip-path: polygon(0 0, calc(100% - #{$ouiSizeS}) 0, 100% 50%, calc(100% - #{$ouiSizeS}) 100%, 0 100%);
+    }
+  }
+
+  .ouiBreadcrumb--last {
+    border-radius: 0 $ouiBorderRadius $ouiBorderRadius 0;
+    padding-right: $ouiSizeM;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, #{$ouiSizeS} 50%);
+  }
+
+  // In case the item is first AND last, aka only, just make it a fully rounded item
+  .ouiBreadcrumb:only-child {
+    clip-path: none;
+    padding-left: $ouiSizeM;
+    padding-right: $ouiSizeM;
+    border-radius: $ouiBorderRadius;
+  }
+}
+

@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 import {
-  EuiDelayHide,
-  EuiFlexItem,
-  EuiCheckbox,
-  EuiFormRow,
-  EuiFieldNumber,
-  EuiLoadingSpinner,
+  OuiDelayHide,
+  OuiFlexItem,
+  OuiCheckbox,
+  OuiFormRow,
+  OuiFieldNumber,
+  OuiLoadingSpinner,
 } from '../../../../src/components';
 
 export default () => {
@@ -22,30 +33,30 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFlexItem>
-        <EuiFormRow>
-          <EuiCheckbox
+      <OuiFlexItem>
+        <OuiFormRow>
+          <OuiCheckbox
             id="dummy-id"
             checked={hide}
             onChange={onChangeHide}
             label="Hide child"
           />
-        </EuiFormRow>
-        <EuiFormRow label="Minimum duration">
-          <EuiFieldNumber
+        </OuiFormRow>
+        <OuiFormRow label="Minimum duration">
+          <OuiFieldNumber
             value={minimumDuration}
             onChange={onChangeMinimumDuration}
           />
-        </EuiFormRow>
+        </OuiFormRow>
 
-        <EuiFormRow label="Child to render">
-          <EuiDelayHide
+        <OuiFormRow label="Child to render">
+          <OuiDelayHide
             hide={hide}
             minimumDuration={minimumDuration}
-            render={() => <EuiLoadingSpinner size="m" />}
+            render={() => <OuiLoadingSpinner size="m" />}
           />
-        </EuiFormRow>
-      </EuiFlexItem>
+        </OuiFormRow>
+      </OuiFlexItem>
     </Fragment>
   );
 };

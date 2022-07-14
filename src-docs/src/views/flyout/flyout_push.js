@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutHeader,
-  EuiButton,
-  EuiText,
-  EuiTitle,
-  EuiFlyoutFooter,
+  OuiFlyout,
+  OuiFlyoutBody,
+  OuiFlyoutHeader,
+  OuiButton,
+  OuiText,
+  OuiTitle,
+  OuiFlyoutFooter,
 } from '../../../../src/components';
 
 export default () => {
@@ -17,18 +28,18 @@ export default () => {
 
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <OuiFlyout
         type="push"
         size="s"
         onClose={() => setIsFlyoutVisible(false)}
         aria-labelledby="pushedFlyoutTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <OuiFlyoutHeader hasBorder>
+          <OuiTitle size="m">
             <h2 id="pushedFlyoutTitle">A pushed flyout</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiText>
+          </OuiTitle>
+        </OuiFlyoutHeader>
+        <OuiFlyoutBody>
+          <OuiText>
             <p>
               A pushed flyout typically contains more information about a
               particular piece of data or complex form controls for editing.
@@ -37,20 +48,20 @@ export default () => {
               Also, it is good to include a close button in the footer for a
               larger hit target than the small close button provides.
             </p>
-          </EuiText>
-        </EuiFlyoutBody>
-        <EuiFlyoutFooter>
-          <EuiButton onClick={() => setIsFlyoutVisible(false)}>Close</EuiButton>
-        </EuiFlyoutFooter>
-      </EuiFlyout>
+          </OuiText>
+        </OuiFlyoutBody>
+        <OuiFlyoutFooter>
+          <OuiButton onClick={() => setIsFlyoutVisible(false)}>Close</OuiButton>
+        </OuiFlyoutFooter>
+      </OuiFlyout>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={() => setIsFlyoutVisible((visible) => !visible)}>
+      <OuiButton onClick={() => setIsFlyoutVisible((visible) => !visible)}>
         Toggle pushed flyout
-      </EuiButton>
+      </OuiButton>
       {flyout}
     </div>
   );

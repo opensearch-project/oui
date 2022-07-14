@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,35 +34,35 @@ import { CommonProps, keysOf } from '../../common';
 
 const gutterSizeToClassNameMap = {
   none: null,
-  xs: 'euiBadgeGroup--gutterExtraSmall',
-  s: 'euiBadgeGroup--gutterSmall',
+  xs: 'ouiBadgeGroup--gutterExtraSmall',
+  s: 'ouiBadgeGroup--gutterSmall',
 };
 
 export const GUTTER_SIZES = keysOf(gutterSizeToClassNameMap);
 type BadgeGroupGutterSize = keyof typeof gutterSizeToClassNameMap;
 
-export interface EuiBadgeGroupProps {
+export interface OuiBadgeGroupProps {
   /**
    * Space between badges
    */
   gutterSize?: BadgeGroupGutterSize;
   /**
-   * Should be a list of EuiBadge's but can also be any other element
+   * Should be a list of OuiBadge's but can also be any other element
    * Will apply an extra class to add spacing
    */
   children?: ReactNode;
 }
 
-export const EuiBadgeGroup = forwardRef<
+export const OuiBadgeGroup = forwardRef<
   HTMLDivElement,
-  CommonProps & HTMLAttributes<HTMLDivElement> & EuiBadgeGroupProps
+  CommonProps & HTMLAttributes<HTMLDivElement> & OuiBadgeGroupProps
 >(
   (
     { children, className, gutterSize = 'xs', ...rest },
     ref: Ref<HTMLDivElement>
   ) => {
     const classes = classNames(
-      'euiBadgeGroup',
+      'ouiBadgeGroup',
       gutterSizeToClassNameMap[gutterSize as BadgeGroupGutterSize],
       className
     );
@@ -59,11 +70,11 @@ export const EuiBadgeGroup = forwardRef<
     return (
       <div className={classes} ref={ref} {...rest}>
         {React.Children.map(children, (child: ReactNode) => (
-          <span className="euiBadgeGroup__item">{child}</span>
+          <span className="ouiBadgeGroup__item">{child}</span>
         ))}
       </div>
     );
   }
 );
 
-EuiBadgeGroup.displayName = 'EuiBadgeGroup';
+OuiBadgeGroup.displayName = 'OuiBadgeGroup';

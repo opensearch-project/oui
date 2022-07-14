@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,27 +28,27 @@
  * under the License.
  */
 
-export { EuiSelectable, EuiSelectableProps } from './selectable';
+export { OuiSelectable, OuiSelectableProps } from './selectable';
 export {
-  EuiSelectableList,
-  EuiSelectableListProps,
-  EuiSelectableListItem,
-  EuiSelectableListItemProps,
-  EuiSelectableOptionsListProps,
+  OuiSelectableList,
+  OuiSelectableListProps,
+  OuiSelectableListItem,
+  OuiSelectableListItemProps,
+  OuiSelectableOptionsListProps,
 } from './selectable_list';
 export {
-  EuiSelectableMessage,
-  EuiSelectableMessageProps,
+  OuiSelectableMessage,
+  OuiSelectableMessageProps,
 } from './selectable_message';
-export { EuiSelectableOption } from './selectable_option';
+export { OuiSelectableOption } from './selectable_option';
 export {
-  EuiSelectableSearch,
-  EuiSelectableSearchProps,
+  OuiSelectableSearch,
+  OuiSelectableSearchProps,
 } from './selectable_search';
 export {
-  EuiSelectableTemplateSitewide,
-  EuiSelectableTemplateSitewideProps,
-  EuiSelectableTemplateSitewideOption,
-  EuiSelectableTemplateSitewideMetaData,
-  euiSelectableTemplateSitewideRenderOptions,
+  OuiSelectableTemplateSitewide,
+  OuiSelectableTemplateSitewideProps,
+  OuiSelectableTemplateSitewideOption,
+  OuiSelectableTemplateSitewideMetaData,
+  ouiSelectableTemplateSitewideRenderOptions,
 } from './selectable_templates';

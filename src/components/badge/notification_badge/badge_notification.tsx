@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,7 +34,7 @@ import { CommonProps, keysOf } from '../../common';
 
 const colorToClassMap = {
   accent: null,
-  subdued: 'euiNotificationBadge--subdued',
+  subdued: 'ouiNotificationBadge--subdued',
 };
 
 export const COLORS: BadgeNotificationColor[] = keysOf(colorToClassMap);
@@ -31,13 +42,13 @@ export type BadgeNotificationColor = keyof typeof colorToClassMap;
 
 const sizeToClassNameMap = {
   s: null,
-  m: 'euiNotificationBadge--medium',
+  m: 'ouiNotificationBadge--medium',
 };
 
 export const SIZES: BadgeNotificationSize[] = keysOf(sizeToClassNameMap);
 export type BadgeNotificationSize = keyof typeof sizeToClassNameMap;
 
-export interface EuiNotificationBadgeProps
+export interface OuiNotificationBadgeProps
   extends CommonProps,
     Omit<HTMLAttributes<HTMLSpanElement>, 'color'> {
   /**
@@ -48,7 +59,7 @@ export interface EuiNotificationBadgeProps
   color?: BadgeNotificationColor;
 }
 
-export const EuiNotificationBadge: FunctionComponent<EuiNotificationBadgeProps> = ({
+export const OuiNotificationBadge: FunctionComponent<OuiNotificationBadgeProps> = ({
   children,
   className,
   size = 's',
@@ -56,7 +67,7 @@ export const EuiNotificationBadge: FunctionComponent<EuiNotificationBadgeProps> 
   ...rest
 }) => {
   const classes = classNames(
-    'euiNotificationBadge',
+    'ouiNotificationBadge',
     sizeToClassNameMap[size],
     colorToClassMap[color],
     className

@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiSuperSelect } from '../../../../src/components';
+import { OuiCode, OuiSuperSelect } from '../../../../src/components';
 
 import SuperSelectBasic from './super_select_basic';
 const superSelectBasicSource = require('!!raw-loader!./super_select_basic');
 const superSelectBasicHtml = renderToHtml(SuperSelectBasic);
-const superSelectBasicSnippet = `<EuiSuperSelect
+const superSelectBasicSnippet = `<OuiSuperSelect
   options={[
     {
       value: 'warning',
@@ -24,7 +35,7 @@ const superSelectBasicSnippet = `<EuiSuperSelect
 import SuperSelectComplex from './super_select_complex';
 const superSelectComplexSource = require('!!raw-loader!./super_select_complex');
 const superSelectComplexHtml = renderToHtml(SuperSelectComplex);
-const superSelectComplexSnippet = `<EuiSuperSelect
+const superSelectComplexSnippet = `<OuiSuperSelect
   options={[
     {
       value: 'option_one',
@@ -41,7 +52,7 @@ const superSelectComplexSnippet = `<EuiSuperSelect
 import SuperSelectStates from './super_select_states';
 const superSelectStatesSource = require('!!raw-loader!./super_select_states');
 const superSelectStatesHtml = renderToHtml(SuperSelectStates);
-const superSelectStatesSnippet = `<EuiSuperSelect
+const superSelectStatesSnippet = `<OuiSuperSelect
   options={[
     {
       value: 'option_one',
@@ -75,20 +86,20 @@ export const SuperSelectExample = {
         <div>
           <p>
             This is a simple replacement component for{' '}
-            <strong>EuiSelect</strong> if you need more customization in either
+            <strong>OuiSelect</strong> if you need more customization in either
             the display of the input or option. Simply pass an array of option
             objects:
           </p>
           <ul>
             <li>
-              <EuiCode>value</EuiCode>: for storing unique value of item,{' '}
+              <OuiCode>value</OuiCode>: for storing unique value of item,{' '}
             </li>
             <li>
-              <EuiCode>inputDisplay</EuiCode>: what shows inside the form input
+              <OuiCode>inputDisplay</OuiCode>: what shows inside the form input
               when selected,{' '}
             </li>
             <li>
-              <EuiCode>dropdownDisplay</EuiCode>: (optional) what shows for the
+              <OuiCode>dropdownDisplay</OuiCode>: (optional) what shows for the
               item in the dropdown
             </li>
           </ul>
@@ -98,7 +109,7 @@ export const SuperSelectExample = {
           </p>
         </div>
       ),
-      props: { EuiSuperSelect },
+      props: { OuiSuperSelect },
       snippet: superSelectBasicSnippet,
       demo: <SuperSelectBasic />,
     },
@@ -116,11 +127,11 @@ export const SuperSelectExample = {
       ],
       text: (
         <p>
-          Both <EuiCode>inputDisplay</EuiCode> and{' '}
-          <EuiCode>dropdownDisplay</EuiCode> accept React nodes. Therefore you
+          Both <OuiCode>inputDisplay</OuiCode> and{' '}
+          <OuiCode>dropdownDisplay</OuiCode> accept React nodes. Therefore you
           can pass some descriptions with each option to show in the dropdown.
           If your options will most likely be multi-line, add the{' '}
-          <EuiCode>hasDividers</EuiCode> prop to show borders between options.
+          <OuiCode>hasDividers</OuiCode> prop to show borders between options.
         </p>
       ),
       props: {},
@@ -142,11 +153,11 @@ export const SuperSelectExample = {
       text: (
         <p>
           You can pass the same props as you normally would to{' '}
-          <strong>EuiSelect</strong> like disabled, isLoading, compressed,
+          <strong>OuiSelect</strong> like disabled, isLoading, compressed,
           etc&hellip;
         </p>
       ),
-      props: { EuiSuperSelect },
+      props: { OuiSuperSelect },
       snippet: superSelectStatesSnippet,
       demo: <SuperSelectStates />,
     },

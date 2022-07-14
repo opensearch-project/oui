@@ -1,42 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSelectableTemplateSitewide is rendered 1`] = `
+exports[`OuiSelectableTemplateSitewide is rendered 1`] = `
 <div
-  class="euiSelectable euiSelectableTemplateSitewide testClass1 testClass2"
+  class="ouiSelectable ouiSelectableTemplateSitewide testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover--displayBlock"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <div
-        class="euiFormControlLayout euiFormControlLayout--fullWidth"
+        class="ouiFormControlLayout ouiFormControlLayout--fullWidth"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <input
             aria-activedescendant=""
             aria-haspopup="listbox"
             aria-label="aria-label"
             autocomplete="off"
-            class="euiFieldSearch euiFieldSearch--fullWidth euiSelectableSearch euiSelectableTemplateSitewide__search"
+            class="ouiFieldSearch ouiFieldSearch--fullWidth ouiSelectableSearch ouiSelectableTemplateSitewide__search"
             placeholder="Search for anything..."
             type="search"
             value=""
           />
           <div
-            class="euiFormControlLayoutIcons"
+            class="ouiFormControlLayoutIcons"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="search"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="search"
               />
             </span>
           </div>
@@ -47,42 +47,42 @@ exports[`EuiSelectableTemplateSitewide is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableTemplateSitewide props popoverButton is not rendered with popoverButtonBreakpoints xs 1`] = `
+exports[`OuiSelectableTemplateSitewide props popoverButton is not rendered with popoverButtonBreakpoints xs 1`] = `
 <div
-  class="euiSelectable euiSelectableTemplateSitewide"
+  class="ouiSelectable ouiSelectableTemplateSitewide"
 >
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover--displayBlock"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <div
-        class="euiFormControlLayout euiFormControlLayout--fullWidth"
+        class="ouiFormControlLayout ouiFormControlLayout--fullWidth"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <input
             aria-activedescendant=""
             aria-haspopup="listbox"
             aria-label="Filter options"
             autocomplete="off"
-            class="euiFieldSearch euiFieldSearch--fullWidth euiSelectableSearch euiSelectableTemplateSitewide__search"
+            class="ouiFieldSearch ouiFieldSearch--fullWidth ouiSelectableSearch ouiSelectableTemplateSitewide__search"
             placeholder="Search for anything..."
             type="search"
             value=""
           />
           <div
-            class="euiFormControlLayoutIcons"
+            class="ouiFormControlLayoutIcons"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="search"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="search"
               />
             </span>
           </div>
@@ -93,15 +93,15 @@ exports[`EuiSelectableTemplateSitewide props popoverButton is not rendered with 
 </div>
 `;
 
-exports[`EuiSelectableTemplateSitewide props popoverButton is rendered 1`] = `
+exports[`OuiSelectableTemplateSitewide props popoverButton is rendered 1`] = `
 <div
-  class="euiSelectable euiSelectableTemplateSitewide"
+  class="ouiSelectable ouiSelectableTemplateSitewide"
 >
   <div
-    class="euiPopover euiPopover--anchorDownCenter"
+    class="ouiPopover ouiPopover--anchorDownCenter"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button>
         Button
@@ -111,15 +111,15 @@ exports[`EuiSelectableTemplateSitewide props popoverButton is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableTemplateSitewide props popoverButton is rendered with popoverButtonBreakpoints m 1`] = `
+exports[`OuiSelectableTemplateSitewide props popoverButton is rendered with popoverButtonBreakpoints m 1`] = `
 <div
-  class="euiSelectable euiSelectableTemplateSitewide"
+  class="ouiSelectable ouiSelectableTemplateSitewide"
 >
   <div
-    class="euiPopover euiPopover--anchorDownCenter"
+    class="ouiPopover ouiPopover--anchorDownCenter"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button>
         Button
@@ -129,42 +129,42 @@ exports[`EuiSelectableTemplateSitewide props popoverButton is rendered with popo
 </div>
 `;
 
-exports[`EuiSelectableTemplateSitewide props popoverFooter is rendered 1`] = `
+exports[`OuiSelectableTemplateSitewide props popoverFooter is rendered 1`] = `
 <div
-  class="euiSelectable euiSelectableTemplateSitewide"
+  class="ouiSelectable ouiSelectableTemplateSitewide"
 >
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover--displayBlock"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <div
-        class="euiFormControlLayout euiFormControlLayout--fullWidth"
+        class="ouiFormControlLayout ouiFormControlLayout--fullWidth"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <input
             aria-activedescendant=""
             aria-haspopup="listbox"
             aria-label="Filter options"
             autocomplete="off"
-            class="euiFieldSearch euiFieldSearch--fullWidth euiSelectableSearch euiSelectableTemplateSitewide__search"
+            class="ouiFieldSearch ouiFieldSearch--fullWidth ouiSelectableSearch ouiSelectableTemplateSitewide__search"
             placeholder="Search for anything..."
             type="search"
             value=""
           />
           <div
-            class="euiFormControlLayoutIcons"
+            class="ouiFormControlLayoutIcons"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="search"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="search"
               />
             </span>
           </div>
@@ -175,42 +175,42 @@ exports[`EuiSelectableTemplateSitewide props popoverFooter is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableTemplateSitewide props popoverProps is rendered 1`] = `
+exports[`OuiSelectableTemplateSitewide props popoverProps is rendered 1`] = `
 <div
-  class="euiSelectable euiSelectableTemplateSitewide"
+  class="ouiSelectable ouiSelectableTemplateSitewide"
 >
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock customPopoverClass"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover--displayBlock customPopoverClass"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <div
-        class="euiFormControlLayout euiFormControlLayout--fullWidth"
+        class="ouiFormControlLayout ouiFormControlLayout--fullWidth"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <input
             aria-activedescendant=""
             aria-haspopup="listbox"
             aria-label="Filter options"
             autocomplete="off"
-            class="euiFieldSearch euiFieldSearch--fullWidth euiSelectableSearch euiSelectableTemplateSitewide__search"
+            class="ouiFieldSearch ouiFieldSearch--fullWidth ouiSelectableSearch ouiSelectableTemplateSitewide__search"
             placeholder="Search for anything..."
             type="search"
             value=""
           />
           <div
-            class="euiFormControlLayoutIcons"
+            class="ouiFormControlLayoutIcons"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="search"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="search"
               />
             </span>
           </div>
@@ -221,42 +221,42 @@ exports[`EuiSelectableTemplateSitewide props popoverProps is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableTemplateSitewide props popoverTitle is rendered 1`] = `
+exports[`OuiSelectableTemplateSitewide props popoverTitle is rendered 1`] = `
 <div
-  class="euiSelectable euiSelectableTemplateSitewide"
+  class="ouiSelectable ouiSelectableTemplateSitewide"
 >
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover--displayBlock"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <div
-        class="euiFormControlLayout euiFormControlLayout--fullWidth"
+        class="ouiFormControlLayout ouiFormControlLayout--fullWidth"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <input
             aria-activedescendant=""
             aria-haspopup="listbox"
             aria-label="Filter options"
             autocomplete="off"
-            class="euiFieldSearch euiFieldSearch--fullWidth euiSelectableSearch euiSelectableTemplateSitewide__search"
+            class="ouiFieldSearch ouiFieldSearch--fullWidth ouiSelectableSearch ouiSelectableTemplateSitewide__search"
             placeholder="Search for anything..."
             type="search"
             value=""
           />
           <div
-            class="euiFormControlLayoutIcons"
+            class="ouiFormControlLayoutIcons"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="search"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="search"
               />
             </span>
           </div>

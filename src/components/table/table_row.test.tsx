@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,15 +32,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableRow } from './table_row';
+import { OuiTableRow } from './table_row';
 
-import { EuiTableRowCell } from './table_row_cell';
+import { OuiTableRowCell } from './table_row_cell';
 
-test('renders EuiTableRow', () => {
+test('renders OuiTableRow', () => {
   const component = (
-    <EuiTableRow {...requiredProps}>
-      <EuiTableRowCell>hi</EuiTableRowCell>
-    </EuiTableRow>
+    <OuiTableRow {...requiredProps}>
+      <OuiTableRowCell>hi</OuiTableRowCell>
+    </OuiTableRow>
   );
 
   expect(render(component)).toMatchSnapshot();
@@ -38,9 +49,9 @@ test('renders EuiTableRow', () => {
 describe('isSelected', () => {
   test('renders true when specified', () => {
     const component = (
-      <EuiTableRow isSelected={true}>
-        <EuiTableRowCell />
-      </EuiTableRow>
+      <OuiTableRow isSelected={true}>
+        <OuiTableRowCell />
+      </OuiTableRow>
     );
 
     expect(render(component)).toMatchSnapshot();

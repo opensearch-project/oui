@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 import {
-  EuiInMemoryTable,
-  EuiLink,
-  EuiHealth,
-  EuiSpacer,
-  EuiSwitch,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiCallOut,
-  EuiCode,
+  OuiInMemoryTable,
+  OuiLink,
+  OuiHealth,
+  OuiSpacer,
+  OuiSwitch,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiCallOut,
+  OuiCode,
 } from '../../../../../src/components';
 
 /*
@@ -58,9 +69,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: (username) => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </OuiLink>
       ),
     },
     {
@@ -85,7 +96,7 @@ export const Table = () => {
       render: (online) => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <OuiHealth color={color}>{label}</OuiHealth>;
       },
     },
   ];
@@ -120,31 +131,31 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+      <OuiFlexGroup>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label="Incremental"
             checked={incremental}
             onChange={() => setIncremental(!incremental)}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label="With Filters"
             checked={filters}
             onChange={() => setFilters(!filters)}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label="Content between"
             checked={contentBetween}
             onChange={() => setContentBetween(!contentBetween)}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer size="l" />
-      <EuiInMemoryTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+      <OuiSpacer size="l" />
+      <OuiInMemoryTable
         items={store.users}
         columns={columns}
         search={search}
@@ -152,12 +163,12 @@ export const Table = () => {
         sorting={true}
         childrenBetween={
           contentBetween && (
-            <EuiCallOut
+            <OuiCallOut
               size="s"
               title={
                 <>
                   You can inject custom content between the search bar and the
-                  table using <EuiCode>childrenBetween</EuiCode>.
+                  table using <OuiCode>childrenBetween</OuiCode>.
                 </>
               }
             />

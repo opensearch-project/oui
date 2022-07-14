@@ -1,29 +1,40 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiHeader,
-  EuiHeaderSectionItem,
-  EuiHeaderLogo,
-  EuiHeaderLinks,
-  EuiHeaderLink,
+  OuiHeader,
+  OuiHeaderSectionItem,
+  OuiHeaderLogo,
+  OuiHeaderLinks,
+  OuiHeaderLink,
 } from '../../../../src/components';
 
 export default () => {
   return (
-    <EuiHeader>
-      <EuiHeaderSectionItem border="right">
-        <EuiHeaderLogo>Elastic</EuiHeaderLogo>
-      </EuiHeaderSectionItem>
+    <OuiHeader>
+      <OuiHeaderSectionItem border="right">
+        <OuiHeaderLogo>Elastic</OuiHeaderLogo>
+      </OuiHeaderSectionItem>
 
-      <EuiHeaderSectionItem>
-        <EuiHeaderLinks aria-label="App navigation links example">
-          <EuiHeaderLink isActive>Docs</EuiHeaderLink>
+      <OuiHeaderSectionItem>
+        <OuiHeaderLinks aria-label="App navigation links example">
+          <OuiHeaderLink isActive>Docs</OuiHeaderLink>
 
-          <EuiHeaderLink>Code</EuiHeaderLink>
+          <OuiHeaderLink>Code</OuiHeaderLink>
 
-          <EuiHeaderLink iconType="help">Help</EuiHeaderLink>
-        </EuiHeaderLinks>
-      </EuiHeaderSectionItem>
-    </EuiHeader>
+          <OuiHeaderLink iconType="help">Help</OuiHeaderLink>
+        </OuiHeaderLinks>
+      </OuiHeaderSectionItem>
+    </OuiHeader>
   );
 };

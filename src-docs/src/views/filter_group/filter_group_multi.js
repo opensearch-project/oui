@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiFieldSearch,
-  EuiFilterSelectItem,
-  EuiLoadingChart,
-  EuiSpacer,
-  EuiIcon,
-  EuiFilterGroup,
-  EuiFilterButton,
+  OuiPopover,
+  OuiPopoverTitle,
+  OuiFieldSearch,
+  OuiFilterSelectItem,
+  OuiLoadingChart,
+  OuiSpacer,
+  OuiIcon,
+  OuiFilterGroup,
+  OuiFilterButton,
 } from '../../../../src/components';
 
 export default () => {
@@ -69,7 +80,7 @@ export default () => {
   }
 
   const button = (
-    <EuiFilterButton
+    <OuiFilterButton
       iconType="arrowDown"
       onClick={onButtonClick}
       isSelected={isPopoverOpen}
@@ -77,51 +88,51 @@ export default () => {
       hasActiveFilters={!!items.find((item) => item.checked === 'on')}
       numActiveFilters={items.filter((item) => item.checked === 'on').length}>
       Composers
-    </EuiFilterButton>
+    </OuiFilterButton>
   );
 
   return (
-    <EuiFilterGroup>
-      <EuiPopover
+    <OuiFilterGroup>
+      <OuiPopover
         id="popoverExampleMultiSelect"
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}
         panelPaddingSize="none">
-        <EuiPopoverTitle paddingSize="s">
-          <EuiFieldSearch compressed />
-        </EuiPopoverTitle>
-        <div className="euiFilterSelect__items">
+        <OuiPopoverTitle paddingSize="s">
+          <OuiFieldSearch compressed />
+        </OuiPopoverTitle>
+        <div className="ouiFilterSelect__items">
           {items.map((item, index) => (
-            <EuiFilterSelectItem
+            <OuiFilterSelectItem
               checked={item.checked}
               key={index}
               onClick={() => updateItem(index)}>
               {item.name}
-            </EuiFilterSelectItem>
+            </OuiFilterSelectItem>
           ))}
           {/*
               Use when loading items initially
             */}
-          <div className="euiFilterSelect__note">
-            <div className="euiFilterSelect__noteContent">
-              <EuiLoadingChart size="m" />
-              <EuiSpacer size="xs" />
+          <div className="ouiFilterSelect__note">
+            <div className="ouiFilterSelect__noteContent">
+              <OuiLoadingChart size="m" />
+              <OuiSpacer size="xs" />
               <p>Loading filters</p>
             </div>
           </div>
           {/*
               Use when no results are returned
             */}
-          <div className="euiFilterSelect__note">
-            <div className="euiFilterSelect__noteContent">
-              <EuiIcon type="minusInCircle" />
-              <EuiSpacer size="xs" />
+          <div className="ouiFilterSelect__note">
+            <div className="ouiFilterSelect__noteContent">
+              <OuiIcon type="minusInCircle" />
+              <OuiSpacer size="xs" />
               <p>No filters found</p>
             </div>
           </div>
         </div>
-      </EuiPopover>
-    </EuiFilterGroup>
+      </OuiPopover>
+    </OuiFilterGroup>
   );
 };

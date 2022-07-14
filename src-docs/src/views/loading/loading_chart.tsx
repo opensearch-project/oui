@@ -1,20 +1,31 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiLoadingChart } from '../../../../src/components/loading';
+import { OuiLoadingChart } from '../../../../src/components/loading';
 
 export default () => (
   <div>
-    <EuiLoadingChart size="m" />
+    <OuiLoadingChart size="m" />
     &nbsp;&nbsp;
-    <EuiLoadingChart size="l" />
+    <OuiLoadingChart size="l" />
     &nbsp;&nbsp;
-    <EuiLoadingChart size="xl" />
+    <OuiLoadingChart size="xl" />
     <br />
     <br />
-    <EuiLoadingChart size="m" mono />
+    <OuiLoadingChart size="m" mono />
     &nbsp;&nbsp;
-    <EuiLoadingChart size="l" mono />
+    <OuiLoadingChart size="l" mono />
     &nbsp;&nbsp;
-    <EuiLoadingChart size="xl" mono />
+    <OuiLoadingChart size="xl" mono />
   </div>
 );

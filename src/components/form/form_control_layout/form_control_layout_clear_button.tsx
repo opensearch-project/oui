@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,36 +32,36 @@ import React, { FunctionComponent, ButtonHTMLAttributes } from 'react';
 
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../../common';
-import { EuiIcon } from '../../icon';
-import { EuiI18n } from '../../i18n';
+import { OuiIcon } from '../../icon';
+import { OuiI18n } from '../../i18n';
 
 const sizeToClassNameMap = {
-  s: 'euiFormControlLayoutClearButton--small',
+  s: 'ouiFormControlLayoutClearButton--small',
   m: null,
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiFormControlLayoutClearButtonProps = CommonProps &
+export type OuiFormControlLayoutClearButtonProps = CommonProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
     size?: typeof SIZES[number];
   };
 
-export const EuiFormControlLayoutClearButton: FunctionComponent<EuiFormControlLayoutClearButtonProps> = ({
+export const OuiFormControlLayoutClearButton: FunctionComponent<OuiFormControlLayoutClearButtonProps> = ({
   className,
   onClick,
   size = 'm',
   ...rest
 }) => {
   const classes = classNames(
-    'euiFormControlLayoutClearButton',
+    'ouiFormControlLayoutClearButton',
     sizeToClassNameMap[size],
     className
   );
 
   return (
-    <EuiI18n
-      token="euiFormControlLayoutClearButton.label"
+    <OuiI18n
+      token="ouiFormControlLayoutClearButton.label"
       default="Clear input">
       {(label: string) => (
         <button
@@ -59,12 +70,12 @@ export const EuiFormControlLayoutClearButton: FunctionComponent<EuiFormControlLa
           onClick={onClick}
           aria-label={label}
           {...rest}>
-          <EuiIcon
-            className="euiFormControlLayoutClearButton__icon"
+          <OuiIcon
+            className="ouiFormControlLayoutClearButton__icon"
             type="cross"
           />
         </button>
       )}
-    </EuiI18n>
+    </OuiI18n>
   );
 };

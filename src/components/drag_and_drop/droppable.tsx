@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,18 +37,18 @@ import React, {
 import { Droppable, DroppableProps } from 'react-beautiful-dnd';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
-import { EuiDragDropContextContext } from './drag_drop_context';
+import { OuiDragDropContextContext } from './drag_drop_context';
 
 const spacingToClassNameMap = {
   none: null,
-  s: 'euiDroppable--s',
-  m: 'euiDroppable--m',
-  l: 'euiDroppable--l',
+  s: 'ouiDroppable--s',
+  m: 'ouiDroppable--m',
+  l: 'ouiDroppable--l',
 };
 
-export type EuiDroppableSpacing = keyof typeof spacingToClassNameMap;
+export type OuiDroppableSpacing = keyof typeof spacingToClassNameMap;
 
-export interface EuiDroppableProps
+export interface OuiDroppableProps
   extends CommonProps,
     Omit<DroppableProps, 'children'> {
   /**
@@ -53,9 +64,9 @@ export interface EuiDroppableProps
   /**
    * Adds padding to the droppable area
    */
-  spacing?: EuiDroppableSpacing;
+  spacing?: OuiDroppableSpacing;
   /**
-   * Adds an EuiPanel style to the droppable area
+   * Adds an OuiPanel style to the droppable area
    */
   withPanel?: boolean;
   /**
@@ -64,11 +75,11 @@ export interface EuiDroppableProps
   grow?: boolean;
 }
 
-export const EuiDroppableContext = React.createContext({
+export const OuiDroppableContext = React.createContext({
   cloneItems: false,
 });
 
-export const EuiDroppable: FunctionComponent<EuiDroppableProps> = ({
+export const OuiDroppable: FunctionComponent<OuiDroppableProps> = ({
   droppableId,
   direction,
   isDropDisabled = false,
@@ -77,13 +88,13 @@ export const EuiDroppable: FunctionComponent<EuiDroppableProps> = ({
   cloneDraggables = false,
   spacing = 'none',
   style,
-  type = 'EUI_DEFAULT',
+  type = 'OUI_DEFAULT',
   withPanel = false,
   grow = false,
   'data-test-subj': dataTestSubj = 'droppable',
   ...rest
 }) => {
-  const { isDraggingType } = useContext(EuiDragDropContextContext);
+  const { isDraggingType } = useContext(OuiDragDropContextContext);
   const dropIsDisabled: boolean = cloneDraggables ? true : isDropDisabled;
   return (
     <Droppable
@@ -94,20 +105,20 @@ export const EuiDroppable: FunctionComponent<EuiDroppableProps> = ({
       {...rest}>
       {(provided, snapshot) => {
         const classes = classNames(
-          'euiDroppable',
+          'ouiDroppable',
           {
-            'euiDroppable--isDisabled': dropIsDisabled,
-            'euiDroppable--isDraggingOver': snapshot.isDraggingOver,
-            'euiDroppable--isDraggingType': isDraggingType === type,
-            'euiDroppable--withPanel': withPanel,
-            'euiDroppable--grow': grow,
-            'euiDroppable--noGrow': !grow,
+            'ouiDroppable--isDisabled': dropIsDisabled,
+            'ouiDroppable--isDraggingOver': snapshot.isDraggingOver,
+            'ouiDroppable--isDraggingType': isDraggingType === type,
+            'ouiDroppable--withPanel': withPanel,
+            'ouiDroppable--grow': grow,
+            'ouiDroppable--noGrow': !grow,
           },
           spacingToClassNameMap[spacing],
           className
         );
-        const placeholderClasses = classNames('euiDroppable__placeholder', {
-          'euiDroppable__placeholder--isHidden': cloneDraggables,
+        const placeholderClasses = classNames('ouiDroppable__placeholder', {
+          'ouiDroppable__placeholder--isHidden': cloneDraggables,
         });
         const DroppableElement =
           typeof children === 'function'
@@ -120,12 +131,12 @@ export const EuiDroppable: FunctionComponent<EuiDroppableProps> = ({
             style={style}
             data-test-subj={dataTestSubj}
             className={classes}>
-            <EuiDroppableContext.Provider
+            <OuiDroppableContext.Provider
               value={{
                 cloneItems: cloneDraggables,
               }}>
               {DroppableElement}
-            </EuiDroppableContext.Provider>
+            </OuiDroppableContext.Provider>
             <div className={placeholderClasses}>{provided.placeholder}</div>
           </div>
         );

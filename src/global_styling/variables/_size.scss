@@ -1,13 +1,24 @@
-$euiSize:     16px !default;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-$euiSizeXS:   $euiSize * .25 !default;
-$euiSizeS:    $euiSize * .5 !default;
-$euiSizeM:    $euiSize * .75 !default;
-$euiSizeL:    $euiSize * 1.5 !default;
-$euiSizeXL:   $euiSize * 2 !default;
-$euiSizeXXL:  $euiSize * 2.5 !default;
+$ouiSize:     16px !default;
 
-$euiButtonMinWidth: $euiSize * 7 !default;
+$ouiSizeXS:   $ouiSize * .25 !default;
+$ouiSizeS:    $ouiSize * .5 !default;
+$ouiSizeM:    $ouiSize * .75 !default;
+$ouiSizeL:    $ouiSize * 1.5 !default;
+$ouiSizeXL:   $ouiSize * 2 !default;
+$ouiSizeXXL:  $ouiSize * 2.5 !default;
 
-$euiScrollBar: $euiSize !default;
-$euiScrollBarCorner: $euiSizeS * .75 !default;
+$ouiButtonMinWidth: $ouiSize * 7 !default;
+
+$ouiScrollBar: $ouiSize !default;
+$ouiScrollBarCorner: $ouiSizeS * .75 !default;

@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiModal,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiCodeBlock,
+  OuiButton,
+  OuiModal,
+  OuiModalBody,
+  OuiModalFooter,
+  OuiModalHeader,
+  OuiModalHeaderTitle,
+  OuiCodeBlock,
 } from '../../../../src/components';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { OuiSpacer } from '../../../../src/components/spacer';
 
 export default () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -21,47 +32,47 @@ export default () => {
 
   if (isModalVisible) {
     modal = (
-      <EuiModal style={{ width: 800 }} onClose={closeModal}>
-        <EuiModalHeader>
-          <EuiModalHeaderTitle>
+      <OuiModal style={{ width: 800 }} onClose={closeModal}>
+        <OuiModalHeader>
+          <OuiModalHeaderTitle>
             <h1>Modal title</h1>
-          </EuiModalHeaderTitle>
-        </EuiModalHeader>
+          </OuiModalHeaderTitle>
+        </OuiModalHeader>
 
-        <EuiModalBody>
+        <OuiModalBody>
           This modal has the following setup:
-          <EuiSpacer />
-          <EuiCodeBlock language="html" isCopyable>
-            {`<EuiModal style={{ width: 800 }} onClose={closeModal}>
-  <EuiModalHeader>
-    <EuiModalHeaderTitle><h1><!-- Modal title --></h1></EuiModalHeaderTitle>
-  </EuiModalHeader>
+          <OuiSpacer />
+          <OuiCodeBlock language="html" isCopyable>
+            {`<OuiModal style={{ width: 800 }} onClose={closeModal}>
+  <OuiModalHeader>
+    <OuiModalHeaderTitle><h1><!-- Modal title --></h1></OuiModalHeaderTitle>
+  </OuiModalHeader>
 
-  <EuiModalBody>
+  <OuiModalBody>
     <!-- Modal body -->
-  </EuiModalBody>
+  </OuiModalBody>
 
-  <EuiModalFooter>
-    <EuiButton onClick={closeModal} fill>
+  <OuiModalFooter>
+    <OuiButton onClick={closeModal} fill>
       Close
-    </EuiButton>
-  </EuiModalFooter>
-</EuiModal>`}
-          </EuiCodeBlock>
-        </EuiModalBody>
+    </OuiButton>
+  </OuiModalFooter>
+</OuiModal>`}
+          </OuiCodeBlock>
+        </OuiModalBody>
 
-        <EuiModalFooter>
-          <EuiButton onClick={closeModal} fill>
+        <OuiModalFooter>
+          <OuiButton onClick={closeModal} fill>
             Close
-          </EuiButton>
-        </EuiModalFooter>
-      </EuiModal>
+          </OuiButton>
+        </OuiModalFooter>
+      </OuiModal>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={showModal}>Show modal with custom width</EuiButton>
+      <OuiButton onClick={showModal}>Show modal with custom width</OuiButton>
       {modal}
     </div>
   );

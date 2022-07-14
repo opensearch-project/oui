@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,41 +39,41 @@ import classNames from 'classnames';
 import tabbable from 'tabbable';
 
 import { CommonProps, NoArgCallback, keysOf } from '../common';
-import { EuiIcon } from '../icon';
-import { EuiResizeObserver } from '../observer/resize_observer';
+import { OuiIcon } from '../icon';
+import { OuiResizeObserver } from '../observer/resize_observer';
 import { cascadingMenuKeys } from '../../services';
 import {
-  EuiContextMenuItem,
-  EuiContextMenuItemProps,
+  OuiContextMenuItem,
+  OuiContextMenuItemProps,
 } from './context_menu_item';
 
-export type EuiContextMenuPanelHeightChangeHandler = (height: number) => void;
-export type EuiContextMenuPanelTransitionType = 'in' | 'out';
-export type EuiContextMenuPanelTransitionDirection = 'next' | 'previous';
-export type EuiContextMenuPanelShowPanelCallback = (
+export type OuiContextMenuPanelHeightChangeHandler = (height: number) => void;
+export type OuiContextMenuPanelTransitionType = 'in' | 'out';
+export type OuiContextMenuPanelTransitionDirection = 'next' | 'previous';
+export type OuiContextMenuPanelShowPanelCallback = (
   currentPanelIndex?: number
 ) => void;
 
 const titleSizeToClassNameMap = {
-  s: 'euiContextMenuPanelTitle--small',
+  s: 'ouiContextMenuPanelTitle--small',
   m: null,
 };
 
 export const SIZES = keysOf(titleSizeToClassNameMap);
 
-export interface EuiContextMenuPanelProps {
+export interface OuiContextMenuPanelProps {
   hasFocus?: boolean;
   initialFocusedItemIndex?: number;
   items?: ReactElement[];
   onClose?: NoArgCallback<void>;
-  onHeightChange?: EuiContextMenuPanelHeightChangeHandler;
+  onHeightChange?: OuiContextMenuPanelHeightChangeHandler;
   onTransitionComplete?: NoArgCallback<void>;
   onUseKeyboardToNavigate?: NoArgCallback<void>;
-  showNextPanel?: EuiContextMenuPanelShowPanelCallback;
+  showNextPanel?: OuiContextMenuPanelShowPanelCallback;
   showPreviousPanel?: NoArgCallback<void>;
   title?: ReactNode;
-  transitionDirection?: EuiContextMenuPanelTransitionDirection;
-  transitionType?: EuiContextMenuPanelTransitionType;
+  transitionDirection?: OuiContextMenuPanelTransitionDirection;
+  transitionType?: OuiContextMenuPanelTransitionType;
   watchedItemProps?: string[];
   /**
    * Alters the size of the items and the title
@@ -75,16 +86,16 @@ type Props = CommonProps &
     HTMLAttributes<HTMLDivElement>,
     'onKeyDown' | 'tabIndex' | 'onAnimationEnd' | 'title'
   > &
-  EuiContextMenuPanelProps;
+  OuiContextMenuPanelProps;
 
 const transitionDirectionAndTypeToClassNameMap = {
   next: {
-    in: 'euiContextMenuPanel-txInLeft',
-    out: 'euiContextMenuPanel-txOutLeft',
+    in: 'ouiContextMenuPanel-txInLeft',
+    out: 'ouiContextMenuPanel-txOutLeft',
   },
   previous: {
-    in: 'euiContextMenuPanel-txInRight',
-    out: 'euiContextMenuPanel-txOutRight',
+    in: 'ouiContextMenuPanel-txInRight',
+    out: 'ouiContextMenuPanel-txOutRight',
   },
 };
 
@@ -98,7 +109,7 @@ interface State {
   height?: number;
 }
 
-export class EuiContextMenuPanel extends Component<Props, State> {
+export class OuiContextMenuPanel extends Component<Props, State> {
   static defaultProps: Partial<Props> = {
     hasFocus: true,
     items: [],
@@ -450,7 +461,7 @@ export class EuiContextMenuPanel extends Component<Props, State> {
 
     if (title) {
       const titleClasses = classNames(
-        'euiContextMenuPanelTitle',
+        'ouiContextMenuPanelTitle',
         size && titleSizeToClassNameMap[size]
       );
 
@@ -464,28 +475,28 @@ export class EuiContextMenuPanel extends Component<Props, State> {
               this.backButton = node;
             }}
             data-test-subj="contextMenuPanelTitleButton">
-            <span className="euiContextMenu__itemLayout">
-              <EuiIcon
+            <span className="ouiContextMenu__itemLayout">
+              <OuiIcon
                 type="arrowLeft"
                 size="m"
-                className="euiContextMenu__icon"
+                className="ouiContextMenu__icon"
               />
 
-              <span className="euiContextMenu__text">{title}</span>
+              <span className="ouiContextMenu__text">{title}</span>
             </span>
           </button>
         );
       } else {
         panelTitle = (
           <div className={titleClasses}>
-            <span className="euiContextMenu__itemLayout">{title}</span>
+            <span className="ouiContextMenu__itemLayout">{title}</span>
           </div>
         );
       }
     }
 
     const classes = classNames(
-      'euiContextMenuPanel',
+      'ouiContextMenuPanel',
       className,
       transitionDirection &&
         transitionType &&
@@ -499,13 +510,13 @@ export class EuiContextMenuPanel extends Component<Props, State> {
     const content =
       items && items.length
         ? items.map((MenuItem, index) => {
-            const cloneProps: Partial<EuiContextMenuItemProps> = {
+            const cloneProps: Partial<OuiContextMenuItemProps> = {
               buttonRef: (node) => this.menuItemRef(index, node),
             };
             if (size) {
               cloneProps.size = size;
             }
-            return MenuItem.type === EuiContextMenuItem
+            return MenuItem.type === OuiContextMenuItem
               ? cloneElement(MenuItem, cloneProps)
               : MenuItem;
           })
@@ -522,9 +533,9 @@ export class EuiContextMenuPanel extends Component<Props, State> {
         {panelTitle}
 
         <div ref={this.contentRef}>
-          <EuiResizeObserver onResize={() => this.updateHeight()}>
+          <OuiResizeObserver onResize={() => this.updateHeight()}>
             {(resizeRef) => <div ref={resizeRef}>{content}</div>}
-          </EuiResizeObserver>
+          </OuiResizeObserver>
         </div>
       </div>
     );

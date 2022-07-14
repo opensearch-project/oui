@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiBottomBar,
-  EuiButtonGroup,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiBottomBar,
+  OuiButtonGroup,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => {
@@ -28,7 +39,7 @@ export default () => {
 
   return (
     <div>
-      <EuiButtonGroup
+      <OuiButtonGroup
         legend="Bottom Bar demo toggle buttons group"
         type="single"
         buttonSize="m"
@@ -39,20 +50,20 @@ export default () => {
       />
 
       {toggleIdSelected && (
-        <EuiBottomBar
+        <OuiBottomBar
           affordForDisplacement={toggleIdSelected === 'bottomBarStandard'}>
-          <EuiFlexGroup justifyContent="flexEnd">
-            <EuiFlexItem grow={false}>
-              <EuiButton
+          <OuiFlexGroup justifyContent="flexEnd">
+            <OuiFlexItem grow={false}>
+              <OuiButton
                 onClick={() => setToggleIdSelected(null)}
                 color="ghost"
                 size="s"
                 iconType="cross">
                 close
-              </EuiButton>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiBottomBar>
+              </OuiButton>
+            </OuiFlexItem>
+          </OuiFlexGroup>
+        </OuiBottomBar>
       )}
     </div>
   );

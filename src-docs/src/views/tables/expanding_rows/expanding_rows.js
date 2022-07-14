@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiButtonIcon,
-  EuiHealth,
-  EuiButton,
-  EuiDescriptionList,
+  OuiBasicTable,
+  OuiButtonIcon,
+  OuiHealth,
+  OuiButton,
+  OuiDescriptionList,
 } from '../../../../../src/components';
 
 import { RIGHT_ALIGNMENT } from '../../../../../src/services';
@@ -70,9 +81,9 @@ export const Table = () => {
       return;
     }
     return (
-      <EuiButton color="danger" iconType="trash" onClick={onClickDelete}>
+      <OuiButton color="danger" iconType="trash" onClick={onClickDelete}>
         Delete {selectedItems.length} Users
-      </EuiButton>
+      </OuiButton>
     );
   };
 
@@ -92,11 +103,11 @@ export const Table = () => {
         },
         {
           title: 'Online',
-          description: <EuiHealth color={color}>{label}</EuiHealth>,
+          description: <OuiHealth color={color}>{label}</OuiHealth>,
         },
       ];
       itemIdToExpandedRowMapValues[item.id] = (
-        <EuiDescriptionList listItems={listItems} />
+        <OuiDescriptionList listItems={listItems} />
       );
     }
     setItemIdToExpandedRowMap(itemIdToExpandedRowMapValues);
@@ -161,7 +172,7 @@ export const Table = () => {
       width: '40px',
       isExpander: true,
       render: (item) => (
-        <EuiButtonIcon
+        <OuiButtonIcon
           onClick={() => toggleDetails(item)}
           aria-label={itemIdToExpandedRowMap[item.id] ? 'Collapse' : 'Expand'}
           iconType={itemIdToExpandedRowMap[item.id] ? 'arrowUp' : 'arrowDown'}
@@ -194,7 +205,7 @@ export const Table = () => {
   return (
     <Fragment>
       {deleteButton}
-      <EuiBasicTable
+      <OuiBasicTable
         items={pageOfItems}
         itemId="id"
         itemIdToExpandedRowMap={itemIdToExpandedRowMap}

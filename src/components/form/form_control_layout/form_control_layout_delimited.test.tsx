@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,13 +32,13 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFormControlLayoutDelimited } from './form_control_layout_delimited';
-import { EuiIcon } from '../../icon';
+import { OuiFormControlLayoutDelimited } from './form_control_layout_delimited';
+import { OuiIcon } from '../../icon';
 
-describe('EuiFormControlLayoutDelimited', () => {
+describe('OuiFormControlLayoutDelimited', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFormControlLayoutDelimited
+      <OuiFormControlLayoutDelimited
         startControl={<span>start</span>}
         endControl={<span>end</span>}
         {...requiredProps}
@@ -42,7 +53,7 @@ describe('EuiFormControlLayoutDelimited', () => {
       describe('is rendered', () => {
         test('as a string', () => {
           const component = render(
-            <EuiFormControlLayoutDelimited
+            <OuiFormControlLayoutDelimited
               startControl={<span>start</span>}
               endControl={<span>end</span>}
               delimiter="+"
@@ -53,10 +64,10 @@ describe('EuiFormControlLayoutDelimited', () => {
         });
 
         test('as a node', () => {
-          const icon = <EuiIcon type="alert" />;
+          const icon = <OuiIcon type="alert" />;
 
           const component = render(
-            <EuiFormControlLayoutDelimited
+            <OuiFormControlLayoutDelimited
               startControl={<span>start</span>}
               endControl={<span>end</span>}
               delimiter={icon}

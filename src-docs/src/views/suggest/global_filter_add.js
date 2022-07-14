@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButtonEmpty,
+  OuiPopover,
+  OuiPopoverTitle,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 import GlobalFilterForm from './global_filter_form';
@@ -22,32 +33,32 @@ export default () => {
   };
 
   return (
-    <EuiPopover
+    <OuiPopover
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       button={
-        <EuiButtonEmpty onClick={togglePopover} size="xs">
+        <OuiButtonEmpty onClick={togglePopover} size="xs">
           + Add filter
-        </EuiButtonEmpty>
+        </OuiButtonEmpty>
       }
       anchorPosition="downCenter">
-      <EuiPopoverTitle>
-        <EuiFlexGroup alignItems="baseline">
-          <EuiFlexItem>Add a filter</EuiFlexItem>
-          <EuiFlexItem grow={false}>
+      <OuiPopoverTitle>
+        <OuiFlexGroup alignItems="baseline">
+          <OuiFlexItem>Add a filter</OuiFlexItem>
+          <OuiFlexItem grow={false}>
             {/* This button should open a modal */}
-            <EuiButtonEmpty flush="right" size="xs">
+            <OuiButtonEmpty flush="right" size="xs">
               Edit as Query DSL
-            </EuiButtonEmpty>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiPopoverTitle>
+            </OuiButtonEmpty>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+      </OuiPopoverTitle>
 
       <GlobalFilterForm
         style={{ width: 400 }}
         onAdd={togglePopover}
         onCancel={togglePopover}
       />
-    </EuiPopover>
+    </OuiPopover>
   );
 };

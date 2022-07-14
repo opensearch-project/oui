@@ -1,32 +1,43 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiListGroupItem,
-  EuiListGroup,
+  OuiListGroupItem,
+  OuiListGroup,
 } from '../../../../src/components/list_group';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { OuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
   <>
-    <EuiListGroup>
-      <EuiListGroupItem href="#" label="Inherit by default (xs)" size="xs" />
+    <OuiListGroup>
+      <OuiListGroupItem href="#" label="Inherit by default (xs)" size="xs" />
 
-      <EuiListGroupItem
+      <OuiListGroupItem
         onClick={() => {}}
         label="Primary (s)"
         color="primary"
         size="s"
       />
 
-      <EuiListGroupItem href="#" label="Text (m)" color="text" />
+      <OuiListGroupItem href="#" label="Text (m)" color="text" />
 
-      <EuiListGroupItem href="#" label="Subdued (l)" color="subdued" size="l" />
-    </EuiListGroup>
+      <OuiListGroupItem href="#" label="Subdued (l)" color="subdued" size="l" />
+    </OuiListGroup>
 
-    <EuiSpacer size="s" />
+    <OuiSpacer size="s" />
 
-    <EuiListGroup style={{ background: 'black' }}>
-      <EuiListGroupItem href="#" label="Ghost" color="ghost" />
-    </EuiListGroup>
+    <OuiListGroup style={{ background: 'black' }}>
+      <OuiListGroupItem href="#" label="Ghost" color="ghost" />
+    </OuiListGroup>
   </>
 );

@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiCode,
-  EuiGlobalToastList,
-  EuiLink,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButton,
+  OuiCode,
+  OuiGlobalToastList,
+  OuiLink,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiButton,
 } from '../../../../src/components';
 
 let addToastHandler;
@@ -51,7 +62,7 @@ export default () => {
             </p>
             <p>
               And some other stuff on another line, just for kicks. And{' '}
-              <EuiLink href="#">here&rsquo;s a link</EuiLink>.
+              <OuiLink href="#">here&rsquo;s a link</OuiLink>.
             </p>
           </Fragment>
         ),
@@ -88,7 +99,7 @@ export default () => {
         toastLifeTimeMs: 15000,
         text: (
           <p>
-            This toast overrides the default <EuiCode>toastLifeTimeMs</EuiCode>{' '}
+            This toast overrides the default <OuiCode>toastLifeTimeMs</OuiCode>{' '}
             value and will be around for 15 seconds.
           </p>
         ),
@@ -103,19 +114,19 @@ export default () => {
 
   return (
     <div style={{ maxWidth: 320 }}>
-      <EuiFlexGroup gutterSize="s">
-        <EuiFlexItem>
-          <EuiButton onClick={addToast}>
+      <OuiFlexGroup gutterSize="s">
+        <OuiFlexItem>
+          <OuiButton onClick={addToast}>
             Add toast to global toast list
-          </EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiButton onClick={removeAllToasts} color="danger">
+          </OuiButton>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiButton onClick={removeAllToasts} color="danger">
             Remove all toasts
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiGlobalToastList
+          </OuiButton>
+        </OuiFlexItem>
+      </OuiFlexGroup>
+      <OuiGlobalToastList
         toasts={toasts}
         dismissToast={removeToast}
         toastLifeTimeMs={6000}

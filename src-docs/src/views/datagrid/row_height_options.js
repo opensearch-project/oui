@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, {
   useCallback,
   useState,
@@ -8,7 +19,7 @@ import React, {
 } from 'react';
 import { fake } from 'faker';
 
-import { EuiDataGrid, EuiText } from '../../../../src/components/';
+import { OuiDataGrid, OuiText } from '../../../../src/components/';
 
 const DataContext = createContext();
 
@@ -100,7 +111,7 @@ export default () => {
   );
 
   const grid = (
-    <EuiDataGrid
+    <OuiDataGrid
       aria-label="Row height options demo"
       columns={columns}
       columnVisibility={{ visibleColumns, setVisibleColumns }}
@@ -119,9 +130,9 @@ export default () => {
 
   return (
     <DataContext.Provider value={dataContext}>
-      <EuiText>
+      <OuiText>
         <p>There are {mountedCellCount} rendered cells</p>
-      </EuiText>
+      </OuiText>
       {grid}
     </DataContext.Provider>
   );

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,36 +34,36 @@ import moment, { Moment, LocaleSpecifier } from 'moment'; // eslint-disable-line
 
 import dateMath from '@elastic/datemath';
 
-import { EuiDatePicker, EuiDatePickerProps } from '../../date_picker';
-import { EuiFormRow, EuiFieldText, EuiFormLabel } from '../../../form';
+import { OuiDatePicker, OuiDatePickerProps } from '../../date_picker';
+import { OuiFormRow, OuiFieldText, OuiFormLabel } from '../../../form';
 import { toSentenceCase } from '../../../../services/string/to_case';
-import { EuiDatePopoverContentProps } from './date_popover_content';
+import { OuiDatePopoverContentProps } from './date_popover_content';
 
-export interface EuiAbsoluteTabProps {
+export interface OuiAbsoluteTabProps {
   dateFormat: string;
   timeFormat: string;
   locale?: LocaleSpecifier;
   value: string;
-  onChange: EuiDatePopoverContentProps['onChange'];
+  onChange: OuiDatePopoverContentProps['onChange'];
   roundUp: boolean;
   position: 'start' | 'end';
   utcOffset?: number;
 }
 
-interface EuiAbsoluteTabState {
+interface OuiAbsoluteTabState {
   isTextInvalid: boolean;
   sentenceCasedPosition: string;
   textInputValue: string;
   valueAsMoment: Moment | null;
 }
 
-export class EuiAbsoluteTab extends Component<
-  EuiAbsoluteTabProps,
-  EuiAbsoluteTabState
+export class OuiAbsoluteTab extends Component<
+  OuiAbsoluteTabProps,
+  OuiAbsoluteTabState
 > {
-  state: EuiAbsoluteTabState;
+  state: OuiAbsoluteTabState;
 
-  constructor(props: EuiAbsoluteTabProps) {
+  constructor(props: OuiAbsoluteTabProps) {
     super(props);
 
     const sentenceCasedPosition = toSentenceCase(props.position);
@@ -73,7 +84,7 @@ export class EuiAbsoluteTab extends Component<
     };
   }
 
-  handleChange: EuiDatePickerProps['onChange'] = (date, event) => {
+  handleChange: OuiDatePickerProps['onChange'] = (date, event) => {
     const { onChange } = this.props;
     if (date === null) {
       return;
@@ -117,7 +128,7 @@ export class EuiAbsoluteTab extends Component<
 
     return (
       <div>
-        <EuiDatePicker
+        <OuiDatePicker
           inline
           showTimeSelect
           shadow={false}
@@ -128,19 +139,19 @@ export class EuiAbsoluteTab extends Component<
           locale={locale}
           utcOffset={utcOffset}
         />
-        <EuiFormRow
-          className="euiSuperDatePicker__absoluteDateFormRow"
+        <OuiFormRow
+          className="ouiSuperDatePicker__absoluteDateFormRow"
           isInvalid={isTextInvalid}
           error={isTextInvalid ? `Expected format ${dateFormat}` : undefined}>
-          <EuiFieldText
+          <OuiFieldText
             compressed
             isInvalid={isTextInvalid}
             value={textInputValue}
             onChange={this.handleTextChange}
             data-test-subj={'superDatePickerAbsoluteDateInput'}
-            prepend={<EuiFormLabel>{sentenceCasedPosition} date</EuiFormLabel>}
+            prepend={<OuiFormLabel>{sentenceCasedPosition} date</OuiFormLabel>}
           />
-        </EuiFormRow>
+        </OuiFormRow>
       </div>
     );
   }

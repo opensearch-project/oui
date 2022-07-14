@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCode, EuiLink, EuiCallOut } from '../../../../src/components';
+import { OuiCode, OuiLink, OuiCallOut } from '../../../../src/components';
 
 export const CodeEditorExample = {
   title: 'Code editor',
@@ -8,23 +19,23 @@ export const CodeEditorExample = {
     {
       text: (
         <>
-          <EuiCallOut iconType="alert" color="danger" title="Deprecated">
+          <OuiCallOut iconType="alert" color="danger" title="Deprecated">
             <p>
-              The <strong>EuiCodeEditor</strong>, a wrapper of{' '}
-              <EuiCode>react-ace</EuiCode>, has been deprecated and will be
+              The <strong>OuiCodeEditor</strong>, a wrapper of{' '}
+              <OuiCode>react-ace</OuiCode>, has been deprecated and will be
               removed in a{' '}
-              <EuiLink href="https://github.com/elastic/eui/issues/1469">
+              <OuiLink href="https://github.com/elastic/eui/issues/1469">
                 future release
-              </EuiLink>
+              </OuiLink>
               .
               <br />
               If you are a Kibana developer, we recommend using the{' '}
-              <EuiLink href="https://github.com/elastic/kibana/tree/master/packages/kbn-monaco">
-                <EuiCode>@kbn/monaco</EuiCode> package
-              </EuiLink>{' '}
+              <OuiLink href="https://github.com/elastic/kibana/tree/master/packages/kbn-monaco">
+                <OuiCode>@kbn/monaco</OuiCode> package
+              </OuiLink>{' '}
               within the Kibana codebase.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </>
       ),
     },

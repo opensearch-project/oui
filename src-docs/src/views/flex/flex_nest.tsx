@@ -1,33 +1,44 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiFlexGrid,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiFlexGrid,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components/flex';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { OuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
   <div>
-    <EuiFlexGroup>
-      <EuiFlexItem grow={false}>
+    <OuiFlexGroup>
+      <OuiFlexItem grow={false}>
         <div>Flex Group</div>
-        <EuiSpacer />
-        <EuiFlexGroup>
-          <EuiFlexItem>Nested Grid One</EuiFlexItem>
-          <EuiFlexItem>Nested Grid Two</EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
+        <OuiSpacer />
+        <OuiFlexGroup>
+          <OuiFlexItem>Nested Grid One</OuiFlexItem>
+          <OuiFlexItem>Nested Grid Two</OuiFlexItem>
+        </OuiFlexGroup>
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
         <div>Flex Grid</div>
-        <EuiSpacer />
-        <EuiFlexGrid columns={3}>
-          <EuiFlexItem>Nested Grid One</EuiFlexItem>
-          <EuiFlexItem>Nested Grid Two</EuiFlexItem>
-          <EuiFlexItem>Nested Grid Three</EuiFlexItem>
-          <EuiFlexItem>Nested Grid Four</EuiFlexItem>
-        </EuiFlexGrid>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        <OuiSpacer />
+        <OuiFlexGrid columns={3}>
+          <OuiFlexItem>Nested Grid One</OuiFlexItem>
+          <OuiFlexItem>Nested Grid Two</OuiFlexItem>
+          <OuiFlexItem>Nested Grid Three</OuiFlexItem>
+          <OuiFlexItem>Nested Grid Four</OuiFlexItem>
+        </OuiFlexGrid>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </div>
 );

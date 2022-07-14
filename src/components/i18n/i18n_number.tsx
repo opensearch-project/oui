@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,7 +29,7 @@
  */
 
 import React, { FunctionComponent, ReactChild, ReactElement } from 'react';
-import { EuiI18nConsumer } from '../context';
+import { OuiI18nConsumer } from '../context';
 import { ExclusiveUnion } from '../common';
 
 const defaultFormatter = new Intl.NumberFormat('en');
@@ -26,12 +37,12 @@ function defaultFormatNumber(value: number) {
   return defaultFormatter.format(value);
 }
 
-interface EuiI18nNumberValueShape {
+interface OuiI18nNumberValueShape {
   value: number;
   children?: (x: ReactChild) => ReactElement<any>;
 }
 
-interface EuiI18nNumberValuesShape {
+interface OuiI18nNumberValuesShape {
   values: number[];
   /**
    * ReactNode to render as this component's content
@@ -39,17 +50,17 @@ interface EuiI18nNumberValuesShape {
   children: (x: ReactChild[]) => ReactElement<any>;
 }
 
-export type EuiI18nNumberProps = ExclusiveUnion<
-  EuiI18nNumberValueShape,
-  EuiI18nNumberValuesShape
+export type OuiI18nNumberProps = ExclusiveUnion<
+  OuiI18nNumberValueShape,
+  OuiI18nNumberValuesShape
 >;
 
-function hasValues(x: EuiI18nNumberProps): x is EuiI18nNumberValuesShape {
+function hasValues(x: OuiI18nNumberProps): x is OuiI18nNumberValuesShape {
   return x.values != null;
 }
 
-const EuiI18nNumber: FunctionComponent<EuiI18nNumberProps> = (props) => (
-  <EuiI18nConsumer>
+const OuiI18nNumber: FunctionComponent<OuiI18nNumberProps> = (props) => (
+  <OuiI18nConsumer>
     {(i18nConfig) => {
       const formatNumber = i18nConfig.formatNumber || defaultFormatNumber;
 
@@ -64,7 +75,7 @@ const EuiI18nNumber: FunctionComponent<EuiI18nNumberProps> = (props) => (
         return formattedValue;
       }
     }}
-  </EuiI18nConsumer>
+  </OuiI18nConsumer>
 );
 
-export { EuiI18nNumber };
+export { OuiI18nNumber };

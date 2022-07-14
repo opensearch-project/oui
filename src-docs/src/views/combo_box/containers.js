@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiComboBox,
-  EuiButton,
-  EuiPopover,
-  EuiFormRow,
-  EuiModal,
-  EuiModalBody,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiSpacer,
+  OuiComboBox,
+  OuiButton,
+  OuiPopover,
+  OuiFormRow,
+  OuiModal,
+  OuiModalBody,
+  OuiModalHeader,
+  OuiModalHeaderTitle,
+  OuiSpacer,
 } from '../../../../src/components';
 
 const optionsStatic = [
@@ -102,7 +113,7 @@ export default () => {
   };
 
   const comboBox = (
-    <EuiComboBox
+    <OuiComboBox
       placeholder="Select or create options"
       options={options}
       selectedOptions={selectedOptions}
@@ -112,48 +123,48 @@ export default () => {
   );
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={togglePopover}>
+    <OuiButton iconType="arrowDown" iconSide="right" onClick={togglePopover}>
       Open popover
-    </EuiButton>
+    </OuiButton>
   );
 
   let modal;
 
   if (isModalVisible) {
     modal = (
-      <EuiModal onClose={closeModal} style={{ width: '800px' }}>
-        <EuiModalHeader>
-          <EuiModalHeaderTitle>
+      <OuiModal onClose={closeModal} style={{ width: '800px' }}>
+        <OuiModalHeader>
+          <OuiModalHeaderTitle>
             <h1>Combo box in a modal</h1>
-          </EuiModalHeaderTitle>
-        </EuiModalHeader>
+          </OuiModalHeaderTitle>
+        </OuiModalHeader>
 
-        <EuiModalBody>{comboBox}</EuiModalBody>
-      </EuiModal>
+        <OuiModalBody>{comboBox}</OuiModalBody>
+      </OuiModal>
     );
   }
 
   return (
     <Fragment>
-      <EuiFormRow
+      <OuiFormRow
         label="Combo box"
         helpText="This combo box is inside of a form row">
         {comboBox}
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiPopover
+      <OuiPopover
         id="popover"
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}>
         <div style={{ width: '300px' }}>{comboBox}</div>
-      </EuiPopover>
+      </OuiPopover>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiButton onClick={showModal}>Show modal</EuiButton>
+      <OuiButton onClick={showModal}>Show modal</OuiButton>
 
       {modal}
     </Fragment>

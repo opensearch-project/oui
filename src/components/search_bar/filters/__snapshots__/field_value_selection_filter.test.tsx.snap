@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FieldValueSelectionFilter active - field is global 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="downCenter"
   button={
-    <EuiFilterButton
+    <OuiFilterButton
       grow={true}
       hasActiveFilters={true}
       iconSide="right"
@@ -13,7 +13,7 @@ exports[`FieldValueSelectionFilter active - field is global 1`] = `
       onClick={[Function]}
     >
       Tag
-    </EuiFilterButton>
+    </OuiFilterButton>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -21,19 +21,19 @@ exports[`FieldValueSelectionFilter active - field is global 1`] = `
   id="field_value_selection_0"
   isOpen={false}
   ownFocus={true}
-  panelClassName="euiFilterGroup__popoverPanel"
+  panelClassName="ouiFilterGroup__popoverPanel"
   panelPaddingSize="none"
 >
   <div
-    className="euiFilterSelect__note"
+    className="ouiFilterSelect__note"
   >
     <div
-      className="euiFilterSelect__noteContent"
+      className="ouiFilterSelect__noteContent"
     >
-      <EuiLoadingChart
+      <OuiLoadingChart
         size="m"
       />
-      <EuiSpacer
+      <OuiSpacer
         size="xs"
       />
       <p>
@@ -41,14 +41,14 @@ exports[`FieldValueSelectionFilter active - field is global 1`] = `
       </p>
     </div>
   </div>
-</EuiPopover>
+</OuiPopover>
 `;
 
 exports[`FieldValueSelectionFilter active - fields in options 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="downCenter"
   button={
-    <EuiFilterButton
+    <OuiFilterButton
       grow={true}
       hasActiveFilters={false}
       iconSide="right"
@@ -56,7 +56,7 @@ exports[`FieldValueSelectionFilter active - fields in options 1`] = `
       onClick={[Function]}
     >
       Tag
-    </EuiFilterButton>
+    </OuiFilterButton>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -64,19 +64,19 @@ exports[`FieldValueSelectionFilter active - fields in options 1`] = `
   id="field_value_selection_0"
   isOpen={false}
   ownFocus={true}
-  panelClassName="euiFilterGroup__popoverPanel"
+  panelClassName="ouiFilterGroup__popoverPanel"
   panelPaddingSize="none"
 >
   <div
-    className="euiFilterSelect__note"
+    className="ouiFilterSelect__note"
   >
     <div
-      className="euiFilterSelect__noteContent"
+      className="ouiFilterSelect__noteContent"
     >
-      <EuiLoadingChart
+      <OuiLoadingChart
         size="m"
       />
-      <EuiSpacer
+      <OuiSpacer
         size="xs"
       />
       <p>
@@ -84,14 +84,14 @@ exports[`FieldValueSelectionFilter active - fields in options 1`] = `
       </p>
     </div>
   </div>
-</EuiPopover>
+</OuiPopover>
 `;
 
 exports[`FieldValueSelectionFilter inactive - field is global 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="downCenter"
   button={
-    <EuiFilterButton
+    <OuiFilterButton
       grow={true}
       hasActiveFilters={false}
       iconSide="right"
@@ -99,7 +99,7 @@ exports[`FieldValueSelectionFilter inactive - field is global 1`] = `
       onClick={[Function]}
     >
       Tag
-    </EuiFilterButton>
+    </OuiFilterButton>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -107,29 +107,29 @@ exports[`FieldValueSelectionFilter inactive - field is global 1`] = `
   id="field_value_selection_0"
   isOpen={false}
   ownFocus={true}
-  panelClassName="euiFilterGroup__popoverPanel"
+  panelClassName="ouiFilterGroup__popoverPanel"
   panelPaddingSize="none"
 >
   <div
-    className="euiFilterSelect__items"
+    className="ouiFilterSelect__items"
   >
-    <EuiFilterSelectItem
+    <OuiFilterSelectItem
       key="0"
       onClick={[Function]}
       onKeyDown={[Function]}
       showIcons={true}
     >
       feature
-    </EuiFilterSelectItem>
-    <EuiFilterSelectItem
+    </OuiFilterSelectItem>
+    <OuiFilterSelectItem
       key="1"
       onClick={[Function]}
       onKeyDown={[Function]}
       showIcons={true}
     >
       Text
-    </EuiFilterSelectItem>
-    <EuiFilterSelectItem
+    </OuiFilterSelectItem>
+    <OuiFilterSelectItem
       key="2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -138,16 +138,16 @@ exports[`FieldValueSelectionFilter inactive - field is global 1`] = `
       <div>
         bug
       </div>
-    </EuiFilterSelectItem>
+    </OuiFilterSelectItem>
   </div>
-</EuiPopover>
+</OuiPopover>
 `;
 
 exports[`FieldValueSelectionFilter inactive - fields in options 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="downCenter"
   button={
-    <EuiFilterButton
+    <OuiFilterButton
       grow={true}
       hasActiveFilters={false}
       iconSide="right"
@@ -155,7 +155,7 @@ exports[`FieldValueSelectionFilter inactive - fields in options 1`] = `
       onClick={[Function]}
     >
       Tag
-    </EuiFilterButton>
+    </OuiFilterButton>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -163,29 +163,29 @@ exports[`FieldValueSelectionFilter inactive - fields in options 1`] = `
   id="field_value_selection_0"
   isOpen={false}
   ownFocus={true}
-  panelClassName="euiFilterGroup__popoverPanel"
+  panelClassName="ouiFilterGroup__popoverPanel"
   panelPaddingSize="none"
 >
   <div
-    className="euiFilterSelect__items"
+    className="ouiFilterSelect__items"
   >
-    <EuiFilterSelectItem
+    <OuiFilterSelectItem
       key="0"
       onClick={[Function]}
       onKeyDown={[Function]}
       showIcons={true}
     >
       feature
-    </EuiFilterSelectItem>
-    <EuiFilterSelectItem
+    </OuiFilterSelectItem>
+    <OuiFilterSelectItem
       key="1"
       onClick={[Function]}
       onKeyDown={[Function]}
       showIcons={true}
     >
       Text
-    </EuiFilterSelectItem>
-    <EuiFilterSelectItem
+    </OuiFilterSelectItem>
+    <OuiFilterSelectItem
       key="2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -194,16 +194,16 @@ exports[`FieldValueSelectionFilter inactive - fields in options 1`] = `
       <div>
         bug
       </div>
-    </EuiFilterSelectItem>
+    </OuiFilterSelectItem>
   </div>
-</EuiPopover>
+</OuiPopover>
 `;
 
 exports[`FieldValueSelectionFilter render - all configurations 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="downCenter"
   button={
-    <EuiFilterButton
+    <OuiFilterButton
       grow={true}
       hasActiveFilters={false}
       iconSide="right"
@@ -211,7 +211,7 @@ exports[`FieldValueSelectionFilter render - all configurations 1`] = `
       onClick={[Function]}
     >
       Tag
-    </EuiFilterButton>
+    </OuiFilterButton>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -219,19 +219,19 @@ exports[`FieldValueSelectionFilter render - all configurations 1`] = `
   id="field_value_selection_0"
   isOpen={false}
   ownFocus={true}
-  panelClassName="euiFilterGroup__popoverPanel"
+  panelClassName="ouiFilterGroup__popoverPanel"
   panelPaddingSize="none"
 >
   <div
-    className="euiFilterSelect__note"
+    className="ouiFilterSelect__note"
   >
     <div
-      className="euiFilterSelect__noteContent"
+      className="ouiFilterSelect__noteContent"
     >
-      <EuiLoadingChart
+      <OuiLoadingChart
         size="m"
       />
-      <EuiSpacer
+      <OuiSpacer
         size="xs"
       />
       <p>
@@ -239,14 +239,14 @@ exports[`FieldValueSelectionFilter render - all configurations 1`] = `
       </p>
     </div>
   </div>
-</EuiPopover>
+</OuiPopover>
 `;
 
 exports[`FieldValueSelectionFilter render - fields in options 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="downCenter"
   button={
-    <EuiFilterButton
+    <OuiFilterButton
       grow={true}
       hasActiveFilters={false}
       iconSide="right"
@@ -254,7 +254,7 @@ exports[`FieldValueSelectionFilter render - fields in options 1`] = `
       onClick={[Function]}
     >
       Tag
-    </EuiFilterButton>
+    </OuiFilterButton>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -262,29 +262,29 @@ exports[`FieldValueSelectionFilter render - fields in options 1`] = `
   id="field_value_selection_0"
   isOpen={false}
   ownFocus={true}
-  panelClassName="euiFilterGroup__popoverPanel"
+  panelClassName="ouiFilterGroup__popoverPanel"
   panelPaddingSize="none"
 >
   <div
-    className="euiFilterSelect__items"
+    className="ouiFilterSelect__items"
   >
-    <EuiFilterSelectItem
+    <OuiFilterSelectItem
       key="0"
       onClick={[Function]}
       onKeyDown={[Function]}
       showIcons={true}
     >
       feature
-    </EuiFilterSelectItem>
-    <EuiFilterSelectItem
+    </OuiFilterSelectItem>
+    <OuiFilterSelectItem
       key="1"
       onClick={[Function]}
       onKeyDown={[Function]}
       showIcons={true}
     >
       Text
-    </EuiFilterSelectItem>
-    <EuiFilterSelectItem
+    </OuiFilterSelectItem>
+    <OuiFilterSelectItem
       key="2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -293,16 +293,16 @@ exports[`FieldValueSelectionFilter render - fields in options 1`] = `
       <div>
         bug
       </div>
-    </EuiFilterSelectItem>
+    </OuiFilterSelectItem>
   </div>
-</EuiPopover>
+</OuiPopover>
 `;
 
 exports[`FieldValueSelectionFilter render - multi-select OR 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="downCenter"
   button={
-    <EuiFilterButton
+    <OuiFilterButton
       grow={true}
       hasActiveFilters={false}
       iconSide="right"
@@ -310,7 +310,7 @@ exports[`FieldValueSelectionFilter render - multi-select OR 1`] = `
       onClick={[Function]}
     >
       Tag
-    </EuiFilterButton>
+    </OuiFilterButton>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -318,19 +318,19 @@ exports[`FieldValueSelectionFilter render - multi-select OR 1`] = `
   id="field_value_selection_0"
   isOpen={false}
   ownFocus={true}
-  panelClassName="euiFilterGroup__popoverPanel"
+  panelClassName="ouiFilterGroup__popoverPanel"
   panelPaddingSize="none"
 >
   <div
-    className="euiFilterSelect__note"
+    className="ouiFilterSelect__note"
   >
     <div
-      className="euiFilterSelect__noteContent"
+      className="ouiFilterSelect__noteContent"
     >
-      <EuiLoadingChart
+      <OuiLoadingChart
         size="m"
       />
-      <EuiSpacer
+      <OuiSpacer
         size="xs"
       />
       <p>
@@ -338,14 +338,14 @@ exports[`FieldValueSelectionFilter render - multi-select OR 1`] = `
       </p>
     </div>
   </div>
-</EuiPopover>
+</OuiPopover>
 `;
 
 exports[`FieldValueSelectionFilter render - options as a function 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="downCenter"
   button={
-    <EuiFilterButton
+    <OuiFilterButton
       grow={true}
       hasActiveFilters={false}
       iconSide="right"
@@ -353,7 +353,7 @@ exports[`FieldValueSelectionFilter render - options as a function 1`] = `
       onClick={[Function]}
     >
       Tag
-    </EuiFilterButton>
+    </OuiFilterButton>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -361,19 +361,19 @@ exports[`FieldValueSelectionFilter render - options as a function 1`] = `
   id="field_value_selection_0"
   isOpen={false}
   ownFocus={true}
-  panelClassName="euiFilterGroup__popoverPanel"
+  panelClassName="ouiFilterGroup__popoverPanel"
   panelPaddingSize="none"
 >
   <div
-    className="euiFilterSelect__note"
+    className="ouiFilterSelect__note"
   >
     <div
-      className="euiFilterSelect__noteContent"
+      className="ouiFilterSelect__noteContent"
     >
-      <EuiLoadingChart
+      <OuiLoadingChart
         size="m"
       />
-      <EuiSpacer
+      <OuiSpacer
         size="xs"
       />
       <p>
@@ -381,14 +381,14 @@ exports[`FieldValueSelectionFilter render - options as a function 1`] = `
       </p>
     </div>
   </div>
-</EuiPopover>
+</OuiPopover>
 `;
 
 exports[`FieldValueSelectionFilter render - options as an array 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="downCenter"
   button={
-    <EuiFilterButton
+    <OuiFilterButton
       grow={true}
       hasActiveFilters={false}
       iconSide="right"
@@ -396,7 +396,7 @@ exports[`FieldValueSelectionFilter render - options as an array 1`] = `
       onClick={[Function]}
     >
       Tag
-    </EuiFilterButton>
+    </OuiFilterButton>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -404,29 +404,29 @@ exports[`FieldValueSelectionFilter render - options as an array 1`] = `
   id="field_value_selection_0"
   isOpen={false}
   ownFocus={true}
-  panelClassName="euiFilterGroup__popoverPanel"
+  panelClassName="ouiFilterGroup__popoverPanel"
   panelPaddingSize="none"
 >
   <div
-    className="euiFilterSelect__items"
+    className="ouiFilterSelect__items"
   >
-    <EuiFilterSelectItem
+    <OuiFilterSelectItem
       key="0"
       onClick={[Function]}
       onKeyDown={[Function]}
       showIcons={true}
     >
       feature
-    </EuiFilterSelectItem>
-    <EuiFilterSelectItem
+    </OuiFilterSelectItem>
+    <OuiFilterSelectItem
       key="1"
       onClick={[Function]}
       onKeyDown={[Function]}
       showIcons={true}
     >
       Text
-    </EuiFilterSelectItem>
-    <EuiFilterSelectItem
+    </OuiFilterSelectItem>
+    <OuiFilterSelectItem
       key="2"
       onClick={[Function]}
       onKeyDown={[Function]}
@@ -435,7 +435,7 @@ exports[`FieldValueSelectionFilter render - options as an array 1`] = `
       <div>
         bug
       </div>
-    </EuiFilterSelectItem>
+    </OuiFilterSelectItem>
   </div>
-</EuiPopover>
+</OuiPopover>
 `;

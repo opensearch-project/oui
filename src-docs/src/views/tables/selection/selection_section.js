@@ -1,5 +1,16 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
-import { EuiBasicTable, EuiCode } from '../../../../../src/components';
+import { OuiBasicTable, OuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -22,15 +33,15 @@ export const section = {
   text: (
     <p>
       The following example shows how to configure selection via the{' '}
-      <EuiCode>selection</EuiCode>
+      <OuiCode>selection</OuiCode>
       property. You can set items to be selected initially by passing an array
-      of items as the <EuiCode>initialSelected</EuiCode> value inside{' '}
-      <EuiCode>selection</EuiCode> property. You can also use the{' '}
-      <EuiCode>setSelection</EuiCode> method to take complete control over table
+      of items as the <OuiCode>initialSelected</OuiCode> value inside{' '}
+      <OuiCode>selection</OuiCode> property. You can also use the{' '}
+      <OuiCode>setSelection</OuiCode> method to take complete control over table
       selection. This can be useful if you want to handle selection in table
       based on user interaction with another part of the UI.
     </p>
   ),
-  components: { EuiBasicTable },
+  components: { OuiBasicTable },
   demo: <Table />,
 };

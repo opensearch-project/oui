@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiFieldText,
-  EuiIcon,
-  EuiIconTip,
-  EuiPopover,
-  EuiSpacer,
-  EuiSwitch,
-  EuiText,
-  EuiToolTip,
+  OuiButtonEmpty,
+  OuiButtonIcon,
+  OuiFieldText,
+  OuiIcon,
+  OuiIconTip,
+  OuiPopover,
+  OuiSpacer,
+  OuiSwitch,
+  OuiText,
+  OuiToolTip,
 } from '../../../../src/components';
 
 export default () => {
@@ -20,156 +31,156 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiSwitch
+      <OuiSwitch
         label="compressed"
         checked={isCompressed}
         onChange={(e) => setCompressed(e.target.checked)}
       />
       &emsp;
-      <EuiSwitch
+      <OuiSwitch
         label="disabled"
         checked={isDisabled}
         onChange={(e) => setDisabled(e.target.checked)}
       />
       &emsp;
-      <EuiSwitch
+      <OuiSwitch
         label="readOnly"
         checked={isReadOnly}
         onChange={(e) => setReadOnly(e.target.checked)}
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <OuiSpacer />
+      <OuiFieldText
         placeholder="String & text in a tooltip"
         prepend="String"
         append={
-          <EuiToolTip content="content">
-            <EuiText size="s">Tooltip</EuiText>
-          </EuiToolTip>
+          <OuiToolTip content="content">
+            <OuiText size="s">Tooltip</OuiText>
+          </OuiToolTip>
         }
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <OuiSpacer />
+      <OuiFieldText
         placeholder="XS empty button in a popover & tooltip"
         prepend={
-          <EuiPopover
+          <OuiPopover
             button={
-              <EuiButtonEmpty size="xs" iconType="arrowDown" iconSide="right">
+              <OuiButtonEmpty size="xs" iconType="arrowDown" iconSide="right">
                 Popover
-              </EuiButtonEmpty>
+              </OuiButtonEmpty>
             }
             closePopover={() => {}}
           />
         }
         append={
-          <EuiToolTip content="content">
-            <EuiButtonEmpty size="xs">Tooltip</EuiButtonEmpty>
-          </EuiToolTip>
+          <OuiToolTip content="content">
+            <OuiButtonEmpty size="xs">Tooltip</OuiButtonEmpty>
+          </OuiToolTip>
         }
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <OuiSpacer />
+      <OuiFieldText
         placeholder="XS empty buttons with icons"
         prepend={
-          <EuiButtonEmpty
+          <OuiButtonEmpty
             role="button"
             size="xs"
             iconType="arrowDown"
             iconSide="right"
             aria-label="Calendar dropdown">
-            <EuiIcon type="calendar" />
-          </EuiButtonEmpty>
+            <OuiIcon type="calendar" />
+          </OuiButtonEmpty>
         }
         append={
-          <EuiButtonEmpty size="xs" iconType="gear">
+          <OuiButtonEmpty size="xs" iconType="gear">
             Tooltip
-          </EuiButtonEmpty>
+          </OuiButtonEmpty>
         }
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <OuiSpacer />
+      <OuiFieldText
         placeholder="Icon & button icon"
-        prepend={<EuiIcon type="vector" />}
-        append={<EuiButtonIcon iconType="gear" aria-label="Gear this" />}
+        prepend={<OuiIcon type="vector" />}
+        append={<OuiButtonIcon iconType="gear" aria-label="Gear this" />}
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <OuiSpacer />
+      <OuiFieldText
         placeholder="Icons in buttons and popovers and tooltips"
         prepend={[
-          <EuiIcon type="vector" />,
-          <EuiButtonIcon iconType="gear" aria-label="Gear this" />,
+          <OuiIcon type="vector" />,
+          <OuiButtonIcon iconType="gear" aria-label="Gear this" />,
         ]}
         append={[
-          <EuiPopover
-            button={<EuiButtonIcon iconType="gear" aria-label="Gear this" />}
+          <OuiPopover
+            button={<OuiButtonIcon iconType="gear" aria-label="Gear this" />}
             closePopover={() => {}}
           />,
-          <EuiIconTip content="content" />,
+          <OuiIconTip content="content" />,
         ]}
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <OuiSpacer />
+      <OuiFieldText
         placeholder="Icon button in popover & tooltip"
         append={
-          <EuiPopover
-            button={<EuiButtonIcon iconType="arrowDown" aria-label="Popover" />}
+          <OuiPopover
+            button={<OuiButtonIcon iconType="arrowDown" aria-label="Popover" />}
             closePopover={() => {}}
           />
         }
         prepend={
-          <EuiToolTip content="content">
-            <EuiButtonIcon iconType="gear" aria-label="Gear this" />
-          </EuiToolTip>
+          <OuiToolTip content="content">
+            <OuiButtonIcon iconType="gear" aria-label="Gear this" />
+          </OuiToolTip>
         }
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <OuiSpacer />
+      <OuiFieldText
         placeholder="Icon and string & string and icon button"
-        prepend={[<EuiIcon type="vector" />, 'String']}
+        prepend={[<OuiIcon type="vector" />, 'String']}
         append={[
           'String',
-          <EuiButtonIcon iconType="gear" aria-label="Gear this" />,
+          <OuiButtonIcon iconType="gear" aria-label="Gear this" />,
         ]}
         compressed={isCompressed}
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
       />
-      <EuiSpacer />
-      <EuiFieldText
+      <OuiSpacer />
+      <OuiFieldText
         placeholder="String and button icon in tooltip & button icon in popover and string "
         prepend={[
           'String',
-          <EuiToolTip content="content">
-            <EuiButtonIcon iconType="gear" aria-label="Gear this" />
-          </EuiToolTip>,
+          <OuiToolTip content="content">
+            <OuiButtonIcon iconType="gear" aria-label="Gear this" />
+          </OuiToolTip>,
         ]}
         append={[
-          <EuiPopover
-            button={<EuiButtonIcon iconType="gear" aria-label="Gear this" />}
+          <OuiPopover
+            button={<OuiButtonIcon iconType="gear" aria-label="Gear this" />}
             closePopover={() => {}}
           />,
           'String',

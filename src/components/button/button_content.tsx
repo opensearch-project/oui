@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,8 +31,8 @@
 import React, { HTMLAttributes, FunctionComponent, Ref } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
-import { EuiLoadingSpinner } from '../loading';
-import { EuiIcon, IconType } from '../icon';
+import { OuiLoadingSpinner } from '../loading';
+import { OuiIcon, IconType } from '../icon';
 
 export type ButtonContentIconSide = 'left' | 'right';
 
@@ -29,20 +40,20 @@ const iconSideToClassNameMap: {
   [side in ButtonContentIconSide]: string | null;
 } = {
   left: null,
-  right: 'euiButtonContent--iconRight',
+  right: 'ouiButtonContent--iconRight',
 };
 
 export const ICON_SIDES = keysOf(iconSideToClassNameMap);
 
-export type EuiButtonContentType = HTMLAttributes<HTMLSpanElement>;
+export type OuiButtonContentType = HTMLAttributes<HTMLSpanElement>;
 
 /**
  * *INTERNAL ONLY*
  * This component is simply a helper component for reuse within other button components
  */
-export interface EuiButtonContentProps extends CommonProps {
+export interface OuiButtonContentProps extends CommonProps {
   /**
-   * Any `type` accepted by EuiIcon
+   * Any `type` accepted by OuiIcon
    */
   iconType?: IconType;
   /**
@@ -61,8 +72,8 @@ export interface EuiButtonContentProps extends CommonProps {
   iconSize?: 's' | 'm';
 }
 
-export const EuiButtonContent: FunctionComponent<
-  EuiButtonContentType & EuiButtonContentProps
+export const OuiButtonContent: FunctionComponent<
+  OuiButtonContentType & OuiButtonContentProps
 > = ({
   children,
   textProps,
@@ -77,12 +88,12 @@ export const EuiButtonContent: FunctionComponent<
 
   if (isLoading) {
     buttonIcon = (
-      <EuiLoadingSpinner className="euiButtonContent__spinner" size="m" />
+      <OuiLoadingSpinner className="ouiButtonContent__spinner" size="m" />
     );
   } else if (iconType) {
     buttonIcon = (
-      <EuiIcon
-        className="euiButtonContent__icon"
+      <OuiIcon
+        className="ouiButtonContent__icon"
         type={iconType}
         size={iconSize}
         color="inherit" // forces the icon to inherit its parent color
@@ -91,7 +102,7 @@ export const EuiButtonContent: FunctionComponent<
   }
 
   const contentClassNames = classNames(
-    'euiButtonContent',
+    'ouiButtonContent',
     iconSide ? iconSideToClassNameMap[iconSide] : null,
     contentProps && contentProps.className
   );

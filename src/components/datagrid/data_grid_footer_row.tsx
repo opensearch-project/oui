@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,39 +31,39 @@
 import React, { forwardRef, HTMLAttributes, memo } from 'react';
 import classnames from 'classnames';
 import {
-  EuiDataGridControlColumn,
-  EuiDataGridColumn,
-  EuiDataGridColumnWidths,
-  EuiDataGridPopoverContent,
-  EuiDataGridPopoverContents,
+  OuiDataGridControlColumn,
+  OuiDataGridColumn,
+  OuiDataGridColumnWidths,
+  OuiDataGridPopoverContent,
+  OuiDataGridPopoverContents,
 } from './data_grid_types';
 import { CommonProps } from '../common';
 
-import { EuiDataGridCell, EuiDataGridCellProps } from './data_grid_cell';
-import { EuiDataGridSchema } from './data_grid_schema';
-import { EuiText } from '../text';
+import { OuiDataGridCell, OuiDataGridCellProps } from './data_grid_cell';
+import { OuiDataGridSchema } from './data_grid_schema';
+import { OuiText } from '../text';
 
-export type EuiDataGridFooterRowProps = CommonProps &
+export type OuiDataGridFooterRowProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     rowIndex: number;
-    leadingControlColumns: EuiDataGridControlColumn[];
-    trailingControlColumns: EuiDataGridControlColumn[];
-    columns: EuiDataGridColumn[];
-    schema: EuiDataGridSchema;
-    popoverContents: EuiDataGridPopoverContents;
-    columnWidths: EuiDataGridColumnWidths;
+    leadingControlColumns: OuiDataGridControlColumn[];
+    trailingControlColumns: OuiDataGridControlColumn[];
+    columns: OuiDataGridColumn[];
+    schema: OuiDataGridSchema;
+    popoverContents: OuiDataGridPopoverContents;
+    columnWidths: OuiDataGridColumnWidths;
     defaultColumnWidth?: number | null;
-    renderCellValue: EuiDataGridCellProps['renderCellValue'];
-    interactiveCellId: EuiDataGridCellProps['interactiveCellId'];
+    renderCellValue: OuiDataGridCellProps['renderCellValue'];
+    interactiveCellId: OuiDataGridCellProps['interactiveCellId'];
     visibleRowIndex?: number;
   };
 
-const DefaultColumnFormatter: EuiDataGridPopoverContent = ({ children }) => {
-  return <EuiText>{children}</EuiText>;
+const DefaultColumnFormatter: OuiDataGridPopoverContent = ({ children }) => {
+  return <OuiText>{children}</OuiText>;
 };
 
-const EuiDataGridFooterRow = memo(
-  forwardRef<HTMLDivElement, EuiDataGridFooterRowProps>(
+const OuiDataGridFooterRow = memo(
+  forwardRef<HTMLDivElement, OuiDataGridFooterRowProps>(
     (
       {
         leadingControlColumns,
@@ -73,8 +84,8 @@ const EuiDataGridFooterRow = memo(
       ref
     ) => {
       const classes = classnames(
-        'euiDataGridRow',
-        'euiDataGridFooter',
+        'ouiDataGridRow',
+        'ouiDataGridFooter',
         className
       );
       const dataTestSubj = classnames('dataGridRow', _dataTestSubj);
@@ -87,7 +98,7 @@ const EuiDataGridFooterRow = memo(
           data-test-subj={dataTestSubj}
           {...rest}>
           {leadingControlColumns.map(({ id, width }, i) => (
-            <EuiDataGridCell
+            <OuiDataGridCell
               key={`${id}-${rowIndex}`}
               rowIndex={rowIndex}
               visibleRowIndex={visibleRowIndex}
@@ -98,7 +109,7 @@ const EuiDataGridFooterRow = memo(
               renderCellValue={() => null}
               interactiveCellId={interactiveCellId}
               isExpandable={true}
-              className="euiDataGridFooterCell euiDataGridRowCell--controlColumn"
+              className="ouiDataGridFooterCell ouiDataGridRowCell--controlColumn"
             />
           ))}
           {columns.map(({ id }, i) => {
@@ -111,7 +122,7 @@ const EuiDataGridFooterRow = memo(
             const columnPosition = i + leadingControlColumns.length;
 
             return (
-              <EuiDataGridCell
+              <OuiDataGridCell
                 key={`${id}-${rowIndex}`}
                 rowIndex={rowIndex}
                 visibleRowIndex={visibleRowIndex}
@@ -123,7 +134,7 @@ const EuiDataGridFooterRow = memo(
                 renderCellValue={renderCellValue}
                 interactiveCellId={interactiveCellId}
                 isExpandable={true}
-                className="euiDataGridFooterCell"
+                className="ouiDataGridFooterCell"
               />
             );
           })}
@@ -131,7 +142,7 @@ const EuiDataGridFooterRow = memo(
             const colIndex = i + columns.length + leadingControlColumns.length;
 
             return (
-              <EuiDataGridCell
+              <OuiDataGridCell
                 key={`${id}-${rowIndex}`}
                 rowIndex={rowIndex}
                 visibleRowIndex={visibleRowIndex}
@@ -142,7 +153,7 @@ const EuiDataGridFooterRow = memo(
                 renderCellValue={() => null}
                 interactiveCellId={interactiveCellId}
                 isExpandable={true}
-                className="euiDataGridFooterCell euiDataGridRowCell--controlColumn"
+                className="ouiDataGridFooterCell ouiDataGridRowCell--controlColumn"
               />
             );
           })}
@@ -152,6 +163,6 @@ const EuiDataGridFooterRow = memo(
   )
 );
 
-EuiDataGridFooterRow.displayName = 'EuiDataGridFooterRow';
+OuiDataGridFooterRow.displayName = 'OuiDataGridFooterRow';
 
-export { EuiDataGridFooterRow };
+export { OuiDataGridFooterRow };

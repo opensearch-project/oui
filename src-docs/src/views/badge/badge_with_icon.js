@@ -1,19 +1,30 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiBadge } from '../../../../src/components';
+import { OuiBadge } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiBadge color="hollow" iconType="cross" iconSide="right">
+    <OuiBadge color="hollow" iconType="cross" iconSide="right">
       Hollow
-    </EuiBadge>
+    </OuiBadge>
 
-    <EuiBadge iconType="check">Default</EuiBadge>
+    <OuiBadge iconType="check">Default</OuiBadge>
 
-    <EuiBadge iconType="lensApp" color="primary">
+    <OuiBadge iconType="lensApp" color="primary">
       Primary with an app icon
-    </EuiBadge>
+    </OuiBadge>
 
-    <EuiBadge iconType="returnKey" />
+    <OuiBadge iconType="returnKey" />
   </div>
 );

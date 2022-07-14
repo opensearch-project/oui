@@ -1,17 +1,28 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiPopover,
-  EuiForm,
-  EuiFormRow,
-  EuiFieldText,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFieldNumber,
-  EuiRange,
-  EuiSpacer,
-  EuiSwitch,
+  OuiButton,
+  OuiPopover,
+  OuiForm,
+  OuiFormRow,
+  OuiFieldText,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFieldNumber,
+  OuiRange,
+  OuiSpacer,
+  OuiSwitch,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -42,90 +53,90 @@ export default () => {
   };
 
   const button = (
-    <EuiButton
+    <OuiButton
       iconSide="right"
       fill
       iconType="arrowDown"
       onClick={onButtonClick}>
       Inline form in a popover
-    </EuiButton>
+    </OuiButton>
   );
 
   const formSample = (
-    <EuiForm component="form">
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false} style={{ width: 100 }}>
-          <EuiFormRow label="Age">
-            <EuiFieldNumber max={10} placeholder={42} />
-          </EuiFormRow>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiFormRow label="Full name">
-            <EuiFieldText icon="user" placeholder="John Doe" />
-          </EuiFormRow>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiFormRow hasEmptyLabelSpace>
-            <EuiButton>Save</EuiButton>
-          </EuiFormRow>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiForm>
+    <OuiForm component="form">
+      <OuiFlexGroup>
+        <OuiFlexItem grow={false} style={{ width: 100 }}>
+          <OuiFormRow label="Age">
+            <OuiFieldNumber max={10} placeholder={42} />
+          </OuiFormRow>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiFormRow label="Full name">
+            <OuiFieldText icon="user" placeholder="John Doe" />
+          </OuiFormRow>
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiFormRow hasEmptyLabelSpace>
+            <OuiButton>Save</OuiButton>
+          </OuiFormRow>
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiForm>
   );
 
   const button2 = (
-    <EuiButton
+    <OuiButton
       iconSide="right"
       fill
       iconType="arrowDown"
       onClick={onButton2Click}>
       Vertical form in a popover
-    </EuiButton>
+    </OuiButton>
   );
 
   const formSample2 = (
-    <EuiForm component="form">
-      <EuiFormRow>
-        <EuiSwitch
+    <OuiForm component="form">
+      <OuiFormRow>
+        <OuiSwitch
           id={htmlIdGenerator()()}
           name="popswitch"
           label="Isn't this popover form cool?"
           checked={isSwitchChecked}
           onChange={onSwitchChange}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="A text field">
-        <EuiFieldText name="popfirst" />
-      </EuiFormRow>
+      <OuiFormRow label="A text field">
+        <OuiFieldText name="popfirst" />
+      </OuiFormRow>
 
-      <EuiFormRow label="Range" helpText="Some help text for the range">
-        <EuiRange min={0} max={100} name="poprange" />
-      </EuiFormRow>
+      <OuiFormRow label="Range" helpText="Some help text for the range">
+        <OuiRange min={0} max={100} name="poprange" />
+      </OuiFormRow>
 
-      <EuiSpacer />
-      <EuiButton fullWidth>Save</EuiButton>
-    </EuiForm>
+      <OuiSpacer />
+      <OuiButton fullWidth>Save</OuiButton>
+    </OuiForm>
   );
 
   return (
     <div>
-      <EuiPopover
+      <OuiPopover
         id="inlineFormPopover"
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}>
         <div style={{ width: 500 }}>{formSample}</div>
-      </EuiPopover>
+      </OuiPopover>
       &emsp;
-      <EuiPopover
+      <OuiPopover
         id="formPopover"
         button={button2}
         isOpen={isPopover2Open}
         closePopover={closePopover2}
         initialFocus="[name='popfirst']">
         <div style={{ width: '300px' }}>{formSample2}</div>
-      </EuiPopover>
+      </OuiPopover>
     </div>
   );
 };

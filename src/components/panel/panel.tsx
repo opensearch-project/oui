@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -36,16 +47,16 @@ export const panelPaddingValues = {
 
 const paddingSizeToClassNameMap = {
   none: null,
-  s: 'euiPanel--paddingSmall',
-  m: 'euiPanel--paddingMedium',
-  l: 'euiPanel--paddingLarge',
+  s: 'ouiPanel--paddingSmall',
+  m: 'ouiPanel--paddingMedium',
+  l: 'ouiPanel--paddingLarge',
 };
 
 export const SIZES = keysOf(paddingSizeToClassNameMap);
 
 const borderRadiusToClassNameMap = {
-  none: 'euiPanel--borderRadiusNone',
-  m: 'euiPanel--borderRadiusMedium',
+  none: 'ouiPanel--borderRadiusNone',
+  m: 'ouiPanel--borderRadiusMedium',
 };
 
 export const BORDER_RADII = keysOf(borderRadiusToClassNameMap);
@@ -65,7 +76,7 @@ export type PanelColor = typeof COLORS[number];
 export type PanelPaddingSize = typeof SIZES[number];
 export type PanelBorderRadius = typeof BORDER_RADII[number];
 
-export interface _EuiPanelProps extends CommonProps {
+export interface _OuiPanelProps extends CommonProps {
   /**
    * Adds a medium shadow to the panel;
    * Only works when `color="plain"`
@@ -86,7 +97,7 @@ export interface _EuiPanelProps extends CommonProps {
    */
   borderRadius?: PanelBorderRadius;
   /**
-   * When true the panel will grow in height to match `EuiFlexItem`
+   * When true the panel will grow in height to match `OuiFlexItem`
    */
   grow?: boolean;
   panelRef?: Ref<HTMLDivElement>;
@@ -97,24 +108,24 @@ export interface _EuiPanelProps extends CommonProps {
   color?: PanelColor;
 }
 
-export interface _EuiPanelDivlike
-  extends _EuiPanelProps,
+export interface _OuiPanelDivlike
+  extends _OuiPanelProps,
     Omit<HTMLAttributes<HTMLDivElement>, 'color'> {
   element?: 'div';
 }
 
-export interface _EuiPanelButtonlike
-  extends _EuiPanelProps,
+export interface _OuiPanelButtonlike
+  extends _OuiPanelProps,
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {
   element?: 'button';
 }
 
-export type EuiPanelProps = ExclusiveUnion<
-  _EuiPanelButtonlike,
-  _EuiPanelDivlike
+export type OuiPanelProps = ExclusiveUnion<
+  _OuiPanelButtonlike,
+  _OuiPanelDivlike
 >;
 
-export const EuiPanel: FunctionComponent<EuiPanelProps> = ({
+export const OuiPanel: FunctionComponent<OuiPanelProps> = ({
   children,
   className,
   paddingSize = 'm',
@@ -132,19 +143,19 @@ export const EuiPanel: FunctionComponent<EuiPanelProps> = ({
   const canHaveBorder = color === 'plain' || color === 'transparent';
 
   const classes = classNames(
-    'euiPanel',
+    'ouiPanel',
     paddingSizeToClassNameMap[paddingSize],
     borderRadiusToClassNameMap[borderRadius],
-    `euiPanel--${color}`,
+    `ouiPanel--${color}`,
     {
       // The `no` classes turn off the option for default theme
       // While the `has` classes turn it on for Amsterdam
-      'euiPanel--hasShadow': canHaveShadow && hasShadow === true,
-      'euiPanel--noShadow': !canHaveShadow || hasShadow === false,
-      'euiPanel--hasBorder': canHaveBorder && hasBorder === true,
-      'euiPanel--noBorder': !canHaveBorder || hasBorder === false,
-      'euiPanel--flexGrowZero': !grow,
-      'euiPanel--isClickable': rest.onClick,
+      'ouiPanel--hasShadow': canHaveShadow && hasShadow === true,
+      'ouiPanel--noShadow': !canHaveShadow || hasShadow === false,
+      'ouiPanel--hasBorder': canHaveBorder && hasBorder === true,
+      'ouiPanel--noBorder': !canHaveBorder || hasBorder === false,
+      'ouiPanel--flexGrowZero': !grow,
+      'ouiPanel--isClickable': rest.onClick,
     },
     className
   );

@@ -1,14 +1,25 @@
-.euiLoadingContent__loader {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiLoadingContent__loader {
   display: block;
   width: 100%;
 }
 
-.euiLoadingContent__singleLine {
+.ouiLoadingContent__singleLine {
   display: block;
   width: 100%;
-  height: $euiSize;
-  margin-bottom: $euiSizeS;
-  border-radius: $euiBorderRadius;
+  height: $ouiSize;
+  margin-bottom: $ouiSizeS;
+  border-radius: $ouiBorderRadius;
   overflow: hidden;
 
   &:last-child:not(:only-child) {
@@ -16,24 +27,24 @@
   }
 }
 
-.euiLoadingContent__singleLineBackground {
+.ouiLoadingContent__singleLineBackground {
   display: block;
   width: 220%;
   height: 100%;
   background: linear-gradient(
     137deg,
-    $euiGradientStartStop 45%,
-    $euiGradientMiddle 50%,
-    $euiGradientStartStop 55%,
+    $ouiGradientStartStop 45%,
+    $ouiGradientMiddle 50%,
+    $ouiGradientStartStop 55%,
     );
 
   // sass-lint:disable-block mixins-before-declarations
-  @include euiCanAnimate {
-    animation: euiLoadingContentGradientLoad 1.5s $euiAnimSlightResistance infinite;
+  @include ouiCanAnimate {
+    animation: ouiLoadingContentGradientLoad 1.5s $ouiAnimSlightResistance infinite;
   }
 }
 
-@keyframes euiLoadingContentGradientLoad {
+@keyframes ouiLoadingContentGradientLoad {
   0% {
     transform: translateX(-53%);
   }

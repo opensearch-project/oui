@@ -1,29 +1,40 @@
-.euiRangeDraggable {
-  height: $euiFormControlHeight / 2;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiRangeDraggable {
+  height: $ouiFormControlHeight / 2;
   position: absolute;
-  top: $euiFormControlHeight / 4;
+  top: $ouiFormControlHeight / 4;
   pointer-events: none;
   z-index: 2;
 
-  &.euiRangeDraggable--compressed {
-    height: $euiFormControlCompressedHeight / 2;
-    top: $euiFormControlCompressedHeight / 4;
+  &.ouiRangeDraggable--compressed {
+    height: $ouiFormControlCompressedHeight / 2;
+    top: $ouiFormControlCompressedHeight / 4;
   }
 
-  &.euiRangeDraggable--hasTicks {
+  &.ouiRangeDraggable--hasTicks {
     top: 0;
   }
 
-  .euiRangeDraggle__inner {
+  .ouiRangeDraggle__inner {
     position: absolute;
-    left: $euiRangeThumbWidth;
-    right: $euiRangeThumbWidth;
+    left: $ouiRangeThumbWidth;
+    right: $ouiRangeThumbWidth;
     top: 0;
     bottom: 0;
   }
 
-  &:not(.euiRangeDraggable--disabled) {
-    .euiRangeDraggle__inner {
+  &:not(.ouiRangeDraggable--disabled) {
+    .ouiRangeDraggle__inner {
       cursor: grab;
       pointer-events: all;
 

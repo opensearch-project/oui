@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,10 +17,10 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiTabs,
-  EuiTab,
-  EuiTabbedContent,
+  OuiCode,
+  OuiTabs,
+  OuiTab,
+  OuiTabbedContent,
 } from '../../../../src/components';
 import { tabConfig, tabsConfig } from './playground';
 
@@ -28,7 +39,7 @@ const tabbedContentHtml = renderToHtml(TabbedContent);
 import Controlled from './controlled';
 const controlledSource = require('!!raw-loader!./controlled');
 const controlledHtml = renderToHtml(Controlled);
-const controlledSnippet = `<EuiTabbedContent
+const controlledSnippet = `<OuiTabbedContent
   tabs={tabs}
   selectedTab={selectedTab}
   onTabClick={onTabClick}
@@ -51,31 +62,31 @@ export const TabsExample = {
       ],
       text: (
         <p>
-          <strong>EuiTabs</strong> allow a <EuiCode>size</EuiCode> prop. In
+          <strong>OuiTabs</strong> allow a <OuiCode>size</OuiCode> prop. In
           general you should always use the default (medium) size. The small
           size is best for when placing inside popovers or other small
           containers. Reserve using the large size for when using as primary
           page navigation, like inside of{' '}
           <Link to="/layout/page">
-            <strong>EuiPageHeader</strong>
+            <strong>OuiPageHeader</strong>
           </Link>
           .
         </p>
       ),
       props: {
-        EuiTabs,
-        EuiTab,
+        OuiTabs,
+        OuiTab,
       },
       demo: <Tabs />,
       snippet: [
-        `<EuiTabs>
-  <EuiTab onClick={onClick}>Example 1</EuiTab>
-  <EuiTab onClick={onClick}>Example 2</EuiTab>
-</EuiTabs>`,
-        `<EuiTabs size="s>
-  <EuiTab onClick={onClick}>Example 1</EuiTab>
-  <EuiTab onClick={onClick}>Example 2</EuiTab>
-</EuiTabs>`,
+        `<OuiTabs>
+  <OuiTab onClick={onClick}>Example 1</OuiTab>
+  <OuiTab onClick={onClick}>Example 2</OuiTab>
+</OuiTabs>`,
+        `<OuiTabs size="s>
+  <OuiTab onClick={onClick}>Example 1</OuiTab>
+  <OuiTab onClick={onClick}>Example 2</OuiTab>
+</OuiTabs>`,
       ],
     },
     {
@@ -92,22 +103,22 @@ export const TabsExample = {
       ],
       text: (
         <p>
-          <strong>EuiTabs</strong> allow a <EuiCode>display</EuiCode> prop. In
+          <strong>OuiTabs</strong> allow a <OuiCode>display</OuiCode> prop. In
           general you should always use the default display. However, it is
-          acceptable to use the alternative <EuiCode>condensed</EuiCode> display
+          acceptable to use the alternative <OuiCode>condensed</OuiCode> display
           in situations where it is desirable to display a bolder, more compact
           and borderless tab interface (for use as primary navigation within
           your application or to establish a higher level hierarchy of tabs).
         </p>
       ),
       props: {
-        EuiTabs,
+        OuiTabs,
       },
       demo: <TabsCondensed />,
-      snippet: `<EuiTabs display="condensed">
-  <EuiTab onClick={onClick}>Example 1</EuiTab>
-  <EuiTab onClick={onClick}>Example 2</EuiTab>
-</EuiTabs>`,
+      snippet: `<OuiTabs display="condensed">
+  <OuiTab onClick={onClick}>Example 1</OuiTab>
+  <OuiTab onClick={onClick}>Example 2</OuiTab>
+</OuiTabs>`,
     },
     {
       title: 'Tabbed content',
@@ -123,17 +134,17 @@ export const TabsExample = {
       ],
       text: (
         <p>
-          <strong>EuiTabbedContent</strong> makes it easier to associate tabs
+          <strong>OuiTabbedContent</strong> makes it easier to associate tabs
           with content based on the selected tab. Use the{' '}
-          <EuiCode>initialSelectedTab</EuiCode> prop to specify which tab to
+          <OuiCode>initialSelectedTab</OuiCode> prop to specify which tab to
           initially select.
         </p>
       ),
       props: {
-        EuiTabbedContent,
+        OuiTabbedContent,
       },
       demo: <TabbedContent />,
-      snippet: `<EuiTabbedContent
+      snippet: `<OuiTabbedContent
   tabs={[
     {
       id: 'example1',
@@ -162,14 +173,14 @@ export const TabsExample = {
       ],
       text: (
         <p>
-          You can also use the <EuiCode>selectedTab</EuiCode> and{' '}
-          <EuiCode>onTabClick</EuiCode> props to take complete control over tab
+          You can also use the <OuiCode>selectedTab</OuiCode> and{' '}
+          <OuiCode>onTabClick</OuiCode> props to take complete control over tab
           selection. This can be useful if you want to change tabs based on user
           interaction with another part of the UI.
         </p>
       ),
       props: {
-        EuiTabbedContent,
+        OuiTabbedContent,
       },
       snippet: controlledSnippet,
       demo: <Controlled />,

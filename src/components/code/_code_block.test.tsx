@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,18 +32,18 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCodeBlockImpl } from './_code_block';
+import { OuiCodeBlockImpl } from './_code_block';
 
 const code = `var some = 'code';
 console.log(some);`;
 
-describe('EuiCodeBlockImpl', () => {
+describe('OuiCodeBlockImpl', () => {
   describe('inline', () => {
     test('renders an inline code tag', () => {
       const component = render(
-        <EuiCodeBlockImpl inline={true} {...requiredProps}>
+        <OuiCodeBlockImpl inline={true} {...requiredProps}>
           {code}
-        </EuiCodeBlockImpl>
+        </OuiCodeBlockImpl>
       );
 
       expect(component).toMatchSnapshot();
@@ -40,7 +51,7 @@ describe('EuiCodeBlockImpl', () => {
 
     test('highlights javascript code, adding "js" class', () => {
       const component = render(
-        <EuiCodeBlockImpl inline={true} language="js" />
+        <OuiCodeBlockImpl inline={true} language="js" />
       );
 
       expect(component).toMatchSnapshot();
@@ -48,7 +59,7 @@ describe('EuiCodeBlockImpl', () => {
 
     test('renders with transparent background', () => {
       const component = render(
-        <EuiCodeBlockImpl inline={true} transparentBackground={true} />
+        <OuiCodeBlockImpl inline={true} transparentBackground={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -58,9 +69,9 @@ describe('EuiCodeBlockImpl', () => {
   describe('block', () => {
     test('renders a pre block tag', () => {
       const component = render(
-        <EuiCodeBlockImpl inline={false} {...requiredProps}>
+        <OuiCodeBlockImpl inline={false} {...requiredProps}>
           {code}
-        </EuiCodeBlockImpl>
+        </OuiCodeBlockImpl>
       );
 
       expect(component).toMatchSnapshot();
@@ -68,7 +79,7 @@ describe('EuiCodeBlockImpl', () => {
 
     test('highlights javascript code, adding "js" class', () => {
       const component = render(
-        <EuiCodeBlockImpl inline={false} language="js" />
+        <OuiCodeBlockImpl inline={false} language="js" />
       );
 
       expect(component).toMatchSnapshot();
@@ -76,7 +87,7 @@ describe('EuiCodeBlockImpl', () => {
 
     test('renders with transparent background', () => {
       const component = render(
-        <EuiCodeBlockImpl inline={false} transparentBackground={true} />
+        <OuiCodeBlockImpl inline={false} transparentBackground={true} />
       );
 
       expect(component).toMatchSnapshot();
@@ -84,9 +95,9 @@ describe('EuiCodeBlockImpl', () => {
 
     test('renders a pre block tag with a css class modifier', () => {
       const component = render(
-        <EuiCodeBlockImpl inline={false} whiteSpace="pre" {...requiredProps}>
+        <OuiCodeBlockImpl inline={false} whiteSpace="pre" {...requiredProps}>
           {code}
-        </EuiCodeBlockImpl>
+        </OuiCodeBlockImpl>
       );
       expect(component).toMatchSnapshot();
     });

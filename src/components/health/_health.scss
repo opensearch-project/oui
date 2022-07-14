@@ -1,19 +1,30 @@
-.euiHealth {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiHealth {
   display: inline-block;
 }
 
-.euiHealth--textSizeXS {
-  @include euiFontSizeXS;
+.ouiHealth--textSizeXS {
+  @include ouiFontSizeXS;
 }
 
-.euiHealth--textSizeS {
-  @include euiFontSizeS;
+.ouiHealth--textSizeS {
+  @include ouiFontSizeS;
 }
 
-.euiHealth--textSizeM {
-  @include euiFontSizeM;
+.ouiHealth--textSizeM {
+  @include ouiFontSizeM;
 }
 
-.euiHealth--textSizeInherit {
+.ouiHealth--textSizeInherit {
   font-size: inherit;
 }

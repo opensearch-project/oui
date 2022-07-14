@@ -1,10 +1,21 @@
-.euiContextMenuItem {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiContextMenuItem {
   display: block;
-  padding: $euiSizeM;
+  padding: $ouiSizeM;
   width: 100%;
   text-align: left;
-  color: $euiTextColor;
-  outline-offset: -$euiFocusRingSize;
+  color: $ouiTextColor;
+  outline-offset: -$ouiFocusRingSize;
 
   &:hover,
   &:focus {
@@ -12,11 +23,11 @@
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $ouiFocusBackgroundColor;
   }
 
-  &.euiContextMenuItem-isDisabled {
-    color: $euiButtonColorDisabledText;
+  &.ouiContextMenuItem-isDisabled {
+    color: $ouiButtonColorDisabledText;
     cursor: default;
 
     &:hover,
@@ -26,40 +37,40 @@
   }
 
   &--small {
-    padding: ($euiSizeS * .75) $euiSizeS;
+    padding: ($ouiSizeS * .75) $ouiSizeS;
 
-    .euiContextMenuItem__text {
-      @include euiFontSizeS;
+    .ouiContextMenuItem__text {
+      @include ouiFontSizeS;
     }
   }
 }
 
-.euiContextMenuItem__inner {
+.ouiContextMenuItem__inner {
   display: flex;
 }
 
-.euiContextMenuItem__text {
+.ouiContextMenuItem__text {
   flex-grow: 1;
   overflow: hidden; // allows for text truncation
 }
 
-.euiContextMenuItem__arrow {
+.ouiContextMenuItem__arrow {
   align-self: flex-end;
 }
 
-.euiContextMenu__itemLayout {
+.ouiContextMenu__itemLayout {
   display: flex;
   align-items: center;
 
-  &.euiContextMenu__itemLayout--bottom {
+  &.ouiContextMenu__itemLayout--bottom {
     align-items: flex-end;
   }
 
-  &.euiContextMenu__itemLayout--top {
+  &.ouiContextMenu__itemLayout--top {
     align-items: flex-start;
   }
 
-  .euiContextMenu__icon {
+  .ouiContextMenu__icon {
     flex-shrink: 0;
   }
 }

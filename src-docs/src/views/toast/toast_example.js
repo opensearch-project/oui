@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,11 +17,11 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiToast,
-  EuiGlobalToastList,
-  EuiGlobalToastListItem,
-  EuiText,
+  OuiCode,
+  OuiToast,
+  OuiGlobalToastList,
+  OuiGlobalToastListItem,
+  OuiText,
 } from '../../../../src/components';
 import Guidelines from './guidelines';
 import toastConfig from './playground';
@@ -19,7 +30,7 @@ import ToastList from './toast_list';
 const toastListSource = require('!!raw-loader!./toast_list');
 const toastListHtml = renderToHtml(ToastList);
 const toastListSnippet = [
-  `<EuiGlobalToastList
+  `<OuiGlobalToastList
   toasts={[
     {
       id: 1,
@@ -35,73 +46,73 @@ import Default from './default';
 const defaultSource = require('!!raw-loader!./default');
 const defaultHtml = renderToHtml(Default);
 const defaultToastSnippet = [
-  `<EuiToast
+  `<OuiToast
   title="Default toast"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </OuiToast>`,
 ];
 
 import Info from './info';
 const infoSource = require('!!raw-loader!./info');
 const infoHtml = renderToHtml(Info);
 const infoToastSnippet = [
-  `<EuiToast
+  `<OuiToast
   title="Info toast"
   type="info"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </OuiToast>`,
 ];
 
 import Success from './success';
 const successSource = require('!!raw-loader!./success');
 const successHtml = renderToHtml(Success);
 const successToastSnippet = [
-  `<EuiToast
+  `<OuiToast
   title="Success toast"
   color="success"
   iconType="check"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </OuiToast>`,
 ];
 
 import Warning from './warning';
 const warningSource = require('!!raw-loader!./warning');
 const warningHtml = renderToHtml(Warning);
 const warningToastSnippet = [
-  `<EuiToast
+  `<OuiToast
   title="Warning toast"
   color="warning"
   iconType="help"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </OuiToast>`,
 ];
 
 import Danger from './danger';
 const dangerSource = require('!!raw-loader!./danger');
 const dangerHtml = renderToHtml(Danger);
 const dangerToastSnippet = [
-  `<EuiToast
+  `<OuiToast
   title="Danger toast"
   color="danger"
   iconType="alert"
   onClose={closeToast}>
   <!-- Raw HTML content -->
-  </EuiToast>`,
+  </OuiToast>`,
 ];
 
 export const ToastExample = {
   title: 'Toast',
   intro: (
-    <EuiText>
+    <OuiText>
       <p>
         Be sure to read the full{' '}
         <Link to="/guidelines/toast">toast usage guidelines</Link>.
       </p>
-    </EuiText>
+    </OuiText>
   ),
   sections: [
     {
@@ -117,9 +128,9 @@ export const ToastExample = {
         },
       ],
       props: {
-        EuiToast,
-        EuiGlobalToastList,
-        EuiGlobalToastListItem,
+        OuiToast,
+        OuiGlobalToastList,
+        OuiGlobalToastListItem,
       },
       demo: (
         <>
@@ -143,7 +154,7 @@ export const ToastExample = {
       text: (
         <div>
           <p>
-            <strong>EuiToast</strong> allows for small notes that appear in the
+            <strong>OuiToast</strong> allows for small notes that appear in the
             bottom right of the screen. They should be used for ephemeral, live
             actions (think <strong>save complete</strong> or{' '}
             <strong>something just finished right now</strong>).
@@ -177,7 +188,7 @@ export const ToastExample = {
       ],
       text: (
         <p>
-          Setting <EuiCode language="js">type=&quot;info&quot;</EuiCode>.
+          Setting <OuiCode language="js">type=&quot;info&quot;</OuiCode>.
         </p>
       ),
       demo: (
@@ -201,7 +212,7 @@ export const ToastExample = {
       ],
       text: (
         <p>
-          Setting <EuiCode language="js">color=&quot;success&quot;</EuiCode>.
+          Setting <OuiCode language="js">color=&quot;success&quot;</OuiCode>.
         </p>
       ),
       demo: (
@@ -225,7 +236,7 @@ export const ToastExample = {
       ],
       text: (
         <p>
-          Setting <EuiCode language="js">color=&quot;warning&quot;</EuiCode>.
+          Setting <OuiCode language="js">color=&quot;warning&quot;</OuiCode>.
         </p>
       ),
       demo: (
@@ -249,7 +260,7 @@ export const ToastExample = {
       ],
       text: (
         <p>
-          Setting <EuiCode language="js">color=&quot;danger&quot;</EuiCode>.
+          Setting <OuiCode language="js">color=&quot;danger&quot;</OuiCode>.
         </p>
       ),
       demo: (

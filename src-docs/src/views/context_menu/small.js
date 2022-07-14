@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiContextMenuPanel,
-  EuiContextMenuItem,
-  EuiPopover,
+  OuiButton,
+  OuiContextMenuPanel,
+  OuiContextMenuItem,
+  OuiPopover,
 } from '../../../../src/components';
 
 export default () => {
@@ -19,32 +30,32 @@ export default () => {
   };
 
   const items = [
-    <EuiContextMenuItem key="copy" icon="copy" onClick={closePopover}>
+    <OuiContextMenuItem key="copy" icon="copy" onClick={closePopover}>
       Copy
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem key="edit" icon="pencil" onClick={closePopover}>
+    </OuiContextMenuItem>,
+    <OuiContextMenuItem key="edit" icon="pencil" onClick={closePopover}>
       Edit
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem key="share" icon="share" onClick={closePopover}>
+    </OuiContextMenuItem>,
+    <OuiContextMenuItem key="share" icon="share" onClick={closePopover}>
       Share
-    </EuiContextMenuItem>,
+    </OuiContextMenuItem>,
   ];
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <OuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Click to show a single panel
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       id="smallContextMenuExample"
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       panelPaddingSize="none"
       anchorPosition="downLeft">
-      <EuiContextMenuPanel size="s" items={items} />
-    </EuiPopover>
+      <OuiContextMenuPanel size="s" items={items} />
+    </OuiPopover>
   );
 };

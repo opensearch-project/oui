@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {
-  EuiFlexItem,
-  EuiText,
-  EuiSplitPanel,
+  OuiFlexItem,
+  OuiText,
+  OuiSplitPanel,
 } from '../../../../src/components';
 
 const typeToClassNameMap = {
@@ -45,8 +56,8 @@ export const GuideRuleExample = ({
   const doOrDont = type && typeToSubtitleTextMap[type];
 
   return (
-    <EuiFlexItem>
-      <EuiSplitPanel.Outer
+    <OuiFlexItem>
+      <OuiSplitPanel.Outer
         className={classes}
         style={styles}
         hasShadow={false}
@@ -55,7 +66,7 @@ export const GuideRuleExample = ({
         hasBorder={false}
         {...rest}>
         <figure>
-          <EuiSplitPanel.Inner
+          <OuiSplitPanel.Inner
             className={classNames('guideRule__example__panel', {
               'guideRule__example__panel--flex': panelDisplay === 'flex',
             })}
@@ -63,17 +74,17 @@ export const GuideRuleExample = ({
             color={panelColor}
             {...panelProps}>
             {children}
-          </EuiSplitPanel.Inner>
-          <EuiSplitPanel.Inner color="transparent">
-            <EuiText color={type === 'do' ? 'success' : 'danger'} size="s">
+          </OuiSplitPanel.Inner>
+          <OuiSplitPanel.Inner color="transparent">
+            <OuiText color={type === 'do' ? 'success' : 'danger'} size="s">
               <p>
                 {doOrDont && <strong>{doOrDont}.</strong>} {text}
               </p>
-            </EuiText>
-          </EuiSplitPanel.Inner>
+            </OuiText>
+          </OuiSplitPanel.Inner>
         </figure>
-      </EuiSplitPanel.Outer>
-    </EuiFlexItem>
+      </OuiSplitPanel.Outer>
+    </OuiFlexItem>
   );
 };
 

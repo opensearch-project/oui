@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,14 +30,14 @@
 
 import React from 'react';
 import { mount, render } from 'enzyme';
-import { EuiNotificationEventMeta } from './notification_event_meta';
-import { EuiContextMenuPanel, EuiContextMenuItem } from '../context_menu';
+import { OuiNotificationEventMeta } from './notification_event_meta';
+import { OuiContextMenuPanel, OuiContextMenuItem } from '../context_menu';
 import { findTestSubject, takeMountedSnapshot } from '../../test';
 
-describe('EuiNotificationEventMeta', () => {
+describe('OuiNotificationEventMeta', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiNotificationEventMeta
+      <OuiNotificationEventMeta
         id="id"
         type="Alert"
         time={<span>2 min ago</span>}
@@ -40,7 +51,7 @@ describe('EuiNotificationEventMeta', () => {
   describe('props', () => {
     test('severity is rendered', () => {
       const component = render(
-        <EuiNotificationEventMeta
+        <OuiNotificationEventMeta
           id="id"
           type="Alert"
           time={<span>2 min ago</span>}
@@ -54,7 +65,7 @@ describe('EuiNotificationEventMeta', () => {
 
     test('badgeColor  is rendered', () => {
       const component = render(
-        <EuiNotificationEventMeta
+        <OuiNotificationEventMeta
           id="id"
           type="Alert"
           time={<span>2 min ago</span>}
@@ -68,7 +79,7 @@ describe('EuiNotificationEventMeta', () => {
 
     test('logoCloud  is rendered', () => {
       const component = render(
-        <EuiNotificationEventMeta
+        <OuiNotificationEventMeta
           id="id"
           type="Alert"
           time={<span>2 min ago</span>}
@@ -82,19 +93,19 @@ describe('EuiNotificationEventMeta', () => {
 
     test('contextMenuItems are rendered', () => {
       const contextMenuItems = [
-        <EuiContextMenuItem key="contextMenuItemA">
+        <OuiContextMenuItem key="contextMenuItemA">
           Mark as read
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="contextMenuItemB">
+        </OuiContextMenuItem>,
+        <OuiContextMenuItem key="contextMenuItemB">
           View messages like this
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="contextMenuItemC">
+        </OuiContextMenuItem>,
+        <OuiContextMenuItem key="contextMenuItemC">
           Don’t notify me about this
-        </EuiContextMenuItem>,
+        </OuiContextMenuItem>,
       ];
 
       const component = mount(
-        <EuiNotificationEventMeta
+        <OuiNotificationEventMeta
           id="id"
           type="Alert"
           time={<span>2 min ago</span>}
@@ -104,14 +115,14 @@ describe('EuiNotificationEventMeta', () => {
         />
       );
 
-      expect(component.find(EuiContextMenuPanel)).toHaveLength(0);
+      expect(component.find(OuiContextMenuPanel)).toHaveLength(0);
       findTestSubject(component, 'id-notificationEventMetaButton').simulate(
         'click'
       );
-      expect(component.find(EuiContextMenuPanel)).toHaveLength(1);
+      expect(component.find(OuiContextMenuPanel)).toHaveLength(1);
 
       expect(
-        takeMountedSnapshot(component.find(EuiContextMenuPanel))
+        takeMountedSnapshot(component.find(OuiContextMenuPanel))
       ).toMatchSnapshot();
     });
   });

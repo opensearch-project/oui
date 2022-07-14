@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,9 +16,9 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiMarkdownEditor,
-  EuiText,
-  EuiCode,
+  OuiMarkdownEditor,
+  OuiText,
+  OuiCode,
 } from '../../../../src/components';
 
 import { Link } from 'react-router-dom';
@@ -15,7 +26,7 @@ import { Link } from 'react-router-dom';
 import MarkdownEditor from './markdown_editor';
 const markdownEditorSource = require('!!raw-loader!./markdown_editor');
 const markdownEditorHtml = renderToHtml(MarkdownEditor);
-const markdownEditorSnippet = `<EuiMarkdownEditor
+const markdownEditorSnippet = `<OuiMarkdownEditor
   value={value}
   onChange={setValue}
 />`;
@@ -23,7 +34,7 @@ const markdownEditorSnippet = `<EuiMarkdownEditor
 import MarkdownEditorErrors from './markdown_editor_errors';
 const markdownEditorErrorsSource = require('!!raw-loader!./markdown_editor_errors');
 const markdownEditorErrorsHtml = renderToHtml(MarkdownEditorErrors);
-const markdownEditorErrorsSnippet = `<EuiMarkdownEditor
+const markdownEditorErrorsSnippet = `<OuiMarkdownEditor
   value={value}
   onChange={setValue}
   onParse={onParse}
@@ -35,26 +46,26 @@ const markdownEditorHeightSource = require('!!raw-loader!./markdown_editor_heigh
 const markdownEditorHeightHtml = renderToHtml(MarkdownEditorHeight);
 const markdownEditorHeightSnippet = [
   `// Custom height with auto-expanding preview
-<EuiMarkdownEditor
+<OuiMarkdownEditor
   value={value}
   onChange={setValue}
   height={200}
 />`,
   `// Height set to full
-<EuiMarkdownEditor
+<OuiMarkdownEditor
   value={value}
   onChange={setValue}
   height="full"
 />`,
   `// Custom height with no auto-expanding preview
-<EuiMarkdownEditor
+<OuiMarkdownEditor
   value={value}
   onChange={setValue}
   height={200}
   autoExpandPreview={false}
 />`,
   `// Custom height and custom max height
-<EuiMarkdownEditor
+<OuiMarkdownEditor
   value={value}
   onChange={setValue}
   height={200}
@@ -67,20 +78,20 @@ export const MarkdownEditorExample = {
   beta: true,
   intro: (
     <Fragment>
-      <EuiText>
+      <OuiText>
         <p>
-          <strong>EuiMarkdownEditor</strong> provides a markdown authoring
+          <strong>OuiMarkdownEditor</strong> provides a markdown authoring
           experience for the user. The component consists of a toolbar, text
           area, and a drag-and-drop zone to accept files (if configured to do
           so). There are two modes: a textarea that keeps track of cursor
           position, and a rendered preview mode that is powered by{' '}
           <strong>
-            <Link to="/editors-syntax/markdown-format/">EuiMarkdownFormat</Link>
+            <Link to="/editors-syntax/markdown-format/">OuiMarkdownFormat</Link>
           </strong>
           . State is maintained between the two and it is possible to pass
           changes from the preview area to the textarea and vice versa.
         </p>
-      </EuiText>
+      </OuiText>
     </Fragment>
   ),
   sections: [
@@ -103,7 +114,7 @@ export const MarkdownEditorExample = {
         </p>
       ),
       props: {
-        EuiMarkdownEditor,
+        OuiMarkdownEditor,
       },
       snippet: markdownEditorSnippet,
       demo: <MarkdownEditor />,
@@ -122,7 +133,7 @@ export const MarkdownEditorExample = {
       title: 'Error handling and feedback',
       text: (
         <p>
-          The <EuiCode>errors</EuiCode> prop allows you to pass an array of
+          The <OuiCode>errors</OuiCode> prop allows you to pass an array of
           errors if syntax is malformed. The below example starts with an
           incomplete tooltip tag, showing this error message by default. These
           errors are meant to be ephemeral and part of the editing experience.
@@ -131,7 +142,7 @@ export const MarkdownEditorExample = {
         </p>
       ),
       props: {
-        EuiMarkdownEditor,
+        OuiMarkdownEditor,
       },
       snippet: markdownEditorErrorsSnippet,
       demo: <MarkdownEditorErrors />,
@@ -151,26 +162,26 @@ export const MarkdownEditorExample = {
       text: (
         <>
           <p>
-            The <EuiCode>height</EuiCode> prop allows you to control the height
-            of the <strong>EuiMarkdownEditor</strong>. You can set the{' '}
-            <EuiCode>height</EuiCode> in pixels or pass{' '}
-            <EuiCode>&quot;full&quot;</EuiCode> to allow the{' '}
-            <strong>EuiMarkdownEditor</strong> to fill the height of its
-            container. By default, the <EuiCode>autoExpandPreview</EuiCode> prop
-            is set to <EuiCode>true</EuiCode>. This means that the preview{' '}
-            <EuiCode>height</EuiCode> is automatically adjusted to fit all the
+            The <OuiCode>height</OuiCode> prop allows you to control the height
+            of the <strong>OuiMarkdownEditor</strong>. You can set the{' '}
+            <OuiCode>height</OuiCode> in pixels or pass{' '}
+            <OuiCode>&quot;full&quot;</OuiCode> to allow the{' '}
+            <strong>OuiMarkdownEditor</strong> to fill the height of its
+            container. By default, the <OuiCode>autoExpandPreview</OuiCode> prop
+            is set to <OuiCode>true</OuiCode>. This means that the preview{' '}
+            <OuiCode>height</OuiCode> is automatically adjusted to fit all the
             content and avoid a scrollbar.
           </p>
           <p>
-            You can also control the <EuiCode>maxHeight</EuiCode> of the{' '}
+            You can also control the <OuiCode>maxHeight</OuiCode> of the{' '}
             editor/preview area. This prop only works when the{' '}
-            <EuiCode>height</EuiCode> is not set to{' '}
-            <EuiCode>&quot;full&quot;</EuiCode>.
+            <OuiCode>height</OuiCode> is not set to{' '}
+            <OuiCode>&quot;full&quot;</OuiCode>.
           </p>
         </>
       ),
       props: {
-        EuiMarkdownEditor,
+        OuiMarkdownEditor,
       },
       snippet: markdownEditorHeightSnippet,
       demo: <MarkdownEditorHeight />,

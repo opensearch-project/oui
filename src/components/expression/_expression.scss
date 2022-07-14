@@ -1,40 +1,51 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Keep each expression's text together as much as possible,
  *    but then wrap long words
  */
-.euiExpression {
-  @include euiTextBreakWord; /* 1 */
-  @include euiFontSizeS;
-  @include euiCodeFont;
+.ouiExpression {
+  @include ouiTextBreakWord; /* 1 */
+  @include ouiFontSizeS;
+  @include ouiCodeFont;
 
-  border-bottom: $euiBorderWidthThick solid transparent;
+  border-bottom: $ouiBorderWidthThick solid transparent;
   display: inline-block; /* 1 */
   text-align: left;
-  padding: ($euiSizeXS / 2) 0;
-  transition: all $euiAnimSpeedNormal ease-in-out;
-  color: $euiTextColor;
+  padding: ($ouiSizeXS / 2) 0;
+  transition: all $ouiAnimSpeedNormal ease-in-out;
+  color: $ouiTextColor;
 
   &:focus {
     border-bottom-style: solid;
   }
 
-  & + .euiExpression {
-    margin-left: $euiSizeS;
+  & + .ouiExpression {
+    margin-left: $ouiSizeS;
   }
 
-  &.euiExpression--columns {
+  &.ouiExpression--columns {
     border-color: transparent;
     // Ensures there's no flash of the dashed style before turning solid for the active state
     border-bottom-style: solid;
-    margin-bottom: $euiSizeXS;
+    margin-bottom: $ouiSizeXS;
   }
 
-  &.euiExpression--truncate {
+  &.ouiExpression--truncate {
     max-width: 100%;
 
-    .euiExpression__description,
-    .euiExpression__value {
-      @include euiTextTruncate;
+    .ouiExpression__description,
+    .ouiExpression__value {
+      @include ouiTextTruncate;
       display: inline-block;
       vertical-align: bottom;
     }
@@ -42,13 +53,13 @@
   }
 }
 
-.euiExpression-isUppercase .euiExpression__description {
+.ouiExpression-isUppercase .ouiExpression__description {
   text-transform: uppercase;
 }
 
-.euiExpression-isClickable {
+.ouiExpression-isClickable {
   cursor: pointer;
-  border-bottom: $euiBorderEditable;
+  border-bottom: $ouiBorderEditable;
 
   &:hover:not(:disabled) {
     border-bottom-style: solid;
@@ -56,61 +67,61 @@
   }
 }
 
-.euiExpression__icon {
-  margin-left: $euiSizeXS;
+.ouiExpression__icon {
+  margin-left: $ouiSizeXS;
 }
 
-.euiExpression-isActive {
+.ouiExpression-isActive {
   border-bottom-style: solid;
 }
 
-.euiExpression--columns {
+.ouiExpression--columns {
   width: 100%;
   display: flex;
-  padding: $euiSizeXS;
-  border-radius: $euiSizeXS;
+  padding: $ouiSizeXS;
+  border-radius: $ouiSizeXS;
 
-  &.euiExpression-isClickable {
-    background-color: $euiColorLightestShade;
+  &.ouiExpression-isClickable {
+    background-color: $ouiColorLightestShade;
 
     // sass-lint:disable-block nesting-depth
     &:focus,
     &:hover:not(:disabled) {
-      .euiExpression__description,
-      .euiExpression__value {
+      .ouiExpression__description,
+      .ouiExpression__value {
         // inner child specificity so it inherits underline color from text color
         text-decoration: underline;
       }
     }
   }
 
-  .euiExpression__description {
+  .ouiExpression__description {
     text-align: right;
-    margin-right: $euiSizeS;
+    margin-right: $ouiSizeS;
     flex-shrink: 0; // Ensures it doesn't get smaller in case the value is really long
   }
 
-  .euiExpression__value {
+  .ouiExpression__value {
     flex-grow: 1;
   }
 
-  .euiExpression__icon {
-    margin-top: $euiSizeXS;
+  .ouiExpression__icon {
+    margin-top: $ouiSizeXS;
   }
 }
 
-@each $name, $color in $euiExpressionColors {
-  .euiExpression--#{$name} {
+@each $name, $color in $ouiExpressionColors {
+  .ouiExpression--#{$name} {
     &:focus {
       background-color: transparentize($color, .9);
     }
 
-    &.euiExpression-isActive {
+    &.ouiExpression-isActive {
       border-bottom-color: $color;
       border-color: $color;
     }
 
-    .euiExpression__description {
+    .ouiExpression__description {
       color: $color;
     }
   }

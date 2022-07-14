@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,15 +35,15 @@ import React, {
   MouseEventHandler,
 } from 'react';
 import classNames from 'classnames';
-import { EuiIcon } from '../icon';
-import { EuiI18n, useEuiI18n } from '../i18n';
+import { OuiIcon } from '../icon';
+import { OuiI18n, useOuiI18n } from '../i18n';
 import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import { getSecureRelForTarget } from '../../services';
-import { EuiScreenReaderOnly } from '../accessibility';
+import { OuiScreenReaderOnly } from '../accessibility';
 import { validateHref } from '../../services/security/href_validator';
 
-export type EuiLinkType = 'button' | 'reset' | 'submit';
-export type EuiLinkColor =
+export type OuiLinkType = 'button' | 'reset' | 'submit';
+export type OuiLinkColor =
   | 'primary'
   | 'subdued'
   | 'secondary'
@@ -43,42 +54,42 @@ export type EuiLinkColor =
   | 'text'
   | 'ghost';
 
-const colorsToClassNameMap: { [color in EuiLinkColor]: string } = {
-  primary: 'euiLink--primary',
-  subdued: 'euiLink--subdued',
-  secondary: 'euiLink--secondary',
-  success: 'euiLink--success',
-  accent: 'euiLink--accent',
-  danger: 'euiLink--danger',
-  warning: 'euiLink--warning',
-  ghost: 'euiLink--ghost',
-  text: 'euiLink--text',
+const colorsToClassNameMap: { [color in OuiLinkColor]: string } = {
+  primary: 'ouiLink--primary',
+  subdued: 'ouiLink--subdued',
+  secondary: 'ouiLink--secondary',
+  success: 'ouiLink--success',
+  accent: 'ouiLink--accent',
+  danger: 'ouiLink--danger',
+  warning: 'ouiLink--warning',
+  ghost: 'ouiLink--ghost',
+  text: 'ouiLink--text',
 };
 
 export const COLORS = keysOf(colorsToClassNameMap);
 
 export interface LinkButtonProps {
-  type?: EuiLinkType;
+  type?: OuiLinkType;
   /**
    * Any of our named colors.
    * **`secondary` color is DEPRECATED, use `success` instead**
    */
-  color?: EuiLinkColor;
+  color?: OuiLinkColor;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export interface EuiLinkButtonProps
+export interface OuiLinkButtonProps
   extends CommonProps,
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type' | 'color' | 'onClick'>,
     LinkButtonProps {}
 
 export interface LinkAnchorProps {
-  type?: EuiLinkType;
+  type?: OuiLinkType;
   /**
    * Any of our named colors.
    * **`secondary` color is DEPRECATED, use `success` instead**
    */
-  color?: EuiLinkColor;
+  color?: OuiLinkColor;
   /**
    * Set to true to show an icon indicating that it is an external link;
    * Defaults to true if `target="_blank"`
@@ -86,19 +97,19 @@ export interface LinkAnchorProps {
   external?: boolean;
 }
 
-export interface EuiLinkAnchorProps
+export interface OuiLinkAnchorProps
   extends CommonProps,
     Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'type' | 'color' | 'onClick'>,
     LinkAnchorProps {
   onClick?: MouseEventHandler<HTMLAnchorElement>;
 }
 
-export type EuiLinkProps = ExclusiveUnion<
-  EuiLinkButtonProps,
-  EuiLinkAnchorProps
+export type OuiLinkProps = ExclusiveUnion<
+  OuiLinkButtonProps,
+  OuiLinkAnchorProps
 >;
 
-const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
+const OuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, OuiLinkProps>(
   (
     {
       children,
@@ -119,30 +130,30 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
     const disabled = _disabled || !isHrefValid;
 
     const externalLinkIcon = (
-      <EuiIcon
-        aria-label={useEuiI18n('euiLink.external.ariaLabel', 'External link')}
+      <OuiIcon
+        aria-label={useOuiI18n('ouiLink.external.ariaLabel', 'External link')}
         size="s"
-        className="euiLink__externalIcon"
+        className="ouiLink__externalIcon"
         type="popout"
       />
     );
 
     const newTargetScreenreaderText = (
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <span>
-          <EuiI18n
-            token="euiLink.newTarget.screenReaderOnlyText"
+          <OuiI18n
+            token="ouiLink.newTarget.screenReaderOnlyText"
             default="(opens in a new tab or window)"
           />
         </span>
-      </EuiScreenReaderOnly>
+      </OuiScreenReaderOnly>
     );
 
     if (href === undefined || !isHrefValid) {
       const buttonProps = {
         className: classNames(
-          'euiLink',
-          disabled ? 'euiLink-disabled' : colorsToClassNameMap[color],
+          'ouiLink',
+          disabled ? 'ouiLink-disabled' : colorsToClassNameMap[color],
           className
         ),
         type,
@@ -154,7 +165,7 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
       return (
         <button
           ref={ref as React.Ref<HTMLButtonElement>}
-          {...(buttonProps as EuiLinkButtonProps)}>
+          {...(buttonProps as OuiLinkButtonProps)}>
           {children}
         </button>
       );
@@ -162,7 +173,7 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
 
     const secureRel = getSecureRelForTarget({ href, target, rel });
     const anchorProps = {
-      className: classNames('euiLink', colorsToClassNameMap[color], className),
+      className: classNames('ouiLink', colorsToClassNameMap[color], className),
       href,
       target,
       rel: secureRel,
@@ -175,7 +186,7 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
     return (
       <a
         ref={ref as React.Ref<HTMLAnchorElement>}
-        {...(anchorProps as EuiLinkAnchorProps)}>
+        {...(anchorProps as OuiLinkAnchorProps)}>
         {children}
         {showExternalLinkIcon && externalLinkIcon}
         {target === '_blank' && newTargetScreenreaderText}
@@ -184,5 +195,5 @@ const EuiLink = forwardRef<HTMLAnchorElement | HTMLButtonElement, EuiLinkProps>(
   }
 );
 
-EuiLink.displayName = 'EuiLink';
-export { EuiLink };
+OuiLink.displayName = 'OuiLink';
+export { OuiLink };

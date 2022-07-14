@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,17 +32,17 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
 
-import { EuiStepProps, EuiStep } from './step';
+import { OuiStepProps, OuiStep } from './step';
 
-export type EuiContainedStepProps = Omit<EuiStepProps, 'step'>;
+export type OuiContainedStepProps = Omit<OuiStepProps, 'step'>;
 
-export interface EuiStepsProps
+export interface OuiStepsProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
-   * An array of `EuiStep` objects excluding the `step` prop
+   * An array of `OuiStep` objects excluding the `step` prop
    */
-  steps: EuiContainedStepProps[];
+  steps: OuiContainedStepProps[];
   /**
    * The number the steps should begin from
    */
@@ -41,22 +52,22 @@ export interface EuiStepsProps
    */
   headingElement?: string;
   /**
-   * Title sizing equivalent to EuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
+   * Title sizing equivalent to OuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
    */
-  titleSize?: EuiStepProps['titleSize'];
+  titleSize?: OuiStepProps['titleSize'];
 }
 
 function renderSteps(
-  steps: EuiContainedStepProps[],
+  steps: OuiContainedStepProps[],
   firstStepNumber: number,
   headingElement: string,
-  titleSize?: EuiStepProps['titleSize']
+  titleSize?: OuiStepProps['titleSize']
 ) {
   return steps.map((step, index) => {
     const { className, children, title, status, ...rest } = step;
 
     return (
-      <EuiStep
+      <OuiStep
         className={className}
         key={index}
         headingElement={headingElement}
@@ -66,12 +77,12 @@ function renderSteps(
         status={status}
         {...rest}>
         {children}
-      </EuiStep>
+      </OuiStep>
     );
   });
 }
 
-export const EuiSteps: FunctionComponent<EuiStepsProps> = ({
+export const OuiSteps: FunctionComponent<OuiStepsProps> = ({
   className,
   firstStepNumber = 1,
   headingElement = 'p',
@@ -79,7 +90,7 @@ export const EuiSteps: FunctionComponent<EuiStepsProps> = ({
   steps,
   ...rest
 }) => {
-  const classes = classNames('euiSteps', className);
+  const classes = classNames('ouiSteps', className);
 
   return (
     <div className={classes} {...rest}>

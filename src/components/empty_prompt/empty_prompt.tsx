@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,16 +37,16 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
-import { EuiTitle, EuiTitleSize } from '../title';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiSpacer } from '../spacer';
-import { EuiIcon, IconColor, IconType } from '../icon';
-import { EuiText, EuiTextColor } from '../text';
+import { OuiTitle, OuiTitleSize } from '../title';
+import { OuiFlexGroup, OuiFlexItem } from '../flex';
+import { OuiSpacer } from '../spacer';
+import { OuiIcon, IconColor, IconType } from '../icon';
+import { OuiText, OuiTextColor } from '../text';
 
-export type EuiEmptyPromptProps = CommonProps &
+export type OuiEmptyPromptProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> & {
     /*
-     * Accepts any `EuiIcon.type` or pass a custom node
+     * Accepts any `OuiIcon.type` or pass a custom node
      */
     iconType?: IconType;
     /**
@@ -47,16 +58,16 @@ export type EuiEmptyPromptProps = CommonProps &
      */
     icon?: ReactNode;
     /**
-     * Requires passing a single element that gets wrapped in an EuiTitle.
+     * Requires passing a single element that gets wrapped in an OuiTitle.
      * Recommendation is a heading, preferrably an `<h2>` if in its own section
      */
     title?: ReactElement<any>;
     /**
-     * Choose from one of the `EuiTitle.size` options
+     * Choose from one of the `OuiTitle.size` options
      */
-    titleSize?: EuiTitleSize;
+    titleSize?: OuiTitleSize;
     /**
-     * Gets wrapped in a subdued EuiText block.
+     * Gets wrapped in a subdued OuiText block.
      * Recommendation is to pass typical text elements like `<p>`
      */
     body?: ReactNode;
@@ -67,7 +78,7 @@ export type EuiEmptyPromptProps = CommonProps &
     actions?: ReactNode;
   };
 
-export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
+export const OuiEmptyPrompt: FunctionComponent<OuiEmptyPromptProps> = ({
   icon,
   iconType,
   iconColor = 'subdued',
@@ -78,21 +89,21 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
   className,
   ...rest
 }) => {
-  const classes = classNames('euiEmptyPrompt', className);
+  const classes = classNames('ouiEmptyPrompt', className);
 
   let iconNode;
   if (icon) {
     iconNode = (
       <>
         {icon}
-        <EuiSpacer size="m" />
+        <OuiSpacer size="m" />
       </>
     );
   } else if (iconType) {
     iconNode = (
       <>
-        <EuiIcon type={iconType} size="xxl" color={iconColor} />
-        <EuiSpacer size="m" />
+        <OuiIcon type={iconType} size="xxl" color={iconColor} />
+        <OuiSpacer size="m" />
       </>
     );
   }
@@ -101,15 +112,15 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
   let bodyNode;
   if (body || title) {
     if (title) {
-      titleNode = <EuiTitle size={titleSize}>{title}</EuiTitle>;
+      titleNode = <OuiTitle size={titleSize}>{title}</OuiTitle>;
     }
 
     if (body) {
       bodyNode = (
-        <EuiTextColor color="subdued">
-          {title && <EuiSpacer size="m" />}
-          <EuiText>{body}</EuiText>
-        </EuiTextColor>
+        <OuiTextColor color="subdued">
+          {title && <OuiSpacer size="m" />}
+          <OuiText>{body}</OuiText>
+        </OuiTextColor>
       );
     }
   }
@@ -120,17 +131,17 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
 
     if (Array.isArray(actions)) {
       actionsRow = (
-        <EuiFlexGroup
+        <OuiFlexGroup
           gutterSize="m"
           alignItems="center"
           justifyContent="center"
           direction="column">
           {actions.map((action, index) => (
-            <EuiFlexItem key={index} grow={false}>
+            <OuiFlexItem key={index} grow={false}>
               {action}
-            </EuiFlexItem>
+            </OuiFlexItem>
           ))}
-        </EuiFlexGroup>
+        </OuiFlexGroup>
       );
     } else {
       actionsRow = actions;
@@ -138,7 +149,7 @@ export const EuiEmptyPrompt: FunctionComponent<EuiEmptyPromptProps> = ({
 
     actionsNode = (
       <>
-        <EuiSpacer size="l" />
+        <OuiSpacer size="l" />
         {actionsRow}
       </>
     );

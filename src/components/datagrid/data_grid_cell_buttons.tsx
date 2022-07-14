@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,15 +29,15 @@
  */
 import React, { JSXElementConstructor, useMemo } from 'react';
 import {
-  EuiDataGridColumn,
-  EuiDataGridColumnCellAction,
-  EuiDataGridColumnCellActionProps,
+  OuiDataGridColumn,
+  OuiDataGridColumnCellAction,
+  OuiDataGridColumnCellActionProps,
 } from './data_grid_types';
 import classNames from 'classnames';
-import { EuiI18n } from '../i18n';
-import { EuiButtonIcon, EuiButtonIconProps } from '../button/button_icon';
+import { OuiI18n } from '../i18n';
+import { OuiButtonIcon, OuiButtonIconProps } from '../button/button_icon';
 
-export const EuiDataGridCellButtons = ({
+export const OuiDataGridCellButtons = ({
   popoverIsOpen,
   closePopover,
   onExpandClick,
@@ -36,22 +47,22 @@ export const EuiDataGridCellButtons = ({
   popoverIsOpen: boolean;
   closePopover: () => void;
   onExpandClick: () => void;
-  column?: EuiDataGridColumn;
+  column?: OuiDataGridColumn;
   rowIndex: number;
 }) => {
-  const buttonIconClasses = classNames('euiDataGridRowCell__expandButtonIcon', {
-    'euiDataGridRowCell__expandButtonIcon-isActive': popoverIsOpen,
+  const buttonIconClasses = classNames('ouiDataGridRowCell__expandButtonIcon', {
+    'ouiDataGridRowCell__expandButtonIcon-isActive': popoverIsOpen,
   });
-  const buttonClasses = classNames('euiDataGridRowCell__expandButton', {
-    'euiDataGridRowCell__expandButton-isActive': popoverIsOpen,
+  const buttonClasses = classNames('ouiDataGridRowCell__expandButton', {
+    'ouiDataGridRowCell__expandButton-isActive': popoverIsOpen,
   });
   const expandButton = (
-    <EuiI18n
+    <OuiI18n
       key={'expand'}
-      token="euiDataGridCellButtons.expandButtonTitle"
+      token="ouiDataGridCellButtons.expandButtonTitle"
       default="Click or hit enter to interact with cell content">
       {(expandButtonTitle: string) => (
-        <EuiButtonIcon
+        <OuiButtonIcon
           display="fill"
           className={buttonIconClasses}
           color="primary"
@@ -62,23 +73,23 @@ export const EuiDataGridCellButtons = ({
           title={expandButtonTitle}
         />
       )}
-    </EuiI18n>
+    </OuiI18n>
   );
   const additionalButtons = useMemo(() => {
-    const ButtonComponent = (props: EuiButtonIconProps) => (
-      <EuiButtonIcon
+    const ButtonComponent = (props: OuiButtonIconProps) => (
+      <OuiButtonIcon
         {...props}
         aria-hidden
-        className="euiDataGridRowCell__actionButtonIcon"
+        className="ouiDataGridRowCell__actionButtonIcon"
         iconSize="s"
       />
     );
     return column && Array.isArray(column.cellActions)
       ? column.cellActions.map(
-          (Action: EuiDataGridColumnCellAction, idx: number) => {
+          (Action: OuiDataGridColumnCellAction, idx: number) => {
             // React is more permissible than the TS types indicate
             const CellButtonElement = Action as JSXElementConstructor<
-              EuiDataGridColumnCellActionProps
+              OuiDataGridColumnCellActionProps
             >;
             return (
               <CellButtonElement

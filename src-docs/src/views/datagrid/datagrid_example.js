@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 import {
-  EuiDataGrid,
-  EuiCode,
-  EuiDescriptionList,
-  EuiCodeBlock,
-  EuiText,
-  EuiSpacer,
+  OuiDataGrid,
+  OuiCode,
+  OuiDescriptionList,
+  OuiCodeBlock,
+  OuiText,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import { Link } from 'react-router-dom';
@@ -19,26 +30,26 @@ const dataGridSource = require('!!raw-loader!./datagrid');
 const dataGridHtml = renderToHtml(DataGrid);
 
 import {
-  EuiDataGridColumn,
-  EuiDataGridColumnCellAction,
-  EuiDataGridPaginationProps,
-  EuiDataGridSorting,
-  EuiDataGridInMemory,
-  EuiDataGridStyle,
-  EuiDataGridToolBarVisibilityOptions,
-  EuiDataGridColumnVisibility,
-  EuiDataGridColumnActions,
-  EuiDataGridPopoverContentProps,
-  EuiDataGridControlColumn,
-  EuiDataGridToolBarVisibilityColumnSelectorOptions,
-  EuiDataGridRowHeightsOptions,
+  OuiDataGridColumn,
+  OuiDataGridColumnCellAction,
+  OuiDataGridPaginationProps,
+  OuiDataGridSorting,
+  OuiDataGridInMemory,
+  OuiDataGridStyle,
+  OuiDataGridToolBarVisibilityOptions,
+  OuiDataGridColumnVisibility,
+  OuiDataGridColumnActions,
+  OuiDataGridPopoverContentProps,
+  OuiDataGridControlColumn,
+  OuiDataGridToolBarVisibilityColumnSelectorOptions,
+  OuiDataGridRowHeightsOptions,
 } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
 
-import { EuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
-import { EuiDataGridSchemaDetector } from '!!prop-loader!../../../../src/components/datagrid/data_grid_schema';
+import { OuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
+import { OuiDataGridSchemaDetector } from '!!prop-loader!../../../../src/components/datagrid/data_grid_schema';
 
 const gridSnippet = `
-  <EuiDataGrid
+  <OuiDataGrid
     // Optional. Will try to autodectect schemas and do sorting and pagination in memory.
     inMemory={{ level: 'sorting' }}
     // Required. There are 200 total records.
@@ -62,7 +73,7 @@ const gridSnippet = `
         id: 'selection',
         width: 31,
         headerCellRender: () => <span>Select a Row</span>,
-        rowCellRender: () => <div><EuiCheckbox ... /></div>,
+        rowCellRender: () => <div><OuiCheckbox ... /></div>,
       },
     ]}
     trailingControlColumns={[
@@ -132,7 +143,7 @@ const gridSnippet = `
         sortTextAsc: 'Star Wars-Star Trek',
         // Text for what the DESC sort does.
         sortTextDesc: 'Star Trek-Star Wars',
-        // EuiIcon or Token to signify this schema.
+        // OuiIcon or Token to signify this schema.
         icon: 'star',
         // The color to use for the icon token.
         color: '#000000',
@@ -162,7 +173,7 @@ const gridConcepts = [
     title: 'columns',
     description: (
       <span>
-        An array of <strong>EuiDataGridColumn</strong> objects. Lists the
+        An array of <strong>OuiDataGridColumn</strong> objects. Lists the
         columns available and the schema and settings tied to it.
       </span>
     ),
@@ -171,7 +182,7 @@ const gridConcepts = [
     title: 'inMemory',
     description: (
       <span>
-        A <strong>EuiDataGridInMemory</strong> object to define the level of
+        A <strong>OuiDataGridInMemory</strong> object to define the level of
         high order schema-detection and sorting logic to use on your data.{' '}
         <strong>Try to set it when possible</strong>. If omitted, disables all
         enhancements and assumes content is flat strings.
@@ -182,7 +193,7 @@ const gridConcepts = [
     title: 'columnVisibility',
     description: (
       <span>
-        An array of <strong>EuiDataGridColumnVisibility</strong> objects.
+        An array of <strong>OuiDataGridColumnVisibility</strong> objects.
         Defines which columns are visible in the grid and the order they are
         displayed.
       </span>
@@ -192,7 +203,7 @@ const gridConcepts = [
     title: 'leading and trailing controlColumns',
     description: (
       <span>
-        An array of <strong>EuiDataGridControlColumn</strong> objects. Used to
+        An array of <strong>OuiDataGridControlColumn</strong> objects. Used to
         define ancillary columns on the left side of the data grid. Useful for
         adding items like checkboxes and buttons.
       </span>
@@ -202,7 +213,7 @@ const gridConcepts = [
     title: 'schemaDetectors',
     description: (
       <span>
-        An array of custom <strong>EuiDataGridSchemaDetector</strong> objects.
+        An array of custom <strong>OuiDataGridSchemaDetector</strong> objects.
         You can inject custom schemas to the grid to define the classnames
         applied.
       </span>
@@ -212,7 +223,7 @@ const gridConcepts = [
     title: 'popoverContents',
     description: (
       <span>
-        An object mapping <strong>EuiDataGridColumn</strong> schemas to a custom
+        An object mapping <strong>OuiDataGridColumn</strong> schemas to a custom
         popover render. This dictates the content of the popovers when you click
         into each cell.
       </span>
@@ -228,9 +239,9 @@ const gridConcepts = [
     description: (
       <span>
         Defines the look of the grid. Accepts a partial{' '}
-        <strong>EuiDataGridStyle</strong> object. Settings provided may be
+        <strong>OuiDataGridStyle</strong> object. Settings provided may be
         overwritten or merged with user defined preferences if{' '}
-        <EuiCode>toolbarVisibility.showStyleSelector</EuiCode> is set to true
+        <OuiCode>toolbarVisibility.showStyleSelector</OuiCode> is set to true
         (which is the default).
       </span>
     ),
@@ -240,7 +251,7 @@ const gridConcepts = [
     description: (
       <span>
         Accepts either a boolean or{' '}
-        <strong>EuiDataGridToolBarVisibilityOptions</strong> object. When used
+        <strong>OuiDataGridToolBarVisibilityOptions</strong> object. When used
         as a boolean, defines the visibility of entire toolbar. When passed an
         object allows you to turn off individual controls within the toolbar.
       </span>
@@ -253,7 +264,7 @@ const gridConcepts = [
         A function called to render a cell&apos;s value. Behind the scenes it is
         treated as a React component allowing hooks, context, and other React
         concepts to be used. The function receives a{' '}
-        <strong>EuiDataGridCellValueElement</strong> as its only argument.
+        <strong>OuiDataGridCellValueElement</strong> as its only argument.
       </span>
     ),
   },
@@ -261,7 +272,7 @@ const gridConcepts = [
     title: 'pagination',
     description: (
       <span>
-        A <strong>EuiDataGridPagination</strong> object. Omit to disable
+        A <strong>OuiDataGridPagination</strong> object. Omit to disable
         pagination completely.
       </span>
     ),
@@ -270,10 +281,10 @@ const gridConcepts = [
     title: 'sorting',
     description: (
       <span>
-        A <strong>EuiDataGridSorting</strong> object that provides the sorted
+        A <strong>OuiDataGridSorting</strong> object that provides the sorted
         columns along with their direction. Omit to disable, but you&apos;ll
         likely want to also turn off the user sorting controls through the{' '}
-        <EuiCode>toolbarVisibility</EuiCode> prop.
+        <OuiCode>toolbarVisibility</OuiCode> prop.
       </span>
     ),
   },
@@ -282,7 +293,7 @@ const gridConcepts = [
     description: (
       <span>
         A callback for when a column&apos;s size changes. Callback receives{' '}
-        <EuiCode>&#123; columnId: string, width: number &#125;</EuiCode>
+        <OuiCode>&#123; columnId: string, width: number &#125;</OuiCode>
       </span>
     ),
   },
@@ -291,17 +302,17 @@ const gridConcepts = [
 export const DataGridExample = {
   title: 'Data grid',
   intro: (
-    <EuiText>
+    <OuiText>
       <p>
-        <strong>EuiDataGrid</strong> is for displaying large amounts of tabular
+        <strong>OuiDataGrid</strong> is for displaying large amounts of tabular
         data. It is a better choice over{' '}
-        <Link to="/tabular-content/tables/">EUI tables</Link> when there are
+        <Link to="/tabular-content/tables/">OUI tables</Link> when there are
         many columns, the data in those columns is fairly uniform, and when
         schemas and sorting are important for comparison. Although it is similar
-        to traditional spreedsheet software, EuiDataGrid&apos;s current
+        to traditional spreedsheet software, OuiDataGrid&apos;s current
         strengths are in rendering rather than creating content.{' '}
       </p>
-    </EuiText>
+    </OuiText>
   ),
   sections: [
     {
@@ -363,22 +374,22 @@ export const DataGridExample = {
       ),
       components: { DataGrid },
       props: {
-        EuiDataGrid,
-        EuiDataGridColumn,
-        EuiDataGridColumnCellAction,
-        EuiDataGridColumnVisibility,
-        EuiDataGridColumnActions,
-        EuiDataGridControlColumn,
-        EuiDataGridInMemory,
-        EuiDataGridPaginationProps,
-        EuiDataGridSorting,
-        EuiDataGridCellValueElementProps,
-        EuiDataGridSchemaDetector,
-        EuiDataGridStyle,
-        EuiDataGridToolBarVisibilityOptions,
-        EuiDataGridToolBarVisibilityColumnSelectorOptions,
-        EuiDataGridPopoverContentProps,
-        EuiDataGridRowHeightsOptions,
+        OuiDataGrid,
+        OuiDataGridColumn,
+        OuiDataGridColumnCellAction,
+        OuiDataGridColumnVisibility,
+        OuiDataGridColumnActions,
+        OuiDataGridControlColumn,
+        OuiDataGridInMemory,
+        OuiDataGridPaginationProps,
+        OuiDataGridSorting,
+        OuiDataGridCellValueElementProps,
+        OuiDataGridSchemaDetector,
+        OuiDataGridStyle,
+        OuiDataGridToolBarVisibilityOptions,
+        OuiDataGridToolBarVisibilityColumnSelectorOptions,
+        OuiDataGridPopoverContentProps,
+        OuiDataGridRowHeightsOptions,
       },
       demo: (
         <Fragment>
@@ -391,17 +402,17 @@ export const DataGridExample = {
       wrapText: false,
       text: (
         <Fragment>
-          <EuiText>
+          <OuiText>
             <p>
               Here is a complicated data grid example meant to give you an idea
               of the data structure and callbacks you&apos;ll need to provide if
               you were utilizing all the features.
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiCodeBlock language="javascript" paddingSize="s" isCopyable>
+          </OuiText>
+          <OuiSpacer />
+          <OuiCodeBlock language="javascript" paddingSize="s" isCopyable>
             {gridSnippet}
-          </EuiCodeBlock>
+          </OuiCodeBlock>
         </Fragment>
       ),
     },
@@ -410,7 +421,7 @@ export const DataGridExample = {
       wrapText: false,
       text: (
         <Fragment>
-          <EuiText>
+          <OuiText>
             <p>
               Please check the props tab in the example above for more
               explanation on the lower level object types. The majority of the
@@ -422,9 +433,9 @@ export const DataGridExample = {
               </a>{' '}
               file.
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiDescriptionList
+          </OuiText>
+          <OuiSpacer />
+          <OuiDescriptionList
             compressed
             listItems={gridConcepts}
             type="responsiveColumn"

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,9 +40,9 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 import { htmlIdGenerator } from '../../../services/accessibility';
-import { EuiIcon } from '../../icon';
+import { OuiIcon } from '../../icon';
 
-export type EuiSwitchEvent = React.BaseSyntheticEvent<
+export type OuiSwitchEvent = React.BaseSyntheticEvent<
   React.MouseEvent<HTMLButtonElement>,
   HTMLButtonElement,
   EventTarget & {
@@ -39,7 +50,7 @@ export type EuiSwitchEvent = React.BaseSyntheticEvent<
   }
 >;
 
-export type EuiSwitchProps = CommonProps &
+export type OuiSwitchProps = CommonProps &
   Omit<
     ButtonHTMLAttributes<HTMLButtonElement>,
     'onChange' | 'type' | 'disabled'
@@ -53,7 +64,7 @@ export type EuiSwitchProps = CommonProps &
      */
     label: ReactNode | string;
     checked: boolean;
-    onChange: (event: EuiSwitchEvent) => void;
+    onChange: (event: OuiSwitchEvent) => void;
     disabled?: boolean;
     compressed?: boolean;
     type?: 'submit' | 'reset' | 'button';
@@ -63,7 +74,7 @@ export type EuiSwitchProps = CommonProps &
     labelProps?: CommonProps & HTMLAttributes<HTMLSpanElement>;
   };
 
-export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
+export const OuiSwitch: FunctionComponent<OuiSwitchProps> = ({
   label,
   id,
   checked,
@@ -85,7 +96,7 @@ export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
         return;
       }
 
-      const event = (e as unknown) as EuiSwitchEvent;
+      const event = (e as unknown) as OuiSwitchEvent;
       event.target.checked = !checked;
       onChange(event);
     },
@@ -93,16 +104,16 @@ export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
   );
 
   const classes = classNames(
-    'euiSwitch',
+    'ouiSwitch',
     {
-      'euiSwitch--compressed': compressed,
+      'ouiSwitch--compressed': compressed,
     },
     className
   );
-  const labelClasses = classNames('euiSwitch__label', labelProps?.className);
+  const labelClasses = classNames('ouiSwitch__label', labelProps?.className);
   if (showLabel === false && typeof label !== 'string') {
     console.warn(
-      'EuiSwitch `label` must be a string when `showLabel` is false.'
+      'OuiSwitch `label` must be a string when `showLabel` is false.'
     );
   }
 
@@ -111,7 +122,7 @@ export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
       <button
         id={switchId}
         aria-checked={checked || false}
-        className="euiSwitch__button"
+        className="ouiSwitch__button"
         role="switch"
         type={type}
         disabled={disabled}
@@ -119,17 +130,17 @@ export const EuiSwitch: FunctionComponent<EuiSwitchProps> = ({
         aria-label={showLabel ? undefined : (label as string)}
         aria-labelledby={showLabel ? labelId : undefined}
         {...rest}>
-        <span className="euiSwitch__body">
-          <span className="euiSwitch__thumb" />
-          <span className="euiSwitch__track">
+        <span className="ouiSwitch__body">
+          <span className="ouiSwitch__thumb" />
+          <span className="ouiSwitch__track">
             {!compressed && (
               <React.Fragment>
-                <EuiIcon type="cross" size="m" className="euiSwitch__icon" />
+                <OuiIcon type="cross" size="m" className="ouiSwitch__icon" />
 
-                <EuiIcon
+                <OuiIcon
                   type="check"
                   size="m"
-                  className="euiSwitch__icon euiSwitch__icon--checked"
+                  className="ouiSwitch__icon ouiSwitch__icon--checked"
                 />
               </React.Fragment>
             )}

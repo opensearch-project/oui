@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,14 +29,14 @@
  */
 
 import { ReactElement, ReactNode } from 'react';
-import { EuiIconType } from '../icon/icon';
-import { EuiButtonIconColor } from '../button/button_icon/button_icon';
-import { EuiButtonEmptyColor } from '../button/button_empty';
+import { OuiIconType } from '../icon/icon';
+import { OuiButtonIconColor } from '../button/button_icon/button_icon';
+import { OuiButtonEmptyColor } from '../button/button_empty';
 import { ExclusiveUnion } from '../common';
 
-type IconFunction<T> = (item: T) => EuiIconType;
-type ButtonColor = EuiButtonIconColor | EuiButtonEmptyColor;
-type EuiButtonIconColorFunction<T> = (item: T) => ButtonColor;
+type IconFunction<T> = (item: T) => OuiIconType;
+type ButtonColor = OuiButtonIconColor | OuiButtonEmptyColor;
+type OuiButtonIconColorFunction<T> = (item: T) => ButtonColor;
 
 export interface DefaultItemActionBase<T> {
   /**
@@ -60,7 +71,7 @@ export interface DefaultItemEmptyButtonAction<T>
    * The type of action
    */
   type?: 'button';
-  color?: EuiButtonEmptyColor | EuiButtonIconColorFunction<T>;
+  color?: OuiButtonEmptyColor | OuiButtonIconColorFunction<T>;
 }
 
 export interface DefaultItemIconButtonAction<T>
@@ -69,11 +80,11 @@ export interface DefaultItemIconButtonAction<T>
   /**
    * Associates an icon with the button
    */
-  icon: EuiIconType | IconFunction<T>;
+  icon: OuiIconType | IconFunction<T>;
   /**
    * Defines the color of the button
    */
-  color?: EuiButtonIconColor | EuiButtonIconColorFunction<T>;
+  color?: OuiButtonIconColor | OuiButtonIconColorFunction<T>;
 }
 
 export type DefaultItemAction<T> = ExclusiveUnion<

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { STATUS, EuiStepNumber } from './step_number';
+import { STATUS, OuiStepNumber } from './step_number';
 
-describe('EuiStepNumber', () => {
+describe('OuiStepNumber', () => {
   test('is rendered', () => {
-    const component = render(<EuiStepNumber {...requiredProps} />);
+    const component = render(<OuiStepNumber {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +44,7 @@ describe('EuiStepNumber', () => {
   describe('props', () => {
     describe('isHollow', () => {
       it('is rendered', () => {
-        const component = render(<EuiStepNumber number={1} isHollow />);
+        const component = render(<OuiStepNumber number={1} isHollow />);
 
         expect(component).toMatchSnapshot();
       });
@@ -41,7 +52,7 @@ describe('EuiStepNumber', () => {
 
     describe('has titleSize', () => {
       it('is rendered', () => {
-        const component = render(<EuiStepNumber titleSize="xs" number={1} />);
+        const component = render(<OuiStepNumber titleSize="xs" number={1} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -51,7 +62,7 @@ describe('EuiStepNumber', () => {
       STATUS.forEach((status) => {
         test(`${status} is rendered`, () => {
           const component = render(
-            <EuiStepNumber number={1} status={status} />
+            <OuiStepNumber number={1} status={status} />
           );
 
           expect(component).toMatchSnapshot();

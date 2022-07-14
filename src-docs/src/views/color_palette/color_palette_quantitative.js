@@ -1,34 +1,45 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiRange,
-  EuiFormRow,
-  EuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiRange,
+  OuiFormRow,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import { ColorPaletteFlexItem, ColorPaletteCopyCode } from './shared';
 
 import {
-  euiPaletteComplimentary,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteGray,
+  ouiPaletteComplimentary,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteGray,
 } from '../../../../src/services';
 const paletteData = {
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteComplimentary,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteGray,
 };
 const paletteNames = Object.keys(paletteData);
 
@@ -41,8 +52,8 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFormRow label="Number of steps" display="columnCompressed">
-        <EuiRange
+      <OuiFormRow label="Number of steps" display="columnCompressed">
+        <OuiRange
           value={length}
           onChange={onLengthChange}
           min={1}
@@ -50,29 +61,29 @@ export default () => {
           compressed
           showValue
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
       {paletteNames.map((paletteName) => (
-        <EuiFlexGroup alignItems="center" key={paletteName}>
-          <EuiFlexItem grow={false}>
-            <EuiFlexGroup
+        <OuiFlexGroup alignItems="center" key={paletteName}>
+          <OuiFlexItem grow={false}>
+            <OuiFlexGroup
               className="guideColorPalette__swatchHolder"
               gutterSize="none"
               responsive={false}>
               {paletteData[paletteName](Number(length)).map((hexCode) => (
                 <ColorPaletteFlexItem hexCode={hexCode} key={hexCode} />
               ))}
-            </EuiFlexGroup>
-          </EuiFlexItem>
-          <EuiFlexItem>
+            </OuiFlexGroup>
+          </OuiFlexItem>
+          <OuiFlexItem>
             <ColorPaletteCopyCode
               textToCopy={`${paletteName}(${length});`}
               code={`${paletteName}(${length})`}
             />
-          </EuiFlexItem>
-        </EuiFlexGroup>
+          </OuiFlexItem>
+        </OuiFlexGroup>
       ))}
     </Fragment>
   );

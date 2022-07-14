@@ -1,68 +1,79 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Add vertical space between breadcrumbs,
  *    but make sure the whole breadcrumb set doesn't add space below itself
  */
 
-.euiBreadcrumbs {
-  @include euiFontSizeS;
-  margin-bottom: -$euiSizeXS; /* 1 */
+.ouiBreadcrumbs {
+  @include ouiFontSizeS;
+  margin-bottom: -$ouiSizeXS; /* 1 */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   min-width: 0; // Ensure it shrinks if the window is narrow
 }
 
-.euiBreadcrumb {
+.ouiBreadcrumb {
   display: inline-block;
-  margin-bottom: $euiSizeXS; /* 1 */
+  margin-bottom: $ouiSizeXS; /* 1 */
 
-  &:not(.euiBreadcrumb--last) {
-    margin-right: $euiBreadcrumbSpacing;
-    color: $euiTextSubduedColor;
+  &:not(.ouiBreadcrumb--last) {
+    margin-right: $ouiBreadcrumbSpacing;
+    color: $ouiTextSubduedColor;
   }
 }
 
-.euiBreadcrumb--last {
-  font-weight: $euiFontWeightMedium;
+.ouiBreadcrumb--last {
+  font-weight: $ouiFontWeightMedium;
 }
 
-.euiBreadcrumb--collapsed {
+.ouiBreadcrumb--collapsed {
   flex-shrink: 0;
 }
 
-.euiBreadcrumbSeparator {
+.ouiBreadcrumbSeparator {
   flex-shrink: 0;
   display: inline-block;
-  margin-right: $euiBreadcrumbSpacing;
+  margin-right: $ouiBreadcrumbSpacing;
   width: 1px;
-  height: $euiSize;
+  height: $ouiSize;
   transform: translateY(-1px) rotate(15deg);
-  background: $euiColorLightShade;
+  background: $ouiColorLightShade;
 }
 
-.euiBreadcrumbs__inPopover .euiBreadcrumb--last {
-  font-weight: $euiFontWeightRegular;
-  color: $euiColorDarkShade !important; // sass-lint:disable-line no-important
+.ouiBreadcrumbs__inPopover .ouiBreadcrumb--last {
+  font-weight: $ouiFontWeightRegular;
+  color: $ouiColorDarkShade !important; // sass-lint:disable-line no-important
 }
 
-.euiBreadcrumbs--truncate {
+.ouiBreadcrumbs--truncate {
   white-space: nowrap;
   flex-wrap: nowrap;
 
-  .euiBreadcrumb:not(.euiBreadcrumb--collapsed) {
-    max-width: $euiBreadcrumbTruncateWidth;
+  .ouiBreadcrumb:not(.ouiBreadcrumb--collapsed) {
+    max-width: $ouiBreadcrumbTruncateWidth;
     overflow: hidden;
     text-overflow: ellipsis;
 
-    &.euiBreadcrumb--last {
+    &.ouiBreadcrumb--last {
       max-width: none;
     }
   }
 }
 
-.euiBreadcrumb--truncate {
-  @include euiTextTruncate;
-  max-width: $euiBreadcrumbTruncateWidth;
+.ouiBreadcrumb--truncate {
+  @include ouiTextTruncate;
+  max-width: $ouiBreadcrumbTruncateWidth;
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
 }

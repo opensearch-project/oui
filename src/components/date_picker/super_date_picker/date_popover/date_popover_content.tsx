@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,12 +30,12 @@
 
 import React, { FunctionComponent } from 'react';
 
-import { EuiTabbedContent, EuiTabbedContentProps } from '../../../tabs';
-import { EuiText } from '../../../text';
-import { EuiButton } from '../../../button';
+import { OuiTabbedContent, OuiTabbedContentProps } from '../../../tabs';
+import { OuiText } from '../../../text';
+import { OuiButton } from '../../../button';
 
-import { EuiAbsoluteTab } from './absolute_tab';
-import { EuiRelativeTab } from './relative_tab';
+import { OuiAbsoluteTab } from './absolute_tab';
+import { OuiRelativeTab } from './relative_tab';
 
 import {
   getDateMode,
@@ -34,7 +45,7 @@ import {
 } from '../date_modes';
 import { LocaleSpecifier } from 'moment'; // eslint-disable-line import/named
 
-export interface EuiDatePopoverContentProps {
+export interface OuiDatePopoverContentProps {
   value: string;
   onChange(date: string | null, event?: React.SyntheticEvent<any>): void;
   roundUp?: boolean;
@@ -45,7 +56,7 @@ export interface EuiDatePopoverContentProps {
   utcOffset?: number;
 }
 
-export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps> = ({
+export const OuiDatePopoverContent: FunctionComponent<OuiDatePopoverContentProps> = ({
   value,
   roundUp = false,
   onChange,
@@ -55,7 +66,7 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
   position,
   utcOffset,
 }) => {
-  const onTabClick: EuiTabbedContentProps['onTabClick'] = (selectedTab) => {
+  const onTabClick: OuiTabbedContentProps['onTabClick'] = (selectedTab) => {
     switch (selectedTab.id) {
       case DATE_MODES.ABSOLUTE:
         onChange(toAbsoluteString(value, roundUp));
@@ -73,7 +84,7 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
       id: DATE_MODES.ABSOLUTE,
       name: 'Absolute',
       content: (
-        <EuiAbsoluteTab
+        <OuiAbsoluteTab
           dateFormat={dateFormat}
           timeFormat={timeFormat}
           locale={locale}
@@ -91,7 +102,7 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
       id: DATE_MODES.RELATIVE,
       name: 'Relative',
       content: (
-        <EuiRelativeTab
+        <OuiRelativeTab
           dateFormat={dateFormat}
           locale={locale}
           value={toAbsoluteString(value, roundUp)}
@@ -107,15 +118,15 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
       id: DATE_MODES.NOW,
       name: 'Now',
       content: (
-        <EuiText
+        <OuiText
           size="s"
           color="subdued"
-          className="euiDatePopoverContent__padded--large">
+          className="ouiDatePopoverContent__padded--large">
           <p>
             Setting the time to &quot;now&quot; means that on every refresh this
             time will be set to the time of the refresh.
           </p>
-          <EuiButton
+          <OuiButton
             data-test-subj="superDatePickerNowButton"
             onClick={() => {
               onChange('now');
@@ -124,8 +135,8 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
             size="s"
             fill>
             Set {position} date and time to now
-          </EuiButton>
-        </EuiText>
+          </OuiButton>
+        </OuiText>
       ),
       'data-test-subj': 'superDatePickerNowTab',
       'aria-label': `${ariaLabel} Now`,
@@ -137,8 +148,8 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
   );
 
   return (
-    <EuiTabbedContent
-      className="euiDatePopoverContent"
+    <OuiTabbedContent
+      className="ouiDatePopoverContent"
       tabs={renderTabs}
       autoFocus="selected"
       initialSelectedTab={initialSelectedTab}
@@ -149,4 +160,4 @@ export const EuiDatePopoverContent: FunctionComponent<EuiDatePopoverContentProps
   );
 };
 
-EuiDatePopoverContent.displayName = 'EuiDatePopoverContent';
+OuiDatePopoverContent.displayName = 'OuiDatePopoverContent';

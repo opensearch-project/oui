@@ -1,36 +1,47 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageContent,
-  EuiEmptyPrompt,
-  EuiPageHeader,
-  EuiPageSideBar,
-  EuiPageBody,
+  OuiPage,
+  OuiPageContent,
+  OuiEmptyPrompt,
+  OuiPageHeader,
+  OuiPageSideBar,
+  OuiPageBody,
 } from '../../../../src/components';
 
 export default ({ button = <></>, content, sideNav }) => (
-  <EuiPage paddingSize="none">
-    <EuiPageSideBar paddingSize="l" sticky>
+  <OuiPage paddingSize="none">
+    <OuiPageSideBar paddingSize="l" sticky>
       {sideNav}
-    </EuiPageSideBar>
+    </OuiPageSideBar>
 
-    <EuiPageBody panelled>
-      <EuiPageHeader
+    <OuiPageBody panelled>
+      <OuiPageHeader
         restrictWidth
         iconType="logoElastic"
         pageTitle="Page title"
         rightSideItems={[button]}
       />
 
-      <EuiPageContent
+      <OuiPageContent
         verticalPosition="center"
         horizontalPosition="center"
         paddingSize="none"
         color="subdued"
         hasShadow={false}>
-        <EuiEmptyPrompt title={<span>No spice</span>} body={content} />
-      </EuiPageContent>
-    </EuiPageBody>
-  </EuiPage>
+        <OuiEmptyPrompt title={<span>No spice</span>} body={content} />
+      </OuiPageContent>
+    </OuiPageBody>
+  </OuiPage>
 );

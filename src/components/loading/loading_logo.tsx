@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,17 +31,17 @@
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
-import { EuiIcon, IconType } from '../icon';
+import { OuiIcon, IconType } from '../icon';
 
 const sizeToClassNameMap = {
-  m: 'euiLoadingLogo--medium',
-  l: 'euiLoadingLogo--large',
-  xl: 'euiLoadingLogo--xLarge',
+  m: 'ouiLoadingLogo--medium',
+  l: 'ouiLoadingLogo--large',
+  xl: 'ouiLoadingLogo--xLarge',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiLoadingLogoProps = CommonProps &
+export type OuiLoadingLogoProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     size?: keyof typeof sizeToClassNameMap;
     /**
@@ -39,22 +50,22 @@ export type EuiLoadingLogoProps = CommonProps &
     logo?: IconType;
   };
 
-export const EuiLoadingLogo: FunctionComponent<EuiLoadingLogoProps> = ({
+export const OuiLoadingLogo: FunctionComponent<OuiLoadingLogoProps> = ({
   size = 'm',
   logo = 'logoKibana',
   className,
   ...rest
 }) => {
   const classes = classNames(
-    'euiLoadingLogo',
+    'ouiLoadingLogo',
     sizeToClassNameMap[size],
     className
   );
 
   return (
     <span className={classes} {...rest}>
-      <span className="euiLoadingLogo__icon">
-        <EuiIcon type={logo} size={size} />
+      <span className="ouiLoadingLogo__icon">
+        <OuiIcon type={logo} size={size} />
       </span>
     </span>
   );

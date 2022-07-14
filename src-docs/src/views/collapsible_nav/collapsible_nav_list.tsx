@@ -1,18 +1,29 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
-import { EuiText } from '../../../../src/components/text';
+import { OuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
+import { OuiText } from '../../../../src/components/text';
 import {
-  EuiListGroup,
-  EuiListGroupProps,
-  EuiPinnableListGroup,
-  EuiPinnableListGroupItemProps,
+  OuiListGroup,
+  OuiListGroupProps,
+  OuiPinnableListGroup,
+  OuiPinnableListGroupItemProps,
 } from '../../../../src/components/list_group';
-import { EuiSpacer } from '../../../../src/components/spacer';
-import { EuiButton, EuiButtonIcon } from '../../../../src/components/button';
-import { EuiLink } from '../../../../src/components/link';
+import { OuiSpacer } from '../../../../src/components/spacer';
+import { OuiButton, OuiButtonIcon } from '../../../../src/components/button';
+import { OuiLink } from '../../../../src/components/link';
 
-const deploymentsList: EuiListGroupProps['listItems'] = [
+const deploymentsList: OuiListGroupProps['listItems'] = [
   {
     label: 'combining-binaries',
     iconType: 'logoAzureMono',
@@ -25,7 +36,7 @@ const deploymentsList: EuiListGroupProps['listItems'] = [
   },
 ];
 
-export const TopNavLinks: EuiPinnableListGroupItemProps[] = [
+export const TopNavLinks: OuiPinnableListGroupItemProps[] = [
   {
     label: 'Home',
     iconType: 'home',
@@ -37,7 +48,7 @@ export const TopNavLinks: EuiPinnableListGroupItemProps[] = [
   { label: 'Maps', pinned: true },
 ];
 
-export const KibanaNavLinks: EuiPinnableListGroupItemProps[] = [
+export const KibanaNavLinks: OuiPinnableListGroupItemProps[] = [
   { label: 'Discover' },
   { label: 'Visualize' },
   { label: 'Dashboards' },
@@ -48,7 +59,7 @@ export const KibanaNavLinks: EuiPinnableListGroupItemProps[] = [
 ];
 
 export const DeploymentsGroup = (
-  <EuiCollapsibleNavGroup
+  <OuiCollapsibleNavGroup
     title={
       <span>
         <small style={{ fontWeight: 'normal' }}>Deployment</small> <br />
@@ -61,17 +72,17 @@ export const DeploymentsGroup = (
     initialIsOpen={false}
     background="dark">
     <div role="group" className="kibanaNavDeployment__content">
-      <EuiListGroup listItems={deploymentsList} flush />
-      <EuiSpacer size="s" />
-      <EuiButton color="ghost" fullWidth>
+      <OuiListGroup listItems={deploymentsList} flush />
+      <OuiSpacer size="s" />
+      <OuiButton color="ghost" fullWidth>
         Manage deployments
-      </EuiButton>
+      </OuiButton>
     </div>
-  </EuiCollapsibleNavGroup>
+  </OuiCollapsibleNavGroup>
 );
 
 export const SecurityGroup = (
-  <EuiCollapsibleNavGroup
+  <OuiCollapsibleNavGroup
     background="light"
     iconType="logoSecurity"
     title="Elastic Security"
@@ -79,28 +90,28 @@ export const SecurityGroup = (
     initialIsOpen={true}
     arrowDisplay="none"
     extraAction={
-      <EuiButtonIcon
+      <OuiButtonIcon
         aria-label="Hide and never show again"
         title="Hide and never show again"
         iconType="cross"
       />
     }>
-    <EuiText size="s" color="subdued" style={{ padding: '0 8px 8px' }}>
+    <OuiText size="s" color="subdued" style={{ padding: '0 8px 8px' }}>
       <p>
         Threat prevention, detection, and response with SIEM and endpoint
         security.
         <br />
-        <EuiLink>Learn more</EuiLink>
+        <OuiLink>Learn more</OuiLink>
       </p>
-    </EuiText>
-  </EuiCollapsibleNavGroup>
+    </OuiText>
+  </OuiCollapsibleNavGroup>
 );
 
 export default () => (
   <>
     {DeploymentsGroup}
-    <EuiCollapsibleNavGroup background="light">
-      <EuiPinnableListGroup
+    <OuiCollapsibleNavGroup background="light">
+      <OuiPinnableListGroup
         listItems={TopNavLinks}
         onPinClick={() => {}}
         maxWidth="none"
@@ -108,13 +119,13 @@ export default () => (
         gutterSize="none"
         size="s"
       />
-    </EuiCollapsibleNavGroup>
-    <EuiCollapsibleNavGroup
+    </OuiCollapsibleNavGroup>
+    <OuiCollapsibleNavGroup
       title="Kibana"
       iconType="logoKibana"
       isCollapsible={true}
       initialIsOpen={true}>
-      <EuiPinnableListGroup
+      <OuiPinnableListGroup
         listItems={KibanaNavLinks}
         onPinClick={() => {}}
         maxWidth="none"
@@ -122,7 +133,7 @@ export default () => (
         gutterSize="none"
         size="s"
       />
-    </EuiCollapsibleNavGroup>
+    </OuiCollapsibleNavGroup>
     {SecurityGroup}
   </>
 );

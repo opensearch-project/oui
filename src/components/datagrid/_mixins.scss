@@ -1,7 +1,18 @@
-$euiDataGridPrefix: '.euiDataGrid--';
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+$ouiDataGridPrefix: '.ouiDataGrid--';
 
 // Things can get nesty so it's nice to have an approved list that match our typings
-$euiDataGridStyles: (
+$ouiDataGridStyles: (
   'bordersAll'
   'bordersNone'
   'bordersHorizontal'
@@ -23,49 +34,49 @@ $euiDataGridStyles: (
 
 // All this does is take some of the above and make a sibling selector
 // selector(headerShade, fontSizeLarge)
-// will produce `.euiDataGrid--headerShade.euiDataGrid--fontSizeLarge
-@function euiDataGridSelector($selectorKeys...) {
+// will produce `.ouiDataGrid--headerShade.ouiDataGrid--fontSizeLarge
+@function ouiDataGridSelector($selectorKeys...) {
   $selectorList: '';
   @each $selector in $selectorKeys {
     // Spit out warnings when you make typos!
-    @if (index($euiDataGridStyles, $selector != true)) {
-      @error '#{$selector} is not an allowed value in the euiDataGridStyles() mixin';
+    @if (index($ouiDataGridStyles, $selector != true)) {
+      @error '#{$selector} is not an allowed value in the ouiDataGridStyles() mixin';
     }
-    $selctorValue: #{$euiDataGridPrefix}#{$selector};
+    $selctorValue: #{$ouiDataGridPrefix}#{$selector};
     $selectorList: str-insert($selectorList, $selctorValue, 1000);
   }
 
   @return $selectorList;
 }
 
-@mixin euiDataGridStyles($selectorKeys...) {
-  #{euiDataGridSelector($selectorKeys...)} {
+@mixin ouiDataGridStyles($selectorKeys...) {
+  #{ouiDataGridSelector($selectorKeys...)} {
     @content;
   }
 }
 
-@mixin euiDataGridHeaderCell {
-  .euiDataGridHeaderCell {
+@mixin ouiDataGridHeaderCell {
+  .ouiDataGridHeaderCell {
     @content;
   }
 }
 
-@mixin euiDataGridCellFocus {
+@mixin ouiDataGridCellFocus {
   border: 1px solid transparent;
-  box-shadow: 0 0 0 2px $euiFocusRingColor;
+  box-shadow: 0 0 0 2px $ouiFocusRingColor;
   border-radius: 1px;
   z-index: 2; // Needed so it sits above potential striping in the next row
   outline: none; // Remove outline as we're handling it manually
 }
 
-@mixin euiDataGridRowCell {
-  .euiDataGridRowCell {
+@mixin ouiDataGridRowCell {
+  .ouiDataGridRowCell {
     @content;
   }
 }
 
-@mixin euiDataGridFooterCell {
-  .euiDataGridRowCell.euiDataGridFooterCell {
+@mixin ouiDataGridFooterCell {
+  .ouiDataGridRowCell.ouiDataGridFooterCell {
     @content;
   }
 }

@@ -1,29 +1,40 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useEffect } from 'react';
 import { assertUnreachable, PropTypes } from 'react-view';
 import { useIsWithinBreakpoints } from '../../../../src/services/hooks';
 import {
-  EuiTitle,
-  EuiCodeBlock,
-  EuiSpacer,
-  EuiSwitch,
-  EuiRadioGroup,
-  EuiFieldText,
-  EuiCode,
-  EuiSelect,
-  EuiFieldNumber,
-  EuiToolTip,
-  EuiTable,
-  EuiTableBody,
-  EuiTableHeader,
-  EuiTableHeaderCell,
-  EuiTableRow,
-  EuiTableRowCell,
-  EuiTextColor,
-  EuiTextArea,
-  EuiFormRow,
-  EuiLink,
-  EuiText,
-  EuiPanel,
+  OuiTitle,
+  OuiCodeBlock,
+  OuiSpacer,
+  OuiSwitch,
+  OuiRadioGroup,
+  OuiFieldText,
+  OuiCode,
+  OuiSelect,
+  OuiFieldNumber,
+  OuiToolTip,
+  OuiTable,
+  OuiTableBody,
+  OuiTableHeader,
+  OuiTableHeaderCell,
+  OuiTableRow,
+  OuiTableRowCell,
+  OuiTextColor,
+  OuiTextArea,
+  OuiFormRow,
+  OuiLink,
+  OuiText,
+  OuiPanel,
 } from '../../../../src/components/';
 
 export const markup = (text) => {
@@ -39,14 +50,14 @@ export const markup = (text) => {
           document.getElementById(id).scrollIntoView();
         };
         return (
-          <EuiLink key={`markup-${index}`} onClick={onClick}>
+          <OuiLink key={`markup-${index}`} onClick={onClick}>
             {id}
-          </EuiLink>
+          </OuiLink>
         );
       }
       if (token.startsWith('`')) {
         const code = token.substring(1, token.length - 1);
-        return <EuiCode key={`markup-${index}`}>{code}</EuiCode>;
+        return <OuiCode key={`markup-${index}`}>{code}</OuiCode>;
       }
       if (token.includes('\n')) {
         return token
@@ -110,12 +121,12 @@ const getTooltip = (description, type, name) => (
 
 const Label = ({ children, tooltip }) => {
   return (
-    <EuiToolTip position="top" content={tooltip}>
+    <OuiToolTip position="top" content={tooltip}>
       <>
         <span>{children}</span>
-        <EuiSpacer size="s" />
+        <OuiSpacer size="s" />
       </>
-    </EuiToolTip>
+    </OuiToolTip>
   );
 };
 
@@ -163,12 +174,12 @@ const Knob = ({
 
     case PropTypes.Number:
       return (
-        <EuiFormRow
+        <OuiFormRow
           isInvalid={error && error.length > 0}
           error={error}
           helpText={helpText}
           fullWidth>
-          <EuiFieldNumber
+          <OuiFieldNumber
             placeholder={placeholder}
             value={val ? val : undefined}
             onChange={(e) => set(e.target.value)}
@@ -177,7 +188,7 @@ const Knob = ({
             fullWidth
             isInvalid={error && error.length > 0}
           />
-        </EuiFormRow>
+        </OuiFormRow>
       );
 
     case PropTypes.String:
@@ -206,7 +217,7 @@ const Knob = ({
       }
 
       return (
-        <EuiFormRow
+        <OuiFormRow
           isInvalid={error && error.length > 0}
           error={error}
           fullWidth
@@ -221,7 +232,7 @@ const Knob = ({
               )}
             </>
           }>
-          <EuiFieldText
+          <OuiFieldText
             aria-label={name}
             placeholder={placeholder}
             isInvalid={error && error.length > 0}
@@ -229,17 +240,17 @@ const Knob = ({
             fullWidth
             {...knobProps}
           />
-        </EuiFormRow>
+        </OuiFormRow>
       );
 
     case PropTypes.Boolean:
       return (
-        <EuiFormRow
+        <OuiFormRow
           fullWidth
           helpText={helpText}
           isInvalid={error && error.length > 0}
           error={error}>
-          <EuiSwitch
+          <OuiSwitch
             aria-label={name}
             id={name}
             label=""
@@ -249,7 +260,7 @@ const Knob = ({
             }}
             compressed
           />
-        </EuiFormRow>
+        </OuiFormRow>
       );
 
     case PropTypes.Enum:
@@ -270,7 +281,7 @@ const Knob = ({
 
         return (
           <>
-            <EuiRadioGroup
+            <OuiRadioGroup
               options={flattenedOptions}
               idSelected={valueKey}
               onChange={(id) => {
@@ -290,12 +301,12 @@ const Knob = ({
         }));
 
         return (
-          <EuiFormRow
+          <OuiFormRow
             isInvalid={error && error.length > 0}
             helpText={helpText}
             error={error}
             fullWidth>
-            <EuiSelect
+            <OuiSelect
               id={name}
               options={flattenedOptions}
               value={valueKey || defaultValue}
@@ -308,14 +319,14 @@ const Knob = ({
               fullWidth
               hasNoInitialSelection={!valueKey && !defaultValue}
             />
-          </EuiFormRow>
+          </OuiFormRow>
         );
       }
 
     case PropTypes.ReactNode:
       if (!hidden) {
         return (
-          <EuiTextArea
+          <OuiTextArea
             compressed
             placeholder={placeholder}
             value={val}
@@ -332,7 +343,7 @@ const Knob = ({
           case 'switch':
             return (
               <>
-                <EuiSwitch
+                <OuiSwitch
                   aria-label={name}
                   id={name}
                   label={custom.label || ''}
@@ -382,7 +393,7 @@ const KnobColumn = ({ state, knobNames, error, set, isPlayground }) => {
 
     if (humanizedType) {
       typeMarkup = humanizedType && (
-        <EuiCodeBlock {...codeBlockProps}>{humanizedType}</EuiCodeBlock>
+        <OuiCodeBlock {...codeBlockProps}>{humanizedType}</OuiCodeBlock>
       );
 
       const functionMatches = [
@@ -408,7 +419,7 @@ const KnobColumn = ({ state, knobNames, error, set, isPlayground }) => {
           }
         }
         typeMarkup = (
-          <EuiCodeBlock {...codeBlockProps}>{elements}</EuiCodeBlock>
+          <OuiCodeBlock {...codeBlockProps}>{elements}</OuiCodeBlock>
         );
       }
     }
@@ -416,7 +427,7 @@ const KnobColumn = ({ state, knobNames, error, set, isPlayground }) => {
     /**
      * Prop name
      */
-    let humanizedName = <strong className="eui-textBreakNormal">{name}</strong>;
+    let humanizedName = <strong className="oui-textBreakNormal">{name}</strong>;
 
     if (
       state[name].custom &&
@@ -425,7 +436,7 @@ const KnobColumn = ({ state, knobNames, error, set, isPlayground }) => {
     ) {
       humanizedName = (
         <>
-          {humanizedName} <EuiTextColor color="danger">(required)</EuiTextColor>
+          {humanizedName} <OuiTextColor color="danger">(required)</OuiTextColor>
         </>
       );
     }
@@ -442,21 +453,21 @@ const KnobColumn = ({ state, knobNames, error, set, isPlayground }) => {
     ) {
       const defaultValue = state[name].custom.origin.defaultValue;
       defaultValueMarkup = (
-        <EuiText size="xs">
+        <OuiText size="xs">
           {isPlayground && 'Default: '}
-          <EuiCode>{defaultValue.value}</EuiCode>
+          <OuiCode>{defaultValue.value}</OuiCode>
           {defaultValue.comment && (
             <>
               <br />({defaultValue.comment})
             </>
           )}
-        </EuiText>
+        </OuiText>
       );
     }
 
     return (
-      <EuiTableRow key={name}>
-        <EuiTableRowCell
+      <OuiTableRow key={name}>
+        <OuiTableRowCell
           key={`prop__${name}-${idx}`}
           header="Prop"
           textOnly={false}
@@ -465,26 +476,26 @@ const KnobColumn = ({ state, knobNames, error, set, isPlayground }) => {
             fullWidth: true,
           }}>
           <div>
-            <EuiTitle size="xxs">
+            <OuiTitle size="xxs">
               <span>{humanizedName}</span>
-            </EuiTitle>
+            </OuiTitle>
             {state[name].description && (
               <>
-                <EuiSpacer size="xs" />
-                <EuiText color="subdued" size="xs">
+                <OuiSpacer size="xs" />
+                <OuiText color="subdued" size="xs">
                   <p>{markup(state[name].description)}</p>
-                </EuiText>
+                </OuiText>
               </>
             )}
           </div>
-        </EuiTableRowCell>
-        <EuiTableRowCell
+        </OuiTableRowCell>
+        <OuiTableRowCell
           key={`type__${name}-${idx}`}
           header="Type"
           textOnly={false}>
           <div>{typeMarkup}</div>
-        </EuiTableRowCell>
-        <EuiTableRowCell
+        </OuiTableRowCell>
+        <OuiTableRowCell
           key={`modify__${name}-${idx}`}
           header={isPlayground ? 'Modify' : 'Default value'}
           textOnly={false}
@@ -511,8 +522,8 @@ const KnobColumn = ({ state, knobNames, error, set, isPlayground }) => {
           ) : (
             defaultValueMarkup
           )}
-        </EuiTableRowCell>
-      </EuiTableRow>
+        </OuiTableRowCell>
+      </OuiTableRow>
     );
   });
 };
@@ -539,23 +550,23 @@ const Knobs = ({ state, set, error, isPlayground = true }) => {
   });
 
   return (
-    <EuiPanel
+    <OuiPanel
       color="transparent"
       paddingSize={isMobile ? 's' : 'none'}
       hasBorder={false}
       hasShadow={false}>
-      <EuiTable style={{ background: 'transparent' }}>
-        <EuiTableHeader>
+      <OuiTable style={{ background: 'transparent' }}>
+        <OuiTableHeader>
           {columns.map(({ name, width }, id) => {
             return (
-              <EuiTableHeaderCell width={width} key={id}>
+              <OuiTableHeaderCell width={width} key={id}>
                 {name}
-              </EuiTableHeaderCell>
+              </OuiTableHeaderCell>
             );
           })}
-        </EuiTableHeader>
+        </OuiTableHeader>
 
-        <EuiTableBody>
+        <OuiTableBody>
           <KnobColumn
             isPlayground={isPlayground}
             state={state}
@@ -563,9 +574,9 @@ const Knobs = ({ state, set, error, isPlayground = true }) => {
             set={set}
             error={error}
           />
-        </EuiTableBody>
-      </EuiTable>
-    </EuiPanel>
+        </OuiTableBody>
+      </OuiTable>
+    </OuiPanel>
   );
 };
 

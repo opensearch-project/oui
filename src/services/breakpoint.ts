@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,16 +30,16 @@
 
 import { keysOf } from '../components/common';
 
-export type EuiBreakpointSize = 'xs' | 's' | 'm' | 'l' | 'xl';
+export type OuiBreakpointSize = 'xs' | 's' | 'm' | 'l' | 'xl';
 
-export type EuiBreakpoints = {
+export type OuiBreakpoints = {
   /**
    * Set the minimum window width at which to start to the breakpoint
    */
-  [key in EuiBreakpointSize]: number;
+  [key in OuiBreakpointSize]: number;
 };
 
-export const BREAKPOINTS: EuiBreakpoints = {
+export const BREAKPOINTS: OuiBreakpoints = {
   xl: 1200,
   l: 992,
   m: 768,
@@ -39,18 +50,18 @@ export const BREAKPOINTS: EuiBreakpoints = {
 export const BREAKPOINT_KEYS = keysOf(BREAKPOINTS);
 
 /**
- * Given the current `width` and an object of `EuiBreakpoints`,
+ * Given the current `width` and an object of `OuiBreakpoints`,
  * this function returns the string that is the name of the breakpoint key
  * that is less than or equal to the width
  *
  * @param {number} width Can either be the full window width or any width
- * @param {EuiBreakpoints} breakpoints An object with keys for sizing and values for minimum width
+ * @param {OuiBreakpoints} breakpoints An object with keys for sizing and values for minimum width
  * @returns {string | undefined} Name of the breakpoint key or `undefined` if a key doesn't exist
  */
 export function getBreakpoint(
   width: number,
-  breakpoints: EuiBreakpoints = BREAKPOINTS
-): EuiBreakpointSize | undefined {
+  breakpoints: OuiBreakpoints = BREAKPOINTS
+): OuiBreakpointSize | undefined {
   // Find the breakpoint (key) whose value is <= windowWidth starting with largest first
   return keysOf(BREAKPOINTS).find((key) => breakpoints[key] <= width);
 }
@@ -61,14 +72,14 @@ export function getBreakpoint(
  * breakpoint or any breakpoints below
  *
  * @param {number} width Can either be the full window width or any width
- * @param {EuiBreakpointSize | number} max The named breakpoint or custom number to check against
- * @param {EuiBreakpoints} breakpoints An object with keys for sizing and values for minimum width
+ * @param {OuiBreakpointSize | number} max The named breakpoint or custom number to check against
+ * @param {OuiBreakpoints} breakpoints An object with keys for sizing and values for minimum width
  * @returns {boolean} Will return `false` if it can't find a value for the `max` breakpoint
  */
 export function isWithinMaxBreakpoint(
   width: number,
-  max: EuiBreakpointSize | number,
-  breakpoints: EuiBreakpoints = BREAKPOINTS
+  max: OuiBreakpointSize | number,
+  breakpoints: OuiBreakpoints = BREAKPOINTS
 ): boolean {
   if (typeof max === 'number') {
     return width <= max;
@@ -86,14 +97,14 @@ export function isWithinMaxBreakpoint(
  * breakpoint or any breakpoints below
  *
  * @param {number} width Can either be the full window width or any width
- * @param {EuiBreakpointSize | number} min The named breakpoint or custom number to check against
- * @param {EuiBreakpoints} breakpoints An object with keys for sizing and values for minimum width
+ * @param {OuiBreakpointSize | number} min The named breakpoint or custom number to check against
+ * @param {OuiBreakpoints} breakpoints An object with keys for sizing and values for minimum width
  * @returns {boolean} Will return `false` if it can't find a value for the `min` breakpoint
  */
 export function isWithinMinBreakpoint(
   width: number,
-  min: EuiBreakpointSize | number,
-  breakpoints: EuiBreakpoints = BREAKPOINTS
+  min: OuiBreakpointSize | number,
+  breakpoints: OuiBreakpoints = BREAKPOINTS
 ): boolean {
   if (typeof min === 'number') {
     return width >= min;
@@ -111,14 +122,14 @@ export function isWithinMinBreakpoint(
  * any of the named breakpoints
  *
  * @param {number} width Can either be the full window width or any width
- * @param {EuiBreakpointSize[]} sizes An array of named breakpoints
- * @param {EuiBreakpoints} breakpoints An object with keys for sizing and values for minimum width
+ * @param {OuiBreakpointSize[]} sizes An array of named breakpoints
+ * @param {OuiBreakpoints} breakpoints An object with keys for sizing and values for minimum width
  * @returns {boolean} Returns `true` if current breakpoint name is included in `sizes`
  */
 export function isWithinBreakpoints(
   width: number,
-  sizes: EuiBreakpointSize[],
-  breakpoints: EuiBreakpoints = BREAKPOINTS
+  sizes: OuiBreakpointSize[],
+  breakpoints: OuiBreakpoints = BREAKPOINTS
 ): boolean {
   const currentBreakpoint = getBreakpoint(width, breakpoints);
   return currentBreakpoint ? sizes.includes(currentBreakpoint) : false;

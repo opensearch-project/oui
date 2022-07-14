@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiColorPicker,
-  EuiColorStops,
-  EuiButton,
-  EuiPopover,
-  EuiFormRow,
-  EuiModal,
-  EuiModalBody,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiSpacer,
+  OuiColorPicker,
+  OuiColorStops,
+  OuiButton,
+  OuiPopover,
+  OuiFormRow,
+  OuiModal,
+  OuiModalBody,
+  OuiModalHeader,
+  OuiModalHeaderTitle,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import {
@@ -40,10 +51,10 @@ export default () => {
     setIsPopoverOpen(false);
   };
 
-  const colorPicker = <EuiColorPicker color={color} onChange={setColor} />;
+  const colorPicker = <OuiColorPicker color={color} onChange={setColor} />;
 
   const stops = (
-    <EuiColorStops
+    <OuiColorStops
       label="Color stops"
       onChange={setColorStops}
       colorStops={colorStops}
@@ -53,64 +64,64 @@ export default () => {
   );
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={togglePopover}>
+    <OuiButton iconType="arrowDown" iconSide="right" onClick={togglePopover}>
       Open popover
-    </EuiButton>
+    </OuiButton>
   );
 
   let modal;
 
   if (isModalVisible) {
     modal = (
-      <EuiModal onClose={closeModal} style={{ width: '800px' }}>
-        <EuiModalHeader>
-          <EuiModalHeaderTitle>
+      <OuiModal onClose={closeModal} style={{ width: '800px' }}>
+        <OuiModalHeader>
+          <OuiModalHeaderTitle>
             <h1>Color picker in a modal</h1>
-          </EuiModalHeaderTitle>
-        </EuiModalHeader>
+          </OuiModalHeaderTitle>
+        </OuiModalHeader>
 
-        <EuiModalBody>
-          <EuiFormRow label="Color picker">{colorPicker}</EuiFormRow>
-          <EuiSpacer />
-          <EuiFormRow label="Color stops">{stops}</EuiFormRow>
-        </EuiModalBody>
-      </EuiModal>
+        <OuiModalBody>
+          <OuiFormRow label="Color picker">{colorPicker}</OuiFormRow>
+          <OuiSpacer />
+          <OuiFormRow label="Color stops">{stops}</OuiFormRow>
+        </OuiModalBody>
+      </OuiModal>
     );
   }
 
   return (
     <Fragment>
-      <EuiFormRow
+      <OuiFormRow
         label="Color picker"
         helpText="This color picker is inside of a form row">
         {colorPicker}
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFormRow
+      <OuiFormRow
         label="Color stops"
         helpText="This color stops component is inside of a form row">
         {stops}
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Unruly focus management">
-        <EuiPopover
+      <OuiFormRow label="Unruly focus management">
+        <OuiPopover
           id="popover"
           button={button}
           isOpen={isPopoverOpen}
           closePopover={closePopover}>
           <div style={{ width: '300px' }}>
-            <EuiFormRow label="Color picker">{colorPicker}</EuiFormRow>
-            <EuiSpacer />
-            <EuiFormRow label="Color stops">{stops}</EuiFormRow>
+            <OuiFormRow label="Color picker">{colorPicker}</OuiFormRow>
+            <OuiSpacer />
+            <OuiFormRow label="Color stops">{stops}</OuiFormRow>
           </div>
-        </EuiPopover>
-      </EuiFormRow>
+        </OuiPopover>
+      </OuiFormRow>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiButton onClick={showModal}>Show modal</EuiButton>
+      <OuiButton onClick={showModal}>Show modal</OuiButton>
 
       {modal}
     </Fragment>

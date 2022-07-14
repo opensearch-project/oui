@@ -1,21 +1,32 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-$euiTextColors: (
-  default: $euiTextColor,
-  subdued: $euiTextSubduedColor,
-  secondary: $euiColorSecondary,
-  success: $euiColorSuccess,
-  accent: $euiColorAccent,
-  warning: $euiColorWarning,
-  danger: $euiColorDanger,
-  ghost: $euiColorGhost,
+
+$ouiTextColors: (
+  default: $ouiTextColor,
+  subdued: $ouiTextSubduedColor,
+  secondary: $ouiColorSecondary,
+  success: $ouiColorSuccess,
+  accent: $ouiColorAccent,
+  warning: $ouiColorWarning,
+  danger: $ouiColorDanger,
+  ghost: $ouiColorGhost,
 );
 
 // Create color modifiers based on the map
-@each $name, $color in $euiTextColors {
-  .euiTextColor--#{$name} {
+@each $name, $color in $ouiTextColors {
+  .ouiTextColor--#{$name} {
 
     // The below function makes sure the color is accessible on our default background.
-    color: makeHighContrastColor($color, $euiColorEmptyShade);
+    color: makeHighContrastColor($color, $ouiColorEmptyShade);
 
     @if $name == 'ghost' {
       color: $color !important; // sass-lint:disable-line no-important

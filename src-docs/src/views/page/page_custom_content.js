@@ -1,41 +1,52 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageHeader,
-  EuiButton,
-  EuiPageContentBody,
-  EuiPageBody,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiPanel,
+  OuiPage,
+  OuiPageHeader,
+  OuiButton,
+  OuiPageContentBody,
+  OuiPageBody,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiPanel,
 } from '../../../../src/components';
 
 export default ({ button = <></> }) => (
-  <EuiPage paddingSize="l">
-    <EuiPageBody>
-      <EuiPageHeader
+  <OuiPage paddingSize="l">
+    <OuiPageBody>
+      <OuiPageHeader
         iconType="logoElastic"
         pageTitle="Page title"
-        rightSideItems={[button, <EuiButton>Do something</EuiButton>]}
+        rightSideItems={[button, <OuiButton>Do something</OuiButton>]}
         bottomBorder
       />
-      <EuiPageContentBody>
-        <EuiFlexGrid columns={2}>
-          <EuiFlexItem>
-            <EuiPanel style={{ height: 200 }} />
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiPanel style={{ height: 200 }} />
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiPanel style={{ height: 200 }} />
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiPanel style={{ height: 200 }} />
-          </EuiFlexItem>
-        </EuiFlexGrid>
-      </EuiPageContentBody>
-    </EuiPageBody>
-  </EuiPage>
+      <OuiPageContentBody>
+        <OuiFlexGrid columns={2}>
+          <OuiFlexItem>
+            <OuiPanel style={{ height: 200 }} />
+          </OuiFlexItem>
+          <OuiFlexItem>
+            <OuiPanel style={{ height: 200 }} />
+          </OuiFlexItem>
+          <OuiFlexItem>
+            <OuiPanel style={{ height: 200 }} />
+          </OuiFlexItem>
+          <OuiFlexItem>
+            <OuiPanel style={{ height: 200 }} />
+          </OuiFlexItem>
+        </OuiFlexGrid>
+      </OuiPageContentBody>
+    </OuiPageBody>
+  </OuiPage>
 );

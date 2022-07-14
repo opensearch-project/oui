@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,24 +32,24 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPageTemplate, TEMPLATES } from './page_template';
+import { OuiPageTemplate, TEMPLATES } from './page_template';
 
-describe('EuiPageTemplate', () => {
+describe('OuiPageTemplate', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageTemplate {...requiredProps} />);
+    const component = render(<OuiPageTemplate {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('restrict width', () => {
     test('can be turned off', () => {
-      const component = render(<EuiPageTemplate restrictWidth={false} />);
+      const component = render(<OuiPageTemplate restrictWidth={false} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('can be set to a custom number', () => {
-      const component = render(<EuiPageTemplate restrictWidth={1024} />);
+      const component = render(<OuiPageTemplate restrictWidth={1024} />);
 
       expect(component).toMatchSnapshot();
     });
@@ -48,14 +59,14 @@ describe('EuiPageTemplate', () => {
     TEMPLATES.forEach((template) => {
       describe(`${template}`, () => {
         it('is rendered', () => {
-          const component = render(<EuiPageTemplate template={template} />);
+          const component = render(<OuiPageTemplate template={template} />);
 
           expect(component).toMatchSnapshot();
         });
 
         it('paddingSize is rendered', () => {
           const component = render(
-            <EuiPageTemplate template={template} paddingSize="none" />
+            <OuiPageTemplate template={template} paddingSize="none" />
           );
 
           expect(component).toMatchSnapshot();
@@ -63,7 +74,7 @@ describe('EuiPageTemplate', () => {
 
         it('minHeight is rendered', () => {
           const component = render(
-            <EuiPageTemplate template={template} minHeight="40vh" />
+            <OuiPageTemplate template={template} minHeight="40vh" />
           );
 
           expect(component).toMatchSnapshot();
@@ -71,7 +82,7 @@ describe('EuiPageTemplate', () => {
 
         it('style is rendered', () => {
           const component = render(
-            <EuiPageTemplate
+            <OuiPageTemplate
               template={template}
               style={{ maxHeight: '100vh' }}
             />
@@ -83,7 +94,7 @@ describe('EuiPageTemplate', () => {
         describe('with pageSideBar', () => {
           test('is rendered', () => {
             const component = render(
-              <EuiPageTemplate template={template} pageSideBar="Side Bar" />
+              <OuiPageTemplate template={template} pageSideBar="Side Bar" />
             );
 
             expect(component).toMatchSnapshot();
@@ -91,7 +102,7 @@ describe('EuiPageTemplate', () => {
 
           test('is rendered with pageSideBarProps', () => {
             const component = render(
-              <EuiPageTemplate
+              <OuiPageTemplate
                 template={template}
                 pageSideBar="Side Bar"
                 pageSideBarProps={requiredProps}
@@ -104,7 +115,7 @@ describe('EuiPageTemplate', () => {
 
         test('is rendered with pageHeader', () => {
           const component = render(
-            <EuiPageTemplate
+            <OuiPageTemplate
               template={template}
               pageHeader={{
                 title: 'Page title',
@@ -118,7 +129,7 @@ describe('EuiPageTemplate', () => {
 
         test('is rendered with pageBodyProps', () => {
           const component = render(
-            <EuiPageTemplate
+            <OuiPageTemplate
               template={template}
               pageBodyProps={requiredProps}
             />
@@ -129,7 +140,7 @@ describe('EuiPageTemplate', () => {
 
         test('is rendered with pageContentProps', () => {
           const component = render(
-            <EuiPageTemplate
+            <OuiPageTemplate
               template={template}
               pageContentProps={requiredProps}
             />
@@ -140,7 +151,7 @@ describe('EuiPageTemplate', () => {
 
         test('is rendered with pageContentBodyProps', () => {
           const component = render(
-            <EuiPageTemplate
+            <OuiPageTemplate
               template={template}
               pageContentBodyProps={requiredProps}
             />
@@ -155,7 +166,7 @@ describe('EuiPageTemplate', () => {
   describe('with bottomBar', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiPageTemplate
+        <OuiPageTemplate
           bottomBar="Bottom Bar"
           bottomBarProps={{ paddingSize: 'none' }}
         />
@@ -167,13 +178,13 @@ describe('EuiPageTemplate', () => {
 
   describe('fullHeight', () => {
     test('is rendered with true', () => {
-      const component = render(<EuiPageTemplate fullHeight={true} />);
+      const component = render(<OuiPageTemplate fullHeight={true} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('is rendered with noscroll', () => {
-      const component = render(<EuiPageTemplate fullHeight={'noscroll'} />);
+      const component = render(<OuiPageTemplate fullHeight={'noscroll'} />);
 
       expect(component).toMatchSnapshot();
     });

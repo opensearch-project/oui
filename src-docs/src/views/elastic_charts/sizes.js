@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Component, Fragment } from 'react';
 import moment from 'moment';
 import { ThemeContext } from '../../components';
@@ -12,21 +23,21 @@ import {
 } from '@elastic/charts';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
 } from '../../../../src/themes/charts/themes';
 
 import {
-  EuiSpacer,
-  EuiTitle,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiPageContent,
-  EuiFormRow,
-  EuiRange,
-  EuiPage,
-  EuiButton,
-  EuiCopy,
+  OuiSpacer,
+  OuiTitle,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiPageContent,
+  OuiFormRow,
+  OuiRange,
+  OuiPage,
+  OuiButton,
+  OuiCopy,
 } from '../../../../src/components';
 
 import { formatDate, dateFormatAliases } from '../../../../src/services';
@@ -170,11 +181,11 @@ export class Sizes extends Component {
 
     const isDarkTheme = this.context.theme.includes('dark');
     const theme = isDarkTheme
-      ? EUI_CHARTS_THEME_DARK.theme
-      : EUI_CHARTS_THEME_LIGHT.theme;
+      ? OUI_CHARTS_THEME_DARK.theme
+      : OUI_CHARTS_THEME_LIGHT.theme;
     const lineAnnotationStyle = isDarkTheme
-      ? EUI_CHARTS_THEME_DARK.lineAnnotation
-      : EUI_CHARTS_THEME_LIGHT.lineAnnotation;
+      ? OUI_CHARTS_THEME_DARK.lineAnnotation
+      : OUI_CHARTS_THEME_LIGHT.lineAnnotation;
 
     let annotation;
     if (width < this.xsmallSize) {
@@ -191,19 +202,19 @@ export class Sizes extends Component {
 
     return (
       <Fragment>
-        <EuiPage>
-          <EuiPageContent
+        <OuiPage>
+          <OuiPageContent
             role={null}
             horizontalPosition="center"
             style={{
               width: `${width}%`,
               overflow: 'hidden',
             }}>
-            <EuiTitle size="xxs">
+            <OuiTitle size="xxs">
               <h2>Chart title {multi && ' by type'}</h2>
-            </EuiTitle>
+            </OuiTitle>
 
-            <EuiSpacer size="s" />
+            <OuiSpacer size="s" />
 
             <Chart size={{ height: 200 }}>
               <Settings
@@ -239,54 +250,54 @@ export class Sizes extends Component {
               />
               <Axis id="left-axis" position="left" style={yAxisStyle} />
             </Chart>
-          </EuiPageContent>
-        </EuiPage>
+          </OuiPageContent>
+        </OuiPage>
 
-        <EuiSpacer />
+        <OuiSpacer />
 
-        <EuiFlexGrid
+        <OuiFlexGrid
           columns={3}
-          className="euiGuide__chartsPageCrosshairSection">
-          <EuiFlexItem>
+          className="ouiGuide__chartsPageCrosshairSection">
+          <OuiFlexItem>
             <MultiChartCard onChange={this.onMultiChange} />
-          </EuiFlexItem>
-          <EuiFlexItem>
+          </OuiFlexItem>
+          <OuiFlexItem>
             <ChartCard
               title="Width of panel"
               description="Watch how the chart changes depending on how much room is in the panel.">
-              <EuiFormRow helpText="These sizes are just for example and don't take mobile-responsiveness into account. Your chart configuration may be different based on different sizes.">
-                <EuiRange
+              <OuiFormRow helpText="These sizes are just for example and don't take mobile-responsiveness into account. Your chart configuration may be different based on different sizes.">
+                <OuiRange
                   min={20}
                   max={100}
                   value={width}
                   onChange={this.onWidthChartsChange}
                   aria-label="Width of panel"
                 />
-              </EuiFormRow>
+              </OuiFormRow>
             </ChartCard>
-          </EuiFlexItem>
+          </OuiFlexItem>
 
-          <EuiFlexItem>
+          <OuiFlexItem>
             <ChartCard
               title="What's changing?"
               description={changeDescription}
             />
-          </EuiFlexItem>
-        </EuiFlexGrid>
+          </OuiFlexItem>
+        </OuiFlexGrid>
 
-        <EuiSpacer />
+        <OuiSpacer />
 
-        <div className="eui-textCenter">
-          <EuiCopy
-            textToCopy={`<EuiTitle size="xxs">
+        <div className="oui-textCenter">
+          <OuiCopy
+            textToCopy={`<OuiTitle size="xxs">
   <h3>Chart title ${multi && ' by type'}</h3>
-</EuiTitle>
+</OuiTitle>
 
-<EuiSpacer size="s" />
+<OuiSpacer size="s" />
 
 <Chart size={{height: 200}}>
   <Settings
-    theme={isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LIGHT.theme}
+    theme={isDarkTheme ? OUI_CHARTS_THEME_DARK.theme : OUI_CHARTS_THEME_LIGHT.theme}
     showLegend={${multi}}
     legendPosition="${legendPosition}"
     tooltip={{ headerFormatter: tooltipData => {
@@ -322,8 +333,8 @@ export class Sizes extends Component {
     dataValues={[{ dataValue: 1.2, details: 'Threshold' }]}
     marker={'1.2'}
     style={isDarkTheme
-      ? EUI_CHARTS_THEME_DARK.lineAnnotation
-      : EUI_CHARTS_THEME_LIGHT.lineAnnotation
+      ? OUI_CHARTS_THEME_DARK.lineAnnotation
+      : OUI_CHARTS_THEME_LIGHT.lineAnnotation
     }
   />`
       : ''
@@ -343,7 +354,7 @@ export class Sizes extends Component {
   />
 </Chart>`}>
             {(copy) => (
-              <EuiButton
+              <OuiButton
                 fill
                 onClick={copy}
                 iconType="copyClipboard"
@@ -351,9 +362,9 @@ export class Sizes extends Component {
                 {false
                   ? "Bad chart, don't copy"
                   : 'Copy code of current configuration'}
-              </EuiButton>
+              </OuiButton>
             )}
-          </EuiCopy>
+          </OuiCopy>
         </div>
       </Fragment>
     );

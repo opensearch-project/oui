@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiFacetGroup, LAYOUTS, GUTTER_SIZES } from './facet_group';
+import { OuiFacetGroup, LAYOUTS, GUTTER_SIZES } from './facet_group';
 
-describe('EuiFacetGroup', () => {
+describe('OuiFacetGroup', () => {
   test('is rendered', () => {
-    const component = render(<EuiFacetGroup {...requiredProps} />);
+    const component = render(<OuiFacetGroup {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +45,7 @@ describe('EuiFacetGroup', () => {
     describe('layout', () => {
       LAYOUTS.forEach((layout) => {
         test(`${layout} is rendered`, () => {
-          const component = render(<EuiFacetGroup layout={layout} />);
+          const component = render(<OuiFacetGroup layout={layout} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -44,7 +55,7 @@ describe('EuiFacetGroup', () => {
     describe('gutterSize', () => {
       GUTTER_SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(<EuiFacetGroup gutterSize={size} />);
+          const component = render(<OuiFacetGroup gutterSize={size} />);
 
           expect(component).toMatchSnapshot();
         });

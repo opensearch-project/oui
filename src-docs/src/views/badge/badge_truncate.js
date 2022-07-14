@@ -1,27 +1,38 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiBadge, EuiPanel, EuiBadgeGroup } from '../../../../src/components';
+import { OuiBadge, OuiPanel, OuiBadgeGroup } from '../../../../src/components';
 
 export default () => (
-  <EuiPanel style={{ maxWidth: 200 }}>
-    <EuiBadgeGroup gutterSize="s">
-      <EuiBadge>Badge with simple text being truncated</EuiBadge>
+  <OuiPanel style={{ maxWidth: 200 }}>
+    <OuiBadgeGroup gutterSize="s">
+      <OuiBadge>Badge with simple text being truncated</OuiBadge>
 
-      <EuiBadge iconType="clock">Badge with icon being truncated</EuiBadge>
+      <OuiBadge iconType="clock">Badge with icon being truncated</OuiBadge>
 
-      <EuiBadge onClick={() => {}} onClickAriaLabel="Click this badge to...">
+      <OuiBadge onClick={() => {}} onClickAriaLabel="Click this badge to...">
         Badge with onClick being truncated
-      </EuiBadge>
+      </OuiBadge>
 
-      <EuiBadge
+      <OuiBadge
         iconType="cross"
         iconSide="right"
         iconOnClick={() => {}}
         iconOnClickAriaLabel="Click this icon to...">
         Badge with iconOnClick being truncated
-      </EuiBadge>
+      </OuiBadge>
 
-      <EuiBadge
+      <OuiBadge
         iconType="cross"
         iconSide="right"
         onClick={() => {}}
@@ -29,7 +40,7 @@ export default () => (
         iconOnClick={() => {}}
         iconOnClickAriaLabel="Click this icon to...">
         Badge with both onClicks being truncated
-      </EuiBadge>
-    </EuiBadgeGroup>
-  </EuiPanel>
+      </OuiBadge>
+    </OuiBadgeGroup>
+  </OuiPanel>
 );

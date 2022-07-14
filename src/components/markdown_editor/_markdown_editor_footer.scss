@@ -1,40 +1,51 @@
-.euiMarkdownEditorFooter {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiMarkdownEditorFooter {
   display: inline-flex;
-  padding: $euiSizeXS;
-  border: $euiBorderThin;
+  padding: $ouiSizeXS;
+  border: $ouiBorderThin;
   align-items: center;
-  background: $euiPageBackgroundColor;
+  background: $ouiPageBackgroundColor;
 }
 
-.euiMarkdownEditorFooter__popover {
+.ouiMarkdownEditorFooter__popover {
   width: 300px;
 }
 
-.euiMarkdownEditorFooter__actions {
+.ouiMarkdownEditorFooter__actions {
   flex: 1;
   display: inline-flex;
 
   > button,
   > span {
-    margin-right: $euiSizeXS;
+    margin-right: $ouiSizeXS;
     align-self: center;
   }
 
   // overrides button empty styles so it can match the button icon
-  // So when we have an error this button appears smoothly 
-  .euiMarkdownEditorFooter__uploadError {
+  // So when we have an error this button appears smoothly
+  .ouiMarkdownEditorFooter__uploadError {
     position: relative;
     left: -1px;
     line-height: 1;
-    border-radius: $euiBorderRadius;
+    border-radius: $ouiBorderRadius;
 
     > span {
-      padding: 0 $euiSizeXS;
+      padding: 0 $ouiSizeXS;
     }
   }
 }
 
-.euiMarkdownEditorFooter__help {
+.ouiMarkdownEditorFooter__help {
   justify-self: flex-end;
 
   // overrides the default button icon width size
@@ -43,9 +54,9 @@
   }
 }
 
-.euiMarkdownEditorFooter__errors {
+.ouiMarkdownEditorFooter__errors {
   // overrides the default button icon width size
   > svg {
-    color: $euiTextSubduedColor;
+    color: $ouiTextSubduedColor;
   }
 }

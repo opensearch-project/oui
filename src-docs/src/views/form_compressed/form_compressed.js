@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiCheckboxGroup,
-  EuiComboBox,
-  EuiFieldText,
-  EuiFormRow,
-  EuiFilePicker,
-  EuiRange,
-  EuiSelect,
-  EuiSwitch,
-  EuiPanel,
-  EuiSpacer,
+  OuiCheckboxGroup,
+  OuiComboBox,
+  OuiFieldText,
+  OuiFormRow,
+  OuiFilePicker,
+  OuiRange,
+  OuiSelect,
+  OuiSwitch,
+  OuiPanel,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -59,16 +70,16 @@ export default () => {
     setCheckboxIdToSelectedMap(newCheckboxIdToSelectedMap);
   };
   return (
-    <EuiPanel style={{ maxWidth: 300 }}>
-      <EuiFormRow
+    <OuiPanel style={{ maxWidth: 300 }}>
+      <OuiFormRow
         label="Text field"
         helpText="I am some friendly help text."
         display="rowCompressed">
-        <EuiFieldText name="first" isLoading compressed />
-      </EuiFormRow>
+        <OuiFieldText name="first" isLoading compressed />
+      </OuiFormRow>
 
-      <EuiFormRow label="Select" display="rowCompressed">
-        <EuiSelect
+      <OuiFormRow label="Select" display="rowCompressed">
+        <OuiSelect
           options={[
             { value: 'option_one', text: 'Option one' },
             { value: 'option_two', text: 'Option two' },
@@ -76,14 +87,14 @@ export default () => {
           ]}
           compressed
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="File picker" display="rowCompressed">
-        <EuiFilePicker compressed display="default" />
-      </EuiFormRow>
+      <OuiFormRow label="File picker" display="rowCompressed">
+        <OuiFilePicker compressed display="default" />
+      </OuiFormRow>
 
-      <EuiFormRow label="Combobox" display="rowCompressed">
-        <EuiComboBox
+      <OuiFormRow label="Combobox" display="rowCompressed">
+        <OuiComboBox
           options={[
             { label: 'Option one' },
             { label: 'Option two' },
@@ -95,10 +106,10 @@ export default () => {
             setComboBoxSelectionOptions(comboBoxSelectionOptions)
           }
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Range" display="rowCompressed">
-        <EuiRange
+      <OuiFormRow label="Range" display="rowCompressed">
+        <OuiRange
           min={0}
           max={100}
           name="range"
@@ -108,21 +119,21 @@ export default () => {
           value={value}
           onChange={onRangeChange}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Switch" display="rowCompressed" hasChildLabel={false}>
-        <EuiSwitch
+      <OuiFormRow label="Switch" display="rowCompressed" hasChildLabel={false}>
+        <OuiSwitch
           label="Should we do this?"
           name="switch"
           checked={isSwitchChecked}
           onChange={onSwitchChange}
           compressed
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiCheckboxGroup
+      <OuiCheckboxGroup
         options={checkboxes}
         idToSelectedMap={checkboxIdToSelectedMap}
         onChange={onCheckboxChange}
@@ -131,6 +142,6 @@ export default () => {
         }}
         compressed
       />
-    </EuiPanel>
+    </OuiPanel>
   );
 };

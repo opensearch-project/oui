@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,11 +17,11 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiForm,
-  EuiFormRow,
-  EuiText,
-  EuiDescribedFormGroup,
+  OuiCode,
+  OuiForm,
+  OuiFormRow,
+  OuiText,
+  OuiDescribedFormGroup,
 } from '../../../../src/components';
 import Guidelines from './guidelines';
 import FormRows from './form_rows';
@@ -40,12 +51,12 @@ const inlinePopoverHtml = renderToHtml(InlinePopover);
 export const FormLayoutsExample = {
   title: 'Form layouts',
   intro: (
-    <EuiText>
+    <OuiText>
       <p>
         Be sure to read the full{' '}
         <Link to="/guidelines/form-layouts">forms usage guidelines</Link>.
       </p>
-    </EuiText>
+    </OuiText>
   ),
   sections: [
     {
@@ -62,25 +73,25 @@ export const FormLayoutsExample = {
       ],
       text: (
         <p>
-          Use the <strong>EuiFormRow</strong> component to easily associate form
+          Use the <strong>OuiFormRow</strong> component to easily associate form
           components with labels, help text, and error text. Use the{' '}
-          <strong>EuiForm</strong> component to group{' '}
-          <strong>EuiFormRows</strong>. By default EuiForm will render as a
+          <strong>OuiForm</strong> component to group{' '}
+          <strong>OuiFormRows</strong>. By default OuiForm will render as a
           simple div unless you pass{' '}
-          <EuiCode language="js">component=&quot;form&quot;</EuiCode>.
+          <OuiCode language="js">component=&quot;form&quot;</OuiCode>.
         </p>
       ),
       props: {
-        EuiForm,
-        EuiFormRow,
+        OuiForm,
+        OuiFormRow,
       },
       demo: <FormRows />,
-      snippet: `<EuiFormRow
+      snippet: `<OuiFormRow
   label="Text field"
   helpText="I am some friendly help text."
 >
-  <EuiFieldText />
-</EuiFormRow>`,
+  <OuiFieldText />
+</OuiFormRow>`,
     },
     {
       title: 'Full-width',
@@ -97,23 +108,23 @@ export const FormLayoutsExample = {
       text: (
         <p>
           Form elements will automatically flex to a max-width of{' '}
-          <EuiCode>400px</EuiCode>. You can optionally pass the{' '}
-          <EuiCode>fullWidth</EuiCode> prop to the row and form control to
+          <OuiCode>400px</OuiCode>. You can optionally pass the{' '}
+          <OuiCode>fullWidth</OuiCode> prop to the row and form control to
           expand to their container. This should be done rarely and usually you
           will only need it for isolated controls like search bars and sliders.
         </p>
       ),
       props: {
-        EuiFormRow,
+        OuiFormRow,
       },
       demo: <FullWidth />,
-      snippet: `<EuiFormRow
+      snippet: `<OuiFormRow
   fullWidth
   label="Works on form rows too"
   helpText="Note that the fullWidth prop is not passed to the form row's child"
 >
-  <EuiRange fullWidth />
-</EuiFormRow>`,
+  <OuiRange fullWidth />
+</OuiFormRow>`,
     },
     {
       title: 'Described form groups',
@@ -129,30 +140,30 @@ export const FormLayoutsExample = {
       ],
       text: (
         <p>
-          Use <strong>EuiDescribedFormGroup</strong> component to associate
-          multiple <strong>EuiFormRows</strong>. It can also simply be used with
-          one <strong>EuiFormRow</strong> as a way to display additional text
+          Use <strong>OuiDescribedFormGroup</strong> component to associate
+          multiple <strong>OuiFormRows</strong>. It can also simply be used with
+          one <strong>OuiFormRow</strong> as a way to display additional text
           next to the field (on mobile, it will revert to being stacked).
         </p>
       ),
       props: {
-        EuiDescribedFormGroup,
+        OuiDescribedFormGroup,
       },
       demo: <DescribedFormGroup />,
-      snippet: `<EuiDescribedFormGroup
+      snippet: `<OuiDescribedFormGroup
   title={<h3>Set heading level based on context</h3>}
   description={
     <Fragment>
-      Will be wrapped in a small, subdued EuiText block.
+      Will be wrapped in a small, subdued OuiText block.
     </Fragment>
   }
 >
-  <EuiFormRow
+  <OuiFormRow
     label="Text field"
   >
-    <EuiFieldText />
-  </EuiFormRow>
-</EuiDescribedFormGroup>`,
+    <OuiFieldText />
+  </OuiFormRow>
+</OuiDescribedFormGroup>`,
     },
     {
       title: 'Inline',
@@ -160,9 +171,9 @@ export const FormLayoutsExample = {
         <p>
           Inline forms can be made with{' '}
           <Link to="/layout/flex">
-            <strong>EuiFlexGroup</strong>
+            <strong>OuiFlexGroup</strong>
           </Link>
-          . Apply <EuiCode language="js">grow=false</EuiCode> on any of the
+          . Apply <OuiCode language="js">grow=false</OuiCode> on any of the
           items you want to collapse (like this button). Note that the button
           FormRow component also requires an additional prop because it&rsquo;s
           missing a label.
@@ -200,18 +211,18 @@ export const FormLayoutsExample = {
             FlexItem, not the input. The input inside will resize as needed.
           </p>
           <p>
-            When supplying children to an EuiFormRow that is{' '}
+            When supplying children to an OuiFormRow that is{' '}
             <strong>not</strong> a form control, and you need to the content to
             vertically center with the other form controls, change the{' '}
-            <EuiCode>display</EuiCode> prop to <EuiCode>center</EuiCode> or{' '}
-            <EuiCode>centerCompressed</EuiCode>.
+            <OuiCode>display</OuiCode> prop to <OuiCode>center</OuiCode> or{' '}
+            <OuiCode>centerCompressed</OuiCode>.
           </p>
         </Fragment>
       ),
       demo: <InlineSizing />,
-      snippet: `<EuiFormRow label="Avatar" display="centerCompressed">
-  <EuiAvatar name="John Doe" size="s" />
-</EuiFormRow>`,
+      snippet: `<OuiFormRow label="Avatar" display="centerCompressed">
+  <OuiAvatar name="John Doe" size="s" />
+</OuiFormRow>`,
     },
     {
       title: 'In a popover',

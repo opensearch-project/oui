@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiBreadcrumbs,
-  EuiTitle,
-  EuiSpacer,
+  OuiBreadcrumbs,
+  OuiTitle,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -43,22 +54,22 @@ export default () => {
 
   return (
     <>
-      <EuiTitle size="xs">
+      <OuiTitle size="xs">
         <span>Turning responsive completely off</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiBreadcrumbs
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiBreadcrumbs
         responsive={false}
         breadcrumbs={breadcrumbs}
         max={null}
-        aria-label="An example of non-responsive EuiBreadcrumbs"
+        aria-label="An example of non-responsive OuiBreadcrumbs"
       />
-      <EuiSpacer />
-      <EuiTitle size="xs">
+      <OuiSpacer />
+      <OuiTitle size="xs">
         <span>Customizing number of items to display</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiBreadcrumbs
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiBreadcrumbs
         responsive={{
           xs: 1,
           s: 3,
@@ -67,7 +78,7 @@ export default () => {
         }}
         breadcrumbs={breadcrumbs}
         max={null}
-        aria-label="An example of custom responsive EuiBreadcrumbs"
+        aria-label="An example of custom responsive OuiBreadcrumbs"
       />
     </>
   );

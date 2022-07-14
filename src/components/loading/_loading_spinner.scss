@@ -1,41 +1,52 @@
-.euiLoadingSpinner {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiLoadingSpinner {
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
-  width: $euiSizeXL;
-  height: $euiSizeXL;
+  width: $ouiSizeXL;
+  height: $ouiSizeXL;
   border-radius: 50%;
-  border: solid $euiSizeXS / 2 $euiColorLightShade;
-  border-color: euiLoadingSpinnerBorderColors();
+  border: solid $ouiSizeXS / 2 $ouiColorLightShade;
+  border-color: ouiLoadingSpinnerBorderColors();
 
   // sass-lint:disable-block mixins-before-declarations
-  @include euiCanAnimate {
-    animation: euiLoadingSpinner .6s infinite linear;
+  @include ouiCanAnimate {
+    animation: ouiLoadingSpinner .6s infinite linear;
   }
 }
 
-.euiLoadingSpinner--small {
-  width: $euiSizeS;
-  height: $euiSizeS;
+.ouiLoadingSpinner--small {
+  width: $ouiSizeS;
+  height: $ouiSizeS;
   border-width: 1px;
 }
 
-.euiLoadingSpinner--medium {
-  width: $euiSize;
-  height: $euiSize;
+.ouiLoadingSpinner--medium {
+  width: $ouiSize;
+  height: $ouiSize;
   border-width: 1px;
 }
 
-.euiLoadingSpinner--large {
-  width: $euiSizeL;
-  height: $euiSizeL;
+.ouiLoadingSpinner--large {
+  width: $ouiSizeL;
+  height: $ouiSizeL;
 }
 
-.euiLoadingSpinner--xLarge {
-  width: $euiSizeXL;
-  height: $euiSizeXL;
+.ouiLoadingSpinner--xLarge {
+  width: $ouiSizeXL;
+  height: $ouiSizeXL;
 }
 
-@keyframes euiLoadingSpinner {
+@keyframes ouiLoadingSpinner {
   from {
     transform: rotate(0deg);
   }

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,17 +30,17 @@
 
 export * from './super_date_picker';
 
-export { EuiDatePicker, EuiDatePickerProps } from './date_picker';
+export { OuiDatePicker, OuiDatePickerProps } from './date_picker';
 
 export {
-  EuiDatePickerRange,
-  EuiDatePickerRangeProps,
+  OuiDatePickerRange,
+  OuiDatePickerRangeProps,
 } from './date_picker_range';
 
 export {
-  DurationRange as EuiSuperDatePickerCommonRange,
-  DurationRange as EuiSuperDatePickerDurationRange,
-  DurationRange as EuiSuperDatePickerRecentRange,
+  DurationRange as OuiSuperDatePickerCommonRange,
+  DurationRange as OuiSuperDatePickerDurationRange,
+  DurationRange as OuiSuperDatePickerRecentRange,
   TimeUnitId,
   TimeUnitFromNowId,
   TimeUnitLabel,
@@ -43,5 +54,5 @@ export {
   RelativeParts,
   RelativeOption,
   QuickSelect,
-  QuickSelectPanel as EuiSuperDatePickerQuickSelectPanel,
+  QuickSelectPanel as OuiSuperDatePickerQuickSelectPanel,
 } from './types';

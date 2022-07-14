@@ -1,10 +1,21 @@
-.euiAccordion__triggerWrapper {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiAccordion__triggerWrapper {
   display: flex;
   align-items: center;
 }
 
-.euiAccordion__button {
-  @include euiFontSize;
+.ouiAccordion__button {
+  @include ouiFontSize;
   text-align: left;
   width: 100%;
   flex-grow: 1;
@@ -18,53 +29,53 @@
   }
 
   &:focus {
-    .euiAccordion__iconWrapper {
-      @include euiAccordionIconFocus;
+    .ouiAccordion__iconWrapper {
+      @include ouiAccordionIconFocus;
       outline: none; // The `outline` gets applied to the whole button, we don't need a second one on the icon
     }
   }
 }
 
-.euiAccordion__buttonReverse {
+.ouiAccordion__buttonReverse {
   // Puts the arrow on the right
   flex-direction: row-reverse;
   justify-content: space-between;
 
-  .euiAccordion__iconWrapper {
-    @include euiAccordionIconMargin(right);
+  .ouiAccordion__iconWrapper {
+    @include ouiAccordionIconMargin(right);
   }
 }
 
-.euiAccordion__iconWrapper {
-  @include size($euiSize);
-  @include euiAccordionIconMargin;
-  border-radius: $euiBorderRadius;
+.ouiAccordion__iconWrapper {
+  @include size($ouiSize);
+  @include ouiAccordionIconMargin;
+  border-radius: $ouiBorderRadius;
   flex-shrink: 0;
 
-  // Nested to override EuiIcon
-  .euiAccordion__icon {
+  // Nested to override OuiIcon
+  .ouiAccordion__icon {
     vertical-align: top;
-    transition: transform $euiAnimSpeedNormal $euiAnimSlightResistance;
+    transition: transform $ouiAnimSpeedNormal $ouiAnimSlightResistance;
   }
 
-  .euiAccordion__icon-isOpen {
+  .ouiAccordion__icon-isOpen {
     transform: rotate(90deg);
   }
 }
 
-.euiAccordion__iconButton {
-  @include euiAccordionIconMargin(right);
+.ouiAccordion__iconButton {
+  @include ouiAccordionIconMargin(right);
 
   &:focus {
-    @include euiAccordionIconFocus;
+    @include ouiAccordionIconFocus;
   }
 }
 
-.euiAccordion__optionalAction {
+.ouiAccordion__optionalAction {
   flex-shrink: 0;
 }
 
-.euiAccordion__childWrapper {
+.ouiAccordion__childWrapper {
   visibility: hidden;
   height: 0;
   opacity: 0;
@@ -72,8 +83,8 @@
   transform: translatez(0);
   // sass-lint:disable-block indentation
   transition:
-    height $euiAnimSpeedNormal $euiAnimSlightResistance,
-    opacity $euiAnimSpeedNormal $euiAnimSlightResistance;
+    height $ouiAnimSpeedNormal $ouiAnimSlightResistance,
+    opacity $ouiAnimSpeedNormal $ouiAnimSlightResistance;
 
   &:focus {
     outline: none; // Hide focus ring because of `tabindex=-1` on Safari
@@ -81,34 +92,34 @@
 }
 
 $paddingSizes: (
-  xs: $euiSizeXS,
-  s: $euiSizeS,
-  m: $euiSize,
-  l: $euiSizeL,
-  xl: $euiSizeXL,
+  xs: $ouiSizeXS,
+  s: $ouiSizeS,
+  m: $ouiSize,
+  l: $ouiSizeL,
+  xl: $ouiSizeXL,
 );
 
 // Create button modifiers based upon the map.
 @each $name, $size in $paddingSizes {
-  .euiAccordion__padding--#{$name} {
+  .ouiAccordion__padding--#{$name} {
     padding: $size;
   }
 }
 
-.euiAccordion.euiAccordion-isOpen {
-  .euiAccordion__childWrapper {
+.ouiAccordion.ouiAccordion-isOpen {
+  .ouiAccordion__childWrapper {
     visibility: visible;
     opacity: 1;
     height: auto;
   }
 }
 
-.euiAccordion__children-isLoading {
-  line-height: $euiLineHeight;
+.ouiAccordion__children-isLoading {
+  line-height: $ouiLineHeight;
   display: flex;
   align-items: center;
 
-  .euiAccordion__spinner {
-    margin-right: $euiSizeXS;
+  .ouiAccordion__spinner {
+    margin-right: $ouiSizeXS;
   }
 }

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,21 +37,21 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf, ExclusiveUnion } from '../common';
-import { EuiIcon } from '../icon';
+import { OuiIcon } from '../icon';
 
 const colorToClassNameMap = {
-  subdued: 'euiExpression--subdued',
-  primary: 'euiExpression--primary',
-  success: 'euiExpression--success',
-  secondary: 'euiExpression--secondary',
-  accent: 'euiExpression--accent',
-  warning: 'euiExpression--warning',
-  danger: 'euiExpression--danger',
+  subdued: 'ouiExpression--subdued',
+  primary: 'ouiExpression--primary',
+  success: 'ouiExpression--success',
+  secondary: 'ouiExpression--secondary',
+  accent: 'ouiExpression--accent',
+  warning: 'ouiExpression--warning',
+  danger: 'ouiExpression--danger',
 };
 
 const textWrapToClassNameMap = {
   'break-word': null,
-  truncate: 'euiExpression--truncate',
+  truncate: 'ouiExpression--truncate',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
@@ -49,10 +60,10 @@ export type ExpressionColor = keyof typeof colorToClassNameMap;
 
 const displayToClassNameMap = {
   inline: null,
-  columns: 'euiExpression--columns',
+  columns: 'ouiExpression--columns',
 };
 
-export type EuiExpressionProps = CommonProps & {
+export type OuiExpressionProps = CommonProps & {
   /**
    * First part of the expression
    */
@@ -101,15 +112,15 @@ export type EuiExpressionProps = CommonProps & {
   textWrap?: keyof typeof textWrapToClassNameMap;
 };
 
-type Buttonlike = EuiExpressionProps &
+type Buttonlike = OuiExpressionProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'value'> & {
     onClick: MouseEventHandler<HTMLButtonElement>;
   };
 
-type Spanlike = EuiExpressionProps &
+type Spanlike = OuiExpressionProps &
   Omit<HTMLAttributes<HTMLSpanElement>, 'value'>;
 
-export const EuiExpression: FunctionComponent<ExclusiveUnion<
+export const OuiExpression: FunctionComponent<ExclusiveUnion<
   Buttonlike,
   Spanlike
 >> = ({
@@ -131,12 +142,12 @@ export const EuiExpression: FunctionComponent<ExclusiveUnion<
   const calculatedColor = isInvalid ? 'danger' : color;
 
   const classes = classNames(
-    'euiExpression',
+    'ouiExpression',
     className,
     {
-      'euiExpression-isActive': isActive,
-      'euiExpression-isClickable': onClick,
-      'euiExpression-isUppercase': uppercase,
+      'ouiExpression-isActive': isActive,
+      'ouiExpression-isClickable': onClick,
+      'ouiExpression-isUppercase': uppercase,
     },
     displayToClassNameMap[display],
     colorToClassNameMap[calculatedColor],
@@ -155,8 +166,8 @@ export const EuiExpression: FunctionComponent<ExclusiveUnion<
       : undefined;
 
   const invalidIcon = isInvalid ? (
-    <EuiIcon
-      className="euiExpression__icon"
+    <OuiIcon
+      className="ouiExpression__icon"
       type="alert"
       color={calculatedColor}
     />
@@ -165,13 +176,13 @@ export const EuiExpression: FunctionComponent<ExclusiveUnion<
   return (
     <Component className={classes} onClick={onClick} {...rest}>
       <span
-        className="euiExpression__description"
+        className="ouiExpression__description"
         style={customWidth}
         {...descriptionProps}>
         {description}
       </span>{' '}
       {value && (
-        <span className="euiExpression__value" {...valueProps}>
+        <span className="ouiExpression__value" {...valueProps}>
           {value}
         </span>
       )}

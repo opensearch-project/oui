@@ -1,18 +1,29 @@
-.euiRangeLabel {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiRangeLabel {
   &--min,
   &--max {
-    font-size: $euiFontSizeXS;
+    font-size: $ouiFontSizeXS;
   }
 
   &--min {
-    margin-right: $euiSizeS;
+    margin-right: $ouiSizeS;
   }
 
   &--max {
-    margin-left: $euiSizeS;
+    margin-left: $ouiSizeS;
   }
 
   &--isDisabled {
-    opacity: $euiRangeDisabledOpacity;
+    opacity: $ouiRangeDisabledOpacity;
   }
 }

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,17 +30,17 @@
 
 import React, { Component } from 'react';
 
-import { EuiButtonEmpty } from '../../button';
-import { EuiContextMenuItem, EuiContextMenuPanel } from '../../context_menu';
-import { EuiFlexGroup, EuiFlexItem } from '../../flex';
-import { EuiPagination } from '../../pagination';
-import { EuiPopover } from '../../popover';
-import { EuiI18n } from '../../i18n';
+import { OuiButtonEmpty } from '../../button';
+import { OuiContextMenuItem, OuiContextMenuPanel } from '../../context_menu';
+import { OuiFlexGroup, OuiFlexItem } from '../../flex';
+import { OuiPagination } from '../../pagination';
+import { OuiPopover } from '../../popover';
+import { OuiI18n } from '../../i18n';
 
 export type PageChangeHandler = (pageIndex: number) => void;
 export type ItemsPerPageChangeHandler = (pageSize: number) => void;
 
-export interface EuiTablePaginationProps {
+export interface OuiTablePaginationProps {
   activePage?: number;
   hidePerPageOptions?: boolean;
   itemsPerPage?: number;
@@ -47,8 +58,8 @@ interface State {
   isPopoverOpen: boolean;
 }
 
-export class EuiTablePagination extends Component<
-  EuiTablePaginationProps,
+export class OuiTablePagination extends Component<
+  OuiTablePaginationProps,
   State
 > {
   state = {
@@ -80,23 +91,23 @@ export class EuiTablePagination extends Component<
     } = this.props;
 
     const button = (
-      <EuiButtonEmpty
+      <OuiButtonEmpty
         size="xs"
         color="text"
         iconType="arrowDown"
         iconSide="right"
         data-test-subj="tablePaginationPopoverButton"
         onClick={this.onButtonClick}>
-        <EuiI18n
-          token="euiTablePagination.rowsPerPage"
+        <OuiI18n
+          token="ouiTablePagination.rowsPerPage"
           default="Rows per page"
         />
         : {itemsPerPage}
-      </EuiButtonEmpty>
+      </OuiButtonEmpty>
     );
 
     const items = itemsPerPageOptions.map((itemsPerPageOption) => (
-      <EuiContextMenuItem
+      <OuiContextMenuItem
         key={itemsPerPageOption}
         icon={itemsPerPageOption === itemsPerPage ? 'check' : 'empty'}
         onClick={() => {
@@ -104,43 +115,43 @@ export class EuiTablePagination extends Component<
           onChangeItemsPerPage(itemsPerPageOption);
         }}
         data-test-subj={`tablePagination-${itemsPerPageOption}-rows`}>
-        <EuiI18n
-          token="euiTablePagination.rowsPerPageOption"
+        <OuiI18n
+          token="ouiTablePagination.rowsPerPageOption"
           values={{ rowsPerPage: itemsPerPageOption }}
           default="{rowsPerPage} rows"
         />
-      </EuiContextMenuItem>
+      </OuiContextMenuItem>
     ));
 
     const itemsPerPagePopover = (
-      <EuiPopover
+      <OuiPopover
         button={button}
         isOpen={this.state.isPopoverOpen}
         closePopover={this.closePopover}
         panelPaddingSize="none"
         anchorPosition="upRight">
-        <EuiContextMenuPanel items={items} />
-      </EuiPopover>
+        <OuiContextMenuPanel items={items} />
+      </OuiPopover>
     );
 
     return (
-      <EuiFlexGroup
+      <OuiFlexGroup
         justifyContent="spaceBetween"
         alignItems="center"
         responsive={false}>
-        <EuiFlexItem grow={false}>
+        <OuiFlexItem grow={false}>
           {hidePerPageOptions ? null : itemsPerPagePopover}
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPagination
+        <OuiFlexItem grow={false}>
+          <OuiPagination
             pageCount={pageCount}
             activePage={activePage}
             onPageClick={onChangePage}
             {...rest}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     );
   }
 }

@@ -1,40 +1,51 @@
-.euiButtonGroup {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiButtonGroup {
   display: inline-block;
   max-width: 100%;
-  position: relative; // Ensures the EuiScreenReaderOnly component is positioned relative to this component
+  position: relative; // Ensures the OuiScreenReaderOnly component is positioned relative to this component
 }
 
-.euiButtonGroup--fullWidth {
+.ouiButtonGroup--fullWidth {
   display: block;
 
-  .euiButtonGroup__buttons {
+  .ouiButtonGroup__buttons {
     width: 100%;
 
-    .euiButtonGroupButton {
+    .ouiButtonGroupButton {
       flex: 1;
     }
   }
 }
 
-.euiButtonGroup__buttons {
-  @include euiSlightShadow;
-  border-radius: $euiBorderRadius + 1px; // Simply for the box-shadow
+.ouiButtonGroup__buttons {
+  @include ouiSlightShadow;
+  border-radius: $ouiBorderRadius + 1px; // Simply for the box-shadow
   max-width: 100%;
   display: flex;
   overflow: hidden;
 }
 
-.euiButtonGroup--isDisabled .euiButtonGroup__buttons {
+.ouiButtonGroup--isDisabled .ouiButtonGroup__buttons {
   box-shadow: none;
 }
 
-.euiButtonGroup--compressed {
-  .euiButtonGroup__buttons {
+.ouiButtonGroup--compressed {
+  .ouiButtonGroup__buttons {
     box-shadow: none !important; // sass-lint:disable-line no-important
-    border-radius: $euiFormControlCompressedBorderRadius;
-    background-color: $euiFormBackgroundColor;
-    height: $euiFormControlCompressedHeight;
-    border: 1px solid $euiFormBorderColor;
+    border-radius: $ouiFormControlCompressedBorderRadius;
+    background-color: $ouiFormBackgroundColor;
+    height: $ouiFormControlCompressedHeight;
+    border: 1px solid $ouiFormBorderColor;
     overflow: visible;
   }
 }

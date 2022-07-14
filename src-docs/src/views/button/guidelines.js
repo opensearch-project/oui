@@ -1,24 +1,35 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { GuideRule, GuideRuleTitle, GuideRuleExample } from '../../components/';
 
 import {
-  EuiText,
-  EuiButton,
-  EuiButtonIcon,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButtonEmpty,
-  EuiIcon,
-  EuiImage,
-  EuiTable,
-  EuiTableHeader,
-  EuiTableHeaderCell,
-  EuiTableBody,
-  EuiTableRow,
-  EuiTableRowCell,
-  EuiTitle,
+  OuiText,
+  OuiButton,
+  OuiButtonIcon,
+  OuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiButtonEmpty,
+  OuiIcon,
+  OuiImage,
+  OuiTable,
+  OuiTableHeader,
+  OuiTableHeaderCell,
+  OuiTableBody,
+  OuiTableRow,
+  OuiTableRowCell,
+  OuiTitle,
 } from '../../../../src/components';
 
 import ContextMenu from '../context_menu/small';
@@ -34,79 +45,79 @@ import imageButtonTypes from '../../images/button_types.svg';
 
 export default () => (
   <>
-    <EuiText grow={false}>
+    <OuiText grow={false}>
       <p>
         This page documents patterns for button design, including types,
         placement, color, and size.
       </p>
-    </EuiText>
-    <EuiSpacer size="xl" />
+    </OuiText>
+    <OuiSpacer size="xl" />
 
-    <EuiTitle>
+    <OuiTitle>
       <h2>Button types</h2>
-    </EuiTitle>
+    </OuiTitle>
 
-    <EuiSpacer size="xl" />
+    <OuiSpacer size="xl" />
 
     <dl>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false} style={{ minWidth: 120 }}>
-          <EuiButton fill>Filled</EuiButton>
-        </EuiFlexItem>
+      <OuiFlexGroup alignItems="center">
+        <OuiFlexItem grow={false} style={{ minWidth: 120 }}>
+          <OuiButton fill>Filled</OuiButton>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
-          <EuiText>
+        <OuiFlexItem>
+          <OuiText>
             <dt>Filled buttons are for the primary action</dt>
             <dd>
               This button has the heaviest visual weight to draw users&apos;
               attention.
             </dd>
-          </EuiText>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiText>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false} style={{ minWidth: 120 }}>
-          <EuiButton>Standard</EuiButton>
-        </EuiFlexItem>
+      <OuiFlexGroup alignItems="center">
+        <OuiFlexItem grow={false} style={{ minWidth: 120 }}>
+          <OuiButton>Standard</OuiButton>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
-          <EuiText>
+        <OuiFlexItem>
+          <OuiText>
             <dt>Standard buttons are for secondary actions</dt>
             <dd>
               Such actions include Add and Apply. This button type works well
               for multiple actions of equal weight.
             </dd>
-          </EuiText>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiText>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false} style={{ minWidth: 120 }}>
-          <EuiButtonEmpty>Empty</EuiButtonEmpty>
-        </EuiFlexItem>
+      <OuiFlexGroup alignItems="center">
+        <OuiFlexItem grow={false} style={{ minWidth: 120 }}>
+          <OuiButtonEmpty>Empty</OuiButtonEmpty>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
-          <EuiText>
+        <OuiFlexItem>
+          <OuiText>
             <dt>Empty buttons are for complementary, UI-specific actions</dt>
             <dd>
               Close, cancel, filter, refresh, and other actions that reconfigure
               the UI are appropriate for empty buttons.
             </dd>
-          </EuiText>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiText>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false} style={{ minWidth: 120 }}>
+      <OuiFlexGroup alignItems="center">
+        <OuiFlexItem grow={false} style={{ minWidth: 120 }}>
           <div style={{ textAlign: 'center' }}>
-            <EuiButtonIcon
+            <OuiButtonIcon
               size="s"
               color="danger"
               onClick={() => {}}
@@ -114,25 +125,25 @@ export default () => (
               aria-label="Next"
             />
           </div>
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
-          <EuiText>
+        <OuiFlexItem>
+          <OuiText>
             <dt>Icon buttons are for saving space</dt>
             <dd>
               The icon must be immediately understood, for example, a trash can
               for delete. Use these buttons sparingly, and never for the primary
               action.
             </dd>
-          </EuiText>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiText>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </dl>
 
     <GuideRuleTitle>Placement and order</GuideRuleTitle>
-    <EuiText>
+    <OuiText>
       <p>Button placement and order should follow the user path.</p>
-    </EuiText>
+    </OuiText>
 
     <GuideRule
       heading="Put buttons on the right in containers with a restricted width"
@@ -144,7 +155,7 @@ export default () => (
         text="Place the primary action on the bottom right with the
           secondary action on its left in modals.">
         <div style={{ textAlign: 'center' }}>
-          <EuiImage
+          <OuiImage
             alt="button placement in an input modal"
             url={imageButtonPlacement}
             height="252"
@@ -156,7 +167,7 @@ export default () => (
         type="do"
         text="Always use buttons positioned to the right in popovers.">
         <div style={{ textAlign: 'center' }}>
-          <EuiImage
+          <OuiImage
             alt="button placement in popovers"
             url={imageButtonPopover}
             height="252"
@@ -173,7 +184,7 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Put the primary action in the leftmost position so the user's eye never has to leave the one side.">
-        <EuiImage
+        <OuiImage
           alt="button placement in form"
           url={imageButtonLeft}
           height="252"
@@ -183,7 +194,7 @@ export default () => (
       <GuideRuleExample
         type="dont"
         text="Put the actions far away from the content.">
-        <EuiImage
+        <OuiImage
           alt="form buttons go on the left, not right"
           url={imageButtonRight}
           height="252"
@@ -200,7 +211,7 @@ export default () => (
         text="If the action is against the page title, place the primary button in the upper right.
           A common pattern is a create button that adds an item to a list. Creation starts
           at the top and ends at the bottom. Think of it as adding to a pile.">
-        <EuiImage
+        <OuiImage
           alt="button placement in upper right"
           url={imageButtonTable}
           height="252"
@@ -212,7 +223,7 @@ export default () => (
         text="Empty states are unique because they focus first on information and then try to sell
           the user on creation. In these special cases, where the container is constrained
           and the content is fairly short, the title and the button should be center aligned.">
-        <EuiImage
+        <OuiImage
           alt="center-aligned button"
           url={imageButtonEmpty}
           height="252"
@@ -229,7 +240,7 @@ export default () => (
         type="do"
         text="Use only one filled button per layout. The primary action is
           the one you want the user to eventually complete.">
-        <EuiImage
+        <OuiImage
           alt="one primary button per page"
           url={imageButtonTypes}
           height="252"
@@ -238,7 +249,7 @@ export default () => (
       <GuideRuleExample
         type="dont"
         text="Too many primary buttons will confuse the user.">
-        <EuiImage
+        <OuiImage
           alt="page without primary button"
           url={imageButtonTypesBad}
           height="252"
@@ -256,14 +267,14 @@ export default () => (
         text="Stick to the default pattern: a filled, primary button paired with
           an empty, but same-colored button.">
         <div>
-          <EuiFlexGroup>
-            <EuiFlexItem grow={false}>
-              <EuiButton fill>Save</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButtonEmpty>Cancel</EuiButtonEmpty>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+          <OuiFlexGroup>
+            <OuiFlexItem grow={false}>
+              <OuiButton fill>Save</OuiButton>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiButtonEmpty>Cancel</OuiButtonEmpty>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         </div>
       </GuideRuleExample>
       <GuideRuleExample
@@ -271,19 +282,19 @@ export default () => (
         type="dont"
         text="Readability suffers when multiple colors and sizes are used.">
         <div>
-          <EuiFlexGroup>
-            <EuiFlexItem grow={false}>
-              <EuiButton fill>Save</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton>Cancel</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton color="danger" fill size="s">
+          <OuiFlexGroup>
+            <OuiFlexItem grow={false}>
+              <OuiButton fill>Save</OuiButton>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiButton>Cancel</OuiButton>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiButton color="danger" fill size="s">
                 Delete
-              </EuiButton>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+              </OuiButton>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         </div>
       </GuideRuleExample>
     </GuideRule>
@@ -300,9 +311,9 @@ export default () => (
         type="do"
         text="Use icon buttons for universal actions that are easy to understand.">
         <div>
-          <EuiButtonIcon size="s" iconType="pencil" aria-label="Edit" />
+          <OuiButtonIcon size="s" iconType="pencil" aria-label="Edit" />
           &nbsp;&nbsp;&nbsp;&nbsp;
-          <EuiButtonIcon size="s" iconType="expand" aria-label="Expand" />
+          <OuiButtonIcon size="s" iconType="expand" aria-label="Expand" />
         </div>
       </GuideRuleExample>
       <GuideRuleExample
@@ -310,13 +321,13 @@ export default () => (
         type="dont"
         text="Icons alone in a standard button defeats the purpose of saving space.">
         <div>
-          <EuiButton>
-            <EuiIcon type="pencil" aria-label="Edit" />
-          </EuiButton>
+          <OuiButton>
+            <OuiIcon type="pencil" aria-label="Edit" />
+          </OuiButton>
           &nbsp;&nbsp;
-          <EuiButton>
-            <EuiIcon type="expand" aria-label="Expand" />
-          </EuiButton>
+          <OuiButton>
+            <OuiIcon type="expand" aria-label="Expand" />
+          </OuiButton>
         </div>
       </GuideRuleExample>
     </GuideRule>
@@ -332,13 +343,13 @@ export default () => (
           Using the word "complete" with a rare check icon helps users
           understand that this is the final action.'>
         <div>
-          <EuiButton iconType="arrowRight" iconSide="right" fill>
+          <OuiButton iconType="arrowRight" iconSide="right" fill>
             Continue
-          </EuiButton>
+          </OuiButton>
           &nbsp;&nbsp;
-          <EuiButton iconType="check" color="secondary" fill>
+          <OuiButton iconType="check" color="secondary" fill>
             Save and complete
-          </EuiButton>
+          </OuiButton>
         </div>
       </GuideRuleExample>
       <GuideRuleExample
@@ -347,9 +358,9 @@ export default () => (
         text="Unnecessary icons often distract from the text.
           This is especially true when the icon is positioned on the right,
           with a hard to interpret icon.">
-        <EuiButton iconType="indexOpen" iconSide="right" fill>
+        <OuiButton iconType="indexOpen" iconSide="right" fill>
           Create index pattern
-        </EuiButton>
+        </OuiButton>
       </GuideRuleExample>
     </GuideRule>
 
@@ -370,24 +381,24 @@ export default () => (
         type="dont"
         text="When there are many buttons, none matter.">
         <div>
-          <EuiFlexGroup>
-            <EuiFlexItem grow={false}>
-              <EuiButton iconType="copy">Copy</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton iconType="pencil">Edit</EuiButton>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton iconType="share">Share</EuiButton>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+          <OuiFlexGroup>
+            <OuiFlexItem grow={false}>
+              <OuiButton iconType="copy">Copy</OuiButton>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiButton iconType="pencil">Edit</OuiButton>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiButton iconType="share">Share</OuiButton>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         </div>
       </GuideRuleExample>
     </GuideRule>
 
     <GuideRuleTitle>Labels that say what the button does</GuideRuleTitle>
 
-    <EuiText grow={false}>
+    <OuiText grow={false}>
       <p>
         Labels should provide a clear indication of that action that occurs when
         the user clicks the button. Prefer action words, and include an object
@@ -397,159 +408,159 @@ export default () => (
       </p>
 
       <h3>Preferred words in buttons</h3>
-    </EuiText>
+    </OuiText>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiTable>
-      <EuiTableHeader>
-        <EuiTableHeaderCell>Text</EuiTableHeaderCell>
+    <OuiTable>
+      <OuiTableHeader>
+        <OuiTableHeaderCell>Text</OuiTableHeaderCell>
 
-        <EuiTableHeaderCell>Description</EuiTableHeaderCell>
-      </EuiTableHeader>
+        <OuiTableHeaderCell>Description</OuiTableHeaderCell>
+      </OuiTableHeader>
 
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton>Add thing</EuiButton>
-          </EuiTableRowCell>
+      <OuiTableBody>
+        <OuiTableRow>
+          <OuiTableRowCell isMobileFullWidth>
+            <OuiButton>Add thing</OuiButton>
+          </OuiTableRowCell>
 
-          <EuiTableRowCell>
+          <OuiTableRowCell>
             Establishes a new relationship. Often used in a create-then-add
             scenario. You create a dashboard, then add a visualization. Always
             followed by an object. Do not use &quot;Add new.&quot; Remove is the
             correct opposite.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </OuiTableRowCell>
+        </OuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButtonEmpty size="s">Cancel</EuiButtonEmpty>
-          </EuiTableRowCell>
-          <EuiTableRowCell>
+        <OuiTableRow>
+          <OuiTableRowCell isMobileFullWidth>
+            <OuiButtonEmpty size="s">Cancel</OuiButtonEmpty>
+          </OuiTableRowCell>
+          <OuiTableRowCell>
             Stops an action without saving pending changes. Never make Cancel
             red&mdash;it&apos;s not a destructive action. Cancel is always an
             empty button.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </OuiTableRowCell>
+        </OuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton fill>Create thing</EuiButton>
-          </EuiTableRowCell>
+        <OuiTableRow>
+          <OuiTableRowCell isMobileFullWidth>
+            <OuiButton fill>Create thing</OuiButton>
+          </OuiTableRowCell>
 
-          <EuiTableRowCell>
+          <OuiTableRowCell>
             Creates a new object from scratch. Always followed by an object, for
             example, “Create pipeline.” Do not use &quot;Create new.&quot;
             Exception: “Add user” is more intuitive than “Create user.” Delete
             is the correct opposite.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </OuiTableRowCell>
+        </OuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton color="danger" fill>
+        <OuiTableRow>
+          <OuiTableRowCell isMobileFullWidth>
+            <OuiButton color="danger" fill>
               Delete
-            </EuiButton>
+            </OuiButton>
             &nbsp;&nbsp;
-            <EuiButton color="danger" fill>
+            <OuiButton color="danger" fill>
               Delete 6 things
-            </EuiButton>
+            </OuiButton>
             &nbsp;&nbsp;
-            <EuiButtonIcon
+            <OuiButtonIcon
               size="s"
               color="danger"
               iconType="trash"
               aria-label="delete"
             />
-          </EuiTableRowCell>
+          </OuiTableRowCell>
 
-          <EuiTableRowCell>
+          <OuiTableRowCell>
             Deletes data so users can longer retrieve it. Create is the correct
             opposite. Do not confuse with Remove.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </OuiTableRowCell>
+        </OuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton color="danger">Remove</EuiButton>&nbsp;&nbsp;
-            <EuiButtonIcon
+        <OuiTableRow>
+          <OuiTableRowCell isMobileFullWidth>
+            <OuiButton color="danger">Remove</OuiButton>&nbsp;&nbsp;
+            <OuiButtonIcon
               size="s"
               color="danger"
               iconType="cross"
               aria-label="Remove"
             />
-          </EuiTableRowCell>
-          <EuiTableRowCell>
+          </OuiTableRowCell>
+          <OuiTableRowCell>
             Removes a relationship, but doesn&apos;t permanently delete data.
             For example, you remove a visualization from a dashboard. Add is the
             correct opposite.
-          </EuiTableRowCell>
-        </EuiTableRow>
+          </OuiTableRowCell>
+        </OuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell isMobileFullWidth>
-            <EuiButton fill>Save</EuiButton>&nbsp;&nbsp;
-            <EuiButton fill color="secondary" iconType="check">
+        <OuiTableRow>
+          <OuiTableRowCell isMobileFullWidth>
+            <OuiButton fill>Save</OuiButton>&nbsp;&nbsp;
+            <OuiButton fill color="secondary" iconType="check">
               Save and complete
-            </EuiButton>
-          </EuiTableRowCell>
-          <EuiTableRowCell>
+            </OuiButton>
+          </OuiTableRowCell>
+          <OuiTableRowCell>
             Carries out pending changes, for example, Save edits. Do not confuse
             with Add. Can use green if this button is the final save action.
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
 
-    <EuiSpacer size="xl" />
+    <OuiSpacer size="xl" />
 
-    <EuiText>
+    <OuiText>
       <h3>Avoid these words in buttons</h3>
-    </EuiText>
+    </OuiText>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiTable responsive={false}>
-      <EuiTableHeader>
-        <EuiTableHeaderCell>Text</EuiTableHeaderCell>
+    <OuiTable responsive={false}>
+      <OuiTableHeader>
+        <OuiTableHeaderCell>Text</OuiTableHeaderCell>
 
-        <EuiTableHeaderCell>Use this instead</EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell>
-            <EuiButton color="danger">Discard</EuiButton>
-          </EuiTableRowCell>
+        <OuiTableHeaderCell>Use this instead</OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody>
+        <OuiTableRow>
+          <OuiTableRowCell>
+            <OuiButton color="danger">Discard</OuiButton>
+          </OuiTableRowCell>
 
-          <EuiTableRowCell>Remove or Delete</EuiTableRowCell>
-        </EuiTableRow>
+          <OuiTableRowCell>Remove or Delete</OuiTableRowCell>
+        </OuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell>
-            <EuiButton>New</EuiButton>
-          </EuiTableRowCell>
+        <OuiTableRow>
+          <OuiTableRowCell>
+            <OuiButton>New</OuiButton>
+          </OuiTableRowCell>
 
-          <EuiTableRowCell>Add or Create</EuiTableRowCell>
-        </EuiTableRow>
+          <OuiTableRowCell>Add or Create</OuiTableRowCell>
+        </OuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell>
-            <EuiButton>OK</EuiButton>
-          </EuiTableRowCell>
+        <OuiTableRow>
+          <OuiTableRowCell>
+            <OuiButton>OK</OuiButton>
+          </OuiTableRowCell>
 
-          <EuiTableRowCell>Words that explain the action</EuiTableRowCell>
-        </EuiTableRow>
+          <OuiTableRowCell>Words that explain the action</OuiTableRowCell>
+        </OuiTableRow>
 
-        <EuiTableRow>
-          <EuiTableRowCell>
-            <EuiButton>Yes?</EuiButton>&nbsp;&nbsp;
-            <EuiButton color="danger">No?</EuiButton>
-          </EuiTableRowCell>
+        <OuiTableRow>
+          <OuiTableRowCell>
+            <OuiButton>Yes?</OuiButton>&nbsp;&nbsp;
+            <OuiButton color="danger">No?</OuiButton>
+          </OuiTableRowCell>
 
-          <EuiTableRowCell>Words that explain the action</EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          <OuiTableRowCell>Words that explain the action</OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </>
 );

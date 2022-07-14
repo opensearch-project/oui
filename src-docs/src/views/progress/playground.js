@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiProgress } from '../../../../src/components/';
+import { OuiProgress } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiProgress.__docgenInfo)
-    ? EuiProgress.__docgenInfo[0]
-    : EuiProgress.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiProgress.__docgenInfo)
+    ? OuiProgress.__docgenInfo[0]
+    : OuiProgress.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -27,14 +38,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiProgress',
+      componentName: 'OuiProgress',
       props: propsToUse,
       scope: {
-        EuiProgress,
+        OuiProgress,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiProgress'],
+        '@opensearch-project/oui': {
+          named: ['OuiProgress'],
         },
       },
     },

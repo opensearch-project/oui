@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCode renders a code snippet 1`] = `
+exports[`OuiCode renders a code snippet 1`] = `
 <span
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge euiCodeBlock--inline prismjs language-none testClass1 testClass2"
+  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--inline prismjs language-none testClass1 testClass2"
 >
   <code
     aria-label="aria-label"
-    class="euiCodeBlock__code"
+    class="ouiCodeBlock__code"
     data-test-subj="test subject string"
   >
     var some = 'code';

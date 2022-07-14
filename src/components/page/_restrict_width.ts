@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,7 +29,7 @@
  */
 
 /**
- * The `restrictedWidth` property is the same for all EuiPage components.
+ * The `restrictedWidth` property is the same for all OuiPage components.
  * This is file contains the type specific to that prop and a helper
  * function for creating the corresponding classNames and style tags
  * based on the consumer's configuration
@@ -30,7 +41,7 @@
 
 import { CSSProperties } from 'react';
 
-export type _EuiPageRestrictWidth = {
+export type _OuiPageRestrictWidth = {
   /**
    * Sets the max-width of the page,
    * set to `true` to use the default size of `1000px (1200 for Amsterdam)`,
@@ -42,7 +53,7 @@ export type _EuiPageRestrictWidth = {
 };
 
 export function setPropsForRestrictedPageWidth(
-  restrictWidth: _EuiPageRestrictWidth['restrictWidth'],
+  restrictWidth: _OuiPageRestrictWidth['restrictWidth'],
   style?: CSSProperties
 ): { widthClassName?: string; newStyle?: CSSProperties } {
   let widthClassName;

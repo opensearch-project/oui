@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, {
   Fragment,
   useCallback,
@@ -10,13 +21,13 @@ import React, {
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiLink,
-  EuiText,
-  EuiSpacer,
-  EuiButtonGroup,
+  OuiDataGrid,
+  OuiLink,
+  OuiText,
+  OuiSpacer,
+  OuiButtonGroup,
 } from '../../../../src/components/';
-import { EuiFormRow } from '../../../../src/components/form/form_row';
+import { OuiFormRow } from '../../../../src/components/form/form_row';
 
 const DataContext = createContext();
 
@@ -71,13 +82,13 @@ function RenderCellValue({ rowIndex, columnId }) {
     const suffix = fake('{{name.suffix}}');
     data[rowIndex] = {
       name: `${name} ${suffix}`,
-      email: <EuiLink href="">{email}</EuiLink>,
+      email: <OuiLink href="">{email}</OuiLink>,
       location: (
         <Fragment>
           {`${fake('{{address.city}}')}, `}
-          <EuiLink href="https://google.com">
+          <OuiLink href="https://google.com">
             {fake('{{address.country}}')}
-          </EuiLink>
+          </OuiLink>
         </Fragment>
       ),
       date: fake('{{date.past}}'),
@@ -141,8 +152,8 @@ export default () => {
 
   return (
     <>
-      <EuiFormRow label="Height">
-        <EuiButtonGroup
+      <OuiFormRow label="Height">
+        <OuiButtonGroup
           legend="Set a height for the following grid"
           options={[
             { id: 'height-300px', label: '300px' },
@@ -152,10 +163,10 @@ export default () => {
           idSelected={height}
           onChange={setHeight}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Width">
-        <EuiButtonGroup
+      <OuiFormRow label="Width">
+        <OuiButtonGroup
           legend="Set a width for the following grid"
           options={[
             { id: 'width-200px', label: '200px' },
@@ -165,16 +176,16 @@ export default () => {
           idSelected={width}
           onChange={setWidth}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiText>
+      <OuiText>
         <p>There are {mountedCellCount} rendered cells</p>
-      </EuiText>
+      </OuiText>
 
       <DataContext.Provider value={dataContext}>
-        <EuiDataGrid
+        <OuiDataGrid
           // completely reset the grid when switching between controlled & uncontrolled heights
           // otherwise, going from constrained->unconstrained is ignored.
           // this is for example only, don't switch between controlled & uncontrolled heights

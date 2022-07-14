@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiCopy,
-  EuiButton,
-  EuiFieldText,
-  EuiSpacer,
-  EuiFormRow,
+  OuiCopy,
+  OuiButton,
+  OuiFieldText,
+  OuiSpacer,
+  OuiFormRow,
 } from '../../../../src/components/';
 
 export default () => {
@@ -17,17 +28,17 @@ export default () => {
 
   return (
     <div>
-      <EuiFormRow label="Enter text that will be copied to clipboard">
-        <EuiFieldText value={copyText} onChange={onChange} />
-      </EuiFormRow>
+      <OuiFormRow label="Enter text that will be copied to clipboard">
+        <OuiFieldText value={copyText} onChange={onChange} />
+      </OuiFormRow>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiCopy textToCopy={copyText}>
+      <OuiCopy textToCopy={copyText}>
         {(copy) => (
-          <EuiButton onClick={copy}>Click to copy input text</EuiButton>
+          <OuiButton onClick={copy}>Click to copy input text</OuiButton>
         )}
-      </EuiCopy>
+      </OuiCopy>
     </div>
   );
 };

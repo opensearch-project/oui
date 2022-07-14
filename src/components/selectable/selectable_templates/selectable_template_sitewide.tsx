@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,33 +38,33 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import { useCombinedRefs, throttle } from '../../../services';
-import { EuiSelectable, EuiSelectableProps } from '../selectable';
-import { EuiPopoverTitle, EuiPopoverFooter } from '../../popover';
-import { EuiPopover, Props as PopoverProps } from '../../popover/popover';
-import { useEuiI18n, EuiI18n } from '../../i18n';
-import { EuiSelectableMessage } from '../selectable_message';
-import { EuiLoadingSpinner } from '../../loading';
+import { OuiSelectable, OuiSelectableProps } from '../selectable';
+import { OuiPopoverTitle, OuiPopoverFooter } from '../../popover';
+import { OuiPopover, Props as PopoverProps } from '../../popover/popover';
+import { useOuiI18n, OuiI18n } from '../../i18n';
+import { OuiSelectableMessage } from '../selectable_message';
+import { OuiLoadingSpinner } from '../../loading';
 import {
-  EuiSelectableTemplateSitewideOption,
-  euiSelectableTemplateSitewideFormatOptions,
-  euiSelectableTemplateSitewideRenderOptions,
+  OuiSelectableTemplateSitewideOption,
+  ouiSelectableTemplateSitewideFormatOptions,
+  ouiSelectableTemplateSitewideRenderOptions,
 } from './selectable_template_sitewide_option';
 import {
-  EuiBreakpointSize,
+  OuiBreakpointSize,
   isWithinBreakpoints,
 } from '../../../services/breakpoint';
-import { EuiSpacer } from '../../spacer';
+import { OuiSpacer } from '../../spacer';
 
-export type EuiSelectableTemplateSitewideProps = Partial<
-  Omit<EuiSelectableProps<{ [key: string]: any }>, 'options'>
+export type OuiSelectableTemplateSitewideProps = Partial<
+  Omit<OuiSelectableProps<{ [key: string]: any }>, 'options'>
 > & {
   /**
-   * Extends the typical EuiSelectable #Options with the addition of pre-composed elements
+   * Extends the typical OuiSelectable #Options with the addition of pre-composed elements
    * such as `icon`, `avatar`and `meta`
    */
-  options: EuiSelectableTemplateSitewideOption[];
+  options: OuiSelectableTemplateSitewideOption[];
   /**
-   * Override some of the EuiPopover props housing the list.
+   * Override some of the OuiPopover props housing the list.
    * The default width is `600`
    */
   popoverProps?: Partial<PopoverProps> & { width?: CSSProperties['width'] };
@@ -73,10 +84,10 @@ export type EuiSelectableTemplateSitewideProps = Partial<
    * Pass an array of named breakpoints for which to show the `popoverButton`.
    * If `undefined`, the `popoverButton` will always show (if provided)
    */
-  popoverButtonBreakpoints?: EuiBreakpointSize[];
+  popoverButtonBreakpoints?: OuiBreakpointSize[];
 };
 
-export const EuiSelectableTemplateSitewide: FunctionComponent<EuiSelectableTemplateSitewideProps> = ({
+export const OuiSelectableTemplateSitewide: FunctionComponent<OuiSelectableTemplateSitewideProps> = ({
   children,
   className,
   options,
@@ -122,8 +133,8 @@ export const EuiSelectableTemplateSitewide: FunctionComponent<EuiSelectableTempl
   /**
    * i18n text
    */
-  const [searchPlaceholder] = useEuiI18n(
-    ['euiSelectableTemplateSitewide.searchPlaceholder'],
+  const [searchPlaceholder] = useOuiI18n(
+    ['ouiSelectableTemplateSitewide.searchPlaceholder'],
     ['Search for anything...']
   );
 
@@ -176,43 +187,43 @@ export const EuiSelectableTemplateSitewide: FunctionComponent<EuiSelectableTempl
   /**
    * Classes
    */
-  const classes = classNames('euiSelectableTemplateSitewide', className);
+  const classes = classNames('ouiSelectableTemplateSitewide', className);
   const searchClasses = classNames(
-    'euiSelectableTemplateSitewide__search',
+    'ouiSelectableTemplateSitewide__search',
     searchProps && searchProps.className
   );
   const listClasses = classNames(
-    'euiSelectableTemplateSitewide__list',
+    'ouiSelectableTemplateSitewide__list',
     listProps && listProps.className
   );
 
   /**
    * List options
    */
-  const formattedOptions = euiSelectableTemplateSitewideFormatOptions(options);
+  const formattedOptions = ouiSelectableTemplateSitewideFormatOptions(options);
 
   const loadingMessage = (
-    <EuiSelectableMessage style={{ minHeight: 300 }}>
-      <EuiLoadingSpinner size="l" />
+    <OuiSelectableMessage style={{ minHeight: 300 }}>
+      <OuiLoadingSpinner size="l" />
       <br />
       <p>
-        <EuiI18n
-          token="euiSelectableTemplateSitewide.loadingResults"
+        <OuiI18n
+          token="ouiSelectableTemplateSitewide.loadingResults"
           default="Loading results"
         />
       </p>
-    </EuiSelectableMessage>
+    </OuiSelectableMessage>
   );
 
   const emptyMessage = (
-    <EuiSelectableMessage style={{ minHeight: 300 }}>
+    <OuiSelectableMessage style={{ minHeight: 300 }}>
       <p>
-        <EuiI18n
-          token="euiSelectableTemplateSitewide.noResults"
+        <OuiI18n
+          token="ouiSelectableTemplateSitewide.noResults"
           default="No results available"
         />
       </p>
-    </EuiSelectableMessage>
+    </OuiSelectableMessage>
   );
 
   /**
@@ -233,10 +244,10 @@ export const EuiSelectableTemplateSitewide: FunctionComponent<EuiSelectableTempl
   }
 
   return (
-    <EuiSelectable
+    <OuiSelectable
       isLoading={isLoading}
       options={formattedOptions}
-      renderOption={euiSelectableTemplateSitewideRenderOptions}
+      renderOption={ouiSelectableTemplateSitewideRenderOptions}
       singleSelection={true}
       searchProps={{
         placeholder: searchPlaceholder,
@@ -253,8 +264,8 @@ export const EuiSelectableTemplateSitewide: FunctionComponent<EuiSelectableTempl
         onFocusBadge: {
           iconSide: 'right',
           children: (
-            <EuiI18n
-              token="euiSelectableTemplateSitewide.onFocusBadgeGoTo"
+            <OuiI18n
+              token="ouiSelectableTemplateSitewide.onFocusBadgeGoTo"
               default="Go to"
             />
           ),
@@ -269,7 +280,7 @@ export const EuiSelectableTemplateSitewide: FunctionComponent<EuiSelectableTempl
       className={classes}
       searchable>
       {(list, search) => (
-        <EuiPopover
+        <OuiPopover
           panelPaddingSize="none"
           isOpen={popoverIsOpen}
           ownFocus={!!popoverTrigger}
@@ -280,21 +291,21 @@ export const EuiSelectableTemplateSitewide: FunctionComponent<EuiSelectableTempl
           closePopover={closePopover}>
           <div style={{ width: popoverWidth, maxWidth: '100%' }}>
             {popoverTitle || popoverTrigger ? (
-              <EuiPopoverTitle paddingSize="s">
+              <OuiPopoverTitle paddingSize="s">
                 {popoverTitle}
-                {popoverTitle && search && <EuiSpacer />}
+                {popoverTitle && search && <OuiSpacer />}
                 {search}
-              </EuiPopoverTitle>
+              </OuiPopoverTitle>
             ) : undefined}
             {list}
             {popoverFooter && (
-              <EuiPopoverFooter paddingSize="s">
+              <OuiPopoverFooter paddingSize="s">
                 {popoverFooter}
-              </EuiPopoverFooter>
+              </OuiPopoverFooter>
             )}
           </div>
-        </EuiPopover>
+        </OuiPopover>
       )}
-    </EuiSelectable>
+    </OuiSelectable>
   );
 };

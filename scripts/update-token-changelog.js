@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 const fs = require('fs');
 const path = require('path');
 const git = require('nodegit');
@@ -148,7 +159,7 @@ async function main() {
   const repo = await git.Repository.open(repoDir);
   const previousVersionCommit = await getCommitForTagName(repo, `v${oldPackageVersion}`);
 
-  // check for i18n token differences between the current file & the most recent EUI version
+  // check for i18n token differences between the current file & the most recent OUI version
   const originalTokens = await getPreviousI18nTokens(previousVersionCommit);
   const newTokens = require(tokensPath);
 

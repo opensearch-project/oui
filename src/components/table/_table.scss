@@ -1,143 +1,154 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * NOTE: table-layout: fixed causes a bug in IE11 and Edge (see #9929). It also prevents us from
  * specifying a column width, e.g. the checkbox column.
  */
-.euiTable {
-  @include euiFontSizeS;
-  @include euiNumberFormat;
+.ouiTable {
+  @include ouiFontSizeS;
+  @include ouiNumberFormat;
 
   width: 100%;
   table-layout: fixed;
   border: none;
   border-collapse: collapse;
-  background-color: $euiColorEmptyShade;
+  background-color: $ouiColorEmptyShade;
 
-  &.euiTable--auto {
+  &.ouiTable--auto {
     table-layout: auto;
   }
 }
 
-.euiTableCaption {
+.ouiTableCaption {
   position: relative;
 }
 
 // Compressed styles not for mobile
-@include euiBreakpoint('m', 'l', 'xl') {
-  .euiTable--compressed {
-    .euiTableCellContent {
-      @include euiFontSizeXS;
-      padding: $euiTableCellContentPaddingCompressed;
+@include ouiBreakpoint('m', 'l', 'xl') {
+  .ouiTable--compressed {
+    .ouiTableCellContent {
+      @include ouiFontSizeXS;
+      padding: $ouiTableCellContentPaddingCompressed;
     }
   }
 }
 
-.euiTableFooterCell,
-.euiTableHeaderCell {
-  @include euiTableCell;
-  @include euiTitle('xxs');
-  font-weight: $euiFontWeightMedium;
+.ouiTableFooterCell,
+.ouiTableHeaderCell {
+  @include ouiTableCell;
+  @include ouiTitle('xxs');
+  font-weight: $ouiFontWeightMedium;
   border-top: none;
 
-  .euiTableHeaderButton {
+  .ouiTableHeaderButton {
     text-align: left;
-    font-weight: $euiFontWeightMedium;
+    font-weight: $ouiFontWeightMedium;
   }
 
-  .euiTableCellContent__text {
-    @include euiFontSizeXS;
-    font-weight: $euiFontWeightSemiBold;
+  .ouiTableCellContent__text {
+    @include ouiFontSizeXS;
+    font-weight: $ouiFontWeightSemiBold;
   }
 }
 
-.euiTableHeaderButton {
-  @include euiFontSizeS;
+.ouiTableHeaderButton {
+  @include ouiFontSizeS;
   color: inherit;
   width: 100%;
 
   &:hover,
   &:focus {
-    .euiTableCellContent__text {
+    .ouiTableCellContent__text {
       text-decoration: underline;
-      color: $euiColorPrimary;
+      color: $ouiColorPrimary;
     }
 
-    .euiTableSortIcon {
-      fill: $euiColorPrimary;
+    .ouiTableSortIcon {
+      fill: $ouiColorPrimary;
     }
   }
 }
 
-.euiTableSortIcon {
-  margin-left: $euiSizeXS;
+.ouiTableSortIcon {
+  margin-left: $ouiSizeXS;
   flex-shrink: 0; // makes sure the icon doesn't change size because the text is long
 
-  .euiTableHeaderButton-isSorted & {
-    fill: $euiTitleColor;
+  .ouiTableHeaderButton-isSorted & {
+    fill: $ouiTitleColor;
   }
 }
 
-.euiTableHeaderCellCheckbox {
-  @include euiTableCellCheckbox;
+.ouiTableHeaderCellCheckbox {
+  @include ouiTableCellCheckbox;
   border-top: none;
 }
 
-.euiTableRow {
+.ouiTableRow {
   &:hover {
-    background-color: $euiTableHoverColor;
+    background-color: $ouiTableHoverColor;
   }
 
 
-  &.euiTableRow-isClickable {
+  &.ouiTableRow-isClickable {
 
     &:hover {
-      background-color: $euiTableHoverClickableColor;
+      background-color: $ouiTableHoverClickableColor;
       cursor: pointer;
     }
 
     &:focus {
-      background-color: $euiTableFocusClickableColor;
+      background-color: $ouiTableFocusClickableColor;
     }
   }
 
-  &.euiTableRow-isExpandedRow {
-    background-color: $euiTableHoverColor;
+  &.ouiTableRow-isExpandedRow {
+    background-color: $ouiTableHoverColor;
 
-    &.euiTableRow-isSelectable .euiTableCellContent {
-      padding-left: $euiTableCellCheckboxWidth + $euiTableCellContentPadding;
+    &.ouiTableRow-isSelectable .ouiTableCellContent {
+      padding-left: $ouiTableCellCheckboxWidth + $ouiTableCellContentPadding;
     }
   }
 
-  &.euiTableRow-isSelected {
-    background-color: $euiTableSelectedColor;
+  &.ouiTableRow-isSelected {
+    background-color: $ouiTableSelectedColor;
 
-    + .euiTableRow.euiTableRow-isExpandedRow .euiTableRowCell {
-      background-color: $euiTableSelectedColor;
+    + .ouiTableRow.ouiTableRow-isExpandedRow .ouiTableRowCell {
+      background-color: $ouiTableSelectedColor;
     }
 
     &:hover,
-    &:hover + .euiTableRow.euiTableRow-isExpandedRow .euiTableRowCell  {
-      background-color: $euiTableHoverSelectedColor;
+    &:hover + .ouiTableRow.ouiTableRow-isExpandedRow .ouiTableRowCell  {
+      background-color: $ouiTableHoverSelectedColor;
     }
   }
 }
 
-.euiTableRowCell {
-  @include euiTableCell;
+.ouiTableRowCell {
+  @include ouiTableCell;
 
-  color: $euiTextColor;
+  color: $ouiTextColor;
 
-  &.euiTableRowCell--isMobileHeader {
+  &.ouiTableRowCell--isMobileHeader {
     display: none; // Hide if not mobile breakpoint
   }
 }
 
-.euiTableRowCellCheckbox {
-  @include euiTableCellCheckbox;
+.ouiTableRowCellCheckbox {
+  @include ouiTableCellCheckbox;
 }
 
-// Must come after .euiTableRowCell selector for border to be removed
-.euiTableFooterCell {
-  background-color: $euiColorLightestShade;
+// Must come after .ouiTableRowCell selector for border to be removed
+.ouiTableFooterCell {
+  background-color: $ouiColorLightestShade;
   border-bottom: none;
 }
 
@@ -149,40 +160,40 @@
  * 4. Prevent very long single words (e.g. the name of a field in a document) from overflowing
  *    the cell.
  */
-.euiTableCellContent {
+.ouiTableCellContent {
   overflow: hidden; /* 4 */
   display: flex;
   align-items: center; /* 1 */
-  padding: $euiTableCellContentPadding; /* 2 */
+  padding: $ouiTableCellContentPadding; /* 2 */
 }
 
-.euiTableCellContent__text {
-  @include euiTextBreakWord; /* 4 */
+.ouiTableCellContent__text {
+  @include ouiTextBreakWord; /* 4 */
   min-width: 0;
   text-overflow: ellipsis;
 }
 
-.euiTableCellContent--alignRight {
+.ouiTableCellContent--alignRight {
   justify-content: flex-end;
   text-align: right;
 }
 
-.euiTableCellContent--alignCenter {
+.ouiTableCellContent--alignCenter {
   justify-content: center;
   text-align: center;
 }
 
-.euiTableHeaderCell,
-.euiTableFooterCell,
-.euiTableCellContent--truncateText {
+.ouiTableHeaderCell,
+.ouiTableFooterCell,
+.ouiTableCellContent--truncateText {
   white-space: nowrap; /* 3 */
 
-  .euiTableCellContent__text {
+  .ouiTableCellContent__text {
     overflow: hidden;
   }
 }
 
-.euiTableCellContent--overflowingContent {
+.ouiTableCellContent--overflowingContent {
   overflow: visible;
   white-space: normal;
   //* 4 */ overflow-wrap is not supported on flex parents
@@ -190,32 +201,32 @@
   word-break: break-word;
 }
 
-.euiTableCellContent--showOnHover {
+.ouiTableCellContent--showOnHover {
   > *:not(:first-child) {
-    margin-left: $euiSizeS;
+    margin-left: $ouiSizeS;
   }
 }
 
-.euiTableRow-hasActions {
-  .euiTableCellContent--showOnHover {
-    .euiTableCellContent__hoverItem {
+.ouiTableRow-hasActions {
+  .ouiTableCellContent--showOnHover {
+    .ouiTableCellContent__hoverItem {
       flex-shrink: 0;
       opacity: .7;
       filter: grayscale(100%);
-      transition: opacity $euiAnimSpeedNormal $euiAnimSlightResistance, filter $euiAnimSpeedNormal $euiAnimSlightResistance;
+      transition: opacity $ouiAnimSpeedNormal $ouiAnimSlightResistance, filter $ouiAnimSpeedNormal $ouiAnimSlightResistance;
     }
 
     .expandedItemActions__completelyHide,
     .expandedItemActions__completelyHide:disabled,
     .expandedItemActions__completelyHide:disabled:hover,
     .expandedItemActions__completelyHide:disabled:focus,
-    .euiTableRow:hover & .expandedItemActions__completelyHide:disabled {
+    .ouiTableRow:hover & .expandedItemActions__completelyHide:disabled {
       filter: grayscale(0%);
       opacity: 0;
     }
   }
 
-  &:hover .euiTableCellContent--showOnHover .euiTableCellContent__hoverItem:not(:disabled) {
+  &:hover .ouiTableCellContent--showOnHover .ouiTableCellContent__hoverItem:not(:disabled) {
     &,
     &:hover,
     &:focus {
@@ -227,9 +238,9 @@
 
 // Animate expanded row must be on the contents div inside
 
-.euiTableRow-isExpandedRow .euiTableCellContent {
+.ouiTableRow-isExpandedRow .ouiTableCellContent {
   overflow: hidden;
-  animation: $euiAnimSpeedNormal $euiAnimSlightResistance 1 normal forwards growExpandedRow;
+  animation: $ouiAnimSpeedNormal $ouiAnimSlightResistance 1 normal forwards growExpandedRow;
 }
 
 @keyframes growExpandedRow {

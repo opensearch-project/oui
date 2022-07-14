@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiComboBox, EuiFormRow } from '../../../../src/components';
+import { OuiComboBox, OuiFormRow } from '../../../../src/components';
 
 const options = [
   {
@@ -51,10 +62,10 @@ export default () => {
   };
 
   return (
-    <EuiFormRow
+    <OuiFormRow
       label="Your occupation"
       helpText="Select an occupation from the list. If your occupation isn’t available, create a custom one.">
-      <EuiComboBox
+      <OuiComboBox
         placeholder="Select a single option"
         singleSelection={{ asPlainText: true }}
         options={options}
@@ -63,6 +74,6 @@ export default () => {
         onCreateOption={onCreateOption}
         customOptionText="Add {searchValue} as your occupation"
       />
-    </EuiFormRow>
+    </OuiFormRow>
   );
 };

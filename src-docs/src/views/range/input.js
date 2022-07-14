@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
-import { EuiRange, EuiSpacer, EuiDualRange } from '../../../../src/components';
+import { OuiRange, OuiSpacer, OuiDualRange } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -18,24 +29,24 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiRange
+      <OuiRange
         id={htmlIdGenerator()()}
         value={value}
         onChange={onChange}
         showInput
-        aria-label="An example of EuiRange"
+        aria-label="An example of OuiRange"
       />
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiDualRange
+      <OuiDualRange
         id={htmlIdGenerator()()}
         value={dualValue}
         onChange={onDualChange}
         showInput
         minInputProps={{ 'aria-label': 'Min value' }}
         maxInputProps={{ 'aria-label': 'Max value' }}
-        aria-label="An example of EuiDualRange with inputs"
+        aria-label="An example of OuiDualRange with inputs"
       />
     </Fragment>
   );

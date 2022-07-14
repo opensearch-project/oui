@@ -1,42 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFormControlLayoutCustomIcon is rendered as button 1`] = `
+exports[`OuiFormControlLayoutCustomIcon is rendered as button 1`] = `
 <button
   aria-label="aria-label"
-  class="euiFormControlLayoutCustomIcon testClass1 testClass2 euiFormControlLayoutCustomIcon--clickable"
+  class="ouiFormControlLayoutCustomIcon testClass1 testClass2 ouiFormControlLayoutCustomIcon--clickable"
   data-test-subj="test subject string"
   type="button"
 >
   <span
     aria-hidden="true"
-    class="euiFormControlLayoutCustomIcon__icon"
-    data-euiicon-type="alert"
+    class="ouiFormControlLayoutCustomIcon__icon"
+    data-ouiicon-type="alert"
   />
 </button>
 `;
 
-exports[`EuiFormControlLayoutCustomIcon is rendered as span 1`] = `
+exports[`OuiFormControlLayoutCustomIcon is rendered as span 1`] = `
 <span
   aria-label="aria-label"
-  class="euiFormControlLayoutCustomIcon testClass1 testClass2"
+  class="ouiFormControlLayoutCustomIcon testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span
     aria-hidden="true"
-    class="euiFormControlLayoutCustomIcon__icon"
-    data-euiicon-type="alert"
+    class="ouiFormControlLayoutCustomIcon__icon"
+    data-ouiicon-type="alert"
   />
 </span>
 `;
 
-exports[`EuiFormControlLayoutCustomIcon size is rendered 1`] = `
+exports[`OuiFormControlLayoutCustomIcon size is rendered 1`] = `
 <span
-  class="euiFormControlLayoutCustomIcon"
+  class="ouiFormControlLayoutCustomIcon"
 >
   <span
     aria-hidden="true"
-    class="euiFormControlLayoutCustomIcon__icon"
-    data-euiicon-type="alert"
+    class="ouiFormControlLayoutCustomIcon__icon"
+    data-ouiicon-type="alert"
   />
 </span>
 `;

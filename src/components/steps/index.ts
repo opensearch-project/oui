@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,21 +28,21 @@
  * under the License.
  */
 
-export { EuiStep, EuiStepProps } from './step';
+export { OuiStep, OuiStepProps } from './step';
 
-export { EuiSteps, EuiStepsProps } from './steps';
+export { OuiSteps, OuiStepsProps } from './steps';
 
-export { EuiSubSteps, EuiSubStepsProps } from './sub_steps';
+export { OuiSubSteps, OuiSubStepsProps } from './sub_steps';
 
-export { EuiStepHorizontal } from './step_horizontal';
+export { OuiStepHorizontal } from './step_horizontal';
 
 export {
-  EuiStepsHorizontal,
-  EuiStepsHorizontalProps,
+  OuiStepsHorizontal,
+  OuiStepsHorizontalProps,
 } from './steps_horizontal';
 
 export {
-  EuiStepStatus,
-  EuiStepNumber,
-  EuiStepNumberProps,
+  OuiStepStatus,
+  OuiStepNumber,
+  OuiStepNumberProps,
 } from './step_number';

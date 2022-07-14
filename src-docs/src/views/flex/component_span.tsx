@@ -1,17 +1,28 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
 
 export default () => (
   <button>
-    <EuiFlexGroup component="span">
-      <EuiFlexItem component="span">
+    <OuiFlexGroup component="span">
+      <OuiFlexItem component="span">
         These items are within a button
-      </EuiFlexItem>
+      </OuiFlexItem>
 
-      <EuiFlexItem component="span">
+      <OuiFlexItem component="span">
         So they all specify component=&ldquo;span&rdquo;
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </button>
 );

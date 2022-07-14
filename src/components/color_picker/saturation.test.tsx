@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,16 +32,16 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiSaturation } from './saturation';
+import { OuiSaturation } from './saturation';
 
 const onChange = () => {
   /* empty */
 };
 
-describe('EuiHue', () => {
+describe('OuiHue', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSaturation onChange={onChange} {...requiredProps} />
+      <OuiSaturation onChange={onChange} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -38,7 +49,7 @@ describe('EuiHue', () => {
 
   test('accepts a color', () => {
     const component = render(
-      <EuiSaturation
+      <OuiSaturation
         color={[180, 1, 0.5]}
         onChange={onChange}
         {...requiredProps}

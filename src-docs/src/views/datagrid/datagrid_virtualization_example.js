@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
-import { EuiCallOut, EuiCode } from '../../../../src/components';
+import { OuiCallOut, OuiCode } from '../../../../src/components';
 import { GuideSectionTypes } from '../../components';
 
 import DataGridVirtualization from './virtualization';
@@ -32,37 +43,37 @@ export const DataGridVirtualizationExample = {
         <Fragment>
           <p>
             Creating a lot of DOM nodes is computationally expensive, and{' '}
-            <strong>EuiDataGrid</strong> uses a couple wrapping divs to build
+            <strong>OuiDataGrid</strong> uses a couple wrapping divs to build
             each cell. To help offset the cost of larger tables, cell
             virtualization can be opted into by constraining the grid&apos;s
             height and/or width. There are two ways to enable this
-            functionality. First, <EuiCode>height</EuiCode> and/or{' '}
-            <EuiCode>width</EuiCode> can be passed as props, which are applied
+            functionality. First, <OuiCode>height</OuiCode> and/or{' '}
+            <OuiCode>width</OuiCode> can be passed as props, which are applied
             to the grid&apos;s container style. Alternatively, if{' '}
-            <strong>EuiDataGrid</strong> is unable to render at the full
+            <strong>OuiDataGrid</strong> is unable to render at the full
             dimensions it needs due to screen real estate or other DOM
             constraints, it will overflow within a scrollable container and only
             render the visible cells.
           </p>
 
-          <EuiCallOut
+          <OuiCallOut
             title={
               <>
                 Never toggle the height between a value and{' '}
-                <EuiCode>undefined</EuiCode>.
+                <OuiCode>undefined</OuiCode>.
               </>
             }
             color="warning">
             <p>
               Similar to React&apos;s rule of not switching between a controlled
-              and uncontrolled input, <EuiCode>EuiDataGrid</EuiCode> does not
+              and uncontrolled input, <OuiCode>OuiDataGrid</OuiCode> does not
               accommodate for its height switching to or from{' '}
-              <EuiCode>undefined</EuiCode>. For demonstration purposes, the
-              example below uses a <EuiCode>key</EuiCode> to force{' '}
-              <strong>EuiDataGrid</strong> to completely remount when its height
+              <OuiCode>undefined</OuiCode>. For demonstration purposes, the
+              example below uses a <OuiCode>key</OuiCode> to force{' '}
+              <strong>OuiDataGrid</strong> to completely remount when its height
               changes between constrained & constrained heights.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </Fragment>
       ),
       components: { DataGridVirtualization },

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +32,20 @@ import React, { HTMLAttributes, forwardRef } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-export interface EuiRangeWrapperProps
+export interface OuiRangeWrapperProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   fullWidth?: boolean;
   compressed?: boolean;
 }
 
-export const EuiRangeWrapper = forwardRef<HTMLDivElement, EuiRangeWrapperProps>(
+export const OuiRangeWrapper = forwardRef<HTMLDivElement, OuiRangeWrapperProps>(
   ({ children, className, fullWidth, compressed, ...rest }, ref) => {
     const classes = classNames(
-      'euiRangeWrapper',
+      'ouiRangeWrapper',
       {
-        'euiRangeWrapper--fullWidth': fullWidth,
-        'euiRangeWrapper--compressed': compressed,
+        'ouiRangeWrapper--fullWidth': fullWidth,
+        'ouiRangeWrapper--compressed': compressed,
       },
       className
     );
@@ -47,4 +58,4 @@ export const EuiRangeWrapper = forwardRef<HTMLDivElement, EuiRangeWrapperProps>(
   }
 );
 
-EuiRangeWrapper.displayName = 'EuiRangeWrapper';
+OuiRangeWrapper.displayName = 'OuiRangeWrapper';

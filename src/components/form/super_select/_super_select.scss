@@ -1,16 +1,27 @@
-.euiSuperSelect__listbox {
-  @include euiScrollBar;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiSuperSelect__listbox {
+  @include ouiScrollBar;
   max-height: 300px;
   overflow: hidden;
   overflow-y: auto;
 }
 
-.euiSuperSelect__item {
-  @include euiFontSizeS;
-  @include euiInteractiveStates;
-  padding: $euiSizeS;
+.ouiSuperSelect__item {
+  @include ouiFontSizeS;
+  @include ouiInteractiveStates;
+  padding: $ouiSizeS;
 }
 
-.euiSuperSelect__item--hasDividers:not(:last-of-type) {
-  border-bottom: $euiBorderThin;
+.ouiSuperSelect__item--hasDividers:not(:last-of-type) {
+  border-bottom: $ouiBorderThin;
 }

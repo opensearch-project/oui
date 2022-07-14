@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,11 +16,11 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiCode,
-  EuiSpacer,
-  EuiSuggest,
-  EuiSuggestItem,
+  OuiCallOut,
+  OuiCode,
+  OuiSpacer,
+  OuiSuggest,
+  OuiSuggestItem,
 } from '../../../../src/components';
 
 import Suggest from './suggest';
@@ -24,25 +35,25 @@ import SuggestItem from './suggest_item';
 const suggestItemSource = require('!!raw-loader!./suggest_item');
 const suggestItemHtml = renderToHtml(SuggestItem);
 const suggestItemSnippet = [
-  `<EuiSuggestItem
+  `<OuiSuggestItem
   type={sampleItem.type}
   label={sampleItem.label}
   description={sampleItem.description}
 />
 `,
-  `<EuiSuggestItem
+  `<OuiSuggestItem
   type={sampleItem.type}
   label={sampleItem.label}
   description={sampleItem.description}
   labelDisplay="expand"
 />`,
-  `<EuiSuggestItem
+  `<OuiSuggestItem
   type={sampleItem.type}
   label={sampleItem.label}
   description={sampleItem.description}
   labelWidth="30"
 />`,
-  `<EuiSuggestItem
+  `<OuiSuggestItem
   type={sampleItem.type}
   label={sampleItem.label}
   description={sampleItem.description}
@@ -51,7 +62,7 @@ const suggestItemSnippet = [
 ];
 
 const suggestSnippet = [
-  `<EuiSuggest
+  `<OuiSuggest
   status={status}
   tooltipContent={tooltipContent}
   onInputChange={getInputValue}
@@ -88,15 +99,15 @@ export const SuggestExample = {
       text: (
         <div>
           <p>
-            <strong>EuiSuggest</strong> is a text field component used to
+            <strong>OuiSuggest</strong> is a text field component used to
             display suggestions. The status of the component is shown on its
-            right side. The available <EuiCode>status</EuiCode> are:{' '}
-            <EuiCode>unsaved</EuiCode>, <EuiCode>saved</EuiCode>,
-            <EuiCode>unchanged</EuiCode> and <EuiCode>isLoading</EuiCode>.
+            right side. The available <OuiCode>status</OuiCode> are:{' '}
+            <OuiCode>unsaved</OuiCode>, <OuiCode>saved</OuiCode>,
+            <OuiCode>unchanged</OuiCode> and <OuiCode>isLoading</OuiCode>.
           </p>
         </div>
       ),
-      props: { EuiSuggest },
+      props: { OuiSuggest },
       snippet: suggestSnippet,
       demo: <Suggest />,
     },
@@ -115,18 +126,18 @@ export const SuggestExample = {
       text: (
         <div>
           <p>
-            <strong>EuiSuggestItem</strong> is a list item component to display
-            suggestions when typing queries in <strong>EuiSuggest</strong>. Use{' '}
-            <EuiCode>labelDisplay</EuiCode> to set whether the{' '}
-            <EuiCode>label</EuiCode> has a fixed width or not. By default, fixed
+            <strong>OuiSuggestItem</strong> is a list item component to display
+            suggestions when typing queries in <strong>OuiSuggest</strong>. Use{' '}
+            <OuiCode>labelDisplay</OuiCode> to set whether the{' '}
+            <OuiCode>label</OuiCode> has a fixed width or not. By default, fixed
             labels will have a width of 50%, you can adjust this by setting{' '}
-            <EuiCode>labelWidth</EuiCode>. Use{' '}
-            <EuiCode>descriptionDisplay</EuiCode> to set whether the{' '}
-            <EuiCode>description</EuiCode> truncates or wraps.
+            <OuiCode>labelWidth</OuiCode>. Use{' '}
+            <OuiCode>descriptionDisplay</OuiCode> to set whether the{' '}
+            <OuiCode>description</OuiCode> truncates or wraps.
           </p>
         </div>
       ),
-      props: { EuiSuggestItem },
+      props: { OuiSuggestItem },
       snippet: suggestItemSnippet,
       demo: <SuggestItem />,
     },
@@ -144,18 +155,18 @@ export const SuggestExample = {
       ],
       text: (
         <div>
-          <EuiCallOut color="warning" title="Demo of visual pattern only">
+          <OuiCallOut color="warning" title="Demo of visual pattern only">
             <p>
               This documents a <strong>visual</strong> pattern for Kibana&apos;s
               global query and filter bars. The filter bar has been broken down
               into multiple components. There are still bugs and not all the
               logic is well-formed.
             </p>
-          </EuiCallOut>
-          <EuiSpacer />
+          </OuiCallOut>
+          <OuiSpacer />
         </div>
       ),
-      props: { EuiSuggest },
+      props: { OuiSuggest },
       demo: <SavedQueries />,
     },
   ],

@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SearchBar render - box 1`] = `
-<EuiFlexGroup
+<OuiFlexGroup
   alignItems="center"
   gutterSize="m"
   wrap={true}
 >
-  <EuiFlexItem
-    className="euiSearchBar__searchHolder"
+  <OuiFlexItem
+    className="ouiSearchBar__searchHolder"
     grow={true}
   >
-    <EuiSearchBox
+    <OuiSearchBox
       aria-label="aria-label"
       className="testClass1 testClass2"
       data-test-subj="test subject string"
@@ -20,54 +20,54 @@ exports[`SearchBar render - box 1`] = `
       placeholder="find something..."
       query=""
     />
-  </EuiFlexItem>
-</EuiFlexGroup>
+  </OuiFlexItem>
+</OuiFlexGroup>
 `;
 
 exports[`SearchBar render - no config, no query 1`] = `
-<EuiFlexGroup
+<OuiFlexGroup
   alignItems="center"
   gutterSize="m"
   wrap={true}
 >
-  <EuiFlexItem
-    className="euiSearchBar__searchHolder"
+  <OuiFlexItem
+    className="ouiSearchBar__searchHolder"
     grow={true}
   >
-    <EuiSearchBox
+    <OuiSearchBox
       incremental={false}
       isInvalid={false}
       onSearch={[Function]}
       placeholder="Search..."
       query=""
     />
-  </EuiFlexItem>
-</EuiFlexGroup>
+  </OuiFlexItem>
+</OuiFlexGroup>
 `;
 
 exports[`SearchBar render - provided query, filters 1`] = `
-<EuiFlexGroup
+<OuiFlexGroup
   alignItems="center"
   gutterSize="m"
   wrap={true}
 >
-  <EuiFlexItem
-    className="euiSearchBar__searchHolder"
+  <OuiFlexItem
+    className="ouiSearchBar__searchHolder"
     grow={true}
   >
-    <EuiSearchBox
+    <OuiSearchBox
       incremental={false}
       isInvalid={false}
       onSearch={[Function]}
       placeholder="Search..."
       query="this is a query"
     />
-  </EuiFlexItem>
-  <EuiFlexItem
-    className="euiSearchBar__filtersHolder"
+  </OuiFlexItem>
+  <OuiFlexItem
+    className="ouiSearchBar__filtersHolder"
     grow={false}
   >
-    <EuiSearchFilters
+    <OuiSearchFilters
       filters={
         Array [
           Object {
@@ -146,41 +146,41 @@ exports[`SearchBar render - provided query, filters 1`] = `
         }
       }
     />
-  </EuiFlexItem>
-</EuiFlexGroup>
+  </OuiFlexItem>
+</OuiFlexGroup>
 `;
 
 exports[`SearchBar render - tools 1`] = `
-<EuiFlexGroup
+<OuiFlexGroup
   alignItems="center"
   gutterSize="m"
   wrap={true}
 >
-  <EuiFlexItem
+  <OuiFlexItem
     grow={false}
   >
     <div>
       Left
     </div>
-  </EuiFlexItem>
-  <EuiFlexItem
-    className="euiSearchBar__searchHolder"
+  </OuiFlexItem>
+  <OuiFlexItem
+    className="ouiSearchBar__searchHolder"
     grow={true}
   >
-    <EuiSearchBox
+    <OuiSearchBox
       incremental={false}
       isInvalid={false}
       onSearch={[Function]}
       placeholder="Search..."
       query=""
     />
-  </EuiFlexItem>
-  <EuiFlexItem
+  </OuiFlexItem>
+  <OuiFlexItem
     grow={false}
   >
     <div>
       Right
     </div>
-  </EuiFlexItem>
-</EuiFlexGroup>
+  </OuiFlexItem>
+</OuiFlexGroup>
 `;

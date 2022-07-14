@@ -1,43 +1,54 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // sass-lint:disable no-empty-rulesets
 
-.euiDraggable {
-  &.euiDraggable--isDragging {
+.ouiDraggable {
+  &.ouiDraggable--isDragging {
     // Overriding inline styles on JS-inserted HTML elements
-    z-index: $euiZLevel9 !important; // sass-lint:disable-line no-important
+    z-index: $ouiZLevel9 !important; // sass-lint:disable-line no-important
   }
 
-  &.euiDraggable--hasClone:not(.euiDraggable--isDragging) {
+  &.ouiDraggable--hasClone:not(.ouiDraggable--isDragging) {
     // Overriding inline styles on JS-inserted HTML elements
     transform: none !important; // sass-lint:disable-line no-important
   }
 
-  &.euiDraggable--withoutDropAnimation {
+  &.ouiDraggable--withoutDropAnimation {
     // Overriding inline styles on JS-inserted HTML elements
     transition-duration: .001s !important; // sass-lint:disable-line no-important
   }
 
-  &:focus > .euiDraggable__item,
-  &.euiDraggable--hasCustomDragHandle > .euiDraggable__item [data-react-beautiful-dnd-drag-handle]:focus {
-    @include euiFocusRing;
+  &:focus > .ouiDraggable__item,
+  &.ouiDraggable--hasCustomDragHandle > .ouiDraggable__item [data-react-beautiful-dnd-drag-handle]:focus {
+    @include ouiFocusRing;
   }
 
-  .euiDraggable__item {
-    &.euiDraggable__item--isDisabled {
+  .ouiDraggable__item {
+    &.ouiDraggable__item--isDisabled {
       cursor: not-allowed;
     }
 
-    &.euiDraggable__item--isDragging {
+    &.ouiDraggable__item--isDragging {
       // TODO: Resolve below
       // Commenting this out for now,
       // I'm thinking about adding an optional prop to auto-add these styles versus always having them
-      // @include euiBottomShadow;
-      // @include euiFocusRing;
+      // @include ouiBottomShadow;
+      // @include ouiFocusRing;
     }
   }
 }
 
-@each $size, $spacing in $euiDragAndDropSpacing {
-  .euiDraggable--#{$size} {
+@each $size, $spacing in $ouiDragAndDropSpacing {
+  .ouiDraggable--#{$size} {
     padding: $spacing;
   }
 }

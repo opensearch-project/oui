@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTourStep can be closed 1`] = `
+exports[`OuiTourStep can be closed 1`] = `
 <div
-  class="euiPopover euiPopover--anchorLeftUp"
+  class="ouiPopover ouiPopover--anchorLeftUp"
   data-test-subj="test subject string"
   offset="10"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <span>
       Test
@@ -16,14 +16,14 @@ exports[`EuiTourStep can be closed 1`] = `
 </div>
 `;
 
-exports[`EuiTourStep can override the footer action 1`] = `
+exports[`OuiTourStep can override the footer action 1`] = `
 <div
-  class="euiPopover euiPopover--anchorLeftUp"
+  class="ouiPopover ouiPopover--anchorLeftUp"
   data-test-subj="test subject string"
   offset="10"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <span>
       Test
@@ -32,14 +32,14 @@ exports[`EuiTourStep can override the footer action 1`] = `
 </div>
 `;
 
-exports[`EuiTourStep can set a minWidth 1`] = `
+exports[`OuiTourStep can set a minWidth 1`] = `
 <div
-  class="euiPopover euiPopover--anchorLeftUp"
+  class="ouiPopover ouiPopover--anchorLeftUp"
   data-test-subj="test subject string"
   offset="10"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <span>
       Test
@@ -48,14 +48,14 @@ exports[`EuiTourStep can set a minWidth 1`] = `
 </div>
 `;
 
-exports[`EuiTourStep can turn off the beacon 1`] = `
+exports[`OuiTourStep can turn off the beacon 1`] = `
 <div
-  class="euiPopover euiPopover--anchorLeftUp"
+  class="ouiPopover ouiPopover--anchorLeftUp"
   data-test-subj="test subject string"
   offset="0"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <span>
       Test
@@ -64,14 +64,14 @@ exports[`EuiTourStep can turn off the beacon 1`] = `
 </div>
 `;
 
-exports[`EuiTourStep is rendered 1`] = `
+exports[`OuiTourStep is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorLeftUp"
+  class="ouiPopover ouiPopover--anchorLeftUp"
   data-test-subj="test subject string"
   offset="10"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <span>
       Test

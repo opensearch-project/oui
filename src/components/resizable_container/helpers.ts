@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,12 +37,12 @@ import {
 
 import { assertNever } from '../common';
 import {
-  EuiResizablePanelController,
-  EuiResizableButtonController,
-  EuiResizableContainerRegistry,
-  EuiResizableContainerState,
-  EuiResizableContainerAction,
-  EuiResizableContainerActions,
+  OuiResizablePanelController,
+  OuiResizableButtonController,
+  OuiResizableContainerRegistry,
+  OuiResizableContainerState,
+  OuiResizableContainerAction,
+  OuiResizableContainerActions,
   ActionDragStart,
   ActionDragMove,
   ActionKeyMove,
@@ -40,7 +51,7 @@ import {
 } from './types';
 
 interface Params {
-  initialState: EuiResizableContainerState;
+  initialState: OuiResizableContainerState;
   containerRef: React.RefObject<HTMLDivElement>;
   onPanelWidthChange?: ({}: { [key: string]: number }) => any;
 }
@@ -57,7 +68,7 @@ export const pxToPercent = (proportion: number, whole: number) => {
 };
 
 export const sizesOnly = (
-  panelObject: EuiResizableContainerRegistry['panels']
+  panelObject: OuiResizableContainerRegistry['panels']
 ) => {
   return Object.values(panelObject).reduce(
     (out: { [key: string]: number }, panel) => {
@@ -114,7 +125,7 @@ const getSiblingPanel = (
   let sibling = element[method];
   while (sibling) {
     if (
-      sibling.matches('.euiResizablePanel:not(.euiResizablePanel-isCollapsed)')
+      sibling.matches('.ouiResizablePanel:not(.ouiResizablePanel-isCollapsed)')
     ) {
       return sibling;
     }
@@ -123,36 +134,36 @@ const getSiblingPanel = (
 };
 
 // lazy initialization to prevent rerender on initial interaction
-const init = (state: EuiResizableContainerState) => state;
+const init = (state: OuiResizableContainerState) => state;
 
 export const useContainerCallbacks = ({
   initialState,
   containerRef,
   onPanelWidthChange,
-}: Params): [EuiResizableContainerActions, EuiResizableContainerState] => {
+}: Params): [OuiResizableContainerActions, OuiResizableContainerState] => {
   function reducer(
-    state: EuiResizableContainerState,
-    action: EuiResizableContainerAction
-  ): EuiResizableContainerState {
+    state: OuiResizableContainerState,
+    action: OuiResizableContainerAction
+  ): OuiResizableContainerState {
     const getContainerSize = (isHorizontal: boolean) => {
       return isHorizontal
         ? containerRef.current!.getBoundingClientRect().width
         : containerRef.current!.getBoundingClientRect().height;
     };
 
-    const runSideEffect = (panels: EuiResizableContainerState['panels']) => {
+    const runSideEffect = (panels: OuiResizableContainerState['panels']) => {
       if (onPanelWidthChange) {
         onPanelWidthChange(sizesOnly(panels));
       }
     };
 
-    const withSideEffect = (newState: EuiResizableContainerState) => {
+    const withSideEffect = (newState: OuiResizableContainerState) => {
       runSideEffect(newState.panels);
       return newState;
     };
 
     switch (action.type) {
-      case 'EUI_RESIZABLE_CONTAINER_INIT': {
+      case 'OUI_RESIZABLE_CONTAINER_INIT': {
         const { isHorizontal } = action.payload;
         return {
           ...state,
@@ -160,7 +171,7 @@ export const useContainerCallbacks = ({
           containerSize: getContainerSize(isHorizontal),
         };
       }
-      case 'EUI_RESIZABLE_PANEL_REGISTER': {
+      case 'OUI_RESIZABLE_PANEL_REGISTER': {
         const { panel } = action.payload;
         return {
           ...state,
@@ -170,12 +181,12 @@ export const useContainerCallbacks = ({
           },
         };
       }
-      case 'EUI_RESIZABLE_PANEL_DEREGISTER': {
+      case 'OUI_RESIZABLE_PANEL_DEREGISTER': {
         const { panelId } = action.payload;
         return {
           ...state,
           panels: Object.values(state.panels).reduce(
-            (out: EuiResizableContainerState['panels'], panel) => {
+            (out: OuiResizableContainerState['panels'], panel) => {
               if (panel.id !== panelId) {
                 out[panel.id] = panel;
               }
@@ -185,7 +196,7 @@ export const useContainerCallbacks = ({
           ),
         };
       }
-      case 'EUI_RESIZABLE_BUTTON_REGISTER': {
+      case 'OUI_RESIZABLE_BUTTON_REGISTER': {
         const { resizer } = action.payload;
         return {
           ...state,
@@ -195,12 +206,12 @@ export const useContainerCallbacks = ({
           },
         };
       }
-      case 'EUI_RESIZABLE_BUTTON_DEREGISTER': {
+      case 'OUI_RESIZABLE_BUTTON_DEREGISTER': {
         const { resizerId } = action.payload;
         return {
           ...state,
           resizers: Object.values(state.resizers).reduce(
-            (out: EuiResizableContainerState['resizers'], panel) => {
+            (out: OuiResizableContainerState['resizers'], panel) => {
               if (panel.id !== resizerId) {
                 out[panel.id] = panel;
               }
@@ -210,7 +221,7 @@ export const useContainerCallbacks = ({
           ),
         };
       }
-      case 'EUI_RESIZABLE_DRAG_START': {
+      case 'OUI_RESIZABLE_DRAG_START': {
         const { position, prevPanelId, nextPanelId } = action.payload;
         return {
           ...state,
@@ -220,7 +231,7 @@ export const useContainerCallbacks = ({
           nextPanelId,
         };
       }
-      case 'EUI_RESIZABLE_DRAG_MOVE': {
+      case 'OUI_RESIZABLE_DRAG_MOVE': {
         if (!state.isDragging) {
           return state;
         }
@@ -266,7 +277,7 @@ export const useContainerCallbacks = ({
 
         return state;
       }
-      case 'EUI_RESIZABLE_KEY_MOVE': {
+      case 'OUI_RESIZABLE_KEY_MOVE': {
         const { prevPanelId, nextPanelId, direction } = action.payload;
         const prevPanel = state.panels[prevPanelId];
         const nextPanel = state.panels[nextPanelId];
@@ -309,7 +320,7 @@ export const useContainerCallbacks = ({
         return state;
       }
 
-      case 'EUI_RESIZABLE_TOGGLE': {
+      case 'OUI_RESIZABLE_TOGGLE': {
         const { options, panelId: currentPanelId } = action.payload;
         const currentPanel = state.panels[currentPanelId];
         const shouldCollapse = !currentPanel.isCollapsed;
@@ -334,7 +345,7 @@ export const useContainerCallbacks = ({
             ? true
             : shouldCollapse;
         }
-        let otherPanels: EuiResizableContainerRegistry['panels'] = {};
+        let otherPanels: OuiResizableContainerRegistry['panels'] = {};
         if (
           prevPanel &&
           !state.panels[prevPanel.id].isCollapsed &&
@@ -404,7 +415,7 @@ export const useContainerCallbacks = ({
         if (!shouldCollapse && !siblings) {
           newPanelSize = 100 - collapsedPanelsSize;
         }
-        let updatedPanels: EuiResizableContainerState['panels'] = {};
+        let updatedPanels: OuiResizableContainerState['panels'] = {};
         if (
           delta < 0 &&
           Object.values(otherPanels).some(
@@ -427,7 +438,7 @@ export const useContainerCallbacks = ({
           // That is (largely), external toggling where the default logic has
           // been negated by the lack of panel mode distinction.
           otherPanels = Object.values(state.panels).reduce(
-            (out: EuiResizableContainerState['panels'], panel) => {
+            (out: OuiResizableContainerState['panels'], panel) => {
               if (panel.id !== currentPanelId && !panel.isCollapsed) {
                 out[panel.id] = {
                   ...panel,
@@ -442,7 +453,7 @@ export const useContainerCallbacks = ({
             (100 - collapsedPanelsSize) / (Object.keys(otherPanels).length + 1);
 
           updatedPanels = Object.values(otherPanels).reduce(
-            (out: EuiResizableContainerState['panels'], panel) => {
+            (out: OuiResizableContainerState['panels'], panel) => {
               out[panel.id] = {
                 ...panel,
                 size: newPanelSize,
@@ -454,7 +465,7 @@ export const useContainerCallbacks = ({
         } else {
           // A toggling sequence has occurred that is standard and predictable
           updatedPanels = Object.values(otherPanels).reduce(
-            (out: EuiResizableContainerState['panels'], panel) => {
+            (out: OuiResizableContainerState['panels'], panel) => {
               out[panel.id] = {
                 ...panel,
                 size: panel.size + delta,
@@ -478,7 +489,7 @@ export const useContainerCallbacks = ({
             },
           },
           resizers: Object.values(state.resizers).reduce(
-            (out: EuiResizableContainerState['resizers'], resizer) => {
+            (out: OuiResizableContainerState['resizers'], resizer) => {
               out[resizer.id] = {
                 ...resizer,
                 isFocused: false,
@@ -490,12 +501,12 @@ export const useContainerCallbacks = ({
           ),
         });
       }
-      case 'EUI_RESIZABLE_BUTTON_FOCUS': {
+      case 'OUI_RESIZABLE_BUTTON_FOCUS': {
         const { resizerId } = action.payload;
         return {
           ...state,
           resizers: Object.values(state.resizers).reduce(
-            (out: EuiResizableContainerState['resizers'], resizer) => {
+            (out: OuiResizableContainerState['resizers'], resizer) => {
               out[resizer.id] = {
                 ...resizer,
                 isFocused: resizer.id === resizerId,
@@ -506,11 +517,11 @@ export const useContainerCallbacks = ({
           ),
         };
       }
-      case 'EUI_RESIZABLE_BUTTON_BLUR': {
+      case 'OUI_RESIZABLE_BUTTON_BLUR': {
         return {
           ...state,
           resizers: Object.values(state.resizers).reduce(
-            (out: EuiResizableContainerState['resizers'], resizer) => {
+            (out: OuiResizableContainerState['resizers'], resizer) => {
               out[resizer.id] = {
                 ...resizer,
                 isFocused: false,
@@ -521,7 +532,7 @@ export const useContainerCallbacks = ({
           ),
         };
       }
-      case 'EUI_RESIZABLE_RESET': {
+      case 'OUI_RESIZABLE_RESET': {
         return {
           ...initialState,
           panels: state.panels,
@@ -529,13 +540,13 @@ export const useContainerCallbacks = ({
           containerSize: state.containerSize,
         };
       }
-      case 'EUI_RESIZABLE_ONCHANGE': {
+      case 'OUI_RESIZABLE_ONCHANGE': {
         onPanelWidthChange!(sizesOnly(state.panels));
         return state;
       }
       // TODO: Implement more generic version of
-      // 'EUI_RESIZABLE_DRAG_MOVE' to expose to consumers
-      case 'EUI_RESIZABLE_RESIZE': {
+      // 'OUI_RESIZABLE_DRAG_MOVE' to expose to consumers
+      case 'OUI_RESIZABLE_RESIZE': {
         return state;
       }
       default:
@@ -546,32 +557,32 @@ export const useContainerCallbacks = ({
 
   const [reducerState, dispatch] = useReducer(reducer, initialState, init);
 
-  const actions: EuiResizableContainerActions = useMemo(() => {
+  const actions: OuiResizableContainerActions = useMemo(() => {
     return {
-      reset: () => dispatch({ type: 'EUI_RESIZABLE_RESET' }),
+      reset: () => dispatch({ type: 'OUI_RESIZABLE_RESET' }),
       initContainer: (isHorizontal: boolean) =>
         dispatch({
-          type: 'EUI_RESIZABLE_CONTAINER_INIT',
+          type: 'OUI_RESIZABLE_CONTAINER_INIT',
           payload: { isHorizontal },
         }),
-      registerPanel: (panel: EuiResizablePanelController) =>
+      registerPanel: (panel: OuiResizablePanelController) =>
         dispatch({
-          type: 'EUI_RESIZABLE_PANEL_REGISTER',
+          type: 'OUI_RESIZABLE_PANEL_REGISTER',
           payload: { panel },
         }),
-      deregisterPanel: (panelId: EuiResizablePanelController['id']) =>
+      deregisterPanel: (panelId: OuiResizablePanelController['id']) =>
         dispatch({
-          type: 'EUI_RESIZABLE_PANEL_DEREGISTER',
+          type: 'OUI_RESIZABLE_PANEL_DEREGISTER',
           payload: { panelId },
         }),
-      registerResizer: (resizer: EuiResizableButtonController) =>
+      registerResizer: (resizer: OuiResizableButtonController) =>
         dispatch({
-          type: 'EUI_RESIZABLE_BUTTON_REGISTER',
+          type: 'OUI_RESIZABLE_BUTTON_REGISTER',
           payload: { resizer },
         }),
-      deregisterResizer: (resizerId: EuiResizableButtonController['id']) =>
+      deregisterResizer: (resizerId: OuiResizableButtonController['id']) =>
         dispatch({
-          type: 'EUI_RESIZABLE_BUTTON_DEREGISTER',
+          type: 'OUI_RESIZABLE_BUTTON_DEREGISTER',
           payload: { resizerId },
         }),
       dragStart: ({
@@ -580,7 +591,7 @@ export const useContainerCallbacks = ({
         position,
       }: ActionDragStart['payload']) =>
         dispatch({
-          type: 'EUI_RESIZABLE_DRAG_START',
+          type: 'OUI_RESIZABLE_DRAG_START',
           payload: { position, prevPanelId, nextPanelId },
         }),
       dragMove: ({
@@ -589,7 +600,7 @@ export const useContainerCallbacks = ({
         position,
       }: ActionDragMove['payload']) =>
         dispatch({
-          type: 'EUI_RESIZABLE_DRAG_MOVE',
+          type: 'OUI_RESIZABLE_DRAG_MOVE',
           payload: { position, prevPanelId, nextPanelId },
         }),
       keyMove: ({
@@ -598,7 +609,7 @@ export const useContainerCallbacks = ({
         direction,
       }: ActionKeyMove['payload']) =>
         dispatch({
-          type: 'EUI_RESIZABLE_KEY_MOVE',
+          type: 'OUI_RESIZABLE_KEY_MOVE',
           payload: { prevPanelId, nextPanelId, direction },
         }),
       togglePanel: (
@@ -606,17 +617,17 @@ export const useContainerCallbacks = ({
         options: ActionToggle['payload']['options']
       ) =>
         dispatch({
-          type: 'EUI_RESIZABLE_TOGGLE',
+          type: 'OUI_RESIZABLE_TOGGLE',
           payload: { panelId, options },
         }),
       resizerFocus: (resizerId: ActionFocus['payload']['resizerId']) =>
         dispatch({
-          type: 'EUI_RESIZABLE_BUTTON_FOCUS',
+          type: 'OUI_RESIZABLE_BUTTON_FOCUS',
           payload: { resizerId },
         }),
       resizerBlur: () =>
         dispatch({
-          type: 'EUI_RESIZABLE_BUTTON_BLUR',
+          type: 'OUI_RESIZABLE_BUTTON_BLUR',
         }),
     };
   }, []);

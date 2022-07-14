@@ -1,34 +1,45 @@
-.euiNotificationBadge {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiNotificationBadge {
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
-  border-radius: $euiBorderRadius;
-  font-size: $euiFontSizeXS;
-  font-weight: $euiFontWeightMedium;
-  line-height: $euiSize;
-  height: $euiSize;
-  min-width: $euiSize;
-  padding-left: $euiSizeXS;
-  padding-right: $euiSizeXS;
+  border-radius: $ouiBorderRadius;
+  font-size: $ouiFontSizeXS;
+  font-weight: $ouiFontWeightMedium;
+  line-height: $ouiSize;
+  height: $ouiSize;
+  min-width: $ouiSize;
+  padding-left: $ouiSizeXS;
+  padding-right: $ouiSizeXS;
   vertical-align: middle;
   text-align: center;
-  transition: all $euiAnimSpeedFast ease-in;
+  transition: all $ouiAnimSpeedFast ease-in;
   cursor: default;
 
-  $backgroundColor: $euiColorAccentText;
+  $backgroundColor: $ouiColorAccentText;
   background: $backgroundColor;
-  color: chooseLightOrDarkText($backgroundColor, $euiColorGhost, $euiColorInk);
+  color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
 }
 
-.euiNotificationBadge--medium {
+.ouiNotificationBadge--medium {
   // Increase the default size a bit
-  $size: $euiSize + $euiSizeXS;
+  $size: $ouiSize + $ouiSizeXS;
   line-height: $size;
   height: $size;
-  min-width: $euiSizeL;
+  min-width: $ouiSizeL;
 }
 
-.euiNotificationBadge--subdued {
-  $backgroundColor: tint($euiColorLightShade, 30%);
+.ouiNotificationBadge--subdued {
+  $backgroundColor: tint($ouiColorLightShade, 30%);
   background: $backgroundColor;
-  color: chooseLightOrDarkText($backgroundColor, $euiColorGhost, $euiColorInk);
+  color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
 }

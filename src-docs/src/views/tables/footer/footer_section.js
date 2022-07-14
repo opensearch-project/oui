@@ -1,5 +1,16 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
-import { EuiBasicTable, EuiCode } from '../../../../../src/components';
+import { OuiBasicTable, OuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -22,14 +33,14 @@ export const section = {
   text: (
     <p>
       The following example shows how to add a footer to your table by adding{' '}
-      <EuiCode>footer</EuiCode> to your column definitions. If one or more of
-      your columns contains a <EuiCode>footer</EuiCode> definition, the footer
+      <OuiCode>footer</OuiCode> to your column definitions. If one or more of
+      your columns contains a <OuiCode>footer</OuiCode> definition, the footer
       area will be visible. By default, columns with no footer specified
       (undefined) will render an empty cell to preserve the table layout. Check
       out the <em>Build a custom table</em> section below for more examples of
-      how you can work with table footers in EUI.
+      how you can work with table footers in OUI.
     </p>
   ),
-  components: { EuiBasicTable },
+  components: { OuiBasicTable },
   demo: <Table />,
 };

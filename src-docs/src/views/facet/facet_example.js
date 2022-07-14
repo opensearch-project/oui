@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,9 +16,9 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiFacetButton,
-  EuiFacetGroup,
-  EuiCode,
+  OuiFacetButton,
+  OuiFacetGroup,
+  OuiCode,
 } from '../../../../src/components';
 
 import { facetButtonConfig, facetLayoutConfig } from './playground';
@@ -15,12 +26,12 @@ import { facetButtonConfig, facetLayoutConfig } from './playground';
 import Facet from './facet';
 const facetSource = require('!!raw-loader!./facet');
 const facetHtml = renderToHtml(Facet);
-const facetSnippet = `<EuiFacetButton
+const facetSnippet = `<OuiFacetButton
   quantity={6}
-  icon={<EuiIcon type="dot" color="success" />}
+  icon={<OuiIcon type="dot" color="success" />}
   isSelected>
-  <!-- Facet with EuiIcon content -->
-</EuiFacetButton>
+  <!-- Facet with OuiIcon content -->
+</OuiFacetButton>
 `;
 
 import FacetLayout from './facet_layout';
@@ -44,18 +55,18 @@ export const FacetExample = {
       text: (
         <>
           <p>
-            <strong>EuiFacetButtons</strong> are to be used when allowing lists
+            <strong>OuiFacetButtons</strong> are to be used when allowing lists
             with multiple search params to be filtered down by these particular
-            params. They allow for an <EuiCode>icon</EuiCode> node and/or{' '}
-            <EuiCode>quantity</EuiCode> to be passed. You can also indicate the
-            current selection with <EuiCode>isSelected</EuiCode>. Other props
-            include <EuiCode>isDisabled</EuiCode> and{' '}
-            <EuiCode>isLoading</EuiCode> (which will swap the quantity indicator
+            params. They allow for an <OuiCode>icon</OuiCode> node and/or{' '}
+            <OuiCode>quantity</OuiCode> to be passed. You can also indicate the
+            current selection with <OuiCode>isSelected</OuiCode>. Other props
+            include <OuiCode>isDisabled</OuiCode> and{' '}
+            <OuiCode>isLoading</OuiCode> (which will swap the quantity indicator
             with a loading icon).
           </p>
         </>
       ),
-      props: { EuiFacetButton },
+      props: { OuiFacetButton },
       snippet: facetSnippet,
       demo: <Facet />,
       playground: facetButtonConfig,
@@ -75,13 +86,13 @@ export const FacetExample = {
       text: (
         <>
           <p>
-            Utilize the <strong>EuiFacetGroup</strong> wrapper to correctly
-            layout multiple facets. You can supply a <EuiCode>layout</EuiCode>{' '}
-            of either <EuiCode>horizontal</EuiCode> or{' '}
-            <EuiCode>vertical</EuiCode> with the default being{' '}
-            <EuiCode>vertical</EuiCode>. Be sure to contain vertical layouts in
+            Utilize the <strong>OuiFacetGroup</strong> wrapper to correctly
+            layout multiple facets. You can supply a <OuiCode>layout</OuiCode>{' '}
+            of either <OuiCode>horizontal</OuiCode> or{' '}
+            <OuiCode>vertical</OuiCode> with the default being{' '}
+            <OuiCode>vertical</OuiCode>. Be sure to contain vertical layouts in
             a skinny component or give it a max-width. You can also adjust the
-            spacing between items with the <EuiCode>gutterSize</EuiCode> prop.
+            spacing between items with the <OuiCode>gutterSize</OuiCode> prop.
           </p>
           <p>
             Typically, each facet grouping should display similarly. For
@@ -91,13 +102,13 @@ export const FacetExample = {
           </p>
         </>
       ),
-      props: { EuiFacetGroup },
+      props: { OuiFacetGroup },
       demo: <FacetLayout />,
       snippet: [
         `// Restrict the width of default (vertical) if not restricted by parent
-<EuiFacetGroup style={{ maxWidth: 200 }}>{facets}</EuiFacetGroup>`,
+<OuiFacetGroup style={{ maxWidth: 200 }}>{facets}</OuiFacetGroup>`,
         `// Horizontal
-<EuiFacetGroup layout="horizontal" gutterSize="l">{facets}</EuiFacetGroup>`,
+<OuiFacetGroup layout="horizontal" gutterSize="l">{facets}</OuiFacetGroup>`,
       ],
       playground: facetLayoutConfig,
     },

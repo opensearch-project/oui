@@ -1,18 +1,29 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Header. Includes breadcrumbs of nav buttons.
 
-.euiHeader {
-  @include euiBottomShadowSmall;
+.ouiHeader {
+  @include ouiBottomShadowSmall;
 
-  height: $euiHeaderHeight + 1; // Add one for the border
+  height: $ouiHeaderHeight + 1; // Add one for the border
   position: relative;
-  z-index: $euiZHeader - 1; // ensure the shadow shows above content
+  z-index: $ouiZHeader - 1; // ensure the shadow shows above content
   display: flex;
   justify-content: space-between;
-  background: $euiHeaderBackgroundColor;
-  border-bottom: 1px solid $euiHeaderBorderColor;
+  background: $ouiHeaderBackgroundColor;
+  border-bottom: 1px solid $ouiHeaderBorderColor;
 
   &--fixed {
-    z-index: $euiZHeader;
+    z-index: $ouiZHeader;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,10 +31,10 @@
   }
 }
 
-.euiHeader--fixed + .euiHeader--fixed {
-  top: $euiHeaderHeightCompensation;
+.ouiHeader--fixed + .ouiHeader--fixed {
+  top: $ouiHeaderHeightCompensation;
 }
 
-.euiHeader--dark {
-  @include euiHeaderDarkTheme($euiHeaderDarkBackgroundColor);
+.ouiHeader--dark {
+  @include ouiHeaderDarkTheme($ouiHeaderDarkBackgroundColor);
 }

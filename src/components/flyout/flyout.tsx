@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -32,72 +43,72 @@ import classnames from 'classnames';
 
 import {
   keys,
-  EuiWindowEvent,
+  OuiWindowEvent,
   useCombinedRefs,
-  EuiBreakpointSize,
+  OuiBreakpointSize,
   isWithinMinBreakpoint,
   throttle,
 } from '../../services';
 
 import { CommonProps, keysOf } from '../common';
-import { EuiFocusTrap } from '../focus_trap';
-import { EuiOverlayMask, EuiOverlayMaskProps } from '../overlay_mask';
-import { EuiButtonIcon, EuiButtonIconPropsForButton } from '../button';
-import { EuiI18n } from '../i18n';
+import { OuiFocusTrap } from '../focus_trap';
+import { OuiOverlayMask, OuiOverlayMaskProps } from '../overlay_mask';
+import { OuiButtonIcon, OuiButtonIconPropsForButton } from '../button';
+import { OuiI18n } from '../i18n';
 import { useResizeObserver } from '../observer/resize_observer';
-import { EuiOutsideClickDetector } from '../outside_click_detector';
-import { EuiPortal } from '../portal';
+import { OuiOutsideClickDetector } from '../outside_click_detector';
+import { OuiPortal } from '../portal';
 
 const typeToClassNameMap = {
-  push: 'euiFlyout--push',
+  push: 'ouiFlyout--push',
   overlay: null,
 };
 
 export const TYPES = keysOf(typeToClassNameMap);
-type _EuiFlyoutType = typeof TYPES[number];
+type _OuiFlyoutType = typeof TYPES[number];
 
 const sideToClassNameMap = {
-  left: 'euiFlyout--left',
+  left: 'ouiFlyout--left',
   right: null,
 };
 
 export const SIDES = keysOf(sideToClassNameMap);
-type _EuiFlyoutSide = typeof SIDES[number];
+type _OuiFlyoutSide = typeof SIDES[number];
 
 const sizeToClassNameMap = {
-  s: 'euiFlyout--small',
-  m: 'euiFlyout--medium',
-  l: 'euiFlyout--large',
+  s: 'ouiFlyout--small',
+  m: 'ouiFlyout--medium',
+  l: 'ouiFlyout--large',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
-export type EuiFlyoutSize = typeof SIZES[number];
+export type OuiFlyoutSize = typeof SIZES[number];
 
 /**
  * Custom type checker for named flyout sizes since the prop
  * `size` can also be CSSProperties['width'] (string | number)
  */
-function isEuiFlyoutSizeNamed(value: any): value is EuiFlyoutSize {
+function isOuiFlyoutSizeNamed(value: any): value is OuiFlyoutSize {
   return SIZES.includes(value as any);
 }
 
 const paddingSizeToClassNameMap = {
-  none: 'euiFlyout--paddingNone',
-  s: 'euiFlyout--paddingSmall',
-  m: 'euiFlyout--paddingMedium',
-  l: 'euiFlyout--paddingLarge',
+  none: 'ouiFlyout--paddingNone',
+  s: 'ouiFlyout--paddingSmall',
+  m: 'ouiFlyout--paddingMedium',
+  l: 'ouiFlyout--paddingLarge',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
-type _EuiFlyoutPaddingSize = typeof PADDING_SIZES[number];
+type _OuiFlyoutPaddingSize = typeof PADDING_SIZES[number];
 
-type _EuiFlyoutProps = {
+type _OuiFlyoutProps = {
   onClose: () => void;
   /**
    * Defines the width of the panel.
    * Pass a predefined size of `s | m | l`, or pass any number/string compatible with the CSS `width` attribute
    */
-  size?: EuiFlyoutSize | CSSProperties['width'];
+  size?: OuiFlyoutSize | CSSProperties['width'];
   /**
    * Sets the max-width of the panel,
    * set to `true` to use the default size,
@@ -109,9 +120,9 @@ type _EuiFlyoutProps = {
   /**
    * Customize the padding around the content of the flyout header, body and footer
    */
-  paddingSize?: _EuiFlyoutPaddingSize;
+  paddingSize?: _OuiFlyoutPaddingSize;
   /**
-   * Adds an EuiOverlayMask and wraps in an EuiPortal
+   * Adds an OuiOverlayMask and wraps in an OuiPortal
    */
   ownFocus?: boolean;
   /**
@@ -124,9 +135,9 @@ type _EuiFlyoutProps = {
    */
   closeButtonAriaLabel?: string;
   /**
-   * Extends EuiButtonIconProps onto the close button
+   * Extends OuiButtonIconProps onto the close button
    */
-  closeButtonProps?: Partial<EuiButtonIconPropsForButton>;
+  closeButtonProps?: Partial<OuiButtonIconPropsForButton>;
   /**
    * Position of close button.
    * `inside`: Floating to just inside the flyout, always top right;
@@ -134,14 +145,14 @@ type _EuiFlyoutProps = {
    */
   closeButtonPosition?: 'inside' | 'outside';
   /**
-   * Adjustments to the EuiOverlayMask that is added when `ownFocus = true`
+   * Adjustments to the OuiOverlayMask that is added when `ownFocus = true`
    */
-  maskProps?: EuiOverlayMaskProps;
+  maskProps?: OuiOverlayMaskProps;
   /**
    * How to display the the flyout in relation to the body content;
    * `push` keeps it visible, pushing the `<body>` content via padding
    */
-  type?: _EuiFlyoutType;
+  type?: _OuiFlyoutType;
   /**
    * Forces this interaction on the mask overlay or body content.
    * Defaults depend on `ownFocus` and `type` values
@@ -151,7 +162,7 @@ type _EuiFlyoutProps = {
    * Which side of the window to attach to.
    * The `left` option should only be used for navigation.
    */
-  side?: _EuiFlyoutSide;
+  side?: _OuiFlyoutSide;
   /**
    * Defaults to `dialog` which is best for most cases of the flyout.
    * Otherwise pass in your own, aria-role, or `null` to remove it and use the semantic `as` element instead
@@ -160,7 +171,7 @@ type _EuiFlyoutProps = {
   /**
    * Named breakpoint or pixel value for customizing the minimum window width to enable the `push` type
    */
-  pushMinBreakpoint?: EuiBreakpointSize | number;
+  pushMinBreakpoint?: OuiBreakpointSize | number;
   style?: React.CSSProperties;
 };
 
@@ -176,15 +187,15 @@ type ComponentTypes =
   | 'header'
   | ComponentType;
 
-export type EuiFlyoutProps<T extends ComponentTypes = 'div'> = CommonProps &
+export type OuiFlyoutProps<T extends ComponentTypes = 'div'> = CommonProps &
   ComponentPropsWithRef<T> & {
     /**
-     * Sets the HTML element for `EuiFlyout`
+     * Sets the HTML element for `OuiFlyout`
      */
     as?: T;
-  } & _EuiFlyoutProps;
+  } & _OuiFlyoutProps;
 
-const EuiFlyout = forwardRef(
+const OuiFlyout = forwardRef(
   <T extends ComponentTypes>(
     {
       className,
@@ -207,7 +218,7 @@ const EuiFlyout = forwardRef(
       role = 'dialog',
       pushMinBreakpoint = 'l',
       ...rest
-    }: PropsWithChildren<EuiFlyoutProps<T>>,
+    }: PropsWithChildren<OuiFlyoutProps<T>>,
     ref:
       | ((instance: ComponentPropsWithRef<T> | null) => void)
       | MutableRefObject<ComponentPropsWithRef<T> | null>
@@ -251,8 +262,8 @@ const EuiFlyout = forwardRef(
     const dimensions = useResizeObserver(resizeRef as Element);
 
     useEffect(() => {
-      // This class doesn't actually do anything by EUI, but is nice to add for consumers (JIC)
-      document.body.classList.add('euiBody--hasFlyout');
+      // This class doesn't actually do anything by OUI, but is nice to add for consumers (JIC)
+      document.body.classList.add('ouiBody--hasFlyout');
 
       /**
        * Accomodate for the `isPushed` state by adding padding to the body equal to the width of the element
@@ -271,7 +282,7 @@ const EuiFlyout = forwardRef(
       }
 
       return () => {
-        document.body.classList.remove('euiBody--hasFlyout');
+        document.body.classList.remove('ouiBody--hasFlyout');
 
         if (type === 'push') {
           window.removeEventListener('resize', functionToCallOnWindowResize);
@@ -301,14 +312,14 @@ const EuiFlyout = forwardRef(
 
     // Setting max-width
     if (maxWidth === true) {
-      widthClassName = 'euiFlyout--maxWidth-default';
+      widthClassName = 'ouiFlyout--maxWidth-default';
     } else if (maxWidth !== false) {
       const value = typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth;
       newStyle = { ...style, maxWidth: value };
     }
 
     // Setting size
-    if (isEuiFlyoutSizeNamed(size)) {
+    if (isOuiFlyoutSizeNamed(size)) {
       sizeClassName = sizeToClassNameMap[size];
     } else if (newStyle) {
       newStyle.width = size;
@@ -317,11 +328,11 @@ const EuiFlyout = forwardRef(
     }
 
     const classes = classnames(
-      'euiFlyout',
-      typeToClassNameMap[type as _EuiFlyoutType],
-      sideToClassNameMap[side as _EuiFlyoutSide],
+      'ouiFlyout',
+      typeToClassNameMap[type as _OuiFlyoutType],
+      sideToClassNameMap[side as _OuiFlyoutSide],
       sizeClassName,
-      paddingSizeToClassNameMap[paddingSize as _EuiFlyoutPaddingSize],
+      paddingSizeToClassNameMap[paddingSize as _OuiFlyoutPaddingSize],
       widthClassName,
       className
     );
@@ -329,20 +340,20 @@ const EuiFlyout = forwardRef(
     let closeButton;
     if (onClose && !hideCloseButton) {
       const closeButtonClasses = classnames(
-        'euiFlyout__closeButton',
-        `euiFlyout__closeButton--${closeButtonPosition}`,
+        'ouiFlyout__closeButton',
+        `ouiFlyout__closeButton--${closeButtonPosition}`,
         closeButtonProps?.className
       );
 
       closeButton = (
-        <EuiI18n token="euiFlyout.closeAriaLabel" default="Close this dialog">
+        <OuiI18n token="ouiFlyout.closeAriaLabel" default="Close this dialog">
           {(closeAriaLabel: string) => (
-            <EuiButtonIcon
+            <OuiButtonIcon
               display={closeButtonPosition === 'outside' ? 'fill' : 'empty'}
               iconType="cross"
               color="text"
               aria-label={closeButtonAriaLabel || closeAriaLabel}
-              data-test-subj="euiFlyoutCloseButton"
+              data-test-subj="ouiFlyoutCloseButton"
               {...closeButtonProps}
               className={closeButtonClasses}
               onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
@@ -351,7 +362,7 @@ const EuiFlyout = forwardRef(
               }}
             />
           )}
-        </EuiI18n>
+        </OuiI18n>
       );
     }
 
@@ -378,40 +389,40 @@ const EuiFlyout = forwardRef(
      * elements outside the flyout.
      */
     let flyout = (
-      <EuiFocusTrap disabled={isPushed} clickOutsideDisables={!ownFocus}>
+      <OuiFocusTrap disabled={isPushed} clickOutsideDisables={!ownFocus}>
         {/* Outside click detector is needed if theres no overlay mask to auto-close when clicking on elements outside */}
-        <EuiOutsideClickDetector
+        <OuiOutsideClickDetector
           isDisabled={isPushed || !outsideClickCloses}
           onOutsideClick={() => onClose()}>
           {flyoutContent}
-        </EuiOutsideClickDetector>
-      </EuiFocusTrap>
+        </OuiOutsideClickDetector>
+      </OuiFocusTrap>
     );
 
     // If ownFocus is set, wrap with an overlay and allow the user to click it to close it.
     if (ownFocus && !isPushed) {
       flyout = (
-        <EuiOverlayMask
+        <OuiOverlayMask
           onClick={onClose}
           headerZindexLocation="below"
           {...maskProps}>
           {flyout}
-        </EuiOverlayMask>
+        </OuiOverlayMask>
       );
     } else if (!isPushed) {
-      // Otherwise still wrap within an EuiPortal so it appends (unless it is the push style)
-      flyout = <EuiPortal>{flyout}</EuiPortal>;
+      // Otherwise still wrap within an OuiPortal so it appends (unless it is the push style)
+      flyout = <OuiPortal>{flyout}</OuiPortal>;
     }
 
     return (
       <Fragment>
-        <EuiWindowEvent event="keydown" handler={onKeyDown} />
+        <OuiWindowEvent event="keydown" handler={onKeyDown} />
         {flyout}
       </Fragment>
     );
   }
 );
 
-EuiFlyout.displayName = 'EuiFlyout';
+OuiFlyout.displayName = 'OuiFlyout';
 
-export { EuiFlyout };
+export { OuiFlyout };

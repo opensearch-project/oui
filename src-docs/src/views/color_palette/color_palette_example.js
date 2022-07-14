@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,7 +17,7 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 import { qualitativePropsInfo, palettePropsInfo } from './props_info';
 
-import { EuiCode, EuiText, EuiCallOut } from '../../../../src/components';
+import { OuiCode, OuiText, OuiCallOut } from '../../../../src/components';
 
 import ColorPalette from './color_palette';
 const colorPaletteSource = require('!!raw-loader!./color_palette');
@@ -24,12 +35,12 @@ export const ColorPaletteExample = {
   title: 'Color palettes',
   intro: (
     <>
-      <EuiText>
+      <OuiText>
         <p>
-          EUI provides a base set of color palettes that return an array of
-          hexadecimal color for use in other EUI components or charts.
+          OUI provides a base set of color palettes that return an array of
+          hexadecimal color for use in other OUI components or charts.
         </p>
-      </EuiText>
+      </OuiText>
     </>
   ),
   sections: [
@@ -49,8 +60,8 @@ export const ColorPaletteExample = {
         <div>
           <p>
             Qualitative palettes are best suited for communicating and comparing
-            discrete data series. EUI recommends using the{' '}
-            <EuiCode>euiPaletteColorBlind()</EuiCode> for qualitative and
+            discrete data series. OUI recommends using the{' '}
+            <OuiCode>ouiPaletteColorBlind()</OuiCode> for qualitative and
             categorical data.
           </p>
           <p>
@@ -60,9 +71,9 @@ export const ColorPaletteExample = {
           </p>
           <p>
             These colors are meant to be used as graphics and contrasted against
-            the value of <EuiCode>euiColorEmptyShade</EuiCode> for the current
+            the value of <OuiCode>ouiColorEmptyShade</OuiCode> for the current
             theme. When placing text on top of these colors, use the{' '}
-            <EuiCode>euiPaletteColorBlindBehindText()</EuiCode> variant. It is a
+            <OuiCode>ouiPaletteColorBlindBehindText()</OuiCode> variant. It is a
             brightened version of the base palette to create better contrast
             with text.
           </p>
@@ -70,8 +81,8 @@ export const ColorPaletteExample = {
       ),
       demo: <ColorPalette />,
       snippet: [
-        'euiPaletteColorBlind()',
-        "euiPaletteColorBlind({rotations: 3, order: 'group', direction: 'both'})",
+        'ouiPaletteColorBlind()',
+        "ouiPaletteColorBlind({rotations: 3, order: 'group', direction: 'both'})",
       ],
       props: qualitativePropsInfo,
     },
@@ -95,12 +106,12 @@ export const ColorPaletteExample = {
             demographic-based data sets.
           </p>
           <p>
-            EUI provides the following common palettes for quantitative data and{' '}
+            OUI provides the following common palettes for quantitative data and{' '}
             <Link to="/elastic-charts/creating-charts">charts</Link>. Just pass
             in the number of steps needed and the function will interpolate
             between the colors.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             iconType="accessibility"
             title="The palette for status is the only palette that has proper contrast ratios. When using the other palettes, consider adding another form of the data for screen readers."
@@ -124,10 +135,10 @@ export const ColorPaletteExample = {
       text: (
         <div>
           <p>
-            Use the <EuiCode>colorPalette</EuiCode> service to generate a
+            Use the <OuiCode>colorPalette</OuiCode> service to generate a
             custom, gradiated palette array of any length from one or more
             hexadecimal color codes. The third parameter{' '}
-            <EuiCode>divergent</EuiCode>, will interpolate between the two
+            <OuiCode>divergent</OuiCode>, will interpolate between the two
             halves of the spectrums separately. If a middle point is not
             provided, it will graduate to light gray.
           </p>

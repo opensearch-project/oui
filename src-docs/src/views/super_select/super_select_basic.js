@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiSuperSelect, EuiHealth } from '../../../../src/components';
+import { OuiSuperSelect, OuiHealth } from '../../../../src/components';
 
 export default () => {
   const options = [
     {
       value: 'warning',
       inputDisplay: (
-        <EuiHealth color="subdued" style={{ lineHeight: 'inherit' }}>
+        <OuiHealth color="subdued" style={{ lineHeight: 'inherit' }}>
           Warning
-        </EuiHealth>
+        </OuiHealth>
       ),
       'data-test-subj': 'option-warning',
       disabled: true,
@@ -17,18 +28,18 @@ export default () => {
     {
       value: 'minor',
       inputDisplay: (
-        <EuiHealth color="warning" style={{ lineHeight: 'inherit' }}>
+        <OuiHealth color="warning" style={{ lineHeight: 'inherit' }}>
           Minor
-        </EuiHealth>
+        </OuiHealth>
       ),
       'data-test-subj': 'option-minor',
     },
     {
       value: 'critical',
       inputDisplay: (
-        <EuiHealth color="danger" style={{ lineHeight: 'inherit' }}>
+        <OuiHealth color="danger" style={{ lineHeight: 'inherit' }}>
           Critical
-        </EuiHealth>
+        </OuiHealth>
       ),
       'data-test-subj': 'option-critical',
     },
@@ -40,7 +51,7 @@ export default () => {
   };
 
   return (
-    <EuiSuperSelect
+    <OuiSuperSelect
       options={options}
       valueOfSelected={value}
       onChange={(value) => onChange(value)}

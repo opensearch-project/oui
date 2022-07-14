@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 .guideRule__example {
   .guideRule__example__panel {
     border-bottom: 2px solid;
@@ -12,13 +23,13 @@
 
 .guideRule__example--do {
   .guideRule__example__panel {
-    border-bottom-color: $euiColorSuccess;
+    border-bottom-color: $ouiColorSuccess;
   }
 }
 
 .guideRule__example--dont {
   .guideRule__example__panel {
-    border-bottom-color: $euiColorDanger;
+    border-bottom-color: $ouiColorDanger;
   }
 }
 

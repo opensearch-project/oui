@@ -1,58 +1,69 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageContent,
-  EuiPageBody,
-  EuiPageContentBody,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPanel,
-  EuiSpacer,
+  OuiPage,
+  OuiPageContent,
+  OuiPageBody,
+  OuiPageContentBody,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiPanel,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default ({ button = <></>, content }) => (
-  <EuiPage paddingSize="none" className="eui-fullHeight">
-    <EuiPageBody className="eui-fullHeight">
-      <EuiPageContent
+  <OuiPage paddingSize="none" className="oui-fullHeight">
+    <OuiPageBody className="oui-fullHeight">
+      <OuiPageContent
         color="transparent"
         borderRadius="none"
         hasShadow={false}
         paddingSize="none"
-        className="eui-fullHeight">
-        <EuiPageContentBody
+        className="oui-fullHeight">
+        <OuiPageContentBody
           restrictWidth
           paddingSize="l"
-          className="eui-fullHeight">
-          <EuiFlexGroup
-            className="eui-fullHeight"
+          className="oui-fullHeight">
+          <OuiFlexGroup
+            className="oui-fullHeight"
             gutterSize="none"
             direction="column"
             responsive={false}>
-            <EuiFlexItem grow={false}>
-              <EuiPanel color="danger" />
-            </EuiFlexItem>
-            <EuiSpacer size="l" />
-            <EuiFlexItem className="eui-fullHeight">
-              <EuiFlexGroup className="eui-fullHeight" gutterSize="l">
-                <EuiFlexItem grow={2}>
-                  <EuiPanel
+            <OuiFlexItem grow={false}>
+              <OuiPanel color="danger" />
+            </OuiFlexItem>
+            <OuiSpacer size="l" />
+            <OuiFlexItem className="oui-fullHeight">
+              <OuiFlexGroup className="oui-fullHeight" gutterSize="l">
+                <OuiFlexItem grow={2}>
+                  <OuiPanel
                     tabIndex={0}
-                    className="eui-yScroll"
+                    className="oui-yScroll"
                     hasShadow={false}>
                     {content}
-                  </EuiPanel>
-                </EuiFlexItem>
-                <EuiFlexItem>
-                  <EuiPanel hasShadow={false} />
-                  <EuiSpacer />
+                  </OuiPanel>
+                </OuiFlexItem>
+                <OuiFlexItem>
+                  <OuiPanel hasShadow={false} />
+                  <OuiSpacer />
                   {button}
-                </EuiFlexItem>
-              </EuiFlexGroup>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiPageContentBody>
-      </EuiPageContent>
-    </EuiPageBody>
-  </EuiPage>
+                </OuiFlexItem>
+              </OuiFlexGroup>
+            </OuiFlexItem>
+          </OuiFlexGroup>
+        </OuiPageContentBody>
+      </OuiPageContent>
+    </OuiPageBody>
+  </OuiPage>
 );

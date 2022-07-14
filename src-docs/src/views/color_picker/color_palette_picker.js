@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import {
-  euiPaletteColorBlind,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
+  ouiPaletteColorBlind,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
 } from '../../../../src/services';
 
 import {
-  EuiSwitch,
-  EuiSpacer,
-  EuiCode,
-  EuiColorPalettePicker,
+  OuiSwitch,
+  OuiSpacer,
+  OuiCode,
+  OuiColorPalettePicker,
 } from '../../../../src/components/';
 
 import { DisplayToggles } from '../form_controls/display_toggles';
@@ -17,20 +28,20 @@ import { DisplayToggles } from '../form_controls/display_toggles';
 const palettes = [
   {
     value: 'pallette_1',
-    title: 'EUI color blind (fixed)',
-    palette: euiPaletteColorBlind(),
+    title: 'OUI color blind (fixed)',
+    palette: ouiPaletteColorBlind(),
     type: 'fixed',
   },
   {
     value: 'pallette_2',
-    title: 'EUI palette for status (gradient)',
-    palette: euiPaletteForStatus(5),
+    title: 'OUI palette for status (gradient)',
+    palette: ouiPaletteForStatus(5),
     type: 'gradient',
   },
   {
     value: 'pallette_3',
-    title: 'EUI palette for temperature (fixed)',
-    palette: euiPaletteForTemperature(5),
+    title: 'OUI palette for temperature (fixed)',
+    palette: ouiPaletteForTemperature(5),
     type: 'fixed',
   },
   {
@@ -92,18 +103,18 @@ export default () => {
 
   return (
     <>
-      <EuiSwitch
+      <OuiSwitch
         label={
           <span>
-            Display selected item as a <EuiCode>title</EuiCode>
+            Display selected item as a <OuiCode>title</OuiCode>
           </span>
         }
         checked={selectionDisplay}
         onChange={() => setSelectionDisplay(!selectionDisplay)}
       />
-      <EuiSpacer />
+      <OuiSpacer />
       <DisplayToggles canPrepend={true} canAppend={true} canReadOnly={false}>
-        <EuiColorPalettePicker
+        <OuiColorPalettePicker
           palettes={palettes}
           onChange={setPallette}
           valueOfSelected={pallette}

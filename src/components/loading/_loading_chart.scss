@@ -1,5 +1,16 @@
-.euiLoadingChart {
-  height: $euiSizeXL;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiLoadingChart {
+  height: $ouiSizeXL;
   z-index: 500;
   overflow: hidden;
   display: inline-block;
@@ -9,101 +20,101 @@
  * 1. Without the animation, the bars are all the same height,
  *    so we apply transforms only if they can't animate
  */
-.euiLoadingChart__bar {
+.ouiLoadingChart__bar {
   height: 100%;
-  width: $euiSizeS;
+  width: $ouiSizeS;
   display: inline-block;
-  margin-bottom: -$euiSize;
-  margin-left: $euiSizeXS / 2;
+  margin-bottom: -$ouiSize;
+  margin-left: $ouiSizeXS / 2;
 
   // sass-lint:disable-block mixins-before-declarations
-  @include euiCanAnimate {
-    animation: euiLoadingChart 1s infinite;
+  @include ouiCanAnimate {
+    animation: ouiLoadingChart 1s infinite;
   }
 
   &:nth-child(1) {
-    background-color: $euiColorVis0;
+    background-color: $ouiColorVis0;
 
-    @include euiCantAnimate {
+    @include ouiCantAnimate {
       transform: translateY(66%); /* 1 */
     }
   }
 
   &:nth-child(2) {
-    background-color: $euiColorVis1;
+    background-color: $ouiColorVis1;
     animation-delay: .1s;
 
-    @include euiCantAnimate {
+    @include ouiCantAnimate {
       transform: translateY(44%); /* 1 */
     }
   }
 
   &:nth-child(3) {
-    background-color: $euiColorVis2;
+    background-color: $ouiColorVis2;
     animation-delay: .2s;
 
-    @include euiCantAnimate {
+    @include ouiCantAnimate {
       transform: translateY(22%); /* 1 */
     }
   }
 
   &:nth-child(4) {
-    background-color: $euiColorVis3;
+    background-color: $ouiColorVis3;
     animation-delay: .3s;
   }
 }
 
-.euiLoadingChart--mono {
-  .euiLoadingChart__bar {
+.ouiLoadingChart--mono {
+  .ouiLoadingChart__bar {
     &:nth-child(1) {
-      background-color: $euiColorLightShade;
+      background-color: $ouiColorLightShade;
     }
 
     &:nth-child(2) {
-      background-color: shadeOrTint($euiColorLightShade, 4%, 4%);
+      background-color: shadeOrTint($ouiColorLightShade, 4%, 4%);
     }
 
     &:nth-child(3) {
-      background-color: shadeOrTint($euiColorLightShade, 8%, 8%);
+      background-color: shadeOrTint($ouiColorLightShade, 8%, 8%);
     }
 
     &:nth-child(4) {
-      background-color: shadeOrTint($euiColorLightShade, 12%, 12%);
+      background-color: shadeOrTint($ouiColorLightShade, 12%, 12%);
     }
   }
 }
 
-.euiLoadingChart--medium {
-  height: $euiSize;
+.ouiLoadingChart--medium {
+  height: $ouiSize;
 
   > span {
-    width: $euiSizeXS / 2;
-    margin-left: $euiSizeXS / 2;
-    margin-bottom: $euiSizeS;
+    width: $ouiSizeXS / 2;
+    margin-left: $ouiSizeXS / 2;
+    margin-bottom: $ouiSizeS;
   }
 }
 
-.euiLoadingChart--large {
-  height: $euiSizeL;
+.ouiLoadingChart--large {
+  height: $ouiSizeL;
 
   > span {
-    width: $euiSizeXS;
-    margin-left: $euiSizeXS / 2;
-    margin-bottom: $euiSizeL / 2;
+    width: $ouiSizeXS;
+    margin-left: $ouiSizeXS / 2;
+    margin-bottom: $ouiSizeL / 2;
   }
 }
 
-.euiLoadingChart--xLarge {
-  height: $euiSizeXL;
+.ouiLoadingChart--xLarge {
+  height: $ouiSizeXL;
 
   > span {
-    width: $euiSizeS;
-    margin-left: $euiSizeXS;
-    margin-bottom: $euiSizeXL / 2;
+    width: $ouiSizeS;
+    margin-left: $ouiSizeXS;
+    margin-bottom: $ouiSizeXL / 2;
   }
 }
 
-@keyframes euiLoadingChart {
+@keyframes ouiLoadingChart {
   0% {
     transform: translateY(0);
   }

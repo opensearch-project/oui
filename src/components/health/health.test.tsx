@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,12 +31,12 @@
 import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
-import { TEXT_SIZES, EuiHealth } from './health';
+import { TEXT_SIZES, OuiHealth } from './health';
 import { COLORS } from '../icon/icon';
 
-describe('EuiHealth', () => {
+describe('OuiHealth', () => {
   test('is rendered', () => {
-    const component = render(<EuiHealth {...requiredProps} />);
+    const component = render(<OuiHealth {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -35,7 +46,7 @@ describe('EuiHealth', () => {
       TEXT_SIZES.forEach((textSize) => {
         test(`${textSize} is rendered`, () => {
           const component = render(
-            <EuiHealth textSize={textSize} color="success" />
+            <OuiHealth textSize={textSize} color="success" />
           );
 
           expect(component).toMatchSnapshot();
@@ -46,7 +57,7 @@ describe('EuiHealth', () => {
     describe('color', () => {
       [...COLORS, '#000000'].forEach((color) => {
         it(`${color} is rendered`, () => {
-          const component = render(<EuiHealth color={color} />);
+          const component = render(<OuiHealth color={color} />);
 
           expect(component).toMatchSnapshot();
         });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFlyout is rendered 1`] = `
+exports[`OuiFlyout is rendered 1`] = `
 Array [
   <div>
     <div
@@ -18,22 +18,22 @@ Array [
     >
       <div
         aria-label="aria-label"
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge testClass1 testClass2"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge testClass1 testClass2"
         data-test-subj="test subject string"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -47,7 +47,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props accepts div props 1`] = `
+exports[`OuiFlyout props accepts div props 1`] = `
 Array [
   <div>
     <div
@@ -64,22 +64,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         id="imaflyout"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -93,7 +93,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props closeButtonPosition can be outside 1`] = `
+exports[`OuiFlyout props closeButtonPosition can be outside 1`] = `
 Array [
   <div>
     <div
@@ -110,21 +110,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--fill euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--outside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--fill ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--outside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -138,7 +138,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props closeButtonProps 1`] = `
+exports[`OuiFlyout props closeButtonProps 1`] = `
 Array [
   <div>
     <div
@@ -155,21 +155,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="aria-label"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside testClass1 testClass2"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside testClass1 testClass2"
           data-test-subj="test subject string"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -183,7 +183,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props hideCloseButton 1`] = `
+exports[`OuiFlyout props hideCloseButton 1`] = `
 Array [
   <div>
     <div
@@ -200,7 +200,7 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       />
@@ -214,7 +214,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props is rendered as nav 1`] = `
+exports[`OuiFlyout props is rendered as nav 1`] = `
 Array [
   <div>
     <div
@@ -231,21 +231,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </nav>
@@ -259,7 +259,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props maxWidth can be set to a custom number 1`] = `
+exports[`OuiFlyout props maxWidth can be set to a custom number 1`] = `
 Array [
   <div>
     <div
@@ -276,22 +276,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         style="max-width: 1024px;"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -305,7 +305,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props maxWidth can be set to a custom value and measurement 1`] = `
+exports[`OuiFlyout props maxWidth can be set to a custom value and measurement 1`] = `
 Array [
   <div>
     <div
@@ -322,22 +322,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         style="max-width: 24rem;"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -351,7 +351,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props maxWidth can be set to a default 1`] = `
+exports[`OuiFlyout props maxWidth can be set to a default 1`] = `
 Array [
   <div>
     <div
@@ -368,21 +368,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge euiFlyout--maxWidth-default"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge ouiFlyout--maxWidth-default"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -396,7 +396,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props outsideClickCloses 1`] = `
+exports[`OuiFlyout props outsideClickCloses 1`] = `
 Array [
   <div>
     <div
@@ -413,21 +413,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -441,7 +441,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props ownFocus can alter mask props with maskProps without throwing error 1`] = `
+exports[`OuiFlyout props ownFocus can alter mask props with maskProps without throwing error 1`] = `
 Array [
   <div>
     <div
@@ -458,21 +458,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -486,7 +486,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props ownFocus can be false 1`] = `
+exports[`OuiFlyout props ownFocus can be false 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -502,21 +502,21 @@ Array [
     data-focus-lock-disabled="false"
   >
     <div
-      class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+      class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
       role="dialog"
       tabindex="-1"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-        data-test-subj="euiFlyoutCloseButton"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+        data-test-subj="ouiFlyoutCloseButton"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="cross"
+          data-ouiicon-type="cross"
         />
       </button>
     </div>
@@ -529,7 +529,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props paddingSize l is rendered 1`] = `
+exports[`OuiFlyout props paddingSize l is rendered 1`] = `
 Array [
   <div>
     <div
@@ -546,21 +546,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -574,7 +574,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props paddingSize m is rendered 1`] = `
+exports[`OuiFlyout props paddingSize m is rendered 1`] = `
 Array [
   <div>
     <div
@@ -591,21 +591,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingMedium"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingMedium"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -619,7 +619,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props paddingSize none is rendered 1`] = `
+exports[`OuiFlyout props paddingSize none is rendered 1`] = `
 Array [
   <div>
     <div
@@ -636,21 +636,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingNone"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingNone"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -664,7 +664,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props paddingSize s is rendered 1`] = `
+exports[`OuiFlyout props paddingSize s is rendered 1`] = `
 Array [
   <div>
     <div
@@ -681,21 +681,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingSmall"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingSmall"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -709,7 +709,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props role can be removed 1`] = `
+exports[`OuiFlyout props role can be removed 1`] = `
 Array [
   <div>
     <div
@@ -726,20 +726,20 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -753,7 +753,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props sides left is rendered 1`] = `
+exports[`OuiFlyout props sides left is rendered 1`] = `
 Array [
   <div>
     <div
@@ -770,21 +770,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--left euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--left ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -798,7 +798,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props sides right is rendered 1`] = `
+exports[`OuiFlyout props sides right is rendered 1`] = `
 Array [
   <div>
     <div
@@ -815,21 +815,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -843,7 +843,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props size accepts custom number 1`] = `
+exports[`OuiFlyout props size accepts custom number 1`] = `
 Array [
   <div>
     <div
@@ -860,22 +860,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--paddingLarge"
         role="dialog"
         style="width: 500px;"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -889,7 +889,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props size l is rendered 1`] = `
+exports[`OuiFlyout props size l is rendered 1`] = `
 Array [
   <div>
     <div
@@ -906,21 +906,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--large euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--large ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -934,7 +934,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props size m is rendered 1`] = `
+exports[`OuiFlyout props size m is rendered 1`] = `
 Array [
   <div>
     <div
@@ -951,21 +951,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--medium euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--medium ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -979,7 +979,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props size s is rendered 1`] = `
+exports[`OuiFlyout props size s is rendered 1`] = `
 Array [
   <div>
     <div
@@ -996,21 +996,21 @@ Array [
       data-focus-lock-disabled="false"
     >
       <div
-        class="euiFlyout euiFlyout--small euiFlyout--paddingLarge"
+        class="ouiFlyout ouiFlyout--small ouiFlyout--paddingLarge"
         role="dialog"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </div>
@@ -1024,7 +1024,7 @@ Array [
 ]
 `;
 
-exports[`EuiFlyout props type=push is rendered 1`] = `
+exports[`OuiFlyout props type=push is rendered 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -1040,21 +1040,21 @@ Array [
     data-focus-lock-disabled="disabled"
   >
     <div
-      class="euiFlyout euiFlyout--push euiFlyout--medium euiFlyout--paddingLarge"
+      class="ouiFlyout ouiFlyout--push ouiFlyout--medium ouiFlyout--paddingLarge"
       role="dialog"
       tabindex="-1"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--inside"
-        data-test-subj="euiFlyoutCloseButton"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--inside"
+        data-test-subj="ouiFlyoutCloseButton"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="cross"
+          data-ouiicon-type="cross"
         />
       </button>
     </div>

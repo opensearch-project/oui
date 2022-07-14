@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,15 +30,15 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import { EuiCopy } from './copy';
+import { OuiCopy } from './copy';
 import { requiredProps } from '../../test';
 
-describe('EuiCopy', () => {
+describe('OuiCopy', () => {
   test('is rendered', () => {
     const component = shallow(
-      <EuiCopy textToCopy="some text" {...requiredProps}>
+      <OuiCopy textToCopy="some text" {...requiredProps}>
         {(copy) => <button onClick={copy}>Click to copy input text</button>}
-      </EuiCopy>
+      </OuiCopy>
     );
     expect(component).toMatchSnapshot();
   });
@@ -35,18 +46,18 @@ describe('EuiCopy', () => {
   describe('props', () => {
     test('beforeMessage', () => {
       const component = shallow(
-        <EuiCopy textToCopy="some text" beforeMessage="copy this">
+        <OuiCopy textToCopy="some text" beforeMessage="copy this">
           {(copy) => <button onClick={copy}>Click to copy input text</button>}
-        </EuiCopy>
+        </OuiCopy>
       );
       expect(component.state('tooltipText')).toBe('copy this');
     });
 
     test('afterMessage', () => {
-      const component = shallow<EuiCopy>(
-        <EuiCopy textToCopy="some text" afterMessage="successfuly copied">
+      const component = shallow<OuiCopy>(
+        <OuiCopy textToCopy="some text" afterMessage="successfuly copied">
           {(copy) => <button onClick={copy}>Click to copy input text</button>}
-        </EuiCopy>
+        </OuiCopy>
       );
       const instance = component.instance();
       expect(instance.props.afterMessage).toBe('successfuly copied');

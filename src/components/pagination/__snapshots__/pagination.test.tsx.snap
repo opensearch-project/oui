@@ -1,42 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPagination is rendered 1`] = `
+exports[`OuiPagination is rendered 1`] = `
 <nav
   aria-label="aria-label"
-  class="euiPagination testClass1 testClass2"
+  class="ouiPagination testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <button
     aria-label="Previous page, 1"
-    class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+    class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
     data-test-subj="pagination-button-previous"
     type="button"
   >
     <span
       aria-hidden="true"
-      class="euiButtonIcon__icon"
+      class="ouiButtonIcon__icon"
       color="inherit"
-      data-euiicon-type="arrowLeft"
+      data-ouiicon-type="arrowLeft"
     />
   </button>
   <ul
     aria-label="aria-label"
-    class="euiPagination__list"
+    class="ouiPagination__list"
   >
     <li
-      class="euiPagination__item"
+      class="ouiPagination__item"
     >
       <button
         aria-label="Page 1 of 1"
-        class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+        class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
         data-test-subj="pagination-button-0"
         type="button"
       >
         <span
-          class="euiButtonContent euiButtonEmpty__content"
+          class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            class="euiButtonEmpty__text"
+            class="ouiButtonEmpty__text"
           >
             1
           </span>
@@ -46,15 +46,15 @@ exports[`EuiPagination is rendered 1`] = `
   </ul>
   <button
     aria-label="Next page, 3"
-    class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+    class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
     data-test-subj="pagination-button-next"
     type="button"
   >
     <span
       aria-hidden="true"
-      class="euiButtonIcon__icon"
+      class="ouiButtonIcon__icon"
       color="inherit"
-      data-euiicon-type="arrowRight"
+      data-ouiicon-type="arrowRight"
     />
   </button>
 </nav>

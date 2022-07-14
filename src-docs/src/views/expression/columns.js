@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiPopoverTitle,
-  EuiPopover,
-  EuiSelect,
-  EuiComboBox,
-  EuiExpression,
-  EuiTitle,
-  EuiSpacer,
+  OuiPopoverTitle,
+  OuiPopover,
+  OuiSelect,
+  OuiComboBox,
+  OuiExpression,
+  OuiTitle,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -99,8 +110,8 @@ export default () => {
 
   const renderPopover1 = () => (
     <div style={{ width: 300 }}>
-      <EuiPopoverTitle>INDICES</EuiPopoverTitle>
-      <EuiComboBox
+      <OuiPopoverTitle>INDICES</OuiPopoverTitle>
+      <OuiComboBox
         placeholder="Select one or more indices"
         options={options}
         selectedOptions={selectedOptions}
@@ -113,8 +124,8 @@ export default () => {
 
   const renderPopover2 = () => (
     <div style={{ width: 150 }}>
-      <EuiPopoverTitle>WHEN</EuiPopoverTitle>
-      <EuiSelect
+      <OuiPopoverTitle>WHEN</OuiPopoverTitle>
+      <OuiSelect
         compressed
         value={example2.value}
         onChange={changeExample2}
@@ -139,10 +150,10 @@ export default () => {
 
   return (
     <div style={{ maxWidth: 500 }}>
-      <EuiPopover
+      <OuiPopover
         id="columnsPopover1"
         button={
-          <EuiExpression
+          <OuiExpression
             description="indices"
             display="columns"
             value={example1.value}
@@ -159,13 +170,13 @@ export default () => {
         panelPaddingSize="s"
         anchorPosition="downLeft">
         {renderPopover1()}
-      </EuiPopover>
+      </OuiPopover>
 
-      <EuiPopover
+      <OuiPopover
         id="columnsPopover2"
         panelPaddingSize="s"
         button={
-          <EuiExpression
+          <OuiExpression
             description="when"
             display="columns"
             value={example2.value}
@@ -178,17 +189,17 @@ export default () => {
         display="block"
         anchorPosition="downLeft">
         {renderPopover2()}
-      </EuiPopover>
-      <EuiExpression
+      </OuiPopover>
+      <OuiExpression
         display="columns"
         description="Except"
         value="kibana_sample_data_ky_counties"
       />
-      <EuiSpacer />
-      <EuiTitle size="xxs">
+      <OuiSpacer />
+      <OuiTitle size="xxs">
         <h3>Description width at 50px</h3>
-      </EuiTitle>
-      <EuiExpression
+      </OuiTitle>
+      <OuiExpression
         description="join"
         display="columns"
         descriptionWidth={50}

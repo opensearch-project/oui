@@ -1,49 +1,60 @@
-.euiContextMenuPanel {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiContextMenuPanel {
   width: 100%;
   visibility: visible;
-  outline-offset: -$euiFocusRingSize;
+  outline-offset: -$ouiFocusRingSize;
 
   &:focus {
     outline: none; // Hide focus ring because of `tabindex=-1` on Safari
   }
 
-  &.euiContextMenuPanel-txInLeft {
+  &.ouiContextMenuPanel-txInLeft {
     pointer-events: none;
-    animation: euiContextMenuPanelTxInLeft $euiAnimSpeedNormal $euiAnimSlightResistance;
+    animation: ouiContextMenuPanelTxInLeft $ouiAnimSpeedNormal $ouiAnimSlightResistance;
   }
 
-  &.euiContextMenuPanel-txOutLeft {
+  &.ouiContextMenuPanel-txOutLeft {
     pointer-events: none;
-    animation: euiContextMenuPanelTxOutLeft $euiAnimSpeedNormal $euiAnimSlightResistance;
+    animation: ouiContextMenuPanelTxOutLeft $ouiAnimSpeedNormal $ouiAnimSlightResistance;
   }
 
-  &.euiContextMenuPanel-txInRight {
+  &.ouiContextMenuPanel-txInRight {
     pointer-events: none;
-    animation: euiContextMenuPanelTxInRight $euiAnimSpeedNormal $euiAnimSlightResistance;
+    animation: ouiContextMenuPanelTxInRight $ouiAnimSpeedNormal $ouiAnimSlightResistance;
   }
 
-  &.euiContextMenuPanel-txOutRight {
+  &.ouiContextMenuPanel-txOutRight {
     pointer-events: none;
-    animation: euiContextMenuPanelTxOutRight $euiAnimSpeedNormal $euiAnimSlightResistance;
+    animation: ouiContextMenuPanelTxOutRight $ouiAnimSpeedNormal $ouiAnimSlightResistance;
   }
 }
 
-.euiContextMenuPanel--next {
-  transform: translateX($euiContextMenuWidth);
+.ouiContextMenuPanel--next {
+  transform: translateX($ouiContextMenuWidth);
   visibility: hidden;
 }
 
-.euiContextMenuPanel--previous {
-  transform: translateX(-$euiContextMenuWidth);
+.ouiContextMenuPanel--previous {
+  transform: translateX(-$ouiContextMenuWidth);
   visibility: hidden;
 }
 
-.euiContextMenuPanelTitle {
-  @include euiPopoverTitle;
-  padding: $euiSizeM;
+.ouiContextMenuPanelTitle {
+  @include ouiPopoverTitle;
+  padding: $ouiSizeM;
   width: 100%;
   text-align: left;
-  outline-offset: -$euiFocusRingSize;
+  outline-offset: -$ouiFocusRingSize;
 
   &:enabled:hover,
   &:enabled:focus {
@@ -51,14 +62,14 @@
   }
 
   &--small {
-    @include euiPopoverTitle('s');
-    padding: ($euiSizeS * .75) $euiSizeS;
+    @include ouiPopoverTitle('s');
+    padding: ($ouiSizeS * .75) $ouiSizeS;
   }
 }
 
-@keyframes euiContextMenuPanelTxInLeft {
+@keyframes ouiContextMenuPanelTxInLeft {
   0% {
-    transform: translateX($euiContextMenuWidth);
+    transform: translateX($ouiContextMenuWidth);
   }
 
   100% {
@@ -66,19 +77,19 @@
   }
 }
 
-@keyframes euiContextMenuPanelTxOutLeft {
+@keyframes ouiContextMenuPanelTxOutLeft {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(-$euiContextMenuWidth);
+    transform: translateX(-$ouiContextMenuWidth);
   }
 }
 
-@keyframes euiContextMenuPanelTxInRight {
+@keyframes ouiContextMenuPanelTxInRight {
   0% {
-    transform: translateX(-$euiContextMenuWidth);
+    transform: translateX(-$ouiContextMenuWidth);
   }
 
   100% {
@@ -86,12 +97,12 @@
   }
 }
 
-@keyframes euiContextMenuPanelTxOutRight {
+@keyframes ouiContextMenuPanelTxOutRight {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX($euiContextMenuWidth);
+    transform: translateX($ouiContextMenuWidth);
   }
 }

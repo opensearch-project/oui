@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiPopoverFooter,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
-  EuiTextColor,
+  OuiPopover,
+  OuiPopoverTitle,
+  OuiPopoverFooter,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiText,
+  OuiTextColor,
 } from '../../../../src/components';
 
 export default () => {
@@ -29,90 +40,90 @@ export default () => {
   const closePopover3 = () => setIsPopoverOpen3(false);
 
   return (
-    <EuiFlexGroup>
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+    <OuiFlexGroup>
+      <OuiFlexItem grow={false}>
+        <OuiPopover
           button={
-            <EuiButton
+            <OuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick1}>
               With title
-            </EuiButton>
+            </OuiButton>
           }
           isOpen={isPopoverOpen1}
           closePopover={closePopover1}
           anchorPosition="downCenter">
-          <EuiPopoverTitle>Hello, I&rsquo;m a popover title</EuiPopoverTitle>
+          <OuiPopoverTitle>Hello, I&rsquo;m a popover title</OuiPopoverTitle>
           <div style={{ width: '300px' }}>
-            <EuiText size="s">
+            <OuiText size="s">
               <p>
                 Selfies migas stumptown hot chicken quinoa wolf green juice,
                 mumblecore tattooed trust fund hammock truffaut taxidermy kogi.
               </p>
-            </EuiText>
+            </OuiText>
           </div>
-        </EuiPopover>
-      </EuiFlexItem>
+        </OuiPopover>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+      <OuiFlexItem grow={false}>
+        <OuiPopover
           button={
-            <EuiButton
+            <OuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick2}>
               With footer
-            </EuiButton>
+            </OuiButton>
           }
           isOpen={isPopoverOpen2}
           closePopover={closePopover2}
           anchorPosition="upCenter">
           <div style={{ width: '300px' }}>
-            <EuiText size="s">
+            <OuiText size="s">
               <p>
                 Selfies migas stumptown hot chicken quinoa wolf green juice,
                 mumblecore tattooed trust fund hammock truffaut taxidermy kogi.
               </p>
-            </EuiText>
+            </OuiText>
           </div>
-          <EuiPopoverFooter>
-            <EuiTextColor color="subdued">
+          <OuiPopoverFooter>
+            <OuiTextColor color="subdued">
               Hello, I&rsquo;m a small popover footer caption
-            </EuiTextColor>
-          </EuiPopoverFooter>
-        </EuiPopover>
-      </EuiFlexItem>
+            </OuiTextColor>
+          </OuiPopoverFooter>
+        </OuiPopover>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+      <OuiFlexItem grow={false}>
+        <OuiPopover
           button={
-            <EuiButton
+            <OuiButton
               iconType="arrowDown"
               iconSide="right"
               onClick={onButtonClick3}>
               With title and footer button
-            </EuiButton>
+            </OuiButton>
           }
           isOpen={isPopoverOpen3}
           closePopover={closePopover3}
           anchorPosition="upCenter">
-          <EuiPopoverTitle>Hello, I&rsquo;m a popover title</EuiPopoverTitle>
+          <OuiPopoverTitle>Hello, I&rsquo;m a popover title</OuiPopoverTitle>
           <div style={{ width: '300px' }}>
-            <EuiText size="s">
+            <OuiText size="s">
               <p>
                 Selfies migas stumptown hot chicken quinoa wolf green juice,
                 mumblecore tattooed trust fund hammock truffaut taxidermy kogi.
               </p>
-            </EuiText>
+            </OuiText>
           </div>
-          <EuiPopoverFooter>
-            <EuiButton fullWidth size="s">
+          <OuiPopoverFooter>
+            <OuiButton fullWidth size="s">
               Manage this thing
-            </EuiButton>
-          </EuiPopoverFooter>
-        </EuiPopover>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+            </OuiButton>
+          </OuiPopoverFooter>
+        </OuiPopover>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 };

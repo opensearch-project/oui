@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,25 +39,25 @@ import classNames from 'classnames';
 
 import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import { getSecureRelForTarget } from '../../services';
-import { EuiText } from '../text';
-import { EuiTitle } from '../title';
-import { EuiBetaBadge, EuiBetaBadgeProps } from '../badge/beta_badge';
-import { EuiIconProps } from '../icon';
+import { OuiText } from '../text';
+import { OuiTitle } from '../title';
+import { OuiBetaBadge, OuiBetaBadgeProps } from '../badge/beta_badge';
+import { OuiIconProps } from '../icon';
 import {
-  EuiCardSelect,
-  EuiCardSelectProps,
-  euiCardSelectableColor,
+  OuiCardSelect,
+  OuiCardSelectProps,
+  ouiCardSelectableColor,
 } from './card_select';
 import { htmlIdGenerator } from '../../services/accessibility';
 import { validateHref } from '../../services/security/href_validator';
-import { EuiPanel, EuiPanelProps } from '../panel';
+import { OuiPanel, OuiPanelProps } from '../panel';
 
 type CardAlignment = 'left' | 'center' | 'right';
 
 const textAlignToClassNameMap: { [alignment in CardAlignment]: string } = {
-  left: 'euiCard--leftAligned',
-  center: 'euiCard--centerAligned',
-  right: 'euiCard--rightAligned',
+  left: 'ouiCard--leftAligned',
+  center: 'ouiCard--centerAligned',
+  right: 'ouiCard--rightAligned',
 };
 
 export const ALIGNMENTS = keysOf(textAlignToClassNameMap);
@@ -55,7 +66,7 @@ type CardLayout = 'vertical' | 'horizontal';
 
 const layoutToClassNameMap: { [layout in CardLayout]: string } = {
   vertical: '',
-  horizontal: 'euiCard--horizontal',
+  horizontal: 'ouiCard--horizontal',
 };
 
 export const LAYOUT_ALIGNMENTS = keysOf(layoutToClassNameMap);
@@ -63,7 +74,7 @@ export const LAYOUT_ALIGNMENTS = keysOf(layoutToClassNameMap);
 /**
  * Certain props are only allowed when the layout is vertical
  */
-type EuiCardPropsLayout = ExclusiveUnion<
+type OuiCardPropsLayout = ExclusiveUnion<
   {
     layout?: 'vertical';
     /**
@@ -88,9 +99,9 @@ type EuiCardPropsLayout = ExclusiveUnion<
   }
 >;
 
-export type EuiCardProps = Omit<CommonProps, 'aria-label'> &
+export type OuiCardProps = Omit<CommonProps, 'aria-label'> &
   Omit<HTMLAttributes<HTMLDivElement>, 'color' | 'title' | 'onClick'> &
-  EuiCardPropsLayout & {
+  OuiCardPropsLayout & {
     /**
      * Cards are required to have at least a title and a description and/or children
      */
@@ -102,20 +113,20 @@ export type EuiCardProps = Omit<CommonProps, 'aria-label'> &
     titleElement?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
 
     /**
-     * Determines the title's size, matching that of EuiTitle.
+     * Determines the title's size, matching that of OuiTitle.
      * Though, card titles can't be too large or small relative to the description text.
      */
     titleSize?: 's' | 'xs';
 
     /**
-     * Placed within a small EuiText `<p>` tag
+     * Placed within a small OuiText `<p>` tag
      */
     description?: NonNullable<ReactNode>;
 
     /**
-     * Accepts an `<EuiIcon>` node or `null`
+     * Accepts an `<OuiIcon>` node or `null`
      */
-    icon?: ReactElement<EuiIconProps> | null;
+    icon?: ReactElement<OuiIconProps> | null;
 
     /**
      * Custom children
@@ -150,25 +161,25 @@ export type EuiCardProps = Omit<CommonProps, 'aria-label'> &
      * **DEPRECATED: Use `betaBadgeProps.title` instead.**
      */
     betaBadgeTitle?: string;
-    betaBadgeProps?: Partial<EuiBetaBadgeProps>;
+    betaBadgeProps?: Partial<OuiBetaBadgeProps>;
     /**
-     * Matches to the color property of EuiPanel. If defined, removes any border & shadow.
+     * Matches to the color property of OuiPanel. If defined, removes any border & shadow.
      * Leave as `undefined` to display as a default panel.
      * Selectable cards will always display as a default panel.
      */
-    display?: EuiPanelProps['color'];
+    display?: OuiPanelProps['color'];
     /**
      * Padding applied around the content of the card
      */
-    paddingSize?: EuiPanelProps['paddingSize'];
+    paddingSize?: OuiPanelProps['paddingSize'];
     /**
      * Adds a button to the bottom of the card to allow for in-place selection
      */
-    selectable?: EuiCardSelectProps;
+    selectable?: OuiCardSelectProps;
     /**
      * Use a border style of card instead of shadow
      */
-    hasBorder?: EuiPanelProps['hasBorder'];
+    hasBorder?: OuiPanelProps['hasBorder'];
   } & (
     | {
         // description becomes optional when children is present
@@ -181,7 +192,7 @@ export type EuiCardProps = Omit<CommonProps, 'aria-label'> &
       }
   );
 
-export const EuiCard: FunctionComponent<EuiCardProps> = ({
+export const OuiCard: FunctionComponent<OuiCardProps> = ({
   className,
   description,
   isDisabled: _isDisabled,
@@ -227,29 +238,29 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   if (layout === 'horizontal') {
     if (image || footer || textAlign !== 'center') {
       throw new Error(
-        'EuiCard: `layout="horizontal"` cannot be used in conjunction with `image`, `footer`, or `textAlign`.'
+        'OuiCard: `layout="horizontal"` cannot be used in conjunction with `image`, `footer`, or `textAlign`.'
       );
     }
   }
 
   const selectableColorClass = selectable
-    ? `euiCard--isSelectable--${euiCardSelectableColor(
+    ? `ouiCard--isSelectable--${ouiCardSelectableColor(
         selectable.color,
         selectable.isSelected
       )}`
     : undefined;
 
   const classes = classNames(
-    'euiCard',
+    'ouiCard',
     textAlignToClassNameMap[textAlign],
     layoutToClassNameMap[layout],
     {
-      'euiCard--isClickable': isClickable,
-      'euiCard--hasBetaBadge': betaBadgeLabel,
-      'euiCard--hasIcon': icon,
-      'euiCard--isSelectable': selectable,
-      'euiCard-isSelected': selectable && selectable.isSelected,
-      'euiCard-isDisabled': isDisabled,
+      'ouiCard--isClickable': isClickable,
+      'ouiCard--hasBetaBadge': betaBadgeLabel,
+      'ouiCard--hasIcon': icon,
+      'ouiCard--isSelectable': selectable,
+      'ouiCard-isSelected': selectable && selectable.isSelected,
+      'ouiCard-isDisabled': isDisabled,
     },
     selectableColorClass,
     className
@@ -266,7 +277,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   if (image && layout === 'vertical') {
     if (isValidElement(image) || typeof image === 'string') {
       imageNode = (
-        <div className="euiCard__image">
+        <div className="ouiCard__image">
           {isValidElement(image) ? image : <img src={image} alt="" />}
         </div>
       );
@@ -278,14 +289,14 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   let iconNode;
   if (icon) {
     iconNode = React.cloneElement(icon, {
-      className: classNames(icon.props.className, 'euiCard__icon'),
+      className: classNames(icon.props.className, 'ouiCard__icon'),
     });
   }
 
   let optionalCardTop;
   if (imageNode || iconNode) {
     optionalCardTop = (
-      <div className="euiCard__top">
+      <div className="ouiCard__top">
         {imageNode}
         {iconNode}
       </div>
@@ -293,7 +304,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   }
 
   /**
-   * Optional EuiBetaBadge
+   * Optional OuiBetaBadge
    */
 
   let optionalBetaBadge;
@@ -301,15 +312,15 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   if (betaBadgeLabel) {
     optionalBetaBadgeID = `${ariaId}BetaBadge`;
     optionalBetaBadge = (
-      <span className="euiCard__betaBadgeWrapper">
-        <EuiBetaBadge
+      <span className="ouiCard__betaBadgeWrapper">
+        <OuiBetaBadge
           id={optionalBetaBadgeID}
-          {...(betaBadgeProps as EuiBetaBadgeProps)}
+          {...(betaBadgeProps as OuiBetaBadgeProps)}
           label={betaBadgeLabel}
           title={betaBadgeTitle}
           tooltipContent={betaBadgeTooltipContent}
           className={classNames(
-            'euiCard__betaBadge',
+            'ouiCard__betaBadge',
             betaBadgeProps?.className
           )}
         />
@@ -331,7 +342,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   let optionalSelectButton;
   if (selectable) {
     optionalSelectButton = (
-      <EuiCardSelect
+      <OuiCardSelect
         aria-describedby={`${ariaId}Title ${ariaDesc}`}
         {...selectable}
         buttonRef={(node) => {
@@ -350,7 +361,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   if (!isDisabled && href) {
     theTitle = (
       <a
-        className="euiCard__titleAnchor"
+        className="ouiCard__titleAnchor"
         onClick={onClick as React.MouseEventHandler<HTMLAnchorElement>}
         href={href}
         target={target}
@@ -365,7 +376,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   } else if (isDisabled || onClick) {
     theTitle = (
       <button
-        className="euiCard__titleButton"
+        className="ouiCard__titleButton"
         onClick={onClick as React.MouseEventHandler<HTMLButtonElement>}
         disabled={isDisabled}
         aria-describedby={`${optionalBetaBadgeID} ${ariaDesc}`}
@@ -386,7 +397,7 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
   const TitleElement = titleElement;
 
   return (
-    <EuiPanel
+    <OuiPanel
       element="div"
       className={classes}
       onClick={isClickable ? outerOnClick : undefined}
@@ -397,30 +408,30 @@ export const EuiCard: FunctionComponent<EuiCardProps> = ({
       {...rest}>
       {optionalCardTop}
 
-      <div className="euiCard__content">
-        <EuiTitle
+      <div className="ouiCard__content">
+        <OuiTitle
           id={`${ariaId}Title`}
-          className="euiCard__title"
+          className="ouiCard__title"
           size={titleSize}>
           <TitleElement>{theTitle}</TitleElement>
-        </EuiTitle>
+        </OuiTitle>
 
         {description && (
-          <EuiText id={ariaDesc} size="s" className="euiCard__description">
+          <OuiText id={ariaDesc} size="s" className="ouiCard__description">
             <p>{description}</p>
-          </EuiText>
+          </OuiText>
         )}
 
-        {children && <div className="euiCard__children">{children}</div>}
+        {children && <div className="ouiCard__children">{children}</div>}
       </div>
 
       {/* Beta badge should always be after the title/description but before any footer buttons */}
       {optionalBetaBadge}
 
       {layout === 'vertical' && footer && (
-        <div className="euiCard__footer">{footer}</div>
+        <div className="ouiCard__footer">{footer}</div>
       )}
       {optionalSelectButton}
-    </EuiPanel>
+    </OuiPanel>
   );
 };

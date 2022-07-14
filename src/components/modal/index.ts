@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,16 +29,16 @@
  */
 
 export {
-  EuiConfirmModal,
-  EuiConfirmModalProps,
-  CONFIRM_BUTTON as EUI_MODAL_CONFIRM_BUTTON,
-  CANCEL_BUTTON as EUI_MODAL_CANCEL_BUTTON,
+  OuiConfirmModal,
+  OuiConfirmModalProps,
+  CONFIRM_BUTTON as OUI_MODAL_CONFIRM_BUTTON,
+  CANCEL_BUTTON as OUI_MODAL_CANCEL_BUTTON,
 } from './confirm_modal';
-export { EuiModal, EuiModalProps } from './modal';
-export { EuiModalFooter, EuiModalFooterProps } from './modal_footer';
-export { EuiModalHeader, EuiModalHeaderProps } from './modal_header';
-export { EuiModalBody, EuiModalBodyProps } from './modal_body';
+export { OuiModal, OuiModalProps } from './modal';
+export { OuiModalFooter, OuiModalFooterProps } from './modal_footer';
+export { OuiModalHeader, OuiModalHeaderProps } from './modal_header';
+export { OuiModalBody, OuiModalBodyProps } from './modal_body';
 export {
-  EuiModalHeaderTitle,
-  EuiModalHeaderTitleProps,
+  OuiModalHeaderTitle,
+  OuiModalHeaderTitleProps,
 } from './modal_header_title';

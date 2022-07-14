@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiLink } from '../../../../src/components/';
+import { OuiLink } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 import * as t from '@babel/types';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiLink.__docgenInfo)
-    ? EuiLink.__docgenInfo[0]
-    : EuiLink.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiLink.__docgenInfo)
+    ? OuiLink.__docgenInfo[0]
+    : OuiLink.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.href = {
@@ -42,14 +53,14 @@ export default () => {
   return {
     setGhostBackground,
     config: {
-      componentName: 'EuiLink',
+      componentName: 'OuiLink',
       props: propsToUse,
       scope: {
-        EuiLink,
+        OuiLink,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLink'],
+        '@opensearch-project/oui': {
+          named: ['OuiLink'],
         },
       },
       customProps: {

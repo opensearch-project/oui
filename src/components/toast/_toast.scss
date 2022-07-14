@@ -1,16 +1,27 @@
-.euiToast {
-  border: $euiBorderThin;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiToast {
+  border: $ouiBorderThin;
   // This overwrites some of the border above
   // sass-lint:disable-block mixins-before-declarations
-  @include euiBottomShadowLarge($adjustBorders: true);
+  @include ouiBottomShadowLarge($adjustBorders: true);
 
   position: relative;
-  padding: $euiSize;
-  background-color: $euiColorEmptyShade;
+  padding: $ouiSize;
+  background-color: $ouiColorEmptyShade;
   width: 100%;
 
-  &:hover .euiToast__closeButton,
-  &:focus .euiToast__closeButton {
+  &:hover .ouiToast__closeButton,
+  &:focus .ouiToast__closeButton {
     opacity: 1;
   }
 }
@@ -18,46 +29,46 @@
 /**
   * 1. Fit button to icon.
   */
-.euiToast__closeButton {
+.ouiToast__closeButton {
   position: absolute;
-  top: $euiSize;
-  right: $euiSize;
+  top: $ouiSize;
+  right: $ouiSize;
   line-height: 0; /* 1 */
   appearance: none;
   opacity: 0;
-  transition: opacity $euiAnimSpeedFast $euiAnimSlightResistance;
+  transition: opacity $ouiAnimSpeedFast $ouiAnimSlightResistance;
 
   svg {
-    fill: tintOrShade($euiTitleColor, 50%, 70%);
+    fill: tintOrShade($ouiTitleColor, 50%, 70%);
   }
 
   &:hover {
     svg {
-      fill: $euiTitleColor;
+      fill: $ouiTitleColor;
     }
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $ouiFocusBackgroundColor;
     opacity: 1;
 
     svg {
-      fill: $euiColorPrimary;
+      fill: $ouiColorPrimary;
     }
   }
 }
 
 // Modifier naming and colors.
-$euiToastTypes: (
-  primary: makeGraphicContrastColor($euiColorPrimary, $euiColorEmptyShade),
-  success: makeGraphicContrastColor($euiColorSecondary, $euiColorEmptyShade),
-  warning: makeGraphicContrastColor($euiColorWarning, $euiColorEmptyShade),
-  danger: makeGraphicContrastColor($euiColorDanger, $euiColorEmptyShade),
+$ouiToastTypes: (
+  primary: makeGraphicContrastColor($ouiColorPrimary, $ouiColorEmptyShade),
+  success: makeGraphicContrastColor($ouiColorSecondary, $ouiColorEmptyShade),
+  warning: makeGraphicContrastColor($ouiColorWarning, $ouiColorEmptyShade),
+  danger: makeGraphicContrastColor($ouiColorDanger, $ouiColorEmptyShade),
 );
 
 // Create button modifiers based upon the map.
-@each $name, $color in $euiToastTypes {
-  .euiToast--#{$name} {
+@each $name, $color in $ouiToastTypes {
+  .ouiToast--#{$name} {
     border-top: 2px solid $color;
   }
 }
@@ -67,38 +78,38 @@ $euiToastTypes: (
  * 2. Apply margin to all but last item in the flex.
  * 3. Account for close button.
  */
-.euiToastHeader {
-  padding-right: $euiSizeL; /* 3 */
+.ouiToastHeader {
+  padding-right: $ouiSizeL; /* 3 */
   display: flex;
   align-items: baseline; /* 1 */
 
   > * + * {
-    margin-left: $euiSizeS; /* 2 */
+    margin-left: $ouiSizeS; /* 2 */
   }
 }
 
 /**
   * 1. Vertically center icon with first line of title.
   */
-.euiToastHeader__icon {
+.ouiToastHeader__icon {
   flex: 0 0 auto;
-  fill: $euiTitleColor;
+  fill: $ouiTitleColor;
   transform: translateY(2px); /* 1 */
 }
 
-.euiToastHeader__title {
-  @include euiTitle('xs');
-  @include euiTextBreakWord;
-  font-weight: $euiFontWeightLight;
+.ouiToastHeader__title {
+  @include ouiTitle('xs');
+  @include ouiTextBreakWord;
+  font-weight: $ouiFontWeightLight;
 }
 
-.euiToastHeader--withBody {
-  margin-bottom: $euiSizeS;
+.ouiToastHeader--withBody {
+  margin-bottom: $ouiSizeS;
 }
 
 /**
  * 1. Prevent long lines from overflowing.
  */
-.euiToastBody {
+.ouiToastBody {
   word-wrap: break-word; /* 1 */
 }

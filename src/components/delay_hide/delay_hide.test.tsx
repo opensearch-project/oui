@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,13 +30,13 @@
 
 import React from 'react';
 import { mount } from 'enzyme';
-import { EuiDelayHide } from './index';
+import { OuiDelayHide } from './index';
 
-describe('when EuiDelayHide is visible initially', () => {
+describe('when OuiDelayHide is visible initially', () => {
   function getWrapper() {
     jest.useFakeTimers();
     return mount(
-      <EuiDelayHide hide={false} render={() => <div>Hello World</div>} />
+      <OuiDelayHide hide={false} render={() => <div>Hello World</div>} />
     );
   }
 
@@ -70,11 +81,11 @@ describe('when EuiDelayHide is visible initially', () => {
   });
 });
 
-describe('when EuiDelayHide parent updates', () => {
+describe('when OuiDelayHide parent updates', () => {
   it('should still hide correctly', () => {
     jest.useFakeTimers();
     const wrapper = mount(
-      <EuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
     );
 
     wrapper.setProps({ hide: false });
@@ -87,11 +98,11 @@ describe('when EuiDelayHide parent updates', () => {
   });
 });
 
-describe('when EuiDelayHide is hidden initially', () => {
+describe('when OuiDelayHide is hidden initially', () => {
   function getWrapper() {
     jest.useFakeTimers();
     return mount(
-      <EuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
     );
   }
 
@@ -120,11 +131,11 @@ describe('when EuiDelayHide is hidden initially', () => {
   });
 });
 
-describe('when EuiDelayHide is visible initially and has a minimumDuration of 2000ms ', () => {
+describe('when OuiDelayHide is visible initially and has a minimumDuration of 2000ms ', () => {
   function getWrapper() {
     jest.useFakeTimers();
     const wrapper = mount(
-      <EuiDelayHide
+      <OuiDelayHide
         hide={false}
         minimumDuration={2000}
         render={() => <div>Hello World</div>}
@@ -153,11 +164,11 @@ describe('when EuiDelayHide is visible initially and has a minimumDuration of 20
   });
 });
 
-describe('when EuiDelayHide has been visible and become hidden', () => {
+describe('when OuiDelayHide has been visible and become hidden', () => {
   it('should still be visible for the minimum duration the second time', () => {
     jest.useFakeTimers();
     const wrapper = mount(
-      <EuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
     );
 
     wrapper.setProps({ hide: false });

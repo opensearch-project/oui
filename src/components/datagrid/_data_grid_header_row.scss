@@ -1,16 +1,27 @@
-.euiDataGridHeader {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiDataGridHeader {
   display: flex;
   z-index: 3; // Needs to sit above the content and focused cells
-  background: $euiColorEmptyShade;
+  background: $ouiColorEmptyShade;
   position: sticky; // In IE11 this does not work, but doesn't cause a break.
   top: 0;
 }
 
-@include euiDataGridHeaderCell {
-  @include euiFontSizeS;
+@include ouiDataGridHeaderCell {
+  @include ouiFontSizeS;
 
-  font-weight: $euiFontWeightBold;
-  padding: $euiDataGridCellPaddingM;
+  font-weight: $ouiFontWeightBold;
+  padding: $ouiDataGridCellPaddingM;
   flex: 0 0 auto;
   position: relative;
   align-items: center;
@@ -21,50 +32,50 @@
     width: 100%;
   }
 
-  &.euiDataGridHeaderCell--numeric {
+  &.ouiDataGridHeaderCell--numeric {
     text-align: right;
   }
 
-  &.euiDataGridHeaderCell--currency {
+  &.ouiDataGridHeaderCell--currency {
     text-align: right;
   }
 
   &:focus {
-    @include euiDataGridCellFocus;
+    @include ouiDataGridCellFocus;
     border-top: none;
   }
 
   // We only truncate if the cell is not a control column.
-  &:not(.euiDataGridHeaderCell--controlColumn) {
+  &:not(.ouiDataGridHeaderCell--controlColumn) {
     &:focus-within {
-      @include euiDataGridCellFocus;
+      @include ouiDataGridCellFocus;
       border-top: none;
     }
 
-    .euiDataGridHeaderCell__sortingArrow {
-      margin-right: $euiSizeXS;
+    .ouiDataGridHeaderCell__sortingArrow {
+      margin-right: $ouiSizeXS;
     }
 
-    .euiDataGridHeaderCell__anchor {
+    .ouiDataGridHeaderCell__anchor {
       width: 100%;
     }
 
-    .euiDataGridHeaderCell__button {
+    .ouiDataGridHeaderCell__button {
       flex: 0 0 auto;
       position: relative;
       align-items: center;
       display: flex;
       width: 100%;
-      font-weight: $euiFontWeightBold;
+      font-weight: $ouiFontWeightBold;
       outline: none;
 
-      .euiDataGridHeaderCell__sortingArrow {
+      .ouiDataGridHeaderCell__sortingArrow {
         flex-grow: 0;
       }
     }
 
-    .euiDataGridHeaderCell__content {
-      @include euiTextTruncate;
+    .ouiDataGridHeaderCell__content {
+      @include ouiTextTruncate;
       overflow: hidden;
       white-space: nowrap;
       text-align: left;
@@ -72,80 +83,80 @@
       align-self: baseline;
     }
 
-    .euiDataGridHeaderCell__icon {
+    .ouiDataGridHeaderCell__icon {
       flex-grow: 0;
       flex-basis: auto;
       width: auto;
-      padding-left: $euiSizeXS;
+      padding-left: $ouiSizeXS;
     }
   }
 }
 
-.euiDataGridHeader__action--selected {
+.ouiDataGridHeader__action--selected {
   // sass-lint:disable-block no-important
-  font-weight: $euiFontWeightBold !important;
+  font-weight: $ouiFontWeightBold !important;
 }
 
 // Header alternates
 // Often these need extra specificity because they need to gracefully clash with the border settings
 
-@include euiDataGridStyles(bordersNone, bordersHorizontal) {
-  .euiDataGridHeader {
-    background: $euiColorEmptyShade;
+@include ouiDataGridStyles(bordersNone, bordersHorizontal) {
+  .ouiDataGridHeader {
+    background: $ouiColorEmptyShade;
   }
 }
 
-@include euiDataGridStyles(headerUnderline) {
-  @include euiDataGridHeaderCell {
+@include ouiDataGridStyles(headerUnderline) {
+  @include ouiDataGridHeaderCell {
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: $euiBorderThick;
-    border-bottom-color: $euiTextColor;
+    border-bottom: $ouiBorderThick;
+    border-bottom-color: $ouiTextColor;
   }
 }
 
-@include euiDataGridStyles(bordersNone, headerUnderline) {
-  @include euiDataGridHeaderCell {
-    border-bottom: $euiBorderThick;
-    border-color: $euiTextColor;
+@include ouiDataGridStyles(bordersNone, headerUnderline) {
+  @include ouiDataGridHeaderCell {
+    border-bottom: $ouiBorderThick;
+    border-color: $ouiTextColor;
   }
 }
 
-@include euiDataGridStyles(headerShade) {
-  @include euiDataGridHeaderCell {
-    background: tintOrShade($euiColorLightestShade, 0%, 10%);
+@include ouiDataGridStyles(headerShade) {
+  @include ouiDataGridHeaderCell {
+    background: tintOrShade($ouiColorLightestShade, 0%, 10%);
   }
 }
 
-@include euiDataGridStyles(headerShade, bordersAll) {
-  @include euiDataGridHeaderCell {
-    border-right: $euiBorderThin;
-    border-bottom: $euiBorderThin;
+@include ouiDataGridStyles(headerShade, bordersAll) {
+  @include ouiDataGridHeaderCell {
+    border-right: $ouiBorderThin;
+    border-bottom: $ouiBorderThin;
     border-left: none;
 
     &:first-of-type {
-      border-left: $euiBorderThin;
+      border-left: $ouiBorderThin;
     }
   }
 }
 
-@include euiDataGridStyles(headerShade, bordersHorizontal) {
-  @include euiDataGridHeaderCell {
+@include ouiDataGridStyles(headerShade, bordersHorizontal) {
+  @include ouiDataGridHeaderCell {
     border-top: none;
-    border-bottom: $euiBorderThin;
+    border-bottom: $ouiBorderThin;
   }
 }
 
 // Border alternates
-@include euiDataGridStyles(bordersNone) {
-  @include euiDataGridHeaderCell {
+@include ouiDataGridStyles(bordersNone) {
+  @include ouiDataGridHeaderCell {
     border: none;
   }
 }
 
-@include euiDataGridStyles(borderhorizontal) {
-  @include euiDataGridHeaderCell {
+@include ouiDataGridStyles(borderhorizontal) {
+  @include ouiDataGridHeaderCell {
     border-top: none;
     border-right: none;
     border-left: none;
@@ -153,39 +164,39 @@
 }
 
 // Font alternates
-@include euiDataGridStyles(fontSizeSmall) {
-  @include euiDataGridHeaderCell {
-    @include euiFontSizeXS;
+@include ouiDataGridStyles(fontSizeSmall) {
+  @include ouiDataGridHeaderCell {
+    @include ouiFontSizeXS;
   }
 }
 
-@include euiDataGridStyles(fontSizeLarge) {
-  @include euiDataGridHeaderCell {
-    @include euiFontSize;
+@include ouiDataGridStyles(fontSizeLarge) {
+  @include ouiDataGridHeaderCell {
+    @include ouiFontSize;
   }
 }
 
 // Padding alternates
-@include euiDataGridStyles(paddingSmall) {
-  @include euiDataGridHeaderCell {
-    padding: $euiDataGridCellPaddingS;
+@include ouiDataGridStyles(paddingSmall) {
+  @include ouiDataGridHeaderCell {
+    padding: $ouiDataGridCellPaddingS;
   }
 }
 
-@include euiDataGridStyles(paddingLarge) {
-  @include euiDataGridHeaderCell {
-    padding: $euiDataGridCellPaddingL;
+@include ouiDataGridStyles(paddingLarge) {
+  @include ouiDataGridHeaderCell {
+    padding: $ouiDataGridCellPaddingL;
   }
 }
 
-@include euiDataGridStyles(noControls, bordersAll) {
-  @include euiDataGridHeaderCell {
-    border-top: $euiBorderThin;
+@include ouiDataGridStyles(noControls, bordersAll) {
+  @include ouiDataGridHeaderCell {
+    border-top: $ouiBorderThin;
   }
 }
 
-@include euiDataGridStyles(noControls, bordersHorizontal) {
-  @include euiDataGridHeaderCell {
-    border-top: $euiBorderThin;
+@include ouiDataGridStyles(noControls, bordersHorizontal) {
+  @include ouiDataGridHeaderCell {
+    border-top: $ouiBorderThin;
   }
 }

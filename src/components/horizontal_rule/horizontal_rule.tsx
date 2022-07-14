@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,47 +33,47 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-export type EuiHorizontalRuleSize = keyof typeof sizeToClassNameMap;
-export type EuiHorizontalRuleMargin = keyof typeof marginToClassNameMap;
+export type OuiHorizontalRuleSize = keyof typeof sizeToClassNameMap;
+export type OuiHorizontalRuleMargin = keyof typeof marginToClassNameMap;
 
-export interface EuiHorizontalRuleProps
+export interface OuiHorizontalRuleProps
   extends CommonProps,
     HTMLAttributes<HTMLHRElement> {
   /**
    * Defines the width of the HR.
    */
-  size?: EuiHorizontalRuleSize;
-  margin?: EuiHorizontalRuleMargin;
+  size?: OuiHorizontalRuleSize;
+  margin?: OuiHorizontalRuleMargin;
 }
 
 const sizeToClassNameMap = {
-  full: 'euiHorizontalRule--full',
-  half: 'euiHorizontalRule--half',
-  quarter: 'euiHorizontalRule--quarter',
+  full: 'ouiHorizontalRule--full',
+  half: 'ouiHorizontalRule--half',
+  quarter: 'ouiHorizontalRule--quarter',
 };
 
 export const SIZES = Object.keys(sizeToClassNameMap);
 
 const marginToClassNameMap = {
   none: null,
-  xs: 'euiHorizontalRule--marginXSmall',
-  s: 'euiHorizontalRule--marginSmall',
-  m: 'euiHorizontalRule--marginMedium',
-  l: 'euiHorizontalRule--marginLarge',
-  xl: 'euiHorizontalRule--marginXLarge',
-  xxl: 'euiHorizontalRule--marginXXLarge',
+  xs: 'ouiHorizontalRule--marginXSmall',
+  s: 'ouiHorizontalRule--marginSmall',
+  m: 'ouiHorizontalRule--marginMedium',
+  l: 'ouiHorizontalRule--marginLarge',
+  xl: 'ouiHorizontalRule--marginXLarge',
+  xxl: 'ouiHorizontalRule--marginXXLarge',
 };
 
 export const MARGINS = Object.keys(marginToClassNameMap);
 
-export const EuiHorizontalRule: FunctionComponent<EuiHorizontalRuleProps> = ({
+export const OuiHorizontalRule: FunctionComponent<OuiHorizontalRuleProps> = ({
   className,
   size = 'full',
   margin = 'l',
   ...rest
 }) => {
   const classes = classNames(
-    'euiHorizontalRule',
+    'ouiHorizontalRule',
     sizeToClassNameMap[size],
     marginToClassNameMap[margin],
     className

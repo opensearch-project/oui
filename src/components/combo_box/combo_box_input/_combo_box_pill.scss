@@ -1,30 +1,41 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /*
- * 1. Overwrites the base styling of EuiBadge, to give it a larger size and margins
+ * 1. Overwrites the base styling of OuiBadge, to give it a larger size and margins
  * that make sense in the input wrap.
  */
-.euiComboBoxPill {
-  height: $euiSizeL - 2px;
-  line-height: $euiSizeL - 2px;
+.ouiComboBoxPill {
+  height: $ouiSizeL - 2px;
+  line-height: $ouiSizeL - 2px;
   vertical-align: baseline;
 
   &,
   & + & /* 1 */ {
-    margin: $euiSizeXS;
+    margin: $ouiSizeXS;
   }
 
-  .euiComboBox--compressed &,
-  .euiComboBox--compressed & + & /* 1 */ {
-    margin: ($euiSizeXS + 1px) $euiSizeXS 0 0;
+  .ouiComboBox--compressed &,
+  .ouiComboBox--compressed & + & /* 1 */ {
+    margin: ($ouiSizeXS + 1px) $ouiSizeXS 0 0;
   }
 
   &--plainText {
-    @include euiFont;
-    @include euiTextTruncate;
+    @include ouiFont;
+    @include ouiTextTruncate;
 
-    line-height: $euiSizeL;
-    font-size: $euiFontSizeS;
+    line-height: $ouiSizeL;
+    font-size: $ouiFontSizeS;
     padding: 0;
-    color: $euiTextColor;
+    color: $ouiTextColor;
     vertical-align: middle;
     display: inline-block;
   }

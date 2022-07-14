@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,10 +38,10 @@ import React, {
 import classNames from 'classnames';
 
 import { keys } from '../../../services';
-import { EuiComboBoxOptionOption, OptionHandler } from '../types';
+import { OuiComboBoxOptionOption, OptionHandler } from '../types';
 import { CommonProps } from '../../common';
 
-export interface EuiComboBoxOptionProps<T>
+export interface OuiComboBoxOptionProps<T>
   extends CommonProps,
     Omit<HTMLAttributes<HTMLButtonElement>, 'onClick'> {
   children?: ReactNode;
@@ -39,11 +50,11 @@ export interface EuiComboBoxOptionProps<T>
   isFocused: boolean;
   onClick: OptionHandler<T>;
   onEnterKey: OptionHandler<T>;
-  option: EuiComboBoxOptionOption<T>;
+  option: OuiComboBoxOptionOption<T>;
   optionRef?: RefCallback<HTMLButtonElement>;
 }
 
-export class EuiComboBoxOption<T> extends Component<EuiComboBoxOptionProps<T>> {
+export class OuiComboBoxOption<T> extends Component<OuiComboBoxOptionProps<T>> {
   onClick = () => {
     const { onClick, option, disabled } = this.props;
 
@@ -81,9 +92,9 @@ export class EuiComboBoxOption<T> extends Component<EuiComboBoxOptionProps<T>> {
       ...rest
     } = this.props;
 
-    const classes = classNames('euiComboBoxOption', className, {
-      'euiComboBoxOption-isDisabled': disabled,
-      'euiComboBoxOption-isFocused': isFocused,
+    const classes = classNames('ouiComboBoxOption', className, {
+      'ouiComboBoxOption-isDisabled': disabled,
+      'ouiComboBoxOption-isFocused': isFocused,
     });
 
     const { label } = option;

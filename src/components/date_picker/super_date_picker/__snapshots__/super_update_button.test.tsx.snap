@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSuperUpdateButton is rendered 1`] = `
-<EuiToolTip
+exports[`OuiSuperUpdateButton is rendered 1`] = `
+<OuiToolTip
   delay="regular"
   position="bottom"
 >
-  <EuiButton
-    className="euiSuperUpdateButton"
+  <OuiButton
+    className="ouiSuperUpdateButton"
     color="primary"
     fill={true}
     iconType="refresh"
@@ -15,31 +15,31 @@ exports[`EuiSuperUpdateButton is rendered 1`] = `
     onClick={[Function]}
     textProps={
       Object {
-        "className": "euiSuperUpdateButton__text",
+        "className": "ouiSuperUpdateButton__text",
       }
     }
   >
-    <EuiI18n
+    <OuiI18n
       default="Refresh"
-      token="euiSuperUpdateButton.refreshButtonLabel"
+      token="ouiSuperUpdateButton.refreshButtonLabel"
     />
-  </EuiButton>
-</EuiToolTip>
+  </OuiButton>
+</OuiToolTip>
 `;
 
-exports[`EuiSuperUpdateButton isDisabled 1`] = `
-<EuiToolTip
+exports[`OuiSuperUpdateButton isDisabled 1`] = `
+<OuiToolTip
   content={
-    <EuiI18n
+    <OuiI18n
       default="Cannot update"
-      token="euiSuperUpdateButton.cannotUpdateTooltip"
+      token="ouiSuperUpdateButton.cannotUpdateTooltip"
     />
   }
   delay="regular"
   position="bottom"
 >
-  <EuiButton
-    className="euiSuperUpdateButton"
+  <OuiButton
+    className="ouiSuperUpdateButton"
     color="primary"
     fill={true}
     iconType="refresh"
@@ -48,25 +48,25 @@ exports[`EuiSuperUpdateButton isDisabled 1`] = `
     onClick={[Function]}
     textProps={
       Object {
-        "className": "euiSuperUpdateButton__text",
+        "className": "ouiSuperUpdateButton__text",
       }
     }
   >
-    <EuiI18n
+    <OuiI18n
       default="Refresh"
-      token="euiSuperUpdateButton.refreshButtonLabel"
+      token="ouiSuperUpdateButton.refreshButtonLabel"
     />
-  </EuiButton>
-</EuiToolTip>
+  </OuiButton>
+</OuiToolTip>
 `;
 
-exports[`EuiSuperUpdateButton isLoading 1`] = `
-<EuiToolTip
+exports[`OuiSuperUpdateButton isLoading 1`] = `
+<OuiToolTip
   delay="regular"
   position="bottom"
 >
-  <EuiButton
-    className="euiSuperUpdateButton"
+  <OuiButton
+    className="ouiSuperUpdateButton"
     color="success"
     fill={true}
     iconType="kqlFunction"
@@ -75,31 +75,31 @@ exports[`EuiSuperUpdateButton isLoading 1`] = `
     onClick={[Function]}
     textProps={
       Object {
-        "className": "euiSuperUpdateButton__text",
+        "className": "ouiSuperUpdateButton__text",
       }
     }
   >
-    <EuiI18n
+    <OuiI18n
       default="Updating"
-      token="euiSuperUpdateButton.updatingButtonLabel"
+      token="ouiSuperUpdateButton.updatingButtonLabel"
     />
-  </EuiButton>
-</EuiToolTip>
+  </OuiButton>
+</OuiToolTip>
 `;
 
-exports[`EuiSuperUpdateButton needsUpdate 1`] = `
-<EuiToolTip
+exports[`OuiSuperUpdateButton needsUpdate 1`] = `
+<OuiToolTip
   content={
-    <EuiI18n
+    <OuiI18n
       default="Click to apply"
-      token="euiSuperUpdateButton.clickToApplyTooltip"
+      token="ouiSuperUpdateButton.clickToApplyTooltip"
     />
   }
   delay="regular"
   position="bottom"
 >
-  <EuiButton
-    className="euiSuperUpdateButton"
+  <OuiButton
+    className="ouiSuperUpdateButton"
     color="success"
     fill={true}
     iconType="kqlFunction"
@@ -108,25 +108,25 @@ exports[`EuiSuperUpdateButton needsUpdate 1`] = `
     onClick={[Function]}
     textProps={
       Object {
-        "className": "euiSuperUpdateButton__text",
+        "className": "ouiSuperUpdateButton__text",
       }
     }
   >
-    <EuiI18n
+    <OuiI18n
       default="Update"
-      token="euiSuperUpdateButton.updateButtonLabel"
+      token="ouiSuperUpdateButton.updateButtonLabel"
     />
-  </EuiButton>
-</EuiToolTip>
+  </OuiButton>
+</OuiToolTip>
 `;
 
-exports[`EuiSuperUpdateButton showTooltip 1`] = `
-<EuiToolTip
+exports[`OuiSuperUpdateButton showTooltip 1`] = `
+<OuiToolTip
   delay="regular"
   position="bottom"
 >
-  <EuiButton
-    className="euiSuperUpdateButton"
+  <OuiButton
+    className="ouiSuperUpdateButton"
     color="primary"
     fill={true}
     iconType="refresh"
@@ -135,14 +135,14 @@ exports[`EuiSuperUpdateButton showTooltip 1`] = `
     onClick={[Function]}
     textProps={
       Object {
-        "className": "euiSuperUpdateButton__text",
+        "className": "ouiSuperUpdateButton__text",
       }
     }
   >
-    <EuiI18n
+    <OuiI18n
       default="Refresh"
-      token="euiSuperUpdateButton.refreshButtonLabel"
+      token="ouiSuperUpdateButton.refreshButtonLabel"
     />
-  </EuiButton>
-</EuiToolTip>
+  </OuiButton>
+</OuiToolTip>
 `;

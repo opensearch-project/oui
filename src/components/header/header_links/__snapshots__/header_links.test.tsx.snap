@@ -1,99 +1,99 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiHeaderLinks gutterSize l is rendered 1`] = `
+exports[`OuiHeaderLinks gutterSize l is rendered 1`] = `
 <nav
   aria-label="App menu"
-  class="euiHeaderLinks"
+  class="ouiHeaderLinks"
 >
   <div
-    class="euiHeaderLinks__list euiHeaderLinks__list--gutterL"
+    class="ouiHeaderLinks__list ouiHeaderLinks__list--gutterL"
   />
 </nav>
 `;
 
-exports[`EuiHeaderLinks gutterSize m is rendered 1`] = `
+exports[`OuiHeaderLinks gutterSize m is rendered 1`] = `
 <nav
   aria-label="App menu"
-  class="euiHeaderLinks"
+  class="ouiHeaderLinks"
 >
   <div
-    class="euiHeaderLinks__list euiHeaderLinks__list--gutterM"
+    class="ouiHeaderLinks__list ouiHeaderLinks__list--gutterM"
   />
 </nav>
 `;
 
-exports[`EuiHeaderLinks gutterSize s is rendered 1`] = `
+exports[`OuiHeaderLinks gutterSize s is rendered 1`] = `
 <nav
   aria-label="App menu"
-  class="euiHeaderLinks"
+  class="ouiHeaderLinks"
 >
   <div
-    class="euiHeaderLinks__list euiHeaderLinks__list--gutterS"
+    class="ouiHeaderLinks__list ouiHeaderLinks__list--gutterS"
   />
 </nav>
 `;
 
-exports[`EuiHeaderLinks gutterSize xs is rendered 1`] = `
+exports[`OuiHeaderLinks gutterSize xs is rendered 1`] = `
 <nav
   aria-label="App menu"
-  class="euiHeaderLinks"
+  class="ouiHeaderLinks"
 >
   <div
-    class="euiHeaderLinks__list euiHeaderLinks__list--gutterXS"
+    class="ouiHeaderLinks__list ouiHeaderLinks__list--gutterXS"
   />
 </nav>
 `;
 
-exports[`EuiHeaderLinks is rendered 1`] = `
+exports[`OuiHeaderLinks is rendered 1`] = `
 <nav
   aria-label="aria-label"
-  class="euiHeaderLinks testClass1 testClass2"
+  class="ouiHeaderLinks testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiHeaderLinks__list euiHeaderLinks__list--gutterS"
+    class="ouiHeaderLinks__list ouiHeaderLinks__list--gutterS"
   />
 </nav>
 `;
 
-exports[`EuiHeaderLinks popover props is never rendered with "none" 1`] = `
+exports[`OuiHeaderLinks popover props is never rendered with "none" 1`] = `
 <nav
   aria-label="App menu"
-  class="euiHeaderLinks"
+  class="ouiHeaderLinks"
 >
   <div
-    class="euiHeaderLinks__list euiHeaderLinks__list--gutterS"
+    class="ouiHeaderLinks__list ouiHeaderLinks__list--gutterS"
   />
 </nav>
 `;
 
-exports[`EuiHeaderLinks popover props is rendered 1`] = `
+exports[`OuiHeaderLinks popover props is rendered 1`] = `
 <nav
   aria-label="App menu"
-  class="euiHeaderLinks"
+  class="ouiHeaderLinks"
 >
   <div
-    class="euiPopover euiPopover--anchorDownRight"
+    class="ouiPopover ouiPopover--anchorDownRight"
   >
     <div
-      class="euiPopover__anchor customAnchorClass"
+      class="ouiPopover__anchor customAnchorClass"
     >
       <button
         aria-label="Open menu"
-        class="euiButtonEmpty euiButtonEmpty--text euiHeaderSectionItemButton customButtonClass"
+        class="ouiButtonEmpty ouiButtonEmpty--text ouiHeaderSectionItemButton customButtonClass"
         type="button"
       >
         <span
-          class="euiButtonContent euiButtonEmpty__content"
+          class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            class="euiButtonEmpty__text"
+            class="ouiButtonEmpty__text"
           >
             <span
-              class="euiHeaderSectionItemButton__content"
+              class="ouiHeaderSectionItemButton__content"
             >
               <span
-                data-euiicon-type="bolt"
+                data-ouiicon-type="bolt"
               />
             </span>
           </span>

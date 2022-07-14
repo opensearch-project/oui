@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useCallback } from 'react';
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiImage,
-  EuiTitle,
-  EuiSpacer,
+  OuiDataGrid,
+  OuiImage,
+  OuiTitle,
+  OuiSpacer,
 } from '../../../../src/components/';
 
 const columns = [
@@ -75,12 +86,12 @@ for (let i = 1; i < 5; i++) {
 const Franchise = (props) => {
   return (
     <div>
-      <EuiTitle size="s">
+      <OuiTitle size="s">
         <h3>{props.name} is the best!</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
+      </OuiTitle>
+      <OuiSpacer size="s" />
       {props.name === 'Star Wars' ? (
-        <EuiImage
+        <OuiImage
           allowFullScreen
           size="m"
           hasShadow
@@ -89,7 +100,7 @@ const Franchise = (props) => {
           url="https://source.unsplash.com/600x600/?starwars"
         />
       ) : (
-        <EuiImage
+        <OuiImage
           allowFullScreen
           size="m"
           hasShadow
@@ -152,8 +163,8 @@ const DataGridSchema = () => {
     setVisibleColumns(visibleColumns);
 
   return (
-    <EuiDataGrid
-      aria-label="Top EUI contributors"
+    <OuiDataGrid
+      aria-label="Top OUI contributors"
       columns={columns}
       columnVisibility={{
         visibleColumns: visibleColumns,

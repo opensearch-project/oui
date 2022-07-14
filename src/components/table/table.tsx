@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@ import React, { FunctionComponent, TableHTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export interface EuiTableProps
+export interface OuiTableProps
   extends CommonProps,
     TableHTMLAttributes<HTMLTableElement> {
   compressed?: boolean;
@@ -34,10 +45,10 @@ export interface EuiTableProps
 
 const tableLayoutToClassMap: { [tableLayout: string]: string | null } = {
   fixed: null,
-  auto: 'euiTable--auto',
+  auto: 'ouiTable--auto',
 };
 
-export const EuiTable: FunctionComponent<EuiTableProps> = ({
+export const OuiTable: FunctionComponent<OuiTableProps> = ({
   children,
   className,
   compressed,
@@ -46,11 +57,11 @@ export const EuiTable: FunctionComponent<EuiTableProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiTable',
+    'ouiTable',
     className,
     {
-      'euiTable--compressed': compressed,
-      'euiTable--responsive': responsive,
+      'ouiTable--compressed': compressed,
+      'ouiTable--responsive': responsive,
     },
     tableLayoutToClassMap[tableLayout]
   );

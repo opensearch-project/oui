@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { getParameters } from 'codesandbox/lib/api/define';
 import {
-  cleanEuiImports,
+  cleanOuiImports,
   hasDisplayToggles,
   listExtraDeps,
 } from '../../services';
@@ -20,7 +31,7 @@ const getVersion = (packageName) => {
  * regex and magic happens:
  *
  * 1. A `content` prop is passed containing the src-doc example code we need to manipulate for CS.
- * 2. If no content exists (like the homepage link), we'll make a hello world file bundled with EUI and call it a day.
+ * 2. If no content exists (like the homepage link), we'll make a hello world file bundled with OUI and call it a day.
  * 3. If content exists, we build an `index.js` file with a <Demo> component based on the original content.
  * 4. If content contains `DisplayToggles`, we also generate a `display_toggles.js` file alongside the `index.js` file to import.
  * 5. Through regex we read the dependencies of both `content` and `display_toggles` and pass that to CS.
@@ -49,16 +60,16 @@ export const CodeSandboxLinkComponent = ({
   let cssFile;
   switch (context.theme) {
     case 'amsterdam-light':
-      cssFile = '@elastic/eui/dist/eui_theme_amsterdam_light.css';
+      cssFile = '@opensearch-project/oui/dist/oui_theme_amsterdam_light.css';
       break;
     case 'amsterdam-dark':
-      cssFile = '@elastic/eui/dist/eui_theme_amsterdam_dark.css';
+      cssFile = '@opensearch-project/oui/dist/oui_theme_amsterdam_dark.css';
       break;
     case 'dark':
-      cssFile = '@elastic/eui/dist/eui_theme_dark.css';
+      cssFile = '@opensearch-project/oui/dist/oui_theme_dark.css';
       break;
     default:
-      cssFile = '@elastic/eui/dist/eui_theme_light.css';
+      cssFile = '@opensearch-project/oui/dist/oui_theme_light.css';
       break;
   }
 
@@ -71,10 +82,10 @@ import '${cssFile}';
 import React from 'react';
 
 import {
-  EuiButton,
-} from '@elastic/eui';
+  OuiButton,
+} from '@opensearch-project/oui';
 
-const Demo = () => (<EuiButton>Hello world!</EuiButton>);
+const Demo = () => (<OuiButton>Hello world!</OuiButton>);
 
 ReactDOM.render(
   <Demo />,
@@ -83,10 +94,10 @@ ReactDOM.render(
 `;
   } else {
     /** This cleans the Demo JS example for Code Sanbox.
-    - Replaces relative imports with pure @elastic/eui ones
+    - Replaces relative imports with pure @opensearch-project/oui ones
     - Changes the JS example from a default export to a component const named Demo
     **/
-    const exampleCleaned = cleanEuiImports(content)
+    const exampleCleaned = cleanOuiImports(content)
       .replace('export default', 'const Demo =')
       .replace(
         /(from )'(..\/)+display_toggles(\/?';)/,
@@ -127,7 +138,7 @@ ${exampleClose}
 
   /* 4 */
   if (hasDisplayToggles(indexContent)) {
-    const cleanedDisplayToggles = cleanEuiImports(displayTogglesRawCode);
+    const cleanedDisplayToggles = cleanOuiImports(displayTogglesRawCode);
     const displayToggleDeps = listExtraDeps(cleanedDisplayToggles);
 
     /* 5 */
@@ -139,7 +150,7 @@ ${exampleClose}
       'package.json': {
         content: {
           dependencies: {
-            '@elastic/eui': pkg.version,
+            '@opensearch-project/oui': pkg.version,
             ...[
               '@elastic/datemath',
               'moment',
@@ -163,7 +174,7 @@ ${exampleClose}
 
   /* 4 */
   if (hasDisplayToggles(indexContent)) {
-    const cleanedDisplayToggles = cleanEuiImports(displayTogglesRawCode);
+    const cleanedDisplayToggles = cleanOuiImports(displayTogglesRawCode);
 
     config.files['display_toggles.js'] = {
       content: cleanedDisplayToggles,

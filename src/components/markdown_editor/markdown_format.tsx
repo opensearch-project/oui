@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,7 +36,7 @@ import {
   defaultParsingPlugins,
 } from './plugins/markdown_default_plugins';
 
-export interface EuiMarkdownFormatProps {
+export interface OuiMarkdownFormatProps {
   children: string;
   /** array of unified plugins to parse content into an AST */
   parsingPluginList?: PluggableList;
@@ -33,7 +44,7 @@ export interface EuiMarkdownFormatProps {
   processingPluginList?: PluggableList;
 }
 
-export const EuiMarkdownFormat: FunctionComponent<EuiMarkdownFormatProps> = ({
+export const OuiMarkdownFormat: FunctionComponent<OuiMarkdownFormatProps> = ({
   children,
   parsingPluginList = defaultParsingPlugins,
   processingPluginList = defaultProcessingPlugins,
@@ -52,5 +63,5 @@ export const EuiMarkdownFormat: FunctionComponent<EuiMarkdownFormatProps> = ({
       return children;
     }
   }, [children, processor]);
-  return <div className="euiMarkdownFormat">{result}</div>;
+  return <div className="ouiMarkdownFormat">{result}</div>;
 };

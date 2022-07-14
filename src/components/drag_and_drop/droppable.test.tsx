@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,8 +35,8 @@ import { resetServerContext } from 'react-beautiful-dnd';
 import { findTestSubject } from '../../test';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiDragDropContext, EuiDroppable } from './';
-import { EuiDroppableContext } from './droppable';
+import { OuiDragDropContext, OuiDroppable } from './';
+import { OuiDroppableContext } from './droppable';
 
 function snapshotDragDropContext(component: ReactWrapper) {
   // Get the Portal's sibling and return its html
@@ -35,7 +46,7 @@ function snapshotDragDropContext(component: ReactWrapper) {
   return container.firstChild;
 }
 
-describe('EuiDroppable', () => {
+describe('OuiDroppable', () => {
   afterEach(() => {
     resetServerContext();
   });
@@ -50,9 +61,9 @@ describe('EuiDroppable', () => {
       };
     });
     const component = mount(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">{() => <div />}</EuiDroppable>
-      </EuiDragDropContext>
+      <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <OuiDroppable droppableId="testDroppable">{() => <div />}</OuiDroppable>
+      </OuiDragDropContext>
     );
 
     expect(snapshotDragDropContext(component)).toMatchSnapshot();
@@ -68,11 +79,11 @@ describe('EuiDroppable', () => {
       };
     });
     const component = mount(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">
+      <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <OuiDroppable droppableId="testDroppable">
           <div />
-        </EuiDroppable>
-      </EuiDragDropContext>
+        </OuiDroppable>
+      </OuiDragDropContext>
     );
 
     expect(snapshotDragDropContext(component)).toMatchSnapshot();
@@ -89,13 +100,13 @@ describe('EuiDroppable', () => {
     });
 
     const component = mount(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-        <EuiDroppable droppableId="testDroppable">
+      <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
+        <OuiDroppable droppableId="testDroppable">
           <div />
           <div />
           <div />
-        </EuiDroppable>
-      </EuiDragDropContext>
+        </OuiDroppable>
+      </OuiDragDropContext>
     );
 
     expect(snapshotDragDropContext(component)).toMatchSnapshot();
@@ -114,17 +125,17 @@ describe('EuiDroppable', () => {
       test('sets `cloneItems` on proprietary context', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-            <EuiDroppable droppableId="testDroppable" cloneDraggables={true}>
-              <EuiDroppableContext.Consumer>
+          <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
+            <OuiDroppable droppableId="testDroppable" cloneDraggables={true}>
+              <OuiDroppableContext.Consumer>
                 {({ cloneItems }) => (
                   <div data-test-subj="child">
                     {cloneItems ? 'true' : 'false'}
                   </div>
                 )}
-              </EuiDroppableContext.Consumer>
-            </EuiDroppable>
-          </EuiDragDropContext>
+              </OuiDroppableContext.Consumer>
+            </OuiDroppable>
+          </OuiDragDropContext>
         );
 
         expect(findTestSubject(component, 'child').text()).toBe('true');
@@ -133,20 +144,20 @@ describe('EuiDroppable', () => {
       test('sets `isDropDisabled`', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-            <EuiDroppable droppableId="testDroppable" cloneDraggables={true}>
-              <EuiDroppableContext.Consumer>
+          <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
+            <OuiDroppable droppableId="testDroppable" cloneDraggables={true}>
+              <OuiDroppableContext.Consumer>
                 {({ cloneItems }) => (
                   <div data-test-subj="child">
                     {cloneItems ? 'true' : 'false'}
                   </div>
                 )}
-              </EuiDroppableContext.Consumer>
-            </EuiDroppable>
-          </EuiDragDropContext>
+              </OuiDroppableContext.Consumer>
+            </OuiDroppable>
+          </OuiDragDropContext>
         );
 
-        expect(component.find('.euiDroppable--isDisabled').length).toBe(1);
+        expect(component.find('.ouiDroppable--isDisabled').length).toBe(1);
       });
     });
   });

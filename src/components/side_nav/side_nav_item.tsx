@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,19 +40,19 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-import { EuiIcon } from '../icon';
+import { OuiIcon } from '../icon';
 
 import { getSecureRelForTarget } from '../../services';
 import { validateHref } from '../../services/security/href_validator';
-import { EuiInnerText } from '../inner_text';
+import { OuiInnerText } from '../inner_text';
 
 /**
  * The props that are exposed to, or altered for, the consumer
- * for use in the object of items in `EuiSideNav`
+ * for use in the object of items in `OuiSideNav`
  * can be found in the `side_nave_types.ts` file.
  */
 
-export type _EuiSideNavItemButtonProps = CommonProps & {
+export type _OuiSideNavItemButtonProps = CommonProps & {
   /**
    * Is an optional string to be passed as the navigation item's `href` prop,
    * and by default it will force rendering of the item as an `<a>`
@@ -58,7 +69,7 @@ export type _EuiSideNavItemButtonProps = CommonProps & {
   disabled?: boolean;
 };
 
-export interface _EuiSideNavItemProps {
+export interface _OuiSideNavItemProps {
   /**
    * React node which will be rendered as a small icon to the
    * left of the navigation item text
@@ -80,7 +91,7 @@ export interface _EuiSideNavItemProps {
    */
   truncate?: boolean;
   /**
-   * Passed to the actual `.euiSideNavItemButton` element
+   * Passed to the actual `.ouiSideNavItemButton` element
    */
   buttonClassName?: string;
   // Exposed as different prop type to consumer
@@ -92,20 +103,20 @@ export interface _EuiSideNavItemProps {
   childrenOnly?: boolean;
 }
 
-type ExcludeEuiSideNavItemProps<T> = Pick<
+type ExcludeOuiSideNavItemProps<T> = Pick<
   T,
-  Exclude<keyof T, keyof _EuiSideNavItemProps | 'renderItem'>
+  Exclude<keyof T, keyof _OuiSideNavItemProps | 'renderItem'>
 >;
-type OmitEuiSideNavItemProps<T> = {
-  [K in keyof ExcludeEuiSideNavItemProps<T>]: T[K];
+type OmitOuiSideNavItemProps<T> = {
+  [K in keyof ExcludeOuiSideNavItemProps<T>]: T[K];
 };
 
 export type RenderItem<T> = (
-  // argument is the set of extra component props + _EuiSideNavItemButtonProps
-  props: OmitEuiSideNavItemProps<T> & _EuiSideNavItemButtonProps
+  // argument is the set of extra component props + _OuiSideNavItemButtonProps
+  props: OmitOuiSideNavItemProps<T> & _OuiSideNavItemButtonProps
 ) => JSX.Element;
 
-export type EuiSideNavItemProps<T> = T extends { renderItem: Function }
+export type OuiSideNavItemProps<T> = T extends { renderItem: Function }
   ? T & { renderItem: RenderItem<T> }
   : T;
 
@@ -118,7 +129,7 @@ const DefaultRenderItem = ({
   children,
   disabled,
   ...rest
-}: _EuiSideNavItemButtonProps) => {
+}: _OuiSideNavItemButtonProps) => {
   if (href && !disabled) {
     const secureRel = getSecureRelForTarget({ href, rel, target });
     return (
@@ -154,9 +165,9 @@ const DefaultRenderItem = ({
   );
 };
 
-export function EuiSideNavItem<
-  T extends _EuiSideNavItemButtonProps &
-    _EuiSideNavItemProps & { renderItem?: (props: any) => JSX.Element }
+export function OuiSideNavItem<
+  T extends _OuiSideNavItemButtonProps &
+    _OuiSideNavItemProps & { renderItem?: (props: any) => JSX.Element }
 >({
   isOpen,
   isSelected,
@@ -176,7 +187,7 @@ export function EuiSideNavItem<
   buttonClassName,
   childrenOnly,
   ...rest
-}: EuiSideNavItemProps<T>) {
+}: OuiSideNavItemProps<T>) {
   const isHrefValid = !_href || validateHref(_href);
   const href = isHrefValid ? _href : '';
   const isClickable = onClick || href;
@@ -193,35 +204,35 @@ export function EuiSideNavItem<
 
   let childItems;
   if (items && itemIsOpen) {
-    childItems = <div className="euiSideNavItem__items">{items}</div>;
+    childItems = <div className="ouiSideNavItem__items">{items}</div>;
   }
 
   let buttonIcon;
   if (icon) {
     buttonIcon = cloneElement(icon, {
-      className: classNames('euiSideNavItemButton__icon', icon.props.className),
+      className: classNames('ouiSideNavItemButton__icon', icon.props.className),
     });
   }
 
   const classes = classNames(
-    'euiSideNavItem',
+    'ouiSideNavItem',
     {
-      'euiSideNavItem--root': depth === 0,
-      'euiSideNavItem--rootIcon': depth === 0 && icon,
-      'euiSideNavItem--trunk': depth === 1,
-      'euiSideNavItem--branch': depth > 1,
-      'euiSideNavItem--hasChildItems': !!childItems,
-      'euiSideNavItem--emphasized': emphasize,
+      'ouiSideNavItem--root': depth === 0,
+      'ouiSideNavItem--rootIcon': depth === 0 && icon,
+      'ouiSideNavItem--trunk': depth === 1,
+      'ouiSideNavItem--branch': depth > 1,
+      'ouiSideNavItem--hasChildItems': !!childItems,
+      'ouiSideNavItem--emphasized': emphasize,
     },
     className
   );
 
   const buttonClasses = classNames(
-    'euiSideNavItemButton',
+    'ouiSideNavItemButton',
     {
-      'euiSideNavItemButton--isClickable': isClickable,
-      'euiSideNavItemButton-isOpen': depth > 0 && itemIsOpen && !isSelected,
-      'euiSideNavItemButton-isSelected': isSelected,
+      'ouiSideNavItemButton--isClickable': isClickable,
+      'ouiSideNavItemButton-isOpen': depth > 0 && itemIsOpen && !isSelected,
+      'ouiSideNavItemButton-isSelected': isSelected,
     },
     buttonClassName
   );
@@ -229,31 +240,31 @@ export function EuiSideNavItem<
   let caret;
 
   if (depth > 0 && childrenOnly) {
-    caret = <EuiIcon type={itemIsOpen ? 'arrowDown' : 'arrowRight'} size="s" />;
+    caret = <OuiIcon type={itemIsOpen ? 'arrowDown' : 'arrowRight'} size="s" />;
   }
 
   const buttonContent = (
-    <span className="euiSideNavItemButton__content">
+    <span className="ouiSideNavItemButton__content">
       {buttonIcon}
 
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
           <span
             ref={ref}
             title={truncate ? innerText : undefined}
-            className={classNames('euiSideNavItemButton__label', {
-              'euiSideNavItemButton__label--truncated': truncate,
+            className={classNames('ouiSideNavItemButton__label', {
+              'ouiSideNavItemButton__label--truncated': truncate,
             })}>
             {children}
           </span>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
 
       {caret}
     </span>
   );
 
-  const renderItemProps: _EuiSideNavItemButtonProps = {
+  const renderItemProps: _OuiSideNavItemButtonProps = {
     href,
     rel,
     target,

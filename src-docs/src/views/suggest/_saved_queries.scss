@@ -1,5 +1,16 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 .savedQueriesInput__hideDatepicker {
-  .euiSuperDatePicker__flexWrapper {
+  .ouiSuperDatePicker__flexWrapper {
     width: 100%;
 
     > div:nth-of-type(1) {
@@ -9,23 +20,23 @@
 }
 
 .savedQueriesInput {
-  padding-bottom: $euiSizeXL * 6;
+  padding-bottom: $ouiSizeXL * 6;
 }
 
 .savedQueryManagement__text {
-  padding: $euiSizeM $euiSizeM ($euiSizeM / 2);
+  padding: $ouiSizeM $ouiSizeM ($ouiSizeM / 2);
 }
 
 .savedQueryManagement__listWrapper {
   // Addition height will ensure one item is "cutoff" to indicate more below the scroll
-  max-height: $euiFormMaxWidth + $euiSize;
+  max-height: $ouiFormMaxWidth + $ouiSize;
   overflow-y: hidden;
 }
 
 .savedQueryManagement__list {
-  @include euiYScrollWithShadows;
+  @include ouiYScrollWithShadows;
   max-height: inherit; // Fixes overflow for applied max-height
   // Left/Right padding is calculated to match the left alignment of the
   // popover text and buttons
-  padding: ($euiSizeM / 2) $euiSizeXS !important; // sass-lint:disable-line no-important
+  padding: ($ouiSizeM / 2) $ouiSizeXS !important; // sass-lint:disable-line no-important
 }

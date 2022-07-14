@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -44,7 +55,7 @@ function isMutableRef(
   return ref != null && ref.hasOwnProperty('current');
 }
 
-export interface EuiValidatableControlProps {
+export interface OuiValidatableControlProps {
   isInvalid?: boolean;
   /**
    * ReactNode to render as this component's content
@@ -52,8 +63,8 @@ export interface EuiValidatableControlProps {
   children: ReactElementWithRef;
 }
 
-export const EuiValidatableControl: FunctionComponent<
-  CommonProps & EuiValidatableControlProps
+export const OuiValidatableControl: FunctionComponent<
+  CommonProps & OuiValidatableControlProps
 > = ({ isInvalid, children }) => {
   const control = useRef<HTMLConstraintValidityElement | null>(null);
 

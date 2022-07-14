@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,41 +35,41 @@ import React, {
   ReactChild,
   forwardRef,
 } from 'react';
-import { EuiLoadingSpinner } from '../loading';
-import { EuiButton, EuiButtonEmpty, EuiButtonIcon } from '../button';
-import { EuiTitle } from '../title';
+import { OuiLoadingSpinner } from '../loading';
+import { OuiButton, OuiButtonEmpty, OuiButtonIcon } from '../button';
+import { OuiTitle } from '../title';
 import {
-  EuiModal,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiModalHeader,
+  OuiModal,
+  OuiModalBody,
+  OuiModalFooter,
+  OuiModalHeader,
 } from '../modal';
-import { EuiI18n, useEuiI18n } from '../i18n';
+import { OuiI18n, useOuiI18n } from '../i18n';
 import {
-  EuiMarkdownDropHandler,
-  EuiMarkdownEditorUiPlugin,
-  EuiMarkdownParseError,
+  OuiMarkdownDropHandler,
+  OuiMarkdownEditorUiPlugin,
+  OuiMarkdownParseError,
 } from './markdown_types';
-import { EuiPopover, EuiPopoverTitle } from '../popover';
-import { EuiText } from '../text';
-import { EuiSpacer } from '../spacer';
+import { OuiPopover, OuiPopoverTitle } from '../popover';
+import { OuiText } from '../text';
+import { OuiSpacer } from '../spacer';
 // @ts-ignore a react svg
 import MarkdownLogo from './icons/markdown_logo';
-import { EuiHorizontalRule } from '../horizontal_rule';
-import { EuiToolTip } from '../tool_tip';
+import { OuiHorizontalRule } from '../horizontal_rule';
+import { OuiToolTip } from '../tool_tip';
 
-interface EuiMarkdownEditorFooterProps {
-  uiPlugins: EuiMarkdownEditorUiPlugin[];
+interface OuiMarkdownEditorFooterProps {
+  uiPlugins: OuiMarkdownEditorUiPlugin[];
   isUploadingFiles: boolean;
   openFiles: () => void;
-  errors: EuiMarkdownParseError[];
+  errors: OuiMarkdownParseError[];
   hasUnacceptedItems: boolean;
-  dropHandlers: EuiMarkdownDropHandler[];
+  dropHandlers: OuiMarkdownDropHandler[];
 }
 
-export const EuiMarkdownEditorFooter = forwardRef<
+export const OuiMarkdownEditorFooter = forwardRef<
   HTMLDivElement,
-  EuiMarkdownEditorFooterProps
+  OuiMarkdownEditorFooterProps
 >((props, ref) => {
   const {
     uiPlugins,
@@ -86,45 +97,45 @@ export const EuiMarkdownEditorFooter = forwardRef<
   );
 
   const ariaLabels = {
-    uploadingFiles: useEuiI18n(
-      'euiMarkdownEditorFooter.uploadingFiles',
+    uploadingFiles: useOuiI18n(
+      'ouiMarkdownEditorFooter.uploadingFiles',
       'Click to upload files'
     ),
-    openUploadModal: useEuiI18n(
-      'euiMarkdownEditorFooter.openUploadModal',
+    openUploadModal: useOuiI18n(
+      'ouiMarkdownEditorFooter.openUploadModal',
       'Open upload files modal'
     ),
-    unsupportedFileType: useEuiI18n(
-      'euiMarkdownEditorFooter.unsupportedFileType',
+    unsupportedFileType: useOuiI18n(
+      'ouiMarkdownEditorFooter.unsupportedFileType',
       'File type not supported'
     ),
-    supportedFileTypes: useEuiI18n(
-      'euiMarkdownEditorFooter.supportedFileTypes',
+    supportedFileTypes: useOuiI18n(
+      'ouiMarkdownEditorFooter.supportedFileTypes',
       'Supported files: {supportedFileTypes}',
       { supportedFileTypes }
     ),
-    showSyntaxErrors: useEuiI18n(
-      'euiMarkdownEditorFooter.showSyntaxErrors',
+    showSyntaxErrors: useOuiI18n(
+      'ouiMarkdownEditorFooter.showSyntaxErrors',
       'Show errors'
     ),
-    showMarkdownHelp: useEuiI18n(
-      'euiMarkdownEditorFooter.showMarkdownHelp',
+    showMarkdownHelp: useOuiI18n(
+      'ouiMarkdownEditorFooter.showMarkdownHelp',
       'Show markdown help'
     ),
   };
 
   if (isUploadingFiles) {
     uploadButton = (
-      <EuiButtonIcon
-        iconType={EuiLoadingSpinner}
+      <OuiButtonIcon
+        iconType={OuiLoadingSpinner}
         aria-label={ariaLabels.uploadingFiles}
       />
     );
   } else if (dropHandlers.length > 0 && hasUnacceptedItems) {
     uploadButton = (
-      <EuiToolTip content={ariaLabels.supportedFileTypes}>
-        <EuiButtonEmpty
-          className="euiMarkdownEditorFooter__uploadError"
+      <OuiToolTip content={ariaLabels.supportedFileTypes}>
+        <OuiButtonEmpty
+          className="ouiMarkdownEditorFooter__uploadError"
           autoFocus
           size="xs"
           iconType="paperClip"
@@ -132,12 +143,12 @@ export const EuiMarkdownEditorFooter = forwardRef<
           aria-label={`${ariaLabels.unsupportedFileType}. ${ariaLabels.supportedFileTypes}. ${ariaLabels.uploadingFiles}`}
           onClick={openFiles}>
           {ariaLabels.unsupportedFileType}
-        </EuiButtonEmpty>
-      </EuiToolTip>
+        </OuiButtonEmpty>
+      </OuiToolTip>
     );
   } else if (dropHandlers.length > 0) {
     uploadButton = (
-      <EuiButtonIcon
+      <OuiButtonIcon
         iconType="paperClip"
         color="text"
         aria-label={ariaLabels.openUploadModal}
@@ -149,70 +160,70 @@ export const EuiMarkdownEditorFooter = forwardRef<
   let errorsButton;
   if (errors && errors.length) {
     errorsButton = (
-      <EuiPopover
+      <OuiPopover
         button={
-          <EuiButtonEmpty
+          <OuiButtonEmpty
             iconType="crossInACircleFilled"
             size="s"
             color="danger"
             aria-label={ariaLabels.showSyntaxErrors}
             onClick={onButtonClick}>
             {errors.length}
-          </EuiButtonEmpty>
+          </OuiButtonEmpty>
         }
         isOpen={isPopoverOpen}
         closePopover={closePopover}
         panelPaddingSize="s"
         anchorPosition="upCenter">
-        <div className="euiMarkdownEditorFooter__popover">
-          <EuiPopoverTitle>
-            <EuiI18n
-              token="euiMarkdownEditorFooter.errorsTitle"
+        <div className="ouiMarkdownEditorFooter__popover">
+          <OuiPopoverTitle>
+            <OuiI18n
+              token="ouiMarkdownEditorFooter.errorsTitle"
               default="Errors"
             />
-          </EuiPopoverTitle>
+          </OuiPopoverTitle>
           {errors.map((message, idx) => (
-            <EuiText size="s" key={idx}>
+            <OuiText size="s" key={idx}>
               {message.toString()}
-            </EuiText>
+            </OuiText>
           ))}
         </div>
-      </EuiPopover>
+      </OuiPopover>
     );
   }
 
   return (
-    <div ref={ref} className="euiMarkdownEditorFooter">
-      <div className="euiMarkdownEditorFooter__actions">
+    <div ref={ref} className="ouiMarkdownEditorFooter">
+      <div className="ouiMarkdownEditorFooter__actions">
         {uploadButton}
         {errorsButton}
       </div>
 
-      <EuiButtonIcon
-        className="euiMarkdownEditorFooter__help"
+      <OuiButtonIcon
+        className="ouiMarkdownEditorFooter__help"
         iconType={MarkdownLogo}
         color="text"
         aria-label={ariaLabels.showMarkdownHelp}
         onClick={() => setIsShowingHelp(!isShowingHelp)}
       />
       {isShowingHelp && (
-        <EuiModal onClose={() => setIsShowingHelp(false)}>
-          <EuiModalHeader>
-            <EuiTitle>
+        <OuiModal onClose={() => setIsShowingHelp(false)}>
+          <OuiModalHeader>
+            <OuiTitle>
               <h3>
-                <EuiI18n
-                  token="euiMarkdownEditorFooter.syntaxTitle"
+                <OuiI18n
+                  token="ouiMarkdownEditorFooter.syntaxTitle"
                   default="Syntax help"
                 />
               </h3>
-            </EuiTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiText>
-              <EuiI18n
+            </OuiTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiText>
+              <OuiI18n
                 tokens={[
-                  'euiMarkdownEditorFooter.descriptionPrefix',
-                  'euiMarkdownEditorFooter.descriptionSuffix',
+                  'ouiMarkdownEditorFooter.descriptionPrefix',
+                  'ouiMarkdownEditorFooter.descriptionSuffix',
                 ]}
                 defaults={[
                   'This editor uses',
@@ -227,37 +238,37 @@ export const EuiMarkdownEditorFooter = forwardRef<
                     . {descriptionSuffix}
                   </p>
                 )}
-              </EuiI18n>
-            </EuiText>
-            <EuiHorizontalRule />
+              </OuiI18n>
+            </OuiText>
+            <OuiHorizontalRule />
             {uiPlugins
               .filter(({ helpText }) => !!helpText)
               .map(({ name, helpText }) => (
                 <Fragment key={name}>
-                  <EuiTitle size="xxs">
+                  <OuiTitle size="xxs">
                     <p>
                       <strong>{name}</strong>
                     </p>
-                  </EuiTitle>
-                  <EuiSpacer size="s" />
+                  </OuiTitle>
+                  <OuiSpacer size="s" />
                   {helpText}
-                  <EuiSpacer size="l" />
+                  <OuiSpacer size="l" />
                 </Fragment>
               ))}
-            <EuiHorizontalRule />
-          </EuiModalBody>
-          <EuiModalFooter>
-            <EuiButton onClick={() => setIsShowingHelp(false)} fill>
-              <EuiI18n
-                token="euiMarkdownEditorFooter.closeButton"
+            <OuiHorizontalRule />
+          </OuiModalBody>
+          <OuiModalFooter>
+            <OuiButton onClick={() => setIsShowingHelp(false)} fill>
+              <OuiI18n
+                token="ouiMarkdownEditorFooter.closeButton"
                 default="Close"
               />
-            </EuiButton>
-          </EuiModalFooter>
-        </EuiModal>
+            </OuiButton>
+          </OuiModalFooter>
+        </OuiModal>
       )}
     </div>
   );
 });
 
-EuiMarkdownEditorFooter.displayName = 'EuiMarkdownEditorFooter';
+OuiMarkdownEditorFooter.displayName = 'OuiMarkdownEditorFooter';

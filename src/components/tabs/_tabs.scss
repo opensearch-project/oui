@@ -1,5 +1,16 @@
-.euiTabs {
-  @include euiScrollBar;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiTabs {
+  @include ouiScrollBar;
   display: flex;
   max-width: 100%;
   overflow-x: auto;
@@ -13,8 +24,8 @@
     height: 3px;
   }
 
-  &:not(.euiTabs--condensed)::before {
-    background-color: $euiColorLightShade;
+  &:not(.ouiTabs--condensed)::before {
+    background-color: $ouiColorLightShade;
     bottom: 0;
     content: '';
     height: 1px;
@@ -24,27 +35,27 @@
   }
 }
 
-.euiTab {
-  @include fontSize($euiTabFontSize);
-  color: $euiTextColor;
+.ouiTab {
+  @include fontSize($ouiTabFontSize);
+  color: $ouiTextColor;
   background-color: transparent;
   cursor: pointer;
-  line-height: $euiLineHeight;
-  padding: $euiSizeM $euiSize;
+  line-height: $ouiLineHeight;
+  padding: $ouiSizeM $ouiSize;
   position: relative;
-  transition: color $euiAnimSpeedNormal $euiAnimSlightResistance, background-color $euiAnimSpeedNormal $euiAnimSlightResistance;
+  transition: color $ouiAnimSpeedNormal $ouiAnimSlightResistance, background-color $ouiAnimSpeedNormal $ouiAnimSlightResistance;
 
-  &:hover:not(.euiTab-isSelected) {
+  &:hover:not(.ouiTab-isSelected) {
     text-decoration: underline;
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $ouiFocusBackgroundColor;
     text-decoration: underline;
-    outline-offset: -$euiFocusRingSize;
+    outline-offset: -$ouiFocusRingSize;
 
     &::before {
-      background-color: $euiColorLightShade;
+      background-color: $ouiColorLightShade;
       bottom: 0;
       content: '';
       height: 1px;
@@ -54,51 +65,51 @@
     }
   }
 
-  &.euiTab-isSelected {
-    color: $euiColorPrimary;
+  &.ouiTab-isSelected {
+    color: $ouiColorPrimary;
     cursor: default;
 
     &::after {
-      animation: euiTab $euiAnimSpeedFast $euiAnimSlightResistance;
-      background-color: $euiColorPrimary;
+      animation: ouiTab $ouiAnimSpeedFast $ouiAnimSlightResistance;
+      background-color: $ouiColorPrimary;
       bottom: 0;
       content: ' ';
-      height: $euiBorderWidthThick;
+      height: $ouiBorderWidthThick;
       left: 0;
       position: absolute;
       width: 100%;
     }
   }
 
-  &.euiTab-isDisabled {
-    color: $euiColorDisabledText;
+  &.ouiTab-isDisabled {
+    color: $ouiColorDisabledText;
 
     &:hover {
-      color: $euiColorDisabledText;
+      color: $ouiColorDisabledText;
       cursor: not-allowed;
       text-decoration: none;
     }
 
     &::after {
-      background-color: $euiColorDisabledText;
+      background-color: $ouiColorDisabledText;
     }
   }
 
   // Small Tabs Group Modifier
 
-  .euiTabs--small & {
-    @include fontSize($euiTabFontSizeS);
-    padding: $euiSizeS;
+  .ouiTabs--small & {
+    @include fontSize($ouiTabFontSizeS);
+    padding: $ouiSizeS;
   }
 
   // Condensed Tabs Group Modifier
 
-  .euiTabs--condensed & {
-    font-weight: $euiFontWeightSemiBold;
-    padding: $euiSizeS $euiSizeXS;
+  .ouiTabs--condensed & {
+    font-weight: $ouiFontWeightSemiBold;
+    padding: $ouiSizeS $ouiSizeXS;
 
     &:focus {
-      background-color: $euiFocusBackgroundColor;
+      background-color: $ouiFocusBackgroundColor;
 
       &::before {
         display: none;
@@ -109,38 +120,38 @@
       text-decoration: none;
     }
 
-    & + .euiTab {
-      margin-left: $euiSize;
+    & + .ouiTab {
+      margin-left: $ouiSize;
     }
   }
 
-  .euiTabs--small.euiTabs--condensed & {
-    padding-top: ($euiSizeM / 2);
-    padding-bottom: ($euiSizeM / 2);
+  .ouiTabs--small.ouiTabs--condensed & {
+    padding-top: ($ouiSizeM / 2);
+    padding-bottom: ($ouiSizeM / 2);
   }
 
-  .euiTabs--large.euiTabs--condensed & + .euiTab {
-    margin-left: $euiSizeL;
+  .ouiTabs--large.ouiTabs--condensed & + .ouiTab {
+    margin-left: $ouiSizeL;
   }
 
   // Expand Tabs Group Modifier
 
-  .euiTabs--expand & {
+  .ouiTabs--expand & {
     flex-basis: 0%;
     flex-grow: 1;
   }
 }
 
-.euiTab__content {
+.ouiTab__content {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   transform: translateY(0);
-  transition: transform $euiAnimSpeedFast $euiAnimSlightBounce;
+  transition: transform $ouiAnimSpeedFast $ouiAnimSlightBounce;
   white-space: nowrap;
 }
 
-@keyframes euiTab {
+@keyframes ouiTab {
   0% {
     transform: scaleX(0);
   }

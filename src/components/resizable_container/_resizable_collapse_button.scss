@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // This file has lots of modifiers and is somewhat nesty by nature because of positioning
 // sass-lint:disable nesting-depth
 
@@ -8,17 +19,17 @@
  *    flex to align the icon within
  */
 
-.euiResizableToggleButton {
-  @include euiSlightShadow;
+.ouiResizableToggleButton {
+  @include ouiSlightShadow;
   position: absolute;
-  z-index: $euiZLevel1 + 1;
-  // Remove animations from EuiButtonIcon because of the custom transforms
+  z-index: $ouiZLevel1 + 1;
+  // Remove animations from OuiButtonIcon because of the custom transforms
   animation: none !important; // sass-lint:disable-line no-important
-  // Remove transition from EuiButtonIcon because of the custom transforms
+  // Remove transition from OuiButtonIcon because of the custom transforms
   transition-property: background, box-shadow;
 
   &:focus {
-    @include euiSlightShadowHover;
+    @include ouiSlightShadowHover;
   }
 
   &-isCollapsed {
@@ -27,116 +38,116 @@
     border-radius: 0;
   }
 
-  &:not(:focus):not(:active):not(.euiResizableToggleButton-isVisible):not(.euiResizableToggleButton-isCollapsed) {
-    @include euiScreenReaderOnly;
+  &:not(:focus):not(:active):not(.ouiResizableToggleButton-isVisible):not(.ouiResizableToggleButton-isCollapsed) {
+    @include ouiScreenReaderOnly;
   }
 }
 
-.euiResizableToggleButton--horizontal {
-  &.euiResizableToggleButton { // Extra layer of nesting to override EuiButtonIcon transforms on hover
-    &.euiResizableToggleButton--after {
+.ouiResizableToggleButton--horizontal {
+  &.ouiResizableToggleButton { // Extra layer of nesting to override OuiButtonIcon transforms on hover
+    &.ouiResizableToggleButton--after {
       right: 0;
       top: 50%; /* 1 */
       transform: translate(50%, -50%); /* 1 */
 
-      &.euiResizableToggleButton--top {
+      &.ouiResizableToggleButton--top {
         top: 0;
-        transform: translate(50%, $euiSize);
+        transform: translate(50%, $ouiSize);
       }
 
-      &.euiResizableToggleButton--bottom {
+      &.ouiResizableToggleButton--bottom {
         top: auto;
         bottom: 0;
-        transform: translate(50%, -$euiSize);
+        transform: translate(50%, -$ouiSize);
       }
     }
 
-    &.euiResizableToggleButton--before {
+    &.ouiResizableToggleButton--before {
       left: 0;
       top: 50%; /* 1 */
       transform: translate(-50%, -50%); /* 1 */
 
-      &.euiResizableToggleButton--top {
+      &.ouiResizableToggleButton--top {
         top: 0;
-        transform: translate(-50%, $euiSize);
+        transform: translate(-50%, $ouiSize);
       }
 
-      &.euiResizableToggleButton--bottom {
+      &.ouiResizableToggleButton--bottom {
         top: auto;
         bottom: 0;
-        transform: translate(-50%, -$euiSize);
+        transform: translate(-50%, -$ouiSize);
       }
     }
 
-    &.euiResizableToggleButton-isCollapsed {
+    &.ouiResizableToggleButton-isCollapsed {
       top: 0 !important; // sass-lint:disable-line no-important
       bottom: 0 !important; // sass-lint:disable-line no-important
       transform: none !important; // sass-lint:disable-line no-important
       height: 100%;
 
-      &.euiResizableToggleButton--top {
-        padding-top: $euiSize;
+      &.ouiResizableToggleButton--top {
+        padding-top: $ouiSize;
         align-items: flex-start;  /* 2 */
       }
 
-      &.euiResizableToggleButton--bottom {
-        padding-bottom: $euiSize;
+      &.ouiResizableToggleButton--bottom {
+        padding-bottom: $ouiSize;
         align-items: flex-end;  /* 2 */
       }
     }
   }
 }
 
-.euiResizableToggleButton--vertical {
-  &.euiResizableToggleButton { // Extra layer of nesting to override EuiButtonIcon transforms on hover
-    &.euiResizableToggleButton--after {
+.ouiResizableToggleButton--vertical {
+  &.ouiResizableToggleButton { // Extra layer of nesting to override OuiButtonIcon transforms on hover
+    &.ouiResizableToggleButton--after {
       top: 100%;
       left: 50%; /* 1 */
       transform: translate(-50%, -50%); /* 1 */
 
-      &.euiResizableToggleButton--left {
+      &.ouiResizableToggleButton--left {
         left: 0;
-        transform: translate($euiSize, -50%);
+        transform: translate($ouiSize, -50%);
       }
 
-      &.euiResizableToggleButton--right {
+      &.ouiResizableToggleButton--right {
         left: auto;
         right: 0;
-        transform: translate(-$euiSize, -50%);
+        transform: translate(-$ouiSize, -50%);
       }
     }
 
-    &.euiResizableToggleButton--before {
+    &.ouiResizableToggleButton--before {
       bottom: 100%;
       left: 50%; /* 1 */
       transform: translate(-50%, 50%); /* 1 */
 
-      &.euiResizableToggleButton--left {
+      &.ouiResizableToggleButton--left {
         left: 0;
-        transform: translate($euiSize, 50%);
+        transform: translate($ouiSize, 50%);
       }
 
-      &.euiResizableToggleButton--right {
+      &.ouiResizableToggleButton--right {
         left: auto;
         right: 0;
-        transform: translate(-$euiSize, 50%);
+        transform: translate(-$ouiSize, 50%);
       }
     }
 
-    &.euiResizableToggleButton-isCollapsed {
+    &.ouiResizableToggleButton-isCollapsed {
       top: 0 !important; // sass-lint:disable-line no-important
       bottom: 0 !important; // sass-lint:disable-line no-important
       left: 0 !important; // sass-lint:disable-line no-important
       transform: none !important; // sass-lint:disable-line no-important
       width: 100%;
 
-      &.euiResizableToggleButton--left {
-        padding-left: $euiSize;
+      &.ouiResizableToggleButton--left {
+        padding-left: $ouiSize;
         justify-content: flex-start; /* 2 */
       }
 
-      &.euiResizableToggleButton--right {
-        padding-right: $euiSize;
+      &.ouiResizableToggleButton--right {
+        padding-right: $ouiSize;
         justify-content: flex-end; /* 2 */
       }
     }

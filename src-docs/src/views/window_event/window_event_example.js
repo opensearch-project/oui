@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiWindowEvent } from '../../../../src/services';
+import { OuiWindowEvent } from '../../../../src/services';
 
-import { EuiCode, EuiCallOut, EuiSpacer } from '../../../../src/components';
+import { OuiCode, OuiCallOut, OuiSpacer } from '../../../../src/components';
 
 import { BasicWindowEvent } from './basic_window_event';
 const basicSource = require('!!raw-loader!./basic_window_event');
@@ -38,22 +49,22 @@ export const WindowEventExample = {
       text: (
         <div>
           <p>
-            Use an <strong>EuiWindowEvent</strong> to safely and declaratively
+            Use an <strong>OuiWindowEvent</strong> to safely and declaratively
             manage adding and auto-removing event listeners to the{' '}
-            <EuiCode>window</EuiCode>. This is preferable to setting up your own
+            <OuiCode>window</OuiCode>. This is preferable to setting up your own
             window event listeners because it will remove old listeners when
             your component unmounts, preventing you from accidentally leaving
             them around forever.
           </p>
           <p>
             This modal example registers a listener on the{' '}
-            <EuiCode>keydown</EuiCode> event and listens for ESC key presses,
+            <OuiCode>keydown</OuiCode> event and listens for ESC key presses,
             which closes the open modal.
           </p>
         </div>
       ),
-      components: { EuiWindowEvent },
-      props: { EuiWindowEvent },
+      components: { OuiWindowEvent },
+      props: { OuiWindowEvent },
       demo: <BasicWindowEvent />,
     },
     {
@@ -70,7 +81,7 @@ export const WindowEventExample = {
       ],
       text: (
         <div>
-          <EuiCallOut
+          <OuiCallOut
             title="Be careful with global listeners"
             color="warning"
             iconType="alert">
@@ -78,19 +89,19 @@ export const WindowEventExample = {
               Since window event listeners are global, they can conflict with
               other event listeners if you aren&apos;t careful.
             </p>
-          </EuiCallOut>
-          <EuiSpacer />
+          </OuiCallOut>
+          <OuiSpacer />
           <p>
             The safest and best way to avoid these conflicts is to use{' '}
-            <EuiCode>event.stopPropagation()</EuiCode> at the lowest, most
+            <OuiCode>event.stopPropagation()</OuiCode> at the lowest, most
             specific level where you are responding to a DOM event. This will
             prevent the event from bubbling up to the window, and the{' '}
-            <strong>EuiWindowEvent</strong> listener will never be triggered,
+            <strong>OuiWindowEvent</strong> listener will never be triggered,
             avoiding the conflict.
           </p>
         </div>
       ),
-      components: { EuiWindowEvent },
+      components: { OuiWindowEvent },
       demo: <WindowEventConflict />,
     },
     {
@@ -117,12 +128,12 @@ export const WindowEventExample = {
             If you were manually attaching window listeners, you might forget to
             remove the listener and be silently responding to mouse events in
             the background for the life of your app. The{' '}
-            <strong>EuiWindowEvent</strong> component manages that
+            <strong>OuiWindowEvent</strong> component manages that
             unmount/unregister process for you.
           </p>
         </div>
       ),
-      components: { EuiWindowEvent },
+      components: { OuiWindowEvent },
       demo: <MousePosition />,
     },
   ],

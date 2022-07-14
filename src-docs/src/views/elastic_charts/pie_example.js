@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
@@ -6,17 +17,17 @@ import { ExternalBadge } from './shared';
 import pieSliceOrderImg from '../../images/pie_slice_order.png';
 
 import {
-  EuiSpacer,
-  EuiCard,
-  EuiIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiLink,
-  EuiIconTip,
-  EuiToolTip,
-  EuiCallOut,
-  EuiCode,
-  EuiImage,
+  OuiSpacer,
+  OuiCard,
+  OuiIcon,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiLink,
+  OuiIconTip,
+  OuiToolTip,
+  OuiCallOut,
+  OuiCode,
+  OuiImage,
 } from '../../../../src/components';
 
 import PieChart from './pie';
@@ -79,22 +90,22 @@ const introCards = [
 ];
 
 const unsupportedTooltip = (
-  <EuiIconTip
+  <OuiIconTip
     type="iInCircle"
     color="subdued"
     content="Elastic Charts doesn’t provide this functionality yet."
     iconProps={{
-      className: 'eui-alignTop',
+      className: 'oui-alignTop',
     }}
   />
 );
 
 const orderingTooltip = (
-  <EuiIconTip
+  <OuiIconTip
     type="iInCircle"
     color="subdued"
     content={
-      <EuiImage
+      <OuiImage
         url={pieSliceOrderImg}
         alt="Photo of a page in the book referencing the ordering of largest slice on top."
         caption={
@@ -110,7 +121,7 @@ const orderingTooltip = (
       />
     }
     iconProps={{
-      className: 'eui-alignTop',
+      className: 'oui-alignTop',
     }}
   />
 );
@@ -120,29 +131,29 @@ export const ElasticChartsPieExample = {
   intro: (
     <Fragment>
       <ExternalBadge />
-      <EuiSpacer size="l" />
-      <EuiFlexGroup responsive={false} wrap>
+      <OuiSpacer size="l" />
+      <OuiFlexGroup responsive={false} wrap>
         {introCards.map((card) => (
-          <EuiFlexItem key={card.title} style={{ minWidth: 170 }}>
-            <EuiCard
+          <OuiFlexItem key={card.title} style={{ minWidth: 170 }}>
+            <OuiCard
               layout="horizontal"
               title={
-                <EuiFlexGroup
+                <OuiFlexGroup
                   gutterSize="s"
                   responsive={false}
                   alignItems="center">
-                  <EuiFlexItem grow={false}>
-                    <EuiIcon type={card.iconType} color={card.iconColor} />
-                  </EuiFlexItem>
-                  <EuiFlexItem>{card.title}</EuiFlexItem>
-                </EuiFlexGroup>
+                  <OuiFlexItem grow={false}>
+                    <OuiIcon type={card.iconType} color={card.iconColor} />
+                  </OuiFlexItem>
+                  <OuiFlexItem>{card.title}</OuiFlexItem>
+                </OuiFlexGroup>
               }
               titleElement="h2"
               description={card.description}
             />
-          </EuiFlexItem>
+          </OuiFlexItem>
         ))}
-      </EuiFlexGroup>
+      </OuiFlexGroup>
     </Fragment>
   ),
   sections: [
@@ -172,7 +183,7 @@ export const ElasticChartsPieExample = {
           </ul>
           <p>
             The guidelines for{' '}
-            <EuiToolTip
+            <OuiToolTip
               title="Yes, donut charts are ok."
               content={
                 <>
@@ -186,53 +197,53 @@ export const ElasticChartsPieExample = {
                   Click the link to read more on the study.
                 </>
               }>
-              <EuiLink href="http://kosara.net/publications/Skau-EuroVis-2016.html">
+              <OuiLink href="http://kosara.net/publications/Skau-EuroVis-2016.html">
                 donut charts
-              </EuiLink>
-            </EuiToolTip>{' '}
+              </OuiLink>
+            </OuiToolTip>{' '}
             are the same for pie charts. The empty center of donut charts can
             provide a place to display additional/related information
-            <EuiIconTip
+            <OuiIconTip
               type="iInCircle"
               color="subdued"
               content="Elastic Charts doesn’t provide this functionality directly, but there is a workaround. See the 'Sunbursts and treemaps' example further down the page."
               iconProps={{
-                className: 'eui-alignTop',
+                className: 'oui-alignTop',
               }}
             />
             .
           </p>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             title={
               <>
                 Elastic Charts&apos;{' '}
-                <EuiLink href="https://github.com/elastic/elastic-charts/issues/518">
+                <OuiLink href="https://github.com/elastic/elastic-charts/issues/518">
                   partition charts do not currently support theming
-                </EuiLink>{' '}
-                through the <EuiCode>{'<Settings />'}</EuiCode> component.
+                </OuiLink>{' '}
+                through the <OuiCode>{'<Settings />'}</OuiCode> component.
               </>
             }>
             <p>
               {' '}
-              EUI provides a separate key for use with
-              <EuiCode language="ts">
-                {'Partition.config={{...EUI_CHARTS_THEME_LIGHT.partition}}'}
-              </EuiCode>
+              OUI provides a separate key for use with
+              <OuiCode language="ts">
+                {'Partition.config={{...OUI_CHARTS_THEME_LIGHT.partition}}'}
+              </OuiCode>
               . The chart colors also need to be passed a different way via{' '}
-              <EuiCode language="ts">
+              <OuiCode language="ts">
                 {'Partition.layers.shape.fillColor'}
-              </EuiCode>
+              </OuiCode>
               . See the snippet for full details.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </>
       ),
       demo: <PieChart />,
-      snippet: `import { EUI_CHARTS_THEME_DARK, EUI_CHARTS_THEME_LIGHT } from '@elastic/eui/dist/eui_charts_theme';
+      snippet: `import { OUI_CHARTS_THEME_DARK, OUI_CHARTS_THEME_LIGHT } from '@opensearch-project/oui/dist/oui_charts_theme';
 
-const euiChartTheme = isDarkTheme ? EUI_CHARTS_THEME_DARK : EUI_CHARTS_THEME_LIGHT;
-const euiPartitionConfig = euiChartTheme.partition;
+const ouiChartTheme = isDarkTheme ? OUI_CHARTS_THEME_DARK : OUI_CHARTS_THEME_LIGHT;
+const ouiPartitionConfig = ouiChartTheme.partition;
 
 <Chart size={{height: 200}}>
   <Partition
@@ -248,12 +259,12 @@ const euiPartitionConfig = euiChartTheme.partition;
       {
         groupByRollup: d => d.category,
         shape: {
-          fillColor: d => euiChartTheme.theme.colors.vizColors[d.sortIndex],
+          fillColor: d => ouiChartTheme.theme.colors.vizColors[d.sortIndex],
         },
       },
     ]}
     config={{
-      ...euiPartitionConfig,
+      ...ouiPartitionConfig,
       emptySizeRatio: 0.4, // To create a donut chart
       clockwiseSectors: false, // For correct slice order
     }}
@@ -267,12 +278,12 @@ const euiPartitionConfig = euiChartTheme.partition;
           <p>
             Try to keep the labels <strong>within the slices</strong> (or just
             outside)
-            <EuiIconTip
+            <OuiIconTip
               type="iInCircle"
               color="subdued"
               content="Elastic charts will do this automatically."
               iconProps={{
-                className: 'eui-alignTop',
+                className: 'oui-alignTop',
               }}
             />{' '}
             and consider appending their values. However, if there are many
@@ -321,12 +332,12 @@ const euiPartitionConfig = euiChartTheme.partition;
             to represent trends or explicit/detailed value comparison.
           </p>
           <p>
-            Below are some basic examples and how EUI supports them with
+            Below are some basic examples and how OUI supports them with
             theming. However, this site will not document the best uses of these
             chart types. For more guidance, go to the{' '}
-            <EuiLink href="https://elastic.github.io/elastic-charts">
+            <OuiLink href="https://elastic.github.io/elastic-charts">
               Elastic Charts documentation
-            </EuiLink>
+            </OuiLink>
             .
           </p>
         </>
@@ -356,9 +367,9 @@ const euiPartitionConfig = euiChartTheme.partition;
           <p>
             And under no circumstances should you enlarge or explode slices.
             This leads to{' '}
-            <EuiLink href="https://digitalblog.ons.gov.uk/2017/02/28/the-humble-pie-chart-part2/">
+            <OuiLink href="https://digitalblog.ons.gov.uk/2017/02/28/the-humble-pie-chart-part2/">
               errors in understanding
-            </EuiLink>
+            </OuiLink>
             .
           </p>
         </>

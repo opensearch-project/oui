@@ -1,50 +1,61 @@
-.euiColorPicker {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiColorPicker {
   position: relative;
-  width: $euiColorPickerWidth;
+  width: $ouiColorPickerWidth;
 }
 
-.euiColorPicker__popoverAnchor {
-  // Nested needed for specificity of overriding .euiFieldText
-  .euiColorPicker__input {
-    @include euiFormControlWithIcon($isIconOptional: false, $side: 'right');
+.ouiColorPicker__popoverAnchor {
+  // Nested needed for specificity of overriding .ouiFieldText
+  .ouiColorPicker__input {
+    @include ouiFormControlWithIcon($isIconOptional: false, $side: 'right');
 
     &[class*='--compressed'] {
-      @include euiFormControlWithIcon($isIconOptional: false, $side: 'right', $compressed: true);
+      @include ouiFormControlWithIcon($isIconOptional: false, $side: 'right', $compressed: true);
     }
 
-    + .euiFormControlLayoutIcons {
+    + .ouiFormControlLayoutIcons {
       // Override :disabled state, which obscures the selected color
       color: inherit;
     }
   }
 }
 
-// Adds a stroke color for the swatchInput icon. Unlike most EuiIcons it has a stroke in the SVG
-.euiSwatchInput__stroke {
+// Adds a stroke color for the swatchInput icon. Unlike most OuiIcons it has a stroke in the SVG
+.ouiSwatchInput__stroke {
   fill: none;
-  stroke: transparentize($euiColorFullShade, .8);
+  stroke: transparentize($ouiColorFullShade, .8);
 }
 
-.euiColorPicker__popoverPanel--pickerOnly {
-  // Override of EuiPanel padding
+.ouiColorPicker__popoverPanel--pickerOnly {
+  // Override of OuiPanel padding
   // sass-lint:disable no-important
   padding-bottom: 0 !important;
 }
 
 // sass-lint:disable no-important
-.euiColorPicker__input--inGroup {
-  height: $euiFormControlLayoutGroupInputHeight !important;
+.ouiColorPicker__input--inGroup {
+  height: $ouiFormControlLayoutGroupInputHeight !important;
   box-shadow: none !important;
   border-radius: 0;
 
-  &.euiFieldText--compressed {
-    height: $euiFormControlLayoutGroupInputCompressedHeight !important;
+  &.ouiFieldText--compressed {
+    height: $ouiFormControlLayoutGroupInputCompressedHeight !important;
     border-radius: 0;
   }
 }
 
-.euiColorPicker__alphaRange {
-  .euiRangeInput {
+.ouiColorPicker__alphaRange {
+  .ouiRangeInput {
     min-width: 0;
   }
 }

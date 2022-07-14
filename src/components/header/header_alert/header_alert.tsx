@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,10 +33,10 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../flex';
+import { OuiFlexGroup, OuiFlexItem } from '../../flex';
 import { htmlIdGenerator } from '../../../services';
 
-export type EuiHeaderAlertProps = CommonProps &
+export type OuiHeaderAlertProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> & {
     /**
      * Adds a link to the alert.
@@ -35,12 +46,12 @@ export type EuiHeaderAlertProps = CommonProps &
     text?: ReactNode;
     title: ReactNode;
     /**
-     * Accepts an `EuiBadge` that displays on the alert
+     * Accepts an `OuiBadge` that displays on the alert
      */
     badge?: ReactNode;
   };
 
-export const EuiHeaderAlert: FunctionComponent<EuiHeaderAlertProps> = ({
+export const OuiHeaderAlert: FunctionComponent<OuiHeaderAlertProps> = ({
   action,
   className,
   date,
@@ -49,24 +60,24 @@ export const EuiHeaderAlert: FunctionComponent<EuiHeaderAlertProps> = ({
   badge,
   ...rest
 }) => {
-  const classes = classNames('euiHeaderAlert', className);
+  const classes = classNames('ouiHeaderAlert', className);
 
   const ariaId = htmlIdGenerator()();
 
   return (
     <article aria-labelledby={`${ariaId}-title`} className={classes} {...rest}>
-      <EuiFlexGroup justifyContent="spaceBetween">
-        <EuiFlexItem>
-          <div className="euiHeaderAlert__date">{date}</div>
-        </EuiFlexItem>
-        {badge && <EuiFlexItem grow={false}>{badge}</EuiFlexItem>}
-      </EuiFlexGroup>
+      <OuiFlexGroup justifyContent="spaceBetween">
+        <OuiFlexItem>
+          <div className="ouiHeaderAlert__date">{date}</div>
+        </OuiFlexItem>
+        {badge && <OuiFlexItem grow={false}>{badge}</OuiFlexItem>}
+      </OuiFlexGroup>
 
-      <h3 id={`${ariaId}-title`} className="euiHeaderAlert__title">
+      <h3 id={`${ariaId}-title`} className="ouiHeaderAlert__title">
         {title}
       </h3>
-      <div className="euiHeaderAlert__text">{text}</div>
-      {action && <div className="euiHeaderAlert__action euiLink">{action}</div>}
+      <div className="ouiHeaderAlert__text">{text}</div>
+      {action && <div className="ouiHeaderAlert__action ouiLink">{action}</div>}
     </article>
   );
 };

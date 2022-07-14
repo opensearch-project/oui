@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,9 +30,9 @@
 
 import React from 'react';
 import { shallow } from 'enzyme';
-import { EuiWindowEvent } from './window_event';
+import { OuiWindowEvent } from './window_event';
 
-describe('EuiWindowEvent', () => {
+describe('OuiWindowEvent', () => {
   beforeEach(() => {
     window.addEventListener = jest.fn();
     window.removeEventListener = jest.fn();
@@ -33,14 +44,14 @@ describe('EuiWindowEvent', () => {
 
   test('attaches handler to window event on mount', () => {
     const handler = () => null;
-    shallow(<EuiWindowEvent event="click" handler={handler} />);
+    shallow(<OuiWindowEvent event="click" handler={handler} />);
     expect(window.addEventListener).toHaveBeenCalledTimes(1);
     expect(window.addEventListener).toHaveBeenCalledWith('click', handler);
   });
 
   test('removes handler on unmount', () => {
     const handler = () => null;
-    const wrapper = shallow(<EuiWindowEvent event="click" handler={handler} />);
+    const wrapper = shallow(<OuiWindowEvent event="click" handler={handler} />);
     wrapper.unmount();
     expect(window.removeEventListener).toHaveBeenLastCalledWith(
       'click',
@@ -52,7 +63,7 @@ describe('EuiWindowEvent', () => {
     const handler1 = () => null;
     const handler2 = () => null;
     const wrapper = shallow(
-      <EuiWindowEvent event="click" handler={handler1} />
+      <OuiWindowEvent event="click" handler={handler1} />
     );
 
     expect(window.addEventListener).toHaveBeenLastCalledWith('click', handler1);
@@ -68,7 +79,7 @@ describe('EuiWindowEvent', () => {
 
   test('does not remove or re-attach handler if update is irrelevant', () => {
     const handler = () => null;
-    const wrapper = shallow(<EuiWindowEvent event="click" handler={handler} />);
+    const wrapper = shallow(<OuiWindowEvent event="click" handler={handler} />);
     expect(window.addEventListener).toHaveBeenCalledTimes(1);
 
     wrapper.setProps({ whatever: 'ugh' });

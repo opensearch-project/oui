@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiBeacon } from '../../../../src/components/';
+import { OuiBeacon } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const beaconConfig = () => {
-  const docgenInfo = Array.isArray(EuiBeacon.__docgenInfo)
-    ? EuiBeacon.__docgenInfo[0]
-    : EuiBeacon.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiBeacon.__docgenInfo)
+    ? OuiBeacon.__docgenInfo[0]
+    : OuiBeacon.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.size = {
@@ -16,14 +27,14 @@ export const beaconConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiBeacon',
+      componentName: 'OuiBeacon',
       props: propsToUse,
       scope: {
-        EuiBeacon,
+        OuiBeacon,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiBeacon'],
+        '@opensearch-project/oui': {
+          named: ['OuiBeacon'],
         },
       },
     },

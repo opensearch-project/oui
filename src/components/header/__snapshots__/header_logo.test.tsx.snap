@@ -1,58 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiHeaderLogo is rendered 1`] = `
+exports[`OuiHeaderLogo is rendered 1`] = `
 <a
   aria-label="aria-label"
-  class="euiHeaderLogo testClass1 testClass2"
+  class="ouiHeaderLogo testClass1 testClass2"
   data-test-subj="test subject string"
   rel="noreferrer"
 >
   <span
     aria-label="Elastic"
-    class="euiHeaderLogo__icon"
-    data-euiicon-type="logoElastic"
+    class="ouiHeaderLogo__icon"
+    data-ouiicon-type="logoElastic"
   />
 </a>
 `;
 
-exports[`EuiHeaderLogo renders href 1`] = `
+exports[`OuiHeaderLogo renders href 1`] = `
 <a
-  class="euiHeaderLogo"
+  class="ouiHeaderLogo"
   href="#"
   rel="noreferrer"
 >
   <span
     aria-label="Elastic"
-    class="euiHeaderLogo__icon"
-    data-euiicon-type="logoElastic"
+    class="ouiHeaderLogo__icon"
+    data-ouiicon-type="logoElastic"
   />
 </a>
 `;
 
-exports[`EuiHeaderLogo renders href with rel 1`] = `
+exports[`OuiHeaderLogo renders href with rel 1`] = `
 <a
-  class="euiHeaderLogo"
+  class="ouiHeaderLogo"
   href="#"
   rel="noreferrer"
 >
   <span
     aria-label="Elastic"
-    class="euiHeaderLogo__icon"
-    data-euiicon-type="logoElastic"
+    class="ouiHeaderLogo__icon"
+    data-ouiicon-type="logoElastic"
   />
 </a>
 `;
 
-exports[`EuiHeaderLogo renders optional props 1`] = `
+exports[`OuiHeaderLogo renders optional props 1`] = `
 <a
-  class="euiHeaderLogo"
+  class="ouiHeaderLogo"
   rel="noreferrer"
   style="color:red"
 >
   <span
     aria-label="Moby Dick"
-    class="euiHeaderLogo__icon"
-    data-euiicon-type="alert"
+    class="ouiHeaderLogo__icon"
+    data-ouiicon-type="alert"
   />
 </a>
 `;

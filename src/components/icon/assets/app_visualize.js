@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import * as React from 'react';
 
-const EuiIconAppVisualize = ({ title, titleId, ...props }) => (
+const OuiIconAppVisualize = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -10,7 +21,7 @@ const EuiIconAppVisualize = ({ title, titleId, ...props }) => (
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
     <path
-      className="euiIcon__fillSecondary"
+      className="ouiIcon__fillSecondary"
       d="M32 32H4a4 4 0 01-4-4V0h2v28a2 2 0 002 2h28v2z"
     />
     <path d="M6 20h2v7H6zM16 12h2v15h-2zM26 17h2v10h-2z" />
@@ -18,4 +29,4 @@ const EuiIconAppVisualize = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconAppVisualize;
+export const icon = OuiIconAppVisualize;

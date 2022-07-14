@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Text-align defaults to center, so we have to override that.
  * 2. Color the text at the item level and then have the button inherit so overrides are easier
@@ -6,86 +17,86 @@
  */
 
 
-.euiSideNavItemButton {
-  @include euiFontSizeS;
+.ouiSideNavItemButton {
+  @include ouiFontSizeS;
   text-align: left; /* 1 */
   display: block;
   width: 100%;
-  padding: ($euiSizeXS / 2) 0;
+  padding: ($ouiSizeXS / 2) 0;
   color: inherit; /* 2 */
 
-  &.euiSideNavItemButton--isClickable:not(:disabled) {
+  &.ouiSideNavItemButton--isClickable:not(:disabled) {
     &:hover {
       cursor: pointer;
     }
 
     &:hover,
     &:focus {
-      .euiSideNavItemButton__label {
+      .ouiSideNavItemButton__label {
         // A lingering focus will stay underlined even if it doesn't get the `isSelected` prop
         text-decoration: underline; /* 4 */
       }
     }
   }
 
-  &.euiSideNavItemButton-isSelected {
-    color: $euiSideNavSelectedTextcolor;
-    font-weight: $euiFontWeightBold;
+  &.ouiSideNavItemButton-isSelected {
+    color: $ouiSideNavSelectedTextcolor;
+    font-weight: $ouiFontWeightBold;
 
-    .euiSideNavItemButton__label {
+    .ouiSideNavItemButton__label {
       text-decoration: underline; /* 4 */
     }
   }
 
   &:disabled {
-    @include euiDisabledState($euiSideNavDisabledTextcolor);
+    @include ouiDisabledState($ouiSideNavDisabledTextcolor);
   }
 }
 
-.euiSideNavItemButton__content {
+.ouiSideNavItemButton__content {
   display: flex;
   align-items: center;
 }
 
-.euiSideNavItemButton__icon {
-  margin-right: $euiSizeS;
+.ouiSideNavItemButton__icon {
+  margin-right: $ouiSizeS;
 }
 
-.euiSideNavItemButton__labelContainer {
+.ouiSideNavItemButton__labelContainer {
   min-width: 0; /* 3 */
 }
 
-.euiSideNavItemButton__label {
+.ouiSideNavItemButton__label {
   flex-grow: 1;
 }
 
-.euiSideNavItemButton__label--truncated {
-  @include euiTextTruncate;
+.ouiSideNavItemButton__label--truncated {
+  @include ouiTextTruncate;
 }
 
-.euiSideNavItem--root {
-  &.euiSideNavItem--rootIcon > .euiSideNavItem__items {
-    margin-left: $euiSizeL;
+.ouiSideNavItem--root {
+  &.ouiSideNavItem--rootIcon > .ouiSideNavItem__items {
+    margin-left: $ouiSizeL;
   }
 
   /**
    * 1. Create padding around focus area without indenting the item itself.
    */
-  & > .euiSideNavItemButton {
-    margin-bottom: $euiSizeS;
+  & > .ouiSideNavItemButton {
+    margin-bottom: $ouiSizeS;
     padding: 0;
-    padding-left: $euiSizeS; /* 1 */
-    padding-right: $euiSizeS; /* 1 */
-    margin-left: -$euiSizeS; /* 1 */
-    width: calc(100% + #{$euiSizeS * 2}); /* 1 */
+    padding-left: $ouiSizeS; /* 1 */
+    padding-right: $ouiSizeS; /* 1 */
+    margin-left: -$ouiSizeS; /* 1 */
+    width: calc(100% + #{$ouiSizeS * 2}); /* 1 */
 
-    .euiSideNavItemButton__label {
-      @include euiTitle('xs');
+    .ouiSideNavItemButton__label {
+      @include ouiTitle('xs');
       color: inherit;
     }
   }
 
-  & > .euiSideNavItem__items {
+  & > .ouiSideNavItem__items {
     position: static;
     margin-left: 0;
 
@@ -95,35 +106,35 @@
   }
 
   & + & {
-    margin-top: $euiSizeXL;
+    margin-top: $ouiSizeXL;
   }
 }
 
-.euiSideNavItem--trunk {
-  color: $euiSideNavRootTextcolor; /* 2 */
+.ouiSideNavItem--trunk {
+  color: $ouiSideNavRootTextcolor; /* 2 */
 
   /**
    * 1. Create padding around focus area without indenting the item itself.
    */
-  & > .euiSideNavItemButton {
-    padding-left: $euiSizeS; /* 1 */
-    padding-right: $euiSizeS; /* 1 */
-    margin-left: -$euiSizeS; /* 1 */
-    width: calc(100% + #{$euiSizeS * 2}); /* 1 */
+  & > .ouiSideNavItemButton {
+    padding-left: $ouiSizeS; /* 1 */
+    padding-right: $ouiSizeS; /* 1 */
+    margin-left: -$ouiSizeS; /* 1 */
+    width: calc(100% + #{$ouiSizeS * 2}); /* 1 */
   }
 
-  & > .euiSideNavItem__items {
-    margin-left: $euiSizeS;
+  & > .ouiSideNavItem__items {
+    margin-left: $ouiSizeS;
     width: 100%;
   }
 }
 
-.euiSideNavItem--branch {
+.ouiSideNavItem--branch {
   /**
   * 1. Draw the vertical line to group an expanded item's child items together.
   */
   position: relative;
-  color: $euiSideNavBranchTextcolor; /* 2 */
+  color: $ouiSideNavBranchTextcolor; /* 2 */
 
   &::after { /* 1 */
     position: absolute;
@@ -131,51 +142,51 @@
     top: 0;
     bottom: 0;
     width: 1px;
-    background: $euiBorderColor;
+    background: $ouiBorderColor;
     left: 0;
   }
 
   // If this is actually the last item, we don't want the vertical line to stretch all the way down
   &:last-of-type::after {
-    height: $euiSizeM;
+    height: $ouiSizeM;
   }
 
   /**
    * 2. Absolutely position the horizontal tick connecting the item to the vertical line.
    */
-  & > .euiSideNavItemButton {
+  & > .ouiSideNavItemButton {
     position: relative; /* 2 */
-    padding-left: $euiSizeS;
-    padding-right: $euiSizeS; /* 2 */
+    padding-left: $ouiSizeS;
+    padding-right: $ouiSizeS; /* 2 */
 
     &:after {
       position: absolute; /* 2 */
       content: '';
-      top: $euiSizeM;
+      top: $ouiSizeM;
       left: 0;
-      width: $euiSizeXS;
+      width: $ouiSizeXS;
       height: 1px;
-      background: $euiBorderColor;
+      background: $ouiBorderColor;
     }
   }
 
-  & > .euiSideNavItem__items {
-    margin-left: $euiSize;
+  & > .ouiSideNavItem__items {
+    margin-left: $ouiSize;
   }
 }
 
-.euiSideNavItem--emphasized {
-  background: $euiSideNavEmphasizedBackgroundColor;
-  color: $euiSideNavRootTextcolor;
+.ouiSideNavItem--emphasized {
+  background: $ouiSideNavEmphasizedBackgroundColor;
+  color: $ouiSideNavRootTextcolor;
   // The large y values allow the shadow to stretch beyond the side nav bounds to it's parents container
-  box-shadow: 100px 0 0 0 $euiSideNavEmphasizedBackgroundColor, -100px 0 0 0 $euiSideNavEmphasizedBackgroundColor;
+  box-shadow: 100px 0 0 0 $ouiSideNavEmphasizedBackgroundColor, -100px 0 0 0 $ouiSideNavEmphasizedBackgroundColor;
 
-  > .euiSideNavItemButton {
-    font-weight: $euiFontWeightBold;
+  > .ouiSideNavItemButton {
+    font-weight: $ouiFontWeightBold;
   }
 
   // Remove any extra box-shadows from nested emphasized items
-  .euiSideNavItem--emphasized {
+  .ouiSideNavItem--emphasized {
     background: transparent;
     box-shadow: none;
   }

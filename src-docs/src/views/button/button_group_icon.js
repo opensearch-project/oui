@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
-import { EuiButtonGroup } from '../../../../src/components';
+import { OuiButtonGroup } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -78,7 +89,7 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiButtonGroup
+      <OuiButtonGroup
         legend="Text align"
         options={toggleButtonsIcons}
         idSelected={toggleIconIdSelected}
@@ -86,7 +97,7 @@ export default () => {
         isIconOnly
       />
       &nbsp;&nbsp;
-      <EuiButtonGroup
+      <OuiButtonGroup
         legend="Text style"
         options={toggleButtonsIconsMulti}
         idToSelectedMap={toggleIconIdToSelectedMap}

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,6 +30,6 @@
 
 import React, { FunctionComponent } from 'react';
 
-export const EuiComboBoxTitle: FunctionComponent<{}> = ({ children }) => (
-  <div className="euiComboBoxTitle">{children}</div>
+export const OuiComboBoxTitle: FunctionComponent<{}> = ({ children }) => (
+  <div className="ouiComboBoxTitle">{children}</div>
 );

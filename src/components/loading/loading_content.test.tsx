@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,13 +32,13 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiLoadingContent, LineRange } from './loading_content';
+import { OuiLoadingContent, LineRange } from './loading_content';
 
 const lines: LineRange[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-describe('EuiLoadingContent', () => {
+describe('OuiLoadingContent', () => {
   test('is rendered', () => {
-    const component = render(<EuiLoadingContent {...requiredProps} />);
+    const component = render(<OuiLoadingContent {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -35,7 +46,7 @@ describe('EuiLoadingContent', () => {
   describe('lines', () => {
     lines.forEach((line) => {
       test(`${line} is rendered`, () => {
-        const component = render(<EuiLoadingContent lines={line} />);
+        const component = render(<OuiLoadingContent lines={line} />);
 
         expect(component).toMatchSnapshot();
       });

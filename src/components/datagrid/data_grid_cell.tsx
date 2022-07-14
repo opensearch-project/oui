@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -33,21 +44,21 @@ import React, {
 import classNames from 'classnames';
 import tabbable from 'tabbable';
 import { CommonProps } from '../common';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
+import { OuiScreenReaderOnly } from '../accessibility';
+import { OuiI18n } from '../i18n';
 import {
-  EuiDataGridColumn,
-  EuiDataGridPopoverContent,
-  EuiDataGridRowHeightsOptions,
+  OuiDataGridColumn,
+  OuiDataGridPopoverContent,
+  OuiDataGridRowHeightsOptions,
 } from './data_grid_types';
 import { DataGridFocusContext } from './data_grid_context';
-import { EuiFocusTrap } from '../focus_trap';
+import { OuiFocusTrap } from '../focus_trap';
 import { keys } from '../../services';
-import { EuiDataGridCellButtons } from './data_grid_cell_buttons';
-import { EuiDataGridCellPopover } from './data_grid_cell_popover';
+import { OuiDataGridCellButtons } from './data_grid_cell_buttons';
+import { OuiDataGridCellPopover } from './data_grid_cell_popover';
 import { getStylesForCell } from './row_height_utils';
 
-export interface EuiDataGridCellValueElementProps {
+export interface OuiDataGridCellValueElementProps {
   /**
    * index of the row being rendered, 0 represents the first row. This index always includes
    * pagination offset, meaning the first rowIndex in a grid is `pagination.pageIndex * pagination.pageSize`
@@ -55,7 +66,7 @@ export interface EuiDataGridCellValueElementProps {
    */
   rowIndex: number;
   /**
-   * id of the column being rendered, the value comes from the #EuiDataGridColumn `id`
+   * id of the column being rendered, the value comes from the #OuiDataGridColumn `id`
    */
   columnId: string;
   /**
@@ -64,7 +75,7 @@ export interface EuiDataGridCellValueElementProps {
    */
   setCellProps: (props: CommonProps & HTMLAttributes<HTMLDivElement>) => void;
   /**
-   * whether or not the cell is expandable, comes from the #EuiDataGridColumn `isExpandable` which defaults to `true`
+   * whether or not the cell is expandable, comes from the #OuiDataGridColumn `isExpandable` which defaults to `true`
    */
   isExpandable: boolean;
   /**
@@ -77,28 +88,28 @@ export interface EuiDataGridCellValueElementProps {
   isDetails: boolean;
 }
 
-export interface EuiDataGridCellProps {
+export interface OuiDataGridCellProps {
   rowIndex: number;
   visibleRowIndex: number;
   colIndex: number;
-  column?: EuiDataGridColumn;
+  column?: OuiDataGridColumn;
   columnId: string;
   columnType?: string | null;
   width?: number;
   interactiveCellId: string;
   isExpandable: boolean;
   className?: string;
-  popoverContent: EuiDataGridPopoverContent;
+  popoverContent: OuiDataGridPopoverContent;
   renderCellValue:
-    | JSXElementConstructor<EuiDataGridCellValueElementProps>
-    | ((props: EuiDataGridCellValueElementProps) => ReactNode);
+    | JSXElementConstructor<OuiDataGridCellValueElementProps>
+    | ((props: OuiDataGridCellValueElementProps) => ReactNode);
   setRowHeight?: (height: number) => void;
   getRowHeight?: (rowIndex: number) => number;
   style?: React.CSSProperties;
-  rowHeightsOptions?: EuiDataGridRowHeightsOptions;
+  rowHeightsOptions?: OuiDataGridRowHeightsOptions;
 }
 
-interface EuiDataGridCellState {
+interface OuiDataGridCellState {
   cellProps: CommonProps & HTMLAttributes<HTMLDivElement>;
   popoverIsOpen: boolean; // is expansion popover open
   isFocused: boolean; // tracks if this cell has focus or not, used to enable tabIndex on the cell
@@ -107,16 +118,16 @@ interface EuiDataGridCellState {
   disableCellTabIndex: boolean; // disables tabIndex on the wrapping cell, used for focus management of a single interactive child
 }
 
-export type EuiDataGridCellValueProps = Omit<
-  EuiDataGridCellProps,
+export type OuiDataGridCellValueProps = Omit<
+  OuiDataGridCellProps,
   'width' | 'interactiveCellId' | 'popoverContent'
 >;
 
-const EuiDataGridCellContent: FunctionComponent<
-  EuiDataGridCellValueProps & {
-    setCellProps: EuiDataGridCellValueElementProps['setCellProps'];
+const OuiDataGridCellContent: FunctionComponent<
+  OuiDataGridCellValueProps & {
+    setCellProps: OuiDataGridCellValueElementProps['setCellProps'];
     isExpanded: boolean;
-    setCellContentsRef: EuiDataGridCell['setCellContentsRef'];
+    setCellContentsRef: OuiDataGridCell['setCellContentsRef'];
   }
 > = memo((props) => {
   const {
@@ -131,23 +142,23 @@ const EuiDataGridCellContent: FunctionComponent<
 
   // React is more permissible than the TS types indicate
   const CellElement = renderCellValue as JSXElementConstructor<
-    EuiDataGridCellValueElementProps
+    OuiDataGridCellValueElementProps
   >;
 
   const screenReaderPosition = (
-    <EuiScreenReaderOnly>
+    <OuiScreenReaderOnly>
       <p>
-        <EuiI18n
-          tokens={['euiDataGridCell.row', 'euiDataGridCell.column']}
+        <OuiI18n
+          tokens={['ouiDataGridCell.row', 'ouiDataGridCell.column']}
           defaults={['Row', 'Column']}>
           {([row, column]: ReactChild[]) => (
             <>
               {row}: {rowIndex + 1}, {column}: {colIndex + 1}:
             </>
           )}
-        </EuiI18n>
+        </OuiI18n>
       </p>
-    </EuiScreenReaderOnly>
+    </OuiScreenReaderOnly>
   );
 
   return (
@@ -156,7 +167,7 @@ const EuiDataGridCellContent: FunctionComponent<
       style={
         rowHeightsOptions ? getStylesForCell(rowHeightsOptions, rowIndex) : {}
       }
-      className={!rowHeightsOptions ? 'euiDataGridRowCell__truncate' : ''}>
+      className={!rowHeightsOptions ? 'ouiDataGridRowCell__truncate' : ''}>
       <CellElement
         isDetails={false}
         data-test-subj="cell-content"
@@ -171,21 +182,21 @@ const EuiDataGridCellContent: FunctionComponent<
 // TODO: TypeScript has added types for ResizeObserver but not yet released
 // https://github.com/microsoft/TypeScript-DOM-lib-generator/pull/948
 // for now, marking ResizeObserver usage as `any`
-// and when EUI upgrades to a version of TS with ResizeObserver
+// and when OUI upgrades to a version of TS with ResizeObserver
 // the anys can be removed
 const hasResizeObserver =
   typeof window !== 'undefined' &&
   typeof (window as any).ResizeObserver !== 'undefined';
 
-export class EuiDataGridCell extends Component<
-  EuiDataGridCellProps,
-  EuiDataGridCellState
+export class OuiDataGridCell extends Component<
+  OuiDataGridCellProps,
+  OuiDataGridCellState
 > {
   cellRef = createRef() as MutableRefObject<HTMLDivElement | null>;
   observer!: any; // ResizeObserver
   popoverPanelRef: MutableRefObject<HTMLElement | null> = createRef();
   cellContentsRef: HTMLDivElement | null = null;
-  state: EuiDataGridCellState = {
+  state: OuiDataGridCellState = {
     cellProps: {},
     popoverIsOpen: false,
     isFocused: false,
@@ -277,8 +288,8 @@ export class EuiDataGridCell extends Component<
   }
 
   shouldComponentUpdate(
-    nextProps: EuiDataGridCellProps,
-    nextState: EuiDataGridCellState
+    nextProps: OuiDataGridCellProps,
+    nextState: OuiDataGridCellState
   ) {
     if (nextProps.rowIndex !== this.props.rowIndex) return true;
     if (nextProps.visibleRowIndex !== this.props.visibleRowIndex) return true;
@@ -406,10 +417,10 @@ export class EuiDataGridCell extends Component<
       this.state.popoverIsOpen;
 
     const cellClasses = classNames(
-      'euiDataGridRowCell',
+      'ouiDataGridRowCell',
       {
-        [`euiDataGridRowCell--${columnType}`]: columnType,
-        ['euiDataGridRowCell--open']: this.state.popoverIsOpen,
+        [`ouiDataGridRowCell--${columnType}`]: columnType,
+        ['ouiDataGridRowCell--open']: this.state.popoverIsOpen,
       },
       className
     );
@@ -495,7 +506,7 @@ export class EuiDataGridCell extends Component<
     };
 
     let anchorContent = (
-      <EuiFocusTrap
+      <OuiFocusTrap
         disabled={!this.state.isEntered}
         autoFocus={true}
         onDeactivation={() => {
@@ -504,42 +515,42 @@ export class EuiDataGridCell extends Component<
         style={this.props.rowHeightsOptions ? { height: '100%' } : {}}
         clickOutsideDisables={true}>
         <div
-          className={`euiDataGridRowCell__expandFlex ${
+          className={`ouiDataGridRowCell__expandFlex ${
             this.props.rowHeightsOptions
-              ? 'euiDataGridRowCell__alignBaseLine'
+              ? 'ouiDataGridRowCell__alignBaseLine'
               : ''
           }`}>
           <div
             className={
               !this.props.rowHeightsOptions
-                ? 'euiDataGridRowCell__expandContent'
-                : 'euiDataGridRowCell__contentByHeight'
+                ? 'ouiDataGridRowCell__expandContent'
+                : 'ouiDataGridRowCell__contentByHeight'
             }>
-            <EuiDataGridCellContent {...cellContentProps} />
+            <OuiDataGridCellContent {...cellContentProps} />
           </div>
         </div>
-      </EuiFocusTrap>
+      </OuiFocusTrap>
     );
 
     if (isExpandable || (column && column.cellActions)) {
       if (showCellButtons) {
         anchorContent = (
           <div
-            className={`euiDataGridRowCell__expandFlex ${
+            className={`ouiDataGridRowCell__expandFlex ${
               this.props.rowHeightsOptions
-                ? 'euiDataGridRowCell__alignBaseLine'
+                ? 'ouiDataGridRowCell__alignBaseLine'
                 : ''
             }`}>
             <div
               className={
                 !this.props.rowHeightsOptions
-                  ? 'euiDataGridRowCell__expandContent'
-                  : 'euiDataGridRowCell__contentByHeight'
+                  ? 'ouiDataGridRowCell__expandContent'
+                  : 'ouiDataGridRowCell__contentByHeight'
               }>
-              <EuiDataGridCellContent {...cellContentProps} />
+              <OuiDataGridCellContent {...cellContentProps} />
             </div>
             {showCellButtons && (
-              <EuiDataGridCellButtons
+              <OuiDataGridCellButtons
                 rowIndex={rowIndex}
                 column={column}
                 popoverIsOpen={this.state.popoverIsOpen}
@@ -556,12 +567,12 @@ export class EuiDataGridCell extends Component<
       } else {
         anchorContent = (
           <div
-            className={`euiDataGridRowCell__expandFlex ${
+            className={`ouiDataGridRowCell__expandFlex ${
               this.props.rowHeightsOptions
-                ? 'euiDataGridRowCell__alignBaseLine'
+                ? 'ouiDataGridRowCell__alignBaseLine'
                 : ''
             }`}>
-            <EuiDataGridCellContent {...cellContentProps} />
+            <OuiDataGridCellContent {...cellContentProps} />
           </div>
         );
       }
@@ -574,10 +585,10 @@ export class EuiDataGridCell extends Component<
           <div
             className={
               !this.props.rowHeightsOptions
-                ? 'euiDataGridRowCell__content'
-                : 'euiDataGridRowCell__contentByHeight'
+                ? 'ouiDataGridRowCell__content'
+                : 'ouiDataGridRowCell__contentByHeight'
             }>
-            <EuiDataGridCellPopover
+            <OuiDataGridCellPopover
               anchorContent={anchorContent}
               cellContentProps={cellContentProps}
               cellContentsRef={this.cellContentsRef}

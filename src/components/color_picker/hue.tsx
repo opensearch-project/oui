@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,12 +36,12 @@ import React, {
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
+import { OuiScreenReaderOnly } from '../accessibility';
+import { OuiI18n } from '../i18n';
 
 const HUE_RANGE = 359;
 
-export type EuiHueProps = Omit<
+export type OuiHueProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'onChange'
 > &
@@ -40,7 +51,7 @@ export type EuiHueProps = Omit<
     onChange: (hue: number) => void;
   };
 
-export const EuiHue: FunctionComponent<EuiHueProps> = ({
+export const OuiHue: FunctionComponent<OuiHueProps> = ({
   className,
   hex,
   hue = 1,
@@ -51,20 +62,20 @@ export const EuiHue: FunctionComponent<EuiHueProps> = ({
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     onChange(Number(e.target.value));
   };
-  const classes = classNames('euiHue', className);
+  const classes = classNames('ouiHue', className);
   return (
     <React.Fragment>
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <label htmlFor={`${id}-hue`}>
-          <EuiI18n
-            token="euiHue.label"
+          <OuiI18n
+            token="ouiHue.label"
             default="Select the HSV color mode 'hue' value"
           />
         </label>
-      </EuiScreenReaderOnly>
-      <EuiScreenReaderOnly>
+      </OuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <p aria-live="polite">{hex}</p>
-      </EuiScreenReaderOnly>
+      </OuiScreenReaderOnly>
       <div className={classes}>
         <input
           id={`${id}-hue`}
@@ -72,7 +83,7 @@ export const EuiHue: FunctionComponent<EuiHueProps> = ({
           max={HUE_RANGE}
           step={1}
           type="range"
-          className="euiHue__range"
+          className="ouiHue__range"
           value={hue}
           onChange={handleChange}
           {...rest}

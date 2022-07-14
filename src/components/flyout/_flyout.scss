@@ -1,6 +1,17 @@
-.euiFlyout {
-  @include euiFlyout;
-  animation: euiFlyout $euiAnimSpeedNormal $euiAnimSlightResistance;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFlyout {
+  @include ouiFlyout;
+  animation: ouiFlyout $ouiAnimSpeedNormal $ouiAnimSlightResistance;
 
   // Remove focus ring because of `tabindex=0`
   &:focus {
@@ -8,32 +19,32 @@
   }
 }
 
-.euiFlyout__closeButton {
-  background-color: transparentize($euiColorEmptyShade, .1);
+.ouiFlyout__closeButton {
+  background-color: transparentize($ouiColorEmptyShade, .1);
   position: absolute;
-  right: $euiSizeS;
-  top: $euiSizeS;
+  right: $ouiSizeS;
+  top: $ouiSizeS;
   z-index: 3;
 
   &--outside {
     // match dropshadow
-    @include euiBottomShadowLarge;
+    @include ouiBottomShadowLarge;
     right: auto;
     left: 0;
     // Override the hover and focus transitions of buttons
     // sass-lint:disable-block no-important
-    transform: translateX(calc(-100% - #{$euiSizeL})) !important;
+    transform: translateX(calc(-100% - #{$ouiSizeL})) !important;
     animation: none !important;
 
-    .euiFlyout--left & {
+    .ouiFlyout--left & {
       left: auto;
       right: 0;
-      transform: translateX(calc(100% + #{$euiSizeL})) !important;
+      transform: translateX(calc(100% + #{$ouiSizeL})) !important;
     }
   }
 }
 
-.euiFlyoutBody__banner {
+.ouiFlyoutBody__banner {
   overflow-x: hidden;
 }
 
@@ -42,58 +53,58 @@
  */
 $flyoutSizes: (
   'small': (
-    min: round(map-get($euiBreakpoints, 'm') * .5), /* 1 */
+    min: round(map-get($ouiBreakpoints, 'm') * .5), /* 1 */
     width: 25vw,
-    max: round(map-get($euiBreakpoints, 's') * .7),
+    max: round(map-get($ouiBreakpoints, 's') * .7),
   ),
   'medium': (
     // Calculated for forms plus padding
-    min: $euiFormMaxWidth + ($euiSizeM * 2),
+    min: $ouiFormMaxWidth + ($ouiSizeM * 2),
     width: 50vw,
-    max: map-get($euiBreakpoints, 'm'),
+    max: map-get($ouiBreakpoints, 'm'),
   ),
   'large': (
-    min:  round(map-get($euiBreakpoints, 'm') * .9), /* 1 */
+    min:  round(map-get($ouiBreakpoints, 'm') * .9), /* 1 */
     width: 75vw,
-    max: map-get($euiBreakpoints, 'l'),
+    max: map-get($ouiBreakpoints, 'l'),
   )
 );
 
 @each $name, $sizing in $flyoutSizes {
-  .euiFlyout--#{$name} {
+  .ouiFlyout--#{$name} {
     min-width: map-get($sizing, min);
     width: map-get($sizing, width);
 
-    &.euiFlyout--maxWidth-default {
+    &.ouiFlyout--maxWidth-default {
       max-width: map-get($sizing, max);
     }
   }
 }
 
-@each $modifier, $paddingAmount in $euiFlyoutPaddingModifiers {
-  .euiFlyout--#{$modifier} {
+@each $modifier, $paddingAmount in $ouiFlyoutPaddingModifiers {
+  .ouiFlyout--#{$modifier} {
 
-    .euiFlyoutHeader {
+    .ouiFlyoutHeader {
       padding: $paddingAmount $paddingAmount 0;
     }
 
-    .euiFlyoutHeader--hasBorder {
+    .ouiFlyoutHeader--hasBorder {
       padding-bottom: $paddingAmount;
     }
 
-    .euiFlyoutBody__overflowContent {
+    .ouiFlyoutBody__overflowContent {
       padding: $paddingAmount;
     }
 
-    .euiFlyoutBody__banner .euiCallOut {
+    .ouiFlyoutBody__banner .ouiCallOut {
       padding-left: $paddingAmount;
       padding-right: $paddingAmount;
     }
 
-    .euiFlyoutFooter {
-      @if $paddingAmount == $euiSizeL {
+    .ouiFlyoutFooter {
+      @if $paddingAmount == $ouiSizeL {
         padding: ($paddingAmount / 1.5) $paddingAmount;
-      } @else if $paddingAmount == $euiSize {
+      } @else if $paddingAmount == $ouiSize {
         padding: ($paddingAmount * .75) $paddingAmount;
       } @else {
         padding: $paddingAmount;
@@ -102,7 +113,7 @@ $flyoutSizes: (
   }
 }
 
-@keyframes euiFlyout {
+@keyframes ouiFlyout {
   0% {
     opacity: 0;
     transform: translateX(100%);
@@ -118,35 +129,35 @@ $flyoutSizes: (
  * 1. Leave only a small sliver exposed on small screens so users understand that this is not a new page
  * 2. If a custom maxWidth is set, we need to override it.
  */
-@include euiBreakpoint('xs', 's') {
+@include ouiBreakpoint('xs', 's') {
   // sass-lint:disable-block no-important
-  .euiFlyout {
+  .ouiFlyout {
     max-width: 90vw !important; /* 1, 2 */
   }
 
-  .euiFlyout--small {
+  .ouiFlyout--small {
     min-width: 0;
     width: map-get(map-get($flyoutSizes, 'small'), 'min');
   }
 
-  .euiFlyout--medium {
+  .ouiFlyout--medium {
     min-width: 0;
     width: map-get(map-get($flyoutSizes, 'medium'), 'min');
   }
 
-  .euiFlyout--large {
+  .ouiFlyout--large {
     min-width: 0;
     width: map-get(map-get($flyoutSizes, 'large'), 'min');
   }
 
   // Pull in close buttons a little
-  .euiFlyout__closeButton--outside {
+  .ouiFlyout__closeButton--outside {
     // Override the hover and focus transitions of buttons
     // sass-lint:disable-block no-important
-    transform: translateX(calc(-100% - #{$euiSizeXS})) !important;
+    transform: translateX(calc(-100% - #{$ouiSizeXS})) !important;
 
-    .euiFlyout--left & {
-      transform: translateX(calc(100% + #{$euiSizeXS})) !important;
+    .ouiFlyout--left & {
+      transform: translateX(calc(100% + #{$ouiSizeXS})) !important;
     }
   }
 }
@@ -154,17 +165,17 @@ $flyoutSizes: (
 /**
  * Left side flyout (should only be used for navigation)
  */
-.euiFlyout--left {
-  border-right: $euiFlyoutBorder;
+.ouiFlyout--left {
+  border-right: $ouiFlyoutBorder;
   border-left: none;
   right: auto;
   left: 0;
   clip-path: polygon(0 0, 150% 0, 150% 100%, 0 100%);
-  animation-name: euiFlyoutLeft;
+  animation-name: ouiFlyoutLeft;
 }
 
 // Specific keyframes so in comes in from the left
-@keyframes euiFlyoutLeft {
+@keyframes ouiFlyoutLeft {
   0% {
     opacity: 0;
     transform: translateX(-100%);
@@ -179,15 +190,15 @@ $flyoutSizes: (
 /**
  * Pushed style (inside body)
  */
-.euiFlyout.euiFlyout--push {
+.ouiFlyout.ouiFlyout--push {
   box-shadow: none;
   clip-path: none;
   animation-duration: 0s; // Don't animate on loading a docked nav
-  border-left: $euiBorderThick;
-  z-index: $euiZHeader - 1; // Make sure the header shadows are above
+  border-left: $ouiBorderThick;
+  z-index: $ouiZHeader - 1; // Make sure the header shadows are above
 
-  &.euiFlyout--left {
+  &.ouiFlyout--left {
     border-left: none;
-    border-right: $euiBorderThick;
+    border-right: $ouiBorderThick;
   }
 }

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +32,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiText } from './text';
+import { OuiText } from './text';
 
-describe('EuiText', () => {
+describe('OuiText', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiText {...requiredProps}>
+      <OuiText {...requiredProps}>
         <p>Content</p>
-      </EuiText>
+      </OuiText>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,9 +49,9 @@ describe('EuiText', () => {
     describe('grow', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiText {...requiredProps} grow>
+          <OuiText {...requiredProps} grow>
             <p>Content</p>
-          </EuiText>
+          </OuiText>
         );
 
         expect(component).toMatchSnapshot();

@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiColorPaletteDisplay is rendered 1`] = `
+exports[`OuiColorPaletteDisplay is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiColorPaletteDisplay testClass1 testClass2 euiColorPaletteDisplay--sizeSmall"
+  class="ouiColorPaletteDisplay testClass1 testClass2 ouiColorPaletteDisplay--sizeSmall"
   data-test-subj="test subject string"
 >
   <span
-    class="euiColorPaletteDisplayFixed__bleedArea"
+    class="ouiColorPaletteDisplayFixed__bleedArea"
   >
     <span
       style="background-color:#1fb0b2;width:20%"
@@ -28,16 +28,16 @@ exports[`EuiColorPaletteDisplay is rendered 1`] = `
 </span>
 `;
 
-exports[`EuiColorPaletteDisplay props HTML attributes accepts span attributes 1`] = `
+exports[`OuiColorPaletteDisplay props HTML attributes accepts span attributes 1`] = `
 <span
   aria-label="aria-label"
-  class="euiColorPaletteDisplay testClass1 testClass2 euiColorPaletteDisplay--sizeSmall"
+  class="ouiColorPaletteDisplay testClass1 testClass2 ouiColorPaletteDisplay--sizeSmall"
   data-test-subj="test subject string"
   id="id"
   title="title"
 >
   <span
-    class="euiColorPaletteDisplayFixed__bleedArea"
+    class="ouiColorPaletteDisplayFixed__bleedArea"
   >
     <span
       style="background-color:#1fb0b2;width:20%"
@@ -58,14 +58,14 @@ exports[`EuiColorPaletteDisplay props HTML attributes accepts span attributes 1`
 </span>
 `;
 
-exports[`EuiColorPaletteDisplay props size m is rendered 1`] = `
+exports[`OuiColorPaletteDisplay props size m is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiColorPaletteDisplay testClass1 testClass2 euiColorPaletteDisplay--sizeMedium"
+  class="ouiColorPaletteDisplay testClass1 testClass2 ouiColorPaletteDisplay--sizeMedium"
   data-test-subj="test subject string"
 >
   <span
-    class="euiColorPaletteDisplayFixed__bleedArea"
+    class="ouiColorPaletteDisplayFixed__bleedArea"
   >
     <span
       style="background-color:#1fb0b2;width:20%"
@@ -86,14 +86,14 @@ exports[`EuiColorPaletteDisplay props size m is rendered 1`] = `
 </span>
 `;
 
-exports[`EuiColorPaletteDisplay props size s is rendered 1`] = `
+exports[`OuiColorPaletteDisplay props size s is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiColorPaletteDisplay testClass1 testClass2 euiColorPaletteDisplay--sizeSmall"
+  class="ouiColorPaletteDisplay testClass1 testClass2 ouiColorPaletteDisplay--sizeSmall"
   data-test-subj="test subject string"
 >
   <span
-    class="euiColorPaletteDisplayFixed__bleedArea"
+    class="ouiColorPaletteDisplayFixed__bleedArea"
   >
     <span
       style="background-color:#1fb0b2;width:20%"
@@ -114,14 +114,14 @@ exports[`EuiColorPaletteDisplay props size s is rendered 1`] = `
 </span>
 `;
 
-exports[`EuiColorPaletteDisplay props size xs is rendered 1`] = `
+exports[`OuiColorPaletteDisplay props size xs is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiColorPaletteDisplay testClass1 testClass2 euiColorPaletteDisplay--sizeExtraSmall"
+  class="ouiColorPaletteDisplay testClass1 testClass2 ouiColorPaletteDisplay--sizeExtraSmall"
   data-test-subj="test subject string"
 >
   <span
-    class="euiColorPaletteDisplayFixed__bleedArea"
+    class="ouiColorPaletteDisplayFixed__bleedArea"
   >
     <span
       style="background-color:#1fb0b2;width:20%"
@@ -142,14 +142,14 @@ exports[`EuiColorPaletteDisplay props size xs is rendered 1`] = `
 </span>
 `;
 
-exports[`EuiColorPaletteDisplay props type and palette are rendered with type fixed and palette with stops 1`] = `
+exports[`OuiColorPaletteDisplay props type and palette are rendered with type fixed and palette with stops 1`] = `
 <span
   aria-label="aria-label"
-  class="euiColorPaletteDisplay testClass1 testClass2 euiColorPaletteDisplay--sizeSmall"
+  class="ouiColorPaletteDisplay testClass1 testClass2 ouiColorPaletteDisplay--sizeSmall"
   data-test-subj="test subject string"
 >
   <span
-    class="euiColorPaletteDisplayFixed__bleedArea"
+    class="ouiColorPaletteDisplayFixed__bleedArea"
   >
     <span
       style="background-color:#54B399;width:21%"
@@ -167,14 +167,14 @@ exports[`EuiColorPaletteDisplay props type and palette are rendered with type fi
 </span>
 `;
 
-exports[`EuiColorPaletteDisplay props type and palette are rendered with type fixed and palette without stops 1`] = `
+exports[`OuiColorPaletteDisplay props type and palette are rendered with type fixed and palette without stops 1`] = `
 <span
   aria-label="aria-label"
-  class="euiColorPaletteDisplay testClass1 testClass2 euiColorPaletteDisplay--sizeSmall"
+  class="ouiColorPaletteDisplay testClass1 testClass2 ouiColorPaletteDisplay--sizeSmall"
   data-test-subj="test subject string"
 >
   <span
-    class="euiColorPaletteDisplayFixed__bleedArea"
+    class="ouiColorPaletteDisplayFixed__bleedArea"
   >
     <span
       style="background-color:#1fb0b2;width:20%"
@@ -195,19 +195,19 @@ exports[`EuiColorPaletteDisplay props type and palette are rendered with type fi
 </span>
 `;
 
-exports[`EuiColorPaletteDisplay props type and palette are rendered with type gradient and palette with stops 1`] = `
+exports[`OuiColorPaletteDisplay props type and palette are rendered with type gradient and palette with stops 1`] = `
 <span
   aria-label="aria-label"
-  class="euiColorPaletteDisplay testClass1 testClass2 euiColorPaletteDisplay--sizeSmall"
+  class="ouiColorPaletteDisplay testClass1 testClass2 ouiColorPaletteDisplay--sizeSmall"
   data-test-subj="test subject string"
   style="background:linear-gradient(to right, #54B399 0%, #D36086 53%, #9170B8 74%, #F5A700 100%)"
 />
 `;
 
-exports[`EuiColorPaletteDisplay props type and palette are rendered with type gradient and palette without stops 1`] = `
+exports[`OuiColorPaletteDisplay props type and palette are rendered with type gradient and palette without stops 1`] = `
 <span
   aria-label="aria-label"
-  class="euiColorPaletteDisplay testClass1 testClass2 euiColorPaletteDisplay--sizeSmall"
+  class="ouiColorPaletteDisplay testClass1 testClass2 ouiColorPaletteDisplay--sizeSmall"
   data-test-subj="test subject string"
   style="background:linear-gradient(to right, #1fb0b2 0%, #ffdb6d 25%, #ee9191 50%, #ffffff 75%, #888094 100%)"
 />

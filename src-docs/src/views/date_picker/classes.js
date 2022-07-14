@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import moment from 'moment';
 
 import {
-  EuiDatePicker,
-  EuiFormRow,
-  EuiSpacer,
+  OuiDatePicker,
+  OuiFormRow,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -17,30 +28,30 @@ export default () => {
 
   return (
     <div>
-      <EuiFormRow label="className example">
-        <EuiDatePicker
+      <OuiFormRow label="className example">
+        <OuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
           className="dpTest__purpleInput"
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiFormRow label="calendarClassName example">
-        <EuiDatePicker
+      <OuiFormRow label="calendarClassName example">
+        <OuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
           calendarClassName="dpTest__purpleCal"
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiFormRow label="dayClassName example">
-        <EuiDatePicker
+      <OuiFormRow label="dayClassName example">
+        <OuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
@@ -48,18 +59,18 @@ export default () => {
             date.date() < Math.random() * 31 ? 'dpTest__purpleDay' : undefined
           }
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiFormRow label="popperClassName example">
-        <EuiDatePicker
+      <OuiFormRow label="popperClassName example">
+        <OuiDatePicker
           selected={startDate}
           showTimeSelect
           onChange={handleChange}
           popperClassName="dpTest__purplePopper"
         />
-      </EuiFormRow>
+      </OuiFormRow>
     </div>
   );
 };

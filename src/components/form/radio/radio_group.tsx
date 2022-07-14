@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,31 +34,31 @@ import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../../common';
 
 import {
-  EuiFormFieldsetProps,
-  EuiFormLegendProps,
-  EuiFormFieldset,
+  OuiFormFieldsetProps,
+  OuiFormLegendProps,
+  OuiFormFieldset,
 } from '../form_fieldset';
-import { EuiRadio, EuiRadioProps } from './radio';
+import { OuiRadio, OuiRadioProps } from './radio';
 
-export interface EuiRadioGroupOption
-  extends Omit<EuiRadioProps, 'checked' | 'onChange'> {
+export interface OuiRadioGroupOption
+  extends Omit<OuiRadioProps, 'checked' | 'onChange'> {
   id: string;
 }
 
-export type EuiRadioGroupChangeCallback = (id: string, value?: string) => void;
+export type OuiRadioGroupChangeCallback = (id: string, value?: string) => void;
 
-// Must omit inherit `onChange` properties or else TS complains when applying to the EuiRadio
+// Must omit inherit `onChange` properties or else TS complains when applying to the OuiRadio
 type AsDivProps = Omit<HTMLAttributes<HTMLDivElement>, 'onChange'>;
-type WithLegendProps = Omit<EuiFormFieldsetProps, 'onChange'> & {
+type WithLegendProps = Omit<OuiFormFieldsetProps, 'onChange'> & {
   /**
    * If the individual labels for each radio do not provide a sufficient description, add a legend.
-   * Wraps the group in a `EuiFormFieldset` which adds an `EuiLegend` for titling the whole group.
-   * Accepts an `EuiFormLegendProps` shape.
+   * Wraps the group in a `OuiFormFieldset` which adds an `OuiLegend` for titling the whole group.
+   * Accepts an `OuiFormLegendProps` shape.
    */
-  legend?: EuiFormLegendProps;
+  legend?: OuiFormLegendProps;
 };
 
-export type EuiRadioGroupProps = CommonProps & {
+export type OuiRadioGroupProps = CommonProps & {
   disabled?: boolean;
   /**
    * Tightens up the spacing between radio rows and sends down the
@@ -55,12 +66,12 @@ export type EuiRadioGroupProps = CommonProps & {
    */
   compressed?: boolean;
   name?: string;
-  options: EuiRadioGroupOption[];
+  options: OuiRadioGroupOption[];
   idSelected?: string;
-  onChange: EuiRadioGroupChangeCallback;
+  onChange: OuiRadioGroupChangeCallback;
 } & ExclusiveUnion<AsDivProps, WithLegendProps>;
 
-export const EuiRadioGroup: FunctionComponent<EuiRadioGroupProps> = ({
+export const OuiRadioGroup: FunctionComponent<OuiRadioGroupProps> = ({
   options = [],
   idSelected,
   onChange,
@@ -80,8 +91,8 @@ export const EuiRadioGroup: FunctionComponent<EuiRadioGroupProps> = ({
       ...optionRest
     } = option;
     return (
-      <EuiRadio
-        className={classNames('euiRadioGroup__item', optionClass)}
+      <OuiRadio
+        className={classNames('ouiRadioGroup__item', optionClass)}
         key={index}
         name={name}
         checked={id === idSelected}
@@ -100,12 +111,12 @@ export const EuiRadioGroup: FunctionComponent<EuiRadioGroupProps> = ({
     legend.compressed = compressed;
 
     return (
-      <EuiFormFieldset
+      <OuiFormFieldset
         className={className}
         legend={legend}
-        {...(rest as EuiFormFieldsetProps)}>
+        {...(rest as OuiFormFieldsetProps)}>
         {radios}
-      </EuiFormFieldset>
+      </OuiFormFieldset>
     );
   }
 

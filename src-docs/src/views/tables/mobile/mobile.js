@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiLink,
-  EuiHealth,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSwitch,
-  EuiSpacer,
+  OuiBasicTable,
+  OuiLink,
+  OuiHealth,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSwitch,
+  OuiSpacer,
 } from '../../../../../src/components';
 
 /*
@@ -135,9 +146,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: (username) => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </OuiLink>
       ),
     },
     {
@@ -162,7 +173,7 @@ export const Table = () => {
       render: (online) => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <OuiHealth color={color}>{label}</OuiHealth>;
       },
       sortable: true,
     },
@@ -195,27 +206,27 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center" responsive={false}>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+      <OuiFlexGroup alignItems="center" responsive={false}>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label="Responsive"
             checked={isResponsive}
             onChange={toggleResponsive}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label="Custom header"
             disabled={!isResponsive}
             checked={isResponsive && customHeader}
             onChange={toggleHeader}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiBasicTable
+      <OuiBasicTable
         items={pageOfItems}
         itemId="id"
         columns={columns}

@@ -1,29 +1,40 @@
-.euiDataGridColumnSelector__item {
-  padding: $euiSizeXS;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiDataGridColumnSelector__item {
+  padding: $ouiSizeXS;
 
   &-isDragging {
-    @include euiBottomShadow;
-    background: $euiColorEmptyShade;
+    @include ouiBottomShadow;
+    background: $ouiColorEmptyShade;
   }
 }
 
-// Because we only want this to scroll vertically, we need to offset inner euiFlexGroup negative padding by adding padding
-.euiDataGridColumnSelector__columnList {
-  @include euiYScrollWithShadows;
+// Because we only want this to scroll vertically, we need to offset inner ouiFlexGroup negative padding by adding padding
+.ouiDataGridColumnSelector__columnList {
+  @include ouiYScrollWithShadows;
   max-height: 400px;
-  margin: 0 (-$euiSizeS);
+  margin: 0 (-$ouiSizeS);
 }
 
-.euiDataGridColumnSelector__itemLabel {
-  @include euiFontSizeXS;
+.ouiDataGridColumnSelector__itemLabel {
+  @include ouiFontSizeXS;
 }
 
-.euiDataGridColumnSelectorPopover {
+.ouiDataGridColumnSelectorPopover {
   // Hack because the fixed positions of drag and drop don't work inside of transformed elements
   // sass-lint:disable-block no-important
   transform: none !important;
   transition: none !important;
-  margin-top: -$euiSizeS;
+  margin-top: -$ouiSizeS;
   // IE11 needs a min-width
-  min-width: $euiSize * 12;
+  min-width: $ouiSize * 12;
 }

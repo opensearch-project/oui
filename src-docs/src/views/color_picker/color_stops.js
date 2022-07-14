@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiColorStops,
-  EuiFormRow,
-  EuiRange,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButtonEmpty,
-  EuiPopover,
+  OuiColorStops,
+  OuiFormRow,
+  OuiRange,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiButtonEmpty,
+  OuiPopover,
 } from '../../../../src/components';
 
 import { useColorStopsState } from '../../../../src/services';
@@ -54,38 +65,38 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButtonEmpty
+    <OuiButtonEmpty
       onClick={onButtonClick}
       iconType="controlsVertical"
       aria-label="Open settings"
       color="text"
       size="xs">
       Steps
-    </EuiButtonEmpty>
+    </OuiButtonEmpty>
   );
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Empty start">
-        <EuiColorStops
+      <OuiFormRow label="Empty start">
+        <OuiColorStops
           label="Empty start"
           onChange={handleEmptyChange}
           colorStops={emptyColorStops}
           min={0}
           max={100}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Standard">
-        <EuiColorStops
+      </OuiFormRow>
+      <OuiFormRow label="Standard">
+        <OuiColorStops
           label="Standard"
           onChange={setStandardColorStops}
           colorStops={standardColorStops}
           min={0}
           max={100}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Random new color">
-        <EuiColorStops
+      </OuiFormRow>
+      <OuiFormRow label="Random new color">
+        <OuiColorStops
           label="Random new color"
           onChange={setRandomColorStops}
           colorStops={randomColorStops}
@@ -93,18 +104,18 @@ export default () => {
           max={100}
           addColor={addRandomColor}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Extended range">
-        <EuiColorStops
+      </OuiFormRow>
+      <OuiFormRow label="Extended range">
+        <OuiColorStops
           label="Extended range"
           onChange={handleExtendedChange}
           colorStops={extendedColorStops}
           min={100}
           max={400}
         />
-      </EuiFormRow>
-      <EuiFormRow label="Fixed color segments">
-        <EuiColorStops
+      </OuiFormRow>
+      <OuiFormRow label="Fixed color segments">
+        <OuiColorStops
           label="Fixed color segments"
           onChange={setFixedColorStops}
           colorStops={fixedColorStops}
@@ -112,12 +123,12 @@ export default () => {
           max={100}
           stopType="fixed"
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Stepped color segments">
-        <EuiFlexGroup alignItems="center" gutterSize="xs">
-          <EuiFlexItem>
-            <EuiColorStops
+      <OuiFormRow label="Stepped color segments">
+        <OuiFlexGroup alignItems="center" gutterSize="xs">
+          <OuiFlexItem>
+            <OuiColorStops
               label="Stepped color segments"
               onChange={setSteppedColorStops}
               colorStops={steppedColorStops}
@@ -126,16 +137,16 @@ export default () => {
               max={100}
               stopType="stepped"
             />
-          </EuiFlexItem>
+          </OuiFlexItem>
 
-          <EuiFlexItem grow={false}>
-            <EuiPopover
+          <OuiFlexItem grow={false}>
+            <OuiPopover
               panelStyle={{ minWidth: 380 }}
               button={button}
               isOpen={isPopoverOpen}
               closePopover={closePopover}>
-              <EuiFormRow label="Number of steps" display="columnCompressed">
-                <EuiRange
+              <OuiFormRow label="Number of steps" display="columnCompressed">
+                <OuiRange
                   value={value}
                   onChange={(e) => setValue(parseInt(e.target.value))}
                   showInput
@@ -143,11 +154,11 @@ export default () => {
                   min={2}
                   max={20}
                 />
-              </EuiFormRow>
-            </EuiPopover>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiFormRow>
+              </OuiFormRow>
+            </OuiPopover>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+      </OuiFormRow>
     </React.Fragment>
   );
 };

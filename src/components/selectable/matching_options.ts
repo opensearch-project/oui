@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,10 +28,10 @@
  * under the License.
  */
 
-import { EuiSelectableOption } from './selectable_option';
+import { OuiSelectableOption } from './selectable_option';
 
 const getSearchableLabel = <T>(
-  option: EuiSelectableOption<T>,
+  option: OuiSelectableOption<T>,
   normalize: boolean = true
 ): string => {
   const searchableLabel = option.searchableLabel || option.label;
@@ -29,7 +40,7 @@ const getSearchableLabel = <T>(
 
 const getSelectedOptionForSearchValue = <T>(
   searchValue: string,
-  selectedOptions: Array<EuiSelectableOption<T>>
+  selectedOptions: Array<OuiSelectableOption<T>>
 ) => {
   const normalizedSearchValue = searchValue.toLowerCase();
   return selectedOptions.find(
@@ -38,11 +49,11 @@ const getSelectedOptionForSearchValue = <T>(
 };
 
 const collectMatchingOption = <T>(
-  accumulator: Array<EuiSelectableOption<T>>,
-  option: EuiSelectableOption<T>,
+  accumulator: Array<OuiSelectableOption<T>>,
+  option: OuiSelectableOption<T>,
   normalizedSearchValue: string,
   isPreFiltered?: boolean,
-  selectedOptions?: Array<EuiSelectableOption<T>>
+  selectedOptions?: Array<OuiSelectableOption<T>>
 ) => {
   // Don't show options that have already been requested if
   // the selectedOptions list exists
@@ -78,7 +89,7 @@ export const getMatchingOptions = <T>(
   /**
    * All available options to match against
    */
-  options: Array<EuiSelectableOption<T>>,
+  options: Array<OuiSelectableOption<T>>,
   /**
    * String to match option.label || option.searchableLabel against
    */
@@ -91,10 +102,10 @@ export const getMatchingOptions = <T>(
    * To exclude selected options from the search list,
    * pass the array of selected options
    */
-  selectedOptions?: Array<EuiSelectableOption<T>>
+  selectedOptions?: Array<OuiSelectableOption<T>>
 ) => {
   const normalizedSearchValue = searchValue.toLowerCase();
-  const matchingOptions: Array<EuiSelectableOption<T>> = [];
+  const matchingOptions: Array<OuiSelectableOption<T>> = [];
 
   options.forEach((option) => {
     collectMatchingOption<T>(

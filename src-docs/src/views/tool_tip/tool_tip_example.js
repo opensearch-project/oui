@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,12 +17,12 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiCode,
-  EuiToolTip,
-  EuiIconTip,
-  EuiSpacer,
-  EuiTitle,
+  OuiCallOut,
+  OuiCode,
+  OuiToolTip,
+  OuiIconTip,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 import toolTipConfig from './playground';
 
@@ -19,24 +30,24 @@ import ToolTip from './tool_tip';
 const toolTipSource = require('!!raw-loader!./tool_tip');
 const toolTipHtml = renderToHtml(ToolTip);
 const tooltipSnippet = [
-  `<EuiToolTip position="top" content="Tooltip text">
+  `<OuiToolTip position="top" content="Tooltip text">
   <!-- An inline element to trigger the tooltip -->
-</EuiToolTip>
+</OuiToolTip>
 `,
-  `<EuiToolTip title="Tooltip title" content="Tooltip text">
+  `<OuiToolTip title="Tooltip title" content="Tooltip text">
   <!-- An inline element to trigger the tooltip -->
-</EuiToolTip>
+</OuiToolTip>
 `,
-  `<EuiToolTip content="A tooltip with a long delay" delay="long">
+  `<OuiToolTip content="A tooltip with a long delay" delay="long">
   <!-- An inline element to trigger the tooltip -->
-</EuiToolTip>
+</OuiToolTip>
 `,
 ];
 
 import IconTip from './icon_tip';
 const infoTipSource = require('!!raw-loader!./icon_tip');
 const infoTipHtml = renderToHtml(IconTip);
-const infoTipSnippet = `<EuiIconTip
+const infoTipSnippet = `<OuiIconTip
   content="Tooltip text for the icon"
   position="top"
   type="iInCircle"
@@ -46,46 +57,46 @@ const infoTipSnippet = `<EuiIconTip
 export const ToolTipExample = {
   title: 'Tooltip',
   intro: (
-    <EuiCallOut title="EuiToolTip only applies to inline elements">
+    <OuiCallOut title="OuiToolTip only applies to inline elements">
       <p>
-        EuiToolTip wraps its children in a span element, so if you pass in a
+        OuiToolTip wraps its children in a span element, so if you pass in a
         block-level child (e.g. a div) the resulting DOM will be in violation of
         the HTML5 spec.
       </p>
-    </EuiCallOut>
+    </OuiCallOut>
   ),
   sections: [
     {
       text: (
         <>
           <p>
-            Wrap <strong>EuiToolTip</strong> around any item that you need a
-            tooltip for. The <EuiCode>position</EuiCode> prop will take a
+            Wrap <strong>OuiToolTip</strong> around any item that you need a
+            tooltip for. The <OuiCode>position</OuiCode> prop will take a
             suggested position, but will change it if the tooltip gets too close
             to the edge of the screen.
           </p>
 
-          <EuiTitle size="xs">
+          <OuiTitle size="xs">
             <h2>
               <small>Applying tooltips to custom components</small>
             </h2>
-          </EuiTitle>
+          </OuiTitle>
 
           <p>
-            Internally, <strong>EuiToolTip</strong> applies{' '}
-            <EuiCode>onFocus</EuiCode>, <EuiCode>onBlur</EuiCode>,{' '}
-            <EuiCode>onMouseOver</EuiCode>, and <EuiCode>onMouseOut</EuiCode>{' '}
-            props to whatever you pass as <EuiCode>children</EuiCode>. If you
+            Internally, <strong>OuiToolTip</strong> applies{' '}
+            <OuiCode>onFocus</OuiCode>, <OuiCode>onBlur</OuiCode>,{' '}
+            <OuiCode>onMouseOver</OuiCode>, and <OuiCode>onMouseOut</OuiCode>{' '}
+            props to whatever you pass as <OuiCode>children</OuiCode>. If you
             pass in a custom component, then you&rsquo;ll need to make sure
             these props are applied to the root element rendered by your
             component. The best way to do that is to follow{' '}
-            <a href="https://github.com/elastic/eui/blob/master/wiki/component-design.md#pass-through-props">
-              EUI&rsquo;s guidelines on pass-through props
+            <a href="https://github.com/opensearch-project/oui/blob/master/wiki/component-design.md#pass-through-props">
+              OUI&rsquo;s guidelines on pass-through props
             </a>
             .
           </p>
 
-          <EuiCallOut
+          <OuiCallOut
             iconType="accessibility"
             color="warning"
             title={
@@ -96,9 +107,9 @@ export const ToolTipExample = {
             }
           />
 
-          <EuiSpacer size="l" />
+          <OuiSpacer size="l" />
 
-          <EuiCallOut
+          <OuiCallOut
             iconType="accessibility"
             color="warning"
             title={
@@ -106,7 +117,7 @@ export const ToolTipExample = {
                 Putting anything other than plain text in a tooltip is lost on
                 screen readers. Consider switching to{' '}
                 <Link to="/layout/popover">
-                  <strong>EuiPopover</strong>
+                  <strong>OuiPopover</strong>
                 </Link>{' '}
                 if you need more content inside a tooltip.
               </>
@@ -125,7 +136,7 @@ export const ToolTipExample = {
         },
       ],
 
-      props: { EuiToolTip },
+      props: { OuiToolTip },
       snippet: tooltipSnippet,
       demo: <ToolTip />,
     },
@@ -144,20 +155,20 @@ export const ToolTipExample = {
       text: (
         <Fragment>
           <p>
-            You can use <strong>EuiIconTip</strong> to explain options, other
+            You can use <strong>OuiIconTip</strong> to explain options, other
             controls, or entire parts of the user interface. When possible,
             surface explanations inline within the UI, and only hide them behind
-            a <strong>EuiIconTip</strong> as a last resort.
+            a <strong>OuiIconTip</strong> as a last resort.
           </p>
           <p>
-            It accepts all the same props as <strong>EuiToolTip</strong>. For
+            It accepts all the same props as <strong>OuiToolTip</strong>. For
             convenience, you can also specify optional icon{' '}
-            <EuiCode>size</EuiCode>, <EuiCode>type</EuiCode>, and
-            <EuiCode>color</EuiCode> props.
+            <OuiCode>size</OuiCode>, <OuiCode>type</OuiCode>, and
+            <OuiCode>color</OuiCode> props.
           </p>
         </Fragment>
       ),
-      props: { EuiToolTip, EuiIconTip },
+      props: { OuiToolTip, OuiIconTip },
       snippet: infoTipSnippet,
       demo: <IconTip />,
     },

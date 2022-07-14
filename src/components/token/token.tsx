@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,69 +34,69 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 import { isColorDark, hexToRgb } from '../../services';
 
-import { IconType, EuiIcon, IconSize } from '../icon';
-import { EuiTokenMapType, TOKEN_MAP } from './token_map';
+import { IconType, OuiIcon, IconSize } from '../icon';
+import { OuiTokenMapType, TOKEN_MAP } from './token_map';
 
 type TokenSize = 'xs' | 's' | 'm' | 'l';
 type TokenShape = 'circle' | 'square' | 'rectangle';
 type TokenFill = 'dark' | 'light' | 'none';
 type TokenColor =
-  | 'euiColorVis0'
-  | 'euiColorVis1'
-  | 'euiColorVis2'
-  | 'euiColorVis3'
-  | 'euiColorVis4'
-  | 'euiColorVis5'
-  | 'euiColorVis6'
-  | 'euiColorVis7'
-  | 'euiColorVis8'
-  | 'euiColorVis9'
+  | 'ouiColorVis0'
+  | 'ouiColorVis1'
+  | 'ouiColorVis2'
+  | 'ouiColorVis3'
+  | 'ouiColorVis4'
+  | 'ouiColorVis5'
+  | 'ouiColorVis6'
+  | 'ouiColorVis7'
+  | 'ouiColorVis8'
+  | 'ouiColorVis9'
   | 'gray';
 
 const sizeToClassMap: { [size in TokenSize]: string } = {
-  xs: 'euiToken--xsmall',
-  s: 'euiToken--small',
-  m: 'euiToken--medium',
-  l: 'euiToken--large',
+  xs: 'ouiToken--xsmall',
+  s: 'ouiToken--small',
+  m: 'ouiToken--medium',
+  l: 'ouiToken--large',
 };
 
 export const SIZES = keysOf(sizeToClassMap);
 
 const shapeToClassMap: { [shape in TokenShape]: string } = {
-  circle: 'euiToken--circle',
-  square: 'euiToken--square',
-  rectangle: 'euiToken--rectangle',
+  circle: 'ouiToken--circle',
+  square: 'ouiToken--square',
+  rectangle: 'ouiToken--rectangle',
 };
 
 export const SHAPES = keysOf(shapeToClassMap);
 
 const fillToClassMap: { [fill in TokenFill]: string | null } = {
   none: null,
-  light: 'euiToken--light',
-  dark: 'euiToken--dark',
+  light: 'ouiToken--light',
+  dark: 'ouiToken--dark',
 };
 
 export const FILLS = keysOf(fillToClassMap);
 
 const colorToClassMap: { [color in TokenColor]: string } = {
-  euiColorVis0: 'euiToken--euiColorVis0',
-  euiColorVis1: 'euiToken--euiColorVis1',
-  euiColorVis2: 'euiToken--euiColorVis2',
-  euiColorVis3: 'euiToken--euiColorVis3',
-  euiColorVis4: 'euiToken--euiColorVis4',
-  euiColorVis5: 'euiToken--euiColorVis5',
-  euiColorVis6: 'euiToken--euiColorVis6',
-  euiColorVis7: 'euiToken--euiColorVis7',
-  euiColorVis8: 'euiToken--euiColorVis8',
-  euiColorVis9: 'euiToken--euiColorVis9',
-  gray: 'euiToken--gray',
+  ouiColorVis0: 'ouiToken--ouiColorVis0',
+  ouiColorVis1: 'ouiToken--ouiColorVis1',
+  ouiColorVis2: 'ouiToken--ouiColorVis2',
+  ouiColorVis3: 'ouiToken--ouiColorVis3',
+  ouiColorVis4: 'ouiToken--ouiColorVis4',
+  ouiColorVis5: 'ouiToken--ouiColorVis5',
+  ouiColorVis6: 'ouiToken--ouiColorVis6',
+  ouiColorVis7: 'ouiToken--ouiColorVis7',
+  ouiColorVis8: 'ouiToken--ouiColorVis8',
+  ouiColorVis9: 'ouiToken--ouiColorVis9',
+  gray: 'ouiToken--gray',
 };
 
 export const COLORS = keysOf(colorToClassMap);
 
 export interface TokenProps {
   /**
-   * An EUI icon type
+   * An OUI icon type
    */
   iconType: IconType;
   /**
@@ -117,11 +128,11 @@ export interface TokenProps {
   'aria-describedby'?: string;
 }
 
-export type EuiTokenProps = CommonProps &
+export type OuiTokenProps = CommonProps &
   TokenProps &
   Omit<HTMLAttributes<HTMLSpanElement>, 'title'>;
 
-export const EuiToken: FunctionComponent<EuiTokenProps> = ({
+export const OuiToken: FunctionComponent<OuiTokenProps> = ({
   iconType,
   color,
   fill,
@@ -159,7 +170,7 @@ export const EuiToken: FunctionComponent<EuiTokenProps> = ({
   // If the iconType passed is one of the prefab token types,
   // grab its properties
   if (typeof iconType === 'string' && iconType in TOKEN_MAP) {
-    const tokenDisplay = TOKEN_MAP[iconType as EuiTokenMapType];
+    const tokenDisplay = TOKEN_MAP[iconType as OuiTokenMapType];
     finalDisplay = defaults(currentDisplay, tokenDisplay);
   } else {
     finalDisplay = currentDisplay;
@@ -169,7 +180,7 @@ export const EuiToken: FunctionComponent<EuiTokenProps> = ({
   const finalShape = finalDisplay.shape || 'circle';
   let finalFill = finalDisplay.fill || 'light';
 
-  // Color can be a named space via euiColorVis
+  // Color can be a named space via ouiColorVis
   let colorClass;
   if (finalColor in colorToClassMap) {
     colorClass = colorToClassMap[finalColor as TokenColor];
@@ -191,7 +202,7 @@ export const EuiToken: FunctionComponent<EuiTokenProps> = ({
   }
 
   const classes = classNames(
-    'euiToken',
+    'ouiToken',
     colorClass,
     shapeToClassMap[finalShape],
     fillToClassMap[finalFill],
@@ -201,7 +212,7 @@ export const EuiToken: FunctionComponent<EuiTokenProps> = ({
 
   return (
     <span className={classes} style={style} {...rest}>
-      <EuiIcon
+      <OuiIcon
         type={iconType}
         size={finalSize}
         title={title}

@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,10 +16,10 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiAccordion,
-  EuiCode,
-  EuiCodeBlock,
-  EuiSpacer,
+  OuiAccordion,
+  OuiCode,
+  OuiCodeBlock,
+  OuiSpacer,
   commonDurationRanges,
 } from '../../../../src/components';
 
@@ -33,32 +44,32 @@ export const PrettyDurationExample = {
       text: (
         <Fragment>
           <p>
-            Use <EuiCode>prettyDuration</EuiCode> to convert a start and end
+            Use <OuiCode>prettyDuration</OuiCode> to convert a start and end
             date string to a human-friendly format.
           </p>
 
           <p>
             Start and end values for the duration are passed as the first and
             second arguments, respectively. These can be timestamps (
-            <EuiCode>2018-01-17T18:57:57.149Z</EuiCode>) or relative times (
-            <EuiCode>now-15m</EuiCode>).
+            <OuiCode>2018-01-17T18:57:57.149Z</OuiCode>) or relative times (
+            <OuiCode>now-15m</OuiCode>).
           </p>
 
           <p>
             An array of quick range values is passed as the third argument.
-            These are used to pretty format custom ranges. EUI exports
-            <EuiCode>commonDurationRanges</EuiCode> which can be passed here.
+            These are used to pretty format custom ranges. OUI exports
+            <OuiCode>commonDurationRanges</OuiCode> which can be passed here.
           </p>
 
-          <EuiAccordion
+          <OuiAccordion
             id="commonDurationRanges"
             buttonContent="Show commonDurationRanges definition">
-            <EuiCodeBlock>
+            <OuiCodeBlock>
               {JSON.stringify(commonDurationRanges, null, 2)}
-            </EuiCodeBlock>
-          </EuiAccordion>
+            </OuiCodeBlock>
+          </OuiAccordion>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
           <p>
             The output date/time format is specified by the fourth argument.

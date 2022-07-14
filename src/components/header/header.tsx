@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,58 +33,58 @@ import classNames from 'classnames';
 import { CommonProps } from '../common';
 
 import {
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemProps,
-  EuiHeaderSection,
+  OuiHeaderSectionItem,
+  OuiHeaderSectionItemProps,
+  OuiHeaderSection,
 } from './header_section';
-import { EuiHeaderBreadcrumbs } from './header_breadcrumbs';
-import { EuiBreadcrumb, EuiBreadcrumbsProps } from '../breadcrumbs';
+import { OuiHeaderBreadcrumbs } from './header_breadcrumbs';
+import { OuiBreadcrumb, OuiBreadcrumbsProps } from '../breadcrumbs';
 
-type EuiHeaderSectionItemType = EuiHeaderSectionItemProps['children'];
-type EuiHeaderSectionBorderType = EuiHeaderSectionItemProps['border'];
+type OuiHeaderSectionItemType = OuiHeaderSectionItemProps['children'];
+type OuiHeaderSectionBorderType = OuiHeaderSectionItemProps['border'];
 
-export interface EuiHeaderSections {
+export interface OuiHeaderSections {
   /**
-   * An arry of items that will be wrapped in a #EuiHeaderSectionItem
+   * An arry of items that will be wrapped in a #OuiHeaderSectionItem
    */
-  items?: EuiHeaderSectionItemType[];
+  items?: OuiHeaderSectionItemType[];
   /**
-   * Apply the passed border side to each #EuiHeaderSectionItem
+   * Apply the passed border side to each #OuiHeaderSectionItem
    */
-  borders?: EuiHeaderSectionBorderType;
+  borders?: OuiHeaderSectionBorderType;
   /**
-   * Breadcrumbs in the header cannot be wrapped in a #EuiHeaderSection in order for truncation to work.
-   * Simply pass the array of EuiBreadcrumb objects
+   * Breadcrumbs in the header cannot be wrapped in a #OuiHeaderSection in order for truncation to work.
+   * Simply pass the array of OuiBreadcrumb objects
    */
-  breadcrumbs?: EuiBreadcrumb[];
+  breadcrumbs?: OuiBreadcrumb[];
   /**
-   * Other props to pass to #EuiHeaderBreadcrumbs
+   * Other props to pass to #OuiHeaderBreadcrumbs
    */
-  breadcrumbProps?: Omit<EuiBreadcrumbsProps, 'breadcrumbs'>;
+  breadcrumbProps?: Omit<OuiBreadcrumbsProps, 'breadcrumbs'>;
 }
 
 function createHeaderSection(
-  sections: EuiHeaderSectionItemType[],
-  border?: EuiHeaderSectionBorderType
+  sections: OuiHeaderSectionItemType[],
+  border?: OuiHeaderSectionBorderType
 ) {
   return sections.map((section, index) => {
     return (
-      <EuiHeaderSectionItem key={index} border={border}>
+      <OuiHeaderSectionItem key={index} border={border}>
         {section}
-      </EuiHeaderSectionItem>
+      </OuiHeaderSectionItem>
     );
   });
 }
 
-export type EuiHeaderProps = CommonProps &
+export type OuiHeaderProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
-     * An array of objects to wrap in a #EuiHeaderSection.
+     * An array of objects to wrap in a #OuiHeaderSection.
      * Each section is spaced using `space-between`.
-     * See #EuiHeaderSectionsProp for object details.
+     * See #OuiHeaderSectionsProp for object details.
      * This prop disregards the prop `children` if both are passed.
      */
-    sections?: EuiHeaderSections[];
+    sections?: OuiHeaderSections[];
     /**
      * Helper that positions the header against the window body and
      * adds the correct amount of top padding to the window when in `fixed` mode
@@ -87,9 +98,9 @@ export type EuiHeaderProps = CommonProps &
   };
 
 // Start a counter to manage the total number of fixed headers that need the body class
-let euiHeaderFixedCounter = 0;
+let ouiHeaderFixedCounter = 0;
 
-export const EuiHeader: FunctionComponent<EuiHeaderProps> = ({
+export const OuiHeader: FunctionComponent<OuiHeaderProps> = ({
   children,
   className,
   sections,
@@ -98,23 +109,23 @@ export const EuiHeader: FunctionComponent<EuiHeaderProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeader',
-    `euiHeader--${theme}`,
-    `euiHeader--${position}`,
+    'ouiHeader',
+    `ouiHeader--${theme}`,
+    `ouiHeader--${position}`,
     className
   );
 
   useEffect(() => {
     if (position === 'fixed') {
       // Increment fixed header counter for each fixed header
-      euiHeaderFixedCounter++;
-      document.body.classList.add('euiBody--headerIsFixed');
+      ouiHeaderFixedCounter++;
+      document.body.classList.add('ouiBody--headerIsFixed');
 
       return () => {
         // Both decrement the fixed counter AND then check if there are none
-        if (--euiHeaderFixedCounter === 0) {
+        if (--ouiHeaderFixedCounter === 0) {
           // If there are none, THEN remove class
-          document.body.classList.remove('euiBody--headerIsFixed');
+          document.body.classList.remove('ouiBody--headerIsFixed');
         }
       };
     }
@@ -125,25 +136,25 @@ export const EuiHeader: FunctionComponent<EuiHeaderProps> = ({
     if (children) {
       // In case both children and sections are passed, warn in the console that the children will be disregarded
       console.warn(
-        'EuiHeader cannot accept both `children` and `sections`. It will disregard the `children`.'
+        'OuiHeader cannot accept both `children` and `sections`. It will disregard the `children`.'
       );
     }
 
     contents = sections.map((section, index) => {
       const content = [];
       if (section.items) {
-        // Items get wrapped in EuiHeaderSection and each item in a EuiHeaderSectionItem
+        // Items get wrapped in OuiHeaderSection and each item in a OuiHeaderSectionItem
         content.push(
-          <EuiHeaderSection key={`items-${index}`}>
+          <OuiHeaderSection key={`items-${index}`}>
             {createHeaderSection(section.items, section.borders)}
-          </EuiHeaderSection>
+          </OuiHeaderSection>
         );
       }
       if (section.breadcrumbs) {
         content.push(
-          // Breadcrumbs are separate and cannot be contained in a EuiHeaderSection
+          // Breadcrumbs are separate and cannot be contained in a OuiHeaderSection
           // in order for truncation to work
-          <EuiHeaderBreadcrumbs
+          <OuiHeaderBreadcrumbs
             key={`breadcrumbs-${index}`}
             breadcrumbs={section.breadcrumbs}
             {...section.breadcrumbProps}

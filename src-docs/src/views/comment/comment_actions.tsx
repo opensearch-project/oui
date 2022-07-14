@@ -1,20 +1,31 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Component, HTMLAttributes } from 'react';
-import { EuiComment } from '../../../../src/components/comment_list';
-import { EuiButtonIcon } from '../../../../src/components/button';
-import { EuiText } from '../../../../src/components/text';
-import { EuiPopover } from '../../../../src/components/popover';
+import { OuiComment } from '../../../../src/components/comment_list';
+import { OuiButtonIcon } from '../../../../src/components/button';
+import { OuiText } from '../../../../src/components/text';
+import { OuiPopover } from '../../../../src/components/popover';
 import {
-  EuiContextMenuPanel,
-  EuiContextMenuItem,
+  OuiContextMenuPanel,
+  OuiContextMenuItem,
 } from '../../../../src/components/context_menu';
 import { CommonProps } from '../../../../src/components/common';
 
 const body = (
-  <EuiText size="s">
+  <OuiText size="s">
     <p>
       This comment has custom actions available. See the upper right corner.
     </p>
-  </EuiText>
+  </OuiText>
 );
 
 export type CustomActionsProps = HTMLAttributes<HTMLDivElement> &
@@ -44,9 +55,9 @@ export default class extends Component<CustomActionsProps, CustomActionsState> {
   render() {
     const { isPopoverOpen } = this.state;
     const customActions = (
-      <EuiPopover
+      <OuiPopover
         button={
-          <EuiButtonIcon
+          <OuiButtonIcon
             aria-label="Actions"
             iconType="gear"
             size="s"
@@ -58,45 +69,45 @@ export default class extends Component<CustomActionsProps, CustomActionsState> {
         closePopover={() => this.closePopover()}
         panelPaddingSize="none"
         anchorPosition="leftCenter">
-        <EuiContextMenuPanel
+        <OuiContextMenuPanel
           items={[
-            <EuiContextMenuItem
+            <OuiContextMenuItem
               key="A"
               icon="pencil"
               onClick={() => {
                 this.closePopover();
               }}>
               Edit
-            </EuiContextMenuItem>,
-            <EuiContextMenuItem
+            </OuiContextMenuItem>,
+            <OuiContextMenuItem
               key="B"
               icon="share"
               onClick={() => {
                 this.closePopover();
               }}>
               Share
-            </EuiContextMenuItem>,
-            <EuiContextMenuItem
+            </OuiContextMenuItem>,
+            <OuiContextMenuItem
               key="C"
               icon="copy"
               onClick={() => {
                 this.closePopover();
               }}>
               Copy
-            </EuiContextMenuItem>,
+            </OuiContextMenuItem>,
           ]}
         />
-      </EuiPopover>
+      </OuiPopover>
     );
     return (
       <div>
-        <EuiComment
+        <OuiComment
           username="janed"
           event="added a comment"
           actions={customActions}
           timestamp="Jan 1, 2020">
           {body}
-        </EuiComment>
+        </OuiComment>
       </div>
     );
   }

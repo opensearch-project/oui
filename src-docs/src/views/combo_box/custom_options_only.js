@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiComboBox, EuiFormRow } from '../../../../src/components';
+import { OuiComboBox, OuiFormRow } from '../../../../src/components';
 
 const isValid = (value) => {
   // Only allow letters. No spaces, numbers, or special characters.
@@ -41,11 +52,11 @@ export default () => {
   };
 
   return (
-    <EuiFormRow
+    <OuiFormRow
       label="Only custom options"
       isInvalid={isInvalid}
       error={isInvalid ? 'Only letters are allowed' : undefined}>
-      <EuiComboBox
+      <OuiComboBox
         noSuggestions
         placeholder="Create some tags (letters only)"
         selectedOptions={selectedOptions}
@@ -54,6 +65,6 @@ export default () => {
         onSearchChange={onSearchChange}
         isInvalid={isInvalid}
       />
-    </EuiFormRow>
+    </OuiFormRow>
   );
 };

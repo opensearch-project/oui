@@ -1,55 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSplitPanel accepts panel props 1`] = `
+exports[`OuiSplitPanel accepts panel props 1`] = `
 <div
-  class="euiPanel euiPanel--borderRadiusMedium euiPanel--primary euiPanel--noShadow euiPanel--noBorder euiPanel--flexGrowZero euiSplitPanel"
+  class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--primary ouiPanel--noShadow ouiPanel--noBorder ouiPanel--flexGrowZero ouiSplitPanel"
 >
   <div
     aria-label="aria-label"
-    class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusNone euiPanel--success euiPanel--noShadow euiPanel--noBorder euiSplitPanel__inner testClass1 testClass2"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusNone ouiPanel--success ouiPanel--noShadow ouiPanel--noBorder ouiSplitPanel__inner testClass1 testClass2"
     data-test-subj="test subject string"
   />
 </div>
 `;
 
-exports[`EuiSplitPanel inner children are rendered 1`] = `
+exports[`OuiSplitPanel inner children are rendered 1`] = `
 <div
-  class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPanel--flexGrowZero euiSplitPanel"
+  class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--flexGrowZero ouiSplitPanel"
 >
   <div
-    class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiSplitPanel__inner"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiSplitPanel__inner"
   />
 </div>
 `;
 
-exports[`EuiSplitPanel is rendered 1`] = `
+exports[`OuiSplitPanel is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPanel--flexGrowZero euiSplitPanel testClass1 testClass2"
+  class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--flexGrowZero ouiSplitPanel testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiSplitPanel renders as row 1`] = `
+exports[`OuiSplitPanel renders as row 1`] = `
 <div
-  class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPanel--flexGrowZero euiSplitPanel euiSplitPanel--row"
+  class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--flexGrowZero ouiSplitPanel ouiSplitPanel--row"
 />
 `;
 
-exports[`EuiSplitPanel responsive can be changed to different breakpoints 1`] = `
+exports[`OuiSplitPanel responsive can be changed to different breakpoints 1`] = `
 <div
-  class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPanel--flexGrowZero euiSplitPanel"
+  class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--flexGrowZero ouiSplitPanel"
 />
 `;
 
-exports[`EuiSplitPanel responsive can be false 1`] = `
+exports[`OuiSplitPanel responsive can be false 1`] = `
 <div
-  class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPanel--flexGrowZero euiSplitPanel"
+  class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--flexGrowZero ouiSplitPanel"
 />
 `;
 
-exports[`EuiSplitPanel responsive is rendered at small screens 1`] = `
+exports[`OuiSplitPanel responsive is rendered at small screens 1`] = `
 <div
-  class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPanel--flexGrowZero euiSplitPanel"
+  class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--flexGrowZero ouiSplitPanel"
 />
 `;

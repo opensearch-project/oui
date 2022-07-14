@@ -1,40 +1,51 @@
-.euiDroppable {
-  $euiDroppableColor: $euiColorSecondary;
-  transition: background-color $euiAnimSpeedExtraSlow ease;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-  &.euiDroppable--isDraggingType:not(.euiDroppable--isDisabled) {
-    background-color: transparentize($euiDroppableColor, .9);
+.ouiDroppable {
+  $ouiDroppableColor: $ouiColorSecondary;
+  transition: background-color $ouiAnimSpeedExtraSlow ease;
 
-    &.euiDroppable--isDraggingOver {
-      background-color: transparentize($euiDroppableColor, .75);
+  &.ouiDroppable--isDraggingType:not(.ouiDroppable--isDisabled) {
+    background-color: transparentize($ouiDroppableColor, .9);
+
+    &.ouiDroppable--isDraggingOver {
+      background-color: transparentize($ouiDroppableColor, .75);
     }
   }
 
-  .euiDroppable__placeholder {
-    &.euiDroppable__placeholder--isHidden {
+  .ouiDroppable__placeholder {
+    &.ouiDroppable__placeholder--isHidden {
       // Overriding inline styles on JS-inserted HTML elements
       display: none !important; // sass-lint:disable-line no-important
     }
   }
 }
 
-@include euiPanel($selector: '.euiDroppable--withPanel');
+@include ouiPanel($selector: '.ouiDroppable--withPanel');
 
-.euiDroppable--withPanel {
-  @include euiBottomShadowMedium;
-  border-radius: $euiBorderRadius;
+.ouiDroppable--withPanel {
+  @include ouiBottomShadowMedium;
+  border-radius: $ouiBorderRadius;
 }
 
-.euiDroppable--noGrow {
+.ouiDroppable--noGrow {
   flex-grow: 0;
 }
 
-.euiDroppable--grow {
+.ouiDroppable--grow {
   flex-grow: 1;
 }
 
-@each $size, $spacing in $euiDragAndDropSpacing {
-  .euiDroppable--#{$size} {
+@each $size, $spacing in $ouiDragAndDropSpacing {
+  .ouiDroppable--#{$size} {
     padding: $spacing;
   }
 }

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +32,20 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiResizableContainer } from './resizable_container';
+import { OuiResizableContainer } from './resizable_container';
 
-describe('EuiResizableContainer', () => {
+describe('OuiResizableContainer', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiResizableContainer {...requiredProps}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+      <OuiResizableContainer {...requiredProps}>
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel initialSize={50}>Testing</EuiResizablePanel>
-            <EuiResizableButton />
-            <EuiResizablePanel initialSize={50}>123</EuiResizablePanel>
+            <OuiResizablePanel initialSize={50}>Testing</OuiResizablePanel>
+            <OuiResizableButton />
+            <OuiResizablePanel initialSize={50}>123</OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,15 +53,15 @@ describe('EuiResizableContainer', () => {
 
   test('can be vertical', () => {
     const component = render(
-      <EuiResizableContainer {...requiredProps} direction="vertical">
-        {(EuiResizablePanel, EuiResizableButton) => (
+      <OuiResizableContainer {...requiredProps} direction="vertical">
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel initialSize={50}>Testing</EuiResizablePanel>
-            <EuiResizableButton />
-            <EuiResizablePanel initialSize={50}>123</EuiResizablePanel>
+            <OuiResizablePanel initialSize={50}>Testing</OuiResizablePanel>
+            <OuiResizableButton />
+            <OuiResizablePanel initialSize={50}>123</OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     );
 
     expect(component).toMatchSnapshot();
@@ -60,15 +71,15 @@ describe('EuiResizableContainer', () => {
     const panel1 = 50;
     const panel2 = 50;
     const component = render(
-      <EuiResizableContainer {...requiredProps}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+      <OuiResizableContainer {...requiredProps}>
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel size={panel1}>Testing</EuiResizablePanel>
-            <EuiResizableButton />
-            <EuiResizablePanel size={panel2}>123</EuiResizablePanel>
+            <OuiResizablePanel size={panel1}>Testing</OuiResizablePanel>
+            <OuiResizableButton />
+            <OuiResizablePanel size={panel2}>123</OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     );
 
     expect(component).toMatchSnapshot();
@@ -76,19 +87,19 @@ describe('EuiResizableContainer', () => {
 
   test('can have scrollable panels', () => {
     const component = render(
-      <EuiResizableContainer {...requiredProps}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+      <OuiResizableContainer {...requiredProps}>
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel initialSize={50} scrollable>
+            <OuiResizablePanel initialSize={50} scrollable>
               Testing
-            </EuiResizablePanel>
-            <EuiResizableButton />
-            <EuiResizablePanel initialSize={50} scrollable>
+            </OuiResizablePanel>
+            <OuiResizableButton />
+            <OuiResizablePanel initialSize={50} scrollable>
               123
-            </EuiResizablePanel>
+            </OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     );
 
     expect(component).toMatchSnapshot();
@@ -96,17 +107,17 @@ describe('EuiResizableContainer', () => {
 
   test('can have more than two panels', () => {
     const component = render(
-      <EuiResizableContainer {...requiredProps}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+      <OuiResizableContainer {...requiredProps}>
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel initialSize={33}>Testing</EuiResizablePanel>
-            <EuiResizableButton />
-            <EuiResizablePanel initialSize={33}>123</EuiResizablePanel>
-            <EuiResizableButton />
-            <EuiResizablePanel initialSize={33}>And again</EuiResizablePanel>
+            <OuiResizablePanel initialSize={33}>Testing</OuiResizablePanel>
+            <OuiResizableButton />
+            <OuiResizablePanel initialSize={33}>123</OuiResizablePanel>
+            <OuiResizableButton />
+            <OuiResizablePanel initialSize={33}>And again</OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     );
 
     expect(component).toMatchSnapshot();
@@ -114,19 +125,19 @@ describe('EuiResizableContainer', () => {
 
   test('can adjust panel props', () => {
     const component = render(
-      <EuiResizableContainer {...requiredProps}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+      <OuiResizableContainer {...requiredProps}>
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel initialSize={50} paddingSize="none">
+            <OuiResizablePanel initialSize={50} paddingSize="none">
               Testing
-            </EuiResizablePanel>
-            <EuiResizableButton />
-            <EuiResizablePanel initialSize={50} color="plain">
+            </OuiResizablePanel>
+            <OuiResizableButton />
+            <OuiResizablePanel initialSize={50} color="plain">
               123
-            </EuiResizablePanel>
+            </OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     );
 
     expect(component).toMatchSnapshot();
@@ -134,19 +145,19 @@ describe('EuiResizableContainer', () => {
 
   test('can have toggleable panels', () => {
     const component = render(
-      <EuiResizableContainer {...requiredProps}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+      <OuiResizableContainer {...requiredProps}>
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel mode="collapsible" initialSize={20}>
+            <OuiResizablePanel mode="collapsible" initialSize={20}>
               Sidebar
-            </EuiResizablePanel>
-            <EuiResizableButton />
-            <EuiResizablePanel mode="main" initialSize={80}>
+            </OuiResizablePanel>
+            <OuiResizableButton />
+            <OuiResizablePanel mode="main" initialSize={80}>
               Sidebar content
-            </EuiResizablePanel>
+            </OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     );
 
     expect(component).toMatchSnapshot();
@@ -154,10 +165,10 @@ describe('EuiResizableContainer', () => {
 
   test('toggleable panels can be configurable', () => {
     const component = render(
-      <EuiResizableContainer {...requiredProps}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+      <OuiResizableContainer {...requiredProps}>
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel
+            <OuiResizablePanel
               mode={[
                 'collapsible',
                 {
@@ -168,14 +179,14 @@ describe('EuiResizableContainer', () => {
               ]}
               initialSize={20}>
               Sidebar
-            </EuiResizablePanel>
-            <EuiResizableButton />
-            <EuiResizablePanel mode="main" initialSize={80}>
+            </OuiResizablePanel>
+            <OuiResizableButton />
+            <OuiResizablePanel mode="main" initialSize={80}>
               Sidebar content
-            </EuiResizablePanel>
+            </OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     );
 
     expect(component).toMatchSnapshot();

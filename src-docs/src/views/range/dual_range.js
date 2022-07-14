@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiDualRange, EuiSpacer, EuiTitle } from '../../../../src/components';
+import { OuiDualRange, OuiSpacer, OuiTitle } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -10,7 +21,7 @@ export default () => {
 
   return (
     <>
-      <EuiDualRange
+      <OuiDualRange
         id={htmlIdGenerator()()}
         min={0}
         max={300}
@@ -18,18 +29,18 @@ export default () => {
         value={value}
         onChange={setValue}
         showLabels
-        aria-label="An example of EuiDualRange"
+        aria-label="An example of OuiDualRange"
       />
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h3>Draggable highlight area</h3>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiDualRange
+      <OuiDualRange
         id={htmlIdGenerator()()}
         min={0}
         max={100}
@@ -37,7 +48,7 @@ export default () => {
         value={value2}
         onChange={setValue2}
         showLabels
-        aria-label="An example of EuiDualRange with isDraggable='true'"
+        aria-label="An example of OuiDualRange with isDraggable='true'"
         isDraggable
       />
     </>

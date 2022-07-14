@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSuperSelect is rendered 1`] = `
+exports[`OuiSuperSelect is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiSuperSelect"
+  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <div>
       <input
@@ -13,13 +13,13 @@ exports[`EuiSuperSelect is rendered 1`] = `
         value=""
       />
       <div
-        class="euiFormControlLayout"
+        class="ouiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <span
-            class="euiScreenReaderOnly"
+            class="ouiScreenReaderOnly"
             id="generated-id"
           >
             Select an option: , is selected
@@ -28,20 +28,20 @@ exports[`EuiSuperSelect is rendered 1`] = `
             aria-haspopup="true"
             aria-label="aria-label"
             aria-labelledby="undefined generated-id"
-            class="euiSuperSelectControl testClass1 testClass2"
+            class="ouiSuperSelectControl testClass1 testClass2"
             data-test-subj="test subject string"
             type="button"
           />
           <div
-            class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="arrowDown"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="arrowDown"
               />
             </span>
           </div>
@@ -52,12 +52,12 @@ exports[`EuiSuperSelect is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSuperSelect props compressed is rendered 1`] = `
+exports[`OuiSuperSelect props compressed is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiSuperSelect"
+  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <div>
       <input
@@ -65,13 +65,13 @@ exports[`EuiSuperSelect props compressed is rendered 1`] = `
         value=""
       />
       <div
-        class="euiFormControlLayout euiFormControlLayout--compressed"
+        class="ouiFormControlLayout ouiFormControlLayout--compressed"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <span
-            class="euiScreenReaderOnly"
+            class="ouiScreenReaderOnly"
             id="generated-id"
           >
             Select an option: , is selected
@@ -80,20 +80,20 @@ exports[`EuiSuperSelect props compressed is rendered 1`] = `
             aria-haspopup="true"
             aria-label="aria-label"
             aria-labelledby="undefined generated-id"
-            class="euiSuperSelectControl euiSuperSelectControl--compressed testClass1 testClass2"
+            class="ouiSuperSelectControl ouiSuperSelectControl--compressed testClass1 testClass2"
             data-test-subj="test subject string"
             type="button"
           />
           <div
-            class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="arrowDown"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="arrowDown"
               />
             </span>
           </div>
@@ -104,12 +104,12 @@ exports[`EuiSuperSelect props compressed is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSuperSelect props custom display is propagated to dropdown 1`] = `
+exports[`OuiSuperSelect props custom display is propagated to dropdown 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiSuperSelect"
+  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <div>
       <input
@@ -117,13 +117,13 @@ exports[`EuiSuperSelect props custom display is propagated to dropdown 1`] = `
         value=""
       />
       <div
-        class="euiFormControlLayout"
+        class="ouiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <span
-            class="euiScreenReaderOnly"
+            class="ouiScreenReaderOnly"
             id="generated-id"
           >
             Select an option: , is selected
@@ -131,20 +131,20 @@ exports[`EuiSuperSelect props custom display is propagated to dropdown 1`] = `
           <button
             aria-haspopup="true"
             aria-labelledby="undefined generated-id"
-            class="euiSuperSelectControl euiSuperSelect--isOpen__button"
+            class="ouiSuperSelectControl ouiSuperSelect--isOpen__button"
             data-test-subj="superSelect"
             type="button"
           />
           <div
-            class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="arrowDown"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="arrowDown"
               />
             </span>
           </div>
@@ -168,12 +168,12 @@ exports[`EuiSuperSelect props custom display is propagated to dropdown 1`] = `
     <div
       aria-live="assertive"
       aria-modal="true"
-      class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-noArrow euiPopover__panel-isAttached"
+      class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-noArrow ouiPopover__panel-isAttached"
       role="dialog"
       style="top: 8px; left: 0px; will-change: transform, opacity; z-index: 2000;"
     >
       <div
-        class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+        class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
       />
       <div>
         <div
@@ -191,33 +191,33 @@ exports[`EuiSuperSelect props custom display is propagated to dropdown 1`] = `
         >
           <div>
             <p
-              class="euiScreenReaderOnly"
+              class="ouiScreenReaderOnly"
               role="alert"
             >
               You are in a form selector of 2 items and must select a single option. Use the up and down keys to navigate or escape to close.
             </p>
             <div
-              class="euiSuperSelect__listbox"
+              class="ouiSuperSelect__listbox"
               role="listbox"
               tabindex="0"
             >
               <button
                 aria-selected="false"
-                class="euiContextMenuItem euiSuperSelect__item"
+                class="ouiContextMenuItem ouiSuperSelect__item"
                 id="1"
                 role="option"
                 type="button"
               >
                 <span
-                  class="euiContextMenu__itemLayout"
+                  class="ouiContextMenu__itemLayout"
                 >
                   <span
-                    class="euiContextMenu__icon"
+                    class="ouiContextMenu__icon"
                     color="inherit"
-                    data-euiicon-type="empty"
+                    data-ouiicon-type="empty"
                   />
                   <span
-                    class="euiContextMenuItem__text"
+                    class="ouiContextMenuItem__text"
                   >
                     Custom Display #1
                   </span>
@@ -225,21 +225,21 @@ exports[`EuiSuperSelect props custom display is propagated to dropdown 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="euiContextMenuItem euiSuperSelect__item"
+                class="ouiContextMenuItem ouiSuperSelect__item"
                 id="2"
                 role="option"
                 type="button"
               >
                 <span
-                  class="euiContextMenu__itemLayout"
+                  class="ouiContextMenu__itemLayout"
                 >
                   <span
-                    class="euiContextMenu__icon"
+                    class="ouiContextMenu__icon"
                     color="inherit"
-                    data-euiicon-type="empty"
+                    data-ouiicon-type="empty"
                   />
                   <span
-                    class="euiContextMenuItem__text"
+                    class="ouiContextMenuItem__text"
                   >
                     Custom Display #2
                   </span>
@@ -264,12 +264,12 @@ exports[`EuiSuperSelect props custom display is propagated to dropdown 1`] = `
 </div>
 `;
 
-exports[`EuiSuperSelect props fullWidth is rendered 1`] = `
+exports[`OuiSuperSelect props fullWidth is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiInputPopover--fullWidth euiSuperSelect"
+  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiInputPopover--fullWidth ouiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <div>
       <input
@@ -277,13 +277,13 @@ exports[`EuiSuperSelect props fullWidth is rendered 1`] = `
         value=""
       />
       <div
-        class="euiFormControlLayout euiFormControlLayout--fullWidth"
+        class="ouiFormControlLayout ouiFormControlLayout--fullWidth"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <span
-            class="euiScreenReaderOnly"
+            class="ouiScreenReaderOnly"
             id="generated-id"
           >
             Select an option: , is selected
@@ -292,20 +292,20 @@ exports[`EuiSuperSelect props fullWidth is rendered 1`] = `
             aria-haspopup="true"
             aria-label="aria-label"
             aria-labelledby="undefined generated-id"
-            class="euiSuperSelectControl euiSuperSelectControl--fullWidth testClass1 testClass2"
+            class="ouiSuperSelectControl ouiSuperSelectControl--fullWidth testClass1 testClass2"
             data-test-subj="test subject string"
             type="button"
           />
           <div
-            class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="arrowDown"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="arrowDown"
               />
             </span>
           </div>
@@ -316,12 +316,12 @@ exports[`EuiSuperSelect props fullWidth is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSuperSelect props is rendered with a prepend and append 1`] = `
+exports[`OuiSuperSelect props is rendered with a prepend and append 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiSuperSelect"
+  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <div>
       <input
@@ -329,18 +329,18 @@ exports[`EuiSuperSelect props is rendered with a prepend and append 1`] = `
         value=""
       />
       <div
-        class="euiFormControlLayout euiFormControlLayout--group"
+        class="ouiFormControlLayout ouiFormControlLayout--group"
       >
         <label
-          class="euiFormLabel euiFormControlLayout__prepend"
+          class="ouiFormLabel ouiFormControlLayout__prepend"
         >
           prepend
         </label>
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <span
-            class="euiScreenReaderOnly"
+            class="ouiScreenReaderOnly"
             id="generated-id"
           >
             Select an option: , is selected
@@ -349,26 +349,26 @@ exports[`EuiSuperSelect props is rendered with a prepend and append 1`] = `
             aria-haspopup="true"
             aria-label="aria-label"
             aria-labelledby="undefined generated-id"
-            class="euiSuperSelectControl euiSuperSelectControl--inGroup testClass1 testClass2"
+            class="ouiSuperSelectControl ouiSuperSelectControl--inGroup testClass1 testClass2"
             data-test-subj="test subject string"
             type="button"
           />
           <div
-            class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="arrowDown"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="arrowDown"
               />
             </span>
           </div>
         </div>
         <label
-          class="euiFormLabel euiFormControlLayout__append"
+          class="ouiFormLabel ouiFormControlLayout__append"
         >
           append
         </label>
@@ -378,12 +378,12 @@ exports[`EuiSuperSelect props is rendered with a prepend and append 1`] = `
 </div>
 `;
 
-exports[`EuiSuperSelect props more props are propogated to each option 1`] = `
+exports[`OuiSuperSelect props more props are propogated to each option 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiSuperSelect"
+  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <div>
       <input
@@ -391,13 +391,13 @@ exports[`EuiSuperSelect props more props are propogated to each option 1`] = `
         value="1"
       />
       <div
-        class="euiFormControlLayout"
+        class="ouiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <span
-            class="euiScreenReaderOnly"
+            class="ouiScreenReaderOnly"
             id="generated-id"
           >
             Select an option: Option #1, is selected
@@ -405,22 +405,22 @@ exports[`EuiSuperSelect props more props are propogated to each option 1`] = `
           <button
             aria-haspopup="true"
             aria-labelledby="undefined generated-id"
-            class="euiSuperSelectControl euiSuperSelect--isOpen__button"
+            class="ouiSuperSelectControl ouiSuperSelect--isOpen__button"
             data-test-subj="superSelect"
             type="button"
           >
             Option #1
           </button>
           <div
-            class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="arrowDown"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="arrowDown"
               />
             </span>
           </div>
@@ -444,12 +444,12 @@ exports[`EuiSuperSelect props more props are propogated to each option 1`] = `
     <div
       aria-live="assertive"
       aria-modal="true"
-      class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-noArrow euiPopover__panel-isAttached"
+      class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-noArrow ouiPopover__panel-isAttached"
       role="dialog"
       style="top: 8px; left: 0px; will-change: transform, opacity; z-index: 2000;"
     >
       <div
-        class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+        class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
       />
       <div>
         <div
@@ -467,35 +467,35 @@ exports[`EuiSuperSelect props more props are propogated to each option 1`] = `
         >
           <div>
             <p
-              class="euiScreenReaderOnly"
+              class="ouiScreenReaderOnly"
               role="alert"
             >
               You are in a form selector of 2 items and must select a single option. Use the up and down keys to navigate or escape to close.
             </p>
             <div
               aria-activedescendant="1"
-              class="euiSuperSelect__listbox"
+              class="ouiSuperSelect__listbox"
               role="listbox"
               tabindex="0"
             >
               <button
                 aria-selected="true"
-                class="euiContextMenuItem euiSuperSelect__item euiContextMenuItem-isDisabled"
+                class="ouiContextMenuItem ouiSuperSelect__item ouiContextMenuItem-isDisabled"
                 disabled=""
                 id="1"
                 role="option"
                 type="button"
               >
                 <span
-                  class="euiContextMenu__itemLayout"
+                  class="ouiContextMenu__itemLayout"
                 >
                   <span
-                    class="euiContextMenu__icon"
+                    class="ouiContextMenu__icon"
                     color="inherit"
-                    data-euiicon-type="check"
+                    data-ouiicon-type="check"
                   />
                   <span
-                    class="euiContextMenuItem__text"
+                    class="ouiContextMenuItem__text"
                   >
                     Option #1
                   </span>
@@ -503,22 +503,22 @@ exports[`EuiSuperSelect props more props are propogated to each option 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="euiContextMenuItem euiSuperSelect__item"
+                class="ouiContextMenuItem ouiSuperSelect__item"
                 data-test-subj="option two"
                 id="2"
                 role="option"
                 type="button"
               >
                 <span
-                  class="euiContextMenu__itemLayout"
+                  class="ouiContextMenu__itemLayout"
                 >
                   <span
-                    class="euiContextMenu__icon"
+                    class="ouiContextMenu__icon"
                     color="inherit"
-                    data-euiicon-type="empty"
+                    data-ouiicon-type="empty"
                   />
                   <span
-                    class="euiContextMenuItem__text"
+                    class="ouiContextMenuItem__text"
                   >
                     Option #2
                   </span>
@@ -543,12 +543,12 @@ exports[`EuiSuperSelect props more props are propogated to each option 1`] = `
 </div>
 `;
 
-exports[`EuiSuperSelect props options are rendered when select is open 1`] = `
+exports[`OuiSuperSelect props options are rendered when select is open 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiSuperSelect"
+  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <div>
       <input
@@ -556,13 +556,13 @@ exports[`EuiSuperSelect props options are rendered when select is open 1`] = `
         value=""
       />
       <div
-        class="euiFormControlLayout"
+        class="ouiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <span
-            class="euiScreenReaderOnly"
+            class="ouiScreenReaderOnly"
             id="generated-id"
           >
             Select an option: , is selected
@@ -570,20 +570,20 @@ exports[`EuiSuperSelect props options are rendered when select is open 1`] = `
           <button
             aria-haspopup="true"
             aria-labelledby="undefined generated-id"
-            class="euiSuperSelectControl euiSuperSelect--isOpen__button"
+            class="ouiSuperSelectControl ouiSuperSelect--isOpen__button"
             data-test-subj="superSelect"
             type="button"
           />
           <div
-            class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="arrowDown"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="arrowDown"
               />
             </span>
           </div>
@@ -607,12 +607,12 @@ exports[`EuiSuperSelect props options are rendered when select is open 1`] = `
     <div
       aria-live="assertive"
       aria-modal="true"
-      class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-noArrow euiPopover__panel-isAttached"
+      class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-noArrow ouiPopover__panel-isAttached"
       role="dialog"
       style="top: 8px; left: 0px; will-change: transform, opacity; z-index: 2000;"
     >
       <div
-        class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+        class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
       />
       <div>
         <div
@@ -630,33 +630,33 @@ exports[`EuiSuperSelect props options are rendered when select is open 1`] = `
         >
           <div>
             <p
-              class="euiScreenReaderOnly"
+              class="ouiScreenReaderOnly"
               role="alert"
             >
               You are in a form selector of 2 items and must select a single option. Use the up and down keys to navigate or escape to close.
             </p>
             <div
-              class="euiSuperSelect__listbox"
+              class="ouiSuperSelect__listbox"
               role="listbox"
               tabindex="0"
             >
               <button
                 aria-selected="false"
-                class="euiContextMenuItem euiSuperSelect__item"
+                class="ouiContextMenuItem ouiSuperSelect__item"
                 id="1"
                 role="option"
                 type="button"
               >
                 <span
-                  class="euiContextMenu__itemLayout"
+                  class="ouiContextMenu__itemLayout"
                 >
                   <span
-                    class="euiContextMenu__icon"
+                    class="ouiContextMenu__icon"
                     color="inherit"
-                    data-euiicon-type="empty"
+                    data-ouiicon-type="empty"
                   />
                   <span
-                    class="euiContextMenuItem__text"
+                    class="ouiContextMenuItem__text"
                   >
                     Option #1
                   </span>
@@ -664,21 +664,21 @@ exports[`EuiSuperSelect props options are rendered when select is open 1`] = `
               </button>
               <button
                 aria-selected="false"
-                class="euiContextMenuItem euiSuperSelect__item"
+                class="ouiContextMenuItem ouiSuperSelect__item"
                 id="2"
                 role="option"
                 type="button"
               >
                 <span
-                  class="euiContextMenu__itemLayout"
+                  class="ouiContextMenu__itemLayout"
                 >
                   <span
-                    class="euiContextMenu__icon"
+                    class="ouiContextMenu__icon"
                     color="inherit"
-                    data-euiicon-type="empty"
+                    data-ouiicon-type="empty"
                   />
                   <span
-                    class="euiContextMenuItem__text"
+                    class="ouiContextMenuItem__text"
                   >
                     Option #2
                   </span>
@@ -703,12 +703,12 @@ exports[`EuiSuperSelect props options are rendered when select is open 1`] = `
 </div>
 `;
 
-exports[`EuiSuperSelect props select component is rendered 1`] = `
+exports[`OuiSuperSelect props select component is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiSuperSelect"
+  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <div>
       <input
@@ -716,13 +716,13 @@ exports[`EuiSuperSelect props select component is rendered 1`] = `
         value=""
       />
       <div
-        class="euiFormControlLayout"
+        class="ouiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <span
-            class="euiScreenReaderOnly"
+            class="ouiScreenReaderOnly"
             id="generated-id"
           >
             Select an option: , is selected
@@ -730,19 +730,19 @@ exports[`EuiSuperSelect props select component is rendered 1`] = `
           <button
             aria-haspopup="true"
             aria-labelledby="undefined generated-id"
-            class="euiSuperSelectControl"
+            class="ouiSuperSelectControl"
             type="button"
           />
           <div
-            class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="arrowDown"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="arrowDown"
               />
             </span>
           </div>
@@ -753,12 +753,12 @@ exports[`EuiSuperSelect props select component is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSuperSelect props valueSelected is rendered 1`] = `
+exports[`OuiSuperSelect props valueSelected is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownLeft euiPopover--displayBlock euiInputPopover euiSuperSelect"
+  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <div>
       <input
@@ -766,13 +766,13 @@ exports[`EuiSuperSelect props valueSelected is rendered 1`] = `
         value="2"
       />
       <div
-        class="euiFormControlLayout"
+        class="ouiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <span
-            class="euiScreenReaderOnly"
+            class="ouiScreenReaderOnly"
             id="generated-id"
           >
             Select an option: Option #2, is selected
@@ -780,21 +780,21 @@ exports[`EuiSuperSelect props valueSelected is rendered 1`] = `
           <button
             aria-haspopup="true"
             aria-labelledby="undefined generated-id"
-            class="euiSuperSelectControl"
+            class="ouiSuperSelectControl"
             type="button"
           >
             Option #2
           </button>
           <div
-            class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="arrowDown"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="arrowDown"
               />
             </span>
           </div>

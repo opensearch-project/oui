@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,31 +31,31 @@
 import React, { FunctionComponent, ReactElement, createElement } from 'react';
 import classNames from 'classnames';
 import {
-  EuiNotificationEventMeta,
-  EuiNotificationEventMetaProps,
+  OuiNotificationEventMeta,
+  OuiNotificationEventMetaProps,
 } from './notification_event_meta';
 import {
-  EuiNotificationEventMessages,
-  EuiNotificationEventMessagesProps,
+  OuiNotificationEventMessages,
+  OuiNotificationEventMessagesProps,
 } from './notification_event_messages';
 import {
-  EuiNotificationEventReadButton,
-  EuiNotificationEventReadButtonProps,
+  OuiNotificationEventReadButton,
+  OuiNotificationEventReadButtonProps,
 } from './notification_event_read_button';
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../button';
-import { EuiLink } from '../link';
-import { EuiContextMenuItem, EuiContextMenuItemProps } from '../context_menu';
+import { OuiButtonEmpty, OuiButtonEmptyProps } from '../button';
+import { OuiLink } from '../link';
+import { OuiContextMenuItem, OuiContextMenuItemProps } from '../context_menu';
 import { htmlIdGenerator } from '../../services';
-import { EuiNotificationEventReadIcon } from './notification_event_read_icon';
+import { OuiNotificationEventReadIcon } from './notification_event_read_icon';
 
-export type EuiNotificationHeadingLevel = 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+export type OuiNotificationHeadingLevel = 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-export type EuiNotificationEventProps = Omit<
-  EuiNotificationEventMetaProps,
+export type OuiNotificationEventProps = Omit<
+  OuiNotificationEventMetaProps,
   'onOpenContextMenu' | 'onRead' | 'eventName' | 'id'
 > &
   Omit<
-    EuiNotificationEventReadButtonProps,
+    OuiNotificationEventReadButtonProps,
     'onClick' | 'color' | 'eventName' | 'isRead' | 'id'
   > & {
     /**
@@ -58,7 +69,7 @@ export type EuiNotificationEventProps = Omit<
     /**
      * The heading level of the title.
      */
-    headingLevel?: EuiNotificationHeadingLevel;
+    headingLevel?: OuiNotificationHeadingLevel;
     /**
      * Returns the `id` and applies an `onClick` handler to the title.
      */
@@ -68,9 +79,9 @@ export type EuiNotificationEventProps = Omit<
      */
     primaryAction?: string;
     /**
-     * Apply more props to the `primaryAction` button. See #EuiPrimaryActionProps.
+     * Apply more props to the `primaryAction` button. See #OuiPrimaryActionProps.
      */
-    primaryActionProps?: EuiButtonEmptyProps;
+    primaryActionProps?: OuiButtonEmptyProps;
     /**
      * Returns the `id` and applies an `onClick` handler to the `primaryAction`.
      */
@@ -78,7 +89,7 @@ export type EuiNotificationEventProps = Omit<
     /**
      * Notification messages as an array of strings. More than one message wraps in an accordion.
      */
-    messages: EuiNotificationEventMessagesProps['messages'];
+    messages: OuiNotificationEventMessagesProps['messages'];
     /**
      * Shows an indicator of the read state of the event. Leave as `undefined` to hide the indicator.
      */
@@ -88,16 +99,16 @@ export type EuiNotificationEventProps = Omit<
      */
     onRead?: (id: string, isRead: boolean) => void;
     /**
-     * Provided the `id` of the event must return an array of #EuiContextMenuItem elements.
+     * Provided the `id` of the event must return an array of #OuiContextMenuItem elements.
      */
     onOpenContextMenu?: (
       id: string
     ) => Array<
-      ReactElement<EuiContextMenuItemProps, typeof EuiContextMenuItem>
+      ReactElement<OuiContextMenuItemProps, typeof OuiContextMenuItem>
     >;
   };
 
-export const EuiNotificationEvent: FunctionComponent<EuiNotificationEventProps> = ({
+export const OuiNotificationEvent: FunctionComponent<OuiNotificationEventProps> = ({
   id,
   type,
   severity,
@@ -116,12 +127,12 @@ export const EuiNotificationEvent: FunctionComponent<EuiNotificationEventProps> 
   onClickPrimaryAction,
   headingLevel = 'h2',
 }) => {
-  const classes = classNames('euiNotificationEvent', {
-    'euiNotificationEvent--withReadState': typeof isRead === 'boolean',
+  const classes = classNames('ouiNotificationEvent', {
+    'ouiNotificationEvent--withReadState': typeof isRead === 'boolean',
   });
 
-  const classesTitle = classNames('euiNotificationEvent__title', {
-    'euiNotificationEvent__title--isRead': isRead,
+  const classesTitle = classNames('ouiNotificationEvent__title', {
+    'ouiNotificationEvent__title--isRead': isRead,
   });
 
   const randomHeadingId = htmlIdGenerator()();
@@ -135,16 +146,16 @@ export const EuiNotificationEvent: FunctionComponent<EuiNotificationEventProps> 
   return (
     <article aria-labelledby={randomHeadingId} className={classes} key={id}>
       {typeof isRead === 'boolean' && (
-        <div className="euiNotificationEvent__readButton">
+        <div className="ouiNotificationEvent__readButton">
           {!!onRead ? (
-            <EuiNotificationEventReadButton
+            <OuiNotificationEventReadButton
               isRead={isRead}
               onClick={() => onRead(id, isRead)}
               eventName={title}
               id={id}
             />
           ) : (
-            <EuiNotificationEventReadIcon
+            <OuiNotificationEventReadIcon
               id={id}
               isRead={isRead}
               eventName={title}
@@ -153,8 +164,8 @@ export const EuiNotificationEvent: FunctionComponent<EuiNotificationEventProps> 
         </div>
       )}
 
-      <div className="euiNotificationEvent__content">
-        <EuiNotificationEventMeta
+      <div className="ouiNotificationEvent__content">
+        <OuiNotificationEventMeta
           id={id}
           type={type}
           severity={severity}
@@ -169,25 +180,25 @@ export const EuiNotificationEvent: FunctionComponent<EuiNotificationEventProps> 
         />
 
         {onClickTitle ? (
-          <EuiLink onClick={() => onClickTitle(id)} {...titleProps}>
+          <OuiLink onClick={() => onClickTitle(id)} {...titleProps}>
             {createElement(headingLevel, null, title)}
-          </EuiLink>
+          </OuiLink>
         ) : (
           createElement(headingLevel, titleProps, title)
         )}
 
-        <EuiNotificationEventMessages messages={messages} eventName={title} />
+        <OuiNotificationEventMessages messages={messages} eventName={title} />
 
         {onClickPrimaryAction && primaryAction && (
-          <div className="euiNotificationEvent__primaryAction">
-            <EuiButtonEmpty
+          <div className="ouiNotificationEvent__primaryAction">
+            <OuiButtonEmpty
               flush="left"
               size="s"
               {...primaryActionProps}
               onClick={() => onClickPrimaryAction?.(id)}
               data-test-subj={`${id}-notificationEventPrimaryAction`}>
               {primaryAction}
-            </EuiButtonEmpty>
+            </OuiButtonEmpty>
           </div>
         )}
       </div>

@@ -1,93 +1,104 @@
-.euiSuggestItem {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiSuggestItem {
   display: flex;
   flex-grow: 1;
   align-items: center;
-  font-size: $euiFontSizeXS;
+  font-size: $ouiFontSizeXS;
   white-space: nowrap;
 
-  &.euiSuggestItem-isClickable {
+  &.ouiSuggestItem-isClickable {
     width: 100%;
     text-align: left;
 
     &:hover,
     &:focus {
       cursor: pointer;
-      background-color: $euiColorLightestShade;
+      background-color: $ouiColorLightestShade;
 
-      .euiSuggestItem__type { //sass-lint:disable-line nesting-depth
-        color: $euiColorDarkestShade;
+      .ouiSuggestItem__type { //sass-lint:disable-line nesting-depth
+        color: $ouiColorDarkestShade;
       }
     }
   }
 
-  @each $name, $color in $euiSuggestItemColors {
-    .euiSuggestItem__type--#{$name} {
+  @each $name, $color in $ouiSuggestItemColors {
+    .ouiSuggestItem__type--#{$name} {
       $backgroundColor: tintOrShade($color, 82%, 70%);
       background-color: $backgroundColor;
       color: makeHighContrastColor($color, $backgroundColor);
     }
   }
 
-  .euiSuggestItem__label,
-  .euiSuggestItem__type,
-  .euiSuggestItem__description {
+  .ouiSuggestItem__label,
+  .ouiSuggestItem__type,
+  .ouiSuggestItem__description {
     flex-grow: 0;
     display: flex;
     flex-direction: column;
   }
 
-  .euiSuggestItem__type {
+  .ouiSuggestItem__type {
     position: relative;
     flex-shrink: 0;
     flex-basis: auto;
-    width: $euiSizeXL;
-    height: $euiSizeXL;
+    width: $ouiSizeXL;
+    height: $ouiSizeXL;
     text-align: center;
     overflow: hidden;
-    padding: $euiSizeXS;
+    padding: $ouiSizeXS;
     justify-content: center;
     align-items: center;
   }
 
-  .euiSuggestItem__label {
-    @include euiTextTruncate;
-    font-family: $euiCodeFontFamily;
+  .ouiSuggestItem__label {
+    @include ouiTextTruncate;
+    font-family: $ouiCodeFontFamily;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: $euiSizeXS $euiSizeS;
-    color: $euiTextColor;
+    padding: $ouiSizeXS $ouiSizeS;
+    color: $ouiTextColor;
     display: block;
 
     // Sets labelWidth from 20% to 90% in increments of 10%
     @for $i from 20 through 90 {
-      &.euiSuggestItem__label--width#{$i} {
+      &.ouiSuggestItem__label--width#{$i} {
         flex-basis: $i * 1%;
         min-width: $i * 1%;
         $i: $i + 10;
       }
     }
 
-    &.euiSuggestItem__labelDisplay--expand {
+    &.ouiSuggestItem__labelDisplay--expand {
       flex-basis: auto;
       flex-shrink: 1;
     }
   }
 
-  .euiSuggestItem__description {
-    color: $euiColorDarkShade;
+  .ouiSuggestItem__description {
+    color: $ouiColorDarkShade;
     flex-basis: auto;
-    padding-top: $euiSizeXS * .5;
+    padding-top: $ouiSizeXS * .5;
     display: block;
 
-    &.euiSuggestItem__description--wrap {
-      @include euiTextBreakWord;
+    &.ouiSuggestItem__description--wrap {
+      @include ouiTextBreakWord;
       white-space: normal;
-      line-height: $euiSizeM + 2px;
+      line-height: $ouiSizeM + 2px;
     }
 
-    &.euiSuggestItem__description--truncate {
-      @include euiTextTruncate;
-      line-height: $euiLineHeight;
+    &.ouiSuggestItem__description--truncate {
+      @include ouiTextTruncate;
+      line-height: $ouiLineHeight;
     }
 
     &:empty {

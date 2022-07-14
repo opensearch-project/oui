@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,7 +28,7 @@
  * under the License.
  */
 
-export interface EuiTourState {
+export interface OuiTourState {
   currentTourStep: number;
   isTourActive: boolean;
   tourPopoverWidth: number;
@@ -25,35 +36,35 @@ export interface EuiTourState {
 }
 
 interface ActionFinish {
-  type: 'EUI_TOUR_FINISH';
+  type: 'OUI_TOUR_FINISH';
   payload: { resetTour?: boolean };
 }
 
 interface ActionReset {
-  type: 'EUI_TOUR_RESET';
+  type: 'OUI_TOUR_RESET';
 }
 
 interface ActionDecrement {
-  type: 'EUI_TOUR_PREVIOUS';
+  type: 'OUI_TOUR_PREVIOUS';
 }
 
 interface ActionIncrement {
-  type: 'EUI_TOUR_NEXT';
+  type: 'OUI_TOUR_NEXT';
 }
 
 interface ActionGotoStep {
-  type: 'EUI_TOUR_GOTO';
+  type: 'OUI_TOUR_GOTO';
   payload: { step: number; isTourActive?: boolean };
 }
 
-export type EuiTourAction =
+export type OuiTourAction =
   | ActionFinish
   | ActionReset
   | ActionDecrement
   | ActionIncrement
   | ActionGotoStep;
 
-export interface EuiTourActions {
+export interface OuiTourActions {
   finishTour: (resetTour?: boolean) => void;
   resetTour: () => void;
   decrementStep: () => void;

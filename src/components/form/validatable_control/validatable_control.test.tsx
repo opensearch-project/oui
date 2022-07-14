@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,14 +31,14 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 
-import { EuiValidatableControl } from './validatable_control';
+import { OuiValidatableControl } from './validatable_control';
 
-describe('EuiValidatableControl', () => {
+describe('OuiValidatableControl', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiValidatableControl>
+      <OuiValidatableControl>
         <input />
-      </EuiValidatableControl>
+      </OuiValidatableControl>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,9 +49,9 @@ describe('EuiValidatableControl', () => {
       const ref = jest.fn();
 
       mount(
-        <EuiValidatableControl>
+        <OuiValidatableControl>
           <input id="testInput" ref={ref} />
-        </EuiValidatableControl>
+        </OuiValidatableControl>
       );
 
       expect(ref).toHaveBeenCalledTimes(1);
@@ -53,9 +64,9 @@ describe('EuiValidatableControl', () => {
       const ref = React.createRef<HTMLInputElement>();
 
       mount(
-        <EuiValidatableControl>
+        <OuiValidatableControl>
           <input id="testInput" ref={ref} />
-        </EuiValidatableControl>
+        </OuiValidatableControl>
       );
 
       expect(ref.current).not.toBeNull();
@@ -66,9 +77,9 @@ describe('EuiValidatableControl', () => {
       const ref = jest.fn();
 
       const Component = () => (
-        <EuiValidatableControl>
+        <OuiValidatableControl>
           <input id="testInput" ref={ref} />
-        </EuiValidatableControl>
+        </OuiValidatableControl>
       );
 
       const wrapper = mount(<Component />);
@@ -87,9 +98,9 @@ describe('EuiValidatableControl', () => {
       const ref = jest.fn();
 
       const Component = () => (
-        <EuiValidatableControl>
+        <OuiValidatableControl>
           <input id="testInput" ref={(el) => ref(el)} />
-        </EuiValidatableControl>
+        </OuiValidatableControl>
       );
 
       const wrapper = mount(<Component />);
@@ -110,13 +121,13 @@ describe('EuiValidatableControl', () => {
       const ref = jest.fn();
 
       const Component = ({ change }: { change: boolean }) => (
-        <EuiValidatableControl>
+        <OuiValidatableControl>
           {!change ? (
             <input key="1" id="testInput" ref={ref} />
           ) : (
             <input key="2" id="testInput2" ref={ref} />
           )}
-        </EuiValidatableControl>
+        </OuiValidatableControl>
       );
 
       const wrapper = mount(<Component change={false} />);
@@ -139,13 +150,13 @@ describe('EuiValidatableControl', () => {
       const ref = React.createRef<HTMLInputElement>();
 
       const Component = ({ change }: { change: boolean }) => (
-        <EuiValidatableControl>
+        <OuiValidatableControl>
           {!change ? (
             <input key="1" id="testInput" ref={ref} />
           ) : (
             <input key="2" id="testInput2" ref={ref} />
           )}
-        </EuiValidatableControl>
+        </OuiValidatableControl>
       );
 
       const wrapper = mount(<Component change={false} />);

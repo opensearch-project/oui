@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiPageTemplate } from '../../../../src/components';
+import { OuiPageTemplate } from '../../../../src/components';
 
 export default ({ button = <></>, content, sideNav, bottomBar }) => {
   return (
-    <EuiPageTemplate
+    <OuiPageTemplate
       pageSideBar={sideNav}
       pageHeader={{
         iconType: 'logoElastic',
@@ -13,6 +24,6 @@ export default ({ button = <></>, content, sideNav, bottomBar }) => {
       }}
       bottomBar={bottomBar}>
       {content}
-    </EuiPageTemplate>
+    </OuiPageTemplate>
   );
 };

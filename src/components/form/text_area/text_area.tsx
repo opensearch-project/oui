@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,9 +31,9 @@
 import React, { TextareaHTMLAttributes, Ref, FunctionComponent } from 'react';
 import { CommonProps } from '../../common';
 import classNames from 'classnames';
-import { EuiValidatableControl } from '../validatable_control';
+import { OuiValidatableControl } from '../validatable_control';
 
-export type EuiTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
+export type OuiTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
   CommonProps & {
     isInvalid?: boolean;
     fullWidth?: boolean;
@@ -37,15 +48,15 @@ export type EuiTextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> &
   };
 
 const resizeToClassNameMap = {
-  vertical: 'euiTextArea--resizeVertical',
-  horizontal: 'euiTextArea--resizeHorizontal',
-  both: 'euiTextArea--resizeBoth',
-  none: 'euiTextArea--resizeNone',
+  vertical: 'ouiTextArea--resizeVertical',
+  horizontal: 'ouiTextArea--resizeHorizontal',
+  both: 'ouiTextArea--resizeBoth',
+  none: 'ouiTextArea--resizeNone',
 };
 
 export const RESIZE = Object.keys(resizeToClassNameMap);
 
-export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
+export const OuiTextArea: FunctionComponent<OuiTextAreaProps> = ({
   children,
   className,
   compressed,
@@ -60,11 +71,11 @@ export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiTextArea',
+    'ouiTextArea',
     resizeToClassNameMap[resize],
     {
-      'euiTextArea--fullWidth': fullWidth,
-      'euiTextArea--compressed': compressed,
+      'ouiTextArea--fullWidth': fullWidth,
+      'ouiTextArea--compressed': compressed,
     },
     className
   );
@@ -80,7 +91,7 @@ export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
   }
 
   return (
-    <EuiValidatableControl isInvalid={isInvalid}>
+    <OuiValidatableControl isInvalid={isInvalid}>
       <textarea
         className={classes}
         {...rest}
@@ -91,6 +102,6 @@ export const EuiTextArea: FunctionComponent<EuiTextAreaProps> = ({
         placeholder={placeholder}>
         {children}
       </textarea>
-    </EuiValidatableControl>
+    </OuiValidatableControl>
   );
 };

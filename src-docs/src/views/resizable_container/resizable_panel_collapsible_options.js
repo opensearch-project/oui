@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import {
-  EuiResizableContainer,
-  EuiListGroup,
-  EuiListGroupItem,
-  EuiPanel,
-  EuiTitle,
-  EuiSpacer,
-  EuiText,
-  EuiPage,
+  OuiResizableContainer,
+  OuiListGroup,
+  OuiListGroupItem,
+  OuiPanel,
+  OuiTitle,
+  OuiSpacer,
+  OuiText,
+  OuiPage,
 } from '../../../../src/components';
 import { fake } from 'faker';
 
@@ -43,7 +54,7 @@ export default () => {
 
   const [itemSelected, setItemSelected] = useState(items[0]);
   const itemElements = items.map((item, index) => (
-    <EuiListGroupItem
+    <OuiListGroupItem
       key={index}
       onClick={() => setItemSelected(item)}
       label={item.label}
@@ -51,11 +62,11 @@ export default () => {
     />
   ));
   return (
-    <EuiPage paddingSize="none">
-      <EuiResizableContainer style={{ height: '320px' }}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+    <OuiPage paddingSize="none">
+      <OuiResizableContainer style={{ height: '320px' }}>
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel
+            <OuiResizablePanel
               mode={[
                 'collapsible',
                 {
@@ -66,24 +77,24 @@ export default () => {
               ]}
               initialSize={20}
               minSize="10%">
-              <EuiListGroup flush>{itemElements}</EuiListGroup>
-            </EuiResizablePanel>
+              <OuiListGroup flush>{itemElements}</OuiListGroup>
+            </OuiResizablePanel>
 
-            <EuiResizableButton />
+            <OuiResizableButton />
 
-            <EuiResizablePanel mode="main" initialSize={60} minSize="20%">
-              <EuiPanel paddingSize="l" style={{ minHeight: '100%' }}>
-                <EuiTitle>
+            <OuiResizablePanel mode="main" initialSize={60} minSize="20%">
+              <OuiPanel paddingSize="l" style={{ minHeight: '100%' }}>
+                <OuiTitle>
                   <p>{itemSelected.label}</p>
-                </EuiTitle>
-                <EuiSpacer />
-                <EuiText>{itemSelected.text}</EuiText>
-              </EuiPanel>
-            </EuiResizablePanel>
+                </OuiTitle>
+                <OuiSpacer />
+                <OuiText>{itemSelected.text}</OuiText>
+              </OuiPanel>
+            </OuiResizablePanel>
 
-            <EuiResizableButton />
+            <OuiResizableButton />
 
-            <EuiResizablePanel
+            <OuiResizablePanel
               mode={[
                 'collapsible',
                 {
@@ -94,11 +105,11 @@ export default () => {
               ]}
               initialSize={20}
               minSize="10%">
-              <EuiListGroup flush>{itemElements}</EuiListGroup>
-            </EuiResizablePanel>
+              <OuiListGroup flush>{itemElements}</OuiListGroup>
+            </OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
-    </EuiPage>
+      </OuiResizableContainer>
+    </OuiPage>
   );
 };

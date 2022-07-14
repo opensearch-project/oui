@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,20 +28,20 @@
  * under the License.
  */
 
-export { EuiMarkdownEditor, EuiMarkdownEditorProps } from './markdown_editor';
+export { OuiMarkdownEditor, OuiMarkdownEditorProps } from './markdown_editor';
 export {
-  getDefaultEuiMarkdownParsingPlugins,
-  getDefaultEuiMarkdownProcessingPlugins,
-  getDefaultEuiMarkdownUiPlugins,
+  getDefaultOuiMarkdownParsingPlugins,
+  getDefaultOuiMarkdownProcessingPlugins,
+  getDefaultOuiMarkdownUiPlugins,
 } from './plugins/markdown_default_plugins';
-export { EuiMarkdownContext } from './markdown_context';
-export { EuiMarkdownFormat, EuiMarkdownFormatProps } from './markdown_format';
+export { OuiMarkdownContext } from './markdown_context';
+export { OuiMarkdownFormat, OuiMarkdownFormatProps } from './markdown_format';
 export {
-  EuiMarkdownParseError,
-  EuiMarkdownAstNode,
-  EuiMarkdownAstNodePosition,
-  EuiMarkdownFormatting,
-  EuiMarkdownEditorUiPlugin,
+  OuiMarkdownParseError,
+  OuiMarkdownAstNode,
+  OuiMarkdownAstNodePosition,
+  OuiMarkdownFormatting,
+  OuiMarkdownEditorUiPlugin,
   RemarkRehypeHandler,
   RemarkTokenizer,
 } from './markdown_types';

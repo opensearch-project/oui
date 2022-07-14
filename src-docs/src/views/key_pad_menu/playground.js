@@ -1,8 +1,19 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
 import {
-  EuiKeyPadMenuItem,
-  EuiIcon,
-  EuiBetaBadge,
+  OuiKeyPadMenuItem,
+  OuiIcon,
+  OuiBetaBadge,
 } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
@@ -11,9 +22,9 @@ import {
 import * as t from '@babel/types';
 
 export const keyPadMenuItemConfig = () => {
-  const docgenInfo = Array.isArray(EuiKeyPadMenuItem.__docgenInfo)
-    ? EuiKeyPadMenuItem.__docgenInfo[0]
-    : EuiKeyPadMenuItem.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiKeyPadMenuItem.__docgenInfo)
+    ? OuiKeyPadMenuItem.__docgenInfo[0]
+    : OuiKeyPadMenuItem.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onClick = {
@@ -42,22 +53,22 @@ export const keyPadMenuItemConfig = () => {
   propsToUse.children = {
     ...propsToUse.children,
     type: PropTypes.ReactNode,
-    value: '<EuiIcon type="dashboardApp" size="l" />',
+    value: '<OuiIcon type="dashboardApp" size="l" />',
     hidden: false,
   };
 
   return {
     config: {
-      componentName: 'EuiKeyPadMenuItem',
+      componentName: 'OuiKeyPadMenuItem',
       props: propsToUse,
       scope: {
-        EuiKeyPadMenuItem,
-        EuiIcon,
-        EuiBetaBadge,
+        OuiKeyPadMenuItem,
+        OuiIcon,
+        OuiBetaBadge,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiKeyPadMenuItem', 'EuiIcon', 'EuiBetaBadge'],
+        '@opensearch-project/oui': {
+          named: ['OuiKeyPadMenuItem', 'OuiIcon', 'OuiBetaBadge'],
         },
       },
       customProps: {

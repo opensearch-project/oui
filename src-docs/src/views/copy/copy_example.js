@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCopy, EuiCode } from '../../../../src/components';
+import { OuiCopy, OuiCode } from '../../../../src/components';
 
 import Copy from './copy';
 const copySource = require('!!raw-loader!./copy');
@@ -26,19 +37,19 @@ export const CopyExample = {
       ],
       text: (
         <p>
-          The <strong>EuiCopy</strong> component is a utility for copying text
+          The <strong>OuiCopy</strong> component is a utility for copying text
           to clipboard. Wrap a function that returns a component. The first
-          argument will be a <EuiCode>copy</EuiCode> function.
+          argument will be a <OuiCode>copy</OuiCode> function.
         </p>
       ),
-      components: { EuiCopy },
+      components: { OuiCopy },
       demo: <Copy />,
-      props: { EuiCopy },
-      snippet: `<EuiCopy textToCopy={textToCopy}>
+      props: { OuiCopy },
+      snippet: `<OuiCopy textToCopy={textToCopy}>
   {copy => (
-    <EuiButton onClick={copy}>Click to copy</EuiButton>
+    <OuiButton onClick={copy}>Click to copy</OuiButton>
   )}
-</EuiCopy>`,
+</OuiCopy>`,
     },
   ],
 };

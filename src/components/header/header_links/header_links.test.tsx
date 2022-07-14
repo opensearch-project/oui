@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiHeaderLinks, GUTTER_SIZES } from './header_links';
+import { OuiHeaderLinks, GUTTER_SIZES } from './header_links';
 
-describe('EuiHeaderLinks', () => {
+describe('OuiHeaderLinks', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderLinks {...requiredProps} />);
+    const component = render(<OuiHeaderLinks {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +44,7 @@ describe('EuiHeaderLinks', () => {
   describe('gutterSize', () => {
     GUTTER_SIZES.forEach((gutterSize) => {
       test(`${gutterSize} is rendered`, () => {
-        const component = render(<EuiHeaderLinks gutterSize={gutterSize} />);
+        const component = render(<OuiHeaderLinks gutterSize={gutterSize} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -43,7 +54,7 @@ describe('EuiHeaderLinks', () => {
   describe('popover props', () => {
     test('is rendered', () => {
       const component = render(
-        <EuiHeaderLinks
+        <OuiHeaderLinks
           popoverBreakpoints={['xs', 's', 'm', 'l', 'xl']}
           popoverButtonProps={{
             iconType: 'bolt',
@@ -57,7 +68,7 @@ describe('EuiHeaderLinks', () => {
     });
 
     test('is never rendered with "none"', () => {
-      const component = render(<EuiHeaderLinks popoverBreakpoints={'none'} />);
+      const component = render(<OuiHeaderLinks popoverBreakpoints={'none'} />);
 
       expect(component).toMatchSnapshot();
     });

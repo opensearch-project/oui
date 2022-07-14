@@ -1,65 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPage direction can be row 1`] = `
+exports[`OuiPage direction can be row 1`] = `
 <div
-  class="euiPage euiPage--paddingMedium euiPage--grow"
+  class="ouiPage ouiPage--paddingMedium ouiPage--grow"
 />
 `;
 
-exports[`EuiPage grow can be false 1`] = `
+exports[`OuiPage grow can be false 1`] = `
 <div
-  class="euiPage euiPage--paddingMedium"
+  class="ouiPage ouiPage--paddingMedium"
 />
 `;
 
-exports[`EuiPage is rendered 1`] = `
+exports[`OuiPage is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPage euiPage--paddingMedium euiPage--grow testClass1 testClass2"
+  class="ouiPage ouiPage--paddingMedium ouiPage--grow testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiPage paddingSize l is rendered 1`] = `
+exports[`OuiPage paddingSize l is rendered 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow"
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow"
 />
 `;
 
-exports[`EuiPage paddingSize m is rendered 1`] = `
+exports[`OuiPage paddingSize m is rendered 1`] = `
 <div
-  class="euiPage euiPage--paddingMedium euiPage--grow"
+  class="ouiPage ouiPage--paddingMedium ouiPage--grow"
 />
 `;
 
-exports[`EuiPage paddingSize none is rendered 1`] = `
+exports[`OuiPage paddingSize none is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow"
+  class="ouiPage ouiPage--grow"
 />
 `;
 
-exports[`EuiPage paddingSize s is rendered 1`] = `
+exports[`OuiPage paddingSize s is rendered 1`] = `
 <div
-  class="euiPage euiPage--paddingSmall euiPage--grow"
+  class="ouiPage ouiPage--paddingSmall ouiPage--grow"
 />
 `;
 
-exports[`EuiPage restrict width can be set to a custom number 1`] = `
+exports[`OuiPage restrict width can be set to a custom number 1`] = `
 <div
-  class="euiPage euiPage--paddingMedium euiPage--grow euiPage--restrictWidth-custom"
+  class="ouiPage ouiPage--paddingMedium ouiPage--grow ouiPage--restrictWidth-custom"
   style="max-width:1024px"
 />
 `;
 
-exports[`EuiPage restrict width can be set to a custom value and does not override custom style 1`] = `
+exports[`OuiPage restrict width can be set to a custom value and does not override custom style 1`] = `
 <div
-  class="euiPage euiPage--paddingMedium euiPage--grow euiPage--restrictWidth-custom"
+  class="ouiPage ouiPage--paddingMedium ouiPage--grow ouiPage--restrictWidth-custom"
   style="color:red;max-width:24rem"
 />
 `;
 
-exports[`EuiPage restrict width can be set to a default 1`] = `
+exports[`OuiPage restrict width can be set to a default 1`] = `
 <div
-  class="euiPage euiPage--paddingMedium euiPage--grow euiPage--restrictWidth-default"
+  class="ouiPage ouiPage--paddingMedium ouiPage--grow ouiPage--restrictWidth-default"
 />
 `;

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -30,14 +41,14 @@ import { CommonProps, ExclusiveUnion, keysOf } from '../../common';
 
 import { getSecureRelForTarget } from '../../../services';
 
-import { EuiToolTip, ToolTipPositions } from '../../tool_tip';
+import { OuiToolTip, ToolTipPositions } from '../../tool_tip';
 
-import { EuiIcon, IconType } from '../../icon';
+import { OuiIcon, IconType } from '../../icon';
 
 const colorToClassMap = {
-  accent: 'euiBetaBadge--accent',
-  subdued: 'euiBetaBadge--subdued',
-  hollow: 'euiBetaBadge--hollow',
+  accent: 'ouiBetaBadge--accent',
+  subdued: 'ouiBetaBadge--subdued',
+  hollow: 'ouiBetaBadge--hollow',
 };
 
 export const COLORS: BetaBadgeColor[] = keysOf(colorToClassMap);
@@ -46,7 +57,7 @@ export type BetaBadgeColor = keyof typeof colorToClassMap;
 export type BetaBadgeSize = 's' | 'm';
 
 export const sizeToClassMap: { [size in BetaBadgeSize]: string | null } = {
-  s: 'euiBetaBadge--small',
+  s: 'ouiBetaBadge--small',
   m: null,
 };
 
@@ -129,14 +140,14 @@ type BadgeProps = {
   size?: BetaBadgeSize;
 } & ExclusiveUnion<LabelAsNode, LabelAsString>;
 
-export type EuiBetaBadgeProps = CommonProps &
+export type OuiBetaBadgeProps = CommonProps &
   ExclusiveUnion<
     ExclusiveUnion<WithButtonProps, WithAnchorProps>,
     WithSpanProps
   > &
   BadgeProps;
 
-export const EuiBetaBadge: FunctionComponent<EuiBetaBadgeProps> = ({
+export const OuiBetaBadge: FunctionComponent<OuiBetaBadgeProps> = ({
   className,
   label,
   color = 'hollow',
@@ -158,11 +169,11 @@ export const EuiBetaBadge: FunctionComponent<EuiBetaBadgeProps> = ({
   }
 
   const classes = classNames(
-    'euiBetaBadge',
+    'ouiBetaBadge',
     {
-      'euiBetaBadge--iconOnly': iconType,
-      'euiBetaBadge--singleLetter': singleLetter,
-      'euiBetaBadge-isClickable': onClick || href,
+      'ouiBetaBadge--iconOnly': iconType,
+      'ouiBetaBadge--singleLetter': singleLetter,
+      'ouiBetaBadge-isClickable': onClick || href,
     },
     colorToClassMap[color],
     sizeToClassMap[size],
@@ -172,8 +183,8 @@ export const EuiBetaBadge: FunctionComponent<EuiBetaBadgeProps> = ({
   let icon: JSX.Element | undefined;
   if (iconType) {
     icon = (
-      <EuiIcon
-        className="euiBetaBadge__icon"
+      <OuiIcon
+        className="ouiBetaBadge__icon"
         type={iconType}
         size={size === 'm' ? 'm' : 's'}
         aria-hidden="true"
@@ -215,12 +226,12 @@ export const EuiBetaBadge: FunctionComponent<EuiBetaBadgeProps> = ({
     );
     if (tooltipContent) {
       return (
-        <EuiToolTip
+        <OuiToolTip
           position={tooltipPosition}
           content={tooltipContent}
           title={title || label}>
           <Fragment>{content}</Fragment>
-        </EuiToolTip>
+        </OuiToolTip>
       );
     } else {
       return <Fragment>{content}</Fragment>;
@@ -228,14 +239,14 @@ export const EuiBetaBadge: FunctionComponent<EuiBetaBadgeProps> = ({
   } else {
     if (tooltipContent) {
       return (
-        <EuiToolTip
+        <OuiToolTip
           position={tooltipPosition}
           content={tooltipContent}
           title={title || label}>
           <span tabIndex={0} className={classes} {...rest}>
             {icon || label}
           </span>
-        </EuiToolTip>
+        </OuiToolTip>
       );
     } else {
       const spanTitle = title || label;

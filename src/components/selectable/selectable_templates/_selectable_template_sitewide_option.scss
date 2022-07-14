@@ -1,34 +1,45 @@
-.euiSelectableTemplateSitewide__listItem {
-  .euiSelectableListItem__text {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiSelectableTemplateSitewide__listItem {
+  .ouiSelectableListItem__text {
     text-decoration: none !important; // sass-lint:disable-line no-important
   }
 
   // TODO: Any better way to override this focus underline?
   &[class*='-isFocused']:not([aria-disabled='true']),
   &:hover:not([aria-disabled='true']) {
-    .euiSelectableTemplateSitewide__listItemTitle {
+    .ouiSelectableTemplateSitewide__listItemTitle {
       text-decoration: underline;
     }
   }
 }
 
-.euiSelectableTemplateSitewide__optionMetasList {
+.ouiSelectableTemplateSitewide__optionMetasList {
   display: block;
-  margin-top: $euiSizeXS;
-  font-size: $euiFontSizeXS;
-  color: $euiTextSubduedColor;
+  margin-top: $ouiSizeXS;
+  font-size: $ouiFontSizeXS;
+  color: $ouiTextSubduedColor;
 }
 
-.euiSelectableTemplateSitewide__optionMeta:not(:last-of-type)::after {
+.ouiSelectableTemplateSitewide__optionMeta:not(:last-of-type)::after {
   content: '•';
-  margin: 0 $euiSizeXS;
-  color: $euiTextSubduedColor;
+  margin: 0 $ouiSizeXS;
+  color: $ouiTextSubduedColor;
 }
 
 // Established styles for types of meta
-@each $type in map-keys($euiSelectableTemplateSitewideTypes) {
-  .euiSelectableTemplateSitewide__optionMeta--#{$type} {
-    @each $property, $value in map-get($euiSelectableTemplateSitewideTypes, $type) {
+@each $type in map-keys($ouiSelectableTemplateSitewideTypes) {
+  .ouiSelectableTemplateSitewide__optionMeta--#{$type} {
+    @each $property, $value in map-get($ouiSelectableTemplateSitewideTypes, $type) {
       #{$property}: $value;
     }
   }

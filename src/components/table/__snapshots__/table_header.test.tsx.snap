@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTableHeader is rendered 1`] = `
+exports[`OuiTableHeader is rendered 1`] = `
 <thead
   aria-label="aria-label"
   class="testClass1 testClass2"
@@ -14,7 +14,7 @@ exports[`EuiTableHeader is rendered 1`] = `
 </thead>
 `;
 
-exports[`EuiTableHeader is rendered without <tr> 1`] = `
+exports[`OuiTableHeader is rendered without <tr> 1`] = `
 <thead>
   <tr>
     <td>

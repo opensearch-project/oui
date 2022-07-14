@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFormLegend } from './form_legend';
+import { OuiFormLegend } from './form_legend';
 
-describe('EuiFormLegend', () => {
+describe('OuiFormLegend', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFormLegend {...requiredProps}>Legend</EuiFormLegend>
+      <OuiFormLegend {...requiredProps}>Legend</OuiFormLegend>
     );
 
     expect(component).toMatchSnapshot();
@@ -35,7 +46,7 @@ describe('EuiFormLegend', () => {
   describe('props', () => {
     test('hidden is rendered', () => {
       const component = render(
-        <EuiFormLegend display="hidden">Legend</EuiFormLegend>
+        <OuiFormLegend display="hidden">Legend</OuiFormLegend>
       );
 
       expect(component).toMatchSnapshot();
@@ -43,7 +54,7 @@ describe('EuiFormLegend', () => {
 
     test('compressed is rendered', () => {
       const component = render(
-        <EuiFormLegend compressed>Legend</EuiFormLegend>
+        <OuiFormLegend compressed>Legend</OuiFormLegend>
       );
 
       expect(component).toMatchSnapshot();

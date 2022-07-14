@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -32,7 +43,7 @@ import {
   DEFAULT_VISUALIZATION_COLOR,
   getSteppedGradient,
 } from '../../../services';
-import { EuiColorStopThumb, ColorStop } from './color_stop_thumb';
+import { OuiColorStopThumb, ColorStop } from './color_stop_thumb';
 import {
   addStop,
   addDefinedStop,
@@ -42,16 +53,16 @@ import {
   removeStop,
 } from './utils';
 
-import { EuiColorPickerProps } from '../';
+import { OuiColorPickerProps } from '../';
 import { getChromaColor } from '../utils';
-import { EuiI18n } from '../../i18n';
-import { EuiScreenReaderOnly } from '../../accessibility';
-import { EuiRangeHighlight } from '../../form/range/range_highlight';
-import { EuiRangeTrack } from '../../form/range/range_track';
-import { EuiRangeWrapper } from '../../form/range/range_wrapper';
-import { EuiFieldNumberProps } from '../../form/field_number';
+import { OuiI18n } from '../../i18n';
+import { OuiScreenReaderOnly } from '../../accessibility';
+import { OuiRangeHighlight } from '../../form/range/range_highlight';
+import { OuiRangeTrack } from '../../form/range/range_track';
+import { OuiRangeWrapper } from '../../form/range/range_wrapper';
+import { OuiFieldNumberProps } from '../../form/field_number';
 
-export interface EuiColorStopsProps extends CommonProps {
+export interface OuiColorStopsProps extends CommonProps {
   addColor?: ColorStop['color'];
   /**
    * An array of #ColorStop. The stops must be numbers in an ordered range.
@@ -78,16 +89,16 @@ export interface EuiColorStopsProps extends CommonProps {
    * Only works when `stopType="stepped"`
    */
   stepNumber?: number;
-  mode?: EuiColorPickerProps['mode'];
-  swatches?: EuiColorPickerProps['swatches'];
-  showAlpha?: EuiColorPickerProps['showAlpha'];
+  mode?: OuiColorPickerProps['mode'];
+  swatches?: OuiColorPickerProps['swatches'];
+  showAlpha?: OuiColorPickerProps['showAlpha'];
   /**
    * Props passed to the value input field in the color stop popover.
    * Can be used to configure functionality like append or prepend.
    */
   valueInputProps?: Partial<
     Omit<
-      EuiFieldNumberProps,
+      OuiFieldNumberProps,
       | 'inputRef'
       | 'compressed'
       | 'readOnly'
@@ -102,7 +113,7 @@ export interface EuiColorStopsProps extends CommonProps {
 
 // Because of how the thumbs are rendered in the popover, using ref results in an infinite loop.
 // We'll instead use old fashioned namespaced DOM selectors to get references
-const STOP_ATTR = 'euiColorStop_';
+const STOP_ATTR = 'ouiColorStop_';
 
 const DEFAULT_MIN = 0;
 const DEFAULT_MAX = 100;
@@ -157,7 +168,7 @@ function getRangeMax(colorStops: ColorStop[], max?: number) {
   return DEFAULT_MAX;
 }
 
-export const EuiColorStops: FunctionComponent<EuiColorStopsProps> = ({
+export const OuiColorStops: FunctionComponent<OuiColorStopsProps> = ({
   addColor = DEFAULT_VISUALIZATION_COLOR,
   max,
   min,
@@ -200,11 +211,11 @@ export const EuiColorStops: FunctionComponent<EuiColorStopsProps> = ({
   const isNotInteractive = disabled || readOnly;
 
   const classes = classNames(
-    'euiColorStops',
+    'ouiColorStops',
     {
-      'euiColorStops-isDragging': isHoverDisabled,
-      'euiColorStops-isDisabled': disabled,
-      'euiColorStops-isReadOnly': readOnly,
+      'ouiColorStops-isDragging': isHoverDisabled,
+      'ouiColorStops-isDisabled': disabled,
+      'ouiColorStops-isReadOnly': readOnly,
     },
     className
   );
@@ -392,7 +403,7 @@ export const EuiColorStops: FunctionComponent<EuiColorStopsProps> = ({
       handleOnChange(newColorStops);
     };
     return sortedStops.map((colorStop, index) => (
-      <EuiColorStopThumb
+      <OuiColorStopThumb
         isRangeMin={min == null && colorStop.stop === rangeMin}
         isRangeMax={max == null && colorStop.stop === rangeMax}
         data-index={`${STOP_ATTR}${index}`}
@@ -504,8 +515,8 @@ export const EuiColorStops: FunctionComponent<EuiColorStopsProps> = ({
   }
 
   return (
-    <EuiRangeWrapper
-      data-test-subj="euiColorStops"
+    <OuiRangeWrapper
+      data-test-subj="ouiColorStops"
       ref={setWrapperRef}
       className={classes}
       fullWidth={fullWidth}
@@ -516,27 +527,27 @@ export const EuiColorStops: FunctionComponent<EuiColorStopsProps> = ({
       onKeyDown={handleKeyDown}
       onFocus={setWrapperHasFocus}
       onBlur={removeWrapperFocus}>
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <p aria-live="polite">
-          <EuiI18n
+          <OuiI18n
             values={{
               label,
               disabled: disabled ? 'Disabled.' : '',
               readOnly: readOnly ? 'Read-only.' : '',
             }}
-            token="euiColorStops.screenReaderAnnouncement"
+            token="ouiColorStops.screenReaderAnnouncement"
             default="{label}: {readOnly} {disabled} Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop."
           />
         </p>
-      </EuiScreenReaderOnly>
-      <EuiRangeTrack
+      </OuiScreenReaderOnly>
+      <OuiRangeTrack
         min={min || rangeMin}
         max={max || rangeMax}
         compressed={compressed}
         disabled={disabled}
         step={1}>
-        <EuiRangeHighlight
-          className="euiColorStops__highlight"
+        <OuiRangeHighlight
+          className="ouiColorStops__highlight"
           min={min || rangeMin}
           max={max || rangeMax}
           lowerValue={min || rangeMin}
@@ -545,22 +556,22 @@ export const EuiColorStops: FunctionComponent<EuiColorStopsProps> = ({
           compressed={compressed}
         />
         <div
-          data-test-subj="euiColorStopsAdd"
-          className={classNames('euiColorStops__addContainer', {
-            'euiColorStops__addContainer-isDisabled':
+          data-test-subj="ouiColorStopsAdd"
+          className={classNames('ouiColorStops__addContainer', {
+            'ouiColorStops__addContainer-isDisabled':
               isHoverDisabled || disabled || readOnly,
           })}
           onClick={handleAddClick}
           onMouseMove={handleAddHover}>
           <div
-            className="euiColorStops__addTarget"
+            className="ouiColorStops__addTarget"
             style={{
               left: `${addTargetPosition}%`,
             }}
           />
         </div>
         {thumbs}
-      </EuiRangeTrack>
-    </EuiRangeWrapper>
+      </OuiRangeTrack>
+    </OuiRangeWrapper>
   );
 };

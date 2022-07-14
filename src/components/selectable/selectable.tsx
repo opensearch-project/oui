@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,32 +38,32 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../common';
-import { EuiSelectableSearch } from './selectable_search';
-import { EuiSelectableMessage } from './selectable_message';
-import { EuiSelectableList } from './selectable_list';
-import { EuiLoadingSpinner } from '../loading';
-import { EuiSpacer } from '../spacer';
+import { OuiSelectableSearch } from './selectable_search';
+import { OuiSelectableMessage } from './selectable_message';
+import { OuiSelectableList } from './selectable_list';
+import { OuiLoadingSpinner } from '../loading';
+import { OuiSpacer } from '../spacer';
 import { getMatchingOptions } from './matching_options';
 import { keys, htmlIdGenerator } from '../../services';
-import { EuiI18n } from '../i18n';
-import { EuiSelectableOption } from './selectable_option';
-import { EuiSelectableOptionsListProps } from './selectable_list/selectable_list';
-import { EuiSelectableSearchProps } from './selectable_search/selectable_search';
+import { OuiI18n } from '../i18n';
+import { OuiSelectableOption } from './selectable_option';
+import { OuiSelectableOptionsListProps } from './selectable_list/selectable_list';
+import { OuiSelectableSearchProps } from './selectable_search/selectable_search';
 import { Align } from 'react-window';
 
-type RequiredEuiSelectableOptionsListProps = Omit<
-  EuiSelectableOptionsListProps,
-  keyof typeof EuiSelectableList['defaultProps']
+type RequiredOuiSelectableOptionsListProps = Omit<
+  OuiSelectableOptionsListProps,
+  keyof typeof OuiSelectableList['defaultProps']
 >;
-type OptionalEuiSelectableOptionsListProps = Omit<
-  EuiSelectableOptionsListProps,
-  keyof RequiredEuiSelectableOptionsListProps
+type OptionalOuiSelectableOptionsListProps = Omit<
+  OuiSelectableOptionsListProps,
+  keyof RequiredOuiSelectableOptionsListProps
 >;
-type EuiSelectableOptionsListPropsWithDefaults = RequiredEuiSelectableOptionsListProps &
-  Partial<OptionalEuiSelectableOptionsListProps>;
+type OuiSelectableOptionsListPropsWithDefaults = RequiredOuiSelectableOptionsListProps &
+  Partial<OptionalOuiSelectableOptionsListProps>;
 
 // `searchProps` can only be specified when `searchable` is true
-type EuiSelectableSearchableProps<T> = ExclusiveUnion<
+type OuiSelectableSearchableProps<T> = ExclusiveUnion<
   {
     searchable: false;
   },
@@ -62,40 +73,40 @@ type EuiSelectableSearchableProps<T> = ExclusiveUnion<
      */
     searchable: true;
     /**
-     * Passes props down to the `EuiFieldSearch`
+     * Passes props down to the `OuiFieldSearch`
      */
-    searchProps?: Partial<EuiSelectableSearchProps<T>>;
+    searchProps?: Partial<OuiSelectableSearchProps<T>>;
   }
 >;
 
-export type EuiSelectableProps<T = {}> = CommonProps &
+export type OuiSelectableProps<T = {}> = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'children' | 'onChange'> &
-  EuiSelectableSearchableProps<T> & {
+  OuiSelectableSearchableProps<T> & {
     /**
      * Function that takes the `list` node and then
      * the `search` node (if `searchable` is applied)
      */
     children?: (
       list: ReactElement<
-        typeof EuiSelectableMessage | typeof EuiSelectableList
+        typeof OuiSelectableMessage | typeof OuiSelectableList
       >,
-      search: ReactElement<EuiSelectableSearch<T>> | undefined
+      search: ReactElement<OuiSelectableSearch<T>> | undefined
     ) => ReactNode;
     /**
-     * Array of EuiSelectableOption objects. See #EuiSelectableOptionProps
+     * Array of OuiSelectableOption objects. See #OuiSelectableOptionProps
      */
-    options: Array<EuiSelectableOption<T>>;
+    options: Array<OuiSelectableOption<T>>;
     /**
      * Passes back the altered `options` array with selected options as
      */
-    onChange?: (options: Array<EuiSelectableOption<T>>) => void;
+    onChange?: (options: Array<OuiSelectableOption<T>>) => void;
     /**
      * Sets the single selection policy of
      * `false`: allows multiple selection
      * `true`: only allows one selection
      * `always`: can and must have only one selection
      */
-    singleSelection?: EuiSelectableOptionsListProps['singleSelection'];
+    singleSelection?: OuiSelectableOptionsListProps['singleSelection'];
     /**
      * Allows marking options as `checked='off'` as well as `'on'`
      */
@@ -111,15 +122,15 @@ export type EuiSelectableProps<T = {}> = CommonProps &
      */
     height?: number | 'full';
     /**
-     * See #EuiSelectableOptionsList
+     * See #OuiSelectableOptionsList
      */
-    listProps?: EuiSelectableOptionsListPropsWithDefaults;
+    listProps?: OuiSelectableOptionsListPropsWithDefaults;
     /**
      * Custom render function for each option.
      * Returns `(option, searchValue)`
      */
     renderOption?: (
-      option: EuiSelectableOption<T>,
+      option: OuiSelectableOption<T>,
       searchValue: string
     ) => ReactNode;
     /**
@@ -144,16 +155,16 @@ export type EuiSelectableProps<T = {}> = CommonProps &
     isPreFiltered?: boolean;
   };
 
-export interface EuiSelectableState<T> {
+export interface OuiSelectableState<T> {
   activeOptionIndex?: number;
   searchValue: string;
-  visibleOptions: Array<EuiSelectableOption<T>>;
+  visibleOptions: Array<OuiSelectableOption<T>>;
   isFocused: boolean;
 }
 
-export class EuiSelectable<T = {}> extends Component<
-  EuiSelectableProps<T>,
-  EuiSelectableState<T>
+export class OuiSelectable<T = {}> extends Component<
+  OuiSelectableProps<T>,
+  OuiSelectableState<T>
 > {
   static defaultProps = {
     options: [],
@@ -162,9 +173,9 @@ export class EuiSelectable<T = {}> extends Component<
     isPreFiltered: false,
   };
   private containerRef = createRef<HTMLDivElement>();
-  private optionsListRef = createRef<EuiSelectableList<T>>();
+  private optionsListRef = createRef<OuiSelectableList<T>>();
   rootId = htmlIdGenerator();
-  constructor(props: EuiSelectableProps<T>) {
+  constructor(props: OuiSelectableProps<T>) {
     super(props);
 
     const { options, singleSelection, isPreFiltered } = props;
@@ -195,8 +206,8 @@ export class EuiSelectable<T = {}> extends Component<
   }
 
   static getDerivedStateFromProps<T>(
-    nextProps: EuiSelectableProps<T>,
-    prevState: EuiSelectableState<T>
+    nextProps: OuiSelectableProps<T>,
+    prevState: OuiSelectableState<T>
   ) {
     const { options, isPreFiltered } = nextProps;
     const { activeOptionIndex, searchValue } = prevState;
@@ -319,7 +330,7 @@ export class EuiSelectable<T = {}> extends Component<
   };
 
   onSearchChange = (
-    visibleOptions: Array<EuiSelectableOption<T>>,
+    visibleOptions: Array<OuiSelectableOption<T>>,
     searchValue: string
   ) => {
     this.setState(
@@ -349,7 +360,7 @@ export class EuiSelectable<T = {}> extends Component<
     });
   };
 
-  onOptionClick = (options: Array<EuiSelectableOption<T>>) => {
+  onOptionClick = (options: Array<OuiSelectableOption<T>>) => {
     const { isPreFiltered, onChange, searchProps } = this.props;
     const { searchValue } = this.state;
     const visibleOptions = getMatchingOptions(
@@ -421,9 +432,9 @@ export class EuiSelectable<T = {}> extends Component<
     } = listProps || unknownAccessibleName;
 
     const classes = classNames(
-      'euiSelectable',
+      'ouiSelectable',
       {
-        'euiSelectable-fullHeight': height === 'full',
+        'ouiSelectable-fullHeight': height === 'full',
       },
       className
     );
@@ -445,12 +456,12 @@ export class EuiSelectable<T = {}> extends Component<
       if (loadingMessage === undefined || typeof loadingMessage === 'string') {
         messageContent = (
           <>
-            <EuiLoadingSpinner size="m" />
-            <EuiSpacer size="xs" />
+            <OuiLoadingSpinner size="m" />
+            <OuiSpacer size="xs" />
             <p>
               {loadingMessage || (
-                <EuiI18n
-                  token="euiSelectable.loadingOptions"
+                <OuiI18n
+                  token="ouiSelectable.loadingOptions"
                   default="Loading options"
                 />
               )}
@@ -471,8 +482,8 @@ export class EuiSelectable<T = {}> extends Component<
         messageContent = (
           <p>
             {noMatchesMessage || (
-              <EuiI18n
-                token="euiSelectable.noMatchingOptions"
+              <OuiI18n
+                token="ouiSelectable.noMatchingOptions"
                 default="{searchValue} doesn't match any options"
                 values={{ searchValue: <strong>{searchValue}</strong> }}
               />
@@ -490,8 +501,8 @@ export class EuiSelectable<T = {}> extends Component<
         messageContent = (
           <p>
             {emptyMessage || (
-              <EuiI18n
-                token="euiSelectable.noAvailableOptions"
+              <OuiI18n
+                token="ouiSelectable.noAvailableOptions"
                 default="No options available"
               />
             )}
@@ -517,8 +528,8 @@ export class EuiSelectable<T = {}> extends Component<
      */
     const getAccessibleName = (
       props:
-        | Partial<EuiSelectableSearchProps<T>>
-        | EuiSelectableOptionsListPropsWithDefaults
+        | Partial<OuiSelectableSearchProps<T>>
+        | OuiSelectableOptionsListPropsWithDefaults
         | undefined,
       messageContentId?: string
     ) => {
@@ -557,9 +568,9 @@ export class EuiSelectable<T = {}> extends Component<
       Object.keys(searchAccessibleName).length
     );
     const search = searchable ? (
-      <EuiI18n token="euiSelectable.placeholderName" default="Filter options">
+      <OuiI18n token="ouiSelectable.placeholderName" default="Filter options">
         {(placeholderName: string) => (
-          <EuiSelectableSearch<T>
+          <OuiSelectableSearch<T>
             key="listSearch"
             options={options}
             onChange={this.onSearchChange}
@@ -573,7 +584,7 @@ export class EuiSelectable<T = {}> extends Component<
             {...cleanedSearchProps}
           />
         )}
-      </EuiI18n>
+      </OuiI18n>
     ) : undefined;
 
     const listAccessibleName = getAccessibleName(listProps);
@@ -581,15 +592,15 @@ export class EuiSelectable<T = {}> extends Component<
       Object.keys(listAccessibleName).length
     );
     const list = messageContent ? (
-      <EuiSelectableMessage
+      <OuiSelectableMessage
         id={messageContentId}
         bordered={listProps && listProps.bordered}>
         {messageContent}
-      </EuiSelectableMessage>
+      </OuiSelectableMessage>
     ) : (
-      <EuiI18n token="euiSelectable.placeholderName" default="Filter options">
+      <OuiI18n token="ouiSelectable.placeholderName" default="Filter options">
         {(placeholderName: string) => (
-          <EuiSelectableList<T>
+          <OuiSelectableList<T>
             key="list"
             options={options}
             visibleOptions={visibleOptions}
@@ -613,7 +624,7 @@ export class EuiSelectable<T = {}> extends Component<
             {...cleanedListProps}
           />
         )}
-      </EuiI18n>
+      </OuiI18n>
     );
 
     return (

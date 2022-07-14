@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import * as React from 'react';
 
-const EuiIconLogoElasticStack = ({ title, titleId, ...props }) => (
+const OuiIconLogoElasticStack = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -21,4 +32,4 @@ const EuiIconLogoElasticStack = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoElasticStack;
+export const icon = OuiIconLogoElasticStack;

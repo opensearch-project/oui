@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,22 +38,22 @@ import classNames from 'classnames';
 import { CommonProps, ExclusiveUnion } from '../../common';
 import { htmlIdGenerator } from '../../../services';
 
-import { EuiAccordion, EuiAccordionProps } from '../../accordion';
-import { EuiIcon, IconType, IconSize, EuiIconProps } from '../../icon';
-import { EuiFlexGroup, EuiFlexItem } from '../../flex';
-import { EuiTitle, EuiTitleProps, EuiTitleSize } from '../../title';
+import { OuiAccordion, OuiAccordionProps } from '../../accordion';
+import { OuiIcon, IconType, IconSize, OuiIconProps } from '../../icon';
+import { OuiFlexGroup, OuiFlexItem } from '../../flex';
+import { OuiTitle, OuiTitleProps, OuiTitleSize } from '../../title';
 
 type Background = 'none' | 'light' | 'dark';
 const backgroundToClassNameMap: { [color in Background]: string } = {
   none: '',
-  light: 'euiCollapsibleNavGroup--light',
-  dark: 'euiCollapsibleNavGroup--dark',
+  light: 'ouiCollapsibleNavGroup--light',
+  dark: 'ouiCollapsibleNavGroup--dark',
 };
 export const BACKGROUNDS = Object.keys(
   backgroundToClassNameMap
 ) as Background[];
 
-export interface EuiCollapsibleNavGroupInterface extends CommonProps {
+export interface OuiCollapsibleNavGroupInterface extends CommonProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -56,9 +67,9 @@ export interface EuiCollapsibleNavGroupInterface extends CommonProps {
    */
   iconSize?: IconSize;
   /**
-   * Further extend the props applied to EuiIcon
+   * Further extend the props applied to OuiIcon
    */
-  iconProps?: Omit<EuiIconProps, 'type' | 'size'>;
+  iconProps?: Omit<OuiIconProps, 'type' | 'size'>;
   /**
    * Optionally provide an id, otherwise one will be created
    */
@@ -73,14 +84,14 @@ export interface EuiCollapsibleNavGroupInterface extends CommonProps {
    */
   titleElement?: 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
   /**
-   * Title sizing equivalent to EuiTitle, but only `s` and smaller
+   * Title sizing equivalent to OuiTitle, but only `s` and smaller
    */
-  titleSize?: Exclude<EuiTitleProps['size'], 'l' | 'm'>;
+  titleSize?: Exclude<OuiTitleProps['size'], 'l' | 'm'>;
 }
 
-type GroupAsAccordion = EuiCollapsibleNavGroupInterface &
+type GroupAsAccordion = OuiCollapsibleNavGroupInterface &
   // The HTML `title` prop conflicts in type with our `title` prop
-  Omit<EuiAccordionProps, 'id' | 'title'> & {
+  Omit<OuiAccordionProps, 'id' | 'title'> & {
     /**
      * If `true`, wraps children in the body of an accordion,
      * requiring the prop `title` to be used as the button.
@@ -94,7 +105,7 @@ type GroupAsAccordion = EuiCollapsibleNavGroupInterface &
     title: ReactNode;
   };
 
-type GroupAsDiv = EuiCollapsibleNavGroupInterface & {
+type GroupAsDiv = OuiCollapsibleNavGroupInterface & {
   /**
    * If `true`, wraps children in the body of an accordion,
    * requiring the prop `title` to be used as the button.
@@ -108,12 +119,12 @@ type GroupAsDiv = EuiCollapsibleNavGroupInterface & {
   title?: ReactNode;
 } & HTMLAttributes<HTMLDivElement>;
 
-export type EuiCollapsibleNavGroupProps = ExclusiveUnion<
+export type OuiCollapsibleNavGroupProps = ExclusiveUnion<
   GroupAsAccordion,
   GroupAsDiv
 >;
 
-export const EuiCollapsibleNavGroup: FunctionComponent<EuiCollapsibleNavGroupProps> = ({
+export const OuiCollapsibleNavGroup: FunctionComponent<OuiCollapsibleNavGroupProps> = ({
   className,
   children,
   id,
@@ -131,10 +142,10 @@ export const EuiCollapsibleNavGroup: FunctionComponent<EuiCollapsibleNavGroupPro
   const titleID = `${groupID}__title`;
 
   const classes = classNames(
-    'euiCollapsibleNavGroup',
+    'ouiCollapsibleNavGroup',
     backgroundToClassNameMap[background],
     {
-      'euiCollapsibleNavGroup--withHeading': title,
+      'ouiCollapsibleNavGroup--withHeading': title,
     },
     className
   );
@@ -142,38 +153,38 @@ export const EuiCollapsibleNavGroup: FunctionComponent<EuiCollapsibleNavGroupPro
   // Warn if consumer passes an iconType without a title
   if (iconType && !title) {
     console.warn(
-      'EuiCollapsibleNavGroup will not render an icon without `title`.'
+      'OuiCollapsibleNavGroup will not render an icon without `title`.'
     );
   }
 
   const content = children && (
-    <div className="euiCollapsibleNavGroup__children">{children}</div>
+    <div className="ouiCollapsibleNavGroup__children">{children}</div>
   );
 
-  const headingClasses = 'euiCollapsibleNavGroup__heading';
+  const headingClasses = 'ouiCollapsibleNavGroup__heading';
 
   const TitleElement = titleElement;
   const titleContent = title ? (
-    <EuiFlexGroup gutterSize="m" alignItems="center" responsive={false}>
+    <OuiFlexGroup gutterSize="m" alignItems="center" responsive={false}>
       {iconType && (
-        <EuiFlexItem grow={false}>
-          <EuiIcon {...iconProps} type={iconType} size={iconSize} />
-        </EuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiIcon {...iconProps} type={iconType} size={iconSize} />
+        </OuiFlexItem>
       )}
 
-      <EuiFlexItem>
-        <EuiTitle size={titleSize as EuiTitleSize}>
-          <TitleElement id={titleID} className="euiCollapsibleNavGroup__title">
+      <OuiFlexItem>
+        <OuiTitle size={titleSize as OuiTitleSize}>
+          <TitleElement id={titleID} className="ouiCollapsibleNavGroup__title">
             {title}
           </TitleElement>
-        </EuiTitle>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiTitle>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   ) : undefined;
 
   if (isCollapsible && title) {
     return (
-      <EuiAccordion
+      <OuiAccordion
         id={groupID}
         className={classes}
         buttonClassName={headingClasses}
@@ -182,7 +193,7 @@ export const EuiCollapsibleNavGroup: FunctionComponent<EuiCollapsibleNavGroupPro
         arrowDisplay="right"
         {...rest}>
         {content}
-      </EuiAccordion>
+      </OuiAccordion>
     );
   } else {
     return (

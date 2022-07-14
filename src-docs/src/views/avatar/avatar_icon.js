@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../components';
 
-import { EuiAvatar, EuiSpacer, EuiTitle } from '../../../../src/components';
+import { OuiAvatar, OuiSpacer, OuiTitle } from '../../../../src/components';
 
 export default () => {
   const themeContext = useContext(ThemeContext);
@@ -13,44 +24,44 @@ export default () => {
 
   return (
     <div>
-      <EuiTitle size="xs">
+      <OuiTitle size="xs">
         <h2>Avatar colors and sizes</h2>
-      </EuiTitle>
-      <EuiSpacer />
-      <EuiAvatar size="s" name="Small size" iconType="managementApp" />
+      </OuiTitle>
+      <OuiSpacer />
+      <OuiAvatar size="s" name="Small size" iconType="managementApp" />
       &emsp;
-      <EuiAvatar size="m" name="Medium size" iconType="managementApp" />
+      <OuiAvatar size="m" name="Medium size" iconType="managementApp" />
       &emsp;
-      <EuiAvatar size="l" name="Large" iconType="managementApp" />
+      <OuiAvatar size="l" name="Large" iconType="managementApp" />
       &emsp;
-      <EuiAvatar
+      <OuiAvatar
         size="xl"
         color="plain"
         name="Plain color"
         iconType="managementApp"
       />
-      <EuiSpacer />
-      <EuiTitle size="xs">
+      <OuiSpacer />
+      <OuiTitle size="xs">
         <h2>Icon colors and sizes</h2>
-      </EuiTitle>
-      <EuiSpacer />
-      <EuiAvatar name="Avatar color" iconType="managementApp" color="#BD10E0" />
+      </OuiTitle>
+      <OuiSpacer />
+      <OuiAvatar name="Avatar color" iconType="managementApp" color="#BD10E0" />
       &emsp;
-      <EuiAvatar
+      <OuiAvatar
         name="Custom iconColor"
         iconType="managementApp"
         color={isDarkTheme ? '#103148' : '#E6F1FA'}
         iconColor="primary"
       />
       &emsp;
-      <EuiAvatar
+      <OuiAvatar
         name="Null iconColor"
         iconType="managementApp"
         color={isDarkTheme ? '#343741' : '#D3DAE6'}
         iconColor={null}
       />
       &emsp;
-      <EuiAvatar name="Large iconSize" iconType="managementApp" iconSize="l" />
+      <OuiAvatar name="Large iconSize" iconType="managementApp" iconSize="l" />
       &emsp;
     </div>
   );

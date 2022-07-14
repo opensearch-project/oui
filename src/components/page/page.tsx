@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,29 +32,29 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 import {
-  _EuiPageRestrictWidth,
+  _OuiPageRestrictWidth,
   setPropsForRestrictedPageWidth,
 } from './_restrict_width';
 
 const paddingSizeToClassNameMap = {
   none: null,
-  s: 'euiPage--paddingSmall',
-  m: 'euiPage--paddingMedium',
-  l: 'euiPage--paddingLarge',
+  s: 'ouiPage--paddingSmall',
+  m: 'ouiPage--paddingMedium',
+  l: 'ouiPage--paddingLarge',
 };
 
 const directionToClassNameMap = {
   row: null,
-  column: 'euiPage--column',
+  column: 'ouiPage--column',
 };
 
 export const SIZES = keysOf(paddingSizeToClassNameMap);
 export const DIRECTIONS = keysOf(directionToClassNameMap);
 
-export interface EuiPageProps
+export interface OuiPageProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement>,
-    _EuiPageRestrictWidth {
+    _OuiPageRestrictWidth {
   /**
    * Adjust the padding.
    * When using this setting it's best to be consistent throughout all similar usages
@@ -61,7 +72,7 @@ export interface EuiPageProps
   direction?: 'row' | 'column';
 }
 
-export const EuiPage: FunctionComponent<EuiPageProps> = ({
+export const OuiPage: FunctionComponent<OuiPageProps> = ({
   children,
   restrictWidth = false,
   style,
@@ -77,12 +88,12 @@ export const EuiPage: FunctionComponent<EuiPageProps> = ({
   );
 
   const classes = classNames(
-    'euiPage',
+    'ouiPage',
     paddingSizeToClassNameMap[paddingSize],
     directionToClassNameMap[direction],
     {
-      'euiPage--grow': grow,
-      [`euiPage--${widthClassName}`]: widthClassName,
+      'ouiPage--grow': grow,
+      [`ouiPage--${widthClassName}`]: widthClassName,
     },
     className
   );

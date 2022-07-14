@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -50,7 +61,7 @@ interface Props {
   children: ReactElement;
 }
 
-export class EuiKeyboardAccessible extends Component<Props> {
+export class OuiKeyboardAccessible extends Component<Props> {
   onKeyDown = (event: KeyboardEvent<any>) => {
     // Prevent a scroll from occurring if the user has hit space.
     if (event.key === keys.SPACE) {
@@ -92,9 +103,9 @@ export class EuiKeyboardAccessible extends Component<Props> {
   }
 }
 
-// @ts-ignore defining this as a static on EuiKeyboardAccessible breaks the
+// @ts-ignore defining this as a static on OuiKeyboardAccessible breaks the
 // tests
-EuiKeyboardAccessible.propTypes = {
+OuiKeyboardAccessible.propTypes = {
   children: keyboardInaccessibleElement,
 };
 

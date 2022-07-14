@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * This demo has been simplified to showcase just the buttons within sections.
  * See the main example for all the menu items.
@@ -6,16 +17,16 @@
 import React from 'react';
 
 import {
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiHeaderSectionItemButton,
-  EuiIcon,
-  EuiAvatar,
+  OuiHeader,
+  OuiHeaderLogo,
+  OuiHeaderSectionItemButton,
+  OuiIcon,
+  OuiAvatar,
 } from '../../../../src/components';
 
 export default () => {
   const renderLogo = (
-    <EuiHeaderLogo
+    <OuiHeaderLogo
       iconType="logoElastic"
       href="#"
       onClick={(e) => e.preventDefault()}
@@ -24,9 +35,9 @@ export default () => {
   );
 
   const renderSpaces = (
-    <EuiHeaderSectionItemButton aria-label="Spaces menu">
-      <EuiAvatar type="space" name="Sales Team" size="s" />
-    </EuiHeaderSectionItemButton>
+    <OuiHeaderSectionItemButton aria-label="Spaces menu">
+      <OuiAvatar type="space" name="Sales Team" size="s" />
+    </OuiHeaderSectionItemButton>
   );
 
   const breadcrumbs = [
@@ -50,23 +61,23 @@ export default () => {
   ];
 
   const renderSearch = (
-    <EuiHeaderSectionItemButton disabled aria-label="Sitewide search">
-      <EuiIcon type="search" size="m" />
-    </EuiHeaderSectionItemButton>
+    <OuiHeaderSectionItemButton disabled aria-label="Sitewide search">
+      <OuiIcon type="search" size="m" />
+    </OuiHeaderSectionItemButton>
   );
   const renderUser = (
-    <EuiHeaderSectionItemButton disabled aria-label="Account menu">
-      <EuiAvatar isDisabled name="John Username" size="s" />
-    </EuiHeaderSectionItemButton>
+    <OuiHeaderSectionItemButton disabled aria-label="Account menu">
+      <OuiAvatar isDisabled name="John Username" size="s" />
+    </OuiHeaderSectionItemButton>
   );
 
   const renderApps = (
-    <EuiHeaderSectionItemButton
+    <OuiHeaderSectionItemButton
       disabled
       aria-label="Apps menu with 1 new app"
       notification="1">
-      <EuiIcon type="apps" size="m" />
-    </EuiHeaderSectionItemButton>
+      <OuiIcon type="apps" size="m" />
+    </OuiHeaderSectionItemButton>
   );
 
   const sections = [
@@ -83,5 +94,5 @@ export default () => {
     },
   ];
 
-  return <EuiHeader sections={sections} />;
+  return <OuiHeader sections={sections} />;
 };

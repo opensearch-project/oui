@@ -1,205 +1,216 @@
-.euiSwitch {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiSwitch {
   position: relative;
   display: inline-flex;
   align-items: flex-start;
-  min-height: $euiSwitchHeight;
+  min-height: $ouiSwitchHeight;
 
-  .euiSwitch__label {
+  .ouiSwitch__label {
     cursor: pointer;
-    padding-left: $euiSizeS;
-    line-height: $euiSwitchHeight;
-    font-size: $euiFontSizeS;
+    padding-left: $ouiSizeS;
+    line-height: $ouiSwitchHeight;
+    font-size: $ouiFontSizeS;
     vertical-align: middle;
     display: inline-block;
   }
 
-  .euiSwitch__button {
+  .ouiSwitch__button {
     flex-shrink: 0; // ensures the button doesn't lose width because of a long label
     line-height: 0; // ensures button takes height of switch inside
 
-    &:focus .euiSwitch__track {
-      @include euiCustomControlFocused;
+    &:focus .ouiSwitch__track {
+      @include ouiCustomControlFocused;
     }
 
     &:disabled {
       &:hover,
-      ~ .euiSwitch__label:hover {
+      ~ .ouiSwitch__label:hover {
         cursor: not-allowed;
       }
 
-      .euiSwitch__body {
-        background-color: $euiSwitchOffColor;
+      .ouiSwitch__body {
+        background-color: $ouiSwitchOffColor;
       }
 
-      .euiSwitch__thumb {
-        @include euiCustomControlDisabled;
-        background-color: $euiSwitchOffColor;
+      .ouiSwitch__thumb {
+        @include ouiCustomControlDisabled;
+        background-color: $ouiSwitchOffColor;
       }
 
-      .euiSwitch__icon {
-        fill: $euiFormCustomControlDisabledIconColor;
+      .ouiSwitch__icon {
+        fill: $ouiFormCustomControlDisabledIconColor;
       }
 
-      + .euiSwitch__label {
-        color: $euiFormControlDisabledColor;
+      + .ouiSwitch__label {
+        color: $ouiFormControlDisabledColor;
       }
     }
 
     &[aria-checked='false'] {
-      .euiSwitch__body {
-        background-color: $euiSwitchOffColor;
+      .ouiSwitch__body {
+        background-color: $ouiSwitchOffColor;
       }
 
       // When input is not checked, we shift around the positioning of the thumb and the icon
-      .euiSwitch__thumb { // move the thumb left
+      .ouiSwitch__thumb { // move the thumb left
         left: 0;
       }
 
-      .euiSwitch__icon { // move the icon right
-        right: -$euiSizeS;
+      .ouiSwitch__icon { // move the icon right
+        right: -$ouiSizeS;
 
-        &.euiSwitch__icon--checked {
+        &.ouiSwitch__icon--checked {
           right: auto;
-          left: -($euiSwitchWidth - ($euiSwitchThumbSize / 2));
+          left: -($ouiSwitchWidth - ($ouiSwitchThumbSize / 2));
         }
       }
     }
   }
 
-  .euiSwitch__body {
+  .ouiSwitch__body {
     pointer-events: none;
-    width: $euiSwitchWidth;
-    height: $euiSwitchHeight;
-    background-color: $euiColorPrimary;
+    width: $ouiSwitchWidth;
+    height: $ouiSwitchHeight;
+    background-color: $ouiColorPrimary;
     display: inline-block;
     position: relative;
-    border-radius: $euiSwitchHeight;
+    border-radius: $ouiSwitchHeight;
     vertical-align: middle;
   }
 
-  .euiSwitch__thumb {
-    @include euiCustomControl($type: 'round', $size: $euiSwitchThumbSize);
+  .ouiSwitch__thumb {
+    @include ouiCustomControl($type: 'round', $size: $ouiSwitchThumbSize);
 
     position: absolute;
     display: inline-block;
-    left: $euiSwitchWidth - $euiSwitchThumbSize;
-    transition: border-color $euiAnimSpeedNormal $euiAnimSlightBounce, background-color $euiAnimSpeedNormal $euiAnimSlightBounce, left $euiAnimSpeedNormal $euiAnimSlightBounce, transform $euiAnimSpeedNormal $euiAnimSlightBounce;
+    left: $ouiSwitchWidth - $ouiSwitchThumbSize;
+    transition: border-color $ouiAnimSpeedNormal $ouiAnimSlightBounce, background-color $ouiAnimSpeedNormal $ouiAnimSlightBounce, left $ouiAnimSpeedNormal $ouiAnimSlightBounce, transform $ouiAnimSpeedNormal $ouiAnimSlightBounce;
   }
 
-  .euiSwitch__track {
+  .ouiSwitch__track {
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     overflow: hidden;
-    border-radius: $euiSwitchHeight;
+    border-radius: $ouiSwitchHeight;
   }
 
-  .euiSwitch__icon {
+  .ouiSwitch__icon {
     position: absolute;
-    right: -($euiSwitchWidth - ($euiSwitchThumbSize / 2));
-    top: ($euiSwitchHeight - $euiSwitchIconHeight) / 2;
+    right: -($ouiSwitchWidth - ($ouiSwitchThumbSize / 2));
+    top: ($ouiSwitchHeight - $ouiSwitchIconHeight) / 2;
     bottom: 0;
-    width: $euiSwitchWidth - ($euiSwitchThumbSize / 2) + $euiSizeS;
-    height: $euiSwitchIconHeight;
-    transition: left $euiAnimSpeedNormal $euiAnimSlightBounce, right $euiAnimSpeedNormal $euiAnimSlightBounce;
-    fill: $euiTextColor;
+    width: $ouiSwitchWidth - ($ouiSwitchThumbSize / 2) + $ouiSizeS;
+    height: $ouiSwitchIconHeight;
+    transition: left $ouiAnimSpeedNormal $ouiAnimSlightBounce, right $ouiAnimSpeedNormal $ouiAnimSlightBounce;
+    fill: $ouiTextColor;
   }
 
-  .euiSwitch__icon--checked {
+  .ouiSwitch__icon--checked {
     right: auto;
-    left: -$euiSizeS;
-    fill: $euiColorEmptyShade;
+    left: -$ouiSizeS;
+    fill: $ouiColorEmptyShade;
   }
 
-  &:hover .euiSwitch__button {
-    &:not(:disabled) .euiSwitch__thumb {
+  &:hover .ouiSwitch__button {
+    &:not(:disabled) .ouiSwitch__thumb {
       transform: scale(1.05);
     }
 
-    &:active .euiSwitch__thumb {
+    &:active .ouiSwitch__thumb {
       transform: scale(.95);
     }
   }
 
   // Compressed switches operate very similar to the normal versions, but are smaller, contain no icon signifiers
-  &.euiSwitch--compressed {
-    min-height: $euiSwitchHeightCompressed;
+  &.ouiSwitch--compressed {
+    min-height: $ouiSwitchHeightCompressed;
 
-    .euiSwitch__label {
-      line-height: $euiSwitchHeightCompressed;
+    .ouiSwitch__label {
+      line-height: $ouiSwitchHeightCompressed;
     }
 
-    .euiSwitch__body {
-      width: $euiSwitchWidthCompressed;
-      height: $euiSwitchHeightCompressed;
-      border-radius: $euiSwitchHeightCompressed;
+    .ouiSwitch__body {
+      width: $ouiSwitchWidthCompressed;
+      height: $ouiSwitchHeightCompressed;
+      border-radius: $ouiSwitchHeightCompressed;
     }
 
-    .euiSwitch__thumb {
-      @include euiCustomControl($type: 'round', $size: ($euiSwitchThumbSizeCompressed) - 2px);
+    .ouiSwitch__thumb {
+      @include ouiCustomControl($type: 'round', $size: ($ouiSwitchThumbSizeCompressed) - 2px);
 
-      left: ($euiSwitchWidthCompressed) - (($euiSwitchThumbSizeCompressed) - 2px) - 1px;
+      left: ($ouiSwitchWidthCompressed) - (($ouiSwitchThumbSizeCompressed) - 2px) - 1px;
       top: 1px;
-      transition: border-color $euiAnimSpeedNormal $euiAnimSlightBounce, background-color $euiAnimSpeedNormal $euiAnimSlightBounce, left $euiAnimSpeedNormal $euiAnimSlightBounce, transform $euiAnimSpeedNormal $euiAnimSlightBounce;
+      transition: border-color $ouiAnimSpeedNormal $ouiAnimSlightBounce, background-color $ouiAnimSpeedNormal $ouiAnimSlightBounce, left $ouiAnimSpeedNormal $ouiAnimSlightBounce, transform $ouiAnimSpeedNormal $ouiAnimSlightBounce;
     }
 
-    .euiSwitch__track {
-      border-radius: $euiSwitchHeightCompressed;
+    .ouiSwitch__track {
+      border-radius: $ouiSwitchHeightCompressed;
     }
   }
 
   // Mini styling is similar to compressed, but even smaller. It's undocumented because it has very specific uses.
-  &.euiSwitch--mini {
-    min-height: $euiSwitchHeightMini;
+  &.ouiSwitch--mini {
+    min-height: $ouiSwitchHeightMini;
 
-    .euiSwitch__label {
-      line-height: $euiSwitchHeightMini;
-      font-size: $euiFontSizeXS;
+    .ouiSwitch__label {
+      line-height: $ouiSwitchHeightMini;
+      font-size: $ouiFontSizeXS;
     }
 
-    .euiSwitch__body {
-      width: $euiSwitchWidthMini;
-      height: $euiSwitchHeightMini;
-      border-radius: $euiSwitchHeightMini;
+    .ouiSwitch__body {
+      width: $ouiSwitchWidthMini;
+      height: $ouiSwitchHeightMini;
+      border-radius: $ouiSwitchHeightMini;
     }
 
-    .euiSwitch__thumb {
-      @include euiCustomControl($type: 'round', $size: ($euiSwitchThumbSizeMini) - 2px);
+    .ouiSwitch__thumb {
+      @include ouiCustomControl($type: 'round', $size: ($ouiSwitchThumbSizeMini) - 2px);
 
-      left: ($euiSwitchWidthMini) - (($euiSwitchThumbSizeMini) - 2px) - 1px;
+      left: ($ouiSwitchWidthMini) - (($ouiSwitchThumbSizeMini) - 2px) - 1px;
       top: 1px;
-      transition: border-color $euiAnimSpeedNormal $euiAnimSlightBounce, background-color $euiAnimSpeedNormal $euiAnimSlightBounce, left $euiAnimSpeedNormal $euiAnimSlightBounce, transform $euiAnimSpeedNormal $euiAnimSlightBounce;
+      transition: border-color $ouiAnimSpeedNormal $ouiAnimSlightBounce, background-color $ouiAnimSpeedNormal $ouiAnimSlightBounce, left $ouiAnimSpeedNormal $ouiAnimSlightBounce, transform $ouiAnimSpeedNormal $ouiAnimSlightBounce;
     }
 
-    .euiSwitch__track {
-      border-radius: $euiSwitchHeightMini;
+    .ouiSwitch__track {
+      border-radius: $ouiSwitchHeightMini;
     }
   }
 
   // Compressed and mini switches have some style overlap
-  &.euiSwitch--compressed,
-  &.euiSwitch--mini {
+  &.ouiSwitch--compressed,
+  &.ouiSwitch--mini {
 
-    .euiSwitch__button[aria-checked='false'] {
-      .euiSwitch__thumb {
+    .ouiSwitch__button[aria-checked='false'] {
+      .ouiSwitch__thumb {
         left: 1px;
       }
     }
 
     // Compressed and mini switches need slightly darker borders since they don't have icons
-    .euiSwitch__button[aria-checked='false'],
-    .euiSwitch__button[aria-checked='true']:disabled {
-      .euiSwitch__thumb {
-        border-color: $euiFormCustomControlBorderColor;
+    .ouiSwitch__button[aria-checked='false'],
+    .ouiSwitch__button[aria-checked='true']:disabled {
+      .ouiSwitch__thumb {
+        border-color: $ouiFormCustomControlBorderColor;
       }
     }
 
     // Similar additional treatment needed while checked
-    .euiSwitch__button[aria-checked='true'] {
-      .euiSwitch__thumb {
-        border-color: $euiColorPrimary;
+    .ouiSwitch__button[aria-checked='true'] {
+      .ouiSwitch__thumb {
+        border-color: $ouiColorPrimary;
       }
     }
   }

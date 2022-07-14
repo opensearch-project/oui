@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiFormRow,
-  EuiPopover,
-  EuiSpacer,
-  EuiSwitch,
+  OuiButton,
+  OuiFormRow,
+  OuiPopover,
+  OuiSpacer,
+  OuiSwitch,
 } from '../../../../src/components';
 
 export default () => {
@@ -16,42 +27,42 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <OuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Show popover
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       ownFocus={false}
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       initialFocus="[id=asdf2]">
-      <EuiFormRow
+      <OuiFormRow
         label="Generate a public snapshot?"
         id="asdf"
         hasChildLabel={false}>
-        <EuiSwitch
+        <OuiSwitch
           name="switch"
           label="Snapshot data"
           checked={true}
           onChange={() => {}}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Include the following in the embed" id="asdf2">
-        <EuiSwitch
+      <OuiFormRow label="Include the following in the embed" id="asdf2">
+        <OuiSwitch
           name="switch"
           label="Current time range"
           checked={true}
           onChange={() => {}}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiButton fill>Copy IFRAME code</EuiButton>
-    </EuiPopover>
+      <OuiButton fill>Copy IFRAME code</OuiButton>
+    </OuiPopover>
   );
 };

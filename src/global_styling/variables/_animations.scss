@@ -1,13 +1,24 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Animations
 
-$euiAnimSlightBounce: cubic-bezier(.34, 1.61, .7, 1) !default;
-$euiAnimSlightResistance: cubic-bezier(.694, .0482, .335, 1) !default;
+$ouiAnimSlightBounce: cubic-bezier(.34, 1.61, .7, 1) !default;
+$ouiAnimSlightResistance: cubic-bezier(.694, .0482, .335, 1) !default;
 
-$euiAnimSpeedExtraFast: 90ms !default;
-$euiAnimSpeedFast: 150ms !default;
-$euiAnimSpeedNormal: 250ms !default;
-$euiAnimSpeedSlow: 350ms !default;
-$euiAnimSpeedExtraSlow: 500ms !default;
+$ouiAnimSpeedExtraFast: 90ms !default;
+$ouiAnimSpeedFast: 150ms !default;
+$ouiAnimSpeedNormal: 250ms !default;
+$ouiAnimSpeedSlow: 350ms !default;
+$ouiAnimSpeedExtraSlow: 500ms !default;
 
 // Keyframe animation declarations can be found in
 // utility/animations.scss

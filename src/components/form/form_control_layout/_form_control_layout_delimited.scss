@@ -1,80 +1,91 @@
-.euiFormControlLayoutDelimited {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFormControlLayoutDelimited {
   // Match just the regular drop shadow of inputs
-  @include euiFormControlDefaultShadow;
+  @include ouiFormControlDefaultShadow;
   display: flex;
   align-items: stretch;
   padding: 1px; /* 1 */
 
-  .euiFormControlLayoutDelimited__delimeter {
-    background-color: $euiFormBackgroundColor;
+  .ouiFormControlLayoutDelimited__delimeter {
+    background-color: $ouiFormBackgroundColor;
   }
 
-  > .euiFormControlLayout__childrenWrapper {
+  > .ouiFormControlLayout__childrenWrapper {
     display: flex;
     align-items: center;
     width: 100%;
   }
 
-  // Target when the euiFormControlLayout is compressed without specifying the full class name in case it ever changes
+  // Target when the ouiFormControlLayout is compressed without specifying the full class name in case it ever changes
   &[class*='--compressed'] {
-    @include euiFormControlDefaultShadow($borderOnly: true);
-    border-radius: $euiBorderRadius / 2;
+    @include ouiFormControlDefaultShadow($borderOnly: true);
+    border-radius: $ouiBorderRadius / 2;
 
-    .euiFormControlLayoutDelimited__input {
+    .ouiFormControlLayoutDelimited__input {
       height: 100%;
       padding-top: 0; // Fixes IE
       padding-bottom: 0; // Fixes IE
-      padding-left: $euiFormControlCompressedPadding;
-      padding-right: $euiFormControlCompressedPadding;
+      padding-left: $ouiFormControlCompressedPadding;
+      padding-right: $ouiFormControlCompressedPadding;
     }
 
-    .euiFormControlLayoutIcons {
-      padding-left: $euiFormControlCompressedPadding;
-      padding-right: $euiFormControlCompressedPadding;
+    .ouiFormControlLayoutIcons {
+      padding-left: $ouiFormControlCompressedPadding;
+      padding-right: $ouiFormControlCompressedPadding;
     }
   }
 
-  // Target when the euiFormControlLayout is fullWidth without specifying the full class name in case it ever changes
-  &[class*='--fullWidth'] .euiFormControlLayout__childrenWrapper,
+  // Target when the ouiFormControlLayout is fullWidth without specifying the full class name in case it ever changes
+  &[class*='--fullWidth'] .ouiFormControlLayout__childrenWrapper,
   &[class*='--fullWidth'] input {
     width: 100%;
     max-width: none;
   }
 
-  // Target when the euiFormControlLayout is disabled without specifying the full class name in case it ever changes
+  // Target when the ouiFormControlLayout is disabled without specifying the full class name in case it ever changes
   &[class*='-isDisabled'] {
-    @include euiFormControlDisabledStyle;
+    @include ouiFormControlDisabledStyle;
 
-    .euiFormControlLayoutDelimited__delimeter {
-      background-color: $euiFormBackgroundDisabledColor;
+    .ouiFormControlLayoutDelimited__delimeter {
+      background-color: $ouiFormBackgroundDisabledColor;
     }
   }
 
-  // Target when the euiFormControlLayout is readOnly without specifying the full class name in case it ever changes
+  // Target when the ouiFormControlLayout is readOnly without specifying the full class name in case it ever changes
   &[class*='--readOnly'] {
-    @include euiFormControlReadOnlyStyle;
+    @include ouiFormControlReadOnlyStyle;
 
     input,
-    .euiFormControlLayoutDelimited__delimeter {
-      background-color: $euiFormBackgroundReadOnlyColor;
+    .ouiFormControlLayoutDelimited__delimeter {
+      background-color: $ouiFormBackgroundReadOnlyColor;
     }
   }
 
-  .euiFormControlLayoutIcons {
+  .ouiFormControlLayoutIcons {
     // Absolutely positioning the icons doesn't work because they
     // overlay only one of controls making the layout unbalanced
     position: static; // Overrider absolute
-    padding-left: $euiFormControlPadding;
-    padding-right: $euiFormControlPadding;
+    padding-left: $ouiFormControlPadding;
+    padding-right: $ouiFormControlPadding;
     flex-shrink: 0; // Fixes IE
 
-    &:not(.euiFormControlLayoutIcons--right) {
+    &:not(.ouiFormControlLayoutIcons--right) {
       order: -1;
     }
   }
 }
 
-.euiFormControlLayoutDelimited__input {
+.ouiFormControlLayoutDelimited__input {
   // sass-lint:disable-block no-important
   box-shadow: none !important;
   border-radius: 0 !important;
@@ -82,15 +93,15 @@
   height: 100%;
   min-width: 0; // Fixes FF
 
-  .euiFormControlLayoutDelimited[class*='--compressed'] & {
+  .ouiFormControlLayoutDelimited[class*='--compressed'] & {
     max-width: none;
   }
 }
 
-.euiFormControlLayoutDelimited__delimeter {
+.ouiFormControlLayoutDelimited__delimeter {
   // sass-lint:disable-block no-important
-  line-height: 1 !important; // Override EuiText line-height
+  line-height: 1 !important; // Override OuiText line-height
   flex: 0 0 auto;
-  padding-left: $euiFormControlPadding / 2;
-  padding-right: $euiFormControlPadding / 2;
+  padding-left: $ouiFormControlPadding / 2;
+  padding-right: $ouiFormControlPadding / 2;
 }

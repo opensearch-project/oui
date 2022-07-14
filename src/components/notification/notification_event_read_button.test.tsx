@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,12 +31,12 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 
-import { EuiNotificationEventReadButton } from './notification_event_read_button';
+import { OuiNotificationEventReadButton } from './notification_event_read_button';
 
-describe('EuiNotificationEventReadButton', () => {
+describe('OuiNotificationEventReadButton', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiNotificationEventReadButton
+      <OuiNotificationEventReadButton
         id="id"
         eventName="eventName"
         isRead={true}
@@ -38,7 +49,7 @@ describe('EuiNotificationEventReadButton', () => {
 
   test('renders isRead to false', () => {
     const component = render(
-      <EuiNotificationEventReadButton
+      <OuiNotificationEventReadButton
         id="id"
         eventName="eventName"
         isRead={false}
@@ -52,7 +63,7 @@ describe('EuiNotificationEventReadButton', () => {
   test('onClick fires for buttons', () => {
     const handler = jest.fn();
     const component = mount(
-      <EuiNotificationEventReadButton
+      <OuiNotificationEventReadButton
         id="id"
         eventName="eventName"
         isRead={false}

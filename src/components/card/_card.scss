@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Footer is always at the bottom.
  * 2. Fix for IE where the image correctly resizes in width but doesn't collapse its height
@@ -5,130 +16,130 @@
  * 3. Horizontal layouts should always top left align no matter the textAlign prop
  */
 
-// EuiCard inherits most from EuiPanel, these styles are for content or other states
+// OuiCard inherits most from OuiPanel, these styles are for content or other states
 
-.euiCard {
+.ouiCard {
   display: flex;
   flex-direction: column;
   min-height: 1px; /* 2 */
 
-  &.euiCard-isDisabled {
+  &.ouiCard-isDisabled {
     // sass-lint:disable-block no-important
     cursor: not-allowed !important; // duplicate property due to Chrome bug
     transform: none !important;
     box-shadow: none !important;
     text-decoration: none !important;
-    background-color: transparentize($euiButtonColorDisabled, .9) !important;
-    color: $euiColorDisabledText;
+    background-color: transparentize($ouiButtonColorDisabled, .9) !important;
+    color: $ouiColorDisabledText;
 
-    .euiCard__top {
+    .ouiCard__top {
       filter: grayscale(100%);
     }
 
-    .euiCard__titleAnchor,
-    .euiCard__titleButton {
-      color: $euiColorDisabledText;
+    .ouiCard__titleAnchor,
+    .ouiCard__titleButton {
+      color: $ouiColorDisabledText;
       cursor: inherit;
     }
 
-    .euiCard__betaBadge:not(.euiBetaBadge-isClickable):not(.euiBetaBadge--hollow) {
-      box-shadow: inset 0 0 0 1px $euiBorderColor;
+    .ouiCard__betaBadge:not(.ouiBetaBadge-isClickable):not(.ouiBetaBadge--hollow) {
+      box-shadow: inset 0 0 0 1px $ouiBorderColor;
       background: transparent;
       color: inherit;
     }
 
-    .euiCard__betaBadge:not(.euiBetaBadge-isClickable).euiBetaBadge--hollow  {
-      background-color: $euiColorEmptyShade;
+    .ouiCard__betaBadge:not(.ouiBetaBadge-isClickable).ouiBetaBadge--hollow  {
+      background-color: $ouiColorEmptyShade;
     }
   }
 
-  &.euiCard--isClickable {
+  &.ouiCard--isClickable {
     display: flex; // Override panel
     width: 100%;
 
-    &:not(.euiCard-isDisabled) {
+    &:not(.ouiCard-isDisabled) {
       // Progressive Enhancement Only
       // The title will still underline to simulate focus in IE
       &:focus-within {
-        @include euiSlightShadowHover;
-        @include euiFocusRing('large');
+        @include ouiSlightShadowHover;
+        @include ouiFocusRing('large');
       }
 
       &:focus,
       &:hover {
-        .euiCard__title,
-        .euiCard__titleAnchor,
-        .euiCard__titleButton {
+        .ouiCard__title,
+        .ouiCard__titleAnchor,
+        .ouiCard__titleButton {
           text-decoration: underline;
         }
       }
     }
   }
 
-  .euiCard__top,
-  .euiCard__content,
-  .euiCard__footer {
+  .ouiCard__top,
+  .ouiCard__content,
+  .ouiCard__footer {
     width: 100%; // Fixes IE and ensures they always stretch no matter the flex layout
   }
 
-  &.euiCard--leftAligned {
+  &.ouiCard--leftAligned {
     text-align: left;
     align-items: flex-start;
 
-    .euiCard__titleButton {
+    .ouiCard__titleButton {
       text-align: left;
     }
   }
 
-  &.euiCard--centerAligned {
+  &.ouiCard--centerAligned {
     text-align: center;
     align-items: center;
   }
 
-  &.euiCard--rightAligned {
+  &.ouiCard--rightAligned {
     text-align: right;
     align-items: flex-end;
 
-    .euiCard__titleButton {
+    .ouiCard__titleButton {
       text-align: right;
     }
   }
 
-  &.euiCard-isSelected {
-    transition: all $euiAnimSpeedFast $euiAnimSlightResistance;
+  &.ouiCard-isSelected {
+    transition: all $ouiAnimSpeedFast $ouiAnimSlightResistance;
   }
 }
 
 // This creates a bunch of sub selectors for the beta badge
-@include euiHasBetaBadge($selector: '.euiCard', $spacing: $euiCardSpacing);
+@include ouiHasBetaBadge($selector: '.ouiCard', $spacing: $ouiCardSpacing);
 
-.euiCard__betaBadge.euiBetaBadge--hollow {
-  background-color: $euiColorEmptyShade;
+.ouiCard__betaBadge.ouiBetaBadge--hollow {
+  background-color: $ouiColorEmptyShade;
 }
 
-.euiCard--isSelectable {
+.ouiCard--isSelectable {
   position: relative;
 }
 
 
-@each $modifier, $paddingAmount in $euiPanelPaddingModifiers {
-  .euiCard[class*='#{$modifier}'] {
+@each $modifier, $paddingAmount in $ouiPanelPaddingModifiers {
+  .ouiCard[class*='#{$modifier}'] {
     padding: $paddingAmount;
 
-    &.euiCard--isSelectable {
-      padding-bottom: $paddingAmount + $euiCardBottomNodeHeight;
+    &.ouiCard--isSelectable {
+      padding-bottom: $paddingAmount + $ouiCardBottomNodeHeight;
     }
 
-    .euiCard__top {
+    .ouiCard__top {
 
-      .euiCard__image {
+      .ouiCard__image {
         width: calc(100% + (#{$paddingAmount} * 2));
         left: $paddingAmount * -1;
         top: $paddingAmount * -1;
         margin-bottom: $paddingAmount * -1; // ensure the parent is only as tall as the image
 
         // IF both exist, position the icon centered on top of image
-        + .euiCard__icon {
+        + .ouiCard__icon {
           transform: translate(-50%, -75%); // Fallback for IE as it doesn't accept calcs in translates
           transform: translate(-50%, calc(-50% + #{$paddingAmount * -1})); // sass-lint:disable-line no-duplicate-properties
         }
@@ -138,18 +149,18 @@
   }
 }
 
-.euiCard__top {
+.ouiCard__top {
   flex-grow: 0; /* 1 */
   position: relative;
   min-height: 1px; /* 2 */
   font-size: 0;
 
-  .euiCard__image {
+  .ouiCard__image {
     position: relative;
 
     // match border radius, minus 1px because it's inside a border
-    border-top-left-radius: $euiBorderRadius - 1px;
-    border-top-right-radius: $euiBorderRadius - 1px;
+    border-top-left-radius: $ouiBorderRadius - 1px;
+    border-top-right-radius: $ouiBorderRadius - 1px;
     overflow: hidden;
 
     img {
@@ -157,50 +168,50 @@
     }
 
     // IF both exist, position the icon centered on top of image
-    + .euiCard__icon {
+    + .ouiCard__icon {
       position: absolute;
       top: 50%;
       left: 50%;
     }
   }
 
-  .euiCard__icon {
-    margin-top: $euiCardSpacing / 2;
+  .ouiCard__icon {
+    margin-top: $ouiCardSpacing / 2;
   }
 }
 
-.euiCard__footer:not(:empty) {
+.ouiCard__footer:not(:empty) {
   flex-grow: 0; /* 1 */
-  margin-top: $euiCardSpacing;
+  margin-top: $ouiCardSpacing;
 }
 
 // Without a border, the image should stand on it's own so it needs to have all corners rounded
-.euiCard[class*='transparent'] .euiCard__image {
-  border-radius: $euiBorderRadius;
+.ouiCard[class*='transparent'] .ouiCard__image {
+  border-radius: $ouiBorderRadius;
 }
 
-@each $name, $color in $euiCardSelectButtonBorders {
-  .euiCard--isSelectable--#{$name}.euiCard-isSelected:not(.euiCard-isDisabled) {
-    // Override .euiPanel.has--Border
+@each $name, $color in $ouiCardSelectButtonBorders {
+  .ouiCard--isSelectable--#{$name}.ouiCard-isSelected:not(.ouiCard-isDisabled) {
+    // Override .ouiPanel.has--Border
     border-color: $color !important; // sass-lint:disable-line no-important
   }
 }
 
 // If an icon or image exists, add some space
-.euiCard__top + .euiCard__content {
-  margin-top: $euiCardSpacing;
+.ouiCard__top + .ouiCard__content {
+  margin-top: $ouiCardSpacing;
 }
 
-.euiCard__content {
+.ouiCard__content {
   flex-grow: 1; /* 1 */
 
-  .euiCard__description,
-  .euiCard__children {
-    margin-top: $euiCardSpacing / 2;
+  .ouiCard__description,
+  .ouiCard__children {
+    margin-top: $ouiCardSpacing / 2;
   }
 
-  .euiCard__titleAnchor,
-  .euiCard__titleButton {
+  .ouiCard__titleAnchor,
+  .ouiCard__titleButton {
     font: inherit;
     color: inherit;
     letter-spacing: inherit;
@@ -212,28 +223,28 @@
 
 }
 
-.euiCard.euiCard--horizontal {
-  .euiCard__content,
-  .euiCard__titleButton {
+.ouiCard.ouiCard--horizontal {
+  .ouiCard__content,
+  .ouiCard__titleButton {
     text-align: left; /* 3 */
   }
 
   // Only change the flex direction if the card has an icon
   // otherwise the button tag won't properly align contents to top
-  &.euiCard--hasIcon {
+  &.ouiCard--hasIcon {
     flex-direction: row;
     // sass-lint:disable-block no-important
     align-items: flex-start !important; /* 3 */
 
-    .euiCard__top,
-    .euiCard__content {
+    .ouiCard__top,
+    .ouiCard__content {
       width: auto; // Makes sure the top shrinks and the content grows
       margin-top: 0;
     }
 
-    .euiCard__top .euiCard__icon {
+    .ouiCard__top .ouiCard__icon {
       margin-top: 0;
-      margin-right: $euiSize;
+      margin-right: $ouiSize;
     }
   }
 }

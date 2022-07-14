@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,25 +40,25 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
-import { EuiIcon } from '../icon';
-import { EuiToolTip, ToolTipPositions } from '../tool_tip';
+import { OuiIcon } from '../icon';
+import { OuiToolTip, ToolTipPositions } from '../tool_tip';
 
 import { getSecureRelForTarget } from '../../services';
 import { validateHref } from '../../services/security/href_validator';
 
-export type EuiContextMenuItemIcon = ReactElement<any> | string | HTMLElement;
+export type OuiContextMenuItemIcon = ReactElement<any> | string | HTMLElement;
 
-export type EuiContextMenuItemLayoutAlignment = 'center' | 'top' | 'bottom';
+export type OuiContextMenuItemLayoutAlignment = 'center' | 'top' | 'bottom';
 
 const sizeToClassNameMap = {
-  s: 'euiContextMenuItem--small',
+  s: 'ouiContextMenuItem--small',
   m: null,
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export interface EuiContextMenuItemProps extends CommonProps {
-  icon?: EuiContextMenuItemIcon;
+export interface OuiContextMenuItemProps extends CommonProps {
+  icon?: OuiContextMenuItemIcon;
   hasPanel?: boolean;
   disabled?: boolean;
   onClick?: (event: React.MouseEvent) => void;
@@ -70,7 +81,7 @@ export interface EuiContextMenuItemProps extends CommonProps {
   /**
    * How to align icon with content of button
    */
-  layoutAlign?: EuiContextMenuItemLayoutAlignment;
+  layoutAlign?: OuiContextMenuItemLayoutAlignment;
   /**
    * Reduce the size to `s` when in need of a more compressed menu
    */
@@ -82,19 +93,19 @@ type Props = CommonProps &
     ButtonHTMLAttributes<HTMLButtonElement>,
     'type' | 'onClick' | 'disabled'
   > &
-  EuiContextMenuItemProps;
+  OuiContextMenuItemProps;
 
 const layoutAlignToClassNames: {
-  [align in EuiContextMenuItemLayoutAlignment]: string | null;
+  [align in OuiContextMenuItemLayoutAlignment]: string | null;
 } = {
   center: null,
-  top: 'euiContextMenu__itemLayout--top',
-  bottom: 'euiContextMenu__itemLayout--bottom',
+  top: 'ouiContextMenu__itemLayout--top',
+  bottom: 'ouiContextMenu__itemLayout--bottom',
 };
 
 export const LAYOUT_ALIGN = keysOf(layoutAlignToClassNames);
 
-export class EuiContextMenuItem extends Component<Props> {
+export class OuiContextMenuItem extends Component<Props> {
   render() {
     const {
       children,
@@ -122,10 +133,10 @@ export class EuiContextMenuItem extends Component<Props> {
       switch (typeof icon) {
         case 'string':
           iconInstance = (
-            <EuiIcon
+            <OuiIcon
               type={icon}
               size="m"
-              className="euiContextMenu__icon"
+              className="ouiContextMenu__icon"
               color="inherit" // forces the icon to inherit its parent color
             />
           );
@@ -134,7 +145,7 @@ export class EuiContextMenuItem extends Component<Props> {
         default:
           // Assume it's already an instance of an icon.
           iconInstance = cloneElement(icon as ReactElement, {
-            className: 'euiContextMenu__icon',
+            className: 'ouiContextMenu__icon',
           });
       }
     }
@@ -143,28 +154,28 @@ export class EuiContextMenuItem extends Component<Props> {
 
     if (hasPanel) {
       arrow = (
-        <EuiIcon type="arrowRight" size="m" className="euiContextMenu__arrow" />
+        <OuiIcon type="arrowRight" size="m" className="ouiContextMenu__arrow" />
       );
     }
 
     const classes = classNames(
-      'euiContextMenuItem',
+      'ouiContextMenuItem',
       size && sizeToClassNameMap[size],
       className,
       {
-        'euiContextMenuItem-isDisabled': disabled,
+        'ouiContextMenuItem-isDisabled': disabled,
       }
     );
 
     const layoutClasses = classNames(
-      'euiContextMenu__itemLayout',
+      'ouiContextMenu__itemLayout',
       layoutAlignToClassNames[layoutAlign]
     );
 
     const buttonInner = (
       <span className={layoutClasses}>
         {iconInstance}
-        <span className="euiContextMenuItem__text">{children}</span>
+        <span className="ouiContextMenuItem__text">{children}</span>
         {arrow}
       </span>
     );
@@ -201,13 +212,13 @@ export class EuiContextMenuItem extends Component<Props> {
 
     if (toolTipContent) {
       return (
-        <EuiToolTip
+        <OuiToolTip
           title={toolTipTitle ? toolTipTitle : null}
           content={toolTipContent}
-          anchorClassName="eui-displayBlock"
+          anchorClassName="oui-displayBlock"
           position={toolTipPosition}>
           {button}
-        </EuiToolTip>
+        </OuiToolTip>
       );
     } else {
       return button;

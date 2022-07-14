@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiImage } from '../../../../src/components/';
+import { OuiImage } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiImage.__docgenInfo)
-    ? EuiImage.__docgenInfo[0]
-    : EuiImage.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiImage.__docgenInfo)
+    ? OuiImage.__docgenInfo[0]
+    : OuiImage.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.size = {
@@ -26,14 +37,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiImage',
+      componentName: 'OuiImage',
       props: propsToUse,
       scope: {
-        EuiImage,
+        OuiImage,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiImage'],
+        '@opensearch-project/oui': {
+          named: ['OuiImage'],
         },
       },
     },

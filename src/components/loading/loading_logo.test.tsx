@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,18 +32,18 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiLoadingLogo, SIZES } from './loading_logo';
+import { OuiLoadingLogo, SIZES } from './loading_logo';
 
-describe('EuiLoadingLogo', () => {
+describe('OuiLoadingLogo', () => {
   test('is rendered', () => {
-    const component = render(<EuiLoadingLogo {...requiredProps} />);
+    const component = render(<OuiLoadingLogo {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('logo is rendered', () => {
     const component = render(
-      <EuiLoadingLogo logo="logoElastic" {...requiredProps} />
+      <OuiLoadingLogo logo="logoElastic" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -41,7 +52,7 @@ describe('EuiLoadingLogo', () => {
   describe('size', () => {
     SIZES.forEach((size) => {
       test(`${size} is rendered`, () => {
-        const component = render(<EuiLoadingLogo size={size} />);
+        const component = render(<OuiLoadingLogo size={size} />);
 
         expect(component).toMatchSnapshot();
       });

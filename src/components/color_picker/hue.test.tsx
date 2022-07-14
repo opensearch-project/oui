@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,22 +32,22 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiHue } from './hue';
+import { OuiHue } from './hue';
 
 const onChange = () => {
   /* empty */
 };
 
-describe('EuiHue', () => {
+describe('OuiHue', () => {
   test('is rendered', () => {
-    const component = render(<EuiHue onChange={onChange} {...requiredProps} />);
+    const component = render(<OuiHue onChange={onChange} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('accepts a hue value', () => {
     const component = render(
-      <EuiHue hue={180} onChange={onChange} {...requiredProps} />
+      <OuiHue hue={180} onChange={onChange} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -44,7 +55,7 @@ describe('EuiHue', () => {
 
   test('accepts a hex value', () => {
     const component = render(
-      <EuiHue hue={180} hex="#00FFFF" onChange={onChange} {...requiredProps} />
+      <OuiHue hue={180} hex="#00FFFF" onChange={onChange} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();

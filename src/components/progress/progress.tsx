@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,21 +37,21 @@ import React, {
   CSSProperties,
 } from 'react';
 import classNames from 'classnames';
-import { EuiI18n } from '../i18n';
-import { EuiInnerText } from '../inner_text';
+import { OuiI18n } from '../i18n';
+import { OuiInnerText } from '../inner_text';
 import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import { isNil } from '../../services/predicate';
 
 const sizeToClassNameMap = {
-  xs: 'euiProgress--xs',
-  s: 'euiProgress--s',
-  m: 'euiProgress--m',
-  l: 'euiProgress--l',
+  xs: 'ouiProgress--xs',
+  s: 'ouiProgress--s',
+  m: 'ouiProgress--m',
+  l: 'ouiProgress--l',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiProgressSize = keyof typeof sizeToClassNameMap;
+export type OuiProgressSize = keyof typeof sizeToClassNameMap;
 
 export type ProgressColor =
   | 'primary'
@@ -62,23 +73,23 @@ export type ProgressColor =
   | 'vis9';
 
 const colorToClassNameMap = {
-  primary: 'euiProgress--primary',
-  secondary: 'euiProgress--secondary',
-  success: 'euiProgress--success',
-  warning: 'euiProgress--warning',
-  danger: 'euiProgress--danger',
-  subdued: 'euiProgress--subdued',
-  accent: 'euiProgress--accent',
-  vis0: 'euiProgress--vis0',
-  vis1: 'euiProgress--vis1',
-  vis2: 'euiProgress--vis2',
-  vis3: 'euiProgress--vis3',
-  vis4: 'euiProgress--vis4',
-  vis5: 'euiProgress--vis5',
-  vis6: 'euiProgress--vis6',
-  vis7: 'euiProgress--vis7',
-  vis8: 'euiProgress--vis8',
-  vis9: 'euiProgress--vis9',
+  primary: 'ouiProgress--primary',
+  secondary: 'ouiProgress--secondary',
+  success: 'ouiProgress--success',
+  warning: 'ouiProgress--warning',
+  danger: 'ouiProgress--danger',
+  subdued: 'ouiProgress--subdued',
+  accent: 'ouiProgress--accent',
+  vis0: 'ouiProgress--vis0',
+  vis1: 'ouiProgress--vis1',
+  vis2: 'ouiProgress--vis2',
+  vis3: 'ouiProgress--vis3',
+  vis4: 'ouiProgress--vis4',
+  vis5: 'ouiProgress--vis5',
+  vis6: 'ouiProgress--vis6',
+  vis7: 'ouiProgress--vis7',
+  vis8: 'ouiProgress--vis8',
+  vis9: 'ouiProgress--vis9',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
@@ -89,51 +100,51 @@ function isNamedColor(name: string): name is NamedColor {
   return colorToClassNameMap.hasOwnProperty(name);
 }
 
-export type EuiProgressColor = keyof typeof colorToClassNameMap;
+export type OuiProgressColor = keyof typeof colorToClassNameMap;
 
 const dataColorToClassNameMap: { [color in ProgressColor]: string } = {
-  primary: 'euiProgress__data--primary',
-  secondary: 'euiProgress__data--secondary',
-  success: 'euiProgress__data--success',
-  warning: 'euiProgress__data--warning',
-  danger: 'euiProgress__data--danger',
-  subdued: 'euiProgress__data--subdued',
-  accent: 'euiProgress__data--accent',
-  vis0: 'euiProgress__data--vis0',
-  vis1: 'euiProgress__data--vis1',
-  vis2: 'euiProgress__data--vis2',
-  vis3: 'euiProgress__data--vis3',
-  vis4: 'euiProgress__data--vis4',
-  vis5: 'euiProgress__data--vis5',
-  vis6: 'euiProgress__data--vis6',
-  vis7: 'euiProgress__data--vis7',
-  vis8: 'euiProgress__data--vis8',
-  vis9: 'euiProgress__data--vis9',
+  primary: 'ouiProgress__data--primary',
+  secondary: 'ouiProgress__data--secondary',
+  success: 'ouiProgress__data--success',
+  warning: 'ouiProgress__data--warning',
+  danger: 'ouiProgress__data--danger',
+  subdued: 'ouiProgress__data--subdued',
+  accent: 'ouiProgress__data--accent',
+  vis0: 'ouiProgress__data--vis0',
+  vis1: 'ouiProgress__data--vis1',
+  vis2: 'ouiProgress__data--vis2',
+  vis3: 'ouiProgress__data--vis3',
+  vis4: 'ouiProgress__data--vis4',
+  vis5: 'ouiProgress__data--vis5',
+  vis6: 'ouiProgress__data--vis6',
+  vis7: 'ouiProgress__data--vis7',
+  vis8: 'ouiProgress__data--vis8',
+  vis9: 'ouiProgress__data--vis9',
 };
 
 const positionsToClassNameMap = {
-  fixed: 'euiProgress--fixed',
-  absolute: 'euiProgress--absolute',
+  fixed: 'ouiProgress--fixed',
+  absolute: 'ouiProgress--absolute',
   static: '',
 };
 
 export const POSITIONS = keysOf(positionsToClassNameMap);
 
-export type EuiProgressPosition = keyof typeof positionsToClassNameMap;
+export type OuiProgressPosition = keyof typeof positionsToClassNameMap;
 
-export type EuiProgressProps = CommonProps & {
-  size?: EuiProgressSize;
+export type OuiProgressProps = CommonProps & {
+  size?: OuiProgressSize;
   /**
-   * One of EUI's color palette, vis colors or a valid CSS color value https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
+   * One of OUI's color palette, vis colors or a valid CSS color value https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
    * **`secondary` color is DEPRECATED, use `success` instead**
    */
-  color?: EuiProgressColor | CSSProperties['color'];
-  position?: EuiProgressPosition;
+  color?: OuiProgressColor | CSSProperties['color'];
+  position?: OuiProgressPosition;
 };
 
-type Indeterminate = EuiProgressProps & HTMLAttributes<HTMLDivElement>;
+type Indeterminate = OuiProgressProps & HTMLAttributes<HTMLDivElement>;
 
-type Determinate = EuiProgressProps &
+type Determinate = OuiProgressProps &
   Omit<ProgressHTMLAttributes<HTMLProgressElement>, 'max'> & {
     max?: number;
     /*
@@ -147,7 +158,7 @@ type Determinate = EuiProgressProps &
     labelProps?: HTMLAttributes<HTMLSpanElement>;
   };
 
-export const EuiProgress: FunctionComponent<ExclusiveUnion<
+export const OuiProgress: FunctionComponent<ExclusiveUnion<
   Determinate,
   Indeterminate
 >> = ({
@@ -172,14 +183,14 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
       dataColorClass = dataColorToClassNameMap[color];
     } else {
       optionalCustomStyles = { color: color };
-      colorClass = 'euiProgress--customColor';
+      colorClass = 'ouiProgress--customColor';
     }
   }
   const classes = classNames(
-    'euiProgress',
+    'ouiProgress',
     {
-      'euiProgress--indeterminate': !determinate,
-      'euiProgress--native': determinate,
+      'ouiProgress--indeterminate': !determinate,
+      'ouiProgress--native': determinate,
     },
     sizeToClassNameMap[size],
     colorClass,
@@ -187,14 +198,14 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
     className
   );
   const dataClasses = classNames(
-    'euiProgress__data',
+    'ouiProgress__data',
     {
-      'euiProgress__data--l': size === 'l',
+      'ouiProgress__data--l': size === 'l',
     },
     dataColorClass
   );
   const labelClasses = classNames(
-    'euiProgress__label',
+    'ouiProgress__label',
     labelProps && labelProps.className
   );
 
@@ -202,8 +213,8 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
   if (valueText === true) {
     // valueText is true
     valueRender = (
-      <EuiI18n
-        token="euiProgress.valueText"
+      <OuiI18n
+        token="ouiProgress.valueText"
         default="{value}%"
         values={{
           value,
@@ -224,7 +235,7 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
         {label || valueText ? (
           <div className={dataClasses}>
             {label && (
-              <EuiInnerText>
+              <OuiInnerText>
                 {(ref, innerText) => (
                   <span
                     title={innerText}
@@ -234,20 +245,20 @@ export const EuiProgress: FunctionComponent<ExclusiveUnion<
                     {label}
                   </span>
                 )}
-              </EuiInnerText>
+              </OuiInnerText>
             )}
             {valueRender && (
-              <EuiInnerText>
+              <OuiInnerText>
                 {(ref, innerText) => (
                   <span
                     title={innerText}
                     ref={ref}
                     style={optionalCustomStyles}
-                    className="euiProgress__valueText">
+                    className="ouiProgress__valueText">
                     {valueRender}
                   </span>
                 )}
-              </EuiInnerText>
+              </OuiInnerText>
             )}
           </div>
         ) : undefined}

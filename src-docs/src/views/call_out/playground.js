@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiCallOut, EuiText } from '../../../../src/components/';
+import { OuiCallOut, OuiText } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   iconValidator,
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiCallOut.__docgenInfo)
-    ? EuiCallOut.__docgenInfo[0]
-    : EuiCallOut.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiCallOut.__docgenInfo)
+    ? OuiCallOut.__docgenInfo[0]
+    : OuiCallOut.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.iconType = iconValidator(propsToUse.iconType);
@@ -22,7 +33,7 @@ export default () => {
   propsToUse.children = {
     ...propsToUse.children,
     value: `<p>
-   Any content inside of <strong>EuiCallOut</strong> will appear here.
+   Any content inside of <strong>OuiCallOut</strong> will appear here.
   </p>`,
     type: PropTypes.ReactNode,
     description: 'Content to display inside the callout below the title',
@@ -31,15 +42,15 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiCallOut',
+      componentName: 'OuiCallOut',
       props: propsToUse,
       scope: {
-        EuiCallOut,
-        EuiText,
+        OuiCallOut,
+        OuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCallOut', 'EuiText'],
+        '@opensearch-project/oui': {
+          named: ['OuiCallOut', 'OuiText'],
         },
       },
     },

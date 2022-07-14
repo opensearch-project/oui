@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 const rule = require('./i18n');
 const RuleTester = require('eslint').RuleTester;
 
@@ -6,80 +17,80 @@ const ruleTester = new RuleTester({
 });
 
 const valid = [
-  /** EuiI18n **/
+  /** OuiI18n **/
   // nothing to validate against
-  '<I18n token="euiFooBar.tokenName" default="Some default value"/>',
+  '<I18n token="ouiFooBar.tokenName" default="Some default value"/>',
 
   // values agree with default string
-  `<EuiI18n token="euiFooBar.tokenName" default="{value}, {value2}" values={{ value: 'Hello', value2: 'World' }}/>`,
+  `<OuiI18n token="ouiFooBar.tokenName" default="{value}, {value2}" values={{ value: 'Hello', value2: 'World' }}/>`,
 
   // valid tokens
-  `<EuiI18n tokens={['euiFooBar.token1', 'euiFooBar.token2']} defaults={['value1', 'value 2']}/>`,
+  `<OuiI18n tokens={['ouiFooBar.token1', 'ouiFooBar.token2']} defaults={['value1', 'value 2']}/>`,
 
   // token name is used by render prop
-  `<EuiI18n token="euiFooBar.tokenName" default="Some default value">
+  `<OuiI18n token="ouiFooBar.tokenName" default="Some default value">
       {tokenName => 'asdf'}
-    </EuiI18n>`,
-  `<EuiI18n token="euiFooBar.tokenName" default="Some default value">
+    </OuiI18n>`,
+  `<OuiI18n token="ouiFooBar.tokenName" default="Some default value">
       {(tokenName) => 'asdf'}
-    </EuiI18n>`,
+    </OuiI18n>`,
 
   // token names are used by render prop
-  `<EuiI18n tokens={['euiFooBar.token1', 'euiFooBar.token2']} defaults={['value 1', 'value 2']}>
+  `<OuiI18n tokens={['ouiFooBar.token1', 'ouiFooBar.token2']} defaults={['value 1', 'value 2']}>
       {([token1, token2]) => 'asdf'}
-    </EuiI18n>`,
+    </OuiI18n>`,
 
   // default callback params match values
-  `<EuiI18n token="euiFooBar.token" values={{ name: 'John' }} default={({ name }) => name}/>`,
+  `<OuiI18n token="ouiFooBar.token" values={{ name: 'John' }} default={({ name }) => name}/>`,
 
-  /** useEuiI18n **/
+  /** useOuiI18n **/
   // nothing to validate against
-  `useI18n('euiFooBar.tokenName', 'Some default value')`,
+  `useI18n('ouiFooBar.tokenName', 'Some default value')`,
 
   // values agree with default string
-  `useEuiI18n('euiFooBar.tokenName', '{value}, {value2}', { value: 'Hello', value2: 'World' })`,
+  `useOuiI18n('ouiFooBar.tokenName', '{value}, {value2}', { value: 'Hello', value2: 'World' })`,
 
   // valid tokens
-  `useEuiI18n(['euiFooBar.token1', 'euiFooBar.token2'], ['value1', 'value 2'])`,
+  `useOuiI18n(['ouiFooBar.token1', 'ouiFooBar.token2'], ['value1', 'value 2'])`,
 
   // default callback params match values
-  `useEuiI18n('euiFooBar.token', ({ name }) => name, { name: 'John' })`,
+  `useOuiI18n('ouiFooBar.token', ({ name }) => name, { name: 'John' })`,
 ];
 const invalid = [
-  /** EuiI18n **/
+  /** OuiI18n **/
   // token doesn't match file name
   {
-    code: '<EuiI18n token="euiFooeyBar.tokenName" default="Some default value"/>',
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'euiFooeyBar.tokenName', tokenNamespace: 'euiFooBar' } }]
+    code: '<OuiI18n token="ouiFooeyBar.tokenName" default="Some default value"/>',
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'ouiFooeyBar.tokenName', tokenNamespace: 'ouiFooBar' } }]
   },
 
   // token doesn't have at least two parts
   {
-    code: '<EuiI18n token="euiFooBar" default="Some default value"/>',
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'euiFooBar', tokenNamespace: 'euiFooBar' } }]
+    code: '<OuiI18n token="ouiFooBar" default="Some default value"/>',
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'ouiFooBar', tokenNamespace: 'ouiFooBar' } }]
   },
   {
-    code: '<EuiI18n token="tokenName" default="Some default value"/>',
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'tokenName', tokenNamespace: 'euiFooBar' } }]
+    code: '<OuiI18n token="tokenName" default="Some default value"/>',
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'tokenName', tokenNamespace: 'ouiFooBar' } }]
   },
 
   // invalid tokens
   {
-    code: `<EuiI18n tokens={['euiFooBar.token1', 'token2']} defaults={['value1', 'value 2']}/>`,
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'token2', tokenNamespace: 'euiFooBar' } }]
+    code: `<OuiI18n tokens={['ouiFooBar.token1', 'token2']} defaults={['value1', 'value 2']}/>`,
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'token2', tokenNamespace: 'ouiFooBar' } }]
   },
   {
-    code: `<EuiI18n tokens={['euiFooeyBar.token1', 'euiFooBar.token2']} defaults={['value1', 'value 2']}/>`,
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'euiFooeyBar.token1', tokenNamespace: 'euiFooBar' } }]
+    code: `<OuiI18n tokens={['ouiFooeyBar.token1', 'ouiFooBar.token2']} defaults={['value1', 'value 2']}/>`,
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'ouiFooeyBar.token1', tokenNamespace: 'ouiFooBar' } }]
   },
   {
-    code: `<EuiI18n tokens={['euiFooBar.token1']} defaults={['value1', 'value 2']}/>`,
+    code: `<OuiI18n tokens={['ouiFooBar.token1']} defaults={['value1', 'value 2']}/>`,
     errors: [{ messageId: 'mismatchedTokensAndDefaults', data: { tokenLength: 1, defaultsLength: 2 } }]
   },
 
   // values not in agreement with default string
   {
-    code: `<EuiI18n token="euiFooBar.tokenName" default="{value}, {value2}" values={{ valuee: 'Hello', value2: 'World' }}/>`,
+    code: `<OuiI18n token="ouiFooBar.tokenName" default="{value}, {value2}" values={{ valuee: 'Hello', value2: 'World' }}/>`,
     errors: [{
       messageId: 'mismatchedValues',
       data: {
@@ -89,7 +100,7 @@ const invalid = [
     }]
   },
   {
-    code: `<EuiI18n token="euiFooBar.tokenName" default="{valuee}, {value2}" values={{ value: 'Hello', value2: 'World' }}/>`,
+    code: `<OuiI18n token="ouiFooBar.tokenName" default="{valuee}, {value2}" values={{ value: 'Hello', value2: 'World' }}/>`,
     errors: [{
       messageId: 'mismatchedValues',
       data: {
@@ -101,9 +112,9 @@ const invalid = [
 
   // token name isn't used by render prop
   {
-    code: `<EuiI18n token="euiFooBar.tokenName" default="Some default value">
+    code: `<OuiI18n token="ouiFooBar.tokenName" default="Some default value">
       {tokenGame => 'asdf'}
-    </EuiI18n>`,
+    </OuiI18n>`,
     errors: [{
       messageId: 'tokenNamesNotUsedInRenderProp',
       data: {
@@ -115,9 +126,9 @@ const invalid = [
 
   // token names aren't used by render prop
   {
-    code: `<EuiI18n tokens={['euiFooBar.token1', 'euiFooBar.token2']} defaults={['value 1', 'value 2']}>
+    code: `<OuiI18n tokens={['ouiFooBar.token1', 'ouiFooBar.token2']} defaults={['value 1', 'value 2']}>
       {([tokener1, token2]) => 'asdf'}
-    </EuiI18n>`,
+    </OuiI18n>`,
     errors: [{
       messageId: 'tokenNamesNotUsedInRenderProp',
       data: {
@@ -129,7 +140,7 @@ const invalid = [
 
   // default callback params don't match values
   {
-    code: `<EuiI18n token="euiFooBar.token" values={{ nare: 'John' }} default={({ name }) => name}/>`,
+    code: `<OuiI18n token="ouiFooBar.token" values={{ nare: 'John' }} default={({ name }) => name}/>`,
     errors: [{
       messageId: 'mismatchedValues',
       data: {
@@ -141,72 +152,72 @@ const invalid = [
 
   // invalid attribute types
   {
-    code: '<EuiI18n token={5} default="value"/>',
+    code: '<OuiI18n token={5} default="value"/>',
     errors: [{ messageId: 'invalidTokenType', data: { type: 'JSXExpressionContainer' } }]
   },
   {
-    code: `<EuiI18n tokens="euiFooBar.token" defaults={['value']}/>`,
+    code: `<OuiI18n tokens="ouiFooBar.token" defaults={['value']}/>`,
     errors: [{ messageId: 'invalidTokensType', data: { type: 'Literal' } }]
   },
   {
-    code: `<EuiI18n tokens={5} defaults={['value']}/>`,
+    code: `<OuiI18n tokens={5} defaults={['value']}/>`,
     errors: [{ messageId: 'invalidTokensType', data: { type: 'Literal' } }]
   },
   {
-    code: `<EuiI18n tokens={[5]} defaults={['value']}/>`,
+    code: `<OuiI18n tokens={[5]} defaults={['value']}/>`,
     errors: [{ messageId: 'invalidTokensType', data: { type: 'Literal' } }]
   },
   {
-    code: '<EuiI18n token="euiFooBar.token" default={5}/>',
+    code: '<OuiI18n token="ouiFooBar.token" default={5}/>',
     errors: [{ messageId: 'invalidDefaultType', data: { type: 'Literal' } }]
   },
   {
-    code: `<EuiI18n tokens={['euiFooBar.token']} defaults="value"/>`,
+    code: `<OuiI18n tokens={['ouiFooBar.token']} defaults="value"/>`,
     errors: [{ messageId: 'invalidDefaultsType', data: { type: 'Literal' } }]
   },
   {
-    code: `<EuiI18n tokens={['euiFooBar.token']} defaults={5}/>`,
+    code: `<OuiI18n tokens={['ouiFooBar.token']} defaults={5}/>`,
     errors: [{ messageId: 'invalidDefaultsType', data: { type: 'Literal' } }]
   },
   {
-    code: `<EuiI18n tokens={['euiFooBar.token']} defaults={[5]}/>`,
+    code: `<OuiI18n tokens={['ouiFooBar.token']} defaults={[5]}/>`,
     errors: [{ messageId: 'invalidDefaultsType', data: { type: 'Literal' } }]
   },
 
-  // /** useEuiI18n **/
+  // /** useOuiI18n **/
   // token doesn't match file name
   {
-    code: `useEuiI18n('euiFooeyBar.tokenName', 'Some default value')`,
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'euiFooeyBar.tokenName', tokenNamespace: 'euiFooBar' } }]
+    code: `useOuiI18n('ouiFooeyBar.tokenName', 'Some default value')`,
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'ouiFooeyBar.tokenName', tokenNamespace: 'ouiFooBar' } }]
   },
 
   // token doesn't have at least two parts
   {
-    code: `useEuiI18n('euiFooBar', 'Some default value')`,
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'euiFooBar', tokenNamespace: 'euiFooBar' } }]
+    code: `useOuiI18n('ouiFooBar', 'Some default value')`,
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'ouiFooBar', tokenNamespace: 'ouiFooBar' } }]
   },
   {
-    code: `useEuiI18n('tokenName', 'Some default value')`,
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'tokenName', tokenNamespace: 'euiFooBar' } }]
+    code: `useOuiI18n('tokenName', 'Some default value')`,
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'tokenName', tokenNamespace: 'ouiFooBar' } }]
   },
 
   // invalid tokens
   {
-    code: `useEuiI18n(['euiFooBar.token1', 'token2'], ['value1', 'value 2'])`,
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'token2', tokenNamespace: 'euiFooBar' } }]
+    code: `useOuiI18n(['ouiFooBar.token1', 'token2'], ['value1', 'value 2'])`,
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'token2', tokenNamespace: 'ouiFooBar' } }]
   },
   {
-    code: `useEuiI18n(['euiFooeyBar.token1', 'euiFooBar.token2'], ['value1', 'value 2'])`,
-    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'euiFooeyBar.token1', tokenNamespace: 'euiFooBar' } }]
+    code: `useOuiI18n(['ouiFooeyBar.token1', 'ouiFooBar.token2'], ['value1', 'value 2'])`,
+    errors: [{ messageId: 'invalidToken', data: { tokenValue: 'ouiFooeyBar.token1', tokenNamespace: 'ouiFooBar' } }]
   },
   {
-    code: `useEuiI18n(['euiFooBar.token1'], ['value1', 'value 2'])`,
+    code: `useOuiI18n(['ouiFooBar.token1'], ['value1', 'value 2'])`,
     errors: [{ messageId: 'mismatchedTokensAndDefaults', data: { tokenLength: 1, defaultsLength: 2 } }]
   },
 
   // values not in agreement with default string
   {
-    code: `useEuiI18n('euiFooBar.tokenName', '{value}, {value2}', { valuee: 'Hello', value2: 'World' })`,
+    code: `useOuiI18n('ouiFooBar.tokenName', '{value}, {value2}', { valuee: 'Hello', value2: 'World' })`,
     errors: [{
       messageId: 'mismatchedValues',
       data: {
@@ -216,7 +227,7 @@ const invalid = [
     }]
   },
   {
-    code: `useEuiI18n('euiFooBar.tokenName', '{valuee}, {value2}', { value: 'Hello', value2: 'World' })`,
+    code: `useOuiI18n('ouiFooBar.tokenName', '{valuee}, {value2}', { value: 'Hello', value2: 'World' })`,
     errors: [{
       messageId: 'mismatchedValues',
       data: {
@@ -228,7 +239,7 @@ const invalid = [
 
   // default callback params don't match values
   {
-    code: `useEuiI18n('euiFooBar.token', ({ name }) => name, { nare: 'John' })`,
+    code: `useOuiI18n('ouiFooBar.token', ({ name }) => name, { nare: 'John' })`,
     errors: [{
       messageId: 'mismatchedValues',
       data: {
@@ -240,27 +251,27 @@ const invalid = [
 
   // invalid attribute types
   {
-    code: `useEuiI18n('euiFooBar.token', ['value'])`,
+    code: `useOuiI18n('ouiFooBar.token', ['value'])`,
     errors: [{ messageId: 'invalidDefaultType', data: { type: 'ArrayExpression' } }]
   },
   {
-    code: `useEuiI18n(5, ['value'])`,
+    code: `useOuiI18n(5, ['value'])`,
     errors: [{ messageId: 'invalidDefaultType', data: { type: 'ArrayExpression' } }]
   },
   {
-    code: `useEuiI18n([5], ['value'])`,
+    code: `useOuiI18n([5], ['value'])`,
     errors: [{ messageId: 'invalidTokensType', data: { type: 'Literal' } }]
   },
   {
-    code: `useEuiI18n(['euiFooBar.token'], 'value')`,
+    code: `useOuiI18n(['ouiFooBar.token'], 'value')`,
     errors: [{ messageId: 'invalidDefaultsType', data: { type: 'Literal' } }]
   },
   {
-    code: `useEuiI18n(['euiFooBar.token'], 5)`,
+    code: `useOuiI18n(['ouiFooBar.token'], 5)`,
     errors: [{ messageId: 'invalidDefaultsType', data: { type: 'Literal' } }]
   },
   {
-    code: `useEuiI18n(['euiFooBar.token'], [5])`,
+    code: `useOuiI18n(['ouiFooBar.token'], [5])`,
     errors: [{ messageId: 'invalidDefaultsType', data: { type: 'Literal' } }]
   },
 ];

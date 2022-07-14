@@ -1,20 +1,31 @@
-@mixin euiTableCell {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@mixin ouiTableCell {
   vertical-align: middle;
-  border-top: $euiBorderThin;
-  border-bottom: $euiBorderThin;
+  border-top: $ouiBorderThin;
+  border-bottom: $ouiBorderThin;
   font-weight: inherit;
   text-align: inherit;
 }
 
-@mixin euiTableCellCheckbox {
-  @include euiTableCell;
-  width: $euiTableCellCheckboxWidth;
+@mixin ouiTableCellCheckbox {
+  @include ouiTableCell;
+  width: $ouiTableCellCheckboxWidth;
   vertical-align: middle;
 }
 
-@mixin euiTableActionsBackgroundMobile {
-  background-image: linear-gradient(to right, $euiTableActionsBorderColor 0, $euiTableActionsBorderColor 1px, transparent 1px, transparent 100%);
-  background-size: $euiTableActionsAreaWidth 100%;
+@mixin ouiTableActionsBackgroundMobile {
+  background-image: linear-gradient(to right, $ouiTableActionsBorderColor 0, $ouiTableActionsBorderColor 1px, transparent 1px, transparent 100%);
+  background-size: $ouiTableActionsAreaWidth 100%;
   background-position-x: right;
   background-repeat: no-repeat;
 }

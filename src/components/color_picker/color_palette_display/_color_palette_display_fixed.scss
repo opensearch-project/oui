@@ -1,4 +1,15 @@
-.euiColorPaletteDisplayFixed {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiColorPaletteDisplayFixed {
   // In a few screen sizes the palette display doesn't get a fully 100% width
   // it gets 1px less on width and for this reason we're adding an horizontal 1px bleed area
   &__bleedArea {
@@ -6,7 +17,7 @@
     top: 0;
     left: 0;
     display: flex;
-    height: $euiSizeS;
+    height: $ouiSizeS;
     width: calc(100% + 1px);
   }
 }

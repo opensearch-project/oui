@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,16 +17,16 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiContextMenu,
-  EuiContextMenuItem,
-  EuiContextMenuPanel,
+  OuiCode,
+  OuiContextMenu,
+  OuiContextMenuItem,
+  OuiContextMenuPanel,
 } from '../../../../src/components';
 
 import ContextMenu from './context_menu';
 const contextMenuSource = require('!!raw-loader!./context_menu');
 const contextMenuHtml = renderToHtml(ContextMenu);
-const contextMenuSnippet = `<EuiContextMenu
+const contextMenuSnippet = `<OuiContextMenu
   initialPanelId={0}
   panels={[
     {
@@ -24,7 +35,7 @@ const contextMenuSnippet = `<EuiContextMenu
       items: [
         {
           name: 'Handle an onClick',
-          icon: <EuiIcon type="search" size="m" />,
+          icon: <OuiIcon type="search" size="m" />,
           onClick: () => {
             closePopover();
           },
@@ -37,20 +48,20 @@ const contextMenuSnippet = `<EuiContextMenu
 import SinglePanel from './single_panel';
 const singlePanelSource = require('!!raw-loader!./single_panel');
 const singlePanelHtml = renderToHtml(SinglePanel);
-const singlePanelSnippet = `<EuiContextMenuPanel
+const singlePanelSnippet = `<OuiContextMenuPanel
   items={[
-    <EuiContextMenuItem
+    <OuiContextMenuItem
       key=""
       onClick={}>
       This is a context menu item
-    </EuiContextMenuItem>
+    </OuiContextMenuItem>
   ]}
 />`;
 
 import Small from './small';
 const smallSizeSource = require('!!raw-loader!./small');
 const smallSizeHtml = renderToHtml(SinglePanel);
-const smallSnippet = `<EuiContextMenuPanel
+const smallSnippet = `<OuiContextMenuPanel
   size="s"
   items={items}
 />`;
@@ -58,9 +69,9 @@ const smallSnippet = `<EuiContextMenuPanel
 import ContentPanel from './content_panel';
 const contentPanelSource = require('!!raw-loader!./content_panel');
 const contentPanelHtml = renderToHtml(ContentPanel);
-const contentPanelSnippet = `<EuiContextMenuPanel>
+const contentPanelSnippet = `<OuiContextMenuPanel>
   <!-- React element as child -->
-</EuiContextMenuPanel>
+</OuiContextMenuPanel>
 `;
 
 import ContextMenuWithContent from './context_menu_with_content';
@@ -83,16 +94,16 @@ export const ContextMenuExample = {
       ],
       text: (
         <p>
-          <strong>EuiContextMenu</strong> is a nested menu system useful for
+          <strong>OuiContextMenu</strong> is a nested menu system useful for
           navigating complicated trees. It lives within an{' '}
           <Link to="/layout/popover">
-            <strong>EuiPopover</strong>
+            <strong>OuiPopover</strong>
           </Link>{' '}
           which itself can be wrapped around any component (like a button in
           this example).
         </p>
       ),
-      props: { EuiContextMenu, EuiContextMenuPanel, EuiContextMenuItem },
+      props: { OuiContextMenu, OuiContextMenuPanel, OuiContextMenuItem },
       snippet: contextMenuSnippet,
       demo: <ContextMenu />,
     },
@@ -110,12 +121,12 @@ export const ContextMenuExample = {
       ],
       text: (
         <p>
-          <strong>EuiContextMenu</strong> supports a small and medium{' '}
-          <EuiCode>size</EuiCode>. The default size is medium,{' '}
-          <EuiCode>m</EuiCode>, and should be used for most menus and major
+          <strong>OuiContextMenu</strong> supports a small and medium{' '}
+          <OuiCode>size</OuiCode>. The default size is medium,{' '}
+          <OuiCode>m</OuiCode>, and should be used for most menus and major
           actions such as top application menus. Use the smaller size,{' '}
-          <EuiCode>s</EuiCode>, for a more compressed version containing minor
-          actions or repeated menus like in <strong>EuiTable</strong>{' '}
+          <OuiCode>s</OuiCode>, for a more compressed version containing minor
+          actions or repeated menus like in <strong>OuiTable</strong>{' '}
           pagination.
         </p>
       ),
@@ -136,7 +147,7 @@ export const ContextMenuExample = {
       ],
       text: (
         <p>
-          Use <strong>EuiContextMenuPanel</strong> for simple, non-nested
+          Use <strong>OuiContextMenuPanel</strong> for simple, non-nested
           context menus. The below pagination example has no nesting and no
           title.
         </p>
@@ -160,7 +171,7 @@ export const ContextMenuExample = {
         <p>
           If you have custom content to show instead of a list of options, you
           can pass a React element as a child to{' '}
-          <strong>EuiContextMenuPanel</strong>.
+          <strong>OuiContextMenuPanel</strong>.
         </p>
       ),
       snippet: contentPanelSnippet,
@@ -182,22 +193,22 @@ export const ContextMenuExample = {
         <div>
           <p>
             Context menu panels can be passed React elements through the{' '}
-            <EuiCode>content</EuiCode> prop instead of <EuiCode>items</EuiCode>.
+            <OuiCode>content</OuiCode> prop instead of <OuiCode>items</OuiCode>.
             The panel will display your custom content without modification.
           </p>
           <p>
             If your panel contents have different widths or you need to ensure
             that a specific context menu panel has a certain width, add{' '}
-            <EuiCode language="ts">width: [number of pixels]</EuiCode> to the
+            <OuiCode language="ts">width: [number of pixels]</OuiCode> to the
             panel tree.
           </p>
           <p>
-            You can add separator lines in the <EuiCode>items</EuiCode> prop if
+            You can add separator lines in the <OuiCode>items</OuiCode> prop if
             you define an item as{' '}
-            <EuiCode language="ts">{'{isSeparator: true}'}</EuiCode>. This will
+            <OuiCode language="ts">{'{isSeparator: true}'}</OuiCode>. This will
             pass the rest of its fields as props to a{' '}
             <Link to="/layout/horizontal-rule">
-              <strong>EuiHorizontalRule</strong>
+              <strong>OuiHorizontalRule</strong>
             </Link>{' '}
             component.
           </p>

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,39 +28,39 @@
  * under the License.
  */
 
-export { EuiTable, EuiTableProps } from './table';
-export { EuiTableBody, EuiTableBodyProps } from './table_body';
-export { EuiTableFooter } from './table_footer';
+export { OuiTable, OuiTableProps } from './table';
+export { OuiTableBody, OuiTableBodyProps } from './table_body';
+export { OuiTableFooter } from './table_footer';
 export {
-  EuiTableFooterCell,
-  EuiTableFooterCellProps,
+  OuiTableFooterCell,
+  OuiTableFooterCellProps,
 } from './table_footer_cell';
-export { EuiTableHeader, EuiTableHeaderProps } from './table_header';
+export { OuiTableHeader, OuiTableHeaderProps } from './table_header';
 export {
-  EuiTableHeaderButton,
-  EuiTableHeaderButtonProps,
+  OuiTableHeaderButton,
+  OuiTableHeaderButtonProps,
 } from './table_header_button';
 export {
-  EuiTableHeaderCell,
-  EuiTableHeaderCellProps,
+  OuiTableHeaderCell,
+  OuiTableHeaderCellProps,
 } from './table_header_cell';
 export {
-  EuiTableHeaderCellCheckbox,
-  EuiTableHeaderCellCheckboxProps,
+  OuiTableHeaderCellCheckbox,
+  OuiTableHeaderCellCheckboxProps,
 } from './table_header_cell_checkbox';
 export {
-  EuiTablePagination,
-  EuiTablePaginationProps,
+  OuiTablePagination,
+  OuiTablePaginationProps,
 } from './table_pagination';
-export { EuiTableHeaderMobile } from './mobile/table_header_mobile';
+export { OuiTableHeaderMobile } from './mobile/table_header_mobile';
 export {
-  EuiTableSortMobile,
-  EuiTableSortMobileProps,
+  OuiTableSortMobile,
+  OuiTableSortMobileProps,
 } from './mobile/table_sort_mobile';
 export {
-  EuiTableSortMobileItem,
-  EuiTableSortMobileItemProps,
+  OuiTableSortMobileItem,
+  OuiTableSortMobileItemProps,
 } from './mobile/table_sort_mobile_item';
-export { EuiTableRow, EuiTableRowProps } from './table_row';
-export { EuiTableRowCell, EuiTableRowCellProps } from './table_row_cell';
-export { EuiTableRowCellCheckbox } from './table_row_cell_checkbox';
+export { OuiTableRow, OuiTableRowProps } from './table_row';
+export { OuiTableRowCell, OuiTableRowCellProps } from './table_row_cell';
+export { OuiTableRowCellCheckbox } from './table_row_cell_checkbox';

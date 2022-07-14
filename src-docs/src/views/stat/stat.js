@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiStat, EuiFlexItem, EuiFlexGroup } from '../../../../src/components';
+import { OuiStat, OuiFlexItem, OuiFlexGroup } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiFlexGroup>
-      <EuiFlexItem>
-        <EuiStat title="7,600 mm" description="Total people" />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+    <OuiFlexGroup>
+      <OuiFlexItem>
+        <OuiStat title="7,600 mm" description="Total people" />
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </div>
 );

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +32,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiSkipLink, POSITIONS } from './skip_link';
+import { OuiSkipLink, POSITIONS } from './skip_link';
 
-describe('EuiSkipLink', () => {
+describe('OuiSkipLink', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiSkipLink destinationId="somewhere" {...requiredProps}>
+      <OuiSkipLink destinationId="somewhere" {...requiredProps}>
         Skip
-      </EuiSkipLink>
+      </OuiSkipLink>
     );
 
     expect(component).toMatchSnapshot();
@@ -37,7 +48,7 @@ describe('EuiSkipLink', () => {
   describe('props', () => {
     test('tabIndex is rendered', () => {
       const component = render(
-        <EuiSkipLink destinationId="somewhere" tabIndex={-1} />
+        <OuiSkipLink destinationId="somewhere" tabIndex={-1} />
       );
 
       expect(component).toMatchSnapshot();
@@ -45,7 +56,7 @@ describe('EuiSkipLink', () => {
 
     test('onClick is rendered', () => {
       const component = render(
-        <EuiSkipLink destinationId="somewhere" onClick={() => {}} />
+        <OuiSkipLink destinationId="somewhere" onClick={() => {}} />
       );
 
       expect(component).toMatchSnapshot();
@@ -55,7 +66,7 @@ describe('EuiSkipLink', () => {
       POSITIONS.forEach((position) => {
         test(`${position} is rendered`, () => {
           const component = render(
-            <EuiSkipLink destinationId="somewhere" position={position} />
+            <OuiSkipLink destinationId="somewhere" position={position} />
           );
 
           expect(component).toMatchSnapshot();

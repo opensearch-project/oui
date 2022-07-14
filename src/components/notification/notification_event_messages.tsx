@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,12 +29,12 @@
  */
 
 import React, { FunctionComponent, useState } from 'react';
-import { EuiAccordion } from '../accordion';
+import { OuiAccordion } from '../accordion';
 import { htmlIdGenerator } from '../../services';
-import { useEuiI18n } from '../i18n';
-import { EuiText } from '../text';
+import { useOuiI18n } from '../i18n';
+import { OuiText } from '../text';
 
-export type EuiNotificationEventMessagesProps = {
+export type OuiNotificationEventMessagesProps = {
   /*
    * An array of strings that get individually wrapped in `<p>` tags
    */
@@ -34,21 +45,21 @@ export type EuiNotificationEventMessagesProps = {
   eventName: string;
 };
 
-export const EuiNotificationEventMessages: FunctionComponent<EuiNotificationEventMessagesProps> = ({
+export const OuiNotificationEventMessages: FunctionComponent<OuiNotificationEventMessagesProps> = ({
   messages,
   eventName,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const messagesLength = messages.length;
 
-  const accordionButtonText = useEuiI18n(
-    'euiNotificationEventMessages.accordionButtonText',
+  const accordionButtonText = useOuiI18n(
+    'ouiNotificationEventMessages.accordionButtonText',
     '+ {messagesLength} more',
     { messagesLength: messagesLength - 1 }
   );
 
-  const accordionAriaLabelButtonText = useEuiI18n(
-    'euiNotificationEventMessages.accordionAriaLabelButtonText',
+  const accordionAriaLabelButtonText = useOuiI18n(
+    'ouiNotificationEventMessages.accordionAriaLabelButtonText',
     '+ {messagesLength} messages for {eventName}',
     {
       messagesLength: messagesLength - 1,
@@ -56,8 +67,8 @@ export const EuiNotificationEventMessages: FunctionComponent<EuiNotificationEven
     }
   );
 
-  const accordionHideText = useEuiI18n(
-    'euiNotificationEventMessages.accordionHideText',
+  const accordionHideText = useOuiI18n(
+    'ouiNotificationEventMessages.accordionHideText',
     'hide'
   );
 
@@ -66,35 +77,35 @@ export const EuiNotificationEventMessages: FunctionComponent<EuiNotificationEven
     : accordionButtonText;
 
   return (
-    <div className="euiNotificationEventMessages">
+    <div className="ouiNotificationEventMessages">
       {messages && messagesLength === 1 ? (
-        <EuiText size="s" color="subdued">
+        <OuiText size="s" color="subdued">
           <p>{messages}</p>
-        </EuiText>
+        </OuiText>
       ) : (
         <>
-          <EuiText size="s" color="subdued">
+          <OuiText size="s" color="subdued">
             <p>{messages[0]}</p>
-          </EuiText>
+          </OuiText>
 
-          <EuiAccordion
+          <OuiAccordion
             onToggle={setIsOpen}
             buttonProps={{ 'aria-label': accordionAriaLabelButtonText }}
-            id={htmlIdGenerator('euiNotificationEventMessagesAccordion')()}
-            className="euiNotificationEventMessages__accordion"
+            id={htmlIdGenerator('ouiNotificationEventMessagesAccordion')()}
+            className="ouiNotificationEventMessages__accordion"
             buttonContent={buttonContentText}
-            buttonClassName="euiNotificationEventMessages__accordionButton"
+            buttonClassName="ouiNotificationEventMessages__accordionButton"
             arrowDisplay="none">
-            <div className="euiNotificationEventMessages__accordionContent">
+            <div className="ouiNotificationEventMessages__accordionContent">
               {messages
                 .map((notification, index) => (
-                  <EuiText size="s" key={index} color="subdued">
+                  <OuiText size="s" key={index} color="subdued">
                     <p>{notification}</p>
-                  </EuiText>
+                  </OuiText>
                 ))
                 .slice(1)}
             </div>
-          </EuiAccordion>
+          </OuiAccordion>
         </>
       )}
     </div>

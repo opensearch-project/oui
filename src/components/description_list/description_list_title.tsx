@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,10 +32,10 @@ import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export const EuiDescriptionListTitle: FunctionComponent<
+export const OuiDescriptionListTitle: FunctionComponent<
   CommonProps & HTMLAttributes<HTMLElement>
 > = ({ children, className, ...rest }) => {
-  const classes = classNames('euiDescriptionList__title', className);
+  const classes = classNames('ouiDescriptionList__title', className);
 
   return (
     <dt className={classes} {...rest}>

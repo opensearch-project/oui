@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,19 +17,19 @@ import { pageTemplateConfig } from './playground';
 import { PageDemo } from './_page_demo';
 
 import {
-  EuiCode,
-  EuiPage,
-  EuiPageBody,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageHeader,
-  EuiPageSideBar,
-  EuiText,
-  EuiEmptyPrompt,
-  EuiPageTemplate,
-  EuiCallOut,
-  EuiSpacer,
-  EuiBottomBar,
+  OuiCode,
+  OuiPage,
+  OuiPageBody,
+  OuiPageContent,
+  OuiPageContentBody,
+  OuiPageHeader,
+  OuiPageSideBar,
+  OuiText,
+  OuiEmptyPrompt,
+  OuiPageTemplate,
+  OuiCallOut,
+  OuiSpacer,
+  OuiBottomBar,
 } from '../../../../src/components';
 
 import PageNew from './page_new';
@@ -78,16 +89,16 @@ export const PageExample = {
   title: 'Page',
   intro: (
     <>
-      <EuiText>
+      <OuiText>
         <p>
           Page layouts are modular and fit together in a precise manner, though
-          certain parts can also be added or removed as needed. EUI provides
+          certain parts can also be added or removed as needed. OUI provides
           both the indivdual page components and an over-arching template for
           easily creating some pre-defined layouts.
         </p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiCallOut
+      </OuiText>
+      <OuiSpacer />
+      <OuiCallOut
         iconType="document"
         title="The following examples showcase the both the template and custom built usages of the page components.">
         <p>
@@ -95,7 +106,7 @@ export const PageExample = {
           full screen, you can see how they would behave in a typical
           application layout.
         </p>
-      </EuiCallOut>
+      </OuiCallOut>
     </>
   ),
   sections: [
@@ -116,63 +127,63 @@ export const PageExample = {
       text: (
         <div>
           <p>
-            EUI provides a family of components using the{' '}
-            <EuiCode>EuiPage</EuiCode> prefix that work together to build
+            OUI provides a family of components using the{' '}
+            <OuiCode>OuiPage</OuiCode> prefix that work together to build
             consistent page layouts that work responsively.
           </p>
           <ul>
             <li>
-              <strong>EuiPage</strong> and <strong>EuiPageBody</strong> provide
+              <strong>OuiPage</strong> and <strong>OuiPageBody</strong> provide
               the overall wrapper with a column flex display.
             </li>
             <li>
-              <strong>EuiPageSideBar</strong> provides a way to add side
-              navigation that can be made <EuiCode>sticky</EuiCode> to scroll
+              <strong>OuiPageSideBar</strong> provides a way to add side
+              navigation that can be made <OuiCode>sticky</OuiCode> to scroll
               independent of the page content. See{' '}
               <Link to="/navigation/side-nav">
-                <strong>EuiSideNav</strong>
+                <strong>OuiSideNav</strong>
               </Link>{' '}
               for contents.
             </li>
             <li>
               <Link to="/layout/page-header">
-                <strong>EuiPageHeader</strong>
+                <strong>OuiPageHeader</strong>
               </Link>{' '}
               provides a title, description, section for actions and possible
               tabs.
             </li>
             <li>
-              <strong>EuiPageContent</strong> provides the main content
+              <strong>OuiPageContent</strong> provides the main content
               container and extends{' '}
               <Link to="/layout/panel">
-                <strong>EuiPanel</strong>
+                <strong>OuiPanel</strong>
               </Link>
               .
             </li>
             <li>
-              <strong>EuiPageContentBody</strong> wraps the content that comes
+              <strong>OuiPageContentBody</strong> wraps the content that comes
               after the page header.
             </li>
           </ul>
           <p>
-            Or you can use the provided <strong>EuiPageTemplate</strong>, which
+            Or you can use the provided <strong>OuiPageTemplate</strong>, which
             is simply a shortcut for creating the different types of page layout
             patterns described in these docs. It is somewhat opinionated, but
             still has the ability to customize most of the inner components with
-            props like <EuiCode>pageSideBarProps</EuiCode> and{' '}
-            <EuiCode>pageContentProps</EuiCode>.
+            props like <OuiCode>pageSideBarProps</OuiCode> and{' '}
+            <OuiCode>pageContentProps</OuiCode>.
           </p>
         </div>
       ),
       props: {
-        EuiPageTemplate,
-        EuiPage,
-        EuiPageBody,
-        EuiPageSideBar,
-        EuiPageHeader,
-        EuiPageContent,
-        EuiPageContentBody,
-        EuiBottomBar,
+        OuiPageTemplate,
+        OuiPage,
+        OuiPageBody,
+        OuiPageSideBar,
+        OuiPageHeader,
+        OuiPageContent,
+        OuiPageContentBody,
+        OuiBottomBar,
       },
       playground: pageTemplateConfig,
       demo: (
@@ -209,19 +220,19 @@ export const PageExample = {
           <p>
             Most content does not scale well to the full width of the window.
             You can restrict this to a typical width and center the page by
-            setting the <EuiCode>restrictWidth</EuiCode> prop to{' '}
-            <EuiCode>true</EuiCode> on <strong>EuiPageHeader</strong> and{' '}
-            <strong>EuiPageContent</strong>. You can also pass an integer to
+            setting the <OuiCode>restrictWidth</OuiCode> prop to{' '}
+            <OuiCode>true</OuiCode> on <strong>OuiPageHeader</strong> and{' '}
+            <strong>OuiPageContent</strong>. You can also pass an integer to
             this property to max out the width at a custom pixel value or a
             string with a custom measurement.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             size="s"
             title={
               <>
-                The <strong>EuiPageTemplate</strong> allows setting this
+                The <strong>OuiPageTemplate</strong> allows setting this
                 property at the top level and defaults to{' '}
-                <EuiCode>true</EuiCode>.
+                <OuiCode>true</OuiCode>.
               </>
             }
           />
@@ -265,29 +276,29 @@ export const PageExample = {
           <p>
             Adding an{' '}
             <Link to="/layout/bottom-bar">
-              <strong>EuiBottomBar</strong>
+              <strong>OuiBottomBar</strong>
             </Link>{' '}
             can be tricky to use and account for any side bars.{' '}
-            <strong>EuiPageTemplate</strong> handles this nicely by supplying a{' '}
-            <EuiCode>bottomBar</EuiCode> prop for passing the contents of your
-            bottom bar, and <EuiCode>bottomBarProps</EuiCode> that extends{' '}
-            <strong>EuiBottomBar</strong>.
+            <strong>OuiPageTemplate</strong> handles this nicely by supplying a{' '}
+            <OuiCode>bottomBar</OuiCode> prop for passing the contents of your
+            bottom bar, and <OuiCode>bottomBarProps</OuiCode> that extends{' '}
+            <strong>OuiBottomBar</strong>.
           </p>
           <p>
-            It uses the <EuiCode>sticky</EuiCode> position so that it sticks to
+            It uses the <OuiCode>sticky</OuiCode> position so that it sticks to
             the bottom of and remains within the bounds of{' '}
-            <strong>EuiPageBody</strong>. This way it will never overlap the{' '}
-            <strong>EuiPageSideBar</strong>, no matter the screen size. It also
+            <strong>OuiPageBody</strong>. This way it will never overlap the{' '}
+            <strong>OuiPageSideBar</strong>, no matter the screen size. It also
             means not needing to accommodate for the height of the bar in the
             body element.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             size="s"
             color="warning"
             title={
               <>
-                <strong>EuiPageTemplate</strong> only supports bottom bars in
-                the <EuiCode>default</EuiCode> template.
+                <strong>OuiPageTemplate</strong> only supports bottom bars in
+                the <OuiCode>default</OuiCode> template.
               </>
             }
           />
@@ -333,16 +344,16 @@ export const PageExample = {
             state, the page content can be centered vertically and horizontally.
             We recommend then using the{' '}
             <Link to="/display/empty-prompt">
-              <strong>EuiEmptyPrompt</strong>
+              <strong>OuiEmptyPrompt</strong>
             </Link>{' '}
             for the content.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             size="s"
             title={
               <>
-                This layout can be achieved in <strong>EuiPageTemplate</strong>{' '}
-                by setting <EuiCode>{'template="centeredBody"'}</EuiCode>.
+                This layout can be achieved in <strong>OuiPageTemplate</strong>{' '}
+                by setting <OuiCode>{'template="centeredBody"'}</OuiCode>.
               </>
             }
           />
@@ -368,7 +379,7 @@ export const PageExample = {
           />
         ),
       },
-      props: { EuiPageTemplate, EuiEmptyPrompt },
+      props: { OuiPageTemplate, OuiEmptyPrompt },
     },
     {
       title: 'Centered content',
@@ -389,15 +400,15 @@ export const PageExample = {
           <p>
             Similar to the previous example, you can create a centered panel to
             emphasize incompleteness even with a page header. For this setup, we
-            recommend using setting <strong>EuiPageContent</strong> to use the{' '}
-            <EuiCode>subdued</EuiCode> color as to not have nested shadows.
+            recommend using setting <strong>OuiPageContent</strong> to use the{' '}
+            <OuiCode>subdued</OuiCode> color as to not have nested shadows.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             size="s"
             title={
               <>
-                This layout can be achieved in <strong>EuiPageTemplate</strong>{' '}
-                by setting <EuiCode>{'template="centeredContent"'}</EuiCode>.
+                This layout can be achieved in <strong>OuiPageTemplate</strong>{' '}
+                by setting <OuiCode>{'template="centeredContent"'}</OuiCode>.
               </>
             }
           />
@@ -441,18 +452,18 @@ export const PageExample = {
       text: (
         <>
           <p>
-            When leaving off the <strong>EuiPageSideBar</strong>, we recommend a
+            When leaving off the <strong>OuiPageSideBar</strong>, we recommend a
             slightly different configuration by pulling the page header out of
-            the <strong>EuiPageContent</strong> and removing the shadow from{' '}
-            <strong>EuiPageContent</strong>.
+            the <strong>OuiPageContent</strong> and removing the shadow from{' '}
+            <strong>OuiPageContent</strong>.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             size="s"
             title={
               <>
                 This layout will automatically be achieved through{' '}
-                <strong>EuiPageTemplate</strong> by leaving{' '}
-                <EuiCode>pageSideBar</EuiCode> as <EuiCode>undefined</EuiCode>.
+                <strong>OuiPageTemplate</strong> by leaving{' '}
+                <OuiCode>pageSideBar</OuiCode> as <OuiCode>undefined</OuiCode>.
               </>
             }
           />
@@ -503,30 +514,30 @@ export const PageExample = {
             </Link>{' '}
             to these children. There are a few <strong>caveats</strong> to
             understand when trying to acheive full height layouts with{' '}
-            <strong>EuiPageTemplate</strong>.
+            <strong>OuiPageTemplate</strong>.
           </p>
           <ol>
             <li>
-              Using the <EuiCode>{'fullHeight'}</EuiCode> prop adds an extra
+              Using the <OuiCode>{'fullHeight'}</OuiCode> prop adds an extra
               layer of{' '}
               <Link to="/layout/flex">
-                <strong>EuiFlexGroup</strong> and <strong>EuiFlexItem</strong>
+                <strong>OuiFlexGroup</strong> and <strong>OuiFlexItem</strong>
               </Link>{' '}
               around the template children to negate the negative margins.
             </li>
             <li>
-              Using <EuiCode>{'fullHeight=true'}</EuiCode> will automatically
-              add scrolling behavior to the <strong>EuiFlexItem</strong> that
+              Using <OuiCode>{'fullHeight=true'}</OuiCode> will automatically
+              add scrolling behavior to the <strong>OuiFlexItem</strong> that
               wraps the children.
             </li>
             <li>
-              Using <EuiCode>{'fullHeight="noscroll"'}</EuiCode> removes all
+              Using <OuiCode>{'fullHeight="noscroll"'}</OuiCode> removes all
               scrolling behavior and your layouts will break if you do not
               manually add them.
             </li>
             <li>
-              When using either values for <EuiCode>{'fullHeight'}</EuiCode>,
-              there will always be a minimum height of <EuiCode>460px</EuiCode>{' '}
+              When using either values for <OuiCode>{'fullHeight'}</OuiCode>,
+              there will always be a minimum height of <OuiCode>460px</OuiCode>{' '}
               to the page contents.
             </li>
             <li>
@@ -536,14 +547,14 @@ export const PageExample = {
               on smaller screens.
             </li>
           </ol>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             iconType="accessibility"
             size="s"
             title={
               <>
-                When applying the <EuiCode>.eui-yScroll</EuiCode> class, it is
-                recommended to also apply <EuiCode>tabindex=0</EuiCode> to
+                When applying the <OuiCode>.oui-yScroll</OuiCode> class, it is
+                recommended to also apply <OuiCode>tabindex=0</OuiCode> to
                 ensure keyboard users can scroll these containers.
               </>
             }
@@ -589,7 +600,7 @@ export const PageExample = {
           is minimal or in an empty/pre-setup state, the page content can be
           centered vertically and horizontally. We recommend then using the{' '}
           <Link to="/display/empty-prompt">
-            <strong>EuiEmptyPrompt</strong>
+            <strong>OuiEmptyPrompt</strong>
           </Link>{' '}
           for the content.
         </p>
@@ -633,7 +644,7 @@ export const PageExample = {
         <p>
           Also similar to the previous examples, you can create a centered panel
           to emphasis incompleteness even with a page header. For this setup,
-          You will need to use nested <strong>EuiPageContent</strong> components
+          You will need to use nested <strong>OuiPageContent</strong> components
           in order for the centering to work.
         </p>
       ),
@@ -675,17 +686,17 @@ export const PageExample = {
       text: (
         <>
           <p>
-            You can replace the inner parts of <strong>EuiPageBody</strong> with
+            You can replace the inner parts of <strong>OuiPageBody</strong> with
             your own content, with or without a page header. This allows you to
             create dashboard style layouts with lots of panels. It is not
             recommended, however, to use this setup when you also have side bar.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             size="s"
             title={
               <>
-                This layout can be achieved in <strong>EuiPageTemplate</strong>{' '}
-                by setting <EuiCode>{'template="empty"'}</EuiCode>.
+                This layout can be achieved in <strong>OuiPageTemplate</strong>{' '}
+                by setting <OuiCode>{'template="empty"'}</OuiCode>.
               </>
             }
           />
@@ -720,11 +731,11 @@ export const PageExample = {
       ],
       text: (
         <p>
-          In previous versions of EUI, we emulated page layouts where the{' '}
-          <strong>EuiPageContent</strong> had margins all around created by
-          padding on <strong>EuiPage</strong>. This layout is still achievable
-          but not through <strong>EuiPageTemplate</strong>. You must use the{' '}
-          <strong>EuiPage</strong> components manually as seen in this example.
+          In previous versions of OUI, we emulated page layouts where the{' '}
+          <strong>OuiPageContent</strong> had margins all around created by
+          padding on <strong>OuiPage</strong>. This layout is still achievable
+          but not through <strong>OuiPageTemplate</strong>. You must use the{' '}
+          <strong>OuiPage</strong> components manually as seen in this example.
         </p>
       ),
       demo: (
@@ -733,12 +744,12 @@ export const PageExample = {
         </div>
       ),
       props: {
-        EuiPage,
-        EuiPageBody,
-        EuiPageSideBar,
-        EuiPageHeader,
-        EuiPageContent,
-        EuiPageContentBody,
+        OuiPage,
+        OuiPageBody,
+        OuiPageSideBar,
+        OuiPageHeader,
+        OuiPageContent,
+        OuiPageContentBody,
       },
     },
   ],

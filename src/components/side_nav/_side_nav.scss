@@ -1,44 +1,55 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // These mobile children are hidden in everything but mobile view.
-.euiSideNav__mobileToggle {
+.ouiSideNav__mobileToggle {
   height: auto;
-  border-bottom: $euiBorderThin;
+  border-bottom: $ouiBorderThin;
   width: 100%;
   text-align: left;
   border-radius: 0 !important; // sass-lint:disable-line no-important
-  font-size: $euiFontSizeM;
-  padding: 0 $euiSize; // This plus the inner padding is equal to paddingSize large for EuiPage
+  font-size: $ouiFontSizeM;
+  padding: 0 $ouiSize; // This plus the inner padding is equal to paddingSize large for OuiPage
 
-  .euiSideNav__mobileToggleText {
-    padding: $euiSize 0;
+  .ouiSideNav__mobileToggleText {
+    padding: $ouiSize 0;
   }
 
-  .euiSideNav__mobileToggleContent {
+  .ouiSideNav__mobileToggleContent {
     justify-content: space-between;
   }
 }
 
-.euiSideNav__heading {
-  margin-bottom: $euiSizeL;
+.ouiSideNav__heading {
+  margin-bottom: $ouiSizeL;
 }
 
 // Loop through the breakpoints and apply mobile styles only to the right className
-@each $breakpoint in $euiBreakpointKeys {
-  @include euiBreakpoint($breakpoint) {
-    .euiSideNav__contentMobile-#{$breakpoint} {
+@each $breakpoint in $ouiBreakpointKeys {
+  @include ouiBreakpoint($breakpoint) {
+    .ouiSideNav__contentMobile-#{$breakpoint} {
       overflow: hidden;
       visibility: hidden;
       opacity: 0;
       max-height: 0;
-      padding: 0 $euiSizeL;
+      padding: 0 $ouiSizeL;
 
-      .euiSideNav-isOpenMobile & {
+      .ouiSideNav-isOpenMobile & {
         visibility: visible;
         opacity: 1;
-        padding: $euiSizeL;
+        padding: $ouiSizeL;
         max-height: 5000px; /* 1 */
 
-        @include euiCanAnimate {
-          transition: all $euiAnimSpeedNormal $euiAnimSlightResistance;
+        @include ouiCanAnimate {
+          transition: all $ouiAnimSpeedNormal $ouiAnimSlightResistance;
         }
       }
     }

@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiText,
-  EuiFlexGroup,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiFlexItem,
+  OuiText,
+  OuiFlexGroup,
+  OuiPageContent,
+  OuiPageContentBody,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 const text = [
@@ -79,28 +90,28 @@ const text = [
 ];
 
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem>
-      <EuiPageContent
+  <OuiFlexGroup>
+    <OuiFlexItem>
+      <OuiPageContent
         role={null}
         className="guideDemo__textLines"
         style={{ padding: 32 }}>
-        <EuiPageContentBody>
-          <EuiText grow={false}>{text}</EuiText>
-        </EuiPageContentBody>
-      </EuiPageContent>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiPageContent
+        <OuiPageContentBody>
+          <OuiText grow={false}>{text}</OuiText>
+        </OuiPageContentBody>
+      </OuiPageContent>
+    </OuiFlexItem>
+    <OuiFlexItem>
+      <OuiPageContent
         role={null}
         className="guideDemo__textLines--s"
         style={{ padding: 32 }}>
-        <EuiPageContentBody>
-          <EuiText grow={false} size="s">
+        <OuiPageContentBody>
+          <OuiText grow={false} size="s">
             {text}
-          </EuiText>
-        </EuiPageContentBody>
-      </EuiPageContent>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+          </OuiText>
+        </OuiPageContentBody>
+      </OuiPageContent>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

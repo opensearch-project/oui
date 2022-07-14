@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,26 +32,26 @@ import { ButtonHTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 
 // note similarity to `Option` in `components/selectable/types.tsx`
-export interface EuiComboBoxOptionOption<
+export interface OuiComboBoxOptionOption<
   T = string | number | string[] | undefined
 > extends CommonProps,
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'value'> {
   isGroupLabelOption?: boolean;
   label: string;
   key?: string;
-  options?: Array<EuiComboBoxOptionOption<T>>;
+  options?: Array<OuiComboBoxOptionOption<T>>;
   value?: T;
 }
 
 export type UpdatePositionHandler = (
   listElement?: RefInstance<HTMLDivElement>
 ) => void;
-export type OptionHandler<T> = (option: EuiComboBoxOptionOption<T>) => void;
+export type OptionHandler<T> = (option: OuiComboBoxOptionOption<T>) => void;
 
 export type RefInstance<T> = T | null;
 
-export type EuiComboBoxOptionsListPosition = 'top' | 'bottom';
+export type OuiComboBoxOptionsListPosition = 'top' | 'bottom';
 
-export interface EuiComboBoxSingleSelectionShape {
+export interface OuiComboBoxSingleSelectionShape {
   asPlainText?: boolean;
 }

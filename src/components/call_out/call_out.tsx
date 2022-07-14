@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,15 +33,15 @@ import React, { forwardRef, Ref, HTMLAttributes, ReactNode } from 'react';
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
-import { IconType, EuiIcon } from '../icon';
+import { IconType, OuiIcon } from '../icon';
 
-import { EuiText } from '../text';
+import { OuiText } from '../text';
 
 type Color = 'primary' | 'success' | 'warning' | 'danger';
 type Size = 's' | 'm';
 type Heading = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p';
 
-export type EuiCallOutProps = CommonProps &
+export type OuiCallOutProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title' | 'color'> & {
     title?: ReactNode;
     iconType?: IconType;
@@ -40,21 +51,21 @@ export type EuiCallOutProps = CommonProps &
   };
 
 const colorToClassNameMap: { [color in Color]: string } = {
-  primary: 'euiCallOut--primary',
-  success: 'euiCallOut--success',
-  warning: 'euiCallOut--warning',
-  danger: 'euiCallOut--danger',
+  primary: 'ouiCallOut--primary',
+  success: 'ouiCallOut--success',
+  warning: 'ouiCallOut--warning',
+  danger: 'ouiCallOut--danger',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 export const HEADINGS: Heading[] = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p'];
 
 const sizeToClassNameMap: { [size in Size]: string } = {
-  s: 'euiCallOut--small',
+  s: 'ouiCallOut--small',
   m: '',
 };
 
-export const EuiCallOut = forwardRef<HTMLDivElement, EuiCallOutProps>(
+export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
   (
     {
       title,
@@ -69,7 +80,7 @@ export const EuiCallOut = forwardRef<HTMLDivElement, EuiCallOutProps>(
     ref: Ref<HTMLDivElement>
   ) => {
     const classes = classNames(
-      'euiCallOut',
+      'ouiCallOut',
       colorToClassNameMap[color],
       sizeToClassNameMap[size],
       className
@@ -79,8 +90,8 @@ export const EuiCallOut = forwardRef<HTMLDivElement, EuiCallOutProps>(
 
     if (iconType) {
       headerIcon = (
-        <EuiIcon
-          className="euiCallOutHeader__icon"
+        <OuiIcon
+          className="ouiCallOutHeader__icon"
           type={iconType}
           size="m"
           aria-hidden="true"
@@ -92,15 +103,15 @@ export const EuiCallOut = forwardRef<HTMLDivElement, EuiCallOutProps>(
     let optionalChildren;
     if (children && size === 's') {
       optionalChildren = (
-        <EuiText size="xs" color="default">
+        <OuiText size="xs" color="default">
           {children}
-        </EuiText>
+        </OuiText>
       );
     } else if (children) {
       optionalChildren = (
-        <EuiText size="s" color="default">
+        <OuiText size="s" color="default">
           {children}
-        </EuiText>
+        </OuiText>
       );
     }
 
@@ -109,9 +120,9 @@ export const EuiCallOut = forwardRef<HTMLDivElement, EuiCallOutProps>(
 
     if (title) {
       header = (
-        <div className="euiCallOutHeader">
+        <div className="ouiCallOutHeader">
           {headerIcon}
-          <H className="euiCallOutHeader__title">{title}</H>
+          <H className="ouiCallOutHeader__title">{title}</H>
         </div>
       );
     }
@@ -124,4 +135,4 @@ export const EuiCallOut = forwardRef<HTMLDivElement, EuiCallOutProps>(
     );
   }
 );
-EuiCallOut.displayName = 'EuiCallOut';
+OuiCallOut.displayName = 'OuiCallOut';

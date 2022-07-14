@@ -8,7 +8,7 @@
 4. Create an `_index.scss` file in this directory that import all of the new component SCSS files you created.
 5. Import the `_index.scss` file into `src/components/index.scss`.
 
-This makes your styles available to your project and to the [EUI documentation][docs].
+This makes your styles available to your project and to the [OUI documentation][docs].
 
 ## Create the React component
 

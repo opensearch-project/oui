@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiSwitch,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiDataGrid,
+  OuiSwitch,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components/';
 
 const raw_data = [];
@@ -109,16 +120,16 @@ export default () => {
   const [showFooterRow, setShowFooterRow] = useState(true);
 
   return (
-    <EuiFlexGroup direction="column">
-      <EuiFlexItem>
-        <EuiSwitch
+    <OuiFlexGroup direction="column">
+      <OuiFlexItem>
+        <OuiSwitch
           label="Show footer row"
           checked={showFooterRow}
           onChange={(e) => setShowFooterRow(e.target.checked)}
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiDataGrid
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiDataGrid
           aria-label="Data grid footer row demo"
           columns={columns}
           columnVisibility={{ visibleColumns, setVisibleColumns }}
@@ -142,7 +153,7 @@ export default () => {
             header: 'underline',
           }}
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 };

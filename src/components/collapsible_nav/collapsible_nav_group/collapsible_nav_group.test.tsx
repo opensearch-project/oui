@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiCollapsibleNavGroup, BACKGROUNDS } from './collapsible_nav_group';
+import { OuiCollapsibleNavGroup, BACKGROUNDS } from './collapsible_nav_group';
 
-describe('EuiCollapsibleNavGroup', () => {
+describe('OuiCollapsibleNavGroup', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCollapsibleNavGroup id="id" {...requiredProps} />
+      <OuiCollapsibleNavGroup id="id" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -35,7 +46,7 @@ describe('EuiCollapsibleNavGroup', () => {
   describe('props', () => {
     test('title is rendered', () => {
       const component = render(
-        <EuiCollapsibleNavGroup title="Title" id="id" />
+        <OuiCollapsibleNavGroup title="Title" id="id" />
       );
 
       expect(component).toMatchSnapshot();
@@ -43,7 +54,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('iconType is rendered', () => {
       const component = render(
-        <EuiCollapsibleNavGroup title="Title" iconType="bolt" id="id" />
+        <OuiCollapsibleNavGroup title="Title" iconType="bolt" id="id" />
       );
 
       expect(component).toMatchSnapshot();
@@ -51,7 +62,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('iconSize is rendered', () => {
       const component = render(
-        <EuiCollapsibleNavGroup
+        <OuiCollapsibleNavGroup
           title="Title"
           iconSize="s"
           iconType="bolt"
@@ -64,7 +75,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('iconProps renders data-test-subj', () => {
       const component = render(
-        <EuiCollapsibleNavGroup
+        <OuiCollapsibleNavGroup
           title="Title"
           iconProps={{
             'data-test-subj': 'DTS',
@@ -81,7 +92,7 @@ describe('EuiCollapsibleNavGroup', () => {
       BACKGROUNDS.forEach((color) => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiCollapsibleNavGroup id="id" background={color} />
+            <OuiCollapsibleNavGroup id="id" background={color} />
           );
 
           expect(component).toMatchSnapshot();
@@ -91,7 +102,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('titleElement can change the rendered element to h2', () => {
       const component = render(
-        <EuiCollapsibleNavGroup title="Title" titleElement="h2" id="id" />
+        <OuiCollapsibleNavGroup title="Title" titleElement="h2" id="id" />
       );
 
       expect(component).toMatchSnapshot();
@@ -99,7 +110,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('titleSize can be larger', () => {
       const component = render(
-        <EuiCollapsibleNavGroup id="id" titleSize="s" />
+        <OuiCollapsibleNavGroup id="id" titleSize="s" />
       );
 
       expect(component).toMatchSnapshot();
@@ -109,7 +120,7 @@ describe('EuiCollapsibleNavGroup', () => {
   describe('when isCollapsible is true', () => {
     test('will render an accordion', () => {
       const component = render(
-        <EuiCollapsibleNavGroup
+        <OuiCollapsibleNavGroup
           isCollapsible={true}
           initialIsOpen={false}
           title="Title"
@@ -122,7 +133,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('accepts accordion props', () => {
       const component = render(
-        <EuiCollapsibleNavGroup
+        <OuiCollapsibleNavGroup
           isCollapsible={true}
           initialIsOpen={false}
           title="Title"
@@ -141,7 +152,7 @@ describe('EuiCollapsibleNavGroup', () => {
     let consoleStub: jest.Mock;
 
     beforeEach(() => {
-      // We don't use jest.spyOn() here, because EUI's tests apply a global
+      // We don't use jest.spyOn() here, because OUI's tests apply a global
       // console.error() override that throws an exception. For these
       // tests, we just want to know if console.error() was called.
       console.warn = consoleStub = jest.fn();
@@ -153,7 +164,7 @@ describe('EuiCollapsibleNavGroup', () => {
 
     test('if iconType is passed without a title', () => {
       const component = render(
-        <EuiCollapsibleNavGroup iconType="bolt" id="id" />
+        <OuiCollapsibleNavGroup iconType="bolt" id="id" />
       );
 
       expect(consoleStub).toBeCalled();

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,28 +33,28 @@ import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
 
 const sizeToClassNameMap = {
-  s: 'euiLoadingSpinner--small',
-  m: 'euiLoadingSpinner--medium',
-  l: 'euiLoadingSpinner--large',
-  xl: 'euiLoadingSpinner--xLarge',
+  s: 'ouiLoadingSpinner--small',
+  m: 'ouiLoadingSpinner--medium',
+  l: 'ouiLoadingSpinner--large',
+  xl: 'ouiLoadingSpinner--xLarge',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiLoadingSpinnerSize = keyof typeof sizeToClassNameMap;
+export type OuiLoadingSpinnerSize = keyof typeof sizeToClassNameMap;
 
-export type EuiLoadingSpinnerProps = CommonProps &
+export type OuiLoadingSpinnerProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
-    size?: EuiLoadingSpinnerSize;
+    size?: OuiLoadingSpinnerSize;
   };
 
-export const EuiLoadingSpinner: FunctionComponent<EuiLoadingSpinnerProps> = ({
+export const OuiLoadingSpinner: FunctionComponent<OuiLoadingSpinnerProps> = ({
   size = 'm',
   className,
   ...rest
 }) => {
   const classes = classNames(
-    'euiLoadingSpinner',
+    'ouiLoadingSpinner',
     sizeToClassNameMap[size],
     className
   );

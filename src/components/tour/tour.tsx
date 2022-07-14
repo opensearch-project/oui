@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,25 +29,25 @@
  */
 
 import { FunctionComponent, ReactElement } from 'react';
-import { useEuiTour, EuiStatelessTourStep } from './useEuiTour';
-import { EuiTourStepProps } from './tour_step';
-import { EuiTourActions, EuiTourState } from './types';
+import { useOuiTour, OuiStatelessTourStep } from './useOuiTour';
+import { OuiTourStepProps } from './tour_step';
+import { OuiTourActions, OuiTourState } from './types';
 
-export interface EuiTourProps {
+export interface OuiTourProps {
   children: (
-    steps: EuiTourStepProps[],
-    actions: EuiTourActions,
-    state: EuiTourState
+    steps: OuiTourStepProps[],
+    actions: OuiTourActions,
+    state: OuiTourState
   ) => ReactElement;
-  steps: EuiStatelessTourStep[];
-  initialState: EuiTourState;
+  steps: OuiStatelessTourStep[];
+  initialState: OuiTourState;
 }
 
-export const EuiTour: FunctionComponent<EuiTourProps> = ({
+export const OuiTour: FunctionComponent<OuiTourProps> = ({
   children,
   steps,
   initialState,
 }) => {
-  const [stepProps, actions, state] = useEuiTour(steps, initialState);
+  const [stepProps, actions, state] = useOuiTour(steps, initialState);
   return children(stepProps, actions, state);
 };

@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import {
-  EuiBadge,
-  EuiRadioGroup,
-  EuiSpacer,
-  EuiSwitch,
-  EuiPanel,
-  EuiText,
-  EuiTitle,
+  OuiBadge,
+  OuiRadioGroup,
+  OuiSpacer,
+  OuiSwitch,
+  OuiPanel,
+  OuiText,
+  OuiTitle,
 } from '../../../../src/components';
 import { BarSeries, LineSeries, AreaSeries } from '@elastic/charts';
 import { devDependencies } from '../../../../package';
@@ -24,7 +35,7 @@ export const CHART_COMPONENTS = {
 
 export const ExternalBadge = () => {
   return (
-    <EuiBadge
+    <OuiBadge
       iconType="popout"
       iconSide="right"
       onClickAriaLabel="Go to @elastic/charts docs"
@@ -34,23 +45,23 @@ export const ExternalBadge = () => {
         )
       }>
       External library: @elastic/charts v{chartsVersion}
-    </EuiBadge>
+    </OuiBadge>
   );
 };
 
 export const ChartCard = ({ title, description, children }) => {
   return (
-    <EuiPanel>
-      <EuiTitle size="s">
+    <OuiPanel>
+      <OuiTitle size="s">
         <span>{title}</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiText size="s">
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiText size="s">
         <p>{description}</p>
-      </EuiText>
-      <EuiSpacer size="s" />
+      </OuiText>
+      <OuiSpacer size="s" />
       {children}
-    </EuiPanel>
+    </OuiPanel>
   );
 };
 
@@ -94,7 +105,7 @@ export const ChartTypeCard = (props) => {
     <ChartCard
       title="Chart types"
       description={`${props.type} charts can be displayed as any x/y series type.`}>
-      <EuiRadioGroup
+      <OuiRadioGroup
         compressed
         options={toggleButtonsIcons}
         idSelected={toggleIdSelected}
@@ -137,13 +148,13 @@ export const MultiChartCard = (props) => {
       textAlign="left"
       title="Single vs multiple series"
       description="Legends are only necessary when there are multiple series. Stacked series indicates accumulation but can hide subtle differences. Do not stack line charts.">
-      <EuiSwitch
+      <OuiSwitch
         label="Show multi-series"
         checked={multi}
         onChange={onMultiChange}
       />
-      <EuiSpacer size="s" />
-      <EuiSwitch
+      <OuiSpacer size="s" />
+      <OuiSwitch
         label="Stacked"
         checked={stacked}
         onChange={onStackedChange}

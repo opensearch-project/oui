@@ -1,6 +1,17 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 @mixin makeLineProgress {
   height: 2px;
-  background-color: $euiColorPrimary;
+  background-color: $ouiColorPrimary;
 }
 
 /**
@@ -10,26 +21,26 @@
  *    e.g. due to some of their titles wrapping to multiple lines
  */
 
-.euiStepsHorizontal {
+.ouiStepsHorizontal {
   display: flex;
   align-items: stretch;
-  background: transparentize($euiColorLightestShade, .5);
+  background: transparentize($ouiColorLightestShade, .5);
 }
 
-.euiStepHorizontal__item {
+.ouiStepHorizontal__item {
   flex-grow: 1; /* 2 */
   flex-basis: 0%; /* 2 */
 
   // Remove the respective lines if the first or last child
-  &:first-of-type > .euiStepHorizontal::before,
-  &:last-of-type > .euiStepHorizontal::after {
+  &:first-of-type > .ouiStepHorizontal::before,
+  &:last-of-type > .ouiStepHorizontal::after {
     display: none;
   }
 }
 
 // Button containing item
-.euiStepHorizontal {
-  padding: $euiSizeL $euiSize $euiSize;
+.ouiStepHorizontal {
+  padding: $ouiSizeL $ouiSize $ouiSize;
   display: flex; /* 3 */
   flex-direction: column; /* 3 */
   align-items: center; /* 3 */
@@ -39,23 +50,23 @@
   width: 100%;
 
   // focus & hover state
-  &:focus:not(.euiStepHorizontal-isDisabled),
-  &:hover:not(.euiStepHorizontal-isDisabled) {
-    .euiStepHorizontal__title {
+  &:focus:not(.ouiStepHorizontal-isDisabled),
+  &:hover:not(.ouiStepHorizontal-isDisabled) {
+    .ouiStepHorizontal__title {
       text-decoration: underline;
     }
   }
 
-  &:focus:not(.euiStepHorizontal-isDisabled) {
+  &:focus:not(.ouiStepHorizontal-isDisabled) {
     outline: none;
 
-    .euiStepHorizontal__number {
-      @include euiFocusRing(large);
+    .ouiStepHorizontal__number {
+      @include ouiFocusRing(large);
     }
   }
 
   // disabled state
-  &.euiStepHorizontal-isDisabled {
+  &.ouiStepHorizontal-isDisabled {
     cursor: not-allowed;
   }
 
@@ -64,11 +75,11 @@
   &::after {
     content: '';
     position: absolute;
-    width: calc(50% - #{$euiStepNumberSize / 2});
+    width: calc(50% - #{$ouiStepNumberSize / 2});
     height: 1px;
-    top: $euiSizeL + ($euiStepNumberSize / 2);
-    background-color: $euiColorLightShade;
-    z-index: $euiZLevel0; /* 1 */
+    top: $ouiSizeL + ($ouiStepNumberSize / 2);
+    background-color: $ouiColorLightShade;
+    z-index: $ouiZLevel0; /* 1 */
   }
 
   &::before {
@@ -80,25 +91,25 @@
   }
 }
 
-.euiStepHorizontal__number {
+.ouiStepHorizontal__number {
   position: relative; /* 1 */
-  z-index: $euiZLevel0 + 1; /* 1 */
-  transition: all $euiAnimSpeedFast ease-in-out;
+  z-index: $ouiZLevel0 + 1; /* 1 */
+  transition: all $ouiAnimSpeedFast ease-in-out;
 }
 
-.euiStepHorizontal__title {
-  @include euiTitle('xs');
-  margin-top: $euiSizeS;
-  font-weight: $euiFontWeightRegular;
+.ouiStepHorizontal__title {
+  @include ouiTitle('xs');
+  margin-top: $ouiSizeS;
+  font-weight: $ouiFontWeightRegular;
   text-align: center;
 
-  .euiStepHorizontal-isDisabled & {
-    color: $euiColorDarkShade;
+  .ouiStepHorizontal-isDisabled & {
+    color: $ouiColorDarkShade;
   }
 }
 
 // Complete state
-.euiStepHorizontal-isComplete {
+.ouiStepHorizontal-isComplete {
   &::before,
   &::after {
     @include makeLineProgress;
@@ -106,9 +117,9 @@
 }
 
 // Selected state
-.euiStepHorizontal-isSelected {
-  .euiStepHorizontal__number:not([class*='danger']):not([class*='warning']):not([class*='loading']) {
-    @include euiSlightShadow(desaturate($euiColorPrimary, 20%));
+.ouiStepHorizontal-isSelected {
+  .ouiStepHorizontal__number:not([class*='danger']):not([class*='warning']):not([class*='loading']) {
+    @include ouiSlightShadow(desaturate($ouiColorPrimary, 20%));
   }
 
   &::before {
@@ -117,19 +128,19 @@
 }
 
 // RESPONSIVE
-@include euiBreakpoint('xs', 's') {
-  .euiStepHorizontal {
+@include ouiBreakpoint('xs', 's') {
+  .ouiStepHorizontal {
     // reduce top padding and shift lines
-    padding-top: $euiSize;
+    padding-top: $ouiSize;
 
     &::before,
     &::after {
-      top: $euiSize + $euiStepNumberSize / 2;
+      top: $ouiSize + $ouiStepNumberSize / 2;
     }
   }
 
   // hide titles
-  .euiStepHorizontal__title {
+  .ouiStepHorizontal__title {
     display: none;
   }
 }

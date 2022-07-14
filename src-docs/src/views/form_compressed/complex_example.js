@@ -1,26 +1,37 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButtonGroup,
-  EuiButtonIcon,
-  EuiColorPicker,
-  EuiColorPickerSwatch,
-  EuiDualRange,
-  EuiFieldNumber,
-  EuiFieldText,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFormLabel,
-  EuiFormRow,
-  EuiHorizontalRule,
-  EuiIcon,
-  EuiPanel,
-  EuiRange,
-  EuiScreenReaderOnly,
-  EuiSelect,
-  EuiSpacer,
-  EuiSuperSelect,
-  EuiToolTip,
+  OuiButtonGroup,
+  OuiButtonIcon,
+  OuiColorPicker,
+  OuiColorPickerSwatch,
+  OuiDualRange,
+  OuiFieldNumber,
+  OuiFieldText,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFormLabel,
+  OuiFormRow,
+  OuiHorizontalRule,
+  OuiIcon,
+  OuiPanel,
+  OuiRange,
+  OuiScreenReaderOnly,
+  OuiSelect,
+  OuiSpacer,
+  OuiSuperSelect,
+  OuiToolTip,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -71,7 +82,7 @@ export default () => {
   ];
 
   const selectTooltipContent =
-    'Otherwise use an EuiToolTip around the label of the form row.';
+    'Otherwise use an OuiToolTip around the label of the form row.';
 
   const [opacityValue, setOpacityValue] = useState('20');
   const [color, setColor] = useState('#D36086');
@@ -120,13 +131,13 @@ export default () => {
   };
 
   return (
-    <EuiPanel style={{ maxWidth: 432 }}>
-      <EuiFormRow label="Name" display="columnCompressed">
-        <EuiFieldText prepend="Label" placeholder="Input" compressed />
-      </EuiFormRow>
+    <OuiPanel style={{ maxWidth: 432 }}>
+      <OuiFormRow label="Name" display="columnCompressed">
+        <OuiFieldText prepend="Label" placeholder="Input" compressed />
+      </OuiFormRow>
 
-      <EuiFormRow label="Visibility" display="columnCompressed">
-        <EuiDualRange
+      <OuiFormRow label="Visibility" display="columnCompressed">
+        <OuiDualRange
           value={dualValue}
           onChange={onDualChange}
           min={0}
@@ -134,13 +145,13 @@ export default () => {
           compressed
           showInput="inputWithPopover"
           showLabels
-          aria-label="EuiDualRange within compressed form"
+          aria-label="OuiDualRange within compressed form"
           prepend="Zoom levels"
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Opacity" display="columnCompressed">
-        <EuiRange
+      <OuiFormRow label="Opacity" display="columnCompressed">
+        <OuiRange
           min={0}
           max={100}
           name="range"
@@ -151,23 +162,23 @@ export default () => {
           onChange={onRangeChange}
           append="%"
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer size="s" />
+      <OuiSpacer size="s" />
 
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <span id="docsExampleSelectTooltipContent">{selectTooltipContent}</span>
-      </EuiScreenReaderOnly>
-      <EuiFormRow
+      </OuiScreenReaderOnly>
+      <OuiFormRow
         label={
-          <EuiToolTip content={selectTooltipContent}>
+          <OuiToolTip content={selectTooltipContent}>
             <span>
-              Label <EuiIcon type="questionInCircle" color="subdued" />
+              Label <OuiIcon type="questionInCircle" color="subdued" />
             </span>
-          </EuiToolTip>
+          </OuiToolTip>
         }
         display="columnCompressed">
-        <EuiSelect
+        <OuiSelect
           options={[
             { value: 'option_one', text: 'Option one' },
             { value: 'option_two', text: 'Option two' },
@@ -176,10 +187,10 @@ export default () => {
           compressed
           aria-describedby="docsExampleSelectTooltipContent"
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Granularity" display="columnCompressed">
-        <EuiButtonGroup
+      <OuiFormRow label="Granularity" display="columnCompressed">
+        <OuiButtonGroup
           legend="Granulariy of zoom levels"
           options={granularityToggleButtons}
           idSelected={granularityToggleButtonsIdSelected}
@@ -187,14 +198,14 @@ export default () => {
           buttonSize="compressed"
           isFullWidth
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="Fill" display="columnCompressed">
-        <EuiColorPicker onChange={onColorChange} color={color} compressed />
-      </EuiFormRow>
+      <OuiFormRow label="Fill" display="columnCompressed">
+        <OuiColorPicker onChange={onColorChange} color={color} compressed />
+      </OuiFormRow>
 
-      <EuiFormRow label="Select one" display="columnCompressed">
-        <EuiSuperSelect
+      <OuiFormRow label="Select one" display="columnCompressed">
+        <OuiSuperSelect
           options={[
             { value: 'option_one', inputDisplay: 'Option one' },
             { value: 'option_two', inputDisplay: 'Option two' },
@@ -202,16 +213,16 @@ export default () => {
           ]}
           compressed
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="With button" display="columnCompressed">
-        <EuiFieldNumber
+      <OuiFormRow label="With button" display="columnCompressed">
+        <OuiFieldNumber
           min={1}
           max={100}
           defaultValue={10}
           compressed
           prepend={[
-            <EuiButtonIcon
+            <OuiButtonIcon
               iconType="magnet"
               aria-label="Dynamic toggle"
               title="Make dynamic"
@@ -220,18 +231,18 @@ export default () => {
           ]}
           append="px"
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiHorizontalRule />
+      <OuiHorizontalRule />
 
-      <EuiFormRow label="Container" display="columnCompressed">
-        <EuiFlexGroup gutterSize="s" responsive={false} wrap>
-          <EuiFlexItem grow={false}>
-            <EuiColorPicker
+      <OuiFormRow label="Container" display="columnCompressed">
+        <OuiFlexGroup gutterSize="s" responsive={false} wrap>
+          <OuiFlexItem grow={false}>
+            <OuiColorPicker
               onChange={onColorChange}
               color={color}
               button={
-                <EuiColorPickerSwatch
+                <OuiColorPickerSwatch
                   color={color}
                   aria-label="Container color"
                   title="Container color"
@@ -239,9 +250,9 @@ export default () => {
                 />
               }
             />
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiRange
+          </OuiFlexItem>
+          <OuiFlexItem>
+            <OuiRange
               showInput="inputWithPopover"
               min={0}
               max={240}
@@ -252,15 +263,15 @@ export default () => {
               prepend="Padding"
               aria-label="Container padding in pixels"
             />
-          </EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiFormRow>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+      </OuiFormRow>
 
-      <EuiSpacer size="s" />
+      <OuiSpacer size="s" />
 
-      <EuiFormRow label="Label" display="columnCompressed">
+      <OuiFormRow label="Label" display="columnCompressed">
         <div>
-          <EuiSelect
+          <OuiSelect
             id="docsExampleLabelFont"
             options={[
               { value: 'inter', text: 'Inter UI' },
@@ -271,14 +282,14 @@ export default () => {
             prepend="Font"
             aria-label="Label font family"
           />
-          <EuiSpacer size="xs" />
-          <EuiFlexGroup
+          <OuiSpacer size="xs" />
+          <OuiFlexGroup
             gutterSize="s"
             responsive={false}
             wrap
             justifyContent="flexEnd">
-            <EuiFlexItem>
-              <EuiRange
+            <OuiFlexItem>
+              <OuiRange
                 showInput="inputWithPopover"
                 min={7}
                 max={140}
@@ -288,11 +299,11 @@ export default () => {
                 append="px"
                 aria-label="Label font size in pixels"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButtonGroup
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiButtonGroup
                 legend="Label text style"
-                className="eui-displayInlineBlock"
+                className="oui-displayInlineBlock"
                 options={typeStyleToggleButtons}
                 idToSelectedMap={typeStyleToggleButtonsIdToSelectedMap}
                 onChange={onTypeStyleChange}
@@ -300,18 +311,18 @@ export default () => {
                 isIconOnly
                 buttonSize="compressed"
               />
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         </div>
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer size="s" />
+      <OuiSpacer size="s" />
 
-      <EuiFormLabel htmlFor="docsExampleBorderSize">Border</EuiFormLabel>
-      <EuiSpacer size="xs" />
-      <EuiFlexGroup gutterSize="s" responsive={false} wrap>
-        <EuiFlexItem style={{ flexBasis: 72 }}>
-          <EuiRange
+      <OuiFormLabel htmlFor="docsExampleBorderSize">Border</OuiFormLabel>
+      <OuiSpacer size="xs" />
+      <OuiFlexGroup gutterSize="s" responsive={false} wrap>
+        <OuiFlexItem style={{ flexBasis: 72 }}>
+          <OuiRange
             id="docsExampleBorderSize"
             showInput="inputWithPopover"
             min={0}
@@ -321,9 +332,9 @@ export default () => {
             compressed
             append="px"
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={4} style={{ minWidth: 160 }}>
-          <EuiSelect
+        </OuiFlexItem>
+        <OuiFlexItem grow={4} style={{ minWidth: 160 }}>
+          <OuiSelect
             id="docsExampleBorderStyle"
             options={[
               { value: 'dashed', text: 'Dashed' },
@@ -334,13 +345,13 @@ export default () => {
             prepend="Style"
             aria-label="Border style"
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiColorPicker
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiColorPicker
             onChange={onColorChange}
             color={color}
             button={
-              <EuiColorPickerSwatch
+              <OuiColorPickerSwatch
                 color={color}
                 aria-label="Border color"
                 title="Border color"
@@ -348,8 +359,8 @@ export default () => {
               />
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiPanel>
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiPanel>
   );
 };

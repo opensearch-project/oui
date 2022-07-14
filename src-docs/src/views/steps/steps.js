@@ -1,27 +1,38 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiCode,
-  EuiSpacer,
-  EuiSteps,
-  EuiText,
+  OuiCode,
+  OuiSpacer,
+  OuiSteps,
+  OuiText,
 } from '../../../../src/components';
 
 const firstSetOfSteps = [
   {
     title: 'Step 1',
     children: (
-      <EuiText>
+      <OuiText>
         <p>Do this first</p>
-      </EuiText>
+      </OuiText>
     ),
   },
   {
     title: 'Step 2',
     children: (
-      <EuiText>
+      <OuiText>
         <p>Then this</p>
-      </EuiText>
+      </OuiText>
     ),
   },
 ];
@@ -30,35 +41,35 @@ const nextSetOfSteps = [
   {
     title: 'Good step',
     children: (
-      <EuiText>
+      <OuiText>
         <p>Do this first</p>
-      </EuiText>
+      </OuiText>
     ),
   },
   {
     title: 'Better step',
     children: (
-      <EuiText>
+      <OuiText>
         <p>Then this</p>
-      </EuiText>
+      </OuiText>
     ),
   },
 ];
 
 export default () => (
   <div>
-    <EuiSteps steps={firstSetOfSteps} />
+    <OuiSteps steps={firstSetOfSteps} />
 
-    <EuiSpacer size="m" />
-    <EuiText>
+    <OuiSpacer size="m" />
+    <OuiText>
       <p>
-        Set <EuiCode>firstStepNumber</EuiCode> to continue step numbering after
+        Set <OuiCode>firstStepNumber</OuiCode> to continue step numbering after
         any type of break in the content
       </p>
-    </EuiText>
-    <EuiSpacer size="m" />
+    </OuiText>
+    <OuiSpacer size="m" />
 
-    <EuiSteps
+    <OuiSteps
       firstStepNumber={firstSetOfSteps.length + 1}
       steps={nextSetOfSteps}
     />

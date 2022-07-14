@@ -1,13 +1,24 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /*
  * 1. Fix for Safari to ensure that it renders like a normal text input
  *    and doesn't add extra spacing around text
  * 2. Remove the X clear button from input type search in Chrome and IE
 */
 
-.euiFieldSearch {
-  @include euiFormControlStyle;
-  @include euiFormControlWithIcon($isIconOptional: false);
-  @include euiFormControlIsLoading;
+.ouiFieldSearch {
+  @include ouiFormControlStyle;
+  @include ouiFormControlWithIcon($isIconOptional: false);
+  @include ouiFormControlIsLoading;
 
   // sass-lint:disable-block no-vendor-prefixes
   -webkit-appearance: textfield; /* 1 */
@@ -21,31 +32,31 @@
     display: none; /* 2 */
   }
 
-  &.euiFieldSearch-isClearable {
-    @include euiFormControlLayoutPadding(1)
+  &.ouiFieldSearch-isClearable {
+    @include ouiFormControlLayoutPadding(1)
   }
 
-  &.euiFieldSearch-isLoading {
-    @include euiFormControlLayoutPadding(1);
+  &.ouiFieldSearch-isLoading {
+    @include ouiFormControlLayoutPadding(1);
   }
 
-  &.euiFieldSearch-isLoading.euiFieldSearch-isClearable {
-    @include euiFormControlLayoutPadding(2);
+  &.ouiFieldSearch-isLoading.ouiFieldSearch-isClearable {
+    @include ouiFormControlLayoutPadding(2);
   }
 
-  &.euiFieldSearch--compressed {
-    @include euiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: true);
+  &.ouiFieldSearch--compressed {
+    @include ouiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: true);
 
-    &.euiFieldSearch-isClearable {
-      @include euiFormControlLayoutPadding(1, $compressed: true);
+    &.ouiFieldSearch-isClearable {
+      @include ouiFormControlLayoutPadding(1, $compressed: true);
     }
 
-    &.euiFieldSearch-isLoading {
-      @include euiFormControlLayoutPadding(1, $compressed: true);
+    &.ouiFieldSearch-isLoading {
+      @include ouiFormControlLayoutPadding(1, $compressed: true);
     }
 
-    &.euiFieldSearch-isLoading.euiFieldSearch-isClearable {
-      @include euiFormControlLayoutPadding(2, $compressed: true);
+    &.ouiFieldSearch-isLoading.ouiFieldSearch-isClearable {
+      @include ouiFormControlLayoutPadding(2, $compressed: true);
     }
   }
 }

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,35 +33,35 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
 const titleSizeToClassNameMap = {
-  xxxs: 'euiTitle--xxxsmall',
-  xxs: 'euiTitle--xxsmall',
-  xs: 'euiTitle--xsmall',
-  s: 'euiTitle--small',
-  m: 'euiTitle--medium',
-  l: 'euiTitle--large',
+  xxxs: 'ouiTitle--xxxsmall',
+  xxs: 'ouiTitle--xxsmall',
+  xs: 'ouiTitle--xsmall',
+  s: 'ouiTitle--small',
+  m: 'ouiTitle--medium',
+  l: 'ouiTitle--large',
 };
 
 export const TITLE_SIZES = keysOf(titleSizeToClassNameMap);
-export type EuiTitleSize = keyof typeof titleSizeToClassNameMap;
+export type OuiTitleSize = keyof typeof titleSizeToClassNameMap;
 
 const textTransformToClassNameMap = {
-  uppercase: 'euiTitle--uppercase',
+  uppercase: 'ouiTitle--uppercase',
 };
 
 export const TEXT_TRANSFORM = keysOf(textTransformToClassNameMap);
-export type EuiTitleTextTransform = keyof typeof textTransformToClassNameMap;
+export type OuiTitleTextTransform = keyof typeof textTransformToClassNameMap;
 
-export type EuiTitleProps = CommonProps & {
+export type OuiTitleProps = CommonProps & {
   /**
    * ReactElement to render as this component's content
    */
   children: ReactElement<any>;
-  size?: EuiTitleSize;
-  textTransform?: EuiTitleTextTransform;
+  size?: OuiTitleSize;
+  textTransform?: OuiTitleTextTransform;
   id?: string;
 };
 
-export const EuiTitle: FunctionComponent<EuiTitleProps> = ({
+export const OuiTitle: FunctionComponent<OuiTitleProps> = ({
   size = 'm',
   children,
   className,
@@ -58,7 +69,7 @@ export const EuiTitle: FunctionComponent<EuiTitleProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiTitle',
+    'ouiTitle',
     titleSizeToClassNameMap[size],
     textTransform ? textTransformToClassNameMap[textTransform] : undefined,
     className,

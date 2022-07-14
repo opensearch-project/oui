@@ -1,5 +1,16 @@
-// Extends <EuiFlyout>
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-.euiCollapsibleNav:not([class*='push']) {
-  z-index: $euiZNavigation !important; // sass-lint:disable-line no-important
+// Extends <OuiFlyout>
+
+.ouiCollapsibleNav:not([class*='push']) {
+  z-index: $ouiZNavigation !important; // sass-lint:disable-line no-important
 }

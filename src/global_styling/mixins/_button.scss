@@ -1,11 +1,22 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Provides a solid reset and base for handling sizing layout
 // Does not include any visual styles
-@mixin euiButtonBase {
+@mixin ouiButtonBase {
   display: inline-block;
   appearance: none;
   cursor: pointer;
-  height: $euiButtonHeight;
-  line-height: $euiButtonHeight; // prevents descenders from getting cut off
+  height: $ouiButtonHeight;
+  line-height: $ouiButtonHeight; // prevents descenders from getting cut off
   text-align: center;
   white-space: nowrap;
   max-width: 100%;
@@ -13,16 +24,16 @@
 }
 
 // Adds the focus (and hover) animation for translating up 1px
-@mixin euiButtonFocus {
-  @include euiCanAnimate {
-    transition: transform $euiAnimSpeedNormal ease-in-out, background $euiAnimSpeedNormal ease-in-out;
+@mixin ouiButtonFocus {
+  @include ouiCanAnimate {
+    transition: transform $ouiAnimSpeedNormal ease-in-out, background $ouiAnimSpeedNormal ease-in-out;
 
     &:hover:not([class*='isDisabled']) {
       transform: translateY(-1px);
     }
 
     &:focus {
-      animation: euiButtonActive $euiAnimSpeedNormal $euiAnimSlightBounce;
+      animation: ouiButtonActive $ouiAnimSpeedNormal $ouiAnimSlightBounce;
     }
 
     &:active:not([class*='isDisabled']) {
@@ -33,17 +44,17 @@
 
 // All of the button base styles including the base, focus, font, and initial styles
 // Does not include individual alterations like color or sizes
-@mixin euiButton {
-  @include euiButtonBase;
-  @include euiFont;
-  @include euiFontSize;
+@mixin ouiButton {
+  @include ouiButtonBase;
+  @include ouiFont;
+  @include ouiFontSize;
 
   text-decoration: none;
   border: solid 1px transparent;
 
   // sass-lint:disable mixins-before-declarations
   // focus states should come after all default styles
-  @include euiButtonFocus;
+  @include ouiButtonFocus;
 
   &:hover:not([class*='isDisabled']),
   &:focus {
@@ -60,13 +71,13 @@
 // </button>
 // 1. Apply margin to all but last item in the flex.
 // 2. Margin gets flipped because of the row-reverse.
-@mixin euiButtonContent($isReverse: false) {
+@mixin ouiButtonContent($isReverse: false) {
   height: 100%;
   width: 100%;
   vertical-align: middle;
 
-  .euiButtonContent__icon,
-  .euiButtonContent__spinner {
+  .ouiButtonContent__icon,
+  .ouiButtonContent__spinner {
     flex-shrink: 0; // Ensures the icons/spinner don't scale down below their intended size
   }
 
@@ -75,7 +86,7 @@
 
     > * + * {
       margin-inline-start: 0; // 1, 2
-      margin-inline-end: $euiSizeS; // 1, 2
+      margin-inline-end: $ouiSizeS; // 1, 2
     }
   } @else {
     display: flex;
@@ -83,21 +94,21 @@
     align-items: center;
 
     > * + * {
-      margin-inline-start: $euiSizeS; // 1
+      margin-inline-start: $ouiSizeS; // 1
     }
   }
 }
 
-@mixin euiButtonContentDisabled {
+@mixin ouiButtonContentDisabled {
   pointer-events: auto;
   cursor: not-allowed;
 
-  .euiButtonContent__icon {
+  .ouiButtonContent__icon {
     fill: currentColor;
   }
 
-  .euiButtonContent__spinner {
-    border-color: euiLoadingSpinnerBorderColors(currentColor);
+  .ouiButtonContent__spinner {
+    border-color: ouiLoadingSpinnerBorderColors(currentColor);
   }
 }
 

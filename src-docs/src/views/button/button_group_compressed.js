@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiButtonGroup,
-  EuiSpacer,
-  EuiTitle,
+  OuiButtonGroup,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -80,15 +91,15 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h3>
           Compressed groups should always be fullWidth so they line up nicely in
           their small container.
         </h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
+      </OuiTitle>
+      <OuiSpacer size="s" />
       <div style={{ maxWidth: 300 }}>
-        <EuiButtonGroup
+        <OuiButtonGroup
           name="coarsness"
           legend="This is a basic group"
           options={toggleButtonsCompressed}
@@ -97,14 +108,14 @@ export default () => {
           buttonSize="compressed"
           isFullWidth
         />
-        <EuiSpacer />
-        <EuiTitle size="xxxs">
+        <OuiSpacer />
+        <OuiTitle size="xxxs">
           <h3>Unless they are icon only</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiButtonGroup
+        </OuiTitle>
+        <OuiSpacer size="s" />
+        <OuiButtonGroup
           legend="Text style"
-          className="eui-displayInlineBlock"
+          className="oui-displayInlineBlock"
           options={toggleButtonsIconsMulti}
           idToSelectedMap={toggleIconIdToSelectedMapIcon}
           onChange={(id) => onChangeIconsMultiIcons(id)}

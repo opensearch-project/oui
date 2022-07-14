@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,12 +35,12 @@ import moment, { Moment, MomentInput } from 'moment';
 
 const utc = moment.utc;
 
-const GRANULARITY_KEY = '__eui_granularity';
-const FORMAT_KEY = '__eui_format';
+const GRANULARITY_KEY = '__oui_granularity';
+const FORMAT_KEY = '__oui_format';
 
-export interface EuiMoment extends Moment {
-  __eui_granularity?: GranularityType;
-  __eui_format?: string;
+export interface OuiMoment extends Moment {
+  __oui_granularity?: GranularityType;
+  __oui_format?: string;
 }
 
 export interface GranularityType {
@@ -84,7 +95,7 @@ export const Granularity: GranularitiesType = Object.freeze({
 });
 
 const parseTime = (value: string) => {
-  const parsed: EuiMoment = utc(
+  const parsed: OuiMoment = utc(
     value,
     ['HH:mm', 'H:mm', 'H:mm', 'h:mm a', 'h:mm A', 'hh:mm a', 'hh:mm A'],
     true
@@ -96,7 +107,7 @@ const parseTime = (value: string) => {
 };
 
 const parseDay = (value: string) => {
-  let parsed: EuiMoment;
+  let parsed: OuiMoment;
 
   switch (value.toLowerCase()) {
     case 'today':
@@ -152,7 +163,7 @@ const parseDay = (value: string) => {
 };
 
 const parseWeek = (value: string) => {
-  let parsed: EuiMoment;
+  let parsed: OuiMoment;
   switch (value.toLowerCase()) {
     case 'this week':
       parsed = utc();
@@ -181,7 +192,7 @@ const parseWeek = (value: string) => {
 };
 
 const parseMonth = (value: string) => {
-  let parsed: EuiMoment;
+  let parsed: OuiMoment;
   switch (value.toLowerCase()) {
     case 'this month':
       parsed = utc();
@@ -222,7 +233,7 @@ const parseMonth = (value: string) => {
 };
 
 const parseYear = (value: string) => {
-  let parsed: EuiMoment;
+  let parsed: OuiMoment;
   switch (value.toLowerCase()) {
     case 'this year':
       parsed = utc().startOf('year');
@@ -250,7 +261,7 @@ const parseYear = (value: string) => {
 };
 
 const parseDefault = (value: string) => {
-  let parsed: EuiMoment = utc(
+  let parsed: OuiMoment = utc(
     value,
     [
       moment.ISO_8601,
@@ -343,7 +354,7 @@ export const printIso8601 = (value: MomentInput) => {
   return utc(value).format(moment.defaultFormatUtc);
 };
 
-export const dateGranularity = (parsedDate: EuiMoment) => {
+export const dateGranularity = (parsedDate: OuiMoment) => {
   return parsedDate[GRANULARITY_KEY]!;
 };
 
@@ -362,15 +373,15 @@ export const dateFormat = Object.freeze({
     return parsed;
   },
 
-  print(date: EuiMoment | MomentInput, defaultGranularity = undefined) {
+  print(date: OuiMoment | MomentInput, defaultGranularity = undefined) {
     date = moment.isMoment(date) ? date : utc(date);
-    const euiDate: EuiMoment = date as EuiMoment;
+    const ouiDate: OuiMoment = date as OuiMoment;
     const now = utc();
-    const format = euiDate[FORMAT_KEY];
+    const format = ouiDate[FORMAT_KEY];
     if (!format) {
       return date.format(dateFormatAliases.iso8601);
     }
-    const granularity = euiDate[GRANULARITY_KEY] || defaultGranularity;
+    const granularity = ouiDate[GRANULARITY_KEY] || defaultGranularity;
     switch (granularity) {
       case Granularity.DAY:
         return printDay(now, date, format);

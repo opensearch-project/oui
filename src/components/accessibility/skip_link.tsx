@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,14 +30,14 @@
 
 import React, { FunctionComponent, Ref } from 'react';
 import classNames from 'classnames';
-import { EuiButton, EuiButtonProps } from '../button/button';
-import { EuiScreenReaderOnly } from '../accessibility/screen_reader';
+import { OuiButton, OuiButtonProps } from '../button/button';
+import { OuiScreenReaderOnly } from '../accessibility/screen_reader';
 import { PropsForAnchor, PropsForButton, ExclusiveUnion } from '../common';
 
 type Positions = 'static' | 'fixed' | 'absolute';
 export const POSITIONS = ['static', 'fixed', 'absolute'] as Positions[];
 
-interface EuiSkipLinkInterface extends EuiButtonProps {
+interface OuiSkipLinkInterface extends OuiButtonProps {
   /**
    * Change the display position of the element when focused.
    * If 'fixed', the link will be fixed to the top left of the viewport
@@ -44,22 +55,22 @@ interface EuiSkipLinkInterface extends EuiButtonProps {
 }
 
 type propsForAnchor = PropsForAnchor<
-  EuiSkipLinkInterface,
+  OuiSkipLinkInterface,
   {
     buttonRef?: Ref<HTMLAnchorElement>;
   }
 >;
 
 type propsForButton = PropsForButton<
-  EuiSkipLinkInterface,
+  OuiSkipLinkInterface,
   {
     buttonRef?: Ref<HTMLButtonElement>;
   }
 >;
 
-export type EuiSkipLinkProps = ExclusiveUnion<propsForAnchor, propsForButton>;
+export type OuiSkipLinkProps = ExclusiveUnion<propsForAnchor, propsForButton>;
 
-export const EuiSkipLink: FunctionComponent<EuiSkipLinkProps> = ({
+export const OuiSkipLink: FunctionComponent<OuiSkipLinkProps> = ({
   destinationId,
   tabIndex,
   position = 'static',
@@ -68,8 +79,8 @@ export const EuiSkipLink: FunctionComponent<EuiSkipLinkProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiSkipLink',
-    [`euiSkipLink--${position}`],
+    'ouiSkipLink',
+    [`ouiSkipLink--${position}`],
     className
   );
 
@@ -82,8 +93,8 @@ export const EuiSkipLink: FunctionComponent<EuiSkipLinkProps> = ({
   }
 
   return (
-    <EuiScreenReaderOnly showOnFocus>
-      <EuiButton
+    <OuiScreenReaderOnly showOnFocus>
+      <OuiButton
         className={classes}
         tabIndex={position === 'fixed' ? 0 : tabIndex}
         size="s"
@@ -91,7 +102,7 @@ export const EuiSkipLink: FunctionComponent<EuiSkipLinkProps> = ({
         {...optionalProps}
         {...rest}>
         {children}
-      </EuiButton>
-    </EuiScreenReaderOnly>
+      </OuiButton>
+    </OuiScreenReaderOnly>
   );
 };

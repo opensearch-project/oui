@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,11 +28,11 @@
  * under the License.
  */
 
-import { EuiPopoverPosition } from './types';
+import { OuiPopoverPosition } from './types';
 
 type Dimension = 'height' | 'width';
 
-export const POSITIONS: EuiPopoverPosition[] = [
+export const POSITIONS: OuiPopoverPosition[] = [
   'top',
   'right',
   'bottom',
@@ -36,12 +47,12 @@ interface BoundingBox {
   left: number;
 }
 
-export interface EuiClientRect extends BoundingBox {
+export interface OuiClientRect extends BoundingBox {
   height: number;
   width: number;
 }
 
-const relatedDimension: { [position in EuiPopoverPosition]: Dimension } = {
+const relatedDimension: { [position in OuiPopoverPosition]: Dimension } = {
   top: 'height',
   right: 'width',
   bottom: 'height',
@@ -56,7 +67,7 @@ const dimensionPositionAttribute: {
 };
 
 const positionComplements: {
-  [position in EuiPopoverPosition]: EuiPopoverPosition;
+  [position in OuiPopoverPosition]: OuiPopoverPosition;
 } = {
   top: 'bottom',
   right: 'left',
@@ -67,7 +78,7 @@ const positionComplements: {
 // always resolving to top/left is taken advantage of by knowing they are the
 // minimum edges of the bounding box
 const positionSubstitutes: {
-  [position in EuiPopoverPosition]: 'left' | 'top';
+  [position in OuiPopoverPosition]: 'left' | 'top';
 } = {
   top: 'left',
   right: 'top',
@@ -78,8 +89,8 @@ const positionSubstitutes: {
 interface FindPopoverPositionArgs {
   anchor: HTMLElement;
   popover: HTMLElement;
-  align?: EuiPopoverPosition;
-  position: EuiPopoverPosition;
+  align?: OuiPopoverPosition;
+  position: OuiPopoverPosition;
   forcePosition?: boolean;
   buffer?: number | [number, number, number, number];
   offset?: number;
@@ -95,7 +106,7 @@ interface FindPopoverPositionResult {
   position: 'top' | 'right' | 'bottom' | 'left';
   fit: number;
   arrow?: { left: number; top: number };
-  anchorBoundingBox?: EuiClientRect;
+  anchorBoundingBox?: OuiClientRect;
 }
 
 const getBufferValues = (
@@ -152,7 +163,7 @@ export function findPopoverPosition({
     document.documentElement.clientWidth || window.innerWidth;
   const documentHeight =
     document.documentElement.clientHeight || window.innerHeight;
-  const windowBoundingBox: EuiClientRect = {
+  const windowBoundingBox: OuiClientRect = {
     top: 0,
     right: documentWidth,
     bottom: documentHeight,
@@ -186,7 +197,7 @@ export function findPopoverPosition({
   // Try the user-desired position first.
   const iterationPositions = [position];
   // keep user-defined alignment in the original positions.
-  const iterationAlignments: Array<undefined | EuiPopoverPosition> = [align];
+  const iterationAlignments: Array<undefined | OuiPopoverPosition> = [align];
 
   if (forcePosition !== true) {
     iterationPositions.push(positionComplements[position]); // Try the complementary position.
@@ -261,12 +272,12 @@ export function findPopoverPosition({
 }
 
 interface GetPopoverScreenCoordinatesArgs {
-  position: EuiPopoverPosition;
-  align?: EuiPopoverPosition;
-  anchorBoundingBox: EuiClientRect;
-  popoverBoundingBox: EuiClientRect;
-  windowBoundingBox: EuiClientRect;
-  containerBoundingBox: EuiClientRect;
+  position: OuiPopoverPosition;
+  align?: OuiPopoverPosition;
+  anchorBoundingBox: OuiClientRect;
+  popoverBoundingBox: OuiClientRect;
+  windowBoundingBox: OuiClientRect;
+  containerBoundingBox: OuiClientRect;
   arrowConfig?: { arrowWidth: number; arrowBuffer: number };
   offset?: number;
   buffer?: number | [number, number, number, number];
@@ -431,17 +442,17 @@ export function getPopoverScreenCoordinates({
 }
 
 interface GetCrossAxisPositionArgs {
-  crossAxisFirstSide: EuiPopoverPosition;
-  crossAxisSecondSide: EuiPopoverPosition;
+  crossAxisFirstSide: OuiPopoverPosition;
+  crossAxisSecondSide: OuiPopoverPosition;
   crossAxisDimension: Dimension;
-  position: EuiPopoverPosition;
-  align?: EuiPopoverPosition;
+  position: OuiPopoverPosition;
+  align?: OuiPopoverPosition;
   buffer: number | [number, number, number, number];
   offset: number;
-  windowBoundingBox: EuiClientRect;
-  containerBoundingBox: EuiClientRect;
-  popoverBoundingBox: EuiClientRect;
-  anchorBoundingBox: EuiClientRect;
+  windowBoundingBox: OuiClientRect;
+  containerBoundingBox: OuiClientRect;
+  popoverBoundingBox: OuiClientRect;
+  anchorBoundingBox: OuiClientRect;
   arrowConfig?: { arrowWidth: number; arrowBuffer: number };
 }
 
@@ -570,7 +581,7 @@ function getCrossAxisPosition({
 }
 
 interface GetPrimaryAxisPositionArgs {
-  position: EuiPopoverPosition;
+  position: OuiPopoverPosition;
   offset: number;
   popoverBoundingBox: BoundingBox;
   anchorBoundingBox: BoundingBox;
@@ -626,7 +637,7 @@ function getPrimaryAxisPosition({
  * @param {HTMLElement} element
  * @returns {{top: number, right: number, bottom: number, left: number, height: number, width: number}}
  */
-export function getElementBoundingBox(element: HTMLElement): EuiClientRect {
+export function getElementBoundingBox(element: HTMLElement): OuiClientRect {
   const rect = element.getBoundingClientRect();
   return {
     top: rect.top,
@@ -654,7 +665,7 @@ export function getAvailableSpace(
   containerBoundingBox: BoundingBox,
   buffer: number | [number, number, number, number],
   offset: number,
-  offsetSide: EuiPopoverPosition
+  offsetSide: OuiPopoverPosition
 ): BoundingBox {
   const [topBuffer, rightBuffer, bottomBuffer, leftBuffer] = getBufferValues(
     buffer
@@ -721,12 +732,12 @@ export function getVisibleFit(
  *
  * @param firstBox
  * @param secondBox
- * @returns {EuiClientRect}
+ * @returns {OuiClientRect}
  */
 export function intersectBoundingBoxes(
   firstBox: BoundingBox,
   secondBox: BoundingBox
-): EuiClientRect {
+): OuiClientRect {
   const top = Math.max(firstBox.top, secondBox.top);
   const right = Math.min(firstBox.right, secondBox.right);
   const bottom = Math.min(firstBox.bottom, secondBox.bottom);

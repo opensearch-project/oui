@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,25 +28,25 @@
  * under the License.
  */
 
-export { EuiColorPicker, EuiColorPickerProps } from './color_picker';
+export { OuiColorPicker, OuiColorPickerProps } from './color_picker';
 export {
-  EuiColorPickerSwatch,
-  EuiColorPickerSwatchProps,
+  OuiColorPickerSwatch,
+  OuiColorPickerSwatchProps,
 } from './color_picker_swatch';
-export { EuiHue, EuiHueProps } from './hue';
-export { EuiSaturation, EuiSaturationProps } from './saturation';
-export { EuiColorStops } from './color_stops';
-// TODO: Exporting `EuiColorStopsProps` from `'./color_stops'`
+export { OuiHue, OuiHueProps } from './hue';
+export { OuiSaturation, OuiSaturationProps } from './saturation';
+export { OuiColorStops } from './color_stops';
+// TODO: Exporting `OuiColorStopsProps` from `'./color_stops'`
 // results in a duplicate d.ts entry that causes build warnings
 // and potential downstream TS project failures.
-export { EuiColorStopsProps } from './color_stops/color_stops';
+export { OuiColorStopsProps } from './color_stops/color_stops';
 export {
-  EuiColorPalettePicker,
-  EuiColorPalettePickerProps,
-  EuiColorPalettePickerPaletteProps,
+  OuiColorPalettePicker,
+  OuiColorPalettePickerProps,
+  OuiColorPalettePickerPaletteProps,
 } from './color_palette_picker';
 
 export {
-  EuiColorPaletteDisplay,
-  EuiColorPaletteDisplayProps,
+  OuiColorPaletteDisplay,
+  OuiColorPaletteDisplayProps,
 } from './color_palette_display';

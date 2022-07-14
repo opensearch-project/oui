@@ -1,20 +1,31 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Temporary style override for inserting search template into dark header
-// These selectors aren't targetable via EuiFieldSearch
-.euiHeader--dark .euiSelectableTemplateSitewide .euiFormControlLayout {
+// These selectors aren't targetable via OuiFieldSearch
+.ouiHeader--dark .ouiSelectableTemplateSitewide .ouiFormControlLayout {
   background-color: transparent;
 
   &--group,
   input {
-    box-shadow: inset 0 0 0 1px transparentize($euiColorGhost, .7);
+    box-shadow: inset 0 0 0 1px transparentize($ouiColorGhost, .7);
   }
 
   &:not(:focus-within) {
-    color: transparentize($euiColorGhost, .3);
+    color: transparentize($ouiColorGhost, .3);
 
     input {
       // Increase contrast of placeholder text
-      @include euiPlaceholderPerBrowser {
-        color: transparentize($euiColorGhost, .6);
+      @include ouiPlaceholderPerBrowser {
+        color: transparentize($ouiColorGhost, .6);
       }
 
       // Inherit color from form control layout
@@ -22,7 +33,7 @@
       background-color: transparent;
     }
 
-    .euiFormControlLayout__append {
+    .ouiFormControlLayout__append {
       background-color: transparent;
       color: inherit;
     }

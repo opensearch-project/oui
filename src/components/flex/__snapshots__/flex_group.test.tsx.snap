@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFlexGroup is rendered 1`] = `
+exports[`OuiFlexGroup is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive testClass1 testClass2"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <h2>
@@ -12,164 +12,164 @@ exports[`EuiFlexGroup is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiFlexGroup props alignItems baseline is rendered 1`] = `
+exports[`OuiFlexGroup props alignItems baseline is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsBaseline euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsBaseline ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props alignItems center is rendered 1`] = `
+exports[`OuiFlexGroup props alignItems center is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props alignItems flexEnd is rendered 1`] = `
+exports[`OuiFlexGroup props alignItems flexEnd is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsFlexEnd euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsFlexEnd ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props alignItems flexStart is rendered 1`] = `
+exports[`OuiFlexGroup props alignItems flexStart is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsFlexStart euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsFlexStart ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props alignItems stretch is rendered 1`] = `
+exports[`OuiFlexGroup props alignItems stretch is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props component div is rendered 1`] = `
+exports[`OuiFlexGroup props component div is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props component span is rendered 1`] = `
+exports[`OuiFlexGroup props component span is rendered 1`] = `
 <span
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props direction column is rendered 1`] = `
+exports[`OuiFlexGroup props direction column is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionColumn euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionColumn ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props direction columnReverse is rendered 1`] = `
+exports[`OuiFlexGroup props direction columnReverse is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionColumnReverse euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionColumnReverse ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props direction row is rendered 1`] = `
+exports[`OuiFlexGroup props direction row is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props direction rowReverse is rendered 1`] = `
+exports[`OuiFlexGroup props direction rowReverse is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRowReverse euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRowReverse ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props gutterSize l is rendered 1`] = `
+exports[`OuiFlexGroup props gutterSize l is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props gutterSize m is rendered 1`] = `
+exports[`OuiFlexGroup props gutterSize m is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterMedium euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterMedium ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props gutterSize none is rendered 1`] = `
+exports[`OuiFlexGroup props gutterSize none is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props gutterSize s is rendered 1`] = `
+exports[`OuiFlexGroup props gutterSize s is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props gutterSize xl is rendered 1`] = `
+exports[`OuiFlexGroup props gutterSize xl is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterExtraLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterExtraLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props gutterSize xs is rendered 1`] = `
+exports[`OuiFlexGroup props gutterSize xs is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterExtraSmall euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props justifyContent center is rendered 1`] = `
+exports[`OuiFlexGroup props justifyContent center is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentCenter euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentCenter ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props justifyContent flexEnd is rendered 1`] = `
+exports[`OuiFlexGroup props justifyContent flexEnd is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentFlexEnd euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentFlexEnd ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props justifyContent flexStart is rendered 1`] = `
+exports[`OuiFlexGroup props justifyContent flexStart is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props justifyContent spaceAround is rendered 1`] = `
+exports[`OuiFlexGroup props justifyContent spaceAround is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentSpaceAround euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceAround ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props justifyContent spaceBetween is rendered 1`] = `
+exports[`OuiFlexGroup props justifyContent spaceBetween is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props justifyContent spaceEvenly is rendered 1`] = `
+exports[`OuiFlexGroup props justifyContent spaceEvenly is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentSpaceEvenly euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceEvenly ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props responsive false is rendered 1`] = `
+exports[`OuiFlexGroup props responsive false is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow"
 />
 `;
 
-exports[`EuiFlexGroup props responsive true is rendered 1`] = `
+exports[`OuiFlexGroup props responsive true is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props wrap false is rendered 1`] = `
+exports[`OuiFlexGroup props wrap false is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
 />
 `;
 
-exports[`EuiFlexGroup props wrap true is rendered 1`] = `
+exports[`OuiFlexGroup props wrap true is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive euiFlexGroup--wrap"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiFlexGroup--wrap"
 />
 `;

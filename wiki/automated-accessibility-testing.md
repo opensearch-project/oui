@@ -1,6 +1,6 @@
 # Accessibility testing
 
-The goal is for the entirety of the EUI docs site to be run through [axe](https://www.deque.com/axe/).
+The goal is for the entirety of the OUI docs site to be run through [axe](https://www.deque.com/axe/).
 As of [#2569](https://github.com/elastic/eui/pull/2569), all of the Guidelines pages are tested and the plumbing is in place to add the rest.
 
 ## What is axe?
@@ -46,4 +46,4 @@ The **set** of failures for each page will be denoted by a line with the URL of 
 
 ## Testing environment
 
-This testing suite runs in a Docker container built and maintained by the EUI team and published to the Elastic Container Registry. Any environment-related failures should be investigated starting with the Docker directory located at [`scripts/docker-puppeteer/`](../scripts/docker-puppeteer/README.md).
+This testing suite runs in a Docker container built and maintained by the OUI team and published to the Elastic Container Registry. Any environment-related failures should be investigated starting with the Docker directory located at [`scripts/docker-puppeteer/`](../scripts/docker-puppeteer/README.md).

@@ -1,19 +1,30 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // This file uses RGBA literal values responsibly
 // This file uses off-pattern indentation to be more readable
 
 // sass-lint:disable no-color-literals, no-color-keywords, indentation, quotes
 
-@mixin euiSlightShadow($color: $euiShadowColor, $opacity: .3) {
+@mixin ouiSlightShadow($color: $ouiShadowColor, $opacity: .3) {
   box-shadow: 0 2px 2px -1px rgba($color, $opacity);
 }
 
-@mixin euiBottomShadowSmall($color: $euiShadowColor, $opacity: .3) {
+@mixin ouiBottomShadowSmall($color: $ouiShadowColor, $opacity: .3) {
   box-shadow:
     0 2px 2px -1px rgba($color, $opacity),
     0 1px 5px -2px rgba($color, $opacity);
 }
 
-@mixin euiBottomShadowMedium($color: $euiShadowColor, $opacity: .2) {
+@mixin ouiBottomShadowMedium($color: $ouiShadowColor, $opacity: .2) {
   box-shadow:
     0 6px 12px -1px rgba($color, $opacity),
     0 4px 4px -1px rgba($color, $opacity),
@@ -22,7 +33,7 @@
 
 // Similar to shadow medium but without the bottom depth. Useful for popovers
 // that drop UP rather than DOWN.
-@mixin euiBottomShadowFlat($color: $euiShadowColor, $opacity: .2) {
+@mixin ouiBottomShadowFlat($color: $ouiShadowColor, $opacity: .2) {
   box-shadow:
     0 0 12px -1px rgba($color, $opacity),
     0 0 4px -1px rgba($color, $opacity),
@@ -31,7 +42,7 @@
 
 // adjustBorder allows the border color to match the drop shadow better so that there's better
 // distinction between element bounds and the shadow (crisper borders)
-@mixin euiBottomShadow($color: $euiShadowColorLarge, $opacity: .1, $adjustBorders: false) {
+@mixin ouiBottomShadow($color: $ouiShadowColorLarge, $opacity: .1, $adjustBorders: false) {
   box-shadow:
     0 12px 24px 0 rgba($color, $opacity),
     0 6px 12px 0 rgba($color, $opacity),
@@ -39,15 +50,15 @@
     0 2px 2px 0 rgba($color, $opacity);
 
   // Never adjust borders if the border color is already on the dark side (dark theme)
-  @if ($adjustBorders and not (lightness($euiBorderColor) < 50)) {
+  @if ($adjustBorders and not (lightness($ouiBorderColor) < 50)) {
     border-color: tint($color, 75%);
     border-top-color: tint($color, 80%);
     border-bottom-color: tint($color, 55%);
   }
 }
 
-@mixin euiBottomShadowLarge(
-  $color: $euiShadowColorLarge,
+@mixin ouiBottomShadowLarge(
+  $color: $ouiShadowColorLarge,
   $opacity: .1,
   $adjustBorders: false,
   $reverse: false
@@ -69,25 +80,25 @@
   }
 
   // Never adjust borders if the border color is already on the dark side (dark theme)
-  @if ($adjustBorders and not (lightness($euiBorderColor) < 50)) {
+  @if ($adjustBorders and not (lightness($ouiBorderColor) < 50)) {
     border-color: tint($color, 70%);
     border-top-color: tint($color, 85%);
     border-bottom-color: tint($color, 55%);
   }
 }
 
-@mixin euiSlightShadowHover($color: $euiShadowColor, $opacity: .3) {
+@mixin ouiSlightShadowHover($color: $ouiShadowColor, $opacity: .3) {
   box-shadow:
     0 4px 8px 0 rgba($color, $opacity/2),
     0 2px 2px -1px rgba($color, $opacity);
 }
 
-@mixin euiSlightShadowActive($color: $euiShadowColor, $opacity: .3) {
-  @include euiSlightShadowHover($color, $opacity);
+@mixin ouiSlightShadowActive($color: $ouiShadowColor, $opacity: .3) {
+  @include ouiSlightShadowHover($color, $opacity);
 }
 
-@mixin euiOverflowShadow($direction: 'y', $side: 'both') {
-  $hideHeight: $euiScrollBarCorner * 1.25;
+@mixin ouiOverflowShadow($direction: 'y', $side: 'both') {
+  $hideHeight: $ouiScrollBarCorner * 1.25;
   $gradient: null;
   $gradientStart:
   transparentize(red, .9) 0%,
@@ -104,7 +115,7 @@
       $gradient: $gradientEnd;
     }
   } @else {
-    @warn "euiOverflowShadow() expects side to be 'both', 'start' or 'end' but got '#{$side}'";
+    @warn "ouiOverflowShadow() expects side to be 'both', 'start' or 'end' but got '#{$side}'";
   }
 
   @if ($direction == 'y') {
@@ -112,6 +123,6 @@
   } @else if ($direction == 'x') {
     mask-image: linear-gradient(to right, #{$gradient});
   } @else {
-    @warn "euiOverflowShadow() expects direction to be 'y' or 'x' but got '#{$direction}'";
+    @warn "ouiOverflowShadow() expects direction to be 'y' or 'x' but got '#{$direction}'";
   }
 }

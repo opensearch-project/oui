@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,7 +30,7 @@
 
 import React, { FunctionComponent, useState } from 'react';
 import { mount } from 'enzyme';
-import { EuiMutationObserver, useMutationObserver } from './mutation_observer';
+import { OuiMutationObserver, useMutationObserver } from './mutation_observer';
 import { sleep } from '../../../test';
 
 export async function waitforMutationObserver(period = 30) {
@@ -27,14 +38,14 @@ export async function waitforMutationObserver(period = 30) {
   await sleep(period);
 }
 
-describe('EuiMutationObserver', () => {
+describe('OuiMutationObserver', () => {
   it('watches for a mutation', async () => {
     expect.assertions(1);
     const onMutation = jest.fn();
 
     const Wrapper: FunctionComponent<{ value: number }> = ({ value }) => {
       return (
-        <EuiMutationObserver
+        <OuiMutationObserver
           observerOptions={{ attributes: true }}
           onMutation={onMutation}>
           {(mutationRef) => (
@@ -42,7 +53,7 @@ describe('EuiMutationObserver', () => {
               Hello World
             </div>
           )}
-        </EuiMutationObserver>
+        </OuiMutationObserver>
       );
     };
 

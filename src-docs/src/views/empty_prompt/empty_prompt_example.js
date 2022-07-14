@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiEmptyPrompt } from '../../../../src/components';
+import { OuiCode, OuiEmptyPrompt } from '../../../../src/components';
 
 import emptyPromptConfig from './playground';
 
 import EmptyPrompt from './empty_prompt';
 const emptyPromptSource = require('!!raw-loader!./empty_prompt');
-const emptyPromptSnippet = `<EuiEmptyPrompt
+const emptyPromptSnippet = `<OuiEmptyPrompt
   iconType="editorStrike"
   title={<h2>You have no spice</h2>}
   body={bodyContent}
@@ -18,7 +29,7 @@ const emptyPromptSnippet = `<EuiEmptyPrompt
 
 import Custom from './custom';
 const customSource = require('!!raw-loader!./custom');
-const customSnippet = `<EuiEmptyPrompt
+const customSnippet = `<OuiEmptyPrompt
   iconType="editorStrike"
   title={<h2>You have no spice</h2>}
   titleSize="xs"
@@ -28,21 +39,21 @@ const customSnippet = `<EuiEmptyPrompt
 
 import Simple from './simple';
 const simpleSource = require('!!raw-loader!./simple');
-const simpleSnippet = `<EuiEmptyPrompt
+const simpleSnippet = `<OuiEmptyPrompt
   title={<h2>You have no spice</h2>}
   actions={multipleActions}
 />`;
 
 import Loading from './empty_prompt_loading';
 const loadingSource = require('!!raw-loader!./empty_prompt_loading');
-const loadingSnippet = `<EuiEmptyPrompt
-  icon={<EuiLoadingLogo logo="logoKibana" size="xl" />}
+const loadingSnippet = `<OuiEmptyPrompt
+  icon={<OuiLoadingLogo logo="logoKibana" size="xl" />}
   title={<h2>Loading</h2>}
 />`;
 
 import Error from './empty_prompt_error';
 const errorSource = require('!!raw-loader!./empty_prompt_error');
-const errorSnippet = `<EuiEmptyPrompt
+const errorSnippet = `<OuiEmptyPrompt
   iconType="alert"
   iconColor="danger"
   title={<h2>There was an error</h2>}
@@ -63,12 +74,12 @@ export const EmptyPromptExample = {
       ],
       text: (
         <p>
-          Use the <strong>EuiEmptyPrompt</strong> as a placeholder for any type
+          Use the <strong>OuiEmptyPrompt</strong> as a placeholder for any type
           of empty content. They are especially helpful for replacing entire
           pages that contain no content.
         </p>
       ),
-      props: { EuiEmptyPrompt },
+      props: { OuiEmptyPrompt },
       demo: <EmptyPrompt />,
       snippet: emptyPromptSnippet,
       playground: emptyPromptConfig,
@@ -84,11 +95,11 @@ export const EmptyPromptExample = {
       text: (
         <p>
           You can control the title size and icon color with the{' '}
-          <EuiCode>titleSize</EuiCode> and <EuiCode>iconColor</EuiCode> props
+          <OuiCode>titleSize</OuiCode> and <OuiCode>iconColor</OuiCode> props
           respectively.
         </p>
       ),
-      props: { EuiEmptyPrompt },
+      props: { OuiEmptyPrompt },
       demo: <Custom />,
       snippet: customSnippet,
     },
@@ -109,7 +120,7 @@ export const EmptyPromptExample = {
           </p>
         </Fragment>
       ),
-      props: { EuiEmptyPrompt },
+      props: { OuiEmptyPrompt },
       demo: <Simple />,
       snippet: simpleSnippet,
     },
@@ -129,13 +140,13 @@ export const EmptyPromptExample = {
           </p>
           <p>
             For <strong>loading</strong> states, you can simply replace the{' '}
-            <EuiCode>iconType</EuiCode> with a custom <EuiCode>icon</EuiCode> by
+            <OuiCode>iconType</OuiCode> with a custom <OuiCode>icon</OuiCode> by
             passing in one of our{' '}
             <Link to="/display/loading">loading components</Link>.
           </p>
         </>
       ),
-      props: { EuiEmptyPrompt },
+      props: { OuiEmptyPrompt },
       demo: <Loading />,
       snippet: loadingSnippet,
     },
@@ -150,16 +161,16 @@ export const EmptyPromptExample = {
         <>
           <p>
             For <strong>error</strong> states, you can simply set the{' '}
-            <EuiCode>iconColor</EuiCode> to <EuiCode>danger</EuiCode> and/or
-            wrap the whole prompt in a <EuiCode>danger</EuiCode> colored{' '}
+            <OuiCode>iconColor</OuiCode> to <OuiCode>danger</OuiCode> and/or
+            wrap the whole prompt in a <OuiCode>danger</OuiCode> colored{' '}
             <Link to="/display/panel">
-              <strong>EuiPanel</strong>
+              <strong>OuiPanel</strong>
             </Link>
             .
           </p>
         </>
       ),
-      props: { EuiEmptyPrompt },
+      props: { OuiEmptyPrompt },
       demo: <Error />,
       snippet: errorSnippet,
     },
@@ -177,15 +188,15 @@ export const EmptyPromptExample = {
             loading to empty or loading to error experience. The following
             example shows how to encorprate these states with{' '}
             <Link to="/layout/page#simple-layout-with-centered-content">
-              <strong>EuiPageTemplate</strong>
+              <strong>OuiPageTemplate</strong>
             </Link>{' '}
-            using <EuiCode>{'template="centeredContent"'}</EuiCode> and passing{' '}
-            <EuiCode>{'color="danger"'}</EuiCode> to the{' '}
-            <EuiCode>pageContentProps</EuiCode> for the error state.
+            using <OuiCode>{'template="centeredContent"'}</OuiCode> and passing{' '}
+            <OuiCode>{'color="danger"'}</OuiCode> to the{' '}
+            <OuiCode>pageContentProps</OuiCode> for the error state.
           </p>
         </>
       ),
-      props: { EuiEmptyPrompt },
+      props: { OuiEmptyPrompt },
       demo: (
         <div className="guideDemo__highlightLayout">
           <States />

@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiBreadcrumbs,
-  EuiButton,
-  EuiPageContent,
-  EuiPageContentHeader,
-  EuiPageContentHeaderSection,
-  EuiTitle,
-  EuiSpacer,
+  OuiBreadcrumbs,
+  OuiButton,
+  OuiPageContent,
+  OuiPageContentHeader,
+  OuiPageContentHeaderSection,
+  OuiTitle,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -36,24 +47,24 @@ export default () => {
   ];
 
   return (
-    <EuiPageContent role={null}>
-      <EuiBreadcrumbs
+    <OuiPageContent role={null}>
+      <OuiBreadcrumbs
         breadcrumbs={breadcrumbs}
         truncate={false}
-        aria-label="An example of EuiBreadcrumbs"
+        aria-label="An example of OuiBreadcrumbs"
       />
-      <EuiSpacer size="xs" />
-      <EuiPageContentHeader>
-        <EuiPageContentHeaderSection>
-          <EuiTitle size="l">
+      <OuiSpacer size="xs" />
+      <OuiPageContentHeader>
+        <OuiPageContentHeaderSection>
+          <OuiTitle size="l">
             <h1>Boa constrictor</h1>
-          </EuiTitle>
-        </EuiPageContentHeaderSection>
+          </OuiTitle>
+        </OuiPageContentHeaderSection>
 
-        <EuiPageContentHeaderSection>
-          <EuiButton>Cancel</EuiButton>
-        </EuiPageContentHeaderSection>
-      </EuiPageContentHeader>
-    </EuiPageContent>
+        <OuiPageContentHeaderSection>
+          <OuiButton>Cancel</OuiButton>
+        </OuiPageContentHeaderSection>
+      </OuiPageContentHeader>
+    </OuiPageContent>
   );
 };

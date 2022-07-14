@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,7 +34,7 @@ interface DropResult {
   [droppableId: string]: any[];
 }
 
-export const euiDragDropReorder = <T extends any[]>(
+export const ouiDragDropReorder = <T extends any[]>(
   list: T,
   startIndex: number,
   endIndex: number
@@ -35,7 +46,7 @@ export const euiDragDropReorder = <T extends any[]>(
   return result;
 };
 
-export const euiDragDropMove = (
+export const ouiDragDropMove = (
   sourceList: any[],
   destinationList: any[],
   dropResultSource: DraggableLocation,
@@ -53,12 +64,12 @@ export const euiDragDropMove = (
   };
 };
 
-export const euiDragDropCopy = (
+export const ouiDragDropCopy = (
   sourceList: any[],
   destinationList: any[],
   dropResultSource: DraggableLocation,
   dropResultDestination: DraggableLocation,
-  /* Each EuiDraggable needs a unique ID, otherwise subsequent drag attempts on the to-be-copied
+  /* Each OuiDraggable needs a unique ID, otherwise subsequent drag attempts on the to-be-copied
    * element may result instead in dragging a previously created duplicate of that Draggable.
    * `idModification` gives implementers better control over creating unique IDs when copying.
    */

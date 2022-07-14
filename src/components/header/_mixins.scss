@@ -1,36 +1,47 @@
-@mixin euiHeaderDarkTheme($backgroundColor) {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@mixin ouiHeaderDarkTheme($backgroundColor) {
   background-color: $backgroundColor;
-  border-bottom-color: lightOrDarkTheme($backgroundColor, $euiHeaderBorderColor);
+  border-bottom-color: lightOrDarkTheme($backgroundColor, $ouiHeaderBorderColor);
 
-  .euiHeaderLogo__text,
-  .euiHeaderLink,
-  .euiHeaderSectionItemButton {
-    color: $euiColorGhost;
+  .ouiHeaderLogo__text,
+  .ouiHeaderLink,
+  .ouiHeaderSectionItemButton {
+    color: $ouiColorGhost;
   }
 
-  .euiHeaderLink-isActive {
-    color: makeHighContrastColor($euiColorPrimary, $backgroundColor);
+  .ouiHeaderLink-isActive {
+    color: makeHighContrastColor($ouiColorPrimary, $backgroundColor);
   }
 
-  .euiHeaderSectionItem {
+  .ouiHeaderSectionItem {
     &:after {
-      background: lightOrDarkTheme($euiColorDarkShade, $euiColorLightestShade);
+      background: lightOrDarkTheme($ouiColorDarkShade, $ouiColorLightestShade);
     }
   }
 
-  .euiHeaderLogo,
-  .euiHeaderLink,
-  .euiHeaderSectionItemButton {
+  .ouiHeaderLogo,
+  .ouiHeaderLink,
+  .ouiHeaderSectionItemButton {
     &:focus {
-      background: shade($euiColorPrimary, 50%);
+      background: shade($ouiColorPrimary, 50%);
     }
   }
 
-  .euiHeaderSectionItemButton__notification--badge {
+  .ouiHeaderSectionItemButton__notification--badge {
     box-shadow: 0 0 0 1px $backgroundColor;
   }
 
-  .euiHeaderSectionItemButton__notification--dot {
+  .ouiHeaderSectionItemButton__notification--dot {
     stroke: $backgroundColor;
   }
 }

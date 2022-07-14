@@ -1,0 +1,121 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiRangeTrack {
+  &::after {
+    content: '';
+    display: block;
+    background: $ouiRangeTrackColor;
+    border: $ouiRangeTrackBorderWidth solid $ouiRangeTrackBorderColor;
+    border-radius: $ouiRangeTrackRadius;
+    position: absolute;
+    left: 0;
+  }
+
+  &:not(.ouiRangeTrack--compressed)::after {
+    @include ouiRangeTrackSize;
+  }
+
+  &--compressed::after {
+    @include ouiRangeTrackSize($compressed: true);
+  }
+
+  &--compressed {
+    &.ouiRangeTrack--hasLevels {
+      .ouiRangeTicks {
+        height: $ouiRangeThumbHeight + ($ouiRangeTrackCompressedHeight / 2);
+        top: $ouiRangeThumbHeight;
+      }
+
+      .ouiRangeTick {
+        padding-top: $ouiRangeTrackCompressedHeight;
+      }
+    }
+
+    &:not(.ouiRangeTrack--hasLevels) {
+      .ouiRangeTicks {
+        height: $ouiRangeTrackCompressedHeight + $ouiRangeThumbHeight;
+        top: $ouiRangeTrackHeight * 2;
+      }
+
+      .ouiRangeTick {
+        padding-top: $ouiSizeM / 2;
+      }
+    }
+
+    &.ouiRangeTrack--hasTicks::after {
+      top: ($ouiRangeThumbHeight - $ouiRangeTrackCompressedHeight) / 2;
+    }
+
+    &:not(.ouiRangeTrack--hasTicks)::after {
+      top: calc(50% - #{($ouiRangeTrackCompressedHeight/2)});
+    }
+
+    .ouiRangeThumb--hasTicks {
+      top: 0;
+    }
+
+    .ouiRangeLevels:not(.ouiRangeLevels--hasTicks) {
+      top: $ouiRangeThumbHeight + $ouiRangeTrackCompressedHeight - 1;
+    }
+
+    .ouiRangeLevels--hasTicks {
+      top: $ouiRangeThumbHeight - $ouiRangeTrackCompressedHeight - 1;
+    }
+  }
+
+  &:not(.ouiRangeTrack--compressed) {
+    &.ouiRangeTrack--hasLevels {
+      .ouiRangeTicks {
+        height: $ouiRangeThumbHeight + ($ouiRangeThumbHeight / 4);
+        top: $ouiRangeThumbHeight + ($ouiRangeThumbHeight / 4);
+      }
+
+      .ouiRangeTick {
+        padding-top: $ouiRangeTrackHeight;
+      }
+    }
+
+    &:not(.ouiRangeTrack--hasLevels) {
+      .ouiRangeTicks {
+        height: $ouiRangeHeight - $ouiRangeThumbHeight;
+        top: $ouiRangeThumbHeight;
+      }
+
+      .ouiRangeTick {
+        // removing 1px to prevent label getting cut in Safari
+        padding-top: ($ouiRangeTrackHeight * 2) - 1;
+      }
+    }
+
+    &.ouiRangeTrack--hasTicks {
+      .ouiRangeTooltip {
+        top: -($ouiSizeXS / 2);
+      }
+
+      &::after {
+        top: ($ouiRangeThumbHeight - $ouiRangeTrackHeight) / 2;
+      }
+    }
+
+    &:not(.ouiRangeTrack--hasTicks)::after {
+      top: calc(50% - #{($ouiRangeTrackHeight/2)});
+    }
+
+    .ouiRangeLevels:not(.ouiRangeLevels--hasTicks) {
+      top: $ouiRangeThumbHeight + $ouiRangeTrackHeight + ($ouiSizeXS / 2);
+    }
+
+    .ouiRangeLevels--hasTicks {
+      top: $ouiRangeTrackHeight * 2;
+    }
+  }
+}

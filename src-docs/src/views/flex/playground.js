@@ -1,44 +1,55 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFlexGrid,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFlexGrid,
 } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const flexGroupConfig = () => {
-  const docgenInfo = Array.isArray(EuiFlexGroup.__docgenInfo)
-    ? EuiFlexGroup.__docgenInfo[0]
-    : EuiFlexGroup.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiFlexGroup.__docgenInfo)
+    ? OuiFlexGroup.__docgenInfo[0]
+    : OuiFlexGroup.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
     type: PropTypes.ReactNode,
-    value: `<EuiFlexItem>Flex item</EuiFlexItem>
-    <EuiFlexItem grow={false}>Grow false</EuiFlexItem>
-    <EuiFlexItem component="span">
+    value: `<OuiFlexItem>Flex item</OuiFlexItem>
+    <OuiFlexItem grow={false}>Grow false</OuiFlexItem>
+    <OuiFlexItem component="span">
     This is a span component
-  </EuiFlexItem>
-  <EuiFlexItem>
+  </OuiFlexItem>
+  <OuiFlexItem>
     <p>Another flex item</p>
     <p>
       To showcase stretcing (or not) of items
     </p>
-  </EuiFlexItem>`,
+  </OuiFlexItem>`,
     hidden: false,
   };
 
   return {
     config: {
-      componentName: 'EuiFlexGroup',
+      componentName: 'OuiFlexGroup',
       props: propsToUse,
       scope: {
-        EuiFlexGroup,
-        EuiFlexItem,
+        OuiFlexGroup,
+        OuiFlexItem,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFlexGroup', 'EuiFlexItem'],
+        '@opensearch-project/oui': {
+          named: ['OuiFlexGroup', 'OuiFlexItem'],
         },
       },
     },
@@ -47,20 +58,20 @@ export const flexGroupConfig = () => {
 };
 
 export const flexGridConfig = () => {
-  const docgenInfo = Array.isArray(EuiFlexGrid.__docgenInfo)
-    ? EuiFlexGrid.__docgenInfo[0]
-    : EuiFlexGrid.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiFlexGrid.__docgenInfo)
+    ? OuiFlexGrid.__docgenInfo[0]
+    : OuiFlexGrid.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
     type: PropTypes.ReactNode,
-    value: `<EuiFlexItem><div>One</div></EuiFlexItem>
-<EuiFlexItem><div>Two</div></EuiFlexItem>
-<EuiFlexItem><div>Three</div></EuiFlexItem>
-<EuiFlexItem><div>Four</div></EuiFlexItem>
-<EuiFlexItem><div>Five</div></EuiFlexItem>
-<EuiFlexItem><div>Six</div></EuiFlexItem>
-<EuiFlexItem><div>Seven</div></EuiFlexItem>`,
+    value: `<OuiFlexItem><div>One</div></OuiFlexItem>
+<OuiFlexItem><div>Two</div></OuiFlexItem>
+<OuiFlexItem><div>Three</div></OuiFlexItem>
+<OuiFlexItem><div>Four</div></OuiFlexItem>
+<OuiFlexItem><div>Five</div></OuiFlexItem>
+<OuiFlexItem><div>Six</div></OuiFlexItem>
+<OuiFlexItem><div>Seven</div></OuiFlexItem>`,
     hidden: false,
   };
 
@@ -72,15 +83,15 @@ export const flexGridConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFlexGrid',
+      componentName: 'OuiFlexGrid',
       props: propsToUse,
       scope: {
-        EuiFlexGrid,
-        EuiFlexItem,
+        OuiFlexGrid,
+        OuiFlexItem,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFlexGrid', 'EuiFlexItem'],
+        '@opensearch-project/oui': {
+          named: ['OuiFlexGrid', 'OuiFlexItem'],
         },
       },
     },

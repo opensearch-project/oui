@@ -1,17 +1,28 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiComboBox,
-  EuiHighlight,
-  EuiHealth,
+  OuiComboBox,
+  OuiHighlight,
+  OuiHealth,
 } from '../../../../src/components';
 import {
-  euiPaletteColorBlind,
-  euiPaletteColorBlindBehindText,
+  ouiPaletteColorBlind,
+  ouiPaletteColorBlindBehindText,
 } from '../../../../src/services';
 
-const visColors = euiPaletteColorBlind();
-const visColorsBehindText = euiPaletteColorBlindBehindText();
+const visColors = ouiPaletteColorBlind();
+const visColorsBehindText = ouiPaletteColorBlindBehindText();
 const optionsStatic = [
   {
     value: {
@@ -129,18 +140,18 @@ export default () => {
     const { color, label, value } = option;
     const dotColor = visColors[visColorsBehindText.indexOf(color)];
     return (
-      <EuiHealth color={dotColor}>
+      <OuiHealth color={dotColor}>
         <span className={contentClassName}>
-          <EuiHighlight search={searchValue}>{label}</EuiHighlight>
+          <OuiHighlight search={searchValue}>{label}</OuiHighlight>
           &nbsp;
           <span>({value.size})</span>
         </span>
-      </EuiHealth>
+      </OuiHealth>
     );
   };
 
   return (
-    <EuiComboBox
+    <OuiComboBox
       placeholder="Select or create options"
       options={options}
       selectedOptions={selectedOptions}

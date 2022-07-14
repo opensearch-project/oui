@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,23 +32,23 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFieldText } from './field_text';
+import { OuiFieldText } from './field_text';
 
 jest.mock('../form_control_layout', () => {
   const formControlLayout = jest.requireActual('../form_control_layout');
   return {
     ...formControlLayout,
-    EuiFormControlLayout: 'eui-form-control-layout',
+    OuiFormControlLayout: 'oui-form-control-layout',
   };
 });
 jest.mock('../validatable_control', () => ({
-  EuiValidatableControl: 'eui-validatable-control',
+  OuiValidatableControl: 'oui-validatable-control',
 }));
 
-describe('EuiFieldText', () => {
+describe('OuiFieldText', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFieldText
+      <OuiFieldText
         name="elastic"
         id="1"
         placeholder="Placeholder"
@@ -54,31 +65,31 @@ describe('EuiFieldText', () => {
 
   describe('props', () => {
     test('isInvalid is rendered', () => {
-      const component = render(<EuiFieldText isInvalid />);
+      const component = render(<OuiFieldText isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(<EuiFieldText fullWidth />);
+      const component = render(<OuiFieldText fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('readOnly is rendered', () => {
-      const component = render(<EuiFieldText readOnly />);
+      const component = render(<OuiFieldText readOnly />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiFieldText isLoading />);
+      const component = render(<OuiFieldText isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('controlOnly is rendered', () => {
-      const component = render(<EuiFieldText controlOnly />);
+      const component = render(<OuiFieldText controlOnly />);
 
       expect(component).toMatchSnapshot();
     });

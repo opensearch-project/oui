@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiSwitch,
-  EuiSpacer,
+  OuiHeader,
+  OuiHeaderLogo,
+  OuiSwitch,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -12,20 +23,20 @@ export default () => {
 
   const sections = [
     {
-      items: [<EuiHeaderLogo>Elastic</EuiHeaderLogo>],
+      items: [<OuiHeaderLogo>Elastic</OuiHeaderLogo>],
       borders: 'right',
     },
   ];
 
   return (
     <>
-      <EuiSwitch
+      <OuiSwitch
         label={'Make header fixed position'}
         checked={position === 'fixed'}
         onChange={(e) => setPosition(e.target.checked ? 'fixed' : 'static')}
       />
-      <EuiSpacer />
-      <EuiHeader position={position} sections={sections} />
+      <OuiSpacer />
+      <OuiHeader position={position} sections={sections} />
     </>
   );
 };

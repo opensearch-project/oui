@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,7 +37,7 @@ import {
 } from '../../test';
 
 import {
-  EuiFlexGroup,
+  OuiFlexGroup,
   GUTTER_SIZES,
   ALIGN_ITEMS,
   JUSTIFY_CONTENTS,
@@ -36,12 +47,12 @@ import {
 beforeAll(startThrowingReactWarnings);
 afterAll(stopThrowingReactWarnings);
 
-describe('EuiFlexGroup', () => {
+describe('OuiFlexGroup', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFlexGroup {...requiredProps}>
+      <OuiFlexGroup {...requiredProps}>
         <h2>My Child</h2>
-      </EuiFlexGroup>
+      </OuiFlexGroup>
     );
 
     expect(component).toMatchSnapshot();
@@ -51,7 +62,7 @@ describe('EuiFlexGroup', () => {
     describe('responsive', () => {
       [true, false].forEach((value) => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup responsive={value} />);
+          const component = render(<OuiFlexGroup responsive={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -61,7 +72,7 @@ describe('EuiFlexGroup', () => {
     describe('gutterSize', () => {
       GUTTER_SIZES.forEach((value) => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup gutterSize={value} />);
+          const component = render(<OuiFlexGroup gutterSize={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -71,7 +82,7 @@ describe('EuiFlexGroup', () => {
     describe('alignItems', () => {
       ALIGN_ITEMS.forEach((value) => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup alignItems={value} />);
+          const component = render(<OuiFlexGroup alignItems={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -81,7 +92,7 @@ describe('EuiFlexGroup', () => {
     describe('justifyContent', () => {
       JUSTIFY_CONTENTS.forEach((value) => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup justifyContent={value} />);
+          const component = render(<OuiFlexGroup justifyContent={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -91,7 +102,7 @@ describe('EuiFlexGroup', () => {
     describe('direction', () => {
       DIRECTIONS.forEach((value) => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup direction={value} />);
+          const component = render(<OuiFlexGroup direction={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -102,7 +113,7 @@ describe('EuiFlexGroup', () => {
       ['div', 'span'].forEach((value) => {
         test(`${value} is rendered`, () => {
           const component = render(
-            <EuiFlexGroup component={value as 'div' | 'span'} />
+            <OuiFlexGroup component={value as 'div' | 'span'} />
           );
 
           expect(component).toMatchSnapshot();
@@ -114,7 +125,7 @@ describe('EuiFlexGroup', () => {
           expect(() =>
             render(
               // @ts-ignore intentionally passing an invalid value
-              <EuiFlexGroup component={value} />
+              <OuiFlexGroup component={value} />
             )
           ).toThrow();
         });
@@ -124,7 +135,7 @@ describe('EuiFlexGroup', () => {
     describe('wrap', () => {
       [true, false].forEach((value) => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGroup wrap={value} />);
+          const component = render(<OuiFlexGroup wrap={value} />);
 
           expect(component).toMatchSnapshot();
         });

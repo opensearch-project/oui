@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiColorPicker,
-  EuiColorPickerSwatch,
-  EuiPageTemplate,
-  EuiSpacer,
-  EuiStat,
-  EuiTextArea,
-  EuiTourStep,
-  useEuiTour,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiColorPicker,
+  OuiColorPickerSwatch,
+  OuiPageTemplate,
+  OuiSpacer,
+  OuiStat,
+  OuiTextArea,
+  OuiTourStep,
+  useOuiTour,
 } from '../../../../src/components';
 import { ExampleContext } from '../../services';
 
@@ -51,10 +62,10 @@ export default () => {
   const [color, setColor] = useState('#000');
   const [selectedTabId, setSelectedTabId] = useState('query');
   const [
-    [euiTourStepOne, euiTourStepTwo, euiTourStepThree, euiTourStepFour],
+    [ouiTourStepOne, ouiTourStepTwo, ouiTourStepThree, ouiTourStepFour],
     actions,
     reducerState,
-  ] = useEuiTour(demoTourSteps, tourConfig);
+  ] = useOuiTour(demoTourSteps, tourConfig);
 
   const onSelectColor = (color) => {
     setColor(color);
@@ -82,95 +93,95 @@ export default () => {
       disabled: false,
       content: (
         <div>
-          <EuiSpacer />
-          <EuiTourStep
-            {...euiTourStepOne}
+          <OuiSpacer />
+          <OuiTourStep
+            {...ouiTourStepOne}
             content={
               <div>
                 <p>This is a neat thing. You enter queries here.</p>
-                <EuiSpacer />
-                <EuiButton color="primary" onClick={actions.incrementStep}>
+                <OuiSpacer />
+                <OuiButton color="primary" onClick={actions.incrementStep}>
                   Ok, got it.
-                </EuiButton>
+                </OuiButton>
               </div>
             }>
-            <EuiTextArea
+            <OuiTextArea
               placeholder="Placeholder text"
               aria-label="Enter ES SQL query"
               defaultValue="{queryValue}"
               style={{ width: 400 }}
             />
-          </EuiTourStep>
+          </OuiTourStep>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiTourStep
-            {...euiTourStepTwo}
+          <OuiTourStep
+            {...ouiTourStepTwo}
             footerAction={
-              <EuiButtonEmpty
+              <OuiButtonEmpty
                 color="text"
                 flush="right"
                 size="xs"
                 onClick={actions.incrementStep}>
                 {"I don't have a favorite color"}
-              </EuiButtonEmpty>
+              </OuiButtonEmpty>
             }>
-            <EuiColorPicker
+            <OuiColorPicker
               onChange={onSelectColor}
               color={color}
               mode="swatch"
               button={
-                <EuiColorPickerSwatch
+                <OuiColorPickerSwatch
                   color={color}
                   aria-label="Select a color"
                 />
               }
             />
-          </EuiTourStep>
+          </OuiTourStep>
         </div>
       ),
     },
     {
       id: 'stat',
       name: (
-        <EuiTourStep {...euiTourStepThree}>
+        <OuiTourStep {...ouiTourStepThree}>
           <span>Stats</span>
-        </EuiTourStep>
+        </OuiTourStep>
       ),
       disabled: false,
       content: (
         <div>
-          <EuiSpacer />
-          <EuiTourStep
-            {...euiTourStepFour}
+          <OuiSpacer />
+          <OuiTourStep
+            {...ouiTourStepFour}
             content={
               <div>
                 <p>That about does it.</p>
-                <EuiSpacer />
-                <EuiButton color="primary" onClick={onReset}>
+                <OuiSpacer />
+                <OuiButton color="primary" onClick={onReset}>
                   Take me to the start.
-                </EuiButton>
+                </OuiButton>
               </div>
             }>
             <div>
-              <EuiStat title="22,123" description="Queries" />
+              <OuiStat title="22,123" description="Queries" />
             </div>
-          </EuiTourStep>
+          </OuiTourStep>
         </div>
       ),
     },
   ];
 
   return (
-    <EuiPageTemplate
+    <OuiPageTemplate
       pageHeader={{
         pageTitle: 'My app',
         rightSideItems: [
           <ExampleContext.Consumer>
             {({ parentPath }) => (
-              <EuiButton fill href={`#${parentPath}`} iconType="exit">
+              <OuiButton fill href={`#${parentPath}`} iconType="exit">
                 Exit full screen demo
-              </EuiButton>
+              </OuiButton>
             )}
           </ExampleContext.Consumer>,
         ],
@@ -193,6 +204,6 @@ export default () => {
           )}
         </Fragment>
       ))}
-    </EuiPageTemplate>
+    </OuiPageTemplate>
   );
 };

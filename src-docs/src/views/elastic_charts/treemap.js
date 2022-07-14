@@ -1,18 +1,29 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../components';
 import { Chart, Partition, Settings, PartitionLayout } from '@elastic/charts';
 import { GITHUB_DATASET_MOD } from './data';
-import { euiPaletteColorBlind } from '../../../../src/services';
+import { ouiPaletteColorBlind } from '../../../../src/services';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
 } from '../../../../src/themes/charts/themes';
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiTitle,
-  EuiSpacer,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiTitle,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -26,7 +37,7 @@ export default () => {
   /**
    * Create a 3 rotation palette (one for each level)
    */
-  const groupedPalette = euiPaletteColorBlind({
+  const groupedPalette = ouiPaletteColorBlind({
     rotations: 3,
     order: 'group',
     sortBy: 'natural',
@@ -34,12 +45,12 @@ export default () => {
 
   return (
     <div>
-      <EuiTitle className="eui-textCenter" size="xs">
+      <OuiTitle className="oui-textCenter" size="xs">
         <h3>Github issues by label</h3>
-      </EuiTitle>
-      <EuiSpacer />
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
+      </OuiTitle>
+      <OuiSpacer />
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
           <Chart size={{ height: 240 }}>
             <Settings showLegend legendMaxDepth={2} />
             <Partition
@@ -51,8 +62,8 @@ export default () => {
                   groupByRollup: (d) => d.total,
                   shape: {
                     fillColor: isDarkTheme
-                      ? EUI_CHARTS_THEME_DARK.partition.sectorLineStroke
-                      : EUI_CHARTS_THEME_LIGHT.partition.sectorLineStroke,
+                      ? OUI_CHARTS_THEME_DARK.partition.sectorLineStroke
+                      : OUI_CHARTS_THEME_LIGHT.partition.sectorLineStroke,
                   },
                   hideInLegend: true,
                 },
@@ -72,20 +83,20 @@ export default () => {
               ]}
               config={{
                 ...(isDarkTheme
-                  ? EUI_CHARTS_THEME_DARK.partition
-                  : EUI_CHARTS_THEME_LIGHT.partition),
+                  ? OUI_CHARTS_THEME_DARK.partition
+                  : OUI_CHARTS_THEME_LIGHT.partition),
                 clockwiseSectors: false,
                 fillLabel: {
                   ...(isDarkTheme
-                    ? EUI_CHARTS_THEME_DARK.partition.fillLabel
-                    : EUI_CHARTS_THEME_LIGHT.partition.fillLabel),
+                    ? OUI_CHARTS_THEME_DARK.partition.fillLabel
+                    : OUI_CHARTS_THEME_LIGHT.partition.fillLabel),
                   textInvertible: true,
                 },
               }}
             />
           </Chart>
-        </EuiFlexItem>
-        <EuiFlexItem>
+        </OuiFlexItem>
+        <OuiFlexItem>
           <Chart size={{ height: 240 }}>
             <Settings showLegend legendMaxDepth={1} />
             <Partition
@@ -116,13 +127,13 @@ export default () => {
               config={{
                 partitionLayout: PartitionLayout.treemap,
                 ...(isDarkTheme
-                  ? EUI_CHARTS_THEME_DARK.partition
-                  : EUI_CHARTS_THEME_LIGHT.partition),
+                  ? OUI_CHARTS_THEME_DARK.partition
+                  : OUI_CHARTS_THEME_LIGHT.partition),
               }}
             />
           </Chart>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </OuiFlexItem>
+      </OuiFlexGrid>
     </div>
   );
 };

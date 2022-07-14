@@ -1,12 +1,23 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Themeable colors
-$euiHeaderBackgroundColor: $euiColorEmptyShade !default;
-$euiHeaderDarkBackgroundColor: lightOrDarkTheme(shade($euiColorDarkestShade, 28%), shade($euiColorLightestShade, 50%)) !default;
-$euiHeaderBorderColor: $euiBorderColor !default;
-$euiHeaderBreadcrumbColor: $euiColorDarkestShade !default;
+$ouiHeaderBackgroundColor: $ouiColorEmptyShade !default;
+$ouiHeaderDarkBackgroundColor: lightOrDarkTheme(shade($ouiColorDarkestShade, 28%), shade($ouiColorLightestShade, 50%)) !default;
+$ouiHeaderBorderColor: $ouiBorderColor !default;
+$ouiHeaderBreadcrumbColor: $ouiColorDarkestShade !default;
 
 // Layout vars
-$euiHeaderHeight: $euiSizeXXL + $euiSizeS !default;
-$euiHeaderChildSize: $euiHeaderHeight !default;
+$ouiHeaderHeight: $ouiSizeXXL + $ouiSizeS !default;
+$ouiHeaderChildSize: $ouiHeaderHeight !default;
 
 // Use the following variable in other components to afford for the fixed header
-$euiHeaderHeightCompensation: $euiHeaderHeight + 1px !default;
+$ouiHeaderHeightCompensation: $ouiHeaderHeight + 1px !default;

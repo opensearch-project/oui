@@ -1,60 +1,71 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
+import { OuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
   <div>
-    <EuiFlexGroup gutterSize="none">
-      <EuiFlexItem>None</EuiFlexItem>
-      <EuiFlexItem>None</EuiFlexItem>
-      <EuiFlexItem>None</EuiFlexItem>
-      <EuiFlexItem>None</EuiFlexItem>
-    </EuiFlexGroup>
+    <OuiFlexGroup gutterSize="none">
+      <OuiFlexItem>None</OuiFlexItem>
+      <OuiFlexItem>None</OuiFlexItem>
+      <OuiFlexItem>None</OuiFlexItem>
+      <OuiFlexItem>None</OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiFlexGroup gutterSize="xs">
-      <EuiFlexItem>Extra small</EuiFlexItem>
-      <EuiFlexItem>Extra small</EuiFlexItem>
-      <EuiFlexItem>Extra small</EuiFlexItem>
-      <EuiFlexItem>Extra small</EuiFlexItem>
-    </EuiFlexGroup>
+    <OuiFlexGroup gutterSize="xs">
+      <OuiFlexItem>Extra small</OuiFlexItem>
+      <OuiFlexItem>Extra small</OuiFlexItem>
+      <OuiFlexItem>Extra small</OuiFlexItem>
+      <OuiFlexItem>Extra small</OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiFlexGroup gutterSize="s">
-      <EuiFlexItem>Small</EuiFlexItem>
-      <EuiFlexItem>Small</EuiFlexItem>
-      <EuiFlexItem>Small</EuiFlexItem>
-      <EuiFlexItem>Small</EuiFlexItem>
-    </EuiFlexGroup>
+    <OuiFlexGroup gutterSize="s">
+      <OuiFlexItem>Small</OuiFlexItem>
+      <OuiFlexItem>Small</OuiFlexItem>
+      <OuiFlexItem>Small</OuiFlexItem>
+      <OuiFlexItem>Small</OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiFlexGroup gutterSize="m">
-      <EuiFlexItem>Medium</EuiFlexItem>
-      <EuiFlexItem>Medium</EuiFlexItem>
-      <EuiFlexItem>Medium</EuiFlexItem>
-      <EuiFlexItem>Medium</EuiFlexItem>
-    </EuiFlexGroup>
+    <OuiFlexGroup gutterSize="m">
+      <OuiFlexItem>Medium</OuiFlexItem>
+      <OuiFlexItem>Medium</OuiFlexItem>
+      <OuiFlexItem>Medium</OuiFlexItem>
+      <OuiFlexItem>Medium</OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiFlexGroup gutterSize="l">
-      <EuiFlexItem>Large (default)</EuiFlexItem>
-      <EuiFlexItem>Large (default)</EuiFlexItem>
-      <EuiFlexItem>Large (default)</EuiFlexItem>
-      <EuiFlexItem>Large (default)</EuiFlexItem>
-    </EuiFlexGroup>
+    <OuiFlexGroup gutterSize="l">
+      <OuiFlexItem>Large (default)</OuiFlexItem>
+      <OuiFlexItem>Large (default)</OuiFlexItem>
+      <OuiFlexItem>Large (default)</OuiFlexItem>
+      <OuiFlexItem>Large (default)</OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiFlexGroup gutterSize="xl">
-      <EuiFlexItem>Extra Large</EuiFlexItem>
-      <EuiFlexItem>Extra Large</EuiFlexItem>
-      <EuiFlexItem>Extra Large</EuiFlexItem>
-      <EuiFlexItem>Extra Large</EuiFlexItem>
-    </EuiFlexGroup>
+    <OuiFlexGroup gutterSize="xl">
+      <OuiFlexItem>Extra Large</OuiFlexItem>
+      <OuiFlexItem>Extra Large</OuiFlexItem>
+      <OuiFlexItem>Extra Large</OuiFlexItem>
+      <OuiFlexItem>Extra Large</OuiFlexItem>
+    </OuiFlexGroup>
   </div>
 );

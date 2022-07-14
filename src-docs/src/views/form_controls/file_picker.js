@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 import { DisplayToggles } from './display_toggles';
 
 import {
-  EuiFilePicker,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
-  EuiSpacer,
-  EuiSwitch,
+  OuiFilePicker,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiText,
+  OuiSpacer,
+  OuiSwitch,
 } from '../../../../src/components';
 
 export default () => {
@@ -38,13 +49,13 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={2}>
+      <OuiFlexGroup>
+        <OuiFlexItem grow={2}>
           {/* DisplayToggles wrapper for Docs only */}
           <DisplayToggles
             canReadOnly={false}
             extras={[
-              <EuiSwitch
+              <OuiSwitch
                 compressed
                 label={'large'}
                 checked={large}
@@ -53,7 +64,7 @@ export default () => {
                 }}
               />,
             ]}>
-            <EuiFilePicker
+            <OuiFilePicker
               id="asdf2"
               multiple
               initialPromptText="Select or drag and drop multiple files"
@@ -64,15 +75,15 @@ export default () => {
               aria-label="Use aria labels when no actual label is in use"
             />
           </DisplayToggles>
-          <EuiSpacer />
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiText>
+          <OuiSpacer />
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiText>
             <h3>Files attached</h3>
             {renderFiles()}
-          </EuiText>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiText>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </Fragment>
   );
 };

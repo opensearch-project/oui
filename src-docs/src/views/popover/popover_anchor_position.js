@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiPopover,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
-  EuiText,
+  OuiPopover,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSpacer,
+  OuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -72,234 +83,234 @@ export default () => {
   const closePopover12 = () => setIsPopoverOpen12(false);
 
   const noteHeight = (
-    <EuiText>
+    <OuiText>
       <p style={{ width: 200 }}>
         For left- or right-aligned popovers, make sure there is sufficient
         content. If the popover height is too short, the arrow positioning will
         appear off.
       </p>
-    </EuiText>
+    </OuiText>
   );
 
   return (
     <div>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+      <OuiFlexGroup>
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick1}>
                 downLeft
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen1}
             closePopover={closePopover1}
             anchorPosition="downLeft">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </OuiPopover>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick2}>
                 downCenter
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen2}
             closePopover={closePopover2}
             anchorPosition="downCenter">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </OuiPopover>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick3}>
                 downRight
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen3}
             closePopover={closePopover3}
             anchorPosition="downRight">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiPopover>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+      <OuiFlexGroup>
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick4}>
                 upLeft
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen4}
             closePopover={closePopover4}
             anchorPosition="upLeft">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </OuiPopover>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick5}>
                 upCenter
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen5}
             closePopover={closePopover5}
             anchorPosition="upCenter">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </OuiPopover>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick6}>
                 upRight
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen6}
             closePopover={closePopover6}
             anchorPosition="upRight">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiPopover>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+      <OuiFlexGroup>
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick7}>
                 leftUp
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen7}
             closePopover={closePopover7}
             anchorPosition="leftUp">
             {noteHeight}
-          </EuiPopover>
-        </EuiFlexItem>
+          </OuiPopover>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick8}>
                 leftCenter
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen8}
             closePopover={closePopover8}
             anchorPosition="leftCenter">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </OuiPopover>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick9}>
                 leftDown
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen9}
             closePopover={closePopover9}
             anchorPosition="leftDown">
             {noteHeight}
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiPopover>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+      <OuiFlexGroup>
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick10}>
                 rightUp
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen10}
             closePopover={closePopover10}
             anchorPosition="rightUp">
             {noteHeight}
-          </EuiPopover>
-        </EuiFlexItem>
+          </OuiPopover>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick11}>
                 rightCenter
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen11}
             closePopover={closePopover11}
             anchorPosition="rightCenter">
             Popover content
-          </EuiPopover>
-        </EuiFlexItem>
+          </OuiPopover>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             button={
-              <EuiButton
+              <OuiButton
                 iconType="arrowDown"
                 iconSide="right"
                 onClick={onButtonClick12}>
                 rightDown
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen12}
             closePopover={closePopover12}
             anchorPosition="rightDown">
             {noteHeight}
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiPopover>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </div>
   );
 };

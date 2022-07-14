@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiHue accepts a hex value 1`] = `
+exports[`OuiHue accepts a hex value 1`] = `
 Array [
   <label
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
     for="undefined-hue"
   >
     Select the HSV color mode 'hue' value
   </label>,
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     #00FFFF
   </p>,
   <div
-    class="euiHue testClass1 testClass2"
+    class="ouiHue testClass1 testClass2"
   >
     <input
       aria-label="aria-label"
-      class="euiHue__range"
+      class="ouiHue__range"
       data-test-subj="test subject string"
       id="undefined-hue"
       max="359"
@@ -32,24 +32,24 @@ Array [
 ]
 `;
 
-exports[`EuiHue accepts a hue value 1`] = `
+exports[`OuiHue accepts a hue value 1`] = `
 Array [
   <label
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
     for="undefined-hue"
   >
     Select the HSV color mode 'hue' value
   </label>,
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   />,
   <div
-    class="euiHue testClass1 testClass2"
+    class="ouiHue testClass1 testClass2"
   >
     <input
       aria-label="aria-label"
-      class="euiHue__range"
+      class="ouiHue__range"
       data-test-subj="test subject string"
       id="undefined-hue"
       max="359"
@@ -62,24 +62,24 @@ Array [
 ]
 `;
 
-exports[`EuiHue is rendered 1`] = `
+exports[`OuiHue is rendered 1`] = `
 Array [
   <label
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
     for="undefined-hue"
   >
     Select the HSV color mode 'hue' value
   </label>,
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   />,
   <div
-    class="euiHue testClass1 testClass2"
+    class="ouiHue testClass1 testClass2"
   >
     <input
       aria-label="aria-label"
-      class="euiHue__range"
+      class="ouiHue__range"
       data-test-subj="test subject string"
       id="undefined-hue"
       max="359"

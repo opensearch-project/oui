@@ -1,74 +1,74 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiLoadingLogo is rendered 1`] = `
+exports[`OuiLoadingLogo is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiLoadingLogo euiLoadingLogo--medium testClass1 testClass2"
+  class="ouiLoadingLogo ouiLoadingLogo--medium testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span
-    class="euiLoadingLogo__icon"
+    class="ouiLoadingLogo__icon"
   >
     <span
-      data-euiicon-type="logoKibana"
+      data-ouiicon-type="logoKibana"
     />
   </span>
 </span>
 `;
 
-exports[`EuiLoadingLogo logo is rendered 1`] = `
+exports[`OuiLoadingLogo logo is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiLoadingLogo euiLoadingLogo--medium testClass1 testClass2"
+  class="ouiLoadingLogo ouiLoadingLogo--medium testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span
-    class="euiLoadingLogo__icon"
+    class="ouiLoadingLogo__icon"
   >
     <span
-      data-euiicon-type="logoElastic"
+      data-ouiicon-type="logoElastic"
     />
   </span>
 </span>
 `;
 
-exports[`EuiLoadingLogo size l is rendered 1`] = `
+exports[`OuiLoadingLogo size l is rendered 1`] = `
 <span
-  class="euiLoadingLogo euiLoadingLogo--large"
+  class="ouiLoadingLogo ouiLoadingLogo--large"
 >
   <span
-    class="euiLoadingLogo__icon"
+    class="ouiLoadingLogo__icon"
   >
     <span
-      data-euiicon-type="logoKibana"
+      data-ouiicon-type="logoKibana"
     />
   </span>
 </span>
 `;
 
-exports[`EuiLoadingLogo size m is rendered 1`] = `
+exports[`OuiLoadingLogo size m is rendered 1`] = `
 <span
-  class="euiLoadingLogo euiLoadingLogo--medium"
+  class="ouiLoadingLogo ouiLoadingLogo--medium"
 >
   <span
-    class="euiLoadingLogo__icon"
+    class="ouiLoadingLogo__icon"
   >
     <span
-      data-euiicon-type="logoKibana"
+      data-ouiicon-type="logoKibana"
     />
   </span>
 </span>
 `;
 
-exports[`EuiLoadingLogo size xl is rendered 1`] = `
+exports[`OuiLoadingLogo size xl is rendered 1`] = `
 <span
-  class="euiLoadingLogo euiLoadingLogo--xLarge"
+  class="ouiLoadingLogo ouiLoadingLogo--xLarge"
 >
   <span
-    class="euiLoadingLogo__icon"
+    class="ouiLoadingLogo__icon"
   >
     <span
-      data-euiicon-type="logoKibana"
+      data-ouiicon-type="logoKibana"
     />
   </span>
 </span>

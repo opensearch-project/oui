@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiFlyout,
-  EuiFlyoutHeader,
-  EuiFlyoutBody,
-  EuiButton,
-  EuiTitle,
-  EuiFormRow,
-  EuiButtonGroup,
+  OuiFlyout,
+  OuiFlyoutHeader,
+  OuiFlyoutBody,
+  OuiButton,
+  OuiTitle,
+  OuiFormRow,
+  OuiButtonGroup,
 } from '../../../../src/components';
 
 export default () => {
@@ -41,19 +52,19 @@ export default () => {
   let flyout;
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <OuiFlyout
         ownFocus
         onClose={closeFlyout}
         size={size}
         aria-labelledby="flyoutLargeTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <OuiFlyoutHeader hasBorder>
+          <OuiTitle size="m">
             <h2 id="flyoutLargeTitle">A {sizeName.toLowerCase()} flyout</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiFormRow label="Change the paddingSize">
-            <EuiButtonGroup
+          </OuiTitle>
+        </OuiFlyoutHeader>
+        <OuiFlyoutBody>
+          <OuiFormRow label="Change the paddingSize">
+            <OuiButtonGroup
               legend="Flyout size"
               color="primary"
               size="s"
@@ -67,14 +78,14 @@ export default () => {
                 setSizeName(newName);
               }}
             />
-          </EuiFormRow>
-        </EuiFlyoutBody>
-      </EuiFlyout>
+          </OuiFormRow>
+        </OuiFlyoutBody>
+      </OuiFlyout>
     );
   }
   return (
     <div>
-      <EuiButton onClick={showFlyout}>Show flyout to test widths</EuiButton>
+      <OuiButton onClick={showFlyout}>Show flyout to test widths</OuiButton>
       {flyout}
     </div>
   );

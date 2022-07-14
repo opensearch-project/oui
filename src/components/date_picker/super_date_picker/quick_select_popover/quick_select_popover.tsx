@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,18 +30,18 @@
 
 import React, { Component, Fragment } from 'react';
 
-import { EuiButtonEmpty } from '../../../button';
-import { EuiIcon } from '../../../icon';
-import { EuiPopover } from '../../../popover';
-import { EuiTitle } from '../../../title';
-import { EuiSpacer } from '../../../spacer';
-import { EuiHorizontalRule } from '../../../horizontal_rule';
-import { EuiText } from '../../../text';
+import { OuiButtonEmpty } from '../../../button';
+import { OuiIcon } from '../../../icon';
+import { OuiPopover } from '../../../popover';
+import { OuiTitle } from '../../../title';
+import { OuiSpacer } from '../../../spacer';
+import { OuiHorizontalRule } from '../../../horizontal_rule';
+import { OuiText } from '../../../text';
 
-import { EuiQuickSelect } from './quick_select';
-import { EuiCommonlyUsedTimeRanges } from './commonly_used_time_ranges';
-import { EuiRecentlyUsed } from './recently_used';
-import { EuiRefreshInterval } from './refresh_interval';
+import { OuiQuickSelect } from './quick_select';
+import { OuiCommonlyUsedTimeRanges } from './commonly_used_time_ranges';
+import { OuiRecentlyUsed } from './recently_used';
+import { OuiRefreshInterval } from './refresh_interval';
 import {
   DurationRange,
   ApplyRefreshInterval,
@@ -39,7 +50,7 @@ import {
   QuickSelectPanel,
 } from '../../types';
 
-export interface EuiQuickSelectPopoverProps {
+export interface OuiQuickSelectPopoverProps {
   applyRefreshInterval?: ApplyRefreshInterval;
   applyTime: ApplyTime;
   commonlyUsedRanges: DurationRange[];
@@ -54,16 +65,16 @@ export interface EuiQuickSelectPopoverProps {
   start: string;
 }
 
-interface EuiQuickSelectPopoverState {
+interface OuiQuickSelectPopoverState {
   isOpen: boolean;
   prevQuickSelect?: QuickSelect;
 }
 
-export class EuiQuickSelectPopover extends Component<
-  EuiQuickSelectPopoverProps,
-  EuiQuickSelectPopoverState
+export class OuiQuickSelectPopover extends Component<
+  OuiQuickSelectPopoverProps,
+  OuiQuickSelectPopoverState
 > {
-  state: EuiQuickSelectPopoverState = {
+  state: OuiQuickSelectPopoverState = {
     isOpen: false,
   };
 
@@ -112,17 +123,17 @@ export class EuiQuickSelectPopover extends Component<
 
     return (
       <Fragment>
-        <EuiQuickSelect
+        <OuiQuickSelect
           applyTime={this.applyTime}
           start={start}
           end={end}
           prevQuickSelect={prevQuickSelect}
         />
-        <EuiCommonlyUsedTimeRanges
+        <OuiCommonlyUsedTimeRanges
           applyTime={this.applyTime}
           commonlyUsedRanges={commonlyUsedRanges}
         />
-        <EuiRecentlyUsed
+        <OuiRecentlyUsed
           applyTime={this.applyTime}
           commonlyUsedRanges={commonlyUsedRanges}
           dateFormat={dateFormat}
@@ -142,14 +153,14 @@ export class EuiQuickSelectPopover extends Component<
     return customQuickSelectPanels.map(({ title, content }) => {
       return (
         <Fragment key={title}>
-          <EuiTitle size="xxxs">
+          <OuiTitle size="xxxs">
             <span>{title}</span>
-          </EuiTitle>
-          <EuiSpacer size="s" />
-          <EuiText size="s" className="euiQuickSelectPopover__section">
+          </OuiTitle>
+          <OuiSpacer size="s" />
+          <OuiText size="s" className="ouiQuickSelectPopover__section">
             {React.cloneElement(content, { applyTime: this.applyTime })}
-          </EuiText>
-          <EuiHorizontalRule margin="s" />
+          </OuiText>
+          <OuiHorizontalRule margin="s" />
         </Fragment>
       );
     });
@@ -166,9 +177,9 @@ export class EuiQuickSelectPopover extends Component<
     const { isOpen } = this.state;
 
     const quickSelectButton = (
-      <EuiButtonEmpty
-        className="euiFormControlLayout__prepend"
-        textProps={{ className: 'euiQuickSelectPopover__buttonText' }}
+      <OuiButtonEmpty
+        className="ouiFormControlLayout__prepend"
+        textProps={{ className: 'ouiQuickSelectPopover__buttonText' }}
         onClick={this.togglePopover}
         aria-label="Date quick select"
         size="xs"
@@ -176,28 +187,28 @@ export class EuiQuickSelectPopover extends Component<
         iconSide="right"
         isDisabled={isDisabled}
         data-test-subj="superDatePickerToggleQuickMenuButton">
-        <EuiIcon type={!isAutoRefreshOnly && isPaused ? 'calendar' : 'clock'} />
-      </EuiButtonEmpty>
+        <OuiIcon type={!isAutoRefreshOnly && isPaused ? 'calendar' : 'clock'} />
+      </OuiButtonEmpty>
     );
 
     return (
-      <EuiPopover
+      <OuiPopover
         button={quickSelectButton}
         isOpen={isOpen}
         closePopover={this.closePopover}
         anchorPosition="downLeft"
-        anchorClassName="euiQuickSelectPopover__anchor">
+        anchorClassName="ouiQuickSelectPopover__anchor">
         <div
-          className="euiQuickSelectPopover__content"
+          className="ouiQuickSelectPopover__content"
           data-test-subj="superDatePickerQuickMenu">
           {this.renderDateTimeSections()}
-          <EuiRefreshInterval
+          <OuiRefreshInterval
             applyRefreshInterval={applyRefreshInterval}
             isPaused={isPaused}
             refreshInterval={refreshInterval}
           />
         </div>
-      </EuiPopover>
+      </OuiPopover>
     );
   }
 }

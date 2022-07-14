@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Helmet } from 'react-helmet';
@@ -5,10 +16,10 @@ import { GuidePageChrome, ThemeContext } from '../components';
 import { translateUsingPseudoLocale } from '../services';
 
 import {
-  EuiErrorBoundary,
-  EuiPage,
-  EuiContext,
-  EuiPageBody,
+  OuiErrorBoundary,
+  OuiPage,
+  OuiContext,
+  OuiPageBody,
 } from '../../../src/components';
 
 import { keys } from '../../../src/services';
@@ -55,7 +66,7 @@ export class AppView extends Component {
     return (
       <>
         <Helmet>
-          <title>{`${this.props.currentRoute.name} - Elastic UI Framework`}</title>
+          <title>{`${this.props.currentRoute.name} - OpenSearch UI Framework`}</title>
           <link
             rel="icon"
             type="image/png"
@@ -79,18 +90,18 @@ export class AppView extends Component {
           onToggleLocale={toggleLocale}
           selectedLocale={locale}
         />
-        <EuiPage paddingSize="none">
-          <EuiErrorBoundary>
+        <OuiPage paddingSize="none">
+          <OuiErrorBoundary>
             <GuidePageChrome
               currentRoute={currentRoute}
               navigation={navigation}
               onToggleLocale={toggleLocale}
               selectedLocale={locale}
             />
-          </EuiErrorBoundary>
+          </OuiErrorBoundary>
 
-          <EuiPageBody panelled>
-            <EuiContext i18n={i18n}>
+          <OuiPageBody panelled>
+            <OuiContext i18n={i18n}>
               <ThemeContext.Consumer>
                 {(context) => {
                   return React.cloneElement(children, {
@@ -99,9 +110,9 @@ export class AppView extends Component {
                   });
                 }}
               </ThemeContext.Consumer>
-            </EuiContext>
-          </EuiPageBody>
-        </EuiPage>
+            </OuiContext>
+          </OuiPageBody>
+        </OuiPage>
       </>
     );
   }

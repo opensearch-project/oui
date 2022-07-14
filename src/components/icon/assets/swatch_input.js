@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import * as React from 'react';
 
-const EuiIconSwatchInput = ({ title, titleId, ...props }) => (
+const OuiIconSwatchInput = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -11,7 +22,7 @@ const EuiIconSwatchInput = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <rect x={2} y={2} width={12} height={12} rx={3} />
     <rect
-      className="euiSwatchInput__stroke"
+      className="ouiSwatchInput__stroke"
       x={2.5}
       y={2.5}
       width={11}
@@ -21,4 +32,4 @@ const EuiIconSwatchInput = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconSwatchInput;
+export const icon = OuiIconSwatchInput;

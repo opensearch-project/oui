@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -36,24 +47,24 @@ export const insertPositions: InsertPositionsMap = {
   before: 'beforebegin',
 };
 
-export const INSERT_POSITIONS: EuiPortalInsertPosition[] = keysOf(
+export const INSERT_POSITIONS: OuiPortalInsertPosition[] = keysOf(
   insertPositions
 );
 
-type EuiPortalInsertPosition = keyof typeof insertPositions;
+type OuiPortalInsertPosition = keyof typeof insertPositions;
 
-export interface EuiPortalProps {
+export interface OuiPortalProps {
   /**
    * ReactNode to render as this component's content
    */
   children: ReactNode;
-  insert?: { sibling: HTMLElement; position: EuiPortalInsertPosition };
+  insert?: { sibling: HTMLElement; position: OuiPortalInsertPosition };
   portalRef?: (ref: HTMLDivElement | null) => void;
 }
 
-export class EuiPortal extends Component<EuiPortalProps> {
+export class OuiPortal extends Component<OuiPortalProps> {
   portalNode: HTMLDivElement;
-  constructor(props: EuiPortalProps) {
+  constructor(props: OuiPortalProps) {
     super(props);
 
     const { insert } = this.props;

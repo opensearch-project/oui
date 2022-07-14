@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +32,14 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiAccordion } from './accordion';
+import { OuiAccordion } from './accordion';
 
 let id = 0;
 const getId = () => `${id++}`;
 
-describe('EuiAccordion', () => {
+describe('OuiAccordion', () => {
   test('is rendered', () => {
-    const component = render(<EuiAccordion id={getId()} {...requiredProps} />);
+    const component = render(<OuiAccordion id={getId()} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -37,7 +48,7 @@ describe('EuiAccordion', () => {
     describe('buttonContentClassName', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion
+          <OuiAccordion
             id={getId()}
             buttonContentClassName="button content class name"
           />
@@ -50,7 +61,7 @@ describe('EuiAccordion', () => {
     describe('buttonContent', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion
+          <OuiAccordion
             id={getId()}
             buttonContent={<div>Button content</div>}
           />
@@ -63,7 +74,7 @@ describe('EuiAccordion', () => {
     describe('buttonProps', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} buttonProps={requiredProps} />
+          <OuiAccordion id={getId()} buttonProps={requiredProps} />
         );
 
         expect(component).toMatchSnapshot();
@@ -73,7 +84,7 @@ describe('EuiAccordion', () => {
     describe('extraAction', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion
+          <OuiAccordion
             id={getId()}
             extraAction={<button>Extra action</button>}
           />
@@ -86,9 +97,9 @@ describe('EuiAccordion', () => {
     describe('initialIsOpen', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} initialIsOpen={true}>
+          <OuiAccordion id={getId()} initialIsOpen={true}>
             <p>You can see me.</p>
-          </EuiAccordion>
+          </OuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -98,9 +109,9 @@ describe('EuiAccordion', () => {
     describe('arrowDisplay', () => {
       it('right is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} arrowDisplay="right">
+          <OuiAccordion id={getId()} arrowDisplay="right">
             <p>You can see me.</p>
-          </EuiAccordion>
+          </OuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -108,9 +119,9 @@ describe('EuiAccordion', () => {
 
       it('none is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} arrowDisplay="none">
+          <OuiAccordion id={getId()} arrowDisplay="none">
             <p>You can see me.</p>
-          </EuiAccordion>
+          </OuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -120,9 +131,9 @@ describe('EuiAccordion', () => {
     describe('forceState', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} forceState="closed">
+          <OuiAccordion id={getId()} forceState="closed">
             <p>You can not see me</p>
-          </EuiAccordion>
+          </OuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -131,7 +142,7 @@ describe('EuiAccordion', () => {
       it('accepts and calls an optional callback on click', () => {
         const onToggleHandler = jest.fn();
         const component = mount(
-          <EuiAccordion
+          <OuiAccordion
             id={getId()}
             onToggle={onToggleHandler}
             forceState="closed"
@@ -147,9 +158,9 @@ describe('EuiAccordion', () => {
     describe('isLoading', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} isLoading>
+          <OuiAccordion id={getId()} isLoading>
             <p>You can see me.</p>
-          </EuiAccordion>
+          </OuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -159,9 +170,9 @@ describe('EuiAccordion', () => {
     describe('isLoadingMessage', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiAccordion id={getId()} isLoadingMessage="Please wait" isLoading>
+          <OuiAccordion id={getId()} isLoadingMessage="Please wait" isLoading>
             <p>You can&apos;t see me.</p>
-          </EuiAccordion>
+          </OuiAccordion>
         );
 
         expect(component).toMatchSnapshot();
@@ -171,7 +182,7 @@ describe('EuiAccordion', () => {
 
   describe('behavior', () => {
     it('opens when clicked once', () => {
-      const component = mount(<EuiAccordion id={getId()} />);
+      const component = mount(<OuiAccordion id={getId()} />);
 
       component.find('button').simulate('click');
 
@@ -179,7 +190,7 @@ describe('EuiAccordion', () => {
     });
 
     it('closes when clicked twice', () => {
-      const component = mount(<EuiAccordion id={getId()} />);
+      const component = mount(<OuiAccordion id={getId()} />);
 
       component.find('button').simulate('click');
       component.find('button').simulate('click');
@@ -190,7 +201,7 @@ describe('EuiAccordion', () => {
     it('accepts and calls an optional callback on open and close', () => {
       const onToggleHandler = jest.fn();
       const component = mount(
-        <EuiAccordion id={getId()} onToggle={onToggleHandler} />
+        <OuiAccordion id={getId()} onToggle={onToggleHandler} />
       );
 
       component.find('button').simulate('click');
@@ -203,7 +214,7 @@ describe('EuiAccordion', () => {
     });
 
     it('moves focus to the content when expanded', () => {
-      const component = mount<EuiAccordion>(<EuiAccordion id={getId()} />);
+      const component = mount<OuiAccordion>(<OuiAccordion id={getId()} />);
       const accordionClass = component.instance();
       const childWrapper = accordionClass.childWrapper;
 

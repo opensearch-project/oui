@@ -1,18 +1,29 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiCallOut,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFlyout,
-  EuiFlyoutHeader,
-  EuiFlyoutBody,
-  EuiFlyoutFooter,
-  EuiButtonGroup,
-  EuiButton,
-  EuiFormRow,
-  EuiTitle,
+  OuiButtonEmpty,
+  OuiCallOut,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFlyout,
+  OuiFlyoutHeader,
+  OuiFlyoutBody,
+  OuiFlyoutFooter,
+  OuiButtonGroup,
+  OuiButton,
+  OuiFormRow,
+  OuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -44,7 +55,7 @@ export default () => {
   const showFlyout = () => setIsFlyoutVisible(true);
 
   const callOut = (
-    <EuiCallOut
+    <OuiCallOut
       title={`The banner left and right padding is ${paddingSizeName} to match that of flyout`}
     />
   );
@@ -52,22 +63,22 @@ export default () => {
   let flyout;
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <OuiFlyout
         ownFocus
         onClose={closeFlyout}
         paddingSize={paddingSize}
         id="flyoutMediumPadding"
         aria-labelledby="flyoutMediumPaddingTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <OuiFlyoutHeader hasBorder>
+          <OuiTitle size="m">
             <h2 id="flyoutMediumPaddingTitle">
               A flyout with a {paddingSizeName} padding
             </h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody banner={callOut}>
-          <EuiFormRow label="Change the paddingSize">
-            <EuiButtonGroup
+          </OuiTitle>
+        </OuiFlyoutHeader>
+        <OuiFlyoutBody banner={callOut}>
+          <OuiFormRow label="Change the paddingSize">
+            <OuiButtonGroup
               legend="Flyout paddingSize"
               color="primary"
               size="s"
@@ -81,38 +92,38 @@ export default () => {
                 setPaddingSizeName(newName);
               }}
             />
-          </EuiFormRow>
-        </EuiFlyoutBody>
-        <EuiFlyoutFooter>
-          <EuiFlexGroup justifyContent="spaceBetween">
-            <EuiFlexItem grow={false}>
-              <EuiButtonEmpty
+          </OuiFormRow>
+        </OuiFlyoutBody>
+        <OuiFlyoutFooter>
+          <OuiFlexGroup justifyContent="spaceBetween">
+            <OuiFlexItem grow={false}>
+              <OuiButtonEmpty
                 iconType="cross"
                 onClick={closeFlyout}
                 flush="left">
                 Close
-              </EuiButtonEmpty>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton onClick={closeFlyout} fill>
+              </OuiButtonEmpty>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiButton onClick={closeFlyout} fill>
                 Save
-              </EuiButton>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiFlyoutFooter>
-      </EuiFlyout>
+              </OuiButton>
+            </OuiFlexItem>
+          </OuiFlexGroup>
+        </OuiFlyoutFooter>
+      </OuiFlyout>
     );
   }
   return (
     <>
-      <EuiButton
+      <OuiButton
         onClick={showFlyout}
         aria-controls="flyoutMediumPadding"
         aria-expanded={isFlyoutVisible}
         aria-haspopup="true"
         aria-label="Show padding size flyout">
         Show flyout to test padding sizes
-      </EuiButton>
+      </OuiButton>
       {flyout}
     </>
   );

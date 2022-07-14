@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiHeader is rendered 1`] = `
+exports[`OuiHeader is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiHeader euiHeader--default euiHeader--static testClass1 testClass2"
+  class="ouiHeader ouiHeader--default ouiHeader--static testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiHeader renders children 1`] = `
+exports[`OuiHeader renders children 1`] = `
 <div
-  class="euiHeader euiHeader--default euiHeader--static"
+  class="ouiHeader ouiHeader--default ouiHeader--static"
 >
   <span>
     Hello!
@@ -18,15 +18,15 @@ exports[`EuiHeader renders children 1`] = `
 </div>
 `;
 
-exports[`EuiHeader renders dark theme 1`] = `
+exports[`OuiHeader renders dark theme 1`] = `
 <div
-  class="euiHeader euiHeader--dark euiHeader--static"
+  class="ouiHeader ouiHeader--dark ouiHeader--static"
 />
 `;
 
-exports[`EuiHeader renders in fixed position 1`] = `
+exports[`OuiHeader renders in fixed position 1`] = `
 <div
-  class="euiHeader euiHeader--default euiHeader--fixed"
+  class="ouiHeader ouiHeader--default ouiHeader--fixed"
 >
   <span>
     Hello!
@@ -34,17 +34,17 @@ exports[`EuiHeader renders in fixed position 1`] = `
 </div>
 `;
 
-exports[`EuiHeader sections render breadcrumbs and props 1`] = `
+exports[`OuiHeader sections render breadcrumbs and props 1`] = `
 <div
-  class="euiHeader euiHeader--default euiHeader--static"
+  class="ouiHeader ouiHeader--default ouiHeader--static"
 >
   <nav
     aria-label="breadcrumb"
-    class="euiBreadcrumbs euiHeaderBreadcrumbs euiBreadcrumbs--truncate"
+    class="ouiBreadcrumbs ouiHeaderBreadcrumbs ouiBreadcrumbs--truncate"
   >
     <span
       aria-current="page"
-      class="euiBreadcrumb euiBreadcrumb--last"
+      class="ouiBreadcrumb ouiBreadcrumb--last"
     >
       Breadcrumb
     </span>
@@ -52,34 +52,34 @@ exports[`EuiHeader sections render breadcrumbs and props 1`] = `
 </div>
 `;
 
-exports[`EuiHeader sections render simple items and borders 1`] = `
+exports[`OuiHeader sections render simple items and borders 1`] = `
 <div
-  class="euiHeader euiHeader--default euiHeader--static"
+  class="ouiHeader ouiHeader--default ouiHeader--static"
 >
   <div
-    class="euiHeaderSection euiHeaderSection--dontGrow euiHeaderSection--left"
+    class="ouiHeaderSection ouiHeaderSection--dontGrow ouiHeaderSection--left"
   >
     <div
-      class="euiHeaderSectionItem euiHeaderSectionItem--borderRight"
+      class="ouiHeaderSectionItem ouiHeaderSectionItem--borderRight"
     >
       Item 1
     </div>
     <div
-      class="euiHeaderSectionItem euiHeaderSectionItem--borderRight"
+      class="ouiHeaderSectionItem ouiHeaderSectionItem--borderRight"
     >
       Item 2
     </div>
   </div>
   <div
-    class="euiHeaderSection euiHeaderSection--dontGrow euiHeaderSection--left"
+    class="ouiHeaderSection ouiHeaderSection--dontGrow ouiHeaderSection--left"
   >
     <div
-      class="euiHeaderSectionItem euiHeaderSectionItem--borderLeft"
+      class="ouiHeaderSectionItem ouiHeaderSectionItem--borderLeft"
     >
       Item A
     </div>
     <div
-      class="euiHeaderSectionItem euiHeaderSectionItem--borderLeft"
+      class="ouiHeaderSectionItem ouiHeaderSectionItem--borderLeft"
     >
       Item B
     </div>
@@ -87,20 +87,20 @@ exports[`EuiHeader sections render simple items and borders 1`] = `
 </div>
 `;
 
-exports[`EuiHeader throws a warning if both children and sections were passed 1`] = `
+exports[`OuiHeader throws a warning if both children and sections were passed 1`] = `
 <div
-  class="euiHeader euiHeader--default euiHeader--static"
+  class="ouiHeader ouiHeader--default ouiHeader--static"
 >
   <div
-    class="euiHeaderSection euiHeaderSection--dontGrow euiHeaderSection--left"
+    class="ouiHeaderSection ouiHeaderSection--dontGrow ouiHeaderSection--left"
   >
     <div
-      class="euiHeaderSectionItem euiHeaderSectionItem--borderLeft"
+      class="ouiHeaderSectionItem ouiHeaderSectionItem--borderLeft"
     >
       Item 1
     </div>
     <div
-      class="euiHeaderSectionItem euiHeaderSectionItem--borderLeft"
+      class="ouiHeaderSectionItem ouiHeaderSectionItem--borderLeft"
     >
       Item 2
     </div>

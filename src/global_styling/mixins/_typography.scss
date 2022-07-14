@@ -1,32 +1,43 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // sass-lint:disable no-vendor-prefixes
 // sass-lint:disable no-important
 
 // Our base fonts
 
-@mixin euiFont {
-  font-family: $euiFontFamily;
-  font-weight: $euiFontWeightRegular;
+@mixin ouiFont {
+  font-family: $ouiFontFamily;
+  font-weight: $ouiFontWeightRegular;
   letter-spacing: -.005em;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   font-kerning: normal;
 }
 
-@mixin euiCodeFont {
-  font-family: $euiCodeFontFamily;
+@mixin ouiCodeFont {
+  font-family: $ouiCodeFontFamily;
   letter-spacing: normal;
 }
 
-@mixin euiText {
-  color: $euiTextColor;
-  font-weight: $euiFontWeightRegular;
+@mixin ouiText {
+  color: $ouiTextColor;
+  font-weight: $ouiFontWeightRegular;
 }
 
-@mixin euiTitle($size: 'm') {
-  color: $euiTitleColor;
+@mixin ouiTitle($size: 'm') {
+  color: $ouiTitleColor;
 
-  @if (map-has-key($euiTitles, $size)) {
-    @each $property, $value in map-get($euiTitles, $size) {
+  @if (map-has-key($ouiTitles, $size)) {
+    @each $property, $value in map-get($ouiTitles, $size) {
       @if ($property == 'font-size') {
         @include fontSize($value);
       } @else {
@@ -41,33 +52,33 @@
 
 // Font sizing extends, using rem mixin
 
-@mixin euiFontSizeXS {
-  @include fontSize($euiFontSizeXS);
-  line-height: $euiLineHeight;
+@mixin ouiFontSizeXS {
+  @include fontSize($ouiFontSizeXS);
+  line-height: $ouiLineHeight;
 }
 
-@mixin euiFontSizeS {
-  @include fontSize($euiFontSizeS);
-  line-height: $euiLineHeight;
+@mixin ouiFontSizeS {
+  @include fontSize($ouiFontSizeS);
+  line-height: $ouiLineHeight;
 }
 
-@mixin euiFontSize {
-  @include fontSize($euiFontSize);
-  line-height: $euiLineHeight;
+@mixin ouiFontSize {
+  @include fontSize($ouiFontSize);
+  line-height: $ouiLineHeight;
 }
 
-@mixin euiFontSizeM {
-  @include fontSize($euiFontSizeM);
-  line-height: $euiLineHeight;
+@mixin ouiFontSizeM {
+  @include fontSize($ouiFontSizeM);
+  line-height: $ouiLineHeight;
 }
 
-@mixin euiFontSizeL {
-  @include fontSize($euiFontSizeL);
-  line-height: $euiLineHeight;
+@mixin ouiFontSizeL {
+  @include fontSize($ouiFontSizeL);
+  line-height: $ouiLineHeight;
 }
 
-@mixin euiFontSizeXL {
-  @each $property, $value in map-get($euiTitles, 'm') {
+@mixin ouiFontSizeXL {
+  @each $property, $value in map-get($ouiTitles, 'm') {
     @if ($property == 'font-size') {
       @include fontSize($value);
     } @else {
@@ -77,8 +88,8 @@
   line-height: 1.25;
 }
 
-@mixin euiFontSizeXXL {
-  @each $property, $value in map-get($euiTitles, 'l') {
+@mixin ouiFontSizeXXL {
+  @each $property, $value in map-get($ouiTitles, 'l') {
     @if ($property == 'font-size') {
       @include fontSize($value);
     } @else {
@@ -88,7 +99,7 @@
   line-height: 1.25;
 }
 
-@mixin euiTextBreakWord {
+@mixin ouiTextBreakWord {
   // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
   overflow-wrap: break-word !important; // makes sure the long string will wrap and not bust out of the container
   word-wrap: break-word !important; // spec says, they are literally just alternate names for each other but some browsers support one and not the other
@@ -105,7 +116,7 @@
 // 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
 //    nodes.
 
-@mixin euiTextTruncate {
+@mixin ouiTextTruncate {
   // sass-lint:disable-block no-important
   max-width: 100%; // 1
   overflow: hidden !important;
@@ -114,8 +125,8 @@
   word-wrap: normal !important; // 2
 }
 
-@mixin euiNumberFormat {
-  font-feature-settings: $euiFontFeatureSettings, 'tnum' 1; // Fixed-width numbers for tabular data
+@mixin ouiNumberFormat {
+  font-feature-settings: $ouiFontFeatureSettings, 'tnum' 1; // Fixed-width numbers for tabular data
 }
 
 
@@ -125,7 +136,7 @@
 // this mixin will ensure that the sizing is dependent on the boldest
 // weight so it doesn't shifter sibling content.
 
-@mixin euiTextShift($fontWeight: $euiFontWeightBold, $attr: 'data-text') {
+@mixin ouiTextShift($fontWeight: $ouiFontWeightBold, $attr: 'data-text') {
   &::after {
     display: block;
     content: attr(#{$attr});

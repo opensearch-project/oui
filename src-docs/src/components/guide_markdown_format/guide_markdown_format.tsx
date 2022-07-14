@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { FunctionComponent } from 'react';
 import {
-  EuiMarkdownFormat,
-  getDefaultEuiMarkdownProcessingPlugins,
+  OuiMarkdownFormat,
+  getDefaultOuiMarkdownProcessingPlugins,
 } from '../../../../src/components/markdown_editor';
-import { EuiText } from '../../../../src/components/text';
-import { EuiTitle } from '../../../../src/components/title';
+import { OuiText } from '../../../../src/components/text';
+import { OuiTitle } from '../../../../src/components/title';
 import { slugify } from '../../../../src/services';
 
 export type GuideMarkdownFormatProps = {
@@ -14,40 +25,40 @@ export type GuideMarkdownFormatProps = {
 export const GuideMarkdownFormat: FunctionComponent<GuideMarkdownFormatProps> = ({
   children,
 }) => {
-  const processingPlugins = getDefaultEuiMarkdownProcessingPlugins();
+  const processingPlugins = getDefaultOuiMarkdownProcessingPlugins();
   const rehype2reactConfig = processingPlugins[1][1];
 
   rehype2reactConfig.components.h2 = ({ children }) => {
     const id = slugify(children[0]);
 
     return (
-      <EuiTitle>
+      <OuiTitle>
         <h2 id={id}>{children}</h2>
-      </EuiTitle>
+      </OuiTitle>
     );
   };
 
   rehype2reactConfig.components.p = ({ children }) => (
-    <EuiText grow={false}>
+    <OuiText grow={false}>
       <p>{children}</p>
-    </EuiText>
+    </OuiText>
   );
 
   rehype2reactConfig.components.ul = ({ children }) => (
-    <EuiText grow={false}>
+    <OuiText grow={false}>
       <ul>{children}</ul>
-    </EuiText>
+    </OuiText>
   );
 
   rehype2reactConfig.components.ol = ({ children }) => (
-    <EuiText grow={false}>
+    <OuiText grow={false}>
       <ol>{children}</ol>
-    </EuiText>
+    </OuiText>
   );
 
   return (
-    <EuiMarkdownFormat processingPluginList={processingPlugins}>
+    <OuiMarkdownFormat processingPluginList={processingPlugins}>
       {children}
-    </EuiMarkdownFormat>
+    </OuiMarkdownFormat>
   );
 };

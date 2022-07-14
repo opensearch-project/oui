@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiFormErrorText } from './form_error_text';
+import { OuiFormErrorText } from './form_error_text';
 
-describe('EuiFormErrorText', () => {
+describe('OuiFormErrorText', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFormErrorText {...requiredProps}>This is an error.</EuiFormErrorText>
+      <OuiFormErrorText {...requiredProps}>This is an error.</OuiFormErrorText>
     );
 
     expect(component).toMatchSnapshot();

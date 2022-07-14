@@ -1,25 +1,36 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiCard,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
+  OuiButton,
+  OuiCard,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiIcon,
 } from '../../../../src/components';
 
 const cardFooterContent = (
-  <EuiFlexGroup justifyContent="flexEnd">
-    <EuiFlexItem grow={false}>
-      <EuiButton>Go for it</EuiButton>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+  <OuiFlexGroup justifyContent="flexEnd">
+    <OuiFlexItem grow={false}>
+      <OuiButton>Go for it</OuiButton>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );
 
 export default () => (
-  <EuiFlexGroup gutterSize="l">
-    <EuiFlexItem>
-      <EuiCard
+  <OuiFlexGroup gutterSize="l">
+    <OuiFlexItem>
+      <OuiCard
         textAlign="left"
         image={
           <div>
@@ -33,25 +44,25 @@ export default () => (
         description="Example of a card's description. Stick to one or two sentences."
         footer={cardFooterContent}
       />
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiCard
+    </OuiFlexItem>
+    <OuiFlexItem>
+      <OuiCard
         textAlign="left"
         image="https://source.unsplash.com/400x200/?Water"
         title="Elastic in Water"
         description="Example of a card's description. Stick to one or two sentences."
         footer={cardFooterContent}
       />
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiCard
+    </OuiFlexItem>
+    <OuiFlexItem>
+      <OuiCard
         textAlign="left"
         href="https://elastic.github.io/eui/"
         image="https://source.unsplash.com/400x200/?City"
-        icon={<EuiIcon size="xxl" type="logoBeats" />}
+        icon={<OuiIcon size="xxl" type="logoBeats" />}
         title={'Beats in the City'}
         description="This card has an href and should be a link."
       />
-    </EuiFlexItem>
-  </EuiFlexGroup>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

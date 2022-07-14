@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFormLabel is rendered 1`] = `
+exports[`OuiFormLabel is rendered 1`] = `
 <label
   aria-label="aria-label"
-  class="euiFormLabel testClass1 testClass2"
+  class="ouiFormLabel testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiFormLabel props isFocused is rendered 1`] = `
+exports[`OuiFormLabel props isFocused is rendered 1`] = `
 <label
-  class="euiFormLabel euiFormLabel-isFocused"
+  class="ouiFormLabel ouiFormLabel-isFocused"
 />
 `;
 
-exports[`EuiFormLabel props isInvalid is rendered 1`] = `
+exports[`OuiFormLabel props isInvalid is rendered 1`] = `
 <label
-  class="euiFormLabel euiFormLabel-isInvalid"
+  class="ouiFormLabel ouiFormLabel-isInvalid"
 />
 `;
 
-exports[`EuiFormLabel props type can be changed to legend 1`] = `
+exports[`OuiFormLabel props type can be changed to legend 1`] = `
 <legend
-  class="euiFormLabel"
+  class="ouiFormLabel"
 />
 `;

@@ -1,48 +1,59 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageContent,
-  EuiPageContentBody,
-  EuiPageHeader,
-  EuiPageSideBar,
-  EuiPageBody,
-  EuiBottomBar,
+  OuiPage,
+  OuiPageContent,
+  OuiPageContentBody,
+  OuiPageHeader,
+  OuiPageSideBar,
+  OuiPageBody,
+  OuiBottomBar,
 } from '../../../../src/components';
 
 export default ({ button = <></>, content, sideNav, bottomBar }) => {
   return (
-    <EuiPage paddingSize="none">
-      <EuiPageSideBar paddingSize="l" sticky>
+    <OuiPage paddingSize="none">
+      <OuiPageSideBar paddingSize="l" sticky>
         {sideNav}
-      </EuiPageSideBar>
+      </OuiPageSideBar>
 
-      {/* Double EuiPageBody to accommodate for the bottom bar */}
-      <EuiPageBody panelled paddingSize="none">
-        <EuiPageBody paddingSize="l">
-          <EuiPageHeader
+      {/* Double OuiPageBody to accommodate for the bottom bar */}
+      <OuiPageBody panelled paddingSize="none">
+        <OuiPageBody paddingSize="l">
+          <OuiPageHeader
             bottomBorder
             restrictWidth
             iconType="logoElastic"
             pageTitle="Page title"
             rightSideItems={[button]}
           />
-          <EuiPageContent
+          <OuiPageContent
             hasBorder={false}
             hasShadow={false}
             paddingSize="none"
             color="transparent"
             borderRadius="none">
-            <EuiPageContentBody restrictWidth>{content}</EuiPageContentBody>
-          </EuiPageContent>
-        </EuiPageBody>
-        <EuiBottomBar paddingSize="l" position="sticky">
-          {/* Wrapping the contents with EuiPageContentBody allows us to match the restrictWidth to keep the contents aligned */}
-          <EuiPageContentBody paddingSize={'none'} restrictWidth>
+            <OuiPageContentBody restrictWidth>{content}</OuiPageContentBody>
+          </OuiPageContent>
+        </OuiPageBody>
+        <OuiBottomBar paddingSize="l" position="sticky">
+          {/* Wrapping the contents with OuiPageContentBody allows us to match the restrictWidth to keep the contents aligned */}
+          <OuiPageContentBody paddingSize={'none'} restrictWidth>
             {bottomBar}
-          </EuiPageContentBody>
-        </EuiBottomBar>
-      </EuiPageBody>
-    </EuiPage>
+          </OuiPageContentBody>
+        </OuiBottomBar>
+      </OuiPageBody>
+    </OuiPage>
   );
 };

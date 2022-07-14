@@ -1,17 +1,28 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment, useCallback } from 'react';
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiButtonGroup,
-  EuiSpacer,
-  EuiFormRow,
-  EuiPopover,
-  EuiButton,
-  EuiAvatar,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiCallOut,
+  OuiDataGrid,
+  OuiButtonGroup,
+  OuiSpacer,
+  OuiFormRow,
+  OuiPopover,
+  OuiButton,
+  OuiAvatar,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiCallOut,
 } from '../../../../src/components/';
 
 const columns = [
@@ -41,7 +52,7 @@ const data = [];
 for (let i = 1; i < 6; i++) {
   data.push({
     avatar: (
-      <EuiAvatar
+      <OuiAvatar
         size="s"
         name={fake('{{name.lastName}}, {{name.firstName}}')}
       />
@@ -363,23 +374,23 @@ const DataGrid = () => {
     setVisibleColumns(visibleColumns);
 
   const styleButton = (
-    <EuiButton
+    <OuiButton
       iconType="gear"
       iconSide="right"
       size="s"
       onClick={onPopoverButtonClick}>
       gridStyle options
-    </EuiButton>
+    </OuiButton>
   );
 
   const toolbarButton = (
-    <EuiButton
+    <OuiButton
       iconType="gear"
       iconSide="right"
       size="s"
       onClick={onToolbarPopoverButtonClick}>
       toolbarVisibility options
-    </EuiButton>
+    </OuiButton>
   );
   let displayColumnSelector = showColumnSelector;
   if (
@@ -409,17 +420,17 @@ const DataGrid = () => {
 
   return (
     <div>
-      <EuiFlexGroup gutterSize="s">
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+      <OuiFlexGroup gutterSize="s">
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             id="styleButton"
             button={styleButton}
             isOpen={isPopoverOpen}
             anchorPosition="rightUp"
             closePopover={closePopover}>
             <div style={{ width: 380 }}>
-              <EuiFormRow label="Border" display="columnCompressed">
-                <EuiButtonGroup
+              <OuiFormRow label="Border" display="columnCompressed">
+                <OuiButtonGroup
                   isFullWidth
                   buttonSize="compressed"
                   legend="Border"
@@ -427,10 +438,10 @@ const DataGrid = () => {
                   idSelected={borderSelected}
                   onChange={onBorderChange}
                 />
-              </EuiFormRow>
+              </OuiFormRow>
 
-              <EuiFormRow label="Cell padding" display="columnCompressed">
-                <EuiButtonGroup
+              <OuiFormRow label="Cell padding" display="columnCompressed">
+                <OuiButtonGroup
                   isFullWidth
                   buttonSize="compressed"
                   legend="Cell padding"
@@ -438,10 +449,10 @@ const DataGrid = () => {
                   idSelected={cellPaddingSelected}
                   onChange={onCellPaddingChange}
                 />
-              </EuiFormRow>
+              </OuiFormRow>
 
-              <EuiFormRow label="Font size" display="columnCompressed">
-                <EuiButtonGroup
+              <OuiFormRow label="Font size" display="columnCompressed">
+                <OuiButtonGroup
                   isFullWidth
                   buttonSize="compressed"
                   legend="Fornt size"
@@ -449,10 +460,10 @@ const DataGrid = () => {
                   idSelected={fontSizeSelected}
                   onChange={onFontSizeChange}
                 />
-              </EuiFormRow>
+              </OuiFormRow>
 
-              <EuiFormRow label="Stripes" display="columnCompressed">
-                <EuiButtonGroup
+              <OuiFormRow label="Stripes" display="columnCompressed">
+                <OuiButtonGroup
                   isFullWidth
                   buttonSize="compressed"
                   legend="Stripes"
@@ -460,10 +471,10 @@ const DataGrid = () => {
                   idSelected={stripesSelected.toString()}
                   onChange={onStripesChange}
                 />
-              </EuiFormRow>
+              </OuiFormRow>
 
-              <EuiFormRow label="Hover row" display="columnCompressed">
-                <EuiButtonGroup
+              <OuiFormRow label="Hover row" display="columnCompressed">
+                <OuiButtonGroup
                   isFullWidth
                   buttonSize="compressed"
                   legend="Hover row"
@@ -471,10 +482,10 @@ const DataGrid = () => {
                   idSelected={rowHoverSelected}
                   onChange={onRowHoverChange}
                 />
-              </EuiFormRow>
+              </OuiFormRow>
 
-              <EuiFormRow label="Header" display="columnCompressed">
-                <EuiButtonGroup
+              <OuiFormRow label="Header" display="columnCompressed">
+                <OuiButtonGroup
                   isFullWidth
                   buttonSize="compressed"
                   legend="Header"
@@ -482,10 +493,10 @@ const DataGrid = () => {
                   idSelected={headerSelected}
                   onChange={onHeaderChange}
                 />
-              </EuiFormRow>
+              </OuiFormRow>
 
-              <EuiFormRow label="Footer" display="columnCompressed">
-                <EuiButtonGroup
+              <OuiFormRow label="Footer" display="columnCompressed">
+                <OuiButtonGroup
                   isFullWidth
                   buttonSize="compressed"
                   legend="Footer"
@@ -493,22 +504,22 @@ const DataGrid = () => {
                   idSelected={footerSelected}
                   onChange={onFooterChange}
                 />
-              </EuiFormRow>
+              </OuiFormRow>
             </div>
-          </EuiPopover>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+          </OuiPopover>
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             id="toolbarVisibility"
             button={toolbarButton}
             isOpen={isToolbarPopoverOpen}
             anchorPosition="rightUp"
             closePopover={closeToolbarPopover}>
             <div style={{ width: 400 }}>
-              <EuiFormRow
+              <OuiFormRow
                 display="columnCompressed"
                 label="toolbarVisibility prop">
-                <EuiButtonGroup
+                <OuiButtonGroup
                   isFullWidth
                   buttonSize="compressed"
                   legend="Border"
@@ -516,13 +527,13 @@ const DataGrid = () => {
                   idSelected={toolbarPropTypeIsBoolean.toString()}
                   onChange={onToolbarPropTypeIsBooleanChange}
                 />
-              </EuiFormRow>
+              </OuiFormRow>
               {toolbarPropTypeIsBoolean === false ? (
                 <Fragment>
-                  <EuiFormRow
+                  <OuiFormRow
                     display="columnCompressed"
                     label="Show style selector">
-                    <EuiButtonGroup
+                    <OuiButtonGroup
                       isFullWidth
                       buttonSize="compressed"
                       legend="Border"
@@ -530,12 +541,12 @@ const DataGrid = () => {
                       idSelected={showStyleSelector.toString()}
                       onChange={onShowStyleSelectorChange}
                     />
-                  </EuiFormRow>
+                  </OuiFormRow>
 
-                  <EuiFormRow
+                  <OuiFormRow
                     display="columnCompressed"
                     label="Show sort selector">
-                    <EuiButtonGroup
+                    <OuiButtonGroup
                       isFullWidth
                       buttonSize="compressed"
                       legend="Border"
@@ -543,12 +554,12 @@ const DataGrid = () => {
                       idSelected={showSortSelector.toString()}
                       onChange={onShowSortSelectorChange}
                     />
-                  </EuiFormRow>
+                  </OuiFormRow>
 
-                  <EuiFormRow
+                  <OuiFormRow
                     display="columnCompressed"
                     label="Show full screen selector">
-                    <EuiButtonGroup
+                    <OuiButtonGroup
                       isFullWidth
                       buttonSize="compressed"
                       legend="Border"
@@ -556,12 +567,12 @@ const DataGrid = () => {
                       idSelected={showFullScreenSelector.toString()}
                       onChange={onShowFullScreenSelectorChange}
                     />
-                  </EuiFormRow>
+                  </OuiFormRow>
 
-                  <EuiFormRow
+                  <OuiFormRow
                     display="columnCompressed"
                     label="Show column selector">
-                    <EuiButtonGroup
+                    <OuiButtonGroup
                       isFullWidth
                       buttonSize="compressed"
                       legend="Border"
@@ -569,14 +580,14 @@ const DataGrid = () => {
                       idSelected={displayColumnSelector ? 'true' : 'false'}
                       onChange={onShowColumnSelectorChange}
                     />
-                  </EuiFormRow>
+                  </OuiFormRow>
                   {displayColumnSelector && (
                     <>
-                      <EuiFormRow
+                      <OuiFormRow
                         display="columnCompressed"
                         label="Allow hiding columns"
                         style={{ marginLeft: 32 }}>
-                        <EuiButtonGroup
+                        <OuiButtonGroup
                           isFullWidth
                           buttonSize="compressed"
                           legend="Border"
@@ -584,12 +595,12 @@ const DataGrid = () => {
                           idSelected={allowHideColumns.toString()}
                           onChange={onAllowHideColumnsChange}
                         />
-                      </EuiFormRow>
-                      <EuiFormRow
+                      </OuiFormRow>
+                      <OuiFormRow
                         display="columnCompressed"
                         label="Allow ordering columns"
                         style={{ marginLeft: 32 }}>
-                        <EuiButtonGroup
+                        <OuiButtonGroup
                           isFullWidth
                           buttonSize="compressed"
                           legend="Border"
@@ -597,13 +608,13 @@ const DataGrid = () => {
                           idSelected={allowOrderingColumns.toString()}
                           onChange={onAllowOrderingColumnsChange}
                         />
-                      </EuiFormRow>
+                      </OuiFormRow>
                     </>
                   )}
                 </Fragment>
               ) : (
-                <EuiFormRow display="columnCompressed" label="Show toolbar">
-                  <EuiButtonGroup
+                <OuiFormRow display="columnCompressed" label="Show toolbar">
+                  <OuiButtonGroup
                     isFullWidth
                     buttonSize="compressed"
                     legend="Border"
@@ -611,28 +622,28 @@ const DataGrid = () => {
                     idSelected={showToolbar.toString()}
                     onChange={onShowToolbarChange}
                   />
-                </EuiFormRow>
+                </OuiFormRow>
               )}
             </div>
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiPopover>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
       {footerSelected === 'striped' ? (
         <>
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiCallOut
+          <OuiCallOut
             size="s"
             title="A striped footer will be shaded depending on whether it is an even or an odd row considering the rest of the rows in the datagrid. Needs to be used with stripes={true}."
           />
         </>
       ) : null}
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiDataGrid
-        aria-label="Top EUI contributors"
+      <OuiDataGrid
+        aria-label="Top OUI contributors"
         columns={columns}
         columnVisibility={{
           visibleColumns: visibleColumns,

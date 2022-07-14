@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,7 +29,7 @@
  */
 
 /**
- * Elements within EuiComboBox which would normally be tabbable (inputs, buttons) have been removed
+ * Elements within OuiComboBox which would normally be tabbable (inputs, buttons) have been removed
  * from the tab order with tabindex={-1} so that we can control the keyboard navigation interface.
  */
 /* eslint-disable jsx-a11y/role-has-required-aria-props */
@@ -33,8 +44,8 @@ import React, {
 import classNames from 'classnames';
 
 import { findPopoverPosition, htmlIdGenerator, keys } from '../../services';
-import { EuiPortal } from '../portal';
-import { EuiComboBoxOptionsList } from './combo_box_options_list';
+import { OuiPortal } from '../portal';
+import { OuiComboBoxOptionsList } from './combo_box_options_list';
 
 import {
   getMatchingOptions,
@@ -42,26 +53,26 @@ import {
   getSelectedOptionForSearchValue,
 } from './matching_options';
 import {
-  EuiComboBoxInputProps,
-  EuiComboBoxInput,
+  OuiComboBoxInputProps,
+  OuiComboBoxInput,
 } from './combo_box_input/combo_box_input';
-import { EuiComboBoxOptionsListProps } from './combo_box_options_list/combo_box_options_list';
+import { OuiComboBoxOptionsListProps } from './combo_box_options_list/combo_box_options_list';
 import {
   UpdatePositionHandler,
   OptionHandler,
   RefInstance,
-  EuiComboBoxOptionOption,
-  EuiComboBoxOptionsListPosition,
-  EuiComboBoxSingleSelectionShape,
+  OuiComboBoxOptionOption,
+  OuiComboBoxOptionsListPosition,
+  OuiComboBoxSingleSelectionShape,
 } from './types';
-import { EuiFilterSelectItem } from '../filter_group';
+import { OuiFilterSelectItem } from '../filter_group';
 import AutosizeInput from 'react-input-autosize';
 import { CommonProps } from '../common';
-import { EuiFormControlLayoutProps } from '../form';
+import { OuiFormControlLayoutProps } from '../form';
 import { getElementZIndex } from '../../services/popover';
 
 type DrillProps<T> = Pick<
-  EuiComboBoxOptionsListProps<T>,
+  OuiComboBoxOptionsListProps<T>,
   | 'customOptionText'
   | 'onCreateOption'
   | 'options'
@@ -69,7 +80,7 @@ type DrillProps<T> = Pick<
   | 'selectedOptions'
 >;
 
-export interface _EuiComboBoxProps<T>
+export interface _OuiComboBoxProps<T>
   extends CommonProps,
     Omit<HTMLAttributes<HTMLDivElement>, 'onChange'>,
     DrillProps<T> {
@@ -110,7 +121,7 @@ export interface _EuiComboBoxProps<T>
   /**
    * Called every time the query in the combo box is parsed
    */
-  onChange?: (options: Array<EuiComboBoxOptionOption<T>>) => void;
+  onChange?: (options: Array<OuiComboBoxOptionOption<T>>) => void;
   onFocus?: FocusEventHandler<HTMLDivElement>;
   onKeyDown?: KeyboardEventHandler<HTMLDivElement>;
   /**
@@ -128,7 +139,7 @@ export interface _EuiComboBoxProps<T>
   /**
    * When `true` only allows the user to select a single option. Set to `{ asPlainText: true }` to not render input selection as pills
    */
-  singleSelection: boolean | EuiComboBoxSingleSelectionShape;
+  singleSelection: boolean | OuiComboBoxSingleSelectionShape;
   /**
    * Display matching options by:
    * `startsWith`: moves items that start with search value to top of the list;
@@ -139,12 +150,12 @@ export interface _EuiComboBoxProps<T>
    * Creates an input group with element(s) coming before input. It won't show if `singleSelection` is set to `false`.
    * `string` | `ReactElement` or an array of these
    */
-  prepend?: EuiFormControlLayoutProps['prepend'];
+  prepend?: OuiFormControlLayoutProps['prepend'];
   /**
    * Creates an input group with element(s) coming after input. It won't show if `singleSelection` is set to `false`.
    * `string` | `ReactElement` or an array of these
    */
-  append?: EuiFormControlLayoutProps['append'];
+  append?: OuiFormControlLayoutProps['append'];
   /**
    * A special character to use as a value separator. Typically a comma `,`
    */
@@ -164,35 +175,35 @@ export interface _EuiComboBoxProps<T>
  * - export (Props - Defaults) & Partial<Defaults>
  */
 type DefaultProps<T> = Omit<
-  typeof EuiComboBox['defaultProps'],
+  typeof OuiComboBox['defaultProps'],
   'options' | 'selectedOptions'
 > & {
-  options: Array<EuiComboBoxOptionOption<T>>;
-  selectedOptions: Array<EuiComboBoxOptionOption<T>>;
+  options: Array<OuiComboBoxOptionOption<T>>;
+  selectedOptions: Array<OuiComboBoxOptionOption<T>>;
 };
-export type EuiComboBoxProps<T> = Omit<
-  _EuiComboBoxProps<T>,
+export type OuiComboBoxProps<T> = Omit<
+  _OuiComboBoxProps<T>,
   keyof DefaultProps<T>
 > &
   Partial<DefaultProps<T>>;
 
-interface EuiComboBoxState<T> {
+interface OuiComboBoxState<T> {
   activeOptionIndex: number;
   hasFocus: boolean;
   isListOpen: boolean;
   listElement?: RefInstance<HTMLDivElement>;
-  listPosition: EuiComboBoxOptionsListPosition;
+  listPosition: OuiComboBoxOptionsListPosition;
   listZIndex: number | undefined;
-  matchingOptions: Array<EuiComboBoxOptionOption<T>>;
+  matchingOptions: Array<OuiComboBoxOptionOption<T>>;
   searchValue: string;
   width: number;
 }
 
 const initialSearchValue = '';
 
-export class EuiComboBox<T> extends Component<
-  _EuiComboBoxProps<T>,
-  EuiComboBoxState<T>
+export class OuiComboBox<T> extends Component<
+  _OuiComboBoxProps<T>,
+  OuiComboBoxState<T>
 > {
   static defaultProps = {
     async: false,
@@ -207,7 +218,7 @@ export class EuiComboBox<T> extends Component<
     sortMatchesBy: 'none' as const,
   };
 
-  state: EuiComboBoxState<T> = {
+  state: OuiComboBoxState<T> = {
     activeOptionIndex: -1,
     hasFocus: false,
     isListOpen: false,
@@ -289,8 +300,8 @@ export class EuiComboBox<T> extends Component<
     this.toggleButtonRefInstance = ref;
   };
 
-  optionsRefInstances: Array<RefInstance<EuiFilterSelectItem>> = [];
-  optionRefCallback: EuiComboBoxOptionsListProps<T>['optionRef'] = (
+  optionsRefInstances: Array<RefInstance<OuiFilterSelectItem>> = [];
+  optionRefCallback: OuiComboBoxOptionsListProps<T>['optionRef'] = (
     index,
     ref
   ) => {
@@ -306,7 +317,7 @@ export class EuiComboBox<T> extends Component<
   closeList = (event?: Event) => {
     if (event && event.target === this.searchInputRefInstance) {
       // really long search values / custom entries triggers a scroll event on the input
-      // which the EuiComboBoxOptionsList passes through here
+      // which the OuiComboBoxOptionsList passes through here
       return;
     }
 
@@ -663,7 +674,7 @@ export class EuiComboBox<T> extends Component<
   };
 
   onAddOption = (
-    addedOption: EuiComboBoxOptionOption<T>,
+    addedOption: OuiComboBoxOptionOption<T>,
     isContainerBlur?: boolean
   ) => {
     if (addedOption.disabled) {
@@ -771,7 +782,7 @@ export class EuiComboBox<T> extends Component<
     this.closeList();
   };
 
-  onSearchChange: NonNullable<EuiComboBoxInputProps<T>['onChange']> = (
+  onSearchChange: NonNullable<OuiComboBoxInputProps<T>['onChange']> = (
     searchValue
   ) => {
     const { onSearchChange, delimiter } = this.props;
@@ -801,8 +812,8 @@ export class EuiComboBox<T> extends Component<
   }
 
   static getDerivedStateFromProps<T>(
-    nextProps: _EuiComboBoxProps<T>,
-    prevState: EuiComboBoxState<T>
+    nextProps: _OuiComboBoxProps<T>,
+    prevState: OuiComboBoxState<T>
   ) {
     const {
       options,
@@ -823,7 +834,7 @@ export class EuiComboBox<T> extends Component<
       sortMatchesBy
     );
 
-    const stateUpdate: Partial<EuiComboBoxState<T>> = { matchingOptions };
+    const stateUpdate: Partial<OuiComboBoxState<T>> = { matchingOptions };
 
     if (activeOptionIndex >= matchingOptions.length) {
       stateUpdate.activeOptionIndex = -1;
@@ -833,7 +844,7 @@ export class EuiComboBox<T> extends Component<
   }
 
   updateMatchingOptionsIfDifferent = (
-    newMatchingOptions: Array<EuiComboBoxOptionOption<T>>
+    newMatchingOptions: Array<OuiComboBoxOptionOption<T>>
   ) => {
     const { matchingOptions, activeOptionIndex } = this.state;
     const { singleSelection, selectedOptions } = this.props;
@@ -954,12 +965,12 @@ export class EuiComboBox<T> extends Component<
       isInvalid ||
       ((hasFocus === false || isListOpen === false) && searchValue);
 
-    const classes = classNames('euiComboBox', className, {
-      'euiComboBox--compressed': compressed,
-      'euiComboBox--fullWidth': fullWidth,
-      'euiComboBox-isDisabled': isDisabled,
-      'euiComboBox-isInvalid': markAsInvalid,
-      'euiComboBox-isOpen': isListOpen,
+    const classes = classNames('ouiComboBox', className, {
+      'ouiComboBox--compressed': compressed,
+      'ouiComboBox--fullWidth': fullWidth,
+      'ouiComboBox-isDisabled': isDisabled,
+      'ouiComboBox-isInvalid': markAsInvalid,
+      'ouiComboBox-isOpen': isListOpen,
     });
 
     const value = selectedOptions
@@ -974,8 +985,8 @@ export class EuiComboBox<T> extends Component<
         : undefined;
 
       optionsList = (
-        <EuiPortal>
-          <EuiComboBoxOptionsList
+        <OuiPortal>
+          <OuiComboBoxOptionsList
             zIndex={this.state.listZIndex}
             activeOptionIndex={this.state.activeOptionIndex}
             areAllOptionsSelected={this.areAllOptionsSelected()}
@@ -1005,17 +1016,17 @@ export class EuiComboBox<T> extends Component<
             delimiter={delimiter}
             getSelectedOptionForSearchValue={getSelectedOptionForSearchValue}
           />
-        </EuiPortal>
+        </OuiPortal>
       );
     }
 
     return (
       /**
        * Re: jsx-a11y/interactive-supports-focus
-       * Focus is managed and is placed on the textbox element (`EuiComboBoxInput`)
+       * Focus is managed and is placed on the textbox element (`OuiComboBoxInput`)
        *
        * Re: jsx-a11y/role-has-required-aria-props
-       * Expansion is managed and required `aria-controls` prop is placed on the textbox element (`EuiComboBoxInput`)
+       * Expansion is managed and required `aria-controls` prop is placed on the textbox element (`OuiComboBoxInput`)
        *
        * Reference for both: https://www.w3.org/TR/2017/REC-wai-aria-1.1-20171214/#combobox,
        * which verifies that this implementation follows the spec.
@@ -1030,7 +1041,7 @@ export class EuiComboBox<T> extends Component<
         onKeyDown={this.onKeyDown}
         ref={this.comboBoxRefCallback}
         role="combobox">
-        <EuiComboBoxInput
+        <OuiComboBoxInput
           autoSizeInputRef={this.autoSizeInputRefCallback}
           compressed={compressed}
           focusedOptionId={

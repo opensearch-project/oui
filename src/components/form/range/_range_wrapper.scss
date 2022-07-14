@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /*
  * 1. There's no way to target the layout of the extra input, so we must
  *    use the descendant selector to allow the width to shrink.
@@ -5,15 +16,15 @@
  * 2. Prevent the prepend/append label from extending outside the parent element
  */
 
-.euiRangeWrapper {
-  @include euiFormControlSize($includeAlternates: true);
+.ouiRangeWrapper {
+  @include ouiFormControlSize($includeAlternates: true);
   display: flex;
   align-items: center;
 
-  > .euiFormControlLayout { /* 1 */
+  > .ouiFormControlLayout { /* 1 */
     width: auto;
 
-    &.euiFormControlLayout--group {
+    &.ouiFormControlLayout--group {
       flex-shrink: 0;  /* 2 */
     }
   }

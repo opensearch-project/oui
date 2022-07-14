@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, {
   Fragment,
   useCallback,
@@ -10,10 +21,10 @@ import React, {
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiLink,
-  EuiText,
-  EuiResizableContainer,
+  OuiDataGrid,
+  OuiLink,
+  OuiText,
+  OuiResizableContainer,
 } from '../../../../src/components/';
 
 const DataContext = createContext();
@@ -69,13 +80,13 @@ function RenderCellValue({ rowIndex, columnId }) {
     const suffix = fake('{{name.suffix}}');
     data[rowIndex] = {
       name: `${name} ${suffix}`,
-      email: <EuiLink href="">{email}</EuiLink>,
+      email: <OuiLink href="">{email}</OuiLink>,
       location: (
         <Fragment>
           {`${fake('{{address.city}}')}, `}
-          <EuiLink href="https://google.com">
+          <OuiLink href="https://google.com">
             {fake('{{address.country}}')}
-          </EuiLink>
+          </OuiLink>
         </Fragment>
       ),
       date: fake('{{date.past}}'),
@@ -126,7 +137,7 @@ export default () => {
   );
 
   const grid = (
-    <EuiDataGrid
+    <OuiDataGrid
       aria-label="Virtualized data grid demo"
       columns={columns}
       columnVisibility={{ visibleColumns, setVisibleColumns }}
@@ -143,31 +154,31 @@ export default () => {
 
   return (
     <DataContext.Provider value={dataContext}>
-      <EuiText>
+      <OuiText>
         <p>There are {mountedCellCount} rendered cells</p>
-      </EuiText>
+      </OuiText>
 
-      <EuiResizableContainer style={{ height: '400px' }}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+      <OuiResizableContainer style={{ height: '400px' }}>
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel initialSize={50} minSize="30%">
+            <OuiResizablePanel initialSize={50} minSize="30%">
               {grid}
-            </EuiResizablePanel>
+            </OuiResizablePanel>
 
-            <EuiResizableButton />
+            <OuiResizableButton />
 
-            <EuiResizablePanel initialSize={50} minSize="200px">
-              <EuiText>
+            <OuiResizablePanel initialSize={50} minSize="200px">
+              <OuiText>
                 <p>
                   This panel is constraining the datagrid. You can resize it
-                  using the drag handle and <strong>EuiDataGrid</strong>{' '}
+                  using the drag handle and <strong>OuiDataGrid</strong>{' '}
                   automatically detects the changes to its container size.
                 </p>
-              </EuiText>
-            </EuiResizablePanel>
+              </OuiText>
+            </OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     </DataContext.Provider>
   );
 };

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,27 +32,27 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../../common';
 import {
-  EuiPageHeaderContent,
-  EuiPageHeaderContentProps,
+  OuiPageHeaderContent,
+  OuiPageHeaderContentProps,
 } from './page_header_content';
 import {
-  _EuiPageRestrictWidth,
+  _OuiPageRestrictWidth,
   setPropsForRestrictedPageWidth,
 } from '../_restrict_width';
 
 const paddingSizeToClassNameMap = {
   none: null,
-  s: 'euiPageHeader--paddingSmall',
-  m: 'euiPageHeader--paddingMedium',
-  l: 'euiPageHeader--paddingLarge',
+  s: 'ouiPageHeader--paddingSmall',
+  m: 'ouiPageHeader--paddingMedium',
+  l: 'ouiPageHeader--paddingLarge',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
 
-export type EuiPageHeaderProps = CommonProps &
+export type OuiPageHeaderProps = CommonProps &
   HTMLAttributes<HTMLElement> &
-  EuiPageHeaderContentProps &
-  _EuiPageRestrictWidth & {
+  OuiPageHeaderContentProps &
+  _OuiPageRestrictWidth & {
     /**
      * Adjust the padding.
      * When using this setting it's best to be consistent throughout all similar usages
@@ -53,7 +64,7 @@ export type EuiPageHeaderProps = CommonProps &
     bottomBorder?: boolean;
   };
 
-export const EuiPageHeader: FunctionComponent<EuiPageHeaderProps> = ({
+export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
   className,
   restrictWidth = false,
   paddingSize = 'none',
@@ -82,16 +93,16 @@ export const EuiPageHeader: FunctionComponent<EuiPageHeaderProps> = ({
   );
 
   const classes = classNames(
-    'euiPageHeader',
+    'ouiPageHeader',
     paddingSizeToClassNameMap[paddingSize],
     {
-      'euiPageHeader--bottomBorder': bottomBorder,
-      'euiPageHeader--responsive': responsive === true,
-      'euiPageHeader--responsiveReverse': responsive === 'reverse',
-      'euiPageHeader--tabsAtBottom': pageTitle && tabs,
-      [`euiPage--${widthClassName}`]: widthClassName,
+      'ouiPageHeader--bottomBorder': bottomBorder,
+      'ouiPageHeader--responsive': responsive === true,
+      'ouiPageHeader--responsiveReverse': responsive === 'reverse',
+      'ouiPageHeader--tabsAtBottom': pageTitle && tabs,
+      [`ouiPage--${widthClassName}`]: widthClassName,
     },
-    `euiPageHeader--${alignItems ?? 'center'}`,
+    `ouiPageHeader--${alignItems ?? 'center'}`,
     className
   );
 
@@ -105,7 +116,7 @@ export const EuiPageHeader: FunctionComponent<EuiPageHeaderProps> = ({
 
   return (
     <header className={classes} style={newStyle || style} {...rest}>
-      <EuiPageHeaderContent
+      <OuiPageHeaderContent
         alignItems={alignItems}
         responsive={responsive}
         pageTitle={pageTitle}
@@ -117,7 +128,7 @@ export const EuiPageHeader: FunctionComponent<EuiPageHeaderProps> = ({
         rightSideItems={rightSideItems}
         rightSideGroupProps={rightSideGroupProps}>
         {children}
-      </EuiPageHeaderContent>
+      </OuiPageHeaderContent>
     </header>
   );
 };

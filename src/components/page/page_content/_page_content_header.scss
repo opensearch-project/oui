@@ -1,19 +1,30 @@
-.euiPageContentHeader {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiPageContentHeader {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
   // Adjust vertical spacing based on content padding prop
-  @each $modifier, $amount in $euiPanelPaddingModifiers {
-    .euiPageContent[class*='#{$modifier}'] & {
+  @each $modifier, $amount in $ouiPanelPaddingModifiers {
+    .ouiPageContent[class*='#{$modifier}'] & {
       margin-bottom: $amount;
     }
   }
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiPageContentHeader--responsive {
+@include ouiBreakpoint('xs', 's') {
+  .ouiPageContentHeader--responsive {
     flex-direction: column;
     align-items: flex-start;
   }

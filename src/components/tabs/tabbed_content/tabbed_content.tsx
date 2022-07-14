@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,8 +32,8 @@ import React, { Component, createRef, HTMLAttributes, ReactNode } from 'react';
 
 import { htmlIdGenerator } from '../../../services';
 
-import { EuiTabs, EuiTabsDisplaySizes, EuiTabsSizes } from '../tabs';
-import { EuiTab } from '../tab';
+import { OuiTabs, OuiTabsDisplaySizes, OuiTabsSizes } from '../tabs';
+import { OuiTab } from '../tab';
 import { CommonProps } from '../../common';
 
 /**
@@ -30,18 +41,18 @@ import { CommonProps } from '../../common';
  */
 export const AUTOFOCUS = ['initial', 'selected'] as const;
 
-export interface EuiTabbedContentTab {
+export interface OuiTabbedContentTab {
   id: string;
   name: ReactNode;
   content: ReactNode;
 }
 
-interface EuiTabbedContentState {
+interface OuiTabbedContentState {
   selectedTabId: string | undefined;
   inFocus: boolean;
 }
 
-export type EuiTabbedContentProps = CommonProps &
+export type OuiTabbedContentProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * When tabbing into the tabs, set the focus on `initial` for the first tab,
@@ -52,7 +63,7 @@ export type EuiTabbedContentProps = CommonProps &
     /**
      * Choose `default` or alternative `condensed` display styles
      */
-    display?: EuiTabsDisplaySizes;
+    display?: OuiTabsDisplaySizes;
     /**
      * Evenly stretches each tab to fill the horizontal space
      */
@@ -61,23 +72,23 @@ export type EuiTabbedContentProps = CommonProps &
      * Use this prop to set the initially selected tab while letting the tabbed content component
      * control selection state internally
      */
-    initialSelectedTab?: EuiTabbedContentTab;
-    onTabClick?: (selectedTab: EuiTabbedContentTab) => void;
+    initialSelectedTab?: OuiTabbedContentTab;
+    onTabClick?: (selectedTab: OuiTabbedContentTab) => void;
     /**
      * Use this prop if you want to control selection state within the owner component
      */
-    selectedTab?: EuiTabbedContentTab;
-    size?: EuiTabsSizes;
+    selectedTab?: OuiTabbedContentTab;
+    size?: OuiTabsSizes;
     /**
      * Each tab needs id and content properties, so we can associate it with its panel for accessibility.
      * The name property (a node) is also required to display to the user.
      */
-    tabs: EuiTabbedContentTab[];
+    tabs: OuiTabbedContentTab[];
   };
 
-export class EuiTabbedContent extends Component<
-  EuiTabbedContentProps,
-  EuiTabbedContentState
+export class OuiTabbedContent extends Component<
+  OuiTabbedContentProps,
+  OuiTabbedContentState
 > {
   static defaultProps = {
     autoFocus: 'initial',
@@ -87,7 +98,7 @@ export class EuiTabbedContent extends Component<
 
   private readonly tabsRef = createRef<HTMLDivElement>();
 
-  constructor(props: EuiTabbedContentProps) {
+  constructor(props: OuiTabbedContentProps) {
     super(props);
 
     const { initialSelectedTab, selectedTab, tabs } = props;
@@ -156,7 +167,7 @@ export class EuiTabbedContent extends Component<
     }
   };
 
-  onTabClick = (selectedTab: EuiTabbedContentTab) => {
+  onTabClick = (selectedTab: OuiTabbedContentTab) => {
     const { onTabClick, selectedTab: externalSelectedTab } = this.props;
 
     if (onTabClick) {
@@ -189,20 +200,20 @@ export class EuiTabbedContent extends Component<
     const selectedTab =
       externalSelectedTab ||
       tabs.find(
-        (tab: EuiTabbedContentTab) => tab.id === this.state.selectedTabId
+        (tab: OuiTabbedContentTab) => tab.id === this.state.selectedTabId
       );
 
     const { content: selectedTabContent, id: selectedTabId } = selectedTab!;
 
     return (
       <div className={className} {...rest}>
-        <EuiTabs
+        <OuiTabs
           ref={this.tabsRef}
           expand={expand}
           display={display}
           size={size}
           onFocus={this.initializeFocus}>
-          {tabs.map((tab: EuiTabbedContentTab) => {
+          {tabs.map((tab: OuiTabbedContentTab) => {
             const {
               id,
               name,
@@ -218,9 +229,9 @@ export class EuiTabbedContent extends Component<
               'aria-controls': `${this.rootId}`,
             };
 
-            return <EuiTab {...props}>{name}</EuiTab>;
+            return <OuiTab {...props}>{name}</OuiTab>;
           })}
-        </EuiTabs>
+        </OuiTabs>
 
         <div
           role="tabpanel"

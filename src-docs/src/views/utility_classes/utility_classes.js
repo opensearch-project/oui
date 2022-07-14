@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCode, EuiSpacer } from '../../../../src/components';
-import { EuiMark } from '../../../../src/components/mark';
+import { OuiCode, OuiSpacer } from '../../../../src/components';
+import { OuiMark } from '../../../../src/components/mark';
 import { UtilityClassesSection } from './utility_classes_section';
 
 const wrappingExampleStyle = {
@@ -11,76 +22,76 @@ const wrappingExampleStyle = {
 export default () => (
   <>
     <UtilityClassesSection
-      code="eui-displayBlock"
+      code="oui-displayBlock"
       description={
         <p>
           Changes the element’s display property to{' '}
-          <EuiCode language="sass">display: block;</EuiCode>
+          <OuiCode language="sass">display: block;</OuiCode>
         </p>
       }
       example={
-        <EuiMark style={wrappingExampleStyle} className="eui-displayBlock">
+        <OuiMark style={wrappingExampleStyle} className="oui-displayBlock">
           Displaying block
-        </EuiMark>
+        </OuiMark>
       }
-      snippet={`<span className="eui-displayBlock">
+      snippet={`<span className="oui-displayBlock">
   /* Your content */
 </span>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-displayInline"
+      code="oui-displayInline"
       description={
         <p>
           Changes the element’s display property to{' '}
-          <EuiCode language="sass">display: inline;</EuiCode>
+          <OuiCode language="sass">display: inline;</OuiCode>
         </p>
       }
       example={
-        <EuiMark style={wrappingExampleStyle} className="eui-displayInline">
+        <OuiMark style={wrappingExampleStyle} className="oui-displayInline">
           Displaying inline
-        </EuiMark>
+        </OuiMark>
       }
-      snippet={`<div className="eui-displayInline">
+      snippet={`<div className="oui-displayInline">
   /* Your content */
 </div>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-displayInlineBlock"
+      code="oui-displayInlineBlock"
       description={
         <p>
           Changes the element’s display property to{' '}
-          <EuiCode language="sass">display: inline-block;</EuiCode>
+          <OuiCode language="sass">display: inline-block;</OuiCode>
         </p>
       }
       example={
-        <EuiMark
+        <OuiMark
           style={wrappingExampleStyle}
-          className="eui-displayInlineBlock">
+          className="oui-displayInlineBlock">
           Displaying inline block
-        </EuiMark>
+        </OuiMark>
       }
-      snippet={`<span className="eui-displayInlineBlock">
+      snippet={`<span className="oui-displayInlineBlock">
   /* Your content */
 </span>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-fullWidth"
+      code="oui-fullWidth"
       description={
         <p>
           Changes the element’s display property to{' '}
-          <EuiCode language="sass">display: inline-block;</EuiCode> and adds{' '}
-          <EuiCode language="sass">width: 100%;</EuiCode>
+          <OuiCode language="sass">display: inline-block;</OuiCode> and adds{' '}
+          <OuiCode language="sass">width: 100%;</OuiCode>
         </p>
       }
       example={
-        <EuiMark style={wrappingExampleStyle} className="eui-fullWidth">
+        <OuiMark style={wrappingExampleStyle} className="oui-fullWidth">
           Displaying full width
-        </EuiMark>
+        </OuiMark>
       }
-      snippet={`<span className="eui-fullWidth">
+      snippet={`<span className="oui-fullWidth">
   /* Your content */
 </span>`}
     />

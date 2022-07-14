@@ -1,38 +1,49 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiPanel,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
+  OuiPanel,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiText,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup gutterSize="l">
-    <EuiFlexItem>
-      <EuiPanel>
-        <EuiText>
+  <OuiFlexGroup gutterSize="l">
+    <OuiFlexItem>
+      <OuiPanel>
+        <OuiText>
           <p>
             I am some panel content...
             <br /> ... <br /> ... <br />
             whose content is tall
           </p>
-        </EuiText>
-      </EuiPanel>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiPanel grow={true}>
-        <EuiText>
+        </OuiText>
+      </OuiPanel>
+    </OuiFlexItem>
+    <OuiFlexItem>
+      <OuiPanel grow={true}>
+        <OuiText>
           <p>I am some panel content... whose content will grow</p>
-        </EuiText>
-      </EuiPanel>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiPanel grow={false}>
-        <EuiText>
+        </OuiText>
+      </OuiPanel>
+    </OuiFlexItem>
+    <OuiFlexItem>
+      <OuiPanel grow={false}>
+        <OuiText>
           <p>I am some panel content... whose content did not grow</p>
-        </EuiText>
-      </EuiPanel>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+        </OuiText>
+      </OuiPanel>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

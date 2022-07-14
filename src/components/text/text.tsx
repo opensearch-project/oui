@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,21 +32,21 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
-import { TextColor, EuiTextColor } from './text_color';
+import { TextColor, OuiTextColor } from './text_color';
 
-import { EuiTextAlign, TextAlignment } from './text_align';
+import { OuiTextAlign, TextAlignment } from './text_align';
 
 const textSizeToClassNameMap = {
-  xs: 'euiText--extraSmall',
-  s: 'euiText--small',
-  m: 'euiText--medium',
+  xs: 'ouiText--extraSmall',
+  s: 'ouiText--small',
+  m: 'ouiText--medium',
 };
 
 export type TextSize = keyof typeof textSizeToClassNameMap;
 
 export const TEXT_SIZES = keysOf(textSizeToClassNameMap);
 
-export type EuiTextProps = CommonProps &
+export type OuiTextProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'color'> & {
     textAlign?: TextAlignment;
     size?: TextSize;
@@ -46,7 +57,7 @@ export type EuiTextProps = CommonProps &
     grow?: boolean;
   };
 
-export const EuiText: FunctionComponent<EuiTextProps> = ({
+export const OuiText: FunctionComponent<OuiTextProps> = ({
   size = 'm',
   color,
   grow = true,
@@ -56,28 +67,28 @@ export const EuiText: FunctionComponent<EuiTextProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiText',
+    'ouiText',
     textSizeToClassNameMap[size],
     className,
     {
-      'euiText--constrainedWidth': !grow,
+      'ouiText--constrainedWidth': !grow,
     }
   );
 
   let optionallyAlteredText;
   if (color) {
     optionallyAlteredText = (
-      <EuiTextColor color={color} component="div">
+      <OuiTextColor color={color} component="div">
         {children}
-      </EuiTextColor>
+      </OuiTextColor>
     );
   }
 
   if (textAlign) {
     optionallyAlteredText = (
-      <EuiTextAlign textAlign={textAlign}>
+      <OuiTextAlign textAlign={textAlign}>
         {optionallyAlteredText || children}
-      </EuiTextAlign>
+      </OuiTextAlign>
     );
   }
 

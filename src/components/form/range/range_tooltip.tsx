@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +31,7 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import classNames from 'classnames';
 
-export interface EuiRangeTooltipProps {
+export interface OuiRangeTooltipProps {
   value?: number | string;
   valueAppend?: ReactNode;
   valuePrepend?: ReactNode;
@@ -31,7 +42,7 @@ export interface EuiRangeTooltipProps {
   compressed?: boolean;
 }
 
-export const EuiRangeTooltip: FunctionComponent<EuiRangeTooltipProps> = ({
+export const OuiRangeTooltip: FunctionComponent<OuiRangeTooltipProps> = ({
   value,
   valueAppend,
   valuePrepend,
@@ -41,8 +52,8 @@ export const EuiRangeTooltip: FunctionComponent<EuiRangeTooltipProps> = ({
   showTicks,
   compressed,
 }) => {
-  const classes = classNames('euiRangeTooltip', {
-    'euiRangeTooltip--compressed': compressed,
+  const classes = classNames('ouiRangeTooltip', {
+    'ouiRangeTooltip--compressed': compressed,
   });
 
   // Calculate the left position based on value
@@ -69,10 +80,10 @@ export const EuiRangeTooltip: FunctionComponent<EuiRangeTooltipProps> = ({
 
   // Change left/right position based on value (half way point)
   const valueClasses = classNames(
-    'euiRangeTooltip__value',
-    `euiRangeTooltip__value--${valuePositionSide}`,
+    'ouiRangeTooltip__value',
+    `ouiRangeTooltip__value--${valuePositionSide}`,
     {
-      'euiRangeTooltip__value--hasTicks': showTicks,
+      'ouiRangeTooltip__value--hasTicks': showTicks,
     }
   );
 

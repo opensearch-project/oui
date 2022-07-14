@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
-export interface EuiPageContentHeaderProps
+export interface OuiPageContentHeaderProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
@@ -31,16 +42,16 @@ export interface EuiPageContentHeaderProps
   responsive?: boolean;
 }
 
-export const EuiPageContentHeader: FunctionComponent<EuiPageContentHeaderProps> = ({
+export const OuiPageContentHeader: FunctionComponent<OuiPageContentHeaderProps> = ({
   children,
   className,
   responsive = true,
   ...rest
 }) => {
   const classes = classNames(
-    'euiPageContentHeader',
+    'ouiPageContentHeader',
     {
-      'euiPageContentHeader--responsive': responsive,
+      'ouiPageContentHeader--responsive': responsive,
     },
     className
   );

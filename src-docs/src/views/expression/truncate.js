@@ -1,27 +1,38 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
-import { EuiExpression, EuiSpacer, EuiTitle } from '../../../../src/components';
+import { OuiExpression, OuiSpacer, OuiTitle } from '../../../../src/components';
 
 const value = 'and a very long string as value';
 const description = 'some very very long description';
 const nodes = (
   <Fragment>
-    <p className="eui-textTruncate">.kibana_task_manager</p>
-    <p className="eui-textTruncate">kibana_sample_data_ecommerce</p>
+    <p className="oui-textTruncate">.kibana_task_manager</p>
+    <p className="oui-textTruncate">kibana_sample_data_ecommerce</p>
   </Fragment>
 );
 
 export default () => (
   <div>
     <div style={{ maxWidth: 240 }}>
-      <EuiExpression
+      <OuiExpression
         onClick={() => {}}
         description={description}
         value={value}
         textWrap="truncate"
       />
-      <EuiSpacer />
-      <EuiExpression
+      <OuiSpacer />
+      <OuiExpression
         description={description}
         display="columns"
         text
@@ -29,13 +40,13 @@ export default () => (
         value={value}
         onClick={() => {}}
       />
-      <EuiSpacer />
+      <OuiSpacer />
     </div>
-    <EuiTitle size="xxs">
-      <h3>eui-textTruncate applied to sub-children</h3>
-    </EuiTitle>
+    <OuiTitle size="xxs">
+      <h3>oui-textTruncate applied to sub-children</h3>
+    </OuiTitle>
     <div style={{ maxWidth: 310 }}>
-      <EuiExpression
+      <OuiExpression
         value={nodes}
         display="columns"
         text

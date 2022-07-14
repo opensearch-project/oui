@@ -1,4 +1,4 @@
-## [`master`](https://github.com/elastic/eui/tree/master)
+## [`master`](https://github.com/opensearch-project/oui/tree/master)
 
 No public interface changes since `34.6.0`.
 

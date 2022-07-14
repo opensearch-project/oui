@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,7 +38,7 @@ export type FlexGroupDirection = keyof typeof directionToClassNameMap;
 export type FlexGroupGutterSize = keyof typeof gutterSizeToClassNameMap;
 export type FlexGroupJustifyContent = keyof typeof justifyContentToClassNameMap;
 
-export interface EuiFlexGroupProps
+export interface OuiFlexGroupProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement | HTMLSpanElement> {
   alignItems?: FlexGroupAlignItems;
@@ -41,42 +52,42 @@ export interface EuiFlexGroupProps
 
 const gutterSizeToClassNameMap = {
   none: null,
-  xs: 'euiFlexGroup--gutterExtraSmall',
-  s: 'euiFlexGroup--gutterSmall',
-  m: 'euiFlexGroup--gutterMedium',
-  l: 'euiFlexGroup--gutterLarge',
-  xl: 'euiFlexGroup--gutterExtraLarge',
+  xs: 'ouiFlexGroup--gutterExtraSmall',
+  s: 'ouiFlexGroup--gutterSmall',
+  m: 'ouiFlexGroup--gutterMedium',
+  l: 'ouiFlexGroup--gutterLarge',
+  xl: 'ouiFlexGroup--gutterExtraLarge',
 };
 
 export const GUTTER_SIZES = keysOf(gutterSizeToClassNameMap);
-export type EuiFlexGroupGutterSize = keyof typeof gutterSizeToClassNameMap;
+export type OuiFlexGroupGutterSize = keyof typeof gutterSizeToClassNameMap;
 
 const alignItemsToClassNameMap = {
   stretch: null,
-  flexStart: 'euiFlexGroup--alignItemsFlexStart',
-  flexEnd: 'euiFlexGroup--alignItemsFlexEnd',
-  center: 'euiFlexGroup--alignItemsCenter',
-  baseline: 'euiFlexGroup--alignItemsBaseline',
+  flexStart: 'ouiFlexGroup--alignItemsFlexStart',
+  flexEnd: 'ouiFlexGroup--alignItemsFlexEnd',
+  center: 'ouiFlexGroup--alignItemsCenter',
+  baseline: 'ouiFlexGroup--alignItemsBaseline',
 };
 
 export const ALIGN_ITEMS = keysOf(alignItemsToClassNameMap);
 
 const justifyContentToClassNameMap = {
   flexStart: null,
-  flexEnd: 'euiFlexGroup--justifyContentFlexEnd',
-  center: 'euiFlexGroup--justifyContentCenter',
-  spaceBetween: 'euiFlexGroup--justifyContentSpaceBetween',
-  spaceAround: 'euiFlexGroup--justifyContentSpaceAround',
-  spaceEvenly: 'euiFlexGroup--justifyContentSpaceEvenly',
+  flexEnd: 'ouiFlexGroup--justifyContentFlexEnd',
+  center: 'ouiFlexGroup--justifyContentCenter',
+  spaceBetween: 'ouiFlexGroup--justifyContentSpaceBetween',
+  spaceAround: 'ouiFlexGroup--justifyContentSpaceAround',
+  spaceEvenly: 'ouiFlexGroup--justifyContentSpaceEvenly',
 };
 
 export const JUSTIFY_CONTENTS = keysOf(justifyContentToClassNameMap);
 
 const directionToClassNameMap = {
-  row: 'euiFlexGroup--directionRow',
-  rowReverse: 'euiFlexGroup--directionRowReverse',
-  column: 'euiFlexGroup--directionColumn',
-  columnReverse: 'euiFlexGroup--directionColumnReverse',
+  row: 'ouiFlexGroup--directionRow',
+  rowReverse: 'ouiFlexGroup--directionRowReverse',
+  column: 'ouiFlexGroup--directionColumn',
+  columnReverse: 'ouiFlexGroup--directionColumnReverse',
 };
 
 export const DIRECTIONS = keysOf(directionToClassNameMap);
@@ -87,9 +98,9 @@ const isValidElement = (
   return ['div', 'span'].includes(component);
 };
 
-export const EuiFlexGroup = forwardRef<
+export const OuiFlexGroup = forwardRef<
   HTMLDivElement | HTMLSpanElement,
-  EuiFlexGroupProps
+  OuiFlexGroupProps
 >(
   (
     {
@@ -107,14 +118,14 @@ export const EuiFlexGroup = forwardRef<
     ref: Ref<HTMLDivElement> | Ref<HTMLSpanElement>
   ) => {
     const classes = classNames(
-      'euiFlexGroup',
+      'ouiFlexGroup',
       gutterSizeToClassNameMap[gutterSize as FlexGroupGutterSize],
       alignItemsToClassNameMap[alignItems as FlexGroupAlignItems],
       justifyContentToClassNameMap[justifyContent as FlexGroupJustifyContent],
       directionToClassNameMap[direction as FlexGroupDirection],
       {
-        'euiFlexGroup--responsive': responsive,
-        'euiFlexGroup--wrap': wrap,
+        'ouiFlexGroup--responsive': responsive,
+        'ouiFlexGroup--wrap': wrap,
       },
       className
     );
@@ -142,4 +153,4 @@ export const EuiFlexGroup = forwardRef<
     );
   }
 );
-EuiFlexGroup.displayName = 'EuiFlexGroup';
+OuiFlexGroup.displayName = 'OuiFlexGroup';

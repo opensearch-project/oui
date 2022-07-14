@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,42 +32,42 @@ import React, { FunctionComponent, ReactNode, useRef } from 'react';
 import classNames from 'classnames';
 
 import {
-  EuiRadio,
-  EuiRadioProps,
-  EuiCheckbox,
-  EuiCheckboxProps,
+  OuiRadio,
+  OuiRadioProps,
+  OuiCheckbox,
+  OuiCheckboxProps,
 } from '../../form';
-import { EuiSplitPanel } from '../../panel';
-import { _EuiSplitPanelOuterProps } from '../../panel/split_panel';
+import { OuiSplitPanel } from '../../panel';
+import { _OuiSplitPanelOuterProps } from '../../panel/split_panel';
 
-interface EuiCheckableCardBaseProps {
+interface OuiCheckableCardBaseProps {
   id: string;
   label: ReactNode;
-  hasShadow?: _EuiSplitPanelOuterProps['hasShadow'];
-  hasBorder?: _EuiSplitPanelOuterProps['hasBorder'];
+  hasShadow?: _OuiSplitPanelOuterProps['hasShadow'];
+  hasBorder?: _OuiSplitPanelOuterProps['hasBorder'];
 }
 
-// if `checkableType` is left out or set to 'radio', use EuiRadioProps
-interface EuiCheckableCardAsRadioProps
-  extends Omit<EuiRadioProps, 'compressed'> {
+// if `checkableType` is left out or set to 'radio', use OuiRadioProps
+interface OuiCheckableCardAsRadioProps
+  extends Omit<OuiRadioProps, 'compressed'> {
   /**
    * Whether the control is a radio button or checkbox
    */
   checkableType?: 'radio';
 }
 
-// if `checkableType` is set to 'checkbox', use EuiCheckboxProps
-interface EuiCheckableCardAsCheckboxProps
-  extends Omit<EuiCheckboxProps, 'compressed'> {
+// if `checkableType` is set to 'checkbox', use OuiCheckboxProps
+interface OuiCheckableCardAsCheckboxProps
+  extends Omit<OuiCheckboxProps, 'compressed'> {
   checkableType: 'checkbox';
 }
 
-export type EuiCheckableCardProps = Omit<
-  EuiCheckableCardAsCheckboxProps | EuiCheckableCardAsRadioProps,
+export type OuiCheckableCardProps = Omit<
+  OuiCheckableCardAsCheckboxProps | OuiCheckableCardAsRadioProps,
   'label' | 'id'
 > &
-  EuiCheckableCardBaseProps;
-export const EuiCheckableCard: FunctionComponent<EuiCheckableCardProps> = ({
+  OuiCheckableCardBaseProps;
+export const OuiCheckableCard: FunctionComponent<OuiCheckableCardProps> = ({
   children,
   className,
   checkableType = 'radio',
@@ -70,10 +81,10 @@ export const EuiCheckableCard: FunctionComponent<EuiCheckableCardProps> = ({
   const { id } = rest;
   const labelEl = useRef<HTMLLabelElement>(null);
   const classes = classNames(
-    'euiCheckableCard',
+    'ouiCheckableCard',
     {
-      'euiCheckableCard-isChecked': checked,
-      'euiCheckableCard-isDisabled': disabled,
+      'ouiCheckableCard-isChecked': checked,
+      'ouiCheckableCard-isDisabled': disabled,
     },
     className
   );
@@ -81,20 +92,20 @@ export const EuiCheckableCard: FunctionComponent<EuiCheckableCardProps> = ({
   let checkableElement;
   if (checkableType === 'radio') {
     checkableElement = (
-      <EuiRadio
+      <OuiRadio
         checked={checked}
         disabled={disabled}
-        {...(rest as EuiRadioProps)}
+        {...(rest as OuiRadioProps)}
       />
     );
   } else {
     checkableElement = (
-      <EuiCheckbox checked={checked} disabled={disabled} {...rest} />
+      <OuiCheckbox checked={checked} disabled={disabled} {...rest} />
     );
   }
 
-  const labelClasses = classNames('euiCheckableCard__label', {
-    'euiCheckableCard__label-isDisabled': disabled,
+  const labelClasses = classNames('ouiCheckableCard__label', {
+    'ouiCheckableCard__label-isDisabled': disabled,
   });
 
   const onChangeAffordance = () => {
@@ -104,20 +115,20 @@ export const EuiCheckableCard: FunctionComponent<EuiCheckableCardProps> = ({
   };
 
   return (
-    <EuiSplitPanel.Outer
+    <OuiSplitPanel.Outer
       responsive={false}
       hasShadow={hasShadow}
       hasBorder={hasBorder}
       direction="row"
       className={classes}>
-      <EuiSplitPanel.Inner
+      <OuiSplitPanel.Inner
         // Bubbles up the change event when clicking on the whole div for extra affordance
         onClick={disabled ? undefined : onChangeAffordance}
         color={checked ? 'primary' : 'subdued'}
         grow={false}>
         {checkableElement}
-      </EuiSplitPanel.Inner>
-      <EuiSplitPanel.Inner>
+      </OuiSplitPanel.Inner>
+      <OuiSplitPanel.Inner>
         <label
           ref={labelEl}
           className={labelClasses}
@@ -126,11 +137,11 @@ export const EuiCheckableCard: FunctionComponent<EuiCheckableCardProps> = ({
           {label}
         </label>
         {children && (
-          <div id={`${id}-details`} className="euiCheckableCard__children">
+          <div id={`${id}-details`} className="ouiCheckableCard__children">
             {children}
           </div>
         )}
-      </EuiSplitPanel.Inner>
-    </EuiSplitPanel.Outer>
+      </OuiSplitPanel.Inner>
+    </OuiSplitPanel.Outer>
   );
 };

@@ -1,40 +1,51 @@
-.euiHeaderAlert {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiHeaderAlert {
   min-width: 300px;
   position: relative;
-  margin-bottom: $euiSizeL;
-  padding: 0 $euiSizeS $euiSizeL;
-  border-bottom: $euiBorderThin;
+  margin-bottom: $ouiSizeL;
+  padding: 0 $ouiSizeS $ouiSizeL;
+  border-bottom: $ouiBorderThin;
   border-top: none;
 
-  .euiHeaderAlert__dismiss {
+  .ouiHeaderAlert__dismiss {
     opacity: 0;
     position: absolute;
-    right: $euiSize - 4px;
-    top: $euiSize - 4px;
-    transition: opacity $euiAnimSpeedNormal ease-in;
+    right: $ouiSize - 4px;
+    top: $ouiSize - 4px;
+    transition: opacity $ouiAnimSpeedNormal ease-in;
   }
 
-  &:hover .euiHeaderAlert__dismiss,
-  .euiHeaderAlert__dismiss:focus {
+  &:hover .ouiHeaderAlert__dismiss,
+  .ouiHeaderAlert__dismiss:focus {
     opacity: 1;
   }
 
-  .euiHeaderAlert__title {
-    @include euiTitle('xs');
-    margin-bottom: $euiSizeS;
+  .ouiHeaderAlert__title {
+    @include ouiTitle('xs');
+    margin-bottom: $ouiSizeS;
   }
 
-  .euiHeaderAlert__text {
-    @include euiFontSizeS;
-    margin-bottom: $euiSize;
+  .ouiHeaderAlert__text {
+    @include ouiFontSizeS;
+    margin-bottom: $ouiSize;
   }
 
-  .euiHeaderAlert__action {
-    @include euiFontSizeS;
+  .ouiHeaderAlert__action {
+    @include ouiFontSizeS;
   }
 
-  .euiHeaderAlert__date {
-    @include euiFontSizeXS;
-    color: $euiColorDarkShade;
+  .ouiHeaderAlert__date {
+    @include ouiFontSizeXS;
+    color: $ouiColorDarkShade;
   }
 }

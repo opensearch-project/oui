@@ -1,18 +1,29 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useRef } from 'react';
 
 import {
-  EuiButton,
-  EuiCheckboxGroup,
-  EuiFieldText,
-  EuiForm,
-  EuiFormRow,
-  EuiFilePicker,
-  EuiLink,
-  EuiRange,
-  EuiSelect,
-  EuiSpacer,
-  EuiSwitch,
-  EuiText,
+  OuiButton,
+  OuiCheckboxGroup,
+  OuiFieldText,
+  OuiForm,
+  OuiFormRow,
+  OuiFilePicker,
+  OuiLink,
+  OuiRange,
+  OuiSelect,
+  OuiSpacer,
+  OuiSwitch,
+  OuiText,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -54,19 +65,19 @@ export default () => {
   };
 
   return (
-    <EuiForm component="form">
-      <EuiFormRow label="Text field" helpText="I am some friendly help text.">
-        <EuiFieldText name="first" />
-      </EuiFormRow>
+    <OuiForm component="form">
+      <OuiFormRow label="Text field" helpText="I am some friendly help text.">
+        <OuiFieldText name="first" />
+      </OuiFormRow>
 
-      <EuiFormRow
+      <OuiFormRow
         label="Select (with no initial selection)"
         labelAppend={
-          <EuiText size="xs">
-            <EuiLink>Link to some help</EuiLink>
-          </EuiText>
+          <OuiText size="xs">
+            <OuiLink>Link to some help</OuiLink>
+          </OuiText>
         }>
-        <EuiSelect
+        <OuiSelect
           hasNoInitialSelection
           options={[
             { value: 'option_one', text: 'Option one' },
@@ -74,30 +85,30 @@ export default () => {
             { value: 'option_three', text: 'Option three' },
           ]}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="File picker">
-        <EuiFilePicker />
-      </EuiFormRow>
+      <OuiFormRow label="File picker">
+        <OuiFilePicker />
+      </OuiFormRow>
 
-      <EuiFormRow label="Range">
-        <EuiRange min={0} max={100} name="range" id="range" />
-      </EuiFormRow>
+      <OuiFormRow label="Range">
+        <OuiRange min={0} max={100} name="range" id="range" />
+      </OuiFormRow>
 
-      <EuiFormRow
+      <OuiFormRow
         label="Use a switch instead of a single checkbox and set 'hasChildLabel' to false"
         hasChildLabel={false}>
-        <EuiSwitch
+        <OuiSwitch
           name="switch"
           label="Should we do this?"
           checked={isSwitchChecked}
           onChange={onSwitchChange}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiCheckboxGroup
+      <OuiCheckboxGroup
         options={checkboxes}
         idToSelectedMap={checkboxIdToSelectedMap}
         onChange={onCheckboxChange}
@@ -107,11 +118,11 @@ export default () => {
         }}
       />
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiButton type="submit" fill>
+      <OuiButton type="submit" fill>
         Save form
-      </EuiButton>
-    </EuiForm>
+      </OuiButton>
+    </OuiForm>
   );
 };

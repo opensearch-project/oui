@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,14 +16,14 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiBadge,
-  EuiSpacer,
-  EuiCallOut,
-  EuiCode,
-  EuiLink,
-  EuiKeyboardAccessible,
-  EuiSkipLink,
-  EuiScreenReaderOnly,
+  OuiBadge,
+  OuiSpacer,
+  OuiCallOut,
+  OuiCode,
+  OuiLink,
+  OuiKeyboardAccessible,
+  OuiSkipLink,
+  OuiScreenReaderOnly,
 } from '../../../../src/components';
 
 import KeyboardAccessible from './keyboard_accessible';
@@ -21,33 +32,33 @@ import SkipLink from './skip_link';
 
 const keyboardAccessibleSource = require('!!raw-loader!./keyboard_accessible');
 const keyboardAccessibleHtml = renderToHtml(KeyboardAccessible);
-const keyboardAccessibleSnippet = `<EuiKeyboardAccessible>
+const keyboardAccessibleSnippet = `<OuiKeyboardAccessible>
   <!-- interactive child element -->
-</EuiKeyboardAccessible>`;
+</OuiKeyboardAccessible>`;
 
 const screenReaderOnlyHtml = renderToHtml(ScreenReaderOnly);
 const screenReaderOnlySource = require('!!raw-loader!./screen_reader');
 const screenReaderOnlySnippet = [
-  `<EuiScreenReaderOnly>
+  `<OuiScreenReaderOnly>
   <!-- visually hidden content -->
-</EuiScreenReaderOnly>
+</OuiScreenReaderOnly>
 `,
-  `<EuiScreenReaderOnly showOnFocus>
+  `<OuiScreenReaderOnly showOnFocus>
   <!-- visually hidden content, displayed on focus -->
-</EuiScreenReaderOnly>
+</OuiScreenReaderOnly>
 `,
 ];
 
 const skipLinkHtml = renderToHtml(SkipLink);
 const skipLinkSource = require('!!raw-loader!./skip_link');
 const skipLinkSnippet = [
-  `<EuiSkipLink destinationId="myAnchorId">
+  `<OuiSkipLink destinationId="myAnchorId">
   Skip to content
-</EuiSkipLink>
+</OuiSkipLink>
 `,
-  `<EuiSkipLink destinationId="myAnchorId" position="fixed">
+  `<OuiSkipLink destinationId="myAnchorId" position="fixed">
   Skip to main content
-</EuiSkipLink>
+</OuiSkipLink>
 `,
 ];
 
@@ -68,18 +79,18 @@ export const AccessibilityExample = {
       ],
       text: (
         <>
-          <EuiBadge
+          <OuiBadge
             color="danger"
             href="https://github.com/elastic/eui/issues/1469"
             target="_blank"
             iconSide="right"
             iconType="popout">
             Set for deprecation. See details.
-          </EuiBadge>
+          </OuiBadge>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             iconType="accessibility"
             title="Deprecated because it often causes problems for screen reader users">
@@ -88,19 +99,19 @@ export const AccessibilityExample = {
               it also frequently introduced problems for screen reader users. As
               such, we don&apos;t recommend it&apos;s continued use.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
           <p>
             You can make interactive elements keyboard-accessible with the{' '}
-            <strong>EuiKeyboardAccessible</strong> component. This is necessary
-            for non-button elements and <EuiCode>a</EuiCode> tags without{' '}
-            <EuiCode>href</EuiCode> attributes.
+            <strong>OuiKeyboardAccessible</strong> component. This is necessary
+            for non-button elements and <OuiCode>a</OuiCode> tags without{' '}
+            <OuiCode>href</OuiCode> attributes.
           </p>
         </>
       ),
-      props: { EuiKeyboardAccessible },
+      props: { OuiKeyboardAccessible },
       snippet: keyboardAccessibleSnippet,
       demo: <KeyboardAccessible />,
     },
@@ -119,13 +130,13 @@ export const AccessibilityExample = {
       text: (
         <div>
           <p>
-            Use the <strong>EuiScreenReaderOnly</strong> component to visually
+            Use the <strong>OuiScreenReaderOnly</strong> component to visually
             hide elements while still allowing them to be read by screen
             readers. In certain cases, you may want to use the{' '}
-            <EuiCode>showOnFocus</EuiCode> prop to display screen reader-only
+            <OuiCode>showOnFocus</OuiCode> prop to display screen reader-only
             content when in focus.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             iconType="accessibility"
             title="WebAIM recommendation for screen reader-only content">
@@ -134,17 +145,17 @@ export const AccessibilityExample = {
               provides functionality or interactivity) is important enough to
               provide to screen reader users, it should probably be made
               available to all users.&quot;{' '}
-              <EuiLink
+              <OuiLink
                 href="http://webaim.org/techniques/css/invisiblecontent/"
                 external>
                 Learn more about invisible content
-              </EuiLink>
+              </OuiLink>
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </div>
       ),
       props: {
-        EuiScreenReaderOnly,
+        OuiScreenReaderOnly,
       },
       snippet: screenReaderOnlySnippet,
       demo: <ScreenReaderOnly />,
@@ -163,12 +174,12 @@ export const AccessibilityExample = {
       ],
       text: (
         <p>
-          The <strong>EuiSkipLink</strong> component allows users to bypass
+          The <strong>OuiSkipLink</strong> component allows users to bypass
           navigation, or ornamental elements, and quickly reach the main content
           of the page.
         </p>
       ),
-      props: { EuiSkipLink },
+      props: { OuiSkipLink },
       snippet: skipLinkSnippet,
       demo: <SkipLink />,
     },

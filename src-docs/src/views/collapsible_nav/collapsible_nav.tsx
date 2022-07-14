@@ -1,69 +1,80 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiCollapsibleNav } from '../../../../src/components/collapsible_nav';
-import { EuiButton } from '../../../../src/components/button';
-import { EuiTitle } from '../../../../src/components/title';
-import { EuiSpacer } from '../../../../src/components/spacer';
-import { EuiText } from '../../../../src/components/text';
-import { EuiCode } from '../../../../src/components/code';
+import { OuiCollapsibleNav } from '../../../../src/components/collapsible_nav';
+import { OuiButton } from '../../../../src/components/button';
+import { OuiTitle } from '../../../../src/components/title';
+import { OuiSpacer } from '../../../../src/components/spacer';
+import { OuiText } from '../../../../src/components/text';
+import { OuiCode } from '../../../../src/components/code';
 
 export default () => {
   const [navIsOpen, setNavIsOpen] = useState<boolean>(
     JSON.parse(
-      String(localStorage.getItem('euiCollapsibleNavExample--isDocked'))
+      String(localStorage.getItem('ouiCollapsibleNavExample--isDocked'))
     ) || false
   );
   const [navIsDocked, setNavIsDocked] = useState<boolean>(
     JSON.parse(
-      String(localStorage.getItem('euiCollapsibleNavExample--isDocked'))
+      String(localStorage.getItem('ouiCollapsibleNavExample--isDocked'))
     ) || false
   );
 
   return (
     <>
-      <EuiCollapsibleNav
+      <OuiCollapsibleNav
         isOpen={navIsOpen}
         isDocked={navIsDocked}
         size={240}
         button={
-          <EuiButton onClick={() => setNavIsOpen((isOpen) => !isOpen)}>
+          <OuiButton onClick={() => setNavIsOpen((isOpen) => !isOpen)}>
             Toggle nav
-          </EuiButton>
+          </OuiButton>
         }
         onClose={() => setNavIsOpen(false)}>
         <div style={{ padding: 16 }}>
-          <EuiTitle>
+          <OuiTitle>
             <h2>I am some nav</h2>
-          </EuiTitle>
-          <EuiSpacer />
-          <EuiText size="s" color="subdued">
+          </OuiTitle>
+          <OuiSpacer />
+          <OuiText size="s" color="subdued">
             <p>
               The docked status is being stored in{' '}
-              <EuiCode>localStorage</EuiCode>.
+              <OuiCode>localStorage</OuiCode>.
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiButton
+          </OuiText>
+          <OuiSpacer />
+          <OuiButton
             onClick={() => {
               setNavIsDocked(!navIsDocked);
               localStorage.setItem(
-                'euiCollapsibleNavExample--isDocked',
+                'ouiCollapsibleNavExample--isDocked',
                 JSON.stringify(!navIsDocked)
               );
             }}>
             Docked: {navIsDocked ? 'on' : 'off'}
-          </EuiButton>
+          </OuiButton>
         </div>
-      </EuiCollapsibleNav>
+      </OuiCollapsibleNav>
 
       {navIsDocked && (
-        <EuiText size="s" color="subdued">
+        <OuiText size="s" color="subdued">
           <p>
-            The <EuiCode>button</EuiCode> gets hidden by default when the nav is
+            The <OuiCode>button</OuiCode> gets hidden by default when the nav is
             docked unless you set{' '}
-            <EuiCode language="js">showButtonIfDocked = true</EuiCode>.
+            <OuiCode language="js">showButtonIfDocked = true</OuiCode>.
           </p>
-        </EuiText>
+        </OuiText>
       )}
     </>
   );

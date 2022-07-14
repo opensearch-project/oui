@@ -1,17 +1,28 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import {
-  EuiCode,
-  EuiTable,
-  EuiTableBody,
-  EuiTableHeader,
-  EuiTableHeaderCell,
-  EuiTableHeaderCellCheckbox,
-  EuiTablePagination,
-  EuiTableRow,
-  EuiTableRowCellCheckbox,
-  EuiTableHeaderMobile,
-  EuiTableSortMobile,
-  EuiTableSortMobileItem,
+  OuiCode,
+  OuiTable,
+  OuiTableBody,
+  OuiTableHeader,
+  OuiTableHeaderCell,
+  OuiTableHeaderCellCheckbox,
+  OuiTablePagination,
+  OuiTableRow,
+  OuiTableRowCellCheckbox,
+  OuiTableHeaderMobile,
+  OuiTableSortMobile,
+  OuiTableSortMobileItem,
 } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
@@ -36,49 +47,49 @@ export const section = {
   text: (
     <div>
       <p>
-        As an alternative to <strong>EuiBasicTable</strong> you can instead
+        As an alternative to <strong>OuiBasicTable</strong> you can instead
         construct a table from individual{' '}
         <strong>low level, basic components</strong> like{' '}
-        <strong>EuiTableHeader</strong>
-        &nbsp;and <strong>EuiTableRowCell</strong>. Below is one of many ways
+        <strong>OuiTableHeader</strong>
+        &nbsp;and <strong>OuiTableRowCell</strong>. Below is one of many ways
         you might set this up on your own. Important to note are how you need to
-        set individual props like the <EuiCode>truncateText</EuiCode> prop to
+        set individual props like the <OuiCode>truncateText</OuiCode> prop to
         cells to enforce a single-line behavior and truncate their contents, or
-        set the <EuiCode>textOnly</EuiCode> prop to <EuiCode>false</EuiCode> if
+        set the <OuiCode>textOnly</OuiCode> prop to <OuiCode>false</OuiCode> if
         you need the contents to be a direct descendent of the cell.
       </p>
       <h3>Responsive extras</h3>
       <p>
-        You must supply a <EuiCode language="js">mobileOptions.header</EuiCode>{' '}
+        You must supply a <OuiCode language="js">mobileOptions.header</OuiCode>{' '}
         prop equivalent to the column header on each{' '}
-        <strong>EuiTableRowCell</strong> so that the mobile version will use
+        <strong>OuiTableRowCell</strong> so that the mobile version will use
         that to populate the per cell headers.
       </p>
       <p>
         Also, custom table implementations <strong>will not</strong>{' '}
         auto-populate any header level functions like selection and filtering.
         In order to add mobile support for these functions, you will need to
-        implement the <strong>EuiTableHeaderMobile</strong> component as a
-        wrapper around these and use <strong>EuiTableSortMobile</strong>
-        &nbsp;and <strong>EuiTableSortMobileItem</strong> components to supply
+        implement the <strong>OuiTableHeaderMobile</strong> component as a
+        wrapper around these and use <strong>OuiTableSortMobile</strong>
+        &nbsp;and <strong>OuiTableSortMobileItem</strong> components to supply
         mobile sorting. See demo below.
       </p>
     </div>
   ),
-  components: { EuiTable },
+  components: { OuiTable },
   props: {
-    EuiTable,
-    EuiTableBody,
-    EuiTableHeader,
-    EuiTableHeaderCell,
-    EuiTableHeaderCellCheckbox,
-    EuiTablePagination,
-    EuiTableRow,
-    EuiTableRowCellCheckbox,
+    OuiTable,
+    OuiTableBody,
+    OuiTableHeader,
+    OuiTableHeaderCell,
+    OuiTableHeaderCellCheckbox,
+    OuiTablePagination,
+    OuiTableRow,
+    OuiTableRowCellCheckbox,
     ...cellPropsInfo,
-    EuiTableHeaderMobile,
-    EuiTableSortMobile,
-    EuiTableSortMobileItem,
+    OuiTableHeaderMobile,
+    OuiTableSortMobile,
+    OuiTableSortMobileItem,
   },
   demo: <Custom />,
 };

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,14 +31,14 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../common';
 
-import { EuiCodeBlockImpl, EuiCodeBlockImplProps } from './_code_block';
+import { OuiCodeBlockImpl, OuiCodeBlockImplProps } from './_code_block';
 
-export type EuiCodeBlockProps = CommonProps &
-  Omit<EuiCodeBlockImplProps, 'inline'> &
+export type OuiCodeBlockProps = CommonProps &
+  Omit<OuiCodeBlockImplProps, 'inline'> &
   HTMLAttributes<HTMLElement>;
 
-export const EuiCodeBlock: FunctionComponent<EuiCodeBlockProps> = ({
+export const OuiCodeBlock: FunctionComponent<OuiCodeBlockProps> = ({
   ...rest
 }) => {
-  return <EuiCodeBlockImpl inline={false} {...rest} />;
+  return <OuiCodeBlockImpl inline={false} {...rest} />;
 };

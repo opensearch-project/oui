@@ -1,16 +1,16 @@
-# Using react-router with EUI
+# Using react-router with OUI
 
-EUI doesn't prescribe the use of any particular routing library, and we also don't want to incur
-the maintenance burden of supporting router-specific components. For these reasons, EUI doesn't
+OUI doesn't prescribe the use of any particular routing library, and we also don't want to incur
+the maintenance burden of supporting router-specific components. For these reasons, OUI doesn't
 publish any tools for working with `react-router` (or any other routing lib). However,
-integrating EUI with `react-router` on the consumer's side is fairly straightforward.
+integrating OUI with `react-router` on the consumer's side is fairly straightforward.
 
 ## How react-router works
 
 Links in `react-router` accept a `to` prop and convert this to both `href` and `onClick` props
 under the hood. The `onClick` is used to push a new `history` location, and the `href` allows you to
-open the link in a new tab. Any mechanism for integrating EUI with `react-router` needs to bridge
-this `to` prop with EUI components' `href` and `onClick` props.
+open the link in a new tab. Any mechanism for integrating OUI with `react-router` needs to bridge
+this `to` prop with OUI components' `href` and `onClick` props.
 
 - [`react-router` 3.x](#react-router-3x)
 - [`react-router` 4.x](#react-router-4x)
@@ -18,19 +18,19 @@ this `to` prop with EUI components' `href` and `onClick` props.
 
 ## Techniques
 
-There are many techniques for integrating EUI with `react-router` ([see below](#techniques-we-dont-recommend) for some techniques we don't recommend), but we think these two are the strongest:
+There are many techniques for integrating OUI with `react-router` ([see below](#techniques-we-dont-recommend) for some techniques we don't recommend), but we think these two are the strongest:
 
 ### 1) Conversion function (recommended)
 
 You can use a conversion function to convert a `to` value
-to `href` and `onClick` values, which you can then pass to any EUI button or link component.
-Many EUI components are designed to accept both props if they accept one.
+to `href` and `onClick` values, which you can then pass to any OUI button or link component.
+Many OUI components are designed to accept both props if they accept one.
 
 This technique is recommended because of its flexibility. As a consumer, you have the option to
 use either the `href` or `onClick` values, or both. It's also terser than the second option.
 
 ```jsx
-<EuiLink {...getRouterLinkProps('/location')}>Link</EuiLink>
+<OuiLink {...getRouterLinkProps('/location')}>Link</OuiLink>
 ```
 
 ### 2) Adapter component
@@ -46,7 +46,7 @@ const RouterLinkAdapter = ({to, children}) => {
 };
 
 <RouterLinkAdapter to="/location">
-  {(onClick, href) => <EuiLink onClick={onClick} href={href}>Link</EuiLink>}
+  {(onClick, href) => <OuiLink onClick={onClick} href={href}>Link</OuiLink>}
 <RouterLinkAdapter/>
 ```
 
@@ -104,7 +104,7 @@ Note that if using HMR, you'll need to re-register the router after a hot reload
 ### `routing.js` service
 
 You can create a `routing.js` service to surface the `registerRouter` method as well as your
-conversion function (called `getRouterLinkProps` here). The EUI documentation site [uses this approach](../src-docs/src/services/routing/routing.js).
+conversion function (called `getRouterLinkProps` here). The OUI documentation site [uses this approach](../src-docs/src/services/routing/routing.js).
 
 ```js
 // routing.js
@@ -296,12 +296,12 @@ ReactDOM.render(
 
 ### react-router 5.1
 
-In react-router 5.1, we can fully capitalize in the React Hooks utility, in this case, `useHistory`. Using this, we do not need other HOC wrapper files and global router variable. We just need to create the file below, and then use it anywhere by importing `EuiCustomLink`. There is an example repository for this: https://github.com/Imballinst/elastic-react-router-hooks.
+In react-router 5.1, we can fully capitalize in the React Hooks utility, in this case, `useHistory`. Using this, we do not need other HOC wrapper files and global router variable. We just need to create the file below, and then use it anywhere by importing `OuiCustomLink`. There is an example repository for this: https://github.com/Imballinst/elastic-react-router-hooks.
 
 ```jsx
-// File name: "EuiCustomLink.js".
+// File name: "OuiCustomLink.js".
 import React from 'react';
-import { EuiLink } from '@elastic/eui';
+import { OuiLink } from '@opensearch-project/oui';
 import { useHistory } from 'react-router';
 
 const isModifiedEvent = (event) =>
@@ -314,7 +314,7 @@ const isTargetBlank = (event) => {
   return target && target !== '_self';
 };
 
-export default function EuiCustomLink({ to, ...rest }) {
+export default function OuiCustomLink({ to, ...rest }) {
   // This is the key!
   const history = useHistory();
 
@@ -339,7 +339,7 @@ export default function EuiCustomLink({ to, ...rest }) {
   const href = history.createHref({ pathname: to });
 
   const props = { ...rest, href, onClick };
-  return <EuiLink {...props} />;
+  return <OuiLink {...props} />;
 }
 ```
 
@@ -361,21 +361,21 @@ ReactDOM.render(
 
 ## Techniques we don't recommend
 
-### Using EUI classes with the react-router `<Link>` component
+### Using OUI classes with the react-router `<Link>` component
 
-It's possible to integrate EUI with `react-router` by using its CSS classes only:
+It's possible to integrate OUI with `react-router` by using its CSS classes only:
 
 ```jsx
-<Link className="euiLink" to="/location">Link</Link>
+<Link className="ouiLink" to="/location">Link</Link>
 ```
 
 But it's important to be aware of two caveats to this approach:
 
-* EUI's components contain a lot of useful behavior. For example, `EuiLink` will render either
+* OUI's components contain a lot of useful behavior. For example, `OuiLink` will render either
   a button or an anchor tag depending on the presence of `onClick` and `href` props. It will also
   create a secure `rel` attribute if you add `target="_blank"`. Consumers lose out on these
-  features if they use EUI's CSS instead of its React components.
-* This creates a brittle dependency upon the `euiLink` CSS class. If we were to rename this
-  class in EUI, this would constitute a breaking change and we'd make a note of it in the change
+  features if they use OUI's CSS instead of its React components.
+* This creates a brittle dependency upon the `ouiLink` CSS class. If we were to rename this
+  class in OUI, this would constitute a breaking change and we'd make a note of it in the change
   log. But if a consumer doesn't notice this note then the only way they could detect that something
   in their UI has changed (and possibly broken) would be through manual testing.

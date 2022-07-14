@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiHighlight, EuiMark } from '../../../../src/components';
+import { OuiCode, OuiHighlight, OuiMark } from '../../../../src/components';
 
 import { highlightConfig, markConfig } from './playground';
 
@@ -13,14 +24,14 @@ import { Mark } from './mark';
 
 const highlightSource = require('!!raw-loader!./highlight');
 const highlightHtml = renderToHtml(Highlight);
-const highlightSnippet = `<EuiHighlight search={searchValue} highlightAll={isHighlightAll}>
+const highlightSnippet = `<OuiHighlight search={searchValue} highlightAll={isHighlightAll}>
   <!-- A text where all your search matches will be highlighted -->
-</EuiHighlight>
+</OuiHighlight>
 `;
 
 const markSource = require('!!raw-loader!./mark');
 const markHtml = renderToHtml(Mark);
-const markSnippet = '<EuiMark><!-- Mark text --></EuiMark>';
+const markSnippet = '<OuiMark><!-- Mark text --></OuiMark>';
 
 export const HighlightAndMarkExample = {
   title: 'Highlight and mark',
@@ -39,11 +50,11 @@ export const HighlightAndMarkExample = {
       ],
       text: (
         <p>
-          Use <strong>EuiHighlight</strong> to highlight substrings within a
+          Use <strong>OuiHighlight</strong> to highlight substrings within a
           string, typically in response to user input.
         </p>
       ),
-      props: { EuiHighlight },
+      props: { OuiHighlight },
       snippet: highlightSnippet,
       demo: <Highlight />,
       playground: highlightConfig,
@@ -62,11 +73,11 @@ export const HighlightAndMarkExample = {
       ],
       text: (
         <p>
-          Use <strong>EuiMark</strong> to wrap a string in a{' '}
-          <EuiCode>mark</EuiCode> element.
+          Use <strong>OuiMark</strong> to wrap a string in a{' '}
+          <OuiCode>mark</OuiCode> element.
         </p>
       ),
-      props: { EuiMark },
+      props: { OuiMark },
       snippet: markSnippet,
       demo: <Mark />,
       playground: markConfig,

@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
-import { EuiCallOut, EuiCode } from '../../../../src/components';
+import { OuiCallOut, OuiCode } from '../../../../src/components';
 
 import DataGridFocus from './focus';
 const dataGridFocusSource = require('!!raw-loader!./focus');
@@ -95,17 +106,17 @@ export const DataGridFocusExample = {
             <li>The cell is not expandable.</li>
             <li>The cell contains multiple interactive elements.</li>
           </ul>
-          <EuiCallOut
+          <OuiCallOut
             size="s"
             color="warning"
             title="A caution about turning off cell expansion when the width of the column is unknown">
-            In general, you should turn <EuiCode>isExpandible</EuiCode> to false
+            In general, you should turn <OuiCode>isExpandible</OuiCode> to false
             only when you know the exact width and number of items that a cell
             will include. Control columns that contain row actions are a good
             example of when to use them. In certain scenarios, allowing multiple
             interactive elements in cells when you can not control the width can
             lead to hidden focus because the content is truncated.
-          </EuiCallOut>
+          </OuiCallOut>
         </Fragment>
       ),
       components: { DataGridFocus },

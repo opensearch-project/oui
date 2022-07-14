@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +32,20 @@ import React, { Component } from 'react';
 
 const MINIMUM_COLUMN_WIDTH = 40;
 
-export interface EuiDataGridColumnResizerProps {
+export interface OuiDataGridColumnResizerProps {
   columnId: string;
   columnWidth: number;
   setColumnWidth: (columnId: string, width: number) => void;
 }
 
-interface EuiDataGridColumnResizerState {
+interface OuiDataGridColumnResizerState {
   initialX: number;
   offset: number;
 }
 
-export class EuiDataGridColumnResizer extends Component<
-  EuiDataGridColumnResizerProps,
-  EuiDataGridColumnResizerState
+export class OuiDataGridColumnResizer extends Component<
+  OuiDataGridColumnResizerProps,
+  OuiDataGridColumnResizerState
 > {
   state = {
     initialX: 0,
@@ -84,7 +95,7 @@ export class EuiDataGridColumnResizer extends Component<
 
     return (
       <div
-        className="euiDataGridColumnResizer"
+        className="ouiDataGridColumnResizer"
         data-test-subj="dataGridColumnResizer"
         style={{ marginRight: `${-offset}px` }}
         onMouseDown={this.onMouseDown}

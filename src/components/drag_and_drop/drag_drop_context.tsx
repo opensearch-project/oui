@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,21 +37,21 @@ import {
   ResponderProvided,
 } from 'react-beautiful-dnd';
 
-// export interface EuiDragDropContextProps extends DragDropContextProps {}
+// export interface OuiDragDropContextProps extends DragDropContextProps {}
 
-type EuiDraggingType = string | null;
+type OuiDraggingType = string | null;
 
-export interface EuiDragDropContextProps {
-  isDraggingType: EuiDraggingType;
+export interface OuiDragDropContextProps {
+  isDraggingType: OuiDraggingType;
 }
 
-export const EuiDragDropContextContext = createContext<EuiDragDropContextProps>(
+export const OuiDragDropContextContext = createContext<OuiDragDropContextProps>(
   {
     isDraggingType: null,
   }
 );
 
-export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
+export const OuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
   onBeforeDragStart,
   onDragStart,
   onDragUpdate,
@@ -48,8 +59,8 @@ export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
   children,
   ...rest
 }) => {
-  const [isDraggingType, setIsDraggingType] = useState<EuiDraggingType>(null);
-  const euiOnDragStart = (
+  const [isDraggingType, setIsDraggingType] = useState<OuiDraggingType>(null);
+  const ouiOnDragStart = (
     start: DragStart,
     provided: ResponderProvided
   ): void => {
@@ -58,7 +69,7 @@ export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
       onDragStart(start, provided);
     }
   };
-  const euiOnDragEnd = (
+  const ouiOnDragEnd = (
     result: DropResult,
     provided: ResponderProvided
   ): void => {
@@ -70,16 +81,16 @@ export const EuiDragDropContext: FunctionComponent<DragDropContextProps> = ({
   return (
     <DragDropContext
       onBeforeDragStart={onBeforeDragStart}
-      onDragStart={euiOnDragStart}
+      onDragStart={ouiOnDragStart}
       onDragUpdate={onDragUpdate}
-      onDragEnd={euiOnDragEnd}
+      onDragEnd={ouiOnDragEnd}
       {...rest}>
-      <EuiDragDropContextContext.Provider
+      <OuiDragDropContextContext.Provider
         value={{
           isDraggingType,
         }}>
         {children}
-      </EuiDragDropContextContext.Provider>
+      </OuiDragDropContextContext.Provider>
     </DragDropContext>
   );
 };

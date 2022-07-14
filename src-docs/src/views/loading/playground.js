@@ -1,32 +1,43 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import {
   propUtilityForPlayground,
   iconValidator,
 } from '../../services/playground';
 import {
-  EuiLoadingElastic,
-  EuiLoadingChart,
-  EuiLoadingLogo,
-  EuiLoadingSpinner,
-  EuiLoadingContent,
+  OuiLoadingElastic,
+  OuiLoadingChart,
+  OuiLoadingLogo,
+  OuiLoadingSpinner,
+  OuiLoadingContent,
 } from '../../../../src/components/';
 import { PropTypes } from 'react-view';
 
 export const loadingElasticConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingElastic.__docgenInfo)
-    ? EuiLoadingElastic.__docgenInfo[0]
-    : EuiLoadingElastic.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiLoadingElastic.__docgenInfo)
+    ? OuiLoadingElastic.__docgenInfo[0]
+    : OuiLoadingElastic.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiLoadingElastic',
+      componentName: 'OuiLoadingElastic',
       props: propsToUse,
       scope: {
-        EuiLoadingElastic,
+        OuiLoadingElastic,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingElastic'],
+        '@opensearch-project/oui': {
+          named: ['OuiLoadingElastic'],
         },
       },
     },
@@ -34,21 +45,21 @@ export const loadingElasticConfig = () => {
 };
 
 export const loadingChartConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingChart.__docgenInfo)
-    ? EuiLoadingChart.__docgenInfo[0]
-    : EuiLoadingChart.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiLoadingChart.__docgenInfo)
+    ? OuiLoadingChart.__docgenInfo[0]
+    : OuiLoadingChart.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiLoadingChart',
+      componentName: 'OuiLoadingChart',
       props: propsToUse,
       scope: {
-        EuiLoadingChart,
+        OuiLoadingChart,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingChart'],
+        '@opensearch-project/oui': {
+          named: ['OuiLoadingChart'],
         },
       },
     },
@@ -56,22 +67,22 @@ export const loadingChartConfig = () => {
 };
 
 export const loadingLogoConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingLogo.__docgenInfo)
-    ? EuiLoadingLogo.__docgenInfo[0]
-    : EuiLoadingLogo.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiLoadingLogo.__docgenInfo)
+    ? OuiLoadingLogo.__docgenInfo[0]
+    : OuiLoadingLogo.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
   propsToUse.logo = iconValidator(propsToUse.logo);
 
   return {
     config: {
-      componentName: 'EuiLoadingLogo',
+      componentName: 'OuiLoadingLogo',
       props: propsToUse,
       scope: {
-        EuiLoadingLogo,
+        OuiLoadingLogo,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingLogo'],
+        '@opensearch-project/oui': {
+          named: ['OuiLoadingLogo'],
         },
       },
     },
@@ -79,21 +90,21 @@ export const loadingLogoConfig = () => {
 };
 
 export const loadingSpinnerConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingSpinner.__docgenInfo)
-    ? EuiLoadingSpinner.__docgenInfo[0]
-    : EuiLoadingSpinner.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiLoadingSpinner.__docgenInfo)
+    ? OuiLoadingSpinner.__docgenInfo[0]
+    : OuiLoadingSpinner.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   return {
     config: {
-      componentName: 'EuiLoadingSpinner',
+      componentName: 'OuiLoadingSpinner',
       props: propsToUse,
       scope: {
-        EuiLoadingSpinner,
+        OuiLoadingSpinner,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingSpinner'],
+        '@opensearch-project/oui': {
+          named: ['OuiLoadingSpinner'],
         },
       },
     },
@@ -101,9 +112,9 @@ export const loadingSpinnerConfig = () => {
 };
 
 export const loadingContentConfig = () => {
-  const docgenInfo = Array.isArray(EuiLoadingContent.__docgenInfo)
-    ? EuiLoadingContent.__docgenInfo[0]
-    : EuiLoadingContent.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiLoadingContent.__docgenInfo)
+    ? OuiLoadingContent.__docgenInfo[0]
+    : OuiLoadingContent.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.lines = {
@@ -113,14 +124,14 @@ export const loadingContentConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiLoadingContent',
+      componentName: 'OuiLoadingContent',
       props: propsToUse,
       scope: {
-        EuiLoadingContent,
+        OuiLoadingContent,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiLoadingContent'],
+        '@opensearch-project/oui': {
+          named: ['OuiLoadingContent'],
         },
       },
     },

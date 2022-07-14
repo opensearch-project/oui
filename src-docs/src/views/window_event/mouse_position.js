@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiSwitch,
-  EuiDescriptionList,
-  EuiSpacer,
+  OuiSwitch,
+  OuiDescriptionList,
+  OuiSpacer,
 } from '../../../../src/components';
 
-import { EuiWindowEvent } from '../../../../src/services';
+import { OuiWindowEvent } from '../../../../src/services';
 
 export const MousePosition = () => {
   const [tracking, setTracking] = useState(false);
@@ -32,17 +43,17 @@ export const MousePosition = () => {
   ];
   return (
     <div>
-      <EuiSwitch
+      <OuiSwitch
         label="Track mouse position"
         checked={tracking}
         onChange={onSwitchChange}
       />
       {tracking ? (
-        <EuiWindowEvent event="mousemove" handler={onMouseMove} />
+        <OuiWindowEvent event="mousemove" handler={onMouseMove} />
       ) : null}
-      <EuiSpacer size="l" />
-      <EuiDescriptionList listItems={listItems} />
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="l" />
+      <OuiDescriptionList listItems={listItems} />
+      <OuiSpacer size="xxl" />
     </div>
   );
 };

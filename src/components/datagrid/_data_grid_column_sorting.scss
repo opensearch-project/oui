@@ -1,44 +1,55 @@
-.euiDataGridColumnSorting__item {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiDataGridColumnSorting__item {
 
   &-isDragging {
-    @include euiBottomShadow;
-    background: $euiColorEmptyShade;
+    @include ouiBottomShadow;
+    background: $ouiColorEmptyShade;
   }
 }
 
-.euiDataGridColumnSortingPopover {
+.ouiDataGridColumnSortingPopover {
   // Hack because the fixed positions of drag and drop don't work inside of transformed elements
   // sass-lint:disable-block no-important
   transform: none !important;
   transition: none !important;
-  margin-top: -$euiSizeS;
+  margin-top: -$ouiSizeS;
   // IE11 needs a min-width
-  min-width: $euiSize * 12;
+  min-width: $ouiSize * 12;
 }
 
-.euiDataGridColumnSorting__fieldList {
-  @include euiYScrollWithShadows;
-  padding-top: $euiSizeXS;
-  padding-bottom: $euiSizeXS;
+.ouiDataGridColumnSorting__fieldList {
+  @include ouiYScrollWithShadows;
+  padding-top: $ouiSizeXS;
+  padding-bottom: $ouiSizeXS;
   max-height: 300px;
 }
 
-.euiDataGridColumnSorting__field {
-  @include euiInteractiveStates;
+.ouiDataGridColumnSorting__field {
+  @include ouiInteractiveStates;
   display: block;
-  padding: $euiSizeXS $euiSizeS;
+  padding: $ouiSizeXS $ouiSizeS;
   width: 100%;
-  outline-offset: -$euiFocusRingSize;
+  outline-offset: -$ouiFocusRingSize;
 }
 
-.euiDataGridColumnSorting__orderButtons {
-  @include euiBreakpoint('xs', 's') {
-    padding-left: $euiSizeXS;
+.ouiDataGridColumnSorting__orderButtons {
+  @include ouiBreakpoint('xs', 's') {
+    padding-left: $ouiSizeXS;
   }
-  padding-left: $euiSizeL;
+  padding-left: $ouiSizeL;
 
-  .euiDataGridColumnSorting__order {
-    @include euiBreakpoint('xs', 's') {
+  .ouiDataGridColumnSorting__order {
+    @include ouiBreakpoint('xs', 's') {
       min-width: unset;
     }
     min-width: 200px;
@@ -47,7 +58,7 @@
     // Hack to overwrite some nested, unreachable component code with button groups
     // sass-lint:disable-block no-important
     button {
-      font-size: $euiFontSizeXS !important;
+      font-size: $ouiFontSizeXS !important;
     }
   }
 }

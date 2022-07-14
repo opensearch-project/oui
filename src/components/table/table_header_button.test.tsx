@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableHeaderButton } from './table_header_button';
+import { OuiTableHeaderButton } from './table_header_button';
 
-describe('EuiTableHeaderButton', () => {
+describe('OuiTableHeaderButton', () => {
   test('is rendered', () => {
-    const component = render(<EuiTableHeaderButton {...requiredProps} />);
+    const component = render(<OuiTableHeaderButton {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

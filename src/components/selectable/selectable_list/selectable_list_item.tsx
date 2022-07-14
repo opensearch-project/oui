@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,14 +31,14 @@
 import classNames from 'classnames';
 import React, { Component, LiHTMLAttributes } from 'react';
 import { CommonProps } from '../../common';
-import { EuiI18n } from '../../i18n';
-import { EuiIcon, IconColor, IconType } from '../../icon';
-import { EuiSelectableOptionCheckedType } from '../selectable_option';
-import { EuiScreenReaderOnly } from '../../accessibility';
-import { EuiBadge, EuiBadgeProps } from '../../badge';
+import { OuiI18n } from '../../i18n';
+import { OuiIcon, IconColor, IconType } from '../../icon';
+import { OuiSelectableOptionCheckedType } from '../selectable_option';
+import { OuiScreenReaderOnly } from '../../accessibility';
+import { OuiBadge, OuiBadgeProps } from '../../badge';
 
 function resolveIconAndColor(
-  checked: EuiSelectableOptionCheckedType
+  checked: OuiSelectableOptionCheckedType
 ): { icon: IconType; color?: IconColor } {
   if (!checked) {
     return { icon: 'empty' };
@@ -37,13 +48,13 @@ function resolveIconAndColor(
     : { icon: 'cross', color: 'text' };
 }
 
-export type EuiSelectableListItemProps = LiHTMLAttributes<HTMLLIElement> &
+export type OuiSelectableListItemProps = LiHTMLAttributes<HTMLLIElement> &
   CommonProps & {
     children?: React.ReactNode;
     /**
      * Applies an icon and visual styling to activated items
      */
-    checked?: EuiSelectableOptionCheckedType;
+    checked?: OuiSelectableOptionCheckedType;
     /**
      * Shows icons based on `checked` type
      */
@@ -61,19 +72,19 @@ export type EuiSelectableListItemProps = LiHTMLAttributes<HTMLLIElement> &
      * shows a hollow badge as an append (far right) when the item is focused.
      * The default content when `true` is `↩ to select/deselect/include/exclude`
      */
-    onFocusBadge?: boolean | EuiBadgeProps;
+    onFocusBadge?: boolean | OuiBadgeProps;
   };
 
 // eslint-disable-next-line react/prefer-stateless-function
-export class EuiSelectableListItem extends Component<
-  EuiSelectableListItemProps
+export class OuiSelectableListItem extends Component<
+  OuiSelectableListItemProps
 > {
   static defaultProps = {
     showIcons: true,
     onFocusBadge: true,
   };
 
-  constructor(props: EuiSelectableListItemProps) {
+  constructor(props: OuiSelectableListItemProps) {
     super(props);
   }
 
@@ -93,9 +104,9 @@ export class EuiSelectableListItem extends Component<
     } = this.props;
 
     const classes = classNames(
-      'euiSelectableListItem',
+      'ouiSelectableListItem',
       {
-        'euiSelectableListItem-isFocused': isFocused,
+        'ouiSelectableListItem-isFocused': isFocused,
       },
       className
     );
@@ -104,8 +115,8 @@ export class EuiSelectableListItem extends Component<
     if (showIcons) {
       const { icon, color } = resolveIconAndColor(checked);
       optionIcon = (
-        <EuiIcon
-          className="euiSelectableListItem__icon"
+        <OuiIcon
+          className="ouiSelectableListItem__icon"
           color={color}
           type={icon}
         />
@@ -116,59 +127,59 @@ export class EuiSelectableListItem extends Component<
     let instruction: React.ReactNode;
     if (allowExclusions && checked === 'on') {
       state = (
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span>
-            <EuiI18n
-              token="euiSelectableListItem.includedOption"
+            <OuiI18n
+              token="ouiSelectableListItem.includedOption"
               default="Included option."
             />
           </span>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       );
       instruction = (
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span>
-            <EuiI18n
-              token="euiSelectableListItem.includedOptionInstructions"
+            <OuiI18n
+              token="ouiSelectableListItem.includedOptionInstructions"
               default="To exclude this option, press enter."
             />
           </span>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       );
     } else if (allowExclusions && checked === 'off') {
       state = (
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span>
-            <EuiI18n
-              token="euiSelectableListItem.excludedOption"
+            <OuiI18n
+              token="ouiSelectableListItem.excludedOption"
               default="Excluded option."
             />
           </span>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       );
       instruction = (
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span>
-            <EuiI18n
-              token="euiSelectableListItem.excludedOptionInstructions"
+            <OuiI18n
+              token="ouiSelectableListItem.excludedOptionInstructions"
               default="To deselect this option, press enter."
             />
           </span>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       );
     }
 
     let prependNode: React.ReactNode;
     if (prepend) {
       prependNode = (
-        <span className="euiSelectableListItem__prepend">{prepend}</span>
+        <span className="ouiSelectableListItem__prepend">{prepend}</span>
       );
     }
 
     let appendNode: React.ReactNode;
     if (append || !!onFocusBadge) {
       let onFocusBadgeNode: React.ReactNode;
-      const defaultOnFocusBadgeProps: EuiBadgeProps = {
+      const defaultOnFocusBadgeProps: OuiBadgeProps = {
         'aria-hidden': true,
         iconType: 'returnKey',
         iconSide: 'left',
@@ -177,30 +188,30 @@ export class EuiSelectableListItem extends Component<
 
       if (onFocusBadge === true) {
         onFocusBadgeNode = (
-          <EuiBadge
-            className="euiSelectableListItem__onFocusBadge"
+          <OuiBadge
+            className="ouiSelectableListItem__onFocusBadge"
             {...defaultOnFocusBadgeProps}
           />
         );
       } else if (!!onFocusBadge && onFocusBadge !== false) {
         const { children, className, ...restBadgeProps } = onFocusBadge;
         onFocusBadgeNode = (
-          <EuiBadge
+          <OuiBadge
             className={classNames(
-              'euiSelectableListItem__onFocusBadge',
+              'ouiSelectableListItem__onFocusBadge',
               className
             )}
             {...defaultOnFocusBadgeProps}
-            {...(restBadgeProps as EuiBadgeProps)}>
+            {...(restBadgeProps as OuiBadgeProps)}>
             {children}
-          </EuiBadge>
+          </OuiBadge>
         );
       }
 
       // Only display the append wrapper if append exists or isFocused
       if (append || (isFocused && !disabled)) {
         appendNode = (
-          <span className="euiSelectableListItem__append">
+          <span className="ouiSelectableListItem__append">
             {append} {isFocused && !disabled ? onFocusBadgeNode : null}
           </span>
         );
@@ -215,10 +226,10 @@ export class EuiSelectableListItem extends Component<
         className={classes}
         aria-disabled={disabled}
         {...rest}>
-        <span className="euiSelectableListItem__content">
+        <span className="ouiSelectableListItem__content">
           {optionIcon}
           {prependNode}
-          <span className="euiSelectableListItem__text">
+          <span className="ouiSelectableListItem__text">
             {state}
             {children}
             {instruction}

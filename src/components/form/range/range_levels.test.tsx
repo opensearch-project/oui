@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiRangeLevels } from './range_levels';
+import { OuiRangeLevels } from './range_levels';
 
-describe('EuiRangeLevels', () => {
+describe('OuiRangeLevels', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiRangeLevels
+      <OuiRangeLevels
         min={0}
         max={100}
         showTicks
@@ -52,7 +63,7 @@ describe('EuiRangeLevels', () => {
   test('should throw error if `level.min` is lower than `min`', () => {
     const component = () =>
       render(
-        <EuiRangeLevels
+        <OuiRangeLevels
           min={0}
           max={100}
           levels={[
@@ -71,7 +82,7 @@ describe('EuiRangeLevels', () => {
   test('should throw error if `level.max` is higher than `max`', () => {
     const component = () =>
       render(
-        <EuiRangeLevels
+        <OuiRangeLevels
           min={0}
           max={100}
           levels={[

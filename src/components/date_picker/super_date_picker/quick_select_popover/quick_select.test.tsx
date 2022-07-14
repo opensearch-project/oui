@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +31,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { EuiQuickSelect } from './quick_select';
+import { OuiQuickSelect } from './quick_select';
 
 const noop = () => {};
 const defaultProps = {
@@ -29,16 +40,16 @@ const defaultProps = {
   start: 'now-15m',
 };
 
-describe('EuiQuickSelect', () => {
+describe('OuiQuickSelect', () => {
   test('is rendered', () => {
-    const component = shallow(<EuiQuickSelect {...defaultProps} />);
+    const component = shallow(<OuiQuickSelect {...defaultProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('prevQuickSelect', () => {
     const component = shallow(
-      <EuiQuickSelect
+      <OuiQuickSelect
         {...defaultProps}
         prevQuickSelect={{
           timeTense: 'Next',

@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiCollapsibleNav,
-  EuiText,
-  EuiCallOut,
-  EuiCollapsibleNavGroup,
-  EuiHorizontalRule,
+  OuiCode,
+  OuiCollapsibleNav,
+  OuiText,
+  OuiCallOut,
+  OuiCollapsibleNavGroup,
+  OuiHorizontalRule,
 } from '../../../../src/components';
 
 import { collapsibleNavConfig } from './playground';
@@ -29,12 +40,12 @@ const collapsibleNavAllSource = require('!!raw-loader!./collapsible_nav_all');
 export const CollapsibleNavExample = {
   title: 'Collapsible nav',
   intro: (
-    <EuiText>
+    <OuiText>
       <p>
         This is a high level component that creates a flyout-style navigational
         pane.
       </p>
-    </EuiText>
+    </OuiText>
   ),
   sections: [
     {
@@ -47,26 +58,26 @@ export const CollapsibleNavExample = {
       text: (
         <>
           <p>
-            <strong>EuiCollapsibleNav</strong> is a custom implementation of{' '}
+            <strong>OuiCollapsibleNav</strong> is a custom implementation of{' '}
             <Link to="/layout/flyout">
-              <strong>EuiFlyout</strong>
+              <strong>OuiFlyout</strong>
             </Link>
             ; the visibility of which must still be maintained by the consuming
             application. An extra feature that it provides is the ability to{' '}
-            <EuiCode>dock</EuiCode> the flyout. This affixes the flyout to the
+            <OuiCode>dock</OuiCode> the flyout. This affixes the flyout to the
             window and pushes the body content by adding left side padding.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             iconType="tableOfContents"
             title="Docking is not possible on small screens because it would force less real estate for the page content."
           />
         </>
       ),
-      props: { EuiCollapsibleNav },
+      props: { OuiCollapsibleNav },
       demo: <CollapsibleNav />,
-      snippet: `<EuiCollapsibleNav
+      snippet: `<OuiCollapsibleNav
   size={240}
-  button={<EuiButton onClick={() => setNavIsOpen(!navIsOpen)}>Toggle nav</EuiButton>}
+  button={<OuiButton onClick={() => setNavIsOpen(!navIsOpen)}>Toggle nav</OuiButton>}
   isOpen={navIsOpen}
   isDocked={navIsDocked}
   onClose={() => setNavIsOpen(false)}
@@ -84,29 +95,29 @@ export const CollapsibleNavExample = {
       text: (
         <>
           <p>
-            An <strong>EuiCollapsibleNavGroup</strong> adds some basic borders
-            and <EuiCode>background</EuiCode> color of <EuiCode>none</EuiCode>,{' '}
-            <EuiCode>light</EuiCode>, or <EuiCode>dark</EuiCode>. Give each
-            section a heading by providing an optional <EuiCode>title</EuiCode>{' '}
-            and <EuiCode>iconType</EuiCode>. Make the section collapsible (
+            An <strong>OuiCollapsibleNavGroup</strong> adds some basic borders
+            and <OuiCode>background</OuiCode> color of <OuiCode>none</OuiCode>,{' '}
+            <OuiCode>light</OuiCode>, or <OuiCode>dark</OuiCode>. Give each
+            section a heading by providing an optional <OuiCode>title</OuiCode>{' '}
+            and <OuiCode>iconType</OuiCode>. Make the section collapsible (
             <Link to="/layout/accordion">accordion style</Link>) with{' '}
-            <EuiCode language="js">isCollapsible=true</EuiCode>.
+            <OuiCode language="js">isCollapsible=true</OuiCode>.
           </p>
           <p>
-            When in <EuiCode>isCollapsible</EuiCode> mode, a{' '}
-            <EuiCode>title</EuiCode> and{' '}
-            <EuiCode language="ts">initialIsOpen:boolean</EuiCode> is required.
+            When in <OuiCode>isCollapsible</OuiCode> mode, a{' '}
+            <OuiCode>title</OuiCode> and{' '}
+            <OuiCode language="ts">initialIsOpen:boolean</OuiCode> is required.
           </p>
         </>
       ),
       props: {
-        EuiCollapsibleNavGroup,
+        OuiCollapsibleNavGroup,
       },
       demo: <CollapsibleNavGroup />,
       demoPanelProps: {
         paddingSize: 'none',
       },
-      snippet: `<EuiCollapsibleNavGroup
+      snippet: `<OuiCollapsibleNavGroup
   title="Nav group"
   iconType="logo"
   isCollapsible={true}
@@ -125,14 +136,14 @@ export const CollapsibleNavExample = {
       text: (
         <>
           <p>
-            <strong>EuiCollapsibleNavGroups</strong> can contain any children.
+            <strong>OuiCollapsibleNavGroups</strong> can contain any children.
             They work well with{' '}
             <Link to="/display/list-group">
-              <strong>EuiListGroup, EuiPinnableListGroup</strong>
+              <strong>OuiListGroup, OuiPinnableListGroup</strong>
             </Link>{' '}
             and simple{' '}
             <Link to="/navigation/link">
-              <strong>EuiText</strong>
+              <strong>OuiText</strong>
             </Link>
             .
           </p>
@@ -142,18 +153,18 @@ export const CollapsibleNavExample = {
       demo: (
         <div>
           <CollapsibleNavList />
-          <EuiHorizontalRule margin="none" />
+          <OuiHorizontalRule margin="none" />
         </div>
       ),
       demoPanelProps: {
         paddingSize: 'none',
       },
-      snippet: `<EuiCollapsibleNavGroup
+      snippet: `<OuiCollapsibleNavGroup
   title="Kibana"
   iconType="logoKibana"
   isCollapsible={true}
   initialIsOpen={true}>
-  <EuiPinnableListGroup
+  <OuiPinnableListGroup
     aria-label="Kibana"
     listItems={[
       { label: 'Discover' },
@@ -165,7 +176,7 @@ export const CollapsibleNavExample = {
     gutterSize="none"
     size="s"
   />
-</EuiCollapsibleNavGroup>`,
+</OuiCollapsibleNavGroup>`,
     },
     {
       title: 'Full pattern with header and saved pins',
@@ -181,11 +192,11 @@ export const CollapsibleNavExample = {
           <p>
             The button below will launch a full screen example that includes{' '}
             <Link to="/layout/header">
-              <strong>EuiHeader</strong>
+              <strong>OuiHeader</strong>
             </Link>{' '}
-            with a toggle button to open an <strong>EuiCollapsibleNav</strong>.
+            with a toggle button to open an <strong>OuiCollapsibleNav</strong>.
             The contents of which are multiple{' '}
-            <strong>EuiCollapsibleNavGroups</strong> and saves the
+            <strong>OuiCollapsibleNavGroups</strong> and saves the
             open/closed/pinned state for each section and item in local store.
           </p>
           <p>

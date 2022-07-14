@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,24 +30,24 @@
 
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../../common';
-import { EuiFormLegendProps, EuiFormLegend } from './form_legend';
+import { OuiFormLegendProps, OuiFormLegend } from './form_legend';
 
-export interface EuiFormFieldsetProps
+export interface OuiFormFieldsetProps
   extends CommonProps,
     HTMLAttributes<HTMLFieldSetElement> {
   /**
-   * Adds an EuiFormLegend element as the first child
+   * Adds an OuiFormLegend element as the first child
    */
-  legend?: EuiFormLegendProps;
+  legend?: OuiFormLegendProps;
 }
 
-export const EuiFormFieldset: FunctionComponent<EuiFormFieldsetProps> = ({
+export const OuiFormFieldset: FunctionComponent<OuiFormFieldsetProps> = ({
   children,
   className,
   legend,
   ...rest
 }) => {
-  const legendDisplay = !!legend && <EuiFormLegend {...legend} />;
+  const legendDisplay = !!legend && <OuiFormLegend {...legend} />;
 
   return (
     <fieldset className={className} {...rest}>

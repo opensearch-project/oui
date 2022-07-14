@@ -1,7 +1,18 @@
-import React, { useState } from 'react';
-import { EuiButton } from '../../../../src/components';
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-import { EuiWindowEvent } from '../../../../src/services';
+import React, { useState } from 'react';
+import { OuiButton } from '../../../../src/components';
+
+import { OuiWindowEvent } from '../../../../src/services';
 
 export const ModalExample = (props) => {
   const [open, setOpen] = useState(false);
@@ -23,11 +34,11 @@ export const ModalExample = (props) => {
   };
 
   const { modal: Modal, buttonText = 'Open Modal' } = props;
-  const button = <EuiButton onClick={openModal}>{buttonText}</EuiButton>;
+  const button = <OuiButton onClick={openModal}>{buttonText}</OuiButton>;
 
   return (
     <div>
-      <EuiWindowEvent event="keydown" handler={closeOnEscape} />
+      <OuiWindowEvent event="keydown" handler={closeOnEscape} />
       {open ? <Modal onClose={close} /> : button}
     </div>
   );

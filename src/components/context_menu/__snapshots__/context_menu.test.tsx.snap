@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiContextMenu can pass-through horizontal rule props 1`] = `
+exports[`OuiContextMenu can pass-through horizontal rule props 1`] = `
 <div
-  class="euiContextMenu"
+  class="ouiContextMenu"
 >
   <div
-    class="euiContextMenuPanel euiContextMenu__panel"
+    class="ouiContextMenuPanel ouiContextMenu__panel"
     tabindex="-1"
   >
     <div
-      class="euiContextMenuPanelTitle"
+      class="ouiContextMenuPanelTitle"
     >
       <span
-        class="euiContextMenu__itemLayout"
+        class="ouiContextMenu__itemLayout"
       >
         Testing separator
       </span>
@@ -20,7 +20,7 @@ exports[`EuiContextMenu can pass-through horizontal rule props 1`] = `
     <div>
       <div>
         <hr
-          class="euiHorizontalRule euiHorizontalRule--half euiHorizontalRule--marginSmall"
+          class="ouiHorizontalRule ouiHorizontalRule--half ouiHorizontalRule--marginSmall"
         />
       </div>
     </div>
@@ -28,27 +28,27 @@ exports[`EuiContextMenu can pass-through horizontal rule props 1`] = `
 </div>
 `;
 
-exports[`EuiContextMenu is rendered 1`] = `
+exports[`OuiContextMenu is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiContextMenu testClass1 testClass2"
+  class="ouiContextMenu testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiContextMenu panel item can be a separator line 1`] = `
+exports[`OuiContextMenu panel item can be a separator line 1`] = `
 <div
-  class="euiContextMenu"
+  class="ouiContextMenu"
 >
   <div
-    class="euiContextMenuPanel euiContextMenu__panel"
+    class="ouiContextMenuPanel ouiContextMenu__panel"
     tabindex="-1"
   >
     <div
-      class="euiContextMenuPanelTitle"
+      class="ouiContextMenuPanelTitle"
     >
       <span
-        class="euiContextMenu__itemLayout"
+        class="ouiContextMenu__itemLayout"
       >
         Testing separator
       </span>
@@ -56,31 +56,31 @@ exports[`EuiContextMenu panel item can be a separator line 1`] = `
     <div>
       <div>
         <button
-          class="euiContextMenuItem"
+          class="ouiContextMenuItem"
           type="button"
         >
           <span
-            class="euiContextMenu__itemLayout"
+            class="ouiContextMenu__itemLayout"
           >
             <span
-              class="euiContextMenuItem__text"
+              class="ouiContextMenuItem__text"
             >
               Foo
             </span>
           </span>
         </button>
         <hr
-          class="euiHorizontalRule euiHorizontalRule--full"
+          class="ouiHorizontalRule ouiHorizontalRule--full"
         />
         <button
-          class="euiContextMenuItem"
+          class="ouiContextMenuItem"
           type="button"
         >
           <span
-            class="euiContextMenu__itemLayout"
+            class="ouiContextMenu__itemLayout"
           >
             <span
-              class="euiContextMenuItem__text"
+              class="ouiContextMenuItem__text"
             >
               Bar
             </span>
@@ -92,19 +92,19 @@ exports[`EuiContextMenu panel item can be a separator line 1`] = `
 </div>
 `;
 
-exports[`EuiContextMenu panel item can contain JSX 1`] = `
+exports[`OuiContextMenu panel item can contain JSX 1`] = `
 <div
-  class="euiContextMenu"
+  class="ouiContextMenu"
 >
   <div
-    class="euiContextMenuPanel euiContextMenu__panel"
+    class="ouiContextMenuPanel ouiContextMenu__panel"
     tabindex="-1"
   >
     <div
-      class="euiContextMenuPanelTitle"
+      class="ouiContextMenuPanelTitle"
     >
       <span
-        class="euiContextMenu__itemLayout"
+        class="ouiContextMenu__itemLayout"
       >
         3
       </span>
@@ -112,14 +112,14 @@ exports[`EuiContextMenu panel item can contain JSX 1`] = `
     <div>
       <div>
         <button
-          class="euiContextMenuItem"
+          class="ouiContextMenuItem"
           type="button"
         >
           <span
-            class="euiContextMenu__itemLayout"
+            class="ouiContextMenu__itemLayout"
           >
             <span
-              class="euiContextMenuItem__text"
+              class="ouiContextMenuItem__text"
             >
               <span
                 style="color:tomato"
@@ -135,29 +135,29 @@ exports[`EuiContextMenu panel item can contain JSX 1`] = `
 </div>
 `;
 
-exports[`EuiContextMenu props panels and initialPanelId allows you to click the title button to go back to the previous panel 1`] = `
+exports[`OuiContextMenu props panels and initialPanelId allows you to click the title button to go back to the previous panel 1`] = `
 <div
-  class="euiContextMenu"
+  class="ouiContextMenu"
   style="height: 0px;"
 >
   <div
-    class="euiContextMenuPanel euiContextMenu__panel"
+    class="ouiContextMenuPanel ouiContextMenu__panel"
     tabindex="-1"
   >
     <button
-      class="euiContextMenuPanelTitle"
+      class="ouiContextMenuPanelTitle"
       data-test-subj="contextMenuPanelTitleButton"
       type="button"
     >
       <span
-        class="euiContextMenu__itemLayout"
+        class="ouiContextMenu__itemLayout"
       >
         <span
-          class="euiContextMenu__icon"
-          data-euiicon-type="arrowLeft"
+          class="ouiContextMenu__icon"
+          data-ouiicon-type="arrowLeft"
         />
         <span
-          class="euiContextMenu__text"
+          class="ouiContextMenu__text"
         >
           2
         </span>
@@ -174,29 +174,29 @@ exports[`EuiContextMenu props panels and initialPanelId allows you to click the 
 </div>
 `;
 
-exports[`EuiContextMenu props panels and initialPanelId allows you to click the title button to go back to the previous panel 2`] = `
+exports[`OuiContextMenu props panels and initialPanelId allows you to click the title button to go back to the previous panel 2`] = `
 <div
-  class="euiContextMenu"
+  class="ouiContextMenu"
   style="height: 0px; width: 400px;"
 >
   <div
-    class="euiContextMenuPanel euiContextMenu__panel euiContextMenuPanel-txOutRight"
+    class="ouiContextMenuPanel ouiContextMenu__panel ouiContextMenuPanel-txOutRight"
     tabindex="-1"
   >
     <button
-      class="euiContextMenuPanelTitle"
+      class="ouiContextMenuPanelTitle"
       data-test-subj="contextMenuPanelTitleButton"
       type="button"
     >
       <span
-        class="euiContextMenu__itemLayout"
+        class="ouiContextMenu__itemLayout"
       >
         <span
-          class="euiContextMenu__icon"
-          data-euiicon-type="arrowLeft"
+          class="ouiContextMenu__icon"
+          data-ouiicon-type="arrowLeft"
         />
         <span
-          class="euiContextMenu__text"
+          class="ouiContextMenu__text"
         >
           2
         </span>
@@ -211,23 +211,23 @@ exports[`EuiContextMenu props panels and initialPanelId allows you to click the 
     </div>
   </div>
   <div
-    class="euiContextMenuPanel euiContextMenu__panel euiContextMenuPanel-txInRight"
+    class="ouiContextMenuPanel ouiContextMenu__panel ouiContextMenuPanel-txInRight"
     tabindex="-1"
   >
     <button
-      class="euiContextMenuPanelTitle"
+      class="ouiContextMenuPanelTitle"
       data-test-subj="contextMenuPanelTitleButton"
       type="button"
     >
       <span
-        class="euiContextMenu__itemLayout"
+        class="ouiContextMenu__itemLayout"
       >
         <span
-          class="euiContextMenu__icon"
-          data-euiicon-type="arrowLeft"
+          class="ouiContextMenu__icon"
+          data-ouiicon-type="arrowLeft"
         />
         <span
-          class="euiContextMenu__text"
+          class="ouiContextMenu__text"
         >
           1
         </span>
@@ -236,56 +236,56 @@ exports[`EuiContextMenu props panels and initialPanelId allows you to click the 
     <div>
       <div>
         <button
-          class="euiContextMenuItem"
+          class="ouiContextMenuItem"
           type="button"
         >
           <span
-            class="euiContextMenu__itemLayout"
+            class="ouiContextMenu__itemLayout"
           >
             <span
-              class="euiContextMenuItem__text"
+              class="ouiContextMenuItem__text"
             >
               2a
             </span>
             <span
-              class="euiContextMenu__arrow"
-              data-euiicon-type="arrowRight"
+              class="ouiContextMenu__arrow"
+              data-ouiicon-type="arrowRight"
             />
           </span>
         </button>
         <button
-          class="euiContextMenuItem"
+          class="ouiContextMenuItem"
           type="button"
         >
           <span
-            class="euiContextMenu__itemLayout"
+            class="ouiContextMenu__itemLayout"
           >
             <span
-              class="euiContextMenuItem__text"
+              class="ouiContextMenuItem__text"
             >
               2b
             </span>
             <span
-              class="euiContextMenu__arrow"
-              data-euiicon-type="arrowRight"
+              class="ouiContextMenu__arrow"
+              data-ouiicon-type="arrowRight"
             />
           </span>
         </button>
         <button
-          class="euiContextMenuItem"
+          class="ouiContextMenuItem"
           type="button"
         >
           <span
-            class="euiContextMenu__itemLayout"
+            class="ouiContextMenu__itemLayout"
           >
             <span
-              class="euiContextMenuItem__text"
+              class="ouiContextMenuItem__text"
             >
               2c
             </span>
             <span
-              class="euiContextMenu__arrow"
-              data-euiicon-type="arrowRight"
+              class="ouiContextMenu__arrow"
+              data-ouiicon-type="arrowRight"
             />
           </span>
         </button>
@@ -295,28 +295,28 @@ exports[`EuiContextMenu props panels and initialPanelId allows you to click the 
 </div>
 `;
 
-exports[`EuiContextMenu props panels and initialPanelId renders the referenced panel 1`] = `
+exports[`OuiContextMenu props panels and initialPanelId renders the referenced panel 1`] = `
 <div
-  class="euiContextMenu"
+  class="ouiContextMenu"
 >
   <div
-    class="euiContextMenuPanel euiContextMenu__panel"
+    class="ouiContextMenuPanel ouiContextMenu__panel"
     tabindex="-1"
   >
     <button
-      class="euiContextMenuPanelTitle"
+      class="ouiContextMenuPanelTitle"
       data-test-subj="contextMenuPanelTitleButton"
       type="button"
     >
       <span
-        class="euiContextMenu__itemLayout"
+        class="ouiContextMenu__itemLayout"
       >
         <span
-          class="euiContextMenu__icon"
-          data-euiicon-type="arrowLeft"
+          class="ouiContextMenu__icon"
+          data-ouiicon-type="arrowLeft"
         />
         <span
-          class="euiContextMenu__text"
+          class="ouiContextMenu__text"
         >
           2
         </span>
@@ -333,28 +333,28 @@ exports[`EuiContextMenu props panels and initialPanelId renders the referenced p
 </div>
 `;
 
-exports[`EuiContextMenu props size m is rendered 1`] = `
+exports[`OuiContextMenu props size m is rendered 1`] = `
 <div
-  class="euiContextMenu"
+  class="ouiContextMenu"
 >
   <div
-    class="euiContextMenuPanel euiContextMenu__panel"
+    class="ouiContextMenuPanel ouiContextMenu__panel"
     tabindex="-1"
   >
     <button
-      class="euiContextMenuPanelTitle"
+      class="ouiContextMenuPanelTitle"
       data-test-subj="contextMenuPanelTitleButton"
       type="button"
     >
       <span
-        class="euiContextMenu__itemLayout"
+        class="ouiContextMenu__itemLayout"
       >
         <span
-          class="euiContextMenu__icon"
-          data-euiicon-type="arrowLeft"
+          class="ouiContextMenu__icon"
+          data-ouiicon-type="arrowLeft"
         />
         <span
-          class="euiContextMenu__text"
+          class="ouiContextMenu__text"
         >
           2
         </span>
@@ -371,28 +371,28 @@ exports[`EuiContextMenu props size m is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiContextMenu props size s is rendered 1`] = `
+exports[`OuiContextMenu props size s is rendered 1`] = `
 <div
-  class="euiContextMenu euiContextMenu--small"
+  class="ouiContextMenu ouiContextMenu--small"
 >
   <div
-    class="euiContextMenuPanel euiContextMenu__panel"
+    class="ouiContextMenuPanel ouiContextMenu__panel"
     tabindex="-1"
   >
     <button
-      class="euiContextMenuPanelTitle euiContextMenuPanelTitle--small"
+      class="ouiContextMenuPanelTitle ouiContextMenuPanelTitle--small"
       data-test-subj="contextMenuPanelTitleButton"
       type="button"
     >
       <span
-        class="euiContextMenu__itemLayout"
+        class="ouiContextMenu__itemLayout"
       >
         <span
-          class="euiContextMenu__icon"
-          data-euiicon-type="arrowLeft"
+          class="ouiContextMenu__icon"
+          data-ouiicon-type="arrowLeft"
         />
         <span
-          class="euiContextMenu__text"
+          class="ouiContextMenu__text"
         >
           2
         </span>

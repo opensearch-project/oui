@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +32,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTableRowCell } from './table_row_cell';
+import { OuiTableRowCell } from './table_row_cell';
 
 import { RIGHT_ALIGNMENT, CENTER_ALIGNMENT } from '../../services/alignment';
 import { WARNING_MESSAGE } from './utils';
 
-test('renders EuiTableRowCell', () => {
+test('renders OuiTableRowCell', () => {
   const component = (
-    <EuiTableRowCell {...requiredProps}>children</EuiTableRowCell>
+    <OuiTableRowCell {...requiredProps}>children</OuiTableRowCell>
   );
 
   expect(render(component)).toMatchSnapshot();
@@ -36,19 +47,19 @@ test('renders EuiTableRowCell', () => {
 
 describe('align', () => {
   test('defaults to left', () => {
-    const component = <EuiTableRowCell />;
+    const component = <OuiTableRowCell />;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('renders right when specified', () => {
-    const component = <EuiTableRowCell align={RIGHT_ALIGNMENT} />;
+    const component = <OuiTableRowCell align={RIGHT_ALIGNMENT} />;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('renders center when specified', () => {
-    const component = <EuiTableRowCell align={CENTER_ALIGNMENT} />;
+    const component = <OuiTableRowCell align={CENTER_ALIGNMENT} />;
 
     expect(render(component)).toMatchSnapshot();
   });
@@ -56,13 +67,13 @@ describe('align', () => {
 
 describe('textOnly', () => {
   test('defaults to true', () => {
-    const component = <EuiTableRowCell />;
+    const component = <OuiTableRowCell />;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('is rendered when specified', () => {
-    const component = <EuiTableRowCell textOnly={false} />;
+    const component = <OuiTableRowCell textOnly={false} />;
 
     expect(render(component)).toMatchSnapshot();
   });
@@ -70,13 +81,13 @@ describe('textOnly', () => {
 
 describe('truncateText', () => {
   test('defaults to false', () => {
-    const component = <EuiTableRowCell />;
+    const component = <OuiTableRowCell />;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('is rendered when specified', () => {
-    const component = <EuiTableRowCell truncateText={true} />;
+    const component = <OuiTableRowCell truncateText={true} />;
 
     expect(render(component)).toMatchSnapshot();
   });
@@ -85,9 +96,9 @@ describe('truncateText', () => {
 describe("children's className", () => {
   test('merges new classnames into existing ones', () => {
     const component = (
-      <EuiTableRowCell textOnly={false} showOnHover={true}>
+      <OuiTableRowCell textOnly={false} showOnHover={true}>
         <div className="testClass" />
-      </EuiTableRowCell>
+      </OuiTableRowCell>
     );
 
     expect(render(component)).toMatchSnapshot();
@@ -109,29 +120,29 @@ describe('width and style', () => {
 
   test('accepts style attribute', () => {
     const component = (
-      <EuiTableRowCell style={{ width: '20%' }}>Test</EuiTableRowCell>
+      <OuiTableRowCell style={{ width: '20%' }}>Test</OuiTableRowCell>
     );
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('accepts width attribute', () => {
-    const component = <EuiTableRowCell width="10%">Test</EuiTableRowCell>;
+    const component = <OuiTableRowCell width="10%">Test</OuiTableRowCell>;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('accepts width attribute as number', () => {
-    const component = <EuiTableRowCell width={100}>Test</EuiTableRowCell>;
+    const component = <OuiTableRowCell width={100}>Test</OuiTableRowCell>;
 
     expect(render(component)).toMatchSnapshot();
   });
 
   test('resolves style and width attribute', () => {
     const component = (
-      <EuiTableRowCell width="10%" style={{ width: '20%' }}>
+      <OuiTableRowCell width="10%" style={{ width: '20%' }}>
         Test
-      </EuiTableRowCell>
+      </OuiTableRowCell>
     );
 
     expect(render(component)).toMatchSnapshot();

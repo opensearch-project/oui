@@ -1,19 +1,30 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useEffect } from 'react';
 
 import {
-  EuiProgress,
-  EuiSpacer,
-  EuiButton,
-  EuiText,
-  EuiPanel,
-  EuiCallOut,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiPortal,
+  OuiProgress,
+  OuiSpacer,
+  OuiButton,
+  OuiText,
+  OuiPanel,
+  OuiCallOut,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiHeader,
+  OuiHeaderLogo,
+  OuiHeaderSection,
+  OuiHeaderSectionItem,
+  OuiPortal,
 } from '../../../../src/components';
 
 export default () => {
@@ -61,10 +72,10 @@ export default () => {
   if (showProgress) {
     progress2 = (
       <div>
-        <EuiCallOut title="Look up!" color="warning" iconType="sortUp">
+        <OuiCallOut title="Look up!" color="warning" iconType="sortUp">
           <p>The progress bar is fixed to the top of your browser.</p>
-        </EuiCallOut>
-        <EuiProgress value={value} max={100} size="s" position="fixed" />
+        </OuiCallOut>
+        <OuiProgress value={value} max={100} size="s" position="fixed" />
       </div>
     );
   }
@@ -72,28 +83,28 @@ export default () => {
   if (showHeader) {
     progress2 = (
       <div>
-        <EuiCallOut title="Look up!" color="warning" iconType="sortUp">
+        <OuiCallOut title="Look up!" color="warning" iconType="sortUp">
           <p>
             The progress bar is fixed to the top of your browser and positioned
-            above an <strong>EuiHeader</strong>.
+            above an <strong>OuiHeader</strong>.
           </p>
-        </EuiCallOut>
-        <EuiHeader
+        </OuiCallOut>
+        <OuiHeader
           style={{ position: 'fixed', top: 0, left: 0, width: '100%' }}>
-          <EuiHeaderSection grow={false}>
-            <EuiHeaderSectionItem border="right">
-              <EuiHeaderLogo
+          <OuiHeaderSection grow={false}>
+            <OuiHeaderSectionItem border="right">
+              <OuiHeaderLogo
                 iconType="logoKibana"
                 href="#"
                 aria-label="Go to home page"
               />
-            </EuiHeaderSectionItem>
-          </EuiHeaderSection>
-        </EuiHeader>
+            </OuiHeaderSectionItem>
+          </OuiHeaderSection>
+        </OuiHeader>
         <div style={{ position: 'absolute', zIndex: '5' }}>
-          <EuiPortal>
-            <EuiProgress size="xs" color="accent" position="fixed" />
-          </EuiPortal>
+          <OuiPortal>
+            <OuiProgress size="xs" color="accent" position="fixed" />
+          </OuiPortal>
         </div>
       </div>
     );
@@ -101,33 +112,33 @@ export default () => {
 
   return (
     <div>
-      <EuiPanel style={{ width: 300, position: 'relative' }}>
-        <EuiProgress size="xs" color="accent" position="absolute" />
-        <EuiText>
+      <OuiPanel style={{ width: 300, position: 'relative' }}>
+        <OuiProgress size="xs" color="accent" position="absolute" />
+        <OuiText>
           <h2>Absolutely!</h2>
           <p>
             The progress bar is absolutely positioned in this panel. You could
             see how this might be useful in our Toast component.
           </p>
-        </EuiText>
-      </EuiPanel>
+        </OuiText>
+      </OuiPanel>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiFlexGroup gutterSize="s" alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton size="s" onClick={toggleProgress}>
+      <OuiFlexGroup gutterSize="s" alignItems="center">
+        <OuiFlexItem grow={false}>
+          <OuiButton size="s" onClick={toggleProgress}>
             Toggle a fixed bar
-          </EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButton size="s" onClick={toggleHeader}>
+          </OuiButton>
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiButton size="s" onClick={toggleHeader}>
             Toggle a fixed bar with header
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiButton>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
       {progress2}
     </div>

@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTablePagination is rendered 1`] = `
+exports[`OuiTablePagination is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsCenter euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsCenter ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow"
 >
   <div
-    class="euiFlexItem euiFlexItem--flexGrowZero"
+    class="ouiFlexItem ouiFlexItem--flexGrowZero"
   >
     <div
-      class="euiPopover euiPopover--anchorUpRight"
+      class="ouiPopover ouiPopover--anchorUpRight"
     >
       <div
-        class="euiPopover__anchor"
+        class="ouiPopover__anchor"
       >
         <button
-          class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall"
+          class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall"
           data-test-subj="tablePaginationPopoverButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+            class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
           >
             <span
-              class="euiButtonContent__icon"
+              class="ouiButtonContent__icon"
               color="inherit"
-              data-euiicon-type="arrowDown"
+              data-ouiicon-type="arrowDown"
             />
             <span
-              class="euiButtonEmpty__text"
+              class="ouiButtonEmpty__text"
             >
               Rows per page: 50
             </span>
@@ -37,44 +37,44 @@ exports[`EuiTablePagination is rendered 1`] = `
     </div>
   </div>
   <div
-    class="euiFlexItem euiFlexItem--flexGrowZero"
+    class="ouiFlexItem ouiFlexItem--flexGrowZero"
   >
     <nav
       aria-label="aria-label"
-      class="euiPagination testClass1 testClass2"
+      class="ouiPagination testClass1 testClass2"
       data-test-subj="test subject string"
     >
       <button
         aria-label="Previous page, 1"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
         data-test-subj="pagination-button-previous"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="arrowLeft"
+          data-ouiicon-type="arrowLeft"
         />
       </button>
       <ul
         aria-label="aria-label"
-        class="euiPagination__list"
+        class="ouiPagination__list"
       >
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-label="Page 1 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-0"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 1
               </span>
@@ -82,21 +82,21 @@ exports[`EuiTablePagination is rendered 1`] = `
           </button>
         </li>
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-current="true"
             aria-label="Page 2 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiButtonEmpty-isDisabled euiPaginationButton euiPaginationButton-isActive euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiButtonEmpty-isDisabled ouiPaginationButton ouiPaginationButton-isActive ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-1"
             disabled=""
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 2
               </span>
@@ -104,19 +104,19 @@ exports[`EuiTablePagination is rendered 1`] = `
           </button>
         </li>
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-label="Page 3 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-2"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 3
               </span>
@@ -124,19 +124,19 @@ exports[`EuiTablePagination is rendered 1`] = `
           </button>
         </li>
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-label="Page 4 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-3"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 4
               </span>
@@ -144,19 +144,19 @@ exports[`EuiTablePagination is rendered 1`] = `
           </button>
         </li>
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-label="Page 5 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-4"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 5
               </span>
@@ -166,15 +166,15 @@ exports[`EuiTablePagination is rendered 1`] = `
       </ul>
       <button
         aria-label="Next page, 3"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
         data-test-subj="pagination-button-next"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="arrowRight"
+          data-ouiicon-type="arrowRight"
         />
       </button>
     </nav>
@@ -182,52 +182,52 @@ exports[`EuiTablePagination is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiTablePagination is rendered when hiding the per page options 1`] = `
+exports[`OuiTablePagination is rendered when hiding the per page options 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsCenter euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsCenter ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow"
 >
   <div
-    class="euiFlexItem euiFlexItem--flexGrowZero"
+    class="ouiFlexItem ouiFlexItem--flexGrowZero"
   />
   <div
-    class="euiFlexItem euiFlexItem--flexGrowZero"
+    class="ouiFlexItem ouiFlexItem--flexGrowZero"
   >
     <nav
       aria-label="aria-label"
-      class="euiPagination testClass1 testClass2"
+      class="ouiPagination testClass1 testClass2"
       data-test-subj="test subject string"
     >
       <button
         aria-label="Previous page, 1"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
         data-test-subj="pagination-button-previous"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="arrowLeft"
+          data-ouiicon-type="arrowLeft"
         />
       </button>
       <ul
         aria-label="aria-label"
-        class="euiPagination__list"
+        class="ouiPagination__list"
       >
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-label="Page 1 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-0"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 1
               </span>
@@ -235,21 +235,21 @@ exports[`EuiTablePagination is rendered when hiding the per page options 1`] = `
           </button>
         </li>
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-current="true"
             aria-label="Page 2 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiButtonEmpty-isDisabled euiPaginationButton euiPaginationButton-isActive euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiButtonEmpty-isDisabled ouiPaginationButton ouiPaginationButton-isActive ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-1"
             disabled=""
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 2
               </span>
@@ -257,19 +257,19 @@ exports[`EuiTablePagination is rendered when hiding the per page options 1`] = `
           </button>
         </li>
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-label="Page 3 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-2"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 3
               </span>
@@ -277,19 +277,19 @@ exports[`EuiTablePagination is rendered when hiding the per page options 1`] = `
           </button>
         </li>
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-label="Page 4 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-3"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 4
               </span>
@@ -297,19 +297,19 @@ exports[`EuiTablePagination is rendered when hiding the per page options 1`] = `
           </button>
         </li>
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-label="Page 5 of 5"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-4"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 5
               </span>
@@ -319,15 +319,15 @@ exports[`EuiTablePagination is rendered when hiding the per page options 1`] = `
       </ul>
       <button
         aria-label="Next page, 3"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
         data-test-subj="pagination-button-next"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="arrowRight"
+          data-ouiicon-type="arrowRight"
         />
       </button>
     </nav>

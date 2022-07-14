@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
-import { EuiPanel } from '../../../../src/components/panel';
-import { EuiSpacer } from '../../../../src/components/spacer';
-import { EuiButton } from '../../../../src/components/button';
-import { EuiContextMenuItem } from '../../../../src/components/context_menu';
-import { EuiNotificationEvent } from '../../../../src/components/notification/notification_event';
+import { OuiPanel } from '../../../../src/components/panel';
+import { OuiSpacer } from '../../../../src/components/spacer';
+import { OuiButton } from '../../../../src/components/button';
+import { OuiContextMenuItem } from '../../../../src/components/context_menu';
+import { OuiNotificationEvent } from '../../../../src/components/notification/notification_event';
 
 const notificationEventsData = [
   {
@@ -100,21 +111,21 @@ export default () => {
     const { isRead, type } = events.find(({ id: eventId }) => eventId === id);
 
     return [
-      <EuiContextMenuItem
+      <OuiContextMenuItem
         key="contextMenuItemA"
         onClick={() => onRead(id, isRead)}>
         {isRead ? 'Mark as unread' : 'Mark as read'}
-      </EuiContextMenuItem>,
+      </OuiContextMenuItem>,
 
-      <EuiContextMenuItem
+      <OuiContextMenuItem
         key="contextMenuItemB"
         onClick={() => onFilterByType(type)}>
         View messages like this
-      </EuiContextMenuItem>,
+      </OuiContextMenuItem>,
 
-      <EuiContextMenuItem key="contextMenuItemC" onClick={() => {}}>
+      <OuiContextMenuItem key="contextMenuItemC" onClick={() => {}}>
         Don’t notify me about this
-      </EuiContextMenuItem>,
+      </OuiContextMenuItem>,
     ];
   };
 
@@ -127,7 +138,7 @@ export default () => {
     const onClickTitle = event.type === 'News' ? undefined : () => {};
 
     return (
-      <EuiNotificationEvent
+      <OuiNotificationEvent
         key={event.id}
         id={event.id}
         type={event.type}
@@ -150,17 +161,17 @@ export default () => {
 
   return (
     <>
-      <EuiButton size="s" onClick={onResetData}>
+      <OuiButton size="s" onClick={onResetData}>
         Reset data
-      </EuiButton>
-      <EuiSpacer />
-      <EuiPanel
+      </OuiButton>
+      <OuiSpacer />
+      <OuiPanel
         role="feed"
         paddingSize="none"
         hasShadow={true}
         style={{ maxWidth: '540px' }}>
         {notificationEvents}
-      </EuiPanel>
+      </OuiPanel>
     </>
   );
 };

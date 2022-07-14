@@ -1,27 +1,38 @@
-.euiCommentTimeline__content {
-  min-width: $euiSizeXXL;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiCommentTimeline__content {
+  min-width: $ouiSizeXXL;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.euiCommentTimeline__icon--default {
+.ouiCommentTimeline__icon--default {
   flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
   border-radius: 50%;
-  background-color: $euiColorLightestShade;
+  background-color: $ouiColorLightestShade;
 
-  &.euiCommentTimeline__icon--regular {
-    width: $euiSizeXXL;
-    height: $euiSizeXXL;
+  &.ouiCommentTimeline__icon--regular {
+    width: $ouiSizeXXL;
+    height: $ouiSizeXXL;
   }
 
-  &.euiCommentTimeline__icon--update {
-    width: $euiSizeL;
-    height: $euiSizeL;
+  &.ouiCommentTimeline__icon--update {
+    width: $ouiSizeL;
+    height: $ouiSizeL;
   }
 }

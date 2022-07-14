@@ -1,31 +1,42 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiFlexGrid, EuiFlexItem } from '../../../../src/components/flex';
+import { OuiFlexGrid, OuiFlexItem } from '../../../../src/components/flex';
 
 export default () => (
   <div>
-    <EuiFlexGrid columns={2} direction="column">
-      <EuiFlexItem>
+    <OuiFlexGrid columns={2} direction="column">
+      <OuiFlexItem>
         <div>One</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </OuiFlexItem>
+      <OuiFlexItem>
         <div>Two</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </OuiFlexItem>
+      <OuiFlexItem>
         <div>Three</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </OuiFlexItem>
+      <OuiFlexItem>
         <div>Four</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </OuiFlexItem>
+      <OuiFlexItem>
         <div>Five</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </OuiFlexItem>
+      <OuiFlexItem>
         <div>Six</div>
-      </EuiFlexItem>
-      <EuiFlexItem>
+      </OuiFlexItem>
+      <OuiFlexItem>
         <div>Seven</div>
-      </EuiFlexItem>
-    </EuiFlexGrid>
+      </OuiFlexItem>
+    </OuiFlexGrid>
   </div>
 );

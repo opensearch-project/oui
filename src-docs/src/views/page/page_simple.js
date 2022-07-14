@@ -1,28 +1,39 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiPage,
-  EuiPageContent,
-  EuiPageHeader,
-  EuiPageBody,
-  EuiPageContentBody,
+  OuiPage,
+  OuiPageContent,
+  OuiPageHeader,
+  OuiPageBody,
+  OuiPageContentBody,
 } from '../../../../src/components';
 
 export default ({ button = <></>, content }) => (
-  <EuiPage paddingSize="none">
-    <EuiPageBody>
-      <EuiPageHeader
+  <OuiPage paddingSize="none">
+    <OuiPageBody>
+      <OuiPageHeader
         restrictWidth
         paddingSize="l"
         pageTitle="Page title"
         rightSideItems={[button]}
         tabs={[{ label: 'Tab 1', isSelected: true }, { label: 'Tab 2' }]}
       />
-      <EuiPageContent borderRadius="none" hasShadow={false} paddingSize="none">
-        <EuiPageContentBody restrictWidth paddingSize="l">
+      <OuiPageContent borderRadius="none" hasShadow={false} paddingSize="none">
+        <OuiPageContentBody restrictWidth paddingSize="l">
           {content}
-        </EuiPageContentBody>
-      </EuiPageContent>
-    </EuiPageBody>
-  </EuiPage>
+        </OuiPageContentBody>
+      </OuiPageContent>
+    </OuiPageBody>
+  </OuiPage>
 );

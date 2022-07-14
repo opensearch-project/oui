@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,7 +36,7 @@ export type FlexGridGutterSize = keyof typeof gutterSizeToClassNameMap;
 export type FlexGridColumns = 0 | 1 | 2 | 3 | 4;
 export type FlexGridDirection = keyof typeof directionToClassNameMap;
 
-export interface EuiFlexGridProps {
+export interface OuiFlexGridProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -57,17 +68,17 @@ export interface EuiFlexGridProps {
 
 const directionToClassNameMap = {
   row: null,
-  column: 'euiFlexGrid--directionColumn',
+  column: 'ouiFlexGrid--directionColumn',
 };
 
 export const DIRECTIONS = keysOf(directionToClassNameMap);
 
 const gutterSizeToClassNameMap = {
-  none: 'euiFlexGrid--gutterNone',
-  s: 'euiFlexGrid--gutterSmall',
-  m: 'euiFlexGrid--gutterMedium',
-  l: 'euiFlexGrid--gutterLarge',
-  xl: 'euiFlexGrid--gutterXLarge',
+  none: 'ouiFlexGrid--gutterNone',
+  s: 'ouiFlexGrid--gutterSmall',
+  m: 'ouiFlexGrid--gutterMedium',
+  l: 'ouiFlexGrid--gutterLarge',
+  xl: 'ouiFlexGrid--gutterXLarge',
 };
 
 export const GUTTER_SIZES: FlexGridGutterSize[] = keysOf(
@@ -75,19 +86,19 @@ export const GUTTER_SIZES: FlexGridGutterSize[] = keysOf(
 );
 
 const columnsToClassNameMap = {
-  0: 'euiFlexGrid--wrap',
-  1: 'euiFlexGrid--single',
-  2: 'euiFlexGrid--halves',
-  3: 'euiFlexGrid--thirds',
-  4: 'euiFlexGrid--fourths',
+  0: 'ouiFlexGrid--wrap',
+  1: 'ouiFlexGrid--single',
+  2: 'ouiFlexGrid--halves',
+  3: 'ouiFlexGrid--thirds',
+  4: 'ouiFlexGrid--fourths',
 };
 
 export const COLUMNS = Object.keys(
   columnsToClassNameMap
 ).map((columns: string) => parseInt(columns, 10)) as FlexGridColumns[];
 
-export const EuiFlexGrid: FunctionComponent<
-  CommonProps & HTMLAttributes<HTMLDivElement> & EuiFlexGridProps
+export const OuiFlexGrid: FunctionComponent<
+  CommonProps & HTMLAttributes<HTMLDivElement> & OuiFlexGridProps
 > = ({
   children,
   className,
@@ -99,12 +110,12 @@ export const EuiFlexGrid: FunctionComponent<
   ...rest
 }) => {
   const classes = classNames(
-    'euiFlexGrid',
+    'ouiFlexGrid',
     gutterSize ? gutterSizeToClassNameMap[gutterSize] : undefined,
     columns != null ? columnsToClassNameMap[columns] : undefined,
     direction ? directionToClassNameMap[direction] : undefined,
     {
-      'euiFlexGrid--responsive': responsive,
+      'ouiFlexGrid--responsive': responsive,
     },
     className
   );

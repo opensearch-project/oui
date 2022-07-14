@@ -1,58 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTableFooterCell align defaults to left 1`] = `
+exports[`OuiTableFooterCell align defaults to left 1`] = `
 <td
-  class="euiTableFooterCell"
+  class="ouiTableFooterCell"
 >
   <div
-    class="euiTableCellContent"
+    class="ouiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="ouiTableCellContent__text"
     />
   </div>
 </td>
 `;
 
-exports[`EuiTableFooterCell align renders center when specified 1`] = `
+exports[`OuiTableFooterCell align renders center when specified 1`] = `
 <td
-  class="euiTableFooterCell"
+  class="ouiTableFooterCell"
 >
   <div
-    class="euiTableCellContent euiTableCellContent--alignCenter"
+    class="ouiTableCellContent ouiTableCellContent--alignCenter"
   >
     <span
-      class="euiTableCellContent__text"
+      class="ouiTableCellContent__text"
     />
   </div>
 </td>
 `;
 
-exports[`EuiTableFooterCell align renders right when specified 1`] = `
+exports[`OuiTableFooterCell align renders right when specified 1`] = `
 <td
-  class="euiTableFooterCell"
+  class="ouiTableFooterCell"
 >
   <div
-    class="euiTableCellContent euiTableCellContent--alignRight"
+    class="ouiTableCellContent ouiTableCellContent--alignRight"
   >
     <span
-      class="euiTableCellContent__text"
+      class="ouiTableCellContent__text"
     />
   </div>
 </td>
 `;
 
-exports[`EuiTableFooterCell is rendered 1`] = `
+exports[`OuiTableFooterCell is rendered 1`] = `
 <td
   aria-label="aria-label"
-  class="euiTableFooterCell testClass1 testClass2"
+  class="ouiTableFooterCell testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiTableCellContent testClass1 testClass2"
+    class="ouiTableCellContent testClass1 testClass2"
   >
     <span
-      class="euiTableCellContent__text"
+      class="ouiTableCellContent__text"
     >
       children
     </span>
@@ -60,16 +60,16 @@ exports[`EuiTableFooterCell is rendered 1`] = `
 </td>
 `;
 
-exports[`EuiTableFooterCell width and style accepts style attribute 1`] = `
+exports[`OuiTableFooterCell width and style accepts style attribute 1`] = `
 <td
-  class="euiTableFooterCell"
+  class="ouiTableFooterCell"
   style="width:20%"
 >
   <div
-    class="euiTableCellContent"
+    class="ouiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="ouiTableCellContent__text"
     >
       Test
     </span>
@@ -77,16 +77,16 @@ exports[`EuiTableFooterCell width and style accepts style attribute 1`] = `
 </td>
 `;
 
-exports[`EuiTableFooterCell width and style accepts width attribute 1`] = `
+exports[`OuiTableFooterCell width and style accepts width attribute 1`] = `
 <td
-  class="euiTableFooterCell"
+  class="ouiTableFooterCell"
   style="width:10%"
 >
   <div
-    class="euiTableCellContent"
+    class="ouiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="ouiTableCellContent__text"
     >
       Test
     </span>
@@ -94,16 +94,16 @@ exports[`EuiTableFooterCell width and style accepts width attribute 1`] = `
 </td>
 `;
 
-exports[`EuiTableFooterCell width and style accepts width attribute as number 1`] = `
+exports[`OuiTableFooterCell width and style accepts width attribute as number 1`] = `
 <td
-  class="euiTableFooterCell"
+  class="ouiTableFooterCell"
   style="width:100px"
 >
   <div
-    class="euiTableCellContent"
+    class="ouiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="ouiTableCellContent__text"
     >
       Test
     </span>
@@ -111,16 +111,16 @@ exports[`EuiTableFooterCell width and style accepts width attribute as number 1`
 </td>
 `;
 
-exports[`EuiTableFooterCell width and style resolves style and width attribute 1`] = `
+exports[`OuiTableFooterCell width and style resolves style and width attribute 1`] = `
 <td
-  class="euiTableFooterCell"
+  class="ouiTableFooterCell"
   style="width:10%"
 >
   <div
-    class="euiTableCellContent"
+    class="ouiTableCellContent"
   >
     <span
-      class="euiTableCellContent__text"
+      class="ouiTableCellContent__text"
     >
       Test
     </span>

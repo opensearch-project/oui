@@ -1,20 +1,31 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import {
-  EuiFormControlLayoutDelimited,
-  EuiSpacer,
-  EuiFormLabel,
-  EuiIcon,
+  OuiFormControlLayoutDelimited,
+  OuiSpacer,
+  OuiFormLabel,
+  OuiIcon,
 } from '../../../../src/components';
 
 export default () => (
   <Fragment>
-    <EuiFormControlLayoutDelimited
+    <OuiFormControlLayoutDelimited
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
@@ -22,20 +33,20 @@ export default () => (
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
     />
 
-    <EuiSpacer size="m" />
-    <EuiFormControlLayoutDelimited
-      append={<EuiFormLabel>px</EuiFormLabel>}
+    <OuiSpacer size="m" />
+    <OuiFormControlLayoutDelimited
+      append={<OuiFormLabel>px</OuiFormLabel>}
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
@@ -43,20 +54,20 @@ export default () => (
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
     />
 
-    <EuiSpacer size="m" />
-    <EuiFormControlLayoutDelimited
+    <OuiSpacer size="m" />
+    <OuiFormControlLayoutDelimited
       icon="vector"
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
@@ -64,21 +75,21 @@ export default () => (
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
     />
 
-    <EuiSpacer size="m" />
-    <EuiFormControlLayoutDelimited
+    <OuiSpacer size="m" />
+    <OuiFormControlLayoutDelimited
       clear={{ onClick: () => {} }}
       isLoading
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
@@ -86,20 +97,20 @@ export default () => (
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
     />
 
-    <EuiSpacer size="m" />
-    <EuiFormControlLayoutDelimited
+    <OuiSpacer size="m" />
+    <OuiFormControlLayoutDelimited
       fullWidth
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
@@ -107,20 +118,20 @@ export default () => (
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
     />
 
-    <EuiSpacer size="m" />
-    <EuiFormControlLayoutDelimited
+    <OuiSpacer size="m" />
+    <OuiFormControlLayoutDelimited
       isLoading
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
@@ -128,20 +139,20 @@ export default () => (
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
     />
 
-    <EuiSpacer size="m" />
-    <EuiFormControlLayoutDelimited
+    <OuiSpacer size="m" />
+    <OuiFormControlLayoutDelimited
       compressed
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
@@ -149,21 +160,21 @@ export default () => (
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
     />
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayoutDelimited
-      prepend={<EuiFormLabel>Add</EuiFormLabel>}
+    <OuiFormControlLayoutDelimited
+      prepend={<OuiFormLabel>Add</OuiFormLabel>}
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
@@ -172,45 +183,45 @@ export default () => (
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
     />
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayoutDelimited
-      prepend={<EuiFormLabel>Merge</EuiFormLabel>}
+    <OuiFormControlLayoutDelimited
+      prepend={<OuiFormLabel>Merge</OuiFormLabel>}
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
-      delimiter={<EuiIcon type="merge" />}
+      delimiter={<OuiIcon type="merge" />}
       endControl={
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           aria-label="Use aria labels when no actual label is in use"
         />
       }
     />
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayoutDelimited
+    <OuiFormControlLayoutDelimited
       readOnly
-      prepend={<EuiFormLabel>Read only</EuiFormLabel>}
+      prepend={<OuiFormLabel>Read only</OuiFormLabel>}
       startControl={
         <input
           type="number"
           placeholder="0"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           readOnly
           aria-label="Use aria labels when no actual label is in use"
         />
@@ -219,7 +230,7 @@ export default () => (
         <input
           type="number"
           placeholder="100"
-          className="euiFieldNumber"
+          className="ouiFieldNumber"
           readOnly
           aria-label="Use aria labels when no actual label is in use"
         />

@@ -31,7 +31,7 @@ rules:
   mixins-before-declarations:
     - 2
     -
-      exclude: ['euiBreakpoint', 'euiCanAnimate']
+      exclude: ['ouiBreakpoint', 'ouiCanAnimate']
   mixin-name-format:
     - 2
     -

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,22 +28,22 @@
  * under the License.
  */
 
-export { EuiDataGridColumnSortingDraggableProps } from './column_sorting_draggable';
-export { EuiDataGrid, EuiDataGridProps } from './data_grid';
-export { EuiDataGridBodyProps } from './data_grid_body';
+export { OuiDataGridColumnSortingDraggableProps } from './column_sorting_draggable';
+export { OuiDataGrid, OuiDataGridProps } from './data_grid';
+export { OuiDataGridBodyProps } from './data_grid_body';
 export {
-  EuiDataGridCellProps,
-  EuiDataGridCellValueProps,
-  EuiDataGridCellValueElementProps,
+  OuiDataGridCellProps,
+  OuiDataGridCellValueProps,
+  OuiDataGridCellValueElementProps,
 } from './data_grid_cell';
-export { EuiDataGridColumnResizerProps } from './data_grid_column_resizer';
-export { EuiDataGridHeaderRowProps } from './data_grid_header_row';
-export { EuiDataGridHeaderCellProps } from './data_grid_header_cell';
-export { EuiDataGridControlHeaderRowProps } from './data_grid_control_header_cell';
-export { EuiDataGridInMemoryRendererProps } from './data_grid_inmemory_renderer';
+export { OuiDataGridColumnResizerProps } from './data_grid_column_resizer';
+export { OuiDataGridHeaderRowProps } from './data_grid_header_row';
+export { OuiDataGridHeaderCellProps } from './data_grid_header_cell';
+export { OuiDataGridControlHeaderRowProps } from './data_grid_control_header_cell';
+export { OuiDataGridInMemoryRendererProps } from './data_grid_inmemory_renderer';
 export {
-  EuiDataGridSchema,
-  EuiDataGridSchemaDetector,
+  OuiDataGridSchema,
+  OuiDataGridSchemaDetector,
   SchemaTypeScore,
 } from './data_grid_schema';
 export { useDataGridColumnSelector } from './column_selector';

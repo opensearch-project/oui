@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,25 +37,25 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../common';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
+import { OuiScreenReaderOnly } from '../accessibility';
+import { OuiI18n } from '../i18n';
 
-import { IconType, EuiIcon } from '../icon';
+import { IconType, OuiIcon } from '../icon';
 
-import { EuiText } from '../text';
+import { OuiText } from '../text';
 
 type ToastColor = 'primary' | 'success' | 'warning' | 'danger';
 
 const colorToClassNameMap: { [color in ToastColor]: string } = {
-  primary: 'euiToast--primary',
-  success: 'euiToast--success',
-  warning: 'euiToast--warning',
-  danger: 'euiToast--danger',
+  primary: 'ouiToast--primary',
+  success: 'ouiToast--success',
+  warning: 'ouiToast--warning',
+  danger: 'ouiToast--danger',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
-export interface EuiToastProps
+export interface OuiToastProps
   extends CommonProps,
     Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   title?: ReactNode;
@@ -53,7 +64,7 @@ export interface EuiToastProps
   onClose?: () => void;
 }
 
-export const EuiToast: FunctionComponent<EuiToastProps> = ({
+export const OuiToast: FunctionComponent<OuiToastProps> = ({
   title,
   color,
   iconType,
@@ -63,20 +74,20 @@ export const EuiToast: FunctionComponent<EuiToastProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiToast',
+    'ouiToast',
     color ? colorToClassNameMap[color] : null,
     className
   );
-  const headerClasses = classNames('euiToastHeader', {
-    'euiToastHeader--withBody': children,
+  const headerClasses = classNames('ouiToastHeader', {
+    'ouiToastHeader--withBody': children,
   });
 
   let headerIcon: ReactElement;
 
   if (iconType) {
     headerIcon = (
-      <EuiIcon
-        className="euiToastHeader__icon"
+      <OuiIcon
+        className="ouiToastHeader__icon"
         type={iconType}
         size="m"
         aria-hidden="true"
@@ -88,18 +99,18 @@ export const EuiToast: FunctionComponent<EuiToastProps> = ({
 
   if (onClose) {
     closeButton = (
-      <EuiI18n token="euiToast.dismissToast" default="Dismiss toast">
+      <OuiI18n token="ouiToast.dismissToast" default="Dismiss toast">
         {(dismissToast: string) => (
           <button
             type="button"
-            className="euiToast__closeButton"
+            className="ouiToast__closeButton"
             aria-label={dismissToast}
             onClick={onClose}
             data-test-subj="toastCloseButton">
-            <EuiIcon type="cross" size="m" aria-hidden="true" />
+            <OuiIcon type="cross" size="m" aria-hidden="true" />
           </button>
         )}
-      </EuiI18n>
+      </OuiI18n>
     );
   }
 
@@ -107,35 +118,35 @@ export const EuiToast: FunctionComponent<EuiToastProps> = ({
 
   if (children) {
     optionalBody = (
-      <EuiText size="s" className="euiToastBody">
+      <OuiText size="s" className="ouiToastBody">
         {children}
-      </EuiText>
+      </OuiText>
     );
   }
 
   return (
     <div className={classes} {...rest}>
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <p>
-          <EuiI18n
-            token="euiToast.newNotification"
+          <OuiI18n
+            token="ouiToast.newNotification"
             default="A new notification appears"
           />
         </p>
-      </EuiScreenReaderOnly>
+      </OuiScreenReaderOnly>
 
-      <EuiI18n token="euiToast.notification" default="Notification">
+      <OuiI18n token="ouiToast.notification" default="Notification">
         {(notification: string) => (
           <div
             className={headerClasses}
             aria-label={notification}
-            data-test-subj="euiToastHeader">
+            data-test-subj="ouiToastHeader">
             {headerIcon}
 
-            <span className="euiToastHeader__title">{title}</span>
+            <span className="ouiToastHeader__title">{title}</span>
           </div>
         )}
-      </EuiI18n>
+      </OuiI18n>
 
       {closeButton}
       {optionalBody}

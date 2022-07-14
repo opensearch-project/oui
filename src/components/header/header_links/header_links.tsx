@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,46 +38,46 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../../common';
-import { EuiIcon, IconType } from '../../icon';
-import { EuiPopover, EuiPopoverProps } from '../../popover';
-import { EuiI18n } from '../../i18n';
+import { OuiIcon, IconType } from '../../icon';
+import { OuiPopover, OuiPopoverProps } from '../../popover';
+import { OuiI18n } from '../../i18n';
 import {
-  EuiHeaderSectionItemButton,
-  EuiHeaderSectionItemButtonProps,
+  OuiHeaderSectionItemButton,
+  OuiHeaderSectionItemButtonProps,
 } from '../header_section';
-import { EuiBreakpointSize } from '../../../services/breakpoint';
-import { EuiHideFor, EuiShowFor } from '../../responsive';
+import { OuiBreakpointSize } from '../../../services/breakpoint';
+import { OuiHideFor, OuiShowFor } from '../../responsive';
 
-type EuiHeaderLinksGutterSize = 'xs' | 's' | 'm' | 'l';
-type EuiHeaderLinksPopoverButtonProps = Partial<
-  EuiHeaderSectionItemButtonProps
+type OuiHeaderLinksGutterSize = 'xs' | 's' | 'm' | 'l';
+type OuiHeaderLinksPopoverButtonProps = Partial<
+  OuiHeaderSectionItemButtonProps
 > & {
   iconType?: IconType;
 };
 
-export type EuiHeaderLinksProps = CommonProps &
+export type OuiHeaderLinksProps = CommonProps &
   HTMLAttributes<HTMLElement> & {
     /**
      * Spacing between direct children
      */
-    gutterSize?: EuiHeaderLinksGutterSize;
+    gutterSize?: OuiHeaderLinksGutterSize;
     /**
      * A list of named breakpoints at which to show the popover version
      */
-    popoverBreakpoints?: EuiBreakpointSize[] | 'all' | 'none';
+    popoverBreakpoints?: OuiBreakpointSize[] | 'all' | 'none';
     /**
-     * Extend the functionality of the EuiPopover.button which is a EuiHeaderSectionItemButton.
+     * Extend the functionality of the OuiPopover.button which is a OuiHeaderSectionItemButton.
      * With the addition of `iconType` to change the display icon which defaults to `apps`
      */
-    popoverButtonProps?: EuiHeaderLinksPopoverButtonProps;
+    popoverButtonProps?: OuiHeaderLinksPopoverButtonProps;
     /**
-     * Extend the functionality of the EuiPopover
+     * Extend the functionality of the OuiPopover
      */
-    popoverProps?: Omit<EuiPopoverProps, 'button' | 'closePopover'>;
+    popoverProps?: Omit<OuiPopoverProps, 'button' | 'closePopover'>;
   };
 
 const gutterSizeToClassNameMap: {
-  [gutterSize in EuiHeaderLinksGutterSize]: string;
+  [gutterSize in OuiHeaderLinksGutterSize]: string;
 } = {
   xs: '--gutterXS',
   s: '--gutterS',
@@ -75,7 +86,7 @@ const gutterSizeToClassNameMap: {
 };
 export const GUTTER_SIZES = keysOf(gutterSizeToClassNameMap);
 
-export const EuiHeaderLinks: FunctionComponent<EuiHeaderLinksProps> = ({
+export const OuiHeaderLinks: FunctionComponent<OuiHeaderLinksProps> = ({
   children,
   className,
   gutterSize = 's',
@@ -108,36 +119,36 @@ export const EuiHeaderLinks: FunctionComponent<EuiHeaderLinksProps> = ({
     };
   });
 
-  const classes = classNames('euiHeaderLinks', className);
+  const classes = classNames('ouiHeaderLinks', className);
 
   const button = (
-    <EuiI18n token="euiHeaderLinks.openNavigationMenu" default="Open menu">
+    <OuiI18n token="ouiHeaderLinks.openNavigationMenu" default="Open menu">
       {(openNavigationMenu: string) => (
-        <EuiHeaderSectionItemButton
+        <OuiHeaderSectionItemButton
           aria-label={openNavigationMenu}
           onClick={onMenuButtonClick}
           {...popoverButtonRest}>
-          <EuiIcon type={iconType} size="m" />
-        </EuiHeaderSectionItemButton>
+          <OuiIcon type={iconType} size="m" />
+        </OuiHeaderSectionItemButton>
       )}
-    </EuiI18n>
+    </OuiI18n>
   );
 
   return (
-    <EuiI18n token="euiHeaderLinks.appNavigation" default="App menu">
+    <OuiI18n token="ouiHeaderLinks.appNavigation" default="App menu">
       {(appNavigation: string) => (
         <nav className={classes} aria-label={appNavigation} {...rest}>
-          <EuiHideFor sizes={popoverBreakpoints}>
+          <OuiHideFor sizes={popoverBreakpoints}>
             <div
-              className={classNames('euiHeaderLinks__list', [
-                `euiHeaderLinks__list${gutterSizeToClassNameMap[gutterSize]}`,
+              className={classNames('ouiHeaderLinks__list', [
+                `ouiHeaderLinks__list${gutterSizeToClassNameMap[gutterSize]}`,
               ])}>
               {children}
             </div>
-          </EuiHideFor>
+          </OuiHideFor>
 
-          <EuiShowFor sizes={popoverBreakpoints}>
-            <EuiPopover
+          <OuiShowFor sizes={popoverBreakpoints}>
+            <OuiPopover
               button={button}
               isOpen={mobileMenuIsOpen}
               anchorPosition="downRight"
@@ -145,15 +156,15 @@ export const EuiHeaderLinks: FunctionComponent<EuiHeaderLinksProps> = ({
               panelPaddingSize="none"
               {...popoverProps}>
               <div
-                className={classNames('euiHeaderLinks__mobileList', [
-                  `euiHeaderLinks__mobileList${gutterSizeToClassNameMap[gutterSize]}`,
+                className={classNames('ouiHeaderLinks__mobileList', [
+                  `ouiHeaderLinks__mobileList${gutterSizeToClassNameMap[gutterSize]}`,
                 ])}>
                 {children}
               </div>
-            </EuiPopover>
-          </EuiShowFor>
+            </OuiPopover>
+          </OuiShowFor>
         </nav>
       )}
-    </EuiI18n>
+    </OuiI18n>
   );
 };

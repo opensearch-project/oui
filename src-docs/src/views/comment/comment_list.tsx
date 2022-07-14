@@ -1,25 +1,36 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import {
-  EuiCommentList,
-  EuiCommentProps,
+  OuiCommentList,
+  OuiCommentProps,
 } from '../../../../src/components/comment_list';
-import { EuiAvatar } from '../../../../src/components/avatar';
-import { EuiButtonIcon } from '../../../../src/components/button';
-import { EuiText } from '../../../../src/components/text';
-import { EuiBadge } from '../../../../src/components/badge';
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
+import { OuiAvatar } from '../../../../src/components/avatar';
+import { OuiButtonIcon } from '../../../../src/components/button';
+import { OuiText } from '../../../../src/components/text';
+import { OuiBadge } from '../../../../src/components/badge';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
 
 const body = (
-  <EuiText size="s">
+  <OuiText size="s">
     <p>
       Far out in the uncharted backwaters of the unfashionable end of the
       western spiral arm of the Galaxy lies a small unregarded yellow sun.
     </p>
-  </EuiText>
+  </OuiText>
 );
 
 const copyAction = (
-  <EuiButtonIcon
+  <OuiButtonIcon
     title="Custom action"
     aria-label="Custom action"
     color="subdued"
@@ -28,28 +39,28 @@ const copyAction = (
 );
 
 const complexEvent = (
-  <EuiFlexGroup responsive={false} alignItems="center" gutterSize="s">
-    <EuiFlexItem grow={false}>added tags</EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="primary">sample</EuiBadge>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="success">review</EuiBadge>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+  <OuiFlexGroup responsive={false} alignItems="center" gutterSize="s">
+    <OuiFlexItem grow={false}>added tags</OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiBadge color="primary">sample</OuiBadge>
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiBadge color="success">review</OuiBadge>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );
 
 const complexUsername = (
-  <EuiFlexGroup responsive={false} alignItems="center" gutterSize="s">
-    <EuiFlexItem grow={false}>
-      <EuiAvatar size="s" type="space" name="Pedro" />
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>pedror</EuiFlexItem>
-  </EuiFlexGroup>
+  <OuiFlexGroup responsive={false} alignItems="center" gutterSize="s">
+    <OuiFlexItem grow={false}>
+      <OuiAvatar size="s" type="space" name="Pedro" />
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>pedror</OuiFlexItem>
+  </OuiFlexGroup>
 );
 
 const longBody = (
-  <EuiText size="s">
+  <OuiText size="s">
     <p>
       This planet has - or rather had - a problem, which was this: most of the
       people living on it were unhappy for pretty much of the time. Many
@@ -58,18 +69,18 @@ const longBody = (
       because on the whole it was not the small green pieces of paper that were
       unhappy.
     </p>
-  </EuiText>
+  </OuiText>
 );
 
 const avatar = (
-  <EuiAvatar
+  <OuiAvatar
     imageUrl="https://source.unsplash.com/64x64/?woman"
     size="l"
     name="Juana"
   />
 );
 
-const comments: EuiCommentProps[] = [
+const comments: OuiCommentProps[] = [
   {
     username: 'janed',
     event: 'added a comment',
@@ -103,10 +114,10 @@ const comments: EuiCommentProps[] = [
     username: 'elohar',
     event: 'added a comment',
     timestamp: 'on Jan 14, 2020',
-    timelineIcon: <EuiAvatar size="l" name="Eloha" />,
+    timelineIcon: <OuiAvatar size="l" name="Eloha" />,
     children: longBody,
     actions: copyAction,
   },
 ];
 
-export default () => <EuiCommentList comments={comments} />;
+export default () => <OuiCommentList comments={comments} />;

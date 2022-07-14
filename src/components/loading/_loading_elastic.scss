@@ -1,28 +1,39 @@
-.euiLoadingElastic {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiLoadingElastic {
   position: relative;
   display: inline-block;
 }
 
-.euiLoadingElastic--medium {
-  width: $euiSize;
+.ouiLoadingElastic--medium {
+  width: $ouiSize;
 }
 
-.euiLoadingElastic--large {
-  width: $euiSizeL;
+.ouiLoadingElastic--large {
+  width: $ouiSizeL;
 }
 
-.euiLoadingElastic--xLarge {
-  width: $euiSizeXL;
+.ouiLoadingElastic--xLarge {
+  width: $ouiSizeXL;
 }
 
-.euiLoadingElastic--xxLarge {
-  width: $euiSizeXXL;
+.ouiLoadingElastic--xxLarge {
+  width: $ouiSizeXXL;
 }
 
 
-.euiLoadingElastic path {
-  @include euiCanAnimate {
-    animation-name: euiLoadingElastic;
+.ouiLoadingElastic path {
+  @include ouiCanAnimate {
+    animation-name: ouiLoadingElastic;
   }
   animation-fill-mode: forwards;
   animation-direction: alternate;
@@ -33,32 +44,32 @@
   transform-origin: 50% 50%;
 }
 
-.euiLoadingElastic path:nth-of-type(1) {
+.ouiLoadingElastic path:nth-of-type(1) {
   animation-delay: 0s;
 }
 
-.euiLoadingElastic path:nth-of-type(2) {
+.ouiLoadingElastic path:nth-of-type(2) {
   animation-delay: .035s;
 }
 
-.euiLoadingElastic path:nth-of-type(3) {
+.ouiLoadingElastic path:nth-of-type(3) {
   animation-delay: .125s;
 }
 
-.euiLoadingElastic path:nth-of-type(4) {
+.ouiLoadingElastic path:nth-of-type(4) {
   animation-delay: .155s;
 }
 
-.euiLoadingElastic path:nth-of-type(5) {
+.ouiLoadingElastic path:nth-of-type(5) {
   animation-delay: .075s;
 }
 
-.euiLoadingElastic path:nth-of-type(6) {
+.ouiLoadingElastic path:nth-of-type(6) {
   animation-delay: .06s;
 };
 
 
-@keyframes euiLoadingElastic {
+@keyframes ouiLoadingElastic {
   0% {
     transform: scale3d(0, 0, -.7);
     opacity: 0;

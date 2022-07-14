@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 const findup = require('findup');
 const resolve = require('resolve');
 const fs = require('fs');
@@ -25,9 +36,9 @@ function hasParentIndex(pathToFile) {
 }
 
 const generator = dtsGenerator({
-  prefix: '@elastic/eui',
+  prefix: '@opensearch-project/oui',
   project: baseDir,
-  out: 'eui.d.ts',
+  out: 'oui.d.ts',
   exclude: [
     'node_modules/**/*.d.ts',
     '*/custom_typings/**/*.d.ts',
@@ -44,14 +55,14 @@ const generator = dtsGenerator({
       path.basename(params.currentModuleId) === 'index' &&
       !hasParentIndex(path.resolve(baseDir, params.currentModuleId))
     ) {
-      // this module is exporting from an `index(.d)?.ts` file, declare its exports straight to @elastic/eui module
-      return '@elastic/eui';
+      // this module is exporting from an `index(.d)?.ts` file, declare its exports straight to @opensearch-project/oui module
+      return '@opensearch-project/oui';
     } else {
-      // otherwise export as the module's path relative to the @elastic/eui namespace
+      // otherwise export as the module's path relative to the @opensearch-project/oui namespace
       if (params.currentModuleId.endsWith('/index')) {
-        return path.join('@elastic/eui', path.dirname(params.currentModuleId));
+        return path.join('@opensearch-project/oui', path.dirname(params.currentModuleId));
       } else {
-        return path.join('@elastic/eui', params.currentModuleId);
+        return path.join('@opensearch-project/oui', params.currentModuleId);
       }
     }
   },
@@ -61,12 +72,12 @@ const generator = dtsGenerator({
       baseDir,
       path.dirname(params.currentModuleId)
     );
-    const isFromEuiSrc = importFromBaseDir.startsWith(srcDir);
-    const isRelativeImport = isFromEuiSrc && params.importedModuleId[0] === '.';
+    const isFromOuiSrc = importFromBaseDir.startsWith(srcDir);
+    const isRelativeImport = isFromOuiSrc && params.importedModuleId[0] === '.';
 
     if (isRelativeImport) {
       // if importing from an `index` file (directly or targeting a directory with an index),
-      // then if there is no parent index file this should import from @elastic/eui
+      // then if there is no parent index file this should import from @opensearch-project/oui
       const importPathTarget = resolve.sync(params.importedModuleId, {
         basedir: importFromBaseDir,
         extensions: ['.ts', '.tsx', '.d.ts'],
@@ -76,12 +87,12 @@ const generator = dtsGenerator({
       const isModuleIndex = isIndexFile && !hasParentIndex(importPathTarget);
 
       if (isModuleIndex) {
-        // importing an `index` file, in `resolveModuleId` above we change those modules to '@elastic/eui'
-        return '@elastic/eui';
+        // importing an `index` file, in `resolveModuleId` above we change those modules to '@opensearch-project/oui'
+        return '@opensearch-project/oui';
       } else {
-        // importing from a non-index TS source file, keep the import path but re-scope it to '@elastic/eui' namespace
+        // importing from a non-index TS source file, keep the import path but re-scope it to '@opensearch-project/oui' namespace
         return path.join(
-          '@elastic/eui',
+          '@opensearch-project/oui',
           path.dirname(params.currentModuleId),
           params.importedModuleId
         );
@@ -92,13 +103,13 @@ const generator = dtsGenerator({
   },
 });
 
-// NOTE: once EUI is all converted to typescript this madness can be deleted forever
-// 1. strip any `/// <reference` lines from the generated eui.d.ts
-// 2. replace any import("src/...") declarations to import("@elastic/eui/src/...")
-// 3. replace any import("./...") declarations to import("@elastic/eui/src/...)
-// 4. generate & add EuiTokenObject
+// NOTE: once OUI is all converted to typescript this madness can be deleted forever
+// 1. strip any `/// <reference` lines from the generated oui.d.ts
+// 2. replace any import("src/...") declarations to import("@opensearch-project/oui/src/...")
+// 3. replace any import("./...") declarations to import("@opensearch-project/oui/src/...)
+// 4. generate & add OuiTokenObject
 generator.then(() => {
-  const defsFilePath = path.resolve(baseDir, 'eui.d.ts');
+  const defsFilePath = path.resolve(baseDir, 'oui.d.ts');
 
   fs.writeFileSync(
     defsFilePath,
@@ -106,14 +117,14 @@ generator.then(() => {
       .readFileSync(defsFilePath)
       .toString()
       .replace(/\/\/\/\W+<reference.*/g, '') // 1.
-      .replace(/import\("src\/(.*?)"\)/g, 'import("@elastic/eui/src/$1")') // 2.
+      .replace(/import\("src\/(.*?)"\)/g, 'import("@opensearch-project/oui/src/$1")') // 2.
       .replace(
         // start 3.
         // find any singular `declare module { ... }` block
         // {.*?^} matches anything until a } starts a new line (via `m` regex option, and `s` is dotall)
         //
         // aren't regex really bad for this? Yes.
-        // However, @babel/preset-typescript doesn't understand some syntax generated in eui.d.ts
+        // However, @babel/preset-typescript doesn't understand some syntax generated in oui.d.ts
         // and the tooling around typescript's parsing & code generation is lacking and undocumented
         // so... because this works with the guarantee that the newline-brace combination matches a module...
         /declare module '(.*?)' {.*?^}/gms,
@@ -125,8 +136,8 @@ generator.then(() => {
             (importStatement, importPath) => {
               let target = path.join(path.dirname(moduleName), importPath);
 
-              // if the target resolves to an orphaned index.ts file, remap to '@elastic/eui'
-              const filePath = target.replace('@elastic/eui', baseDir);
+              // if the target resolves to an orphaned index.ts file, remap to '@opensearch-project/oui'
+              const filePath = target.replace('@opensearch-project/oui', baseDir);
               const filePathTs = `${filePath}.ts`;
               const filePathTsx = `${filePath}.tsx`;
               const filePathResolvedToIndex = path.join(filePath, 'index.ts');
@@ -137,7 +148,7 @@ generator.then(() => {
                 fs.existsSync(filePathResolvedToIndex) && // and it resolves to an index.ts
                 hasParentIndex(filePathResolvedToIndex) === false // does not get exported at a higher level
               ) {
-                target = '@elastic/eui';
+                target = '@opensearch-project/oui';
               }
 
               return `import ("${target}")`;
@@ -145,13 +156,13 @@ generator.then(() => {
           );
         }
       ) // end 3.
-      .replace(/$/, `\n\n${buildEuiTokensObject()}`) // 4.
+      .replace(/$/, `\n\n${buildOuiTokensObject()}`) // 4.
   );
 });
 
 /** For step 4 **/
 // i18ntokens.json is generated as the first step in the build and can be relied upon here
-function buildEuiTokensObject() {
+function buildOuiTokensObject() {
   // reduce over the tokens list as a few of the tokens are used multiple times and must be
   // filtered down to a list
   const { i18ndefs } = require('../i18ntokens.json').reduce(
@@ -165,8 +176,8 @@ function buildEuiTokensObject() {
     { i18ndefs: [], tokens: new Set() }
   );
   return `
-declare module '@elastic/eui' {
-  export type EuiTokensObject = {
+declare module '@opensearch-project/oui' {
+  export type OuiTokensObject = {
     ${i18ndefs.map(({ token }) => `"${token}": any;`).join('\n')}
   }
 }

@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,12 +17,12 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiFormRow,
-  EuiToolTip,
-  EuiCallOut,
-  EuiText,
-  EuiSpacer,
+  OuiCode,
+  OuiFormRow,
+  OuiToolTip,
+  OuiCallOut,
+  OuiText,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import FormCompressed from './form_compressed';
@@ -38,7 +49,7 @@ export const FormCompressedExample = {
   title: 'Compressed forms',
   intro: (
     <Fragment>
-      <EuiText>
+      <OuiText>
         <p>
           Also known as <strong>Editor-Style Controls</strong>, compressed forms
           and controls were specifically created for use when space is at a
@@ -47,9 +58,9 @@ export const FormCompressedExample = {
           where form controls are being used to create or edit content on the
           page.
         </p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiCallOut
+      </OuiText>
+      <OuiSpacer />
+      <OuiCallOut
         color="danger"
         title="Do not use compressed and non-compressed form controls in the same form."
       />
@@ -70,22 +81,22 @@ export const FormCompressedExample = {
       text: (
         <p>
           To use compressed forms, pass{' '}
-          <EuiCode language="js">display=&quot;rowCompressed&quot;</EuiCode> to
-          the EuiFormRows and <EuiCode language="js">compressed=true</EuiCode>{' '}
+          <OuiCode language="js">display=&quot;rowCompressed&quot;</OuiCode> to
+          the OuiFormRows and <OuiCode language="js">compressed=true</OuiCode>{' '}
           to the form controls themselves.
         </p>
       ),
       props: {
-        EuiFormRow,
+        OuiFormRow,
       },
       demo: <FormCompressed />,
       snippet: [
-        `<EuiFormRow
+        `<OuiFormRow
   label="Text field"
   display="rowCompressed"
 >
-  <EuiFieldText compressed />
-</EuiFormRow>`,
+  <OuiFieldText compressed />
+</OuiFormRow>`,
       ],
     },
     {
@@ -105,35 +116,35 @@ export const FormCompressedExample = {
           <p>
             Editor-style controls can be displayed in a two column layout for
             even better use of limited space, just pass{' '}
-            <EuiCode language="js">
+            <OuiCode language="js">
               display=&quot;columnCompressed&quot;
-            </EuiCode>{' '}
+            </OuiCode>{' '}
             to align the labels and inputs side by side.
           </p>
           <p>
-            <strong>EuiSwitches</strong> are a special case in which so you must
-            pass <EuiCode language="js">{'"columnCompressedSwitch"'}</EuiCode>{' '}
-            to the EuiFormRow as the display property.
+            <strong>OuiSwitches</strong> are a special case in which so you must
+            pass <OuiCode language="js">{'"columnCompressedSwitch"'}</OuiCode>{' '}
+            to the OuiFormRow as the display property.
           </p>
         </Fragment>
       ),
       props: {
-        EuiFormRow,
+        OuiFormRow,
       },
       demo: <FormHorizontal />,
       snippet: [
-        `<EuiFormRow
+        `<OuiFormRow
   label="Text field"
   display="columnCompressed"
 >
-  <EuiFieldText compressed />
-</EuiFormRow>`,
-        `<EuiFormRow
+  <OuiFieldText compressed />
+</OuiFormRow>`,
+        `<OuiFormRow
   label="Switch"
   display="columnCompressedSwitch"
 >
-  <EuiSwitch compressed />
-</EuiFormRow>`,
+  <OuiSwitch compressed />
+</OuiFormRow>`,
       ],
     },
     {
@@ -153,39 +164,39 @@ export const FormCompressedExample = {
           <p>
             When using compressed, horizontal form styles, it is best not to
             overload the UI with expansive help text. If it&apos;s short and
-            part of the validation, use <EuiCode>helpText</EuiCode>. However, if
+            part of the validation, use <OuiCode>helpText</OuiCode>. However, if
             it&apos;s an explanation of the control, consider wraping the label
             with an{' '}
             <Link to="/display/tooltip">
-              <strong>EuiToolTip</strong>
+              <strong>OuiToolTip</strong>
             </Link>{' '}
-            and appending the <EuiCode>questionInCircle</EuiCode> icon to it.
+            and appending the <OuiCode>questionInCircle</OuiCode> icon to it.
           </p>
         </Fragment>
       ),
       props: {
-        EuiFormRow,
-        EuiToolTip,
+        OuiFormRow,
+        OuiToolTip,
       },
       demo: <FormHelp />,
       snippet: [
-        `<EuiFormRow
+        `<OuiFormRow
   display="columnCompressed"
   label=""
   helpText="">
-  <EuiFieldText compressed />
-</EuiFormRow>`,
-        `<EuiFormRow
+  <OuiFieldText compressed />
+</OuiFormRow>`,
+        `<OuiFormRow
   display="columnCompressed"
   label={
-    <EuiToolTip content="">
+    <OuiToolTip content="">
       <span>
-        Label <EuiIcon type="questionInCircle" color="subdued" />
+        Label <OuiIcon type="questionInCircle" color="subdued" />
       </span>
-    </EuiToolTip>
+    </OuiToolTip>
   }>
-  <EuiFieldText compressed />
-</EuiFormRow>`,
+  <OuiFieldText compressed />
+</OuiFormRow>`,
       ],
     },
     {
@@ -228,15 +239,15 @@ export const FormCompressedExample = {
             This is an example of how to combine compressed form controls with
             from rows, labels, prepend and appends in a column layout.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             iconType="accessibility"
             title={
               <span>
                 Pay close attention to the patterns of using{' '}
-                <EuiCode>htmlFor</EuiCode> and <EuiCode>aria-label</EuiCode>.
+                <OuiCode>htmlFor</OuiCode> and <OuiCode>aria-label</OuiCode>.
                 For best results, each form control that is not wrapped in an
-                EuiFormRow should be supplied an <EuiCode>id</EuiCode>.
+                OuiFormRow should be supplied an <OuiCode>id</OuiCode>.
               </span>
             }
           />

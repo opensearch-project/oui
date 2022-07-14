@@ -1,38 +1,49 @@
-.euiComment {
-  font-size: $euiFontSizeS;
-  display: flex;
-  padding-bottom: $euiSize;
-  min-height: $euiSize * 3.5;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-  .euiCommentEvent {
+.ouiComment {
+  font-size: $ouiFontSizeS;
+  display: flex;
+  padding-bottom: $ouiSize;
+  min-height: $ouiSize * 3.5;
+
+  .ouiCommentEvent {
     flex-grow: 1;
   }
 
-  .euiCommentTimeline {
+  .ouiCommentTimeline {
     position: relative;
     flex-grow: 0;
-    margin-right: $euiSize;
+    margin-right: $ouiSize;
 
     &::before {
       content: '';
       position: absolute;
-      left: $euiSizeXXL / 2;
-      top: $euiSizeL;
-      width: $euiSizeXS / 2;
-      background-color: $euiColorLightShade;
-      height: calc(100% + #{$euiSizeL});
+      left: $ouiSizeXXL / 2;
+      top: $ouiSizeL;
+      width: $ouiSizeXS / 2;
+      background-color: $ouiColorLightShade;
+      height: calc(100% + #{$ouiSizeL});
     }
   }
 }
 
-.euiComment:last-of-type {
-  .euiCommentTimeline {
+.ouiComment:last-of-type {
+  .ouiCommentTimeline {
     &::before {
       display: none;
     }
   }
 }
 
-.euiComment--update:not(.euiComment--hasBody) {
+.ouiComment--update:not(.ouiComment--hasBody) {
   align-items: center;
 }

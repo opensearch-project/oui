@@ -1,31 +1,42 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiFacetButton, EuiIcon, EuiAvatar } from '../../../../src/components';
+import { OuiFacetButton, OuiIcon, OuiAvatar } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiFacetButton quantity={6}>Simple, no icon</EuiFacetButton>
+    <OuiFacetButton quantity={6}>Simple, no icon</OuiFacetButton>
     <br />
-    <EuiFacetButton quantity={6} isSelected>
+    <OuiFacetButton quantity={6} isSelected>
       Simple, selected
-    </EuiFacetButton>
+    </OuiFacetButton>
     <br />
-    <EuiFacetButton quantity={6} icon={<EuiIcon type="dot" color="success" />}>
+    <OuiFacetButton quantity={6} icon={<OuiIcon type="dot" color="success" />}>
       Label or color indicator
-    </EuiFacetButton>
+    </OuiFacetButton>
     <br />
-    <EuiFacetButton quantity={6} isDisabled>
+    <OuiFacetButton quantity={6} isDisabled>
       Disabled
-    </EuiFacetButton>
+    </OuiFacetButton>
     <br />
-    <EuiFacetButton
+    <OuiFacetButton
       quantity={6}
-      icon={<EuiAvatar size="s" name="Avatar Jones" />}>
+      icon={<OuiAvatar size="s" name="Avatar Jones" />}>
       Avatar as icon
-    </EuiFacetButton>
+    </OuiFacetButton>
     <br />
-    <EuiFacetButton quantity={6} isLoading>
+    <OuiFacetButton quantity={6} isLoading>
       Loading
-    </EuiFacetButton>
+    </OuiFacetButton>
   </div>
 );

@@ -1,57 +1,68 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiBottomBar,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButton,
-  EuiButtonEmpty,
+  OuiBottomBar,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiButton,
+  OuiButtonEmpty,
 } from '../../../../src/components';
 
 export default () => {
   const [showBar, setShowBar] = useState(false);
 
   const button = (
-    <EuiButton color="primary" onClick={() => setShowBar((show) => !show)}>
+    <OuiButton color="primary" onClick={() => setShowBar((show) => !show)}>
       Toggle appearance of the bottom bar
-    </EuiButton>
+    </OuiButton>
   );
 
   let bottomBar;
   if (showBar) {
     bottomBar = (
-      <EuiBottomBar>
-        <EuiFlexGroup justifyContent="spaceBetween">
-          <EuiFlexItem grow={false}>
-            <EuiFlexGroup gutterSize="s">
-              <EuiFlexItem grow={false}>
-                <EuiButton color="ghost" size="s" iconType="help">
+      <OuiBottomBar>
+        <OuiFlexGroup justifyContent="spaceBetween">
+          <OuiFlexItem grow={false}>
+            <OuiFlexGroup gutterSize="s">
+              <OuiFlexItem grow={false}>
+                <OuiButton color="ghost" size="s" iconType="help">
                   Help
-                </EuiButton>
-              </EuiFlexItem>
-              <EuiFlexItem grow={false}>
-                <EuiButton color="ghost" size="s" iconType="user">
+                </OuiButton>
+              </OuiFlexItem>
+              <OuiFlexItem grow={false}>
+                <OuiButton color="ghost" size="s" iconType="user">
                   Add user
-                </EuiButton>
-              </EuiFlexItem>
-            </EuiFlexGroup>
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiFlexGroup gutterSize="s">
-              <EuiFlexItem grow={false}>
-                <EuiButtonEmpty color="ghost" size="s" iconType="cross">
+                </OuiButton>
+              </OuiFlexItem>
+            </OuiFlexGroup>
+          </OuiFlexItem>
+          <OuiFlexItem grow={false}>
+            <OuiFlexGroup gutterSize="s">
+              <OuiFlexItem grow={false}>
+                <OuiButtonEmpty color="ghost" size="s" iconType="cross">
                   Discard
-                </EuiButtonEmpty>
-              </EuiFlexItem>
-              <EuiFlexItem grow={false}>
-                <EuiButton color="primary" fill size="s" iconType="check">
+                </OuiButtonEmpty>
+              </OuiFlexItem>
+              <OuiFlexItem grow={false}>
+                <OuiButton color="primary" fill size="s" iconType="check">
                   Save
-                </EuiButton>
-              </EuiFlexItem>
-            </EuiFlexGroup>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiBottomBar>
+                </OuiButton>
+              </OuiFlexItem>
+            </OuiFlexGroup>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+      </OuiBottomBar>
     );
   }
 

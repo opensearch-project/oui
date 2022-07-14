@@ -1,34 +1,45 @@
-.euiRangeTooltip {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiRangeTooltip {
   // Keeps tooltip (value) aligned to percentage of actual slider
   display: block;
   position: absolute;
   left: 0;
   top: 0;
   bottom: 0;
-  width: calc(100% - #{$euiRangeThumbWidth});
-  margin-left: $euiRangeThumbWidth / 2;
+  width: calc(100% - #{$ouiRangeThumbWidth});
+  margin-left: $ouiRangeThumbWidth / 2;
   pointer-events: none;
-  z-index: 2; // higher than .euiRangeSlider that is 1
+  z-index: 2; // higher than .ouiRangeSlider that is 1
 }
 
-.euiRangeTooltip__value {
+.ouiRangeTooltip__value {
   // Indentation for legibility in transition
   // sass-lint:disable-block indentation
-  @include euiFontSizeS;
-  border: 1px solid $euiTooltipBackgroundColor;
+  @include ouiFontSizeS;
+  border: 1px solid $ouiTooltipBackgroundColor;
   position: absolute;
-  border-radius: $euiBorderRadius;
-  padding: ($euiSizeXS / 2) $euiSizeS;
-  background-color: $euiTooltipBackgroundColor;
-  color: $euiColorGhost;
+  border-radius: $ouiBorderRadius;
+  padding: ($ouiSizeXS / 2) $ouiSizeS;
+  background-color: $ouiTooltipBackgroundColor;
+  color: $ouiColorGhost;
   max-width: 256px;
   top: 50%;
   transition:
-    box-shadow $euiAnimSpeedNormal $euiAnimSlightResistance,
-    transform $euiAnimSpeedNormal $euiAnimSlightResistance;
+    box-shadow $ouiAnimSpeedNormal $ouiAnimSlightResistance,
+    transform $ouiAnimSpeedNormal $ouiAnimSlightResistance;
 
   // Custom sizing
-  $arrowSize: $euiSizeM;
+  $arrowSize: $ouiSizeM;
   $arrowMinusSize: (($arrowSize / 2) - 1px) * -1;
 
   &::after,
@@ -38,19 +49,19 @@
     bottom: -$arrowSize / 2;
     left: 50%;
     transform-origin: center;
-    background-color: $euiTooltipBackgroundColor;
+    background-color: $ouiTooltipBackgroundColor;
     width: $arrowSize;
     height: $arrowSize;
     border-radius: 2px;
   }
 
   &::before {
-    background-color: $euiTooltipBackgroundColor;
+    background-color: $ouiTooltipBackgroundColor;
   }
 
   // Positions the arrow
-  &.euiRangeTooltip__value--right {
-    margin-left: $euiSizeL;
+  &.ouiRangeTooltip__value--right {
+    margin-left: $ouiSizeL;
 
     &:before,
     &:after {
@@ -62,8 +73,8 @@
     }
   }
 
-  &.euiRangeTooltip__value--left {
-    margin-right: $euiSizeL;
+  &.ouiRangeTooltip__value--left {
+    margin-right: $ouiSizeL;
 
     &:before,
     &:after {
@@ -76,8 +87,8 @@
     }
   }
 
-  &.euiRangeTooltip__value--right,
-  &.euiRangeTooltip__value--left {
+  &.ouiRangeTooltip__value--right,
+  &.ouiRangeTooltip__value--left {
     transform: translateX(0) translateY(-50%);
 
     &:before,
@@ -88,10 +99,10 @@
   }
 
   &--hasTicks {
-    top: ($euiFormControlHeight / 4);
+    top: ($ouiFormControlHeight / 4);
 
-    .euiRangeTooltip--compressed & {
-      top: ($euiFormControlCompressedHeight / 4);
+    .ouiRangeTooltip--compressed & {
+      top: ($ouiFormControlCompressedHeight / 4);
     }
   }
 }

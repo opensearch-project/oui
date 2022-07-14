@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiButtonIcon, COLORS, DISPLAYS, SIZES } from './button_icon';
+import { OuiButtonIcon, COLORS, DISPLAYS, SIZES } from './button_icon';
 
-describe('EuiButtonIcon', () => {
+describe('OuiButtonIcon', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiButtonIcon iconType="user" {...requiredProps} />
+      <OuiButtonIcon iconType="user" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +47,7 @@ describe('EuiButtonIcon', () => {
     describe('isDisabled', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiButtonIcon iconType="user" aria-label="button" isDisabled />
+          <OuiButtonIcon iconType="user" aria-label="button" isDisabled />
         );
 
         expect(component).toMatchSnapshot();
@@ -44,7 +55,7 @@ describe('EuiButtonIcon', () => {
 
       it('renders a button even when href is defined', () => {
         const component = render(
-          <EuiButtonIcon
+          <OuiButtonIcon
             iconType="user"
             aria-label="button"
             href="#"
@@ -59,7 +70,7 @@ describe('EuiButtonIcon', () => {
     describe('iconType', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiButtonIcon aria-label="button" iconType="user" />
+          <OuiButtonIcon aria-label="button" iconType="user" />
         );
 
         expect(component).toMatchSnapshot();
@@ -70,7 +81,7 @@ describe('EuiButtonIcon', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiButtonIcon iconType="user" aria-label="button" color={color} />
+            <OuiButtonIcon iconType="user" aria-label="button" color={color} />
           );
 
           expect(component).toMatchSnapshot();
@@ -82,7 +93,7 @@ describe('EuiButtonIcon', () => {
       DISPLAYS.forEach((display) => {
         test(`${display} is rendered`, () => {
           const component = render(
-            <EuiButtonIcon
+            <OuiButtonIcon
               iconType="user"
               aria-label="button"
               display={display}
@@ -98,7 +109,7 @@ describe('EuiButtonIcon', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
           const component = render(
-            <EuiButtonIcon iconType="user" aria-label="button" size={size} />
+            <OuiButtonIcon iconType="user" aria-label="button" size={size} />
           );
 
           expect(component).toMatchSnapshot();
@@ -109,7 +120,7 @@ describe('EuiButtonIcon', () => {
     describe('isSelected', () => {
       it('is rendered as true', () => {
         const component = render(
-          <EuiButtonIcon iconType="user" aria-label="button" isSelected />
+          <OuiButtonIcon iconType="user" aria-label="button" isSelected />
         );
 
         expect(component).toMatchSnapshot();
@@ -117,7 +128,7 @@ describe('EuiButtonIcon', () => {
 
       it('is rendered as false', () => {
         const component = render(
-          <EuiButtonIcon
+          <OuiButtonIcon
             iconType="user"
             aria-label="button"
             isSelected={false}
@@ -131,7 +142,7 @@ describe('EuiButtonIcon', () => {
     describe('href', () => {
       it('secures the rel attribute when the target is _blank', () => {
         const component = render(
-          <EuiButtonIcon
+          <OuiButtonIcon
             iconType="user"
             aria-label="button"
             href="#"
@@ -147,7 +158,7 @@ describe('EuiButtonIcon', () => {
       it('supports onClick and href', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiButtonIcon
+          <OuiButtonIcon
             iconType="user"
             aria-label="hoi"
             href="#"
@@ -161,7 +172,7 @@ describe('EuiButtonIcon', () => {
       it('supports onClick as a button', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiButtonIcon iconType="user" aria-label="hoi" onClick={handler} />
+          <OuiButtonIcon iconType="user" aria-label="hoi" onClick={handler} />
         );
         component.find('button').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);

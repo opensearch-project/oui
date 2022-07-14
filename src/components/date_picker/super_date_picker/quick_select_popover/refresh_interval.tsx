@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,14 +34,14 @@ import React, {
   KeyboardEventHandler,
 } from 'react';
 import { timeUnits, timeUnitsPlural } from '../time_units';
-import { EuiI18n } from '../../../i18n';
-import { EuiFlexGroup, EuiFlexItem } from '../../../flex';
-import { EuiTitle } from '../../../title';
-import { EuiSpacer } from '../../../spacer';
-import { EuiSelect, EuiFieldNumber } from '../../../form';
-import { EuiButton } from '../../../button';
+import { OuiI18n } from '../../../i18n';
+import { OuiFlexGroup, OuiFlexItem } from '../../../flex';
+import { OuiTitle } from '../../../title';
+import { OuiSpacer } from '../../../spacer';
+import { OuiSelect, OuiFieldNumber } from '../../../form';
+import { OuiButton } from '../../../button';
 import { htmlIdGenerator } from '../../../../services';
-import { EuiScreenReaderOnly } from '../../../accessibility';
+import { OuiScreenReaderOnly } from '../../../accessibility';
 import {
   Milliseconds,
   TimeUnitId,
@@ -49,7 +60,7 @@ const MILLISECONDS_IN_SECOND = 1000;
 const MILLISECONDS_IN_MINUTE = MILLISECONDS_IN_SECOND * 60;
 const MILLISECONDS_IN_HOUR = MILLISECONDS_IN_MINUTE * 60;
 
-function fromMilliseconds(milliseconds: Milliseconds): EuiRefreshIntervalState {
+function fromMilliseconds(milliseconds: Milliseconds): OuiRefreshIntervalState {
   const round = (value: number) => parseFloat(value.toFixed(2));
   if (milliseconds > MILLISECONDS_IN_HOUR) {
     return {
@@ -83,22 +94,22 @@ function toMilliseconds(units: TimeUnitId, value: Milliseconds) {
   }
 }
 
-export interface EuiRefreshIntervalProps {
+export interface OuiRefreshIntervalProps {
   applyRefreshInterval?: ApplyRefreshInterval;
   isPaused: boolean;
   refreshInterval: Milliseconds;
 }
 
-interface EuiRefreshIntervalState {
+interface OuiRefreshIntervalState {
   value: number | '';
   units: TimeUnitId;
 }
 
-export class EuiRefreshInterval extends Component<
-  EuiRefreshIntervalProps,
-  EuiRefreshIntervalState
+export class OuiRefreshInterval extends Component<
+  OuiRefreshIntervalProps,
+  OuiRefreshIntervalState
 > {
-  state: EuiRefreshIntervalState = fromMilliseconds(this.props.refreshInterval);
+  state: OuiRefreshIntervalState = fromMilliseconds(this.props.refreshInterval);
 
   generateId = htmlIdGenerator();
 
@@ -185,18 +196,18 @@ export class EuiRefreshInterval extends Component<
 
     return (
       <fieldset>
-        <EuiTitle size="xxxs">
+        <OuiTitle size="xxxs">
           <legend id={legendId}>
-            <EuiI18n
-              token="euiRefreshInterval.legend"
+            <OuiI18n
+              token="ouiRefreshInterval.legend"
               default="Refresh every"
             />
           </legend>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiFlexGroup gutterSize="s" responsive={false}>
-          <EuiFlexItem>
-            <EuiFieldNumber
+        </OuiTitle>
+        <OuiSpacer size="s" />
+        <OuiFlexGroup gutterSize="s" responsive={false}>
+          <OuiFlexItem>
+            <OuiFieldNumber
               compressed
               value={value}
               onChange={this.onValueChange}
@@ -205,9 +216,9 @@ export class EuiRefreshInterval extends Component<
               aria-describedby={`${refreshSelectionId} ${legendId}`}
               data-test-subj="superDatePickerRefreshIntervalInput"
             />
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiSelect
+          </OuiFlexItem>
+          <OuiFlexItem>
+            <OuiSelect
               compressed
               aria-label="Refresh interval units"
               aria-describedby={`${refreshSelectionId} ${legendId}`}
@@ -217,10 +228,10 @@ export class EuiRefreshInterval extends Component<
               onKeyDown={this.handleKeyDown}
               data-test-subj="superDatePickerRefreshIntervalUnitsSelect"
             />
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiButton
-              className="euiRefreshInterval__startButton"
+          </OuiFlexItem>
+          <OuiFlexItem grow={false}>
+            <OuiButton
+              className="ouiRefreshInterval__startButton"
               iconType={isPaused ? 'play' : 'stop'}
               size="s"
               onClick={this.toggleRefresh}
@@ -228,17 +239,17 @@ export class EuiRefreshInterval extends Component<
               data-test-subj="superDatePickerToggleRefreshButton"
               aria-describedby={refreshSelectionId}>
               {isPaused ? (
-                <EuiI18n token="euiRefreshInterval.start" default="Start" />
+                <OuiI18n token="ouiRefreshInterval.start" default="Start" />
               ) : (
-                <EuiI18n token="euiRefreshInterval.stop" default="Stop" />
+                <OuiI18n token="ouiRefreshInterval.stop" default="Stop" />
               )}
-            </EuiButton>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiScreenReaderOnly>
+            </OuiButton>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+        <OuiScreenReaderOnly>
           <p id={refreshSelectionId}>
-            <EuiI18n
-              token="euiRefreshInterval.fullDescription"
+            <OuiI18n
+              token="ouiRefreshInterval.fullDescription"
               default="Refresh interval currently set to {optionValue} {optionText}."
               values={{
                 optionValue: value,
@@ -246,7 +257,7 @@ export class EuiRefreshInterval extends Component<
               }}
             />
           </p>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       </fieldset>
     );
   }

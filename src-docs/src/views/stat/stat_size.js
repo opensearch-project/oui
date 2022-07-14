@@ -1,42 +1,53 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiStat, EuiFlexItem, EuiFlexGroup } from '../../../../src/components';
+import { OuiStat, OuiFlexItem, OuiFlexGroup } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiFlexGroup>
-      <EuiFlexItem>
-        <EuiStat title="1,000,000" description="Large size" titleSize="l" />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiStat title="1,000,000" description="Medium size" titleSize="m" />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiStat title="1,000,000" description="Small size" titleSize="s" />
-      </EuiFlexItem>
-    </EuiFlexGroup>
-    <EuiFlexGroup>
-      <EuiFlexItem>
-        <EuiStat
+    <OuiFlexGroup>
+      <OuiFlexItem>
+        <OuiStat title="1,000,000" description="Large size" titleSize="l" />
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiStat title="1,000,000" description="Medium size" titleSize="m" />
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiStat title="1,000,000" description="Small size" titleSize="s" />
+      </OuiFlexItem>
+    </OuiFlexGroup>
+    <OuiFlexGroup>
+      <OuiFlexItem>
+        <OuiStat
           title="1,000,000"
           description="Extra small size"
           titleSize="xs"
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiStat
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiStat
           title="1,000,000"
           description="Extra extra small size"
           titleSize="xxs"
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiStat
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiStat
           title="1,000,000"
           description="Extra extra extra small size"
           titleSize="xxxs"
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </div>
 );

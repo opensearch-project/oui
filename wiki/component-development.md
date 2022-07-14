@@ -2,7 +2,7 @@
 
 For information on how to design components, see the [component design docs][component-design].
 
-Before working with EUI components or creating new ones, you may want to run a local server for the [documentation site][docs]. This is where we demonstrate how the components in our design system work.
+Before working with OUI components or creating new ones, you may want to run a local server for the [documentation site][docs]. This is where we demonstrate how the components in our design system work.
 
 ## Launching the Documentation Server
 
@@ -54,33 +54,33 @@ Refer to the [automated accessibility testing guide](automated-accessibility-tes
 
 Note that `yarn link` currently does not work with Kibana. You'll need to manually pack and insert it into Kibana to test locally.
 
-#### In EUI run:
+#### In OUI run:
 
 ```bash
 yarn build && npm pack
 ```
 
-This will create a `.tgz` file with the changes in your EUI directory. At this point you can move it anywhere.
+This will create a `.tgz` file with the changes in your OUI directory. At this point you can move it anywhere.
 
 #### In Kibana:
 
-Point the `package.json` file in Kibana to that file: `"@elastic/eui": "/path/to/elastic-eui-xx.x.x.tgz"`. Then run the following commands at Kibana's root folder:
+Point the `package.json` file in Kibana to that file: `"@opensearch-project/oui": "/path/to/elastic-oui-xx.x.x.tgz"`. Then run the following commands at Kibana's root folder:
 
 ```bash
 yarn kbn bootstrap --no-validate && cd packages/kbn-ui-shared-deps/ && yarn kbn:bootstrap && cd ../../ && FORCE_DLL_CREATION=true node scripts/kibana --dev
 ```
 
 * The `--no-validate` flag is required when bootstrapping with a `.tgz`.
-  * Change the name of the `.tgz` after subsequent `yarn build` and `npm pack` steps (e.g., `elastic-eui-xx.x.x-1.tgz`, `elastic-eui-xx.x.x-2.tgz`). This is required for `yarn` to recognize new changes to the package.
+  * Change the name of the `.tgz` after subsequent `yarn build` and `npm pack` steps (e.g., `elastic-oui-xx.x.x-1.tgz`, `elastic-oui-xx.x.x-2.tgz`). This is required for `yarn` to recognize new changes to the package.
 * Running `yarn kbn:bootstrap` inside of `kibana/packages/kbn-ui-shared-deps/` rebuilds Kibana's shared-ui-deps.
-* Running Kibana with `FORCE_DLL_CREATION=true node scripts/kibana --dev` ensures it doesn't use a previously cached version of EUI.
+* Running Kibana with `FORCE_DLL_CREATION=true node scripts/kibana --dev` ensures it doesn't use a previously cached version of OUI.
 
 
 ## Principles
 
 ### Logically-grouped components
 
-If a component has subcomponents (`<EuiToolBar>` and `<EuiToolBarSearch>`), tightly-coupled components (`<EuiButton>` and `<EuiButtonGroup>`), or you just want to group some related components together (`<EuiTextInput>`, `<EuiTextArea>`, and `<EuiCheckBox>`), then they belong in the same logical grouping. In this case, you can create additional SCSS files for these components in the same component directory.
+If a component has subcomponents (`<OuiToolBar>` and `<OuiToolBarSearch>`), tightly-coupled components (`<OuiButton>` and `<OuiButtonGroup>`), or you just want to group some related components together (`<OuiTextInput>`, `<OuiTextArea>`, and `<OuiCheckBox>`), then they belong in the same logical grouping. In this case, you can create additional SCSS files for these components in the same component directory.
 
 ### Writing CSS
 
@@ -160,7 +160,7 @@ MyComponent.displayName = 'MyComponent';
 
 #### Combining with additional refs
 
-Sometimes an element needs to have 2+ refs passed to it, for example a component interacts with the same element the forwarded ref needs to be given to. For this EUI provides a `useCombinedRefs` hook:
+Sometimes an element needs to have 2+ refs passed to it, for example a component interacts with the same element the forwarded ref needs to be given to. For this OUI provides a `useCombinedRefs` hook:
 
 ```ts
 import React, { forwardRef, createRef } from 'react';
@@ -191,14 +191,14 @@ MyComponent.displayName = 'MyComponent';
 
 #### Providing custom or additional data 
 
-Rarely, a component's ref needs to be something other than a DOM element, or provide additional information. In these cases, React's `useImperativeHandle` can be used to provide a custom object as the ref's value. For example, **EuiMarkdownEditor**'s ref includes both its textarea element and the `replaceNode` method to interact with the abstract syntax tree. https://github.com/elastic/eui/blob/v31.10.0/src/components/markdown_editor/markdown_editor.tsx#L331
+Rarely, a component's ref needs to be something other than a DOM element, or provide additional information. In these cases, React's `useImperativeHandle` can be used to provide a custom object as the ref's value. For example, **OuiMarkdownEditor**'s ref includes both its textarea element and the `replaceNode` method to interact with the abstract syntax tree. https://github.com/elastic/eui/blob/v31.10.0/src/components/markdown_editor/markdown_editor.tsx#L331
 
 ```ts
 import React, { useImperativeHandle } from 'react';
 
-export const EuiMarkdownEditor = forwardRef<
-  EuiMarkdownEditorRef,
-  EuiMarkdownEditorProps
+export const OuiMarkdownEditor = forwardRef<
+  OuiMarkdownEditorRef,
+  OuiMarkdownEditorProps
   >(
   (props, ref) => {
     ...

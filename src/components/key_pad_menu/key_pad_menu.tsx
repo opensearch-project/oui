@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,14 +33,14 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-export type EuiKeyPadMenuProps = CommonProps & HTMLAttributes<HTMLUListElement>;
+export type OuiKeyPadMenuProps = CommonProps & HTMLAttributes<HTMLUListElement>;
 
-export const EuiKeyPadMenu: FunctionComponent<EuiKeyPadMenuProps> = ({
+export const OuiKeyPadMenu: FunctionComponent<OuiKeyPadMenuProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiKeyPadMenu', className);
+  const classes = classNames('ouiKeyPadMenu', className);
 
   return (
     <ul className={classes} {...rest}>

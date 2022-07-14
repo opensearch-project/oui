@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiImage, EuiText } from '../../../../src/components';
+import { OuiImage, OuiText } from '../../../../src/components';
 import { fake } from 'faker';
 
 export default () => (
-  <EuiText>
-    <EuiImage
+  <OuiText>
+    <OuiImage
       size="l"
       float="right"
       margin="l"
@@ -18,7 +29,7 @@ export default () => (
     <p>{fake('{{lorem.paragraphs}}')}</p>
     <p>{fake('{{lorem.paragraphs}}')}</p>
     <p>{fake('{{lorem.paragraphs}}')}</p>
-    <EuiImage
+    <OuiImage
       size="l"
       float="left"
       margin="l"
@@ -30,5 +41,5 @@ export default () => (
     />
     <p>{fake('{{lorem.paragraphs}}')}</p>
     <p>{fake('{{lorem.paragraphs}}')}</p>
-  </EuiText>
+  </OuiText>
 );

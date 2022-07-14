@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiRadioGroup is rendered 1`] = `
+exports[`OuiRadioGroup is rendered 1`] = `
 <div
   aria-label="aria-label"
   class="testClass1 testClass2"
@@ -8,40 +8,40 @@ exports[`EuiRadioGroup is rendered 1`] = `
 />
 `;
 
-exports[`EuiRadioGroup props idSelected is rendered 1`] = `
+exports[`OuiRadioGroup props idSelected is rendered 1`] = `
 <div>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
       checked=""
-      class="euiRadio__input"
+      class="ouiRadio__input"
       id="1"
       type="radio"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="1"
     >
       Option #1
     </label>
   </div>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
-      class="euiRadio__input"
+      class="ouiRadio__input"
       id="2"
       type="radio"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="2"
     >
       Option #2
@@ -50,44 +50,44 @@ exports[`EuiRadioGroup props idSelected is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiRadioGroup props legend is rendered 1`] = `
+exports[`OuiRadioGroup props legend is rendered 1`] = `
 <fieldset>
   <legend
-    class="euiFormLegend"
+    class="ouiFormLegend"
   >
     A legend
   </legend>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
-      class="euiRadio__input"
+      class="ouiRadio__input"
       id="1"
       type="radio"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="1"
     >
       Option #1
     </label>
   </div>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
-      class="euiRadio__input"
+      class="ouiRadio__input"
       id="2"
       type="radio"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="2"
     >
       Option #2
@@ -96,41 +96,41 @@ exports[`EuiRadioGroup props legend is rendered 1`] = `
 </fieldset>
 `;
 
-exports[`EuiRadioGroup props name is propagated to radios 1`] = `
+exports[`OuiRadioGroup props name is propagated to radios 1`] = `
 <div>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
-      class="euiRadio__input"
+      class="ouiRadio__input"
       id="1"
       name="radiogroupname"
       type="radio"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="1"
     >
       Option #1
     </label>
   </div>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
-      class="euiRadio__input"
+      class="ouiRadio__input"
       id="2"
       name="radiogroupname"
       type="radio"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="2"
     >
       Option #2
@@ -139,40 +139,40 @@ exports[`EuiRadioGroup props name is propagated to radios 1`] = `
 </div>
 `;
 
-exports[`EuiRadioGroup props options are rendered 1`] = `
+exports[`OuiRadioGroup props options are rendered 1`] = `
 <div>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
-      class="euiRadio__input"
+      class="ouiRadio__input"
       id="1"
       type="radio"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="1"
     >
       Option #1
     </label>
   </div>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
-      class="euiRadio__input"
+      class="ouiRadio__input"
       disabled=""
       id="2"
       type="radio"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="2"
     >
       Option #2
@@ -181,43 +181,43 @@ exports[`EuiRadioGroup props options are rendered 1`] = `
 </div>
 `;
 
-exports[`EuiRadioGroup props value is propagated to radios 1`] = `
+exports[`OuiRadioGroup props value is propagated to radios 1`] = `
 <div>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
-      class="euiRadio__input"
+      class="ouiRadio__input"
       id="1"
       name="radiogroupname"
       type="radio"
       value="Value #1"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="1"
     >
       Option #1
     </label>
   </div>
   <div
-    class="euiRadio euiRadioGroup__item"
+    class="ouiRadio ouiRadioGroup__item"
   >
     <input
-      class="euiRadio__input"
+      class="ouiRadio__input"
       id="2"
       name="radiogroupname"
       type="radio"
       value="Value #2"
     />
     <div
-      class="euiRadio__circle"
+      class="ouiRadio__circle"
     />
     <label
-      class="euiRadio__label"
+      class="ouiRadio__label"
       for="2"
     >
       Option #2

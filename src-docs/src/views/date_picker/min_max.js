@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import moment from 'moment';
 
 import {
-  EuiDatePicker,
-  EuiFormRow,
-  EuiSpacer,
+  OuiDatePicker,
+  OuiFormRow,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -22,43 +33,43 @@ export default () => {
 
   return (
     <div>
-      <EuiFormRow label="Only allow a certain range of dates">
-        <EuiDatePicker
+      <OuiFormRow label="Only allow a certain range of dates">
+        <OuiDatePicker
           showTimeSelect
           selected={startDate}
           onChange={setStartDate}
           minDate={moment().subtract(2, 'days')}
           maxDate={moment().add(5, 'days')}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFormRow label="Only allow a certain range of times">
-        <EuiDatePicker
+      <OuiFormRow label="Only allow a certain range of times">
+        <OuiDatePicker
           showTimeSelect
           selected={startDate2}
           onChange={setStartDate2}
           minTime={moment().hours(17).minutes(0)}
           maxTime={moment().hours(20).minutes(30)}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFormRow label="Exclude yesterday and today">
-        <EuiDatePicker
+      <OuiFormRow label="Exclude yesterday and today">
+        <OuiDatePicker
           showTimeSelect
           selected={startDate3}
           onChange={setStartDate3}
           excludeDates={[moment(), moment().add(1, 'days')]}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFormRow label="Exclude 12AM and 5PM from selection">
-        <EuiDatePicker
+      <OuiFormRow label="Exclude 12AM and 5PM from selection">
+        <OuiDatePicker
           showTimeSelect
           selected={startDate4}
           onChange={setStartDate4}
@@ -67,18 +78,18 @@ export default () => {
             moment().hours(17).minutes(0),
           ]}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFormRow label="Filter so only weekdays are selectable">
-        <EuiDatePicker
+      <OuiFormRow label="Filter so only weekdays are selectable">
+        <OuiDatePicker
           showTimeSelect
           selected={startDate5}
           onChange={setStartDate5}
           filterDate={isWeekday}
         />
-      </EuiFormRow>
+      </OuiFormRow>
     </div>
   );
 };

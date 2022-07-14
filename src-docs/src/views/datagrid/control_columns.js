@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, {
   createContext,
   useContext,
@@ -9,24 +20,24 @@ import React, {
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiAvatar,
-  EuiCheckbox,
-  EuiButtonIcon,
-  EuiPopover,
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPopoverTitle,
-  EuiSpacer,
-  EuiPortal,
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutHeader,
-  EuiTitle,
-  EuiDescriptionList,
-  EuiDescriptionListTitle,
-  EuiDescriptionListDescription,
+  OuiDataGrid,
+  OuiAvatar,
+  OuiCheckbox,
+  OuiButtonIcon,
+  OuiPopover,
+  OuiButtonEmpty,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiPopoverTitle,
+  OuiSpacer,
+  OuiPortal,
+  OuiFlyout,
+  OuiFlyoutBody,
+  OuiFlyoutHeader,
+  OuiTitle,
+  OuiDescriptionList,
+  OuiDescriptionListTitle,
+  OuiDescriptionListDescription,
 } from '../../../../src/components/';
 
 const columns = [
@@ -59,7 +70,7 @@ const data = [];
 for (let i = 1; i < 500; i++) {
   data.push({
     avatar: (
-      <EuiAvatar
+      <OuiAvatar
         size="s"
         name={fake('{{name.lastName}}, {{name.firstName}}')}
       />
@@ -79,61 +90,61 @@ const SelectionButton = () => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   if (selectedRows.size > 0) {
     return (
-      <EuiPopover
+      <OuiPopover
         isOpen={isPopoverOpen}
         anchorPosition="upCenter"
         panelPaddingSize="s"
         button={
-          <EuiButtonEmpty
+          <OuiButtonEmpty
             size="xs"
             iconType="arrowDown"
             color="primary"
-            className="euiDataGrid__controlBtn"
+            className="ouiDataGrid__controlBtn"
             onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
             {selectedRows.size} {selectedRows.size > 1 ? 'items' : 'item'}{' '}
             selected
-          </EuiButtonEmpty>
+          </OuiButtonEmpty>
         }
         closePopover={() => setIsPopoverOpen(false)}>
-        <EuiPopoverTitle>
+        <OuiPopoverTitle>
           {selectedRows.size} {selectedRows.size > 1 ? 'items' : 'item'}
-        </EuiPopoverTitle>
+        </OuiPopoverTitle>
         <div style={{ width: 150 }}>
           <button onClick={() => {}} component="span">
-            <EuiFlexGroup
+            <OuiFlexGroup
               responsive={false}
               alignItems="center"
               component="span"
               gutterSize="s">
-              <EuiFlexItem grow={false}>
-                <EuiButtonIcon
+              <OuiFlexItem grow={false}>
+                <OuiButtonIcon
                   aria-label="Pin selected items"
                   iconType="pin"
                   color="text"
                 />
-              </EuiFlexItem>
-              <EuiFlexItem>Pin items</EuiFlexItem>
-            </EuiFlexGroup>
+              </OuiFlexItem>
+              <OuiFlexItem>Pin items</OuiFlexItem>
+            </OuiFlexGroup>
           </button>
-          <EuiSpacer size="s" />
+          <OuiSpacer size="s" />
           <button onClick={() => {}}>
-            <EuiFlexGroup
+            <OuiFlexGroup
               responsive={false}
               alignItems="center"
               component="span"
               gutterSize="s">
-              <EuiFlexItem grow={false}>
-                <EuiButtonIcon
+              <OuiFlexItem grow={false}>
+                <OuiButtonIcon
                   aria-label="Delete selected items"
                   iconType="trash"
                   color="text"
                 />
-              </EuiFlexItem>
-              <EuiFlexItem>Delete items</EuiFlexItem>
-            </EuiFlexGroup>
+              </OuiFlexItem>
+              <OuiFlexItem>Delete items</OuiFlexItem>
+            </OuiFlexGroup>
           </button>
         </div>
-      </EuiPopover>
+      </OuiPopover>
     );
   } else {
     return null;
@@ -145,7 +156,7 @@ const SelectionHeaderCell = () => {
   const isIndeterminate =
     selectedRows.size > 0 && selectedRows.size < data.length;
   return (
-    <EuiCheckbox
+    <OuiCheckbox
       id="selection-toggle"
       aria-label="Select all rows"
       indeterminate={isIndeterminate}
@@ -174,7 +185,7 @@ const SelectionRowCell = ({ rowIndex }) => {
 
   return (
     <div>
-      <EuiCheckbox
+      <OuiCheckbox
         id={`${rowIndex}`}
         aria-label={`Select row ${rowIndex}, ${data[rowIndex].name}`}
         checked={isChecked}
@@ -199,31 +210,31 @@ const FlyoutRowCell = (rowIndex) => {
     const details = Object.entries(rowData).map(([key, value]) => {
       return (
         <Fragment>
-          <EuiDescriptionListTitle>{key}</EuiDescriptionListTitle>
-          <EuiDescriptionListDescription>{value}</EuiDescriptionListDescription>
+          <OuiDescriptionListTitle>{key}</OuiDescriptionListTitle>
+          <OuiDescriptionListDescription>{value}</OuiDescriptionListDescription>
         </Fragment>
       );
     });
 
     flyout = (
-      <EuiPortal>
-        <EuiFlyout ownFocus onClose={() => setIsFlyoutOpen(!isFlyoutOpen)}>
-          <EuiFlyoutHeader hasBorder>
-            <EuiTitle size="m">
+      <OuiPortal>
+        <OuiFlyout ownFocus onClose={() => setIsFlyoutOpen(!isFlyoutOpen)}>
+          <OuiFlyoutHeader hasBorder>
+            <OuiTitle size="m">
               <h2>{rowData.name}</h2>
-            </EuiTitle>
-          </EuiFlyoutHeader>
-          <EuiFlyoutBody>
-            <EuiDescriptionList>{details}</EuiDescriptionList>
-          </EuiFlyoutBody>
-        </EuiFlyout>
-      </EuiPortal>
+            </OuiTitle>
+          </OuiFlyoutHeader>
+          <OuiFlyoutBody>
+            <OuiDescriptionList>{details}</OuiDescriptionList>
+          </OuiFlyoutBody>
+        </OuiFlyout>
+      </OuiPortal>
     );
   }
 
   return (
     <Fragment>
-      <EuiButtonIcon
+      <OuiButtonIcon
         color="text"
         iconType="eye"
         iconSize="s"
@@ -259,12 +270,12 @@ const trailingControlColumns = [
       const [isPopoverOpen, setIsPopoverOpen] = useState(false);
       return (
         <div>
-          <EuiPopover
+          <OuiPopover
             isOpen={isPopoverOpen}
             anchorPosition="upCenter"
             panelPaddingSize="s"
             button={
-              <EuiButtonIcon
+              <OuiButtonIcon
                 aria-label="show actions"
                 iconType="boxesHorizontal"
                 color="text"
@@ -272,41 +283,41 @@ const trailingControlColumns = [
               />
             }
             closePopover={() => setIsPopoverOpen(false)}>
-            <EuiPopoverTitle>Actions</EuiPopoverTitle>
+            <OuiPopoverTitle>Actions</OuiPopoverTitle>
             <div style={{ width: 150 }}>
               <button onClick={() => {}} component="span">
-                <EuiFlexGroup
+                <OuiFlexGroup
                   alignItems="center"
                   component="span"
                   gutterSize="s">
-                  <EuiFlexItem grow={false}>
-                    <EuiButtonIcon
+                  <OuiFlexItem grow={false}>
+                    <OuiButtonIcon
                       aria-label="Pin selected items"
                       iconType="pin"
                       color="text"
                     />
-                  </EuiFlexItem>
-                  <EuiFlexItem>Pin</EuiFlexItem>
-                </EuiFlexGroup>
+                  </OuiFlexItem>
+                  <OuiFlexItem>Pin</OuiFlexItem>
+                </OuiFlexGroup>
               </button>
-              <EuiSpacer size="s" />
+              <OuiSpacer size="s" />
               <button onClick={() => {}}>
-                <EuiFlexGroup
+                <OuiFlexGroup
                   alignItems="center"
                   component="span"
                   gutterSize="s">
-                  <EuiFlexItem grow={false}>
-                    <EuiButtonIcon
+                  <OuiFlexItem grow={false}>
+                    <OuiButtonIcon
                       aria-label="Delete selected items"
                       iconType="trash"
                       color="text"
                     />
-                  </EuiFlexItem>
-                  <EuiFlexItem>Delete</EuiFlexItem>
-                </EuiFlexGroup>
+                  </OuiFlexItem>
+                  <OuiFlexItem>Delete</OuiFlexItem>
+                </OuiFlexGroup>
               </button>
             </div>
-          </EuiPopover>
+          </OuiPopover>
         </div>
       );
     },
@@ -356,8 +367,8 @@ export default function DataGrid() {
   return (
     <SelectionContext.Provider value={rowSelection}>
       <div>
-        <EuiDataGrid
-          aria-label="Top EUI contributors"
+        <OuiDataGrid
+          aria-label="Top OUI contributors"
           leadingControlColumns={leadingControlColumns}
           trailingControlColumns={trailingControlColumns}
           columns={columns}

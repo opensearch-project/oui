@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useCallback } from 'react';
 import { fake } from 'faker';
 
-import { EuiDataGrid, EuiPanel, EuiLink } from '../../../../src/components/';
+import { OuiDataGrid, OuiPanel, OuiLink } from '../../../../src/components/';
 
 const columns = [
   {
@@ -28,7 +39,7 @@ for (let i = 1; i < 20; i++) {
     name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
     email: fake('{{internet.email}}'),
     city: (
-      <EuiLink href="http://google.com">{fake('{{address.city}}')}</EuiLink>
+      <OuiLink href="http://google.com">{fake('{{address.city}}')}</OuiLink>
     ),
     country: fake('{{address.country}}'),
     account: fake('{{finance.account}}'),
@@ -52,9 +63,9 @@ export default () => {
   );
 
   return (
-    <EuiPanel style={{ width: 400, paddingBottom: 4 }} paddingSize="none">
+    <OuiPanel style={{ width: 400, paddingBottom: 4 }} paddingSize="none">
       <div style={{ height: 300 }}>
-        <EuiDataGrid
+        <OuiDataGrid
           aria-label="Container constrained data grid demo"
           columns={columns}
           columnVisibility={{
@@ -75,6 +86,6 @@ export default () => {
           }}
         />
       </div>
-    </EuiPanel>
+    </OuiPanel>
   );
 };

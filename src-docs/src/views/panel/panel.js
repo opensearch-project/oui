@@ -1,29 +1,40 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiPanel, EuiCode, EuiSpacer } from '../../../../src/components';
+import { OuiPanel, OuiCode, OuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiPanel paddingSize="none">
-      <EuiCode>paddingSize=&quot;none&quot;</EuiCode>
-    </EuiPanel>
+    <OuiPanel paddingSize="none">
+      <OuiCode>paddingSize=&quot;none&quot;</OuiCode>
+    </OuiPanel>
 
-    <EuiSpacer size="l" />
+    <OuiSpacer size="l" />
 
-    <EuiPanel paddingSize="s">
-      <EuiCode>paddingSize=&quot;s&quot;</EuiCode>
-    </EuiPanel>
+    <OuiPanel paddingSize="s">
+      <OuiCode>paddingSize=&quot;s&quot;</OuiCode>
+    </OuiPanel>
 
-    <EuiSpacer size="l" />
+    <OuiSpacer size="l" />
 
-    <EuiPanel paddingSize="m">
-      <EuiCode>paddingSize=&quot;m&quot; (default)</EuiCode>
-    </EuiPanel>
+    <OuiPanel paddingSize="m">
+      <OuiCode>paddingSize=&quot;m&quot; (default)</OuiCode>
+    </OuiPanel>
 
-    <EuiSpacer size="l" />
+    <OuiSpacer size="l" />
 
-    <EuiPanel paddingSize="l">
-      <EuiCode>paddingSize=&quot;l&quot;</EuiCode>
-    </EuiPanel>
+    <OuiPanel paddingSize="l">
+      <OuiCode>paddingSize=&quot;l&quot;</OuiCode>
+    </OuiPanel>
   </div>
 );

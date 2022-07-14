@@ -1,5 +1,16 @@
-.euiRangeTrack {
-  height: 100%; // Don't overflow `euiRangeWrapper`
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiRangeTrack {
+  height: 100%; // Don't overflow `ouiRangeWrapper`
   flex-grow: 1;
   position: relative; // for positioning ticks/levels
   align-self: flex-start; // Adjust vertical alignment of input based on extras
@@ -10,6 +21,6 @@
   }
 
   &--disabled {
-    opacity: $euiRangeDisabledOpacity;
+    opacity: $ouiRangeDisabledOpacity;
   }
 }

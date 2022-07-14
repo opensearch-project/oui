@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import * as React from 'react';
 
-const EuiIconLogoKibana = ({ title, titleId, ...props }) => (
+const OuiIconLogoKibana = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -12,7 +23,7 @@ const EuiIconLogoKibana = ({ title, titleId, ...props }) => (
     <g fill="none" fillRule="evenodd">
       <path fill="#F04E98" d="M4 0v28.789L28.935.017z" />
       <path
-        className="euiIcon__fillNegative"
+        className="ouiIcon__fillNegative"
         d="M4 12v16.789l11.906-13.738A24.721 24.721 0 004 12"
       />
       <path
@@ -23,4 +34,4 @@ const EuiIconLogoKibana = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoKibana;
+export const icon = OuiIconLogoKibana;

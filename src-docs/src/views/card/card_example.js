@@ -1,18 +1,29 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiCard,
-  EuiCallOut,
-  EuiCheckableCard,
-  EuiText,
+  OuiCode,
+  OuiCard,
+  OuiCallOut,
+  OuiCheckableCard,
+  OuiText,
 } from '../../../../src/components';
 import { cardConfig, checkableCardConfig } from './playground';
 
-import { EuiCardSelect } from '../../../../src/components/card/card_select';
+import { OuiCardSelect } from '../../../../src/components/card/card_select';
 
 import Card from './card';
 const cardSource = require('!!raw-loader!./card');
@@ -47,12 +58,12 @@ export const CardExample = {
   title: 'Card',
   intro: (
     <>
-      <EuiText>
+      <OuiText>
         <p>
-          <strong>EuiCard</strong> is a content-oriented component built on top
+          <strong>OuiCard</strong> is a content-oriented component built on top
           of{' '}
           <Link to="/layout/panel">
-            <strong>EuiPanel</strong>
+            <strong>OuiPanel</strong>
           </Link>
           . Be sure to check out the{' '}
           <Link to="/layout/panel/guidelines">
@@ -60,7 +71,7 @@ export const CardExample = {
           </Link>
           .
         </p>
-      </EuiText>
+      </OuiText>
     </>
   ),
   sections: [
@@ -75,26 +86,26 @@ export const CardExample = {
       text: (
         <div>
           <p>
-            At its core an <strong>EuiCard</strong> should contain a{' '}
-            <EuiCode>title</EuiCode>,<EuiCode>description</EuiCode>, and an{' '}
-            <EuiCode>icon</EuiCode>. You can make the whole card clickable by
-            giving it an <EuiCode>onClick</EuiCode> handler or{' '}
-            <EuiCode>href</EuiCode>.
+            At its core an <strong>OuiCard</strong> should contain a{' '}
+            <OuiCode>title</OuiCode>,<OuiCode>description</OuiCode>, and an{' '}
+            <OuiCode>icon</OuiCode>. You can make the whole card clickable by
+            giving it an <OuiCode>onClick</OuiCode> handler or{' '}
+            <OuiCode>href</OuiCode>.
           </p>
           <p>
             For accessibility and heading hierarchy, a card&apos;s title element
-            is a <EuiCode>span</EuiCode> by default. However, this can be
-            changed via the <EuiCode>titleElement</EuiCode> prop without
+            is a <OuiCode>span</OuiCode> by default. However, this can be
+            changed via the <OuiCode>titleElement</OuiCode> prop without
             altering the visual size.
           </p>
         </div>
       ),
-      props: { EuiCard },
+      props: { OuiCard },
       demo: <Card />,
       demoPanelProps: {
         color: 'subdued',
       },
-      snippet: `<EuiCard
+      snippet: `<OuiCard
   icon={icon}
   title="title"
   description="description"
@@ -116,27 +127,27 @@ export const CardExample = {
             Most of the time, cards should read from top to bottom (vertical).
             However, in some cases, you may want the icon to be to the left of
             the content. In this case, add the prop{' '}
-            <EuiCode language="js">layout=&quot;horizontal&quot;</EuiCode>.
-            Works best when the icon is size <EuiCode>xl</EuiCode>.
+            <OuiCode language="js">layout=&quot;horizontal&quot;</OuiCode>.
+            Works best when the icon is size <OuiCode>xl</OuiCode>.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             color="danger"
             title={
               <span>
                 Horizontal layouts <strong>do not</strong> work with images,
-                footers, or <EuiCode>textAlign</EuiCode>. Therefore, these
+                footers, or <OuiCode>textAlign</OuiCode>. Therefore, these
                 properties will be ignored.
               </span>
             }
           />
         </div>
       ),
-      props: { EuiCard },
+      props: { OuiCard },
       demo: <CardLayout />,
       demoPanelProps: {
         color: 'subdued',
       },
-      snippet: `<EuiCard
+      snippet: `<OuiCard
   layout="horizontal"
   icon={icon}
   title="title"
@@ -156,10 +167,10 @@ export const CardExample = {
         <div>
           <p>
             Images can be added in place of, or in conjuction with, icons. Just
-            pass a url into the <EuiCode>image</EuiCode> prop and it will expand
+            pass a url into the <OuiCode>image</OuiCode> prop and it will expand
             to the edges of the card.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             title={
               <span>
                 Make sure that all images are the{' '}
@@ -168,20 +179,20 @@ export const CardExample = {
             }>
             <p>
               Also, when passing an <strong>element</strong> to the{' '}
-              <EuiCode>image</EuiCode> prop that consists solely of inline
+              <OuiCode>image</OuiCode> prop that consists solely of inline
               elements or does not contain an
-              <EuiCode>{'<img />'}</EuiCode> element, each element will require
-              a style of <EuiCode>width: 100%</EuiCode>.
+              <OuiCode>{'<img />'}</OuiCode> element, each element will require
+              a style of <OuiCode>width: 100%</OuiCode>.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </div>
       ),
-      props: { EuiCard },
+      props: { OuiCard },
       demo: <CardImage />,
       demoPanelProps: {
         color: 'subdued',
       },
-      snippet: `<EuiCard
+      snippet: `<OuiCard
   textAlign="left"
   image="https://source.unsplash.com/400x200/?Nature"
   title="title"
@@ -202,28 +213,28 @@ export const CardExample = {
           <p>
             Footers can contain any number of elements and will always align to
             the bottom of the card. However, if you supply a footer containing a{' '}
-            <strong>EuiButton</strong> you <strong>must not</strong> also give
-            it an <EuiCode>onClick</EuiCode>.
+            <strong>OuiButton</strong> you <strong>must not</strong> also give
+            it an <OuiCode>onClick</OuiCode>.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             iconType="accessibility"
             color="warning"
             title={
               <span>
                 When using footers to display generic &quot;Go&quot; buttons,
-                you must provide an <EuiCode>aria-label</EuiCode> to the button
+                you must provide an <OuiCode>aria-label</OuiCode> to the button
                 itself that refers back to the title of the card.
               </span>
             }
           />
         </>
       ),
-      components: { EuiCard },
+      components: { OuiCard },
       demo: <CardFooter />,
       demoPanelProps: {
         color: 'subdued',
       },
-      snippet: `<EuiCard
+      snippet: `<OuiCard
   icon={icon}
   title="title"
   description="description"
@@ -241,19 +252,19 @@ export const CardExample = {
       text: (
         <p>
           If the card links to or references a module that is not GA (beta, lab,
-          etc), you can add a <EuiCode>betaBadgeLabel</EuiCode> and{' '}
-          <EuiCode>betaBadgeTooltipContent</EuiCode> to the card and it will
-          properly create and position an <strong>EuiBetaBadge</strong>. If you
+          etc), you can add a <OuiCode>betaBadgeLabel</OuiCode> and{' '}
+          <OuiCode>betaBadgeTooltipContent</OuiCode> to the card and it will
+          properly create and position an <strong>OuiBetaBadge</strong>. If you
           want to change the title of the tooltip, supply a{' '}
-          <EuiCode>betaBadgeTitle</EuiCode> prop.
+          <OuiCode>betaBadgeTitle</OuiCode> prop.
         </p>
       ),
-      props: { EuiCard },
+      props: { OuiCard },
       demo: <CardBeta />,
       demoPanelProps: {
         color: 'subdued',
       },
-      snippet: `<EuiCard
+      snippet: `<OuiCard
   icon={icon}
   title="title"
   description="description"
@@ -275,25 +286,25 @@ export const CardExample = {
           <p>
             When you have a list of cards that can be selected but{' '}
             <strong>do not navigate anywhere</strong>, you can add the{' '}
-            <EuiCode>selectable</EuiCode> prop. The prop is an object that
-            extends <strong>EuiButtonEmpty</strong>. It will apply the button as
+            <OuiCode>selectable</OuiCode> prop. The prop is an object that
+            extends <strong>OuiButtonEmpty</strong>. It will apply the button as
             seen below, and passing{' '}
-            <EuiCode language="js">selectable.isSelected=true</EuiCode> will
+            <OuiCode language="js">selectable.isSelected=true</OuiCode> will
             alter the styles of the card and button to look selected.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             title="When providing an extra link to more details or such, be sure to
             stop event propagation from also selecting the card."
           />
         </Fragment>
       ),
-      props: { EuiCardSelect },
+      props: { OuiCardSelect },
       demo: <CardSelectable />,
       demoPanelProps: {
         color: 'subdued',
       },
-      snippet: `<EuiCard
+      snippet: `<OuiCard
   icon={icon}
   title="title"
   description="description"
@@ -309,8 +320,8 @@ export const CardExample = {
       title: 'Checkable',
       text: (
         <p>
-          <strong>EuiCheckableCard</strong> wraps an <strong>EuiRadio</strong>{' '}
-          or <strong>EuiCheckbox</strong> with a more-prominent panel, allowing
+          <strong>OuiCheckableCard</strong> wraps an <strong>OuiRadio</strong>{' '}
+          or <strong>OuiCheckbox</strong> with a more-prominent panel, allowing
           for children to be displayed.
         </p>
       ),
@@ -321,20 +332,20 @@ export const CardExample = {
         },
       ],
       props: {
-        EuiCheckableCard,
+        OuiCheckableCard,
       },
       demo: <CardCheckableCheckbox />,
       playground: checkableCardConfig,
     },
     {
       text: (
-        <EuiCallOut
+        <OuiCallOut
           iconType="accessibility"
           color="warning"
           title={
             <span>
               When used as a radio group, you must provide a{' '}
-              <EuiCode>fieldset</EuiCode> with a <EuiCode>legend</EuiCode> for
+              <OuiCode>fieldset</OuiCode> with a <OuiCode>legend</OuiCode> for
               accessibility.
             </span>
           }
@@ -347,7 +358,7 @@ export const CardExample = {
         },
       ],
       props: {
-        EuiCheckableCard,
+        OuiCheckableCard,
       },
       demo: <CardCheckable />,
     },
@@ -363,30 +374,30 @@ export const CardExample = {
         <Fragment>
           <p>
             In the event that you need <strong>more than</strong> just paragraph
-            text for the <EuiCode>description</EuiCode>, you can suppliment with
-            anything you need as the <EuiCode>children</EuiCode> of the
+            text for the <OuiCode>description</OuiCode>, you can suppliment with
+            anything you need as the <OuiCode>children</OuiCode> of the
             component. You can also completely replace the description with
-            custom children, but <strong>EuiCard</strong> at least one of these.
+            custom children, but <strong>OuiCard</strong> at least one of these.
           </p>
         </Fragment>
       ),
-      props: { EuiCard },
+      props: { OuiCard },
       demo: <CardChildren />,
       demoPanelProps: {
         color: 'subdued',
       },
-      snippet: `<EuiCard
+      snippet: `<OuiCard
   textAlign="left"
   title="title"
   description="description">
-  <EuiText size="s">
+  <OuiText size="s">
     <ul>
       <li>Bullet 1</li>
       <li>Bullet 2</li>
       <li>Bullet 3</li>
     </ul>
-  </EuiText>
-</EuiCard>`,
+  </OuiText>
+</OuiCard>`,
     },
     {
       title: 'Plain and other colors',
@@ -400,22 +411,22 @@ export const CardExample = {
         <Fragment>
           <p>
             If you need a card with no borders or shadows pass{' '}
-            <EuiCode language="ts">{'display="plain"'}</EuiCode>. This is a good
+            <OuiCode language="ts">{'display="plain"'}</OuiCode>. This is a good
             option to avoid nested panels. Adding an interaction to the card
             will provide the clickable styling on hover. The{' '}
-            <EuiCode language="ts">display</EuiCode> prop also accepts all other{' '}
-            <strong>EuiPanel</strong> colors like{' '}
-            <EuiCode language="ts">{"'transparent'"}</EuiCode>.
+            <OuiCode language="ts">display</OuiCode> prop also accepts all other{' '}
+            <strong>OuiPanel</strong> colors like{' '}
+            <OuiCode language="ts">{"'transparent'"}</OuiCode>.
           </p>
           <p>
             For non-interactive cards, reduce or eliminate the padding as needed
-            to suit your layout with the prop <EuiCode>paddingSize</EuiCode>.
+            to suit your layout with the prop <OuiCode>paddingSize</OuiCode>.
           </p>
         </Fragment>
       ),
-      props: { EuiCard },
+      props: { OuiCard },
       demo: <CardDisplay />,
-      snippet: `<EuiCard
+      snippet: `<OuiCard
   title="title"
   description="description"
   display="plain"

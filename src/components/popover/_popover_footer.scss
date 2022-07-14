@@ -1,13 +1,24 @@
-.euiPopoverFooter {
-  @include euiPopoverFooter;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiPopoverFooter {
+  @include ouiPopoverFooter;
 }
 
-.euiPopoverFooter--paddingNone {
+.ouiPopoverFooter--paddingNone {
   padding: 0;
 }
 
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPopoverFooter--#{$modifier} {
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPopoverFooter--#{$modifier} {
     padding: $amount;
   }
 }
@@ -16,12 +27,12 @@
 // ensure the title expands to cover that padding and
 // take on the same amount of padding horizontally
 
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPopover__panel.euiPanel--#{$modifier} .euiPopoverFooter {
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPopover__panel.ouiPanel--#{$modifier} .ouiPopoverFooter {
     margin: $amount ($amount * -1) ($amount * -1);
 
-    &:not([class*='euiPopoverFooter--padding']) {
-      padding: $euiSizeM $amount;
+    &:not([class*='ouiPopoverFooter--padding']) {
+      padding: $ouiSizeM $amount;
     }
   }
 }

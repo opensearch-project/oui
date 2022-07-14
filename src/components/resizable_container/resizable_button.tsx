@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,39 +39,39 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
-import { EuiI18n } from '../i18n';
+import { OuiI18n } from '../i18n';
 import { htmlIdGenerator } from '../../services';
-import { useEuiResizableContainerContext } from './context';
+import { useOuiResizableContainerContext } from './context';
 import {
-  EuiResizableButtonController,
-  EuiResizableButtonMouseEvent,
-  EuiResizableButtonKeyDownEvent,
+  OuiResizableButtonController,
+  OuiResizableButtonMouseEvent,
+  OuiResizableButtonKeyDownEvent,
 } from './types';
 
-interface EuiResizableButtonControls {
-  onKeyDown: (eve: EuiResizableButtonKeyDownEvent) => void;
-  onMouseDown: (eve: EuiResizableButtonMouseEvent) => void;
-  onTouchStart: (eve: EuiResizableButtonMouseEvent) => void;
+interface OuiResizableButtonControls {
+  onKeyDown: (eve: OuiResizableButtonKeyDownEvent) => void;
+  onMouseDown: (eve: OuiResizableButtonMouseEvent) => void;
+  onTouchStart: (eve: OuiResizableButtonMouseEvent) => void;
   onFocus: (id: string) => void;
   onBlur: () => void;
   registration: {
-    register: (resizer: EuiResizableButtonController) => void;
-    deregister: (resizerId: EuiResizableButtonController['id']) => void;
+    register: (resizer: OuiResizableButtonController) => void;
+    deregister: (resizerId: OuiResizableButtonController['id']) => void;
   };
   isHorizontal: boolean;
 }
 
-export interface EuiResizableButtonProps
+export interface OuiResizableButtonProps
   extends Omit<
       ButtonHTMLAttributes<HTMLButtonElement>,
-      keyof EuiResizableButtonControls
+      keyof OuiResizableButtonControls
     >,
     CommonProps,
-    Partial<EuiResizableButtonControls> {}
+    Partial<OuiResizableButtonControls> {}
 
 const generatePanelId = htmlIdGenerator('resizable-button');
 
-export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
+export const OuiResizableButton: FunctionComponent<OuiResizableButtonProps> = ({
   isHorizontal,
   className,
   id,
@@ -73,7 +84,7 @@ export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
   const resizerId = useRef(id || generatePanelId());
   const {
     registry: { resizers } = { resizers: {} },
-  } = useEuiResizableContainerContext();
+  } = useOuiResizableContainerContext();
   const isDisabled = useMemo(
     () =>
       disabled ||
@@ -81,11 +92,11 @@ export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
     [resizers, disabled]
   );
   const classes = classNames(
-    'euiResizableButton',
+    'ouiResizableButton',
     {
-      'euiResizableButton--vertical': !isHorizontal,
-      'euiResizableButton--horizontal': isHorizontal,
-      'euiResizableButton--disabled': isDisabled,
+      'ouiResizableButton--vertical': !isHorizontal,
+      'ouiResizableButton--horizontal': isHorizontal,
+      'ouiResizableButton--disabled': isDisabled,
     },
     className
   );
@@ -121,10 +132,10 @@ export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
   };
 
   return (
-    <EuiI18n
+    <OuiI18n
       tokens={[
-        'euiResizableButton.horizontalResizerAriaLabel',
-        'euiResizableButton.verticalResizerAriaLabel',
+        'ouiResizableButton.horizontalResizerAriaLabel',
+        'ouiResizableButton.verticalResizerAriaLabel',
       ]}
       defaults={[
         'Press left or right to adjust panels size',
@@ -138,7 +149,7 @@ export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
             isHorizontal ? horizontalResizerAriaLabel : verticalResizerAriaLabel
           }
           className={classes}
-          data-test-subj="euiResizableButton"
+          data-test-subj="ouiResizableButton"
           type="button"
           onClick={setFocus}
           onFocus={handleFocus}
@@ -147,14 +158,14 @@ export const EuiResizableButton: FunctionComponent<EuiResizableButtonProps> = ({
           {...rest}
         />
       )}
-    </EuiI18n>
+    </OuiI18n>
   );
 };
 
-export function euiResizableButtonWithControls(
-  controls: EuiResizableButtonControls
+export function ouiResizableButtonWithControls(
+  controls: OuiResizableButtonControls
 ) {
   return (props: CommonProps) => (
-    <EuiResizableButton {...controls} {...props} />
+    <OuiResizableButton {...controls} {...props} />
   );
 }

@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFieldNumber is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldNumber is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   icon="alert"
   inputid="1"
   isloading="false"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
       aria-label="aria-label"
-      class="euiFieldNumber testClass1 testClass2 euiFieldNumber--withIcon"
+      class="ouiFieldNumber testClass1 testClass2 ouiFieldNumber--withIcon"
       data-test-subj="test subject string"
       id="1"
       max="8"
@@ -21,111 +21,111 @@ exports[`EuiFieldNumber is rendered 1`] = `
       type="number"
       value="1"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldNumber props controlOnly is rendered 1`] = `
-<eui-validatable-control>
+exports[`OuiFieldNumber props controlOnly is rendered 1`] = `
+<oui-validatable-control>
   <input
-    class="euiFieldNumber"
+    class="ouiFieldNumber"
     type="number"
   />
-</eui-validatable-control>
+</oui-validatable-control>
 `;
 
-exports[`EuiFieldNumber props fullWidth is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldNumber props fullWidth is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="true"
   isloading="false"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldNumber euiFieldNumber--fullWidth"
+      class="ouiFieldNumber ouiFieldNumber--fullWidth"
       type="number"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldNumber props isInvalid is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldNumber props isInvalid is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   isloading="false"
 >
-  <eui-validatable-control
+  <oui-validatable-control
     isinvalid="true"
   >
     <input
-      class="euiFieldNumber"
+      class="ouiFieldNumber"
       type="number"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldNumber props isLoading is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldNumber props isLoading is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   isloading="true"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldNumber euiFieldNumber-isLoading"
+      class="ouiFieldNumber ouiFieldNumber-isLoading"
       type="number"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldNumber props readOnly is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldNumber props readOnly is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   isloading="false"
   readonly="true"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldNumber"
+      class="ouiFieldNumber"
       readonly=""
       type="number"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldNumber props value no initial value 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldNumber props value no initial value 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   isloading="false"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldNumber"
+      class="ouiFieldNumber"
       type="number"
       value=""
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldNumber props value value is number 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldNumber props value value is number 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   isloading="false"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldNumber"
+      class="ouiFieldNumber"
       type="number"
       value="0"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;

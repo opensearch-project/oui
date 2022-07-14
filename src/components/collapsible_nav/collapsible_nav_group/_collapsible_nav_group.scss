@@ -1,59 +1,70 @@
-.euiCollapsibleNavGroup {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiCollapsibleNavGroup {
   &:not(:first-child) {
-    border-top: $euiBorderThin;
+    border-top: $ouiBorderThin;
   }
 
   // This class does not accept a custom classname
-  .euiAccordion__triggerWrapper {
+  .ouiAccordion__triggerWrapper {
     // Add padding to the trigger wrapper in case an `extraAction` is passed
     // that doesn't get wrapped in the `__heading`
-    padding: $euiSize;
+    padding: $ouiSize;
   }
 }
 
-.euiCollapsibleNavGroup--light {
-  background-color: $euiCollapsibleNavGroupLightBackgroundColor;
+.ouiCollapsibleNavGroup--light {
+  background-color: $ouiCollapsibleNavGroupLightBackgroundColor;
 }
 
-.euiCollapsibleNavGroup--dark {
-  background-color: $euiCollapsibleNavGroupDarkBackgroundColor;
-  color: $euiColorGhost;
+.ouiCollapsibleNavGroup--dark {
+  background-color: $ouiCollapsibleNavGroupDarkBackgroundColor;
+  color: $ouiColorGhost;
 
-  // Forcing better contrast of focus state on EuiAccordion toggle icon
-  .euiCollapsibleNavGroup__heading:focus .euiAccordion__iconWrapper {
-    color: $euiCollapsibleNavGroupDarkHighContrastColor;
-    animation-name: euiCollapsibleNavGroupDarkFocusRingAnimate !important; // sass-lint:disable-line no-important
+  // Forcing better contrast of focus state on OuiAccordion toggle icon
+  .ouiCollapsibleNavGroup__heading:focus .ouiAccordion__iconWrapper {
+    color: $ouiCollapsibleNavGroupDarkHighContrastColor;
+    animation-name: ouiCollapsibleNavGroupDarkFocusRingAnimate !important; // sass-lint:disable-line no-important
   }
 
-  .euiCollapsibleNavGroup__title {
+  .ouiCollapsibleNavGroup__title {
     color: inherit;
     line-height: inherit;
   }
 }
 
-.euiCollapsibleNavGroup__heading {
-  font-weight: $euiFontWeightSemiBold;
+.ouiCollapsibleNavGroup__heading {
+  font-weight: $ouiFontWeightSemiBold;
 
   // If the heading is not in an accordion, it needs the padding
-  &:not(.euiAccordion__button) {
-    padding: $euiSize;
+  &:not(.ouiAccordion__button) {
+    padding: $ouiSize;
   }
 }
 
-.euiCollapsibleNavGroup__children {
-  padding: $euiSizeS;
+.ouiCollapsibleNavGroup__children {
+  padding: $ouiSizeS;
 }
 
-.euiCollapsibleNavGroup--withHeading .euiCollapsibleNavGroup__children {
+.ouiCollapsibleNavGroup--withHeading .ouiCollapsibleNavGroup__children {
   padding-top: 0;
 }
 
-@keyframes euiCollapsibleNavGroupDarkFocusRingAnimate {
+@keyframes ouiCollapsibleNavGroupDarkFocusRingAnimate {
   0% {
-    box-shadow: 0 0 0 $euiFocusRingAnimStartSize $euiFocusRingAnimStartColor;
+    box-shadow: 0 0 0 $ouiFocusRingAnimStartSize $ouiFocusRingAnimStartColor;
   }
 
   100% {
-    box-shadow: 0 0 0 $euiFocusRingSize $euiCollapsibleNavGroupDarkHighContrastColor;
+    box-shadow: 0 0 0 $ouiFocusRingSize $ouiCollapsibleNavGroupDarkHighContrastColor;
   }
 }

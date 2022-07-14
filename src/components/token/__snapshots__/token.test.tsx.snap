@@ -1,734 +1,734 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiToken is rendered 1`] = `
+exports[`OuiToken is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--light euiToken--small testClass1 testClass2"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--light ouiToken--small testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span
     aria-label="aria-label"
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color can be a custom hex 1`] = `
+exports[`OuiToken props color can be a custom hex 1`] = `
 <span
-  class="euiToken euiToken--circle euiToken--dark euiToken--small"
+  class="ouiToken ouiToken--circle ouiToken--dark ouiToken--small"
   style="background-color:#FF0000;color:#000000"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis0 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis0 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis0 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis0 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis1 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis1 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis1 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis1 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis2 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis2 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis2 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis2 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis3 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis3 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis3 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis3 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis4 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis4 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis4 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis4 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis5 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis5 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis5 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis5 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis6 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis6 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis6 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis6 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis7 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis7 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis7 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis7 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis8 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis8 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis8 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis8 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color euiColorVis9 is rendered 1`] = `
+exports[`OuiToken props color ouiColorVis9 is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis9 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis9 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props color gray is rendered 1`] = `
+exports[`OuiToken props color gray is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props fill dark is rendered 1`] = `
+exports[`OuiToken props fill dark is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--dark euiToken--small"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--dark ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props fill light is rendered 1`] = `
+exports[`OuiToken props fill light is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props fill none is rendered 1`] = `
+exports[`OuiToken props fill none is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--small"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenAlias is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenAlias is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis3 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis3 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenAlias"
+    data-ouiicon-type="tokenAlias"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenAnnotation is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenAnnotation is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis5 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis5 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenAnnotation"
+    data-ouiicon-type="tokenAnnotation"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenArray is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenArray is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis7 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis7 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenArray"
+    data-ouiicon-type="tokenArray"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenBinary is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenBinary is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis4 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis4 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenBinary"
+    data-ouiicon-type="tokenBinary"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenBoolean is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenBoolean is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis7 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis7 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenBoolean"
+    data-ouiicon-type="tokenBoolean"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenClass is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenClass is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis1 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis1 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenClass"
+    data-ouiicon-type="tokenClass"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenCompletionSuggester is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenCompletionSuggester is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis1 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis1 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenCompletionSuggester"
+    data-ouiicon-type="tokenCompletionSuggester"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenConstant is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenConstant is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis0 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis0 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenConstant"
+    data-ouiicon-type="tokenConstant"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenDate is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenDate is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis6 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis6 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenDate"
+    data-ouiicon-type="tokenDate"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenDenseVector is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenDenseVector is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis2 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis2 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenDenseVector"
+    data-ouiicon-type="tokenDenseVector"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenElement is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenElement is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis3 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis3 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenElement"
+    data-ouiicon-type="tokenElement"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenEnum is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenEnum is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis3 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis3 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenEnum"
+    data-ouiicon-type="tokenEnum"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenEnumMember is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenEnumMember is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis7 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis7 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenEnumMember"
+    data-ouiicon-type="tokenEnumMember"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenEvent is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenEvent is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis4 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis4 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenEvent"
+    data-ouiicon-type="tokenEvent"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenException is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenException is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis0 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis0 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenException"
+    data-ouiicon-type="tokenException"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenField is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenField is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis0 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis0 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenField"
+    data-ouiicon-type="tokenField"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenFile is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenFile is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--rectangle euiToken--dark euiToken--small"
+  class="ouiToken ouiToken--gray ouiToken--rectangle ouiToken--dark ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenFile"
+    data-ouiicon-type="tokenFile"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenFlattened is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenFlattened is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis7 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis7 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenFlattened"
+    data-ouiicon-type="tokenFlattened"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenFunction is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenFunction is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis2 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis2 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenFunction"
+    data-ouiicon-type="tokenFunction"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenGeo is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenGeo is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis5 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis5 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenGeo"
+    data-ouiicon-type="tokenGeo"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenHistogram is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenHistogram is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis6 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis6 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenHistogram"
+    data-ouiicon-type="tokenHistogram"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenIP is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenIP is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis9 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis9 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenIP"
+    data-ouiicon-type="tokenIP"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenInterface is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenInterface is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis9 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis9 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenInterface"
+    data-ouiicon-type="tokenInterface"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenJoin is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenJoin is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis5 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis5 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenJoin"
+    data-ouiicon-type="tokenJoin"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenKey is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenKey is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis5 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis5 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenKey"
+    data-ouiicon-type="tokenKey"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenKeyword is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenKeyword is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis9 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis9 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenKeyword"
+    data-ouiicon-type="tokenKeyword"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenMethod is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenMethod is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis2 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis2 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenMethod"
+    data-ouiicon-type="tokenMethod"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenModule is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenModule is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis4 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis4 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenModule"
+    data-ouiicon-type="tokenModule"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenNamespace is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenNamespace is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis1 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis1 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenNamespace"
+    data-ouiicon-type="tokenNamespace"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenNested is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenNested is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis2 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis2 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenNested"
+    data-ouiicon-type="tokenNested"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenNull is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenNull is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis2 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis2 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenNull"
+    data-ouiicon-type="tokenNull"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenNumber is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenNumber is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis0 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis0 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenNumber"
+    data-ouiicon-type="tokenNumber"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenObject is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenObject is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis3 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis3 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenObject"
+    data-ouiicon-type="tokenObject"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenOperator is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenOperator is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis4 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis4 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenOperator"
+    data-ouiicon-type="tokenOperator"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenPackage is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenPackage is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis0 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis0 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenPackage"
+    data-ouiicon-type="tokenPackage"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenParameter is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenParameter is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis4 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis4 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenParameter"
+    data-ouiicon-type="tokenParameter"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenPercolator is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenPercolator is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis6 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis6 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenPercolator"
+    data-ouiicon-type="tokenPercolator"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenProperty is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenProperty is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis2 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis2 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenProperty"
+    data-ouiicon-type="tokenProperty"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenRange is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenRange is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis4 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis4 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenRange"
+    data-ouiicon-type="tokenRange"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenRankFeature is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenRankFeature is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis8 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis8 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenRankFeature"
+    data-ouiicon-type="tokenRankFeature"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenRankFeatures is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenRankFeatures is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis3 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis3 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenRankFeatures"
+    data-ouiicon-type="tokenRankFeatures"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenRepo is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenRepo is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis1 euiToken--rectangle euiToken--dark euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis1 ouiToken--rectangle ouiToken--dark ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenRepo"
+    data-ouiicon-type="tokenRepo"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenSearchType is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenSearchType is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis5 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis5 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenSearchType"
+    data-ouiicon-type="tokenSearchType"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenShape is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenShape is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis8 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis8 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenShape"
+    data-ouiicon-type="tokenShape"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenString is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenString is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis1 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis1 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenString"
+    data-ouiicon-type="tokenString"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenStruct is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenStruct is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis0 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis0 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenStruct"
+    data-ouiicon-type="tokenStruct"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenSymbol is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenSymbol is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis0 euiToken--rectangle euiToken--dark euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis0 ouiToken--rectangle ouiToken--dark ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenSymbol"
+    data-ouiicon-type="tokenSymbol"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenText is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenText is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis3 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis3 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenText"
+    data-ouiicon-type="tokenText"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenTokenCount is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenTokenCount is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis4 euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis4 ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenTokenCount"
+    data-ouiicon-type="tokenTokenCount"
   />
 </span>
 `;
 
-exports[`EuiToken props iconType as EuiTokenMapType tokenVariable is rendered 1`] = `
+exports[`OuiToken props iconType as OuiTokenMapType tokenVariable is rendered 1`] = `
 <span
-  class="euiToken euiToken--euiColorVis7 euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--ouiColorVis7 ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="tokenVariable"
+    data-ouiicon-type="tokenVariable"
   />
 </span>
 `;
 
-exports[`EuiToken props shape circle is rendered 1`] = `
+exports[`OuiToken props shape circle is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props shape rectangle is rendered 1`] = `
+exports[`OuiToken props shape rectangle is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--rectangle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--gray ouiToken--rectangle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props shape square is rendered 1`] = `
+exports[`OuiToken props shape square is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--square euiToken--light euiToken--small"
+  class="ouiToken ouiToken--gray ouiToken--square ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props size l is rendered 1`] = `
+exports[`OuiToken props size l is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--light euiToken--large"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--light ouiToken--large"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props size m is rendered 1`] = `
+exports[`OuiToken props size m is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--light euiToken--medium"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--light ouiToken--medium"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props size s is rendered 1`] = `
+exports[`OuiToken props size s is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--light euiToken--small"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--light ouiToken--small"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;
 
-exports[`EuiToken props size xs is rendered 1`] = `
+exports[`OuiToken props size xs is rendered 1`] = `
 <span
-  class="euiToken euiToken--gray euiToken--circle euiToken--light euiToken--xsmall"
+  class="ouiToken ouiToken--gray ouiToken--circle ouiToken--light ouiToken--xsmall"
 >
   <span
-    data-euiicon-type="dot"
+    data-ouiicon-type="dot"
   />
 </span>
 `;

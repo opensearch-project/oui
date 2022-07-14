@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiCollapsibleNav } from '../../../../src/components/';
+import { OuiCollapsibleNav } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const collapsibleNavConfig = () => {
-  const docgenInfo = Array.isArray(EuiCollapsibleNav.__docgenInfo)
-    ? EuiCollapsibleNav.__docgenInfo[0]
-    : EuiCollapsibleNav.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiCollapsibleNav.__docgenInfo)
+    ? OuiCollapsibleNav.__docgenInfo[0]
+    : OuiCollapsibleNav.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.isOpen = {
@@ -39,14 +50,14 @@ export const collapsibleNavConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiCollapsibleNav',
+      componentName: 'OuiCollapsibleNav',
       props: propsToUse,
       scope: {
-        EuiCollapsibleNav,
+        OuiCollapsibleNav,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCollapsibleNav'],
+        '@opensearch-project/oui': {
+          named: ['OuiCollapsibleNav'],
         },
       },
     },

@@ -1,36 +1,47 @@
-.euiDescribedFormGroup {
-  max-width: $euiFormMaxWidth * 2;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiDescribedFormGroup {
+  max-width: $ouiFormMaxWidth * 2;
 
   + * {
-    margin-top: $euiSizeL;
+    margin-top: $ouiSizeL;
   }
 
-  &.euiDescribedFormGroup--fullWidth {
+  &.ouiDescribedFormGroup--fullWidth {
     max-width: 100%;
   }
 
-  .euiDescribedFormGroup__description {
-    padding-top: $euiSizeS;
+  .ouiDescribedFormGroup__description {
+    padding-top: $ouiSizeS;
   }
 
-  .euiDescribedFormGroup__fields {
+  .ouiDescribedFormGroup__fields {
     min-width: 0; // Needed to support shrinking appropriately with viewport (prevents x-axis content overflow)
   }
 
-  .euiDescribedFormGroup__fieldPadding {
-    &--xxxsmall {padding-top: ($euiFontSizeXS * 1.5) - $euiFontSizeXS + 2px;}
-    &--xxsmall {padding-top: ($euiFontSizeS * 1.5) - $euiFontSizeXS + 2px;}
-    &--xsmall {padding-top: ($euiFontSize * 1.5) - $euiFontSizeXS + 2px;}
-    &--small {padding-top: ($euiFontSizeL * 1.5) - $euiFontSizeXS + 2px;}
-    &--medium {padding-top: ($euiFontSizeXL * 1.5) - $euiFontSizeXS + 2px;}
-    &--large {padding-top: ($euiFontSizeXXL * 1.5) - $euiFontSizeXS + 2px;}
+  .ouiDescribedFormGroup__fieldPadding {
+    &--xxxsmall {padding-top: ($ouiFontSizeXS * 1.5) - $ouiFontSizeXS + 2px;}
+    &--xxsmall {padding-top: ($ouiFontSizeS * 1.5) - $ouiFontSizeXS + 2px;}
+    &--xsmall {padding-top: ($ouiFontSize * 1.5) - $ouiFontSizeXS + 2px;}
+    &--small {padding-top: ($ouiFontSizeL * 1.5) - $ouiFontSizeXS + 2px;}
+    &--medium {padding-top: ($ouiFontSizeXL * 1.5) - $ouiFontSizeXS + 2px;}
+    &--large {padding-top: ($ouiFontSizeXXL * 1.5) - $ouiFontSizeXS + 2px;}
   }
 
-  @include euiBreakpoint('xs', 's') {
-    .euiDescribedFormGroup__fields {
+  @include ouiBreakpoint('xs', 's') {
+    .ouiDescribedFormGroup__fields {
       padding-top: 0;
 
-      > .euiFormRow--hasEmptyLabelSpace:first-child {
+      > .ouiFormRow--hasEmptyLabelSpace:first-child {
         padding-top: 0;
       }
     }

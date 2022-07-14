@@ -1,117 +1,128 @@
-.euiTreeView__wrapper .euiTreeView {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiTreeView__wrapper .ouiTreeView {
   margin: 0;
   list-style-type: none;
 }
 
-.euiTreeView .euiTreeView {
-  padding-left: $euiSizeL;
+.ouiTreeView .ouiTreeView {
+  padding-left: $ouiSizeL;
 }
 
-.euiTreeView__node {
-  max-height: $euiSizeXL;
-  line-height: $euiSizeXL;
+.ouiTreeView__node {
+  max-height: $ouiSizeXL;
+  line-height: $ouiSizeXL;
 }
 
-.euiTreeView__node--expanded {
+.ouiTreeView__node--expanded {
   max-height: 100vh;
 }
 
-.euiTreeView__nodeInner {
-  @include euiTextTruncate;
+.ouiTreeView__nodeInner {
+  @include ouiTextTruncate;
 
-  padding-left: $euiSizeS;
+  padding-left: $ouiSizeS;
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: $euiSizeXL;
-  border-radius: $euiBorderRadius;
+  height: $ouiSizeXL;
+  border-radius: $ouiBorderRadius;
   width: 100%;
   text-align-last: left;
 
   &:focus {
-    @include euiFocusRing('small', 'inner');
+    @include ouiFocusRing('small', 'inner');
   }
 
   &:hover,
   &:active,
   &:focus {
-    @include euiFocusBackground($euiTextColor);
+    @include ouiFocusBackground($ouiTextColor);
   }
 
-  .euiTreeView__iconPlaceholder {
-    width: $euiSizeXL;
+  .ouiTreeView__iconPlaceholder {
+    width: $ouiSizeXL;
   }
 
 }
 
-.euiTreeView__nodeLabel {
-  @include euiTextTruncate;
+.ouiTreeView__nodeLabel {
+  @include ouiTextTruncate;
 }
 
-.euiTreeView__iconWrapper {
-  margin-top: -($euiSizeXS / 2);
-  margin-right: $euiSizeS;
+.ouiTreeView__iconWrapper {
+  margin-top: -($ouiSizeXS / 2);
+  margin-right: $ouiSizeS;
 
   // This helps tokens appear vertically centered
-  .euiToken {
-    margin-top: $euiSizeXS / 2;
+  .ouiToken {
+    margin-top: $ouiSizeXS / 2;
   }
 }
 
-.euiTreeView--compressed {
-  .euiTreeView__node {
-    max-height: $euiSizeL;
-    line-height: $euiSizeL;
+.ouiTreeView--compressed {
+  .ouiTreeView__node {
+    max-height: $ouiSizeL;
+    line-height: $ouiSizeL;
 
-    .euiTreeView__nodeInner {
-      height: $euiSizeL;
+    .ouiTreeView__nodeInner {
+      height: $ouiSizeL;
 
     }
 
-    .euiTreeView__iconWrapper {
-      margin: 0 ($euiSizeS * .75) 0 0;
+    .ouiTreeView__iconWrapper {
+      margin: 0 ($ouiSizeS * .75) 0 0;
     }
 
-    .euiTreeView__nodeLabel {
+    .ouiTreeView__nodeLabel {
       margin-top: -1px;
     }
 
-    .euiTreeView__iconPlaceholder {
-      width: $euiSizeL;
+    .ouiTreeView__iconPlaceholder {
+      width: $ouiSizeL;
     }
   }
 
-  .euiTreeView__node--expanded {
+  .ouiTreeView__node--expanded {
     max-height: 100vh;
   }
 }
 
-.euiTreeView--withArrows {
-  .euiTreeView__expansionArrow {
-    margin-right: $euiSizeXS;
+.ouiTreeView--withArrows {
+  .ouiTreeView__expansionArrow {
+    margin-right: $ouiSizeXS;
   }
 
-  &.euiTreeView {
-    .euiTreeView__nodeInner--withArrows {
-      .euiTreeView__iconWrapper {
+  &.ouiTreeView {
+    .ouiTreeView__nodeInner--withArrows {
+      .ouiTreeView__iconWrapper {
         margin-left: 0;
       }
     }
 
-    .euiTreeView__iconWrapper {
-      margin-left: $euiSize + $euiSizeXS;
+    .ouiTreeView__iconWrapper {
+      margin-left: $ouiSize + $ouiSizeXS;
     }
   }
 
-  &.euiTreeView--compressed {
-    .euiTreeView__nodeInner--withArrows {
-      .euiTreeView__iconWrapper {
+  &.ouiTreeView--compressed {
+    .ouiTreeView__nodeInner--withArrows {
+      .ouiTreeView__iconWrapper {
         margin-left: 0;
       }
     }
 
-    .euiTreeView__iconWrapper {
-      margin-left: $euiSize;
+    .ouiTreeView__iconWrapper {
+      margin-left: $ouiSize;
     }
   }
 }

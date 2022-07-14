@@ -1,45 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFacetGroup is rendered 1`] = `
+exports[`OuiFacetGroup is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiFlexGroup euiFlexGroup--directionColumn euiFlexGroup--responsive euiFacetGroup euiFacetGroup--vertical euiFacetGroup--gutterMedium testClass1 testClass2"
+  class="ouiFlexGroup ouiFlexGroup--directionColumn ouiFlexGroup--responsive ouiFacetGroup ouiFacetGroup--vertical ouiFacetGroup--gutterMedium testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiFacetGroup props gutterSize l is rendered 1`] = `
+exports[`OuiFacetGroup props gutterSize l is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--directionColumn euiFlexGroup--responsive euiFacetGroup euiFacetGroup--vertical euiFacetGroup--gutterLarge"
+  class="ouiFlexGroup ouiFlexGroup--directionColumn ouiFlexGroup--responsive ouiFacetGroup ouiFacetGroup--vertical ouiFacetGroup--gutterLarge"
 />
 `;
 
-exports[`EuiFacetGroup props gutterSize m is rendered 1`] = `
+exports[`OuiFacetGroup props gutterSize m is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--directionColumn euiFlexGroup--responsive euiFacetGroup euiFacetGroup--vertical euiFacetGroup--gutterMedium"
+  class="ouiFlexGroup ouiFlexGroup--directionColumn ouiFlexGroup--responsive ouiFacetGroup ouiFacetGroup--vertical ouiFacetGroup--gutterMedium"
 />
 `;
 
-exports[`EuiFacetGroup props gutterSize none is rendered 1`] = `
+exports[`OuiFacetGroup props gutterSize none is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--directionColumn euiFlexGroup--responsive euiFacetGroup euiFacetGroup--vertical euiFacetGroup--gutterNone"
+  class="ouiFlexGroup ouiFlexGroup--directionColumn ouiFlexGroup--responsive ouiFacetGroup ouiFacetGroup--vertical ouiFacetGroup--gutterNone"
 />
 `;
 
-exports[`EuiFacetGroup props gutterSize s is rendered 1`] = `
+exports[`OuiFacetGroup props gutterSize s is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--directionColumn euiFlexGroup--responsive euiFacetGroup euiFacetGroup--vertical euiFacetGroup--gutterSmall"
+  class="ouiFlexGroup ouiFlexGroup--directionColumn ouiFlexGroup--responsive ouiFacetGroup ouiFacetGroup--vertical ouiFacetGroup--gutterSmall"
 />
 `;
 
-exports[`EuiFacetGroup props layout horizontal is rendered 1`] = `
+exports[`OuiFacetGroup props layout horizontal is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--directionRow euiFlexGroup--responsive euiFlexGroup--wrap euiFacetGroup euiFacetGroup--horizontal euiFacetGroup--gutterMedium"
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiFlexGroup--wrap ouiFacetGroup ouiFacetGroup--horizontal ouiFacetGroup--gutterMedium"
 />
 `;
 
-exports[`EuiFacetGroup props layout vertical is rendered 1`] = `
+exports[`OuiFacetGroup props layout vertical is rendered 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--directionColumn euiFlexGroup--responsive euiFacetGroup euiFacetGroup--vertical euiFacetGroup--gutterMedium"
+  class="ouiFlexGroup ouiFlexGroup--directionColumn ouiFlexGroup--responsive ouiFacetGroup ouiFacetGroup--vertical ouiFacetGroup--gutterMedium"
 />
 `;

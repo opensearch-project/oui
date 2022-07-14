@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,28 +29,28 @@
  */
 
 import React, { FunctionComponent, ReactChild } from 'react';
-import { EuiI18n } from '../i18n';
-import { EuiDraggable } from '../drag_and_drop';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiButtonIcon, EuiButtonGroup } from '../button';
-import { EuiIcon } from '../icon';
-import { EuiText } from '../text';
+import { OuiI18n } from '../i18n';
+import { OuiDraggable } from '../drag_and_drop';
+import { OuiScreenReaderOnly } from '../accessibility';
+import { OuiFlexGroup, OuiFlexItem } from '../flex';
+import { OuiButtonIcon, OuiButtonGroup } from '../button';
+import { OuiIcon } from '../icon';
+import { OuiText } from '../text';
 import {
   getDetailsForSchema,
-  EuiDataGridSchema,
-  EuiDataGridSchemaDetector,
+  OuiDataGridSchema,
+  OuiDataGridSchemaDetector,
 } from './data_grid_schema';
-import { EuiDataGridSorting } from './data_grid_types';
-import { EuiToken } from '../token';
+import { OuiDataGridSorting } from './data_grid_types';
+import { OuiToken } from '../token';
 
-export interface EuiDataGridColumnSortingDraggableProps {
+export interface OuiDataGridColumnSortingDraggableProps {
   id: string;
   direction: string;
   index: number;
-  sorting: EuiDataGridSorting;
-  schema: EuiDataGridSchema;
-  schemaDetectors: EuiDataGridSchemaDetector[];
+  sorting: OuiDataGridSorting;
+  schema: OuiDataGridSchema;
+  schemaDetectors: OuiDataGridSchemaDetector[];
   /**
    * Value to be shown in column sorting popover.
    */
@@ -47,13 +58,13 @@ export interface EuiDataGridColumnSortingDraggableProps {
 }
 
 export const defaultSortAscLabel = (
-  <EuiI18n token="euiColumnSortingDraggable.defaultSortAsc" default="A-Z" />
+  <OuiI18n token="ouiColumnSortingDraggable.defaultSortAsc" default="A-Z" />
 );
 export const defaultSortDescLabel = (
-  <EuiI18n token="euiColumnSortingDraggable.defaultSortDesc" default="Z-A" />
+  <OuiI18n token="ouiColumnSortingDraggable.defaultSortDesc" default="Z-A" />
 );
 
-export const EuiDataGridColumnSortingDraggable: FunctionComponent<EuiDataGridColumnSortingDraggableProps> = ({
+export const OuiDataGridColumnSortingDraggable: FunctionComponent<OuiDataGridColumnSortingDraggableProps> = ({
   id,
   display,
   direction,
@@ -79,49 +90,49 @@ export const EuiDataGridColumnSortingDraggable: FunctionComponent<EuiDataGridCol
       id: `${id}Asc`,
       value: 'asc',
       label: textSortAsc,
-      'data-test-subj': `euiDataGridColumnSorting-sortColumn-${id}-asc`,
+      'data-test-subj': `ouiDataGridColumnSorting-sortColumn-${id}-asc`,
     },
     {
       id: `${id}Desc`,
       value: 'desc',
       label: textSortDesc,
-      'data-test-subj': `euiDataGridColumnSorting-sortColumn-${id}-desc`,
+      'data-test-subj': `ouiDataGridColumnSorting-sortColumn-${id}-desc`,
     },
   ];
 
   return (
-    <EuiDraggable draggableId={id} index={index} {...rest}>
+    <OuiDraggable draggableId={id} index={index} {...rest}>
       {(provided, state) => (
         <div
-          className={`euiDataGridColumnSorting__item ${
-            state.isDragging && 'euiDataGridColumnSorting__item-isDragging'
+          className={`ouiDataGridColumnSorting__item ${
+            state.isDragging && 'ouiDataGridColumnSorting__item-isDragging'
           }`}>
-          <EuiScreenReaderOnly>
+          <OuiScreenReaderOnly>
             <p>
-              <EuiI18n
-                token="euiColumnSortingDraggable.activeSortLabel"
+              <OuiI18n
+                token="ouiColumnSortingDraggable.activeSortLabel"
                 default="is sorting this data grid">
                 {(activeSortLabel: ReactChild) => (
                   <span>
                     {display} {activeSortLabel}
                   </span>
                 )}
-              </EuiI18n>
+              </OuiI18n>
             </p>
-          </EuiScreenReaderOnly>
-          <EuiFlexGroup
+          </OuiScreenReaderOnly>
+          <OuiFlexGroup
             gutterSize="xs"
             alignItems="center"
             responsive={false}
-            data-test-subj={`euiDataGridColumnSorting-sortColumn-${id}`}>
-            <EuiFlexItem grow={false}>
-              <EuiI18n
-                token="euiColumnSortingDraggable.removeSortLabel"
+            data-test-subj={`ouiDataGridColumnSorting-sortColumn-${id}`}>
+            <OuiFlexItem grow={false}>
+              <OuiI18n
+                token="ouiColumnSortingDraggable.removeSortLabel"
                 default="Remove from data grid sort:">
                 {(removeSortLabel: ReactChild) => (
-                  <EuiButtonIcon
+                  <OuiButtonIcon
                     color="text"
-                    className="euiDataGridColumnSorting__button"
+                    className="ouiDataGridColumnSorting__button"
                     aria-label={`${removeSortLabel} ${id}`}
                     iconType="cross"
                     onClick={() => {
@@ -134,35 +145,35 @@ export const EuiDataGridColumnSortingDraggable: FunctionComponent<EuiDataGridCol
                     }}
                   />
                 )}
-              </EuiI18n>
-            </EuiFlexItem>
+              </OuiI18n>
+            </OuiFlexItem>
 
-            <EuiFlexItem grow={false}>
-              <EuiToken
+            <OuiFlexItem grow={false}>
+              <OuiToken
                 color={schemaDetails != null ? schemaDetails.color : undefined}
                 iconType={
                   schemaDetails != null ? schemaDetails.icon : 'tokenString'
                 }
               />
-            </EuiFlexItem>
-            <EuiFlexItem aria-hidden>
-              <EuiText size="xs">
+            </OuiFlexItem>
+            <OuiFlexItem aria-hidden>
+              <OuiText size="xs">
                 <p>{display}</p>
-              </EuiText>
-            </EuiFlexItem>
-            <EuiFlexItem className="euiDataGridColumnSorting__orderButtons">
-              <EuiI18n
-                token="euiColumnSortingDraggable.toggleLegend"
+              </OuiText>
+            </OuiFlexItem>
+            <OuiFlexItem className="ouiDataGridColumnSorting__orderButtons">
+              <OuiI18n
+                token="ouiColumnSortingDraggable.toggleLegend"
                 default="Select sorting method for field: ">
                 {(toggleLegend: ReactChild) => (
-                  <EuiButtonGroup
+                  <OuiButtonGroup
                     legend={`${toggleLegend} ${id}`}
                     name={id}
                     isFullWidth
                     options={toggleOptions}
                     data-test-subj={`-${direction}`}
                     buttonSize="compressed"
-                    className="euiDataGridColumnSorting__order"
+                    className="ouiDataGridColumnSorting__order"
                     idSelected={direction === 'asc' ? `${id}Asc` : `${id}Desc`}
                     onChange={(_, direction) => {
                       const nextColumns = [...sorting.columns];
@@ -177,16 +188,16 @@ export const EuiDataGridColumnSortingDraggable: FunctionComponent<EuiDataGridCol
                     }}
                   />
                 )}
-              </EuiI18n>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false} {...provided.dragHandleProps}>
+              </OuiI18n>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false} {...provided.dragHandleProps}>
               <div {...provided.dragHandleProps}>
-                <EuiIcon type="grab" color="subdued" />
+                <OuiIcon type="grab" color="subdued" />
               </div>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         </div>
       )}
-    </EuiDraggable>
+    </OuiDraggable>
   );
 };

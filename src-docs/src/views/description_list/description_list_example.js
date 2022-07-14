@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,17 +16,17 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiDescriptionList,
-  EuiDescriptionListTitle,
-  EuiDescriptionListDescription,
+  OuiCode,
+  OuiDescriptionList,
+  OuiDescriptionListTitle,
+  OuiDescriptionListDescription,
 } from '../../../../src/components';
 
 import DescriptionList from './description_list';
 const descriptionListSource = require('!!raw-loader!./description_list');
 const descriptionListHtml = renderToHtml(DescriptionList);
 const descriptionListSnippet = [
-  `<EuiDescriptionList
+  `<OuiDescriptionList
   listItems={[
     {
       title: 'The Elder Scrolls: Morrowind',
@@ -23,23 +34,23 @@ const descriptionListSnippet = [
     },
   ]}
 />`,
-  `<EuiDescriptionList>
-  <EuiDescriptionListTitle>Dota 2</EuiDescriptionListTitle>
-  <EuiDescriptionListDescription>
+  `<OuiDescriptionList>
+  <OuiDescriptionListTitle>Dota 2</OuiDescriptionListTitle>
+  <OuiDescriptionListDescription>
     A videogame that I have spent way too much time on over the years.
-  </EuiDescriptionListDescription>
-</EuiDescriptionList>`,
+  </OuiDescriptionListDescription>
+</OuiDescriptionList>`,
 ];
 
 import DescriptionListColumn from './description_list_column';
 const descriptionListColumnSource = require('!!raw-loader!./description_list_column');
 const descriptionListColumnHtml = renderToHtml(DescriptionListColumn);
 const descriptionListColumnSnippet = [
-  `<EuiDescriptionList
+  `<OuiDescriptionList
   type="column"
   listItems={favoriteVideoGames}
 />`,
-  `<EuiDescriptionList
+  `<OuiDescriptionList
   type="responsiveColumn"
   listItems={favoriteVideoGames}
 />`,
@@ -49,7 +60,7 @@ import DescriptionListStyling from './description_list_styling';
 const descriptionListStylingSource = require('!!raw-loader!./description_list_styling');
 const descriptionListStylingHtml = renderToHtml(DescriptionListStyling);
 const descriptionListStylingSnippet = [
-  `<EuiDescriptionList
+  `<OuiDescriptionList
   listItems={favoriteVideoGames}
   align="center"
   compressed
@@ -60,7 +71,7 @@ import DescriptionListInline from './description_list_inline';
 const descriptionListInlineSource = require('!!raw-loader!./description_list_inline');
 const descriptionListInlineHtml = renderToHtml(DescriptionListInline);
 const descriptionListInlineSnippet = [
-  `<EuiDescriptionList
+  `<OuiDescriptionList
   type="inline"
   listItems={favoriteVideoGames}
 />`,
@@ -70,7 +81,7 @@ import DescriptionListReverse from './description_list_reverse';
 const descriptionListReverseSource = require('!!raw-loader!./description_list_reverse');
 const descriptionListReverseHtml = renderToHtml(DescriptionListReverse);
 const descriptionListReverseSnippet = [
-  `<EuiDescriptionList
+  `<OuiDescriptionList
   textStyle="reverse"
   listItems={favoriteVideoGames}
 />`,
@@ -80,9 +91,9 @@ import DescriptionListClasses from './description_list_classes';
 const descriptionListClassesSource = require('!!raw-loader!./description_list_classes');
 const descriptionListClassesHtml = renderToHtml(DescriptionListClasses);
 const descriptionListClassesSnippet = [
-  `<EuiDescriptionList
-  titleProps={{ className: 'eui-textTruncate' }}
-  descriptionProps={{ className: 'eui-textTruncate' }}
+  `<OuiDescriptionList
+  titleProps={{ className: 'oui-textTruncate' }}
+  descriptionProps={{ className: 'oui-textTruncate' }}
   listItems={favoriteVideoGames}
 />`,
 ];
@@ -103,18 +114,18 @@ export const DescriptionListExample = {
       ],
       text: (
         <p>
-          <strong>EuiDescriptionList</strong> is a component for listing pairs
+          <strong>OuiDescriptionList</strong> is a component for listing pairs
           of information together. You can use the component on its own, passing
           in an object for the list, or use the{' '}
-          <strong>EuiDescriptionListTitle</strong> and{' '}
-          <strong>EuiDescriptionListDescription</strong> components separately
+          <strong>OuiDescriptionListTitle</strong> and{' '}
+          <strong>OuiDescriptionListDescription</strong> components separately
           to build a list manually.
         </p>
       ),
       props: {
-        EuiDescriptionList,
-        EuiDescriptionListTitle,
-        EuiDescriptionListDescription,
+        OuiDescriptionList,
+        OuiDescriptionListTitle,
+        OuiDescriptionListDescription,
       },
       snippet: descriptionListSnippet,
       demo: <DescriptionList />,
@@ -134,14 +145,14 @@ export const DescriptionListExample = {
       text: (
         <div>
           <p>
-            Setting the <EuiCode>textStyle</EuiCode> prop to{' '}
-            <EuiCode>reverse</EuiCode> will reverse the text styles of the{' '}
-            <EuiCode>title</EuiCode> and <EuiCode>description</EuiCode> elements
+            Setting the <OuiCode>textStyle</OuiCode> prop to{' '}
+            <OuiCode>reverse</OuiCode> will reverse the text styles of the{' '}
+            <OuiCode>title</OuiCode> and <OuiCode>description</OuiCode> elements
             so that the description is more prominent. This works best for
             key/value type content.
           </p>
           <p>
-            Adding this property to the <EuiCode>inline</EuiCode> type will not
+            Adding this property to the <OuiCode>inline</OuiCode> type will not
             change anything.
           </p>
         </div>
@@ -164,13 +175,13 @@ export const DescriptionListExample = {
       text: (
         <Fragment>
           <p>
-            Using the prop <EuiCode>type</EuiCode> set to{' '}
-            <EuiCode>column</EuiCode> description lists can be presented in an
+            Using the prop <OuiCode>type</OuiCode> set to{' '}
+            <OuiCode>column</OuiCode> description lists can be presented in an
             inline, column format.
           </p>
           <p>
             To return to the typical row format on smaller screens set{' '}
-            <EuiCode>type</EuiCode> to <EuiCode>responsiveColumn</EuiCode>.
+            <OuiCode>type</OuiCode> to <OuiCode>responsiveColumn</OuiCode>.
           </p>
         </Fragment>
       ),
@@ -191,7 +202,7 @@ export const DescriptionListExample = {
       ],
       text: (
         <p>
-          Using a prop <EuiCode>type</EuiCode> set to <EuiCode>inline</EuiCode>{' '}
+          Using a prop <OuiCode>type</OuiCode> set to <OuiCode>inline</OuiCode>{' '}
           description lists can be presented in an inline, blob format. This is
           useful for JSON code blocks. Inline description lists are sized
           smaller than normal lists due to their compact nature.
@@ -214,7 +225,7 @@ export const DescriptionListExample = {
       ],
       text: (
         <p>
-          Using the <EuiCode>align</EuiCode> and <EuiCode>compressed</EuiCode>{' '}
+          Using the <OuiCode>align</OuiCode> and <OuiCode>compressed</OuiCode>{' '}
           props you can further tailor the look of a description list. This
           works with column and inline types.
         </p>
@@ -236,10 +247,10 @@ export const DescriptionListExample = {
       ],
       text: (
         <p>
-          When using the <EuiCode>listItems</EuiCode> prop to pass an object of
-          items and you need to also add a <EuiCode>className</EuiCode> (or
+          When using the <OuiCode>listItems</OuiCode> prop to pass an object of
+          items and you need to also add a <OuiCode>className</OuiCode> (or
           other available prop) to the individual pieces, you can use the{' '}
-          <EuiCode>titleProps</EuiCode> and <EuiCode>descriptionProps</EuiCode>{' '}
+          <OuiCode>titleProps</OuiCode> and <OuiCode>descriptionProps</OuiCode>{' '}
           to do so.
         </p>
       ),

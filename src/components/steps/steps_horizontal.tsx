@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,23 +31,23 @@
 import classNames from 'classnames';
 import React, { FunctionComponent, OlHTMLAttributes } from 'react';
 import { CommonProps } from '../common';
-import { EuiStepHorizontal, EuiStepHorizontalProps } from './step_horizontal';
+import { OuiStepHorizontal, OuiStepHorizontalProps } from './step_horizontal';
 
-export interface EuiStepsHorizontalProps
+export interface OuiStepsHorizontalProps
   extends OlHTMLAttributes<HTMLOListElement>,
     CommonProps {
   /**
-   * An array of `EuiStepHorizontal` objects excluding the `step` prop
+   * An array of `OuiStepHorizontal` objects excluding the `step` prop
    */
-  steps: Array<Omit<EuiStepHorizontalProps, 'step'>>;
+  steps: Array<Omit<OuiStepHorizontalProps, 'step'>>;
 }
 
-export const EuiStepsHorizontal: FunctionComponent<EuiStepsHorizontalProps> = ({
+export const OuiStepsHorizontal: FunctionComponent<OuiStepsHorizontalProps> = ({
   className,
   steps,
   ...rest
 }) => {
-  const classes = classNames('euiStepsHorizontal', className);
+  const classes = classNames('ouiStepsHorizontal', className);
 
   return (
     <ol className={classes} {...rest}>
@@ -46,8 +57,8 @@ export const EuiStepsHorizontal: FunctionComponent<EuiStepsHorizontalProps> = ({
           : {};
 
         return (
-          <li key={index} className="euiStepHorizontal__item" {...isCurrent}>
-            <EuiStepHorizontal step={index + 1} {...stepProps} />
+          <li key={index} className="ouiStepHorizontal__item" {...isCurrent}>
+            <OuiStepHorizontal step={index + 1} {...stepProps} />
           </li>
         );
       })}

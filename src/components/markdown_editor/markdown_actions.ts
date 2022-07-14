@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -43,8 +54,8 @@ SOFTWARE.
  */
 
 import {
-  EuiMarkdownEditorUiPlugin,
-  EuiMarkdownFormatting,
+  OuiMarkdownEditorUiPlugin,
+  OuiMarkdownFormatting,
   isPluginWithImmediateFormatting,
 } from './markdown_types';
 
@@ -56,9 +67,9 @@ import {
  * @param {string} editorID
  */
 class MarkdownActions {
-  styles: Record<string, EuiMarkdownEditorUiPlugin>;
+  styles: Record<string, OuiMarkdownEditorUiPlugin>;
 
-  constructor(public editorID: string, uiPlugins: EuiMarkdownEditorUiPlugin[]) {
+  constructor(public editorID: string, uiPlugins: OuiMarkdownEditorUiPlugin[]) {
     /**
      * This object is in the format:
      * [nameOfAction]: {[styles to apply]}
@@ -173,7 +184,7 @@ class MarkdownActions {
    * @param {object} incomingStyle
    * @memberof MarkdownActions
    */
-  applyStyle(incomingStyle: EuiMarkdownFormatting) {
+  applyStyle(incomingStyle: OuiMarkdownFormatting) {
     const defaults = {
       prefix: '',
       suffix: '',

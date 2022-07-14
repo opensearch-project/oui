@@ -1,46 +1,57 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // -------------------------------------
 // Colors guideline page
 // -------------------------------------
 .guidelineColor__palette {
-  padding: $euiSize;
-  padding-bottom: $euiSizeXL;
+  padding: $ouiSize;
+  padding-bottom: $ouiSizeXL;
 }
 
 .guidelineColor__swatch {
-  height: $euiSizeM;
-  width: $euiSizeM;
+  height: $ouiSizeM;
+  width: $ouiSizeM;
   border-radius: 50%;
 }
 
 .guidelineColor__stripe {
-  height: $euiSizeL;
-  line-height: $euiSizeL;
+  height: $ouiSizeL;
+  line-height: $ouiSizeL;
 }
 
 .guidelineColor__test {
   text-align: center;
-  font-size: $euiFontSizeS;
+  font-size: $ouiFontSizeS;
 }
 
 // sass-lint:disable no-important
 .guidelineColor__title {
-  color: $euiColorMediumShade !important;
+  color: $ouiColorMediumShade !important;
 }
 
 .guideColorPalette__swatch {
   span {
-    height: $euiSize;
-    width: $euiSizeL;
+    height: $ouiSize;
+    width: $ouiSizeL;
   }
 
   &--small span {
     width: auto;
-    height: $euiSizeS;
+    height: $ouiSizeS;
   }
 }
 
 .guideColorPalette__swatchHolder {
-  border-radius: $euiBorderRadius;
+  border-radius: $ouiBorderRadius;
   overflow: hidden;
 }
 
@@ -48,24 +59,24 @@
 // Sass guideline page
 // -------------------------------------
 .guideSass__swatchItem + .guideSass__swatchItem {
-  margin-top: $euiSize;
+  margin-top: $ouiSize;
 }
 
 .guideSass__swatch {
-  height: $euiSizeL;
-  width: $euiSizeL;
+  height: $ouiSizeL;
+  width: $ouiSizeL;
 }
 
 .guideSass__swatch--danger {
-  background: $euiColorDanger;
+  background: $ouiColorDanger;
 }
 
 .guideSass__swatch--dangerTint {
-  background: tint($euiColorDanger, 30%);
+  background: tint($ouiColorDanger, 30%);
 }
 
 .guideSass__swatch--dangerShade {
-  background: shade($euiColorDanger, 30%);
+  background: shade($ouiColorDanger, 30%);
 }
 
 // sass-lint:disable no-color-literals
@@ -79,105 +90,105 @@
 }
 
 .guideSass__levelRow {
-  padding-left: $euiSizeS;
+  padding-left: $ouiSizeS;
 }
 
 .guideSass__levelRow + .guideSass__levelRow {
-  margin-top: $euiSizeS;
+  margin-top: $ouiSizeS;
 }
 
 .guideSass__level {
-  background-color: $euiColorMediumShade;
+  background-color: $ouiColorMediumShade;
   transform: scaleY(.5) rotate(30deg) skew(-30deg, 0deg);
-  width: $euiSize;
-  height: $euiSize;
+  width: $ouiSize;
+  height: $ouiSize;
 }
 
 .guideSass__sizeRow + .guideSass__sizeRow {
-  margin-top: $euiSize;
+  margin-top: $ouiSize;
 }
 
 .guideSass__size {
-  background-color: $euiColorFullShade;
+  background-color: $ouiColorFullShade;
   display: inline-block;
 }
 
 .guideSass__sizeItem {
-  width: $euiSizeXXL;
+  width: $ouiSizeXXL;
   text-align: right;
 }
 
 .guideSass__fontSizeExample + .guideSass__fontSizeExample {
-  margin-top: $euiSizeL;
+  margin-top: $ouiSizeL;
 }
 
 .guideSass__fontSize {
-  margin-bottom: $euiSizeS;
+  margin-bottom: $ouiSizeS;
 }
 
-.guideSass__fontSize--euiFontSizeXS {
-  @include euiFontSizeXS;
+.guideSass__fontSize--ouiFontSizeXS {
+  @include ouiFontSizeXS;
 }
 
-.guideSass__fontSize--euiFontSizeS {
-  @include euiFontSizeS;
+.guideSass__fontSize--ouiFontSizeS {
+  @include ouiFontSizeS;
 }
 
-.guideSass__fontSize--euiFontSizeM {
-  @include euiFontSizeM;
+.guideSass__fontSize--ouiFontSizeM {
+  @include ouiFontSizeM;
 }
 
-.guideSass__fontSize--euiFontSize {
-  @include euiFontSize;
+.guideSass__fontSize--ouiFontSize {
+  @include ouiFontSize;
 }
 
-.guideSass__fontSize--euiFontSizeL {
-  @include euiFontSizeL;
+.guideSass__fontSize--ouiFontSizeL {
+  @include ouiFontSizeL;
 }
 
-.guideSass__fontSize--euiFontSizeXL {
-  @include euiFontSizeXL;
+.guideSass__fontSize--ouiFontSizeXL {
+  @include ouiFontSizeXL;
 }
 
-.guideSass__fontSize--euiFontSizeXXL {
-  @include euiFontSizeXL;
+.guideSass__fontSize--ouiFontSizeXXL {
+  @include ouiFontSizeXL;
 }
 
 .guideSass__shadow {
-  padding: $euiSizeXXL;
-  background: $euiColorEmptyShade;
-  border-radius: $euiBorderRadius;
+  padding: $ouiSizeXXL;
+  background: $ouiColorEmptyShade;
+  border-radius: $ouiBorderRadius;
 
   & + .guideSass__shadow {
-    margin-top: $euiSizeXL;
+    margin-top: $ouiSizeXL;
   }
 }
 
 .colorGuidelines_colorPreviewTooLight rect {
-  stroke: transparentize($euiColorLightShade, lightOrDarkTheme(.5, 0));
+  stroke: transparentize($ouiColorLightShade, lightOrDarkTheme(.5, 0));
   stroke-width: .25px;
 }
 
-.guideSass__shadow--euiSlightShadow { @include euiSlightShadow; }
-.guideSass__shadow--euiBottomShadowSmall { @include euiBottomShadowSmall; }
-.guideSass__shadow--euiBottomShadowMedium { @include euiBottomShadowMedium; }
-.guideSass__shadow--euiBottomShadowFlat { @include euiBottomShadowFlat; }
-.guideSass__shadow--euiBottomShadow { @include euiBottomShadow; }
-.guideSass__shadow--euiBottomShadowLarge { @include euiBottomShadowLarge; }
+.guideSass__shadow--ouiSlightShadow { @include ouiSlightShadow; }
+.guideSass__shadow--ouiBottomShadowSmall { @include ouiBottomShadowSmall; }
+.guideSass__shadow--ouiBottomShadowMedium { @include ouiBottomShadowMedium; }
+.guideSass__shadow--ouiBottomShadowFlat { @include ouiBottomShadowFlat; }
+.guideSass__shadow--ouiBottomShadow { @include ouiBottomShadow; }
+.guideSass__shadow--ouiBottomShadowLarge { @include ouiBottomShadowLarge; }
 
 .guideSass__overflowShadows {
   overflow-y: hidden;
   height: 200px;
 
   .guideSass__overflowShadowText {
-    @include euiYScrollWithShadows;
-    padding: $euiSizeS;
+    @include ouiYScrollWithShadows;
+    padding: $ouiSizeS;
   }
 }
 
 .guideSass__overflowShadowsX {
-  @include euiXScrollWithShadows;
-  padding: $euiSizeS $euiSizeS 0;
+  @include ouiXScrollWithShadows;
+  padding: $ouiSizeS $ouiSizeS 0;
 
   .guideSass__overflowShadowTextX {
     width: 150%;
@@ -185,65 +196,65 @@
 }
 
 .guideSass__shadow--color {
-  @include euiBottomShadowLarge(desaturate($euiColorPrimary, 30%));
+  @include ouiBottomShadowLarge(desaturate($ouiColorPrimary, 30%));
 }
 
 .guideSass__border {
   display: flex;
-  padding: $euiSize;
+  padding: $ouiSize;
 }
 
 .guideSass__border--radius {
-  border: $euiBorderThin;
-  border-radius: $euiBorderRadius;
+  border: $ouiBorderThin;
+  border-radius: $ouiBorderRadius;
 }
 
 .guideSass__border--radiusSmall {
-  border: $euiBorderThin;
-  border-radius: $euiBorderRadiusSmall;
+  border: $ouiBorderThin;
+  border-radius: $ouiBorderRadiusSmall;
 }
 
-.guideSass__border--euiBorderThin {
-  border: $euiBorderThin;
+.guideSass__border--ouiBorderThin {
+  border: $ouiBorderThin;
 }
 
-.guideSass__border--euiBorderThick {
-  border: $euiBorderThick;
+.guideSass__border--ouiBorderThick {
+  border: $ouiBorderThick;
 }
 
-.guideSass__border--euiBorderEditable {
-  border: $euiBorderEditable;
+.guideSass__border--ouiBorderEditable {
+  border: $ouiBorderEditable;
 }
 
 .guideSass__fontFamily {
-  font-size: $euiSizeL;
-  background: $euiColorDarkestShade;
+  font-size: $ouiSizeL;
+  background: $ouiColorDarkestShade;
   text-align: center;
-  width: $euiSizeXL * 2;
-  height: $euiSizeXL;
-  line-height: $euiSizeXL;
-  color: $euiColorEmptyShade;
+  width: $ouiSizeXL * 2;
+  height: $ouiSizeXL;
+  line-height: $ouiSizeXL;
+  color: $ouiColorEmptyShade;
 
   &--code {
-    @include euiCodeFont;
+    @include ouiCodeFont;
   }
 }
 
 .guideSass__animRow + .guideSass__animRow {
-  margin-top: $euiSizeL;
+  margin-top: $ouiSizeL;
 }
 
 .guideSass__animParent {
-  background: $euiColorLightestShade;
-  height: $euiSize;
-  margin-top: $euiSizeS;
+  background: $ouiColorLightestShade;
+  height: $ouiSize;
+  margin-top: $ouiSizeS;
   position: relative;
 }
 
 .guideSass__animChild {
-  width: $euiSize;
-  height: $euiSize;
-  background: $euiColorDarkestShade;
+  width: $ouiSize;
+  height: $ouiSize;
+  background: $ouiColorDarkestShade;
   position: absolute;
   left: 0;
 }
@@ -251,47 +262,47 @@
 .guideSass__animRow:hover .guideSass__animChild {
   transition-property: left;
   transition-timing-function: linear;
-  left: calc(100% - #{$euiSize});
+  left: calc(100% - #{$ouiSize});
 }
 
-.guideSass__animRow--euiAnimSpeedExtraFast:hover .guideSass__animChild {
-  transition-duration: $euiAnimSpeedExtraFast;
+.guideSass__animRow--ouiAnimSpeedExtraFast:hover .guideSass__animChild {
+  transition-duration: $ouiAnimSpeedExtraFast;
 }
 
-.guideSass__animRow--euiAnimSpeedFast:hover .guideSass__animChild {
-  transition-duration: $euiAnimSpeedFast;
+.guideSass__animRow--ouiAnimSpeedFast:hover .guideSass__animChild {
+  transition-duration: $ouiAnimSpeedFast;
 }
 
-.guideSass__animRow--euiAnimSpeedNormal:hover .guideSass__animChild {
-  transition-duration: $euiAnimSpeedNormal;
+.guideSass__animRow--ouiAnimSpeedNormal:hover .guideSass__animChild {
+  transition-duration: $ouiAnimSpeedNormal;
 }
 
-.guideSass__animRow--euiAnimSpeedSlow:hover .guideSass__animChild {
-  transition-duration: $euiAnimSpeedSlow;
+.guideSass__animRow--ouiAnimSpeedSlow:hover .guideSass__animChild {
+  transition-duration: $ouiAnimSpeedSlow;
 }
 
-.guideSass__animRow--euiAnimSpeedExtraSlow:hover .guideSass__animChild {
-  transition-duration: $euiAnimSpeedExtraSlow;
+.guideSass__animRow--ouiAnimSpeedExtraSlow:hover .guideSass__animChild {
+  transition-duration: $ouiAnimSpeedExtraSlow;
 }
 
-.guideSass__animRow--euiAnimSlightBounce:hover .guideSass__animChild {
-  transition-timing-function: $euiAnimSlightBounce;
-  transition-duration: $euiAnimSpeedSlow;
+.guideSass__animRow--ouiAnimSlightBounce:hover .guideSass__animChild {
+  transition-timing-function: $ouiAnimSlightBounce;
+  transition-duration: $ouiAnimSpeedSlow;
 }
 
-.guideSass__animRow--euiAnimSlightResistance:hover .guideSass__animChild {
-  transition-timing-function: $euiAnimSlightResistance;
-  transition-duration: $euiAnimSpeedSlow;
+.guideSass__animRow--ouiAnimSlightResistance:hover .guideSass__animChild {
+  transition-timing-function: $ouiAnimSlightResistance;
+  transition-duration: $ouiAnimSpeedSlow;
 }
 
 .guideSass__breakpointExample {
-  padding: $euiSize;
-  color: $euiColorGhost;
+  padding: $ouiSize;
+  color: $ouiColorGhost;
 }
 
 .guideSass__themedBox {
-  padding: $euiSize;
-  border-left: $euiBorderThick;
+  padding: $ouiSize;
+  border-left: $ouiBorderThick;
 }
 
 // sass-lint:disable no-color-literals
@@ -309,29 +320,29 @@
 }
 
 .guideSass__contrastExample {
-  $backgroundColor: tintOrShade($euiColorWarning, 90%, 70%);
+  $backgroundColor: tintOrShade($ouiColorWarning, 90%, 70%);
 
   background: $backgroundColor;
-  color: makeHighContrastColor($euiColorWarning, $backgroundColor);
-  padding: $euiSize;
-  border-left: $euiBorderThick;
-  border-color: $euiColorWarning;
+  color: makeHighContrastColor($ouiColorWarning, $backgroundColor);
+  padding: $ouiSize;
+  border-left: $ouiBorderThick;
+  border-color: $ouiColorWarning;
 
   .square {
-    fill: makeGraphicContrastColor($euiColorWarning, $backgroundColor);
+    fill: makeGraphicContrastColor($ouiColorWarning, $backgroundColor);
     vertical-align: bottom;
   }
 }
 
 .guideSection__emptyBox {
-  background-color: $euiColorEmptyShade;
+  background-color: $ouiColorEmptyShade;
 }
 
 @import 'colors/color_section';
 
-@include euiBreakpoint('xl') {
+@include ouiBreakpoint('xl') {
   .guideSass__breakpointExample {
-    background: $euiColorPrimary;
+    background: $ouiColorPrimary;
 
     &:before {
       content: 'You are currently in the xl breakpoint';
@@ -339,9 +350,9 @@
   }
 }
 
-@include euiBreakpoint('l') {
+@include ouiBreakpoint('l') {
   .guideSass__breakpointExample {
-    background: $euiColorSecondary;
+    background: $ouiColorSecondary;
 
     &:before {
       content: 'You are currently in the l breakpoint';
@@ -349,9 +360,9 @@
   }
 }
 
-@include euiBreakpoint('m') {
+@include ouiBreakpoint('m') {
   .guideSass__breakpointExample {
-    background: $euiColorAccent;
+    background: $ouiColorAccent;
 
     &:before {
       content: 'You are currently in the m breakpoint';
@@ -359,9 +370,9 @@
   }
 }
 
-@include euiBreakpoint('s') {
+@include ouiBreakpoint('s') {
   .guideSass__breakpointExample {
-    background: $euiColorWarning;
+    background: $ouiColorWarning;
 
     &:before {
       content: 'You are currently in the s breakpoint';
@@ -369,9 +380,9 @@
   }
 }
 
-@include euiBreakpoint('xs') {
+@include ouiBreakpoint('xs') {
   .guideSass__breakpointExample {
-    background: $euiColorDanger;
+    background: $ouiColorDanger;
 
     &:before {
       content: 'You are currently in the xs breakpoint';

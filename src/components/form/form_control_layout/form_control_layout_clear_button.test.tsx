@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,13 +30,13 @@
 
 import React from 'react';
 import { render } from 'enzyme';
-import { EuiFormControlLayoutClearButton } from './form_control_layout_clear_button';
+import { OuiFormControlLayoutClearButton } from './form_control_layout_clear_button';
 import { requiredProps } from '../../../test';
 
-describe('EuiFormControlLayoutClearButton', () => {
+describe('OuiFormControlLayoutClearButton', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFormControlLayoutClearButton
+      <OuiFormControlLayoutClearButton
         onClick={() => null}
         {...requiredProps}
       />
@@ -36,7 +47,7 @@ describe('EuiFormControlLayoutClearButton', () => {
 
   test('size is rendered', () => {
     const component = render(
-      <EuiFormControlLayoutClearButton onClick={() => null} size="s" />
+      <OuiFormControlLayoutClearButton onClick={() => null} size="s" />
     );
 
     expect(component).toMatchSnapshot();

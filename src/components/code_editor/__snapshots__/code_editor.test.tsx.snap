@@ -1,79 +1,79 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCodeEditor behavior hint element should be disabled when the ui ace box gains focus 1`] = `
+exports[`OuiCodeEditor behavior hint element should be disabled when the ui ace box gains focus 1`] = `
 <button
-  class="euiCodeEditorKeyboardHint"
+  class="ouiCodeEditorKeyboardHint"
   data-test-subj="codeEditorHint"
   id="generated-id_codeEditor"
 >
   <p
-    class="euiText"
+    class="ouiText"
   >
     Press Enter to start editing.
   </p>
   <p
-    class="euiText"
+    class="ouiText"
   >
     When you're done, press Escape to stop editing.
   </p>
 </button>
 `;
 
-exports[`EuiCodeEditor behavior hint element should be enabled when the ui ace box loses focus 1`] = `
+exports[`OuiCodeEditor behavior hint element should be enabled when the ui ace box loses focus 1`] = `
 <button
-  class="euiCodeEditorKeyboardHint"
+  class="ouiCodeEditorKeyboardHint"
   data-test-subj="codeEditorHint"
   id="generated-id_codeEditor"
 >
   <p
-    class="euiText"
+    class="ouiText"
   >
     Press Enter to start editing.
   </p>
   <p
-    class="euiText"
+    class="ouiText"
   >
     When you're done, press Escape to stop editing.
   </p>
 </button>
 `;
 
-exports[`EuiCodeEditor behavior hint element should be tabable 1`] = `
+exports[`OuiCodeEditor behavior hint element should be tabable 1`] = `
 <button
-  class="euiCodeEditorKeyboardHint"
+  class="ouiCodeEditorKeyboardHint"
   data-test-subj="codeEditorHint"
   id="generated-id_codeEditor"
 >
   <p
-    class="euiText"
+    class="ouiText"
   >
     Press Enter to start editing.
   </p>
   <p
-    class="euiText"
+    class="ouiText"
   >
     When you're done, press Escape to stop editing.
   </p>
 </button>
 `;
 
-exports[`EuiCodeEditor is rendered 1`] = `
+exports[`OuiCodeEditor is rendered 1`] = `
 <div
-  class="euiCodeEditorWrapper"
+  class="ouiCodeEditorWrapper"
   data-test-subj="test subject string"
 >
   <button
-    class="euiCodeEditorKeyboardHint"
+    class="ouiCodeEditorKeyboardHint"
     data-test-subj="codeEditorHint"
     id="generated-id_codeEditor"
   >
     <p
-      class="euiText"
+      class="ouiText"
     >
       Press Enter to start editing.
     </p>
     <p
-      class="euiText"
+      class="ouiText"
     >
       When you're done, press Escape to stop editing.
     </p>
@@ -171,23 +171,23 @@ exports[`EuiCodeEditor is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiCodeEditor props aria attributes allows setting aria-describedby on textbox 1`] = `
+exports[`OuiCodeEditor props aria attributes allows setting aria-describedby on textbox 1`] = `
 <div
-  class="euiCodeEditorWrapper"
+  class="ouiCodeEditorWrapper"
   data-test-subj="codeEditorContainer"
 >
   <button
-    class="euiCodeEditorKeyboardHint"
+    class="ouiCodeEditorKeyboardHint"
     data-test-subj="codeEditorHint"
     id="generated-id_codeEditor"
   >
     <p
-      class="euiText"
+      class="ouiText"
     >
       Press Enter to start editing.
     </p>
     <p
-      class="euiText"
+      class="ouiText"
     >
       When you're done, press Escape to stop editing.
     </p>
@@ -285,23 +285,23 @@ exports[`EuiCodeEditor props aria attributes allows setting aria-describedby on 
 </div>
 `;
 
-exports[`EuiCodeEditor props aria attributes allows setting aria-labelledby on textbox 1`] = `
+exports[`OuiCodeEditor props aria attributes allows setting aria-labelledby on textbox 1`] = `
 <div
-  class="euiCodeEditorWrapper"
+  class="ouiCodeEditorWrapper"
   data-test-subj="codeEditorContainer"
 >
   <button
-    class="euiCodeEditorKeyboardHint"
+    class="ouiCodeEditorKeyboardHint"
     data-test-subj="codeEditorHint"
     id="generated-id_codeEditor"
   >
     <p
-      class="euiText"
+      class="ouiText"
     >
       Press Enter to start editing.
     </p>
     <p
-      class="euiText"
+      class="ouiText"
     >
       When you're done, press Escape to stop editing.
     </p>
@@ -399,23 +399,23 @@ exports[`EuiCodeEditor props aria attributes allows setting aria-labelledby on t
 </div>
 `;
 
-exports[`EuiCodeEditor props isReadOnly renders alternate hint text 1`] = `
+exports[`OuiCodeEditor props isReadOnly renders alternate hint text 1`] = `
 <div
-  class="euiCodeEditorWrapper"
+  class="ouiCodeEditorWrapper"
   data-test-subj="codeEditorContainer"
 >
   <button
-    class="euiCodeEditorKeyboardHint"
+    class="ouiCodeEditorKeyboardHint"
     data-test-subj="codeEditorHint"
     id="generated-id_codeEditor"
   >
     <p
-      class="euiText"
+      class="ouiText"
     >
       Press Enter to start interacting with the code.
     </p>
     <p
-      class="euiText"
+      class="ouiText"
     >
       When you're done, press Escape to stop interacting with the code.
     </p>
@@ -513,23 +513,23 @@ exports[`EuiCodeEditor props isReadOnly renders alternate hint text 1`] = `
 </div>
 `;
 
-exports[`EuiCodeEditor props theme renders terminal theme 1`] = `
+exports[`OuiCodeEditor props theme renders terminal theme 1`] = `
 <div
-  class="euiCodeEditorWrapper"
+  class="ouiCodeEditorWrapper"
   data-test-subj="codeEditorContainer"
 >
   <button
-    class="euiCodeEditorKeyboardHint"
+    class="ouiCodeEditorKeyboardHint"
     data-test-subj="codeEditorHint"
     id="generated-id_codeEditor"
   >
     <p
-      class="euiText"
+      class="ouiText"
     >
       Press Enter to start editing.
     </p>
     <p
-      class="euiText"
+      class="ouiText"
     >
       When you're done, press Escape to stop editing.
     </p>

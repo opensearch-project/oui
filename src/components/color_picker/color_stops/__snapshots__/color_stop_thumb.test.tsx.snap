@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders EuiColorStopThumb 1`] = `
+exports[`renders OuiColorStopThumb 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover testClass1 testClass2"
+  class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover testClass1 testClass2"
   style="left:0%"
 >
   <div
-    class="euiPopover__anchor euiColorStopPopover__anchor"
+    class="ouiPopover__anchor ouiColorStopPopover__anchor"
   >
     <button
       aria-disabled="false"
@@ -14,8 +14,8 @@ exports[`renders EuiColorStopThumb 1`] = `
       aria-valuemax="24"
       aria-valuemin="0"
       aria-valuenow="0"
-      class="euiRangeThumb euiColorStopThumb"
-      data-test-subj="euiColorStopThumb"
+      class="ouiRangeThumb ouiColorStopThumb"
+      data-test-subj="ouiColorStopThumb"
       role="slider"
       style="background:rgb(255,0,0)"
       tabindex="-1"
@@ -26,13 +26,13 @@ exports[`renders EuiColorStopThumb 1`] = `
 </div>
 `;
 
-exports[`renders disabled EuiColorStopThumb 1`] = `
+exports[`renders disabled OuiColorStopThumb 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover testClass1 testClass2"
+  class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover testClass1 testClass2"
   style="left:0%"
 >
   <div
-    class="euiPopover__anchor euiColorStopPopover__anchor"
+    class="ouiPopover__anchor ouiColorStopPopover__anchor"
   >
     <button
       aria-disabled="true"
@@ -40,8 +40,8 @@ exports[`renders disabled EuiColorStopThumb 1`] = `
       aria-valuemax="24"
       aria-valuemin="0"
       aria-valuenow="0"
-      class="euiRangeThumb euiColorStopThumb"
-      data-test-subj="euiColorStopThumb"
+      class="ouiRangeThumb ouiColorStopThumb"
+      data-test-subj="ouiColorStopThumb"
       disabled=""
       role="slider"
       style="background:rgb(255,0,0)"
@@ -53,13 +53,13 @@ exports[`renders disabled EuiColorStopThumb 1`] = `
 </div>
 `;
 
-exports[`renders picker-only EuiColorStopThumb 1`] = `
+exports[`renders picker-only OuiColorStopThumb 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover testClass1 testClass2"
+  class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover testClass1 testClass2"
   style="left:0%"
 >
   <div
-    class="euiPopover__anchor euiColorStopPopover__anchor"
+    class="ouiPopover__anchor ouiColorStopPopover__anchor"
   >
     <button
       aria-disabled="false"
@@ -67,8 +67,8 @@ exports[`renders picker-only EuiColorStopThumb 1`] = `
       aria-valuemax="24"
       aria-valuemin="0"
       aria-valuenow="0"
-      class="euiRangeThumb euiColorStopThumb"
-      data-test-subj="euiColorStopThumb"
+      class="ouiRangeThumb ouiColorStopThumb"
+      data-test-subj="ouiColorStopThumb"
       role="slider"
       style="background:rgb(255,0,0)"
       tabindex="-1"
@@ -79,13 +79,13 @@ exports[`renders picker-only EuiColorStopThumb 1`] = `
 </div>
 `;
 
-exports[`renders readOnly EuiColorStopThumb 1`] = `
+exports[`renders readOnly OuiColorStopThumb 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover testClass1 testClass2"
+  class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover testClass1 testClass2"
   style="left:0%"
 >
   <div
-    class="euiPopover__anchor euiColorStopPopover__anchor"
+    class="ouiPopover__anchor ouiColorStopPopover__anchor"
   >
     <button
       aria-disabled="false"
@@ -93,8 +93,8 @@ exports[`renders readOnly EuiColorStopThumb 1`] = `
       aria-valuemax="24"
       aria-valuemin="0"
       aria-valuenow="0"
-      class="euiRangeThumb euiColorStopThumb"
-      data-test-subj="euiColorStopThumb"
+      class="ouiRangeThumb ouiColorStopThumb"
+      data-test-subj="ouiColorStopThumb"
       role="slider"
       style="background:rgb(255,0,0)"
       tabindex="-1"
@@ -105,13 +105,13 @@ exports[`renders readOnly EuiColorStopThumb 1`] = `
 </div>
 `;
 
-exports[`renders swatch-only EuiColorStopThumb 1`] = `
+exports[`renders swatch-only OuiColorStopThumb 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover testClass1 testClass2"
+  class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover testClass1 testClass2"
   style="left:0%"
 >
   <div
-    class="euiPopover__anchor euiColorStopPopover__anchor"
+    class="ouiPopover__anchor ouiColorStopPopover__anchor"
   >
     <button
       aria-disabled="false"
@@ -119,8 +119,8 @@ exports[`renders swatch-only EuiColorStopThumb 1`] = `
       aria-valuemax="24"
       aria-valuemin="0"
       aria-valuenow="0"
-      class="euiRangeThumb euiColorStopThumb"
-      data-test-subj="euiColorStopThumb"
+      class="ouiRangeThumb ouiColorStopThumb"
+      data-test-subj="ouiColorStopThumb"
       role="slider"
       style="background:rgb(255,0,0)"
       tabindex="-1"

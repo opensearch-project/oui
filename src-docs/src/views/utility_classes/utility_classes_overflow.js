@@ -1,52 +1,63 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiText,
-  EuiCode,
-  EuiSpacer,
-  EuiPanel,
-  EuiFlexItem,
-  EuiFlexGroup,
+  OuiText,
+  OuiCode,
+  OuiSpacer,
+  OuiPanel,
+  OuiFlexItem,
+  OuiFlexGroup,
 } from '../../../../src/components';
 import { UtilityClassesSection } from './utility_classes_section';
 
 export default () => (
   <>
     <UtilityClassesSection
-      code="eui-yScroll"
+      code="oui-yScroll"
       description={
         <>
           <p>
             Quick utility for adding vertical scrolling to a container. Requires
             the wrapping element to control the height and to have
-            <EuiCode language="sass">overflow-y: hidden;</EuiCode> applied.
+            <OuiCode language="sass">overflow-y: hidden;</OuiCode> applied.
           </p>
           <p>
             If you would like the content to fade at the top and bottom, use the
-            variant <EuiCode>eui-yScrollWithShadows</EuiCode>.
+            variant <OuiCode>oui-yScrollWithShadows</OuiCode>.
           </p>
           <dl>
             <dt>Sass mixins</dt>
             <dd>
-              <EuiCode language="scss">@include euiYScroll;</EuiCode>
+              <OuiCode language="scss">@include ouiYScroll;</OuiCode>
             </dd>
             <dd>
-              <EuiCode language="scss">@include euiYScrollWithShadows;</EuiCode>
+              <OuiCode language="scss">@include ouiYScrollWithShadows;</OuiCode>
             </dd>
           </dl>
         </>
       }
       example={
-        <EuiPanel
+        <OuiPanel
           color="warning"
           paddingSize="none"
           style={{
             height: 180,
             overflowY: 'hidden',
           }}>
-          <EuiText
+          <OuiText
             tabIndex={0}
-            className="eui-yScrollWithShadows"
+            className="oui-yScrollWithShadows"
             size="s"
             style={{ padding: 16 }}>
             <p>
@@ -67,63 +78,63 @@ export default () => (
               ape-descended life forms are so amazingly primitive that they
               still think digital watches are a pretty neat idea.
             </p>
-          </EuiText>
-        </EuiPanel>
+          </OuiText>
+        </OuiPanel>
       }
       snippet={`<BodyContent
   style={{ height: 200, overflowY: 'hidden' }}>
   <BodyScroll
-    className="eui-yScrollWithShadows"
+    className="oui-yScrollWithShadows"
     tabIndex={0}
   />
 </BodyContent>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-xScroll"
+      code="oui-xScroll"
       description={
         <>
           <p>Quick utility for adding horizontal scrolling to a container.</p>
           <p>
             If you would like the content to fade at the left and right, use the
-            variant <EuiCode>eui-xScrollWithShadows</EuiCode>. It is recommended
+            variant <OuiCode>oui-xScrollWithShadows</OuiCode>. It is recommended
             to add padding to the sides of the inner content so the mask
             doesn&apos;t overlay it.
           </p>
           <dl>
             <dt>Sass mixins</dt>
             <dd>
-              <EuiCode language="scss">@include euiXScroll;</EuiCode>
+              <OuiCode language="scss">@include ouiXScroll;</OuiCode>
             </dd>
             <dd>
-              <EuiCode language="scss">@include euiXScrollWithShadows;</EuiCode>
+              <OuiCode language="scss">@include ouiXScrollWithShadows;</OuiCode>
             </dd>
           </dl>
         </>
       }
       example={
-        <EuiPanel color="warning" paddingSize="none">
-          <div tabIndex={0} className="eui-xScrollWithShadows">
-            <EuiText size="s" style={{ width: '150%', padding: 16 }}>
+        <OuiPanel color="warning" paddingSize="none">
+          <div tabIndex={0} className="oui-xScrollWithShadows">
+            <OuiText size="s" style={{ width: '150%', padding: 16 }}>
               <p>
                 Orbiting this at a distance of roughly ninety-two million miles
                 is an utterly insignificant little blue green planet whose
                 ape-descended life forms are so amazingly primitive that they
                 still think digital watches are a pretty neat idea.
               </p>
-            </EuiText>
+            </OuiText>
           </div>
-        </EuiPanel>
+        </OuiPanel>
       }
       snippet={`<BodyScroll
-  className="eui-xScrollWithShadows"
+  className="oui-xScrollWithShadows"
   tabIndex={0}>
   <BodyContent style={{ width: '150%', padding: 16 }} />
 </BodyScroll>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-fullHeight"
+      code="oui-fullHeight"
       description={
         <>
           <p>
@@ -133,27 +144,27 @@ export default () => (
           </p>
           <p>
             It applies{' '}
-            <EuiCode language="sass">height: 100%; overflow: hidden;</EuiCode>{' '}
-            but also adds <EuiCode language="sass">flex: 1 1 auto;</EuiCode> for
-            uses within <EuiCode language="sass">flex</EuiCode> containers.
+            <OuiCode language="sass">height: 100%; overflow: hidden;</OuiCode>{' '}
+            but also adds <OuiCode language="sass">flex: 1 1 auto;</OuiCode> for
+            uses within <OuiCode language="sass">flex</OuiCode> containers.
           </p>
           <dl>
             <dt>Sass mixins</dt>
             <dd>
-              <EuiCode language="scss">@include euiFullHeight;</EuiCode>
+              <OuiCode language="scss">@include ouiFullHeight;</OuiCode>
             </dd>
           </dl>
         </>
       }
       example={
         <div style={{ height: 180 }}>
-          <EuiFlexGroup
-            className="eui-fullHeight"
+          <OuiFlexGroup
+            className="oui-fullHeight"
             gutterSize="s"
             responsive={false}>
-            <EuiFlexItem>
-              <EuiPanel className="eui-yScroll" color="warning" tabIndex="0">
-                <EuiText size="s">
+            <OuiFlexItem>
+              <OuiPanel className="oui-yScroll" color="warning" tabIndex="0">
+                <OuiText size="s">
                   <p>
                     Orbiting this at a distance of roughly ninety-two million
                     miles is an utterly insignificant little blue green planet
@@ -161,12 +172,12 @@ export default () => (
                     that they still think digital watches are a pretty neat
                     idea.
                   </p>
-                </EuiText>
-              </EuiPanel>
-            </EuiFlexItem>
-            <EuiFlexItem>
-              <EuiPanel className="eui-yScroll" color="warning" tabIndex="0">
-                <EuiText size="s">
+                </OuiText>
+              </OuiPanel>
+            </OuiFlexItem>
+            <OuiFlexItem>
+              <OuiPanel className="oui-yScroll" color="warning" tabIndex="0">
+                <OuiText size="s">
                   <p>
                     Orbiting this at a distance of roughly ninety-two million
                     miles is an utterly insignificant little blue green planet
@@ -174,24 +185,24 @@ export default () => (
                     that they still think digital watches are a pretty neat
                     idea.
                   </p>
-                </EuiText>
-              </EuiPanel>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+                </OuiText>
+              </OuiPanel>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         </div>
       }
       snippet={`<BodyContent style={{ height: 180 }}>
-  <EuiFlexGroup
-    className="eui-fullHeight" responsive={false}>
-    <EuiFlexItem>
+  <OuiFlexGroup
+    className="oui-fullHeight" responsive={false}>
+    <OuiFlexItem>
       <BodyScroll
-        className="eui-yScroll" tabIndex="0"/>
-    </EuiFlexItem>
-    <EuiFlexItem>
+        className="oui-yScroll" tabIndex="0"/>
+    </OuiFlexItem>
+    <OuiFlexItem>
       <BodyScroll
-        className="eui-yScroll" tabIndex="0"/>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+        className="oui-yScroll" tabIndex="0"/>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 </BodyContent>`}
     />
   </>

@@ -1,117 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPanel is rendered 1`] = `
+exports[`OuiPanel is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow testClass1 testClass2"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiPanel props borderRadius m is rendered 1`] = `
+exports[`OuiPanel props borderRadius m is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow"
 />
 `;
 
-exports[`EuiPanel props borderRadius none is rendered 1`] = `
+exports[`OuiPanel props borderRadius none is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusNone euiPanel--plain euiPanel--hasShadow"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--hasShadow"
 />
 `;
 
-exports[`EuiPanel props color accent is rendered 1`] = `
+exports[`OuiPanel props color accent is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--accent euiPanel--noShadow euiPanel--noBorder"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--accent ouiPanel--noShadow ouiPanel--noBorder"
 />
 `;
 
-exports[`EuiPanel props color danger is rendered 1`] = `
+exports[`OuiPanel props color danger is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--danger euiPanel--noShadow euiPanel--noBorder"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--danger ouiPanel--noShadow ouiPanel--noBorder"
 />
 `;
 
-exports[`EuiPanel props color plain is rendered 1`] = `
+exports[`OuiPanel props color plain is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow"
 />
 `;
 
-exports[`EuiPanel props color primary is rendered 1`] = `
+exports[`OuiPanel props color primary is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--primary euiPanel--noShadow euiPanel--noBorder"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--primary ouiPanel--noShadow ouiPanel--noBorder"
 />
 `;
 
-exports[`EuiPanel props color subdued is rendered 1`] = `
+exports[`OuiPanel props color subdued is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder"
 />
 `;
 
-exports[`EuiPanel props color success is rendered 1`] = `
+exports[`OuiPanel props color success is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--success euiPanel--noShadow euiPanel--noBorder"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--success ouiPanel--noShadow ouiPanel--noBorder"
 />
 `;
 
-exports[`EuiPanel props color transparent is rendered 1`] = `
+exports[`OuiPanel props color transparent is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--transparent euiPanel--noShadow"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--transparent ouiPanel--noShadow"
 />
 `;
 
-exports[`EuiPanel props color warning is rendered 1`] = `
+exports[`OuiPanel props color warning is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--warning euiPanel--noShadow euiPanel--noBorder"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--warning ouiPanel--noShadow ouiPanel--noBorder"
 />
 `;
 
-exports[`EuiPanel props grow can be false 1`] = `
+exports[`OuiPanel props grow can be false 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPanel--flexGrowZero"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--flexGrowZero"
 />
 `;
 
-exports[`EuiPanel props hasBorder can be false 1`] = `
+exports[`OuiPanel props hasBorder can be false 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPanel--noBorder"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--noBorder"
 />
 `;
 
-exports[`EuiPanel props hasBorder can be true 1`] = `
+exports[`OuiPanel props hasBorder can be true 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPanel--hasBorder"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--hasBorder"
 />
 `;
 
-exports[`EuiPanel props hasShadow can be false 1`] = `
+exports[`OuiPanel props hasShadow can be false 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow"
 />
 `;
 
-exports[`EuiPanel props paddingSize l is rendered 1`] = `
+exports[`OuiPanel props paddingSize l is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow"
+  class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow"
 />
 `;
 
-exports[`EuiPanel props paddingSize m is rendered 1`] = `
+exports[`OuiPanel props paddingSize m is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow"
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow"
 />
 `;
 
-exports[`EuiPanel props paddingSize none is rendered 1`] = `
+exports[`OuiPanel props paddingSize none is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow"
+  class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow"
 />
 `;
 
-exports[`EuiPanel props paddingSize s is rendered 1`] = `
+exports[`OuiPanel props paddingSize s is rendered 1`] = `
 <div
-  class="euiPanel euiPanel--paddingSmall euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow"
+  class="ouiPanel ouiPanel--paddingSmall ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow"
 />
 `;

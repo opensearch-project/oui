@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSelectableSearch is rendered 1`] = `
+exports[`OuiSelectableSearch is rendered 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--fullWidth"
+  class="ouiFormControlLayout ouiFormControlLayout--fullWidth"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="ouiFormControlLayout__childrenWrapper"
   >
     <input
       aria-autocomplete="list"
@@ -15,22 +15,22 @@ exports[`EuiSelectableSearch is rendered 1`] = `
       aria-label="aria-label"
       aria-owns="list"
       autocomplete="off"
-      class="euiFieldSearch euiFieldSearch--fullWidth euiSelectableSearch testClass1 testClass2"
+      class="ouiFieldSearch ouiFieldSearch--fullWidth ouiSelectableSearch testClass1 testClass2"
       data-test-subj="test subject string"
       role="combobox"
       type="search"
       value=""
     />
     <div
-      class="euiFormControlLayoutIcons"
+      class="ouiFormControlLayoutIcons"
     >
       <span
-        class="euiFormControlLayoutCustomIcon"
+        class="ouiFormControlLayoutCustomIcon"
       >
         <span
           aria-hidden="true"
-          class="euiFormControlLayoutCustomIcon__icon"
-          data-euiicon-type="search"
+          class="ouiFormControlLayoutCustomIcon__icon"
+          data-ouiicon-type="search"
         />
       </span>
     </div>
@@ -38,12 +38,12 @@ exports[`EuiSelectableSearch is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableSearch props defaultValue 1`] = `
+exports[`OuiSelectableSearch props defaultValue 1`] = `
 <div
-  class="euiFormControlLayout euiFormControlLayout--fullWidth"
+  class="ouiFormControlLayout ouiFormControlLayout--fullWidth"
 >
   <div
-    class="euiFormControlLayout__childrenWrapper"
+    class="ouiFormControlLayout__childrenWrapper"
   >
     <input
       aria-autocomplete="list"
@@ -52,35 +52,35 @@ exports[`EuiSelectableSearch props defaultValue 1`] = `
       aria-haspopup="listbox"
       aria-owns="list"
       autocomplete="off"
-      class="euiFieldSearch euiFieldSearch--fullWidth euiFieldSearch-isClearable euiSelectableSearch"
+      class="ouiFieldSearch ouiFieldSearch--fullWidth ouiFieldSearch-isClearable ouiSelectableSearch"
       role="combobox"
       type="search"
       value="Mi"
     />
     <div
-      class="euiFormControlLayoutIcons"
+      class="ouiFormControlLayoutIcons"
     >
       <span
-        class="euiFormControlLayoutCustomIcon"
+        class="ouiFormControlLayoutCustomIcon"
       >
         <span
           aria-hidden="true"
-          class="euiFormControlLayoutCustomIcon__icon"
-          data-euiicon-type="search"
+          class="ouiFormControlLayoutCustomIcon__icon"
+          data-ouiicon-type="search"
         />
       </span>
     </div>
     <div
-      class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+      class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
     >
       <button
         aria-label="Clear input"
-        class="euiFormControlLayoutClearButton"
+        class="ouiFormControlLayoutClearButton"
         type="button"
       >
         <span
-          class="euiFormControlLayoutClearButton__icon"
-          data-euiicon-type="cross"
+          class="ouiFormControlLayoutClearButton__icon"
+          data-ouiicon-type="cross"
         />
       </button>
     </div>

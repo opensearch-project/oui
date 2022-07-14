@@ -1,39 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders EuiTable 1`] = `
+exports[`renders OuiTable 1`] = `
 <table
   aria-label="aria-label"
-  class="euiTable testClass1 testClass2 euiTable--responsive"
+  class="ouiTable testClass1 testClass2 ouiTable--responsive"
   data-test-subj="test subject string"
   tabindex="-1"
 >
   <thead>
     <tr>
       <th
-        class="euiTableHeaderCell"
+        class="ouiTableHeaderCell"
         role="columnheader"
         scope="col"
       >
         <span
-          class="euiTableCellContent"
+          class="ouiTableCellContent"
         >
           <span
-            class="euiTableCellContent__text"
+            class="ouiTableCellContent__text"
           >
             Hi Title
           </span>
         </span>
       </th>
       <th
-        class="euiTableHeaderCell"
+        class="ouiTableHeaderCell"
         role="columnheader"
         scope="col"
       >
         <span
-          class="euiTableCellContent"
+          class="ouiTableCellContent"
         >
           <span
-            class="euiTableCellContent__text"
+            class="ouiTableCellContent__text"
           >
             Bye Title
           </span>
@@ -43,16 +43,16 @@ exports[`renders EuiTable 1`] = `
   </thead>
   <tbody>
     <tr
-      class="euiTableRow"
+      class="ouiTableRow"
     >
       <td
-        class="euiTableRowCell"
+        class="ouiTableRowCell"
       >
         <div
-          class="euiTableCellContent"
+          class="ouiTableCellContent"
         >
           <span
-            class="euiTableCellContent__text"
+            class="ouiTableCellContent__text"
           >
             Hi
           </span>
@@ -60,16 +60,16 @@ exports[`renders EuiTable 1`] = `
       </td>
     </tr>
     <tr
-      class="euiTableRow"
+      class="ouiTableRow"
     >
       <td
-        class="euiTableRowCell"
+        class="ouiTableRowCell"
       >
         <div
-          class="euiTableCellContent"
+          class="ouiTableCellContent"
         >
           <span
-            class="euiTableCellContent__text"
+            class="ouiTableCellContent__text"
           >
             Bye
           </span>

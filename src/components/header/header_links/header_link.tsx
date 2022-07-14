@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,9 +31,9 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../../button';
+import { OuiButtonEmpty, OuiButtonEmptyProps } from '../../button';
 
-export type EuiHeaderLinkProps = EuiButtonEmptyProps & {
+export type OuiHeaderLinkProps = OuiButtonEmptyProps & {
   /**
    * Simple prop to update color based on active state.
    * Can be overridden with `color`
@@ -30,15 +41,15 @@ export type EuiHeaderLinkProps = EuiButtonEmptyProps & {
   isActive?: boolean;
 };
 
-export const EuiHeaderLink: FunctionComponent<EuiHeaderLinkProps> = ({
+export const OuiHeaderLink: FunctionComponent<OuiHeaderLinkProps> = ({
   isActive,
   className,
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeaderLink',
+    'ouiHeaderLink',
     {
-      'euiHeaderLink-isActive': isActive,
+      'ouiHeaderLink-isActive': isActive,
     },
     className
   );
@@ -49,5 +60,5 @@ export const EuiHeaderLink: FunctionComponent<EuiHeaderLinkProps> = ({
     className: classes,
   };
 
-  return <EuiButtonEmpty {...(props as EuiButtonEmptyProps)} />;
+  return <OuiButtonEmpty {...(props as OuiButtonEmptyProps)} />;
 };

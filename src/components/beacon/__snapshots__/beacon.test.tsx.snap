@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiBeacon accepts size 1`] = `
+exports[`OuiBeacon accepts size 1`] = `
 <div
   aria-label="aria-label"
-  class="euiBeacon testClass1 testClass2"
+  class="ouiBeacon testClass1 testClass2"
   data-test-subj="test subject string"
   style="height:14px;width:14px"
 />
 `;
 
-exports[`EuiBeacon is rendered 1`] = `
+exports[`OuiBeacon is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiBeacon testClass1 testClass2"
+  class="ouiBeacon testClass1 testClass2"
   data-test-subj="test subject string"
   style="height:12px;width:12px"
 />

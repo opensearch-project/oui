@@ -1,38 +1,49 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import find from 'lodash/find';
 import findIndex from 'lodash/findIndex';
 
 import {
-  EuiCollapsibleNav,
-  EuiCollapsibleNavGroup,
+  OuiCollapsibleNav,
+  OuiCollapsibleNavGroup,
 } from '../../../../src/components/collapsible_nav';
 import {
-  EuiHeaderSectionItemButton,
-  EuiHeaderLogo,
-  EuiHeader,
+  OuiHeaderSectionItemButton,
+  OuiHeaderLogo,
+  OuiHeader,
 } from '../../../../src/components/header';
-import { EuiIcon } from '../../../../src/components/icon';
-import { EuiButtonEmpty } from '../../../../src/components/button';
-import { EuiPageTemplate } from '../../../../src/components/page';
+import { OuiIcon } from '../../../../src/components/icon';
+import { OuiButtonEmpty } from '../../../../src/components/button';
+import { OuiPageTemplate } from '../../../../src/components/page';
 import {
-  EuiPinnableListGroup,
-  EuiListGroupItem,
-  EuiPinnableListGroupItemProps,
+  OuiPinnableListGroup,
+  OuiListGroupItem,
+  OuiPinnableListGroupItemProps,
 } from '../../../../src/components/list_group';
-import { EuiFlexItem } from '../../../../src/components/flex';
-import { EuiHorizontalRule } from '../../../../src/components/horizontal_rule';
+import { OuiFlexItem } from '../../../../src/components/flex';
+import { OuiHorizontalRule } from '../../../../src/components/horizontal_rule';
 
 import {
   DeploymentsGroup,
   KibanaNavLinks,
   SecurityGroup,
 } from './collapsible_nav_list';
-import { EuiShowFor } from '../../../../src/components/responsive';
-import { EuiImage } from '../../../../src/components/image';
+import { OuiShowFor } from '../../../../src/components/responsive';
+import { OuiImage } from '../../../../src/components/image';
 import contentSvg from '../../images/content.svg';
 import { useExitPath } from '../../services/routing/routing';
 
-const TopLinks: EuiPinnableListGroupItemProps[] = [
+const TopLinks: OuiPinnableListGroupItemProps[] = [
   {
     label: 'Home',
     iconType: 'home',
@@ -42,7 +53,7 @@ const TopLinks: EuiPinnableListGroupItemProps[] = [
     pinnable: false,
   },
 ];
-const KibanaLinks: EuiPinnableListGroupItemProps[] = KibanaNavLinks.map(
+const KibanaLinks: OuiPinnableListGroupItemProps[] = KibanaNavLinks.map(
   (link) => {
     return {
       ...link,
@@ -50,7 +61,7 @@ const KibanaLinks: EuiPinnableListGroupItemProps[] = KibanaNavLinks.map(
     };
   }
 );
-const LearnLinks: EuiPinnableListGroupItemProps[] = [
+const LearnLinks: OuiPinnableListGroupItemProps[] = [
   { label: 'Docs', onClick: () => {} },
   { label: 'Blogs', onClick: () => {} },
   { label: 'Webinars', onClick: () => {} },
@@ -95,7 +106,7 @@ const CollapsibleNavAll = () => {
    * Pinning
    */
   const [pinnedItems, setPinnedItems] = useState<
-    EuiPinnableListGroupItemProps[]
+    OuiPinnableListGroupItemProps[]
   >(JSON.parse(String(localStorage.getItem('pinnedItems'))) || []);
 
   const addPin = (item: any) => {
@@ -120,9 +131,9 @@ const CollapsibleNavAll = () => {
   };
 
   function alterLinksWithCurrentState(
-    links: EuiPinnableListGroupItemProps[],
+    links: OuiPinnableListGroupItemProps[],
     showPinned = false
-  ): EuiPinnableListGroupItemProps[] {
+  ): OuiPinnableListGroupItemProps[] {
     return links.map((link) => {
       const { pinned, ...rest } = link;
       return {
@@ -132,40 +143,40 @@ const CollapsibleNavAll = () => {
     });
   }
 
-  function addLinkNameToPinTitle(listItem: EuiPinnableListGroupItemProps) {
+  function addLinkNameToPinTitle(listItem: OuiPinnableListGroupItemProps) {
     return `Pin ${listItem.label} to top`;
   }
 
-  function addLinkNameToUnpinTitle(listItem: EuiPinnableListGroupItemProps) {
+  function addLinkNameToUnpinTitle(listItem: OuiPinnableListGroupItemProps) {
     return `Unpin ${listItem.label}`;
   }
 
   const collapsibleNav = (
-    <EuiCollapsibleNav
+    <OuiCollapsibleNav
       id="guideCollapsibleNavAllExampleNav"
       aria-label="Main navigation"
       isOpen={navIsOpen}
       isDocked={navIsDocked}
       button={
-        <EuiHeaderSectionItemButton
+        <OuiHeaderSectionItemButton
           aria-label="Toggle main navigation"
           onClick={() => setNavIsOpen(!navIsOpen)}>
-          <EuiIcon type={'menu'} size="m" aria-hidden="true" />
-        </EuiHeaderSectionItemButton>
+          <OuiIcon type={'menu'} size="m" aria-hidden="true" />
+        </OuiHeaderSectionItemButton>
       }
       onClose={() => setNavIsOpen(false)}>
       {/* Dark deployments section */}
-      <EuiFlexItem grow={false} style={{ flexShrink: 0 }}>
+      <OuiFlexItem grow={false} style={{ flexShrink: 0 }}>
         {DeploymentsGroup}
-      </EuiFlexItem>
+      </OuiFlexItem>
 
       {/* Shaded pinned section always with a home item */}
-      <EuiFlexItem grow={false} style={{ flexShrink: 0 }}>
-        <EuiCollapsibleNavGroup
+      <OuiFlexItem grow={false} style={{ flexShrink: 0 }}>
+        <OuiCollapsibleNavGroup
           background="light"
-          className="eui-yScroll"
+          className="oui-yScroll"
           style={{ maxHeight: '40vh' }}>
-          <EuiPinnableListGroup
+          <OuiPinnableListGroup
             aria-label="Pinned links" // A11y : Since this group doesn't have a visible `title` it should be provided an accessible description
             listItems={alterLinksWithCurrentState(TopLinks).concat(
               alterLinksWithCurrentState(pinnedItems, true)
@@ -177,22 +188,22 @@ const CollapsibleNavAll = () => {
             gutterSize="none"
             size="s"
           />
-        </EuiCollapsibleNavGroup>
-      </EuiFlexItem>
+        </OuiCollapsibleNavGroup>
+      </OuiFlexItem>
 
-      <EuiHorizontalRule margin="none" />
+      <OuiHorizontalRule margin="none" />
 
       {/* BOTTOM */}
-      <EuiFlexItem className="eui-yScroll">
+      <OuiFlexItem className="oui-yScroll">
         {/* Kibana section */}
-        <EuiCollapsibleNavGroup
+        <OuiCollapsibleNavGroup
           title="Kibana"
           iconType="logoKibana"
           isCollapsible={true}
           initialIsOpen={openGroups.includes('Kibana')}
           onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Kibana')}>
-          <EuiPinnableListGroup
-            aria-label="Kibana" // A11y : EuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
+          <OuiPinnableListGroup
+            aria-label="Kibana" // A11y : OuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
             listItems={alterLinksWithCurrentState(KibanaLinks)}
             pinTitle={addLinkNameToPinTitle}
             onPinClick={addPin}
@@ -201,20 +212,20 @@ const CollapsibleNavAll = () => {
             gutterSize="none"
             size="s"
           />
-        </EuiCollapsibleNavGroup>
+        </OuiCollapsibleNavGroup>
 
         {/* Security callout */}
         {SecurityGroup}
 
         {/* Learn section */}
-        <EuiCollapsibleNavGroup
+        <OuiCollapsibleNavGroup
           title="Learn"
           iconType="training"
           isCollapsible={true}
           initialIsOpen={openGroups.includes('Learn')}
           onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Learn')}>
-          <EuiPinnableListGroup
-            aria-label="Learn" // A11y : EuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
+          <OuiPinnableListGroup
+            aria-label="Learn" // A11y : OuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
             listItems={alterLinksWithCurrentState(LearnLinks)}
             pinTitle={addLinkNameToPinTitle}
             onPinClick={addPin}
@@ -223,12 +234,12 @@ const CollapsibleNavAll = () => {
             gutterSize="none"
             size="s"
           />
-        </EuiCollapsibleNavGroup>
+        </OuiCollapsibleNavGroup>
 
         {/* Docking button only for larger screens that can support it*/}
-        <EuiShowFor sizes={['l', 'xl']}>
-          <EuiCollapsibleNavGroup>
-            <EuiListGroupItem
+        <OuiShowFor sizes={['l', 'xl']}>
+          <OuiCollapsibleNavGroup>
+            <OuiListGroupItem
               size="xs"
               color="subdued"
               label={`${navIsDocked ? 'Undock' : 'Dock'} navigation`}
@@ -241,22 +252,22 @@ const CollapsibleNavAll = () => {
               }}
               iconType={navIsDocked ? 'lock' : 'lockOpen'}
             />
-          </EuiCollapsibleNavGroup>
-        </EuiShowFor>
-      </EuiFlexItem>
-    </EuiCollapsibleNav>
+          </OuiCollapsibleNavGroup>
+        </OuiShowFor>
+      </OuiFlexItem>
+    </OuiCollapsibleNav>
   );
 
   const leftSectionItems = [
     collapsibleNav,
-    <EuiHeaderLogo href={exitPath} iconType="logoElastic">
+    <OuiHeaderLogo href={exitPath} iconType="logoElastic">
       Elastic
-    </EuiHeaderLogo>,
+    </OuiHeaderLogo>,
   ];
 
   return (
     <>
-      <EuiHeader
+      <OuiHeader
         position="fixed"
         sections={[
           {
@@ -265,17 +276,17 @@ const CollapsibleNavAll = () => {
           },
           {
             items: [
-              <EuiButtonEmpty href={exitPath} iconType="exit">
+              <OuiButtonEmpty href={exitPath} iconType="exit">
                 Exit full screen
-              </EuiButtonEmpty>,
+              </OuiButtonEmpty>,
             ],
           },
         ]}
       />
 
-      <EuiPageTemplate template="centeredBody">
-        <EuiImage size="fullWidth" alt="Fake paragraph" url={contentSvg} />
-      </EuiPageTemplate>
+      <OuiPageTemplate template="centeredBody">
+        <OuiImage size="fullWidth" alt="Fake paragraph" url={contentSvg} />
+      </OuiPageTemplate>
     </>
   );
 };

@@ -1,68 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiRadio is rendered 1`] = `
+exports[`OuiRadio is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiRadio euiRadio--noLabel testClass1 testClass2"
+  class="ouiRadio ouiRadio--noLabel testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <input
-    class="euiRadio__input"
+    class="ouiRadio__input"
     id="id"
     type="radio"
   />
   <div
-    class="euiRadio__circle"
+    class="ouiRadio__circle"
   />
 </div>
 `;
 
-exports[`EuiRadio props checked is rendered 1`] = `
+exports[`OuiRadio props checked is rendered 1`] = `
 <div
-  class="euiRadio euiRadio--noLabel"
+  class="ouiRadio ouiRadio--noLabel"
 >
   <input
     checked=""
-    class="euiRadio__input"
+    class="ouiRadio__input"
     id="id"
     type="radio"
   />
   <div
-    class="euiRadio__circle"
+    class="ouiRadio__circle"
   />
 </div>
 `;
 
-exports[`EuiRadio props disabled is rendered 1`] = `
+exports[`OuiRadio props disabled is rendered 1`] = `
 <div
-  class="euiRadio euiRadio--noLabel"
+  class="ouiRadio ouiRadio--noLabel"
 >
   <input
-    class="euiRadio__input"
+    class="ouiRadio__input"
     disabled=""
     id="id"
     type="radio"
   />
   <div
-    class="euiRadio__circle"
+    class="ouiRadio__circle"
   />
 </div>
 `;
 
-exports[`EuiRadio props label is rendered 1`] = `
+exports[`OuiRadio props label is rendered 1`] = `
 <div
-  class="euiRadio"
+  class="ouiRadio"
 >
   <input
-    class="euiRadio__input"
+    class="ouiRadio__input"
     id="id"
     type="radio"
   />
   <div
-    class="euiRadio__circle"
+    class="ouiRadio__circle"
   />
   <label
-    class="euiRadio__label"
+    class="ouiRadio__label"
     for="id"
   >
     <span>
@@ -72,21 +72,21 @@ exports[`EuiRadio props label is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiRadio props labelProps is rendered 1`] = `
+exports[`OuiRadio props labelProps is rendered 1`] = `
 <div
-  class="euiRadio"
+  class="ouiRadio"
 >
   <input
-    class="euiRadio__input"
+    class="ouiRadio__input"
     id="id"
     type="radio"
   />
   <div
-    class="euiRadio__circle"
+    class="ouiRadio__circle"
   />
   <label
     aria-label="aria-label"
-    class="euiRadio__label testClass1 testClass2"
+    class="ouiRadio__label testClass1 testClass2"
     data-test-subj="test subject string"
     for="id"
   >
@@ -95,18 +95,18 @@ exports[`EuiRadio props labelProps is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiRadio props value is rendered 1`] = `
+exports[`OuiRadio props value is rendered 1`] = `
 <div
-  class="euiRadio euiRadio--noLabel"
+  class="ouiRadio ouiRadio--noLabel"
 >
   <input
-    class="euiRadio__input"
+    class="ouiRadio__input"
     id="id"
     type="radio"
     value="bobbins"
   />
   <div
-    class="euiRadio__circle"
+    class="ouiRadio__circle"
   />
 </div>
 `;

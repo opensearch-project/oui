@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render, shallow, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiContextMenuItem, SIZES } from './context_menu_item';
+import { OuiContextMenuItem, SIZES } from './context_menu_item';
 
-describe('EuiContextMenuItem', () => {
+describe('OuiContextMenuItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiContextMenuItem {...requiredProps}>Hello</EuiContextMenuItem>
+      <OuiContextMenuItem {...requiredProps}>Hello</OuiContextMenuItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +47,7 @@ describe('EuiContextMenuItem', () => {
     describe('icon', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiContextMenuItem icon={<span className="euiIcon fa-user" />} />
+          <OuiContextMenuItem icon={<span className="ouiIcon fa-user" />} />
         );
 
         expect(component).toMatchSnapshot();
@@ -45,7 +56,7 @@ describe('EuiContextMenuItem', () => {
 
     describe('disabled', () => {
       test('is rendered', () => {
-        const component = render(<EuiContextMenuItem disabled />);
+        const component = render(<OuiContextMenuItem disabled />);
 
         expect(component).toMatchSnapshot();
       });
@@ -54,7 +65,7 @@ describe('EuiContextMenuItem', () => {
     describe('size', () => {
       SIZES.forEach((size) => {
         it(`${size} is rendered`, () => {
-          const component = render(<EuiContextMenuItem size={size} />);
+          const component = render(<OuiContextMenuItem size={size} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -64,7 +75,7 @@ describe('EuiContextMenuItem', () => {
     describe('onClick', () => {
       test('renders a button', () => {
         const component = render(
-          <EuiContextMenuItem {...requiredProps} onClick={() => {}} />
+          <OuiContextMenuItem {...requiredProps} onClick={() => {}} />
         );
 
         expect(component).toMatchSnapshot();
@@ -73,7 +84,7 @@ describe('EuiContextMenuItem', () => {
       test("isn't called upon instantiation", () => {
         const onClickHandler = jest.fn();
 
-        shallow(<EuiContextMenuItem onClick={onClickHandler} />);
+        shallow(<OuiContextMenuItem onClick={onClickHandler} />);
 
         expect(onClickHandler).not.toHaveBeenCalled();
       });
@@ -82,7 +93,7 @@ describe('EuiContextMenuItem', () => {
         const onClickHandler = jest.fn();
 
         const component = shallow(
-          <EuiContextMenuItem onClick={onClickHandler} />
+          <OuiContextMenuItem onClick={onClickHandler} />
         );
 
         component.simulate('click');
@@ -94,7 +105,7 @@ describe('EuiContextMenuItem', () => {
         const onClickHandler = jest.fn();
 
         const component = mount(
-          <EuiContextMenuItem disabled onClick={onClickHandler} />
+          <OuiContextMenuItem disabled onClick={onClickHandler} />
         );
 
         component.simulate('click');
@@ -106,7 +117,7 @@ describe('EuiContextMenuItem', () => {
     describe('href', () => {
       test('renders a link', () => {
         const component = render(
-          <EuiContextMenuItem {...requiredProps} href="url" />
+          <OuiContextMenuItem {...requiredProps} href="url" />
         );
 
         expect(component).toMatchSnapshot();
@@ -116,7 +127,7 @@ describe('EuiContextMenuItem', () => {
     describe('rel', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiContextMenuItem {...requiredProps} href="url" rel="help" />
+          <OuiContextMenuItem {...requiredProps} href="url" rel="help" />
         );
 
         expect(component).toMatchSnapshot();
@@ -126,7 +137,7 @@ describe('EuiContextMenuItem', () => {
     describe('target', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiContextMenuItem {...requiredProps} href="url" target="_blank" />
+          <OuiContextMenuItem {...requiredProps} href="url" target="_blank" />
         );
 
         expect(component).toMatchSnapshot();
@@ -135,7 +146,7 @@ describe('EuiContextMenuItem', () => {
 
     describe('hasPanel', () => {
       test('is rendered', () => {
-        const component = render(<EuiContextMenuItem hasPanel />);
+        const component = render(<OuiContextMenuItem hasPanel />);
 
         expect(component).toMatchSnapshot();
       });

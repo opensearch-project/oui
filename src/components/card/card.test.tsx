@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,16 +32,16 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiCard } from './card';
+import { OuiCard } from './card';
 
-import { EuiIcon } from '../icon';
-import { EuiI18n } from '../i18n';
+import { OuiIcon } from '../icon';
+import { OuiI18n } from '../i18n';
 import { COLORS, SIZES } from '../panel/panel';
 
-describe('EuiCard', () => {
+describe('OuiCard', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCard
+      <OuiCard
         title="Card title"
         description="Card description"
         {...requiredProps}
@@ -43,10 +54,10 @@ describe('EuiCard', () => {
   describe('props', () => {
     test('icon', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title="Card title"
           description="Card description"
-          icon={<EuiIcon className="myIconClass" type="apmApp" />}
+          icon={<OuiIcon className="myIconClass" type="apmApp" />}
         />
       );
 
@@ -55,7 +66,7 @@ describe('EuiCard', () => {
 
     test('a null icon', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title="Card title"
           description="Card description"
           icon={null}
@@ -67,7 +78,7 @@ describe('EuiCard', () => {
 
     test('hasBorder', () => {
       const component = render(
-        <EuiCard title="Card title" description="Card description" hasBorder />
+        <OuiCard title="Card title" description="Card description" hasBorder />
       );
 
       expect(component).toMatchSnapshot();
@@ -75,7 +86,7 @@ describe('EuiCard', () => {
 
     test('horizontal', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title="Card title"
           description="Card description"
           layout="horizontal"
@@ -87,7 +98,7 @@ describe('EuiCard', () => {
 
     test('image', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title="Card title"
           description="Card description"
           image={
@@ -107,7 +118,7 @@ describe('EuiCard', () => {
     describe('href', () => {
       it('supports href as a link', () => {
         const component = mount(
-          <EuiCard title="Hoi" description="There" href="#" />
+          <OuiCard title="Hoi" description="There" href="#" />
         );
 
         expect(component).toMatchSnapshot();
@@ -118,7 +129,7 @@ describe('EuiCard', () => {
       it('supports onClick as a link', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiCard title="Hoi" description="There" href="#" onClick={handler} />
+          <OuiCard title="Hoi" description="There" href="#" onClick={handler} />
         );
         component.find('a').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);
@@ -127,7 +138,7 @@ describe('EuiCard', () => {
       it('supports onClick as a button', () => {
         const handler = jest.fn();
         const component = mount(
-          <EuiCard title="Hoi" description="There" onClick={handler} />
+          <OuiCard title="Hoi" description="There" onClick={handler} />
         );
         component.find('button').simulate('click');
         expect(handler.mock.calls.length).toEqual(1);
@@ -136,7 +147,7 @@ describe('EuiCard', () => {
 
     test('titleElement', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title="Card title"
           description="Card description"
           titleElement="h4"
@@ -148,9 +159,9 @@ describe('EuiCard', () => {
 
     test('titleElement with nodes', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title={
-            <EuiI18n token="euiCard.title" default="Card title" /> // eslint-disable-line
+            <OuiI18n token="ouiCard.title" default="Card title" /> // eslint-disable-line
           }
           description="Card description"
           titleElement="h4"
@@ -162,7 +173,7 @@ describe('EuiCard', () => {
 
     test('titleSize', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title="Card title"
           description="Card description"
           titleSize="xs"
@@ -175,7 +186,7 @@ describe('EuiCard', () => {
     describe('accepts div props', () => {
       test('like style', () => {
         const component = render(
-          <EuiCard
+          <OuiCard
             title="Card title"
             description="Card description"
             style={{ minWidth: 0 }}
@@ -188,7 +199,7 @@ describe('EuiCard', () => {
 
     test('footer', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title="Card title"
           description="Card description"
           footer={<span>Footer</span>}
@@ -199,16 +210,16 @@ describe('EuiCard', () => {
     });
 
     test('children', () => {
-      const component = render(<EuiCard title="Card title">Child</EuiCard>);
+      const component = render(<OuiCard title="Card title">Child</OuiCard>);
 
       expect(component).toMatchSnapshot();
     });
 
     test('children with description', () => {
       const component = render(
-        <EuiCard title="Card title" description="Card description">
+        <OuiCard title="Card title" description="Card description">
           Child
-        </EuiCard>
+        </OuiCard>
       );
 
       expect(component).toMatchSnapshot();
@@ -216,7 +227,7 @@ describe('EuiCard', () => {
 
     test('textAlign', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title="Card title"
           description="Card description"
           textAlign="right"
@@ -228,7 +239,7 @@ describe('EuiCard', () => {
 
     test('isDisabled', () => {
       const component = render(
-        <EuiCard title="Card title" description="Card description" isDisabled />
+        <OuiCard title="Card title" description="Card description" isDisabled />
       );
 
       expect(component).toMatchSnapshot();
@@ -238,7 +249,7 @@ describe('EuiCard', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
           const component = render(
-            <EuiCard
+            <OuiCard
               title="Card title"
               description="Card description"
               paddingSize={size}
@@ -254,7 +265,7 @@ describe('EuiCard', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
           const component = render(
-            <EuiCard
+            <OuiCard
               title="Card title"
               description="Card description"
               display={color}
@@ -268,7 +279,7 @@ describe('EuiCard', () => {
 
     test('selectable', () => {
       const component = render(
-        <EuiCard
+        <OuiCard
           title="Card title"
           description="Card description"
           selectable={{
@@ -283,7 +294,7 @@ describe('EuiCard', () => {
 
   test('horizontal selectable', () => {
     const component = render(
-      <EuiCard
+      <OuiCard
         title="Card title"
         description="Card description"
         layout="horizontal"
@@ -298,7 +309,7 @@ describe('EuiCard', () => {
 
   test('betaBadgeProps renders href', () => {
     const component = render(
-      <EuiCard
+      <OuiCard
         title="Card title"
         description="Card description"
         betaBadgeProps={{

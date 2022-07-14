@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,33 +31,33 @@
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
-import { EuiIcon } from '../icon';
+import { OuiIcon } from '../icon';
 
 const sizeToClassNameMap = {
-  m: 'euiLoadingElastic--medium',
-  l: 'euiLoadingElastic--large',
-  xl: 'euiLoadingElastic--xLarge',
-  xxl: 'euiLoadingElastic--xxLarge',
+  m: 'ouiLoadingElastic--medium',
+  l: 'ouiLoadingElastic--large',
+  xl: 'ouiLoadingElastic--xLarge',
+  xxl: 'ouiLoadingElastic--xxLarge',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export interface EuiLoadingElasticProps {
+export interface OuiLoadingElasticProps {
   size?: keyof typeof sizeToClassNameMap;
 }
 
-export const EuiLoadingElastic: FunctionComponent<
-  CommonProps & HTMLAttributes<HTMLDivElement> & EuiLoadingElasticProps
+export const OuiLoadingElastic: FunctionComponent<
+  CommonProps & HTMLAttributes<HTMLDivElement> & OuiLoadingElasticProps
 > = ({ size = 'm', className, ...rest }) => {
   const classes = classNames(
-    'euiLoadingElastic',
+    'ouiLoadingElastic',
     sizeToClassNameMap[size],
     className
   );
 
   return (
     <span className={classes} {...rest}>
-      <EuiIcon type="logoElastic" size={size} />
+      <OuiIcon type="logoElastic" size={size} />
     </span>
   );
 };

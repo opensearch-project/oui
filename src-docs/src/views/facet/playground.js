@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiFacetButton, EuiFacetGroup } from '../../../../src/components/';
+import { OuiFacetButton, OuiFacetGroup } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 import * as t from '@babel/types';
 
 export const facetButtonConfig = () => {
-  const docgenInfo = Array.isArray(EuiFacetButton.__docgenInfo)
-    ? EuiFacetButton.__docgenInfo[0]
-    : EuiFacetButton.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiFacetButton.__docgenInfo)
+    ? OuiFacetButton.__docgenInfo[0]
+    : OuiFacetButton.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onClick = {
@@ -33,14 +44,14 @@ export const facetButtonConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiFacetButton',
+      componentName: 'OuiFacetButton',
       props: propsToUse,
       scope: {
-        EuiFacetButton,
+        OuiFacetButton,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFacetButton'],
+        '@opensearch-project/oui': {
+          named: ['OuiFacetButton'],
         },
       },
       customProps: {
@@ -61,36 +72,36 @@ export const facetButtonConfig = () => {
 };
 
 export const facetLayoutConfig = () => {
-  const docgenInfo = Array.isArray(EuiFacetGroup.__docgenInfo)
-    ? EuiFacetGroup.__docgenInfo[0]
-    : EuiFacetGroup.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiFacetGroup.__docgenInfo)
+    ? OuiFacetGroup.__docgenInfo[0]
+    : OuiFacetGroup.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
     type: PropTypes.ReactNode,
-    value: `<EuiFacetButton quantity={6}>
+    value: `<OuiFacetButton quantity={6}>
     Facet one
-  </EuiFacetButton>
-  <EuiFacetButton quantity={10}>
+  </OuiFacetButton>
+  <OuiFacetButton quantity={10}>
      Facet two
-  </EuiFacetButton>
-  <EuiFacetButton quantity={25}>
+  </OuiFacetButton>
+  <OuiFacetButton quantity={25}>
     Facet three
-  </EuiFacetButton>`,
+  </OuiFacetButton>`,
     hidden: false,
   };
 
   return {
     config: {
-      componentName: 'EuiFacetGroup',
+      componentName: 'OuiFacetGroup',
       props: propsToUse,
       scope: {
-        EuiFacetButton,
-        EuiFacetGroup,
+        OuiFacetButton,
+        OuiFacetGroup,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiFacetButton', 'EuiFacetGroup'],
+        '@opensearch-project/oui': {
+          named: ['OuiFacetButton', 'OuiFacetGroup'],
         },
       },
     },

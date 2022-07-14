@@ -1,24 +1,35 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Because of the animations and positioning involved, this code gets pretty
 // repetitive. What you generally need to know if you work in here is that
 // the positioning of the popovers (and the arrows attached to them)
 // is handled through absolute positioning and then animated through the use
 // of transforms.
 
-.euiPopover {
+.ouiPopover {
   display: inline-block;
   position: relative;
   vertical-align: middle;
   max-width: 100%;
 }
 
-.euiPopover__anchor {
+.ouiPopover__anchor {
   display: inline-block;
 }
 
-.euiPopover--displayBlock {
+.ouiPopover--displayBlock {
   display: block;
 
-  .euiPopover__anchor {
+  .ouiPopover__anchor {
     display: block;
   }
 }
@@ -28,37 +39,37 @@
  * 2. Animation happens on the panel. But don't animate when using the attached mode like for inputs
  * 3. Make sure the panel stays within the window.
  */
-.euiPopover__panel {
+.ouiPopover__panel {
   // Ignore linting for legibility of transition property, and the mixin performs an overwrite
   // sass-lint:disable-block indentation
-  @include euiBottomShadow($adjustBorders: true);
+  @include ouiBottomShadow($adjustBorders: true);
   position: absolute;
-  min-width: $euiButtonMinWidth; /* 1 */
-  max-width: calc(100vw - #{$euiSizeXL}); /* 3 */
+  min-width: $ouiButtonMinWidth; /* 1 */
+  max-width: calc(100vw - #{$ouiSizeXL}); /* 3 */
   backface-visibility: hidden;
   pointer-events: none;
   opacity: 0; /* 2 */
   visibility: hidden; /* 2 */
   transition: /* 2 */
-    opacity $euiAnimSlightBounce $euiAnimSpeedSlow,
-    visibility $euiAnimSlightBounce $euiAnimSpeedSlow;
+    opacity $ouiAnimSlightBounce $ouiAnimSpeedSlow,
+    visibility $ouiAnimSlightBounce $ouiAnimSpeedSlow;
 
   // Don't animate when using the attached mode like for inputs
-  &:not(.euiPopover__panel-isAttached) {
+  &:not(.ouiPopover__panel-isAttached) {
     transform: translateY(0) translateX(0) translateZ(0); /* 2 */
     transition: /* 2 */
-      opacity $euiAnimSlightBounce $euiAnimSpeedSlow,
-      visibility $euiAnimSlightBounce $euiAnimSpeedSlow,
-      transform $euiAnimSlightBounce ($euiAnimSpeedSlow + 100ms);
+      opacity $ouiAnimSlightBounce $ouiAnimSpeedSlow,
+      visibility $ouiAnimSlightBounce $ouiAnimSpeedSlow,
+      transform $ouiAnimSlightBounce ($ouiAnimSpeedSlow + 100ms);
   }
 
-  &.euiPopover__panel-isOpen {
+  &.ouiPopover__panel-isOpen {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 
-  .euiPopover__panelArrow {
+  .ouiPopover__panelArrow {
     position: absolute;
     width: 0;
     height: 0;
@@ -79,109 +90,109 @@
       width: 0;
     }
 
-    &.euiPopover__panelArrow--top {
+    &.ouiPopover__panelArrow--top {
       &:before {
-        bottom: -$euiPopoverArrowSize + 2;
-        border-left: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid transparent;
-        border-top: $euiPopoverArrowSize solid $euiBorderColor;
+        bottom: -$ouiPopoverArrowSize + 2;
+        border-left: $ouiPopoverArrowSize solid transparent;
+        border-right: $ouiPopoverArrowSize solid transparent;
+        border-top: $ouiPopoverArrowSize solid $ouiBorderColor;
       }
 
       &:after {
-        bottom: -$euiPopoverArrowSize + 3;
-        border-left: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid transparent;
-        border-top: $euiPopoverArrowSize solid $euiColorEmptyShade;
+        bottom: -$ouiPopoverArrowSize + 3;
+        border-left: $ouiPopoverArrowSize solid transparent;
+        border-right: $ouiPopoverArrowSize solid transparent;
+        border-top: $ouiPopoverArrowSize solid $ouiColorEmptyShade;
       }
     }
 
-    &.euiPopover__panelArrow--right {
+    &.ouiPopover__panelArrow--right {
       &:before {
-        left: -$euiPopoverArrowSize;
+        left: -$ouiPopoverArrowSize;
         top: 50%;
-        border-top: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid $euiBorderColor;
+        border-top: $ouiPopoverArrowSize solid transparent;
+        border-bottom: $ouiPopoverArrowSize solid transparent;
+        border-right: $ouiPopoverArrowSize solid $ouiBorderColor;
       }
 
       &:after {
-        left: -$euiPopoverArrowSize + 1;
+        left: -$ouiPopoverArrowSize + 1;
         top: 50%;
-        border-top: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid $euiColorEmptyShade;
+        border-top: $ouiPopoverArrowSize solid transparent;
+        border-bottom: $ouiPopoverArrowSize solid transparent;
+        border-right: $ouiPopoverArrowSize solid $ouiColorEmptyShade;
       }
     }
 
-    &.euiPopover__panelArrow--bottom {
+    &.ouiPopover__panelArrow--bottom {
       &:before {
-        top: -$euiPopoverArrowSize;
-        border-left: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid $euiBorderColor;
+        top: -$ouiPopoverArrowSize;
+        border-left: $ouiPopoverArrowSize solid transparent;
+        border-right: $ouiPopoverArrowSize solid transparent;
+        border-bottom: $ouiPopoverArrowSize solid $ouiBorderColor;
       }
 
       &:after {
-        top: -$euiPopoverArrowSize + 1;
-        border-left: $euiPopoverArrowSize solid transparent;
-        border-right: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid $euiColorEmptyShade;
+        top: -$ouiPopoverArrowSize + 1;
+        border-left: $ouiPopoverArrowSize solid transparent;
+        border-right: $ouiPopoverArrowSize solid transparent;
+        border-bottom: $ouiPopoverArrowSize solid $ouiColorEmptyShade;
       }
     }
 
-    &.euiPopover__panelArrow--left {
+    &.ouiPopover__panelArrow--left {
       &:before {
-        right: -$euiPopoverArrowSize + 1;
+        right: -$ouiPopoverArrowSize + 1;
         top: 50%;
-        border-top: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid transparent;
-        border-left: $euiPopoverArrowSize solid $euiBorderColor;
+        border-top: $ouiPopoverArrowSize solid transparent;
+        border-bottom: $ouiPopoverArrowSize solid transparent;
+        border-left: $ouiPopoverArrowSize solid $ouiBorderColor;
       }
 
       &:after {
-        right: -$euiPopoverArrowSize + 2;
+        right: -$ouiPopoverArrowSize + 2;
         top: 50%;
-        border-top: $euiPopoverArrowSize solid transparent;
-        border-bottom: $euiPopoverArrowSize solid transparent;
-        border-left: $euiPopoverArrowSize solid $euiColorEmptyShade;
+        border-top: $ouiPopoverArrowSize solid transparent;
+        border-bottom: $ouiPopoverArrowSize solid transparent;
+        border-left: $ouiPopoverArrowSize solid $ouiColorEmptyShade;
       }
     }
   }
 
 
-  &.euiPopover__panel-noArrow .euiPopover__panelArrow {
+  &.ouiPopover__panel-noArrow .ouiPopover__panelArrow {
     display: none;
   }
 
-  &.euiPopover__panel-isAttached.euiPopover__panel--bottom {
-    border-top-color: transparentize($euiBorderColor, .2);
+  &.ouiPopover__panel-isAttached.ouiPopover__panel--bottom {
+    border-top-color: transparentize($ouiBorderColor, .2);
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
 
-  &.euiPopover__panel-isAttached.euiPopover__panel--top {
-    @include euiBottomShadowFlat;
+  &.ouiPopover__panel-isAttached.ouiPopover__panel--top {
+    @include ouiBottomShadowFlat;
 
-    border-bottom-color: transparentize($euiBorderColor, .2);
+    border-bottom-color: transparentize($ouiBorderColor, .2);
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
 }
 
-.euiPopover__panel.euiPopover__panel-isAttached.euiPopover__panel--top,  /* 2 */
-.euiPopover__panel.euiPopover__panel-isOpen.euiPopover__panel--top {
-  transform: translateY($euiPopoverTranslateDistance) translateZ(0);
+.ouiPopover__panel.ouiPopover__panel-isAttached.ouiPopover__panel--top,  /* 2 */
+.ouiPopover__panel.ouiPopover__panel-isOpen.ouiPopover__panel--top {
+  transform: translateY($ouiPopoverTranslateDistance) translateZ(0);
 }
 
-.euiPopover__panel.euiPopover__panel-isAttached.euiPopover__panel--bottom,  /* 2 */
-.euiPopover__panel.euiPopover__panel-isOpen.euiPopover__panel--bottom {
-  transform: translateY(-$euiPopoverTranslateDistance) translateZ(0);
+.ouiPopover__panel.ouiPopover__panel-isAttached.ouiPopover__panel--bottom,  /* 2 */
+.ouiPopover__panel.ouiPopover__panel-isOpen.ouiPopover__panel--bottom {
+  transform: translateY(-$ouiPopoverTranslateDistance) translateZ(0);
 }
 
-.euiPopover__panel.euiPopover__panel-isOpen.euiPopover__panel--left {
-  transform: translateX($euiPopoverTranslateDistance) translateZ(0);
+.ouiPopover__panel.ouiPopover__panel-isOpen.ouiPopover__panel--left {
+  transform: translateX($ouiPopoverTranslateDistance) translateZ(0);
 }
 
-.euiPopover__panel.euiPopover__panel-isOpen.euiPopover__panel--right {
-  transform: translateX(-$euiPopoverTranslateDistance) translateZ(0);
+.ouiPopover__panel.ouiPopover__panel-isOpen.ouiPopover__panel--right {
+  transform: translateX(-$ouiPopoverTranslateDistance) translateZ(0);
 }

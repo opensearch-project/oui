@@ -1,18 +1,29 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiHealth,
-  EuiIcon,
-  EuiLink,
-  EuiToolTip,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSwitch,
-  EuiSpacer,
-  EuiCode,
+  OuiBasicTable,
+  OuiHealth,
+  OuiIcon,
+  OuiLink,
+  OuiToolTip,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSwitch,
+  OuiSpacer,
+  OuiCode,
 } from '../../../../../src/components';
 
 /*
@@ -95,38 +106,38 @@ export const Table = () => {
     {
       field: 'github',
       name: (
-        <EuiToolTip content="Their mascot is the Octokitty">
+        <OuiToolTip content="Their mascot is the Octokitty">
           <span>
             Github{' '}
-            <EuiIcon
+            <OuiIcon
               size="s"
               color="subdued"
               type="questionInCircle"
-              className="eui-alignTop"
+              className="oui-alignTop"
             />
           </span>
-        </EuiToolTip>
+        </OuiToolTip>
       ),
       render: (username) => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </OuiLink>
       ),
     },
     {
       field: 'dateOfBirth',
       name: (
-        <EuiToolTip content="Colloquially known as a 'birthday'">
+        <OuiToolTip content="Colloquially known as a 'birthday'">
           <span>
             Date of Birth{' '}
-            <EuiIcon
+            <OuiIcon
               size="s"
               color="subdued"
               type="questionInCircle"
-              className="eui-alignTop"
+              className="oui-alignTop"
             />
           </span>
-        </EuiToolTip>
+        </OuiToolTip>
       ),
       schema: 'date',
       render: (date) => formatDate(date, 'dobLong'),
@@ -134,17 +145,17 @@ export const Table = () => {
     {
       field: 'nationality',
       name: (
-        <EuiToolTip content="The nation in which this person resides">
+        <OuiToolTip content="The nation in which this person resides">
           <span>
             Nationality{' '}
-            <EuiIcon
+            <OuiIcon
               size="s"
               color="subdued"
               type="questionInCircle"
-              className="eui-alignTop"
+              className="oui-alignTop"
             />
           </span>
-        </EuiToolTip>
+        </OuiToolTip>
       ),
       render: (countryCode) => {
         const country = store.getCountry(countryCode);
@@ -154,23 +165,23 @@ export const Table = () => {
     {
       field: 'online',
       name: (
-        <EuiToolTip content="Free to talk or busy with business">
+        <OuiToolTip content="Free to talk or busy with business">
           <span>
             Online{' '}
-            <EuiIcon
+            <OuiIcon
               size="s"
               color="subdued"
               type="questionInCircle"
-              className="eui-alignTop"
+              className="oui-alignTop"
             />
           </span>
-        </EuiToolTip>
+        </OuiToolTip>
       ),
       schema: 'boolean',
       render: (online) => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <OuiHealth color={color}>{label}</OuiHealth>;
       },
     },
   ];
@@ -193,24 +204,24 @@ export const Table = () => {
 
   return (
     <div>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
-            label={<EuiCode>enableAllColumns</EuiCode>}
+      <OuiFlexGroup>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
+            label={<OuiCode>enableAllColumns</OuiCode>}
             checked={enableAll}
             onChange={() => setEnableAll((enabled) => !enabled)}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
-            label={<EuiCode>readOnly</EuiCode>}
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
+            label={<OuiCode>readOnly</OuiCode>}
             checked={readonly}
             onChange={() => setReadonly((readonly) => !readonly)}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer />
-      <EuiBasicTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+      <OuiSpacer />
+      <OuiBasicTable
         items={pageOfItems}
         columns={columns}
         pagination={pagination}

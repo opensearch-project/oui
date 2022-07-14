@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { FunctionComponent, ReactNode } from 'react';
 import classNames from 'classnames';
-import { EuiSplitPanel } from '../../../../../src/components/panel';
-import { _EuiSplitPanelInnerProps } from '../../../../../src/components/panel/split_panel/';
+import { OuiSplitPanel } from '../../../../../src/components/panel';
+import { _OuiSplitPanelInnerProps } from '../../../../../src/components/panel/split_panel/';
 
 export interface GuideSectionExample {
   example: ReactNode;
@@ -9,7 +20,7 @@ export interface GuideSectionExample {
   /** Forces display of a certain content (playground props table) */
   tabContent?: ReactNode;
   ghostBackground?: boolean;
-  demoPanelProps?: _EuiSplitPanelInnerProps;
+  demoPanelProps?: _OuiSplitPanelInnerProps;
 }
 
 export const GuideSectionExample: FunctionComponent<GuideSectionExample> = ({
@@ -24,19 +35,19 @@ export const GuideSectionExample: FunctionComponent<GuideSectionExample> = ({
   });
 
   return (
-    <EuiSplitPanel.Outer hasBorder hasShadow={false}>
-      <EuiSplitPanel.Inner
+    <OuiSplitPanel.Outer hasBorder hasShadow={false}>
+      <OuiSplitPanel.Inner
         color="plain"
         {...demoPanelProps}
         className={classes}>
         {example}
-      </EuiSplitPanel.Inner>
+      </OuiSplitPanel.Inner>
       {(tabs || tabContent) && (
-        <EuiSplitPanel.Inner paddingSize="none" color="subdued">
+        <OuiSplitPanel.Inner paddingSize="none" color="subdued">
           {tabs}
           {tabContent}
-        </EuiSplitPanel.Inner>
+        </OuiSplitPanel.Inner>
       )}
-    </EuiSplitPanel.Outer>
+    </OuiSplitPanel.Outer>
   );
 };

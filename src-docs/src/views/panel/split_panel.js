@@ -1,81 +1,92 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import {
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSplitPanel,
-  EuiText,
-  EuiCode,
+  OuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSplitPanel,
+  OuiText,
+  OuiCode,
 } from '../../../../src/components';
 
 export default () => (
   <>
-    <EuiFlexGroup gutterSize="l">
-      <EuiFlexItem>
-        <EuiSplitPanel.Outer grow>
-          <EuiSplitPanel.Inner>
-            <EuiText>
+    <OuiFlexGroup gutterSize="l">
+      <OuiFlexItem>
+        <OuiSplitPanel.Outer grow>
+          <OuiSplitPanel.Inner>
+            <OuiText>
               <p>Top panel</p>
-            </EuiText>
-          </EuiSplitPanel.Inner>
-          <EuiSplitPanel.Inner grow={false} color="subdued">
-            <EuiText>
+            </OuiText>
+          </OuiSplitPanel.Inner>
+          <OuiSplitPanel.Inner grow={false} color="subdued">
+            <OuiText>
               <p>
-                Bottom panel has <EuiCode>{'grow={false}'}</EuiCode>
+                Bottom panel has <OuiCode>{'grow={false}'}</OuiCode>
               </p>
-            </EuiText>
-          </EuiSplitPanel.Inner>
-        </EuiSplitPanel.Outer>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiSplitPanel.Outer grow={false}>
-          <EuiSplitPanel.Inner>
-            <EuiText>
+            </OuiText>
+          </OuiSplitPanel.Inner>
+        </OuiSplitPanel.Outer>
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiSplitPanel.Outer grow={false}>
+          <OuiSplitPanel.Inner>
+            <OuiText>
               <p>
-                Outer panel has <EuiCode>{'grow={false}'}</EuiCode>
+                Outer panel has <OuiCode>{'grow={false}'}</OuiCode>
               </p>
-            </EuiText>
-          </EuiSplitPanel.Inner>
-          <EuiSplitPanel.Inner grow={false} color="subdued">
-            <EuiText>
+            </OuiText>
+          </OuiSplitPanel.Inner>
+          <OuiSplitPanel.Inner grow={false} color="subdued">
+            <OuiText>
               <p>Bottom panel</p>
-            </EuiText>
-          </EuiSplitPanel.Inner>
-        </EuiSplitPanel.Outer>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiSplitPanel.Outer>
-          <EuiSplitPanel.Inner>
-            <EuiText>
+            </OuiText>
+          </OuiSplitPanel.Inner>
+        </OuiSplitPanel.Outer>
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiSplitPanel.Outer>
+          <OuiSplitPanel.Inner>
+            <OuiText>
               <p>Top panel</p>
-            </EuiText>
-          </EuiSplitPanel.Inner>
-          <EuiSplitPanel.Inner color="subdued">
-            <EuiText>
+            </OuiText>
+          </OuiSplitPanel.Inner>
+          <OuiSplitPanel.Inner color="subdued">
+            <OuiText>
               <p>Middle panel</p>
-            </EuiText>
-          </EuiSplitPanel.Inner>
-          <EuiSplitPanel.Inner color="danger">
-            <EuiText>
+            </OuiText>
+          </OuiSplitPanel.Inner>
+          <OuiSplitPanel.Inner color="danger">
+            <OuiText>
               <p>Danger panel</p>
-            </EuiText>
-          </EuiSplitPanel.Inner>
-        </EuiSplitPanel.Outer>
-      </EuiFlexItem>
-    </EuiFlexGroup>
-    <EuiSpacer />
-    <EuiSplitPanel.Outer direction="row">
-      <EuiSplitPanel.Inner>
-        <EuiText>
+            </OuiText>
+          </OuiSplitPanel.Inner>
+        </OuiSplitPanel.Outer>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+    <OuiSpacer />
+    <OuiSplitPanel.Outer direction="row">
+      <OuiSplitPanel.Inner>
+        <OuiText>
           <p>Left panel</p>
           <p>Has more content</p>
-        </EuiText>
-      </EuiSplitPanel.Inner>
-      <EuiSplitPanel.Inner color="subdued">
-        <EuiText>
+        </OuiText>
+      </OuiSplitPanel.Inner>
+      <OuiSplitPanel.Inner color="subdued">
+        <OuiText>
           <p>Right panel</p>
-        </EuiText>
-      </EuiSplitPanel.Inner>
-    </EuiSplitPanel.Outer>
+        </OuiText>
+      </OuiSplitPanel.Inner>
+    </OuiSplitPanel.Outer>
   </>
 );

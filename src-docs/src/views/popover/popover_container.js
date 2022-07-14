@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiCode,
-  EuiPanel,
-  EuiPopover,
-  EuiSpacer,
+  OuiButton,
+  OuiCode,
+  OuiPanel,
+  OuiPopover,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -17,31 +28,31 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton
+    <OuiButton
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}
       style={{ position: 'relative', left: 50 }}>
       Show constrained popover
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
-    <EuiPanel panelRef={setPanelRef}>
-      <EuiPopover
+    <OuiPanel panelRef={setPanelRef}>
+      <OuiPopover
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}
         container={panelRef}>
         <div>
-          Popover is positioned <EuiCode>downCenter</EuiCode> but constrained to
+          Popover is positioned <OuiCode>downCenter</OuiCode> but constrained to
           fit within the panel.
         </div>
-      </EuiPopover>
+      </OuiPopover>
 
       {/* create adequate room for the popover */}
-      <EuiSpacer size="xxl" />
-      <EuiSpacer size="xxl" />
-    </EuiPanel>
+      <OuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
+    </OuiPanel>
   );
 };

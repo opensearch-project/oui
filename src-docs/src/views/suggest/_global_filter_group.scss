@@ -1,28 +1,39 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 @import 'global_filter_item';
 @import 'saved_queries';
 
 .globalFilterGroup__filterBar {
-  margin-top: $euiSizeXS;
+  margin-top: $ouiSizeXS;
 }
 
 // sass-lint:disable quotes
 .globalFilterGroup__branch {
-  padding: $euiSize $euiSize $euiSizeS $euiSizeS;
+  padding: $ouiSize $ouiSize $ouiSizeS $ouiSizeS;
   background-repeat: no-repeat;
   background-position: right top;
-  background-image: url("data:image/svg+xml,%0A%3Csvg width='28px' height='28px' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='#{hexToRGB($euiColorLightShade)}'%3E%3Crect x='14' y='27' width='14' height='1'%3E%3C/rect%3E%3Crect x='0' y='0' width='1' height='14'%3E%3C/rect%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%0A%3Csvg width='28px' height='28px' viewBox='0 0 28 28' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='#{hexToRGB($ouiColorLightShade)}'%3E%3Crect x='14' y='27' width='14' height='1'%3E%3C/rect%3E%3Crect x='0' y='0' width='1' height='14'%3E%3C/rect%3E%3C/g%3E%3C/svg%3E");
 }
 
 .globalFilterGroup__wrapper {
   overflow: hidden;
-  transition: height $euiAnimSpeedNormal $euiAnimSlightResistance;
+  transition: height $ouiAnimSpeedNormal $ouiAnimSlightResistance;
 }
 
 .globalFilterGroup__filterFlexItem {
   overflow: hidden;
-  padding: $euiSizeS;
+  padding: $ouiSizeS;
 }
 
 .globalFilterBar__flexItem {
-  max-width: calc(100% - #{$euiSizeXS}); // Width minus margin around each flex itm
+  max-width: calc(100% - #{$ouiSizeXS}); // Width minus margin around each flex itm
 }

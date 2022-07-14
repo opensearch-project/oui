@@ -1,21 +1,32 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiProgress, EuiSpacer } from '../../../../src/components';
+import { OuiProgress, OuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiProgress value={20} max={100} size="xs" />
-    <EuiSpacer size="l" />
+    <OuiProgress value={20} max={100} size="xs" />
+    <OuiSpacer size="l" />
 
-    <EuiProgress value={40} max={100} size="xs" />
-    <EuiSpacer size="l" />
+    <OuiProgress value={40} max={100} size="xs" />
+    <OuiSpacer size="l" />
 
-    <EuiProgress value={60} max={100} size="s" />
-    <EuiSpacer size="l" />
+    <OuiProgress value={60} max={100} size="s" />
+    <OuiSpacer size="l" />
 
-    <EuiProgress value={80} max={100} size="m" />
-    <EuiSpacer size="l" />
+    <OuiProgress value={80} max={100} size="m" />
+    <OuiSpacer size="l" />
 
-    <EuiProgress value={90} max={100} size="l" />
+    <OuiProgress value={90} max={100} size="l" />
   </div>
 );

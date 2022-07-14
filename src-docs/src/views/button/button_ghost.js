@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiButtonIcon,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => {
@@ -16,61 +27,61 @@ export default () => {
   };
 
   return (
-    <EuiFlexGroup wrap gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton color="ghost" onClick={() => {}}>
+    <OuiFlexGroup wrap gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButton color="ghost" onClick={() => {}}>
           Ghost
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <OuiFlexItem grow={false}>
+        <OuiButton
           fill
           color="ghost"
           size="s"
           iconType="check"
           onClick={() => {}}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty size="s" color="ghost" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButtonEmpty size="s" color="ghost" onClick={() => {}}>
           small
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </OuiButtonEmpty>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon
           size="s"
           color="ghost"
           iconType="user"
           onClick={() => {}}
           aria-label="Your account"
         />
-      </EuiFlexItem>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="ghost" isLoading fill size="s">
+      <OuiFlexItem grow={false}>
+        <OuiButton color="ghost" isLoading fill size="s">
           Loading&hellip;
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="ghost" isLoading>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="ghost" isLoading>
           Loading&hellip;
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <OuiFlexItem grow={false}>
+        <OuiButton
           color="ghost"
           isSelected={toggle0On}
           fill={toggle0On}
           onClick={onToggle0Change}>
           Toggle me
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 };

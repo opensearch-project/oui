@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +31,7 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-export interface EuiRangeHighlightProps {
+export interface OuiRangeHighlightProps {
   className?: string;
   background?: string;
   compressed?: boolean;
@@ -33,7 +44,7 @@ export interface EuiRangeHighlightProps {
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
 }
 
-export const EuiRangeHighlight: FunctionComponent<EuiRangeHighlightProps> = ({
+export const OuiRangeHighlight: FunctionComponent<OuiRangeHighlightProps> = ({
   className,
   hasFocus,
   showTicks,
@@ -57,16 +68,16 @@ export const EuiRangeHighlight: FunctionComponent<EuiRangeHighlightProps> = ({
   };
 
   const classes = classNames(
-    'euiRangeHighlight',
+    'ouiRangeHighlight',
     {
-      'euiRangeHighlight--hasTicks': showTicks,
-      'euiRangeHighlight--compressed': compressed,
+      'ouiRangeHighlight--hasTicks': showTicks,
+      'ouiRangeHighlight--compressed': compressed,
     },
     className
   );
 
-  const progressClasses = classNames('euiRangeHighlight__progress', {
-    'euiRangeHighlight__progress--hasFocus': hasFocus,
+  const progressClasses = classNames('ouiRangeHighlight__progress', {
+    'ouiRangeHighlight__progress--hasFocus': hasFocus,
   });
 
   return (

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,9 +40,9 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiButtonIcon, EuiButtonIconPropsForButton } from '../button';
-import { EuiIcon, IconType, EuiIconProps } from '../icon';
-import { EuiToolTip } from '../tool_tip';
+import { OuiButtonIcon, OuiButtonIconPropsForButton } from '../button';
+import { OuiIcon, IconType, OuiIconProps } from '../icon';
+import { OuiToolTip } from '../tool_tip';
 import { useInnerText } from '../inner_text';
 import { ExclusiveUnion, CommonProps } from '../common';
 
@@ -40,24 +51,24 @@ import { validateHref } from '../../services/security/href_validator';
 
 type ItemSize = 'xs' | 's' | 'm' | 'l';
 const sizeToClassNameMap: { [size in ItemSize]: string } = {
-  xs: 'euiListGroupItem--xSmall',
-  s: 'euiListGroupItem--small',
-  m: 'euiListGroupItem--medium',
-  l: 'euiListGroupItem--large',
+  xs: 'ouiListGroupItem--xSmall',
+  s: 'ouiListGroupItem--small',
+  m: 'ouiListGroupItem--medium',
+  l: 'ouiListGroupItem--large',
 };
 export const SIZES = Object.keys(sizeToClassNameMap) as ItemSize[];
 
 type Color = 'inherit' | 'primary' | 'text' | 'subdued' | 'ghost';
 const colorToClassNameMap: { [color in Color]: string } = {
   inherit: '',
-  primary: 'euiListGroupItem--primary',
-  text: 'euiListGroupItem--text',
-  subdued: 'euiListGroupItem--subdued',
-  ghost: 'euiListGroupItem--ghost',
+  primary: 'ouiListGroupItem--primary',
+  text: 'ouiListGroupItem--text',
+  subdued: 'ouiListGroupItem--subdued',
+  ghost: 'ouiListGroupItem--ghost',
 };
 export const COLORS = Object.keys(colorToClassNameMap) as Color[];
 
-export type EuiListGroupItemProps = CommonProps &
+export type OuiListGroupItemProps = CommonProps &
   Omit<
     ExclusiveUnion<
       ExclusiveUnion<
@@ -104,14 +115,14 @@ export type EuiListGroupItemProps = CommonProps &
     rel?: string;
 
     /**
-     * Adds `EuiIcon` of `EuiIcon.type`
+     * Adds `OuiIcon` of `OuiIcon.type`
      */
     iconType?: IconType;
 
     /**
-     * Further extend the props applied to EuiIcon
+     * Further extend the props applied to OuiIcon
      */
-    iconProps?: Omit<EuiIconProps, 'type'>;
+    iconProps?: Omit<OuiIconProps, 'type'>;
 
     /**
      * Custom node to pass as the icon. Cannot be used in conjunction
@@ -125,10 +136,10 @@ export type EuiListGroupItemProps = CommonProps &
     showToolTip?: boolean;
 
     /**
-     * Adds an `EuiButtonIcon` to the right side of the item; `iconType` is required;
+     * Adds an `OuiButtonIcon` to the right side of the item; `iconType` is required;
      * pass `alwaysShow` if you don't want the default behavior of only showing on hover
      */
-    extraAction?: EuiButtonIconPropsForButton & {
+    extraAction?: OuiButtonIconPropsForButton & {
       alwaysShow?: boolean;
     };
 
@@ -150,7 +161,7 @@ export type EuiListGroupItemProps = CommonProps &
     buttonRef?: React.Ref<HTMLButtonElement>;
   };
 
-export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
+export const OuiListGroupItem: FunctionComponent<OuiListGroupItemProps> = ({
   label,
   isActive = false,
   isDisabled: _isDisabled = false,
@@ -174,15 +185,15 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
   const isDisabled = _isDisabled || !isHrefValid;
 
   const classes = classNames(
-    'euiListGroupItem',
+    'ouiListGroupItem',
     sizeToClassNameMap[size],
     colorToClassNameMap[color],
     {
-      'euiListGroupItem-isActive': isActive,
-      'euiListGroupItem-isDisabled': isDisabled,
-      'euiListGroupItem-isClickable': href || onClick,
-      'euiListGroupItem-hasExtraAction': extraAction,
-      'euiListGroupItem--wrapText': wrapText,
+      'ouiListGroupItem-isActive': isActive,
+      'ouiListGroupItem-isDisabled': isDisabled,
+      'ouiListGroupItem-isClickable': href || onClick,
+      'ouiListGroupItem-hasExtraAction': extraAction,
+      'ouiListGroupItem--wrapText': wrapText,
     },
     className
   );
@@ -191,22 +202,22 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
 
   if (iconType) {
     iconNode = (
-      <EuiIcon
+      <OuiIcon
         color="inherit" // forces the icon to inherit its parent color
         {...iconProps}
         type={iconType}
-        className={classNames('euiListGroupItem__icon', iconProps?.className)}
+        className={classNames('ouiListGroupItem__icon', iconProps?.className)}
       />
     );
 
     if (icon) {
       console.warn(
-        'Both `iconType` and `icon` were passed to EuiListGroupItem but only one can exist. The `iconType` was used.'
+        'Both `iconType` and `icon` were passed to OuiListGroupItem but only one can exist. The `iconType` was used.'
       );
     }
   } else if (icon) {
     iconNode = React.cloneElement(icon, {
-      className: classNames('euiListGroupItem__icon', icon.props.className),
+      className: classNames('ouiListGroupItem__icon', icon.props.className),
     });
   }
 
@@ -222,15 +233,15 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
     } = extraAction;
 
     const extraActionClasses = classNames(
-      'euiListGroupItem__extraAction',
+      'ouiListGroupItem__extraAction',
       {
-        'euiListGroupItem__extraAction-alwaysShow': alwaysShow,
+        'ouiListGroupItem__extraAction-alwaysShow': alwaysShow,
       },
       className
     );
 
     extraActionNode = (
-      <EuiButtonIcon
+      <OuiButtonIcon
         className={extraActionClasses}
         iconType={iconType}
         {...rest}
@@ -246,12 +257,12 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
   const labelContent = shouldRenderTitle ? (
     <span
       ref={ref}
-      className="euiListGroupItem__label"
+      className="ouiListGroupItem__label"
       title={typeof label === 'string' ? label : innerText}>
       {label}
     </span>
   ) : (
-    <span className="euiListGroupItem__label">{label}</span>
+    <span className="ouiListGroupItem__label">{label}</span>
   );
 
   // Handle the variety of interaction behavior
@@ -262,7 +273,7 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
   if (href && !isDisabled) {
     itemContent = (
       <a
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         href={href}
         target={target}
         rel={secureRel}
@@ -276,7 +287,7 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
     itemContent = (
       <button
         type="button"
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={isDisabled}
         onClick={onClick}
         ref={buttonRef}
@@ -287,7 +298,7 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
     );
   } else {
     itemContent = (
-      <span className="euiListGroupItem__text" {...rest}>
+      <span className="ouiListGroupItem__text" {...rest}>
         {iconNode}
         {labelContent}
       </span>
@@ -297,13 +308,13 @@ export const EuiListGroupItem: FunctionComponent<EuiListGroupItemProps> = ({
   if (showToolTip) {
     itemContent = (
       <li className={classes}>
-        <EuiToolTip
-          anchorClassName="euiListGroupItem__tooltip"
+        <OuiToolTip
+          anchorClassName="ouiListGroupItem__tooltip"
           content={label}
           position="right"
           delay="long">
           {itemContent}
-        </EuiToolTip>
+        </OuiToolTip>
       </li>
     );
   } else {

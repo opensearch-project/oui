@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,24 +32,24 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 
 import {
-  EuiSuperDatePicker,
-  EuiSuperDatePickerProps,
+  OuiSuperDatePicker,
+  OuiSuperDatePickerProps,
 } from './super_date_picker';
-import { EuiButton } from '../../button';
+import { OuiButton } from '../../button';
 
 const noop = () => {};
 
-describe('EuiSuperDatePicker', () => {
+describe('OuiSuperDatePicker', () => {
   test('is rendered', () => {
-    const component = shallow(<EuiSuperDatePicker onTimeChange={noop} />);
+    const component = shallow(<OuiSuperDatePicker onTimeChange={noop} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('refresh is disabled by default', () => {
     // By default we expect `asyncInterval` to be not set.
-    const componentPaused = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker onTimeChange={noop} />
+    const componentPaused = mount<OuiSuperDatePicker>(
+      <OuiSuperDatePicker onTimeChange={noop} />
     );
     const instancePaused = componentPaused.instance();
     expect(instancePaused.asyncInterval).toBe(undefined);
@@ -49,8 +60,8 @@ describe('EuiSuperDatePicker', () => {
     // If refresh is enabled via `isPaused/onRefresh` we expect
     // `asyncInterval` to be present and `asyncInterval.isStopped` to be `false`.
     const onRefresh = jest.fn();
-    const componentRefresh = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker
+    const componentRefresh = mount<OuiSuperDatePicker>(
+      <OuiSuperDatePicker
         onTimeChange={noop}
         isPaused={false}
         onRefresh={onRefresh}
@@ -81,8 +92,8 @@ describe('EuiSuperDatePicker', () => {
 
     const onRefresh = jest.fn();
 
-    const componentRefresh = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker
+    const componentRefresh = mount<OuiSuperDatePicker>(
+      <OuiSuperDatePicker
         onTimeChange={noop}
         isPaused={false}
         onRefresh={onRefresh}
@@ -108,8 +119,8 @@ describe('EuiSuperDatePicker', () => {
 
     const onRefresh = jest.fn();
 
-    const componentRefresh = mount<EuiSuperDatePicker>(
-      <EuiSuperDatePicker
+    const componentRefresh = mount<OuiSuperDatePicker>(
+      <OuiSuperDatePicker
         onTimeChange={noop}
         isPaused={false}
         onRefresh={onRefresh}
@@ -132,17 +143,17 @@ describe('EuiSuperDatePicker', () => {
   });
 
   test('updateButtonProps', () => {
-    const updateButtonProps: EuiSuperDatePickerProps['updateButtonProps'] = {
+    const updateButtonProps: OuiSuperDatePickerProps['updateButtonProps'] = {
       fill: false,
       color: 'ghost',
     };
 
     const component = mount(
-      <EuiSuperDatePicker
+      <OuiSuperDatePicker
         onTimeChange={noop}
         updateButtonProps={updateButtonProps}
       />
     );
-    expect(component.find(EuiButton).props()).toMatchObject(updateButtonProps);
+    expect(component.find(OuiButton).props()).toMatchObject(updateButtonProps);
   });
 });

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,34 +33,34 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 import { PanelPaddingSize } from '../panel';
 
-export type EuiPopoverTitleProps = FunctionComponent<
+export type OuiPopoverTitleProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> &
     CommonProps & {
       /**
        * Customize the all around padding of the popover title.
-       * Leave `undefined` to inherit from the `panelPaddingSize` of the containing EuiPopover
+       * Leave `undefined` to inherit from the `panelPaddingSize` of the containing OuiPopover
        */
       paddingSize?: PanelPaddingSize;
     }
 >;
 
 const paddingSizeToClassNameMap = {
-  none: 'euiPopoverTitle--paddingNone',
-  s: 'euiPopoverTitle--paddingSmall',
-  m: 'euiPopoverTitle--paddingMedium',
-  l: 'euiPopoverTitle--paddingLarge',
+  none: 'ouiPopoverTitle--paddingNone',
+  s: 'ouiPopoverTitle--paddingSmall',
+  m: 'ouiPopoverTitle--paddingMedium',
+  l: 'ouiPopoverTitle--paddingLarge',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
 
-export const EuiPopoverTitle: EuiPopoverTitleProps = ({
+export const OuiPopoverTitle: OuiPopoverTitleProps = ({
   children,
   className,
   paddingSize,
   ...rest
 }) => {
   const classes = classNames(
-    'euiPopoverTitle',
+    'ouiPopoverTitle',
     paddingSize ? paddingSizeToClassNameMap[paddingSize] : null,
     className
   );

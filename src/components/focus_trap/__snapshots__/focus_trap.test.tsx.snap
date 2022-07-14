@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFocusTrap accepts className and style 1`] = `
+exports[`OuiFocusTrap accepts className and style 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -27,7 +27,7 @@ Array [
 ]
 `;
 
-exports[`EuiFocusTrap can be disabled 1`] = `
+exports[`OuiFocusTrap can be disabled 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -52,7 +52,7 @@ Array [
 ]
 `;
 
-exports[`EuiFocusTrap is rendered 1`] = `
+exports[`OuiFocusTrap is rendered 1`] = `
 Array [
   <div
     data-focus-guard="true"

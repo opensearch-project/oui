@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,12 +17,12 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiInputPopover,
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiPopoverFooter,
-  EuiCallOut,
+  OuiCode,
+  OuiInputPopover,
+  OuiPopover,
+  OuiPopoverTitle,
+  OuiPopoverFooter,
+  OuiCallOut,
 } from '../../../../src/components';
 
 import Popover from './popover';
@@ -58,87 +69,87 @@ import InputPopover from './input_popover';
 const inputPopoverSource = require('!!raw-loader!./input_popover');
 const inputPopoverHtml = renderToHtml(PopoverBlock);
 
-const popOverSnippet = `<EuiPopover
+const popOverSnippet = `<OuiPopover
   button={button}
   isOpen={isPopoverOpen}
   closePopover={closePopover}>
   <!-- Popover content -->
-</EuiPopover>`;
+</OuiPopover>`;
 
-const trapFocusSnippet = `<EuiPopover
+const trapFocusSnippet = `<OuiPopover
   ownFocus={false}
   button={button}
   isOpen={isPopoverOpen}
   closePopover={closePopover}>
   <!-- Popover content -->
-</EuiPopover>`;
+</OuiPopover>`;
 
-const popoverAnchorSnippet = `<EuiPopover
+const popoverAnchorSnippet = `<OuiPopover
   button={button}
   isOpen={isPopoverOpen}
   closePopover={closePopover}
   anchorPosition="downLeft">
   <!-- Popover content -->
-</EuiPopover>`;
+</OuiPopover>`;
 
-const popoverWithTitleSnippet = `<EuiPopover
+const popoverWithTitleSnippet = `<OuiPopover
   button={button}
   isOpen={isPopoverOpen}
   closePopover={closePopover}>
-  <EuiPopoverTitle><!-- Popover title --></EuiPopoverTitle>
+  <OuiPopoverTitle><!-- Popover title --></OuiPopoverTitle>
   <!-- Popover content -->
-  <EuiPopoverFooter><!-- Popover footer --></EuiPopoverFooter>
-</EuiPopover>`;
+  <OuiPopoverFooter><!-- Popover footer --></OuiPopoverFooter>
+</OuiPopover>`;
 
-const popoverPanelClassNameSnippet = `<EuiPopover
+const popoverPanelClassNameSnippet = `<OuiPopover
   button={button}
   isOpen={isPopoverOpen}
   closePopover={closePopover}
   panelClassName="yourClassNameHere"
   panelPaddingSize="none">
   <!-- Content for popover with custom class name and custom padding -->
-</EuiPopover>`;
+</OuiPopover>`;
 
-const popoverWithTitlePaddingSnippet = `<EuiPopover
+const popoverWithTitlePaddingSnippet = `<OuiPopover
   button={button}
   isOpen={isPopoverOpen}
   closePopover={closePopover}
   panelPaddingSize="none">
-  <EuiPopoverTitle paddingSize="s"><!-- Popover title --></EuiPopoverTitle>
+  <OuiPopoverTitle paddingSize="s"><!-- Popover title --></OuiPopoverTitle>
   <!-- Content for popover without padding -->
-  <EuiPopoverFooter paddingSize="s"><!-- Popover footer --></EuiPopoverFooter>
-</EuiPopover>`;
+  <OuiPopoverFooter paddingSize="s"><!-- Popover footer --></OuiPopoverFooter>
+</OuiPopover>`;
 
-const popoverContainerSnippet = `<EuiPopover
+const popoverContainerSnippet = `<OuiPopover
   button={button}
   isOpen={isPopoverOpen}
   closePopover={closePopover}
   container={panel}>
   <!-- Content for popover inside a container -->
-</EuiPopover>`;
+</OuiPopover>`;
 
-const popoverFixedSnippet = `<EuiPopover
+const popoverFixedSnippet = `<OuiPopover
   button={button}
   isOpen={isPopoverOpen}
   closePopover={closePopover}
   repositionOnScroll={true}>
   <!-- Content for popover on a fixed element -->
-</EuiPopover>`;
+</OuiPopover>`;
 
-const popoverBlockSnippet = `<EuiPopover
+const popoverBlockSnippet = `<OuiPopover
   button={button}
   isOpen={isPopoverOpen}
   closePopover={closePopover}
   display="block">
   <!-- Content for popover with display block anchor -->
-</EuiPopover>`;
+</OuiPopover>`;
 
-const inputPopoverSnippet = `<EuiInputPopover
+const inputPopoverSnippet = `<OuiInputPopover
   input={input}
   isOpen={isPopoverOpen}
   closePopover={closePopover}>
   <!-- Popover content attached to input -->
-</EuiInputPopover>`;
+</OuiInputPopover>`;
 
 export const PopoverExample = {
   title: 'Popover',
@@ -157,7 +168,7 @@ export const PopoverExample = {
       text: (
         <>
           <p>
-            Use the <strong>EuiPopover</strong> component to hide controls or
+            Use the <strong>OuiPopover</strong> component to hide controls or
             options behind a clickable element. A popover is temporary so keep
             tasks simple and narrowly focused.
           </p>
@@ -171,13 +182,13 @@ export const PopoverExample = {
             Avoid popover inception (popover triggering another popover), and
             instead use a{' '}
             <Link to="/navigation/context-menu">
-              <strong>EuiContextMenu</strong>
+              <strong>OuiContextMenu</strong>
             </Link>{' '}
             to swap the popover panel content.
           </p>
         </>
       ),
-      props: { EuiPopover },
+      props: { OuiPopover },
       snippet: popOverSnippet,
       demo: <Popover />,
     },
@@ -197,7 +208,7 @@ export const PopoverExample = {
         <>
           <p>
             The alignment and arrow on your popover can be set with the{' '}
-            <EuiCode>anchorPosition</EuiCode> prop. These positions will update
+            <OuiCode>anchorPosition</OuiCode> prop. These positions will update
             based upon screen real estate.
           </p>
           <p>
@@ -205,18 +216,18 @@ export const PopoverExample = {
           </p>
           <ul>
             <li>
-              The first word in the <EuiCode>anchorPosition</EuiCode> denotes
+              The first word in the <OuiCode>anchorPosition</OuiCode> denotes
               where the popover will appear relative to the button.
             </li>
             <li>
-              The second word in the <EuiCode>anchorPosition</EuiCode> denotes
+              The second word in the <OuiCode>anchorPosition</OuiCode> denotes
               where the gravity / pin position will appear relative to the
               popover.
             </li>
           </ul>
         </>
       ),
-      props: { EuiPopover },
+      props: { OuiPopover },
       snippet: popoverAnchorSnippet,
       demo: <PopoverAnchorPosition />,
     },
@@ -236,17 +247,17 @@ export const PopoverExample = {
         <>
           <p>
             Popovers often need titling. Use the
-            <strong>EuiPopoverTitle</strong> component nested somewhere inside
+            <strong>OuiPopoverTitle</strong> component nested somewhere inside
             the popover contents.
           </p>
           <p>
             You can also add a similarly styled{' '}
-            <strong>EuiPopoverFooter</strong> for smaller captions or call to
+            <strong>OuiPopoverFooter</strong> for smaller captions or call to
             action buttons.
           </p>
         </>
       ),
-      props: { EuiPopoverTitle, EuiPopoverFooter },
+      props: { OuiPopoverTitle, OuiPopoverFooter },
       demo: <PopoverWithTitle />,
       snippet: popoverWithTitleSnippet,
     },
@@ -264,14 +275,14 @@ export const PopoverExample = {
       ],
       text: (
         <p>
-          Use the <EuiCode>panelPaddingSize</EuiCode> prop to adjust the padding
+          Use the <OuiCode>panelPaddingSize</OuiCode> prop to adjust the padding
           of the panel content. When using popover titles and footers, this
           setting will propogate to them. Or you can supply a custom{' '}
-          <EuiCode>paddingSize</EuiCode> to either the{' '}
-          <strong>EuiPopoverTitle</strong> of <strong>EuiPopoverFooter</strong>.
+          <OuiCode>paddingSize</OuiCode> to either the{' '}
+          <strong>OuiPopoverTitle</strong> of <strong>OuiPopoverFooter</strong>.
         </p>
       ),
-      props: { EuiPopover, EuiPopoverTitle, EuiPopoverFooter },
+      props: { OuiPopover, OuiPopoverTitle, OuiPopoverFooter },
       snippet: popoverWithTitlePaddingSnippet,
       demo: <PopoverWithTitlePadding />,
     },
@@ -289,11 +300,11 @@ export const PopoverExample = {
       ],
       text: (
         <p>
-          Use the <EuiCode>panelClassName</EuiCode> prop to pass a custom class
+          Use the <OuiCode>panelClassName</OuiCode> prop to pass a custom class
           to the panel containing the popover contents.
         </p>
       ),
-      props: { EuiPopover },
+      props: { OuiPopover },
       demo: <PopoverPanelClassName />,
       snippet: popoverPanelClassNameSnippet,
     },
@@ -312,12 +323,12 @@ export const PopoverExample = {
       text: (
         <p>
           Popover anchors default to{' '}
-          <EuiCode language="sass">display: inline-block;</EuiCode> so they do
+          <OuiCode language="sass">display: inline-block;</OuiCode> so they do
           not force a display on inline triggers. If you do need to change this,
-          just add <EuiCode language="js">display=&quot;block&quot;</EuiCode>
+          just add <OuiCode language="js">display=&quot;block&quot;</OuiCode>
         </p>
       ),
-      props: { EuiPopover },
+      props: { OuiPopover },
       snippet: popoverBlockSnippet,
       demo: <PopoverBlock />,
     },
@@ -336,12 +347,12 @@ export const PopoverExample = {
       text: (
         <p>
           Popover content even works on{' '}
-          <EuiCode language="sass">position: fixed;</EuiCode> elements. Add the{' '}
-          <EuiCode>repositionOnScroll</EuiCode> boolean prop to ensure the
+          <OuiCode language="sass">position: fixed;</OuiCode> elements. Add the{' '}
+          <OuiCode>repositionOnScroll</OuiCode> boolean prop to ensure the
           popover realigns to the fixed button on scroll.
         </p>
       ),
-      props: { EuiPopover },
+      props: { OuiPopover },
       snippet: popoverFixedSnippet,
       demo: <PopoverFixed />,
     },
@@ -359,12 +370,12 @@ export const PopoverExample = {
       ],
       text: (
         <p>
-          <strong>EuiPopover</strong> can accept a React or DOM element as a{' '}
-          <EuiCode>container</EuiCode> prop and restrict the popover from
+          <strong>OuiPopover</strong> can accept a React or DOM element as a{' '}
+          <OuiCode>container</OuiCode> prop and restrict the popover from
           overflowing that container.
         </p>
       ),
-      props: { EuiPopover },
+      props: { OuiPopover },
       snippet: popoverContainerSnippet,
       demo: <PopoverContainer />,
     },
@@ -383,7 +394,7 @@ export const PopoverExample = {
       text: (
         <>
           <p>
-            <strong>EuiInputPopover</strong> is a specialized popover component
+            <strong>OuiInputPopover</strong> is a specialized popover component
             intended to be used with form elements. Stylistically, the popover
             panel is
             {'"attached"'} to the input. Functionally, consumers have control
@@ -393,15 +404,15 @@ export const PopoverExample = {
           <p>
             Although some assumptions are made about keyboard behavior,
             consumers should provide specific key event handlers depending on
-            the use case. For instance, a <EuiCode>type=text</EuiCode> input
+            the use case. For instance, a <OuiCode>type=text</OuiCode> input
             could use the down key to trigger popover opening, but this
             interaction would not be appropriate for{' '}
-            <EuiCode>type=number</EuiCode> inputs as they natively bind to the
+            <OuiCode>type=number</OuiCode> inputs as they natively bind to the
             down key.
           </p>
         </>
       ),
-      props: { EuiInputPopover },
+      props: { OuiInputPopover },
       snippet: inputPopoverSnippet,
       demo: <InputPopover />,
     },
@@ -421,15 +432,15 @@ export const PopoverExample = {
         <>
           <p>
             If the popover should not trap focus within itself, then you can
-            remove it with <EuiCode language="ts">{'ownFocus={false}'}</EuiCode>
+            remove it with <OuiCode language="ts">{'ownFocus={false}'}</OuiCode>
             .
           </p>
-          <EuiCallOut
+          <OuiCallOut
             iconType="accessibility"
             color="warning"
             title={
               <>
-                Removing <EuiCode>ownFocus</EuiCode> makes it difficult for
+                Removing <OuiCode>ownFocus</OuiCode> makes it difficult for
                 keyboard-only and screen reader users to navigate to and from
                 your popover.
               </>
@@ -437,7 +448,7 @@ export const PopoverExample = {
           />
         </>
       ),
-      props: { EuiPopover },
+      props: { OuiPopover },
       snippet: trapFocusSnippet,
       demo: <TrapFocus />,
     },
@@ -455,9 +466,9 @@ export const PopoverExample = {
       ],
       text: (
         <p>
-          <strong>EuiWrappingPopover</strong> is an extra popover component that
+          <strong>OuiWrappingPopover</strong> is an extra popover component that
           allows any existing DOM element to be passed as the{' '}
-          <EuiCode>button</EuiCode> prop.
+          <OuiCode>button</OuiCode> prop.
         </p>
       ),
       demo: <PopoverHTMLElementAnchor />,

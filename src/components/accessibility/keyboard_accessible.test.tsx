@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@
 import React from 'react';
 import { render, shallow } from 'enzyme';
 
-import { EuiKeyboardAccessible } from './keyboard_accessible';
+import { OuiKeyboardAccessible } from './keyboard_accessible';
 
 import { keys } from '../../services';
 
@@ -29,13 +40,13 @@ const noop = () => {
   // eslint-disable-line no-empty
 };
 
-describe('EuiKeyboardAccessible', () => {
+describe('OuiKeyboardAccessible', () => {
   describe('throws an error', () => {
     const oldConsoleError = console.error;
     let consoleStub: jest.Mock<typeof console.error>;
 
     beforeEach(() => {
-      // We don't use jest.spyOn() here, because EUI's tests apply a global
+      // We don't use jest.spyOn() here, because OUI's tests apply a global
       // console.error() override that throws an exception. For these
       // tests, we just want to know if console.error() was called.
 
@@ -48,7 +59,7 @@ describe('EuiKeyboardAccessible', () => {
 
     test("when there's no child", () => {
       // @ts-ignore unused var
-      const component = <EuiKeyboardAccessible />; // eslint-disable-line @typescript-eslint/no-unused-vars
+      const component = <OuiKeyboardAccessible />; // eslint-disable-line @typescript-eslint/no-unused-vars
 
       expect(consoleStub).toBeCalled();
       expect(consoleStub.mock.calls[0][0]).toMatch(
@@ -59,9 +70,9 @@ describe('EuiKeyboardAccessible', () => {
     test('when the child is a button', () => {
       // @ts-ignore unused var
       const component = ( // eslint-disable-line @typescript-eslint/no-unused-vars
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <button onClick={noop} />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       expect(consoleStub).toBeCalled();
@@ -73,11 +84,11 @@ describe('EuiKeyboardAccessible', () => {
     test('when the child is a link with an href', () => {
       // @ts-ignore unused var
       const component = ( // eslint-disable-line @typescript-eslint/no-unused-vars
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <a href="#" onClick={noop}>
             Click me
           </a>
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       expect(consoleStub).toBeCalled();
@@ -89,9 +100,9 @@ describe('EuiKeyboardAccessible', () => {
     test("when the child doesn't have an onClick prop", () => {
       // @ts-ignore unused var
       const component = ( // eslint-disable-line @typescript-eslint/no-unused-vars
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <div />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       expect(consoleStub).toBeCalled();
@@ -103,12 +114,12 @@ describe('EuiKeyboardAccessible', () => {
     test("when the child's onClick prop isn't a function", () => {
       // @ts-ignore unused var
       const component = ( // eslint-disable-line @typescript-eslint/no-unused-vars
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <div
             // @ts-ignore not a valid prop type
             onClick="notAFunction"
           />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       expect(consoleStub).toBeCalled();
@@ -134,9 +145,9 @@ describe('EuiKeyboardAccessible', () => {
     test('when the element is a link without an href', () => {
       // @ts-ignore unused var
       const component = ( // eslint-disable-line @typescript-eslint/no-unused-vars
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <a onClick={noop}>Click me</a>
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       expect(consoleStub).not.toBeCalled();
@@ -146,9 +157,9 @@ describe('EuiKeyboardAccessible', () => {
   describe('adds accessibility attributes', () => {
     test('tabindex and role', () => {
       const $button = render(
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <div onClick={noop} />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       expect($button).toMatchSnapshot();
@@ -158,9 +169,9 @@ describe('EuiKeyboardAccessible', () => {
   describe("doesn't override pre-existing accessibility attributes", () => {
     test('tabindex', () => {
       const $button = render(
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <div onClick={noop} tabIndex={1} />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       expect($button).toMatchSnapshot();
@@ -168,9 +179,9 @@ describe('EuiKeyboardAccessible', () => {
 
     test('role', () => {
       const $button = render(
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <div onClick={noop} role="button" tabIndex={0} />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       expect($button).toMatchSnapshot();
@@ -182,9 +193,9 @@ describe('EuiKeyboardAccessible', () => {
       const onClickHandler = jest.fn();
 
       const $button = shallow(
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <div data-div onClick={onClickHandler} />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       $button.find('[data-div]').simulate('keyup', {
@@ -198,9 +209,9 @@ describe('EuiKeyboardAccessible', () => {
       const onClickHandler = jest.fn();
 
       const $button = shallow(
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <div data-div onClick={onClickHandler} />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       $button.find('[data-div]').simulate('keyup', {
@@ -216,9 +227,9 @@ describe('EuiKeyboardAccessible', () => {
       const onKeyUpHandler = jest.fn();
 
       const $button = shallow(
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <div data-div onKeyUp={onKeyUpHandler} />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       $button.find('[data-div]').simulate('keyup', {
@@ -232,9 +243,9 @@ describe('EuiKeyboardAccessible', () => {
       const onKeyDownHandler = jest.fn();
 
       const $button = shallow(
-        <EuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
           <div data-div onKeyDown={onKeyDownHandler} />
-        </EuiKeyboardAccessible>
+        </OuiKeyboardAccessible>
       );
 
       $button.find('[data-div]').simulate('keydown', {

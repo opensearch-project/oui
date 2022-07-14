@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,12 +29,12 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import { useEuiI18n } from '../i18n';
+import { useOuiI18n } from '../i18n';
 import classNames from 'classnames';
-import { EuiIcon, EuiIconProps } from '../icon';
+import { OuiIcon, OuiIconProps } from '../icon';
 
-export type EuiNotificationEventReadIconProps = Omit<
-  EuiIconProps,
+export type OuiNotificationEventReadIconProps = Omit<
+  OuiIconProps,
   'type' | 'color' | 'size'
 > & {
   id: string;
@@ -37,34 +48,34 @@ export type EuiNotificationEventReadIconProps = Omit<
   eventName: string;
 };
 
-export const EuiNotificationEventReadIcon: FunctionComponent<EuiNotificationEventReadIconProps> = ({
+export const OuiNotificationEventReadIcon: FunctionComponent<OuiNotificationEventReadIconProps> = ({
   id,
   isRead,
   eventName,
   ...rest
 }) => {
-  const classesReadState = classNames('euiNotificationEventReadIcon', {
-    'euiNotificationEventReadIcon--isRead': isRead,
+  const classesReadState = classNames('ouiNotificationEventReadIcon', {
+    'ouiNotificationEventReadIcon--isRead': isRead,
   });
 
-  const readAria = useEuiI18n(
-    'euiNotificationEventReadIcon.readAria',
+  const readAria = useOuiI18n(
+    'ouiNotificationEventReadIcon.readAria',
     '{eventName} is read',
     {
       eventName,
     }
   );
 
-  const unreadAria = useEuiI18n(
-    'euiNotificationEventReadIcon.unreadAria',
+  const unreadAria = useOuiI18n(
+    'ouiNotificationEventReadIcon.unreadAria',
     '{eventName} is unread',
     {
       eventName,
     }
   );
-  const readTitle = useEuiI18n('euiNotificationEventReadIcon.read', 'Read');
-  const unreadTitle = useEuiI18n(
-    'euiNotificationEventReadIcon.unread',
+  const readTitle = useOuiI18n('ouiNotificationEventReadIcon.read', 'Read');
+  const unreadTitle = useOuiI18n(
+    'ouiNotificationEventReadIcon.unread',
     'Unread'
   );
 
@@ -73,7 +84,7 @@ export const EuiNotificationEventReadIcon: FunctionComponent<EuiNotificationEven
 
   return (
     <div className={classesReadState}>
-      <EuiIcon
+      <OuiIcon
         type="dot"
         aria-label={iconAriaLabel}
         title={iconTitle}

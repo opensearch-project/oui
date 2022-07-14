@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../../components';
 import { getSassVars } from '../_get_sass_vars';
 
 import {
-  EuiIcon,
-  EuiTitle,
-  EuiCode,
-  EuiSpacer,
-  EuiText,
-  EuiFlexGrid,
-  EuiPanel,
+  OuiIcon,
+  OuiTitle,
+  OuiCode,
+  OuiSpacer,
+  OuiText,
+  OuiFlexGrid,
+  OuiPanel,
 } from '../../../../../src/components';
 import {
   getHexValueFromColorName,
@@ -43,9 +54,9 @@ export const ColorSection = ({
 
   return (
     <>
-      <EuiTitle size="xs">
+      <OuiTitle size="xs">
         <h3 id={color}>
-          <EuiIcon
+          <OuiIcon
             className={iconClass}
             aria-hidden="true"
             type="stopFilled"
@@ -53,23 +64,23 @@ export const ColorSection = ({
             color={hex}
           />{' '}
           &ensp;
-          {color}: <EuiCode>{hex}</EuiCode>
+          {color}: <OuiCode>{hex}</OuiCode>
         </h3>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiText grow={false}>{children}</EuiText>
+      <OuiText grow={false}>{children}</OuiText>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiPanel color="subdued">
-        <EuiText size="xs">
-          <EuiFlexGrid columns={2} direction="column" gutterSize="s">
+      <OuiPanel color="subdued">
+        <OuiText size="xs">
+          <OuiFlexGrid columns={2} direction="column" gutterSize="s">
             {showTextVariants && colorIsCore(color) && (
               <ColorsContrastItem
                 foreground={`${color}Text`}
-                background={'euiPageBackgroundColor'}
+                background={'ouiPageBackgroundColor'}
                 minimumContrast={minimumContrast}
               />
             )}
@@ -87,9 +98,9 @@ export const ColorSection = ({
                 />
               );
             })}
-          </EuiFlexGrid>
-        </EuiText>
-      </EuiPanel>
+          </OuiFlexGrid>
+        </OuiText>
+      </OuiPanel>
     </>
   );
 };

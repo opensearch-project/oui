@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,19 +29,19 @@
  */
 
 import React, { Component } from 'react';
-import { EuiPopover, Props as EuiPopoverProps } from './popover';
-import { EuiPortal } from '../portal';
+import { OuiPopover, Props as OuiPopoverProps } from './popover';
+import { OuiPortal } from '../portal';
 
-export interface EuiWrappingPopoverProps extends EuiPopoverProps {
+export interface OuiWrappingPopoverProps extends OuiPopoverProps {
   button: HTMLElement;
 }
 
 /**
- * Injects the EuiPopover next to the button via EuiPortal
+ * Injects the OuiPopover next to the button via OuiPortal
  * then the button element is moved into the popover dom.
  * On unmount, the button is moved back to its original location.
  */
-export class EuiWrappingPopover extends Component<EuiWrappingPopoverProps> {
+export class OuiWrappingPopover extends Component<OuiWrappingPopoverProps> {
   private portal: HTMLElement | null = null;
   private anchor: HTMLElement | null = null;
 
@@ -60,19 +71,19 @@ export class EuiWrappingPopover extends Component<EuiWrappingPopoverProps> {
     const { button, ...rest } = this.props;
 
     return (
-      <EuiPortal
+      <OuiPortal
         portalRef={this.setPortalRef}
         insert={{ sibling: this.props.button, position: 'after' }}>
-        <EuiPopover
+        <OuiPopover
           {...rest}
           button={
             <div
               ref={this.setAnchorRef}
-              className="euiWrappingPopover__anchor"
+              className="ouiWrappingPopover__anchor"
             />
           }
         />
-      </EuiPortal>
+      </OuiPortal>
     );
   }
 }

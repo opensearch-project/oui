@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,15 +33,15 @@ import { CommonProps } from '../../common';
 import classNames from 'classnames';
 
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  OuiFormControlLayout,
+  OuiFormControlLayoutProps,
 } from '../form_control_layout';
 
-import { EuiValidatableControl } from '../validatable_control';
+import { OuiValidatableControl } from '../validatable_control';
 
 import { IconType } from '../../icon';
 
-export type EuiFieldNumberProps = Omit<
+export type OuiFieldNumberProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
   'min' | 'max' | 'readOnly' | 'step'
 > &
@@ -54,17 +65,17 @@ export type EuiFieldNumberProps = Omit<
      * Creates an input group with element(s) coming before input.
      * `string` | `ReactElement` or an array of these
      */
-    prepend?: EuiFormControlLayoutProps['prepend'];
+    prepend?: OuiFormControlLayoutProps['prepend'];
 
     /**
      * Creates an input group with element(s) coming after input.
      * `string` | `ReactElement` or an array of these
      */
-    append?: EuiFormControlLayoutProps['append'];
+    append?: OuiFormControlLayoutProps['append'];
 
     /**
      * Completely removes form control layout wrapper and ignores
-     * icon, prepend, and append. Best used inside EuiFormControlLayoutDelimited.
+     * icon, prepend, and append. Best used inside OuiFormControlLayoutDelimited.
      */
     controlOnly?: boolean;
 
@@ -74,7 +85,7 @@ export type EuiFieldNumberProps = Omit<
     compressed?: boolean;
   };
 
-export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
+export const OuiFieldNumber: FunctionComponent<OuiFieldNumberProps> = ({
   className,
   icon,
   id,
@@ -94,16 +105,16 @@ export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
   controlOnly,
   ...rest
 }) => {
-  const classes = classNames('euiFieldNumber', className, {
-    'euiFieldNumber--withIcon': icon,
-    'euiFieldNumber--fullWidth': fullWidth,
-    'euiFieldNumber--compressed': compressed,
-    'euiFieldNumber--inGroup': prepend || append,
-    'euiFieldNumber-isLoading': isLoading,
+  const classes = classNames('ouiFieldNumber', className, {
+    'ouiFieldNumber--withIcon': icon,
+    'ouiFieldNumber--fullWidth': fullWidth,
+    'ouiFieldNumber--compressed': compressed,
+    'ouiFieldNumber--inGroup': prepend || append,
+    'ouiFieldNumber-isLoading': isLoading,
   });
 
   const control = (
-    <EuiValidatableControl isInvalid={isInvalid}>
+    <OuiValidatableControl isInvalid={isInvalid}>
       <input
         type="number"
         id={id}
@@ -117,7 +128,7 @@ export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
         ref={inputRef}
         {...rest}
       />
-    </EuiValidatableControl>
+    </OuiValidatableControl>
   );
 
   if (controlOnly) {
@@ -125,7 +136,7 @@ export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
   }
 
   return (
-    <EuiFormControlLayout
+    <OuiFormControlLayout
       icon={icon}
       fullWidth={fullWidth}
       isLoading={isLoading}
@@ -135,6 +146,6 @@ export const EuiFieldNumber: FunctionComponent<EuiFieldNumberProps> = ({
       append={append}
       inputId={id}>
       {control}
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
   );
 };

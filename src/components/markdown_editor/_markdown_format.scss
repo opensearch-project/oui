@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Default styles for Markdown Format
 // 1. Headings
 // 2. Images
@@ -7,8 +18,8 @@
 // 6. Tables
 // 7. Code
 
-// The Markdown Format uses by default a few EUI components
-// to render elements: EuiLink and EuiCode.
+// The Markdown Format uses by default a few OUI components
+// to render elements: OuiLink and OuiCode.
 
 $browserDefaultFontSize: 16px;
 
@@ -18,44 +29,44 @@ $browserDefaultFontSize: 16px;
   @return #{$pixels/$context}em;
 }
 
-.euiMarkdownFormat {
-  @include euiFont;
-  @include euiText;
+.ouiMarkdownFormat {
+  @include ouiFont;
+  @include ouiText;
 
   // We're using `em` values to support apps where consumers might adjust sizes
   // and consequently the markdown needs to adjust to these changes
 
   // Font size variables
-  $euiMarkdownFontSizeXS: em(12px);
-  $euiMarkdownFontSizeS: em(14px);
-  $euiMarkdownFontSize: em(16px);
-  $euiMarkdownFontSizeM:  em(18px);
-  $euiMarkdownFontSizeL: em(20px);
-  $euiMarkdownFontSizeXL: em(28px);
-  $euiMarkdownFontSizeXXL: em(36px);
+  $ouiMarkdownFontSizeXS: em(12px);
+  $ouiMarkdownFontSizeS: em(14px);
+  $ouiMarkdownFontSize: em(16px);
+  $ouiMarkdownFontSizeM:  em(18px);
+  $ouiMarkdownFontSizeL: em(20px);
+  $ouiMarkdownFontSizeXL: em(28px);
+  $ouiMarkdownFontSizeXXL: em(36px);
 
   // Spacing variables
-  $euiMarkdownSizeXXS: em(4px);
-  $euiMarkdownSizeXS: em(8px);
-  $euiMarkdownSizeS: em(12px);
-  $euiMarkdownSize: em(16px);
-  $euiMarkdownSizeL: em(24px);
+  $ouiMarkdownSizeXXS: em(4px);
+  $ouiMarkdownSizeXS: em(8px);
+  $ouiMarkdownSizeS: em(12px);
+  $ouiMarkdownSize: em(16px);
+  $ouiMarkdownSizeL: em(24px);
 
   // We're using alpha values to support apps that
   // display markdown on backgrounds of various colors
 
   // Grayscale variables
-  $euiMarkdownAlphaLightestShade: rgba($euiColorFullShade, .05);
-  $euiMarkdownAlphaLightShade: rgba($euiColorFullShade, .15);
-  $euiMarkdownAlphaDarkShade: rgba($euiColorFullShade, .65);
+  $ouiMarkdownAlphaLightestShade: rgba($ouiColorFullShade, .05);
+  $ouiMarkdownAlphaLightShade: rgba($ouiColorFullShade, .15);
+  $ouiMarkdownAlphaDarkShade: rgba($ouiColorFullShade, .65);
 
   // Reverse grayscale for opposite of theme
-  $euiMarkdownAlphaLightestShadeReversed: rgba($euiColorEmptyShade, .05);
-  $euiMarkdownAlphaLightShadeReversed: rgba($euiColorEmptyShade, .15);
-  $euiMarkdownAlphaDarkShadeReversed: rgba($euiColorEmptyShade, .65);
+  $ouiMarkdownAlphaLightestShadeReversed: rgba($ouiColorEmptyShade, .05);
+  $ouiMarkdownAlphaLightShadeReversed: rgba($ouiColorEmptyShade, .15);
+  $ouiMarkdownAlphaDarkShadeReversed: rgba($ouiColorEmptyShade, .65);
 
   &--reversed {
-    color: $euiColorLightestShade;
+    color: $ouiColorLightestShade;
   }
 
   > div > *:first-child {
@@ -65,17 +76,17 @@ $browserDefaultFontSize: 16px;
 
   > div > * {
     margin-top: 0;
-    margin-bottom: $euiMarkdownSize;
+    margin-bottom: $ouiMarkdownSize;
   }
 
   > div > *:last-child,
-  .euiCheckbox {
+  .ouiCheckbox {
     // sass-lint:disable-block no-important
     margin-bottom: 0 !important;
   }
 
-  .euiCheckbox + *:not(.euiCheckbox) {
-    margin-top: $euiMarkdownSize;
+  .ouiCheckbox + *:not(.ouiCheckbox) {
+    margin-top: $ouiMarkdownSize;
   }
 
   p,
@@ -86,7 +97,7 @@ $browserDefaultFontSize: 16px;
   pre,
   table {
     margin-top: 0;
-    margin-bottom: $euiMarkdownSize;
+    margin-bottom: $ouiMarkdownSize;
     line-height: 1.5em;
   }
 
@@ -102,41 +113,41 @@ $browserDefaultFontSize: 16px;
   h5,
   h6 {
     margin-top: 0;
-    margin-bottom: $euiMarkdownSizeXS;
+    margin-bottom: $ouiMarkdownSizeXS;
   }
 
   h1 {
-    font-size: $euiMarkdownFontSizeXXL;
+    font-size: $ouiMarkdownFontSizeXXL;
     line-height: 1.333333em;
     font-weight: 300;
   }
 
   h2 {
-    font-size: $euiMarkdownFontSizeXL;
+    font-size: $ouiMarkdownFontSizeXL;
     line-height: 1.428571em;
     font-weight: 300;
   }
 
   h3 {
-    font-size: $euiMarkdownFontSizeL;
+    font-size: $ouiMarkdownFontSizeL;
     line-height: 1.6em;
     font-weight: 600;
   }
 
   h4 {
-    font-size: $euiMarkdownSize;
+    font-size: $ouiMarkdownSize;
     line-height: 1.5em;
     font-weight: 600;
   }
 
   h5 {
-    font-size: $euiMarkdownFontSizeS;
+    font-size: $ouiMarkdownFontSizeS;
     line-height: 1.142857em;
     font-weight: 700;
   }
 
   h6 {
-    font-size: $euiMarkdownFontSizeXS;
+    font-size: $ouiMarkdownFontSizeXS;
     line-height: 1.333333em;
     font-weight: 700;
     text-transform: uppercase;
@@ -152,19 +163,19 @@ $browserDefaultFontSize: 16px;
   // 4. Blockquotes
   blockquote {
     padding: 0 1em;
-    border-left: $euiMarkdownSizeXXS solid $euiMarkdownAlphaLightShade;
+    border-left: $ouiMarkdownSizeXXS solid $ouiMarkdownAlphaLightShade;
   }
 
   &--reversed blockquote {
-    border-left-color: $euiMarkdownAlphaLightShadeReversed;
+    border-left-color: $ouiMarkdownAlphaLightShadeReversed;
   }
 
   // 5. Horizontal rules
   hr {
     border: none;
     height: 1px;
-    background-color: $euiMarkdownAlphaLightShade;
-    margin: $euiMarkdownSizeL 0;
+    background-color: $ouiMarkdownAlphaLightShade;
+    margin: $ouiMarkdownSizeL 0;
   }
 
   hr::before {
@@ -181,9 +192,9 @@ $browserDefaultFontSize: 16px;
   // 6. Lists
   ul,
   ol {
-    padding-left: $euiMarkdownSizeL;
+    padding-left: $ouiMarkdownSizeL;
     margin-top: 0;
-    margin-bottom: $euiMarkdownSize;
+    margin-bottom: $ouiMarkdownSize;
   }
 
   ul {
@@ -223,11 +234,11 @@ $browserDefaultFontSize: 16px;
   }
 
   li > p {
-    margin-bottom: $euiMarkdownSizeXS;
+    margin-bottom: $ouiMarkdownSizeXS;
   }
 
   li + li {
-    margin-top: $euiMarkdownSizeXXS;
+    margin-top: $ouiMarkdownSizeXXS;
   }
 
   .task-list-item {
@@ -235,7 +246,7 @@ $browserDefaultFontSize: 16px;
   }
 
   .task-list-item + .task-list-item {
-    margin-top: $euiMarkdownSizeXXS;
+    margin-top: $ouiMarkdownSizeXXS;
   }
 
   .task-list-item input {
@@ -248,7 +259,7 @@ $browserDefaultFontSize: 16px;
     display: block;
     width: 100%;
     overflow: auto;
-    border-left: 1px solid $euiMarkdownAlphaLightShade;
+    border-left: 1px solid $ouiMarkdownAlphaLightShade;
     border-spacing: 0;
     border-collapse: collapse;
   }
@@ -260,17 +271,17 @@ $browserDefaultFontSize: 16px;
 
   table th,
   table td {
-    padding: $euiMarkdownSizeXXS $euiMarkdownSizeXS;
-    border-top: 1px solid $euiMarkdownAlphaLightShade;
-    border-bottom: 1px solid $euiMarkdownAlphaLightShade;
+    padding: $ouiMarkdownSizeXXS $ouiMarkdownSizeXS;
+    border-top: 1px solid $ouiMarkdownAlphaLightShade;
+    border-bottom: 1px solid $ouiMarkdownAlphaLightShade;
 
     &:last-child {
-      border-right: 1px solid $euiMarkdownAlphaLightShade;
+      border-right: 1px solid $ouiMarkdownAlphaLightShade;
     }
   }
 
   table tr {
     background-color: transparent;
-    border-top: 1px solid $euiMarkdownAlphaLightShade;
+    border-top: 1px solid $ouiMarkdownAlphaLightShade;
   }
 }

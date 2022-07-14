@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,23 +31,23 @@
 import { CSSProperties } from 'react';
 import { isObject, isNumber } from '../../services/predicate';
 import {
-  EuiDataGridStyleCellPaddings,
-  EuiDataGridStyleFontSizes,
-  EuiDataGridStyle,
-  EuiDataGridRowHeightOption,
-  EuiDataGridRowHeightsOptions,
+  OuiDataGridStyleCellPaddings,
+  OuiDataGridStyleFontSizes,
+  OuiDataGridStyle,
+  OuiDataGridRowHeightOption,
+  OuiDataGridRowHeightsOptions,
 } from './data_grid_types';
 
-const cellPaddingsToClassMap: Record<EuiDataGridStyleCellPaddings, string> = {
-  s: 'euiDataGridRowCell--paddingSmall',
+const cellPaddingsToClassMap: Record<OuiDataGridStyleCellPaddings, string> = {
+  s: 'ouiDataGridRowCell--paddingSmall',
   m: '',
-  l: 'euiDataGridRowCell--paddingLarge',
+  l: 'ouiDataGridRowCell--paddingLarge',
 };
 
-const fontSizesToClassMap: Record<EuiDataGridStyleFontSizes, string> = {
-  s: 'euiDataGridRowCell--fontSizeSmall',
+const fontSizesToClassMap: Record<OuiDataGridStyleFontSizes, string> = {
+  s: 'ouiDataGridRowCell--fontSizeSmall',
   m: '',
-  l: 'euiDataGridRowCell--fontSizeLarge',
+  l: 'ouiDataGridRowCell--fontSizeLarge',
 };
 
 function getNumberFromPx(style?: string) {
@@ -53,10 +64,10 @@ export class RowHeightUtils {
   } = {};
   private fakeCell = document.createElement('div');
 
-  computeStylesForGridCell(gridStyles: EuiDataGridStyle) {
+  computeStylesForGridCell(gridStyles: OuiDataGridStyle) {
     this.fakeCell.className = `
-      euiDataGridRowCell 
-      ${cellPaddingsToClassMap[gridStyles.cellPadding!]} 
+      ouiDataGridRowCell
+      ${cellPaddingsToClassMap[gridStyles.cellPadding!]}
       ${fontSizesToClassMap[gridStyles.fontSize!]}
     `;
     document.body.appendChild(this.fakeCell);
@@ -77,7 +88,7 @@ export class RowHeightUtils {
   }
 
   getCalculatedHeight(
-    heightOption: EuiDataGridRowHeightOption,
+    heightOption: OuiDataGridRowHeightOption,
     defaultHeight: number
   ) {
     if (isObject(heightOption)) {
@@ -99,7 +110,7 @@ export class RowHeightUtils {
 }
 
 export const getStylesForCell = (
-  rowHeightsOptions: EuiDataGridRowHeightsOptions,
+  rowHeightsOptions: OuiDataGridRowHeightsOptions,
   rowIndex: number
 ): CSSProperties => {
   let initialHeight =

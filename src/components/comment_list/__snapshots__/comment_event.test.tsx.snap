@@ -1,45 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCommentEvent is rendered 1`] = `
+exports[`OuiCommentEvent is rendered 1`] = `
 <figure
-  class="euiCommentEvent euiCommentEvent--regular testClass1 testClass2"
+  class="ouiCommentEvent ouiCommentEvent--regular testClass1 testClass2"
 >
   <figcaption
-    class="euiCommentEvent__header"
+    class="ouiCommentEvent__header"
   >
     <div
-      class="euiCommentEvent__headerData"
+      class="ouiCommentEvent__headerData"
     >
       <div
-        class="euiCommentEvent__headerUsername"
+        class="ouiCommentEvent__headerUsername"
       >
         someuser
       </div>
       <div
-        class="euiCommentEvent__headerEvent"
+        class="ouiCommentEvent__headerEvent"
       />
     </div>
   </figcaption>
 </figure>
 `;
 
-exports[`EuiCommentEvent props event is rendered 1`] = `
+exports[`OuiCommentEvent props event is rendered 1`] = `
 <figure
-  class="euiCommentEvent euiCommentEvent--regular"
+  class="ouiCommentEvent ouiCommentEvent--regular"
 >
   <figcaption
-    class="euiCommentEvent__header"
+    class="ouiCommentEvent__header"
   >
     <div
-      class="euiCommentEvent__headerData"
+      class="ouiCommentEvent__headerData"
     >
       <div
-        class="euiCommentEvent__headerUsername"
+        class="ouiCommentEvent__headerUsername"
       >
         someuser
       </div>
       <div
-        class="euiCommentEvent__headerEvent"
+        class="ouiCommentEvent__headerEvent"
       >
         commented
       </div>
@@ -48,26 +48,26 @@ exports[`EuiCommentEvent props event is rendered 1`] = `
 </figure>
 `;
 
-exports[`EuiCommentEvent props timestamp is rendered 1`] = `
+exports[`OuiCommentEvent props timestamp is rendered 1`] = `
 <figure
-  class="euiCommentEvent euiCommentEvent--regular"
+  class="ouiCommentEvent ouiCommentEvent--regular"
 >
   <figcaption
-    class="euiCommentEvent__header"
+    class="ouiCommentEvent__header"
   >
     <div
-      class="euiCommentEvent__headerData"
+      class="ouiCommentEvent__headerData"
     >
       <div
-        class="euiCommentEvent__headerUsername"
+        class="ouiCommentEvent__headerUsername"
       >
         someuser
       </div>
       <div
-        class="euiCommentEvent__headerEvent"
+        class="ouiCommentEvent__headerEvent"
       />
       <div
-        class="euiCommentEvent__headerTimestamp"
+        class="ouiCommentEvent__headerTimestamp"
       >
         <time>
           21 days ago
@@ -78,23 +78,23 @@ exports[`EuiCommentEvent props timestamp is rendered 1`] = `
 </figure>
 `;
 
-exports[`EuiCommentEvent props type is rendered 1`] = `
+exports[`OuiCommentEvent props type is rendered 1`] = `
 <div
-  class="euiCommentEvent euiCommentEvent--update"
+  class="ouiCommentEvent ouiCommentEvent--update"
 >
   <div
-    class="euiCommentEvent__header"
+    class="ouiCommentEvent__header"
   >
     <div
-      class="euiCommentEvent__headerData"
+      class="ouiCommentEvent__headerData"
     >
       <div
-        class="euiCommentEvent__headerUsername"
+        class="ouiCommentEvent__headerUsername"
       >
         someuser
       </div>
       <div
-        class="euiCommentEvent__headerEvent"
+        class="ouiCommentEvent__headerEvent"
       />
     </div>
   </div>

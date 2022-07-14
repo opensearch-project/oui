@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiSideNav, EuiCallOut } from '../../../../src/components';
-import { EuiSideNavItem, EuiSideNavHeading } from './props';
+import { OuiCode, OuiSideNav, OuiCallOut } from '../../../../src/components';
+import { OuiSideNavItem, OuiSideNavHeading } from './props';
 
 import SideNav from './side_nav';
 const sideNavSource = require('!!raw-loader!./side_nav');
-const sideNavSnippet = `<EuiSideNav
+const sideNavSnippet = `<OuiSideNav
   mobileTitle="Nav Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
   isOpenOnMobile={isSideNavOpenOnMobile}
@@ -33,7 +44,7 @@ const sideNavSnippet = `<EuiSideNav
 
 import SideNavHeading from './side_nav_heading';
 const sideNavHeadingSource = require('!!raw-loader!./side_nav_heading');
-const sideNavHeadingSnippet = `<EuiSideNav
+const sideNavHeadingSnippet = `<OuiSideNav
   heading="Nav items"
   toggleOpenOnMobile={toggleOpenOnMobile}
   isOpenOnMobile={isSideNavOpenOnMobile}
@@ -43,14 +54,14 @@ const sideNavHeadingSnippet = `<EuiSideNav
 
 import SideNavComplex from './side_nav_complex';
 const sideNavComplexSource = require('!!raw-loader!./side_nav_complex');
-const sideNavComplexSnippet = `<EuiSideNav
+const sideNavComplexSnippet = `<OuiSideNav
   mobileTitle="Nav Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
   isOpenOnMobile={isSideNavOpenOnMobile}
   items={[
     {
       name: 'Elasticsearch',
-      icon: <EuiIcon type="logoElasticsearch" />,
+      icon: <OuiIcon type="logoElasticsearch" />,
       id: '0',
       items: [
         {
@@ -67,7 +78,7 @@ const sideNavComplexSnippet = `<EuiSideNav
     },
     {
       name: 'Kibana',
-      icon: <EuiIcon type="logoKibana" />,
+      icon: <OuiIcon type="logoKibana" />,
       id: '1',
       items: [
         {
@@ -108,7 +119,7 @@ const sideNavComplexSnippet = `<EuiSideNav
 
 import SideNavForceOpen from './side_nav_force_open';
 const sideNavForceOpenSource = require('!!raw-loader!./side_nav_force_open');
-const sideNavForceSnippet = `<EuiSideNav
+const sideNavForceSnippet = `<OuiSideNav
   mobileTitle="Nav Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
   isOpenOnMobile={isSideNavOpenOnMobile}
@@ -183,7 +194,7 @@ const sideNavForceSnippet = `<EuiSideNav
 
 import SideNavEmphasis from './side_nav_emphasis';
 const sideNavEmphasisSource = require('!!raw-loader!./side_nav_emphasis');
-const sideNavEmphasisSnippet = `<EuiSideNav
+const sideNavEmphasisSnippet = `<OuiSideNav
   mobileTitle="Nav Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
   isOpenOnMobile={isSideNavOpenOnMobile}
@@ -234,32 +245,32 @@ export const SideNavExample = {
       text: (
         <>
           <p>
-            <strong>EuiSideNav</strong> is a responsive menu system that usually
+            <strong>OuiSideNav</strong> is a responsive menu system that usually
             sits on the left side of a page layout. It will expand to the width
-            of its container. This is the same menu system used for the EUI
+            of its container. This is the same menu system used for the OUI
             documentation.
           </p>
 
           <p>
-            Configure the content of a <strong>EuiSideNav</strong> by passing in
-            an <EuiCode>items</EuiCode> prop. Refer to the source code for an
+            Configure the content of a <strong>OuiSideNav</strong> by passing in
+            an <OuiCode>items</OuiCode> prop. Refer to the source code for an
             example of this data structure&rsquo;s anatomy.
           </p>
 
-          <EuiCallOut
+          <OuiCallOut
             iconType="mobile"
             title="The responsive behavior converts the list into an accordion style component with a mobile only button.">
             <p>
               You will need to pass a string to the prop{' '}
-              <EuiCode>mobileTitle</EuiCode> to label the mobile button.
+              <OuiCode>mobileTitle</OuiCode> to label the mobile button.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </>
       ),
       props: {
-        EuiSideNav,
-        EuiSideNavHeading,
-        EuiSideNavItem,
+        OuiSideNav,
+        OuiSideNavHeading,
+        OuiSideNavItem,
       },
       snippet: sideNavSnippet,
       demo: <SideNav />,
@@ -275,29 +286,29 @@ export const SideNavExample = {
       text: (
         <>
           <p>
-            Since <strong>EuiSideNav</strong> renders a{' '}
-            <EuiCode>{'<nav>'}</EuiCode> section element, it is recommended that
+            Since <strong>OuiSideNav</strong> renders a{' '}
+            <OuiCode>{'<nav>'}</OuiCode> section element, it is recommended that
             the element contain a heading. Pass a string or node to the{' '}
-            <EuiCode>heading</EuiCode> prop to display within an{' '}
-            <EuiCode>{'<h2>'}</EuiCode>. Though you can also adjust this heading
-            element with <EuiCode>headingProps.element</EuiCode>.
+            <OuiCode>heading</OuiCode> prop to display within an{' '}
+            <OuiCode>{'<h2>'}</OuiCode>. Though you can also adjust this heading
+            element with <OuiCode>headingProps.element</OuiCode>.
           </p>
 
           <p>
             If the heading is visually unnecessary for your application, pass{' '}
-            <EuiCode>headingProps.screenReaderOnly</EuiCode> to ensure proper
+            <OuiCode>headingProps.screenReaderOnly</OuiCode> to ensure proper
             accessibility for those using assitive technology.
           </p>
 
-          <EuiCallOut
+          <OuiCallOut
             iconType="mobile"
             title="When providing a heading, this will then be the default display for the mobile button title."
           />
         </>
       ),
       props: {
-        EuiSideNav,
-        EuiSideNavHeading,
+        OuiSideNav,
+        OuiSideNavHeading,
       },
       snippet: sideNavHeadingSnippet,
       demo: <SideNavHeading />,
@@ -313,7 +324,7 @@ export const SideNavExample = {
       text: (
         <>
           <p>
-            <strong>EuiSideNav</strong> also supports multiple top level
+            <strong>OuiSideNav</strong> also supports multiple top level
             sections and deeply-nested tree-based data.
           </p>
           <p>
@@ -327,8 +338,8 @@ export const SideNavExample = {
       snippet: sideNavComplexSnippet,
       demo: <SideNavComplex />,
       props: {
-        EuiSideNav,
-        EuiSideNavItem,
+        OuiSideNav,
+        OuiSideNavItem,
       },
     },
     {
@@ -345,7 +356,7 @@ export const SideNavExample = {
             Typically, the children of nested items progressively shows as users
             traverse the pages themselves. However, you can bypass this
             functionality and force open items by setting{' '}
-            <EuiCode>items[n].forceOpen = true</EuiCode>.
+            <OuiCode>items[n].forceOpen = true</OuiCode>.
           </p>
           <p>
             Arrow indicators will show only if the item has children but{' '}
@@ -356,8 +367,8 @@ export const SideNavExample = {
       ),
       snippet: sideNavForceSnippet,
       props: {
-        EuiSideNav,
-        EuiSideNavItem,
+        OuiSideNav,
+        OuiSideNavItem,
       },
       demo: <SideNavForceOpen />,
     },
@@ -372,28 +383,28 @@ export const SideNavExample = {
       text: (
         <>
           <p>
-            Adding the <EuiCode>emphasize = true</EuiCode> prop to a{' '}
-            <strong>EuiSideNav</strong> item will enhance the visual appearance
+            Adding the <OuiCode>emphasize = true</OuiCode> prop to a{' '}
+            <strong>OuiSideNav</strong> item will enhance the visual appearance
             of that section and its nested items. This is helpful for when you
             need to indicate a dynamic navigational item like a user-created
             object.
           </p>
-          <EuiCallOut iconType="editorCodeBlock" title="Extra style needed">
+          <OuiCallOut iconType="editorCodeBlock" title="Extra style needed">
             <p>
               The emphasized nav item&apos;s background color extends beyond the
               horizontal bounds of the component to allow it to reach it&apos;s
               parents bounds. Be sure to add{' '}
-              <EuiCode language="sass">{'overflow: hidden'}</EuiCode> to
+              <OuiCode language="sass">{'overflow: hidden'}</OuiCode> to
               whichever container you&apos;d like it to stop at.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </>
       ),
       snippet: sideNavEmphasisSnippet,
       demo: <SideNavEmphasis />,
       props: {
-        EuiSideNav,
-        EuiSideNavItem,
+        OuiSideNav,
+        OuiSideNavItem,
       },
     },
   ],

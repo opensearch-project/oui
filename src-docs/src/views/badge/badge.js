@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiBadge,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiSpacer,
-  EuiSwitch,
-  EuiText,
-  EuiTitle,
+  OuiBadge,
+  OuiFlexItem,
+  OuiFlexGroup,
+  OuiSpacer,
+  OuiSwitch,
+  OuiText,
+  OuiTitle,
 } from '../../../../src/components';
 
 const badges = [
@@ -37,56 +48,56 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiTitle size="xs">
+      <OuiTitle size="xs">
         <h2>Accepted color names</h2>
-      </EuiTitle>
-      <EuiSpacer size="m" />
-      <EuiFlexGroup wrap responsive={false} gutterSize="xs">
+      </OuiTitle>
+      <OuiSpacer size="m" />
+      <OuiFlexGroup wrap responsive={false} gutterSize="xs">
         {badges.map((badge) => (
-          <EuiFlexItem grow={false} key={badge}>
-            <EuiBadge color={badge}>{badge}</EuiBadge>
-          </EuiFlexItem>
+          <OuiFlexItem grow={false} key={badge}>
+            <OuiBadge color={badge}>{badge}</OuiBadge>
+          </OuiFlexItem>
         ))}
-      </EuiFlexGroup>
-      <EuiSpacer />
-      <EuiTitle size="xs">
+      </OuiFlexGroup>
+      <OuiSpacer />
+      <OuiTitle size="xs">
         <h3>Custom color examples</h3>
-      </EuiTitle>
-      <EuiSpacer size="m" />
-      <EuiFlexGroup
+      </OuiTitle>
+      <OuiSpacer size="m" />
+      <OuiFlexGroup
         wrap
         responsive={false}
         gutterSize="xs"
         style={{ maxWidth: '300px' }}>
         {customBadges.map((badge) => (
-          <EuiFlexItem grow={false} key={badge}>
-            <EuiBadge color={badge}>{badge}</EuiBadge>
-          </EuiFlexItem>
+          <OuiFlexItem grow={false} key={badge}>
+            <OuiBadge color={badge}>{badge}</OuiBadge>
+          </OuiFlexItem>
         ))}
-      </EuiFlexGroup>
-      <EuiSpacer />
-      <EuiTitle size="xs">
+      </OuiFlexGroup>
+      <OuiSpacer />
+      <OuiTitle size="xs">
         <h3>Disabled state</h3>
-      </EuiTitle>
-      <EuiSpacer size="m" />
-      <EuiText size="s">
+      </OuiTitle>
+      <OuiSpacer size="m" />
+      <OuiText size="s">
         Regardless of the assigned color, all badges use the same disabled state
         styles.
-      </EuiText>
-      <EuiSpacer size="m" />
-      <EuiSwitch
+      </OuiText>
+      <OuiSpacer size="m" />
+      <OuiSwitch
         label="Show disabled state"
         checked={isDisabled}
         onChange={(e) => setDisabled(e.target.checked)}
       />
-      <EuiSpacer size="m" />
-      <EuiFlexGroup wrap responsive={false} gutterSize="xs">
-        <EuiFlexItem grow={false}>
-          <EuiBadge color="success" isDisabled={isDisabled}>
+      <OuiSpacer size="m" />
+      <OuiFlexGroup wrap responsive={false} gutterSize="xs">
+        <OuiFlexItem grow={false}>
+          <OuiBadge color="success" isDisabled={isDisabled}>
             {isDisabled ? 'Disabled badge' : 'Disable me!'}
-          </EuiBadge>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiBadge>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </Fragment>
   );
 };

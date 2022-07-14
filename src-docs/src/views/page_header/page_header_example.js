@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiPageHeader,
-  EuiPageHeaderSection,
+  OuiCode,
+  OuiPageHeader,
+  OuiPageHeaderSection,
 } from '../../../../src/components';
 
 import { pageHeaderConfig } from './playground';
@@ -18,23 +29,23 @@ import PageHeaderTabs from './page_header_tabs';
 const pageHeaderTabsSource = require('!!raw-loader!./page_header_tabs');
 
 import PageHeaderCustom from './page_header_custom';
-import { EuiText } from '../../../../src/components/text';
+import { OuiText } from '../../../../src/components/text';
 const pageHeaderCustomSource = require('!!raw-loader!./page_header_custom');
 
 export const PageHeaderExample = {
   title: 'Page header',
   intro: (
-    <EuiText>
+    <OuiText>
       <p>
-        While the <strong>EuiPageHeader</strong> component can be placed
+        While the <strong>OuiPageHeader</strong> component can be placed
         anywhere within your page layout, we recommend using it within the{' '}
         <Link to="/layout/page">
-          <strong>EuiPageTemplate</strong>
+          <strong>OuiPageTemplate</strong>
         </Link>{' '}
         component by passing the configuration props as its{' '}
-        <EuiCode>pageHeader</EuiCode>.
+        <OuiCode>pageHeader</OuiCode>.
       </p>
-    </EuiText>
+    </OuiText>
   ),
   sections: [
     {
@@ -48,33 +59,33 @@ export const PageHeaderExample = {
       text: (
         <>
           <p>
-            <strong>EuiPageHeader</strong> provides props for opinionated,
+            <strong>OuiPageHeader</strong> provides props for opinionated,
             consistent formatting of your header. Any combination of{' '}
-            <EuiCode>pageTitle</EuiCode>, <EuiCode>description</EuiCode>,{' '}
-            <EuiCode>tabs</EuiCode>, or any <EuiCode>children</EuiCode> will
+            <OuiCode>pageTitle</OuiCode>, <OuiCode>description</OuiCode>,{' '}
+            <OuiCode>tabs</OuiCode>, or any <OuiCode>children</OuiCode> will
             adjust the layout as needed.
           </p>
           <p>
-            An additional prop <EuiCode>rightSideItems</EuiCode> allows for a
+            An additional prop <OuiCode>rightSideItems</OuiCode> allows for a
             simple <strong>array of nodes</strong> which will layout in a
             flexbox row. This is commonly used for adding multiple buttons, of
             which, at least one should be primary (or{' '}
-            <EuiCode language="ts">{'fill="true"'}</EuiCode>). These items are
+            <OuiCode language="ts">{'fill="true"'}</OuiCode>). These items are
             also displayed in <strong>reverse order</strong> so that the first
             and primary array item will be displayed on the far right.
           </p>
           <p>
             You can further adjust the display of these content types with an
-            optional <EuiCode>iconType</EuiCode> placed to the left of the
-            title, <EuiCode>alignItems</EuiCode> for adjusting the vertical
-            alignment of the two sides, and <EuiCode>responsiveOrder</EuiCode>{' '}
+            optional <OuiCode>iconType</OuiCode> placed to the left of the
+            title, <OuiCode>alignItems</OuiCode> for adjusting the vertical
+            alignment of the two sides, and <OuiCode>responsiveOrder</OuiCode>{' '}
             to determine which content side to display first on smaller screens.
           </p>
         </>
       ),
       demo: <PageHeader />,
-      props: { EuiPageHeader },
-      snippet: `<EuiPageHeader
+      props: { OuiPageHeader },
+      snippet: `<OuiPageHeader
   pageTitle="Page title"
   tabs={[
     { label:"Tab 1", isSelected: true },
@@ -82,8 +93,8 @@ export const PageHeaderExample = {
   ]}
   description="Example of a description."
   rightSideItems={[
-    <EuiButton fill>Button 1</EuiButton>,
-    <EuiButton>Button 2</EuiButton>
+    <OuiButton fill>Button 1</OuiButton>,
+    <OuiButton>Button 2</OuiButton>
   ]}
 />`,
     },
@@ -98,17 +109,17 @@ export const PageHeaderExample = {
       text: (
         <>
           <p>
-            When supplying <EuiCode>tabs</EuiCode> without a{' '}
-            <EuiCode>pageTitle</EuiCode>, <strong>EuiPageHeader</strong> will
+            When supplying <OuiCode>tabs</OuiCode> without a{' '}
+            <OuiCode>pageTitle</OuiCode>, <strong>OuiPageHeader</strong> will
             promote those tabs as if they are the page title. This means that
-            any <EuiCode>description</EuiCode> or <EuiCode>children</EuiCode>{' '}
+            any <OuiCode>description</OuiCode> or <OuiCode>children</OuiCode>{' '}
             will sit <strong>below</strong> the tabs.
           </p>
         </>
       ),
       demo: <PageHeaderTabs />,
-      props: { EuiPageHeader },
-      snippet: `<EuiPageHeader
+      props: { OuiPageHeader },
+      snippet: `<OuiPageHeader
   tabs={[
     { label:"Tab 1", isSelected: true },
     { label:"Tab 2" }
@@ -131,13 +142,13 @@ export const PageHeaderExample = {
             established Elastic page layout patterns. They are completely
             optional and by design, inflexible. If you need a layout that does
             not match these patterns you can pass in your own{' '}
-            <EuiCode>children</EuiCode> utilizing the{' '}
-            <strong>EuiPageHeaderSection</strong> components.
+            <OuiCode>children</OuiCode> utilizing the{' '}
+            <strong>OuiPageHeaderSection</strong> components.
           </p>
         </>
       ),
       demo: <PageHeaderCustom />,
-      props: { EuiPageHeader, EuiPageHeaderSection },
+      props: { OuiPageHeader, OuiPageHeaderSection },
     },
   ],
 };

@@ -3,7 +3,7 @@ docs/
 reports/
 tmp/
 wiki/
-generator-eui/
+generator-oui/
 test/
 src-docs/
 packages/react-datepicker

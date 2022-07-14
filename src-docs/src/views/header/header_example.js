@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,19 +16,19 @@ import { GuideSectionTypes } from '../../components';
 import lightColors from '!!sass-vars-to-js-loader!../../../../src/global_styling/variables/_colors.scss';
 
 import {
-  EuiHeader,
-  EuiHeaderAlert,
-  EuiHeaderBreadcrumbs,
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemButton,
-  EuiHeaderLogo,
-  EuiCode,
-  EuiHeaderLinks,
-  EuiHeaderLink,
+  OuiHeader,
+  OuiHeaderAlert,
+  OuiHeaderBreadcrumbs,
+  OuiHeaderSection,
+  OuiHeaderSectionItem,
+  OuiHeaderSectionItemButton,
+  OuiHeaderLogo,
+  OuiCode,
+  OuiHeaderLinks,
+  OuiHeaderLink,
 } from '../../../../src/components';
 
-import { EuiHeaderSectionsProp } from './props';
+import { OuiHeaderSectionsProp } from './props';
 
 import Header from './header';
 const headerSource = require('!!raw-loader!./header');
@@ -46,24 +57,24 @@ const headerStackedSource = require('!!raw-loader!./header_stacked');
 import HeaderElasticPattern from './header_elastic_pattern';
 const headerElasticPatternSource = require('!!raw-loader!./header_elastic_pattern');
 
-const headerSnippet = `<EuiHeader>
-  <EuiHeaderSection grow={false}>
-    <EuiHeaderSectionItem border="right">
+const headerSnippet = `<OuiHeader>
+  <OuiHeaderSection grow={false}>
+    <OuiHeaderSectionItem border="right">
       <!-- HeaderSectionItem content -->
-    </EuiHeaderSectionItem>
-  </EuiHeaderSection>
+    </OuiHeaderSectionItem>
+  </OuiHeaderSection>
 
-  <!-- You can render breadcrumbs here using EuiHeaderBreadcrumbs -->
+  <!-- You can render breadcrumbs here using OuiHeaderBreadcrumbs -->
 
-  <EuiHeaderSection side="right">
-    <EuiHeaderSectionItem>
+  <OuiHeaderSection side="right">
+    <OuiHeaderSectionItem>
       <!-- HeaderSectionItem content -->
-    </EuiHeaderSectionItem>
-  </EuiHeaderSection>
-</EuiHeader>
+    </OuiHeaderSectionItem>
+  </OuiHeaderSection>
+</OuiHeader>
 `;
 
-const headerSectionsSnippet = `<EuiHeader
+const headerSectionsSnippet = `<OuiHeader
   sections={[
     {
       items: [...],
@@ -80,71 +91,71 @@ const headerSectionsSnippet = `<EuiHeader
   ]}
 />`;
 
-const headerLinksSnippet = `<EuiHeader>
-  <EuiHeaderSectionItem border="right">
-    <EuiHeaderLogo
+const headerLinksSnippet = `<OuiHeader>
+  <OuiHeaderSectionItem border="right">
+    <OuiHeaderLogo
       iconType="iconName"
       href=""
     />
-  </EuiHeaderSectionItem>
+  </OuiHeaderSectionItem>
 
-  <EuiHeaderLinks>
-    <EuiHeaderLink href="" isActive>
+  <OuiHeaderLinks>
+    <OuiHeaderLink href="" isActive>
       <!-- First link -->
-    </EuiHeaderLink>
+    </OuiHeaderLink>
 
-    <EuiHeaderLink href="">
+    <OuiHeaderLink href="">
       <!-- Second link -->
-    </EuiHeaderLink>
-  </EuiHeaderLinks>
-</EuiHeader>`;
+    </OuiHeaderLink>
+  </OuiHeaderLinks>
+</OuiHeader>`;
 
-const headerAlertSnippet = `<EuiHeader>
-  <EuiHeaderSection grow={false}>
-    <EuiHeaderSectionItem>
+const headerAlertSnippet = `<OuiHeader>
+  <OuiHeaderSection grow={false}>
+    <OuiHeaderSectionItem>
       <!-- HeaderSectionItem content -->
-    </EuiHeaderSectionItem>
-  </EuiHeaderSection>
+    </OuiHeaderSectionItem>
+  </OuiHeaderSection>
 
-  <EuiHeaderSection side="right">
-    <EuiHeaderSectionItem>
-      <!-- Button to trigger portal content like a EuiPopover or a EuiFlyout -->
-      <EuiHeaderSectionItemButton
+  <OuiHeaderSection side="right">
+    <OuiHeaderSectionItem>
+      <!-- Button to trigger portal content like a OuiPopover or a OuiFlyout -->
+      <OuiHeaderSectionItemButton
         aria-controls={portalContentId}
         aria-expanded={isPortalContentVisible}
         aria-label="Open portal content"
         onClick={showPortalContent}
         notification={showNotification}
       >
-        <EuiIcon type="bell" />
-      </EuiHeaderSectionItemButton>
-    </EuiHeaderSectionItem>
-  </EuiHeaderSection>
-</EuiHeader>`;
+        <OuiIcon type="bell" />
+      </OuiHeaderSectionItemButton>
+    </OuiHeaderSectionItem>
+  </OuiHeaderSection>
+</OuiHeader>`;
 
 const headerAnimateSnippet = `const bellRef = useRef();
 
-// wrapping the 'euiAnimate' methods to make them available through this component's 'ref'
-const euiAnimate = useCallback(() => {
-  bellRef.current?.euiAnimate();
+// wrapping the 'ouiAnimate' methods to make them available through this component's 'ref'
+const ouiAnimate = useCallback(() => {
+  bellRef.current?.ouiAnimate();
 }, []);
 
 // we're using the useImperativeHandle which allows the child to expose a function to the parent
 useImperativeHandle(
   ref,
   () => ({
-    euiAnimate,
+    ouiAnimate,
   }),
-  [euiAnimate]
+  [ouiAnimate]
 );
 
 const bellButton = (
-  <EuiHeaderSectionItemButton
+  <OuiHeaderSectionItemButton
     ref={bellRef}
     aria-label={ariaLabel}
     notification={notification}>
-    <EuiIcon type="bell" />
-  </EuiHeaderSectionItemButton>
+    <OuiIcon type="bell" />
+  </OuiHeaderSectionItemButton>
 );`;
 
 export const HeaderExample = {
@@ -161,36 +172,36 @@ export const HeaderExample = {
         <>
           <p>
             The header is made up of <strong>many</strong> individual components
-            starting with <strong>EuiHeader</strong> as the container. You can
+            starting with <strong>OuiHeader</strong> as the container. You can
             manually configure your header with the following related
             components:
           </p>
           <ul>
             <li>
-              <strong>EuiHeaderSection</strong>: Left/right containers with flex
+              <strong>OuiHeaderSection</strong>: Left/right containers with flex
               properties.
             </li>
             <li>
-              <strong>EuiHeaderSectionItem</strong>: Containers for individual
+              <strong>OuiHeaderSectionItem</strong>: Containers for individual
               header items as flex items.
             </li>
             <li>
-              <strong>EuiHeaderSectionItemButton</strong>: Specialized button
+              <strong>OuiHeaderSectionItemButton</strong>: Specialized button
               that extends{' '}
               <Link to="/navigation/button#empty-button">
-                <strong>EuiButtonEmpty</strong>
+                <strong>OuiButtonEmpty</strong>
               </Link>{' '}
               but styled to fit the height of the header with additional{' '}
-              <EuiCode>notification</EuiCode> props.
+              <OuiCode>notification</OuiCode> props.
             </li>
             <li>
-              <strong>EuiHeaderLogo</strong>: A helpful component for creating a
+              <strong>OuiHeaderLogo</strong>: A helpful component for creating a
               linked logo that fits within the header sizing.
             </li>
             <li>
-              <strong>EuiHeaderBreadcrumbs</strong>: A set of{' '}
+              <strong>OuiHeaderBreadcrumbs</strong>: A set of{' '}
               <Link to="/navigation/breadcrumbs">
-                <strong>EuiBreadcrumbs</strong>
+                <strong>OuiBreadcrumbs</strong>
               </Link>{' '}
               specifically stylized to fit inside the header.
             </li>
@@ -198,13 +209,13 @@ export const HeaderExample = {
         </>
       ),
       props: {
-        EuiHeader,
-        EuiHeaderSection,
-        EuiHeaderSectionItem,
-        EuiHeaderSectionItemButton,
-        EuiHeaderLogo,
-        EuiHeaderBreadcrumbs,
-        EuiHeaderSectionsProp,
+        OuiHeader,
+        OuiHeaderSection,
+        OuiHeaderSectionItem,
+        OuiHeaderSectionItemButton,
+        OuiHeaderLogo,
+        OuiHeaderBreadcrumbs,
+        OuiHeaderSectionsProp,
       },
       snippet: headerSnippet,
       demo: <Header />,
@@ -224,27 +235,27 @@ export const HeaderExample = {
         <>
           <p>
             Alternatively, you can pass an array of objects to the{' '}
-            <EuiCode>sections</EuiCode> prop that takes a key of{' '}
-            <EuiCode>items</EuiCode> (array of children to wrap in an{' '}
-            <strong>EuiHeaderSectionItem</strong>) and/or{' '}
-            <EuiCode>breadcrumbs</EuiCode> (array of{' '}
+            <OuiCode>sections</OuiCode> prop that takes a key of{' '}
+            <OuiCode>items</OuiCode> (array of children to wrap in an{' '}
+            <strong>OuiHeaderSectionItem</strong>) and/or{' '}
+            <OuiCode>breadcrumbs</OuiCode> (array of{' '}
             <Link to="/navigation/breadcrumbs">breadcrumb</Link> objects). Each
             item in the array will be wrapped in an{' '}
-            <strong>EuiHeaderSection</strong>.
+            <strong>OuiHeaderSection</strong>.
           </p>
           <p>
-            <strong>Note:</strong> Passing <EuiCode>sections</EuiCode> and{' '}
-            <EuiCode>children</EuiCode> will disregard the{' '}
-            <EuiCode>children</EuiCode> as it is not easily interpreted at what
+            <strong>Note:</strong> Passing <OuiCode>sections</OuiCode> and{' '}
+            <OuiCode>children</OuiCode> will disregard the{' '}
+            <OuiCode>children</OuiCode> as it is not easily interpreted at what
             location the children should be placed.
           </p>
         </>
       ),
       props: {
-        EuiHeader,
-        EuiHeaderSectionsProp,
-        EuiHeaderSection,
-        EuiHeaderSectionItem,
+        OuiHeader,
+        OuiHeaderSectionsProp,
+        OuiHeaderSection,
+        OuiHeaderSectionItem,
       },
       snippet: headerSectionsSnippet,
       demo: <HeaderSections />,
@@ -265,23 +276,23 @@ export const HeaderExample = {
           <p>
             In addition to the components mentioned prior, which lend themselves
             to more application style navigation patterns,{' '}
-            <strong>EuiHeaderLinks</strong> and <strong>EuiHeaderLink</strong>{' '}
+            <strong>OuiHeaderLinks</strong> and <strong>OuiHeaderLink</strong>{' '}
             supply the ability to inline a list of navigational or menu style
             links.
           </p>
           <p>
-            <strong>EuiHeaderLinks</strong> comes with responsive functionality
+            <strong>OuiHeaderLinks</strong> comes with responsive functionality
             built-in which will convert the inline list of links to a popover
-            list triggered by a <strong>EuiHeaderSectionItemButton</strong>. You
+            list triggered by a <strong>OuiHeaderSectionItemButton</strong>. You
             can adjust at which breakpoints to switch to the popover display by
             passing your own array of named breakpoints to{' '}
-            <EuiCode>popoverBreakpoints</EuiCode>.
+            <OuiCode>popoverBreakpoints</OuiCode>.
           </p>
         </>
       ),
       props: {
-        EuiHeaderLinks,
-        EuiHeaderLink,
+        OuiHeaderLinks,
+        OuiHeaderLink,
       },
       snippet: headerLinksSnippet,
       demo: <HeaderLinks />,
@@ -302,23 +313,23 @@ export const HeaderExample = {
           <p>
             Most consumers need a header that does not scroll away with the page
             contents. You can apply this display by applying the property{' '}
-            <EuiCode language="ts">{'position="fixed"'}</EuiCode>. This will
-            also add a class of <EuiCode>.euiBody--headerIsFixed</EuiCode> to
+            <OuiCode language="ts">{'position="fixed"'}</OuiCode>. This will
+            also add a class of <OuiCode>.ouiBody--headerIsFixed</OuiCode> to
             the window body.
           </p>
           <p>
             You will then need to apply your own padding to this body class to
-            afford for the header height. EUI supplies a helper mixin that also
+            afford for the header height. OUI supplies a helper mixin that also
             accounts for this height in flyouts and the collapsible nav. Simply
             add{' '}
-            <EuiCode language="sass">@include euiHeaderAffordForFixed;</EuiCode>{' '}
+            <OuiCode language="sass">@include ouiHeaderAffordForFixed;</OuiCode>{' '}
             anywhere in your SASS.
           </p>
         </>
       ),
       snippet: [
-        '<EuiHeader position="fixed" />',
-        '@include euiHeaderAffordForFixed;',
+        '<OuiHeader position="fixed" />',
+        '@include ouiHeaderAffordForFixed;',
       ],
       demo: <HeaderPosition />,
       demoPanelProps: {
@@ -336,17 +347,17 @@ export const HeaderExample = {
       text: (
         <p>
           To make site-wide navigation more prominent,{' '}
-          <strong>EuiHeader</strong> supports reversing the colors to dark theme
-          with <EuiCode language="js">{'theme="dark"'}</EuiCode>. However, it
+          <strong>OuiHeader</strong> supports reversing the colors to dark theme
+          with <OuiCode language="js">{'theme="dark"'}</OuiCode>. However, it
           only supports a <strong>limited set of children</strong> that will
           also shift their theme. These components include{' '}
-          <strong>EuiHeaderLogo, EuiHeaderLink(s),</strong>{' '}
-          <strong>EuiHeaderSectionItemButton</strong> and{' '}
-          <strong>EuiSelectableTemplateSitewide</strong>. Any other content may
+          <strong>OuiHeaderLogo, OuiHeaderLink(s),</strong>{' '}
+          <strong>OuiHeaderSectionItemButton</strong> and{' '}
+          <strong>OuiSelectableTemplateSitewide</strong>. Any other content may
           not render correctly without custom configurations.
         </p>
       ),
-      snippet: '<EuiHeader theme="dark" />',
+      snippet: '<OuiHeader theme="dark" />',
       demo: <HeaderDark theme={lightColors} />,
       demoPanelProps: {
         color: 'subdued',
@@ -363,42 +374,42 @@ export const HeaderExample = {
       text: (
         <>
           <p>
-            Use an <strong>EuiHeaderSectionItemButton</strong> to display
+            Use an <strong>OuiHeaderSectionItemButton</strong> to display
             additional information in <Link to="/layout/popover">popovers</Link>{' '}
             or <Link to="/layout/flyout">flyouts</Link>, such as a user profile
             or news feed. When using{' '}
             <Link to="/layout/flyout">
-              <strong>EuiFlyout</strong>
+              <strong>OuiFlyout</strong>
             </Link>
             , be sure to wrap it in a{' '}
             <Link to="/utilities/portal">
-              <strong>EuiPortal</strong>
+              <strong>OuiPortal</strong>
             </Link>
             . When using an{' '}
             <Link to="/layout/popover">
-              <strong>EuiPopover</strong>
+              <strong>OuiPopover</strong>
             </Link>{' '}
             in conjunction with a <strong>fixed</strong> header, be sure to add
-            the <EuiCode>repositionOnScroll</EuiCode> prop to the popover.
+            the <OuiCode>repositionOnScroll</OuiCode> prop to the popover.
           </p>
           <p>
             The example below shows how to incorporate{' '}
-            <strong>EuiHeaderAlert</strong> components to show a list of updates
+            <strong>OuiHeaderAlert</strong> components to show a list of updates
             inside a{' '}
             <Link to="/layout/flyout">
-              <strong>EuiFlyout</strong>
+              <strong>OuiFlyout</strong>
             </Link>{' '}
             and a{' '}
             <Link to="/layout/popover">
-              <strong>EuiPopover</strong>
+              <strong>OuiPopover</strong>
             </Link>{' '}
             .
           </p>
         </>
       ),
       props: {
-        EuiHeaderAlert,
-        EuiHeaderSectionItemButton,
+        OuiHeaderAlert,
+        OuiHeaderSectionItemButton,
       },
       snippet: headerAlertSnippet,
       demo: <HeaderAlert />,
@@ -418,19 +429,19 @@ export const HeaderExample = {
         <>
           <p>
             To alert or notify users about the additional information they are
-            receiving, use the <strong>EuiHeaderSectionItemButton</strong>{' '}
-            <EuiCode>notification</EuiCode> prop. You can pass a{' '}
-            <EuiCode>node</EuiCode> that will render inside a{' '}
-            <strong>EuiBadgeNotification</strong> or pass{' '}
-            <EuiCode>true</EuiCode> to render a simple dot. You can also animate
-            the button by calling the <EuiCode>euiAnimate()</EuiCode> method on
-            the <strong>EuiHeaderSectionItemButton</strong>{' '}
-            <EuiCode>ref</EuiCode>.
+            receiving, use the <strong>OuiHeaderSectionItemButton</strong>{' '}
+            <OuiCode>notification</OuiCode> prop. You can pass a{' '}
+            <OuiCode>node</OuiCode> that will render inside a{' '}
+            <strong>OuiBadgeNotification</strong> or pass{' '}
+            <OuiCode>true</OuiCode> to render a simple dot. You can also animate
+            the button by calling the <OuiCode>ouiAnimate()</OuiCode> method on
+            the <strong>OuiHeaderSectionItemButton</strong>{' '}
+            <OuiCode>ref</OuiCode>.
           </p>
         </>
       ),
       props: {
-        EuiHeaderSectionItemButton,
+        OuiHeaderSectionItemButton,
       },
       snippet: headerAnimateSnippet,
       demo: <HeaderAnimate />,
@@ -450,16 +461,16 @@ export const HeaderExample = {
         <p>
           Stacking multiple headers provides a great way to separate global
           navigation concerns. However, the{' '}
-          <EuiCode language="ts">{'position="fixed"'}</EuiCode> option will not
+          <OuiCode language="ts">{'position="fixed"'}</OuiCode> option will not
           be aware of the number of headers. If you do need fixed{' '}
           <strong>and</strong> stacked headers, you will need to apply the SASS
           helper mixin and pass in the correct height to afford for.
         </p>
       ),
       snippet: [
-        `<EuiHeader theme="dark" position="fixed" />
-<EuiHeader position="fixed" />`,
-        '@include euiHeaderAffordForFixed($euiHeaderHeightCompensation * 2);',
+        `<OuiHeader theme="dark" position="fixed" />
+<OuiHeader position="fixed" />`,
+        '@include ouiHeaderAffordForFixed($ouiHeaderHeightCompensation * 2);',
       ],
       demo: <HeaderStacked />,
       demoPanelProps: {
@@ -479,14 +490,14 @@ export const HeaderExample = {
           <h3>Putting it all together</h3>
           <p>
             The button below will launch a full screen example that includes two{' '}
-            <strong>EuiHeaders</strong> with all the appropriate navigation
+            <strong>OuiHeaders</strong> with all the appropriate navigation
             pieces including{' '}
             <Link to="/navigation/collapsible-nav">
-              <strong>EuiCollapsibleNav</strong>,
+              <strong>OuiCollapsibleNav</strong>,
             </Link>{' '}
-            <strong>EuiHeaderAlerts</strong>, user menu, deployment switcher,
-            space selector, <strong>EuiHeaderBreadcrumbs</strong> and{' '}
-            <strong>EuiHeaderLinks</strong> for app menu items.
+            <strong>OuiHeaderAlerts</strong>, user menu, deployment switcher,
+            space selector, <strong>OuiHeaderBreadcrumbs</strong> and{' '}
+            <strong>OuiHeaderLinks</strong> for app menu items.
           </p>
           <p>
             This is just a pattern and should be treated as such. Consuming

@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiImage,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiImage,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem grow={false}>
-      <EuiImage
+  <OuiFlexGroup>
+    <OuiFlexItem grow={false}>
+      <OuiImage
         size="m"
         hasShadow
         allowFullScreen
@@ -17,9 +28,9 @@ export default () => (
         alt="Accessible image alt goes here"
         src="https://source.unsplash.com/2000x1000/?Nature"
       />
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiImage
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiImage
         size="m"
         hasShadow
         allowFullScreen
@@ -28,6 +39,6 @@ export default () => (
         fullScreenIconColor="dark"
         src="https://source.unsplash.com/1000x2000/?Nature"
       />
-    </EuiFlexItem>
-  </EuiFlexGroup>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

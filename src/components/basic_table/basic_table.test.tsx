@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,14 +33,14 @@ import { shallow, mount } from 'enzyme';
 import { requiredProps } from '../../test';
 
 import {
-  EuiBasicTable,
-  EuiBasicTableColumn,
-  EuiBasicTableProps,
+  OuiBasicTable,
+  OuiBasicTableColumn,
+  OuiBasicTableProps,
   getItemId,
 } from './basic_table';
 
 import { SortDirection } from '../../services';
-import { EuiTableFieldDataColumnType } from './table_types';
+import { OuiTableFieldDataColumnType } from './table_types';
 
 describe('getItemId', () => {
   it('returns undefined if no itemId prop is given', () => {
@@ -68,7 +79,7 @@ interface CountItem {
   count: number;
 }
 
-const basicColumns: Array<EuiBasicTableColumn<BasicItem>> = [
+const basicColumns: Array<OuiBasicTableColumn<BasicItem>> = [
   {
     field: 'name',
     name: 'Name',
@@ -76,7 +87,7 @@ const basicColumns: Array<EuiBasicTableColumn<BasicItem>> = [
   },
 ];
 
-describe('EuiBasicTable', () => {
+describe('OuiBasicTable', () => {
   describe('empty', () => {
     test('is rendered', () => {
       const props = {
@@ -84,13 +95,13 @@ describe('EuiBasicTable', () => {
         items: [],
         columns: basicColumns,
       };
-      const component = shallow(<EuiBasicTable {...props} />);
+      const component = shallow(<OuiBasicTable {...props} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('renders a string as a custom message', () => {
-      const props: EuiBasicTableProps<BasicItem> = {
+      const props: OuiBasicTableProps<BasicItem> = {
         items: [],
         columns: [
           {
@@ -101,13 +112,13 @@ describe('EuiBasicTable', () => {
         ],
         noItemsMessage: 'where my items at?',
       };
-      const component = shallow(<EuiBasicTable {...props} />);
+      const component = shallow(<OuiBasicTable {...props} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('renders a node as a custom message', () => {
-      const props: EuiBasicTableProps<BasicItem> = {
+      const props: OuiBasicTableProps<BasicItem> = {
         items: [],
         columns: [
           {
@@ -122,7 +133,7 @@ describe('EuiBasicTable', () => {
           </p>
         ),
       };
-      const component = shallow(<EuiBasicTable {...props} />);
+      const component = shallow(<OuiBasicTable {...props} />);
 
       expect(component).toMatchSnapshot();
     });
@@ -130,7 +141,7 @@ describe('EuiBasicTable', () => {
 
   describe('rowProps', () => {
     test('renders rows with custom props from a callback', () => {
-      const props: EuiBasicTableProps<BasicItem> = {
+      const props: OuiBasicTableProps<BasicItem> = {
         items: [
           { id: '1', name: 'name1' },
           { id: '2', name: 'name2' },
@@ -152,13 +163,13 @@ describe('EuiBasicTable', () => {
           };
         },
       };
-      const component = shallow(<EuiBasicTable<BasicItem> {...props} />);
+      const component = shallow(<OuiBasicTable<BasicItem> {...props} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('renders rows with custom props from an object', () => {
-      const props: EuiBasicTableProps<BasicItem> = {
+      const props: OuiBasicTableProps<BasicItem> = {
         items: [
           { id: '1', name: 'name1' },
           { id: '2', name: 'name2' },
@@ -177,7 +188,7 @@ describe('EuiBasicTable', () => {
           onClick: () => {},
         },
       };
-      const component = shallow(<EuiBasicTable {...props} />);
+      const component = shallow(<OuiBasicTable {...props} />);
 
       expect(component).toMatchSnapshot();
     });
@@ -185,7 +196,7 @@ describe('EuiBasicTable', () => {
 
   describe('cellProps', () => {
     test('renders cells with custom props from a callback', () => {
-      const props: EuiBasicTableProps<BasicItem> = {
+      const props: OuiBasicTableProps<BasicItem> = {
         items: [
           { id: '1', name: 'name1' },
           { id: '2', name: 'name2' },
@@ -200,7 +211,7 @@ describe('EuiBasicTable', () => {
         ],
         cellProps: (item, column) => {
           const { id } = item;
-          const { field } = column as EuiTableFieldDataColumnType<BasicItem>;
+          const { field } = column as OuiTableFieldDataColumnType<BasicItem>;
           return {
             'data-test-subj': `cell-${id}-${field}`,
             className: 'customRowClass',
@@ -208,13 +219,13 @@ describe('EuiBasicTable', () => {
           };
         },
       };
-      const component = shallow(<EuiBasicTable {...props} />);
+      const component = shallow(<OuiBasicTable {...props} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('renders rows with custom props from an object', () => {
-      const props: EuiBasicTableProps<BasicItem> = {
+      const props: OuiBasicTableProps<BasicItem> = {
         items: [
           { id: '1', name: 'name1' },
           { id: '2', name: 'name2' },
@@ -233,14 +244,14 @@ describe('EuiBasicTable', () => {
           onClick: () => {},
         },
       };
-      const component = shallow(<EuiBasicTable {...props} />);
+      const component = shallow(<OuiBasicTable {...props} />);
 
       expect(component).toMatchSnapshot();
     });
   });
 
   test('itemIdToExpandedRowMap renders an expanded row', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -259,13 +270,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -285,13 +296,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination - 2nd page', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -310,13 +321,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination and error', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -337,13 +348,13 @@ describe('EuiBasicTable', () => {
       onChange: () => {},
       error: 'no can do',
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, hiding the per page options', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -364,13 +375,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with sorting', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -389,13 +400,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with sortable columns and sorting disabled', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -411,13 +422,13 @@ describe('EuiBasicTable', () => {
       ],
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with sorting enabled and enable all columns for sorting', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -439,13 +450,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with initial selection', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -464,13 +475,13 @@ describe('EuiBasicTable', () => {
         initialSelected: [{ id: '1', name: 'name1' }],
       },
     };
-    const component = mount(<EuiBasicTable {...props} />);
+    const component = mount(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination and selection', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -494,13 +505,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, selection and sorting', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -528,14 +539,14 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('footers', () => {
     test('do not render without a column footer definition', () => {
-      const props: EuiBasicTableProps<AgeItem> = {
+      const props: OuiBasicTableProps<AgeItem> = {
         items: [
           { id: '1', name: 'name1', age: 20 },
           { id: '2', name: 'name2', age: 21 },
@@ -561,13 +572,13 @@ describe('EuiBasicTable', () => {
         ],
         onChange: () => {},
       };
-      const component = shallow(<EuiBasicTable {...props} />);
+      const component = shallow(<OuiBasicTable {...props} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('render with pagination, selection, sorting, and footer', () => {
-      const props: EuiBasicTableProps<AgeItem> = {
+      const props: OuiBasicTableProps<AgeItem> = {
         items: [
           { id: '1', name: 'name1', age: 20 },
           { id: '2', name: 'name2', age: 21 },
@@ -616,14 +627,14 @@ describe('EuiBasicTable', () => {
         },
         onChange: () => {},
       };
-      const component = shallow(<EuiBasicTable {...props} />);
+      const component = shallow(<OuiBasicTable {...props} />);
 
       expect(component).toMatchSnapshot();
     });
   });
 
   test('with pagination, selection, sorting and column renderer', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -652,13 +663,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting and column dataType', () => {
-    const props: EuiBasicTableProps<CountItem> = {
+    const props: OuiBasicTableProps<CountItem> = {
       items: [
         { id: '1', count: 1 },
         { id: '2', count: 2 },
@@ -687,14 +698,14 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   // here we want to verify that the column renderer takes precedence over the column data type
   test('with pagination, selection, sorting, column renderer and column dataType', () => {
-    const props: EuiBasicTableProps<CountItem> = {
+    const props: OuiBasicTableProps<CountItem> = {
       items: [
         { id: '1', count: 1 },
         { id: '2', count: 2 },
@@ -724,13 +735,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting and a single record action', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -769,13 +780,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting and multiple record actions', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -820,13 +831,13 @@ describe('EuiBasicTable', () => {
       },
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('with multiple record actions with custom availability', () => {
-    const props: EuiBasicTableProps<BasicItem> = {
+    const props: OuiBasicTableProps<BasicItem> = {
       items: [
         { id: '1', name: 'name1' },
         { id: '2', name: 'name2' },
@@ -881,7 +892,7 @@ describe('EuiBasicTable', () => {
       ],
       onChange: () => {},
     };
-    const component = shallow(<EuiBasicTable {...props} />);
+    const component = shallow(<OuiBasicTable {...props} />);
 
     expect(component).toMatchSnapshot();
   });

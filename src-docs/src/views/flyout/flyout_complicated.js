@@ -1,26 +1,37 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiCodeBlock,
-  EuiComboBox,
-  EuiExpression,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutFooter,
-  EuiFlyoutHeader,
-  EuiForm,
-  EuiFormRow,
-  EuiPopover,
-  EuiSpacer,
-  EuiTab,
-  EuiTabs,
-  EuiText,
-  EuiTitle,
-  EuiSuperSelect,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiCodeBlock,
+  OuiComboBox,
+  OuiExpression,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFlyout,
+  OuiFlyoutBody,
+  OuiFlyoutFooter,
+  OuiFlyoutHeader,
+  OuiForm,
+  OuiFormRow,
+  OuiPopover,
+  OuiSpacer,
+  OuiTab,
+  OuiTabs,
+  OuiText,
+  OuiTitle,
+  OuiSuperSelect,
 } from '../../../../src/components';
 
 export default () => {
@@ -53,12 +64,12 @@ export default () => {
   const onSelectedTabChanged = (id) => setSelectedTabId(id);
 
   const renderTabs = tabs.map((tab, index) => (
-    <EuiTab
+    <OuiTab
       onClick={() => onSelectedTabChanged(tab.id)}
       isSelected={tab.id === selectedTabId}
       key={index}>
       {tab.name}
-    </EuiTab>
+    </OuiTab>
   ));
 
   const superSelectOptions = [
@@ -68,11 +79,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option one</strong>
-          <EuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+          <OuiText size="s" color="subdued">
+            <p className="ouiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </OuiText>
         </Fragment>
       ),
     },
@@ -82,11 +93,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option two</strong>
-          <EuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+          <OuiText size="s" color="subdued">
+            <p className="ouiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </OuiText>
         </Fragment>
       ),
     },
@@ -96,11 +107,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option three</strong>
-          <EuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+          <OuiText size="s" color="subdued">
+            <p className="ouiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </OuiText>
         </Fragment>
       ),
     },
@@ -111,7 +122,7 @@ export default () => {
   };
 
   const flyoutContent = (
-    <EuiText>
+    <OuiText>
       <p>
         Far out in the uncharted backwaters of the unfashionable end of the
         western spiral arm of the Galaxy lies a small unregarded yellow sun.
@@ -165,7 +176,7 @@ export default () => {
         So it thought the dog was making a poor life choice by focusing so much
         on mindfulness. What if its car broke down?
       </p>
-    </EuiText>
+    </OuiText>
   );
 
   const htmlCode = `<!--I'm an example of HTML-->
@@ -178,62 +189,62 @@ export default () => {
 
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <OuiFlyout
         ownFocus
         onClose={closeFlyout}
         hideCloseButton
         aria-labelledby="flyoutComplicatedTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <OuiFlyoutHeader hasBorder>
+          <OuiTitle size="m">
             <h2 id="flyoutComplicatedTitle">Flyout header</h2>
-          </EuiTitle>
-          <EuiSpacer size="s" />
-          <EuiText color="subdued">
+          </OuiTitle>
+          <OuiSpacer size="s" />
+          <OuiText color="subdued">
             <p>
               Put navigation items in the header, and cross tab actions in a
               footer.
             </p>
-          </EuiText>
-          <EuiTabs style={{ marginBottom: '-25px' }}>{renderTabs}</EuiTabs>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiPopover
+          </OuiText>
+          <OuiTabs style={{ marginBottom: '-25px' }}>{renderTabs}</OuiTabs>
+        </OuiFlyoutHeader>
+        <OuiFlyoutBody>
+          <OuiPopover
             closePopover={closePopover}
             button={
-              <EuiButton onClick={togglePopover}>
+              <OuiButton onClick={togglePopover}>
                 Even popovers can be included
-              </EuiButton>
+              </OuiButton>
             }
             isOpen={isPopoverOpen}>
             <p>
               This is the popover content, notice how it can overflow the
               flyout!
             </p>
-          </EuiPopover>
-          <EuiSpacer size="m" />
-          <EuiForm component="form">
-            <EuiFormRow label="A SuperSelect field">
-              <EuiSuperSelect
+          </OuiPopover>
+          <OuiSpacer size="m" />
+          <OuiForm component="form">
+            <OuiFormRow label="A SuperSelect field">
+              <OuiSuperSelect
                 options={superSelectOptions}
                 valueOfSelected={superSelectvalue}
                 onChange={(value) => onSuperSelectChange(value)}
                 itemLayoutAlign="top"
                 hasDividers
               />
-            </EuiFormRow>
-          </EuiForm>
-          <EuiSpacer />
-          <EuiPopover
+            </OuiFormRow>
+          </OuiForm>
+          <OuiSpacer />
+          <OuiPopover
             isOpen={isExpressionOpen}
             closePopover={() => setIsExpressionOpen(false)}
             button={
-              <EuiExpression
+              <OuiExpression
                 description="expression"
                 value="configurations"
                 onClick={() => setIsExpressionOpen(!isExpressionOpen)}
               />
             }>
-            <EuiComboBox
+            <OuiComboBox
               selectedOptions={[{ label: 'Option one' }]}
               options={[
                 { label: 'Option one' },
@@ -241,35 +252,35 @@ export default () => {
                 { label: 'Option three' },
               ]}
             />
-          </EuiPopover>
-          <EuiSpacer />
+          </OuiPopover>
+          <OuiSpacer />
           {flyoutContent}
-          <EuiCodeBlock language="html">{htmlCode}</EuiCodeBlock>
-        </EuiFlyoutBody>
-        <EuiFlyoutFooter>
-          <EuiFlexGroup justifyContent="spaceBetween">
-            <EuiFlexItem grow={false}>
-              <EuiButtonEmpty
+          <OuiCodeBlock language="html">{htmlCode}</OuiCodeBlock>
+        </OuiFlyoutBody>
+        <OuiFlyoutFooter>
+          <OuiFlexGroup justifyContent="spaceBetween">
+            <OuiFlexItem grow={false}>
+              <OuiButtonEmpty
                 iconType="cross"
                 onClick={closeFlyout}
                 flush="left">
                 Close
-              </EuiButtonEmpty>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiButton onClick={closeFlyout} fill>
+              </OuiButtonEmpty>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiButton onClick={closeFlyout} fill>
                 Save
-              </EuiButton>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiFlyoutFooter>
-      </EuiFlyout>
+              </OuiButton>
+            </OuiFlexItem>
+          </OuiFlexGroup>
+        </OuiFlyoutFooter>
+      </OuiFlyout>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={showFlyout}>Show flyout</EuiButton>
+      <OuiButton onClick={showFlyout}>Show flyout</OuiButton>
 
       {flyout}
     </div>

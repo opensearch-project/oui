@@ -1,8 +1,19 @@
-$euiTooltipBackgroundColor: tintOrShade($euiColorFullShade, 25%, 100%) !default;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-$euiTooltipAnimations: (
-  top: euiToolTipTop,
-  left: euiToolTipBottom,
-  bottom: euiToolTipLeft,
-  right: euiToolTipRight,
+$ouiTooltipBackgroundColor: tintOrShade($ouiColorFullShade, 25%, 100%) !default;
+
+$ouiTooltipAnimations: (
+  top: ouiToolTipTop,
+  left: ouiToolTipBottom,
+  bottom: ouiToolTipLeft,
+  right: ouiToolTipRight,
 ) !default;

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,15 +28,15 @@
  * under the License.
  */
 
-export { EuiToast } from './toast';
+export { OuiToast } from './toast';
 
 export {
-  EuiGlobalToastList,
-  EuiGlobalToastListProps,
-  Toast as EuiGlobalToastListToast,
+  OuiGlobalToastList,
+  OuiGlobalToastListProps,
+  Toast as OuiGlobalToastListToast,
 } from './global_toast_list';
 
 export {
-  EuiGlobalToastListItem,
-  EuiGlobalToastListItemProps,
+  OuiGlobalToastListItem,
+  OuiGlobalToastListItemProps,
 } from './global_toast_list_item';

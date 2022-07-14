@@ -1,5 +1,16 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiToast } from '../../../../src/components/';
+import { OuiToast } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   iconValidator,
@@ -9,9 +20,9 @@ import {
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiToast.__docgenInfo)
-    ? EuiToast.__docgenInfo[0]
-    : EuiToast.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiToast.__docgenInfo)
+    ? OuiToast.__docgenInfo[0]
+    : OuiToast.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.iconType = iconValidator(propsToUse.iconType);
@@ -28,14 +39,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiToast',
+      componentName: 'OuiToast',
       props: propsToUse,
       scope: {
-        EuiToast,
+        OuiToast,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiToast'],
+        '@opensearch-project/oui': {
+          named: ['OuiToast'],
         },
       },
       customProps: {

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,30 +31,30 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiScreenReaderOnly } from './screen_reader';
+import { OuiScreenReaderOnly } from './screen_reader';
 
-describe('EuiScreenReaderOnly', () => {
+describe('OuiScreenReaderOnly', () => {
   describe('adds an accessibility class to a child element', () => {
     test('when used with no props', () => {
       const $paragraph = render(
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <p>
             This paragraph is not visibile to sighted users but will be read by
             screenreaders.
           </p>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       );
 
       expect($paragraph).toMatchSnapshot();
     });
     test('and combines other classNames (foo, bar) given as props on the child', () => {
       const $paragraph = render(
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <p className="foo bar">
             This paragraph is not visibile to sighted users but will be read by
             screenreaders.
           </p>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       );
 
       expect($paragraph).toMatchSnapshot();
@@ -52,9 +63,9 @@ describe('EuiScreenReaderOnly', () => {
 
   test('will show on focus', () => {
     const component = render(
-      <EuiScreenReaderOnly showOnFocus>
+      <OuiScreenReaderOnly showOnFocus>
         <a href="#">Link</a>
-      </EuiScreenReaderOnly>
+      </OuiScreenReaderOnly>
     );
 
     expect(component).toMatchSnapshot();

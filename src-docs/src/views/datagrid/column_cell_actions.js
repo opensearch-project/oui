@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useCallback } from 'react';
 import { fake } from 'faker';
 
-import { EuiDataGrid, EuiAvatar } from '../../../../src/components/';
+import { OuiDataGrid, OuiAvatar } from '../../../../src/components/';
 
 const columns = [
   {
@@ -102,7 +113,7 @@ const data = [];
 for (let i = 1; i < 5; i++) {
   data.push({
     avatar: (
-      <EuiAvatar
+      <OuiAvatar
         size="s"
         name={fake('{{name.lastName}}, {{name.firstName}}')}
       />
@@ -132,7 +143,7 @@ export default () => {
   );
 
   return (
-    <EuiDataGrid
+    <OuiDataGrid
       aria-label="DataGrid demonstrating column sizing constraints"
       columns={columns}
       columnVisibility={{

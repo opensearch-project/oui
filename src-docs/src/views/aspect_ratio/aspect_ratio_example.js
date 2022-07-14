@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 import {
-  EuiLink,
-  EuiCallOut,
-  EuiAspectRatio,
-  EuiSpacer,
+  OuiLink,
+  OuiCallOut,
+  OuiAspectRatio,
+  OuiSpacer,
 } from '../../../../src/components';
 import aspectRatioConfig from './playground';
 
@@ -15,9 +26,9 @@ import AspectRatio from './aspect_ratio';
 const aspectRatioSource = require('!!raw-loader!./aspect_ratio');
 const aspectRatioHtml = renderToHtml(AspectRatio);
 
-const aspectRatioSnippet = `<EuiAspectRatio width={16} height={9}>
+const aspectRatioSnippet = `<OuiAspectRatio width={16} height={9}>
   <!-- Embed goes here -->
-</EuiAspectRatio>`;
+</OuiAspectRatio>`;
 
 export const AspectRatioExample = {
   title: 'Aspect ratio',
@@ -35,26 +46,26 @@ export const AspectRatioExample = {
       ],
       text: (
         <Fragment>
-          <EuiCallOut
+          <OuiCallOut
             size="s"
             color="warning"
             title="In some cases, aspect ratio sizing may not be supported by the embed. This component will only work with ones that do, like YouTube."
           />
-          <EuiSpacer />
+          <OuiSpacer />
           <p>
-            <strong>EuiAspectRatio</strong> provides a way to responsively
+            <strong>OuiAspectRatio</strong> provides a way to responsively
             resize a single block level child element to a specificied ratio.
             This is useful for things like YouTube iframes or other embeds that
             initially have a fixed size. If you need something similar for
             images, take a look at CSS&apos;s{' '}
-            <EuiLink href="https://www.w3schools.com/css/css3_object-fit.asp">
+            <OuiLink href="https://www.w3schools.com/css/css3_object-fit.asp">
               object-fit property
-            </EuiLink>
+            </OuiLink>
             .
           </p>
         </Fragment>
       ),
-      props: { EuiAspectRatio },
+      props: { OuiAspectRatio },
       demo: <AspectRatio />,
       snippet: aspectRatioSnippet,
     },

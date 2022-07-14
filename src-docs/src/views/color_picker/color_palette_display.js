@@ -1,30 +1,41 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import {
-  euiPaletteColorBlind,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
+  ouiPaletteColorBlind,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteComplimentary,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteGray,
 } from '../../../../src/services/color';
 
 import {
-  EuiColorPaletteDisplay,
-  EuiColorPalettePicker,
-  EuiFormRow,
-  EuiSpacer,
-  EuiTitle,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPopover,
-  EuiRange,
-  EuiSwitch,
-  EuiCode,
-  EuiButtonEmpty,
-  EuiSelect,
+  OuiColorPaletteDisplay,
+  OuiColorPalettePicker,
+  OuiFormRow,
+  OuiSpacer,
+  OuiTitle,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiPopover,
+  OuiRange,
+  OuiSwitch,
+  OuiCode,
+  OuiButtonEmpty,
+  OuiSelect,
 } from '../../../../src/components/';
 
 const paletteWithStops = [
@@ -47,14 +58,14 @@ const paletteWithStops = [
 ];
 
 const paletteData = {
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteComplimentary,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteGray,
 };
 
 const paletteNames = Object.keys(paletteData);
@@ -96,74 +107,74 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButtonEmpty
+    <OuiButtonEmpty
       onClick={onButtonClick}
       iconType="controlsVertical"
       aria-label="Open settings"
       color="text"
       size="xs">
       Customize
-    </EuiButtonEmpty>
+    </OuiButtonEmpty>
   );
 
   return (
     <>
-      <EuiTitle size="xxxs">
+      <OuiTitle size="xxxs">
         <h3>Fixed</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiColorPaletteDisplay type="fixed" palette={euiPaletteColorBlind()} />
-      <EuiSpacer />
-      <EuiTitle size="xxxs">
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiColorPaletteDisplay type="fixed" palette={ouiPaletteColorBlind()} />
+      <OuiSpacer />
+      <OuiTitle size="xxxs">
         <h3>Gradient</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiColorPaletteDisplay
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiColorPaletteDisplay
         type="gradient"
-        palette={euiPaletteColorBlind()}
+        palette={ouiPaletteColorBlind()}
       />
-      <EuiSpacer />
-      <EuiTitle size="xxxs">
+      <OuiSpacer />
+      <OuiTitle size="xxxs">
         <h3>Fixed with stops</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiColorPaletteDisplay type="fixed" palette={paletteWithStops} />
-      <EuiSpacer />
-      <EuiTitle size="xxxs">
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiColorPaletteDisplay type="fixed" palette={paletteWithStops} />
+      <OuiSpacer />
+      <OuiTitle size="xxxs">
         <h3>Gradient with stops</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiColorPaletteDisplay type="gradient" palette={paletteWithStops} />
-      <EuiSpacer />
-      <EuiTitle size="xxxs">
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiColorPaletteDisplay type="gradient" palette={paletteWithStops} />
+      <OuiSpacer />
+      <OuiTitle size="xxxs">
         <h3>Complex example</h3>
-      </EuiTitle>
-      <EuiSpacer size="xs" />
-      <EuiFlexGroup alignItems="center" gutterSize="xs">
-        <EuiFlexItem>
-          <EuiColorPaletteDisplay
+      </OuiTitle>
+      <OuiSpacer size="xs" />
+      <OuiFlexGroup alignItems="center" gutterSize="xs">
+        <OuiFlexItem>
+          <OuiColorPaletteDisplay
             type={selectionType ? 'fixed' : 'gradient'}
             palette={selectedPalette}
             size={size}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiPopover
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiPopover
             panelStyle={{ minWidth: 380 }}
             button={button}
             isOpen={isPopoverOpen}
             closePopover={closePopover}>
-            <EuiFormRow label="Color palette" display="columnCompressed">
-              <EuiColorPalettePicker
+            <OuiFormRow label="Color palette" display="columnCompressed">
+              <OuiColorPalettePicker
                 palettes={palettes}
                 onChange={setPalette}
                 valueOfSelected={palette}
                 selectionDisplay="title"
                 compressed
               />
-            </EuiFormRow>
-            <EuiFormRow label="Number of stops" display="columnCompressed">
-              <EuiRange
+            </OuiFormRow>
+            <OuiFormRow label="Number of stops" display="columnCompressed">
+              <OuiRange
                 value={categories}
                 onChange={onChange}
                 min={1}
@@ -171,33 +182,33 @@ export default () => {
                 compressed
                 showValue
               />
-            </EuiFormRow>
-            <EuiFormRow label="Size" display="columnCompressed">
-              <EuiSelect
+            </OuiFormRow>
+            <OuiFormRow label="Size" display="columnCompressed">
+              <OuiSelect
                 options={sizes}
                 value={size}
                 onChange={(e) => onChangeSize(e)}
                 compressed
               />
-            </EuiFormRow>
-            <EuiFormRow
+            </OuiFormRow>
+            <OuiFormRow
               label={
                 <span>
-                  Display <EuiCode>fixed</EuiCode>
+                  Display <OuiCode>fixed</OuiCode>
                 </span>
               }
               display="columnCompressedSwitch">
-              <EuiSwitch
+              <OuiSwitch
                 checked={selectionType}
                 onChange={() => setSelectionType(!selectionType)}
                 compressed
                 showLabel={false}
                 label="Display as fixed"
               />
-            </EuiFormRow>
-          </EuiPopover>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+            </OuiFormRow>
+          </OuiPopover>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </>
   );
 };

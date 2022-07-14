@@ -1,10 +1,21 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
   // Resizer straddles the column border and is an invisible hitzone for dragging
-.euiDataGridColumnResizer {
+.ouiDataGridColumnResizer {
   position: absolute;
   top: 0;
-  right: -$euiSizeS;
+  right: -$ouiSizeS;
   height: 100%;
-  width: $euiSize;
+  width: $ouiSize;
   cursor: ew-resize;
   opacity: 0;
   z-index: 2; // Needs to be a level above the cells themselves in case of overlaps
@@ -13,18 +24,18 @@
   &:after {
     content: '';
     position: absolute;
-    left: $euiSizeS - 1px;
+    left: $ouiSizeS - 1px;
     top: 0;
     bottom: 0;
-    width: $euiDataGridColumnResizerWidth;
-    background-color: $euiColorPrimary;
+    width: $ouiDataGridColumnResizerWidth;
+    background-color: $ouiColorPrimary;
   }
 
   &:hover,
   &:active {
     opacity: 1;
 
-    ~ .euiDataGridHeaderCell__content {
+    ~ .ouiDataGridHeaderCell__content {
       user-select: none;
     }
   }
@@ -33,12 +44,12 @@
 // This is important. Because the resizer sits in the negative space to the right of the column
 // it can cause the full grid to be a few pixels longer than it actually is. So for the last one
 // we don't use negative positioning and the borders from the cell will match the container.
-@include euiDataGridHeaderCell {
+@include ouiDataGridHeaderCell {
   &:last-child {
 
-    .euiDataGridColumnResizer {
+    .ouiDataGridColumnResizer {
       right: 0;
-      width: $euiSize / 2;
+      width: $ouiSize / 2;
 
       &:after {
         left: auto;

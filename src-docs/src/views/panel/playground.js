@@ -1,20 +1,31 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiPanel, EuiText } from '../../../../src/components/';
+import { OuiPanel, OuiText } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 import * as t from '@babel/types';
 
 export const panelConfig = () => {
-  const docgenInfo = Array.isArray(EuiPanel.__docgenInfo)
-    ? EuiPanel.__docgenInfo[0]
-    : EuiPanel.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiPanel.__docgenInfo)
+    ? OuiPanel.__docgenInfo[0]
+    : OuiPanel.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
-    value: `<EuiText>
+    value: `<OuiText>
     <p>
-      Any content inside of <strong>EuiPanel</strong> will appear here.
+      Any content inside of <strong>OuiPanel</strong> will appear here.
     </p>
-  </EuiText>`,
+  </OuiText>`,
     type: PropTypes.ReactNode,
     hidden: false,
   };
@@ -37,15 +48,15 @@ export const panelConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiPanel',
+      componentName: 'OuiPanel',
       props: propsToUse,
       scope: {
-        EuiPanel,
-        EuiText,
+        OuiPanel,
+        OuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiPanel', 'EuiText'],
+        '@opensearch-project/oui': {
+          named: ['OuiPanel', 'OuiText'],
         },
       },
       customProps: {

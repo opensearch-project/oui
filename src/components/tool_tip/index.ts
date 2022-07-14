@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,6 +28,6 @@
  * under the License.
  */
 
-export { EuiToolTip, ToolTipPositions, EuiToolTipProps } from './tool_tip';
+export { OuiToolTip, ToolTipPositions, OuiToolTipProps } from './tool_tip';
 
-export { EuiIconTip, EuiIconTipProps } from './icon_tip';
+export { OuiIconTip, OuiIconTipProps } from './icon_tip';

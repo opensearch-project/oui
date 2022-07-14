@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +31,7 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiColorPaletteDisplay, SIZES } from './color_palette_display';
+import { OuiColorPaletteDisplay, SIZES } from './color_palette_display';
 import { requiredProps } from '../../../test';
 
 const palette = ['#1fb0b2', '#ffdb6d', '#ee9191', '#ffffff', '#888094'];
@@ -44,10 +55,10 @@ const paletteWithStops = [
   },
 ];
 
-describe('EuiColorPaletteDisplay', () => {
+describe('OuiColorPaletteDisplay', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiColorPaletteDisplay {...requiredProps} palette={palette} />
+      <OuiColorPaletteDisplay {...requiredProps} palette={palette} />
     );
 
     expect(component).toMatchSnapshot();
@@ -57,7 +68,7 @@ describe('EuiColorPaletteDisplay', () => {
     describe('type and palette', () => {
       it('are rendered with type fixed and palette without stops', () => {
         const component = render(
-          <EuiColorPaletteDisplay
+          <OuiColorPaletteDisplay
             {...requiredProps}
             palette={palette}
             type="fixed"
@@ -69,7 +80,7 @@ describe('EuiColorPaletteDisplay', () => {
 
       it('are rendered with type gradient and palette without stops', () => {
         const component = render(
-          <EuiColorPaletteDisplay
+          <OuiColorPaletteDisplay
             {...requiredProps}
             palette={palette}
             type="gradient"
@@ -81,7 +92,7 @@ describe('EuiColorPaletteDisplay', () => {
 
       it('are rendered with type fixed and palette with stops', () => {
         const component = render(
-          <EuiColorPaletteDisplay
+          <OuiColorPaletteDisplay
             {...requiredProps}
             palette={paletteWithStops}
             type="fixed"
@@ -93,7 +104,7 @@ describe('EuiColorPaletteDisplay', () => {
 
       it('are rendered with type gradient and palette with stops', () => {
         const component = render(
-          <EuiColorPaletteDisplay
+          <OuiColorPaletteDisplay
             {...requiredProps}
             palette={paletteWithStops}
             type="gradient"
@@ -108,7 +119,7 @@ describe('EuiColorPaletteDisplay', () => {
       SIZES.forEach((size) => {
         it(`${size} is rendered`, () => {
           const component = render(
-            <EuiColorPaletteDisplay
+            <OuiColorPaletteDisplay
               {...requiredProps}
               size={size}
               palette={palette}
@@ -123,7 +134,7 @@ describe('EuiColorPaletteDisplay', () => {
     describe('HTML attributes', () => {
       it('accepts span attributes', () => {
         const component = render(
-          <EuiColorPaletteDisplay
+          <OuiColorPaletteDisplay
             {...requiredProps}
             palette={palette}
             type="fixed"

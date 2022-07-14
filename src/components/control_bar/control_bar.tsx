@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,13 +37,13 @@ import React, {
   Ref,
   ReactNode,
 } from 'react';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiBreadcrumbs, EuiBreadcrumbsProps } from '../breadcrumbs';
+import { OuiScreenReaderOnly } from '../accessibility';
+import { OuiBreadcrumbs, OuiBreadcrumbsProps } from '../breadcrumbs';
 import {
-  EuiButton,
-  EuiButtonIcon,
-  EuiButtonIconProps,
-  EuiButtonProps,
+  OuiButton,
+  OuiButtonIcon,
+  OuiButtonIconProps,
+  OuiButtonProps,
 } from '../button';
 import {
   CommonProps,
@@ -40,15 +51,15 @@ import {
   PropsForAnchor,
   PropsForButton,
 } from '../common';
-import { EuiI18n } from '../i18n';
-import { EuiIcon } from '../icon';
-import { EuiIconProps } from '../icon/icon';
-import { EuiPortal } from '../portal';
+import { OuiI18n } from '../i18n';
+import { OuiIcon } from '../icon';
+import { OuiIconProps } from '../icon/icon';
+import { OuiPortal } from '../portal';
 
 /**
- * Extends EuiButton excluding `size`. Requires `label` as the `children`.
+ * Extends OuiButton excluding `size`. Requires `label` as the `children`.
  */
-export interface ButtonControl extends Omit<EuiButtonProps, 'size'> {
+export interface ButtonControl extends Omit<OuiButtonProps, 'size'> {
   id: string;
   label: ReactNode;
 }
@@ -88,9 +99,9 @@ export interface TabControl
 }
 
 /**
- * Extends EuiBreadcrumbs
+ * Extends OuiBreadcrumbs
  */
-export interface BreadcrumbControl extends EuiBreadcrumbsProps {
+export interface BreadcrumbControl extends OuiBreadcrumbsProps {
   controlType: 'breadcrumbs';
   id: string;
 }
@@ -126,20 +137,20 @@ export interface IconControlProps {
 }
 
 /**
- * Icon can extend EuiIcon
+ * Icon can extend OuiIcon
  * Had to omit `onClick` as it's a valid prop of SVGElement
  * Also omits `type` and `id` as these are also specific to icon control
  */
 export interface IconControlType
-  extends Omit<EuiIconProps, 'type' | 'id' | 'onClick'>,
+  extends Omit<OuiIconProps, 'type' | 'id' | 'onClick'>,
     IconControlProps {}
 
 /**
- * Icon can extend EuiButtonIcon
+ * Icon can extend OuiButtonIcon
  * Also omits `iconType` and `id` as these are also specific to icon control
  */
 export interface IconButtonControlType
-  extends Omit<EuiButtonIconProps, 'iconType' | 'id'>,
+  extends Omit<OuiButtonIconProps, 'iconType' | 'id'>,
     IconControlProps {}
 
 export type IconControl = ExclusiveUnion<
@@ -164,7 +175,7 @@ export type Control = ExclusiveUnion<
   SpacerControl
 >;
 
-export type EuiControlBarProps = HTMLAttributes<HTMLDivElement> &
+export type OuiControlBarProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     /**
      * Show or hide the content area containing the `children`
@@ -205,7 +216,7 @@ export type EuiControlBarProps = HTMLAttributes<HTMLDivElement> &
     showOnMobile?: boolean;
 
     /**
-     * By default EuiControlBar will live in a portal, fixed position to the browser window.
+     * By default OuiControlBar will live in a portal, fixed position to the browser window.
      * Change the position of the bar to live inside a container and be positioned against its parent.
      */
     position?: 'fixed' | 'relative' | 'absolute';
@@ -221,13 +232,13 @@ export type EuiControlBarProps = HTMLAttributes<HTMLDivElement> &
     landmarkHeading?: string;
   };
 
-interface EuiControlBarState {
+interface OuiControlBarState {
   selectedTab: string;
 }
 
-export class EuiControlBar extends Component<
-  EuiControlBarProps,
-  EuiControlBarState
+export class OuiControlBar extends Component<
+  OuiControlBarProps,
+  OuiControlBarState
 > {
   static defaultProps = {
     leftOffset: 0,
@@ -285,15 +296,15 @@ export class EuiControlBar extends Component<
       maxHeight: maxHeight,
     };
 
-    const classes = classNames('euiControlBar', className, {
-      'euiControlBar-isOpen': showContent,
-      'euiControlBar--large': size === 'l',
-      'euiControlBar--medium': size === 'm',
-      'euiControlBar--small': size === 's',
-      'euiControlBar--fixed': position === 'fixed',
-      'euiControlBar--absolute': position === 'absolute',
-      'euiControlBar--relative': position === 'relative',
-      'euiControlBar--showOnMobile': showOnMobile,
+    const classes = classNames('ouiControlBar', className, {
+      'ouiControlBar-isOpen': showContent,
+      'ouiControlBar--large': size === 'l',
+      'ouiControlBar--medium': size === 'm',
+      'ouiControlBar--small': size === 's',
+      'ouiControlBar--fixed': position === 'fixed',
+      'ouiControlBar--absolute': position === 'absolute',
+      'ouiControlBar--relative': position === 'relative',
+      'ouiControlBar--showOnMobile': showOnMobile,
     });
 
     const handleTabClick = (
@@ -322,14 +333,14 @@ export class EuiControlBar extends Component<
             ...rest
           } = control;
           return (
-            <EuiButton
+            <OuiButton
               key={id + index}
-              className={classNames('euiControlBar__button', className)}
+              className={classNames('ouiControlBar__button', className)}
               color={color}
               {...rest}
               size="s">
               {label}
-            </EuiButton>
+            </OuiButton>
           );
         }
         case 'icon': {
@@ -344,19 +355,19 @@ export class EuiControlBar extends Component<
             ...rest
           } = control;
           return onClick || href ? (
-            <EuiButtonIcon
+            <OuiButtonIcon
               key={id + index}
-              className={classNames('euiControlBar__buttonIcon', className)}
+              className={classNames('ouiControlBar__buttonIcon', className)}
               onClick={onClick}
               href={href}
-              color={color as EuiButtonIconProps['color']}
+              color={color as OuiButtonIconProps['color']}
               {...(rest as IconButtonControlType)}
               iconType={iconType}
             />
           ) : (
-            <EuiIcon
+            <OuiIcon
               key={id + index}
-              className={classNames('euiControlBar__icon', className)}
+              className={classNames('ouiControlBar__icon', className)}
               type={iconType}
               color={color}
               {...rest}
@@ -367,14 +378,14 @@ export class EuiControlBar extends Component<
           return (
             <div
               key={control.controlType + index}
-              className="euiControlBar__divider"
+              className="ouiControlBar__divider"
             />
           );
         case 'spacer':
           return (
             <div
               key={control.controlType + index}
-              className="euiControlBar__spacer"
+              className="ouiControlBar__spacer"
             />
           );
         case 'text': {
@@ -382,7 +393,7 @@ export class EuiControlBar extends Component<
           return (
             <div
               key={id}
-              className={classNames('euiControlBar__text', className)}
+              className={classNames('ouiControlBar__text', className)}
               {...rest}>
               {text}
             </div>
@@ -399,9 +410,9 @@ export class EuiControlBar extends Component<
           } = control;
 
           const tabClasses = classNames(
-            'euiControlBar__tab',
+            'ouiControlBar__tab',
             {
-              'euiControlBar__tab--active':
+              'ouiControlBar__tab--active':
                 showContent && id === this.state.selectedTab,
             },
             className
@@ -420,8 +431,8 @@ export class EuiControlBar extends Component<
         case 'breadcrumbs': {
           const { controlType, id, ...rest } = control;
           return (
-            <EuiBreadcrumbs
-              className="euiControlBar__breadcrumbs"
+            <OuiBreadcrumbs
+              className="ouiControlBar__breadcrumbs"
               key={control.id}
               {...rest}
             />
@@ -431,8 +442,8 @@ export class EuiControlBar extends Component<
     };
 
     const controlBar = (
-      <EuiI18n
-        token="euiControlBar.screenReaderHeading"
+      <OuiI18n
+        token="ouiControlBar.screenReaderHeading"
         default="Page level controls">
         {(screenReaderHeading: string) => (
           // Though it would be better to use aria-labelledby than aria-label and not repeat the same string twice
@@ -442,44 +453,44 @@ export class EuiControlBar extends Component<
             aria-label={landmarkHeading ? landmarkHeading : screenReaderHeading}
             {...rest}
             style={styles}>
-            <EuiScreenReaderOnly>
+            <OuiScreenReaderOnly>
               <h2>{landmarkHeading ? landmarkHeading : screenReaderHeading}</h2>
-            </EuiScreenReaderOnly>
+            </OuiScreenReaderOnly>
             <div
-              className="euiControlBar__controls"
+              className="ouiControlBar__controls"
               ref={(node) => {
                 this.bar = node;
               }}>
               {controls.map((control, index) => controlItem(control, index))}
             </div>
             {this.props.showContent ? (
-              <div className="euiControlBar__content">{children}</div>
+              <div className="ouiControlBar__content">{children}</div>
             ) : null}
           </section>
         )}
-      </EuiI18n>
+      </OuiI18n>
     );
 
     return position === 'fixed' ? (
-      <EuiPortal>
+      <OuiPortal>
         {controlBar}
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <p aria-live="assertive">
             {landmarkHeading ? (
-              <EuiI18n
-                token="euiControlBar.customScreenReaderAnnouncement"
+              <OuiI18n
+                token="ouiControlBar.customScreenReaderAnnouncement"
                 default="There is a new region landmark called {landmarkHeading} with page level controls at the end of the document."
                 values={{ landmarkHeading }}
               />
             ) : (
-              <EuiI18n
-                token="euiControlBar.screenReaderAnnouncement"
+              <OuiI18n
+                token="ouiControlBar.screenReaderAnnouncement"
                 default="There is a new region landmark with page level controls at the end of the document."
               />
             )}
           </p>
-        </EuiScreenReaderOnly>
-      </EuiPortal>
+        </OuiScreenReaderOnly>
+      </OuiPortal>
     ) : (
       controlBar
     );

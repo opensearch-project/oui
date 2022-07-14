@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiCode,
-  EuiSpacer,
-  EuiTextColor,
-  EuiMark,
+  OuiCode,
+  OuiSpacer,
+  OuiTextColor,
+  OuiMark,
 } from '../../../../src/components';
 import { UtilityClassesSection } from './utility_classes_section';
 
@@ -24,97 +35,97 @@ const wrappingDivExampleStyle = {
 export default () => (
   <>
     <UtilityClassesSection
-      code="eui-textInheritColor"
+      code="oui-textInheritColor"
       description={
         <>
           <p>Forces the component to inherit its text color from its parent.</p>
           <p>
             For changing the color of your text to on of the named colors, use{' '}
-            <strong>EuiText</strong> or <strong>EuiTextColor</strong>.
+            <strong>OuiText</strong> or <strong>OuiTextColor</strong>.
           </p>
         </>
       }
       example={
-        <EuiTextColor color="danger">
-          <EuiCode className="eui-textInheritColor">I am code</EuiCode> that
-          matches the EuiTextColor
-        </EuiTextColor>
+        <OuiTextColor color="danger">
+          <OuiCode className="oui-textInheritColor">I am code</OuiCode> that
+          matches the OuiTextColor
+        </OuiTextColor>
       }
-      snippet={`<EuiTextColor color="danger">
-  <EuiCode className="eui-textInheritColor">I am danger code</EuiCode>
-</EuiTextColor>`}
+      snippet={`<OuiTextColor color="danger">
+  <OuiCode className="oui-textInheritColor">I am danger code</OuiCode>
+</OuiTextColor>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-textLeft"
+      code="oui-textLeft"
       description={
         <p>
           Changes the element’s text alignment property to{' '}
-          <EuiCode language="sass">text-align: left;</EuiCode>
+          <OuiCode language="sass">text-align: left;</OuiCode>
         </p>
       }
       example={
-        <div className="eui-textLeft">
-          <EuiMark style={wrappingExampleStyle}>Left align text</EuiMark>
+        <div className="oui-textLeft">
+          <OuiMark style={wrappingExampleStyle}>Left align text</OuiMark>
         </div>
       }
-      snippet={`<div className="eui-textLeft">
+      snippet={`<div className="oui-textLeft">
   /* Your content */
 </div>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-textCenter"
+      code="oui-textCenter"
       description={
         <p>
           Changes the element’s text alignment property to{' '}
-          <EuiCode language="sass">text-align: center;</EuiCode>
+          <OuiCode language="sass">text-align: center;</OuiCode>
         </p>
       }
       example={
-        <div className="eui-textCenter">
-          <EuiMark style={wrappingExampleStyle}>Center align text</EuiMark>
+        <div className="oui-textCenter">
+          <OuiMark style={wrappingExampleStyle}>Center align text</OuiMark>
         </div>
       }
-      snippet={`<div className="eui-textCenter">
+      snippet={`<div className="oui-textCenter">
   /* Your content */
 </div>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-textRight"
+      code="oui-textRight"
       description={
         <p>
           Changes the element’s text alignment property to{' '}
-          <EuiCode language="sass">text-align: right;</EuiCode>
+          <OuiCode language="sass">text-align: right;</OuiCode>
         </p>
       }
       example={
-        <div className="eui-textRight">
-          <EuiMark style={wrappingExampleStyle}>Right align text</EuiMark>
+        <div className="oui-textRight">
+          <OuiMark style={wrappingExampleStyle}>Right align text</OuiMark>
         </div>
       }
-      snippet={`<div className="eui-textRight">
+      snippet={`<div className="oui-textRight">
   /* Your content */
 </div>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-textNoWrap"
+      code="oui-textNoWrap"
       description={<p>Forces text not to wrap even in small containers.</p>}
       example={
-        <div style={wrappingDivExampleStyle} className="eui-textNoWrap">
+        <div style={wrappingDivExampleStyle} className="oui-textNoWrap">
           This text will not to wrap but extend beyond the boundaries of the
           yellow box.
         </div>
       }
-      snippet={`<div className="eui-textNoWrap">
+      snippet={`<div className="oui-textNoWrap">
   /* Your content */
 </div>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-textTruncate"
+      code="oui-textTruncate"
       description={
         <>
           <p>
@@ -123,27 +134,27 @@ export default () => (
           </p>
           <p>
             <strong>Tip:</strong> When truncating text, it is recommended to
-            include the full text within an HTML <EuiCode>title</EuiCode>{' '}
+            include the full text within an HTML <OuiCode>title</OuiCode>{' '}
             attribute or by wrapping the element within an{' '}
-            <strong>EuiToolTip</strong>.
+            <strong>OuiToolTip</strong>.
           </p>
         </>
       }
       example={
-        <div style={wrappingDivExampleStyle} className="eui-textTruncate">
+        <div style={wrappingDivExampleStyle} className="oui-textTruncate">
           This text will not to wrap but truncate beyond the boundaries of the
           yellow box.
         </div>
       }
       snippet={`<div
-  className="eui-textTruncate"
+  className="oui-textTruncate"
   title={Your content}>
   /* Your content */
 </div>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-textBreakWord"
+      code="oui-textBreakWord"
       description={
         <p>
           Wraps the text across lines like normal, but forces long words like
@@ -151,18 +162,18 @@ export default () => (
         </p>
       }
       example={
-        <div style={wrappingDivExampleStyle} className="eui-textBreakWord">
+        <div style={wrappingDivExampleStyle} className="oui-textBreakWord">
           This text will wrap like normal but this long link {longLink} will
           break mid-word.
         </div>
       }
-      snippet={`<div className="eui-textBreakWord">
+      snippet={`<div className="oui-textBreakWord">
   /* Your content */
 </div>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-textBreakAll"
+      code="oui-textBreakAll"
       description={
         <p>
           Wraps the text across lines always forcing the last word on the line
@@ -170,19 +181,19 @@ export default () => (
         </p>
       }
       example={
-        <div style={wrappingDivExampleStyle} className="eui-textBreakAll">
+        <div style={wrappingDivExampleStyle} className="oui-textBreakAll">
           This text block will wrap, breaking up anything including long{' '}
           {"URL's"} {longLink} and run on strings like this
           --------------------------------------------------------------------------.
         </div>
       }
-      snippet={`<div className="eui-textBreakAll">
+      snippet={`<div className="oui-textBreakAll">
   /* Your content */
 </div>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-textBreakNormal"
+      code="oui-textBreakNormal"
       description={
         <p>
           Reverts the text back to the normal wrapping scheme of not forcing
@@ -190,13 +201,13 @@ export default () => (
         </p>
       }
       example={
-        <div style={wrappingDivExampleStyle} className="eui-textBreakNormal">
+        <div style={wrappingDivExampleStyle} className="oui-textBreakNormal">
           This text block will wrap normally, but will not break long {"URL's"}{' '}
           {longLink} but may break run on strings like this
           ---------------------------------------------------------------.
         </div>
       }
-      snippet={`<div className="eui-textBreakNormal">
+      snippet={`<div className="oui-textBreakNormal">
   /* Your content */
 </div>`}
     />

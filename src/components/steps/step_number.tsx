@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,10 +30,10 @@
 
 import classNames from 'classnames';
 import React, { FunctionComponent, HTMLAttributes } from 'react';
-import { EuiScreenReaderOnly } from '../accessibility';
+import { OuiScreenReaderOnly } from '../accessibility';
 import { CommonProps, keysOf } from '../common';
-import { EuiIcon } from '../icon';
-import { EuiStepProps } from './step';
+import { OuiIcon } from '../icon';
+import { OuiStepProps } from './step';
 import {
   useI18nCompleteStep,
   useI18nDisabledStep,
@@ -32,27 +43,27 @@ import {
   useI18nWarningStep,
   useI18nLoadingStep,
 } from './step_strings';
-import { EuiLoadingSpinner } from '../loading';
+import { OuiLoadingSpinner } from '../loading';
 
 const statusToClassNameMap = {
-  incomplete: 'euiStepNumber--incomplete',
-  disabled: 'euiStepNumber--disabled',
-  loading: 'euiStepNumber--loading',
-  warning: 'euiStepNumber--warning',
-  danger: 'euiStepNumber--danger',
-  complete: 'euiStepNumber--complete',
+  incomplete: 'ouiStepNumber--incomplete',
+  disabled: 'ouiStepNumber--disabled',
+  loading: 'ouiStepNumber--loading',
+  warning: 'ouiStepNumber--warning',
+  danger: 'ouiStepNumber--danger',
+  complete: 'ouiStepNumber--complete',
 };
 
 export const STATUS = keysOf(statusToClassNameMap);
-export type EuiStepStatus = typeof STATUS[number];
+export type OuiStepStatus = typeof STATUS[number];
 
-export interface EuiStepNumberProps
+export interface OuiStepNumberProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
    * May replace the number provided in props.number with alternate styling
    */
-  status?: EuiStepStatus;
+  status?: OuiStepStatus;
   number?: number;
   /**
    * **DEPRECATED IN AMSTERDAM**
@@ -60,12 +71,12 @@ export interface EuiStepNumberProps
    */
   isHollow?: boolean;
   /**
-   * Title sizing equivalent to EuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
+   * Title sizing equivalent to OuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
    */
-  titleSize?: EuiStepProps['titleSize'];
+  titleSize?: OuiStepProps['titleSize'];
 }
 
-export const EuiStepNumber: FunctionComponent<EuiStepNumberProps> = ({
+export const OuiStepNumber: FunctionComponent<OuiStepNumberProps> = ({
   className,
   status,
   number,
@@ -82,9 +93,9 @@ export const EuiStepNumber: FunctionComponent<EuiStepNumberProps> = ({
   const loadingAriaLabel = useI18nLoadingStep({ number });
 
   const classes = classNames(
-    'euiStepNumber',
+    'ouiStepNumber',
     status ? statusToClassNameMap[status] : undefined,
-    { 'euiStepNumber-isHollow': isHollow },
+    { 'ouiStepNumber-isHollow': isHollow },
     className
   );
 
@@ -96,10 +107,10 @@ export const EuiStepNumber: FunctionComponent<EuiStepNumberProps> = ({
 
   let numberOrIcon = (
     <>
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <span>{screenReaderText}</span>
-      </EuiScreenReaderOnly>
-      <span className="euiStepNumber__number" aria-hidden="true">
+      </OuiScreenReaderOnly>
+      <span className="ouiStepNumber__number" aria-hidden="true">
         {number}
       </span>
     </>
@@ -107,27 +118,27 @@ export const EuiStepNumber: FunctionComponent<EuiStepNumberProps> = ({
 
   if (status === 'complete') {
     numberOrIcon = (
-      <EuiIcon
+      <OuiIcon
         type="check"
-        className="euiStepNumber__icon"
+        className="ouiStepNumber__icon"
         size={iconSize}
         aria-label={completeAriaLabel}
       />
     );
   } else if (status === 'warning') {
     numberOrIcon = (
-      <EuiIcon
+      <OuiIcon
         type="alert"
-        className="euiStepNumber__icon"
+        className="ouiStepNumber__icon"
         size={iconSize}
         aria-label={warningAriaLabel}
       />
     );
   } else if (status === 'danger') {
     numberOrIcon = (
-      <EuiIcon
+      <OuiIcon
         type="cross"
-        className="euiStepNumber__icon"
+        className="ouiStepNumber__icon"
         size={iconSize}
         aria-label={errorsAriaLabel}
       />
@@ -135,11 +146,11 @@ export const EuiStepNumber: FunctionComponent<EuiStepNumberProps> = ({
   } else if (status === 'loading') {
     numberOrIcon = (
       <>
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span>{screenReaderText}</span>
-        </EuiScreenReaderOnly>
-        <EuiLoadingSpinner
-          className="euiStepNumber__loader"
+        </OuiScreenReaderOnly>
+        <OuiLoadingSpinner
+          className="ouiStepNumber__loader"
           size={iconSize === 's' ? 'l' : 'xl'}
         />
       </>

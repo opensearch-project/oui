@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiAccordion,
-  EuiButton,
-  EuiButtonGroup,
-  EuiSpacer,
-  EuiPanel,
+  OuiAccordion,
+  OuiButton,
+  OuiButtonGroup,
+  OuiSpacer,
+  OuiPanel,
 } from '../../../../src/components';
-import { EuiFormRow } from '../../../../src/components/form';
+import { OuiFormRow } from '../../../../src/components/form';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -53,26 +64,26 @@ export default () => {
 
   return (
     <>
-      <EuiFormRow label="isLoadingMessage:" display="columnCompressed">
-        <EuiButtonGroup
+      <OuiFormRow label="isLoadingMessage:" display="columnCompressed">
+        <OuiButtonGroup
           buttonSize="s"
           legend="Accordion loading message group"
           options={toggleButtons}
           idSelected={toggleIdSelected}
           onChange={onChange}
         />
-      </EuiFormRow>
-      <EuiSpacer size="m" />
-      <EuiAccordion
+      </OuiFormRow>
+      <OuiSpacer size="m" />
+      <OuiAccordion
         id={htmlIdGenerator()()}
         initialIsOpen={true}
         paddingSize={isLoadingMessage ? 'm' : 'none'}
         buttonContent="Accordion is loading, click to toggle"
-        extraAction={<EuiButton size="s">Extra action!</EuiButton>}
+        extraAction={<OuiButton size="s">Extra action!</OuiButton>}
         isLoading
         isLoadingMessage={isLoadingMessage}>
-        <EuiPanel color="subdued">Opened content.</EuiPanel>
-      </EuiAccordion>
+        <OuiPanel color="subdued">Opened content.</OuiPanel>
+      </OuiAccordion>
     </>
   );
 };

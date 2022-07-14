@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiOutsideClickDetector,
-  EuiSpacer,
+  OuiButton,
+  OuiOutsideClickDetector,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -15,7 +26,7 @@ export default () => {
 
   return (
     <div>
-      <EuiOutsideClickDetector
+      <OuiOutsideClickDetector
         onOutsideClick={() => {
           window.alert('Clicked outside');
         }}
@@ -25,13 +36,13 @@ export default () => {
             ? 'This detector is disabled, so clicking outside will do nothing.'
             : 'Clicking inside here will do nothing, but clicking outside will trigger an alert.'}
         </p>
-      </EuiOutsideClickDetector>
+      </OuiOutsideClickDetector>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiButton onClick={toggleDisabled}>
+      <OuiButton onClick={toggleDisabled}>
         {isDisabled ? 'Enable' : 'Disable'} the detector
-      </EuiButton>
+      </OuiButton>
     </div>
   );
 };

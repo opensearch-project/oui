@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,15 +38,15 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 
-import { EuiScreenReaderOnly } from '../../accessibility';
+import { OuiScreenReaderOnly } from '../../accessibility';
 import { htmlIdGenerator } from '../../../services/accessibility';
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  OuiFormControlLayout,
+  OuiFormControlLayoutProps,
 } from '../form_control_layout';
-import { EuiI18n } from '../../i18n';
+import { OuiI18n } from '../../i18n';
 
-export interface EuiSuperSelectOption<T> {
+export interface OuiSuperSelectOption<T> {
   value: T;
   inputDisplay?: ReactNode;
   dropdownDisplay?: ReactNode;
@@ -43,7 +54,7 @@ export interface EuiSuperSelectOption<T> {
   'data-test-subj'?: string;
 }
 
-export interface EuiSuperSelectControlProps<T>
+export interface OuiSuperSelectControlProps<T>
   extends CommonProps,
     Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'value'> {
   compressed?: boolean;
@@ -55,24 +66,24 @@ export interface EuiSuperSelectControlProps<T>
   name?: string;
   value?: T;
 
-  options?: Array<EuiSuperSelectOption<T>>;
+  options?: Array<OuiSuperSelectOption<T>>;
 
   /**
    * Creates an input group with element(s) coming before input.
    * `string` | `ReactElement` or an array of these
    */
-  prepend?: EuiFormControlLayoutProps['prepend'];
+  prepend?: OuiFormControlLayoutProps['prepend'];
 
   /**
    * Creates an input group with element(s) coming after input.
    * `string` | `ReactElement` or an array of these
    */
-  append?: EuiFormControlLayoutProps['append'];
+  append?: OuiFormControlLayoutProps['append'];
 }
 
-export const EuiSuperSelectControl: <T extends string>(
-  props: EuiSuperSelectControlProps<T>
-) => ReturnType<FunctionComponent<EuiSuperSelectControlProps<T>>> = ({
+export const OuiSuperSelectControl: <T extends string>(
+  props: OuiSuperSelectControlProps<T>
+) => ReturnType<FunctionComponent<OuiSuperSelectControlProps<T>>> = ({
   className,
   options = [],
   id,
@@ -88,13 +99,13 @@ export const EuiSuperSelectControl: <T extends string>(
   ...rest
 }) => {
   const classes = classNames(
-    'euiSuperSelectControl',
+    'ouiSuperSelectControl',
     {
-      'euiSuperSelectControl--fullWidth': fullWidth,
-      'euiSuperSelectControl--compressed': compressed,
-      'euiSuperSelectControl--inGroup': prepend || append,
-      'euiSuperSelectControl-isLoading': isLoading,
-      'euiSuperSelectControl-isInvalid': isInvalid,
+      'ouiSuperSelectControl--fullWidth': fullWidth,
+      'ouiSuperSelectControl--compressed': compressed,
+      'ouiSuperSelectControl--inGroup': prepend || append,
+      'ouiSuperSelectControl-isLoading': isLoading,
+      'ouiSuperSelectControl-isInvalid': isInvalid,
     },
     className
   );
@@ -114,7 +125,7 @@ export const EuiSuperSelectControl: <T extends string>(
       : selectedValue;
   }
 
-  const icon: EuiFormControlLayoutProps['icon'] = {
+  const icon: OuiFormControlLayoutProps['icon'] = {
     type: 'arrowDown',
     side: 'right',
   };
@@ -131,7 +142,7 @@ export const EuiSuperSelectControl: <T extends string>(
         value={value}
       />
 
-      <EuiFormControlLayout
+      <OuiFormControlLayout
         icon={icon}
         fullWidth={fullWidth}
         isLoading={isLoading}
@@ -142,15 +153,15 @@ export const EuiSuperSelectControl: <T extends string>(
           This is read when the user tabs in. The comma is important,
           otherwise the screen reader often combines the text.
         */}
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span id={screenReaderId}>
-            <EuiI18n
-              token="euiSuperSelectControl.selectAnOption"
+            <OuiI18n
+              token="ouiSuperSelectControl.selectAnOption"
               default="Select an option: {selectedValue}, is selected"
               values={{ selectedValue }}
             />
           </span>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
         <button
           type="button"
           className={classes}
@@ -159,7 +170,7 @@ export const EuiSuperSelectControl: <T extends string>(
           {...rest}>
           {selectedValue}
         </button>
-      </EuiFormControlLayout>
+      </OuiFormControlLayout>
     </Fragment>
   );
 };

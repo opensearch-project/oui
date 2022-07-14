@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 const babel = require('@babel/core');
 const babelOptions = require('../../.babelrc');
 const fs = require('fs');
@@ -134,7 +145,7 @@ function traverseFile(filepath) {
     ast,
     {
       JSXOpeningElement(path) {
-        if (path.node.name.name === 'EuiI18n') {
+        if (path.node.name.name === 'OuiI18n') {
           const symbols = handleJSXPath(path);
           for (let i = 0; i < symbols.length; i++) {
             tokenMappings.push(
@@ -144,7 +155,7 @@ function traverseFile(filepath) {
         }
       },
       CallExpression(path) {
-        if (path.node.callee && path.node.callee.type === 'Identifier' && path.node.callee.name === 'useEuiI18n') {
+        if (path.node.callee && path.node.callee.type === 'Identifier' && path.node.callee.name === 'useOuiI18n') {
           const symbols = handleHookPath(path);
           for (let i = 0; i < symbols.length; i++) {
             tokenMappings.push(

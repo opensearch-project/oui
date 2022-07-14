@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -362,7 +373,7 @@ const typeToPathMap = {
   storage: 'storage',
   string: 'string',
   submodule: 'submodule',
-  swatchInput: 'swatch_input', // Undocumented on purpose. Has an extra stroke for EuiColorPicker
+  swatchInput: 'swatch_input', // Undocumented on purpose. Has an extra stroke for OuiColorPicker
   symlink: 'symlink',
   tableOfContents: 'tableOfContents',
   tableDensityExpanded: 'table_density_expanded',
@@ -465,22 +476,22 @@ const typeToPathMap = {
 
 export const TYPES = keysOf(typeToPathMap);
 
-export type EuiIconType = keyof typeof typeToPathMap;
+export type OuiIconType = keyof typeof typeToPathMap;
 
-export type IconType = EuiIconType | string | ComponentType;
+export type IconType = OuiIconType | string | ComponentType;
 
 const colorToClassMap = {
   default: null,
-  primary: 'euiIcon--primary',
-  secondary: 'euiIcon--secondary',
-  success: 'euiIcon--success',
-  accent: 'euiIcon--accent',
-  warning: 'euiIcon--warning',
-  danger: 'euiIcon--danger',
-  text: 'euiIcon--text',
-  subdued: 'euiIcon--subdued',
-  ghost: 'euiIcon--ghost',
-  inherit: 'euiIcon--inherit',
+  primary: 'ouiIcon--primary',
+  secondary: 'ouiIcon--secondary',
+  success: 'ouiIcon--success',
+  accent: 'ouiIcon--accent',
+  warning: 'ouiIcon--warning',
+  danger: 'ouiIcon--danger',
+  text: 'ouiIcon--text',
+  subdued: 'ouiIcon--subdued',
+  ghost: 'ouiIcon--ghost',
+  inherit: 'ouiIcon--inherit',
 };
 
 export const COLORS: NamedColor[] = keysOf(colorToClassMap);
@@ -496,25 +507,25 @@ export type IconColor = string | NamedColor;
 
 const sizeToClassNameMap = {
   original: null,
-  s: 'euiIcon--small',
-  m: 'euiIcon--medium',
-  l: 'euiIcon--large',
-  xl: 'euiIcon--xLarge',
-  xxl: 'euiIcon--xxLarge',
+  s: 'ouiIcon--small',
+  m: 'ouiIcon--medium',
+  l: 'ouiIcon--large',
+  xl: 'ouiIcon--xLarge',
+  xxl: 'ouiIcon--xxLarge',
 };
 
 export const SIZES: IconSize[] = keysOf(sizeToClassNameMap);
 
 export type IconSize = keyof typeof sizeToClassNameMap;
 
-export type EuiIconProps = CommonProps &
+export type OuiIconProps = CommonProps &
   Omit<SVGAttributes<SVGElement>, 'type' | 'color' | 'size'> & {
     /**
      * `Enum` is any of the named icons listed in the docs, `string` is usually a URL to an SVG file, and `elementType` is any React SVG component
      */
     type: IconType;
     /**
-     * One of EUI's color palette or a valid CSS color value https://developer.mozilla.org/en-US/docs/Web/CSS/color_value.
+     * One of OUI's color palette or a valid CSS color value https://developer.mozilla.org/en-US/docs/Web/CSS/color_value.
      * Note that coloring only works if your SVG is removed of fill attributes.
      * **`secondary` color is DEPRECATED, use `success` instead**
      */
@@ -548,15 +559,15 @@ interface State {
   neededLoading: boolean; // controls the fade-in animation, cached icons are immediately rendered
 }
 
-function isEuiIconType(x: EuiIconProps['type']): x is EuiIconType {
+function isOuiIconType(x: OuiIconProps['type']): x is OuiIconType {
   return typeof x === 'string' && typeToPathMap.hasOwnProperty(x);
 }
 
-function getInitialIcon(icon: EuiIconProps['type']) {
+function getInitialIcon(icon: OuiIconProps['type']) {
   if (icon == null) {
     return undefined;
   }
-  if (isEuiIconType(icon)) {
+  if (isOuiIconType(icon)) {
     if (iconComponentCache.hasOwnProperty(icon)) {
       return iconComponentCache[icon];
     }
@@ -570,7 +581,7 @@ const generateId = htmlIdGenerator();
 
 let iconComponentCache: { [iconType: string]: ComponentType } = {};
 
-export const clearIconComponentCache = (iconType?: EuiIconType) => {
+export const clearIconComponentCache = (iconType?: OuiIconType) => {
   if (iconType != null) {
     delete iconComponentCache[iconType];
   } else {
@@ -588,16 +599,16 @@ export const appendIconComponentCache = (iconTypeToIconComponentMap: {
   }
 };
 
-export class EuiIcon extends PureComponent<EuiIconProps, State> {
+export class OuiIcon extends PureComponent<OuiIconProps, State> {
   isMounted = true;
-  constructor(props: EuiIconProps) {
+  constructor(props: OuiIconProps) {
     super(props);
 
     const { type } = props;
     const initialIcon = getInitialIcon(type);
     let isLoading = false;
 
-    if (isEuiIconType(type) && initialIcon == null) {
+    if (isOuiIconType(type) && initialIcon == null) {
       isLoading = true;
       this.loadIconComponent(type);
     } else {
@@ -612,10 +623,10 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
     };
   }
 
-  componentDidUpdate(prevProps: EuiIconProps) {
+  componentDidUpdate(prevProps: OuiIconProps) {
     const { type } = this.props;
     if (type !== prevProps.type) {
-      if (isEuiIconType(type)) {
+      if (isOuiIconType(type)) {
         // eslint-disable-next-line react/no-did-update-set-state
         this.setState({
           neededLoading: iconComponentCache.hasOwnProperty(type),
@@ -637,7 +648,7 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
     this.isMounted = false;
   }
 
-  loadIconComponent = (iconType: EuiIconType) => {
+  loadIconComponent = (iconType: OuiIconType) => {
     if (iconComponentCache.hasOwnProperty(iconType)) {
       // exists in cache
       this.setState({
@@ -701,7 +712,7 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
         optionalColorClass = colorToClassMap[color];
       } else {
         optionalCustomStyles = { color: color };
-        optionalColorClass = 'euiIcon--customColor';
+        optionalColorClass = 'ouiIcon--customColor';
       }
     }
 
@@ -715,14 +726,14 @@ export class EuiIcon extends PureComponent<EuiIconProps, State> {
 
     // parent is not one of
     const classes = classNames(
-      'euiIcon',
+      'ouiIcon',
       sizeToClassNameMap[size],
       optionalColorClass,
       {
-        // The app icon only gets the .euiIcon--app class if no color is passed or if color="default" is passed
-        'euiIcon--app': isAppIcon && !appIconHasColor,
-        'euiIcon-isLoading': isLoading,
-        'euiIcon-isLoaded': !isLoading && neededLoading,
+        // The app icon only gets the .ouiIcon--app class if no color is passed or if color="default" is passed
+        'ouiIcon--app': isAppIcon && !appIconHasColor,
+        'ouiIcon-isLoading': isLoading,
+        'ouiIcon-isLoaded': !isLoading && neededLoading,
       },
       className
     );

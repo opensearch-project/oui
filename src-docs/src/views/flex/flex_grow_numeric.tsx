@@ -1,31 +1,42 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
-import { EuiSpacer } from '../../../../src/components/spacer';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
+import { OuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
   <div>
-    <EuiFlexGroup>
-      <EuiFlexItem grow={1}>1</EuiFlexItem>
-      <EuiFlexItem grow={2}>
+    <OuiFlexGroup>
+      <OuiFlexItem grow={1}>1</OuiFlexItem>
+      <OuiFlexItem grow={2}>
         2<br />
         wraps content if necessary
-      </EuiFlexItem>
-      <EuiFlexItem grow={3}>
+      </OuiFlexItem>
+      <OuiFlexItem grow={3}>
         3<br />
         expands_to_fit_if_content_cannot_wrap
-      </EuiFlexItem>
-      <EuiFlexItem grow={4}>4</EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+      <OuiFlexItem grow={4}>4</OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiFlexGroup>
-      <EuiFlexItem grow={6}>6</EuiFlexItem>
-      <EuiFlexItem grow={3}>3</EuiFlexItem>
-      <EuiFlexItem grow={1}>1</EuiFlexItem>
-      <EuiFlexItem grow={3}>3</EuiFlexItem>
-      <EuiFlexItem grow={6}>6</EuiFlexItem>
-    </EuiFlexGroup>
+    <OuiFlexGroup>
+      <OuiFlexItem grow={6}>6</OuiFlexItem>
+      <OuiFlexItem grow={3}>3</OuiFlexItem>
+      <OuiFlexItem grow={1}>1</OuiFlexItem>
+      <OuiFlexItem grow={3}>3</OuiFlexItem>
+      <OuiFlexItem grow={6}>6</OuiFlexItem>
+    </OuiFlexGroup>
   </div>
 );

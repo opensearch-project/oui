@@ -1,0 +1,113 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Make the disabled step title the same disabled text color
+.ouiStepHorizontal-isDisabled .ouiStepHorizontal__title,
+.ouiStep-isDisabled .ouiStep__title {
+  color: $ouiColorDisabledText;
+}
+
+// STEP NUMBER CHANGES
+
+.ouiStepNumber {
+  outline-color: $ouiColorPrimary;
+
+  .ouiStepNumber__icon {
+    position: relative;
+    top: -1px;
+  }
+
+  &--small {
+    .ouiStepNumber__icon {
+      top: -1px;
+    }
+  }
+
+  &--complete,
+  &--danger {
+    // Thicken the checkmark by adding a slight stroke.
+    .ouiStepNumber__icon {
+      stroke: currentColor;
+      stroke-width: .5px;
+    }
+  }
+
+  // Create modifiers based upon the map
+  @each $name, $color in $ouiStepStatusColors {
+    &--#{$name} {
+      background-color: $color;
+      color: chooseLightOrDarkText($color, $ouiColorGhost, $ouiColorInk);
+      outline-color: chooseLightOrDarkText($color, $color, $ouiColorInk) !important; // sass-lint:disable-line no-important
+    }
+  }
+
+  &.ouiStepNumber--incomplete {
+    background-color: transparent;
+    color: $ouiTextColor;
+    border: $ouiBorderThick;
+
+    // Don't hide the step number when "hollow"
+    .ouiStepNumber__number {
+      display: unset;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+.ouiStepNumber--disabled {
+  $backgroundColorSimulated: mix($ouiPageBackgroundColor, $ouiButtonColorDisabled, 90%);
+  background-color: transparentize($ouiButtonColorDisabled, .9);
+  color: makeDisabledContrastColor($ouiButtonColorDisabled, $backgroundColorSimulated);
+}
+
+.ouiStepHorizontal__title {
+  font-weight: $ouiFontWeightBold;
+}
+
+.ouiStepHorizontal {
+  // create the connecting lines
+  &::before,
+  &::after {
+    @include makeLineProgress;
+    background-color: $ouiBorderColor;
+  }
+}
+
+// Make the line connect to the numbers
+
+.ouiStep {
+  &:not(:last-of-type) {
+    background-position: left $ouiSizeXL;
+  }
+
+  &--small {
+    &:not(:last-of-type) {
+      background-position: -#{$ouiSizeXS} $ouiSizeL;
+    }
+  }
+}
+
+.ouiStep__content {
+  padding-bottom: ($ouiSizeXL + $ouiSizeS);
+  margin-bottom: 0;
+}
+
+// Remove forced background from horizontal steps
+.ouiStepsHorizontal {
+  background: none;
+}
+
+// Fix outline in Chrome for horizontal steps
+.ouiStepHorizontal:focus:not(.ouiStepHorizontal-isDisabled) .ouiStepHorizontal__number:not(:focus-visible) {
+  outline: $ouiFocusRingSize solid $ouiColorPrimary;
+}
+

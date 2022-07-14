@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 
 import {
-  EuiBasicTable,
-  EuiLink,
-  EuiHealth,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSwitch,
-  EuiSpacer,
+  OuiBasicTable,
+  OuiLink,
+  OuiHealth,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSwitch,
+  OuiSpacer,
 } from '../../../../../src/components';
 
 /*
@@ -73,11 +84,11 @@ export const Table = () => {
     }
 
     return (
-      <EuiFlexItem grow={false}>
-        <EuiButton color="danger" iconType="trash" onClick={onClickDelete}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="danger" iconType="trash" onClick={onClickDelete}>
           Delete {selectedItems.length} Users
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
     );
   };
 
@@ -116,18 +127,18 @@ export const Table = () => {
           {
             render: (item) => {
               return (
-                <EuiLink color="success" onClick={() => cloneUser(item)}>
+                <OuiLink color="success" onClick={() => cloneUser(item)}>
                   Clone
-                </EuiLink>
+                </OuiLink>
               );
             },
           },
           {
             render: (item) => {
               return (
-                <EuiLink color="danger" onClick={() => deleteUser(item)}>
+                <OuiLink color="danger" onClick={() => deleteUser(item)}>
                   Delete
-                </EuiLink>
+                </OuiLink>
               );
             },
           },
@@ -185,9 +196,9 @@ export const Table = () => {
           {
             render: (item) => {
               return (
-                <EuiLink onClick={() => deleteUser(item)} color="danger">
+                <OuiLink onClick={() => deleteUser(item)} color="danger">
                   Delete
-                </EuiLink>
+                </OuiLink>
               );
             },
           },
@@ -236,9 +247,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: (username) => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </OuiLink>
       ),
     },
     {
@@ -263,7 +274,7 @@ export const Table = () => {
       render: (online) => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <OuiHealth color={color}>{label}</OuiHealth>;
       },
       sortable: true,
     },
@@ -296,28 +307,28 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+      <OuiFlexGroup alignItems="center">
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label="Multiple Actions"
             checked={multiAction}
             onChange={toggleMultiAction}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label="Custom Actions"
             checked={customAction}
             onChange={toggleCustomAction}
           />
-        </EuiFlexItem>
-        <EuiFlexItem />
+        </OuiFlexItem>
+        <OuiFlexItem />
         {deleteButton}
-      </EuiFlexGroup>
+      </OuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiBasicTable
+      <OuiBasicTable
         items={pageOfItems}
         itemId="id"
         columns={columns}

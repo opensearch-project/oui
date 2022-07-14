@@ -1,68 +1,79 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
-import { EuiComment } from '../../../../src/components/comment_list';
-import { EuiText } from '../../../../src/components/text';
-import { EuiAvatar } from '../../../../src/components/avatar';
-import { EuiCode } from '../../../../src/components/code';
+import { OuiComment } from '../../../../src/components/comment_list';
+import { OuiText } from '../../../../src/components/text';
+import { OuiAvatar } from '../../../../src/components/avatar';
+import { OuiCode } from '../../../../src/components/code';
 
 const defaultBody = (
-  <EuiText size="s">
+  <OuiText size="s">
     <p>
       This comment and the one below are using the default{' '}
-      <EuiCode>timelineIcon</EuiCode>.
+      <OuiCode>timelineIcon</OuiCode>.
     </p>
-  </EuiText>
+  </OuiText>
 );
 
 const iconStringBody = (
-  <EuiText size="s">
+  <OuiText size="s">
     <p>
       This comment passed the string &ldquo;tag&rdquo; to the{' '}
-      <EuiCode>timelineIcon</EuiCode> prop.
+      <OuiCode>timelineIcon</OuiCode> prop.
     </p>
-  </EuiText>
+  </OuiText>
 );
 
 const customIconBody = (
-  <EuiText size="s">
+  <OuiText size="s">
     <p>
-      This comment has a custom element as its <EuiCode>timelineIcon</EuiCode>.
+      This comment has a custom element as its <OuiCode>timelineIcon</OuiCode>.
     </p>
-  </EuiText>
+  </OuiText>
 );
 
 export default () => (
   <Fragment>
-    <EuiComment
+    <OuiComment
       username="janed"
       event="added a comment"
       timestamp="Jan 1, 2020">
       {defaultBody}
-    </EuiComment>
-    <EuiComment
+    </OuiComment>
+    <OuiComment
       username="pancho1"
       type="update"
       event="edited case"
       timestamp="Jan 3, 2020"
     />
-    <EuiComment
+    <OuiComment
       username="janed"
       event="added a comment"
       timestamp="Jan 1, 2020"
       timelineIcon="tag">
       {iconStringBody}
-    </EuiComment>
-    <EuiComment
+    </OuiComment>
+    <OuiComment
       username="juanab"
       event="added a comment"
       timestamp="Jan 3, 2020"
       timelineIcon={
-        <EuiAvatar
+        <OuiAvatar
           imageUrl="https://source.unsplash.com/64x64/?woman"
           size="l"
           name="Juana"
         />
       }>
       {customIconBody}
-    </EuiComment>
+    </OuiComment>
   </Fragment>
 );

@@ -1,25 +1,36 @@
-.euiRangeLevels {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiRangeLevels {
   display: flex;
   justify-content: stretch;
   position: absolute;
   left: 0;
   right: 0;
-  top: ($euiFormControlHeight / 2) + 2px;
+  top: ($ouiFormControlHeight / 2) + 2px;
 
   &--hasTicks {
-    top: ($euiFormControlHeight / 4) + 2px;
+    top: ($ouiFormControlHeight / 4) + 2px;
   }
 
   &--compressed {
-    top: ($euiFormControlCompressedHeight / 2) + 2px;
+    top: ($ouiFormControlCompressedHeight / 2) + 2px;
 
-    &.euiRangeLevels--hasTicks {
-      top: ($euiFormControlCompressedHeight / 4) + 2px;
+    &.ouiRangeLevels--hasTicks {
+      top: ($ouiFormControlCompressedHeight / 4) + 2px;
     }
   }
 }
 
-.euiRangeLevel {
+.ouiRangeLevel {
   display: block;
   height: 6px;
   border-radius: 6px;
@@ -27,16 +38,16 @@
 }
 
 // Modifier naming and colors.
-$euiRangeLevelColors: (
-  primary: $euiColorPrimary,
-  success: $euiColorSuccess,
-  warning: $euiColorWarning,
-  danger: $euiColorDanger,
+$ouiRangeLevelColors: (
+  primary: $ouiColorPrimary,
+  success: $ouiColorSuccess,
+  warning: $ouiColorWarning,
+  danger: $ouiColorDanger,
 );
 
 // Create level modifiers based upon the map.
-@each $name, $color in $euiRangeLevelColors {
-  .euiRangeLevel--#{$name} {
+@each $name, $color in $ouiRangeLevelColors {
+  .ouiRangeLevel--#{$name} {
     background-color: transparentize($color, .7);
   }
 }

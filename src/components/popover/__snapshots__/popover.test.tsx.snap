@@ -1,92 +1,92 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPopover children is rendered 1`] = `
+exports[`OuiPopover children is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter"
+  class="ouiPopover ouiPopover--anchorDownCenter"
   id="1"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <button />
   </div>
 </div>
 `;
 
-exports[`EuiPopover is rendered 1`] = `
+exports[`OuiPopover is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter testClass1 testClass2"
+  class="ouiPopover ouiPopover--anchorDownCenter testClass1 testClass2"
   data-test-subj="test subject string"
   id="0"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <button />
   </div>
 </div>
 `;
 
-exports[`EuiPopover props anchorClassName is rendered 1`] = `
+exports[`OuiPopover props anchorClassName is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter"
+  class="ouiPopover ouiPopover--anchorDownCenter"
   id="3"
 >
   <div
-    class="euiPopover__anchor test"
+    class="ouiPopover__anchor test"
   >
     <button />
   </div>
 </div>
 `;
 
-exports[`EuiPopover props anchorPosition defaults to centerDown 1`] = `
+exports[`OuiPopover props anchorPosition defaults to centerDown 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter"
+  class="ouiPopover ouiPopover--anchorDownCenter"
   id="6"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <button />
   </div>
 </div>
 `;
 
-exports[`EuiPopover props anchorPosition downRight is rendered 1`] = `
+exports[`OuiPopover props anchorPosition downRight is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownRight"
+  class="ouiPopover ouiPopover--anchorDownRight"
   id="8"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <button />
   </div>
 </div>
 `;
 
-exports[`EuiPopover props anchorPosition leftCenter is rendered 1`] = `
+exports[`OuiPopover props anchorPosition leftCenter is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorLeftCenter"
+  class="ouiPopover ouiPopover--anchorLeftCenter"
   id="7"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <button />
   </div>
 </div>
 `;
 
-exports[`EuiPopover props arrowChildren is rendered 1`] = `
+exports[`OuiPopover props arrowChildren is rendered 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="19"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -107,20 +107,20 @@ exports[`EuiPopover props arrowChildren is rendered 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
         data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         >
           <span />
         </div>
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -137,14 +137,14 @@ exports[`EuiPopover props arrowChildren is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props buffer 1`] = `
+exports[`OuiPopover props buffer 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="20"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -165,18 +165,18 @@ exports[`EuiPopover props buffer 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
         data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -193,14 +193,14 @@ exports[`EuiPopover props buffer 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props buffer for all sides 1`] = `
+exports[`OuiPopover props buffer for all sides 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="21"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -221,18 +221,18 @@ exports[`EuiPopover props buffer for all sides 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
         data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -249,27 +249,27 @@ exports[`EuiPopover props buffer for all sides 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props display block is rendered 1`] = `
+exports[`OuiPopover props display block is rendered 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter euiPopover--displayBlock"
+  class="ouiPopover ouiPopover--anchorDownCenter ouiPopover--displayBlock"
   id="2"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <button />
   </div>
 </div>
 `;
 
-exports[`EuiPopover props focusTrapProps is rendered 1`] = `
+exports[`OuiPopover props focusTrapProps is rendered 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="16"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -290,18 +290,18 @@ exports[`EuiPopover props focusTrapProps is rendered 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
         data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -318,27 +318,27 @@ exports[`EuiPopover props focusTrapProps is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props isOpen defaults to false 1`] = `
+exports[`OuiPopover props isOpen defaults to false 1`] = `
 <div
-  class="euiPopover euiPopover--anchorDownCenter"
+  class="ouiPopover ouiPopover--anchorDownCenter"
   id="9"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <button />
   </div>
 </div>
 `;
 
-exports[`EuiPopover props isOpen renders true 1`] = `
+exports[`OuiPopover props isOpen renders true 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="10"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -359,18 +359,18 @@ exports[`EuiPopover props isOpen renders true 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
         data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -387,15 +387,15 @@ exports[`EuiPopover props isOpen renders true 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props offset with arrow 1`] = `
+exports[`OuiPopover props offset with arrow 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="17"
     offset="10"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -416,18 +416,18 @@ exports[`EuiPopover props offset with arrow 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
         data-autofocus="true"
         role="dialog"
         style="top: 26px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -444,15 +444,15 @@ exports[`EuiPopover props offset with arrow 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props offset without arrow 1`] = `
+exports[`OuiPopover props offset without arrow 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="18"
     offset="10"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -473,17 +473,17 @@ exports[`EuiPopover props offset without arrow 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen euiPopover__panel-noArrow"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen ouiPopover__panel-noArrow"
         data-autofocus="true"
         role="dialog"
         style="top: 18px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -500,14 +500,14 @@ exports[`EuiPopover props offset without arrow 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props ownFocus defaults to true 1`] = `
+exports[`OuiPopover props ownFocus defaults to true 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="11"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -528,18 +528,18 @@ exports[`EuiPopover props ownFocus defaults to true 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
         data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -556,14 +556,14 @@ exports[`EuiPopover props ownFocus defaults to true 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props ownFocus renders false 1`] = `
+exports[`OuiPopover props ownFocus renders false 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="12"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -583,12 +583,12 @@ exports[`EuiPopover props ownFocus renders false 1`] = `
       <div
         aria-live="assertive"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <div />
@@ -603,14 +603,14 @@ exports[`EuiPopover props ownFocus renders false 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props panelClassName is rendered 1`] = `
+exports[`OuiPopover props panelClassName is rendered 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="13"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -631,18 +631,18 @@ exports[`EuiPopover props panelClassName is rendered 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen test"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen test"
         data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -659,14 +659,14 @@ exports[`EuiPopover props panelClassName is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props panelPaddingSize is rendered 1`] = `
+exports[`OuiPopover props panelPaddingSize is rendered 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="14"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -687,18 +687,18 @@ exports[`EuiPopover props panelPaddingSize is rendered 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingSmall euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen"
+        class="ouiPanel ouiPanel--paddingSmall ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
         data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.
@@ -715,14 +715,14 @@ exports[`EuiPopover props panelPaddingSize is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPopover props panelProps is rendered 1`] = `
+exports[`OuiPopover props panelProps is rendered 1`] = `
 <div>
   <div
-    class="euiPopover euiPopover--anchorDownCenter euiPopover-isOpen"
+    class="ouiPopover ouiPopover--anchorDownCenter ouiPopover-isOpen"
     id="15"
   >
     <div
-      class="euiPopover__anchor"
+      class="ouiPopover__anchor"
     >
       <button />
     </div>
@@ -743,7 +743,7 @@ exports[`EuiPopover props panelProps is rendered 1`] = `
         aria-describedby="generated-id"
         aria-live="off"
         aria-modal="true"
-        class="euiPanel euiPanel--paddingMedium euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiPopover__panel euiPopover__panel--bottom euiPopover__panel-isOpen testClass1 testClass2"
+        class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen testClass1 testClass2"
         data-autofocus="true"
         data-test-subj="test subject string"
         role="dialog"
@@ -751,11 +751,11 @@ exports[`EuiPopover props panelProps is rendered 1`] = `
         tabindex="0"
       >
         <div
-          class="euiPopover__panelArrow euiPopover__panelArrow--bottom"
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
         <p
-          class="euiScreenReaderOnly"
+          class="ouiScreenReaderOnly"
           id="generated-id"
         >
           You are in a dialog. To close this dialog, hit escape.

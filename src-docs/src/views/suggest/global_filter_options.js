@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButtonIcon,
-  EuiPopover,
-  EuiContextMenu,
-  EuiPopoverTitle,
+  OuiButtonIcon,
+  OuiPopover,
+  OuiContextMenu,
+  OuiPopoverTitle,
 } from '../../../../src/components';
 
 function flattenPanelTree(tree, array = []) {
@@ -89,11 +100,11 @@ export default () => {
   };
 
   return (
-    <EuiPopover
+    <OuiPopover
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       button={
-        <EuiButtonIcon
+        <OuiButtonIcon
           onClick={togglePopover}
           color="text"
           iconType="filter"
@@ -103,8 +114,8 @@ export default () => {
       }
       anchorPosition="downCenter"
       panelPaddingSize="none">
-      <EuiPopoverTitle paddingSize="s">Change all filters</EuiPopoverTitle>
-      <EuiContextMenu initialPanelId={0} panels={flattenPanelTree(panelTree)} />
-    </EuiPopover>
+      <OuiPopoverTitle paddingSize="s">Change all filters</OuiPopoverTitle>
+      <OuiContextMenu initialPanelId={0} panels={flattenPanelTree(panelTree)} />
+    </OuiPopover>
   );
 };

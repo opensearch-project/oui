@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { cloneElement, useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  EuiFlexGroup,
-  EuiSwitch,
-  EuiFlexItem,
-  EuiToolTip,
-  EuiIcon,
-  EuiButtonEmpty,
-  EuiPopover,
-  EuiSpacer,
+  OuiFlexGroup,
+  OuiSwitch,
+  OuiFlexItem,
+  OuiToolTip,
+  OuiIcon,
+  OuiButtonEmpty,
+  OuiPopover,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export const DisplayToggles = ({
@@ -50,129 +61,129 @@ export const DisplayToggles = ({
   return (
     <Fragment>
       {cloneElement(children, canProps)}
-      <EuiSpacer size={spacerSize} />
-      <EuiPopover
+      <OuiSpacer size={spacerSize} />
+      <OuiPopover
         panelPaddingSize="s"
         isOpen={isPopoverOpen}
         closePopover={() => {
           setIsPopoverOpen(false);
         }}
         button={
-          <EuiButtonEmpty
+          <OuiButtonEmpty
             iconType="controlsHorizontal"
             size="xs"
             onClick={() => {
               setIsPopoverOpen(!isPopoverOpen);
             }}>
             Display toggles
-          </EuiButtonEmpty>
+          </OuiButtonEmpty>
         }>
         <div>
-          <EuiFlexGroup
+          <OuiFlexGroup
             wrap={true}
             direction="column"
             gutterSize="s"
             responsive={false}>
             {(canDisabled || canIsDisabled) && (
-              <EuiFlexItem grow={false}>
-                <EuiSwitch
+              <OuiFlexItem grow={false}>
+                <OuiSwitch
                   compressed
                   label={'disabled'}
                   checked={disabled}
                   onChange={(e) => setDisabled(e.target.checked)}
                 />
-              </EuiFlexItem>
+              </OuiFlexItem>
             )}
             {canReadOnly && (
-              <EuiFlexItem grow={false}>
-                <EuiSwitch
+              <OuiFlexItem grow={false}>
+                <OuiSwitch
                   compressed
                   label={'readOnly'}
                   checked={readOnly}
                   onChange={(e) => setReadOnly(e.target.checked)}
                 />
-              </EuiFlexItem>
+              </OuiFlexItem>
             )}
             {canLoading && (
-              <EuiFlexItem grow={false}>
-                <EuiSwitch
+              <OuiFlexItem grow={false}>
+                <OuiSwitch
                   compressed
                   label={'loading'}
                   checked={loading}
                   onChange={(e) => setLoading(e.target.checked)}
                 />
-              </EuiFlexItem>
+              </OuiFlexItem>
             )}
             {canInvalid && (
-              <EuiFlexItem grow={false}>
-                <EuiSwitch
+              <OuiFlexItem grow={false}>
+                <OuiSwitch
                   compressed
                   label={'invalid'}
                   checked={invalid}
                   onChange={(e) => setInvalid(e.target.checked)}
                 />
-              </EuiFlexItem>
+              </OuiFlexItem>
             )}
             {canFullWidth && (
-              <EuiFlexItem grow={false}>
-                <EuiSwitch
+              <OuiFlexItem grow={false}>
+                <OuiSwitch
                   compressed
                   label={'fullWidth'}
                   checked={fullWidth}
                   onChange={(e) => setFullWidth(e.target.checked)}
                 />
-              </EuiFlexItem>
+              </OuiFlexItem>
             )}
             {canCompressed && (
-              <EuiFlexItem grow={false}>
-                <EuiSwitch
+              <OuiFlexItem grow={false}>
+                <OuiSwitch
                   compressed
                   label={
                     <span>
                       compressed{' '}
-                      <EuiToolTip content="Compressed usages are very specific. Click to view full compressed documentation">
+                      <OuiToolTip content="Compressed usages are very specific. Click to view full compressed documentation">
                         <a href="/#/forms/compressed-forms">
-                          <EuiIcon type="help" />
+                          <OuiIcon type="help" />
                         </a>
-                      </EuiToolTip>
+                      </OuiToolTip>
                     </span>
                   }
                   checked={compressed}
                   onChange={(e) => setCompressed(e.target.checked)}
                 />
-              </EuiFlexItem>
+              </OuiFlexItem>
             )}
             {canPrepend && (
-              <EuiFlexItem grow={false}>
-                <EuiSwitch
+              <OuiFlexItem grow={false}>
+                <OuiSwitch
                   compressed
                   label={'prepend'}
                   checked={prepend}
                   onChange={(e) => setPrepend(e.target.checked)}
                 />
-              </EuiFlexItem>
+              </OuiFlexItem>
             )}
             {canAppend && (
-              <EuiFlexItem grow={false}>
-                <EuiSwitch
+              <OuiFlexItem grow={false}>
+                <OuiSwitch
                   compressed
                   label={'append'}
                   checked={append}
                   onChange={(e) => setAppend(e.target.checked)}
                 />
-              </EuiFlexItem>
+              </OuiFlexItem>
             )}
             {extras &&
               extras.map((extra, index) => {
                 return (
-                  <EuiFlexItem key={index} grow={false}>
+                  <OuiFlexItem key={index} grow={false}>
                     {extra}
-                  </EuiFlexItem>
+                  </OuiFlexItem>
                 );
               })}
-          </EuiFlexGroup>
+          </OuiFlexGroup>
         </div>
-      </EuiPopover>
+      </OuiPopover>
     </Fragment>
   );
 };

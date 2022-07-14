@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment, useContext } from 'react';
 import { ThemeContext } from '../../components';
 import {
@@ -10,39 +21,39 @@ import {
 } from '@elastic/charts';
 
 import {
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiColorPalettePicker,
+  OuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiColorPalettePicker,
 } from '../../../../src/components';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
 } from '../../../../src/themes/charts/themes';
 
 import {
-  euiPaletteColorBlind,
-  euiPaletteComplimentary,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteGray,
+  ouiPaletteColorBlind,
+  ouiPaletteComplimentary,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteGray,
 } from '../../../../src/services';
 
 const paletteData = {
-  euiPaletteColorBlind,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
+  ouiPaletteColorBlind,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteComplimentary,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteGray,
 };
 
 const paletteNames = Object.keys(paletteData);
@@ -66,7 +77,7 @@ export const Theming = () => {
     };
   });
 
-  const [barPalette, setBarPalette] = useState('euiPaletteColorBlind');
+  const [barPalette, setBarPalette] = useState('ouiPaletteColorBlind');
 
   /**
    * Create data
@@ -80,8 +91,8 @@ export const Theming = () => {
    */
   const isDarkTheme = themeContext.theme.includes('dark');
   const theme = isDarkTheme
-    ? EUI_CHARTS_THEME_DARK.theme
-    : EUI_CHARTS_THEME_LIGHT.theme;
+    ? OUI_CHARTS_THEME_DARK.theme
+    : OUI_CHARTS_THEME_LIGHT.theme;
 
   const barPaletteIndex = paletteNames.findIndex((item) => item === barPalette);
 
@@ -121,16 +132,16 @@ export const Theming = () => {
         <Axis id="bottom-axis" position="bottom" showGridLines />
         <Axis id="left-axis" position="left" showGridLines />
       </Chart>
-      <EuiSpacer size="xxl" />
-      <EuiFlexGroup justifyContent="center">
-        <EuiFlexItem grow={false} style={{ width: 300 }}>
-          <EuiColorPalettePicker
+      <OuiSpacer size="xxl" />
+      <OuiFlexGroup justifyContent="center">
+        <OuiFlexItem grow={false} style={{ width: 300 }}>
+          <OuiColorPalettePicker
             palettes={palettes}
             onChange={setBarPalette}
             valueOfSelected={barPalette}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </Fragment>
   );
 };

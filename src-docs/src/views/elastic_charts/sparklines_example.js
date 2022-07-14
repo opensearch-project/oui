@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
@@ -8,7 +19,7 @@ import { Sparklines } from './sparklines';
 const sparklinesSource = require('!!raw-loader!./sparklines');
 const sparklinesHtml = renderToHtml(Sparklines);
 
-import { EuiCode, EuiCodeBlock } from '../../../../src/components';
+import { OuiCode, OuiCodeBlock } from '../../../../src/components';
 
 export const ElasticChartsSparklinesExample = {
   title: 'Sizing',
@@ -54,26 +65,26 @@ export const ElasticChartsSparklinesExample = {
             content should give context to the sparkline.
           </p>
           <p>
-            EUI also provides a quick theme alteration object that you can merge
+            OUI also provides a quick theme alteration object that you can merge
             with the correct dark or light theme to properly style your
             sparklines.
           </p>
-          <EuiCodeBlock language="javascript" isCopyable>
-            {`import { EUI_CHARTS_THEME_DARK, EUI_CHARTS_THEME_LIGHT, EUI_SPARKLINE_THEME_PARTIAL } from \'@elastic/eui/dist/eui_charts_theme\';
-const euiTheme = isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LIGHT.theme;
-<Settings theme={[EUI_SPARKLINE_THEME_PARTIAL, euiTheme]} />`}
-          </EuiCodeBlock>
+          <OuiCodeBlock language="javascript" isCopyable>
+            {`import { OUI_CHARTS_THEME_DARK, OUI_CHARTS_THEME_LIGHT, OUI_SPARKLINE_THEME_PARTIAL } from \'@opensearch-project/oui/dist/oui_charts_theme\';
+const ouiTheme = isDarkTheme ? OUI_CHARTS_THEME_DARK.theme : OUI_CHARTS_THEME_LIGHT.theme;
+<Settings theme={[OUI_SPARKLINE_THEME_PARTIAL, ouiTheme]} />`}
+          </OuiCodeBlock>
           <p>
             <strong>Other key configurations</strong>
           </p>
           <ul>
             <li>
-              <EuiCode language="js">Settings.showLegend = false</EuiCode>
+              <OuiCode language="js">Settings.showLegend = false</OuiCode>
             </li>
             <li>
-              <EuiCode language="js">
+              <OuiCode language="js">
                 Settings.tooltip = &quot;none&quot;
-              </EuiCode>
+              </OuiCode>
             </li>
           </ul>
         </Fragment>

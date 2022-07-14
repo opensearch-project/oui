@@ -1,20 +1,31 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiFieldText,
-  EuiForm,
-  EuiFormRow,
-  EuiModal,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiRange,
-  EuiSwitch,
-  EuiSuperSelect,
-  EuiText,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiFieldText,
+  OuiForm,
+  OuiFormRow,
+  OuiModal,
+  OuiModalBody,
+  OuiModalFooter,
+  OuiModalHeader,
+  OuiModalHeaderTitle,
+  OuiRange,
+  OuiSwitch,
+  OuiSuperSelect,
+  OuiText,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -38,11 +49,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option one</strong>
-          <EuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+          <OuiText size="s" color="subdued">
+            <p className="ouiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </OuiText>
         </Fragment>
       ),
     },
@@ -52,11 +63,11 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option two</strong>
-          <EuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+          <OuiText size="s" color="subdued">
+            <p className="ouiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </OuiText>
         </Fragment>
       ),
     },
@@ -66,46 +77,46 @@ export default () => {
       dropdownDisplay: (
         <Fragment>
           <strong>Option three</strong>
-          <EuiText size="s" color="subdued">
-            <p className="euiTextColor--subdued">
+          <OuiText size="s" color="subdued">
+            <p className="ouiTextColor--subdued">
               Has a short description giving more detail to the option.
             </p>
-          </EuiText>
+          </OuiText>
         </Fragment>
       ),
     },
   ];
 
   const formSample = (
-    <EuiForm id="modalFormId" component="form">
-      <EuiFormRow>
-        <EuiSwitch
+    <OuiForm id="modalFormId" component="form">
+      <OuiFormRow>
+        <OuiSwitch
           id={htmlIdGenerator()()}
           name="popswitch"
           label="Isn't this modal form cool?"
           checked={isSwitchChecked}
           onChange={onSwitchChange}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow label="A text field">
-        <EuiFieldText name="popfirst" />
-      </EuiFormRow>
+      <OuiFormRow label="A text field">
+        <OuiFieldText name="popfirst" />
+      </OuiFormRow>
 
-      <EuiFormRow label="Range" helpText="Some help text for the range">
-        <EuiRange min={0} max={100} name="poprange" />
-      </EuiFormRow>
+      <OuiFormRow label="Range" helpText="Some help text for the range">
+        <OuiRange min={0} max={100} name="poprange" />
+      </OuiFormRow>
 
-      <EuiFormRow label="An EuiSuperSelect">
-        <EuiSuperSelect
+      <OuiFormRow label="An OuiSuperSelect">
+        <OuiSuperSelect
           options={superSelectOptions}
           valueOfSelected={superSelectvalue}
           onChange={(value) => onSuperSelectChange(value)}
           itemLayoutAlign="top"
           hasDividers
         />
-      </EuiFormRow>
-    </EuiForm>
+      </OuiFormRow>
+    </OuiForm>
   );
 
   const onSuperSelectChange = (value) => {
@@ -116,28 +127,28 @@ export default () => {
 
   if (isModalVisible) {
     modal = (
-      <EuiModal onClose={closeModal} initialFocus="[name=popswitch]">
-        <EuiModalHeader>
-          <EuiModalHeaderTitle>
+      <OuiModal onClose={closeModal} initialFocus="[name=popswitch]">
+        <OuiModalHeader>
+          <OuiModalHeaderTitle>
             <h1>Modal title</h1>
-          </EuiModalHeaderTitle>
-        </EuiModalHeader>
+          </OuiModalHeaderTitle>
+        </OuiModalHeader>
 
-        <EuiModalBody>{formSample}</EuiModalBody>
+        <OuiModalBody>{formSample}</OuiModalBody>
 
-        <EuiModalFooter>
-          <EuiButtonEmpty onClick={closeModal}>Cancel</EuiButtonEmpty>
+        <OuiModalFooter>
+          <OuiButtonEmpty onClick={closeModal}>Cancel</OuiButtonEmpty>
 
-          <EuiButton type="submit" form="modalFormId" onClick={closeModal} fill>
+          <OuiButton type="submit" form="modalFormId" onClick={closeModal} fill>
             Save
-          </EuiButton>
-        </EuiModalFooter>
-      </EuiModal>
+          </OuiButton>
+        </OuiModalFooter>
+      </OuiModal>
     );
   }
   return (
     <div>
-      <EuiButton onClick={showModal}>Show form modal</EuiButton>
+      <OuiButton onClick={showModal}>Show form modal</OuiButton>
       {modal}
     </div>
   );

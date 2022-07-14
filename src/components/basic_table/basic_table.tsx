@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -40,51 +51,51 @@ import {
 import { CommonProps } from '../common';
 import { isFunction } from '../../services/predicate';
 import { get } from '../../services/objects';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiCheckbox } from '../form';
+import { OuiFlexGroup, OuiFlexItem } from '../flex';
+import { OuiCheckbox } from '../form';
 
 import {
-  EuiTable,
-  EuiTableProps,
-  EuiTableBody,
-  EuiTableFooter,
-  EuiTableFooterCell,
-  EuiTableHeader,
-  EuiTableHeaderCell,
-  EuiTableHeaderCellCheckbox,
-  EuiTableHeaderMobile,
-  EuiTableRow,
-  EuiTableRowCell,
-  EuiTableRowCellCheckbox,
-  EuiTableSortMobile,
+  OuiTable,
+  OuiTableProps,
+  OuiTableBody,
+  OuiTableFooter,
+  OuiTableFooterCell,
+  OuiTableHeader,
+  OuiTableHeaderCell,
+  OuiTableHeaderCellCheckbox,
+  OuiTableHeaderMobile,
+  OuiTableRow,
+  OuiTableRowCell,
+  OuiTableRowCellCheckbox,
+  OuiTableSortMobile,
 } from '../table';
 
 import { CollapsedItemActions } from './collapsed_item_actions';
 import { ExpandedItemActions } from './expanded_item_actions';
 
 import { Pagination, PaginationBar } from './pagination_bar';
-import { EuiIcon } from '../icon';
-import { EuiKeyboardAccessible, EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
-import { EuiDelayRender } from '../delay_render';
+import { OuiIcon } from '../icon';
+import { OuiKeyboardAccessible, OuiScreenReaderOnly } from '../accessibility';
+import { OuiI18n } from '../i18n';
+import { OuiDelayRender } from '../delay_render';
 
 import { htmlIdGenerator } from '../../services/accessibility';
 import { Action } from './action_types';
 import {
-  EuiTableActionsColumnType,
-  EuiTableComputedColumnType,
-  EuiTableDataType,
-  EuiTableFieldDataColumnType,
-  EuiTableFooterProps,
+  OuiTableActionsColumnType,
+  OuiTableComputedColumnType,
+  OuiTableDataType,
+  OuiTableFieldDataColumnType,
+  OuiTableFooterProps,
   ItemId,
-  EuiTableSelectionType,
-  EuiTableSortingType,
+  OuiTableSelectionType,
+  OuiTableSortingType,
   ItemIdResolved,
 } from './table_types';
-import { EuiTableSortMobileProps } from '../table/mobile/table_sort_mobile';
+import { OuiTableSortMobileProps } from '../table/mobile/table_sort_mobile';
 
 type DataTypeProfiles = Record<
-  EuiTableDataType,
+  OuiTableDataType,
   {
     align: typeof LEFT_ALIGNMENT | typeof RIGHT_ALIGNMENT;
     render: (value: any) => string;
@@ -143,7 +154,7 @@ function getRowProps<T>(item: T, rowProps: RowPropsCallback<T>) {
 
 function getCellProps<T>(
   item: T,
-  column: EuiBasicTableColumn<T>,
+  column: OuiBasicTableColumn<T>,
   cellProps: CellPropsCallback<T>
 ) {
   if (cellProps) {
@@ -157,10 +168,10 @@ function getCellProps<T>(
 }
 
 function getColumnFooter<T>(
-  column: EuiBasicTableColumn<T>,
-  { items, pagination }: EuiTableFooterProps<T>
+  column: OuiBasicTableColumn<T>,
+  { items, pagination }: OuiTableFooterProps<T>
 ) {
-  const { footer } = column as EuiTableFieldDataColumnType<T>;
+  const { footer } = column as OuiTableFieldDataColumnType<T>;
   if (footer) {
     if (isFunction(footer)) {
       return footer({ items, pagination });
@@ -171,10 +182,10 @@ function getColumnFooter<T>(
   return undefined;
 }
 
-export type EuiBasicTableColumn<T> =
-  | EuiTableFieldDataColumnType<T>
-  | EuiTableComputedColumnType<T>
-  | EuiTableActionsColumnType<T>;
+export type OuiBasicTableColumn<T> =
+  | OuiTableFieldDataColumnType<T>
+  | OuiTableComputedColumnType<T>
+  | OuiTableActionsColumnType<T>;
 
 export interface Criteria<T> {
   /**
@@ -203,10 +214,10 @@ export interface CriteriaWithPagination<T> extends Criteria<T> {
   };
 }
 
-type CellPropsCallback<T> = (item: T, column: EuiBasicTableColumn<T>) => object;
+type CellPropsCallback<T> = (item: T, column: OuiBasicTableColumn<T>) => object;
 type RowPropsCallback<T> = (item: T) => object;
 
-interface BasicTableProps<T> extends Omit<EuiTableProps, 'onChange'> {
+interface BasicTableProps<T> extends Omit<OuiTableProps, 'onChange'> {
   /**
    * Describes how to extract a unique ID from each item, used for selections & expanded rows
    */
@@ -220,13 +231,13 @@ interface BasicTableProps<T> extends Omit<EuiTableProps, 'onChange'> {
    */
   items: T[];
   /**
-   * Applied to `EuiTableRowCell`
+   * Applied to `OuiTableRowCell`
    */
   cellProps?: object | CellPropsCallback<T>;
   /**
-   * An array of one of the objects: #EuiTableFieldDataColumnType, #EuiTableComputedColumnType or #EuiTableActionsColumnType.
+   * An array of one of the objects: #OuiTableFieldDataColumnType, #OuiTableComputedColumnType or #OuiTableActionsColumnType.
    */
-  columns: Array<EuiBasicTableColumn<T>>;
+  columns: Array<OuiBasicTableColumn<T>>;
   /**
    * Error message to display
    */
@@ -263,17 +274,17 @@ interface BasicTableProps<T> extends Omit<EuiTableProps, 'onChange'> {
    */
   responsive?: boolean;
   /**
-   * Applied to `EuiTableRow`
+   * Applied to `OuiTableRow`
    */
   rowProps?: object | RowPropsCallback<T>;
   /**
-   * Configures #EuiTableSelectionType
+   * Configures #OuiTableSelectionType
    */
-  selection?: EuiTableSelectionType<T>;
+  selection?: OuiTableSelectionType<T>;
   /**
-   * Configures #EuiTableSortingType
+   * Configures #OuiTableSortingType
    */
-  sorting?: EuiTableSortingType<T>;
+  sorting?: OuiTableSortingType<T>;
   /**
    * Sets the table-layout CSS property. Note that auto tableLayout prevents truncateText from working properly.
    */
@@ -292,7 +303,7 @@ type BasicTableWithPaginationProps<T> = Omit<
   onChange?: (criteria: CriteriaWithPagination<T>) => void;
 };
 
-export type EuiBasicTableProps<T> = CommonProps &
+export type OuiBasicTableProps<T> = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> &
   (BasicTableProps<T> | BasicTableWithPaginationProps<T>);
 
@@ -310,13 +321,13 @@ interface SortOptions {
 }
 
 function hasPagination<T>(
-  x: EuiBasicTableProps<T>
+  x: OuiBasicTableProps<T>
 ): x is BasicTableWithPaginationProps<T> {
   return x.hasOwnProperty('pagination') && !!x.pagination;
 }
 
-export class EuiBasicTable<T = any> extends Component<
-  EuiBasicTableProps<T>,
+export class OuiBasicTable<T = any> extends Component<
+  OuiBasicTableProps<T>,
   State<T>
 > {
   static defaultProps = {
@@ -326,7 +337,7 @@ export class EuiBasicTable<T = any> extends Component<
   };
 
   static getDerivedStateFromProps<T>(
-    nextProps: EuiBasicTableProps<T>,
+    nextProps: OuiBasicTableProps<T>,
     prevState: State<T>
   ) {
     if (!nextProps.selection) {
@@ -358,7 +369,7 @@ export class EuiBasicTable<T = any> extends Component<
   private cleanups: Array<() => void> = [];
   private tbody: HTMLTableSectionElement | null = null;
 
-  constructor(props: EuiBasicTableProps<T>) {
+  constructor(props: OuiBasicTableProps<T>) {
     super(props);
     this.state = {
       // used for checking if  initial selection is rendered
@@ -372,7 +383,7 @@ export class EuiBasicTable<T = any> extends Component<
     this.getInitialSelection();
   }
 
-  componentDidUpdate(prevProps: EuiBasicTableProps<T>) {
+  componentDidUpdate(prevProps: OuiBasicTableProps<T>) {
     if (prevProps.loading !== this.props.loading) {
       if (this.props.loading && this.tbody) {
         this.addLoadingListeners(this.tbody);
@@ -446,7 +457,7 @@ export class EuiBasicTable<T = any> extends Component<
     this.cleanups.length = 0;
   };
 
-  buildCriteria(props: EuiBasicTableProps<T>): Criteria<T> {
+  buildCriteria(props: OuiBasicTableProps<T>): Criteria<T> {
     const criteria: Criteria<T> = {};
     if (hasPagination(props)) {
       criteria.page = {
@@ -504,7 +515,7 @@ export class EuiBasicTable<T = any> extends Component<
     }
   }
 
-  onColumnSortChange(column: EuiBasicTableColumn<T>) {
+  onColumnSortChange(column: OuiBasicTableColumn<T>) {
     this.clearSelection();
     const currentCriteria = this.buildCriteria(this.props);
     let direction: Direction = SortDirection.ASC;
@@ -512,7 +523,7 @@ export class EuiBasicTable<T = any> extends Component<
       currentCriteria &&
       currentCriteria.sort &&
       (currentCriteria.sort.field ===
-        (column as EuiTableFieldDataColumnType<T>).field ||
+        (column as OuiTableFieldDataColumnType<T>).field ||
         currentCriteria.sort.field === column.name)
     ) {
       direction = SortDirection.reverse(currentCriteria.sort.direction);
@@ -527,7 +538,7 @@ export class EuiBasicTable<T = any> extends Component<
             size: currentCriteria.page.size,
           },
       sort: {
-        field: ((column as EuiTableFieldDataColumnType<T>).field ||
+        field: ((column as OuiTableFieldDataColumnType<T>).field ||
           column.name) as keyof T,
         direction,
       },
@@ -568,9 +579,9 @@ export class EuiBasicTable<T = any> extends Component<
     } = this.props;
 
     const classes = classNames(
-      'euiBasicTable',
+      'ouiBasicTable',
       {
-        'euiBasicTable-loading': loading,
+        'ouiBasicTable-loading': loading,
       },
       className
     );
@@ -590,15 +601,15 @@ export class EuiBasicTable<T = any> extends Component<
     const { compressed, responsive, tableLayout } = this.props;
 
     const mobileHeader = responsive ? (
-      <EuiTableHeaderMobile>
-        <EuiFlexGroup
+      <OuiTableHeaderMobile>
+        <OuiFlexGroup
           responsive={false}
           justifyContent="spaceBetween"
           alignItems="baseline">
-          <EuiFlexItem grow={false}>{this.renderSelectAll(true)}</EuiFlexItem>
-          <EuiFlexItem grow={false}>{this.renderTableMobileSort()}</EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiTableHeaderMobile>
+          <OuiFlexItem grow={false}>{this.renderSelectAll(true)}</OuiFlexItem>
+          <OuiFlexItem grow={false}>{this.renderTableMobileSort()}</OuiFlexItem>
+        </OuiFlexGroup>
+      </OuiTableHeaderMobile>
     ) : undefined;
     const caption = this.renderTableCaption();
     const head = this.renderTableHead();
@@ -607,7 +618,7 @@ export class EuiBasicTable<T = any> extends Component<
     return (
       <div>
         {mobileHeader}
-        <EuiTable
+        <OuiTable
           id={this.tableId}
           tableLayout={tableLayout}
           responsive={responsive}
@@ -616,35 +627,35 @@ export class EuiBasicTable<T = any> extends Component<
           {head}
           {body}
           {footer}
-        </EuiTable>
+        </OuiTable>
       </div>
     );
   }
 
   renderTableMobileSort() {
     const { columns, sorting } = this.props;
-    const items: EuiTableSortMobileProps['items'] = [];
+    const items: OuiTableSortMobileProps['items'] = [];
 
     if (!sorting) {
       return null;
     }
 
-    columns.forEach((column: EuiBasicTableColumn<T>, index: number) => {
+    columns.forEach((column: OuiBasicTableColumn<T>, index: number) => {
       if (
-        (column as EuiTableFieldDataColumnType<T>).field &&
+        (column as OuiTableFieldDataColumnType<T>).field &&
         sorting.sort &&
         !!sorting.enableAllColumns &&
-        (column as EuiTableFieldDataColumnType<T>).sortable == null
+        (column as OuiTableFieldDataColumnType<T>).sortable == null
       ) {
         column = {
-          ...(column as EuiTableFieldDataColumnType<T>),
+          ...(column as OuiTableFieldDataColumnType<T>),
           sortable: true,
         };
       }
 
       if (
-        !(column as EuiTableFieldDataColumnType<T>).sortable ||
-        (column as EuiTableFieldDataColumnType<T>).hideForMobile
+        !(column as OuiTableFieldDataColumnType<T>).sortable ||
+        (column as OuiTableFieldDataColumnType<T>).hideForMobile
       ) {
         return;
       }
@@ -654,7 +665,7 @@ export class EuiBasicTable<T = any> extends Component<
       items.push({
         name: column.name,
         key: `_data_s_${
-          (column as EuiTableFieldDataColumnType<T>).field
+          (column as OuiTableFieldDataColumnType<T>).field
         }_${index}`,
         onSort: this.resolveColumnOnSort(column),
         isSorted: !!sortDirection,
@@ -664,7 +675,7 @@ export class EuiBasicTable<T = any> extends Component<
       });
     });
 
-    return items.length ? <EuiTableSortMobile items={items} /> : null;
+    return items.length ? <OuiTableSortMobile items={items} /> : null;
   }
 
   renderTableCaption() {
@@ -673,8 +684,8 @@ export class EuiBasicTable<T = any> extends Component<
     if (tableCaption) {
       if (pagination) {
         captionElement = (
-          <EuiI18n
-            token="euiBasicTable.tableCaptionWithPagination"
+          <OuiI18n
+            token="ouiBasicTable.tableCaptionWithPagination"
             default="{tableCaption}; Page {page} of {pageCount}."
             values={{
               tableCaption,
@@ -692,8 +703,8 @@ export class EuiBasicTable<T = any> extends Component<
       if (pagination) {
         if (pagination.totalItemCount > 0) {
           captionElement = (
-            <EuiI18n
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+            <OuiI18n
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               values={{
                 totalItemCount: pagination.totalItemCount,
@@ -707,8 +718,8 @@ export class EuiBasicTable<T = any> extends Component<
           );
         } else {
           captionElement = (
-            <EuiI18n
-              token="euiBasicTable.tableSimpleAutoCaptionWithPagination"
+            <OuiI18n
+              token="ouiBasicTable.tableSimpleAutoCaptionWithPagination"
               default="This table contains {itemCount} rows; Page {page} of {pageCount}."
               values={{
                 itemCount: items.length,
@@ -722,8 +733,8 @@ export class EuiBasicTable<T = any> extends Component<
         }
       } else {
         captionElement = (
-          <EuiI18n
-            token="euiBasicTable.tableAutoCaptionWithoutPagination"
+          <OuiI18n
+            token="ouiBasicTable.tableAutoCaptionWithoutPagination"
             default="This table contains {itemCount} rows."
             values={{
               itemCount: items.length,
@@ -733,11 +744,11 @@ export class EuiBasicTable<T = any> extends Component<
       }
     }
     return (
-      <EuiScreenReaderOnly>
-        <caption className="euiTableCaption">
-          <EuiDelayRender>{captionElement}</EuiDelayRender>
+      <OuiScreenReaderOnly>
+        <caption className="ouiTableCaption">
+          <OuiDelayRender>{captionElement}</OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
+      </OuiScreenReaderOnly>
     );
   }
 
@@ -768,9 +779,9 @@ export class EuiBasicTable<T = any> extends Component<
     };
 
     return (
-      <EuiI18n token="euiBasicTable.selectAllRows" default="Select all rows">
+      <OuiI18n token="ouiBasicTable.selectAllRows" default="Select all rows">
         {(selectAllRows: string) => (
-          <EuiCheckbox
+          <OuiCheckbox
             id={`_selection_column-checkbox_${htmlIdGenerator()()}`}
             type={isMobile ? undefined : 'inList'}
             checked={checked}
@@ -782,7 +793,7 @@ export class EuiBasicTable<T = any> extends Component<
             label={isMobile ? selectAllRows : null}
           />
         )}
-      </EuiI18n>
+      </OuiI18n>
     );
   };
 
@@ -793,13 +804,13 @@ export class EuiBasicTable<T = any> extends Component<
 
     if (selection) {
       headers.push(
-        <EuiTableHeaderCellCheckbox key="_selection_column_h">
+        <OuiTableHeaderCellCheckbox key="_selection_column_h">
           {this.renderSelectAll(false)}
-        </EuiTableHeaderCellCheckbox>
+        </OuiTableHeaderCellCheckbox>
       );
     }
 
-    columns.forEach((column: EuiBasicTableColumn<T>, index: number) => {
+    columns.forEach((column: OuiBasicTableColumn<T>, index: number) => {
       const {
         field,
         width,
@@ -812,27 +823,27 @@ export class EuiBasicTable<T = any> extends Component<
         hideForMobile,
         readOnly,
         description,
-      } = column as EuiTableFieldDataColumnType<T>;
+      } = column as OuiTableFieldDataColumnType<T>;
 
       const columnAlign = align || this.getAlignForDataType(dataType);
 
       // actions column
-      if ((column as EuiTableActionsColumnType<T>).actions) {
+      if ((column as OuiTableActionsColumnType<T>).actions) {
         headers.push(
-          <EuiTableHeaderCell
+          <OuiTableHeaderCell
             key={`_actions_h_${index}`}
             align="right"
             width={width}
             description={description}
             mobileOptions={mobileOptions}>
             {name}
-          </EuiTableHeaderCell>
+          </OuiTableHeaderCell>
         );
         return;
       }
 
       // computed column
-      if (!(column as EuiTableFieldDataColumnType<T>).field) {
+      if (!(column as OuiTableFieldDataColumnType<T>).field) {
         const sorting: SortOptions = {};
         // computed columns are only sortable if their `sortable` is a function
         if (this.props.sorting && typeof sortable === 'function') {
@@ -845,7 +856,7 @@ export class EuiBasicTable<T = any> extends Component<
           sorting.readOnly = this.props.sorting.readOnly || readOnly;
         }
         headers.push(
-          <EuiTableHeaderCell
+          <OuiTableHeaderCell
             key={`_computed_column_h_${index}`}
             align={columnAlign}
             width={width}
@@ -854,7 +865,7 @@ export class EuiBasicTable<T = any> extends Component<
             description={description}
             {...sorting}>
             {name}
-          </EuiTableHeaderCell>
+          </OuiTableHeaderCell>
         );
         return;
       }
@@ -865,15 +876,15 @@ export class EuiBasicTable<T = any> extends Component<
         if (
           this.props.sorting.sort &&
           !!this.props.sorting.enableAllColumns &&
-          (column as EuiTableFieldDataColumnType<T>).sortable == null
+          (column as OuiTableFieldDataColumnType<T>).sortable == null
         ) {
           column = {
-            ...(column as EuiTableFieldDataColumnType<T>),
+            ...(column as OuiTableFieldDataColumnType<T>),
             sortable: true,
           };
         }
 
-        const { sortable } = column as EuiTableFieldDataColumnType<T>;
+        const { sortable } = column as OuiTableFieldDataColumnType<T>;
 
         if (sortable) {
           const sortDirection = this.resolveColumnSortDirection(column);
@@ -886,7 +897,7 @@ export class EuiBasicTable<T = any> extends Component<
         }
       }
       headers.push(
-        <EuiTableHeaderCell
+        <OuiTableHeaderCell
           key={`_data_h_${field}_${index}`}
           align={columnAlign}
           width={width}
@@ -897,11 +908,11 @@ export class EuiBasicTable<T = any> extends Component<
           description={description}
           {...sorting}>
           {name}
-        </EuiTableHeaderCell>
+        </OuiTableHeaderCell>
       );
     });
 
-    return <EuiTableHeader>{headers}</EuiTableHeader>;
+    return <OuiTableHeader>{headers}</OuiTableHeader>;
   }
 
   renderTableFooter() {
@@ -913,20 +924,20 @@ export class EuiBasicTable<T = any> extends Component<
     if (selection) {
       // Create an empty cell to compensate for additional selection column
       footers.push(
-        <EuiTableFooterCell key="_selection_column_f">
+        <OuiTableFooterCell key="_selection_column_f">
           {undefined}
-        </EuiTableFooterCell>
+        </OuiTableFooterCell>
       );
     }
 
-    columns.forEach((column: EuiBasicTableColumn<T>) => {
+    columns.forEach((column: OuiBasicTableColumn<T>) => {
       const footer = getColumnFooter(column, { items, pagination });
       const {
         mobileOptions,
         isMobileHeader,
         field,
         align,
-      } = column as EuiTableFieldDataColumnType<T>;
+      } = column as OuiTableFieldDataColumnType<T>;
 
       if ((mobileOptions && mobileOptions!.only) || isMobileHeader) {
         return; // exclude columns that only exist for mobile headers
@@ -934,27 +945,27 @@ export class EuiBasicTable<T = any> extends Component<
 
       if (footer) {
         footers.push(
-          <EuiTableFooterCell
+          <OuiTableFooterCell
             key={`footer_${field}_${footers.length - 1}`}
             align={align}>
             {footer}
-          </EuiTableFooterCell>
+          </OuiTableFooterCell>
         );
         hasDefinedFooter = true;
       } else {
         // Footer is undefined, so create an empty cell to preserve layout
         footers.push(
-          <EuiTableFooterCell
+          <OuiTableFooterCell
             key={`footer_empty_${footers.length - 1}`}
             align={align}>
             {undefined}
-          </EuiTableFooterCell>
+          </OuiTableFooterCell>
         );
       }
     });
 
     return footers.length && hasDefinedFooter ? (
-      <EuiTableFooter>{footers}</EuiTableFooter>
+      <OuiTableFooter>{footers}</OuiTableFooter>
     ) : null;
   }
 
@@ -975,22 +986,22 @@ export class EuiBasicTable<T = any> extends Component<
         : index;
       return this.renderItemRow(item, tableItemIndex);
     });
-    return <EuiTableBody bodyRef={this.setTbody}>{rows}</EuiTableBody>;
+    return <OuiTableBody bodyRef={this.setTbody}>{rows}</OuiTableBody>;
   }
 
   renderErrorBody(error: string) {
     const colSpan = this.props.columns.length + (this.props.selection ? 1 : 0);
     return (
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+      <OuiTableBody>
+        <OuiTableRow>
+          <OuiTableRowCell
             align="center"
             colSpan={colSpan}
             isMobileFullWidth={true}>
-            <EuiIcon type="minusInCircle" color="danger" /> {error}
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
+            <OuiIcon type="minusInCircle" color="danger" /> {error}
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
     );
   }
 
@@ -998,16 +1009,16 @@ export class EuiBasicTable<T = any> extends Component<
     const { columns, selection, noItemsMessage } = this.props;
     const colSpan = columns.length + (selection ? 1 : 0);
     return (
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+      <OuiTableBody>
+        <OuiTableRow>
+          <OuiTableRowCell
             align="center"
             colSpan={colSpan}
             isMobileFullWidth={true}>
             {noItemsMessage}
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
     );
   }
 
@@ -1044,24 +1055,24 @@ export class EuiBasicTable<T = any> extends Component<
     }
 
     let calculatedHasActions;
-    columns.forEach((column: EuiBasicTableColumn<T>, columnIndex: number) => {
-      if ((column as EuiTableActionsColumnType<T>).actions) {
+    columns.forEach((column: OuiBasicTableColumn<T>, columnIndex: number) => {
+      if ((column as OuiTableActionsColumnType<T>).actions) {
         cells.push(
           this.renderItemActionsCell(
             itemId,
             item,
-            column as EuiTableActionsColumnType<T>,
+            column as OuiTableActionsColumnType<T>,
             columnIndex
           )
         );
         calculatedHasActions = true;
-      } else if ((column as EuiTableFieldDataColumnType<T>).field) {
-        const fieldDataColumn = column as EuiTableFieldDataColumnType<T>;
+      } else if ((column as OuiTableFieldDataColumnType<T>).field) {
+        const fieldDataColumn = column as OuiTableFieldDataColumnType<T>;
         cells.push(
           this.renderItemFieldDataCell(
             itemId,
             item,
-            column as EuiTableFieldDataColumnType<T>,
+            column as OuiTableFieldDataColumnType<T>,
             columnIndex,
             fieldDataColumn.field === rowHeader
           )
@@ -1071,7 +1082,7 @@ export class EuiBasicTable<T = any> extends Component<
           this.renderItemComputedCell(
             itemId,
             item,
-            column as EuiTableComputedColumnType<T>,
+            column as OuiTableComputedColumnType<T>,
             columnIndex
           )
         );
@@ -1083,13 +1094,13 @@ export class EuiBasicTable<T = any> extends Component<
 
     const mobileOnlyCols = columns.reduce<number>((num, column) => {
       if (
-        (column as EuiTableFieldDataColumnType<T>).mobileOptions &&
-        (column as EuiTableFieldDataColumnType<T>).mobileOptions!.only
+        (column as OuiTableFieldDataColumnType<T>).mobileOptions &&
+        (column as OuiTableFieldDataColumnType<T>).mobileOptions!.only
       ) {
         return num + 1;
       }
 
-      return (column as EuiTableFieldDataColumnType<T>).isMobileHeader
+      return (column as OuiTableFieldDataColumnType<T>).isMobileHeader
         ? num + 1
         : num + 0; // BWC only
     }, 0);
@@ -1102,20 +1113,20 @@ export class EuiBasicTable<T = any> extends Component<
       ? `row_${itemId}_expansion`
       : undefined;
     const expandedRow = hasExpandedRow ? (
-      <EuiTableRow
+      <OuiTableRow
         id={expandedRowId}
         isExpandedRow={true}
         isSelectable={isSelectable}>
-        <EuiTableRowCell colSpan={expandedRowColSpan} textOnly={false}>
+        <OuiTableRowCell colSpan={expandedRowColSpan} textOnly={false}>
           {itemIdToExpandedRowMap[itemId]}
-        </EuiTableRowCell>
-      </EuiTableRow>
+        </OuiTableRowCell>
+      </OuiTableRow>
     ) : undefined;
 
     const { rowProps: rowPropsCallback } = this.props;
     const rowProps = getRowProps(item, rowPropsCallback as RowPropsCallback<T>);
     const row = (
-      <EuiTableRow
+      <OuiTableRow
         aria-owns={expandedRowId}
         isSelectable={
           isSelectable == null ? calculatedHasSelection : isSelectable
@@ -1125,13 +1136,13 @@ export class EuiBasicTable<T = any> extends Component<
         isExpandable={isExpandable}
         {...rowProps}>
         {cells}
-      </EuiTableRow>
+      </OuiTableRow>
     );
 
     return (
       <Fragment key={`row_${itemId}`}>
         {(rowProps as any).onClick ? (
-          <EuiKeyboardAccessible>{row}</EuiKeyboardAccessible>
+          <OuiKeyboardAccessible>{row}</OuiKeyboardAccessible>
         ) : (
           row
         )}
@@ -1164,10 +1175,10 @@ export class EuiBasicTable<T = any> extends Component<
       }
     };
     return (
-      <EuiTableRowCellCheckbox key={key}>
-        <EuiI18n token="euiBasicTable.selectThisRow" default="Select this row">
+      <OuiTableRowCellCheckbox key={key}>
+        <OuiI18n token="ouiBasicTable.selectThisRow" default="Select this row">
           {(selectThisRow: string) => (
-            <EuiCheckbox
+            <OuiCheckbox
               id={`${key}-checkbox`}
               type="inList"
               disabled={disabled}
@@ -1178,15 +1189,15 @@ export class EuiBasicTable<T = any> extends Component<
               data-test-subj={`checkboxSelectRow-${itemId}`}
             />
           )}
-        </EuiI18n>
-      </EuiTableRowCellCheckbox>
+        </OuiI18n>
+      </OuiTableRowCellCheckbox>
     );
   }
 
   renderItemActionsCell(
     itemId: ItemIdResolved,
     item: T,
-    column: EuiTableActionsColumnType<T>,
+    column: OuiTableActionsColumnType<T>,
     columnIndex: number
   ) {
     const actionEnabled = (action: Action<T>) =>
@@ -1233,21 +1244,21 @@ export class EuiBasicTable<T = any> extends Component<
 
     const key = `record_actions_${itemId}_${columnIndex}`;
     return (
-      <EuiTableRowCell
+      <OuiTableRowCell
         showOnHover={true}
         key={key}
         align="right"
         textOnly={false}
         hasActions={true}>
         {tools}
-      </EuiTableRowCell>
+      </OuiTableRowCell>
     );
   }
 
   renderItemFieldDataCell(
     itemId: ItemId<T>,
     item: T,
-    column: EuiTableFieldDataColumnType<T>,
+    column: OuiTableFieldDataColumnType<T>,
     columnIndex: number,
     setScopeRow: boolean
   ) {
@@ -1264,7 +1275,7 @@ export class EuiBasicTable<T = any> extends Component<
   renderItemComputedCell(
     itemId: ItemId<T>,
     item: T,
-    column: EuiTableComputedColumnType<T>,
+    column: OuiTableComputedColumnType<T>,
     columnIndex: number
   ) {
     const { render } = column;
@@ -1278,7 +1289,7 @@ export class EuiBasicTable<T = any> extends Component<
 
   renderItemCell(
     item: T,
-    column: EuiBasicTableColumn<T>,
+    column: OuiBasicTableColumn<T>,
     key: string | number,
     content: ReactNode,
     setScopeRow: boolean
@@ -1296,7 +1307,7 @@ export class EuiBasicTable<T = any> extends Component<
       footer,
       mobileOptions,
       ...rest
-    } = column as EuiTableFieldDataColumnType<T>;
+    } = column as OuiTableFieldDataColumnType<T>;
     const columnAlign = align || this.getAlignForDataType(dataType);
     const { cellProps: cellPropsCallback } = this.props;
     const cellProps = getCellProps(
@@ -1306,7 +1317,7 @@ export class EuiBasicTable<T = any> extends Component<
     );
 
     return (
-      <EuiTableRowCell
+      <OuiTableRowCell
         key={key}
         align={columnAlign}
         isExpander={isExpander}
@@ -1322,13 +1333,13 @@ export class EuiBasicTable<T = any> extends Component<
         {...cellProps}
         {...rest}>
         {content}
-      </EuiTableRowCell>
+      </OuiTableRowCell>
     );
   }
 
-  resolveColumnSortDirection = (column: EuiBasicTableColumn<T>) => {
+  resolveColumnSortDirection = (column: OuiBasicTableColumn<T>) => {
     const { sorting } = this.props;
-    const { sortable, field, name } = column as EuiTableFieldDataColumnType<T>;
+    const { sortable, field, name } = column as OuiTableFieldDataColumnType<T>;
     if (!sorting || !sorting.sort || !sortable) {
       return;
     }
@@ -1337,9 +1348,9 @@ export class EuiBasicTable<T = any> extends Component<
     }
   };
 
-  resolveColumnOnSort = (column: EuiBasicTableColumn<T>) => {
+  resolveColumnOnSort = (column: OuiBasicTableColumn<T>) => {
     const { sorting } = this.props;
-    const { sortable, name } = column as EuiTableFieldDataColumnType<T>;
+    const { sortable, name } = column as OuiTableFieldDataColumnType<T>;
     if (!sorting || !sortable) {
       return;
     }
@@ -1350,7 +1361,7 @@ export class EuiBasicTable<T = any> extends Component<
     return () => this.onColumnSortChange(column);
   };
 
-  getRendererForDataType(dataType: EuiTableDataType = 'auto') {
+  getRendererForDataType(dataType: OuiTableDataType = 'auto') {
     const profile = dataTypesProfiles[dataType];
     if (!profile) {
       throw new Error(
@@ -1362,7 +1373,7 @@ export class EuiBasicTable<T = any> extends Component<
     return profile.render;
   }
 
-  getAlignForDataType(dataType: EuiTableDataType = 'auto') {
+  getAlignForDataType(dataType: OuiTableDataType = 'auto') {
     const profile = dataTypesProfiles[dataType];
     if (!profile) {
       throw new Error(
@@ -1386,8 +1397,8 @@ export class EuiBasicTable<T = any> extends Component<
 
       if (tableCaption) {
         ariaLabel = (
-          <EuiI18n
-            token="euiBasicTable.tablePagination"
+          <OuiI18n
+            token="ouiBasicTable.tablePagination"
             default="Pagination for preceding table: {tableCaption}"
             values={{ tableCaption }}
           />

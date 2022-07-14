@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiButtonIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButton,
+  OuiButtonIcon,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 const colors = ['primary', 'text', 'accent', 'success', 'warning', 'danger'];
@@ -12,26 +23,26 @@ const colors = ['primary', 'text', 'accent', 'success', 'warning', 'danger'];
 export default () => (
   <>
     {colors.map((color) => (
-      <EuiFlexGroup
+      <OuiFlexGroup
         key={color}
         responsive={false}
         gutterSize="s"
         alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton color={color} size="s" iconType="calendar">
+        <OuiFlexItem grow={false}>
+          <OuiButton color={color} size="s" iconType="calendar">
             Last 15 min
-          </EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButtonIcon
+          </OuiButton>
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiButtonIcon
             color={color}
             display="base"
             size="s"
             iconType="boxesVertical"
             aria-label="More"
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     ))}
   </>
 );

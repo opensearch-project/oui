@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiButtonEmpty,
-  EuiFormRow,
-  EuiComboBox,
-  EuiButton,
-  EuiSpacer,
-  EuiSwitch,
-  EuiFieldText,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiButtonEmpty,
+  OuiFormRow,
+  OuiComboBox,
+  OuiButton,
+  OuiSpacer,
+  OuiSwitch,
+  OuiFieldText,
 } from '../../../../src/components';
 
 const fieldOption = [
@@ -142,10 +153,10 @@ const GlobalFilterForm = (props) => {
 
   return (
     <div {...rest}>
-      <EuiFlexGroup>
-        <EuiFlexItem style={{ maxWidth: '188px' }}>
-          <EuiFormRow label="Field">
-            <EuiComboBox
+      <OuiFlexGroup>
+        <OuiFlexItem style={{ maxWidth: '188px' }}>
+          <OuiFormRow label="Field">
+            <OuiComboBox
               placeholder={
                 selectedOperand.length < 1 ? 'Start here' : 'Select a field'
               }
@@ -156,11 +167,11 @@ const GlobalFilterForm = (props) => {
               singleSelection={{ asPlainText: true }}
               isClearable={false}
             />
-          </EuiFormRow>
-        </EuiFlexItem>
-        <EuiFlexItem style={{ maxWidth: '188px' }}>
-          <EuiFormRow label="Operand">
-            <EuiComboBox
+          </OuiFormRow>
+        </OuiFlexItem>
+        <OuiFlexItem style={{ maxWidth: '188px' }}>
+          <OuiFormRow label="Operand">
+            <OuiComboBox
               placeholder={
                 selectedField.length < 1
                   ? 'Select a field first'
@@ -174,15 +185,15 @@ const GlobalFilterForm = (props) => {
               singleSelection={{ asPlainText: true }}
               isClearable={false}
             />
-          </EuiFormRow>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiFormRow>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
       <div>
-        <EuiFormRow label="Value(s)">
-          <EuiComboBox
+        <OuiFormRow label="Value(s)">
+          <OuiComboBox
             placeholder={
               selectedField.length < 1 && selectedOperand.length < 1
                 ? 'Waiting on previous selections'
@@ -194,12 +205,12 @@ const GlobalFilterForm = (props) => {
             onChange={onValuesChange}
             onSearchChange={onValuesSearchChange}
           />
-        </EuiFormRow>
+        </OuiFormRow>
       </div>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiSwitch
+      <OuiSwitch
         label="Create custom label?"
         checked={useCustomLabel}
         onChange={onCustomLabelSwitchChange}
@@ -207,40 +218,40 @@ const GlobalFilterForm = (props) => {
 
       {useCustomLabel && (
         <div>
-          <EuiSpacer size="m" />
-          <EuiFormRow label="Custom label">
-            <EuiFieldText value={customLabel} onChange={onCustomLabelChange} />
-          </EuiFormRow>
+          <OuiSpacer size="m" />
+          <OuiFormRow label="Custom label">
+            <OuiFieldText value={customLabel} onChange={onCustomLabelChange} />
+          </OuiFormRow>
         </div>
       )}
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiFlexGroup direction="rowReverse" alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton
+      <OuiFlexGroup direction="rowReverse" alignItems="center">
+        <OuiFlexItem grow={false}>
+          <OuiButton
             isDisabled={selectedValues.length < 1 && customLabel.length === 0}
             fill
             onClick={onAdd}>
             Add
-          </EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButtonEmpty
+          </OuiButton>
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiButtonEmpty
             flush="right"
             onClick={selectedObject ? onCancel : resetForm}>
             {selectedObject ? 'Cancel' : 'Reset form'}
-          </EuiButtonEmpty>
-        </EuiFlexItem>
-        <EuiFlexItem />
-        <EuiFlexItem grow={false}>
+          </OuiButtonEmpty>
+        </OuiFlexItem>
+        <OuiFlexItem />
+        <OuiFlexItem grow={false}>
           {selectedObject && (
-            <EuiButtonEmpty flush="left" color="danger">
+            <OuiButtonEmpty flush="left" color="danger">
               Delete
-            </EuiButtonEmpty>
+            </OuiButtonEmpty>
           )}
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </div>
   );
 };

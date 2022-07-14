@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,27 +38,27 @@ import React, {
 import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
 
-import { EuiText } from '../text';
-import { EuiTitle, EuiTitleSize } from '../title/title';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
+import { OuiText } from '../text';
+import { OuiTitle, OuiTitleSize } from '../title/title';
+import { OuiScreenReaderOnly } from '../accessibility';
+import { OuiI18n } from '../i18n';
 
 const colorToClassNameMap = {
   default: null,
-  subdued: 'euiStat__title--subdued',
-  primary: 'euiStat__title--primary',
-  secondary: 'euiStat__title--secondary',
-  success: 'euiStat__title--success',
-  danger: 'euiStat__title--danger',
-  accent: 'euiStat__title--accent',
+  subdued: 'ouiStat__title--subdued',
+  primary: 'ouiStat__title--primary',
+  secondary: 'ouiStat__title--secondary',
+  success: 'ouiStat__title--success',
+  danger: 'ouiStat__title--danger',
+  accent: 'ouiStat__title--accent',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
 const textAlignToClassNameMap = {
-  left: 'euiStat--leftAligned',
-  center: 'euiStat--centerAligned',
-  right: 'euiStat--rightAligned',
+  left: 'ouiStat--leftAligned',
+  center: 'ouiStat--centerAligned',
+  right: 'ouiStat--rightAligned',
 };
 
 export const isColorClass = (
@@ -58,7 +69,7 @@ export const isColorClass = (
 
 export const ALIGNMENTS = keysOf(textAlignToClassNameMap);
 
-export interface EuiStatProps {
+export interface OuiStatProps {
   /**
    * Set the description (label) text
    */
@@ -82,9 +93,9 @@ export interface EuiStatProps {
    */
   titleColor?: keyof typeof colorToClassNameMap | string;
   /**
-   * Size of the title. See EuiTitle for options ('s', 'm', 'l'... etc)
+   * Size of the title. See OuiTitle for options ('s', 'm', 'l'... etc)
    */
-  titleSize?: EuiTitleSize;
+  titleSize?: OuiTitleSize;
   /**
    * HTML Element to be used for title
    */
@@ -95,8 +106,8 @@ export interface EuiStatProps {
   descriptionElement?: string;
 }
 
-export const EuiStat: FunctionComponent<
-  CommonProps & Omit<HTMLAttributes<HTMLDivElement>, 'title'> & EuiStatProps
+export const OuiStat: FunctionComponent<
+  CommonProps & Omit<HTMLAttributes<HTMLDivElement>, 'title'> & OuiStatProps
 > = ({
   children,
   className,
@@ -112,16 +123,16 @@ export const EuiStat: FunctionComponent<
   ...rest
 }) => {
   const classes = classNames(
-    'euiStat',
+    'ouiStat',
     textAlignToClassNameMap[textAlign],
     className
   );
 
   const titleClasses = classNames(
-    'euiStat__title',
+    'ouiStat__title',
     isColorClass(titleColor) ? colorToClassNameMap[titleColor] : null,
     {
-      'euiStat__title-isLoading': isLoading,
+      'ouiStat__title-isLoading': isLoading,
     }
   );
 
@@ -130,9 +141,9 @@ export const EuiStat: FunctionComponent<
   };
 
   const descriptionDisplay = (
-    <EuiText size="s" className="euiStat__description">
+    <OuiText size="s" className="ouiStat__description">
       {createElement(descriptionElement, commonProps, description)}
-    </EuiText>
+    </OuiText>
   );
 
   const titlePropsWithColor = {
@@ -145,27 +156,27 @@ export const EuiStat: FunctionComponent<
   const titleChildren = isLoading ? '--' : title;
 
   const titleDisplay = isColorClass(titleColor) ? (
-    <EuiTitle size={titleSize} className={titleClasses}>
+    <OuiTitle size={titleSize} className={titleClasses}>
       {createElement(titleElement, commonProps, titleChildren)}
-    </EuiTitle>
+    </OuiTitle>
   ) : (
-    <EuiTitle size={titleSize} className={titleClasses}>
+    <OuiTitle size={titleSize} className={titleClasses}>
       {createElement(titleElement, titlePropsWithColor, titleChildren)}
-    </EuiTitle>
+    </OuiTitle>
   );
 
   const screenReader = (
-    <EuiScreenReaderOnly>
+    <OuiScreenReaderOnly>
       <p>
         {isLoading ? (
-          <EuiI18n token="euiStat.loadingText" default="Statistic is loading" />
+          <OuiI18n token="ouiStat.loadingText" default="Statistic is loading" />
         ) : (
           <Fragment>
             {reverse ? `${title} ${description}` : `${description} ${title}`}
           </Fragment>
         )}
       </p>
-    </EuiScreenReaderOnly>
+    </OuiScreenReaderOnly>
   );
 
   const statDisplay = (

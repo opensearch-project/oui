@@ -1,40 +1,51 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Make sure the quantity doesn't get an underline on hover
  */
-.euiFacetButton {
-  @include euiButtonBase;
-  @include euiFont;
-  @include euiFontSizeS;
+.ouiFacetButton {
+  @include ouiButtonBase;
+  @include ouiFont;
+  @include ouiFontSizeS;
 
-  height: $euiButtonHeightSmall;
+  height: $ouiButtonHeightSmall;
   text-align: left;
   text-decoration: none;
-  transition: all $euiAnimSpeedFast ease-in;
+  transition: all $ouiAnimSpeedFast ease-in;
 
   &:hover,
   &:focus {
-    &:not(:disabled) .euiFacetButton__text {
+    &:not(:disabled) .ouiFacetButton__text {
       text-decoration: underline; /* 1 */
     }
   }
 
   &:focus {
-    background-color: $euiFocusBackgroundColor;
+    background-color: $ouiFocusBackgroundColor;
     // use box-shadow as a "faux outline" to apply left/right padding only
-    box-shadow: -$euiSizeXS 0 $euiFocusBackgroundColor, $euiSizeXS 0 $euiFocusBackgroundColor;
+    box-shadow: -$ouiSizeXS 0 $ouiFocusBackgroundColor, $ouiSizeXS 0 $ouiFocusBackgroundColor;
   }
 
   &:disabled {
-    color: $euiButtonColorDisabledText;
+    color: $ouiButtonColorDisabledText;
     pointer-events: none;
 
-    .euiFacetButton__content {
+    .ouiFacetButton__content {
       pointer-events: auto;
       cursor: not-allowed;
     }
 
-    .euiFacetButton__icon,
-    .euiFacetButton__quantity {
+    .ouiFacetButton__icon,
+    .ouiFacetButton__quantity {
       opacity: .5;
     }
 
@@ -49,21 +60,21 @@
   }
 }
 
-.euiFacetButton__content {
-  @include euiButtonContent;
+.ouiFacetButton__content {
+  @include ouiButtonContent;
 }
 
-.euiFacetButton__text {
-  @include euiTextShift;
-  @include euiTextTruncate;
+.ouiFacetButton__text {
+  @include ouiTextShift;
+  @include ouiTextTruncate;
   flex-grow: 1;
   vertical-align: middle;
 
-  .euiFacetButton--isSelected & {
-    font-weight: $euiFontWeightBold;
+  .ouiFacetButton--isSelected & {
+    font-weight: $ouiFontWeightBold;
   }
 }
 
-.euiFacetButton__icon {
-  transition: all $euiAnimSpeedFast ease-in;
+.ouiFacetButton__icon {
+  transition: all $ouiAnimSpeedFast ease-in;
 }

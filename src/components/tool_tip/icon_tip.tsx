@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,10 +31,10 @@
 import React, { FunctionComponent } from 'react';
 
 import { PropsOf } from '../common';
-import { EuiIcon, IconSize, IconType } from '../icon';
-import { EuiToolTip, EuiToolTipProps } from './tool_tip';
+import { OuiIcon, IconSize, IconType } from '../icon';
+import { OuiToolTip, OuiToolTipProps } from './tool_tip';
 
-export interface EuiIconTipProps {
+export interface OuiIconTipProps {
   /**
    * The icon color.
    */
@@ -42,23 +53,23 @@ export interface EuiIconTipProps {
   'aria-label'?: string;
 
   /**
-   * Pass certain props down to `EuiIcon`
+   * Pass certain props down to `OuiIcon`
    */
-  // EuiIconTip's `type` is passed to EuiIcon, so we want to exclude `type` from
+  // OuiIconTip's `type` is passed to OuiIcon, so we want to exclude `type` from
   // iconProps; however, due to TS's bivariant function arguments `type` could be
   // passed without any error/feedback so we explicitly set it to `never` type
-  iconProps?: Omit<PropsOf<EuiIcon>, 'type'> & { type?: never };
+  iconProps?: Omit<PropsOf<OuiIcon>, 'type'> & { type?: never };
 }
 
-type Props = Omit<EuiToolTipProps, 'children' | 'delay' | 'position'> &
-  EuiIconTipProps & {
-    // This are copied from EuiToolTipProps, but made optional. Defaults
+type Props = Omit<OuiToolTipProps, 'children' | 'delay' | 'position'> &
+  OuiIconTipProps & {
+    // This are copied from OuiToolTipProps, but made optional. Defaults
     // are applied below.
-    delay?: EuiToolTipProps['delay'];
-    position?: EuiToolTipProps['position'];
+    delay?: OuiToolTipProps['delay'];
+    position?: OuiToolTipProps['position'];
   };
 
-export const EuiIconTip: FunctionComponent<Props> = ({
+export const OuiIconTip: FunctionComponent<Props> = ({
   type = 'questionInCircle',
   'aria-label': ariaLabel = 'Info',
   color,
@@ -68,8 +79,8 @@ export const EuiIconTip: FunctionComponent<Props> = ({
   delay = 'regular',
   ...rest
 }) => (
-  <EuiToolTip position={position} delay={delay} {...rest}>
-    <EuiIcon
+  <OuiToolTip position={position} delay={delay} {...rest}>
+    <OuiIcon
       tabIndex={0}
       type={type}
       color={color}
@@ -77,5 +88,5 @@ export const EuiIconTip: FunctionComponent<Props> = ({
       aria-label={ariaLabel}
       {...iconProps}
     />
-  </EuiToolTip>
+  </OuiToolTip>
 );

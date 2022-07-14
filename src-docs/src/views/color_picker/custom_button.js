@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiColorPicker,
-  EuiFormRow,
-  EuiColorPickerSwatch,
-  EuiBadge,
-  EuiSpacer,
+  OuiColorPicker,
+  OuiFormRow,
+  OuiColorPickerSwatch,
+  OuiBadge,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import { useColorPickerState } from '../../../../src/services';
@@ -19,32 +30,32 @@ export default () => {
   };
   return (
     <Fragment>
-      <EuiFormRow label="Pick a color" error={errors}>
-        <EuiColorPicker
+      <OuiFormRow label="Pick a color" error={errors}>
+        <OuiColorPicker
           onChange={handleColorChange}
           color={color}
           secondaryInputDisplay="top"
           button={
-            <EuiColorPickerSwatch
+            <OuiColorPickerSwatch
               color={selectedColor}
               aria-label="Select a new color"
             />
           }
           isClearable={true}
         />
-      </EuiFormRow>
-      <EuiSpacer />
-      <EuiColorPicker
+      </OuiFormRow>
+      <OuiSpacer />
+      <OuiColorPicker
         onChange={handleColorChange}
         color={color}
         isInvalid={!!errors}
         secondaryInputDisplay="bottom"
         button={
-          <EuiBadge
+          <OuiBadge
             color={selectedColor ? selectedColor : 'hollow'}
             onClickAriaLabel="Select a new color">
             Color this badge
-          </EuiBadge>
+          </OuiBadge>
         }
       />
     </Fragment>

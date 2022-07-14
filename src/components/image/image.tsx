@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,13 +37,13 @@ import React, {
 import classNames from 'classnames';
 
 import { CommonProps, ExclusiveUnion } from '../common';
-import { EuiOverlayMask } from '../overlay_mask';
+import { OuiOverlayMask } from '../overlay_mask';
 
-import { EuiIcon } from '../icon';
+import { OuiIcon } from '../icon';
 
-import { useEuiI18n } from '../i18n';
+import { useOuiI18n } from '../i18n';
 
-import { EuiFocusTrap } from '../focus_trap';
+import { OuiFocusTrap } from '../focus_trap';
 
 import { keys } from '../../services';
 import { useInnerText } from '../inner_text';
@@ -42,24 +53,24 @@ type Floats = 'left' | 'right';
 type Margins = 's' | 'm' | 'l' | 'xl';
 
 const sizeToClassNameMap: { [size in ImageSize]: string } = {
-  s: 'euiImage--small',
-  m: 'euiImage--medium',
-  l: 'euiImage--large',
-  xl: 'euiImage--xlarge',
-  fullWidth: 'euiImage--fullWidth',
-  original: 'euiImage--original',
+  s: 'ouiImage--small',
+  m: 'ouiImage--medium',
+  l: 'ouiImage--large',
+  xl: 'ouiImage--xlarge',
+  fullWidth: 'ouiImage--fullWidth',
+  original: 'ouiImage--original',
 };
 
 const marginToClassNameMap: { [margin in Margins]: string } = {
-  s: 'euiImage--marginSmall',
-  m: 'euiImage--marginMedium',
-  l: 'euiImage--marginLarge',
-  xl: 'euiImage--marginXlarge',
+  s: 'ouiImage--marginSmall',
+  m: 'ouiImage--marginMedium',
+  l: 'ouiImage--marginLarge',
+  xl: 'ouiImage--marginXlarge',
 };
 
 const floatToClassNameMap: { [float in Floats]: string } = {
-  left: 'euiImage--floatLeft',
-  right: 'euiImage--floatRight',
+  left: 'ouiImage--floatLeft',
+  right: 'ouiImage--floatRight',
 };
 
 export const SIZES = Object.keys(sizeToClassNameMap);
@@ -71,7 +82,7 @@ const fullScreenIconColorMap: { [color in FullScreenIconColor]: string } = {
   dark: 'default',
 };
 
-type _EuiImageSrcOrUrl = ExclusiveUnion<
+type _OuiImageSrcOrUrl = ExclusiveUnion<
   {
     /**
      * Requires either `src` or `url` but defaults to using `src` if both are provided
@@ -83,8 +94,8 @@ type _EuiImageSrcOrUrl = ExclusiveUnion<
   }
 >;
 
-export type EuiImageProps = CommonProps &
-  _EuiImageSrcOrUrl &
+export type OuiImageProps = CommonProps &
+  _OuiImageSrcOrUrl &
   HTMLAttributes<HTMLImageElement> & {
     /**
      * Separate from the caption is a title on the alt tag itself.
@@ -124,7 +135,7 @@ export type EuiImageProps = CommonProps &
     margin?: Margins;
   };
 
-export const EuiImage: FunctionComponent<EuiImageProps> = ({
+export const OuiImage: FunctionComponent<OuiImageProps> = ({
   className,
   url,
   src,
@@ -160,10 +171,10 @@ export const EuiImage: FunctionComponent<EuiImageProps> = ({
   const customStyle: React.CSSProperties = { ...style };
 
   let classes = classNames(
-    'euiImage',
+    'ouiImage',
     {
-      'euiImage--hasShadow': hasShadow,
-      'euiImage--allowFullScreen': allowFullScreen,
+      'ouiImage--hasShadow': hasShadow,
+      'ouiImage--allowFullScreen': allowFullScreen,
     },
     margin ? marginToClassNameMap[margin] : null,
     float ? floatToClassNameMap[float] : null,
@@ -180,12 +191,12 @@ export const EuiImage: FunctionComponent<EuiImageProps> = ({
     customStyle.width = 'auto';
   }
 
-  let allowFullScreenButtonClasses = 'euiImage__button';
+  let allowFullScreenButtonClasses = 'ouiImage__button';
 
   // when the button is not custom we need it to go full width
-  // to match the parent '.euiImage' width except when the size is original
+  // to match the parent '.ouiImage' width except when the size is original
   if (typeof size === 'string' && size !== 'original' && SIZES.includes(size)) {
-    allowFullScreenButtonClasses = `${allowFullScreenButtonClasses} euiImage__button--fullWidth`;
+    allowFullScreenButtonClasses = `${allowFullScreenButtonClasses} ouiImage__button--fullWidth`;
   } else {
     allowFullScreenButtonClasses = `${allowFullScreenButtonClasses}`;
   }
@@ -194,61 +205,61 @@ export const EuiImage: FunctionComponent<EuiImageProps> = ({
   let optionalCaption;
   if (caption) {
     optionalCaption = (
-      <figcaption ref={optionalCaptionRef} className="euiImage__caption">
+      <figcaption ref={optionalCaptionRef} className="ouiImage__caption">
         {caption}
       </figcaption>
     );
   }
 
   const allowFullScreenIcon = (
-    <EuiIcon
+    <OuiIcon
       type="fullScreen"
       color={fullScreenIconColorMap[fullScreenIconColor]}
-      className="euiImage__icon"
+      className="ouiImage__icon"
     />
   );
 
   const fullScreenDisplay = (
-    <EuiOverlayMask
+    <OuiOverlayMask
       data-test-subj="fullScreenOverlayMask"
       onClick={closeFullScreen}>
-      <EuiFocusTrap clickOutsideDisables={true}>
+      <OuiFocusTrap clickOutsideDisables={true}>
         <>
           <figure
-            className="euiImage euiImage-isFullScreen"
+            className="ouiImage ouiImage-isFullScreen"
             aria-label={optionalCaptionText}>
             <button
               type="button"
-              aria-label={useEuiI18n(
-                'euiImage.closeImage',
+              aria-label={useOuiI18n(
+                'ouiImage.closeImage',
                 'Close full screen {alt} image',
                 { alt }
               )}
-              className="euiImage__button"
+              className="ouiImage__button"
               data-test-subj="deactivateFullScreenButton"
               onClick={closeFullScreen}
               onKeyDown={onKeyDown}>
               <img
                 src={src || url}
                 alt={alt}
-                className="euiImage-isFullScreen__img"
+                className="ouiImage-isFullScreen__img"
                 {...rest}
               />
             </button>
             {optionalCaption}
           </figure>
-          <EuiIcon
+          <OuiIcon
             type="cross"
             color="default"
-            className="euiImage-isFullScreenCloseIcon"
+            className="ouiImage-isFullScreenCloseIcon"
           />
         </>
-      </EuiFocusTrap>
-    </EuiOverlayMask>
+      </OuiFocusTrap>
+    </OuiOverlayMask>
   );
 
-  const fullscreenLabel = useEuiI18n(
-    'euiImage.openImage',
+  const fullscreenLabel = useOuiI18n(
+    'ouiImage.openImage',
     'Open full screen {alt} image',
     { alt }
   );
@@ -266,7 +277,7 @@ export const EuiImage: FunctionComponent<EuiImageProps> = ({
             style={customStyle}
             src={src || url}
             alt={alt}
-            className="euiImage__img"
+            className="ouiImage__img"
             {...rest}
           />
           {allowFullScreenIcon}
@@ -281,7 +292,7 @@ export const EuiImage: FunctionComponent<EuiImageProps> = ({
         <img
           style={customStyle}
           src={src || url}
-          className="euiImage__img"
+          className="ouiImage__img"
           alt={alt}
           {...rest}
         />

@@ -1,24 +1,35 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
-import { EuiDataGrid, EuiCodeBlock, EuiCode } from '../../../../src/components';
+import { OuiDataGrid, OuiCodeBlock, OuiCode } from '../../../../src/components';
 
 import DataGridControlColumns from './control_columns';
 const dataGridControlColumnsSource = require('!!raw-loader!./control_columns');
 const dataGridControlColumnsHtml = renderToHtml(DataGridControlColumns);
 
-import { EuiDataGridControlColumn } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
+import { OuiDataGridControlColumn } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
 
-const gridSnippet = `<EuiDataGrid
+const gridSnippet = `<OuiDataGrid
   {...usualProps}
   leadingControlColumns={[
     {
       id: 'selection',
       width: 31,
       headerCellRender: () => <span>Select a Row</span>,
-      rowCellRender: () => <div><EuiSelectBox ... /></div>,
+      rowCellRender: () => <div><OuiSelectBox ... /></div>,
     },
   ]}
   trailingControlColumns={[
@@ -56,26 +67,26 @@ export const DataGridControlColumnsExample = {
           </p>
           <p>
             These custom columns are defined by passing an array of
-            EuiDataGridControlColumn objects (see <em>Props</em> tab below) to{' '}
-            <EuiCode>leadingControlColumns</EuiCode> and/or{' '}
-            <EuiCode>trailingControlColumns</EuiCode>.
+            OuiDataGridControlColumn objects (see <em>Props</em> tab below) to{' '}
+            <OuiCode>leadingControlColumns</OuiCode> and/or{' '}
+            <OuiCode>trailingControlColumns</OuiCode>.
           </p>
           <p>
-            As with the data grid&apos;s <EuiCode>renderCellValue</EuiCode>, the
-            control columns&apos; <EuiCode>headerCellRender</EuiCode> and{' '}
-            <EuiCode>rowCellRender</EuiCode> props are treated as React
+            As with the data grid&apos;s <OuiCode>renderCellValue</OuiCode>, the
+            control columns&apos; <OuiCode>headerCellRender</OuiCode> and{' '}
+            <OuiCode>rowCellRender</OuiCode> props are treated as React
             components.
           </p>
-          <EuiCodeBlock language="javascript" paddingSize="s" isCopyable>
+          <OuiCodeBlock language="javascript" paddingSize="s" isCopyable>
             {gridSnippet}
-          </EuiCodeBlock>
+          </OuiCodeBlock>
         </Fragment>
       ),
       components: { DataGridControlColumns },
 
       props: {
-        EuiDataGrid,
-        EuiDataGridControlColumn,
+        OuiDataGrid,
+        OuiDataGridControlColumn,
       },
       demo: <DataGridControlColumns />,
     },

@@ -1,65 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiBasicTable cellProps renders cells with custom props from a callback 1`] = `
+exports[`OuiBasicTable cellProps renders cells with custom props from a callback 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             className="customRowClass"
             data-test-subj="cell-1-name"
@@ -75,12 +75,12 @@ exports[`EuiBasicTable cellProps renders cells with custom props from a callback
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             className="customRowClass"
             data-test-subj="cell-2-name"
@@ -96,12 +96,12 @@ exports[`EuiBasicTable cellProps renders cells with custom props from a callback
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             className="customRowClass"
             data-test-subj="cell-3-name"
@@ -117,74 +117,74 @@ exports[`EuiBasicTable cellProps renders cells with custom props from a callback
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable cellProps renders rows with custom props from an object 1`] = `
+exports[`OuiBasicTable cellProps renders rows with custom props from an object 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             className="customClass"
             data-test-subj="cell"
@@ -200,12 +200,12 @@ exports[`EuiBasicTable cellProps renders rows with custom props from an object 1
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             className="customClass"
             data-test-subj="cell"
@@ -221,12 +221,12 @@ exports[`EuiBasicTable cellProps renders rows with custom props from an object 1
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             className="customClass"
             data-test-subj="cell"
@@ -242,141 +242,141 @@ exports[`EuiBasicTable cellProps renders rows with custom props from an object 1
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable empty is rendered 1`] = `
+exports[`OuiBasicTable empty is rendered 1`] = `
 <div
   aria-label="aria-label"
-  className="euiBasicTable testClass1 testClass2"
+  className="ouiBasicTable testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 0,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody>
+        <OuiTableRow>
+          <OuiTableRowCell
             align="center"
             colSpan={1}
             isMobileFullWidth={true}
           >
             No items found
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable empty renders a node as a custom message 1`] = `
+exports[`OuiBasicTable empty renders a node as a custom message 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 0,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody>
+        <OuiTableRow>
+          <OuiTableRowCell
             align="center"
             colSpan={1}
             isMobileFullWidth={true}
@@ -390,159 +390,159 @@ exports[`EuiBasicTable empty renders a node as a custom message 1`] = `
               </a>
                to make some
             </p>
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable empty renders a string as a custom message 1`] = `
+exports[`OuiBasicTable empty renders a string as a custom message 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 0,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody>
+        <OuiTableRow>
+          <OuiTableRowCell
             align="center"
             colSpan={1}
             isMobileFullWidth={true}
           >
             where my items at?
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable footers do not render without a column footer definition 1`] = `
+exports[`OuiBasicTable footers do not render without a column footer definition 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="your name"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </OuiTableHeaderCell>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_id_1"
           description="your id"
           key="_data_h_id_1"
         >
           ID
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </OuiTableHeaderCell>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_age_2"
           description="your age"
           key="_data_h_age_2"
         >
           Age
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -555,8 +555,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_id_1_1"
             mobileOptions={
@@ -569,8 +569,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_age_1_2"
             mobileOptions={
@@ -583,12 +583,12 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             20
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -601,8 +601,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_id_2_1"
             mobileOptions={
@@ -615,8 +615,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_age_2_2"
             mobileOptions={
@@ -629,12 +629,12 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             21
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -647,8 +647,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_id_3_1"
             mobileOptions={
@@ -661,8 +661,8 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_age_3_2"
             mobileOptions={
@@ -675,39 +675,39 @@ exports[`EuiBasicTable footers do not render without a column footer definition 
             textOnly={true}
           >
             22
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable footers render with pagination, selection, sorting, and footer 1`] = `
+exports[`OuiBasicTable footers render with pagination, selection, sorting, and footer 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </OuiI18n>
+        </OuiFlexItem>
+        <OuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <OuiTableSortMobile
             items={
               Array [
                 Object {
@@ -720,24 +720,24 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -747,21 +747,21 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </OuiI18n>
+        </OuiTableHeaderCellCheckbox>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="your name"
@@ -771,42 +771,42 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </OuiTableHeaderCell>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_id_1"
           description="your id"
           key="_data_h_id_1"
         >
           ID
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </OuiTableHeaderCell>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_age_2"
           description="your age"
           key="_data_h_age_2"
         >
           Age
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -819,8 +819,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_id_1_1"
             mobileOptions={
@@ -833,8 +833,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_age_1_2"
             mobileOptions={
@@ -847,23 +847,23 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             20
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -876,8 +876,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_id_2_1"
             mobileOptions={
@@ -890,8 +890,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_age_2_2"
             mobileOptions={
@@ -904,23 +904,23 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             21
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -933,8 +933,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_id_3_1"
             mobileOptions={
@@ -947,8 +947,8 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="left"
             key="_data_column_age_3_2"
             mobileOptions={
@@ -961,26 +961,26 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             textOnly={true}
           >
             22
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-      <EuiTableFooter>
-        <EuiTableFooterCell
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+      <OuiTableFooter>
+        <OuiTableFooterCell
           key="_selection_column_f"
         />
-        <EuiTableFooterCell
+        <OuiTableFooterCell
           key="footer_name_0"
         >
           <strong>
             Name
           </strong>
-        </EuiTableFooterCell>
-        <EuiTableFooterCell
+        </OuiTableFooterCell>
+        <OuiTableFooterCell
           key="footer_id_1"
         >
           ID
-        </EuiTableFooterCell>
-        <EuiTableFooterCell
+        </OuiTableFooterCell>
+        <OuiTableFooterCell
           key="footer_age_2"
         >
           <strong>
@@ -990,9 +990,9 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
             total items:
             5
           </strong>
-        </EuiTableFooterCell>
-      </EuiTableFooter>
-    </EuiTable>
+        </OuiTableFooterCell>
+      </OuiTableFooter>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -1009,67 +1009,67 @@ exports[`EuiBasicTable footers render with pagination, selection, sorting, and f
 </div>
 `;
 
-exports[`EuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
+exports[`OuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           aria-owns="row_1_expansion"
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -1082,25 +1082,25 @@ exports[`EuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           id="row_1_expansion"
           isExpandedRow={true}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             colSpan={1}
             textOnly={false}
           >
             <div>
               Expanded row
             </div>
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -1113,12 +1113,12 @@ exports[`EuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -1131,78 +1131,78 @@ exports[`EuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable rowProps renders rows with custom props from a callback 1`] = `
+exports[`OuiBasicTable rowProps renders rows with custom props from a callback 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+        <OuiKeyboardAccessible>
+          <OuiTableRow
             className="customRowClass"
             data-test-subj="row-1"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <OuiTableRowCell
               align="left"
               key="_data_column_name_0_0"
               mobileOptions={
@@ -1215,17 +1215,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from a callback 1
               textOnly={true}
             >
               name1
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+            </OuiTableRowCell>
+          </OuiTableRow>
+        </OuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
+          <OuiTableRow
             className="customRowClass"
             data-test-subj="row-2"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <OuiTableRowCell
               align="left"
               key="_data_column_name_1_0"
               mobileOptions={
@@ -1238,17 +1238,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from a callback 1
               textOnly={true}
             >
               name2
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+            </OuiTableRowCell>
+          </OuiTableRow>
+        </OuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
+          <OuiTableRow
             className="customRowClass"
             data-test-subj="row-3"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <OuiTableRowCell
               align="left"
               key="_data_column_name_2_0"
               mobileOptions={
@@ -1261,79 +1261,79 @@ exports[`EuiBasicTable rowProps renders rows with custom props from a callback 1
               textOnly={true}
             >
               name3
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-      </EuiTableBody>
-    </EuiTable>
+            </OuiTableRowCell>
+          </OuiTableRow>
+        </OuiKeyboardAccessible>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable rowProps renders rows with custom props from an object 1`] = `
+exports[`OuiBasicTable rowProps renders rows with custom props from an object 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+        <OuiKeyboardAccessible>
+          <OuiTableRow
             className="customClass"
             data-test-subj="row"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <OuiTableRowCell
               align="left"
               key="_data_column_name_0_0"
               mobileOptions={
@@ -1346,17 +1346,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from an object 1`
               textOnly={true}
             >
               name1
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+            </OuiTableRowCell>
+          </OuiTableRow>
+        </OuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
+          <OuiTableRow
             className="customClass"
             data-test-subj="row"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <OuiTableRowCell
               align="left"
               key="_data_column_name_1_0"
               mobileOptions={
@@ -1369,17 +1369,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from an object 1`
               textOnly={true}
             >
               name2
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-        <EuiKeyboardAccessible>
-          <EuiTableRow
+            </OuiTableRowCell>
+          </OuiTableRow>
+        </OuiKeyboardAccessible>
+        <OuiKeyboardAccessible>
+          <OuiTableRow
             className="customClass"
             data-test-subj="row"
             isSelected={false}
             onClick={[Function]}
           >
-            <EuiTableRowCell
+            <OuiTableRowCell
               align="left"
               key="_data_column_name_2_0"
               mobileOptions={
@@ -1392,17 +1392,17 @@ exports[`EuiBasicTable rowProps renders rows with custom props from an object 1`
               textOnly={true}
             >
               name3
-            </EuiTableRowCell>
-          </EuiTableRow>
-        </EuiKeyboardAccessible>
-      </EuiTableBody>
-    </EuiTable>
+            </OuiTableRowCell>
+          </OuiTableRow>
+        </OuiKeyboardAccessible>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with initial selection 1`] = `
-<EuiBasicTable
+exports[`OuiBasicTable with initial selection 1`] = `
+<OuiBasicTable
   columns={
     Array [
       Object {
@@ -1445,32 +1445,32 @@ exports[`EuiBasicTable with initial selection 1`] = `
   tableLayout="fixed"
 >
   <div
-    className="euiBasicTable"
+    className="ouiBasicTable"
   >
     <div>
-      <EuiTableHeaderMobile>
+      <OuiTableHeaderMobile>
         <div
-          className="euiTableHeaderMobile"
+          className="ouiTableHeaderMobile"
         >
-          <EuiFlexGroup
+          <OuiFlexGroup
             alignItems="baseline"
             justifyContent="spaceBetween"
             responsive={false}
           >
             <div
-              className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsBaseline euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow"
+              className="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsBaseline ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow"
             >
-              <EuiFlexItem
+              <OuiFlexItem
                 grow={false}
               >
                 <div
-                  className="euiFlexItem euiFlexItem--flexGrowZero"
+                  className="ouiFlexItem ouiFlexItem--flexGrowZero"
                 >
-                  <EuiI18n
+                  <OuiI18n
                     default="Select all rows"
-                    token="euiBasicTable.selectAllRows"
+                    token="ouiBasicTable.selectAllRows"
                   >
-                    <EuiCheckbox
+                    <OuiCheckbox
                       aria-label="Select all rows"
                       checked={false}
                       compressed={false}
@@ -1481,69 +1481,69 @@ exports[`EuiBasicTable with initial selection 1`] = `
                       onChange={[Function]}
                     >
                       <div
-                        className="euiCheckbox"
+                        className="ouiCheckbox"
                       >
                         <input
                           aria-label="Select all rows"
                           checked={false}
-                          className="euiCheckbox__input"
+                          className="ouiCheckbox__input"
                           disabled={false}
                           id="_selection_column-checkbox_generated-id"
                           onChange={[Function]}
                           type="checkbox"
                         />
                         <div
-                          className="euiCheckbox__square"
+                          className="ouiCheckbox__square"
                         />
                         <label
-                          className="euiCheckbox__label"
+                          className="ouiCheckbox__label"
                           htmlFor="_selection_column-checkbox_generated-id"
                         >
                           Select all rows
                         </label>
                       </div>
-                    </EuiCheckbox>
-                  </EuiI18n>
+                    </OuiCheckbox>
+                  </OuiI18n>
                 </div>
-              </EuiFlexItem>
-              <EuiFlexItem
+              </OuiFlexItem>
+              <OuiFlexItem
                 grow={false}
               >
                 <div
-                  className="euiFlexItem euiFlexItem--flexGrowZero"
+                  className="ouiFlexItem ouiFlexItem--flexGrowZero"
                 />
-              </EuiFlexItem>
+              </OuiFlexItem>
             </div>
-          </EuiFlexGroup>
+          </OuiFlexGroup>
         </div>
-      </EuiTableHeaderMobile>
-      <EuiTable
+      </OuiTableHeaderMobile>
+      <OuiTable
         id="__table_generated-id"
         responsive={true}
         tableLayout="fixed"
       >
         <table
-          className="euiTable euiTable--responsive"
+          className="ouiTable ouiTable--responsive"
           id="__table_generated-id"
           tabIndex={-1}
         >
-          <EuiScreenReaderOnly>
+          <OuiScreenReaderOnly>
             <caption
-              className="euiScreenReaderOnly euiTableCaption"
+              className="ouiScreenReaderOnly ouiTableCaption"
             >
-              <EuiDelayRender
+              <OuiDelayRender
                 delay={500}
               />
             </caption>
-          </EuiScreenReaderOnly>
-          <EuiTableHeader>
+          </OuiScreenReaderOnly>
+          <OuiTableHeader>
             <thead>
               <tr>
-                <EuiTableHeaderCellCheckbox
+                <OuiTableHeaderCellCheckbox
                   key="_selection_column_h"
                 >
                   <th
-                    className="euiTableHeaderCellCheckbox"
+                    className="ouiTableHeaderCellCheckbox"
                     scope="col"
                     style={
                       Object {
@@ -1552,13 +1552,13 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     }
                   >
                     <div
-                      className="euiTableCellContent"
+                      className="ouiTableCellContent"
                     >
-                      <EuiI18n
+                      <OuiI18n
                         default="Select all rows"
-                        token="euiBasicTable.selectAllRows"
+                        token="ouiBasicTable.selectAllRows"
                       >
-                        <EuiCheckbox
+                        <OuiCheckbox
                           aria-label="Select all rows"
                           checked={false}
                           compressed={false}
@@ -1571,12 +1571,12 @@ exports[`EuiBasicTable with initial selection 1`] = `
                           type="inList"
                         >
                           <div
-                            className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                            className="ouiCheckbox ouiCheckbox--inList ouiCheckbox--noLabel"
                           >
                             <input
                               aria-label="Select all rows"
                               checked={false}
-                              className="euiCheckbox__input"
+                              className="ouiCheckbox__input"
                               data-test-subj="checkboxSelectAll"
                               disabled={false}
                               id="_selection_column-checkbox_generated-id"
@@ -1584,22 +1584,22 @@ exports[`EuiBasicTable with initial selection 1`] = `
                               type="checkbox"
                             />
                             <div
-                              className="euiCheckbox__square"
+                              className="ouiCheckbox__square"
                             />
                           </div>
-                        </EuiCheckbox>
-                      </EuiI18n>
+                        </OuiCheckbox>
+                      </OuiI18n>
                     </div>
                   </th>
-                </EuiTableHeaderCellCheckbox>
-                <EuiTableHeaderCell
+                </OuiTableHeaderCellCheckbox>
+                <OuiTableHeaderCell
                   align="left"
                   data-test-subj="tableHeaderCell_name_0"
                   description="description"
                   key="_data_h_name_0"
                 >
                   <th
-                    className="euiTableHeaderCell"
+                    className="ouiTableHeaderCell"
                     data-test-subj="tableHeaderCell_name_0"
                     role="columnheader"
                     scope="col"
@@ -1610,17 +1610,17 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     }
                   >
                     <CellContents
-                      className="euiTableCellContent"
+                      className="ouiTableCellContent"
                       description="description"
                       showSortMsg={false}
                     >
                       <span
-                        className="euiTableCellContent"
+                        className="ouiTableCellContent"
                       >
-                        <EuiInnerText>
-                          <EuiI18n
+                        <OuiInnerText>
+                          <OuiI18n
                             default="{innerText}; {description}"
-                            token="euiTableHeaderCell.titleTextWithDesc"
+                            token="ouiTableHeaderCell.titleTextWithDesc"
                             values={
                               Object {
                                 "description": "description",
@@ -1629,52 +1629,52 @@ exports[`EuiBasicTable with initial selection 1`] = `
                             }
                           >
                             <span
-                              className="euiTableCellContent__text"
+                              className="ouiTableCellContent__text"
                               title="Name; description"
                             >
                               Name
                             </span>
-                          </EuiI18n>
-                        </EuiInnerText>
-                        <EuiScreenReaderOnly>
+                          </OuiI18n>
+                        </OuiInnerText>
+                        <OuiScreenReaderOnly>
                           <span
-                            className="euiScreenReaderOnly"
+                            className="ouiScreenReaderOnly"
                           >
                             description
                           </span>
-                        </EuiScreenReaderOnly>
+                        </OuiScreenReaderOnly>
                       </span>
                     </CellContents>
                   </th>
-                </EuiTableHeaderCell>
+                </OuiTableHeaderCell>
               </tr>
             </thead>
-          </EuiTableHeader>
-          <EuiTableBody
+          </OuiTableHeader>
+          <OuiTableBody
             bodyRef={[Function]}
           >
             <tbody>
-              <EuiTableRow
+              <OuiTableRow
                 isSelectable={true}
                 isSelected={true}
               >
                 <tr
-                  className="euiTableRow euiTableRow-isSelectable euiTableRow-isSelected"
+                  className="ouiTableRow ouiTableRow-isSelectable ouiTableRow-isSelected"
                 >
-                  <EuiTableRowCellCheckbox
+                  <OuiTableRowCellCheckbox
                     key="_selection_column_1"
                   >
                     <td
-                      className="euiTableRowCellCheckbox"
+                      className="ouiTableRowCellCheckbox"
                     >
                       <div
-                        className="euiTableCellContent"
+                        className="ouiTableCellContent"
                       >
-                        <EuiI18n
+                        <OuiI18n
                           default="Select this row"
-                          token="euiBasicTable.selectThisRow"
+                          token="ouiBasicTable.selectThisRow"
                         >
-                          <EuiCheckbox
+                          <OuiCheckbox
                             aria-label="Select this row"
                             checked={true}
                             compressed={false}
@@ -1687,12 +1687,12 @@ exports[`EuiBasicTable with initial selection 1`] = `
                             type="inList"
                           >
                             <div
-                              className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                              className="ouiCheckbox ouiCheckbox--inList ouiCheckbox--noLabel"
                             >
                               <input
                                 aria-label="Select this row"
                                 checked={true}
-                                className="euiCheckbox__input"
+                                className="ouiCheckbox__input"
                                 data-test-subj="checkboxSelectRow-1"
                                 disabled={false}
                                 id="_selection_column_1-checkbox"
@@ -1701,15 +1701,15 @@ exports[`EuiBasicTable with initial selection 1`] = `
                                 type="checkbox"
                               />
                               <div
-                                className="euiCheckbox__square"
+                                className="ouiCheckbox__square"
                               />
                             </div>
-                          </EuiCheckbox>
-                        </EuiI18n>
+                          </OuiCheckbox>
+                        </OuiI18n>
                       </div>
                     </td>
-                  </EuiTableRowCellCheckbox>
-                  <EuiTableRowCell
+                  </OuiTableRowCellCheckbox>
+                  <OuiTableRowCell
                     align="left"
                     key="_data_column_name_1_0"
                     mobileOptions={
@@ -1722,7 +1722,7 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     textOnly={true}
                   >
                     <td
-                      className="euiTableRowCell"
+                      className="ouiTableRowCell"
                       style={
                         Object {
                           "width": undefined,
@@ -1730,44 +1730,44 @@ exports[`EuiBasicTable with initial selection 1`] = `
                       }
                     >
                       <div
-                        className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                        className="ouiTableRowCell__mobileHeader ouiTableRowCell--hideForDesktop"
                       >
                         Name
                       </div>
                       <div
-                        className="euiTableCellContent"
+                        className="ouiTableCellContent"
                       >
                         <span
-                          className="euiTableCellContent__text"
+                          className="ouiTableCellContent__text"
                         >
                           name1
                         </span>
                       </div>
                     </td>
-                  </EuiTableRowCell>
+                  </OuiTableRowCell>
                 </tr>
-              </EuiTableRow>
-              <EuiTableRow
+              </OuiTableRow>
+              <OuiTableRow
                 isSelectable={true}
                 isSelected={false}
               >
                 <tr
-                  className="euiTableRow euiTableRow-isSelectable"
+                  className="ouiTableRow ouiTableRow-isSelectable"
                 >
-                  <EuiTableRowCellCheckbox
+                  <OuiTableRowCellCheckbox
                     key="_selection_column_2"
                   >
                     <td
-                      className="euiTableRowCellCheckbox"
+                      className="ouiTableRowCellCheckbox"
                     >
                       <div
-                        className="euiTableCellContent"
+                        className="ouiTableCellContent"
                       >
-                        <EuiI18n
+                        <OuiI18n
                           default="Select this row"
-                          token="euiBasicTable.selectThisRow"
+                          token="ouiBasicTable.selectThisRow"
                         >
-                          <EuiCheckbox
+                          <OuiCheckbox
                             aria-label="Select this row"
                             checked={false}
                             compressed={false}
@@ -1780,12 +1780,12 @@ exports[`EuiBasicTable with initial selection 1`] = `
                             type="inList"
                           >
                             <div
-                              className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                              className="ouiCheckbox ouiCheckbox--inList ouiCheckbox--noLabel"
                             >
                               <input
                                 aria-label="Select this row"
                                 checked={false}
-                                className="euiCheckbox__input"
+                                className="ouiCheckbox__input"
                                 data-test-subj="checkboxSelectRow-2"
                                 disabled={false}
                                 id="_selection_column_2-checkbox"
@@ -1794,15 +1794,15 @@ exports[`EuiBasicTable with initial selection 1`] = `
                                 type="checkbox"
                               />
                               <div
-                                className="euiCheckbox__square"
+                                className="ouiCheckbox__square"
                               />
                             </div>
-                          </EuiCheckbox>
-                        </EuiI18n>
+                          </OuiCheckbox>
+                        </OuiI18n>
                       </div>
                     </td>
-                  </EuiTableRowCellCheckbox>
-                  <EuiTableRowCell
+                  </OuiTableRowCellCheckbox>
+                  <OuiTableRowCell
                     align="left"
                     key="_data_column_name_2_0"
                     mobileOptions={
@@ -1815,7 +1815,7 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     textOnly={true}
                   >
                     <td
-                      className="euiTableRowCell"
+                      className="ouiTableRowCell"
                       style={
                         Object {
                           "width": undefined,
@@ -1823,44 +1823,44 @@ exports[`EuiBasicTable with initial selection 1`] = `
                       }
                     >
                       <div
-                        className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                        className="ouiTableRowCell__mobileHeader ouiTableRowCell--hideForDesktop"
                       >
                         Name
                       </div>
                       <div
-                        className="euiTableCellContent"
+                        className="ouiTableCellContent"
                       >
                         <span
-                          className="euiTableCellContent__text"
+                          className="ouiTableCellContent__text"
                         >
                           name2
                         </span>
                       </div>
                     </td>
-                  </EuiTableRowCell>
+                  </OuiTableRowCell>
                 </tr>
-              </EuiTableRow>
-              <EuiTableRow
+              </OuiTableRow>
+              <OuiTableRow
                 isSelectable={true}
                 isSelected={false}
               >
                 <tr
-                  className="euiTableRow euiTableRow-isSelectable"
+                  className="ouiTableRow ouiTableRow-isSelectable"
                 >
-                  <EuiTableRowCellCheckbox
+                  <OuiTableRowCellCheckbox
                     key="_selection_column_3"
                   >
                     <td
-                      className="euiTableRowCellCheckbox"
+                      className="ouiTableRowCellCheckbox"
                     >
                       <div
-                        className="euiTableCellContent"
+                        className="ouiTableCellContent"
                       >
-                        <EuiI18n
+                        <OuiI18n
                           default="Select this row"
-                          token="euiBasicTable.selectThisRow"
+                          token="ouiBasicTable.selectThisRow"
                         >
-                          <EuiCheckbox
+                          <OuiCheckbox
                             aria-label="Select this row"
                             checked={false}
                             compressed={false}
@@ -1873,12 +1873,12 @@ exports[`EuiBasicTable with initial selection 1`] = `
                             type="inList"
                           >
                             <div
-                              className="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+                              className="ouiCheckbox ouiCheckbox--inList ouiCheckbox--noLabel"
                             >
                               <input
                                 aria-label="Select this row"
                                 checked={false}
-                                className="euiCheckbox__input"
+                                className="ouiCheckbox__input"
                                 data-test-subj="checkboxSelectRow-3"
                                 disabled={false}
                                 id="_selection_column_3-checkbox"
@@ -1887,15 +1887,15 @@ exports[`EuiBasicTable with initial selection 1`] = `
                                 type="checkbox"
                               />
                               <div
-                                className="euiCheckbox__square"
+                                className="ouiCheckbox__square"
                               />
                             </div>
-                          </EuiCheckbox>
-                        </EuiI18n>
+                          </OuiCheckbox>
+                        </OuiI18n>
                       </div>
                     </td>
-                  </EuiTableRowCellCheckbox>
-                  <EuiTableRowCell
+                  </OuiTableRowCellCheckbox>
+                  <OuiTableRowCell
                     align="left"
                     key="_data_column_name_3_0"
                     mobileOptions={
@@ -1908,7 +1908,7 @@ exports[`EuiBasicTable with initial selection 1`] = `
                     textOnly={true}
                   >
                     <td
-                      className="euiTableRowCell"
+                      className="ouiTableRowCell"
                       style={
                         Object {
                           "width": undefined,
@@ -1916,99 +1916,99 @@ exports[`EuiBasicTable with initial selection 1`] = `
                       }
                     >
                       <div
-                        className="euiTableRowCell__mobileHeader euiTableRowCell--hideForDesktop"
+                        className="ouiTableRowCell__mobileHeader ouiTableRowCell--hideForDesktop"
                       >
                         Name
                       </div>
                       <div
-                        className="euiTableCellContent"
+                        className="ouiTableCellContent"
                       >
                         <span
-                          className="euiTableCellContent__text"
+                          className="ouiTableCellContent__text"
                         >
                           name3
                         </span>
                       </div>
                     </td>
-                  </EuiTableRowCell>
+                  </OuiTableRowCell>
                 </tr>
-              </EuiTableRow>
+              </OuiTableRow>
             </tbody>
-          </EuiTableBody>
+          </OuiTableBody>
         </table>
-      </EuiTable>
+      </OuiTable>
     </div>
   </div>
-</EuiBasicTable>
+</OuiBasicTable>
 `;
 
-exports[`EuiBasicTable with multiple record actions with custom availability 1`] = `
+exports[`OuiBasicTable with multiple record actions with custom availability 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 4,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </OuiTableHeaderCell>
+        <OuiTableHeaderCell
           align="right"
           key="_actions_h_1"
         >
           Actions
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           hasActions={true}
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -2021,8 +2021,8 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_1_1"
@@ -2063,13 +2063,13 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
               }
               itemId="1"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           hasActions={true}
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -2082,8 +2082,8 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_2_1"
@@ -2125,13 +2125,13 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
               }
               itemId="2"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           hasActions={true}
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -2144,8 +2144,8 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_3_1"
@@ -2182,13 +2182,13 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
               }
               itemId="3"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           hasActions={true}
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_4_0"
             mobileOptions={
@@ -2201,8 +2201,8 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_4_1"
@@ -2244,48 +2244,48 @@ exports[`EuiBasicTable with multiple record actions with custom availability 1`]
               }
               itemId="4"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with pagination - 2nd page 1`] = `
+exports[`OuiBasicTable with pagination - 2nd page 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 2,
@@ -2295,26 +2295,26 @@ exports[`EuiBasicTable with pagination - 2nd page 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -2327,12 +2327,12 @@ exports[`EuiBasicTable with pagination - 2nd page 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_4_0"
             mobileOptions={
@@ -2345,10 +2345,10 @@ exports[`EuiBasicTable with pagination - 2nd page 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -2365,40 +2365,40 @@ exports[`EuiBasicTable with pagination - 2nd page 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination 1`] = `
+exports[`OuiBasicTable with pagination 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2408,26 +2408,26 @@ exports[`EuiBasicTable with pagination 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -2440,12 +2440,12 @@ exports[`EuiBasicTable with pagination 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -2458,12 +2458,12 @@ exports[`EuiBasicTable with pagination 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -2476,10 +2476,10 @@ exports[`EuiBasicTable with pagination 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -2496,40 +2496,40 @@ exports[`EuiBasicTable with pagination 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination and error 1`] = `
+exports[`OuiBasicTable with pagination and error 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2539,81 +2539,81 @@ exports[`EuiBasicTable with pagination and error 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody>
-        <EuiTableRow>
-          <EuiTableRowCell
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody>
+        <OuiTableRow>
+          <OuiTableRowCell
             align="center"
             colSpan={1}
             isMobileFullWidth={true}
           >
-            <EuiIcon
+            <OuiIcon
               color="danger"
               type="minusInCircle"
             />
              
             no can do
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with pagination and selection 1`] = `
+exports[`OuiBasicTable with pagination and selection 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </OuiI18n>
+        </OuiFlexItem>
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2623,47 +2623,47 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </OuiI18n>
+        </OuiTableHeaderCellCheckbox>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -2676,23 +2676,23 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -2705,23 +2705,23 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -2734,10 +2734,10 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -2754,40 +2754,40 @@ exports[`EuiBasicTable with pagination and selection 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
+exports[`OuiBasicTable with pagination, hiding the per page options 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2797,26 +2797,26 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -2829,12 +2829,12 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -2847,12 +2847,12 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -2865,10 +2865,10 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -2886,31 +2886,31 @@ exports[`EuiBasicTable with pagination, hiding the per page options 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
+exports[`OuiBasicTable with pagination, selection and sorting 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </OuiI18n>
+        </OuiFlexItem>
+        <OuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <OuiTableSortMobile
             items={
               Array [
                 Object {
@@ -2923,24 +2923,24 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -2950,21 +2950,21 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </OuiI18n>
+        </OuiTableHeaderCellCheckbox>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
@@ -2974,26 +2974,26 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -3006,23 +3006,23 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -3035,23 +3035,23 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -3064,10 +3064,10 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -3084,31 +3084,31 @@ exports[`EuiBasicTable with pagination, selection and sorting 1`] = `
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting and a single record action 1`] = `
+exports[`OuiBasicTable with pagination, selection, sorting and a single record action 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </OuiI18n>
+        </OuiFlexItem>
+        <OuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <OuiTableSortMobile
             items={
               Array [
                 Object {
@@ -3121,24 +3121,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -3148,21 +3148,21 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </OuiI18n>
+        </OuiTableHeaderCellCheckbox>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
@@ -3172,33 +3172,33 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </OuiTableHeaderCell>
+        <OuiTableHeaderCell
           align="right"
           key="_actions_h_1"
         >
           Actions
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -3211,8 +3211,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_1_1"
@@ -3239,24 +3239,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
               }
               itemId="1"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -3269,8 +3269,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_2_1"
@@ -3297,24 +3297,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
               }
               itemId="2"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -3327,8 +3327,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_3_1"
@@ -3355,10 +3355,10 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
               }
               itemId="3"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -3375,31 +3375,31 @@ exports[`EuiBasicTable with pagination, selection, sorting and a single record a
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1`] = `
+exports[`OuiBasicTable with pagination, selection, sorting and column dataType 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </OuiI18n>
+        </OuiFlexItem>
+        <OuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <OuiTableSortMobile
             items={
               Array [
                 Object {
@@ -3412,24 +3412,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -3439,21 +3439,21 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </OuiI18n>
+        </OuiTableHeaderCellCheckbox>
+        <OuiTableHeaderCell
           align="right"
           data-test-subj="tableHeaderCell_count_0"
           description="description of count"
@@ -3463,26 +3463,26 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
           onSort={[Function]}
         >
           Count
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="right"
             key="_data_column_count_1_0"
             mobileOptions={
@@ -3495,23 +3495,23 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
             textOnly={true}
           >
             1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="right"
             key="_data_column_count_2_0"
             mobileOptions={
@@ -3524,23 +3524,23 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
             textOnly={true}
           >
             2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="right"
             key="_data_column_count_3_0"
             mobileOptions={
@@ -3553,10 +3553,10 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
             textOnly={true}
           >
             3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -3573,31 +3573,31 @@ exports[`EuiBasicTable with pagination, selection, sorting and column dataType 1
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1`] = `
+exports[`OuiBasicTable with pagination, selection, sorting and column renderer 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </OuiI18n>
+        </OuiFlexItem>
+        <OuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <OuiTableSortMobile
             items={
               Array [
                 Object {
@@ -3610,24 +3610,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -3637,21 +3637,21 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </OuiI18n>
+        </OuiTableHeaderCellCheckbox>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
@@ -3661,26 +3661,26 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -3693,23 +3693,23 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
             textOnly={false}
           >
             NAME1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -3722,23 +3722,23 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
             textOnly={false}
           >
             NAME2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -3751,10 +3751,10 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
             textOnly={false}
           >
             NAME3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -3771,31 +3771,31 @@ exports[`EuiBasicTable with pagination, selection, sorting and column renderer 1
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting and multiple record actions 1`] = `
+exports[`OuiBasicTable with pagination, selection, sorting and multiple record actions 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </OuiI18n>
+        </OuiFlexItem>
+        <OuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <OuiTableSortMobile
             items={
               Array [
                 Object {
@@ -3808,24 +3808,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -3835,21 +3835,21 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </OuiI18n>
+        </OuiTableHeaderCellCheckbox>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
@@ -3859,33 +3859,33 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-        <EuiTableHeaderCell
+        </OuiTableHeaderCell>
+        <OuiTableHeaderCell
           align="right"
           key="_actions_h_1"
         >
           Actions
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -3898,8 +3898,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_1_1"
@@ -3932,24 +3932,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
               }
               itemId="1"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -3962,8 +3962,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_2_1"
@@ -3996,24 +3996,24 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
               }
               itemId="2"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           hasActions={true}
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
@@ -4026,8 +4026,8 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-          <EuiTableRowCell
+          </OuiTableRowCell>
+          <OuiTableRowCell
             align="right"
             hasActions={true}
             key="record_actions_3_1"
@@ -4060,10 +4060,10 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
               }
               itemId="3"
             />
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -4080,31 +4080,31 @@ exports[`EuiBasicTable with pagination, selection, sorting and multiple record a
 </div>
 `;
 
-exports[`EuiBasicTable with pagination, selection, sorting, column renderer and column dataType 1`] = `
+exports[`OuiBasicTable with pagination, selection, sorting, column renderer and column dataType 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiFlexItem>
-        <EuiFlexItem
+          </OuiI18n>
+        </OuiFlexItem>
+        <OuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <OuiTableSortMobile
             items={
               Array [
                 Object {
@@ -4117,24 +4117,24 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
-              token="euiBasicTable.tableAutoCaptionWithPagination"
+              token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
                 Object {
                   "itemCount": 3,
@@ -4144,21 +4144,21 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCellCheckbox
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCellCheckbox
           key="_selection_column_h"
         >
-          <EuiI18n
+          <OuiI18n
             default="Select all rows"
-            token="euiBasicTable.selectAllRows"
+            token="ouiBasicTable.selectAllRows"
           >
             <Component />
-          </EuiI18n>
-        </EuiTableHeaderCellCheckbox>
-        <EuiTableHeaderCell
+          </OuiI18n>
+        </OuiTableHeaderCellCheckbox>
+        <OuiTableHeaderCell
           align="right"
           data-test-subj="tableHeaderCell_count_0"
           description="description of count"
@@ -4168,26 +4168,26 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
           onSort={[Function]}
         >
           Count
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_1"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="right"
             key="_data_column_count_1_0"
             mobileOptions={
@@ -4200,23 +4200,23 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
             textOnly={false}
           >
             x
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_2"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="right"
             key="_data_column_count_2_0"
             mobileOptions={
@@ -4229,23 +4229,23 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
             textOnly={false}
           >
             xx
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelectable={true}
           isSelected={false}
         >
-          <EuiTableRowCellCheckbox
+          <OuiTableRowCellCheckbox
             key="_selection_column_3"
           >
-            <EuiI18n
+            <OuiI18n
               default="Select this row"
-              token="euiBasicTable.selectThisRow"
+              token="ouiBasicTable.selectThisRow"
             >
               <Component />
-            </EuiI18n>
-          </EuiTableRowCellCheckbox>
-          <EuiTableRowCell
+            </OuiI18n>
+          </OuiTableRowCellCheckbox>
+          <OuiTableRowCell
             align="right"
             key="_data_column_count_3_0"
             mobileOptions={
@@ -4258,10 +4258,10 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
             textOnly={false}
           >
             xxx
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
   <PaginationBar
     aria-controls="__table_generated-id"
@@ -4278,66 +4278,66 @@ exports[`EuiBasicTable with pagination, selection, sorting, column renderer and 
 </div>
 `;
 
-exports[`EuiBasicTable with sortable columns and sorting disabled 1`] = `
+exports[`OuiBasicTable with sortable columns and sorting disabled 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
           key="_data_h_name_0"
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -4350,12 +4350,12 @@ exports[`EuiBasicTable with sortable columns and sorting disabled 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -4368,12 +4368,12 @@ exports[`EuiBasicTable with sortable columns and sorting disabled 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -4386,32 +4386,32 @@ exports[`EuiBasicTable with sortable columns and sorting disabled 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with sorting 1`] = `
+exports[`OuiBasicTable with sorting 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <OuiTableSortMobile
             items={
               Array [
                 Object {
@@ -4424,35 +4424,35 @@ exports[`EuiBasicTable with sorting 1`] = `
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
@@ -4462,15 +4462,15 @@ exports[`EuiBasicTable with sorting 1`] = `
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -4483,12 +4483,12 @@ exports[`EuiBasicTable with sorting 1`] = `
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -4501,12 +4501,12 @@ exports[`EuiBasicTable with sorting 1`] = `
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -4519,32 +4519,32 @@ exports[`EuiBasicTable with sorting 1`] = `
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;
 
-exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1`] = `
+exports[`OuiBasicTable with sorting enabled and enable all columns for sorting 1`] = `
 <div
-  className="euiBasicTable"
+  className="ouiBasicTable"
 >
   <div>
-    <EuiTableHeaderMobile>
-      <EuiFlexGroup
+    <OuiTableHeaderMobile>
+      <OuiFlexGroup
         alignItems="baseline"
         justifyContent="spaceBetween"
         responsive={false}
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         />
-        <EuiFlexItem
+        <OuiFlexItem
           grow={false}
         >
-          <EuiTableSortMobile
+          <OuiTableSortMobile
             items={
               Array [
                 Object {
@@ -4557,35 +4557,35 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
               ]
             }
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiTableHeaderMobile>
-    <EuiTable
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiTableHeaderMobile>
+    <OuiTable
       id="__table_generated-id"
       responsive={true}
       tableLayout="fixed"
     >
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <caption
-          className="euiTableCaption"
+          className="ouiTableCaption"
         >
-          <EuiDelayRender
+          <OuiDelayRender
             delay={500}
           >
-            <EuiI18n
+            <OuiI18n
               default="This table contains {itemCount} rows."
-              token="euiBasicTable.tableAutoCaptionWithoutPagination"
+              token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
                 Object {
                   "itemCount": 3,
                 }
               }
             />
-          </EuiDelayRender>
+          </OuiDelayRender>
         </caption>
-      </EuiScreenReaderOnly>
-      <EuiTableHeader>
-        <EuiTableHeaderCell
+      </OuiScreenReaderOnly>
+      <OuiTableHeader>
+        <OuiTableHeaderCell
           align="left"
           data-test-subj="tableHeaderCell_name_0"
           description="description"
@@ -4595,15 +4595,15 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
           onSort={[Function]}
         >
           Name
-        </EuiTableHeaderCell>
-      </EuiTableHeader>
-      <EuiTableBody
+        </OuiTableHeaderCell>
+      </OuiTableHeader>
+      <OuiTableBody
         bodyRef={[Function]}
       >
-        <EuiTableRow
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
@@ -4616,12 +4616,12 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
             textOnly={true}
           >
             name1
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
@@ -4634,12 +4634,12 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
             textOnly={true}
           >
             name2
-          </EuiTableRowCell>
-        </EuiTableRow>
-        <EuiTableRow
+          </OuiTableRowCell>
+        </OuiTableRow>
+        <OuiTableRow
           isSelected={false}
         >
-          <EuiTableRowCell
+          <OuiTableRowCell
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
@@ -4652,10 +4652,10 @@ exports[`EuiBasicTable with sorting enabled and enable all columns for sorting 1
             textOnly={true}
           >
             name3
-          </EuiTableRowCell>
-        </EuiTableRow>
-      </EuiTableBody>
-    </EuiTable>
+          </OuiTableRowCell>
+        </OuiTableRow>
+      </OuiTableBody>
+    </OuiTable>
   </div>
 </div>
 `;

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTabs, SIZES, DISPLAYS } from './tabs';
+import { OuiTabs, SIZES, DISPLAYS } from './tabs';
 
-describe('EuiTabs', () => {
+describe('OuiTabs', () => {
   test('renders', () => {
-    const component = <EuiTabs {...requiredProps}>children</EuiTabs>;
+    const component = <OuiTabs {...requiredProps}>children</OuiTabs>;
 
     expect(render(component)).toMatchSnapshot();
   });
@@ -34,7 +45,7 @@ describe('EuiTabs', () => {
     describe('size', () => {
       SIZES.forEach((size) => {
         it(`${size} is rendered`, () => {
-          const component = render(<EuiTabs size={size}>children</EuiTabs>);
+          const component = render(<OuiTabs size={size}>children</OuiTabs>);
 
           expect(component).toMatchSnapshot();
         });
@@ -45,7 +56,7 @@ describe('EuiTabs', () => {
       DISPLAYS.forEach((display) => {
         it(`${display} is rendered`, () => {
           const component = render(
-            <EuiTabs display={display}>children</EuiTabs>
+            <OuiTabs display={display}>children</OuiTabs>
           );
 
           expect(component).toMatchSnapshot();
@@ -55,7 +66,7 @@ describe('EuiTabs', () => {
 
     describe('expand', () => {
       test('is rendered', () => {
-        const component = render(<EuiTabs expand>children</EuiTabs>);
+        const component = render(<OuiTabs expand>children</OuiTabs>);
         expect(component).toMatchSnapshot();
       });
     });

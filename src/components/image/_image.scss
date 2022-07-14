@@ -1,10 +1,21 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Fix for IE where the image correctly resizes in width but doesn't collapse its height
       (https://github.com/philipwalton/flexbugs/issues/75#issuecomment-134702421)
  */
 
 // Main <figure> that wraps images.
-.euiImage {
+.ouiImage {
   display: inline-block;
   max-width: 100%;
   position: relative;
@@ -12,29 +23,29 @@
   line-height: 0; // Fixes cropping when image is resized by forcing its height to be determined by the image not line-height
   flex-shrink: 0; // Don't ever let this shrink in height if direct descendent of flex
 
-  // Required for common usage of nesting within EuiText
-  .euiImage__img {
+  // Required for common usage of nesting within OuiText
+  .ouiImage__img {
     margin-bottom: 0;
   }
 
-  &.euiImage--hasShadow {
-    .euiImage__img {
-      @include euiBottomShadowMedium;
+  &.ouiImage--hasShadow {
+    .ouiImage__img {
+      @include ouiBottomShadowMedium;
     }
   }
 
-  .euiImage__button {
+  .ouiImage__button {
     position: relative;
     cursor: pointer;
 
     // transition the shadow
-    transition: all $euiAnimSpeedFast $euiAnimSlightResistance;
+    transition: all $ouiAnimSpeedFast $ouiAnimSlightResistance;
 
     &:focus  {
-      outline: 2px solid $euiFocusRingColor;
+      outline: 2px solid $ouiFocusRingColor;
     }
 
-    &:hover .euiImage__icon {
+    &:hover .ouiImage__icon {
       visibility: visible;
       fill-opacity: 1;
     }
@@ -44,121 +55,121 @@
     }
   }
 
-  &.euiImage--allowFullScreen {
-    &:hover .euiImage__caption {
+  &.ouiImage--allowFullScreen {
+    &:hover .ouiImage__caption {
       text-decoration: underline;
     }
 
-    &:not(.euiImage--hasShadow) .euiImage__button:hover,
-    &:not(.euiImage--hasShadow) .euiImage__button:focus {
-      @include euiBottomShadowMedium;
+    &:not(.ouiImage--hasShadow) .ouiImage__button:hover,
+    &:not(.ouiImage--hasShadow) .ouiImage__button:focus {
+      @include ouiBottomShadowMedium;
     }
 
-    &.euiImage--hasShadow .euiImage__button:hover,
-    &.euiImage--hasShadow .euiImage__button:focus {
-      @include euiBottomShadow;
+    &.ouiImage--hasShadow .ouiImage__button:hover,
+    &.ouiImage--hasShadow .ouiImage__button:focus {
+      @include ouiBottomShadow;
     }
   }
 
   // These sizes are mostly suggestions. Don't look too hard for meaning in their values.
   // Size is applied to the image, rather than the figure to work better with floats
-  &.euiImage--small .euiImage__img {
+  &.ouiImage--small .ouiImage__img {
     width: convertToRem(120px);
   }
 
-  &.euiImage--medium .euiImage__img {
+  &.ouiImage--medium .ouiImage__img {
     width: convertToRem(200px);
   }
 
-  &.euiImage--large .euiImage__img {
+  &.ouiImage--large .ouiImage__img {
     width: convertToRem(360px);
   }
 
-  &.euiImage--xlarge .euiImage__img {
+  &.ouiImage--xlarge .ouiImage__img {
     width: convertToRem(600px);
   }
 
-  &.euiImage--fullWidth {
+  &.ouiImage--fullWidth {
     width: 100%;
   }
 
-  &.euiImage--original {
-    .euiImage__img {
+  &.ouiImage--original {
+    .ouiImage__img {
       width: auto;
       max-width: 100%;
     }
   }
 
-  &.euiImage--floatLeft {
+  &.ouiImage--floatLeft {
     float: left;
 
-    &[class*='euiImage--margin']  {
+    &[class*='ouiImage--margin']  {
       margin-left: 0;
       margin-top: 0;
     }
   }
 
-  &.euiImage--floatRight {
+  &.ouiImage--floatRight {
     float: right;
 
-    &[class*='euiImage--margin']  {
+    &[class*='ouiImage--margin']  {
       margin-right: 0;
       margin-top: 0;
     }
   }
 
-  &.euiImage--marginSmall {
-    margin: $euiSizeS;
+  &.ouiImage--marginSmall {
+    margin: $ouiSizeS;
   }
 
-  &.euiImage--marginMedium {
-    margin: $euiSize;
+  &.ouiImage--marginMedium {
+    margin: $ouiSize;
   }
 
-  &.euiImage--marginLarge {
-    margin: $euiSizeL;
+  &.ouiImage--marginLarge {
+    margin: $ouiSizeL;
   }
 
-  &.euiImage--marginXlarge {
-    margin: $euiSizeXL;
+  &.ouiImage--marginXlarge {
+    margin: $ouiSizeXL;
   }
 }
 
 // The image itself is full width within the container.
-.euiImage__img {
+.ouiImage__img {
   width: 100%;
   vertical-align: middle;
 }
 
-.euiImage__caption {
-  @include euiFontSizeS;
-  margin-top: $euiSizeXS;
+.ouiImage__caption {
+  @include ouiFontSizeS;
+  margin-top: $ouiSizeXS;
   text-align: center;
 }
 
-.euiImage__icon {
+.ouiImage__icon {
   visibility: hidden;
   fill-opacity: 0;
   position: absolute;
-  right: $euiSize;
-  top: $euiSize;
-  transition: fill-opacity $euiAnimSpeedSlow $euiAnimSlightResistance;
+  right: $ouiSize;
+  top: $ouiSize;
+  transition: fill-opacity $ouiAnimSpeedSlow $ouiAnimSlightResistance;
   cursor: pointer;
 }
 
 // The FullScreen image that optionally pops up on click.
-.euiImage-isFullScreen {
+.ouiImage-isFullScreen {
   position: relative;
   max-height: 80vh;
   max-width: 80vw;
-  animation: euiImageFullScreen $euiAnimSpeedExtraSlow $euiAnimSlightBounce;
+  animation: ouiImageFullScreen $ouiAnimSpeedExtraSlow $ouiAnimSlightBounce;
 
   &:hover {
-    .euiImage__button {
-      @include euiBottomShadow;
+    .ouiImage__button {
+      @include ouiBottomShadow;
     }
 
-    .euiImage__caption {
+    .ouiImage__caption {
       text-decoration: underline;
     }
   }
@@ -168,21 +179,21 @@
     max-width: 80vw;
     vertical-align: middle;
     cursor: pointer;
-    transition: all $euiAnimSpeedFast $euiAnimSlightResistance;
+    transition: all $ouiAnimSpeedFast $ouiAnimSlightResistance;
   }
 }
 
-.euiImage-isFullScreenCloseIcon {
+.ouiImage-isFullScreenCloseIcon {
   position: absolute;
-  right: $euiSize;
-  top: $euiSize;
+  right: $ouiSize;
+  top: $ouiSize;
   pointer-events: none;
 }
 
-@keyframes euiImageFullScreen {
+@keyframes ouiImageFullScreen {
   0% {
     opacity: 0;
-    transform: translateY($euiSizeXL * 2);
+    transform: translateY($ouiSizeXL * 2);
   }
 
   100% {
@@ -191,16 +202,16 @@
   }
 }
 
-@include euiBreakpoint('xs', 's', 'm') {
+@include ouiBreakpoint('xs', 's', 'm') {
 
-  .euiImage {
+  .ouiImage {
 
-    &.euiImage--floatLeft,
-    &.euiImage--floatRight {
+    &.ouiImage--floatLeft,
+    &.ouiImage--floatRight {
       float: none;
 
       // Return back to whatever margin settings were set without the float
-      &[class*='euiImage--margin']  {
+      &[class*='ouiImage--margin']  {
         margin-top: inherit;
         margin-right: inherit;
         margin-bottom: inherit;

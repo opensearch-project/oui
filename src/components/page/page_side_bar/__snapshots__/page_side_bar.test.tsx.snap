@@ -1,39 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPageSideBar is rendered 1`] = `
+exports[`OuiPageSideBar is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPageSideBar testClass1 testClass2"
+  class="ouiPageSideBar testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiPageSideBar paddingSize l is rendered 1`] = `
+exports[`OuiPageSideBar paddingSize l is rendered 1`] = `
 <div
-  class="euiPageSideBar euiPageSideBar--paddingLarge"
+  class="ouiPageSideBar ouiPageSideBar--paddingLarge"
 />
 `;
 
-exports[`EuiPageSideBar paddingSize m is rendered 1`] = `
+exports[`OuiPageSideBar paddingSize m is rendered 1`] = `
 <div
-  class="euiPageSideBar euiPageSideBar--paddingMedium"
+  class="ouiPageSideBar ouiPageSideBar--paddingMedium"
 />
 `;
 
-exports[`EuiPageSideBar paddingSize none is rendered 1`] = `
+exports[`OuiPageSideBar paddingSize none is rendered 1`] = `
 <div
-  class="euiPageSideBar"
+  class="ouiPageSideBar"
 />
 `;
 
-exports[`EuiPageSideBar paddingSize s is rendered 1`] = `
+exports[`OuiPageSideBar paddingSize s is rendered 1`] = `
 <div
-  class="euiPageSideBar euiPageSideBar--paddingSmall"
+  class="ouiPageSideBar ouiPageSideBar--paddingSmall"
 />
 `;
 
-exports[`EuiPageSideBar sticky is rendered 1`] = `
+exports[`OuiPageSideBar sticky is rendered 1`] = `
 <div
-  class="euiPageSideBar euiPageSideBar--sticky"
+  class="ouiPageSideBar ouiPageSideBar--sticky"
 />
 `;

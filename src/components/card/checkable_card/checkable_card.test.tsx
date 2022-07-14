@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiCheckableCard } from './checkable_card';
+import { OuiCheckableCard } from './checkable_card';
 
 const checkablePanelRequiredProps = {
   label: 'Label',
@@ -29,10 +40,10 @@ const checkablePanelRequiredProps = {
   onChange: () => {},
 };
 
-describe('EuiCheckableCard', () => {
+describe('OuiCheckableCard', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCheckableCard {...requiredProps} {...checkablePanelRequiredProps} />
+      <OuiCheckableCard {...requiredProps} {...checkablePanelRequiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -40,7 +51,7 @@ describe('EuiCheckableCard', () => {
 
   test('renders panel props', () => {
     const component = render(
-      <EuiCheckableCard
+      <OuiCheckableCard
         hasBorder={false}
         hasShadow={true}
         {...checkablePanelRequiredProps}
@@ -52,7 +63,7 @@ describe('EuiCheckableCard', () => {
 
   test('renders disabled', () => {
     const component = render(
-      <EuiCheckableCard disabled={true} {...checkablePanelRequiredProps} />
+      <OuiCheckableCard disabled={true} {...checkablePanelRequiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -60,9 +71,9 @@ describe('EuiCheckableCard', () => {
 
   test('renders children', () => {
     const component = render(
-      <EuiCheckableCard {...checkablePanelRequiredProps}>
+      <OuiCheckableCard {...checkablePanelRequiredProps}>
         Child
-      </EuiCheckableCard>
+      </OuiCheckableCard>
     );
 
     expect(component).toMatchSnapshot();
@@ -70,7 +81,7 @@ describe('EuiCheckableCard', () => {
 
   test('renders a checkbox when specified', () => {
     const component = render(
-      <EuiCheckableCard
+      <OuiCheckableCard
         {...requiredProps}
         {...checkablePanelRequiredProps}
         checkableType="checkbox"

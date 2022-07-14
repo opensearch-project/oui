@@ -1,31 +1,42 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * The List Group component provides neatly styled lists containing plain text
  * or links. The outer container can be bordered, with padding, or borderless
  * with links flush to the sides.
  */
 
-.euiListGroup {
-  &.euiListGroup-flush {
+.ouiListGroup {
+  &.ouiListGroup-flush {
     padding: 0;
     border: none;
   }
 
-  &.euiListGroup-bordered {
-    border-radius: $euiBorderRadius;
-    border: $euiBorderThin;
+  &.ouiListGroup-bordered {
+    border-radius: $ouiBorderRadius;
+    border: $ouiBorderThin;
   }
 }
 
-.euiListGroup-maxWidthDefault {
-  max-width: $euiFormMaxWidth;
+.ouiListGroup-maxWidthDefault {
+  max-width: $ouiFormMaxWidth;
 }
 
 // Gutter Sizes
-@each $gutterName, $gutterSize in $euiListGroupGutterTypes {
-  .euiListGroup--#{$gutterName} {
+@each $gutterName, $gutterSize in $ouiListGroupGutterTypes {
+  .ouiListGroup--#{$gutterName} {
     padding: $gutterSize;
 
-    .euiListGroupItem:not(:first-of-type) {
+    .ouiListGroupItem:not(:first-of-type) {
       margin-top: $gutterSize;
     }
   }

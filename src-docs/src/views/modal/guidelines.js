@@ -1,97 +1,108 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { GuideRule, GuideRuleExample, GuideRuleTitle } from '../../components';
 
 import {
-  EuiButton,
-  EuiText,
-  EuiTitle,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPanel,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiButtonEmpty,
-  EuiFormRow,
-  EuiFieldText,
-  EuiTextArea,
-  EuiCard,
-  EuiHorizontalRule,
+  OuiButton,
+  OuiText,
+  OuiTitle,
+  OuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiPanel,
+  OuiModalBody,
+  OuiModalFooter,
+  OuiModalHeader,
+  OuiModalHeaderTitle,
+  OuiButtonEmpty,
+  OuiFormRow,
+  OuiFieldText,
+  OuiTextArea,
+  OuiCard,
+  OuiHorizontalRule,
 } from '../../../../src/components';
 
 export default () => (
   <>
-    <EuiText grow={false}>
+    <OuiText grow={false}>
       <p>A modal says “pay attention to me and nothing else.”</p>
-    </EuiText>
+    </OuiText>
 
-    <EuiSpacer size="xxl" />
+    <OuiSpacer size="xxl" />
 
-    <EuiPanel
+    <OuiPanel
       color="subdued"
       paddingSize="l"
       hasShadow={false}
       style={{ justifyContent: 'center', display: 'flex' }}>
-      <EuiPanel style={{ maxWidth: 520 }} paddingSize="none">
-        <EuiModalHeader>
-          <EuiModalHeaderTitle>
+      <OuiPanel style={{ maxWidth: 520 }} paddingSize="none">
+        <OuiModalHeader>
+          <OuiModalHeaderTitle>
             A modal title should be one line
-          </EuiModalHeaderTitle>
-        </EuiModalHeader>
-        <EuiModalBody>
-          <EuiText>
+          </OuiModalHeaderTitle>
+        </OuiModalHeader>
+        <OuiModalBody>
+          <OuiText>
             <p>
               The modal body will automatically scroll if the content gets too
               tall. Try to keep this from happening by keeping your content
               short and to the point.
             </p>
-          </EuiText>
-        </EuiModalBody>
+          </OuiText>
+        </OuiModalBody>
 
-        <EuiModalFooter>
-          <EuiButtonEmpty>Secondary action</EuiButtonEmpty>
+        <OuiModalFooter>
+          <OuiButtonEmpty>Secondary action</OuiButtonEmpty>
 
-          <EuiButton fill>Primary action</EuiButton>
-        </EuiModalFooter>
-      </EuiPanel>
-    </EuiPanel>
+          <OuiButton fill>Primary action</OuiButton>
+        </OuiModalFooter>
+      </OuiPanel>
+    </OuiPanel>
 
-    <EuiSpacer size="xxl" />
+    <OuiSpacer size="xxl" />
 
-    <EuiFlexGroup wrap={true}>
-      <EuiFlexItem>
-        <EuiCard
+    <OuiFlexGroup wrap={true}>
+      <OuiFlexItem>
+        <OuiCard
           titleSize="xs"
           layout="horizontal"
           display="plain"
           title="The header sets the context"
           description="Short and sentence-case, the header should indicate what the modal is about."
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiCard
           titleSize="xs"
           layout="horizontal"
           display="plain"
           title="The body is for a single task"
           description="This task should not require a lot of explanation or user interaction."
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiCard
           titleSize="xs"
           layout="horizontal"
           display="plain"
           title="Buttons are right-aligned"
           description="The primary action is a filled button, and the secondary action is a link button. Labels should use strong action verbs."
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiSpacer size="xl" />
+    <OuiSpacer size="xl" />
 
     <GuideRuleTitle>Use a modal to silo a single action</GuideRuleTitle>
 
@@ -105,68 +116,68 @@ export default () => (
         type="do"
         text="A save action is a good use case for a modal. The
         meaning is clear and the content is simple.">
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Save dashboard</EuiModalHeaderTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiFormRow label="Name">
-              <EuiFieldText />
-            </EuiFormRow>
-            <EuiFormRow label="Description">
-              <EuiTextArea />
-            </EuiFormRow>
-          </EuiModalBody>
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>Save dashboard</OuiModalHeaderTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiFormRow label="Name">
+              <OuiFieldText />
+            </OuiFormRow>
+            <OuiFormRow label="Description">
+              <OuiTextArea />
+            </OuiFormRow>
+          </OuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty>Cancel</EuiButtonEmpty>
+          <OuiModalFooter>
+            <OuiButtonEmpty>Cancel</OuiButtonEmpty>
 
-            <EuiButton fill>Save</EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+            <OuiButton fill>Save</OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Modals aren't the best design solution for multiple steps or complex user input.
         An in-page form is more appropriate.">
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Add a team member</EuiModalHeaderTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiTitle size="s">
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>Add a team member</OuiModalHeaderTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiTitle size="s">
               <h3>Step 1 of 3: the basics</h3>
-            </EuiTitle>
-            <EuiSpacer />
-            <EuiFormRow label="Name">
-              <EuiFieldText />
-            </EuiFormRow>
-            <EuiFormRow label="Email">
-              <EuiFieldText />
-            </EuiFormRow>
-          </EuiModalBody>
+            </OuiTitle>
+            <OuiSpacer />
+            <OuiFormRow label="Name">
+              <OuiFieldText />
+            </OuiFormRow>
+            <OuiFormRow label="Email">
+              <OuiFieldText />
+            </OuiFormRow>
+          </OuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty>Cancel</EuiButtonEmpty>
+          <OuiModalFooter>
+            <OuiButtonEmpty>Cancel</OuiButtonEmpty>
 
-            <EuiButton fill>Continue to step 2</EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+            <OuiButton fill>Continue to step 2</OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
     </GuideRule>
 
-    <EuiSpacer size="xl" />
+    <OuiSpacer size="xl" />
 
-    <EuiHorizontalRule margin="xl" />
+    <OuiHorizontalRule margin="xl" />
 
-    <EuiFlexGroup wrap={true}>
-      <EuiFlexItem>
-        <EuiCard
+    <OuiFlexGroup wrap={true}>
+      <OuiFlexItem>
+        <OuiCard
           titleSize="xs"
           layout="horizontal"
           display="plain"
@@ -174,9 +185,9 @@ export default () => (
           description="Let a user action, such as a button click,
           open a modal. Don't open a modal from a toolbar action&mdash;users don't expect it."
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiCard
           titleSize="xs"
           layout="horizontal"
           display="plain"
@@ -185,9 +196,9 @@ export default () => (
           a lot of detail or a long list of items, consider a different solution, such as a
           form or a table."
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiCard
           titleSize="xs"
           layout="horizontal"
           display="plain"
@@ -195,8 +206,8 @@ export default () => (
           description="Opening a modal on top of a modal might mean your workflow is too complex.
           Instead, use a component that supports multiple steps, such as a form or steps."
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
     <GuideRuleTitle>
       Use a modal to ask users to confirm an action
@@ -204,7 +215,7 @@ export default () => (
 
     <GuideRule
       heading=""
-      description="The most common use of modals in the EUI Framework is
+      description="The most common use of modals in the OUI Framework is
       to confirm a user action.
       This modal should start with a question, give
       users enough information to make a decision,
@@ -213,26 +224,26 @@ export default () => (
         type="do"
         text="Use a modal for confirmation when the user might lose data. For the body
         text, use one to two short sentences that explain the consequences.">
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>
               Save changes before leaving?
-            </EuiModalHeaderTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiText>
+            </OuiModalHeaderTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiText>
               <p>If you don&apos;t save, your changes will be lost.</p>
-            </EuiText>
-          </EuiModalBody>
+            </OuiText>
+          </OuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty>Leave anyway</EuiButtonEmpty>
+          <OuiModalFooter>
+            <OuiButtonEmpty>Leave anyway</OuiButtonEmpty>
 
-            <EuiButton fill>Save changes</EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+            <OuiButton fill>Save changes</OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
 
       <GuideRuleExample
@@ -240,22 +251,22 @@ export default () => (
         text=" Confirmations aren't good for messages.
           Toasts are best for success messages because they are less disruptive.
           Error and warning messages often appear directly on the page.">
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Great!</EuiModalHeaderTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiText>
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>Great!</OuiModalHeaderTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiText>
               <p>Your dashboard has been successfully created.</p>
-            </EuiText>
-          </EuiModalBody>
+            </OuiText>
+          </OuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButton fill>Close</EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+          <OuiModalFooter>
+            <OuiButton fill>Close</OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
     </GuideRule>
 
@@ -265,49 +276,49 @@ export default () => (
       <GuideRuleExample
         type="do"
         text="Use the same action verbs in the header and button text.">
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Refresh field list?</EuiModalHeaderTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiText>
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>Refresh field list?</OuiModalHeaderTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiText>
               <p>This action resets the popularity counter of each field.</p>
-            </EuiText>
-          </EuiModalBody>
+            </OuiText>
+          </OuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty>Cancel</EuiButtonEmpty>
+          <OuiModalFooter>
+            <OuiButtonEmpty>Cancel</OuiButtonEmpty>
 
-            <EuiButton fill>Refresh</EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+            <OuiButton fill>Refresh</OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text='Don&apos;t use a vague header such as "Are you sure?" or the button labels "Yes" and "No."'>
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>
               Are you sure you want to refresh this field list?
-            </EuiModalHeaderTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiText>
+            </OuiModalHeaderTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiText>
               <p>This action resets the popularity counter of each field.</p>
-            </EuiText>
-          </EuiModalBody>
+            </OuiText>
+          </OuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty>No</EuiButtonEmpty>
+          <OuiModalFooter>
+            <OuiButtonEmpty>No</OuiButtonEmpty>
 
-            <EuiButton fill>Yes</EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+            <OuiButton fill>Yes</OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
     </GuideRule>
 
@@ -320,53 +331,53 @@ export default () => (
         type="do"
         text="Asking users to delete a single item should include the item name in the title, if possible.
         Use single quotes around the name if it helps clarify meaning.">
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>
               Delete pipeline &apos;MyPipeline&apos;?
-            </EuiModalHeaderTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiText>
+            </OuiModalHeaderTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiText>
               <p>You can&apos;t recover deleted data.</p>
-            </EuiText>
-          </EuiModalBody>
+            </OuiText>
+          </OuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty>Cancel</EuiButtonEmpty>
+          <OuiModalFooter>
+            <OuiButtonEmpty>Cancel</OuiButtonEmpty>
 
-            <EuiButton color="danger" fill>
+            <OuiButton color="danger" fill>
               Delete
-            </EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+            </OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="do"
         text="For bulk actions, include the number of items in the title.">
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Delete 6 pipelines?</EuiModalHeaderTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiText>
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>Delete 6 pipelines?</OuiModalHeaderTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiText>
               <p>You can&apos;t recover deleted data.</p>
-            </EuiText>
-          </EuiModalBody>
+            </OuiText>
+          </OuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty>Cancel</EuiButtonEmpty>
+          <OuiModalFooter>
+            <OuiButtonEmpty>Cancel</OuiButtonEmpty>
 
-            <EuiButton color="danger" fill>
+            <OuiButton color="danger" fill>
               Delete
-            </EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+            </OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
     </GuideRule>
 
@@ -377,46 +388,46 @@ export default () => (
         type="do"
         text="Here the header and body are enough.
         The modal asks the user whether to remove an index pattern &mdash; data won't be lost.">
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Remove index pattern?</EuiModalHeaderTitle>
-          </EuiModalHeader>
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>Remove index pattern?</OuiModalHeaderTitle>
+          </OuiModalHeader>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty>Cancel</EuiButtonEmpty>
+          <OuiModalFooter>
+            <OuiButtonEmpty>Cancel</OuiButtonEmpty>
 
-            <EuiButton fill color="danger">
+            <OuiButton fill color="danger">
               Remove
-            </EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+            </OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
 
       <GuideRuleExample
         type="dont"
         text="Don't write body text that simply repeats the title. It doesn't add value.">
-        <EuiPanel
+        <OuiPanel
           paddingSize="none"
           style={{ maxWidth: 400, transform: 'scale(.75)' }}>
-          <EuiModalHeader>
-            <EuiModalHeaderTitle>Remove index pattern?</EuiModalHeaderTitle>
-          </EuiModalHeader>
-          <EuiModalBody>
-            <EuiText>
+          <OuiModalHeader>
+            <OuiModalHeaderTitle>Remove index pattern?</OuiModalHeaderTitle>
+          </OuiModalHeader>
+          <OuiModalBody>
+            <OuiText>
               <p>This action removes your index pattern.</p>
-            </EuiText>
-          </EuiModalBody>
+            </OuiText>
+          </OuiModalBody>
 
-          <EuiModalFooter>
-            <EuiButtonEmpty>Cancel</EuiButtonEmpty>
+          <OuiModalFooter>
+            <OuiButtonEmpty>Cancel</OuiButtonEmpty>
 
-            <EuiButton color="danger" fill>
+            <OuiButton color="danger" fill>
               Remove
-            </EuiButton>
-          </EuiModalFooter>
-        </EuiPanel>
+            </OuiButton>
+          </OuiModalFooter>
+        </OuiPanel>
       </GuideRuleExample>
     </GuideRule>
   </>

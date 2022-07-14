@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // This file allows multi-line selectors to make it more readable
 // sass-lint:disable single-line-per-selector
 
@@ -30,7 +41,7 @@ time, mark, audio, video {
 }
 
 code, pre, kbd, samp {
-  font-family: $euiCodeFontFamily;
+  font-family: $ouiCodeFontFamily;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -40,7 +51,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 input, textarea, select, button {
-  font-family: $euiFontFamily;
+  font-family: $ouiFontFamily;
 }
 
 em {
@@ -48,7 +59,7 @@ em {
 }
 
 strong {
-  font-weight: $euiFontWeightBold;
+  font-weight: $ouiFontWeightBold;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -58,15 +69,15 @@ footer, header, hgroup, menu, nav, section {
 }
 
 html {
-  @include euiFont;
-  font-size: $euiFontSize;
-  color: $euiTextColor;
+  @include ouiFont;
+  font-size: $ouiFontSize;
+  color: $ouiTextColor;
   height: 100%;
-  background-color: $euiPageBackgroundColor;
+  background-color: $ouiPageBackgroundColor;
 }
 
 body {
-  line-height: $euiBodyLineHeight;
+  line-height: $ouiBodyLineHeight;
 }
 
 *:focus {
@@ -85,7 +96,7 @@ body {
 
 a {
   text-decoration: none;
-  color: $euiColorPrimary;
+  color: $ouiColorPrimary;
 
   &:hover {
     text-decoration: none;

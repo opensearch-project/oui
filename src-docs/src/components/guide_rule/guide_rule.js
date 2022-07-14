@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { EuiFlexGroup } from '../../../../src/components';
+import { OuiFlexGroup } from '../../../../src/components';
 
 import { GuideRuleDescription } from './guide_rule_description';
 
@@ -33,9 +44,9 @@ export const GuideRule = ({
     <div className={classes} {...rest}>
       {descriptionNode}
 
-      <EuiFlexGroup className="guideRule__exampleRow" gutterSize="xl" wrap>
+      <OuiFlexGroup className="guideRule__exampleRow" gutterSize="xl" wrap>
         {children}
-      </EuiFlexGroup>
+      </OuiFlexGroup>
     </div>
   );
 };

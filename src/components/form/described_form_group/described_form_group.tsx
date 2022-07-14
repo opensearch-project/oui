@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,54 +34,54 @@ import classNames from 'classnames';
 
 import { CommonProps, keysOf, PropsOf } from '../../common';
 
-import { EuiTitle, EuiTitleSize, EuiTitleProps } from '../../title';
-import { EuiText } from '../../text';
-import { EuiFlexGroup, EuiFlexItem, EuiFlexGroupGutterSize } from '../../flex';
+import { OuiTitle, OuiTitleSize, OuiTitleProps } from '../../title';
+import { OuiText } from '../../text';
+import { OuiFlexGroup, OuiFlexItem, OuiFlexGroupGutterSize } from '../../flex';
 
 const paddingSizeToClassNameMap = {
-  xxxs: 'euiDescribedFormGroup__fieldPadding--xxxsmall',
-  xxs: 'euiDescribedFormGroup__fieldPadding--xxsmall',
-  xs: 'euiDescribedFormGroup__fieldPadding--xsmall',
-  s: 'euiDescribedFormGroup__fieldPadding--small',
-  m: 'euiDescribedFormGroup__fieldPadding--medium',
-  l: 'euiDescribedFormGroup__fieldPadding--large',
+  xxxs: 'ouiDescribedFormGroup__fieldPadding--xxxsmall',
+  xxs: 'ouiDescribedFormGroup__fieldPadding--xxsmall',
+  xs: 'ouiDescribedFormGroup__fieldPadding--xsmall',
+  s: 'ouiDescribedFormGroup__fieldPadding--small',
+  m: 'ouiDescribedFormGroup__fieldPadding--medium',
+  l: 'ouiDescribedFormGroup__fieldPadding--large',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
 
-export type EuiDescribedFormGroupPaddingSize = keyof typeof paddingSizeToClassNameMap;
+export type OuiDescribedFormGroupPaddingSize = keyof typeof paddingSizeToClassNameMap;
 
-export type EuiDescribedFormGroupProps = CommonProps &
+export type OuiDescribedFormGroupProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> & {
     /**
-     * One or more `EuiFormRow`s
+     * One or more `OuiFormRow`s
      */
     children?: ReactNode;
     /**
-     * Passed to `EuiFlexGroup`
+     * Passed to `OuiFlexGroup`
      */
-    gutterSize?: EuiFlexGroupGutterSize;
+    gutterSize?: OuiFlexGroupGutterSize;
     fullWidth?: boolean;
     /**
      * For better accessibility, it's recommended the use of HTML headings
      */
-    title: EuiTitleProps['children'];
-    titleSize?: EuiTitleSize;
+    title: OuiTitleProps['children'];
+    titleSize?: OuiTitleSize;
     /**
-     * Added as a child of `EuiText`
+     * Added as a child of `OuiText`
      */
     description?: ReactNode;
     /**
-     * For customizing the description container. Extended from `EuiFlexItem`
+     * For customizing the description container. Extended from `OuiFlexItem`
      */
-    descriptionFlexItemProps?: PropsOf<typeof EuiFlexItem>;
+    descriptionFlexItemProps?: PropsOf<typeof OuiFlexItem>;
     /**
-     * For customizing the field container. Extended from `EuiFlexItem`
+     * For customizing the field container. Extended from `OuiFlexItem`
      */
-    fieldFlexItemProps?: PropsOf<typeof EuiFlexItem>;
+    fieldFlexItemProps?: PropsOf<typeof OuiFlexItem>;
   };
 
-export const EuiDescribedFormGroup: FunctionComponent<EuiDescribedFormGroupProps> = ({
+export const OuiDescribedFormGroup: FunctionComponent<OuiDescribedFormGroupProps> = ({
   children,
   className,
   gutterSize = 'l',
@@ -83,15 +94,15 @@ export const EuiDescribedFormGroup: FunctionComponent<EuiDescribedFormGroupProps
   ...rest
 }) => {
   const classes = classNames(
-    'euiDescribedFormGroup',
+    'ouiDescribedFormGroup',
     {
-      'euiDescribedFormGroup--fullWidth': fullWidth,
+      'ouiDescribedFormGroup--fullWidth': fullWidth,
     },
     className
   );
 
   const fieldClasses = classNames(
-    'euiDescribedFormGroup__fields',
+    'ouiDescribedFormGroup__fields',
     paddingSizeToClassNameMap[titleSize],
     fieldFlexItemProps && fieldFlexItemProps.className
   );
@@ -100,30 +111,30 @@ export const EuiDescribedFormGroup: FunctionComponent<EuiDescribedFormGroupProps
 
   if (description) {
     renderedDescription = (
-      <EuiText
+      <OuiText
         size="s"
         color="subdued"
-        className="euiDescribedFormGroup__description">
+        className="ouiDescribedFormGroup__description">
         {description}
-      </EuiText>
+      </OuiText>
     );
   }
 
   return (
     <div role="group" className={classes} {...rest}>
-      <EuiFlexGroup gutterSize={gutterSize}>
-        <EuiFlexItem {...descriptionFlexItemProps}>
-          <EuiTitle size={titleSize} className="euiDescribedFormGroup__title">
+      <OuiFlexGroup gutterSize={gutterSize}>
+        <OuiFlexItem {...descriptionFlexItemProps}>
+          <OuiTitle size={titleSize} className="ouiDescribedFormGroup__title">
             {title}
-          </EuiTitle>
+          </OuiTitle>
 
           {renderedDescription}
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem {...fieldFlexItemProps} className={fieldClasses}>
+        <OuiFlexItem {...fieldFlexItemProps} className={fieldClasses}>
           {children}
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </div>
   );
 };

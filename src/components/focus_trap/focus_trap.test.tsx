@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,16 +33,16 @@ import { render, mount } from 'enzyme';
 
 import { findTestSubject, takeMountedSnapshot } from '../../test';
 
-import { EuiEvent } from '../outside_click_detector/outside_click_detector';
-import { EuiFocusTrap } from './focus_trap';
-import { EuiPortal } from '../portal';
+import { OuiEvent } from '../outside_click_detector/outside_click_detector';
+import { OuiFocusTrap } from './focus_trap';
+import { OuiPortal } from '../portal';
 
-describe('EuiFocusTrap', () => {
+describe('OuiFocusTrap', () => {
   test('is rendered', () => {
     const component = mount(
-      <EuiFocusTrap>
+      <OuiFocusTrap>
         <div />
-      </EuiFocusTrap>
+      </OuiFocusTrap>
     );
 
     expect(
@@ -41,9 +52,9 @@ describe('EuiFocusTrap', () => {
 
   test('can be disabled', () => {
     const component = render(
-      <EuiFocusTrap disabled>
+      <OuiFocusTrap disabled>
         <div />
-      </EuiFocusTrap>
+      </OuiFocusTrap>
     );
 
     expect(component).toMatchSnapshot();
@@ -51,9 +62,9 @@ describe('EuiFocusTrap', () => {
 
   test('accepts className and style', () => {
     const component = render(
-      <EuiFocusTrap className="testing" style={{ height: '100%' }}>
+      <OuiFocusTrap className="testing" style={{ height: '100%' }}>
         <div />
-      </EuiFocusTrap>
+      </OuiFocusTrap>
     );
 
     expect(component).toMatchSnapshot();
@@ -65,12 +76,12 @@ describe('EuiFocusTrap', () => {
         const component = mount(
           <div>
             <input data-test-subj="outside" />
-            <EuiFocusTrap>
+            <OuiFocusTrap>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </OuiFocusTrap>
           </div>
         );
 
@@ -83,12 +94,12 @@ describe('EuiFocusTrap', () => {
         mount(
           <div>
             <input data-test-subj="outside" />
-            <EuiFocusTrap autoFocus={false}>
+            <OuiFocusTrap autoFocus={false}>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </OuiFocusTrap>
           </div>
         );
 
@@ -99,12 +110,12 @@ describe('EuiFocusTrap', () => {
         const component = mount(
           <div>
             <input data-test-subj="outside" />
-            <EuiFocusTrap>
+            <OuiFocusTrap>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-autofocus data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </OuiFocusTrap>
           </div>
         );
 
@@ -127,16 +138,16 @@ describe('EuiFocusTrap', () => {
       const triggerDocumentMouseDown: EventHandler<any> = (
         e: React.MouseEvent
       ) => {
-        const event = new Event('mousedown') as EuiEvent;
-        event.euiGeneratedBy = ((e.nativeEvent as unknown) as EuiEvent).euiGeneratedBy;
+        const event = new Event('mousedown') as OuiEvent;
+        event.ouiGeneratedBy = ((e.nativeEvent as unknown) as OuiEvent).ouiGeneratedBy;
         document.dispatchEvent(event);
       };
 
       const triggerDocumentMouseUp: EventHandler<any> = (
         e: React.MouseEvent
       ) => {
-        const event = new Event('mousedown') as EuiEvent;
-        event.euiGeneratedBy = ((e.nativeEvent as unknown) as EuiEvent).euiGeneratedBy;
+        const event = new Event('mousedown') as OuiEvent;
+        event.ouiGeneratedBy = ((e.nativeEvent as unknown) as OuiEvent).ouiGeneratedBy;
         document.dispatchEvent(event);
       };
 
@@ -145,12 +156,12 @@ describe('EuiFocusTrap', () => {
           <div
             onMouseDown={triggerDocumentMouseDown}
             onMouseUp={triggerDocumentMouseUp}>
-            <EuiFocusTrap>
+            <OuiFocusTrap>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </OuiFocusTrap>
             <button data-test-subj="outside" />
           </div>
         );
@@ -175,12 +186,12 @@ describe('EuiFocusTrap', () => {
           <div
             onMouseDown={triggerDocumentMouseDown}
             onMouseUp={triggerDocumentMouseUp}>
-            <EuiFocusTrap clickOutsideDisables>
+            <OuiFocusTrap clickOutsideDisables>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </OuiFocusTrap>
             <button data-test-subj="outside" />
           </div>
         );
@@ -201,15 +212,15 @@ describe('EuiFocusTrap', () => {
           <div
             onMouseDown={triggerDocumentMouseDown}
             onMouseUp={triggerDocumentMouseUp}>
-            <EuiFocusTrap clickOutsideDisables>
+            <OuiFocusTrap clickOutsideDisables>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
-                <EuiPortal>
+                <OuiPortal>
                   <input data-test-subj="input3" />
-                </EuiPortal>
+                </OuiPortal>
               </div>
-            </EuiFocusTrap>
+            </OuiFocusTrap>
             <button data-test-subj="outside" />
           </div>
         );
@@ -230,12 +241,12 @@ describe('EuiFocusTrap', () => {
           <div
             onMouseDown={triggerDocumentMouseDown}
             onMouseUp={triggerDocumentMouseUp}>
-            <EuiFocusTrap clickOutsideDisables>
+            <OuiFocusTrap clickOutsideDisables>
               <div data-test-subj="container">
                 <input data-test-subj="input" />
                 <input data-test-subj="input2" />
               </div>
-            </EuiFocusTrap>
+            </OuiFocusTrap>
             <button data-test-subj="outside" />
           </div>
         );

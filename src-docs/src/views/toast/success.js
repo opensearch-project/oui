@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiLink,
-  EuiToast,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButton,
+  OuiLink,
+  OuiToast,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiToast
+  <OuiToast
     title="Created report for dashboard 'Tuba Sales by Region'"
     color="success"
     iconType="check">
@@ -22,13 +33,13 @@ export default () => (
 
     <p>
       And some other stuff on another line, just for kicks. And{' '}
-      <EuiLink href="#">here&rsquo;s a link</EuiLink>.
+      <OuiLink href="#">here&rsquo;s a link</OuiLink>.
     </p>
 
-    <EuiFlexGroup justifyContent="flexEnd" gutterSize="s">
-      <EuiFlexItem grow={false}>
-        <EuiButton size="s">Download report</EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
-  </EuiToast>
+    <OuiFlexGroup justifyContent="flexEnd" gutterSize="s">
+      <OuiFlexItem grow={false}>
+        <OuiButton size="s">Download report</OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+  </OuiToast>
 );

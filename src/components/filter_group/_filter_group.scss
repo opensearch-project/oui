@@ -1,59 +1,70 @@
-.euiFilterGroup {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFilterGroup {
   display: inline-flex;
   max-width: 100%;
-  border-right: 1px solid $euiFormBorderColor;
-  box-shadow: 0 1px 2px -1px transparentize($euiShadowColor, .8), 0 3px 3px -2px transparentize($euiShadowColor, .8);
+  border-right: 1px solid $ouiFormBorderColor;
+  box-shadow: 0 1px 2px -1px transparentize($ouiShadowColor, .8), 0 3px 3px -2px transparentize($ouiShadowColor, .8);
   overflow: hidden;
 
   > * {
     flex: 1 1 auto;
-    min-width: $euiSize * 3;
+    min-width: $ouiSize * 3;
   }
 
-  > .euiFilterButton--noGrow  {
+  > .ouiFilterButton--noGrow  {
     flex-grow: 0;
   }
 
-  > .euiFilterButton-hasNotification {
-    min-width: $euiSize * 6;
+  > .ouiFilterButton-hasNotification {
+    min-width: $ouiSize * 6;
   }
 
-  > .euiFilterButton--hasIcon {
-    min-width: $euiSize * 8;
+  > .ouiFilterButton--hasIcon {
+    min-width: $ouiSize * 8;
   }
 
   // Force popover anchors to expand for now
-  .euiPopover__anchor {
+  .ouiPopover__anchor {
     display: block;
 
-    .euiFilterButton {
+    .ouiFilterButton {
       width: 100%;
     }
   }
 }
 
-.euiFilterGroup--fullWidth {
+.ouiFilterGroup--fullWidth {
   display: flex;
 }
 
 // A fixed width is required in IE11 because of the shift in widths that can be caused
 // by the loading animation that precedes the results.
-.euiFilterGroup__popoverPanel {
-  width: $euiSize * 18;
+.ouiFilterGroup__popoverPanel {
+  width: $ouiSize * 18;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiFilterGroup {
+@include ouiBreakpoint('xs', 's') {
+  .ouiFilterGroup {
     flex-wrap: wrap;
   }
 }
 
-@include euiBreakpoint('xs') {
+@include ouiBreakpoint('xs') {
   // Force all tiny screens to take up the entire width
-  .euiFilterGroup {
+  .ouiFilterGroup {
     display: flex;
 
-    .euiFilterButton {
+    .ouiFilterButton {
       // sass-lint:disable-block no-important
       flex-grow: 1 !important;
     }

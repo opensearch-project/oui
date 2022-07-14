@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Converting a normal hex color to RBG
 @function hexToRGB($color) {
   @return 'rgb%28#{round(red($color))}, #{round(green($color))}, #{round(blue($color))}%29';
@@ -5,18 +16,18 @@
 
 // Mixes a provided color with white.
 @function tint($color, $percent) {
-  @return mix($euiColorGhost, $color, $percent);
+  @return mix($ouiColorGhost, $color, $percent);
 }
 
 // Mixes a provided color with black.
 @function shade($color, $percent) {
-  @return mix($euiColorInk, $color, $percent);
+  @return mix($ouiColorInk, $color, $percent);
 }
 
 // For theming. Checks the text color and tells us whether it's light or dark.
 // Based on that we either tint (add white) or shade (add black).
 @function tintOrShade($color, $tint, $shade) {
-  @if (lightness($euiTextColor) > 50) {
+  @if (lightness($ouiTextColor) > 50) {
     @return shade($color, $shade);
   } @else {
     @return tint($color, $tint);
@@ -25,7 +36,7 @@
 
 // The reverse of the above
 @function shadeOrTint($color, $shade, $tint) {
-  @if (lightness($euiTextColor) < 50) {
+  @if (lightness($ouiTextColor) < 50) {
     @return shade($color, $shade);
   } @else {
     @return tint($color, $tint);
@@ -35,7 +46,7 @@
 // Similar to above, but uses the light or dark color based
 // on whether it's the light or dark theme
 @function lightOrDarkTheme($lightColor, $darkColor) {
-  @if (lightness($euiTextColor) < 50) {
+  @if (lightness($ouiTextColor) < 50) {
     @return $lightColor;
   } @else {
     @return $darkColor;
@@ -89,8 +100,8 @@
 
 // ex: makeContrastColor($lightPink, #FFF) would continually shade the pink until
 //     it had higher than 4.5 contrast on a white background.
-$euiContrastRatioText: 4.5;
-@function makeHighContrastColor($foreground, $background: $euiPageBackgroundColor, $ratio: $euiContrastRatioText) {
+$ouiContrastRatioText: 4.5;
+@function makeHighContrastColor($foreground, $background: $ouiPageBackgroundColor, $ratio: $ouiContrastRatioText) {
   $contrast: contrastRatio($foreground, $background);
 
   // Determine the lightness factor of the background color first to
@@ -126,13 +137,13 @@ $euiContrastRatioText: 4.5;
 // Therefore, we can reuse the `makeHighContrastColor()` function but only attain a min contrast of 3.0.
 // It is still recommended to use `makeHighContrastColor()` to attain a 4.5:1 ratio if the graphic is small or thinly stroked.
 // https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Informational_Graphic_Contrast_(Minimum)
-$euiContrastRatioGraphic: 3;
-@function makeGraphicContrastColor($color, $background: $euiPageBackgroundColor) {
-  @return makeHighContrastColor($color, $background, $euiContrastRatioGraphic);
+$ouiContrastRatioGraphic: 3;
+@function makeGraphicContrastColor($color, $background: $ouiPageBackgroundColor) {
+  @return makeHighContrastColor($color, $background, $ouiContrastRatioGraphic);
 }
 
 // Disabled content only needs a contrast of at least 2 because there is no interaction available
-$euiContrastRatioDisabled: 2;
-@function makeDisabledContrastColor($color, $background: $euiPageBackgroundColor) {
-  @return makeHighContrastColor($color, $background, $euiContrastRatioDisabled);
+$ouiContrastRatioDisabled: 2;
+@function makeDisabledContrastColor($color, $background: $ouiPageBackgroundColor) {
+  @return makeHighContrastColor($color, $background, $ouiContrastRatioDisabled);
 }

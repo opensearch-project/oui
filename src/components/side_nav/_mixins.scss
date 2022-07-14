@@ -1,7 +1,18 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // sass-lint:disable indentation no-color-keywords no-color-literals
 
-@mixin euiSideNavEmbellish {
+@mixin ouiSideNavEmbellish {
   background:
-    linear-gradient(160deg, $euiSideNavEmphasizedBackgroundColor 0, $euiSideNavEmphasizedBackgroundColor $euiSizeXL, rgba(red, 0) 0),
-    linear-gradient(175deg, $euiSideNavEmphasizedBackgroundColor 0, $euiSideNavEmphasizedBackgroundColor $euiSize, rgba(red, 0) 0);
+    linear-gradient(160deg, $ouiSideNavEmphasizedBackgroundColor 0, $ouiSideNavEmphasizedBackgroundColor $ouiSizeXL, rgba(red, 0) 0),
+    linear-gradient(175deg, $ouiSideNavEmphasizedBackgroundColor 0, $ouiSideNavEmphasizedBackgroundColor $ouiSize, rgba(red, 0) 0);
 }

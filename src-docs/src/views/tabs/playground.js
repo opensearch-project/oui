@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import {
   propUtilityForPlayground,
   dummyFunction,
 } from '../../services/playground';
-import { EuiTab, EuiTabs } from '../../../../src/components/';
+import { OuiTab, OuiTabs } from '../../../../src/components/';
 import { PropTypes } from 'react-view';
 
 export const tabConfig = () => {
-  const docgenInfo = Array.isArray(EuiTab.__docgenInfo)
-    ? EuiTab.__docgenInfo[0]
-    : EuiTab.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiTab.__docgenInfo)
+    ? OuiTab.__docgenInfo[0]
+    : OuiTab.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onClick = {
@@ -30,14 +41,14 @@ export const tabConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiTab',
+      componentName: 'OuiTab',
       props: propsToUse,
       scope: {
-        EuiTab,
+        OuiTab,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiTab'],
+        '@opensearch-project/oui': {
+          named: ['OuiTab'],
         },
       },
       customProps: {
@@ -48,28 +59,28 @@ export const tabConfig = () => {
 };
 
 export const tabsConfig = () => {
-  const docgenInfo = Array.isArray(EuiTabs.__docgenInfo)
-    ? EuiTabs.__docgenInfo[0]
-    : EuiTabs.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiTabs.__docgenInfo)
+    ? OuiTabs.__docgenInfo[0]
+    : OuiTabs.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
-    value: '<EuiTab>Tab 1</EuiTab><EuiTab isSelected>Tab 2</EuiTab>',
+    value: '<OuiTab>Tab 1</OuiTab><OuiTab isSelected>Tab 2</OuiTab>',
     type: PropTypes.ReactNode,
     hidden: false,
   };
 
   return {
     config: {
-      componentName: 'EuiTabs',
+      componentName: 'OuiTabs',
       props: propsToUse,
       scope: {
-        EuiTabs,
-        EuiTab,
+        OuiTabs,
+        OuiTab,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiTabs', 'EuiTab'],
+        '@opensearch-project/oui': {
+          named: ['OuiTabs', 'OuiTab'],
         },
       },
       customProps: {

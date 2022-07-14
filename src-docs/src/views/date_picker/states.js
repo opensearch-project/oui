@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiDatePicker,
-  EuiSpacer,
-  EuiFormRow,
+  OuiDatePicker,
+  OuiSpacer,
+  OuiFormRow,
 } from '../../../../src/components';
 import { DisplayToggles } from '../form_controls/display_toggles';
 
@@ -23,7 +34,7 @@ export default () => {
     /* DisplayToggles wrapper for Docs only */
     <div>
       <DisplayToggles canCompressed={false}>
-        <EuiDatePicker
+        <OuiDatePicker
           showTimeSelect
           selected={startDate}
           onChange={handleChange}
@@ -31,9 +42,9 @@ export default () => {
         />
       </DisplayToggles>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiDatePicker
+      <OuiDatePicker
         showTimeSelect
         selected={startDate}
         onChange={handleChange}
@@ -41,17 +52,17 @@ export default () => {
         placeholder="Clearable"
       />
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiFormRow label="Form row validation" isInvalid error={errors}>
-        <EuiDatePicker
+      <OuiFormRow label="Form row validation" isInvalid error={errors}>
+        <OuiDatePicker
           showTimeSelect
           isInvalid
           selected={startDate}
           onChange={handleChange}
           placeholder="Example of an error"
         />
-      </EuiFormRow>
+      </OuiFormRow>
     </div>
   );
 };

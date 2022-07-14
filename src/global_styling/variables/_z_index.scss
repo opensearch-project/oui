@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Z-Index
 
 // Remember that z-index is relative to parent and based on the stacking context.
@@ -12,23 +23,23 @@
 
 // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 
-$euiZLevel0: 0;
-$euiZLevel1: 1000;
-$euiZLevel2: 2000;
-$euiZLevel3: 3000;
-$euiZLevel4: 4000;
-$euiZLevel5: 5000;
-$euiZLevel6: 6000;
-$euiZLevel7: 7000;
-$euiZLevel8: 8000;
-$euiZLevel9: 9000;
+$ouiZLevel0: 0;
+$ouiZLevel1: 1000;
+$ouiZLevel2: 2000;
+$ouiZLevel3: 3000;
+$ouiZLevel4: 4000;
+$ouiZLevel5: 5000;
+$ouiZLevel6: 6000;
+$ouiZLevel7: 7000;
+$ouiZLevel8: 8000;
+$ouiZLevel9: 9000;
 
-$euiZToastList: $euiZLevel9;
-$euiZModal: $euiZLevel8;
-$euiZMask: $euiZLevel6;
-$euiZNavigation: $euiZLevel6;
-$euiZContentMenu: $euiZLevel2;
-$euiZHeader: $euiZLevel1;
-$euiZFlyout: $euiZHeader;
-$euiZMaskBelowHeader: $euiZHeader;
-$euiZContent: $euiZLevel0;
+$ouiZToastList: $ouiZLevel9;
+$ouiZModal: $ouiZLevel8;
+$ouiZMask: $ouiZLevel6;
+$ouiZNavigation: $ouiZLevel6;
+$ouiZContentMenu: $ouiZLevel2;
+$ouiZHeader: $ouiZLevel1;
+$ouiZFlyout: $ouiZHeader;
+$ouiZMaskBelowHeader: $ouiZHeader;
+$ouiZContent: $ouiZLevel0;

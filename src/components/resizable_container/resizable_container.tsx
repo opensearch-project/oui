@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -33,23 +44,23 @@ import classNames from 'classnames';
 import { CommonProps } from '../common';
 import { keys } from '../../services';
 import { useResizeObserver } from '../observer/resize_observer';
-import { EuiResizableContainerContextProvider } from './context';
+import { OuiResizableContainerContextProvider } from './context';
 import {
-  EuiResizableButtonProps,
-  euiResizableButtonWithControls,
+  OuiResizableButtonProps,
+  ouiResizableButtonWithControls,
 } from './resizable_button';
 import {
-  EuiResizablePanelProps,
-  euiResizablePanelWithControls,
+  OuiResizablePanelProps,
+  ouiResizablePanelWithControls,
   getModeType,
   ToggleCollapseCallback,
 } from './resizable_panel';
 import { useContainerCallbacks, getPosition } from './helpers';
 import {
-  EuiResizableButtonMouseEvent,
-  EuiResizableButtonKeyDownEvent,
-  EuiResizableContainerState,
-  EuiResizableContainerActions,
+  OuiResizableButtonMouseEvent,
+  OuiResizableButtonKeyDownEvent,
+  OuiResizableContainerState,
+  OuiResizableContainerActions,
 } from './types';
 
 const containerDirections = {
@@ -57,7 +68,7 @@ const containerDirections = {
   horizontal: 'horizontal',
 };
 
-export interface EuiResizableContainerProps
+export interface OuiResizableContainerProps
   extends HTMLAttributes<HTMLDivElement>,
     CommonProps {
   /**
@@ -69,9 +80,9 @@ export interface EuiResizableContainerProps
    * and returns a component tree
    */
   children: (
-    Panel: ComponentType<EuiResizablePanelProps>,
-    Resizer: ComponentType<EuiResizableButtonProps>,
-    actions: Partial<EuiResizableContainerActions>
+    Panel: ComponentType<OuiResizablePanelProps>,
+    Resizer: ComponentType<OuiResizableButtonProps>,
+    actions: Partial<OuiResizableContainerActions>
   ) => ReactNode;
   /**
    * Pure function which accepts an object where keys are IDs of panels, which sizes were changed,
@@ -82,7 +93,7 @@ export interface EuiResizableContainerProps
   style?: CSSProperties;
 }
 
-const initialState: EuiResizableContainerState = {
+const initialState: OuiResizableContainerState = {
   isDragging: false,
   currentResizerPos: -1,
   prevPanelId: null,
@@ -92,7 +103,7 @@ const initialState: EuiResizableContainerState = {
   resizers: {},
 };
 
-export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps> = ({
+export const OuiResizableContainer: FunctionComponent<OuiResizableContainerProps> = ({
   direction = 'horizontal',
   children,
   className,
@@ -104,10 +115,10 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
   const isHorizontal = direction === containerDirections.horizontal;
 
   const classes = classNames(
-    'euiResizableContainer',
+    'ouiResizableContainer',
     {
-      'euiResizableContainer--vertical': !isHorizontal,
-      'euiResizableContainer--horizontal': isHorizontal,
+      'ouiResizableContainer--vertical': !isHorizontal,
+      'ouiResizableContainer--horizontal': isHorizontal,
     },
     className
   );
@@ -134,7 +145,7 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
   }, [initialize, containerSize]);
 
   const onMouseDown = useCallback(
-    (event: EuiResizableButtonMouseEvent) => {
+    (event: OuiResizableButtonMouseEvent) => {
       const currentTarget = event.currentTarget;
       const prevPanel = currentTarget.previousElementSibling;
       const nextPanel = currentTarget.nextElementSibling;
@@ -172,7 +183,7 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
   );
 
   const onKeyDown = useCallback(
-    (event: EuiResizableButtonKeyDownEvent) => {
+    (event: OuiResizableButtonKeyDownEvent) => {
       const { key, currentTarget } = event;
       const shouldResizeHorizontalPanel =
         isHorizontal && (key === keys.ARROW_LEFT || key === keys.ARROW_RIGHT);
@@ -207,8 +218,8 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
   }, [actions]);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const EuiResizableButton = useCallback(
-    euiResizableButtonWithControls({
+  const OuiResizableButton = useCallback(
+    ouiResizableButtonWithControls({
       onKeyDown,
       onMouseDown,
       onTouchStart: onMouseDown,
@@ -224,8 +235,8 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
   );
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const EuiResizablePanel = useCallback(
-    euiResizablePanelWithControls({
+  const OuiResizablePanel = useCallback(
+    ouiResizablePanelWithControls({
       isHorizontal,
       registration: {
         register: actions.registerPanel,
@@ -239,7 +250,7 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
 
   const render = () => {
     const DEFAULT = 'custom';
-    const content = children(EuiResizablePanel, EuiResizableButton, {
+    const content = children(OuiResizablePanel, OuiResizableButton, {
       togglePanel: actions.togglePanel,
     });
     const modes = React.isValidElement(content)
@@ -261,7 +272,7 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
   };
 
   return (
-    <EuiResizableContainerContextProvider
+    <OuiResizableContainerContextProvider
       registry={{
         panels: reducerState.panels,
         resizers: reducerState.resizers,
@@ -277,6 +288,6 @@ export const EuiResizableContainer: FunctionComponent<EuiResizableContainerProps
         {...rest}>
         {render()}
       </div>
-    </EuiResizableContainerContextProvider>
+    </OuiResizableContainerContextProvider>
   );
 };

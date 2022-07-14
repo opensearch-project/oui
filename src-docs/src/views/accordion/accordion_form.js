@@ -1,101 +1,112 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiAccordion,
-  EuiText,
-  EuiTextColor,
-  EuiForm,
-  EuiFormRow,
-  EuiFieldText,
-  EuiFieldPassword,
-  EuiIcon,
-  EuiTextArea,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiTitle,
-  EuiButtonIcon,
+  OuiAccordion,
+  OuiText,
+  OuiTextColor,
+  OuiForm,
+  OuiFormRow,
+  OuiFieldText,
+  OuiFieldPassword,
+  OuiIcon,
+  OuiTextArea,
+  OuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiTitle,
+  OuiButtonIcon,
 } from '../../../../src/components';
 
 const repeatableForm = (
-  <EuiForm component="form">
-    <EuiFlexGroup>
-      <EuiFlexItem>
-        <EuiFormRow label="Username">
-          <EuiFieldText icon="user" placeholder="John" />
-        </EuiFormRow>
-      </EuiFlexItem>
+  <OuiForm component="form">
+    <OuiFlexGroup>
+      <OuiFlexItem>
+        <OuiFormRow label="Username">
+          <OuiFieldText icon="user" placeholder="John" />
+        </OuiFormRow>
+      </OuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiFormRow
+      <OuiFlexItem>
+        <OuiFormRow
           label="Password"
           helpText="Must include one number and one symbol">
-          <EuiFieldPassword icon="lock" />
-        </EuiFormRow>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+          <OuiFieldPassword icon="lock" />
+        </OuiFormRow>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormRow label="Body">
-      <EuiTextArea placeholder="I am a textarea, put some content in me!" />
-    </EuiFormRow>
-  </EuiForm>
+    <OuiFormRow label="Body">
+      <OuiTextArea placeholder="I am a textarea, put some content in me!" />
+    </OuiFormRow>
+  </OuiForm>
 );
 
 const buttonContent = (
   <div>
-    <EuiFlexGroup gutterSize="s" alignItems="center" responsive={false}>
-      <EuiFlexItem grow={false}>
-        <EuiIcon type="logoWebhook" size="m" />
-      </EuiFlexItem>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false}>
+      <OuiFlexItem grow={false}>
+        <OuiIcon type="logoWebhook" size="m" />
+      </OuiFlexItem>
 
-      <EuiFlexItem>
-        <EuiTitle size="xs">
+      <OuiFlexItem>
+        <OuiTitle size="xs">
           <h3>Webhook</h3>
-        </EuiTitle>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiTitle>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiText size="s">
+    <OuiText size="s">
       <p>
-        <EuiTextColor color="subdued">
+        <OuiTextColor color="subdued">
           Will send a POST request to www.example.com/some/path/
-        </EuiTextColor>
+        </OuiTextColor>
       </p>
-    </EuiText>
+    </OuiText>
   </div>
 );
 
 const extraAction = (
-  <EuiButtonIcon
+  <OuiButtonIcon
     iconType="cross"
     color="danger"
-    className="euiAccordionForm__extraAction"
+    className="ouiAccordionForm__extraAction"
     aria-label="Delete"
   />
 );
 
 export default () => (
   <div>
-    <EuiAccordion
+    <OuiAccordion
       id="accordionForm1"
-      className="euiAccordionForm"
-      buttonClassName="euiAccordionForm__button"
+      className="ouiAccordionForm"
+      buttonClassName="ouiAccordionForm__button"
       buttonContent={buttonContent}
       extraAction={extraAction}
       paddingSize="l">
       {repeatableForm}
-    </EuiAccordion>
+    </OuiAccordion>
 
-    <EuiAccordion
+    <OuiAccordion
       id="accordionForm2"
-      className="euiAccordionForm"
-      buttonClassName="euiAccordionForm__button"
+      className="ouiAccordionForm"
+      buttonClassName="ouiAccordionForm__button"
       buttonContent={buttonContent}
       extraAction={extraAction}
       paddingSize="l">
       {repeatableForm}
-    </EuiAccordion>
+    </OuiAccordion>
   </div>
 );

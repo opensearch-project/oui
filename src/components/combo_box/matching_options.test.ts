@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,7 +28,7 @@
  * under the License.
  */
 
-import { EuiComboBoxOptionOption } from './types';
+import { OuiComboBoxOptionOption } from './types';
 import {
   flattenOptionGroups,
   getMatchingOptions,
@@ -102,11 +113,11 @@ describe('getSelectedOptionForSearchValue', () => {
 });
 
 interface GetMatchingOptionsTestCase {
-  expected: EuiComboBoxOptionOption[];
+  expected: OuiComboBoxOptionOption[];
   isPreFiltered: boolean;
-  options: EuiComboBoxOptionOption[];
+  options: OuiComboBoxOptionOption[];
   searchValue: string;
-  selectedOptions: EuiComboBoxOptionOption[];
+  selectedOptions: OuiComboBoxOptionOption[];
   showPrevSelected: boolean;
   sortMatchesBy: string;
 }

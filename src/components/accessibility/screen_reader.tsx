@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +31,7 @@
 import { cloneElement, ReactElement, FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-export interface EuiScreenReaderOnlyProps {
+export interface OuiScreenReaderOnlyProps {
   /**
    * ReactElement to render as this component's content
    */
@@ -32,14 +43,14 @@ export interface EuiScreenReaderOnlyProps {
   showOnFocus?: boolean;
 }
 
-export const EuiScreenReaderOnly: FunctionComponent<EuiScreenReaderOnlyProps> = ({
+export const OuiScreenReaderOnly: FunctionComponent<OuiScreenReaderOnlyProps> = ({
   children,
   showOnFocus,
 }) => {
   const classes = classNames(
     {
-      euiScreenReaderOnly: !showOnFocus,
-      'euiScreenReaderOnly--showOnFocus': showOnFocus,
+      ouiScreenReaderOnly: !showOnFocus,
+      'ouiScreenReaderOnly--showOnFocus': showOnFocus,
     },
     children.props.className
   );

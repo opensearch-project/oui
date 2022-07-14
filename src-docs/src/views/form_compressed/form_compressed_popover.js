@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiFieldText,
-  EuiFormRow,
-  EuiSelect,
-  EuiButton,
-  EuiPopover,
-  EuiButtonGroup,
+  OuiFieldText,
+  OuiFormRow,
+  OuiSelect,
+  OuiButton,
+  OuiPopover,
+  OuiButtonGroup,
 } from '../../../../src/components';
 
 export default () => {
@@ -24,9 +35,9 @@ export default () => {
   };
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <OuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Open form in popover
-    </EuiButton>
+    </OuiButton>
   );
 
   const granularityToggleButtons = [
@@ -45,13 +56,13 @@ export default () => {
   ];
 
   return (
-    <EuiPopover
+    <OuiPopover
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}>
       <div style={{ width: 300 }}>
-        <EuiFormRow label="Button group" display="columnCompressed">
-          <EuiButtonGroup
+        <OuiFormRow label="Button group" display="columnCompressed">
+          <OuiButtonGroup
             legend="Granulariy of zoom levels"
             options={granularityToggleButtons}
             idSelected={granularityIdSelected}
@@ -59,13 +70,13 @@ export default () => {
             buttonSize="compressed"
             isFullWidth
           />
-        </EuiFormRow>
-        <EuiFormRow label="Text field" display="columnCompressed">
-          <EuiFieldText name="first" compressed />
-        </EuiFormRow>
+        </OuiFormRow>
+        <OuiFormRow label="Text field" display="columnCompressed">
+          <OuiFieldText name="first" compressed />
+        </OuiFormRow>
 
-        <EuiFormRow label={'Select'} display="columnCompressed">
-          <EuiSelect
+        <OuiFormRow label={'Select'} display="columnCompressed">
+          <OuiSelect
             options={[
               { value: 'option_one', text: 'Option one' },
               { value: 'option_two', text: 'Option two' },
@@ -73,8 +84,8 @@ export default () => {
             ]}
             compressed
           />
-        </EuiFormRow>
+        </OuiFormRow>
       </div>
-    </EuiPopover>
+    </OuiPopover>
   );
 };

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +32,20 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
-import { EuiIcon, IconColor } from '../icon';
+import { OuiIcon, IconColor } from '../icon';
 
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { OuiFlexGroup, OuiFlexItem } from '../flex';
 
 const sizeToClassNameMap = {
-  xs: 'euiHealth--textSizeXS',
-  s: 'euiHealth--textSizeS',
-  m: 'euiHealth--textSizeM',
-  inherit: 'euiHealth--textSizeInherit',
+  xs: 'ouiHealth--textSizeXS',
+  s: 'ouiHealth--textSizeS',
+  m: 'ouiHealth--textSizeM',
+  inherit: 'ouiHealth--textSizeInherit',
 };
 
 export const TEXT_SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiHealthProps = CommonProps &
+export type OuiHealthProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'color'> & {
     /**
      * Sets the color of the dot icon.
@@ -44,13 +55,13 @@ export type EuiHealthProps = CommonProps &
      */
     color?: IconColor;
     /**
-     * Matches the text scales of EuiText.
+     * Matches the text scales of OuiText.
      * The `inherit` style will get its font size from the parent element
      */
     textSize?: typeof TEXT_SIZES[number];
   };
 
-export const EuiHealth: FunctionComponent<EuiHealthProps> = ({
+export const OuiHealth: FunctionComponent<OuiHealthProps> = ({
   children,
   className,
   color,
@@ -58,19 +69,19 @@ export const EuiHealth: FunctionComponent<EuiHealthProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiHealth',
+    'ouiHealth',
     textSize ? sizeToClassNameMap[textSize] : null,
     className
   );
 
   return (
     <div className={classes} {...rest}>
-      <EuiFlexGroup gutterSize="xs" alignItems="center" responsive={false}>
-        <EuiFlexItem grow={false}>
-          <EuiIcon type="dot" color={color} />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>{children}</EuiFlexItem>
-      </EuiFlexGroup>
+      <OuiFlexGroup gutterSize="xs" alignItems="center" responsive={false}>
+        <OuiFlexItem grow={false}>
+          <OuiIcon type="dot" color={color} />
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>{children}</OuiFlexItem>
+      </OuiFlexGroup>
     </div>
   );
 };

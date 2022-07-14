@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
-import { EuiCode } from '../../../../src/components';
+import { OuiCode } from '../../../../src/components';
 
 import IdGenerator from './html_id_generator';
 import { HtmlIdGeneratorPrefix } from './html_id_generator_prefix';
@@ -42,10 +53,10 @@ export const HtmlIdGeneratorExample = {
       ],
       text: (
         <p>
-          Use <EuiCode>htmlIdGenerator()()</EuiCode> to generate unique IDs for
-          elements with an optional <EuiCode>prefix</EuiCode> and/or{' '}
-          <EuiCode>suffix</EuiCode>. The first call to{' '}
-          <EuiCode>htmlIdGenerator</EuiCode> accepts the prefix as an optional
+          Use <OuiCode>htmlIdGenerator()()</OuiCode> to generate unique IDs for
+          elements with an optional <OuiCode>prefix</OuiCode> and/or{' '}
+          <OuiCode>suffix</OuiCode>. The first call to{' '}
+          <OuiCode>htmlIdGenerator</OuiCode> accepts the prefix as an optional
           argument and returns a second function which accepts an optional
           suffix and returns the generated ID.
         </p>
@@ -67,7 +78,7 @@ export const HtmlIdGeneratorExample = {
       ],
       text: (
         <p>
-          Provide a <EuiCode>prefix</EuiCode> to the generator to get an ID that
+          Provide a <OuiCode>prefix</OuiCode> to the generator to get an ID that
           starts with the specified prefix.
         </p>
       ),
@@ -88,7 +99,7 @@ export const HtmlIdGeneratorExample = {
       ],
       text: (
         <p>
-          Provide a <EuiCode>suffix</EuiCode> to the generator to get an ID that
+          Provide a <OuiCode>suffix</OuiCode> to the generator to get an ID that
           starts with the specified suffix.
         </p>
       ),
@@ -109,7 +120,7 @@ export const HtmlIdGeneratorExample = {
       ],
       text: (
         <p>
-          The <EuiCode>htmlIdGenerator</EuiCode> is capable of generating an ID
+          The <OuiCode>htmlIdGenerator</OuiCode> is capable of generating an ID
           with both a specified prefix <strong>and</strong> suffix.
         </p>
       ),

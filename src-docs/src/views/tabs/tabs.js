@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiIcon,
-  EuiTabs,
-  EuiTab,
-  EuiSpacer,
-  EuiTitle,
+  OuiIcon,
+  OuiTabs,
+  OuiTab,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 
 const tabs = [
@@ -23,7 +34,7 @@ const tabs = [
     id: 'hydrogen',
     name: (
       <span>
-        <EuiIcon type="heatmap" />
+        <OuiIcon type="heatmap" />
         &nbsp;Hydrogen
       </span>
     ),
@@ -51,37 +62,37 @@ export default () => {
 
   const renderTabs = () => {
     return tabs.map((tab, index) => (
-      <EuiTab
+      <OuiTab
         {...(tab.href && { href: tab.href, target: '_blank' })}
         onClick={() => onSelectedTabChanged(tab.id)}
         isSelected={tab.id === selectedTabId}
         disabled={tab.disabled}
         key={index}>
         {tab.name}
-      </EuiTab>
+      </OuiTab>
     ));
   };
 
   return (
     <Fragment>
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <span>Small</span>
-      </EuiTitle>
-      <EuiTabs size="s">{renderTabs()}</EuiTabs>
+      </OuiTitle>
+      <OuiTabs size="s">{renderTabs()}</OuiTabs>
 
-      <EuiSpacer />
-      <EuiTitle size="xxs">
+      <OuiSpacer />
+      <OuiTitle size="xxs">
         <span>Medium (default)</span>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiTabs>{renderTabs()}</EuiTabs>
+      <OuiTabs>{renderTabs()}</OuiTabs>
 
-      <EuiSpacer />
-      <EuiTitle size="xxs">
+      <OuiSpacer />
+      <OuiTitle size="xxs">
         <span>Large</span>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiTabs size="l">{renderTabs()}</EuiTabs>
+      <OuiTabs size="l">{renderTabs()}</OuiTabs>
     </Fragment>
   );
 };

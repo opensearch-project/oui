@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,33 +40,33 @@ import React, {
 } from 'react';
 import { htmlIdGenerator } from '../../services/accessibility';
 import classnames from 'classnames';
-import { EuiDataGridHeaderRowPropsSpecificProps } from './data_grid_header_row';
+import { OuiDataGridHeaderRowPropsSpecificProps } from './data_grid_header_row';
 import { keys } from '../../services';
-import { EuiDataGridColumnResizer } from './data_grid_column_resizer';
-import { EuiPopover } from '../popover';
-import { EuiListGroup } from '../list_group';
-import { EuiScreenReaderOnly } from '../accessibility';
+import { OuiDataGridColumnResizer } from './data_grid_column_resizer';
+import { OuiPopover } from '../popover';
+import { OuiListGroup } from '../list_group';
+import { OuiScreenReaderOnly } from '../accessibility';
 import tabbable from 'tabbable';
-import { EuiDataGridColumn } from './data_grid_types';
+import { OuiDataGridColumn } from './data_grid_types';
 import { getColumnActions } from './column_actions';
-import { useEuiI18n } from '../i18n';
-import { EuiIcon } from '../icon';
+import { useOuiI18n } from '../i18n';
+import { OuiIcon } from '../icon';
 import {
   DataGridFocusContext,
   DataGridSortingContext,
 } from './data_grid_context';
 
-export interface EuiDataGridHeaderCellProps
+export interface OuiDataGridHeaderCellProps
   extends Omit<
-    EuiDataGridHeaderRowPropsSpecificProps,
+    OuiDataGridHeaderRowPropsSpecificProps,
     'leadingControlColumns'
   > {
-  column: EuiDataGridColumn;
+  column: OuiDataGridColumn;
   index: number;
   className?: string;
 }
 
-export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps> = (
+export const OuiDataGridHeaderCell: FunctionComponent<OuiDataGridHeaderCellProps> = (
   props
 ) => {
   const {
@@ -83,8 +94,8 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
 
   const screenReaderId = htmlIdGenerator()();
   let sortString;
-  const actionButtonAriaLabel = useEuiI18n(
-    'euiDataGridHeaderCell.headerActions',
+  const actionButtonAriaLabel = useOuiI18n(
+    'ouiDataGridHeaderCell.headerActions',
     'Header actions'
   );
 
@@ -116,9 +127,9 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
   const columnType = schema[id] ? schema[id].columnType : null;
 
   const classes = classnames(
-    'euiDataGridHeaderCell',
+    'ouiDataGridHeaderCell',
     {
-      [`euiDataGridHeaderCell--${columnType}`]: columnType,
+      [`ouiDataGridHeaderCell--${columnType}`]: columnType,
     },
     className
   );
@@ -137,7 +148,7 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
   const enableInteractives = useCallback(() => {
     if (headerRef.current) {
       const interactiveElements = headerRef.current.querySelectorAll(
-        '[data-euigrid-tab-managed]'
+        '[data-ouigrid-tab-managed]'
       );
       for (let i = 0; i < interactiveElements.length; i++) {
         interactiveElements[i].setAttribute('tabIndex', '0');
@@ -150,12 +161,12 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
       const tababbles = tabbable(headerRef.current);
       if (tababbles.length > 1) {
         console.warn(
-          `EuiDataGridHeaderCell expects at most 1 tabbable element, ${tababbles.length} found instead`
+          `OuiDataGridHeaderCell expects at most 1 tabbable element, ${tababbles.length} found instead`
         );
       }
       for (let i = 0; i < tababbles.length; i++) {
         const element = tababbles[i];
-        element.setAttribute('data-euigrid-tab-managed', 'true');
+        element.setAttribute('data-ouigrid-tab-managed', 'true');
         element.setAttribute('tabIndex', '-1');
       }
     }
@@ -179,7 +190,7 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
     if (headerRef.current) {
       if (isFocused) {
         const interactives = headerRef.current.querySelectorAll(
-          '[data-euigrid-tab-managed]'
+          '[data-ouigrid-tab-managed]'
         );
         if (interactives.length === 1) {
           setIsCellEntered(true);
@@ -291,10 +302,10 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
   const showColumnActions = columnActions && columnActions.length > 0;
   const sortedColumn = sorting?.columns.find((col) => col.id === id);
   const sortingArrow = sortedColumn ? (
-    <EuiIcon
+    <OuiIcon
       type={sortedColumn.direction === 'asc' ? 'sortUp' : 'sortDown'}
       color="text"
-      className="euiDataGridHeaderCell__sortingArrow"
+      className="ouiDataGridHeaderCell__sortingArrow"
       data-test-subj={`dataGridHeaderCellSortingIcon-${id}`}
     />
   ) : null;
@@ -309,7 +320,7 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
       data-test-subj={`dataGridHeaderCell-${id}`}
       style={width != null ? { width: `${width}px` } : {}}>
       {column.isResizable !== false && width != null ? (
-        <EuiDataGridColumnResizer
+        <OuiDataGridColumnResizer
           columnId={id}
           columnWidth={width}
           setColumnWidth={setColumnWidth}
@@ -317,34 +328,34 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
       ) : null}
 
       {sorting && sorting.columns.length >= 2 && (
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <div id={screenReaderId}>{sortString}</div>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       )}
       {!showColumnActions ? (
         <>
           {sortingArrow}
-          <div className="euiDataGridHeaderCell__content">
+          <div className="ouiDataGridHeaderCell__content">
             {display || displayAsText || id}
           </div>
         </>
       ) : (
-        <EuiPopover
-          anchorClassName="euiDataGridHeaderCell__anchor"
+        <OuiPopover
+          anchorClassName="ouiDataGridHeaderCell__anchor"
           panelPaddingSize="none"
           offset={7}
           button={
             <button
-              className="euiDataGridHeaderCell__button"
+              className="ouiDataGridHeaderCell__button"
               onClick={() =>
                 setIsPopoverOpen((isPopoverOpen) => !isPopoverOpen)
               }>
               {sortingArrow}
-              <div className="euiDataGridHeaderCell__content">
+              <div className="ouiDataGridHeaderCell__content">
                 {display || displayAsText || id}
               </div>
-              <EuiIcon
-                className="euiDataGridHeaderCell__icon"
+              <OuiIcon
+                className="ouiDataGridHeaderCell__icon"
                 type="arrowDown"
                 size="s"
                 color="text"
@@ -356,13 +367,13 @@ export const EuiDataGridHeaderCell: FunctionComponent<EuiDataGridHeaderCellProps
           isOpen={isPopoverOpen}
           closePopover={() => setIsPopoverOpen(false)}>
           <div>
-            <EuiListGroup
+            <OuiListGroup
               listItems={columnActions}
               gutterSize="none"
               data-test-subj={`dataGridHeaderCellActionGroup-${id}`}
             />
           </div>
-        </EuiPopover>
+        </OuiPopover>
       )}
     </div>
   );

@@ -1,5 +1,16 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // This wraps the range. It is needed because there is no way to do a linear gradient in ie11 for the track
-.euiHue {
+.ouiHue {
   // sass-lint:disable-block no-color-literals
   background: linear-gradient(to right,
     #FF3232 0%,
@@ -10,8 +21,8 @@
     #FF28FB 88%,
     #FF0094 100%
    );
-  height: $euiSizeL;
-  margin: $euiSizeXS 0;
+  height: $ouiSizeL;
+  margin: $ouiSizeXS 0;
   position: relative;
 
   // To make our fake range skinny, we add some pseudo borders to fake the height of the gradient
@@ -20,8 +31,8 @@
     content: '';
     left: 0;
     position: absolute;
-    height: $euiSizeS;
-    background: $euiColorEmptyShade;
+    height: $ouiSizeS;
+    background: $ouiColorEmptyShade;
     width: 100%;
   }
 
@@ -31,19 +42,19 @@
 }
 
 // The range itself is the same height
-.euiHue__range {
-  @include euiRangeThumbPerBrowser {
-    @include euiCustomControl($type: 'round');
-    @include euiRangeThumbStyle;
+.ouiHue__range {
+  @include ouiRangeThumbPerBrowser {
+    @include ouiCustomControl($type: 'round');
+    @include ouiRangeThumbStyle;
   }
 
   position: relative;
-  height: $euiSizeL;
+  height: $ouiSizeL;
   width: calc(100% + 2px); // Allow for overlap
   margin: 0 -1px; // Use ^ overlap to allow thumb to fully cover gradient ends
   appearance: none;
   background: transparent;
-  z-index: 2; // Needed to place the thumb above the :after pseudo border from .euiRange
+  z-index: 2; // Needed to place the thumb above the :after pseudo border from .ouiRange
 
 
   // Resets for the range
@@ -60,7 +71,7 @@
   }
 
   &::-ms-track {
-    height: $euiSizeL;
+    height: $ouiSizeL;
     background: transparent;
     border-color: transparent;
     color: transparent;
@@ -75,11 +86,11 @@
     background: transparent;
   }
 
-  // Thumb has trouble with animation, so we make something similar to `@include euiFocusRing`
+  // Thumb has trouble with animation, so we make something similar to `@include ouiFocusRing`
   &:focus {
-    @include euiRangeThumbPerBrowser {
-      box-shadow: 0 0 0 $euiFocusRingSize $euiFocusRingColor;
-      border-color: $euiColorPrimary;
+    @include ouiRangeThumbPerBrowser {
+      box-shadow: 0 0 0 $ouiFocusRingSize $ouiFocusRingColor;
+      border-color: $ouiColorPrimary;
     }
 
     // Focus is added to the thumb ^^ so we can remove the outer wrapping outline

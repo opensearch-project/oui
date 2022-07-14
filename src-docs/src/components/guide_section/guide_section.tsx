@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { FunctionComponent, ReactNode, useState } from 'react';
 import { useRouteMatch } from 'react-router';
 
-import { EuiErrorBoundary } from '../../../../src/components/error_boundary';
-import { EuiText } from '../../../../src/components/text';
-import { EuiSwitch } from '../../../../src/components/form';
-import { EuiButton } from '../../../../src/components/button';
+import { OuiErrorBoundary } from '../../../../src/components/error_boundary';
+import { OuiText } from '../../../../src/components/text';
+import { OuiSwitch } from '../../../../src/components/form';
+import { OuiButton } from '../../../../src/components/button';
 
 import { slugify } from '../../../../src/services/string/slugify';
 
@@ -130,16 +141,16 @@ export const GuideSection: FunctionComponent<GuideSection> = ({
 
     if (!isPlaygroundUnsupported && !!playground) {
       return (
-        <EuiSwitch
+        <OuiSwitch
           onChange={() => {
             setRenderingPlayground((rendering) => !rendering);
           }}
           checked={renderingPlayground}
           compressed
           label={
-            <EuiText size="xs">
+            <OuiText size="xs">
               <strong>Playground</strong>
-            </EuiText>
+            </OuiText>
           }
         />
       );
@@ -176,21 +187,21 @@ export const GuideSection: FunctionComponent<GuideSection> = ({
       {!renderingPlayground && (demo || fullScreen) && (
         <GuideSectionExample
           example={
-            <EuiErrorBoundary>
+            <OuiErrorBoundary>
               {/* eslint-disable-next-line no-nested-ternary */}
               {fullScreen == null ? (
                 <div>{demo}</div>
               ) : demo == null ? (
-                <EuiButton
+                <OuiButton
                   fill
                   iconType="fullScreen"
                   href={`#${path}/${fullScreen.slug}`}>
                   Full screen demo
-                </EuiButton>
+                </OuiButton>
               ) : (
                 demo
               )}
-            </EuiErrorBoundary>
+            </OuiErrorBoundary>
           }
           tabs={renderTabs()}
           ghostBackground={ghostBackground}

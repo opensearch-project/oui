@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -52,11 +63,11 @@ interface Props {
   timeout?: number;
 }
 
-export type EuiTextDiffProps = CommonProps &
+export type OuiTextDiffProps = CommonProps &
   Props &
   HTMLAttributes<HTMLElement>;
 
-export const useEuiTextDiff = ({
+export const useOuiTextDiff = ({
   className,
   insertComponent = 'ins',
   deleteComponent = 'del',
@@ -65,14 +76,14 @@ export const useEuiTextDiff = ({
   afterText = '',
   timeout = 0.1,
   ...rest
-}: EuiTextDiffProps) => {
+}: OuiTextDiffProps) => {
   const textDiff = useMemo(() => {
     const diff = new Diff({ timeout }); // options may be passed to constructor
 
     return diff.main(beforeText, afterText);
   }, [beforeText, afterText, timeout]); // produces diff array
 
-  const classes = classNames('euiTextDiff', className);
+  const classes = classNames('ouiTextDiff', className);
 
   const rendereredHtml = useMemo(() => {
     const html = [];

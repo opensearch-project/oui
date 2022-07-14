@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,7 +33,7 @@ import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
 import {
-  EuiPopover,
+  OuiPopover,
   getPopoverPositionFromAnchorPosition,
   getPopoverAlignFromAnchorPosition,
   PopoverAnchorPosition,
@@ -31,16 +42,16 @@ import {
 import { keys } from '../../services';
 
 jest.mock('../portal', () => ({
-  EuiPortal: ({ children }: { children: ReactNode }) => children,
+  OuiPortal: ({ children }: { children: ReactNode }) => children,
 }));
 
 let id = 0;
 const getId = () => `${id++}`;
 
-describe('EuiPopover', () => {
+describe('OuiPopover', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiPopover
+      <OuiPopover
         id={getId()}
         button={<button />}
         closePopover={() => {}}
@@ -53,9 +64,9 @@ describe('EuiPopover', () => {
 
   test('children is rendered', () => {
     const component = render(
-      <EuiPopover id={getId()} button={<button />} closePopover={() => {}}>
+      <OuiPopover id={getId()} button={<button />} closePopover={() => {}}>
         Children
-      </EuiPopover>
+      </OuiPopover>
     );
 
     expect(component).toMatchSnapshot();
@@ -65,7 +76,7 @@ describe('EuiPopover', () => {
     describe('display block', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPopover
+          <OuiPopover
             id={getId()}
             display="block"
             button={<button />}
@@ -80,7 +91,7 @@ describe('EuiPopover', () => {
     describe('anchorClassName', () => {
       test('is rendered', () => {
         const component = render(
-          <EuiPopover
+          <OuiPopover
             id={getId()}
             anchorClassName="test"
             button={<button />}
@@ -97,7 +108,7 @@ describe('EuiPopover', () => {
         const closePopoverHandler = jest.fn();
 
         const component = mount(
-          <EuiPopover
+          <OuiPopover
             ownFocus={false}
             id={getId()}
             button={<button />}
@@ -114,7 +125,7 @@ describe('EuiPopover', () => {
         const closePopoverHandler = jest.fn();
 
         const component = mount(
-          <EuiPopover
+          <OuiPopover
             id={getId()}
             button={<button />}
             closePopover={closePopoverHandler}
@@ -130,7 +141,7 @@ describe('EuiPopover', () => {
     describe('anchorPosition', () => {
       test('defaults to centerDown', () => {
         const component = render(
-          <EuiPopover
+          <OuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -142,7 +153,7 @@ describe('EuiPopover', () => {
 
       test('leftCenter is rendered', () => {
         const component = render(
-          <EuiPopover
+          <OuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -155,7 +166,7 @@ describe('EuiPopover', () => {
 
       test('downRight is rendered', () => {
         const component = render(
-          <EuiPopover
+          <OuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -170,7 +181,7 @@ describe('EuiPopover', () => {
     describe('isOpen', () => {
       test('defaults to false', () => {
         const component = render(
-          <EuiPopover
+          <OuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -183,7 +194,7 @@ describe('EuiPopover', () => {
       test('renders true', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -202,7 +213,7 @@ describe('EuiPopover', () => {
       test('defaults to true', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               id={getId()}
               isOpen
               button={<button />}
@@ -217,7 +228,7 @@ describe('EuiPopover', () => {
       test('renders false', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               ownFocus={false}
               id={getId()}
               isOpen
@@ -235,7 +246,7 @@ describe('EuiPopover', () => {
       test('is rendered', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -253,7 +264,7 @@ describe('EuiPopover', () => {
       test('is rendered', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -271,7 +282,7 @@ describe('EuiPopover', () => {
       test('is rendered', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -289,7 +300,7 @@ describe('EuiPopover', () => {
       test('is rendered', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -311,7 +322,7 @@ describe('EuiPopover', () => {
       test('with arrow', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -327,7 +338,7 @@ describe('EuiPopover', () => {
       test('without arrow', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -346,7 +357,7 @@ describe('EuiPopover', () => {
       test('is rendered', () => {
         const component = mount(
           <div>
-            <EuiPopover
+            <OuiPopover
               id={getId()}
               button={<button />}
               closePopover={() => {}}
@@ -363,7 +374,7 @@ describe('EuiPopover', () => {
     test('buffer', () => {
       const component = mount(
         <div>
-          <EuiPopover
+          <OuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -379,7 +390,7 @@ describe('EuiPopover', () => {
     test('buffer for all sides', () => {
       const component = mount(
         <div>
-          <EuiPopover
+          <OuiPopover
             id={getId()}
             button={<button />}
             closePopover={() => {}}
@@ -425,7 +436,7 @@ describe('EuiPopover', () => {
 
     it('cleans up timeouts and rAFs on unmount', () => {
       const component = mount(
-        <EuiPopover
+        <OuiPopover
           id={getId()}
           button={<button />}
           closePopover={() => {}}
@@ -438,7 +449,7 @@ describe('EuiPopover', () => {
 
       component.unmount();
 
-      // EUI's jest configuration throws an error if there are any console.error calls, like
+      // OUI's jest configuration throws an error if there are any console.error calls, like
       // React's setState on an unmounted component warning
       // to be future proof, verify that's still the case
       expect(() => {
@@ -446,7 +457,7 @@ describe('EuiPopover', () => {
       }).toThrow();
 
       // execute any pending timeouts or animation frame callbacks
-      // and validate the timeout/rAF clearing done by EuiPopover
+      // and validate the timeout/rAF clearing done by OuiPopover
       jest.advanceTimersByTime(10);
     });
   });

@@ -1,27 +1,38 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
- * Note: Margin is added in _page.scss when EuiPage has `paddingSize`
+ * Note: Margin is added in _page.scss when OuiPage has `paddingSize`
  * 1. Prevent side bar width from changing when content width changes.
  */
-.euiPageSideBar {
-  min-width: $euiPageSidebarMinWidth + ($euiSizeL * 2);
+.ouiPageSideBar {
+  min-width: $ouiPageSidebarMinWidth + ($ouiSizeL * 2);
   flex: 0 1 0%; /* 1 */
 }
 
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPageSideBar--#{$modifier} {
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPageSideBar--#{$modifier} {
     padding: $amount;
   }
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiPageSideBar {
+@include ouiBreakpoint('xs', 's') {
+  .ouiPageSideBar {
     width: 100%;
   }
 }
 
-@include euiBreakpoint('m', 'l', 'xl') {
-  .euiPageSideBar--sticky {
-    @include euiScrollBar;
+@include ouiBreakpoint('m', 'l', 'xl') {
+  .ouiPageSideBar--sticky {
+    @include ouiScrollBar;
     overflow-y: auto;
     flex-grow: 1;
     position: sticky;

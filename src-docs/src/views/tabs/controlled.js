@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiButton,
-  EuiIcon,
-  EuiTabbedContent,
-  EuiTitle,
-  EuiText,
-  EuiSpacer,
+  OuiButton,
+  OuiIcon,
+  OuiTabbedContent,
+  OuiTitle,
+  OuiText,
+  OuiSpacer,
 } from '../../../../src/components';
 
 const tabs = [
@@ -15,17 +26,17 @@ const tabs = [
     name: 'Cobalt',
     content: (
       <Fragment>
-        <EuiSpacer />
-        <EuiTitle>
+        <OuiSpacer />
+        <OuiTitle>
           <h3>Cobalt</h3>
-        </EuiTitle>
-        <EuiText>
+        </OuiTitle>
+        <OuiText>
           Cobalt is a chemical element with symbol Co and atomic number 27. Like
           nickel, cobalt is found in the Earth&rsquo;s crust only in chemically
           combined form, save for small deposits found in alloys of natural
           meteoric iron. The free element, produced by reductive smelting, is a
           hard, lustrous, silver-gray metal.
-        </EuiText>
+        </OuiText>
       </Fragment>
     ),
   },
@@ -34,15 +45,15 @@ const tabs = [
     name: 'Dextrose',
     content: (
       <Fragment>
-        <EuiSpacer />
-        <EuiTitle>
+        <OuiSpacer />
+        <OuiTitle>
           <h3>Dextrose</h3>
-        </EuiTitle>
-        <EuiText>
+        </OuiTitle>
+        <OuiText>
           Intravenous sugar solution, also known as dextrose solution, is a
           mixture of dextrose (glucose) and water. It is used to treat low blood
           sugar or water loss without electrolyte loss.
-        </EuiText>
+        </OuiText>
       </Fragment>
     ),
   },
@@ -50,21 +61,21 @@ const tabs = [
     id: 'hydrogen',
     name: (
       <span>
-        <EuiIcon type="heatmap" />
+        <OuiIcon type="heatmap" />
         &nbsp;Hydrogen
       </span>
     ),
     content: (
       <Fragment>
-        <EuiSpacer />
-        <EuiTitle>
+        <OuiSpacer />
+        <OuiTitle>
           <h3>Hydrogen</h3>
-        </EuiTitle>
-        <EuiText>
+        </OuiTitle>
+        <OuiText>
           Hydrogen is a chemical element with symbol H and atomic number 1. With
           a standard atomic weight of 1.008, hydrogen is the lightest element on
           the periodic table
-        </EuiText>
+        </OuiText>
       </Fragment>
     ),
   },
@@ -73,16 +84,16 @@ const tabs = [
     name: 'Monosodium Glutamate',
     content: (
       <Fragment>
-        <EuiSpacer />
-        <EuiTitle>
+        <OuiSpacer />
+        <OuiTitle>
           <h3>Monosodium Glutamate</h3>
-        </EuiTitle>
-        <EuiText>
+        </OuiTitle>
+        <OuiText>
           Monosodium glutamate (MSG, also known as sodium glutamate) is the
           sodium salt of glutamic acid, one of the most abundant naturally
           occurring non-essential amino acids. Monosodium glutamate is found
           naturally in tomatoes, cheese and other foods.
-        </EuiText>
+        </OuiText>
       </Fragment>
     ),
   },
@@ -104,13 +115,13 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiButton iconType="arrowRight" iconSide="right" onClick={cycleTab}>
+      <OuiButton iconType="arrowRight" iconSide="right" onClick={cycleTab}>
         Cycle through the tabs
-      </EuiButton>
+      </OuiButton>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiTabbedContent
+      <OuiTabbedContent
         tabs={tabs}
         selectedTab={selectedTab}
         onTabClick={onTabClick}

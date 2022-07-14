@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,7 +34,7 @@ import { requiredProps } from '../../test/required_props';
 import cheerio from 'cheerio';
 
 import {
-  EuiIcon,
+  OuiIcon,
   SIZES,
   TYPES,
   COLORS,
@@ -32,7 +43,7 @@ import {
 } from './icon';
 import { PropsOf } from '../common';
 // @ts-ignore importing from a JS file
-import { icon as EuiIconVideoPlayer } from './assets/videoPlayer.js';
+import { icon as OuiIconVideoPlayer } from './assets/videoPlayer.js';
 
 jest.mock('./icon', () => {
   return jest.requireActual('./icon');
@@ -42,7 +53,7 @@ beforeEach(() => clearIconComponentCache());
 
 const prettyHtml = cheerio.load('');
 
-function testIcon(props: PropsOf<EuiIcon>) {
+function testIcon(props: PropsOf<OuiIcon>) {
   return () => {
     expect.assertions(1);
     return new Promise((resolve) => {
@@ -51,12 +62,12 @@ function testIcon(props: PropsOf<EuiIcon>) {
         expect(prettyHtml(component.html())).toMatchSnapshot();
         resolve();
       };
-      const component = mount(<EuiIcon {...props} onIconLoad={onIconLoad} />);
+      const component = mount(<OuiIcon {...props} onIconLoad={onIconLoad} />);
     });
   };
 }
 
-describe('EuiIcon', () => {
+describe('OuiIcon', () => {
   test('is rendered', testIcon({ type: 'search', ...requiredProps }));
 
   describe('props', () => {
@@ -132,36 +143,36 @@ describe('EuiIcon', () => {
         </span>
       );
     };
-    const component = mount(<EuiIcon type={CustomIcon} />);
+    const component = mount(<OuiIcon type={CustomIcon} />);
     expect(prettyHtml(component.html())).toMatchSnapshot();
   });
 
   describe('appendIconComponentCache', () => {
     it('does nothing if not called', () => {
-      const component = mount(<EuiIcon type="videoPlayer" />);
+      const component = mount(<OuiIcon type="videoPlayer" />);
       expect(
-        component.find('EuiIcon[type="videoPlayer"] > EuiIconEmpty').length
+        component.find('OuiIcon[type="videoPlayer"] > OuiIconEmpty').length
       ).toBe(1);
     });
 
     it('injects the specified icon', () => {
       appendIconComponentCache({
-        videoPlayer: EuiIconVideoPlayer,
+        videoPlayer: OuiIconVideoPlayer,
       });
-      const component = mount(<EuiIcon type="videoPlayer" />);
+      const component = mount(<OuiIcon type="videoPlayer" />);
       expect(
-        component.find('EuiIcon[type="videoPlayer"] > EuiIconVideoPlayer')
+        component.find('OuiIcon[type="videoPlayer"] > OuiIconVideoPlayer')
           .length
       ).toBe(1);
     });
 
     it('does not impact non-loaded icons', () => {
       appendIconComponentCache({
-        videoPlayer: EuiIconVideoPlayer,
+        videoPlayer: OuiIconVideoPlayer,
       });
-      const component = mount(<EuiIcon type="accessibility" />);
+      const component = mount(<OuiIcon type="accessibility" />);
       expect(
-        component.find('EuiIcon[type="accessibility"] > EuiIconEmpty').length
+        component.find('OuiIcon[type="accessibility"] > OuiIconEmpty').length
       ).toBe(1);
     });
   });

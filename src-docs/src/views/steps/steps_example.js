@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,14 +16,14 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiSteps,
-  EuiStep,
-  EuiSubSteps,
-  EuiStepsHorizontal,
+  OuiCode,
+  OuiSteps,
+  OuiStep,
+  OuiSubSteps,
+  OuiStepsHorizontal,
 } from '../../../../src/components';
 
-import { EuiStepHorizontal } from '../../../../src/components/steps/step_horizontal';
+import { OuiStepHorizontal } from '../../../../src/components/steps/step_horizontal';
 
 import { stepConfig, stepHorizontalConfig } from './playground';
 
@@ -20,20 +31,20 @@ import Steps from './steps';
 const stepsSource = require('!!raw-loader!./steps');
 const stepsHtml = renderToHtml(Steps);
 const stepsSnippet = [
-  `<EuiSteps
+  `<OuiSteps
   steps={[
     {
       title: 'Step 1',
-      children: <EuiText><p>Do this first</p></EuiText>,
+      children: <OuiText><p>Do this first</p></OuiText>,
     },
   ]}
 />`,
-  `<EuiSteps
+  `<OuiSteps
   firstStepNumber={3}
   steps={[
     {
       title: 'Step 3',
-      children: <EuiText><p>Do this third first</p></EuiText>,
+      children: <OuiText><p>Do this third first</p></OuiText>,
     },
   ]}
 />`,
@@ -43,45 +54,45 @@ import StepsComplex from './steps_complex';
 const stepsComplexSource = require('!!raw-loader!./steps_complex');
 const stepsComplexHtml = renderToHtml(StepsComplex);
 const stepsComplexSnippet = [
-  `<EuiSteps
+  `<OuiSteps
   steps={[
     {
       title: 'Step 1 has intro plus code snippet',
       children: (
         <>
-          <EuiText>
+          <OuiText>
             <p>Run this code snippet to install things.</p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiCodeBlock language="bash">npm install</EuiCodeBlock>
+          </OuiText>
+          <OuiSpacer />
+          <OuiCodeBlock language="bash">npm install</OuiCodeBlock>
         </>
       ),
     },
   ]}
 />`,
-  `<EuiSteps
+  `<OuiSteps
   steps={[
     {
       title: 'Step 2 has sub steps',
       children: (
-        <EuiText>
+        <OuiText>
           <p>
             In order to complete this step, do the following things <strong>in order</strong>.
           </p>
-          <EuiSubSteps>
+          <OuiSubSteps>
             <ol>
               <li>Do thing 1</li>
               <li>Do thing 2</li>
               <li>Do thing 3</li>
             </ol>
-          </EuiSubSteps>
+          </OuiSubSteps>
           <p>Here are some bullet point reminders.</p>
           <ul>
             <li>Reminder 1</li>
             <li>Reminder 2</li>
             <li>Reminder 3</li>
           </ul>
-        </EuiText>
+        </OuiText>
       ),
     },
   ]}
@@ -91,13 +102,13 @@ const stepsComplexSnippet = [
 import HeadingElementSteps from './heading_element_steps';
 const headingElementStepsSource = require('!!raw-loader!./heading_element_steps');
 const headingElementStepsHtml = renderToHtml(HeadingElementSteps);
-const headingElementStepsSnippet = `<EuiSteps steps={steps} headingElement="h2" />
+const headingElementStepsSnippet = `<OuiSteps steps={steps} headingElement="h2" />
 `;
 
 import StepsHorizontal from './steps_horizontal';
 const stepsHorizontalSource = require('!!raw-loader!./steps_horizontal');
 const stepsHorizontalHtml = renderToHtml(StepsHorizontal);
-const stepsHorizontalSnippet = `<EuiStepsHorizontal steps={[{
+const stepsHorizontalSnippet = `<OuiStepsHorizontal steps={[{
   title: 'Completed step',
   isComplete: true,
   onClick: function,
@@ -107,7 +118,7 @@ const stepsHorizontalSnippet = `<EuiStepsHorizontal steps={[{
 import Status from './status';
 const statusSource = require('!!raw-loader!./status');
 const statusHtml = renderToHtml(Steps);
-const statusSnippet = `<EuiSteps
+const statusSnippet = `<OuiSteps
   steps={[
     {
       title: 'Warning',
@@ -120,7 +131,7 @@ const statusSnippet = `<EuiSteps
 import StepsTitleSizes from './steps_title_sizes';
 const stepsTitleSizesSource = require('!!raw-loader!./steps_title_sizes');
 const stepsTitleSizesHtml = renderToHtml(StepsTitleSizes);
-const stepsTitleSizesSnippet = `<EuiSteps titleSize="xs" steps={steps} />
+const stepsTitleSizesSnippet = `<OuiSteps titleSize="xs" steps={steps} />
 `;
 
 export const StepsExample = {
@@ -139,15 +150,15 @@ export const StepsExample = {
       ],
       text: (
         <p>
-          <strong>EuiSteps</strong> presents procedural content in a numbered
+          <strong>OuiSteps</strong> presents procedural content in a numbered
           outline format. It is best used when presenting instructional content
           that must be conducted in a particular order. It requires a{' '}
-          <EuiCode>title</EuiCode> and <EuiCode>children</EuiCode> to be present
+          <OuiCode>title</OuiCode> and <OuiCode>children</OuiCode> to be present
           and will automatically increment the step number based on the initial{' '}
-          <EuiCode>firstStepNumber</EuiCode>.
+          <OuiCode>firstStepNumber</OuiCode>.
         </p>
       ),
-      props: { EuiSteps, EuiStep },
+      props: { OuiSteps, OuiStep },
       snippet: stepsSnippet,
       demo: <Steps />,
     },
@@ -166,12 +177,12 @@ export const StepsExample = {
       text: (
         <p>
           If you need to call out a set of substeps that are not lines of code,
-          most likely a <EuiCode>{'<ol/>'}</EuiCode>, wrap the block in a{' '}
-          <EuiCode>{'<EuiSubSteps/>'}</EuiCode>.
+          most likely a <OuiCode>{'<ol/>'}</OuiCode>, wrap the block in a{' '}
+          <OuiCode>{'<OuiSubSteps/>'}</OuiCode>.
         </p>
       ),
       demo: <StepsComplex />,
-      props: { EuiSubSteps },
+      props: { OuiSubSteps },
       snippet: stepsComplexSnippet,
     },
     {
@@ -192,10 +203,10 @@ export const StepsExample = {
             To aid with accessibility and hierarchical headings, you can and
             should pass in a heading element to use for each step title. The
             example below shows that the logical heading element should be an{' '}
-            <EuiCode>h2</EuiCode>
+            <OuiCode>h2</OuiCode>
             and therefore adds{' '}
-            <EuiCode language="j">{'headingElement="h2"'}</EuiCode> to the
-            EuiSteps component.
+            <OuiCode language="j">{'headingElement="h2"'}</OuiCode> to the
+            OuiSteps component.
           </p>
           <p>
             The style of the title will <strong>not</strong> be affected.
@@ -219,11 +230,11 @@ export const StepsExample = {
       ],
       text: (
         <p>
-          Steps can optionally include <EuiCode>status</EuiCode> prop that will
+          Steps can optionally include <OuiCode>status</OuiCode> prop that will
           alter the look of the number prefix. The options are{' '}
-          <EuiCode>incomplete</EuiCode>, <EuiCode>complete</EuiCode>,{' '}
-          <EuiCode>warning</EuiCode>, <EuiCode>danger</EuiCode>,{' '}
-          <EuiCode>disabled</EuiCode> and <EuiCode>loading</EuiCode>. This is
+          <OuiCode>incomplete</OuiCode>, <OuiCode>complete</OuiCode>,{' '}
+          <OuiCode>warning</OuiCode>, <OuiCode>danger</OuiCode>,{' '}
+          <OuiCode>disabled</OuiCode> and <OuiCode>loading</OuiCode>. This is
           used mostly as a final step when you need to make some sort of final
           check.
         </p>
@@ -247,10 +258,10 @@ export const StepsExample = {
         <Fragment>
           <p>
             You can set a different title size using{' '}
-            <EuiCode>titleSize</EuiCode>. If <EuiCode>titleSize</EuiCode> is set
-            in both <strong>EuiSteps</strong> and <strong>EuiStep</strong>, the
+            <OuiCode>titleSize</OuiCode>. If <OuiCode>titleSize</OuiCode> is set
+            in both <strong>OuiSteps</strong> and <strong>OuiStep</strong>, the
             latter value will override the former. Additionally, the title size{' '}
-            <EuiCode>xs</EuiCode> will automatically generate smaller steps
+            <OuiCode>xs</OuiCode> will automatically generate smaller steps
             circles.
           </p>
         </Fragment>
@@ -278,15 +289,15 @@ export const StepsExample = {
           </p>
           <p>
             For each step object, be sure to signify previous/completed steps
-            with <EuiCode language="ts">isComplete: true</EuiCode> and the
+            with <OuiCode language="ts">isComplete: true</OuiCode> and the
             current/selected step with{' '}
-            <EuiCode language="ts">isSelected: true</EuiCode>.
+            <OuiCode language="ts">isSelected: true</OuiCode>.
           </p>
         </Fragment>
       ),
       demo: <StepsHorizontal />,
       snippet: stepsHorizontalSnippet,
-      props: { EuiStepsHorizontal, EuiStepHorizontal },
+      props: { OuiStepsHorizontal, OuiStepHorizontal },
     },
   ],
   playground: [stepConfig, stepHorizontalConfig],

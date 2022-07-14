@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiOverlayMask,
-  EuiButton,
-  EuiSpacer,
-  EuiTitle,
+  OuiOverlayMask,
+  OuiButton,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -13,40 +24,40 @@ export default () => {
 
   const modal = (
     <React.Fragment>
-      <EuiOverlayMask
+      <OuiOverlayMask
         onClick={() => {
           changeMask(false);
         }}>
-        <EuiTitle>
+        <OuiTitle>
           <h2> Click anywhere to close overlay. </h2>
-        </EuiTitle>
-      </EuiOverlayMask>
+        </OuiTitle>
+      </OuiOverlayMask>
     </React.Fragment>
   );
 
   const maskWithClick = (
-    <EuiOverlayMask>
-      <EuiButton
+    <OuiOverlayMask>
+      <OuiButton
         onClick={() => {
           changeMaskWithClick(false);
         }}>
         Click this button to close
-      </EuiButton>
-    </EuiOverlayMask>
+      </OuiButton>
+    </OuiOverlayMask>
   );
 
   return (
     <React.Fragment>
-      <EuiButton
+      <OuiButton
         onClick={() => {
           changeMask(true);
         }}>
         Overlay with onClick
-      </EuiButton>
-      <EuiSpacer size="xxl" />
-      <EuiButton onClick={() => changeMaskWithClick(true)}>
+      </OuiButton>
+      <OuiSpacer size="xxl" />
+      <OuiButton onClick={() => changeMaskWithClick(true)}>
         Overlay with button
-      </EuiButton>
+      </OuiButton>
       {maskOpen ? modal : undefined}
       {maskWithClickOpen ? maskWithClick : undefined}
     </React.Fragment>

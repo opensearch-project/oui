@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,9 +16,9 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiLink,
-  EuiMarkdownFormat,
-  EuiText,
+  OuiLink,
+  OuiMarkdownFormat,
+  OuiText,
 } from '../../../../src/components';
 
 import { Link } from 'react-router-dom';
@@ -25,17 +36,17 @@ export const MarkdownFormatExample = {
   beta: true,
   intro: (
     <Fragment>
-      <EuiText>
+      <OuiText>
         <p>
-          <strong>EuiMarkdownFormat</strong> is a read-only way to render
+          <strong>OuiMarkdownFormat</strong> is a read-only way to render
           markdown-style content in a page. It is a peer component to{' '}
           <strong>
-            <Link to="/editors-syntax/markdown-editor/">EuiMarkdownEditor</Link>
+            <Link to="/editors-syntax/markdown-editor/">OuiMarkdownEditor</Link>
           </strong>{' '}
           and has the ability to be modified by additional{' '}
           <Link to="/editors-syntax/markdown-plugins">markdown plugins</Link>.
         </p>
-      </EuiText>
+      </OuiText>
     </Fragment>
   ),
   sections: [
@@ -53,19 +64,19 @@ export const MarkdownFormatExample = {
       title: 'Built in plugins',
       text: (
         <p>
-          <strong>EuiMarkdownFormat</strong> is a wrapper that will render
-          Markdown provided. EuiMarkdownFormat uses{' '}
-          <EuiLink target="_blank" href="https://github.com/remarkjs/remark">
+          <strong>OuiMarkdownFormat</strong> is a wrapper that will render
+          Markdown provided. OuiMarkdownFormat uses{' '}
+          <OuiLink target="_blank" href="https://github.com/remarkjs/remark">
             Remark
-          </EuiLink>{' '}
+          </OuiLink>{' '}
           by default. The translation layer automatically substitutes raw HTML
-          output with their EUI equivalent. This means anchor and code blocks
-          will become <strong>EuiLink</strong> and <strong>EuiCodeBlock</strong>{' '}
+          output with their OUI equivalent. This means anchor and code blocks
+          will become <strong>OuiLink</strong> and <strong>OuiCodeBlock</strong>{' '}
           components respectively.
         </p>
       ),
       props: {
-        EuiMarkdownFormat,
+        OuiMarkdownFormat,
       },
       demo: <MarkdownFormat />,
     },
@@ -88,7 +99,7 @@ export const MarkdownFormatExample = {
         </p>
       ),
       props: {
-        EuiMarkdownFormat,
+        OuiMarkdownFormat,
       },
       demo: <MarkdownFormatSink />,
     },

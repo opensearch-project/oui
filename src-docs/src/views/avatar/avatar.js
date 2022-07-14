@@ -1,40 +1,51 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiAvatar, EuiSpacer, EuiTitle } from '../../../../src/components';
+import { OuiAvatar, OuiSpacer, OuiTitle } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiAvatar size="s" name="Raphael" />
+    <OuiAvatar size="s" name="Raphael" />
     &emsp;
-    <EuiAvatar size="m" name="Donatello" />
+    <OuiAvatar size="m" name="Donatello" />
     &emsp;
-    <EuiAvatar size="l" name="Leonardo" color="#BD10E0" />
+    <OuiAvatar size="l" name="Leonardo" color="#BD10E0" />
     &emsp;
-    <EuiAvatar size="xl" name="Michelangelo" />
-    <EuiSpacer />
-    <EuiTitle size="xs">
+    <OuiAvatar size="xl" name="Michelangelo" />
+    <OuiSpacer />
+    <OuiTitle size="xs">
       <h2>With image</h2>
-    </EuiTitle>
-    <EuiSpacer />
-    <EuiAvatar
+    </OuiTitle>
+    <OuiSpacer />
+    <OuiAvatar
       size="s"
       name="Cat"
       imageUrl="https://source.unsplash.com/64x64/?cat"
     />
     &emsp;
-    <EuiAvatar
+    <OuiAvatar
       size="m"
       name="Cat"
       imageUrl="https://source.unsplash.com/64x64/?cat"
     />
     &emsp;
-    <EuiAvatar
+    <OuiAvatar
       size="l"
       name="Cat"
       imageUrl="https://source.unsplash.com/64x64/?cat"
     />
     &emsp;
-    <EuiAvatar
+    <OuiAvatar
       size="xl"
       name="Cat"
       imageUrl="https://source.unsplash.com/64x64/?cat"

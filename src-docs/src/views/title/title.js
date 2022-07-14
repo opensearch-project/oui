@@ -1,56 +1,67 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiTitle,
-  EuiHorizontalRule,
-  EuiSpacer,
-  EuiCode,
+  OuiTitle,
+  OuiHorizontalRule,
+  OuiSpacer,
+  OuiCode,
 } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiTitle size="l">
+    <OuiTitle size="l">
       <h1>This is a large title, only one should exist per page</h1>
-    </EuiTitle>
-    <EuiCode language="js">size=&quot;l&quot;</EuiCode>
+    </OuiTitle>
+    <OuiCode language="js">size=&quot;l&quot;</OuiCode>
 
-    <EuiSpacer />
-    <EuiTitle>
+    <OuiSpacer />
+    <OuiTitle>
       <h2>This is the default size for title</h2>
-    </EuiTitle>
-    <EuiCode language="js">size=&quot;m&quot;</EuiCode>
+    </OuiTitle>
+    <OuiCode language="js">size=&quot;m&quot;</OuiCode>
 
-    <EuiSpacer />
-    <EuiTitle size="s">
+    <OuiSpacer />
+    <OuiTitle size="s">
       <h3>This is a small title</h3>
-    </EuiTitle>
-    <EuiCode language="js">size=&quot;s&quot;</EuiCode>
+    </OuiTitle>
+    <OuiCode language="js">size=&quot;s&quot;</OuiCode>
 
-    <EuiSpacer />
-    <EuiTitle size="xs">
+    <OuiSpacer />
+    <OuiTitle size="xs">
       <h4>This is an extra small title</h4>
-    </EuiTitle>
-    <EuiCode language="js">size=&quot;xs&quot;</EuiCode>
+    </OuiTitle>
+    <OuiCode language="js">size=&quot;xs&quot;</OuiCode>
 
-    <EuiSpacer />
-    <EuiTitle size="xxs">
+    <OuiSpacer />
+    <OuiTitle size="xxs">
       <h5>This is an extra extra small title</h5>
-    </EuiTitle>
-    <EuiCode language="js">size=&quot;xxs&quot;</EuiCode>
+    </OuiTitle>
+    <OuiCode language="js">size=&quot;xxs&quot;</OuiCode>
 
-    <EuiSpacer />
-    <EuiTitle size="xxxs">
+    <OuiSpacer />
+    <OuiTitle size="xxxs">
       <h6>
         This is an extra extra extra small title and should only be used when
         the title is inconsequential (like a label)
       </h6>
-    </EuiTitle>
-    <EuiCode language="js">size=&quot;xxxs&quot;</EuiCode>
+    </OuiTitle>
+    <OuiCode language="js">size=&quot;xxxs&quot;</OuiCode>
 
-    <EuiHorizontalRule />
+    <OuiHorizontalRule />
 
-    <EuiTitle size="l">
+    <OuiTitle size="l">
       <span>Titles are markup agnostic, they only confer style</span>
-    </EuiTitle>
+    </OuiTitle>
   </div>
 );

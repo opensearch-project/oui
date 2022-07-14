@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,28 +33,28 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 
-import { EuiScreenReaderOnly } from '../../accessibility';
+import { OuiScreenReaderOnly } from '../../accessibility';
 import {
-  EuiSuperSelectControl,
-  EuiSuperSelectControlProps,
-  EuiSuperSelectOption,
+  OuiSuperSelectControl,
+  OuiSuperSelectControlProps,
+  OuiSuperSelectOption,
 } from './super_select_control';
-import { EuiInputPopover } from '../../popover';
+import { OuiInputPopover } from '../../popover';
 import {
-  EuiContextMenuItem,
-  EuiContextMenuItemLayoutAlignment,
+  OuiContextMenuItem,
+  OuiContextMenuItemLayoutAlignment,
 } from '../../context_menu';
 import { keys } from '../../../services';
-import { EuiI18n } from '../../i18n';
+import { OuiI18n } from '../../i18n';
 
 enum ShiftDirection {
   BACK = 'back',
   FORWARD = 'forward',
 }
 
-export type EuiSuperSelectProps<T extends string> = CommonProps &
+export type OuiSuperSelectProps<T extends string> = CommonProps &
   Omit<
-    EuiSuperSelectControlProps<T>,
+    OuiSuperSelectControlProps<T>,
     'onChange' | 'onClick' | 'options' | 'value'
   > & {
     /**
@@ -52,7 +63,7 @@ export type EuiSuperSelectProps<T extends string> = CommonProps &
      * `inputDisplay`: what shows inside the form input when selected
      * `dropdownDisplay` (optional): what shows for the item in the dropdown
      */
-    options: Array<EuiSuperSelectOption<T>>;
+    options: Array<OuiSuperSelectOption<T>>;
 
     valueOfSelected?: T;
 
@@ -73,9 +84,9 @@ export type EuiSuperSelectProps<T extends string> = CommonProps &
     hasDividers?: boolean;
 
     /**
-     * Change `EuiContextMenuItem` layout position of icon
+     * Change `OuiContextMenuItem` layout position of icon
      */
-    itemLayoutAlign?: EuiContextMenuItemLayoutAlignment;
+    itemLayoutAlign?: OuiContextMenuItemLayoutAlignment;
 
     /**
      * Applied to the outermost wrapper (popover)
@@ -88,8 +99,8 @@ export type EuiSuperSelectProps<T extends string> = CommonProps &
     isOpen?: boolean;
   };
 
-export class EuiSuperSelect<T extends string> extends Component<
-  EuiSuperSelectProps<T>
+export class OuiSuperSelect<T extends string> extends Component<
+  OuiSuperSelectProps<T>
 > {
   static defaultProps = {
     hasDividers: false,
@@ -252,25 +263,25 @@ export class EuiSuperSelect<T extends string> extends Component<
       ...rest
     } = this.props;
 
-    const popoverClasses = classNames('euiSuperSelect', popoverClassName);
+    const popoverClasses = classNames('ouiSuperSelect', popoverClassName);
 
     const buttonClasses = classNames(
       {
-        'euiSuperSelect--isOpen__button': this.state.isPopoverOpen,
+        'ouiSuperSelect--isOpen__button': this.state.isPopoverOpen,
       },
       className
     );
 
     const itemClasses = classNames(
-      'euiSuperSelect__item',
+      'ouiSuperSelect__item',
       {
-        'euiSuperSelect__item--hasDividers': hasDividers,
+        'ouiSuperSelect__item--hasDividers': hasDividers,
       },
       itemClassName
     );
 
     const button = (
-      <EuiSuperSelectControl
+      <OuiSuperSelectControl
         options={options}
         value={valueOfSelected}
         onClick={
@@ -289,7 +300,7 @@ export class EuiSuperSelect<T extends string> extends Component<
       const { value, dropdownDisplay, inputDisplay, ...optionRest } = option;
 
       return (
-        <EuiContextMenuItem
+        <OuiContextMenuItem
           key={index}
           className={itemClasses}
           icon={valueOfSelected === value ? 'check' : 'empty'}
@@ -302,36 +313,36 @@ export class EuiSuperSelect<T extends string> extends Component<
           aria-selected={valueOfSelected === value}
           {...optionRest}>
           {dropdownDisplay || inputDisplay}
-        </EuiContextMenuItem>
+        </OuiContextMenuItem>
       );
     });
 
     return (
-      <EuiInputPopover
+      <OuiInputPopover
         className={popoverClasses}
         input={button}
         isOpen={isOpen || this.state.isPopoverOpen}
         closePopover={this.closePopover}
         panelPaddingSize="none"
         fullWidth={fullWidth}>
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <p role="alert">
-            <EuiI18n
-              token="euiSuperSelect.screenReaderAnnouncement"
+            <OuiI18n
+              token="ouiSuperSelect.screenReaderAnnouncement"
               default="You are in a form selector of {optionsCount} items and must select a single option.
               Use the up and down keys to navigate or escape to close."
               values={{ optionsCount: options.length }}
             />
           </p>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
         <div
-          className="euiSuperSelect__listbox"
+          className="ouiSuperSelect__listbox"
           role="listbox"
           aria-activedescendant={valueOfSelected}
           tabIndex={0}>
           {items}
         </div>
-      </EuiInputPopover>
+      </OuiInputPopover>
     );
   }
 }

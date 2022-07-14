@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`DefaultItemAction render - button 1`] = `
-<EuiToolTip
+<OuiToolTip
   content="action 1"
   delay="long"
   position="top"
 >
-  <EuiButtonEmpty
+  <OuiButtonEmpty
     color="primary"
     flush="right"
     isDisabled={false}
@@ -14,17 +14,17 @@ exports[`DefaultItemAction render - button 1`] = `
     size="s"
   >
     action1
-  </EuiButtonEmpty>
-</EuiToolTip>
+  </OuiButtonEmpty>
+</OuiToolTip>
 `;
 
 exports[`DefaultItemAction render - default button 1`] = `
-<EuiToolTip
+<OuiToolTip
   content="action 1"
   delay="long"
   position="top"
 >
-  <EuiButtonEmpty
+  <OuiButtonEmpty
     color="primary"
     flush="right"
     isDisabled={false}
@@ -32,24 +32,24 @@ exports[`DefaultItemAction render - default button 1`] = `
     size="s"
   >
     action1
-  </EuiButtonEmpty>
-</EuiToolTip>
+  </OuiButtonEmpty>
+</OuiToolTip>
 `;
 
 exports[`DefaultItemAction render - icon 1`] = `
-<EuiToolTip
+<OuiToolTip
   content="action 1"
   delay="long"
   position="top"
 >
-  <EuiButtonIcon
+  <OuiButtonIcon
     aria-labelledby="generated-id"
     color="primary"
     iconType="trash"
     isDisabled={false}
     onClick={[Function]}
   />
-  <EuiScreenReaderOnly>
+  <OuiScreenReaderOnly>
     <span
       id="generated-id"
     >
@@ -57,17 +57,17 @@ exports[`DefaultItemAction render - icon 1`] = `
         action1
       </span>
     </span>
-  </EuiScreenReaderOnly>
-</EuiToolTip>
+  </OuiScreenReaderOnly>
+</OuiToolTip>
 `;
 
 exports[`DefaultItemAction render - name 1`] = `
-<EuiToolTip
+<OuiToolTip
   content="action 1"
   delay="long"
   position="top"
 >
-  <EuiButtonEmpty
+  <OuiButtonEmpty
     color="primary"
     flush="right"
     isDisabled={false}
@@ -77,6 +77,6 @@ exports[`DefaultItemAction render - name 1`] = `
     <span>
       xyz
     </span>
-  </EuiButtonEmpty>
-</EuiToolTip>
+  </OuiButtonEmpty>
+</OuiToolTip>
 `;

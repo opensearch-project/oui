@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -7,14 +18,14 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiPanel,
-  EuiText,
-  EuiCallOut,
+  OuiCode,
+  OuiPanel,
+  OuiText,
+  OuiCallOut,
 } from '../../../../src/components';
 import {
-  _EuiSplitPanelOuter,
-  _EuiSplitPanelInner,
+  _OuiSplitPanelOuter,
+  _OuiSplitPanelInner,
 } from '../../../../src/components/panel/split_panel/split_panel';
 
 import { panelConfig } from './playground';
@@ -40,49 +51,49 @@ import SplitPanel from './split_panel';
 const splitPanelSource = require('!!raw-loader!./split_panel');
 const splitPanelHtml = renderToHtml(SplitPanel);
 
-const panelSnippet = `<EuiPanel paddingSize="none">
+const panelSnippet = `<OuiPanel paddingSize="none">
   <!-- Panel with no padding -->
-</EuiPanel>`;
+</OuiPanel>`;
 
 const panelShadowSnippet = [
-  `<EuiPanel hasShadow={false}>
+  `<OuiPanel hasShadow={false}>
   <!-- Panel without shadow -->
-</EuiPanel>`,
-  `<EuiPanel hasBorder={false}>
+</OuiPanel>`,
+  `<OuiPanel hasBorder={false}>
   <!-- Panel without border -->
-</EuiPanel>`,
+</OuiPanel>`,
 ];
 
 const panelColorSnippet = [
-  `<EuiPanel color="subdued" borderRadius="none">
+  `<OuiPanel color="subdued" borderRadius="none">
   <!-- Panel with gray background and no rounded corners -->
-</EuiPanel>`,
-  `<EuiPanel color="transparent" hasBorder={false}>
+</OuiPanel>`,
+  `<OuiPanel color="transparent" hasBorder={false}>
   <!-- Transparent panel -->
-</EuiPanel>`,
+</OuiPanel>`,
 ];
 
-const panelGrowSnippet = `<EuiPanel grow={false}>
+const panelGrowSnippet = `<OuiPanel grow={false}>
   <!-- Panel whose height won't grow to match -->
-</EuiPanel>`;
+</OuiPanel>`;
 
 const splitPanelSnippet = [
-  `<EuiSplitPanel.Outer>
-  <EuiSplitPanel.Inner>
+  `<OuiSplitPanel.Outer>
+  <OuiSplitPanel.Inner>
     <!-- Top panel content -->
-  </EuiSplitPanel.Inner>
-  <EuiSplitPanel.Inner color="subdued">
+  </OuiSplitPanel.Inner>
+  <OuiSplitPanel.Inner color="subdued">
     <!-- Bottom panel content -->
-  </EuiSplitPanel.Inner>
-</EuiSplitPanel.Outer>`,
-  `<EuiSplitPanel.Outer direction="row">
-  <EuiSplitPanel.Inner>
+  </OuiSplitPanel.Inner>
+</OuiSplitPanel.Outer>`,
+  `<OuiSplitPanel.Outer direction="row">
+  <OuiSplitPanel.Inner>
     <!-- Left panel content -->
-  </EuiSplitPanel.Inner>
-  <EuiSplitPanel.Inner color="subdued">
+  </OuiSplitPanel.Inner>
+  <OuiSplitPanel.Inner color="subdued">
     <!-- Right panel content -->
-  </EuiSplitPanel.Inner>
-</EuiSplitPanel.Outer>`,
+  </OuiSplitPanel.Inner>
+</OuiSplitPanel.Outer>`,
 ];
 
 export const PanelExample = {
@@ -90,25 +101,25 @@ export const PanelExample = {
   guidelines: <Guidelines />,
   intro: (
     <>
-      <EuiText>
+      <OuiText>
         <p>
-          <strong>EuiPanel</strong> is a building block component. Use it as a
+          <strong>OuiPanel</strong> is a building block component. Use it as a
           layout helper for containing content. It is also commonly used as a
           base for other larger components like{' '}
           <Link to="/layout/page">
-            <strong>EuiPage</strong>
+            <strong>OuiPage</strong>
           </Link>
           ,{' '}
           <Link to="/layout/popover">
-            <strong>EuiPopover</strong>
+            <strong>OuiPopover</strong>
           </Link>
           and{' '}
           <Link to="/display/card">
-            <strong>EuiCard</strong>
+            <strong>OuiCard</strong>
           </Link>
           .
         </p>
-      </EuiText>
+      </OuiText>
     </>
   ),
   sections: [
@@ -127,7 +138,7 @@ export const PanelExample = {
       text: (
         <p>The most basic use is to simply add padding around your content.</p>
       ),
-      props: { EuiPanel },
+      props: { OuiPanel },
       snippet: panelSnippet,
       demo: <Panel />,
       playground: panelConfig,
@@ -147,26 +158,26 @@ export const PanelExample = {
       text: (
         <>
           <p>
-            <strong>EuiPanel</strong> can give depth to your container with{' '}
-            <EuiCode>hasShadow</EuiCode> while <EuiCode>hasBorder</EuiCode> can
+            <strong>OuiPanel</strong> can give depth to your container with{' '}
+            <OuiCode>hasShadow</OuiCode> while <OuiCode>hasBorder</OuiCode> can
             add containment. Just be sure not to include too many nested panels
             with these settings.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             title="Certain allowed combinations of shadow, border, and color depend on the current theme.">
             <p>
               For instance, only plain or transparent panels can have a border
               and/or shadow. The Amsterdam theme doesn&apos;t allow combining
-              the <EuiCode>hasBorder</EuiCode> option with{' '}
-              <EuiCode>hasShadow</EuiCode>. The default theme only allows
-              removing the border if both <EuiCode>hasShadow</EuiCode> and{' '}
-              <EuiCode>hasBorder</EuiCode> are set to <EuiCode>false</EuiCode>.
+              the <OuiCode>hasBorder</OuiCode> option with{' '}
+              <OuiCode>hasShadow</OuiCode>. The default theme only allows
+              removing the border if both <OuiCode>hasShadow</OuiCode> and{' '}
+              <OuiCode>hasBorder</OuiCode> are set to <OuiCode>false</OuiCode>.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </>
       ),
-      props: { EuiPanel },
+      props: { OuiPanel },
       snippet: panelShadowSnippet,
       demo: <PanelShadow />,
     },
@@ -185,19 +196,19 @@ export const PanelExample = {
       text: (
         <>
           <p>
-            Use <EuiCode>color</EuiCode> to add background shading to your panel
+            Use <OuiCode>color</OuiCode> to add background shading to your panel
             and provide an additional helpful aesthetic to your container in
             context. Be mindful to use color sparingly. You can also remove the
             rounded corners depending on the placement of your panel with{' '}
-            <EuiCode language="tsx">{'borderRadius="none"'}</EuiCode>
+            <OuiCode language="tsx">{'borderRadius="none"'}</OuiCode>
           </p>
           <p>
-            Passing <EuiCode language="ts">{'color="transparent"'}</EuiCode> can
+            Passing <OuiCode language="ts">{'color="transparent"'}</OuiCode> can
             give you a quick empty box simply for adding padding to all sides.
           </p>
         </>
       ),
-      props: { EuiPanel },
+      props: { OuiPanel },
       snippet: panelColorSnippet,
       demo: <PanelColor />,
     },
@@ -215,16 +226,16 @@ export const PanelExample = {
       ],
       text: (
         <p>
-          Using <strong>EuiPanel</strong> in an{' '}
+          Using <strong>OuiPanel</strong> in an{' '}
           <Link to="/layout/flex#panels-grow-to-fill-flex-items">
-            <strong>EuiFlexItem</strong>
+            <strong>OuiFlexItem</strong>
           </Link>{' '}
           will always grow its height to match. This is great for rows of
           panels. However, you can also turn this feature off by setting{' '}
-          <EuiCode language="tsx">{'grow={false}'}</EuiCode>.
+          <OuiCode language="tsx">{'grow={false}'}</OuiCode>.
         </p>
       ),
-      props: { EuiPanel },
+      props: { OuiPanel },
       snippet: panelGrowSnippet,
       demo: <PanelGrow />,
     },
@@ -243,25 +254,25 @@ export const PanelExample = {
       text: (
         <>
           <p>
-            <strong>EuiSplitPanel</strong> is a composition of an outer and
-            multiple inner <strong>EuiPanels</strong>. It is a namespaced
+            <strong>OuiSplitPanel</strong> is a composition of an outer and
+            multiple inner <strong>OuiPanels</strong>. It is a namespaced
             component that you consume using{' '}
-            <EuiCode>EuiSplitPanel.Outer</EuiCode> and{' '}
-            <EuiCode>EuiSplitPanel.Inner</EuiCode> respectively. You can supply
+            <OuiCode>OuiSplitPanel.Outer</OuiCode> and{' '}
+            <OuiCode>OuiSplitPanel.Inner</OuiCode> respectively. You can supply
             the same panel props to both components with the exception of a few
             to ensure the visual layout is correct. It also has two directions,{' '}
-            <EuiCode>column</EuiCode> (default) and <EuiCode>row</EuiCode>.
+            <OuiCode>column</OuiCode> (default) and <OuiCode>row</OuiCode>.
           </p>
           <p>
             For custom responsiveness, you can adjust at which breakpoints a{' '}
-            <EuiCode>row</EuiCode> layout will stack by passing a new array of
-            breakpoint names <EuiCode>{"['xs', 's']"}</EuiCode> to the{' '}
-            <EuiCode>responsive</EuiCode> prop, or completely turn it off with{' '}
-            <EuiCode>false</EuiCode>.
+            <OuiCode>row</OuiCode> layout will stack by passing a new array of
+            breakpoint names <OuiCode>{"['xs', 's']"}</OuiCode> to the{' '}
+            <OuiCode>responsive</OuiCode> prop, or completely turn it off with{' '}
+            <OuiCode>false</OuiCode>.
           </p>
         </>
       ),
-      props: { _EuiSplitPanelOuter, _EuiSplitPanelInner },
+      props: { _OuiSplitPanelOuter, _OuiSplitPanelInner },
       snippet: splitPanelSnippet,
       demo: <SplitPanel />,
     },

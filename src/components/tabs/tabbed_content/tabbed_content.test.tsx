@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@ import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps, findTestSubject } from '../../../test';
 
-import { EuiTabbedContent, AUTOFOCUS } from './tabbed_content';
+import { OuiTabbedContent, AUTOFOCUS } from './tabbed_content';
 
 const elasticsearchTab = {
   id: 'es',
@@ -38,10 +49,10 @@ const kibanaTab = {
 
 const tabs = [elasticsearchTab, kibanaTab];
 
-describe('EuiTabbedContent', () => {
+describe('OuiTabbedContent', () => {
   test('is rendered with required props and tabs', () => {
     const component = render(
-      <EuiTabbedContent {...requiredProps} tabs={tabs} />
+      <OuiTabbedContent {...requiredProps} tabs={tabs} />
     );
     expect(component).toMatchSnapshot();
   });
@@ -51,7 +62,7 @@ describe('EuiTabbedContent', () => {
       test('is called when a tab is clicked', () => {
         const onTabClickHandler = jest.fn();
         const component = mount(
-          <EuiTabbedContent onTabClick={onTabClickHandler} tabs={tabs} />
+          <OuiTabbedContent onTabClick={onTabClickHandler} tabs={tabs} />
         );
         findTestSubject(component, 'kibanaTab').simulate('click');
         expect(onTabClickHandler).toBeCalledTimes(1);
@@ -62,7 +73,7 @@ describe('EuiTabbedContent', () => {
     describe('selectedTab', () => {
       test('renders a selected tab', () => {
         const component = render(
-          <EuiTabbedContent selectedTab={kibanaTab} tabs={tabs} />
+          <OuiTabbedContent selectedTab={kibanaTab} tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -71,7 +82,7 @@ describe('EuiTabbedContent', () => {
     describe('initialSelectedTab', () => {
       test('renders a selected tab', () => {
         const component = render(
-          <EuiTabbedContent initialSelectedTab={kibanaTab} tabs={tabs} />
+          <OuiTabbedContent initialSelectedTab={kibanaTab} tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -79,7 +90,7 @@ describe('EuiTabbedContent', () => {
 
     describe('size', () => {
       test('can be small', () => {
-        const component = render(<EuiTabbedContent size="s" tabs={tabs} />);
+        const component = render(<OuiTabbedContent size="s" tabs={tabs} />);
         expect(component).toMatchSnapshot();
       });
     });
@@ -87,7 +98,7 @@ describe('EuiTabbedContent', () => {
     describe('display', () => {
       test('can be condensed', () => {
         const component = render(
-          <EuiTabbedContent display="condensed" tabs={tabs} />
+          <OuiTabbedContent display="condensed" tabs={tabs} />
         );
         expect(component).toMatchSnapshot();
       });
@@ -97,7 +108,7 @@ describe('EuiTabbedContent', () => {
       AUTOFOCUS.forEach((focusType) => {
         test(`${focusType} is rendered`, () => {
           const component = render(
-            <EuiTabbedContent autoFocus={focusType} tabs={tabs} />
+            <OuiTabbedContent autoFocus={focusType} tabs={tabs} />
           );
 
           expect(component).toMatchSnapshot();
@@ -108,7 +119,7 @@ describe('EuiTabbedContent', () => {
 
   describe('behavior', () => {
     test("when selected tab state isn't controlled by the owner, select the first tab by default", () => {
-      const component = render(<EuiTabbedContent tabs={tabs} />);
+      const component = render(<OuiTabbedContent tabs={tabs} />);
       expect(component).toMatchSnapshot();
     });
 
@@ -119,9 +130,9 @@ describe('EuiTabbedContent', () => {
           ...kibanaTab,
         },
       ];
-      const component = mount(<EuiTabbedContent tabs={tabs} />);
+      const component = mount(<OuiTabbedContent tabs={tabs} />);
 
-      component.find('EuiTab[id="kibana"] button').first().simulate('click');
+      component.find('OuiTab[id="kibana"] button').first().simulate('click');
 
       component.setProps({
         tabs: [

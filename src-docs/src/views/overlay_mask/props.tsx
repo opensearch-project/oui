@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { FunctionComponent, ReactNode } from 'react';
 import { CommonProps } from '../../../../src/components/common';
 
-interface EuiOverlayMaskInterface extends CommonProps {
+interface OuiOverlayMaskInterface extends CommonProps {
   /**
    * Function that applies to clicking the mask itself and not the children
    */
@@ -11,11 +22,11 @@ interface EuiOverlayMaskInterface extends CommonProps {
    */
   children?: ReactNode;
   /**
-   * Should the mask visually sit above or below the EuiHeader (controlled by z-index)
+   * Should the mask visually sit above or below the OuiHeader (controlled by z-index)
    */
   headerZindexLocation?: 'above' | 'below';
 }
 
-export const EuiOverlayMaskProps: FunctionComponent<EuiOverlayMaskInterface> = () => (
+export const OuiOverlayMaskProps: FunctionComponent<OuiOverlayMaskInterface> = () => (
   <div />
 );

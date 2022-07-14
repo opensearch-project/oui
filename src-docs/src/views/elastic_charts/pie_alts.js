@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /* eslint-disable no-nested-ternary */
 import React, { useState, Fragment, useContext } from 'react';
 import groupBy from 'lodash/groupBy';
@@ -10,26 +21,26 @@ import { ThemeContext } from '../../components';
 import { Chart, Settings, Axis, BarSeries } from '@elastic/charts';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
 } from '../../../../src/themes/charts/themes';
 
 import {
-  EuiSwitch,
-  EuiSpacer,
-  EuiTitle,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiCopy,
-  EuiButton,
+  OuiSwitch,
+  OuiSpacer,
+  OuiTitle,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiCopy,
+  OuiButton,
 } from '../../../../src/components';
 
 import { GITHUB_DATASET, GITHUB_DATASET_MOD, DAYS_OF_RAIN } from './data';
 import { ChartCard } from './shared';
 import {
-  euiPaletteForTemperature,
-  euiPaletteColorBlind,
-  euiPaletteGray,
+  ouiPaletteForTemperature,
+  ouiPaletteColorBlind,
+  ouiPaletteGray,
 } from '../../../../src/services';
 
 export default () => {
@@ -44,17 +55,17 @@ export default () => {
 
   const isDarkTheme = themeContext.theme.includes('dark');
   const theme = isDarkTheme
-    ? EUI_CHARTS_THEME_DARK.theme
-    : EUI_CHARTS_THEME_LIGHT.theme;
+    ? OUI_CHARTS_THEME_DARK.theme
+    : OUI_CHARTS_THEME_LIGHT.theme;
 
-  let color = euiPaletteColorBlind({ rotations: 2, order: 'group' }).slice(
+  let color = ouiPaletteColorBlind({ rotations: 2, order: 'group' }).slice(
     18,
     20
   );
   if (formatted) {
     color = [
-      euiPaletteForTemperature()[0],
-      euiPaletteGray(5)[isDarkTheme ? 4 : 0],
+      ouiPaletteForTemperature()[0],
+      ouiPaletteGray(5)[isDarkTheme ? 4 : 0],
     ];
   }
 
@@ -65,7 +76,7 @@ export default () => {
       ? orderBy(DAYS_OF_RAIN, ['precipitation', 'days'], ['desc', 'asc'])
       : DAYS_OF_RAIN;
     usesRainData = true;
-    color = euiPaletteForTemperature(3);
+    color = ouiPaletteForTemperature(3);
   } else {
     const DATASET = grouped ? GITHUB_DATASET_MOD : GITHUB_DATASET;
     data = orderBy(DATASET, 'issueType', 'asc');
@@ -128,11 +139,11 @@ export default () => {
     <Fragment>
       {usesRainData ? (
         <>
-          <EuiTitle size="xxs">
+          <OuiTitle size="xxs">
             <h3>Percentage of rainfall per season</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer size="s" />
+          <OuiSpacer size="s" />
 
           <Chart size={{ height: 300 }}>
             <Settings theme={theme} rotation={rotated ? 90 : 0} />
@@ -158,14 +169,14 @@ export default () => {
         </>
       ) : (
         <>
-          <EuiTitle size="xxs">
+          <OuiTitle size="xxs">
             <h3>
               {formatted ? 'Percentage' : 'Number'} of GitHub issues per
               visualization type
             </h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer size="s" />
+          <OuiSpacer size="s" />
 
           <Chart size={{ height: 300 }}>
             <Settings
@@ -196,72 +207,72 @@ export default () => {
         </>
       )}
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGrid columns={3}>
-        <EuiFlexItem>
+      <OuiFlexGrid columns={3}>
+        <OuiFlexItem>
           <ChartCard title={title} description={description}>
             {formatted && stacked && (
-              <EuiSwitch
+              <OuiSwitch
                 label="Use percentage data"
                 checked={formattedData}
                 onChange={(e) => setFormattedData(e.target.checked)}
               />
             )}
           </ChartCard>
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
+        <OuiFlexItem>
           <ChartCard
             textAlign="left"
             title="Bar chart options"
             description="Compare how the following options change the understanding of the data with that of the sunburst or treemap chart.">
-            <EuiSwitch
+            <OuiSwitch
               label="Stacked bar chart"
               checked={stacked}
               onChange={(e) => setStacked(e.target.checked)}
             />
-            <EuiSpacer size="s" />
-            <EuiSwitch
+            <OuiSpacer size="s" />
+            <OuiSwitch
               label="Group 'Other' slices"
               checked={grouped}
               onChange={(e) => setGrouped(e.target.checked)}
             />
-            <EuiSpacer size="s" />
-            <EuiSwitch
+            <OuiSpacer size="s" />
+            <OuiSwitch
               label="Show as percentages"
               checked={formatted}
               onChange={(e) => setFormatted(e.target.checked)}
             />
           </ChartCard>
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
+        <OuiFlexItem>
           <ChartCard
             title="Order and rotation"
             description="Categorical data is often easier to compare when sorted by sequence. Use a horizontal layout when you need more space for the category labels.">
-            <EuiSwitch
+            <OuiSwitch
               label="Order by count descending"
               checked={ordered}
               onChange={(e) => setOrdered(e.target.checked)}
             />
-            <EuiSpacer size="s" />
-            <EuiSwitch
+            <OuiSpacer size="s" />
+            <OuiSwitch
               label="Rotate 90deg"
               checked={rotated}
               onChange={(e) => setRotated(e.target.checked)}
             />
           </ChartCard>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <div className="eui-textCenter">
-        <EuiCopy
+      <div className="oui-textCenter">
+        <OuiCopy
           textToCopy={`<Chart size={{height: 300}}>
   <Settings
-    theme={isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LIGHT.theme}
+    theme={isDarkTheme ? OUI_CHARTS_THEME_DARK.theme : OUI_CHARTS_THEME_LIGHT.theme}
     rotation={${rotated ? 90 : 0}}
     showLegend={${usesRainData ? 'false' : 'true'}}
     ${usesRainData ? '' : 'legendPosition="right"'}
@@ -287,8 +298,8 @@ export default () => {
     }
     color={${
       formatted
-        ? '[euiPaletteForTemperature()[0], euiPaletteGray(5)[isDarkTheme ? 4 : 0]]'
-        : "euiPaletteColorBlind({ rotations: 2, order: 'group' }).slice(18, 20)"
+        ? '[ouiPaletteForTemperature()[0], ouiPaletteGray(5)[isDarkTheme ? 4 : 0]]'
+        : "ouiPaletteColorBlind({ rotations: 2, order: 'group' }).slice(18, 20)"
     }}
   />
   <Axis
@@ -307,7 +318,7 @@ export default () => {
   />
 </Chart>`}>
           {(copy) => (
-            <EuiButton
+            <OuiButton
               disabled={isMisleadingChart || isBadChart}
               fill
               onClick={copy}
@@ -317,9 +328,9 @@ export default () => {
                   ? 'This chart is misleading'
                   : "Bad chart, don't copy"
                 : 'Copy code of current configuration'}
-            </EuiButton>
+            </OuiButton>
           )}
-        </EuiCopy>
+        </OuiCopy>
       </div>
     </Fragment>
   );

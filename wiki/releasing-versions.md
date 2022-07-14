@@ -26,11 +26,11 @@ For information on releasing the eslint plugin checkout the readme in [packages/
 
 # Backport process
 
-In general, we strongly encourage updating to the latest version of EUI to obtain bug fixes, and we do not actively consider backporting fixes to previous major or minor release versions. The exception to this is when supporting Kibana's release process, as we want to avoid pushing larger changes near the feature freeze.
+In general, we strongly encourage updating to the latest version of OUI to obtain bug fixes, and we do not actively consider backporting fixes to previous major or minor release versions. The exception to this is when supporting Kibana's release process, as we want to avoid pushing larger changes near the feature freeze.
 
 ### Tracking issue
 
-When preparing for a backport a GitHub issue should be created in EUI referencing the relevant issues and/or PRs to be included - see https://github.com/elastic/eui/issues/3386 as an example. This issue is used to keep track of the patch's completion progress and to ensure the desired changes are included in the release.
+When preparing for a backport a GitHub issue should be created in OUI referencing the relevant issues and/or PRs to be included - see https://github.com/elastic/eui/issues/3386 as an example. This issue is used to keep track of the patch's completion progress and to ensure the desired changes are included in the release.
 
 ### Patch process
 
@@ -39,8 +39,8 @@ This provides a walkthrough of the patching & backport release process; examples
 * Unless it is unreasonable, begin by performing a full release from the `master` branch. This ensures the changelog is prepared for referencing later by the backport, and pulls in all commits that will be used by the backport.
   * Switch to `master` - `git checkout master`
   * Run the release script and follow the prompts - `npm run release`
-* Identify the target version of EUI to patch; GitHub issue says the new version should be `22.3.1` and I confirmed the patch's base is `22.3.0`
-  * in the EUI git repo, checkout the release tag the patch is intended for - `git checkout v22.3.0`
+* Identify the target version of OUI to patch; GitHub issue says the new version should be `22.3.1` and I confirmed the patch's base is `22.3.0`
+  * in the OUI git repo, checkout the release tag the patch is intended for - `git checkout v22.3.0`
   * create a new branch from the versioned tag, the name is unimportant but I use the target version without a leading `v` - `git checkout -b 22.3.1`
 * Run `yarn` to ensure you have the correct dependencies for that point in time installed
 * Apply the commit(s) with the desired changes

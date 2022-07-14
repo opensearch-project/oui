@@ -1,11 +1,22 @@
-@mixin euiPanel($selector) {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@mixin ouiPanel($selector) {
   @if variable-exists(selector) == false {
-    @error 'A $selector must be provided to @mixin euiPanel().';
+    @error 'A $selector must be provided to @mixin ouiPanel().';
   } @else {
     #{$selector} {
-      background-color: $euiColorEmptyShade;
-      border: $euiBorderThin;
-      border-radius: $euiBorderRadius;
+      background-color: $ouiColorEmptyShade;
+      border: $ouiBorderThin;
+      border-radius: $ouiBorderRadius;
       flex-grow: 1;
 
       &#{$selector}--flexGrowZero {
@@ -17,13 +28,13 @@
       }
 
       &#{$selector}--hasShadow {
-        @include euiBottomShadowSmall;
-        border: $euiBorderThin;
+        @include ouiBottomShadowSmall;
+        border: $ouiBorderThin;
       }
 
       &#{$selector}--isClickable {
         // transition the shadow
-        transition: all $euiAnimSpeedFast $euiAnimSlightResistance;
+        transition: all $ouiAnimSpeedFast $ouiAnimSlightResistance;
 
         &:enabled { // This is a good selector for buttons since it doesn't exist on divs
           // in case of button wrapper which inherently is inline-block and no width
@@ -34,21 +45,21 @@
 
         &:hover,
         &:focus {
-          @include euiSlightShadowHover;
+          @include ouiSlightShadowHover;
           transform: translateY(-2px);
           cursor: pointer;
         }
       }
 
       // Border Radius
-      @each $modifier, $amount in $euiPanelBorderRadiusModifiers {
+      @each $modifier, $amount in $ouiPanelBorderRadiusModifiers {
         &#{$selector}--#{$modifier} {
           border-radius: $amount;
         }
       }
 
       // Background colors
-      @each $modifier, $color in $euiPanelBackgroundColorModifiers {
+      @each $modifier, $color in $ouiPanelBackgroundColorModifiers {
         &#{$selector}--#{$modifier} {
           background-color: $color;
         }

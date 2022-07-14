@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiAspectRatio } from '../../../../src/components/';
+import { OuiAspectRatio } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiAspectRatio.__docgenInfo)
-    ? EuiAspectRatio.__docgenInfo[0]
-    : EuiAspectRatio.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiAspectRatio.__docgenInfo)
+    ? OuiAspectRatio.__docgenInfo[0]
+    : OuiAspectRatio.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.height.value = 9;
@@ -28,14 +39,14 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiAspectRatio',
+      componentName: 'OuiAspectRatio',
       props: propsToUse,
       scope: {
-        EuiAspectRatio,
+        OuiAspectRatio,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiAspectRatio'],
+        '@opensearch-project/oui': {
+          named: ['OuiAspectRatio'],
         },
       },
     },

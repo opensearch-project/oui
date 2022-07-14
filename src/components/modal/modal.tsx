@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,13 +33,13 @@ import classnames from 'classnames';
 
 import { keys } from '../../services';
 
-import { EuiButtonIcon } from '../button';
+import { OuiButtonIcon } from '../button';
 
-import { EuiFocusTrap } from '../focus_trap';
-import { EuiOverlayMask } from '../overlay_mask';
-import { EuiI18n } from '../i18n';
+import { OuiFocusTrap } from '../focus_trap';
+import { OuiOverlayMask } from '../overlay_mask';
+import { OuiI18n } from '../i18n';
 
-export interface EuiModalProps extends HTMLAttributes<HTMLDivElement> {
+export interface OuiModalProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
   /**
    * ReactNode to render as this component's content
@@ -41,7 +52,7 @@ export interface EuiModalProps extends HTMLAttributes<HTMLDivElement> {
   ) => void;
   /**
    * Sets the max-width of the modal.
-   * Set to `true` to use the default (`euiBreakpoints 'm'`),
+   * Set to `true` to use the default (`ouiBreakpoints 'm'`),
    * set to `false` to not restrict the width,
    * set to a number for a custom width in px,
    * set to a string for a custom width in custom measurement.
@@ -54,7 +65,7 @@ export interface EuiModalProps extends HTMLAttributes<HTMLDivElement> {
   initialFocus?: HTMLElement | (() => HTMLElement) | string;
 }
 
-export const EuiModal: FunctionComponent<EuiModalProps> = ({
+export const OuiModal: FunctionComponent<OuiModalProps> = ({
   className,
   children,
   initialFocus,
@@ -74,17 +85,17 @@ export const EuiModal: FunctionComponent<EuiModalProps> = ({
   let newStyle;
   let widthClassName;
   if (maxWidth === true) {
-    widthClassName = 'euiModal--maxWidth-default';
+    widthClassName = 'ouiModal--maxWidth-default';
   } else if (maxWidth !== false) {
     const value = typeof maxWidth === 'number' ? `${maxWidth}px` : maxWidth;
     newStyle = { ...style, maxWidth: value };
   }
 
-  const classes = classnames('euiModal', widthClassName, className);
+  const classes = classnames('ouiModal', widthClassName, className);
 
   return (
-    <EuiOverlayMask>
-      <EuiFocusTrap initialFocus={initialFocus}>
+    <OuiOverlayMask>
+      <OuiFocusTrap initialFocus={initialFocus}>
         {
           // Create a child div instead of applying these props directly to FocusTrap, or else
           // fallbackFocus won't work.
@@ -95,22 +106,22 @@ export const EuiModal: FunctionComponent<EuiModalProps> = ({
           tabIndex={0}
           style={newStyle || style}
           {...rest}>
-          <EuiI18n
-            token="euiModal.closeModal"
+          <OuiI18n
+            token="ouiModal.closeModal"
             default="Closes this modal window">
             {(closeModal: string) => (
-              <EuiButtonIcon
+              <OuiButtonIcon
                 iconType="cross"
                 onClick={onClose}
-                className="euiModal__closeIcon"
+                className="ouiModal__closeIcon"
                 color="text"
                 aria-label={closeModal}
               />
             )}
-          </EuiI18n>
-          <div className="euiModal__flex">{children}</div>
+          </OuiI18n>
+          <div className="ouiModal__flex">{children}</div>
         </div>
-      </EuiFocusTrap>
-    </EuiOverlayMask>
+      </OuiFocusTrap>
+    </OuiOverlayMask>
   );
 };

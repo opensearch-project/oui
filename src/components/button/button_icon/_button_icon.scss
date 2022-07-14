@@ -1,12 +1,23 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // This file has lots of modifiers and is somewhat nesty by nature
 // sass-lint:disable nesting-depth
 
-.euiButtonIcon {
-  @include euiButton;
-  @include euiSlightShadow;
+.ouiButtonIcon {
+  @include ouiButton;
+  @include ouiSlightShadow;
 
-  border-radius: $euiBorderRadius;
-  width: $euiButtonHeight;
+  border-radius: $ouiBorderRadius;
+  width: $ouiButtonHeight;
 
   // Ensures center alignment of any sized icon inside buttons and anchors
   display: inline-flex;
@@ -19,71 +30,71 @@
     pointer-events: none;
   }
 
-  &.euiButtonIcon--empty {
+  &.ouiButtonIcon--empty {
     box-shadow: none !important; // sass-lint:disable-line no-important
     border: none;
   }
 
-  &.euiButtonIcon-isDisabled {
-    @include euiButtonContentDisabled;
-    color: $euiButtonColorDisabledText;
-    border-color: $euiButtonColorDisabled;
+  &.ouiButtonIcon-isDisabled {
+    @include ouiButtonContentDisabled;
+    color: $ouiButtonColorDisabledText;
+    border-color: $ouiButtonColorDisabled;
 
-    &.euiButtonIcon--fill {
+    &.ouiButtonIcon--fill {
       // Only increase the contrast of background color to text to 2.0 for disabled
-      color: makeHighContrastColor($euiButtonColorDisabled, $euiButtonColorDisabled, 2);
-      background-color: $euiButtonColorDisabled;
-      border-color: $euiButtonColorDisabled;
+      color: makeHighContrastColor($ouiButtonColorDisabled, $ouiButtonColorDisabled, 2);
+      background-color: $ouiButtonColorDisabled;
+      border-color: $ouiButtonColorDisabled;
 
       &:hover,
       &:focus,
       &:focus-within {
-        background-color: $euiButtonColorDisabled;
-        border-color: $euiButtonColorDisabled;
+        background-color: $ouiButtonColorDisabled;
+        border-color: $ouiButtonColorDisabled;
       }
     }
 
     &:hover,
     &:focus,
     &:focus-within {
-      @include euiSlightShadow;
+      @include ouiSlightShadow;
       text-decoration: none;
     }
   }
 }
 
-.euiButtonIcon--xSmall {
-  height: $euiButtonHeightXSmall;
-  width: $euiButtonHeightXSmall;
+.ouiButtonIcon--xSmall {
+  height: $ouiButtonHeightXSmall;
+  width: $ouiButtonHeightXSmall;
 }
 
-.euiButtonIcon--small {
-  height: $euiButtonHeightSmall;
-  width: $euiButtonHeightSmall;
+.ouiButtonIcon--small {
+  height: $ouiButtonHeightSmall;
+  width: $ouiButtonHeightSmall;
 }
 
 // Create button modifiers based upon the map.
-@each $name, $color in $euiButtonTypes {
-  .euiButtonIcon--#{$name} {
+@each $name, $color in $ouiButtonTypes {
+  .ouiButtonIcon--#{$name} {
     @if ($name == 'ghost') {
       // Ghost is unique and ALWAYS sits against a dark background.
       color: $color;
     } @else if ($name == 'text') {
       // The default color is lighter than the normal text color, make the it the text color
-      color: $euiTextColor;
+      color: $ouiTextColor;
     } @else {
       // Other colors need to check their contrast against the page background color.
-      color: makeHighContrastColor($color, $euiPageBackgroundColor);
+      color: makeHighContrastColor($color, $ouiPageBackgroundColor);
     }
 
     border-color: $color;
 
-    &.euiButtonIcon--fill {
+    &.ouiButtonIcon--fill {
       background-color: $color;
       border-color: $color;
 
       // The function makes that hexes safe for theming
-      $fillTextColor: chooseLightOrDarkText($color, $euiColorGhost, $euiColorInk);
+      $fillTextColor: chooseLightOrDarkText($color, $ouiColorGhost, $ouiColorInk);
 
       color: $fillTextColor;
 
@@ -98,20 +109,20 @@
     }
 
     &:not([class*='isDisabled']) {
-      $shadowColor: $euiShadowColor;
+      $shadowColor: $ouiShadowColor;
       @if ($name == 'ghost') {
-        $shadowColor: $euiColorInk;
-      } @else if (lightness($euiTextColor) < 50) {
+        $shadowColor: $ouiColorInk;
+      } @else if (lightness($ouiTextColor) < 50) {
         // Only if this is the light theme do we use the button variant color to colorize the shadow
         $shadowColor: desaturate($color, 60%);
       }
 
-      @include euiSlightShadow($shadowColor);
+      @include ouiSlightShadow($shadowColor);
 
       &:hover,
       &:focus,
       &:focus-within {
-        @include euiSlightShadowHover($shadowColor);
+        @include ouiSlightShadowHover($shadowColor);
         background-color: transparentize($color, .9);
       }
     }
@@ -119,18 +130,18 @@
 }
 
 // Fix ghost/disabled look specifically
-.euiButtonIcon.euiButtonIcon-isDisabled.euiButtonIcon--ghost {
+.ouiButtonIcon.ouiButtonIcon-isDisabled.ouiButtonIcon--ghost {
   &,
   &:hover,
   &:focus,
   &:focus-within {
-    @include euiSlightShadow($euiColorInk);
-    color: $euiButtonColorGhostDisabled;
-    border-color: $euiButtonColorGhostDisabled;
+    @include ouiSlightShadow($ouiColorInk);
+    color: $ouiButtonColorGhostDisabled;
+    border-color: $ouiButtonColorGhostDisabled;
   }
 
-  &.euiButton--fill {
-    background-color: $euiButtonColorGhostDisabled;
-    color: makeHighContrastColor($euiButtonColorGhostDisabled, $euiButtonColorGhostDisabled, 2);
+  &.ouiButton--fill {
+    background-color: $ouiButtonColorGhostDisabled;
+    color: makeHighContrastColor($ouiButtonColorGhostDisabled, $ouiButtonColorGhostDisabled, 2);
   }
 }

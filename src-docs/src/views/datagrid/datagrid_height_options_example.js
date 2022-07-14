@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 import {
-  EuiCallOut,
-  EuiCode,
-  EuiCodeBlock,
-  EuiSpacer,
+  OuiCallOut,
+  OuiCode,
+  OuiCodeBlock,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import DataGridRowHeightOptions from './row_height_options';
@@ -46,20 +57,20 @@ export const DataGridRowHeightOptionsExample = {
         <Fragment>
           <p>
             Row height options can be passed down to the grid through the{' '}
-            <EuiCode>rowHeightsOptions</EuiCode> prop. It accepts an object
+            <OuiCode>rowHeightsOptions</OuiCode> prop. It accepts an object
             configuring the default height and/or specific row heights:
           </p>
           <ul>
             <li>
-              <EuiCode>defaultHeight</EuiCode> - defines the default size for
+              <OuiCode>defaultHeight</OuiCode> - defines the default size for
               all rows
             </li>
             <li>
-              <EuiCode>rowHeights</EuiCode> - overrides the height for a
+              <OuiCode>rowHeights</OuiCode> - overrides the height for a
               specific row
             </li>
           </ul>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             title="Rows have minimum height requirements">
             <p>
@@ -67,11 +78,11 @@ export const DataGridRowHeightOptionsExample = {
               render at least one line of text. If you provide a smaller height
               the row will default to 34 pixels.
             </p>
-          </EuiCallOut>
-          <EuiSpacer />
-          <EuiCodeBlock language="javascript" paddingSize="s" isCopyable>
+          </OuiCallOut>
+          <OuiSpacer />
+          <OuiCodeBlock language="javascript" paddingSize="s" isCopyable>
             {rowHeightsSnippet}
-          </EuiCodeBlock>
+          </OuiCodeBlock>
         </Fragment>
       ),
       components: { DataGridRowHeightOptions },

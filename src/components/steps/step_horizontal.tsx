@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,7 +36,7 @@ import React, {
   MouseEventHandler,
 } from 'react';
 import { CommonProps } from '../common';
-import { EuiStepNumber, EuiStepStatus } from './step_number';
+import { OuiStepNumber, OuiStepStatus } from './step_number';
 import {
   useI18nCompleteStep,
   useI18nDisabledStep,
@@ -34,7 +45,7 @@ import {
   useI18nWarningStep,
 } from './step_strings';
 
-export interface EuiStepHorizontalProps
+export interface OuiStepHorizontalProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'>,
     CommonProps {
   /**
@@ -62,10 +73,10 @@ export interface EuiStepHorizontalProps
    * May replace the number provided in props.step with alternate styling.
    * The `isSelected`, `isComplete`, and `disabled` props will override these.
    */
-  status?: EuiStepStatus;
+  status?: OuiStepStatus;
 }
 
-export const EuiStepHorizontal: FunctionComponent<EuiStepHorizontalProps> = ({
+export const OuiStepHorizontal: FunctionComponent<OuiStepHorizontalProps> = ({
   className,
   step = 1,
   title,
@@ -82,11 +93,11 @@ export const EuiStepHorizontal: FunctionComponent<EuiStepHorizontalProps> = ({
   const incompleteTitle = useI18nIncompleteStep({ number: step, title });
   const warningTitle = useI18nWarningStep({ number: step, title });
 
-  const classes = classNames('euiStepHorizontal', className, {
-    'euiStepHorizontal-isSelected': isSelected,
-    'euiStepHorizontal-isComplete': isComplete,
-    'euiStepHorizontal-isIncomplete': !isSelected && !isComplete,
-    'euiStepHorizontal-isDisabled': disabled,
+  const classes = classNames('ouiStepHorizontal', className, {
+    'ouiStepHorizontal-isSelected': isSelected,
+    'ouiStepHorizontal-isComplete': isComplete,
+    'ouiStepHorizontal-isIncomplete': !isSelected && !isComplete,
+    'ouiStepHorizontal-isDisabled': disabled,
   });
 
   if (disabled) status = 'disabled';
@@ -113,13 +124,13 @@ export const EuiStepHorizontal: FunctionComponent<EuiStepHorizontalProps> = ({
       onClick={onStepClick}
       disabled={disabled}
       {...rest}>
-      <EuiStepNumber
-        className="euiStepHorizontal__number"
+      <OuiStepNumber
+        className="ouiStepHorizontal__number"
         status={status}
         number={step}
       />
 
-      <span className="euiStepHorizontal__title">{title}</span>
+      <span className="ouiStepHorizontal__title">{title}</span>
     </button>
   );
 };

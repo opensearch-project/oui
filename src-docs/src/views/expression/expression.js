@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiPopoverTitle,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiPopover,
-  EuiSelect,
-  EuiFieldNumber,
-  EuiExpression,
+  OuiPopoverTitle,
+  OuiFlexItem,
+  OuiFlexGroup,
+  OuiPopover,
+  OuiSelect,
+  OuiFieldNumber,
+  OuiExpression,
 } from '../../../../src/components';
 
 // Rise the popovers above GuidePageSideNav
@@ -84,8 +95,8 @@ export default () => {
 
   const renderPopover1 = () => (
     <div style={POPOVER_STYLE}>
-      <EuiPopoverTitle>When</EuiPopoverTitle>
-      <EuiSelect
+      <OuiPopoverTitle>When</OuiPopoverTitle>
+      <OuiSelect
         compressed
         value={example1.value}
         onChange={changeExample1}
@@ -103,9 +114,9 @@ export default () => {
 
   const renderPopover2 = () => (
     <div style={POPOVER_STYLE}>
-      <EuiFlexGroup gutterSize="s">
-        <EuiFlexItem grow={false} style={{ width: 150 }}>
-          <EuiSelect
+      <OuiFlexGroup gutterSize="s">
+        <OuiFlexItem grow={false} style={{ width: 150 }}>
+          <OuiSelect
             compressed
             value={example2.description}
             onChange={changeExample2Description}
@@ -115,26 +126,26 @@ export default () => {
               { value: 'Is exactly', text: 'Is exactly' },
             ]}
           />
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false} style={{ width: 100 }}>
-          <EuiFieldNumber
+        <OuiFlexItem grow={false} style={{ width: 100 }}>
+          <OuiFieldNumber
             compressed
             value={example2.value}
             onChange={changeExample2Value}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </div>
   );
 
   return (
-    <EuiFlexGroup gutterSize="s">
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+    <OuiFlexGroup gutterSize="s">
+      <OuiFlexItem grow={false}>
+        <OuiPopover
           id="popover1"
           button={
-            <EuiExpression
+            <OuiExpression
               description="when"
               value={example1.value}
               isActive={example1.isOpen}
@@ -146,15 +157,15 @@ export default () => {
           panelPaddingSize="s"
           anchorPosition="downLeft">
           {renderPopover1()}
-        </EuiPopover>
-      </EuiFlexItem>
+        </OuiPopover>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+      <OuiFlexItem grow={false}>
+        <OuiPopover
           id="popover2"
           panelPaddingSize="s"
           button={
-            <EuiExpression
+            <OuiExpression
               description={example2.description}
               value={example2.value}
               isActive={example2.isOpen}
@@ -165,8 +176,8 @@ export default () => {
           closePopover={closeExample2}
           anchorPosition="downLeft">
           {renderPopover2()}
-        </EuiPopover>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiPopover>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 };

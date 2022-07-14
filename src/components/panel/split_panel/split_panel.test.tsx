@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiSplitPanel } from './split_panel';
+import { OuiSplitPanel } from './split_panel';
 
-describe('EuiSplitPanel', () => {
+describe('OuiSplitPanel', () => {
   test('is rendered', () => {
-    const component = render(<EuiSplitPanel.Outer {...requiredProps} />);
+    const component = render(<OuiSplitPanel.Outer {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,9 +44,9 @@ describe('EuiSplitPanel', () => {
   describe('inner children', () => {
     test('are rendered', () => {
       const component = render(
-        <EuiSplitPanel.Outer>
-          <EuiSplitPanel.Inner />
-        </EuiSplitPanel.Outer>
+        <OuiSplitPanel.Outer>
+          <OuiSplitPanel.Inner />
+        </OuiSplitPanel.Outer>
       );
 
       expect(component).toMatchSnapshot();
@@ -44,16 +55,16 @@ describe('EuiSplitPanel', () => {
 
   test('accepts panel props', () => {
     const component = render(
-      <EuiSplitPanel.Outer color="primary">
-        <EuiSplitPanel.Inner color="success" {...requiredProps} />
-      </EuiSplitPanel.Outer>
+      <OuiSplitPanel.Outer color="primary">
+        <OuiSplitPanel.Inner color="success" {...requiredProps} />
+      </OuiSplitPanel.Outer>
     );
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders as row', () => {
-    const component = render(<EuiSplitPanel.Outer direction="row" />);
+    const component = render(<OuiSplitPanel.Outer direction="row" />);
 
     expect(component).toMatchSnapshot();
   });
@@ -64,13 +75,13 @@ describe('EuiSplitPanel', () => {
     afterAll(() => 1024); // reset to jsdom's default
 
     test('is rendered at small screens', () => {
-      const component = render(<EuiSplitPanel.Outer />);
+      const component = render(<OuiSplitPanel.Outer />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('can be false', () => {
-      const component = render(<EuiSplitPanel.Outer responsive={false} />);
+      const component = render(<OuiSplitPanel.Outer responsive={false} />);
 
       expect(component).toMatchSnapshot();
     });
@@ -82,7 +93,7 @@ describe('EuiSplitPanel', () => {
     afterAll(() => 1024); // reset to jsdom's default
 
     test('can be changed to different breakpoints', () => {
-      const component = render(<EuiSplitPanel.Outer responsive={['m', 'l']} />);
+      const component = render(<OuiSplitPanel.Outer responsive={['m', 'l']} />);
 
       expect(component).toMatchSnapshot();
     });

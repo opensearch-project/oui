@@ -1,0 +1,65 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiRangeSlider {
+  // in firefox just setting the z-index to the thumb doesn't work
+  // so we need to set the z-index to all the range slider and make the track transparent
+  @include ouiRangeTrackPerBrowser {
+    background-color: transparent;
+  }
+
+  // z-index higher than .ouiRangeHighlight that is 1
+  // the track is transparent we just want the thumb to be on top of the .ouiRangeHighlight
+  z-index: 2;
+
+  &--hasTicks {
+    height: $ouiRangeThumbHeight;
+  }
+
+  &:focus {
+    @include ouiRangeThumbPerBrowser {
+      @include ouiRangeThumbFocus;
+    }
+
+    @include ouiRangeTrackPerBrowser {
+      background-color: transparent;
+    }
+
+    outline: none;
+
+    ~ .ouiRangeHighlight .ouiRangeHighlight__progress {
+      background-color: $ouiColorPrimary;
+    }
+  }
+
+  // in Chrome/FF/Edge we don't want to focus on click
+  &:focus:not(:focus-visible) {
+    @include ouiRangeThumbPerBrowser {
+      @include ouiRangeThumbBoxShadow;
+      background-color: $ouiRangeThumbBackgroundColor;
+    }
+
+    ~ .ouiRangeHighlight .ouiRangeHighlight__progress {
+      background-color: $ouiRangeHighlightColor;
+    }
+  }
+
+  &:disabled {
+    // sass-lint:disable-block mixins-before-declarations
+    @include ouiRangeThumbPerBrowser {
+      background-color: $ouiRangeThumbBackgroundColor;
+    }
+
+    ~ .ouiRangeThumb {
+      background-color: $ouiRangeThumbBackgroundColor;
+    }
+  }
+}

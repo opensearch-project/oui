@@ -1,8 +1,19 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 import { ExternalBadge } from './shared';
 import { CategoryChart } from './category_chart';
 
-import { EuiCode } from '../../../../src/components';
+import { OuiCode } from '../../../../src/components';
 
 export const ElasticChartsCategoryExample = {
   title: 'Categorical',
@@ -27,23 +38,23 @@ export const ElasticChartsCategoryExample = {
 
           <ul>
             <li>
-              <EuiCode language="js">Settings.rotation = 90</EuiCode>
+              <OuiCode language="js">Settings.rotation = 90</OuiCode>
             </li>
             <li>
-              <EuiCode language="js">
+              <OuiCode language="js">
                 BarSeries.data = orderBy(DATASET, [&apos;count&apos;],
                 [&apos;desc&apos;])
-              </EuiCode>
+              </OuiCode>
             </li>
             <li>
-              <EuiCode language="js">
+              <OuiCode language="js">
                 BarSeries.xAccessor = &quot;vizType&quot;
-              </EuiCode>
+              </OuiCode>
             </li>
             <li>
-              <EuiCode language="js">
+              <OuiCode language="js">
                 Axis.tickFormat = (d =&gt; Number(d)&apos;k&apos;)
-              </EuiCode>
+              </OuiCode>
             </li>
           </ul>
         </Fragment>

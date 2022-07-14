@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiContextMenuPanel,
-  EuiContextMenuItem,
-  EuiPopover,
+  OuiButtonEmpty,
+  OuiContextMenuPanel,
+  OuiContextMenuItem,
+  OuiPopover,
 } from '../../../../src/components';
 
 export default () => {
@@ -24,17 +35,17 @@ export default () => {
   };
 
   const button = (
-    <EuiButtonEmpty
+    <OuiButtonEmpty
       size="s"
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}>
       Rows per page: {rowSize}
-    </EuiButtonEmpty>
+    </OuiButtonEmpty>
   );
 
   const items = [
-    <EuiContextMenuItem
+    <OuiContextMenuItem
       key="10 rows"
       icon={getIconType(10)}
       onClick={() => {
@@ -42,8 +53,8 @@ export default () => {
         setRowSize(10);
       }}>
       10 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </OuiContextMenuItem>,
+    <OuiContextMenuItem
       key="20 rows"
       icon={getIconType(20)}
       onClick={() => {
@@ -51,8 +62,8 @@ export default () => {
         setRowSize(20);
       }}>
       20 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </OuiContextMenuItem>,
+    <OuiContextMenuItem
       key="50 rows"
       icon={getIconType(50)}
       onClick={() => {
@@ -60,8 +71,8 @@ export default () => {
         setRowSize(50);
       }}>
       50 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </OuiContextMenuItem>,
+    <OuiContextMenuItem
       key="100 rows"
       icon={getIconType(100)}
       onClick={() => {
@@ -69,18 +80,18 @@ export default () => {
         setRowSize(100);
       }}>
       100 rows
-    </EuiContextMenuItem>,
+    </OuiContextMenuItem>,
   ];
 
   return (
-    <EuiPopover
+    <OuiPopover
       id="singlePanel"
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       panelPaddingSize="none"
       anchorPosition="downLeft">
-      <EuiContextMenuPanel size="s" items={items} />
-    </EuiPopover>
+      <OuiContextMenuPanel size="s" items={items} />
+    </OuiPopover>
   );
 };

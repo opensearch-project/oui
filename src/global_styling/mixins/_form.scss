@@ -1,21 +1,32 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Labels
-@mixin euiFormLabel {
-  @include euiFontSizeXS;
-  color: $euiTitleColor;
-  font-weight: $euiFontWeightSemiBold;
+@mixin ouiFormLabel {
+  @include ouiFontSizeXS;
+  color: $ouiTitleColor;
+  font-weight: $ouiFontWeightSemiBold;
 }
 
-@mixin euiFormControlLayoutPadding($numOfIcons, $side: 'right', $compressed: false) {
-  $iconSize: $euiSize;
-  $iconPadding: $euiFormControlPadding;
-  $marginBetweenIcons: $euiFormControlPadding / 2;
+@mixin ouiFormControlLayoutPadding($numOfIcons, $side: 'right', $compressed: false) {
+  $iconSize: $ouiSize;
+  $iconPadding: $ouiFormControlPadding;
+  $marginBetweenIcons: $ouiFormControlPadding / 2;
 
   @if ($compressed) {
-    $iconPadding: $euiFormControlCompressedPadding;
+    $iconPadding: $ouiFormControlCompressedPadding;
   }
 
   @if variable-exists(numOfIcons) == false {
-    @error '$numOfIcons:integer (1-3) must be provided to @mixin euiFormControlLayoutPadding().';
+    @error '$numOfIcons:integer (1-3) must be provided to @mixin ouiFormControlLayoutPadding().';
   } @else if $numOfIcons == 1 {
     padding-#{$side}: $iconPadding + $iconSize + $iconPadding;
   } @else if $numOfIcons == 2 {
@@ -25,35 +36,35 @@
   }
 }
 
-@mixin euiFormControlLayoutClearIcon($iconClass, $size: 'm') {
-  $clearSize: $euiSize;
+@mixin ouiFormControlLayoutClearIcon($iconClass, $size: 'm') {
+  $clearSize: $ouiSize;
   $clearIconStroke: 2px;
 
   @if ($size == 's') {
-    $clearSize: $euiSizeM;
-    $clearIconStroke: $euiSizeXS;
+    $clearSize: $ouiSizeM;
+    $clearIconStroke: $ouiSizeXS;
   }
 
   @include size($clearSize);
   pointer-events: all;
-  background-color: lightOrDarkTheme($euiColorMediumShade, $euiColorDarkShade);
+  background-color: lightOrDarkTheme($ouiColorMediumShade, $ouiColorDarkShade);
   border-radius: $clearSize;
   line-height: 0; // ensures the icon stays vertically centered
 
   &:focus {
-    @include euiFocusRing;
+    @include ouiFocusRing;
   }
 
   #{$iconClass} {
     @include size($clearSize / 2);
-    fill: $euiColorEmptyShade;
+    fill: $ouiColorEmptyShade;
     // increase thickness of icon at such a small size
-    stroke: $euiColorEmptyShade;
+    stroke: $ouiColorEmptyShade;
     stroke-width: $clearIconStroke;
   }
 }
 
-@mixin euiPlaceholderPerBrowser {
+@mixin ouiPlaceholderPerBrowser {
   // sass-lint:disable-block no-vendor-prefixes
   // Each prefix must be its own content block
   &::-webkit-input-placeholder { @content; opacity: 1; }
@@ -63,7 +74,7 @@
   &::placeholder { @content; opacity: 1; }
 }
 
-@function euiFormControlGradient($color: $euiColorPrimary) {
+@function ouiFormControlGradient($color: $ouiColorPrimary) {
   @return linear-gradient(to top,
     $color,
     $color 2px,
@@ -72,27 +83,27 @@
   );
 }
 
-@mixin euiFormControlText {
-  @include euiFont;
-  font-size: $euiFontSizeS;
-  color: $euiTextColor;
+@mixin ouiFormControlText {
+  @include ouiFont;
+  font-size: $ouiFontSizeS;
+  color: $ouiTextColor;
 
   @include internetExplorerOnly {
     line-height: 1em; // fixes text alignment in IE
   }
 
   // sass-lint:disable-block mixins-before-declarations
-  @include euiPlaceholderPerBrowser {
-    color: $euiFormControlPlaceholderText;
+  @include ouiPlaceholderPerBrowser {
+    color: $ouiFormControlPlaceholderText;
   }
 }
 
-@mixin euiFormControlSize(
-  $height: $euiFormControlHeight,
+@mixin ouiFormControlSize(
+  $height: $ouiFormControlHeight,
   $includeAlternates: false
 ) {
   // Default
-  max-width: $euiFormMaxWidth;
+  max-width: $ouiFormMaxWidth;
   width: 100%;
   height: $height;
 
@@ -102,7 +113,7 @@
     }
 
     &--compressed {
-      height: $euiFormControlCompressedHeight;
+      height: $ouiFormControlCompressedHeight;
     }
 
     &--inGroup {
@@ -111,33 +122,33 @@
   }
 }
 
-@mixin euiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: false) {
+@mixin ouiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: false) {
   @if ($isIconOptional) {
     @at-root {
       #{&}--withIcon {
-        @include euiFormControlLayoutPadding(1, $side, $compressed);
+        @include ouiFormControlLayoutPadding(1, $side, $compressed);
       }
     }
   } @else {
-    @include euiFormControlLayoutPadding(1, $side, $compressed);
+    @include ouiFormControlLayoutPadding(1, $side, $compressed);
   }
 }
 
-@mixin euiFormControlIsLoading($isNextToIcon: false) {
+@mixin ouiFormControlIsLoading($isNextToIcon: false) {
   @at-root {
     #{&}-isLoading {
       @if ($isNextToIcon) {
-        @include euiFormControlLayoutPadding(2);
+        @include ouiFormControlLayoutPadding(2);
       } @else {
-        @include euiFormControlLayoutPadding(1);
+        @include ouiFormControlLayoutPadding(1);
       }
     }
 
     #{&}-isLoading#{&}--compressed {
       @if ($isNextToIcon) {
-        @include euiFormControlLayoutPadding(2, $compressed: true);
+        @include ouiFormControlLayoutPadding(2, $compressed: true);
       } @else {
-        @include euiFormControlLayoutPadding(1, $compressed: true);
+        @include ouiFormControlLayoutPadding(1, $compressed: true);
       }
     }
   }
@@ -145,25 +156,25 @@
 
 // 1. Must supply both values to background-size or some browsers apply the single value to both directions
 
-@mixin euiFormControlDefaultShadow($borderOnly: false) {
+@mixin ouiFormControlDefaultShadow($borderOnly: false) {
   // sass-lint:disable-block indentation
-  background-color: $euiFormBackgroundColor;
+  background-color: $ouiFormBackgroundColor;
   background-repeat: no-repeat;
   background-size: 0% 100%; // 1
 
   @if ($borderOnly) {
-    box-shadow: inset 0 0 0 1px $euiFormBorderColor;
+    box-shadow: inset 0 0 0 1px $ouiFormBorderColor;
   } @else {
     box-shadow:
-      #{$euiFormControlBoxShadow},
-      inset 0 0 0 1px $euiFormBorderColor;
+      #{$ouiFormControlBoxShadow},
+      inset 0 0 0 1px $ouiFormBorderColor;
   }
 
   transition:
-    box-shadow $euiAnimSpeedFast ease-in,
-    background-image $euiAnimSpeedFast ease-in,
-    background-size $euiAnimSpeedFast ease-in,
-    background-color $euiAnimSpeedFast ease-in;
+    box-shadow $ouiAnimSpeedFast ease-in,
+    background-image $ouiAnimSpeedFast ease-in,
+    background-size $ouiAnimSpeedFast ease-in,
+    background-color $ouiAnimSpeedFast ease-in;
 
   // Fixes bug in Firefox where adding a transition to the background-color
   // caused a flash of differently styled dropdown.
@@ -173,89 +184,89 @@
   }
 }
 
-@mixin euiFormControlFocusStyle($borderOnly: false) {
+@mixin ouiFormControlFocusStyle($borderOnly: false) {
   // sass-lint:disable-block indentation, empty-args
-  background-color: tintOrShade($euiColorEmptyShade, 0%, 40%);
-  background-image: euiFormControlGradient();
+  background-color: tintOrShade($ouiColorEmptyShade, 0%, 40%);
+  background-image: ouiFormControlGradient();
   background-size: 100% 100%; // 1
 
   @if ($borderOnly) {
-    box-shadow: inset 0 0 0 1px $euiFormBorderColor;
+    box-shadow: inset 0 0 0 1px $ouiFormBorderColor;
   } @else {
     box-shadow:
-      0 1px 1px -1px transparentize($euiShadowColor, .8),
-      0 4px 4px -2px transparentize($euiShadowColor, .8),
-      inset 0 0 0 1px $euiFormBorderColor;
+      0 1px 1px -1px transparentize($ouiShadowColor, .8),
+      0 4px 4px -2px transparentize($ouiShadowColor, .8),
+      inset 0 0 0 1px $ouiFormBorderColor;
   }
 }
 
-@mixin euiFormControlInvalidStyle {
-  background-image: euiFormControlGradient($euiColorDanger);
+@mixin ouiFormControlInvalidStyle {
+  background-image: ouiFormControlGradient($ouiColorDanger);
   background-size: 100%;
 }
 
-@mixin euiFormControlDisabledTextStyle {
+@mixin ouiFormControlDisabledTextStyle {
   // sass-lint:disable-block no-vendor-prefixes
-  color: $euiFormControlDisabledColor;
-  -webkit-text-fill-color: $euiFormControlDisabledColor; // Required for Safari
+  color: $ouiFormControlDisabledColor;
+  -webkit-text-fill-color: $ouiFormControlDisabledColor; // Required for Safari
 }
 
-@mixin euiFormControlDisabledStyle {
-  @include euiFormControlDisabledTextStyle;
+@mixin ouiFormControlDisabledStyle {
+  @include ouiFormControlDisabledTextStyle;
   cursor: not-allowed;
-  background: $euiFormBackgroundDisabledColor;
-  box-shadow: inset 0 0 0 1px $euiFormBorderDisabledColor;
+  background: $ouiFormBackgroundDisabledColor;
+  box-shadow: inset 0 0 0 1px $ouiFormBorderDisabledColor;
 
   // sass-lint:disable-block mixins-before-declarations
-  @include euiPlaceholderPerBrowser {
-    color: $euiFormControlDisabledColor;
+  @include ouiPlaceholderPerBrowser {
+    color: $ouiFormControlDisabledColor;
   }
 }
 
-@mixin euiFormControlReadOnlyStyle {
+@mixin ouiFormControlReadOnlyStyle {
   cursor: default;
   // Use transparency since there is no border and in case form is on a non-white background
-  background: $euiFormBackgroundReadOnlyColor;
+  background: $ouiFormBackgroundReadOnlyColor;
   border-color: transparent;
-  box-shadow: inset 0 0 0 1px $euiFormBorderDisabledColor;
+  box-shadow: inset 0 0 0 1px $ouiFormBorderDisabledColor;
 }
 
 
 // 2. Override invalid state with focus state.
 
-@mixin euiFormControlStyle($borderOnly: false, $includeStates: true, $includeSizes: true) {
-  @include euiFormControlSize($includeAlternates: $includeSizes);
-  @include euiFormControlDefaultShadow;
-  @include euiFormControlText;
+@mixin ouiFormControlStyle($borderOnly: false, $includeStates: true, $includeSizes: true) {
+  @include ouiFormControlSize($includeAlternates: $includeSizes);
+  @include ouiFormControlDefaultShadow;
+  @include ouiFormControlText;
 
   border: none;
-  border-radius: $euiFormControlBorderRadius;
-  padding: $euiFormControlPadding;
+  border-radius: $ouiFormControlBorderRadius;
+  padding: $ouiFormControlPadding;
 
   @if ($includeStates) {
     &:invalid { // 2
-      @include euiFormControlInvalidStyle;
+      @include ouiFormControlInvalidStyle;
     }
 
     &:focus { // 2
-      @include euiFormControlFocusStyle;
+      @include ouiFormControlFocusStyle;
     }
 
     &:disabled {
-      @include euiFormControlDisabledStyle;
+      @include ouiFormControlDisabledStyle;
     }
 
     &[readOnly] {
-      @include euiFormControlReadOnlyStyle;
+      @include ouiFormControlReadOnlyStyle;
     }
 
     // Needs to be set for autofill
     // sass-lint:disable-block no-vendor-prefixes
     &:-webkit-autofill {
-      -webkit-text-fill-color: lightOrDarkTheme($euiColorDarkestShade, $euiColorLightShade);
+      -webkit-text-fill-color: lightOrDarkTheme($ouiColorDarkestShade, $ouiColorLightShade);
 
-      ~ .euiFormControlLayoutIcons {
-        color: lightOrDarkTheme($euiColorDarkestShade, $euiColorLightShade);
+      ~ .ouiFormControlLayoutIcons {
+        color: lightOrDarkTheme($ouiColorDarkestShade, $ouiColorLightShade);
       }
     }
 
@@ -263,7 +274,7 @@
 
   @if ($includeSizes) {
     &--compressed {
-      @include euiFormControlStyleCompressed($borderOnly, $includeStates);
+      @include ouiFormControlStyleCompressed($borderOnly, $includeStates);
     }
 
     &--inGroup {
@@ -274,76 +285,76 @@
   }
 }
 
-@mixin euiFormControlStyleCompressed($borderOnly: false, $includeStates: true) {
-  @include euiFormControlDefaultShadow($borderOnly: true);
-  padding: $euiFormControlCompressedPadding;
-  border-radius: $euiFormControlCompressedBorderRadius;
+@mixin ouiFormControlStyleCompressed($borderOnly: false, $includeStates: true) {
+  @include ouiFormControlDefaultShadow($borderOnly: true);
+  padding: $ouiFormControlCompressedPadding;
+  border-radius: $ouiFormControlCompressedBorderRadius;
 
   @if ($includeStates) {
     &:invalid { // 2
-      @include euiFormControlInvalidStyle;
+      @include ouiFormControlInvalidStyle;
     }
 
     &:focus { // 2
-      @include euiFormControlFocusStyle($borderOnly: true);
+      @include ouiFormControlFocusStyle($borderOnly: true);
     }
 
     &:disabled {
-      @include euiFormControlDisabledStyle;
+      @include ouiFormControlDisabledStyle;
     }
 
     &[readOnly] {
-      @include euiFormControlReadOnlyStyle;
+      @include ouiFormControlReadOnlyStyle;
     }
   }
 }
 
 // Custom styles and states for checkboxes and radios
 
-@mixin euiCustomControl($type: null, $size: $euiSize) {
-  @include euiSlightShadow;
+@mixin ouiCustomControl($type: null, $size: $ouiSize) {
+  @include ouiSlightShadow;
 
   @if $size {
     $size: $size - 2px; // subtract 2px from size to account for border size
     padding: $size / 2;
   }
 
-  border: 1px solid $euiFormCustomControlBorderColor;
-  background: $euiColorEmptyShade no-repeat center;
+  border: 1px solid $ouiFormCustomControlBorderColor;
+  background: $ouiColorEmptyShade no-repeat center;
 
   @if $type == 'round' {
     border-radius: $size;
   } @else if $type == 'square' {
-    border-radius: $euiCheckboxBorderRadius;
+    border-radius: $ouiCheckboxBorderRadius;
   }
   // sass-lint:disable-block indentation
-  transition: background-color $euiAnimSpeedFast ease-in,
-              border-color $euiAnimSpeedFast ease-in;
+  transition: background-color $ouiAnimSpeedFast ease-in,
+              border-color $ouiAnimSpeedFast ease-in;
 }
 
-@mixin euiCustomControlSelected($type: null) {
-  border-color: $euiColorPrimary;
-  background-color: $euiColorPrimary;
+@mixin ouiCustomControlSelected($type: null) {
+  border-color: $ouiColorPrimary;
+  background-color: $ouiColorPrimary;
 
   @if $type != null {
-    @include euiIconBackground($type, $euiColorEmptyShade);
+    @include ouiIconBackground($type, $ouiColorEmptyShade);
   }
 }
 
-@mixin euiCustomControlDisabled($type: null) {
-  border-color: $euiColorLightShade;
-  background-color: $euiColorLightShade;
+@mixin ouiCustomControlDisabled($type: null) {
+  border-color: $ouiColorLightShade;
+  background-color: $ouiColorLightShade;
   box-shadow: none;
   @if $type != null {
-    @include euiIconBackground($type, $euiFormCustomControlDisabledIconColor);
+    @include ouiIconBackground($type, $ouiFormCustomControlDisabledIconColor);
   }
 }
 
-@mixin euiCustomControlFocused($amsterdamSelector: null) {
+@mixin ouiCustomControlFocused($amsterdamSelector: null) {
   // Requires a selector to work with the Amsterdam outline styles
   @if ($amsterdamSelector) {
     + #{$amsterdamSelector} {
-      outline: $euiFocusRingSize solid currentColor;
+      outline: $ouiFocusRingSize solid currentColor;
     }
 
     // Chrome
@@ -357,12 +368,12 @@
     }
   } @else {
     // Default theme
-    @include euiFocusRing('small', 'outer');
-    border-color: $euiColorPrimary;
+    @include ouiFocusRing('small', 'outer');
+    border-color: $ouiColorPrimary;
   }
 }
 
-@mixin euiHiddenSelectableInput {
+@mixin ouiHiddenSelectableInput {
   position: absolute;
   // sass-lint:disable no-important
   opacity: 0 !important; // Make sure it's still hidden when :disabled

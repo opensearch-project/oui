@@ -1,120 +1,131 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiButtonIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
-  EuiTitle,
+  OuiButtonIcon,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 
 const colors = ['primary', 'text', 'accent', 'success', 'warning', 'danger'];
 
 export default () => (
   <>
-    <EuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
+    <OuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
       {colors.map((color) => (
-        <EuiFlexItem key={color} grow={false}>
-          <EuiButtonIcon
+        <OuiFlexItem key={color} grow={false}>
+          <OuiButtonIcon
             color={color}
             onClick={() => {}}
             iconType="arrowRight"
             aria-label="Next"
           />
-        </EuiFlexItem>
+        </OuiFlexItem>
       ))}
-    </EuiFlexGroup>
-    <EuiSpacer size="m" />
-    <EuiTitle size="xxs">
+    </OuiFlexGroup>
+    <OuiSpacer size="m" />
+    <OuiTitle size="xxs">
       <h3>Display</h3>
-    </EuiTitle>
-    <EuiSpacer size="s" />
-    <EuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon iconType="arrowRight" aria-label="Next" />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon display="base" iconType="arrowRight" aria-label="Next" />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon display="fill" iconType="arrowRight" aria-label="Next" />
-      </EuiFlexItem>
-    </EuiFlexGroup>
-    <EuiSpacer size="s" />
-    <EuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon iconType="arrowRight" isDisabled aria-label="Next" />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
+    </OuiTitle>
+    <OuiSpacer size="s" />
+    <OuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon iconType="arrowRight" aria-label="Next" />
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon display="base" iconType="arrowRight" aria-label="Next" />
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon display="fill" iconType="arrowRight" aria-label="Next" />
+      </OuiFlexItem>
+    </OuiFlexGroup>
+    <OuiSpacer size="s" />
+    <OuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon iconType="arrowRight" isDisabled aria-label="Next" />
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon
           display="base"
           iconType="arrowRight"
           isDisabled
           aria-label="Next"
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon
           iconType="arrowRight"
           display="fill"
           isDisabled
           aria-label="Next"
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
-    <EuiSpacer size="m" />
-    <EuiTitle size="xxs">
+      </OuiFlexItem>
+    </OuiFlexGroup>
+    <OuiSpacer size="m" />
+    <OuiTitle size="xxs">
       <h3>Size</h3>
-    </EuiTitle>
-    <EuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon display="base" iconType="arrowRight" aria-label="Next" />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
+    </OuiTitle>
+    <OuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon display="base" iconType="arrowRight" aria-label="Next" />
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon
           display="base"
           iconType="arrowRight"
           size="s"
           aria-label="Next"
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon
           display="base"
           iconType="arrowRight"
           iconSize="l"
           size="m"
           aria-label="Next"
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
-    <EuiSpacer size="m" />
-    <EuiTitle size="xxs">
+      </OuiFlexItem>
+    </OuiFlexGroup>
+    <OuiSpacer size="m" />
+    <OuiTitle size="xxs">
       <h3>Icons inherit by default the button color</h3>
-    </EuiTitle>
-    <EuiSpacer size="s" />
-    <EuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon iconType="heart" aria-label="Heart" color="accent" />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
+    </OuiTitle>
+    <OuiSpacer size="s" />
+    <OuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon iconType="heart" aria-label="Heart" color="accent" />
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon
           iconType="dashboardApp"
           aria-label="Dashboard"
           color="success"
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon
           display="base"
           iconType="trash"
           aria-label="Delete"
           color="danger"
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButtonIcon display="base" iconType="lensApp" aria-label="Lens" />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButtonIcon display="base" iconType="lensApp" aria-label="Lens" />
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </>
 );

@@ -1,80 +1,80 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiImage is rendered 1`] = `
+exports[`OuiImage is rendered 1`] = `
 <figure
-  class="euiImage testClass1 testClass2 euiImage--large"
+  class="ouiImage testClass1 testClass2 ouiImage--large"
 >
   <img
     alt="alt"
     aria-label="aria-label"
-    class="euiImage__img"
+    class="ouiImage__img"
     data-test-subj="test subject string"
     src="/cat.jpg"
   />
 </figure>
 `;
 
-exports[`EuiImage is rendered and allows full screen 1`] = `
+exports[`OuiImage is rendered and allows full screen 1`] = `
 <figure
-  class="euiImage euiImage--allowFullScreen testClass1 testClass2 euiImage--large"
+  class="ouiImage ouiImage--allowFullScreen testClass1 testClass2 ouiImage--large"
 >
   <button
     aria-label="Open full screen alt image"
-    class="euiImage__button euiImage__button--fullWidth"
+    class="ouiImage__button ouiImage__button--fullWidth"
     data-test-subj="activateFullScreenButton"
     type="button"
   >
     <img
       alt="alt"
       aria-label="aria-label"
-      class="euiImage__img"
+      class="ouiImage__img"
       data-test-subj="test subject string"
       src="/cat.jpg"
     />
     <span
-      class="euiImage__icon"
+      class="ouiImage__icon"
       color="ghost"
-      data-euiicon-type="fullScreen"
+      data-ouiicon-type="fullScreen"
     />
   </button>
 </figure>
 `;
 
-exports[`EuiImage is rendered with a float 1`] = `
+exports[`OuiImage is rendered with a float 1`] = `
 <figure
-  class="euiImage euiImage--floatLeft euiImage--original"
+  class="ouiImage ouiImage--floatLeft ouiImage--original"
 >
   <img
     alt="alt"
-    class="euiImage__img"
+    class="ouiImage__img"
     src="/cat.jpg"
   />
 </figure>
 `;
 
-exports[`EuiImage is rendered with a margin 1`] = `
+exports[`OuiImage is rendered with a margin 1`] = `
 <figure
-  class="euiImage euiImage--marginLarge euiImage--original"
+  class="ouiImage ouiImage--marginLarge ouiImage--original"
 >
   <img
     alt="alt"
-    class="euiImage__img"
+    class="ouiImage__img"
     src="/cat.jpg"
   />
 </figure>
 `;
 
-exports[`EuiImage is rendered with a node as the caption 1`] = `
+exports[`OuiImage is rendered with a node as the caption 1`] = `
 <figure
-  class="euiImage euiImage--original"
+  class="ouiImage ouiImage--original"
 >
   <img
     alt="alt"
-    class="euiImage__img"
+    class="ouiImage__img"
     src="/cat.jpg"
   />
   <figcaption
-    class="euiImage__caption"
+    class="ouiImage__caption"
   >
     <span>
       caption
@@ -83,26 +83,26 @@ exports[`EuiImage is rendered with a node as the caption 1`] = `
 </figure>
 `;
 
-exports[`EuiImage is rendered with custom size 1`] = `
+exports[`OuiImage is rendered with custom size 1`] = `
 <figure
-  class="euiImage"
+  class="ouiImage"
 >
   <img
     alt="alt"
-    class="euiImage__img"
+    class="ouiImage__img"
     src="/cat.jpg"
     style="max-width:50px;max-height:50px;width:auto"
   />
 </figure>
 `;
 
-exports[`EuiImage is rendered with src 1`] = `
+exports[`OuiImage is rendered with src 1`] = `
 <figure
-  class="euiImage euiImage--floatLeft euiImage--original"
+  class="ouiImage ouiImage--floatLeft ouiImage--original"
 >
   <img
     alt="alt"
-    class="euiImage__img"
+    class="ouiImage__img"
     src="/cat.jpg"
   />
 </figure>

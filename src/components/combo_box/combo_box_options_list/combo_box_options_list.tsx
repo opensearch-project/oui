@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -30,33 +41,33 @@ import {
   ListChildComponentProps,
 } from 'react-window';
 
-import { EuiFlexGroup, EuiFlexItem } from '../../flex';
-import { EuiHighlight } from '../../highlight';
-import { EuiPanel } from '../../panel';
-import { EuiText } from '../../text';
-import { EuiLoadingSpinner } from '../../loading';
-import { EuiComboBoxTitle } from './combo_box_title';
-import { EuiI18n } from '../../i18n';
+import { OuiFlexGroup, OuiFlexItem } from '../../flex';
+import { OuiHighlight } from '../../highlight';
+import { OuiPanel } from '../../panel';
+import { OuiText } from '../../text';
+import { OuiLoadingSpinner } from '../../loading';
+import { OuiComboBoxTitle } from './combo_box_title';
+import { OuiI18n } from '../../i18n';
 import {
-  EuiFilterSelectItem,
+  OuiFilterSelectItem,
   FilterChecked,
 } from '../../filter_group/filter_select_item';
 import { htmlIdGenerator } from '../../../services';
 import {
-  EuiComboBoxOptionOption,
-  EuiComboBoxOptionsListPosition,
-  EuiComboBoxSingleSelectionShape,
+  OuiComboBoxOptionOption,
+  OuiComboBoxOptionsListPosition,
+  OuiComboBoxSingleSelectionShape,
   OptionHandler,
   RefInstance,
   UpdatePositionHandler,
 } from '../types';
 import { CommonProps } from '../../common';
-import { EuiBadge } from '../../badge/';
+import { OuiBadge } from '../../badge/';
 
-const OPTION_CONTENT_CLASSNAME = 'euiComboBoxOption__content';
+const OPTION_CONTENT_CLASSNAME = 'ouiComboBoxOption__content';
 
-export type EuiComboBoxOptionsListProps<T> = CommonProps &
-  ComponentProps<typeof EuiPanel> & {
+export type OuiComboBoxOptionsListProps<T> = CommonProps &
+  ComponentProps<typeof OuiPanel> & {
     'data-test-subj': string;
     activeOptionIndex?: number;
     areAllOptionsSelected?: boolean;
@@ -69,26 +80,26 @@ export type EuiComboBoxOptionsListProps<T> = CommonProps &
     getSelectedOptionForSearchValue?: (
       searchValue: string,
       selectedOptions: any[]
-    ) => EuiComboBoxOptionOption<T> | undefined;
+    ) => OuiComboBoxOptionOption<T> | undefined;
     isLoading?: boolean;
     listRef: RefCallback<HTMLDivElement>;
-    matchingOptions: Array<EuiComboBoxOptionOption<T>>;
+    matchingOptions: Array<OuiComboBoxOptionOption<T>>;
     onCloseList: (event: Event) => void;
     onCreateOption?: (
       searchValue: string,
-      options: Array<EuiComboBoxOptionOption<T>>
+      options: Array<OuiComboBoxOptionOption<T>>
     ) => boolean | void;
     onOptionClick?: OptionHandler<T>;
     onOptionEnterKey?: OptionHandler<T>;
     onScroll?: ListProps['onScroll'];
-    optionRef: (index: number, node: RefInstance<EuiFilterSelectItem>) => void;
+    optionRef: (index: number, node: RefInstance<OuiFilterSelectItem>) => void;
     /**
-     * Array of EuiComboBoxOptionOption objects. See #EuiComboBoxOptionOption
+     * Array of OuiComboBoxOptionOption objects. See #OuiComboBoxOptionOption
      */
-    options: Array<EuiComboBoxOptionOption<T>>;
-    position?: EuiComboBoxOptionsListPosition;
+    options: Array<OuiComboBoxOptionOption<T>>;
+    position?: OuiComboBoxOptionsListPosition;
     renderOption?: (
-      option: EuiComboBoxOptionOption<T>,
+      option: OuiComboBoxOptionOption<T>,
       searchValue: string,
       OPTION_CONTENT_CLASSNAME: string
     ) => ReactNode;
@@ -96,25 +107,25 @@ export type EuiComboBoxOptionsListProps<T> = CommonProps &
     rowHeight: number;
     scrollToIndex?: number;
     searchValue: string;
-    selectedOptions: Array<EuiComboBoxOptionOption<T>>;
+    selectedOptions: Array<OuiComboBoxOptionOption<T>>;
     updatePosition: UpdatePositionHandler;
     width: number;
-    singleSelection?: boolean | EuiComboBoxSingleSelectionShape;
+    singleSelection?: boolean | OuiComboBoxSingleSelectionShape;
     delimiter?: string;
     zIndex?: number;
   };
 
 const hitEnterBadge = (
-  <EuiBadge
-    className="euiComboBoxOption__enterBadge"
+  <OuiBadge
+    className="ouiComboBoxOption__enterBadge"
     color="hollow"
     iconType="returnKey"
     aria-hidden="true"
   />
 );
 
-export class EuiComboBoxOptionsList<T> extends Component<
-  EuiComboBoxOptionsListProps<T>
+export class OuiComboBoxOptionsList<T> extends Component<
+  OuiComboBoxOptionsListProps<T>
 > {
   listRefInstance: RefInstance<HTMLDivElement> = null;
   listRef: FixedSizeList | null = null;
@@ -136,7 +147,7 @@ export class EuiComboBoxOptionsList<T> extends Component<
     // Wait a frame, otherwise moving focus from one combo box to another will result in the class
     // being removed from the body.
     requestAnimationFrame(() => {
-      document.body.classList.add('euiBody-hasPortalContent');
+      document.body.classList.add('ouiBody-hasPortalContent');
     });
     this.updatePosition();
     window.addEventListener('resize', this.updatePosition);
@@ -151,7 +162,7 @@ export class EuiComboBoxOptionsList<T> extends Component<
     }, 500);
   }
 
-  componentDidUpdate(prevProps: EuiComboBoxOptionsListProps<T>) {
+  componentDidUpdate(prevProps: OuiComboBoxOptionsListProps<T>) {
     const { options, selectedOptions, searchValue } = prevProps;
 
     // We don't compare matchingOptions because that will result in a loop.
@@ -173,7 +184,7 @@ export class EuiComboBoxOptionsList<T> extends Component<
   }
 
   componentWillUnmount() {
-    document.body.classList.remove('euiBody-hasPortalContent');
+    document.body.classList.remove('ouiBody-hasPortalContent');
     window.removeEventListener('resize', this.updatePosition);
     window.removeEventListener('scroll', this.closeListOnScroll, {
       capture: true,
@@ -228,7 +239,7 @@ export class EuiComboBoxOptionsList<T> extends Component<
     if (isGroupLabelOption) {
       return (
         <div key={key ?? label.toLowerCase()} style={style}>
-          <EuiComboBoxTitle>{label}</EuiComboBoxTitle>
+          <OuiComboBoxTitle>{label}</OuiComboBoxTitle>
         </div>
       );
     }
@@ -248,7 +259,7 @@ export class EuiComboBoxOptionsList<T> extends Component<
       option.hasOwnProperty('disabled') && option.disabled === true;
 
     return (
-      <EuiFilterSelectItem
+      <OuiFilterSelectItem
         style={style}
         key={option.key ?? option.label.toLowerCase()}
         onClick={() => {
@@ -263,25 +274,25 @@ export class EuiComboBoxOptionsList<T> extends Component<
         id={rootId(`_option-${index}`)}
         title={label}
         {...rest}>
-        <span className="euiComboBoxOption__contentWrapper">
+        <span className="ouiComboBoxOption__contentWrapper">
           {renderOption ? (
             <span className={OPTION_CONTENT_CLASSNAME}>
               {renderOption(
                 option,
                 searchValue,
-                'euiComboBoxOption__renderOption'
+                'ouiComboBoxOption__renderOption'
               )}
             </span>
           ) : (
-            <EuiHighlight
+            <OuiHighlight
               search={searchValue}
               className={OPTION_CONTENT_CLASSNAME}>
               {label}
-            </EuiHighlight>
+            </OuiHighlight>
           )}
           {optionIsFocused && !optionIsDisabled ? hitEnterBadge : null}
         </span>
-      </EuiFilterSelectItem>
+      </OuiFilterSelectItem>
     );
   };
 
@@ -323,26 +334,26 @@ export class EuiComboBoxOptionsList<T> extends Component<
 
     if (isLoading) {
       emptyStateContent = (
-        <EuiFlexGroup gutterSize="s" justifyContent="center">
-          <EuiFlexItem grow={false}>
-            <EuiLoadingSpinner size="m" />
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiI18n
-              token="euiComboBoxOptionsList.loadingOptions"
+        <OuiFlexGroup gutterSize="s" justifyContent="center">
+          <OuiFlexItem grow={false}>
+            <OuiLoadingSpinner size="m" />
+          </OuiFlexItem>
+          <OuiFlexItem grow={false}>
+            <OuiI18n
+              token="ouiComboBoxOptionsList.loadingOptions"
               default="Loading options"
             />
-          </EuiFlexItem>
-        </EuiFlexGroup>
+          </OuiFlexItem>
+        </OuiFlexGroup>
       );
     } else if (searchValue && matchingOptions && matchingOptions.length === 0) {
       if (onCreateOption && getSelectedOptionForSearchValue) {
         if (delimiter && searchValue.includes(delimiter)) {
           emptyStateContent = (
-            <div className="euiComboBoxOption__contentWrapper">
-              <p className="euiComboBoxOption__emptyStateText">
-                <EuiI18n
-                  token="euiComboBoxOptionsList.delimiterMessage"
+            <div className="ouiComboBoxOption__contentWrapper">
+              <p className="ouiComboBoxOption__emptyStateText">
+                <OuiI18n
+                  token="ouiComboBoxOptionsList.delimiterMessage"
                   default="Add each item separated by {delimiter}"
                   values={{ delimiter: <strong>{delimiter}</strong> }}
                 />
@@ -359,8 +370,8 @@ export class EuiComboBoxOptionsList<T> extends Component<
             // Disallow duplicate custom options.
             emptyStateContent = (
               <p>
-                <EuiI18n
-                  token="euiComboBoxOptionsList.alreadyAdded"
+                <OuiI18n
+                  token="ouiComboBoxOptionsList.alreadyAdded"
                   default="{label} has already been added"
                   values={{
                     label: <strong>{selectedOptionForValue.label}</strong>,
@@ -376,7 +387,7 @@ export class EuiComboBoxOptionsList<T> extends Component<
               const reg = new RegExp(/(\{searchValue})/, 'gi');
               const parts = text.split(reg);
               return (
-                <p className="euiComboBoxOption__emptyStateText">
+                <p className="ouiComboBoxOption__emptyStateText">
                   {parts.map((part, idx) =>
                     part.match(reg) ? (
                       <strong key={idx}>{searchValue}</strong>
@@ -389,13 +400,13 @@ export class EuiComboBoxOptionsList<T> extends Component<
             };
 
             emptyStateContent = (
-              <div className="euiComboBoxOption__contentWrapper">
+              <div className="ouiComboBoxOption__contentWrapper">
                 {customOptionText ? (
                   highlightSearchValue(customOptionText, searchValue)
                 ) : (
-                  <p className="euiComboBoxOption__emptyStateText">
-                    <EuiI18n
-                      token="euiComboBoxOptionsList.createCustomOption"
+                  <p className="ouiComboBoxOption__emptyStateText">
+                    <OuiI18n
+                      token="ouiComboBoxOptionsList.createCustomOption"
                       default="Add {searchValue} as a custom option"
                       values={{
                         searchValue: <strong>{searchValue}</strong>,
@@ -411,8 +422,8 @@ export class EuiComboBoxOptionsList<T> extends Component<
       } else {
         emptyStateContent = (
           <p>
-            <EuiI18n
-              token="euiComboBoxOptionsList.noMatchingOptions"
+            <OuiI18n
+              token="ouiComboBoxOptionsList.noMatchingOptions"
               default="{searchValue} doesn't match any options"
               values={{ searchValue: <strong>{searchValue}</strong> }}
             />
@@ -422,8 +433,8 @@ export class EuiComboBoxOptionsList<T> extends Component<
     } else if (!options.length) {
       emptyStateContent = (
         <p>
-          <EuiI18n
-            token="euiComboBoxOptionsList.noAvailableOptions"
+          <OuiI18n
+            token="ouiComboBoxOptionsList.noAvailableOptions"
             default="There aren't any options available"
           />
         </p>
@@ -431,8 +442,8 @@ export class EuiComboBoxOptionsList<T> extends Component<
     } else if (areAllOptionsSelected) {
       emptyStateContent = (
         <p>
-          <EuiI18n
-            token="euiComboBoxOptionsList.allOptionsSelected"
+          <OuiI18n
+            token="ouiComboBoxOptionsList.allOptionsSelected"
             default="You've selected all available options"
           />
         </p>
@@ -440,16 +451,16 @@ export class EuiComboBoxOptionsList<T> extends Component<
     }
 
     const emptyState = emptyStateContent ? (
-      <EuiText size="xs" className="euiComboBoxOptionsList__empty">
+      <OuiText size="xs" className="ouiComboBoxOptionsList__empty">
         {emptyStateContent}
-      </EuiText>
+      </OuiText>
     ) : undefined;
 
     const numVisibleOptions =
       matchingOptions.length < 7 ? matchingOptions.length : 7;
     const height = numVisibleOptions * (rowHeight + 1); // Add one for the border
 
-    // bounded by max-height of euiComboBoxOptionsList__rowWrap
+    // bounded by max-height of ouiComboBoxOptionsList__rowWrap
     const boundedHeight = height > 200 ? 200 : height;
 
     const optionsList = (
@@ -467,20 +478,20 @@ export class EuiComboBoxOptionsList<T> extends Component<
     );
 
     /**
-     * Reusing the EuiPopover__panel classes to help with consistency/maintenance.
+     * Reusing the OuiPopover__panel classes to help with consistency/maintenance.
      * But this should really be converted to user the popover component.
      */
     const classes = classNames(
-      'euiComboBoxOptionsList',
-      'euiPopover__panel',
-      'euiPopover__panel-isAttached',
-      'euiPopover__panel-noArrow',
-      'euiPopover__panel-isOpen',
-      `euiPopover__panel--${position}`
+      'ouiComboBoxOptionsList',
+      'ouiPopover__panel',
+      'ouiPopover__panel-isAttached',
+      'ouiPopover__panel-noArrow',
+      'ouiPopover__panel-isOpen',
+      `ouiPopover__panel--${position}`
     );
 
     return (
-      <EuiPanel
+      <OuiPanel
         paddingSize="none"
         hasShadow={false}
         className={classes}
@@ -488,10 +499,10 @@ export class EuiComboBoxOptionsList<T> extends Component<
         data-test-subj={`comboBoxOptionsList ${dataTestSubj}`}
         style={{ ...style, zIndex: zIndex }}
         {...rest}>
-        <div className="euiComboBoxOptionsList__rowWrap">
+        <div className="ouiComboBoxOptionsList__rowWrap">
           {emptyState || optionsList}
         </div>
-      </EuiPanel>
+      </OuiPanel>
     );
   }
 }

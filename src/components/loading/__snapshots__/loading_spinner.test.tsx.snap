@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiLoadingSpinner is rendered 1`] = `
+exports[`OuiLoadingSpinner is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiLoadingSpinner euiLoadingSpinner--medium testClass1 testClass2"
+  class="ouiLoadingSpinner ouiLoadingSpinner--medium testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiLoadingSpinner size l is rendered 1`] = `
+exports[`OuiLoadingSpinner size l is rendered 1`] = `
 <span
-  class="euiLoadingSpinner euiLoadingSpinner--large"
+  class="ouiLoadingSpinner ouiLoadingSpinner--large"
 />
 `;
 
-exports[`EuiLoadingSpinner size m is rendered 1`] = `
+exports[`OuiLoadingSpinner size m is rendered 1`] = `
 <span
-  class="euiLoadingSpinner euiLoadingSpinner--medium"
+  class="ouiLoadingSpinner ouiLoadingSpinner--medium"
 />
 `;
 
-exports[`EuiLoadingSpinner size s is rendered 1`] = `
+exports[`OuiLoadingSpinner size s is rendered 1`] = `
 <span
-  class="euiLoadingSpinner euiLoadingSpinner--small"
+  class="ouiLoadingSpinner ouiLoadingSpinner--small"
 />
 `;
 
-exports[`EuiLoadingSpinner size xl is rendered 1`] = `
+exports[`OuiLoadingSpinner size xl is rendered 1`] = `
 <span
-  class="euiLoadingSpinner euiLoadingSpinner--xLarge"
+  class="ouiLoadingSpinner ouiLoadingSpinner--xLarge"
 />
 `;

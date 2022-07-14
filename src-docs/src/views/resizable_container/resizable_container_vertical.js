@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiText, EuiResizableContainer } from '../../../../src/components';
+import { OuiText, OuiResizableContainer } from '../../../../src/components';
 import { fake } from 'faker';
 
 const text = (
@@ -12,23 +23,23 @@ const text = (
 );
 
 export default () => (
-  <EuiResizableContainer style={{ height: '400px' }} direction="vertical">
-    {(EuiResizablePanel, EuiResizableButton) => (
+  <OuiResizableContainer style={{ height: '400px' }} direction="vertical">
+    {(OuiResizablePanel, OuiResizableButton) => (
       <>
-        <EuiResizablePanel initialSize={60} minSize="40%">
-          <EuiText>
+        <OuiResizablePanel initialSize={60} minSize="40%">
+          <OuiText>
             <div>{text}</div>
-          </EuiText>
-        </EuiResizablePanel>
+          </OuiText>
+        </OuiResizablePanel>
 
-        <EuiResizableButton />
+        <OuiResizableButton />
 
-        <EuiResizablePanel initialSize={40} minSize="10%">
-          <EuiText>
+        <OuiResizablePanel initialSize={40} minSize="10%">
+          <OuiText>
             <div>{text}</div>
-          </EuiText>
-        </EuiResizablePanel>
+          </OuiText>
+        </OuiResizablePanel>
       </>
     )}
-  </EuiResizableContainer>
+  </OuiResizableContainer>
 );

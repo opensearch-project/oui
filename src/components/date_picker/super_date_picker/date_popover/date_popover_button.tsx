@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,16 +35,16 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiPopover, EuiPopoverProps } from '../../../popover';
+import { OuiPopover, OuiPopoverProps } from '../../../popover';
 
 import { formatTimeString } from '../pretty_duration';
 import {
-  EuiDatePopoverContent,
-  EuiDatePopoverContentProps,
+  OuiDatePopoverContent,
+  OuiDatePopoverContentProps,
 } from './date_popover_content';
 import { LocaleSpecifier } from 'moment'; // eslint-disable-line import/named
 
-export interface EuiDatePopoverButtonProps {
+export interface OuiDatePopoverButtonProps {
   className?: string;
   buttonProps?: ButtonHTMLAttributes<HTMLButtonElement>;
   dateFormat: string;
@@ -42,8 +53,8 @@ export interface EuiDatePopoverButtonProps {
   isOpen: boolean;
   needsUpdating?: boolean;
   locale?: LocaleSpecifier;
-  onChange: NonNullable<EuiDatePopoverContentProps['onChange']>;
-  onPopoverClose: EuiPopoverProps['closePopover'];
+  onChange: NonNullable<OuiDatePopoverContentProps['onChange']>;
+  onPopoverClose: OuiPopoverProps['closePopover'];
   onPopoverToggle: MouseEventHandler<HTMLButtonElement>;
   position: 'start' | 'end';
   roundUp?: boolean;
@@ -52,7 +63,7 @@ export interface EuiDatePopoverButtonProps {
   utcOffset?: number;
 }
 
-export const EuiDatePopoverButton: FunctionComponent<EuiDatePopoverButtonProps> = (
+export const OuiDatePopoverButton: FunctionComponent<OuiDatePopoverButtonProps> = (
   props
 ) => {
   const {
@@ -75,13 +86,13 @@ export const EuiDatePopoverButton: FunctionComponent<EuiDatePopoverButtonProps> 
   } = props;
 
   const classes = classNames([
-    'euiDatePopoverButton',
-    `euiDatePopoverButton--${position}`,
+    'ouiDatePopoverButton',
+    `ouiDatePopoverButton--${position}`,
     {
-      'euiDatePopoverButton-isSelected': isOpen,
-      'euiDatePopoverButton-isInvalid': isInvalid,
-      'euiDatePopoverButton-needsUpdating': needsUpdating,
-      'euiDatePopoverButton-disabled': isDisabled,
+      'ouiDatePopoverButton-isSelected': isOpen,
+      'ouiDatePopoverButton-isInvalid': isInvalid,
+      'ouiDatePopoverButton-needsUpdating': needsUpdating,
+      'ouiDatePopoverButton-disabled': isDisabled,
     },
   ]);
 
@@ -105,7 +116,7 @@ export const EuiDatePopoverButton: FunctionComponent<EuiDatePopoverButtonProps> 
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       button={button}
       isOpen={isOpen}
       closePopover={onPopoverClose}
@@ -113,7 +124,7 @@ export const EuiDatePopoverButton: FunctionComponent<EuiDatePopoverButtonProps> 
       display="block"
       panelPaddingSize="none"
       {...rest}>
-      <EuiDatePopoverContent
+      <OuiDatePopoverContent
         value={value}
         roundUp={roundUp}
         onChange={onChange}
@@ -123,8 +134,8 @@ export const EuiDatePopoverButton: FunctionComponent<EuiDatePopoverButtonProps> 
         position={position}
         utcOffset={utcOffset}
       />
-    </EuiPopover>
+    </OuiPopover>
   );
 };
 
-EuiDatePopoverButton.displayName = 'EuiDatePopoverButton';
+OuiDatePopoverButton.displayName = 'OuiDatePopoverButton';

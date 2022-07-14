@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,10 +28,10 @@
  * under the License.
  */
 
-export { EuiComment, EuiCommentProps } from './comment';
+export { OuiComment, OuiCommentProps } from './comment';
 
-export { EuiCommentEvent, EuiCommentType } from './comment_event';
+export { OuiCommentEvent, OuiCommentType } from './comment_event';
 
-export { EuiCommentTimeline } from './comment_timeline';
+export { OuiCommentTimeline } from './comment_timeline';
 
-export { EuiCommentList, EuiCommentListProps } from './comment_list';
+export { OuiCommentList, OuiCommentListProps } from './comment_list';

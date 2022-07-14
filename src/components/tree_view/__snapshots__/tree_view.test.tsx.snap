@@ -1,134 +1,134 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTreeView is rendered 1`] = `
+exports[`OuiTreeView is rendered 1`] = `
 <div
-  class="euiText euiText--medium euiTreeView__wrapper"
+  class="ouiText ouiText--medium ouiTreeView__wrapper"
 >
   <p
-    class="euiScreenReaderOnly"
-    id="euiTreeView_generated-id--instruction"
+    class="ouiScreenReaderOnly"
+    id="ouiTreeView_generated-id--instruction"
   >
     You can quickly navigate this list using arrow keys.
   </p>
   <ul
-    aria-describedby="euiTreeView_generated-id--instruction"
+    aria-describedby="ouiTreeView_generated-id--instruction"
     aria-label="aria-label"
-    class="euiTreeView testClass1 testClass2"
+    class="ouiTreeView testClass1 testClass2"
     data-test-subj="test subject string"
-    id="euiTreeView_generated-id"
+    id="ouiTreeView_generated-id"
   >
     <li
-      class="euiTreeView__node euiTreeView__node--expanded"
+      class="ouiTreeView__node ouiTreeView__node--expanded"
     >
       <button
-        aria-controls="euiTreeView_generated-id_item_one"
+        aria-controls="ouiTreeView_generated-id_item_one"
         aria-expanded="true"
-        class="euiTreeView__nodeInner"
-        data-test-subj="euiTreeViewButton-euiTreeView_generated-id"
+        class="ouiTreeView__nodeInner"
+        data-test-subj="ouiTreeViewButton-ouiTreeView_generated-id"
         id="item_one"
       >
         <span
-          class="euiTreeView__iconWrapper"
+          class="ouiTreeView__iconWrapper"
         >
           <span
-            data-euiicon-type="folderOpen"
+            data-ouiicon-type="folderOpen"
           />
         </span>
         <span
-          class="euiTreeView__nodeLabel"
+          class="ouiTreeView__nodeLabel"
         >
           Item One
         </span>
       </button>
       <div
-        id="euiTreeView_generated-id_item_one"
+        id="ouiTreeView_generated-id_item_one"
       >
         <div
-          class="euiText euiText--medium euiTreeView__wrapper"
+          class="ouiText ouiText--medium ouiTreeView__wrapper"
         >
           <ul
             aria-label="Item One child of aria-label"
-            class="euiTreeView"
+            class="ouiTreeView"
           >
             <li
-              class="euiTreeView__node"
+              class="ouiTreeView__node"
             >
               <button
-                aria-controls="euiTreeView_generated-id_item_a"
+                aria-controls="ouiTreeView_generated-id_item_a"
                 aria-expanded="false"
-                class="euiTreeView__nodeInner"
-                data-test-subj="euiTreeViewButton-euiTreeView_generated-id"
+                class="ouiTreeView__nodeInner"
+                data-test-subj="ouiTreeViewButton-ouiTreeView_generated-id"
                 id="item_a"
               >
                 <span
-                  class="euiTreeView__iconWrapper"
+                  class="ouiTreeView__iconWrapper"
                 >
                   <span
-                    data-euiicon-type="document"
+                    data-ouiicon-type="document"
                   />
                 </span>
                 <span
-                  class="euiTreeView__nodeLabel"
+                  class="ouiTreeView__nodeLabel"
                 >
                   Item A
                 </span>
               </button>
               <div
-                id="euiTreeView_generated-id_item_a"
+                id="ouiTreeView_generated-id_item_a"
               />
             </li>
             <li
-              class="euiTreeView__node"
+              class="ouiTreeView__node"
             >
               <button
-                aria-controls="euiTreeView_generated-id_item_b"
+                aria-controls="ouiTreeView_generated-id_item_b"
                 aria-expanded="false"
-                class="euiTreeView__nodeInner"
-                data-test-subj="euiTreeViewButton-euiTreeView_generated-id"
+                class="ouiTreeView__nodeInner"
+                data-test-subj="ouiTreeViewButton-ouiTreeView_generated-id"
                 id="item_b"
               >
                 <span
-                  class="euiTreeView__iconWrapper"
+                  class="ouiTreeView__iconWrapper"
                 >
                   <span
-                    data-euiicon-type="arrowRight"
+                    data-ouiicon-type="arrowRight"
                   />
                 </span>
                 <span
-                  class="euiTreeView__nodeLabel"
+                  class="ouiTreeView__nodeLabel"
                 >
                   Item B
                 </span>
               </button>
               <div
-                id="euiTreeView_generated-id_item_b"
+                id="ouiTreeView_generated-id_item_b"
               />
             </li>
             <li
-              class="euiTreeView__node"
+              class="ouiTreeView__node"
             >
               <button
-                aria-controls="euiTreeView_generated-id_item_c"
+                aria-controls="ouiTreeView_generated-id_item_c"
                 aria-expanded="false"
-                class="euiTreeView__nodeInner"
-                data-test-subj="euiTreeViewButton-euiTreeView_generated-id"
+                class="ouiTreeView__nodeInner"
+                data-test-subj="ouiTreeViewButton-ouiTreeView_generated-id"
                 id="item_c"
               >
                 <span
-                  class="euiTreeView__iconWrapper"
+                  class="ouiTreeView__iconWrapper"
                 >
                   <span
-                    data-euiicon-type="arrowRight"
+                    data-ouiicon-type="arrowRight"
                   />
                 </span>
                 <span
-                  class="euiTreeView__nodeLabel"
+                  class="ouiTreeView__nodeLabel"
                 >
                   Item C
                 </span>
               </button>
               <div
-                id="euiTreeView_generated-id_item_c"
+                id="ouiTreeView_generated-id_item_c"
               />
             </li>
           </ul>
@@ -136,23 +136,23 @@ exports[`EuiTreeView is rendered 1`] = `
       </div>
     </li>
     <li
-      class="euiTreeView__node"
+      class="ouiTreeView__node"
     >
       <button
-        aria-controls="euiTreeView_generated-id_item_two"
+        aria-controls="ouiTreeView_generated-id_item_two"
         aria-expanded="false"
-        class="euiTreeView__nodeInner"
-        data-test-subj="euiTreeViewButton-euiTreeView_generated-id"
+        class="ouiTreeView__nodeInner"
+        data-test-subj="ouiTreeViewButton-ouiTreeView_generated-id"
         id="item_two"
       >
         <span
-          class="euiTreeView__nodeLabel"
+          class="ouiTreeView__nodeLabel"
         >
           Item Two
         </span>
       </button>
       <div
-        id="euiTreeView_generated-id_item_two"
+        id="ouiTreeView_generated-id_item_two"
       />
     </li>
   </ul>

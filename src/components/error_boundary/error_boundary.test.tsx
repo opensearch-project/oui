@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@ import React from 'react';
 import { mount } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
-import { EuiErrorBoundary } from './error_boundary';
+import { OuiErrorBoundary } from './error_boundary';
 
 const GoodComponent = () => <div>No error</div>;
 
@@ -32,13 +43,13 @@ const BadComponent = () => {
   throw new Error(errorMessage);
 };
 
-describe('EuiErrorBoundary', () => {
+describe('OuiErrorBoundary', () => {
   test('is rendered without an error', () => {
     const component = takeMountedSnapshot(
       mount(
-        <EuiErrorBoundary {...requiredProps}>
+        <OuiErrorBoundary {...requiredProps}>
           <GoodComponent />
-        </EuiErrorBoundary>
+        </OuiErrorBoundary>
       )
     );
 
@@ -52,9 +63,9 @@ describe('EuiErrorBoundary', () => {
     // Because the error contains the stack trace, it's non-deterministic. So we'll just check that
     // it contains our error message.
     const errorText = mount(
-      <EuiErrorBoundary {...requiredProps}>
+      <OuiErrorBoundary {...requiredProps}>
         <BadComponent />
-      </EuiErrorBoundary>
+      </OuiErrorBoundary>
     ).text();
 
     expect(errorText).toContain(errorMessage);

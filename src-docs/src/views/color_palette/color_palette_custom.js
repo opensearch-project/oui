@@ -1,20 +1,31 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiRange,
-  EuiFormRow,
-  EuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiRange,
+  OuiFormRow,
+  OuiSpacer,
 } from '../../../../src/components';
 
-import { euiPaletteColorBlind, colorPalette } from '../../../../src/services';
+import { ouiPaletteColorBlind, colorPalette } from '../../../../src/services';
 import { ColorPaletteFlexItem, ColorPaletteCopyCode } from './shared';
 
 const customPalettes = [
-  [euiPaletteColorBlind()[3]],
-  [euiPaletteColorBlind()[3], euiPaletteColorBlind()[4]],
-  [euiPaletteColorBlind()[3], euiPaletteColorBlind()[4]],
+  [ouiPaletteColorBlind()[3]],
+  [ouiPaletteColorBlind()[3], ouiPaletteColorBlind()[4]],
+  [ouiPaletteColorBlind()[3], ouiPaletteColorBlind()[4]],
 ];
 
 export default () => {
@@ -26,8 +37,8 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFormRow label="Number of steps" display="columnCompressed">
-        <EuiRange
+      <OuiFormRow label="Number of steps" display="columnCompressed">
+        <OuiRange
           value={length}
           onChange={onLengthChange}
           min={2}
@@ -35,23 +46,23 @@ export default () => {
           compressed
           showValue
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
       {customPalettes.map((palette, i) => (
-        <EuiFlexGroup alignItems="center" key={i}>
-          <EuiFlexItem grow={false}>
-            <EuiFlexGroup
+        <OuiFlexGroup alignItems="center" key={i}>
+          <OuiFlexItem grow={false}>
+            <OuiFlexGroup
               className="guideColorPalette__swatchHolder"
               gutterSize="none"
               responsive={false}>
               {colorPalette(palette, Number(length), i > 1).map((hexCode) => (
                 <ColorPaletteFlexItem hexCode={hexCode} key={hexCode} />
               ))}
-            </EuiFlexGroup>
-          </EuiFlexItem>
-          <EuiFlexItem>
+            </OuiFlexGroup>
+          </OuiFlexItem>
+          <OuiFlexItem>
             <ColorPaletteCopyCode
               textToCopy={`colorPalette([], ${length}${
                 i > 1 ? ', true' : ''
@@ -60,8 +71,8 @@ export default () => {
                 i > 1 ? ', true' : ''
               });`}
             />
-          </EuiFlexItem>
-        </EuiFlexGroup>
+          </OuiFlexItem>
+        </OuiFlexGroup>
       ))}
     </Fragment>
   );

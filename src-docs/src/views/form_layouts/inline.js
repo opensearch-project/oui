@@ -1,29 +1,40 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFormRow,
-  EuiButton,
-  EuiFieldText,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFormRow,
+  OuiButton,
+  OuiFieldText,
 } from '../../../../src/components/';
 
 export default () => (
-  <EuiFlexGroup style={{ maxWidth: 600 }}>
-    <EuiFlexItem>
-      <EuiFormRow label="First name" helpText="I am helpful help text!">
-        <EuiFieldText />
-      </EuiFormRow>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiFormRow label="Last name">
-        <EuiFieldText />
-      </EuiFormRow>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiFormRow hasEmptyLabelSpace>
-        <EuiButton>Save</EuiButton>
-      </EuiFormRow>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+  <OuiFlexGroup style={{ maxWidth: 600 }}>
+    <OuiFlexItem>
+      <OuiFormRow label="First name" helpText="I am helpful help text!">
+        <OuiFieldText />
+      </OuiFormRow>
+    </OuiFlexItem>
+    <OuiFlexItem>
+      <OuiFormRow label="Last name">
+        <OuiFieldText />
+      </OuiFormRow>
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiFormRow hasEmptyLabelSpace>
+        <OuiButton>Save</OuiButton>
+      </OuiFormRow>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

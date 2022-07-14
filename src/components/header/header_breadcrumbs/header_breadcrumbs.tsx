@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,17 +31,17 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-import { EuiBreadcrumbs, EuiBreadcrumbsProps } from '../../breadcrumbs';
+import { OuiBreadcrumbs, OuiBreadcrumbsProps } from '../../breadcrumbs';
 
-export const EuiHeaderBreadcrumbs: FunctionComponent<EuiBreadcrumbsProps> = ({
+export const OuiHeaderBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   className,
   breadcrumbs,
   ...rest
 }) => {
-  const classes = classNames('euiHeaderBreadcrumbs', className);
+  const classes = classNames('ouiHeaderBreadcrumbs', className);
 
   return (
-    <EuiBreadcrumbs
+    <OuiBreadcrumbs
       max={4}
       truncate
       breadcrumbs={breadcrumbs}

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPanel, SIZES, COLORS, BORDER_RADII } from './panel';
+import { OuiPanel, SIZES, COLORS, BORDER_RADII } from './panel';
 
-describe('EuiPanel', () => {
+describe('OuiPanel', () => {
   test('is rendered', () => {
-    const component = render(<EuiPanel {...requiredProps} />);
+    const component = render(<OuiPanel {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -33,7 +44,7 @@ describe('EuiPanel', () => {
   describe('props', () => {
     describe('hasShadow', () => {
       test('can be false', () => {
-        const component = render(<EuiPanel hasShadow={false} />);
+        const component = render(<OuiPanel hasShadow={false} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -41,7 +52,7 @@ describe('EuiPanel', () => {
 
     describe('grow', () => {
       test('can be false', () => {
-        const component = render(<EuiPanel grow={false} />);
+        const component = render(<OuiPanel grow={false} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -49,12 +60,12 @@ describe('EuiPanel', () => {
 
     describe('hasBorder', () => {
       test('can be false', () => {
-        const component = render(<EuiPanel hasBorder={false} />);
+        const component = render(<OuiPanel hasBorder={false} />);
 
         expect(component).toMatchSnapshot();
       });
       test('can be true', () => {
-        const component = render(<EuiPanel hasBorder={true} />);
+        const component = render(<OuiPanel hasBorder={true} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -63,7 +74,7 @@ describe('EuiPanel', () => {
     describe('paddingSize', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(<EuiPanel paddingSize={size} />);
+          const component = render(<OuiPanel paddingSize={size} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -73,7 +84,7 @@ describe('EuiPanel', () => {
     describe('color', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = render(<EuiPanel color={color} />);
+          const component = render(<OuiPanel color={color} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -83,7 +94,7 @@ describe('EuiPanel', () => {
     describe('borderRadius', () => {
       BORDER_RADII.forEach((borderRadius) => {
         test(`${borderRadius} is rendered`, () => {
-          const component = render(<EuiPanel borderRadius={borderRadius} />);
+          const component = render(<OuiPanel borderRadius={borderRadius} />);
 
           expect(component).toMatchSnapshot();
         });

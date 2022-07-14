@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,14 +36,14 @@ import {
   stopThrowingReactWarnings,
 } from '../../test';
 
-import { EuiFlexItem, GROW_SIZES } from './flex_item';
+import { OuiFlexItem, GROW_SIZES } from './flex_item';
 
 beforeAll(startThrowingReactWarnings);
 afterAll(stopThrowingReactWarnings);
 
-describe('EuiFlexItem', () => {
+describe('OuiFlexItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiFlexItem {...requiredProps} />);
+    const component = render(<OuiFlexItem {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -40,7 +51,7 @@ describe('EuiFlexItem', () => {
   describe('grow', () => {
     GROW_SIZES.concat([true, false]).forEach((value) => {
       test(`${value} is rendered`, () => {
-        const component = render(<EuiFlexItem grow={value} />);
+        const component = render(<OuiFlexItem grow={value} />);
 
         expect(component).toMatchSnapshot();
       });

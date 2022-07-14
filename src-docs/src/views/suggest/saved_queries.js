@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSuggest,
-  EuiSuperDatePicker,
+  OuiButtonEmpty,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSuggest,
+  OuiSuperDatePicker,
 } from '../../../../src/components';
 
 import { GlobalFilterBar } from './global_filter_bar';
@@ -109,15 +120,15 @@ export default () => {
     console.log(dateRange);
   };
 
-  const append = <EuiButtonEmpty>KQL</EuiButtonEmpty>;
+  const append = <OuiButtonEmpty>KQL</OuiButtonEmpty>;
 
   return (
     <div className="savedQueriesInput">
-      <EuiFlexGroup
+      <OuiFlexGroup
         gutterSize="s"
         className={hideDatepicker ? 'savedQueriesInput__hideDatepicker' : ''}>
-        <EuiFlexItem>
-          <EuiSuggest
+        <OuiFlexItem>
+          <OuiSuggest
             status={status}
             onFocus={onFieldFocus}
             onBlur={onFieldBlur}
@@ -128,26 +139,26 @@ export default () => {
             onItemClick={onItemClick}
             onInputChange={getInputValue}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false} className="savedQueriesInput__datepicker">
-          <EuiSuperDatePicker onTimeChange={onTimeChange} />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiFlexGroup
+        </OuiFlexItem>
+        <OuiFlexItem grow={false} className="savedQueriesInput__datepicker">
+          <OuiSuperDatePicker onTimeChange={onTimeChange} />
+        </OuiFlexItem>
+      </OuiFlexGroup>
+      <OuiFlexGroup
         className="globalFilterGroup"
         gutterSize="none"
         alignItems="flexStart"
         responsive={false}>
-        <EuiFlexItem className="globalFilterGroup__branch" grow={false}>
+        <OuiFlexItem className="globalFilterGroup__branch" grow={false}>
           <GlobalFilterOptions />
-        </EuiFlexItem>
-        <EuiFlexItem className="globalFilterGroup__filterFlexItem">
+        </OuiFlexItem>
+        <OuiFlexItem className="globalFilterGroup__filterFlexItem">
           <GlobalFilterBar
             className="globalFilterGroup__filterBar"
             filters={filters}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </div>
   );
 };

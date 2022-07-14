@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiPopoverFooter, PADDING_SIZES } from './popover_footer';
+import { OuiPopoverFooter, PADDING_SIZES } from './popover_footer';
 
-describe('EuiPopoverFooter', () => {
+describe('OuiPopoverFooter', () => {
   test('is rendered', () => {
-    const component = render(<EuiPopoverFooter {...requiredProps} />);
+    const component = render(<OuiPopoverFooter {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +45,7 @@ describe('EuiPopoverFooter', () => {
     describe('paddingSize', () => {
       PADDING_SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(<EuiPopoverFooter paddingSize={size} />);
+          const component = render(<OuiPopoverFooter paddingSize={size} />);
 
           expect(component).toMatchSnapshot();
         });

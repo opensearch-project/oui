@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,28 +32,28 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiForm } from './form';
+import { OuiForm } from './form';
 
-describe('EuiForm', () => {
+describe('OuiForm', () => {
   test('is rendered', () => {
-    const component = render(<EuiForm {...requiredProps} />);
+    const component = render(<OuiForm {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders a form element', () => {
-    const component = render(<EuiForm {...requiredProps} component="form" />);
+    const component = render(<OuiForm {...requiredProps} component="form" />);
 
     expect(component).toMatchSnapshot();
   });
   test('renders with error callout when isInvalid is "true"', () => {
-    const component = render(<EuiForm {...requiredProps} isInvalid />);
+    const component = render(<OuiForm {...requiredProps} isInvalid />);
 
     expect(component).toMatchSnapshot();
   });
   test('renders with error callout when isInvalid is "true" and has one error', () => {
     const component = render(
-      <EuiForm
+      <OuiForm
         {...requiredProps}
         isInvalid
         error={<span>This is one error</span>}
@@ -53,7 +64,7 @@ describe('EuiForm', () => {
   });
   test('renders with error callout when isInvalid is "true" and has multiple errors', () => {
     const component = render(
-      <EuiForm
+      <OuiForm
         {...requiredProps}
         isInvalid
         error={[
@@ -67,7 +78,7 @@ describe('EuiForm', () => {
   });
   test('renders without error callout when invalidCallout is "none"', () => {
     const component = render(
-      <EuiForm {...requiredProps} isInvalid invalidCallout="none" />
+      <OuiForm {...requiredProps} isInvalid invalidCallout="none" />
     );
 
     expect(component).toMatchSnapshot();

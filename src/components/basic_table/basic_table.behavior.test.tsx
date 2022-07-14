@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { findTestSubject } from '../../test';
 
-import { EuiBasicTable, EuiBasicTableProps } from './basic_table';
+import { OuiBasicTable, OuiBasicTableProps } from './basic_table';
 
-describe('EuiBasicTable', () => {
+describe('OuiBasicTable', () => {
   describe('behavior', () => {
     describe('selected items', () => {
-      let props: EuiBasicTableProps<{ id: string; name: string }>;
+      let props: OuiBasicTableProps<{ id: string; name: string }>;
       let component: ReactWrapper;
 
       beforeEach(() => {
@@ -49,7 +60,7 @@ describe('EuiBasicTable', () => {
           onChange: () => {},
         };
 
-        component = mount(<EuiBasicTable {...props} />);
+        component = mount(<OuiBasicTable {...props} />);
       });
 
       test('check the select all checkbox when all are selected', () => {

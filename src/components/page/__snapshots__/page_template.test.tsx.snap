@@ -1,81 +1,81 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPageTemplate fullHeight is rendered with noscroll 1`] = `
+exports[`OuiPageTemplate fullHeight is rendered with noscroll 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate fullHeight is rendered with true 1`] = `
+exports[`OuiPageTemplate fullHeight is rendered with true 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate is rendered 1`] = `
+exports[`OuiPageTemplate is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPage euiPage--grow euiPageTemplate testClass1 testClass2"
+  class="ouiPage ouiPage--grow ouiPageTemplate testClass1 testClass2"
   data-test-subj="test subject string"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate restrict width can be set to a custom number 1`] = `
+exports[`OuiPageTemplate restrict width can be set to a custom number 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-custom"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-custom"
         style="max-width:1024px"
       />
     </div>
@@ -83,43 +83,43 @@ exports[`EuiPageTemplate restrict width can be set to a custom number 1`] = `
 </div>
 `;
 
-exports[`EuiPageTemplate restrict width can be turned off 1`] = `
+exports[`OuiPageTemplate restrict width can be turned off 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--paddingLarge"
+        class="ouiPageContentBody ouiPage--paddingLarge"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody is rendered 1`] = `
+exports[`OuiPageTemplate template centeredBody is rendered 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
   >
     <div
-      class="euiPageBody euiPageBody--borderRadiusNone"
+      class="ouiPageBody ouiPageBody--borderRadiusNone"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -127,25 +127,25 @@ exports[`EuiPageTemplate template centeredBody is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody is rendered with pageBodyProps 1`] = `
+exports[`OuiPageTemplate template centeredBody is rendered with pageBodyProps 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
     aria-label="aria-label"
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default testClass1 testClass2"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default testClass1 testClass2"
     data-test-subj="test subject string"
   >
     <div
-      class="euiPageBody euiPageBody--borderRadiusNone"
+      class="ouiPageBody ouiPageBody--borderRadiusNone"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -153,24 +153,24 @@ exports[`EuiPageTemplate template centeredBody is rendered with pageBodyProps 1`
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody is rendered with pageContentBodyProps 1`] = `
+exports[`OuiPageTemplate template centeredBody is rendered with pageContentBodyProps 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
   >
     <div
-      class="euiPageBody euiPageBody--borderRadiusNone"
+      class="ouiPageBody ouiPageBody--borderRadiusNone"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
           aria-label="aria-label"
-          class="euiPageContentBody euiPage--restrictWidth-default testClass1 testClass2"
+          class="ouiPageContentBody ouiPage--restrictWidth-default testClass1 testClass2"
           data-test-subj="test subject string"
         />
       </div>
@@ -179,25 +179,25 @@ exports[`EuiPageTemplate template centeredBody is rendered with pageContentBodyP
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody is rendered with pageContentProps 1`] = `
+exports[`OuiPageTemplate template centeredBody is rendered with pageContentProps 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
   >
     <div
-      class="euiPageBody euiPageBody--borderRadiusNone"
+      class="ouiPageBody ouiPageBody--borderRadiusNone"
     >
       <div
         aria-label="aria-label"
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter testClass1 testClass2"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter testClass1 testClass2"
         data-test-subj="test subject string"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -205,29 +205,29 @@ exports[`EuiPageTemplate template centeredBody is rendered with pageContentProps
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody is rendered with pageHeader 1`] = `
+exports[`OuiPageTemplate template centeredBody is rendered with pageHeader 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
   >
     <header
       aria-label="aria-label"
-      class="euiPageHeader euiPageHeader--bottomBorder euiPageHeader--responsive euiPageHeader--center testClass1 testClass2"
+      class="ouiPageHeader ouiPageHeader--bottomBorder ouiPageHeader--responsive ouiPageHeader--center testClass1 testClass2"
       data-test-subj="test subject string"
       title="Page title"
     />
     <div
-      class="euiPageBody euiPageBody--borderRadiusNone"
+      class="ouiPageBody ouiPageBody--borderRadiusNone"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -235,23 +235,23 @@ exports[`EuiPageTemplate template centeredBody is rendered with pageHeader 1`] =
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody minHeight is rendered 1`] = `
+exports[`OuiPageTemplate template centeredBody minHeight is rendered 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
   style="min-height:40vh"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
   >
     <div
-      class="euiPageBody euiPageBody--borderRadiusNone"
+      class="ouiPageBody ouiPageBody--borderRadiusNone"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -259,23 +259,23 @@ exports[`EuiPageTemplate template centeredBody minHeight is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody paddingSize is rendered 1`] = `
+exports[`OuiPageTemplate template centeredBody paddingSize is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
   >
     <div
-      class="euiPageBody euiPageBody--borderRadiusNone"
+      class="ouiPageBody ouiPageBody--borderRadiusNone"
     >
       <div
-        class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -283,23 +283,23 @@ exports[`EuiPageTemplate template centeredBody paddingSize is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody style is rendered 1`] = `
+exports[`OuiPageTemplate template centeredBody style is rendered 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
   style="min-height:460px;max-height:100vh"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
   >
     <div
-      class="euiPageBody euiPageBody--borderRadiusNone"
+      class="ouiPageBody ouiPageBody--borderRadiusNone"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -307,76 +307,76 @@ exports[`EuiPageTemplate template centeredBody style is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody with pageSideBar is rendered 1`] = `
+exports[`OuiPageTemplate template centeredBody with pageSideBar is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageSideBar euiPageSideBar--paddingLarge euiPageSideBar--sticky"
+    class="ouiPageSideBar ouiPageSideBar--paddingLarge ouiPageSideBar--sticky"
   >
     Side Bar
   </div>
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--paddingLarge"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--paddingLarge"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredBody with pageSideBar is rendered with pageSideBarProps 1`] = `
+exports[`OuiPageTemplate template centeredBody with pageSideBar is rendered with pageSideBarProps 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
     aria-label="aria-label"
-    class="euiPageSideBar euiPageSideBar--paddingLarge euiPageSideBar--sticky testClass1 testClass2"
+    class="ouiPageSideBar ouiPageSideBar--paddingLarge ouiPageSideBar--sticky testClass1 testClass2"
     data-test-subj="test subject string"
   >
     Side Bar
   </div>
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--paddingLarge"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--paddingLarge"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--plain euiPanel--hasShadow euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent is rendered 1`] = `
+exports[`OuiPageTemplate template centeredContent is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPageContent ouiPageContent--borderRadiusNone"
       style="display:flex"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -384,26 +384,26 @@ exports[`EuiPageTemplate template centeredContent is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent is rendered with pageBodyProps 1`] = `
+exports[`OuiPageTemplate template centeredContent is rendered with pageBodyProps 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
     aria-label="aria-label"
-    class="euiPageBody euiPageBody--borderRadiusNone testClass1 testClass2"
+    class="ouiPageBody ouiPageBody--borderRadiusNone testClass1 testClass2"
     data-test-subj="test subject string"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPageContent ouiPageContent--borderRadiusNone"
       style="display:flex"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -411,25 +411,25 @@ exports[`EuiPageTemplate template centeredContent is rendered with pageBodyProps
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent is rendered with pageContentBodyProps 1`] = `
+exports[`OuiPageTemplate template centeredContent is rendered with pageContentBodyProps 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPageContent ouiPageContent--borderRadiusNone"
       style="display:flex"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
           aria-label="aria-label"
-          class="euiPageContentBody euiPage--restrictWidth-default testClass1 testClass2"
+          class="ouiPageContentBody ouiPage--restrictWidth-default testClass1 testClass2"
           data-test-subj="test subject string"
         />
       </div>
@@ -438,26 +438,26 @@ exports[`EuiPageTemplate template centeredContent is rendered with pageContentBo
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent is rendered with pageContentProps 1`] = `
+exports[`OuiPageTemplate template centeredContent is rendered with pageContentProps 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPageContent ouiPageContent--borderRadiusNone"
       style="display:flex"
     >
       <div
         aria-label="aria-label"
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter testClass1 testClass2"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter testClass1 testClass2"
         data-test-subj="test subject string"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -465,30 +465,30 @@ exports[`EuiPageTemplate template centeredContent is rendered with pageContentPr
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent is rendered with pageHeader 1`] = `
+exports[`OuiPageTemplate template centeredContent is rendered with pageHeader 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <header
       aria-label="aria-label"
-      class="euiPageHeader euiPageHeader--paddingLarge euiPageHeader--responsive euiPage--restrictWidth-default euiPageHeader--center testClass1 testClass2"
+      class="ouiPageHeader ouiPageHeader--paddingLarge ouiPageHeader--responsive ouiPage--restrictWidth-default ouiPageHeader--center testClass1 testClass2"
       data-test-subj="test subject string"
       title="Page title"
     />
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPageContent ouiPageContent--borderRadiusNone"
       style="display:flex"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -496,24 +496,24 @@ exports[`EuiPageTemplate template centeredContent is rendered with pageHeader 1`
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent minHeight is rendered 1`] = `
+exports[`OuiPageTemplate template centeredContent minHeight is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:40vh"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPageContent ouiPageContent--borderRadiusNone"
       style="display:flex"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -521,24 +521,24 @@ exports[`EuiPageTemplate template centeredContent minHeight is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent paddingSize is rendered 1`] = `
+exports[`OuiPageTemplate template centeredContent paddingSize is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPageContent ouiPageContent--borderRadiusNone"
       style="display:flex"
     >
       <div
-        class="euiPanel euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -546,24 +546,24 @@ exports[`EuiPageTemplate template centeredContent paddingSize is rendered 1`] = 
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent style is rendered 1`] = `
+exports[`OuiPageTemplate template centeredContent style is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px;max-height:100vh"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPageContent ouiPageContent--borderRadiusNone"
       style="display:flex"
     >
       <div
-        class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+        class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
         role="main"
       >
         <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
         />
       </div>
     </div>
@@ -571,347 +571,115 @@ exports[`EuiPageTemplate template centeredContent style is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent with pageSideBar is rendered 1`] = `
+exports[`OuiPageTemplate template centeredContent with pageSideBar is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageSideBar euiPageSideBar--paddingLarge euiPageSideBar--sticky"
+    class="ouiPageSideBar ouiPageSideBar--paddingLarge ouiPageSideBar--sticky"
   >
     Side Bar
   </div>
   <div
-    class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusNone euiPanel--plain euiPanel--hasShadow euiPageBody euiPageBody--borderRadiusNone euiPageBody--paddingLarge"
+    class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--hasShadow ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--paddingLarge"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template centeredContent with pageSideBar is rendered with pageSideBarProps 1`] = `
+exports[`OuiPageTemplate template centeredContent with pageSideBar is rendered with pageSideBarProps 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
     aria-label="aria-label"
-    class="euiPageSideBar euiPageSideBar--paddingLarge euiPageSideBar--sticky testClass1 testClass2"
+    class="ouiPageSideBar ouiPageSideBar--paddingLarge ouiPageSideBar--sticky testClass1 testClass2"
     data-test-subj="test subject string"
   >
     Side Bar
   </div>
   <div
-    class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusNone euiPanel--plain euiPanel--hasShadow euiPageBody euiPageBody--borderRadiusNone euiPageBody--paddingLarge"
+    class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--hasShadow ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--paddingLarge"
   >
     <div
-      class="euiPanel euiPanel--paddingLarge euiPanel--borderRadiusMedium euiPanel--subdued euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--verticalCenter euiPageContent--horizontalCenter"
+      class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--verticalCenter ouiPageContent--horizontalCenter"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template default is rendered 1`] = `
+exports[`OuiPageTemplate template default is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template default is rendered with pageBodyProps 1`] = `
+exports[`OuiPageTemplate template default is rendered with pageBodyProps 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
     aria-label="aria-label"
-    class="euiPageBody euiPageBody--borderRadiusNone testClass1 testClass2"
+    class="ouiPageBody ouiPageBody--borderRadiusNone testClass1 testClass2"
     data-test-subj="test subject string"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template default is rendered with pageContentBodyProps 1`] = `
+exports[`OuiPageTemplate template default is rendered with pageContentBodyProps 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
         aria-label="aria-label"
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default testClass1 testClass2"
-        data-test-subj="test subject string"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template default is rendered with pageContentProps 1`] = `
-<div
-  class="euiPage euiPage--grow euiPageTemplate"
-  style="min-height:460px"
->
-  <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
-  >
-    <div
-      aria-label="aria-label"
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone testClass1 testClass2"
-      data-test-subj="test subject string"
-      role="main"
-    >
-      <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template default is rendered with pageHeader 1`] = `
-<div
-  class="euiPage euiPage--grow euiPageTemplate"
-  style="min-height:460px"
->
-  <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
-  >
-    <header
-      aria-label="aria-label"
-      class="euiPageHeader euiPageHeader--paddingLarge euiPageHeader--responsive euiPage--restrictWidth-default euiPageHeader--center testClass1 testClass2"
-      data-test-subj="test subject string"
-      title="Page title"
-    />
-    <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPageContent euiPageContent--borderRadiusNone"
-      role="main"
-    >
-      <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template default minHeight is rendered 1`] = `
-<div
-  class="euiPage euiPage--grow euiPageTemplate"
-  style="min-height:40vh"
->
-  <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
-  >
-    <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
-      role="main"
-    >
-      <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template default paddingSize is rendered 1`] = `
-<div
-  class="euiPage euiPage--grow euiPageTemplate"
-  style="min-height:460px"
->
-  <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
-  >
-    <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
-      role="main"
-    >
-      <div
-        class="euiPageContentBody euiPage--restrictWidth-default"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template default style is rendered 1`] = `
-<div
-  class="euiPage euiPage--grow euiPageTemplate"
-  style="min-height:460px;max-height:100vh"
->
-  <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
-  >
-    <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
-      role="main"
-    >
-      <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template default with pageSideBar is rendered 1`] = `
-<div
-  class="euiPage euiPage--grow euiPageTemplate"
-  style="min-height:460px"
->
-  <div
-    class="euiPageSideBar euiPageSideBar--paddingLarge euiPageSideBar--sticky"
-  >
-    Side Bar
-  </div>
-  <div
-    class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--hasShadow euiPageBody euiPageBody--borderRadiusNone"
-  >
-    <div
-      class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--paddingLarge"
-    >
-      <div
-        class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
-        role="main"
-      >
-        <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template default with pageSideBar is rendered with pageSideBarProps 1`] = `
-<div
-  class="euiPage euiPage--grow euiPageTemplate"
-  style="min-height:460px"
->
-  <div
-    aria-label="aria-label"
-    class="euiPageSideBar euiPageSideBar--paddingLarge euiPageSideBar--sticky testClass1 testClass2"
-    data-test-subj="test subject string"
-  >
-    Side Bar
-  </div>
-  <div
-    class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--hasShadow euiPageBody euiPageBody--borderRadiusNone"
-  >
-    <div
-      class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--paddingLarge"
-    >
-      <div
-        class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
-        role="main"
-      >
-        <div
-          class="euiPageContentBody euiPage--restrictWidth-default"
-        />
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template empty is rendered 1`] = `
-<div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
-  style="min-height:460px"
->
-  <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
-  >
-    <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
-      role="main"
-    >
-      <div
-        class="euiPageContentBody"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template empty is rendered with pageBodyProps 1`] = `
-<div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
-  style="min-height:460px"
->
-  <div
-    aria-label="aria-label"
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default testClass1 testClass2"
-    data-test-subj="test subject string"
-  >
-    <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
-      role="main"
-    >
-      <div
-        class="euiPageContentBody"
-      />
-    </div>
-  </div>
-</div>
-`;
-
-exports[`EuiPageTemplate template empty is rendered with pageContentBodyProps 1`] = `
-<div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
-  style="min-height:460px"
->
-  <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
-  >
-    <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
-      role="main"
-    >
-      <div
-        aria-label="aria-label"
-        class="euiPageContentBody testClass1 testClass2"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default testClass1 testClass2"
         data-test-subj="test subject string"
       />
     </div>
@@ -919,201 +687,433 @@ exports[`EuiPageTemplate template empty is rendered with pageContentBodyProps 1`
 </div>
 `;
 
-exports[`EuiPageTemplate template empty is rendered with pageContentProps 1`] = `
+exports[`OuiPageTemplate template default is rendered with pageContentProps 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
       aria-label="aria-label"
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone testClass1 testClass2"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone testClass1 testClass2"
       data-test-subj="test subject string"
       role="main"
     >
       <div
-        class="euiPageContentBody"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template empty is rendered with pageHeader 1`] = `
+exports[`OuiPageTemplate template default is rendered with pageHeader 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <header
       aria-label="aria-label"
-      class="euiPageHeader euiPageHeader--bottomBorder euiPageHeader--responsive euiPageHeader--center testClass1 testClass2"
+      class="ouiPageHeader ouiPageHeader--paddingLarge ouiPageHeader--responsive ouiPage--restrictWidth-default ouiPageHeader--center testClass1 testClass2"
       data-test-subj="test subject string"
       title="Page title"
     />
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template empty minHeight is rendered 1`] = `
+exports[`OuiPageTemplate template default minHeight is rendered 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:40vh"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template empty paddingSize is rendered 1`] = `
+exports[`OuiPageTemplate template default paddingSize is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody"
+        class="ouiPageContentBody ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template empty style is rendered 1`] = `
+exports[`OuiPageTemplate template default style is rendered 1`] = `
 <div
-  class="euiPage euiPage--paddingLarge euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px;max-height:100vh"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--restrictWidth-default"
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody"
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template empty with pageSideBar is rendered 1`] = `
+exports[`OuiPageTemplate template default with pageSideBar is rendered 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageSideBar euiPageSideBar--paddingLarge euiPageSideBar--sticky"
+    class="ouiPageSideBar ouiPageSideBar--paddingLarge ouiPageSideBar--sticky"
   >
     Side Bar
   </div>
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--paddingLarge"
+    class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--hasShadow ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
-      role="main"
+      class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--paddingLarge"
     >
       <div
-        class="euiPageContentBody euiPage--restrictWidth-default"
-      />
+        class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+        role="main"
+      >
+        <div
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
+        />
+      </div>
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate template empty with pageSideBar is rendered with pageSideBarProps 1`] = `
+exports[`OuiPageTemplate template default with pageSideBar is rendered with pageSideBarProps 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
     aria-label="aria-label"
-    class="euiPageSideBar euiPageSideBar--paddingLarge euiPageSideBar--sticky testClass1 testClass2"
+    class="ouiPageSideBar ouiPageSideBar--paddingLarge ouiPageSideBar--sticky testClass1 testClass2"
     data-test-subj="test subject string"
   >
     Side Bar
   </div>
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone euiPageBody--paddingLarge"
+    class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--hasShadow ouiPageBody ouiPageBody--borderRadiusNone"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--transparent euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--paddingLarge"
+    >
+      <div
+        class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+        role="main"
+      >
+        <div
+          class="ouiPageContentBody ouiPage--restrictWidth-default"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate template empty is rendered 1`] = `
+<div
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
+  style="min-height:460px"
+>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
+  >
+    <div
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--restrictWidth-default"
+        class="ouiPageContentBody"
       />
     </div>
   </div>
 </div>
 `;
 
-exports[`EuiPageTemplate with bottomBar is rendered 1`] = `
+exports[`OuiPageTemplate template empty is rendered with pageBodyProps 1`] = `
 <div
-  class="euiPage euiPage--grow euiPageTemplate"
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
   style="min-height:460px"
 >
   <div
-    class="euiPageBody euiPageBody--borderRadiusNone"
+    aria-label="aria-label"
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default testClass1 testClass2"
+    data-test-subj="test subject string"
   >
     <div
-      class="euiPanel euiPanel--borderRadiusNone euiPanel--plain euiPanel--noShadow euiPanel--noBorder euiPageContent euiPageContent--borderRadiusNone"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
       role="main"
     >
       <div
-        class="euiPageContentBody euiPage--paddingLarge euiPage--restrictWidth-default"
+        class="ouiPageContentBody"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate template empty is rendered with pageContentBodyProps 1`] = `
+<div
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
+  style="min-height:460px"
+>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
+  >
+    <div
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+      role="main"
+    >
+      <div
+        aria-label="aria-label"
+        class="ouiPageContentBody testClass1 testClass2"
+        data-test-subj="test subject string"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate template empty is rendered with pageContentProps 1`] = `
+<div
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
+  style="min-height:460px"
+>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
+  >
+    <div
+      aria-label="aria-label"
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone testClass1 testClass2"
+      data-test-subj="test subject string"
+      role="main"
+    >
+      <div
+        class="ouiPageContentBody"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate template empty is rendered with pageHeader 1`] = `
+<div
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
+  style="min-height:460px"
+>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
+  >
+    <header
+      aria-label="aria-label"
+      class="ouiPageHeader ouiPageHeader--bottomBorder ouiPageHeader--responsive ouiPageHeader--center testClass1 testClass2"
+      data-test-subj="test subject string"
+      title="Page title"
+    />
+    <div
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+      role="main"
+    >
+      <div
+        class="ouiPageContentBody"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate template empty minHeight is rendered 1`] = `
+<div
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
+  style="min-height:40vh"
+>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
+  >
+    <div
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+      role="main"
+    >
+      <div
+        class="ouiPageContentBody"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate template empty paddingSize is rendered 1`] = `
+<div
+  class="ouiPage ouiPage--grow ouiPageTemplate"
+  style="min-height:460px"
+>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
+  >
+    <div
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+      role="main"
+    >
+      <div
+        class="ouiPageContentBody"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate template empty style is rendered 1`] = `
+<div
+  class="ouiPage ouiPage--paddingLarge ouiPage--grow ouiPageTemplate"
+  style="min-height:460px;max-height:100vh"
+>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--restrictWidth-default"
+  >
+    <div
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+      role="main"
+    >
+      <div
+        class="ouiPageContentBody"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate template empty with pageSideBar is rendered 1`] = `
+<div
+  class="ouiPage ouiPage--grow ouiPageTemplate"
+  style="min-height:460px"
+>
+  <div
+    class="ouiPageSideBar ouiPageSideBar--paddingLarge ouiPageSideBar--sticky"
+  >
+    Side Bar
+  </div>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--paddingLarge"
+  >
+    <div
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+      role="main"
+    >
+      <div
+        class="ouiPageContentBody ouiPage--restrictWidth-default"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate template empty with pageSideBar is rendered with pageSideBarProps 1`] = `
+<div
+  class="ouiPage ouiPage--grow ouiPageTemplate"
+  style="min-height:460px"
+>
+  <div
+    aria-label="aria-label"
+    class="ouiPageSideBar ouiPageSideBar--paddingLarge ouiPageSideBar--sticky testClass1 testClass2"
+    data-test-subj="test subject string"
+  >
+    Side Bar
+  </div>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone ouiPageBody--paddingLarge"
+  >
+    <div
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+      role="main"
+    >
+      <div
+        class="ouiPageContentBody ouiPage--restrictWidth-default"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiPageTemplate with bottomBar is rendered 1`] = `
+<div
+  class="ouiPage ouiPage--grow ouiPageTemplate"
+  style="min-height:460px"
+>
+  <div
+    class="ouiPageBody ouiPageBody--borderRadiusNone"
+  >
+    <div
+      class="ouiPanel ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiPageContent ouiPageContent--borderRadiusNone"
+      role="main"
+    >
+      <div
+        class="ouiPageContentBody ouiPage--paddingLarge ouiPage--restrictWidth-default"
       />
     </div>
     <section
       aria-label="Page level controls"
-      class="euiBottomBar euiBottomBar--sticky"
+      class="ouiBottomBar ouiBottomBar--sticky"
       style="left:0;right:0;bottom:0"
     >
       <h2
-        class="euiScreenReaderOnly"
+        class="ouiScreenReaderOnly"
       >
         Page level controls
       </h2>
       <div
-        class="euiPageContentBody euiPage--restrictWidth-default"
+        class="ouiPageContentBody ouiPage--restrictWidth-default"
       >
         Bottom Bar
       </div>
     </section>
     <p
       aria-live="assertive"
-      class="euiScreenReaderOnly"
+      class="ouiScreenReaderOnly"
     >
       There is a new region landmark with page level controls at the end of the document.
     </p>

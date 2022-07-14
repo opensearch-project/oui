@@ -1,35 +1,46 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import {
-  EuiAvatar,
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiHeader,
-  EuiHeaderBreadcrumbs,
-  EuiHeaderLogo,
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemButton,
-  EuiIcon,
-  EuiKeyPadMenu,
-  EuiKeyPadMenuItem,
-  EuiLink,
-  EuiPopover,
-  EuiPopoverFooter,
-  EuiPopoverTitle,
-  EuiSelectable,
-  EuiSelectableMessage,
-  EuiSelectableTemplateSitewide,
-  EuiSpacer,
-  EuiText,
+  OuiAvatar,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiHeader,
+  OuiHeaderBreadcrumbs,
+  OuiHeaderLogo,
+  OuiHeaderSection,
+  OuiHeaderSectionItem,
+  OuiHeaderSectionItemButton,
+  OuiIcon,
+  OuiKeyPadMenu,
+  OuiKeyPadMenuItem,
+  OuiLink,
+  OuiPopover,
+  OuiPopoverFooter,
+  OuiPopoverTitle,
+  OuiSelectable,
+  OuiSelectableMessage,
+  OuiSelectableTemplateSitewide,
+  OuiSpacer,
+  OuiText,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
 export default () => {
   const renderLogo = () => (
-    <EuiHeaderLogo
+    <OuiHeaderLogo
       iconType="logoElastic"
       href="#"
       onClick={(e) => e.preventDefault()}
@@ -75,7 +86,7 @@ export default () => {
     ];
 
     return (
-      <EuiHeaderBreadcrumbs
+      <OuiHeaderBreadcrumbs
         aria-label="Header breadcrumbs example"
         breadcrumbs={breadcrumbs}
       />
@@ -83,55 +94,55 @@ export default () => {
   };
 
   const search = (
-    <EuiSelectableTemplateSitewide
+    <OuiSelectableTemplateSitewide
       options={[]}
       searchProps={{
         compressed: true,
       }}
       popoverButton={
-        <EuiHeaderSectionItemButton aria-label="Sitewide search">
-          <EuiIcon type="search" size="m" />
-        </EuiHeaderSectionItemButton>
+        <OuiHeaderSectionItemButton aria-label="Sitewide search">
+          <OuiIcon type="search" size="m" />
+        </OuiHeaderSectionItemButton>
       }
       emptyMessage={
-        <EuiSelectableMessage style={{ minHeight: 300 }}>
+        <OuiSelectableMessage style={{ minHeight: 300 }}>
           <p>
             Please see the component page for{' '}
             <Link to="/forms/selectable">
-              <strong>EuiSelectableTemplateSitewide</strong>
+              <strong>OuiSelectableTemplateSitewide</strong>
             </Link>{' '}
             on how to configure your sitewide search.
           </p>
-        </EuiSelectableMessage>
+        </OuiSelectableMessage>
       }
     />
   );
 
   return (
-    <EuiHeader>
-      <EuiHeaderSection grow={false}>
-        <EuiHeaderSectionItem border="right">
+    <OuiHeader>
+      <OuiHeaderSection grow={false}>
+        <OuiHeaderSectionItem border="right">
           {renderLogo()}
-        </EuiHeaderSectionItem>
-        <EuiHeaderSectionItem border="right">
+        </OuiHeaderSectionItem>
+        <OuiHeaderSectionItem border="right">
           <HeaderSpacesMenu />
-        </EuiHeaderSectionItem>
-      </EuiHeaderSection>
+        </OuiHeaderSectionItem>
+      </OuiHeaderSection>
 
       {renderBreadcrumbs()}
 
-      <EuiHeaderSection side="right">
-        <EuiHeaderSectionItem>{search}</EuiHeaderSectionItem>
+      <OuiHeaderSection side="right">
+        <OuiHeaderSectionItem>{search}</OuiHeaderSectionItem>
 
-        <EuiHeaderSectionItem>
+        <OuiHeaderSectionItem>
           <HeaderUserMenu />
-        </EuiHeaderSectionItem>
+        </OuiHeaderSectionItem>
 
-        <EuiHeaderSectionItem>
+        <OuiHeaderSectionItem>
           <HeaderAppMenu />
-        </EuiHeaderSectionItem>
-      </EuiHeaderSection>
-    </EuiHeader>
+        </OuiHeaderSectionItem>
+      </OuiHeaderSection>
+    </OuiHeader>
   );
 };
 
@@ -148,18 +159,18 @@ const HeaderUserMenu = () => {
   };
 
   const button = (
-    <EuiHeaderSectionItemButton
+    <OuiHeaderSectionItemButton
       aria-controls={id}
       aria-expanded={isOpen}
       aria-haspopup="true"
       aria-label="Account menu"
       onClick={onMenuButtonClick}>
-      <EuiAvatar name="John Username" size="s" />
-    </EuiHeaderSectionItemButton>
+      <OuiAvatar name="John Username" size="s" />
+    </OuiHeaderSectionItemButton>
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       id={id}
       button={button}
       isOpen={isOpen}
@@ -167,38 +178,38 @@ const HeaderUserMenu = () => {
       closePopover={closeMenu}
       panelPaddingSize="none">
       <div style={{ width: 320 }}>
-        <EuiFlexGroup
+        <OuiFlexGroup
           gutterSize="m"
-          className="euiHeaderProfile"
+          className="ouiHeaderProfile"
           responsive={false}>
-          <EuiFlexItem grow={false}>
-            <EuiAvatar name="John Username" size="xl" />
-          </EuiFlexItem>
+          <OuiFlexItem grow={false}>
+            <OuiAvatar name="John Username" size="xl" />
+          </OuiFlexItem>
 
-          <EuiFlexItem>
-            <EuiText>
+          <OuiFlexItem>
+            <OuiText>
               <p>John Username</p>
-            </EuiText>
+            </OuiText>
 
-            <EuiSpacer size="m" />
+            <OuiSpacer size="m" />
 
-            <EuiFlexGroup>
-              <EuiFlexItem>
-                <EuiFlexGroup justifyContent="spaceBetween">
-                  <EuiFlexItem grow={false}>
-                    <EuiLink>Edit profile</EuiLink>
-                  </EuiFlexItem>
+            <OuiFlexGroup>
+              <OuiFlexItem>
+                <OuiFlexGroup justifyContent="spaceBetween">
+                  <OuiFlexItem grow={false}>
+                    <OuiLink>Edit profile</OuiLink>
+                  </OuiFlexItem>
 
-                  <EuiFlexItem grow={false}>
-                    <EuiLink>Log out</EuiLink>
-                  </EuiFlexItem>
-                </EuiFlexGroup>
-              </EuiFlexItem>
-            </EuiFlexGroup>
-          </EuiFlexItem>
-        </EuiFlexGroup>
+                  <OuiFlexItem grow={false}>
+                    <OuiLink>Log out</OuiLink>
+                  </OuiFlexItem>
+                </OuiFlexGroup>
+              </OuiFlexItem>
+            </OuiFlexGroup>
+          </OuiFlexItem>
+        </OuiFlexGroup>
       </div>
-    </EuiPopover>
+    </OuiPopover>
   );
 };
 
@@ -207,39 +218,39 @@ const HeaderSpacesMenu = () => {
   const spacesValues = [
     {
       label: 'Sales team',
-      prepend: <EuiAvatar type="space" name="Sales Team" size="s" />,
+      prepend: <OuiAvatar type="space" name="Sales Team" size="s" />,
       checked: 'on',
     },
     {
       label: 'Engineering',
-      prepend: <EuiAvatar type="space" name="Engineering" size="s" />,
+      prepend: <OuiAvatar type="space" name="Engineering" size="s" />,
     },
     {
       label: 'Security',
-      prepend: <EuiAvatar type="space" name="Security" size="s" />,
+      prepend: <OuiAvatar type="space" name="Security" size="s" />,
     },
     {
       label: 'Default',
-      prepend: <EuiAvatar type="space" name="Default" size="s" />,
+      prepend: <OuiAvatar type="space" name="Default" size="s" />,
     },
   ];
 
   const additionalSpaces = [
     {
       label: 'Sales team 2',
-      prepend: <EuiAvatar type="space" name="Sales Team 2" size="s" />,
+      prepend: <OuiAvatar type="space" name="Sales Team 2" size="s" />,
     },
     {
       label: 'Engineering 2',
-      prepend: <EuiAvatar type="space" name="Engineering 2" size="s" />,
+      prepend: <OuiAvatar type="space" name="Engineering 2" size="s" />,
     },
     {
       label: 'Security 2',
-      prepend: <EuiAvatar type="space" name="Security 2" size="s" />,
+      prepend: <OuiAvatar type="space" name="Security 2" size="s" />,
     },
     {
       label: 'Default 2',
-      prepend: <EuiAvatar type="space" name="Default 2" size="s" />,
+      prepend: <OuiAvatar type="space" name="Default 2" size="s" />,
     },
   ];
 
@@ -272,25 +283,25 @@ const HeaderSpacesMenu = () => {
   };
 
   const button = (
-    <EuiHeaderSectionItemButton
+    <OuiHeaderSectionItemButton
       aria-controls={id}
       aria-expanded={isOpen}
       aria-haspopup="true"
       aria-label="Spaces menu"
       onClick={onMenuButtonClick}>
       {selectedSpace.prepend}
-    </EuiHeaderSectionItemButton>
+    </OuiHeaderSectionItemButton>
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       id={id}
       button={button}
       isOpen={isOpen}
       anchorPosition="downLeft"
       closePopover={closePopover}
       panelPaddingSize="none">
-      <EuiSelectable
+      <OuiSelectable
         searchable={isListExtended()}
         searchProps={{
           placeholder: 'Find a space',
@@ -306,23 +317,23 @@ const HeaderSpacesMenu = () => {
         }}>
         {(list, search) => (
           <>
-            <EuiPopoverTitle paddingSize="s">
+            <OuiPopoverTitle paddingSize="s">
               {search || 'Your spaces'}
-            </EuiPopoverTitle>
+            </OuiPopoverTitle>
             {list}
-            <EuiPopoverFooter paddingSize="s">
-              <EuiButton
+            <OuiPopoverFooter paddingSize="s">
+              <OuiButton
                 size="s"
                 fullWidth
                 onClick={addMoreSpaces}
                 disabled={isListExtended()}>
                 Add more spaces
-              </EuiButton>
-            </EuiPopoverFooter>
+              </OuiButton>
+            </OuiPopoverFooter>
           </>
         )}
-      </EuiSelectable>
-    </EuiPopover>
+      </OuiSelectable>
+    </OuiPopover>
   );
 };
 
@@ -342,53 +353,53 @@ const HeaderAppMenu = () => {
   };
 
   const button = (
-    <EuiHeaderSectionItemButton
+    <OuiHeaderSectionItemButton
       aria-controls={keypadId}
       aria-expanded={isOpen}
       aria-haspopup="true"
       aria-label="Apps menu with 1 new app"
       notification="1"
       onClick={onMenuButtonClick}>
-      <EuiIcon type="apps" size="m" />
-    </EuiHeaderSectionItemButton>
+      <OuiIcon type="apps" size="m" />
+    </OuiHeaderSectionItemButton>
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       id={popoverId}
       button={button}
       isOpen={isOpen}
       anchorPosition="downRight"
       closePopover={closeMenu}>
-      <EuiKeyPadMenu id={keypadId} style={{ width: 288 }}>
-        <EuiKeyPadMenuItem label="Discover">
-          <EuiIcon type="discoverApp" size="l" />
-        </EuiKeyPadMenuItem>
+      <OuiKeyPadMenu id={keypadId} style={{ width: 288 }}>
+        <OuiKeyPadMenuItem label="Discover">
+          <OuiIcon type="discoverApp" size="l" />
+        </OuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Dashboard">
-          <EuiIcon type="dashboardApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <OuiKeyPadMenuItem label="Dashboard">
+          <OuiIcon type="dashboardApp" size="l" />
+        </OuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Dev Tools">
-          <EuiIcon type="devToolsApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <OuiKeyPadMenuItem label="Dev Tools">
+          <OuiIcon type="devToolsApp" size="l" />
+        </OuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Machine Learning">
-          <EuiIcon type="machineLearningApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <OuiKeyPadMenuItem label="Machine Learning">
+          <OuiIcon type="machineLearningApp" size="l" />
+        </OuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Graph">
-          <EuiIcon type="graphApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <OuiKeyPadMenuItem label="Graph">
+          <OuiIcon type="graphApp" size="l" />
+        </OuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Visualize">
-          <EuiIcon type="visualizeApp" size="l" />
-        </EuiKeyPadMenuItem>
+        <OuiKeyPadMenuItem label="Visualize">
+          <OuiIcon type="visualizeApp" size="l" />
+        </OuiKeyPadMenuItem>
 
-        <EuiKeyPadMenuItem label="Timelion" betaBadgeLabel="Beta">
-          <EuiIcon type="timelionApp" size="l" />
-        </EuiKeyPadMenuItem>
-      </EuiKeyPadMenu>
-    </EuiPopover>
+        <OuiKeyPadMenuItem label="Timelion" betaBadgeLabel="Beta">
+          <OuiIcon type="timelionApp" size="l" />
+        </OuiKeyPadMenuItem>
+      </OuiKeyPadMenu>
+    </OuiPopover>
   );
 };

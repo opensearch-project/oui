@@ -1,17 +1,28 @@
-.euiPaginationButton {
-  font-size: $euiFontSizeS;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiPaginationButton {
+  font-size: $ouiFontSizeS;
   padding: 0;
   text-align: center;
-  border-radius: $euiBorderRadius;
+  border-radius: $ouiBorderRadius;
 }
 
-.euiPaginationButton-isActive {
-  font-weight: $euiFontWeightBold;
+.ouiPaginationButton-isActive {
+  font-weight: $ouiFontWeightBold;
 
   &#{&} {
-    color: $euiColorPrimary;
+    color: $ouiColorPrimary;
 
-    .euiButtonEmpty__content {
+    .ouiButtonEmpty__content {
       cursor: default;
     }
 
@@ -22,18 +33,18 @@
   }
 }
 
-.euiPaginationButton-isPlaceholder {
+.ouiPaginationButton-isPlaceholder {
   align-items: baseline;
-  color: $euiButtonColorDisabledText;
-  font-size: $euiFontSizeS;
-  padding: 0 $euiSizeS;
-  height: $euiSizeL;
-  padding-top: $euiSizeM / 2;
+  color: $ouiButtonColorDisabledText;
+  font-size: $ouiFontSizeS;
+  padding: 0 $ouiSizeS;
+  height: $ouiSizeL;
+  padding-top: $ouiSizeM / 2;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiPaginationButton-isPlaceholder,
-  .euiPaginationButton--hideOnMobile {
+@include ouiBreakpoint('xs', 's') {
+  .ouiPaginationButton-isPlaceholder,
+  .ouiPaginationButton--hideOnMobile {
     display: none;
   }
 }

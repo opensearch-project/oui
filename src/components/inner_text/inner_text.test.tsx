@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,8 +33,8 @@ import { act } from 'react-dom/test-utils';
 import { render, mount } from 'enzyme';
 import { findTestSubject, requiredProps } from '../../test';
 
-import { useInnerText, EuiInnerText } from './inner_text';
-import { EuiBadge } from '../badge';
+import { useInnerText, OuiInnerText } from './inner_text';
+import { OuiBadge } from '../badge';
 
 describe('useInnerText', () => {
   test('provides a callback `ref`', () => {
@@ -135,16 +146,16 @@ describe('useInnerText', () => {
   });
 });
 
-describe('EuiInnerText', () => {
+describe('OuiInnerText', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiInnerText {...requiredProps}>
+      <OuiInnerText {...requiredProps}>
         {(ref, innerText) => (
           <span ref={ref} title={innerText}>
             Test
           </span>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
     );
 
     expect(component).toMatchSnapshot();
@@ -153,13 +164,13 @@ describe('EuiInnerText', () => {
   test('uses innerText', () => {
     const text = 'Test';
     const component = mount(
-      <EuiInnerText {...requiredProps}>
+      <OuiInnerText {...requiredProps}>
         {(ref, innerText) => (
           <span ref={ref} title={innerText} data-test-subj="span">
             {text}
           </span>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
     );
 
     const span = findTestSubject(component, 'span');
@@ -170,13 +181,13 @@ describe('EuiInnerText', () => {
     const text = 'Test';
     const fallback = 'Fallback';
     const component = mount(
-      <EuiInnerText {...requiredProps} fallback={fallback}>
+      <OuiInnerText {...requiredProps} fallback={fallback}>
         {(_, innerText) => (
           <span title={innerText} data-test-subj="span">
             {text}
           </span>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
     );
 
     const span = findTestSubject(component, 'span');
@@ -185,7 +196,7 @@ describe('EuiInnerText', () => {
 
   test('works with wrapper and interspersed DOM elements', () => {
     const component = mount(
-      <EuiInnerText {...requiredProps}>
+      <OuiInnerText {...requiredProps}>
         {(ref, innerText) => (
           <span ref={ref} title={innerText} data-test-subj="span">
             <div>
@@ -194,13 +205,13 @@ describe('EuiInnerText', () => {
                 can{' '}
                 <em>
                   still <strong>read </strong>
-                  <EuiBadge>this</EuiBadge>
+                  <OuiBadge>this</OuiBadge>
                 </em>
               </span>
             </div>
           </span>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
     );
 
     const span = findTestSubject(component, 'span');

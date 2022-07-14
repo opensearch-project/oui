@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useEffect } from 'react';
 
 import {
-  EuiHeader,
-  EuiHeaderLogo,
-  EuiHeaderSectionItemButton,
-  EuiSwitch,
-  EuiSpacer,
-  EuiAvatar,
-  EuiIcon,
+  OuiHeader,
+  OuiHeaderLogo,
+  OuiHeaderSectionItemButton,
+  OuiSwitch,
+  OuiSpacer,
+  OuiAvatar,
+  OuiIcon,
 } from '../../../../src/components';
 
 export default () => {
@@ -27,54 +38,54 @@ export default () => {
   ];
 
   useEffect(() => {
-    if (isFixed) document.body.classList.add('euiBody--headerIsFixed--double');
+    if (isFixed) document.body.classList.add('ouiBody--headerIsFixed--double');
 
     return () => {
-      document.body.classList.remove('euiBody--headerIsFixed--double');
+      document.body.classList.remove('ouiBody--headerIsFixed--double');
     };
   }, [isFixed]);
 
   const headers = (
     <>
-      <EuiHeader
+      <OuiHeader
         theme="dark"
         position={isFixed ? 'fixed' : 'static'}
         sections={[
           {
             items: [
-              <EuiHeaderLogo iconType="logoElastic">Elastic</EuiHeaderLogo>,
+              <OuiHeaderLogo iconType="logoElastic">Elastic</OuiHeaderLogo>,
             ],
             borders: 'none',
           },
           {
             items: [
-              <EuiHeaderSectionItemButton aria-label="Account menu">
-                <EuiAvatar name="John Username" size="s" />
-              </EuiHeaderSectionItemButton>,
+              <OuiHeaderSectionItemButton aria-label="Account menu">
+                <OuiAvatar name="John Username" size="s" />
+              </OuiHeaderSectionItemButton>,
             ],
             borders: 'none',
           },
         ]}
       />
-      <EuiHeader
+      <OuiHeader
         position={isFixed ? 'fixed' : 'static'}
         sections={[
           {
             items: [
-              <EuiHeaderSectionItemButton aria-label="Account menu">
-                <EuiAvatar type="space" name="Default Space" size="s" />
-              </EuiHeaderSectionItemButton>,
+              <OuiHeaderSectionItemButton aria-label="Account menu">
+                <OuiAvatar type="space" name="Default Space" size="s" />
+              </OuiHeaderSectionItemButton>,
             ],
             breadcrumbs: breadcrumbs,
             borders: 'right',
           },
           {
             items: [
-              <EuiHeaderSectionItemButton
+              <OuiHeaderSectionItemButton
                 aria-label="News feed: Updates available"
                 notification={true}>
-                <EuiIcon type="cheer" size="m" />
-              </EuiHeaderSectionItemButton>,
+                <OuiIcon type="cheer" size="m" />
+              </OuiHeaderSectionItemButton>,
             ],
             borders: 'none',
           },
@@ -85,12 +96,12 @@ export default () => {
 
   return (
     <>
-      <EuiSwitch
+      <OuiSwitch
         label={'Make header fixed position'}
         checked={isFixed}
         onChange={(e) => setIsFixed(e.target.checked)}
       />
-      <EuiSpacer />
+      <OuiSpacer />
       {headers}
     </>
   );

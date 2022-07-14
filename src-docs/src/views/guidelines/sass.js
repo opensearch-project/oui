@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import sizes from '!!sass-vars-to-js-loader?preserveKeys=true!../../../../src/global_styling/variables/_size.scss';
 import zindexs from '!!sass-vars-to-js-loader?preserveKeys=true!../../../../src/global_styling/variables/_z_index.scss';
@@ -12,130 +23,130 @@ import { getSassVars } from './_get_sass_vars';
 import { allowedColors } from './colors/_utilities';
 
 import {
-  EuiText,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiTitle,
-  EuiLink,
-  EuiCode,
-  EuiCodeBlock,
-  EuiCallOut,
-  EuiPanel,
+  OuiText,
+  OuiSpacer,
+  OuiFlexGroup,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiTitle,
+  OuiLink,
+  OuiCode,
+  OuiCodeBlock,
+  OuiCallOut,
+  OuiPanel,
 } from '../../../../src/components';
 
-const euiColors = [...allowedColors, 'euiColorGhost', 'euiColorInk'];
+const ouiColors = [...allowedColors, 'ouiColorGhost', 'ouiColorInk'];
 
-const euiTextColors = ['euiTextColor', 'euiColorDarkShade', 'euiLinkColor'];
+const ouiTextColors = ['ouiTextColor', 'ouiColorDarkShade', 'ouiLinkColor'];
 
-const euiSizes = [
-  'euiSizeXS',
-  'euiSizeS',
-  'euiSizeM',
-  'euiSize',
-  'euiSizeL',
-  'euiSizeXL',
-  'euiSizeXXL',
+const ouiSizes = [
+  'ouiSizeXS',
+  'ouiSizeS',
+  'ouiSizeM',
+  'ouiSize',
+  'ouiSizeL',
+  'ouiSizeXL',
+  'ouiSizeXXL',
 ];
 
-const euiFontSizes = [
-  'euiFontSizeXS',
-  'euiFontSizeS',
-  'euiFontSizeM',
-  'euiFontSize',
-  'euiFontSizeL',
-  'euiFontSizeXL',
+const ouiFontSizes = [
+  'ouiFontSizeXS',
+  'ouiFontSizeS',
+  'ouiFontSizeM',
+  'ouiFontSize',
+  'ouiFontSizeL',
+  'ouiFontSizeXL',
 ];
 
-const euiShadows = [
-  'euiBottomShadowFlat',
-  'euiSlightShadow',
-  'euiBottomShadowSmall',
-  'euiBottomShadowMedium',
-  'euiBottomShadow',
-  'euiBottomShadowLarge',
+const ouiShadows = [
+  'ouiBottomShadowFlat',
+  'ouiSlightShadow',
+  'ouiBottomShadowSmall',
+  'ouiBottomShadowMedium',
+  'ouiBottomShadow',
+  'ouiBottomShadowLarge',
 ];
 
-const euiBorders = ['euiBorderThin', 'euiBorderThick', 'euiBorderEditable'];
+const ouiBorders = ['ouiBorderThin', 'ouiBorderThick', 'ouiBorderEditable'];
 
-const euiLevels = [
-  'euiZToastList',
-  'euiZComboBox',
-  'euiZModal',
-  'euiZMask',
-  'euiZNavigation',
-  'euiZContentMenu',
-  'euiZHeader',
-  'euiZContent',
+const ouiLevels = [
+  'ouiZToastList',
+  'ouiZComboBox',
+  'ouiZModal',
+  'ouiZMask',
+  'ouiZNavigation',
+  'ouiZContentMenu',
+  'ouiZHeader',
+  'ouiZContent',
 ];
 
-const euiAnimationSpeeds = [
-  'euiAnimSpeedExtraFast',
-  'euiAnimSpeedFast',
-  'euiAnimSpeedNormal',
-  'euiAnimSpeedSlow',
-  'euiAnimSpeedExtraSlow',
+const ouiAnimationSpeeds = [
+  'ouiAnimSpeedExtraFast',
+  'ouiAnimSpeedFast',
+  'ouiAnimSpeedNormal',
+  'ouiAnimSpeedSlow',
+  'ouiAnimSpeedExtraSlow',
 ];
 
-const euiAnimationTimings = ['euiAnimSlightBounce', 'euiAnimSlightResistance'];
+const ouiAnimationTimings = ['ouiAnimSlightBounce', 'ouiAnimSlightResistance'];
 
-const euiBreakPoints = Object.getOwnPropertyNames(breakpoints.euiBreakpoints);
+const ouiBreakPoints = Object.getOwnPropertyNames(breakpoints.ouiBreakpoints);
 
 function renderPaletteColor(palette, color) {
   let optionalDefault;
-  if (color === 'euiTextColor') {
+  if (color === 'ouiTextColor') {
     optionalDefault = (
-      <EuiFlexItem grow={false}>
+      <OuiFlexItem grow={false}>
         <strong>default</strong>
-      </EuiFlexItem>
+      </OuiFlexItem>
     );
   }
 
   return (
-    <EuiFlexGroup
+    <OuiFlexGroup
       responsive={false}
       alignItems="center"
       gutterSize="s"
       className="guideSass__swatchItem"
       key={color}>
-      <EuiFlexItem grow={false}>
+      <OuiFlexItem grow={false}>
         <div
           className="guideSass__swatch"
           style={{ background: rgbToHex(palette[color].rgba).toUpperCase() }}
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiCode>${color}</EuiCode>
-      </EuiFlexItem>
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiCode>${color}</OuiCode>
+      </OuiFlexItem>
       {optionalDefault}
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   );
 }
 
 function renderSize(size) {
   return (
-    <EuiFlexGroup
+    <OuiFlexGroup
       responsive={false}
       alignItems="center"
       gutterSize="s"
       key={size}
       className="guideSass__sizeRow">
-      <EuiFlexItem grow={false} className="guideSass__sizeItem">
+      <OuiFlexItem grow={false} className="guideSass__sizeItem">
         <div
           className="guideSass__size"
           style={{ width: sizes[size], height: sizes[size] }}
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false} style={{ minWidth: 184 }}>
+      </OuiFlexItem>
+      <OuiFlexItem grow={false} style={{ minWidth: 184 }}>
         <div>
-          <EuiCode>${size}</EuiCode>
+          <OuiCode>${size}</OuiCode>
         </div>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiText size="s">{sizes[size]}px</EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiText size="s">{sizes[size]}px</OuiText>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 }
 
@@ -145,34 +156,34 @@ function renderFontSize(size) {
       <div className={`guideSass__fontSize guideSass__fontSize--${size}`}>
         The quick brown fox
       </div>
-      <EuiCode>${size}</EuiCode>
+      <OuiCode>${size}</OuiCode>
     </div>
   );
 }
 
 function renderLevel(level, index) {
   return (
-    <EuiFlexGroup
+    <OuiFlexGroup
       responsive={false}
       alignItems="center"
       gutterSize="s"
       key={level}
       className="guideSass__levelRow">
-      <EuiFlexItem grow={false}>
+      <OuiFlexItem grow={false}>
         <div
           className="guideSass__level"
           style={{ opacity: 1 - index * 0.1 }}
         />
-      </EuiFlexItem>
-      <EuiFlexItem grow={false} style={{ minWidth: 200, paddingLeft: 16 }}>
+      </OuiFlexItem>
+      <OuiFlexItem grow={false} style={{ minWidth: 200, paddingLeft: 16 }}>
         <div>
-          <EuiCode>${level}</EuiCode>
+          <OuiCode>${level}</OuiCode>
         </div>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiText size="s">{zindexs[level]}</EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiText size="s">{zindexs[level]}</OuiText>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 }
 
@@ -181,22 +192,22 @@ function renderShadow(shadow) {
     <div
       key={shadow}
       className={`guideSass__shadow guideSass__shadow--${shadow}`}>
-      <EuiCodeBlock language="scss" paddingSize="none" transparentBackground>
+      <OuiCodeBlock language="scss" paddingSize="none" transparentBackground>
         @include {shadow};
-      </EuiCodeBlock>
+      </OuiCodeBlock>
     </div>
   );
 }
 
 function renderBorder(border) {
   return (
-    <EuiFlexItem
+    <OuiFlexItem
       key={border}
       className={`guideSass__border guideSass__border--${border}`}>
-      <EuiCodeBlock language="scss" paddingSize="none" transparentBackground>
+      <OuiCodeBlock language="scss" paddingSize="none" transparentBackground>
         border: ${border}
-      </EuiCodeBlock>
-    </EuiFlexItem>
+      </OuiCodeBlock>
+    </OuiFlexItem>
   );
 }
 
@@ -205,19 +216,19 @@ function renderAnimationSpeed(speed) {
     <div
       key={speed}
       className={`guideSass__animRow guideSass__animRow--${speed}`}>
-      <EuiFlexGroup alignItems="center" gutterSize="s">
-        <EuiFlexItem grow={false}>
+      <OuiFlexGroup alignItems="center" gutterSize="s">
+        <OuiFlexItem grow={false}>
           {animations[speed]}ms
-          <EuiSpacer size="s" />
-          <EuiCodeBlock
+          <OuiSpacer size="s" />
+          <OuiCodeBlock
             transparentBackground
             paddingSize="none"
             language="scss">
             animation-duration: ${speed}
-          </EuiCodeBlock>
-          <EuiSpacer size="s" />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiCodeBlock>
+          <OuiSpacer size="s" />
+        </OuiFlexItem>
+      </OuiFlexGroup>
       <div className={'guideSass__animParent'}>
         <div className="guideSass__animChild" />
       </div>
@@ -230,19 +241,19 @@ function renderAnimationTiming(speed) {
     <div
       key={speed}
       className={`guideSass__animRow guideSass__animRow--${speed}`}>
-      <EuiFlexGroup alignItems="center" gutterSize="s">
-        <EuiFlexItem grow={false}>
+      <OuiFlexGroup alignItems="center" gutterSize="s">
+        <OuiFlexItem grow={false}>
           {animations[speed]}
-          <EuiSpacer size="s" />
-          <EuiCodeBlock
+          <OuiSpacer size="s" />
+          <OuiCodeBlock
             transparentBackground
             paddingSize="none"
             language="scss">
             animation-timing-function: ${speed}
-          </EuiCodeBlock>
-          <EuiSpacer size="s" />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiCodeBlock>
+          <OuiSpacer size="s" />
+        </OuiFlexItem>
+      </OuiFlexGroup>
       <div className={'guideSass__animParent'}>
         <div className="guideSass__animChild" />
       </div>
@@ -252,62 +263,62 @@ function renderAnimationTiming(speed) {
 
 export function renderBreakpoint(size, breakpoints) {
   return (
-    <EuiFlexGroup
+    <OuiFlexGroup
       responsive={false}
       alignItems="center"
       gutterSize="s"
       key={size}>
-      <EuiFlexItem grow={false}>
-        <EuiText size="s" className="eui-textRight" style={{ minWidth: 50 }}>
-          <EuiCode>{size}</EuiCode>
-        </EuiText>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiText size="s">{breakpoints.euiBreakpoints[size]}px</EuiText>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      <OuiFlexItem grow={false}>
+        <OuiText size="s" className="oui-textRight" style={{ minWidth: 50 }}>
+          <OuiCode>{size}</OuiCode>
+        </OuiText>
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiText size="s">{breakpoints.ouiBreakpoints[size]}px</OuiText>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 }
 
 const bemExample = `// Use camelCase naming
-.euiButton {
+.ouiButton {
   // Put mixins first before properties
-  @include euiButton;
-  @include euiSlightShadow;
+  @include ouiButton;
+  @include ouiSlightShadow;
 
-  border-radius: $euiBorderRadius;
+  border-radius: $ouiBorderRadius;
 
 
   // Elements exist within the component
-  .euiButton__content {
-    padding: 0 ($euiSize - $euiSizeXS);
+  .ouiButton__content {
+    padding: 0 ($ouiSize - $ouiSizeXS);
   }
 
   // Modifiers augment existing components or elements
-  &.euiButton--primary {
-    background-color: $euiColorPrimary;
+  &.ouiButton--primary {
+    background-color: $ouiColorPrimary;
   }
 
   // States are written with a verb prefix
-  &.euiButton-isLoading {
+  &.ouiButton-isLoading {
     opacity: .5;
   }
 }
 
 // Put breakpoints at the bottom of the document
-@include euiBreakpoint("xs", "s") {
-  .euiButton {
+@include ouiBreakpoint("xs", "s") {
+  .ouiButton {
     width: 100%;
   }
 }
 `;
 
-const borderRadiusExample = `border: $euiBorderThin;
-border-radius: $euiBorderRadius;
+const borderRadiusExample = `border: $ouiBorderThin;
+border-radius: $ouiBorderRadius;
 `;
 
-const borderRadiusSmallExample = `border: $euiBorderThin;
-border-radius: $euiBorderRadiusSmall;
+const borderRadiusSmallExample = `border: $ouiBorderThin;
+border-radius: $ouiBorderRadiusSmall;
 `;
 
 const importKibanaExample = `// In Kibana you can add this to the top of your Sass file
@@ -315,37 +326,37 @@ const importKibanaExample = `// In Kibana you can add this to the top of your Sa
 `;
 
 const importOutsideExample = `// In an outside project, import the core variables like so
-@import '@elastic/eui/src/global_styling/functions/index';
-@import '@elastic/eui/src/global_styling/variables/index';
-@import '@elastic/eui/src/global_styling/mixins/index';
+@import '@opensearch-project/oui/src/global_styling/functions/index';
+@import '@opensearch-project/oui/src/global_styling/variables/index';
+@import '@opensearch-project/oui/src/global_styling/mixins/index';
 `;
 
 const tintOrShadeExample = `// tintOrShade(color, tint_percent, shade_percent)
 // will tint the color by % in light themes
 // and shade the color by % in dark themes
 .themedBox {
-  background-color: tintOrShade($euiColorPrimary, 90%, 70%);
-  border-left: $euiBorderThick;
-  border-color: $euiColorPrimary;
-  padding: $euiSize;
-  color: $euiTextColor;
+  background-color: tintOrShade($ouiColorPrimary, 90%, 70%);
+  border-left: $ouiBorderThick;
+  border-color: $ouiColorPrimary;
+  padding: $ouiSize;
+  color: $ouiTextColor;
 }
 `;
 
 const contrastExample = `// Make sure text passes a contrast check
 .contrastBox {
-  $backgroundColor: tintOrShade($euiColorWarning, 90%, 70%);
+  $backgroundColor: tintOrShade($ouiColorWarning, 90%, 70%);
   background: $backgroundColor;
 
   // Given two colors, adjust the first until contrast is 4.5
-  color: makeHighContrastColor($euiColorWarning, $backgroundColor);
-  padding: $euiSize;
-  border-left: $euiBorderThick;
-  border-color: $euiColorWarning;
+  color: makeHighContrastColor($ouiColorWarning, $backgroundColor);
+  padding: $ouiSize;
+  border-left: $ouiBorderThick;
+  border-color: $ouiColorWarning;
 
   // Graphics can have a lower minimum contrast level of 3.0
   .square {
-    fill: makeGraphicContrastColor($euiColorWarning, $backgroundColor);
+    fill: makeGraphicContrastColor($ouiColorWarning, $backgroundColor);
   }
 }
 `;
@@ -355,206 +366,206 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
   return (
     <GuidePage title="Sass guidelines">
-      <EuiTitle>
+      <OuiTitle>
         <h2>Core variables</h2>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
           <div>
-            <EuiTitle size="s">
+            <OuiTitle size="s">
               <h3>Sizing</h3>
-            </EuiTitle>
+            </OuiTitle>
 
-            <EuiSpacer />
+            <OuiSpacer />
 
-            {euiSizes.map(function (size, index) {
+            {ouiSizes.map(function (size, index) {
               return renderSize(size, index);
             })}
 
-            <EuiSpacer />
+            <OuiSpacer />
 
-            <EuiTitle size="s">
+            <OuiTitle size="s">
               <h3>Z-index</h3>
-            </EuiTitle>
+            </OuiTitle>
 
-            <EuiSpacer />
+            <OuiSpacer />
 
-            {euiLevels.map(function (level, index) {
+            {ouiLevels.map(function (level, index) {
               return renderLevel(level, index);
             })}
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiTitle size="s">
             <h3>Color</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          {euiColors.map(function (color, index) {
+          {ouiColors.map(function (color, index) {
             return renderPaletteColor(palette, color, index);
           })}
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
       <GuideRuleTitle>Going beyond the provided colors</GuideRuleTitle>
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
+          <OuiTitle size="s">
             <h3>Theming patterns</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer />
-          <EuiText>
+          <OuiSpacer />
+          <OuiText>
             <p>
               Often you need to go beyond the provided color set. When doing so{' '}
               <strong>always</strong> use color functions to modify the base
               set. Here are some examples.
             </p>
-          </EuiText>
-          <EuiSpacer />
+          </OuiText>
+          <OuiSpacer />
 
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem grow={false}>
+          <OuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <OuiFlexItem grow={false}>
               <div className="guideSass__swatch guideSass__swatch--danger" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>$euiCodeDanger</EuiCode>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-          <EuiSpacer />
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem grow={false}>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiCode>$ouiCodeDanger</OuiCode>
+            </OuiFlexItem>
+          </OuiFlexGroup>
+          <OuiSpacer />
+          <OuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <OuiFlexItem grow={false}>
               <div className="guideSass__swatch guideSass__swatch--dangerTint" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>tint($euiCodeDanger, 30%)</EuiCode>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-          <EuiSpacer />
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem grow={false}>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiCode>tint($ouiCodeDanger, 30%)</OuiCode>
+            </OuiFlexItem>
+          </OuiFlexGroup>
+          <OuiSpacer />
+          <OuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <OuiFlexItem grow={false}>
               <div className="guideSass__swatch guideSass__swatch--dangerShade" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>shade($euiCodeDanger, 30%)</EuiCode>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiCode>shade($ouiCodeDanger, 30%)</OuiCode>
+            </OuiFlexItem>
+          </OuiFlexGroup>
 
-          <EuiSpacer />
-          <EuiText>
+          <OuiSpacer />
+          <OuiText>
             <p>
-              Remember that EUI provides dark and light mode theming support.
+              Remember that OUI provides dark and light mode theming support.
               Sometimes the traditional color functions don&apos;t give enough
               flexibility for both modes.
             </p>
             <p>
               For example, depending upon what theme you use{' '}
-              <EuiCode>$euiColorPrimary</EuiCode> will be a different hex value.
+              <OuiCode>$ouiColorPrimary</OuiCode> will be a different hex value.
             </p>
-          </EuiText>
-          <EuiSpacer />
+          </OuiText>
+          <OuiSpacer />
 
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem
+          <OuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <OuiFlexItem
               grow={false}
               style={{ background: '#FFF', padding: 8 }}>
               <div className="guideSass__swatch guideSass__swatch--primaryLight" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>$euiColorPrimary</EuiCode>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiText size="s">
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiCode>$ouiColorPrimary</OuiCode>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiText size="s">
                 <p>is #0079A5 in the light theme</p>
-              </EuiText>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-          <EuiSpacer />
-          <EuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
-            <EuiFlexItem
+              </OuiText>
+            </OuiFlexItem>
+          </OuiFlexGroup>
+          <OuiSpacer />
+          <OuiFlexGroup alignItems="center" responsive={false} gutterSize="s">
+            <OuiFlexItem
               grow={false}
               style={{ background: '#222', padding: 8 }}>
               <div className="guideSass__swatch guideSass__swatch--primaryDark" />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiCode>$euiColorPrimary</EuiCode>
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiText size="s">
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiCode>$ouiColorPrimary</OuiCode>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiText size="s">
                 <p>is #4da1c0 in the dark theme</p>
-              </EuiText>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+              </OuiText>
+            </OuiFlexItem>
+          </OuiFlexGroup>
 
-          <EuiSpacer />
-          <EuiText>
+          <OuiSpacer />
+          <OuiText>
             <p>
               Taking the default primary color above we want to tint the color
               in the light mode, but shade it in the dark mode. This makes the
               background color more subtle in both use cases.
             </p>
-          </EuiText>
+          </OuiText>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiCodeBlock
+          <OuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {tintOrShadeExample}
-          </EuiCodeBlock>
+          </OuiCodeBlock>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiFlexGrid columns={2}>
-            <EuiFlexItem style={{ background: '#FFF', padding: 16 }}>
+          <OuiFlexGrid columns={2}>
+            <OuiFlexItem style={{ background: '#FFF', padding: 16 }}>
               <div className="guideSass__themedBox guideSass__themedBox--light">
                 Light theme
               </div>
-            </EuiFlexItem>
-            <EuiFlexItem style={{ background: '#222', padding: 16 }}>
+            </OuiFlexItem>
+            <OuiFlexItem style={{ background: '#222', padding: 16 }}>
               <div className="guideSass__themedBox guideSass__themedBox--dark">
                 Dark theme
               </div>
-            </EuiFlexItem>
-          </EuiFlexGrid>
-        </EuiFlexItem>
+            </OuiFlexItem>
+          </OuiFlexGrid>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        <OuiFlexItem>
+          <OuiTitle size="s">
             <h3>Color contrast patterns</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiText>
+          <OuiText>
             <p>
-              EUI provides some nifty color functions for auto-adjusting color
+              OUI provides some nifty color functions for auto-adjusting color
               to pass AA contrast checks. Often this is needed when using the
               base colors on top of each other. Here is an example similar to
               our callouts with a pesky orange.
             </p>
-          </EuiText>
+          </OuiText>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiCodeBlock
+          <OuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {contrastExample}
-          </EuiCodeBlock>
+          </OuiCodeBlock>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
           <div className="guideSass__contrastExample">
             <svg
@@ -575,254 +586,254 @@ export const SassGuidelines = ({ selectedTheme }) => {
             This orange text now passes a contrast check!
           </div>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiTitle size="s">
+          <OuiTitle size="s">
             <h3>More on color contrast</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiText>
+          <OuiText>
             <p>
               Consult the larger{' '}
               <Link to="/guidelines/colors">color guidelines</Link> page for a
               better explanation about passing color contrast.
             </p>
-          </EuiText>
+          </OuiText>
 
-          <EuiSpacer />
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          <OuiSpacer />
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
       <GuideRuleTitle>Typography</GuideRuleTitle>
 
-      <EuiText grow={false}>
+      <OuiText grow={false}>
         <p>
           View the{' '}
-          <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/variables/_typography.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/variables/_typography.scss">
             variable
-          </EuiLink>{' '}
+          </OuiLink>{' '}
           and{' '}
-          <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_typography.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_typography.scss">
             mixins
-          </EuiLink>{' '}
+          </OuiLink>{' '}
           Sass code for typography. For most of your components we recommend
-          using <Link to="/display/text">EuiText</Link> or{' '}
-          <Link to="/display/title">EuiTitle</Link> instead of these Sass
+          using <Link to="/display/text">OuiText</Link> or{' '}
+          <Link to="/display/title">OuiTitle</Link> instead of these Sass
           variables.
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer />
-      <EuiCallOut
+      <OuiSpacer />
+      <OuiCallOut
         size="s"
         color="warning"
         title={
           <span>
             It is more common to use these as a mixin (e.g.{' '}
-            <EuiCode language="css">@include euiFontSizeS;</EuiCode>) to
+            <OuiCode language="css">@include ouiFontSizeS;</OuiCode>) to
             automatically apply line-height as well as size.
           </span>
         }
       />
 
-      <EuiSpacer />
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+      <OuiSpacer />
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
+          <OuiTitle size="s">
             <h3>Text sizes</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer />
-          {euiFontSizes.map(function (size, index) {
+          <OuiSpacer />
+          {ouiFontSizes.map(function (size, index) {
             return renderFontSize(size, index);
           })}
-        </EuiFlexItem>
-        <EuiFlexItem>
+        </OuiFlexItem>
+        <OuiFlexItem>
           <div>
-            <EuiTitle size="s">
+            <OuiTitle size="s">
               <h3>Text colors</h3>
-            </EuiTitle>
+            </OuiTitle>
 
-            <EuiSpacer />
+            <OuiSpacer />
 
-            {euiTextColors.map(function (color, index) {
+            {ouiTextColors.map(function (color, index) {
               return renderPaletteColor(palette, color, index);
             })}
 
-            <EuiSpacer />
+            <OuiSpacer />
 
-            <EuiTitle>
+            <OuiTitle>
               <h3>Font families</h3>
-            </EuiTitle>
+            </OuiTitle>
 
-            <EuiSpacer />
+            <OuiSpacer />
 
-            <EuiFlexGroup responsive={false} alignItems="center">
-              <EuiFlexItem grow={false} className="guideSass__fontFamily">
+            <OuiFlexGroup responsive={false} alignItems="center">
+              <OuiFlexItem grow={false} className="guideSass__fontFamily">
                 Abc
-              </EuiFlexItem>
-              <EuiFlexItem grow={false}>
-                <EuiCode language="css">@include euiFont;</EuiCode>
-              </EuiFlexItem>
-            </EuiFlexGroup>
+              </OuiFlexItem>
+              <OuiFlexItem grow={false}>
+                <OuiCode language="css">@include ouiFont;</OuiCode>
+              </OuiFlexItem>
+            </OuiFlexGroup>
 
-            <EuiFlexGroup responsive={false} alignItems="center">
-              <EuiFlexItem
+            <OuiFlexGroup responsive={false} alignItems="center">
+              <OuiFlexItem
                 grow={false}
                 className="guideSass__fontFamily guideSass__fontFamily--code">
                 Abc
-              </EuiFlexItem>
-              <EuiFlexItem grow={false}>
-                <EuiCode language="css">@include euiCodeFont;</EuiCode>
-              </EuiFlexItem>
-            </EuiFlexGroup>
+              </OuiFlexItem>
+              <OuiFlexItem grow={false}>
+                <OuiCode language="css">@include ouiCodeFont;</OuiCode>
+              </OuiFlexItem>
+            </OuiFlexGroup>
           </div>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
       <GuideRuleTitle>Borders</GuideRuleTitle>
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
-      <EuiText grow={false}>
+      <OuiText grow={false}>
         <p>
-          EUI provides some helper variables for setting common border types.
+          OUI provides some helper variables for setting common border types.
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGrid columns={3}>
-        {euiBorders.map(function (border, index) {
+      <OuiFlexGrid columns={3}>
+        {ouiBorders.map(function (border, index) {
           return renderBorder(border, index);
         })}
-      </EuiFlexGrid>
+      </OuiFlexGrid>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiText grow={false}>
+      <OuiText grow={false}>
         <p>
-          In addition, you can utilize <EuiCode>$euiBorderRadius</EuiCode> or{' '}
-          <EuiCode>$euiBorderRadiusSmall</EuiCode> to round the corners.
+          In addition, you can utilize <OuiCode>$ouiBorderRadius</OuiCode> or{' '}
+          <OuiCode>$ouiBorderRadiusSmall</OuiCode> to round the corners.
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGrid columns={3}>
-        <EuiFlexItem className="guideSass__border guideSass__border--radius">
-          <EuiCodeBlock
+      <OuiFlexGrid columns={3}>
+        <OuiFlexItem className="guideSass__border guideSass__border--radius">
+          <OuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {borderRadiusExample}
-          </EuiCodeBlock>
-        </EuiFlexItem>
-        <EuiFlexItem className="guideSass__border guideSass__border--radiusSmall">
-          <EuiCodeBlock
+          </OuiCodeBlock>
+        </OuiFlexItem>
+        <OuiFlexItem className="guideSass__border guideSass__border--radiusSmall">
+          <OuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {borderRadiusSmallExample}
-          </EuiCodeBlock>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          </OuiCodeBlock>
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
       <GuideRuleTitle>Shadow and Depth</GuideRuleTitle>
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
+          <OuiTitle size="s">
             <h3>Use mixins for shadows</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiText>
+          <OuiText>
             <p>
-              <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_shadow.scss">
+              <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_shadow.scss">
                 View the Sass code for shadow mixins
-              </EuiLink>
+              </OuiLink>
               .
             </p>
-          </EuiText>
+          </OuiText>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          {euiShadows.map(function (shadow, index) {
+          {ouiShadows.map(function (shadow, index) {
             return renderShadow(shadow, index);
           })}
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiTitle size="s">
+          <OuiTitle size="s">
             <h3>Adding color to shadows</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiText>
+          <OuiText>
             <p>Most shadow mixins can also accept color.</p>
-          </EuiText>
+          </OuiText>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <div className="guideSass__shadow guideSass__shadow--color eui-textBreakAll">
-            <EuiCodeBlock
+          <div className="guideSass__shadow guideSass__shadow--color oui-textBreakAll">
+            <OuiCodeBlock
               language="scss"
               paddingSize="none"
               transparentBackground>
-              @include euiBottomShadowLarge(desaturate($euiColorPrimary, 30%));
-            </EuiCodeBlock>
+              @include ouiBottomShadowLarge(desaturate($ouiColorPrimary, 30%));
+            </OuiCodeBlock>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiTitle size="s">
             <h3>Shadows to create graceful overflows</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiText>
+          <OuiText>
             <p>
               Primarily used in modals and flyouts, the overflow shadow masks
               the edges to indicate there is more content.
             </p>
-          </EuiText>
+          </OuiText>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiTitle size="xs">
+          <OuiTitle size="xs">
             <h4>
-              Vertical scrolling with <EuiCode>euiYScrollWithShadows</EuiCode>
+              Vertical scrolling with <OuiCode>ouiYScrollWithShadows</OuiCode>
             </h4>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer size="s" />
+          <OuiSpacer size="s" />
 
-          <EuiPanel paddingSize="none" grow={false}>
+          <OuiPanel paddingSize="none" grow={false}>
             <div className="guideSass__overflowShadows">
-              <EuiText className="guideSass__overflowShadowText" size="s">
+              <OuiText className="guideSass__overflowShadowText" size="s">
                 <p>
                   It requires a wrapping element to control the height with{' '}
-                  <EuiCode>overflow-y: hidden;</EuiCode> and the content to
-                  <EuiCode>@include euiYScrollWithShadows;</EuiCode> or use the{' '}
+                  <OuiCode>overflow-y: hidden;</OuiCode> and the content to
+                  <OuiCode>@include ouiYScrollWithShadows;</OuiCode> or use the{' '}
                   <Link to="/utilities/css-utility-classes">
                     CSS utility class
                   </Link>{' '}
-                  <EuiCode>.eui-yScrollWithShadows</EuiCode>.
+                  <OuiCode>.oui-yScrollWithShadows</OuiCode>.
                 </p>
                 <p>
                   <b>Example:</b>
                 </p>
-                <EuiCodeBlock language="sass" isCopyable paddingSize="s">
+                <OuiCodeBlock language="sass" isCopyable paddingSize="s">
                   {`.overflowY {
   height: 200px;
   overflow-y: hidden;
 
   .overflowY__content {
-    @include euiYScrollWithShadows;
+    @include ouiYScrollWithShadows;
   }
 }`}
-                </EuiCodeBlock>
+                </OuiCodeBlock>
                 <p>
                   Consequuntur atque nulla atque nemo tenetur numquam. Assumenda
                   aspernatur qui aut sit. Aliquam doloribus iure sint id.
@@ -837,216 +848,216 @@ export const SassGuidelines = ({ selectedTheme }) => {
                   velit. Quidem delectus eos veritatis et vitae et nisi.
                   Doloribus ut corrupti voluptates qui exercitationem dolores.
                 </p>
-              </EuiText>
+              </OuiText>
             </div>
-          </EuiPanel>
+          </OuiPanel>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiTitle size="xs">
+          <OuiTitle size="xs">
             <h4>
-              Horizontal scrolling with <EuiCode>euiXScrollWithShadows</EuiCode>
+              Horizontal scrolling with <OuiCode>ouiXScrollWithShadows</OuiCode>
             </h4>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer size="s" />
+          <OuiSpacer size="s" />
 
-          <EuiPanel paddingSize="none" grow={false}>
+          <OuiPanel paddingSize="none" grow={false}>
             <div className="guideSass__overflowShadowsX">
-              <EuiText className="guideSass__overflowShadowTextX" size="s">
+              <OuiText className="guideSass__overflowShadowTextX" size="s">
                 <p>
-                  You may want to add at least <EuiCode>$euiSizeS</EuiCode>
+                  You may want to add at least <OuiCode>$ouiSizeS</OuiCode>
                   &apos;s worth of padding to the sides of your content so the
                   mask doesn&apos;t overlay it.
                 </p>
                 <p>
                   <b>Example:</b>
                 </p>
-                <EuiCodeBlock language="sass" isCopyable paddingSize="s">
+                <OuiCodeBlock language="sass" isCopyable paddingSize="s">
                   {`.overflowXContent {
-  @include euiXScrollWithShadows;
-  padding-left: $euiSizeS;
-  padding-right: $euiSizeS;
+  @include ouiXScrollWithShadows;
+  padding-left: $ouiSizeS;
+  padding-right: $ouiSizeS;
 }`}
-                </EuiCodeBlock>
-              </EuiText>
+                </OuiCodeBlock>
+              </OuiText>
             </div>
-          </EuiPanel>
-          <EuiSpacer size="xl" />
-          <EuiText>
+          </OuiPanel>
+          <OuiSpacer size="xl" />
+          <OuiText>
             <p>
               If you need to further customize the position or side of the
-              overflow shadow use the <EuiCode>euiOverflowShadow</EuiCode>{' '}
-              <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_shadow.scss">
+              overflow shadow use the <OuiCode>ouiOverflowShadow</OuiCode>{' '}
+              <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_shadow.scss">
                 mixin
-              </EuiLink>
+              </OuiLink>
               .
             </p>
-          </EuiText>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          </OuiText>
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
       <GuideRuleTitle>Media queries and breakpoints</GuideRuleTitle>
 
-      <EuiText>
+      <OuiText>
         <p>
-          <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_responsive.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_responsive.scss">
             View the Sass code for media queries
-          </EuiLink>
+          </OuiLink>
           .
         </p>
         <p>
-          Breakpoints in EUI are provided through the use of a Sass mixin{' '}
-          <EuiCode>@include euiBreakpoint()</EuiCode> that accepts an array of
+          Breakpoints in OUI are provided through the use of a Sass mixin{' '}
+          <OuiCode>@include ouiBreakpoint()</OuiCode> that accepts an array of
           sizes.
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer />
+      <OuiSpacer />
       <div className="guideSass__breakpointExample" />
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
           <div>
-            <EuiTitle size="s">
+            <OuiTitle size="s">
               <h3>Breakpoint sizing</h3>
-            </EuiTitle>
+            </OuiTitle>
 
-            <EuiSpacer />
+            <OuiSpacer />
 
-            {euiBreakPoints.map(function (size) {
+            {ouiBreakPoints.map(function (size) {
               return renderBreakpoint(size, breakpoints);
             })}
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiTitle size="s">
             <h3>Mixin usage</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiText>
+          <OuiText>
             <p>Target mobile devices only</p>
-          </EuiText>
-          <EuiCodeBlock language="scss" transparentBackground paddingSize="s">
-            {"@include euiBreakpoint('xs','s') {...}"}
-          </EuiCodeBlock>
+          </OuiText>
+          <OuiCodeBlock language="scss" transparentBackground paddingSize="s">
+            {"@include ouiBreakpoint('xs','s') {...}"}
+          </OuiCodeBlock>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiText>
+          <OuiText>
             <p>Target mobile and tablets</p>
-          </EuiText>
-          <EuiCodeBlock language="scss" transparentBackground paddingSize="s">
-            {"@include euiBreakpoint('xs', 's', 'm') {...}"}
-          </EuiCodeBlock>
+          </OuiText>
+          <OuiCodeBlock language="scss" transparentBackground paddingSize="s">
+            {"@include ouiBreakpoint('xs', 's', 'm') {...}"}
+          </OuiCodeBlock>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiText>
+          <OuiText>
             <p>Target tablets only</p>
-          </EuiText>
-          <EuiCodeBlock language="scss" transparentBackground paddingSize="s">
-            {"@include euiBreakpoint('m') {...}"}
-          </EuiCodeBlock>
+          </OuiText>
+          <OuiCodeBlock language="scss" transparentBackground paddingSize="s">
+            {"@include ouiBreakpoint('m') {...}"}
+          </OuiCodeBlock>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiText>
+          <OuiText>
             <p>Target very wide displays only</p>
-          </EuiText>
-          <EuiCodeBlock language="scss" transparentBackground paddingSize="s">
-            {"@include euiBreakpoint('xl') {...}"}
-          </EuiCodeBlock>
+          </OuiText>
+          <OuiCodeBlock language="scss" transparentBackground paddingSize="s">
+            {"@include ouiBreakpoint('xl') {...}"}
+          </OuiCodeBlock>
 
-          <EuiSpacer />
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          <OuiSpacer />
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
-      <EuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
 
       <GuideRuleTitle>Animation</GuideRuleTitle>
-      <EuiText grow={false}>
+      <OuiText grow={false}>
         <p>
-          <EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/variables/_animations.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/variables/_animations.scss">
             View the Sass code for animation
-          </EuiLink>
+          </OuiLink>
           .
         </p>
         <p>
-          EUI utilizes the following constants to maintain a similar
+          OUI utilizes the following constants to maintain a similar
           &apos;bounce&apos; to its animations. That said, animations are
           tricky, and if they aren&apos;t working for your specific application
           this is the one place where we think it&apos;s OK to come up with your
           own rules.
         </p>
-      </EuiText>
-      <EuiSpacer />
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+      </OuiText>
+      <OuiSpacer />
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
+          <OuiTitle size="s">
             <h3>Speed</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          {euiAnimationSpeeds.map(function (speed, index) {
+          {ouiAnimationSpeeds.map(function (speed, index) {
             return renderAnimationSpeed(speed, index);
           })}
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiTitle size="s">
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiTitle size="s">
             <h3>Timing</h3>
-          </EuiTitle>
+          </OuiTitle>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          {euiAnimationTimings.map(function (speed, index) {
+          {ouiAnimationTimings.map(function (speed, index) {
             return renderAnimationTiming(speed, index);
           })}
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
       <GuideRuleTitle>Sass best practices</GuideRuleTitle>
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiText>
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
+          <OuiText>
             <h3>Component based naming</h3>
             <p>
-              EUI is written in a{' '}
-              <EuiLink href="http://getbem.com/introduction/">BEM</EuiLink>ish
+              OUI is written in a{' '}
+              <OuiLink href="http://getbem.com/introduction/">BEM</OuiLink>ish
               style with the addition of verb states (ex:{' '}
-              <EuiCode>*-isLoading</EuiCode>). Below is an example of proper
+              <OuiCode>*-isLoading</OuiCode>). Below is an example of proper
               formatting.
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiCodeBlock
+          </OuiText>
+          <OuiSpacer />
+          <OuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {bemExample}
-          </EuiCodeBlock>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiText grow={false}>
-            <h3>Writing Sass the EUI way</h3>
+          </OuiCodeBlock>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiText grow={false}>
+            <h3>Writing Sass the OUI way</h3>
             <p>
-              In general, when writing new SCSS in a project that installs EUI
+              In general, when writing new SCSS in a project that installs OUI
               as a dependency try to follow these best practices:
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiText size="s" grow={false}>
+          </OuiText>
+          <OuiSpacer />
+          <OuiText size="s" grow={false}>
             <ul>
               <li>
                 Utilize color variables and functions rather than hard-coded
@@ -1075,48 +1086,48 @@ export const SassGuidelines = ({ selectedTheme }) => {
                 nature
               </li>
             </ul>
-          </EuiText>
+          </OuiText>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiTitle size="s">
-            <h3>Importing EUI global Sass</h3>
-          </EuiTitle>
+          <OuiTitle size="s">
+            <h3>Importing OUI global Sass</h3>
+          </OuiTitle>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiText grow={false}>
+          <OuiText grow={false}>
             <p>
-              Most EUI based projects should already import the EUI global
+              Most OUI based projects should already import the OUI global
               scope. For example, Kibana has its own liner that will give you
               everything on this page.
             </p>
-          </EuiText>
-          <EuiSpacer />
-          <EuiCodeBlock
+          </OuiText>
+          <OuiSpacer />
+          <OuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {importKibanaExample}
-          </EuiCodeBlock>
-          <EuiSpacer />
-          <EuiText grow={false}>
+          </OuiCodeBlock>
+          <OuiSpacer />
+          <OuiText grow={false}>
             <p>
               If you want to construct your own import, you would just need to
               import the following core files into a fresh Sass project.
             </p>
-          </EuiText>
+          </OuiText>
 
-          <EuiSpacer />
+          <OuiSpacer />
 
-          <EuiCodeBlock
+          <OuiCodeBlock
             language="scss"
             transparentBackground
             paddingSize="none">
             {importOutsideExample}
-          </EuiCodeBlock>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+          </OuiCodeBlock>
+        </OuiFlexItem>
+      </OuiFlexGrid>
     </GuidePage>
   );
 };

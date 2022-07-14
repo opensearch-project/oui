@@ -1,79 +1,90 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCode, EuiLink, EuiText } from '../../../../src/components';
+import { OuiCode, OuiLink, OuiText } from '../../../../src/components';
 
 export default () => (
-  <EuiText>
+  <OuiText>
     <p>
       Open the{' '}
-      <EuiLink href="http://www.elastic.co" target="_blank">
+      <OuiLink href="http://www.elastic.co" target="_blank">
         Elastic website
-      </EuiLink>{' '}
-      in a new tab. Setting <EuiCode>target=&ldquo;_blank&rdquo;</EuiCode> also
-      defaults to <EuiCode>{'external={true}'}</EuiCode>.
+      </OuiLink>{' '}
+      in a new tab. Setting <OuiCode>target=&ldquo;_blank&rdquo;</OuiCode> also
+      defaults to <OuiCode>{'external={true}'}</OuiCode>.
     </p>
     <p>
       This{' '}
-      <EuiLink href="http://www.elastic.co" external>
+      <OuiLink href="http://www.elastic.co" external>
         link
-      </EuiLink>{' '}
-      has the <EuiCode>external</EuiCode> prop set to true.
+      </OuiLink>{' '}
+      has the <OuiCode>external</OuiCode> prop set to true.
     </p>
     <p>
-      This link is actually a <EuiLink onClick={() => {}}>button</EuiLink> with
+      This link is actually a <OuiLink onClick={() => {}}>button</OuiLink> with
       an onClick handler.
     </p>
     <p>
       Here is an example of a{' '}
-      <EuiLink
+      <OuiLink
         href="https://github.com/elastic/eui"
         onClick={(e) => {
           e.preventDefault();
         }}>
         link
-      </EuiLink>{' '}
-      with both an <EuiCode>href</EuiCode> and an <EuiCode>onClick</EuiCode>{' '}
+      </OuiLink>{' '}
+      with both an <OuiCode>href</OuiCode> and an <OuiCode>onClick</OuiCode>{' '}
       handler.
     </p>
     <p>Links can be colored as well.</p>
     <ul>
       <li>
-        <EuiLink color="subdued" href="#">
+        <OuiLink color="subdued" href="#">
           subdued
-        </EuiLink>
+        </OuiLink>
       </li>
       <li>
-        <EuiLink color="success" href="#">
+        <OuiLink color="success" href="#">
           success
-        </EuiLink>
+        </OuiLink>
       </li>
       <li>
-        <EuiLink color="accent" href="#">
+        <OuiLink color="accent" href="#">
           accent
-        </EuiLink>
+        </OuiLink>
       </li>
       <li>
-        <EuiLink color="danger" href="#">
+        <OuiLink color="danger" href="#">
           danger
-        </EuiLink>
+        </OuiLink>
       </li>
       <li>
-        <EuiLink color="warning" href="#">
+        <OuiLink color="warning" href="#">
           warning
-        </EuiLink>
+        </OuiLink>
       </li>
       <li>
-        <EuiLink color="text" href="#">
+        <OuiLink color="text" href="#">
           text
-        </EuiLink>
+        </OuiLink>
       </li>
       <li>
         <span style={{ background: 'black' }}>
-          <EuiLink color="ghost" href="#">
+          <OuiLink color="ghost" href="#">
             ghost
-          </EuiLink>
+          </OuiLink>
         </span>
       </li>
     </ul>
-  </EuiText>
+  </OuiText>
 );

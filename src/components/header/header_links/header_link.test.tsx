@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,23 +32,23 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiHeaderLink } from './header_link';
+import { OuiHeaderLink } from './header_link';
 
-describe('EuiHeaderLink', () => {
+describe('OuiHeaderLink', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderLink {...requiredProps} />);
+    const component = render(<OuiHeaderLink {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('is rendered as active', () => {
-    const component = render(<EuiHeaderLink isActive />);
+    const component = render(<OuiHeaderLink isActive />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('can render as specific color', () => {
-    const component = render(<EuiHeaderLink color="danger" />);
+    const component = render(<OuiHeaderLink color="danger" />);
 
     expect(component).toMatchSnapshot();
   });

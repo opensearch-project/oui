@@ -1,18 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiButtonContent is rendered 1`] = `
+exports[`OuiButtonContent is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiButtonContent testClass1 testClass2"
+  class="ouiButtonContent testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span />
 </span>
 `;
 
-exports[`EuiButtonContent props children is rendered 1`] = `
+exports[`OuiButtonContent props children is rendered 1`] = `
 <span
-  class="euiButtonContent"
+  class="ouiButtonContent"
 >
   <span>
     Content
@@ -20,57 +20,57 @@ exports[`EuiButtonContent props children is rendered 1`] = `
 </span>
 `;
 
-exports[`EuiButtonContent props iconSide is rendered 1`] = `
+exports[`OuiButtonContent props iconSide is rendered 1`] = `
 <span
-  class="euiButtonContent euiButtonContent--iconRight"
+  class="ouiButtonContent ouiButtonContent--iconRight"
 >
   <span
-    class="euiButtonContent__icon"
+    class="ouiButtonContent__icon"
     color="inherit"
-    data-euiicon-type="bolt"
+    data-ouiicon-type="bolt"
   />
   <span />
 </span>
 `;
 
-exports[`EuiButtonContent props iconType is rendered 1`] = `
+exports[`OuiButtonContent props iconType is rendered 1`] = `
 <span
-  class="euiButtonContent"
+  class="ouiButtonContent"
 >
   <span
-    class="euiButtonContent__icon"
+    class="ouiButtonContent__icon"
     color="inherit"
-    data-euiicon-type="bolt"
+    data-ouiicon-type="bolt"
   />
   <span />
 </span>
 `;
 
-exports[`EuiButtonContent props isLoading is rendered 1`] = `
+exports[`OuiButtonContent props isLoading is rendered 1`] = `
 <span
-  class="euiButtonContent"
+  class="ouiButtonContent"
 >
   <span
-    class="euiLoadingSpinner euiLoadingSpinner--medium euiButtonContent__spinner"
+    class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
   />
   <span />
 </span>
 `;
 
-exports[`EuiButtonContent props isLoading replaces iconType with spinner 1`] = `
+exports[`OuiButtonContent props isLoading replaces iconType with spinner 1`] = `
 <span
-  class="euiButtonContent"
+  class="ouiButtonContent"
 >
   <span
-    class="euiLoadingSpinner euiLoadingSpinner--medium euiButtonContent__spinner"
+    class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
   />
   <span />
 </span>
 `;
 
-exports[`EuiButtonContent props textProps is rendered 1`] = `
+exports[`OuiButtonContent props textProps is rendered 1`] = `
 <span
-  class="euiButtonContent"
+  class="ouiButtonContent"
 >
   <span
     aria-label="aria-label"

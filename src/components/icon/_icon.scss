@@ -1,4 +1,15 @@
-.euiIcon {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiIcon {
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
   vertical-align: middle;
@@ -7,46 +18,46 @@
 
   &:focus {
     opacity: 1; // We often hide icons on hover. Make sure they appear on focus.
-    background: $euiFocusBackgroundColor;
+    background: $ouiFocusBackgroundColor;
   }
 }
 
 // App icons are two-toned so get an extra class. This provides the base color.
-.euiIcon--app {
-  fill: $euiTextColor;
+.ouiIcon--app {
+  fill: $ouiTextColor;
 
   // This provides the default secondary color
-  .euiIcon__fillSecondary {
-    fill: makeGraphicContrastColor($euiColorSuccess);
+  .ouiIcon__fillSecondary {
+    fill: makeGraphicContrastColor($ouiColorSuccess);
   }
 }
 
-.euiIcon-isLoading {
-  opacity: $euiIconLoadingOpacity;
+.ouiIcon-isLoading {
+  opacity: $ouiIconLoadingOpacity;
   background-color: currentColor;
-  border-radius: $euiBorderRadius;
+  border-radius: $ouiBorderRadius;
 }
 
-.euiIcon-isLoaded {
-  animation: euiIconLoading $euiAnimSpeedNormal ease-in 0s 1 forwards;
+.ouiIcon-isLoaded {
+  animation: ouiIconLoading $ouiAnimSpeedNormal ease-in 0s 1 forwards;
 }
 
 // COLORS
 
-@each $name, $color in $euiIconColors {
-  .euiIcon--#{$name} {
+@each $name, $color in $ouiIconColors {
+  .ouiIcon--#{$name} {
     // Use color attribute so currentColor can be used in more properties
     color: $color;
   }
 }
 
 // App icon special cases for fully mono
-.euiIcon--text,
-.euiIcon--subdued,
-.euiIcon--primary,
-.euiIcon--customColor {
+.ouiIcon--text,
+.ouiIcon--subdued,
+.ouiIcon--primary,
+.ouiIcon--customColor {
   &,
-  .euiIcon__fillSecondary {
+  .ouiIcon__fillSecondary {
     fill: currentColor;
   }
 }
@@ -54,21 +65,21 @@
 // Use the negative fill on SVG elements that need to flip portions
 // of the icon to light and dark compatible modes. You can see this
 // in use on the Elastic logo icons.
-.euiIcon__fillNegative {
-  fill: $euiColorDarkestShade;
+.ouiIcon__fillNegative {
+  fill: $ouiColorDarkestShade;
 }
 
 // SIZES
 
-@each $name, $size in $euiIconSizes {
-  .euiIcon--#{$name} {
+@each $name, $size in $ouiIconSizes {
+  .ouiIcon--#{$name} {
     @include size($size);
   }
 }
 
-@keyframes euiIconLoading {
+@keyframes ouiIconLoading {
   0% {
-    opacity: $euiIconLoadingOpacity;
+    opacity: $ouiIconLoadingOpacity;
   }
 
   100% {

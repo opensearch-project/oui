@@ -1,18 +1,29 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Hide mobile-only elements by default
-.euiTableHeaderMobile,
-.euiTableHeaderCell--hideForDesktop {
+.ouiTableHeaderMobile,
+.ouiTableHeaderCell--hideForDesktop {
   display: none;
 }
 
-@include euiBreakpoint('xs', 's') {
+@include ouiBreakpoint('xs', 's') {
 
-  .euiTableHeaderMobile {
+  .ouiTableHeaderMobile {
     display: flex;
     justify-content: flex-end;
-    padding: $euiTableCellContentPadding 0;
+    padding: $ouiTableCellContentPadding 0;
   }
 
-  .euiTableSortMobile {
+  .ouiTableSortMobile {
     display: block;
   }
 

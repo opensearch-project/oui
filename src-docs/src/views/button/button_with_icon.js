@@ -1,109 +1,120 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton onClick={() => {}} iconType="heart">
+    <OuiFlexGroup gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButton onClick={() => {}} iconType="heart">
           Primary
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton fill iconType="lensApp" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton fill iconType="lensApp" onClick={() => {}}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton iconType="heart" size="s" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton iconType="heart" size="s" onClick={() => {}}>
           small
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton iconType="lensApp" size="s" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton iconType="lensApp" size="s" fill onClick={() => {}}>
           small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton iconSide="right" onClick={() => {}} iconType="heart">
+    <OuiFlexGroup gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButton iconSide="right" onClick={() => {}} iconType="heart">
           Primary
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton iconSide="right" fill iconType="lensApp" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton iconSide="right" fill iconType="lensApp" onClick={() => {}}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <OuiFlexItem grow={false}>
+        <OuiButton
           iconSide="right"
           iconType="heart"
           size="s"
           onClick={() => {}}>
           small
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <OuiFlexItem grow={false}>
+        <OuiButton
           iconSide="right"
           iconType="lensApp"
           size="s"
           fill
           onClick={() => {}}>
           small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton
+    <OuiFlexGroup gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButton
           iconSide="right"
           onClick={() => {}}
           iconType="heart"
           isDisabled>
           Disabled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <OuiFlexItem grow={false}>
+        <OuiButton
           iconSide="right"
           fill
           iconType="lensApp"
           onClick={() => {}}
           isDisabled>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <OuiFlexItem grow={false}>
+        <OuiButton
           iconSide="right"
           iconType="heart"
           size="s"
           onClick={() => {}}
           isDisabled>
           small
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton
+      <OuiFlexItem grow={false}>
+        <OuiButton
           iconSide="right"
           iconType="lensApp"
           size="s"
@@ -111,8 +122,8 @@ export default () => (
           onClick={() => {}}
           isDisabled>
           small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </div>
 );

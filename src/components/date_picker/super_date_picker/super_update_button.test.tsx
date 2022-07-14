@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,21 +31,21 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
-import { EuiSuperUpdateButton } from './super_update_button';
-import { EuiButton, EuiButtonProps } from '../../button';
+import { OuiSuperUpdateButton } from './super_update_button';
+import { OuiButton, OuiButtonProps } from '../../button';
 
 const noop = () => {};
 
-describe('EuiSuperUpdateButton', () => {
+describe('OuiSuperUpdateButton', () => {
   test('is rendered', () => {
-    const component = shallow(<EuiSuperUpdateButton onClick={noop} />);
+    const component = shallow(<OuiSuperUpdateButton onClick={noop} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('needsUpdate', () => {
     const component = shallow(
-      <EuiSuperUpdateButton needsUpdate onClick={noop} />
+      <OuiSuperUpdateButton needsUpdate onClick={noop} />
     );
 
     expect(component).toMatchSnapshot();
@@ -42,7 +53,7 @@ describe('EuiSuperUpdateButton', () => {
 
   test('isDisabled', () => {
     const component = shallow(
-      <EuiSuperUpdateButton isDisabled onClick={noop} />
+      <OuiSuperUpdateButton isDisabled onClick={noop} />
     );
 
     expect(component).toMatchSnapshot();
@@ -50,7 +61,7 @@ describe('EuiSuperUpdateButton', () => {
 
   test('isLoading', () => {
     const component = shallow(
-      <EuiSuperUpdateButton isLoading onClick={noop} />
+      <OuiSuperUpdateButton isLoading onClick={noop} />
     );
 
     expect(component).toMatchSnapshot();
@@ -58,13 +69,13 @@ describe('EuiSuperUpdateButton', () => {
 
   test('showTooltip', () => {
     const component = shallow(
-      <EuiSuperUpdateButton showTooltip onClick={noop} />
+      <OuiSuperUpdateButton showTooltip onClick={noop} />
     );
 
     expect(component).toMatchSnapshot();
   });
 
-  test('forwards props to EuiButton', () => {
+  test('forwards props to OuiButton', () => {
     const speciallyHandledProps = {
       className: 'testClass',
       textProps: {
@@ -72,14 +83,14 @@ describe('EuiSuperUpdateButton', () => {
         id: 'test',
       },
     };
-    const extraProps: Partial<EuiButtonProps> = {
+    const extraProps: Partial<OuiButtonProps> = {
       fill: false,
       size: 's',
       contentProps: { id: 'contentSpan' },
     };
 
     const component = mount(
-      <EuiSuperUpdateButton
+      <OuiSuperUpdateButton
         onClick={() => {}}
         {...speciallyHandledProps}
         {...extraProps}
@@ -97,11 +108,11 @@ describe('EuiSuperUpdateButton', () => {
       textProps,
 
       ...forwardedProps
-    } = component.find(EuiButton).props();
+    } = component.find(OuiButton).props();
 
-    expect(className).toBe('euiSuperUpdateButton testClass');
+    expect(className).toBe('ouiSuperUpdateButton testClass');
     expect(textProps).toEqual({
-      className: 'euiSuperUpdateButton__text textPropsTestClass',
+      className: 'ouiSuperUpdateButton__text textPropsTestClass',
       id: 'test',
     });
     expect(forwardedProps).toMatchObject(extraProps);

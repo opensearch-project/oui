@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,30 +28,30 @@
  * under the License.
  */
 
-export { EuiPage, EuiPageProps } from './page';
+export { OuiPage, OuiPageProps } from './page';
 
-export { EuiPageBody, EuiPageBodyProps } from './page_body';
+export { OuiPageBody, OuiPageBodyProps } from './page_body';
 
 export {
-  EuiPageContent,
-  EuiPageContentProps,
-  EuiPageContentBody,
-  EuiPageContentBodyProps,
-  EuiPageContentHeader,
-  EuiPageContentHeaderProps,
-  EuiPageContentHeaderSection,
-  EuiPageContentHeaderSectionProps,
+  OuiPageContent,
+  OuiPageContentProps,
+  OuiPageContentBody,
+  OuiPageContentBodyProps,
+  OuiPageContentHeader,
+  OuiPageContentHeaderProps,
+  OuiPageContentHeaderSection,
+  OuiPageContentHeaderSectionProps,
 } from './page_content';
 
 export {
-  EuiPageHeader,
-  EuiPageHeaderContent,
-  EuiPageHeaderContentProps,
-  EuiPageHeaderProps,
-  EuiPageHeaderSection,
-  EuiPageHeaderSectionProps,
+  OuiPageHeader,
+  OuiPageHeaderContent,
+  OuiPageHeaderContentProps,
+  OuiPageHeaderProps,
+  OuiPageHeaderSection,
+  OuiPageHeaderSectionProps,
 } from './page_header';
 
-export { EuiPageSideBar, EuiPageSideBarProps } from './page_side_bar';
+export { OuiPageSideBar, OuiPageSideBarProps } from './page_side_bar';
 
-export { EuiPageTemplate, EuiPageTemplateProps } from './page_template';
+export { OuiPageTemplate, OuiPageTemplateProps } from './page_template';

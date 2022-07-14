@@ -1,7 +1,18 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 @import '../../../src/global_styling/mixins/helpers';
 
 $guideSideNavWidth: 240px;
-$guideZLevelHighest: $euiZLevel9 + 1000;
+$guideZLevelHighest: $ouiZLevel9 + 1000;
 $elasticLogoTextLight: #FFF;
 $elasticLogoTextDark: #1C1E23;
 
@@ -10,21 +21,21 @@ $elasticLogoTextDark: #1C1E23;
   flex-direction: column;
   min-height: 100vh;
 
-  .euiBody--headerIsFixed & {
-    min-height: calc(100vh - #{$euiHeaderHeightCompensation});
+  .ouiBody--headerIsFixed & {
+    min-height: calc(100vh - #{$ouiHeaderHeightCompensation});
   }
 }
 
-@include euiHeaderAffordForFixed;
+@include ouiHeaderAffordForFixed;
 
-.euiBody--headerIsFixed--double {
-  @include euiHeaderAffordForFixed($euiHeaderHeightCompensation * 2);
+.ouiBody--headerIsFixed--double {
+  @include ouiHeaderAffordForFixed($ouiHeaderHeightCompensation * 2);
 
   #guide { // sass-lint:disable-line no-ids
-    min-height: calc(100vh - #{$euiHeaderHeightCompensation * 2});
+    min-height: calc(100vh - #{$ouiHeaderHeightCompensation * 2});
   }
 
-  .euiHeader:not(.euiHeader--fixed) {
+  .ouiHeader:not(.ouiHeader--fixed) {
     // Force headers below the full screen.
     // This shouldn't be necessary in consuming applications because headers should always be at the top of the page
     z-index: 0;
@@ -32,24 +43,24 @@ $elasticLogoTextDark: #1C1E23;
 }
 
 .guideSideNav {
-  @include euiSideNavEmbellish;
+  @include ouiSideNavEmbellish;
   min-width: $guideSideNavWidth;
 }
 
 .guideSideNav__content {
-  @include euiYScroll;
-  padding: 0 $euiSizeL $euiSizeL;
+  @include ouiYScroll;
+  padding: 0 $ouiSizeL $ouiSizeL;
 }
 
 .guideSideNav__search {
   flex-shrink: 0;
-  padding: $euiSizeS $euiSizeS $euiSize;
+  padding: $ouiSizeS $ouiSizeS $ouiSize;
 }
 
 .guideSideNav__item {
   // Hate to do this, but it's the only way to get the badge to display correctly
-  .euiSideNavItemButton__label {
-    // By using the `icon` display of EuiSideNavItem, it will continue to:
+  .ouiSideNavItemButton__label {
+    // By using the `icon` display of OuiSideNavItem, it will continue to:
     // a) truncate properly
     // b) not underline the badge when selected
     // But it shows to the left of the label instead of right, so we have to shift the order of the label
@@ -57,39 +68,39 @@ $elasticLogoTextDark: #1C1E23;
   }
 
   .guideSideNav__newBadge {
-    margin-left: $euiSizeXS;
-    margin-right: $euiSizeXS;
+    margin-left: $ouiSizeXS;
+    margin-right: $ouiSizeXS;
   }
 
   // Shift the margin on the badge when selected and the dropdown arrow no longer shows
-  .euiSideNavItemButton-isSelected .guideSideNav__newBadge {
+  .ouiSideNavItemButton-isSelected .guideSideNav__newBadge {
     margin-right: 0;
   }
 }
 
 .guideSideNav__item--inSearch {
-  color: $euiColorDarkShade;
+  color: $ouiColorDarkShade;
 }
 
 .guideDemo__highlightLayout,
 .guideDemo__highlightLayout--playground,
 .guideDemo__highlightLayout--legacy {
-  border: 1px solid transparentize($euiColorPrimary, .9);
+  border: 1px solid transparentize($ouiColorPrimary, .9);
   overflow: hidden;
   height: 460px;
   display: flex;
 
-  .euiPageSideBar--sticky {
+  .ouiPageSideBar--sticky {
     top: 0;
   }
 }
 
-.guideDemo__highlightLayout--playground > div:not(.euiPage) {
+.guideDemo__highlightLayout--playground > div:not(.ouiPage) {
   height: 100%;
   width: 100%;
   padding: 0 !important; // sass-lint:disable-line no-important
 
-  > .euiPage--grow {
+  > .ouiPage--grow {
     height: 100%;
   }
 }
@@ -97,63 +108,63 @@ $elasticLogoTextDark: #1C1E23;
 .guideDemo__highlightLayout--legacy {
   > div,
   > div > div {
-    background: transparentize($euiColorPrimary, .9);
+    background: transparentize($ouiColorPrimary, .9);
   }
 }
 
 .guideDemo__highlightHR > div,
-.guideDemo__highlightSpacer .euiSpacer,
-.guideDemo__highlightGrid .euiFlexItem,
-.guideDemo__highlightGridWrap .euiFlexItem div {
-  background: transparentize($euiColorPrimary, .9);
+.guideDemo__highlightSpacer .ouiSpacer,
+.guideDemo__highlightGrid .ouiFlexItem,
+.guideDemo__highlightGridWrap .ouiFlexItem div {
+  background: transparentize($ouiColorPrimary, .9);
 }
 
 .guideDemo__highlightHR > div {
   padding: .1px;
-  margin-bottom: $euiSize;
+  margin-bottom: $ouiSize;
 }
 
-.guideDemo__highlightSpacer .euiCodeBlock {
+.guideDemo__highlightSpacer .ouiCodeBlock {
   align-self: flex-start;
-  margin-bottom: $euiSize;
+  margin-bottom: $ouiSize;
 }
 
 
-.guideDemo__highlightGrid .euiFlexItem,
-.guideDemo__highlightGridWrap .euiFlexItem div {
-  padding: $euiSize;
+.guideDemo__highlightGrid .ouiFlexItem,
+.guideDemo__highlightGridWrap .ouiFlexItem div {
+  padding: $ouiSize;
 }
 
 // sass-lint:disable no-important
 .guideDemo__textLines {
-  background-image: linear-gradient($euiFocusBackgroundColor 1px, transparent 1px) !important;
+  background-image: linear-gradient($ouiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 8px !important;
   background-position-y: 2px;
 }
 
 // sass-lint:disable no-important
 .guideDemo__textLines--s {
-  background-image: linear-gradient($euiFocusBackgroundColor 1px, transparent 1px) !important;
+  background-image: linear-gradient($ouiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 7px !important;
   background-position-y: -2px;
 }
 
 .guideDemo__color {
-  padding: $euiSizeS;
-  color: $euiColorEmptyShade;
-  font-size: $euiFontSizeS;
-  margin-top: $euiSizeS;
+  padding: $ouiSizeS;
+  color: $ouiColorEmptyShade;
+  font-size: $ouiFontSizeS;
+  margin-top: $ouiSizeS;
   line-height: 1.5;
   height: 64px;
 
   .guideDemo__colorHex {
-    font-size: $euiFontSize;
+    font-size: $ouiFontSize;
   }
 }
 
 
 .guideDemo__size {
-  background: $euiTextColor;
+  background: $ouiTextColor;
   display: inline-block;
 }
 
@@ -162,52 +173,52 @@ $elasticLogoTextDark: #1C1E23;
 }
 
 .guideDemo__sizeGrid {
-  font-size: $euiFontSizeS;
+  font-size: $ouiFontSizeS;
 }
 
 .guideDemo__ghostBackground {
-  @if (lightness($euiTextColor) < 50) {
-    color: $euiColorGhost;
-    background: $euiColorDarkestShade !important; // Override EuiPanel specificity
+  @if (lightness($ouiTextColor) < 50) {
+    color: $ouiColorGhost;
+    background: $ouiColorDarkestShade !important; // Override OuiPanel specificity
   }
 }
 
 .dpTest__purpleCal {
-  background: $euiColorVis3;
+  background: $ouiColorVis3;
 }
 
 .dpTest__purpleInput {
-  outline: solid 2px $euiColorVis3;
+  outline: solid 2px $ouiColorVis3;
 }
 
 .dpTest__purpleDay {
-  background: $euiColorVis3;
+  background: $ouiColorVis3;
 }
 
 .dpTest__purplePopper {
-  outline: solid 2px $euiColorVis3;
+  outline: solid 2px $ouiColorVis3;
 }
 
 .guideOptionsPopover {
-  width: $euiSize * 16;
+  width: $ouiSize * 16;
 }
 
 .guideCharts__customLegend {
-  font-size: $euiFontSizeXS;
+  font-size: $ouiFontSizeXS;
   position: absolute;
   width: 93px;
   right: 0;
   bottom: 0;
-  padding: $euiSizeXS;
+  padding: $ouiSizeXS;
 }
 
 .guideCharts__customLegendLine {
   display: inline-block;
-  width: $euiSize;
-  height: $euiSizeM / 2;
+  width: $ouiSize;
+  height: $ouiSizeM / 2;
   background-color: currentColor;
   vertical-align: middle;
-  margin-right: $euiSizeS;
+  margin-right: $ouiSizeS;
 }
 
 .guideCharts__customLegendLine--thin {
@@ -216,24 +227,24 @@ $elasticLogoTextDark: #1C1E23;
 
 .guideDemo__notificationEventCircleIndicator {
   display: inline-block;
-  width: $euiSize;
-  height: $euiSize;
-  background: $euiColorPrimary;
-  color: $euiColorEmptyShade;
-  font-size: $euiSizeM;
-  line-height: $euiSize;
+  width: $ouiSize;
+  height: $ouiSize;
+  background: $ouiColorPrimary;
+  color: $ouiColorEmptyShade;
+  font-size: $ouiSizeM;
+  line-height: $ouiSize;
   text-align: center;
   border-radius: 50%;
 }
 
 .guideDemo__notificationEventHighlight {
-  background: transparentize($euiColorPrimary, .9);
-  border-radius: $euiBorderRadiusSmall;
-  padding: $euiSizeXS;
+  background: transparentize($ouiColorPrimary, .9);
+  border-radius: $ouiBorderRadiusSmall;
+  padding: $ouiSizeXS;
 }
 
 .guideDemo__notificationEvent {
-  @include euiFontSizeS;
+  @include ouiFontSizeS;
   display: flex;
   flex-direction: column;
 
@@ -242,7 +253,7 @@ $elasticLogoTextDark: #1C1E23;
   }
 
   .guideDemo__notificationEventCircleIndicator {
-    margin-right: $euiSizeXS;
+    margin-right: $ouiSizeXS;
   }
 }
 
@@ -251,7 +262,7 @@ $elasticLogoTextDark: #1C1E23;
 
   > * {
     position: relative;
-    margin-right: $euiSizeXS;
+    margin-right: $ouiSizeXS;
 
     &:last-child {
       margin-right: 0;
@@ -259,12 +270,12 @@ $elasticLogoTextDark: #1C1E23;
   }
 
   .guideDemo__notificationEventIcon {
-    margin: 0 $euiSizeXS;
+    margin: 0 $ouiSizeXS;
   }
 
   .guideDemo__notificationEventCircleIndicator {
     position: absolute;
-    top: -$euiSizeS;
+    top: -$ouiSizeS;
     left: 0;
   }
 }
@@ -272,20 +283,20 @@ $elasticLogoTextDark: #1C1E23;
 .guideDemo__notificationEventMeta {
   display: flex;
   width: 100%;
-  margin: 0 $euiSizeS;
+  margin: 0 $ouiSizeS;
 
-  .euiNotificationEventMeta {
+  .ouiNotificationEventMeta {
     width: 100%;
   }
 }
 
 .guideDemo__notificationEventSections {
-  margin-left: $euiSizeXL + $euiSizeXS;
+  margin-left: $ouiSizeXL + $ouiSizeXS;
   display: flex;
   flex-direction: column;
 
   > * {
-    margin-top: $euiSizeS;
+    margin-top: $ouiSizeS;
   }
 }
 
@@ -293,22 +304,22 @@ $elasticLogoTextDark: #1C1E23;
   flex: 1;
 }
 
-.euiDataGridRowCell--favoriteFranchise {
+.ouiDataGridRowCell--favoriteFranchise {
   background: transparentize($color: #800080, $amount: .95) !important;
 }
 
-.euiDataGridHeaderCell--favoriteFranchise {
+.ouiDataGridHeaderCell--favoriteFranchise {
   background: transparentize($color: #800080, $amount: .9) !important;
 }
 
-.euiTreeView__nodeInnerExample {
-  color: $euiColorDanger;
-  font-weight: $euiFontWeightBold;
+.ouiTreeView__nodeInnerExample {
+  color: $ouiColorDanger;
+  font-weight: $ouiFontWeightBold;
 }
 
-.euiSelectableTemplateSitewide__optionMeta--PINK {
-  font-weight: $euiFontWeightMedium;
-  color: $euiColorAccentText;
+.ouiSelectableTemplateSitewide__optionMeta--PINK {
+  font-weight: $ouiFontWeightMedium;
+  color: $ouiColorAccentText;
 }
 
 
@@ -316,18 +327,18 @@ $elasticLogoTextDark: #1C1E23;
 @import 'guide_section/index';
 @import 'guide_rule/index';
 
-@include euiBreakpoint('xs', 's') {
+@include ouiBreakpoint('xs', 's') {
   .guideSideNav {
     width: 100%;
   }
 
   .guideSideNav__content {
     padding: 0;
-    border-top: $euiBorderThin;
+    border-top: $ouiBorderThin;
   }
 
   .guideSideNav__search {
-    padding: $euiSizeS;
+    padding: $ouiSizeS;
   }
 }
 
@@ -336,21 +347,21 @@ $elasticLogoTextDark: #1C1E23;
   flex-basis: 100% !important;
 
   // sass-lint:disable-block mixins-before-declarations
-  @include euiBreakpoint('s', 'm') {
+  @include ouiBreakpoint('s', 'm') {
     flex-basis: 45% !important; // sass-lint:disable-line no-important
   }
 
-  @include euiBreakpoint('l') {
+  @include ouiBreakpoint('l') {
     flex-basis: 30% !important; // sass-lint:disable-line no-important
   }
 
-  @include euiBreakpoint('xl') {
+  @include ouiBreakpoint('xl') {
     flex-basis: 22% !important; // sass-lint:disable-line no-important
   }
 }
 
 .guideHomePage__illustration {
-  @include euiBreakpoint('s', 'm') {
+  @include ouiBreakpoint('s', 'm') {
     justify-content: center;
   }
 
@@ -441,7 +452,7 @@ $elasticLogoTextDark: #1C1E23;
 }
 
 .guideHome__footerHeart {
-  color: $euiColorAccentText;
+  color: $ouiColorAccentText;
 }
 
 .guideHome__footerLogo {
@@ -459,6 +470,6 @@ $elasticLogoTextDark: #1C1E23;
 
 .guideHome__hero {
   > * {
-    padding: $euiSizeL;
+    padding: $ouiSizeL;
   }
 }

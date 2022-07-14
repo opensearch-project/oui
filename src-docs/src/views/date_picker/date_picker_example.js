@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,10 +16,10 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiLink,
-  EuiDatePicker,
-  EuiDatePickerRange,
+  OuiCode,
+  OuiLink,
+  OuiDatePicker,
+  OuiDatePickerRange,
 } from '../../../../src/components';
 
 import DatePicker from './date_picker';
@@ -56,17 +67,17 @@ const utcSource = require('!!raw-loader!./utc');
 const utcHtml = renderToHtml(Utc);
 
 const datePickerSnippet =
-  '<EuiDatePicker selected={startDate} onChange={handleChange} />';
+  '<OuiDatePicker selected={startDate} onChange={handleChange} />';
 
 const statesSnippet = [
-  `<EuiDatePicker
+  `<OuiDatePicker
   selected={startDate}
   onChange={handleChange}
   onClear={onClear}
   placeholder="Clearable"
 />
 `,
-  `<EuiDatePicker
+  `<OuiDatePicker
   isInvalid
   selected={startDate}
   onChange={handleChange}
@@ -76,20 +87,20 @@ const statesSnippet = [
 ];
 
 const timeSnippet = [
-  `<EuiDatePicker
+  `<OuiDatePicker
   showTimeSelect
   selected={startDate}
   onChange={handleChange}
 />
 `,
-  `<EuiDatePicker
+  `<OuiDatePicker
   showTimeSelect
   showTimeSelectOnly
   selected={startDate}
   onChange={handleChange}
 />
 `,
-  `<EuiDatePicker
+  `<OuiDatePicker
   showTimeSelect
   showTimeSelectOnly
   selected={startDate}
@@ -99,7 +110,7 @@ const timeSnippet = [
 `,
 ];
 
-const localeSnippet = `<EuiDatePicker
+const localeSnippet = `<OuiDatePicker
   showTimeSelect
   selected={startDate}
   onChange={handleChange}
@@ -108,9 +119,9 @@ const localeSnippet = `<EuiDatePicker
   locale="de-de"
 />`;
 
-const rangeSnippet = `<EuiDatePickerRange
+const rangeSnippet = `<OuiDatePickerRange
   startDateControl={
-    <EuiDatePicker
+    <OuiDatePicker
       selected={startDate}
       onChange={handleChange}
       startDate={startDate}
@@ -120,7 +131,7 @@ const rangeSnippet = `<EuiDatePickerRange
     />
   }
   endDateControl={
-    <EuiDatePicker
+    <OuiDatePicker
       selected={endDate}
       onChange={handleChange}
       startDate={startDate}
@@ -132,7 +143,7 @@ const rangeSnippet = `<EuiDatePickerRange
 />`;
 
 const minMaxSnippet = [
-  `<EuiDatePicker
+  `<OuiDatePicker
   showTimeSelect
   selected={startDate}
   onChange={handleChange}
@@ -142,7 +153,7 @@ const minMaxSnippet = [
   maxTime={maxTime}
 />
 `,
-  `<EuiDatePicker
+  `<OuiDatePicker
   showTimeSelect
   showTimeSelectOnly
   selected={startDate}
@@ -151,7 +162,7 @@ const minMaxSnippet = [
   excludeTimes={[excludeTimes]}
 />
 `,
-  `<EuiDatePicker
+  `<OuiDatePicker
   showTimeSelect
   showTimeSelectOnly
   selected={startDate}
@@ -161,25 +172,25 @@ const minMaxSnippet = [
 `,
 ];
 
-const openToDateSnippet = `<EuiDatePicker
+const openToDateSnippet = `<OuiDatePicker
   selected={startDate}
   onChange={handleChange}
   openToDate={openToDate}
 />`;
 
-const customInputSnippet = `<EuiDatePicker
+const customInputSnippet = `<OuiDatePicker
   selected={startDate}
   onChange={handleChange}
   customInput={customInput}
 />`;
 
-const utcSnippet = `<EuiDatePicker
+const utcSnippet = `<OuiDatePicker
   selected={startDate}
   onChange={handleChange}
   customInput={customInput}
 />`;
 
-const inlineSnippet = `<EuiDatePicker
+const inlineSnippet = `<OuiDatePicker
   selected={startDate}
   onChange={handleChange}
   showTimeSelect
@@ -187,7 +198,7 @@ const inlineSnippet = `<EuiDatePicker
   shadow={false}
 />`;
 
-const classesSnippet = `<EuiDatePicker
+const classesSnippet = `<OuiDatePicker
   selected={startDate}
   onChange={handleChange}
   className="customClassName"
@@ -209,17 +220,17 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          At its most bare the <strong>EuiDatePicker</strong> only requires
-          props for <EuiCode>selected</EuiCode> and <EuiCode>onChange</EuiCode>.
+          At its most bare the <strong>OuiDatePicker</strong> only requires
+          props for <OuiCode>selected</OuiCode> and <OuiCode>onChange</OuiCode>.
           It depends on{' '}
-          <EuiLink href="https://momentjs.com/docs/">moment</EuiLink> for all of
+          <OuiLink href="https://momentjs.com/docs/">moment</OuiLink> for all of
           its formatting.
         </p>
       ),
-      components: { EuiDatePicker },
+      components: { OuiDatePicker },
       snippet: datePickerSnippet,
       demo: <DatePicker />,
-      props: { EuiDatePicker },
+      props: { OuiDatePicker },
     },
     {
       title: 'Date picker states',
@@ -256,11 +267,11 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Two props control time selection. <EuiCode>showTimeSelect</EuiCode>{' '}
+          Two props control time selection. <OuiCode>showTimeSelect</OuiCode>{' '}
           will make time selection appear next to the calendar and{' '}
-          <EuiCode>showTimeSelectOnly</EuiCode> will exclude the calendar and
+          <OuiCode>showTimeSelectOnly</OuiCode> will exclude the calendar and
           make the time selection the only thing you see. Make sure to adjust
-          your <EuiCode>dateFormat</EuiCode> and <EuiCode>timeFormat</EuiCode>{' '}
+          your <OuiCode>dateFormat</OuiCode> and <OuiCode>timeFormat</OuiCode>{' '}
           values to match.
         </p>
       ),
@@ -281,9 +292,9 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Locale formatting is achieved by using the <EuiCode>locale</EuiCode>,
-          <EuiCode>timeFormat</EuiCode>, and <EuiCode>dateFormat</EuiCode>{' '}
-          props. The latter will take any <EuiCode>moment()</EuiCode> notation.
+          Locale formatting is achieved by using the <OuiCode>locale</OuiCode>,
+          <OuiCode>timeFormat</OuiCode>, and <OuiCode>dateFormat</OuiCode>{' '}
+          props. The latter will take any <OuiCode>moment()</OuiCode> notation.
           Check{' '}
           <a href="https://en.wikipedia.org/wiki/Date_format_by_country">
             Date format by country
@@ -308,17 +319,17 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          By passing <EuiCode>startDate</EuiCode> and <EuiCode>endDate</EuiCode>{' '}
+          By passing <OuiCode>startDate</OuiCode> and <OuiCode>endDate</OuiCode>{' '}
           props you can provide styling the range in between two dates. To
           further style the group as a single control, use{' '}
-          <strong>EuiDatePickerRange</strong> and pass the date picker controls
-          into the <EuiCode>startDateControl</EuiCode> and{' '}
-          <EuiCode>endDateControl</EuiCode> props.
+          <strong>OuiDatePickerRange</strong> and pass the date picker controls
+          into the <OuiCode>startDateControl</OuiCode> and{' '}
+          <OuiCode>endDateControl</OuiCode> props.
         </p>
       ),
       demo: <Range />,
       snippet: rangeSnippet,
-      props: { EuiDatePickerRange },
+      props: { OuiDatePickerRange },
     },
     {
       title: 'Only allow specific dates and times',
@@ -334,12 +345,12 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use the <EuiCode>minDate</EuiCode>,<EuiCode>maxDate</EuiCode>,
-          <EuiCode>minTime</EuiCode>, and <EuiCode>maxTime</EuiCode>
-          props to specify specific ranges the <EuiCode>selected</EuiCode> code
+          Use the <OuiCode>minDate</OuiCode>,<OuiCode>maxDate</OuiCode>,
+          <OuiCode>minTime</OuiCode>, and <OuiCode>maxTime</OuiCode>
+          props to specify specific ranges the <OuiCode>selected</OuiCode> code
           must must fall into. You can also use the{' '}
-          <EuiCode>excludeDates</EuiCode> and
-          <EuiCode>excludeTimes</EuiCode> property to disallow a specific array
+          <OuiCode>excludeDates</OuiCode> and
+          <OuiCode>excludeTimes</OuiCode> property to disallow a specific array
           of items from selection.
         </p>
       ),
@@ -360,7 +371,7 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use <EuiCode>openToDate</EuiCode> to default selection to a specific
+          Use <OuiCode>openToDate</OuiCode> to default selection to a specific
           date.
         </p>
       ),
@@ -381,7 +392,7 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use <EuiCode>customInput</EuiCode> to pass a custom input to trigger
+          Use <OuiCode>customInput</OuiCode> to pass a custom input to trigger
           your calendar.
         </p>
       ),
@@ -402,7 +413,7 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use <EuiCode>utcOffset</EuiCode> to apply an offset to the datetime.
+          Use <OuiCode>utcOffset</OuiCode> to apply an offset to the datetime.
         </p>
       ),
       snippet: utcSnippet,
@@ -422,10 +433,10 @@ export const DatePickerExample = {
       ],
       text: (
         <p>
-          Use the <EuiCode>inline</EuiCode> prop to display the date picker
+          Use the <OuiCode>inline</OuiCode> prop to display the date picker
           directly in the page. If you do not need the shadows / popover effect
           to the date picker then also apply the{' '}
-          <EuiCode language="js">shadow=false</EuiCode> prop as shown in the
+          <OuiCode language="js">shadow=false</OuiCode> prop as shown in the
           second example.
         </p>
       ),
@@ -452,17 +463,17 @@ export const DatePickerExample = {
           </p>
           <ul>
             <li>
-              <EuiCode>className</EuiCode> will pass onto the input.
+              <OuiCode>className</OuiCode> will pass onto the input.
             </li>
             <li>
-              <EuiCode>calendarClassName</EuiCode> will pass onto the calendar
+              <OuiCode>calendarClassName</OuiCode> will pass onto the calendar
               itself.
             </li>
             <li>
-              <EuiCode>dayClassName</EuiCode> will pass onto specificed days.
+              <OuiCode>dayClassName</OuiCode> will pass onto specificed days.
             </li>
             <li>
-              <EuiCode>popperClassName</EuiCode> will pass onto the popover.
+              <OuiCode>popperClassName</OuiCode> will pass onto the popover.
             </li>
           </ul>
         </div>

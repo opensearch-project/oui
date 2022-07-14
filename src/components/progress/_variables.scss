@@ -1,22 +1,33 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Progress bars come in different colors.
-$euiProgressColors: (
-  primary: $euiColorPrimary,
-  secondary: $euiColorSecondary,
-  success: $euiColorSuccess,
-  warning: $euiColorWarning,
-  danger: $euiColorDanger,
-  accent: $euiColorAccent,
-  subdued: $euiTextSubduedColor,
-  vis0: $euiColorVis0,
-  vis1: $euiColorVis1,
-  vis2: $euiColorVis2,
-  vis3: $euiColorVis3,
-  vis4: $euiColorVis4,
-  vis5: $euiColorVis5,
-  vis6: $euiColorVis6,
-  vis7: $euiColorVis7,
-  vis8: $euiColorVis8,
-  vis9: $euiColorVis9,
+$ouiProgressColors: (
+  primary: $ouiColorPrimary,
+  secondary: $ouiColorSecondary,
+  success: $ouiColorSuccess,
+  warning: $ouiColorWarning,
+  danger: $ouiColorDanger,
+  accent: $ouiColorAccent,
+  subdued: $ouiTextSubduedColor,
+  vis0: $ouiColorVis0,
+  vis1: $ouiColorVis1,
+  vis2: $ouiColorVis2,
+  vis3: $ouiColorVis3,
+  vis4: $ouiColorVis4,
+  vis5: $ouiColorVis5,
+  vis6: $ouiColorVis6,
+  vis7: $ouiColorVis7,
+  vis8: $ouiColorVis8,
+  vis9: $ouiColorVis9,
   customColor: currentColor,
 );
 

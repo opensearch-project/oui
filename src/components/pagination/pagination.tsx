@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,18 +32,18 @@ import React, { FunctionComponent, HTMLAttributes, MouseEvent } from 'react';
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
-import { EuiPaginationButton } from './pagination_button';
-import { EuiButtonIcon } from '../button';
-import { EuiI18n } from '../i18n';
-import { EuiText } from '../text';
-import { EuiHideFor } from '../responsive';
+import { OuiPaginationButton } from './pagination_button';
+import { OuiButtonIcon } from '../button';
+import { OuiI18n } from '../i18n';
+import { OuiText } from '../text';
+import { OuiHideFor } from '../responsive';
 
 const MAX_VISIBLE_PAGES = 5;
 const NUMBER_SURROUNDING_PAGES = Math.floor(MAX_VISIBLE_PAGES * 0.5);
 
 export type PageClickHandler = (pageIndex: number) => void;
 
-export interface EuiPaginationProps {
+export interface OuiPaginationProps {
   /**
    * The total number of pages.
    */
@@ -57,9 +68,9 @@ export interface EuiPaginationProps {
   'aria-controls'?: string;
 }
 
-type Props = CommonProps & HTMLAttributes<HTMLDivElement> & EuiPaginationProps;
+type Props = CommonProps & HTMLAttributes<HTMLDivElement> & OuiPaginationProps;
 
-export const EuiPagination: FunctionComponent<Props> = ({
+export const OuiPagination: FunctionComponent<Props> = ({
   className,
   pageCount = 1,
   activePage = 1,
@@ -89,7 +100,7 @@ export const EuiPagination: FunctionComponent<Props> = ({
     inList?: boolean;
   }) => {
     const button = (
-      <EuiPaginationButton
+      <OuiPaginationButton
         isActive={pageIndex === activePage}
         totalPages={pageCount}
         onClick={(e: MouseEvent) => safeClick(e, pageIndex)}
@@ -100,12 +111,12 @@ export const EuiPagination: FunctionComponent<Props> = ({
     );
 
     if (inList) {
-      return <li className="euiPagination__item">{button}</li>;
+      return <li className="ouiPagination__item">{button}</li>;
     }
 
     return button;
   };
-  const classes = classNames('euiPagination', className);
+  const classes = classNames('ouiPagination', className);
   const hasControl = ariaControls !== undefined;
   const pages = [];
   const firstPageInRange = Math.max(
@@ -135,16 +146,16 @@ export const EuiPagination: FunctionComponent<Props> = ({
   }
 
   const previousButton = (
-    <EuiI18n
-      token="euiPagination.previousPage"
+    <OuiI18n
+      token="ouiPagination.previousPage"
       default="Previous page, {page}"
       values={{ page: activePage }}>
       {(previousPage: string) => (
-        <EuiI18n
-          token="euiPagination.disabledPreviousPage"
+        <OuiI18n
+          token="ouiPagination.disabledPreviousPage"
           default="Previous page">
           {(disabledPreviousPage: string) => (
-            <EuiButtonIcon
+            <OuiButtonIcon
               onClick={(e: MouseEvent) => safeClick(e, activePage - 1)}
               iconType="arrowLeft"
               color="text"
@@ -155,9 +166,9 @@ export const EuiPagination: FunctionComponent<Props> = ({
               {...prevPageButtonProps}
             />
           )}
-        </EuiI18n>
+        </OuiI18n>
       )}
-    </EuiI18n>
+    </OuiI18n>
   );
 
   const firstPageButtons = [];
@@ -167,19 +178,19 @@ export const EuiPagination: FunctionComponent<Props> = ({
 
     if (firstPageInRange > 1 && firstPageInRange !== 2) {
       firstPageButtons.push(
-        <EuiI18n
+        <OuiI18n
           key="startingEllipses"
-          token="euiPagination.firstRangeAriaLabel"
+          token="ouiPagination.firstRangeAriaLabel"
           default="Skipping pages 2 to {lastPage}"
           values={{ lastPage: firstPageInRange }}>
           {(firstRangeAriaLabel: string) => (
             <li
               aria-label={firstRangeAriaLabel}
-              className="euiPaginationButton-isPlaceholder euiPagination__item">
+              className="ouiPaginationButton-isPlaceholder ouiPagination__item">
               &hellip;
             </li>
           )}
-        </EuiI18n>
+        </OuiI18n>
       );
     } else if (firstPageInRange === 2) {
       firstPageButtons.push(<PaginationButton pageIndex={1} key={1} />);
@@ -195,19 +206,19 @@ export const EuiPagination: FunctionComponent<Props> = ({
       );
     } else if (lastPageInRange < pageCount - 1) {
       lastPageButtons.push(
-        <EuiI18n
+        <OuiI18n
           key="endingEllipses"
-          token="euiPagination.lastRangeAriaLabel"
+          token="ouiPagination.lastRangeAriaLabel"
           default="Skipping pages {firstPage} to {lastPage}"
           values={{ firstPage: lastPageInRange + 1, lastPage: pageCount - 1 }}>
           {(lastRangeAriaLabel: string) => (
             <li
               aria-label={lastRangeAriaLabel}
-              className="euiPaginationButton-isPlaceholder euiPagination__item">
+              className="ouiPaginationButton-isPlaceholder ouiPagination__item">
               &hellip;
             </li>
           )}
-        </EuiI18n>
+        </OuiI18n>
       );
     }
 
@@ -227,14 +238,14 @@ export const EuiPagination: FunctionComponent<Props> = ({
   }
 
   const nextButton = (
-    <EuiI18n
-      token="euiPagination.nextPage"
+    <OuiI18n
+      token="ouiPagination.nextPage"
       default="Next page, {page}"
       values={{ page: activePage + 2 }}>
       {(nextPage: string) => (
-        <EuiI18n token="euiPagination.disabledNextPage" default="Next page">
+        <OuiI18n token="ouiPagination.disabledNextPage" default="Next page">
           {(disabledNextPage: string) => (
-            <EuiButtonIcon
+            <OuiButtonIcon
               onClick={(e: MouseEvent) => safeClick(e, activePage + 1)}
               iconType="arrowRight"
               aria-label={
@@ -245,9 +256,9 @@ export const EuiPagination: FunctionComponent<Props> = ({
               {...nextPageButtonProps}
             />
           )}
-        </EuiI18n>
+        </OuiI18n>
       )}
-    </EuiI18n>
+    </OuiI18n>
   );
 
   const selectablePages = pages;
@@ -263,18 +274,18 @@ export const EuiPagination: FunctionComponent<Props> = ({
     return (
       <nav className={classes} {...rest}>
         {previousButton}
-        <EuiHideFor sizes={['xs', 's']}>
-          <EuiText size="s" className="euiPagination__compressedText">
-            <EuiI18n
-              token="euiPagination.pageOfTotalCompressed"
+        <OuiHideFor sizes={['xs', 's']}>
+          <OuiText size="s" className="ouiPagination__compressedText">
+            <OuiI18n
+              token="ouiPagination.pageOfTotalCompressed"
               default="{page} of {total}"
               values={{
                 page: firstPageButtonCompressed,
                 total: lastPageButtonCompressed,
               }}
             />
-          </EuiText>
-        </EuiHideFor>
+          </OuiText>
+        </OuiHideFor>
         {nextButton}
       </nav>
     );
@@ -290,7 +301,7 @@ export const EuiPagination: FunctionComponent<Props> = ({
   return (
     <nav className={classes} {...rest}>
       {previousButton}
-      <ul {...accessibleName} className="euiPagination__list">
+      <ul {...accessibleName} className="ouiPagination__list">
         {firstPageButtons}
         {selectablePages}
         {lastPageButtons}

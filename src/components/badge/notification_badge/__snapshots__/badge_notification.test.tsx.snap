@@ -1,42 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiNotificationBadge is rendered 1`] = `
+exports[`OuiNotificationBadge is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiNotificationBadge testClass1 testClass2"
+  class="ouiNotificationBadge testClass1 testClass2"
   data-test-subj="test subject string"
 >
   5
 </span>
 `;
 
-exports[`EuiNotificationBadge props color accent is rendered 1`] = `
+exports[`OuiNotificationBadge props color accent is rendered 1`] = `
 <span
-  class="euiNotificationBadge"
+  class="ouiNotificationBadge"
 >
   5
 </span>
 `;
 
-exports[`EuiNotificationBadge props color subdued is rendered 1`] = `
+exports[`OuiNotificationBadge props color subdued is rendered 1`] = `
 <span
-  class="euiNotificationBadge euiNotificationBadge--subdued"
+  class="ouiNotificationBadge ouiNotificationBadge--subdued"
 >
   5
 </span>
 `;
 
-exports[`EuiNotificationBadge props size m is rendered 1`] = `
+exports[`OuiNotificationBadge props size m is rendered 1`] = `
 <span
-  class="euiNotificationBadge euiNotificationBadge--medium"
+  class="ouiNotificationBadge ouiNotificationBadge--medium"
 >
   5
 </span>
 `;
 
-exports[`EuiNotificationBadge props size s is rendered 1`] = `
+exports[`OuiNotificationBadge props size s is rendered 1`] = `
 <span
-  class="euiNotificationBadge"
+  class="ouiNotificationBadge"
 >
   5
 </span>

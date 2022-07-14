@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCode, EuiText } from '../../../../src/components';
+import { OuiCode, OuiText } from '../../../../src/components';
 
 const htmlCode = `<!--I'm an example of HTML-->
 <div>
@@ -9,20 +20,20 @@ const htmlCode = `<!--I'm an example of HTML-->
 `;
 
 export default () => (
-  <EuiText>
+  <OuiText>
     <p>
-      Sometimes you need to emphasize <EuiCode>code</EuiCode> like this.
+      Sometimes you need to emphasize <OuiCode>code</OuiCode> like this.
     </p>
     <p>
       You can also pass a language in like{' '}
-      <EuiCode language="html">{htmlCode.trim()}</EuiCode>.
+      <OuiCode language="html">{htmlCode.trim()}</OuiCode>.
     </p>
     <p>
       Make the background transparent like this{' '}
-      <EuiCode language="html" transparentBackground>
+      <OuiCode language="html" transparentBackground>
         {htmlCode.trim()}
-      </EuiCode>
+      </OuiCode>
       .
     </p>
-  </EuiText>
+  </OuiText>
 );

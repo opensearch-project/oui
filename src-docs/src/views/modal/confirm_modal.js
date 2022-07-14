@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiConfirmModal,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButton,
+  OuiConfirmModal,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => {
@@ -21,7 +32,7 @@ export default () => {
 
   if (isModalVisible) {
     modal = (
-      <EuiConfirmModal
+      <OuiConfirmModal
         title="Do this thing"
         onCancel={closeModal}
         onConfirm={closeModal}
@@ -30,7 +41,7 @@ export default () => {
         defaultFocusedButton="confirm">
         <p>You&rsquo;re about to do something.</p>
         <p>Are you sure you want to do this?</p>
-      </EuiConfirmModal>
+      </OuiConfirmModal>
     );
   }
 
@@ -38,7 +49,7 @@ export default () => {
 
   if (isDestroyModalVisible) {
     destroyModal = (
-      <EuiConfirmModal
+      <OuiConfirmModal
         title="Do this destructive thing"
         onCancel={closeDestroyModal}
         onConfirm={closeDestroyModal}
@@ -48,22 +59,22 @@ export default () => {
         defaultFocusedButton="confirm">
         <p>You&rsquo;re about to destroy something.</p>
         <p>Are you sure you want to do this?</p>
-      </EuiConfirmModal>
+      </OuiConfirmModal>
     );
   }
 
   return (
     <div>
-      <EuiFlexGroup responsive={false} wrap gutterSize="xs">
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={showModal}>Show confirm modal</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={showDestroyModal}>
+      <OuiFlexGroup responsive={false} wrap gutterSize="xs">
+        <OuiFlexItem grow={false}>
+          <OuiButton onClick={showModal}>Show confirm modal</OuiButton>
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiButton onClick={showDestroyModal}>
             Show dangerous confirm modal
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiButton>
+        </OuiFlexItem>
+      </OuiFlexGroup>
       {modal}
       {destroyModal}
     </div>

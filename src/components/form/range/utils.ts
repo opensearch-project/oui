@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,14 +28,14 @@
  * under the License.
  */
 
-export const EUI_THUMB_SIZE = 16;
+export const OUI_THUMB_SIZE = 16;
 
 export const calculateThumbPosition = (
   value: number,
   min: number,
   max: number,
   width: number,
-  thumbSize: number = EUI_THUMB_SIZE
+  thumbSize: number = OUI_THUMB_SIZE
 ) => {
   // Calculate the left position based on value
   const decimal = (value - min) / (max - min);

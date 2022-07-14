@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiComboBox is rendered 1`] = `
+exports[`OuiComboBox is rendered 1`] = `
 <div
   aria-expanded="false"
   aria-haspopup="listbox"
   aria-label="aria-label"
-  class="euiComboBox testClass1 testClass2"
+  class="ouiComboBox testClass1 testClass2"
   data-test-subj="test subject string"
   role="combobox"
 >
   <div
-    class="euiFormControlLayout"
+    class="ouiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="ouiFormControlLayout__childrenWrapper"
     >
       <div
-        class="euiComboBox__inputWrap euiComboBox__inputWrap-isClearable"
+        class="ouiComboBox__inputWrap ouiComboBox__inputWrap-isClearable"
         data-test-subj="comboBoxInput"
         tabindex="-1"
       >
         <div
-          class="euiComboBox__input"
+          class="ouiComboBox__input"
           style="font-size:14px;display:inline-block"
         >
           <input
@@ -37,18 +37,18 @@ exports[`EuiComboBox is rendered 1`] = `
         </div>
       </div>
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
       >
         <button
           aria-label="Open list of options"
-          class="euiFormControlLayoutCustomIcon euiFormControlLayoutCustomIcon--clickable"
+          class="ouiFormControlLayoutCustomIcon ouiFormControlLayoutCustomIcon--clickable"
           data-test-subj="comboBoxToggleListButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="ouiFormControlLayoutCustomIcon__icon"
+            data-ouiicon-type="arrowDown"
           />
         </button>
       </div>
@@ -61,11 +61,11 @@ exports[`props autoFocus is rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="ouiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -104,11 +104,11 @@ exports[`props delimiter is rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="ouiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -147,11 +147,11 @@ exports[`props full width is rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox euiComboBox--fullWidth"
+  className="ouiComboBox ouiComboBox--fullWidth"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={true}
@@ -187,11 +187,11 @@ exports[`props isClearable=false disallows user from clearing input when no opti
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="ouiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -220,11 +220,11 @@ exports[`props isClearable=false disallows user from clearing input when options
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="ouiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -262,11 +262,11 @@ exports[`props isDisabled is rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox euiComboBox-isDisabled"
+  className="ouiComboBox ouiComboBox-isDisabled"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -302,23 +302,23 @@ exports[`props options list is rendered 1`] = `
 <div
   aria-expanded="true"
   aria-haspopup="listbox"
-  class="euiComboBox euiComboBox-isOpen"
+  class="ouiComboBox ouiComboBox-isOpen"
   data-test-subj="alsoGetsAppliedToOptionsList"
   role="combobox"
 >
   <div
-    class="euiFormControlLayout"
+    class="ouiFormControlLayout"
   >
     <div
-      class="euiFormControlLayout__childrenWrapper"
+      class="ouiFormControlLayout__childrenWrapper"
     >
       <div
-        class="euiComboBox__inputWrap euiComboBox__inputWrap-isClearable"
+        class="ouiComboBox__inputWrap ouiComboBox__inputWrap-isClearable"
         data-test-subj="comboBoxInput"
         tabindex="-1"
       >
         <div
-          class="euiComboBox__input"
+          class="ouiComboBox__input"
           style="font-size: 14px; display: inline-block;"
         >
           <input
@@ -334,30 +334,30 @@ exports[`props options list is rendered 1`] = `
         </div>
       </div>
       <div
-        class="euiFormControlLayoutIcons euiFormControlLayoutIcons--right"
+        class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
       >
         <button
           aria-label="Close list of options"
-          class="euiFormControlLayoutCustomIcon euiFormControlLayoutCustomIcon--clickable"
+          class="ouiFormControlLayoutCustomIcon ouiFormControlLayoutCustomIcon--clickable"
           data-test-subj="comboBoxToggleListButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiFormControlLayoutCustomIcon__icon"
-            data-euiicon-type="arrowDown"
+            class="ouiFormControlLayoutCustomIcon__icon"
+            data-ouiicon-type="arrowDown"
           />
         </button>
       </div>
     </div>
   </div>
   <div
-    class="euiPanel euiPanel--borderRadiusMedium euiPanel--plain euiPanel--noShadow euiComboBoxOptionsList euiPopover__panel euiPopover__panel-isAttached euiPopover__panel-noArrow euiPopover__panel-isOpen euiPopover__panel--bottom"
+    class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiComboBoxOptionsList ouiPopover__panel ouiPopover__panel-isAttached ouiPopover__panel-noArrow ouiPopover__panel-isOpen ouiPopover__panel--bottom"
     data-test-subj="comboBoxOptionsList alsoGetsAppliedToOptionsList-optionsList"
     style="z-index: 100;"
   >
     <div
-      class="euiComboBoxOptionsList__rowWrap"
+      class="ouiComboBoxOptionsList__rowWrap"
     >
       <div
         style="position: relative; height: 200px; width: 0px; overflow: auto; will-change: transform; direction: ltr;"
@@ -370,7 +370,7 @@ exports[`props options list is rendered 1`] = `
         >
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="ouiFilterSelectItem"
             data-test-subj="titanOption"
             id="generated-id__option-0"
             role="option"
@@ -379,16 +379,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="ouiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="ouiComboBoxOption__content"
                   >
                     Titan
                   </span>
@@ -398,7 +398,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="ouiFilterSelectItem"
             id="generated-id__option-1"
             role="option"
             style="position: absolute; left: 0px; top: 29px; height: 29px; width: 100%;"
@@ -406,16 +406,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="ouiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="ouiComboBoxOption__content"
                   >
                     Enceladus
                   </span>
@@ -425,7 +425,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="ouiFilterSelectItem"
             id="generated-id__option-2"
             role="option"
             style="position: absolute; left: 0px; top: 58px; height: 29px; width: 100%;"
@@ -433,16 +433,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="ouiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="ouiComboBoxOption__content"
                   >
                     Mimas
                   </span>
@@ -452,7 +452,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="ouiFilterSelectItem"
             id="generated-id__option-3"
             role="option"
             style="position: absolute; left: 0px; top: 87px; height: 29px; width: 100%;"
@@ -460,16 +460,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="ouiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="ouiComboBoxOption__content"
                   >
                     Dione
                   </span>
@@ -479,7 +479,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="ouiFilterSelectItem"
             id="generated-id__option-4"
             role="option"
             style="position: absolute; left: 0px; top: 116px; height: 29px; width: 100%;"
@@ -487,16 +487,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="ouiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="ouiComboBoxOption__content"
                   >
                     Iapetus
                   </span>
@@ -506,7 +506,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="ouiFilterSelectItem"
             id="generated-id__option-5"
             role="option"
             style="position: absolute; left: 0px; top: 145px; height: 29px; width: 100%;"
@@ -514,16 +514,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="ouiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="ouiComboBoxOption__content"
                   >
                     Phoebe
                   </span>
@@ -533,7 +533,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="ouiFilterSelectItem"
             id="generated-id__option-6"
             role="option"
             style="position: absolute; left: 0px; top: 174px; height: 29px; width: 100%;"
@@ -541,16 +541,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="ouiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="ouiComboBoxOption__content"
                   >
                     Rhea
                   </span>
@@ -560,7 +560,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="ouiFilterSelectItem"
             id="generated-id__option-7"
             role="option"
             style="position: absolute; left: 0px; top: 203px; height: 29px; width: 100%;"
@@ -568,16 +568,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="ouiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="ouiComboBoxOption__content"
                   >
                     Pandora is one of Saturn's moons, named for a Titaness of Greek mythology
                   </span>
@@ -587,7 +587,7 @@ exports[`props options list is rendered 1`] = `
           </button>
           <button
             aria-selected="false"
-            class="euiFilterSelectItem"
+            class="ouiFilterSelectItem"
             id="generated-id__option-8"
             role="option"
             style="position: absolute; left: 0px; top: 232px; height: 29px; width: 100%;"
@@ -595,16 +595,16 @@ exports[`props options list is rendered 1`] = `
             type="button"
           >
             <span
-              class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+              class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="euiFlexItem euiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
-                  class="euiComboBoxOption__contentWrapper"
+                  class="ouiComboBoxOption__contentWrapper"
                 >
                   <span
-                    class="euiComboBoxOption__content"
+                    class="ouiComboBoxOption__content"
                   >
                     Tethys
                   </span>
@@ -623,11 +623,11 @@ exports[`props selectedOptions are rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="ouiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -666,11 +666,11 @@ exports[`props singleSelection is rendered 1`] = `
 <div
   aria-expanded={false}
   aria-haspopup="listbox"
-  className="euiComboBox"
+  className="ouiComboBox"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -706,11 +706,11 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
 <div
   aria-expanded={true}
   aria-haspopup="listbox"
-  className="euiComboBox euiComboBox-isOpen"
+  className="ouiComboBox ouiComboBox-isOpen"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     append="String"
     autoSizeInputRef={[Function]}
     compressed={false}
@@ -735,8 +735,8 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
     updatePosition={[Function]}
     value=""
   />
-  <EuiPortal>
-    <EuiComboBoxOptionsList
+  <OuiPortal>
+    <OuiComboBoxOptionsList
       activeOptionIndex={-1}
       areAllOptionsSelected={false}
       data-test-subj=""
@@ -828,7 +828,7 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
       updatePosition={[Function]}
       width={0}
     />
-  </EuiPortal>
+  </OuiPortal>
 </div>
 `;
 
@@ -836,11 +836,11 @@ exports[`props singleSelection selects existing option when opened 1`] = `
 <div
   aria-expanded={true}
   aria-haspopup="listbox"
-  className="euiComboBox euiComboBox-isOpen"
+  className="ouiComboBox ouiComboBox-isOpen"
   onKeyDown={[Function]}
   role="combobox"
 >
-  <EuiComboBoxInput
+  <OuiComboBoxInput
     autoSizeInputRef={[Function]}
     compressed={false}
     fullWidth={false}
@@ -869,8 +869,8 @@ exports[`props singleSelection selects existing option when opened 1`] = `
     updatePosition={[Function]}
     value="Mimas"
   />
-  <EuiPortal>
-    <EuiComboBoxOptionsList
+  <OuiPortal>
+    <OuiComboBoxOptionsList
       activeOptionIndex={-1}
       areAllOptionsSelected={false}
       data-test-subj=""
@@ -968,6 +968,6 @@ exports[`props singleSelection selects existing option when opened 1`] = `
       updatePosition={[Function]}
       width={0}
     />
-  </EuiPortal>
+  </OuiPortal>
 </div>
 `;

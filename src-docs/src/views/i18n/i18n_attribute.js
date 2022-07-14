@@ -1,56 +1,67 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiCode,
-  EuiFieldText,
-  EuiI18n,
-  EuiFormRow,
-  EuiTitle,
-  useEuiI18n,
-  EuiSpacer,
+  OuiCode,
+  OuiFieldText,
+  OuiI18n,
+  OuiFormRow,
+  OuiTitle,
+  useOuiI18n,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
   return (
     <>
-      <EuiTitle size="xs">
-        <h3>useEuiI18n used in an attribute</h3>
-      </EuiTitle>
+      <OuiTitle size="xs">
+        <h3>useOuiI18n used in an attribute</h3>
+      </OuiTitle>
       <p>
-        <EuiFormRow
+        <OuiFormRow
           label={
             <>
               This text field&apos;s placeholder reads from{' '}
-              <EuiCode>euiI18nAttribute.placeholderName</EuiCode>
+              <OuiCode>ouiI18nAttribute.placeholderName</OuiCode>
             </>
           }>
-          <EuiFieldText
-            placeholder={useEuiI18n(
-              'euiI18nAttribute.placeholderName',
+          <OuiFieldText
+            placeholder={useOuiI18n(
+              'ouiI18nAttribute.placeholderName',
               'John Doe'
             )}
           />
-        </EuiFormRow>
+        </OuiFormRow>
       </p>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiTitle size="xs">
-        <h3>EuiI18n used as a render prop</h3>
-      </EuiTitle>
-      <EuiI18n token="euiI18nAttribute.placeholderName" default="John Doe">
+      <OuiTitle size="xs">
+        <h3>OuiI18n used as a render prop</h3>
+      </OuiTitle>
+      <OuiI18n token="ouiI18nAttribute.placeholderName" default="John Doe">
         {(placeholderName) => (
-          <EuiFormRow
+          <OuiFormRow
             label={
               <>
                 This text field&apos;s placeholder reads from{' '}
-                <EuiCode>euiI18nAttribute.placeholderName</EuiCode>
+                <OuiCode>ouiI18nAttribute.placeholderName</OuiCode>
               </>
             }>
-            <EuiFieldText placeholder={placeholderName} />
-          </EuiFormRow>
+            <OuiFieldText placeholder={placeholderName} />
+          </OuiFormRow>
         )}
-      </EuiI18n>
+      </OuiI18n>
     </>
   );
 };

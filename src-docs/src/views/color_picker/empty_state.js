@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useMemo } from 'react';
 
-import { EuiColorPicker, EuiFormRow } from '../../../../src/components';
+import { OuiColorPicker, OuiFormRow } from '../../../../src/components';
 
 import { useColorPickerState } from '../../../../src/services';
 
@@ -10,15 +21,15 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Pick a color" isInvalid={isInvalid} error={errors}>
-        <EuiColorPicker
+      <OuiFormRow label="Pick a color" isInvalid={isInvalid} error={errors}>
+        <OuiColorPicker
           onChange={setColor}
           color={color}
           isInvalid={isInvalid}
           placeholder="Auto"
           isClearable={true}
         />
-      </EuiFormRow>
+      </OuiFormRow>
     </React.Fragment>
   );
 };

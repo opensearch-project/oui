@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,16 +31,16 @@
 import React, { HTMLAttributes, ReactNode, FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-import { EuiDescriptionListTitle } from './description_list_title';
+import { OuiDescriptionListTitle } from './description_list_title';
 
-import { EuiDescriptionListDescription } from './description_list_description';
+import { OuiDescriptionListDescription } from './description_list_description';
 import { CommonProps, keysOf } from '../common';
 
-export type EuiDescriptionListType = keyof typeof typesToClassNameMap;
-export type EuiDescriptionListAlignment = keyof typeof alignmentsToClassNameMap;
-export type EuiDescriptionListTextStyle = keyof typeof textStylesToClassNameMap;
+export type OuiDescriptionListType = keyof typeof typesToClassNameMap;
+export type OuiDescriptionListAlignment = keyof typeof alignmentsToClassNameMap;
+export type OuiDescriptionListTextStyle = keyof typeof textStylesToClassNameMap;
 
-export interface EuiDescriptionListProps {
+export interface OuiDescriptionListProps {
   listItems?: Array<{
     title: NonNullable<ReactNode>;
     description: NonNullable<ReactNode>;
@@ -37,7 +48,7 @@ export interface EuiDescriptionListProps {
   /**
    * Text alignment
    */
-  align?: EuiDescriptionListAlignment;
+  align?: OuiDescriptionListAlignment;
   /**
    * Smaller text and condensed spacing
    */
@@ -46,32 +57,32 @@ export interface EuiDescriptionListProps {
    * How should the content be styled, by default
    * this will emphasize the title
    */
-  textStyle?: EuiDescriptionListTextStyle;
+  textStyle?: OuiDescriptionListTextStyle;
   /**
    * How each item should be laid out
    */
-  type?: EuiDescriptionListType;
+  type?: OuiDescriptionListType;
   /**
-   * Props object to be passed to `EuiDescriptionListTitle`
+   * Props object to be passed to `OuiDescriptionListTitle`
    */
   titleProps?: HTMLAttributes<HTMLElement>;
   /**
-   * Props object to be passed to `EuiDescriptionListDescription`
+   * Props object to be passed to `OuiDescriptionListDescription`
    */
   descriptionProps?: HTMLAttributes<HTMLElement>;
 }
 
 const typesToClassNameMap = {
-  row: 'euiDescriptionList--row',
-  inline: 'euiDescriptionList--inline',
-  column: 'euiDescriptionList--column',
-  responsiveColumn: 'euiDescriptionList--responsiveColumn',
+  row: 'ouiDescriptionList--row',
+  inline: 'ouiDescriptionList--inline',
+  column: 'ouiDescriptionList--column',
+  responsiveColumn: 'ouiDescriptionList--responsiveColumn',
 };
 
 export const TYPES = keysOf(typesToClassNameMap);
 
 const alignmentsToClassNameMap = {
-  center: 'euiDescriptionList--center',
+  center: 'ouiDescriptionList--center',
   left: '',
 };
 
@@ -79,13 +90,13 @@ export const ALIGNMENTS = keysOf(alignmentsToClassNameMap);
 
 const textStylesToClassNameMap = {
   normal: '',
-  reverse: 'euiDescriptionList--reverse',
+  reverse: 'ouiDescriptionList--reverse',
 };
 
 export const TEXT_STYLES = keysOf(textStylesToClassNameMap);
 
-export const EuiDescriptionList: FunctionComponent<
-  CommonProps & HTMLAttributes<HTMLDListElement> & EuiDescriptionListProps
+export const OuiDescriptionList: FunctionComponent<
+  CommonProps & HTMLAttributes<HTMLDListElement> & OuiDescriptionListProps
 > = ({
   align = 'left',
   children,
@@ -99,12 +110,12 @@ export const EuiDescriptionList: FunctionComponent<
   ...rest
 }) => {
   const classes = classNames(
-    'euiDescriptionList',
+    'ouiDescriptionList',
     type ? typesToClassNameMap[type] : undefined,
     align ? alignmentsToClassNameMap[align] : undefined,
     textStyle ? textStylesToClassNameMap[textStyle] : undefined,
     {
-      'euiDescriptionList--compressed': compressed,
+      'ouiDescriptionList--compressed': compressed,
     },
     className
   );
@@ -113,15 +124,15 @@ export const EuiDescriptionList: FunctionComponent<
   if (listItems) {
     childrenOrListItems = listItems.map((item, index) => {
       return [
-        <EuiDescriptionListTitle key={`title-${index}`} {...titleProps}>
+        <OuiDescriptionListTitle key={`title-${index}`} {...titleProps}>
           {item.title}
-        </EuiDescriptionListTitle>,
+        </OuiDescriptionListTitle>,
 
-        <EuiDescriptionListDescription
+        <OuiDescriptionListDescription
           key={`description-${index}`}
           {...descriptionProps}>
           {item.description}
-        </EuiDescriptionListDescription>,
+        </OuiDescriptionListDescription>,
       ];
     });
   } else {

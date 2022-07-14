@@ -1,11 +1,22 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Helper mixins
 
 // Useful border shade when dealing with images of unknown color.
 @mixin innerBorder($type: 'dark', $borderRadius: 0, $alpha: .1) {
-  $color: rgba($euiColorDarkestShade, $alpha);
+  $color: rgba($ouiColorDarkestShade, $alpha);
 
   @if $type == 'light' {
-    $color: rgba($euiColorEmptyShade, $alpha);
+    $color: rgba($ouiColorEmptyShade, $alpha);
   }
 
   position: relative;
@@ -24,7 +35,7 @@
 }
 
 // Set scroll bar appearance on Chrome (and firefox).
-@mixin euiScrollBar($thumbColor: $euiColorDarkShade, $trackBackgroundColor: transparent) {
+@mixin ouiScrollBar($thumbColor: $ouiColorDarkShade, $trackBackgroundColor: transparent) {
   // Firefox's scrollbar coloring cascades, but the sizing does not,
   // so it's being added to this mixin for allowing support wherever custom scrollbars are
   // sass-lint:disable-block no-misspelled-properties
@@ -32,13 +43,13 @@
 
   // sass-lint:disable-block no-vendor-prefixes
   &::-webkit-scrollbar {
-    width: $euiScrollBar;
-    height: $euiScrollBar;
+    width: $ouiScrollBar;
+    height: $ouiScrollBar;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: transparentize($thumbColor, .5);
-    border: $euiScrollBarCorner solid $trackBackgroundColor;
+    border: $ouiScrollBarCorner solid $trackBackgroundColor;
     background-clip: content-box;
   }
 
@@ -56,8 +67,8 @@
  */
 
 // Just overflow and scrollbars
-@mixin euiYScroll {
-  @include euiScrollBar;
+@mixin ouiYScroll {
+  @include ouiScrollBar;
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -71,8 +82,8 @@
   }
 }
 
-@mixin euiXScroll {
-  @include euiScrollBar;
+@mixin ouiXScroll {
+  @include ouiScrollBar;
   overflow-x: auto;
 
   &:focus {
@@ -85,18 +96,18 @@
 }
 
 // The full overflow with shadow
-@mixin euiYScrollWithShadows {
-  @include euiYScroll;
-  @include euiOverflowShadow('y');
+@mixin ouiYScrollWithShadows {
+  @include ouiYScroll;
+  @include ouiOverflowShadow('y');
 }
 
-@mixin euiXScrollWithShadows {
-  @include euiXScroll;
-  @include euiOverflowShadow('x');
+@mixin ouiXScrollWithShadows {
+  @include ouiXScroll;
+  @include ouiOverflowShadow('x');
 }
 
 // Hiding elements offscreen to only be read by screen reader
-@mixin euiScreenReaderOnly {
+@mixin ouiScreenReaderOnly {
   position: absolute;
   left: -10000px;
   top: auto;
@@ -114,14 +125,14 @@
 }
 
 // Doesn't have reduced motion turned on
-@mixin euiCanAnimate {
+@mixin ouiCanAnimate {
   @media screen and (prefers-reduced-motion: no-preference) {
     @content;
   }
 }
 
 // Does have reduced motion turned on
-@mixin euiCantAnimate {
+@mixin ouiCantAnimate {
   @media screen and (prefers-reduced-motion: reduce) {
     @content;
   }

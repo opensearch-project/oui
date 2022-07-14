@@ -1,14 +1,25 @@
-.euiHeaderSection {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiHeaderSection {
   display: flex;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.euiHeaderSection--grow,
-.euiHeaderSection--left {
+.ouiHeaderSection--grow,
+.ouiHeaderSection--left {
   flex-grow: 1;
 }
 
-.euiHeaderSection--dontGrow {
+.ouiHeaderSection--dontGrow {
   flex-grow: 0;
 }

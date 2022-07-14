@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -39,9 +50,9 @@ import {
 import { getSecureRelForTarget } from '../../services';
 
 import {
-  EuiButtonContentProps,
-  EuiButtonContentType,
-  EuiButtonContent,
+  OuiButtonContentProps,
+  OuiButtonContentType,
+  OuiButtonContent,
 } from './button_content';
 import { validateHref } from '../../services/security/href_validator';
 
@@ -78,10 +89,10 @@ export const sizeToClassNameMap: { [size in ButtonSize]: string | null } = {
 export const SIZES = keysOf(sizeToClassNameMap);
 
 /**
- * Extends EuiButtonContentProps which provides
+ * Extends OuiButtonContentProps which provides
  * `iconType`, `iconSide`, and `textProps`
  */
-export interface EuiButtonProps extends EuiButtonContentProps, CommonProps {
+export interface OuiButtonProps extends OuiButtonContentProps, CommonProps {
   children?: ReactNode;
   /**
    * Make button a solid color for prominence
@@ -120,11 +131,11 @@ export interface EuiButtonProps extends EuiButtonContentProps, CommonProps {
   /**
    * Object of props passed to the <span/> wrapping the button's content
    */
-  contentProps?: EuiButtonContentType;
+  contentProps?: OuiButtonContentType;
   style?: CSSProperties;
 }
 
-export type EuiButtonDisplayProps = EuiButtonProps &
+export type OuiButtonDisplayProps = OuiButtonProps &
   HTMLAttributes<HTMLElement> & {
     /**
      * Provide a valid element to render the element as
@@ -139,10 +150,10 @@ export type EuiButtonDisplayProps = EuiButtonProps &
 /**
  * *INTERNAL ONLY*
  * Component for displaying any element as a button
- * EuiButton is largely responsible for providing relevant props
+ * OuiButton is largely responsible for providing relevant props
  * and the logic for element-specific attributes
  */
-const EuiButtonDisplay = forwardRef<HTMLElement, EuiButtonDisplayProps>(
+const OuiButtonDisplay = forwardRef<HTMLElement, OuiButtonDisplayProps>(
   (
     {
       element = 'button',
@@ -185,17 +196,17 @@ const EuiButtonDisplay = forwardRef<HTMLElement, EuiButtonDisplayProps>(
      * as it is a major breaking change.
      */
     const contentClassNames = classNames(
-      'euiButton__content',
+      'ouiButton__content',
       contentProps && contentProps.className
     );
 
     const textClassNames = classNames(
-      'euiButton__text',
+      'ouiButton__text',
       textProps && textProps.className
     );
 
     const innerNode = (
-      <EuiButtonContent
+      <OuiButtonContent
         isLoading={isLoading}
         iconType={iconType}
         iconSide={iconSide}
@@ -204,7 +215,7 @@ const EuiButtonDisplay = forwardRef<HTMLElement, EuiButtonDisplayProps>(
         // className has to come last to override contentProps.className
         className={contentClassNames}>
         {children}
-      </EuiButtonContent>
+      </OuiButtonContent>
     );
 
     let calculatedStyle: CSSProperties | undefined = style;
@@ -230,29 +241,29 @@ const EuiButtonDisplay = forwardRef<HTMLElement, EuiButtonDisplayProps>(
   }
 );
 
-EuiButtonDisplay.displayName = 'EuiButtonDisplay';
-export { EuiButtonDisplay };
+OuiButtonDisplay.displayName = 'OuiButtonDisplay';
+export { OuiButtonDisplay };
 
-export type EuiButtonPropsForAnchor = PropsForAnchor<
-  EuiButtonProps,
+export type OuiButtonPropsForAnchor = PropsForAnchor<
+  OuiButtonProps,
   {
     buttonRef?: Ref<HTMLAnchorElement>;
   }
 >;
 
-export type EuiButtonPropsForButton = PropsForButton<
-  EuiButtonProps,
+export type OuiButtonPropsForButton = PropsForButton<
+  OuiButtonProps,
   {
     buttonRef?: Ref<HTMLButtonElement>;
   }
 >;
 
 export type Props = ExclusiveUnion<
-  EuiButtonPropsForAnchor,
-  EuiButtonPropsForButton
+  OuiButtonPropsForAnchor,
+  OuiButtonPropsForButton
 >;
 
-export const EuiButton: FunctionComponent<Props> = ({
+export const OuiButton: FunctionComponent<Props> = ({
   isDisabled: _isDisabled,
   disabled: _disabled,
   href,
@@ -293,9 +304,9 @@ export const EuiButton: FunctionComponent<Props> = ({
   }
 
   return (
-    <EuiButtonDisplay
+    <OuiButtonDisplay
       element={element}
-      baseClassName="euiButton"
+      baseClassName="ouiButton"
       ref={buttonRef}
       {...elementProps}
       {...relObj}

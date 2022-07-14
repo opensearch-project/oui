@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiBreadcrumbs } from '../../../../src/components';
+import { OuiBreadcrumbs } from '../../../../src/components';
 
 export default () => {
   const breadcrumbs = [
@@ -38,10 +49,10 @@ export default () => {
   ];
 
   return (
-    <EuiBreadcrumbs
+    <OuiBreadcrumbs
       max={4}
       breadcrumbs={breadcrumbs}
-      aria-label="An example of EuiBreadcrumbs with specifying max prop"
+      aria-label="An example of OuiBreadcrumbs with specifying max prop"
     />
   );
 };

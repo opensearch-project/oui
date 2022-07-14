@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,8 +16,8 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiTreeView } from '../../../../src/components';
-import { EuiTreeViewNode } from './tree_view_props';
+import { OuiCode, OuiTreeView } from '../../../../src/components';
+import { OuiTreeViewNode } from './tree_view_props';
 import TreeView from './tree_view';
 import TreeViewCompressed from './compressed';
 
@@ -17,24 +28,24 @@ const treeViewCompressedSource = require('!!raw-loader!./compressed');
 const treeViewCompressedHtml = renderToHtml(TreeViewCompressed);
 
 const treeViewSnippet = [
-  `<EuiTreeView
+  `<OuiTreeView
   items={[
     {
       label: 'Item One',
       id: 'item_one',
-      icon: <EuiIcon type="arrowRight" />,
-      iconWhenExpanded: <EuiIcon type="arrowDown" />,
+      icon: <OuiIcon type="arrowRight" />,
+      iconWhenExpanded: <OuiIcon type="arrowDown" />,
       isExpanded: true,
       children: [
         {
           label: 'Item A',
           id: 'item_a',
-          icon: <EuiIcon type="document" />,
+          icon: <OuiIcon type="document" />,
         },
         {
           label: 'Item B',
           id: 'item_b',
-          icon: <EuiIcon type="document" />,
+          icon: <OuiIcon type="document" />,
         },
       ],
     },
@@ -64,26 +75,26 @@ export const TreeViewExample = {
       text: (
         <div>
           <p>
-            <strong>EuiTreeView</strong> allows you to render recursive objects,
-            such as a file directory. The <EuiCode>children</EuiCode> prop takes
-            an array of <EuiCode>nodes</EuiCode>.
+            <strong>OuiTreeView</strong> allows you to render recursive objects,
+            such as a file directory. The <OuiCode>children</OuiCode> prop takes
+            an array of <OuiCode>nodes</OuiCode>.
           </p>
           <p>
             Keyboard navigation allows users to navigate and interact with the
             tree using the arrow keys, spacebar, and return.
           </p>
           <p>
-            The <EuiCode>icon</EuiCode> prop accepts any{' '}
+            The <OuiCode>icon</OuiCode> prop accepts any{' '}
             <Link to="/display/icons">icon or token</Link>. You can also
             specifiy a different icon for the open state with the{' '}
-            <EuiCode>iconWhenExpanded</EuiCode> prop.
+            <OuiCode>iconWhenExpanded</OuiCode> prop.
           </p>
         </div>
       ),
-      components: { EuiTreeView },
+      components: { OuiTreeView },
       demo: <TreeView />,
       snippet: treeViewSnippet,
-      props: { EuiTreeView, EuiTreeViewNode },
+      props: { OuiTreeView, OuiTreeViewNode },
     },
     {
       title: 'Optional styling',
@@ -100,16 +111,16 @@ export const TreeViewExample = {
       text: (
         <div>
           <p>
-            <strong>EuiTreeView</strong> supports a compressed mode with the{' '}
-            <EuiCode language="js">{'display="compressed"'}</EuiCode> setting.
+            <strong>OuiTreeView</strong> supports a compressed mode with the{' '}
+            <OuiCode language="js">{'display="compressed"'}</OuiCode> setting.
             When using the compressed version it&apos;s highly recommended to
-            use the small size of <strong>EuiIcon</strong> and the extra small
-            size of <strong>EuiToken</strong>. This will help prevent awkard
+            use the small size of <strong>OuiIcon</strong> and the extra small
+            size of <strong>OuiToken</strong>. This will help prevent awkard
             alignment issues when used alongside the{' '}
-            <EuiCode>showExpansionArrows</EuiCode> prop.
+            <OuiCode>showExpansionArrows</OuiCode> prop.
           </p>
           <p>
-            The <EuiCode>showExpansionArrows</EuiCode> prop provides an
+            The <OuiCode>showExpansionArrows</OuiCode> prop provides an
             additional visual indicator. Ideal for when a tree&apos;s items use
             icons that don&apos;t immediately let a user know that there are
             nested nodes that may not be visible.
@@ -117,19 +128,19 @@ export const TreeViewExample = {
           <p>
             In some cases, you may want to automatically expand all the items
             with children. In those instances, you can use the{' '}
-            <EuiCode>expandByDefault</EuiCode> prop, as seen in the example
+            <OuiCode>expandByDefault</OuiCode> prop, as seen in the example
             below.
           </p>
           <p>
             Lastly, each node can also accept a custom{' '}
-            <EuiCode>className</EuiCode> should you need to style them
+            <OuiCode>className</OuiCode> should you need to style them
             individually.
           </p>
         </div>
       ),
-      components: { EuiTreeView },
+      components: { OuiTreeView },
       demo: <TreeViewCompressed />,
-      props: { EuiTreeView, EuiTreeViewNode },
+      props: { OuiTreeView, OuiTreeViewNode },
     },
   ],
 };

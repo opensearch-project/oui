@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,12 +31,12 @@
 import React, { AriaAttributes, Component, MouseEventHandler } from 'react';
 import classNames from 'classnames';
 
-import { EuiBadge } from '../../badge';
-import { EuiI18n } from '../../i18n';
-import { EuiComboBoxOptionOption, OptionHandler } from '../types';
+import { OuiBadge } from '../../badge';
+import { OuiI18n } from '../../i18n';
+import { OuiComboBoxOptionOption, OptionHandler } from '../types';
 import { CommonProps } from '../../common';
 
-export interface EuiComboBoxPillProps<T> extends CommonProps {
+export interface OuiComboBoxPillProps<T> extends CommonProps {
   asPlainText?: boolean;
   children?: string;
   className?: string;
@@ -33,10 +44,10 @@ export interface EuiComboBoxPillProps<T> extends CommonProps {
   onClick?: MouseEventHandler<HTMLButtonElement>;
   onClickAriaLabel?: AriaAttributes['aria-label'];
   onClose?: OptionHandler<T>;
-  option: EuiComboBoxOptionOption<T>;
+  option: OuiComboBoxOptionOption<T>;
 }
 
-export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
+export class OuiComboBoxPill<T> extends Component<OuiComboBoxPillProps<T>> {
   static defaultProps = {
     color: 'hollow',
   };
@@ -61,9 +72,9 @@ export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
       ...rest
     } = this.props;
     const classes = classNames(
-      'euiComboBoxPill',
+      'ouiComboBoxPill',
       {
-        'euiComboBoxPill--plainText': asPlainText,
+        'ouiComboBoxPill--plainText': asPlainText,
       },
       className
     );
@@ -77,12 +88,12 @@ export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
 
     if (onClose) {
       return (
-        <EuiI18n
-          token="euiComboBoxPill.removeSelection"
+        <OuiI18n
+          token="ouiComboBoxPill.removeSelection"
           default="Remove {children} from selection in this group"
           values={{ children }}>
           {(removeSelection: string) => (
-            <EuiBadge
+            <OuiBadge
               className={classes}
               closeButtonProps={{ tabIndex: -1 }}
               color={color}
@@ -94,9 +105,9 @@ export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
               {...onClickProps}
               {...rest}>
               {children}
-            </EuiBadge>
+            </OuiBadge>
           )}
-        </EuiI18n>
+        </OuiI18n>
       );
     }
 
@@ -109,14 +120,14 @@ export class EuiComboBoxPill<T> extends Component<EuiComboBoxPillProps<T>> {
     }
 
     return (
-      <EuiBadge
+      <OuiBadge
         className={classes}
         color={color}
         title={children}
         {...rest}
         {...onClickProps}>
         {children}
-      </EuiBadge>
+      </OuiBadge>
     );
   }
 }

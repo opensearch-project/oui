@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { GuideSectionTypes } from '../../components';
 import {
-  EuiCallOut,
-  EuiCode,
-  EuiDragDropContext,
-  EuiDraggable,
-  EuiDroppable,
-  EuiLink,
-  EuiSpacer,
-  EuiText,
+  OuiCallOut,
+  OuiCode,
+  OuiDragDropContext,
+  OuiDraggable,
+  OuiDroppable,
+  OuiLink,
+  OuiSpacer,
+  OuiText,
 } from '../../../../src/components';
 import { renderToHtml } from '../../services';
 
@@ -49,35 +60,35 @@ export const DragAndDropExample = {
   beta: true,
   intro: (
     <React.Fragment>
-      <EuiText>
+      <OuiText>
         <p>
           An extension of{' '}
-          <EuiLink href="https://github.com/atlassian/react-beautiful-dnd">
+          <OuiLink href="https://github.com/atlassian/react-beautiful-dnd">
             react-beautiful-dnd
-          </EuiLink>{' '}
+          </OuiLink>{' '}
           with a compatible API and built-in style opinions. Functionality
           results from 3 components working together:
         </p>
         <ul>
           <li>
-            <EuiCode>{'<EuiDragDropContext />'}</EuiCode>: Section of your
+            <OuiCode>{'<OuiDragDropContext />'}</OuiCode>: Section of your
             application containing the draggable elements and the drop targets.
           </li>
           <li>
-            <EuiCode>{'<EuiDroppable />'}</EuiCode>: Area into which items can
+            <OuiCode>{'<OuiDroppable />'}</OuiCode>: Area into which items can
             be dropped. Contains one or more{' '}
-            <EuiCode>{'<EuiDraggable />'}</EuiCode>.
+            <OuiCode>{'<OuiDraggable />'}</OuiCode>.
           </li>
           <li>
-            <EuiCode>{'<EuiDraggable />'}</EuiCode>: Items that can be dragged.
-            Must be part of an <EuiCode>{'<EuiDroppable />'}</EuiCode>
+            <OuiCode>{'<OuiDraggable />'}</OuiCode>: Items that can be dragged.
+            Must be part of an <OuiCode>{'<OuiDroppable />'}</OuiCode>
           </li>
         </ul>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiCallOut title="Consider your users, use case" color="warning">
+      <OuiCallOut title="Consider your users, use case" color="warning">
         <p>
           Drag and drop interfaces are not well-adapted to many cases, and may
           be less suitable than other form types for data operations. For
@@ -88,10 +99,10 @@ export const DragAndDropExample = {
           item manipulation.
         </p>
         <p>
-          {`EUI (largely due to the great work already in react-beautiful-dnd) has and will continue to ensure accessibility where possible.
+          {`OUI (largely due to the great work already in react-beautiful-dnd) has and will continue to ensure accessibility where possible.
           With that in mind, keep your users' working context in mind.`}
         </p>
-      </EuiCallOut>
+      </OuiCallOut>
     </React.Fragment>
   ),
   sections: [
@@ -110,66 +121,66 @@ export const DragAndDropExample = {
       text: (
         <React.Fragment>
           <p>
-            <strong>EuiDraggable</strong> makes very few assumptions about what
+            <strong>OuiDraggable</strong> makes very few assumptions about what
             content it contains. To give affordance to draggable elements and to
             ensure a consistent experience, child elements must be able to
             accept a border and drop shadow (automatically applied via CSS). No
             other style opinions are applied, however.
           </p>
           <p>
-            Similarly, <strong>EuiDroppable</strong> must accept a background
+            Similarly, <strong>OuiDroppable</strong> must accept a background
             color overlay (automatically applied via CSS), but has no other
             restrictions.
           </p>
           <p>
-            All <strong>EuiDragDropContext</strong> elements are discrete and
-            isolated; <strong>EuiDroppables</strong> and{' '}
-            <strong>EuiDraggables</strong> cannot be shared/transferred between
-            instances. Also, <strong>EuiDragDropContexts</strong> cannot be
+            All <strong>OuiDragDropContext</strong> elements are discrete and
+            isolated; <strong>OuiDroppables</strong> and{' '}
+            <strong>OuiDraggables</strong> cannot be shared/transferred between
+            instances. Also, <strong>OuiDragDropContexts</strong> cannot be
             nested. It is recommended that a single, high-level{' '}
-            <strong>EuiDragDropContext</strong> is used and{' '}
-            <strong>EuiDroppables</strong> account for categorical and
+            <strong>OuiDragDropContext</strong> is used and{' '}
+            <strong>OuiDroppables</strong> account for categorical and
             functional separation (see later examples).
           </p>
           <p>
-            <strong>EuiDragDropContext</strong> handles all eventing but makes
+            <strong>OuiDragDropContext</strong> handles all eventing but makes
             no assumptions about the result of a drop event. As such, the
             following event handlers are available:
           </p>
           <ul>
             <li>
-              <EuiCode>onBeforeDragStart</EuiCode>
+              <OuiCode>onBeforeDragStart</OuiCode>
             </li>
             <li>
-              <EuiCode>onDragStart</EuiCode>
+              <OuiCode>onDragStart</OuiCode>
             </li>
             <li>
-              <EuiCode>onDragUpdate</EuiCode>
+              <OuiCode>onDragUpdate</OuiCode>
             </li>
             <li>
-              <EuiCode>onDragEnd</EuiCode> (required)
+              <OuiCode>onDragEnd</OuiCode> (required)
             </li>
           </ul>
           <p>
-            EUI also provides methods for helping to deal to common action
+            OUI also provides methods for helping to deal to common action
             types:
           </p>
           <ul>
             <li>
-              <EuiCode>reorder</EuiCode>:{' '}
+              <OuiCode>reorder</OuiCode>:{' '}
               {"change an item's location in a droppable area"}
             </li>
             <li>
-              <EuiCode>copy</EuiCode>: create a duplicate of an item in a
+              <OuiCode>copy</OuiCode>: create a duplicate of an item in a
               different droppable area
             </li>
             <li>
-              <EuiCode>move</EuiCode>: move an item to a differnt droppable area
+              <OuiCode>move</OuiCode>: move an item to a differnt droppable area
             </li>
           </ul>
         </React.Fragment>
       ),
-      props: { EuiDragDropContext, EuiDraggable, EuiDroppable },
+      props: { OuiDragDropContext, OuiDraggable, OuiDroppable },
       demo: <DragAndDropBare />,
     },
     {
@@ -188,20 +199,20 @@ export const DragAndDropExample = {
         <React.Fragment>
           <p>
             The simplest case, demonstrating a single{' '}
-            <strong>EuiDroppable</strong> with <EuiCode>reorder</EuiCode>{' '}
+            <strong>OuiDroppable</strong> with <OuiCode>reorder</OuiCode>{' '}
             behavior.
           </p>
           <p>
             Notice the ability to change rendered content based on dragging
-            state. <strong>EuiDraggable</strong> <EuiCode>children</EuiCode> is
-            a render prop that mush return a <EuiCode>ReactElement</EuiCode>.
-            The <EuiCode>snapshot</EuiCode> parameter on that function has state
+            state. <strong>OuiDraggable</strong> <OuiCode>children</OuiCode> is
+            a render prop that mush return a <OuiCode>ReactElement</OuiCode>.
+            The <OuiCode>snapshot</OuiCode> parameter on that function has state
             data that can be used to alter appearance or behavior (e.g.,{' '}
-            <EuiCode>isDragging</EuiCode>).
+            <OuiCode>isDragging</OuiCode>).
           </p>
         </React.Fragment>
       ),
-      props: { EuiDragDropContext, EuiDraggable, EuiDroppable },
+      props: { OuiDragDropContext, OuiDraggable, OuiDroppable },
       demo: <DragAndDrop />,
     },
     {
@@ -221,15 +232,15 @@ export const DragAndDropExample = {
           <p>
             By default the entire element surface can initiate a drag. To
             specify a certain element within as the handle, set
-            <EuiCode>customDragHandle=true</EuiCode> on the{' '}
-            <strong>EuiDraggable</strong>.
+            <OuiCode>customDragHandle=true</OuiCode> on the{' '}
+            <strong>OuiDraggable</strong>.
           </p>
           <p>
-            The <EuiCode>provided</EuiCode> parameter on the{' '}
-            <strong>EuiDraggable</strong> <EuiCode>children</EuiCode> render
+            The <OuiCode>provided</OuiCode> parameter on the{' '}
+            <strong>OuiDraggable</strong> <OuiCode>children</OuiCode> render
             prop has all data required for functionality. Along with the{' '}
-            <EuiCode>customDragHandle</EuiCode> flag,
-            <EuiCode>provided.dragHandleProps</EuiCode> needs to be added to the
+            <OuiCode>customDragHandle</OuiCode> flag,
+            <OuiCode>provided.dragHandleProps</OuiCode> needs to be added to the
             intended handle element.
           </p>
         </React.Fragment>
@@ -251,9 +262,9 @@ export const DragAndDropExample = {
       text: (
         <React.Fragment>
           <p>
-            <strong>EuiDraggable</strong> elements can contain interactive
+            <strong>OuiDraggable</strong> elements can contain interactive
             elements such as buttons and form fields by adding the
-            <EuiCode>disableInteractiveElementBlocking</EuiCode> prop. This will
+            <OuiCode>disableInteractiveElementBlocking</OuiCode> prop. This will
             keep drag functionality while also enabling click, etc., events on
             the interactive child elements.
           </p>
@@ -276,12 +287,12 @@ export const DragAndDropExample = {
       text: (
         <React.Fragment>
           <p>
-            By default, all <strong>EuiDroppable</strong> elements are of the
-            same type and will accept <strong>EuiDraggable</strong> elements
-            from others in the same <strong>EuiDragDropContext</strong>.
+            By default, all <strong>OuiDroppable</strong> elements are of the
+            same type and will accept <strong>OuiDraggable</strong> elements
+            from others in the same <strong>OuiDragDropContext</strong>.
           </p>
           <p>
-            The EUI <EuiCode>move</EuiCode> method is demonstrated in this
+            The OUI <OuiCode>move</OuiCode> method is demonstrated in this
             example.
           </p>
         </React.Fragment>
@@ -303,15 +314,15 @@ export const DragAndDropExample = {
       text: (
         <React.Fragment>
           <p>
-            Setting the <EuiCode>type</EuiCode> prop on an{' '}
-            <strong>EuiDroppable</strong> element will ensure that it will only
-            accept <strong>EuiDraggable</strong> elements from the same type of{' '}
-            <strong>EuiDroppable</strong>.
+            Setting the <OuiCode>type</OuiCode> prop on an{' '}
+            <strong>OuiDroppable</strong> element will ensure that it will only
+            accept <strong>OuiDraggable</strong> elements from the same type of{' '}
+            <strong>OuiDroppable</strong>.
           </p>
           <p>
-            Notice that the enabled, compatible <strong>EuiDroppable</strong>{' '}
+            Notice that the enabled, compatible <strong>OuiDroppable</strong>{' '}
             elements have a visual change that indicates they can accept the
-            actively moving/focused <strong>EuiDraggable</strong> element.
+            actively moving/focused <strong>OuiDraggable</strong> element.
           </p>
         </React.Fragment>
       ),
@@ -332,21 +343,21 @@ export const DragAndDropExample = {
       text: (
         <React.Fragment>
           <p>
-            For cases where collections of <strong>EuiDraggable</strong>{' '}
+            For cases where collections of <strong>OuiDraggable</strong>{' '}
             elements are static or can be used in multiple places set{' '}
-            <EuiCode language="js">cloneDraggables=true</EuiCode> on the parent{' '}
-            <strong>EuiDroppable</strong>. The <strong>EuiDroppable</strong>{' '}
-            becomes disabled (does not accept new <strong>EuiDraggable</strong>{' '}
+            <OuiCode language="js">cloneDraggables=true</OuiCode> on the parent{' '}
+            <strong>OuiDroppable</strong>. The <strong>OuiDroppable</strong>{' '}
+            becomes disabled (does not accept new <strong>OuiDraggable</strong>{' '}
             elements) in this scenario to avoid mixed content intentions.
           </p>
           <p>
-            The EUI <EuiCode>copy</EuiCode> method is available and demonstrated
+            The OUI <OuiCode>copy</OuiCode> method is available and demonstrated
             in the example below. Note that the data point used as
-            <EuiCode>draggableId</EuiCode> in <strong>EuiDraggable</strong> must
+            <OuiCode>draggableId</OuiCode> in <strong>OuiDraggable</strong> must
             change to allow for real duplication.
           </p>
           <p>
-            <EuiCode>isRemovable</EuiCode> is used in the example for cloned
+            <OuiCode>isRemovable</OuiCode> is used in the example for cloned
             items. This API is likely to change, but currently provides the
             visual changes with drop-to-remove interactions.
           </p>
@@ -369,8 +380,8 @@ export const DragAndDropExample = {
       text: (
         <React.Fragment>
           <p>
-            <strong>EuiDraggables</strong> in <strong>EuiDroppables</strong>,{' '}
-            <strong>EuiDroppables</strong> in <strong>EuiDraggables</strong>,
+            <strong>OuiDraggables</strong> in <strong>OuiDroppables</strong>,{' '}
+            <strong>OuiDroppables</strong> in <strong>OuiDraggables</strong>,
             custom drag handles, horizontal movement, vertical movement,
             flexbox, panel inception, you name it.
           </p>

@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const { RuleTester } = require('eslint');
@@ -11,40 +22,40 @@ const ruleTester = new RuleTester({
   },
 });
 
-ruleTester.run('@elastic/eui/href-or-on-click', rule, {
+ruleTester.run('@opensearch-project/oui/href-or-on-click', rule, {
   valid: [
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton />
+          <OuiButton />
         )
       `),
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton href="/" />
+          <OuiButton href="/" />
         )
       `),
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton href={'/' + 'home'} />
+          <OuiButton href={'/' + 'home'} />
         )
       `),
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton onClick={executeAction} />
+          <OuiButton onClick={executeAction} />
         )
       `),
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton onClick={() => executeAction()} />
+          <OuiButton onClick={() => executeAction()} />
         )
       `),
     },
@@ -54,40 +65,40 @@ ruleTester.run('@elastic/eui/href-or-on-click', rule, {
     {
       code: dedent(`
         module.export = () => (
-          <EuiButton href="/" onClick={fooBar} />
+          <OuiButton href="/" onClick={fooBar} />
         )
       `),
 
       errors: [
         {
-          message: '<EuiButton> accepts either `href` or `onClick`, not both.',
+          message: '<OuiButton> accepts either `href` or `onClick`, not both.',
         },
       ],
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiButtonEmpty href="/" onClick={fooBar} />
+          <OuiButtonEmpty href="/" onClick={fooBar} />
         )
       `),
 
       errors: [
         {
           message:
-            '<EuiButtonEmpty> accepts either `href` or `onClick`, not both.',
+            '<OuiButtonEmpty> accepts either `href` or `onClick`, not both.',
         },
       ],
     },
     {
       code: dedent(`
         module.export = () => (
-          <EuiLink href="/" onClick={fooBar} />
+          <OuiLink href="/" onClick={fooBar} />
         )
       `),
 
       errors: [
         {
-          message: '<EuiLink> accepts either `href` or `onClick`, not both.',
+          message: '<OuiLink> accepts either `href` or `onClick`, not both.',
         },
       ],
     },

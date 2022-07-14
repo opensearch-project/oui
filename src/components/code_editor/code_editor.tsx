@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,7 +34,7 @@ import AceEditor, { IAceEditorProps } from 'react-ace';
 
 import { keysOf } from '../common';
 import { htmlIdGenerator, keys } from '../../services';
-import { EuiI18n } from '../i18n';
+import { OuiI18n } from '../i18n';
 
 const DEFAULT_MODE = 'text';
 const DEFAULT_THEME = 'textmate';
@@ -46,7 +57,7 @@ type SupportedAriaAttribute =
   | 'aria-describedby';
 type SupportedAriaAttributes = Pick<AriaAttributes, SupportedAriaAttribute>;
 
-export interface EuiCodeEditorProps
+export interface OuiCodeEditorProps
   extends SupportedAriaAttributes,
     Omit<IAceEditorProps, 'mode'> {
   width?: string;
@@ -70,21 +81,21 @@ export interface EuiCodeEditorProps
   id?: string;
 }
 
-export interface EuiCodeEditorState {
+export interface OuiCodeEditorState {
   isHintActive: boolean;
   isEditing: boolean;
   name: string;
 }
 
-export class EuiCodeEditor extends Component<
-  EuiCodeEditorProps,
-  EuiCodeEditorState
+export class OuiCodeEditor extends Component<
+  OuiCodeEditorProps,
+  OuiCodeEditorState
 > {
   static defaultProps = {
     setOptions: {},
   };
 
-  state: EuiCodeEditorState = {
+  state: OuiCodeEditorState = {
     isHintActive: true,
     isEditing: false,
     name: htmlIdGenerator()(),
@@ -202,7 +213,7 @@ export class EuiCodeEditor extends Component<
     }
   }
 
-  componentDidUpdate(prevProps: EuiCodeEditorProps) {
+  componentDidUpdate(prevProps: OuiCodeEditorProps) {
     if (this.props.mode !== prevProps.mode && this.isCustomMode()) {
       this.setCustomMode();
     }
@@ -223,12 +234,12 @@ export class EuiCodeEditor extends Component<
       ...rest
     } = this.props;
 
-    const classes = classNames('euiCodeEditorWrapper', {
-      'euiCodeEditorWrapper-isEditing': this.state.isEditing,
+    const classes = classNames('ouiCodeEditorWrapper', {
+      'ouiCodeEditorWrapper-isEditing': this.state.isEditing,
     });
 
-    const promptClasses = classNames('euiCodeEditorKeyboardHint', {
-      'euiCodeEditorKeyboardHint-isInactive': !this.state.isHintActive,
+    const promptClasses = classNames('ouiCodeEditorKeyboardHint', {
+      'ouiCodeEditorKeyboardHint-isInactive': !this.state.isHintActive,
     });
 
     let filteredCursorStart;
@@ -258,29 +269,29 @@ export class EuiCodeEditor extends Component<
         }}
         onClick={this.startEditing}
         data-test-subj="codeEditorHint">
-        <p className="euiText">
+        <p className="ouiText">
           {isReadOnly ? (
-            <EuiI18n
-              token="euiCodeEditor.startInteracting"
+            <OuiI18n
+              token="ouiCodeEditor.startInteracting"
               default="Press Enter to start interacting with the code."
             />
           ) : (
-            <EuiI18n
-              token="euiCodeEditor.startEditing"
+            <OuiI18n
+              token="ouiCodeEditor.startEditing"
               default="Press Enter to start editing."
             />
           )}
         </p>
 
-        <p className="euiText">
+        <p className="ouiText">
           {isReadOnly ? (
-            <EuiI18n
-              token="euiCodeEditor.stopInteracting"
+            <OuiI18n
+              token="ouiCodeEditor.stopInteracting"
               default="When you're done, press Escape to stop interacting with the code."
             />
           ) : (
-            <EuiI18n
-              token="euiCodeEditor.stopEditing"
+            <OuiI18n
+              token="ouiCodeEditor.stopEditing"
               default="When you're done, press Escape to stop editing."
             />
           )}

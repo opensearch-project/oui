@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /*
  *  Input Range Customization by browser
  */
@@ -12,44 +23,44 @@
 // It has been modified to fit the styling patterns of Kibana and
 // to be more easily maintained / themeable going forward.
 
-.euiRangeSlider {
-  height: $euiFormControlHeight;
+.ouiRangeSlider {
+  height: $ouiFormControlHeight;
   appearance: none;
   background: transparent; // Otherwise white in Chrome
   width: 100%; // ensures the slider expands to fill flex display
   position: relative;
   cursor: pointer; // Keep cursor to full range bounds
-  z-index: 1; // higher than .euiRangeHighlight that is 0
+  z-index: 1; // higher than .ouiRangeHighlight that is 0
 
   &:disabled {
     cursor: not-allowed;
 
     // sass-lint:disable-block mixins-before-declarations
-    @include euiRangeThumbPerBrowser {
+    @include ouiRangeThumbPerBrowser {
       cursor: not-allowed;
-      border-color: $euiRangeThumbBorderColor;
-      background-color: $euiRangeThumbBorderColor;
+      border-color: $ouiRangeThumbBorderColor;
+      background-color: $ouiRangeThumbBorderColor;
       box-shadow: none;
     }
 
-    ~ .euiRangeThumb {
+    ~ .ouiRangeThumb {
       cursor: not-allowed;
-      border-color: $euiRangeThumbBorderColor;
-      background-color: $euiRangeThumbBorderColor;
+      border-color: $ouiRangeThumbBorderColor;
+      background-color: $ouiRangeThumbBorderColor;
       box-shadow: none;
     }
   }
 
-  @include euiRangeThumbPerBrowser {
-    @include euiCustomControl($type: 'round');
-    @include euiRangeThumbStyle;
+  @include ouiRangeThumbPerBrowser {
+    @include ouiCustomControl($type: 'round');
+    @include ouiRangeThumbStyle;
   }
 
-  @include euiRangeTrackPerBrowser {
-    @include euiRangeTrackSize;
-    background: $euiRangeTrackColor;
-    border: $euiRangeTrackBorderWidth solid $euiRangeTrackBorderColor;
-    border-radius: $euiRangeTrackRadius;
+  @include ouiRangeTrackPerBrowser {
+    @include ouiRangeTrackSize;
+    background: $ouiRangeTrackColor;
+    border: $ouiRangeTrackBorderWidth solid $ouiRangeTrackBorderColor;
+    border-radius: $ouiRangeTrackRadius;
   }
 
   &:focus {
@@ -58,28 +69,28 @@
 
   &:focus-visible,
   &--hasFocus {
-    @include euiRangeThumbPerBrowser {
-      box-shadow: 0 0 0 $euiFocusRingSize $euiFocusRingColor;
+    @include ouiRangeThumbPerBrowser {
+      box-shadow: 0 0 0 $ouiFocusRingSize $ouiFocusRingColor;
     }
 
-    ~ .euiRangeThumb {
-      border-color: $euiRangeThumbBorderColor;
+    ~ .ouiRangeThumb {
+      border-color: $ouiRangeThumbBorderColor;
     }
 
-    @include euiRangeTrackPerBrowser {
-      background-color: $euiColorPrimary;
-      border-color: $euiColorPrimary;
+    @include ouiRangeTrackPerBrowser {
+      background-color: $ouiColorPrimary;
+      border-color: $ouiColorPrimary;
     }
 
-    ~ .euiRangeHighlight .euiRangeHighlight__progress {
-      background-color: $euiColorPrimary;
+    ~ .ouiRangeHighlight .ouiRangeHighlight__progress {
+      background-color: $ouiColorPrimary;
     }
 
-    ~ .euiRangeTooltip .euiRangeTooltip__value {
-      @include euiBottomShadowMedium;
+    ~ .ouiRangeTooltip .ouiRangeTooltip__value {
+      @include ouiBottomShadowMedium;
 
-      &.euiRangeTooltip__value--right,
-      &.euiRangeTooltip__value--left {
+      &.ouiRangeTooltip__value--right,
+      &.ouiRangeTooltip__value--left {
         transform: translateX(0) translateY(-50%) scale(1.1);
       }
     }
@@ -91,7 +102,7 @@
   // sass-lint:disable-block no-vendor-prefixes
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    margin-top: ((-$euiRangeTrackBorderWidth * 2 + $euiRangeTrackHeight) / 2) - ($euiRangeThumbHeight / 2);
+    margin-top: ((-$ouiRangeTrackBorderWidth * 2 + $ouiRangeTrackHeight) / 2) - ($ouiRangeThumbHeight / 2);
   }
 
   &::-ms-thumb {
@@ -103,31 +114,31 @@
   }
 
   &::-ms-track {
-    @include euiRangeTrackSize;
+    @include ouiRangeTrackSize;
     background: transparent;
     border-color: transparent;
-    border-width: ($euiRangeThumbHeight / 2) 0;
+    border-width: ($ouiRangeThumbHeight / 2) 0;
     color: transparent;
   }
 
   // States
   &--hasTicks {
-    height: $euiFormControlHeight / 2; // Adjust vertical alignment based on extras
+    height: $ouiFormControlHeight / 2; // Adjust vertical alignment based on extras
   }
 
   &--compressed {
-    height: $euiFormControlCompressedHeight;
+    height: $ouiFormControlCompressedHeight;
 
-    &.euiRangeSlider--hasTicks {
-      height: $euiFormControlCompressedHeight / 2;
+    &.ouiRangeSlider--hasTicks {
+      height: $ouiFormControlCompressedHeight / 2;
     }
   }
 }
 
 // Lighten the track when showing the range
-.euiRangeSlider--hasRange {
-  @include euiRangeTrackPerBrowser {
-    background-color: transparentize($euiRangeTrackColor, .6);
-    border-color: transparentize($euiRangeTrackBorderColor, .6);
+.ouiRangeSlider--hasRange {
+  @include ouiRangeTrackPerBrowser {
+    background-color: transparentize($ouiRangeTrackColor, .6);
+    border-color: transparentize($ouiRangeTrackBorderColor, .6);
   }
 }

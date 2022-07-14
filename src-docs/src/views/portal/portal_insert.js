@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiPortal, EuiButton } from '../../../../src/components';
-import { EuiSpacer } from '../../../../src/components/spacer/spacer';
+import { OuiPortal, OuiButton } from '../../../../src/components';
+import { OuiSpacer } from '../../../../src/components/spacer/spacer';
 
 let buttonRef = null;
 
@@ -18,17 +29,17 @@ export const PortalInsert = () => {
 
   if (isPortalVisible) {
     portal = (
-      <EuiPortal insert={{ sibling: buttonRef, position: 'after' }}>
-        <EuiSpacer />
+      <OuiPortal insert={{ sibling: buttonRef, position: 'after' }}>
+        <OuiSpacer />
         <p>This element is appended immediately after the button.</p>
-      </EuiPortal>
+      </OuiPortal>
     );
   }
   return (
     <div>
-      <EuiButton onClick={togglePortal} buttonRef={setButtonRef}>
+      <OuiButton onClick={togglePortal} buttonRef={setButtonRef}>
         Toggle portal
-      </EuiButton>
+      </OuiButton>
       {portal}
     </div>
   );

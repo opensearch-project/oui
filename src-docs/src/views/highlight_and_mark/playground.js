@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiHighlight, EuiMark } from '../../../../src/components/';
+import { OuiHighlight, OuiMark } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const highlightConfig = () => {
-  const docgenInfo = Array.isArray(EuiHighlight.__docgenInfo)
-    ? EuiHighlight.__docgenInfo[0]
-    : EuiHighlight.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiHighlight.__docgenInfo)
+    ? OuiHighlight.__docgenInfo[0]
+    : OuiHighlight.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
@@ -19,14 +30,14 @@ export const highlightConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiHighlight',
+      componentName: 'OuiHighlight',
       props: propsToUse,
       scope: {
-        EuiHighlight,
+        OuiHighlight,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiHighlight'],
+        '@opensearch-project/oui': {
+          named: ['OuiHighlight'],
         },
       },
     },
@@ -34,23 +45,23 @@ export const highlightConfig = () => {
 };
 
 export const markConfig = () => {
-  const docgenInfo = Array.isArray(EuiMark.__docgenInfo)
-    ? EuiMark.__docgenInfo[0]
-    : EuiMark.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiMark.__docgenInfo)
+    ? OuiMark.__docgenInfo[0]
+    : OuiMark.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children.value = 'Mark';
 
   return {
     config: {
-      componentName: 'EuiMark',
+      componentName: 'OuiMark',
       props: propsToUse,
       scope: {
-        EuiMark,
+        OuiMark,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiMark'],
+        '@opensearch-project/oui': {
+          named: ['OuiMark'],
         },
       },
     },

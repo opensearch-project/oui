@@ -1,20 +1,31 @@
-@each $gutterName, $gutterSize in $euiFacetGutterSizes {
-  .euiFacetGroup--#{$gutterName} {
-    .euiFacetButton {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@each $gutterName, $gutterSize in $ouiFacetGutterSizes {
+  .ouiFacetGroup--#{$gutterName} {
+    .ouiFacetButton {
       // Split the margin between top and bottom
       margin-top: $gutterSize / 2;
       margin-bottom: $gutterSize / 2;
     }
 
-    &.euiFacetGroup--horizontal {
+    &.ouiFacetGroup--horizontal {
       // There needs to be an additional distance between horizontal buttons to ensure
       // the number notification is closer in proximity to the text it belongs to rather than the button
-      $gutterAdjustment: $euiSizeM + $gutterSize;
+      $gutterAdjustment: $ouiSizeM + $gutterSize;
 
       // Collapse margin on the right side of the group to allow it to extend the full width
       margin-left: -#{$gutterAdjustment};
 
-      .euiFacetButton {
+      .ouiFacetButton {
         margin-left: $gutterAdjustment;
         // Adjust the max-width so it fits within the allotted margin
         max-width: calc(100% - #{$gutterAdjustment});

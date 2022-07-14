@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,18 +38,18 @@ import React, {
 } from 'react';
 import { createPortal } from 'react-dom';
 import {
-  EuiDataGridCellValueElementProps,
-  EuiDataGridCellProps,
+  OuiDataGridCellValueElementProps,
+  OuiDataGridCellProps,
 } from './data_grid_cell';
-import { EuiDataGridColumn, EuiDataGridInMemory } from './data_grid_types';
+import { OuiDataGridColumn, OuiDataGridInMemory } from './data_grid_types';
 import { enqueueStateChange } from '../../services/react';
-import { EuiMutationObserver } from '../observer/mutation_observer';
+import { OuiMutationObserver } from '../observer/mutation_observer';
 
-export interface EuiDataGridInMemoryRendererProps {
-  inMemory: EuiDataGridInMemory;
-  columns: EuiDataGridColumn[];
+export interface OuiDataGridInMemoryRendererProps {
+  inMemory: OuiDataGridInMemory;
+  columns: OuiDataGridColumn[];
   rowCount: number;
-  renderCellValue: EuiDataGridCellProps['renderCellValue'];
+  renderCellValue: OuiDataGridCellProps['renderCellValue'];
   onCellRender: (rowIndex: number, columnId: string, value: string) => void;
 }
 
@@ -52,7 +63,7 @@ function getElementText(element: HTMLElement) {
       element.textContent || undefined;
 }
 
-export const EuiDataGridInMemoryRenderer: FunctionComponent<EuiDataGridInMemoryRendererProps> = ({
+export const OuiDataGridInMemoryRenderer: FunctionComponent<OuiDataGridInMemoryRendererProps> = ({
   inMemory,
   columns,
   rowCount,
@@ -63,7 +74,7 @@ export const EuiDataGridInMemoryRenderer: FunctionComponent<EuiDataGridInMemoryR
 
   const cells = useMemo(() => {
     const CellElement = renderCellValue as JSXElementConstructor<
-      EuiDataGridCellValueElementProps
+      OuiDataGridCellValueElementProps
     >;
 
     const cells = [];
@@ -148,7 +159,7 @@ export const EuiDataGridInMemoryRenderer: FunctionComponent<EuiDataGridInMemoryR
   }, [onCellRender, cells]);
 
   return createPortal(
-    <EuiMutationObserver
+    <OuiMutationObserver
       onMutation={onMutation}
       observerOptions={{
         characterData: true,
@@ -157,7 +168,7 @@ export const EuiDataGridInMemoryRenderer: FunctionComponent<EuiDataGridInMemoryR
         childList: true,
       }}>
       {(ref) => <div ref={ref}>{cells}</div>}
-    </EuiMutationObserver>,
+    </OuiMutationObserver>,
     (documentFragment as unknown) as Element
   );
 };

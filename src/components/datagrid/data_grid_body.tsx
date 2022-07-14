@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -34,34 +45,34 @@ import {
   VariableSizeGrid as Grid,
   VariableSizeGridProps,
 } from 'react-window';
-import { EuiCodeBlock } from '../code';
+import { OuiCodeBlock } from '../code';
 import {
-  EuiDataGridControlColumn,
-  EuiDataGridColumn,
-  EuiDataGridColumnWidths,
-  EuiDataGridPopoverContents,
-  EuiDataGridInMemory,
-  EuiDataGridInMemoryValues,
-  EuiDataGridPaginationProps,
-  EuiDataGridPopoverContent,
-  EuiDataGridRowHeightsOptions,
-  EuiDataGridStyle,
+  OuiDataGridControlColumn,
+  OuiDataGridColumn,
+  OuiDataGridColumnWidths,
+  OuiDataGridPopoverContents,
+  OuiDataGridInMemory,
+  OuiDataGridInMemoryValues,
+  OuiDataGridPaginationProps,
+  OuiDataGridPopoverContent,
+  OuiDataGridRowHeightsOptions,
+  OuiDataGridStyle,
 } from './data_grid_types';
-import { EuiDataGridCell, EuiDataGridCellProps } from './data_grid_cell';
+import { OuiDataGridCell, OuiDataGridCellProps } from './data_grid_cell';
 import {
-  EuiDataGridSchema,
-  EuiDataGridSchemaDetector,
+  OuiDataGridSchema,
+  OuiDataGridSchemaDetector,
 } from './data_grid_schema';
-import { EuiDataGridFooterRow } from './data_grid_footer_row';
+import { OuiDataGridFooterRow } from './data_grid_footer_row';
 import {
-  EuiDataGridHeaderRow,
-  EuiDataGridHeaderRowProps,
+  OuiDataGridHeaderRow,
+  OuiDataGridHeaderRowProps,
 } from './data_grid_header_row';
 import {
-  EuiMutationObserver,
+  OuiMutationObserver,
   useMutationObserver,
 } from '../observer/mutation_observer';
-import { EuiText } from '../text';
+import { OuiText } from '../text';
 import {
   DataGridSortingContext,
   DataGridWrapperRowsContext,
@@ -69,45 +80,45 @@ import {
 import { useResizeObserver } from '../observer/resize_observer';
 import { RowHeightUtils } from './row_height_utils';
 
-export interface EuiDataGridBodyProps {
+export interface OuiDataGridBodyProps {
   isFullScreen: boolean;
-  columnWidths: EuiDataGridColumnWidths;
+  columnWidths: OuiDataGridColumnWidths;
   defaultColumnWidth?: number | null;
-  leadingControlColumns?: EuiDataGridControlColumn[];
-  trailingControlColumns?: EuiDataGridControlColumn[];
-  columns: EuiDataGridColumn[];
-  schema: EuiDataGridSchema;
-  schemaDetectors: EuiDataGridSchemaDetector[];
-  popoverContents?: EuiDataGridPopoverContents;
+  leadingControlColumns?: OuiDataGridControlColumn[];
+  trailingControlColumns?: OuiDataGridControlColumn[];
+  columns: OuiDataGridColumn[];
+  schema: OuiDataGridSchema;
+  schemaDetectors: OuiDataGridSchemaDetector[];
+  popoverContents?: OuiDataGridPopoverContents;
   rowCount: number;
-  renderCellValue: EuiDataGridCellProps['renderCellValue'];
-  renderFooterCellValue?: EuiDataGridCellProps['renderCellValue'];
-  inMemory?: EuiDataGridInMemory;
-  inMemoryValues: EuiDataGridInMemoryValues;
-  interactiveCellId: EuiDataGridCellProps['interactiveCellId'];
-  pagination?: EuiDataGridPaginationProps;
+  renderCellValue: OuiDataGridCellProps['renderCellValue'];
+  renderFooterCellValue?: OuiDataGridCellProps['renderCellValue'];
+  inMemory?: OuiDataGridInMemory;
+  inMemoryValues: OuiDataGridInMemoryValues;
+  interactiveCellId: OuiDataGridCellProps['interactiveCellId'];
+  pagination?: OuiDataGridPaginationProps;
   setColumnWidth: (columnId: string, width: number) => void;
   headerIsInteractive: boolean;
   handleHeaderMutation: MutationCallback;
-  setVisibleColumns: EuiDataGridHeaderRowProps['setVisibleColumns'];
-  switchColumnPos: EuiDataGridHeaderRowProps['switchColumnPos'];
+  setVisibleColumns: OuiDataGridHeaderRowProps['setVisibleColumns'];
+  switchColumnPos: OuiDataGridHeaderRowProps['switchColumnPos'];
   toolbarHeight: number;
-  rowHeightsOptions?: EuiDataGridRowHeightsOptions;
+  rowHeightsOptions?: OuiDataGridRowHeightsOptions;
   rowHeightUtils: RowHeightUtils;
-  gridStyles?: EuiDataGridStyle;
+  gridStyles?: OuiDataGridStyle;
 }
 
-export const VIRTUALIZED_CONTAINER_CLASS = 'euiDataGrid__virtualized';
+export const VIRTUALIZED_CONTAINER_CLASS = 'ouiDataGrid__virtualized';
 
 const defaultComparator: NonNullable<
-  EuiDataGridSchemaDetector['comparator']
+  OuiDataGridSchemaDetector['comparator']
 > = (a, b, direction) => {
   if (a < b) return direction === 'asc' ? -1 : 1;
   if (a > b) return direction === 'asc' ? 1 : -1;
   return 0;
 };
 
-const providedPopoverContents: EuiDataGridPopoverContents = {
+const providedPopoverContents: OuiDataGridPopoverContents = {
   json: ({ cellContentsElement }) => {
     let formattedText = cellContentsElement.innerText;
 
@@ -117,19 +128,19 @@ const providedPopoverContents: EuiDataGridPopoverContents = {
     } catch (e) {} // eslint-disable-line no-empty
 
     return (
-      <EuiCodeBlock
+      <OuiCodeBlock
         isCopyable
         transparentBackground
         paddingSize="none"
         language="json">
         {formattedText}
-      </EuiCodeBlock>
+      </OuiCodeBlock>
     );
   },
 };
 
-const DefaultColumnFormatter: EuiDataGridPopoverContent = ({ children }) => {
-  return <EuiText>{children}</EuiText>;
+const DefaultColumnFormatter: OuiDataGridPopoverContent = ({ children }) => {
+  return <OuiText>{children}</OuiText>;
 };
 
 const Cell: FunctionComponent<GridChildComponentProps> = ({
@@ -184,7 +195,7 @@ const Cell: FunctionComponent<GridChildComponentProps> = ({
   const columnId = column?.id;
 
   const transformClass = schemaDetectors.filter(
-    (row: EuiDataGridSchemaDetector) => {
+    (row: OuiDataGridSchemaDetector) => {
       return column?.schema
         ? column?.schema === row.type
         : columnId === row.type;
@@ -193,12 +204,12 @@ const Cell: FunctionComponent<GridChildComponentProps> = ({
   const textTransform = transformClass?.textTransform;
 
   const classes = classNames({
-    'euiDataGridRowCell--stripe': isStripableRow,
-    'euiDataGridRowCell--firstColumn': isFirstColumn,
-    'euiDataGridRowCell--lastColumn': isLastColumn,
-    'euiDataGridRowCell--controlColumn':
+    'ouiDataGridRowCell--stripe': isStripableRow,
+    'ouiDataGridRowCell--firstColumn': isFirstColumn,
+    'ouiDataGridRowCell--lastColumn': isLastColumn,
+    'ouiDataGridRowCell--controlColumn':
       isLeadingControlColumn || isTrailingControlColumn,
-    [`euiDataGridRowCell--${textTransform}`]: textTransform,
+    [`ouiDataGridRowCell--${textTransform}`]: textTransform,
   });
 
   if (isLeadingControlColumn) {
@@ -206,7 +217,7 @@ const Cell: FunctionComponent<GridChildComponentProps> = ({
     const { id, rowCellRender } = leadingColumn;
 
     cellContent = (
-      <EuiDataGridCell
+      <OuiDataGridCell
         rowIndex={rowIndex}
         visibleRowIndex={visibleRowIndex}
         colIndex={columnIndex}
@@ -233,7 +244,7 @@ const Cell: FunctionComponent<GridChildComponentProps> = ({
     const { id, rowCellRender } = trailingColumn;
 
     cellContent = (
-      <EuiDataGridCell
+      <OuiDataGridCell
         rowIndex={rowIndex}
         visibleRowIndex={visibleRowIndex}
         colIndex={columnIndex}
@@ -267,7 +278,7 @@ const Cell: FunctionComponent<GridChildComponentProps> = ({
     const width = columnWidths[columnId] || defaultColumnWidth;
 
     cellContent = (
-      <EuiDataGridCell
+      <OuiDataGridCell
         rowIndex={rowIndex}
         visibleRowIndex={visibleRowIndex}
         colIndex={columnIndex}
@@ -316,12 +327,12 @@ const InnerElement: VariableSizeGridProps['innerElementType'] = forwardRef<
     </>
   );
 });
-InnerElement.displayName = 'EuiDataGridInnerElement';
+InnerElement.displayName = 'OuiDataGridInnerElement';
 
 const INITIAL_ROW_HEIGHT = 34;
 const IS_JEST_ENVIRONMENT = global.hasOwnProperty('_isJest');
 
-export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = (
+export const OuiDataGridBody: FunctionComponent<OuiDataGridBodyProps> = (
   props
 ) => {
   const {
@@ -390,7 +401,7 @@ export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = (
       const inMemoryRowIndices = Object.keys(inMemoryValues);
       const wrappedValues: Array<{
         index: number;
-        values: EuiDataGridInMemoryValues[number];
+        values: OuiDataGridInMemoryValues[number];
       }> = [];
       for (let i = 0; i < inMemoryRowIndices.length; i++) {
         const inMemoryRow = inMemoryValues[inMemoryRowIndices[i]];
@@ -450,7 +461,7 @@ export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = (
 
   const headerRow = useMemo(() => {
     return (
-      <EuiDataGridHeaderRow
+      <OuiDataGridHeaderRow
         ref={setHeaderRowRef}
         switchColumnPos={switchColumnPos}
         setVisibleColumns={setVisibleColumns}
@@ -482,7 +493,7 @@ export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = (
   const footerRow = useMemo(() => {
     if (renderFooterCellValue == null) return null;
     return (
-      <EuiDataGridFooterRow
+      <OuiDataGridFooterRow
         ref={setFooterRowRef}
         leadingControlColumns={leadingControlColumns}
         trailingControlColumns={trailingControlColumns}
@@ -655,7 +666,7 @@ export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = (
         const element = tabbables[i];
         if (
           element.getAttribute('role') !== 'gridcell' &&
-          !element.dataset['euigrid-tab-managed']
+          !element.dataset['ouigrid-tab-managed']
         ) {
           element.setAttribute('tabIndex', '-1');
           element.setAttribute('data-datagrid-interactable', 'true');
@@ -677,7 +688,7 @@ export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = (
   }
 
   return (
-    <EuiMutationObserver
+    <OuiMutationObserver
       observerOptions={{ subtree: true, childList: true }}
       onMutation={preventTabbing}>
       {(mutationRef) => (
@@ -734,6 +745,6 @@ export const EuiDataGridBody: FunctionComponent<EuiDataGridBodyProps> = (
           )}
         </div>
       )}
-    </EuiMutationObserver>
+    </OuiMutationObserver>
   );
 };

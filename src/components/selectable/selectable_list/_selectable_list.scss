@@ -1,29 +1,40 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Expand height of list via flex box
-.euiSelectableList {
+.ouiSelectableList {
   &:focus-within {
-    @include euiFocusRing;
+    @include ouiFocusRing;
   }
 }
 
-.euiSelectableList-fullHeight {
+.ouiSelectableList-fullHeight {
   flex-grow: 1;
 }
 
-.euiSelectableList-bordered {
+.ouiSelectableList-bordered {
   overflow: hidden;
-  border: $euiBorderThin;
-  border-radius: $euiBorderRadius;
+  border: $ouiBorderThin;
+  border-radius: $ouiBorderRadius;
 }
 
-.euiSelectableList__list {
-  @include euiOverflowShadow;
-  @include euiScrollBar;
+.ouiSelectableList__list {
+  @include ouiOverflowShadow;
+  @include ouiScrollBar;
 }
 
-.euiSelectableList__groupLabel {
-  @include euiTitle('xxxs');
+.ouiSelectableList__groupLabel {
+  @include ouiTitle('xxxs');
   display: flex;
   align-items: center;
-  border-bottom: $euiSelectableListItemBorder;
-  padding: $euiSelectableListItemPadding;
+  border-bottom: $ouiSelectableListItemBorder;
+  padding: $ouiSelectableListItemPadding;
 }

@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment, useContext } from 'react';
 import orderBy from 'lodash/orderBy';
 import round from 'lodash/round';
@@ -6,19 +17,19 @@ import { ThemeContext } from '../../components';
 import { Chart, Settings, Axis } from '@elastic/charts';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
 } from '../../../../src/themes/charts/themes';
 
 import {
-  EuiSwitch,
-  EuiSpacer,
-  EuiTitle,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiCode,
-  EuiCopy,
-  EuiButton,
+  OuiSwitch,
+  OuiSpacer,
+  OuiTitle,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiCode,
+  OuiCopy,
+  OuiButton,
 } from '../../../../src/components';
 
 import { SIMPLE_GITHUB_DATASET, GITHUB_DATASET } from './data';
@@ -63,8 +74,8 @@ export const CategoryChart = () => {
 
   const isDarkTheme = themeContext.theme.includes('dark');
   const theme = isDarkTheme
-    ? EUI_CHARTS_THEME_DARK.theme
-    : EUI_CHARTS_THEME_LIGHT.theme;
+    ? OUI_CHARTS_THEME_DARK.theme
+    : OUI_CHARTS_THEME_LIGHT.theme;
 
   const ChartType = CHART_COMPONENTS[chartType];
 
@@ -72,14 +83,14 @@ export const CategoryChart = () => {
 
   return (
     <Fragment>
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h2>
           Number of GitHub issues per visualization type
           {multi && ' by type of issue'}
         </h2>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiSpacer size="s" />
+      <OuiSpacer size="s" />
 
       <Chart size={{ height: 300 }}>
         <Settings
@@ -115,68 +126,68 @@ export const CategoryChart = () => {
         />
       </Chart>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGrid columns={3}>
-        <EuiFlexItem>
+      <OuiFlexGrid columns={3}>
+        <OuiFlexItem>
           <ChartCard
             title="Chart titles"
             description="A meaningful, descriptive title can often eliminate the need for axis titles entirely. That title may need to dynamically change depending on the number of series data rendered."
           />
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
+        <OuiFlexItem>
           <ChartCard
             title="Order and rotation"
             description="Categorical data is often easier to compare when sorted by sequence. Use a horizontal layout when you need more space for the category labels.">
-            <EuiSwitch
+            <OuiSwitch
               label="Order by count descending"
               checked={ordered}
               onChange={onOrderedChange}
             />
-            <EuiSpacer size="s" />
-            <EuiSwitch
+            <OuiSpacer size="s" />
+            <OuiSwitch
               label="Rotate 90deg"
               checked={rotated}
               onChange={onRotatedChange}
             />
           </ChartCard>
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
+        <OuiFlexItem>
           <ChartCard
             title="Tick marks"
             description="Tick marks should be spaced out properly and number values formatted. For example, if the number is in the thousands, remove a few numerals and add the `k` symbol.">
-            <EuiCode>1000 ⇢ 1k</EuiCode> &nbsp; <EuiCode>20000 ⇢ 20k</EuiCode>
-            <EuiSpacer size="s" />
-            <EuiSwitch
+            <OuiCode>1000 ⇢ 1k</OuiCode> &nbsp; <OuiCode>20000 ⇢ 20k</OuiCode>
+            <OuiSpacer size="s" />
+            <OuiSwitch
               label="Simulate thousands formatting"
               checked={formatted}
               onChange={onFormatChange}
             />
           </ChartCard>
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
+        <OuiFlexItem>
           <ChartTypeCard
             type="Although we recommend only bar charts, categorical"
             onChange={onChartTypeChange}
             disabled
           />
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
+        <OuiFlexItem>
           <MultiChartCard onChange={onMultiChange} />
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </OuiFlexItem>
+      </OuiFlexGrid>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <div className="eui-textCenter">
-        <EuiCopy
+      <div className="oui-textCenter">
+        <OuiCopy
           textToCopy={`<Chart size={{height: 300}}>
   <Settings
-    theme={isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LIGHT.theme}
+    theme={isDarkTheme ? OUI_CHARTS_THEME_DARK.theme : OUI_CHARTS_THEME_LIGHT.theme}
     rotation={${rotated ? 90 : 0}}
     showLegend={${multi}}
     ${multi ? 'legendPosition="right"' : ''}
@@ -206,11 +217,11 @@ export const CategoryChart = () => {
   />
 </Chart>`}>
           {(copy) => (
-            <EuiButton fill onClick={copy} iconType="copyClipboard">
+            <OuiButton fill onClick={copy} iconType="copyClipboard">
               Copy code of current configuration
-            </EuiButton>
+            </OuiButton>
           )}
-        </EuiCopy>
+        </OuiCopy>
       </div>
     </Fragment>
   );

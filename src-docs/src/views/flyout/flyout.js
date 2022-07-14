@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutHeader,
-  EuiButton,
-  EuiText,
-  EuiTitle,
-  EuiCodeBlock,
+  OuiFlyout,
+  OuiFlyoutBody,
+  OuiFlyoutHeader,
+  OuiButton,
+  OuiText,
+  OuiTitle,
+  OuiCodeBlock,
 } from '../../../../src/components';
 
 export default () => {
@@ -15,47 +26,47 @@ export default () => {
 
   let flyout;
 
-  const htmlCode = `<EuiFlyout ...>
-  <EuiFlyoutHeader hasBorder>
-    <EuiTitle size="m">
+  const htmlCode = `<OuiFlyout ...>
+  <OuiFlyoutHeader hasBorder>
+    <OuiTitle size="m">
       <h2></h2>
-    </EuiTitle>
-  </EuiFlyoutHeader>
-  <EuiFlyoutBody>
+    </OuiTitle>
+  </OuiFlyoutHeader>
+  <OuiFlyoutBody>
     ...
-  </EuiFlyoutBody>
-</EuiFlyout>
+  </OuiFlyoutBody>
+</OuiFlyout>
 `;
 
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <OuiFlyout
         ownFocus
         onClose={() => setIsFlyoutVisible(false)}
         aria-labelledby="flyoutTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <OuiFlyoutHeader hasBorder>
+          <OuiTitle size="m">
             <h2 id="flyoutTitle">A typical flyout</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiText>
+          </OuiTitle>
+        </OuiFlyoutHeader>
+        <OuiFlyoutBody>
+          <OuiText>
             <p>
               For consistency across the many flyouts, please utilize the
               following code for implementing the flyout with a header.
             </p>
-          </EuiText>
-          <EuiCodeBlock language="html">{htmlCode}</EuiCodeBlock>
-        </EuiFlyoutBody>
-      </EuiFlyout>
+          </OuiText>
+          <OuiCodeBlock language="html">{htmlCode}</OuiCodeBlock>
+        </OuiFlyoutBody>
+      </OuiFlyout>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={() => setIsFlyoutVisible(true)}>
+      <OuiButton onClick={() => setIsFlyoutVisible(true)}>
         Show flyout
-      </EuiButton>
+      </OuiButton>
       {flyout}
     </div>
   );

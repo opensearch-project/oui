@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,26 +31,26 @@
 import React, { FunctionComponent, ReactNode, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
-import { EuiIcon, EuiIconProps, IconType } from '../../icon';
-import { EuiTab, EuiTabs, EuiTabsProps } from '../../tabs';
-import { Props as EuiTabProps } from '../../tabs/tab';
-import { EuiFlexGroup, EuiFlexItem, EuiFlexGroupProps } from '../../flex';
-import { EuiSpacer } from '../../spacer';
-import { EuiTitle } from '../../title';
-import { EuiText } from '../../text';
+import { OuiIcon, OuiIconProps, IconType } from '../../icon';
+import { OuiTab, OuiTabs, OuiTabsProps } from '../../tabs';
+import { Props as OuiTabProps } from '../../tabs/tab';
+import { OuiFlexGroup, OuiFlexItem, OuiFlexGroupProps } from '../../flex';
+import { OuiSpacer } from '../../spacer';
+import { OuiTitle } from '../../title';
+import { OuiText } from '../../text';
 import { useIsWithinBreakpoints } from '../../../services/hooks';
 
 export const ALIGN_ITEMS = ['top', 'bottom', 'center', 'stretch'] as const;
 
 // Gets all the tab props including the button or link props
-type Tab = EuiTabProps & {
+type Tab = OuiTabProps & {
   /**
    * Visible text of the tab
    */
   label: ReactNode;
 };
 
-export type EuiPageHeaderContentTitle = {
+export type OuiPageHeaderContentTitle = {
   /**
    * Wrapped in an `H1` so choose appropriately.
    * A simple string is best
@@ -50,23 +61,23 @@ export type EuiPageHeaderContentTitle = {
    */
   iconType?: IconType;
   /**
-   * Additional EuiIcon props to apply to the optional icon
+   * Additional OuiIcon props to apply to the optional icon
    */
-  iconProps?: Partial<Omit<EuiIconProps, 'type'>>;
+  iconProps?: Partial<Omit<OuiIconProps, 'type'>>;
 };
 
-export type EuiPageHeaderContentTabs = {
+export type OuiPageHeaderContentTabs = {
   /**
    * In-app navigation presented as large borderless tabs.
-   * Accepts an array of `EuiTab` objects;
+   * Accepts an array of `OuiTab` objects;
    * HELP: This is evaluating to `any[]` in the props table
    */
   tabs?: Tab[];
   /**
    * Any extras to apply to the outer tabs container.
-   * Extends `EuiTabs`
+   * Extends `OuiTabs`
    */
-  tabsProps?: Omit<EuiTabsProps, 'size' | 'expand' | 'display'>;
+  tabsProps?: Omit<OuiTabsProps, 'size' | 'expand' | 'display'>;
 };
 
 /**
@@ -74,18 +85,18 @@ export type EuiPageHeaderContentTabs = {
  * Or a list of tabs,
  * Or a custom node
  */
-type EuiPageHeaderContentLeft = EuiPageHeaderContentTitle &
-  EuiPageHeaderContentTabs & {
+type OuiPageHeaderContentLeft = OuiPageHeaderContentTitle &
+  OuiPageHeaderContentTabs & {
     /**
      * Position is dependent on existing with a `pageTitle` or `tabs`
-     * Automatically get wrapped in a single paragraph tag inside an EuiText block
+     * Automatically get wrapped in a single paragraph tag inside an OuiText block
      */
     description?: string | ReactNode;
   };
 
-export type EuiPageHeaderContentProps = CommonProps &
+export type OuiPageHeaderContentProps = CommonProps &
   HTMLAttributes<HTMLDivElement> &
-  EuiPageHeaderContentLeft & {
+  OuiPageHeaderContentLeft & {
     /**
      * Set to false if you don't want the children to stack at small screen sizes.
      * Set to `reverse` to display the right side content first for the sack of hierarchy (like global time)
@@ -103,16 +114,16 @@ export type EuiPageHeaderContentProps = CommonProps &
      */
     rightSideItems?: ReactNode[];
     /**
-     * Additional EuiFlexGroup props to pass to the container of the `rightSideItems`
+     * Additional OuiFlexGroup props to pass to the container of the `rightSideItems`
      */
-    rightSideGroupProps?: Partial<EuiFlexGroupProps>;
+    rightSideGroupProps?: Partial<OuiFlexGroupProps>;
     /**
      * Custom children will be rendered before the `tabs` unless no `pageTitle` is present, then it will be the last item
      */
     children?: ReactNode;
   };
 
-export const EuiPageHeaderContent: FunctionComponent<EuiPageHeaderContentProps> = ({
+export const OuiPageHeaderContent: FunctionComponent<OuiPageHeaderContentProps> = ({
   className,
   pageTitle,
   iconType,
@@ -132,16 +143,16 @@ export const EuiPageHeaderContent: FunctionComponent<EuiPageHeaderContentProps> 
     !!responsive
   );
 
-  const classes = classNames('euiPageHeaderContent');
+  const classes = classNames('ouiPageHeaderContent');
 
   let descriptionNode;
   if (description) {
     descriptionNode = (
       <>
-        {(pageTitle || tabs) && <EuiSpacer />}
-        <EuiText grow={false}>
+        {(pageTitle || tabs) && <OuiSpacer />}
+        <OuiText grow={false}>
           <p>{description}</p>
-        </EuiText>
+        </OuiText>
       </>
     );
   }
@@ -149,24 +160,24 @@ export const EuiPageHeaderContent: FunctionComponent<EuiPageHeaderContentProps> 
   let pageTitleNode;
   if (pageTitle) {
     const icon = iconType ? (
-      <EuiIcon
+      <OuiIcon
         size="xl"
         {...iconProps}
         type={iconType}
         className={classNames(
-          'euiPageHeaderContent__titleIcon',
+          'ouiPageHeaderContent__titleIcon',
           iconProps?.className
         )}
       />
     ) : undefined;
 
     pageTitleNode = (
-      <EuiTitle size="l">
+      <OuiTitle size="l">
         <h1>
           {icon}
           {pageTitle}
         </h1>
-      </EuiTitle>
+      </OuiTitle>
     );
   }
 
@@ -176,26 +187,26 @@ export const EuiPageHeaderContent: FunctionComponent<EuiPageHeaderContentProps> 
       return tabs.map((tab, index) => {
         const { label, ...tabRest } = tab;
         return (
-          <EuiTab key={index} {...tabRest}>
+          <OuiTab key={index} {...tabRest}>
             {label}
-          </EuiTab>
+          </OuiTab>
         );
       });
     };
 
     tabsNode = (
       <>
-        {pageTitleNode && <EuiSpacer />}
-        <EuiTabs {...tabsProps} display="condensed" size="l">
+        {pageTitleNode && <OuiSpacer />}
+        <OuiTabs {...tabsProps} display="condensed" size="l">
           {renderTabs()}
-        </EuiTabs>
+        </OuiTabs>
       </>
     );
   }
 
   const childrenNode = children && (
     <>
-      <EuiSpacer />
+      <OuiSpacer />
       {children}
     </>
   );
@@ -203,7 +214,7 @@ export const EuiPageHeaderContent: FunctionComponent<EuiPageHeaderContentProps> 
   let bottomContentNode;
   if (childrenNode || (tabsNode && pageTitleNode)) {
     bottomContentNode = (
-      <div className="euiPageHeaderContent__bottom">
+      <div className="ouiPageHeaderContent__bottom">
         {childrenNode}
         {pageTitleNode && tabsNode}
       </div>
@@ -236,63 +247,63 @@ export const EuiPageHeaderContent: FunctionComponent<EuiPageHeaderContentProps> 
     const wrapWithFlex = () => {
       return rightSideItems.map((item, index) => {
         return (
-          <EuiFlexItem grow={false} key={index}>
+          <OuiFlexItem grow={false} key={index}>
             {item}
-          </EuiFlexItem>
+          </OuiFlexItem>
         );
       });
     };
 
     rightSideFlexItem = (
-      <EuiFlexItem grow={false}>
-        <EuiFlexGroup
+      <OuiFlexItem grow={false}>
+        <OuiFlexGroup
           wrap
           responsive={false}
           {...rightSideGroupProps}
           className={classNames(
-            'euiPageHeaderContent__rightSideItems',
+            'ouiPageHeaderContent__rightSideItems',
             rightSideGroupProps?.className
           )}>
           {wrapWithFlex()}
-        </EuiFlexGroup>
-      </EuiFlexItem>
+        </OuiFlexGroup>
+      </OuiFlexItem>
     );
   }
 
   return alignItems === 'top' || isResponsiveBreakpoint ? (
     <div className={classes} {...rest}>
-      <EuiFlexGroup
+      <OuiFlexGroup
         responsive={!!responsive}
-        className="euiPageHeaderContent__top"
+        className="ouiPageHeaderContent__top"
         alignItems="flexStart"
         gutterSize="l">
         {isResponsiveBreakpoint && responsive === 'reverse' ? (
           <>
             {rightSideFlexItem}
-            <EuiFlexItem>{leftSideOrder}</EuiFlexItem>
+            <OuiFlexItem>{leftSideOrder}</OuiFlexItem>
           </>
         ) : (
           <>
-            <EuiFlexItem>{leftSideOrder}</EuiFlexItem>
+            <OuiFlexItem>{leftSideOrder}</OuiFlexItem>
             {rightSideFlexItem}
           </>
         )}
-      </EuiFlexGroup>
+      </OuiFlexGroup>
       {bottomContentNode}
     </div>
   ) : (
     <div className={classes} {...rest}>
-      <EuiFlexGroup
+      <OuiFlexGroup
         responsive={!!responsive}
-        className="euiPageHeaderContent__top"
+        className="ouiPageHeaderContent__top"
         alignItems={alignItems === 'bottom' ? 'flexEnd' : alignItems}
         gutterSize="l">
-        <EuiFlexItem>
+        <OuiFlexItem>
           {leftSideOrder}
           {bottomContentNode}
-        </EuiFlexItem>
+        </OuiFlexItem>
         {rightSideFlexItem}
-      </EuiFlexGroup>
+      </OuiFlexGroup>
     </div>
   );
 };

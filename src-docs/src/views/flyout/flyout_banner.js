@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiCallOut,
-  EuiFlyout,
-  EuiFlyoutHeader,
-  EuiFlyoutBody,
-  EuiLink,
-  EuiButton,
-  EuiText,
-  EuiTitle,
+  OuiCallOut,
+  OuiFlyout,
+  OuiFlyoutHeader,
+  OuiFlyoutBody,
+  OuiLink,
+  OuiButton,
+  OuiText,
+  OuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -21,39 +32,39 @@ export default () => {
   let flyout;
 
   const callOut = (
-    <EuiCallOut iconType="help">
+    <OuiCallOut iconType="help">
       <p>
         Here&rsquo;s some stuff that you need to know. This banner helps
-        highlight important information. <EuiLink href="#">View docs</EuiLink>
+        highlight important information. <OuiLink href="#">View docs</OuiLink>
       </p>
-    </EuiCallOut>
+    </OuiCallOut>
   );
 
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <OuiFlyout
         ownFocus
         onClose={closeFlyout}
         aria-labelledby="flyoutWithBannerTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="m">
+        <OuiFlyoutHeader hasBorder>
+          <OuiTitle size="m">
             <h2 id="flyoutWithBannerTitle">A flyout with a banner</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody banner={callOut}>
-          <EuiText>
+          </OuiTitle>
+        </OuiFlyoutHeader>
+        <OuiFlyoutBody banner={callOut}>
+          <OuiText>
             <p>
               This flyout is using the banner prop in{' '}
-              <strong>EuiFlyoutBody</strong>.
+              <strong>OuiFlyoutBody</strong>.
             </p>
-          </EuiText>
-        </EuiFlyoutBody>
-      </EuiFlyout>
+          </OuiText>
+        </OuiFlyoutBody>
+      </OuiFlyout>
     );
   }
   return (
     <div>
-      <EuiButton onClick={showFlyout}>Show flyout with banner</EuiButton>
+      <OuiButton onClick={showFlyout}>Show flyout with banner</OuiButton>
       {flyout}
     </div>
   );

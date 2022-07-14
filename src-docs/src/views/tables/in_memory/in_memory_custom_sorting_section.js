@@ -1,22 +1,33 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
-import { EuiCode } from '../../../../../src/components';
+import { OuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
 import { Table } from './in_memory_custom_sorting';
 
-import { EuiInMemoryTable } from '../../../../../src/components/basic_table/in_memory_table';
+import { OuiInMemoryTable } from '../../../../../src/components/basic_table/in_memory_table';
 import {
   Criteria,
   CriteriaWithPagination,
 } from '!!prop-loader!../../../../../src/components/basic_table/basic_table';
 import { Pagination } from '!!prop-loader!../../../../../src/components/basic_table/pagination_bar';
 import {
-  EuiTableFieldDataColumnType,
-  EuiTableComputedColumnType,
-  EuiTableActionsColumnType,
-  EuiTableSelectionType,
-  EuiTableSortingType,
+  OuiTableFieldDataColumnType,
+  OuiTableComputedColumnType,
+  OuiTableActionsColumnType,
+  OuiTableSelectionType,
+  OuiTableSortingType,
 } from '!!prop-loader!../../../../../src/components/basic_table/table_types';
 import { CustomItemAction } from '!!prop-loader!../../../../../src/components/basic_table/action_types';
 import {
@@ -47,23 +58,23 @@ export const customSortingSection = {
       <p>
         Sometimes the value displayed in a column is not appropriate to use for
         sorting, such as pre-formatting values to be human-readable. In these
-        cases it&apos;s possible to pass the <EuiCode>sortable</EuiCode> prop as
-        a function instead of <EuiCode>true</EuiCode> or{' '}
-        <EuiCode>false</EuiCode>. The function is used to extract or calculate
-        the intended sort value for each <EuiCode>item</EuiCode>.
+        cases it&apos;s possible to pass the <OuiCode>sortable</OuiCode> prop as
+        a function instead of <OuiCode>true</OuiCode> or{' '}
+        <OuiCode>false</OuiCode>. The function is used to extract or calculate
+        the intended sort value for each <OuiCode>item</OuiCode>.
       </p>
     </div>
   ),
   props: {
-    EuiInMemoryTable,
+    OuiInMemoryTable,
     Criteria,
     CriteriaWithPagination,
     Pagination,
-    EuiTableSortingType,
-    EuiTableSelectionType,
-    EuiTableFieldDataColumnType,
-    EuiTableComputedColumnType,
-    EuiTableActionsColumnType,
+    OuiTableSortingType,
+    OuiTableSelectionType,
+    OuiTableFieldDataColumnType,
+    OuiTableComputedColumnType,
+    OuiTableActionsColumnType,
     DefaultItemAction,
     CustomItemAction,
     Search,

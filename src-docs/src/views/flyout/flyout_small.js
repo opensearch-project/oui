@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiFlyout,
-  EuiFlyoutHeader,
-  EuiFlyoutBody,
-  EuiButton,
-  EuiText,
-  EuiTitle,
+  OuiFlyout,
+  OuiFlyoutHeader,
+  OuiFlyoutBody,
+  OuiButton,
+  OuiText,
+  OuiTitle,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -22,29 +33,29 @@ export default () => {
   let flyout;
   if (isFlyoutVisible) {
     flyout = (
-      <EuiFlyout
+      <OuiFlyout
         ownFocus={false}
         onClose={closeFlyout}
         aria-labelledby={flyoutTitleId}>
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="s">
+        <OuiFlyoutHeader hasBorder>
+          <OuiTitle size="s">
             <h2 id={flyoutTitleId}>A flyout without ownFocus</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiText>
+          </OuiTitle>
+        </OuiFlyoutHeader>
+        <OuiFlyoutBody>
+          <OuiText>
             <p>
               The page contents is still interactable though screenreader users
               will find themselves still within the bounds of the flyout.
             </p>
-          </EuiText>
-        </EuiFlyoutBody>
-      </EuiFlyout>
+          </OuiText>
+        </OuiFlyoutBody>
+      </OuiFlyout>
     );
   }
   return (
     <div>
-      <EuiButton onClick={toggleFlyout}>Toggle flyout</EuiButton>
+      <OuiButton onClick={toggleFlyout}>Toggle flyout</OuiButton>
 
       {flyout}
     </div>

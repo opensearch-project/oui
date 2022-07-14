@@ -1,25 +1,36 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // This file makes use of double quotes to format errors with nested single quotes
 // The indentation linting freaks out on comments above else statements and is disabled.
 
 // sass-lint:disable quotes, no-warn, indentation
 
 // A sem-complicated mixin for breakpoints, that takes any number of
-// named breakpoints that exists in $euiBreakpoints.
+// named breakpoints that exists in $ouiBreakpoints.
 
-@mixin euiBreakpoint($sizes...) {
+@mixin ouiBreakpoint($sizes...) {
   // Loop through each size parameter
   @each $size in $sizes {
     // Store the location of the size in the list to check against
-    $index: index($euiBreakpointKeys, $size);
+    $index: index($ouiBreakpointKeys, $size);
 
     // Check to make sure it exists in the allowed breakpoint names
     @if ( $index ) {
 
       // Set the min size to the value of the size
-      $minSize: map-get($euiBreakpoints, $size);
+      $minSize: map-get($ouiBreakpoints, $size);
 
       // If it is the last item, don't give it a max-width
-      @if ( $index == length($euiBreakpointKeys) ) {
+      @if ( $index == length($ouiBreakpointKeys) ) {
         @media only screen and (min-width: $minSize) {
           @content;
         }
@@ -27,7 +38,7 @@
       } @else {
 
         // Set the max size to the value of the next size (-1px as to not overlap)
-        $maxSize: map-get($euiBreakpoints, nth($euiBreakpointKeys, $index + 1)) - 1px;
+        $maxSize: map-get($ouiBreakpoints, nth($ouiBreakpointKeys, $index + 1)) - 1px;
 
         // If it's the the first item, don't set a min-width
         @if ( $index == 1 ) {
@@ -43,7 +54,7 @@
       }
     // If it's not a known breakpoint, throw a warning
     } @else {
-      @warn "euiBreakpoint(): '#{$size}' is not a valid size in $euiBreakpoints. Accepted values are '#{$euiBreakpointKeys}'";
+      @warn "ouiBreakpoint(): '#{$size}' is not a valid size in $ouiBreakpoints. Accepted values are '#{$ouiBreakpointKeys}'";
     }
   }
 }

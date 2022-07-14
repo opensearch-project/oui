@@ -1,22 +1,33 @@
-.euiCodeEditorWrapper {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiCodeEditorWrapper {
   position: relative;
 
   .ace_hidden-cursors {
     opacity: 0;
   }
 
-  &.euiCodeEditorWrapper-isEditing {
+  &.ouiCodeEditorWrapper-isEditing {
     .ace_hidden-cursors {
       opacity: 1;
     }
   }
 }
 
-.euiCodeEditorKeyboardHint {
+.ouiCodeEditorKeyboardHint {
   position: absolute;
   top: 0;
   left: 0;
-  background: transparentize($euiColorGhost, .3);
+  background: transparentize($ouiColorGhost, .3);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,11 +39,11 @@
 
   &:focus {
     opacity: 1;
-    border: 2px solid $euiColorPrimary;
-    z-index: $euiZLevel1;
+    border: 2px solid $ouiColorPrimary;
+    z-index: $ouiZLevel1;
   }
 
-  &.euiCodeEditorKeyboardHint-isInactive {
+  &.ouiCodeEditorKeyboardHint-isInactive {
     display: none;
   }
 }

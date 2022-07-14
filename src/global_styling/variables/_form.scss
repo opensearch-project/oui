@@ -1,65 +1,76 @@
-// Sizing
-$euiFormMaxWidth: $euiSizeXXL * 10 !default;
-$euiFormControlHeight: $euiSizeXXL !default;
-$euiFormControlCompressedHeight: $euiSizeXL !default;
-$euiFormControlPadding: $euiSizeM !default;
-$euiFormControlCompressedPadding: $euiSizeS !default;
-$euiFormControlBorderRadius: 0 !default;
-$euiFormControlCompressedBorderRadius: $euiBorderRadiusSmall !default;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-$euiRadioSize: $euiSize !default;
-$euiCheckBoxSize: $euiSize !default;
-$euiCheckboxBorderRadius: $euiBorderRadius !default;
+// Sizing
+$ouiFormMaxWidth: $ouiSizeXXL * 10 !default;
+$ouiFormControlHeight: $ouiSizeXXL !default;
+$ouiFormControlCompressedHeight: $ouiSizeXL !default;
+$ouiFormControlPadding: $ouiSizeM !default;
+$ouiFormControlCompressedPadding: $ouiSizeS !default;
+$ouiFormControlBorderRadius: 0 !default;
+$ouiFormControlCompressedBorderRadius: $ouiBorderRadiusSmall !default;
+
+$ouiRadioSize: $ouiSize !default;
+$ouiCheckBoxSize: $ouiSize !default;
+$ouiCheckboxBorderRadius: $ouiBorderRadius !default;
 
 // Switch
-$euiSwitchHeight: $euiSize * 1.25 !default;
-$euiSwitchWidth: ($euiSize * 2.5) + $euiSizeXS !default;
-$euiSwitchThumbSize: $euiSwitchHeight !default;
-$euiSwitchIconHeight: $euiSize !default;
+$ouiSwitchHeight: $ouiSize * 1.25 !default;
+$ouiSwitchWidth: ($ouiSize * 2.5) + $ouiSizeXS !default;
+$ouiSwitchThumbSize: $ouiSwitchHeight !default;
+$ouiSwitchIconHeight: $ouiSize !default;
 
-$euiSwitchHeightCompressed: $euiSize !default;
-$euiSwitchWidthCompressed: $euiSize * 1.75 !default;
-$euiSwitchThumbSizeCompressed: $euiSwitchHeightCompressed !default;
+$ouiSwitchHeightCompressed: $ouiSize !default;
+$ouiSwitchWidthCompressed: $ouiSize * 1.75 !default;
+$ouiSwitchThumbSizeCompressed: $ouiSwitchHeightCompressed !default;
 
-$euiSwitchHeightMini: $euiSwitchHeight * .5 !default;
-$euiSwitchWidthMini: $euiSwitchWidth * .5 !default;
-$euiSwitchThumbSizeMini: $euiSwitchHeightMini !default;
+$ouiSwitchHeightMini: $ouiSwitchHeight * .5 !default;
+$ouiSwitchWidthMini: $ouiSwitchWidth * .5 !default;
+$ouiSwitchThumbSizeMini: $ouiSwitchHeightMini !default;
 
 // Coloring
-$euiFormBackgroundColor: tintOrShade($euiColorLightestShade, 60%, 40%) !default;
-$euiFormBackgroundDisabledColor: darken($euiColorLightestShade, 2%) !default;
-$euiFormBackgroundReadOnlyColor: transparentize(lightOrDarkTheme($euiColorLightShade, $euiColorInk), .95) !default;
-$euiFormBorderOpaqueColor: shadeOrTint(desaturate(adjust-hue($euiColorPrimary, 22), 22.95), 26%, 100%) !default;
-$euiFormBorderColor: transparentize($euiFormBorderOpaqueColor, .9) !default;
-$euiFormBorderDisabledColor: transparentize($euiFormBorderOpaqueColor, .9) !default;
-$euiFormCustomControlDisabledIconColor: shadeOrTint($euiColorMediumShade, 38%, 48.5%) !default; // exact 508c foreground for $euiColorLightShade
-$euiFormCustomControlBorderColor: shadeOrTint($euiColorLightestShade, 18%, 30%) !default;
-$euiFormControlDisabledColor: $euiColorMediumShade !default;
-$euiFormControlBoxShadow: 0 1px 1px -1px transparentize($euiShadowColor, .8), 0 3px 2px -2px transparentize($euiShadowColor, .8) !default;
-$euiFormControlPlaceholderText: makeHighContrastColor($euiTextSubduedColor, $euiFormBackgroundColor) !default;
-$euiFormInputGroupLabelBackground: tintOrShade($euiColorLightShade, 50%, 40%) !default;
-$euiFormInputGroupBorder: 1px solid shadeOrTint($euiFormInputGroupLabelBackground, 2%, 4%) !default;
-$euiSwitchOffColor: lightOrDarkTheme(transparentize($euiColorMediumShade, .8), transparentize($euiColorMediumShade, .3)) !default;
+$ouiFormBackgroundColor: tintOrShade($ouiColorLightestShade, 60%, 40%) !default;
+$ouiFormBackgroundDisabledColor: darken($ouiColorLightestShade, 2%) !default;
+$ouiFormBackgroundReadOnlyColor: transparentize(lightOrDarkTheme($ouiColorLightShade, $ouiColorInk), .95) !default;
+$ouiFormBorderOpaqueColor: shadeOrTint(desaturate(adjust-hue($ouiColorPrimary, 22), 22.95), 26%, 100%) !default;
+$ouiFormBorderColor: transparentize($ouiFormBorderOpaqueColor, .9) !default;
+$ouiFormBorderDisabledColor: transparentize($ouiFormBorderOpaqueColor, .9) !default;
+$ouiFormCustomControlDisabledIconColor: shadeOrTint($ouiColorMediumShade, 38%, 48.5%) !default; // exact 508c foreground for $ouiColorLightShade
+$ouiFormCustomControlBorderColor: shadeOrTint($ouiColorLightestShade, 18%, 30%) !default;
+$ouiFormControlDisabledColor: $ouiColorMediumShade !default;
+$ouiFormControlBoxShadow: 0 1px 1px -1px transparentize($ouiShadowColor, .8), 0 3px 2px -2px transparentize($ouiShadowColor, .8) !default;
+$ouiFormControlPlaceholderText: makeHighContrastColor($ouiTextSubduedColor, $ouiFormBackgroundColor) !default;
+$ouiFormInputGroupLabelBackground: tintOrShade($ouiColorLightShade, 50%, 40%) !default;
+$ouiFormInputGroupBorder: 1px solid shadeOrTint($ouiFormInputGroupLabelBackground, 2%, 4%) !default;
+$ouiSwitchOffColor: lightOrDarkTheme(transparentize($ouiColorMediumShade, .8), transparentize($ouiColorMediumShade, .3)) !default;
 
 // Control Layout
-$euiFormControlLayoutGroupInputHeight: $euiFormControlHeight - 2px !default;
-$euiFormControlLayoutGroupInputCompressedHeight: $euiFormControlCompressedHeight - 2px !default;
-$euiFormControlLayoutGroupInputCompressedBorderRadius: $euiFormControlCompressedBorderRadius / 2 !default;
+$ouiFormControlLayoutGroupInputHeight: $ouiFormControlHeight - 2px !default;
+$ouiFormControlLayoutGroupInputCompressedHeight: $ouiFormControlCompressedHeight - 2px !default;
+$ouiFormControlLayoutGroupInputCompressedBorderRadius: $ouiFormControlCompressedBorderRadius / 2 !default;
 
 // Range
-$euiRangeTrackColor: $euiColorDarkShade !default;
+$ouiRangeTrackColor: $ouiColorDarkShade !default;
 
-$euiRangeThumbRadius: 50% !default;
-$euiRangeThumbHeight: $euiSize !default;
-$euiRangeThumbWidth: $euiSize !default;
-$euiRangeThumbBorderColor: $euiRangeTrackColor !default;
+$ouiRangeThumbRadius: 50% !default;
+$ouiRangeThumbHeight: $ouiSize !default;
+$ouiRangeThumbWidth: $ouiSize !default;
+$ouiRangeThumbBorderColor: $ouiRangeTrackColor !default;
 
-$euiRangeTrackWidth: 100% !default;
-$euiRangeTrackHeight: 2px !default;
-$euiRangeTrackBorderWidth: 0 !default;
-$euiRangeTrackBorderColor: $euiRangeTrackColor !default;
-$euiRangeTrackRadius: $euiBorderRadius !default;
+$ouiRangeTrackWidth: 100% !default;
+$ouiRangeTrackHeight: 2px !default;
+$ouiRangeTrackBorderWidth: 0 !default;
+$ouiRangeTrackBorderColor: $ouiRangeTrackColor !default;
+$ouiRangeTrackRadius: $ouiBorderRadius !default;
 
-$euiRangeDisabledOpacity: .25 !default;
+$ouiRangeDisabledOpacity: .25 !default;
 
-$euiRangeHighlightHeight: $euiSizeXS !default;
+$ouiRangeHighlightHeight: $ouiSizeXS !default;

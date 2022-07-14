@@ -1,23 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSelectableMessage bordered is rendered 1`] = `
+exports[`OuiSelectableMessage bordered is rendered 1`] = `
 <div
-  class="euiText euiText--extraSmall euiSelectableMessage euiSelectableMessage--bordered"
+  class="ouiText ouiText--extraSmall ouiSelectableMessage ouiSelectableMessage--bordered"
 >
   <div
-    class="euiTextColor euiTextColor--subdued"
+    class="ouiTextColor ouiTextColor--subdued"
   />
 </div>
 `;
 
-exports[`EuiSelectableMessage is rendered 1`] = `
+exports[`OuiSelectableMessage is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiText euiText--extraSmall euiSelectableMessage testClass1 testClass2"
+  class="ouiText ouiText--extraSmall ouiSelectableMessage testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiTextColor euiTextColor--subdued"
+    class="ouiTextColor ouiTextColor--subdued"
   />
 </div>
 `;

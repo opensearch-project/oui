@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiPanel,
-  EuiToken,
-  EuiCopy,
-  EuiCodeBlock,
-  EuiSpacer,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiPanel,
+  OuiToken,
+  OuiCopy,
+  OuiCodeBlock,
+  OuiSpacer,
 } from '../../../../src/components';
 
 const tokens = [
@@ -65,30 +76,30 @@ const tokens = [
 
 export default () => (
   <>
-    <EuiCodeBlock language="html" isCopyable paddingSize="m">
-      {'<EuiToken iconType="tokenAnnotation" />'}
-    </EuiCodeBlock>
-    <EuiSpacer />
-    <EuiFlexGrid direction="column" columns={3}>
+    <OuiCodeBlock language="html" isCopyable paddingSize="m">
+      {'<OuiToken iconType="tokenAnnotation" />'}
+    </OuiCodeBlock>
+    <OuiSpacer />
+    <OuiFlexGrid direction="column" columns={3}>
       {tokens.map((token) => (
-        <EuiFlexItem key={token}>
-          <EuiCopy
+        <OuiFlexItem key={token}>
+          <OuiCopy
             display="block"
             textToCopy={token}
             afterMessage={`${token} copied`}>
             {(copy) => (
-              <EuiPanel
+              <OuiPanel
                 hasShadow={false}
                 hasBorder={false}
                 onClick={copy}
                 paddingSize="s">
-                <EuiToken className="eui-alignMiddle" iconType={token} /> &emsp;{' '}
+                <OuiToken className="oui-alignMiddle" iconType={token} /> &emsp;{' '}
                 <small>{token}</small>
-              </EuiPanel>
+              </OuiPanel>
             )}
-          </EuiCopy>
-        </EuiFlexItem>
+          </OuiCopy>
+        </OuiFlexItem>
       ))}
-    </EuiFlexGrid>
+    </OuiFlexGrid>
   </>
 );

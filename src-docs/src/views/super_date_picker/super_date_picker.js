@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiSuperDatePicker,
-  EuiSpacer,
-  EuiFormControlLayoutDelimited,
-  EuiFormLabel,
-  EuiPanel,
-  EuiText,
+  OuiSuperDatePicker,
+  OuiSpacer,
+  OuiFormControlLayoutDelimited,
+  OuiFormLabel,
+  OuiPanel,
+  OuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -67,21 +78,21 @@ export default () => {
   const renderTimeRange = () => {
     return (
       <Fragment>
-        <EuiPanel paddingSize="m">
-          <EuiText size="s">
-            EuiSuperDatePicker should be resilient to invalid date values. You
+        <OuiPanel paddingSize="m">
+          <OuiText size="s">
+            OuiSuperDatePicker should be resilient to invalid date values. You
             can try to break it with unexpected values here.
-          </EuiText>
-          <EuiSpacer />
-          <EuiFormControlLayoutDelimited
-            prepend={<EuiFormLabel>Dates</EuiFormLabel>}
+          </OuiText>
+          <OuiSpacer />
+          <OuiFormControlLayoutDelimited
+            prepend={<OuiFormLabel>Dates</OuiFormLabel>}
             startControl={
               <input
                 onChange={onStartInputChange}
                 type="text"
                 value={start}
                 placeholder="start"
-                className="euiFieldText"
+                className="ouiFieldText"
               />
             }
             endControl={
@@ -90,18 +101,18 @@ export default () => {
                 type="text"
                 placeholder="end"
                 value={end}
-                className="euiFieldText"
+                className="ouiFieldText"
               />
             }
           />
-        </EuiPanel>
+        </OuiPanel>
       </Fragment>
     );
   };
 
   return (
     <Fragment>
-      <EuiSuperDatePicker
+      <OuiSuperDatePicker
         isLoading={isLoading}
         start={start}
         end={end}
@@ -112,7 +123,7 @@ export default () => {
         onRefreshChange={onRefreshChange}
         recentlyUsedRanges={recentlyUsedRanges}
       />
-      <EuiSpacer />
+      <OuiSpacer />
       {renderTimeRange()}
     </Fragment>
   );

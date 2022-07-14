@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@ import React, { TextareaHTMLAttributes, forwardRef } from 'react';
 
 import { CommonProps } from '../common';
 
-export type EuiMarkdownEditorTextAreaProps = TextareaHTMLAttributes<
+export type OuiMarkdownEditorTextAreaProps = TextareaHTMLAttributes<
   HTMLTextAreaElement
 > &
   CommonProps & {
@@ -32,9 +43,9 @@ export type EuiMarkdownEditorTextAreaProps = TextareaHTMLAttributes<
     maxHeight: string;
   };
 
-export const EuiMarkdownEditorTextArea = forwardRef<
+export const OuiMarkdownEditorTextArea = forwardRef<
   HTMLTextAreaElement,
-  EuiMarkdownEditorTextAreaProps
+  OuiMarkdownEditorTextAreaProps
 >(
   (
     {
@@ -55,7 +66,7 @@ export const EuiMarkdownEditorTextArea = forwardRef<
       <textarea
         ref={ref}
         style={{ height, maxHeight }}
-        className="euiMarkdownEditorTextArea"
+        className="ouiMarkdownEditorTextArea"
         {...rest}
         rows={6}
         name={name}
@@ -67,4 +78,4 @@ export const EuiMarkdownEditorTextArea = forwardRef<
   }
 );
 
-EuiMarkdownEditorTextArea.displayName = 'EuiMarkdownEditorTextArea';
+OuiMarkdownEditorTextArea.displayName = 'OuiMarkdownEditorTextArea';

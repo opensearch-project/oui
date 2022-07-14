@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,11 +31,11 @@
 import React, { Component, ReactElement, ReactNode } from 'react';
 import { CommonProps } from '../common';
 import { copyToClipboard } from '../../services';
-import { EuiToolTip, EuiToolTipProps } from '../tool_tip';
+import { OuiToolTip, OuiToolTipProps } from '../tool_tip';
 
-export interface EuiCopyProps
+export interface OuiCopyProps
   extends CommonProps,
-    Partial<Omit<EuiToolTipProps, 'children'>> {
+    Partial<Omit<OuiToolTipProps, 'children'>> {
   /**
    * Text that will be copied to clipboard when copy function is executed.
    */
@@ -45,16 +56,16 @@ export interface EuiCopyProps
   children(copy: () => void): ReactElement;
 }
 
-interface EuiCopyState {
+interface OuiCopyState {
   tooltipText: ReactNode;
 }
 
-export class EuiCopy extends Component<EuiCopyProps, EuiCopyState> {
+export class OuiCopy extends Component<OuiCopyProps, OuiCopyState> {
   static defaultProps = {
     afterMessage: 'Copied',
   };
 
-  constructor(props: EuiCopyProps) {
+  constructor(props: OuiCopyProps) {
     super(props);
 
     this.state = {
@@ -89,12 +100,12 @@ export class EuiCopy extends Component<EuiCopyProps, EuiCopyState> {
     return (
       // See `src/components/tool_tip/tool_tip.js` for explanation of below eslint-disable
       // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
-      <EuiToolTip
+      <OuiToolTip
         content={this.state.tooltipText}
         onMouseOut={this.resetTooltipText}
         {...rest}>
         {children(this.copy)}
-      </EuiToolTip>
+      </OuiToolTip>
     );
   }
 }

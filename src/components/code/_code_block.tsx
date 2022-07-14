@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,15 +40,15 @@ import React, {
 import classNames from 'classnames';
 import { highlight, AST, RefractorNode } from 'refractor';
 import { keys, useCombinedRefs } from '../../services';
-import { EuiButtonIcon } from '../button';
+import { OuiButtonIcon } from '../button';
 import { keysOf } from '../common';
-import { EuiCopy } from '../copy';
-import { EuiFocusTrap } from '../focus_trap';
-import { EuiI18n } from '../i18n';
+import { OuiCopy } from '../copy';
+import { OuiFocusTrap } from '../focus_trap';
+import { OuiI18n } from '../i18n';
 import { useInnerText } from '../inner_text';
 import { useMutationObserver } from '../observer/mutation_observer';
 import { useResizeObserver } from '../observer/resize_observer';
-import { EuiOverlayMask } from '../overlay_mask';
+import { OuiOverlayMask } from '../overlay_mask';
 
 type ExtendedRefractorNode = RefractorNode & {
   lineStart?: number;
@@ -136,7 +147,7 @@ function wrapLines(nodes: ExtendedRefractorNode[]) {
       type: 'element',
       tagName: 'span',
       properties: {
-        className: ['euiCodeBlock__line'],
+        className: ['ouiCodeBlock__line'],
       },
       children: node,
     });
@@ -149,9 +160,9 @@ const highlightByLine = (children: string, language: string) => {
 };
 
 const fontSizeToClassNameMap = {
-  s: 'euiCodeBlock--fontSmall',
-  m: 'euiCodeBlock--fontMedium',
-  l: 'euiCodeBlock--fontLarge',
+  s: 'ouiCodeBlock--fontSmall',
+  m: 'ouiCodeBlock--fontMedium',
+  l: 'ouiCodeBlock--fontLarge',
 };
 
 type PaddingSize = 'none' | 's' | 'm' | 'l';
@@ -161,14 +172,14 @@ export const FONT_SIZES = keysOf(fontSizeToClassNameMap);
 
 const paddingSizeToClassNameMap: { [paddingSize in PaddingSize]: string } = {
   none: '',
-  s: 'euiCodeBlock--paddingSmall',
-  m: 'euiCodeBlock--paddingMedium',
-  l: 'euiCodeBlock--paddingLarge',
+  s: 'ouiCodeBlock--paddingSmall',
+  m: 'ouiCodeBlock--paddingMedium',
+  l: 'ouiCodeBlock--paddingLarge',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
 
-export interface EuiCodeBlockImplProps {
+export interface OuiCodeBlockImplProps {
   className?: string;
   fontSize?: FontSize;
 
@@ -200,10 +211,10 @@ export interface EuiCodeBlockImplProps {
 }
 
 /**
- * This is the base component extended by EuiCode and EuiCodeBlock.
- * These components share the same propTypes definition with EuiCodeBlockImpl.
+ * This is the base component extended by OuiCode and OuiCodeBlock.
+ * These components share the same propTypes definition with OuiCodeBlockImpl.
  */
-export const EuiCodeBlockImpl: FunctionComponent<EuiCodeBlockImplProps> = ({
+export const OuiCodeBlockImpl: FunctionComponent<OuiCodeBlockImplProps> = ({
   transparentBackground = false,
   paddingSize = 'l',
   fontSize = 's',
@@ -274,13 +285,13 @@ export const EuiCodeBlockImpl: FunctionComponent<EuiCodeBlockImplProps> = ({
   };
 
   const classes = classNames(
-    'euiCodeBlock',
+    'ouiCodeBlock',
     fontSizeToClassNameMap[fontSize],
     paddingSizeToClassNameMap[paddingSize],
     {
-      'euiCodeBlock--transparentBackground': transparentBackground,
-      'euiCodeBlock--inline': inline,
-      'euiCodeBlock--hasControls': isCopyable || overflowHeight,
+      'ouiCodeBlock--transparentBackground': transparentBackground,
+      'ouiCodeBlock--inline': inline,
+      'ouiCodeBlock--hasControls': isCopyable || overflowHeight,
     },
     {
       prismjs: !className?.includes('prismjs'),
@@ -289,11 +300,11 @@ export const EuiCodeBlockImpl: FunctionComponent<EuiCodeBlockImplProps> = ({
     className
   );
 
-  const codeClasses = classNames('euiCodeBlock__code', language);
+  const codeClasses = classNames('ouiCodeBlock__code', language);
 
-  const preClasses = classNames('euiCodeBlock__pre', {
-    'euiCodeBlock__pre--whiteSpacePre': whiteSpace === 'pre',
-    'euiCodeBlock__pre--whiteSpacePreWrap': whiteSpace === 'pre-wrap',
+  const preClasses = classNames('ouiCodeBlock__pre', {
+    'ouiCodeBlock__pre--whiteSpacePre': whiteSpace === 'pre',
+    'ouiCodeBlock__pre--whiteSpacePreWrap': whiteSpace === 'pre-wrap',
   });
 
   const optionalStyles: CSSProperties = {};
@@ -322,21 +333,21 @@ export const EuiCodeBlockImpl: FunctionComponent<EuiCodeBlockImplProps> = ({
 
     if (isCopyable && textToCopy) {
       copyButton = (
-        <div className="euiCodeBlock__copyButton">
-          <EuiI18n token="euiCodeBlock.copyButton" default="Copy">
+        <div className="ouiCodeBlock__copyButton">
+          <OuiI18n token="ouiCodeBlock.copyButton" default="Copy">
             {(copyButton: string) => (
-              <EuiCopy textToCopy={textToCopy}>
+              <OuiCopy textToCopy={textToCopy}>
                 {(copy) => (
-                  <EuiButtonIcon
+                  <OuiButtonIcon
                     onClick={copy}
                     iconType="copy"
                     color="text"
                     aria-label={copyButton}
                   />
                 )}
-              </EuiCopy>
+              </OuiCopy>
             )}
-          </EuiI18n>
+          </OuiI18n>
         </div>
       );
     }
@@ -348,22 +359,22 @@ export const EuiCodeBlockImpl: FunctionComponent<EuiCodeBlockImplProps> = ({
 
   if (!inline && overflowHeight) {
     fullScreenButton = (
-      <EuiI18n
+      <OuiI18n
         tokens={[
-          'euiCodeBlock.fullscreenCollapse',
-          'euiCodeBlock.fullscreenExpand',
+          'ouiCodeBlock.fullscreenCollapse',
+          'ouiCodeBlock.fullscreenExpand',
         ]}
         defaults={['Collapse', 'Expand']}>
         {([fullscreenCollapse, fullscreenExpand]: string[]) => (
-          <EuiButtonIcon
-            className="euiCodeBlock__fullScreenButton"
+          <OuiButtonIcon
+            className="ouiCodeBlock__fullScreenButton"
             onClick={toggleFullScreen}
             iconType={isFullScreen ? 'cross' : 'fullScreen'}
             color="text"
             aria-label={isFullScreen ? fullscreenCollapse : fullscreenExpand}
           />
         )}
-      </EuiI18n>
+      </OuiI18n>
     );
   }
 
@@ -373,7 +384,7 @@ export const EuiCodeBlockImpl: FunctionComponent<EuiCodeBlockImplProps> = ({
 
     if (copyButton || fullScreenButton) {
       codeBlockControls = (
-        <div className="euiCodeBlock__controls">
+        <div className="ouiCodeBlock__controls">
           {fullScreenButton}
           {copyButton}
         </div>
@@ -389,16 +400,16 @@ export const EuiCodeBlockImpl: FunctionComponent<EuiCodeBlockImplProps> = ({
     if (isFullScreen) {
       // Force fullscreen to use large font and padding.
       const fullScreenClasses = classNames(
-        'euiCodeBlock',
+        'ouiCodeBlock',
         fontSizeToClassNameMap[fontSize],
-        'euiCodeBlock-paddingLarge',
-        'euiCodeBlock-isFullScreen',
+        'ouiCodeBlock-paddingLarge',
+        'ouiCodeBlock-isFullScreen',
         className
       );
 
       fullScreenDisplay = (
-        <EuiOverlayMask>
-          <EuiFocusTrap clickOutsideDisables={true}>
+        <OuiOverlayMask>
+          <OuiFocusTrap clickOutsideDisables={true}>
             <div className={fullScreenClasses}>
               <pre className={preClasses} tabIndex={0}>
                 <code className={codeClasses} onKeyDown={onKeyDown}>
@@ -408,8 +419,8 @@ export const EuiCodeBlockImpl: FunctionComponent<EuiCodeBlockImplProps> = ({
 
               {codeBlockControls}
             </div>
-          </EuiFocusTrap>
-        </EuiOverlayMask>
+          </OuiFocusTrap>
+        </OuiOverlayMask>
       );
     }
 
@@ -428,7 +439,7 @@ export const EuiCodeBlockImpl: FunctionComponent<EuiCodeBlockImplProps> = ({
       </pre>
       {/*
           If the below fullScreen code renders, it actually attaches to the body because of
-          EuiOverlayMask's React portal usage.
+          OuiOverlayMask's React portal usage.
         */}
       {codeBlockControls}
       {getFullScreenDisplay(codeBlockControls)}

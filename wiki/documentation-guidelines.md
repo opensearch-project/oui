@@ -13,17 +13,17 @@ The complexity of the component should determine how many examples you need to c
 Here are our formatting guidelines for writing documentation:
 
 - Use sentence case, always, for page and section titles. Example: `This component does something`
-- When referencing the component name, wrap it in `<strong>` tags. Example: `<strong>EuiComponent</strong>`
-- When referencing the component name, always include the `Eui` prefix unless you are referencing the generic term. Example: `EuiFlyout` vs `flyout`
-- Wrap references to prop names and elements in `<EuiCode>` blocks. Example: `<EuiCode>propName</EuiCode>`
-- If the code reference is more than a single prop name or value, add the language type. Example: `<EuiCode language="js">propName=true</EuiCode>`
-- When referencing another EUI component, wrap the reference in a link to the component. Example: `<Link to="/component/url><strong>EuiComponent</strong><Link>`
+- When referencing the component name, wrap it in `<strong>` tags. Example: `<strong>OuiComponent</strong>`
+- When referencing the component name, always include the `Oui` prefix unless you are referencing the generic term. Example: `OuiFlyout` vs `flyout`
+- Wrap references to prop names and elements in `<OuiCode>` blocks. Example: `<OuiCode>propName</OuiCode>`
+- If the code reference is more than a single prop name or value, add the language type. Example: `<OuiCode language="js">propName=true</OuiCode>`
+- When referencing another OUI component, wrap the reference in a link to the component. Example: `<Link to="/component/url><strong>OuiComponent</strong><Link>`
 
-## Linking between EUI doc pages/components
+## Linking between OUI doc pages/components
 
-In instances where you would like to provide a link to another EUI component
+In instances where you would like to provide a link to another OUI component
 referenced in a given component description or example, take advantage of `react-router`,
-which is used for routing in EUI docs. Aside from the benefit of shorter path names, `react-router` will take the environment into account and provide the correct URL for both development and production locations.
+which is used for routing in OUI docs. Aside from the benefit of shorter path names, `react-router` will take the environment into account and provide the correct URL for both development and production locations.
 
 ### Basic example:
 
@@ -40,18 +40,18 @@ for a better explanation about passing color contrast.
 
 ### Linking to external resources
 
-When referring to external sites or resources, use EUI components that take an `href` prop, such as `EuiLink`.
+When referring to external sites or resources, use OUI components that take an `href` prop, such as `OuiLink`.
 
 #### Basic example:
 
 ```js
 import {
-  EuiLink,
+  OuiLink,
 } from '/src/components';
 
 // ...
 
-<EuiLink href="https://github.com/elastic/eui/blob/master/src/global_styling/mixins/_shadow.scss">View the Sass code for shadow mixins</EuiLink>.
+<OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_shadow.scss">View the Sass code for shadow mixins</OuiLink>.
 ```
 
 ## Adding snippets
@@ -69,7 +69,7 @@ There are a couple themes to keep in mind when adding snippets:
 - All other props, like enums, should be written with proper value types.
 
 ``` js
-<EuiPopover
+<OuiPopover
   id={popoverId}
   button={button}
   isOpen={isPopoverOpen}
@@ -77,48 +77,48 @@ There are a couple themes to keep in mind when adding snippets:
   anchorPosition="downLeft"
 >
   <!-- Popover content -->
-</EuiPopover>
+</OuiPopover>
 ```
 
 - If the demo code provides lots of examples, this is probably mostly for us maintainers to manage all the different states. However, **the consumer really just needs a single basic snippet**. In some cases, you can add a second one with the **most commonly used props**. The basic example should always come first.
 
 ```js
-<EuiLink href="#"><!-- Link text --></EuiLink>
+<OuiLink href="#"><!-- Link text --></OuiLink>
 ```
 
 ```js
-<EuiLink href="#" color="success">
+<OuiLink href="#" color="success">
   <!-- Colored link text -->
-</EuiLink>
+</OuiLink>
 ```
 
 
 - Use HTML comments to suggest what the `children` might be.
 
 ``` js
-<EuiText color="danger"><!-- Raw HTML content --></EuiText>
+<OuiText color="danger"><!-- Raw HTML content --></OuiText>
 ```
 
 - The snippet should illustrate when a component requires its children to be wrapped with a specific tag.
 
 ``` js
-<EuiCallOut>
+<OuiCallOut>
   <p><!-- Content --></p>
-</EuiCallOut>
+</OuiCallOut>
 ```
 
 - When a component contains a single element child the snippet should illustrate it. Enforce best practices by providing a description.
 
 ``` js
-<EuiTitle>
+<OuiTitle>
   <h2><!-- Defaults to medium size. Change the heading level based on your context. --></h2>
-</EuiTitle>
+</OuiTitle>
 ```
 
 - When a prop receives an array of objects, display only one object and show all the required keys.
 
 ``` js
-<EuiSteps
+<OuiSteps
   steps={[
     {
       title: 'Step 1',
@@ -134,15 +134,15 @@ Most documentation pages include a [playground section](https://elastic.github.i
 
 ### Toggles for required props
 
-Props marked required for a component typically do not have default values and therefore need to be set for the playground to work well. For example, the `children` prop, which can be set in the component's [`playground.js` file](https://github.com/elastic/eui/blob/master/src-docs/src/views/accordion/playground.js):
+Props marked required for a component typically do not have default values and therefore need to be set for the playground to work well. For example, the `children` prop, which can be set in the component's [`playground.js` file](https://github.com/opensearch-project/oui/blob/master/src-docs/src/views/accordion/playground.js):
 
 ```js
 propsToUse.children = {
-  value: `<EuiText>
+  value: `<OuiText>
     <p>
-      Any content inside of <strong>EuiAccordion</strong> will appear here.
+      Any content inside of <strong>OuiAccordion</strong> will appear here.
     </p>
-  </EuiText>`,
+  </OuiText>`,
   type: PropTypes.ReactNode,
   hidden: false,
 };
@@ -170,7 +170,7 @@ Not all props lend themselves to becoming helpful playground toggles. For instan
 
 ## Full screen demos
 
-EUI's documentation sections provide an easy way to create full screen demos that are simply blank pages (no headers or other chrome). To create a basic full screen demo with a built-in button add the following as your section.
+OUI's documentation sections provide an easy way to create full screen demos that are simply blank pages (no headers or other chrome). To create a basic full screen demo with a built-in button add the following as your section.
 
 ```tsx
 {
@@ -202,9 +202,9 @@ import { ExampleContext } from '../../services';
 
 <ExampleContext.Consumer>
   {({ parentPath }) => (
-    <EuiButton fill href={`#${parentPath}`} iconType="exit">
+    <OuiButton fill href={`#${parentPath}`} iconType="exit">
       Exit full screen
-    </EuiButton>
+    </OuiButton>
   )}
 </ExampleContext.Consumer>
 ```

@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiText, EuiHorizontalRule } from '../../../../src/components';
+import { OuiText, OuiHorizontalRule } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiText grow={false}>
+    <OuiText grow={false}>
       <h1>This is Heading One</h1>
       <p>
         Far out in the uncharted backwaters of the <a href="#">unfashionable</a>{' '}
@@ -95,7 +106,7 @@ export default () => (
 
       <h6>This is Heading Six</h6>
 
-      <EuiHorizontalRule />
+      <OuiHorizontalRule />
 
       <dl>
         <dt>The Elder Scrolls: Morrowind</dt>
@@ -108,9 +119,9 @@ export default () => (
         <dd>The game that made me drop out of college.</dd>
       </dl>
 
-      <EuiHorizontalRule />
+      <OuiHorizontalRule />
 
-      <dl className="eui-definitionListReverse">
+      <dl className="oui-definitionListReverse">
         <dt>Name</dt>
         <dd>The Elder Scrolls: Morrowind</dd>
         <dt>Game style</dt>
@@ -118,6 +129,6 @@ export default () => (
         <dt>Release date</dt>
         <dd>2002</dd>
       </dl>
-    </EuiText>
+    </OuiText>
   </div>
 );

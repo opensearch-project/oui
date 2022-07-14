@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,19 +32,19 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFieldSearch } from './field_search';
+import { OuiFieldSearch } from './field_search';
 
 jest.mock('../form_control_layout', () => ({
-  EuiFormControlLayout: 'eui-form-control-layout',
+  OuiFormControlLayout: 'oui-form-control-layout',
 }));
 jest.mock('../validatable_control', () => ({
-  EuiValidatableControl: 'eui-validatable-control',
+  OuiValidatableControl: 'oui-validatable-control',
 }));
 
-describe('EuiFieldSearch', () => {
+describe('OuiFieldSearch', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFieldSearch
+      <OuiFieldSearch
         name="elastic"
         id="1"
         placeholder="Placeholder"
@@ -48,33 +59,33 @@ describe('EuiFieldSearch', () => {
 
   describe('props', () => {
     test('isInvalid is rendered', () => {
-      const component = render(<EuiFieldSearch isInvalid />);
+      const component = render(<OuiFieldSearch isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(<EuiFieldSearch fullWidth />);
+      const component = render(<OuiFieldSearch fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiFieldSearch isLoading />);
+      const component = render(<OuiFieldSearch isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     describe('isClearable', () => {
       test('is accepted', () => {
-        const component = render(<EuiFieldSearch isClearable />);
+        const component = render(<OuiFieldSearch isClearable />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('is rendered when a value exists', () => {
         const component = render(
-          <EuiFieldSearch isClearable defaultValue="Hello" />
+          <OuiFieldSearch isClearable defaultValue="Hello" />
         );
 
         expect(component).toMatchSnapshot();
@@ -82,13 +93,13 @@ describe('EuiFieldSearch', () => {
     });
 
     test('prepend is rendered', () => {
-      const component = render(<EuiFieldSearch prepend="Prepend" />);
+      const component = render(<OuiFieldSearch prepend="Prepend" />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('append is rendered', () => {
-      const component = render(<EuiFieldSearch prepend="Append" />);
+      const component = render(<OuiFieldSearch prepend="Append" />);
 
       expect(component).toMatchSnapshot();
     });

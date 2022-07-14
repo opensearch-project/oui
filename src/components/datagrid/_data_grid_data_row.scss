@@ -1,15 +1,26 @@
-.euiDataGridRow {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiDataGridRow {
   display: flex;
 }
 
-@include euiDataGridRowCell {
-  @include euiFontSizeS;
+@include ouiDataGridRowCell {
+  @include ouiFontSizeS;
 
-  padding: $euiDataGridCellPaddingM;
-  border-right: $euiDataGridVerticalBorder;
-  border-bottom: $euiBorderThin;
+  padding: $ouiDataGridCellPaddingM;
+  border-right: $ouiDataGridVerticalBorder;
+  border-bottom: $ouiBorderThin;
   flex: 0 0 auto;
-  background: $euiColorEmptyShade;
+  background: $ouiColorEmptyShade;
   position: relative;
   align-items: center;
   display: flex;
@@ -20,265 +31,265 @@
     width: 100%;
   }
 
-  &.euiDataGridRowCell--firstColumn {
-    border-left: $euiBorderThin;
+  &.ouiDataGridRowCell--firstColumn {
+    border-left: $ouiBorderThin;
   }
 
-  &.euiDataGridRowCell--lastColumn {
-    border-right-color: $euiBorderColor;
+  &.ouiDataGridRowCell--lastColumn {
+    border-right-color: $ouiBorderColor;
   }
 
   &:focus {
-    @include euiDataGridCellFocus;
+    @include ouiDataGridCellFocus;
     margin-top: -1px;
   }
 
   // Only add the transition effect on hover, so that it is instantaneous on focus
   // Long delays on hover to mitigate the accordion effect
   &:hover {
-    .euiDataGridRowCell__expandButtonIcon {
-      animation-duration: $euiAnimSpeedExtraFast;
-      animation-name: euiDataGridCellButtonSlideIn;
+    .ouiDataGridRowCell__expandButtonIcon {
+      animation-duration: $ouiAnimSpeedExtraFast;
+      animation-name: ouiDataGridCellButtonSlideIn;
       animation-iteration-count: 1;
-      animation-delay: $euiAnimSpeedNormal;
+      animation-delay: $ouiAnimSpeedNormal;
       animation-fill-mode: forwards;
     }
 
-    .euiDataGridRowCell__actionButtonIcon {
-      animation-duration: $euiAnimSpeedExtraFast;
-      animation-name: euiDataGridCellButtonSlideIn;
+    .ouiDataGridRowCell__actionButtonIcon {
+      animation-duration: $ouiAnimSpeedExtraFast;
+      animation-name: ouiDataGridCellButtonSlideIn;
       animation-iteration-count: 1;
-      animation-delay: $euiAnimSpeedNormal;
+      animation-delay: $ouiAnimSpeedNormal;
       animation-fill-mode: forwards;
     }
   }
 
   &:not(:hover),
-  &.euiDataGridRowCell--open {
-    .euiDataGridRowCell__expandButtonIcon {
+  &.ouiDataGridRowCell--open {
+    .ouiDataGridRowCell__expandButtonIcon {
       animation: none;
-      margin-left: $euiDataGridCellPaddingM;
-      width: $euiSizeM;
+      margin-left: $ouiDataGridCellPaddingM;
+      width: $ouiSizeM;
     }
 
-    .euiDataGridRowCell__actionButtonIcon {
+    .ouiDataGridRowCell__actionButtonIcon {
       animation: none;
-      margin-left: $euiDataGridCellPaddingM;
-      width: $euiSizeM;
+      margin-left: $ouiDataGridCellPaddingM;
+      width: $ouiSizeM;
     }
   }
 
   // on focus, directly show action buttons (without animation), but still slide in the open popover button
   &:focus {
-    .euiDataGridRowCell__actionButtonIcon {
-      margin-left: $euiDataGridCellPaddingM;
-      width: $euiSizeM;
+    .ouiDataGridRowCell__actionButtonIcon {
+      margin-left: $ouiDataGridCellPaddingM;
+      width: $ouiSizeM;
     }
   }
 
   // if a cell is not hovered nor focused nor open via popover, don't show buttons in general
-  &:not(:hover):not(:focus):not(.euiDataGridRowCell--open) {
-    .euiDataGridRowCell__expandButtonIcon,
-    .euiDataGridRowCell__actionButtonIcon {
+  &:not(:hover):not(:focus):not(.ouiDataGridRowCell--open) {
+    .ouiDataGridRowCell__expandButtonIcon,
+    .ouiDataGridRowCell__actionButtonIcon {
       display: none;
     }
   }
 
   &:focus:not(:first-of-type) {
     // Needed because the focus state adds a border, which needs to be subtracted from padding
-    padding-left: $euiDataGridCellPaddingM - 1px;
+    padding-left: $ouiDataGridCellPaddingM - 1px;
   }
 
-  &.euiDataGridRowCell--numeric {
+  &.ouiDataGridRowCell--numeric {
     text-align: right;
   }
 
-  &.euiDataGridRowCell--currency {
+  &.ouiDataGridRowCell--currency {
     text-align: right;
   }
 
-  &.euiDataGridRowCell--uppercase {
+  &.ouiDataGridRowCell--uppercase {
     text-transform: uppercase;
   }
 
-  &.euiDataGridRowCell--lowercase {
+  &.ouiDataGridRowCell--lowercase {
     text-transform: lowercase;
   }
 
-  &.euiDataGridRowCell--capitalize {
+  &.ouiDataGridRowCell--capitalize {
     text-transform: capitalize;
   }
 
   // We only truncate if the cell is not a control column.
-  &:not(.euiDataGridRowCell--controlColumn) {
-    .euiDataGridRowCell__content,
-    .euiDataGridRowCell__truncate,
-    &.euiDataGridRowCell__truncate,
-    .euiDataGridRowCell__expandContent {
-      @include euiTextTruncate;
+  &:not(.ouiDataGridRowCell--controlColumn) {
+    .ouiDataGridRowCell__content,
+    .ouiDataGridRowCell__truncate,
+    &.ouiDataGridRowCell__truncate,
+    .ouiDataGridRowCell__expandContent {
+      @include ouiTextTruncate;
       overflow: hidden;
       white-space: nowrap;
     }
   }
 }
 
-.euiDataGridRowCell__popover {
-  @include euiScrollBar;
+.ouiDataGridRowCell__popover {
+  @include ouiScrollBar;
   overflow: auto;
   // sass-lint:disable-block no-important
   max-width: 400px !important;
   max-height: 400px !important;
 }
 
-.euiDataGridRowCell__expand {
+.ouiDataGridRowCell__expand {
   width: 100%;
   max-width: 100%;
 }
 
-.euiDataGridRowCell__expandFlex {
+.ouiDataGridRowCell__expandFlex {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.euiDataGridRowCell__expandContent {
+.ouiDataGridRowCell__expandContent {
   flex-grow: 1;
 }
 
-.euiDataGridRowCell__contentByHeight {
+.ouiDataGridRowCell__contentByHeight {
   flex-grow: 1;
   height: 100%;
 }
 
-.euiDataGridRowCell__alignBaseLine {
+.ouiDataGridRowCell__alignBaseLine {
   align-items: baseline;
 }
 
-.euiDataGridRowCell__expandButton {
+.ouiDataGridRowCell__expandButton {
   display: flex;
   flex-grow: 0;
 }
 
-.euiDataGridRowCell__expandButtonIcon {
-  height: $euiSizeM;
-  border-radius: $euiBorderRadius / 2;
+.ouiDataGridRowCell__expandButtonIcon {
+  height: $ouiSizeM;
+  border-radius: $ouiBorderRadius / 2;
   width: 0;
   overflow: hidden;
   transition: none; // Have to take out the generic transition so it is instaneous on focus
   box-shadow: none !important; // sass-lint:disable-line no-important
-  // Remove default .euiButtonIcon--fill border
+  // Remove default .ouiButtonIcon--fill border
   // This way we don't need to animate the border that is inexistent in Amsterdam and unnecessary for a fill button
   border: none;
 
   &-isActive {
-    margin-left: $euiDataGridCellPaddingM;
-    width: $euiSizeM;
+    margin-left: $ouiDataGridCellPaddingM;
+    width: $ouiSizeM;
   }
 }
 
-.euiDataGridRowCell__actionButtonIcon {
-  height: $euiSizeM;
-  border-radius: $euiBorderRadius / 2;
+.ouiDataGridRowCell__actionButtonIcon {
+  height: $ouiSizeM;
+  border-radius: $ouiBorderRadius / 2;
   width: 0;
   overflow: hidden;
   transition: none; // Have to take out the generic transition so it is instaneous on focus
 }
 
 // Row highlights
-@include euiDataGridStyles(rowHoverHighlight) {
-  .euiDataGridRow:hover {
-    @include euiDataGridRowCell {
+@include ouiDataGridStyles(rowHoverHighlight) {
+  .ouiDataGridRow:hover {
+    @include ouiDataGridRowCell {
       // sass-lint:disable-block no-important
       // Needed to overtake striping
-      background-color: $euiColorHighlight !important;
+      background-color: $ouiColorHighlight !important;
     }
   }
 }
 
 // Stripes
-@include euiDataGridStyles(stripes) {
-  @include euiDataGridRowCell {
-    &.euiDataGridRowCell--stripe {
-      background: $euiColorLightestShade;
+@include ouiDataGridStyles(stripes) {
+  @include ouiDataGridRowCell {
+    &.ouiDataGridRowCell--stripe {
+      background: $ouiColorLightestShade;
     }
   }
 }
 
 // Border alternates
-@include euiDataGridStyles(bordersNone) {
-  @include euiDataGridRowCell {
+@include ouiDataGridStyles(bordersNone) {
+  @include ouiDataGridRowCell {
     // sass-lint:disable-block no-important
     border-color: transparent !important;
   }
 }
 
-@include euiDataGridStyles(bordersHorizontal) {
-  @include euiDataGridRowCell {
+@include ouiDataGridStyles(bordersHorizontal) {
+  @include ouiDataGridRowCell {
     border-right-color: transparent;
     border-left-color: transparent;
   }
 }
 
 // Font alternates
-@include euiDataGridStyles(fontSizeSmall) {
-  @include euiDataGridRowCell {
-    @include euiFontSizeXS;
+@include ouiDataGridStyles(fontSizeSmall) {
+  @include ouiDataGridRowCell {
+    @include ouiFontSizeXS;
   }
 }
 
-.euiDataGridRowCell--fontSizeSmall {
-  @include euiFontSizeXS;
+.ouiDataGridRowCell--fontSizeSmall {
+  @include ouiFontSizeXS;
 }
 
-@include euiDataGridStyles(fontSizeLarge) {
-  @include euiDataGridRowCell {
-    @include euiFontSize;
+@include ouiDataGridStyles(fontSizeLarge) {
+  @include ouiDataGridRowCell {
+    @include ouiFontSize;
   }
 }
 
-.euiDataGridRowCell--fontSizeLarge {
-  @include euiFontSize;
+.ouiDataGridRowCell--fontSizeLarge {
+  @include ouiFontSize;
 }
 
 // Padding alternates
-@include euiDataGridStyles(paddingSmall) {
-  @include euiDataGridRowCell {
-    padding: $euiDataGridCellPaddingS;
+@include ouiDataGridStyles(paddingSmall) {
+  @include ouiDataGridRowCell {
+    padding: $ouiDataGridCellPaddingS;
 
     &:focus:not(:first-of-type) {
       // Needed because the focus state adds a border, which needs to be subtracted from padding
-      padding-left: $euiDataGridCellPaddingS - 1px;
+      padding-left: $ouiDataGridCellPaddingS - 1px;
     }
   }
 }
 
-.euiDataGridRowCell--paddingSmall {
-  padding: $euiDataGridCellPaddingS;
+.ouiDataGridRowCell--paddingSmall {
+  padding: $ouiDataGridCellPaddingS;
 }
 
-@include euiDataGridStyles(paddingLarge) {
-  @include euiDataGridRowCell {
-    padding: $euiDataGridCellPaddingL;
+@include ouiDataGridStyles(paddingLarge) {
+  @include ouiDataGridRowCell {
+    padding: $ouiDataGridCellPaddingL;
 
     &:focus:not(:first-of-type) {
       // Needed because the focus state adds a border, which needs to be subtracted from padding
-      padding-left: $euiDataGridCellPaddingL - 1px;
+      padding-left: $ouiDataGridCellPaddingL - 1px;
     }
   }
 }
 
-.euiDataGridRowCell--paddingLarge {
-  padding: $euiDataGridCellPaddingL;
+.ouiDataGridRowCell--paddingLarge {
+  padding: $ouiDataGridCellPaddingL;
 }
 
-@keyframes euiDataGridCellButtonSlideIn {
+@keyframes ouiDataGridCellButtonSlideIn {
   from {
     margin-left: 0;
     width: 0;
   }
 
   to {
-    margin-left: $euiDataGridCellPaddingM;
-    width: $euiSizeM;
+    margin-left: $ouiDataGridCellPaddingM;
+    width: $ouiSizeM;
   }
 }

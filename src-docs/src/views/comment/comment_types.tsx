@@ -1,41 +1,52 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
-import { EuiComment } from '../../../../src/components/comment_list';
-import { EuiText } from '../../../../src/components/text';
-import { EuiCode } from '../../../../src/components/code';
+import { OuiComment } from '../../../../src/components/comment_list';
+import { OuiText } from '../../../../src/components/text';
+import { OuiCode } from '../../../../src/components/code';
 
 const body = (
-  <EuiText size="s">
+  <OuiText size="s">
     <p>
-      This is the body of a comment of type <EuiCode>regular</EuiCode>
+      This is the body of a comment of type <OuiCode>regular</OuiCode>
     </p>
-  </EuiText>
+  </OuiText>
 );
 
 const bodyUpdate = (
-  <EuiText size="s">
+  <OuiText size="s">
     <p>
-      Comments of type <EuiCode>update</EuiCode> can also have a body
+      Comments of type <OuiCode>update</OuiCode> can also have a body
     </p>
-  </EuiText>
+  </OuiText>
 );
 
 export default () => (
   <div>
-    <EuiComment username="andred" event="added a comment" timestamp="yesterday">
+    <OuiComment username="andred" event="added a comment" timestamp="yesterday">
       {body}
-    </EuiComment>
-    <EuiComment
+    </OuiComment>
+    <OuiComment
       username="luisg"
       type="update"
       event="edited case"
       timestamp="22 hours ago"
     />
-    <EuiComment
+    <OuiComment
       username="milal"
       type="update"
       event="edited case"
       timestamp="6 hours ago">
       {bodyUpdate}
-    </EuiComment>
+    </OuiComment>
   </div>
 );

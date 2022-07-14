@@ -1,15 +1,26 @@
-$euiContextMenuWidth: $euiSize * 16;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-.euiContextMenu {
-  width: $euiContextMenuWidth;
+$ouiContextMenuWidth: $ouiSize * 16;
+
+.ouiContextMenu {
+  width: $ouiContextMenuWidth;
   max-width: 100%;
   position: relative;
   overflow: hidden;
-  transition: height $euiAnimSpeedFast $euiAnimSlightResistance;
-  border-radius: $euiBorderRadius;
+  transition: height $ouiAnimSpeedFast $ouiAnimSlightResistance;
+  border-radius: $ouiBorderRadius;
 
-  .euiContextMenu__content {
-    padding: $euiSizeS;
+  .ouiContextMenu__content {
+    padding: $ouiSizeS;
   }
 }
 
@@ -18,10 +29,10 @@ $euiContextMenuWidth: $euiSize * 16;
   *    position them. ContextMenuPanel will break the layout of a Popover if it's
   *    absolutely positioned by default.
   */
-.euiContextMenu__panel {
+.ouiContextMenu__panel {
   position: absolute; /* 1 */
 }
 
-.euiContextMenu__icon {
-  margin-right: $euiSizeS;
+.ouiContextMenu__icon {
+  margin-right: $ouiSizeS;
 }

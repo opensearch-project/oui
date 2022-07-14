@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { FunctionComponent, ReactNode } from 'react';
-import { EuiSpacer } from '../../../../../src/components/spacer';
-import { EuiTitle } from '../../../../../src/components/title';
-import { EuiText } from '../../../../../src/components/text';
+import { OuiSpacer } from '../../../../../src/components/spacer';
+import { OuiTitle } from '../../../../../src/components/title';
+import { OuiText } from '../../../../../src/components/text';
 
 export const LANGUAGES = ['javascript', 'html'] as const;
 
@@ -21,11 +32,11 @@ export const GuideSectionExampleText: FunctionComponent<GuideSectionExampleText>
   if (title) {
     titleNode = (
       <>
-        <EuiSpacer />
-        <EuiTitle>
+        <OuiSpacer />
+        <OuiTitle>
           <h2>{title}</h2>
-        </EuiTitle>
-        <EuiSpacer size="m" />
+        </OuiTitle>
+        <OuiSpacer size="m" />
       </>
     );
   }
@@ -33,14 +44,14 @@ export const GuideSectionExampleText: FunctionComponent<GuideSectionExampleText>
   let textNode = children;
 
   if (children && wrapText) {
-    textNode = <EuiText>{children}</EuiText>;
+    textNode = <OuiText>{children}</OuiText>;
   }
 
   return (
     <>
       {titleNode}
       {textNode}
-      {(titleNode || textNode) && <EuiSpacer />}
+      {(titleNode || textNode) && <OuiSpacer />}
     </>
   );
 };

@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiDataGrid pagination renders 1`] = `
+exports[`OuiDataGrid pagination renders 1`] = `
 <div
-  class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--alignItemsCenter euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow"
+  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsCenter ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow"
 >
   <div
-    class="euiFlexItem euiFlexItem--flexGrowZero"
+    class="ouiFlexItem ouiFlexItem--flexGrowZero"
   >
     <div
-      class="euiPopover euiPopover--anchorUpRight"
+      class="ouiPopover ouiPopover--anchorUpRight"
     >
       <div
-        class="euiPopover__anchor"
+        class="ouiPopover__anchor"
       >
         <button
-          class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall"
+          class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall"
           data-test-subj="tablePaginationPopoverButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+            class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
           >
             <span
-              class="euiButtonContent__icon"
+              class="ouiButtonContent__icon"
               color="inherit"
-              data-euiicon-type="arrowDown"
+              data-ouiicon-type="arrowDown"
             />
             <span
-              class="euiButtonEmpty__text"
+              class="ouiButtonEmpty__text"
             >
               Rows per page: 6
             </span>
@@ -37,47 +37,47 @@ exports[`EuiDataGrid pagination renders 1`] = `
     </div>
   </div>
   <div
-    class="euiFlexItem euiFlexItem--flexGrowZero"
+    class="ouiFlexItem ouiFlexItem--flexGrowZero"
   >
     <nav
       aria-label="Pagination for preceding grid: test grid"
-      class="euiPagination"
+      class="ouiPagination"
     >
       <a
         aria-controls="generated-id"
         aria-label="Previous page, 1"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
         data-test-subj="pagination-button-previous"
         href="#generated-id"
         rel="noreferrer"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="arrowLeft"
+          data-ouiicon-type="arrowLeft"
         />
       </a>
       <ul
         aria-label="Pagination for preceding grid: test grid"
-        class="euiPagination__list"
+        class="ouiPagination__list"
       >
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <a
             aria-controls="generated-id"
             aria-label="Page 1 of 2"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiPaginationButton euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-0"
             href="#generated-id"
             rel="noreferrer"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 1
               </span>
@@ -85,22 +85,22 @@ exports[`EuiDataGrid pagination renders 1`] = `
           </a>
         </li>
         <li
-          class="euiPagination__item"
+          class="ouiPagination__item"
         >
           <button
             aria-controls="generated-id"
             aria-current="true"
             aria-label="Page 2 of 2"
-            class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small euiButtonEmpty-isDisabled euiPaginationButton euiPaginationButton-isActive euiPaginationButton--hideOnMobile"
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiButtonEmpty-isDisabled ouiPaginationButton ouiPaginationButton-isActive ouiPaginationButton--hideOnMobile"
             data-test-subj="pagination-button-1"
             disabled=""
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 2
               </span>
@@ -110,16 +110,16 @@ exports[`EuiDataGrid pagination renders 1`] = `
       </ul>
       <button
         aria-label="Next page"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
         data-test-subj="pagination-button-next"
         disabled=""
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="arrowRight"
+          data-ouiicon-type="arrowRight"
         />
       </button>
     </nav>
@@ -127,19 +127,19 @@ exports[`EuiDataGrid pagination renders 1`] = `
 </div>
 `;
 
-exports[`EuiDataGrid render column actions renders various column actions configurations 1`] = `
+exports[`OuiDataGrid render column actions renders various column actions configurations 1`] = `
 <ul
-  className="euiListGroup euiListGroup-maxWidthDefault"
+  className="ouiListGroup ouiListGroup-maxWidthDefault"
   data-test-subj="dataGridHeaderCellActionGroup-B"
 >
-  <EuiListGroupItem
+  <OuiListGroupItem
     color="text"
     iconType="eyeClosed"
     key="title-0"
     label={
-      <EuiI18n
+      <OuiI18n
         default="Hide column"
-        token="euiColumnActions.hideColumn"
+        token="ouiColumnActions.hideColumn"
       />
     }
     onClick={[Function]}
@@ -148,54 +148,54 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="eyeClosed"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="eyeClosed"
+            data-ouiicon-type="eyeClosed"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="Hide column"
         >
-          <EuiI18n
+          <OuiI18n
             default="Hide column"
-            token="euiColumnActions.hideColumn"
+            token="ouiColumnActions.hideColumn"
           >
             Hide column
-          </EuiI18n>
+          </OuiI18n>
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     className=""
     color="text"
     iconType="sortUp"
     isDisabled={false}
     key="title-1"
     label={
-      <EuiI18n
+      <OuiI18n
         default="Sort {schemaLabel}"
-        token="euiColumnActions.sort"
+        token="ouiColumnActions.sort"
         values={
           Object {
-            "schemaLabel": <EuiI18n
+            "schemaLabel": <OuiI18n
               default="A-Z"
-              token="euiColumnSortingDraggable.defaultSortAsc"
+              token="ouiColumnSortingDraggable.defaultSortAsc"
             />,
           }
         }
@@ -207,78 +207,78 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortUp"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortUp"
+            data-ouiicon-type="sortUp"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="Sort A-Z"
         >
-          <EuiI18n
+          <OuiI18n
             default="Sort {schemaLabel}"
-            token="euiColumnActions.sort"
+            token="ouiColumnActions.sort"
             values={
               Object {
-                "schemaLabel": <EuiI18n
+                "schemaLabel": <OuiI18n
                   default="A-Z"
-                  token="euiColumnSortingDraggable.defaultSortAsc"
+                  token="ouiColumnSortingDraggable.defaultSortAsc"
                 />,
               }
             }
           >
             <Component
               schemaLabel={
-                <EuiI18n
+                <OuiI18n
                   default="A-Z"
-                  token="euiColumnSortingDraggable.defaultSortAsc"
+                  token="ouiColumnSortingDraggable.defaultSortAsc"
                 />
               }
             >
               Sort 
-              <EuiI18n
+              <OuiI18n
                 default="A-Z"
                 key="1"
-                token="euiColumnSortingDraggable.defaultSortAsc"
+                token="ouiColumnSortingDraggable.defaultSortAsc"
               >
                 A-Z
-              </EuiI18n>
+              </OuiI18n>
             </Component>
-          </EuiI18n>
+          </OuiI18n>
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     className=""
     color="text"
     iconType="sortDown"
     isDisabled={false}
     key="title-2"
     label={
-      <EuiI18n
+      <OuiI18n
         default="Sort {schemaLabel}"
-        token="euiColumnActions.sort"
+        token="ouiColumnActions.sort"
         values={
           Object {
-            "schemaLabel": <EuiI18n
+            "schemaLabel": <OuiI18n
               default="Z-A"
-              token="euiColumnSortingDraggable.defaultSortDesc"
+              token="ouiColumnSortingDraggable.defaultSortDesc"
             />,
           }
         }
@@ -290,72 +290,72 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortDown"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortDown"
+            data-ouiicon-type="sortDown"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="Sort Z-A"
         >
-          <EuiI18n
+          <OuiI18n
             default="Sort {schemaLabel}"
-            token="euiColumnActions.sort"
+            token="ouiColumnActions.sort"
             values={
               Object {
-                "schemaLabel": <EuiI18n
+                "schemaLabel": <OuiI18n
                   default="Z-A"
-                  token="euiColumnSortingDraggable.defaultSortDesc"
+                  token="ouiColumnSortingDraggable.defaultSortDesc"
                 />,
               }
             }
           >
             <Component
               schemaLabel={
-                <EuiI18n
+                <OuiI18n
                   default="Z-A"
-                  token="euiColumnSortingDraggable.defaultSortDesc"
+                  token="ouiColumnSortingDraggable.defaultSortDesc"
                 />
               }
             >
               Sort 
-              <EuiI18n
+              <OuiI18n
                 default="Z-A"
                 key="1"
-                token="euiColumnSortingDraggable.defaultSortDesc"
+                token="ouiColumnSortingDraggable.defaultSortDesc"
               >
                 Z-A
-              </EuiI18n>
+              </OuiI18n>
             </Component>
-          </EuiI18n>
+          </OuiI18n>
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     color="text"
     iconType="sortLeft"
     isDisabled={false}
     key="title-3"
     label={
-      <EuiI18n
+      <OuiI18n
         default="Move left"
-        token="euiColumnActions.moveLeft"
+        token="ouiColumnActions.moveLeft"
       />
     }
     onClick={[Function]}
@@ -364,48 +364,48 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortLeft"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortLeft"
+            data-ouiicon-type="sortLeft"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="Move left"
         >
-          <EuiI18n
+          <OuiI18n
             default="Move left"
-            token="euiColumnActions.moveLeft"
+            token="ouiColumnActions.moveLeft"
           >
             Move left
-          </EuiI18n>
+          </OuiI18n>
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     color="text"
     iconType="sortRight"
     isDisabled={false}
     key="title-4"
     label={
-      <EuiI18n
+      <OuiI18n
         default="Move right"
-        token="euiColumnActions.moveRight"
+        token="ouiColumnActions.moveRight"
       />
     }
     onClick={[Function]}
@@ -414,48 +414,48 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortRight"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortRight"
+            data-ouiicon-type="sortRight"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="Move right"
         >
-          <EuiI18n
+          <OuiI18n
             default="Move right"
-            token="euiColumnActions.moveRight"
+            token="ouiColumnActions.moveRight"
           >
             Move right
-          </EuiI18n>
+          </OuiI18n>
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
+  </OuiListGroupItem>
 </ul>
 `;
 
-exports[`EuiDataGrid render column actions renders various column actions configurations 2`] = `
+exports[`OuiDataGrid render column actions renders various column actions configurations 2`] = `
 <ul
-  className="euiListGroup euiListGroup-maxWidthDefault"
+  className="ouiListGroup ouiListGroup-maxWidthDefault"
   data-test-subj="dataGridHeaderCellActionGroup-C"
 >
-  <EuiListGroupItem
+  <OuiListGroupItem
     key="title-0"
     label="test"
     onClick={[Function]}
@@ -463,46 +463,46 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--medium ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="test"
         >
           test
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
+  </OuiListGroupItem>
 </ul>
 `;
 
-exports[`EuiDataGrid render column actions renders various column actions configurations 3`] = `
+exports[`OuiDataGrid render column actions renders various column actions configurations 3`] = `
 <ul
-  className="euiListGroup euiListGroup-maxWidthDefault"
+  className="ouiListGroup ouiListGroup-maxWidthDefault"
   data-test-subj="dataGridHeaderCellActionGroup-D"
 >
-  <EuiListGroupItem
+  <OuiListGroupItem
     className=""
     color="text"
     iconType="sortUp"
     isDisabled={false}
     key="title-0"
     label={
-      <EuiI18n
+      <OuiI18n
         default="Sort {schemaLabel}"
-        token="euiColumnActions.sort"
+        token="ouiColumnActions.sort"
         values={
           Object {
-            "schemaLabel": <EuiI18n
+            "schemaLabel": <OuiI18n
               default="A-Z"
-              token="euiColumnSortingDraggable.defaultSortAsc"
+              token="ouiColumnSortingDraggable.defaultSortAsc"
             />,
           }
         }
@@ -514,78 +514,78 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortUp"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortUp"
+            data-ouiicon-type="sortUp"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="Sort A-Z"
         >
-          <EuiI18n
+          <OuiI18n
             default="Sort {schemaLabel}"
-            token="euiColumnActions.sort"
+            token="ouiColumnActions.sort"
             values={
               Object {
-                "schemaLabel": <EuiI18n
+                "schemaLabel": <OuiI18n
                   default="A-Z"
-                  token="euiColumnSortingDraggable.defaultSortAsc"
+                  token="ouiColumnSortingDraggable.defaultSortAsc"
                 />,
               }
             }
           >
             <Component
               schemaLabel={
-                <EuiI18n
+                <OuiI18n
                   default="A-Z"
-                  token="euiColumnSortingDraggable.defaultSortAsc"
+                  token="ouiColumnSortingDraggable.defaultSortAsc"
                 />
               }
             >
               Sort 
-              <EuiI18n
+              <OuiI18n
                 default="A-Z"
                 key="1"
-                token="euiColumnSortingDraggable.defaultSortAsc"
+                token="ouiColumnSortingDraggable.defaultSortAsc"
               >
                 A-Z
-              </EuiI18n>
+              </OuiI18n>
             </Component>
-          </EuiI18n>
+          </OuiI18n>
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     className=""
     color="text"
     iconType="sortDown"
     isDisabled={false}
     key="title-1"
     label={
-      <EuiI18n
+      <OuiI18n
         default="Sort {schemaLabel}"
-        token="euiColumnActions.sort"
+        token="ouiColumnActions.sort"
         values={
           Object {
-            "schemaLabel": <EuiI18n
+            "schemaLabel": <OuiI18n
               default="Z-A"
-              token="euiColumnSortingDraggable.defaultSortDesc"
+              token="ouiColumnSortingDraggable.defaultSortDesc"
             />,
           }
         }
@@ -597,64 +597,64 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortDown"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortDown"
+            data-ouiicon-type="sortDown"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="Sort Z-A"
         >
-          <EuiI18n
+          <OuiI18n
             default="Sort {schemaLabel}"
-            token="euiColumnActions.sort"
+            token="ouiColumnActions.sort"
             values={
               Object {
-                "schemaLabel": <EuiI18n
+                "schemaLabel": <OuiI18n
                   default="Z-A"
-                  token="euiColumnSortingDraggable.defaultSortDesc"
+                  token="ouiColumnSortingDraggable.defaultSortDesc"
                 />,
               }
             }
           >
             <Component
               schemaLabel={
-                <EuiI18n
+                <OuiI18n
                   default="Z-A"
-                  token="euiColumnSortingDraggable.defaultSortDesc"
+                  token="ouiColumnSortingDraggable.defaultSortDesc"
                 />
               }
             >
               Sort 
-              <EuiI18n
+              <OuiI18n
                 default="Z-A"
                 key="1"
-                token="euiColumnSortingDraggable.defaultSortDesc"
+                token="ouiColumnSortingDraggable.defaultSortDesc"
               >
                 Z-A
-              </EuiI18n>
+              </OuiI18n>
             </Component>
-          </EuiI18n>
+          </OuiI18n>
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     key="title-2"
     label="test"
     onClick={[Function]}
@@ -662,32 +662,32 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--medium ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="test"
         >
           test
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
+  </OuiListGroupItem>
 </ul>
 `;
 
-exports[`EuiDataGrid render column actions renders various column actions configurations 4`] = `
+exports[`OuiDataGrid render column actions renders various column actions configurations 4`] = `
 <ul
-  className="euiListGroup euiListGroup-maxWidthDefault"
+  className="ouiListGroup ouiListGroup-maxWidthDefault"
   data-test-subj="dataGridHeaderCellActionGroup-E"
 >
-  <EuiListGroupItem
+  <OuiListGroupItem
     color="text"
     iconType="eyeClosed"
     key="title-0"
@@ -698,35 +698,35 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="eyeClosed"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="eyeClosed"
+            data-ouiicon-type="eyeClosed"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="1"
         >
           1
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     className=""
     color="text"
     iconType="sortUp"
@@ -739,35 +739,35 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortUp"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortUp"
+            data-ouiicon-type="sortUp"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="2"
         >
           2
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     className=""
     color="text"
     iconType="sortDown"
@@ -780,35 +780,35 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortDown"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortDown"
+            data-ouiicon-type="sortDown"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="3"
         >
           3
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     color="text"
     iconType="sortLeft"
     isDisabled={false}
@@ -820,35 +820,35 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortLeft"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortLeft"
+            data-ouiicon-type="sortLeft"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="4"
         >
           4
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     color="text"
     iconType="sortRight"
     isDisabled={true}
@@ -860,35 +860,35 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--xSmall euiListGroupItem--text euiListGroupItem-isDisabled euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isDisabled ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={true}
         onClick={[Function]}
         type="button"
       >
-        <EuiIcon
-          className="euiListGroupItem__icon"
+        <OuiIcon
+          className="ouiListGroupItem__icon"
           color="inherit"
           type="sortRight"
         >
           <span
-            className="euiListGroupItem__icon"
+            className="ouiListGroupItem__icon"
             color="inherit"
-            data-euiicon-type="sortRight"
+            data-ouiicon-type="sortRight"
           />
-        </EuiIcon>
+        </OuiIcon>
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="5"
         >
           5
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
-  <EuiListGroupItem
+  </OuiListGroupItem>
+  <OuiListGroupItem
     key="title-5"
     label="test"
     onClick={[Function]}
@@ -896,27 +896,27 @@ exports[`EuiDataGrid render column actions renders various column actions config
     wrapText={false}
   >
     <li
-      className="euiListGroupItem euiListGroupItem--medium euiListGroupItem-isClickable"
+      className="ouiListGroupItem ouiListGroupItem--medium ouiListGroupItem-isClickable"
     >
       <button
-        className="euiListGroupItem__button"
+        className="ouiListGroupItem__button"
         disabled={false}
         onClick={[Function]}
         type="button"
       >
         <span
-          className="euiListGroupItem__label"
+          className="ouiListGroupItem__label"
           title="test"
         >
           test
         </span>
       </button>
     </li>
-  </EuiListGroupItem>
+  </OuiListGroupItem>
 </ul>
 `;
 
-exports[`EuiDataGrid rendering renders additional toolbar controls 1`] = `
+exports[`OuiDataGrid rendering renders additional toolbar controls 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -929,42 +929,42 @@ Array [
     tabindex="-1"
   />,
   <div
-    class="euiDataGrid__focusWrap"
+    class="ouiDataGrid__focusWrap"
     data-focus-lock-disabled="disabled"
   >
     <div
-      class="euiDataGrid euiDataGrid--bordersAll euiDataGrid--headerShade euiDataGrid--footerOverline euiDataGrid--rowHoverHighlight euiDataGrid--stickyFooter testClass1 testClass2"
+      class="ouiDataGrid ouiDataGrid--bordersAll ouiDataGrid--headerShade ouiDataGrid--footerOverline ouiDataGrid--rowHoverHighlight ouiDataGrid--stickyFooter testClass1 testClass2"
       data-test-subj="test subject string"
     >
       <div
-        class="euiDataGrid__controls"
+        class="ouiDataGrid__controls"
         data-test-sub="dataGridControls"
       >
         <button>
           Button
         </button>
         <div
-          class="euiPopover euiPopover--anchorDownLeft"
+          class="ouiPopover ouiPopover--anchorDownLeft"
           data-test-subj="dataGridColumnSelectorPopover"
         >
           <div
-            class="euiPopover__anchor"
+            class="ouiPopover__anchor"
           >
             <button
-              class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn"
               data-test-subj="dataGridColumnSelectorButton"
               type="button"
             >
               <span
-                class="euiButtonContent euiButtonEmpty__content"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="euiButtonContent__icon"
+                  class="ouiButtonContent__icon"
                   color="inherit"
-                  data-euiicon-type="listAdd"
+                  data-ouiicon-type="listAdd"
                 />
                 <span
-                  class="euiButtonEmpty__text"
+                  class="ouiButtonEmpty__text"
                 >
                   Columns
                 </span>
@@ -973,27 +973,27 @@ Array [
           </div>
         </div>
         <div
-          class="euiPopover euiPopover--anchorDownCenter"
+          class="ouiPopover ouiPopover--anchorDownCenter"
           data-test-subj="dataGridStyleSelectorPopover"
         >
           <div
-            class="euiPopover__anchor"
+            class="ouiPopover__anchor"
           >
             <button
-              class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn"
               data-test-subj="dataGridStyleSelectorButton"
               type="button"
             >
               <span
-                class="euiButtonContent euiButtonEmpty__content"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="euiButtonContent__icon"
+                  class="ouiButtonContent__icon"
                   color="inherit"
-                  data-euiicon-type="tableDensityExpanded"
+                  data-ouiicon-type="tableDensityExpanded"
                 />
                 <span
-                  class="euiButtonEmpty__text"
+                  class="ouiButtonEmpty__text"
                 >
                   Density
                 </span>
@@ -1002,20 +1002,20 @@ Array [
           </div>
         </div>
         <button
-          class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn testClass1 testClass2"
+          class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn testClass1 testClass2"
           data-test-subj="dataGridFullScrenButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="ouiButtonContent ouiButtonEmpty__content"
           >
             <span
-              class="euiButtonContent__icon"
+              class="ouiButtonContent__icon"
               color="inherit"
-              data-euiicon-type="fullScreen"
+              data-ouiicon-type="fullScreen"
             />
             <span
-              class="euiButtonEmpty__text"
+              class="ouiButtonEmpty__text"
             >
               Full screen
             </span>
@@ -1023,14 +1023,14 @@ Array [
         </button>
       </div>
       <div
-        class="euiDataGrid__verticalScroll"
+        class="ouiDataGrid__verticalScroll"
       >
         <div
-          class="euiDataGrid__overflow"
+          class="ouiDataGrid__overflow"
         >
           <div
             aria-label="aria-label"
-            class="euiDataGrid__content"
+            class="ouiDataGrid__content"
             data-test-subj="dataGridWrapper"
             id="generated-id"
             role="grid"
@@ -1040,49 +1040,49 @@ Array [
               style="width:100%;height:100%;overflow:hidden"
             >
               <div
-                class="euiDataGrid__virtualized"
+                class="ouiDataGrid__virtualized"
                 style="position:relative;height:9007199254740991px;width:9007199254740991px;overflow:auto;-webkit-overflow-scrolling:touch;will-change:transform;direction:ltr"
               >
                 <div
                   style="height:102px;width:200px"
                 >
                   <div
-                    class="euiDataGridHeader"
+                    class="ouiDataGridHeader"
                     data-test-subj="dataGridHeader"
                     role="row"
                   >
                     <div
-                      class="euiDataGridHeaderCell"
+                      class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-A"
                       role="columnheader"
                       style="width:100px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridColumnResizer"
+                        class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
                         style="margin-right:0px"
                       />
                       <div
-                        class="euiPopover euiPopover--anchorDownCenter"
+                        class="ouiPopover ouiPopover--anchorDownCenter"
                         offset="7"
                       >
                         <div
-                          class="euiPopover__anchor euiDataGridHeaderCell__anchor"
+                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                         >
                           <button
-                            class="euiDataGridHeaderCell__button"
+                            class="ouiDataGridHeaderCell__button"
                           >
                             <div
-                              class="euiDataGridHeaderCell__content"
+                              class="ouiDataGridHeaderCell__content"
                             >
                               A
                             </div>
                             <span
                               aria-label="Header actions"
-                              class="euiDataGridHeaderCell__icon"
+                              class="ouiDataGridHeaderCell__icon"
                               color="text"
-                              data-euiicon-type="arrowDown"
+                              data-ouiicon-type="arrowDown"
                               data-test-subj="dataGridHeaderCellActionButton-A"
                             />
                           </button>
@@ -1090,37 +1090,37 @@ Array [
                       </div>
                     </div>
                     <div
-                      class="euiDataGridHeaderCell"
+                      class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-B"
                       role="columnheader"
                       style="width:100px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridColumnResizer"
+                        class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
                         style="margin-right:0px"
                       />
                       <div
-                        class="euiPopover euiPopover--anchorDownCenter"
+                        class="ouiPopover ouiPopover--anchorDownCenter"
                         offset="7"
                       >
                         <div
-                          class="euiPopover__anchor euiDataGridHeaderCell__anchor"
+                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                         >
                           <button
-                            class="euiDataGridHeaderCell__button"
+                            class="ouiDataGridHeaderCell__button"
                           >
                             <div
-                              class="euiDataGridHeaderCell__content"
+                              class="ouiDataGridHeaderCell__content"
                             >
                               B
                             </div>
                             <span
                               aria-label="Header actions"
-                              class="euiDataGridHeaderCell__icon"
+                              class="ouiDataGridHeaderCell__icon"
                               color="text"
-                              data-euiicon-type="arrowDown"
+                              data-ouiicon-type="arrowDown"
                               data-test-subj="dataGridHeaderCellActionButton-B"
                             />
                           </button>
@@ -1129,21 +1129,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--firstColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:0px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         0, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 1, Column: 1:
                         </p>
@@ -1151,21 +1151,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--lastColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:100px;top:0px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         0, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 1, Column: 2:
                         </p>
@@ -1173,21 +1173,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe euiDataGridRowCell--firstColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:34px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         1, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 2, Column: 1:
                         </p>
@@ -1195,21 +1195,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe euiDataGridRowCell--lastColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:100px;top:34px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         1, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 2, Column: 2:
                         </p>
@@ -1217,21 +1217,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--firstColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:68px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         2, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 3, Column: 1:
                         </p>
@@ -1239,21 +1239,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--lastColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:100px;top:68px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         2, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 3, Column: 2:
                         </p>
@@ -1282,7 +1282,7 @@ Array [
 ]
 `;
 
-exports[`EuiDataGrid rendering renders control columns 1`] = `
+exports[`OuiDataGrid rendering renders control columns 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -1295,42 +1295,42 @@ Array [
     tabindex="-1"
   />,
   <div
-    class="euiDataGrid__focusWrap"
+    class="ouiDataGrid__focusWrap"
     data-focus-lock-disabled="disabled"
   >
     <div
-      class="euiDataGrid euiDataGrid--bordersAll euiDataGrid--headerShade euiDataGrid--footerOverline euiDataGrid--rowHoverHighlight euiDataGrid--stickyFooter testClass1 testClass2"
+      class="ouiDataGrid ouiDataGrid--bordersAll ouiDataGrid--headerShade ouiDataGrid--footerOverline ouiDataGrid--rowHoverHighlight ouiDataGrid--stickyFooter testClass1 testClass2"
       data-test-subj="test subject string"
     >
       <div
-        class="euiDataGrid__controls"
+        class="ouiDataGrid__controls"
         data-test-sub="dataGridControls"
       >
         <button>
           Button
         </button>
         <div
-          class="euiPopover euiPopover--anchorDownLeft"
+          class="ouiPopover ouiPopover--anchorDownLeft"
           data-test-subj="dataGridColumnSelectorPopover"
         >
           <div
-            class="euiPopover__anchor"
+            class="ouiPopover__anchor"
           >
             <button
-              class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn"
               data-test-subj="dataGridColumnSelectorButton"
               type="button"
             >
               <span
-                class="euiButtonContent euiButtonEmpty__content"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="euiButtonContent__icon"
+                  class="ouiButtonContent__icon"
                   color="inherit"
-                  data-euiicon-type="listAdd"
+                  data-ouiicon-type="listAdd"
                 />
                 <span
-                  class="euiButtonEmpty__text"
+                  class="ouiButtonEmpty__text"
                 >
                   Columns
                 </span>
@@ -1339,27 +1339,27 @@ Array [
           </div>
         </div>
         <div
-          class="euiPopover euiPopover--anchorDownCenter"
+          class="ouiPopover ouiPopover--anchorDownCenter"
           data-test-subj="dataGridStyleSelectorPopover"
         >
           <div
-            class="euiPopover__anchor"
+            class="ouiPopover__anchor"
           >
             <button
-              class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn"
               data-test-subj="dataGridStyleSelectorButton"
               type="button"
             >
               <span
-                class="euiButtonContent euiButtonEmpty__content"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="euiButtonContent__icon"
+                  class="ouiButtonContent__icon"
                   color="inherit"
-                  data-euiicon-type="tableDensityExpanded"
+                  data-ouiicon-type="tableDensityExpanded"
                 />
                 <span
-                  class="euiButtonEmpty__text"
+                  class="ouiButtonEmpty__text"
                 >
                   Density
                 </span>
@@ -1368,20 +1368,20 @@ Array [
           </div>
         </div>
         <button
-          class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn testClass1 testClass2"
+          class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn testClass1 testClass2"
           data-test-subj="dataGridFullScrenButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="ouiButtonContent ouiButtonEmpty__content"
           >
             <span
-              class="euiButtonContent__icon"
+              class="ouiButtonContent__icon"
               color="inherit"
-              data-euiicon-type="fullScreen"
+              data-ouiicon-type="fullScreen"
             />
             <span
-              class="euiButtonEmpty__text"
+              class="ouiButtonEmpty__text"
             >
               Full screen
             </span>
@@ -1389,14 +1389,14 @@ Array [
         </button>
       </div>
       <div
-        class="euiDataGrid__verticalScroll"
+        class="ouiDataGrid__verticalScroll"
       >
         <div
-          class="euiDataGrid__overflow"
+          class="ouiDataGrid__overflow"
         >
           <div
             aria-label="aria-label"
-            class="euiDataGrid__content"
+            class="ouiDataGrid__content"
             data-test-subj="dataGridWrapper"
             id="generated-id"
             role="grid"
@@ -1406,26 +1406,26 @@ Array [
               style="width:100%;height:100%;overflow:hidden"
             >
               <div
-                class="euiDataGrid__virtualized"
+                class="ouiDataGrid__virtualized"
                 style="position:relative;height:9007199254740991px;width:9007199254740991px;overflow:auto;-webkit-overflow-scrolling:touch;will-change:transform;direction:ltr"
               >
                 <div
                   style="height:102px;width:300px"
                 >
                   <div
-                    class="euiDataGridHeader"
+                    class="ouiDataGridHeader"
                     data-test-subj="dataGridHeader"
                     role="row"
                   >
                     <div
-                      class="euiDataGridHeaderCell euiDataGridHeaderCell--controlColumn"
+                      class="ouiDataGridHeaderCell ouiDataGridHeaderCell--controlColumn"
                       data-test-subj="dataGridHeaderCell-leading"
                       role="columnheader"
                       style="width:50px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridHeaderCell__content"
+                        class="ouiDataGridHeaderCell__content"
                       >
                         <span>
                           leading heading
@@ -1433,37 +1433,37 @@ Array [
                       </div>
                     </div>
                     <div
-                      class="euiDataGridHeaderCell"
+                      class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-A"
                       role="columnheader"
                       style="width:100px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridColumnResizer"
+                        class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
                         style="margin-right:0px"
                       />
                       <div
-                        class="euiPopover euiPopover--anchorDownCenter"
+                        class="ouiPopover ouiPopover--anchorDownCenter"
                         offset="7"
                       >
                         <div
-                          class="euiPopover__anchor euiDataGridHeaderCell__anchor"
+                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                         >
                           <button
-                            class="euiDataGridHeaderCell__button"
+                            class="ouiDataGridHeaderCell__button"
                           >
                             <div
-                              class="euiDataGridHeaderCell__content"
+                              class="ouiDataGridHeaderCell__content"
                             >
                               A
                             </div>
                             <span
                               aria-label="Header actions"
-                              class="euiDataGridHeaderCell__icon"
+                              class="ouiDataGridHeaderCell__icon"
                               color="text"
-                              data-euiicon-type="arrowDown"
+                              data-ouiicon-type="arrowDown"
                               data-test-subj="dataGridHeaderCellActionButton-A"
                             />
                           </button>
@@ -1471,37 +1471,37 @@ Array [
                       </div>
                     </div>
                     <div
-                      class="euiDataGridHeaderCell"
+                      class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-B"
                       role="columnheader"
                       style="width:100px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridColumnResizer"
+                        class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
                         style="margin-right:0px"
                       />
                       <div
-                        class="euiPopover euiPopover--anchorDownCenter"
+                        class="ouiPopover ouiPopover--anchorDownCenter"
                         offset="7"
                       >
                         <div
-                          class="euiPopover__anchor euiDataGridHeaderCell__anchor"
+                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                         >
                           <button
-                            class="euiDataGridHeaderCell__button"
+                            class="ouiDataGridHeaderCell__button"
                           >
                             <div
-                              class="euiDataGridHeaderCell__content"
+                              class="ouiDataGridHeaderCell__content"
                             >
                               B
                             </div>
                             <span
                               aria-label="Header actions"
-                              class="euiDataGridHeaderCell__icon"
+                              class="ouiDataGridHeaderCell__icon"
                               color="text"
-                              data-euiicon-type="arrowDown"
+                              data-ouiicon-type="arrowDown"
                               data-test-subj="dataGridHeaderCellActionButton-B"
                             />
                           </button>
@@ -1509,14 +1509,14 @@ Array [
                       </div>
                     </div>
                     <div
-                      class="euiDataGridHeaderCell euiDataGridHeaderCell--controlColumn"
+                      class="ouiDataGridHeaderCell ouiDataGridHeaderCell--controlColumn"
                       data-test-subj="dataGridHeaderCell-trailing"
                       role="columnheader"
                       style="width:50px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridHeaderCell__content"
+                        class="ouiDataGridHeaderCell__content"
                       >
                         <span>
                           trailing heading
@@ -1525,7 +1525,7 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--firstColumn euiDataGridRowCell--controlColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:0px;height:34px;width:50px"
@@ -1545,17 +1545,17 @@ Array [
                       data-focus-lock-disabled="disabled"
                     >
                       <div
-                        class="euiDataGridRowCell__expandFlex "
+                        class="ouiDataGridRowCell__expandFlex "
                       >
                         <div
-                          class="euiDataGridRowCell__expandContent"
+                          class="ouiDataGridRowCell__expandContent"
                         >
                           <div
-                            class="euiDataGridRowCell__truncate"
+                            class="ouiDataGridRowCell__truncate"
                           >
                             0
                             <p
-                              class="euiScreenReaderOnly"
+                              class="ouiScreenReaderOnly"
                             >
                               Row: 1, Column: 1:
                             </p>
@@ -1570,21 +1570,21 @@ Array [
                     />
                   </div>
                   <div
-                    class="euiDataGridRowCell"
+                    class="ouiDataGridRowCell"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:50px;top:0px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         0, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 1, Column: 2:
                         </p>
@@ -1592,21 +1592,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell"
+                    class="ouiDataGridRowCell"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:150px;top:0px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         0, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 1, Column: 3:
                         </p>
@@ -1614,7 +1614,7 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--lastColumn euiDataGridRowCell--controlColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:250px;top:0px;height:34px;width:50px"
@@ -1634,17 +1634,17 @@ Array [
                       data-focus-lock-disabled="disabled"
                     >
                       <div
-                        class="euiDataGridRowCell__expandFlex "
+                        class="ouiDataGridRowCell__expandFlex "
                       >
                         <div
-                          class="euiDataGridRowCell__expandContent"
+                          class="ouiDataGridRowCell__expandContent"
                         >
                           <div
-                            class="euiDataGridRowCell__truncate"
+                            class="ouiDataGridRowCell__truncate"
                           >
                             0
                             <p
-                              class="euiScreenReaderOnly"
+                              class="ouiScreenReaderOnly"
                             >
                               Row: 1, Column: 4:
                             </p>
@@ -1659,7 +1659,7 @@ Array [
                     />
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe euiDataGridRowCell--firstColumn euiDataGridRowCell--controlColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--firstColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:34px;height:34px;width:50px"
@@ -1679,17 +1679,17 @@ Array [
                       data-focus-lock-disabled="disabled"
                     >
                       <div
-                        class="euiDataGridRowCell__expandFlex "
+                        class="ouiDataGridRowCell__expandFlex "
                       >
                         <div
-                          class="euiDataGridRowCell__expandContent"
+                          class="ouiDataGridRowCell__expandContent"
                         >
                           <div
-                            class="euiDataGridRowCell__truncate"
+                            class="ouiDataGridRowCell__truncate"
                           >
                             1
                             <p
-                              class="euiScreenReaderOnly"
+                              class="ouiScreenReaderOnly"
                             >
                               Row: 2, Column: 1:
                             </p>
@@ -1704,21 +1704,21 @@ Array [
                     />
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:50px;top:34px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         1, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 2, Column: 2:
                         </p>
@@ -1726,21 +1726,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:150px;top:34px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         1, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 2, Column: 3:
                         </p>
@@ -1748,7 +1748,7 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe euiDataGridRowCell--lastColumn euiDataGridRowCell--controlColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--lastColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:250px;top:34px;height:34px;width:50px"
@@ -1768,17 +1768,17 @@ Array [
                       data-focus-lock-disabled="disabled"
                     >
                       <div
-                        class="euiDataGridRowCell__expandFlex "
+                        class="ouiDataGridRowCell__expandFlex "
                       >
                         <div
-                          class="euiDataGridRowCell__expandContent"
+                          class="ouiDataGridRowCell__expandContent"
                         >
                           <div
-                            class="euiDataGridRowCell__truncate"
+                            class="ouiDataGridRowCell__truncate"
                           >
                             1
                             <p
-                              class="euiScreenReaderOnly"
+                              class="ouiScreenReaderOnly"
                             >
                               Row: 2, Column: 4:
                             </p>
@@ -1793,7 +1793,7 @@ Array [
                     />
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--firstColumn euiDataGridRowCell--controlColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:68px;height:34px;width:50px"
@@ -1813,17 +1813,17 @@ Array [
                       data-focus-lock-disabled="disabled"
                     >
                       <div
-                        class="euiDataGridRowCell__expandFlex "
+                        class="ouiDataGridRowCell__expandFlex "
                       >
                         <div
-                          class="euiDataGridRowCell__expandContent"
+                          class="ouiDataGridRowCell__expandContent"
                         >
                           <div
-                            class="euiDataGridRowCell__truncate"
+                            class="ouiDataGridRowCell__truncate"
                           >
                             2
                             <p
-                              class="euiScreenReaderOnly"
+                              class="ouiScreenReaderOnly"
                             >
                               Row: 3, Column: 1:
                             </p>
@@ -1838,21 +1838,21 @@ Array [
                     />
                   </div>
                   <div
-                    class="euiDataGridRowCell"
+                    class="ouiDataGridRowCell"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:50px;top:68px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         2, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 3, Column: 2:
                         </p>
@@ -1860,21 +1860,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell"
+                    class="ouiDataGridRowCell"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:150px;top:68px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         2, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 3, Column: 3:
                         </p>
@@ -1882,7 +1882,7 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--lastColumn euiDataGridRowCell--controlColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:250px;top:68px;height:34px;width:50px"
@@ -1902,17 +1902,17 @@ Array [
                       data-focus-lock-disabled="disabled"
                     >
                       <div
-                        class="euiDataGridRowCell__expandFlex "
+                        class="ouiDataGridRowCell__expandFlex "
                       >
                         <div
-                          class="euiDataGridRowCell__expandContent"
+                          class="ouiDataGridRowCell__expandContent"
                         >
                           <div
-                            class="euiDataGridRowCell__truncate"
+                            class="ouiDataGridRowCell__truncate"
                           >
                             2
                             <p
-                              class="euiScreenReaderOnly"
+                              class="ouiScreenReaderOnly"
                             >
                               Row: 3, Column: 4:
                             </p>
@@ -1948,7 +1948,7 @@ Array [
 ]
 `;
 
-exports[`EuiDataGrid rendering renders custom column headers 1`] = `
+exports[`OuiDataGrid rendering renders custom column headers 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -1961,39 +1961,39 @@ Array [
     tabindex="-1"
   />,
   <div
-    class="euiDataGrid__focusWrap"
+    class="ouiDataGrid__focusWrap"
     data-focus-lock-disabled="disabled"
   >
     <div
-      class="euiDataGrid euiDataGrid--bordersAll euiDataGrid--headerShade euiDataGrid--footerOverline euiDataGrid--rowHoverHighlight euiDataGrid--stickyFooter testClass1 testClass2"
+      class="ouiDataGrid ouiDataGrid--bordersAll ouiDataGrid--headerShade ouiDataGrid--footerOverline ouiDataGrid--rowHoverHighlight ouiDataGrid--stickyFooter testClass1 testClass2"
       data-test-subj="test subject string"
     >
       <div
-        class="euiDataGrid__controls"
+        class="ouiDataGrid__controls"
         data-test-sub="dataGridControls"
       >
         <div
-          class="euiPopover euiPopover--anchorDownLeft"
+          class="ouiPopover ouiPopover--anchorDownLeft"
           data-test-subj="dataGridColumnSelectorPopover"
         >
           <div
-            class="euiPopover__anchor"
+            class="ouiPopover__anchor"
           >
             <button
-              class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn"
               data-test-subj="dataGridColumnSelectorButton"
               type="button"
             >
               <span
-                class="euiButtonContent euiButtonEmpty__content"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="euiButtonContent__icon"
+                  class="ouiButtonContent__icon"
                   color="inherit"
-                  data-euiicon-type="listAdd"
+                  data-ouiicon-type="listAdd"
                 />
                 <span
-                  class="euiButtonEmpty__text"
+                  class="ouiButtonEmpty__text"
                 >
                   Columns
                 </span>
@@ -2002,27 +2002,27 @@ Array [
           </div>
         </div>
         <div
-          class="euiPopover euiPopover--anchorDownCenter"
+          class="ouiPopover ouiPopover--anchorDownCenter"
           data-test-subj="dataGridStyleSelectorPopover"
         >
           <div
-            class="euiPopover__anchor"
+            class="ouiPopover__anchor"
           >
             <button
-              class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn"
               data-test-subj="dataGridStyleSelectorButton"
               type="button"
             >
               <span
-                class="euiButtonContent euiButtonEmpty__content"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="euiButtonContent__icon"
+                  class="ouiButtonContent__icon"
                   color="inherit"
-                  data-euiicon-type="tableDensityExpanded"
+                  data-ouiicon-type="tableDensityExpanded"
                 />
                 <span
-                  class="euiButtonEmpty__text"
+                  class="ouiButtonEmpty__text"
                 >
                   Density
                 </span>
@@ -2031,20 +2031,20 @@ Array [
           </div>
         </div>
         <button
-          class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn testClass1 testClass2"
+          class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn testClass1 testClass2"
           data-test-subj="dataGridFullScrenButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="ouiButtonContent ouiButtonEmpty__content"
           >
             <span
-              class="euiButtonContent__icon"
+              class="ouiButtonContent__icon"
               color="inherit"
-              data-euiicon-type="fullScreen"
+              data-ouiicon-type="fullScreen"
             />
             <span
-              class="euiButtonEmpty__text"
+              class="ouiButtonEmpty__text"
             >
               Full screen
             </span>
@@ -2052,14 +2052,14 @@ Array [
         </button>
       </div>
       <div
-        class="euiDataGrid__verticalScroll"
+        class="ouiDataGrid__verticalScroll"
       >
         <div
-          class="euiDataGrid__overflow"
+          class="ouiDataGrid__overflow"
         >
           <div
             aria-label="aria-label"
-            class="euiDataGrid__content"
+            class="ouiDataGrid__content"
             data-test-subj="dataGridWrapper"
             id="generated-id"
             role="grid"
@@ -2069,49 +2069,49 @@ Array [
               style="width:100%;height:100%;overflow:hidden"
             >
               <div
-                class="euiDataGrid__virtualized"
+                class="ouiDataGrid__virtualized"
                 style="position:relative;height:9007199254740991px;width:9007199254740991px;overflow:auto;-webkit-overflow-scrolling:touch;will-change:transform;direction:ltr"
               >
                 <div
                   style="height:102px;width:200px"
                 >
                   <div
-                    class="euiDataGridHeader"
+                    class="ouiDataGridHeader"
                     data-test-subj="dataGridHeader"
                     role="row"
                   >
                     <div
-                      class="euiDataGridHeaderCell"
+                      class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-A"
                       role="columnheader"
                       style="width:100px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridColumnResizer"
+                        class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
                         style="margin-right:0px"
                       />
                       <div
-                        class="euiPopover euiPopover--anchorDownCenter"
+                        class="ouiPopover ouiPopover--anchorDownCenter"
                         offset="7"
                       >
                         <div
-                          class="euiPopover__anchor euiDataGridHeaderCell__anchor"
+                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                         >
                           <button
-                            class="euiDataGridHeaderCell__button"
+                            class="ouiDataGridHeaderCell__button"
                           >
                             <div
-                              class="euiDataGridHeaderCell__content"
+                              class="ouiDataGridHeaderCell__content"
                             >
                               Column A
                             </div>
                             <span
                               aria-label="Header actions"
-                              class="euiDataGridHeaderCell__icon"
+                              class="ouiDataGridHeaderCell__icon"
                               color="text"
-                              data-euiicon-type="arrowDown"
+                              data-ouiicon-type="arrowDown"
                               data-test-subj="dataGridHeaderCellActionButton-A"
                             />
                           </button>
@@ -2119,29 +2119,29 @@ Array [
                       </div>
                     </div>
                     <div
-                      class="euiDataGridHeaderCell"
+                      class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-B"
                       role="columnheader"
                       style="width:100px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridColumnResizer"
+                        class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
                         style="margin-right:0px"
                       />
                       <div
-                        class="euiPopover euiPopover--anchorDownCenter"
+                        class="ouiPopover ouiPopover--anchorDownCenter"
                         offset="7"
                       >
                         <div
-                          class="euiPopover__anchor euiDataGridHeaderCell__anchor"
+                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                         >
                           <button
-                            class="euiDataGridHeaderCell__button"
+                            class="ouiDataGridHeaderCell__button"
                           >
                             <div
-                              class="euiDataGridHeaderCell__content"
+                              class="ouiDataGridHeaderCell__content"
                             >
                               <div>
                                 More Elements
@@ -2149,9 +2149,9 @@ Array [
                             </div>
                             <span
                               aria-label="Header actions"
-                              class="euiDataGridHeaderCell__icon"
+                              class="ouiDataGridHeaderCell__icon"
                               color="text"
-                              data-euiicon-type="arrowDown"
+                              data-ouiicon-type="arrowDown"
                               data-test-subj="dataGridHeaderCellActionButton-B"
                             />
                           </button>
@@ -2160,21 +2160,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--firstColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:0px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         0, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 1, Column: 1:
                         </p>
@@ -2182,21 +2182,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--lastColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:100px;top:0px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         0, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 1, Column: 2:
                         </p>
@@ -2204,21 +2204,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe euiDataGridRowCell--firstColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:34px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         1, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 2, Column: 1:
                         </p>
@@ -2226,21 +2226,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe euiDataGridRowCell--lastColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:100px;top:34px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         1, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 2, Column: 2:
                         </p>
@@ -2248,21 +2248,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--firstColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:68px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         2, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 3, Column: 1:
                         </p>
@@ -2270,21 +2270,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--lastColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:100px;top:68px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         2, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 3, Column: 2:
                         </p>
@@ -2313,7 +2313,7 @@ Array [
 ]
 `;
 
-exports[`EuiDataGrid rendering renders with common and div attributes 1`] = `
+exports[`OuiDataGrid rendering renders with common and div attributes 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -2326,39 +2326,39 @@ Array [
     tabindex="-1"
   />,
   <div
-    class="euiDataGrid__focusWrap"
+    class="ouiDataGrid__focusWrap"
     data-focus-lock-disabled="disabled"
   >
     <div
-      class="euiDataGrid euiDataGrid--bordersAll euiDataGrid--headerShade euiDataGrid--footerOverline euiDataGrid--rowHoverHighlight euiDataGrid--stickyFooter testClass1 testClass2"
+      class="ouiDataGrid ouiDataGrid--bordersAll ouiDataGrid--headerShade ouiDataGrid--footerOverline ouiDataGrid--rowHoverHighlight ouiDataGrid--stickyFooter testClass1 testClass2"
       data-test-subj="test subject string"
     >
       <div
-        class="euiDataGrid__controls"
+        class="ouiDataGrid__controls"
         data-test-sub="dataGridControls"
       >
         <div
-          class="euiPopover euiPopover--anchorDownLeft"
+          class="ouiPopover ouiPopover--anchorDownLeft"
           data-test-subj="dataGridColumnSelectorPopover"
         >
           <div
-            class="euiPopover__anchor"
+            class="ouiPopover__anchor"
           >
             <button
-              class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn"
               data-test-subj="dataGridColumnSelectorButton"
               type="button"
             >
               <span
-                class="euiButtonContent euiButtonEmpty__content"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="euiButtonContent__icon"
+                  class="ouiButtonContent__icon"
                   color="inherit"
-                  data-euiicon-type="listAdd"
+                  data-ouiicon-type="listAdd"
                 />
                 <span
-                  class="euiButtonEmpty__text"
+                  class="ouiButtonEmpty__text"
                 >
                   Columns
                 </span>
@@ -2367,27 +2367,27 @@ Array [
           </div>
         </div>
         <div
-          class="euiPopover euiPopover--anchorDownCenter"
+          class="ouiPopover ouiPopover--anchorDownCenter"
           data-test-subj="dataGridStyleSelectorPopover"
         >
           <div
-            class="euiPopover__anchor"
+            class="ouiPopover__anchor"
           >
             <button
-              class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn"
               data-test-subj="dataGridStyleSelectorButton"
               type="button"
             >
               <span
-                class="euiButtonContent euiButtonEmpty__content"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="euiButtonContent__icon"
+                  class="ouiButtonContent__icon"
                   color="inherit"
-                  data-euiicon-type="tableDensityExpanded"
+                  data-ouiicon-type="tableDensityExpanded"
                 />
                 <span
-                  class="euiButtonEmpty__text"
+                  class="ouiButtonEmpty__text"
                 >
                   Density
                 </span>
@@ -2396,20 +2396,20 @@ Array [
           </div>
         </div>
         <button
-          class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiDataGrid__controlBtn testClass1 testClass2"
+          class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiDataGrid__controlBtn testClass1 testClass2"
           data-test-subj="dataGridFullScrenButton"
           type="button"
         >
           <span
-            class="euiButtonContent euiButtonEmpty__content"
+            class="ouiButtonContent ouiButtonEmpty__content"
           >
             <span
-              class="euiButtonContent__icon"
+              class="ouiButtonContent__icon"
               color="inherit"
-              data-euiicon-type="fullScreen"
+              data-ouiicon-type="fullScreen"
             />
             <span
-              class="euiButtonEmpty__text"
+              class="ouiButtonEmpty__text"
             >
               Full screen
             </span>
@@ -2417,14 +2417,14 @@ Array [
         </button>
       </div>
       <div
-        class="euiDataGrid__verticalScroll"
+        class="ouiDataGrid__verticalScroll"
       >
         <div
-          class="euiDataGrid__overflow"
+          class="ouiDataGrid__overflow"
         >
           <div
             aria-label="aria-label"
-            class="euiDataGrid__content"
+            class="ouiDataGrid__content"
             data-test-subj="dataGridWrapper"
             id="generated-id"
             role="grid"
@@ -2434,49 +2434,49 @@ Array [
               style="width:100%;height:100%;overflow:hidden"
             >
               <div
-                class="euiDataGrid__virtualized"
+                class="ouiDataGrid__virtualized"
                 style="position:relative;height:9007199254740991px;width:9007199254740991px;overflow:auto;-webkit-overflow-scrolling:touch;will-change:transform;direction:ltr"
               >
                 <div
                   style="height:102px;width:200px"
                 >
                   <div
-                    class="euiDataGridHeader"
+                    class="ouiDataGridHeader"
                     data-test-subj="dataGridHeader"
                     role="row"
                   >
                     <div
-                      class="euiDataGridHeaderCell"
+                      class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-A"
                       role="columnheader"
                       style="width:100px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridColumnResizer"
+                        class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
                         style="margin-right:0px"
                       />
                       <div
-                        class="euiPopover euiPopover--anchorDownCenter"
+                        class="ouiPopover ouiPopover--anchorDownCenter"
                         offset="7"
                       >
                         <div
-                          class="euiPopover__anchor euiDataGridHeaderCell__anchor"
+                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                         >
                           <button
-                            class="euiDataGridHeaderCell__button"
+                            class="ouiDataGridHeaderCell__button"
                           >
                             <div
-                              class="euiDataGridHeaderCell__content"
+                              class="ouiDataGridHeaderCell__content"
                             >
                               A
                             </div>
                             <span
                               aria-label="Header actions"
-                              class="euiDataGridHeaderCell__icon"
+                              class="ouiDataGridHeaderCell__icon"
                               color="text"
-                              data-euiicon-type="arrowDown"
+                              data-ouiicon-type="arrowDown"
                               data-test-subj="dataGridHeaderCellActionButton-A"
                             />
                           </button>
@@ -2484,37 +2484,37 @@ Array [
                       </div>
                     </div>
                     <div
-                      class="euiDataGridHeaderCell"
+                      class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-B"
                       role="columnheader"
                       style="width:100px"
                       tabindex="-1"
                     >
                       <div
-                        class="euiDataGridColumnResizer"
+                        class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
                         style="margin-right:0px"
                       />
                       <div
-                        class="euiPopover euiPopover--anchorDownCenter"
+                        class="ouiPopover ouiPopover--anchorDownCenter"
                         offset="7"
                       >
                         <div
-                          class="euiPopover__anchor euiDataGridHeaderCell__anchor"
+                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                         >
                           <button
-                            class="euiDataGridHeaderCell__button"
+                            class="ouiDataGridHeaderCell__button"
                           >
                             <div
-                              class="euiDataGridHeaderCell__content"
+                              class="ouiDataGridHeaderCell__content"
                             >
                               B
                             </div>
                             <span
                               aria-label="Header actions"
-                              class="euiDataGridHeaderCell__icon"
+                              class="ouiDataGridHeaderCell__icon"
                               color="text"
-                              data-euiicon-type="arrowDown"
+                              data-ouiicon-type="arrowDown"
                               data-test-subj="dataGridHeaderCellActionButton-B"
                             />
                           </button>
@@ -2523,21 +2523,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--firstColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:0px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         0, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 1, Column: 1:
                         </p>
@@ -2545,21 +2545,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--lastColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:100px;top:0px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         0, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 1, Column: 2:
                         </p>
@@ -2567,21 +2567,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe euiDataGridRowCell--firstColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:34px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         1, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 2, Column: 1:
                         </p>
@@ -2589,21 +2589,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--stripe euiDataGridRowCell--lastColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:100px;top:34px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         1, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 2, Column: 2:
                         </p>
@@ -2611,21 +2611,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--firstColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:0;top:68px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         2, A
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 3, Column: 1:
                         </p>
@@ -2633,21 +2633,21 @@ Array [
                     </div>
                   </div>
                   <div
-                    class="euiDataGridRowCell euiDataGridRowCell--lastColumn"
+                    class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
                     style="position:absolute;left:100px;top:68px;height:34px;width:100px"
                     tabindex="-1"
                   >
                     <div
-                      class="euiDataGridRowCell__expandFlex "
+                      class="ouiDataGridRowCell__expandFlex "
                     >
                       <div
-                        class="euiDataGridRowCell__truncate"
+                        class="ouiDataGridRowCell__truncate"
                       >
                         2, B
                         <p
-                          class="euiScreenReaderOnly"
+                          class="ouiScreenReaderOnly"
                         >
                           Row: 3, Column: 2:
                         </p>

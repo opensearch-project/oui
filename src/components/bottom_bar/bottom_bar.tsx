@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,11 +37,11 @@ import React, {
   useState,
 } from 'react';
 import { useCombinedRefs } from '../../services';
-import { EuiScreenReaderOnly } from '../accessibility';
+import { OuiScreenReaderOnly } from '../accessibility';
 import { CommonProps, ExclusiveUnion } from '../common';
-import { EuiI18n } from '../i18n';
+import { OuiI18n } from '../i18n';
 import { useResizeObserver } from '../observer/resize_observer';
-import { EuiPortal } from '../portal';
+import { OuiPortal } from '../portal';
 
 type BottomBarPaddingSize = 'none' | 's' | 'm' | 'l';
 
@@ -39,9 +50,9 @@ export const paddingSizeToClassNameMap: {
   [value in BottomBarPaddingSize]: string | null;
 } = {
   none: null,
-  s: 'euiBottomBar--paddingSmall',
-  m: 'euiBottomBar--paddingMedium',
-  l: 'euiBottomBar--paddingLarge',
+  s: 'ouiBottomBar--paddingSmall',
+  m: 'ouiBottomBar--paddingMedium',
+  l: 'ouiBottomBar--paddingLarge',
 };
 
 export const POSITIONS = ['static', 'fixed', 'sticky'] as const;
@@ -51,7 +62,7 @@ type _BottomBarExclusivePositions = ExclusiveUnion<
   {
     position?: 'fixed';
     /**
-     * Whether to wrap in an EuiPortal which appends the component to the body element.
+     * Whether to wrap in an OuiPortal which appends the component to the body element.
      * Only works if `position` is `fixed`.
      */
     usePortal?: boolean;
@@ -68,7 +79,7 @@ type _BottomBarExclusivePositions = ExclusiveUnion<
     position: 'static' | 'sticky';
   }
 >;
-export type EuiBottomBarProps = CommonProps &
+export type OuiBottomBarProps = CommonProps &
   HTMLAttributes<HTMLElement> &
   _BottomBarExclusivePositions & {
     /**
@@ -107,9 +118,9 @@ export type EuiBottomBarProps = CommonProps &
     left?: CSSProperties['left'];
   };
 
-export const EuiBottomBar = forwardRef<
+export const OuiBottomBar = forwardRef<
   HTMLElement, // type of element or component the ref will be passed to
-  EuiBottomBarProps // what properties apart from `ref` the component accepts
+  OuiBottomBarProps // what properties apart from `ref` the component accepts
 >(
   (
     {
@@ -161,8 +172,8 @@ export const EuiBottomBar = forwardRef<
     }, [affordForDisplacement, usePortal, dimensions, bodyClassName]);
 
     const classes = classNames(
-      'euiBottomBar',
-      `euiBottomBar--${position}`,
+      'ouiBottomBar',
+      `ouiBottomBar--${position}`,
       paddingSizeToClassNameMap[paddingSize],
       className
     );
@@ -177,8 +188,8 @@ export const EuiBottomBar = forwardRef<
 
     const bar = (
       <>
-        <EuiI18n
-          token="euiBottomBar.screenReaderHeading"
+        <OuiI18n
+          token="ouiBottomBar.screenReaderHeading"
           default="Page level controls">
           {(screenReaderHeading: string) => (
             // Though it would be better to use aria-labelledby than aria-label and not repeat the same string twice
@@ -191,36 +202,36 @@ export const EuiBottomBar = forwardRef<
               ref={setRef}
               style={newStyle}
               {...rest}>
-              <EuiScreenReaderOnly>
+              <OuiScreenReaderOnly>
                 <h2>
                   {landmarkHeading ? landmarkHeading : screenReaderHeading}
                 </h2>
-              </EuiScreenReaderOnly>
+              </OuiScreenReaderOnly>
               {children}
             </section>
           )}
-        </EuiI18n>
-        <EuiScreenReaderOnly>
+        </OuiI18n>
+        <OuiScreenReaderOnly>
           <p aria-live="assertive">
             {landmarkHeading ? (
-              <EuiI18n
-                token="euiBottomBar.customScreenReaderAnnouncement"
+              <OuiI18n
+                token="ouiBottomBar.customScreenReaderAnnouncement"
                 default="There is a new region landmark called {landmarkHeading} with page level controls at the end of the document."
                 values={{ landmarkHeading }}
               />
             ) : (
-              <EuiI18n
-                token="euiBottomBar.screenReaderAnnouncement"
+              <OuiI18n
+                token="ouiBottomBar.screenReaderAnnouncement"
                 default="There is a new region landmark with page level controls at the end of the document."
               />
             )}
           </p>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       </>
     );
 
-    return usePortal ? <EuiPortal>{bar}</EuiPortal> : bar;
+    return usePortal ? <OuiPortal>{bar}</OuiPortal> : bar;
   }
 );
 
-EuiBottomBar.displayName = 'EuiBottomBar';
+OuiBottomBar.displayName = 'OuiBottomBar';

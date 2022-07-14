@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiRange, EuiDualRange } from '../../../../src/components/';
+import { OuiRange, OuiDualRange } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
 } from '../../services/playground';
 
 export const rangeConfig = () => {
-  const docgenInfo = Array.isArray(EuiRange.__docgenInfo)
-    ? EuiRange.__docgenInfo[0]
-    : EuiRange.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiRange.__docgenInfo)
+    ? OuiRange.__docgenInfo[0]
+    : OuiRange.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -34,7 +45,7 @@ export const rangeConfig = () => {
       ...propsToUse.tickInterval.custom,
       checkDep: (val, state) => {
         if (state.showTicks.value && !val) {
-          return 'When passing showTicks to EuiDualRange, you must also provide tickInterval';
+          return 'When passing showTicks to OuiDualRange, you must also provide tickInterval';
         }
         return undefined;
       },
@@ -57,14 +68,14 @@ export const rangeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiRange',
+      componentName: 'OuiRange',
       props: propsToUse,
       scope: {
-        EuiRange,
+        OuiRange,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiRange'],
+        '@opensearch-project/oui': {
+          named: ['OuiRange'],
         },
       },
       customProps: {
@@ -75,9 +86,9 @@ export const rangeConfig = () => {
 };
 
 export const dualRangeConfig = () => {
-  const docgenInfo = Array.isArray(EuiDualRange.__docgenInfo)
-    ? EuiDualRange.__docgenInfo[0]
-    : EuiDualRange.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiDualRange.__docgenInfo)
+    ? OuiDualRange.__docgenInfo[0]
+    : OuiDualRange.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -109,7 +120,7 @@ export const dualRangeConfig = () => {
       ...propsToUse.tickInterval.custom,
       checkDep: (val, state) => {
         if (state.showTicks.value && !val) {
-          return 'When passing showTicks to EuiRange, you must also provide tickInterval';
+          return 'When passing showTicks to OuiRange, you must also provide tickInterval';
         }
         return undefined;
       },
@@ -118,14 +129,14 @@ export const dualRangeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiDualRange',
+      componentName: 'OuiDualRange',
       props: propsToUse,
       scope: {
-        EuiDualRange,
+        OuiDualRange,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiDualRange'],
+        '@opensearch-project/oui': {
+          named: ['OuiDualRange'],
         },
       },
       customProps: {

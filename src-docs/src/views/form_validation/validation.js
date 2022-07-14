@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiButton,
-  EuiForm,
-  EuiSelect,
-  EuiFormRow,
-  EuiTextArea,
-  EuiFieldText,
-  EuiSpacer,
+  OuiButton,
+  OuiForm,
+  OuiSelect,
+  OuiFormRow,
+  OuiTextArea,
+  OuiFieldText,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -18,9 +29,9 @@ export default () => {
   };
 
   const button = (
-    <EuiButton fill color="danger" onClick={onButtonClick}>
+    <OuiButton fill color="danger" onClick={onButtonClick}>
       Toggle errors
-    </EuiButton>
+    </OuiButton>
   );
 
   let errors;
@@ -34,25 +45,25 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiForm isInvalid={showErrors} error={errors} component="form">
-        <EuiFormRow label="Validation only" isInvalid={showErrors}>
-          <EuiFieldText name="first" isInvalid={showErrors} />
-        </EuiFormRow>
+      <OuiForm isInvalid={showErrors} error={errors} component="form">
+        <OuiFormRow label="Validation only" isInvalid={showErrors}>
+          <OuiFieldText name="first" isInvalid={showErrors} />
+        </OuiFormRow>
 
-        <EuiFormRow
+        <OuiFormRow
           label="Validation with help text and errors"
           helpText="I am some friendly help text."
           isInvalid={showErrors}
           error={errors}>
-          <EuiFieldText name="text" isInvalid={showErrors} />
-        </EuiFormRow>
+          <OuiFieldText name="text" isInvalid={showErrors} />
+        </OuiFormRow>
 
-        <EuiFormRow label="Text area" isInvalid={showErrors}>
-          <EuiTextArea name="area" isInvalid={showErrors} />
-        </EuiFormRow>
+        <OuiFormRow label="Text area" isInvalid={showErrors}>
+          <OuiTextArea name="area" isInvalid={showErrors} />
+        </OuiFormRow>
 
-        <EuiFormRow label="Select" isInvalid={showErrors}>
-          <EuiSelect
+        <OuiFormRow label="Select" isInvalid={showErrors}>
+          <OuiSelect
             options={[
               { value: 'option_one', text: 'Option one' },
               { value: 'option_two', text: 'Option two' },
@@ -60,12 +71,12 @@ export default () => {
             ]}
             isInvalid={showErrors}
           />
-        </EuiFormRow>
+        </OuiFormRow>
 
-        <EuiSpacer />
+        <OuiSpacer />
 
         {button}
-      </EuiForm>
+      </OuiForm>
     </Fragment>
   );
 };

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,14 +31,14 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../../common';
 import { getLinearGradient } from '../utils';
-import { EuiColorPaletteDisplayShared } from './color_palette_display';
+import { OuiColorPaletteDisplayShared } from './color_palette_display';
 
-export interface EuiColorPaletteDisplayGradientProps
+export interface OuiColorPaletteDisplayGradientProps
   extends HTMLAttributes<HTMLSpanElement>,
     CommonProps,
-    EuiColorPaletteDisplayShared {}
+    OuiColorPaletteDisplayShared {}
 
-export const EuiColorPaletteDisplayGradient: FunctionComponent<EuiColorPaletteDisplayGradientProps> = ({
+export const OuiColorPaletteDisplayGradient: FunctionComponent<OuiColorPaletteDisplayGradientProps> = ({
   palette,
   style = {},
   ...rest

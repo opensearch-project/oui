@@ -1,12 +1,23 @@
-.euiFlexGrid {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFlexGrid {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 0;
 
-  > .euiFlexItem {
+  > .ouiFlexItem {
     flex-grow: 0;
 
-    &.euiFlexItem--flexGrowZero {
+    &.ouiFlexItem--flexGrowZero {
       // sass-lint:disable-block no-important
       flex-grow: 0 !important;
       flex-basis: auto !important;
@@ -17,11 +28,11 @@
 /**
   * 1. For vertical layouts we use columns instead of flex
   */
-.euiFlexGrid--directionColumn {
+.ouiFlexGrid--directionColumn {
   display: block; /* 1 */
   column-gap: 0; // The "gap" comes from the margin around the item
 
-  > .euiFlexItem {
+  > .ouiFlexItem {
     display: inline-block; /* 1 */
     line-height: initial; // Ensures the item itself doesn't impose any height
   }
@@ -30,10 +41,10 @@
 $gutterTypes: (
   // We're using calc which requires the px unit
   gutterNone: 0px, // sass-lint:disable-line zero-unit
-  gutterSmall: $euiSizeS,
-  gutterMedium: $euiSize,
-  gutterLarge: $euiSizeL,
-  gutterXLarge: $euiSizeXL,
+  gutterSmall: $ouiSizeS,
+  gutterMedium: $ouiSize,
+  gutterLarge: $ouiSizeL,
+  gutterXLarge: $ouiSizeXL,
 );
 
 $fractions: (
@@ -62,25 +73,25 @@ $fractions: (
    * Uncouple the gutter margin from the column widths to support cases where we use a FlexGrid
    * without columns.
    */
-  .euiFlexGrid--#{$gutterName} {
+  .ouiFlexGrid--#{$gutterName} {
     margin: -$halfGutterSize;
     align-items: stretch;
 
-    > .euiFlexItem {
+    > .ouiFlexItem {
       margin: $halfGutterSize;
     }
   }
 
   @each $fraction, $map in $fractions {
-    .euiFlexGrid--#{$gutterName}.euiFlexGrid--#{$fraction} {
-      > .euiFlexItem {
+    .ouiFlexGrid--#{$gutterName}.ouiFlexGrid--#{$fraction} {
+      > .ouiFlexItem {
         flex-basis: calc(#{map-get($map, 'percentage')} - #{$gutterSize});
       }
 
-      &.euiFlexGrid--directionColumn { /* 1 */
+      &.ouiFlexGrid--directionColumn { /* 1 */
         column-count: map-get($map, 'count');
 
-        > .euiFlexItem {
+        > .ouiFlexItem {
           width: calc(100% - #{$gutterSize});
         }
       }
@@ -89,8 +100,8 @@ $fractions: (
 }
 
 
-@include euiBreakpoint('xs', 's') {
-  .euiFlexGrid.euiFlexGrid--responsive {
+@include ouiBreakpoint('xs', 's') {
+  .ouiFlexGrid.ouiFlexGrid--responsive {
     // sass-lint:disable-block no-important
     margin-left: 0 !important;
     margin-right: 0 !important;

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTextColor is rendered 1`] = `
+exports[`OuiTextColor is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiTextColor euiTextColor--default testClass1 testClass2"
+  class="ouiTextColor ouiTextColor--default testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;

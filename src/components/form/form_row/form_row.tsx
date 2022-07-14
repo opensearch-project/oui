@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -30,32 +41,32 @@ import { ExclusiveUnion, CommonProps, keysOf } from '../../common';
 
 import { get } from '../../../services/objects';
 
-import { EuiFormHelpText } from '../form_help_text';
-import { EuiFormErrorText } from '../form_error_text';
-import { EuiFormLabel } from '../form_label';
+import { OuiFormHelpText } from '../form_help_text';
+import { OuiFormErrorText } from '../form_error_text';
+import { OuiFormLabel } from '../form_label';
 
 import { htmlIdGenerator } from '../../../services/accessibility';
 
 const displayToClassNameMap = {
   row: null,
-  rowCompressed: 'euiFormRow--compressed',
-  columnCompressed: 'euiFormRow--compressed euiFormRow--horizontal',
+  rowCompressed: 'ouiFormRow--compressed',
+  columnCompressed: 'ouiFormRow--compressed ouiFormRow--horizontal',
   center: null,
-  centerCompressed: 'euiFormRow--compressed',
+  centerCompressed: 'ouiFormRow--compressed',
   columnCompressedSwitch:
-    'euiFormRow--compressed euiFormRow--horizontal euiFormRow--hasSwitch',
+    'ouiFormRow--compressed ouiFormRow--horizontal ouiFormRow--hasSwitch',
 };
 
 export const DISPLAYS = keysOf(displayToClassNameMap);
 
-export type EuiFormRowDisplayKeys = keyof typeof displayToClassNameMap;
+export type OuiFormRowDisplayKeys = keyof typeof displayToClassNameMap;
 
-interface EuiFormRowState {
+interface OuiFormRowState {
   isFocused: boolean;
   id: string;
 }
 
-type EuiFormRowCommonProps = CommonProps & {
+type OuiFormRowCommonProps = CommonProps & {
   /**
    * When `rowCompressed`, just tightens up the spacing;
    * Set to `columnCompressed` if compressed
@@ -65,7 +76,7 @@ type EuiFormRowCommonProps = CommonProps & {
    * Set to `columnCompressedSwitch` if the form control being passed
    * as the child is a switch.
    */
-  display?: EuiFormRowDisplayKeys;
+  display?: OuiFormRowDisplayKeys;
   hasEmptyLabelSpace?: boolean;
   fullWidth?: boolean;
   /**
@@ -98,7 +109,7 @@ type EuiFormRowCommonProps = CommonProps & {
 
 type LabelProps = {
   labelType?: 'label';
-} & EuiFormRowCommonProps &
+} & OuiFormRowCommonProps &
   HTMLAttributes<HTMLDivElement>;
 
 type LegendProps = {
@@ -107,12 +118,12 @@ type LegendProps = {
    * will render both a `<legend>` and the surrounding container as a `<fieldset>`
    */
   labelType?: 'legend';
-} & EuiFormRowCommonProps &
+} & OuiFormRowCommonProps &
   HTMLAttributes<HTMLFieldSetElement>;
 
-export type EuiFormRowProps = ExclusiveUnion<LabelProps, LegendProps>;
+export type OuiFormRowProps = ExclusiveUnion<LabelProps, LegendProps>;
 
-export class EuiFormRow extends Component<EuiFormRowProps, EuiFormRowState> {
+export class OuiFormRow extends Component<OuiFormRowProps, OuiFormRowState> {
   static defaultProps = {
     display: 'row',
     hasEmptyLabelSpace: false,
@@ -122,7 +133,7 @@ export class EuiFormRow extends Component<EuiFormRowProps, EuiFormRowState> {
     hasChildLabel: true,
   };
 
-  state: EuiFormRowState = {
+  state: OuiFormRowState = {
     isFocused: false,
     id: this.props.id || htmlIdGenerator()(),
   };
@@ -179,10 +190,10 @@ export class EuiFormRow extends Component<EuiFormRowProps, EuiFormRowState> {
     const { id } = this.state;
 
     const classes = classNames(
-      'euiFormRow',
+      'ouiFormRow',
       {
-        'euiFormRow--hasEmptyLabelSpace': hasEmptyLabelSpace,
-        'euiFormRow--fullWidth': fullWidth,
+        'ouiFormRow--hasEmptyLabelSpace': hasEmptyLabelSpace,
+        'ouiFormRow--fullWidth': fullWidth,
       },
       displayToClassNameMap[display!], // Safe use of ! as default prop is 'row'
       className
@@ -195,12 +206,12 @@ export class EuiFormRow extends Component<EuiFormRowProps, EuiFormRowState> {
       optionalHelpTexts = helpTexts.map((helpText, i) => {
         const key = typeof helpText === 'string' ? helpText : i;
         return (
-          <EuiFormHelpText
+          <OuiFormHelpText
             key={key}
             id={`${id}-help-${i}`}
-            className="euiFormRow__text">
+            className="ouiFormRow__text">
             {helpText}
-          </EuiFormHelpText>
+          </OuiFormHelpText>
         );
       });
     }
@@ -212,12 +223,12 @@ export class EuiFormRow extends Component<EuiFormRowProps, EuiFormRowState> {
       optionalErrors = errorTexts.map((error, i) => {
         const key = typeof error === 'string' ? error : i;
         return (
-          <EuiFormErrorText
+          <OuiFormErrorText
             key={key}
             id={`${id}-error-${i}`}
-            className="euiFormRow__text">
+            className="ouiFormRow__text">
             {error}
-          </EuiFormErrorText>
+          </OuiFormErrorText>
         );
       });
     }
@@ -239,14 +250,14 @@ export class EuiFormRow extends Component<EuiFormRowProps, EuiFormRowState> {
         };
       }
       optionalLabel = (
-        <div className="euiFormRow__labelWrapper">
-          <EuiFormLabel
-            className="euiFormRow__label"
+        <div className="ouiFormRow__labelWrapper">
+          <OuiFormLabel
+            className="ouiFormRow__label"
             isInvalid={isInvalid}
             aria-invalid={isInvalid}
             {...labelProps}>
             {label}
-          </EuiFormLabel>
+          </OuiFormLabel>
           {labelAppend && ' '}
           {labelAppend}
         </div>
@@ -280,8 +291,8 @@ export class EuiFormRow extends Component<EuiFormRowProps, EuiFormRowState> {
       ...optionalProps,
     });
 
-    const fieldWrapperClasses = classNames('euiFormRow__fieldWrapper', {
-      euiFormRow__fieldWrapperDisplayOnly:
+    const fieldWrapperClasses = classNames('ouiFormRow__fieldWrapper', {
+      ouiFormRow__fieldWrapperDisplayOnly:
         /**
          * Safe use of ! as default prop is 'row'
          */

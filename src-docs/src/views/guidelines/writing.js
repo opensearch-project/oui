@@ -1,30 +1,41 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import classNames from 'classnames';
 
 import { GuideRule, GuideRuleExample } from '../../components';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiCard,
-  EuiCheckbox,
-  EuiFieldNumber,
-  EuiFieldPassword,
-  EuiFieldSearch,
-  EuiFieldText,
-  EuiFlexGrid,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFormRow,
-  EuiHorizontalRule,
-  EuiIcon,
-  EuiLink,
-  EuiPanel,
-  EuiSpacer,
-  EuiTab,
-  EuiTabs,
-  EuiText,
-  EuiTitle,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiCard,
+  OuiCheckbox,
+  OuiFieldNumber,
+  OuiFieldPassword,
+  OuiFieldSearch,
+  OuiFieldText,
+  OuiFlexGrid,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFormRow,
+  OuiHorizontalRule,
+  OuiIcon,
+  OuiLink,
+  OuiPanel,
+  OuiSpacer,
+  OuiTab,
+  OuiTabs,
+  OuiText,
+  OuiTitle,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -33,9 +44,9 @@ const GuideRuleWriting = ({ children, className, ...rest }) => {
   const classes = classNames(className);
 
   return (
-    <EuiText className={classes} {...rest}>
+    <OuiText className={classes} {...rest}>
       <p>{children}</p>
-    </EuiText>
+    </OuiText>
   );
 };
 
@@ -43,46 +54,46 @@ export default {
   title: 'Writing Guidelines',
   intro: (
     <>
-      <EuiText grow={false}>
+      <OuiText grow={false}>
         <p>
           You can have the most beautiful UI, but without{' '}
           <b>consistent, easy-to-understand text</b>, you haven’t built the best
           user experience.
         </p>
-      </EuiText>
+      </OuiText>
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiFlexGrid columns={3}>
-        <EuiFlexItem>
-          <EuiCard
+      <OuiFlexGrid columns={3}>
+        <OuiFlexItem>
+          <OuiCard
             layout="horizontal"
             title="Clear and concise"
             description="Get straight to the point&mdash;in a way that your users
               understand. Make every word contribute to meaning."
           />
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
-          <EuiCard
+        <OuiFlexItem>
+          <OuiCard
             layout="horizontal"
             title="Consistent"
             description="Use the same terminology to mean the same thing. Make sure
           spelling, capitalization, punctuation, labels, and use of
           abbreviations are all consistent."
           />
-        </EuiFlexItem>
+        </OuiFlexItem>
 
-        <EuiFlexItem>
-          <EuiCard
+        <OuiFlexItem>
+          <OuiCard
             layout="horizontal"
             title="Conversational"
             description="Write as a professional in the field would talk&mdash;not as a
           professor lecturing students. Use words that the user would use."
           />
-        </EuiFlexItem>
-      </EuiFlexGrid>
-      <EuiSpacer size="xl" />
+        </OuiFlexItem>
+      </OuiFlexGrid>
+      <OuiSpacer size="xl" />
     </>
   ),
   sections: [
@@ -98,17 +109,17 @@ export default {
             <GuideRuleExample
               type="do"
               text="Sentence case makes titles easier to read.">
-              <EuiTitle size="xs">
+              <OuiTitle size="xs">
                 <span>Create index patterns</span>
-              </EuiTitle>
+              </OuiTitle>
             </GuideRuleExample>
 
             <GuideRuleExample
               type="dont"
               text="Title case can feel more cluttered.">
-              <EuiTitle size="xs">
+              <OuiTitle size="xs">
                 <span>Create Index Patterns</span>
-              </EuiTitle>
+              </OuiTitle>
             </GuideRuleExample>
           </GuideRule>
 
@@ -116,14 +127,14 @@ export default {
             <GuideRuleExample
               type="do"
               text="Sentence case is friendlier in button labels.">
-              <EuiButton fill color="text">
+              <OuiButton fill color="text">
                 Set up index pattern
-              </EuiButton>
+              </OuiButton>
             </GuideRuleExample>
             <GuideRuleExample type="dont" text="Title case looks too formal.">
-              <EuiButton fill color="text">
+              <OuiButton fill color="text">
                 Set Up Index Pattern
-              </EuiButton>
+              </OuiButton>
             </GuideRuleExample>
           </GuideRule>
 
@@ -133,22 +144,22 @@ export default {
             <GuideRuleExample
               type="do"
               text="Title case in tabs and titles for names of features.">
-              <EuiTabs display="condensed">
-                <EuiTab>Inventory</EuiTab>
-                <EuiTab isSelected>Metrics Explorer</EuiTab>
-              </EuiTabs>
+              <OuiTabs display="condensed">
+                <OuiTab>Inventory</OuiTab>
+                <OuiTab isSelected>Metrics Explorer</OuiTab>
+              </OuiTabs>
             </GuideRuleExample>
             <GuideRuleExample
               type="dont"
               text="Features are proper names, not sentences.">
-              <EuiTabs display="condensed">
-                <EuiTab>Inventory</EuiTab>
-                <EuiTab isSelected>Metrics explorer</EuiTab>
-              </EuiTabs>
+              <OuiTabs display="condensed">
+                <OuiTab>Inventory</OuiTab>
+                <OuiTab isSelected>Metrics explorer</OuiTab>
+              </OuiTabs>
             </GuideRuleExample>
           </GuideRule>
 
-          <EuiHorizontalRule />
+          <OuiHorizontalRule />
         </>
       ),
     },
@@ -183,21 +194,21 @@ export default {
       Don't repeat what's already been said or state the obvious.
       Omit common introductory phrases.">
             <GuideRuleExample type="do" text="Keep it short.">
-              <EuiText>
+              <OuiText>
                 <h4>Edit saved objects</h4>
-              </EuiText>
+              </OuiText>
             </GuideRuleExample>
 
             <GuideRuleExample
               type="dont"
               text="Repeat what's already been said or state the obvious.">
-              <EuiText>
+              <OuiText>
                 <h4>Edit saved objects</h4>
                 <p>
                   From here, you can edit saved objects. To get started, follow
                   these steps.
                 </p>
-              </EuiText>
+              </OuiText>
             </GuideRuleExample>
           </GuideRule>
 
@@ -238,15 +249,15 @@ export default {
             <GuideRuleExample
               type="do"
               text="Avoid unneeded words in button labels.">
-              <EuiButton fill>Create component template</EuiButton>
+              <OuiButton fill>Create component template</OuiButton>
             </GuideRuleExample>
             <GuideRuleExample
               type="dont"
               text='Use "create a new" or include articles in button labels.'>
-              <EuiButton fill>Create a new component template</EuiButton>
+              <OuiButton fill>Create a new component template</OuiButton>
             </GuideRuleExample>
           </GuideRule>
-          <EuiHorizontalRule />
+          <OuiHorizontalRule />
         </>
       ),
     },
@@ -316,7 +327,7 @@ export default {
               </GuideRuleWriting>
             </GuideRuleExample>
           </GuideRule>
-          <EuiHorizontalRule />
+          <OuiHorizontalRule />
         </>
       ),
     },
@@ -335,22 +346,22 @@ export default {
               panelDisplay="block"
               type="do"
               text='Use an "s" or "es" to show plural.'>
-              <EuiFormRow
+              <OuiFormRow
                 label="Airports"
                 helpText="Separate multiple names with a comma">
-                <EuiFieldText />
-              </EuiFormRow>
+                <OuiFieldText />
+              </OuiFormRow>
             </GuideRuleExample>
 
             <GuideRuleExample
               panelDisplay="block"
               type="dont"
               text="Use (s), a colon after labels, or parenthetical statements.">
-              <EuiFormRow
+              <OuiFormRow
                 label="Airport(s):"
                 helpText="Separate multiple names with a comma (other characters are unsupported).">
-                <EuiFieldText />
-              </EuiFormRow>
+                <OuiFieldText />
+              </OuiFormRow>
             </GuideRuleExample>
           </GuideRule>
 
@@ -359,7 +370,7 @@ export default {
               panelDisplay="block"
               type="do"
               text="Remove the ellipsis from Search fields.">
-              <EuiFieldSearch
+              <OuiFieldSearch
                 defaultValue="Search"
                 aria-label="Search example"
               />
@@ -369,7 +380,7 @@ export default {
               panelDisplay="block"
               type="do"
               text="Use an ellipsis for truncated text or situations that require waiting.">
-              <EuiFieldSearch
+              <OuiFieldSearch
                 defaultValue="Loading..."
                 aria-label="Search loading example"
               />
@@ -385,27 +396,27 @@ export default {
               panelDisplay="block"
               type="do"
               text="Use periods at the end of help text.">
-              <EuiFormRow
+              <OuiFormRow
                 label="Number"
                 helpText={
                   <span>
-                    Accepts 1–5. <EuiLink>Learn more.</EuiLink>
+                    Accepts 1–5. <OuiLink>Learn more.</OuiLink>
                   </span>
                 }>
-                <EuiFieldNumber min={1} max={5} step={1} />
-              </EuiFormRow>
+                <OuiFieldNumber min={1} max={5} step={1} />
+              </OuiFormRow>
             </GuideRuleExample>
 
             <GuideRuleExample
               panelDisplay="block"
               type="dont"
               text="Use a lead-in sentence without an ending period. It looks wrong.">
-              <EuiTitle size="s">
+              <OuiTitle size="s">
                 <span>Index management</span>
-              </EuiTitle>
-              <EuiText>
+              </OuiTitle>
+              <OuiText>
                 Update your Elasticsearch indices individually or in bulk
-              </EuiText>
+              </OuiText>
             </GuideRuleExample>
           </GuideRule>
 
@@ -449,7 +460,7 @@ export default {
               </GuideRuleWriting>
             </GuideRuleExample>
           </GuideRule>
-          <EuiHorizontalRule />
+          <OuiHorizontalRule />
         </>
       ),
     },
@@ -466,31 +477,31 @@ export default {
               panelDisplay="block"
               type="do"
               text="Provide a title that is meaningful to the user.">
-              <EuiTitle size="xs">
+              <OuiTitle size="xs">
                 <span>This dashboard is empty</span>
-              </EuiTitle>
-              <EuiText size="s">
+              </OuiTitle>
+              <OuiText size="s">
                 <p>
                   To add a visualization, click Add in the menu bar. No
                   visualizations yet? Go to Visualize to create one.
                 </p>
-              </EuiText>
+              </OuiText>
             </GuideRuleExample>
 
             <GuideRuleExample
               panelDisplay="block"
               type="dont"
               text="Use uh-oh, oops, or other meaningless text in the title.">
-              <EuiTitle size="xs">
+              <OuiTitle size="xs">
                 <span>Uh-oh!</span>
-              </EuiTitle>
-              <EuiText size="s">
+              </OuiTitle>
+              <OuiText size="s">
                 <p>
                   This dashboard is empty. To add a visualization, click Add in
                   the menu bar. No visualizations yet? Go to the Visualize app
                   to create one.
                 </p>
-              </EuiText>
+              </OuiText>
             </GuideRuleExample>
           </GuideRule>
 
@@ -538,39 +549,39 @@ export default {
             <GuideRuleExample
               type="do"
               text="Keep titles as concise as possible.">
-              <EuiPanel style={{ transform: 'scale(.75)' }}>
-                <EuiTitle size="m">
+              <OuiPanel style={{ transform: 'scale(.75)' }}>
+                <OuiTitle size="m">
                   <span>Delete this report?</span>
-                </EuiTitle>
-                <EuiSpacer />
-                <EuiFlexGroup justifyContent="flexEnd" gutterSize="none">
-                  <EuiButtonEmpty color="text" size="s">
+                </OuiTitle>
+                <OuiSpacer />
+                <OuiFlexGroup justifyContent="flexEnd" gutterSize="none">
+                  <OuiButtonEmpty color="text" size="s">
                     Cancel
-                  </EuiButtonEmpty>
-                  <EuiButton color="danger" size="s">
+                  </OuiButtonEmpty>
+                  <OuiButton color="danger" size="s">
                     Delete
-                  </EuiButton>
-                </EuiFlexGroup>
-              </EuiPanel>
+                  </OuiButton>
+                </OuiFlexGroup>
+              </OuiPanel>
             </GuideRuleExample>
 
             <GuideRuleExample
               type="dont"
               text="Pad the title with empty words&mdash;it increases reading time.">
-              <EuiPanel style={{ transform: 'scale(.75)' }}>
-                <EuiTitle size="m">
+              <OuiPanel style={{ transform: 'scale(.75)' }}>
+                <OuiTitle size="m">
                   <span>Are you sure you want to delete this report?</span>
-                </EuiTitle>
-                <EuiSpacer />
-                <EuiFlexGroup justifyContent="flexEnd" gutterSize="none">
-                  <EuiButtonEmpty color="text" size="s">
+                </OuiTitle>
+                <OuiSpacer />
+                <OuiFlexGroup justifyContent="flexEnd" gutterSize="none">
+                  <OuiButtonEmpty color="text" size="s">
                     Cancel
-                  </EuiButtonEmpty>
-                  <EuiButton color="danger" size="s">
+                  </OuiButtonEmpty>
+                  <OuiButton color="danger" size="s">
                     Delete report
-                  </EuiButton>
-                </EuiFlexGroup>
-              </EuiPanel>
+                  </OuiButton>
+                </OuiFlexGroup>
+              </OuiPanel>
             </GuideRuleExample>
           </GuideRule>
 
@@ -617,25 +628,25 @@ export default {
               panelDisplay="block"
               type="do"
               text="Write for scanning.">
-              <EuiFormRow
+              <OuiFormRow
                 label="Password"
                 helpText="Must be least 8 characters and include upper and lower case letters, numbers, and symbols such as !@#$%.">
-                <EuiFieldPassword />
-              </EuiFormRow>
+                <OuiFieldPassword />
+              </OuiFormRow>
             </GuideRuleExample>
 
             <GuideRuleExample
               panelDisplay="block"
               type="dont"
               text="Write long blocks of text.">
-              <EuiFormRow
+              <OuiFormRow
                 label="Password"
                 helpText="Passwords must be at least 8 characters long. Good passwords
           contain either a combination of upper and lowercase letters or a
           combination of letters with one digit. Strong passwords contain either
           a combination of letters and more than one digit or special characters.">
-                <EuiFieldPassword />
-              </EuiFormRow>
+                <OuiFieldPassword />
+              </OuiFormRow>
             </GuideRuleExample>
           </GuideRule>
 
@@ -646,25 +657,25 @@ export default {
               panelDisplay="block"
               type="do"
               text=" Explain new or difficult concepts.">
-              <EuiFormRow
+              <OuiFormRow
                 label="Index template"
                 helpText="A template defines the settings, mappings, and aliases to apply when you create an index.">
-                <EuiFieldText />
-              </EuiFormRow>
+                <OuiFieldText />
+              </OuiFormRow>
             </GuideRuleExample>
 
             <GuideRuleExample
               panelDisplay="block"
               type="dont"
               text="Provide explanations for common actions.">
-              <EuiFormRow
+              <OuiFormRow
                 label="Email"
                 helpText="Please enter your email address.">
-                <EuiFieldText />
-              </EuiFormRow>
+                <OuiFieldText />
+              </OuiFormRow>
             </GuideRuleExample>
           </GuideRule>
-          <EuiHorizontalRule />
+          <OuiHorizontalRule />
         </>
       ),
     },
@@ -681,31 +692,31 @@ export default {
               panelDisplay="block"
               type="do"
               text="Use labels that say what the component does.">
-              <EuiFormRow>
-                <EuiCheckbox
+              <OuiFormRow>
+                <OuiCheckbox
                   onChange={() => {}}
                   id={htmlIdGenerator()()}
                   label="Combine values in other bucket"
                 />
-              </EuiFormRow>
-              <EuiFormRow label="Bucket label">
-                <EuiFieldText />
-              </EuiFormRow>
+              </OuiFormRow>
+              <OuiFormRow label="Bucket label">
+                <OuiFieldText />
+              </OuiFormRow>
             </GuideRuleExample>
             <GuideRuleExample
               panelDisplay="block"
               type="dont"
               text="Use generic labels.">
-              <EuiFormRow>
-                <EuiCheckbox
+              <OuiFormRow>
+                <OuiCheckbox
                   onChange={() => {}}
                   id={htmlIdGenerator()()}
                   label="Combine other"
                 />
-              </EuiFormRow>
-              <EuiFormRow label="Bucket label">
-                <EuiFieldText />
-              </EuiFormRow>
+              </OuiFormRow>
+              <OuiFormRow label="Bucket label">
+                <OuiFieldText />
+              </OuiFormRow>
             </GuideRuleExample>
           </GuideRule>
 
@@ -715,41 +726,41 @@ export default {
             <GuideRuleExample
               type="do"
               text="Use a verb + noun for a button label.">
-              <EuiPanel style={{ transform: 'scale(.75)' }}>
-                <EuiTitle size="m">
+              <OuiPanel style={{ transform: 'scale(.75)' }}>
+                <OuiTitle size="m">
                   <span>Remove this index pattern?</span>
-                </EuiTitle>
-                <EuiSpacer />
-                <EuiFlexGroup justifyContent="flexEnd" gutterSize="none">
-                  <EuiButtonEmpty color="text" size="s">
+                </OuiTitle>
+                <OuiSpacer />
+                <OuiFlexGroup justifyContent="flexEnd" gutterSize="none">
+                  <OuiButtonEmpty color="text" size="s">
                     Cancel
-                  </EuiButtonEmpty>
-                  <EuiButton color="danger" size="s">
+                  </OuiButtonEmpty>
+                  <OuiButton color="danger" size="s">
                     Remove index pattern
-                  </EuiButton>
-                </EuiFlexGroup>
-              </EuiPanel>
+                  </OuiButton>
+                </OuiFlexGroup>
+              </OuiPanel>
             </GuideRuleExample>
             <GuideRuleExample
               type="dont"
               text="Use vague labels, such as Yes and OK.">
-              <EuiPanel style={{ transform: 'scale(.75)' }}>
-                <EuiTitle size="m">
+              <OuiPanel style={{ transform: 'scale(.75)' }}>
+                <OuiTitle size="m">
                   <span>Remove this index pattern?</span>
-                </EuiTitle>
-                <EuiSpacer />
-                <EuiFlexGroup justifyContent="flexEnd" gutterSize="none">
-                  <EuiButtonEmpty color="text" size="s">
+                </OuiTitle>
+                <OuiSpacer />
+                <OuiFlexGroup justifyContent="flexEnd" gutterSize="none">
+                  <OuiButtonEmpty color="text" size="s">
                     Cancel
-                  </EuiButtonEmpty>
-                  <EuiButton color="danger" size="s">
+                  </OuiButtonEmpty>
+                  <OuiButton color="danger" size="s">
                     Ok
-                  </EuiButton>
-                </EuiFlexGroup>
-              </EuiPanel>
+                  </OuiButton>
+                </OuiFlexGroup>
+              </OuiPanel>
             </GuideRuleExample>
           </GuideRule>
-          <EuiHorizontalRule />
+          <OuiHorizontalRule />
         </>
       ),
     },
@@ -758,7 +769,7 @@ export default {
       wrapText: false,
       text: (
         <>
-          <EuiText grow={false}>
+          <OuiText grow={false}>
             <p>
               Your text can be fun as long as it fits the experience&mdash;and
               doesn&apos;t get in the user&apos;s way. Clever text can become
@@ -766,7 +777,7 @@ export default {
               where the user might lose data or otherwise be frustrated are also
               not appropriate for humor.
             </p>
-          </EuiText>
+          </OuiText>
           <GuideRule heading="" description="">
             <GuideRuleExample
               type="do"
@@ -780,23 +791,23 @@ export default {
               panelDisplay="block"
               type="dont"
               text="Be clever with a serious message.">
-              <EuiTitle size="xs">
+              <OuiTitle size="xs">
                 <span>
-                  <EuiIcon type="faceSad" /> No results found
+                  <OuiIcon type="faceSad" /> No results found
                 </span>
-              </EuiTitle>
-              <EuiSpacer />
-              <EuiText>
+              </OuiTitle>
+              <OuiSpacer />
+              <OuiText>
                 <p>
                   Unfortunately, I could not find any results matching your
                   search. I tried really hard. I looked all over the place and
                   frankly, I just couldn&apos;t find anything good. Help me,
                   help you.
                 </p>
-              </EuiText>
+              </OuiText>
             </GuideRuleExample>
           </GuideRule>
-          <EuiHorizontalRule />
+          <OuiHorizontalRule />
         </>
       ),
     },
@@ -805,10 +816,10 @@ export default {
       wrapText: false,
       text: (
         <>
-          <EuiSpacer />
-          <EuiFlexGrid gutterSize="xl" columns={3}>
-            <EuiFlexItem>
-              <EuiCard
+          <OuiSpacer />
+          <OuiFlexGrid gutterSize="xl" columns={3}>
+            <OuiFlexItem>
+              <OuiCard
                 paddingSize="none"
                 display="plain"
                 titleSize="xs"
@@ -817,10 +828,10 @@ export default {
                 description="A writer can help determine where you need text and what it should
               say."
               />
-            </EuiFlexItem>
+            </OuiFlexItem>
 
-            <EuiFlexItem>
-              <EuiCard
+            <OuiFlexItem>
+              <OuiCard
                 paddingSize="none"
                 display="plain"
                 titleSize="xs"
@@ -830,10 +841,10 @@ export default {
               changes, and then repeat until the flow of your text feels
               natural."
               />
-            </EuiFlexItem>
+            </OuiFlexItem>
 
-            <EuiFlexItem>
-              <EuiCard
+            <OuiFlexItem>
+              <OuiCard
                 paddingSize="none"
                 display="plain"
                 titleSize="xs"
@@ -841,8 +852,8 @@ export default {
                 title="Use spell check"
                 description="Run your text through a spelling and grammar checker."
               />
-            </EuiFlexItem>
-          </EuiFlexGrid>
+            </OuiFlexItem>
+          </OuiFlexGrid>
         </>
       ),
     },

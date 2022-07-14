@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { ExternalBadge } from './shared';
 import { TimeChart } from './time_chart';
 
-import { EuiCode } from '../../../../src/components';
+import { OuiCode } from '../../../../src/components';
 
 export const ElasticChartsTimeExample = {
   title: 'Time series',
@@ -27,14 +38,14 @@ export const ElasticChartsTimeExample = {
           </p>
           <ul>
             <li>
-              <EuiCode language="js">
+              <OuiCode language="js">
                 BarSeries.xScaleType = &quot;time&quot;
-              </EuiCode>
+              </OuiCode>
             </li>
             <li>
-              <EuiCode language="js">
+              <OuiCode language="js">
                 tickFormat = timeFormatter(niceTimeFormatByDay(1));
-              </EuiCode>
+              </OuiCode>
             </li>
           </ul>
         </Fragment>

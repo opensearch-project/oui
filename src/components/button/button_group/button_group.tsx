@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,15 +30,15 @@
 
 import classNames from 'classnames';
 import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react';
-import { EuiScreenReaderOnly } from '../../accessibility';
-import { EuiButtonGroupButton } from './button_group_button';
+import { OuiScreenReaderOnly } from '../../accessibility';
+import { OuiButtonGroupButton } from './button_group_button';
 import { colorToClassNameMap, ButtonColor } from '../button';
-import { EuiButtonContentProps } from '../button_content';
+import { OuiButtonContentProps } from '../button_content';
 import { CommonProps } from '../../common';
 import { htmlIdGenerator } from '../../../services';
 
-export interface EuiButtonGroupOptionProps
-  extends EuiButtonContentProps,
+export interface OuiButtonGroupOptionProps
+  extends OuiButtonContentProps,
     CommonProps {
   /**
    * Each option must have a unique `id` for maintaining selection
@@ -48,7 +59,7 @@ export interface EuiButtonGroupOptionProps
   type?: 'button' | 'submit' | 'reset';
 }
 
-export type EuiButtonGroupProps = CommonProps & {
+export type OuiButtonGroupProps = CommonProps & {
   /**
    * Typical sizing is `s`. Medium `m` size should be reserved for major features.
    * `compressed` is meant to be used alongside and within compressed forms.
@@ -80,9 +91,9 @@ export type EuiButtonGroupProps = CommonProps & {
    */
   type?: 'single' | 'multi';
   /**
-   * An array of #EuiButtonGroupOptionProps
+   * An array of #OuiButtonGroupOptionProps
    */
-  options: EuiButtonGroupOptionProps[];
+  options: OuiButtonGroupOptionProps[];
 } & (
     | {
         /**
@@ -122,7 +133,7 @@ export type EuiButtonGroupProps = CommonProps & {
   );
 
 type Props = Omit<HTMLAttributes<HTMLFieldSetElement>, 'onChange' | 'color'> &
-  EuiButtonGroupProps;
+  OuiButtonGroupProps;
 
 const groupSizeToClassNameMap = {
   s: '--small',
@@ -130,7 +141,7 @@ const groupSizeToClassNameMap = {
   compressed: '--compressed',
 };
 
-export const EuiButtonGroup: FunctionComponent<Props> = ({
+export const OuiButtonGroup: FunctionComponent<Props> = ({
   className,
   buttonSize = 's',
   color = 'text',
@@ -151,17 +162,17 @@ export const EuiButtonGroup: FunctionComponent<Props> = ({
   const resolvedColor = badColorCombo ? 'text' : color;
   if (badColorCombo) {
     console.warn(
-      'EuiButtonGroup of compressed size does not support the ghost color. It will render as text instead.'
+      'OuiButtonGroup of compressed size does not support the ghost color. It will render as text instead.'
     );
   }
 
   const classes = classNames(
-    'euiButtonGroup',
-    `euiButtonGroup${groupSizeToClassNameMap[buttonSize]}`,
-    `euiButtonGroup${colorToClassNameMap[resolvedColor]}`,
+    'ouiButtonGroup',
+    `ouiButtonGroup${groupSizeToClassNameMap[buttonSize]}`,
+    `ouiButtonGroup${colorToClassNameMap[resolvedColor]}`,
     {
-      'euiButtonGroup--fullWidth': isFullWidth,
-      'euiButtonGroup--isDisabled': isDisabled,
+      'ouiButtonGroup--fullWidth': isFullWidth,
+      'ouiButtonGroup--isDisabled': isDisabled,
     },
     className
   );
@@ -171,18 +182,18 @@ export const EuiButtonGroup: FunctionComponent<Props> = ({
 
   return (
     <fieldset className={classes} {...rest} disabled={isDisabled}>
-      <EuiScreenReaderOnly>
+      <OuiScreenReaderOnly>
         <legend>{legend}</legend>
-      </EuiScreenReaderOnly>
+      </OuiScreenReaderOnly>
 
-      <div className="euiButtonGroup__buttons">
+      <div className="ouiButtonGroup__buttons">
         {options.map((option, index) => {
           return (
-            <EuiButtonGroupButton
+            <OuiButtonGroupButton
               key={index}
               name={nameIfSingle}
               isDisabled={isDisabled}
-              {...(option as EuiButtonGroupOptionProps)}
+              {...(option as OuiButtonGroupOptionProps)}
               element={typeIsSingle ? 'label' : 'button'}
               isSelected={
                 typeIsSingle

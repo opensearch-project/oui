@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiCardSelect } from './card_select';
+import { OuiCardSelect } from './card_select';
 
-describe('EuiCardSelect', () => {
+describe('OuiCardSelect', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCardSelect onClick={() => {}} {...requiredProps} />
+      <OuiCardSelect onClick={() => {}} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -34,20 +45,20 @@ describe('EuiCardSelect', () => {
 
   describe('props', () => {
     test('isSelected', () => {
-      const component = render(<EuiCardSelect onClick={() => {}} isSelected />);
+      const component = render(<OuiCardSelect onClick={() => {}} isSelected />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isDisabled', () => {
-      const component = render(<EuiCardSelect onClick={() => {}} isDisabled />);
+      const component = render(<OuiCardSelect onClick={() => {}} isDisabled />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('can override color', () => {
       const component = render(
-        <EuiCardSelect onClick={() => {}} color="danger" />
+        <OuiCardSelect onClick={() => {}} color="danger" />
       );
 
       expect(component).toMatchSnapshot();
@@ -55,7 +66,7 @@ describe('EuiCardSelect', () => {
 
     test('can override text', () => {
       const component = render(
-        <EuiCardSelect onClick={() => {}} children="Custom text" />
+        <OuiCardSelect onClick={() => {}} children="Custom text" />
       );
 
       expect(component).toMatchSnapshot();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiConfirmModal renders EuiConfirmModal 1`] = `
+exports[`OuiConfirmModal renders OuiConfirmModal 1`] = `
 Array [
   <div
     aria-hidden="true"
@@ -21,43 +21,43 @@ Array [
   >
     <div
       aria-label="aria-label"
-      class="euiModal euiModal--maxWidth-default euiModal--confirmation testClass1 testClass2"
+      class="ouiModal ouiModal--maxWidth-default ouiModal--confirmation testClass1 testClass2"
       data-test-subj="test subject string"
       tabindex="0"
     >
       <button
         aria-label="Closes this modal window"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiModal__closeIcon"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiModal__closeIcon"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="cross"
+          data-ouiicon-type="cross"
         />
       </button>
       <div
-        class="euiModal__flex"
+        class="ouiModal__flex"
       >
         <div
-          class="euiModalHeader"
+          class="ouiModalHeader"
         >
           <div
-            class="euiModalHeader__title"
+            class="ouiModalHeader__title"
             data-test-subj="confirmModalTitleText"
           >
             A confirmation modal
           </div>
         </div>
         <div
-          class="euiModalBody"
+          class="ouiModalBody"
         >
           <div
-            class="euiModalBody__overflow"
+            class="ouiModalBody__overflow"
           >
             <div
-              class="euiText euiText--medium"
+              class="ouiText ouiText--medium"
               data-test-subj="confirmModalBodyText"
             >
               <p>
@@ -67,33 +67,33 @@ Array [
           </div>
         </div>
         <div
-          class="euiModalFooter"
+          class="ouiModalFooter"
         >
           <button
-            class="euiButtonEmpty euiButtonEmpty--primary"
+            class="ouiButtonEmpty ouiButtonEmpty--primary"
             data-test-subj="confirmModalCancelButton"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 Cancel Button Text
               </span>
             </span>
           </button>
           <button
-            class="euiButton euiButton--primary euiButton--fill"
+            class="ouiButton ouiButton--primary ouiButton--fill"
             data-test-subj="confirmModalConfirmButton"
             type="button"
           >
             <span
-              class="euiButtonContent euiButton__content"
+              class="ouiButtonContent ouiButton__content"
             >
               <span
-                class="euiButton__text"
+                class="ouiButton__text"
               >
                 Confirm Button Text
               </span>
@@ -113,7 +113,7 @@ Array [
 ]
 `;
 
-exports[`EuiConfirmModal renders EuiConfirmModal without EuiModalBody, if empty 1`] = `
+exports[`OuiConfirmModal renders OuiConfirmModal without OuiModalBody, if empty 1`] = `
 Array [
   <div
     aria-hidden="true"
@@ -134,63 +134,63 @@ Array [
   >
     <div
       aria-label="aria-label"
-      class="euiModal euiModal--maxWidth-default euiModal--confirmation testClass1 testClass2"
+      class="ouiModal ouiModal--maxWidth-default ouiModal--confirmation testClass1 testClass2"
       data-test-subj="test subject string"
       tabindex="0"
     >
       <button
         aria-label="Closes this modal window"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiModal__closeIcon"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiModal__closeIcon"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="cross"
+          data-ouiicon-type="cross"
         />
       </button>
       <div
-        class="euiModal__flex"
+        class="ouiModal__flex"
       >
         <div
-          class="euiModalHeader"
+          class="ouiModalHeader"
         >
           <div
-            class="euiModalHeader__title"
+            class="ouiModalHeader__title"
             data-test-subj="confirmModalTitleText"
           >
             A confirmation modal
           </div>
         </div>
         <div
-          class="euiModalFooter"
+          class="ouiModalFooter"
         >
           <button
-            class="euiButtonEmpty euiButtonEmpty--primary"
+            class="ouiButtonEmpty ouiButtonEmpty--primary"
             data-test-subj="confirmModalCancelButton"
             type="button"
           >
             <span
-              class="euiButtonContent euiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
-                class="euiButtonEmpty__text"
+                class="ouiButtonEmpty__text"
               >
                 Cancel Button Text
               </span>
             </span>
           </button>
           <button
-            class="euiButton euiButton--primary euiButton--fill"
+            class="ouiButton ouiButton--primary ouiButton--fill"
             data-test-subj="confirmModalConfirmButton"
             type="button"
           >
             <span
-              class="euiButtonContent euiButton__content"
+              class="ouiButtonContent ouiButton__content"
             >
               <span
-                class="euiButton__text"
+                class="ouiButton__text"
               >
                 Confirm Button Text
               </span>

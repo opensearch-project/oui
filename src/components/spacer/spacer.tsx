@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,29 +34,29 @@ import classNames from 'classnames';
 import { CommonProps } from '../common';
 
 const sizeToClassNameMap = {
-  xs: 'euiSpacer--xs',
-  s: 'euiSpacer--s',
-  m: 'euiSpacer--m',
-  l: 'euiSpacer--l',
-  xl: 'euiSpacer--xl',
-  xxl: 'euiSpacer--xxl',
+  xs: 'ouiSpacer--xs',
+  s: 'ouiSpacer--s',
+  m: 'ouiSpacer--m',
+  l: 'ouiSpacer--l',
+  xl: 'ouiSpacer--xl',
+  xxl: 'ouiSpacer--xxl',
 };
 
 export const SIZES = Object.keys(sizeToClassNameMap);
 
 export type SpacerSize = keyof typeof sizeToClassNameMap;
 
-export type EuiSpacerProps = HTMLAttributes<HTMLDivElement> &
+export type OuiSpacerProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     size?: SpacerSize;
   };
 
-export const EuiSpacer: FunctionComponent<EuiSpacerProps> = ({
+export const OuiSpacer: FunctionComponent<OuiSpacerProps> = ({
   className,
   size = 'l',
   ...rest
 }) => {
-  const classes = classNames('euiSpacer', sizeToClassNameMap[size], className);
+  const classes = classNames('ouiSpacer', sizeToClassNameMap[size], className);
 
   return <div className={classes} {...rest} />;
 };

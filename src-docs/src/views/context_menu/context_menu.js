@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiContextMenu,
-  EuiFormRow,
-  EuiIcon,
-  EuiPopover,
-  EuiSwitch,
-  EuiSpacer,
+  OuiButton,
+  OuiContextMenu,
+  OuiFormRow,
+  OuiIcon,
+  OuiPopover,
+  OuiSwitch,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -60,7 +71,7 @@ export default () => {
         },
         {
           name: 'Pass an icon as a component to customize it',
-          icon: <EuiIcon type="trash" size="m" color="danger" />,
+          icon: <OuiIcon type="trash" size="m" color="danger" />,
         },
         {
           name: 'Disabled option',
@@ -105,48 +116,48 @@ export default () => {
       title: 'Embed code',
       content: (
         <div style={{ padding: 16 }}>
-          <EuiFormRow label="Generate a public snapshot?" hasChildLabel={false}>
-            <EuiSwitch
+          <OuiFormRow label="Generate a public snapshot?" hasChildLabel={false}>
+            <OuiSwitch
               name="switch"
               id="asdf"
               label="Snapshot data"
               checked={true}
               onChange={() => {}}
             />
-          </EuiFormRow>
-          <EuiFormRow
+          </OuiFormRow>
+          <OuiFormRow
             label="Include the following in the embed"
             hasChildLabel={false}>
-            <EuiSwitch
+            <OuiSwitch
               name="switch"
               id="asdf2"
               label="Current time range"
               checked={true}
               onChange={() => {}}
             />
-          </EuiFormRow>
-          <EuiSpacer />
-          <EuiButton fill>Copy iFrame code</EuiButton>
+          </OuiFormRow>
+          <OuiSpacer />
+          <OuiButton fill>Copy iFrame code</OuiButton>
         </div>
       ),
     },
   ];
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <OuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Click me to load a context menu
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       id="contextMenuExample"
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}
       panelPaddingSize="none"
       anchorPosition="downLeft">
-      <EuiContextMenu initialPanelId={0} panels={panels} />
-    </EuiPopover>
+      <OuiContextMenu initialPanelId={0} panels={panels} />
+    </OuiPopover>
   );
 };

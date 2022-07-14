@@ -1,17 +1,28 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // Spacing
 
-$euiTableCellContentPadding: $euiSizeS;
-$euiTableCellContentPaddingCompressed: $euiSizeXS;
+$ouiTableCellContentPadding: $ouiSizeS;
+$ouiTableCellContentPaddingCompressed: $ouiSizeXS;
 
-$euiTableCellCheckboxWidth: $euiSizeXL;
+$ouiTableCellCheckboxWidth: $ouiSizeXL;
 
-$euiTableActionsAreaWidth: $euiSizeXXL;
+$ouiTableActionsAreaWidth: $ouiSizeXXL;
 
 // Colors
 
-$euiTableHoverColor: tintOrShade($euiColorLightestShade, 50%, 20%);
-$euiTableSelectedColor: tintOrShade($euiFocusBackgroundColor, 30%, 0%);
-$euiTableHoverSelectedColor: tintOrShade($euiFocusBackgroundColor, 0, 10%);
-$euiTableActionsBorderColor: transparentize($euiColorMediumShade, .9);
-$euiTableHoverClickableColor: transparentize($euiColorPrimary, .95);
-$euiTableFocusClickableColor: transparentize($euiColorPrimary, .9);
+$ouiTableHoverColor: tintOrShade($ouiColorLightestShade, 50%, 20%);
+$ouiTableSelectedColor: tintOrShade($ouiFocusBackgroundColor, 30%, 0%);
+$ouiTableHoverSelectedColor: tintOrShade($ouiFocusBackgroundColor, 0, 10%);
+$ouiTableActionsBorderColor: transparentize($ouiColorMediumShade, .9);
+$ouiTableHoverClickableColor: transparentize($ouiColorPrimary, .95);
+$ouiTableFocusClickableColor: transparentize($ouiColorPrimary, .9);

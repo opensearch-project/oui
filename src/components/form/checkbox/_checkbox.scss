@@ -1,37 +1,48 @@
-.euiCheckbox {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiCheckbox {
   position: relative;
 
-  .euiCheckbox__input {
-    @include euiScreenReaderOnly;
+  .ouiCheckbox__input {
+    @include ouiScreenReaderOnly;
 
-    ~ .euiCheckbox__label {
+    ~ .ouiCheckbox__label {
       display: inline-block;
-      padding-left: ($euiCheckBoxSize * 1.5);
-      line-height: $euiSizeL;
-      font-size: $euiFontSizeS;
+      padding-left: ($ouiCheckBoxSize * 1.5);
+      line-height: $ouiSizeL;
+      font-size: $ouiFontSizeS;
       position: relative;
       z-index: 2;
       cursor: pointer;
     }
 
-    + .euiCheckbox__square {
-      @include euiCustomControl($type: 'square', $size: $euiCheckBoxSize);
+    + .ouiCheckbox__square {
+      @include ouiCustomControl($type: 'square', $size: $ouiCheckBoxSize);
 
       display: inline-block;
       position: absolute;
       left: 0;
-      top: (($euiSizeL - $euiCheckBoxSize) / 2) - 1px;
+      top: (($ouiSizeL - $ouiCheckBoxSize) / 2) - 1px;
     }
 
     &:checked {
-      + .euiCheckbox__square {
-        @include euiCustomControlSelected($type: 'check');
+      + .ouiCheckbox__square {
+        @include ouiCustomControlSelected($type: 'check');
       }
     }
 
     &:indeterminate {
-      + .euiCheckbox__square {
-        @include euiCustomControlSelected($type: 'square');
+      + .ouiCheckbox__square {
+        @include ouiCustomControlSelected($type: 'square');
       }
     }
 
@@ -39,32 +50,32 @@
       // sass-lint:disable-block no-important
       cursor: not-allowed !important;
 
-      ~ .euiCheckbox__label {
-        color: $euiFormControlDisabledColor;
+      ~ .ouiCheckbox__label {
+        color: $ouiFormControlDisabledColor;
         cursor: not-allowed !important;
       }
 
-      + .euiCheckbox__square {
-        @include euiCustomControlDisabled;
+      + .ouiCheckbox__square {
+        @include ouiCustomControlDisabled;
       }
     }
 
     &:checked[disabled] {
-      + .euiCheckbox__square {
-        @include euiCustomControlDisabled($type: 'check');
+      + .ouiCheckbox__square {
+        @include ouiCustomControlDisabled($type: 'check');
       }
     }
 
     &:indeterminate[disabled] {
-      + .euiCheckbox__square {
-        @include euiCustomControlDisabled($type: 'dot');
+      + .ouiCheckbox__square {
+        @include ouiCustomControlDisabled($type: 'dot');
       }
     }
 
     &:focus,
     &:active:not(:disabled) {
-      + .euiCheckbox__square {
-        @include euiCustomControlFocused;
+      + .ouiCheckbox__square {
+        @include ouiCustomControlFocused;
       }
     }
   }
@@ -74,17 +85,17 @@
    *    they actually click this input.
    */
 
-  &.euiCheckbox--inList,
-  &.euiCheckbox--noLabel {
-    min-height: $euiCheckBoxSize;
-    min-width: $euiCheckBoxSize;
+  &.ouiCheckbox--inList,
+  &.ouiCheckbox--noLabel {
+    min-height: $ouiCheckBoxSize;
+    min-width: $ouiCheckBoxSize;
 
-    .euiCheckbox__square {
+    .ouiCheckbox__square {
       top: 0;
     }
 
-    .euiCheckbox__input {
-      @include size($euiCheckBoxSize); /* 1 */
+    .ouiCheckbox__input {
+      @include size($ouiCheckBoxSize); /* 1 */
 
       position: absolute; /* 1 */
       opacity: 0; /* 1 */

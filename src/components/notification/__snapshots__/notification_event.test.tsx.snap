@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiNotificationEvent is rendered 1`] = `
+exports[`OuiNotificationEvent is rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent"
+  class="ouiNotificationEvent"
 >
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiBadge euiBadge--hollow euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert
             </span>
@@ -29,30 +29,30 @@ exports[`EuiNotificationEvent is rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h2
-      class="euiNotificationEvent__title"
+      class="ouiNotificationEvent__title"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h2>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message
@@ -64,29 +64,29 @@ exports[`EuiNotificationEvent is rendered 1`] = `
 </article>
 `;
 
-exports[`EuiNotificationEvent props badgeColor is rendered 1`] = `
+exports[`OuiNotificationEvent props badgeColor is rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent"
+  class="ouiNotificationEvent"
 >
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiBadge euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--iconLeft ouiNotificationEventMeta__badge"
           style="background-color:#f1d86f;color:#000"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert
             </span>
@@ -94,30 +94,30 @@ exports[`EuiNotificationEvent props badgeColor is rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h2
-      class="euiNotificationEvent__title"
+      class="ouiNotificationEvent__title"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h2>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message
@@ -129,50 +129,50 @@ exports[`EuiNotificationEvent props badgeColor is rendered 1`] = `
 </article>
 `;
 
-exports[`EuiNotificationEvent props contextMenuItems are rendered 1`] = `
+exports[`OuiNotificationEvent props contextMenuItems are rendered 1`] = `
 <div
-  class="euiContextMenuPanel"
+  class="ouiContextMenuPanel"
   tabindex="-1"
 >
   <div>
     <div>
       <button
-        class="euiContextMenuItem"
+        class="ouiContextMenuItem"
         type="button"
       >
         <span
-          class="euiContextMenu__itemLayout"
+          class="ouiContextMenu__itemLayout"
         >
           <span
-            class="euiContextMenuItem__text"
+            class="ouiContextMenuItem__text"
           >
             Context menu 1 for id: id
           </span>
         </span>
       </button>
       <button
-        class="euiContextMenuItem"
+        class="ouiContextMenuItem"
         type="button"
       >
         <span
-          class="euiContextMenu__itemLayout"
+          class="ouiContextMenu__itemLayout"
         >
           <span
-            class="euiContextMenuItem__text"
+            class="ouiContextMenuItem__text"
           >
             Context menu 2 for id: id
           </span>
         </span>
       </button>
       <button
-        class="euiContextMenuItem"
+        class="ouiContextMenuItem"
         type="button"
       >
         <span
-          class="euiContextMenu__itemLayout"
+          class="ouiContextMenu__itemLayout"
         >
           <span
-            class="euiContextMenuItem__text"
+            class="ouiContextMenuItem__text"
           >
             Context menu 3 for id: id
           </span>
@@ -183,28 +183,28 @@ exports[`EuiNotificationEvent props contextMenuItems are rendered 1`] = `
 </div>
 `;
 
-exports[`EuiNotificationEvent props headingLevel is rendered 1`] = `
+exports[`OuiNotificationEvent props headingLevel is rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent"
+  class="ouiNotificationEvent"
 >
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiBadge euiBadge--hollow euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert
             </span>
@@ -212,30 +212,30 @@ exports[`EuiNotificationEvent props headingLevel is rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h4
-      class="euiNotificationEvent__title"
+      class="ouiNotificationEvent__title"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h4>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message
@@ -247,33 +247,33 @@ exports[`EuiNotificationEvent props headingLevel is rendered 1`] = `
 </article>
 `;
 
-exports[`EuiNotificationEvent props iconAriaLabel is rendered 1`] = `
+exports[`OuiNotificationEvent props iconAriaLabel is rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent"
+  class="ouiNotificationEvent"
 >
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
           aria-label="my icon aria label"
-          class="euiNotificationEventMeta__icon"
-          data-euiicon-type="logoCloud"
+          class="ouiNotificationEventMeta__icon"
+          data-ouiicon-type="logoCloud"
         />
         <span
-          class="euiBadge euiBadge--hollow euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert
             </span>
@@ -281,30 +281,30 @@ exports[`EuiNotificationEvent props iconAriaLabel is rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h2
-      class="euiNotificationEvent__title"
+      class="ouiNotificationEvent__title"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h2>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message
@@ -316,33 +316,33 @@ exports[`EuiNotificationEvent props iconAriaLabel is rendered 1`] = `
 </article>
 `;
 
-exports[`EuiNotificationEvent props iconType is rendered 1`] = `
+exports[`OuiNotificationEvent props iconType is rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent"
+  class="ouiNotificationEvent"
 >
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
           aria-hidden="true"
-          class="euiNotificationEventMeta__icon"
-          data-euiicon-type="logoCloud"
+          class="ouiNotificationEventMeta__icon"
+          data-ouiicon-type="logoCloud"
         />
         <span
-          class="euiBadge euiBadge--hollow euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert
             </span>
@@ -350,30 +350,30 @@ exports[`EuiNotificationEvent props iconType is rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h2
-      class="euiNotificationEvent__title"
+      class="ouiNotificationEvent__title"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h2>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message
@@ -385,46 +385,46 @@ exports[`EuiNotificationEvent props iconType is rendered 1`] = `
 </article>
 `;
 
-exports[`EuiNotificationEvent props isRead  is rendered 1`] = `
+exports[`OuiNotificationEvent props isRead  is rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent euiNotificationEvent--withReadState"
+  class="ouiNotificationEvent ouiNotificationEvent--withReadState"
 >
   <div
-    class="euiNotificationEvent__readButton"
+    class="ouiNotificationEvent__readButton"
   >
     <button
       aria-label="Mark title as unread"
-      class="euiButtonIcon euiButtonIcon--primary euiButtonIcon--empty euiButtonIcon--xSmall euiNotificationEventReadButton euiNotificationEventReadButton--isRead"
+      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiNotificationEventReadButton ouiNotificationEventReadButton--isRead"
       data-test-subj="id-notificationEventReadButton"
       title="Mark as unread"
       type="button"
     >
       <span
         aria-hidden="true"
-        class="euiButtonIcon__icon"
+        class="ouiButtonIcon__icon"
         color="inherit"
-        data-euiicon-type="dot"
+        data-ouiicon-type="dot"
       />
     </button>
   </div>
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiBadge euiBadge--hollow euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert
             </span>
@@ -432,30 +432,30 @@ exports[`EuiNotificationEvent props isRead  is rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h2
-      class="euiNotificationEvent__title euiNotificationEvent__title--isRead"
+      class="ouiNotificationEvent__title ouiNotificationEvent__title--isRead"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h2>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message
@@ -467,28 +467,28 @@ exports[`EuiNotificationEvent props isRead  is rendered 1`] = `
 </article>
 `;
 
-exports[`EuiNotificationEvent props multiple messages are rendered 1`] = `
+exports[`OuiNotificationEvent props multiple messages are rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent"
+  class="ouiNotificationEvent"
 >
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiBadge euiBadge--hollow euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert
             </span>
@@ -496,30 +496,30 @@ exports[`EuiNotificationEvent props multiple messages are rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h2
-      class="euiNotificationEvent__title"
+      class="ouiNotificationEvent__title"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h2>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message 1
@@ -527,21 +527,21 @@ exports[`EuiNotificationEvent props multiple messages are rendered 1`] = `
         </div>
       </div>
       <div
-        class="euiAccordion euiNotificationEventMessages__accordion"
+        class="ouiAccordion ouiNotificationEventMessages__accordion"
       >
         <div
-          class="euiAccordion__triggerWrapper"
+          class="ouiAccordion__triggerWrapper"
         >
           <button
-            aria-controls="euiNotificationEventMessagesAccordion_generated-id"
+            aria-controls="ouiNotificationEventMessagesAccordion_generated-id"
             aria-expanded="false"
             aria-label="+ 2 messages for title"
-            class="euiAccordion__button euiNotificationEventMessages__accordionButton"
+            class="ouiAccordion__button ouiNotificationEventMessages__accordionButton"
             id="generated-id"
             type="button"
           >
             <span
-              class="euiIEFlexWrapFix"
+              class="ouiIEFlexWrapFix"
             >
               + 2 more
             </span>
@@ -549,8 +549,8 @@ exports[`EuiNotificationEvent props multiple messages are rendered 1`] = `
         </div>
         <div
           aria-labelledby="generated-id"
-          class="euiAccordion__childWrapper"
-          id="euiNotificationEventMessagesAccordion_generated-id"
+          class="ouiAccordion__childWrapper"
+          id="ouiNotificationEventMessagesAccordion_generated-id"
           role="region"
           tabindex="-1"
         >
@@ -559,13 +559,13 @@ exports[`EuiNotificationEvent props multiple messages are rendered 1`] = `
               class=""
             >
               <div
-                class="euiNotificationEventMessages__accordionContent"
+                class="ouiNotificationEventMessages__accordionContent"
               >
                 <div
-                  class="euiText euiText--small"
+                  class="ouiText ouiText--small"
                 >
                   <div
-                    class="euiTextColor euiTextColor--subdued"
+                    class="ouiTextColor ouiTextColor--subdued"
                   >
                     <p>
                       message 2
@@ -573,10 +573,10 @@ exports[`EuiNotificationEvent props multiple messages are rendered 1`] = `
                   </div>
                 </div>
                 <div
-                  class="euiText euiText--small"
+                  class="ouiText ouiText--small"
                 >
                   <div
-                    class="euiTextColor euiTextColor--subdued"
+                    class="ouiTextColor ouiTextColor--subdued"
                   >
                     <p>
                       message 3
@@ -593,28 +593,28 @@ exports[`EuiNotificationEvent props multiple messages are rendered 1`] = `
 </article>
 `;
 
-exports[`EuiNotificationEvent props primaryAction is rendered 1`] = `
+exports[`OuiNotificationEvent props primaryAction is rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent"
+  class="ouiNotificationEvent"
 >
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiBadge euiBadge--hollow euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert
             </span>
@@ -622,30 +622,30 @@ exports[`EuiNotificationEvent props primaryAction is rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h2
-      class="euiNotificationEvent__title"
+      class="ouiNotificationEvent__title"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h2>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message
@@ -654,18 +654,18 @@ exports[`EuiNotificationEvent props primaryAction is rendered 1`] = `
       </div>
     </div>
     <div
-      class="euiNotificationEvent__primaryAction"
+      class="ouiNotificationEvent__primaryAction"
     >
       <button
-        class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small euiButtonEmpty--flushLeft"
+        class="ouiButtonEmpty ouiButtonEmpty--primary ouiButtonEmpty--small ouiButtonEmpty--flushLeft"
         data-test-subj="id-notificationEventPrimaryAction"
         type="button"
       >
         <span
-          class="euiButtonContent euiButtonEmpty__content"
+          class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            class="euiButtonEmpty__text"
+            class="ouiButtonEmpty__text"
           >
             primaryAction label
           </span>
@@ -676,28 +676,28 @@ exports[`EuiNotificationEvent props primaryAction is rendered 1`] = `
 </article>
 `;
 
-exports[`EuiNotificationEvent props primaryActionProps is rendered 1`] = `
+exports[`OuiNotificationEvent props primaryActionProps is rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent"
+  class="ouiNotificationEvent"
 >
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiBadge euiBadge--hollow euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert
             </span>
@@ -705,30 +705,30 @@ exports[`EuiNotificationEvent props primaryActionProps is rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h2
-      class="euiNotificationEvent__title"
+      class="ouiNotificationEvent__title"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h2>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message
@@ -737,23 +737,23 @@ exports[`EuiNotificationEvent props primaryActionProps is rendered 1`] = `
       </div>
     </div>
     <div
-      class="euiNotificationEvent__primaryAction"
+      class="ouiNotificationEvent__primaryAction"
     >
       <button
-        class="euiButtonEmpty euiButtonEmpty--primary euiButtonEmpty--small euiButtonEmpty--flushLeft"
+        class="ouiButtonEmpty ouiButtonEmpty--primary ouiButtonEmpty--small ouiButtonEmpty--flushLeft"
         data-test-subj="id-notificationEventPrimaryAction"
         type="button"
       >
         <span
-          class="euiButtonContent euiButtonEmpty__content"
+          class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            class="euiButtonContent__icon"
+            class="ouiButtonContent__icon"
             color="inherit"
-            data-euiicon-type="download"
+            data-ouiicon-type="download"
           />
           <span
-            class="euiButtonEmpty__text"
+            class="ouiButtonEmpty__text"
           >
             primaryAction
           </span>
@@ -764,28 +764,28 @@ exports[`EuiNotificationEvent props primaryActionProps is rendered 1`] = `
 </article>
 `;
 
-exports[`EuiNotificationEvent props severity  is rendered 1`] = `
+exports[`OuiNotificationEvent props severity  is rendered 1`] = `
 <article
   aria-labelledby="generated-id"
-  class="euiNotificationEvent"
+  class="ouiNotificationEvent"
 >
   <div
-    class="euiNotificationEvent__content"
+    class="ouiNotificationEvent__content"
   >
     <div
-      class="euiNotificationEventMeta"
+      class="ouiNotificationEventMeta"
     >
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiBadge euiBadge--hollow euiBadge--iconLeft euiNotificationEventMeta__badge"
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
         >
           <span
-            class="euiBadge__content"
+            class="ouiBadge__content"
           >
             <span
-              class="euiBadge__text"
+              class="ouiBadge__text"
             >
               Alert: severity
             </span>
@@ -793,30 +793,30 @@ exports[`EuiNotificationEvent props severity  is rendered 1`] = `
         </span>
       </div>
       <div
-        class="euiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta__section"
       >
         <span
-          class="euiNotificationEventMeta__time"
+          class="ouiNotificationEventMeta__time"
         >
           1 min ago
         </span>
       </div>
     </div>
     <h2
-      class="euiNotificationEvent__title"
+      class="ouiNotificationEvent__title"
       data-test-subj="id-notificationEventTitle"
       id="generated-id"
     >
       title
     </h2>
     <div
-      class="euiNotificationEventMessages"
+      class="ouiNotificationEventMessages"
     >
       <div
-        class="euiText euiText--small"
+        class="ouiText ouiText--small"
       >
         <div
-          class="euiTextColor euiTextColor--subdued"
+          class="ouiTextColor ouiTextColor--subdued"
         >
           <p>
             message

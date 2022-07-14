@@ -1,60 +1,71 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Ensure that the step number vertically aligns with the title text
  */
 
-.euiStep {
+.ouiStep {
   // sass-lint:disable indentation
   // Create border on all but the last step
   &:not(:last-of-type) {
     background-image: linear-gradient(
                         to right,
                         transparent 0,
-                        transparent ($euiSize - 1),
-                        $euiBorderColor ($euiSize - 1),
-                        $euiBorderColor ($euiSize + 1),
-                        transparent ($euiSize + 1),
+                        transparent ($ouiSize - 1),
+                        $ouiBorderColor ($ouiSize - 1),
+                        $ouiBorderColor ($ouiSize + 1),
+                        transparent ($ouiSize + 1),
                         transparent 100%
                       );
     background-repeat: no-repeat;
-    background-position: left $euiSizeXXL;
+    background-position: left $ouiSizeXXL;
   }
 
   &--small {
     &:not(:last-of-type) {
-      background-position: left -#{$euiSizeXS} top $euiSizeXL;
+      background-position: left -#{$ouiSizeXS} top $ouiSizeXL;
     }
 
-    .euiStep__content {
+    .ouiStep__content {
       // Align the content's contents with the title
-      padding-left: ($euiStepNumberSmallSize / 2) + $euiStepNumberMargin;
+      padding-left: ($ouiStepNumberSmallSize / 2) + $ouiStepNumberMargin;
 
       // Align content border to horizontal center of step number
-      margin-left: ($euiStepNumberSmallSize / 2);
+      margin-left: ($ouiStepNumberSmallSize / 2);
     }
   }
 }
 
-.euiStep__titleWrapper {
+.ouiStep__titleWrapper {
   display: flex;
 }
 
-.euiStep__circle {
+.ouiStep__circle {
   flex-shrink: 0;
-  margin-right: $euiStepNumberMargin;
+  margin-right: $ouiStepNumberMargin;
   vertical-align: top; /* 1 */
 }
 
-.euiStep__title {
-  font-weight: $euiFontWeightMedium;
+.ouiStep__title {
+  font-weight: $ouiFontWeightMedium;
 }
 
-.euiStep__content {
-  padding: $euiSize $euiSize $euiSizeXL;
-  margin: $euiSizeS 0;
+.ouiStep__content {
+  padding: $ouiSize $ouiSize $ouiSizeXL;
+  margin: $ouiSizeS 0;
 
   // Align the content's contents with the title
-  padding-left: ($euiStepNumberSize / 2) + $euiStepNumberMargin;
+  padding-left: ($ouiStepNumberSize / 2) + $ouiStepNumberMargin;
 
   // Align content border to horizontal center of step number
-  margin-left: ($euiStepNumberSize / 2);
+  margin-left: ($ouiStepNumberSize / 2);
 }

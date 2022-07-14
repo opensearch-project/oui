@@ -1,182 +1,193 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import {
-  EuiFormControlLayout,
-  EuiSpacer,
-  EuiFormLabel,
-  EuiButtonEmpty,
-  EuiText,
+  OuiFormControlLayout,
+  OuiSpacer,
+  OuiFormLabel,
+  OuiButtonEmpty,
+  OuiText,
 } from '../../../../src/components';
 
 export default () => (
   <Fragment>
-    <EuiFormControlLayout icon="search">
+    <OuiFormControlLayout icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading>
+    <OuiFormControlLayout isLoading>
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout clear={{ onClick: () => {} }}>
+    <OuiFormControlLayout clear={{ onClick: () => {} }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading clear={{ onClick: () => {} }}>
+    <OuiFormControlLayout isLoading clear={{ onClick: () => {} }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading icon="search">
+    <OuiFormControlLayout isLoading icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading icon={{ type: 'arrowDown', side: 'right' }}>
+    <OuiFormControlLayout isLoading icon={{ type: 'arrowDown', side: 'right' }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout clear={{ onClick: () => {} }} icon="search">
+    <OuiFormControlLayout clear={{ onClick: () => {} }} icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <OuiFormControlLayout
       clear={{ onClick: () => {} }}
       icon={{ type: 'arrowDown', side: 'right' }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading clear={{ onClick: () => {} }} icon="search">
+    <OuiFormControlLayout isLoading clear={{ onClick: () => {} }} icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <OuiFormControlLayout
       isLoading
       clear={{ onClick: () => {} }}
       icon={{ type: 'arrowDown', side: 'right' }}>
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout isLoading clear={{ onClick: () => {} }} icon="search">
+    <OuiFormControlLayout isLoading clear={{ onClick: () => {} }} icon="search">
       <input
         type="text"
-        className="euiFieldText"
+        className="ouiFieldText"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout
-      prepend={<EuiFormLabel htmlFor="textField19">Label</EuiFormLabel>}>
+    <OuiFormControlLayout
+      prepend={<OuiFormLabel htmlFor="textField19">Label</OuiFormLabel>}>
       <input
         type="text"
-        className="euiFieldText euiFieldText--inGroup"
+        className="ouiFieldText ouiFieldText--inGroup"
         id="textField19"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <OuiFormControlLayout
       readOnly
-      prepend={<EuiFormLabel htmlFor="textField19a">Read only</EuiFormLabel>}>
+      prepend={<OuiFormLabel htmlFor="textField19a">Read only</OuiFormLabel>}>
       <input
         type="text"
-        className="euiFieldText euiFieldText--inGroup"
+        className="ouiFieldText ouiFieldText--inGroup"
         id="textField19a"
         readOnly
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <OuiFormControlLayout
       append={
-        <EuiText size="xs">
+        <OuiText size="xs">
           <strong>%</strong>
-        </EuiText>
+        </OuiText>
       }>
       <input
         type="number"
-        className="euiFieldNumber euiFieldNumber--inGroup"
+        className="ouiFieldNumber ouiFieldNumber--inGroup"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiFormControlLayout
+    <OuiFormControlLayout
       isLoading
       clear={{ onClick: () => {} }}
       prepend={
-        <EuiButtonEmpty size="xs" iconType="arrowDown" iconSide="right">
+        <OuiButtonEmpty size="xs" iconType="arrowDown" iconSide="right">
           Button
-        </EuiButtonEmpty>
+        </OuiButtonEmpty>
       }>
       <input
         type="text"
-        className="euiFieldText euiFieldText--inGroup"
+        className="ouiFieldText ouiFieldText--inGroup"
         aria-label="Use aria labels when no actual label is in use"
       />
-    </EuiFormControlLayout>
+    </OuiFormControlLayout>
   </Fragment>
 );

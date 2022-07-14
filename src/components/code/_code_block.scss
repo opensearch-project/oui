@@ -1,178 +1,189 @@
-.euiCodeBlock {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiCodeBlock {
   max-width: 100%;
   display: block;
   position: relative;
-  background: $euiCodeBlockBackgroundColor;
-  color: $euiCodeBlockColor;
+  background: $ouiCodeBlockBackgroundColor;
+  color: $ouiCodeBlockColor;
 
-  .euiCodeBlock__pre {
-    @include euiScrollBar;
+  .ouiCodeBlock__pre {
+    @include ouiScrollBar;
     height: 100%;
     overflow: auto;
     display: block;
   }
 
-  .euiCodeBlock__pre--whiteSpacePre {
+  .ouiCodeBlock__pre--whiteSpacePre {
     white-space: pre;
   }
 
-  .euiCodeBlock__pre--whiteSpacePreWrap {
+  .ouiCodeBlock__pre--whiteSpacePreWrap {
     white-space: pre-wrap;
   }
 
-  .euiCodeBlock__code {
-    @include euiCodeFont;
+  .ouiCodeBlock__code {
+    @include ouiCodeFont;
     display: block;
-    line-height: $euiLineHeight;
-    font-weight: $euiCodeFontWeightRegular;
+    line-height: $ouiLineHeight;
+    font-weight: $ouiCodeFontWeightRegular;
     font-size: inherit;
   }
 
-  .euiCodeBlock__controls {
+  .ouiCodeBlock__controls {
     position: absolute;
     top: 0;
     right: 0;
   }
 
-  .euiCodeBlock__fullScreenButton + .euiCodeBlock__copyButton {
-    margin-top: $euiSizeXS;
+  .ouiCodeBlock__fullScreenButton + .ouiCodeBlock__copyButton {
+    margin-top: $ouiSizeXS;
   }
 
-  .euiCodeBlock__line {
+  .ouiCodeBlock__line {
     display: block;
   }
 
-  &.euiCodeBlock-isFullScreen {
+  &.ouiCodeBlock-isFullScreen {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 
-    .euiCodeBlock__pre {
+    .ouiCodeBlock__pre {
       // sass-lint:disable-block no-important
-      padding: $euiSizeXL !important;
+      padding: $ouiSizeXL !important;
     }
 
-    .euiCodeBlock__controls {
-      top: $euiSizeXS;
-      right: $euiSizeXS;
+    .ouiCodeBlock__controls {
+      top: $ouiSizeXS;
+      right: $ouiSizeXS;
     }
   }
 
-  &.euiCodeBlock--fontSmall {
-    font-size: $euiFontSizeXS;
+  &.ouiCodeBlock--fontSmall {
+    font-size: $ouiFontSizeXS;
   }
 
-  &.euiCodeBlock--fontMedium {
-    font-size: $euiFontSizeS;
+  &.ouiCodeBlock--fontMedium {
+    font-size: $ouiFontSizeS;
   }
 
-  &.euiCodeBlock--fontLarge {
-    font-size: $euiFontSize;
+  &.ouiCodeBlock--fontLarge {
+    font-size: $ouiFontSize;
   }
 
   // Storing for re-use the sizing of controls plus extra padding
-  $controlsPadding: $euiSizeL + $euiSizeXS;
+  $controlsPadding: $ouiSizeL + $ouiSizeXS;
 
-  &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePreWrap {
+  &.ouiCodeBlock--hasControls .ouiCodeBlock__pre--whiteSpacePreWrap {
     padding-right: $controlsPadding;
   }
 
-  &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePre {
+  &.ouiCodeBlock--hasControls .ouiCodeBlock__pre--whiteSpacePre {
     margin-right: $controlsPadding;
   }
 
   // Small padding
-  &.euiCodeBlock--paddingSmall {
-    .euiCodeBlock__pre {
-      padding: $euiSizeS;
+  &.ouiCodeBlock--paddingSmall {
+    .ouiCodeBlock__pre {
+      padding: $ouiSizeS;
     }
 
-    .euiCodeBlock__controls {
-      top: $euiSizeS;
-      right: $euiSizeS;
+    .ouiCodeBlock__controls {
+      top: $ouiSizeS;
+      right: $ouiSizeS;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePreWrap {
-      padding-right: $euiSizeS + $controlsPadding;
+    &.ouiCodeBlock--hasControls .ouiCodeBlock__pre--whiteSpacePreWrap {
+      padding-right: $ouiSizeS + $controlsPadding;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePre {
-      margin-right: $euiSizeS + $controlsPadding;
+    &.ouiCodeBlock--hasControls .ouiCodeBlock__pre--whiteSpacePre {
+      margin-right: $ouiSizeS + $controlsPadding;
     }
   }
 
   // Medium padding
-  &.euiCodeBlock--paddingMedium {
-    .euiCodeBlock__pre {
-      padding: $euiSize;
+  &.ouiCodeBlock--paddingMedium {
+    .ouiCodeBlock__pre {
+      padding: $ouiSize;
     }
 
-    .euiCodeBlock__controls {
-      top: $euiSize;
-      right: $euiSize;
+    .ouiCodeBlock__controls {
+      top: $ouiSize;
+      right: $ouiSize;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePreWrap {
-      padding-right: $euiSize + $controlsPadding;
+    &.ouiCodeBlock--hasControls .ouiCodeBlock__pre--whiteSpacePreWrap {
+      padding-right: $ouiSize + $controlsPadding;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePre {
-      margin-right: $euiSize + $controlsPadding;
+    &.ouiCodeBlock--hasControls .ouiCodeBlock__pre--whiteSpacePre {
+      margin-right: $ouiSize + $controlsPadding;
     }
   }
 
   // Large padding
-  &.euiCodeBlock--paddingLarge {
-    .euiCodeBlock__pre {
-      padding: $euiSizeL;
+  &.ouiCodeBlock--paddingLarge {
+    .ouiCodeBlock__pre {
+      padding: $ouiSizeL;
     }
 
-    .euiCodeBlock__controls {
-      top: $euiSizeL;
-      right: $euiSizeL;
+    .ouiCodeBlock__controls {
+      top: $ouiSizeL;
+      right: $ouiSizeL;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePreWrap {
-      padding-right: $euiSizeL + $controlsPadding;
+    &.ouiCodeBlock--hasControls .ouiCodeBlock__pre--whiteSpacePreWrap {
+      padding-right: $ouiSizeL + $controlsPadding;
     }
 
-    &.euiCodeBlock--hasControls .euiCodeBlock__pre--whiteSpacePre {
-      margin-right: $euiSizeL + $controlsPadding;
+    &.ouiCodeBlock--hasControls .ouiCodeBlock__pre--whiteSpacePre {
+      margin-right: $ouiSizeL + $controlsPadding;
     }
   }
 
   /*
    * 1. Size the code against the text its embedded within.
    */
-  &.euiCodeBlock--inline {
+  &.ouiCodeBlock--inline {
     display: inline-block;
     white-space: pre;
-    color: $euiTextColor;
+    color: $ouiTextColor;
     font-size: 90%; /* 1 */
-    padding: 0 $euiSizeS;
-    background: $euiCodeBlockBackgroundColor;
+    padding: 0 $ouiSizeS;
+    background: $ouiCodeBlockBackgroundColor;
 
-    .euiCodeBlock__pre {
-      padding: 0 $euiSizeXS;
+    .ouiCodeBlock__pre {
+      padding: 0 $ouiSizeXS;
     }
 
-    .euiCodeBlock__code {
+    .ouiCodeBlock__code {
       display: inline;
       white-space: normal;
     }
   }
 
-  &.euiCodeBlock--transparentBackground {
+  &.ouiCodeBlock--transparentBackground {
     background: transparent;
   }
 
   .prismjs > *::selection {
     // Only change the color if the variable IS a color
     // or else no highlight color shows up at all
-    @if type-of($euiCodeBlockSelectedBackgroundColor) == color {
-      background-color: $euiCodeBlockSelectedBackgroundColor;
+    @if type-of($ouiCodeBlockSelectedBackgroundColor) == color {
+      background-color: $ouiCodeBlockSelectedBackgroundColor;
     }
   }
 
@@ -186,12 +197,12 @@
   .token.cdata,
   .token.coord,
   .token.blockquote {
-    color: $euiCodeBlockCommentColor;
+    color: $ouiCodeBlockCommentColor;
     font-style: italic;
   }
 
   .token.selector {
-    color: $euiCodeBlockSelectorTagColor;
+    color: $ouiCodeBlockSelectorTagColor;
   }
 
   .token.string,
@@ -200,7 +211,7 @@
   .token.doc-comment .token.keyword,
   .token.attr-value,
   .token.url .token.content {
-    color: $euiCodeBlockStringColor;
+    color: $ouiCodeBlockStringColor;
   }
 
   .token.number,
@@ -212,76 +223,76 @@
   .token.hexcode,
   .token.attr-name,
   .token.attr-equals {
-    color: $euiCodeBlockNumberColor;
+    color: $ouiCodeBlockNumberColor;
   }
 
   .token.atrule .token.rule,
   .token.keyword {
-    color: $euiCodeBlockKeywordColor;
+    color: $ouiCodeBlockKeywordColor;
   }
 
   .token.function {
-    color: $euiCodeBlockFunctionTitleColor;
+    color: $ouiCodeBlockFunctionTitleColor;
   }
 
   .token.tag {
-    color: $euiCodeBlockTagColor;
+    color: $ouiCodeBlockTagColor;
   }
 
   .token.class-name {
-    color: $euiCodeBlockTypeColor;
+    color: $ouiCodeBlockTypeColor;
   }
 
   .token.property {
-    color: $euiCodeBlockAttributeColor;
+    color: $ouiCodeBlockAttributeColor;
   }
 
   .token.console,
   .token.list-punctuation,
   .token.url-reference,
   .token.url .token.url {
-    color: $euiCodeBlockSymbolColor;
+    color: $ouiCodeBlockSymbolColor;
   }
 
   .token.paramater {
-    color: $euiCodeBlockParamsColor;
+    color: $ouiCodeBlockParamsColor;
   }
 
   .token.meta,
   .token.important {
-    color: $euiCodeBlockMetaColor;
+    color: $ouiCodeBlockMetaColor;
   }
 
   .token.title {
-    color: $euiCodeBlockTitleColor;
+    color: $ouiCodeBlockTitleColor;
   }
 
   .token.section {
-    color: $euiCodeBlockSectionColor;
+    color: $ouiCodeBlockSectionColor;
   }
 
   .token.prefix.inserted,
   .token.prefix.deleted {
-    padding-left: $euiSizeXS;
-    margin-left: -$euiSizeXS;
+    padding-left: $ouiSizeXS;
+    margin-left: -$ouiSizeXS;
   }
 
   .token.prefix.inserted {
-    box-shadow: -$euiSizeXS 0 $euiCodeBlockAdditionColor;
-    color: $euiCodeBlockAdditionColor;
+    box-shadow: -$ouiSizeXS 0 $ouiCodeBlockAdditionColor;
+    color: $ouiCodeBlockAdditionColor;
   }
 
   .token.prefix.deleted {
-    box-shadow: -$euiSizeXS 0 $euiCodeBlockDeletionColor;
-    color: $euiCodeBlockDeletionColor;
+    box-shadow: -$ouiSizeXS 0 $ouiCodeBlockDeletionColor;
+    color: $ouiCodeBlockDeletionColor;
   }
 
   .token.selector .token.class {
-    color: $euiCodeBlockSelectorClassColor;
+    color: $ouiCodeBlockSelectorClassColor;
   }
 
   .token.selector .token.id {
-    color: $euiCodeBlockSelectorIdColor;
+    color: $ouiCodeBlockSelectorIdColor;
   }
 
   .token.italic {
@@ -290,7 +301,7 @@
 
   .token.important,
   .token.bold {
-    font-weight: $euiCodeFontWeightBold;
+    font-weight: $ouiCodeFontWeightBold;
   }
 
   .token.url-reference,

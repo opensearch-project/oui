@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiHeaderBreadcrumbs is rendered 1`] = `
+exports[`OuiHeaderBreadcrumbs is rendered 1`] = `
 <nav
   aria-label="aria-label"
-  class="euiBreadcrumbs euiHeaderBreadcrumbs testClass1 testClass2 euiBreadcrumbs--truncate"
+  class="ouiBreadcrumbs ouiHeaderBreadcrumbs testClass1 testClass2 ouiBreadcrumbs--truncate"
   data-test-subj="test subject string"
 >
   <a
-    class="euiLink euiLink--subdued euiBreadcrumb customClass"
+    class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
     data-test-subj="breadcrumbsAnimals"
     href="#"
     rel="noreferrer"
@@ -15,30 +15,30 @@ exports[`EuiHeaderBreadcrumbs is rendered 1`] = `
     Animals
   </a>
   <div
-    class="euiBreadcrumbSeparator"
+    class="ouiBreadcrumbSeparator"
   />
   <button
-    class="euiLink euiLink--subdued euiBreadcrumb"
+    class="ouiLink ouiLink--subdued ouiBreadcrumb"
     type="button"
   >
     Reptiles
   </button>
   <div
-    class="euiBreadcrumbSeparator"
+    class="ouiBreadcrumbSeparator"
   />
   <a
-    class="euiLink euiLink--subdued euiBreadcrumb"
+    class="ouiLink ouiLink--subdued ouiBreadcrumb"
     href="#"
     rel="noreferrer"
   >
     Boa constrictor
   </a>
   <div
-    class="euiBreadcrumbSeparator"
+    class="ouiBreadcrumbSeparator"
   />
   <span
     aria-current="page"
-    class="euiBreadcrumb euiBreadcrumb--last"
+    class="ouiBreadcrumb ouiBreadcrumb--last"
   >
     Edit
   </span>

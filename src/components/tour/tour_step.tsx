@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,29 +38,29 @@ import classNames from 'classnames';
 
 import { CommonProps, NoArgCallback } from '../common';
 
-import { EuiBeacon } from '../beacon';
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../button';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiI18n } from '../i18n';
+import { OuiBeacon } from '../beacon';
+import { OuiButtonEmpty, OuiButtonEmptyProps } from '../button';
+import { OuiFlexGroup, OuiFlexItem } from '../flex';
+import { OuiI18n } from '../i18n';
 import {
-  EuiPopover,
-  EuiPopoverFooter,
-  EuiPopoverProps,
-  EuiPopoverTitle,
+  OuiPopover,
+  OuiPopoverFooter,
+  OuiPopoverProps,
+  OuiPopoverTitle,
 } from '../popover';
-import { EuiTitle } from '../title';
+import { OuiTitle } from '../title';
 
-import { EuiTourStepIndicator, EuiTourStepStatus } from './tour_step_indicator';
+import { OuiTourStepIndicator, OuiTourStepStatus } from './tour_step_indicator';
 import { htmlIdGenerator } from '../../services';
 
 type PopoverOverrides = 'button' | 'closePopover';
 
-type EuiPopoverPartials = Partial<Pick<EuiPopoverProps, PopoverOverrides>>;
+type OuiPopoverPartials = Partial<Pick<OuiPopoverProps, PopoverOverrides>>;
 
-export interface EuiTourStepProps
+export interface OuiTourStepProps
   extends CommonProps,
-    Omit<EuiPopoverProps, PopoverOverrides>,
-    EuiPopoverPartials {
+    Omit<OuiPopoverProps, PopoverOverrides>,
+    OuiPopoverPartials {
   /**
    * Element to which the tour step popover attaches when open
    */
@@ -90,7 +101,7 @@ export interface EuiTourStepProps
   stepsTotal: number;
 
   /**
-   * Optional, standard DOM `style` attribute. Passed to the EuiPopover panel.
+   * Optional, standard DOM `style` attribute. Passed to the OuiPopover panel.
    */
   style?: CSSProperties;
 
@@ -115,7 +126,7 @@ export interface EuiTourStepProps
   footerAction?: ReactElement;
 }
 
-export const EuiTourStep: FunctionComponent<EuiTourStepProps> = ({
+export const OuiTourStep: FunctionComponent<OuiTourStepProps> = ({
   anchorPosition = 'leftUp',
   children,
   className,
@@ -137,58 +148,58 @@ export const EuiTourStep: FunctionComponent<EuiTourStepProps> = ({
   const titleId = generatedId();
   if (step === 0) {
     console.warn(
-      'EuiTourStep `step` should 1-based indexing. Please update to eliminate 0 indexes.'
+      'OuiTourStep `step` should 1-based indexing. Please update to eliminate 0 indexes.'
     );
   }
   let newStyle;
 
   let widthClassName;
   if (minWidth === true) {
-    widthClassName = 'euiTour--minWidth-default';
+    widthClassName = 'ouiTour--minWidth-default';
   } else if (minWidth !== false) {
     const value = typeof minWidth === 'number' ? `${minWidth}px` : minWidth;
     newStyle = { ...style, minWidth: value };
   }
 
-  const classes = classNames('euiTour', widthClassName, className);
+  const classes = classNames('ouiTour', widthClassName, className);
 
-  const finishButtonProps: EuiButtonEmptyProps = {
+  const finishButtonProps: OuiButtonEmptyProps = {
     color: 'text',
     flush: 'right',
     size: 'xs',
   };
 
   const footer = (
-    <EuiFlexGroup
+    <OuiFlexGroup
       responsive={false}
       justifyContent={stepsTotal > 1 ? 'spaceBetween' : 'flexEnd'}>
       {stepsTotal > 1 && (
-        <EuiFlexItem grow={false}>
-          <ul className="euiTourFooter__stepList">
+        <OuiFlexItem grow={false}>
+          <ul className="ouiTourFooter__stepList">
             {[...Array(stepsTotal).keys()].map((_, i) => {
-              let status: EuiTourStepStatus = 'complete';
+              let status: OuiTourStepStatus = 'complete';
               if (step === i + 1) {
                 status = 'active';
               } else if (step <= i) {
                 status = 'incomplete';
               }
               return (
-                <EuiTourStepIndicator key={i} number={i + 1} status={status} />
+                <OuiTourStepIndicator key={i} number={i + 1} status={status} />
               );
             })}
           </ul>
-        </EuiFlexItem>
+        </OuiFlexItem>
       )}
 
       {footerAction ? (
-        <EuiFlexItem grow={false}>{footerAction}</EuiFlexItem>
+        <OuiFlexItem grow={false}>{footerAction}</OuiFlexItem>
       ) : (
-        <EuiFlexItem grow={false}>
-          <EuiI18n
+        <OuiFlexItem grow={false}>
+          <OuiI18n
             tokens={[
-              'euiTourStep.endTour',
-              'euiTourStep.skipTour',
-              'euiTourStep.closeTour',
+              'ouiTourStep.endTour',
+              'ouiTourStep.skipTour',
+              'ouiTourStep.closeTour',
             ]}
             defaults={['End tour', 'Skip tour', 'Close tour']}>
             {([endTour, skipTour, closeTour]: string[]) => {
@@ -197,21 +208,21 @@ export const EuiTourStep: FunctionComponent<EuiTourStepProps> = ({
                 content = stepsTotal === step ? endTour : skipTour;
               }
               return (
-                <EuiButtonEmpty onClick={onFinish} {...finishButtonProps}>
+                <OuiButtonEmpty onClick={onFinish} {...finishButtonProps}>
                   {content}
-                </EuiButtonEmpty>
+                </OuiButtonEmpty>
               );
             }}
-          </EuiI18n>
-        </EuiFlexItem>
+          </OuiI18n>
+        </OuiFlexItem>
       )}
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   );
 
   const hasBeacon = decoration === 'beacon';
 
   return (
-    <EuiPopover
+    <OuiPopover
       anchorPosition={anchorPosition}
       button={children}
       closePopover={closePopover}
@@ -221,18 +232,18 @@ export const EuiTourStep: FunctionComponent<EuiTourStepProps> = ({
       panelStyle={newStyle || style}
       offset={hasBeacon ? 10 : 0}
       aria-labelledby={titleId}
-      arrowChildren={hasBeacon && <EuiBeacon className="euiTour__beacon" />}
+      arrowChildren={hasBeacon && <OuiBeacon className="ouiTour__beacon" />}
       {...rest}>
-      <EuiPopoverTitle className="euiTourHeader" id={titleId}>
-        <EuiTitle size="xxxs" className="euiTourHeader__subtitle">
+      <OuiPopoverTitle className="ouiTourHeader" id={titleId}>
+        <OuiTitle size="xxxs" className="ouiTourHeader__subtitle">
           <h1>{subtitle}</h1>
-        </EuiTitle>
-        <EuiTitle size="xxs" className="euiTourHeader__title">
+        </OuiTitle>
+        <OuiTitle size="xxs" className="ouiTourHeader__title">
           <h2>{title}</h2>
-        </EuiTitle>
-      </EuiPopoverTitle>
-      <div className="euiTour__content">{content}</div>
-      <EuiPopoverFooter className="euiTourFooter">{footer}</EuiPopoverFooter>
-    </EuiPopover>
+        </OuiTitle>
+      </OuiPopoverTitle>
+      <div className="ouiTour__content">{content}</div>
+      <OuiPopoverFooter className="ouiTourFooter">{footer}</OuiPopoverFooter>
+    </OuiPopover>
   );
 };

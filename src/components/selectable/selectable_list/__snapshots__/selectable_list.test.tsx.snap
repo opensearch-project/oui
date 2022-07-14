@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSelectableListItem is rendered 1`] = `
+exports[`OuiSelectableListItem is rendered 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -11,9 +11,9 @@ exports[`EuiSelectableListItem is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props activeOptionIndex 1`] = `
+exports[`OuiSelectableListItem props activeOptionIndex 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -22,9 +22,9 @@ exports[`EuiSelectableListItem props activeOptionIndex 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props allowExclusions 1`] = `
+exports[`OuiSelectableListItem props allowExclusions 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -33,9 +33,9 @@ exports[`EuiSelectableListItem props allowExclusions 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props bordered 1`] = `
+exports[`OuiSelectableListItem props bordered 1`] = `
 <div
-  class="euiSelectableList euiSelectableList-bordered testClass1 testClass2"
+  class="ouiSelectableList ouiSelectableList-bordered testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -44,9 +44,9 @@ exports[`EuiSelectableListItem props bordered 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props height is forced 1`] = `
+exports[`OuiSelectableListItem props height is forced 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -55,9 +55,9 @@ exports[`EuiSelectableListItem props height is forced 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props height is full 1`] = `
+exports[`OuiSelectableListItem props height is full 1`] = `
 <div
-  class="euiSelectableList euiSelectableList-fullHeight testClass1 testClass2"
+  class="ouiSelectableList ouiSelectableList-fullHeight testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -66,9 +66,9 @@ exports[`EuiSelectableListItem props height is full 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props renderOption 1`] = `
+exports[`OuiSelectableListItem props renderOption 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -77,9 +77,9 @@ exports[`EuiSelectableListItem props renderOption 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props rowHeight 1`] = `
+exports[`OuiSelectableListItem props rowHeight 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -88,9 +88,9 @@ exports[`EuiSelectableListItem props rowHeight 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props searchValue 1`] = `
+exports[`OuiSelectableListItem props searchValue 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -99,9 +99,9 @@ exports[`EuiSelectableListItem props searchValue 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props searchValue 2`] = `
+exports[`OuiSelectableListItem props searchValue 2`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -110,9 +110,9 @@ exports[`EuiSelectableListItem props searchValue 2`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props showIcons can be turned off 1`] = `
+exports[`OuiSelectableListItem props showIcons can be turned off 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -121,9 +121,9 @@ exports[`EuiSelectableListItem props showIcons can be turned off 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props singleSelection can be forced so that at least one must be selected 1`] = `
+exports[`OuiSelectableListItem props singleSelection can be forced so that at least one must be selected 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -132,9 +132,9 @@ exports[`EuiSelectableListItem props singleSelection can be forced so that at le
 </div>
 `;
 
-exports[`EuiSelectableListItem props singleSelection can be turned on 1`] = `
+exports[`OuiSelectableListItem props singleSelection can be turned on 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
@@ -143,9 +143,9 @@ exports[`EuiSelectableListItem props singleSelection can be turned on 1`] = `
 </div>
 `;
 
-exports[`EuiSelectableListItem props visibleOptions 1`] = `
+exports[`OuiSelectableListItem props visibleOptions 1`] = `
 <div
-  class="euiSelectableList testClass1 testClass2"
+  class="ouiSelectableList testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div

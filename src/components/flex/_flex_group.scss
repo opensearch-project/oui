@@ -1,14 +1,25 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Not always needed, but fixes an IE11 issue when flex-groups are nested under display: flex elements.
  * 2. IE requires a unit to grow.
  */
 
-.euiFlexGroup {
+.ouiFlexGroup {
   display: flex;
   align-items: stretch;
   flex-grow: 1; /* 1 */
 
-  .euiFlexItem {
+  .ouiFlexItem {
     @include internetExplorerOnly {
       min-width: 1px;
     }
@@ -19,89 +30,89 @@
 }
 
 $gutterTypes: (
-  gutterExtraSmall: $euiSizeXS,
-  gutterSmall: $euiSizeS,
-  gutterMedium: $euiSize,
-  gutterLarge: $euiSizeL,
-  gutterExtraLarge: $euiSizeXXL,
+  gutterExtraSmall: $ouiSizeXS,
+  gutterSmall: $ouiSizeS,
+  gutterMedium: $ouiSize,
+  gutterLarge: $ouiSizeL,
+  gutterExtraLarge: $ouiSizeXXL,
 );
 
 // Gutter Sizes
 @each $gutterName, $gutterSize in $gutterTypes {
   $halfGutterSize: $gutterSize * .5;
 
-  .euiFlexGroup--#{$gutterName} {
+  .ouiFlexGroup--#{$gutterName} {
     margin: -$halfGutterSize;
 
-    & > .euiFlexItem {
+    & > .ouiFlexItem {
       margin: $halfGutterSize;
     }
   }
 }
 
 // Justify the grid
-.euiFlexGroup--justifyContentSpaceEvenly {
+.ouiFlexGroup--justifyContentSpaceEvenly {
   justify-content: space-evenly;
 }
 
-.euiFlexGroup--justifyContentSpaceBetween {
+.ouiFlexGroup--justifyContentSpaceBetween {
   justify-content: space-between;
 }
 
-.euiFlexGroup--justifyContentSpaceAround {
+.ouiFlexGroup--justifyContentSpaceAround {
   justify-content: space-around;
 }
 
-.euiFlexGroup--justifyContentCenter {
+.ouiFlexGroup--justifyContentCenter {
   justify-content: center;
 }
 
-.euiFlexGroup--justifyContentFlexEnd {
+.ouiFlexGroup--justifyContentFlexEnd {
   justify-content: flex-end;
 }
 
 // Align Items
-.euiFlexGroup--alignItemsFlexStart {
+.ouiFlexGroup--alignItemsFlexStart {
   align-items: flex-start;
 }
 
-.euiFlexGroup--alignItemsCenter {
+.ouiFlexGroup--alignItemsCenter {
   align-items: center;
 }
 
-.euiFlexGroup--alignItemsFlexEnd {
+.ouiFlexGroup--alignItemsFlexEnd {
   align-items: flex-end;
 }
 
-.euiFlexGroup--alignItemsBaseline {
+.ouiFlexGroup--alignItemsBaseline {
   align-items: baseline;
 }
 
 // Direction
 
-.euiFlexGroup--directionRow {
+.ouiFlexGroup--directionRow {
   flex-direction: row;
 }
 
-.euiFlexGroup--directionRowReverse {
+.ouiFlexGroup--directionRowReverse {
   flex-direction: row-reverse;
 }
 
-.euiFlexGroup--directionColumn {
+.ouiFlexGroup--directionColumn {
   flex-direction: column;
 }
 
-.euiFlexGroup--directionColumnReverse {
+.ouiFlexGroup--directionColumnReverse {
   flex-direction: column-reverse;
 }
 
 // Wrap
-.euiFlexGroup--wrap {
+.ouiFlexGroup--wrap {
   flex-wrap: wrap;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiFlexGroup--responsive {
+@include ouiBreakpoint('xs', 's') {
+  .ouiFlexGroup--responsive {
     flex-wrap: wrap;
     margin-left: 0;
     margin-right: 0;

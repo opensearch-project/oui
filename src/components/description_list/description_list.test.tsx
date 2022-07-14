@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiDescriptionList, TYPES, ALIGNMENTS } from './description_list';
+import { OuiDescriptionList, TYPES, ALIGNMENTS } from './description_list';
 
-describe('EuiDescriptionList', () => {
+describe('OuiDescriptionList', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiDescriptionList {...requiredProps}>Content</EuiDescriptionList>
+      <OuiDescriptionList {...requiredProps}>Content</OuiDescriptionList>
     );
 
     expect(component).toMatchSnapshot();
@@ -51,9 +62,9 @@ describe('EuiDescriptionList', () => {
         ];
 
         const component = render(
-          <EuiDescriptionList listItems={listItems}>
+          <OuiDescriptionList listItems={listItems}>
             listItems will render instead of this content
-          </EuiDescriptionList>
+          </OuiDescriptionList>
         );
 
         expect(component).toMatchSnapshot();
@@ -62,7 +73,7 @@ describe('EuiDescriptionList', () => {
 
     describe('compressed', () => {
       test('is rendered', () => {
-        const component = render(<EuiDescriptionList compressed />);
+        const component = render(<OuiDescriptionList compressed />);
 
         expect(component).toMatchSnapshot();
       });
@@ -71,7 +82,7 @@ describe('EuiDescriptionList', () => {
     describe('type', () => {
       TYPES.forEach((type) => {
         test(`${type} is rendered`, () => {
-          const component = render(<EuiDescriptionList type={type} />);
+          const component = render(<OuiDescriptionList type={type} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -81,7 +92,7 @@ describe('EuiDescriptionList', () => {
     describe('align', () => {
       ALIGNMENTS.forEach((alignment) => {
         test(`${alignment} is rendered`, () => {
-          const component = render(<EuiDescriptionList align={alignment} />);
+          const component = render(<OuiDescriptionList align={alignment} />);
 
           expect(component).toMatchSnapshot();
         });

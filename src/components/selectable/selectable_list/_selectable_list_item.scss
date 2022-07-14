@@ -1,50 +1,61 @@
-.euiSelectableListItem {
-  @include euiFontSizeS;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiSelectableListItem {
+  @include ouiFontSizeS;
   display: inline-flex; // Necessary to make sure it doesn't force the whole popover to be too wide
   width: 100%;
   text-align: left;
-  color: $euiTextColor;
+  color: $ouiTextColor;
   cursor: pointer;
 
   &:not(:last-of-type) {
-    border-bottom: $euiSelectableListItemBorder;
+    border-bottom: $ouiSelectableListItemBorder;
   }
 
   &-isFocused:not([aria-disabled='true']),
   &:hover:not([aria-disabled='true']) {
-    color: $euiColorPrimary;
-    background-color: $euiFocusBackgroundColor;
+    color: $ouiColorPrimary;
+    background-color: $ouiFocusBackgroundColor;
 
-    .euiSelectableListItem__text {
+    .ouiSelectableListItem__text {
       text-decoration: underline;
     }
   }
 
   &[aria-disabled='true'] {
-    color: $euiColorMediumShade;
+    color: $ouiColorMediumShade;
     cursor: not-allowed;
   }
 }
 
-.euiSelectableListItem__content {
-  padding: $euiSelectableListItemPadding;
+.ouiSelectableListItem__content {
+  padding: $ouiSelectableListItemPadding;
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.euiSelectableListItem__icon,
-.euiSelectableListItem__prepend {
-  margin-right: $euiSizeM;
+.ouiSelectableListItem__icon,
+.ouiSelectableListItem__prepend {
+  margin-right: $ouiSizeM;
   flex-shrink: 0;
 }
 
-.euiSelectableListItem__append {
-  margin-left: $euiSizeM;
+.ouiSelectableListItem__append {
+  margin-left: $ouiSizeM;
   flex-shrink: 0;
 }
 
-.euiSelectableListItem__text {
-  @include euiTextTruncate;
+.ouiSelectableListItem__text {
+  @include ouiTextTruncate;
   flex-grow: 1; // Pushes appended content to the far right
 }

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,11 +36,11 @@ import React, {
   useCallback,
 } from 'react';
 import classNames from 'classnames';
-import { EuiCallOut } from '../call_out';
-import { EuiI18n } from '../i18n';
+import { OuiCallOut } from '../call_out';
+import { OuiI18n } from '../i18n';
 import { CommonProps, ExclusiveUnion } from '../common';
 
-export type EuiFormProps = CommonProps &
+export type OuiFormProps = CommonProps &
   ExclusiveUnion<
     { component: 'form' } & FormHTMLAttributes<HTMLFormElement>,
     { component?: 'div' } & HTMLAttributes<HTMLDivElement>
@@ -46,7 +57,7 @@ export type EuiFormProps = CommonProps &
     invalidCallout?: 'above' | 'none';
   };
 
-export const EuiForm: FunctionComponent<EuiFormProps> = ({
+export const OuiForm: FunctionComponent<OuiFormProps> = ({
   children,
   className,
   isInvalid,
@@ -59,7 +70,7 @@ export const EuiForm: FunctionComponent<EuiFormProps> = ({
     node?.focus();
   }, []);
 
-  const classes = classNames('euiForm', className);
+  const classes = classNames('ouiForm', className);
 
   let optionalErrors: JSX.Element | null = null;
 
@@ -68,7 +79,7 @@ export const EuiForm: FunctionComponent<EuiFormProps> = ({
     optionalErrors = (
       <ul>
         {errorTexts.map((error, index) => (
-          <li className="euiForm__error" key={index}>
+          <li className="ouiForm__error" key={index}>
             {error}
           </li>
         ))}
@@ -80,22 +91,22 @@ export const EuiForm: FunctionComponent<EuiFormProps> = ({
 
   if (isInvalid && invalidCallout === 'above') {
     optionalErrorAlert = (
-      <EuiI18n
-        token="euiForm.addressFormErrors"
+      <OuiI18n
+        token="ouiForm.addressFormErrors"
         default="Please address the highlighted errors.">
         {(addressFormErrors: string) => (
-          <EuiCallOut
+          <OuiCallOut
             tabIndex={-1}
             ref={handleFocus}
-            className="euiForm__errors"
+            className="ouiForm__errors"
             title={addressFormErrors}
             color="danger"
             role="alert"
             aria-live="assertive">
             {optionalErrors}
-          </EuiCallOut>
+          </OuiCallOut>
         )}
-      </EuiI18n>
+      </OuiI18n>
     );
   }
 

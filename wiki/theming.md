@@ -1,12 +1,12 @@
-## How EUI theming works
+## How OUI theming works
 
-EUI can be easily themed by overwriting the [global styling](https://github.com/elastic/eui/tree/master/src/global_styling)
+OUI can be easily themed by overwriting the [global styling](https://github.com/elastic/eui/tree/master/src/global_styling)
 variables. Currently we maintain the following themes:
 
-* theme_light (the default EUI theme)
+* theme_light (the default OUI theme)
 * theme_dark (the same theme in dark)
-* theme_amsterdam_light (the next iteration of the EUI light theme)
-* theme_amsterdam_dark (the next iteration of the EUI dark theme)
+* theme_amsterdam_light (the next iteration of the OUI light theme)
+* theme_amsterdam_dark (the next iteration of the OUI dark theme)
 
 Each of these themes include variables,
 mixins, functions and other overwrites that adjust colors and sizing to fit the
@@ -41,7 +41,7 @@ through the theme selector.
 
 ## Theming tips
 
-Touch the least amount of variables possible. By nature EUI is very rigid. You shouldn't need
+Touch the least amount of variables possible. By nature OUI is very rigid. You shouldn't need
 much to make drastic changes to color. Most themes are less then a dozen variable overwrites in total.
 
 * In general you should only overwrite variables contained in the `src/global_styling` folder.

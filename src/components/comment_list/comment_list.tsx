@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,29 +31,29 @@
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
-import { EuiComment, EuiCommentProps } from './comment';
+import { OuiComment, OuiCommentProps } from './comment';
 
-export type EuiCommentListProps = HTMLAttributes<HTMLDivElement> &
+export type OuiCommentListProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     /**
-     * List of comments to render. See #EuiComment
+     * List of comments to render. See #OuiComment
      */
-    comments?: EuiCommentProps[];
+    comments?: OuiCommentProps[];
   };
 
-export const EuiCommentList: FunctionComponent<EuiCommentListProps> = ({
+export const OuiCommentList: FunctionComponent<OuiCommentListProps> = ({
   children,
   className,
   comments,
   ...rest
 }) => {
-  const classes = classNames('euiCommentList', className);
+  const classes = classNames('ouiCommentList', className);
 
   let commentElements = null;
 
   if (comments) {
     commentElements = comments.map((item, index) => (
-      <EuiComment key={index} {...item} />
+      <OuiComment key={index} {...item} />
     ));
   }
 

@@ -1,16 +1,27 @@
-.euiFieldText {
-  @include euiFormControlStyle;
-  @include euiFormControlWithIcon($isIconOptional: true);
-  @include euiFormControlIsLoading;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFieldText {
+  @include ouiFormControlStyle;
+  @include ouiFormControlWithIcon($isIconOptional: true);
+  @include ouiFormControlIsLoading;
 
   /* Invalid state normally comes from :invalid, but several components
-  /* like EuiDatePicker need it toggled through an extra class.
+  /* like OuiDatePicker need it toggled through an extra class.
   */
-  &.euiFieldText-isInvalid {
-    @include euiFormControlInvalidStyle;
+  &.ouiFieldText-isInvalid {
+    @include ouiFormControlInvalidStyle;
   }
 }
 
-.euiFieldText--withIcon.euiFieldText--compressed {
-  @include euiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: true);
+.ouiFieldText--withIcon.ouiFieldText--compressed {
+  @include ouiFormControlWithIcon($isIconOptional: false, $side: 'left', $compressed: true);
 }

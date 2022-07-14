@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { EuiText } from '../../../../src/components';
+import { OuiText } from '../../../../src/components';
 
 export const GuideRuleDescription = ({
   children,
@@ -20,10 +31,10 @@ export const GuideRuleDescription = ({
 
   return (
     <div className={classes} {...rest}>
-      <EuiText grow={false}>
+      <OuiText grow={false}>
         {headingNode}
         <p>{description}</p>
-      </EuiText>
+      </OuiText>
 
       {children}
     </div>

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,11 +35,11 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { EuiScreenReaderOnly } from '../accessibility';
+import { OuiScreenReaderOnly } from '../accessibility';
 import { CommonProps, NoArgCallback } from '../common';
-import { EuiIcon } from '../icon';
+import { OuiIcon } from '../icon';
 import { resolveWidthAsStyle } from './utils';
-import { EuiInnerText } from '../inner_text';
+import { OuiInnerText } from '../inner_text';
 
 import {
   HorizontalAlignment,
@@ -36,11 +47,11 @@ import {
   RIGHT_ALIGNMENT,
   CENTER_ALIGNMENT,
 } from '../../services';
-import { EuiI18n } from '../i18n';
+import { OuiI18n } from '../i18n';
 
 export type TableHeaderCellScope = 'col' | 'row' | 'colgroup' | 'rowgroup';
 
-export type EuiTableHeaderCellProps = CommonProps &
+export type OuiTableHeaderCellProps = CommonProps &
   Omit<ThHTMLAttributes<HTMLTableHeaderCellElement>, 'align' | 'scope'> & {
     align?: HorizontalAlignment;
     /**
@@ -90,39 +101,39 @@ const CellContents = ({
   showSortMsg,
 }: {
   className: string;
-  description: EuiTableHeaderCellProps['description'];
-  children: EuiTableHeaderCellProps['children'];
-  isSorted: EuiTableHeaderCellProps['isSorted'];
-  isSortAscending?: EuiTableHeaderCellProps['isSortAscending'];
+  description: OuiTableHeaderCellProps['description'];
+  children: OuiTableHeaderCellProps['children'];
+  isSorted: OuiTableHeaderCellProps['isSorted'];
+  isSortAscending?: OuiTableHeaderCellProps['isSortAscending'];
   showSortMsg: boolean;
 }) => {
   return (
     <span className={className}>
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
-          <EuiI18n
-            token="euiTableHeaderCell.titleTextWithDesc"
+          <OuiI18n
+            token="ouiTableHeaderCell.titleTextWithDesc"
             default="{innerText}; {description}"
             values={{ innerText, description }}>
             {(titleTextWithDesc: string) => (
               <span
                 title={description ? titleTextWithDesc : innerText}
                 ref={ref}
-                className="euiTableCellContent__text">
+                className="ouiTableCellContent__text">
                 {children}
               </span>
             )}
-          </EuiI18n>
+          </OuiI18n>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
       {description && (
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span>{description}</span>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       )}
       {showSortMsg && isSorted && (
-        <EuiIcon
-          className="euiTableSortIcon"
+        <OuiIcon
+          className="ouiTableSortIcon"
           type={isSortAscending ? 'sortUp' : 'sortDown'}
           size="m"
         />
@@ -131,7 +142,7 @@ const CellContents = ({
   );
 };
 
-export const EuiTableHeaderCell: FunctionComponent<EuiTableHeaderCellProps> = ({
+export const OuiTableHeaderCell: FunctionComponent<OuiTableHeaderCellProps> = ({
   children,
   align = LEFT_ALIGNMENT,
   onSort,
@@ -151,14 +162,14 @@ export const EuiTableHeaderCell: FunctionComponent<EuiTableHeaderCellProps> = ({
   description,
   ...rest
 }) => {
-  const classes = classNames('euiTableHeaderCell', className, {
-    'euiTableHeaderCell--hideForDesktop': mobileOptions.only || isMobileHeader,
-    'euiTableHeaderCell--hideForMobile': !mobileOptions.show || hideForMobile,
+  const classes = classNames('ouiTableHeaderCell', className, {
+    'ouiTableHeaderCell--hideForDesktop': mobileOptions.only || isMobileHeader,
+    'ouiTableHeaderCell--hideForMobile': !mobileOptions.show || hideForMobile,
   });
 
-  const contentClasses = classNames('euiTableCellContent', className, {
-    'euiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
-    'euiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
+  const contentClasses = classNames('ouiTableCellContent', className, {
+    'ouiTableCellContent--alignRight': align === RIGHT_ALIGNMENT,
+    'ouiTableCellContent--alignCenter': align === CENTER_ALIGNMENT,
   });
 
   const styleObj = resolveWidthAsStyle(style, width);
@@ -166,8 +177,8 @@ export const EuiTableHeaderCell: FunctionComponent<EuiTableHeaderCellProps> = ({
   const CellComponent = children ? 'th' : 'td';
 
   if (onSort || isSorted) {
-    const buttonClasses = classNames('euiTableHeaderButton', {
-      'euiTableHeaderButton-isSorted': isSorted,
+    const buttonClasses = classNames('ouiTableHeaderButton', {
+      'ouiTableHeaderButton-isSorted': isSorted,
     });
 
     let ariaSortValue: HTMLAttributes<any>['aria-sort'] = 'none';

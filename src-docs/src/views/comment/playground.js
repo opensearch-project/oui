@@ -1,22 +1,33 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiComment, EuiText } from '../../../../src/components/';
+import { OuiComment, OuiText } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiComment.__docgenInfo)
-    ? EuiComment.__docgenInfo[0]
-    : EuiComment.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiComment.__docgenInfo)
+    ? OuiComment.__docgenInfo[0]
+    : OuiComment.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
     ...propsToUse.children,
     type: PropTypes.ReactNode,
-    value: `<EuiText size="s">
+    value: `<OuiText size="s">
     <p>
       Far out in the uncharted backwaters of the unfashionable end of the
       western spiral arm of the Galaxy lies a small unregarded yellow sun.
     </p>
-  </EuiText>`,
+  </OuiText>`,
     hidden: false,
   };
 
@@ -39,15 +50,15 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiComment',
+      componentName: 'OuiComment',
       props: propsToUse,
       scope: {
-        EuiComment,
-        EuiText,
+        OuiComment,
+        OuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiComment', 'EuiText'],
+        '@opensearch-project/oui': {
+          named: ['OuiComment', 'OuiText'],
         },
       },
     },

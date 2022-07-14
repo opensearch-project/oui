@@ -1,97 +1,108 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCode, EuiSpacer, EuiIcon } from '../../../../src/components';
+import { OuiCode, OuiSpacer, OuiIcon } from '../../../../src/components';
 import { UtilityClassesSection } from './utility_classes_section';
 
 export default () => (
   <>
     <UtilityClassesSection
-      code="eui-alignTop"
+      code="oui-alignTop"
       description={
         <p>
           Changes the element’s vertical alignment property to{' '}
-          <EuiCode language="sass">vertical-align: top;</EuiCode>
+          <OuiCode language="sass">vertical-align: top;</OuiCode>
         </p>
       }
       example={
         <p>
-          <EuiIcon
+          <OuiIcon
             type="logoElasticStack"
             size="xxl"
-            className="eui-alignTop"
+            className="oui-alignTop"
           />
           &emsp; Icon is aligned to the top of the text
         </p>
       }
-      snippet={'<EuiIcon className="eui-alignTop" type="logoElasticStack" />'}
+      snippet={'<OuiIcon className="oui-alignTop" type="logoElasticStack" />'}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-alignMiddle"
+      code="oui-alignMiddle"
       description={
         <p>
           Changes the element’s vertical alignment property to{' '}
-          <EuiCode language="sass">vertical-align: middle;</EuiCode>
+          <OuiCode language="sass">vertical-align: middle;</OuiCode>
         </p>
       }
       example={
         <p>
-          <EuiIcon
+          <OuiIcon
             type="logoElasticStack"
             size="xxl"
-            className="eui-alignMiddle"
+            className="oui-alignMiddle"
           />
           &emsp; Icon is aligned to the middle of the text
         </p>
       }
       snippet={
-        '<EuiIcon className="eui-alignMiddle" type="logoElasticStack" />'
+        '<OuiIcon className="oui-alignMiddle" type="logoElasticStack" />'
       }
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-alignBottom"
+      code="oui-alignBottom"
       description={
         <p>
           Changes the element’s vertical alignment property to{' '}
-          <EuiCode language="sass">vertical-align: bottom;</EuiCode>
+          <OuiCode language="sass">vertical-align: bottom;</OuiCode>
         </p>
       }
       example={
         <p>
-          <EuiIcon
+          <OuiIcon
             type="logoElasticStack"
             size="xxl"
-            className="eui-alignBottom"
+            className="oui-alignBottom"
           />
           &emsp; Icon is aligned to the bottom of the text
         </p>
       }
       snippet={
-        '<EuiIcon className="eui-alignBottom" type="logoElasticStack" />'
+        '<OuiIcon className="oui-alignBottom" type="logoElasticStack" />'
       }
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-alignBaseline"
+      code="oui-alignBaseline"
       description={
         <p>
           Changes the element’s vertical alignment property to{' '}
-          <EuiCode language="sass">vertical-align: baseline;</EuiCode>
+          <OuiCode language="sass">vertical-align: baseline;</OuiCode>
         </p>
       }
       example={
         <p>
-          <EuiIcon
+          <OuiIcon
             type="logoElasticStack"
             size="xxl"
-            className="eui-alignBaseline"
+            className="oui-alignBaseline"
           />
           &emsp; Icon is aligned to the baseline of the text
         </p>
       }
       snippet={
-        '<EuiIcon className="eui-alignBaseline" type="logoElasticStack" />'
+        '<OuiIcon className="oui-alignBaseline" type="logoElasticStack" />'
       }
     />
   </>

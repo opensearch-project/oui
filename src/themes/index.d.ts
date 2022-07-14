@@ -17,7 +17,7 @@
  * under the License.
  */
 
-declare module '@elastic/eui/dist/eui_theme_*.json' {
+declare module '@elastic/oui/dist/oui_theme_*.json' {
   const value: any;
   export default value;
 }

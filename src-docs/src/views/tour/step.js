@@ -1,21 +1,32 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiLink,
-  EuiText,
-  EuiSpacer,
-  EuiTourStep,
+  OuiLink,
+  OuiText,
+  OuiSpacer,
+  OuiTourStep,
 } from '../../../../src/components';
 
 export default () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <div>
-      <EuiTourStep
+      <OuiTourStep
         content={
-          <EuiText>
+          <OuiText>
             <p>The tour step content.</p>
-          </EuiText>
+          </OuiText>
         }
         isStepOpen={isOpen}
         minWidth={300}
@@ -25,13 +36,13 @@ export default () => {
         title="Title of the current step"
         subtitle="Title of the full tour"
         anchorPosition="rightUp">
-        <EuiText>
+        <OuiText>
           The tour step{' '}
-          <EuiLink onClick={() => setIsOpen(!isOpen)}>anchor point</EuiLink>.
-        </EuiText>
-      </EuiTourStep>
-      <EuiSpacer size="xxl" />
-      <EuiSpacer size="xxl" />
+          <OuiLink onClick={() => setIsOpen(!isOpen)}>anchor point</OuiLink>.
+        </OuiText>
+      </OuiTourStep>
+      <OuiSpacer size="xxl" />
+      <OuiSpacer size="xxl" />
     </div>
   );
 };

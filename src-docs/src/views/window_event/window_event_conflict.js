@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiModal,
-  EuiModalBody,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiFieldText,
-  EuiSpacer,
+  OuiModal,
+  OuiModalBody,
+  OuiModalHeader,
+  OuiModalHeaderTitle,
+  OuiFieldText,
+  OuiSpacer,
 } from '../../../../src/components';
 import { keys } from '../../../../src/services';
 
@@ -26,27 +37,27 @@ const ConflictModal = (props) => {
   };
 
   return (
-    <EuiModal onClose={props.onClose} style={{ width: '800px' }}>
-      <EuiModalHeader>
-        <EuiModalHeaderTitle>
+    <OuiModal onClose={props.onClose} style={{ width: '800px' }}>
+      <OuiModalHeader>
+        <OuiModalHeaderTitle>
           <h1>Example modal</h1>
-        </EuiModalHeaderTitle>
-      </EuiModalHeader>
-      <EuiModalBody>
-        <EuiFieldText
+        </OuiModalHeaderTitle>
+      </OuiModalHeader>
+      <OuiModalBody>
+        <OuiFieldText
           value={inputValue}
           onChange={updateInputValue}
           onKeyDown={clearInputValueOnEscape}
         />
-        <EuiSpacer size="s" />
+        <OuiSpacer size="s" />
         <p>While typing in this field, ESC will clear the field.</p>
-        <EuiSpacer size="l" />
+        <OuiSpacer size="l" />
         <p>
           Otherwise, the event bubbles up to the window and ESC closes the
           modal.
         </p>
-      </EuiModalBody>
-    </EuiModal>
+      </OuiModalBody>
+    </OuiModal>
   );
 };
 

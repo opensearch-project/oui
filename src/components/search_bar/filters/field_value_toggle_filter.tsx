@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,7 +29,7 @@
  */
 
 import React, { Component } from 'react';
-import { EuiFilterButton } from '../../filter_group';
+import { OuiFilterButton } from '../../filter_group';
 import { isNil } from '../../../services/predicate';
 import { Query } from '../query';
 import { Clause, OperatorType, Value } from '../query/ast';
@@ -73,12 +84,12 @@ export class FieldValueToggleFilter extends Component<
       this.valueChanged(checked);
     };
     return (
-      <EuiFilterButton
+      <OuiFilterButton
         onClick={onClick}
         hasActiveFilters={hasActiveFilters}
         aria-pressed={!!hasActiveFilters}>
         {name}
-      </EuiFilterButton>
+      </OuiFilterButton>
     );
   }
 }

@@ -1,38 +1,49 @@
-.euiAccordionForm__extraAction {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiAccordionForm__extraAction {
   opacity: 0;
-  transition: opacity $euiAnimSpeedNormal $euiAnimSlightResistance;
+  transition: opacity $ouiAnimSpeedNormal $ouiAnimSlightResistance;
 
   &:focus {
     opacity: 1;
   }
 }
 
-.euiAccordionForm__title {
+.ouiAccordionForm__title {
   display: inline-block;
 }
 
-.euiAccordionForm__button {
-  padding: $euiSize $euiSize $euiSize 0;
+.ouiAccordionForm__button {
+  padding: $ouiSize $ouiSize $ouiSize 0;
 
   &:hover {
     text-decoration: none;
 
-    .euiAccordionForm__title {
+    .ouiAccordionForm__title {
       text-decoration: underline;
     }
   }
 }
 
-.euiAccordionForm {
-  border-top: $euiBorderThin;
-  border-bottom: $euiBorderThin;
+.ouiAccordionForm {
+  border-top: $ouiBorderThin;
+  border-bottom: $ouiBorderThin;
 
-  & + .euiAccordionForm {
+  & + .ouiAccordionForm {
     border-top: none;
   }
 
   &:hover {
-    .euiAccordionForm__extraAction {
+    .ouiAccordionForm__extraAction {
       opacity: 1;
       visibility: visible;
     }

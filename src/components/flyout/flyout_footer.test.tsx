@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiFlyoutFooter } from './flyout_footer';
+import { OuiFlyoutFooter } from './flyout_footer';
 
-describe('EuiFlyoutFooter', () => {
+describe('OuiFlyoutFooter', () => {
   test('is rendered', () => {
-    const component = render(<EuiFlyoutFooter {...requiredProps} />);
+    const component = render(<OuiFlyoutFooter {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });

@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiText,
-  EuiLoadingLogo,
-  EuiLoadingElastic,
-  EuiLoadingSpinner,
-  EuiLoadingChart,
-  EuiLoadingContent,
+  OuiCode,
+  OuiText,
+  OuiLoadingLogo,
+  OuiLoadingElastic,
+  OuiLoadingSpinner,
+  OuiLoadingChart,
+  OuiLoadingContent,
 } from '../../../../src/components';
 import {
   loadingElasticConfig,
@@ -38,7 +49,7 @@ const loadingContentSource = require('!!raw-loader!./loading_content');
 export const LoadingExample = {
   title: 'Loading',
   intro: (
-    <EuiText>
+    <OuiText>
       <p>
         Use loading indicators sparingly and opt for showing actual{' '}
         <Link to="/display/progress#progress-with-values">progress</Link> over
@@ -46,7 +57,7 @@ export const LoadingExample = {
         section is progressively loaded. However, if the entire page is loaded
         at once, use a single, larger loading indicator.
       </p>
-    </EuiText>
+    </OuiText>
   ),
   sections: [
     {
@@ -59,13 +70,13 @@ export const LoadingExample = {
       ],
       text: (
         <p>
-          The <strong>EuiLoadingElastic</strong> loader is great for full page
+          The <strong>OuiLoadingElastic</strong> loader is great for full page
           or Elastic product loading screens.
         </p>
       ),
-      props: { EuiLoadingElastic },
+      props: { OuiLoadingElastic },
       demo: <LoadingElastic />,
-      snippet: '<EuiLoadingElastic size="m" />',
+      snippet: '<OuiLoadingElastic size="m" />',
       playground: loadingElasticConfig,
     },
     {
@@ -78,17 +89,17 @@ export const LoadingExample = {
       ],
       text: (
         <p>
-          <strong>EuiLoadingLogo</strong> accepts any of our{' '}
+          <strong>OuiLoadingLogo</strong> accepts any of our{' '}
           <Link to="/display/icons#elastic-logos">
-            <strong>EuiIcon</strong>
+            <strong>OuiIcon</strong>
           </Link>{' '}
           logos. It should only be used in very large panels, like full screen
           pages.
         </p>
       ),
-      props: { EuiLoadingLogo },
+      props: { OuiLoadingLogo },
       demo: <LoadingLogo />,
-      snippet: '<EuiLoadingLogo size="m" />',
+      snippet: '<OuiLoadingLogo size="m" />',
       playground: loadingLogoConfig,
     },
     {
@@ -102,14 +113,14 @@ export const LoadingExample = {
       text: (
         <p>
           To indicate that a visualization is loading, use{' '}
-          <strong>EuiLoadingChart</strong>. The multi-color version should be
+          <strong>OuiLoadingChart</strong>. The multi-color version should be
           used sparingly, and only when a single large visualization is being
           loaded.
         </p>
       ),
-      props: { EuiLoadingChart },
+      props: { OuiLoadingChart },
       demo: <LoadingChart />,
-      snippet: '<EuiLoadingChart size="m" />',
+      snippet: '<OuiLoadingChart size="m" />',
       playground: loadingChartConfig,
     },
     {
@@ -122,13 +133,13 @@ export const LoadingExample = {
       ],
       text: (
         <p>
-          <strong>EuiLoadingSpinner</strong> is a simple spinner for most
+          <strong>OuiLoadingSpinner</strong> is a simple spinner for most
           loading contexts.
         </p>
       ),
-      props: { EuiLoadingSpinner },
+      props: { OuiLoadingSpinner },
       demo: <LoadingSpinner />,
-      snippet: '<EuiLoadingSpinner size="m" />',
+      snippet: '<OuiLoadingSpinner size="m" />',
       playground: loadingSpinnerConfig,
     },
     {
@@ -141,14 +152,14 @@ export const LoadingExample = {
       ],
       text: (
         <p>
-          <strong>EuiLoadingContent</strong> is a simple loading animation for
+          <strong>OuiLoadingContent</strong> is a simple loading animation for
           displaying placeholder text content. You can pass in a number of{' '}
-          <EuiCode>lines</EuiCode> between 1 and 10.
+          <OuiCode>lines</OuiCode> between 1 and 10.
         </p>
       ),
-      props: { EuiLoadingContent },
+      props: { OuiLoadingContent },
       demo: <LoadingContent />,
-      snippet: '<EuiLoadingContent lines={3} />',
+      snippet: '<OuiLoadingContent lines={3} />',
       playground: loadingContentConfig,
     },
   ],

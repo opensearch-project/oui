@@ -1,20 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiDatePickerRange is rendered 1`] = `
+exports[`OuiDatePickerRange is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiDatePickerRange testClass1 testClass2"
+  class="ouiDatePickerRange testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span>
     <span
-      class="euiDatePicker euiDatePicker--shadow"
+      class="ouiDatePicker ouiDatePicker--shadow"
     >
       <div
-        class="euiFormControlLayout"
+        class="ouiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <div
             class="react-datepicker-wrapper"
@@ -24,22 +24,22 @@ exports[`EuiDatePickerRange is rendered 1`] = `
             >
               <input
                 aria-label="Press the down key to open a popover containing a calendar."
-                class="euiDatePicker euiFieldText euiFieldText--withIcon"
+                class="ouiDatePicker ouiFieldText ouiFieldText--withIcon"
                 type="text"
                 value=""
               />
             </div>
           </div>
           <div
-            class="euiFormControlLayoutIcons"
+            class="ouiFormControlLayoutIcons"
           >
             <span
-              class="euiFormControlLayoutCustomIcon"
+              class="ouiFormControlLayoutCustomIcon"
             >
               <span
                 aria-hidden="true"
-                class="euiFormControlLayoutCustomIcon__icon"
-                data-euiicon-type="calendar"
+                class="ouiFormControlLayoutCustomIcon__icon"
+                data-ouiicon-type="calendar"
               />
             </span>
           </div>
@@ -48,23 +48,23 @@ exports[`EuiDatePickerRange is rendered 1`] = `
     </span>
   </span>
   <div
-    class="euiText euiText--small euiDatePickerRange__delimeter"
+    class="ouiText ouiText--small ouiDatePickerRange__delimeter"
   >
     <div
-      class="euiTextColor euiTextColor--subdued"
+      class="ouiTextColor ouiTextColor--subdued"
     >
       →
     </div>
   </div>
   <span>
     <span
-      class="euiDatePicker euiDatePicker--shadow"
+      class="ouiDatePicker ouiDatePicker--shadow"
     >
       <div
-        class="euiFormControlLayout"
+        class="ouiFormControlLayout"
       >
         <div
-          class="euiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout__childrenWrapper"
         >
           <div
             class="react-datepicker-wrapper"
@@ -74,7 +74,7 @@ exports[`EuiDatePickerRange is rendered 1`] = `
             >
               <input
                 aria-label="Press the down key to open a popover containing a calendar."
-                class="euiDatePicker euiFieldText"
+                class="ouiDatePicker ouiFieldText"
                 type="text"
                 value=""
               />

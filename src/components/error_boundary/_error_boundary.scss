@@ -1,6 +1,17 @@
-.euiErrorBoundary {
-  $color1: transparentize($euiColorDanger, .75);
-  $color2: transparentize($euiColorDanger, .95);
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiErrorBoundary {
+  $color1: transparentize($ouiColorDanger, .75);
+  $color2: transparentize($ouiColorDanger, .95);
 
   background: repeating-linear-gradient(
     45deg,
@@ -10,14 +21,14 @@
     $color2 20px
   );
   overflow: auto;
-  padding: $euiSize;
+  padding: $ouiSize;
 }
 
-.euiErrorBoundary__text {
-  background-color: $euiColorEmptyShade;
-  padding: $euiSizeS;
+.ouiErrorBoundary__text {
+  background-color: $ouiColorEmptyShade;
+  padding: $ouiSizeS;
 }
 
-.euiErrorBoundary__stack {
+.ouiErrorBoundary__stack {
   white-space: pre-wrap;
 }

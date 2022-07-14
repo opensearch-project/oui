@@ -1,0 +1,124 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// This file has lots of modifiers and is somewhat nesty by nature
+//sass-lint:disable nesting-depth
+
+.ouiButton,
+.ouiButtonIcon {
+  // sass-lint:disable no-important
+  // remove for all states
+  box-shadow: none !important;
+}
+
+.ouiButton.ouiButton-isDisabled:not(.ouiButton--ghost),
+.ouiButtonIcon.ouiButtonIcon-isDisabled:not(.ouiButtonIcon--ghost) {
+  &,
+  &:hover {
+    $backgroundColorSimulated: mix($ouiPageBackgroundColor, $ouiButtonColorDisabled, 90%);
+    background-color: transparentize($ouiButtonColorDisabled, .9);
+    color: makeDisabledContrastColor($ouiButtonColorDisabled, $backgroundColorSimulated);
+  }
+}
+
+.ouiButtonIcon--empty.ouiButtonIcon-isDisabled:not(.ouiButtonIcon--ghost) {
+  &,
+  &:hover {
+    background-color: transparent;
+    color: makeDisabledContrastColor($ouiButtonColorDisabled, $ouiPageBackgroundColor);
+  }
+}
+
+.ouiButton--small,
+.ouiButtonIcon--small,
+.ouiButtonIcon--xSmall {
+  // Use a moderately smaller radius on small buttons
+  // so that they don't appear completely rounded
+  border-radius: $ouiBorderRadius * (2 / 3);
+}
+
+// Change the hollow (bordered) buttons to have a transparent background
+// and no border
+@each $name, $color in $ouiButtonTypes {
+  .ouiButton--#{$name} {
+    @include ouiButtonDefaultStyle($color);
+
+    @if ($name == 'ghost') {
+      // Ghost is unique and ALWAYS sits against a dark background.
+      $backgroundColorSimulated: mix($ouiColorInk, $color, 70%);
+      color: makeHighContrastColor($color, $backgroundColorSimulated);
+    } @else {
+      &.ouiButton--fill:focus {
+        outline-color: lightOrDarkTheme($ouiColorInk, $ouiColorGhost);
+      }
+    }
+
+    &.ouiButton--fill:not([class*='isDisabled']) {
+      color: chooseLightOrDarkText($color, $ouiColorGhost, $ouiColorInk);
+
+      &,
+      &:hover,
+      &:focus {
+        background-color: $color;
+      }
+    }
+  }
+}
+
+// Fix ghost/disabled look specifically
+.ouiButton.ouiButton-isDisabled.ouiButton--ghost,
+// adding fill type to override default theme
+.ouiButton.ouiButton-isDisabled.ouiButton--ghost.ouiButton--fill {
+  &,
+  &:focus {
+    color: $ouiButtonColorGhostDisabled;
+    background-color: transparentize($ouiButtonColorGhostDisabled, .9);
+  }
+}
+
+
+// Duplicating the above for OuiButtonIcon
+@each $name, $color in $ouiButtonTypes {
+  .ouiButtonIcon--#{$name}:not(.ouiButtonIcon--empty) {
+    @include ouiButtonDefaultStyle($color);
+
+    @if ($name == 'ghost') {
+      // Ghost is unique and ALWAYS sits against a dark background.
+      $backgroundColorSimulated: mix($ouiColorInk, $color, 70%);
+      color: makeHighContrastColor($color, $backgroundColorSimulated);
+    } @else {
+      &.ouiButtonIcon--fill:focus {
+        outline-color: lightOrDarkTheme($ouiColorInk, $ouiColorGhost);
+      }
+    }
+
+    &.ouiButtonIcon--fill:not([class*='isDisabled']) {
+      color: chooseLightOrDarkText($color, $ouiColorGhost, $ouiColorInk);
+
+      &,
+      &:hover,
+      &:focus {
+        background-color: $color;
+      }
+    }
+  }
+}
+
+// Fix ghost/disabled look specifically
+.ouiButtonIcon:not(.ouiButtonIcon--empty).ouiButtonIcon-isDisabled.ouiButtonIcon--ghost,
+// adding fill type to override default theme
+.ouiButtonIcon.ouiButtonIcon-isDisabled.ouiButtonIcon--ghost.ouiButtonIcon--fill {
+  &,
+  &:focus {
+    color: $ouiButtonColorGhostDisabled;
+    background-color: transparentize($ouiButtonColorGhostDisabled, .9);
+  }
+}

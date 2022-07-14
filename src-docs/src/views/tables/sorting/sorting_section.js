@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
-import { EuiCode } from '../../../../../src/components';
+import { OuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
-import { EuiTableSortingType } from '!!prop-loader!../../../../../src/components/basic_table/table_types';
+import { OuiTableSortingType } from '!!prop-loader!../../../../../src/components/basic_table/table_types';
 
 import { Table } from './sorting';
 const source = require('!!raw-loader!./sorting');
@@ -24,16 +35,16 @@ export const section = {
   text: (
     <p>
       The following example shows how to configure column sorting via the{' '}
-      <EuiCode>sorting</EuiCode> property and flagging the sortable columns as{' '}
-      <EuiCode language="js">sortable: true</EuiCode>. To enable the default
+      <OuiCode>sorting</OuiCode> property and flagging the sortable columns as{' '}
+      <OuiCode language="js">sortable: true</OuiCode>. To enable the default
       sorting ability for <strong>every</strong> column, pass{' '}
-      <EuiCode language="js">enableAllColumns: true</EuiCode> to the{' '}
-      <EuiCode>sorting</EuiCode> prop. If you don&apos;t want the user to have
+      <OuiCode language="js">enableAllColumns: true</OuiCode> to the{' '}
+      <OuiCode>sorting</OuiCode> prop. If you don&apos;t want the user to have
       control over the sort you can pass{' '}
-      <EuiCode language="js">readOnly: true</EuiCode> to the{' '}
-      <EuiCode>sorting</EuiCode> prop or per column.
+      <OuiCode language="js">readOnly: true</OuiCode> to the{' '}
+      <OuiCode>sorting</OuiCode> prop or per column.
     </p>
   ),
-  props: { EuiTableSortingType },
+  props: { OuiTableSortingType },
   demo: <Table />,
 };

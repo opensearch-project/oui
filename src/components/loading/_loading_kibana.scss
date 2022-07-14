@@ -1,10 +1,21 @@
-.euiLoadingLogo,
-.euiLoadingKibana {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiLoadingLogo,
+.ouiLoadingKibana {
   position: relative;
   display: inline-block;
 
   // sass-lint:disable-block mixins-before-declarations
-  @include euiCanAnimate {
+  @include ouiCanAnimate {
     &:before,
     &:after {
       position: absolute;
@@ -17,22 +28,22 @@
     }
 
     &:before {
-      box-shadow: 0 0 8px $euiColorFullShade;
-      animation: 1s euiLoadingKibanaPulsateAndFade $euiAnimSlightResistance infinite;
+      box-shadow: 0 0 8px $ouiColorFullShade;
+      animation: 1s ouiLoadingKibanaPulsateAndFade $ouiAnimSlightResistance infinite;
     }
 
     &:after {
-      background-color: $euiColorFullShade;
-      animation: 1s euiLoadingKibanaPulsate $euiAnimSlightResistance infinite;
+      background-color: $ouiColorFullShade;
+      animation: 1s ouiLoadingKibanaPulsate $ouiAnimSlightResistance infinite;
     }
   }
 
-  .euiLoadingLogo__icon,
-  .euiLoadingKibana__icon {
+  .ouiLoadingLogo__icon,
+  .ouiLoadingKibana__icon {
     display: block;
 
-    @include euiCanAnimate {
-      animation: 1s euiLoadingKibanaBounceMedium $euiAnimSlightResistance infinite;
+    @include ouiCanAnimate {
+      animation: 1s ouiLoadingKibanaBounceMedium $ouiAnimSlightResistance infinite;
     }
   }
 }
@@ -40,74 +51,74 @@
 /**
  * 1. Requires pixel math for animation.
  */
-.euiLoadingLogo--medium,
-.euiLoadingKibana--medium {
-  width: $euiSize;
+.ouiLoadingLogo--medium,
+.ouiLoadingKibana--medium {
+  width: $ouiSize;
 
   &:before,
   &:after {
-    height: $euiSizeXS - 1; /* 1 */
-    bottom: -$euiSizeXS;
+    height: $ouiSizeXS - 1; /* 1 */
+    bottom: -$ouiSizeXS;
   }
 
-  .euiLoadingLogo__icon,
-  .euiLoadingKibana__icon {
+  .ouiLoadingLogo__icon,
+  .ouiLoadingKibana__icon {
     z-index: 999;
-    animation-name: euiLoadingKibanaBounceMedium;
+    animation-name: ouiLoadingKibanaBounceMedium;
   }
 }
 
-.euiLoadingLogo--large,
-.euiLoadingKibana--large {
-  width: $euiSizeL;
+.ouiLoadingLogo--large,
+.ouiLoadingKibana--large {
+  width: $ouiSizeL;
 
   &:before,
   &:after {
-    height: $euiSizeS - 2; /* 1 */
-    bottom: -$euiSizeS;
+    height: $ouiSizeS - 2; /* 1 */
+    bottom: -$ouiSizeS;
   }
 
-  .euiLoadingLogo__icon,
-  .euiLoadingKibana__icon {
-    animation-name: euiLoadingKibanaBounceLarge;
+  .ouiLoadingLogo__icon,
+  .ouiLoadingKibana__icon {
+    animation-name: ouiLoadingKibanaBounceLarge;
   }
 }
 
-.euiLoadingLogo--xLarge,
-.euiLoadingKibana--xLarge {
-  width: $euiSizeXL;
+.ouiLoadingLogo--xLarge,
+.ouiLoadingKibana--xLarge {
+  width: $ouiSizeXL;
 
   &:before,
   &:after {
-    height: $euiSizeS;
-    bottom: -$euiSizeM;
+    height: $ouiSizeS;
+    bottom: -$ouiSizeM;
   }
 
-  .euiLoadingLogo__icon,
-  .euiLoadingKibana__icon {
-    animation-name: euiLoadingKibanaBounceXLarge;
+  .ouiLoadingLogo__icon,
+  .ouiLoadingKibana__icon {
+    animation-name: ouiLoadingKibanaBounceXLarge;
   }
 }
 
-@keyframes euiLoadingKibanaBounceMedium {
+@keyframes ouiLoadingKibanaBounceMedium {
   50% {
-    transform: translateY(-$euiSizeS);
+    transform: translateY(-$ouiSizeS);
   }
 }
 
-@keyframes euiLoadingKibanaBounceLarge {
+@keyframes ouiLoadingKibanaBounceLarge {
   50% {
-    transform: translateY(-$euiSizeM);
+    transform: translateY(-$ouiSizeM);
   }
 }
 
-@keyframes euiLoadingKibanaBounceXLarge {
+@keyframes ouiLoadingKibanaBounceXLarge {
   50% {
-    transform: translateY(-$euiSize);
+    transform: translateY(-$ouiSize);
   }
 }
 
-@keyframes euiLoadingKibanaPulsateAndFade {
+@keyframes ouiLoadingKibanaPulsateAndFade {
   0% {
     opacity: 0;
   }
@@ -122,7 +133,7 @@
   }
 }
 
-@keyframes euiLoadingKibanaPulsate {
+@keyframes ouiLoadingKibanaPulsate {
   0% {
     opacity: .15;
   }

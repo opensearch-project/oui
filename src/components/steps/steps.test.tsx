@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,9 +32,9 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiContainedStepProps, EuiSteps } from './steps';
+import { OuiContainedStepProps, OuiSteps } from './steps';
 
-const steps: EuiContainedStepProps[] = [
+const steps: OuiContainedStepProps[] = [
   {
     title: 'first title',
     children: <p>Do this first</p>,
@@ -39,16 +50,16 @@ const steps: EuiContainedStepProps[] = [
   },
 ];
 
-describe('EuiSteps', () => {
+describe('OuiSteps', () => {
   test('renders steps', () => {
-    const component = render(<EuiSteps {...requiredProps} steps={steps} />);
+    const component = render(<OuiSteps {...requiredProps} steps={steps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders steps with firstStepNumber', () => {
     const component = render(
-      <EuiSteps {...requiredProps} steps={steps} firstStepNumber={10} />
+      <OuiSteps {...requiredProps} steps={steps} firstStepNumber={10} />
     );
 
     expect(component).toMatchSnapshot();
@@ -56,7 +67,7 @@ describe('EuiSteps', () => {
 
   test('renders steps with titleSize', () => {
     const component = render(
-      <EuiSteps {...requiredProps} steps={steps} titleSize="xs" />
+      <OuiSteps {...requiredProps} steps={steps} titleSize="xs" />
     );
 
     expect(component).toMatchSnapshot();
@@ -64,7 +75,7 @@ describe('EuiSteps', () => {
 
   test('renders step title inside "headingElement" element', () => {
     const component = render(
-      <EuiSteps {...requiredProps} steps={steps} headingElement="h2" />
+      <OuiSteps {...requiredProps} steps={steps} headingElement="h2" />
     );
 
     expect(component).toMatchSnapshot();

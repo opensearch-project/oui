@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,40 +33,40 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
 const sizeToClassNameMap = {
-  m: 'euiLoadingChart--medium',
-  l: 'euiLoadingChart--large',
-  xl: 'euiLoadingChart--xLarge',
+  m: 'ouiLoadingChart--medium',
+  l: 'ouiLoadingChart--large',
+  xl: 'ouiLoadingChart--xLarge',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiLoadingChartSize = keyof typeof sizeToClassNameMap;
+export type OuiLoadingChartSize = keyof typeof sizeToClassNameMap;
 
-export type EuiLoadingChartProps = CommonProps &
+export type OuiLoadingChartProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
-    size?: EuiLoadingChartSize;
+    size?: OuiLoadingChartSize;
     mono?: boolean;
   };
 
-export const EuiLoadingChart: FunctionComponent<EuiLoadingChartProps> = ({
+export const OuiLoadingChart: FunctionComponent<OuiLoadingChartProps> = ({
   size = 'm',
   mono = false,
   className,
   ...rest
 }) => {
   const classes = classNames(
-    'euiLoadingChart',
-    { 'euiLoadingChart--mono': mono },
+    'ouiLoadingChart',
+    { 'ouiLoadingChart--mono': mono },
     className,
     sizeToClassNameMap[size]
   );
 
   return (
     <span className={classes} {...rest}>
-      <span className="euiLoadingChart__bar" />
-      <span className="euiLoadingChart__bar" />
-      <span className="euiLoadingChart__bar" />
-      <span className="euiLoadingChart__bar" />
+      <span className="ouiLoadingChart__bar" />
+      <span className="ouiLoadingChart__bar" />
+      <span className="ouiLoadingChart__bar" />
+      <span className="ouiLoadingChart__bar" />
     </span>
   );
 };

@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 
 import {
-  EuiCode,
-  EuiFieldText,
-  EuiForm,
-  EuiFormRow,
-  EuiDescribedFormGroup,
-  EuiFilePicker,
-  EuiRange,
-  EuiSelect,
-  EuiSwitch,
-  EuiLink,
+  OuiCode,
+  OuiFieldText,
+  OuiForm,
+  OuiFormRow,
+  OuiDescribedFormGroup,
+  OuiFilePicker,
+  OuiRange,
+  OuiSelect,
+  OuiSwitch,
+  OuiLink,
 } from '../../../../src/components';
 
 export default () => {
@@ -21,35 +32,35 @@ export default () => {
   };
 
   return (
-    <EuiForm component="form">
-      <EuiDescribedFormGroup
+    <OuiForm component="form">
+      <OuiDescribedFormGroup
         title={<h3>Single text field</h3>}
         description={
           <Fragment>
             A single text field that can be used to display additional text. It
             can have{' '}
-            <EuiLink href="http://www.elastic.co" target="_blank">
+            <OuiLink href="http://www.elastic.co" target="_blank">
               links
-            </EuiLink>{' '}
+            </OuiLink>{' '}
             or any other type of content.
           </Fragment>
         }>
-        <EuiFormRow label="Text field">
-          <EuiFieldText name="first" aria-label="Example" />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
-      <EuiDescribedFormGroup title={<h3>No description</h3>}>
-        <EuiFormRow label="Text field">
-          <EuiFieldText name="first" />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
-      <EuiDescribedFormGroup
+        <OuiFormRow label="Text field">
+          <OuiFieldText name="first" aria-label="Example" />
+        </OuiFormRow>
+      </OuiDescribedFormGroup>
+      <OuiDescribedFormGroup title={<h3>No description</h3>}>
+        <OuiFormRow label="Text field">
+          <OuiFieldText name="first" />
+        </OuiFormRow>
+      </OuiDescribedFormGroup>
+      <OuiDescribedFormGroup
         title={<h3>Multiple fields</h3>}
         description="Here are three form rows. The first form row does not have a title.">
-        <EuiFormRow
+        <OuiFormRow
           hasEmptyLabelSpace
           helpText={<span>This is a help text</span>}>
-          <EuiSelect
+          <OuiSelect
             hasNoInitialSelection
             options={[
               { value: 'option_one', text: 'Option one' },
@@ -58,48 +69,48 @@ export default () => {
             ]}
             aria-label="An example of a form element without a visible label"
           />
-        </EuiFormRow>
+        </OuiFormRow>
 
-        <EuiFormRow label="File picker">
-          <EuiFilePicker />
-        </EuiFormRow>
+        <OuiFormRow label="File picker">
+          <OuiFilePicker />
+        </OuiFormRow>
 
-        <EuiFormRow label="Range">
-          <EuiRange min={0} max={100} name="range" id="range" />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
-      <EuiDescribedFormGroup
+        <OuiFormRow label="Range">
+          <OuiRange min={0} max={100} name="range" id="range" />
+        </OuiFormRow>
+      </OuiDescribedFormGroup>
+      <OuiDescribedFormGroup
         title={<h2>Full width</h2>}
         titleSize="xxxs"
         description={
           <Fragment>
-            By default, <strong>EuiDescribedFormGroup</strong> will be double
+            By default, <strong>OuiDescribedFormGroup</strong> will be double
             the default width of form elements. However, you can pass{' '}
-            <EuiCode>fullWidth</EuiCode> prop to this, the individual field and
+            <OuiCode>fullWidth</OuiCode> prop to this, the individual field and
             row components to expand to their container.
           </Fragment>
         }
         fullWidth>
-        <EuiFormRow
+        <OuiFormRow
           label="Use a switch instead of a single checkbox"
           hasChildLabel={false}
           fullWidth>
-          <EuiSwitch
+          <OuiSwitch
             name="switch"
             label="Should we do this?"
             checked={isSwitchChecked}
             onChange={onSwitchChange}
           />
-        </EuiFormRow>
+        </OuiFormRow>
 
-        <EuiFormRow fullWidth>
-          <EuiFieldText
+        <OuiFormRow fullWidth>
+          <OuiFieldText
             name="second"
             fullWidth
-            aria-label="An example of EuiTextField with fullWidth"
+            aria-label="An example of OuiTextField with fullWidth"
           />
-        </EuiFormRow>
-      </EuiDescribedFormGroup>
-    </EuiForm>
+        </OuiFormRow>
+      </OuiDescribedFormGroup>
+    </OuiForm>
   );
 };

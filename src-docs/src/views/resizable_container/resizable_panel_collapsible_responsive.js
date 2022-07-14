@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import {
-  EuiText,
-  EuiResizableContainer,
-  EuiListGroup,
-  EuiListGroupItem,
-  EuiPanel,
-  EuiTitle,
-  EuiSpacer,
-  EuiPage,
+  OuiText,
+  OuiResizableContainer,
+  OuiListGroup,
+  OuiListGroupItem,
+  OuiPanel,
+  OuiTitle,
+  OuiSpacer,
+  OuiPage,
 } from '../../../../src/components';
 import { useIsWithinBreakpoints } from '../../../../src/services';
 import { fake } from 'faker';
@@ -45,7 +56,7 @@ export default () => {
 
   const [itemSelected, setItemSelected] = useState(items[0]);
   const itemElements = items.map((item, index) => (
-    <EuiListGroupItem
+    <OuiListGroupItem
       key={index}
       onClick={() => setItemSelected(item)}
       label={item.label}
@@ -57,33 +68,33 @@ export default () => {
   const style = isMobile ? { height: '100%' } : { minHeight: '100%' };
 
   return (
-    <EuiPage paddingSize="none">
-      <EuiResizableContainer
+    <OuiPage paddingSize="none">
+      <OuiResizableContainer
         direction={isMobile ? 'vertical' : 'horizontal'}
         style={{ height: '400px' }}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel
+            <OuiResizablePanel
               mode="collapsible"
               initialSize={20}
               minSize="10%">
-              <EuiListGroup flush>{itemElements}</EuiListGroup>
-            </EuiResizablePanel>
+              <OuiListGroup flush>{itemElements}</OuiListGroup>
+            </OuiResizablePanel>
 
-            <EuiResizableButton />
+            <OuiResizableButton />
 
-            <EuiResizablePanel mode="main" initialSize={80} minSize="50px">
-              <EuiPanel paddingSize="l" style={style}>
-                <EuiTitle>
+            <OuiResizablePanel mode="main" initialSize={80} minSize="50px">
+              <OuiPanel paddingSize="l" style={style}>
+                <OuiTitle>
                   <p>{itemSelected.label}</p>
-                </EuiTitle>
-                <EuiSpacer />
-                <EuiText>{itemSelected.text}</EuiText>
-              </EuiPanel>
-            </EuiResizablePanel>
+                </OuiTitle>
+                <OuiSpacer />
+                <OuiText>{itemSelected.text}</OuiText>
+              </OuiPanel>
+            </OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
-    </EuiPage>
+      </OuiResizableContainer>
+    </OuiPage>
   );
 };

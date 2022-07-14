@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useCallback, useState } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiText,
-  EuiResizableContainer,
-  EuiButton,
-  EuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiText,
+  OuiResizableContainer,
+  OuiButton,
+  OuiSpacer,
 } from '../../../../src/components';
 import { fake } from 'faker';
 
@@ -60,55 +71,55 @@ export default () => {
 
   return (
     <>
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiButton onClick={onClickDefault}>{'Reset to defaults'}</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiButton onClick={onClick30x70}>{'30x70'}</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiButton onClick={onClick80x20}>{'80x20'}</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiButton
+      <OuiFlexGroup>
+        <OuiFlexItem>
+          <OuiButton onClick={onClickDefault}>{'Reset to defaults'}</OuiButton>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiButton onClick={onClick30x70}>{'30x70'}</OuiButton>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiButton onClick={onClick80x20}>{'80x20'}</OuiButton>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiButton
             fill={savedSizes === sizes}
             iconType={savedSizes === sizes ? 'check' : undefined}
             onClick={onSaveToLocalStorage}>
             {'Store in localStorage'}
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+          </OuiButton>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiResizableContainer
+      <OuiResizableContainer
         style={{ height: '200px' }}
         onPanelWidthChange={onPanelWidthChange}>
-        {(EuiResizablePanel, EuiResizableButton) => (
+        {(OuiResizablePanel, OuiResizableButton) => (
           <>
-            <EuiResizablePanel
+            <OuiResizablePanel
               id={firstPanelId}
               size={sizes[firstPanelId]}
               minSize="30%">
-              <EuiText>
+              <OuiText>
                 <div>{text}</div>
-              </EuiText>
-            </EuiResizablePanel>
+              </OuiText>
+            </OuiResizablePanel>
 
-            <EuiResizableButton />
+            <OuiResizableButton />
 
-            <EuiResizablePanel
+            <OuiResizablePanel
               id={secondPanelId}
               size={sizes[secondPanelId]}
               minSize="200px">
-              <EuiText>
+              <OuiText>
                 <div>{text}</div>
-              </EuiText>
-            </EuiResizablePanel>
+              </OuiText>
+            </OuiResizablePanel>
           </>
         )}
-      </EuiResizableContainer>
+      </OuiResizableContainer>
     </>
   );
 };

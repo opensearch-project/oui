@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,9 +17,9 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiPagination,
-  EuiPaginationButton,
+  OuiCode,
+  OuiPagination,
+  OuiPaginationButton,
 } from '../../../../src/components';
 
 import { paginationConfig } from './playground';
@@ -16,7 +27,7 @@ import { paginationConfig } from './playground';
 import ManyPages from './many_pages';
 const manyPagesSource = require('!!raw-loader!./many_pages');
 const manyPagesHtml = renderToHtml(ManyPages);
-const manyPagesSnippet = `<EuiPagination
+const manyPagesSnippet = `<OuiPagination
   aria-label="my pagination"
   pageCount={higherThan5Number}
   activePage={activePage}
@@ -27,7 +38,7 @@ const manyPagesSnippet = `<EuiPagination
 import FewPages from './few_pages';
 const fewPagesSource = require('!!raw-loader!./few_pages');
 const fewPagesHtml = renderToHtml(FewPages);
-const fewPagesSnippet = `<EuiPagination
+const fewPagesSnippet = `<OuiPagination
   aria-label="my pagination"
   pageCount={lowerThan5Number}
   activePage={activePage}
@@ -38,46 +49,46 @@ const fewPagesSnippet = `<EuiPagination
 import CenteredPagination from './centered_pagination';
 const centeredPaginationSource = require('!!raw-loader!./centered_pagination');
 const centeredPaginationHtml = renderToHtml(CenteredPagination);
-const centeredPaginationSnippet = `<EuiFlexGroup justifyContent="spaceAround">
-  <EuiFlexItem grow={false}>
-    <EuiPagination
+const centeredPaginationSnippet = `<OuiFlexGroup justifyContent="spaceAround">
+  <OuiFlexItem grow={false}>
+    <OuiPagination
       aria-label="my pagination"
       pageCount={pageCount}
       activePage={activePage}
       onPageClick={goToPage}
     />
-  </EuiFlexItem>
-</EuiFlexGroup>
+  </OuiFlexItem>
+</OuiFlexGroup>
 `;
 
 import CustomizablePagination from './customizable_pagination';
 const customizablePaginationSource = require('!!raw-loader!./customizable_pagination');
 const customizablePaginationHtml = renderToHtml(CustomizablePagination);
-const customizablePaginationSnippet = `<EuiFlexGroup justifyContent="spaceBetween" alignItems="center">
-  <EuiFlexItem grow={false}>
-    <EuiPopover
+const customizablePaginationSnippet = `<OuiFlexGroup justifyContent="spaceBetween" alignItems="center">
+  <OuiFlexItem grow={false}>
+    <OuiPopover
       button={button}
       isOpen={isPopoverOpen}
       closePopover={closePopover}>
-      <EuiContextMenuPanel items={items} />
-    </EuiPopover>
-  </EuiFlexItem>
+      <OuiContextMenuPanel items={items} />
+    </OuiPopover>
+  </OuiFlexItem>
 
-  <EuiFlexItem grow={false}>
-    <EuiPagination
+  <OuiFlexItem grow={false}>
+    <OuiPagination
       aria-label="my pagination"
       pageCount={pageCount}
       activePage={activePage}
       onPageClick={goToPage}
     />
-  </EuiFlexItem>
-</EuiFlexGroup>
+  </OuiFlexItem>
+</OuiFlexGroup>
 `;
 
 import Compressed from './compressed';
 const compressedSource = require('!!raw-loader!./compressed');
 const compressedHtml = renderToHtml(Compressed);
-const compressedSnippet = `<EuiPagination
+const compressedSnippet = `<OuiPagination
   aria-label="my pagination"
   pageCount={pageCount}
   activePage={activePage}
@@ -107,7 +118,7 @@ export const PaginationExample = {
           and/or last page.
         </p>
       ),
-      props: { EuiPagination, EuiPaginationButton },
+      props: { OuiPagination, OuiPaginationButton },
       snippet: manyPagesSnippet,
       demo: <ManyPages />,
     },
@@ -148,7 +159,7 @@ export const PaginationExample = {
         <p>
           You can use{' '}
           <Link to="/layout/flex">
-            <strong>EuiFlexGroup</strong>
+            <strong>OuiFlexGroup</strong>
           </Link>{' '}
           to set up this pagination layout.
         </p>
@@ -170,7 +181,7 @@ export const PaginationExample = {
       ],
       text: (
         <p>
-          Use the <EuiCode>compressed</EuiCode> prop to minimize the horizontal
+          Use the <OuiCode>compressed</OuiCode> prop to minimize the horizontal
           footprint.
         </p>
       ),
@@ -193,7 +204,7 @@ export const PaginationExample = {
         <p>
           You can use{' '}
           <Link to="/layout/flex">
-            <strong>EuiFlexGroup</strong>
+            <strong>OuiFlexGroup</strong>
           </Link>{' '}
           to set up this pagination layout, commonly used with{' '}
           <Link to="/tabular-content/tables">tables</Link>.

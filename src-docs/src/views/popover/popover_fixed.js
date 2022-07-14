@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiButton, EuiPopover } from '../../../../src/components';
+import { OuiButton, OuiPopover } from '../../../../src/components';
 
 export default () => {
   const [isExampleShown, setIsExampleShown] = useState(false);
@@ -14,27 +25,27 @@ export default () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton
+    <OuiButton
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}
       fill>
       Show fixed popover
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
     <React.Fragment>
-      <EuiButton onClick={toggleExample}>Toggle example</EuiButton>
+      <OuiButton onClick={toggleExample}>Toggle example</OuiButton>
       {isExampleShown && (
-        <EuiPopover
+        <OuiPopover
           button={button}
           isOpen={isPopoverOpen}
           closePopover={closePopover}
           style={{ position: 'fixed', bottom: 50, right: 50, zIndex: 10 }}
           repositionOnScroll={true}>
           <div>This popover scrolls with the button element!</div>
-        </EuiPopover>
+        </OuiPopover>
       )}
     </React.Fragment>
   );

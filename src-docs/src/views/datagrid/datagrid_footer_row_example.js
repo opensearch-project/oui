@@ -1,22 +1,33 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
-import { EuiDataGrid, EuiCodeBlock, EuiCode } from '../../../../src/components';
+import { OuiDataGrid, OuiCodeBlock, OuiCode } from '../../../../src/components';
 
 import DataGridFooterRow from './footer_row';
 const dataGridControlColumnsSource = require('!!raw-loader!./footer_row');
 const dataGridControlColumnsHtml = renderToHtml(DataGridFooterRow);
 
-import { EuiDataGridControlColumn } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
-import { EuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
+import { OuiDataGridControlColumn } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';
+import { OuiDataGridCellValueElementProps } from '!!prop-loader!../../../../src/components/datagrid/data_grid_cell';
 
 const gridSnippet = `const footerCellValues = {
   // desired data
 };
 
-<EuiDataGrid
+<OuiDataGrid
   {...usualProps}
   renderFooterCellValue={({ columnId }) =>
     footerCellValues[columnId] || null
@@ -47,23 +58,23 @@ export const DataGridFooterRowExample = {
           </p>
           <p>
             The footer row is defined by passing{' '}
-            <EuiCode>renderFooterCellValue</EuiCode> function prop into
-            EuiDataGrid. <EuiCode>renderFooterCellValue</EuiCode> acts like a
+            <OuiCode>renderFooterCellValue</OuiCode> function prop into
+            OuiDataGrid. <OuiCode>renderFooterCellValue</OuiCode> acts like a
             React component, receiving{' '}
-            <EuiCode>EuiDataGridCellValueElementProps</EuiCode> and returning a
+            <OuiCode>OuiDataGridCellValueElementProps</OuiCode> and returning a
             React node.
           </p>
-          <EuiCodeBlock language="javascript" paddingSize="s" isCopyable>
+          <OuiCodeBlock language="javascript" paddingSize="s" isCopyable>
             {gridSnippet}
-          </EuiCodeBlock>
+          </OuiCodeBlock>
         </Fragment>
       ),
       components: { DataGridFooterRow },
 
       props: {
-        EuiDataGrid,
-        EuiDataGridControlColumn,
-        EuiDataGridCellValueElementProps,
+        OuiDataGrid,
+        OuiDataGridControlColumn,
+        OuiDataGridCellValueElementProps,
       },
       demo: <DataGridFooterRow />,
     },

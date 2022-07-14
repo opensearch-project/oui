@@ -1,13 +1,24 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 // sass-lint:disable indentation
 
-$euiTokenGrayColor: lightOrDarkTheme($euiColorDarkShade, $euiColorMediumShade);
+$ouiTokenGrayColor: lightOrDarkTheme($ouiColorDarkShade, $ouiColorMediumShade);
 
 // Appends the gray color to the color blind palette
-$euiTokenTypes: map-merge($euiPaletteColorBlind, (
+$ouiTokenTypes: map-merge($ouiPaletteColorBlind, (
   'gray': (
-    graphic: $euiTokenGrayColor,
-    behindText: $euiTokenGrayColor,
+    graphic: $ouiTokenGrayColor,
+    behindText: $ouiTokenGrayColor,
   )
 ));
 
-$euiTokenTypeKeys: map-keys($euiTokenTypes);
+$ouiTokenTypeKeys: map-keys($ouiTokenTypes);

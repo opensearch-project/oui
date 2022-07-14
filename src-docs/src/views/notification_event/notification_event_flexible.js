@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
-import { EuiPanel } from '../../../../src/components/panel';
-import { EuiSpacer } from '../../../../src/components/spacer';
-import { EuiButtonGroup } from '../../../../src/components/button';
-import { EuiContextMenuItem } from '../../../../src/components/context_menu';
-import { EuiNotificationEvent } from '../../../../src/components/notification/notification_event';
+import { OuiPanel } from '../../../../src/components/panel';
+import { OuiSpacer } from '../../../../src/components/spacer';
+import { OuiButtonGroup } from '../../../../src/components/button';
+import { OuiContextMenuItem } from '../../../../src/components/context_menu';
+import { OuiNotificationEvent } from '../../../../src/components/notification/notification_event';
 
 const notificationEventsData = [
   {
@@ -66,19 +77,19 @@ export default () => {
     const { isRead } = event;
 
     return [
-      <EuiContextMenuItem
+      <OuiContextMenuItem
         key="contextMenuItemA"
         onClick={() => onRead(id, isRead)}>
         {isRead ? 'Mark as unread' : 'Mark as read'}
-      </EuiContextMenuItem>,
+      </OuiContextMenuItem>,
 
-      <EuiContextMenuItem key="contextMenuItemB" onClick={() => {}}>
+      <OuiContextMenuItem key="contextMenuItemB" onClick={() => {}}>
         View messages like this
-      </EuiContextMenuItem>,
+      </OuiContextMenuItem>,
 
-      <EuiContextMenuItem key="contextMenuItemC" onClick={() => {}}>
+      <OuiContextMenuItem key="contextMenuItemC" onClick={() => {}}>
         Don’t notify me about this
-      </EuiContextMenuItem>,
+      </OuiContextMenuItem>,
     ];
   };
 
@@ -108,7 +119,7 @@ export default () => {
 
   return (
     <>
-      <EuiButtonGroup
+      <OuiButtonGroup
         legend="Pick an example"
         options={toggleButtons}
         onChange={onChangeButtonGroup}
@@ -116,12 +127,12 @@ export default () => {
         type="single"
         color="primary"
       />
-      <EuiSpacer />
-      <EuiPanel
+      <OuiSpacer />
+      <OuiPanel
         paddingSize="none"
         hasShadow={true}
         style={{ maxWidth: '540px' }}>
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           key={event.id}
           id={event.id}
           type={event.type}
@@ -140,7 +151,7 @@ export default () => {
           onClickPrimaryAction={() => {}}
           onClickTitle={event.id !== 'news' ? () => {} : undefined}
         />
-      </EuiPanel>
+      </OuiPanel>
     </>
   );
 };

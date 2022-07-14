@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useEffect, useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiCodeBlock,
-  EuiForm,
-  EuiFormRow,
-  EuiSpacer,
-  EuiTextArea,
-  EuiTour,
-  EuiTourStep,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiCodeBlock,
+  OuiForm,
+  OuiFormRow,
+  OuiSpacer,
+  OuiTextArea,
+  OuiTour,
+  OuiTourStep,
 } from '../../../../src/components';
 
 const demoTourSteps = [
@@ -19,10 +30,10 @@ const demoTourSteps = [
     content: (
       <span>
         <p>Copy and paste this sample query.</p>
-        <EuiSpacer />
-        <EuiCodeBlock language="html" paddingSize="s" isCopyable>
+        <OuiSpacer />
+        <OuiCodeBlock language="html" paddingSize="s" isCopyable>
           {'SELECT email FROM “kibana_sample_data_ecommerce”'}
-        </EuiCodeBlock>
+        </OuiCodeBlock>
       </span>
     ),
     anchorPosition: 'rightUp',
@@ -56,8 +67,8 @@ export default () => {
   }
 
   return (
-    <EuiTour steps={demoTourSteps} initialState={state}>
-      {([euiTourStepOne, euiTourStepTwo], actions, reducerState) => {
+    <OuiTour steps={demoTourSteps} initialState={state}>
+      {([ouiTourStepOne, ouiTourStepTwo], actions, reducerState) => {
         useEffect(() => {
           localStorage.setItem(STORAGE_KEY, JSON.stringify(reducerState));
         }, [reducerState]);
@@ -80,32 +91,32 @@ export default () => {
         };
         return (
           <React.Fragment>
-            <EuiButtonEmpty iconType="refresh" flush="left" onClick={resetTour}>
+            <OuiButtonEmpty iconType="refresh" flush="left" onClick={resetTour}>
               Start or reset tour
-            </EuiButtonEmpty>
-            <EuiSpacer />
-            <EuiForm component="form">
-              <EuiFormRow label="Enter an ES SQL query">
-                <EuiTourStep {...euiTourStepOne}>
-                  <EuiTextArea
+            </OuiButtonEmpty>
+            <OuiSpacer />
+            <OuiForm component="form">
+              <OuiFormRow label="Enter an ES SQL query">
+                <OuiTourStep {...ouiTourStepOne}>
+                  <OuiTextArea
                     placeholder="Placeholder text"
                     aria-label="Enter ES SQL query"
                     value={queryValue}
                     onChange={onChange}
                     style={{ width: 400 }}
                   />
-                </EuiTourStep>
-              </EuiFormRow>
+                </OuiTourStep>
+              </OuiFormRow>
 
-              <EuiSpacer />
+              <OuiSpacer />
 
-              <EuiTourStep {...euiTourStepTwo}>
-                <EuiButton onClick={handleClick}>Save query</EuiButton>
-              </EuiTourStep>
-            </EuiForm>
+              <OuiTourStep {...ouiTourStepTwo}>
+                <OuiButton onClick={handleClick}>Save query</OuiButton>
+              </OuiTourStep>
+            </OuiForm>
           </React.Fragment>
         );
       }}
-    </EuiTour>
+    </OuiTour>
   );
 };

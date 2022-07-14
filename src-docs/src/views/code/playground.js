@@ -1,5 +1,16 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiCodeBlock, EuiCode } from '../../../../src/components/';
+import { OuiCodeBlock, OuiCode } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 const codeDemo = `\n{\`${
@@ -7,9 +18,9 @@ const codeDemo = `\n{\`${
 }\`}\n`;
 
 export const codeBlockConfig = () => {
-  const docgenInfo = Array.isArray(EuiCodeBlock.__docgenInfo)
-    ? EuiCodeBlock.__docgenInfo[0]
-    : EuiCodeBlock.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiCodeBlock.__docgenInfo)
+    ? OuiCodeBlock.__docgenInfo[0]
+    : OuiCodeBlock.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.language.value = 'html';
@@ -22,14 +33,14 @@ export const codeBlockConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiCodeBlock',
+      componentName: 'OuiCodeBlock',
       props: propsToUse,
       scope: {
-        EuiCodeBlock,
+        OuiCodeBlock,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCodeBlock'],
+        '@opensearch-project/oui': {
+          named: ['OuiCodeBlock'],
         },
       },
     },
@@ -37,9 +48,9 @@ export const codeBlockConfig = () => {
 };
 
 export const codeConfig = () => {
-  const docgenInfo = Array.isArray(EuiCode.__docgenInfo)
-    ? EuiCode.__docgenInfo[0]
-    : EuiCode.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiCode.__docgenInfo)
+    ? OuiCode.__docgenInfo[0]
+    : OuiCode.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.language.value = 'html';
@@ -52,14 +63,14 @@ export const codeConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiCode',
+      componentName: 'OuiCode',
       props: propsToUse,
       scope: {
-        EuiCode,
+        OuiCode,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiCode'],
+        '@opensearch-project/oui': {
+          named: ['OuiCode'],
         },
       },
     },

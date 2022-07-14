@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiFilterGroup, EuiFilterButton } from '../../../../src/components';
+import { OuiFilterGroup, OuiFilterButton } from '../../../../src/components';
 
 export default () => {
   const [isFilterOn, setIsFilterOn] = useState(false);
@@ -22,21 +33,21 @@ export default () => {
   };
 
   return (
-    <EuiFilterGroup>
-      <EuiFilterButton hasActiveFilters={isFilterOn} onClick={toggleFilter}>
+    <OuiFilterGroup>
+      <OuiFilterButton hasActiveFilters={isFilterOn} onClick={toggleFilter}>
         Single filter
-      </EuiFilterButton>
-      <EuiFilterButton
+      </OuiFilterButton>
+      <OuiFilterButton
         withNext
         hasActiveFilters={isOnFilterOn}
         onClick={toggleOnFilter}>
         On
-      </EuiFilterButton>
-      <EuiFilterButton
+      </OuiFilterButton>
+      <OuiFilterButton
         hasActiveFilters={isOffFilterOn}
         onClick={toggleOffFilter}>
         Off
-      </EuiFilterButton>
-    </EuiFilterGroup>
+      </OuiFilterButton>
+    </OuiFilterGroup>
   );
 };

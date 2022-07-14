@@ -1,63 +1,74 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiText,
-  EuiCode,
-  EuiResizableContainer,
-  EuiPanel,
+  OuiText,
+  OuiCode,
+  OuiResizableContainer,
+  OuiPanel,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiResizableContainer style={{ height: '200px' }}>
-    {(EuiResizablePanel, EuiResizableButton) => (
+  <OuiResizableContainer style={{ height: '200px' }}>
+    {(OuiResizablePanel, OuiResizableButton) => (
       <>
-        <EuiResizablePanel initialSize={20} color="subdued">
-          <EuiText size="s">
+        <OuiResizablePanel initialSize={20} color="subdued">
+          <OuiText size="s">
             <p>
-              This <strong>EuiResizablePanel</strong> changes the background
-              with <EuiCode>{'color="subdued"'}</EuiCode>.
+              This <strong>OuiResizablePanel</strong> changes the background
+              with <OuiCode>{'color="subdued"'}</OuiCode>.
             </p>
-          </EuiText>
-        </EuiResizablePanel>
+          </OuiText>
+        </OuiResizablePanel>
 
-        <EuiResizableButton />
+        <OuiResizableButton />
 
-        <EuiResizablePanel
+        <OuiResizablePanel
           initialSize={40}
           color="plain"
           hasShadow
           borderRadius="m"
           wrapperPadding="m"
           minSize="20%">
-          <EuiText size="s">
+          <OuiText size="s">
             <p>
-              This <strong>EuiResizablePanel</strong> resets most of the{' '}
-              <strong>EuiPanel</strong> props back to default with{' '}
-              <EuiCode>{'color="plain" hasShadow borderRadius="m"'}</EuiCode>.
+              This <strong>OuiResizablePanel</strong> resets most of the{' '}
+              <strong>OuiPanel</strong> props back to default with{' '}
+              <OuiCode>{'color="plain" hasShadow borderRadius="m"'}</OuiCode>.
             </p>
             <p>
               It also adds padding to the wrapping div with{' '}
-              <EuiCode>{'wrapperPadding="m"'}</EuiCode> to maintain the scroll{' '}
+              <OuiCode>{'wrapperPadding="m"'}</OuiCode> to maintain the scroll{' '}
               <strong>inside</strong> the panel.
             </p>
-          </EuiText>
-        </EuiResizablePanel>
+          </OuiText>
+        </OuiResizablePanel>
 
-        <EuiResizableButton />
+        <OuiResizableButton />
 
-        <EuiResizablePanel initialSize={40} color="subdued">
-          <EuiPanel>
-            <EuiText size="s">
+        <OuiResizablePanel initialSize={40} color="subdued">
+          <OuiPanel>
+            <OuiText size="s">
               <p>
-                This <strong>EuiResizablePanel</strong> also changes the
-                background color but adds an internal <strong>EuiPanel</strong>{' '}
+                This <strong>OuiResizablePanel</strong> also changes the
+                background color but adds an internal <strong>OuiPanel</strong>{' '}
                 that will not stretch and will scroll within the{' '}
-                <strong>EuiResizablePanel</strong>.
+                <strong>OuiResizablePanel</strong>.
               </p>
-            </EuiText>
-          </EuiPanel>
-        </EuiResizablePanel>
+            </OuiText>
+          </OuiPanel>
+        </OuiResizablePanel>
       </>
     )}
-  </EuiResizableContainer>
+  </OuiResizableContainer>
 );

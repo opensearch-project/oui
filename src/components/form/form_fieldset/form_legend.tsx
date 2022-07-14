@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,9 +31,9 @@
 import React, { HTMLAttributes, FunctionComponent, ReactNode } from 'react';
 import { CommonProps } from '../../common';
 import classNames from 'classnames';
-import { EuiScreenReaderOnly } from '../../accessibility';
+import { OuiScreenReaderOnly } from '../../accessibility';
 
-export type EuiFormLegendProps = HTMLAttributes<HTMLLegendElement> &
+export type OuiFormLegendProps = HTMLAttributes<HTMLLegendElement> &
   CommonProps & {
     /**
      * ReactNode to render as this component's content
@@ -35,7 +46,7 @@ export type EuiFormLegendProps = HTMLAttributes<HTMLLegendElement> &
     compressed?: boolean;
   };
 
-export const EuiFormLegend: FunctionComponent<EuiFormLegendProps> = ({
+export const OuiFormLegend: FunctionComponent<OuiFormLegendProps> = ({
   children,
   className,
   display = 'visible',
@@ -44,10 +55,10 @@ export const EuiFormLegend: FunctionComponent<EuiFormLegendProps> = ({
 }) => {
   const isLegendHidden = display === 'hidden';
   const classes = classNames(
-    'euiFormLegend',
+    'ouiFormLegend',
     {
-      'euiFormLegend-isHidden': isLegendHidden,
-      'euiFormLegend--compressed': compressed,
+      'ouiFormLegend-isHidden': isLegendHidden,
+      'ouiFormLegend--compressed': compressed,
     },
     className
   );
@@ -55,9 +66,9 @@ export const EuiFormLegend: FunctionComponent<EuiFormLegendProps> = ({
   return (
     <legend className={classes} {...rest}>
       {isLegendHidden ? (
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span>{children}</span>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       ) : (
         children
       )}

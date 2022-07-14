@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiDescribedFormGroup is rendered 1`] = `
-<EuiDescribedFormGroup
+exports[`OuiDescribedFormGroup is rendered 1`] = `
+<OuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -14,59 +14,59 @@ exports[`EuiDescribedFormGroup is rendered 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="ouiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <OuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <OuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="ouiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <OuiTitle
+              className="ouiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="ouiTitle ouiTitle--xsmall ouiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </OuiTitle>
+            <OuiText
+              className="ouiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="ouiText ouiText--small ouiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <OuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="ouiTextColor ouiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </OuiTextColor>
               </div>
-            </EuiText>
+            </OuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </OuiFlexItem>
+        <OuiFlexItem
+          className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <OuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -75,11 +75,11 @@ exports[`EuiDescribedFormGroup is rendered 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="ouiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="ouiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -88,17 +88,17 @@ exports[`EuiDescribedFormGroup is rendered 1`] = `
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </OuiFormRow>
           </div>
-        </EuiFlexItem>
+        </OuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</OuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props description is not rendered when it's not provided 1`] = `
-<EuiDescribedFormGroup
+exports[`OuiDescribedFormGroup props description is not rendered when it's not provided 1`] = `
+<OuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -110,39 +110,39 @@ exports[`EuiDescribedFormGroup props description is not rendered when it's not p
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="ouiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <OuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <OuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="ouiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <OuiTitle
+              className="ouiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="ouiTitle ouiTitle--xsmall ouiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
+            </OuiTitle>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </OuiFlexItem>
+        <OuiFlexItem
+          className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <OuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -151,11 +151,11 @@ exports[`EuiDescribedFormGroup props description is not rendered when it's not p
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="ouiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="ouiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -164,17 +164,17 @@ exports[`EuiDescribedFormGroup props description is not rendered when it's not p
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </OuiFormRow>
           </div>
-        </EuiFlexItem>
+        </OuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</OuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props fullWidth is rendered 1`] = `
-<EuiDescribedFormGroup
+exports[`OuiDescribedFormGroup props fullWidth is rendered 1`] = `
+<OuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -188,59 +188,59 @@ exports[`EuiDescribedFormGroup props fullWidth is rendered 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup euiDescribedFormGroup--fullWidth testClass1 testClass2"
+    className="ouiDescribedFormGroup ouiDescribedFormGroup--fullWidth testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <OuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <OuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="ouiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <OuiTitle
+              className="ouiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="ouiTitle ouiTitle--xsmall ouiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </OuiTitle>
+            <OuiText
+              className="ouiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="ouiText ouiText--small ouiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <OuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="ouiTextColor ouiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </OuiTextColor>
               </div>
-            </EuiText>
+            </OuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </OuiFlexItem>
+        <OuiFlexItem
+          className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <OuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={true}
@@ -249,11 +249,11 @@ exports[`EuiDescribedFormGroup props fullWidth is rendered 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow euiFormRow--fullWidth"
+                className="ouiFormRow ouiFormRow--fullWidth"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="ouiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -262,17 +262,17 @@ exports[`EuiDescribedFormGroup props fullWidth is rendered 1`] = `
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </OuiFormRow>
           </div>
-        </EuiFlexItem>
+        </OuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</OuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props gutterSize is rendered 1`] = `
-<EuiDescribedFormGroup
+exports[`OuiDescribedFormGroup props gutterSize is rendered 1`] = `
+<OuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -286,59 +286,59 @@ exports[`EuiDescribedFormGroup props gutterSize is rendered 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="ouiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <OuiFlexGroup
       gutterSize="s"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--directionRow ouiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <OuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="ouiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <OuiTitle
+              className="ouiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="ouiTitle ouiTitle--xsmall ouiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </OuiTitle>
+            <OuiText
+              className="ouiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="ouiText ouiText--small ouiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <OuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="ouiTextColor ouiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </OuiTextColor>
               </div>
-            </EuiText>
+            </OuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </OuiFlexItem>
+        <OuiFlexItem
+          className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <OuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -347,11 +347,11 @@ exports[`EuiDescribedFormGroup props gutterSize is rendered 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="ouiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="ouiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -360,17 +360,17 @@ exports[`EuiDescribedFormGroup props gutterSize is rendered 1`] = `
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </OuiFormRow>
           </div>
-        </EuiFlexItem>
+        </OuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</OuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props props for the flex item containers are passed down 1`] = `
-<EuiDescribedFormGroup
+exports[`OuiDescribedFormGroup props props for the flex item containers are passed down 1`] = `
+<OuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -393,62 +393,62 @@ exports[`EuiDescribedFormGroup props props for the flex item containers are pass
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="ouiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <OuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
       >
-        <EuiFlexItem
+        <OuiFlexItem
           grow={2}
         >
           <div
-            className="euiFlexItem euiFlexItem--flexGrow2"
+            className="ouiFlexItem ouiFlexItem--flexGrow2"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <OuiTitle
+              className="ouiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="ouiTitle ouiTitle--xsmall ouiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </OuiTitle>
+            <OuiText
+              className="ouiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="ouiText ouiText--small ouiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <OuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="ouiTextColor ouiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </OuiTextColor>
               </div>
-            </EuiText>
+            </OuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </OuiFlexItem>
+        <OuiFlexItem
+          className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           component="section"
         >
           <section
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <OuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -457,11 +457,11 @@ exports[`EuiDescribedFormGroup props props for the flex item containers are pass
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="ouiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="ouiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -470,17 +470,17 @@ exports[`EuiDescribedFormGroup props props for the flex item containers are pass
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </OuiFormRow>
           </section>
-        </EuiFlexItem>
+        </OuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</OuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup props titleSize is rendered 1`] = `
-<EuiDescribedFormGroup
+exports[`OuiDescribedFormGroup props titleSize is rendered 1`] = `
+<OuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -494,59 +494,59 @@ exports[`EuiDescribedFormGroup props titleSize is rendered 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="ouiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <OuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <OuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="ouiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <OuiTitle
+              className="ouiDescribedFormGroup__title"
               size="l"
             >
               <h3
-                className="euiTitle euiTitle--large euiDescribedFormGroup__title"
+                className="ouiTitle ouiTitle--large ouiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </OuiTitle>
+            <OuiText
+              className="ouiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="ouiText ouiText--small ouiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <OuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="ouiTextColor ouiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </OuiTextColor>
               </div>
-            </EuiText>
+            </OuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--large"
+        </OuiFlexItem>
+        <OuiFlexItem
+          className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--large"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--large"
+            className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--large"
           >
-            <EuiFormRow
+            <OuiFormRow
               describedByIds={Array []}
               display="row"
               fullWidth={false}
@@ -555,11 +555,11 @@ exports[`EuiDescribedFormGroup props titleSize is rendered 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="ouiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="ouiFormRow__fieldWrapper"
                 >
                   <input
                     id="generated-id"
@@ -568,17 +568,17 @@ exports[`EuiDescribedFormGroup props titleSize is rendered 1`] = `
                   />
                 </div>
               </div>
-            </EuiFormRow>
+            </OuiFormRow>
           </div>
-        </EuiFlexItem>
+        </OuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</OuiDescribedFormGroup>
 `;
 
-exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
-<EuiDescribedFormGroup
+exports[`OuiDescribedFormGroup ties together parts for accessibility 1`] = `
+<OuiDescribedFormGroup
   aria-label="aria-label"
   className="testClass1 testClass2"
   data-test-subj="test subject string"
@@ -591,59 +591,59 @@ exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
 >
   <div
     aria-label="aria-label"
-    className="euiDescribedFormGroup testClass1 testClass2"
+    className="ouiDescribedFormGroup testClass1 testClass2"
     data-test-subj="test subject string"
     role="group"
   >
-    <EuiFlexGroup
+    <OuiFlexGroup
       gutterSize="l"
     >
       <div
-        className="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--directionRow euiFlexGroup--responsive"
+        className="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive"
       >
-        <EuiFlexItem>
+        <OuiFlexItem>
           <div
-            className="euiFlexItem"
+            className="ouiFlexItem"
           >
-            <EuiTitle
-              className="euiDescribedFormGroup__title"
+            <OuiTitle
+              className="ouiDescribedFormGroup__title"
               size="xs"
             >
               <h3
-                className="euiTitle euiTitle--xsmall euiDescribedFormGroup__title"
+                className="ouiTitle ouiTitle--xsmall ouiDescribedFormGroup__title"
               >
                 Title
               </h3>
-            </EuiTitle>
-            <EuiText
-              className="euiDescribedFormGroup__description"
+            </OuiTitle>
+            <OuiText
+              className="ouiDescribedFormGroup__description"
               color="subdued"
               size="s"
             >
               <div
-                className="euiText euiText--small euiDescribedFormGroup__description"
+                className="ouiText ouiText--small ouiDescribedFormGroup__description"
               >
-                <EuiTextColor
+                <OuiTextColor
                   color="subdued"
                   component="div"
                 >
                   <div
-                    className="euiTextColor euiTextColor--subdued"
+                    className="ouiTextColor ouiTextColor--subdued"
                   >
                     Test description
                   </div>
-                </EuiTextColor>
+                </OuiTextColor>
               </div>
-            </EuiText>
+            </OuiText>
           </div>
-        </EuiFlexItem>
-        <EuiFlexItem
-          className="euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+        </OuiFlexItem>
+        <OuiFlexItem
+          className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="euiFlexItem euiDescribedFormGroup__fields euiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
-            <EuiFormRow
+            <OuiFormRow
               describedByIds={Array []}
               display="row"
               error={
@@ -661,15 +661,15 @@ exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
               labelType="label"
             >
               <div
-                className="euiFormRow"
+                className="ouiFormRow"
                 id="generated-id-row"
               >
                 <div
-                  className="euiFormRow__labelWrapper"
+                  className="ouiFormRow__labelWrapper"
                 >
-                  <EuiFormLabel
+                  <OuiFormLabel
                     aria-invalid={true}
-                    className="euiFormRow__label"
+                    className="ouiFormRow__label"
                     htmlFor="generated-id"
                     isFocused={false}
                     isInvalid={true}
@@ -677,15 +677,15 @@ exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
                   >
                     <label
                       aria-invalid={true}
-                      className="euiFormLabel euiFormRow__label euiFormLabel-isInvalid"
+                      className="ouiFormLabel ouiFormRow__label ouiFormLabel-isInvalid"
                       htmlFor="generated-id"
                     >
                       Label
                     </label>
-                  </EuiFormLabel>
+                  </OuiFormLabel>
                 </div>
                 <div
-                  className="euiFormRow__fieldWrapper"
+                  className="ouiFormRow__fieldWrapper"
                 >
                   <input
                     aria-describedby="generated-id-help-0 generated-id-error-0 generated-id-error-1"
@@ -693,51 +693,51 @@ exports[`EuiDescribedFormGroup ties together parts for accessibility 1`] = `
                     onBlur={[Function]}
                     onFocus={[Function]}
                   />
-                  <EuiFormErrorText
-                    className="euiFormRow__text"
+                  <OuiFormErrorText
+                    className="ouiFormRow__text"
                     id="generated-id-error-0"
                     key="Error one"
                   >
                     <div
                       aria-live="polite"
-                      className="euiFormErrorText euiFormRow__text"
+                      className="ouiFormErrorText ouiFormRow__text"
                       id="generated-id-error-0"
                     >
                       Error one
                     </div>
-                  </EuiFormErrorText>
-                  <EuiFormErrorText
-                    className="euiFormRow__text"
+                  </OuiFormErrorText>
+                  <OuiFormErrorText
+                    className="ouiFormRow__text"
                     id="generated-id-error-1"
                     key="Error two"
                   >
                     <div
                       aria-live="polite"
-                      className="euiFormErrorText euiFormRow__text"
+                      className="ouiFormErrorText ouiFormRow__text"
                       id="generated-id-error-1"
                     >
                       Error two
                     </div>
-                  </EuiFormErrorText>
-                  <EuiFormHelpText
-                    className="euiFormRow__text"
+                  </OuiFormErrorText>
+                  <OuiFormHelpText
+                    className="ouiFormRow__text"
                     id="generated-id-help-0"
                     key="Help text"
                   >
                     <div
-                      className="euiFormHelpText euiFormRow__text"
+                      className="ouiFormHelpText ouiFormRow__text"
                       id="generated-id-help-0"
                     >
                       Help text
                     </div>
-                  </EuiFormHelpText>
+                  </OuiFormHelpText>
                 </div>
               </div>
-            </EuiFormRow>
+            </OuiFormRow>
           </div>
-        </EuiFlexItem>
+        </OuiFlexItem>
       </div>
-    </EuiFlexGroup>
+    </OuiFlexGroup>
   </div>
-</EuiDescribedFormGroup>
+</OuiDescribedFormGroup>
 `;

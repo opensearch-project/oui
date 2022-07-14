@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiFieldSearch, EuiSwitch } from '../../../../src/components';
+import { OuiFieldSearch, OuiSwitch } from '../../../../src/components';
 import { DisplayToggles } from './display_toggles';
 
 export default () => {
@@ -17,7 +28,7 @@ export default () => {
       canPrepend
       canAppend
       extras={[
-        <EuiSwitch
+        <OuiSwitch
           compressed
           label={'clearable'}
           checked={isClearable}
@@ -26,7 +37,7 @@ export default () => {
           }}
         />,
       ]}>
-      <EuiFieldSearch
+      <OuiFieldSearch
         placeholder="Search this"
         value={value}
         onChange={(e) => onChange(e)}

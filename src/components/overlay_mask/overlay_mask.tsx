@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -34,7 +45,7 @@ import { createPortal } from 'react-dom';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 
-export interface EuiOverlayMaskInterface {
+export interface OuiOverlayMaskInterface {
   /**
    * Function that applies to clicking the mask itself and not the children
    */
@@ -44,19 +55,19 @@ export interface EuiOverlayMaskInterface {
    */
   children?: ReactNode;
   /**
-   * Should the mask visually sit above or below the EuiHeader (controlled by z-index)
+   * Should the mask visually sit above or below the OuiHeader (controlled by z-index)
    */
   headerZindexLocation?: 'above' | 'below';
 }
 
-export type EuiOverlayMaskProps = CommonProps &
+export type OuiOverlayMaskProps = CommonProps &
   Omit<
     Partial<Record<keyof HTMLAttributes<HTMLDivElement>, string>>,
-    keyof EuiOverlayMaskInterface
+    keyof OuiOverlayMaskInterface
   > &
-  EuiOverlayMaskInterface;
+  OuiOverlayMaskInterface;
 
-export const EuiOverlayMask: FunctionComponent<EuiOverlayMaskProps> = ({
+export const OuiOverlayMask: FunctionComponent<OuiOverlayMaskProps> = ({
   className,
   children,
   onClick,
@@ -67,10 +78,10 @@ export const EuiOverlayMask: FunctionComponent<EuiOverlayMaskProps> = ({
   const [isPortalTargetReady, setIsPortalTargetReady] = useState(false);
 
   useEffect(() => {
-    document.body.classList.add('euiBody-hasOverlayMask');
+    document.body.classList.add('ouiBody-hasOverlayMask');
 
     return () => {
-      document.body.classList.remove('euiBody-hasOverlayMask');
+      document.body.classList.remove('ouiBody-hasOverlayMask');
     };
   }, []);
 
@@ -91,7 +102,7 @@ export const EuiOverlayMask: FunctionComponent<EuiOverlayMaskProps> = ({
     keysOf(rest).forEach((key) => {
       if (typeof rest[key] !== 'string') {
         throw new Error(
-          `Unhandled property type. EuiOverlayMask property ${key} is not a string.`
+          `Unhandled property type. OuiOverlayMask property ${key} is not a string.`
         );
       }
       overlayMaskNode.current.setAttribute(key, rest[key]!);
@@ -101,8 +112,8 @@ export const EuiOverlayMask: FunctionComponent<EuiOverlayMaskProps> = ({
   useEffect(() => {
     if (!overlayMaskNode.current) return;
     overlayMaskNode.current.className = classNames(
-      'euiOverlayMask',
-      `euiOverlayMask--${headerZindexLocation}Header`,
+      'ouiOverlayMask',
+      `ouiOverlayMask--${headerZindexLocation}Header`,
       className
     );
   }, [className, headerZindexLocation]);

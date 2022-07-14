@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,24 +33,24 @@ import classNames from 'classnames';
 
 import { CommonProps, keysOf } from '../../common';
 
-import { EuiValidatableControl } from '../validatable_control';
-import { EuiButtonEmpty } from '../../button';
-import { EuiProgress } from '../../progress';
-import { EuiIcon } from '../../icon';
-import { EuiI18n } from '../../i18n';
-import { EuiLoadingSpinner } from '../../loading';
+import { OuiValidatableControl } from '../validatable_control';
+import { OuiButtonEmpty } from '../../button';
+import { OuiProgress } from '../../progress';
+import { OuiIcon } from '../../icon';
+import { OuiI18n } from '../../i18n';
+import { OuiLoadingSpinner } from '../../loading';
 import { htmlIdGenerator } from '../../../services/accessibility';
 
 const displayToClassNameMap = {
   default: null,
-  large: 'euiFilePicker--large',
+  large: 'ouiFilePicker--large',
 };
 
 export const DISPLAYS = keysOf(displayToClassNameMap);
 
-export type EuiFilePickerDisplay = keyof typeof displayToClassNameMap;
+export type OuiFilePickerDisplay = keyof typeof displayToClassNameMap;
 
-export interface EuiFilePickerProps
+export interface OuiFilePickerProps
   extends CommonProps,
     Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {
   id?: string;
@@ -62,14 +73,14 @@ export interface EuiFilePickerProps
    * `default` for normal height, similar to other controls;
    * `large` for taller size
    */
-  display?: EuiFilePickerDisplay;
+  display?: OuiFilePickerDisplay;
   fullWidth?: boolean;
   isInvalid?: boolean;
   isLoading?: boolean;
   disabled?: boolean;
 }
 
-export class EuiFilePicker extends Component<EuiFilePickerProps> {
+export class OuiFilePicker extends Component<OuiFilePickerProps> {
   static defaultProps = {
     initialPromptText: 'Select or drag and drop a file',
     compressed: false,
@@ -125,10 +136,10 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
 
   render() {
     return (
-      <EuiI18n
+      <OuiI18n
         tokens={[
-          'euiFilePicker.clearSelectedFiles',
-          'euiFilePicker.filesSelected',
+          'ouiFilePicker.clearSelectedFiles',
+          'ouiFilePicker.filesSelected',
         ]}
         defaults={['Clear selected files', 'files selected']}>
         {([clearSelectedFiles, filesSelected]: string[]) => {
@@ -158,15 +169,15 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
           const normalFormControl = display === 'default';
 
           const classes = classNames(
-            'euiFilePicker',
+            'ouiFilePicker',
             displayToClassNameMap[display!],
             {
-              euiFilePicker__showDrop: this.state.isHoveringDrop,
-              'euiFilePicker--compressed': compressed,
-              'euiFilePicker--fullWidth': fullWidth,
-              'euiFilePicker-isInvalid': isInvalid,
-              'euiFilePicker-isLoading': isLoading,
-              'euiFilePicker-hasFiles': isOverridingInitialPrompt,
+              ouiFilePicker__showDrop: this.state.isHoveringDrop,
+              'ouiFilePicker--compressed': compressed,
+              'ouiFilePicker--fullWidth': fullWidth,
+              'ouiFilePicker-isInvalid': isInvalid,
+              'ouiFilePicker-isLoading': isLoading,
+              'ouiFilePicker-hasFiles': isOverridingInitialPrompt,
             },
             className
           );
@@ -175,7 +186,7 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
           if (isLoading && normalFormControl) {
             // Override clear button with loading spinner if it is in loading state
             clearButton = (
-              <EuiLoadingSpinner className="euiFilePicker__loadingSpinner" />
+              <OuiLoadingSpinner className="ouiFilePicker__loadingSpinner" />
             );
           } else if (isOverridingInitialPrompt) {
             if (normalFormControl) {
@@ -183,23 +194,23 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
                 <button
                   type="button"
                   aria-label={clearSelectedFiles}
-                  className="euiFilePicker__clearButton"
+                  className="ouiFilePicker__clearButton"
                   onClick={this.removeFiles}>
-                  <EuiIcon className="euiFilePicker__clearIcon" type="cross" />
+                  <OuiIcon className="ouiFilePicker__clearIcon" type="cross" />
                 </button>
               );
             } else {
               clearButton = (
-                <EuiButtonEmpty
+                <OuiButtonEmpty
                   aria-label={clearSelectedFiles}
-                  className="euiFilePicker__clearButton"
+                  className="ouiFilePicker__clearButton"
                   size="xs"
                   onClick={this.removeFiles}>
-                  <EuiI18n
-                    token="euiFilePicker.removeSelected"
+                  <OuiI18n
+                    token="ouiFilePicker.removeSelected"
                     default="Remove"
                   />
-                </EuiButtonEmpty>
+                </OuiButtonEmpty>
               );
             }
           } else {
@@ -207,18 +218,18 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
           }
 
           const loader = !normalFormControl && isLoading && (
-            <EuiProgress size="xs" color="accent" position="absolute" />
+            <OuiProgress size="xs" color="accent" position="absolute" />
           );
 
           return (
             <div className={classes}>
-              <div className="euiFilePicker__wrap">
-                <EuiValidatableControl isInvalid={isInvalid}>
+              <div className="ouiFilePicker__wrap">
+                <OuiValidatableControl isInvalid={isInvalid}>
                   <input
                     type="file"
                     id={id}
                     name={name}
-                    className="euiFilePicker__input"
+                    className="ouiFilePicker__input"
                     onChange={() => this.handleChange(filesSelected)}
                     ref={(input) => {
                       this.fileInput = input;
@@ -230,15 +241,15 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
                     aria-describedby={promptId}
                     {...rest}
                   />
-                </EuiValidatableControl>
-                <div className="euiFilePicker__prompt" id={promptId}>
-                  <EuiIcon
-                    className="euiFilePicker__icon"
+                </OuiValidatableControl>
+                <div className="ouiFilePicker__prompt" id={promptId}>
+                  <OuiIcon
+                    className="ouiFilePicker__icon"
                     type="importAction"
                     size={normalFormControl ? 'm' : 'l'}
                     aria-hidden="true"
                   />
-                  <div className="euiFilePicker__promptText">
+                  <div className="ouiFilePicker__promptText">
                     {this.state.promptText || initialPromptText}
                   </div>
                   {clearButton}
@@ -248,7 +259,7 @@ export class EuiFilePicker extends Component<EuiFilePickerProps> {
             </div>
           );
         }}
-      </EuiI18n>
+      </OuiI18n>
     );
   }
 }

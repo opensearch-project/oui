@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,12 +31,12 @@
 import React, { Component, ReactElement, ReactNode } from 'react';
 import { isArray, isNil } from '../../../services/predicate';
 import { keys } from '../../../services';
-import { EuiPopover, EuiPopoverTitle } from '../../popover';
-import { EuiFieldSearch } from '../../form/field_search';
-import { EuiFilterButton, EuiFilterSelectItem } from '../../filter_group';
-import { EuiLoadingChart } from '../../loading';
-import { EuiSpacer } from '../../spacer';
-import { EuiIcon } from '../../icon';
+import { OuiPopover, OuiPopoverTitle } from '../../popover';
+import { OuiFieldSearch } from '../../form/field_search';
+import { OuiFilterButton, OuiFilterSelectItem } from '../../filter_group';
+import { OuiLoadingChart } from '../../loading';
+import { OuiSpacer } from '../../spacer';
+import { OuiIcon } from '../../icon';
 import { Query } from '../query';
 import { Clause, Operator, OperatorType, Value } from '../query/ast';
 
@@ -97,7 +108,7 @@ export class FieldValueSelectionFilter extends Component<
   FieldValueSelectionFilterProps,
   State
 > {
-  private readonly selectItems: EuiFilterSelectItem[];
+  private readonly selectItems: OuiFilterSelectItem[];
   private searchInput: HTMLInputElement | null = null;
 
   constructor(props: FieldValueSelectionFilterProps) {
@@ -356,7 +367,7 @@ export class FieldValueSelectionFilter extends Component<
     const active = activeTop || activeItem;
 
     const button = (
-      <EuiFilterButton
+      <OuiFilterButton
         iconType="arrowDown"
         iconSide="right"
         onClick={this.onButtonClick.bind(this)}
@@ -364,7 +375,7 @@ export class FieldValueSelectionFilter extends Component<
         numActiveFilters={active ? this.state.activeItems.length : undefined}
         grow>
         {config.name}
-      </EuiFilterButton>
+      </OuiFilterButton>
     );
 
     const searchBox = this.renderSearchBox();
@@ -376,17 +387,17 @@ export class FieldValueSelectionFilter extends Component<
     );
 
     return (
-      <EuiPopover
+      <OuiPopover
         id={`${config.type}_${index}`}
         button={button}
         isOpen={this.state.popoverOpen}
         closePopover={this.closePopover.bind(this)}
         panelPaddingSize="none"
         anchorPosition="downCenter"
-        panelClassName="euiFilterGroup__popoverPanel">
+        panelClassName="ouiFilterGroup__popoverPanel">
         {searchBox}
         {content}
-      </EuiPopover>
+      </OuiPopover>
     );
   }
 
@@ -396,8 +407,8 @@ export class FieldValueSelectionFilter extends Component<
     if (this.state.options && this.state.options.all.length >= threshold) {
       const disabled = this.state.error != null;
       return (
-        <EuiPopoverTitle paddingSize="s">
-          <EuiFieldSearch
+        <OuiPopoverTitle paddingSize="s">
+          <OuiFieldSearch
             inputRef={(ref) => (this.searchInput = ref)}
             disabled={disabled}
             incremental={true}
@@ -405,7 +416,7 @@ export class FieldValueSelectionFilter extends Component<
             onKeyDown={this.onKeyDown.bind(this, -1)}
             compressed
           />
-        </EuiPopoverTitle>
+        </OuiPopoverTitle>
       );
     }
   }
@@ -453,20 +464,20 @@ export class FieldValueSelectionFilter extends Component<
       };
 
       const item = (
-        <EuiFilterSelectItem
+        <OuiFilterSelectItem
           key={index}
           checked={checked}
           onClick={onClick}
           ref={(ref) => (this.selectItems[index] = ref!)}
           onKeyDown={this.onKeyDown.bind(this, index)}>
           {option.view ? option.view : this.resolveOptionName(option)}
-        </EuiFilterSelectItem>
+        </OuiFilterSelectItem>
       );
 
       items.push(item);
     });
 
-    return <div className="euiFilterSelect__items">{items}</div>;
+    return <div className="ouiFilterSelect__items">{items}</div>;
   }
 
   resolveChecked(clause: Clause | undefined): 'on' | 'off' | undefined {
@@ -479,10 +490,10 @@ export class FieldValueSelectionFilter extends Component<
     const message =
       this.props.config.loadingMessage || defaults.config.loadingMessage;
     return (
-      <div className="euiFilterSelect__note">
-        <div className="euiFilterSelect__noteContent">
-          <EuiLoadingChart size="m" />
-          <EuiSpacer size="xs" />
+      <div className="ouiFilterSelect__note">
+        <div className="ouiFilterSelect__noteContent">
+          <OuiLoadingChart size="m" />
+          <OuiSpacer size="xs" />
           <p>{message}</p>
         </div>
       </div>
@@ -491,10 +502,10 @@ export class FieldValueSelectionFilter extends Component<
 
   renderError(message: string) {
     return (
-      <div className="euiFilterSelect__note">
-        <div className="euiFilterSelect__noteContent">
-          <EuiIcon size="m" type="faceSad" color="danger" />
-          <EuiSpacer size="xs" />
+      <div className="ouiFilterSelect__note">
+        <div className="ouiFilterSelect__noteContent">
+          <OuiIcon size="m" type="faceSad" color="danger" />
+          <OuiSpacer size="xs" />
           <p>{message}</p>
         </div>
       </div>
@@ -505,10 +516,10 @@ export class FieldValueSelectionFilter extends Component<
     const message =
       this.props.config.noOptionsMessage || defaults.config.noOptionsMessage;
     return (
-      <div className="euiFilterSelect__note">
-        <div className="euiFilterSelect__noteContent">
-          <EuiIcon type="minusInCircle" />
-          <EuiSpacer size="xs" />
+      <div className="ouiFilterSelect__note">
+        <div className="ouiFilterSelect__noteContent">
+          <OuiIcon type="minusInCircle" />
+          <OuiSpacer size="xs" />
           <p>{message}</p>
         </div>
       </div>

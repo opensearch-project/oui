@@ -1,47 +1,58 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiTitle,
-  EuiSpacer,
-  EuiBadge,
-  EuiFlexGrid,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiTitle,
+  OuiSpacer,
+  OuiBadge,
+  OuiFlexGrid,
 } from '../../../../src/components';
 
 import {
-  euiPaletteColorBlind,
-  euiPaletteColorBlindBehindText,
+  ouiPaletteColorBlind,
+  ouiPaletteColorBlindBehindText,
 } from '../../../../src/services';
 import { ColorPaletteFlexItem, ColorPaletteCopyCode } from './shared';
 
 const customPalettes = [
   {
     title: 'Max 10 colors',
-    palette: euiPaletteColorBlind(),
-    code: 'euiPaletteColorBlind()',
+    palette: ouiPaletteColorBlind(),
+    code: 'ouiPaletteColorBlind()',
   },
   {
     title: 'More than 10 colors are needed',
-    palette: euiPaletteColorBlind({ rotations: 2 }),
-    code: 'euiPaletteColorBlind({rotations: 2})',
+    palette: ouiPaletteColorBlind({ rotations: 2 }),
+    code: 'ouiPaletteColorBlind({rotations: 2})',
   },
   {
     title:
       'Series may have multiple metrics and so the colors must coordinate but be distinguishable',
-    palette: euiPaletteColorBlind({
+    palette: ouiPaletteColorBlind({
       rotations: 3,
       order: 'group',
       direction: 'both',
     }),
     code:
-      "euiPaletteColorBlind({rotations: 3, order: 'group', direction: 'both'})",
+      "ouiPaletteColorBlind({rotations: 3, order: 'group', direction: 'both'})",
   },
   {
     title:
       "The default sort order is close but not exactly aligned with the color wheel. To sort this better add the 'natural' sort param.",
-    palette: euiPaletteColorBlind({ sortBy: 'natural' }),
-    code: "euiPaletteColorBlind({sortBy: 'natural'})",
+    palette: ouiPaletteColorBlind({ sortBy: 'natural' }),
+    code: "ouiPaletteColorBlind({sortBy: 'natural'})",
   },
 ];
 
@@ -49,13 +60,13 @@ export default () => (
   <Fragment>
     {customPalettes.map((palette) => (
       <Fragment key={palette.title}>
-        <EuiTitle size="xxs">
+        <OuiTitle size="xxs">
           <h3>{palette.title}</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiFlexGroup alignItems="center">
-          <EuiFlexItem grow={false} style={{ maxWidth: 240 }}>
-            <EuiFlexGroup
+        </OuiTitle>
+        <OuiSpacer size="s" />
+        <OuiFlexGroup alignItems="center">
+          <OuiFlexItem grow={false} style={{ maxWidth: 240 }}>
+            <OuiFlexGroup
               className="guideColorPalette__swatchHolder"
               gutterSize="none"
               alignItems="flexStart"
@@ -68,39 +79,39 @@ export default () => (
                   key={hexCode}
                 />
               ))}
-            </EuiFlexGroup>
-          </EuiFlexItem>
-          <EuiFlexItem>
+            </OuiFlexGroup>
+          </OuiFlexItem>
+          <OuiFlexItem>
             <ColorPaletteCopyCode code={palette.code} />
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiSpacer size="xl" />
+          </OuiFlexItem>
+        </OuiFlexGroup>
+        <OuiSpacer size="xl" />
       </Fragment>
     ))}
-    <EuiTitle size="xxs">
+    <OuiTitle size="xxs">
       <h3>Behind text variant</h3>
-    </EuiTitle>
-    <EuiSpacer size="s" />
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false} style={{ maxWidth: 240 }}>
-        <EuiFlexGrid columns={4} gutterSize="s">
-          {euiPaletteColorBlindBehindText({ sortBy: 'natural' }).map(
+    </OuiTitle>
+    <OuiSpacer size="s" />
+    <OuiFlexGroup alignItems="center">
+      <OuiFlexItem grow={false} style={{ maxWidth: 240 }}>
+        <OuiFlexGrid columns={4} gutterSize="s">
+          {ouiPaletteColorBlindBehindText({ sortBy: 'natural' }).map(
             (color, i) => (
-              <EuiFlexItem key={i} grow={false}>
+              <OuiFlexItem key={i} grow={false}>
                 <span>
-                  <EuiBadge color={color}>Text</EuiBadge>
+                  <OuiBadge color={color}>Text</OuiBadge>
                 </span>
-              </EuiFlexItem>
+              </OuiFlexItem>
             )
           )}
-        </EuiFlexGrid>
-      </EuiFlexItem>
-      <EuiFlexItem>
+        </OuiFlexGrid>
+      </OuiFlexItem>
+      <OuiFlexItem>
         <ColorPaletteCopyCode
-          textToCopy={"euiPaletteColorBlindBehindText({ sortBy: 'natural' })"}
-          code={"euiPaletteColorBlindBehindText({ sortBy: 'natural' })"}
+          textToCopy={"ouiPaletteColorBlindBehindText({ sortBy: 'natural' })"}
+          code={"ouiPaletteColorBlindBehindText({ sortBy: 'natural' })"}
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </Fragment>
 );

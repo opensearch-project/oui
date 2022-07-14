@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { createElement, Fragment } from 'react';
 import { slugify } from '../../src/services';
 
@@ -5,7 +16,7 @@ import { createHashHistory } from 'history';
 
 import { GuidePage, GuideSection } from './components';
 
-import { EuiErrorBoundary } from '../../src/components';
+import { OuiErrorBoundary } from '../../src/components';
 
 import { playgroundCreator } from './services/playground';
 
@@ -272,7 +283,7 @@ const createExample = (example, customTitle) => {
   }
 
   const component = () => (
-    <EuiErrorBoundary>
+    <OuiErrorBoundary>
       <GuidePage
         title={title}
         intro={intro}
@@ -281,7 +292,7 @@ const createExample = (example, customTitle) => {
         guidelines={guidelines}>
         {renderedSections}
       </GuidePage>
-    </EuiErrorBoundary>
+    </OuiErrorBoundary>
   );
 
   return {
@@ -319,7 +330,7 @@ const navigation = [
   {
     name: 'Guidelines',
     items: [
-      // TODO uncomment when EuiMarkdownFormat has a better text formatting
+      // TODO uncomment when OuiMarkdownFormat has a better text formatting
       // createMarkdownExample(GettingStarted, 'Getting started'),
       createExample(AccessibilityGuidelines, 'Accessibility'),
       {

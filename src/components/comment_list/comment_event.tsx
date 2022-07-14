@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@ import React, { FunctionComponent, ReactNode } from 'react';
 import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
 
-export interface EuiCommentEventProps extends CommonProps {
+export interface OuiCommentEventProps extends CommonProps {
   /**
    * Author of the comment. Display a small icon or avatar with it if needed.
    */
@@ -41,18 +52,18 @@ export interface EuiCommentEventProps extends CommonProps {
   /**
    * Use "update" when the comment is primarily showing info about actions that the user or the system has performed (e.g. "user1 edited a case").
    */
-  type?: EuiCommentType;
+  type?: OuiCommentType;
 }
 
 const typeToClassNameMap = {
-  regular: 'euiCommentEvent--regular',
-  update: 'euiCommentEvent--update',
+  regular: 'ouiCommentEvent--regular',
+  update: 'ouiCommentEvent--update',
 };
 
 export const TYPES = keysOf(typeToClassNameMap);
-export type EuiCommentType = keyof typeof typeToClassNameMap;
+export type OuiCommentType = keyof typeof typeToClassNameMap;
 
-export const EuiCommentEvent: FunctionComponent<EuiCommentEventProps> = ({
+export const OuiCommentEvent: FunctionComponent<OuiCommentEventProps> = ({
   children,
   className,
   username,
@@ -62,7 +73,7 @@ export const EuiCommentEvent: FunctionComponent<EuiCommentEventProps> = ({
   actions,
 }) => {
   const classes = classNames(
-    'euiCommentEvent',
+    'ouiCommentEvent',
     typeToClassNameMap[type],
     className
   );
@@ -76,22 +87,22 @@ export const EuiCommentEvent: FunctionComponent<EuiCommentEventProps> = ({
 
   return (
     <Element className={classes}>
-      <HeaderElement className="euiCommentEvent__header">
-        <div className="euiCommentEvent__headerData">
-          <div className="euiCommentEvent__headerUsername">{username}</div>
-          <div className="euiCommentEvent__headerEvent">{event}</div>
+      <HeaderElement className="ouiCommentEvent__header">
+        <div className="ouiCommentEvent__headerData">
+          <div className="ouiCommentEvent__headerUsername">{username}</div>
+          <div className="ouiCommentEvent__headerEvent">{event}</div>
           {timestamp ? (
-            <div className="euiCommentEvent__headerTimestamp">
+            <div className="ouiCommentEvent__headerTimestamp">
               <time>{timestamp}</time>
             </div>
           ) : undefined}
         </div>
         {actions ? (
-          <div className="euiCommentEvent__headerActions">{actions}</div>
+          <div className="ouiCommentEvent__headerActions">{actions}</div>
         ) : undefined}
       </HeaderElement>
       {children ? (
-        <div className="euiCommentEvent__body">{children}</div>
+        <div className="ouiCommentEvent__body">{children}</div>
       ) : undefined}
     </Element>
   );

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,12 +31,12 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
-import { EuiFieldSearch, EuiFieldSearchProps } from '../../form';
+import { OuiFieldSearch, OuiFieldSearchProps } from '../../form';
 import { getMatchingOptions } from '../matching_options';
-import { EuiSelectableOption } from '../selectable_option';
+import { OuiSelectableOption } from '../selectable_option';
 
-export type EuiSelectableSearchProps<T> = Omit<
-  EuiFieldSearchProps,
+export type OuiSelectableSearchProps<T> = Omit<
+  OuiFieldSearchProps,
   'onChange'
 > &
   CommonProps & {
@@ -33,10 +44,10 @@ export type EuiSelectableSearchProps<T> = Omit<
      * Passes back (matchingOptions, searchValue)
      */
     onChange: (
-      matchingOptions: Array<EuiSelectableOption<T>>,
+      matchingOptions: Array<OuiSelectableOption<T>>,
       searchValue: string
     ) => void;
-    options: Array<EuiSelectableOption<T>>;
+    options: Array<OuiSelectableOption<T>>;
     defaultValue: string;
     /**
      * The id of the visible list to create the appropriate aria controls
@@ -45,19 +56,19 @@ export type EuiSelectableSearchProps<T> = Omit<
     isPreFiltered: boolean;
   };
 
-export interface EuiSelectableSearchState {
+export interface OuiSelectableSearchState {
   searchValue: string;
 }
 
-export class EuiSelectableSearch<T> extends Component<
-  EuiSelectableSearchProps<T>,
-  EuiSelectableSearchState
+export class OuiSelectableSearch<T> extends Component<
+  OuiSelectableSearchProps<T>,
+  OuiSelectableSearchState
 > {
   static defaultProps = {
     defaultValue: '',
   };
 
-  constructor(props: EuiSelectableSearchProps<T>) {
+  constructor(props: OuiSelectableSearchProps<T>) {
     super(props);
 
     this.state = {
@@ -100,10 +111,10 @@ export class EuiSelectableSearch<T> extends Component<
       ...rest
     } = this.props;
 
-    const classes = classNames('euiSelectableSearch', className);
+    const classes = classNames('ouiSelectableSearch', className);
 
     const ariaPropsIfListIsPresent:
-      | Partial<EuiFieldSearchProps>
+      | Partial<OuiFieldSearchProps>
       | undefined = listId
       ? {
           role: 'combobox',
@@ -115,7 +126,7 @@ export class EuiSelectableSearch<T> extends Component<
       : undefined;
 
     return (
-      <EuiFieldSearch
+      <OuiFieldSearch
         className={classes}
         placeholder={placeholder}
         onSearch={this.onSearchChange}

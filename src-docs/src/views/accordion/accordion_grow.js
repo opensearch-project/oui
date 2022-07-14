@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiAccordion,
-  EuiButton,
-  EuiSpacer,
-  EuiText,
-  EuiScreenReaderOnly,
+  OuiAccordion,
+  OuiButton,
+  OuiSpacer,
+  OuiText,
+  OuiScreenReaderOnly,
 } from '../../../../src/components';
-import { EuiPanel } from '../../../../src/components/panel';
+import { OuiPanel } from '../../../../src/components/panel';
 import { htmlIdGenerator } from '../../../../src/services';
 
 const Rows = () => {
@@ -19,23 +30,23 @@ const Rows = () => {
   const growingAccordianDescriptionId = htmlIdGenerator()();
   const listId = htmlIdGenerator()();
   return (
-    <EuiText size="s">
-      <EuiScreenReaderOnly>
+    <OuiText size="s">
+      <OuiScreenReaderOnly>
         <p id={growingAccordianDescriptionId}>
           Currently height is set to {counter} items
         </p>
-      </EuiScreenReaderOnly>
-      <EuiSpacer size="s" />
+      </OuiScreenReaderOnly>
+      <OuiSpacer size="s" />
       <p>
-        <EuiButton
+        <OuiButton
           size="s"
           iconType="plusInCircleFilled"
           onClick={() => setCounter(counter + 1)}
           aria-controls={listId}
           aria-describedby={growingAccordianDescriptionId}>
           Increase height to {counter + 1} items
-        </EuiButton>{' '}
-        <EuiButton
+        </OuiButton>{' '}
+        <OuiButton
           size="s"
           iconType="minusInCircleFilled"
           aria-controls={listId}
@@ -43,21 +54,21 @@ const Rows = () => {
           onClick={() => setCounter(Math.max(0, counter - 1))}
           isDisabled={counter === 1}>
           Decrease height to {counter - 1} item{counter > 2 && 's'}
-        </EuiButton>
+        </OuiButton>
       </p>
       <ul id={listId}>{rows}</ul>
-    </EuiText>
+    </OuiText>
   );
 };
 
 export default () => (
-  <EuiAccordion
+  <OuiAccordion
     id={htmlIdGenerator()()}
     buttonContent="Click me to toggle close / open"
     initialIsOpen={true}
     paddingSize="s">
-    <EuiPanel color="subdued">
+    <OuiPanel color="subdued">
       <Rows />
-    </EuiPanel>
-  </EuiAccordion>
+    </OuiPanel>
+  </OuiAccordion>
 );

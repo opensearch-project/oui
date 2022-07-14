@@ -1,10 +1,21 @@
-/**
- * Note: Bottom margin is added in _page.scss when EuiPage has `paddingSize`
- *       Or it's added in _page_body.scss when EuiPageBody has `paddingSize`
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
  */
 
-.euiPageHeader {
-  @include euiPageRestrictWidth;
+/**
+ * Note: Bottom margin is added in _page.scss when OuiPage has `paddingSize`
+ *       Or it's added in _page_body.scss when OuiPageBody has `paddingSize`
+ */
+
+.ouiPageHeader {
+  @include ouiPageRestrictWidth;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -13,49 +24,49 @@
   flex-shrink: 0; // Ensures Safari doesn't shrink beyond contents
 }
 
-.euiPageHeader--bottomBorder {
-  border-bottom: $euiBorderThin;
+.ouiPageHeader--bottomBorder {
+  border-bottom: $ouiBorderThin;
 
-  &:not(.euiPageHeader--tabsAtBottom) {
+  &:not(.ouiPageHeader--tabsAtBottom) {
     // Default padding to separate contents (unless there's tabs)
-    padding-bottom: map-get($euiPanelPaddingModifiers, 'paddingLarge');
+    padding-bottom: map-get($ouiPanelPaddingModifiers, 'paddingLarge');
   }
 }
 
-// Uses the same values as EuiPanel
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPageHeader--#{$modifier} {
+// Uses the same values as OuiPanel
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPageHeader--#{$modifier} {
     padding: $amount;
 
     // Use margin if there are tabs to keep border close to tabs
-    &.euiPageHeader--tabsAtBottom {
+    &.ouiPageHeader--tabsAtBottom {
       padding-bottom: 0;
     }
 
-    &.euiPageHeader--tabsAtBottom.euiPageHeader--bottomBorder {
+    &.ouiPageHeader--tabsAtBottom.ouiPageHeader--bottomBorder {
       margin-bottom: $amount;
     }
   }
 }
 
-.euiPageHeader--top {
+.ouiPageHeader--top {
   align-items: flex-start;
 }
 
-.euiPageHeader--bottom {
+.ouiPageHeader--bottom {
   align-items: flex-end;
 }
 
-.euiPageHeader--stretch {
+.ouiPageHeader--stretch {
   align-items: stretch;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiPageHeader--responsive {
+@include ouiBreakpoint('xs', 's') {
+  .ouiPageHeader--responsive {
     flex-direction: column;
   }
 
-  .euiPageHeader--responsiveReverse {
+  .ouiPageHeader--responsiveReverse {
     flex-direction: column-reverse;
   }
 }

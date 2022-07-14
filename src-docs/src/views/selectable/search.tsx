@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useEffect } from 'react';
 
-import { EuiText } from '../../../../src/components/text';
-import { EuiBadge } from '../../../../src/components/badge';
-import { EuiSelectableTemplateSitewide } from '../../../../src/components/selectable';
-import { EuiSelectableTemplateSitewideOption } from '../../../../src/components/selectable/selectable_templates/selectable_template_sitewide_option';
-import { EuiFlexGroup, EuiFlexItem } from '../../../../src/components/flex';
-import { EuiLink } from '../../../../src/components/link';
-import { EuiButton } from '../../../../src/components/button';
+import { OuiText } from '../../../../src/components/text';
+import { OuiBadge } from '../../../../src/components/badge';
+import { OuiSelectableTemplateSitewide } from '../../../../src/components/selectable';
+import { OuiSelectableTemplateSitewideOption } from '../../../../src/components/selectable/selectable_templates/selectable_template_sitewide_option';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
+import { OuiLink } from '../../../../src/components/link';
+import { OuiButton } from '../../../../src/components/button';
 
 export default () => {
   const [searchValue, setSearchValue] = useState('');
@@ -31,7 +42,7 @@ export default () => {
    * Take the first 5 options and simulate recently viewed
    */
   const recents = searchData.slice(0, 5);
-  const recentsWithIcon: EuiSelectableTemplateSitewideOption[] = recents.map(
+  const recentsWithIcon: OuiSelectableTemplateSitewideOption[] = recents.map(
     (recent) => {
       return {
         ...recent,
@@ -73,7 +84,7 @@ export default () => {
   /**
    * Do something with the selection based on the found option with `checked: on`
    */
-  const onChange = (updatedOptions: EuiSelectableTemplateSitewideOption[]) => {
+  const onChange = (updatedOptions: OuiSelectableTemplateSitewideOption[]) => {
     const clickedItem = updatedOptions.find(
       (option) => option.checked === 'on'
     );
@@ -81,7 +92,7 @@ export default () => {
   };
 
   return (
-    <EuiSelectableTemplateSitewide
+    <OuiSelectableTemplateSitewide
       isLoading={isLoading}
       onChange={onChange}
       options={searchValueExists ? searchData : recentsWithIcon}
@@ -97,25 +108,25 @@ export default () => {
       popoverProps={{
         className: 'customPopoverClass',
       }}
-      popoverButton={<EuiButton>Mobile toggle</EuiButton>}
+      popoverButton={<OuiButton>Mobile toggle</OuiButton>}
       popoverButtonBreakpoints={['xs', 's']}
       popoverFooter={
-        <EuiText color="subdued" size="xs">
-          <EuiFlexGroup
+        <OuiText color="subdued" size="xs">
+          <OuiFlexGroup
             alignItems="center"
             gutterSize="s"
             responsive={false}
             wrap>
-            <EuiFlexItem grow={false}>
-              {searchValueExists && <EuiLink>View more results</EuiLink>}
-            </EuiFlexItem>
-            <EuiFlexItem />
-            <EuiFlexItem grow={false}>Quickly search using</EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>Command + K</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiText>
+            <OuiFlexItem grow={false}>
+              {searchValueExists && <OuiLink>View more results</OuiLink>}
+            </OuiFlexItem>
+            <OuiFlexItem />
+            <OuiFlexItem grow={false}>Quickly search using</OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiBadge>Command + K</OuiBadge>
+            </OuiFlexItem>
+          </OuiFlexGroup>
+        </OuiText>
       }
     />
   );
@@ -124,7 +135,7 @@ export default () => {
 /**
  * The options object
  */
-const searchData: EuiSelectableTemplateSitewideOption[] = [
+const searchData: OuiSelectableTemplateSitewideOption[] = [
   {
     label: 'Welcome dashboards',
     avatar: {

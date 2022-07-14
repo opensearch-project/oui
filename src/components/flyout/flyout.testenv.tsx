@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,7 +29,7 @@
  */
 
 import React from 'react';
-export const EuiFlyout = ({
+export const OuiFlyout = ({
   as = 'div',
   role = 'dialog',
   children,
@@ -29,11 +40,11 @@ export const EuiFlyout = ({
 }: any) => {
   const Element = as;
   return (
-    <Element data-eui="EuiFlyout" data-test-subj={dataTestSubj} role={role}>
+    <Element data-oui="OuiFlyout" data-test-subj={dataTestSubj} role={role}>
       {!hideCloseButton && (
         <button
           type="button"
-          data-test-subj="euiFlyoutCloseButton"
+          data-test-subj="ouiFlyoutCloseButton"
           onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
             onClose();
             closeButtonProps?.onClick && closeButtonProps.onClick(e);

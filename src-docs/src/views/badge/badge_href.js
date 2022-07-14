@@ -1,25 +1,36 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiBadge,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiBadge,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup wrap responsive={false} gutterSize="xs">
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="#BADA55" href="/#/display/badge">
+  <OuiFlexGroup wrap responsive={false} gutterSize="xs">
+    <OuiFlexItem grow={false}>
+      <OuiBadge color="#BADA55" href="/#/display/badge">
         badge as an anchor
-      </EuiBadge>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="hollow" href="/#/display/badge" target="blank">
+      </OuiBadge>
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiBadge color="hollow" href="/#/display/badge" target="blank">
         anchor with target specified
-      </EuiBadge>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge
+      </OuiBadge>
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiBadge
         color="accent"
         href="/#/display/badge"
         iconType="bolt"
@@ -27,12 +38,12 @@ export default () => (
         iconOnClick={() => {}}
         iconOnClickAriaLabel="Example of onClick event for icon within the anchor">
         anchor with an icon and iconOnClick
-      </EuiBadge>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiBadge color="success" href="/#/display/badge" isDisabled={true}>
+      </OuiBadge>
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiBadge color="success" href="/#/display/badge" isDisabled={true}>
         disabled anchor badge
-      </EuiBadge>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+      </OuiBadge>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCallOut, COLORS, HEADINGS } from './call_out';
+import { OuiCallOut, COLORS, HEADINGS } from './call_out';
 
-describe('EuiCallOut', () => {
+describe('OuiCallOut', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCallOut {...requiredProps}>Content</EuiCallOut>
+      <OuiCallOut {...requiredProps}>Content</OuiCallOut>
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +47,7 @@ describe('EuiCallOut', () => {
     describe('title', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCallOut title="Title">Content</EuiCallOut>
+          <OuiCallOut title="Title">Content</OuiCallOut>
         );
 
         expect(component).toMatchSnapshot();
@@ -45,7 +56,7 @@ describe('EuiCallOut', () => {
 
     describe('iconType', () => {
       it('is rendered', () => {
-        const component = render(<EuiCallOut iconType="user" />);
+        const component = render(<OuiCallOut iconType="user" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -54,7 +65,7 @@ describe('EuiCallOut', () => {
     describe('color', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = render(<EuiCallOut color={color} />);
+          const component = render(<OuiCallOut color={color} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -64,7 +75,7 @@ describe('EuiCallOut', () => {
     describe('heading', () => {
       HEADINGS.forEach((heading) => {
         test(`${heading} is rendered`, () => {
-          const component = render(<EuiCallOut heading={heading} />);
+          const component = render(<OuiCallOut heading={heading} />);
 
           expect(component).toMatchSnapshot();
         });

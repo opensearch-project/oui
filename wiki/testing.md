@@ -103,7 +103,7 @@ describe('YourComponent', () => {
 
 A component file can be mocked for snapshot simplification or to mitigate nondeterministic rendering in test environments. See [`src/components/icon`](../src/components/icon) for a example.
 
-_Although mock component files are currently only used as part of consuming project test environments, the concept will soon be applied to EUI's own testing environment._
+_Although mock component files are currently only used as part of consuming project test environments, the concept will soon be applied to OUI's own testing environment._
 
 ### Using the mock namespace
 

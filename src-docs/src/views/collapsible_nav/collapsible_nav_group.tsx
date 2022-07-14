@@ -1,44 +1,55 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
-import { EuiText } from '../../../../src/components/text';
-import { EuiCode } from '../../../../src/components/code';
+import { OuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
+import { OuiText } from '../../../../src/components/text';
+import { OuiCode } from '../../../../src/components/code';
 
 export default () => (
   <>
-    <EuiCollapsibleNavGroup>
-      <EuiText size="s" color="subdued">
+    <OuiCollapsibleNavGroup>
+      <OuiText size="s" color="subdued">
         <p>This is a basic group without any modifications</p>
-      </EuiText>
-    </EuiCollapsibleNavGroup>
-    <EuiCollapsibleNavGroup
+      </OuiText>
+    </OuiCollapsibleNavGroup>
+    <OuiCollapsibleNavGroup
       data-test-subj="TEST"
       title="Nav group"
       iconType="logoElastic">
-      <EuiText size="s" color="subdued">
+      <OuiText size="s" color="subdued">
         <p>
           This is a nice group with a heading supplied via{' '}
-          <EuiCode>title</EuiCode> and <EuiCode>iconType</EuiCode>.
+          <OuiCode>title</OuiCode> and <OuiCode>iconType</OuiCode>.
         </p>
-      </EuiText>
-    </EuiCollapsibleNavGroup>
-    <EuiCollapsibleNavGroup
+      </OuiText>
+    </OuiCollapsibleNavGroup>
+    <OuiCollapsibleNavGroup
       data-test-subj="TEST"
       background="light"
       title="Nav group"
       isCollapsible={true}
       iconType="logoElastic"
       initialIsOpen={true}>
-      <EuiText size="s" color="subdued">
+      <OuiText size="s" color="subdued">
         <p>
-          This group is <EuiCode>collapsible</EuiCode> and set with{' '}
-          <EuiCode>initialIsOpen</EuiCode>. It has a heading that is the
-          collapsing button via <EuiCode>title</EuiCode> and{' '}
-          <EuiCode>iconType</EuiCode>.
+          This group is <OuiCode>collapsible</OuiCode> and set with{' '}
+          <OuiCode>initialIsOpen</OuiCode>. It has a heading that is the
+          collapsing button via <OuiCode>title</OuiCode> and{' '}
+          <OuiCode>iconType</OuiCode>.
         </p>
-      </EuiText>
-    </EuiCollapsibleNavGroup>
-    <EuiCollapsibleNavGroup
+      </OuiText>
+    </OuiCollapsibleNavGroup>
+    <OuiCollapsibleNavGroup
       title="Nav group"
       iconType="logoGCPMono"
       iconSize="xxl"
@@ -46,14 +57,14 @@ export default () => (
       isCollapsible={true}
       initialIsOpen={false}
       background="dark">
-      <EuiText size="s">
+      <OuiText size="s">
         <p>
-          This is a <EuiCode>dark</EuiCode> <EuiCode>collapsible</EuiCode> group
+          This is a <OuiCode>dark</OuiCode> <OuiCode>collapsible</OuiCode> group
           that is initally set to closed,{' '}
-          <EuiCode>iconSize=&quot;xxl&quot;</EuiCode> and{' '}
-          <EuiCode>titleSize=&quot;s&quot;</EuiCode>.
+          <OuiCode>iconSize=&quot;xxl&quot;</OuiCode> and{' '}
+          <OuiCode>titleSize=&quot;s&quot;</OuiCode>.
         </p>
-      </EuiText>
-    </EuiCollapsibleNavGroup>
+      </OuiText>
+    </OuiCollapsibleNavGroup>
   </>
 );

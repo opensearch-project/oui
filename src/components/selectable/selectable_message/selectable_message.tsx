@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,36 +31,36 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import { CommonProps } from '../../common';
 import classNames from 'classnames';
-import { EuiText } from '../../text';
+import { OuiText } from '../../text';
 
-export type EuiSelectableMessageProps = Omit<
+export type OuiSelectableMessageProps = Omit<
   HTMLAttributes<HTMLDivElement>,
   'color'
 > &
   CommonProps & {
     /**
-     * Match this to the `listProps.bordered` property of your `EuiSelectable` instance
+     * Match this to the `listProps.bordered` property of your `OuiSelectable` instance
      */
     bordered?: boolean;
   };
 
-export const EuiSelectableMessage: FunctionComponent<EuiSelectableMessageProps> = ({
+export const OuiSelectableMessage: FunctionComponent<OuiSelectableMessageProps> = ({
   children,
   className,
   bordered = false,
   ...rest
 }) => {
   const classes = classNames(
-    'euiSelectableMessage',
+    'ouiSelectableMessage',
     {
-      'euiSelectableMessage--bordered': bordered,
+      'ouiSelectableMessage--bordered': bordered,
     },
     className
   );
 
   return (
-    <EuiText color="subdued" size="xs" className={classes} {...rest}>
+    <OuiText color="subdued" size="xs" className={classes} {...rest}>
       {children}
-    </EuiText>
+    </OuiText>
   );
 };

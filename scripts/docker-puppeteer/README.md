@@ -1,4 +1,4 @@
-# eui/puppeteer
+# oui/puppeteer
 
 Base Docker environment image for Puppeteer (Headless Chromium Node API)
 Built containers can be published to the [Elastic Docker Registry](https://container-library.elastic.co) for use locally or in CI environments.
@@ -6,14 +6,14 @@ Built containers can be published to the [Elastic Docker Registry](https://conta
 ## Getting started
 
 ### `test-docker` script
-The [`test-docker`](../test-docker.js) script is the primary user of this container. Specifically, the [`a11y-testing](../a11y-testing.js) script therein uses the headless Chromium environment to run EUI's automated axe accessibility testing suite.
+The [`test-docker`](../test-docker.js) script is the primary user of this container. Specifically, the [`a11y-testing](../a11y-testing.js) script therein uses the headless Chromium environment to run OUI's automated axe accessibility testing suite.
 
 ### Generic node application
 Run the container by passing `node -e "<yourscript.js content as a string>"` as the command:
 
 ```bash
 docker run -i --rm --cap-add=SYS_ADMIN \
-    --name puppeteer-chrome eui/puppeteer \
+    --name puppeteer-chrome oui/puppeteer \
     node -e "`cat yourscript.js`"
 ```
 
@@ -42,7 +42,7 @@ To run the [`test-docker`](../test-docker.js) script with the new image locally,
 
 ### Publish a built image
 
-Authentication and membership of the `eui-design` team on GitHub is required:
+Authentication and membership of the `oui-design` team on GitHub is required:
 
 * You can login at [https://docker-auth.elastic.co](https://docker-auth.elastic.co) using GitHub OAuth to sign in.
 * This will give you a login command that you can run locally to connect to the registry, like:

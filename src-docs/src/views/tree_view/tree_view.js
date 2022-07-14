@@ -1,36 +1,47 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiIcon, EuiTreeView, EuiToken } from '../../../../src/components';
+import { OuiIcon, OuiTreeView, OuiToken } from '../../../../src/components';
 
 export default () => {
   const items = [
     {
       label: 'Item One',
       id: 'item_one',
-      icon: <EuiIcon type="folderClosed" />,
-      iconWhenExpanded: <EuiIcon type="folderOpen" />,
+      icon: <OuiIcon type="folderClosed" />,
+      iconWhenExpanded: <OuiIcon type="folderOpen" />,
       isExpanded: true,
       children: [
         {
           label: 'Item A',
           id: 'item_a',
-          icon: <EuiIcon type="document" />,
+          icon: <OuiIcon type="document" />,
         },
         {
           label: 'Item B',
           id: 'item_b',
-          icon: <EuiIcon type="arrowRight" />,
-          iconWhenExpanded: <EuiIcon type="arrowDown" />,
+          icon: <OuiIcon type="arrowRight" />,
+          iconWhenExpanded: <OuiIcon type="arrowDown" />,
           children: [
             {
               label: 'A Cloud',
               id: 'item_cloud',
-              icon: <EuiToken iconType="tokenConstant" />,
+              icon: <OuiToken iconType="tokenConstant" />,
             },
             {
               label: "I'm a Bug",
               id: 'item_bug',
-              icon: <EuiToken iconType="tokenEnum" />,
+              icon: <OuiToken iconType="tokenEnum" />,
               callback: () => {},
             },
           ],
@@ -38,19 +49,19 @@ export default () => {
         {
           label: 'Item C',
           id: 'item_c',
-          icon: <EuiIcon type="arrowRight" />,
-          iconWhenExpanded: <EuiIcon type="arrowDown" />,
+          icon: <OuiIcon type="arrowRight" />,
+          iconWhenExpanded: <OuiIcon type="arrowDown" />,
           children: [
             {
               label: 'Another Cloud',
               id: 'item_cloud2',
-              icon: <EuiToken iconType="tokenConstant" />,
+              icon: <OuiToken iconType="tokenConstant" />,
             },
             {
               label:
                 'This one is a really long string that we will check truncates correctly',
               id: 'item_bug2',
-              icon: <EuiToken iconType="tokenEnum" />,
+              icon: <OuiToken iconType="tokenEnum" />,
               callback: () => {},
             },
           ],
@@ -65,7 +76,7 @@ export default () => {
 
   return (
     <div style={{ width: '20rem' }}>
-      <EuiTreeView items={items} aria-label="Sample Folder Tree" />
+      <OuiTreeView items={items} aria-label="Sample Folder Tree" />
     </div>
   );
 };

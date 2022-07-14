@@ -1,25 +1,36 @@
-$euiCardSpacing: map-get($euiPanelPaddingModifiers, 'paddingMedium');
-$euiCardBottomNodeHeight: $euiSizeXXL;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-$euiCardSelectButtonBorders: (
-  text: $euiColorSuccess, // Default for selected
-  primary: $euiColorPrimary,
-  success: $euiColorSuccess,
-  danger: $euiColorDanger,
-  ghost: $euiColorDarkShade,
+$ouiCardSpacing: map-get($ouiPanelPaddingModifiers, 'paddingMedium');
+$ouiCardBottomNodeHeight: $ouiSizeXXL;
+
+$ouiCardSelectButtonBorders: (
+  text: $ouiColorSuccess, // Default for selected
+  primary: $ouiColorPrimary,
+  success: $ouiColorSuccess,
+  danger: $ouiColorDanger,
+  ghost: $ouiColorDarkShade,
 );
 
-$euiCardSelectButtonBackgrounds: (
-  text: $euiColorLightestShade, // Default for unselected
-  primary: tintOrShade($euiColorPrimary, 90%, 70%),
-  success: tintOrShade($euiColorSuccess, 90%, 70%),
-  danger: tintOrShade($euiColorDanger, 90%, 70%),
-  ghost: $euiColorDarkShade,
+$ouiCardSelectButtonBackgrounds: (
+  text: $ouiColorLightestShade, // Default for unselected
+  primary: tintOrShade($ouiColorPrimary, 90%, 70%),
+  success: tintOrShade($ouiColorSuccess, 90%, 70%),
+  danger: tintOrShade($ouiColorDanger, 90%, 70%),
+  ghost: $ouiColorDarkShade,
 );
 
-$euiCardPaddingModifiers: (
+$ouiCardPaddingModifiers: (
   'paddingNone': 0,
-  'paddingSmall': $euiSizeS,
-  'paddingMedium': $euiSize,
-  'paddingLarge': $euiSizeL
+  'paddingSmall': $ouiSizeS,
+  'paddingMedium': $ouiSize,
+  'paddingLarge': $ouiSizeL
 ) !default;

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,12 +40,12 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-import { EuiNotificationBadge } from '../badge';
+import { OuiNotificationBadge } from '../badge';
 
-import { EuiLoadingSpinner } from '../loading';
-import { EuiInnerText } from '../inner_text';
+import { OuiLoadingSpinner } from '../loading';
+import { OuiInnerText } from '../inner_text';
 
-export interface EuiFacetButtonProps
+export interface OuiFacetButtonProps
   extends CommonProps,
     Omit<HTMLAttributes<HTMLButtonElement>, 'onClick'> {
   buttonRef?: RefCallback<HTMLButtonElement>;
@@ -43,7 +54,7 @@ export interface EuiFacetButtonProps
    */
   children: ReactNode;
   /**
-   * Any node, but preferably a `EuiIcon` or `EuiAvatar`
+   * Any node, but preferably a `OuiIcon` or `OuiAvatar`
    */
   icon?: ReactNode;
   isDisabled?: boolean;
@@ -62,7 +73,7 @@ export interface EuiFacetButtonProps
   quantity?: number;
 }
 
-export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
+export const OuiFacetButton: FunctionComponent<OuiFacetButtonProps> = ({
   children,
   className,
   icon,
@@ -77,10 +88,10 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
   isDisabled = isLoading ? true : isDisabled;
 
   const classes = classNames(
-    'euiFacetButton',
+    'ouiFacetButton',
     {
-      'euiFacetButton--isSelected': isSelected,
-      'euiFacetButton--unSelected': !isSelected,
+      'ouiFacetButton--isSelected': isSelected,
+      'ouiFacetButton--unSelected': !isSelected,
     },
     className
   );
@@ -90,16 +101,16 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
 
   if (isLoading) {
     buttonQuantity = (
-      <EuiLoadingSpinner className="euiFacetButton__spinner" size="m" />
+      <OuiLoadingSpinner className="ouiFacetButton__spinner" size="m" />
     );
   } else if (typeof quantity === 'number') {
     buttonQuantity = (
-      <EuiNotificationBadge
-        className="euiFacetButton__quantity"
+      <OuiNotificationBadge
+        className="ouiFacetButton__quantity"
         size="m"
         color={!isSelected || isDisabled ? 'subdued' : 'accent'}>
         {quantity}
-      </EuiNotificationBadge>
+      </OuiNotificationBadge>
     );
   }
 
@@ -108,12 +119,12 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
 
   if (React.isValidElement<{ className?: string }>(icon)) {
     buttonIcon = React.cloneElement(icon, {
-      className: classNames(icon.props.className, 'euiFacetButton__icon'),
+      className: classNames(icon.props.className, 'ouiFacetButton__icon'),
     });
   }
 
   return (
-    <EuiInnerText>
+    <OuiInnerText>
       {(ref, innerText) => (
         <button
           className={classes}
@@ -122,10 +133,10 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
           ref={buttonRef}
           title={rest['aria-label'] || innerText}
           {...rest}>
-          <span className="euiFacetButton__content">
+          <span className="ouiFacetButton__content">
             {buttonIcon}
             <span
-              className="euiFacetButton__text"
+              className="ouiFacetButton__text"
               data-text={innerText}
               ref={ref}>
               {children}
@@ -134,6 +145,6 @@ export const EuiFacetButton: FunctionComponent<EuiFacetButtonProps> = ({
           </span>
         </button>
       )}
-    </EuiInnerText>
+    </OuiInnerText>
   );
 };

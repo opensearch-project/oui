@@ -1,12 +1,23 @@
-@mixin createStepsNumber($size: $euiStepNumberSize, $fontSize: $euiFontSize) {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@mixin createStepsNumber($size: $ouiStepNumberSize, $fontSize: $ouiFontSize) {
   @include size($size);
 
   display: inline-block;
   line-height: $size;
   border-radius: $size;
   text-align: center;
-  color: $euiColorEmptyShade;
-  background-color: $euiColorPrimary;
+  color: $ouiColorEmptyShade;
+  background-color: $ouiColorPrimary;
   font-size: $fontSize;
-  font-weight: $euiFontWeightMedium;
+  font-weight: $ouiFontWeightMedium;
 }

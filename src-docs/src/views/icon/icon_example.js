@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiIcon,
-  EuiToken,
-  EuiLink,
-  EuiText,
-  EuiCallOut,
-  EuiSpacer,
+  OuiCode,
+  OuiIcon,
+  OuiToken,
+  OuiLink,
+  OuiText,
+  OuiCallOut,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import iconConfig from './playground';
@@ -41,33 +52,33 @@ export const IconExample = {
     {
       text: (
         <p>
-          <strong>EuiIcon</strong> is a handy component for using our custom
-          glyphs and logos. The <EuiCode>type</EuiCode> prop accepts either an
+          <strong>OuiIcon</strong> is a handy component for using our custom
+          glyphs and logos. The <OuiCode>type</OuiCode> prop accepts either an
           enumerated name from one of the sets below, a location to a custom SVG
           asset, or a React Element.
         </p>
       ),
-      demo: <EuiIcon type="grid" />,
-      props: { EuiIcon },
+      demo: <OuiIcon type="grid" />,
+      props: { OuiIcon },
       playground: iconConfig,
     },
     {
       text: (
-        <EuiCallOut
+        <OuiCallOut
           iconType="accessibility"
           title={
             <>
               For better accessibility it&apos;s always recommended to give a
-              descriptive <EuiCode>title</EuiCode> based on the icon use.
+              descriptive <OuiCode>title</OuiCode> based on the icon use.
             </>
           }
           color="warning">
           <p>
             If no title is provided the icon is going to be purely decorative
             and it will get by default an{' '}
-            <EuiCode language="js">aria-hidden=true</EuiCode>.
+            <OuiCode language="js">aria-hidden=true</OuiCode>.
           </p>
-        </EuiCallOut>
+        </OuiCallOut>
       ),
     },
     {
@@ -77,7 +88,7 @@ export const IconExample = {
           <p>
             Glyphs are small, monochromatic icons that typically should always
             use the default size of{' '}
-            <EuiCode language="js">size=&quot;m&quot;</EuiCode>.
+            <OuiCode language="js">size=&quot;m&quot;</OuiCode>.
           </p>
         </>
       ),
@@ -88,7 +99,7 @@ export const IconExample = {
       text: (
         <p>
           Editor icons relate to the visual styling of elements and are commonly
-          used within <strong>EuiButtonGroup</strong> components.
+          used within <strong>OuiButtonGroup</strong> components.
         </p>
       ),
       demo: <Editor />,
@@ -98,7 +109,7 @@ export const IconExample = {
       text: (
         <p>
           Product logos follow similar rules as app logos. Note the use of{' '}
-          <EuiCode>.euiIcon__fillNegative</EuiCode> on portions of the SVGs to
+          <OuiCode>.ouiIcon__fillNegative</OuiCode> on portions of the SVGs to
           handle flipping colors for dark mode.
         </p>
       ),
@@ -108,7 +119,7 @@ export const IconExample = {
       title: 'Apps',
       text: (
         <p>
-          App logos are usually displayed at <EuiCode>32x32</EuiCode> or above
+          App logos are usually displayed at <OuiCode>32x32</OuiCode> or above
           and can contain multiple colors.
         </p>
       ),
@@ -120,7 +131,7 @@ export const IconExample = {
           <h3>Machine learning icons</h3>
           <p>
             Machine learning has some specific icons for job creation. Again,
-            these are made for <EuiCode>32x32</EuiCode>.
+            these are made for <OuiCode>32x32</OuiCode>.
           </p>
         </>
       ),
@@ -132,33 +143,33 @@ export const IconExample = {
         <>
           <p>
             Tokens are most commonly used to visually signify field or code
-            types. An <strong>EuiToken</strong> accepts any valid{' '}
-            <strong>EuiIcon</strong> as its <EuiCode>iconType</EuiCode>{' '}
+            types. An <strong>OuiToken</strong> accepts any valid{' '}
+            <strong>OuiIcon</strong> as its <OuiCode>iconType</OuiCode>{' '}
             property. However, icons designed specifically for use in the{' '}
-            <strong>EuiToken</strong> are prefixed with &quot;token&quot; in
+            <strong>OuiToken</strong> are prefixed with &quot;token&quot; in
             their name and have pre-defined styles.
           </p>
         </>
       ),
-      props: { EuiToken },
+      props: { OuiToken },
       demo: <Tokens />,
     },
     {
       wrapText: false,
       text: (
         <>
-          <EuiText>
+          <OuiText>
             <h3>Custom tokens</h3>
             <p>
-              By default, an <EuiCode>iconType</EuiCode> with the token prefix
+              By default, an <OuiCode>iconType</OuiCode> with the token prefix
               (i.e. those listed above) will have predefined styles. However,
-              any valid <EuiCode>iconType</EuiCode> can be passed and, in either
-              case, the <EuiCode>shape</EuiCode>, <EuiCode>size</EuiCode>,{' '}
-              <EuiCode>color</EuiCode>, and <EuiCode>fill</EuiCode> can be
+              any valid <OuiCode>iconType</OuiCode> can be passed and, in either
+              case, the <OuiCode>shape</OuiCode>, <OuiCode>size</OuiCode>,{' '}
+              <OuiCode>color</OuiCode>, and <OuiCode>fill</OuiCode> can be
               customized.
             </p>
-          </EuiText>
-          <EuiSpacer />
+          </OuiText>
+          <OuiSpacer />
           <CustomTokens />
         </>
       ),
@@ -167,8 +178,8 @@ export const IconExample = {
       title: 'Sizes',
       text: (
         <p>
-          Use the <EuiCode>size</EuiCode> prop to automatically size your icons.
-          Medium is the default, and will output a <EuiCode>16x16</EuiCode>{' '}
+          Use the <OuiCode>size</OuiCode> prop to automatically size your icons.
+          Medium is the default, and will output a <OuiCode>16x16</OuiCode>{' '}
           icon.
         </p>
       ),
@@ -179,16 +190,16 @@ export const IconExample = {
       text: (
         <p>
           The default behavior of icons is to inherit from the text color. You
-          can use the <EuiCode>color</EuiCode> prop to assign a custom color
+          can use the <OuiCode>color</OuiCode> prop to assign a custom color
           which accepts a named color from our palette or a valid&nbsp;
-          <EuiLink
+          <OuiLink
             target="_blank"
             href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">
             CSS color data type
-          </EuiLink>
+          </OuiLink>
           &nbsp;which will be passed down through the inline-style{' '}
-          <EuiCode>fill</EuiCode>&nbsp; property.{' '}
-          <strong>We recommend relying on the EUI named color palette</strong>{' '}
+          <OuiCode>fill</OuiCode>&nbsp; property.{' '}
+          <strong>We recommend relying on the OUI named color palette</strong>{' '}
           unless the custom color is initiated by the user (like as a graph
           color).
         </p>
@@ -199,15 +210,15 @@ export const IconExample = {
       wrapText: false,
       text: (
         <>
-          <EuiText>
+          <OuiText>
             <p>
               Two-tone icons, like our app style icons, will behave similarly to
               normal glyphs when provided a specific color by applying the color
               to <strong>all</strong> the shapes within. You can force the icon
               to match the parent's text color by passing{' '}
-              <EuiCode>color="inherit"</EuiCode> to the icon.
+              <OuiCode>color="inherit"</OuiCode> to the icon.
             </p>
-          </EuiText>
+          </OuiText>
         </>
       ),
       demo: <AppIconColors />,
@@ -217,10 +228,10 @@ export const IconExample = {
       text: (
         <>
           <p>
-            The <EuiCode>type</EuiCode> prop can accept a valid enum, string or
+            The <OuiCode>type</OuiCode> prop can accept a valid enum, string or
             React SVG Element. When using a custom SVG, please make sure it sits
-            on a square canvas and preferably utilizes one of EUI&apos;s sizes (
-            <EuiCode>16x16</EuiCode> or <EuiCode>32x32</EuiCode>).
+            on a square canvas and preferably utilizes one of OUI&apos;s sizes (
+            <OuiCode>16x16</OuiCode> or <OuiCode>32x32</OuiCode>).
           </p>
           <p>
             When using custom SVGs for simple glyphs,{' '}
@@ -236,7 +247,7 @@ export const IconExample = {
           code: iconTypesSource,
         },
       ],
-      props: { EuiIcon },
+      props: { OuiIcon },
       demo: <IconTypes />,
     },
   ],

@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiFieldPassword, EuiSwitch } from '../../../../src/components';
+import { OuiFieldPassword, OuiSwitch } from '../../../../src/components';
 import { DisplayToggles } from './display_toggles';
 
 export default function () {
@@ -13,7 +24,7 @@ export default function () {
       canAppend
       canPrepend
       extras={[
-        <EuiSwitch
+        <OuiSwitch
           compressed
           label={'dual'}
           checked={dual}
@@ -22,7 +33,7 @@ export default function () {
           }}
         />,
       ]}>
-      <EuiFieldPassword
+      <OuiFieldPassword
         placeholder="Placeholder text"
         type={dual ? 'dual' : undefined}
         value={value}

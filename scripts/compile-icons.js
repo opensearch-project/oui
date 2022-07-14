@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 const glob = require('glob');
 const svgr = require('@svgr/core').default;
 const path = require('path');
@@ -50,7 +61,7 @@ export const icon = ${componentName};
         `,
       },
       {
-        componentName: `EuiIcon${pascalCase(path.basename(filePath, '.svg'))}`,
+        componentName: `OuiIcon${pascalCase(path.basename(filePath, '.svg'))}`,
       }
     );
 

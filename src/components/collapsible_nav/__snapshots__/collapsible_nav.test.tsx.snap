@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCollapsibleNav close button can be hidden 1`] = `
+exports[`OuiCollapsibleNav close button can be hidden 1`] = `
 Array [
   <div>
     <div
@@ -17,22 +17,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiFlyout euiFlyout--left euiFlyout--paddingNone euiCollapsibleNav"
+        class="ouiFlyout ouiFlyout--left ouiFlyout--paddingNone ouiCollapsibleNav"
         id="id"
         style="width: 320px;"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--fill euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--outside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--fill ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--outside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </nav>
@@ -46,9 +46,9 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav does not render if isOpen is false 1`] = `null`;
+exports[`OuiCollapsibleNav does not render if isOpen is false 1`] = `null`;
 
-exports[`EuiCollapsibleNav is rendered 1`] = `
+exports[`OuiCollapsibleNav is rendered 1`] = `
 Array [
   <div>
     <div
@@ -66,7 +66,7 @@ Array [
     >
       <nav
         aria-label="aria-label"
-        class="euiFlyout euiFlyout--left euiFlyout--paddingNone euiCollapsibleNav testClass1 testClass2"
+        class="ouiFlyout ouiFlyout--left ouiFlyout--paddingNone ouiCollapsibleNav testClass1 testClass2"
         data-test-subj="test subject string"
         id="id"
         style="width: 320px;"
@@ -74,15 +74,15 @@ Array [
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--fill euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--outside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--fill ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--outside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </nav>
@@ -96,7 +96,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props accepts EuiFlyout props 1`] = `
+exports[`OuiCollapsibleNav props accepts OuiFlyout props 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -112,22 +112,22 @@ Array [
     data-focus-lock-disabled="false"
   >
     <nav
-      class="euiFlyout euiFlyout--left euiFlyout--paddingNone euiCollapsibleNav"
+      class="ouiFlyout ouiFlyout--left ouiFlyout--paddingNone ouiCollapsibleNav"
       id="id"
       style="width: 240px;"
       tabindex="-1"
     >
       <button
         aria-label="Close this dialog"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--fill euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--outside"
-        data-test-subj="euiFlyoutCloseButton"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--fill ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--outside"
+        data-test-subj="ouiFlyoutCloseButton"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="cross"
+          data-ouiicon-type="cross"
         />
       </button>
     </nav>
@@ -140,7 +140,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props button 1`] = `
+exports[`OuiCollapsibleNav props button 1`] = `
 Array [
   <button
     aria-controls="id"
@@ -162,22 +162,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiFlyout euiFlyout--left euiFlyout--paddingNone euiCollapsibleNav"
+        class="ouiFlyout ouiFlyout--left ouiFlyout--paddingNone ouiCollapsibleNav"
         id="id"
         style="width: 320px;"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--fill euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--outside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--fill ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--outside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </nav>
@@ -191,7 +191,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props dockedBreakpoint 1`] = `
+exports[`OuiCollapsibleNav props dockedBreakpoint 1`] = `
 Array [
   <div>
     <div
@@ -208,22 +208,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiFlyout euiFlyout--left euiFlyout--paddingNone euiCollapsibleNav"
+        class="ouiFlyout ouiFlyout--left ouiFlyout--paddingNone ouiCollapsibleNav"
         id="id"
         style="width: 320px;"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--fill euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--outside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--fill ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--outside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </nav>
@@ -237,7 +237,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props isDocked 1`] = `
+exports[`OuiCollapsibleNav props isDocked 1`] = `
 Array [
   <div
     data-focus-guard="true"
@@ -253,7 +253,7 @@ Array [
     data-focus-lock-disabled="disabled"
   >
     <nav
-      class="euiFlyout euiFlyout--push euiFlyout--left euiFlyout--paddingNone euiCollapsibleNav"
+      class="ouiFlyout ouiFlyout--push ouiFlyout--left ouiFlyout--paddingNone ouiCollapsibleNav"
       id="id"
       style="width:320px"
       tabindex="-1"
@@ -267,7 +267,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props onClose 1`] = `
+exports[`OuiCollapsibleNav props onClose 1`] = `
 Array [
   <div>
     <div
@@ -284,22 +284,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiFlyout euiFlyout--left euiFlyout--paddingNone euiCollapsibleNav"
+        class="ouiFlyout ouiFlyout--left ouiFlyout--paddingNone ouiCollapsibleNav"
         id="id"
         style="width: 320px;"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--fill euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--outside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--fill ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--outside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </nav>
@@ -313,7 +313,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props showButtonIfDocked 1`] = `
+exports[`OuiCollapsibleNav props showButtonIfDocked 1`] = `
 Array [
   <button
     aria-controls="id"
@@ -334,7 +334,7 @@ Array [
     data-focus-lock-disabled="disabled"
   >
     <nav
-      class="euiFlyout euiFlyout--push euiFlyout--left euiFlyout--paddingNone euiCollapsibleNav"
+      class="ouiFlyout ouiFlyout--push ouiFlyout--left ouiFlyout--paddingNone ouiCollapsibleNav"
       id="id"
       style="width: 320px;"
       tabindex="-1"
@@ -348,7 +348,7 @@ Array [
 ]
 `;
 
-exports[`EuiCollapsibleNav props size 1`] = `
+exports[`OuiCollapsibleNav props size 1`] = `
 Array [
   <div>
     <div
@@ -365,22 +365,22 @@ Array [
       data-focus-lock-disabled="false"
     >
       <nav
-        class="euiFlyout euiFlyout--left euiFlyout--paddingNone euiCollapsibleNav"
+        class="ouiFlyout ouiFlyout--left ouiFlyout--paddingNone ouiCollapsibleNav"
         id="id"
         style="width: 240px;"
         tabindex="-1"
       >
         <button
           aria-label="Close this dialog"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--fill euiButtonIcon--xSmall euiFlyout__closeButton euiFlyout__closeButton--outside"
-          data-test-subj="euiFlyoutCloseButton"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--fill ouiButtonIcon--xSmall ouiFlyout__closeButton ouiFlyout__closeButton--outside"
+          data-test-subj="ouiFlyoutCloseButton"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="cross"
+            data-ouiicon-type="cross"
           />
         </button>
       </nav>

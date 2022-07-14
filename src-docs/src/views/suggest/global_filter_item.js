@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import {
-  EuiBadge,
-  EuiPopover,
-  EuiContextMenu,
+  OuiBadge,
+  OuiPopover,
+  OuiContextMenu,
 } from '../../../../src/components';
 import GlobalFilterForm from './global_filter_form';
 
@@ -74,7 +85,7 @@ export const GlobalFilterItem = (props) => {
   }
 
   const badge = (
-    <EuiBadge
+    <OuiBadge
       id={id}
       className={classes}
       title={title}
@@ -94,7 +105,7 @@ export const GlobalFilterItem = (props) => {
       {prefix}
       <span>{field}: </span>
       <span>&quot;{value}&quot;</span>
-    </EuiBadge>
+    </OuiBadge>
   );
 
   const _createFilterContextMenu = (filter, button) => {
@@ -156,7 +167,7 @@ export const GlobalFilterItem = (props) => {
     };
 
     return (
-      <EuiPopover
+      <OuiPopover
         id={`popoverFor_${filter.id}`}
         isOpen={isPopoverOpen}
         closePopover={closePopover}
@@ -164,11 +175,11 @@ export const GlobalFilterItem = (props) => {
         anchorPosition="downCenter"
         panelPaddingSize="none"
         display="block">
-        <EuiContextMenu
+        <OuiContextMenu
           initialPanelId={0}
           panels={flattenPanelTree(panelTree)}
         />
-      </EuiPopover>
+      </OuiPopover>
     );
   };
 

@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiCard,
-  EuiIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButtonEmpty,
+  OuiCard,
+  OuiIcon,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => {
@@ -25,67 +36,67 @@ export default () => {
   };
 
   return (
-    <EuiFlexGroup gutterSize="l">
-      <EuiFlexItem>
-        <EuiCard
-          icon={<EuiIcon size="xxl" type="logoSketch" />}
+    <OuiFlexGroup gutterSize="l">
+      <OuiFlexItem>
+        <OuiCard
+          icon={<OuiIcon size="xxl" type="logoSketch" />}
           title="Sketch"
           description="Example of a short card description."
           footer={
-            <EuiButtonEmpty
+            <OuiButtonEmpty
               iconType="iInCircle"
               size="xs"
               onClick={detailsClicked}
               aria-label="See more details about Sketch">
               More details
-            </EuiButtonEmpty>
+            </OuiButtonEmpty>
           }
           selectable={{
             onClick: card1Clicked,
             isSelected: card1Selected,
           }}
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
-          icon={<EuiIcon size="xxl" type="logoGCP" />}
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiCard
+          icon={<OuiIcon size="xxl" type="logoGCP" />}
           title="Google"
           description="Example of a longer card description. See how the footers stay lined up."
           footer={
-            <EuiButtonEmpty
+            <OuiButtonEmpty
               iconType="iInCircle"
               size="xs"
               onClick={detailsClicked}
               aria-label="See more details about Google">
               More details
-            </EuiButtonEmpty>
+            </OuiButtonEmpty>
           }
           selectable={{
             onClick: card2Clicked,
             isSelected: card2Selected,
           }}
         />
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
-          icon={<EuiIcon size="xxl" type="logoAerospike" />}
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiCard
+          icon={<OuiIcon size="xxl" type="logoAerospike" />}
           title="Not Adobe"
           description="Example of a short card description."
           footer={
-            <EuiButtonEmpty
+            <OuiButtonEmpty
               iconType="iInCircle"
               size="xs"
               onClick={detailsClicked}
               aria-label="See more details about Not Adobe">
               More details
-            </EuiButtonEmpty>
+            </OuiButtonEmpty>
           }
           selectable={{
             onClick: () => {},
             isDisabled: true,
           }}
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 };

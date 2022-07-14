@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiIcon,
-  EuiPanel,
-  EuiText,
-  EuiCopy,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiIcon,
+  OuiPanel,
+  OuiText,
+  OuiCopy,
 } from '../../../../src/components';
 
 const iconTypes = [
@@ -50,23 +61,23 @@ const iconTypes = [
 ].sort();
 
 export default () => (
-  <EuiFlexGrid columns={4}>
+  <OuiFlexGrid columns={4}>
     {iconTypes.map((iconType) => (
-      <EuiFlexItem
+      <OuiFlexItem
         className="guideDemo__icon"
         key={iconType}
         style={{ width: '200px' }}>
-        <EuiCopy textToCopy={iconType} afterMessage={`${iconType} copied`}>
+        <OuiCopy textToCopy={iconType} afterMessage={`${iconType} copied`}>
           {(copy) => (
-            <EuiPanel onClick={copy} className="eui-textCenter">
-              <EuiIcon type={iconType} size="xl" />
-              <EuiText size="s">
+            <OuiPanel onClick={copy} className="oui-textCenter">
+              <OuiIcon type={iconType} size="xl" />
+              <OuiText size="s">
                 <p>{iconType}</p>
-              </EuiText>
-            </EuiPanel>
+              </OuiText>
+            </OuiPanel>
           )}
-        </EuiCopy>
-      </EuiFlexItem>
+        </OuiCopy>
+      </OuiFlexItem>
     ))}
-  </EuiFlexGrid>
+  </OuiFlexGrid>
 );

@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonIcon,
-  EuiSpacer,
-  EuiTitle,
+  OuiButton,
+  OuiButtonIcon,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -15,18 +26,18 @@ export default () => {
 
   return (
     <>
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h3>Changing content</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiButton
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiButton
         onClick={() => {
           setToggle0On((isOn) => !isOn);
         }}>
         {toggle0On ? 'Hey there good lookin' : 'Toggle me'}
-      </EuiButton>
+      </OuiButton>
       &emsp;
-      <EuiButtonIcon
+      <OuiButtonIcon
         title={toggle1On ? 'Play' : 'Pause'}
         aria-label={toggle1On ? 'Play' : 'Pause'}
         iconType={toggle1On ? 'play' : 'pause'}
@@ -34,12 +45,12 @@ export default () => {
           setToggle1On((isOn) => !isOn);
         }}
       />
-      <EuiSpacer size="m" />
-      <EuiTitle size="xxs">
+      <OuiSpacer size="m" />
+      <OuiTitle size="xxs">
         <h3>Changing visual appearance</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiButton
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiButton
         isSelected={toggle2On}
         fill={toggle2On}
         iconType={toggle2On ? 'starFilledSpace' : 'starPlusEmpty'}
@@ -47,9 +58,9 @@ export default () => {
           setToggle2On((isOn) => !isOn);
         }}>
         Toggle me
-      </EuiButton>
+      </OuiButton>
       &emsp;
-      <EuiButtonIcon
+      <OuiButtonIcon
         aria-label="Autosave"
         title="Autosave"
         iconType="save"

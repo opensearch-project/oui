@@ -1,27 +1,38 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 .guideSection {
   & + .guideSection {
-    margin-top: $euiSizeXL;
+    margin-top: $ouiSizeXL;
   }
 }
 
 .guideSection__tableCodeBlock {
-  padding-left: $euiSizeXS;
-  padding-right: $euiSizeXS;
+  padding-left: $ouiSizeXS;
+  padding-right: $ouiSizeXS;
 }
 
 .guideSection__propsTableIntro {
-  padding-left: $euiSizeS;
-  padding-right: $euiSizeS;
+  padding-left: $ouiSizeS;
+  padding-right: $ouiSizeS;
 }
 
 .guideSectionExampleCode__link {
   text-align: right;
-  padding-top: $euiSizeS;
-  padding-bottom: $euiSizeS;
+  padding-top: $ouiSizeS;
+  padding-bottom: $ouiSizeS;
 }
 
 .guideSectionTabs {
-  padding: $euiSizeXS $euiSizeM;
+  padding: $ouiSizeXS $ouiSizeM;
 
   &--open {
     padding-bottom: 0;
@@ -29,5 +40,5 @@
 }
 
 .guideSectionTabs__tab {
-  font-weight: $euiFontWeightMedium !important; // sass-lint:disable-line no-important
+  font-weight: $ouiFontWeightMedium !important; // sass-lint:disable-line no-important
 }

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,42 +38,42 @@ import classNames from 'classnames';
 
 import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import {
-  EuiContextMenuPanel,
-  EuiContextMenuPanelTransitionDirection,
-  EuiContextMenuPanelTransitionType,
+  OuiContextMenuPanel,
+  OuiContextMenuPanelTransitionDirection,
+  OuiContextMenuPanelTransitionType,
 } from './context_menu_panel';
 import {
-  EuiContextMenuItem,
-  EuiContextMenuItemProps,
+  OuiContextMenuItem,
+  OuiContextMenuItemProps,
 } from './context_menu_item';
-import { EuiHorizontalRule, EuiHorizontalRuleProps } from '../horizontal_rule';
+import { OuiHorizontalRule, OuiHorizontalRuleProps } from '../horizontal_rule';
 
-export type EuiContextMenuPanelId = string | number;
+export type OuiContextMenuPanelId = string | number;
 
-export type EuiContextMenuPanelItemDescriptorEntry = Omit<
-  EuiContextMenuItemProps,
+export type OuiContextMenuPanelItemDescriptorEntry = Omit<
+  OuiContextMenuItemProps,
   'hasPanel'
 > & {
   name: React.ReactNode;
   key?: string;
-  panel?: EuiContextMenuPanelId;
+  panel?: OuiContextMenuPanelId;
 };
 
-export interface EuiContextMenuPanelItemSeparator
-  extends EuiHorizontalRuleProps {
+export interface OuiContextMenuPanelItemSeparator
+  extends OuiHorizontalRuleProps {
   isSeparator: true;
   key?: string;
 }
 
-export type EuiContextMenuPanelItemDescriptor = ExclusiveUnion<
-  EuiContextMenuPanelItemDescriptorEntry,
-  EuiContextMenuPanelItemSeparator
+export type OuiContextMenuPanelItemDescriptor = ExclusiveUnion<
+  OuiContextMenuPanelItemDescriptorEntry,
+  OuiContextMenuPanelItemSeparator
 >;
 
-export interface EuiContextMenuPanelDescriptor {
-  id: EuiContextMenuPanelId;
+export interface OuiContextMenuPanelDescriptor {
+  id: OuiContextMenuPanelId;
   title?: ReactNode;
-  items?: EuiContextMenuPanelItemDescriptor[];
+  items?: OuiContextMenuPanelItemDescriptor[];
   content?: ReactNode;
   width?: number;
   initialFocusedItemIndex?: number;
@@ -73,16 +84,16 @@ export interface EuiContextMenuPanelDescriptor {
 }
 
 const sizeToClassNameMap = {
-  s: 'euiContextMenu--small',
+  s: 'ouiContextMenu--small',
   m: null,
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiContextMenuProps = CommonProps &
+export type OuiContextMenuProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'style'> & {
-    panels?: EuiContextMenuPanelDescriptor[];
-    initialPanelId?: EuiContextMenuPanelId;
+    panels?: OuiContextMenuPanelDescriptor[];
+    initialPanelId?: OuiContextMenuPanelId;
     /**
      * Alters the size of the items and the title
      */
@@ -90,12 +101,12 @@ export type EuiContextMenuProps = CommonProps &
   };
 
 const isItemSeparator = (
-  item: EuiContextMenuPanelItemDescriptor
-): item is EuiContextMenuPanelItemSeparator =>
-  (item as EuiContextMenuPanelItemSeparator).isSeparator === true;
+  item: OuiContextMenuPanelItemDescriptor
+): item is OuiContextMenuPanelItemSeparator =>
+  (item as OuiContextMenuPanelItemSeparator).isSeparator === true;
 
-function mapIdsToPanels(panels: EuiContextMenuPanelDescriptor[]) {
-  const map: { [id: string]: EuiContextMenuPanelDescriptor } = {};
+function mapIdsToPanels(panels: OuiContextMenuPanelDescriptor[]) {
+  const map: { [id: string]: OuiContextMenuPanelDescriptor } = {};
 
   panels.forEach((panel) => {
     map[panel.id] = panel;
@@ -104,8 +115,8 @@ function mapIdsToPanels(panels: EuiContextMenuPanelDescriptor[]) {
   return map;
 }
 
-function mapIdsToPreviousPanels(panels: EuiContextMenuPanelDescriptor[]) {
-  const idToPreviousPanelIdMap: { [panel: string]: EuiContextMenuPanelId } = {};
+function mapIdsToPreviousPanels(panels: OuiContextMenuPanelDescriptor[]) {
+  const idToPreviousPanelIdMap: { [panel: string]: OuiContextMenuPanelId } = {};
 
   panels.forEach((panel) => {
     if (Array.isArray(panel.items)) {
@@ -122,9 +133,9 @@ function mapIdsToPreviousPanels(panels: EuiContextMenuPanelDescriptor[]) {
   return idToPreviousPanelIdMap;
 }
 
-function mapPanelItemsToPanels(panels: EuiContextMenuPanelDescriptor[]) {
+function mapPanelItemsToPanels(panels: OuiContextMenuPanelDescriptor[]) {
   const idAndItemIndexToPanelIdMap: {
-    [id: string]: { [index: string]: EuiContextMenuPanelId };
+    [id: string]: { [index: string]: OuiContextMenuPanelId };
   } = {};
 
   panels.forEach((panel) => {
@@ -145,32 +156,32 @@ function mapPanelItemsToPanels(panels: EuiContextMenuPanelDescriptor[]) {
 
 interface State {
   prevProps: {
-    panels?: EuiContextMenuPanelDescriptor[];
+    panels?: OuiContextMenuPanelDescriptor[];
   };
-  idToPanelMap: { [id: string]: EuiContextMenuPanelDescriptor };
-  idToPreviousPanelIdMap: { [panel: string]: EuiContextMenuPanelId };
+  idToPanelMap: { [id: string]: OuiContextMenuPanelDescriptor };
+  idToPreviousPanelIdMap: { [panel: string]: OuiContextMenuPanelId };
   idAndItemIndexToPanelIdMap: {
-    [id: string]: { [index: string]: EuiContextMenuPanelId };
+    [id: string]: { [index: string]: OuiContextMenuPanelId };
   };
   idToRenderedItemsMap: { [id: string]: ReactElement[] };
 
   height?: number;
-  outgoingPanelId?: EuiContextMenuPanelId;
-  incomingPanelId?: EuiContextMenuPanelId;
-  transitionDirection?: EuiContextMenuPanelTransitionDirection;
+  outgoingPanelId?: OuiContextMenuPanelId;
+  incomingPanelId?: OuiContextMenuPanelId;
+  transitionDirection?: OuiContextMenuPanelTransitionDirection;
   isOutgoingPanelVisible: boolean;
   focusedItemIndex?: number;
   isUsingKeyboardToNavigate: boolean;
 }
 
-export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
-  static defaultProps: Partial<EuiContextMenuProps> = {
+export class OuiContextMenu extends Component<OuiContextMenuProps, State> {
+  static defaultProps: Partial<OuiContextMenuProps> = {
     panels: [],
     size: 'm',
   };
 
   static getDerivedStateFromProps(
-    nextProps: EuiContextMenuProps,
+    nextProps: OuiContextMenuProps,
     prevState: State
   ): Partial<State> | null {
     const { panels } = nextProps;
@@ -187,7 +198,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     return null;
   }
 
-  constructor(props: EuiContextMenuProps) {
+  constructor(props: OuiContextMenuProps) {
     super(props);
 
     this.state = {
@@ -207,7 +218,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     };
   }
 
-  componentDidUpdate(prevProps: EuiContextMenuProps) {
+  componentDidUpdate(prevProps: OuiContextMenuProps) {
     if (prevProps.panels !== this.props.panels) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
@@ -216,14 +227,14 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     }
   }
 
-  hasPreviousPanel = (panelId: EuiContextMenuPanelId) => {
+  hasPreviousPanel = (panelId: OuiContextMenuPanelId) => {
     const previousPanelId = this.state.idToPreviousPanelIdMap[panelId];
     return typeof previousPanelId !== 'undefined';
   };
 
   showPanel(
-    panelId: EuiContextMenuPanelId,
-    direction?: EuiContextMenuPanelTransitionDirection
+    panelId: OuiContextMenuPanelId,
+    direction?: OuiContextMenuPanelTransitionDirection
   ) {
     this.setState({
       outgoingPanelId: this.state.incomingPanelId,
@@ -302,10 +313,10 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     }
   };
 
-  mapIdsToRenderedItems = (panels: EuiContextMenuPanelDescriptor[] = []) => {
+  mapIdsToRenderedItems = (panels: OuiContextMenuPanelDescriptor[] = []) => {
     const idToRenderedItemsMap: { [id: string]: ReactElement[] } = {};
 
-    // Pre-rendering the items lets us check reference equality inside of EuiContextMenuPanel.
+    // Pre-rendering the items lets us check reference equality inside of OuiContextMenuPanel.
     panels.forEach((panel) => {
       idToRenderedItemsMap[panel.id] = this.renderItems(panel.items);
     });
@@ -313,11 +324,11 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     return idToRenderedItemsMap;
   };
 
-  renderItems(items: EuiContextMenuPanelItemDescriptor[] = []) {
+  renderItems(items: OuiContextMenuPanelItemDescriptor[] = []) {
     return items.map((item, index) => {
       if (isItemSeparator(item)) {
         const { isSeparator: omit, key = index, ...rest } = item;
-        return <EuiHorizontalRule key={key} margin="none" {...rest} />;
+        return <OuiHorizontalRule key={key} margin="none" {...rest} />;
       }
 
       const {
@@ -336,7 +347,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
             if (onClick && event) {
               event.persist();
             }
-            // This component is commonly wrapped in a EuiOutsideClickDetector, which means we'll
+            // This component is commonly wrapped in a OuiOutsideClickDetector, which means we'll
             // need to wait for that logic to complete before re-rendering the DOM via showPanel.
             window.requestAnimationFrame(() => {
               if (onClick) {
@@ -348,7 +359,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
         : onClick;
 
       return (
-        <EuiContextMenuItem
+        <OuiContextMenuItem
           key={key || (typeof name === 'string' ? name : undefined) || index}
           icon={icon}
           onClick={onClickHandler}
@@ -357,14 +368,14 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
           toolTipContent={toolTipContent}
           {...rest}>
           {name}
-        </EuiContextMenuItem>
+        </OuiContextMenuItem>
       );
     });
   }
 
   renderPanel(
-    panelId: EuiContextMenuPanelId,
-    transitionType: EuiContextMenuPanelTransitionType
+    panelId: OuiContextMenuPanelId,
+    transitionType: OuiContextMenuPanelTransitionType
   ) {
     const panel = this.state.idToPanelMap[panelId];
 
@@ -372,7 +383,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
       return;
     }
 
-    // As above, we need to wait for EuiOutsideClickDetector to complete its logic before
+    // As above, we need to wait for OuiOutsideClickDetector to complete its logic before
     // re-rendering via showPanel.
     let onClose;
     if (this.hasPreviousPanel(panelId)) {
@@ -380,10 +391,10 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
     }
 
     return (
-      <EuiContextMenuPanel
+      <OuiContextMenuPanel
         key={panelId}
         size={this.props.size}
-        className="euiContextMenu__panel"
+        className="ouiContextMenu__panel"
         onHeightChange={
           transitionType === 'in' ? this.onIncomingPanelHeightChange : undefined
         }
@@ -413,7 +424,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
         showNextPanel={this.showNextPanel}
         showPreviousPanel={this.showPreviousPanel}>
         {panel.content}
-      </EuiContextMenuPanel>
+      </OuiContextMenuPanel>
     );
   }
 
@@ -434,7 +445,7 @@ export class EuiContextMenu extends Component<EuiContextMenuProps, State> {
         : undefined;
 
     const classes = classNames(
-      'euiContextMenu',
+      'ouiContextMenu',
       size && sizeToClassNameMap[size],
       className
     );

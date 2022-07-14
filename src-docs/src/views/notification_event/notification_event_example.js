@@ -1,17 +1,28 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 import { Link } from 'react-router-dom';
-import { EuiNotificationEventMeta } from '../../../../src/components/notification/notification_event_meta';
+import { OuiNotificationEventMeta } from '../../../../src/components/notification/notification_event_meta';
 import {
-  EuiNotificationEvent,
-  EuiText,
-  EuiContextMenuItem,
-  EuiSpacer,
-  EuiCode,
-  EuiAccordion,
-  EuiCodeBlock,
-  EuiButtonEmpty as EuiPrimaryActionProps,
+  OuiNotificationEvent,
+  OuiText,
+  OuiContextMenuItem,
+  OuiSpacer,
+  OuiCode,
+  OuiAccordion,
+  OuiCodeBlock,
+  OuiButtonEmpty as OuiPrimaryActionProps,
 } from '../../../../src/components';
 import NotificationEventPropsMethods from './notification_event_props_methods';
 
@@ -27,7 +38,7 @@ import NotificationsFeed from './notifications_feed';
 const notificationsFeedSource = require('!!raw-loader!./notifications_feed');
 const notificationsFeedHtml = renderToHtml(NotificationsFeed);
 
-const notificationEventSnippet = `<EuiNotificationEvent
+const notificationEventSnippet = `<OuiNotificationEvent
   id={id}
   type="Alert"
   iconType= "logoMaps"
@@ -43,9 +54,9 @@ const notificationEventSnippet = `<EuiNotificationEvent
   onClickTitle={onClickTitle}
 />`;
 
-const notificationEventFeedSnippet = `// we're looping through an array of objects to render multiple EuiNotificationEvent
+const notificationEventFeedSnippet = `// we're looping through an array of objects to render multiple OuiNotificationEvent
 const notificationEvents = events.map((event) => (
-  <EuiNotificationEvent
+  <OuiNotificationEvent
     key={event.id}
     id={event.id}
     type={event.type}
@@ -63,7 +74,7 @@ const notificationEvents = events.map((event) => (
   />
 ));
 
-// the multiple EuiNotificationEvent should live inside the same container
+// the multiple OuiNotificationEvent should live inside the same container
 <div>
  {notificationEvents}
 </div>
@@ -74,17 +85,17 @@ export const NotificationEventExample = {
   beta: true,
   isNew: true,
   intro: (
-    <EuiText>
+    <OuiText>
       <p>
-        Use <strong>EuiNotificationEvent</strong> to display notifications about
+        Use <strong>OuiNotificationEvent</strong> to display notifications about
         new events in your product like alerts, support, or news. This component
         is meant to live inside a{' '}
         <strong>
-          <Link to="/layout/flyout/">EuiFlyout</Link>
+          <Link to="/layout/flyout/">OuiFlyout</Link>
         </strong>{' '}
         so that users can quickly be informed or take action.
       </p>
-    </EuiText>
+    </OuiText>
   ),
   sections: [
     {
@@ -99,10 +110,10 @@ export const NotificationEventExample = {
         },
       ],
       props: {
-        EuiNotificationEvent,
-        EuiNotificationEventMeta,
-        EuiContextMenuItem,
-        EuiPrimaryActionProps,
+        OuiNotificationEvent,
+        OuiNotificationEventMeta,
+        OuiContextMenuItem,
+        OuiPrimaryActionProps,
       },
       snippet: notificationEventSnippet,
       demo: <NotificationEvent />,
@@ -121,92 +132,92 @@ export const NotificationEventExample = {
       title: 'A flexible component',
       text: (
         <>
-          <EuiText>
+          <OuiText>
             <p>
-              The <strong>EuiNotificationEvent</strong> takes into account that
+              The <strong>OuiNotificationEvent</strong> takes into account that
               an event can be purely informative or actionable. It is flexible
               and adapts the design according to the props passed.
             </p>
-          </EuiText>
-          <EuiSpacer />
+          </OuiText>
+          <OuiSpacer />
           <NotificationEventPropsMethods />
-          <EuiSpacer size="xs" />
-          <EuiAccordion
+          <OuiSpacer size="xs" />
+          <OuiAccordion
             id="propsSnippet"
             buttonContent={<small>Code snippet</small>}>
-            <EuiSpacer size="xs" />
-            <EuiCodeBlock language="ts" isCopyable paddingSize="s">
+            <OuiSpacer size="xs" />
+            <OuiCodeBlock language="ts" isCopyable paddingSize="s">
               {notificationEventSnippet}
-            </EuiCodeBlock>
-          </EuiAccordion>
-          <EuiSpacer />
-          <EuiText>
+            </OuiCodeBlock>
+          </OuiAccordion>
+          <OuiSpacer />
+          <OuiText>
             <ul style={{ listStyleType: 'upper-alpha' }}>
               <li>
-                <EuiCode>isRead</EuiCode>: Shows a button or icon that indicates
-                the current <EuiCode>isRead</EuiCode> state of the event. Use{' '}
-                <EuiCode>onRead</EuiCode> to allow users to toggle between read
+                <OuiCode>isRead</OuiCode>: Shows a button or icon that indicates
+                the current <OuiCode>isRead</OuiCode> state of the event. Use{' '}
+                <OuiCode>onRead</OuiCode> to allow users to toggle between read
                 and unread states.
               </li>
               <li>
-                <EuiCode>iconType</EuiCode>: Display an icon or logo to help
+                <OuiCode>iconType</OuiCode>: Display an icon or logo to help
                 users quickly identify where the event originated.
               </li>
               <li>
-                <EuiCode>type</EuiCode> (required): Shows inside a badge
+                <OuiCode>type</OuiCode> (required): Shows inside a badge
                 denoting what type of event it is. Use in conjunction with{' '}
-                <EuiCode>severity</EuiCode> and <EuiCode>badgeColor</EuiCode> to
+                <OuiCode>severity</OuiCode> and <OuiCode>badgeColor</OuiCode> to
                 indicate the level of urgency.
               </li>
               <li>
-                <EuiCode>time</EuiCode> (required): Indicates the time the event
+                <OuiCode>time</OuiCode> (required): Indicates the time the event
                 was received. It is recommended to display a relative time
                 format like &apos;2 hours ago&apos;.
               </li>
               <li>
-                <EuiCode>onContextMenu</EuiCode>: Use this prop when you have
+                <OuiCode>onContextMenu</OuiCode>: Use this prop when you have
                 multiple events and you need to add individual actions to each
                 event. You can add filters based on the event type or a more
                 descriptive read/unread actions as an alternative to the read
                 indicator.
               </li>
               <li>
-                <EuiCode>title</EuiCode> (required): The title of the
+                <OuiCode>title</OuiCode> (required): The title of the
                 notification event. It should be descriptive enough so that
                 users don&apos;t need to navigate away. But use it in
-                conjunction with an <EuiCode>onClickTitle</EuiCode> to direct
+                conjunction with an <OuiCode>onClickTitle</OuiCode> to direct
                 users to the respective app in case they need more information
                 about the notification.
               </li>
               <li>
-                <EuiCode>messages</EuiCode>: Provides more details about the
+                <OuiCode>messages</OuiCode>: Provides more details about the
                 event. You can provide a single message or multiple messages if
                 the event executes in various steps.
               </li>
               <li>
-                <EuiCode>primaryAction</EuiCode>: Use this prop in conjunction
-                with <EuiCode>onClickPrimaryAction</EuiCode> to provide a call
+                <OuiCode>primaryAction</OuiCode>: Use this prop in conjunction
+                with <OuiCode>onClickPrimaryAction</OuiCode> to provide a call
                 to action, like download a report or link to a page where an
                 action is required. Most of the time, the clickable title is
                 enough.
               </li>
             </ul>
-          </EuiText>
-          <EuiSpacer />
-          <EuiText>
+          </OuiText>
+          <OuiSpacer />
+          <OuiText>
             <p>
               The following demo shows how you can combine different props to
               create different types of events like a report, alert, or simply
               news.
             </p>
-          </EuiText>
+          </OuiText>
         </>
       ),
       props: {
-        EuiNotificationEvent,
-        EuiNotificationEventMeta,
-        EuiContextMenuItem,
-        EuiPrimaryActionProps,
+        OuiNotificationEvent,
+        OuiNotificationEventMeta,
+        OuiContextMenuItem,
+        OuiPrimaryActionProps,
       },
       snippet: notificationEventSnippet,
       demo: <NotificationEventFlexible />,
@@ -226,7 +237,7 @@ export const NotificationEventExample = {
       text: (
         <p>
           You can create a notifications feed by rendering multiple{' '}
-          <strong>EuiNotificationEvent</strong>. These components should live
+          <strong>OuiNotificationEvent</strong>. These components should live
           inside a container without other components on the same level. This
           way, we ensure that feed styles are applied correctly. Consuming
           applications should implement all the logic to filter and save
@@ -234,10 +245,10 @@ export const NotificationEventExample = {
         </p>
       ),
       props: {
-        EuiNotificationEvent,
-        EuiNotificationEventMeta,
-        EuiContextMenuItem,
-        EuiPrimaryActionProps,
+        OuiNotificationEvent,
+        OuiNotificationEventMeta,
+        OuiContextMenuItem,
+        OuiPrimaryActionProps,
       },
       snippet: notificationEventFeedSnippet,
       demo: <NotificationsFeed />,

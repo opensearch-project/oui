@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCallOut is rendered 1`] = `
+exports[`OuiCallOut is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiCallOut euiCallOut--primary testClass1 testClass2"
+  class="ouiCallOut ouiCallOut--primary testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiText euiText--small"
+    class="ouiText ouiText--small"
   >
     <div
-      class="euiTextColor euiTextColor--default"
+      class="ouiTextColor ouiTextColor--default"
     >
       Content
     </div>
@@ -18,96 +18,96 @@ exports[`EuiCallOut is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiCallOut props color danger is rendered 1`] = `
+exports[`OuiCallOut props color danger is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--danger"
+  class="ouiCallOut ouiCallOut--danger"
 />
 `;
 
-exports[`EuiCallOut props color primary is rendered 1`] = `
+exports[`OuiCallOut props color primary is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 />
 `;
 
-exports[`EuiCallOut props color success is rendered 1`] = `
+exports[`OuiCallOut props color success is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--success"
+  class="ouiCallOut ouiCallOut--success"
 />
 `;
 
-exports[`EuiCallOut props color warning is rendered 1`] = `
+exports[`OuiCallOut props color warning is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--warning"
+  class="ouiCallOut ouiCallOut--warning"
 />
 `;
 
-exports[`EuiCallOut props heading h1 is rendered 1`] = `
+exports[`OuiCallOut props heading h1 is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 />
 `;
 
-exports[`EuiCallOut props heading h2 is rendered 1`] = `
+exports[`OuiCallOut props heading h2 is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 />
 `;
 
-exports[`EuiCallOut props heading h3 is rendered 1`] = `
+exports[`OuiCallOut props heading h3 is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 />
 `;
 
-exports[`EuiCallOut props heading h4 is rendered 1`] = `
+exports[`OuiCallOut props heading h4 is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 />
 `;
 
-exports[`EuiCallOut props heading h5 is rendered 1`] = `
+exports[`OuiCallOut props heading h5 is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 />
 `;
 
-exports[`EuiCallOut props heading h6 is rendered 1`] = `
+exports[`OuiCallOut props heading h6 is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 />
 `;
 
-exports[`EuiCallOut props heading p is rendered 1`] = `
+exports[`OuiCallOut props heading p is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 />
 `;
 
-exports[`EuiCallOut props iconType is rendered 1`] = `
+exports[`OuiCallOut props iconType is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 />
 `;
 
-exports[`EuiCallOut props title is rendered 1`] = `
+exports[`OuiCallOut props title is rendered 1`] = `
 <div
-  class="euiCallOut euiCallOut--primary"
+  class="ouiCallOut ouiCallOut--primary"
 >
   <div
-    class="euiCallOutHeader"
+    class="ouiCallOutHeader"
   >
     <span
-      class="euiCallOutHeader__title"
+      class="ouiCallOutHeader__title"
     >
       Title
     </span>
   </div>
   <div
-    class="euiText euiText--small"
+    class="ouiText ouiText--small"
   >
     <div
-      class="euiTextColor euiTextColor--default"
+      class="ouiTextColor ouiTextColor--default"
     >
       Content
     </div>

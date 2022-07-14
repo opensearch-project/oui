@@ -1,33 +1,44 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Component } from 'react';
 
 import {
-  EuiBadge,
-  EuiHealth,
-  EuiButton,
-  EuiButtonIcon,
-  EuiCheckbox,
-  EuiContextMenuItem,
-  EuiContextMenuPanel,
-  EuiFieldSearch,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiLink,
-  EuiPopover,
-  EuiSpacer,
-  EuiTable,
-  EuiTableBody,
-  EuiTableFooter,
-  EuiTableFooterCell,
-  EuiTableHeader,
-  EuiTableHeaderCell,
-  EuiTableHeaderCellCheckbox,
-  EuiTablePagination,
-  EuiTableRow,
-  EuiTableRowCell,
-  EuiTableRowCellCheckbox,
-  EuiTableSortMobile,
-  EuiTableHeaderMobile,
+  OuiBadge,
+  OuiHealth,
+  OuiButton,
+  OuiButtonIcon,
+  OuiCheckbox,
+  OuiContextMenuItem,
+  OuiContextMenuPanel,
+  OuiFieldSearch,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiIcon,
+  OuiLink,
+  OuiPopover,
+  OuiSpacer,
+  OuiTable,
+  OuiTableBody,
+  OuiTableFooter,
+  OuiTableFooterCell,
+  OuiTableHeader,
+  OuiTableHeaderCell,
+  OuiTableHeaderCellCheckbox,
+  OuiTablePagination,
+  OuiTableRow,
+  OuiTableRowCell,
+  OuiTableRowCellCheckbox,
+  OuiTableSortMobile,
+  OuiTableHeaderMobile,
 } from '../../../../../src/components';
 
 import {
@@ -58,7 +69,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 28 2016',
         magnitude: 1,
-        health: <EuiBadge color="success">Healthy</EuiBadge>,
+        health: <OuiBadge color="success">Healthy</OuiBadge>,
       },
       {
         id: 1,
@@ -70,7 +81,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 01 2016',
         magnitude: 1,
-        health: <EuiBadge color="success">Healthy</EuiBadge>,
+        health: <OuiBadge color="success">Healthy</OuiBadge>,
       },
       {
         id: 2,
@@ -83,11 +94,11 @@ export default class extends Component {
         type: 'user',
         dateCreated: (
           <span>
-            Tue Dec 01 2016 &nbsp; <EuiBadge color="accent">New!</EuiBadge>
+            Tue Dec 01 2016 &nbsp; <OuiBadge color="accent">New!</OuiBadge>
           </span>
         ),
         magnitude: 10,
-        health: <EuiBadge color="warning">Warning</EuiBadge>,
+        health: <OuiBadge color="warning">Warning</OuiBadge>,
       },
       {
         id: 3,
@@ -104,7 +115,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 16 2016',
         magnitude: 100,
-        health: <EuiBadge color="success">Healthy</EuiBadge>,
+        health: <OuiBadge color="success">Healthy</OuiBadge>,
       },
       {
         id: 4,
@@ -115,7 +126,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 13 2016',
         magnitude: 1000,
-        health: <EuiBadge color="warning">Warning</EuiBadge>,
+        health: <OuiBadge color="warning">Warning</OuiBadge>,
       },
       {
         id: 5,
@@ -126,7 +137,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 11 2016',
         magnitude: 10000,
-        health: <EuiBadge color="success">Healthy</EuiBadge>,
+        health: <OuiBadge color="success">Healthy</OuiBadge>,
       },
       {
         id: 6,
@@ -137,7 +148,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 11 2016',
         magnitude: 10000,
-        health: <EuiBadge color="danger">Danger</EuiBadge>,
+        health: <OuiBadge color="danger">Danger</OuiBadge>,
       },
       {
         id: 7,
@@ -148,7 +159,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 11 2016',
         magnitude: 10000,
-        health: <EuiBadge color="warning">Warning</EuiBadge>,
+        health: <OuiBadge color="warning">Warning</OuiBadge>,
       },
       {
         id: 8,
@@ -159,7 +170,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 11 2016',
         magnitude: 10000,
-        health: <EuiBadge color="warning">Warning</EuiBadge>,
+        health: <OuiBadge color="warning">Warning</OuiBadge>,
       },
       {
         id: 9,
@@ -170,7 +181,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 11 2016',
         magnitude: 10000,
-        health: <EuiBadge color="success">Healthy</EuiBadge>,
+        health: <OuiBadge color="success">Healthy</OuiBadge>,
       },
       {
         id: 10,
@@ -181,7 +192,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 11 2016',
         magnitude: 10000,
-        health: <EuiBadge color="danger">Danger</EuiBadge>,
+        health: <OuiBadge color="danger">Danger</OuiBadge>,
       },
       {
         id: 11,
@@ -192,7 +203,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 11 2016',
         magnitude: 10000,
-        health: <EuiBadge color="warning">Warning</EuiBadge>,
+        health: <OuiBadge color="warning">Warning</OuiBadge>,
       },
       {
         id: 12,
@@ -203,7 +214,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 11 2016',
         magnitude: 10000,
-        health: <EuiHealth color="success">Healthy</EuiHealth>,
+        health: <OuiHealth color="success">Healthy</OuiHealth>,
       },
       {
         id: 13,
@@ -214,7 +225,7 @@ export default class extends Component {
         type: 'user',
         dateCreated: 'Tue Dec 11 2016',
         magnitude: 10000,
-        health: <EuiBadge color="danger">Danger</EuiBadge>,
+        health: <OuiBadge color="danger">Danger</OuiBadge>,
       },
     ];
 
@@ -251,7 +262,7 @@ export default class extends Component {
         label: '',
         alignment: LEFT_ALIGNMENT,
         width: '24px',
-        cellProvider: (cell) => <EuiIcon type={cell} size="m" />,
+        cellProvider: (cell) => <OuiIcon type={cell} size="m" />,
         mobileOptions: {
           show: false,
         },
@@ -277,7 +288,7 @@ export default class extends Component {
         },
         render: (title, item) => (
           <span>
-            <EuiIcon
+            <OuiIcon
               type={item.type}
               size="m"
               style={{ verticalAlign: 'text-top' }}
@@ -436,7 +447,7 @@ export default class extends Component {
 
   renderSelectAll = (mobile) => {
     return (
-      <EuiCheckbox
+      <OuiCheckbox
         id="selectAllCheckbox"
         label={mobile ? 'Select all' : null}
         checked={this.areAllItemsSelected()}
@@ -469,13 +480,13 @@ export default class extends Component {
     this.columns.forEach((column, columnIndex) => {
       if (column.isCheckbox) {
         headers.push(
-          <EuiTableHeaderCellCheckbox key={column.id} width={column.width}>
+          <OuiTableHeaderCellCheckbox key={column.id} width={column.width}>
             {this.renderSelectAll()}
-          </EuiTableHeaderCellCheckbox>
+          </OuiTableHeaderCellCheckbox>
         );
       } else {
         headers.push(
-          <EuiTableHeaderCell
+          <OuiTableHeaderCell
             key={column.id}
             align={this.columns[columnIndex].alignment}
             width={column.width}
@@ -488,7 +499,7 @@ export default class extends Component {
             )}
             mobileOptions={column.mobileOptions}>
             {column.label}
-          </EuiTableHeaderCell>
+          </OuiTableHeaderCell>
         );
       }
     });
@@ -504,29 +515,29 @@ export default class extends Component {
 
         if (column.isCheckbox) {
           return (
-            <EuiTableRowCellCheckbox key={column.id}>
-              <EuiCheckbox
+            <OuiTableRowCellCheckbox key={column.id}>
+              <OuiCheckbox
                 id={`${item.id}-checkbox`}
                 checked={this.isItemSelected(item.id)}
                 onChange={this.toggleItem.bind(this, item.id)}
                 type="inList"
               />
-            </EuiTableRowCellCheckbox>
+            </OuiTableRowCellCheckbox>
           );
         }
 
         if (column.isActionsPopover) {
           return (
-            <EuiTableRowCell
+            <OuiTableRowCell
               key={column.id}
               header={column.label}
               textOnly={false}
               hasActions={true}
               align="right">
-              <EuiPopover
+              <OuiPopover
                 id={`${item.id}-actions`}
                 button={
-                  <EuiButtonIcon
+                  <OuiButtonIcon
                     aria-label="Actions"
                     iconType="gear"
                     size="s"
@@ -538,36 +549,36 @@ export default class extends Component {
                 closePopover={() => this.closePopover(item.id)}
                 panelPaddingSize="none"
                 anchorPosition="leftCenter">
-                <EuiContextMenuPanel
+                <OuiContextMenuPanel
                   items={[
-                    <EuiContextMenuItem
+                    <OuiContextMenuItem
                       key="A"
                       icon="pencil"
                       onClick={() => {
                         this.closePopover(item.id);
                       }}>
                       Edit
-                    </EuiContextMenuItem>,
-                    <EuiContextMenuItem
+                    </OuiContextMenuItem>,
+                    <OuiContextMenuItem
                       key="B"
                       icon="share"
                       onClick={() => {
                         this.closePopover(item.id);
                       }}>
                       Share
-                    </EuiContextMenuItem>,
-                    <EuiContextMenuItem
+                    </OuiContextMenuItem>,
+                    <OuiContextMenuItem
                       key="C"
                       icon="trash"
                       onClick={() => {
                         this.closePopover(item.id);
                       }}>
                       Delete
-                    </EuiContextMenuItem>,
+                    </OuiContextMenuItem>,
                   ]}
                 />
-              </EuiPopover>
-            </EuiTableRowCell>
+              </OuiPopover>
+            </OuiTableRowCell>
           );
         }
 
@@ -576,7 +587,7 @@ export default class extends Component {
             ? item.title.value
             : item.title;
           const title = item.title.isLink ? (
-            <EuiLink href="">{item.title.value}</EuiLink>
+            <OuiLink href="">{item.title.value}</OuiLink>
           ) : (
             titleText
           );
@@ -584,7 +595,7 @@ export default class extends Component {
         } else if (column.cellProvider) {
           child = column.cellProvider(cell);
         } else if (cell.isLink) {
-          child = <EuiLink href="">{cell.value}</EuiLink>;
+          child = <OuiLink href="">{cell.value}</OuiLink>;
         } else if (cell.truncateText) {
           child = cell.value;
         } else {
@@ -592,7 +603,7 @@ export default class extends Component {
         }
 
         return (
-          <EuiTableRowCell
+          <OuiTableRowCell
             key={column.id}
             align={column.alignment}
             truncateText={cell && cell.truncateText}
@@ -602,18 +613,18 @@ export default class extends Component {
               ...column.mobileOptions,
             }}>
             {child}
-          </EuiTableRowCell>
+          </OuiTableRowCell>
         );
       });
 
       return (
-        <EuiTableRow
+        <OuiTableRow
           key={item.id}
           isSelected={this.isItemSelected(item.id)}
           isSelectable={true}
           hasActions={true}>
           {cells}
-        </EuiTableRow>
+        </OuiTableRow>
       );
     };
 
@@ -649,19 +660,19 @@ export default class extends Component {
 
       if (footer) {
         footers.push(
-          <EuiTableFooterCell
+          <OuiTableFooterCell
             key={`footer_${column.id}`}
             align={column.alignment}>
             {footer}
-          </EuiTableFooterCell>
+          </OuiTableFooterCell>
         );
       } else {
         footers.push(
-          <EuiTableFooterCell
+          <OuiTableFooterCell
             key={`footer_empty_${footers.length - 1}`}
             align={column.alignment}>
             {undefined}
-          </EuiTableFooterCell>
+          </OuiTableFooterCell>
         );
       }
     });
@@ -689,47 +700,47 @@ export default class extends Component {
 
     if (this.areAnyRowsSelected() > 0) {
       optionalActionButtons = (
-        <EuiFlexItem grow={false}>
-          <EuiButton color="danger">Delete selected</EuiButton>
-        </EuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiButton color="danger">Delete selected</OuiButton>
+        </OuiFlexItem>
       );
     }
 
     return (
       <div>
-        <EuiFlexGroup gutterSize="m">
+        <OuiFlexGroup gutterSize="m">
           {optionalActionButtons}
 
-          <EuiFlexItem>
-            <EuiFieldSearch fullWidth placeholder="Search..." />
-          </EuiFlexItem>
-        </EuiFlexGroup>
+          <OuiFlexItem>
+            <OuiFieldSearch fullWidth placeholder="Search..." />
+          </OuiFlexItem>
+        </OuiFlexGroup>
 
-        <EuiSpacer size="m" />
+        <OuiSpacer size="m" />
 
-        <EuiTableHeaderMobile>
-          <EuiFlexGroup
+        <OuiTableHeaderMobile>
+          <OuiFlexGroup
             responsive={false}
             justifyContent="spaceBetween"
             alignItems="baseline">
-            <EuiFlexItem grow={false}>{this.renderSelectAll(true)}</EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiTableSortMobile items={this.getTableMobileSortItems()} />
-            </EuiFlexItem>
-          </EuiFlexGroup>
-        </EuiTableHeaderMobile>
+            <OuiFlexItem grow={false}>{this.renderSelectAll(true)}</OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiTableSortMobile items={this.getTableMobileSortItems()} />
+            </OuiFlexItem>
+          </OuiFlexGroup>
+        </OuiTableHeaderMobile>
 
-        <EuiTable id={exampleId}>
-          <EuiTableHeader>{this.renderHeaderCells()}</EuiTableHeader>
+        <OuiTable id={exampleId}>
+          <OuiTableHeader>{this.renderHeaderCells()}</OuiTableHeader>
 
-          <EuiTableBody>{this.renderRows()}</EuiTableBody>
+          <OuiTableBody>{this.renderRows()}</OuiTableBody>
 
-          <EuiTableFooter>{this.renderFooterCells()}</EuiTableFooter>
-        </EuiTable>
+          <OuiTableFooter>{this.renderFooterCells()}</OuiTableFooter>
+        </OuiTable>
 
-        <EuiSpacer size="m" />
+        <OuiSpacer size="m" />
 
-        <EuiTablePagination
+        <OuiTablePagination
           aria-controls={exampleId}
           activePage={this.pager.getCurrentPageIndex()}
           itemsPerPage={this.state.itemsPerPage}

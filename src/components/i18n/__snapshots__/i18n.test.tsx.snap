@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiI18n default rendering render prop with multiple tokens renders render prop result to the dom 1`] = `
-<EuiI18n
+exports[`OuiI18n default rendering render prop with multiple tokens renders render prop result to the dom 1`] = `
+<OuiI18n
   defaults={
     Array [
       "This is the first basic string.",
@@ -20,11 +20,11 @@ exports[`EuiI18n default rendering render prop with multiple tokens renders rend
      
     This is the second basic string.
   </div>
-</EuiI18n>
+</OuiI18n>
 `;
 
-exports[`EuiI18n default rendering render prop with single token calls a function and renders render prop result to the dom 1`] = `
-<EuiI18n
+exports[`OuiI18n default rendering render prop with single token calls a function and renders render prop result to the dom 1`] = `
+<OuiI18n
   default={
     [MockFunction] {
       "calls": Array [
@@ -52,20 +52,20 @@ exports[`EuiI18n default rendering render prop with single token calls a functio
   }
 >
   Here's something neat: This is a callback with values.
-</EuiI18n>
+</OuiI18n>
 `;
 
-exports[`EuiI18n default rendering render prop with single token renders render prop result to the dom 1`] = `
-<EuiI18n
+exports[`OuiI18n default rendering render prop with single token renders render prop result to the dom 1`] = `
+<OuiI18n
   default="This is a basic string."
   token="test"
 >
   A nifty thing: This is a basic string.
-</EuiI18n>
+</OuiI18n>
 `;
 
-exports[`EuiI18n default rendering render prop with single token renders render prop result with placeholders to the dom 1`] = `
-<EuiI18n
+exports[`OuiI18n default rendering render prop with single token renders render prop result with placeholders to the dom 1`] = `
+<OuiI18n
   default="This is a {type} with {special}."
   token="test"
   values={
@@ -76,11 +76,11 @@ exports[`EuiI18n default rendering render prop with single token renders render 
   }
 >
   Here's something cool: This is a string with values.
-</EuiI18n>
+</OuiI18n>
 `;
 
-exports[`EuiI18n default rendering rendering to dom calls a function and renders the result to the dom 1`] = `
-<EuiI18n
+exports[`OuiI18n default rendering rendering to dom calls a function and renders the result to the dom 1`] = `
+<OuiI18n
   default={
     [MockFunction] {
       "calls": Array [
@@ -108,20 +108,20 @@ exports[`EuiI18n default rendering rendering to dom calls a function and renders
   }
 >
   This is a callback with values.
-</EuiI18n>
+</OuiI18n>
 `;
 
-exports[`EuiI18n default rendering rendering to dom renders a basic string to the dom 1`] = `
-<EuiI18n
+exports[`OuiI18n default rendering rendering to dom renders a basic string to the dom 1`] = `
+<OuiI18n
   default="This is a basic string."
   token="test"
 >
   This is a basic string.
-</EuiI18n>
+</OuiI18n>
 `;
 
-exports[`EuiI18n default rendering rendering to dom renders a string with placeholders to the dom 1`] = `
-<EuiI18n
+exports[`OuiI18n default rendering rendering to dom renders a string with placeholders to the dom 1`] = `
+<OuiI18n
   default="This is a {type} with {special}."
   token="test"
   values={
@@ -132,11 +132,11 @@ exports[`EuiI18n default rendering rendering to dom renders a string with placeh
   }
 >
   This is a string with values.
-</EuiI18n>
+</OuiI18n>
 `;
 
-exports[`EuiI18n default rendering rendering to dom renders when value is null 1`] = `
-<EuiI18n
+exports[`OuiI18n default rendering rendering to dom renders when value is null 1`] = `
+<OuiI18n
   default="{arg}"
   token="test"
   values={
@@ -148,11 +148,11 @@ exports[`EuiI18n default rendering rendering to dom renders when value is null 1
   <Component
     arg={null}
   />
-</EuiI18n>
+</OuiI18n>
 `;
 
-exports[`EuiI18n mapped tokens handles multiple tokens 1`] = `
-<EuiContext
+exports[`OuiI18n mapped tokens handles multiple tokens 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -172,11 +172,11 @@ exports[`EuiI18n mapped tokens handles multiple tokens 1`] = `
       </span>
     </p>
   </Component>
-</EuiContext>
+</OuiContext>
 `;
 
-exports[`EuiI18n mapped tokens handles single token with values 1`] = `
-<EuiContext
+exports[`OuiI18n mapped tokens handles single token with values 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -190,11 +190,11 @@ exports[`EuiI18n mapped tokens handles single token with values 1`] = `
       In reverse order: aardvarks, then apples
     </p>
   </Component>
-</EuiContext>
+</OuiContext>
 `;
 
-exports[`EuiI18n mapped tokens handles single token without values 1`] = `
-<EuiContext
+exports[`OuiI18n mapped tokens handles single token without values 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -208,11 +208,11 @@ exports[`EuiI18n mapped tokens handles single token without values 1`] = `
       This is the mapped value.
     </p>
   </Component>
-</EuiContext>
+</OuiContext>
 `;
 
-exports[`EuiI18n mapped tokens mappingFunc calls the mapping function with the source string 1`] = `
-<EuiContext
+exports[`OuiI18n mapped tokens mappingFunc calls the mapping function with the source string 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -229,11 +229,11 @@ exports[`EuiI18n mapped tokens mappingFunc calls the mapping function with the s
       PLACEHOLDER
     </div>
   </Component>
-</EuiContext>
+</OuiContext>
 `;
 
-exports[`EuiI18n reading values from context mappingFunc calls the mapping function with the source string 1`] = `
-<EuiContext
+exports[`OuiI18n reading values from context mappingFunc calls the mapping function with the source string 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -243,7 +243,7 @@ exports[`EuiI18n reading values from context mappingFunc calls the mapping funct
     }
   }
 >
-  <EuiI18n
+  <OuiI18n
     default="This is the basic string."
     token="test1"
   >
@@ -252,12 +252,12 @@ exports[`EuiI18n reading values from context mappingFunc calls the mapping funct
     >
       THIS IS THE BASIC STRING.
     </div>
-  </EuiI18n>
-</EuiContext>
+  </OuiI18n>
+</OuiContext>
 `;
 
-exports[`EuiI18n reading values from context render prop with multiple tokens renders mapped render prop result to the dom 1`] = `
-<EuiContext
+exports[`OuiI18n reading values from context render prop with multiple tokens renders mapped render prop result to the dom 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -267,7 +267,7 @@ exports[`EuiI18n reading values from context render prop with multiple tokens re
     }
   }
 >
-  <EuiI18n
+  <OuiI18n
     defaults={
       Array [
         "This is the first basic string.",
@@ -286,12 +286,12 @@ exports[`EuiI18n reading values from context render prop with multiple tokens re
        
       This is the second mapped value.
     </div>
-  </EuiI18n>
-</EuiContext>
+  </OuiI18n>
+</OuiContext>
 `;
 
-exports[`EuiI18n reading values from context render prop with single token calls a mapped function and renders render prop result to the dom 1`] = `
-<EuiContext
+exports[`OuiI18n reading values from context render prop with single token calls a mapped function and renders render prop result to the dom 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -315,7 +315,7 @@ exports[`EuiI18n reading values from context render prop with single token calls
     }
   }
 >
-  <EuiI18n
+  <OuiI18n
     default={
       [MockFunction] {
         "calls": Array [
@@ -343,12 +343,12 @@ exports[`EuiI18n reading values from context render prop with single token calls
     }
   >
     Here's something neat: This is a callback with values.
-  </EuiI18n>
-</EuiContext>
+  </OuiI18n>
+</OuiContext>
 `;
 
-exports[`EuiI18n reading values from context render prop with single token renders mapped render prop result to the dom 1`] = `
-<EuiContext
+exports[`OuiI18n reading values from context render prop with single token renders mapped render prop result to the dom 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -357,17 +357,17 @@ exports[`EuiI18n reading values from context render prop with single token rende
     }
   }
 >
-  <EuiI18n
+  <OuiI18n
     default="This is a basic string."
     token="test"
   >
     A nifty thing: An overridden string.
-  </EuiI18n>
-</EuiContext>
+  </OuiI18n>
+</OuiContext>
 `;
 
-exports[`EuiI18n reading values from context render prop with single token renders mapped render prop result with placeholders to the dom 1`] = `
-<EuiContext
+exports[`OuiI18n reading values from context render prop with single token renders mapped render prop result with placeholders to the dom 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -376,7 +376,7 @@ exports[`EuiI18n reading values from context render prop with single token rende
     }
   }
 >
-  <EuiI18n
+  <OuiI18n
     default="This is a {type} with {special}."
     token="test"
     values={
@@ -387,12 +387,12 @@ exports[`EuiI18n reading values from context render prop with single token rende
     }
   >
     Here's something cool: An overridden string with values.
-  </EuiI18n>
-</EuiContext>
+  </OuiI18n>
+</OuiContext>
 `;
 
-exports[`EuiI18n reading values from context rendering to dom calls a mapped function and renders the result to the dom 1`] = `
-<EuiContext
+exports[`OuiI18n reading values from context rendering to dom calls a mapped function and renders the result to the dom 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -416,7 +416,7 @@ exports[`EuiI18n reading values from context rendering to dom calls a mapped fun
     }
   }
 >
-  <EuiI18n
+  <OuiI18n
     default={[Function]}
     token="test"
     values={
@@ -427,12 +427,12 @@ exports[`EuiI18n reading values from context rendering to dom calls a mapped fun
     }
   >
     This is a mapped callback with values.
-  </EuiI18n>
-</EuiContext>
+  </OuiI18n>
+</OuiContext>
 `;
 
-exports[`EuiI18n reading values from context rendering to dom renders a mapped basic string to the dom 1`] = `
-<EuiContext
+exports[`OuiI18n reading values from context rendering to dom renders a mapped basic string to the dom 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -441,17 +441,17 @@ exports[`EuiI18n reading values from context rendering to dom renders a mapped b
     }
   }
 >
-  <EuiI18n
+  <OuiI18n
     default="This is a basic string."
     token="test"
   >
     An overridden string.
-  </EuiI18n>
-</EuiContext>
+  </OuiI18n>
+</OuiContext>
 `;
 
-exports[`EuiI18n reading values from context rendering to dom renders a mapped string with placeholders to the dom 1`] = `
-<EuiContext
+exports[`OuiI18n reading values from context rendering to dom renders a mapped string with placeholders to the dom 1`] = `
+<OuiContext
   i18n={
     Object {
       "mapping": Object {
@@ -460,7 +460,7 @@ exports[`EuiI18n reading values from context rendering to dom renders a mapped s
     }
   }
 >
-  <EuiI18n
+  <OuiI18n
     default="This is a {type} with {special}."
     token="test"
     values={
@@ -471,11 +471,11 @@ exports[`EuiI18n reading values from context rendering to dom renders a mapped s
     }
   >
     An overridden string with values.
-  </EuiI18n>
-</EuiContext>
+  </OuiI18n>
+</OuiContext>
 `;
 
-exports[`EuiI18n useEuiI18n unmapped calls a function and renders the result to the dom 1`] = `
+exports[`OuiI18n useOuiI18n unmapped calls a function and renders the result to the dom 1`] = `
 <Component>
   <div>
     <p>
@@ -489,7 +489,7 @@ exports[`EuiI18n useEuiI18n unmapped calls a function and renders the result to 
 </Component>
 `;
 
-exports[`EuiI18n useEuiI18n unmapped handles multiple tokens 1`] = `
+exports[`OuiI18n useOuiI18n unmapped handles multiple tokens 1`] = `
 <Component>
   <p>
     <span>
@@ -502,7 +502,7 @@ exports[`EuiI18n useEuiI18n unmapped handles multiple tokens 1`] = `
 </Component>
 `;
 
-exports[`EuiI18n useEuiI18n unmapped handles single token with values 1`] = `
+exports[`OuiI18n useOuiI18n unmapped handles single token with values 1`] = `
 <Component>
   <p>
     first apples, then aardvarks
@@ -510,7 +510,7 @@ exports[`EuiI18n useEuiI18n unmapped handles single token with values 1`] = `
 </Component>
 `;
 
-exports[`EuiI18n useEuiI18n unmapped handles single token without values 1`] = `
+exports[`OuiI18n useOuiI18n unmapped handles single token without values 1`] = `
 <Component>
   <p>
     placeholder

@@ -1,142 +1,142 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiStepNumber is rendered 1`] = `
+exports[`OuiStepNumber is rendered 1`] = `
 <span
   aria-label="aria-label"
-  class="euiStepNumber testClass1 testClass2"
+  class="ouiStepNumber testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Step 
   </span>
   <span
     aria-hidden="true"
-    class="euiStepNumber__number"
+    class="ouiStepNumber__number"
   />
 </span>
 `;
 
-exports[`EuiStepNumber props has titleSize is rendered 1`] = `
+exports[`OuiStepNumber props has titleSize is rendered 1`] = `
 <span
-  class="euiStepNumber"
+  class="ouiStepNumber"
 >
   <span
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Step 1
   </span>
   <span
     aria-hidden="true"
-    class="euiStepNumber__number"
+    class="ouiStepNumber__number"
   >
     1
   </span>
 </span>
 `;
 
-exports[`EuiStepNumber props isHollow is rendered 1`] = `
+exports[`OuiStepNumber props isHollow is rendered 1`] = `
 <span
-  class="euiStepNumber euiStepNumber-isHollow"
+  class="ouiStepNumber ouiStepNumber-isHollow"
 >
   <span
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Step 1
   </span>
   <span
     aria-hidden="true"
-    class="euiStepNumber__number"
+    class="ouiStepNumber__number"
   >
     1
   </span>
 </span>
 `;
 
-exports[`EuiStepNumber props status complete is rendered 1`] = `
+exports[`OuiStepNumber props status complete is rendered 1`] = `
 <span
-  class="euiStepNumber euiStepNumber--complete"
+  class="ouiStepNumber ouiStepNumber--complete"
 >
   <span
     aria-label="Step 1 is complete"
-    class="euiStepNumber__icon"
-    data-euiicon-type="check"
+    class="ouiStepNumber__icon"
+    data-ouiicon-type="check"
   />
 </span>
 `;
 
-exports[`EuiStepNumber props status danger is rendered 1`] = `
+exports[`OuiStepNumber props status danger is rendered 1`] = `
 <span
-  class="euiStepNumber euiStepNumber--danger"
+  class="ouiStepNumber ouiStepNumber--danger"
 >
   <span
     aria-label="Step 1 has errors"
-    class="euiStepNumber__icon"
-    data-euiicon-type="cross"
+    class="ouiStepNumber__icon"
+    data-ouiicon-type="cross"
   />
 </span>
 `;
 
-exports[`EuiStepNumber props status disabled is rendered 1`] = `
+exports[`OuiStepNumber props status disabled is rendered 1`] = `
 <span
-  class="euiStepNumber euiStepNumber--disabled"
+  class="ouiStepNumber ouiStepNumber--disabled"
 >
   <span
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Step 1 is disabled
   </span>
   <span
     aria-hidden="true"
-    class="euiStepNumber__number"
+    class="ouiStepNumber__number"
   >
     1
   </span>
 </span>
 `;
 
-exports[`EuiStepNumber props status incomplete is rendered 1`] = `
+exports[`OuiStepNumber props status incomplete is rendered 1`] = `
 <span
-  class="euiStepNumber euiStepNumber--incomplete"
+  class="ouiStepNumber ouiStepNumber--incomplete"
 >
   <span
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Step 1 is incomplete
   </span>
   <span
     aria-hidden="true"
-    class="euiStepNumber__number"
+    class="ouiStepNumber__number"
   >
     1
   </span>
 </span>
 `;
 
-exports[`EuiStepNumber props status loading is rendered 1`] = `
+exports[`OuiStepNumber props status loading is rendered 1`] = `
 <span
-  class="euiStepNumber euiStepNumber--loading"
+  class="ouiStepNumber ouiStepNumber--loading"
 >
   <span
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Step 1 is loading
   </span>
   <span
-    class="euiLoadingSpinner euiLoadingSpinner--xLarge euiStepNumber__loader"
+    class="ouiLoadingSpinner ouiLoadingSpinner--xLarge ouiStepNumber__loader"
   />
 </span>
 `;
 
-exports[`EuiStepNumber props status warning is rendered 1`] = `
+exports[`OuiStepNumber props status warning is rendered 1`] = `
 <span
-  class="euiStepNumber euiStepNumber--warning"
+  class="ouiStepNumber ouiStepNumber--warning"
 >
   <span
     aria-label="Step 1 has warnings"
-    class="euiStepNumber__icon"
-    data-euiicon-type="alert"
+    class="ouiStepNumber__icon"
+    data-ouiicon-type="alert"
   />
 </span>
 `;

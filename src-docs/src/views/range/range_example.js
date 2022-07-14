@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,22 +16,22 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiDualRange,
-  EuiRange,
-  EuiCode,
+  OuiCallOut,
+  OuiDualRange,
+  OuiRange,
+  OuiCode,
 } from '../../../../src/components';
 
 import { rangeConfig, dualRangeConfig } from './playground';
 
 import {
-  EuiRangeLevels,
+  OuiRangeLevels,
   LEVEL_COLORS,
 } from '../../../../src/components/form/range/range_levels';
 
-import { EuiRangeTicks } from '../../../../src/components/form/range/range_ticks';
+import { OuiRangeTicks } from '../../../../src/components/form/range/range_ticks';
 
-import { EuiRangeInput } from '../../../../src/components/form/range/range_input';
+import { OuiRangeInput } from '../../../../src/components/form/range/range_input';
 
 import DualRangeExample from './dual_range';
 const dualRangeSource = require('!!raw-loader!./dual_range');
@@ -54,14 +65,14 @@ export const RangeControlExample = {
   title: 'Range sliders',
   intro: (
     <Fragment>
-      <EuiCallOut color="warning" title="Understanding precision">
+      <OuiCallOut color="warning" title="Understanding precision">
         <p>
           Range sliders should only be used when{' '}
           <strong>the precise value is not considered important</strong>. If the
-          precise value does matter, add the <EuiCode>showInput</EuiCode> prop
-          or use a <strong>EuiFieldNumber</strong> instead.
+          precise value does matter, add the <OuiCode>showInput</OuiCode> prop
+          or use a <strong>OuiFieldNumber</strong> instead.
         </p>
-      </EuiCallOut>
+      </OuiCallOut>
     </Fragment>
   ),
   sections: [
@@ -72,31 +83,31 @@ export const RangeControlExample = {
           <h3>Required</h3>
           <ul>
             <li>
-              <EuiCode>min, max</EuiCode>: Sets the range values.
+              <OuiCode>min, max</OuiCode>: Sets the range values.
             </li>
             <li>
-              <EuiCode>step</EuiCode>: Technically not required because the
-              default is <EuiCode>1</EuiCode>.
+              <OuiCode>step</OuiCode>: Technically not required because the
+              default is <OuiCode>1</OuiCode>.
             </li>
             <li>
-              <EuiCode>value, onChange</EuiCode>
+              <OuiCode>value, onChange</OuiCode>
             </li>
           </ul>
           <h3>Optional</h3>
           <ul>
             <li>
-              <EuiCode>showLabels</EuiCode>: While currently considered
+              <OuiCode>showLabels</OuiCode>: While currently considered
               optional, the property should be added to explicitly state the
               range to the user.
             </li>
             <li>
-              <EuiCode>showValue</EuiCode>: Displays a tooltip style indicator
-              of the selected value. You can add <EuiCode>valuePrepend</EuiCode>{' '}
-              and/or <EuiCode>valueAppend</EuiCode> to bookend the value with
+              <OuiCode>showValue</OuiCode>: Displays a tooltip style indicator
+              of the selected value. You can add <OuiCode>valuePrepend</OuiCode>{' '}
+              and/or <OuiCode>valueAppend</OuiCode> to bookend the value with
               custom content.
             </li>
             <li>
-              <EuiCode>showRange</EuiCode>: Displays a thickened line from the
+              <OuiCode>showRange</OuiCode>: Displays a thickened line from the
               minimum value to the selected value.
             </li>
           </ul>
@@ -113,11 +124,11 @@ export const RangeControlExample = {
         },
       ],
       props: {
-        EuiRange,
+        OuiRange,
       },
       demo: <RangeExample />,
       snippet: [
-        `<EuiRange
+        `<OuiRange
   min={100}
   max={200}
   step={0.05}
@@ -126,7 +137,7 @@ export const RangeControlExample = {
   showLabels
 />`,
         `// Show tooltip
-<EuiRange
+<OuiRange
   min={100}
   max={200}
   value={value}
@@ -135,7 +146,7 @@ export const RangeControlExample = {
   showValue
 />`,
         `// Show thickened range and prepend a string to the tooltip
-<EuiRange
+<OuiRange
   min={100}
   max={200}
   value={value}
@@ -152,31 +163,31 @@ export const RangeControlExample = {
       text: (
         <Fragment>
           <p>
-            The <strong>EuiDualRange</strong> accepts almost all the same props
-            as the regular <strong>EuiRange</strong>, with the exception of{' '}
-            <EuiCode>showRange</EuiCode> which is on by default, and{' '}
-            <EuiCode>showValue</EuiCode> since tooltips don&apos;t fit properly
+            The <strong>OuiDualRange</strong> accepts almost all the same props
+            as the regular <strong>OuiRange</strong>, with the exception of{' '}
+            <OuiCode>showRange</OuiCode> which is on by default, and{' '}
+            <OuiCode>showValue</OuiCode> since tooltips don&apos;t fit properly
             when there are two.
           </p>
-          <EuiCallOut color="warning" title="Retrieving field values">
+          <OuiCallOut color="warning" title="Retrieving field values">
             <p>
-              Two-value <EuiCode>input[type=range]</EuiCode> elements are not
+              Two-value <OuiCode>input[type=range]</OuiCode> elements are not
               part of the HTML5 specification. Because of this support gap,{' '}
-              <strong>EuiDualRange</strong> cannot expose a native{' '}
-              <EuiCode>value</EuiCode> property for native form to consumption.{' '}
+              <strong>OuiDualRange</strong> cannot expose a native{' '}
+              <OuiCode>value</OuiCode> property for native form to consumption.{' '}
               <strong>
-                The React <EuiCode>onChange</EuiCode> prop is the recommended
+                The React <OuiCode>onChange</OuiCode> prop is the recommended
                 method for retrieving the upper and lower values.
               </strong>
             </p>
             <p>
-              <strong>EuiDualRange</strong> does use native inputs to help
+              <strong>OuiDualRange</strong> does use native inputs to help
               validate step values and range limits. These may be used as form
-              values when <EuiCode>showInput</EuiCode> is in use. The
+              values when <OuiCode>showInput</OuiCode> is in use. The
               alternative is to store values in{' '}
-              <EuiCode>input[type=hidden]</EuiCode>.
+              <OuiCode>input[type=hidden]</OuiCode>.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </Fragment>
       ),
       source: [
@@ -190,11 +201,11 @@ export const RangeControlExample = {
         },
       ],
       props: {
-        EuiDualRange,
+        OuiDualRange,
       },
       demo: <DualRangeExample />,
       snippet: [
-        `<EuiDualRange
+        `<OuiDualRange
   min={100}
   max={200}
   step={10}
@@ -202,7 +213,7 @@ export const RangeControlExample = {
   onChange={handleChange}
   showLabels
 />`,
-        `<EuiDualRange
+        `<OuiDualRange
   min={0}
   max={100}
   step={1}
@@ -217,12 +228,12 @@ export const RangeControlExample = {
       text: (
         <Fragment>
           <p>
-            The <EuiCode>showInput</EuiCode> prop, will append or bookend the
+            The <OuiCode>showInput</OuiCode> prop, will append or bookend the
             range slider with number type inputs. This is important for allowing
             precise values to be entered by the user.
           </p>
           <p>
-            Passing empty strings as the <EuiCode>value</EuiCode> to the ranges,
+            Passing empty strings as the <OuiCode>value</OuiCode> to the ranges,
             will allow the inputs to be blank, though the range handles will
             show at the min (or max and min) positions.
           </p>
@@ -239,8 +250,8 @@ export const RangeControlExample = {
         },
       ],
       demo: <InputExample />,
-      props: { EuiRangeInput },
-      snippet: ['<EuiRange showInput />', '<EuiDualRange showInput />'],
+      props: { OuiRangeInput },
+      snippet: ['<OuiRange showInput />', '<OuiDualRange showInput />'],
     },
     {
       title: 'Tick marks',
@@ -248,23 +259,23 @@ export const RangeControlExample = {
         <Fragment>
           <p>
             To show clickable tick marks and labels at a given interval, add the
-            prop <EuiCode>showTicks</EuiCode>. By default, tick mark interval is
-            bound to the <EuiCode>step</EuiCode> prop, however, you can set a
+            prop <OuiCode>showTicks</OuiCode>. By default, tick mark interval is
+            bound to the <OuiCode>step</OuiCode> prop, however, you can set a
             custom interval without changing the actual steps allowed by passing
-            a number to the <EuiCode>tickInterval</EuiCode> prop.
+            a number to the <OuiCode>tickInterval</OuiCode> prop.
           </p>
           <p>
             To pass completely custom tick marks, you can pass an array of
-            objects that require a <EuiCode>value</EuiCode> and{' '}
-            <EuiCode>label</EuiCode>. The value must be included in the range of
+            objects that require a <OuiCode>value</OuiCode> and{' '}
+            <OuiCode>label</OuiCode>. The value must be included in the range of
             values (min-max), though the label may be anythin you choose.
           </p>
-          <EuiCallOut color="warning" title="Maximum of 20 ticks allowed">
+          <OuiCallOut color="warning" title="Maximum of 20 ticks allowed">
             <p>
               Spacing can get quite cramped with lots of ticks so we max out the
               number to 20.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </Fragment>
       ),
       source: [
@@ -278,11 +289,11 @@ export const RangeControlExample = {
         },
       ],
       demo: <TicksExample />,
-      props: { EuiRangeTicks },
+      props: { OuiRangeTicks },
       snippet: [
-        '<EuiRange step={10} showTicks />',
-        '<EuiRange showTicks tickInterval={20} />',
-        `<EuiDualRange
+        '<OuiRange step={10} showTicks />',
+        '<OuiRange showTicks tickInterval={20} />',
+        `<OuiDualRange
   showTicks
   ticks={[
     { label: '20kb', value: 20 },
@@ -297,17 +308,17 @@ export const RangeControlExample = {
         <Fragment>
           <p>
             To create colored indicators for certain intervals, pass an array of
-            objects that include a <EuiCode>min</EuiCode>,{' '}
-            <EuiCode>max</EuiCode> and <EuiCode>color</EuiCode>. Color options
+            objects that include a <OuiCode>min</OuiCode>,{' '}
+            <OuiCode>max</OuiCode> and <OuiCode>color</OuiCode>. Color options
             are{' '}
-            <EuiCode language="js">
+            <OuiCode language="js">
               {JSON.stringify(LEVEL_COLORS, null, 2)}
-            </EuiCode>
+            </OuiCode>
             .
           </p>
           <p>
-            Be sure to then add an <EuiCode>aria-describedby</EuiCode> and match
-            it to the id of a <strong>EuiFormHelpText</strong>.
+            Be sure to then add an <OuiCode>aria-describedby</OuiCode> and match
+            it to the id of a <strong>OuiFormHelpText</strong>.
           </p>
         </Fragment>
       ),
@@ -322,16 +333,16 @@ export const RangeControlExample = {
         },
       ],
       demo: <LevelsExample />,
-      props: { EuiRangeLevels },
+      props: { OuiRangeLevels },
       snippet: [
-        `<EuiRange
+        `<OuiRange
   levels={[
     {min: 0, max: 20, color: 'danger'},
     {min: 20, max: 100, color: 'success'}
   ]}
   aria-describedBy={replaceWithID}
 />`,
-        `<EuiDualRange
+        `<OuiDualRange
   levels={[
     {min: 0, max: 20, color: 'danger'},
     {min: 20, max: 100, color: 'success'}
@@ -346,9 +357,9 @@ export const RangeControlExample = {
         <Fragment>
           <p>
             Passing{' '}
-            <EuiCode language="js">
+            <OuiCode language="js">
               showInput=&quot;inputWithPopover&quot;
-            </EuiCode>{' '}
+            </OuiCode>{' '}
             instead of a boolean will only display the inputs until the input is
             interacted with in which case a dropdown will appear displaying the
             actual slider.
@@ -367,13 +378,13 @@ export const RangeControlExample = {
       ],
       demo: <InputOnlyExample />,
       snippet: [
-        `<EuiRange
+        `<OuiRange
   id={rangeId}
   value={value}
   onChange={handleChange}
   showInput="inputWithPopover"
 />`,
-        `<EuiDualRange
+        `<OuiDualRange
   id={rangeId}
   value={value}
   onChange={handleChange}
@@ -387,7 +398,7 @@ export const RangeControlExample = {
         <Fragment>
           <p>
             Other alterations you can add to the range are{' '}
-            <EuiCode>fullWidth</EuiCode>, and <EuiCode>disabled</EuiCode>.
+            <OuiCode>fullWidth</OuiCode>, and <OuiCode>disabled</OuiCode>.
           </p>
         </Fragment>
       ),
@@ -403,7 +414,7 @@ export const RangeControlExample = {
       ],
       demo: <StatesExample />,
       snippet: [
-        `<EuiRange
+        `<OuiRange
   id={rangeId}
   value={value}
   onChange={handleChange}
@@ -418,7 +429,7 @@ export const RangeControlExample = {
   levels={levels}
   aria-describedBy={replaceWithID}
 />`,
-        `<EuiDualRange
+        `<OuiDualRange
   id={rangeId}
   value={value}
   onChange={handleChange}

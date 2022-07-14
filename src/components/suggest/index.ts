@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,8 +28,8 @@
  * under the License.
  */
 
-export { EuiSuggestInput, EuiSuggestInputProps } from './suggest_input';
+export { OuiSuggestInput, OuiSuggestInputProps } from './suggest_input';
 
-export { EuiSuggestItem, EuiSuggestItemProps } from './suggest_item';
+export { OuiSuggestItem, OuiSuggestItemProps } from './suggest_item';
 
-export { EuiSuggest, EuiSuggestProps } from './suggest';
+export { OuiSuggest, OuiSuggestProps } from './suggest';

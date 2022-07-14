@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useContext, Fragment } from 'react';
 import cloneDeep from 'lodash/cloneDeep';
 import { ThemeContext } from '../../components';
@@ -10,25 +21,25 @@ import {
 } from '@elastic/charts';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
-  EUI_SPARKLINE_THEME_PARTIAL,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
+  OUI_SPARKLINE_THEME_PARTIAL,
 } from '../../../../src/themes/charts/themes';
 
 import {
-  EuiPanel,
-  EuiStat,
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiIcon,
-  EuiSpacer,
-  EuiText,
+  OuiPanel,
+  OuiStat,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiIcon,
+  OuiSpacer,
+  OuiText,
 } from '../../../../src/components';
 
 import { TIME_DATA_SMALL } from './data';
 import {
-  euiPaletteForDarkBackground,
-  euiPaletteForLightBackground,
+  ouiPaletteForDarkBackground,
+  ouiPaletteForLightBackground,
 } from '../../../../src/services';
 
 export const Sparklines = () => {
@@ -36,8 +47,8 @@ export const Sparklines = () => {
   const isDarkTheme = themeContext.theme.includes('dark');
 
   const theme = [
-    EUI_SPARKLINE_THEME_PARTIAL,
-    isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LIGHT.theme,
+    OUI_SPARKLINE_THEME_PARTIAL,
+    isDarkTheme ? OUI_CHARTS_THEME_DARK.theme : OUI_CHARTS_THEME_LIGHT.theme,
   ];
 
   const TIME_DATA_SMALL_REVERSE = cloneDeep(TIME_DATA_SMALL).reverse();
@@ -48,11 +59,11 @@ export const Sparklines = () => {
 
   return (
     <Fragment>
-      <EuiFlexGrid columns={4} responsive={false}>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat title="" description="Number of things" textAlign="right">
-              <EuiSpacer size="s" />
+      <OuiFlexGrid columns={4} responsive={false}>
+        <OuiFlexItem>
+          <OuiPanel>
+            <OuiStat title="" description="Number of things" textAlign="right">
+              <OuiSpacer size="s" />
               <Chart size={{ height: 64 }}>
                 <Settings theme={theme} showLegend={false} tooltip="none" />
                 <BarSeries
@@ -62,22 +73,22 @@ export const Sparklines = () => {
                   yAccessors={[1]}
                   color={[
                     isDarkTheme
-                      ? euiPaletteForDarkBackground()[1]
-                      : euiPaletteForLightBackground()[1],
+                      ? ouiPaletteForDarkBackground()[1]
+                      : ouiPaletteForLightBackground()[1],
                   ]}
                 />
               </Chart>
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+            </OuiStat>
+          </OuiPanel>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiPanel>
+            <OuiStat
               title=""
               description="Increase over time"
               titleColor="success"
               textAlign="right">
-              <EuiSpacer size="s" />
+              <OuiSpacer size="s" />
               <Chart size={{ height: 48 }}>
                 <Settings theme={theme} showLegend={false} tooltip="none" />
                 <LineSeries
@@ -87,30 +98,30 @@ export const Sparklines = () => {
                   yAccessors={[1]}
                   color={[
                     isDarkTheme
-                      ? euiPaletteForDarkBackground()[1]
-                      : euiPaletteForLightBackground()[1],
+                      ? ouiPaletteForDarkBackground()[1]
+                      : ouiPaletteForLightBackground()[1],
                   ]}
                 />
               </Chart>
-              <EuiSpacer size="s" />
-              <EuiText size="xs" color="success">
-                <EuiIcon type="sortUp" /> <strong>15%</strong>
-              </EuiText>
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+              <OuiSpacer size="s" />
+              <OuiText size="xs" color="success">
+                <OuiIcon type="sortUp" /> <strong>15%</strong>
+              </OuiText>
+            </OuiStat>
+          </OuiPanel>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiPanel>
+            <OuiStat
               title={
                 <span>
-                  <EuiIcon size="xl" type="sortDown" /> 15%
+                  <OuiIcon size="xl" type="sortDown" /> 15%
                 </span>
               }
               description="Major decrease over time"
               titleColor="danger"
               textAlign="right">
-              <EuiSpacer size="s" />
+              <OuiSpacer size="s" />
               <Chart size={{ height: 16 }}>
                 <Settings theme={theme} showLegend={false} tooltip="none" />
                 <LineSeries
@@ -120,22 +131,22 @@ export const Sparklines = () => {
                   yAccessors={[1]}
                   color={[
                     isDarkTheme
-                      ? euiPaletteForDarkBackground()[3]
-                      : euiPaletteForLightBackground()[3],
+                      ? ouiPaletteForDarkBackground()[3]
+                      : ouiPaletteForLightBackground()[3],
                   ]}
                 />
               </Chart>
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+            </OuiStat>
+          </OuiPanel>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiPanel>
+            <OuiStat
               title=""
               description="Subtle decrease"
               titleColor="danger"
               textAlign="right">
-              <EuiSpacer size="s" />
+              <OuiSpacer size="s" />
               <Chart size={{ height: 48 }}>
                 <Settings theme={theme} showLegend={false} tooltip="none" />
                 <AreaSeries
@@ -145,19 +156,19 @@ export const Sparklines = () => {
                   yAccessors={[1]}
                   color={[
                     isDarkTheme
-                      ? euiPaletteForDarkBackground()[3]
-                      : euiPaletteForLightBackground()[3],
+                      ? ouiPaletteForDarkBackground()[3]
+                      : ouiPaletteForLightBackground()[3],
                   ]}
                 />
               </Chart>
-              <EuiSpacer size="s" />
-              <EuiText size="xs" color="danger">
+              <OuiSpacer size="s" />
+              <OuiText size="xs" color="danger">
                 - 15 points since last Tuesday
-              </EuiText>
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+              </OuiText>
+            </OuiStat>
+          </OuiPanel>
+        </OuiFlexItem>
+      </OuiFlexGrid>
     </Fragment>
   );
 };

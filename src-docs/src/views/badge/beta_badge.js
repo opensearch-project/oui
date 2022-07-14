@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiBetaBadge, EuiSpacer, EuiTitle } from '../../../../src/components';
+import { OuiBetaBadge, OuiSpacer, OuiTitle } from '../../../../src/components';
 
 const colors = ['hollow', 'accent', 'subdued'];
 
@@ -8,50 +19,50 @@ export default () => (
   <div>
     {colors.map((item, index) => (
       <div key={index}>
-        <EuiBetaBadge
+        <OuiBetaBadge
           label="Beta"
           color={item}
           tooltipContent="This module is not GA. Please help us by reporting any bugs."
         />
         &emsp;
-        <EuiBetaBadge
+        <OuiBetaBadge
           label="Beta"
           color={item}
           size="s"
           tooltipContent="This module is not GA. Please help us by reporting any bugs."
         />
         &emsp;
-        <EuiBetaBadge label="B" color={item} />
+        <OuiBetaBadge label="B" color={item} />
         &emsp;
-        <EuiBetaBadge size="s" label="B" color={item} />
+        <OuiBetaBadge size="s" label="B" color={item} />
         &emsp;
-        <EuiBetaBadge label="Lab" color={item} iconType="beaker" />
+        <OuiBetaBadge label="Lab" color={item} iconType="beaker" />
         &emsp;
-        <EuiBetaBadge label="Lab" size="s" color={item} iconType="beaker" />
-        <EuiSpacer size="s" />
+        <OuiBetaBadge label="Lab" size="s" color={item} iconType="beaker" />
+        <OuiSpacer size="s" />
       </div>
     ))}
-    <EuiSpacer size="s" />
-    <EuiTitle size="s">
+    <OuiSpacer size="s" />
+    <OuiTitle size="s">
       <h3>
         Beta badges will also line up nicely with titles &nbsp;
-        <EuiBetaBadge
+        <OuiBetaBadge
           label="Lab"
           tooltipContent="This module is not GA. Please help us by reporting any bugs."
         />
       </h3>
-    </EuiTitle>
-    <EuiTitle size="xxs">
+    </OuiTitle>
+    <OuiTitle size="xxs">
       <h4>Clickable beta badges</h4>
-    </EuiTitle>
-    <EuiSpacer size="s" />
-    <EuiBetaBadge
+    </OuiTitle>
+    <OuiSpacer size="s" />
+    <OuiBetaBadge
       label="Lens"
       iconType="lensApp"
       onClick={() => alert('Goes to Lens')}
     />
     &emsp;
-    <EuiBetaBadge
+    <OuiBetaBadge
       label="Basic"
       href="http://www.elastic.co/subscriptions"
       target="_blank"

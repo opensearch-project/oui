@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useCallback, useState } from 'react';
 
 import {
@@ -8,51 +19,51 @@ import {
   DataGenerator,
 } from '@elastic/charts';
 
-import { EUI_CHARTS_THEME_LIGHT } from '../../../../src/themes/charts/themes';
+import { OUI_CHARTS_THEME_LIGHT } from '../../../../src/themes/charts/themes';
 
 import {
-  getDefaultEuiMarkdownParsingPlugins,
-  getDefaultEuiMarkdownProcessingPlugins,
-  EuiMarkdownEditor,
-  EuiMarkdownFormat,
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiModalHeader,
-  EuiModalHeaderTitle,
-  EuiModalBody,
-  EuiModalFooter,
-  EuiButton,
-  EuiButtonEmpty,
-  EuiForm,
-  EuiFormRow,
-  EuiColorPalettePicker,
-  EuiRange,
-  EuiText,
-  EuiFlexGroup,
-  EuiFlexItem,
+  getDefaultOuiMarkdownParsingPlugins,
+  getDefaultOuiMarkdownProcessingPlugins,
+  OuiMarkdownEditor,
+  OuiMarkdownFormat,
+  OuiSpacer,
+  OuiCodeBlock,
+  OuiModalHeader,
+  OuiModalHeaderTitle,
+  OuiModalBody,
+  OuiModalFooter,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiForm,
+  OuiFormRow,
+  OuiColorPalettePicker,
+  OuiRange,
+  OuiText,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 import {
-  euiPaletteComplimentary,
-  euiPaletteCool,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteGray,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteWarm,
+  ouiPaletteComplimentary,
+  ouiPaletteCool,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteGray,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteWarm,
 } from '../../../../src/services/color';
-import { getDefaultEuiMarkdownUiPlugins } from '../../../../src/components/markdown_editor';
+import { getDefaultOuiMarkdownUiPlugins } from '../../../../src/components/markdown_editor';
 
 const paletteData = {
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteComplimentary,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteGray,
 };
 
 const paletteNames = Object.keys(paletteData);
@@ -68,11 +79,11 @@ const chartDemoPlugin = {
   },
   helpText: (
     <div>
-      <EuiCodeBlock language="md" fontSize="l" paddingSize="s" isCopyable>
+      <OuiCodeBlock language="md" fontSize="l" paddingSize="s" isCopyable>
         {'!{chart{options}}'}
-      </EuiCodeBlock>
-      <EuiSpacer size="s" />
-      <EuiText size="xs" style={{ marginLeft: 16 }}>
+      </OuiCodeBlock>
+      <OuiSpacer size="s" />
+      <OuiText size="xs" style={{ marginLeft: 16 }}>
         <p>Where options can contain:</p>
         <ul>
           <li>
@@ -83,7 +94,7 @@ const chartDemoPlugin = {
             The number of categories per column
           </li>
         </ul>
-      </EuiText>
+      </OuiText>
     </div>
   ),
   editor: function ChartEditor({ node, onSave, onCancel }) {
@@ -105,27 +116,27 @@ const chartDemoPlugin = {
 
     return (
       <>
-        <EuiModalHeader>
-          <EuiModalHeaderTitle>Add chart</EuiModalHeaderTitle>
-        </EuiModalHeader>
+        <OuiModalHeader>
+          <OuiModalHeaderTitle>Add chart</OuiModalHeaderTitle>
+        </OuiModalHeader>
 
-        <EuiModalBody>
+        <OuiModalBody>
           <>
-            <EuiForm component="form">
-              <EuiFlexGroup gutterSize="m" style={{ width: 600 }}>
-                <EuiFlexItem>
-                  <EuiFormRow label="Palette">
-                    <EuiColorPalettePicker
+            <OuiForm component="form">
+              <OuiFlexGroup gutterSize="m" style={{ width: 600 }}>
+                <OuiFlexItem>
+                  <OuiFormRow label="Palette">
+                    <OuiColorPalettePicker
                       palettes={palettes}
                       onChange={setPalette}
                       value={palette}
                       compressed
                     />
-                  </EuiFormRow>
-                </EuiFlexItem>
-                <EuiFlexItem>
-                  <EuiFormRow label="Categories">
-                    <EuiRange
+                  </OuiFormRow>
+                </OuiFlexItem>
+                <OuiFlexItem>
+                  <OuiFormRow label="Categories">
+                    <OuiRange
                       value={categories}
                       onChange={onChange}
                       min={1}
@@ -133,19 +144,19 @@ const chartDemoPlugin = {
                       compressed
                       showValue
                     />
-                  </EuiFormRow>
-                </EuiFlexItem>
-              </EuiFlexGroup>
-            </EuiForm>
-            <EuiSpacer />
+                  </OuiFormRow>
+                </OuiFlexItem>
+              </OuiFlexGroup>
+            </OuiForm>
+            <OuiSpacer />
             <ChartMarkdownRenderer palette={palette} categories={categories} />
           </>
-        </EuiModalBody>
+        </OuiModalBody>
 
-        <EuiModalFooter>
-          <EuiButtonEmpty onClick={onCancel}>Cancel</EuiButtonEmpty>
+        <OuiModalFooter>
+          <OuiButtonEmpty onClick={onCancel}>Cancel</OuiButtonEmpty>
 
-          <EuiButton
+          <OuiButton
             onClick={() =>
               onSave(`!{chart${JSON.stringify({ palette, categories })}}`, {
                 block: true,
@@ -153,8 +164,8 @@ const chartDemoPlugin = {
             }
             fill>
             Save
-          </EuiButton>
-        </EuiModalFooter>
+          </OuiButton>
+        </OuiModalFooter>
       </>
     );
   },
@@ -237,7 +248,7 @@ const ChartMarkdownRenderer = ({ palette, categories }) => {
   return (
     <Chart size={{ height: 320 }}>
       <Settings
-        theme={[customColors, EUI_CHARTS_THEME_LIGHT]}
+        theme={[customColors, OUI_CHARTS_THEME_LIGHT]}
         showLegend={false}
         showLegendDisplayValue={false}
       />
@@ -256,13 +267,13 @@ const ChartMarkdownRenderer = ({ palette, categories }) => {
   );
 };
 
-const exampleParsingList = getDefaultEuiMarkdownParsingPlugins();
+const exampleParsingList = getDefaultOuiMarkdownParsingPlugins();
 exampleParsingList.push(ChartMarkdownParser);
 
-const exampleProcessingList = getDefaultEuiMarkdownProcessingPlugins();
+const exampleProcessingList = getDefaultOuiMarkdownProcessingPlugins();
 exampleProcessingList[1][1].components.chartDemoPlugin = ChartMarkdownRenderer;
 
-const exampleUiPlugins = getDefaultEuiMarkdownUiPlugins();
+const exampleUiPlugins = getDefaultOuiMarkdownUiPlugins();
 exampleUiPlugins.push(chartDemoPlugin);
 
 const initialExample = `## Chart plugin
@@ -285,8 +296,8 @@ export default () => {
   }, []);
   return (
     <>
-      <EuiMarkdownEditor
-        aria-label="EUI markdown editor with plugins demo"
+      <OuiMarkdownEditor
+        aria-label="OUI markdown editor with plugins demo"
         value={value}
         onChange={setValue}
         height={400}
@@ -296,23 +307,23 @@ export default () => {
         onParse={onParse}
         errors={messages}
       />
-      <EuiSpacer size="s" />
-      <div className="eui-textRight">
-        <EuiButton
+      <OuiSpacer size="s" />
+      <div className="oui-textRight">
+        <OuiButton
           size="s"
           iconType={isAstShowing ? 'eyeClosed' : 'eye'}
           onClick={() => setIsAstShowing(!isAstShowing)}
           fill={isAstShowing}>
           {isAstShowing ? 'Hide editor AST' : 'Show editor AST'}
-        </EuiButton>
+        </OuiButton>
       </div>
-      {isAstShowing && <EuiCodeBlock language="json">{ast}</EuiCodeBlock>}
+      {isAstShowing && <OuiCodeBlock language="json">{ast}</OuiCodeBlock>}
 
-      <EuiMarkdownFormat
+      <OuiMarkdownFormat
         parsingPluginList={exampleParsingList}
         processingPluginList={exampleProcessingList}>
         {value}
-      </EuiMarkdownFormat>
+      </OuiMarkdownFormat>
     </>
   );
 };

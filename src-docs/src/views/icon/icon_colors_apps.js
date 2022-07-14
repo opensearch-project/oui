@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import classNames from 'classnames';
 
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiIcon,
-  EuiPanel,
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiCopy,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiIcon,
+  OuiPanel,
+  OuiSpacer,
+  OuiCodeBlock,
+  OuiCopy,
 } from '../../../../src/components';
 
 const iconColors = [
@@ -29,16 +40,16 @@ const iconColors = [
 
 export default () => (
   <>
-    <EuiCodeBlock language="html" isCopyable paddingSize="m">
-      {'<EuiIcon type="gisApp" color="primary" />'}
-    </EuiCodeBlock>
-    <EuiSpacer />
-    <EuiFlexGrid direction="column" columns={3}>
+    <OuiCodeBlock language="html" isCopyable paddingSize="m">
+      {'<OuiIcon type="gisApp" color="primary" />'}
+    </OuiCodeBlock>
+    <OuiSpacer />
+    <OuiFlexGrid direction="column" columns={3}>
       {iconColors.map((iconColor) => (
-        <EuiFlexItem key={iconColor}>
-          <EuiCopy display="block" textToCopy={`color="${iconColor}"`}>
+        <OuiFlexItem key={iconColor}>
+          <OuiCopy display="block" textToCopy={`color="${iconColor}"`}>
             {(copy) => (
-              <EuiPanel
+              <OuiPanel
                 hasShadow={false}
                 hasBorder={false}
                 onClick={copy}
@@ -46,13 +57,13 @@ export default () => (
                   guideDemo__ghostBackground: iconColor === 'ghost',
                 })}
                 paddingSize="s">
-                <EuiIcon type="gisApp" color={iconColor} />
+                <OuiIcon type="gisApp" color={iconColor} />
                 &emsp; <small>{iconColor}</small>
-              </EuiPanel>
+              </OuiPanel>
             )}
-          </EuiCopy>
-        </EuiFlexItem>
+          </OuiCopy>
+        </OuiFlexItem>
       ))}
-    </EuiFlexGrid>
+    </OuiFlexGrid>
   </>
 );

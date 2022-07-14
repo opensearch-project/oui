@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,11 +28,11 @@
  * under the License.
  */
 
-export { EuiInputPopover, EuiInputPopoverProps } from './input_popover';
-export { EuiPopover, EuiPopoverProps, PopoverAnchorPosition } from './popover';
-export { EuiPopoverTitle, EuiPopoverTitleProps } from './popover_title';
-export { EuiPopoverFooter, EuiPopoverFooterProps } from './popover_footer';
+export { OuiInputPopover, OuiInputPopoverProps } from './input_popover';
+export { OuiPopover, OuiPopoverProps, PopoverAnchorPosition } from './popover';
+export { OuiPopoverTitle, OuiPopoverTitleProps } from './popover_title';
+export { OuiPopoverFooter, OuiPopoverFooterProps } from './popover_footer';
 export {
-  EuiWrappingPopover,
-  EuiWrappingPopoverProps,
+  OuiWrappingPopover,
+  OuiWrappingPopoverProps,
 } from './wrapping_popover';

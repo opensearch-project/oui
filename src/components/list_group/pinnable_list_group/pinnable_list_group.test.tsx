@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,11 +33,11 @@ import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
 import {
-  EuiPinnableListGroup,
-  EuiPinnableListGroupItemProps,
+  OuiPinnableListGroup,
+  OuiPinnableListGroupItemProps,
 } from './pinnable_list_group';
 
-const someListItems: EuiPinnableListGroupItemProps[] = [
+const someListItems: OuiPinnableListGroupItemProps[] = [
   {
     label: 'Label with iconType',
     iconType: 'stop',
@@ -62,10 +73,10 @@ const someListItems: EuiPinnableListGroupItemProps[] = [
   },
 ];
 
-describe('EuiPinnableListGroup', () => {
+describe('OuiPinnableListGroup', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiPinnableListGroup
+      <OuiPinnableListGroup
         {...requiredProps}
         listItems={someListItems}
         onPinClick={() => {}}
@@ -77,14 +88,14 @@ describe('EuiPinnableListGroup', () => {
 
   test('can have custom pin icon titles', () => {
     const component = render(
-      <EuiPinnableListGroup
+      <OuiPinnableListGroup
         {...requiredProps}
         listItems={someListItems}
         onPinClick={() => {}}
-        pinTitle={(item: EuiPinnableListGroupItemProps) =>
+        pinTitle={(item: OuiPinnableListGroupItemProps) =>
           `Pin ${item.label} to the top`
         }
-        unpinTitle={(item: EuiPinnableListGroupItemProps) =>
+        unpinTitle={(item: OuiPinnableListGroupItemProps) =>
           `Unpin ${item.label} to the top`
         }
       />

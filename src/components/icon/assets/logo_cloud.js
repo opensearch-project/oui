@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import * as React from 'react';
 
-const EuiIconLogoCloud = ({ title, titleId, ...props }) => (
+const OuiIconLogoCloud = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -11,7 +22,7 @@ const EuiIconLogoCloud = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <g fill="none" fillRule="evenodd">
       <path
-        className="euiIcon__fillNegative"
+        className="ouiIcon__fillNegative"
         d="M12.37 18.352c.032-.01.066-.014.1-.023A6 6 0 0118 10V0C9.163 0 2 7.164 2 16c0 2.793.72 5.417 1.976 7.702a18.947 18.947 0 018.393-5.349"
       />
       <path
@@ -26,4 +37,4 @@ const EuiIconLogoCloud = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = EuiIconLogoCloud;
+export const icon = OuiIconLogoCloud;

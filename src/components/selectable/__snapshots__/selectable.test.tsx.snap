@@ -1,56 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSelectable is rendered 1`] = `
+exports[`OuiSelectable is rendered 1`] = `
 <div
-  class="euiSelectable testClass1 testClass2"
+  class="ouiSelectable testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiSelectable props allowExclusions 1`] = `
+exports[`OuiSelectable props allowExclusions 1`] = `
 <div
-  class="euiSelectable"
+  class="ouiSelectable"
 />
 `;
 
-exports[`EuiSelectable props height can be forced 1`] = `
+exports[`OuiSelectable props height can be forced 1`] = `
 <div
-  class="euiSelectable"
+  class="ouiSelectable"
 />
 `;
 
-exports[`EuiSelectable props height can be full 1`] = `
+exports[`OuiSelectable props height can be full 1`] = `
 <div
-  class="euiSelectable euiSelectable-fullHeight"
+  class="ouiSelectable ouiSelectable-fullHeight"
 />
 `;
 
-exports[`EuiSelectable props isLoading 1`] = `
+exports[`OuiSelectable props isLoading 1`] = `
 <div
-  class="euiSelectable"
+  class="ouiSelectable"
 />
 `;
 
-exports[`EuiSelectable props listProps 1`] = `
+exports[`OuiSelectable props listProps 1`] = `
 <div
-  class="euiSelectable"
+  class="ouiSelectable"
 />
 `;
 
-exports[`EuiSelectable props renderOption 1`] = `
+exports[`OuiSelectable props renderOption 1`] = `
 <div
-  class="euiSelectable"
+  class="ouiSelectable"
 />
 `;
 
-exports[`EuiSelectable props searchable 1`] = `
+exports[`OuiSelectable props searchable 1`] = `
 <div
-  class="euiSelectable"
+  class="ouiSelectable"
 />
 `;
 
-exports[`EuiSelectable props singleSelection 1`] = `
+exports[`OuiSelectable props singleSelection 1`] = `
 <div
-  class="euiSelectable"
+  class="ouiSelectable"
 />
 `;

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,10 +36,10 @@ import React, {
   ReactNode,
 } from 'react';
 import { CommonProps } from '../common';
-import { EuiTitle, EuiTitleProps, EuiTitleSize } from '../title';
-import { EuiStepNumber, EuiStepStatus } from './step_number';
+import { OuiTitle, OuiTitleProps, OuiTitleSize } from '../title';
+import { OuiStepNumber, OuiStepStatus } from './step_number';
 
-export interface EuiStepInterface {
+export interface OuiStepInterface {
   /**
    * ReactNode to render as this component's content
    */
@@ -45,18 +56,18 @@ export interface EuiStepInterface {
   /**
    * May replace the number provided in props.step with alternate styling.
    */
-  status?: EuiStepStatus;
+  status?: OuiStepStatus;
   /**
-   * Title sizing equivalent to EuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
+   * Title sizing equivalent to OuiTitle, but only `m`, `s` and `xs`. Defaults to `s`
    */
-  titleSize?: Exclude<EuiTitleProps['size'], 'xxxs' | 'xxs' | 'l'>;
+  titleSize?: Exclude<OuiTitleProps['size'], 'xxxs' | 'xxs' | 'l'>;
 }
 
-export type EuiStepProps = CommonProps &
+export type OuiStepProps = CommonProps &
   Omit<HTMLAttributes<HTMLDivElement>, 'title'> &
-  EuiStepInterface;
+  OuiStepInterface;
 
-export const EuiStep: FunctionComponent<EuiStepProps> = ({
+export const OuiStep: FunctionComponent<OuiStepProps> = ({
   className,
   children,
   headingElement = 'p',
@@ -67,33 +78,33 @@ export const EuiStep: FunctionComponent<EuiStepProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiStep',
+    'ouiStep',
     {
-      'euiStep--small': titleSize === 'xs',
-      'euiStep-isDisabled': status === 'disabled',
+      'ouiStep--small': titleSize === 'xs',
+      'ouiStep-isDisabled': status === 'disabled',
     },
     className
   );
-  const numberClasses = classNames('euiStep__circle', {
-    'euiStepNumber--small': titleSize === 'xs',
+  const numberClasses = classNames('ouiStep__circle', {
+    'ouiStepNumber--small': titleSize === 'xs',
   });
 
   return (
     <div className={classes} {...rest}>
-      <div className="euiStep__titleWrapper">
-        <EuiStepNumber
+      <div className="ouiStep__titleWrapper">
+        <OuiStepNumber
           className={numberClasses}
           number={step}
           status={status}
           titleSize={titleSize}
           isHollow={status === 'incomplete'}
         />
-        <EuiTitle size={titleSize as EuiTitleSize} className="euiStep__title">
+        <OuiTitle size={titleSize as OuiTitleSize} className="ouiStep__title">
           {createElement(headingElement, null, title)}
-        </EuiTitle>
+        </OuiTitle>
       </div>
 
-      <div className="euiStep__content">{children}</div>
+      <div className="ouiStep__content">{children}</div>
     </div>
   );
 };

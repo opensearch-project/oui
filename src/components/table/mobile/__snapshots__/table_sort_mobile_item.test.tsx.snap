@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTableSortMobileItem is rendered 1`] = `
+exports[`OuiTableSortMobileItem is rendered 1`] = `
 <button
   aria-label="aria-label"
-  class="euiContextMenuItem euiTableSortMobileItem testClass1 testClass2"
+  class="ouiContextMenuItem ouiTableSortMobileItem testClass1 testClass2"
   data-test-subj="test subject string"
   type="button"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenu__icon"
+      class="ouiContextMenu__icon"
       color="inherit"
-      data-euiicon-type="empty"
+      data-ouiicon-type="empty"
     />
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
   </span>
 </button>

@@ -1,0 +1,114 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFormControlLayout--group {
+  border-radius: $ouiFormControlBorderRadius;
+  background-color: $ouiFormInputGroupLabelBackground;
+
+  .ouiFormControlLayout__prepend:first-child {
+    @include ouiFormControlSideBorderRadius($ouiFormControlBorderRadius, $side: 'left', $internal: true);
+
+    [class*='ouiButton'] {
+      @include ouiFormControlSideBorderRadius($ouiFormControlBorderRadius, $side: 'left', $internal: true);
+    }
+  }
+
+  .ouiFormControlLayout__append:last-child {
+    @include ouiFormControlSideBorderRadius($ouiFormControlBorderRadius, $side: 'right', $internal: true);
+
+    [class*='ouiButton'] {
+      @include ouiFormControlSideBorderRadius($ouiFormControlBorderRadius, $side: 'right', $internal: true);
+    }
+  }
+
+  [class*='ouiButton']:focus {
+    @include ouiFocusRing(null, 'inner');
+  }
+
+  .ouiToolTipAnchor > .ouiIcon {
+    @include ouiFormControlSideBorderRadius($ouiFormControlBorderRadius, $side: 'right', $internal: true);
+  }
+
+  .ouiToolTipAnchor:first-child [class*='ouiButton'] {
+    @include ouiFormControlSideBorderRadius($ouiFormControlBorderRadius, $side: 'left', $internal: true);
+  }
+
+  .ouiToolTipAnchor:last-child {
+    [class*='ouiButton'],
+    .ouiText {
+      @include ouiFormControlSideBorderRadius($ouiFormControlBorderRadius, $side: 'right', $internal: true);
+    }
+  }
+
+  .ouiFormControlLayout__childrenWrapper:nth-child(2) [class*='ouiField'],
+  .ouiFormControlLayout__childrenWrapper:nth-child(3) [class*='ouiField'] {
+    border-radius: 0;
+  }
+
+  .ouiFormControlLayout__childrenWrapper:first-child .ouiSelect,
+  .ouiFormControlLayout__childrenWrapper:first-child [class*='ouiField'] {
+    @include ouiFormControlSideBorderRadius($ouiFormControlBorderRadius, $side: 'left');
+  }
+
+  .ouiFormControlLayout__childrenWrapper:last-child .ouiSelect,
+  .ouiFormControlLayout__childrenWrapper:last-child [class*='ouiField'] {
+    @include ouiFormControlSideBorderRadius($ouiFormControlBorderRadius, $side: 'right');
+  }
+
+  &.ouiFormControlLayout--compressed {
+    border-radius: $ouiFormControlCompressedBorderRadius;
+    background-color: $ouiFormInputGroupLabelBackground;
+
+    .ouiFormControlLayout__prepend:first-child {
+      @include ouiFormControlSideBorderRadius($ouiFormControlCompressedBorderRadius, $side: 'left', $internal: true);
+
+      [class*='ouiButton'] {
+        @include ouiFormControlSideBorderRadius($ouiFormControlCompressedBorderRadius, $side: 'left');
+      }
+    }
+
+    .ouiFormControlLayout__append:last-child {
+      @include ouiFormControlSideBorderRadius($ouiFormControlCompressedBorderRadius, $side: 'right', $internal: true);
+
+      [class*='ouiButton'] {
+        @include ouiFormControlSideBorderRadius($ouiFormControlCompressedBorderRadius, $side: 'right', $internal: true);
+      }
+    }
+
+    .ouiToolTipAnchor > .ouiIcon {
+      @include ouiFormControlSideBorderRadius($ouiFormControlCompressedBorderRadius, $side: 'right', $internal: true);
+    }
+
+    .ouiToolTipAnchor:first-child [class*='ouiButton'] {
+      @include ouiFormControlSideBorderRadius($ouiFormControlCompressedBorderRadius, $side: 'left', $internal: true);
+    }
+
+    .ouiToolTipAnchor:last-child [class*='ouiButton'],
+    .ouiToolTipAnchor:last-child .ouiText {
+      @include ouiFormControlSideBorderRadius($ouiFormControlCompressedBorderRadius, $side: 'right', $internal: true);
+    }
+
+    .ouiFormControlLayout__childrenWrapper:nth-child(2) [class*='ouiField'],
+    .ouiFormControlLayout__childrenWrapper:nth-child(3) [class*='ouiField'] {
+      border-radius: 0;
+    }
+
+    .ouiFormControlLayout__childrenWrapper:first-child .ouiSelect,
+    .ouiFormControlLayout__childrenWrapper:first-child [class*='ouiField'] {
+      @include ouiFormControlSideBorderRadius($ouiFormControlCompressedBorderRadius, $side: 'left', $internal: true);
+    }
+
+    .ouiFormControlLayout__childrenWrapper:last-child .ouiSelect,
+    .ouiFormControlLayout__childrenWrapper:last-child [class*='ouiField'] {
+      @include ouiFormControlSideBorderRadius($ouiFormControlCompressedBorderRadius, $side: 'right', $internal: true);
+    }
+  }
+}

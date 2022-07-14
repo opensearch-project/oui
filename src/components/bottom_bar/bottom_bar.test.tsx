@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,7 +35,7 @@ import { keysOf } from '../common';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
 import {
-  EuiBottomBar,
+  OuiBottomBar,
   paddingSizeToClassNameMap,
   POSITIONS,
 } from './bottom_bar';
@@ -37,10 +48,10 @@ ReactDOM.createPortal = (children) => {
   return children;
 };
 
-describe('EuiBottomBar', () => {
+describe('OuiBottomBar', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiBottomBar {...requiredProps}>Content</EuiBottomBar>
+      <OuiBottomBar {...requiredProps}>Content</OuiBottomBar>
     );
 
     expect(component).toMatchSnapshot();
@@ -50,7 +61,7 @@ describe('EuiBottomBar', () => {
     describe('paddingSize', () => {
       keysOf(paddingSizeToClassNameMap).forEach((paddingSize) => {
         test(`${paddingSize} is rendered`, () => {
-          const component = render(<EuiBottomBar paddingSize={paddingSize} />);
+          const component = render(<OuiBottomBar paddingSize={paddingSize} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -60,7 +71,7 @@ describe('EuiBottomBar', () => {
     describe('position', () => {
       POSITIONS.forEach((position) => {
         test(`${position} is rendered`, () => {
-          const component = render(<EuiBottomBar position={position} />);
+          const component = render(<OuiBottomBar position={position} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -69,40 +80,40 @@ describe('EuiBottomBar', () => {
 
     test('landmarkHeading', () => {
       const component = render(
-        <EuiBottomBar landmarkHeading="This should have been label" />
+        <OuiBottomBar landmarkHeading="This should have been label" />
       );
 
       expect(component).toMatchSnapshot();
     });
 
     test('affordForDisplacement can be false', () => {
-      const component = render(<EuiBottomBar affordForDisplacement={false} />);
+      const component = render(<OuiBottomBar affordForDisplacement={false} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('usePortal can be false', () => {
-      const component = render(<EuiBottomBar usePortal={false} />);
+      const component = render(<OuiBottomBar usePortal={false} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('bodyClassName is rendered', () => {
-      const component = mount(<EuiBottomBar bodyClassName={'customClass'} />);
+      const component = mount(<OuiBottomBar bodyClassName={'customClass'} />);
 
       expect(takeMountedSnapshot(component)).toMatchSnapshot();
       expect(document.body.classList.contains('customClass')).toBe(true);
     });
 
     test('style is customized', () => {
-      const component = render(<EuiBottomBar style={{ left: 12 }} />);
+      const component = render(<OuiBottomBar style={{ left: 12 }} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('position props are altered', () => {
       const component = render(
-        <EuiBottomBar top={30} right={30} bottom={30} left={30} />
+        <OuiBottomBar top={30} right={30} bottom={30} left={30} />
       );
 
       expect(component).toMatchSnapshot();

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -30,7 +41,7 @@ import { CommonProps } from '../common';
  */
 export type FocusTarget = HTMLElement | string | (() => HTMLElement);
 
-interface EuiFocusTrapInterface {
+interface OuiFocusTrapInterface {
   /**
    * Clicking outside the trap area will disable the trap
    */
@@ -43,16 +54,16 @@ interface EuiFocusTrapInterface {
   disabled?: boolean;
 }
 
-export interface EuiFocusTrapProps
+export interface OuiFocusTrapProps
   extends CommonProps,
     Omit<ReactFocusOnProps, 'enabled'>, // Inverted `disabled` prop used instead
-    EuiFocusTrapInterface {}
+    OuiFocusTrapInterface {}
 
 interface State {
   hasBeenDisabledByClick: boolean;
 }
 
-export class EuiFocusTrap extends Component<EuiFocusTrapProps, State> {
+export class OuiFocusTrap extends Component<OuiFocusTrapProps, State> {
   static defaultProps = {
     clickOutsideDisables: false,
     disabled: false,
@@ -72,7 +83,7 @@ export class EuiFocusTrap extends Component<EuiFocusTrapProps, State> {
     this.setInitialFocus(this.props.initialFocus);
   }
 
-  componentDidUpdate(prevProps: EuiFocusTrapProps) {
+  componentDidUpdate(prevProps: OuiFocusTrapProps) {
     if (prevProps.disabled === true && this.props.disabled === false) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({ hasBeenDisabledByClick: false });

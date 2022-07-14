@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiButtonEmpty,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiMutationObserver,
-  EuiPanel,
-  EuiSpacer,
+  OuiButton,
+  OuiButtonEmpty,
+  OuiFlexItem,
+  OuiFlexGroup,
+  OuiMutationObserver,
+  OuiPanel,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export const MutationObserver = () => {
@@ -33,38 +44,38 @@ export const MutationObserver = () => {
     <div>
       <p>{lastMutation}</p>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiMutationObserver
+      <OuiMutationObserver
         observerOptions={{ subtree: true, attributes: true, childList: true }}
         onMutation={onMutation}>
         {(mutationRef) => (
           <div ref={mutationRef}>
-            <EuiButton
+            <OuiButton
               color={buttonColor}
               fill={true}
               onClick={toggleButtonColor}>
               Toggle button color
-            </EuiButton>
+            </OuiButton>
 
-            <EuiSpacer />
+            <OuiSpacer />
 
-            <EuiFlexGroup>
-              <EuiFlexItem grow={false}>
-                <EuiPanel grow={false}>
+            <OuiFlexGroup>
+              <OuiFlexItem grow={false}>
+                <OuiPanel grow={false}>
                   <ul>
                     {items.map((item) => (
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
-                  <EuiSpacer size="s" />
-                  <EuiButtonEmpty onClick={addItem}>add item</EuiButtonEmpty>
-                </EuiPanel>
-              </EuiFlexItem>
-            </EuiFlexGroup>
+                  <OuiSpacer size="s" />
+                  <OuiButtonEmpty onClick={addItem}>add item</OuiButtonEmpty>
+                </OuiPanel>
+              </OuiFlexItem>
+            </OuiFlexGroup>
           </div>
         )}
-      </EuiMutationObserver>
+      </OuiMutationObserver>
     </div>
   );
 };

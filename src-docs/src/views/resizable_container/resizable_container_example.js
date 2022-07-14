@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,16 +17,16 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiCode,
-  EuiCodeBlock,
-  EuiLink,
-  EuiResizableContainer,
-  EuiText,
+  OuiCallOut,
+  OuiCode,
+  OuiCodeBlock,
+  OuiLink,
+  OuiResizableContainer,
+  OuiText,
 } from '../../../../src/components';
 // eslint-disable-next-line
-import { EuiResizablePanel } from '../../../../src/components/resizable_container/resizable_panel';
-import { EuiResizableButton } from '../../../../src/components/resizable_container/resizable_button';
+import { OuiResizablePanel } from '../../../../src/components/resizable_container/resizable_panel';
+import { OuiResizableButton } from '../../../../src/components/resizable_container/resizable_button';
 
 // eslint-disable-next-line
 import { ModeOptions, ToggleOptions } from '!!prop-loader!../../../../src/components/resizable_container/resizable_panel';
@@ -40,101 +51,101 @@ const ResizablePanelCollapsibleOptsSource = require('!!raw-loader!./resizable_pa
 const ResizablePanelCollapsibleExtSource = require('!!raw-loader!./resizable_panel_collapsible_external');
 
 const ResizableContainerHtml = renderToHtml(ResizableContainerBasic);
-const basicSnippet = `<EuiResizableContainer>
-  {(EuiResizablePanel, EuiResizableButton) => (
+const basicSnippet = `<OuiResizableContainer>
+  {(OuiResizablePanel, OuiResizableButton) => (
     <>
-      <EuiResizablePanel initialSize={50} minSize="200px">
+      <OuiResizablePanel initialSize={50} minSize="200px">
         <!-- Left panel content -->
-      </EuiResizablePanel>
+      </OuiResizablePanel>
 
-      <EuiResizableButton />
+      <OuiResizableButton />
 
-      <EuiResizablePanel initialSize={50} minSize="200px">
+      <OuiResizablePanel initialSize={50} minSize="200px">
         <!-- Right panel content -->
-      </EuiResizablePanel>
+      </OuiResizablePanel>
     </>
   )}
-</EuiResizableContainer>`;
+</OuiResizableContainer>`;
 
 const ResizablePanelsHtml = renderToHtml(ResizablePanels);
-const panelsSnippet = `<EuiResizablePanel color="subdued" paddingSize="none" wrapperPadding="m">
-  <EuiText>
+const panelsSnippet = `<OuiResizablePanel color="subdued" paddingSize="none" wrapperPadding="m">
+  <OuiText>
     <p>{text}</p>
-  </EuiText>
-</EuiResizablePanel>`;
+  </OuiText>
+</OuiResizablePanel>`;
 
 const ResizableContainerVerticalHtml = renderToHtml(ResizableContainerVertical);
-const verticalSnippet = `<EuiResizableContainer direction="vertical">
-  {(EuiResizablePanel, EuiResizableButton) => (
+const verticalSnippet = `<OuiResizableContainer direction="vertical">
+  {(OuiResizablePanel, OuiResizableButton) => (
     <>
-      <EuiResizablePanel initialSize={50} minSize="20%">
-        <EuiText>
+      <OuiResizablePanel initialSize={50} minSize="20%">
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
 
-      <EuiResizableButton />
+      <OuiResizableButton />
 
-      <EuiResizablePanel initialSize={50} minSize="20%">
-        <EuiText>
+      <OuiResizablePanel initialSize={50} minSize="20%">
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
     </>
   )}
-</EuiResizableContainer>`;
+</OuiResizableContainer>`;
 const ResizableContainerResetValuesHtml = renderToHtml(
   ResizableContainerResetValues
 );
 const ResizablePanelCollapsibleHtml = renderToHtml(ResizablePanelCollapsible);
-const collapsibleSnippet = `<EuiResizableContainer>
-  {(EuiResizablePanel, EuiResizableButton) => (
+const collapsibleSnippet = `<OuiResizableContainer>
+  {(OuiResizablePanel, OuiResizableButton) => (
     <>
-      <EuiResizablePanel mode="collapsible" initialSize={20} minSize="5px">
-        <EuiText>
+      <OuiResizablePanel mode="collapsible" initialSize={20} minSize="5px">
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
 
-      <EuiResizableButton />
+      <OuiResizableButton />
 
-      <EuiResizablePanel mode="main" initialSize={80} minSize="200px">
-        <EuiText>
+      <OuiResizablePanel mode="main" initialSize={80} minSize="200px">
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
     </>
   )}
-</EuiResizableContainer>`;
+</OuiResizableContainer>`;
 const ResizablePanelCollapsibleResponsiveHtml = renderToHtml(
   ResizablePanelCollapsibleResponsive
 );
-const responsiveSnippet = `<EuiResizableContainer direction={isMobile ? 'vertical' : 'horizontal'}>
-  {(EuiResizablePanel, EuiResizableButton) => (
+const responsiveSnippet = `<OuiResizableContainer direction={isMobile ? 'vertical' : 'horizontal'}>
+  {(OuiResizablePanel, OuiResizableButton) => (
     <>
-      <EuiResizablePanel mode="collapsible" initialSize={20} minSize="5px">
-        <EuiText>
+      <OuiResizablePanel mode="collapsible" initialSize={20} minSize="5px">
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
 
-      <EuiResizableButton />
+      <OuiResizableButton />
 
-      <EuiResizablePanel mode="main" initialSize={80} minSize="200px">
-        <EuiText>
+      <OuiResizablePanel mode="main" initialSize={80} minSize="200px">
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
     </>
   )}
-</EuiResizableContainer>`;
+</OuiResizableContainer>`;
 const ResizablePanelCollapsibleOptsHtml = renderToHtml(
   ResizablePanelCollapsibleOpts
 );
-const collapsibleOptsSnippet = `<EuiResizableContainer style={{ height: '400px' }}>
-  {(EuiResizablePanel, EuiResizableButton) => (
+const collapsibleOptsSnippet = `<OuiResizableContainer style={{ height: '400px' }}>
+  {(OuiResizablePanel, OuiResizableButton) => (
     <>
-      <EuiResizablePanel mode={['collapsible', {
+      <OuiResizablePanel mode={['collapsible', {
           className: 'panel-toggle',
           'data-test-subj: 'test',
           position: 'top'
@@ -142,64 +153,64 @@ const collapsibleOptsSnippet = `<EuiResizableContainer style={{ height: '400px' 
         initialSize={20}
         minSize="5px"
       >
-        <EuiText>
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
 
-      <EuiResizableButton />
+      <OuiResizableButton />
 
-      <EuiResizablePanel mode="main" initialSize={80} minSize="200px">
-        <EuiText>
+      <OuiResizablePanel mode="main" initialSize={80} minSize="200px">
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
     </>
   )}
-</EuiResizableContainer>`;
+</OuiResizableContainer>`;
 const ResizablePanelCollapsibleExtHtml = renderToHtml(
   ResizablePanelCollapsibleExt
 );
-const collapsibleExtSnippet = `<EuiResizableContainer style={{ height: '400px' }}>
-  {(EuiResizablePanel, EuiResizableButton, {togglePanel}) => (
+const collapsibleExtSnippet = `<OuiResizableContainer style={{ height: '400px' }}>
+  {(OuiResizablePanel, OuiResizableButton, {togglePanel}) => (
     <>
-      <EuiResizablePanel initialSize={20} minSize="5px">
-        <EuiText>
+      <OuiResizablePanel initialSize={20} minSize="5px">
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
 
-      <EuiResizableButton />
+      <OuiResizableButton />
 
-      <EuiResizablePanel initialSize={80} minSize="200px">
-        <EuiText>
+      <OuiResizablePanel initialSize={80} minSize="200px">
+        <OuiText>
           <p>{text}</p>
-        </EuiText>
-      </EuiResizablePanel>
+        </OuiText>
+      </OuiResizablePanel>
     </>
   )}
-</EuiResizableContainer>`;
+</OuiResizableContainer>`;
 
 export const ResizableContainerExample = {
   title: 'Resizable container',
   intro: (
-    <EuiText>
+    <OuiText>
       <p>
         This component is handy for various resizable containers.{' '}
-        <strong>EuiResizableContainer</strong> uses the{' '}
-        <EuiLink
+        <strong>OuiResizableContainer</strong> uses the{' '}
+        <OuiLink
           href="https://reactjs.org/docs/render-props.html#using-props-other-than-render"
           external>
           React Render Props
-        </EuiLink>{' '}
-        technique to provide <strong>EuiResizablePanel</strong> and{' '}
-        <strong>EuiResizableButton</strong> components for layout, and{' '}
-        <EuiCode>actions</EuiCode> for custom handling collapse and resize
+        </OuiLink>{' '}
+        technique to provide <strong>OuiResizablePanel</strong> and{' '}
+        <strong>OuiResizableButton</strong> components for layout, and{' '}
+        <OuiCode>actions</OuiCode> for custom handling collapse and resize
         functionality in your app. Wrap parts of your content with the{' '}
-        <strong>EuiResizablePanel</strong> component and put the{' '}
-        <strong>EuiResizableButton</strong> component between.
+        <strong>OuiResizablePanel</strong> component and put the{' '}
+        <strong>OuiResizableButton</strong> component between.
       </p>
-    </EuiText>
+    </OuiText>
   ),
   sections: [
     {
@@ -226,21 +237,21 @@ export const ResizableContainerExample = {
           </p>
           <ul>
             <li>
-              add <EuiCode>initialSize</EuiCode> in percents to each panel to
+              add <OuiCode>initialSize</OuiCode> in percents to each panel to
               specify the initial size of it. Other calculations will be
               encapsulated, you don&#39;t worry about it.
             </li>
             <li>
-              add <EuiCode>scrollable=false</EuiCode> prop to a panel to
+              add <OuiCode>scrollable=false</OuiCode> prop to a panel to
               eliminate overflow scrolling
             </li>
           </ul>
         </div>
       ),
       props: {
-        EuiResizableContainer,
-        EuiResizablePanel,
-        EuiResizableButton,
+        OuiResizableContainer,
+        OuiResizablePanel,
+        OuiResizableButton,
       },
       snippet: basicSnippet,
       demo: <ResizableContainerBasic />,
@@ -260,23 +271,23 @@ export const ResizableContainerExample = {
       text: (
         <div>
           <p>
-            Each <strong>EuiResizablePanel</strong> is simply an{' '}
-            <strong>EuiPanel</strong> wrapped with a{' '}
-            <EuiCode>{'<div>'}</EuiCode> for controlling the width. It stretches
+            Each <strong>OuiResizablePanel</strong> is simply an{' '}
+            <strong>OuiPanel</strong> wrapped with a{' '}
+            <OuiCode>{'<div>'}</OuiCode> for controlling the width. It stretches
             to fill its container and accepts all of the same{' '}
             <Link to="/layout/panel">
-              <strong>EuiPanel</strong>
+              <strong>OuiPanel</strong>
             </Link>{' '}
             props to style your panel.
           </p>
           <p>
-            The default props clear most of the <strong>EuiPanel</strong>{' '}
-            styles, but you can add them back in with <EuiCode>color</EuiCode>,{' '}
-            <EuiCode>hasShadow</EuiCode>, and <EuiCode>paddingSize</EuiCode>.
+            The default props clear most of the <strong>OuiPanel</strong>{' '}
+            styles, but you can add them back in with <OuiCode>color</OuiCode>,{' '}
+            <OuiCode>hasShadow</OuiCode>, and <OuiCode>paddingSize</OuiCode>.
           </p>
         </div>
       ),
-      props: { EuiResizablePanel },
+      props: { OuiResizablePanel },
       snippet: panelsSnippet,
       demo: <ResizablePanels />,
     },
@@ -297,25 +308,25 @@ export const ResizableContainerExample = {
           <p>
             Sometimes it&#39;s necessary to control panel sizes from the
             outside. For example to store sizes in{' '}
-            <EuiCode>localStorage</EuiCode> or change the layout with predefined
-            sizes. Here is the <EuiCode>onPanelWidthChange</EuiCode> and{' '}
-            <EuiCode>size</EuiCode> props for help. If you use such an approach,
-            you have to specify an <EuiCode>id</EuiCode> prop for each panel to
+            <OuiCode>localStorage</OuiCode> or change the layout with predefined
+            sizes. Here is the <OuiCode>onPanelWidthChange</OuiCode> and{' '}
+            <OuiCode>size</OuiCode> props for help. If you use such an approach,
+            you have to specify an <OuiCode>id</OuiCode> prop for each panel to
             track their sizes.
           </p>
 
-          <EuiCallOut title="Required properties" color="warning">
-            <EuiText size="s">
+          <OuiCallOut title="Required properties" color="warning">
+            <OuiText size="s">
               <p>
-                Either <EuiCode>initialSize</EuiCode> or <EuiCode>size</EuiCode>{' '}
-                must be specified. The <EuiCode>size</EuiCode> prop is for cases
+                Either <OuiCode>initialSize</OuiCode> or <OuiCode>size</OuiCode>{' '}
+                must be specified. The <OuiCode>size</OuiCode> prop is for cases
                 where a parent component will control sizing updates.
               </p>
-            </EuiText>
-          </EuiCallOut>
+            </OuiText>
+          </OuiCallOut>
         </div>
       ),
-      props: { EuiResizableContainer, EuiResizablePanel, EuiResizableButton },
+      props: { OuiResizableContainer, OuiResizablePanel, OuiResizableButton },
       demo: <ResizableContainerResetValues />,
     },
     {
@@ -332,12 +343,12 @@ export const ResizableContainerExample = {
       title: 'Vertical resizing',
       text: (
         <p>
-          Set <EuiCode>direction=vertical</EuiCode> on{' '}
-          <strong>EuiResizableContainer</strong> to set a vertical orientation
+          Set <OuiCode>direction=vertical</OuiCode> on{' '}
+          <strong>OuiResizableContainer</strong> to set a vertical orientation
           of the resizable panels.
         </p>
       ),
-      props: { EuiResizableContainer, EuiResizablePanel, EuiResizableButton },
+      props: { OuiResizableContainer, OuiResizablePanel, OuiResizableButton },
       demo: <ResizableContainerVertical />,
       snippet: verticalSnippet,
     },
@@ -363,22 +374,22 @@ export const ResizableContainerExample = {
             action panel to allow more focus on the primary display panel.
           </p>
           <p>
-            Use the <EuiCode>mode</EuiCode> prop on an{' '}
-            <strong>EuiResizablePanel</strong> to mark it as{' '}
-            <EuiCode>collapsible</EuiCode> or <EuiCode>main</EuiCode>. From the
-            provided <EuiCode>mode</EuiCode> configuration, the{' '}
-            <strong>EuiResizableContainer</strong> will determine placement of
+            Use the <OuiCode>mode</OuiCode> prop on an{' '}
+            <strong>OuiResizablePanel</strong> to mark it as{' '}
+            <OuiCode>collapsible</OuiCode> or <OuiCode>main</OuiCode>. From the
+            provided <OuiCode>mode</OuiCode> configuration, the{' '}
+            <strong>OuiResizableContainer</strong> will determine placement of
             the toggle button and functionality of panel collapsing. To prevent
             empty states, not all panels can be{' '}
-            <EuiCode>mode=collapsible</EuiCode> (there must be at least one{' '}
-            <EuiCode>mode=main</EuiCode> panel).
+            <OuiCode>mode=collapsible</OuiCode> (there must be at least one{' '}
+            <OuiCode>mode=main</OuiCode> panel).
           </p>
         </div>
       ),
       props: {
-        EuiResizableContainer,
-        EuiResizablePanel,
-        EuiResizableButton,
+        OuiResizableContainer,
+        OuiResizablePanel,
+        OuiResizableButton,
         ModeOptions,
         PanelModeType,
         ToggleOptions,
@@ -402,7 +413,7 @@ export const ResizableContainerExample = {
         <div>
           <p>
             It is possible to dynamically change the{' '}
-            <EuiCode>direction</EuiCode> prop to allow for adapting layouts to
+            <OuiCode>direction</OuiCode> prop to allow for adapting layouts to
             screen size. Resize the window to see the panel orientation change.
           </p>
         </div>
@@ -425,18 +436,18 @@ export const ResizableContainerExample = {
       text: (
         <div>
           <p>
-            An <strong>EuiResizablePanel</strong> marked as{' '}
-            <EuiCode language="ts">{"mode={['collapsible']}"}</EuiCode> also
+            An <strong>OuiResizablePanel</strong> marked as{' '}
+            <OuiCode language="ts">{"mode={['collapsible']}"}</OuiCode> also
             accepts configuration options for the collapsible button by passing
             a second parameter, in the form of:
           </p>
-          <EuiCodeBlock language="js" isCopyable>
+          <OuiCodeBlock language="js" isCopyable>
             {`mode={['collapsible', {
   'data-test-subj': 'panel-1-toggle',
   className: 'panel-toggle',
   position: 'top',
 }]}`}
-          </EuiCodeBlock>
+          </OuiCodeBlock>
         </div>
       ),
       demo: <ResizablePanelCollapsibleOpts />,
@@ -457,14 +468,14 @@ export const ResizableContainerExample = {
       text: (
         <div>
           <p>
-            <strong>EuiResizableContainer</strong> also provides action hooks
+            <strong>OuiResizableContainer</strong> also provides action hooks
             for parent components to access internal methods, such as{' '}
-            <strong>EuiResizablePanel</strong> collapse toggling. The actions
+            <strong>OuiResizablePanel</strong> collapse toggling. The actions
             are accessible via the third parameter of the render prop function.
           </p>
           <p>
             Note that when bypassing internal{' '}
-            <strong>EuiResizableContainer</strong> logic, it is possible to
+            <strong>OuiResizableContainer</strong> logic, it is possible to
             create situations that would otherwise be prevented. For instance,
             allowing all panels to be collapsed creates a scenerio where your
             app will need to account for empty state and accesibility in regards
@@ -474,13 +485,13 @@ export const ResizableContainerExample = {
           <p>
             You can also provide an external collapse button for custom
             placement and look within your panel with{' '}
-            <EuiCode language="ts">{"mode={['custom']}"}</EuiCode>. When
+            <OuiCode language="ts">{"mode={['custom']}"}</OuiCode>. When
             collapsed, however, the default collapsed button will be used for
             users to uncollapse the panel.
           </p>
           <p>
             For consistency, we recommend the usage of the{' '}
-            <EuiCode>menuLeft</EuiCode>, <EuiCode>menuRight</EuiCode>, etc, icon
+            <OuiCode>menuLeft</OuiCode>, <OuiCode>menuRight</OuiCode>, etc, icon
             types.
           </p>
         </div>

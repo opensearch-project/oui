@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,19 +29,19 @@
  */
 
 export {
-  EuiDragDropContext,
-  EuiDragDropContextProps,
+  OuiDragDropContext,
+  OuiDragDropContextProps,
 } from './drag_drop_context';
-export { EuiDraggable, EuiDraggableProps } from './draggable';
-export { EuiDroppable, EuiDroppableProps } from './droppable';
+export { OuiDraggable, OuiDraggableProps } from './draggable';
+export { OuiDroppable, OuiDroppableProps } from './droppable';
 export {
-  euiDragDropCopy,
-  euiDragDropMove,
-  euiDragDropReorder,
+  ouiDragDropCopy,
+  ouiDragDropMove,
+  ouiDragDropReorder,
 } from './services';
 
-// Interfaces in react-beautiful-dnd that EUI abstracts over
-// allows consumers to pull these from EUI instead of react-beautiful-dnd
+// Interfaces in react-beautiful-dnd that OUI abstracts over
+// allows consumers to pull these from OUI instead of react-beautiful-dnd
 export {
   DraggableLocation,
   DraggableProps,

@@ -1,69 +1,80 @@
-.euiTour--minWidth-default {
-  min-width: $euiSizeL * 10;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiTour--minWidth-default {
+  min-width: $ouiSizeL * 10;
 }
 
-.euiTourHeader {
+.ouiTourHeader {
   border-bottom: none;
-  // Overriding default `EuiPopoverTitle` styles
-  margin-bottom: $euiSizeS !important; // sass-lint:disable-line no-important
+  // Overriding default `OuiPopoverTitle` styles
+  margin-bottom: $ouiSizeS !important; // sass-lint:disable-line no-important
 
 
-  .euiTourHeader__title { // nested for additional specificity to override EuiTitle styles
+  .ouiTourHeader__title { // nested for additional specificity to override OuiTitle styles
     margin-top: 0;
   }
 }
 
-.euiTourHeader__subtitle {
-  color: $euiColorDarkShade;
+.ouiTourHeader__subtitle {
+  color: $ouiColorDarkShade;
 }
 
-.euiTourFooter {
-  background-color: $euiColorLightestShade;
-  // Overriding default `EuiPopoverFooter` styles
-  margin-top: $euiSizeL !important; // sass-lint:disable-line no-important
+.ouiTourFooter {
+  background-color: $ouiColorLightestShade;
+  // Overriding default `OuiPopoverFooter` styles
+  margin-top: $ouiSizeL !important; // sass-lint:disable-line no-important
 }
 
-.euiTour {
-  .euiTour__beacon {
+.ouiTour {
+  .ouiTour__beacon {
     pointer-events: none;
     position: absolute;
     opacity: 0;
-    transition: opacity 0s $euiAnimSpeedSlow; // delay time equals EuiPopover animation time
+    transition: opacity 0s $ouiAnimSpeedSlow; // delay time equals OuiPopover animation time
   }
 
-  .euiPopover__panelArrow.euiPopover__panelArrow--right {
-    .euiTour__beacon {
+  .ouiPopover__panelArrow.ouiPopover__panelArrow--right {
+    .ouiTour__beacon {
       opacity: 1;
-      top: $euiPopoverArrowSize / 2;
-      left: -$euiPopoverArrowSize * 2;
+      top: $ouiPopoverArrowSize / 2;
+      left: -$ouiPopoverArrowSize * 2;
     }
   }
 
-  .euiPopover__panelArrow.euiPopover__panelArrow--left {
-    .euiTour__beacon {
+  .ouiPopover__panelArrow.ouiPopover__panelArrow--left {
+    .ouiTour__beacon {
       opacity: 1;
-      top: $euiPopoverArrowSize / 2;
-      left: $euiPopoverArrowSize;
+      top: $ouiPopoverArrowSize / 2;
+      left: $ouiPopoverArrowSize;
     }
   }
 
-  .euiPopover__panelArrow.euiPopover__panelArrow--top {
+  .ouiPopover__panelArrow.ouiPopover__panelArrow--top {
     &:after {
-      border-top-color: $euiColorLightestShade;
+      border-top-color: $ouiColorLightestShade;
     }
 
-    .euiTour__beacon {
+    .ouiTour__beacon {
       opacity: 1;
-      top: $euiPopoverArrowSize;
-      left: $euiPopoverArrowSize / 2;
+      top: $ouiPopoverArrowSize;
+      left: $ouiPopoverArrowSize / 2;
     }
   }
 
-  .euiPopover__panelArrow.euiPopover__panelArrow--bottom {
-    .euiTour__beacon {
+  .ouiPopover__panelArrow.ouiPopover__panelArrow--bottom {
+    .ouiTour__beacon {
       opacity: 1;
-      top: -$euiPopoverArrowSize * 2;
-      left: $euiPopoverArrowSize / 2;
+      top: -$ouiPopoverArrowSize * 2;
+      left: $ouiPopoverArrowSize / 2;
     }
   }
 }

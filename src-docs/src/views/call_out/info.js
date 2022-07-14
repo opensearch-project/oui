@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCallOut, EuiLink, EuiSpacer } from '../../../../src/components';
+import { OuiCallOut, OuiLink, OuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiCallOut
+    <OuiCallOut
       title="Check it out, here's a really long title that will wrap within a narrower browser"
       iconType="search">
       <p>
@@ -14,20 +25,20 @@ export default () => (
       </p>
       <p>
         And some other stuff on another line, just for kicks. And{' '}
-        <EuiLink href="#">here&rsquo;s a link</EuiLink>.
+        <OuiLink href="#">here&rsquo;s a link</OuiLink>.
       </p>
-    </EuiCallOut>
+    </OuiCallOut>
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiCallOut
+    <OuiCallOut
       title="Callouts can exist as just a title. Simply omit the child content."
       iconType="lensApp"
     />
 
-    <EuiSpacer size="m" />
+    <OuiSpacer size="m" />
 
-    <EuiCallOut
+    <OuiCallOut
       size="s"
       title="This is a small callout for more unintrusive but constant messages."
       iconType="pin"

@@ -1,7 +1,18 @@
-.euiMark {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiMark {
   background-color: transparent;
-  font-weight: $euiFontWeightBold;
+  font-weight: $ouiFontWeightBold;
   // Override the browser's black color.
   // Can't use `inherit` because the text to background color contrast may not be sufficient
-  color: $euiTextColor;
+  color: $ouiTextColor;
 }

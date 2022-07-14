@@ -1,33 +1,44 @@
-.euiFormControlLayoutIcons {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFormControlLayoutIcons {
   pointer-events: none;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: $euiFormControlPadding;
+  left: $ouiFormControlPadding;
   display: flex;
   align-items: center;
 
   > * + * {
-    margin-left: $euiFormControlPadding / 2;
+    margin-left: $ouiFormControlPadding / 2;
   }
 
-  .euiFormControlLayout--compressed & {
-    left: $euiFormControlCompressedPadding;
+  .ouiFormControlLayout--compressed & {
+    left: $ouiFormControlCompressedPadding;
   }
 }
 
-.euiFormControlLayoutIcons--right {
+.ouiFormControlLayoutIcons--right {
   left: auto;
-  right: $euiFormControlPadding;
+  right: $ouiFormControlPadding;
 
-  .euiFormControlLayout--compressed & {
+  .ouiFormControlLayout--compressed & {
     left: auto;
-    right: $euiFormControlCompressedPadding;
+    right: $ouiFormControlCompressedPadding;
   }
 }
 
 // If the control is disabled, change the color of the icons
-*:disabled + .euiFormControlLayoutIcons {
+*:disabled + .ouiFormControlLayoutIcons {
   cursor: not-allowed;
-  color: $euiFormControlDisabledColor;
+  color: $ouiFormControlDisabledColor;
 }

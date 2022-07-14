@@ -1,5 +1,16 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
-import { EuiBasicTable, EuiCode } from '../../../../../src/components';
+import { OuiBasicTable, OuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
@@ -22,12 +33,12 @@ export const section = {
   text: (
     <p>
       You can expand rows by passing in a{' '}
-      <EuiCode>itemIdToExpandedRowMap</EuiCode> prop which will contain the
+      <OuiCode>itemIdToExpandedRowMap</OuiCode> prop which will contain the
       content you want rendered inside the expanded row. When building out your
-      table manually (not using EuiBasicTable), you will also need to add the
-      prop <EuiCode>isExpandedRow</EuiCode> to the row that will be revealed.
+      table manually (not using OuiBasicTable), you will also need to add the
+      prop <OuiCode>isExpandedRow</OuiCode> to the row that will be revealed.
     </p>
   ),
-  components: { EuiBasicTable },
+  components: { OuiBasicTable },
   demo: <Table />,
 };

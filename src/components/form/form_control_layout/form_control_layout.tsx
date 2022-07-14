@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,18 +38,18 @@ import React, {
 import classNames from 'classnames';
 
 import {
-  EuiFormControlLayoutIcons,
-  EuiFormControlLayoutIconsProps,
+  OuiFormControlLayoutIcons,
+  OuiFormControlLayoutIconsProps,
 } from './form_control_layout_icons';
 import { CommonProps } from '../../common';
-import { EuiFormLabel } from '../form_label';
+import { OuiFormLabel } from '../form_label';
 
 export { ICON_SIDES } from './form_control_layout_icons';
 
 type StringOrReactElement = string | ReactElement;
 type PrependAppendType = StringOrReactElement | StringOrReactElement[];
 
-export type EuiFormControlLayoutProps = CommonProps &
+export type OuiFormControlLayoutProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     /**
      * Creates an input group with element(s) coming before children.
@@ -51,8 +62,8 @@ export type EuiFormControlLayoutProps = CommonProps &
      */
     append?: PrependAppendType;
     children?: ReactNode;
-    icon?: EuiFormControlLayoutIconsProps['icon'];
-    clear?: EuiFormControlLayoutIconsProps['clear'];
+    icon?: OuiFormControlLayoutIconsProps['icon'];
+    clear?: OuiFormControlLayoutIconsProps['clear'];
     fullWidth?: boolean;
     isLoading?: boolean;
     isDisabled?: boolean;
@@ -65,7 +76,7 @@ export type EuiFormControlLayoutProps = CommonProps &
     inputId?: string;
   };
 
-export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
+export class OuiFormControlLayout extends Component<OuiFormControlLayoutProps> {
   render() {
     const {
       children,
@@ -84,13 +95,13 @@ export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
     } = this.props;
 
     const classes = classNames(
-      'euiFormControlLayout',
+      'ouiFormControlLayout',
       {
-        'euiFormControlLayout--fullWidth': fullWidth,
-        'euiFormControlLayout--compressed': compressed,
-        'euiFormControlLayout--readOnly': readOnly,
-        'euiFormControlLayout--group': prepend || append,
-        'euiFormControlLayout-isDisabled': isDisabled,
+        'ouiFormControlLayout--fullWidth': fullWidth,
+        'ouiFormControlLayout--compressed': compressed,
+        'ouiFormControlLayout--readOnly': readOnly,
+        'ouiFormControlLayout--group': prepend || append,
+        'ouiFormControlLayout-isDisabled': isDisabled,
       },
       className
     );
@@ -101,10 +112,10 @@ export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
     return (
       <div className={classes} {...rest}>
         {prependNodes}
-        <div className="euiFormControlLayout__childrenWrapper">
+        <div className="ouiFormControlLayout__childrenWrapper">
           {children}
 
-          <EuiFormControlLayoutIcons
+          <OuiFormControlLayoutIcons
             icon={icon}
             clear={clear}
             compressed={compressed}
@@ -144,11 +155,11 @@ export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
     inputId?: string
   ) {
     return (
-      <EuiFormLabel
+      <OuiFormLabel
         htmlFor={inputId}
-        className={`euiFormControlLayout__${side}`}>
+        className={`ouiFormControlLayout__${side}`}>
         {string}
-      </EuiFormLabel>
+      </OuiFormLabel>
     );
   }
 
@@ -159,7 +170,7 @@ export class EuiFormControlLayout extends Component<EuiFormControlLayoutProps> {
   ) {
     return cloneElement(node, {
       className: classNames(
-        `euiFormControlLayout__${side}`,
+        `ouiFormControlLayout__${side}`,
         node.props.className
       ),
       key: key,

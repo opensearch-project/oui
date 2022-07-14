@@ -1,44 +1,55 @@
-.euiFilterSelectItem {
-  @include euiFontSizeS;
-  @include euiInteractiveStates;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-  padding: $euiSizeXS $euiSizeM;
+.ouiFilterSelectItem {
+  @include ouiFontSizeS;
+  @include ouiInteractiveStates;
+
+  padding: $ouiSizeXS $ouiSizeM;
   display: block; // Necessary to make sure it doesn't force the whole popover to be too wide
   width: 100%;
   text-align: left;
-  color: $euiTextColor;
-  border-bottom: $euiBorderThin;
-  border-color: darken($euiColorLightestShade, 2%);
-  outline-offset: -$euiFocusRingSize;
+  color: $ouiTextColor;
+  border-bottom: $ouiBorderThin;
+  border-color: darken($ouiColorLightestShade, 2%);
+  outline-offset: -$ouiFocusRingSize;
 
   &:focus,
   &-isFocused {
-    @include euiFocusBackground;
-    color: $euiColorPrimary;
+    @include ouiFocusBackground;
+    color: $ouiColorPrimary;
   }
 }
 
-.euiFilterSelectItem__content {
-  @include euiTextTruncate;
+.ouiFilterSelectItem__content {
+  @include ouiTextTruncate;
 }
 
 
-.euiFilterSelect__items {
-  @include euiScrollBar;
+.ouiFilterSelect__items {
+  @include ouiScrollBar;
 
   overflow-y: auto;
-  max-height: $euiSize * 30;
+  max-height: $ouiSize * 30;
 }
 
-.euiFilterSelect__note {
-  height: $euiSize * 4;
+.ouiFilterSelect__note {
+  height: $ouiSize * 4;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.euiFilterSelect__noteContent {
-  color: $euiColorDarkShade;
-  font-size: $euiFontSizeS;
+.ouiFilterSelect__noteContent {
+  color: $ouiColorDarkShade;
+  font-size: $ouiFontSizeS;
 }

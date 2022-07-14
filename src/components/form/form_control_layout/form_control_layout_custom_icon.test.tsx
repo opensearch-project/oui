@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,32 +31,32 @@
 import React from 'react';
 import { render } from 'enzyme';
 import {
-  EuiFormControlLayoutCustomIcon,
-  EuiFormControlLayoutCustomIconProps,
+  OuiFormControlLayoutCustomIcon,
+  OuiFormControlLayoutCustomIconProps,
 } from './form_control_layout_custom_icon';
 import { requiredProps } from '../../../test';
 
-describe('EuiFormControlLayoutCustomIcon', () => {
+describe('OuiFormControlLayoutCustomIcon', () => {
   test('is rendered as button', () => {
-    const props: EuiFormControlLayoutCustomIconProps = {
+    const props: OuiFormControlLayoutCustomIconProps = {
       onClick: () => null,
       type: 'alert',
       iconRef: 'icon',
     };
     const component = render(
-      <EuiFormControlLayoutCustomIcon {...props} {...requiredProps} />
+      <OuiFormControlLayoutCustomIcon {...props} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
   });
 
   test('is rendered as span', () => {
-    const props: EuiFormControlLayoutCustomIconProps = {
+    const props: OuiFormControlLayoutCustomIconProps = {
       type: 'alert',
       iconRef: 'icon',
     };
     const component = render(
-      <EuiFormControlLayoutCustomIcon {...props} {...requiredProps} />
+      <OuiFormControlLayoutCustomIcon {...props} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -53,7 +64,7 @@ describe('EuiFormControlLayoutCustomIcon', () => {
 
   test('size is rendered', () => {
     const component = render(
-      <EuiFormControlLayoutCustomIcon type="alert" size="s" />
+      <OuiFormControlLayoutCustomIcon type="alert" size="s" />
     );
 
     expect(component).toMatchSnapshot();

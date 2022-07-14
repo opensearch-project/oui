@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiLoadingSpinner } from '../../../../src/components/loading';
+import { OuiLoadingSpinner } from '../../../../src/components/loading';
 
 export default () => (
   <div>
-    <EuiLoadingSpinner size="s" />
+    <OuiLoadingSpinner size="s" />
     &nbsp;&nbsp;
-    <EuiLoadingSpinner size="m" />
+    <OuiLoadingSpinner size="m" />
     &nbsp;&nbsp;
-    <EuiLoadingSpinner size="l" />
+    <OuiLoadingSpinner size="l" />
     &nbsp;&nbsp;
-    <EuiLoadingSpinner size="xl" />
+    <OuiLoadingSpinner size="xl" />
   </div>
 );

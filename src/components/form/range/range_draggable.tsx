@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,7 +33,7 @@ import classNames from 'classnames';
 
 import { useMouseMove } from '../../../services';
 
-export interface EuiRangeDraggableProps
+export interface OuiRangeDraggableProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
   min: number;
   max: number;
@@ -35,7 +46,7 @@ export interface EuiRangeDraggableProps
   onChange: (x: number, isFirstInteraction?: boolean) => void;
 }
 
-export const EuiRangeDraggable: FunctionComponent<EuiRangeDraggableProps> = ({
+export const OuiRangeDraggable: FunctionComponent<OuiRangeDraggableProps> = ({
   className,
   showTicks,
   lowerPosition,
@@ -54,11 +65,11 @@ export const EuiRangeDraggable: FunctionComponent<EuiRangeDraggableProps> = ({
   };
 
   const classes = classNames(
-    'euiRangeDraggable',
+    'ouiRangeDraggable',
     {
-      'euiRangeDraggable--hasTicks': showTicks,
-      'euiRangeDraggable--compressed': compressed,
-      'euiRangeDraggable--disabled': disabled,
+      'ouiRangeDraggable--hasTicks': showTicks,
+      'ouiRangeDraggable--compressed': compressed,
+      'ouiRangeDraggable--disabled': disabled,
     },
     className
   );
@@ -87,7 +98,7 @@ export const EuiRangeDraggable: FunctionComponent<EuiRangeDraggableProps> = ({
   return (
     <div style={outerStyle} {...commonProps} {...rest}>
       <div
-        className="euiRangeDraggle__inner"
+        className="ouiRangeDraggle__inner"
         onMouseDown={handleMouseDown}
         onTouchStart={handleInteraction}
         onTouchMove={handleInteraction}

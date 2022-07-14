@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiMark is rendered 1`] = `
+exports[`OuiMark is rendered 1`] = `
 <mark
-  class="euiMark"
+  class="ouiMark"
 >
   Marked
 </mark>

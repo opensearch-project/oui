@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 import { times } from '../../../../src/services/utils';
 import { Random } from '../../../../src/services/random';
 import {
-  EuiHealth,
-  EuiCallOut,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSwitch,
-  EuiBasicTable,
-  EuiSearchBar,
-  EuiButton,
+  OuiHealth,
+  OuiCallOut,
+  OuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSwitch,
+  OuiBasicTable,
+  OuiSearchBar,
+  OuiButton,
 } from '../../../../src/components';
 
 const random = new Random();
@@ -50,7 +61,7 @@ const loadTags = () => {
       resolve(
         tags.map((tag) => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <OuiHealth color={tag.color}>{tag.name}</OuiHealth>,
         }))
       );
     }, 2000);
@@ -81,24 +92,24 @@ export const ControlledSearchBar = () => {
     return (
       <Fragment>
         <p>Enter a query, or select one from a bookmark</p>
-        <EuiSpacer size="s" />
-        <EuiFlexGroup>
-          <EuiFlexItem grow={false}>
-            <EuiButton
+        <OuiSpacer size="s" />
+        <OuiFlexGroup>
+          <OuiFlexItem grow={false}>
+            <OuiButton
               size="s"
               onClick={() => setQuery('status:open owner:dewey')}>
               mine, open
-            </EuiButton>
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiButton
+            </OuiButton>
+          </OuiFlexItem>
+          <OuiFlexItem grow={false}>
+            <OuiButton
               size="s"
               onClick={() => setQuery('status:closed owner:dewey')}>
               mine, closed
-            </EuiButton>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiSpacer size="m" />
+            </OuiButton>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+        <OuiSpacer size="m" />
       </Fragment>
     );
   };
@@ -184,7 +195,7 @@ export const ControlledSearchBar = () => {
     };
 
     return (
-      <EuiSearchBar
+      <OuiSearchBar
         query={query}
         box={{
           placeholder: 'e.g. type:visualization -is:active joe',
@@ -203,12 +214,12 @@ export const ControlledSearchBar = () => {
     }
     return (
       <Fragment>
-        <EuiCallOut
+        <OuiCallOut
           iconType="faceSad"
           color="danger"
           title={`Invalid search: ${error.message}`}
         />
-        <EuiSpacer size="l" />
+        <OuiSpacer size="l" />
       </Fragment>
     );
   };
@@ -252,36 +263,36 @@ export const ControlledSearchBar = () => {
       },
     ];
 
-    const queriedItems = EuiSearchBar.Query.execute(query, items, {
+    const queriedItems = OuiSearchBar.Query.execute(query, items, {
       defaultFields: ['owner', 'tag', 'type'],
     });
 
-    return <EuiBasicTable items={queriedItems} columns={columns} />;
+    return <OuiBasicTable items={queriedItems} columns={columns} />;
   };
 
   const content = renderError() || (
-    <EuiFlexGroup>
-      <EuiFlexItem grow={6}>{renderTable()}</EuiFlexItem>
-    </EuiFlexGroup>
+    <OuiFlexGroup>
+      <OuiFlexItem grow={6}>{renderTable()}</OuiFlexItem>
+    </OuiFlexGroup>
   );
 
   return (
     <Fragment>
-      <EuiFlexGroup>
-        <EuiFlexItem>{renderBookmarks()}</EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem>{renderSearch()}</EuiFlexItem>
+      <OuiFlexGroup>
+        <OuiFlexItem>{renderBookmarks()}</OuiFlexItem>
+      </OuiFlexGroup>
+      <OuiFlexGroup alignItems="center">
+        <OuiFlexItem>{renderSearch()}</OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label="Incremental"
             checked={incremental}
             onChange={toggleIncremental}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer size="l" />
+        </OuiFlexItem>
+      </OuiFlexGroup>
+      <OuiSpacer size="l" />
       {content}
     </Fragment>
   );

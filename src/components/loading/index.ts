@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,9 +28,9 @@
  * under the License.
  */
 
-export { EuiLoadingKibana, EuiLoadingKibanaProps } from './loading_kibana';
-export { EuiLoadingElastic, EuiLoadingElasticProps } from './loading_elastic';
-export { EuiLoadingChart, EuiLoadingChartProps } from './loading_chart';
-export { EuiLoadingContent, EuiLoadingContentProps } from './loading_content';
-export { EuiLoadingSpinner, EuiLoadingSpinnerProps } from './loading_spinner';
-export { EuiLoadingLogo, EuiLoadingLogoProps } from './loading_logo';
+export { OuiLoadingKibana, OuiLoadingKibanaProps } from './loading_kibana';
+export { OuiLoadingElastic, OuiLoadingElasticProps } from './loading_elastic';
+export { OuiLoadingChart, OuiLoadingChartProps } from './loading_chart';
+export { OuiLoadingContent, OuiLoadingContentProps } from './loading_content';
+export { OuiLoadingSpinner, OuiLoadingSpinnerProps } from './loading_spinner';
+export { OuiLoadingLogo, OuiLoadingLogoProps } from './loading_logo';

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,15 +36,15 @@ import React, {
 import moment from 'moment';
 import dateMath from '@elastic/datemath';
 import { htmlIdGenerator } from '../../../../services';
-import { EuiButton, EuiButtonIcon } from '../../../button';
-import { EuiFlexGroup, EuiFlexItem } from '../../../flex';
-import { EuiSpacer } from '../../../spacer';
-import { EuiSelect, EuiFieldNumber } from '../../../form';
-import { EuiToolTip } from '../../../tool_tip';
-import { EuiHorizontalRule } from '../../../horizontal_rule';
-import { EuiI18n } from '../../../i18n';
+import { OuiButton, OuiButtonIcon } from '../../../button';
+import { OuiFlexGroup, OuiFlexItem } from '../../../flex';
+import { OuiSpacer } from '../../../spacer';
+import { OuiSelect, OuiFieldNumber } from '../../../form';
+import { OuiToolTip } from '../../../tool_tip';
+import { OuiHorizontalRule } from '../../../horizontal_rule';
+import { OuiI18n } from '../../../i18n';
 import { timeUnits } from '../time_units';
-import { EuiScreenReaderOnly } from '../../../accessibility';
+import { OuiScreenReaderOnly } from '../../../accessibility';
 import { ApplyTime, QuickSelect, TimeUnitId } from '../../types';
 import { keysOf } from '../../../common';
 import { parseTimeParts } from './quick_select_utils';
@@ -49,20 +60,20 @@ const timeUnitsOptions = keysOf(timeUnits).map((key) => {
   return { value: key, text: `${timeUnits[key]}s` };
 });
 
-type EuiQuickSelectState = QuickSelect;
+type OuiQuickSelectState = QuickSelect;
 
-export interface EuiQuickSelectProps {
+export interface OuiQuickSelectProps {
   applyTime: ApplyTime;
   start: string;
   end: string;
-  prevQuickSelect?: EuiQuickSelectState;
+  prevQuickSelect?: OuiQuickSelectState;
 }
 
-export class EuiQuickSelect extends Component<
-  EuiQuickSelectProps,
-  EuiQuickSelectState
+export class OuiQuickSelect extends Component<
+  OuiQuickSelectProps,
+  OuiQuickSelectState
 > {
-  constructor(props: EuiQuickSelectProps) {
+  constructor(props: OuiQuickSelectProps) {
     super(props);
 
     const {
@@ -180,76 +191,76 @@ export class EuiQuickSelect extends Component<
 
     return (
       <fieldset>
-        <EuiI18n
-          token="euiQuickSelect.legendText"
+        <OuiI18n
+          token="ouiQuickSelect.legendText"
           default="Quick select a time range">
           {(legendText: string) => (
             // Legend needs to be the first thing in a fieldset, but we want the visible title within the flex.
             // So we hide it, but allow screen readers to see it
-            <EuiScreenReaderOnly>
-              <legend id={legendId} className="euiFormLabel">
+            <OuiScreenReaderOnly>
+              <legend id={legendId} className="ouiFormLabel">
                 {legendText}
               </legend>
-            </EuiScreenReaderOnly>
+            </OuiScreenReaderOnly>
           )}
-        </EuiI18n>
-        <EuiFlexGroup
+        </OuiI18n>
+        <OuiFlexGroup
           responsive={false}
           alignItems="center"
           justifyContent="spaceBetween"
           gutterSize="s">
-          <EuiFlexItem grow={false}>
-            <EuiI18n
-              token="euiQuickSelect.quickSelectTitle"
+          <OuiFlexItem grow={false}>
+            <OuiI18n
+              token="ouiQuickSelect.quickSelectTitle"
               default="Quick select">
               {(quickSelectTitle: string) => (
-                <div aria-hidden className="euiFormLabel">
+                <div aria-hidden className="ouiFormLabel">
                   {quickSelectTitle}
                 </div>
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiFlexGroup alignItems="center" gutterSize="s" responsive={false}>
-              <EuiFlexItem grow={false}>
-                <EuiI18n
-                  token="euiQuickSelect.previousLabel"
+            </OuiI18n>
+          </OuiFlexItem>
+          <OuiFlexItem grow={false}>
+            <OuiFlexGroup alignItems="center" gutterSize="s" responsive={false}>
+              <OuiFlexItem grow={false}>
+                <OuiI18n
+                  token="ouiQuickSelect.previousLabel"
                   default="Previous time window">
                   {(previousLabel: string) => (
-                    <EuiToolTip content={previousLabel}>
-                      <EuiButtonIcon
+                    <OuiToolTip content={previousLabel}>
+                      <OuiButtonIcon
                         aria-label={previousLabel}
                         iconType="arrowLeft"
                         onClick={this.stepBackward}
                       />
-                    </EuiToolTip>
+                    </OuiToolTip>
                   )}
-                </EuiI18n>
-              </EuiFlexItem>
-              <EuiFlexItem grow={false}>
-                <EuiI18n
-                  token="euiQuickSelect.nextLabel"
+                </OuiI18n>
+              </OuiFlexItem>
+              <OuiFlexItem grow={false}>
+                <OuiI18n
+                  token="ouiQuickSelect.nextLabel"
                   default="Next time window">
                   {(nextLabel: string) => (
-                    <EuiToolTip content={nextLabel}>
-                      <EuiButtonIcon
+                    <OuiToolTip content={nextLabel}>
+                      <OuiButtonIcon
                         aria-label={nextLabel}
                         iconType="arrowRight"
                         onClick={this.stepForward}
                       />
-                    </EuiToolTip>
+                    </OuiToolTip>
                   )}
-                </EuiI18n>
-              </EuiFlexItem>
-            </EuiFlexGroup>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiSpacer size="s" />
-        <EuiFlexGroup gutterSize="s" responsive={false}>
-          <EuiFlexItem>
-            <EuiI18n token="euiQuickSelect.tenseLabel" default="Time tense">
+                </OuiI18n>
+              </OuiFlexItem>
+            </OuiFlexGroup>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+        <OuiSpacer size="s" />
+        <OuiFlexGroup gutterSize="s" responsive={false}>
+          <OuiFlexItem>
+            <OuiI18n token="ouiQuickSelect.tenseLabel" default="Time tense">
               {(tenseLabel: string) => (
-                <EuiSelect
+                <OuiSelect
                   compressed
                   onKeyDown={this.handleKeyDown}
                   aria-label={tenseLabel}
@@ -259,12 +270,12 @@ export class EuiQuickSelect extends Component<
                   onChange={this.onTimeTenseChange}
                 />
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiI18n token="euiQuickSelect.valueLabel" default="Time value">
+            </OuiI18n>
+          </OuiFlexItem>
+          <OuiFlexItem>
+            <OuiI18n token="ouiQuickSelect.valueLabel" default="Time value">
               {(valueLabel: string) => (
-                <EuiFieldNumber
+                <OuiFieldNumber
                   compressed
                   onKeyDown={this.handleKeyDown}
                   aria-describedby={`${timeSelectionId} ${legendId}`}
@@ -273,12 +284,12 @@ export class EuiQuickSelect extends Component<
                   onChange={this.onTimeValueChange}
                 />
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiI18n token="euiQuickSelect.unitLabel" default="Time unit">
+            </OuiI18n>
+          </OuiFlexItem>
+          <OuiFlexItem>
+            <OuiI18n token="ouiQuickSelect.unitLabel" default="Time unit">
               {(unitLabel: string) => (
-                <EuiSelect
+                <OuiSelect
                   compressed
                   onKeyDown={this.handleKeyDown}
                   aria-label={unitLabel}
@@ -288,24 +299,24 @@ export class EuiQuickSelect extends Component<
                   onChange={this.onTimeUnitsChange}
                 />
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem grow={false}>
-            <EuiButton
+            </OuiI18n>
+          </OuiFlexItem>
+          <OuiFlexItem grow={false}>
+            <OuiButton
               aria-describedby={`${timeSelectionId} ${legendId}`}
-              className="euiQuickSelect__applyButton"
+              className="ouiQuickSelect__applyButton"
               size="s"
               onClick={this.applyQuickSelect}
               disabled={timeValue <= 0}>
-              <EuiI18n token="euiQuickSelect.applyButton" default="Apply" />
-            </EuiButton>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiHorizontalRule margin="s" />
-        <EuiScreenReaderOnly>
+              <OuiI18n token="ouiQuickSelect.applyButton" default="Apply" />
+            </OuiButton>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+        <OuiHorizontalRule margin="s" />
+        <OuiScreenReaderOnly>
           <p id={timeSelectionId}>
-            <EuiI18n
-              token="euiQuickSelect.fullDescription"
+            <OuiI18n
+              token="ouiQuickSelect.fullDescription"
               default="Currently set to {timeTense} {timeValue} {timeUnit}."
               values={{
                 timeTense,
@@ -314,7 +325,7 @@ export class EuiQuickSelect extends Component<
               }}
             />
           </p>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       </fieldset>
     );
   }

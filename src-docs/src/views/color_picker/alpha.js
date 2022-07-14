@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiColorPicker, EuiFormRow } from '../../../../src/components';
+import { OuiColorPicker, OuiFormRow } from '../../../../src/components';
 import { useColorPickerState } from '../../../../src/services';
 
 export default () => {
@@ -29,24 +40,24 @@ export default () => {
 
   return (
     <>
-      <EuiFormRow
+      <OuiFormRow
         label="Pick a color with optional opacity"
         isInvalid={!!errors}
         error={errors}>
-        <EuiColorPicker
+        <OuiColorPicker
           onChange={setColor}
           color={color}
           showAlpha={true}
           isInvalid={!!errors}
           swatches={customSwatches}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiFormRow
+      <OuiFormRow
         label="Using RGBa format"
         isInvalid={!!errors2}
         error={errors2}>
-        <EuiColorPicker
+        <OuiColorPicker
           onChange={setColor2}
           color={color2}
           showAlpha={true}
@@ -54,7 +65,7 @@ export default () => {
           isInvalid={!!errors2}
           swatches={customSwatches2}
         />
-      </EuiFormRow>
+      </OuiFormRow>
     </>
   );
 };

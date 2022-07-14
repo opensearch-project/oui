@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCheckboxGroup (mocked checkbox) disabled is rendered 1`] = `
+exports[`OuiCheckboxGroup (mocked checkbox) disabled is rendered 1`] = `
 <div>
-  <eui_checkbox
+  <oui_checkbox
     checked=""
-    class="euiCheckboxGroup__item"
+    class="ouiCheckboxGroup__item"
     disabled=""
     id="1"
     label="kibana"
   />
-  <eui_checkbox
-    class="euiCheckboxGroup__item"
+  <oui_checkbox
+    class="ouiCheckboxGroup__item"
     disabled=""
     id="2"
     label="elastic"
@@ -18,40 +18,40 @@ exports[`EuiCheckboxGroup (mocked checkbox) disabled is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiCheckboxGroup (mocked checkbox) idToSelectedMap is rendered 1`] = `
+exports[`OuiCheckboxGroup (mocked checkbox) idToSelectedMap is rendered 1`] = `
 <div>
-  <eui_checkbox
+  <oui_checkbox
     checked=""
-    class="euiCheckboxGroup__item"
+    class="ouiCheckboxGroup__item"
     id="1"
     label="kibana"
   />
-  <eui_checkbox
-    class="euiCheckboxGroup__item"
+  <oui_checkbox
+    class="ouiCheckboxGroup__item"
     id="2"
     label="elastic"
   />
 </div>
 `;
 
-exports[`EuiCheckboxGroup (mocked checkbox) individual disabled is rendered 1`] = `
+exports[`OuiCheckboxGroup (mocked checkbox) individual disabled is rendered 1`] = `
 <div>
-  <eui_checkbox
+  <oui_checkbox
     checked=""
-    class="euiCheckboxGroup__item"
+    class="ouiCheckboxGroup__item"
     disabled=""
     id="1"
     label="kibana"
   />
-  <eui_checkbox
-    class="euiCheckboxGroup__item"
+  <oui_checkbox
+    class="ouiCheckboxGroup__item"
     id="2"
     label="elastic"
   />
 </div>
 `;
 
-exports[`EuiCheckboxGroup (mocked checkbox) is rendered 1`] = `
+exports[`OuiCheckboxGroup (mocked checkbox) is rendered 1`] = `
 <div
   aria-label="aria-label"
   class="testClass1 testClass2"
@@ -59,25 +59,25 @@ exports[`EuiCheckboxGroup (mocked checkbox) is rendered 1`] = `
 />
 `;
 
-exports[`EuiCheckboxGroup (mocked checkbox) legend is rendered 1`] = `
+exports[`OuiCheckboxGroup (mocked checkbox) legend is rendered 1`] = `
 <fieldset>
   <legend
-    class="euiFormLegend"
+    class="ouiFormLegend"
   >
     A legend
   </legend>
 </fieldset>
 `;
 
-exports[`EuiCheckboxGroup (mocked checkbox) options are rendered 1`] = `
+exports[`OuiCheckboxGroup (mocked checkbox) options are rendered 1`] = `
 <div>
-  <eui_checkbox
-    class="euiCheckboxGroup__item"
+  <oui_checkbox
+    class="ouiCheckboxGroup__item"
     id="1"
     label="kibana"
   />
-  <eui_checkbox
-    class="euiCheckboxGroup__item"
+  <oui_checkbox
+    class="ouiCheckboxGroup__item"
     id="2"
     label="elastic"
   />

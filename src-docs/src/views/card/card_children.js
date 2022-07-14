@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiCard,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiCodeBlock,
-  EuiRadioGroup,
-  EuiText,
-  EuiButton,
-  EuiCode,
+  OuiCard,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiCodeBlock,
+  OuiRadioGroup,
+  OuiText,
+  OuiButton,
+  OuiCode,
 } from '../../../../src/components';
 
 const radios = [
@@ -29,62 +40,62 @@ const radios = [
 
 export default () => {
   return (
-    <EuiFlexGroup gutterSize="l">
-      <EuiFlexItem>
-        <EuiCard
+    <OuiFlexGroup gutterSize="l">
+      <OuiFlexItem>
+        <OuiCard
           textAlign="left"
           title="Lists"
           description={
             <span>
-              Wrap a lists with <strong>EuiText size=&quot;s&quot;</strong> to
+              Wrap a lists with <strong>OuiText size=&quot;s&quot;</strong> to
               match the description text.
             </span>
           }>
-          <EuiText size="s">
+          <OuiText size="s">
             <ul>
               <li>Bullet 1</li>
               <li>Bullet 2</li>
               <li>Bullet 3</li>
             </ul>
-          </EuiText>
-        </EuiCard>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
+          </OuiText>
+        </OuiCard>
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiCard
           textAlign="left"
           title="Form controls"
           footer={
-            <EuiFlexGroup justifyContent="flexEnd">
-              <EuiFlexItem grow={false}>
-                <EuiButton size="s" fill>
+            <OuiFlexGroup justifyContent="flexEnd">
+              <OuiFlexItem grow={false}>
+                <OuiButton size="s" fill>
                   Send
-                </EuiButton>
-              </EuiFlexItem>
-            </EuiFlexGroup>
+                </OuiButton>
+              </OuiFlexItem>
+            </OuiFlexGroup>
           }>
-          <EuiRadioGroup
+          <OuiRadioGroup
             options={radios}
             idSelected={radios[0].id}
             onChange={() => {}}
             compressed
           />
-        </EuiCard>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiCard
+        </OuiCard>
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiCard
           textAlign="left"
           title="Just about anything"
           description={
             <span>
-              Just be sure not to add any <EuiCode>onClick</EuiCode> handler to
+              Just be sure not to add any <OuiCode>onClick</OuiCode> handler to
               the card if the children are also interactable.
             </span>
           }>
-          <EuiCodeBlock language="html" paddingSize="s">
+          <OuiCodeBlock language="html" paddingSize="s">
             {'<yoda>Hello, young Skywalker</yoda>'}
-          </EuiCodeBlock>
-        </EuiCard>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+          </OuiCodeBlock>
+        </OuiCard>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 };

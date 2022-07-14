@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiRange,
-  EuiSpacer,
-  EuiFormHelpText,
-  EuiDualRange,
+  OuiRange,
+  OuiSpacer,
+  OuiFormHelpText,
+  OuiDualRange,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -36,22 +47,22 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiRange
+      <OuiRange
         id={htmlIdGenerator()()}
         value={value}
         onChange={(e) => onChange(e)}
         showTicks
         tickInterval={20}
         levels={levels}
-        aria-label="An example of EuiRange with levels prop"
+        aria-label="An example of OuiRange with levels prop"
         aria-describedby="levelsHelp2"
       />
-      <EuiFormHelpText id="levelsHelp2">
+      <OuiFormHelpText id="levelsHelp2">
         Recommended levels are {levels[1].min} and above.
-      </EuiFormHelpText>
+      </OuiFormHelpText>
 
-      <EuiSpacer size="xl" />
-      <EuiDualRange
+      <OuiSpacer size="xl" />
+      <OuiDualRange
         id={htmlIdGenerator()()}
         value={dualValue}
         onChange={(value) => onDualChange(value)}
@@ -62,12 +73,12 @@ export default () => {
         ]}
         showInput
         levels={levels}
-        aria-label="An example of EuiDualRange with levels prop"
+        aria-label="An example of OuiDualRange with levels prop"
         aria-describedby="levelsHelp3"
       />
-      <EuiFormHelpText id="levelsHelp3">
+      <OuiFormHelpText id="levelsHelp3">
         Recommended size is {levels[1].min}kb and above.
-      </EuiFormHelpText>
+      </OuiFormHelpText>
     </Fragment>
   );
 };

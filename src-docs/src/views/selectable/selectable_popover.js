@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 import {
-  EuiButton,
-  EuiCode,
-  EuiFlyout,
-  EuiFlyoutFooter,
-  EuiFlyoutHeader,
-  EuiPopover,
-  EuiPopoverFooter,
-  EuiPopoverTitle,
-  EuiSelectable,
-  EuiSpacer,
-  EuiTitle,
+  OuiButton,
+  OuiCode,
+  OuiFlyout,
+  OuiFlyoutFooter,
+  OuiFlyoutHeader,
+  OuiPopover,
+  OuiPopoverFooter,
+  OuiPopoverTitle,
+  OuiSelectable,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 import { Comparators } from '../../../../src/services/sort';
 
@@ -57,20 +68,20 @@ export default () => {
   };
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <OuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Show popover
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
     <Fragment>
-      <EuiPopover
+      <OuiPopover
         id="popover"
         panelPaddingSize="none"
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}>
-        <EuiSelectable
+        <OuiSelectable
           searchable
           searchProps={{
             placeholder: 'Filter list',
@@ -80,25 +91,25 @@ export default () => {
           onChange={onChange}>
           {(list, search) => (
             <div style={{ width: 240 }}>
-              <EuiPopoverTitle paddingSize="s">{search}</EuiPopoverTitle>
+              <OuiPopoverTitle paddingSize="s">{search}</OuiPopoverTitle>
               {list}
-              <EuiPopoverFooter paddingSize="s">
-                <EuiButton size="s" fullWidth>
+              <OuiPopoverFooter paddingSize="s">
+                <OuiButton size="s" fullWidth>
                   Manage this list
-                </EuiButton>
-              </EuiPopoverFooter>
+                </OuiButton>
+              </OuiPopoverFooter>
             </div>
           )}
-        </EuiSelectable>
-      </EuiPopover>
+        </OuiSelectable>
+      </OuiPopover>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiButton onClick={showFlyout}>Show flyout</EuiButton>
+      <OuiButton onClick={showFlyout}>Show flyout</OuiButton>
 
       {isFlyoutVisible && (
-        <EuiFlyout ownFocus onClose={closeFlyout} aria-labelledby="flyoutTitle">
-          <EuiSelectable
+        <OuiFlyout ownFocus onClose={closeFlyout} aria-labelledby="flyoutTitle">
+          <OuiSelectable
             aria-label="Popover example"
             searchable
             options={countries}
@@ -106,43 +117,43 @@ export default () => {
             height="full">
             {(list, search) => (
               <Fragment>
-                <EuiFlyoutHeader hasBorder>
-                  <EuiTitle size="m">
+                <OuiFlyoutHeader hasBorder>
+                  <OuiTitle size="m">
                     <h2 id="flyoutTitle">Be mindful of the flexbox</h2>
-                  </EuiTitle>
-                  <EuiSpacer />
+                  </OuiTitle>
+                  <OuiSpacer />
                   {search}
-                </EuiFlyoutHeader>
-                <EuiSpacer size="xs" />
+                </OuiFlyoutHeader>
+                <OuiSpacer size="xs" />
                 {list}
               </Fragment>
             )}
-          </EuiSelectable>
-          <EuiSpacer size="xs" />
-          <EuiFlyoutFooter>
-            <EuiButton fill>Some extra action</EuiButton>
-          </EuiFlyoutFooter>
-        </EuiFlyout>
+          </OuiSelectable>
+          <OuiSpacer size="xs" />
+          <OuiFlyoutFooter>
+            <OuiButton fill>Some extra action</OuiButton>
+          </OuiFlyoutFooter>
+        </OuiFlyout>
       )}
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiTitle size="xxs">
+      <OuiTitle size="xxs">
         <h4>
-          Using <EuiCode language="js">listProps.bordered=true</EuiCode>
+          Using <OuiCode language="js">listProps.bordered=true</OuiCode>
         </h4>
-      </EuiTitle>
+      </OuiTitle>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiSelectable
+      <OuiSelectable
         aria-label="Bordered selectable example"
         options={options}
         onChange={() => {}}
         style={{ width: 300 }}
         listProps={{ bordered: true }}>
         {(list) => list}
-      </EuiSelectable>
+      </OuiSelectable>
     </Fragment>
   );
 };

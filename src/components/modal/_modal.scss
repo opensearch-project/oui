@@ -1,3 +1,14 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Fix IE overflow issue (min-height) by adding a separate wrapper for the
  *    flex display. https://github.com/philipwalton/flexbugs#flexbug-3
@@ -5,26 +16,26 @@
  *    from our forms since that's usually the smallest we want them.
  */
 
-.euiModal {
-  border: $euiBorderThin;
+.ouiModal {
+  border: $ouiBorderThin;
   // This mixin overwrites some of the border above
-  @include euiBottomShadowLarge($adjustBorders: true); // sass-lint:disable-line mixins-before-declarations
+  @include ouiBottomShadowLarge($adjustBorders: true); // sass-lint:disable-line mixins-before-declarations
   display: flex; /* 1 */
 
   position: relative;
-  background-color: $euiColorEmptyShade;
-  border-radius: $euiBorderRadius;
-  z-index: $euiZModal;
-  min-width: $euiFormMaxWidth;
-  animation: euiModal $euiAnimSpeedSlow $euiAnimSlightBounce;
-  max-width: calc(100vw - #{$euiSize});
+  background-color: $ouiColorEmptyShade;
+  border-radius: $ouiBorderRadius;
+  z-index: $ouiZModal;
+  min-width: $ouiFormMaxWidth;
+  animation: ouiModal $ouiAnimSpeedSlow $ouiAnimSlightBounce;
+  max-width: calc(100vw - #{$ouiSize});
 
   // Remove the outline from the focusable container
   &:focus {
     outline: none;
   }
 
-  .euiModal__flex { /* 1 */
+  .ouiModal__flex { /* 1 */
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
@@ -33,80 +44,80 @@
   }
 }
 
-.euiModal--maxWidth-default {
+.ouiModal--maxWidth-default {
   // Sass and CSS's versions of `min` collide here, so we use all uppercase to ensure the CSS version is used
   // https://css-tricks.com/when-sass-and-new-css-features-collide/#the-solution
   // sass-lint:disable-block function-name-format
-  max-width: MIN(#{map-get($euiBreakpoints, 'm')}, calc(100vw - #{$euiSize}));
+  max-width: MIN(#{map-get($ouiBreakpoints, 'm')}, calc(100vw - #{$ouiSize}));
 }
 
-.euiModal--confirmation {
-  min-width: $euiFormMaxWidth;
+.ouiModal--confirmation {
+  min-width: $ouiFormMaxWidth;
 }
 
-.euiModalHeader {
+.ouiModalHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: $euiSizeL $euiSizeXXL $euiSize $euiSizeL;
+  padding: $ouiSizeL $ouiSizeXXL $ouiSize $ouiSizeL;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
-.euiModalHeader__title {
-  @include euiTitle('m');
+.ouiModalHeader__title {
+  @include ouiTitle('m');
 }
 
-.euiModalBody {
+.ouiModalBody {
   flex-grow: 1;
   overflow: hidden;
   // The below fixes scroll on Chrome and Safari
   display: flex;
   flex-direction: column;
 
-  .euiModalBody__overflow {
-    @include euiYScrollWithShadows;
-    padding: $euiSizeS $euiSizeL;
+  .ouiModalBody__overflow {
+    @include ouiYScrollWithShadows;
+    padding: $ouiSizeS $ouiSizeL;
   }
 }
 
-.euiModalFooter {
+.ouiModalFooter {
   display: flex;
   justify-content: flex-end;
-  padding: $euiSize $euiSizeL $euiSizeL;
+  padding: $ouiSize $ouiSizeL $ouiSizeL;
   flex-grow: 0;
   flex-shrink: 0; // ensure the height of the footer is based off its contents and doesn't squish
 
   > * + * {
-    margin-left: $euiSize;
+    margin-left: $ouiSize;
   }
 }
 
 // If a body doesn't exist, remove some extra padding from footer
-.euiModalHeader + .euiModalFooter {
-  padding-top: $euiSizeS;
+.ouiModalHeader + .ouiModalFooter {
+  padding-top: $ouiSizeS;
 }
 
 // If a footer doesn't exist (body is the last element) add padding to the bottom
-.euiModalBody:last-of-type .euiModalBody__overflow {
-  padding-bottom: $euiSizeL;
+.ouiModalBody:last-of-type .ouiModalBody__overflow {
+  padding-bottom: $ouiSizeL;
 }
 
 
 // The actual size of the X button in pixels is a bit fuzzy because of all the
 // button padding so there is some pixel pushing here.
-.euiModal__closeIcon {
-  background-color: transparentize($euiColorEmptyShade, .1);
+.ouiModal__closeIcon {
+  background-color: transparentize($ouiColorEmptyShade, .1);
   position: absolute;
-  right: $euiSizeXS;
-  top: $euiSizeXS;
+  right: $ouiSizeXS;
+  top: $ouiSizeXS;
   z-index: 3;
 }
 
-@keyframes euiModal {
+@keyframes ouiModal {
   0% {
     opacity: 0;
-    transform: translateY($euiSizeXL);
+    transform: translateY($ouiSizeXL);
   }
 
   100% {
@@ -116,8 +127,8 @@
 }
 
 // On mobile we fix modals as a takeover.
-@include euiBreakpoint('xs', 's') {
-  .euiModal {
+@include ouiBreakpoint('xs', 's') {
+  .ouiModal {
     // sass-lint:disable-block no-important
     position: fixed;
     width: 100vw !important;
@@ -130,24 +141,24 @@
     border-radius: 0;
     border: none;
 
-    &.euiModal--confirmation {
-      @include euiBottomShadowLarge($euiShadowColorLarge, $reverse: true);
+    &.ouiModal--confirmation {
+      @include ouiBottomShadowLarge($ouiShadowColorLarge, $reverse: true);
       top: auto;
     }
 
-    .euiModal__flex { /* 1 */
+    .ouiModal__flex { /* 1 */
       max-height: 100vh;
     }
   }
 
-  .euiModalHeader {
+  .ouiModalHeader {
     width: 100%;
   }
 
-  .euiModalFooter {
+  .ouiModalFooter {
     width: 100%;
-    background: $euiColorLightestShade;
-    padding: $euiSizeM $euiSizeL !important; // sass-lint:disable-line no-important
+    background: $ouiColorLightestShade;
+    padding: $ouiSizeM $ouiSizeL !important; // sass-lint:disable-line no-important
     justify-content: stretch;
 
     > * {
@@ -159,11 +170,11 @@
     }
   }
 
-  .euiModalBody {
+  .ouiModalBody {
     width: 100%;
 
-    .euiModalBody__overflow {
-      padding-bottom: $euiSizeL;
+    .ouiModalBody__overflow {
+      padding-bottom: $ouiSizeL;
     }
   }
 }

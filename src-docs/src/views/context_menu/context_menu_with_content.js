@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButton,
-  EuiContextMenu,
-  EuiIcon,
-  EuiPopover,
-  EuiSpacer,
-  EuiText,
+  OuiButton,
+  OuiContextMenu,
+  OuiIcon,
+  OuiPopover,
+  OuiSpacer,
+  OuiText,
 } from '../../../../src/components';
 
-import EuiTabsExample from '../tabs/tabbed_content';
+import OuiTabsExample from '../tabs/tabbed_content';
 
 function flattenPanelTree(tree, array = []) {
   array.push(tree);
@@ -53,7 +64,7 @@ export default () => {
       items: [
         {
           name: 'Show full screen',
-          icon: <EuiIcon type="search" size="m" />,
+          icon: <OuiIcon type="search" size="m" />,
           onClick: () => {
             closePopover();
           },
@@ -77,9 +88,9 @@ export default () => {
   };
 
   const panels = createPanelTree(() => (
-    <EuiText style={{ padding: 24 }} textAlign="center">
+    <OuiText style={{ padding: 24 }} textAlign="center">
       <p>
-        <EuiIcon type="faceHappy" size="xxl" />
+        <OuiIcon type="faceHappy" size="xxl" />
       </p>
 
       <h3>Context panels can contain anything</h3>
@@ -88,49 +99,49 @@ export default () => {
         though. This panel is set to 400px and the height will grow as space
         allows.
       </p>
-    </EuiText>
+    </OuiText>
   ));
 
-  const dynamicPanels = createPanelTree(EuiTabsExample);
+  const dynamicPanels = createPanelTree(OuiTabsExample);
 
   const button = (
-    <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
+    <OuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
       Click me to load mixed content menu
-    </EuiButton>
+    </OuiButton>
   );
 
   const dynamicButton = (
-    <EuiButton
+    <OuiButton
       iconType="arrowDown"
       iconSide="right"
       onClick={onDynamicButtonClick}>
       Click me to load dynamic mixed content menu
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
     <React.Fragment>
-      <EuiPopover
+      <OuiPopover
         id="contextMenuNormal"
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}
         panelPaddingSize="none"
         anchorPosition="upLeft">
-        <EuiContextMenu initialPanelId={0} panels={panels} />
-      </EuiPopover>
+        <OuiContextMenu initialPanelId={0} panels={panels} />
+      </OuiPopover>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiPopover
+      <OuiPopover
         id="contextMenuDynamic"
         button={dynamicButton}
         isOpen={isDynamicPopoverOpen}
         closePopover={closeDynamicPopover}
         panelPaddingSize="none"
         anchorPosition="upLeft">
-        <EuiContextMenu initialPanelId={0} panels={dynamicPanels} />
-      </EuiPopover>
+        <OuiContextMenu initialPanelId={0} panels={dynamicPanels} />
+      </OuiPopover>
     </React.Fragment>
   );
 };

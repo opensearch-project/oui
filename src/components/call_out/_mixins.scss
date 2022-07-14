@@ -1,6 +1,17 @@
-@function euiCallOutColor($type: 'primary', $returnBackgroundOrForeground: 'background') {
-  @if (map-has-key($euiCallOutTypes, $type)) {
-    $color: map-get($euiCallOutTypes, $type);
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@function ouiCallOutColor($type: 'primary', $returnBackgroundOrForeground: 'background') {
+  @if (map-has-key($ouiCallOutTypes, $type)) {
+    $color: map-get($ouiCallOutTypes, $type);
     $backgroundColor: tintOrShade($color, 90%, 70%);
     $foregroundColor: shadeOrTint(makeHighContrastColor($color, $backgroundColor), 0, 20%);
 
@@ -12,16 +23,16 @@
       @warn 'Incorrect value provided as $returnBackgroundOrForeground';
     }
   } @else {
-    @warn 'Incorrect type of call out provided. See the $euiCallOutTypes map for allowed values.';
+    @warn 'Incorrect type of call out provided. See the $ouiCallOutTypes map for allowed values.';
   }
 }
 
-@mixin euiCallOutTitle($size: null) {
+@mixin ouiCallOutTitle($size: null) {
   @if ($size == 's') {
-    @include euiTitle('xxs');
-    font-weight: $euiFontWeightRegular;
+    @include ouiTitle('xxs');
+    font-weight: $ouiFontWeightRegular;
   } @else {
-    @include euiTitle('xs');
-    font-weight: $euiFontWeightRegular;
+    @include ouiTitle('xs');
+    font-weight: $ouiFontWeightRegular;
   }
 }

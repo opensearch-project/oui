@@ -1,16 +1,27 @@
-.euiStat {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiStat {
   // Modifier naming and colors.
   $titleColors: (
-    subdued: $euiTextSubduedColor,
-    primary: $euiColorPrimaryText,
-    secondary: $euiColorSecondaryText,
-    success: $euiColorSuccessText,
-    danger: $euiColorDangerText,
-    accent: $euiColorAccentText,
+    subdued: $ouiTextSubduedColor,
+    primary: $ouiColorPrimaryText,
+    secondary: $ouiColorSecondaryText,
+    success: $ouiColorSuccessText,
+    danger: $ouiColorDangerText,
+    accent: $ouiColorAccentText,
   );
 
-  .euiStat__title {
-    color: $euiColorFullShade;
+  .ouiStat__title {
+    color: $ouiColorFullShade;
 
     // Create color classes based upon the map.
     @each $name, $color in $titleColors {
@@ -20,31 +31,31 @@
     }
   }
 
-  .euiStat__title-isLoading {
-    animation: euiStatPulse 1.5s infinite ease-in-out;
+  .ouiStat__title-isLoading {
+    animation: ouiStatPulse 1.5s infinite ease-in-out;
   }
 
-  .euiStat__description {
+  .ouiStat__description {
     color: map-get($titleColors, dark);
   }
 
-  &.euiStat--leftAligned {
+  &.ouiStat--leftAligned {
     text-align: left;
     align-items: flex-start;
   }
 
-  &.euiStat--centerAligned {
+  &.ouiStat--centerAligned {
     text-align: center;
     align-items: center;
   }
 
-  &.euiStat--rightAligned {
+  &.ouiStat--rightAligned {
     text-align: right;
     align-items: flex-end;
   }
 }
 
-@keyframes euiStatPulse {
+@keyframes ouiStatPulse {
   0% { opacity: 1; }
   50% { opacity: .25; }
   100% { opacity: 1; }

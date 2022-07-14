@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /* eslint-disable @typescript-eslint/no-var-requires */
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
@@ -13,11 +24,11 @@ const themingHtml = renderToHtml(Theming);
 import { Categorical } from './theming_categorical';
 
 import {
-  EuiSpacer,
-  EuiText,
-  EuiCodeBlock,
-  EuiLink,
-  EuiCallOut,
+  OuiSpacer,
+  OuiText,
+  OuiCodeBlock,
+  OuiLink,
+  OuiCallOut,
 } from '../../../../src/components';
 
 export const ElasticChartsThemingExample = {
@@ -25,24 +36,24 @@ export const ElasticChartsThemingExample = {
   intro: (
     <Fragment>
       <ExternalBadge />
-      <EuiSpacer size="l" />
-      <EuiText>
+      <OuiSpacer size="l" />
+      <OuiText>
         <p>
-          EUI provides utilities and documentation for working with{' '}
-          <EuiLink
+          OUI provides utilities and documentation for working with{' '}
+          <OuiLink
             href="https://elastic.github.io/elastic-charts"
             target="_blank">
             Elastic Charts
-          </EuiLink>
+          </OuiLink>
           , an open source charting library also created and maintained by
           Elastic.
         </p>
-      </EuiText>
+      </OuiText>
     </Fragment>
   ),
   sections: [
     {
-      title: 'Theming via EUI',
+      title: 'Theming via OUI',
       source: [
         {
           type: GuideSectionTypes.JS,
@@ -56,33 +67,33 @@ export const ElasticChartsThemingExample = {
       text: (
         <Fragment>
           <p>
-            EUI provides both light and dark theme files to use in tandem with
+            OUI provides both light and dark theme files to use in tandem with
             Elastic Charts. Simply import these objects from the themes folder
             and pass the correct one to the Settings.theme property.
           </p>
-          <EuiCodeBlock language="javascript" isCopyable fontSize="s">
-            {`import { EUI_CHARTS_THEME_DARK, EUI_CHARTS_THEME_LIGHT } from '@elastic/eui/dist/eui_charts_theme';
+          <OuiCodeBlock language="javascript" isCopyable fontSize="s">
+            {`import { OUI_CHARTS_THEME_DARK, OUI_CHARTS_THEME_LIGHT } from '@opensearch-project/oui/dist/oui_charts_theme';
 
-const euiTheme = isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LIGHT.theme;
+const ouiTheme = isDarkTheme ? OUI_CHARTS_THEME_DARK.theme : OUI_CHARTS_THEME_LIGHT.theme;
 
-<Settings theme={euiTheme} />`}
-          </EuiCodeBlock>
-          <EuiCallOut title="Kibana engineers" iconType="logoKibana">
+<Settings theme={ouiTheme} />`}
+          </OuiCodeBlock>
+          <OuiCallOut title="Kibana engineers" iconType="logoKibana">
             <p>
-              EUI provides a plugin utility for ease of pulling in the correct
+              OUI provides a plugin utility for ease of pulling in the correct
               theme object depending on the current Kibana theme. Learn more
               from this{' '}
-              <EuiLink
+              <OuiLink
                 href="https://github.com/elastic/kibana/tree/master/src/plugins/charts"
                 target="_blank">
                 readme
-              </EuiLink>
+              </OuiLink>
               .
             </p>
-          </EuiCallOut>
-          <EuiSpacer />
+          </OuiCallOut>
+          <OuiSpacer />
           <p>
-            EUI also provides some basic{' '}
+            OUI also provides some basic{' '}
             <Link to="/utilities/color-palettes">
               color palettes and functions
             </Link>{' '}
@@ -92,17 +103,17 @@ const euiTheme = isDarkTheme ? EUI_CHARTS_THEME_DARK.theme : EUI_CHARTS_THEME_LI
             prepend it to the list of themes supplied to Settings.
           </p>
 
-          <EuiCodeBlock language="javascript" isCopyable fontSize="s">
-            {`import { euiPalettePositive } from '../../../../src/services';
+          <OuiCodeBlock language="javascript" isCopyable fontSize="s">
+            {`import { ouiPalettePositive } from '../../../../src/services';
 
 const customColors = {
   colors: {
-    vizColors: euiPalettePositive(5),
+    vizColors: ouiPalettePositive(5),
   },
 };
 
-<Settings theme={[customColors, euiTheme]} />`}
-          </EuiCodeBlock>
+<Settings theme={[customColors, ouiTheme]} />`}
+          </OuiCodeBlock>
           <p>You&apos;ll find an example of these in the demo below.</p>
         </Fragment>
       ),

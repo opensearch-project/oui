@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,9 +30,9 @@
 
 import React, { Fragment, HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
-import { EuiMark } from '../mark';
+import { OuiMark } from '../mark';
 
-interface EuiHighlightChunk {
+interface OuiHighlightChunk {
   /**
    * Start of the chunk
    */
@@ -36,7 +47,7 @@ interface EuiHighlightChunk {
   highlight?: boolean;
 }
 
-export type EuiHighlightProps = HTMLAttributes<HTMLSpanElement> &
+export type OuiHighlightProps = HTMLAttributes<HTMLSpanElement> &
   CommonProps & {
     /**
      * string to highlight as this component's content
@@ -81,7 +92,7 @@ const highlight = (
           const { end, highlight, start } = chunk;
           const value = searchSubject.substr(start, end - start);
           if (highlight) {
-            return <EuiMark key={start}>{value}</EuiMark>;
+            return <OuiMark key={start}>{value}</OuiMark>;
           }
           return value;
         })}
@@ -112,7 +123,7 @@ const highlight = (
   return (
     <Fragment>
       {preMatch}
-      <EuiMark>{match}</EuiMark>
+      <OuiMark>{match}</OuiMark>
       {postMatch}
     </Fragment>
   );
@@ -136,10 +147,10 @@ const getHightlightWords = (
 };
 
 const fillInChunks = (
-  chunksToHighlight: EuiHighlightChunk[],
+  chunksToHighlight: OuiHighlightChunk[],
   totalLength: number
 ) => {
-  const allChunks: EuiHighlightChunk[] = [];
+  const allChunks: OuiHighlightChunk[] = [];
   const append = (start: number, end: number, highlight: boolean) => {
     if (end - start > 0) {
       allChunks.push({
@@ -163,7 +174,7 @@ const fillInChunks = (
   return allChunks;
 };
 
-export const EuiHighlight: FunctionComponent<EuiHighlightProps> = ({
+export const OuiHighlight: FunctionComponent<OuiHighlightProps> = ({
   children,
   className,
   search,

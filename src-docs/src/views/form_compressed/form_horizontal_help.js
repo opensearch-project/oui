@@ -1,33 +1,44 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiFieldText,
-  EuiFormRow,
-  EuiSelect,
-  EuiPanel,
-  EuiIcon,
+  OuiFieldText,
+  OuiFormRow,
+  OuiSelect,
+  OuiPanel,
+  OuiIcon,
 } from '../../../../src/components';
-import { EuiToolTip } from '../../../../src/components/tool_tip';
+import { OuiToolTip } from '../../../../src/components/tool_tip';
 
 export default () => (
-  <EuiPanel style={{ maxWidth: 300 }}>
-    <EuiFormRow
+  <OuiPanel style={{ maxWidth: 300 }}>
+    <OuiFormRow
       label="Text field"
       helpText="Show validation help text only."
       display="columnCompressed">
-      <EuiFieldText name="first" compressed />
-    </EuiFormRow>
+      <OuiFieldText name="first" compressed />
+    </OuiFormRow>
 
-    <EuiFormRow
+    <OuiFormRow
       label={
-        <EuiToolTip content="Otherwise use an EuiToolTip around the label of the form row.">
+        <OuiToolTip content="Otherwise use an OuiToolTip around the label of the form row.">
           <span>
-            Label <EuiIcon type="questionInCircle" color="subdued" />
+            Label <OuiIcon type="questionInCircle" color="subdued" />
           </span>
-        </EuiToolTip>
+        </OuiToolTip>
       }
       display="columnCompressed">
-      <EuiSelect
+      <OuiSelect
         options={[
           { value: 'option_one', text: 'Option one' },
           { value: 'option_two', text: 'Option two' },
@@ -35,6 +46,6 @@ export default () => (
         ]}
         compressed
       />
-    </EuiFormRow>
-  </EuiPanel>
+    </OuiFormRow>
+  </OuiPanel>
 );

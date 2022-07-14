@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import {
-  EuiDragDropContext,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiDraggable,
-  EuiDroppable,
-  EuiPanel,
-  euiDragDropMove,
-  euiDragDropReorder,
+  OuiDragDropContext,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiDraggable,
+  OuiDroppable,
+  OuiPanel,
+  ouiDragDropMove,
+  ouiDragDropReorder,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -38,7 +49,7 @@ export default () => {
     };
     if (source && destination) {
       if (source.droppableId === destination.droppableId) {
-        const items = euiDragDropReorder(
+        const items = ouiDragDropReorder(
           lists[destination.droppableId],
           source.index,
           destination.index
@@ -48,7 +59,7 @@ export default () => {
       } else {
         const sourceId = source.droppableId;
         const destinationId = destination.droppableId;
-        const result = euiDragDropMove(
+        const result = ouiDragDropMove(
           lists[sourceId],
           lists[destinationId],
           source,
@@ -61,66 +72,66 @@ export default () => {
     }
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd}>
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiDroppable
+    <OuiDragDropContext onDragEnd={onDragEnd}>
+      <OuiFlexGroup>
+        <OuiFlexItem>
+          <OuiDroppable
             droppableId="DROPPABLE_AREA_TYPE_1"
             type="TYPE_ONE"
             spacing="m"
             withPanel
             grow={false}>
             {list1.map(({ content, id }, idx) => (
-              <EuiDraggable key={id} index={idx} draggableId={id} spacing="m">
+              <OuiDraggable key={id} index={idx} draggableId={id} spacing="m">
                 {(provided, state) => (
-                  <EuiPanel hasShadow={state.isDragging}>
+                  <OuiPanel hasShadow={state.isDragging}>
                     {content}
                     {state.isDragging && ' ✨'}
-                  </EuiPanel>
+                  </OuiPanel>
                 )}
-              </EuiDraggable>
+              </OuiDraggable>
             ))}
-          </EuiDroppable>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiDroppable
+          </OuiDroppable>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiDroppable
             droppableId="DROPPABLE_AREA_TYPE_2"
             type="TYPE_ONE"
             spacing="m"
             withPanel
             grow={false}>
             {list2.map(({ content, id }, idx) => (
-              <EuiDraggable key={id} index={idx} draggableId={id} spacing="m">
+              <OuiDraggable key={id} index={idx} draggableId={id} spacing="m">
                 {(provided, state) => (
-                  <EuiPanel hasShadow={state.isDragging}>
+                  <OuiPanel hasShadow={state.isDragging}>
                     {content}
                     {state.isDragging && ' ✨'}
-                  </EuiPanel>
+                  </OuiPanel>
                 )}
-              </EuiDraggable>
+              </OuiDraggable>
             ))}
-          </EuiDroppable>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiDroppable
+          </OuiDroppable>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiDroppable
             droppableId="DROPPABLE_AREA_TYPE_3"
             type="TYPE_TWO"
             spacing="m"
             withPanel
             grow={true}>
             {list3.map(({ content, id }, idx) => (
-              <EuiDraggable key={id} index={idx} draggableId={id} spacing="m">
+              <OuiDraggable key={id} index={idx} draggableId={id} spacing="m">
                 {(provided, state) => (
-                  <EuiPanel hasShadow={state.isDragging}>
+                  <OuiPanel hasShadow={state.isDragging}>
                     {content}
                     {state.isDragging && ' ✨'}
-                  </EuiPanel>
+                  </OuiPanel>
                 )}
-              </EuiDraggable>
+              </OuiDraggable>
             ))}
-          </EuiDroppable>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-    </EuiDragDropContext>
+          </OuiDroppable>
+        </OuiFlexItem>
+      </OuiFlexGroup>
+    </OuiDragDropContext>
   );
 };

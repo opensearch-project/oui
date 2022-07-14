@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiStat } from '../../../../src/components';
+import { OuiCode, OuiStat } from '../../../../src/components';
 import statConfig from './playground';
 
 import Stat from './stat';
 const statSource = require('!!raw-loader!./stat');
 const statHtml = renderToHtml(Stat);
-const statSnippet = `<EuiStat
+const statSnippet = `<OuiStat
   title="22,123"
   description="Total people"
 />
@@ -19,7 +30,7 @@ const statSnippet = `<EuiStat
 import StatColors from './stat_colors';
 const statColorsSource = require('!!raw-loader!./stat_colors');
 const statColorsHtml = renderToHtml(StatColors);
-const statColorSnippet = `<EuiStat
+const statColorSnippet = `<OuiStat
   title="22,123"
   description="Total people"
   color="primary"
@@ -29,7 +40,7 @@ const statColorSnippet = `<EuiStat
 import StatAlign from './stat_align';
 const statAlignSource = require('!!raw-loader!./stat_align');
 const statAlignHtml = renderToHtml(StatAlign);
-const statAlignSnippet = `<EuiStat
+const statAlignSnippet = `<OuiStat
   title="22,123"
   description="Total people"
   textAlign="right"
@@ -39,7 +50,7 @@ const statAlignSnippet = `<EuiStat
 import StatSize from './stat_size';
 const statSizeSource = require('!!raw-loader!./stat_size');
 const statSizeHtml = renderToHtml(StatSize);
-const statSizeSnippet = `<EuiStat
+const statSizeSnippet = `<OuiStat
   title="22,123"
   description="Total people"
   titleSize="s"
@@ -49,7 +60,7 @@ const statSizeSnippet = `<EuiStat
 import StatOrder from './stat_order';
 const statOrderSource = require('!!raw-loader!./stat_order');
 const statOrderHtml = renderToHtml(StatOrder);
-const statOrderSnippet = `<EuiStat
+const statOrderSnippet = `<OuiStat
   title="22,123"
   description="Total people"
   reverse
@@ -63,7 +74,7 @@ const statCombosHtml = renderToHtml(StatCombos);
 import StatLoading from './stat_loading';
 const statLoadingSource = require('!!raw-loader!./stat_loading');
 const statLoadingHtml = renderToHtml(StatLoading);
-const statLoadingSnippet = `<EuiStat
+const statLoadingSnippet = `<OuiStat
   title={someNumber}
   description="Total people"
   isLoading={someNumber == undefined}
@@ -86,13 +97,13 @@ export const StatExample = {
       ],
       text: (
         <p>
-          <strong>EuiStat</strong> can be used to display prominent text or
-          number values. It consists of <EuiCode>title</EuiCode>
-          and <EuiCode>description</EuiCode> elements with several visual
+          <strong>OuiStat</strong> can be used to display prominent text or
+          number values. It consists of <OuiCode>title</OuiCode>
+          and <OuiCode>description</OuiCode> elements with several visual
           styling properties (examples below).
         </p>
       ),
-      props: { EuiStat },
+      props: { OuiStat },
       demo: <Stat />,
       snippet: statSnippet,
     },
@@ -110,9 +121,9 @@ export const StatExample = {
       ],
       text: (
         <p>
-          <EuiCode>title</EuiCode> can be altered using the color property. By
-          default, it will appear in <EuiCode>full</EuiCode> color. For proper
-          color contrast, only a limited set of EUI colors are offered. See the
+          <OuiCode>title</OuiCode> can be altered using the color property. By
+          default, it will appear in <OuiCode>full</OuiCode> color. For proper
+          color contrast, only a limited set of OUI colors are offered. See the
           Props tab above for a list of available colors.
         </p>
       ),
@@ -133,7 +144,7 @@ export const StatExample = {
       ],
       text: (
         <p>
-          <strong>EuiStat</strong> also offers alignment options. By default,
+          <strong>OuiStat</strong> also offers alignment options. By default,
           text will be left aligned.
         </p>
       ),
@@ -154,16 +165,16 @@ export const StatExample = {
       ],
       text: (
         <p>
-          <EuiCode>title</EuiCode> uses the <strong>EuiTitle</strong> component
+          <OuiCode>title</OuiCode> uses the <strong>OuiTitle</strong> component
           and thus uses the same sizing property values (applied via the{' '}
-          <EuiCode>titleSize</EuiCode> property). Although all{' '}
-          <strong>EuiTitle</strong> sizes are available, suggested sizes include{' '}
-          <EuiCode language="ts">
+          <OuiCode>titleSize</OuiCode> property). Although all{' '}
+          <strong>OuiTitle</strong> sizes are available, suggested sizes include{' '}
+          <OuiCode language="ts">
             {"'l' | 'm' | 's' | 'xs' | 'xxs' | 'xxxs'"}
-          </EuiCode>
+          </OuiCode>
           . By default, the size is set to large{' '}
-          <EuiCode language="ts">{"'l'"}</EuiCode>. The{' '}
-          <EuiCode>description</EuiCode> label cannot be re-sized via component
+          <OuiCode language="ts">{"'l'"}</OuiCode>. The{' '}
+          <OuiCode>description</OuiCode> label cannot be re-sized via component
           properties.
         </p>
       ),
@@ -184,9 +195,9 @@ export const StatExample = {
       ],
       text: (
         <p>
-          You can reverse the order of the <EuiCode>description</EuiCode> and{' '}
-          <EuiCode>title</EuiCode> text by setting the{' '}
-          <EuiCode>reverse</EuiCode> property to true. By default, the
+          You can reverse the order of the <OuiCode>description</OuiCode> and{' '}
+          <OuiCode>title</OuiCode> text by setting the{' '}
+          <OuiCode>reverse</OuiCode> property to true. By default, the
           description (label) is displayed above the title (value).
         </p>
       ),
@@ -207,7 +218,7 @@ export const StatExample = {
       ],
       text: (
         <p>
-          If you apply the <EuiCode>isLoading</EuiCode> prop, the title will
+          If you apply the <OuiCode>isLoading</OuiCode> prop, the title will
           indicate the loading status by swapping the provided title with two
           flashing dashes.
         </p>
@@ -230,7 +241,7 @@ export const StatExample = {
       text: (
         <p>
           Following are samples demonstrating how you might assemble and display{' '}
-          <strong>EuiStat</strong> components.
+          <strong>OuiStat</strong> components.
         </p>
       ),
       demo: <StatCombos />,

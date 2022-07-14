@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,12 +33,12 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
+import { OuiFlexGroup, OuiFlexItem } from '../flex';
 
-import { EuiIcon } from '../icon';
+import { OuiIcon } from '../icon';
 
 export type FilterChecked = 'on' | 'off';
-export interface EuiFilterSelectItemProps
+export interface OuiFilterSelectItemProps
   extends CommonProps,
     ButtonHTMLAttributes<HTMLButtonElement> {
   checked?: FilterChecked;
@@ -50,7 +61,7 @@ const resolveIconAndColor = (checked?: FilterChecked) => {
       };
 };
 
-export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
+export class OuiFilterSelectItem extends Component<OuiFilterSelectItemProps> {
   static defaultProps = {
     showIcons: true,
   };
@@ -82,9 +93,9 @@ export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
       ...rest
     } = this.props;
     const classes = classNames(
-      'euiFilterSelectItem',
+      'ouiFilterSelectItem',
       {
-        'euiFilterSelectItem-isFocused': isFocused,
+        'ouiFilterSelectItem-isFocused': isFocused,
       },
       className
     );
@@ -93,9 +104,9 @@ export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
     if (showIcons) {
       const { icon, color } = resolveIconAndColor(checked);
       iconNode = (
-        <EuiFlexItem grow={false}>
-          <EuiIcon color={color} type={icon} />
-        </EuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiIcon color={color} type={icon} />
+        </OuiFlexItem>
       );
     }
 
@@ -109,18 +120,18 @@ export class EuiFilterSelectItem extends Component<EuiFilterSelectItemProps> {
         disabled={disabled}
         aria-disabled={disabled}
         {...rest}>
-        <EuiFlexGroup
+        <OuiFlexGroup
           alignItems="center"
           gutterSize="s"
           component="span"
           responsive={false}>
           {iconNode}
-          <EuiFlexItem
-            className="euiFilterSelectItem__content"
+          <OuiFlexItem
+            className="ouiFilterSelectItem__content"
             component="span">
             {children}
-          </EuiFlexItem>
-        </EuiFlexGroup>
+          </OuiFlexItem>
+        </OuiFlexGroup>
       </button>
     );
   }

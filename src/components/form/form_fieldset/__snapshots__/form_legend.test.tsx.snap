@@ -1,29 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFormLegend is rendered 1`] = `
+exports[`OuiFormLegend is rendered 1`] = `
 <legend
   aria-label="aria-label"
-  class="euiFormLegend testClass1 testClass2"
+  class="ouiFormLegend testClass1 testClass2"
   data-test-subj="test subject string"
 >
   Legend
 </legend>
 `;
 
-exports[`EuiFormLegend props compressed is rendered 1`] = `
+exports[`OuiFormLegend props compressed is rendered 1`] = `
 <legend
-  class="euiFormLegend euiFormLegend--compressed"
+  class="ouiFormLegend ouiFormLegend--compressed"
 >
   Legend
 </legend>
 `;
 
-exports[`EuiFormLegend props hidden is rendered 1`] = `
+exports[`OuiFormLegend props hidden is rendered 1`] = `
 <legend
-  class="euiFormLegend euiFormLegend-isHidden"
+  class="ouiFormLegend ouiFormLegend-isHidden"
 >
   <span
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Legend
   </span>

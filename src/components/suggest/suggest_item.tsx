@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,16 +36,16 @@ import React, {
 } from 'react';
 import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import classNames from 'classnames';
-import { EuiIcon, IconType } from '../icon';
+import { OuiIcon, IconType } from '../icon';
 
 interface Type {
   iconType: IconType;
   color: string | keyof typeof colorToClassNameMap;
 }
 
-interface EuiSuggestItemPropsBase {
+interface OuiSuggestItemPropsBase {
   /**
-   * Takes 'iconType' for EuiIcon and 'color'. 'color' can be tint1 through tint9.
+   * Takes 'iconType' for OuiIcon and 'color'. 'color' can be tint1 through tint9.
    */
   type: Type;
 
@@ -73,8 +84,8 @@ type PropsForButton = Omit<
   onClick: MouseEventHandler<HTMLButtonElement> | undefined;
 };
 
-export type EuiSuggestItemProps = CommonProps &
-  EuiSuggestItemPropsBase &
+export type OuiSuggestItemProps = CommonProps &
+  OuiSuggestItemPropsBase &
   ExclusiveUnion<PropsForDiv, PropsForButton>;
 
 interface ColorToClassMap {
@@ -95,34 +106,34 @@ interface ColorToClassMap {
 type LabelWidthSize = '20' | '30' | '40' | '50' | '60' | '70' | '80' | '90';
 
 const colorToClassNameMap: ColorToClassMap = {
-  tint0: 'euiSuggestItem__type--tint0',
-  tint1: 'euiSuggestItem__type--tint1',
-  tint2: 'euiSuggestItem__type--tint2',
-  tint3: 'euiSuggestItem__type--tint3',
-  tint4: 'euiSuggestItem__type--tint4',
-  tint5: 'euiSuggestItem__type--tint5',
-  tint6: 'euiSuggestItem__type--tint6',
-  tint7: 'euiSuggestItem__type--tint7',
-  tint8: 'euiSuggestItem__type--tint8',
-  tint9: 'euiSuggestItem__type--tint9',
-  tint10: 'euiSuggestItem__type--tint10',
+  tint0: 'ouiSuggestItem__type--tint0',
+  tint1: 'ouiSuggestItem__type--tint1',
+  tint2: 'ouiSuggestItem__type--tint2',
+  tint3: 'ouiSuggestItem__type--tint3',
+  tint4: 'ouiSuggestItem__type--tint4',
+  tint5: 'ouiSuggestItem__type--tint5',
+  tint6: 'ouiSuggestItem__type--tint6',
+  tint7: 'ouiSuggestItem__type--tint7',
+  tint8: 'ouiSuggestItem__type--tint8',
+  tint9: 'ouiSuggestItem__type--tint9',
+  tint10: 'ouiSuggestItem__type--tint10',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
 const labelDisplayToClassMap = {
-  fixed: 'euiSuggestItem__labelDisplay--fixed',
-  expand: 'euiSuggestItem__labelDisplay--expand',
+  fixed: 'ouiSuggestItem__labelDisplay--fixed',
+  expand: 'ouiSuggestItem__labelDisplay--expand',
 };
 
 const descriptionDisplayToClassMap = {
-  truncate: 'euiSuggestItem__description--truncate',
-  wrap: 'euiSuggestItem__description--wrap',
+  truncate: 'ouiSuggestItem__description--truncate',
+  wrap: 'ouiSuggestItem__description--wrap',
 };
 
 export const DISPLAYS = keysOf(labelDisplayToClassMap);
 
-export const EuiSuggestItem: FunctionComponent<EuiSuggestItemProps> = ({
+export const OuiSuggestItem: FunctionComponent<OuiSuggestItemProps> = ({
   className,
   label,
   type,
@@ -134,9 +145,9 @@ export const EuiSuggestItem: FunctionComponent<EuiSuggestItemProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiSuggestItem',
+    'ouiSuggestItem',
     {
-      'euiSuggestItem-isClickable': onClick,
+      'ouiSuggestItem-isClickable': onClick,
     },
     className
   );
@@ -146,15 +157,15 @@ export const EuiSuggestItem: FunctionComponent<EuiSuggestItemProps> = ({
   const labelDisplayCalculated = !description ? 'expand' : labelDisplay;
 
   const labelClassNames = classNames(
-    'euiSuggestItem__label',
+    'ouiSuggestItem__label',
     labelDisplayToClassMap[labelDisplayCalculated],
     {
-      [`euiSuggestItem__label--width${labelWidth}`]: labelDisplay === 'fixed',
+      [`ouiSuggestItem__label--width${labelWidth}`]: labelDisplay === 'fixed',
     }
   );
 
   const descriptionClassNames = classNames(
-    'euiSuggestItem__description',
+    'ouiSuggestItem__description',
     descriptionDisplayToClassMap[descriptionDisplay]
   );
 
@@ -166,8 +177,8 @@ export const EuiSuggestItem: FunctionComponent<EuiSuggestItemProps> = ({
 
   const innerContent = (
     <React.Fragment>
-      <span className={`euiSuggestItem__type ${colorClass}`}>
-        <EuiIcon
+      <span className={`ouiSuggestItem__type ${colorClass}`}>
+        <OuiIcon
           type={type.iconType}
           color="inherit" // forces the icon to inherit its parent color
         />

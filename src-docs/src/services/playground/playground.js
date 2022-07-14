@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import format from 'html-format';
 
 import { useView, Compiler, Placeholder } from 'react-view';
 import {
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiErrorBoundary,
-  EuiTitle,
+  OuiSpacer,
+  OuiCodeBlock,
+  OuiErrorBoundary,
+  OuiTitle,
 } from '../../../../src/components';
 import Knobs from './knobs';
 import { GuideSectionExample } from '../../components/guide_section/guide_section_parts/guide_section_example';
@@ -79,14 +90,14 @@ export default ({
                 className={playgroundClassName}
               />
             </div>
-            <EuiSpacer />
-            <EuiCodeBlock
+            <OuiSpacer />
+            <OuiCodeBlock
               language="jsx"
               fontSize="m"
               paddingSize="m"
               isCopyable>
               {getSnippet(params.editorProps.code)}
-            </EuiCodeBlock>
+            </OuiCodeBlock>
           </>
         }
         tabs={tabs}
@@ -96,14 +107,14 @@ export default ({
               description
             ) : (
               <div className="guideSection__propsTableIntro">
-                <EuiTitle size="s">
+                <OuiTitle size="s">
                   <h2>{config.componentName}</h2>
-                </EuiTitle>
+                </OuiTitle>
               </div>
             )}
-            <EuiErrorBoundary>
+            <OuiErrorBoundary>
               <Knobs {...params.knobProps} />
-            </EuiErrorBoundary>
+            </OuiErrorBoundary>
           </>
         }
       />

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,18 +32,18 @@ import React, { Component, ChangeEventHandler } from 'react';
 import dateMath from '@elastic/datemath';
 import { toSentenceCase } from '../../../../services/string/to_case';
 import { htmlIdGenerator } from '../../../../services';
-import { EuiFlexGroup, EuiFlexItem } from '../../../flex';
+import { OuiFlexGroup, OuiFlexItem } from '../../../flex';
 import {
-  EuiForm,
-  EuiFormRow,
-  EuiSelect,
-  EuiFieldNumber,
-  EuiFieldText,
-  EuiSwitch,
-  EuiFormLabel,
-  EuiSwitchEvent,
+  OuiForm,
+  OuiFormRow,
+  OuiSelect,
+  OuiFieldNumber,
+  OuiFieldText,
+  OuiSwitch,
+  OuiFormLabel,
+  OuiSwitchEvent,
 } from '../../../form';
-import { EuiSpacer } from '../../../spacer';
+import { OuiSpacer } from '../../../spacer';
 
 import { timeUnits } from '../time_units';
 import { relativeOptions } from '../relative_options';
@@ -40,32 +51,32 @@ import {
   parseRelativeParts,
   toRelativeStringFromParts,
 } from '../relative_utils';
-import { EuiScreenReaderOnly } from '../../../accessibility';
-import { EuiI18n } from '../../../i18n';
+import { OuiScreenReaderOnly } from '../../../accessibility';
+import { OuiI18n } from '../../../i18n';
 import { RelativeParts, TimeUnitId } from '../../types';
 import { LocaleSpecifier } from 'moment'; // eslint-disable-line import/named
-import { EuiDatePopoverContentProps } from './date_popover_content';
+import { OuiDatePopoverContentProps } from './date_popover_content';
 
-export interface EuiRelativeTabProps {
+export interface OuiRelativeTabProps {
   dateFormat: string;
   locale?: LocaleSpecifier;
   value: string;
-  onChange: EuiDatePopoverContentProps['onChange'];
+  onChange: OuiDatePopoverContentProps['onChange'];
   roundUp?: boolean;
   position: 'start' | 'end';
 }
 
-interface EuiRelativeTabState
+interface OuiRelativeTabState
   extends Pick<RelativeParts, 'unit' | 'round' | 'roundUnit'> {
   count: number | undefined;
   sentenceCasedPosition: string;
 }
 
-export class EuiRelativeTab extends Component<
-  EuiRelativeTabProps,
-  EuiRelativeTabState
+export class OuiRelativeTab extends Component<
+  OuiRelativeTabProps,
+  OuiRelativeTabState
 > {
-  state: EuiRelativeTabState = {
+  state: OuiRelativeTabState = {
     ...parseRelativeParts(this.props.value),
     sentenceCasedPosition: toSentenceCase(this.props.position),
   };
@@ -91,7 +102,7 @@ export class EuiRelativeTab extends Component<
     );
   };
 
-  onRoundChange = (event: EuiSwitchEvent) => {
+  onRoundChange = (event: OuiSwitchEvent) => {
     this.setState(
       {
         round: event.target.checked,
@@ -129,20 +140,20 @@ export class EuiRelativeTab extends Component<
             .locale(this.props.locale || 'en')
             .format(this.props.dateFormat);
     return (
-      <EuiForm className="euiDatePopoverContent__padded">
-        <EuiFlexGroup gutterSize="s" responsive={false}>
-          <EuiFlexItem>
-            <EuiI18n
+      <OuiForm className="ouiDatePopoverContent__padded">
+        <OuiFlexGroup gutterSize="s" responsive={false}>
+          <OuiFlexItem>
+            <OuiI18n
               tokens={[
-                'euiRelativeTab.numberInputError',
-                'euiRelativeTab.numberInputLabel',
+                'ouiRelativeTab.numberInputError',
+                'ouiRelativeTab.numberInputLabel',
               ]}
               defaults={['Must be >= 0', 'Time span amount']}>
               {([numberInputError, numberInputLabel]: string[]) => (
-                <EuiFormRow
+                <OuiFormRow
                   isInvalid={isInvalid}
                   error={isInvalid ? numberInputError : null}>
-                  <EuiFieldNumber
+                  <OuiFieldNumber
                     compressed
                     aria-label={numberInputLabel}
                     aria-describedby={relativeDateInputNumberDescriptionId}
@@ -151,16 +162,16 @@ export class EuiRelativeTab extends Component<
                     onChange={this.onCountChange}
                     isInvalid={isInvalid}
                   />
-                </EuiFormRow>
+                </OuiFormRow>
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiI18n
-              token="euiRelativeTab.unitInputLabel"
+            </OuiI18n>
+          </OuiFlexItem>
+          <OuiFlexItem>
+            <OuiI18n
+              token="ouiRelativeTab.unitInputLabel"
               default="Relative time span">
               {(unitInputLabel: string) => (
-                <EuiSelect
+                <OuiSelect
                   compressed
                   aria-label={unitInputLabel}
                   data-test-subj={
@@ -171,49 +182,49 @@ export class EuiRelativeTab extends Component<
                   onChange={this.onUnitChange}
                 />
               )}
-            </EuiI18n>
-          </EuiFlexItem>
-        </EuiFlexGroup>
-        <EuiSpacer size="m" />
-        <EuiI18n
-          token="euiRelativeTab.roundingLabel"
+            </OuiI18n>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+        <OuiSpacer size="m" />
+        <OuiI18n
+          token="ouiRelativeTab.roundingLabel"
           default="Round to the {unit}"
           values={{ unit: timeUnits[unit.substring(0, 1) as TimeUnitId] }}>
           {(roundingLabel: string) => (
-            <EuiSwitch
+            <OuiSwitch
               data-test-subj={'superDatePickerRelativeDateRoundSwitch'}
               label={roundingLabel}
               checked={this.state.round}
               onChange={this.onRoundChange}
             />
           )}
-        </EuiI18n>
+        </OuiI18n>
 
-        <EuiSpacer size="m" />
-        <EuiFieldText
+        <OuiSpacer size="m" />
+        <OuiFieldText
           compressed
           value={formatedValue}
           readOnly
           prepend={
-            <EuiFormLabel>
-              <EuiI18n
-                token="euiRelativeTab.relativeDate"
+            <OuiFormLabel>
+              <OuiI18n
+                token="ouiRelativeTab.relativeDate"
                 default="{position} date"
                 values={{ position: this.state.sentenceCasedPosition }}
               />
-            </EuiFormLabel>
+            </OuiFormLabel>
           }
         />
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <p id={relativeDateInputNumberDescriptionId}>
-            <EuiI18n
-              token="euiRelativeTab.fullDescription"
+            <OuiI18n
+              token="ouiRelativeTab.fullDescription"
               default="The unit is changeable. Currently set to {unit}."
               values={{ unit }}
             />
           </p>
-        </EuiScreenReaderOnly>
-      </EuiForm>
+        </OuiScreenReaderOnly>
+      </OuiForm>
     );
   }
 }

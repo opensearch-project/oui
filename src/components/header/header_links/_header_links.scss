@@ -1,15 +1,26 @@
-.euiHeaderLinks {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiHeaderLinks {
   display: flex;
 }
 
-.euiHeaderLinks__list {
+.ouiHeaderLinks__list {
   white-space: nowrap;
   display: flex;
   align-items: center;
 }
 
-@each $name, $gutterSize in $euiHeaderLinksGutterSizes {
-  .euiHeaderLinks__list--#{$name} > * {
+@each $name, $gutterSize in $ouiHeaderLinksGutterSizes {
+  .ouiHeaderLinks__list--#{$name} > * {
     // Apply margins to any children
     margin: 0 $gutterSize;
   }

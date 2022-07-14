@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFormErrorText is rendered 1`] = `
+exports[`OuiFormErrorText is rendered 1`] = `
 <div
   aria-label="aria-label"
   aria-live="polite"
-  class="euiFormErrorText testClass1 testClass2"
+  class="ouiFormErrorText testClass1 testClass2"
   data-test-subj="test subject string"
 >
   This is an error.

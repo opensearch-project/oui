@@ -1,37 +1,48 @@
-.euiBottomBar {
-  @include euiBottomShadowFlat($euiShadowColorLarge);
-  background: $euiHeaderDarkBackgroundColor;
-  color: $euiColorGhost;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiBottomBar {
+  @include ouiBottomShadowFlat($ouiShadowColorLarge);
+  background: $ouiHeaderDarkBackgroundColor;
+  color: $ouiColorGhost;
 
   // sass-lint:disable-block mixins-before-declarations
-  @include euiCanAnimate {
-    animation: euiBottomBarAppear $euiAnimSpeedSlow $euiAnimSlightResistance;
+  @include ouiCanAnimate {
+    animation: ouiBottomBarAppear $ouiAnimSpeedSlow $ouiAnimSlightResistance;
   }
 }
 
-.euiBottomBar--fixed {
+.ouiBottomBar--fixed {
   position: fixed;
-  z-index: $euiZHeader - 2;
+  z-index: $ouiZHeader - 2;
 }
 
-.euiBottomBar--sticky {
+.ouiBottomBar--sticky {
   position: sticky;
-  z-index: $euiZHeader - 2;
+  z-index: $ouiZHeader - 2;
 }
 
-.euiBottomBar--paddingSmall {
-  padding: $euiSizeS;
+.ouiBottomBar--paddingSmall {
+  padding: $ouiSizeS;
 }
 
-.euiBottomBar--paddingMedium {
-  padding: $euiSize;
+.ouiBottomBar--paddingMedium {
+  padding: $ouiSize;
 }
 
-.euiBottomBar--paddingLarge {
-  padding: $euiSizeL;
+.ouiBottomBar--paddingLarge {
+  padding: $ouiSizeL;
 }
 
-@keyframes euiBottomBarAppear {
+@keyframes ouiBottomBarAppear {
   0% {
     transform: translateY(100%);
     opacity: 0;

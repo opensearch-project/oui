@@ -1,38 +1,49 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiPageTemplate,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPanel,
-  EuiSpacer,
+  OuiPageTemplate,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiPanel,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default ({ button = <></>, content }) => (
-  <EuiPageTemplate fullHeight template="empty">
-    <EuiFlexGroup
-      className="eui-fullHeight"
+  <OuiPageTemplate fullHeight template="empty">
+    <OuiFlexGroup
+      className="oui-fullHeight"
       gutterSize="none"
       direction="column"
       responsive={false}>
-      <EuiFlexItem grow={false}>
-        <EuiPanel color="danger" />
-      </EuiFlexItem>
-      <EuiSpacer size="l" />
-      <EuiFlexItem className="eui-fullHeight">
-        <EuiFlexGroup className="eui-fullHeight" gutterSize="l">
-          <EuiFlexItem grow={2}>
-            <EuiPanel tabIndex={0} className="eui-yScroll" hasShadow={false}>
+      <OuiFlexItem grow={false}>
+        <OuiPanel color="danger" />
+      </OuiFlexItem>
+      <OuiSpacer size="l" />
+      <OuiFlexItem className="oui-fullHeight">
+        <OuiFlexGroup className="oui-fullHeight" gutterSize="l">
+          <OuiFlexItem grow={2}>
+            <OuiPanel tabIndex={0} className="oui-yScroll" hasShadow={false}>
               {content}
-            </EuiPanel>
-          </EuiFlexItem>
-          <EuiFlexItem>
-            <EuiPanel hasShadow={false} />
-            <EuiSpacer />
+            </OuiPanel>
+          </OuiFlexItem>
+          <OuiFlexItem>
+            <OuiPanel hasShadow={false} />
+            <OuiSpacer />
             {button}
-          </EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiFlexItem>
-    </EuiFlexGroup>
-  </EuiPageTemplate>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+  </OuiPageTemplate>
 );

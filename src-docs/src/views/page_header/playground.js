@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
 import React from 'react';
 import { PropTypes } from 'react-view';
 import {
-  EuiPageTemplate,
-  EuiPageHeader,
-  EuiButton,
-  EuiTabs,
-  EuiImage,
+  OuiPageTemplate,
+  OuiPageHeader,
+  OuiButton,
+  OuiTabs,
+  OuiImage,
 } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
@@ -28,18 +39,18 @@ const tabs = `[
 ]`;
 
 const rightSideItems = `[
-  <EuiButton fill>Button 1</EuiButton>,
-  <EuiButton>Button 2</EuiButton>,
+  <OuiButton fill>Button 1</OuiButton>,
+  <OuiButton>Button 2</OuiButton>,
 ]`;
 
 // TODO: Try later to build a toggle that allows switching between different types of content to pass
 // const rightSideItems =
-//   '[<EuiImage url="https://source.unsplash.com/400x200/?Water" height="200" />]';
+//   '[<OuiImage url="https://source.unsplash.com/400x200/?Water" height="200" />]';
 
 export const pageHeaderConfig = () => {
-  const docgenInfo = Array.isArray(EuiPageHeader.__docgenInfo)
-    ? EuiPageHeader.__docgenInfo[0]
-    : EuiPageHeader.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiPageHeader.__docgenInfo)
+    ? OuiPageHeader.__docgenInfo[0]
+    : OuiPageHeader.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.iconType = iconValidator(propsToUse.iconType);
@@ -80,17 +91,17 @@ export const pageHeaderConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiPageHeader',
+      componentName: 'OuiPageHeader',
       props: propsToUse,
       scope: {
-        EuiPageHeader,
-        EuiButton,
-        EuiTabs,
-        EuiImage,
+        OuiPageHeader,
+        OuiButton,
+        OuiTabs,
+        OuiImage,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiPageHeader', 'EuiButton', 'EuiTabs', 'EuiImage'],
+        '@opensearch-project/oui': {
+          named: ['OuiPageHeader', 'OuiButton', 'OuiTabs', 'OuiImage'],
         },
       },
       customProps: generateCustomProps(['rightSideItems', 'tabs']),

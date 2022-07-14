@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,20 +37,20 @@ function isComponentBecomingVisible(
   return prevHide === true && nextHide === false;
 }
 
-export interface EuiDelayHideProps {
+export interface OuiDelayHideProps {
   hide: boolean;
   minimumDuration: number;
   render: () => ReactNode;
 }
 
-interface EuiDelayHideState {
+interface OuiDelayHideState {
   hide: boolean;
   countdownExpired?: boolean;
 }
 
-export class EuiDelayHide extends Component<
-  EuiDelayHideProps,
-  EuiDelayHideState
+export class OuiDelayHide extends Component<
+  OuiDelayHideProps,
+  OuiDelayHideState
 > {
   static defaultProps = {
     hide: false,
@@ -47,8 +58,8 @@ export class EuiDelayHide extends Component<
   };
 
   static getDerivedStateFromProps(
-    nextProps: EuiDelayHideProps,
-    prevState: EuiDelayHideState
+    nextProps: OuiDelayHideProps,
+    prevState: OuiDelayHideState
   ) {
     const isBecomingVisible = isComponentBecomingVisible(
       prevState.hide,
@@ -74,7 +85,7 @@ export class EuiDelayHide extends Component<
     }
   }
 
-  componentDidUpdate(prevProps: EuiDelayHideProps) {
+  componentDidUpdate(prevProps: OuiDelayHideProps) {
     const isBecomingVisible = isComponentBecomingVisible(
       prevProps.hide,
       this.props.hide

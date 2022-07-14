@@ -1,6 +1,17 @@
-.euiTextArea {
-  @include euiFormControlStyle;
-  line-height: $euiLineHeight; // give more spacing between multiple lines
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiTextArea {
+  @include ouiFormControlStyle;
+  line-height: $ouiLineHeight; // give more spacing between multiple lines
 
   // Textareas have their own sizing
   &,
@@ -19,7 +30,7 @@ $textareaResizing: (
 
 // Create button modifiers based upon the map.
 @each $direction, $modifier in $textareaResizing {
-  .euiTextArea--#{$modifier} {
+  .ouiTextArea--#{$modifier} {
     resize: #{$direction};
   }
 }

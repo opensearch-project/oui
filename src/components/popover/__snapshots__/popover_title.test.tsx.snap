@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiPopoverTitle is rendered 1`] = `
+exports[`OuiPopoverTitle is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiPopoverTitle testClass1 testClass2"
+  class="ouiPopoverTitle testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
 
-exports[`EuiPopoverTitle props paddingSize l is rendered 1`] = `
+exports[`OuiPopoverTitle props paddingSize l is rendered 1`] = `
 <div
-  class="euiPopoverTitle euiPopoverTitle--paddingLarge"
+  class="ouiPopoverTitle ouiPopoverTitle--paddingLarge"
 />
 `;
 
-exports[`EuiPopoverTitle props paddingSize m is rendered 1`] = `
+exports[`OuiPopoverTitle props paddingSize m is rendered 1`] = `
 <div
-  class="euiPopoverTitle euiPopoverTitle--paddingMedium"
+  class="ouiPopoverTitle ouiPopoverTitle--paddingMedium"
 />
 `;
 
-exports[`EuiPopoverTitle props paddingSize none is rendered 1`] = `
+exports[`OuiPopoverTitle props paddingSize none is rendered 1`] = `
 <div
-  class="euiPopoverTitle euiPopoverTitle--paddingNone"
+  class="ouiPopoverTitle ouiPopoverTitle--paddingNone"
 />
 `;
 
-exports[`EuiPopoverTitle props paddingSize s is rendered 1`] = `
+exports[`OuiPopoverTitle props paddingSize s is rendered 1`] = `
 <div
-  class="euiPopoverTitle euiPopoverTitle--paddingSmall"
+  class="ouiPopoverTitle ouiPopoverTitle--paddingSmall"
 />
 `;

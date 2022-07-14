@@ -1,5 +1,16 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiNotificationBadge } from '../../../../src/components/badge/notification_badge';
+import { OuiNotificationBadge } from '../../../../src/components/badge/notification_badge';
 
-export default () => <EuiNotificationBadge>3</EuiNotificationBadge>;
+export default () => <OuiNotificationBadge>3</OuiNotificationBadge>;

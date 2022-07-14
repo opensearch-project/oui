@@ -1,5 +1,16 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 export const propsInfo = {
-  EuiSearchBar: {
+  OuiSearchBar: {
     __docgenInfo: {
       props: {
         onChange: {
@@ -42,7 +53,7 @@ export const propsInfo = {
 
   Query: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         parse: {
           description: 'Parses the given string and returns the parsed query',
@@ -70,7 +81,7 @@ export const propsInfo = {
 
   SearchBox: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         placeholder: {
           description: 'Sets the placeholder of the search input',
@@ -96,7 +107,7 @@ export const propsInfo = {
 
   Schema: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         strict: {
           description:
@@ -121,7 +132,7 @@ export const propsInfo = {
 
   SchemaField: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         type: {
           description: 'The data type of the field',
@@ -147,7 +158,7 @@ export const propsInfo = {
 
   SearchFilters: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       description:
         '#IsFilter | #FieldValueSelectionFilter | #FieldValueToggleFilter | #FieldValueToggleGroupFilter',
       props: {},
@@ -156,7 +167,7 @@ export const propsInfo = {
 
   IsFilter: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         type: {
           description: 'Defines the type of this filter. Must be set to `is`',
@@ -196,7 +207,7 @@ export const propsInfo = {
 
   FieldValueSelectionFilter: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         type: {
           description:
@@ -295,7 +306,7 @@ export const propsInfo = {
 
   FieldValueOption: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         value: {
           description:
@@ -321,7 +332,7 @@ export const propsInfo = {
 
   FieldValueToggleFilter: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         type: {
           description:
@@ -367,7 +378,7 @@ export const propsInfo = {
 
   FieldValueToggleGroupFilter: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         type: {
           description:
@@ -398,7 +409,7 @@ export const propsInfo = {
 
   FieldValueToggleGroupFilterItemType: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         value: {
           description: 'Value of the filter item',
@@ -422,7 +433,7 @@ export const propsInfo = {
 
   ExecuteQueryOptions: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         defaultFields: {
           description: 'A set of fields to execute the term clauses against',
@@ -444,7 +455,7 @@ export const propsInfo = {
 
   ToESQueryOptions: {
     __docgenInfo: {
-      _euiObjectType: 'type',
+      _ouiObjectType: 'type',
       props: {
         extraMustQueries: {
           description:

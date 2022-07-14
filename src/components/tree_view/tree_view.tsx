@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,14 +31,14 @@
 import React, { Component, HTMLAttributes, createContext } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
-import { EuiI18n } from '../i18n';
-import { EuiIcon } from '../icon';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiText } from '../text';
+import { OuiI18n } from '../i18n';
+import { OuiIcon } from '../icon';
+import { OuiScreenReaderOnly } from '../accessibility';
+import { OuiText } from '../text';
 import { keys, htmlIdGenerator } from '../../services';
-import { EuiInnerText } from '../inner_text';
+import { OuiInnerText } from '../inner_text';
 
-const EuiTreeViewContext = createContext<string>('');
+const OuiTreeViewContext = createContext<string>('');
 
 function hasAriaLabel(
   x: HTMLAttributes<HTMLUListElement>
@@ -44,7 +55,7 @@ function getTreeId(
 }
 
 export interface Node {
-  /** An array of EuiTreeViewNodes to render as children
+  /** An array of OuiTreeViewNodes to render as children
    */
   children?: Node[];
   /** The readable label for the item
@@ -76,16 +87,16 @@ export interface Node {
   callback?(): string;
 }
 
-export type EuiTreeViewDisplayOptions = 'default' | 'compressed';
+export type OuiTreeViewDisplayOptions = 'default' | 'compressed';
 
 const displayToClassNameMap: {
-  [option in EuiTreeViewDisplayOptions]: string | null;
+  [option in OuiTreeViewDisplayOptions]: string | null;
 } = {
   default: null,
-  compressed: 'euiTreeView--compressed',
+  compressed: 'ouiTreeView--compressed',
 };
 
-interface EuiTreeViewState {
+interface OuiTreeViewState {
   openItems: string[];
   activeItem: string;
   treeID: string;
@@ -94,12 +105,12 @@ interface EuiTreeViewState {
 
 export type CommonTreeProps = CommonProps &
   HTMLAttributes<HTMLUListElement> & {
-    /** An array of EuiTreeViewNodes
+    /** An array of OuiTreeViewNodes
      */
     items: Node[];
     /** Optionally use a variation with smaller text and icon sizes
      */
-    display?: EuiTreeViewDisplayOptions;
+    display?: OuiTreeViewDisplayOptions;
     /** Set all items to open on initial load
      */
     expandByDefault?: boolean;
@@ -109,17 +120,17 @@ export type CommonTreeProps = CommonProps &
     showExpansionArrows?: boolean;
   };
 
-export type EuiTreeViewProps = Omit<
+export type OuiTreeViewProps = Omit<
   CommonTreeProps,
   'aria-label' | 'aria-labelledby'
 > &
   ({ 'aria-label': string } | { 'aria-labelledby': string });
 
-export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
-  treeIdGenerator = htmlIdGenerator('euiTreeView');
-  static contextType = EuiTreeViewContext;
+export class OuiTreeView extends Component<OuiTreeViewProps, OuiTreeViewState> {
+  treeIdGenerator = htmlIdGenerator('ouiTreeView');
+  static contextType = OuiTreeViewContext;
   isNested: boolean = !!this.context;
-  state: EuiTreeViewState = {
+  state: OuiTreeViewState = {
     openItems: this.props.expandByDefault
       ? this.props.items
           .map<string>(({ id, children }) =>
@@ -136,7 +147,7 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
     expandChildNodes: this.props.expandByDefault || false,
   };
 
-  componentDidUpdate(prevProps: EuiTreeViewProps) {
+  componentDidUpdate(prevProps: OuiTreeViewProps) {
     if (this.props.id !== prevProps.id) {
       // eslint-disable-next-line react/no-did-update-set-state
       this.setState({
@@ -192,7 +203,7 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
       case keys.ARROW_DOWN: {
         const nodeButtons = Array.from(
           document.querySelectorAll(
-            `[data-test-subj="euiTreeViewButton-${this.state.treeID}"]`
+            `[data-test-subj="ouiTreeViewButton-${this.state.treeID}"]`
           )
         );
         const currentIndex = nodeButtons.indexOf(event.currentTarget);
@@ -209,7 +220,7 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
       case keys.ARROW_UP: {
         const nodeButtons = Array.from(
           document.querySelectorAll(
-            `[data-test-subj="euiTreeViewButton-${this.state.treeID}"]`
+            `[data-test-subj="ouiTreeViewButton-${this.state.treeID}"]`
           )
         );
         const currentIndex = nodeButtons.indexOf(event.currentTarget);
@@ -264,29 +275,29 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
 
     // Computed classNames
     const classes = classNames(
-      'euiTreeView',
+      'ouiTreeView',
       display ? displayToClassNameMap[display] : null,
-      { 'euiTreeView--withArrows': showExpansionArrows },
+      { 'ouiTreeView--withArrows': showExpansionArrows },
       className
     );
 
     const instructionsId = `${this.state.treeID}--instruction`;
 
     return (
-      <EuiTreeViewContext.Provider value={this.state.treeID}>
-        <EuiText
+      <OuiTreeViewContext.Provider value={this.state.treeID}>
+        <OuiText
           size={display === 'compressed' ? 's' : 'm'}
-          className="euiTreeView__wrapper">
+          className="ouiTreeView__wrapper">
           {!this.isNested && (
-            <EuiI18n
-              token="euiTreeView.listNavigationInstructions"
+            <OuiI18n
+              token="ouiTreeView.listNavigationInstructions"
               default="You can quickly navigate this list using arrow keys.">
               {(listNavigationInstructions: string) => (
-                <EuiScreenReaderOnly>
+                <OuiScreenReaderOnly>
                   <p id={instructionsId}>{listNavigationInstructions}</p>
-                </EuiScreenReaderOnly>
+                </OuiScreenReaderOnly>
               )}
-            </EuiI18n>
+            </OuiI18n>
           )}
           <ul
             className={classes}
@@ -298,13 +309,13 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
               const wrappingId = this.treeIdGenerator(buttonId);
 
               return (
-                <EuiInnerText
+                <OuiInnerText
                   key={node.id + index}
                   fallback={typeof node.label === 'string' ? node.label : ''}>
                   {(ref, innerText) => (
-                    <EuiI18n
+                    <OuiI18n
                       key={node.id + index}
-                      token="euiTreeView.ariaLabel"
+                      token="ouiTreeView.ariaLabel"
                       default="{nodeLabel} child of {ariaLabel}"
                       values={{
                         nodeLabel: innerText,
@@ -322,22 +333,22 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                             };
 
                         const nodeClasses = classNames(
-                          'euiTreeView__node',
+                          'ouiTreeView__node',
                           display ? displayToClassNameMap[display] : null,
                           {
-                            'euiTreeView__node--expanded': this.isNodeOpen(
+                            'ouiTreeView__node--expanded': this.isNodeOpen(
                               node
                             ),
                           }
                         );
 
                         const nodeButtonClasses = classNames(
-                          'euiTreeView__nodeInner',
+                          'ouiTreeView__nodeInner',
                           showExpansionArrows && node.children
-                            ? 'euiTreeView__nodeInner--withArrows'
+                            ? 'ouiTreeView__nodeInner--withArrows'
                             : null,
                           this.state.activeItem === node.id
-                            ? 'euiTreeView__node--active'
+                            ? 'ouiTreeView__node--active'
                             : null,
                           node.className ? node.className : null
                         );
@@ -350,15 +361,15 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                                 aria-controls={wrappingId}
                                 aria-expanded={this.isNodeOpen(node)}
                                 ref={(ref) => this.setButtonRef(ref, index)}
-                                data-test-subj={`euiTreeViewButton-${this.state.treeID}`}
+                                data-test-subj={`ouiTreeViewButton-${this.state.treeID}`}
                                 onKeyDown={(event: React.KeyboardEvent) =>
                                   this.onKeyDown(event, node)
                                 }
                                 onClick={() => this.handleNodeClick(node)}
                                 className={nodeButtonClasses}>
                                 {showExpansionArrows && node.children ? (
-                                  <EuiIcon
-                                    className="euiTreeView__expansionArrow"
+                                  <OuiIcon
+                                    className="ouiTreeView__expansionArrow"
                                     size={display === 'compressed' ? 's' : 'm'}
                                     type={
                                       this.isNodeOpen(node)
@@ -368,7 +379,7 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                                   />
                                 ) : null}
                                 {node.icon && !node.useEmptyIcon ? (
-                                  <span className="euiTreeView__iconWrapper">
+                                  <span className="ouiTreeView__iconWrapper">
                                     {this.isNodeOpen(node) &&
                                     node.iconWhenExpanded
                                       ? node.iconWhenExpanded
@@ -376,11 +387,11 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                                   </span>
                                 ) : null}
                                 {node.useEmptyIcon && !node.icon ? (
-                                  <span className="euiTreeView__iconPlaceholder" />
+                                  <span className="ouiTreeView__iconPlaceholder" />
                                 ) : null}
                                 <span
                                   ref={ref}
-                                  className="euiTreeView__nodeLabel">
+                                  className="ouiTreeView__nodeLabel">
                                   {node.label}
                                 </span>
                               </button>
@@ -390,7 +401,7 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                                   this.onChildrenKeydown(event, index)
                                 }>
                                 {node.children && this.isNodeOpen(node) ? (
-                                  <EuiTreeView
+                                  <OuiTreeView
                                     items={node.children}
                                     display={display}
                                     showExpansionArrows={showExpansionArrows}
@@ -405,14 +416,14 @@ export class EuiTreeView extends Component<EuiTreeViewProps, EuiTreeViewState> {
                           </React.Fragment>
                         );
                       }}
-                    </EuiI18n>
+                    </OuiI18n>
                   )}
-                </EuiInnerText>
+                </OuiInnerText>
               );
             })}
           </ul>
-        </EuiText>
-      </EuiTreeViewContext.Provider>
+        </OuiText>
+      </OuiTreeViewContext.Provider>
     );
   }
 }

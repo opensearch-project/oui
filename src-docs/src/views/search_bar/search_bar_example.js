@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,7 +16,7 @@ import { propsInfo } from './props_info';
 
 import { GuideRuleTitle, GuideSectionTypes } from '../../components';
 
-import { EuiCode, EuiLink } from '../../../../src/components';
+import { OuiCode, OuiLink } from '../../../../src/components';
 
 import { SearchBar } from './search_bar';
 import { ControlledSearchBar } from './controlled_search_bar';
@@ -37,7 +48,7 @@ export const SearchBarExample = {
       text: (
         <div>
           <p>
-            An <strong>EuiSearchBar</strong> is a toolbar that enables the user
+            An <strong>OuiSearchBar</strong> is a toolbar that enables the user
             to create/define a search query. This can be done either by entering
             the query syntax in a search box or by clicking any of the
             configured filters. The query language is not meant to be full blown
@@ -46,48 +57,48 @@ export const SearchBarExample = {
           </p>
           <ul>
             <li>
-              Search <EuiCode>terms</EuiCode> - one can simply type search terms
+              Search <OuiCode>terms</OuiCode> - one can simply type search terms
               (free text words) - Example,
-              <EuiCode>website -production</EuiCode>. In this example the
+              <OuiCode>website -production</OuiCode>. In this example the
               intention is to find all items that have the &quot;website&quot;
               terms in them but do not have the word &quot;production&quot;
             </li>
             <li>
               Field/value search - one can search for terms within specific
               fields - Example,
-              <EuiCode>tag:bug -severity:high</EuiCode>. In this example the
+              <OuiCode>tag:bug -severity:high</OuiCode>. In this example the
               intention is to find all items that have &quot;bug&quot; in their{' '}
-              <EuiCode>tag</EuiCode> field but do not have &quot;high&quot; in
+              <OuiCode>tag</OuiCode> field but do not have &quot;high&quot; in
               their
-              <EuiCode>severity</EuiCode> field. It is also possible to define
+              <OuiCode>severity</OuiCode> field. It is also possible to define
               range queries on numeric and date fields. For example,{' '}
-              <EuiCode>followers&gt;=10</EuiCode> will only match items that
+              <OuiCode>followers&gt;=10</OuiCode> will only match items that
               have 10 followers or above. And
-              <EuiCode>created&gt;&#39;12 Jan 2018&#39;</EuiCode> will only
+              <OuiCode>created&gt;&#39;12 Jan 2018&#39;</OuiCode> will only
               match items that were created after 12th January 2018.
             </li>
             <li>
-              <EuiCode>is</EuiCode> clauses - a simple boolean filter over a
+              <OuiCode>is</OuiCode> clauses - a simple boolean filter over a
               flag - Example,
-              <EuiCode>is:open -is:assigned</EuiCode>. In this example the
+              <OuiCode>is:open -is:assigned</OuiCode>. In this example the
               intention is to find all items that are flagged as{' '}
-              <EuiCode>open</EuiCode> but are not flagged as{' '}
-              <EuiCode>assigned</EuiCode>
+              <OuiCode>open</OuiCode> but are not flagged as{' '}
+              <OuiCode>assigned</OuiCode>
             </li>
             <li>
-              <EuiCode>or group</EuiCode> clauses - allowing multiple clauses to
+              <OuiCode>or group</OuiCode> clauses - allowing multiple clauses to
               be OR&apos;d together - Example,
-              <EuiCode>(is:active OR owner:dewey) followers&gt;5</EuiCode>. In
+              <OuiCode>(is:active OR owner:dewey) followers&gt;5</OuiCode>. In
               this example the intention is to find all items that are
-              <EuiCode>active</EuiCode> OR owned by <EuiCode>dewey</EuiCode>,
-              and have more than 5 <EuiCode>followers</EuiCode>
+              <OuiCode>active</OuiCode> OR owned by <OuiCode>dewey</OuiCode>,
+              and have more than 5 <OuiCode>followers</OuiCode>
             </li>
             <li>
-              Operators for partial text match <EuiCode>:</EuiCode>, exact text
-              match <EuiCode>=</EuiCode>, greater than <EuiCode>&gt;</EuiCode>,
-              greater than or equal <EuiCode>&gt;=</EuiCode>, less than{' '}
-              <EuiCode>&lt;</EuiCode>, and less than or equal{' '}
-              <EuiCode>&lt;=</EuiCode>.
+              Operators for partial text match <OuiCode>:</OuiCode>, exact text
+              match <OuiCode>=</OuiCode>, greater than <OuiCode>&gt;</OuiCode>,
+              greater than or equal <OuiCode>&gt;=</OuiCode>, less than{' '}
+              <OuiCode>&lt;</OuiCode>, and less than or equal{' '}
+              <OuiCode>&lt;=</OuiCode>.
             </li>
           </ul>
           <p>
@@ -98,7 +109,7 @@ export const SearchBarExample = {
           </p>
           <ul>
             <li>
-              <EuiCode>field_value_selection</EuiCode> - A filter to manipulate
+              <OuiCode>field_value_selection</OuiCode> - A filter to manipulate
               field/value clauses. The filter is associated with a field name,
               and provides the user a list of value options to choose from. This
               filter can be configured to be single or multi select. In a single
@@ -108,33 +119,33 @@ export const SearchBarExample = {
               all these field clauses to be ANDed.
             </li>
             <li>
-              <EuiCode>field_value_toggle</EuiCode> - A filter to manipulate a
+              <OuiCode>field_value_toggle</OuiCode> - A filter to manipulate a
               single field/value clause. The filter is associated with a field
               name and a value. When the user clicks the control (button) the
               field/value filter is added/removed to/from the query.
             </li>
             <li>
-              <EuiCode>field_value_toggle_group</EuiCode> - Similar to the{' '}
-              <EuiCode>field_value_toggle</EuiCode> above, except here you can
+              <OuiCode>field_value_toggle_group</OuiCode> - Similar to the{' '}
+              <OuiCode>field_value_toggle</OuiCode> above, except here you can
               define multiple values that will be displayed as a group of toggle
               buttons.
             </li>
             <li>
-              <EuiCode>is</EuiCode> - A toggle button that is associated with a
+              <OuiCode>is</OuiCode> - A toggle button that is associated with a
               flag name and when clicked it toggles this flag back and forth
-              (adds/removed an <EuiCode>is:</EuiCode> clause to/from the query).
+              (adds/removed an <OuiCode>is:</OuiCode> clause to/from the query).
             </li>
           </ul>
 
           <GuideRuleTitle>Date parsing</GuideRuleTitle>
           <p>
             Date values can be used for equality or range tests when the{' '}
-            <EuiCode>schema</EuiCode> prop specifies the field as a{' '}
-            <EuiCode>date</EuiCode> type (the <EuiCode>created</EuiCode> field
+            <OuiCode>schema</OuiCode> prop specifies the field as a{' '}
+            <OuiCode>date</OuiCode> type (the <OuiCode>created</OuiCode> field
             in the demo below is a date), and must be enclosed in single quotes.
             E.g.&nbsp;
-            <EuiCode>created:&apos;2019-01-01&apos;</EuiCode>,&nbsp;
-            <EuiCode>created&gt;=&apos;3rd January 2017&apos;</EuiCode>
+            <OuiCode>created:&apos;2019-01-01&apos;</OuiCode>,&nbsp;
+            <OuiCode>created&gt;=&apos;3rd January 2017&apos;</OuiCode>
           </p>
           <div>
             Formats understood by the parser
@@ -143,69 +154,69 @@ export const SearchBarExample = {
                 relative
                 <ul>
                   <li>
-                    <EuiCode>yesterday</EuiCode>
+                    <OuiCode>yesterday</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>today</EuiCode>
+                    <OuiCode>today</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>tomorrow</EuiCode>
+                    <OuiCode>tomorrow</OuiCode>
                   </li>
                 </ul>
               </li>
               <li>
                 absolute (parsed by Moment.js&apos;s&nbsp;
-                <EuiLink
+                <OuiLink
                   href="https://momentjs.com/docs/#/parsing/utc/"
                   target="_blank">
                   `utc` method
-                </EuiLink>
+                </OuiLink>
                 )
                 <ul>
                   <li>
-                    <EuiCode>ddd</EuiCode>
+                    <OuiCode>ddd</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>dddd</EuiCode>
+                    <OuiCode>dddd</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>D MMM YY</EuiCode>
+                    <OuiCode>D MMM YY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>Do MMM YY</EuiCode>
+                    <OuiCode>Do MMM YY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>D MMM YYYY</EuiCode>
+                    <OuiCode>D MMM YYYY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>Do MMM YYYY</EuiCode>
+                    <OuiCode>Do MMM YYYY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>DD MMM YY</EuiCode>
+                    <OuiCode>DD MMM YY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>DD MMM YYYY</EuiCode>
+                    <OuiCode>DD MMM YYYY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>D MMMM YY</EuiCode>
+                    <OuiCode>D MMMM YY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>Do MMMM YY</EuiCode>
+                    <OuiCode>Do MMMM YY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>D MMMM YYYY</EuiCode>
+                    <OuiCode>D MMMM YYYY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>Do MMMM YYYY</EuiCode>
+                    <OuiCode>Do MMMM YYYY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>DD MMMM YY</EuiCode>
+                    <OuiCode>DD MMMM YY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>DD MMMM YYYY</EuiCode>
+                    <OuiCode>DD MMMM YYYY</OuiCode>
                   </li>
                   <li>
-                    <EuiCode>YYYY-MM-DD</EuiCode>
+                    <OuiCode>YYYY-MM-DD</OuiCode>
                   </li>
                 </ul>
               </li>
@@ -231,10 +242,10 @@ export const SearchBarExample = {
       text: (
         <div>
           <p>
-            An <strong>EuiSearchBar</strong> can have its query controlled by a
-            parent component by passing the <EuiCode>query</EuiCode> prop.
+            An <strong>OuiSearchBar</strong> can have its query controlled by a
+            parent component by passing the <OuiCode>query</OuiCode> prop.
             Changes to the query will be passed back up through the{' '}
-            <EuiCode>onChange</EuiCode> callback where the new query must be
+            <OuiCode>onChange</OuiCode> callback where the new query must be
             stored in state and passed back into the search bar.
           </p>
         </div>
@@ -256,7 +267,7 @@ export const SearchBarExample = {
       text: (
         <div>
           <p>
-            An <strong>EuiSearchBar</strong> can have custom filter dropdowns
+            An <strong>OuiSearchBar</strong> can have custom filter dropdowns
             that control how a user can search.
           </p>
         </div>

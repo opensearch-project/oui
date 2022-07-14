@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
@@ -5,24 +16,24 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiCodeBlock,
-  EuiLink,
-  EuiText,
+  OuiCode,
+  OuiCodeBlock,
+  OuiLink,
+  OuiText,
 } from '../../../../src/components';
 import { codeBlockConfig, codeConfig } from './playground';
 
 import Code from './code';
 const codeSource = require('!!raw-loader!./code');
 const codeHtml = renderToHtml(Code);
-const codeSnippet = '<EuiCode>Text to be formatted</EuiCode>';
+const codeSnippet = '<OuiCode>Text to be formatted</OuiCode>';
 
 import CodeBlock from './code_block';
 const codeBlockSource = require('!!raw-loader!./code_block');
 const codeBlockHtml = renderToHtml(CodeBlock);
-const codeBlockSnippet = `<EuiCodeBlock language="html" paddingSize="s" isCopyable>
+const codeBlockSnippet = `<OuiCodeBlock language="html" paddingSize="s" isCopyable>
 { \`<h1>Title</h1>\` }
-</EuiCodeBlock>
+</OuiCodeBlock>
 `;
 
 import CodeBlockPre from './code_block_pre';
@@ -33,30 +44,30 @@ export const CodeExample = {
   title: 'Code',
   intro: (
     <>
-      <EuiText>
+      <OuiText>
         <p>
-          The <strong>EuiCode</strong> and <strong>EuiCodeBlock</strong>{' '}
+          The <strong>OuiCode</strong> and <strong>OuiCodeBlock</strong>{' '}
           components support{' '}
-          <EuiLink external href="https://github.com/wooorm/refractor#syntaxes">
+          <OuiLink external href="https://github.com/wooorm/refractor#syntaxes">
             all language syntaxes
-          </EuiLink>{' '}
+          </OuiLink>{' '}
           supported by the
-          <EuiCode>prism</EuiCode>{' '}
-          <EuiLink external href="https://prismjs.com/">
+          <OuiCode>prism</OuiCode>{' '}
+          <OuiLink external href="https://prismjs.com/">
             library
-          </EuiLink>
+          </OuiLink>
           .
           <br />
-          The <EuiCode>language</EuiCode> prop can also be omitted to simply
+          The <OuiCode>language</OuiCode> prop can also be omitted to simply
           render formatted but unhighlighted code.
         </p>
         <p>
           JSX code (often React) has distinct language syntaxes from the base
           JavaScript and TypeScript languages. For these instances, use{' '}
-          <EuiCode>language=&quot;jsx&quot;</EuiCode> or{' '}
-          <EuiCode>language=&quot;tsx&quot;</EuiCode>.
+          <OuiCode>language=&quot;jsx&quot;</OuiCode> or{' '}
+          <OuiCode>language=&quot;tsx&quot;</OuiCode>.
         </p>
-      </EuiText>
+      </OuiText>
     </>
   ),
   sections: [
@@ -74,12 +85,12 @@ export const CodeExample = {
       ],
       text: (
         <p>
-          <strong>EuiCode</strong> is for making inline code snippets that can
+          <strong>OuiCode</strong> is for making inline code snippets that can
           work within or next to bodies of text.
         </p>
       ),
       snippet: codeSnippet,
-      props: { EuiCode },
+      props: { OuiCode },
       demo: <Code />,
       playground: codeConfig,
     },
@@ -97,14 +108,14 @@ export const CodeExample = {
       ],
       text: (
         <p>
-          <strong>EuiCodeBlock</strong> can be used to create multi-line code
+          <strong>OuiCodeBlock</strong> can be used to create multi-line code
           blocks. Copy and fullscreen buttons can be enabled via the
-          <EuiCode>isCopyable</EuiCode> and <EuiCode>overflowHeight</EuiCode>
+          <OuiCode>isCopyable</OuiCode> and <OuiCode>overflowHeight</OuiCode>
           props, respectively.
         </p>
       ),
       snippet: codeBlockSnippet,
-      props: { EuiCodeBlock },
+      props: { OuiCodeBlock },
       demo: <CodeBlock />,
       playground: codeBlockConfig,
     },
@@ -122,14 +133,14 @@ export const CodeExample = {
       ],
       text: (
         <p>
-          By default, the <EuiCode>whiteSpace</EuiCode> property is set to{' '}
-          <EuiCode>pre-wrap</EuiCode>. This makes the text wrap when needed. You
-          can, however, pass <EuiCode>pre</EuiCode> to the{' '}
-          <EuiCode>whiteSpace</EuiCode> prop and the text won&apos;t wrap unless
+          By default, the <OuiCode>whiteSpace</OuiCode> property is set to{' '}
+          <OuiCode>pre-wrap</OuiCode>. This makes the text wrap when needed. You
+          can, however, pass <OuiCode>pre</OuiCode> to the{' '}
+          <OuiCode>whiteSpace</OuiCode> prop and the text won&apos;t wrap unless
           line breaks are in the content.
         </p>
       ),
-      props: { EuiCodeBlock },
+      props: { OuiCodeBlock },
       demo: <CodeBlockPre />,
     },
   ],

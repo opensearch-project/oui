@@ -1,22 +1,33 @@
-$euiSelectableTemplateSitewideTypes: (
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+$ouiSelectableTemplateSitewideTypes: (
   'application': (
-    'color': makeHighContrastColor($euiColorVis1),
-    'font-weight': $euiFontWeightMedium,
+    'color': makeHighContrastColor($ouiColorVis1),
+    'font-weight': $ouiFontWeightMedium,
   ),
   'deployment': (
-    'color': makeHighContrastColor($euiColorVis0),
-    'font-weight': $euiFontWeightMedium,
+    'color': makeHighContrastColor($ouiColorVis0),
+    'font-weight': $ouiFontWeightMedium,
   ),
   'article': (
-    'color': makeHighContrastColor($euiColorVis3),
-    'font-weight': $euiFontWeightMedium,
+    'color': makeHighContrastColor($ouiColorVis3),
+    'font-weight': $ouiFontWeightMedium,
   ),
   'case': (
-    'color': makeHighContrastColor($euiColorVis9),
-    'font-weight': $euiFontWeightMedium,
+    'color': makeHighContrastColor($ouiColorVis9),
+    'font-weight': $ouiFontWeightMedium,
   ),
   'platform': (
-    'color': makeHighContrastColor($euiColorVis5),
-    'font-weight': $euiFontWeightMedium,
+    'color': makeHighContrastColor($ouiColorVis5),
+    'font-weight': $ouiFontWeightMedium,
   ),
 );

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -36,9 +47,9 @@ interface DivLike
   extends BaseProps,
     Omit<HTMLAttributes<HTMLDivElement>, 'onClick' | 'onMouseDown'> {}
 
-export type EuiRangeThumbProps = ExclusiveUnion<ButtonLike, DivLike>;
+export type OuiRangeThumbProps = ExclusiveUnion<ButtonLike, DivLike>;
 
-export const EuiRangeThumb: FunctionComponent<EuiRangeThumbProps> = ({
+export const OuiRangeThumb: FunctionComponent<OuiRangeThumbProps> = ({
   className,
   min,
   max,
@@ -52,9 +63,9 @@ export const EuiRangeThumb: FunctionComponent<EuiRangeThumbProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiRangeThumb',
+    'ouiRangeThumb',
     {
-      'euiRangeThumb--hasTicks': showTicks,
+      'ouiRangeThumb--hasTicks': showTicks,
     },
     className
   );

@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
-import { EuiRange, EuiSpacer } from '../../../../src/components';
+import { OuiRange, OuiSpacer } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -13,7 +24,7 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiRange
+      <OuiRange
         id={htmlIdGenerator()()}
         min={100}
         max={200}
@@ -21,12 +32,12 @@ export default () => {
         value={value}
         onChange={onChange}
         showLabels
-        aria-label="An example of EuiRange with showLabels prop"
+        aria-label="An example of OuiRange with showLabels prop"
       />
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiRange
+      <OuiRange
         id={htmlIdGenerator()()}
         min={100}
         max={200}
@@ -34,12 +45,12 @@ export default () => {
         onChange={onChange}
         showLabels
         showValue
-        aria-label="An example of EuiRange with showValue prop"
+        aria-label="An example of OuiRange with showValue prop"
       />
 
-      <EuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
 
-      <EuiRange
+      <OuiRange
         id={htmlIdGenerator()()}
         min={100}
         max={200}
@@ -49,7 +60,7 @@ export default () => {
         showRange
         showValue
         valuePrepend="100 - "
-        aria-label="An example of EuiRange with valuePrepend prop"
+        aria-label="An example of OuiRange with valuePrepend prop"
       />
     </Fragment>
   );

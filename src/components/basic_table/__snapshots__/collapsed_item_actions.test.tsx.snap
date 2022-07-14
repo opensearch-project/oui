@@ -2,26 +2,26 @@
 
 exports[`CollapsedItemActions render 1`] = `
 <div
-  class="euiPopover euiPopover--anchorLeftCenter"
+  class="ouiPopover ouiPopover--anchorLeftCenter"
   id="id-actions"
 >
   <div
-    class="euiPopover__anchor"
+    class="ouiPopover__anchor"
   >
     <span
-      class="euiToolTipAnchor"
+      class="ouiToolTipAnchor"
     >
       <button
         aria-label="All actions"
-        class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
-        data-test-subj="euiCollapsedItemActionsButton"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+        data-test-subj="ouiCollapsedItemActionsButton"
         type="button"
       >
         <span
           aria-hidden="true"
-          class="euiButtonIcon__icon"
+          class="ouiButtonIcon__icon"
           color="inherit"
-          data-euiicon-type="boxesHorizontal"
+          data-ouiicon-type="boxesHorizontal"
         />
       </button>
     </span>
@@ -30,15 +30,15 @@ exports[`CollapsedItemActions render 1`] = `
 `;
 
 exports[`CollapsedItemActions render with href and _target provided 1`] = `
-<EuiPopover
+<OuiPopover
   anchorPosition="leftCenter"
   button={
-    <EuiI18n
+    <OuiI18n
       default="All actions"
-      token="euiCollapsedItemActions.allActions"
+      token="ouiCollapsedItemActions.allActions"
     >
       [Function]
-    </EuiI18n>
+    </OuiI18n>
   }
   closePopover={[Function]}
   display="inlineBlock"
@@ -49,31 +49,31 @@ exports[`CollapsedItemActions render with href and _target provided 1`] = `
   panelPaddingSize="none"
   popoverRef={[Function]}
 >
-  <EuiContextMenuPanel
+  <OuiContextMenuPanel
     hasFocus={true}
     items={
       Array [
-        <EuiContextMenuItem
+        <OuiContextMenuItem
           disabled={false}
           onClick={[Function]}
         >
           default1
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem
+        </OuiContextMenuItem>,
+        <OuiContextMenuItem
           onClick={[Function]}
         >
           <div />
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem
+        </OuiContextMenuItem>,
+        <OuiContextMenuItem
           disabled={false}
           href="https://www.elastic.co/"
           onClick={[Function]}
           target="_blank"
         >
           default2
-        </EuiContextMenuItem>,
+        </OuiContextMenuItem>,
       ]
     }
   />
-</EuiPopover>
+</OuiPopover>
 `;

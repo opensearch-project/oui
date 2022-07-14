@@ -1,8 +1,19 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiMarkdownFormat } from '../../../../src';
+import { OuiMarkdownFormat } from '../../../../src';
 
-const markdownContent = `Beyond Remark's base syntax, **EuiMarkdownFormat** bundles these abilities by default:
+const markdownContent = `Beyond Remark's base syntax, **OuiMarkdownFormat** bundles these abilities by default:
 
 \`:smile:\` we support emojis :smile:!
 
@@ -22,9 +33,9 @@ turns into
 - [x] Can be filled
 - [ ] Or empty
 
-Note that you'll need to use *EuiMarkdownEditor* to make those checkboxes dynamic.
+Note that you'll need to use *OuiMarkdownEditor* to make those checkboxes dynamic.
 `;
 
 export default () => {
-  return <EuiMarkdownFormat>{markdownContent}</EuiMarkdownFormat>;
+  return <OuiMarkdownFormat>{markdownContent}</OuiMarkdownFormat>;
 };

@@ -1,3 +1,14 @@
+<!--
+  - SPDX-License-Identifier: Apache-2.0
+  -
+  - The OpenSearch Contributors require contributions made to
+  - this file be licensed under the Apache-2.0 license or a
+  - compatible open source license.
+  -
+  - Modifications Copyright OpenSearch Contributors. See
+  - GitHub history for details.
+  -->
+
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
   <defs>
     <path id="logo_php-a" d="M0.0279746144,7.85441096 C0.0279746144,3.53324759 6.68738537,0.0301803052 14.9018619,0.0301803052 C23.1163384,0.0301803052 29.775803,3.53324759 29.775803,7.85441096 C29.775803,12.1755205 23.1163384,15.6786416 14.9018619,15.6786416 C6.68738537,15.6786416 0.0279746144,12.1755205 0.0279746144,7.85441096"/>

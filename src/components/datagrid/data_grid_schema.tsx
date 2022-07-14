@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,19 +30,19 @@
 
 import React, { useMemo, ReactNode } from 'react';
 import {
-  EuiDataGridColumn,
-  EuiDataGridInMemory,
-  EuiDataGridInMemoryValues,
+  OuiDataGridColumn,
+  OuiDataGridInMemory,
+  OuiDataGridInMemoryValues,
 } from './data_grid_types';
 
-import { EuiI18n } from '../i18n';
+import { OuiI18n } from '../i18n';
 
 import { IconType } from '../icon';
-import { EuiTokenProps } from '../token';
+import { OuiTokenProps } from '../token';
 
-export interface EuiDataGridSchemaDetector {
+export interface OuiDataGridSchemaDetector {
   /**
-   * The name of this data type, matches #EuiDataGridColumn / schema `schema`
+   * The name of this data type, matches #OuiDataGridColumn / schema `schema`
    */
   type: string;
   /**
@@ -43,13 +54,13 @@ export interface EuiDataGridSchemaDetector {
    */
   comparator?: (a: string, b: string, direction: 'asc' | 'desc') => -1 | 0 | 1;
   /**
-   * The icon used to visually represent this data type. Accepts any `EuiIcon IconType`.
+   * The icon used to visually represent this data type. Accepts any `OuiIcon IconType`.
    */
   icon: IconType;
   /**
    * The color associated with this data type; it's used to color the icon token
    */
-  color?: EuiTokenProps['color'] | string;
+  color?: OuiTokenProps['color'] | string;
   /**
    * Text for how to represent an ascending sort of this data type, e.g. 'A -> Z'
    */
@@ -86,7 +97,7 @@ const numericChars = new Set([
   '.',
   '-',
 ]);
-export const schemaDetectors: EuiDataGridSchemaDetector[] = [
+export const schemaDetectors: OuiDataGridSchemaDetector[] = [
   {
     type: 'boolean',
     detector(value) {
@@ -103,14 +114,14 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
     },
     icon: 'tokenBoolean',
     sortTextAsc: (
-      <EuiI18n
-        token="euiDataGridSchema.booleanSortTextAsc"
+      <OuiI18n
+        token="ouiDataGridSchema.booleanSortTextAsc"
         default="False-True"
       />
     ),
     sortTextDesc: (
-      <EuiI18n
-        token="euiDataGridSchema.booleanSortTextDesc"
+      <OuiI18n
+        token="ouiDataGridSchema.booleanSortTextDesc"
         default="True-False"
       />
     ),
@@ -142,16 +153,16 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
       return 0;
     },
     icon: 'currency',
-    color: 'euiColorVis0',
+    color: 'ouiColorVis0',
     sortTextAsc: (
-      <EuiI18n
-        token="euiDataGridSchema.currencySortTextAsc"
+      <OuiI18n
+        token="ouiDataGridSchema.currencySortTextAsc"
         default="Low-High"
       />
     ),
     sortTextDesc: (
-      <EuiI18n
-        token="euiDataGridSchema.currencySortTextDesc"
+      <OuiI18n
+        token="ouiDataGridSchema.currencySortTextDesc"
         default="High-Low"
       />
     ),
@@ -182,10 +193,10 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
     },
     icon: 'tokenDate',
     sortTextAsc: (
-      <EuiI18n token="euiDataGridSchema.dateSortTextAsc" default="Old-New" />
+      <OuiI18n token="ouiDataGridSchema.dateSortTextAsc" default="Old-New" />
     ),
     sortTextDesc: (
-      <EuiI18n token="euiDataGridSchema.dateSortTextDesc" default="New-Old" />
+      <OuiI18n token="ouiDataGridSchema.dateSortTextDesc" default="New-Old" />
     ),
   },
   {
@@ -219,11 +230,11 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
     },
     icon: 'tokenNumber',
     sortTextAsc: (
-      <EuiI18n token="euiDataGridSchema.numberSortTextAsc" default="Low-High" />
+      <OuiI18n token="ouiDataGridSchema.numberSortTextAsc" default="Low-High" />
     ),
     sortTextDesc: (
-      <EuiI18n
-        token="euiDataGridSchema.numberSortTextDesc"
+      <OuiI18n
+        token="ouiDataGridSchema.numberSortTextDesc"
         default="High-Low"
       />
     ),
@@ -250,21 +261,21 @@ export const schemaDetectors: EuiDataGridSchemaDetector[] = [
     },
     icon: 'tokenObject',
     sortTextAsc: (
-      <EuiI18n
-        token="euiDataGridSchema.jsonSortTextAsc"
+      <OuiI18n
+        token="ouiDataGridSchema.jsonSortTextAsc"
         default="Small-Large"
       />
     ),
     sortTextDesc: (
-      <EuiI18n
-        token="euiDataGridSchema.jsonSortTextDesc"
+      <OuiI18n
+        token="ouiDataGridSchema.jsonSortTextDesc"
         default="Large-Small"
       />
     ),
   },
 ];
 
-export interface EuiDataGridSchema {
+export interface OuiDataGridSchema {
   [columnId: string]: { columnType: string | null };
 }
 
@@ -275,7 +286,7 @@ export interface SchemaTypeScore {
 
 function scoreValueBySchemaType(
   value: string,
-  schemaDetectors: EuiDataGridSchemaDetector[] = []
+  schemaDetectors: OuiDataGridSchemaDetector[] = []
 ) {
   const scores: SchemaTypeScore[] = [];
 
@@ -294,18 +305,18 @@ const MINIMUM_SCORE_MATCH = 0.5;
 
 const emptyArray: unknown = []; // for in-memory object permanence
 export function useDetectSchema(
-  inMemory: EuiDataGridInMemory | undefined,
-  inMemoryValues: EuiDataGridInMemoryValues,
-  schemaDetectors: EuiDataGridSchemaDetector[] | undefined,
+  inMemory: OuiDataGridInMemory | undefined,
+  inMemoryValues: OuiDataGridInMemoryValues,
+  schemaDetectors: OuiDataGridSchemaDetector[] | undefined,
   definedColumnSchemas: { [key: string]: string },
   autoDetectSchema: boolean
 ) {
   const inMemorySkipColumns =
     inMemory?.skipColumns ??
-    (emptyArray as NonNullable<EuiDataGridInMemory['skipColumns']>);
+    (emptyArray as NonNullable<OuiDataGridInMemory['skipColumns']>);
 
   const schema = useMemo(() => {
-    const schema: EuiDataGridSchema = {};
+    const schema: OuiDataGridSchema = {};
     if (autoDetectSchema === false) {
       return schema;
     }
@@ -354,7 +365,7 @@ export function useDetectSchema(
     }
 
     // for each column, reduce each detector type's score to a single value and find the best fit
-    return Object.keys(columnSchemas).reduce<EuiDataGridSchema | any>(
+    return Object.keys(columnSchemas).reduce<OuiDataGridSchema | any>(
       (schema, columnId) => {
         const columnScores = columnSchemas[columnId];
         const typeIds = Object.keys(columnScores);
@@ -421,8 +432,8 @@ export function useDetectSchema(
 }
 
 export function useMergedSchema(
-  detectedSchema: EuiDataGridSchema,
-  columns: EuiDataGridColumn[]
+  detectedSchema: OuiDataGridSchema,
+  columns: OuiDataGridColumn[]
 ) {
   return useMemo(() => {
     const mergedSchema = { ...detectedSchema };
@@ -445,7 +456,7 @@ export function useMergedSchema(
 // Given a provided schema, return the details for the schema
 // Useful for grabbing the color or icon
 export function getDetailsForSchema(
-  detectors: EuiDataGridSchemaDetector[],
+  detectors: OuiDataGridSchemaDetector[],
   providedSchema: string | null
 ) {
   const results = detectors.filter((matches) => {

@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';
@@ -7,9 +18,9 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCode,
-  EuiComment,
-  EuiCommentList,
+  OuiCode,
+  OuiComment,
+  OuiCommentList,
 } from '../../../../src/components';
 import commentConfig from './playground';
 
@@ -33,41 +44,41 @@ import CommentList from './comment_list';
 const commentListSource = require('!!raw-loader!./comment_list');
 const commentListHtml = renderToHtml(CommentList);
 
-const commentSnippet = `<EuiComment username="janed">
+const commentSnippet = `<OuiComment username="janed">
   {body}
-</EuiComment>`;
+</OuiComment>`;
 
 const commentTypesSnippet = [
-  `<EuiComment username="janed">
+  `<OuiComment username="janed">
   {body}
-</EuiComment>
+</OuiComment>
 `,
-  `<EuiComment type="update" username="janed" />
+  `<OuiComment type="update" username="janed" />
 `,
-  `<EuiComment type="update" username="janed">
+  `<OuiComment type="update" username="janed">
   {body}
-</EuiComment>
+</OuiComment>
 `,
 ];
 
 const commentTimelineIconsSnippet = [
-  `<EuiComment username="janed">
+  `<OuiComment username="janed">
   {body}
-</EuiComment>
+</OuiComment>
 `,
-  `<EuiComment timelineIcon="tag" username="janed" />
+  `<OuiComment timelineIcon="tag" username="janed" />
 `,
-  `<EuiComment timelineIcon={avatar} username="janed">
+  `<OuiComment timelineIcon={avatar} username="janed">
   {body}
-</EuiComment>
+</OuiComment>
 `,
 ];
 
-const commentActionsSnippet = `<EuiComment username="janed" actions={customActions}>
+const commentActionsSnippet = `<OuiComment username="janed" actions={customActions}>
   {body}
-</EuiComment>`;
+</OuiComment>`;
 
-const commentListSnippet = `<EuiCommentList
+const commentListSnippet = `<OuiCommentList
   comments={[
     {
       username: username,
@@ -94,13 +105,13 @@ export const CommentListExample = {
       ],
       text: (
         <div>
-          Use <strong>EuiCommentList</strong> to display a list of{' '}
-          <strong>EuiComments</strong>. Pass an array of{' '}
-          <strong>EuiComment</strong> objects and{' '}
-          <strong>EuiCommentList</strong> will generate a comment thread.
+          Use <strong>OuiCommentList</strong> to display a list of{' '}
+          <strong>OuiComments</strong>. Pass an array of{' '}
+          <strong>OuiComment</strong> objects and{' '}
+          <strong>OuiCommentList</strong> will generate a comment thread.
         </div>
       ),
-      props: { EuiCommentList, EuiComment },
+      props: { OuiCommentList, OuiComment },
       snippet: commentListSnippet,
       demo: <CommentList />,
     },
@@ -119,18 +130,18 @@ export const CommentListExample = {
       text: (
         <div>
           <p>
-            Use <strong>EuiComment</strong> to display comments. Each{' '}
-            <strong>EuiComment</strong> has two parts: a{' '}
-            <EuiCode>timelineIcon</EuiCode> on the left and content on the
-            right. The <EuiCode>timelineIcon</EuiCode> provides a visual
-            indication of the <EuiCode>type</EuiCode> of comment it is. For
+            Use <strong>OuiComment</strong> to display comments. Each{' '}
+            <strong>OuiComment</strong> has two parts: a{' '}
+            <OuiCode>timelineIcon</OuiCode> on the left and content on the
+            right. The <OuiCode>timelineIcon</OuiCode> provides a visual
+            indication of the <OuiCode>type</OuiCode> of comment it is. For
             example, it can be an icon that represents what action was performed
             or it can be a user avatar. The content has a header with all the
             relevant metadata and a body.
           </p>
         </div>
       ),
-      props: { EuiComment },
+      props: { OuiComment },
       snippet: commentSnippet,
       demo: <Comment />,
     },
@@ -149,12 +160,12 @@ export const CommentListExample = {
       text: (
         <div>
           <p>
-            The default <EuiCode>type</EuiCode> of comment is
-            <EuiCode>regular</EuiCode> and displays a comment that a user has
+            The default <OuiCode>type</OuiCode> of comment is
+            <OuiCode>regular</OuiCode> and displays a comment that a user has
             written.
           </p>
           <p>
-            Change the type to <EuiCode>update</EuiCode> to display comments
+            Change the type to <OuiCode>update</OuiCode> to display comments
             that generally do not have a body and are logging actions that
             either the user or the system has performed (e.g. &ldquo;jsmith
             edited a case&rdquo; or &ldquo;kibanamachine added the review
@@ -162,7 +173,7 @@ export const CommentListExample = {
           </p>
         </div>
       ),
-      props: { EuiComment },
+      props: { OuiComment },
       snippet: commentTypesSnippet,
       demo: <CommentTypes />,
     },
@@ -181,30 +192,30 @@ export const CommentListExample = {
       text: (
         <div>
           <p>
-            There are three ways to use <EuiCode>timelineIcon</EuiCode>:
+            There are three ways to use <OuiCode>timelineIcon</OuiCode>:
           </p>
           <ol>
             <li>
               Use the defaults; a user icon inside a large container for
-              <EuiCode>regular</EuiCode> comments; or a dot icon inside a small
-              container for <EuiCode>update</EuiCode> comments.
+              <OuiCode>regular</OuiCode> comments; or a dot icon inside a small
+              container for <OuiCode>update</OuiCode> comments.
             </li>
             <li>
               Pass a string with any of the icon types that{' '}
-              <strong>EuiIcon</strong> supports and it will receive the default
+              <strong>OuiIcon</strong> supports and it will receive the default
               styling.
             </li>
             <li>
               Pass any other element (e.g.{' '}
               <Link to="/display/avatar">
-                <strong>EuiAvatar</strong>
+                <strong>OuiAvatar</strong>
               </Link>
               ). It is recommended not to use an element larger than 40x40.
             </li>
           </ol>
         </div>
       ),
-      props: { EuiComment },
+      props: { OuiComment },
       snippet: commentTimelineIconsSnippet,
       demo: <CommentTimelineIcons />,
     },
@@ -224,30 +235,30 @@ export const CommentListExample = {
         <div>
           <p>
             There are scenarios where you might want to allow the user to
-            perform <EuiCode>actions</EuiCode> related to each comment. Some
-            common <EuiCode>actions</EuiCode> include: editing, deleting,
-            sharing and copying. To add custom <EuiCode>actions</EuiCode> to a
-            comment, use the <EuiCode>actions</EuiCode>
+            perform <OuiCode>actions</OuiCode> related to each comment. Some
+            common <OuiCode>actions</OuiCode> include: editing, deleting,
+            sharing and copying. To add custom <OuiCode>actions</OuiCode> to a
+            comment, use the <OuiCode>actions</OuiCode>
             prop. These will be placed to the right of the metadata in the
             comment&apos;s header. You can use any element to display{' '}
-            <EuiCode>actions</EuiCode>. For example, for something simple you
+            <OuiCode>actions</OuiCode>. For example, for something simple you
             can use{' '}
             <Link to="/navigation/button">
-              <strong>EuiButtonIcon</strong>
+              <strong>OuiButtonIcon</strong>
             </Link>{' '}
             and for something more complex you can combine that with{' '}
             <Link to="/layout/popover">
-              <strong>EuiPopover</strong>
+              <strong>OuiPopover</strong>
             </Link>{' '}
             and{' '}
             <Link to="/navigation/context-menu">
-              <strong>EuiContextMenu</strong>
+              <strong>OuiContextMenu</strong>
             </Link>
             .
           </p>
         </div>
       ),
-      props: { EuiComment },
+      props: { OuiComment },
       snippet: commentActionsSnippet,
       demo: <CommentActions />,
     },

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,17 +32,17 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiPageSideBar, PADDING_SIZES } from './page_side_bar';
+import { OuiPageSideBar, PADDING_SIZES } from './page_side_bar';
 
-describe('EuiPageSideBar', () => {
+describe('OuiPageSideBar', () => {
   test('is rendered', () => {
-    const component = render(<EuiPageSideBar {...requiredProps} />);
+    const component = render(<OuiPageSideBar {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('sticky is rendered', () => {
-    const component = render(<EuiPageSideBar sticky />);
+    const component = render(<OuiPageSideBar sticky />);
 
     expect(component).toMatchSnapshot();
   });
@@ -39,7 +50,7 @@ describe('EuiPageSideBar', () => {
   describe('paddingSize', () => {
     PADDING_SIZES.forEach((size) => {
       it(`${size} is rendered`, () => {
-        const component = render(<EuiPageSideBar paddingSize={size} />);
+        const component = render(<OuiPageSideBar paddingSize={size} />);
 
         expect(component).toMatchSnapshot();
       });

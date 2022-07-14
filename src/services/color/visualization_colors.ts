@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,8 +30,8 @@
 
 // Array of color-blind safe colors to use in visualizations or other
 // spots that need a large range of varied, qualitative colors.
-import { euiPaletteColorBlind } from '../../services/color/eui_palettes';
+import { ouiPaletteColorBlind } from '../../services/color/oui_palettes';
 
-export const VISUALIZATION_COLORS = euiPaletteColorBlind();
+export const VISUALIZATION_COLORS = ouiPaletteColorBlind();
 
 export const DEFAULT_VISUALIZATION_COLOR = VISUALIZATION_COLORS[1];

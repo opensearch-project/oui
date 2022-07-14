@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,26 +31,26 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 
-import { EuiColorPicker } from './color_picker';
+import { OuiColorPicker } from './color_picker';
 import { VISUALIZATION_COLORS, keys } from '../../services';
 import { requiredProps, findTestSubject, sleep } from '../../test';
 
 jest.mock('../portal', () => ({
-  EuiPortal: ({ children }: { children: any }) => children,
+  OuiPortal: ({ children }: { children: any }) => children,
 }));
 
 const onChange = jest.fn();
 
-test('renders EuiColorPicker', () => {
+test('renders OuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <OuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders compressed EuiColorPicker', () => {
+test('renders compressed OuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       compressed={true}
@@ -49,9 +60,9 @@ test('renders compressed EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders readOnly EuiColorPicker', () => {
+test('renders readOnly OuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       readOnly={true}
@@ -61,9 +72,9 @@ test('renders readOnly EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders fullWidth EuiColorPicker', () => {
+test('renders fullWidth OuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       fullWidth={true}
@@ -73,9 +84,9 @@ test('renders fullWidth EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders disabled EuiColorPicker', () => {
+test('renders disabled OuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       disabled={true}
@@ -85,9 +96,9 @@ test('renders disabled EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders inline EuiColorPicker', () => {
+test('renders inline OuiColorPicker', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       display="inline"
@@ -97,9 +108,9 @@ test('renders inline EuiColorPicker', () => {
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders a EuiColorPicker with a prepend and append', () => {
+test('renders a OuiColorPicker with a prepend and append', () => {
   const component = render(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       prepend="prepend"
@@ -111,9 +122,9 @@ test('renders a EuiColorPicker with a prepend and append', () => {
   expect(component).toMatchSnapshot();
 });
 
-test('renders a EuiColorPicker with an alpha range selector', () => {
+test('renders a OuiColorPicker with an alpha range selector', () => {
   const component = render(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       showAlpha={true}
@@ -124,37 +135,37 @@ test('renders a EuiColorPicker with an alpha range selector', () => {
   expect(component).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with an empty swatch when color is null', () => {
+test('renders OuiColorPicker with an empty swatch when color is null', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} color={null} {...requiredProps} />
+    <OuiColorPicker onChange={onChange} color={null} {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with an empty swatch when color is ""', () => {
+test('renders OuiColorPicker with an empty swatch when color is ""', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} color={''} {...requiredProps} />
+    <OuiColorPicker onChange={onChange} color={''} {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with a color swatch when color is defined', () => {
+test('renders OuiColorPicker with a color swatch when color is defined', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} color={'#ffffff'} {...requiredProps} />
+    <OuiColorPicker onChange={onChange} color={'#ffffff'} {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with a custom placeholder', () => {
+test('renders OuiColorPicker with a custom placeholder', () => {
   const colorPicker = render(
-    <EuiColorPicker onChange={onChange} placeholder="Auto" {...requiredProps} />
+    <OuiColorPicker onChange={onChange} placeholder="Auto" {...requiredProps} />
   );
   expect(colorPicker).toMatchSnapshot();
 });
 
-test('renders EuiColorPicker with a clearable input', () => {
+test('renders OuiColorPicker with a clearable input', () => {
   const colorPicker = render(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color={'#ffeedd'}
       isClearable={true}
@@ -166,17 +177,17 @@ test('renders EuiColorPicker with a clearable input', () => {
 
 test('popover color selector is not shown by default', () => {
   const colorPicker = mount(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <OuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
 
-  const colorSelector = findTestSubject(colorPicker, 'euiColorPickerPopover');
+  const colorSelector = findTestSubject(colorPicker, 'ouiColorPickerPopover');
   expect(colorSelector.length).toBe(0);
 });
 
 test('popover color selector is shown when the input is clicked', () => {
   const onFocusHandler = jest.fn();
   const colorPicker = mount(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       onFocus={onFocusHandler}
       color="#ffeedd"
@@ -184,16 +195,16 @@ test('popover color selector is shown when the input is clicked', () => {
     />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
   expect(onFocusHandler).toBeCalled();
-  const colorSelector = findTestSubject(colorPicker, 'euiColorPickerPopover');
+  const colorSelector = findTestSubject(colorPicker, 'ouiColorPickerPopover');
   expect(colorSelector.length).toBe(1);
 });
 
 test('popover color selector is hidden when the ESC key pressed', async () => {
   const onBlurHandler = jest.fn();
   const colorPicker = mount(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       onBlur={onBlurHandler}
@@ -201,9 +212,9 @@ test('popover color selector is hidden when the ESC key pressed', async () => {
     />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
   await sleep();
-  findTestSubject(colorPicker, 'euiColorPickerPopover').simulate('keydown', {
+  findTestSubject(colorPicker, 'ouiColorPickerPopover').simulate('keydown', {
     key: keys.ESCAPE,
   });
   // Portal removal not working with Jest. The blur handler is called just before the portal would be removed.
@@ -213,7 +224,7 @@ test('popover color selector is hidden when the ESC key pressed', async () => {
 test('popover color selector is hidden and input regains focus when the ENTER key pressed', () => {
   const onBlurHandler = jest.fn();
   const colorPicker = mount(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       onBlur={onBlurHandler}
@@ -221,12 +232,12 @@ test('popover color selector is hidden and input regains focus when the ENTER ke
     />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
-  findTestSubject(colorPicker, 'euiSaturation').simulate('keydown', {
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
+  findTestSubject(colorPicker, 'ouiSaturation').simulate('keydown', {
     key: keys.ENTER,
   });
   expect(
-    findTestSubject(colorPicker, 'euiColorPickerAnchor').getDOMNode()
+    findTestSubject(colorPicker, 'ouiColorPickerAnchor').getDOMNode()
   ).toEqual(document.activeElement);
   // Portal removal not working with Jest. The blur handler is called just before the portal would be removed.
   expect(onBlurHandler).toBeCalled();
@@ -234,10 +245,10 @@ test('popover color selector is hidden and input regains focus when the ENTER ke
 
 test('Setting a new color calls onChange', () => {
   const colorPicker = mount(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <OuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
   const event = { target: { value: '#000000' } };
   const inputs = colorPicker.find('input[type="text"]');
   expect(inputs.length).toBe(1);
@@ -252,11 +263,11 @@ test('Setting a new color calls onChange', () => {
 
 test('Clicking a swatch calls onChange', () => {
   const colorPicker = mount(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <OuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
-  const swatches = colorPicker.find('button.euiColorPicker__swatchSelect');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
+  const swatches = colorPicker.find('button.ouiColorPicker__swatchSelect');
   expect(swatches.length).toBe(VISUALIZATION_COLORS.length);
   swatches.first().simulate('click');
   expect(onChange).toBeCalled();
@@ -269,7 +280,7 @@ test('Clicking a swatch calls onChange', () => {
 
 test('Setting a new alpha value calls onChange', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       showAlpha={true}
@@ -277,9 +288,9 @@ test('Setting a new alpha value calls onChange', () => {
     />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
   // Slider
-  const alpha = findTestSubject(colorPicker, 'euiColorPickerAlpha');
+  const alpha = findTestSubject(colorPicker, 'ouiColorPickerAlpha');
   const event1 = { target: { value: '50' } };
   const range = alpha.first(); // input[type=range]
   range.simulate('change', event1);
@@ -303,7 +314,7 @@ test('Setting a new alpha value calls onChange', () => {
 
 test('Clicking the "clear" button calls onChange', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       color="#ffeedd"
       isClearable={true}
@@ -311,7 +322,7 @@ test('Clicking the "clear" button calls onChange', () => {
     />
   );
 
-  colorPicker.find('.euiFormControlLayoutClearButton').simulate('click');
+  colorPicker.find('.ouiFormControlLayoutClearButton').simulate('click');
   expect(onChange).toBeCalled();
   expect(onChange).toBeCalledWith('', {
     hex: '',
@@ -322,21 +333,21 @@ test('Clicking the "clear" button calls onChange', () => {
 
 test('default mode does renders child components', () => {
   const colorPicker = mount(
-    <EuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+    <OuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
-  const saturation = findTestSubject(colorPicker, 'euiSaturation');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
+  const saturation = findTestSubject(colorPicker, 'ouiSaturation');
   expect(saturation.length).toBe(1);
-  const hue = colorPicker.find('EuiHue');
+  const hue = colorPicker.find('OuiHue');
   expect(hue.length).toBe(1);
-  const swatches = colorPicker.find('button.euiColorPicker__swatchSelect');
+  const swatches = colorPicker.find('button.ouiColorPicker__swatchSelect');
   expect(swatches.length).toBe(VISUALIZATION_COLORS.length);
 });
 
-test('swatch mode does not render EuiSaturation or EuiHue', () => {
+test('swatch mode does not render OuiSaturation or OuiHue', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       mode="swatch"
       color="#ffeedd"
@@ -344,18 +355,18 @@ test('swatch mode does not render EuiSaturation or EuiHue', () => {
     />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
-  const saturation = colorPicker.find('EuiSaturation');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
+  const saturation = colorPicker.find('OuiSaturation');
   expect(saturation.length).toBe(0);
-  const hue = colorPicker.find('EuiHue');
+  const hue = colorPicker.find('OuiHue');
   expect(hue.length).toBe(0);
-  const swatches = colorPicker.find('button.euiColorPicker__swatchSelect');
+  const swatches = colorPicker.find('button.ouiColorPicker__swatchSelect');
   expect(swatches.length).toBe(VISUALIZATION_COLORS.length);
 });
 
 test('picker mode does not render swatches', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       mode="picker"
       color="#ffeedd"
@@ -363,18 +374,18 @@ test('picker mode does not render swatches', () => {
     />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
-  const saturation = findTestSubject(colorPicker, 'euiSaturation');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
+  const saturation = findTestSubject(colorPicker, 'ouiSaturation');
   expect(saturation.length).toBe(1);
-  const hue = colorPicker.find('EuiHue');
+  const hue = colorPicker.find('OuiHue');
   expect(hue.length).toBe(1);
-  const swatches = colorPicker.find('button.euiColorPicker__swatchSelect');
+  const swatches = colorPicker.find('button.ouiColorPicker__swatchSelect');
   expect(swatches.length).toBe(0);
 });
 
 test('secondaryInputDisplay `top` has a popover panel input', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       secondaryInputDisplay="top"
       color="#ffeedd"
@@ -382,11 +393,11 @@ test('secondaryInputDisplay `top` has a popover panel input', () => {
     />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
-  const inputTop = findTestSubject(colorPicker, 'euiColorPickerInput_top');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
+  const inputTop = findTestSubject(colorPicker, 'ouiColorPickerInput_top');
   const inputBottom = findTestSubject(
     colorPicker,
-    'euiColorPickerInput_bottom'
+    'ouiColorPickerInput_bottom'
   );
   expect(inputTop.length).toBe(1);
   expect(inputBottom.length).toBe(0);
@@ -394,7 +405,7 @@ test('secondaryInputDisplay `top` has a popover panel input', () => {
 
 test('secondaryInputDisplay `bottom` has a popover panel input', () => {
   const colorPicker = mount(
-    <EuiColorPicker
+    <OuiColorPicker
       onChange={onChange}
       secondaryInputDisplay="bottom"
       color="#ffeedd"
@@ -402,11 +413,11 @@ test('secondaryInputDisplay `bottom` has a popover panel input', () => {
     />
   );
 
-  findTestSubject(colorPicker, 'euiColorPickerAnchor').simulate('click');
-  const inputTop = findTestSubject(colorPicker, 'euiColorPickerInput_top');
+  findTestSubject(colorPicker, 'ouiColorPickerAnchor').simulate('click');
+  const inputTop = findTestSubject(colorPicker, 'ouiColorPickerInput_top');
   const inputBottom = findTestSubject(
     colorPicker,
-    'euiColorPickerInput_bottom'
+    'ouiColorPickerInput_bottom'
   );
   expect(inputTop.length).toBe(0);
   expect(inputBottom.length).toBe(1);

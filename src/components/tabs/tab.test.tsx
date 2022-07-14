@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,32 +32,32 @@ import React from 'react';
 import { render, shallow } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiTab } from './tab';
+import { OuiTab } from './tab';
 
-describe('EuiTab', () => {
+describe('OuiTab', () => {
   test('renders button', () => {
     const component = (
-      <EuiTab onClick={() => {}} {...requiredProps}>
+      <OuiTab onClick={() => {}} {...requiredProps}>
         children
-      </EuiTab>
+      </OuiTab>
     );
     expect(render(component)).toMatchSnapshot();
   });
 
   test('renders anchor', () => {
     const component = (
-      <EuiTab href="/baz/bing" {...requiredProps}>
+      <OuiTab href="/baz/bing" {...requiredProps}>
         children
-      </EuiTab>
+      </OuiTab>
     );
     expect(render(component)).toMatchSnapshot();
   });
 
   test('renders isSelected', () => {
     const component = (
-      <EuiTab onClick={() => {}} isSelected {...requiredProps}>
+      <OuiTab onClick={() => {}} isSelected {...requiredProps}>
         children
-      </EuiTab>
+      </OuiTab>
     );
     expect(render(component)).toMatchSnapshot();
   });
@@ -56,7 +67,7 @@ describe('EuiTab', () => {
       test('is called when the button is clicked', () => {
         const onClickHandler = jest.fn();
 
-        const $button = shallow(<EuiTab onClick={onClickHandler} />);
+        const $button = shallow(<OuiTab onClick={onClickHandler} />);
 
         $button.simulate('click');
 
@@ -65,7 +76,7 @@ describe('EuiTab', () => {
     });
 
     test('is disabled', () => {
-      const component = render(<EuiTab disabled>Click Me</EuiTab>);
+      const component = render(<OuiTab disabled>Click Me</OuiTab>);
 
       expect(component).toMatchSnapshot();
     });

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,15 +28,15 @@
  * under the License.
  */
 
-import { EuiComboBoxOptionOption } from './types';
+import { OuiComboBoxOptionOption } from './types';
 
 export const flattenOptionGroups = <T>(
-  optionsOrGroups: Array<EuiComboBoxOptionOption<T>>
+  optionsOrGroups: Array<OuiComboBoxOptionOption<T>>
 ) => {
   return optionsOrGroups.reduce(
     (
-      options: Array<EuiComboBoxOptionOption<T>>,
-      optionOrGroup: EuiComboBoxOptionOption<T>
+      options: Array<OuiComboBoxOptionOption<T>>,
+      optionOrGroup: OuiComboBoxOptionOption<T>
     ) => {
       if (optionOrGroup.options) {
         options.push(...optionOrGroup.options);
@@ -40,7 +51,7 @@ export const flattenOptionGroups = <T>(
 
 export const getSelectedOptionForSearchValue = <T>(
   searchValue: string,
-  selectedOptions: Array<EuiComboBoxOptionOption<T>>,
+  selectedOptions: Array<OuiComboBoxOptionOption<T>>,
   optionKey?: string
 ) => {
   const normalizedSearchValue = searchValue.toLowerCase();
@@ -52,9 +63,9 @@ export const getSelectedOptionForSearchValue = <T>(
 };
 
 const collectMatchingOption = <T>(
-  accumulator: Array<EuiComboBoxOptionOption<T>>,
-  option: EuiComboBoxOptionOption<T>,
-  selectedOptions: Array<EuiComboBoxOptionOption<T>>,
+  accumulator: Array<OuiComboBoxOptionOption<T>>,
+  option: OuiComboBoxOptionOption<T>,
+  selectedOptions: Array<OuiComboBoxOptionOption<T>>,
   normalizedSearchValue: string,
   isPreFiltered: boolean,
   showPrevSelected: boolean
@@ -87,20 +98,20 @@ const collectMatchingOption = <T>(
 };
 
 export const getMatchingOptions = <T>(
-  options: Array<EuiComboBoxOptionOption<T>>,
-  selectedOptions: Array<EuiComboBoxOptionOption<T>>,
+  options: Array<OuiComboBoxOptionOption<T>>,
+  selectedOptions: Array<OuiComboBoxOptionOption<T>>,
   searchValue: string,
   isPreFiltered: boolean,
   showPrevSelected: boolean,
   sortMatchesBy: string
 ) => {
   const normalizedSearchValue = searchValue.trim().toLowerCase();
-  const matchingOptions: Array<EuiComboBoxOptionOption<T>> = [];
+  const matchingOptions: Array<OuiComboBoxOptionOption<T>> = [];
 
   options.forEach((option) => {
     if (option.options) {
-      const matchingOptionsForGroup: Array<EuiComboBoxOptionOption<T>> = [];
-      option.options.forEach((groupOption: EuiComboBoxOptionOption<T>) => {
+      const matchingOptionsForGroup: Array<OuiComboBoxOptionOption<T>> = [];
+      option.options.forEach((groupOption: OuiComboBoxOptionOption<T>) => {
         collectMatchingOption(
           matchingOptionsForGroup,
           groupOption,
@@ -134,8 +145,8 @@ export const getMatchingOptions = <T>(
 
   if (sortMatchesBy === 'startsWith') {
     const refObj: {
-      startWith: Array<EuiComboBoxOptionOption<T>>;
-      others: Array<EuiComboBoxOptionOption<T>>;
+      startWith: Array<OuiComboBoxOptionOption<T>>;
+      others: Array<OuiComboBoxOptionOption<T>>;
     } = { startWith: [], others: [] };
 
     matchingOptions.forEach((object) => {

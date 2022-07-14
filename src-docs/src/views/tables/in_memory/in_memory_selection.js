@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment, useRef } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 import {
-  EuiLink,
-  EuiHealth,
-  EuiButton,
-  EuiInMemoryTable,
-  EuiEmptyPrompt,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
+  OuiLink,
+  OuiHealth,
+  OuiButton,
+  OuiInMemoryTable,
+  OuiEmptyPrompt,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSpacer,
 } from '../../../../../src/components';
 import { Random } from '../../../../../src/services/random';
 
@@ -45,19 +56,19 @@ export const Table = () => {
   const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const [message, setMessage] = useState(
-    <EuiEmptyPrompt
+    <OuiEmptyPrompt
       title={<h3>No users</h3>}
       titleSize="xs"
       body="Looks like you don&rsquo;t have any users. Let&rsquo;s create some!"
       actions={
-        <EuiButton
+        <OuiButton
           size="s"
           key="loadUsers"
           onClick={() => {
             loadUsers();
           }}>
           Load Users
-        </EuiButton>
+        </OuiButton>
       }
     />
   );
@@ -104,30 +115,30 @@ export const Table = () => {
     };
 
     return (
-      <EuiButton color="danger" iconType="trash" onClick={onClick}>
+      <OuiButton color="danger" iconType="trash" onClick={onClick}>
         Delete {selection.length} Users
-      </EuiButton>
+      </OuiButton>
     );
   };
 
   const renderToolsRight = () => {
     return [
-      <EuiButton
+      <OuiButton
         key="loadUsers"
         onClick={() => {
           loadUsers();
         }}
         isDisabled={loading}>
         Load Users
-      </EuiButton>,
-      <EuiButton
+      </OuiButton>,
+      <OuiButton
         key="loadUsersError"
         onClick={() => {
           loadUsersWithError();
         }}
         isDisabled={loading}>
         Load Users (Error)
-      </EuiButton>,
+      </OuiButton>,
     ];
   };
 
@@ -147,9 +158,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: (username) => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </OuiLink>
       ),
     },
     {
@@ -174,7 +185,7 @@ export const Table = () => {
       render: (online) => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <OuiHealth color={color}>{label}</OuiHealth>;
       },
       sortable: true,
     },
@@ -228,16 +239,16 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton onClick={onSelection}>Select online users</EuiButton>
-        </EuiFlexItem>
-        <EuiFlexItem />
-      </EuiFlexGroup>
+      <OuiFlexGroup alignItems="center">
+        <OuiFlexItem grow={false}>
+          <OuiButton onClick={onSelection}>Select online users</OuiButton>
+        </OuiFlexItem>
+        <OuiFlexItem />
+      </OuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiInMemoryTable
+      <OuiInMemoryTable
         ref={tableRef}
         items={users}
         itemId="id"

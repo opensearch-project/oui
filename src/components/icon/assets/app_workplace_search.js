@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import * as React from 'react';
 
-const EuiIconAppWorkplaceSearch = ({ title, titleId, ...props }) => (
+const OuiIconAppWorkplaceSearch = ({ title, titleId, ...props }) => (
   <svg
     width={32}
     height={32}
@@ -15,10 +26,10 @@ const EuiIconAppWorkplaceSearch = ({ title, titleId, ...props }) => (
     />
     <path
       fillRule="evenodd"
-      className="euiIcon__fillSecondary"
+      className="ouiIcon__fillSecondary"
       d="M23.801 3c-.382 0-1.052.231-1.925.812-.636.422-1.228.928-1.677 1.357l1.771 2.245.005.007.024.03.008.01c4.003 5.099 3.99 12.057-.035 17.145l-1.793 2.267a8.206 8.206 0 001.769 1.498c.698.427 1.337.629 1.852.629H28V3h-4.199zm-6.148 23.842l.765 1.053.023.027c.717.851 1.566 1.607 2.464 2.156.89.544 1.89.922 2.895.922H30V1h-6.199c-.987 0-2.066.505-3.032 1.146a14.934 14.934 0 00-2.352 1.974l-.276.288-.595.628 2.855 3.619.006.006c3.459 4.375 3.457 10.329-.004 14.704l-2.75 3.477z"
     />
   </svg>
 );
 
-export const icon = EuiIconAppWorkplaceSearch;
+export const icon = OuiIconAppWorkplaceSearch;

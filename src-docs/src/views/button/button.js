@@ -1,165 +1,176 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components/';
 
 export default () => (
   <div>
-    <EuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <EuiFlexItem grow={false}>
-        <EuiButton onClick={() => {}}>Primary</EuiButton>
-      </EuiFlexItem>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiButton onClick={() => {}}>Primary</OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton fill onClick={() => {}}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton size="s" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton size="s" onClick={() => {}}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton size="s" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton size="s" fill onClick={() => {}}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <EuiFlexItem grow={false}>
-        <EuiButton color="success" onClick={() => {}}>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="success" onClick={() => {}}>
           Success
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="success" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="success" fill onClick={() => {}}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="success" size="s" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="success" size="s" onClick={() => {}}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="success" size="s" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="success" size="s" fill onClick={() => {}}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <EuiFlexItem grow={false}>
-        <EuiButton color="warning" onClick={() => {}}>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="warning" onClick={() => {}}>
           Warning
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="warning" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="warning" fill onClick={() => {}}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="warning" size="s" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="warning" size="s" onClick={() => {}}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="warning" size="s" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="warning" size="s" fill onClick={() => {}}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <EuiFlexItem grow={false}>
-        <EuiButton color="danger" onClick={() => {}}>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="danger" onClick={() => {}}>
           Danger
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="danger" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="danger" fill onClick={() => {}}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="danger" size="s" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="danger" size="s" onClick={() => {}}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="danger" size="s" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="danger" size="s" fill onClick={() => {}}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <EuiFlexItem grow={false}>
-        <EuiButton color="text" onClick={() => {}}>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="text" onClick={() => {}}>
           Text
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="text" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="text" fill onClick={() => {}}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="text" size="s" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="text" size="s" onClick={() => {}}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton color="text" size="s" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="text" size="s" fill onClick={() => {}}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <EuiFlexItem grow={false}>
-        <EuiButton isDisabled onClick={() => {}}>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiButton isDisabled onClick={() => {}}>
           Disabled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton isDisabled fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton isDisabled fill onClick={() => {}}>
           Filled
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton isDisabled size="s" onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton isDisabled size="s" onClick={() => {}}>
           Small
-        </EuiButton>
-      </EuiFlexItem>
+        </OuiButton>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButton isDisabled size="s" fill onClick={() => {}}>
+      <OuiFlexItem grow={false}>
+        <OuiButton isDisabled size="s" fill onClick={() => {}}>
           Small and filled
-        </EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </div>
 );

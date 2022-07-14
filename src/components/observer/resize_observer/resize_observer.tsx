@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,9 +29,9 @@
  */
 
 import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
-import { EuiObserver } from '../observer';
+import { OuiObserver } from '../observer';
 
-export interface EuiResizeObserverProps {
+export interface OuiResizeObserverProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -30,8 +41,8 @@ export interface EuiResizeObserverProps {
 
 const hasResizeObserver =
   typeof window !== 'undefined' && typeof window.ResizeObserver !== 'undefined';
-export class EuiResizeObserver extends EuiObserver<EuiResizeObserverProps> {
-  name = 'EuiResizeObserver';
+export class OuiResizeObserver extends OuiObserver<OuiResizeObserverProps> {
+  name = 'OuiResizeObserver';
 
   state = {
     height: 0,

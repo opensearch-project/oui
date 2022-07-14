@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,12 +30,12 @@
 
 import React, { Component, ReactElement } from 'react';
 import { isString } from '../../services/predicate';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiSearchBox, SchemaType } from './search_box';
-import { EuiSearchFilters, SearchFilterConfig } from './search_filters';
+import { OuiFlexGroup, OuiFlexItem } from '../flex';
+import { OuiSearchBox, SchemaType } from './search_box';
+import { OuiSearchFilters, SearchFilterConfig } from './search_filters';
 import { Query } from './query';
 import { CommonProps } from '../common';
-import { EuiFieldSearchProps } from '../form/field_search';
+import { OuiFieldSearchProps } from '../form/field_search';
 
 export { Query, AST as Ast } from './query';
 
@@ -44,7 +55,7 @@ interface ArgsWithError {
   error: Error;
 }
 
-export interface EuiSearchBarProps extends CommonProps {
+export interface OuiSearchBarProps extends CommonProps {
   onChange?: (args: ArgsWithQuery | ArgsWithError) => void | boolean;
 
   /**
@@ -60,9 +71,9 @@ export interface EuiSearchBarProps extends CommonProps {
   /**
    Configures the search box. Set `placeholder` to change the placeholder text in the box and `incremental` to support incremental (as you type) search.
    */
-  box?: EuiFieldSearchProps & {
-    // Boolean values are not meaningful to this EuiSearchBox, but are allowed so that other
-    // components can use e.g. a true value to mean "auto-derive a schema". See EuiInMemoryTable.
+  box?: OuiFieldSearchProps & {
+    // Boolean values are not meaningful to this OuiSearchBox, but are allowed so that other
+    // components can use e.g. a true value to mean "auto-derive a schema". See OuiInMemoryTable.
     // Admittedly, this is a bit of a hack.
     schema?: SchemaType | boolean;
   };
@@ -90,7 +101,7 @@ export interface EuiSearchBarProps extends CommonProps {
 
 const parseQuery = (
   query: QueryType | undefined,
-  props: EuiSearchBarProps
+  props: OuiSearchBarProps
 ): Query => {
   let schema: SchemaType | undefined = undefined;
   if (props.box && props.box.schema && typeof props.box.schema === 'object') {
@@ -114,10 +125,10 @@ interface State {
 // when `error` is not null.
 type StateWithOptionalQuery = Omit<State, 'query'> & { query: Query | null };
 
-export class EuiSearchBar extends Component<EuiSearchBarProps, State> {
+export class OuiSearchBar extends Component<OuiSearchBarProps, State> {
   static Query = Query;
 
-  constructor(props: EuiSearchBarProps) {
+  constructor(props: OuiSearchBarProps) {
     super(props);
     const query = parseQuery(props.defaultQuery || props.query, props);
     this.state = {
@@ -128,7 +139,7 @@ export class EuiSearchBar extends Component<EuiSearchBarProps, State> {
   }
 
   static getDerivedStateFromProps(
-    nextProps: EuiSearchBarProps,
+    nextProps: OuiSearchBarProps,
     prevState: State
   ): State | null {
     if (
@@ -200,19 +211,19 @@ export class EuiSearchBar extends Component<EuiSearchBarProps, State> {
 
     if (Array.isArray(tools)) {
       return tools.map((tool) => (
-        <EuiFlexItem grow={false} key={tool.key == null ? undefined : tool.key}>
+        <OuiFlexItem grow={false} key={tool.key == null ? undefined : tool.key}>
           {tool}
-        </EuiFlexItem>
+        </OuiFlexItem>
       ));
     }
 
-    return <EuiFlexItem grow={false}>{tools}</EuiFlexItem>;
+    return <OuiFlexItem grow={false}>{tools}</OuiFlexItem>;
   }
 
   render() {
     const { query, queryText, error } = this.state;
     const {
-      box: { schema, ...box } = { schema: '' }, // strip `schema` out to prevent passing it to EuiSearchBox
+      box: { schema, ...box } = { schema: '' }, // strip `schema` out to prevent passing it to OuiSearchBox
       filters,
       toolsLeft,
       toolsRight,
@@ -221,32 +232,32 @@ export class EuiSearchBar extends Component<EuiSearchBarProps, State> {
     const toolsLeftEl = this.renderTools(toolsLeft);
 
     const filtersBar = !filters ? undefined : (
-      <EuiFlexItem className="euiSearchBar__filtersHolder" grow={false}>
-        <EuiSearchFilters
+      <OuiFlexItem className="ouiSearchBar__filtersHolder" grow={false}>
+        <OuiSearchFilters
           filters={filters}
           query={query}
           onChange={this.onFiltersChange}
         />
-      </EuiFlexItem>
+      </OuiFlexItem>
     );
 
     const toolsRightEl = this.renderTools(toolsRight);
 
     return (
-      <EuiFlexGroup gutterSize="m" alignItems="center" wrap>
+      <OuiFlexGroup gutterSize="m" alignItems="center" wrap>
         {toolsLeftEl}
-        <EuiFlexItem className="euiSearchBar__searchHolder" grow={true}>
-          <EuiSearchBox
+        <OuiFlexItem className="ouiSearchBar__searchHolder" grow={true}>
+          <OuiSearchBox
             {...box}
             query={queryText}
             onSearch={this.onSearch}
             isInvalid={error != null}
             title={error ? error.message : undefined}
           />
-        </EuiFlexItem>
+        </OuiFlexItem>
         {filtersBar}
         {toolsRightEl}
-      </EuiFlexGroup>
+      </OuiFlexGroup>
     );
   }
 }

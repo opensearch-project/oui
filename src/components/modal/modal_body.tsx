@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,19 +32,19 @@ import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classnames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiModalBodyProps = FunctionComponent<
+export type OuiModalBodyProps = FunctionComponent<
   HTMLAttributes<HTMLDivElement> & CommonProps
 >;
 
-export const EuiModalBody: EuiModalBodyProps = ({
+export const OuiModalBody: OuiModalBodyProps = ({
   className,
   children,
   ...rest
 }) => {
-  const classes = classnames('euiModalBody', className);
+  const classes = classnames('ouiModalBody', className);
   return (
     <div className={classes} {...rest}>
-      <div className="euiModalBody__overflow">{children}</div>
+      <div className="ouiModalBody__overflow">{children}</div>
     </div>
   );
 };

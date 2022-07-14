@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSuggestItem is rendered 1`] = `
+exports[`OuiSuggestItem is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiSuggestItem testClass1 testClass2"
+  class="ouiSuggestItem testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span
-    class="euiSuggestItem__type euiSuggestItem__type--tint1"
+    class="ouiSuggestItem__type ouiSuggestItem__type--tint1"
   >
     <span
       color="inherit"
-      data-euiicon-type="search"
+      data-ouiicon-type="search"
     />
   </span>
   <span
-    class="euiSuggestItem__label euiSuggestItem__labelDisplay--expand euiSuggestItem__label--width50"
+    class="ouiSuggestItem__label ouiSuggestItem__labelDisplay--expand ouiSuggestItem__label--width50"
   >
     Test label
   </span>
@@ -24,23 +24,23 @@ exports[`EuiSuggestItem is rendered 1`] = `
 
 exports[`props descriptionDisplay as wrap is rendered 1`] = `
 <div
-  class="euiSuggestItem"
+  class="ouiSuggestItem"
 >
   <span
-    class="euiSuggestItem__type euiSuggestItem__type--tint2"
+    class="ouiSuggestItem__type ouiSuggestItem__type--tint2"
   >
     <span
       color="inherit"
-      data-euiicon-type="kqlValue"
+      data-ouiicon-type="kqlValue"
     />
   </span>
   <span
-    class="euiSuggestItem__label euiSuggestItem__labelDisplay--fixed euiSuggestItem__label--width50"
+    class="ouiSuggestItem__label ouiSuggestItem__labelDisplay--fixed ouiSuggestItem__label--width50"
   >
     This is the description
   </span>
   <span
-    class="euiSuggestItem__description euiSuggestItem__description--wrap"
+    class="ouiSuggestItem__description ouiSuggestItem__description--wrap"
   >
     This is the description
   </span>
@@ -49,18 +49,18 @@ exports[`props descriptionDisplay as wrap is rendered 1`] = `
 
 exports[`props item with no description has expanded label is rendered 1`] = `
 <div
-  class="euiSuggestItem"
+  class="ouiSuggestItem"
 >
   <span
-    class="euiSuggestItem__type euiSuggestItem__type--tint2"
+    class="ouiSuggestItem__type ouiSuggestItem__type--tint2"
   >
     <span
       color="inherit"
-      data-euiicon-type="kqlValue"
+      data-ouiicon-type="kqlValue"
     />
   </span>
   <span
-    class="euiSuggestItem__label euiSuggestItem__labelDisplay--expand euiSuggestItem__label--width50"
+    class="ouiSuggestItem__label ouiSuggestItem__labelDisplay--expand ouiSuggestItem__label--width50"
   >
     Charles de Gaulle International Airport
   </span>
@@ -69,23 +69,23 @@ exports[`props item with no description has expanded label is rendered 1`] = `
 
 exports[`props labelDisplay as expand is rendered 1`] = `
 <div
-  class="euiSuggestItem"
+  class="ouiSuggestItem"
 >
   <span
-    class="euiSuggestItem__type euiSuggestItem__type--tint2"
+    class="ouiSuggestItem__type ouiSuggestItem__type--tint2"
   >
     <span
       color="inherit"
-      data-euiicon-type="kqlValue"
+      data-ouiicon-type="kqlValue"
     />
   </span>
   <span
-    class="euiSuggestItem__label euiSuggestItem__labelDisplay--expand"
+    class="ouiSuggestItem__label ouiSuggestItem__labelDisplay--expand"
   >
     This is the description
   </span>
   <span
-    class="euiSuggestItem__description euiSuggestItem__description--truncate"
+    class="ouiSuggestItem__description ouiSuggestItem__description--truncate"
   >
     This is the description
   </span>
@@ -94,23 +94,23 @@ exports[`props labelDisplay as expand is rendered 1`] = `
 
 exports[`props labelWidth is 30% is rendered 1`] = `
 <div
-  class="euiSuggestItem"
+  class="ouiSuggestItem"
 >
   <span
-    class="euiSuggestItem__type euiSuggestItem__type--tint2"
+    class="ouiSuggestItem__type ouiSuggestItem__type--tint2"
   >
     <span
       color="inherit"
-      data-euiicon-type="kqlValue"
+      data-ouiicon-type="kqlValue"
     />
   </span>
   <span
-    class="euiSuggestItem__label euiSuggestItem__labelDisplay--fixed euiSuggestItem__label--width30"
+    class="ouiSuggestItem__label ouiSuggestItem__labelDisplay--fixed ouiSuggestItem__label--width30"
   >
     This is the description
   </span>
   <span
-    class="euiSuggestItem__description euiSuggestItem__description--truncate"
+    class="ouiSuggestItem__description ouiSuggestItem__description--truncate"
   >
     This is the description
   </span>

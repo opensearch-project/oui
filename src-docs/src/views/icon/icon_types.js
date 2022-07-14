@@ -1,85 +1,96 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiText,
-  EuiSpacer,
-  EuiButton,
-  EuiSplitPanel,
-  EuiCodeBlock,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiIcon,
+  OuiText,
+  OuiSpacer,
+  OuiButton,
+  OuiSplitPanel,
+  OuiCodeBlock,
 } from '../../../../src/components';
 
 import reactSvg from '../../images/custom.svg';
 
 export default () => (
   <div>
-    <EuiSplitPanel.Outer hasShadow={false} direction="row">
-      <EuiSplitPanel.Inner
-        className="eui-textCenter"
+    <OuiSplitPanel.Outer hasShadow={false} direction="row">
+      <OuiSplitPanel.Inner
+        className="oui-textCenter"
         grow={false}
         style={{ minWidth: 96 }}>
-        <EuiIcon
+        <OuiIcon
           type="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg"
           size="xl"
           title="My SVG logo"
         />
-      </EuiSplitPanel.Inner>
-      <EuiSplitPanel.Inner paddingSize="s" color="subdued">
-        <EuiCodeBlock
-          className="eui-textBreakWord"
+      </OuiSplitPanel.Inner>
+      <OuiSplitPanel.Inner paddingSize="s" color="subdued">
+        <OuiCodeBlock
+          className="oui-textBreakWord"
           language="html"
           isCopyable
           transparentBackground
           paddingSize="m">
           {
-            '<EuiIcon type="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg" size="xl" title="My SVG logo" />'
+            '<OuiIcon type="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg" size="xl" title="My SVG logo" />'
           }
-        </EuiCodeBlock>
-      </EuiSplitPanel.Inner>
-    </EuiSplitPanel.Outer>
-    <EuiSpacer />
-    <EuiSplitPanel.Outer hasShadow={false} direction="row">
-      <EuiSplitPanel.Inner
-        className="eui-textCenter"
+        </OuiCodeBlock>
+      </OuiSplitPanel.Inner>
+    </OuiSplitPanel.Outer>
+    <OuiSpacer />
+    <OuiSplitPanel.Outer hasShadow={false} direction="row">
+      <OuiSplitPanel.Inner
+        className="oui-textCenter"
         grow={false}
         style={{ minWidth: 96 }}>
-        <EuiIcon type={reactSvg} size="xl" title="Custom SVG icon" />
-      </EuiSplitPanel.Inner>
-      <EuiSplitPanel.Inner paddingSize="s" color="subdued">
-        <EuiCodeBlock
+        <OuiIcon type={reactSvg} size="xl" title="Custom SVG icon" />
+      </OuiSplitPanel.Inner>
+      <OuiSplitPanel.Inner paddingSize="s" color="subdued">
+        <OuiCodeBlock
           language="html"
           isCopyable
           transparentBackground
           paddingSize="m">
-          {'<EuiIcon type={reactSvg} size="xl" title="Custom SVG icon" />'}
-        </EuiCodeBlock>
-      </EuiSplitPanel.Inner>
-    </EuiSplitPanel.Outer>
+          {'<OuiIcon type={reactSvg} size="xl" title="Custom SVG icon" />'}
+        </OuiCodeBlock>
+      </OuiSplitPanel.Inner>
+    </OuiSplitPanel.Outer>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiText>
+    <OuiText>
       <p>
-        Any component that utlizes <strong>EuiIcon</strong> can use custom SVGs
+        Any component that utlizes <strong>OuiIcon</strong> can use custom SVGs
         as well.
       </p>
-    </EuiText>
+    </OuiText>
 
-    <EuiSpacer />
+    <OuiSpacer />
 
-    <EuiFlexGroup>
-      <EuiFlexItem grow={false}>
-        <EuiButton
+    <OuiFlexGroup>
+      <OuiFlexItem grow={false}>
+        <OuiButton
           iconType="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg"
           title="Another SVG Logo">
           http://some.svg
-        </EuiButton>
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiButton iconType={reactSvg}>{'{reactSvg}'}</EuiButton>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButton>
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiButton iconType={reactSvg}>{'{reactSvg}'}</OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </div>
 );

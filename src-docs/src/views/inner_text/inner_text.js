@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useEffect, useState } from 'react';
 
 import {
-  EuiBadge,
-  EuiCode,
-  EuiHighlight,
-  EuiHorizontalRule,
-  EuiPanel,
-  EuiText,
-  EuiSpacer,
-  EuiInnerText,
+  OuiBadge,
+  OuiCode,
+  OuiHighlight,
+  OuiHorizontalRule,
+  OuiPanel,
+  OuiText,
+  OuiSpacer,
+  OuiInnerText,
 } from '../../../../src/components';
 
 export default () => {
@@ -26,83 +37,83 @@ export default () => {
   }, [thing, type]);
 
   return (
-    <EuiText size="s">
+    <OuiText size="s">
       <p>
         <strong>Example:</strong>
       </p>
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
           <React.Fragment>
-            <EuiPanel paddingSize="s" className="eui-displayInlineBlock">
+            <OuiPanel paddingSize="s" className="oui-displayInlineBlock">
               <span ref={ref} title={innerText}>
                 Simple string content
               </span>
-            </EuiPanel>
-            <EuiSpacer />
-            <p className="eui-displayInlineBlock">
+            </OuiPanel>
+            <OuiSpacer />
+            <p className="oui-displayInlineBlock">
               <strong>Output:</strong>
             </p>{' '}
-            <EuiCode>{innerText}</EuiCode>
+            <OuiCode>{innerText}</OuiCode>
           </React.Fragment>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
 
-      <EuiHorizontalRule margin="xl" />
+      <OuiHorizontalRule margin="xl" />
 
       <p>
         <strong>Example with complex children:</strong>
       </p>
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
           <React.Fragment>
-            <EuiPanel paddingSize="s" className="eui-displayInlineBlock">
+            <OuiPanel paddingSize="s" className="oui-displayInlineBlock">
               <span ref={ref} title={innerText}>
-                <EuiHighlight search="content">
-                  EuiHighlight content
-                </EuiHighlight>{' '}
-                <EuiBadge>with EuiBadge</EuiBadge>
+                <OuiHighlight search="content">
+                  OuiHighlight content
+                </OuiHighlight>{' '}
+                <OuiBadge>with OuiBadge</OuiBadge>
               </span>
-            </EuiPanel>
-            <EuiSpacer />
-            <p className="eui-displayInlineBlock">
+            </OuiPanel>
+            <OuiSpacer />
+            <p className="oui-displayInlineBlock">
               <strong>Output:</strong>
             </p>{' '}
-            <EuiCode>{innerText}</EuiCode>
+            <OuiCode>{innerText}</OuiCode>
           </React.Fragment>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
 
-      <EuiHorizontalRule margin="xl" />
+      <OuiHorizontalRule margin="xl" />
 
       <p>
         <strong>Example with updating content:</strong>
       </p>
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
           <React.Fragment>
-            <EuiPanel paddingSize="s" className="eui-displayInlineBlock">
+            <OuiPanel paddingSize="s" className="oui-displayInlineBlock">
               <span ref={ref} title={innerText}>
                 {thing}
               </span>
-            </EuiPanel>
-            <EuiSpacer />
-            <p className="eui-displayInlineBlock">
+            </OuiPanel>
+            <OuiSpacer />
+            <p className="oui-displayInlineBlock">
               <strong>Output:</strong>
             </p>{' '}
-            <EuiCode>{innerText}</EuiCode>
+            <OuiCode>{innerText}</OuiCode>
           </React.Fragment>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
 
-      <EuiHorizontalRule margin="xl" />
+      <OuiHorizontalRule margin="xl" />
 
       <p>
         <strong>Example with updating element:</strong>
       </p>
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
           <React.Fragment>
-            <EuiPanel paddingSize="s" className="eui-displayInlineBlock">
+            <OuiPanel paddingSize="s" className="oui-displayInlineBlock">
               {React.createElement(
                 type,
                 {
@@ -111,15 +122,15 @@ export default () => {
                 },
                 thing2
               )}
-            </EuiPanel>
-            <EuiSpacer />
-            <p className="eui-displayInlineBlock">
+            </OuiPanel>
+            <OuiSpacer />
+            <p className="oui-displayInlineBlock">
               <strong>Output:</strong>
             </p>{' '}
-            <EuiCode>{innerText}</EuiCode>
+            <OuiCode>{innerText}</OuiCode>
           </React.Fragment>
         )}
-      </EuiInnerText>
-    </EuiText>
+      </OuiInnerText>
+    </OuiText>
   );
 };

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,14 +28,14 @@
  * under the License.
  */
 
-export { EuiTableHeaderMobile } from './table_header_mobile';
+export { OuiTableHeaderMobile } from './table_header_mobile';
 
 export {
-  EuiTableSortMobile,
-  EuiTableSortMobileProps,
+  OuiTableSortMobile,
+  OuiTableSortMobileProps,
 } from './table_sort_mobile';
 
 export {
-  EuiTableSortMobileItem,
-  EuiTableSortMobileItemProps,
+  OuiTableSortMobileItem,
+  OuiTableSortMobileItemProps,
 } from './table_sort_mobile_item';

@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import {
   propUtilityForPlayground,
   dummyFunction,
   simulateFunction,
   createOptionalEnum,
 } from '../../services/playground';
-import { EuiColorPicker } from '../../../../src/components/';
+import { OuiColorPicker } from '../../../../src/components/';
 import { PropTypes } from 'react-view';
 
 const colorPickerConfig = () => {
-  const docgenInfo = Array.isArray(EuiColorPicker.__docgenInfo)
-    ? EuiColorPicker.__docgenInfo[0]
-    : EuiColorPicker.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiColorPicker.__docgenInfo)
+    ? OuiColorPicker.__docgenInfo[0]
+    : OuiColorPicker.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.append = {
@@ -50,14 +61,14 @@ const colorPickerConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiColorPicker',
+      componentName: 'OuiColorPicker',
       props: propsToUse,
       scope: {
-        EuiColorPicker,
+        OuiColorPicker,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiColorPicker'],
+        '@opensearch-project/oui': {
+          named: ['OuiColorPicker'],
         },
       },
       customProps: {

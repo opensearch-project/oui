@@ -1,18 +1,29 @@
-.euiSplitPanel {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiSplitPanel {
   display: flex;
   flex-direction: column;
   min-width: 0;
 
-  .euiSplitPanel__inner {
+  .ouiSplitPanel__inner {
     flex-basis: 0%; // Make sure they're evenly split
     // Ensure no movement if they have click handlers
     transform: none !important; // sass-lint:disable-line no-important
     box-shadow: none !important; // sass-lint:disable-line no-important
   }
 
-  @each $modifier, $amount in $euiPanelBorderRadiusModifiers {
-    &.euiSplitPanel-isResponsive.euiPanel--#{$modifier} .euiSplitPanel__inner,
-    &.euiPanel--#{$modifier} .euiSplitPanel__inner {
+  @each $modifier, $amount in $ouiPanelBorderRadiusModifiers {
+    &.ouiSplitPanel-isResponsive.ouiPanel--#{$modifier} .ouiSplitPanel__inner,
+    &.ouiPanel--#{$modifier} .ouiSplitPanel__inner {
       &:first-child {
         border-radius: ($amount - 1) ($amount - 1) 0 0;
       }
@@ -24,15 +35,15 @@
   }
 }
 
-.euiSplitPanel--row {
+.ouiSplitPanel--row {
   flex-direction: row;
 
-  &.euiSplitPanel-isResponsive {
+  &.ouiSplitPanel-isResponsive {
     flex-direction: column;
   }
 
-  @each $modifier, $amount in $euiPanelBorderRadiusModifiers {
-    &.euiPanel--#{$modifier} .euiSplitPanel__inner {
+  @each $modifier, $amount in $ouiPanelBorderRadiusModifiers {
+    &.ouiPanel--#{$modifier} .ouiSplitPanel__inner {
       &:first-child {
         border-radius: ($amount - 1) 0 0 ($amount - 1);
       }

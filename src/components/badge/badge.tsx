@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,12 +40,12 @@ import classNames from 'classnames';
 import chroma from 'chroma-js';
 import { CommonProps, ExclusiveUnion, keysOf, PropsOf } from '../common';
 import {
-  euiPaletteColorBlindBehindText,
+  ouiPaletteColorBlindBehindText,
   getSecureRelForTarget,
   isColorDark,
 } from '../../services';
-import { EuiInnerText } from '../inner_text';
-import { EuiIcon, IconColor, IconType } from '../icon';
+import { OuiInnerText } from '../inner_text';
+import { OuiIcon, IconColor, IconType } from '../icon';
 import { chromaValid, parseColor } from '../color_picker/utils';
 import { validateHref } from '../../services/security/href_validator';
 
@@ -72,7 +83,7 @@ interface WithIconOnClick {
   iconOnClickAriaLabel: AriaAttributes['aria-label'];
 }
 
-export type EuiBadgeProps = {
+export type OuiBadgeProps = {
   /**
    * Accepts any string from our icon library
    */
@@ -96,7 +107,7 @@ export type EuiBadgeProps = {
   /**
    * Props passed to the close button.
    */
-  closeButtonProps?: Partial<PropsOf<EuiIcon>>;
+  closeButtonProps?: Partial<PropsOf<OuiIcon>>;
 } & CommonProps &
   ExclusiveUnion<WithIconOnClick, {}> &
   ExclusiveUnion<
@@ -109,9 +120,9 @@ const colorInk = '#000';
 const colorGhost = '#fff';
 
 // The color blind palette has some stricter accessibility needs with regards to
-// charts and contrast. We use the euiPaletteColorBlindBehindText variant here since our
+// charts and contrast. We use the ouiPaletteColorBlindBehindText variant here since our
 // accessibility concerns pertain to foreground (text) and background contrast
-const visColors = euiPaletteColorBlindBehindText();
+const visColors = ouiPaletteColorBlindBehindText();
 
 const colorToHexMap: { [color in IconColor]: string } = {
   // TODO - replace with variable once https://github.com/elastic/eui/issues/2731 is closed
@@ -127,13 +138,13 @@ const colorToHexMap: { [color in IconColor]: string } = {
 export const COLORS = keysOf(colorToHexMap);
 
 const iconSideToClassNameMap: { [side in IconSide]: string } = {
-  left: 'euiBadge--iconLeft',
-  right: 'euiBadge--iconRight',
+  left: 'ouiBadge--iconLeft',
+  right: 'ouiBadge--iconRight',
 };
 
 export const ICON_SIDES = keysOf(iconSideToClassNameMap);
 
-export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
+export const OuiBadge: FunctionComponent<OuiBadgeProps> = ({
   children,
   color = 'default',
   iconType,
@@ -208,18 +219,18 @@ export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
     handleInvalidColor(color);
   }
   const classes = classNames(
-    'euiBadge',
+    'ouiBadge',
     {
-      'euiBadge-isClickable': (onClick || href) && !iconOnClick,
-      'euiBadge-isDisabled': isDisabled,
-      'euiBadge--hollow': color === 'hollow',
+      'ouiBadge-isClickable': (onClick || href) && !iconOnClick,
+      'ouiBadge-isDisabled': isDisabled,
+      'ouiBadge--hollow': color === 'hollow',
     },
     iconSideToClassNameMap[iconSide],
     className
   );
 
   const closeClassNames = classNames(
-    'euiBadge__icon',
+    'ouiBadge__icon',
     closeButtonProps && closeButtonProps.className
   );
 
@@ -247,18 +258,18 @@ export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
     if (iconOnClick) {
       if (!iconOnClickAriaLabel) {
         console.warn(
-          'When passing the iconOnClick props to EuiBadge, you must also provide iconOnClickAriaLabel'
+          'When passing the iconOnClick props to OuiBadge, you must also provide iconOnClickAriaLabel'
         );
       }
       optionalIcon = (
         <button
           type="button"
-          className="euiBadge__iconButton"
+          className="ouiBadge__iconButton"
           aria-label={iconOnClickAriaLabel}
           disabled={isDisabled}
           title={iconOnClickAriaLabel}
           onClick={iconOnClick}>
-          <EuiIcon
+          <OuiIcon
             type={iconType}
             size="s"
             color="inherit" // forces the icon to inherit its parent color
@@ -269,10 +280,10 @@ export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
       );
     } else {
       optionalIcon = (
-        <EuiIcon
+        <OuiIcon
           type={iconType}
           size={children ? 's' : 'm'}
-          className="euiBadge__icon"
+          className="ouiBadge__icon"
           color="inherit" // forces the icon to inherit its parent color
         />
       );
@@ -281,13 +292,13 @@ export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
 
   if (onClick && !onClickAriaLabel) {
     console.warn(
-      'When passing onClick to EuiBadge, you must also provide onClickAriaLabel'
+      'When passing onClick to OuiBadge, you must also provide onClickAriaLabel'
     );
   }
 
   const content = (
-    <span className="euiBadge__content">
-      {children && <span className="euiBadge__text">{children}</span>}
+    <span className="ouiBadge__content">
+      {children && <span className="ouiBadge__text">{children}</span>}
       {optionalIcon}
     </span>
   );
@@ -295,11 +306,11 @@ export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
   if (iconOnClick) {
     return onClick || href ? (
       <span className={classes} style={optionalCustomStyles}>
-        <span className="euiBadge__content">
-          <EuiInnerText>
+        <span className="ouiBadge__content">
+          <OuiInnerText>
             {(ref, innerText) => (
               <Element
-                className="euiBadge__childButton"
+                className="ouiBadge__childButton"
                 disabled={isDisabled}
                 aria-label={onClickAriaLabel}
                 ref={ref}
@@ -309,12 +320,12 @@ export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
                 {children}
               </Element>
             )}
-          </EuiInnerText>
+          </OuiInnerText>
           {optionalIcon}
         </span>
       </span>
     ) : (
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
           <span
             className={classes}
@@ -325,11 +336,11 @@ export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
             {content}
           </span>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
     );
   } else if (onClick || href) {
     return (
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
           <Element
             disabled={isDisabled}
@@ -343,11 +354,11 @@ export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
             {content}
           </Element>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
     );
   } else {
     return (
-      <EuiInnerText>
+      <OuiInnerText>
         {(ref, innerText) => (
           <span
             className={classes}
@@ -358,7 +369,7 @@ export const EuiBadge: FunctionComponent<EuiBadgeProps> = ({
             {content}
           </span>
         )}
-      </EuiInnerText>
+      </OuiInnerText>
     );
   }
 };
@@ -381,7 +392,7 @@ function handleInvalidColor(color: null | IconColor | string) {
   const isValidColorString = color && chromaValid(parseColor(color) || '');
   if (!isNamedColor && !isValidColorString) {
     console.warn(
-      'EuiBadge expects a valid color. This can either be a three or six ' +
+      'OuiBadge expects a valid color. This can either be a three or six ' +
         `character hex value, rgb(a) value, hsv value, hollow, or one of the following: ${COLORS}. ` +
         `Instead got ${color}.`
     );

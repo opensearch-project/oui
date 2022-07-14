@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiCommentEvent } from './comment_event';
+import { OuiCommentEvent } from './comment_event';
 
-describe('EuiCommentEvent', () => {
+describe('OuiCommentEvent', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiCommentEvent username="someuser" {...requiredProps} />
+      <OuiCommentEvent username="someuser" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -36,7 +47,7 @@ describe('EuiCommentEvent', () => {
     describe('type', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCommentEvent username="someuser" type="update" />
+          <OuiCommentEvent username="someuser" type="update" />
         );
 
         expect(component).toMatchSnapshot();
@@ -46,7 +57,7 @@ describe('EuiCommentEvent', () => {
     describe('timestamp', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCommentEvent timestamp="21 days ago" username="someuser" />
+          <OuiCommentEvent timestamp="21 days ago" username="someuser" />
         );
 
         expect(component).toMatchSnapshot();
@@ -56,7 +67,7 @@ describe('EuiCommentEvent', () => {
     describe('event', () => {
       it('is rendered', () => {
         const component = render(
-          <EuiCommentEvent event="commented" username="someuser" />
+          <OuiCommentEvent event="commented" username="someuser" />
         );
 
         expect(component).toMatchSnapshot();

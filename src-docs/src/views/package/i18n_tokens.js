@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import tokens from '../../../../i18ntokens.json';
 import tokenChangelog from '../../../../i18ntokens_changelog.json';
 
 import {
-  EuiAccordion,
-  EuiCodeBlock,
-  EuiInMemoryTable,
-  EuiLink,
-  EuiSpacer,
-  EuiText,
-  EuiTitle,
+  OuiAccordion,
+  OuiCodeBlock,
+  OuiInMemoryTable,
+  OuiLink,
+  OuiSpacer,
+  OuiText,
+  OuiTitle,
 } from '../../../../src';
 import { GuidePage } from '../../components/guide_page';
 
@@ -22,12 +33,12 @@ const columns = [
           <p>
             <strong>{token}</strong>
           </p>
-          <EuiLink
+          <OuiLink
             target="_blank"
             color="subdued"
-            href={`https://github.com/elastic/eui/blob/master/${filepath}#L${loc.start.line}`}>
+            href={`https://github.com/opensearch-project/oui/blob/master/${filepath}#L${loc.start.line}`}>
             {filepath}:{loc.start.line}:{loc.start.column}
-          </EuiLink>
+          </OuiLink>
         </div>
       );
     },
@@ -36,13 +47,13 @@ const columns = [
     name: 'Default',
     render({ defString, highlighting }) {
       return (
-        <EuiCodeBlock
+        <OuiCodeBlock
           language={highlighting === 'code' ? 'javascript' : undefined}
           paddingSize="none"
           transparentBackground
           fontSize="s">
           {defString}
-        </EuiCodeBlock>
+        </OuiCodeBlock>
       );
     },
   },
@@ -59,25 +70,25 @@ export const I18nTokens = {
   name: 'I18n tokens',
   component: () => (
     <GuidePage title="I18n tokens">
-      <EuiInMemoryTable
+      <OuiInMemoryTable
         items={tokens}
         columns={columns}
         search={search}
         pagination={{ initialPageSize: 50 }}
       />
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiTitle size="m">
+      <OuiTitle size="m">
         <span>Token changelog</span>
-      </EuiTitle>
+      </OuiTitle>
 
       {tokenChangelog.map(({ version, changes }) => (
-        <EuiAccordion
+        <OuiAccordion
           key={version}
           id={version}
           buttonContent={<span>{version}</span>}>
-          <EuiInMemoryTable
+          <OuiInMemoryTable
             items={changes}
             columns={[
               {
@@ -85,17 +96,17 @@ export const I18nTokens = {
                 name: 'Change',
                 width: '100px',
                 render: (changeType) => (
-                  <EuiText color="subdued" size="xs">
+                  <OuiText color="subdued" size="xs">
                     {changeType}
-                  </EuiText>
+                  </OuiText>
                 ),
               },
               { field: 'token', name: 'Token' },
               { field: 'value', name: 'New Value' },
             ]}
           />
-          <EuiSpacer size="s" />
-        </EuiAccordion>
+          <OuiSpacer size="s" />
+        </OuiAccordion>
       ))}
     </GuidePage>
   ),

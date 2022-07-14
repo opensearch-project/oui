@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,14 +30,14 @@
 
 import React from 'react';
 import { mount, render } from 'enzyme';
-import { EuiNotificationEvent } from './notification_event';
-import { EuiContextMenuPanel, EuiContextMenuItem } from '../context_menu';
+import { OuiNotificationEvent } from './notification_event';
+import { OuiContextMenuPanel, OuiContextMenuItem } from '../context_menu';
 import { findTestSubject, takeMountedSnapshot } from '../../test';
 
-describe('EuiNotificationEvent', () => {
+describe('OuiNotificationEvent', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiNotificationEvent
+      <OuiNotificationEvent
         id="id"
         type="Alert"
         time="1 min ago"
@@ -41,7 +52,7 @@ describe('EuiNotificationEvent', () => {
   describe('props', () => {
     test('multiple messages are rendered', () => {
       const component = render(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -55,7 +66,7 @@ describe('EuiNotificationEvent', () => {
 
     test('isRead  is rendered', () => {
       const component = render(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -71,7 +82,7 @@ describe('EuiNotificationEvent', () => {
 
     test('severity  is rendered', () => {
       const component = render(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -86,7 +97,7 @@ describe('EuiNotificationEvent', () => {
 
     test('badgeColor is rendered', () => {
       const component = render(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -101,7 +112,7 @@ describe('EuiNotificationEvent', () => {
 
     test('iconType is rendered', () => {
       const component = render(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -116,7 +127,7 @@ describe('EuiNotificationEvent', () => {
 
     test('headingLevel is rendered', () => {
       const component = render(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -131,7 +142,7 @@ describe('EuiNotificationEvent', () => {
 
     test('iconAriaLabel is rendered', () => {
       const component = render(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -147,7 +158,7 @@ describe('EuiNotificationEvent', () => {
 
     test('primaryAction is rendered', () => {
       const component = render(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -163,7 +174,7 @@ describe('EuiNotificationEvent', () => {
 
     test('primaryActionProps is rendered', () => {
       const component = render(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -181,20 +192,20 @@ describe('EuiNotificationEvent', () => {
     test('contextMenuItems are rendered', () => {
       const onOpenContextMenu = (id: string) => {
         return [
-          <EuiContextMenuItem key="contextMenuItemA">
+          <OuiContextMenuItem key="contextMenuItemA">
             Context menu 1 for id: {id}
-          </EuiContextMenuItem>,
-          <EuiContextMenuItem key="contextMenuItemB">
+          </OuiContextMenuItem>,
+          <OuiContextMenuItem key="contextMenuItemB">
             Context menu 2 for id: {id}
-          </EuiContextMenuItem>,
-          <EuiContextMenuItem key="contextMenuItemC">
+          </OuiContextMenuItem>,
+          <OuiContextMenuItem key="contextMenuItemC">
             Context menu 3 for id: {id}
-          </EuiContextMenuItem>,
+          </OuiContextMenuItem>,
         ];
       };
 
       const component = mount(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -204,14 +215,14 @@ describe('EuiNotificationEvent', () => {
         />
       );
 
-      expect(component.find(EuiContextMenuPanel)).toHaveLength(0);
+      expect(component.find(OuiContextMenuPanel)).toHaveLength(0);
       findTestSubject(component, 'id-notificationEventMetaButton').simulate(
         'click'
       );
-      expect(component.find(EuiContextMenuPanel)).toHaveLength(1);
+      expect(component.find(OuiContextMenuPanel)).toHaveLength(1);
 
       expect(
-        takeMountedSnapshot(component.find(EuiContextMenuPanel))
+        takeMountedSnapshot(component.find(OuiContextMenuPanel))
       ).toMatchSnapshot();
     });
   });
@@ -221,7 +232,7 @@ describe('EuiNotificationEvent', () => {
       const onRead = jest.fn();
 
       const component = mount(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -243,7 +254,7 @@ describe('EuiNotificationEvent', () => {
       const onClickPrimaryAction = jest.fn();
 
       const component = mount(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"
@@ -267,7 +278,7 @@ describe('EuiNotificationEvent', () => {
       const onClickTitle = jest.fn();
 
       const component = mount(
-        <EuiNotificationEvent
+        <OuiNotificationEvent
           id="id"
           type="Alert"
           time="1 min ago"

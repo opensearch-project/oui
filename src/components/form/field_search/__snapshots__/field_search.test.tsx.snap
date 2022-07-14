@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFieldSearch is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldSearch is rendered 1`] = `
+<oui-form-control-layout
   clear="[object Object]"
   compressed="false"
   fullwidth="false"
   icon="search"
   isloading="false"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
       aria-label="aria-label"
-      class="euiFieldSearch euiFieldSearch-isClearable testClass1 testClass2"
+      class="ouiFieldSearch ouiFieldSearch-isClearable testClass1 testClass2"
       data-test-subj="test subject string"
       id="1"
       name="elastic"
@@ -19,124 +19,124 @@ exports[`EuiFieldSearch is rendered 1`] = `
       type="search"
       value="1"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldSearch props append is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldSearch props append is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   icon="search"
   isloading="false"
   prepend="Append"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldSearch euiFieldSearch--inGroup"
+      class="ouiFieldSearch ouiFieldSearch--inGroup"
       type="search"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldSearch props fullWidth is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldSearch props fullWidth is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="true"
   icon="search"
   isloading="false"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldSearch euiFieldSearch--fullWidth"
+      class="ouiFieldSearch ouiFieldSearch--fullWidth"
       type="search"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldSearch props isClearable is accepted 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldSearch props isClearable is accepted 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   icon="search"
   isloading="false"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldSearch"
+      class="ouiFieldSearch"
       type="search"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldSearch props isClearable is rendered when a value exists 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldSearch props isClearable is rendered when a value exists 1`] = `
+<oui-form-control-layout
   clear="[object Object]"
   compressed="false"
   fullwidth="false"
   icon="search"
   isloading="false"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldSearch euiFieldSearch-isClearable"
+      class="ouiFieldSearch ouiFieldSearch-isClearable"
       type="search"
       value="Hello"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldSearch props isInvalid is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldSearch props isInvalid is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   icon="search"
   isloading="false"
 >
-  <eui-validatable-control
+  <oui-validatable-control
     isinvalid="true"
   >
     <input
-      class="euiFieldSearch"
+      class="ouiFieldSearch"
       type="search"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldSearch props isLoading is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldSearch props isLoading is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   icon="search"
   isloading="true"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldSearch euiFieldSearch-isLoading"
+      class="ouiFieldSearch ouiFieldSearch-isLoading"
       type="search"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;
 
-exports[`EuiFieldSearch props prepend is rendered 1`] = `
-<eui-form-control-layout
+exports[`OuiFieldSearch props prepend is rendered 1`] = `
+<oui-form-control-layout
   compressed="false"
   fullwidth="false"
   icon="search"
   isloading="false"
   prepend="Prepend"
 >
-  <eui-validatable-control>
+  <oui-validatable-control>
     <input
-      class="euiFieldSearch euiFieldSearch--inGroup"
+      class="ouiFieldSearch ouiFieldSearch--inGroup"
       type="search"
     />
-  </eui-validatable-control>
-</eui-form-control-layout>
+  </oui-validatable-control>
+</oui-form-control-layout>
 `;

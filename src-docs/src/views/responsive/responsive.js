@@ -1,72 +1,83 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiCode,
-  EuiHideFor,
-  EuiShowFor,
-  EuiText,
-  EuiSpacer,
+  OuiCode,
+  OuiHideFor,
+  OuiShowFor,
+  OuiText,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiText>
-    <EuiHideFor sizes={'none'}>
+  <OuiText>
+    <OuiHideFor sizes={'none'}>
       <p>
-        Hiding from <EuiCode>{'"none"'}</EuiCode> of the screen sizes
+        Hiding from <OuiCode>{'"none"'}</OuiCode> of the screen sizes
       </p>
-    </EuiHideFor>
-    <EuiHideFor sizes={['xs']}>
+    </OuiHideFor>
+    <OuiHideFor sizes={['xs']}>
       <p>
-        Hiding from <EuiCode>xs</EuiCode> screens only
+        Hiding from <OuiCode>xs</OuiCode> screens only
       </p>
-    </EuiHideFor>
-    <EuiHideFor sizes={['xs', 's']}>
+    </OuiHideFor>
+    <OuiHideFor sizes={['xs', 's']}>
       <p>
-        Hiding from <EuiCode>xs, s</EuiCode> screens
+        Hiding from <OuiCode>xs, s</OuiCode> screens
       </p>
-    </EuiHideFor>
-    <EuiHideFor sizes={['xs', 's', 'm', 'l']}>
+    </OuiHideFor>
+    <OuiHideFor sizes={['xs', 's', 'm', 'l']}>
       <p>
-        Hiding from <EuiCode>xs, s, m, l</EuiCode> screens
+        Hiding from <OuiCode>xs, s, m, l</OuiCode> screens
       </p>
-    </EuiHideFor>
-    <EuiHideFor sizes={['xl']}>
+    </OuiHideFor>
+    <OuiHideFor sizes={['xl']}>
       <p>
-        Hiding from <EuiCode>xl</EuiCode> screens only
+        Hiding from <OuiCode>xl</OuiCode> screens only
       </p>
-    </EuiHideFor>
+    </OuiHideFor>
 
-    <EuiSpacer size="xxl" />
+    <OuiSpacer size="xxl" />
 
-    <EuiShowFor sizes={'all'}>
+    <OuiShowFor sizes={'all'}>
       <p>
-        Showing for <EuiCode>{'"all"'}</EuiCode> of the screen sizes
+        Showing for <OuiCode>{'"all"'}</OuiCode> of the screen sizes
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['xs']}>
+    </OuiShowFor>
+    <OuiShowFor sizes={['xs']}>
       <p>
-        Showing for <EuiCode>xs</EuiCode> screens only
+        Showing for <OuiCode>xs</OuiCode> screens only
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['xs', 's']}>
+    </OuiShowFor>
+    <OuiShowFor sizes={['xs', 's']}>
       <p>
-        Showing for <EuiCode>xs, s</EuiCode> screens
+        Showing for <OuiCode>xs, s</OuiCode> screens
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['xs', 's', 'm', 'l']}>
+    </OuiShowFor>
+    <OuiShowFor sizes={['xs', 's', 'm', 'l']}>
       <p>
-        Showing for <EuiCode>xs, s, m, l</EuiCode> screens
+        Showing for <OuiCode>xs, s, m, l</OuiCode> screens
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['xl']}>
+    </OuiShowFor>
+    <OuiShowFor sizes={['xl']}>
       <p>
-        Showing for <EuiCode>xl</EuiCode> screen only
+        Showing for <OuiCode>xl</OuiCode> screen only
       </p>
-    </EuiShowFor>
-    <EuiShowFor sizes={['m', 'l', 'xl']}>
+    </OuiShowFor>
+    <OuiShowFor sizes={['m', 'l', 'xl']}>
       <p>
-        Showing for <EuiCode>m, l, xl</EuiCode> screen only
+        Showing for <OuiCode>m, l, xl</OuiCode> screen only
       </p>
-    </EuiShowFor>
-  </EuiText>
+    </OuiShowFor>
+  </OuiText>
 );

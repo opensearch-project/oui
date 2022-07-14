@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiContextMenuItem is rendered 1`] = `
+exports[`OuiContextMenuItem is rendered 1`] = `
 <button
   aria-label="aria-label"
-  class="euiContextMenuItem testClass1 testClass2"
+  class="ouiContextMenuItem testClass1 testClass2"
   data-test-subj="test subject string"
   type="button"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     >
       Hello
     </span>
@@ -19,156 +19,156 @@ exports[`EuiContextMenuItem is rendered 1`] = `
 </button>
 `;
 
-exports[`EuiContextMenuItem props disabled is rendered 1`] = `
+exports[`OuiContextMenuItem props disabled is rendered 1`] = `
 <button
-  class="euiContextMenuItem euiContextMenuItem-isDisabled"
+  class="ouiContextMenuItem ouiContextMenuItem-isDisabled"
   disabled=""
   type="button"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
   </span>
 </button>
 `;
 
-exports[`EuiContextMenuItem props hasPanel is rendered 1`] = `
+exports[`OuiContextMenuItem props hasPanel is rendered 1`] = `
 <button
-  class="euiContextMenuItem"
+  class="ouiContextMenuItem"
   type="button"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
     <span
-      class="euiContextMenu__arrow"
-      data-euiicon-type="arrowRight"
+      class="ouiContextMenu__arrow"
+      data-ouiicon-type="arrowRight"
     />
   </span>
 </button>
 `;
 
-exports[`EuiContextMenuItem props href renders a link 1`] = `
+exports[`OuiContextMenuItem props href renders a link 1`] = `
 <a
   aria-label="aria-label"
-  class="euiContextMenuItem testClass1 testClass2"
+  class="ouiContextMenuItem testClass1 testClass2"
   data-test-subj="test subject string"
   href="url"
   rel="noreferrer"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
   </span>
 </a>
 `;
 
-exports[`EuiContextMenuItem props icon is rendered 1`] = `
+exports[`OuiContextMenuItem props icon is rendered 1`] = `
 <button
-  class="euiContextMenuItem"
+  class="ouiContextMenuItem"
   type="button"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenu__icon"
+      class="ouiContextMenu__icon"
     />
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
   </span>
 </button>
 `;
 
-exports[`EuiContextMenuItem props onClick renders a button 1`] = `
+exports[`OuiContextMenuItem props onClick renders a button 1`] = `
 <button
   aria-label="aria-label"
-  class="euiContextMenuItem testClass1 testClass2"
+  class="ouiContextMenuItem testClass1 testClass2"
   data-test-subj="test subject string"
   type="button"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
   </span>
 </button>
 `;
 
-exports[`EuiContextMenuItem props rel is rendered 1`] = `
+exports[`OuiContextMenuItem props rel is rendered 1`] = `
 <a
   aria-label="aria-label"
-  class="euiContextMenuItem testClass1 testClass2"
+  class="ouiContextMenuItem testClass1 testClass2"
   data-test-subj="test subject string"
   href="url"
   rel="help noreferrer"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
   </span>
 </a>
 `;
 
-exports[`EuiContextMenuItem props size m is rendered 1`] = `
+exports[`OuiContextMenuItem props size m is rendered 1`] = `
 <button
-  class="euiContextMenuItem"
+  class="ouiContextMenuItem"
   type="button"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
   </span>
 </button>
 `;
 
-exports[`EuiContextMenuItem props size s is rendered 1`] = `
+exports[`OuiContextMenuItem props size s is rendered 1`] = `
 <button
-  class="euiContextMenuItem euiContextMenuItem--small"
+  class="ouiContextMenuItem ouiContextMenuItem--small"
   type="button"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
   </span>
 </button>
 `;
 
-exports[`EuiContextMenuItem props target is rendered 1`] = `
+exports[`OuiContextMenuItem props target is rendered 1`] = `
 <a
   aria-label="aria-label"
-  class="euiContextMenuItem testClass1 testClass2"
+  class="ouiContextMenuItem testClass1 testClass2"
   data-test-subj="test subject string"
   href="url"
   rel="noopener noreferrer"
   target="_blank"
 >
   <span
-    class="euiContextMenu__itemLayout"
+    class="ouiContextMenu__itemLayout"
   >
     <span
-      class="euiContextMenuItem__text"
+      class="ouiContextMenuItem__text"
     />
   </span>
 </a>

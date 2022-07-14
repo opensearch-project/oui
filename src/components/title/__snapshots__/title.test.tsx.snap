@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTitle is rendered 1`] = `
+exports[`OuiTitle is rendered 1`] = `
 <h1
   aria-label="aria-label"
-  class="euiTitle euiTitle--medium testClass1 testClass2"
+  class="ouiTitle ouiTitle--medium testClass1 testClass2"
   data-test-subj="test subject string"
 >
   Title
 </h1>
 `;
 
-exports[`EuiTitle renders children element className 1`] = `
+exports[`OuiTitle renders children element className 1`] = `
 <h1
   aria-label="aria-label"
-  class="euiTitle euiTitle--medium testClass1 testClass2 test"
+  class="ouiTitle ouiTitle--medium testClass1 testClass2 test"
   data-test-subj="test subject string"
 >
   Title

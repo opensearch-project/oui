@@ -1,39 +1,50 @@
-@include euiPanel($selector: '.euiCommentEvent--regular');
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-.euiCommentEvent {
+@include ouiPanel($selector: '.ouiCommentEvent--regular');
+
+.ouiCommentEvent {
   overflow: hidden;
 }
 
-.euiCommentEvent__header {
-  line-height: $euiLineHeight;
+.ouiCommentEvent__header {
+  line-height: $ouiLineHeight;
   display: flex;
   align-items: center;
 }
 
-.euiCommentEvent__headerData {
+.ouiCommentEvent__headerData {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
 
   > div {
-    padding-right: $euiSizeXS;
+    padding-right: $ouiSizeXS;
   }
 }
 
-.euiCommentEvent__headerUsername {
-  font-weight: $euiFontWeightSemiBold;
+.ouiCommentEvent__headerUsername {
+  font-weight: $ouiFontWeightSemiBold;
 }
 
-.euiCommentEvent--regular {
-  @include euiSlightShadow;
-  border-radius: $euiBorderRadius;
-  border: $euiBorderThin;
+.ouiCommentEvent--regular {
+  @include ouiSlightShadow;
+  border-radius: $ouiBorderRadius;
+  border: $ouiBorderThin;
 
-  .euiCommentEvent__header {
-    min-height: $euiSizeXXL;
-    background-color: $euiColorLightestShade;
-    border-bottom: $euiBorderThin;
-    padding: $euiSizeXS $euiSizeS;
+  .ouiCommentEvent__header {
+    min-height: $ouiSizeXXL;
+    background-color: $ouiColorLightestShade;
+    border-bottom: $ouiBorderThin;
+    padding: $ouiSizeXS $ouiSizeS;
 
     /**
      * Fix for IE when using align-items:center in an item that has min-height
@@ -44,34 +55,34 @@
       &::after {
         content: '';
         // Calculates the minimum height based on full header's min-height minus the vertical padding
-        min-height: $euiSizeXXL - $euiSizeS;
+        min-height: $ouiSizeXXL - $ouiSizeS;
         font-size: 0;
         display: block;
       }
     }
   }
 
-  .euiCommentEvent__headerData {
+  .ouiCommentEvent__headerData {
     // Push the actions far right
     flex-grow: 1;
   }
 
-  .euiCommentEvent__body {
-    padding: $euiSizeS;
+  .ouiCommentEvent__body {
+    padding: $ouiSizeS;
   }
 }
 
-.euiCommentEvent--update {
-  .euiCommentEvent__header {
+.ouiCommentEvent--update {
+  .ouiCommentEvent__header {
     justify-content: flex-start;
-    padding: $euiSizeXS 0;
+    padding: $ouiSizeXS 0;
   }
 
-  .euiCommentEvent__headerData {
-    padding-right: $euiSizeS;
+  .ouiCommentEvent__headerData {
+    padding-right: $ouiSizeS;
   }
 
-  .euiCommentEvent__body {
-    padding-top: $euiSizeXS;
+  .ouiCommentEvent__body {
+    padding-top: $ouiSizeXS;
   }
 }

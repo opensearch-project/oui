@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import {
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiText,
+  OuiSpacer,
+  OuiCodeBlock,
+  OuiText,
   prettyDuration,
 } from '../../../../src/components';
 
@@ -57,19 +68,19 @@ export default function prettyDurationExample() {
     <Fragment>
       {examples.map(({ start, end, quickRanges, dateFormat }, idx) => (
         <div key={idx}>
-          <EuiCodeBlock paddingSize="s" isCopyable language="js">
+          <OuiCodeBlock paddingSize="s" isCopyable language="js">
             prettyDuration(&apos;{start}&apos;, &apos;{end}&apos;,{' '}
             {JSON.stringify(quickRanges)}, &apos;
             {dateFormat}&apos;)
-          </EuiCodeBlock>
+          </OuiCodeBlock>
 
-          <EuiSpacer size="s" />
+          <OuiSpacer size="s" />
 
-          <EuiText>
+          <OuiText>
             <p>{prettyDuration(start, end, quickRanges, dateFormat)}</p>
-          </EuiText>
+          </OuiText>
 
-          <EuiSpacer size="xl" />
+          <OuiSpacer size="xl" />
         </div>
       ))}
     </Fragment>

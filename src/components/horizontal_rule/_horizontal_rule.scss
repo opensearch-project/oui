@@ -1,21 +1,32 @@
-.euiHorizontalRule {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiHorizontalRule {
   border: none;
   height: 1px;
-  background-color: $euiBorderColor;
+  background-color: $ouiBorderColor;
   flex-shrink: 0; // Ensure when used in flex group, it retains its size
   flex-grow: 0; // Ensure when used in flex group, it retains its size
 
-  &.euiHorizontalRule--full {
+  &.ouiHorizontalRule--full {
     width: 100%;
   }
 
-  &.euiHorizontalRule--half {
+  &.ouiHorizontalRule--half {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  &.euiHorizontalRule--quarter {
+  &.ouiHorizontalRule--quarter {
     width: 25%;
     margin-left: auto;
     margin-right: auto;
@@ -23,16 +34,16 @@
 }
 
 $ruleMargins: (
-  marginXSmall: $euiSizeS,
-  marginSmall: $euiSizeM,
-  marginMedium: $euiSize,
-  marginLarge: $euiSizeL,
-  marginXLarge: $euiSizeXL,
-  marginXXLarge: $euiSizeXXL,
+  marginXSmall: $ouiSizeS,
+  marginSmall: $ouiSizeM,
+  marginMedium: $ouiSize,
+  marginLarge: $ouiSizeL,
+  marginXLarge: $ouiSizeXL,
+  marginXXLarge: $ouiSizeXXL,
 );
 
 @each $name, $size in $ruleMargins {
-  .euiHorizontalRule--#{$name} {
+  .ouiHorizontalRule--#{$name} {
     margin: $size 0;
   }
 }

@@ -1,5 +1,16 @@
-.euiPageBody {
-  @include euiPageRestrictWidth;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiPageBody {
+  @include ouiPageRestrictWidth;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -8,30 +19,30 @@
   max-width: 100%;
   min-width: 0;
   // Commenting out for posterity
-  // Adding z-index disallows fullscreens like EuiDataGrid to get above the headers
+  // Adding z-index disallows fullscreens like OuiDataGrid to get above the headers
   // z-index: 1; // Ensures any side nav emphasis gets rendered under shadow
 
-  // Assumes that in the default theme, the borders are touching the edge of the EuiPage so remove them.
-  &.euiPageBody--borderRadiusNone { // Nested for specificity
+  // Assumes that in the default theme, the borders are touching the edge of the OuiPage so remove them.
+  &.ouiPageBody--borderRadiusNone { // Nested for specificity
     border-top-width: 0;
     border-right-width: 0;
     border-bottom-width: 0;
   }
 }
 
-// Uses the same values as EuiPanel
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPageBody--#{$modifier} {
+// Uses the same values as OuiPanel
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPageBody--#{$modifier} {
     padding: $amount;
 
-    & > .euiPageHeader:not([class*='--padding']) {
+    & > .ouiPageHeader:not([class*='--padding']) {
       // Match the body's padding for spacing if it doesn't have it's own
       margin-bottom: $amount;
       // When the page header is actually inside of a panelled page body,
       // We want to add some extra separation between it and the content body
-      border-bottom: $euiBorderThin;
+      border-bottom: $ouiBorderThin;
 
-      &:not(.euiPageHeader--tabsAtBottom) {
+      &:not(.ouiPageHeader--tabsAtBottom) {
         padding-bottom: $amount;
       }
     }

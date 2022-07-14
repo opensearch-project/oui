@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,14 +34,14 @@ import { CommonProps, keysOf } from '../../common';
 
 const paddingSizeToClassNameMap = {
   none: null,
-  s: 'euiPageSideBar--paddingSmall',
-  m: 'euiPageSideBar--paddingMedium',
-  l: 'euiPageSideBar--paddingLarge',
+  s: 'ouiPageSideBar--paddingSmall',
+  m: 'ouiPageSideBar--paddingMedium',
+  l: 'ouiPageSideBar--paddingLarge',
 };
 
 export const PADDING_SIZES = keysOf(paddingSizeToClassNameMap);
 
-export interface EuiPageSideBarProps
+export interface OuiPageSideBarProps
   extends CommonProps,
     HTMLAttributes<HTMLDivElement> {
   /**
@@ -43,7 +54,7 @@ export interface EuiPageSideBarProps
   paddingSize?: typeof PADDING_SIZES[number];
 }
 
-export const EuiPageSideBar: FunctionComponent<EuiPageSideBarProps> = ({
+export const OuiPageSideBar: FunctionComponent<OuiPageSideBarProps> = ({
   children,
   className,
   sticky,
@@ -51,10 +62,10 @@ export const EuiPageSideBar: FunctionComponent<EuiPageSideBarProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiPageSideBar',
+    'ouiPageSideBar',
     paddingSizeToClassNameMap[paddingSize],
     {
-      'euiPageSideBar--sticky': sticky,
+      'ouiPageSideBar--sticky': sticky,
     },
     className
   );

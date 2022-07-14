@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, {
   Fragment,
   useCallback,
@@ -11,14 +22,14 @@ import React, {
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiLink,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPopover,
-  EuiPopoverTitle,
-  EuiButtonIcon,
-  EuiSpacer,
+  OuiDataGrid,
+  OuiLink,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiPopover,
+  OuiPopoverTitle,
+  OuiButtonIcon,
+  OuiSpacer,
 } from '../../../../src/components/';
 const DataContext = createContext();
 
@@ -34,15 +45,15 @@ for (let i = 1; i < 100; i++) {
       raw: name,
     },
     email: {
-      formatted: <EuiLink href="">{fake('{{internet.email}}')}</EuiLink>,
+      formatted: <OuiLink href="">{fake('{{internet.email}}')}</OuiLink>,
       raw: email,
     },
     location: (
       <Fragment>
         {`${fake('{{address.city}}')}, `}
-        <EuiLink href="https://google.com">
+        <OuiLink href="https://google.com">
           {fake('{{address.country}}')}
-        </EuiLink>
+        </OuiLink>
       </Fragment>
     ),
     date: fake('{{date.past}}'),
@@ -176,12 +187,12 @@ const trailingControlColumns = [
       const [isPopoverOpen, setIsPopoverOpen] = useState(false);
       return (
         <div>
-          <EuiPopover
+          <OuiPopover
             isOpen={isPopoverOpen}
             panelPaddingSize="s"
             anchorPosition="upCenter"
             button={
-              <EuiButtonIcon
+              <OuiButtonIcon
                 aria-label="show actions"
                 iconType="boxesHorizontal"
                 color="text"
@@ -189,41 +200,41 @@ const trailingControlColumns = [
               />
             }
             closePopover={() => setIsPopoverOpen(false)}>
-            <EuiPopoverTitle>Actions</EuiPopoverTitle>
+            <OuiPopoverTitle>Actions</OuiPopoverTitle>
             <div style={{ width: 150 }}>
               <button onClick={() => {}}>
-                <EuiFlexGroup
+                <OuiFlexGroup
                   alignItems="center"
                   component="span"
                   gutterSize="s">
-                  <EuiFlexItem grow={false}>
-                    <EuiButtonIcon
+                  <OuiFlexItem grow={false}>
+                    <OuiButtonIcon
                       aria-label="Pin selected items"
                       iconType="pin"
                       color="text"
                     />
-                  </EuiFlexItem>
-                  <EuiFlexItem>Pin</EuiFlexItem>
-                </EuiFlexGroup>
+                  </OuiFlexItem>
+                  <OuiFlexItem>Pin</OuiFlexItem>
+                </OuiFlexGroup>
               </button>
-              <EuiSpacer size="s" />
+              <OuiSpacer size="s" />
               <button onClick={() => {}}>
-                <EuiFlexGroup
+                <OuiFlexGroup
                   alignItems="center"
                   component="span"
                   gutterSize="s">
-                  <EuiFlexItem grow={false}>
-                    <EuiButtonIcon
+                  <OuiFlexItem grow={false}>
+                    <OuiButtonIcon
                       aria-label="Delete selected items"
                       iconType="trash"
                       color="text"
                     />
-                  </EuiFlexItem>
-                  <EuiFlexItem>Delete</EuiFlexItem>
-                </EuiFlexGroup>
+                  </OuiFlexItem>
+                  <OuiFlexItem>Delete</OuiFlexItem>
+                </OuiFlexGroup>
               </button>
             </div>
-          </EuiPopover>
+          </OuiPopover>
         </div>
       );
     },
@@ -299,7 +310,7 @@ export default () => {
 
   return (
     <DataContext.Provider value={raw_data}>
-      <EuiDataGrid
+      <OuiDataGrid
         aria-label="Data grid demo"
         columns={columns}
         columnVisibility={{ visibleColumns, setVisibleColumns }}

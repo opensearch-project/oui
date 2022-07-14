@@ -1,0 +1,43 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiRangeLevels {
+  .ouiRangeLevel {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &--compressed {
+    .ouiRangeLevel {
+      height: $ouiRangeTrackCompressedHeight;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .ouiRangeThumb--hasTicks {
+      top: 0;
+    }
+  }
+}

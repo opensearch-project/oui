@@ -1,6 +1,17 @@
-.euiBeacon {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiBeacon {
   position: relative;
-  background-color: $euiColorVis0;
+  background-color: $ouiColorVis0;
   border-radius: 50%;
 
   &:before,
@@ -13,19 +24,19 @@
     top: 0;
     background-color: transparent;
     border-radius: 50%;
-    box-shadow: 0 0 1px 1px $euiColorVis0;
+    box-shadow: 0 0 1px 1px $ouiColorVis0;
   }
 
   &:before {
-    animation: euiBeaconPulseLarge 2.5s infinite ease-out;
+    animation: ouiBeaconPulseLarge 2.5s infinite ease-out;
   }
 
   &:after {
-    animation: euiBeaconPulseSmall 2.5s infinite ease-out .25s;
+    animation: ouiBeaconPulseSmall 2.5s infinite ease-out .25s;
   }
 }
 
-@keyframes euiBeaconPulseLarge {
+@keyframes ouiBeaconPulseLarge {
   0% {
     transform: scale(.1);
     opacity: 1;
@@ -41,7 +52,7 @@
   }
 }
 
-@keyframes euiBeaconPulseSmall {
+@keyframes ouiBeaconPulseSmall {
   0% {
     transform: scale(.1);
     opacity: 1;

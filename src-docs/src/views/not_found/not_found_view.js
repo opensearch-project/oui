@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { Link } from 'react-router-dom';
-import { EuiText } from '../../../../src/components/text';
+import { OuiText } from '../../../../src/components/text';
 
 export const NotFoundView = () => (
   <div className="guideContentPage">
     <div className="guideContentPage__content">
-      <EuiText>
+      <OuiText>
         <h1 className="guideTitle">404</h1>
 
         <p className="guideText">
@@ -21,7 +32,7 @@ export const NotFoundView = () => (
           }
           ?
         </p>
-      </EuiText>
+      </OuiText>
     </div>
   </div>
 );

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,12 +30,12 @@
 
 import classNames from 'classnames';
 import React, { FunctionComponent, useRef } from 'react';
-import { EuiButtonDisplay } from '../button';
-import { EuiButtonGroupOptionProps, EuiButtonGroupProps } from './button_group';
+import { OuiButtonDisplay } from '../button';
+import { OuiButtonGroupOptionProps, OuiButtonGroupProps } from './button_group';
 import { useInnerText } from '../../inner_text';
 import { htmlIdGenerator } from '../../../services';
 
-type Props = EuiButtonGroupOptionProps & {
+type Props = OuiButtonGroupOptionProps & {
   /**
    * Element to display based on single or multi
    */
@@ -42,24 +53,24 @@ type Props = EuiButtonGroupOptionProps & {
    */
   value?: string;
   /**
-   * Inherit from EuiButtonGroup
+   * Inherit from OuiButtonGroup
    */
-  color: EuiButtonGroupProps['color'];
+  color: OuiButtonGroupProps['color'];
   /**
-   * Inherit from EuiButtonGroup
+   * Inherit from OuiButtonGroup
    */
-  size: EuiButtonGroupProps['buttonSize'];
+  size: OuiButtonGroupProps['buttonSize'];
   /**
-   * Inherit from EuiButtonGroup
+   * Inherit from OuiButtonGroup
    */
-  isIconOnly: EuiButtonGroupProps['isIconOnly'];
+  isIconOnly: OuiButtonGroupProps['isIconOnly'];
   /**
-   * Inherit from EuiButtonGroup
+   * Inherit from OuiButtonGroup
    */
-  onChange: EuiButtonGroupProps['onChange'];
+  onChange: OuiButtonGroupProps['onChange'];
 };
 
-export const EuiButtonGroupButton: FunctionComponent<Props> = ({
+export const OuiButtonGroupButton: FunctionComponent<Props> = ({
   className,
   id,
   isDisabled,
@@ -89,7 +100,7 @@ export const EuiButtonGroupButton: FunctionComponent<Props> = ({
     singleInput = (
       <input
         id={newId}
-        className="euiScreenReaderOnly"
+        className="ouiScreenReaderOnly"
         name={name}
         checked={isSelected}
         disabled={isDisabled}
@@ -112,8 +123,8 @@ export const EuiButtonGroupButton: FunctionComponent<Props> = ({
 
   const buttonClasses = classNames(
     {
-      'euiButtonGroupButton-isSelected': isSelected,
-      'euiButtonGroupButton-isIconOnly': isIconOnly,
+      'ouiButtonGroupButton-isSelected': isSelected,
+      'ouiButtonGroupButton-isIconOnly': isIconOnly,
     },
     className
   );
@@ -121,13 +132,13 @@ export const EuiButtonGroupButton: FunctionComponent<Props> = ({
   /**
    * Because the selected buttons also increase their text weight to 'bold',
    * we don't want the whole button size to shift when selected, so we determine
-   * the base width of the button via the `euiTextShift()` method in SASS.
+   * the base width of the button via the `ouiTextShift()` method in SASS.
    */
   const [buttonTextRef, innerText] = useInnerText();
 
   return (
-    <EuiButtonDisplay
-      baseClassName="euiButtonGroupButton"
+    <OuiButtonDisplay
+      baseClassName="ouiButtonGroupButton"
       className={buttonClasses}
       element={el}
       fill={size !== 'compressed' && isSelected}
@@ -135,8 +146,8 @@ export const EuiButtonGroupButton: FunctionComponent<Props> = ({
       size={size === 'compressed' ? 's' : size}
       textProps={{
         className: isIconOnly
-          ? 'euiScreenReaderOnly'
-          : 'euiButtonGroupButton__textShift',
+          ? 'ouiScreenReaderOnly'
+          : 'ouiButtonGroupButton__textShift',
         ref: buttonTextRef,
         'data-text': innerText,
         title: innerText,
@@ -145,6 +156,6 @@ export const EuiButtonGroupButton: FunctionComponent<Props> = ({
       {...rest}>
       {singleInput}
       {label}
-    </EuiButtonDisplay>
+    </OuiButtonDisplay>
   );
 };

@@ -1,25 +1,36 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiBottomBar, EuiSpacer, EuiText } from '../../../../src/components';
+import { OuiBottomBar, OuiSpacer, OuiText } from '../../../../src/components';
 
 export default () => {
   return (
     <>
-      <EuiText>
+      <OuiText>
         <p>
           When scrolling past this example block, the{' '}
-          <strong>EuiBottomBar</strong> will stick to the bottom of the browser
+          <strong>OuiBottomBar</strong> will stick to the bottom of the browser
           window (with a 10px offset), but keeps it within the bounds of its
           parent.
         </p>
-      </EuiText>
-      <EuiSpacer size="xl" />
-      <EuiSpacer size="xl" />
-      <EuiBottomBar position="sticky" bottom={10}>
-        <EuiText color="ghost" textAlign="center">
+      </OuiText>
+      <OuiSpacer size="xl" />
+      <OuiSpacer size="xl" />
+      <OuiBottomBar position="sticky" bottom={10}>
+        <OuiText color="ghost" textAlign="center">
           <p>Scroll to see!</p>
-        </EuiText>
-      </EuiBottomBar>
+        </OuiText>
+      </OuiBottomBar>
     </>
   );
 };

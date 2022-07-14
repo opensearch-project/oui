@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,23 +32,23 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiProgress, COLORS, SIZES } from './progress';
+import { OuiProgress, COLORS, SIZES } from './progress';
 
-describe('EuiProgress', () => {
+describe('OuiProgress', () => {
   test('is rendered', () => {
-    const component = render(<EuiProgress {...requiredProps} />);
+    const component = render(<OuiProgress {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('has max', () => {
-    const component = render(<EuiProgress max={100} {...requiredProps} />);
+    const component = render(<OuiProgress max={100} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('has value', () => {
-    const component = render(<EuiProgress value={100} {...requiredProps} />);
+    const component = render(<OuiProgress value={100} {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -45,7 +56,7 @@ describe('EuiProgress', () => {
   test('is determinate', () => {
     const val = 50;
     const component = render(
-      <EuiProgress max={val ? 100 : undefined} value={val} {...requiredProps} />
+      <OuiProgress max={val ? 100 : undefined} value={val} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -54,7 +65,7 @@ describe('EuiProgress', () => {
   test('is indeterminate', () => {
     const val = undefined;
     const component = render(
-      <EuiProgress max={val ? 100 : undefined} value={val} {...requiredProps} />
+      <OuiProgress max={val ? 100 : undefined} value={val} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -62,7 +73,7 @@ describe('EuiProgress', () => {
 
   test('has valueText and label', () => {
     const component = render(
-      <EuiProgress
+      <OuiProgress
         valueText="150"
         label="Label"
         value={50}
@@ -76,7 +87,7 @@ describe('EuiProgress', () => {
 
   test('valueText is true', () => {
     const component = render(
-      <EuiProgress valueText={true} value={50} max={100} {...requiredProps} />
+      <OuiProgress valueText={true} value={50} max={100} {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -84,7 +95,7 @@ describe('EuiProgress', () => {
 
   test('has labelProps', () => {
     const component = render(
-      <EuiProgress
+      <OuiProgress
         max={100}
         value={50}
         labelProps={{ title: 'Custom title' }}
@@ -99,7 +110,7 @@ describe('EuiProgress', () => {
   describe('color', () => {
     [...COLORS, '#885522'].forEach((color) => {
       test(`${color} is rendered`, () => {
-        const component = render(<EuiProgress color={color} />);
+        const component = render(<OuiProgress color={color} />);
 
         expect(component).toMatchSnapshot();
       });
@@ -109,7 +120,7 @@ describe('EuiProgress', () => {
   describe('size', () => {
     SIZES.forEach((size) => {
       test(`${size} is rendered`, () => {
-        const component = render(<EuiProgress size={size} />);
+        const component = render(<OuiProgress size={size} />);
 
         expect(component).toMatchSnapshot();
       });

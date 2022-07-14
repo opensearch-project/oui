@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiColorPicker,
-  EuiColorStops,
-  EuiSpacer,
+  OuiColorPicker,
+  OuiColorStops,
+  OuiSpacer,
 } from '../../../../src/components';
 import { DisplayToggles } from '../form_controls/display_toggles';
 
@@ -20,15 +31,15 @@ export default () => {
     <React.Fragment>
       {/* DisplayToggles wrapper for Docs only */}
       <DisplayToggles canLoading={false} canPrepend={true} canAppend={true}>
-        <EuiColorPicker color={color} onChange={setColor} />
+        <OuiColorPicker color={color} onChange={setColor} />
       </DisplayToggles>
-      <EuiSpacer />
+      <OuiSpacer />
       {/* DisplayToggles wrapper for Docs only */}
       <DisplayToggles
         canLoading={false}
         canInvalid={false}
         canCompressed={false}>
-        <EuiColorStops
+        <OuiColorStops
           label="Kitchen sink"
           colorStops={colorStops}
           onChange={setColorStops}

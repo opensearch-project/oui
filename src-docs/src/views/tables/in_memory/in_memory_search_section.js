@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
@@ -5,18 +16,18 @@ import { renderToHtml } from '../../../services';
 import { Table } from './in_memory_search';
 import { Link } from 'react-router-dom';
 
-import { EuiInMemoryTable } from '../../../../../src/components/basic_table/in_memory_table';
+import { OuiInMemoryTable } from '../../../../../src/components/basic_table/in_memory_table';
 import {
   Criteria,
   CriteriaWithPagination,
 } from '!!prop-loader!../../../../../src/components/basic_table/basic_table';
 import { Pagination } from '!!prop-loader!../../../../../src/components/basic_table/pagination_bar';
 import {
-  EuiTableFieldDataColumnType,
-  EuiTableComputedColumnType,
-  EuiTableActionsColumnType,
-  EuiTableSelectionType,
-  EuiTableSortingType,
+  OuiTableFieldDataColumnType,
+  OuiTableComputedColumnType,
+  OuiTableActionsColumnType,
+  OuiTableSelectionType,
+  OuiTableSortingType,
 } from '!!prop-loader!../../../../../src/components/basic_table/table_types';
 import { CustomItemAction } from '!!prop-loader!../../../../../src/components/basic_table/action_types';
 import {
@@ -45,7 +56,7 @@ export const searchSection = {
   text: (
     <div>
       <p>
-        The example shows how to configure <strong>EuiInMemoryTable </strong>
+        The example shows how to configure <strong>OuiInMemoryTable </strong>
         to display a search bar by passing the search prop. You can read more
         about the search bar&apos;s properties and its syntax{' '}
         <Link to="/forms/search-bar">
@@ -56,15 +67,15 @@ export const searchSection = {
     </div>
   ),
   props: {
-    EuiInMemoryTable,
+    OuiInMemoryTable,
     Criteria,
     CriteriaWithPagination,
     Pagination,
-    EuiTableSortingType,
-    EuiTableSelectionType,
-    EuiTableFieldDataColumnType,
-    EuiTableComputedColumnType,
-    EuiTableActionsColumnType,
+    OuiTableSortingType,
+    OuiTableSelectionType,
+    OuiTableFieldDataColumnType,
+    OuiTableComputedColumnType,
+    OuiTableActionsColumnType,
     DefaultItemAction,
     CustomItemAction,
     Search,

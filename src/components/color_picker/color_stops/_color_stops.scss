@@ -1,57 +1,68 @@
-.euiColorStops:not(.euiColorStops-isDisabled) {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiColorStops:not(.ouiColorStops-isDisabled) {
   &:focus {
-    outline: 2px solid $euiFocusRingColor;
+    outline: 2px solid $ouiFocusRingColor;
   }
 }
 
-.euiColorStops__addContainer {
+.ouiColorStops__addContainer {
   display: block;
   position: absolute;
   left: 0;
   right: 0;
   top: 50%;
-  height: $euiRangeThumbHeight;
-  margin-top: $euiRangeThumbHeight * -.5;
+  height: $ouiRangeThumbHeight;
+  margin-top: $ouiRangeThumbHeight * -.5;
 
-  &:hover:not(.euiColorStops__addContainer-isDisabled) {
+  &:hover:not(.ouiColorStops__addContainer-isDisabled) {
     cursor: pointer;
 
-    .euiColorStops__addTarget {
+    .ouiColorStops__addTarget {
       opacity: .7;
     }
   }
 }
 
-.euiColorStops__addTarget {
-  @include euiCustomControl($type: 'round');
-  @include euiRangeThumbStyle;
+.ouiColorStops__addTarget {
+  @include ouiCustomControl($type: 'round');
+  @include ouiRangeThumbStyle;
   position: absolute;
   top: 0;
-  height: $euiRangeThumbHeight;
-  width: $euiRangeThumbHeight;
-  background-color: $euiColorLightestShade;
+  height: $ouiRangeThumbHeight;
+  width: $ouiRangeThumbHeight;
+  background-color: $ouiColorLightestShade;
   pointer-events: none;
   opacity: 0;
-  transition: opacity $euiAnimSpeedFast;
+  transition: opacity $ouiAnimSpeedFast;
 }
 
-.euiColorStop {
-  width: $euiColorPickerWidth;
+.ouiColorStop {
+  width: $ouiColorPickerWidth;
 }
 
-.euiColorStopPopover.euiPopover {
+.ouiColorStopPopover.ouiPopover {
   position: absolute;
   top: 50%;
-  width: $euiRangeThumbWidth;
-  height: $euiRangeThumbHeight;
-  margin-top: $euiRangeThumbHeight * -.5;
+  width: $ouiRangeThumbWidth;
+  height: $ouiRangeThumbHeight;
+  margin-top: $ouiRangeThumbHeight * -.5;
 }
 
-.euiColorStopPopover-hasFocus {
+.ouiColorStopPopover-hasFocus {
   z-index: 1;
 }
 
-.euiColorStopPopover__anchor {
+.ouiColorStopPopover__anchor {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -64,39 +75,39 @@
     position: absolute;
     left: 0;
     top: 0;
-    height: $euiRangeThumbHeight;
-    width: $euiRangeThumbHeight;
-    border-radius: $euiRangeThumbHeight;
-    background: $euiColorEmptyShade;
+    height: $ouiRangeThumbHeight;
+    width: $ouiRangeThumbHeight;
+    border-radius: $ouiRangeThumbHeight;
+    background: $ouiColorEmptyShade;
   }
 }
 
-.euiColorStopThumb.euiRangeThumb:not(:disabled) {
+.ouiColorStopThumb.ouiRangeThumb:not(:disabled) {
   // sass-lint:disable-block no-color-literals, indentation
   top: 0;
   margin-top: 0;
   pointer-events: auto;
   cursor: grab;
-  border: solid ($euiSizeXS - 1px) $euiColorEmptyShade;
+  border: solid ($ouiSizeXS - 1px) $ouiColorEmptyShade;
   box-shadow:
-    0 0 0 1px $euiColorMediumShade,
-    0 2px 2px -1px rgba($euiShadowColor, .2),
-    0 1px 5px -2px rgba($euiShadowColor, .2);
+    0 0 0 1px $ouiColorMediumShade,
+    0 2px 2px -1px rgba($ouiShadowColor, .2),
+    0 1px 5px -2px rgba($ouiShadowColor, .2);
 
   &:active {
     cursor: grabbing;
   }
 }
 
-.euiColorStopPopover-isLoadingPanel {
+.ouiColorStopPopover-isLoadingPanel {
   // sass-lint:disable-block no-important
-  visibility: hidden !important; // Overrides a stateful class on EuiPopover -> EuiPanel
+  visibility: hidden !important; // Overrides a stateful class on OuiPopover -> OuiPanel
 }
 
-.euiColorStops.euiColorStops-isDragging:not(.euiColorStops-isDisabled):not(.euiColorStops-isReadOnly) {
+.ouiColorStops.ouiColorStops-isDragging:not(.ouiColorStops-isDisabled):not(.ouiColorStops-isReadOnly) {
   cursor: grabbing;
 }
 
-.euiColorStops__highlight {
-  color: $euiRangeTrackColor;
+.ouiColorStops__highlight {
+  color: $ouiRangeTrackColor;
 }

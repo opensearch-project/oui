@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 const path = require('path');
 const util = require('util');
 const fs = require('fs');
@@ -46,9 +57,9 @@ async function compileScssFiles(
         const { name } = path.parse(inputFilename);
         const outputFilenames = await compileScssFile(
           inputFilename,
-          path.join(destinationDirectory, `eui_${name}.css`),
-          path.join(destinationDirectory, `eui_${name}.json`),
-          path.join(destinationDirectory, `eui_${name}.json.d.ts`),
+          path.join(destinationDirectory, `oui_${name}.css`),
+          path.join(destinationDirectory, `oui_${name}.json`),
+          path.join(destinationDirectory, `oui_${name}.json.d.ts`),
           packageName
         );
 
@@ -127,12 +138,12 @@ async function compileScssFile(
 }
 
 if (require.main === module) {
-  const [nodeBin, scriptName, euiPackageName] = process.argv;
+  const [nodeBin, scriptName, ouiPackageName] = process.argv;
 
   if (process.argv.length < 3) {
-    console.log(chalk`{bold Usage:} ${nodeBin} ${scriptName} eui-package-name`);
+    console.log(chalk`{bold Usage:} ${nodeBin} ${scriptName} oui-package-name`);
     process.exit(1);
   }
 
-  compileScssFiles(path.join('src', 'theme_*.scss'), 'dist', euiPackageName);
+  compileScssFiles(path.join('src', 'theme_*.scss'), 'dist', ouiPackageName);
 }

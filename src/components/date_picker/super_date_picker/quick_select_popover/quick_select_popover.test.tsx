@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,13 +32,13 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import {
-  EuiQuickSelectPopover,
-  EuiQuickSelectPopoverProps,
+  OuiQuickSelectPopover,
+  OuiQuickSelectPopoverProps,
 } from './quick_select_popover';
 
 const noop = () => {};
 
-const defaultProps: EuiQuickSelectPopoverProps = {
+const defaultProps: OuiQuickSelectPopoverProps = {
   applyTime: noop,
   applyRefreshInterval: noop,
   start: 'now-15m',
@@ -41,16 +52,16 @@ const defaultProps: EuiQuickSelectPopoverProps = {
   isAutoRefreshOnly: false,
 };
 
-describe('EuiQuickSelectPopover', () => {
+describe('OuiQuickSelectPopover', () => {
   test('is rendered', () => {
-    const component = shallow(<EuiQuickSelectPopover {...defaultProps} />);
+    const component = shallow(<OuiQuickSelectPopover {...defaultProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('isAutoRefreshOnly', () => {
     const component = shallow(
-      <EuiQuickSelectPopover {...defaultProps} isAutoRefreshOnly={true} />
+      <OuiQuickSelectPopover {...defaultProps} isAutoRefreshOnly={true} />
     );
 
     expect(component).toMatchSnapshot();

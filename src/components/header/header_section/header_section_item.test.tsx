@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +32,20 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiHeaderSectionItem } from './header_section_item';
+import { OuiHeaderSectionItem } from './header_section_item';
 
-describe('EuiHeaderSectionItem', () => {
+describe('OuiHeaderSectionItem', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeaderSectionItem {...requiredProps} />);
+    const component = render(<OuiHeaderSectionItem {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders children', () => {
     const component = render(
-      <EuiHeaderSectionItem>
+      <OuiHeaderSectionItem>
         <span>Call me Ishmael.</span>
-      </EuiHeaderSectionItem>
+      </OuiHeaderSectionItem>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,13 +53,13 @@ describe('EuiHeaderSectionItem', () => {
 
   describe('border', () => {
     test('defaults to left', () => {
-      const component = render(<EuiHeaderSectionItem />);
+      const component = render(<OuiHeaderSectionItem />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('renders right', () => {
-      const component = render(<EuiHeaderSectionItem border="right" />);
+      const component = render(<OuiHeaderSectionItem border="right" />);
 
       expect(component).toMatchSnapshot();
     });

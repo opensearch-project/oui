@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -5,8 +16,8 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiCode } from '../../../../src/components';
-import { useEuiTextDiffProp } from './props';
+import { OuiCode } from '../../../../src/components';
+import { useOuiTextDiffProp } from './props';
 import TextDiff from './text_diff';
 const textDiffSource = require('!!raw-loader!./text_diff');
 const textDiffHtml = renderToHtml(TextDiff);
@@ -32,29 +43,29 @@ export const TextDiffExample = {
       text: (
         <>
           <p>
-            The hook, <strong>useEuiTextDiff</strong>, generates a set of
+            The hook, <strong>useOuiTextDiff</strong>, generates a set of
             changes between two strings. It returns both React elements for
             displaying the diff and an object representing the identified
-            changes. The <EuiCode>timeout</EuiCode> prop is used to set how many
+            changes. The <OuiCode>timeout</OuiCode> prop is used to set how many
             seconds any diff&apos;s exploration phase may take. The default
             value is 0.1, a value of 0 disables the timeout and lets diff run
             until completion. The higher the timeout, the more detailed the
             comparison.
           </p>
           <p>
-            <EuiCode language="tsx">
+            <OuiCode language="tsx">
               {
-                'const [rendered, textDiffObject] = useEuiTextDiff({ beforeText, afterText })'
+                'const [rendered, textDiffObject] = useOuiTextDiff({ beforeText, afterText })'
               }
-            </EuiCode>
+            </OuiCode>
           </p>
         </>
       ),
       demo: <TextDiff />,
-      props: { useEuiTextDiffProp },
-      snippet: `const [rendered, textDiffObject] = useEuiTextDiff({ beforeText, afterText })
+      props: { useOuiTextDiffProp },
+      snippet: `const [rendered, textDiffObject] = useOuiTextDiff({ beforeText, afterText })
 
-<EuiText><p>{rendered}</p></EuiText>`,
+<OuiText><p>{rendered}</p></OuiText>`,
     },
     {
       title: 'Custom rendered elements',
@@ -72,36 +83,36 @@ export const TextDiffExample = {
         <>
           <p>
             By default, the hook will wrap deletions with{' '}
-            <EuiCode>{'<del>'}</EuiCode> and insertions with{' '}
-            <EuiCode>{'<ins>'}</EuiCode> elements. You can replace these
-            elements with the <EuiCode>deleteComponent</EuiCode> and{' '}
-            <EuiCode>insertComponent</EuiCode>
+            <OuiCode>{'<del>'}</OuiCode> and insertions with{' '}
+            <OuiCode>{'<ins>'}</OuiCode> elements. You can replace these
+            elements with the <OuiCode>deleteComponent</OuiCode> and{' '}
+            <OuiCode>insertComponent</OuiCode>
             props respectively.
           </p>
           <p>
-            Also, since <EuiCode>rendered</EuiCode> is simple html string, you
+            Also, since <OuiCode>rendered</OuiCode> is simple html string, you
             can wrap it in any contextual element like{' '}
             <Link to="/display/text">
-              <strong>EuiText</strong>
+              <strong>OuiText</strong>
             </Link>{' '}
             or{' '}
             <Link to="/display/code">
-              <strong>EuiCodeBlock</strong>
+              <strong>OuiCodeBlock</strong>
             </Link>
             .
           </p>
         </>
       ),
       demo: <TextDiffCustomComponents />,
-      snippet: `const [rendered] = useEuiTextDiff({
+      snippet: `const [rendered] = useOuiTextDiff({
   beforeText,
   afterText,
   insertComponent: 'strong',
 });
 
-<EuiCodeBlock fontSize="m" paddingSize="m">
+<OuiCodeBlock fontSize="m" paddingSize="m">
   {rendered}
-</EuiCodeBlock>`,
+</OuiCodeBlock>`,
     },
   ],
 };

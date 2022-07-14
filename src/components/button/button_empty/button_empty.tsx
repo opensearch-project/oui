@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -29,13 +40,13 @@ import {
 } from '../../common';
 import { getSecureRelForTarget } from '../../../services';
 import {
-  EuiButtonContent,
-  EuiButtonContentProps,
-  EuiButtonContentType,
+  OuiButtonContent,
+  OuiButtonContentProps,
+  OuiButtonContentType,
 } from '../button_content';
 import { validateHref } from '../../../services/security/href_validator';
 
-export type EuiButtonEmptyColor =
+export type OuiButtonEmptyColor =
   | 'primary'
   | 'danger'
   | 'text'
@@ -43,47 +54,47 @@ export type EuiButtonEmptyColor =
   | 'success'
   | 'warning';
 
-const colorToClassNameMap: { [color in EuiButtonEmptyColor]: string } = {
-  primary: 'euiButtonEmpty--primary',
-  danger: 'euiButtonEmpty--danger',
-  text: 'euiButtonEmpty--text',
-  ghost: 'euiButtonEmpty--ghost',
-  success: 'euiButtonEmpty--success',
-  warning: 'euiButtonEmpty--warning',
+const colorToClassNameMap: { [color in OuiButtonEmptyColor]: string } = {
+  primary: 'ouiButtonEmpty--primary',
+  danger: 'ouiButtonEmpty--danger',
+  text: 'ouiButtonEmpty--text',
+  ghost: 'ouiButtonEmpty--ghost',
+  success: 'ouiButtonEmpty--success',
+  warning: 'ouiButtonEmpty--warning',
 };
 
 export const COLORS = keysOf(colorToClassNameMap);
 
 const sizeToClassNameMap = {
-  xs: 'euiButtonEmpty--xSmall',
-  s: 'euiButtonEmpty--small',
-  l: 'euiButtonEmpty--large',
+  xs: 'ouiButtonEmpty--xSmall',
+  s: 'ouiButtonEmpty--small',
+  l: 'ouiButtonEmpty--large',
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
 
-export type EuiButtonEmptySizes = keyof typeof sizeToClassNameMap;
+export type OuiButtonEmptySizes = keyof typeof sizeToClassNameMap;
 
 const flushTypeToClassNameMap = {
-  left: 'euiButtonEmpty--flushLeft',
-  right: 'euiButtonEmpty--flushRight',
-  both: 'euiButtonEmpty--flushBoth',
+  left: 'ouiButtonEmpty--flushLeft',
+  right: 'ouiButtonEmpty--flushRight',
+  both: 'ouiButtonEmpty--flushBoth',
 };
 
 export const FLUSH_TYPES = keysOf(flushTypeToClassNameMap);
 
 /**
- * Extends EuiButtonContentProps which provides
+ * Extends OuiButtonContentProps which provides
  * `iconType`, `iconSide`, and `textProps`
  */
-export interface CommonEuiButtonEmptyProps
-  extends EuiButtonContentProps,
+export interface CommonOuiButtonEmptyProps
+  extends OuiButtonContentProps,
     CommonProps {
   /**
    * Any of our named colors
    */
-  color?: EuiButtonEmptyColor;
-  size?: EuiButtonEmptySizes;
+  color?: OuiButtonEmptyColor;
+  size?: OuiButtonEmptySizes;
   /**
    * Ensure the text of the button sits flush to the left, right, or both sides of its container
    */
@@ -109,19 +120,19 @@ export interface CommonEuiButtonEmptyProps
   /**
    * Object of props passed to the <span/> wrapping the button's content
    */
-  contentProps?: EuiButtonContentType;
+  contentProps?: OuiButtonContentType;
 }
 
-type EuiButtonEmptyPropsForAnchor = PropsForAnchor<CommonEuiButtonEmptyProps>;
+type OuiButtonEmptyPropsForAnchor = PropsForAnchor<CommonOuiButtonEmptyProps>;
 
-type EuiButtonEmptyPropsForButton = PropsForButton<CommonEuiButtonEmptyProps>;
+type OuiButtonEmptyPropsForButton = PropsForButton<CommonOuiButtonEmptyProps>;
 
-export type EuiButtonEmptyProps = ExclusiveUnion<
-  EuiButtonEmptyPropsForAnchor,
-  EuiButtonEmptyPropsForButton
+export type OuiButtonEmptyProps = ExclusiveUnion<
+  OuiButtonEmptyPropsForAnchor,
+  OuiButtonEmptyPropsForButton
 >;
 
-export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
+export const OuiButtonEmpty: FunctionComponent<OuiButtonEmptyProps> = ({
   children,
   className,
   iconType,
@@ -150,30 +161,30 @@ export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
   const buttonIsDisabled = isLoading || isDisabled || disabled;
 
   const classes = classNames(
-    'euiButtonEmpty',
+    'ouiButtonEmpty',
     colorToClassNameMap[color],
     size ? sizeToClassNameMap[size] : null,
     flush ? flushTypeToClassNameMap[flush] : null,
     {
-      'euiButtonEmpty-isDisabled': buttonIsDisabled,
+      'ouiButtonEmpty-isDisabled': buttonIsDisabled,
     },
     className
   );
 
   const contentClassNames = classNames(
-    'euiButtonEmpty__content',
+    'ouiButtonEmpty__content',
     contentProps && contentProps.className
   );
 
   const textClassNames = classNames(
-    'euiButtonEmpty__text',
+    'ouiButtonEmpty__text',
     textProps && textProps.className
   );
 
   const iconSize = size === 'xs' ? 's' : 'm';
 
   const innerNode = (
-    <EuiButtonContent
+    <OuiButtonContent
       isLoading={isLoading}
       iconType={iconType}
       iconSide={iconSide}
@@ -183,7 +194,7 @@ export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
       // className has to come last to override contentProps.className
       className={contentClassNames}>
       {children}
-    </EuiButtonContent>
+    </OuiButtonContent>
   );
 
   // <a> elements don't respect the `disabled` attribute. So if we're disabled, we'll just pretend
@@ -198,7 +209,7 @@ export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
         target={target}
         rel={secureRel}
         ref={buttonRef as Ref<HTMLAnchorElement>}
-        {...(rest as EuiButtonEmptyPropsForAnchor)}>
+        {...(rest as OuiButtonEmptyPropsForAnchor)}>
         {innerNode}
       </a>
     );
@@ -211,7 +222,7 @@ export const EuiButtonEmpty: FunctionComponent<EuiButtonEmptyProps> = ({
       type={type}
       ref={buttonRef as Ref<HTMLButtonElement>}
       aria-pressed={isSelected}
-      {...(rest as EuiButtonEmptyPropsForButton)}>
+      {...(rest as OuiButtonEmptyPropsForButton)}>
       {innerNode}
     </button>
   );

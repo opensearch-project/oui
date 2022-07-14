@@ -1,16 +1,27 @@
-.euiFilterButton {
-  background-color: $euiFormBackgroundColor;
-  height: $euiFormControlHeight;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFilterButton {
+  background-color: $ouiFormBackgroundColor;
+  height: $ouiFormControlHeight;
   width: auto;
-  border: 1px solid $euiFormBorderColor;
+  border: 1px solid $ouiFormBorderColor;
   border-right: none;
-  font-size: $euiFontSizeS;
+  font-size: $ouiFontSizeS;
 
   &:disabled {
-    color: $euiButtonColorDisabledText;
+    color: $ouiButtonColorDisabledText;
     pointer-events: none;
 
-    .euiFilterButton__notification {
+    .ouiFilterButton__notification {
       opacity: .5;
     }
   }
@@ -20,42 +31,42 @@
     // Remove underline from whole button so notifications don't get the underline
     text-decoration: none;
 
-    .euiFilterButton__textShift {
+    .ouiFilterButton__textShift {
       // Add put it only on the actual text part
       text-decoration: underline;
     }
   }
 }
 
-.euiFilterButton-hasActiveFilters {
-  font-weight: $euiFontWeightBold;
+.ouiFilterButton-hasActiveFilters {
+  font-weight: $ouiFontWeightBold;
 }
 
-.euiFilterButton--hasIcon .euiButtonEmpty__content {
+.ouiFilterButton--hasIcon .ouiButtonEmpty__content {
   justify-content: space-between;
 }
 
-.euiFilterButton--withNext + .euiFilterButton {
-  margin-left: $euiSizeXS * -1;
+.ouiFilterButton--withNext + .ouiFilterButton {
+  margin-left: $ouiSizeXS * -1;
   border-left: none;
 }
 
-.euiFilterButton-isSelected {
-  background-color: $euiColorLightestShade;
+.ouiFilterButton-isSelected {
+  background-color: $ouiColorLightestShade;
 }
 
-.euiFilterButton__text-hasNotification {
+.ouiFilterButton__text-hasNotification {
   display: flex;
   align-items: center;
 }
 
-.euiFilterButton__notification {
-  margin-left: $euiSizeS;
+.ouiFilterButton__notification {
+  margin-left: $ouiSizeS;
   vertical-align: text-bottom;
 }
 
-.euiFilterButton__textShift {
-  @include euiTextShift;
-  @include euiTextTruncate;
-  min-width: $euiSize * 3;
+.ouiFilterButton__textShift {
+  @include ouiTextShift;
+  @include ouiTextTruncate;
+  min-width: $ouiSize * 3;
 }

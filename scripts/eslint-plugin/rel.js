@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 module.exports = {
   meta: {
     type: 'problem',
@@ -9,7 +20,7 @@ module.exports = {
     return {
       /**
        * Props of any component is defined in ArrowFunctions
-       * Example: const EuiButton = ({ foo, bar }) => {};
+       * Example: const OuiButton = ({ foo, bar }) => {};
        */
       ArrowFunctionExpression(node) {
         // Functional component contains only single argument

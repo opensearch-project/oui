@@ -2,10 +2,10 @@
 
 exports[`PaginationBar render - custom page size options 1`] = `
 <div>
-  <EuiSpacer
+  <OuiSpacer
     size="m"
   />
-  <EuiTablePagination
+  <OuiTablePagination
     activePage={0}
     itemsPerPage={5}
     itemsPerPageOptions={
@@ -24,10 +24,10 @@ exports[`PaginationBar render - custom page size options 1`] = `
 
 exports[`PaginationBar render - hiding per page options 1`] = `
 <div>
-  <EuiSpacer
+  <OuiSpacer
     size="m"
   />
-  <EuiTablePagination
+  <OuiTablePagination
     activePage={0}
     hidePerPageOptions={true}
     itemsPerPage={5}
@@ -47,10 +47,10 @@ exports[`PaginationBar render - hiding per page options 1`] = `
 
 exports[`PaginationBar render 1`] = `
 <div>
-  <EuiSpacer
+  <OuiSpacer
     size="m"
   />
-  <EuiTablePagination
+  <OuiTablePagination
     activePage={0}
     itemsPerPage={5}
     itemsPerPageOptions={

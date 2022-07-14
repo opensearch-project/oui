@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiEmptyPrompt, EuiButton } from '../../../../src/components/';
+import { OuiEmptyPrompt, OuiButton } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   iconValidator,
 } from '../../services/playground';
 
 export default () => {
-  const docgenInfo = Array.isArray(EuiEmptyPrompt.__docgenInfo)
-    ? EuiEmptyPrompt.__docgenInfo[0]
-    : EuiEmptyPrompt.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiEmptyPrompt.__docgenInfo)
+    ? OuiEmptyPrompt.__docgenInfo[0]
+    : OuiEmptyPrompt.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.title = {
@@ -42,15 +53,15 @@ export default () => {
 
   return {
     config: {
-      componentName: 'EuiEmptyPrompt',
+      componentName: 'OuiEmptyPrompt',
       props: propsToUse,
       scope: {
-        EuiEmptyPrompt,
-        EuiButton,
+        OuiEmptyPrompt,
+        OuiButton,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiEmptyPrompt', 'EuiButton'],
+        '@opensearch-project/oui': {
+          named: ['OuiEmptyPrompt', 'OuiButton'],
         },
       },
     },

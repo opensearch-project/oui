@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../components';
 import { Chart, Partition } from '@elastic/charts';
 
 import {
-  EUI_CHARTS_THEME_DARK,
-  EUI_CHARTS_THEME_LIGHT,
+  OUI_CHARTS_THEME_DARK,
+  OUI_CHARTS_THEME_LIGHT,
 } from '../../../../src/themes/charts/themes';
 import {
-  EuiFlexGrid,
-  EuiFlexItem,
-  EuiTitle,
-  EuiSpacer,
+  OuiFlexGrid,
+  OuiFlexItem,
+  OuiTitle,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -20,19 +31,19 @@ export default () => {
    * Setup theme based on current light/dark theme
    */
   const isDarkTheme = themeContext.theme.includes('dark');
-  const euiChartTheme = isDarkTheme
-    ? EUI_CHARTS_THEME_DARK
-    : EUI_CHARTS_THEME_LIGHT;
-  const euiPartitionConfig = euiChartTheme.partition;
+  const ouiChartTheme = isDarkTheme
+    ? OUI_CHARTS_THEME_DARK
+    : OUI_CHARTS_THEME_LIGHT;
+  const ouiPartitionConfig = ouiChartTheme.partition;
 
   return (
     <div>
-      <EuiFlexGrid columns={2}>
-        <EuiFlexItem>
-          <EuiTitle className="eui-textCenter" size="xs">
+      <OuiFlexGrid columns={2}>
+        <OuiFlexItem>
+          <OuiTitle className="oui-textCenter" size="xs">
             <h3>Year to date PR count by status</h3>
-          </EuiTitle>
-          <EuiSpacer />
+          </OuiTitle>
+          <OuiSpacer />
           <Chart size={{ height: 200 }}>
             <Partition
               id="pieByPR"
@@ -52,22 +63,22 @@ export default () => {
                   groupByRollup: (d) => d.status,
                   shape: {
                     fillColor: (d) =>
-                      euiChartTheme.theme.colors.vizColors[d.sortIndex],
+                      ouiChartTheme.theme.colors.vizColors[d.sortIndex],
                   },
                 },
               ]}
               config={{
-                ...euiPartitionConfig,
+                ...ouiPartitionConfig,
                 clockwiseSectors: false,
               }}
             />
           </Chart>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiTitle className="eui-textCenter" size="xs">
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiTitle className="oui-textCenter" size="xs">
             <h3>Code languages</h3>
-          </EuiTitle>
-          <EuiSpacer />
+          </OuiTitle>
+          <OuiSpacer />
           <Chart size={{ height: 200 }}>
             <Partition
               id="donutByLanguage"
@@ -92,19 +103,19 @@ export default () => {
                   groupByRollup: (d) => d.language,
                   shape: {
                     fillColor: (d) =>
-                      euiChartTheme.theme.colors.vizColors[d.sortIndex],
+                      ouiChartTheme.theme.colors.vizColors[d.sortIndex],
                   },
                 },
               ]}
               config={{
-                ...euiPartitionConfig,
+                ...ouiPartitionConfig,
                 emptySizeRatio: 0.4,
                 clockwiseSectors: false,
               }}
             />
           </Chart>
-        </EuiFlexItem>
-      </EuiFlexGrid>
+        </OuiFlexItem>
+      </OuiFlexGrid>
     </div>
   );
 };

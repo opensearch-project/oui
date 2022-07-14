@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,12 +28,12 @@
  * under the License.
  */
 import React from 'react';
-import { EuiDataGridColumn, EuiDataGridSorting } from './data_grid_types';
-import { EuiI18n } from '../i18n';
-import { EuiListGroupItemProps } from '../list_group';
+import { OuiDataGridColumn, OuiDataGridSorting } from './data_grid_types';
+import { OuiI18n } from '../i18n';
+import { OuiListGroupItemProps } from '../list_group';
 import {
-  EuiDataGridSchema,
-  EuiDataGridSchemaDetector,
+  OuiDataGridSchema,
+  OuiDataGridSchemaDetector,
   getDetailsForSchema,
 } from './data_grid_schema';
 import {
@@ -31,13 +42,13 @@ import {
 } from './column_sorting_draggable';
 
 export function getColumnActions(
-  column: EuiDataGridColumn,
-  columns: EuiDataGridColumn[],
-  schema: EuiDataGridSchema,
-  schemaDetectors: EuiDataGridSchemaDetector[],
+  column: OuiDataGridColumn,
+  columns: OuiDataGridColumn[],
+  schema: OuiDataGridSchema,
+  schemaDetectors: OuiDataGridSchemaDetector[],
   setVisibleColumns: (columnId: string[]) => void,
   setIsPopoverOpen: (value: boolean) => void,
-  sorting: EuiDataGridSorting | undefined,
+  sorting: OuiDataGridSorting | undefined,
   switchColumnPos: (colFromId: string, colToId: string) => void
 ) {
   if (column.actions === false) {
@@ -71,7 +82,7 @@ export function getColumnActions(
           direction: direction,
         },
       });
-      sorting.onSort(newColumns as EuiDataGridSorting['columns']);
+      sorting.onSort(newColumns as OuiDataGridSorting['columns']);
     } else {
       // add new sort
       const newColumns = [
@@ -81,7 +92,7 @@ export function getColumnActions(
           direction: direction,
         },
       ];
-      sorting.onSort(newColumns as EuiDataGridSorting['columns']);
+      sorting.onSort(newColumns as OuiDataGridSorting['columns']);
     }
   };
   const onClickHideColumn = () =>
@@ -111,17 +122,17 @@ export function getColumnActions(
     }
   };
 
-  const result: EuiListGroupItemProps[] = [];
+  const result: OuiListGroupItemProps[] = [];
   if (column.actions?.showHide !== false) {
     const option = {
       label: (
-        <EuiI18n token="euiColumnActions.hideColumn" default="Hide column" />
+        <OuiI18n token="ouiColumnActions.hideColumn" default="Hide column" />
       ),
       onClick: onClickHideColumn,
       iconType: 'eyeClosed',
       size: 'xs',
       color: 'text',
-    } as EuiListGroupItemProps;
+    } as OuiListGroupItemProps;
     if (typeof column.actions?.showHide === 'object') {
       result.push({ ...option, ...column.actions.showHide });
     } else {
@@ -139,8 +150,8 @@ export function getColumnActions(
       : defaultSortAscLabel;
     const option = {
       label: (
-        <EuiI18n
-          token="euiColumnActions.sort"
+        <OuiI18n
+          token="ouiColumnActions.sort"
           default="Sort {schemaLabel}"
           values={{ schemaLabel: label }}
         />
@@ -149,12 +160,12 @@ export function getColumnActions(
       isDisabled: column.isSortable === false,
       className:
         sortingIdx >= 0 && sorting.columns[sortingIdx].direction === 'asc'
-          ? 'euiDataGridHeader__action--selected'
+          ? 'ouiDataGridHeader__action--selected'
           : '',
       iconType: 'sortUp',
       size: 'xs',
       color: 'text',
-    } as EuiListGroupItemProps;
+    } as OuiListGroupItemProps;
     if (typeof column.actions?.showSortAsc === 'object') {
       result.push({ ...option, ...column.actions.showSortAsc });
     } else {
@@ -168,8 +179,8 @@ export function getColumnActions(
       : defaultSortDescLabel;
     const option = {
       label: (
-        <EuiI18n
-          token="euiColumnActions.sort"
+        <OuiI18n
+          token="ouiColumnActions.sort"
           default="Sort {schemaLabel}"
           values={{ schemaLabel: label }}
         />
@@ -178,12 +189,12 @@ export function getColumnActions(
       isDisabled: column.isSortable === false,
       className:
         sortingIdx >= 0 && sorting.columns[sortingIdx].direction === 'desc'
-          ? 'euiDataGridHeader__action--selected'
+          ? 'ouiDataGridHeader__action--selected'
           : '',
       iconType: 'sortDown',
       size: 'xs',
       color: 'text',
-    } as EuiListGroupItemProps;
+    } as OuiListGroupItemProps;
     if (typeof column.actions?.showSortDesc === 'object') {
       result.push({ ...option, ...column.actions.showSortDesc });
     } else {
@@ -193,13 +204,13 @@ export function getColumnActions(
 
   if (column.actions?.showMoveLeft !== false) {
     const option = {
-      label: <EuiI18n token="euiColumnActions.moveLeft" default="Move left" />,
+      label: <OuiI18n token="ouiColumnActions.moveLeft" default="Move left" />,
       iconType: 'sortLeft',
       size: 'xs',
       color: 'text',
       onClick: onClickMoveLeft,
       isDisabled: colIdx === 0,
-    } as EuiListGroupItemProps;
+    } as OuiListGroupItemProps;
     if (typeof column.actions?.showMoveLeft === 'object') {
       result.push({ ...option, ...column.actions.showMoveLeft });
     } else {
@@ -210,14 +221,14 @@ export function getColumnActions(
   if (column.actions?.showMoveRight !== false) {
     const option = {
       label: (
-        <EuiI18n token="euiColumnActions.moveRight" default="Move right" />
+        <OuiI18n token="ouiColumnActions.moveRight" default="Move right" />
       ),
       iconType: 'sortRight',
       size: 'xs',
       color: 'text',
       onClick: onClickMoveRight,
       isDisabled: colIdx === columns.length - 1,
-    } as EuiListGroupItemProps;
+    } as OuiListGroupItemProps;
     if (typeof column.actions?.showMoveRight === 'object') {
       result.push({ ...option, ...column.actions.showMoveRight });
     } else {
@@ -228,7 +239,7 @@ export function getColumnActions(
     ? [...result, ...column.actions?.additional]
     : result;
 
-  //wrap EuiListGroupItem onClick function to close the popover and prevet bubbling up
+  //wrap OuiListGroupItem onClick function to close the popover and prevet bubbling up
 
   return allActions.map((action) => {
     return {
@@ -243,5 +254,5 @@ export function getColumnActions(
         },
       },
     };
-  }) as EuiListGroupItemProps[];
+  }) as OuiListGroupItemProps[];
 }

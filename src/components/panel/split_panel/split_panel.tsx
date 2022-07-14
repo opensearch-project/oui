@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,25 +30,25 @@
 
 import React, { FunctionComponent, ReactNode, HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import { EuiPanel, _EuiPanelProps } from '../panel';
-import { EuiBreakpointSize } from '../../../services/breakpoint';
+import { OuiPanel, _OuiPanelProps } from '../panel';
+import { OuiBreakpointSize } from '../../../services/breakpoint';
 import { useIsWithinBreakpoints } from '../../../services/hooks';
 
-export type _EuiSplitPanelInnerProps = HTMLAttributes<HTMLDivElement> &
-  Omit<_EuiPanelProps, 'hasShadow' | 'hasBorder' | 'borderRadius'>;
+export type _OuiSplitPanelInnerProps = HTMLAttributes<HTMLDivElement> &
+  Omit<_OuiPanelProps, 'hasShadow' | 'hasBorder' | 'borderRadius'>;
 
 /**
- * Consumed via `EuiSplitPanel.Inner`.
- * Extends most `EuiPanelProps`.
+ * Consumed via `OuiSplitPanel.Inner`.
+ * Extends most `OuiPanelProps`.
  */
-export const _EuiSplitPanelInner: FunctionComponent<_EuiSplitPanelInnerProps> = ({
+export const _OuiSplitPanelInner: FunctionComponent<_OuiSplitPanelInnerProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiSplitPanel__inner', className);
+  const classes = classNames('ouiSplitPanel__inner', className);
 
-  const panelProps: _EuiPanelProps = {
+  const panelProps: _OuiPanelProps = {
     hasShadow: false,
     color: 'transparent',
     borderRadius: 'none',
@@ -45,19 +56,19 @@ export const _EuiSplitPanelInner: FunctionComponent<_EuiSplitPanelInnerProps> = 
   };
 
   return (
-    <EuiPanel
+    <OuiPanel
       element="div"
       className={classes}
       {...panelProps}
-      {...(rest as _EuiPanelProps)}>
+      {...(rest as _OuiPanelProps)}>
       {children}
-    </EuiPanel>
+    </OuiPanel>
   );
 };
 
-export type _EuiSplitPanelOuterProps = HTMLAttributes<HTMLDivElement> & {
+export type _OuiSplitPanelOuterProps = HTMLAttributes<HTMLDivElement> & {
   /**
-   * Any number of _EuiSplitPanelInner components
+   * Any number of _OuiSplitPanelInner components
    */
   children?: ReactNode;
   /**
@@ -68,14 +79,14 @@ export type _EuiSplitPanelOuterProps = HTMLAttributes<HTMLDivElement> & {
    * Stacks row display on small screens.
    * Remove completely with `false` or provide your own list of breakpoint sizes to stack on.
    */
-  responsive?: false | EuiBreakpointSize[];
-} & Omit<_EuiPanelProps, 'paddingSize'>;
+  responsive?: false | OuiBreakpointSize[];
+} & Omit<_OuiPanelProps, 'paddingSize'>;
 
 /**
- * Consumed via `EuiSplitPanel.Outer`.
- * Extends most `EuiPanelProps`.
+ * Consumed via `OuiSplitPanel.Outer`.
+ * Extends most `OuiPanelProps`.
  */
-export const _EuiSplitPanelOuter: FunctionComponent<_EuiSplitPanelOuterProps> = ({
+export const _OuiSplitPanelOuter: FunctionComponent<_OuiSplitPanelOuterProps> = ({
   children,
   className,
   direction = 'column',
@@ -83,31 +94,31 @@ export const _EuiSplitPanelOuter: FunctionComponent<_EuiSplitPanelOuterProps> = 
   ...rest
 }) => {
   const isResponsive = useIsWithinBreakpoints(
-    responsive as EuiBreakpointSize[],
+    responsive as OuiBreakpointSize[],
     !!responsive
   );
 
   const classes = classNames(
-    'euiSplitPanel',
+    'ouiSplitPanel',
     {
-      'euiSplitPanel--row': direction === 'row',
-      'euiSplitPanel-isResponsive': isResponsive,
+      'ouiSplitPanel--row': direction === 'row',
+      'ouiSplitPanel-isResponsive': isResponsive,
     },
     className
   );
 
   return (
-    <EuiPanel
+    <OuiPanel
       paddingSize="none"
       grow={false}
       className={classes}
-      {...(rest as _EuiPanelProps)}>
+      {...(rest as _OuiPanelProps)}>
       {children}
-    </EuiPanel>
+    </OuiPanel>
   );
 };
 
-export const EuiSplitPanel = {
-  Outer: _EuiSplitPanelOuter,
-  Inner: _EuiSplitPanelInner,
+export const OuiSplitPanel = {
+  Outer: _OuiSplitPanelOuter,
+  Inner: _OuiSplitPanelInner,
 };

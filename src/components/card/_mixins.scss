@@ -1,11 +1,22 @@
-@mixin euiCardBottomNodePosition {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@mixin ouiCardBottomNodePosition {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: $euiCardBottomNodeHeight !important;  // sass-lint:disable-line no-important -- To override .euiButtonEmpty--xSmall
+  height: $ouiCardBottomNodeHeight !important;  // sass-lint:disable-line no-important -- To override .ouiButtonEmpty--xSmall
   width: 100%;
   overflow: hidden;
   // Subtract 1px from border radius since it sits inside a border-radius
-  border-bottom-left-radius: $euiBorderRadius - 1px;
-  border-bottom-right-radius: $euiBorderRadius - 1px;
+  border-bottom-left-radius: $ouiBorderRadius - 1px;
+  border-bottom-right-radius: $ouiBorderRadius - 1px;
 }

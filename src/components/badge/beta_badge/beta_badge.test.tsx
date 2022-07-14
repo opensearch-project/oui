@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,11 +32,11 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiBetaBadge, COLORS, SIZES } from './beta_badge';
+import { OuiBetaBadge, COLORS, SIZES } from './beta_badge';
 
-describe('EuiBetaBadge', () => {
+describe('OuiBetaBadge', () => {
   test('is rendered', () => {
-    const component = render(<EuiBetaBadge label="Beta" {...requiredProps} />);
+    const component = render(<OuiBetaBadge label="Beta" {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -34,7 +45,7 @@ describe('EuiBetaBadge', () => {
     describe('color', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = render(<EuiBetaBadge label="Beta" color={color} />);
+          const component = render(<OuiBetaBadge label="Beta" color={color} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -44,7 +55,7 @@ describe('EuiBetaBadge', () => {
     describe('size', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(<EuiBetaBadge label="Beta" size={size} />);
+          const component = render(<OuiBetaBadge label="Beta" size={size} />);
 
           expect(component).toMatchSnapshot();
         });

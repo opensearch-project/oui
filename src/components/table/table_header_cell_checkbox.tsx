@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,28 +34,28 @@ import { CommonProps } from '../common';
 
 import { resolveWidthAsStyle } from './utils';
 
-export type EuiTableHeaderCellCheckboxScope =
+export type OuiTableHeaderCellCheckboxScope =
   | 'col'
   | 'row'
   | 'colgroup'
   | 'rowgroup';
 
-export interface EuiTableHeaderCellCheckboxProps {
+export interface OuiTableHeaderCellCheckboxProps {
   width?: string | number;
-  scope?: EuiTableHeaderCellCheckboxScope;
+  scope?: OuiTableHeaderCellCheckboxScope;
 }
 
-export const EuiTableHeaderCellCheckbox: FunctionComponent<
+export const OuiTableHeaderCellCheckbox: FunctionComponent<
   CommonProps &
     ThHTMLAttributes<HTMLTableHeaderCellElement> &
-    EuiTableHeaderCellCheckboxProps
+    OuiTableHeaderCellCheckboxProps
 > = ({ children, className, scope = 'col', style, width, ...rest }) => {
-  const classes = classNames('euiTableHeaderCellCheckbox', className);
+  const classes = classNames('ouiTableHeaderCellCheckbox', className);
   const styleObj = resolveWidthAsStyle(style, width);
 
   return (
     <th className={classes} scope={scope} style={styleObj} {...rest}>
-      <div className="euiTableCellContent">{children}</div>
+      <div className="ouiTableCellContent">{children}</div>
     </th>
   );
 };

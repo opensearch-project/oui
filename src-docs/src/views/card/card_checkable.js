@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiCheckableCard,
-  EuiSpacer,
-  EuiRadioGroup,
-  EuiTitle,
-  EuiFormFieldset,
+  OuiCheckableCard,
+  OuiSpacer,
+  OuiRadioGroup,
+  OuiTitle,
+  OuiFormFieldset,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -32,15 +43,15 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFormFieldset
+      <OuiFormFieldset
         legend={{
           children: (
-            <EuiTitle size="xs">
+            <OuiTitle size="xs">
               <span>Checkable card radio group with legend</span>
-            </EuiTitle>
+            </OuiTitle>
           ),
         }}>
-        <EuiCheckableCard
+        <OuiCheckableCard
           id={htmlIdGenerator()()}
           label="Option one"
           name={radioName}
@@ -49,26 +60,26 @@ export default () => {
           onChange={() => setRadio('radio1')}
         />
 
-        <EuiSpacer size="m" />
+        <OuiSpacer size="m" />
 
-        <EuiCheckableCard
+        <OuiCheckableCard
           id={htmlIdGenerator()()}
           label="Option two"
           name={radioName}
           value="radio2"
           checked={radio === 'radio2'}
           onChange={() => setRadio('radio2')}>
-          <EuiRadioGroup
+          <OuiRadioGroup
             options={nestedRadios}
             idSelected={nestedRadio}
             onChange={(nestedRadio) => setNestedRadio(nestedRadio)}
             disabled={radio !== 'radio2'}
           />
-        </EuiCheckableCard>
+        </OuiCheckableCard>
 
-        <EuiSpacer size="m" />
+        <OuiSpacer size="m" />
 
-        <EuiCheckableCard
+        <OuiCheckableCard
           id={htmlIdGenerator()()}
           label="Option three (disabled)"
           name={radioName}
@@ -77,7 +88,7 @@ export default () => {
           onChange={() => setRadio('radio3')}
           disabled
         />
-      </EuiFormFieldset>
+      </OuiFormFieldset>
     </Fragment>
   );
 };

@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { FunctionComponent, useState, ReactNode } from 'react';
 import classNames from 'classnames';
 import {
-  EuiTabs,
-  EuiTab,
-  EuiTabProps,
+  OuiTabs,
+  OuiTab,
+  OuiTabProps,
 } from '../../../../../src/components/tabs';
-import { EuiErrorBoundary } from '../../../../../src/components/error_boundary';
-import { EuiHorizontalRule } from '../../../../../src/components/horizontal_rule';
+import { OuiErrorBoundary } from '../../../../../src/components/error_boundary';
+import { OuiHorizontalRule } from '../../../../../src/components/horizontal_rule';
 import { GuideSectionSnippets } from './guide_section_snippets';
 import { GuideSectionExampleCode } from './guide_section_code';
 import { GuideSectionPropsTable } from './guide_section_props_table';
-import { EuiFlexGroup, EuiFlexItem } from '../../../../../src/components/flex';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../../src/components/flex';
 import { ExclusiveUnion } from '../../../../../src/components/common';
 
 export type GuideSectionExampleTabCodeType = GuideSectionExampleCode;
@@ -19,7 +30,7 @@ export type GuideSectionExampleTabPropsTableType = {
   props: any;
 };
 
-export type GuideSectionExampleTabType = EuiTabProps &
+export type GuideSectionExampleTabType = OuiTabProps &
   ExclusiveUnion<
     GuideSectionExampleTabCodeType,
     ExclusiveUnion<
@@ -57,12 +68,12 @@ export const GuideSectionExampleTabs: FunctionComponent<GuideSectionExampleTabsP
 
   const renderTabs = () => {
     return (
-      <EuiTabs size="s" display="condensed">
+      <OuiTabs size="s" display="condensed">
         {tabs.map((tab, index) => {
           const { displayName, code, name, props, snippets, ...rest } = tab;
 
           return (
-            <EuiTab
+            <OuiTab
               {...rest}
               className="guideSectionTabs__tab"
               name={name}
@@ -70,10 +81,10 @@ export const GuideSectionExampleTabs: FunctionComponent<GuideSectionExampleTabsP
               isSelected={name === selectedTabId}
               key={index}>
               {tab.displayName}
-            </EuiTab>
+            </OuiTab>
           );
         })}
-      </EuiTabs>
+      </OuiTabs>
     );
   };
 
@@ -85,46 +96,46 @@ export const GuideSectionExampleTabs: FunctionComponent<GuideSectionExampleTabsP
     // SNIPPET
     if (selectedTab && selectedTab.snippets) {
       return (
-        <EuiErrorBoundary>
-          <EuiHorizontalRule margin="none" />
+        <OuiErrorBoundary>
+          <OuiHorizontalRule margin="none" />
           <GuideSectionSnippets snippets={selectedTab.snippets} />
-        </EuiErrorBoundary>
+        </OuiErrorBoundary>
       );
       // SOURCE CODE BLOCK
     } else if (selectedTab && selectedTab.code) {
       return (
-        <EuiErrorBoundary>
-          <EuiHorizontalRule margin="none" />
+        <OuiErrorBoundary>
+          <OuiHorizontalRule margin="none" />
           <GuideSectionExampleCode code={selectedTab.code} />
-        </EuiErrorBoundary>
+        </OuiErrorBoundary>
       );
       // PROPS TABLE
     } else if (selectedTab && selectedTab.props) {
       const components = Object.keys(selectedTab.props);
 
       return components.map((component) => (
-        <EuiErrorBoundary key={component}>
+        <OuiErrorBoundary key={component}>
           <GuideSectionPropsTable
             key={component}
             componentName={component}
             component={selectedTab.props[component]}
           />
-        </EuiErrorBoundary>
+        </OuiErrorBoundary>
       ));
     }
   };
 
   return (
     <>
-      <EuiFlexGroup
+      <OuiFlexGroup
         className={tabClasses}
         responsive={false}
         wrap
         gutterSize="none"
         alignItems="center">
-        <EuiFlexItem>{renderTabs()}</EuiFlexItem>
-        <EuiFlexItem grow={false}>{rightSideControl}</EuiFlexItem>
-      </EuiFlexGroup>
+        <OuiFlexItem>{renderTabs()}</OuiFlexItem>
+        <OuiFlexItem grow={false}>{rightSideControl}</OuiFlexItem>
+      </OuiFlexGroup>
       {selectedTabId && renderContent()}
     </>
   );

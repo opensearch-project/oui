@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiBreadcrumbs,
-  EuiSpacer,
-  EuiTitle,
+  OuiBreadcrumbs,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 
 export default () => {
@@ -46,24 +57,24 @@ export default () => {
 
   return (
     <div>
-      <EuiTitle size="xs">
+      <OuiTitle size="xs">
         <span>Truncation on the entire set</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiBreadcrumbs
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiBreadcrumbs
         truncate={true}
         breadcrumbs={breadcrumbs}
-        aria-label="An example of EuiBreadcrumbs with truncate prop"
+        aria-label="An example of OuiBreadcrumbs with truncate prop"
       />
-      <EuiSpacer />
-      <EuiTitle size="xs">
+      <OuiSpacer />
+      <OuiTitle size="xs">
         <span>Truncation on a single item</span>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiBreadcrumbs
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiBreadcrumbs
         truncate={false}
         breadcrumbs={breadcrumbs}
-        aria-label="An example of EuiBreadcrumbs without truncate prop"
+        aria-label="An example of OuiBreadcrumbs without truncate prop"
       />
     </div>
   );

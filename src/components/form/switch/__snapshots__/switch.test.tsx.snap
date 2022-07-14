@@ -1,39 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSwitch assigns automatically generated ID to label 1`] = `
+exports[`OuiSwitch assigns automatically generated ID to label 1`] = `
 <div
-  class="euiSwitch"
+  class="ouiSwitch"
 >
   <button
     aria-checked="false"
     aria-labelledby="generated-id"
-    class="euiSwitch__button"
+    class="ouiSwitch__button"
     id="generated-id"
     role="switch"
     type="button"
   >
     <span
-      class="euiSwitch__body"
+      class="ouiSwitch__body"
     >
       <span
-        class="euiSwitch__thumb"
+        class="ouiSwitch__thumb"
       />
       <span
-        class="euiSwitch__track"
+        class="ouiSwitch__track"
       >
         <span
-          class="euiSwitch__icon"
-          data-euiicon-type="cross"
+          class="ouiSwitch__icon"
+          data-ouiicon-type="cross"
         />
         <span
-          class="euiSwitch__icon euiSwitch__icon--checked"
-          data-euiicon-type="check"
+          class="ouiSwitch__icon ouiSwitch__icon--checked"
+          data-ouiicon-type="check"
         />
       </span>
     </span>
   </button>
   <span
-    class="euiSwitch__label"
+    class="ouiSwitch__label"
     id="generated-id"
   >
     Label
@@ -41,42 +41,42 @@ exports[`EuiSwitch assigns automatically generated ID to label 1`] = `
 </div>
 `;
 
-exports[`EuiSwitch is rendered 1`] = `
+exports[`OuiSwitch is rendered 1`] = `
 <div
-  class="euiSwitch testClass1 testClass2"
+  class="ouiSwitch testClass1 testClass2"
 >
   <button
     aria-checked="false"
     aria-label="aria-label"
     aria-labelledby="generated-id"
-    class="euiSwitch__button"
+    class="ouiSwitch__button"
     data-test-subj="test subject string"
     id="test"
     role="switch"
     type="button"
   >
     <span
-      class="euiSwitch__body"
+      class="ouiSwitch__body"
     >
       <span
-        class="euiSwitch__thumb"
+        class="ouiSwitch__thumb"
       />
       <span
-        class="euiSwitch__track"
+        class="ouiSwitch__track"
       >
         <span
-          class="euiSwitch__icon"
-          data-euiicon-type="cross"
+          class="ouiSwitch__icon"
+          data-ouiicon-type="cross"
         />
         <span
-          class="euiSwitch__icon euiSwitch__icon--checked"
-          data-euiicon-type="check"
+          class="ouiSwitch__icon ouiSwitch__icon--checked"
+          data-ouiicon-type="check"
         />
       </span>
     </span>
   </button>
   <span
-    class="euiSwitch__label"
+    class="ouiSwitch__label"
     id="generated-id"
   >
     Label
@@ -84,41 +84,41 @@ exports[`EuiSwitch is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiSwitch labelProps is rendered 1`] = `
+exports[`OuiSwitch labelProps is rendered 1`] = `
 <div
-  class="euiSwitch"
+  class="ouiSwitch"
 >
   <button
     aria-checked="false"
     aria-labelledby="generated-id"
-    class="euiSwitch__button"
+    class="ouiSwitch__button"
     id="generated-id"
     role="switch"
     type="button"
   >
     <span
-      class="euiSwitch__body"
+      class="ouiSwitch__body"
     >
       <span
-        class="euiSwitch__thumb"
+        class="ouiSwitch__thumb"
       />
       <span
-        class="euiSwitch__track"
+        class="ouiSwitch__track"
       >
         <span
-          class="euiSwitch__icon"
-          data-euiicon-type="cross"
+          class="ouiSwitch__icon"
+          data-ouiicon-type="cross"
         />
         <span
-          class="euiSwitch__icon euiSwitch__icon--checked"
-          data-euiicon-type="check"
+          class="ouiSwitch__icon ouiSwitch__icon--checked"
+          data-ouiicon-type="check"
         />
       </span>
     </span>
   </button>
   <span
     aria-label="aria-label"
-    class="euiSwitch__label testClass1 testClass2"
+    class="ouiSwitch__label testClass1 testClass2"
     data-test-subj="test subject string"
     id="generated-id"
   >

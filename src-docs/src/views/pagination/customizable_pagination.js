@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiContextMenuItem,
-  EuiContextMenuPanel,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiPagination,
-  EuiPopover,
+  OuiButtonEmpty,
+  OuiContextMenuItem,
+  OuiContextMenuPanel,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiPagination,
+  OuiPopover,
 } from '../../../../src/components';
 
 export default () => {
@@ -28,18 +39,18 @@ export default () => {
   };
 
   const button = (
-    <EuiButtonEmpty
+    <OuiButtonEmpty
       size="s"
       color="text"
       iconType="arrowDown"
       iconSide="right"
       onClick={onButtonClick}>
       Rows per page: {rowSize}
-    </EuiButtonEmpty>
+    </OuiButtonEmpty>
   );
 
   const items = [
-    <EuiContextMenuItem
+    <OuiContextMenuItem
       key="10 rows"
       icon={getIconType(10)}
       onClick={() => {
@@ -47,8 +58,8 @@ export default () => {
         setRowSize(10);
       }}>
       10 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </OuiContextMenuItem>,
+    <OuiContextMenuItem
       key="20 rows"
       icon={getIconType(20)}
       onClick={() => {
@@ -56,8 +67,8 @@ export default () => {
         setRowSize(20);
       }}>
       20 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </OuiContextMenuItem>,
+    <OuiContextMenuItem
       key="50 rows"
       icon={getIconType(50)}
       onClick={() => {
@@ -65,8 +76,8 @@ export default () => {
         setRowSize(50);
       }}>
       50 rows
-    </EuiContextMenuItem>,
-    <EuiContextMenuItem
+    </OuiContextMenuItem>,
+    <OuiContextMenuItem
       key="100 rows"
       icon={getIconType(100)}
       onClick={() => {
@@ -74,29 +85,29 @@ export default () => {
         setRowSize(100);
       }}>
       100 rows
-    </EuiContextMenuItem>,
+    </OuiContextMenuItem>,
   ];
 
   return (
-    <EuiFlexGroup justifyContent="spaceBetween" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiPopover
+    <OuiFlexGroup justifyContent="spaceBetween" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiPopover
           button={button}
           isOpen={isPopoverOpen}
           closePopover={closePopover}
           panelPaddingSize="none">
-          <EuiContextMenuPanel items={items} />
-        </EuiPopover>
-      </EuiFlexItem>
+          <OuiContextMenuPanel items={items} />
+        </OuiPopover>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiPagination
+      <OuiFlexItem grow={false}>
+        <OuiPagination
           aria-label="Custom pagination example"
           pageCount={PAGE_COUNT}
           activePage={activePage}
           onPageClick={goToPage}
         />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 };

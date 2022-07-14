@@ -1,45 +1,45 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiSelectableListItem is rendered 1`] = `
+exports[`OuiSelectableListItem is rendered 1`] = `
 <li
   aria-label="aria-label"
   aria-selected="false"
-  class="euiSelectableListItem testClass1 testClass2"
+  class="ouiSelectableListItem testClass1 testClass2"
   data-test-subj="test subject string"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__icon"
-      data-euiicon-type="empty"
+      class="ouiSelectableListItem__icon"
+      data-ouiicon-type="empty"
     />
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
   </span>
 </li>
 `;
 
-exports[`EuiSelectableListItem props append 1`] = `
+exports[`OuiSelectableListItem props append 1`] = `
 <li
   aria-selected="false"
-  class="euiSelectableListItem"
+  class="ouiSelectableListItem"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__icon"
-      data-euiicon-type="empty"
+      class="ouiSelectableListItem__icon"
+      data-ouiicon-type="empty"
     />
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
     <span
-      class="euiSelectableListItem__append"
+      class="ouiSelectableListItem__append"
     >
       <span />
        
@@ -48,100 +48,100 @@ exports[`EuiSelectableListItem props append 1`] = `
 </li>
 `;
 
-exports[`EuiSelectableListItem props checked is off 1`] = `
+exports[`OuiSelectableListItem props checked is off 1`] = `
 <li
   aria-selected="true"
-  class="euiSelectableListItem"
+  class="ouiSelectableListItem"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__icon"
+      class="ouiSelectableListItem__icon"
       color="text"
-      data-euiicon-type="cross"
+      data-ouiicon-type="cross"
     />
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
   </span>
 </li>
 `;
 
-exports[`EuiSelectableListItem props checked is on 1`] = `
+exports[`OuiSelectableListItem props checked is on 1`] = `
 <li
   aria-selected="true"
-  class="euiSelectableListItem"
+  class="ouiSelectableListItem"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__icon"
+      class="ouiSelectableListItem__icon"
       color="text"
-      data-euiicon-type="check"
+      data-ouiicon-type="check"
     />
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
   </span>
 </li>
 `;
 
-exports[`EuiSelectableListItem props disabled 1`] = `
+exports[`OuiSelectableListItem props disabled 1`] = `
 <li
   aria-disabled="true"
   aria-selected="false"
-  class="euiSelectableListItem"
+  class="ouiSelectableListItem"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__icon"
-      data-euiicon-type="empty"
+      class="ouiSelectableListItem__icon"
+      data-ouiicon-type="empty"
     />
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
   </span>
 </li>
 `;
 
-exports[`EuiSelectableListItem props isFocused 1`] = `
+exports[`OuiSelectableListItem props isFocused 1`] = `
 <li
   aria-selected="false"
-  class="euiSelectableListItem euiSelectableListItem-isFocused"
+  class="ouiSelectableListItem ouiSelectableListItem-isFocused"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__icon"
-      data-euiicon-type="empty"
+      class="ouiSelectableListItem__icon"
+      data-ouiicon-type="empty"
     />
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
     <span
-      class="euiSelectableListItem__append"
+      class="ouiSelectableListItem__append"
     >
        
       <span
         aria-hidden="true"
-        class="euiBadge euiBadge--hollow euiBadge--iconLeft euiSelectableListItem__onFocusBadge"
+        class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiSelectableListItem__onFocusBadge"
       >
         <span
-          class="euiBadge__content"
+          class="ouiBadge__content"
         >
           <span
-            class="euiBadge__icon"
+            class="ouiBadge__icon"
             color="inherit"
-            data-euiicon-type="returnKey"
+            data-ouiicon-type="returnKey"
           />
         </span>
       </span>
@@ -150,82 +150,82 @@ exports[`EuiSelectableListItem props isFocused 1`] = `
 </li>
 `;
 
-exports[`EuiSelectableListItem props onFocusBadge can be custom 1`] = `
+exports[`OuiSelectableListItem props onFocusBadge can be custom 1`] = `
 <li
   aria-selected="false"
-  class="euiSelectableListItem"
+  class="ouiSelectableListItem"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__icon"
-      data-euiicon-type="empty"
+      class="ouiSelectableListItem__icon"
+      data-ouiicon-type="empty"
     />
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
   </span>
 </li>
 `;
 
-exports[`EuiSelectableListItem props onFocusBadge can be true 1`] = `
+exports[`OuiSelectableListItem props onFocusBadge can be true 1`] = `
 <li
   aria-selected="false"
-  class="euiSelectableListItem"
+  class="ouiSelectableListItem"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__icon"
-      data-euiicon-type="empty"
+      class="ouiSelectableListItem__icon"
+      data-ouiicon-type="empty"
     />
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
   </span>
 </li>
 `;
 
-exports[`EuiSelectableListItem props prepend 1`] = `
+exports[`OuiSelectableListItem props prepend 1`] = `
 <li
   aria-selected="false"
-  class="euiSelectableListItem"
+  class="ouiSelectableListItem"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__icon"
-      data-euiicon-type="empty"
+      class="ouiSelectableListItem__icon"
+      data-ouiicon-type="empty"
     />
     <span
-      class="euiSelectableListItem__prepend"
+      class="ouiSelectableListItem__prepend"
     >
       <span />
     </span>
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
   </span>
 </li>
 `;
 
-exports[`EuiSelectableListItem props showIcons can be turned off 1`] = `
+exports[`OuiSelectableListItem props showIcons can be turned off 1`] = `
 <li
   aria-selected="false"
-  class="euiSelectableListItem"
+  class="ouiSelectableListItem"
   role="option"
 >
   <span
-    class="euiSelectableListItem__content"
+    class="ouiSelectableListItem__content"
   >
     <span
-      class="euiSelectableListItem__text"
+      class="ouiSelectableListItem__text"
     />
   </span>
 </li>

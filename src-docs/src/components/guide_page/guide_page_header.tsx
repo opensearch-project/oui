@@ -1,20 +1,31 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiHeaderLogo,
-  EuiHeader,
-  EuiHeaderSectionItemButton,
+  OuiHeaderLogo,
+  OuiHeader,
+  OuiHeaderSectionItemButton,
 } from '../../../../src/components/header';
-import { EuiBadge } from '../../../../src/components/badge';
-import { EuiIcon } from '../../../../src/components/icon';
-import { EuiToolTip } from '../../../../src/components/tool_tip';
-import { EuiPopover } from '../../../../src/components/popover';
+import { OuiBadge } from '../../../../src/components/badge';
+import { OuiIcon } from '../../../../src/components/icon';
+import { OuiToolTip } from '../../../../src/components/tool_tip';
+import { OuiPopover } from '../../../../src/components/popover';
 import { useIsWithinBreakpoints } from '../../../../src/services/hooks';
-import { EuiButtonEmpty } from '../../../../src/components/button';
+import { OuiButtonEmpty } from '../../../../src/components/button';
 
 // @ts-ignore Not TS
 import { CodeSandboxLink } from '../../components/codesandbox/link';
-import logoEUI from '../../images/logo-eui.svg';
+import logoOUI from '../../images/logo-oui.svg';
 import {
   GuideThemeSelector,
   GuideSketchLink,
@@ -36,9 +47,9 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
 
   function renderLogo() {
     return (
-      <EuiHeaderLogo iconType={logoEUI} href="#/" aria-label="EUI home">
-        Elastic UI
-      </EuiHeaderLogo>
+      <OuiHeaderLogo iconType={logoOUI} href="#/" aria-label="OUI home">
+        OpenSearch UI
+      </OuiHeaderLogo>
     );
   }
 
@@ -46,31 +57,31 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
     const isLocalDev = window.location.host.includes('803');
 
     return (
-      <EuiBadge
+      <OuiBadge
         href="#/package/changelog"
         aria-label={`Version ${pkg.version}, View changelog`}
         color={isLocalDev ? 'accent' : 'default'}>
         {isLocalDev ? 'Local' : `v.${pkg.version}`}
-      </EuiBadge>
+      </OuiBadge>
     );
   }
 
   function renderGithub() {
-    const href = 'https://github.com/elastic/eui';
-    const label = 'EUI GitHub repo';
+    const href = 'https://github.com/opensearch-project/oui';
+    const label = 'OUI GitHub repo';
     return isMobileSize ? (
-      <EuiButtonEmpty size="s" flush="both" iconType="logoGithub" href={href}>
+      <OuiButtonEmpty size="s" flush="both" iconType="logoGithub" href={href}>
         {label}
-      </EuiButtonEmpty>
+      </OuiButtonEmpty>
     ) : (
-      <EuiToolTip content="Github">
-        <EuiHeaderSectionItemButton
+      <OuiToolTip content="Github">
+        <OuiHeaderSectionItemButton
           aria-label={label}
           // @ts-ignore TODO: FIX
           href={href}>
-          <EuiIcon type="logoGithub" aria-hidden="true" />
-        </EuiHeaderSectionItemButton>
-      </EuiToolTip>
+          <OuiIcon type="logoGithub" aria-hidden="true" />
+        </OuiHeaderSectionItemButton>
+      </OuiToolTip>
     );
   }
 
@@ -78,18 +89,18 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
     const label = 'Codesandbox';
     return isMobileSize ? (
       <CodeSandboxLink key="codesandbox">
-        <EuiButtonEmpty size="s" flush="both" iconType="logoCodesandbox">
+        <OuiButtonEmpty size="s" flush="both" iconType="logoCodesandbox">
           {label}
-        </EuiButtonEmpty>
+        </OuiButtonEmpty>
       </CodeSandboxLink>
     ) : (
-      <EuiToolTip content="Codesandbox" key="codesandbox">
+      <OuiToolTip content="Codesandbox" key="codesandbox">
         <CodeSandboxLink>
-          <EuiHeaderSectionItemButton aria-label="Codesandbox">
-            <EuiIcon type="logoCodesandbox" aria-hidden="true" />
-          </EuiHeaderSectionItemButton>
+          <OuiHeaderSectionItemButton aria-label="Codesandbox">
+            <OuiIcon type="logoCodesandbox" aria-hidden="true" />
+          </OuiHeaderSectionItemButton>
         </CodeSandboxLink>
-      </EuiToolTip>
+      </OuiToolTip>
     );
   }
 
@@ -97,15 +108,15 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
 
   function renderMobileMenu() {
     const button = (
-      <EuiHeaderSectionItemButton
-        aria-label="Open EUI options menu"
+      <OuiHeaderSectionItemButton
+        aria-label="Open OUI options menu"
         onClick={() => setMobilePopoverIsOpen((isOpen) => !isOpen)}>
-        <EuiIcon type="apps" aria-hidden="true" />
-      </EuiHeaderSectionItemButton>
+        <OuiIcon type="apps" aria-hidden="true" />
+      </OuiHeaderSectionItemButton>
     );
 
     return (
-      <EuiPopover
+      <OuiPopover
         id="guidePageChromeThemePopover"
         button={button}
         isOpen={mobilePopoverIsOpen}
@@ -116,7 +127,7 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
           <GuideFigmaLink />
           {renderCodeSandbox()}
         </div>
-      </EuiPopover>
+      </OuiPopover>
     );
   }
 
@@ -140,7 +151,7 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
       ];
 
   return (
-    <EuiHeader
+    <OuiHeader
       position="fixed"
       theme="dark"
       sections={[

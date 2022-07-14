@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment, useState } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
 import {
-  EuiInMemoryTable,
-  EuiLink,
-  EuiHealth,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFacetGroup,
-  EuiFacetButton,
+  OuiInMemoryTable,
+  OuiLink,
+  OuiHealth,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFacetGroup,
+  OuiFacetButton,
 } from '../../../../../src/components';
 
 /*
@@ -55,9 +66,9 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: (username) => (
-        <EuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href={`https://github.com/${username}`} target="_blank">
           {username}
-        </EuiLink>
+        </OuiLink>
       ),
     },
     {
@@ -82,7 +93,7 @@ export const Table = () => {
       render: (online) => {
         const color = online ? 'success' : 'danger';
         const label = online ? 'Online' : 'Offline';
-        return <EuiHealth color={color}>{label}</EuiHealth>;
+        return <OuiHealth color={color}>{label}</OuiHealth>;
       },
     },
   ];
@@ -180,32 +191,32 @@ export const Table = () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup>
-        <EuiFlexItem grow={1}>
-          <EuiFacetGroup>
+      <OuiFlexGroup>
+        <OuiFlexItem grow={1}>
+          <OuiFacetGroup>
             {facets.map((facet) => {
               return (
-                <EuiFacetButton
+                <OuiFacetButton
                   key={facet.id}
                   id={facet.id}
                   isSelected={facet.isSelected}
                   onClick={facet.onClick}>
                   {facet.label}
-                </EuiFacetButton>
+                </OuiFacetButton>
               );
             })}
-          </EuiFacetGroup>
-        </EuiFlexItem>
-        <EuiFlexItem grow={3}>
-          <EuiInMemoryTable
+          </OuiFacetGroup>
+        </OuiFlexItem>
+        <OuiFlexItem grow={3}>
+          <OuiInMemoryTable
             items={store.users}
             columns={columns}
             search={search}
             pagination={true}
             sorting={true}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </Fragment>
   );
 };

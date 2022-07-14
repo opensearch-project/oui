@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,46 +33,46 @@ import classNames from 'classnames';
 import { CommonProps } from '../../common';
 
 import {
-  EuiPanel,
+  OuiPanel,
   PanelPaddingSize,
-  _EuiPanelProps,
-  _EuiPanelDivlike,
+  _OuiPanelProps,
+  _OuiPanelDivlike,
 } from '../../panel/panel';
 import { HTMLAttributes } from 'enzyme';
 
-export type EuiPageContentVerticalPositions = 'center';
-export type EuiPageContentHorizontalPositions = 'center';
+export type OuiPageContentVerticalPositions = 'center';
+export type OuiPageContentHorizontalPositions = 'center';
 
 const verticalPositionToClassNameMap: {
-  [position in EuiPageContentVerticalPositions]: string | null;
+  [position in OuiPageContentVerticalPositions]: string | null;
 } = {
-  center: 'euiPageContent--verticalCenter',
+  center: 'ouiPageContent--verticalCenter',
 };
 
 const horizontalPositionToClassNameMap: {
-  [position in EuiPageContentHorizontalPositions]: string | null;
+  [position in OuiPageContentHorizontalPositions]: string | null;
 } = {
-  center: 'euiPageContent--horizontalCenter',
+  center: 'ouiPageContent--horizontalCenter',
 };
 
-export type EuiPageContentProps = CommonProps &
-  // Use only the div properties of EuiPanel (not button)
-  _EuiPanelProps &
-  Omit<_EuiPanelDivlike, 'onClick' | 'role'> & {
+export type OuiPageContentProps = CommonProps &
+  // Use only the div properties of OuiPanel (not button)
+  _OuiPanelProps &
+  Omit<_OuiPanelDivlike, 'onClick' | 'role'> & {
     /**
      * **DEPRECATED: use `paddingSize` instead.**
      */
     panelPaddingSize?: PanelPaddingSize;
-    verticalPosition?: EuiPageContentVerticalPositions;
-    horizontalPosition?: EuiPageContentHorizontalPositions;
+    verticalPosition?: OuiPageContentVerticalPositions;
+    horizontalPosition?: OuiPageContentHorizontalPositions;
     /**
-     * There should only be one EuiPageContent per page and should contain the main contents.
+     * There should only be one OuiPageContent per page and should contain the main contents.
      * If this is untrue, set role = `null`, or change it to match your needed aria role
      */
     role?: HTMLAttributes['role'] | null;
   };
 
-export const EuiPageContent: FunctionComponent<EuiPageContentProps> = ({
+export const OuiPageContent: FunctionComponent<OuiPageContentProps> = ({
   verticalPosition,
   horizontalPosition,
   panelPaddingSize,
@@ -75,10 +86,10 @@ export const EuiPageContent: FunctionComponent<EuiPageContentProps> = ({
   const role = _role === null ? undefined : _role;
 
   const borderRadiusClass =
-    borderRadius === 'none' ? 'euiPageContent--borderRadiusNone' : '';
+    borderRadius === 'none' ? 'ouiPageContent--borderRadiusNone' : '';
 
   const classes = classNames(
-    'euiPageContent',
+    'ouiPageContent',
     borderRadiusClass,
     verticalPosition ? verticalPositionToClassNameMap[verticalPosition] : null,
     horizontalPosition
@@ -88,13 +99,13 @@ export const EuiPageContent: FunctionComponent<EuiPageContentProps> = ({
   );
 
   return (
-    <EuiPanel
+    <OuiPanel
       className={classes}
       paddingSize={panelPaddingSize ?? paddingSize}
       borderRadius={borderRadius}
       role={role}
       {...rest}>
       {children}
-    </EuiPanel>
+    </OuiPanel>
   );
 };

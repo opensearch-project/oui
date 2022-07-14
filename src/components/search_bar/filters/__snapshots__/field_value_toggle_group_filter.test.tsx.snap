@@ -2,7 +2,7 @@
 
 exports[`TermToggleGroupFilter render - active 1`] = `
 Array [
-  <EuiFilterButton
+  <OuiFilterButton
     aria-pressed={true}
     hasActiveFilters={true}
     key="field_value_toggle_filter_item_0"
@@ -11,8 +11,8 @@ Array [
     withNext={true}
   >
     Kibana
-  </EuiFilterButton>,
-  <EuiFilterButton
+  </OuiFilterButton>,
+  <OuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_1"
@@ -21,13 +21,13 @@ Array [
     withNext={false}
   >
     Elasticsearch
-  </EuiFilterButton>,
+  </OuiFilterButton>,
 ]
 `;
 
 exports[`TermToggleGroupFilter render - active negated - custom negated name 1`] = `
 Array [
-  <EuiFilterButton
+  <OuiFilterButton
     aria-pressed={true}
     hasActiveFilters={true}
     key="field_value_toggle_filter_item_0"
@@ -36,8 +36,8 @@ Array [
     withNext={true}
   >
     -Kibana
-  </EuiFilterButton>,
-  <EuiFilterButton
+  </OuiFilterButton>,
+  <OuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_1"
@@ -46,13 +46,13 @@ Array [
     withNext={false}
   >
     Elasticsearch
-  </EuiFilterButton>,
+  </OuiFilterButton>,
 ]
 `;
 
 exports[`TermToggleGroupFilter render - active negated 1`] = `
 Array [
-  <EuiFilterButton
+  <OuiFilterButton
     aria-pressed={true}
     hasActiveFilters={true}
     key="field_value_toggle_filter_item_0"
@@ -61,8 +61,8 @@ Array [
     withNext={true}
   >
     Not Kibana
-  </EuiFilterButton>,
-  <EuiFilterButton
+  </OuiFilterButton>,
+  <OuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_1"
@@ -71,13 +71,13 @@ Array [
     withNext={false}
   >
     Elasticsearch
-  </EuiFilterButton>,
+  </OuiFilterButton>,
 ]
 `;
 
 exports[`TermToggleGroupFilter render 1`] = `
 Array [
-  <EuiFilterButton
+  <OuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_0"
@@ -86,8 +86,8 @@ Array [
     withNext={true}
   >
     Kibana
-  </EuiFilterButton>,
-  <EuiFilterButton
+  </OuiFilterButton>,
+  <OuiFilterButton
     aria-pressed={false}
     hasActiveFilters={false}
     key="field_value_toggle_filter_item_1"
@@ -96,6 +96,6 @@ Array [
     withNext={false}
   >
     Elasticsearch
-  </EuiFilterButton>,
+  </OuiFilterButton>,
 ]
 `;

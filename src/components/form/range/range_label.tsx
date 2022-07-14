@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +31,7 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-export interface EuiRangeLabelProps {
+export interface OuiRangeLabelProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -29,13 +40,13 @@ export interface EuiRangeLabelProps {
   side?: 'min' | 'max';
 }
 
-export const EuiRangeLabel: FunctionComponent<EuiRangeLabelProps> = ({
+export const OuiRangeLabel: FunctionComponent<OuiRangeLabelProps> = ({
   children,
   disabled,
   side = 'max',
 }) => {
-  const classes = classNames('euiRangeLabel', `euiRangeLabel--${side}`, {
-    'euiRangeLabel--isDisabled': disabled,
+  const classes = classNames('ouiRangeLabel', `ouiRangeLabel--${side}`, {
+    'ouiRangeLabel--isDisabled': disabled,
   });
   return <label className={classes}>{children}</label>;
 };

@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -6,12 +17,12 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiListGroup,
-  EuiListGroupItem,
-  EuiPinnableListGroup,
-  EuiCode,
+  OuiListGroup,
+  OuiListGroupItem,
+  OuiPinnableListGroup,
+  OuiCode,
 } from '../../../../src/components';
-import { EuiPinnableListGroupItem } from './props';
+import { OuiPinnableListGroupItem } from './props';
 
 import ListGroup from './list_group';
 const listGroupSource = require('!!raw-loader!./list_group');
@@ -54,22 +65,22 @@ export const ListGroupExample = {
       text: (
         <>
           <p>
-            The <strong>EuiListGroup</strong> component is used to present{' '}
-            <strong>EuiListGroupItems</strong> in a neatly formatted list. Use
-            the <EuiCode>flush</EuiCode> and <EuiCode>bordered</EuiCode>{' '}
+            The <strong>OuiListGroup</strong> component is used to present{' '}
+            <strong>OuiListGroupItems</strong> in a neatly formatted list. Use
+            the <OuiCode>flush</OuiCode> and <OuiCode>bordered</OuiCode>{' '}
             properties for full-width and bordered presentations, respectively.
           </p>
           <p>
-            Adjust the <EuiCode>gutterSize</EuiCode> prop to increase or
+            Adjust the <OuiCode>gutterSize</OuiCode> prop to increase or
             decrease the spacing between items.
           </p>
         </>
       ),
-      props: { EuiListGroup, EuiListGroupItem },
+      props: { OuiListGroup, OuiListGroupItem },
       demo: <ListGroup />,
-      snippet: `<EuiListGroup flush={true} bordered={true}>
-  <EuiListGroupItem onClick={handleOnClick} label="Item" />
-</EuiListGroup>`,
+      snippet: `<OuiListGroup flush={true} bordered={true}>
+  <OuiListGroupItem onClick={handleOnClick} label="Item" />
+</OuiListGroup>`,
     },
     {
       title: 'List of links',
@@ -86,20 +97,20 @@ export const ListGroupExample = {
       text: (
         <>
           <p>
-            Display <strong>EuiListGroupItems</strong> as links by providing an{' '}
-            <EuiCode>href</EuiCode> value and change their state with the{' '}
-            <EuiCode>isActive</EuiCode> and <EuiCode>isDisabled</EuiCode>{' '}
+            Display <strong>OuiListGroupItems</strong> as links by providing an{' '}
+            <OuiCode>href</OuiCode> value and change their state with the{' '}
+            <OuiCode>isActive</OuiCode> and <OuiCode>isDisabled</OuiCode>{' '}
             properties.
           </p>
           <p>
-            As is done in this example, the <strong>EuiListGroup</strong>{' '}
+            As is done in this example, the <strong>OuiListGroup</strong>{' '}
             component can also accept an array of items via the{' '}
-            <EuiCode>listItems</EuiCode> property.
+            <OuiCode>listItems</OuiCode> property.
           </p>
         </>
       ),
       demo: <ListGroupLinks />,
-      snippet: `<EuiListGroup
+      snippet: `<OuiListGroup
   listItems={[
     {
       label: 'First link',
@@ -129,17 +140,17 @@ export const ListGroupExample = {
       ],
       text: (
         <p>
-          The <EuiCode>extraAction</EuiCode> property adds a secondary icon
+          The <OuiCode>extraAction</OuiCode> property adds a secondary icon
           button to any list item. It accepts several properties of its own,
-          including <EuiCode>color</EuiCode>, <EuiCode>onClick</EuiCode>,{' '}
-          <EuiCode>iconType</EuiCode>, and <EuiCode>alwaysShow</EuiCode>, and
+          including <OuiCode>color</OuiCode>, <OuiCode>onClick</OuiCode>,{' '}
+          <OuiCode>iconType</OuiCode>, and <OuiCode>alwaysShow</OuiCode>, and
           can be used for actions such as pinning, favoriting, or deleting an
           item.
         </p>
       ),
       demo: <ListGroupLinkActions />,
-      snippet: `<EuiListGroupItem
-  label="EUI button link"
+      snippet: `<OuiListGroupItem
+  label="OUI button link"
   extraAction={{
     color: 'primary',
     onClick: this.clicked,
@@ -164,19 +175,19 @@ export const ListGroupExample = {
       ],
       text: (
         <p>
-          Optional props <EuiCode>showToolTip</EuiCode> and{' '}
-          <EuiCode>wrapLines</EuiCode> can be used to augment the display of
+          Optional props <OuiCode>showToolTip</OuiCode> and{' '}
+          <OuiCode>wrapLines</OuiCode> can be used to augment the display of
           list items. Use these when lists are inside small containers where it
           is likely that the content will be truncated.
         </p>
       ),
       demo: <ListGroupExtra />,
-      snippet: `<EuiListGroup showToolTips>
-  <EuiListGroupItem
+      snippet: `<OuiListGroup showToolTips>
+  <OuiListGroupItem
     wrapText
     label="A very long label"
   />
-</EuiListGroup>`,
+</OuiListGroup>`,
     },
     {
       title: 'List item color and size',
@@ -193,22 +204,22 @@ export const ListGroupExample = {
       text: (
         <>
           <p>
-            <strong>EuiListGroupItems</strong> will inherit the color from their
-            element type whether it is a <EuiCode>button</EuiCode>,{' '}
-            <EuiCode>anchor</EuiCode>, or <EuiCode>span</EuiCode>. You can
-            enforce a different color of <EuiCode>primary</EuiCode>,{' '}
-            <EuiCode>text</EuiCode>, or <EuiCode>subdued</EuiCode> with the{' '}
-            <EuiCode>color</EuiCode> prop. Or provide the prop directly to{' '}
-            <strong>EuiListGroup</strong>.
+            <strong>OuiListGroupItems</strong> will inherit the color from their
+            element type whether it is a <OuiCode>button</OuiCode>,{' '}
+            <OuiCode>anchor</OuiCode>, or <OuiCode>span</OuiCode>. You can
+            enforce a different color of <OuiCode>primary</OuiCode>,{' '}
+            <OuiCode>text</OuiCode>, or <OuiCode>subdued</OuiCode> with the{' '}
+            <OuiCode>color</OuiCode> prop. Or provide the prop directly to{' '}
+            <strong>OuiListGroup</strong>.
           </p>
           <p>
             They also accept options for text size;{' '}
-            <EuiCode language="ts">{"'xs' | 's' | 'm' | 'l'"}</EuiCode>.
+            <OuiCode language="ts">{"'xs' | 's' | 'm' | 'l'"}</OuiCode>.
           </p>
         </>
       ),
       demo: <ListGroupItemColor />,
-      snippet: `<EuiListGroupItem
+      snippet: `<OuiListGroupItem
   label="Primary"
   color="primary"
   size="s"
@@ -229,32 +240,32 @@ export const ListGroupExample = {
       text: (
         <>
           <p>
-            <strong>EuiPinnableListGroup</strong> is simply an extra wrapper
+            <strong>OuiPinnableListGroup</strong> is simply an extra wrapper
             around an{' '}
             <Link to="/display/list-group">
-              <strong>EuiListGroup</strong>
+              <strong>OuiListGroup</strong>
             </Link>{' '}
             that provides visual indicators for <strong>pinning</strong>.
           </p>
           <p>
             Pinning is the concept that users can click a pin icon and add it to
             a subset of links (most likely shown in different list group). By
-            providing an <EuiCode>onPinClick</EuiCode> handler, the component
+            providing an <OuiCode>onPinClick</OuiCode> handler, the component
             will automatically add the pin action to the item. However, the
-            consuming application must manage the <EuiCode>listItems</EuiCode>
-            and their <EuiCode>pinned</EuiCode> state.
+            consuming application must manage the <OuiCode>listItems</OuiCode>
+            and their <OuiCode>pinned</OuiCode> state.
           </p>
           <p>
             In order to get the full benefit of using{' '}
-            <strong>EuiPinnableListGroup</strong>, the component only supports
-            providing list items via the <EuiCode>listItem</EuiCode> prop and
-            does not support <EuiCode>children</EuiCode>.
+            <strong>OuiPinnableListGroup</strong>, the component only supports
+            providing list items via the <OuiCode>listItem</OuiCode> prop and
+            does not support <OuiCode>children</OuiCode>.
           </p>
         </>
       ),
-      props: { EuiPinnableListGroup, EuiPinnableListGroupItem },
+      props: { OuiPinnableListGroup, OuiPinnableListGroupItem },
       demo: <PinnableListGroup />,
-      snippet: `<EuiPinnableListGroup
+      snippet: `<OuiPinnableListGroup
   onPinClick={item => {}}
   listItems={[
     {

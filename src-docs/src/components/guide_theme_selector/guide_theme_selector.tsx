@@ -1,15 +1,26 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /* eslint-disable no-restricted-globals */
 import React, { useState } from 'react';
 
-import { EuiButton } from '../../../../src/components/button';
+import { OuiButton } from '../../../../src/components/button';
 import {
-  EuiContextMenuPanel,
-  EuiContextMenuItem,
+  OuiContextMenuPanel,
+  OuiContextMenuItem,
 } from '../../../../src/components/context_menu';
-import { EuiPopover } from '../../../../src/components/popover';
-import { EuiHorizontalRule } from '../../../../src/components/horizontal_rule';
+import { OuiPopover } from '../../../../src/components/popover';
+import { OuiHorizontalRule } from '../../../../src/components/horizontal_rule';
 import { useIsWithinBreakpoints } from '../../../../src/services/hooks/useIsWithinBreakpoints';
-import { EUI_THEME, EUI_THEMES } from '../../../../src/themes';
+import { OUI_THEME, OUI_THEMES } from '../../../../src/themes';
 
 import { ThemeContext } from '../with_theme';
 // @ts-ignore Not TS
@@ -48,16 +59,16 @@ const GuideThemeSelectorComponent: React.FunctionComponent<GuideThemeSelectorPro
     setPopover(false);
   };
 
-  const currentTheme: EUI_THEME =
-    EUI_THEMES.find((theme) => theme.value === context.theme) || EUI_THEMES[0];
+  const currentTheme: OUI_THEME =
+    OUI_THEMES.find((theme) => theme.value === context.theme) || OUI_THEMES[0];
 
-  const getIconType = (value: EUI_THEME['value']) => {
+  const getIconType = (value: OUI_THEME['value']) => {
     return value === currentTheme.value ? 'check' : 'empty';
   };
 
-  const items = EUI_THEMES.map((theme) => {
+  const items = OUI_THEMES.map((theme) => {
     return (
-      <EuiContextMenuItem
+      <OuiContextMenuItem
         key={theme.value}
         icon={getIconType(theme.value)}
         onClick={() => {
@@ -65,12 +76,12 @@ const GuideThemeSelectorComponent: React.FunctionComponent<GuideThemeSelectorPro
           context.changeTheme(theme.value);
         }}>
         {theme.text}
-      </EuiContextMenuItem>
+      </OuiContextMenuItem>
     );
   });
 
   const button = (
-    <EuiButton
+    <OuiButton
       size="s"
       iconType="arrowDown"
       iconSide="right"
@@ -78,11 +89,11 @@ const GuideThemeSelectorComponent: React.FunctionComponent<GuideThemeSelectorPro
       minWidth={0}
       onClick={onButtonClick}>
       {isMobileSize ? 'Theme' : currentTheme.text}
-    </EuiButton>
+    </OuiButton>
   );
 
   return (
-    <EuiPopover
+    <OuiPopover
       id="docsThemeSelector"
       repositionOnScroll
       button={button}
@@ -90,10 +101,10 @@ const GuideThemeSelectorComponent: React.FunctionComponent<GuideThemeSelectorPro
       closePopover={closePopover}
       panelPaddingSize="none"
       anchorPosition="downRight">
-      <EuiContextMenuPanel size="s" items={items} />
+      <OuiContextMenuPanel size="s" items={items} />
       {location.host.includes('803') && (
         <>
-          <EuiHorizontalRule margin="none" />
+          <OuiHorizontalRule margin="none" />
           <div style={{ padding: 8 }}>
             <GuideLocaleSelector
               onToggleLocale={onToggleLocale}
@@ -102,6 +113,6 @@ const GuideThemeSelectorComponent: React.FunctionComponent<GuideThemeSelectorPro
           </div>
         </>
       )}
-    </EuiPopover>
+    </OuiPopover>
   );
 };

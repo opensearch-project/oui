@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiInnerText is rendered 1`] = `
+exports[`OuiInnerText is rendered 1`] = `
 <span>
   Test
 </span>

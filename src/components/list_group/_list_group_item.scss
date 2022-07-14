@@ -1,45 +1,56 @@
-.euiListGroupItem {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiListGroupItem {
   padding: 0;
-  border-radius: $euiBorderRadius;
+  border-radius: $ouiBorderRadius;
   display: flex;
   align-items: center;
-  transition: background-color $euiAnimSpeedFast;
+  transition: background-color $ouiAnimSpeedFast;
   position: relative;
 
-  &.euiListGroupItem-isActive,
-  &.euiListGroupItem-isClickable:hover {
-    background-color: $euiListGroupItemHoverBackground;
+  &.ouiListGroupItem-isActive,
+  &.ouiListGroupItem-isClickable:hover {
+    background-color: $ouiListGroupItemHoverBackground;
   }
 
   // Can't be grouped with above or else IE will ignore the whole group
-  &.euiListGroupItem-isClickable:focus-within {
-    background-color: $euiListGroupItemHoverBackground;
+  &.ouiListGroupItem-isClickable:focus-within {
+    background-color: $ouiListGroupItemHoverBackground;
   }
 
-  &.euiListGroupItem--ghost {
-    &.euiListGroupItem-isClickable:hover {
-      background-color: $euiListGroupItemHoverBackgroundGhost;
+  &.ouiListGroupItem--ghost {
+    &.ouiListGroupItem-isClickable:hover {
+      background-color: $ouiListGroupItemHoverBackgroundGhost;
     }
 
     // Can't be grouped with above or else IE will ignore the whole group
-    &.euiListGroupItem-isClickable:focus-within {
-      background-color: $euiListGroupItemHoverBackgroundGhost;
+    &.ouiListGroupItem-isClickable:focus-within {
+      background-color: $ouiListGroupItemHoverBackgroundGhost;
     }
   }
 
-  &.euiListGroupItem-isClickable:hover .euiListGroupItem__button,
-  .euiListGroupItem__button:hover,
-  .euiListGroupItem__button:focus {
+  &.ouiListGroupItem-isClickable:hover .ouiListGroupItem__button,
+  .ouiListGroupItem__button:hover,
+  .ouiListGroupItem__button:focus {
     text-decoration: underline;
   }
 
   // Style all disabled list items whether or not they are links or buttons
-  &.euiListGroupItem-isDisabled,
-  &.euiListGroupItem-isDisabled:hover,
-  &.euiListGroupItem-isDisabled:focus,
-  &.euiListGroupItem-isDisabled .euiListGroupItem__button:hover,
-  &.euiListGroupItem-isDisabled .euiListGroupItem__button:focus {
-    color: $euiButtonColorDisabled;
+  &.ouiListGroupItem-isDisabled,
+  &.ouiListGroupItem-isDisabled:hover,
+  &.ouiListGroupItem-isDisabled:focus,
+  &.ouiListGroupItem-isDisabled .ouiListGroupItem__button:hover,
+  &.ouiListGroupItem-isDisabled .ouiListGroupItem__button:focus {
+    color: $ouiButtonColorDisabled;
     cursor: not-allowed;
     background-color: transparent;
     text-decoration: none;
@@ -48,22 +59,22 @@
 
 // IE doesn't support :focus-within
 @include internetExplorerOnly {
-  .euiListGroupItem__button:hover,
-  .euiListGroupItem__button:focus {
-    background-color: $euiListGroupItemHoverBackground;
-    border-radius: $euiBorderRadius;
+  .ouiListGroupItem__button:hover,
+  .ouiListGroupItem__button:focus {
+    background-color: $ouiListGroupItemHoverBackground;
+    border-radius: $ouiBorderRadius;
 
-    .euiListGroupItem--ghost .euiListGroupItem__button:hover,
-    .euiListGroupItem--ghost .euiListGroupItem__button:focus {
-      background-color: $euiListGroupItemHoverBackgroundGhost;
+    .ouiListGroupItem--ghost .ouiListGroupItem__button:hover,
+    .ouiListGroupItem--ghost .ouiListGroupItem__button:focus {
+      background-color: $ouiListGroupItemHoverBackgroundGhost;
     }
   }
 }
 
-.euiListGroupItem__text,
-.euiListGroupItem__button {
-  line-height: $euiSizeL;
-  padding: $euiSizeXS $euiSizeS;
+.ouiListGroupItem__text,
+.ouiListGroupItem__button {
+  line-height: $ouiSizeL;
+  padding: $ouiSizeXS $ouiSizeS;
   display: flex;
   align-items: center;
   flex: 1 0 auto; // The flex-shrink and flex-basis values are needed for IE11
@@ -71,103 +82,103 @@
   max-width: 100%;
   font-weight: inherit;
 
-  .euiListGroupItem-hasExtraAction & {
-    max-width: calc(100% - #{$euiSizeXL});
+  .ouiListGroupItem-hasExtraAction & {
+    max-width: calc(100% - #{$ouiSizeXL});
   }
 
-  @each $colorName, $color in $euiListGroupItemColorTypes {
-    .euiListGroupItem--#{$colorName} &:not(:disabled) {
+  @each $colorName, $color in $ouiListGroupItemColorTypes {
+    .ouiListGroupItem--#{$colorName} &:not(:disabled) {
       color: $color;
     }
   }
 
-  .euiListGroupItem-isActive:not(.euiListGroupItem--ghost) & {
-    color: $euiTextColor;
+  .ouiListGroupItem-isActive:not(.ouiListGroupItem--ghost) & {
+    color: $ouiTextColor;
   }
 }
 
-.euiListGroupItem__label {
+.ouiListGroupItem__label {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.euiListGroupItem__extraAction {
+.ouiListGroupItem__extraAction {
   opacity: 0;
-  margin-right: $euiSizeS;
-  transition: opacity $euiAnimSpeedFast;
+  margin-right: $ouiSizeS;
+  transition: opacity $ouiAnimSpeedFast;
 
-  .euiListGroupItem:not(.euiListGroupItem-isDisabled):focus &,
-  .euiListGroupItem:not(.euiListGroupItem-isDisabled):hover &,
-  &.euiListGroupItem__extraAction-alwaysShow,
+  .ouiListGroupItem:not(.ouiListGroupItem-isDisabled):focus &,
+  .ouiListGroupItem:not(.ouiListGroupItem-isDisabled):hover &,
+  &.ouiListGroupItem__extraAction-alwaysShow,
   &:focus {
     opacity: 1;
   }
 }
 
-.euiListGroupItem__icon {
-  margin-right: $euiSizeM;
+.ouiListGroupItem__icon {
+  margin-right: $ouiSizeM;
   flex-grow: 0;
   flex-shrink: 0;
 }
 
 // Font sizes
-@each $sizeName, $fontSize in $euiListGroupItemSizeTypes {
-  .euiListGroupItem--#{$sizeName} {
+@each $sizeName, $fontSize in $ouiListGroupItemSizeTypes {
+  .ouiListGroupItem--#{$sizeName} {
     font-size: $fontSize;
   }
 }
 
-.euiListGroupItem--xSmall,
-.euiListGroupItem--small {
-  font-weight: $euiFontWeightMedium;
+.ouiListGroupItem--xSmall,
+.ouiListGroupItem--small {
+  font-weight: $ouiFontWeightMedium;
   letter-spacing: 0;
 }
 
-.euiListGroupItem--xSmall {
-  .euiListGroupItem__button,
-  .euiListGroupItem__text {
-    line-height: $euiSize;
+.ouiListGroupItem--xSmall {
+  .ouiListGroupItem__button,
+  .ouiListGroupItem__text {
+    line-height: $ouiSize;
   }
 }
 
-.euiListGroupItem--large {
-  .euiListGroupItem__button,
-  .euiListGroupItem__text {
-    line-height: $euiSizeXL;
+.ouiListGroupItem--large {
+  .ouiListGroupItem__button,
+  .ouiListGroupItem__text {
+    line-height: $ouiSizeXL;
   }
 }
 
-.euiListGroupItem--wrapText {
-  .euiListGroupItem__button,
-  .euiListGroupItem__text {
+.ouiListGroupItem--wrapText {
+  .ouiListGroupItem__button,
+  .ouiListGroupItem__text {
     width: 100%;
     word-break: break-word;
   }
 
-  .euiListGroupItem__label {
+  .ouiListGroupItem__label {
     white-space: inherit;
   }
 }
 
-// Layout alts from euiListGroup
+// Layout alts from ouiListGroup
 
-.euiListGroup-flush .euiListGroupItem {
+.ouiListGroup-flush .ouiListGroupItem {
   border-radius: 0;
 }
 
-.euiListGroup-bordered .euiListGroupItem {
+.ouiListGroup-bordered .ouiListGroupItem {
   &:first-child {
-    border-top-left-radius: $euiBorderRadius;
-    border-top-right-radius: $euiBorderRadius;
+    border-top-left-radius: $ouiBorderRadius;
+    border-top-right-radius: $ouiBorderRadius;
   }
 
   &:last-child {
-    border-bottom-left-radius: $euiBorderRadius;
-    border-bottom-right-radius: $euiBorderRadius;
+    border-bottom-left-radius: $ouiBorderRadius;
+    border-bottom-right-radius: $ouiBorderRadius;
   }
 }
 
-.euiListGroupItem__tooltip {
+.ouiListGroupItem__tooltip {
   width: 100%;
 }

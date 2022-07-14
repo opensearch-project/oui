@@ -1,17 +1,28 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import {
-  EuiFieldSearch,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSideNav,
-  EuiPageSideBar,
-  EuiText,
+  OuiFieldSearch,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSideNav,
+  OuiPageSideBar,
+  OuiText,
 } from '../../../../src/components';
 
-import { EuiHighlight } from '../../../../src/components/highlight';
-import { EuiBadge } from '../../../../src/components/badge';
+import { OuiHighlight } from '../../../../src/components/highlight';
+import { OuiBadge } from '../../../../src/components/badge';
 
 export class GuidePageChrome extends Component {
   _isMounted = false;
@@ -53,13 +64,13 @@ export class GuidePageChrome extends Component {
     // wait a bit for react to blow away and re-create the DOM
     // then scroll the selected nav section into view
     const selectedButton = document.querySelector(
-      '.euiSideNavItemButton-isSelected'
+      '.ouiSideNavItemButton-isSelected'
     );
     if (selectedButton) {
       let root = selectedButton.parentNode;
 
       while (
-        !root.classList.contains('euiSideNavItem--root') &&
+        !root.classList.contains('ouiSideNavItem--root') &&
         !root.classList.contains('guideSideNav')
       ) {
         root = root.parentNode;
@@ -108,11 +119,11 @@ export class GuidePageChrome extends Component {
       let name = title;
       if (searchTerm) {
         name = (
-          <EuiHighlight
+          <OuiHighlight
             className="guideSideNav__item--inSearch"
             search={searchTerm}>
             {title}
-          </EuiHighlight>
+          </OuiHighlight>
         );
       }
 
@@ -159,20 +170,20 @@ export class GuidePageChrome extends Component {
         let newBadge;
         if (isNew) {
           newBadge = (
-            <EuiBadge color="accent" className="guideSideNav__newBadge">
+            <OuiBadge color="accent" className="guideSideNav__newBadge">
               NEW
-            </EuiBadge>
+            </OuiBadge>
           );
         }
 
         let visibleName = name;
         if (searchTerm) {
           visibleName = (
-            <EuiHighlight
+            <OuiHighlight
               className="guideSideNav__item--inSearch"
               search={searchTerm}>
               {name}
-            </EuiHighlight>
+            </OuiHighlight>
           );
         }
 
@@ -209,46 +220,46 @@ export class GuidePageChrome extends Component {
 
     if (sideNav.length) {
       sideNavContent = (
-        <EuiSideNav
+        <OuiSideNav
           mobileTitle="Navigate components"
           toggleOpenOnMobile={this.toggleOpenOnMobile}
           isOpenOnMobile={this.state.isSideNavOpenOnMobile}
           items={sideNav}
-          aria-label="EUI"
+          aria-label="OUI"
         />
       );
     } else {
       sideNavContent = (
-        <EuiText color="subdued" size="s">
+        <OuiText color="subdued" size="s">
           <p>No matches</p>
-        </EuiText>
+        </OuiText>
       );
     }
 
     return (
-      <EuiPageSideBar className="guideSideNav" sticky>
-        <EuiFlexGroup
+      <OuiPageSideBar className="guideSideNav" sticky>
+        <OuiFlexGroup
           style={{ height: '100%' }}
           direction="column"
           responsive={false}
           gutterSize="none">
-          <EuiFlexItem
+          <OuiFlexItem
             role="search"
             grow={false}
             className="guideSideNav__search">
-            <EuiFieldSearch
+            <OuiFieldSearch
               fullWidth
               placeholder="Search"
               value={this.state.search}
               onChange={this.onSearchChange}
               aria-label="Search for a docs section"
             />
-          </EuiFlexItem>
-          <EuiFlexItem className="guideSideNav__content">
+          </OuiFlexItem>
+          <OuiFlexItem className="guideSideNav__content">
             {sideNavContent}
-          </EuiFlexItem>
-        </EuiFlexGroup>
-      </EuiPageSideBar>
+          </OuiFlexItem>
+        </OuiFlexGroup>
+      </OuiPageSideBar>
     );
   }
 }

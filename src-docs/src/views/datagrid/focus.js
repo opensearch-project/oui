@@ -1,18 +1,29 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState, useCallback, useMemo } from 'react';
 import { fake } from 'faker';
 
 import {
-  EuiDataGrid,
-  EuiButtonEmpty,
-  EuiButtonIcon,
-  EuiLink,
-  EuiSwitch,
-  EuiSpacer,
-  EuiBadge,
-  EuiToken,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiDataGrid,
+  OuiButtonEmpty,
+  OuiButtonIcon,
+  OuiLink,
+  OuiSwitch,
+  OuiSpacer,
+  OuiBadge,
+  OuiToken,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components/';
 
 const data = [];
@@ -23,44 +34,44 @@ for (let i = 0; i < 10; i++) {
     <span>{fake('{{name.firstName}}')}</span>,
 
     <span>
-      <EuiLink href="#/tabular-content/data-grid-focus">
+      <OuiLink href="#/tabular-content/data-grid-focus">
         {fake('{{internet.email}}')}
-      </EuiLink>
+      </OuiLink>
     </span>,
     <span>
-      <EuiLink href="#/tabular-content/data-grid-focus">
+      <OuiLink href="#/tabular-content/data-grid-focus">
         {fake('{{internet.email}}')}
-      </EuiLink>
+      </OuiLink>
     </span>,
 
     <span>
-      <EuiButtonEmpty size="xs" onClick={() => {}}>
+      <OuiButtonEmpty size="xs" onClick={() => {}}>
         Yes
-      </EuiButtonEmpty>
-      <EuiButtonEmpty size="xs" color="danger" onClick={() => {}}>
+      </OuiButtonEmpty>
+      <OuiButtonEmpty size="xs" color="danger" onClick={() => {}}>
         No
-      </EuiButtonEmpty>
+      </OuiButtonEmpty>
     </span>,
     <span>
-      <EuiButtonEmpty size="xs" onClick={() => {}}>
+      <OuiButtonEmpty size="xs" onClick={() => {}}>
         Yes
-      </EuiButtonEmpty>
-      <EuiButtonEmpty size="xs" color="danger" onClick={() => {}}>
+      </OuiButtonEmpty>
+      <OuiButtonEmpty size="xs" color="danger" onClick={() => {}}>
         No
-      </EuiButtonEmpty>
+      </OuiButtonEmpty>
     </span>,
   ]);
 }
 
 const renderHeaderIcon = (areHeadersInteractive) =>
   areHeadersInteractive ? (
-    <EuiFlexItem grow={false}>
-      <EuiButtonIcon
+    <OuiFlexItem grow={false}>
+      <OuiButtonIcon
         aria-label="column settings"
         iconType="gear"
         onClick={() => {}}
       />
-    </EuiFlexItem>
+    </OuiFlexItem>
   ) : null;
 
 export default () => {
@@ -75,20 +86,20 @@ export default () => {
       {
         id: 'no-interactives not expandable',
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+          <OuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
             {renderHeaderIcon(areHeadersInteractive)}
-            <EuiFlexItem grow={false}>
-              <EuiToken
+            <OuiFlexItem grow={false}>
+              <OuiToken
                 iconType="expandMini"
-                color="euiColorVis2"
+                color="ouiColorVis2"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>0 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiBadge>0 interactive</OuiBadge>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         ),
         isExpandable: false,
         actions: false,
@@ -96,38 +107,38 @@ export default () => {
       {
         id: 'no-interactives is expandable',
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
-            <EuiFlexItem grow={false}>
-              <EuiToken
+          <OuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+            <OuiFlexItem grow={false}>
+              <OuiToken
                 iconType="expandMini"
-                color="euiColorVis0"
+                color="ouiColorVis0"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>0 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiBadge>0 interactive</OuiBadge>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         ),
         actions: false,
       },
       {
         id: 'one-interactive not expandable',
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
-            <EuiFlexItem grow={false}>
-              <EuiToken
+          <OuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+            <OuiFlexItem grow={false}>
+              <OuiToken
                 iconType="expandMini"
-                color="euiColorVis2"
+                color="ouiColorVis2"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>1 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiBadge>1 interactive</OuiBadge>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         ),
         isExpandable: false,
         actions: false,
@@ -135,20 +146,20 @@ export default () => {
       {
         id: 'one-interactives is expandable',
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+          <OuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
             {renderHeaderIcon(areHeadersInteractive)}
-            <EuiFlexItem grow={false}>
-              <EuiToken
+            <OuiFlexItem grow={false}>
+              <OuiToken
                 iconType="expandMini"
-                color="euiColorVis0"
+                color="ouiColorVis0"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>1 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiBadge>1 interactive</OuiBadge>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         ),
         actions: false,
       },
@@ -156,19 +167,19 @@ export default () => {
         id: 'two-interactives not expandable',
 
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
-            <EuiFlexItem grow={false}>
-              <EuiToken
+          <OuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+            <OuiFlexItem grow={false}>
+              <OuiToken
                 iconType="expandMini"
-                color="euiColorVis2"
+                color="ouiColorVis2"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>2 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiBadge>2 interactive</OuiBadge>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         ),
         isExpandable: false,
         actions: false,
@@ -177,19 +188,19 @@ export default () => {
         id: 'two-interactives is expandable',
 
         display: (
-          <EuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
-            <EuiFlexItem grow={false}>
-              <EuiToken
+          <OuiFlexGroup alignItems="center" gutterSize="xs" responsive={false}>
+            <OuiFlexItem grow={false}>
+              <OuiToken
                 iconType="expandMini"
-                color="euiColorVis0"
+                color="ouiColorVis0"
                 shape="square"
                 fill="dark"
               />
-            </EuiFlexItem>
-            <EuiFlexItem grow={false}>
-              <EuiBadge>2 interactive</EuiBadge>
-            </EuiFlexItem>
-          </EuiFlexGroup>
+            </OuiFlexItem>
+            <OuiFlexItem grow={false}>
+              <OuiBadge>2 interactive</OuiBadge>
+            </OuiFlexItem>
+          </OuiFlexGroup>
         ),
         actions: false,
       },
@@ -230,17 +241,17 @@ export default () => {
 
   return (
     <>
-      <EuiSwitch
+      <OuiSwitch
         label="Use interactive headers - toggling will reset the datagrid and any internal states"
         checked={areHeadersInteractive}
         onChange={switchInteractiveHeaders}
       />
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiDataGrid
+      <OuiDataGrid
         key={areHeadersInteractive ? 'interactive-headers' : 'static-headers'}
-        aria-label="Top EUI contributors"
+        aria-label="Top OUI contributors"
         columns={columns}
         columnVisibility={{ visibleColumns, setVisibleColumns }}
         rowCount={data.length}

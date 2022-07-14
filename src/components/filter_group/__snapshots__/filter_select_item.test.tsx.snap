@@ -1,25 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFilterSelectItem is rendered 1`] = `
+exports[`OuiFilterSelectItem is rendered 1`] = `
 <button
   aria-label="aria-label"
-  class="euiFilterSelectItem testClass1 testClass2"
+  class="ouiFilterSelectItem testClass1 testClass2"
   data-test-subj="test subject string"
   role="option"
   type="button"
 >
   <span
-    class="euiFlexGroup euiFlexGroup--gutterSmall euiFlexGroup--alignItemsCenter euiFlexGroup--directionRow"
+    class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
-        data-euiicon-type="empty"
+        data-ouiicon-type="empty"
       />
     </div>
     <span
-      class="euiFlexItem euiFilterSelectItem__content"
+      class="ouiFlexItem ouiFilterSelectItem__content"
     />
   </span>
 </button>

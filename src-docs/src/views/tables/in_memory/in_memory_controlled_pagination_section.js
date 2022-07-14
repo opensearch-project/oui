@@ -1,22 +1,33 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
-import { EuiCode } from '../../../../../src/components';
+import { OuiCode } from '../../../../../src/components';
 import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
 import { Table } from './in_memory_controlled_pagination';
 
-import { EuiInMemoryTable } from '../../../../../src/components/basic_table/in_memory_table';
+import { OuiInMemoryTable } from '../../../../../src/components/basic_table/in_memory_table';
 import {
   Criteria,
   CriteriaWithPagination,
 } from '!!prop-loader!../../../../../src/components/basic_table/basic_table';
 import { Pagination } from '!!prop-loader!../../../../../src/components/basic_table/pagination_bar';
 import {
-  EuiTableFieldDataColumnType,
-  EuiTableComputedColumnType,
-  EuiTableActionsColumnType,
-  EuiTableSelectionType,
-  EuiTableSortingType,
+  OuiTableFieldDataColumnType,
+  OuiTableComputedColumnType,
+  OuiTableActionsColumnType,
+  OuiTableSelectionType,
+  OuiTableSortingType,
 } from '!!prop-loader!../../../../../src/components/basic_table/table_types';
 import { CustomItemAction } from '!!prop-loader!../../../../../src/components/basic_table/action_types';
 import {
@@ -45,13 +56,13 @@ export const controlledPaginationSection = {
   text: (
     <div>
       <p>
-        By default <EuiCode>EuiInMemoryTable</EuiCode> resets its page index
-        when receiving a new <EuiCode>EuiInMemoryTable</EuiCode> array. To avoid
+        By default <OuiCode>OuiInMemoryTable</OuiCode> resets its page index
+        when receiving a new <OuiCode>OuiInMemoryTable</OuiCode> array. To avoid
         this behavior the pagination object optionally takes a
-        <EuiCode>pageIndex</EuiCode> value to control this yourself.
-        Additionally, <EuiCode>pageSize</EuiCode> can also be controlled the
+        <OuiCode>pageIndex</OuiCode> value to control this yourself.
+        Additionally, <OuiCode>pageSize</OuiCode> can also be controlled the
         same way. Both of these are provided to your app during the
-        <EuiCode>onTableChange</EuiCode> callback.
+        <OuiCode>onTableChange</OuiCode> callback.
       </p>
       <p>
         The example below updates the array of users every second, randomly
@@ -61,15 +72,15 @@ export const controlledPaginationSection = {
     </div>
   ),
   props: {
-    EuiInMemoryTable,
+    OuiInMemoryTable,
     Criteria,
     CriteriaWithPagination,
     Pagination,
-    EuiTableSortingType,
-    EuiTableSelectionType,
-    EuiTableFieldDataColumnType,
-    EuiTableComputedColumnType,
-    EuiTableActionsColumnType,
+    OuiTableSortingType,
+    OuiTableSelectionType,
+    OuiTableFieldDataColumnType,
+    OuiTableComputedColumnType,
+    OuiTableActionsColumnType,
     DefaultItemAction,
     CustomItemAction,
     Search,

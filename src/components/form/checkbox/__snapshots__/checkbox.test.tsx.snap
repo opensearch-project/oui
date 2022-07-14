@@ -1,68 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCheckbox is rendered 1`] = `
+exports[`OuiCheckbox is rendered 1`] = `
 <div
-  class="euiCheckbox euiCheckbox--noLabel testClass1 testClass2"
+  class="ouiCheckbox ouiCheckbox--noLabel testClass1 testClass2"
 >
   <input
     aria-label="aria-label"
-    class="euiCheckbox__input"
+    class="ouiCheckbox__input"
     data-test-subj="test subject string"
     id="id"
     type="checkbox"
   />
   <div
-    class="euiCheckbox__square"
+    class="ouiCheckbox__square"
   />
 </div>
 `;
 
-exports[`EuiCheckbox props check is rendered 1`] = `
+exports[`OuiCheckbox props check is rendered 1`] = `
 <div
-  class="euiCheckbox euiCheckbox--noLabel"
+  class="ouiCheckbox ouiCheckbox--noLabel"
 >
   <input
     checked=""
-    class="euiCheckbox__input"
+    class="ouiCheckbox__input"
     id="id"
     type="checkbox"
   />
   <div
-    class="euiCheckbox__square"
+    class="ouiCheckbox__square"
   />
 </div>
 `;
 
-exports[`EuiCheckbox props disabled disabled is rendered 1`] = `
+exports[`OuiCheckbox props disabled disabled is rendered 1`] = `
 <div
-  class="euiCheckbox euiCheckbox--noLabel"
+  class="ouiCheckbox ouiCheckbox--noLabel"
 >
   <input
-    class="euiCheckbox__input"
+    class="ouiCheckbox__input"
     disabled=""
     id="id"
     type="checkbox"
   />
   <div
-    class="euiCheckbox__square"
+    class="ouiCheckbox__square"
   />
 </div>
 `;
 
-exports[`EuiCheckbox props label is rendered 1`] = `
+exports[`OuiCheckbox props label is rendered 1`] = `
 <div
-  class="euiCheckbox"
+  class="ouiCheckbox"
 >
   <input
-    class="euiCheckbox__input"
+    class="ouiCheckbox__input"
     id="id"
     type="checkbox"
   />
   <div
-    class="euiCheckbox__square"
+    class="ouiCheckbox__square"
   />
   <label
-    class="euiCheckbox__label"
+    class="ouiCheckbox__label"
     for="id"
   >
     <span>
@@ -72,21 +72,21 @@ exports[`EuiCheckbox props label is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiCheckbox props labelProps is rendered 1`] = `
+exports[`OuiCheckbox props labelProps is rendered 1`] = `
 <div
-  class="euiCheckbox"
+  class="ouiCheckbox"
 >
   <input
-    class="euiCheckbox__input"
+    class="ouiCheckbox__input"
     id="id"
     type="checkbox"
   />
   <div
-    class="euiCheckbox__square"
+    class="ouiCheckbox__square"
   />
   <label
     aria-label="aria-label"
-    class="euiCheckbox__label testClass1 testClass2"
+    class="ouiCheckbox__label testClass1 testClass2"
     data-test-subj="test subject string"
     for="id"
   >
@@ -95,17 +95,17 @@ exports[`EuiCheckbox props labelProps is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiCheckbox props type inList is rendered 1`] = `
+exports[`OuiCheckbox props type inList is rendered 1`] = `
 <div
-  class="euiCheckbox euiCheckbox--inList euiCheckbox--noLabel"
+  class="ouiCheckbox ouiCheckbox--inList ouiCheckbox--noLabel"
 >
   <input
-    class="euiCheckbox__input"
+    class="ouiCheckbox__input"
     id="id"
     type="checkbox"
   />
   <div
-    class="euiCheckbox__square"
+    class="ouiCheckbox__square"
   />
 </div>
 `;

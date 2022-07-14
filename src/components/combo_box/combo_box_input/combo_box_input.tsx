@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -26,23 +37,23 @@ import React, {
 import classNames from 'classnames';
 import AutosizeInput from 'react-input-autosize';
 
-import { EuiScreenReaderOnly } from '../../accessibility';
+import { OuiScreenReaderOnly } from '../../accessibility';
 import {
-  EuiFormControlLayout,
-  EuiFormControlLayoutProps,
+  OuiFormControlLayout,
+  OuiFormControlLayoutProps,
 } from '../../form/form_control_layout';
-import { EuiComboBoxPill } from './combo_box_pill';
+import { OuiComboBoxPill } from './combo_box_pill';
 import { htmlIdGenerator } from '../../../services';
-import { EuiFormControlLayoutIconsProps } from '../../form/form_control_layout/form_control_layout_icons';
+import { OuiFormControlLayoutIconsProps } from '../../form/form_control_layout/form_control_layout_icons';
 import {
-  EuiComboBoxOptionOption,
-  EuiComboBoxSingleSelectionShape,
+  OuiComboBoxOptionOption,
+  OuiComboBoxSingleSelectionShape,
   OptionHandler,
   UpdatePositionHandler,
 } from '../types';
 import { CommonProps } from '../../common';
 
-export interface EuiComboBoxInputProps<T> extends CommonProps {
+export interface OuiComboBoxInputProps<T> extends CommonProps {
   autoSizeInputRef?: RefCallback<AutosizeInput & HTMLInputElement>;
   compressed: boolean;
   focusedOptionId?: string;
@@ -64,26 +75,26 @@ export interface EuiComboBoxInputProps<T> extends CommonProps {
   placeholder?: string;
   rootId: ReturnType<typeof htmlIdGenerator>;
   searchValue: string;
-  selectedOptions?: Array<EuiComboBoxOptionOption<T>>;
-  singleSelection?: boolean | EuiComboBoxSingleSelectionShape;
+  selectedOptions?: Array<OuiComboBoxOptionOption<T>>;
+  singleSelection?: boolean | OuiComboBoxSingleSelectionShape;
   toggleButtonRef?: RefCallback<HTMLButtonElement | HTMLSpanElement>;
   updatePosition: UpdatePositionHandler;
   value?: string;
-  prepend?: EuiFormControlLayoutProps['prepend'];
-  append?: EuiFormControlLayoutProps['append'];
+  prepend?: OuiFormControlLayoutProps['prepend'];
+  append?: OuiFormControlLayoutProps['append'];
   isLoading?: boolean;
   autoFocus?: boolean;
 }
 
-interface EuiComboBoxInputState {
+interface OuiComboBoxInputState {
   hasFocus: boolean;
 }
 
-export class EuiComboBoxInput<T> extends Component<
-  EuiComboBoxInputProps<T>,
-  EuiComboBoxInputState
+export class OuiComboBoxInput<T> extends Component<
+  OuiComboBoxInputProps<T>,
+  OuiComboBoxInputState
 > {
-  state: EuiComboBoxInputState = {
+  state: OuiComboBoxInputState = {
     hasFocus: false,
   };
 
@@ -110,7 +121,7 @@ export class EuiComboBoxInput<T> extends Component<
     });
   };
 
-  componentDidUpdate(prevProps: EuiComboBoxInputProps<T>) {
+  componentDidUpdate(prevProps: OuiComboBoxInputProps<T>) {
     const { searchValue } = prevProps;
 
     // We need to update the position of everything if the user enters enough input to change
@@ -178,7 +189,7 @@ export class EuiComboBoxInput<T> extends Component<
               ? undefined
               : onRemoveOption;
           return (
-            <EuiComboBoxPill
+            <OuiComboBoxPill
               option={option}
               onClose={pillOnClose}
               key={key ?? label.toLowerCase()}
@@ -188,7 +199,7 @@ export class EuiComboBoxInput<T> extends Component<
               asPlainText={asPlainText}
               {...rest}>
               {label}
-            </EuiComboBoxPill>
+            </OuiComboBoxPill>
           );
         })
       : null;
@@ -217,11 +228,11 @@ export class EuiComboBoxInput<T> extends Component<
       // We'll use aria-hidden to prevent default aria information from being read by the screen
       // reader.
       removeOptionMessage = (
-        <EuiScreenReaderOnly>
+        <OuiScreenReaderOnly>
           <span aria-live="assertive" id={removeOptionMessageId}>
             {removeOptionMessageContent}
           </span>
-        </EuiScreenReaderOnly>
+        </OuiScreenReaderOnly>
       );
     }
 
@@ -234,11 +245,11 @@ export class EuiComboBoxInput<T> extends Component<
       !searchValue
     ) {
       placeholderMessage = (
-        <p className="euiComboBoxPlaceholder">{placeholder}</p>
+        <p className="ouiComboBoxPlaceholder">{placeholder}</p>
       );
     }
 
-    const clickProps: EuiFormControlLayoutIconsProps = {};
+    const clickProps: OuiFormControlLayoutIconsProps = {};
     if (!isDisabled && onClear && hasSelectedOptions) {
       clickProps.clear = {
         'data-test-subj': 'comboBoxClearButton',
@@ -246,7 +257,7 @@ export class EuiComboBoxInput<T> extends Component<
       };
     }
 
-    let icon: EuiFormControlLayoutIconsProps['icon'];
+    let icon: OuiFormControlLayoutIconsProps['icon'];
     if (!noIcon) {
       icon = {
         'aria-label': isListOpen
@@ -261,17 +272,17 @@ export class EuiComboBoxInput<T> extends Component<
       };
     }
 
-    const wrapClasses = classNames('euiComboBox__inputWrap', {
-      'euiComboBox__inputWrap--compressed': compressed,
-      'euiComboBox__inputWrap--fullWidth': fullWidth,
-      'euiComboBox__inputWrap--noWrap': singleSelection,
-      'euiComboBox__inputWrap-isLoading': isLoading,
-      'euiComboBox__inputWrap-isClearable': onClear,
-      'euiComboBox__inputWrap--inGroup': prepend || append,
+    const wrapClasses = classNames('ouiComboBox__inputWrap', {
+      'ouiComboBox__inputWrap--compressed': compressed,
+      'ouiComboBox__inputWrap--fullWidth': fullWidth,
+      'ouiComboBox__inputWrap--noWrap': singleSelection,
+      'ouiComboBox__inputWrap-isLoading': isLoading,
+      'ouiComboBox__inputWrap-isClearable': onClear,
+      'ouiComboBox__inputWrap--inGroup': prepend || append,
     });
 
     return (
-      <EuiFormControlLayout
+      <OuiFormControlLayout
         icon={icon}
         {...clickProps}
         isLoading={isLoading}
@@ -290,7 +301,7 @@ export class EuiComboBoxInput<T> extends Component<
           <AutosizeInput
             aria-activedescendant={focusedOptionId}
             aria-controls={isListOpen ? rootId('listbox') : ''}
-            className="euiComboBox__input"
+            className="ouiComboBox__input"
             data-test-subj="comboBoxSearchInput"
             disabled={isDisabled}
             id={id}
@@ -306,7 +317,7 @@ export class EuiComboBoxInput<T> extends Component<
           />
           {removeOptionMessage}
         </div>
-      </EuiFormControlLayout>
+      </OuiFormControlLayout>
     );
   }
 }

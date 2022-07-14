@@ -1,63 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTabs props display condensed is rendered 1`] = `
+exports[`OuiTabs props display condensed is rendered 1`] = `
 <div
-  class="euiTabs euiTabs--condensed"
+  class="ouiTabs ouiTabs--condensed"
   role="tablist"
 >
   children
 </div>
 `;
 
-exports[`EuiTabs props display default is rendered 1`] = `
+exports[`OuiTabs props display default is rendered 1`] = `
 <div
-  class="euiTabs"
+  class="ouiTabs"
   role="tablist"
 >
   children
 </div>
 `;
 
-exports[`EuiTabs props expand is rendered 1`] = `
+exports[`OuiTabs props expand is rendered 1`] = `
 <div
-  class="euiTabs euiTabs--expand"
+  class="ouiTabs ouiTabs--expand"
   role="tablist"
 >
   children
 </div>
 `;
 
-exports[`EuiTabs props size l is rendered 1`] = `
+exports[`OuiTabs props size l is rendered 1`] = `
 <div
-  class="euiTabs euiTabs--large"
+  class="ouiTabs ouiTabs--large"
   role="tablist"
 >
   children
 </div>
 `;
 
-exports[`EuiTabs props size m is rendered 1`] = `
+exports[`OuiTabs props size m is rendered 1`] = `
 <div
-  class="euiTabs"
+  class="ouiTabs"
   role="tablist"
 >
   children
 </div>
 `;
 
-exports[`EuiTabs props size s is rendered 1`] = `
+exports[`OuiTabs props size s is rendered 1`] = `
 <div
-  class="euiTabs euiTabs--small"
+  class="ouiTabs ouiTabs--small"
   role="tablist"
 >
   children
 </div>
 `;
 
-exports[`EuiTabs renders 1`] = `
+exports[`OuiTabs renders 1`] = `
 <div
   aria-label="aria-label"
-  class="euiTabs testClass1 testClass2"
+  class="ouiTabs testClass1 testClass2"
   data-test-subj="test subject string"
   role="tablist"
 >

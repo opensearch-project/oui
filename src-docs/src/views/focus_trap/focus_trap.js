@@ -1,12 +1,23 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiBadge,
-  EuiButton,
-  EuiFocusTrap,
-  EuiPanel,
-  EuiSpacer,
-  EuiText,
+  OuiBadge,
+  OuiButton,
+  OuiFocusTrap,
+  OuiPanel,
+  OuiSpacer,
+  OuiText,
 } from '../../../../src/components';
 
 import FormExample from '../form_compressed/form_compressed';
@@ -18,28 +29,28 @@ export default () => {
 
   return (
     <div>
-      <EuiBadge>Trap is {isDisabled ? 'disabled' : 'enabled'}</EuiBadge>
-      <EuiSpacer size="s" />
-      <EuiFocusTrap disabled={isDisabled}>
-        <EuiPanel>
+      <OuiBadge>Trap is {isDisabled ? 'disabled' : 'enabled'}</OuiBadge>
+      <OuiSpacer size="s" />
+      <OuiFocusTrap disabled={isDisabled}>
+        <OuiPanel>
           <FormExample />
 
-          <EuiSpacer size="m" />
+          <OuiSpacer size="m" />
 
-          <EuiButton onClick={toggleDisabled}>
+          <OuiButton onClick={toggleDisabled}>
             {`${!isDisabled ? 'Disable' : 'Enable'} Focus Trap`}
-          </EuiButton>
-        </EuiPanel>
-      </EuiFocusTrap>
+          </OuiButton>
+        </OuiPanel>
+      </OuiFocusTrap>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiText>
+      <OuiText>
         The button below is not focusable by keyboard as long as the focus trap
         is enabled.
-      </EuiText>
+      </OuiText>
 
-      <EuiButton onClick={() => {}}>External Focusable Element</EuiButton>
+      <OuiButton onClick={() => {}}>External Focusable Element</OuiButton>
     </div>
   );
 };

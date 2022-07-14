@@ -1,14 +1,25 @@
-.euiResizablePanel {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiResizablePanel {
   position: relative;
 }
 
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiResizablePanel--#{$modifier} {
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiResizablePanel--#{$modifier} {
     padding: $amount;
   }
 }
 
-.euiResizablePanel__content {
+.ouiResizablePanel__content {
   height: 100%;
 
   // Manually remove the border for default theme
@@ -17,35 +28,35 @@
   }
 }
 
-.euiResizablePanel__content--scrollable {
-  @include euiScrollBar;
+.ouiResizablePanel__content--scrollable {
+  @include ouiScrollBar;
   overflow-y: auto;
 }
 
-.euiResizablePanel-isCollapsed {
+.ouiResizablePanel-isCollapsed {
   overflow: hidden;
 
-  .euiResizablePanel__content * {
+  .ouiResizablePanel__content * {
     display: none;
   }
 }
 
-.euiResizableContainer--horizontal {
-  .euiResizablePanel-isCollapsed {
+.ouiResizableContainer--horizontal {
+  .ouiResizablePanel-isCollapsed {
     min-width: 0 !important; // sass-lint:disable-line no-important
   }
 
-  .euiResizablePanel--collapsible.euiResizablePanel-isCollapsed {
-    min-width: $euiSizeL !important; // sass-lint:disable-line no-important
+  .ouiResizablePanel--collapsible.ouiResizablePanel-isCollapsed {
+    min-width: $ouiSizeL !important; // sass-lint:disable-line no-important
   }
 }
 
-.euiResizableContainer--vertical {
-  .euiResizablePanel-isCollapsed {
+.ouiResizableContainer--vertical {
+  .ouiResizablePanel-isCollapsed {
     min-height: 0 !important; // sass-lint:disable-line no-important
   }
 
-  .euiResizablePanel--collapsible.euiResizablePanel-isCollapsed {
-    min-height: $euiSizeL !important; // sass-lint:disable-line no-important
+  .ouiResizablePanel--collapsible.ouiResizablePanel-isCollapsed {
+    min-height: $ouiSizeL !important; // sass-lint:disable-line no-important
   }
 }

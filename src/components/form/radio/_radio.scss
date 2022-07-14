@@ -1,31 +1,42 @@
-.euiRadio {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiRadio {
   position: relative;
 
-  .euiRadio__input {
-    @include euiScreenReaderOnly;
+  .ouiRadio__input {
+    @include ouiScreenReaderOnly;
 
-    ~ .euiRadio__label {
+    ~ .ouiRadio__label {
       display: inline-block;
-      padding-left: ($euiRadioSize * 1.5);
-      line-height: $euiSizeL;
-      font-size: $euiFontSizeS;
+      padding-left: ($ouiRadioSize * 1.5);
+      line-height: $ouiSizeL;
+      font-size: $ouiFontSizeS;
       position: relative;
       z-index: 2;
       cursor: pointer;
     }
 
-    + .euiRadio__circle {
-      @include euiCustomControl($type: 'round', $size: $euiRadioSize);
+    + .ouiRadio__circle {
+      @include ouiCustomControl($type: 'round', $size: $ouiRadioSize);
 
       display: inline-block;
       position: absolute;
       left: 0;
-      top: (($euiSizeL - $euiRadioSize) / 2) - 1px;
+      top: (($ouiSizeL - $ouiRadioSize) / 2) - 1px;
     }
 
     &:checked {
-      + .euiRadio__circle {
-        @include euiCustomControlSelected($type: 'dot');
+      + .ouiRadio__circle {
+        @include ouiCustomControlSelected($type: 'dot');
       }
     }
 
@@ -33,26 +44,26 @@
       //sass-lint:disable no-important
       cursor: not-allowed !important;
 
-      ~ .euiRadio__label {
-        color: $euiFormControlDisabledColor;
+      ~ .ouiRadio__label {
+        color: $ouiFormControlDisabledColor;
         cursor: not-allowed !important;
       }
 
-      + .euiRadio__circle {
-        @include euiCustomControlDisabled;
+      + .ouiRadio__circle {
+        @include ouiCustomControlDisabled;
       }
     }
 
     &:checked[disabled] {
-      + .euiRadio__circle {
-        @include euiCustomControlDisabled($type: 'dot');
+      + .ouiRadio__circle {
+        @include ouiCustomControlDisabled($type: 'dot');
       }
     }
 
     &:focus,
     &:active:not(:disabled) {
-      + .euiRadio__circle {
-        @include euiCustomControlFocused;
+      + .ouiRadio__circle {
+        @include ouiCustomControlFocused;
       }
     }
   }
@@ -62,17 +73,17 @@
    *    they actually click this input.
    */
 
-  &.euiRadio--inList,
-  &.euiRadio--noLabel {
-    min-height: $euiRadioSize;
-    min-width: $euiRadioSize;
+  &.ouiRadio--inList,
+  &.ouiRadio--noLabel {
+    min-height: $ouiRadioSize;
+    min-width: $ouiRadioSize;
 
-    .euiRadio__circle {
+    .ouiRadio__circle {
       top: 0;
     }
 
-    .euiRadio__input {
-      @include size($euiRadioSize); /* 1 */
+    .ouiRadio__input {
+      @include size($ouiRadioSize); /* 1 */
 
       position: absolute; /* 1 */
       opacity: 0; /* 1 */

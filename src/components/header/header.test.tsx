@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,20 +32,20 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiHeader } from './header';
+import { OuiHeader } from './header';
 
-describe('EuiHeader', () => {
+describe('OuiHeader', () => {
   test('is rendered', () => {
-    const component = render(<EuiHeader {...requiredProps} />);
+    const component = render(<OuiHeader {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders children', () => {
     const component = render(
-      <EuiHeader>
+      <OuiHeader>
         <span>Hello!</span>
-      </EuiHeader>
+      </OuiHeader>
     );
 
     expect(component).toMatchSnapshot();
@@ -42,16 +53,16 @@ describe('EuiHeader', () => {
 
   test('renders in fixed position', () => {
     const component = render(
-      <EuiHeader position="fixed">
+      <OuiHeader position="fixed">
         <span>Hello!</span>
-      </EuiHeader>
+      </OuiHeader>
     );
 
     expect(component).toMatchSnapshot();
   });
 
   test('renders dark theme', () => {
-    const component = render(<EuiHeader theme="dark" />);
+    const component = render(<OuiHeader theme="dark" />);
 
     expect(component).toMatchSnapshot();
   });
@@ -59,7 +70,7 @@ describe('EuiHeader', () => {
   describe('sections', () => {
     test('render simple items and borders', () => {
       const component = render(
-        <EuiHeader
+        <OuiHeader
           sections={[
             {
               items: ['Item 1', 'Item 2'],
@@ -77,7 +88,7 @@ describe('EuiHeader', () => {
 
     test('render breadcrumbs and props', () => {
       const component = render(
-        <EuiHeader
+        <OuiHeader
           sections={[
             {
               breadcrumbs: [{ text: 'Breadcrumb' }],
@@ -96,7 +107,7 @@ describe('EuiHeader', () => {
     let consoleStub: jest.Mock;
 
     beforeEach(() => {
-      // We don't use jest.spyOn() here, because EUI's tests apply a global
+      // We don't use jest.spyOn() here, because OUI's tests apply a global
       // console.error() override that throws an exception. For these
       // tests, we just want to know if console.error() was called.
       console.warn = consoleStub = jest.fn();
@@ -108,14 +119,14 @@ describe('EuiHeader', () => {
 
     test('if both children and sections were passed', () => {
       const component = render(
-        <EuiHeader
+        <OuiHeader
           sections={[
             {
               items: ['Item 1', 'Item 2'],
             },
           ]}>
           Child
-        </EuiHeader>
+        </OuiHeader>
       );
 
       expect(consoleStub).toBeCalled();

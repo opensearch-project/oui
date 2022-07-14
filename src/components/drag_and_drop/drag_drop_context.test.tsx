@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,8 +34,8 @@ import { mount, ReactWrapper } from 'enzyme';
 import { findTestSubject } from '../../test';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiDragDropContext } from './';
-import { EuiDragDropContextContext } from './drag_drop_context';
+import { OuiDragDropContext } from './';
+import { OuiDragDropContextContext } from './drag_drop_context';
 
 function snapshotDragDropContext(component: ReactWrapper) {
   // Get the Portal's sibling and return its html
@@ -34,13 +45,13 @@ function snapshotDragDropContext(component: ReactWrapper) {
   return container.firstChild;
 }
 
-describe('EuiDragDropContext', () => {
+describe('OuiDragDropContext', () => {
   test('is rendered', () => {
     const handler = jest.fn();
     const component = mount(
-      <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
+      <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <div />
-      </EuiDragDropContext>
+      </OuiDragDropContext>
     );
 
     expect(snapshotDragDropContext(component)).toMatchSnapshot();
@@ -58,15 +69,15 @@ describe('EuiDragDropContext', () => {
         });
         const handler = jest.fn();
         const component = mount(
-          <EuiDragDropContext onDragEnd={handler} {...requiredProps}>
-            <EuiDragDropContextContext.Consumer>
+          <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
+            <OuiDragDropContextContext.Consumer>
               {(value) => (
                 <div data-test-subj="child">
                   {value.hasOwnProperty('isDraggingType') ? 'true' : 'false'}
                 </div>
               )}
-            </EuiDragDropContextContext.Consumer>
-          </EuiDragDropContext>
+            </OuiDragDropContextContext.Consumer>
+          </OuiDragDropContext>
         );
 
         expect(findTestSubject(component, 'child').text()).toBe('true');

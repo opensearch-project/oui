@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { Link } from 'react-router-dom';
@@ -7,27 +18,27 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiBadge,
-  EuiCallOut,
-  EuiCheckbox,
-  EuiCheckboxGroup,
-  EuiCode,
-  EuiFieldNumber,
-  EuiFieldPassword,
-  EuiFieldSearch,
-  EuiFieldText,
-  EuiFilePicker,
-  EuiFormFieldset,
-  EuiFormLegend,
-  EuiFormControlLayout,
-  EuiFormControlLayoutDelimited,
-  EuiLink,
-  EuiRadio,
-  EuiRadioGroup,
-  EuiSelect,
-  EuiSwitch,
-  EuiTextArea,
-  EuiSpacer,
+  OuiBadge,
+  OuiCallOut,
+  OuiCheckbox,
+  OuiCheckboxGroup,
+  OuiCode,
+  OuiFieldNumber,
+  OuiFieldPassword,
+  OuiFieldSearch,
+  OuiFieldText,
+  OuiFilePicker,
+  OuiFormFieldset,
+  OuiFormLegend,
+  OuiFormControlLayout,
+  OuiFormControlLayoutDelimited,
+  OuiLink,
+  OuiRadio,
+  OuiRadioGroup,
+  OuiSelect,
+  OuiSwitch,
+  OuiTextArea,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import {
@@ -45,7 +56,7 @@ import FieldSearch from './field_search';
 const fieldSearchSource = require('!!raw-loader!./field_search');
 const fieldSearchHtml = renderToHtml(FieldSearch);
 const fieldSearchSnippet = [
-  `<EuiFieldSearch
+  `<OuiFieldSearch
   placeholder="Search this"
   value={value}
   isClearable={isClearable}
@@ -57,7 +68,7 @@ import FieldText from './field_text';
 const fieldTextSource = require('!!raw-loader!./field_text');
 const fieldTextHtml = renderToHtml(FieldText);
 const fieldTextSnippet = [
-  `<EuiFieldText
+  `<OuiFieldText
   placeholder="Placeholder text"
   value={value}
   onChange={onChange}
@@ -68,7 +79,7 @@ import FieldNumber from './field_number';
 const fieldNumberSource = require('!!raw-loader!./field_number');
 const fieldNumberHtml = renderToHtml(FieldNumber);
 const fieldNumberSnippet = [
-  `<EuiFieldNumber
+  `<OuiFieldNumber
   placeholder="Placeholder text"
   value={value}
   onChange={onChange}
@@ -79,7 +90,7 @@ import FieldPassword from './field_password';
 const fieldPasswordSource = require('!!raw-loader!./field_password');
 const fieldPasswordHtml = renderToHtml(FieldPassword);
 const fieldPasswordSnippet = [
-  `<EuiFieldPassword
+  `<OuiFieldPassword
   placeholder="Placeholder text"
   value={value}
   onChange={onChange}
@@ -91,7 +102,7 @@ import TextArea from './text_area';
 const textAreaSource = require('!!raw-loader!./text_area');
 const textAreaHtml = renderToHtml(TextArea);
 const textAreaSnippet = [
-  `<EuiTextArea
+  `<OuiTextArea
   placeholder="Placeholder text"
   value={value}
   onChange={onChange}
@@ -102,7 +113,7 @@ import FilePicker from './file_picker';
 const filePickerSource = require('!!raw-loader!./file_picker');
 const filePickerHtml = renderToHtml(FilePicker);
 const filePickerSnippet = [
-  `<EuiFilePicker
+  `<OuiFilePicker
   id={filePickerId}
   multiple
   initialPromptText="content that appears in the dropzone if no file is attached"
@@ -114,7 +125,7 @@ import Select from './select';
 const selectSource = require('!!raw-loader!./select');
 const selectHtml = renderToHtml(Select);
 const selectSnippet = [
-  `<EuiSelect
+  `<OuiSelect
   options={[
     {
       value: 'option_one',
@@ -130,13 +141,13 @@ import Checkbox from './checkbox';
 const checkboxSource = require('!!raw-loader!./checkbox');
 const checkboxHtml = renderToHtml(Checkbox);
 const checkboxSnippet = [
-  `<EuiCheckbox
+  `<OuiCheckbox
   id={checkboxId}
   label="I am a checkbox"
   checked={checked}
   onChange={onChange}
 />`,
-  `<EuiCheckbox
+  `<OuiCheckbox
   id={checkboxId}
   label="I am an indeterminate checkbox"
   indeterminate={indeterminate}
@@ -152,7 +163,7 @@ import Radio from './radio';
 const radioSource = require('!!raw-loader!./radio');
 const radioHtml = renderToHtml(Radio);
 const radioSnippet = [
-  `<EuiRadio
+  `<OuiRadio
   label="I am a radio"
   checked={checked}
   onChange={onChange}
@@ -167,7 +178,7 @@ import Switch from './switch';
 const switchSource = require('!!raw-loader!./switch');
 const switchHtml = renderToHtml(Switch);
 const switchSnippet = [
-  `<EuiSwitch
+  `<OuiSwitch
   label="I am a switch"
   checked={checked}
   onChange={onChange}
@@ -207,7 +218,7 @@ export const FormControlsExample = {
       ],
       snippet: fieldTextSnippet,
       props: {
-        EuiFieldText,
+        OuiFieldText,
       },
       demo: <FieldText />,
       playground: FieldTextConfig,
@@ -226,7 +237,7 @@ export const FormControlsExample = {
       ],
       snippet: fieldSearchSnippet,
       props: {
-        EuiFieldSearch,
+        OuiFieldSearch,
       },
       demo: <FieldSearch />,
       playground: FieldSearchConfig,
@@ -245,7 +256,7 @@ export const FormControlsExample = {
       ],
       snippet: fieldNumberSnippet,
       props: {
-        EuiFieldNumber,
+        OuiFieldNumber,
       },
       demo: <FieldNumber />,
       playground: FieldNumberConfig,
@@ -264,7 +275,7 @@ export const FormControlsExample = {
       ],
       snippet: fieldPasswordSnippet,
       props: {
-        EuiFieldPassword,
+        OuiFieldPassword,
       },
       demo: <FieldPassword />,
       playground: FieldPasswordConfig,
@@ -284,15 +295,15 @@ export const FormControlsExample = {
       text: (
         <p>
           This component renders a basic HTML{' '}
-          <EuiCode language="html">&lt;select&gt;</EuiCode> element. If you need
+          <OuiCode language="html">&lt;select&gt;</OuiCode> element. If you need
           more customization for how the options and/or selected values render,
           use the{' '}
           <Link to="/forms/super-select">
-            <strong>EuiSuperSelect</strong>
+            <strong>OuiSuperSelect</strong>
           </Link>
           . Another option is to use the{' '}
           <Link to="/forms/combo-box">
-            <strong>EuiComboBox</strong>
+            <strong>OuiComboBox</strong>
           </Link>
           , which has search and multi-select capabilities, but also has
           restrictions on how items are rendered.
@@ -300,7 +311,7 @@ export const FormControlsExample = {
       ),
       snippet: selectSnippet,
       props: {
-        EuiSelect,
+        OuiSelect,
       },
       demo: <Select />,
     },
@@ -318,7 +329,7 @@ export const FormControlsExample = {
       ],
       snippet: textAreaSnippet,
       props: {
-        EuiTextArea,
+        OuiTextArea,
       },
       demo: <TextArea />,
       playground: TextAreaConfig,
@@ -337,23 +348,23 @@ export const FormControlsExample = {
       ],
       text: (
         <p>
-          <strong>EuiFilePicker</strong> is a stylized, but generic HTML{' '}
-          <EuiCode language="html">&lt;input type=&quot;file&quot;&gt;</EuiCode>{' '}
+          <strong>OuiFilePicker</strong> is a stylized, but generic HTML{' '}
+          <OuiCode language="html">&lt;input type=&quot;file&quot;&gt;</OuiCode>{' '}
           tag. It supports drag and drop as well as on click style selection of
           files. The example below shows how to grab the files using the{' '}
-          <EuiLink
+          <OuiLink
             href="https://developer.mozilla.org/en-US/docs/Web/API/FileList"
             target="_blank">
             FileList API
-          </EuiLink>
+          </OuiLink>
           . Like other form elements, you can wrap it in a{' '}
-          <strong>EuiFormRow</strong> to apply a label.
+          <strong>OuiFormRow</strong> to apply a label.
         </p>
       ),
-      components: { EuiFilePicker },
+      components: { OuiFilePicker },
       snippet: filePickerSnippet,
       demo: <FilePicker />,
-      props: { EuiFilePicker },
+      props: { OuiFilePicker },
     },
     {
       title: 'Checkbox',
@@ -369,7 +380,7 @@ export const FormControlsExample = {
       ],
       snippet: checkboxSnippet,
       props: {
-        EuiCheckbox,
+        OuiCheckbox,
       },
       demo: <Checkbox />,
       playground: CheckboxConfig,
@@ -387,10 +398,10 @@ export const FormControlsExample = {
         },
       ],
       props: {
-        EuiCheckboxGroup,
+        OuiCheckboxGroup,
       },
       demo: <CheckboxGroup />,
-      snippet: `<EuiCheckboxGroup
+      snippet: `<OuiCheckboxGroup
   options={[
     {
       id: id1,
@@ -415,7 +426,7 @@ export const FormControlsExample = {
       ],
       snippet: radioSnippet,
       props: {
-        EuiRadio,
+        OuiRadio,
       },
       demo: <Radio />,
       playground: RadioConfig,
@@ -433,10 +444,10 @@ export const FormControlsExample = {
         },
       ],
       props: {
-        EuiRadioGroup,
+        OuiRadioGroup,
       },
       demo: <RadioGroup />,
-      snippet: `<EuiRadioGroup
+      snippet: `<OuiRadioGroup
   options={[
     {
       id: id1,
@@ -465,7 +476,7 @@ export const FormControlsExample = {
       ],
       snippet: switchSnippet,
       props: {
-        EuiSwitch,
+        OuiSwitch,
       },
       demo: <Switch />,
       playground: SwitchConfig,
@@ -484,7 +495,7 @@ export const FormControlsExample = {
       ],
       text: (
         <Fragment>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             iconType="accessibility"
             size="s"
@@ -494,35 +505,35 @@ export const FormControlsExample = {
                 where the individual labels for each control do not provide a
                 sufficient description, and an additional group level
                 description is needed.&quot;{' '}
-                <EuiLink
+                <OuiLink
                   external
                   href="https://www.w3.org/WAI/WCAG21/Techniques/html/H71">
                   WCAG Spec
-                </EuiLink>
+                </OuiLink>
               </span>
             }
           />
-          <EuiSpacer />
+          <OuiSpacer />
           <p>
-            <strong>EuiFormFieldset</strong> simply wraps its children in a{' '}
-            <EuiCode language="html">&lt;fieldset&gt;</EuiCode> with the option
-            to add a <EuiCode language="html">&lt;legend&gt;</EuiCode> via the{' '}
-            <EuiCode>legend</EuiCode> object prop.
+            <strong>OuiFormFieldset</strong> simply wraps its children in a{' '}
+            <OuiCode language="html">&lt;fieldset&gt;</OuiCode> with the option
+            to add a <OuiCode language="html">&lt;legend&gt;</OuiCode> via the{' '}
+            <OuiCode>legend</OuiCode> object prop.
           </p>
         </Fragment>
       ),
       props: {
-        EuiFormFieldset,
-        EuiFormLegend,
+        OuiFormFieldset,
+        OuiFormLegend,
       },
       demo: <Fieldset />,
       snippet: [
-        `<EuiFormFieldset legend={{ children: 'Legend' }}>
+        `<OuiFormFieldset legend={{ children: 'Legend' }}>
   <!-- Controls -->
-</EuiFormFieldset>`,
-        `<EuiFormFieldset legend={{ children: 'Hidden legend', display: 'hidden' }}>
+</OuiFormFieldset>`,
+        `<OuiFormFieldset legend={{ children: 'Hidden legend', display: 'hidden' }}>
   <!-- Controls -->
-</EuiFormFieldset>`,
+</OuiFormFieldset>`,
       ],
     },
     {
@@ -530,19 +541,19 @@ export const FormControlsExample = {
       text: (
         <Fragment>
           <p>
-            Most form controls accept a <EuiCode>prepend</EuiCode> and{' '}
-            <EuiCode>append</EuiCode> prop that allows passing a single
+            Most form controls accept a <OuiCode>prepend</OuiCode> and{' '}
+            <OuiCode>append</OuiCode> prop that allows passing a single
             node/string or an array of nodes/strings. Strings will be converted
             into form labels and connected to the input via{' '}
-            <EuiCode>htmlFor</EuiCode> for accessibility.
+            <OuiCode>htmlFor</OuiCode> for accessibility.
           </p>
           <p>
             These are great for demarcating the input&apos;s metric like
             &quot;px&quot; or &quot;ms&quot;. You can also pass buttons for
             input settings or additional filters. Just be sure to use
-            <EuiCode language="js">
-              &lt;EuiButtonEmpty size=&quot;xs&quot; /&gt;
-            </EuiCode>
+            <OuiCode language="js">
+              &lt;OuiButtonEmpty size=&quot;xs&quot; /&gt;
+            </OuiCode>
             .
           </p>
         </Fragment>
@@ -559,11 +570,11 @@ export const FormControlsExample = {
       ],
       demo: <PrependAppend />,
       snippet: [
-        `<EuiFieldText
+        `<OuiFieldText
   prepend="Label"
   append="px"
 />`,
-        `<EuiFieldText
+        `<OuiFieldText
   prepend={prepend}
   append={append}
 />`,
@@ -584,29 +595,29 @@ export const FormControlsExample = {
       text: (
         <Fragment>
           <p>
-            <EuiBadge color={'warning'}>Building block only</EuiBadge>
+            <OuiBadge color={'warning'}>Building block only</OuiBadge>
           </p>
 
           <p>
-            <strong>EuiFormControlLayout</strong> is generally used internally
+            <strong>OuiFormControlLayout</strong> is generally used internally
             to consistently style form controls, but it&rsquo;s published in
             case you want to create your own form control which matches those of
-            EUI. The examples below demonstrate its various states.
+            OUI. The examples below demonstrate its various states.
           </p>
 
-          <EuiCallOut title="Additional padding required" color="warning">
+          <OuiCallOut title="Additional padding required" color="warning">
             <p>
-              The padding on the <EuiCode>input</EuiCode> itself doesn&rsquo;t
+              The padding on the <OuiCode>input</OuiCode> itself doesn&rsquo;t
               take into account the presence of the various icons supported by{' '}
-              <strong>EuiFormControlLayout</strong>. Any input component
-              provided to <strong>EuiFormControlLayout</strong> is responsible
+              <strong>OuiFormControlLayout</strong>. Any input component
+              provided to <strong>OuiFormControlLayout</strong> is responsible
               for its own padding.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </Fragment>
       ),
       props: {
-        EuiFormControlLayout,
+        OuiFormControlLayout,
       },
       demo: <FormControlLayout />,
     },
@@ -625,28 +636,28 @@ export const FormControlsExample = {
       text: (
         <Fragment>
           <p>
-            <EuiBadge color={'warning'}>Building block only</EuiBadge>
+            <OuiBadge color={'warning'}>Building block only</OuiBadge>
           </p>
 
           <p>
-            Like <strong>EuiFormControlLayout</strong>,{' '}
-            <strong>EuiFormControlLayoutDelimited</strong> is generally used
+            Like <strong>OuiFormControlLayout</strong>,{' '}
+            <strong>OuiFormControlLayoutDelimited</strong> is generally used
             internally to consistently style form controls. This component
             specifically lays out two form controls with center text or icon.
           </p>
           <p>
             It takes all of the same props as{' '}
-            <strong>EuiFormControlLayout</strong> except for{' '}
-            <EuiCode>children</EuiCode>. Instead it requires both a{' '}
-            <strong>single</strong> <EuiCode>startControl</EuiCode> and a{' '}
-            <strong>single</strong> <EuiCode>endControl</EuiCode>. You can
+            <strong>OuiFormControlLayout</strong> except for{' '}
+            <OuiCode>children</OuiCode>. Instead it requires both a{' '}
+            <strong>single</strong> <OuiCode>startControl</OuiCode> and a{' '}
+            <strong>single</strong> <OuiCode>endControl</OuiCode>. You can
             optionally change the center content to a different string or node
-            (like an EuiIcon).
+            (like an OuiIcon).
           </p>
         </Fragment>
       ),
       props: {
-        EuiFormControlLayoutDelimited,
+        OuiFormControlLayoutDelimited,
       },
       demo: <FormControlLayoutRange />,
     },

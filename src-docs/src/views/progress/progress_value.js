@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useEffect } from 'react';
 
 import {
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiProgress,
-  EuiText,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiProgress,
+  OuiText,
 } from '../../../../src/components';
 
 export default () => {
@@ -41,20 +52,20 @@ export default () => {
   }, [timer]);
 
   return (
-    <EuiFlexGroup alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButton size="s" onClick={toggleProgress}>
+    <OuiFlexGroup alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButton size="s" onClick={toggleProgress}>
           Toggle progress
-        </EuiButton>
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
-        <EuiText>
+        </OuiButton>
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
+        <OuiText>
           <p>{value}</p>
-        </EuiText>
-      </EuiFlexItem>
-      <EuiFlexItem>
-        <EuiProgress value={value} max={100} size="xs" />
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiText>
+      </OuiFlexItem>
+      <OuiFlexItem>
+        <OuiProgress value={value} max={100} size="xs" />
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 };

@@ -1,40 +1,51 @@
-.euiNotificationEvent {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiNotificationEvent {
   display: flex;
-  padding: $euiSizeM 0 $euiSizeM $euiSizeM;
-  border-bottom: $euiBorderThin;
+  padding: $ouiSizeM 0 $ouiSizeM $ouiSizeM;
+  border-bottom: $ouiBorderThin;
 
   &:last-child {
     border-bottom: none;
   }
 
   &--withReadState {
-    padding: $euiSizeM 0 $euiSizeM $euiSizeS;
+    padding: $ouiSizeM 0 $ouiSizeM $ouiSizeS;
   }
 }
 
-.euiNotificationEvent__title {
-  @include euiTitle('xs');
+.ouiNotificationEvent__title {
+  @include ouiTitle('xs');
   display: flex;
 
   // ensure links get the right color
-  &.euiLink {
-    color: $euiLinkColor;
+  &.ouiLink {
+    color: $ouiLinkColor;
   }
 
   &--isRead {
-    color: $euiColorDarkShade !important; // sass-lint:disable-line no-important
+    color: $ouiColorDarkShade !important; // sass-lint:disable-line no-important
   }
 }
 
-.euiNotificationEvent__readButton {
-  margin-right: $euiSizeS;
+.ouiNotificationEvent__readButton {
+  margin-right: $ouiSizeS;
 }
 
-.euiNotificationEvent__content {
+.ouiNotificationEvent__content {
   flex: 1;
 
   > * + * {
-    margin-top: $euiSizeS;
-    margin-right: $euiSizeM;
+    margin-top: $ouiSizeS;
+    margin-right: $ouiSizeM;
   }
 }

@@ -1,63 +1,74 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiCard,
-  EuiSpacer,
-  EuiText,
-  EuiI18n,
-  EuiTitle,
-  useEuiI18n,
+  OuiCard,
+  OuiSpacer,
+  OuiText,
+  OuiI18n,
+  OuiTitle,
+  useOuiI18n,
 } from '../../../../src/components';
 
 export default () => {
-  const [title, description] = useEuiI18n(
-    ['euiI18nMulti.title', 'euiI18nMulti.description'],
+  const [title, description] = useOuiI18n(
+    ['ouiI18nMulti.title', 'ouiI18nMulti.description'],
     ['Card Title', 'Card Description']
   );
   return (
     <>
-      <EuiTitle size="xs">
-        <h3>useEuiI18n with multiple tokens</h3>
-      </EuiTitle>
+      <OuiTitle size="xs">
+        <h3>useOuiI18n with multiple tokens</h3>
+      </OuiTitle>
       <div>
-        <EuiText>
+        <OuiText>
           <p>
             Both title and description for the card are looked up in one call to{' '}
-            <strong>useEuiI18n</strong>
+            <strong>useOuiI18n</strong>
           </p>
-        </EuiText>
-        <EuiSpacer />
-        <EuiCard
-          className="eui-displayInlineBlock"
+        </OuiText>
+        <OuiSpacer />
+        <OuiCard
+          className="oui-displayInlineBlock"
           title={title}
           description={description}
         />
       </div>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiTitle size="xs">
-        <h3>EuiI18n render prop with multiple tokens</h3>
-      </EuiTitle>
+      <OuiTitle size="xs">
+        <h3>OuiI18n render prop with multiple tokens</h3>
+      </OuiTitle>
       <div>
-        <EuiText>
+        <OuiText>
           <p>
             Both title and description for the card are looked up in one call to{' '}
-            <strong>EuiI18n</strong>
+            <strong>OuiI18n</strong>
           </p>
-        </EuiText>
-        <EuiSpacer />
-        <EuiI18n
-          tokens={['euiI18nMulti.title', 'euiI18nMulti.description']}
+        </OuiText>
+        <OuiSpacer />
+        <OuiI18n
+          tokens={['ouiI18nMulti.title', 'ouiI18nMulti.description']}
           defaults={['Card Title', 'Card Description']}>
           {([title, description]) => (
-            <EuiCard
-              className="eui-displayInlineBlock"
+            <OuiCard
+              className="oui-displayInlineBlock"
               title={title}
               description={description}
             />
           )}
-        </EuiI18n>
+        </OuiI18n>
       </div>
     </>
   );

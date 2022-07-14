@@ -1,31 +1,42 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiAvatar, EuiTitle, EuiSpacer } from '../../../../src/components';
+import { OuiAvatar, OuiTitle, OuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiTitle size="xs">
+    <OuiTitle size="xs">
       <h3>Single vs multi-word</h3>
-    </EuiTitle>
-    <EuiSpacer />
-    <EuiAvatar name="Single" />
+    </OuiTitle>
+    <OuiSpacer />
+    <OuiAvatar name="Single" />
     &emsp;
-    <EuiAvatar name="Two Words" />
+    <OuiAvatar name="Two Words" />
     &emsp;
-    <EuiAvatar name="More Than Two Words" />
+    <OuiAvatar name="More Than Two Words" />
     &emsp;
-    <EuiAvatar name="lowercase words" />
-    <EuiSpacer />
-    <EuiTitle size="xs">
+    <OuiAvatar name="lowercase words" />
+    <OuiSpacer />
+    <OuiTitle size="xs">
       <h4>Custom</h4>
-    </EuiTitle>
-    <EuiSpacer />
-    <EuiAvatar name="Kibana" initialsLength={2} />
+    </OuiTitle>
+    <OuiSpacer />
+    <OuiAvatar name="Kibana" initialsLength={2} />
     &emsp;
-    <EuiAvatar name="Leonardo Dude" initialsLength={1} />
+    <OuiAvatar name="Leonardo Dude" initialsLength={1} />
     &emsp;
-    <EuiAvatar name="Not provided" initials="?" />
+    <OuiAvatar name="Not provided" initials="?" />
     &emsp;
-    <EuiAvatar name="Engineering User" initials="En" initialsLength={2} />
+    <OuiAvatar name="Engineering User" initials="En" initialsLength={2} />
   </div>
 );

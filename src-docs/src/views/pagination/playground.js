@@ -1,4 +1,15 @@
-import { EuiPagination, EuiText } from '../../../../src/components/';
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+import { OuiPagination, OuiText } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
@@ -6,23 +17,23 @@ import {
 } from '../../services/playground';
 
 export const paginationConfig = () => {
-  const docgenInfo = Array.isArray(EuiPagination.__docgenInfo)
-    ? EuiPagination.__docgenInfo[0]
-    : EuiPagination.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiPagination.__docgenInfo)
+    ? OuiPagination.__docgenInfo[0]
+    : OuiPagination.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.onPageClick = simulateFunction(propsToUse.onPageClick);
   return {
     config: {
-      componentName: 'EuiPagination',
+      componentName: 'OuiPagination',
       props: propsToUse,
       scope: {
-        EuiPagination,
-        EuiText,
+        OuiPagination,
+        OuiText,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiPagination', 'EuiText'],
+        '@opensearch-project/oui': {
+          named: ['OuiPagination', 'OuiText'],
         },
       },
       customProps: {

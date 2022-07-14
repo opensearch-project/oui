@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import {
-  EuiDragDropContext,
-  EuiDraggable,
-  EuiDroppable,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiPanel,
-  euiDragDropReorder,
+  OuiDragDropContext,
+  OuiDraggable,
+  OuiDroppable,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiIcon,
+  OuiPanel,
+  ouiDragDropReorder,
 } from '../../../../src/components';
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -25,39 +36,39 @@ export default () => {
   const [list, setList] = useState(makeList(3));
   const onDragEnd = ({ source, destination }) => {
     if (source && destination) {
-      const items = euiDragDropReorder(list, source.index, destination.index);
+      const items = ouiDragDropReorder(list, source.index, destination.index);
 
       setList(items);
     }
   };
   return (
-    <EuiDragDropContext onDragEnd={onDragEnd}>
-      <EuiDroppable
+    <OuiDragDropContext onDragEnd={onDragEnd}>
+      <OuiDroppable
         droppableId="CUSTOM_HANDLE_DROPPABLE_AREA"
         spacing="m"
         withPanel>
         {list.map(({ content, id }, idx) => (
-          <EuiDraggable
+          <OuiDraggable
             spacing="m"
             key={id}
             index={idx}
             draggableId={id}
             customDragHandle={true}>
             {(provided) => (
-              <EuiPanel className="custom" paddingSize="m">
-                <EuiFlexGroup>
-                  <EuiFlexItem grow={false}>
+              <OuiPanel className="custom" paddingSize="m">
+                <OuiFlexGroup>
+                  <OuiFlexItem grow={false}>
                     <div {...provided.dragHandleProps} aria-label="Drag Handle">
-                      <EuiIcon type="grab" />
+                      <OuiIcon type="grab" />
                     </div>
-                  </EuiFlexItem>
-                  <EuiFlexItem>{content}</EuiFlexItem>
-                </EuiFlexGroup>
-              </EuiPanel>
+                  </OuiFlexItem>
+                  <OuiFlexItem>{content}</OuiFlexItem>
+                </OuiFlexGroup>
+              </OuiPanel>
             )}
-          </EuiDraggable>
+          </OuiDraggable>
         ))}
-      </EuiDroppable>
-    </EuiDragDropContext>
+      </OuiDroppable>
+    </OuiDragDropContext>
   );
 };

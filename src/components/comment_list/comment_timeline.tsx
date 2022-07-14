@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,33 +31,33 @@
 import React, { FunctionComponent, ReactNode } from 'react';
 import { CommonProps, keysOf } from '../common';
 import classNames from 'classnames';
-import { EuiIcon, IconType } from '../icon';
+import { OuiIcon, IconType } from '../icon';
 
-export interface EuiCommentTimelineProps extends CommonProps {
+export interface OuiCommentTimelineProps extends CommonProps {
   /**
-   * Main icon that accompanies the comment. The default is `user` for regular comments and `dot` for update comments. To customize, pass a `string` as an `EuiIcon['type']` or any `ReactNode`.
+   * Main icon that accompanies the comment. The default is `user` for regular comments and `dot` for update comments. To customize, pass a `string` as an `OuiIcon['type']` or any `ReactNode`.
    */
   timelineIcon?: ReactNode | IconType;
-  type?: EuiCommentType;
+  type?: OuiCommentType;
 }
 
 const typeToClassNameMap = {
-  regular: 'euiCommentTimeline__icon--regular',
-  update: 'euiCommentTimeline__icon--update',
+  regular: 'ouiCommentTimeline__icon--regular',
+  update: 'ouiCommentTimeline__icon--update',
 };
 
 export const TYPES = keysOf(typeToClassNameMap);
-export type EuiCommentType = keyof typeof typeToClassNameMap;
+export type OuiCommentType = keyof typeof typeToClassNameMap;
 
-export const EuiCommentTimeline: FunctionComponent<EuiCommentTimelineProps> = ({
+export const OuiCommentTimeline: FunctionComponent<OuiCommentTimelineProps> = ({
   className,
   timelineIcon,
   type = 'regular',
 }) => {
-  const classes = classNames('euiCommentTimeline', className);
+  const classes = classNames('ouiCommentTimeline', className);
   const iconClasses = classNames(
     {
-      'euiCommentTimeline__icon--default':
+      'ouiCommentTimeline__icon--default':
         !timelineIcon || typeof timelineIcon === 'string',
     },
     typeToClassNameMap[type]
@@ -55,13 +66,13 @@ export const EuiCommentTimeline: FunctionComponent<EuiCommentTimelineProps> = ({
   let iconRender;
   if (typeof timelineIcon === 'string') {
     iconRender = (
-      <EuiIcon size={type === 'update' ? 'm' : 'l'} type={timelineIcon} />
+      <OuiIcon size={type === 'update' ? 'm' : 'l'} type={timelineIcon} />
     );
   } else if (timelineIcon) {
     iconRender = timelineIcon;
   } else {
     iconRender = (
-      <EuiIcon
+      <OuiIcon
         type={type === 'update' ? 'dot' : 'user'}
         size={type === 'update' ? 's' : 'l'}
       />
@@ -70,7 +81,7 @@ export const EuiCommentTimeline: FunctionComponent<EuiCommentTimelineProps> = ({
 
   return (
     <div className={classes}>
-      <div className="euiCommentTimeline__content">
+      <div className="ouiCommentTimeline__content">
         <div className={iconClasses}>{iconRender}</div>
       </div>
     </div>

@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiCard,
-  EuiIcon,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiCard,
+  OuiIcon,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 const icons = ['dashboard', 'monitoring'];
@@ -12,9 +23,9 @@ const badges = [null, 'Beta'];
 
 const cardNodes = icons.map(function (item, index) {
   return (
-    <EuiFlexItem key={index}>
-      <EuiCard
-        icon={<EuiIcon size="xxl" type={`${item}App`} />}
+    <OuiFlexItem key={index}>
+      <OuiCard
+        icon={<OuiIcon size="xxl" type={`${item}App`} />}
         title={`Kibana ${item}`}
         description="Example of a card's description. Stick to one or two sentences."
         betaBadgeLabel={badges[index]}
@@ -25,19 +36,19 @@ const cardNodes = icons.map(function (item, index) {
         }
         onClick={() => {}}
       />
-    </EuiFlexItem>
+    </OuiFlexItem>
   );
 });
 
 export default () => (
-  <EuiFlexGroup gutterSize="l">
+  <OuiFlexGroup gutterSize="l">
     {cardNodes}
-    <EuiFlexItem>
-      <EuiCard
-        icon={<EuiIcon size="xxl" type="lensApp" />}
+    <OuiFlexItem>
+      <OuiCard
+        icon={<OuiIcon size="xxl" type="lensApp" />}
         title="Lens"
         isDisabled
-        description="Disabled cards can have active links using EuiBetaBadge."
+        description="Disabled cards can have active links using OuiBetaBadge."
         betaBadgeProps={{
           href: 'http://www.elastic.co/subscriptions',
           target: '_blank',
@@ -46,6 +57,6 @@ export default () => (
         betaBadgeTooltipContent="This feature requires a Basic License"
         onClick={() => {}}
       />
-    </EuiFlexItem>
-  </EuiFlexGroup>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

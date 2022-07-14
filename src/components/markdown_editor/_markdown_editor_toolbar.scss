@@ -1,11 +1,22 @@
-.euiMarkdownEditorToolbar {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiMarkdownEditorToolbar {
   display: flex;
   flex-wrap: wrap;
-  background: $euiColorLightestShade;
-  border: $euiBorderThin;
-  border-color: $euiColorLightShade;
+  background: $ouiColorLightestShade;
+  border: $ouiBorderThin;
+  border-color: $ouiColorLightShade;
   border-bottom: none;
-  padding: $euiSizeXS;
+  padding: $ouiSizeXS;
 
   &__buttons {
     display: flex;
@@ -14,16 +25,16 @@
     align-items: center;
 
     > * {
-      margin-right: $euiSizeXS;
+      margin-right: $ouiSizeXS;
     }
   }
 
   &__divider {
     content: '';
-    height: $euiSizeL;
+    height: $ouiSizeL;
     display: block;
-    margin-left: $euiSizeXS;
-    padding-right: $euiSizeXS;
-    border-left: 1px solid $euiColorLightShade;
+    margin-left: $ouiSizeXS;
+    padding-right: $ouiSizeXS;
+    border-left: 1px solid $ouiColorLightShade;
   }
 }

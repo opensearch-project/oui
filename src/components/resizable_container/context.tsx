@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,12 +29,12 @@
  */
 
 import React, { createContext, useContext } from 'react';
-import { EuiResizableContainerRegistry } from './types';
+import { OuiResizableContainerRegistry } from './types';
 interface ContainerContextProps {
-  registry?: EuiResizableContainerRegistry;
+  registry?: OuiResizableContainerRegistry;
 }
 
-const EuiResizableContainerContext = createContext<ContainerContextProps>({});
+const OuiResizableContainerContext = createContext<ContainerContextProps>({});
 
 interface ContextProviderProps extends Required<ContainerContextProps> {
   /**
@@ -32,22 +43,22 @@ interface ContextProviderProps extends Required<ContainerContextProps> {
   children: any;
 }
 
-export function EuiResizableContainerContextProvider({
+export function OuiResizableContainerContextProvider({
   children,
   registry,
 }: ContextProviderProps) {
   return (
-    <EuiResizableContainerContext.Provider value={{ registry }}>
+    <OuiResizableContainerContext.Provider value={{ registry }}>
       {children}
-    </EuiResizableContainerContext.Provider>
+    </OuiResizableContainerContext.Provider>
   );
 }
 
-export const useEuiResizableContainerContext = () => {
-  const context = useContext(EuiResizableContainerContext);
+export const useOuiResizableContainerContext = () => {
+  const context = useContext(OuiResizableContainerContext);
   if (!context.registry) {
     throw new Error(
-      'useEuiResizableContainerContext must be used within a <EuiResizableContainerContextProvider />'
+      'useOuiResizableContainerContext must be used within a <OuiResizableContainerContextProvider />'
     );
   }
   return context;

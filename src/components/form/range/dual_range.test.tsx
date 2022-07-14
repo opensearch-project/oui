@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,16 +32,16 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiDualRange } from './dual_range';
+import { OuiDualRange } from './dual_range';
 
 const props = {
   onChange: () => {},
 };
 
-describe('EuiDualRange', () => {
+describe('OuiDualRange', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiDualRange
+      <OuiDualRange
         name="name"
         id="id"
         value={['1', '8']}
@@ -45,7 +56,7 @@ describe('EuiDualRange', () => {
   describe('props', () => {
     test('disabled should render', () => {
       const component = render(
-        <EuiDualRange {...props} value={['1', '8']} disabled />
+        <OuiDualRange {...props} value={['1', '8']} disabled />
       );
 
       expect(component).toMatchSnapshot();
@@ -53,7 +64,7 @@ describe('EuiDualRange', () => {
 
     test('fullWidth should render', () => {
       const component = render(
-        <EuiDualRange {...props} value={['1', '8']} fullWidth />
+        <OuiDualRange {...props} value={['1', '8']} fullWidth />
       );
 
       expect(component).toMatchSnapshot();
@@ -61,7 +72,7 @@ describe('EuiDualRange', () => {
 
     test('compressed should render', () => {
       const component = render(
-        <EuiDualRange {...props} value={['1', '8']} compressed />
+        <OuiDualRange {...props} value={['1', '8']} compressed />
       );
 
       expect(component).toMatchSnapshot();
@@ -69,7 +80,7 @@ describe('EuiDualRange', () => {
 
     test('labels should render', () => {
       const component = render(
-        <EuiDualRange {...props} value={['1', '8']} showLabels />
+        <OuiDualRange {...props} value={['1', '8']} showLabels />
       );
 
       expect(component).toMatchSnapshot();
@@ -77,7 +88,7 @@ describe('EuiDualRange', () => {
 
     test('ticks should render', () => {
       const component = render(
-        <EuiDualRange
+        <OuiDualRange
           {...props}
           value={['1', '8']}
           showTicks
@@ -90,7 +101,7 @@ describe('EuiDualRange', () => {
 
     test('custom ticks should render', () => {
       const component = render(
-        <EuiDualRange
+        <OuiDualRange
           {...props}
           value={[20, 100]}
           showTicks
@@ -106,7 +117,7 @@ describe('EuiDualRange', () => {
 
     test('range should render', () => {
       const component = render(
-        <EuiDualRange {...props} showRange value={[1, 8]} />
+        <OuiDualRange {...props} showRange value={[1, 8]} />
       );
 
       expect(component).toMatchSnapshot();
@@ -114,7 +125,7 @@ describe('EuiDualRange', () => {
 
     test('inputs should render', () => {
       const component = render(
-        <EuiDualRange
+        <OuiDualRange
           name="name"
           id="id"
           value={['1', '8']}
@@ -129,7 +140,7 @@ describe('EuiDualRange', () => {
 
     test('slider should display in popover', () => {
       const component = render(
-        <EuiDualRange
+        <OuiDualRange
           name="name"
           id="id"
           value={['1', '8']}
@@ -144,7 +155,7 @@ describe('EuiDualRange', () => {
 
     test('levels should render', () => {
       const component = render(
-        <EuiDualRange
+        <OuiDualRange
           levels={[
             {
               min: 0,
@@ -167,7 +178,7 @@ describe('EuiDualRange', () => {
 
     test('isDraggable should render', () => {
       const component = render(
-        <EuiDualRange isDraggable value={['1', '8']} onChange={() => {}} />
+        <OuiDualRange isDraggable value={['1', '8']} onChange={() => {}} />
       );
 
       expect(component).toMatchSnapshot();
@@ -175,13 +186,13 @@ describe('EuiDualRange', () => {
   });
 
   test('allows value prop to accept numbers', () => {
-    const component = render(<EuiDualRange value={[1, 8]} {...props} />);
+    const component = render(<OuiDualRange value={[1, 8]} {...props} />);
 
     expect(component).toMatchSnapshot();
   });
 
   test('allows value prop to accept empty strings', () => {
-    const component = render(<EuiDualRange value={['', '']} {...props} />);
+    const component = render(<OuiDualRange value={['', '']} {...props} />);
 
     expect(component).toMatchSnapshot();
   });
@@ -189,7 +200,7 @@ describe('EuiDualRange', () => {
   describe('input props', () => {
     test('can be applied to min and max inputs', () => {
       const component = render(
-        <EuiDualRange
+        <OuiDualRange
           name="name"
           id="id"
           min={1}

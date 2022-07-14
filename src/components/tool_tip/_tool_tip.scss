@@ -1,24 +1,35 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /*
  * 1. Shift arrow 1px more than half its size to account for border radius
  */
 
-.euiToolTip {
-  @include euiToolTipStyle;
-  @include euiToolTipAnimation('top');
+.ouiToolTip {
+  @include ouiToolTipStyle;
+  @include ouiToolTipAnimation('top');
   position: absolute;
   opacity: 0;
 
   // Custom sizing
-  $arrowSize: $euiSizeM;
+  $arrowSize: $ouiSizeM;
   $arrowPlusSize: (($arrowSize/2) + 1px) * -1; /* 1 */
   $arrowMinusSize: (($arrowSize/2) - 1px) * -1; /* 1 */
 
-  .euiToolTip__arrow {
+  .ouiToolTip__arrow {
     content: '';
     position: absolute;
     transform-origin: center;
     border-radius: 2px;
-    background-color: $euiTooltipBackgroundColor;
+    background-color: $ouiTooltipBackgroundColor;
     width: $arrowSize;
     height: $arrowSize;
 
@@ -26,36 +37,36 @@
   }
 
   // Positions the arrow and animates in from the same side.
-  &.euiToolTip--right {
-    animation-name: euiToolTipRight;
+  &.ouiToolTip--right {
+    animation-name: ouiToolTipRight;
 
-    .euiToolTip__arrow {
+    .ouiToolTip__arrow {
       transform: translateX($arrowMinusSize) rotateZ(45deg); /* 1 */
     }
   }
 
-  &.euiToolTip--bottom {
-    animation-name: euiToolTipBottom;
+  &.ouiToolTip--bottom {
+    animation-name: ouiToolTipBottom;
 
-    .euiToolTip__arrow {
+    .ouiToolTip__arrow {
       transform: translateY($arrowMinusSize) rotateZ(45deg); /* 1 */
     }
   }
 
-  &.euiToolTip--left {
-    animation-name: euiToolTipLeft;
+  &.ouiToolTip--left {
+    animation-name: ouiToolTipLeft;
 
-    .euiToolTip__arrow {
+    .ouiToolTip__arrow {
       transform: translateX($arrowPlusSize) rotateZ(45deg); /* 1 */
     }
   }
 
-  .euiToolTip__title {
-    @include euiToolTipTitle;
+  .ouiToolTip__title {
+    @include ouiToolTipTitle;
   }
 }
 
-.euiToolTipAnchor {
+.ouiToolTipAnchor {
   display: inline-block;
 
   // disabled elements don't fire mouse events which means leaving a disabled element
@@ -66,16 +77,16 @@
     pointer-events: none;
   }
 
-  &.euiToolTipAnchor--displayBlock {
+  &.ouiToolTipAnchor--displayBlock {
     display: block;
   }
 }
 
 // Keyframes to animate in the tooltip.
-@keyframes euiToolTipTop {
+@keyframes ouiToolTipTop {
   0% {
     opacity: 0;
-    transform: translateY(-$euiSize);
+    transform: translateY(-$ouiSize);
   }
 
   100% {
@@ -84,10 +95,10 @@
   }
 }
 
-@keyframes euiToolTipBottom {
+@keyframes ouiToolTipBottom {
   0% {
     opacity: 0;
-    transform: translateY($euiSize);
+    transform: translateY($ouiSize);
   }
 
   100% {
@@ -96,10 +107,10 @@
   }
 }
 
-@keyframes euiToolTipLeft {
+@keyframes ouiToolTipLeft {
   0% {
     opacity: 0;
-    transform: translateX(-$euiSize);
+    transform: translateX(-$ouiSize);
   }
 
   100% {
@@ -108,10 +119,10 @@
   }
 }
 
-@keyframes euiToolTipRight {
+@keyframes ouiToolTipRight {
   0% {
     opacity: 0;
-    transform: translateX($euiSize);
+    transform: translateX($ouiSize);
   }
 
   100% {

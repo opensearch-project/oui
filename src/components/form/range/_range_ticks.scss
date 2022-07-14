@@ -1,40 +1,51 @@
-@mixin tickStyles {
-  @include size($euiSizeXS);
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-  background-color: $euiColorDarkShade;
+@mixin tickStyles {
+  @include size($ouiSizeXS);
+
+  background-color: $ouiColorDarkShade;
   border-radius: 100%;
   position: absolute;
   top: 0;
 }
 
-.euiRangeTicks {
+.ouiRangeTicks {
   position: absolute;
   left: 0;
   right: 0;
-  top: $euiSizeS;
+  top: $ouiSizeS;
   display: flex;
 
   &--isCustom {
-    left: ($euiRangeThumbWidth / 8);
-    right: ($euiRangeThumbWidth / 8);
+    left: ($ouiRangeThumbWidth / 8);
+    right: ($ouiRangeThumbWidth / 8);
   }
 }
 
-.euiRangeTick {
+.ouiRangeTick {
   overflow-x: hidden;
   text-overflow: ellipsis;
-  font-size: $euiFontSizeXS;
+  font-size: $ouiFontSizeXS;
   position: absolute;
   transform: translateX(-50%);
-  padding-top: $euiSize;
+  padding-top: $ouiSize;
 
-  &:not(.euiRangeTick--hasTickMark)::before {
+  &:not(.ouiRangeTick--hasTickMark)::before {
     @include tickStyles;
     content: '';
-    left: calc(50% - #{($euiSizeXS/2)});
+    left: calc(50% - #{($ouiSizeXS/2)});
   }
 
-  .euiRangeTick__pseudo {
+  .ouiRangeTick__pseudo {
     @include tickStyles;
   }
 
@@ -48,13 +59,13 @@
   }
 
   &--isMin {
-    .euiRangeTick__pseudo {
+    .ouiRangeTick__pseudo {
       left: 0;
     }
   }
 
   &--isMax {
-    .euiRangeTick__pseudo {
+    .ouiRangeTick__pseudo {
       right: 0;
     }
   }
@@ -62,11 +73,11 @@
   &:enabled:hover,
   &:focus,
   &--selected {
-    color: $euiColorPrimary;
+    color: $ouiColorPrimary;
   }
 
   &--selected {
-    font-weight: $euiFontWeightMedium;
+    font-weight: $ouiFontWeightMedium;
   }
 
   &:disabled {
@@ -74,14 +85,14 @@
   }
 }
 
-.euiRangeTicks--compressed {
-  top: $euiSizeS - 2px;
+.ouiRangeTicks--compressed {
+  top: $ouiSizeS - 2px;
 
-  .euiRangeTick {
-    padding-top: $euiSize - 2px;
+  .ouiRangeTick {
+    padding-top: $ouiSize - 2px;
   }
 }
 
-.euiRangeTick__label {
+.ouiRangeTick__label {
   pointer-events: none;
 }

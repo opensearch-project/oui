@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +32,14 @@ import { ReactNode } from 'react';
 
 import {
   RenderItem,
-  _EuiSideNavItemButtonProps,
-  _EuiSideNavItemProps,
+  _OuiSideNavItemButtonProps,
+  _OuiSideNavItemProps,
 } from './side_nav_item';
 
-export interface EuiSideNavItemType<T>
-  extends Omit<_EuiSideNavItemButtonProps, 'children'>,
+export interface OuiSideNavItemType<T>
+  extends Omit<_OuiSideNavItemButtonProps, 'children'>,
     Omit<
-      _EuiSideNavItemProps,
+      _OuiSideNavItemProps,
       'isParent' | 'depth' | 'isOpen' | 'childrenOnly'
     > {
   /**
@@ -42,7 +53,7 @@ export interface EuiSideNavItemType<T>
   /**
    * Array containing additional item objects, representing nested children of this navigation item.
    */
-  items?: Array<EuiSideNavItemType<T>>;
+  items?: Array<OuiSideNavItemType<T>>;
   /**
    * React node representing the text to render for this item (usually a string will suffice).
    */

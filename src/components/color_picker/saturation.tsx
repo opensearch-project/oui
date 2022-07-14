@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -31,8 +42,8 @@ import { ColorSpaces } from 'chroma-js';
 import { CommonProps } from '../common';
 import { keys, useMouseMove } from '../../services';
 import { isNil } from '../../services/predicate';
-import { EuiScreenReaderOnly } from '../accessibility';
-import { EuiI18n } from '../i18n';
+import { OuiScreenReaderOnly } from '../accessibility';
+import { OuiI18n } from '../i18n';
 
 import { getEventPosition } from './utils';
 
@@ -47,7 +58,7 @@ interface HTMLDivElementOverrides {
   color?: ColorSpaces['hsv'];
   onChange: (color: ColorSpaces['hsv']) => void;
 }
-export type EuiSaturationProps = Omit<
+export type OuiSaturationProps = Omit<
   HTMLAttributes<HTMLDivElement>,
   keyof HTMLDivElementOverrides
 > &
@@ -56,12 +67,12 @@ export type EuiSaturationProps = Omit<
     hex?: string;
   };
 
-export const EuiSaturation = forwardRef<HTMLDivElement, EuiSaturationProps>(
+export const OuiSaturation = forwardRef<HTMLDivElement, OuiSaturationProps>(
   (
     {
       className,
       color = [1, 0, 0],
-      'data-test-subj': dataTestSubj = 'euiSaturation',
+      'data-test-subj': dataTestSubj = 'ouiSaturation',
       hex,
       id,
       onChange,
@@ -158,10 +169,10 @@ export const EuiSaturation = forwardRef<HTMLDivElement, EuiSaturationProps>(
       onChange(newColor);
     };
 
-    const classes = classNames('euiSaturation', className);
+    const classes = classNames('ouiSaturation', className);
     return (
-      <EuiI18n
-        token="euiSaturation.roleDescription"
+      <OuiI18n
+        token="ouiSaturation.roleDescription"
         default="HSV color mode saturation and value selection">
         {(roleDescription: string) => (
           // Unsure why this element causes errors as `tabIndex` and focus/interactivity (by extension) are accounted for.
@@ -183,30 +194,30 @@ export const EuiSaturation = forwardRef<HTMLDivElement, EuiSaturationProps>(
               background: `hsl(${color[0]}, 100%, 50%)`,
             }}
             {...rest}>
-            <EuiScreenReaderOnly>
+            <OuiScreenReaderOnly>
               <p>
-                <EuiI18n
-                  token="euiSaturation.screenReaderAnnouncement"
+                <OuiI18n
+                  token="ouiSaturation.screenReaderAnnouncement"
                   default="Use the arrow keys to navigate the square color gradient. The coordinates resulting from each key press will be used to calculate HSV color mode 'saturation' and 'value' numbers, in the range of 0 to 1. Left and right decrease and increase (respectively) the 'saturation' value. Up and down decrease and increase (respectively) the 'value' value."
                 />
               </p>
-            </EuiScreenReaderOnly>
-            <EuiScreenReaderOnly>
+            </OuiScreenReaderOnly>
+            <OuiScreenReaderOnly>
               <p aria-live="polite">{hex}</p>
-            </EuiScreenReaderOnly>
-            <div className="euiSaturation__lightness" ref={boxRef}>
-              <div className="euiSaturation__saturation" />
+            </OuiScreenReaderOnly>
+            <div className="ouiSaturation__lightness" ref={boxRef}>
+              <div className="ouiSaturation__saturation" />
             </div>
             <div
               id={`${id}-saturationIndicator`}
-              className="euiSaturation__indicator"
+              className="ouiSaturation__indicator"
               style={{ ...indicator }}
             />
           </div>
         )}
-      </EuiI18n>
+      </OuiI18n>
     );
   }
 );
 
-EuiSaturation.displayName = 'EuiSaturation';
+OuiSaturation.displayName = 'OuiSaturation';

@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiStat,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiPanel,
-  EuiIcon,
-  EuiSwitch,
-  EuiSpacer,
+  OuiStat,
+  OuiFlexItem,
+  OuiFlexGroup,
+  OuiPanel,
+  OuiIcon,
+  OuiSwitch,
+  OuiSpacer,
 } from '../../../../src/components';
 
 export default () => {
@@ -19,57 +30,57 @@ export default () => {
 
   return (
     <div>
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+      <OuiFlexGroup>
+        <OuiFlexItem>
+          <OuiPanel>
+            <OuiStat
               title="8,888"
               description="Total widgets"
               textAlign="right"
               isLoading={isLoading}>
-              <EuiIcon type="empty" />
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+              <OuiIcon type="empty" />
+            </OuiStat>
+          </OuiPanel>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiPanel>
+            <OuiStat
               title="2,000"
               description="Pending widgets"
               titleColor="accent"
               textAlign="right"
               isLoading={isLoading}>
-              <EuiIcon type="clock" color="accent" />
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+              <OuiIcon type="clock" color="accent" />
+            </OuiStat>
+          </OuiPanel>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiPanel>
+            <OuiStat
               title="6,800"
               description="Success widgets"
               titleColor="success"
               textAlign="right"
               isLoading={isLoading}>
-              <EuiIcon type="check" color="success" />
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiPanel>
-            <EuiStat
+              <OuiIcon type="check" color="success" />
+            </OuiStat>
+          </OuiPanel>
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiPanel>
+            <OuiStat
               title="88"
               description="Error widgets"
               titleColor="danger"
               textAlign="right"
               isLoading={isLoading}>
-              <EuiIcon type="alert" color="danger" />
-            </EuiStat>
-          </EuiPanel>
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer />
-      <EuiSwitch
+              <OuiIcon type="alert" color="danger" />
+            </OuiStat>
+          </OuiPanel>
+        </OuiFlexItem>
+      </OuiFlexGroup>
+      <OuiSpacer />
+      <OuiSwitch
         label="Show as loading"
         checked={isLoading}
         onChange={onToggleChange}

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,7 +28,7 @@
  * under the License.
  */
 
-import { euiPaletteColorBlind } from '../../services/color/eui_palettes';
+import { ouiPaletteColorBlind } from '../../services/color/oui_palettes';
 import { DEFAULT_VISUALIZATION_COLOR } from '../../services/color/visualization_colors';
 import {
   PartialTheme,
@@ -30,29 +41,29 @@ import { RecursivePartial } from '../../components/common';
 // @ts-ignore typescript doesn't understand the webpack loader
 import lightColors from '!!sass-vars-to-js-loader!../../global_styling/variables/_colors.scss';
 // @ts-ignore typescript doesn't understand the webpack loader
-import darkColors from '!!sass-vars-to-js-loader!../../themes/eui/eui_colors_dark.scss';
+import darkColors from '!!sass-vars-to-js-loader!../../themes/oui/oui_colors_dark.scss';
 
 const fontFamily = `'Inter UI', -apple-system, BlinkMacSystemFont,
   'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'`;
 
-export interface EuiChartThemeType {
+export interface OuiChartThemeType {
   lineAnnotation: LineAnnotationStyle;
   theme: PartialTheme;
   partition: RecursivePartial<PartitionConfig>;
 }
 
-function createTheme(colors: any): EuiChartThemeType {
+function createTheme(colors: any): OuiChartThemeType {
   return {
     lineAnnotation: {
       line: {
         strokeWidth: 1,
-        stroke: colors.euiColorDarkShade.rgba,
+        stroke: colors.ouiColorDarkShade.rgba,
         opacity: 1,
       },
       details: {
         fontSize: 10,
         fontFamily: fontFamily,
-        fill: colors.euiColorDarkShade.rgba,
+        fill: colors.ouiColorDarkShade.rgba,
         padding: 0,
       },
     },
@@ -69,16 +80,16 @@ function createTheme(colors: any): EuiChartThemeType {
       linkLabel: {
         maxCount: 5,
         fontSize: 11,
-        textColor: colors.euiColorDarkestShade.rgba,
+        textColor: colors.ouiColorDarkestShade.rgba,
       },
       outerSizeRatio: 1,
       circlePadding: 4,
-      sectorLineStroke: colors.euiColorEmptyShade.rgba,
+      sectorLineStroke: colors.ouiColorEmptyShade.rgba,
       sectorLineWidth: 1.5,
     },
     theme: {
       background: {
-        color: colors.euiColorEmptyShade.rgba,
+        color: colors.ouiColorEmptyShade.rgba,
       },
       chartMargins: {
         left: 0,
@@ -91,7 +102,7 @@ function createTheme(colors: any): EuiChartThemeType {
           strokeWidth: 2,
         },
         point: {
-          fill: colors.euiColorEmptyShade.rgba,
+          fill: colors.ouiColorEmptyShade.rgba,
           strokeWidth: 2,
           radius: 3,
         },
@@ -105,7 +116,7 @@ function createTheme(colors: any): EuiChartThemeType {
         },
         point: {
           visible: false,
-          fill: colors.euiColorEmptyShade.rgba,
+          fill: colors.ouiColorEmptyShade.rgba,
           strokeWidth: 2,
           radius: 3,
         },
@@ -114,7 +125,7 @@ function createTheme(colors: any): EuiChartThemeType {
         displayValue: {
           fontSize: 8,
           fontFamily: fontFamily,
-          fill: colors.euiColorDarkShade.rgba,
+          fill: colors.ouiColorDarkShade.rgba,
         },
       },
       scales: {
@@ -125,19 +136,19 @@ function createTheme(colors: any): EuiChartThemeType {
         axisTitle: {
           fontSize: 12,
           fontFamily: fontFamily,
-          fill: colors.euiColorDarkestShade.rgba,
+          fill: colors.ouiColorDarkestShade.rgba,
           padding: {
             inner: 10,
             outer: 0,
           },
         },
         axisLine: {
-          stroke: colors.euiColorChartLines.rgba,
+          stroke: colors.ouiColorChartLines.rgba,
         },
         tickLabel: {
           fontSize: 10,
           fontFamily: fontFamily,
-          fill: colors.euiColorDarkShade.rgba,
+          fill: colors.ouiColorDarkShade.rgba,
           padding: {
             outer: 8,
             inner: 10,
@@ -145,20 +156,20 @@ function createTheme(colors: any): EuiChartThemeType {
         },
         tickLine: {
           visible: false,
-          stroke: colors.euiColorChartLines.rgba,
+          stroke: colors.ouiColorChartLines.rgba,
           strokeWidth: 1,
         },
         gridLine: {
           horizontal: {
             visible: true,
-            stroke: colors.euiColorChartLines.rgba,
+            stroke: colors.ouiColorChartLines.rgba,
             strokeWidth: 1,
             opacity: 1,
             dash: [0, 0],
           },
           vertical: {
             visible: true,
-            stroke: colors.euiColorChartLines.rgba,
+            stroke: colors.ouiColorChartLines.rgba,
             strokeWidth: 1,
             opacity: 1,
             dash: [4, 4],
@@ -166,20 +177,20 @@ function createTheme(colors: any): EuiChartThemeType {
         },
       },
       colors: {
-        vizColors: euiPaletteColorBlind({ sortBy: 'natural' }),
+        vizColors: ouiPaletteColorBlind({ sortBy: 'natural' }),
         defaultVizColor: DEFAULT_VISUALIZATION_COLOR,
       },
       crosshair: {
         band: {
-          fill: colors.euiColorChartBand.rgba,
+          fill: colors.ouiColorChartBand.rgba,
         },
         line: {
-          stroke: colors.euiColorDarkShade.rgba,
+          stroke: colors.ouiColorDarkShade.rgba,
           strokeWidth: 1,
           dash: [4, 4],
         },
         crossLine: {
-          stroke: colors.euiColorDarkShade.rgba,
+          stroke: colors.ouiColorDarkShade.rgba,
           strokeWidth: 1,
           dash: [4, 4],
         },
@@ -188,12 +199,12 @@ function createTheme(colors: any): EuiChartThemeType {
   };
 }
 
-export const EUI_CHARTS_THEME_LIGHT: EuiChartThemeType = createTheme(
+export const OUI_CHARTS_THEME_LIGHT: OuiChartThemeType = createTheme(
   lightColors
 );
-export const EUI_CHARTS_THEME_DARK: EuiChartThemeType = createTheme(darkColors);
+export const OUI_CHARTS_THEME_DARK: OuiChartThemeType = createTheme(darkColors);
 
-export const EUI_SPARKLINE_THEME_PARTIAL: PartialTheme = {
+export const OUI_SPARKLINE_THEME_PARTIAL: PartialTheme = {
   lineSeriesStyle: {
     point: {
       visible: false,

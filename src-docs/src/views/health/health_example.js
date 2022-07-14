@@ -1,26 +1,37 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { EuiHealth, EuiCode } from '../../../../src/components';
+import { OuiHealth, OuiCode } from '../../../../src/components';
 import healthConfig from './playground';
 
 import Health from './health';
 const healthSource = require('!!raw-loader!./health');
 const healthHtml = renderToHtml(Health);
 const healthSnippet = [
-  '<EuiHealth color="success">Healthy</EuiHealth>',
-  '<EuiHealth color="#33CC33">Custom color as hex</EuiHealth>',
+  '<OuiHealth color="success">Healthy</OuiHealth>',
+  '<OuiHealth color="#33CC33">Custom color as hex</OuiHealth>',
 ];
 
 import HealthSize from './health_size';
 const healthTextSizeSource = require('!!raw-loader!./health_size');
 const healthTextSizeHtml = renderToHtml(HealthSize);
 const healthTextSizeSnippet = [
-  '<EuiHealth textSize="inherit">Text inherited from the parent element</EuiHealth>',
-  '<EuiHealth textSize="xs">Text extra small</EuiHealth>',
+  '<OuiHealth textSize="inherit">Text inherited from the parent element</OuiHealth>',
+  '<OuiHealth textSize="xs">Text extra small</OuiHealth>',
 ];
 
 export const HealthExample = {
@@ -39,7 +50,7 @@ export const HealthExample = {
       ],
       text: (
         <p>
-          The <strong>EuiHealth</strong> component should be used when showing
+          The <strong>OuiHealth</strong> component should be used when showing
           comparitive health of listed objects (like servers, HTTP response
           status codes(as per convenience), nodes, indexes..etc). Because icons
           are vague and bulky and color alone does not work, color plus text
@@ -48,7 +59,7 @@ export const HealthExample = {
         </p>
       ),
       snippet: healthSnippet,
-      props: { EuiHealth },
+      props: { OuiHealth },
       demo: <Health />,
     },
     {
@@ -65,14 +76,14 @@ export const HealthExample = {
       ],
       text: (
         <p>
-          Match the text size of <strong>EuiHealth</strong> to your context by
-          passing <EuiCode>xs / s / m / inherit</EuiCode> to the{' '}
-          <EuiCode>textSize</EuiCode> prop. The <EuiCode>inherit</EuiCode> style
+          Match the text size of <strong>OuiHealth</strong> to your context by
+          passing <OuiCode>xs / s / m / inherit</OuiCode> to the{' '}
+          <OuiCode>textSize</OuiCode> prop. The <OuiCode>inherit</OuiCode> style
           will get its font size from the parent element.
         </p>
       ),
       snippet: healthTextSizeSnippet,
-      props: { EuiHealth },
+      props: { OuiHealth },
       demo: <HealthSize />,
     },
   ],

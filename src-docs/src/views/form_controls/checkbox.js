@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
-import { EuiCheckbox, EuiSpacer } from '../../../../src/components';
+import { OuiCheckbox, OuiSpacer } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
 
@@ -18,25 +29,25 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiCheckbox
+      <OuiCheckbox
         id={htmlIdGenerator()()}
         label="I am a checkbox"
         checked={checked}
         onChange={(e) => onChange(e)}
       />
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiCheckbox
+      <OuiCheckbox
         id={htmlIdGenerator()()}
         label="I am an indeterminate checkbox"
         indeterminate={indeterminate}
         onChange={() => onChangeIndeterminate()}
       />
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiCheckbox
+      <OuiCheckbox
         id={htmlIdGenerator()()}
         label="I am a disabled checkbox"
         checked={checked}
@@ -44,9 +55,9 @@ export default () => {
         disabled
       />
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiCheckbox
+      <OuiCheckbox
         id={htmlIdGenerator()()}
         label="I am a compressed checkbox"
         checked={checked}

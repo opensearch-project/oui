@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, {
   ComponentType,
   ReactElement,
@@ -5,11 +16,11 @@ import React, {
   FunctionComponent,
 } from 'react';
 import { useRouteMatch } from 'react-router';
-import { EuiImage } from '../../../../src/components/image';
-import { EuiButton } from '../../../../src/components/button';
-import { EuiSpacer } from '../../../../src/components/spacer';
-import { EuiSwitch } from '../../../../src/components/form';
-import { EuiTextAlign } from '../../../../src/components/text';
+import { OuiImage } from '../../../../src/components/image';
+import { OuiButton } from '../../../../src/components/button';
+import { OuiSpacer } from '../../../../src/components/spacer';
+import { OuiSwitch } from '../../../../src/components/form';
+import { OuiTextAlign } from '../../../../src/components/text';
 import { useIsWithinBreakpoints } from '../../../../src/services/hooks';
 import { useExitPath } from '../../services/routing/routing';
 
@@ -21,9 +32,9 @@ import singleSvg from '../../images/single.svg';
 const ExitFullscreenDemoButton = () => {
   const exitPath = useExitPath();
   return (
-    <EuiButton fill href={exitPath} iconType="exit">
+    <OuiButton fill href={exitPath} iconType="exit">
       Exit full screen
-    </EuiButton>
+    </OuiButton>
   );
 };
 
@@ -68,13 +79,13 @@ export const PageDemo: FunctionComponent<{
   const button = fullscreen ? (
     <ExitFullscreenDemoButton />
   ) : (
-    <EuiButton fill href={`#${path}/${slug}`}>
+    <OuiButton fill href={`#${path}/${slug}`}>
       Go full screen
-    </EuiButton>
+    </OuiButton>
   );
 
   const sideNav = (
-    <EuiImage
+    <OuiImage
       size={isMobileSize ? 'original' : 'fullWidth'}
       alt="Fake side nav list"
       url={isMobileSize ? singleSvg : sideNavSvg}
@@ -83,15 +94,15 @@ export const PageDemo: FunctionComponent<{
 
   const content = (
     <>
-      <EuiImage
+      <OuiImage
         size="fullWidth"
         alt="Fake paragraph"
         url={centered ? contentCenterSvg : contentSvg}
       />
       {!centered && (
         <>
-          <EuiSpacer />
-          <EuiImage
+          <OuiSpacer />
+          <OuiImage
             size="fullWidth"
             alt="Fake paragraph"
             url={centered ? contentCenterSvg : contentSvg}
@@ -102,9 +113,9 @@ export const PageDemo: FunctionComponent<{
   );
 
   const bottomBar = (
-    <EuiButton size="s" color="ghost">
+    <OuiButton size="s" color="ghost">
       Save
-    </EuiButton>
+    </OuiButton>
   );
 
   const Child = showTemplate ? template : pattern;
@@ -125,14 +136,14 @@ export const PageDemo: FunctionComponent<{
           bottomBar={bottomBar}
         />
       </div>
-      <EuiTextAlign textAlign="right">
-        <EuiSpacer />
-        <EuiSwitch
+      <OuiTextAlign textAlign="right">
+        <OuiSpacer />
+        <OuiSwitch
           label="Show with individual components"
           checked={!showTemplate}
           onChange={() => setShowTemplate((showing) => !showing)}
         />
-      </EuiTextAlign>
+      </OuiTextAlign>
     </>
   );
 };

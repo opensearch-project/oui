@@ -1,125 +1,125 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiFilterButton is rendered 1`] = `
+exports[`OuiFilterButton is rendered 1`] = `
 <button
   aria-label="aria-label"
-  class="euiButtonEmpty euiButtonEmpty--text euiFilterButton testClass1 testClass2"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiFilterButton testClass1 testClass2"
   data-test-subj="test subject string"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
     </span>
   </span>
 </button>
 `;
 
-exports[`EuiFilterButton props grow can be turned off 1`] = `
+exports[`OuiFilterButton props grow can be turned off 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--text euiFilterButton euiFilterButton--noGrow"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiFilterButton ouiFilterButton--noGrow"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
     </span>
   </span>
 </button>
 `;
 
-exports[`EuiFilterButton props iconType and iconSide is rendered 1`] = `
+exports[`OuiFilterButton props iconType and iconSide is rendered 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--text euiFilterButton euiFilterButton--hasIcon"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiFilterButton ouiFilterButton--hasIcon"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonContent__icon"
+      class="ouiButtonContent__icon"
       color="inherit"
-      data-euiicon-type="user"
+      data-ouiicon-type="user"
     />
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
     </span>
   </span>
 </button>
 `;
 
-exports[`EuiFilterButton props isDisabled is rendered 1`] = `
+exports[`OuiFilterButton props isDisabled is rendered 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty-isDisabled euiFilterButton"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty-isDisabled ouiFilterButton"
   disabled=""
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
     </span>
   </span>
 </button>
 `;
 
-exports[`EuiFilterButton props isSelected is rendered 1`] = `
+exports[`OuiFilterButton props isSelected is rendered 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--text euiFilterButton euiFilterButton-isSelected"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiFilterButton ouiFilterButton-isSelected"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
     </span>
   </span>
 </button>
 `;
 
-exports[`EuiFilterButton props numActiveFilters and hasActiveFilters is rendered 1`] = `
+exports[`OuiFilterButton props numActiveFilters and hasActiveFilters is rendered 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--text euiFilterButton euiFilterButton-hasActiveFilters"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiFilterButton ouiFilterButton-hasActiveFilters"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text euiFilterButton__text-hasNotification"
+      class="ouiButtonEmpty__text ouiFilterButton__text-hasNotification"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
       <span
         aria-label="5 active filters"
-        class="euiNotificationBadge euiNotificationBadge--medium euiFilterButton__notification"
+        class="ouiNotificationBadge ouiNotificationBadge--medium ouiFilterButton__notification"
       >
         5
       </span>
@@ -128,23 +128,23 @@ exports[`EuiFilterButton props numActiveFilters and hasActiveFilters is rendered
 </button>
 `;
 
-exports[`EuiFilterButton props numFilters is rendered 1`] = `
+exports[`OuiFilterButton props numFilters is rendered 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--text euiFilterButton euiFilterButton-hasNotification"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiFilterButton ouiFilterButton-hasNotification"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text euiFilterButton__text-hasNotification"
+      class="ouiButtonEmpty__text ouiFilterButton__text-hasNotification"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
       <span
         aria-label="5 available filters"
-        class="euiNotificationBadge euiNotificationBadge--medium euiNotificationBadge--subdued euiFilterButton__notification"
+        class="ouiNotificationBadge ouiNotificationBadge--medium ouiNotificationBadge--subdued ouiFilterButton__notification"
       >
         5
       </span>
@@ -153,63 +153,63 @@ exports[`EuiFilterButton props numFilters is rendered 1`] = `
 </button>
 `;
 
-exports[`EuiFilterButton props type is rendered 1`] = `
+exports[`OuiFilterButton props type is rendered 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--text euiFilterButton"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiFilterButton"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
     </span>
   </span>
 </button>
 `;
 
-exports[`EuiFilterButton props withNext is rendered 1`] = `
+exports[`OuiFilterButton props withNext is rendered 1`] = `
 <button
-  class="euiButtonEmpty euiButtonEmpty--text euiFilterButton euiFilterButton--withNext"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiFilterButton ouiFilterButton--withNext"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
     </span>
   </span>
 </button>
 `;
 
-exports[`EuiFilterButton renders zero properly 1`] = `
+exports[`OuiFilterButton renders zero properly 1`] = `
 <button
   aria-label="aria-label"
-  class="euiButtonEmpty euiButtonEmpty--text euiFilterButton euiFilterButton-hasNotification testClass1 testClass2"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiFilterButton ouiFilterButton-hasNotification testClass1 testClass2"
   data-test-subj="test subject string"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonContent--iconRight euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text euiFilterButton__text-hasNotification"
+      class="ouiButtonEmpty__text ouiFilterButton__text-hasNotification"
     >
       <span
-        class="euiFilterButton__textShift"
+        class="ouiFilterButton__textShift"
       />
       <span
         aria-label="0 available filters"
-        class="euiNotificationBadge euiNotificationBadge--medium euiNotificationBadge--subdued euiFilterButton__notification"
+        class="ouiNotificationBadge ouiNotificationBadge--medium ouiNotificationBadge--subdued ouiFilterButton__notification"
       >
         0
       </span>

@@ -1,32 +1,43 @@
-@mixin euiFocusRing($size: 'small', $amsterdamOnlyProp: null) {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@mixin ouiFocusRing($size: 'small', $amsterdamOnlyProp: null) {
   @if $size == 'large' {
-    // It's always OK to use the focus animation. This will take precedence over times we turn it off individually like EuiButtonEmpty
+    // It's always OK to use the focus animation. This will take precedence over times we turn it off individually like OuiButtonEmpty
     // sass-lint:disable-block no-important
-    animation: $euiAnimSpeedSlow $euiAnimSlightResistance 1 normal forwards focusRingAnimateLarge !important;
+    animation: $ouiAnimSpeedSlow $ouiAnimSlightResistance 1 normal forwards focusRingAnimateLarge !important;
   } @else {
     // sass-lint:disable-block no-important
-    animation: $euiAnimSpeedSlow $euiAnimSlightResistance 1 normal forwards focusRingAnimate !important;
+    animation: $ouiAnimSpeedSlow $ouiAnimSlightResistance 1 normal forwards focusRingAnimate !important;
   }
 }
 
 // Keyframe animation declarations can be found in
 // utility/animations.scss
 
-@mixin euiFocusBackground($color: $euiColorPrimary) {
-  background-color: tintOrShade($euiColorPrimary, ((1 - $euiFocusTransparency) * 100%), ((1 - $euiFocusTransparency) * 100%));
+@mixin ouiFocusBackground($color: $ouiColorPrimary) {
+  background-color: tintOrShade($ouiColorPrimary, ((1 - $ouiFocusTransparency) * 100%), ((1 - $ouiFocusTransparency) * 100%));
 }
 
-@mixin euiHoverState {
+@mixin ouiHoverState {
   cursor: pointer;
   text-decoration: underline;
 }
 
-@mixin euiFocusState($color: $euiColorPrimary) {
-  @include euiHoverState;
-  @include euiFocusBackground($color);
+@mixin ouiFocusState($color: $ouiColorPrimary) {
+  @include ouiHoverState;
+  @include ouiFocusBackground($color);
 }
 
-@mixin euiDisabledState($color: $euiButtonColorDisabledText) {
+@mixin ouiDisabledState($color: $ouiButtonColorDisabledText) {
   cursor: not-allowed;
   text-decoration: none;
 
@@ -35,16 +46,16 @@
   }
 }
 
-@mixin euiInteractiveStates($focusColor: $euiColorPrimary, $disabledColor: $euiButtonColorDisabledText) {
+@mixin ouiInteractiveStates($focusColor: $ouiColorPrimary, $disabledColor: $ouiButtonColorDisabledText) {
   &:hover {
-    @include euiHoverState;
+    @include ouiHoverState;
   }
 
   &:focus {
-    @include euiFocusState($focusColor);
+    @include ouiFocusState($focusColor);
   }
 
   &:disabled {
-    @include euiDisabledState($disabledColor);
+    @include ouiDisabledState($disabledColor);
   }
 }

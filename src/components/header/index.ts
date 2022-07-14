@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -17,24 +28,24 @@
  * under the License.
  */
 
-export { EuiHeader, EuiHeaderProps, EuiHeaderSections } from './header';
+export { OuiHeader, OuiHeaderProps, OuiHeaderSections } from './header';
 
-export { EuiHeaderAlert, EuiHeaderAlertProps } from './header_alert';
+export { OuiHeaderAlert, OuiHeaderAlertProps } from './header_alert';
 
-export { EuiHeaderBreadcrumbs } from './header_breadcrumbs';
+export { OuiHeaderBreadcrumbs } from './header_breadcrumbs';
 
 export {
-  EuiHeaderLink,
-  EuiHeaderLinkProps,
-  EuiHeaderLinks,
-  EuiHeaderLinksProps,
+  OuiHeaderLink,
+  OuiHeaderLinkProps,
+  OuiHeaderLinks,
+  OuiHeaderLinksProps,
 } from './header_links';
 
-export { EuiHeaderLogo, EuiHeaderLogoProps } from './header_logo';
+export { OuiHeaderLogo, OuiHeaderLogoProps } from './header_logo';
 
 export {
-  EuiHeaderSection,
-  EuiHeaderSectionItem,
-  EuiHeaderSectionItemButton,
-  EuiHeaderSectionItemButtonProps,
+  OuiHeaderSection,
+  OuiHeaderSectionItem,
+  OuiHeaderSectionItemButton,
+  OuiHeaderSectionItemButtonProps,
 } from './header_section';

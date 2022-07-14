@@ -1,27 +1,38 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiContext,
-  EuiButton,
-  EuiFieldText,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFormRow,
-  EuiSpacer,
-  EuiI18n,
-  EuiI18nNumber,
-  useEuiI18n,
+  OuiContext,
+  OuiButton,
+  OuiFieldText,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFormRow,
+  OuiSpacer,
+  OuiI18n,
+  OuiI18nNumber,
+  useOuiI18n,
 } from '../../../../src/components';
 
 const mappings = {
   fr: {
-    'euiContext.english': 'Anglais',
-    'euiContext.french': 'Française',
-    'euiContext.greeting': 'Salutations!',
-    'euiContext.guestNo': 'Vous êtes invité #',
-    'euiContext.question': 'Quel est votre nom?',
-    'euiContext.placeholder': 'Jean Dupont',
-    'euiContext.action': 'Soumettre',
+    'ouiContext.english': 'Anglais',
+    'ouiContext.french': 'Française',
+    'ouiContext.greeting': 'Salutations!',
+    'ouiContext.guestNo': 'Vous êtes invité #',
+    'ouiContext.question': 'Quel est votre nom?',
+    'ouiContext.placeholder': 'Jean Dupont',
+    'ouiContext.action': 'Soumettre',
   },
 };
 
@@ -29,29 +40,29 @@ const ContextConsumer = () => {
   return (
     <div>
       <strong>
-        <EuiI18n token="euiContext.greeting" default="Welcome!" />
+        <OuiI18n token="ouiContext.greeting" default="Welcome!" />
       </strong>
 
-      <EuiSpacer size="s" />
+      <OuiSpacer size="s" />
 
       <p>
-        <EuiI18n token="euiContext.guestNo" default="You are guest #" />
-        <EuiI18nNumber value={1582394} />
+        <OuiI18n token="ouiContext.guestNo" default="You are guest #" />
+        <OuiI18nNumber value={1582394} />
       </p>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
       <Fragment>
-        <EuiFormRow
-          label={useEuiI18n('euiContext.question', 'What is your name?')}>
-          <EuiFieldText
-            placeholder={useEuiI18n('euiContext.placeholder', 'John Doe')}
+        <OuiFormRow
+          label={useOuiI18n('ouiContext.question', 'What is your name?')}>
+          <OuiFieldText
+            placeholder={useOuiI18n('ouiContext.placeholder', 'John Doe')}
           />
-        </EuiFormRow>
+        </OuiFormRow>
 
-        <EuiSpacer />
+        <OuiSpacer />
 
-        <EuiButton>{useEuiI18n('euiContext.action', 'Submit')}</EuiButton>
+        <OuiButton>{useOuiI18n('ouiContext.action', 'Submit')}</OuiButton>
       </Fragment>
     </div>
   );
@@ -67,25 +78,25 @@ export default () => {
 
   return (
     <>
-      <EuiFlexGroup gutterSize="s" alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiButton fill={language === 'en'} onClick={() => setLanguage('en')}>
-            <EuiI18n token="euiContext.english" default="English" />
-          </EuiButton>
-        </EuiFlexItem>
+      <OuiFlexGroup gutterSize="s" alignItems="center">
+        <OuiFlexItem grow={false}>
+          <OuiButton fill={language === 'en'} onClick={() => setLanguage('en')}>
+            <OuiI18n token="ouiContext.english" default="English" />
+          </OuiButton>
+        </OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiButton fill={language === 'fr'} onClick={() => setLanguage('fr')}>
-            <EuiI18n token="euiContext.french" default="French" />
-          </EuiButton>
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        <OuiFlexItem grow={false}>
+          <OuiButton fill={language === 'fr'} onClick={() => setLanguage('fr')}>
+            <OuiI18n token="ouiContext.french" default="French" />
+          </OuiButton>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
 
-      <EuiContext i18n={i18n}>
+      <OuiContext i18n={i18n}>
         <ContextConsumer />
-      </EuiContext>
+      </OuiContext>
     </>
   );
 };

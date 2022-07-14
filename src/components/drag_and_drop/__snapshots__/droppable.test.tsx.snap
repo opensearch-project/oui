@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiDroppable can be given ReactElement children 1`] = `
+exports[`OuiDroppable can be given ReactElement children 1`] = `
 <div
-  class="euiDroppable euiDroppable--noGrow"
+  class="ouiDroppable ouiDroppable--noGrow"
   data-rbd-droppable-context-id="0"
   data-rbd-droppable-id="testDroppable"
   data-test-subj="droppable"
 >
   <div />
   <div
-    class="euiDroppable__placeholder"
+    class="ouiDroppable__placeholder"
   />
 </div>
 `;
 
-exports[`EuiDroppable can be given multiple ReactElement children 1`] = `
+exports[`OuiDroppable can be given multiple ReactElement children 1`] = `
 <div
-  class="euiDroppable euiDroppable--noGrow"
+  class="ouiDroppable ouiDroppable--noGrow"
   data-rbd-droppable-context-id="0"
   data-rbd-droppable-id="testDroppable"
   data-test-subj="droppable"
@@ -25,21 +25,21 @@ exports[`EuiDroppable can be given multiple ReactElement children 1`] = `
   <div />
   <div />
   <div
-    class="euiDroppable__placeholder"
+    class="ouiDroppable__placeholder"
   />
 </div>
 `;
 
-exports[`EuiDroppable is rendered 1`] = `
+exports[`OuiDroppable is rendered 1`] = `
 <div
-  class="euiDroppable euiDroppable--noGrow"
+  class="ouiDroppable ouiDroppable--noGrow"
   data-rbd-droppable-context-id="0"
   data-rbd-droppable-id="testDroppable"
   data-test-subj="droppable"
 >
   <div />
   <div
-    class="euiDroppable__placeholder"
+    class="ouiDroppable__placeholder"
   />
 </div>
 `;

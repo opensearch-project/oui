@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,33 +29,33 @@
  */
 import React, { JSXElementConstructor, ReactNode, RefCallback } from 'react';
 import {
-  EuiDataGridColumn,
-  EuiDataGridColumnCellAction,
-  EuiDataGridColumnCellActionProps,
-  EuiDataGridPopoverContent,
+  OuiDataGridColumn,
+  OuiDataGridColumnCellAction,
+  OuiDataGridColumnCellActionProps,
+  OuiDataGridPopoverContent,
 } from './data_grid_types';
-import { EuiPopover, EuiPopoverFooter } from '../popover';
+import { OuiPopover, OuiPopoverFooter } from '../popover';
 import { keys } from '../../services';
-import { EuiFlexGroup, EuiFlexItem } from '../flex';
-import { EuiButtonEmpty, EuiButtonEmptyProps } from '../button/button_empty';
-import { EuiDataGridCellValueElementProps } from './data_grid_cell';
+import { OuiFlexGroup, OuiFlexItem } from '../flex';
+import { OuiButtonEmpty, OuiButtonEmptyProps } from '../button/button_empty';
+import { OuiDataGridCellValueElementProps } from './data_grid_cell';
 
-interface EuiDataGridCellPopoverProps {
+interface OuiDataGridCellPopoverProps {
   anchorContent: NonNullable<ReactNode>;
-  cellContentProps: EuiDataGridCellValueElementProps;
+  cellContentProps: OuiDataGridCellValueElementProps;
   cellContentsRef: HTMLDivElement | null;
   closePopover: () => void;
-  column?: EuiDataGridColumn;
+  column?: OuiDataGridColumn;
   panelRefFn: RefCallback<HTMLElement | null>;
   popoverIsOpen: boolean;
-  popoverContent: EuiDataGridPopoverContent;
+  popoverContent: OuiDataGridPopoverContent;
   renderCellValue:
-    | JSXElementConstructor<EuiDataGridCellValueElementProps>
-    | ((props: EuiDataGridCellValueElementProps) => ReactNode);
+    | JSXElementConstructor<OuiDataGridCellValueElementProps>
+    | ((props: OuiDataGridCellValueElementProps) => ReactNode);
   rowIndex: number;
 }
 
-export function EuiDataGridCellPopover({
+export function OuiDataGridCellPopover({
   anchorContent,
   cellContentProps,
   cellContentsRef,
@@ -55,18 +66,18 @@ export function EuiDataGridCellPopover({
   popoverIsOpen,
   renderCellValue,
   rowIndex,
-}: EuiDataGridCellPopoverProps) {
+}: OuiDataGridCellPopoverProps) {
   const CellElement = renderCellValue as JSXElementConstructor<
-    EuiDataGridCellValueElementProps
+    OuiDataGridCellValueElementProps
   >;
   return (
-    <EuiPopover
+    <OuiPopover
       hasArrow={false}
-      anchorClassName="euiDataGridRowCell__expand"
+      anchorClassName="ouiDataGridRowCell__expand"
       button={anchorContent}
       isOpen={popoverIsOpen}
       panelRef={panelRefFn}
-      panelClassName="euiDataGridRowCell__popover"
+      panelClassName="ouiDataGridRowCell__popover"
       panelPaddingSize="s"
       zIndex={8001}
       display="block"
@@ -84,33 +95,33 @@ export function EuiDataGridCellPopover({
             <CellElement {...cellContentProps} isDetails={true} />
           </PopoverContent>
           {column && column.cellActions && column.cellActions.length ? (
-            <EuiPopoverFooter>
-              <EuiFlexGroup gutterSize="s">
+            <OuiPopoverFooter>
+              <OuiFlexGroup gutterSize="s">
                 {column.cellActions.map(
-                  (Action: EuiDataGridColumnCellAction, idx: number) => {
+                  (Action: OuiDataGridColumnCellAction, idx: number) => {
                     const CellButtonElement = Action as JSXElementConstructor<
-                      EuiDataGridColumnCellActionProps
+                      OuiDataGridColumnCellActionProps
                     >;
                     return (
-                      <EuiFlexItem key={idx}>
+                      <OuiFlexItem key={idx}>
                         <CellButtonElement
                           rowIndex={rowIndex}
                           columnId={column.id}
-                          Component={(props: EuiButtonEmptyProps) => (
-                            <EuiButtonEmpty {...props} size="s" />
+                          Component={(props: OuiButtonEmptyProps) => (
+                            <OuiButtonEmpty {...props} size="s" />
                           )}
                           isExpanded={true}
                           closePopover={closePopover}
                         />
-                      </EuiFlexItem>
+                      </OuiFlexItem>
                     );
                   }
                 )}
-              </EuiFlexGroup>
-            </EuiPopoverFooter>
+              </OuiFlexGroup>
+            </OuiPopoverFooter>
           ) : null}
         </>
       ) : null}
-    </EuiPopover>
+    </OuiPopover>
   );
 }

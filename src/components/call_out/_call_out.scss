@@ -1,40 +1,51 @@
-.euiCallOut {
-  padding: $euiSize;
-  border-left: $euiSizeXS / 2 solid transparent;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-  &.euiCallOut--small {
-    padding: $euiSizeS;
+.ouiCallOut {
+  padding: $ouiSize;
+  border-left: $ouiSizeXS / 2 solid transparent;
+
+  &.ouiCallOut--small {
+    padding: $ouiSizeS;
   }
 
-  .euiCallOutHeader__icon {
+  .ouiCallOutHeader__icon {
     flex: 0 0 auto;
     // Vertically center icon with first line of title
     transform: translateY(2px);
   }
 
-  .euiCallOutHeader__title {
-    @include euiCallOutTitle;
-    margin-bottom: 0; // In case it's nested inside EuiText
+  .ouiCallOutHeader__title {
+    @include ouiCallOutTitle;
+    margin-bottom: 0; // In case it's nested inside OuiText
   }
 }
 
 // smaller font size for headers in small callout
-.euiCallOut--small .euiCallOutHeader__title {
-  @include euiCallOutTitle('s');
+.ouiCallOut--small .ouiCallOutHeader__title {
+  @include ouiCallOutTitle('s');
 }
 
 // Create callout modifiers based upon the map.
-@each $name, $color in $euiCallOutTypes {
-  .euiCallOut--#{$name} {
+@each $name, $color in $ouiCallOutTypes {
+  .ouiCallOut--#{$name} {
     border-color: $color;
-    background-color: euiCallOutColor($name, 'background');
+    background-color: ouiCallOutColor($name, 'background');
 
-    .euiCallOutHeader__icon {
-      fill: euiCallOutColor($name, 'foreground');
+    .ouiCallOutHeader__icon {
+      fill: ouiCallOutColor($name, 'foreground');
     }
 
-    .euiCallOutHeader__title {
-      color: euiCallOutColor($name, 'foreground');
+    .ouiCallOutHeader__title {
+      color: ouiCallOutColor($name, 'foreground');
     }
   }
 }
@@ -44,15 +55,15 @@
  * 2. If content exists under the header, space it appropriately.
  * 3. Apply margin to all but last item in the flex.
  */
-.euiCallOutHeader {
+.ouiCallOutHeader {
   display: flex;
   align-items: baseline; /* 1 */
 
   + * {
-    margin-top: $euiSizeS; /* 1 */
+    margin-top: $ouiSizeS; /* 1 */
   }
 
   > * + * {
-    margin-left: $euiSizeS; /* 3 */
+    margin-left: $ouiSizeS; /* 3 */
   }
 }

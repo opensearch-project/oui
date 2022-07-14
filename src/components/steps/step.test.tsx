@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,15 +32,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiStep } from './step';
+import { OuiStep } from './step';
 import { STATUS } from './step_number';
 
-describe('EuiStep', () => {
+describe('OuiStep', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiStep {...requiredProps} title={'First step'}>
+      <OuiStep {...requiredProps} title={'First step'}>
         <p>Do this</p>
-      </EuiStep>
+      </OuiStep>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,9 +49,9 @@ describe('EuiStep', () => {
   describe('props', () => {
     test('headingElement', () => {
       const component = render(
-        <EuiStep headingElement={'h3'} title={'First step'}>
+        <OuiStep headingElement={'h3'} title={'First step'}>
           <p>Do this</p>
-        </EuiStep>
+        </OuiStep>
       );
 
       expect(component).toMatchSnapshot();
@@ -48,9 +59,9 @@ describe('EuiStep', () => {
 
     test('step', () => {
       const component = render(
-        <EuiStep step={5} title={'First step'}>
+        <OuiStep step={5} title={'First step'}>
           <p>Do this</p>
-        </EuiStep>
+        </OuiStep>
       );
 
       expect(component).toMatchSnapshot();
@@ -58,9 +69,9 @@ describe('EuiStep', () => {
 
     test('titleSize', () => {
       const component = render(
-        <EuiStep titleSize="xs" title={'First step'}>
+        <OuiStep titleSize="xs" title={'First step'}>
           <p>Do this</p>
-        </EuiStep>
+        </OuiStep>
       );
 
       expect(component).toMatchSnapshot();
@@ -70,9 +81,9 @@ describe('EuiStep', () => {
       STATUS.forEach((status) => {
         test(`${status} is rendered`, () => {
           const component = render(
-            <EuiStep status={status} title={'First step'}>
+            <OuiStep status={status} title={'First step'}>
               <p>Do this</p>
-            </EuiStep>
+            </OuiStep>
           );
 
           expect(component).toMatchSnapshot();

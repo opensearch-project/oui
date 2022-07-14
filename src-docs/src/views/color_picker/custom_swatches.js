@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiColorPicker,
-  EuiColorStops,
-  EuiFormRow,
-  EuiSpacer,
+  OuiColorPicker,
+  OuiColorStops,
+  OuiFormRow,
+  OuiSpacer,
 } from '../../../../src/components';
 
 import {
@@ -20,19 +31,19 @@ export default () => {
 
   return (
     <React.Fragment>
-      <EuiFormRow label="Pick a color" isInvalid={!!errors} error={errors}>
-        <EuiColorPicker
+      <OuiFormRow label="Pick a color" isInvalid={!!errors} error={errors}>
+        <OuiColorPicker
           onChange={setColor}
           color={color}
           isInvalid={!!errors}
           swatches={customSwatches}
         />
-      </EuiFormRow>
+      </OuiFormRow>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFormRow label="Set color stops">
-        <EuiColorStops
+      <OuiFormRow label="Set color stops">
+        <OuiColorStops
           label="Set color stops"
           onChange={setColorStops}
           colorStops={colorStops}
@@ -40,7 +51,7 @@ export default () => {
           max={100}
           swatches={customSwatches}
         />
-      </EuiFormRow>
+      </OuiFormRow>
     </React.Fragment>
   );
 };

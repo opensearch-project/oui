@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,30 +32,30 @@ import React from 'react';
 import { render, mount, ReactWrapper } from 'enzyme';
 import { findTestSubject, requiredProps } from '../../test';
 
-import { EuiContextMenuPanel, SIZES } from './context_menu_panel';
+import { OuiContextMenuPanel, SIZES } from './context_menu_panel';
 
-import { EuiContextMenuItem } from './context_menu_item';
+import { OuiContextMenuItem } from './context_menu_item';
 
 import { tick } from './context_menu.test';
 
 import { keys } from '../../services';
 
 const items = [
-  <EuiContextMenuItem key="A" data-test-subj="itemA">
+  <OuiContextMenuItem key="A" data-test-subj="itemA">
     Option A
-  </EuiContextMenuItem>,
-  <EuiContextMenuItem key="B" data-test-subj="itemB">
+  </OuiContextMenuItem>,
+  <OuiContextMenuItem key="B" data-test-subj="itemB">
     Option B
-  </EuiContextMenuItem>,
-  <EuiContextMenuItem key="C" data-test-subj="itemC">
+  </OuiContextMenuItem>,
+  <OuiContextMenuItem key="C" data-test-subj="itemC">
     Option C
-  </EuiContextMenuItem>,
+  </OuiContextMenuItem>,
 ];
 
-describe('EuiContextMenuPanel', () => {
+describe('OuiContextMenuPanel', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiContextMenuPanel {...requiredProps}>Hello</EuiContextMenuPanel>
+      <OuiContextMenuPanel {...requiredProps}>Hello</OuiContextMenuPanel>
     );
 
     expect(component).toMatchSnapshot();
@@ -53,7 +64,7 @@ describe('EuiContextMenuPanel', () => {
   describe('props', () => {
     describe('title', () => {
       test('is rendered', () => {
-        const component = render(<EuiContextMenuPanel title="Title" />);
+        const component = render(<OuiContextMenuPanel title="Title" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -63,7 +74,7 @@ describe('EuiContextMenuPanel', () => {
       SIZES.forEach((size) => {
         it(`${size} is rendered`, () => {
           const component = render(
-            <EuiContextMenuPanel title="Title" size={size} />
+            <OuiContextMenuPanel title="Title" size={size} />
           );
 
           expect(component).toMatchSnapshot();
@@ -74,7 +85,7 @@ describe('EuiContextMenuPanel', () => {
     describe('onClose', () => {
       test('renders a button as a title', () => {
         const component = render(
-          <EuiContextMenuPanel title="Title" onClose={() => {}} />
+          <OuiContextMenuPanel title="Title" onClose={() => {}} />
         );
 
         expect(component).toMatchSnapshot();
@@ -83,7 +94,7 @@ describe('EuiContextMenuPanel', () => {
       test("isn't called upon instantiation", () => {
         const onCloseHandler = jest.fn();
 
-        mount(<EuiContextMenuPanel title="Title" onClose={onCloseHandler} />);
+        mount(<OuiContextMenuPanel title="Title" onClose={onCloseHandler} />);
 
         expect(onCloseHandler).not.toHaveBeenCalled();
       });
@@ -92,7 +103,7 @@ describe('EuiContextMenuPanel', () => {
         const onCloseHandler = jest.fn();
 
         const component = mount(
-          <EuiContextMenuPanel title="Title" onClose={onCloseHandler} />
+          <OuiContextMenuPanel title="Title" onClose={onCloseHandler} />
         );
 
         component.find('button').simulate('click');
@@ -105,7 +116,7 @@ describe('EuiContextMenuPanel', () => {
       it('is called with a height value', () => {
         const onHeightChange = jest.fn();
 
-        mount(<EuiContextMenuPanel onHeightChange={onHeightChange} />);
+        mount(<OuiContextMenuPanel onHeightChange={onHeightChange} />);
 
         expect(onHeightChange).toHaveBeenCalledWith(0);
       });
@@ -117,7 +128,7 @@ describe('EuiContextMenuPanel', () => {
           describe('in', () => {
             test('is rendered', () => {
               const component = render(
-                <EuiContextMenuPanel
+                <OuiContextMenuPanel
                   transitionDirection="next"
                   transitionType="in"
                 />
@@ -130,7 +141,7 @@ describe('EuiContextMenuPanel', () => {
           describe('out', () => {
             test('is rendered', () => {
               const component = render(
-                <EuiContextMenuPanel
+                <OuiContextMenuPanel
                   transitionDirection="next"
                   transitionType="out"
                 />
@@ -147,7 +158,7 @@ describe('EuiContextMenuPanel', () => {
           describe('in', () => {
             test('is rendered', () => {
               const component = render(
-                <EuiContextMenuPanel
+                <OuiContextMenuPanel
                   transitionDirection="previous"
                   transitionType="in"
                 />
@@ -160,7 +171,7 @@ describe('EuiContextMenuPanel', () => {
           describe('out', () => {
             test('is rendered', () => {
               const component = render(
-                <EuiContextMenuPanel
+                <OuiContextMenuPanel
                   transitionDirection="previous"
                   transitionType="out"
                 />
@@ -176,7 +187,7 @@ describe('EuiContextMenuPanel', () => {
     describe('initialFocusedItemIndex', () => {
       it('sets focus on the item occupying that index', async () => {
         const component = mount(
-          <EuiContextMenuPanel items={items} initialFocusedItemIndex={1} />
+          <OuiContextMenuPanel items={items} initialFocusedItemIndex={1} />
         );
 
         await tick(20);
@@ -188,7 +199,7 @@ describe('EuiContextMenuPanel', () => {
 
       it('sets focus on the panel when set to `-1`', async () => {
         const component = mount(
-          <EuiContextMenuPanel items={items} initialFocusedItemIndex={-1} />
+          <OuiContextMenuPanel items={items} initialFocusedItemIndex={-1} />
         );
 
         await tick(20);
@@ -202,7 +213,7 @@ describe('EuiContextMenuPanel', () => {
         const onUseKeyboardToNavigateHandler = jest.fn();
 
         const component = mount(
-          <EuiContextMenuPanel
+          <OuiContextMenuPanel
             items={items}
             onUseKeyboardToNavigate={onUseKeyboardToNavigateHandler}
           />
@@ -216,7 +227,7 @@ describe('EuiContextMenuPanel', () => {
         const onUseKeyboardToNavigateHandler = jest.fn();
 
         const component = mount(
-          <EuiContextMenuPanel
+          <OuiContextMenuPanel
             items={items}
             onUseKeyboardToNavigate={onUseKeyboardToNavigateHandler}
           />
@@ -231,7 +242,7 @@ describe('EuiContextMenuPanel', () => {
           const onUseKeyboardToNavigateHandler = jest.fn();
 
           const component = mount(
-            <EuiContextMenuPanel
+            <OuiContextMenuPanel
               items={items}
               showPreviousPanel={() => {}}
               onUseKeyboardToNavigate={onUseKeyboardToNavigateHandler}
@@ -246,7 +257,7 @@ describe('EuiContextMenuPanel', () => {
           const onUseKeyboardToNavigateHandler = jest.fn();
 
           const component = mount(
-            <EuiContextMenuPanel
+            <OuiContextMenuPanel
               items={items}
               onUseKeyboardToNavigate={onUseKeyboardToNavigateHandler}
             />
@@ -262,7 +273,7 @@ describe('EuiContextMenuPanel', () => {
           const onUseKeyboardToNavigateHandler = jest.fn();
 
           const component = mount(
-            <EuiContextMenuPanel
+            <OuiContextMenuPanel
               items={items}
               showNextPanel={() => {}}
               onUseKeyboardToNavigate={onUseKeyboardToNavigateHandler}
@@ -277,7 +288,7 @@ describe('EuiContextMenuPanel', () => {
           const onUseKeyboardToNavigateHandler = jest.fn();
 
           const component = mount(
-            <EuiContextMenuPanel
+            <OuiContextMenuPanel
               items={items}
               onUseKeyboardToNavigate={onUseKeyboardToNavigateHandler}
             />
@@ -294,9 +305,9 @@ describe('EuiContextMenuPanel', () => {
     describe('focus', () => {
       it('is set on the first focusable element by default if there are no items and hasFocus is true', async () => {
         const component = mount(
-          <EuiContextMenuPanel>
+          <OuiContextMenuPanel>
             <button data-test-subj="button" />
-          </EuiContextMenuPanel>
+          </OuiContextMenuPanel>
         );
 
         await tick(20);
@@ -308,9 +319,9 @@ describe('EuiContextMenuPanel', () => {
 
       it('is not set on anything if hasFocus is false', () => {
         const component = mount(
-          <EuiContextMenuPanel hasFocus={false}>
+          <OuiContextMenuPanel hasFocus={false}>
             <button data-test-subj="button" />
-          </EuiContextMenuPanel>
+          </OuiContextMenuPanel>
         );
 
         expect(findTestSubject(component, 'button').getDOMNode()).not.toBe(
@@ -329,7 +340,7 @@ describe('EuiContextMenuPanel', () => {
         showPreviousPanelHandler = jest.fn();
 
         component = mount(
-          <EuiContextMenuPanel
+          <OuiContextMenuPanel
             items={items}
             showNextPanel={showNextPanelHandler}
             showPreviousPanel={showPreviousPanelHandler}
@@ -421,14 +432,14 @@ describe('EuiContextMenuPanel', () => {
 
         // by not passing `watchedItemProps` no changes to items should cause a re-render
         const component = mount(
-          <EuiContextMenuPanel
+          <OuiContextMenuPanel
             items={[
-              <EuiContextMenuItem key="A" data-counter={0}>
+              <OuiContextMenuItem key="A" data-counter={0}>
                 Option A
-              </EuiContextMenuItem>,
-              <EuiContextMenuItem key="B" data-counter={1}>
+              </OuiContextMenuItem>,
+              <OuiContextMenuItem key="B" data-counter={1}>
                 Option B
-              </EuiContextMenuItem>,
+              </OuiContextMenuItem>,
             ]}
           />
         );
@@ -438,12 +449,12 @@ describe('EuiContextMenuPanel', () => {
         component.setProps(
           {
             items: [
-              <EuiContextMenuItem key="A" data-counter={2}>
+              <OuiContextMenuItem key="A" data-counter={2}>
                 Option A
-              </EuiContextMenuItem>,
-              <EuiContextMenuItem key="B" data-counter={3}>
+              </OuiContextMenuItem>,
+              <OuiContextMenuItem key="B" data-counter={3}>
                 Option B
-              </EuiContextMenuItem>,
+              </OuiContextMenuItem>,
             ],
           },
           () => {
@@ -458,15 +469,15 @@ describe('EuiContextMenuPanel', () => {
         // by referencing the `data-counter` property in `watchedItemProps`
         // changes to the items should be picked up and re-rendered
         const component = mount(
-          <EuiContextMenuPanel
+          <OuiContextMenuPanel
             watchedItemProps={['data-counter']}
             items={[
-              <EuiContextMenuItem key="A" data-counter={0}>
+              <OuiContextMenuItem key="A" data-counter={0}>
                 Option A
-              </EuiContextMenuItem>,
-              <EuiContextMenuItem key="B" data-counter={1}>
+              </OuiContextMenuItem>,
+              <OuiContextMenuItem key="B" data-counter={1}>
                 Option B
-              </EuiContextMenuItem>,
+              </OuiContextMenuItem>,
             ]}
           />
         );
@@ -476,12 +487,12 @@ describe('EuiContextMenuPanel', () => {
         component.setProps(
           {
             items: [
-              <EuiContextMenuItem key="A" data-counter={2}>
+              <OuiContextMenuItem key="A" data-counter={2}>
                 Option A
-              </EuiContextMenuItem>,
-              <EuiContextMenuItem key="B" data-counter={3}>
+              </OuiContextMenuItem>,
+              <OuiContextMenuItem key="B" data-counter={3}>
                 Option B
-              </EuiContextMenuItem>,
+              </OuiContextMenuItem>,
             ],
           },
           () => {
@@ -494,7 +505,7 @@ describe('EuiContextMenuPanel', () => {
         expect.assertions(2); // make sure the assertion in the `setProps` callback is executed
 
         const component = mount(
-          <EuiContextMenuPanel>Hello World</EuiContextMenuPanel>
+          <OuiContextMenuPanel>Hello World</OuiContextMenuPanel>
         );
 
         expect(component.debug()).toMatchSnapshot();

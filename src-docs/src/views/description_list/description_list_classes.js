@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiDescriptionList } from '../../../../src/components';
+import { OuiDescriptionList } from '../../../../src/components';
 
 const favoriteVideoGames = [
   {
@@ -19,12 +30,12 @@ const favoriteVideoGames = [
 ];
 export default () => (
   <div style={{ maxWidth: '400px' }}>
-    <EuiDescriptionList
+    <OuiDescriptionList
       listItems={favoriteVideoGames}
       type="column"
       align="center"
-      titleProps={{ className: 'eui-textTruncate' }}
-      descriptionProps={{ className: 'eui-textTruncate' }}
+      titleProps={{ className: 'oui-textTruncate' }}
+      descriptionProps={{ className: 'oui-textTruncate' }}
     />
   </div>
 );

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +32,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiHighlight } from './highlight';
+import { OuiHighlight } from './highlight';
 
-describe('EuiHighlight', () => {
+describe('OuiHighlight', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiHighlight {...requiredProps} search="">
+      <OuiHighlight {...requiredProps} search="">
         value
-      </EuiHighlight>
+      </OuiHighlight>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,7 +49,7 @@ describe('EuiHighlight', () => {
     describe('matching', () => {
       test('only applies to first match', () => {
         const component = render(
-          <EuiHighlight search="match">match match match</EuiHighlight>
+          <OuiHighlight search="match">match match match</OuiHighlight>
         );
 
         expect(component).toMatchSnapshot();
@@ -46,9 +57,9 @@ describe('EuiHighlight', () => {
 
       test('applies to all matches', () => {
         const component = render(
-          <EuiHighlight search="match" highlightAll>
+          <OuiHighlight search="match" highlightAll>
             match match match
-          </EuiHighlight>
+          </OuiHighlight>
         );
 
         expect(component).toMatchSnapshot();
@@ -58,7 +69,7 @@ describe('EuiHighlight', () => {
     describe('loose matching', () => {
       test('matches strings with different casing', () => {
         const component = render(
-          <EuiHighlight search="CASE">different case match</EuiHighlight>
+          <OuiHighlight search="CASE">different case match</OuiHighlight>
         );
 
         expect(component).toMatchSnapshot();
@@ -68,9 +79,9 @@ describe('EuiHighlight', () => {
     describe('strict matching', () => {
       test("doesn't match strings with different casing", () => {
         const component = render(
-          <EuiHighlight search="CASE" strict>
+          <OuiHighlight search="CASE" strict>
             different case match
-          </EuiHighlight>
+          </OuiHighlight>
         );
 
         expect(component).toMatchSnapshot();

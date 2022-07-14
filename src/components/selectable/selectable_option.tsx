@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,9 +31,9 @@
 import React, { HTMLAttributes } from 'react';
 import { CommonProps, ExclusiveUnion } from '../common';
 
-export type EuiSelectableOptionCheckedType = 'on' | 'off' | undefined;
+export type OuiSelectableOptionCheckedType = 'on' | 'off' | undefined;
 
-export type EuiSelectableOptionBase = CommonProps & {
+export type OuiSelectableOptionBase = CommonProps & {
   /**
    * Visible label of option.
    * Must be unique across items if `key` is not supplied
@@ -43,7 +54,7 @@ export type EuiSelectableOptionBase = CommonProps & {
    * 'on' to indicate inclusion and
    * 'off' to indicate exclusion
    */
-  checked?: EuiSelectableOptionCheckedType;
+  checked?: OuiSelectableOptionCheckedType;
   disabled?: boolean;
   /**
    * Optional `boolean`.
@@ -66,23 +77,23 @@ export type EuiSelectableOptionBase = CommonProps & {
   id?: never;
 };
 
-type _EuiSelectableGroupLabelOption = Omit<
-  EuiSelectableOptionBase,
+type _OuiSelectableGroupLabelOption = Omit<
+  OuiSelectableOptionBase,
   'isGroupLabel'
 > &
   Exclude<HTMLAttributes<HTMLDivElement>, 'id'> & {
     isGroupLabel: true;
   };
 
-export type EuiSelectableGroupLabelOption<T> = _EuiSelectableGroupLabelOption &
+export type OuiSelectableGroupLabelOption<T> = _OuiSelectableGroupLabelOption &
   T;
 
-type _EuiSelectableLIOption = EuiSelectableOptionBase &
+type _OuiSelectableLIOption = OuiSelectableOptionBase &
   Exclude<HTMLAttributes<HTMLLIElement>, 'id'>;
 
-export type EuiSelectableLIOption<T> = _EuiSelectableLIOption & T;
+export type OuiSelectableLIOption<T> = _OuiSelectableLIOption & T;
 
-export type EuiSelectableOption<T = {}> = ExclusiveUnion<
-  EuiSelectableGroupLabelOption<T>,
-  EuiSelectableLIOption<T>
+export type OuiSelectableOption<T = {}> = ExclusiveUnion<
+  OuiSelectableGroupLabelOption<T>,
+  OuiSelectableLIOption<T>
 >;

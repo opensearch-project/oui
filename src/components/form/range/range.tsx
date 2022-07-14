@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -22,22 +33,22 @@ import classNames from 'classnames';
 
 import { CommonProps } from '../../common';
 import { isWithinRange } from '../../../services/number';
-import { EuiInputPopover } from '../../popover';
+import { OuiInputPopover } from '../../popover';
 import { htmlIdGenerator } from '../../../services/accessibility';
 
-import { EuiRangeHighlight } from './range_highlight';
-import { EuiRangeInput, EuiRangeInputProps } from './range_input';
-import { EuiRangeLabel } from './range_label';
-import { EuiRangeLevel } from './range_levels';
-import { EuiRangeSlider } from './range_slider';
-import { EuiRangeTick } from './range_ticks';
-import { EuiRangeTooltip } from './range_tooltip';
-import { EuiRangeTrack } from './range_track';
-import { EuiRangeWrapper } from './range_wrapper';
+import { OuiRangeHighlight } from './range_highlight';
+import { OuiRangeInput, OuiRangeInputProps } from './range_input';
+import { OuiRangeLabel } from './range_label';
+import { OuiRangeLevel } from './range_levels';
+import { OuiRangeSlider } from './range_slider';
+import { OuiRangeTick } from './range_ticks';
+import { OuiRangeTooltip } from './range_tooltip';
+import { OuiRangeTrack } from './range_track';
+import { OuiRangeWrapper } from './range_wrapper';
 
-export interface EuiRangeProps
+export interface OuiRangeProps
   extends CommonProps,
-    Omit<EuiRangeInputProps, 'onChange' | 'digitTolerance'> {
+    Omit<OuiRangeInputProps, 'onChange' | 'digitTolerance'> {
   compressed?: boolean;
   readOnly?: boolean;
   fullWidth?: boolean;
@@ -45,7 +56,7 @@ export interface EuiRangeProps
   /**
    * Create colored indicators for certain intervals
    */
-  levels?: EuiRangeLevel[];
+  levels?: OuiRangeLevel[];
   step?: number;
   /**
    * Pass `true` to displays an extra input control for direct manipulation.
@@ -71,7 +82,7 @@ export interface EuiRangeProps
   /**
    * Specified ticks at specified values
    */
-  ticks?: EuiRangeTick[];
+  ticks?: OuiRangeTick[];
   /**
    * Modifies the number of tick marks and at what interval
    */
@@ -93,7 +104,7 @@ export interface EuiRangeProps
   ) => void;
 }
 
-export class EuiRange extends Component<EuiRangeProps> {
+export class OuiRange extends Component<OuiRangeProps> {
   static defaultProps = {
     min: 0,
     max: 100,
@@ -209,7 +220,7 @@ export class EuiRange extends Component<EuiRangeProps> {
     const canShowDropdown = showInputOnly && !readOnly && !disabled;
 
     const theInput: ReactNode = !!showInput ? (
-      <EuiRangeInput
+      <OuiRangeInput
         id={id}
         min={min}
         max={max}
@@ -232,24 +243,24 @@ export class EuiRange extends Component<EuiRangeProps> {
     ) : null;
 
     const classes = classNames(
-      'euiRange',
+      'ouiRange',
       {
-        'euiRange--hasInput': showInput,
+        'ouiRange--hasInput': showInput,
       },
       className
     );
 
     const theRange = (
-      <EuiRangeWrapper
+      <OuiRangeWrapper
         className={classes}
         fullWidth={fullWidth}
         compressed={compressed}>
         {showLabels && (
-          <EuiRangeLabel side="min" disabled={disabled}>
+          <OuiRangeLabel side="min" disabled={disabled}>
             {min}
-          </EuiRangeLabel>
+          </OuiRangeLabel>
         )}
-        <EuiRangeTrack
+        <OuiRangeTrack
           disabled={disabled}
           compressed={compressed}
           max={max}
@@ -262,7 +273,7 @@ export class EuiRange extends Component<EuiRangeProps> {
           onChange={this.handleOnChange}
           value={value}
           aria-hidden={showInput === true}>
-          <EuiRangeSlider
+          <OuiRangeSlider
             id={showInput ? undefined : id} // Attach id only to the input if there is one
             name={name}
             min={min}
@@ -288,7 +299,7 @@ export class EuiRange extends Component<EuiRangeProps> {
           />
 
           {showRange && this.isValid && (
-            <EuiRangeHighlight
+            <OuiRangeHighlight
               compressed={compressed}
               showTicks={showTicks}
               min={Number(min)}
@@ -299,7 +310,7 @@ export class EuiRange extends Component<EuiRangeProps> {
           )}
 
           {showValue && !!String(value).length && (
-            <EuiRangeTooltip
+            <OuiRangeTooltip
               compressed={compressed}
               value={value}
               max={max}
@@ -310,37 +321,37 @@ export class EuiRange extends Component<EuiRangeProps> {
               valueAppend={valueAppend}
             />
           )}
-        </EuiRangeTrack>
+        </OuiRangeTrack>
         {showLabels && (
-          <EuiRangeLabel side="max" disabled={disabled}>
+          <OuiRangeLabel side="max" disabled={disabled}>
             {max}
-          </EuiRangeLabel>
+          </OuiRangeLabel>
         )}
         {showInput && !showInputOnly && (
           <>
             <div
               className={
                 showTicks || ticks
-                  ? 'euiRange__slimHorizontalSpacer'
-                  : 'euiRange__horizontalSpacer'
+                  ? 'ouiRange__slimHorizontalSpacer'
+                  : 'ouiRange__horizontalSpacer'
               }
             />
             {theInput}
           </>
         )}
-      </EuiRangeWrapper>
+      </OuiRangeWrapper>
     );
 
     const thePopover = showInputOnly ? (
-      <EuiInputPopover
-        className="euiRange__popover"
+      <OuiInputPopover
+        className="ouiRange__popover"
         input={theInput!} // `showInputOnly` confirms existence
         fullWidth={fullWidth}
         isOpen={this.state.isPopoverOpen}
         closePopover={this.closePopover}
         disableFocusTrap={true}>
         {theRange}
-      </EuiInputPopover>
+      </OuiInputPopover>
     ) : undefined;
 
     return thePopover ? thePopover : theRange;

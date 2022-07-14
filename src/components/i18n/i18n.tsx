@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,7 +35,7 @@ import React, {
   useContext,
   ReactElement,
 } from 'react';
-import { EuiI18nConsumer } from '../context';
+import { OuiI18nConsumer } from '../context';
 import { ExclusiveUnion } from '../common';
 import {
   I18nContext,
@@ -98,14 +109,14 @@ interface I18nTokensShape<T extends any[]> {
   children: (x: Array<T[number]>) => ReactChild;
 }
 
-export type EuiI18nProps<
+export type OuiI18nProps<
   T,
   DEFAULT extends Renderable<T>,
   DEFAULTS extends any[]
 > = ExclusiveUnion<I18nTokenShape<T, DEFAULT>, I18nTokensShape<DEFAULTS>>;
 
 function isI18nTokensShape<T extends any[]>(
-  x: EuiI18nProps<any, any, T>
+  x: OuiI18nProps<any, any, T>
 ): x is I18nTokensShape<T> {
   return x.tokens != null;
 }
@@ -113,14 +124,14 @@ function isI18nTokensShape<T extends any[]>(
 // Must use the generics <T extends {}>
 // If instead typed with React.FunctionComponent there isn't feedback given back to the dev
 // when using a `values` object with a renderer callback.
-const EuiI18n = <
+const OuiI18n = <
   T extends {},
   DEFAULT extends Renderable<T>,
   DEFAULTS extends any[]
 >(
-  props: EuiI18nProps<T, DEFAULT, DEFAULTS>
+  props: OuiI18nProps<T, DEFAULT, DEFAULTS>
 ) => (
-  <EuiI18nConsumer>
+  <OuiI18nConsumer>
     {(i18nConfig) => {
       const { mapping, mappingFunc } = i18nConfig;
       if (isI18nTokensShape(props)) {
@@ -144,7 +155,7 @@ const EuiI18n = <
         return tokenValue;
       }
     }}
-  </EuiI18nConsumer>
+  </OuiI18nConsumer>
 );
 
 // A single default could be a string, react child, or render function
@@ -159,16 +170,16 @@ type DefaultsRenderType<
   K extends Array<string | ReactElement>
 > = K extends Array<infer Item> ? Item : never;
 
-function useEuiI18n<T extends {}, DEFAULT extends Renderable<T>>(
+function useOuiI18n<T extends {}, DEFAULT extends Renderable<T>>(
   token: string,
   defaultValue: DEFAULT,
   values?: T
 ): DefaultRenderType<T, DEFAULT>;
-function useEuiI18n<DEFAULTS extends Array<string | ReactElement>>(
+function useOuiI18n<DEFAULTS extends Array<string | ReactElement>>(
   tokens: string[],
   defaultValues: DEFAULTS
 ): Array<DefaultsRenderType<DEFAULTS>>;
-function useEuiI18n(...props: any[]) {
+function useOuiI18n(...props: any[]) {
   const i18nConfig = useContext(I18nContext);
   const { mapping, mappingFunc } = i18nConfig;
 
@@ -183,4 +194,4 @@ function useEuiI18n(...props: any[]) {
   }
 }
 
-export { EuiI18n, useEuiI18n };
+export { OuiI18n, useOuiI18n };

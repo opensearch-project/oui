@@ -1,43 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders EuiColorStops 1`] = `
+exports[`renders OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiColorStops testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="0"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack"
+    class="ouiRangeTrack"
   >
     <div
-      class="euiRangeHighlight euiColorStops__highlight"
+      class="ouiRangeHighlight ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:0%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -46,9 +46,9 @@ exports[`renders EuiColorStops 1`] = `
           aria-valuemin="0"
           aria-valuenow="0"
           aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_0"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_0"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(255,0,0)"
           tabindex="-1"
@@ -58,11 +58,11 @@ exports[`renders EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:21%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -71,9 +71,9 @@ exports[`renders EuiColorStops 1`] = `
           aria-valuemin="1"
           aria-valuenow="25"
           aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_1"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_1"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,255,0)"
           tabindex="-1"
@@ -83,11 +83,11 @@ exports[`renders EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:29.4%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -96,9 +96,9 @@ exports[`renders EuiColorStops 1`] = `
           aria-valuemin="26"
           aria-valuenow="35"
           aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_2"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_2"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,0,255)"
           tabindex="-1"
@@ -111,44 +111,44 @@ exports[`renders EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders compressed EuiColorStops 1`] = `
+exports[`renders compressed OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiColorStops testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="0"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack euiRangeTrack--compressed"
+    class="ouiRangeTrack ouiRangeTrack--compressed"
   >
     <div
-      class="euiRangeHighlight euiRangeHighlight--compressed euiColorStops__highlight"
+      class="ouiRangeHighlight ouiRangeHighlight--compressed ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:0%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -157,9 +157,9 @@ exports[`renders compressed EuiColorStops 1`] = `
           aria-valuemin="0"
           aria-valuenow="0"
           aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_0"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_0"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(255,0,0)"
           tabindex="-1"
@@ -169,11 +169,11 @@ exports[`renders compressed EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:21%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -182,9 +182,9 @@ exports[`renders compressed EuiColorStops 1`] = `
           aria-valuemin="1"
           aria-valuenow="25"
           aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_1"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_1"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,255,0)"
           tabindex="-1"
@@ -194,11 +194,11 @@ exports[`renders compressed EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:29.4%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -207,9 +207,9 @@ exports[`renders compressed EuiColorStops 1`] = `
           aria-valuemin="26"
           aria-valuenow="35"
           aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_2"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_2"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,0,255)"
           tabindex="-1"
@@ -222,44 +222,44 @@ exports[`renders compressed EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders disabled EuiColorStops 1`] = `
+exports[`renders disabled OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiColorStops euiColorStops-isDisabled testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiColorStops ouiColorStops-isDisabled testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="-1"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test:  Disabled. Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack euiRangeTrack--disabled"
+    class="ouiRangeTrack ouiRangeTrack--disabled"
   >
     <div
-      class="euiRangeHighlight euiColorStops__highlight"
+      class="ouiRangeHighlight ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer euiColorStops__addContainer-isDisabled"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer ouiColorStops__addContainer-isDisabled"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:0%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="true"
@@ -268,9 +268,9 @@ exports[`renders disabled EuiColorStops 1`] = `
           aria-valuemin="0"
           aria-valuenow="0"
           aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_0"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_0"
+          data-test-subj="ouiColorStopThumb"
           disabled=""
           role="slider"
           style="background:rgb(255,0,0)"
@@ -281,11 +281,11 @@ exports[`renders disabled EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:21%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="true"
@@ -294,9 +294,9 @@ exports[`renders disabled EuiColorStops 1`] = `
           aria-valuemin="1"
           aria-valuenow="25"
           aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_1"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_1"
+          data-test-subj="ouiColorStopThumb"
           disabled=""
           role="slider"
           style="background:rgb(0,255,0)"
@@ -307,11 +307,11 @@ exports[`renders disabled EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:29.4%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="true"
@@ -320,9 +320,9 @@ exports[`renders disabled EuiColorStops 1`] = `
           aria-valuemin="26"
           aria-valuenow="35"
           aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_2"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_2"
+          data-test-subj="ouiColorStopThumb"
           disabled=""
           role="slider"
           style="background:rgb(0,0,255)"
@@ -336,35 +336,35 @@ exports[`renders disabled EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders empty EuiColorStops 1`] = `
+exports[`renders empty OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiColorStops testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="0"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack"
+    class="ouiRangeTrack"
   >
     <div
-      class="euiRangeHighlight euiColorStops__highlight"
+      class="ouiRangeHighlight ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
@@ -372,44 +372,44 @@ exports[`renders empty EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders fixed stop EuiColorStops 1`] = `
+exports[`renders fixed stop OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiColorStops testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="0"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack"
+    class="ouiRangeTrack"
   >
     <div
-      class="euiRangeHighlight euiColorStops__highlight"
+      class="ouiRangeHighlight ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%, rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:0%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -418,9 +418,9 @@ exports[`renders fixed stop EuiColorStops 1`] = `
           aria-valuemin="0"
           aria-valuenow="0"
           aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_0"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_0"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(255,0,0)"
           tabindex="-1"
@@ -430,11 +430,11 @@ exports[`renders fixed stop EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:21%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -443,9 +443,9 @@ exports[`renders fixed stop EuiColorStops 1`] = `
           aria-valuemin="1"
           aria-valuenow="25"
           aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_1"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_1"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,255,0)"
           tabindex="-1"
@@ -455,11 +455,11 @@ exports[`renders fixed stop EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:29.4%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -468,9 +468,9 @@ exports[`renders fixed stop EuiColorStops 1`] = `
           aria-valuemin="26"
           aria-valuenow="35"
           aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_2"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_2"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,0,255)"
           tabindex="-1"
@@ -483,35 +483,35 @@ exports[`renders fixed stop EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders free-range EuiColorStops 1`] = `
+exports[`renders free-range OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiColorStops testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="0"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack"
+    class="ouiRangeTrack"
   >
     <div
-      class="euiRangeHighlight euiColorStops__highlight"
+      class="ouiRangeHighlight ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
@@ -519,44 +519,44 @@ exports[`renders free-range EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders fullWidth EuiColorStops 1`] = `
+exports[`renders fullWidth OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiRangeWrapper--fullWidth euiColorStops testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiRangeWrapper--fullWidth ouiColorStops testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="0"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack"
+    class="ouiRangeTrack"
   >
     <div
-      class="euiRangeHighlight euiColorStops__highlight"
+      class="ouiRangeHighlight ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:0%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -565,9 +565,9 @@ exports[`renders fullWidth EuiColorStops 1`] = `
           aria-valuemin="0"
           aria-valuenow="0"
           aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_0"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_0"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(255,0,0)"
           tabindex="-1"
@@ -577,11 +577,11 @@ exports[`renders fullWidth EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:21%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -590,9 +590,9 @@ exports[`renders fullWidth EuiColorStops 1`] = `
           aria-valuemin="1"
           aria-valuenow="25"
           aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_1"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_1"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,255,0)"
           tabindex="-1"
@@ -602,11 +602,11 @@ exports[`renders fullWidth EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:29.4%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -615,9 +615,9 @@ exports[`renders fullWidth EuiColorStops 1`] = `
           aria-valuemin="26"
           aria-valuenow="35"
           aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_2"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_2"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,0,255)"
           tabindex="-1"
@@ -630,35 +630,35 @@ exports[`renders fullWidth EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders max-only EuiColorStops 1`] = `
+exports[`renders max-only OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiColorStops testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="0"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack"
+    class="ouiRangeTrack"
   >
     <div
-      class="euiRangeHighlight euiColorStops__highlight"
+      class="ouiRangeHighlight ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
@@ -666,35 +666,35 @@ exports[`renders max-only EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders min-only EuiColorStops 1`] = `
+exports[`renders min-only OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiColorStops testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="0"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack"
+    class="ouiRangeTrack"
   >
     <div
-      class="euiRangeHighlight euiColorStops__highlight"
+      class="ouiRangeHighlight ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
@@ -702,44 +702,44 @@ exports[`renders min-only EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders readOnly EuiColorStops 1`] = `
+exports[`renders readOnly OuiColorStops 1`] = `
 <div
-  class="euiRangeWrapper euiColorStops euiColorStops-isReadOnly testClass1 testClass2"
-  data-test-subj="euiColorStops"
+  class="ouiRangeWrapper ouiColorStops ouiColorStops-isReadOnly testClass1 testClass2"
+  data-test-subj="ouiColorStops"
   tabindex="0"
 >
   <p
     aria-live="polite"
-    class="euiScreenReaderOnly"
+    class="ouiScreenReaderOnly"
   >
     Test: Read-only.  Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
   </p>
   <div
-    class="euiRangeTrack"
+    class="ouiRangeTrack"
   >
     <div
-      class="euiRangeHighlight euiColorStops__highlight"
+      class="ouiRangeHighlight ouiColorStops__highlight"
     >
       <div
-        class="euiRangeHighlight__progress"
+        class="ouiRangeHighlight__progress"
         style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
       />
     </div>
     <div
-      class="euiColorStops__addContainer euiColorStops__addContainer-isDisabled"
-      data-test-subj="euiColorStopsAdd"
+      class="ouiColorStops__addContainer ouiColorStops__addContainer-isDisabled"
+      data-test-subj="ouiColorStopsAdd"
     >
       <div
-        class="euiColorStops__addTarget"
+        class="ouiColorStops__addTarget"
         style="left:0%"
       />
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:0%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -748,9 +748,9 @@ exports[`renders readOnly EuiColorStops 1`] = `
           aria-valuemin="0"
           aria-valuenow="0"
           aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_0"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_0"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(255,0,0)"
           tabindex="-1"
@@ -760,11 +760,11 @@ exports[`renders readOnly EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:21%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -773,9 +773,9 @@ exports[`renders readOnly EuiColorStops 1`] = `
           aria-valuemin="1"
           aria-valuenow="25"
           aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_1"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_1"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,255,0)"
           tabindex="-1"
@@ -785,11 +785,11 @@ exports[`renders readOnly EuiColorStops 1`] = `
       </div>
     </div>
     <div
-      class="euiPopover euiPopover--anchorDownCenter euiColorStopPopover"
+      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
       style="left:29.4%"
     >
       <div
-        class="euiPopover__anchor euiColorStopPopover__anchor"
+        class="ouiPopover__anchor ouiColorStopPopover__anchor"
       >
         <button
           aria-disabled="false"
@@ -798,9 +798,9 @@ exports[`renders readOnly EuiColorStops 1`] = `
           aria-valuemin="26"
           aria-valuenow="35"
           aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="euiRangeThumb euiColorStopThumb"
-          data-index="euiColorStop_2"
-          data-test-subj="euiColorStopThumb"
+          class="ouiRangeThumb ouiColorStopThumb"
+          data-index="ouiColorStop_2"
+          data-test-subj="ouiColorStopThumb"
           role="slider"
           style="background:rgb(0,0,255)"
           tabindex="-1"
@@ -813,7 +813,7 @@ exports[`renders readOnly EuiColorStops 1`] = `
 </div>
 `;
 
-exports[`renders stepped stop EuiColorStops 1`] = `
+exports[`renders stepped stop OuiColorStops 1`] = `
 Object {
   "background": "linear-gradient(to right, currentColor 0%, #ff0000 0% 2.94%, #d72800 2.94% 5.88%, #b04f00 5.880000000000001% 8.82%, #887700 8.82% 11.76%, #609f00 11.76% 14.7%, #39c600 14.700000000000001% 17.64%, #11ee00 17.64% 20.580000000000002%, #00c639 20.580000000000002% 23.520000000000003%, #00639c 23.520000000000003% 26.460000000000004%, #0000ff 26.460000000000004% 29.400000000000006%)",
   "marginLeft": "0%",

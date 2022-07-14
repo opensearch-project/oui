@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiButtonEmpty,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButtonEmpty,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components/';
 
 const buttons = ['primary', 'success', 'warning', 'danger', 'text', 'disabled'];
@@ -12,9 +23,9 @@ export default () => (
   <div>
     {buttons.map((value) => (
       <React.Fragment key={value}>
-        <EuiFlexGroup gutterSize="s" key={value} alignItems="center">
-          <EuiFlexItem grow={false}>
-            <EuiButtonEmpty
+        <OuiFlexGroup gutterSize="s" key={value} alignItems="center">
+          <OuiFlexItem grow={false}>
+            <OuiButtonEmpty
               style={{
                 textTransform: 'capitalize',
               }}
@@ -22,81 +33,81 @@ export default () => (
               color={value !== 'disabled' ? value : 'primary'}
               onClick={() => {}}>
               {value}
-            </EuiButtonEmpty>
-          </EuiFlexItem>
+            </OuiButtonEmpty>
+          </OuiFlexItem>
 
-          <EuiFlexItem grow={false}>
-            <EuiButtonEmpty
+          <OuiFlexItem grow={false}>
+            <OuiButtonEmpty
               isDisabled={value === 'disabled' ? true : false}
               color={value !== 'disabled' ? value : 'primary'}
               size="s"
               onClick={() => {}}>
               small
-            </EuiButtonEmpty>
-          </EuiFlexItem>
+            </OuiButtonEmpty>
+          </OuiFlexItem>
 
-          <EuiFlexItem grow={false}>
-            <EuiButtonEmpty
+          <OuiFlexItem grow={false}>
+            <OuiButtonEmpty
               isDisabled={value === 'disabled' ? true : false}
               color={value !== 'disabled' ? value : 'primary'}
               size="xs"
               onClick={() => {}}>
               extra small
-            </EuiButtonEmpty>
-          </EuiFlexItem>
-        </EuiFlexGroup>
+            </OuiButtonEmpty>
+          </OuiFlexItem>
+        </OuiFlexGroup>
       </React.Fragment>
     ))}
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty onClick={() => {}} iconType="arrowDown">
+    <OuiFlexGroup gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButtonEmpty onClick={() => {}} iconType="arrowDown">
           Primary with icon left
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </OuiButtonEmpty>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <OuiFlexItem grow={false}>
+        <OuiButtonEmpty
           onClick={() => {}}
           iconType="arrowDown"
           iconSide="right"
           size="xs">
           Extra small with icon right
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButtonEmpty>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty color="text" onClick={() => {}} iconType="dashboardApp">
+    <OuiFlexGroup gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButtonEmpty color="text" onClick={() => {}} iconType="dashboardApp">
           Text with app icon left
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </OuiButtonEmpty>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty
+      <OuiFlexItem grow={false}>
+        <OuiButtonEmpty
           color="text"
           onClick={() => {}}
           iconType="dashboardApp"
           iconSide="right"
           size="xs">
           Extra small with app icon right
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButtonEmpty>
+      </OuiFlexItem>
+    </OuiFlexGroup>
 
-    <EuiFlexGroup gutterSize="s" alignItems="center">
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty onClick={() => {}} isLoading>
+    <OuiFlexGroup gutterSize="s" alignItems="center">
+      <OuiFlexItem grow={false}>
+        <OuiButtonEmpty onClick={() => {}} isLoading>
           Loading
-        </EuiButtonEmpty>
-      </EuiFlexItem>
+        </OuiButtonEmpty>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={false}>
-        <EuiButtonEmpty onClick={() => {}} isLoading iconSide="right">
+      <OuiFlexItem grow={false}>
+        <OuiButtonEmpty onClick={() => {}} isLoading iconSide="right">
           Loading
-        </EuiButtonEmpty>
-      </EuiFlexItem>
-    </EuiFlexGroup>
+        </OuiButtonEmpty>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   </div>
 );

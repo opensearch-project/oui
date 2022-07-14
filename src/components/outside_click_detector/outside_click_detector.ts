@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,11 +38,11 @@ import {
 } from 'react';
 import { htmlIdGenerator } from '../../services/accessibility';
 
-export interface EuiEvent extends Event {
-  euiGeneratedBy: string[];
+export interface OuiEvent extends Event {
+  ouiGeneratedBy: string[];
 }
 
-export interface EuiOutsideClickDetectorProps {
+export interface OuiOutsideClickDetectorProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -44,8 +55,8 @@ export interface EuiOutsideClickDetectorProps {
   onTouchEnd?: (event: ReactMouseEvent) => void;
 }
 
-export class EuiOutsideClickDetector extends Component<
-  EuiOutsideClickDetectorProps
+export class OuiOutsideClickDetector extends Component<
+  OuiOutsideClickDetectorProps
 > {
   // We are working with the assumption that a click event is
   // equivalent to a sequential, compound press and release of
@@ -62,10 +73,10 @@ export class EuiOutsideClickDetector extends Component<
 
   private capturedDownIds: string[];
 
-  constructor(props: EuiOutsideClickDetectorProps) {
+  constructor(props: OuiOutsideClickDetectorProps) {
     super(props);
 
-    // the id is used to identify which EuiOutsideClickDetector
+    // the id is used to identify which OuiOutsideClickDetector
     // is the source of a click event; as the click event bubbles
     // up and reaches the click detector's child component the
     // id value is stamped on the event. This id is inspected
@@ -76,9 +87,9 @@ export class EuiOutsideClickDetector extends Component<
     // Taking this approach instead of checking if the event's
     // target element exists in this component's DOM sub-tree is
     // necessary for handling clicks originating from children
-    // rendered through React's portals (EuiPortal). The id tracking
+    // rendered through React's portals (OuiPortal). The id tracking
     // works because React guarantees the event bubbles through the
-    // virtual DOM and executes EuiClickDetector's onClick handler,
+    // virtual DOM and executes OuiClickDetector's onClick handler,
     // stamping the id even though the event originates outside
     // this component's reified DOM tree.
     this.id = htmlIdGenerator()();
@@ -94,10 +105,10 @@ export class EuiOutsideClickDetector extends Component<
       return;
     }
 
-    const event = (e as unknown) as EuiEvent;
+    const event = (e as unknown) as OuiEvent;
 
     if (
-      (event.euiGeneratedBy && event.euiGeneratedBy.includes(this.id)) ||
+      (event.ouiGeneratedBy && event.ouiGeneratedBy.includes(this.id)) ||
       this.capturedDownIds.includes(this.id)
     ) {
       this.capturedDownIds = [];
@@ -124,18 +135,18 @@ export class EuiOutsideClickDetector extends Component<
   ) => {
     // to support nested click detectors, build an array
     // of detector ids that have been encountered;
-    if (event.nativeEvent.hasOwnProperty('euiGeneratedBy')) {
-      ((event.nativeEvent as unknown) as EuiEvent).euiGeneratedBy.push(this.id);
+    if (event.nativeEvent.hasOwnProperty('ouiGeneratedBy')) {
+      ((event.nativeEvent as unknown) as OuiEvent).ouiGeneratedBy.push(this.id);
     } else {
-      ((event.nativeEvent as unknown) as EuiEvent).euiGeneratedBy = [this.id];
+      ((event.nativeEvent as unknown) as OuiEvent).ouiGeneratedBy = [this.id];
     }
     if (cb) cb(event);
   };
 
   onChildMouseDown = (event: ReactMouseEvent) => {
     this.onChildClick(event, (e) => {
-      const nativeEvent = (e.nativeEvent as unknown) as EuiEvent;
-      this.capturedDownIds = nativeEvent.euiGeneratedBy;
+      const nativeEvent = (e.nativeEvent as unknown) as OuiEvent;
+      this.capturedDownIds = nativeEvent.ouiGeneratedBy;
       if (this.props.onMouseDown) this.props.onMouseDown(e);
       if (this.props.onTouchStart) this.props.onTouchStart(e);
     });

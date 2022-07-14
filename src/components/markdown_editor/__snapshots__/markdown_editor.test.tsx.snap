@@ -1,184 +1,184 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiMarkdownEditor is rendered 1`] = `
+exports[`OuiMarkdownEditor is rendered 1`] = `
 <div
-  class="euiMarkdownEditor testClass1 testClass2"
+  class="ouiMarkdownEditor testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiMarkdownEditorToolbar"
+    class="ouiMarkdownEditorToolbar"
   >
     <div
-      class="euiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar__buttons"
     >
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Bold"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorBold"
+            data-ouiicon-type="editorBold"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Italic"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorItalic"
+            data-ouiicon-type="editorItalic"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Unordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorUnorderedList"
+            data-ouiicon-type="editorUnorderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Ordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorOrderedList"
+            data-ouiicon-type="editorOrderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Task list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownCheckmark"
+            data-ouiicon-type="MarkdownCheckmark"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Quote"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="quote"
+            data-ouiicon-type="quote"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Code"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorCodeBlock"
+            data-ouiicon-type="editorCodeBlock"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Link"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorLink"
+            data-ouiicon-type="editorLink"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Tooltip"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorComment"
+            data-ouiicon-type="editorComment"
           />
         </button>
       </span>
     </div>
     <button
-      class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small"
+      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
       type="button"
     >
       <span
-        class="euiButtonContent euiButtonEmpty__content"
+        class="ouiButtonContent ouiButtonEmpty__content"
       >
         <span
-          class="euiButtonContent__icon"
+          class="ouiButtonContent__icon"
           color="inherit"
-          data-euiicon-type="eye"
+          data-ouiicon-type="eye"
         />
         <span
-          class="euiButtonEmpty__text"
+          class="ouiButtonEmpty__text"
         >
           Preview
         </span>
@@ -186,35 +186,35 @@ exports[`EuiMarkdownEditor is rendered 1`] = `
     </button>
   </div>
   <div
-    class="euiMarkdownEditor__toggleContainer"
+    class="ouiMarkdownEditor__toggleContainer"
     style="height:calc(100% - 0px)"
   >
     <div
-      class="euiMarkdownEditorDropZone"
+      class="ouiMarkdownEditorDropZone"
     >
       <textarea
         aria-label="aria-label"
-        class="euiMarkdownEditorTextArea"
+        class="ouiMarkdownEditorTextArea"
         id="editorId"
         rows="6"
         style="height:calc(250px);max-height:500px"
       />
       <div
-        class="euiMarkdownEditorFooter"
+        class="ouiMarkdownEditorFooter"
       >
         <div
-          class="euiMarkdownEditorFooter__actions"
+          class="ouiMarkdownEditorFooter__actions"
         />
         <button
           aria-label="Show markdown help"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiMarkdownEditorFooter__help"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownLogo"
+            data-ouiicon-type="MarkdownLogo"
           />
         </button>
       </div>
@@ -230,185 +230,185 @@ exports[`EuiMarkdownEditor is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiMarkdownEditor props autoExpandPreview is rendered with false 1`] = `
+exports[`OuiMarkdownEditor props autoExpandPreview is rendered with false 1`] = `
 <div
-  class="euiMarkdownEditor testClass1 testClass2"
+  class="ouiMarkdownEditor testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiMarkdownEditorToolbar"
+    class="ouiMarkdownEditorToolbar"
   >
     <div
-      class="euiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar__buttons"
     >
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Bold"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorBold"
+            data-ouiicon-type="editorBold"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Italic"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorItalic"
+            data-ouiicon-type="editorItalic"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Unordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorUnorderedList"
+            data-ouiicon-type="editorUnorderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Ordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorOrderedList"
+            data-ouiicon-type="editorOrderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Task list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownCheckmark"
+            data-ouiicon-type="MarkdownCheckmark"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Quote"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="quote"
+            data-ouiicon-type="quote"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Code"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorCodeBlock"
+            data-ouiicon-type="editorCodeBlock"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Link"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorLink"
+            data-ouiicon-type="editorLink"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Tooltip"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorComment"
+            data-ouiicon-type="editorComment"
           />
         </button>
       </span>
     </div>
     <button
-      class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small"
+      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
       type="button"
     >
       <span
-        class="euiButtonContent euiButtonEmpty__content"
+        class="ouiButtonContent ouiButtonEmpty__content"
       >
         <span
-          class="euiButtonContent__icon"
+          class="ouiButtonContent__icon"
           color="inherit"
-          data-euiicon-type="eye"
+          data-ouiicon-type="eye"
         />
         <span
-          class="euiButtonEmpty__text"
+          class="ouiButtonEmpty__text"
         >
           Preview
         </span>
@@ -416,35 +416,35 @@ exports[`EuiMarkdownEditor props autoExpandPreview is rendered with false 1`] = 
     </button>
   </div>
   <div
-    class="euiMarkdownEditor__toggleContainer"
+    class="ouiMarkdownEditor__toggleContainer"
     style="height:calc(100% - 0px)"
   >
     <div
-      class="euiMarkdownEditorDropZone"
+      class="ouiMarkdownEditorDropZone"
     >
       <textarea
         aria-label="aria-label"
-        class="euiMarkdownEditorTextArea"
+        class="ouiMarkdownEditorTextArea"
         id="editorId"
         rows="6"
         style="height:calc(250px);max-height:500px"
       />
       <div
-        class="euiMarkdownEditorFooter"
+        class="ouiMarkdownEditorFooter"
       >
         <div
-          class="euiMarkdownEditorFooter__actions"
+          class="ouiMarkdownEditorFooter__actions"
         />
         <button
           aria-label="Show markdown help"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiMarkdownEditorFooter__help"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownLogo"
+            data-ouiicon-type="MarkdownLogo"
           />
         </button>
       </div>
@@ -460,185 +460,185 @@ exports[`EuiMarkdownEditor props autoExpandPreview is rendered with false 1`] = 
 </div>
 `;
 
-exports[`EuiMarkdownEditor props height is rendered in full mode 1`] = `
+exports[`OuiMarkdownEditor props height is rendered in full mode 1`] = `
 <div
-  class="euiMarkdownEditor euiMarkdownEditor--fullHeight testClass1 testClass2"
+  class="ouiMarkdownEditor ouiMarkdownEditor--fullHeight testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiMarkdownEditorToolbar"
+    class="ouiMarkdownEditorToolbar"
   >
     <div
-      class="euiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar__buttons"
     >
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Bold"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorBold"
+            data-ouiicon-type="editorBold"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Italic"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorItalic"
+            data-ouiicon-type="editorItalic"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Unordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorUnorderedList"
+            data-ouiicon-type="editorUnorderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Ordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorOrderedList"
+            data-ouiicon-type="editorOrderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Task list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownCheckmark"
+            data-ouiicon-type="MarkdownCheckmark"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Quote"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="quote"
+            data-ouiicon-type="quote"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Code"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorCodeBlock"
+            data-ouiicon-type="editorCodeBlock"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Link"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorLink"
+            data-ouiicon-type="editorLink"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Tooltip"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorComment"
+            data-ouiicon-type="editorComment"
           />
         </button>
       </span>
     </div>
     <button
-      class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small"
+      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
       type="button"
     >
       <span
-        class="euiButtonContent euiButtonEmpty__content"
+        class="ouiButtonContent ouiButtonEmpty__content"
       >
         <span
-          class="euiButtonContent__icon"
+          class="ouiButtonContent__icon"
           color="inherit"
-          data-euiicon-type="eye"
+          data-ouiicon-type="eye"
         />
         <span
-          class="euiButtonEmpty__text"
+          class="ouiButtonEmpty__text"
         >
           Preview
         </span>
@@ -646,35 +646,35 @@ exports[`EuiMarkdownEditor props height is rendered in full mode 1`] = `
     </button>
   </div>
   <div
-    class="euiMarkdownEditor__toggleContainer"
+    class="ouiMarkdownEditor__toggleContainer"
     style="height:calc(100% - 0px)"
   >
     <div
-      class="euiMarkdownEditorDropZone"
+      class="ouiMarkdownEditorDropZone"
     >
       <textarea
         aria-label="aria-label"
-        class="euiMarkdownEditorTextArea"
+        class="ouiMarkdownEditorTextArea"
         id="editorId"
         rows="6"
         style="height:100%;max-height:"
       />
       <div
-        class="euiMarkdownEditorFooter"
+        class="ouiMarkdownEditorFooter"
       >
         <div
-          class="euiMarkdownEditorFooter__actions"
+          class="ouiMarkdownEditorFooter__actions"
         />
         <button
           aria-label="Show markdown help"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiMarkdownEditorFooter__help"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownLogo"
+            data-ouiicon-type="MarkdownLogo"
           />
         </button>
       </div>
@@ -690,185 +690,185 @@ exports[`EuiMarkdownEditor props height is rendered in full mode 1`] = `
 </div>
 `;
 
-exports[`EuiMarkdownEditor props height is rendered with a custom size 1`] = `
+exports[`OuiMarkdownEditor props height is rendered with a custom size 1`] = `
 <div
-  class="euiMarkdownEditor testClass1 testClass2"
+  class="ouiMarkdownEditor testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiMarkdownEditorToolbar"
+    class="ouiMarkdownEditorToolbar"
   >
     <div
-      class="euiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar__buttons"
     >
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Bold"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorBold"
+            data-ouiicon-type="editorBold"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Italic"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorItalic"
+            data-ouiicon-type="editorItalic"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Unordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorUnorderedList"
+            data-ouiicon-type="editorUnorderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Ordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorOrderedList"
+            data-ouiicon-type="editorOrderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Task list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownCheckmark"
+            data-ouiicon-type="MarkdownCheckmark"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Quote"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="quote"
+            data-ouiicon-type="quote"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Code"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorCodeBlock"
+            data-ouiicon-type="editorCodeBlock"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Link"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorLink"
+            data-ouiicon-type="editorLink"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Tooltip"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorComment"
+            data-ouiicon-type="editorComment"
           />
         </button>
       </span>
     </div>
     <button
-      class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small"
+      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
       type="button"
     >
       <span
-        class="euiButtonContent euiButtonEmpty__content"
+        class="ouiButtonContent ouiButtonEmpty__content"
       >
         <span
-          class="euiButtonContent__icon"
+          class="ouiButtonContent__icon"
           color="inherit"
-          data-euiicon-type="eye"
+          data-ouiicon-type="eye"
         />
         <span
-          class="euiButtonEmpty__text"
+          class="ouiButtonEmpty__text"
         >
           Preview
         </span>
@@ -876,35 +876,35 @@ exports[`EuiMarkdownEditor props height is rendered with a custom size 1`] = `
     </button>
   </div>
   <div
-    class="euiMarkdownEditor__toggleContainer"
+    class="ouiMarkdownEditor__toggleContainer"
     style="height:calc(100% - 0px)"
   >
     <div
-      class="euiMarkdownEditorDropZone"
+      class="ouiMarkdownEditorDropZone"
     >
       <textarea
         aria-label="aria-label"
-        class="euiMarkdownEditorTextArea"
+        class="ouiMarkdownEditorTextArea"
         id="editorId"
         rows="6"
         style="height:calc(400px);max-height:500px"
       />
       <div
-        class="euiMarkdownEditorFooter"
+        class="ouiMarkdownEditorFooter"
       >
         <div
-          class="euiMarkdownEditorFooter__actions"
+          class="ouiMarkdownEditorFooter__actions"
         />
         <button
           aria-label="Show markdown help"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiMarkdownEditorFooter__help"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownLogo"
+            data-ouiicon-type="MarkdownLogo"
           />
         </button>
       </div>
@@ -920,185 +920,185 @@ exports[`EuiMarkdownEditor props height is rendered with a custom size 1`] = `
 </div>
 `;
 
-exports[`EuiMarkdownEditor props maxHeight is rendered with a custom size 1`] = `
+exports[`OuiMarkdownEditor props maxHeight is rendered with a custom size 1`] = `
 <div
-  class="euiMarkdownEditor testClass1 testClass2"
+  class="ouiMarkdownEditor testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiMarkdownEditorToolbar"
+    class="ouiMarkdownEditorToolbar"
   >
     <div
-      class="euiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar__buttons"
     >
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Bold"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorBold"
+            data-ouiicon-type="editorBold"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Italic"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorItalic"
+            data-ouiicon-type="editorItalic"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Unordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorUnorderedList"
+            data-ouiicon-type="editorUnorderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Ordered list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorOrderedList"
+            data-ouiicon-type="editorOrderedList"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Task list"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownCheckmark"
+            data-ouiicon-type="MarkdownCheckmark"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Quote"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="quote"
+            data-ouiicon-type="quote"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Code"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorCodeBlock"
+            data-ouiicon-type="editorCodeBlock"
           />
         </button>
       </span>
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Link"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorLink"
+            data-ouiicon-type="editorLink"
           />
         </button>
       </span>
       <span
-        class="euiMarkdownEditorToolbar__divider"
+        class="ouiMarkdownEditorToolbar__divider"
       />
       <span
-        class="euiToolTipAnchor"
+        class="ouiToolTipAnchor"
       >
         <button
           aria-label="Tooltip"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="editorComment"
+            data-ouiicon-type="editorComment"
           />
         </button>
       </span>
     </div>
     <button
-      class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--small"
+      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
       type="button"
     >
       <span
-        class="euiButtonContent euiButtonEmpty__content"
+        class="ouiButtonContent ouiButtonEmpty__content"
       >
         <span
-          class="euiButtonContent__icon"
+          class="ouiButtonContent__icon"
           color="inherit"
-          data-euiicon-type="eye"
+          data-ouiicon-type="eye"
         />
         <span
-          class="euiButtonEmpty__text"
+          class="ouiButtonEmpty__text"
         >
           Preview
         </span>
@@ -1106,35 +1106,35 @@ exports[`EuiMarkdownEditor props maxHeight is rendered with a custom size 1`] = 
     </button>
   </div>
   <div
-    class="euiMarkdownEditor__toggleContainer"
+    class="ouiMarkdownEditor__toggleContainer"
     style="height:calc(100% - 0px)"
   >
     <div
-      class="euiMarkdownEditorDropZone"
+      class="ouiMarkdownEditorDropZone"
     >
       <textarea
         aria-label="aria-label"
-        class="euiMarkdownEditorTextArea"
+        class="ouiMarkdownEditorTextArea"
         id="editorId"
         rows="6"
         style="height:calc(250px);max-height:600px"
       />
       <div
-        class="euiMarkdownEditorFooter"
+        class="ouiMarkdownEditorFooter"
       >
         <div
-          class="euiMarkdownEditorFooter__actions"
+          class="ouiMarkdownEditorFooter__actions"
         />
         <button
           aria-label="Show markdown help"
-          class="euiButtonIcon euiButtonIcon--text euiButtonIcon--empty euiButtonIcon--xSmall euiMarkdownEditorFooter__help"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
           type="button"
         >
           <span
             aria-hidden="true"
-            class="euiButtonIcon__icon"
+            class="ouiButtonIcon__icon"
             color="inherit"
-            data-euiicon-type="MarkdownLogo"
+            data-ouiicon-type="MarkdownLogo"
           />
         </button>
       </div>

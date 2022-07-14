@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,10 +32,10 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiListGroup, GUTTER_SIZES } from './list_group';
-import { EuiListGroupItemProps } from './list_group_item';
+import { OuiListGroup, GUTTER_SIZES } from './list_group';
+import { OuiListGroupItemProps } from './list_group_item';
 
-const someListItems: EuiListGroupItemProps[] = [
+const someListItems: OuiListGroupItemProps[] = [
   {
     label: 'Label with iconType',
     iconType: 'stop',
@@ -54,30 +65,30 @@ const someListItems: EuiListGroupItemProps[] = [
   },
 ];
 
-describe('EuiListGroup', () => {
+describe('OuiListGroup', () => {
   test('is rendered', () => {
-    const component = render(<EuiListGroup {...requiredProps} />);
+    const component = render(<OuiListGroup {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('listItems', () => {
     test('is rendered', () => {
-      const component = render(<EuiListGroup listItems={someListItems} />);
+      const component = render(<OuiListGroup listItems={someListItems} />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('is rendered with color', () => {
       const component = render(
-        <EuiListGroup color="primary" listItems={someListItems} />
+        <OuiListGroup color="primary" listItems={someListItems} />
       );
 
       expect(component).toMatchSnapshot();
     });
 
     test('is rendered with size', () => {
-      const component = render(<EuiListGroup color="primary" size="xs" />);
+      const component = render(<OuiListGroup color="primary" size="xs" />);
 
       expect(component).toMatchSnapshot();
     });
@@ -85,25 +96,25 @@ describe('EuiListGroup', () => {
 
   describe('props', () => {
     test('bordered is rendered', () => {
-      const component = render(<EuiListGroup bordered />);
+      const component = render(<OuiListGroup bordered />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('flush is rendered', () => {
-      const component = render(<EuiListGroup flush />);
+      const component = render(<OuiListGroup flush />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('showToolTips is rendered', () => {
-      const component = render(<EuiListGroup showToolTips />);
+      const component = render(<OuiListGroup showToolTips />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('wrapText is rendered', () => {
-      const component = render(<EuiListGroup wrapText />);
+      const component = render(<OuiListGroup wrapText />);
 
       expect(component).toMatchSnapshot();
     });
@@ -111,7 +122,7 @@ describe('EuiListGroup', () => {
     describe('gutter size', () => {
       GUTTER_SIZES.forEach((gutter) => {
         test(`${gutter} is rendered`, () => {
-          const component = render(<EuiListGroup gutterSize={gutter} />);
+          const component = render(<OuiListGroup gutterSize={gutter} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -120,19 +131,19 @@ describe('EuiListGroup', () => {
 
     describe('maxWidth', () => {
       test('as true is rendered', () => {
-        const component = render(<EuiListGroup maxWidth={true} />);
+        const component = render(<OuiListGroup maxWidth={true} />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('as a number is rendered', () => {
-        const component = render(<EuiListGroup maxWidth={300} />);
+        const component = render(<OuiListGroup maxWidth={300} />);
 
         expect(component).toMatchSnapshot();
       });
 
       test('as a string is rendered', () => {
-        const component = render(<EuiListGroup maxWidth="20em" />);
+        const component = render(<OuiListGroup maxWidth="20em" />);
 
         expect(component).toMatchSnapshot();
       });

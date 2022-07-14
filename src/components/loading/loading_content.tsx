@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,23 +34,23 @@ import { CommonProps } from '../common';
 
 export type LineRange = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
 
-export type EuiLoadingContentProps = CommonProps &
+export type OuiLoadingContentProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
     lines?: LineRange;
   };
 
-export const EuiLoadingContent: FunctionComponent<EuiLoadingContentProps> = ({
+export const OuiLoadingContent: FunctionComponent<OuiLoadingContentProps> = ({
   lines = 3,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiLoadingContent', className);
+  const classes = classNames('ouiLoadingContent', className);
   const lineElements = [];
 
   for (let i = 0; i < lines; i++) {
     lineElements.push(
-      <span key={i} className="euiLoadingContent__singleLine">
-        <span className="euiLoadingContent__singleLineBackground" />
+      <span key={i} className="ouiLoadingContent__singleLine">
+        <span className="ouiLoadingContent__singleLineBackground" />
       </span>
     );
   }

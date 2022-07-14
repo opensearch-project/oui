@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,23 +31,23 @@
 import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-import { EuiCommentEvent, EuiCommentEventProps } from './comment_event';
+import { OuiCommentEvent, OuiCommentEventProps } from './comment_event';
 import {
-  EuiCommentTimeline,
-  EuiCommentTimelineProps,
+  OuiCommentTimeline,
+  OuiCommentTimelineProps,
 } from './comment_timeline';
 
-export interface EuiCommentProps
+export interface OuiCommentProps
   extends HTMLAttributes<HTMLDivElement>,
-    EuiCommentEventProps,
-    EuiCommentTimelineProps {}
+    OuiCommentEventProps,
+    OuiCommentTimelineProps {}
 
 const typeToClassNameMap = {
   regular: '',
-  update: 'euiComment--update',
+  update: 'ouiComment--update',
 };
 
-export const EuiComment: FunctionComponent<EuiCommentProps> = ({
+export const OuiComment: FunctionComponent<OuiCommentProps> = ({
   children,
   className,
   username,
@@ -48,23 +59,23 @@ export const EuiComment: FunctionComponent<EuiCommentProps> = ({
   ...rest
 }) => {
   const classes = classNames(
-    'euiComment',
+    'ouiComment',
     typeToClassNameMap[type],
-    { 'euiComment--hasBody': children },
+    { 'ouiComment--hasBody': children },
     className
   );
 
   return (
     <div className={classes} {...rest}>
-      <EuiCommentTimeline type={type} timelineIcon={timelineIcon} />
-      <EuiCommentEvent
+      <OuiCommentTimeline type={type} timelineIcon={timelineIcon} />
+      <OuiCommentEvent
         username={username}
         actions={actions}
         event={event}
         timestamp={timestamp}
         type={type}>
         {children}
-      </EuiCommentEvent>
+      </OuiCommentEvent>
     </div>
   );
 };

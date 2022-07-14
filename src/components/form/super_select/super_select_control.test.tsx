@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,43 +32,43 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { EuiSuperSelectControl } from './super_select_control';
+import { OuiSuperSelectControl } from './super_select_control';
 
-describe('EuiSuperSelectControl', () => {
+describe('OuiSuperSelectControl', () => {
   test('is rendered', () => {
-    const component = render(<EuiSuperSelectControl {...requiredProps} />);
+    const component = render(<OuiSuperSelectControl {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('fullWidth is rendered', () => {
-      const component = render(<EuiSuperSelectControl fullWidth />);
+      const component = render(<OuiSuperSelectControl fullWidth />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('compressed is rendered', () => {
-      const component = render(<EuiSuperSelectControl compressed />);
+      const component = render(<OuiSuperSelectControl compressed />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<EuiSuperSelectControl isLoading />);
+      const component = render(<OuiSuperSelectControl isLoading />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isInvalid is rendered', () => {
-      const component = render(<EuiSuperSelectControl isInvalid />);
+      const component = render(<OuiSuperSelectControl isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('disabled options are rendered', () => {
       const component = render(
-        <EuiSuperSelectControl
+        <OuiSuperSelectControl
           options={[
             { value: '1', inputDisplay: 'Option #1', disabled: false },
             { value: '2', inputDisplay: 'Option #2', disabled: true },
@@ -70,7 +81,7 @@ describe('EuiSuperSelectControl', () => {
 
     test('value option is rendered', () => {
       const component = render(
-        <EuiSuperSelectControl
+        <OuiSuperSelectControl
           options={[
             { value: '1', inputDisplay: 'Option #1' },
             { value: '2', inputDisplay: 'Option #2' },
@@ -86,7 +97,7 @@ describe('EuiSuperSelectControl', () => {
     test('empty value option is rendered', () => {
       const value = undefined;
       const component = render(
-        <EuiSuperSelectControl
+        <OuiSuperSelectControl
           options={[
             { value: '1', inputDisplay: 'Option #1' },
             { value: '2', inputDisplay: 'Option #2' },

@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCardSelect is rendered 1`] = `
+exports[`OuiCardSelect is rendered 1`] = `
 <button
   aria-checked="false"
   aria-label="aria-label"
-  class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiCardSelect euiCardSelect--text testClass1 testClass2"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiCardSelect ouiCardSelect--text testClass1 testClass2"
   data-test-subj="test subject string"
   role="switch"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       Select
     </span>
@@ -21,18 +21,18 @@ exports[`EuiCardSelect is rendered 1`] = `
 </button>
 `;
 
-exports[`EuiCardSelect props can override color 1`] = `
+exports[`OuiCardSelect props can override color 1`] = `
 <button
   aria-checked="false"
-  class="euiButtonEmpty euiButtonEmpty--danger euiButtonEmpty--xSmall euiCardSelect euiCardSelect--danger"
+  class="ouiButtonEmpty ouiButtonEmpty--danger ouiButtonEmpty--xSmall ouiCardSelect ouiCardSelect--danger"
   role="switch"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       Select
     </span>
@@ -40,18 +40,18 @@ exports[`EuiCardSelect props can override color 1`] = `
 </button>
 `;
 
-exports[`EuiCardSelect props can override text 1`] = `
+exports[`OuiCardSelect props can override text 1`] = `
 <button
   aria-checked="false"
-  class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiCardSelect euiCardSelect--text"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiCardSelect ouiCardSelect--text"
   role="switch"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       Custom text
     </span>
@@ -59,19 +59,19 @@ exports[`EuiCardSelect props can override text 1`] = `
 </button>
 `;
 
-exports[`EuiCardSelect props isDisabled 1`] = `
+exports[`OuiCardSelect props isDisabled 1`] = `
 <button
   aria-checked="false"
-  class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiButtonEmpty-isDisabled euiCardSelect euiCardSelect--text"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiButtonEmpty-isDisabled ouiCardSelect ouiCardSelect--text"
   disabled=""
   role="switch"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       Unavailable
     </span>
@@ -79,23 +79,23 @@ exports[`EuiCardSelect props isDisabled 1`] = `
 </button>
 `;
 
-exports[`EuiCardSelect props isSelected 1`] = `
+exports[`OuiCardSelect props isSelected 1`] = `
 <button
   aria-checked="true"
-  class="euiButtonEmpty euiButtonEmpty--text euiButtonEmpty--xSmall euiCardSelect euiCardSelect--success"
+  class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiCardSelect ouiCardSelect--success"
   role="switch"
   type="button"
 >
   <span
-    class="euiButtonContent euiButtonEmpty__content"
+    class="ouiButtonContent ouiButtonEmpty__content"
   >
     <span
-      class="euiButtonContent__icon"
+      class="ouiButtonContent__icon"
       color="inherit"
-      data-euiicon-type="check"
+      data-ouiicon-type="check"
     />
     <span
-      class="euiButtonEmpty__text"
+      class="ouiButtonEmpty__text"
     >
       Selected
     </span>

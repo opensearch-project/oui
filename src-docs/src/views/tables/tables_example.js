@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCallOut } from '../../../../src/components';
+import { OuiCallOut } from '../../../../src/components';
 
 import { section as basicSection } from './basic';
 import { section as autoSection } from './auto';
@@ -17,11 +28,11 @@ export const TableExample = {
   title: 'Tables',
   intro: (
     <div>
-      <EuiCallOut title="EUI provides opinionated and non-opinionated ways to build tables">
+      <OuiCallOut title="OUI provides opinionated and non-opinionated ways to build tables">
         <p>
           Tables can get complicated very fast. If you&apos;re just looking for
           a basic table with pagination, sorting, checkbox selection, and
-          actions then you should use <strong>EuiBasicTable</strong>. It&apos;s
+          actions then you should use <strong>OuiBasicTable</strong>. It&apos;s
           a <strong>high level component</strong> that removes the need to worry
           about constructing individual components together. You simply arrange
           your data in the format it asks for.
@@ -32,7 +43,7 @@ export const TableExample = {
           separately to do what you need. Find examples for that{' '}
           <strong>at the bottom of this page</strong>.
         </p>
-      </EuiCallOut>
+      </OuiCallOut>
     </div>
   ),
   sections: [

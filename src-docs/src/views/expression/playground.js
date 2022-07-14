@@ -1,14 +1,25 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiExpression } from '../../../../src/components/';
+import { OuiExpression } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
   dummyFunction,
 } from '../../services/playground';
 
 export const expressionConfig = () => {
-  const docgenInfo = Array.isArray(EuiExpression.__docgenInfo)
-    ? EuiExpression.__docgenInfo[0]
-    : EuiExpression.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiExpression.__docgenInfo)
+    ? OuiExpression.__docgenInfo[0]
+    : OuiExpression.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.value = {
@@ -41,14 +52,14 @@ export const expressionConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiExpression',
+      componentName: 'OuiExpression',
       props: propsToUse,
       scope: {
-        EuiExpression,
+        OuiExpression,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiExpression'],
+        '@opensearch-project/oui': {
+          named: ['OuiExpression'],
         },
       },
       customProps: {

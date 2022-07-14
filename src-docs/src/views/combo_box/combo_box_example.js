@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { Link } from 'react-router-dom';
@@ -7,18 +18,18 @@ import { renderToHtml } from '../../services';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiLink,
-  EuiCode,
-  EuiComboBox,
-  EuiText,
+  OuiLink,
+  OuiCode,
+  OuiComboBox,
+  OuiText,
 } from '../../../../src/components';
 
-import { EuiComboBoxOptionOption } from '!!prop-loader!../../../../src/components/combo_box/types';
+import { OuiComboBoxOptionOption } from '!!prop-loader!../../../../src/components/combo_box/types';
 
 import ComboBox from './combo_box';
 const comboBoxSource = require('!!raw-loader!./combo_box');
 const comboBoxHtml = renderToHtml(ComboBox);
-const comboBoxSnippet = `<EuiComboBox
+const comboBoxSnippet = `<OuiComboBox
   placeholder="Select or create options"
   options={[
     {
@@ -37,7 +48,7 @@ const containersHtml = renderToHtml(Containers);
 import Colors from './colors';
 const colorsSource = require('!!raw-loader!./colors');
 const colorsHtml = renderToHtml(Colors);
-const colorsSnippet = `<EuiComboBox
+const colorsSnippet = `<OuiComboBox
   placeholder="Select or create options"
   options={[
     {
@@ -54,7 +65,7 @@ const colorsSnippet = `<EuiComboBox
 import RenderOption from './render_option';
 const renderOptionSource = require('!!raw-loader!./render_option');
 const renderOptionHtml = renderToHtml(RenderOption);
-const renderOptionSnippet = `<EuiComboBox
+const renderOptionSnippet = `<OuiComboBox
   placeholder="Select or create options"
   options={options}
   selectedOptions={selectedOptions}
@@ -66,7 +77,7 @@ const renderOptionSnippet = `<EuiComboBox
 import Groups from './groups';
 const groupsSource = require('!!raw-loader!./groups');
 const groupsHtml = renderToHtml(Groups);
-const groupsSnippet = `<EuiComboBox
+const groupsSnippet = `<OuiComboBox
   placeholder="These options are grouped"
   options={[colorGroup, soundGroup]}
   selectedOptions={selectedOptions}
@@ -77,7 +88,7 @@ const groupsSnippet = `<EuiComboBox
 import SingleSelection from './single_selection';
 const singleSelectionSource = require('!!raw-loader!./single_selection');
 const singleSelectionHtml = renderToHtml(SingleSelection);
-const singleSelectionSnippet = `<EuiComboBox
+const singleSelectionSnippet = `<OuiComboBox
   placeholder="Select a single option"
   singleSelection={{ asPlainText: true }}
   options={options}
@@ -90,7 +101,7 @@ const singleSelectionCustomOptionsSource = require('!!raw-loader!./single_select
 const singleSelectionCustomOptionsHtml = renderToHtml(
   SingleSelectionCustomOptions
 );
-const singleSelectionCustomOptionsSnippet = `<EuiComboBox
+const singleSelectionCustomOptionsSnippet = `<OuiComboBox
   placeholder="Select a single option"
   singleSelection={{ asPlainText: true }}
   options={options}
@@ -102,7 +113,7 @@ const singleSelectionCustomOptionsSnippet = `<EuiComboBox
 import DisallowCustomOptions from './disallow_custom_options';
 const disallowCustomOptionsSource = require('!!raw-loader!./disallow_custom_options');
 const disallowCustomOptionsHtml = renderToHtml(DisallowCustomOptions);
-const disallowCustomOptionsSnippet = `<EuiComboBox
+const disallowCustomOptionsSnippet = `<OuiComboBox
   placeholder="Select one or more options"
   options={options}
   onChange={onChange}
@@ -112,7 +123,7 @@ const disallowCustomOptionsSnippet = `<EuiComboBox
 import CustomOptionsOnly from './custom_options_only';
 const customOptionsOnlySource = require('!!raw-loader!./custom_options_only');
 const customOptionsOnlyHtml = renderToHtml(CustomOptionsOnly);
-const customOptionsOnlySnippet = `<EuiComboBox
+const customOptionsOnlySnippet = `<OuiComboBox
   noSuggestions
   placeholder="Create some tags (letters only)"
   selectedOptions={selectedOptions}
@@ -125,7 +136,7 @@ const customOptionsOnlySnippet = `<EuiComboBox
 import Async from './async';
 const asyncSource = require('!!raw-loader!./async');
 const asyncHtml = renderToHtml(Async);
-const asyncSnippet = `<EuiComboBox
+const asyncSnippet = `<OuiComboBox
   placeholder="Search asynchronously"
   async
   options={options}
@@ -139,7 +150,7 @@ const asyncSnippet = `<EuiComboBox
 import Virtualized from './virtualized';
 const virtualizedSource = require('!!raw-loader!./virtualized');
 const virtualizedHtml = renderToHtml(Virtualized);
-const virtualizedSnippet = `<EuiComboBox
+const virtualizedSnippet = `<OuiComboBox
   placeholder="Select one or more options"
   options={options}
   selectedOptions={selectedOptions}
@@ -149,7 +160,7 @@ const virtualizedSnippet = `<EuiComboBox
 import Disabled from './disabled';
 const disabledSource = require('!!raw-loader!./disabled');
 const disabledHtml = renderToHtml(Disabled);
-const disabledSnippet = `<EuiComboBox
+const disabledSnippet = `<OuiComboBox
   placeholder="Select or create options"
   options={options}
   onChange={onChange}
@@ -160,7 +171,7 @@ const disabledSnippet = `<EuiComboBox
 import Delimiter from './combo_box_delimiter';
 const delimiterSource = require('!!raw-loader!./combo_box_delimiter');
 const delimiterHtml = renderToHtml(Delimiter);
-const delimiterSnippet = `<EuiComboBox
+const delimiterSnippet = `<OuiComboBox
   placeholder="Select or create options"
   options={options}
   delimiter=","
@@ -173,7 +184,7 @@ const delimiterSnippet = `<EuiComboBox
 import StartingWith from './startingWith';
 const startingWithSource = require('!!raw-loader!./startingWith');
 const startingWithHtml = renderToHtml(StartingWith);
-const startingWithSnippet = `<EuiComboBox
+const startingWithSnippet = `<OuiComboBox
   placeholder="Select or create options"
   sortMatchesBy="startsWith"
   options={options}
@@ -199,15 +210,15 @@ export const ComboBoxExample = {
   title: 'Combo box',
   intro: (
     <Fragment>
-      <EuiText>
+      <OuiText>
         <p>
-          Use a <strong>EuiComboBox</strong> when the input has so many options
+          Use a <strong>OuiComboBox</strong> when the input has so many options
           that the user needs to be able to search them, the user needs to be
           able to select multiple options, and/or the user should have the
           ability to specify a custom value in addition to selecting from a
           predetermined list.
         </p>
-      </EuiText>
+      </OuiText>
     </Fragment>
   ),
   sections: [
@@ -222,7 +233,7 @@ export const ComboBoxExample = {
           code: comboBoxHtml,
         },
       ],
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: comboBoxSnippet,
       demo: <ComboBox />,
     },
@@ -240,11 +251,11 @@ export const ComboBoxExample = {
       ],
       text: (
         <p>
-          Set the prop <EuiCode>isDisabled</EuiCode> to make the combo box
+          Set the prop <OuiCode>isDisabled</OuiCode> to make the combo box
           disabled.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: disabledSnippet,
       demo: <Disabled />,
     },
@@ -262,15 +273,15 @@ export const ComboBoxExample = {
       ],
       text: (
         <p>
-          <strong>EuiComboBoxList</strong> uses{' '}
-          <EuiLink href="https://github.com/bvaughn/react-window">
+          <strong>OuiComboBoxList</strong> uses{' '}
+          <OuiLink href="https://github.com/bvaughn/react-window">
             react-window
-          </EuiLink>{' '}
+          </OuiLink>{' '}
           to only render visible options to be super fast no matter how many
           options there are.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: virtualizedSnippet,
       demo: <Virtualized />,
     },
@@ -293,7 +304,7 @@ export const ComboBoxExample = {
           works within other portal-using components.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       demo: <Containers />,
     },
     {
@@ -312,15 +323,15 @@ export const ComboBoxExample = {
         <p>
           Useful for visualization or tagging systems. You can also pass a color
           in your option list. The color can be a hex value (like{' '}
-          <EuiCode>#000</EuiCode>) or any other named color value accepted by
+          <OuiCode>#000</OuiCode>) or any other named color value accepted by
           the{' '}
           <Link to="/display/badge">
-            <strong>EuiBadge</strong>
+            <strong>OuiBadge</strong>
           </Link>{' '}
           component.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: colorsSnippet,
       demo: <Colors />,
     },
@@ -339,10 +350,10 @@ export const ComboBoxExample = {
       text: (
         <Fragment>
           <p>
-            You can provide a <EuiCode>renderOption</EuiCode> prop which will
-            accept <EuiCode>option</EuiCode> and <EuiCode>searchValue</EuiCode>{' '}
-            arguments. Use the <EuiCode>value</EuiCode> prop of the{' '}
-            <EuiCode>option</EuiCode> object to store metadata about the option
+            You can provide a <OuiCode>renderOption</OuiCode> prop which will
+            accept <OuiCode>option</OuiCode> and <OuiCode>searchValue</OuiCode>{' '}
+            arguments. Use the <OuiCode>value</OuiCode> prop of the{' '}
+            <OuiCode>option</OuiCode> object to store metadata about the option
             for use in this callback.
           </p>
 
@@ -354,7 +365,7 @@ export const ComboBoxExample = {
           </p>
         </Fragment>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: renderOptionSnippet,
       demo: <RenderOption />,
     },
@@ -376,7 +387,7 @@ export const ComboBoxExample = {
           against the search value.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: groupsSnippet,
       demo: <Groups />,
     },
@@ -396,23 +407,23 @@ export const ComboBoxExample = {
         <Fragment>
           <p>
             To only allow the user to select a single option, provide the{' '}
-            <EuiCode>singleSelection</EuiCode> prop. You may want to render the
+            <OuiCode>singleSelection</OuiCode> prop. You may want to render the
             selected option as plain text instead of pill form. To do this, pass{' '}
-            <EuiCode language="js">
+            <OuiCode language="js">
               {'singleSelection={{ asPlainText: true }}'}
-            </EuiCode>
+            </OuiCode>
           </p>
           <p>
-            <strong>Note:</strong> <EuiCode>append</EuiCode> and{' '}
-            <EuiCode>prepend</EuiCode> props only work if
-            <EuiCode>singleSelection</EuiCode> prop is not set to{' '}
-            <EuiCode>false</EuiCode> to avoid multilines that makes combobox
-            height greater than that of <EuiCode>append</EuiCode> and{' '}
-            <EuiCode>prepend</EuiCode>.
+            <strong>Note:</strong> <OuiCode>append</OuiCode> and{' '}
+            <OuiCode>prepend</OuiCode> props only work if
+            <OuiCode>singleSelection</OuiCode> prop is not set to{' '}
+            <OuiCode>false</OuiCode> to avoid multilines that makes combobox
+            height greater than that of <OuiCode>append</OuiCode> and{' '}
+            <OuiCode>prepend</OuiCode>.
           </p>
         </Fragment>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: singleSelectionSnippet,
       demo: <SingleSelection />,
     },
@@ -433,18 +444,18 @@ export const ComboBoxExample = {
           <p>
             You can allow the user to select a single option and also allow the
             creation of custom options. To do that, use the{' '}
-            <EuiCode>singleSelection</EuiCode> in conjunction with the{' '}
-            <EuiCode>onCreateOption</EuiCode> prop.
+            <OuiCode>singleSelection</OuiCode> in conjunction with the{' '}
+            <OuiCode>onCreateOption</OuiCode> prop.
           </p>
           <p>
             <strong>Note:</strong> Creating custom options might not be obvious
             to the user, so provide help text explaining that this option is
             available. You can also customize the custom option text by passing
-            a text to <EuiCode>customOptionText</EuiCode> prop.
+            a text to <OuiCode>customOptionText</OuiCode> prop.
           </p>
         </Fragment>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: singleSelectionCustomOptionsSnippet,
       demo: <SingleSelectionCustomOptions />,
     },
@@ -462,11 +473,11 @@ export const ComboBoxExample = {
       ],
       text: (
         <p>
-          Leave out the <EuiCode>onCreateOption</EuiCode> prop to disallow the
+          Leave out the <OuiCode>onCreateOption</OuiCode> prop to disallow the
           creation of custom options.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: disallowCustomOptionsSnippet,
       demo: <DisallowCustomOptions />,
     },
@@ -484,12 +495,12 @@ export const ComboBoxExample = {
       ],
       text: (
         <p>
-          Alternatively, provide the <EuiCode>noSuggestions</EuiCode> prop to
+          Alternatively, provide the <OuiCode>noSuggestions</OuiCode> prop to
           hide the suggestions list and <em>only</em> allow the creation of
           custom options.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: customOptionsOnlySnippet,
       demo: <CustomOptionsOnly />,
     },
@@ -507,13 +518,13 @@ export const ComboBoxExample = {
       ],
       text: (
         <p>
-          Use the <EuiCode>onSearchChange</EuiCode> code to handle searches
+          Use the <OuiCode>onSearchChange</OuiCode> code to handle searches
           asynchronously. Use the
-          <EuiCode>isLoading</EuiCode> prop to let the user know that something
+          <OuiCode>isLoading</OuiCode> prop to let the user know that something
           async is happening.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: asyncSnippet,
       demo: <Async />,
     },
@@ -531,12 +542,12 @@ export const ComboBoxExample = {
       ],
       text: (
         <p>
-          Pass a unique character to the <EuiCode>delimiter</EuiCode> prop to
+          Pass a unique character to the <OuiCode>delimiter</OuiCode> prop to
           aid in option creation. This is best used when knowing that content
           may be pasted from elsewhere such as a comma separated list.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: delimiterSnippet,
       demo: <Delimiter />,
     },
@@ -557,11 +568,11 @@ export const ComboBoxExample = {
           By default, the matched options will keep their original sort order.
           If you would like to prioritize those options that{' '}
           <strong>start with</strong> the searched string, pass{' '}
-          <EuiCode language="js">sortMatchesBy=&quot;startsWith&quot;</EuiCode>
+          <OuiCode language="js">sortMatchesBy=&quot;startsWith&quot;</OuiCode>
           to display those options at the top of the list.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: startingWithSnippet,
       demo: <StartingWith />,
     },
@@ -582,10 +593,10 @@ export const ComboBoxExample = {
           In general, it is not recommended to use duplicate labels on the
           options because the user has no way to distinguish between them. If
           you need duplicate labels, you will need to add a unique{' '}
-          <EuiCode language="js">key</EuiCode> for each option.
+          <OuiCode language="js">key</OuiCode> for each option.
         </p>
       ),
-      props: { EuiComboBox, EuiComboBoxOptionOption },
+      props: { OuiComboBox, OuiComboBoxOptionOption },
       demo: <DuplicateOptions />,
       snippet: duplicateOptionsSnippet,
     },

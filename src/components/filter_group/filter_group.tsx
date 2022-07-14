@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@ import React, { HTMLAttributes, ReactNode, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
-export type EuiFilterGroupProps = HTMLAttributes<HTMLDivElement> &
+export type OuiFilterGroupProps = HTMLAttributes<HTMLDivElement> &
   CommonProps & {
     children?: ReactNode;
     /**
@@ -30,16 +41,16 @@ export type EuiFilterGroupProps = HTMLAttributes<HTMLDivElement> &
     fullWidth?: boolean;
   };
 
-export const EuiFilterGroup: FunctionComponent<EuiFilterGroupProps> = ({
+export const OuiFilterGroup: FunctionComponent<OuiFilterGroupProps> = ({
   children,
   className,
   fullWidth = false,
   ...rest
 }) => {
   const classes = classNames(
-    'euiFilterGroup',
+    'ouiFilterGroup',
     {
-      'euiFilterGroup--fullWidth': fullWidth,
+      'ouiFilterGroup--fullWidth': fullWidth,
     },
     className
   );

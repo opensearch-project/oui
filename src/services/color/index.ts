@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -35,18 +46,18 @@ export {
 } from './visualization_colors';
 export { colorPalette } from './color_palette';
 export {
-  euiPaletteForLightBackground,
-  euiPaletteForDarkBackground,
-  euiPaletteColorBlind,
-  euiPaletteColorBlindBehindText,
-  euiPaletteForStatus,
-  euiPaletteForTemperature,
-  euiPaletteComplimentary,
-  euiPaletteNegative,
-  euiPalettePositive,
-  euiPaletteCool,
-  euiPaletteWarm,
-  euiPaletteGray,
-} from './eui_palettes';
+  ouiPaletteForLightBackground,
+  ouiPaletteForDarkBackground,
+  ouiPaletteColorBlind,
+  ouiPaletteColorBlindBehindText,
+  ouiPaletteForStatus,
+  ouiPaletteForTemperature,
+  ouiPaletteComplimentary,
+  ouiPaletteNegative,
+  ouiPalettePositive,
+  ouiPaletteCool,
+  ouiPaletteWarm,
+  ouiPaletteGray,
+} from './oui_palettes';
 export { rgbDef, HSV, RGB } from './color_types';
 export { getSteppedGradient } from './stepped_gradient';

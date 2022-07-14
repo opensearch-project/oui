@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,7 +31,7 @@
 import React, { HTMLAttributes, FunctionComponent } from 'react';
 import { CommonProps } from '../common';
 import classNames from 'classnames';
-export type EuiMarkProps = HTMLAttributes<HTMLElement> &
+export type OuiMarkProps = HTMLAttributes<HTMLElement> &
   CommonProps & {
     /**
      * ReactNode to render as this component's content
@@ -28,12 +39,12 @@ export type EuiMarkProps = HTMLAttributes<HTMLElement> &
     children: string;
   };
 
-export const EuiMark: FunctionComponent<EuiMarkProps> = ({
+export const OuiMark: FunctionComponent<OuiMarkProps> = ({
   children,
   className,
   ...rest
 }) => {
-  const classes = classNames('euiMark', className);
+  const classes = classNames('ouiMark', className);
 
   return (
     <mark className={classes} {...rest}>

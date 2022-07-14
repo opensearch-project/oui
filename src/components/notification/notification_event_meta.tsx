@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,19 +35,19 @@ import React, {
   ReactElement,
 } from 'react';
 import classNames from 'classnames';
-import { EuiIcon, IconType } from '../icon';
-import { EuiBadge, EuiBadgeProps } from '../badge';
-import { EuiPopover } from '../popover';
-import { EuiButtonIcon } from '../button';
+import { OuiIcon, IconType } from '../icon';
+import { OuiBadge, OuiBadgeProps } from '../badge';
+import { OuiPopover } from '../popover';
+import { OuiButtonIcon } from '../button';
 import {
-  EuiContextMenuItem,
-  EuiContextMenuItemProps,
-  EuiContextMenuPanel,
+  OuiContextMenuItem,
+  OuiContextMenuItemProps,
+  OuiContextMenuPanel,
 } from '../context_menu';
-import { EuiI18n } from '../i18n';
+import { OuiI18n } from '../i18n';
 import { htmlIdGenerator } from '../../services';
 
-export type EuiNotificationEventMetaProps = {
+export type OuiNotificationEventMetaProps = {
   id: string;
   /**
    * Type of event (e.g. "Alert", "Cloud", etc..). Shows inside a badge.
@@ -54,9 +65,9 @@ export type EuiNotificationEventMetaProps = {
    * Accepts either our palette colors (primary, success ..etc) or a hex value `#FFFFFF`, `#000`.
    * **`secondary` color is DEPRECATED, use `success` instead**
    */
-  badgeColor?: EuiBadgeProps['color'];
+  badgeColor?: OuiBadgeProps['color'];
   /**
-   * The icon used to visually represent this data type. Accepts any `EuiIcon IconType`.
+   * The icon used to visually represent this data type. Accepts any `OuiIcon IconType`.
    */
   iconType?: IconType;
   /**
@@ -69,14 +80,14 @@ export type EuiNotificationEventMetaProps = {
    */
   time: ReactNode;
   /**
-   * Necessary to trigger `onOpenContextMenu` from #EuiNotificationEvent
+   * Necessary to trigger `onOpenContextMenu` from #OuiNotificationEvent
    */
   onOpenContextMenu?: () => Array<
-    ReactElement<EuiContextMenuItemProps, typeof EuiContextMenuItem>
+    ReactElement<OuiContextMenuItemProps, typeof OuiContextMenuItem>
   >;
 };
 
-export const EuiNotificationEventMeta: FunctionComponent<EuiNotificationEventMetaProps> = ({
+export const OuiNotificationEventMeta: FunctionComponent<OuiNotificationEventMetaProps> = ({
   id,
   iconType,
   type,
@@ -88,8 +99,8 @@ export const EuiNotificationEventMeta: FunctionComponent<EuiNotificationEventMet
   onOpenContextMenu,
 }) => {
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-  const classes = classNames('euiNotificationEventMeta', {
-    'euiNotificationEventMeta--hasContextMenu': onOpenContextMenu,
+  const classes = classNames('ouiNotificationEventMeta', {
+    'ouiNotificationEventMeta--hasContextMenu': onOpenContextMenu,
   });
 
   const [contextMenuItems, setContextMenuItems] = useState<
@@ -111,31 +122,31 @@ export const EuiNotificationEventMeta: FunctionComponent<EuiNotificationEventMet
 
   return (
     <div className={classes}>
-      <div className="euiNotificationEventMeta__section">
+      <div className="ouiNotificationEventMeta__section">
         {iconType && (
-          <EuiIcon
-            className="euiNotificationEventMeta__icon"
+          <OuiIcon
+            className="ouiNotificationEventMeta__icon"
             type={iconType}
             {...ariaAttribute}
           />
         )}
 
         {type && (
-          <EuiBadge
-            className="euiNotificationEventMeta__badge"
+          <OuiBadge
+            className="ouiNotificationEventMeta__badge"
             color={badgeColor}>
             {severity ? `${type}: ${severity}` : type}
-          </EuiBadge>
+          </OuiBadge>
         )}
       </div>
 
-      <div className="euiNotificationEventMeta__section">
-        <span className="euiNotificationEventMeta__time">{time}</span>
+      <div className="ouiNotificationEventMeta__section">
+        <span className="ouiNotificationEventMeta__time">{time}</span>
       </div>
 
       {onOpenContextMenu && (
-        <div className="euiNotificationEventMeta__contextMenuWrapper">
-          <EuiPopover
+        <div className="ouiNotificationEventMeta__contextMenuWrapper">
+          <OuiPopover
             id={randomPopoverId}
             ownFocus
             repositionOnScroll
@@ -143,14 +154,14 @@ export const EuiNotificationEventMeta: FunctionComponent<EuiNotificationEventMet
             panelPaddingSize="none"
             anchorPosition="leftUp"
             button={
-              <EuiI18n
-                token="euiNotificationEventMeta.contextMenuButton"
+              <OuiI18n
+                token="ouiNotificationEventMeta.contextMenuButton"
                 default="Menu for {eventName}"
                 values={{
                   eventName,
                 }}>
                 {(contextMenuButton: string) => (
-                  <EuiButtonIcon
+                  <OuiButtonIcon
                     aria-label={contextMenuButton}
                     aria-controls={randomPopoverId}
                     aria-expanded={isPopoverOpen}
@@ -161,14 +172,14 @@ export const EuiNotificationEventMeta: FunctionComponent<EuiNotificationEventMet
                     data-test-subj={`${id}-notificationEventMetaButton`}
                   />
                 )}
-              </EuiI18n>
+              </OuiI18n>
             }
             closePopover={() => setIsPopoverOpen(false)}>
-            {/* The EuiContextMenu is wrapped with a div so it closes after an item is clicked */}
+            {/* The OuiContextMenu is wrapped with a div so it closes after an item is clicked */}
             <div onClick={() => setIsPopoverOpen(false)}>
-              <EuiContextMenuPanel items={contextMenuItems} />
+              <OuiContextMenuPanel items={contextMenuItems} />
             </div>
-          </EuiPopover>
+          </OuiPopover>
         </div>
       )}
     </div>

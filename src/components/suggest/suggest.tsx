@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,26 +30,26 @@
 
 import React, { FunctionComponent } from 'react';
 import { CommonProps } from '../common';
-import { EuiSuggestItem, EuiSuggestItemProps } from './suggest_item';
-import { EuiSuggestInput, EuiSuggestInputProps } from './suggest_input';
+import { OuiSuggestItem, OuiSuggestItemProps } from './suggest_item';
+import { OuiSuggestInput, OuiSuggestInputProps } from './suggest_input';
 
-export type EuiSuggestProps = CommonProps &
-  EuiSuggestInputProps & {
+export type OuiSuggestProps = CommonProps &
+  OuiSuggestInputProps & {
     /**
      * List of suggestions to display using 'suggestItem'.
      */
-    suggestions: EuiSuggestItemProps[];
+    suggestions: OuiSuggestItemProps[];
 
     /**
      * Handler for click on a suggestItem.
      */
-    onItemClick?: (item: EuiSuggestItemProps) => void;
+    onItemClick?: (item: OuiSuggestItemProps) => void;
 
     onInputChange?: (target: EventTarget) => void;
   };
 
-export const EuiSuggest: FunctionComponent<EuiSuggestProps> = (
-  props: EuiSuggestProps
+export const OuiSuggest: FunctionComponent<OuiSuggestProps> = (
+  props: OuiSuggestProps
 ) => {
   const {
     onItemClick,
@@ -54,16 +65,16 @@ export const EuiSuggest: FunctionComponent<EuiSuggestProps> = (
     onInputChange ? onInputChange(e.target) : null;
   };
 
-  const suggestionList = suggestions.map((item: EuiSuggestItemProps, index) => {
+  const suggestionList = suggestions.map((item: OuiSuggestItemProps, index) => {
     const props = { ...item };
     if (onItemClick) {
       props.onClick = () => onItemClick(item);
     }
-    return <EuiSuggestItem key={index} {...props} />;
+    return <OuiSuggestItem key={index} {...props} />;
   });
 
   const suggestInput = (
-    <EuiSuggestInput
+    <OuiSuggestInput
       status={status}
       tooltipContent={tooltipContent}
       append={append}
@@ -75,6 +86,6 @@ export const EuiSuggest: FunctionComponent<EuiSuggestProps> = (
   return <div onChange={onChange}>{suggestInput}</div>;
 };
 
-EuiSuggestInput.defaultProps = {
+OuiSuggestInput.defaultProps = {
   status: 'unchanged',
 };

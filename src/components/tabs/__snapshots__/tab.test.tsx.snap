@@ -1,67 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiTab Props is disabled 1`] = `
+exports[`OuiTab Props is disabled 1`] = `
 <button
   aria-selected="false"
-  class="euiTab euiTab-isDisabled"
+  class="ouiTab ouiTab-isDisabled"
   disabled=""
   role="tab"
   type="button"
 >
   <span
-    class="euiTab__content"
+    class="ouiTab__content"
   >
     Click Me
   </span>
 </button>
 `;
 
-exports[`EuiTab renders anchor 1`] = `
+exports[`OuiTab renders anchor 1`] = `
 <a
   aria-label="aria-label"
   aria-selected="false"
-  class="euiTab testClass1 testClass2"
+  class="ouiTab testClass1 testClass2"
   data-test-subj="test subject string"
   href="/baz/bing"
   rel="noreferrer"
   role="tab"
 >
   <span
-    class="euiTab__content"
+    class="ouiTab__content"
   >
     children
   </span>
 </a>
 `;
 
-exports[`EuiTab renders button 1`] = `
+exports[`OuiTab renders button 1`] = `
 <button
   aria-label="aria-label"
   aria-selected="false"
-  class="euiTab testClass1 testClass2"
+  class="ouiTab testClass1 testClass2"
   data-test-subj="test subject string"
   role="tab"
   type="button"
 >
   <span
-    class="euiTab__content"
+    class="ouiTab__content"
   >
     children
   </span>
 </button>
 `;
 
-exports[`EuiTab renders isSelected 1`] = `
+exports[`OuiTab renders isSelected 1`] = `
 <button
   aria-label="aria-label"
   aria-selected="true"
-  class="euiTab testClass1 testClass2 euiTab-isSelected"
+  class="ouiTab testClass1 testClass2 ouiTab-isSelected"
   data-test-subj="test subject string"
   role="tab"
   type="button"
 >
   <span
-    class="euiTab__content"
+    class="ouiTab__content"
   >
     children
   </span>

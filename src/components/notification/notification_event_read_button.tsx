@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -18,12 +29,12 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import { EuiButtonIcon, EuiButtonIconProps } from '../button';
-import { useEuiI18n } from '../i18n';
+import { OuiButtonIcon, OuiButtonIconProps } from '../button';
+import { useOuiI18n } from '../i18n';
 import classNames from 'classnames';
 
-export type EuiNotificationEventReadButtonProps = Omit<
-  EuiButtonIconProps,
+export type OuiNotificationEventReadButtonProps = Omit<
+  OuiButtonIconProps,
   'iconType' | 'isDisabled' | 'isSelected' | 'size'
 > & {
   id: string;
@@ -41,40 +52,40 @@ export type EuiNotificationEventReadButtonProps = Omit<
   eventName: string;
 };
 
-export const EuiNotificationEventReadButton: FunctionComponent<EuiNotificationEventReadButtonProps> = ({
+export const OuiNotificationEventReadButton: FunctionComponent<OuiNotificationEventReadButtonProps> = ({
   id,
   isRead,
   onClick,
   eventName,
   ...rest
 }) => {
-  const classesReadState = classNames('euiNotificationEventReadButton', {
-    'euiNotificationEventReadButton--isRead': isRead,
+  const classesReadState = classNames('ouiNotificationEventReadButton', {
+    'ouiNotificationEventReadButton--isRead': isRead,
   });
 
-  const markAsReadAria = useEuiI18n(
-    'euiNotificationEventReadButton.markAsReadAria',
+  const markAsReadAria = useOuiI18n(
+    'ouiNotificationEventReadButton.markAsReadAria',
     'Mark {eventName} as read',
     {
       eventName,
     }
   );
 
-  const markAsUnreadAria = useEuiI18n(
-    'euiNotificationEventReadButton.markAsUnreadAria',
+  const markAsUnreadAria = useOuiI18n(
+    'ouiNotificationEventReadButton.markAsUnreadAria',
     'Mark {eventName} as unread',
     {
       eventName,
     }
   );
 
-  const markAsRead = useEuiI18n(
-    'euiNotificationEventReadButton.markAsRead',
+  const markAsRead = useOuiI18n(
+    'ouiNotificationEventReadButton.markAsRead',
     'Mark as read'
   );
 
-  const markAsUnread = useEuiI18n(
-    'euiNotificationEventReadButton.markAsUnread',
+  const markAsUnread = useOuiI18n(
+    'ouiNotificationEventReadButton.markAsUnread',
     'Mark as unread'
   );
 
@@ -82,7 +93,7 @@ export const EuiNotificationEventReadButton: FunctionComponent<EuiNotificationEv
   const buttonTitle = isRead ? markAsUnread : markAsRead;
 
   return (
-    <EuiButtonIcon
+    <OuiButtonIcon
       iconType="dot"
       aria-label={buttonAriaLabel}
       title={buttonTitle}

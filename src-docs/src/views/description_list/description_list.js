@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiDescriptionList,
-  EuiFlexItem,
-  EuiFlexGroup,
-  EuiDescriptionListTitle,
-  EuiDescriptionListDescription,
+  OuiDescriptionList,
+  OuiFlexItem,
+  OuiFlexGroup,
+  OuiDescriptionListTitle,
+  OuiDescriptionListDescription,
 } from '../../../../src/components';
 
 const favoriteVideoGames = [
@@ -24,21 +35,21 @@ const favoriteVideoGames = [
   },
 ];
 export default () => (
-  <EuiFlexGroup>
-    <EuiFlexItem>
-      <EuiDescriptionList listItems={favoriteVideoGames} />
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiDescriptionList>
-        <EuiDescriptionListTitle>Dota 2</EuiDescriptionListTitle>
-        <EuiDescriptionListDescription>
+  <OuiFlexGroup>
+    <OuiFlexItem>
+      <OuiDescriptionList listItems={favoriteVideoGames} />
+    </OuiFlexItem>
+    <OuiFlexItem>
+      <OuiDescriptionList>
+        <OuiDescriptionListTitle>Dota 2</OuiDescriptionListTitle>
+        <OuiDescriptionListDescription>
           A videogame that I have spent way too much time on over the years.
-        </EuiDescriptionListDescription>
-        <EuiDescriptionListTitle>Kings Quest VI</EuiDescriptionListTitle>
-        <EuiDescriptionListDescription>
+        </OuiDescriptionListDescription>
+        <OuiDescriptionListTitle>Kings Quest VI</OuiDescriptionListTitle>
+        <OuiDescriptionListDescription>
           The game that forced me to learn DOS.
-        </EuiDescriptionListDescription>
-      </EuiDescriptionList>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+        </OuiDescriptionListDescription>
+      </OuiDescriptionList>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

@@ -1,27 +1,38 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiButton,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiButton,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => (
-  <EuiFlexGroup gutterSize="s" alignItems="center" wrap>
-    <EuiFlexItem grow={false}>
-      <EuiButton isLoading={true}>Loading&hellip;</EuiButton>
-    </EuiFlexItem>
+  <OuiFlexGroup gutterSize="s" alignItems="center" wrap>
+    <OuiFlexItem grow={false}>
+      <OuiButton isLoading={true}>Loading&hellip;</OuiButton>
+    </OuiFlexItem>
 
-    <EuiFlexItem grow={false}>
-      <EuiButton fill isLoading={true}>
+    <OuiFlexItem grow={false}>
+      <OuiButton fill isLoading={true}>
         Loading&hellip;
-      </EuiButton>
-    </EuiFlexItem>
+      </OuiButton>
+    </OuiFlexItem>
 
-    <EuiFlexItem grow={false}>
-      <EuiButton fill isLoading={true} iconType="check" iconSide="right">
+    <OuiFlexItem grow={false}>
+      <OuiButton fill isLoading={true} iconType="check" iconSide="right">
         Loading&hellip;
-      </EuiButton>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+      </OuiButton>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );

@@ -1,16 +1,27 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import { PropTypes } from 'react-view';
-import { EuiButton, EuiBottomBar } from '../../../../src/components/';
+import { OuiButton, OuiBottomBar } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 export const bottomBarConfig = () => {
-  const docgenInfo = Array.isArray(EuiBottomBar.__docgenInfo)
-    ? EuiBottomBar.__docgenInfo[0]
-    : EuiBottomBar.__docgenInfo;
+  const docgenInfo = Array.isArray(OuiBottomBar.__docgenInfo)
+    ? OuiBottomBar.__docgenInfo[0]
+    : OuiBottomBar.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
 
   propsToUse.children = {
     type: PropTypes.ReactNode,
-    value: '<EuiButton color="ghost">Save</EuiButton>',
+    value: '<OuiButton color="ghost">Save</OuiButton>',
   };
 
   propsToUse.top = {
@@ -38,15 +49,15 @@ export const bottomBarConfig = () => {
 
   return {
     config: {
-      componentName: 'EuiBottomBar',
+      componentName: 'OuiBottomBar',
       props: propsToUse,
       scope: {
-        EuiBottomBar,
-        EuiButton,
+        OuiBottomBar,
+        OuiButton,
       },
       imports: {
-        '@elastic/eui': {
-          named: ['EuiBottomBar', 'EuiButton'],
+        '@opensearch-project/oui': {
+          named: ['OuiBottomBar', 'OuiButton'],
         },
       },
     },

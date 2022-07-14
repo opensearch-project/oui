@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiButtonGroup,
-  EuiSpacer,
-  EuiTitle,
+  OuiButtonGroup,
+  OuiSpacer,
+  OuiTitle,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -83,18 +94,18 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiButtonGroup
+      <OuiButtonGroup
         legend="This is a basic group"
         options={toggleButtons}
         idSelected={toggleIdSelected}
         onChange={(id) => onChange(id)}
       />
-      <EuiSpacer size="m" />
-      <EuiTitle size="xxs">
+      <OuiSpacer size="m" />
+      <OuiTitle size="xxs">
         <h3>Primary &amp; multi select</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiButtonGroup
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiButtonGroup
         legend="This is a primary group"
         options={toggleButtonsMulti}
         idToSelectedMap={toggleIdToSelectedMap}
@@ -102,12 +113,12 @@ export default () => {
         color="primary"
         type="multi"
       />
-      <EuiSpacer size="m" />
-      <EuiTitle size="xxs">
+      <OuiSpacer size="m" />
+      <OuiTitle size="xxs">
         <h3>Disabled &amp; full width</h3>
-      </EuiTitle>
-      <EuiSpacer size="s" />
-      <EuiButtonGroup
+      </OuiTitle>
+      <OuiSpacer size="s" />
+      <OuiButtonGroup
         legend="This is a disabled group"
         options={toggleButtonsDisabled}
         idSelected={toggleIdDisabled}

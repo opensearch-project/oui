@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,16 +31,16 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import { EuiCheckboxGroup } from './checkbox_group';
+import { OuiCheckboxGroup } from './checkbox_group';
 
 // This exists because we need to run the following tests
 // without mocking the Checkbox component, such as testing
 // an interaction that is handled by the Checkbox component.
-describe('EuiCheckboxGroup behavior', () => {
+describe('OuiCheckboxGroup behavior', () => {
   test('id is bound to onChange', () => {
     const onChangeHandler = jest.fn();
     const component = mount(
-      <EuiCheckboxGroup
+      <OuiCheckboxGroup
         options={[{ id: '1', label: 'kibana', disabled: false }]}
         idToSelectedMap={{
           '1': true,

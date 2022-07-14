@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,12 +36,12 @@ import { CommonProps } from '../../common';
 type Border = 'left' | 'right' | 'none';
 
 const borderToClassNameMap: { [border in Border]: string | undefined } = {
-  left: 'euiHeaderSectionItem--borderLeft',
-  right: 'euiHeaderSectionItem--borderRight',
+  left: 'ouiHeaderSectionItem--borderLeft',
+  right: 'ouiHeaderSectionItem--borderRight',
   none: undefined,
 };
 
-export type EuiHeaderSectionItemProps = CommonProps & {
+export type OuiHeaderSectionItemProps = CommonProps & {
   /**
    * Side to display a short border on.
    * Not supported in Amsterdam theme.
@@ -42,14 +53,14 @@ export type EuiHeaderSectionItemProps = CommonProps & {
   children?: ReactNode;
 };
 
-export const EuiHeaderSectionItem: FunctionComponent<EuiHeaderSectionItemProps> = ({
+export const OuiHeaderSectionItem: FunctionComponent<OuiHeaderSectionItemProps> = ({
   border = 'left',
   children,
   className,
   ...rest
 }) => {
   const classes = classNames(
-    'euiHeaderSectionItem',
+    'ouiHeaderSectionItem',
     borderToClassNameMap[border],
     className
   );

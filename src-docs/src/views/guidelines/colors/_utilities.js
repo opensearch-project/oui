@@ -1,43 +1,54 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../../components';
 import { calculateContrast, rgbToHex } from '../../../../../src/services';
 import { getSassVars } from '../_get_sass_vars';
 
-import { EuiBadge, EuiCopy, EuiFlexItem } from '../../../../../src/components';
-import { EuiIcon } from '../../../../../src/components/icon';
+import { OuiBadge, OuiCopy, OuiFlexItem } from '../../../../../src/components';
+import { OuiIcon } from '../../../../../src/components/icon';
 
 export const coreColors = [
-  'euiColorPrimary',
-  'euiColorAccent',
-  'euiColorSuccess',
-  'euiColorWarning',
-  'euiColorDanger',
+  'ouiColorPrimary',
+  'ouiColorAccent',
+  'ouiColorSuccess',
+  'ouiColorWarning',
+  'ouiColorDanger',
 ];
 
 export const coreTextVariants = [
-  'euiColorPrimaryText',
-  'euiColorAccentText',
-  'euiColorSuccessText',
-  'euiColorWarningText',
-  'euiColorDangerText',
+  'ouiColorPrimaryText',
+  'ouiColorAccentText',
+  'ouiColorSuccessText',
+  'ouiColorWarningText',
+  'ouiColorDangerText',
 ];
 
 export const grayColors = [
-  'euiColorEmptyShade',
-  'euiColorLightestShade',
-  'euiColorLightShade',
-  'euiColorMediumShade',
-  'euiColorDarkShade',
-  'euiColorDarkestShade',
-  'euiColorFullShade',
+  'ouiColorEmptyShade',
+  'ouiColorLightestShade',
+  'ouiColorLightShade',
+  'ouiColorMediumShade',
+  'ouiColorDarkShade',
+  'ouiColorDarkestShade',
+  'ouiColorFullShade',
 ];
 
 export const textColors = [
-  'euiTextSubduedColor',
-  'euiTextColor',
-  'euiTitleColor',
-  'euiColorGhost',
-  'euiColorInk',
+  'ouiTextSubduedColor',
+  'ouiTextColor',
+  'ouiTitleColor',
+  'ouiColorGhost',
+  'ouiColorInk',
 ];
 
 export const allowedColors = [...coreColors, ...grayColors];
@@ -45,21 +56,21 @@ export const allowedColors = [...coreColors, ...grayColors];
 export const textVariants = [...coreTextVariants, ...textColors];
 
 export const ratingAAA = (
-  <EuiBadge iconType="checkInCircleFilled" color="#000">
+  <OuiBadge iconType="checkInCircleFilled" color="#000">
     AAA
-  </EuiBadge>
+  </OuiBadge>
 );
 export const ratingAA = (
-  <EuiBadge iconType="checkInCircleFilled" color="#333">
+  <OuiBadge iconType="checkInCircleFilled" color="#333">
     AA
-  </EuiBadge>
+  </OuiBadge>
 );
 export const ratingAA18 = (
-  <EuiBadge iconType="partial" color="#666">
+  <OuiBadge iconType="partial" color="#666">
     AA18
-  </EuiBadge>
+  </OuiBadge>
 );
-export const ratingAll = <EuiBadge color="#eee">ALL</EuiBadge>;
+export const ratingAll = <OuiBadge color="#eee">ALL</OuiBadge>;
 
 function getContrastRatings(background, foreground, palette) {
   const contrast = calculateContrast(
@@ -80,10 +91,10 @@ function getContrastRatings(background, foreground, palette) {
     contrastRatingBadge = ratingAA18;
   } else if (foreground.includes('Shade') && contrast >= 2) {
     contrastRating = 'minusInCircle';
-    contrastRatingBadge = <EuiIcon type="minusInCircle" />;
+    contrastRatingBadge = <OuiIcon type="minusInCircle" />;
   } else {
     contrastRating = 'cross';
-    contrastRatingBadge = <EuiIcon type="cross" />;
+    contrastRatingBadge = <OuiIcon type="cross" />;
   }
 
   return { contrast, contrastRating, contrastRatingBadge };
@@ -121,9 +132,9 @@ color: $${foreground};`;
   );
 
   return (
-    <EuiFlexItem className="eui-textCenter">
-      <EuiCopy
-        anchorClassName="eui-displayBlock"
+    <OuiFlexItem className="oui-textCenter">
+      <OuiCopy
+        anchorClassName="oui-displayBlock"
         title={
           <span>
             {contrastRatingBadge} Contrast is {contrast.toFixed(1)}
@@ -133,7 +144,7 @@ color: $${foreground};`;
         afterMessage={<small>Copied!</small>}
         textToCopy={textToCopy}>
         {(copy) => (
-          <EuiBadge
+          <OuiBadge
             className="guideColorSection__button"
             iconType={contrastRating}
             onClick={copy}
@@ -144,10 +155,10 @@ color: $${foreground};`;
               color: palette[foreground].rgba,
             }}>
             {foreground}
-          </EuiBadge>
+          </OuiBadge>
         )}
-      </EuiCopy>
-    </EuiFlexItem>
+      </OuiCopy>
+    </OuiFlexItem>
   );
 };
 

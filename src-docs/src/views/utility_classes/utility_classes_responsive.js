@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiCode, EuiSpacer, EuiText } from '../../../../src/components';
+import { OuiCode, OuiSpacer, OuiText } from '../../../../src/components';
 import { UtilityClassesSection } from './utility_classes_section';
 import { renderBreakpoint } from '../guidelines/sass';
 import breakpoints from '!!sass-vars-to-js-loader?preserveKeys=true!../../../../src/global_styling/variables/_responsive.scss';
 
-const euiBreakPoints = Object.getOwnPropertyNames(breakpoints.euiBreakpoints);
+const ouiBreakPoints = Object.getOwnPropertyNames(breakpoints.ouiBreakpoints);
 
 const wrappingExampleStyle = {
   background: 'rgba(254, 228, 181, 0.5)',
@@ -19,55 +30,55 @@ const wrappingDivExampleStyle = {
 
 export default () => (
   <>
-    <EuiText size="m">
+    <OuiText size="m">
       <p>
         Breakpoint sizes are based on the overall browser window width. They
         start at the mininumum values listed below until 1px before the next
         breakpoint.
       </p>
 
-      {euiBreakPoints.map(function (size) {
+      {ouiBreakPoints.map(function (size) {
         return renderBreakpoint(size, breakpoints);
       })}
-    </EuiText>
-    <EuiSpacer size="xxl" />
+    </OuiText>
+    <OuiSpacer size="xxl" />
     <UtilityClassesSection
-      code="eui-hideFor--[size]"
+      code="oui-hideFor--[size]"
       description={
         <>
           <p>
             Hides the element for the specified breakpoint size with
-            <EuiCode language="sass">display: none;</EuiCode>. The element will
+            <OuiCode language="sass">display: none;</OuiCode>. The element will
             still render and exist in the DOM.
           </p>
         </>
       }
       example={
         <>
-          <EuiCode className="eui-hideFor--xs">.eui-hideFor--xs</EuiCode>
-          <EuiSpacer />
-          <EuiCode className="eui-hideFor--s">.eui-hideFor--s</EuiCode>
-          <EuiSpacer />
-          <EuiCode className="eui-hideFor--m">.eui-hideFor--m</EuiCode>
-          <EuiSpacer />
-          <EuiCode className="eui-hideFor--l">.eui-hideFor--l</EuiCode>
-          <EuiSpacer />
-          <EuiCode className="eui-hideFor--xl">.eui-hideFor--xl</EuiCode>
+          <OuiCode className="oui-hideFor--xs">.oui-hideFor--xs</OuiCode>
+          <OuiSpacer />
+          <OuiCode className="oui-hideFor--s">.oui-hideFor--s</OuiCode>
+          <OuiSpacer />
+          <OuiCode className="oui-hideFor--m">.oui-hideFor--m</OuiCode>
+          <OuiSpacer />
+          <OuiCode className="oui-hideFor--l">.oui-hideFor--l</OuiCode>
+          <OuiSpacer />
+          <OuiCode className="oui-hideFor--xl">.oui-hideFor--xl</OuiCode>
         </>
       }
-      snippet={`<span className="eui-hideFor--xs">
+      snippet={`<span className="oui-hideFor--xs">
   <!-- Your content -->
 </span>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-showFor--[size]"
+      code="oui-showFor--[size]"
       description={
         <>
           <p>
             Shows the element only for the specified breakpoint by applying
-            <EuiCode language="sass">display: none;</EuiCode> for all, then
-            applying <EuiCode language="sass">display: inline;</EuiCode> when
+            <OuiCode language="sass">display: none;</OuiCode> for all, then
+            applying <OuiCode language="sass">display: inline;</OuiCode> when
             within the breakpoint size. The element will still render and exist
             in the DOM.
           </p>
@@ -75,41 +86,41 @@ export default () => (
       }
       example={
         <>
-          <EuiCode className="eui-showFor--xs">.eui-showFor--xs</EuiCode>
-          <EuiCode className="eui-showFor--s">.eui-showFor--s</EuiCode>
-          <EuiCode className="eui-showFor--m">.eui-showFor--m</EuiCode>
-          <EuiCode className="eui-showFor--l">.eui-showFor--l</EuiCode>
-          <EuiCode className="eui-showFor--xl">.eui-showFor--xl</EuiCode>
+          <OuiCode className="oui-showFor--xs">.oui-showFor--xs</OuiCode>
+          <OuiCode className="oui-showFor--s">.oui-showFor--s</OuiCode>
+          <OuiCode className="oui-showFor--m">.oui-showFor--m</OuiCode>
+          <OuiCode className="oui-showFor--l">.oui-showFor--l</OuiCode>
+          <OuiCode className="oui-showFor--xl">.oui-showFor--xl</OuiCode>
         </>
       }
-      snippet={`<span className="eui-showFor--xs">
+      snippet={`<span className="oui-showFor--xs">
   <!-- Your content -->
 </span>`}
     />
-    <EuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
-      code="eui-showFor--[size]--[display]"
+      code="oui-showFor--[size]--[display]"
       description={
         <>
           <p>
-            The <EuiCode language="html">eui-showFor--[size]</EuiCode> classes
-            will force display of <EuiCode>inline</EuiCode> when showing the
+            The <OuiCode language="html">oui-showFor--[size]</OuiCode> classes
+            will force display of <OuiCode>inline</OuiCode> when showing the
             element. You can modify this display property by appending one of
-            the following display properties <EuiCode>block</EuiCode>,{' '}
-            <EuiCode>inlineBlock</EuiCode>, or <EuiCode>flex</EuiCode>.
+            the following display properties <OuiCode>block</OuiCode>,{' '}
+            <OuiCode>inlineBlock</OuiCode>, or <OuiCode>flex</OuiCode>.
           </p>
         </>
       }
       example={
         <div
           style={{ background: wrappingDivExampleStyle.background }}
-          className="eui-showFor--xs eui-showFor--s eui-showFor--m--block eui-showFor--l--inlineBlock eui-showFor--xl--flex">
+          className="oui-showFor--xs oui-showFor--s oui-showFor--m--block oui-showFor--l--inlineBlock oui-showFor--xl--flex">
           <span style={wrappingDivExampleStyle}>span</span>
           <span style={wrappingDivExampleStyle}>span</span>
           <span style={wrappingDivExampleStyle}>span</span>
         </div>
       }
-      snippet={`<span className="eui-showFor--xs--flex">
+      snippet={`<span className="oui-showFor--xs--flex">
   <!-- Your content -->
 </span>`}
     />

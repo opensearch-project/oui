@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -27,17 +38,17 @@ import React, {
 import classnames from 'classnames';
 import { keys } from '../../services';
 import tabbable from 'tabbable';
-import { EuiDataGridControlColumn } from './data_grid_types';
+import { OuiDataGridControlColumn } from './data_grid_types';
 import { DataGridFocusContext } from './data_grid_context';
 
-export interface EuiDataGridControlHeaderRowProps {
+export interface OuiDataGridControlHeaderRowProps {
   index: number;
-  controlColumn: EuiDataGridControlColumn;
+  controlColumn: OuiDataGridControlColumn;
   headerIsInteractive: boolean;
   className?: string;
 }
 
-export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlHeaderRowProps> = (
+export const OuiDataGridControlHeaderCell: FunctionComponent<OuiDataGridControlHeaderRowProps> = (
   props
 ) => {
   const { controlColumn, index, headerIsInteractive, className } = props;
@@ -46,7 +57,7 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
 
   const { headerCellRender: HeaderCellRender, width, id } = controlColumn;
 
-  const classes = classnames('euiDataGridHeaderCell', className);
+  const classes = classnames('ouiDataGridHeaderCell', className);
 
   const [isFocused, setIsFocused] = useState(false);
   useEffect(() => {
@@ -62,7 +73,7 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
     if (headerRef.current) {
       function enableInteractives() {
         const interactiveElements = headerRef.current!.querySelectorAll(
-          '[data-euigrid-tab-managed]'
+          '[data-ouigrid-tab-managed]'
         );
         for (let i = 0; i < interactiveElements.length; i++) {
           interactiveElements[i].setAttribute('tabIndex', '0');
@@ -73,12 +84,12 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
         const tababbles = tabbable(headerRef.current!);
         if (tababbles.length > 1) {
           console.warn(
-            `EuiDataGridHeaderCell expects at most 1 tabbable element, ${tababbles.length} found instead`
+            `OuiDataGridHeaderCell expects at most 1 tabbable element, ${tababbles.length} found instead`
           );
         }
         for (let i = 0; i < tababbles.length; i++) {
           const element = tababbles[i];
-          element.setAttribute('data-euigrid-tab-managed', 'true');
+          element.setAttribute('data-ouigrid-tab-managed', 'true');
           element.setAttribute('tabIndex', '-1');
         }
       }
@@ -99,7 +110,7 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
     if (headerRef.current) {
       if (isFocused) {
         const interactives = headerRef.current.querySelectorAll(
-          '[data-euigrid-tab-managed]'
+          '[data-ouigrid-tab-managed]'
         );
         if (interactives.length === 1) {
           setIsCellEntered(true);
@@ -186,7 +197,7 @@ export const EuiDataGridControlHeaderCell: FunctionComponent<EuiDataGridControlH
       className={classes}
       data-test-subj={`dataGridHeaderCell-${id}`}
       style={width != null ? { width: `${width}px` } : {}}>
-      <div className="euiDataGridHeaderCell__content">
+      <div className="ouiDataGridHeaderCell__content">
         <HeaderCellRender />
       </div>
     </div>

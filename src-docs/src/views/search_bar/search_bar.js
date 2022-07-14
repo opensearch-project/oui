@@ -1,17 +1,28 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 import { times } from '../../../../src/services/utils';
 import { Random } from '../../../../src/services/random';
 import {
-  EuiHealth,
-  EuiCallOut,
-  EuiSpacer,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiCodeBlock,
-  EuiTitle,
-  EuiSwitch,
-  EuiBasicTable,
-  EuiSearchBar,
+  OuiHealth,
+  OuiCallOut,
+  OuiSpacer,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiCodeBlock,
+  OuiTitle,
+  OuiSwitch,
+  OuiBasicTable,
+  OuiSearchBar,
 } from '../../../../src/components';
 
 const random = new Random();
@@ -51,14 +62,14 @@ const loadTags = () => {
       resolve(
         tags.map((tag) => ({
           value: tag.name,
-          view: <EuiHealth color={tag.color}>{tag.name}</EuiHealth>,
+          view: <OuiHealth color={tag.color}>{tag.name}</OuiHealth>,
         }))
       );
     }, 2000);
   });
 };
 
-const initialQuery = EuiSearchBar.Query.MATCH_ALL;
+const initialQuery = OuiSearchBar.Query.MATCH_ALL;
 
 export const SearchBar = () => {
   const [query, setQuery] = useState(initialQuery);
@@ -167,7 +178,7 @@ export const SearchBar = () => {
     };
 
     return (
-      <EuiSearchBar
+      <OuiSearchBar
         defaultQuery={initialQuery}
         box={{
           placeholder: 'e.g. type:visualization -is:active joe',
@@ -186,12 +197,12 @@ export const SearchBar = () => {
     }
     return (
       <Fragment>
-        <EuiCallOut
+        <OuiCallOut
           iconType="faceSad"
           color="danger"
           title={`Invalid search: ${error.message}`}
         />
-        <EuiSpacer size="l" />
+        <OuiSpacer size="l" />
       </Fragment>
     );
   };
@@ -235,75 +246,75 @@ export const SearchBar = () => {
       },
     ];
 
-    const queriedItems = EuiSearchBar.Query.execute(query, items, {
+    const queriedItems = OuiSearchBar.Query.execute(query, items, {
       defaultFields: ['owner', 'tag', 'type'],
     });
 
-    return <EuiBasicTable items={queriedItems} columns={columns} />;
+    return <OuiBasicTable items={queriedItems} columns={columns} />;
   };
 
   let esQueryDsl;
   let esQueryString;
 
   try {
-    esQueryDsl = EuiSearchBar.Query.toESQuery(query);
+    esQueryDsl = OuiSearchBar.Query.toESQuery(query);
   } catch (e) {
     esQueryDsl = e.toString();
   }
   try {
-    esQueryString = EuiSearchBar.Query.toESQueryString(query);
+    esQueryString = OuiSearchBar.Query.toESQueryString(query);
   } catch (e) {
     esQueryString = e.toString();
   }
 
   const content = renderError() || (
-    <EuiFlexGroup>
-      <EuiFlexItem grow={4}>
-        <EuiTitle size="s">
+    <OuiFlexGroup>
+      <OuiFlexItem grow={4}>
+        <OuiTitle size="s">
           <h3>Elasticsearch Query String</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiCodeBlock language="js">
+        </OuiTitle>
+        <OuiSpacer size="s" />
+        <OuiCodeBlock language="js">
           {esQueryString ? esQueryString : ''}
-        </EuiCodeBlock>
+        </OuiCodeBlock>
 
-        <EuiSpacer size="l" />
+        <OuiSpacer size="l" />
 
-        <EuiTitle size="s">
+        <OuiTitle size="s">
           <h3>Elasticsearch Query DSL</h3>
-        </EuiTitle>
-        <EuiSpacer size="s" />
-        <EuiCodeBlock language="js">
+        </OuiTitle>
+        <OuiSpacer size="s" />
+        <OuiCodeBlock language="js">
           {esQueryDsl ? JSON.stringify(esQueryDsl, null, 2) : ''}
-        </EuiCodeBlock>
-      </EuiFlexItem>
+        </OuiCodeBlock>
+      </OuiFlexItem>
 
-      <EuiFlexItem grow={6}>
-        <EuiTitle size="s">
+      <OuiFlexItem grow={6}>
+        <OuiTitle size="s">
           <h3>JS execution</h3>
-        </EuiTitle>
+        </OuiTitle>
 
-        <EuiSpacer size="s" />
+        <OuiSpacer size="s" />
 
         {renderTable()}
-      </EuiFlexItem>
-    </EuiFlexGroup>
+      </OuiFlexItem>
+    </OuiFlexGroup>
   );
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem>{renderSearch()}</EuiFlexItem>
+      <OuiFlexGroup alignItems="center">
+        <OuiFlexItem>{renderSearch()}</OuiFlexItem>
 
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label="Incremental"
             checked={incremental}
             onChange={toggleIncremental}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
-      <EuiSpacer size="l" />
+        </OuiFlexItem>
+      </OuiFlexGroup>
+      <OuiSpacer size="l" />
       {content}
     </Fragment>
   );

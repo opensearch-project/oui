@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -24,14 +35,14 @@ import {
   findTestSubject,
   takeMountedSnapshot,
 } from '../../test';
-import { EuiToolTip } from './tool_tip';
+import { OuiToolTip } from './tool_tip';
 
-describe('EuiToolTip', () => {
+describe('OuiToolTip', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiToolTip title="title" id="id" content="content" {...requiredProps}>
+      <OuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button>Trigger</button>
-      </EuiToolTip>
+      </OuiToolTip>
     );
 
     expect(component).toMatchSnapshot();
@@ -40,9 +51,9 @@ describe('EuiToolTip', () => {
   test('shows tooltip on focus', () => {
     jest.useFakeTimers();
     const component = mount(
-      <EuiToolTip title="title" id="id" content="content" {...requiredProps}>
+      <OuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button data-test-subj="trigger">Trigger</button>
-      </EuiToolTip>
+      </OuiToolTip>
     );
 
     const trigger = findTestSubject(component, 'trigger');
@@ -53,14 +64,14 @@ describe('EuiToolTip', () => {
 
   test('display prop renders block', () => {
     const component = render(
-      <EuiToolTip
+      <OuiToolTip
         title="title"
         id="id"
         content="content"
         {...requiredProps}
         display="block">
         <button>Trigger</button>
-      </EuiToolTip>
+      </OuiToolTip>
     );
 
     expect(component).toMatchSnapshot();

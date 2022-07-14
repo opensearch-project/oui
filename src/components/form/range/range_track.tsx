@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -23,12 +34,12 @@ import classNames from 'classnames';
 import range from 'lodash/range';
 
 import { isEvenlyDivisibleBy } from '../../../services';
-import { EuiRangeLevels, EuiRangeLevel, LEVEL_COLORS } from './range_levels';
-import { EuiRangeTicks, EuiRangeTick } from './range_ticks';
+import { OuiRangeLevels, OuiRangeLevel, LEVEL_COLORS } from './range_levels';
+import { OuiRangeTicks, OuiRangeTick } from './range_ticks';
 
 export { LEVEL_COLORS };
 
-export interface EuiRangeTrackProps
+export interface OuiRangeTrackProps
   extends Omit<HTMLAttributes<HTMLDivElement>, 'onChange'> {
   min: number;
   max: number;
@@ -38,12 +49,12 @@ export interface EuiRangeTrackProps
   disabled?: boolean;
   showTicks?: boolean;
   tickInterval?: number;
-  ticks?: EuiRangeTick[];
+  ticks?: OuiRangeTick[];
   onChange?: MouseEventHandler<HTMLButtonElement>;
-  levels?: EuiRangeLevel[];
+  levels?: OuiRangeLevel[];
 }
 
-export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
+export class OuiRangeTrack extends Component<OuiRangeTrackProps> {
   validateValueIsInStep = (value: number) => {
     if (value < this.props.min) {
       throw new Error(
@@ -71,9 +82,9 @@ export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
   };
 
   calculateSequence = (
-    min: EuiRangeTrackProps['min'],
-    max: EuiRangeTrackProps['max'],
-    interval?: EuiRangeTrackProps['tickInterval']
+    min: OuiRangeTrackProps['min'],
+    max: OuiRangeTrackProps['max'],
+    interval?: OuiRangeTrackProps['tickInterval']
   ) => {
     // Loop from min to max, creating adding values at each interval
     const sequence = range(min, max, interval);
@@ -85,11 +96,11 @@ export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
   };
 
   calculateTicks = (
-    min: EuiRangeTrackProps['min'],
-    max: EuiRangeTrackProps['max'],
-    step?: EuiRangeTrackProps['step'],
-    tickInterval?: EuiRangeTrackProps['tickInterval'],
-    customTicks?: EuiRangeTick[]
+    min: OuiRangeTrackProps['min'],
+    max: OuiRangeTrackProps['max'],
+    step?: OuiRangeTrackProps['step'],
+    tickInterval?: OuiRangeTrackProps['tickInterval'],
+    customTicks?: OuiRangeTick[]
   ) => {
     let ticks;
 
@@ -144,17 +155,17 @@ export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
       showTicks === true &&
       this.calculateTicks(min, max, step, tickInterval, ticks);
 
-    const trackClasses = classNames('euiRangeTrack', {
-      'euiRangeTrack--disabled': disabled,
-      'euiRangeTrack--hasLevels': levels && !!levels.length,
-      'euiRangeTrack--hasTicks': tickSequence || ticks,
-      'euiRangeTrack--compressed': compressed,
+    const trackClasses = classNames('ouiRangeTrack', {
+      'ouiRangeTrack--disabled': disabled,
+      'ouiRangeTrack--hasLevels': levels && !!levels.length,
+      'ouiRangeTrack--hasTicks': tickSequence || ticks,
+      'ouiRangeTrack--compressed': compressed,
     });
 
     return (
       <div className={trackClasses} {...rest}>
         {levels && !!levels.length && (
-          <EuiRangeLevels
+          <OuiRangeLevels
             compressed={compressed}
             levels={levels}
             max={max}
@@ -163,7 +174,7 @@ export class EuiRangeTrack extends Component<EuiRangeTrackProps> {
           />
         )}
         {tickSequence && (
-          <EuiRangeTicks
+          <OuiRangeTicks
             disabled={disabled}
             compressed={compressed}
             onChange={onChange}

@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiOverlayMask,
-  EuiButton,
-  EuiFlyout,
-  EuiTitle,
-  EuiFlyoutHeader,
+  OuiOverlayMask,
+  OuiButton,
+  OuiFlyout,
+  OuiTitle,
+  OuiFlyoutHeader,
 } from '../../../../src/components';
 
 export default () => {
@@ -19,23 +30,23 @@ export default () => {
   if (flyOut) {
     flyout = (
       <React.Fragment>
-        <EuiOverlayMask onClick={toggleFlyOut} headerZindexLocation="below" />
-        <EuiFlyout size="s" onClose={toggleFlyOut}>
-          <EuiFlyoutHeader>
-            <EuiTitle>
+        <OuiOverlayMask onClick={toggleFlyOut} headerZindexLocation="below" />
+        <OuiFlyout size="s" onClose={toggleFlyOut}>
+          <OuiFlyoutHeader>
+            <OuiTitle>
               <h1>Click outside this flyout to close overlay. </h1>
-            </EuiTitle>
-          </EuiFlyoutHeader>
-        </EuiFlyout>
+            </OuiTitle>
+          </OuiFlyoutHeader>
+        </OuiFlyout>
       </React.Fragment>
     );
   }
 
   return (
     <React.Fragment>
-      <EuiButton onClick={() => toggleFlyOut()}>
+      <OuiButton onClick={() => toggleFlyOut()}>
         Overlay as a sibling of a flyout
-      </EuiButton>
+      </OuiButton>
       {flyout}
     </React.Fragment>
   );

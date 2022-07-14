@@ -1,68 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiHeaderAlert is rendered 1`] = `
+exports[`OuiHeaderAlert is rendered 1`] = `
 <article
   aria-label="aria-label"
   aria-labelledby="generated-id-title"
-  class="euiHeaderAlert testClass1 testClass2"
+  class="ouiHeaderAlert testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow euiFlexGroup--responsive"
+    class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow ouiFlexGroup--responsive"
   >
     <div
-      class="euiFlexItem"
+      class="ouiFlexItem"
     >
       <div
-        class="euiHeaderAlert__date"
+        class="ouiHeaderAlert__date"
       >
         date
       </div>
     </div>
   </div>
   <h3
-    class="euiHeaderAlert__title"
+    class="ouiHeaderAlert__title"
     id="generated-id-title"
   >
     title
   </h3>
   <div
-    class="euiHeaderAlert__text"
+    class="ouiHeaderAlert__text"
   />
 </article>
 `;
 
-exports[`EuiHeaderAlert renders action 1`] = `
+exports[`OuiHeaderAlert renders action 1`] = `
 <article
   aria-label="aria-label"
   aria-labelledby="generated-id-title"
-  class="euiHeaderAlert testClass1 testClass2"
+  class="ouiHeaderAlert testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow euiFlexGroup--responsive"
+    class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow ouiFlexGroup--responsive"
   >
     <div
-      class="euiFlexItem"
+      class="ouiFlexItem"
     >
       <div
-        class="euiHeaderAlert__date"
+        class="ouiHeaderAlert__date"
       >
         date
       </div>
     </div>
   </div>
   <h3
-    class="euiHeaderAlert__title"
+    class="ouiHeaderAlert__title"
     id="generated-id-title"
   >
     title
   </h3>
   <div
-    class="euiHeaderAlert__text"
+    class="ouiHeaderAlert__text"
   />
   <div
-    class="euiHeaderAlert__action euiLink"
+    class="ouiHeaderAlert__action ouiLink"
   >
     <button>
       Quietly take to the ship
@@ -71,21 +71,21 @@ exports[`EuiHeaderAlert renders action 1`] = `
 </article>
 `;
 
-exports[`EuiHeaderAlert renders date as an element 1`] = `
+exports[`OuiHeaderAlert renders date as an element 1`] = `
 <article
   aria-label="aria-label"
   aria-labelledby="generated-id-title"
-  class="euiHeaderAlert testClass1 testClass2"
+  class="ouiHeaderAlert testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow euiFlexGroup--responsive"
+    class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow ouiFlexGroup--responsive"
   >
     <div
-      class="euiFlexItem"
+      class="ouiFlexItem"
     >
       <div
-        class="euiHeaderAlert__date"
+        class="ouiHeaderAlert__date"
       >
         <h2>
           October 18, 1851
@@ -94,46 +94,46 @@ exports[`EuiHeaderAlert renders date as an element 1`] = `
     </div>
   </div>
   <h3
-    class="euiHeaderAlert__title"
+    class="ouiHeaderAlert__title"
     id="generated-id-title"
   >
     shazm
   </h3>
   <div
-    class="euiHeaderAlert__text"
+    class="ouiHeaderAlert__text"
   />
 </article>
 `;
 
-exports[`EuiHeaderAlert renders title as an element 1`] = `
+exports[`OuiHeaderAlert renders title as an element 1`] = `
 <article
   aria-label="aria-label"
   aria-labelledby="generated-id-title"
-  class="euiHeaderAlert testClass1 testClass2"
+  class="ouiHeaderAlert testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <div
-    class="euiFlexGroup euiFlexGroup--gutterLarge euiFlexGroup--justifyContentSpaceBetween euiFlexGroup--directionRow euiFlexGroup--responsive"
+    class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow ouiFlexGroup--responsive"
   >
     <div
-      class="euiFlexItem"
+      class="ouiFlexItem"
     >
       <div
-        class="euiHeaderAlert__date"
+        class="ouiHeaderAlert__date"
       >
         date
       </div>
     </div>
   </div>
   <h3
-    class="euiHeaderAlert__title"
+    class="ouiHeaderAlert__title"
     id="generated-id-title"
   />
   <h2>
     Circumambulate the city
   </h2>
   <div
-    class="euiHeaderAlert__text"
+    class="ouiHeaderAlert__text"
   />
 </article>
 `;

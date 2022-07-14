@@ -1,9 +1,20 @@
-.euiComboBoxOption {
-  font-size: $euiFontSizeS;
-  padding: $euiSizeXS $euiSizeS $euiSizeXS #{$euiSizeM + $euiSizeXS};
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiComboBoxOption {
+  font-size: $ouiFontSizeS;
+  padding: $ouiSizeXS $ouiSizeS $ouiSizeXS #{$ouiSizeM + $ouiSizeXS};
   width: 100%;
   text-align: left;
-  border: $euiBorderThin;
+  border: $ouiBorderThin;
   border-color: transparent;
   display: flex;
   align-items: center;
@@ -12,14 +23,14 @@
     text-decoration: underline;
   }
 
-  &.euiComboBoxOption-isFocused {
+  &.ouiComboBoxOption-isFocused {
     cursor: pointer;
-    color: $euiColorPrimaryText;
-    background-color: $euiFocusBackgroundColor;
+    color: $ouiColorPrimaryText;
+    background-color: $ouiFocusBackgroundColor;
   }
 
-  &.euiComboBoxOption-isDisabled {
-    color: $euiColorMediumShade;
+  &.ouiComboBoxOption-isDisabled {
+    color: $ouiColorMediumShade;
     cursor: not-allowed;
 
     &:hover {
@@ -28,22 +39,22 @@
   }
 }
 
-.euiComboBoxOption__contentWrapper {
+.ouiComboBoxOption__contentWrapper {
   display: flex;
 
-  .euiComboBoxOption__emptyStateText {
+  .ouiComboBoxOption__emptyStateText {
     flex: 1;
     text-align: left;
     margin-bottom: 0;
   }
 
-  .euiComboBoxOption__enterBadge {
+  .ouiComboBoxOption__enterBadge {
     align-self: flex-start;
-    margin-left: $euiSizeXS;
+    margin-left: $ouiSizeXS;
   }
 }
 
-.euiComboBoxOption__content {
+.ouiComboBoxOption__content {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

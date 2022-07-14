@@ -1,7 +1,18 @@
-.euiPage {
-  @include euiPageRestrictWidth;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiPage {
+  @include ouiPageRestrictWidth;
   display: flex;
-  background-color: $euiPageBackgroundColor;
+  background-color: $ouiPageBackgroundColor;
   flex-shrink: 0; // Ensures Safari doesn't shrink height beyond contents
   max-width: 100%; // Ensures Firefox doesn't expand width beyond bounds
 
@@ -13,28 +24,28 @@
     flex-direction: column;
   }
 
-  @include euiBreakpoint('xs', 's') {
+  @include ouiBreakpoint('xs', 's') {
     flex-direction: column;
   }
 }
 
-// Uses the same values as EuiPanel
-@each $modifier, $amount in $euiPanelPaddingModifiers {
-  .euiPage--#{$modifier} {
+// Uses the same values as OuiPanel
+@each $modifier, $amount in $ouiPanelPaddingModifiers {
+  .ouiPage--#{$modifier} {
     padding: $amount;
 
-    .euiPageSideBar {
-      min-width: $euiPageSidebarMinWidth;
+    .ouiPageSideBar {
+      min-width: $ouiPageSidebarMinWidth;
       margin-right: $amount;
 
       // sass-lint:disable-block mixins-before-declarations
-      @include euiBreakpoint('xs', 's') {
+      @include ouiBreakpoint('xs', 's') {
         margin-right: 0;
         margin-bottom: $amount;
       }
     }
 
-    .euiPageBody > .euiPageHeader {
+    .ouiPageBody > .ouiPageHeader {
       margin-bottom: $amount;
     }
   }

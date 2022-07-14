@@ -1,31 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiEmptyPrompt is rendered 1`] = `
+exports[`OuiEmptyPrompt is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiEmptyPrompt testClass1 testClass2"
+  class="ouiEmptyPrompt testClass1 testClass2"
   data-test-subj="test subject string"
 >
   <span
     color="subdued"
-    data-euiicon-type="arrowUp"
+    data-ouiicon-type="arrowUp"
   />
   <div
-    class="euiSpacer euiSpacer--m"
+    class="ouiSpacer ouiSpacer--m"
   />
   <h2
-    class="euiTitle euiTitle--medium"
+    class="ouiTitle ouiTitle--medium"
   >
     Title
   </h2>
   <span
-    class="euiTextColor euiTextColor--subdued"
+    class="ouiTextColor ouiTextColor--subdued"
   >
     <div
-      class="euiSpacer euiSpacer--m"
+      class="ouiSpacer ouiSpacer--m"
     />
     <div
-      class="euiText euiText--medium"
+      class="ouiText ouiText--medium"
     >
       <p>
         Body
@@ -33,7 +33,7 @@ exports[`EuiEmptyPrompt is rendered 1`] = `
     </div>
   </span>
   <div
-    class="euiSpacer euiSpacer--l"
+    class="ouiSpacer ouiSpacer--l"
   />
   <div>
     Actions
@@ -41,34 +41,34 @@ exports[`EuiEmptyPrompt is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiEmptyPrompt props actions renders alone 1`] = `
+exports[`OuiEmptyPrompt props actions renders alone 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="ouiEmptyPrompt"
 >
   <div
-    class="euiSpacer euiSpacer--l"
+    class="ouiSpacer ouiSpacer--l"
   />
   actions
 </div>
 `;
 
-exports[`EuiEmptyPrompt props actions renders an array 1`] = `
+exports[`OuiEmptyPrompt props actions renders an array 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="ouiEmptyPrompt"
 >
   <div
-    class="euiSpacer euiSpacer--l"
+    class="ouiSpacer ouiSpacer--l"
   />
   <div
-    class="euiFlexGroup euiFlexGroup--gutterMedium euiFlexGroup--alignItemsCenter euiFlexGroup--justifyContentCenter euiFlexGroup--directionColumn euiFlexGroup--responsive"
+    class="ouiFlexGroup ouiFlexGroup--gutterMedium ouiFlexGroup--alignItemsCenter ouiFlexGroup--justifyContentCenter ouiFlexGroup--directionColumn ouiFlexGroup--responsive"
   >
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       action1
     </div>
     <div
-      class="euiFlexItem euiFlexItem--flexGrowZero"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       action2
     </div>
@@ -76,15 +76,15 @@ exports[`EuiEmptyPrompt props actions renders an array 1`] = `
 </div>
 `;
 
-exports[`EuiEmptyPrompt props body renders alone 1`] = `
+exports[`OuiEmptyPrompt props body renders alone 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="ouiEmptyPrompt"
 >
   <span
-    class="euiTextColor euiTextColor--subdued"
+    class="ouiTextColor ouiTextColor--subdued"
   >
     <div
-      class="euiText euiText--medium"
+      class="ouiText ouiText--medium"
     >
       body
     </div>
@@ -92,53 +92,53 @@ exports[`EuiEmptyPrompt props body renders alone 1`] = `
 </div>
 `;
 
-exports[`EuiEmptyPrompt props icon renders alone 1`] = `
+exports[`OuiEmptyPrompt props icon renders alone 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="ouiEmptyPrompt"
 >
   <span>
     Custom icon
   </span>
   <div
-    class="euiSpacer euiSpacer--m"
+    class="ouiSpacer ouiSpacer--m"
   />
 </div>
 `;
 
-exports[`EuiEmptyPrompt props iconType renders alone 1`] = `
+exports[`OuiEmptyPrompt props iconType renders alone 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="ouiEmptyPrompt"
 >
   <span
     color="subdued"
-    data-euiicon-type="arrowUp"
+    data-ouiicon-type="arrowUp"
   />
   <div
-    class="euiSpacer euiSpacer--m"
+    class="ouiSpacer ouiSpacer--m"
   />
 </div>
 `;
 
-exports[`EuiEmptyPrompt props iconType renders with iconColor 1`] = `
+exports[`OuiEmptyPrompt props iconType renders with iconColor 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="ouiEmptyPrompt"
 >
   <span
     color="danger"
-    data-euiicon-type="arrowUp"
+    data-ouiicon-type="arrowUp"
   />
   <div
-    class="euiSpacer euiSpacer--m"
+    class="ouiSpacer ouiSpacer--m"
   />
 </div>
 `;
 
-exports[`EuiEmptyPrompt props title renders alone 1`] = `
+exports[`OuiEmptyPrompt props title renders alone 1`] = `
 <div
-  class="euiEmptyPrompt"
+  class="ouiEmptyPrompt"
 >
   <div
-    class="euiTitle euiTitle--medium"
+    class="ouiTitle ouiTitle--medium"
   >
     title
   </div>

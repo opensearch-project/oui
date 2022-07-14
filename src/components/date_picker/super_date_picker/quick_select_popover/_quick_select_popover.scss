@@ -1,31 +1,42 @@
-.euiQuickSelectPopover__content {
-  width: $euiFormMaxWidth;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiQuickSelectPopover__content {
+  width: $ouiFormMaxWidth;
   max-width: 100%;
 }
 
-.euiQuickSelectPopover__section {
-  @include euiScrollBar;
-  max-height: $euiSizeM * 11;
+.ouiQuickSelectPopover__section {
+  @include ouiScrollBar;
+  max-height: $ouiSizeM * 11;
   overflow: hidden;
   overflow-y: auto;
-  padding: $euiSizeS 0 $euiSizeXS; // Offset negative margin from flex items
+  padding: $ouiSizeS 0 $ouiSizeXS; // Offset negative margin from flex items
 }
 
 // sass-lint:disable no-important
-.euiQuickSelectPopover__buttonText {
+.ouiQuickSelectPopover__buttonText {
   // Override specificity from universal and sibling selectors
-  margin-right: $euiSizeXS !important;
+  margin-right: $ouiSizeXS !important;
 }
 
-.euiQuickSelectPopover__anchor {
+.ouiQuickSelectPopover__anchor {
   height: 100%;
 }
 
-.euiQuickSelectPopover__sectionItem {
-  font-size: $euiFontSizeS;
-  line-height: $euiFontSizeS;
+.ouiQuickSelectPopover__sectionItem {
+  font-size: $ouiFontSizeS;
+  line-height: $ouiFontSizeS;
 
   &:not(:last-of-type) {
-    margin-bottom: $euiSizeS;
+    margin-bottom: $ouiSizeS;
   }
 }

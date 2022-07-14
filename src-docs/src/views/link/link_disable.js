@@ -1,9 +1,20 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 import {
-  EuiLink,
-  EuiSwitch,
-  EuiSpacer,
-  EuiTextColor,
+  OuiLink,
+  OuiSwitch,
+  OuiSpacer,
+  OuiTextColor,
 } from '../../../../src/components';
 
 export const LinkDisable = () => {
@@ -11,31 +22,31 @@ export const LinkDisable = () => {
 
   return (
     <div>
-      <EuiSwitch
+      <OuiSwitch
         label="Disable links"
         checked={disableLink}
         onChange={() => setDisableLink(!disableLink)}
       />
-      <EuiSpacer size="m" />
+      <OuiSpacer size="m" />
       <p>
         This{' '}
-        <EuiLink color="accent" disabled={disableLink} onClick={() => {}}>
+        <OuiLink color="accent" disabled={disableLink} onClick={() => {}}>
           paragraph
-        </EuiLink>{' '}
+        </OuiLink>{' '}
         has two{disableLink ? ' disabled ' : ' enabled '}
-        <EuiLink color="warning" disabled={disableLink} onClick={() => {}}>
+        <OuiLink color="warning" disabled={disableLink} onClick={() => {}}>
           links
-        </EuiLink>{' '}
+        </OuiLink>{' '}
         in it.
       </p>
-      <EuiSpacer size="m" />
-      <EuiTextColor color="accent">
+      <OuiSpacer size="m" />
+      <OuiTextColor color="accent">
         When links are disabled, they inherit the{' '}
-        <EuiLink color="success" disabled={disableLink} onClick={() => {}}>
+        <OuiLink color="success" disabled={disableLink} onClick={() => {}}>
           color
-        </EuiLink>{' '}
+        </OuiLink>{' '}
         of surrounding text.
-      </EuiTextColor>
+      </OuiTextColor>
     </div>
   );
 };

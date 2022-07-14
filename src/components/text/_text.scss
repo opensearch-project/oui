@@ -1,6 +1,17 @@
-// This should only be used for .euiText, therefore it's not included in a separate mixin file
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
 
-@mixin euiScaleText($baseFontSize) {
+// This should only be used for .ouiText, therefore it's not included in a separate mixin file
+
+@mixin ouiScaleText($baseFontSize) {
   $baseLineHeightMultiplier: $baseFontSize / 2;
   line-height: convertToRem($baseLineHeightMultiplier * 3);
 
@@ -21,7 +32,7 @@
 
   blockquote {
     padding:  convertToRem($baseFontSize * 1.5);
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 4));
+    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 4));
   }
 
   h1,
@@ -46,44 +57,44 @@
   }
 
   h1 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 1));
+    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 1));
     line-height: convertToRem($baseLineHeightMultiplier * 6);
   }
 
   h2 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 2));
+    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 2));
     line-height: convertToRem($baseLineHeightMultiplier * 5);
   }
 
   h3 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 3));
+    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 3));
     line-height: convertToRem($baseLineHeightMultiplier * 4);
   }
 
   h4,
   dt,
-  .eui-definitionListReverse dd {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 5)); // skip level 4 on purpose
+  .oui-definitionListReverse dd {
+    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 5)); // skip level 4 on purpose
     line-height: convertToRem($baseLineHeightMultiplier * 3);
   }
 
-  .eui-definitionListReverse dt {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 7));
-    color: $euiTextColor;
+  .oui-definitionListReverse dt {
+    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 7));
+    color: $ouiTextColor;
   }
 
   h5 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 6));
+    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 6));
     line-height: convertToRem($baseLineHeightMultiplier * 2);
   }
 
   h6 {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 7));
+    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 7));
     line-height: convertToRem($baseLineHeightMultiplier * 2);
   }
 
   small {
-    font-size: convertToRem($baseFontSize * nth($euiTextScale, 6));
+    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 6));
   }
 
   pre {
@@ -92,35 +103,35 @@
 
   code {
     // Setting the font size in rem's ensure it doesn't compound
-    // the 90% set by euiCodeBlock
+    // the 90% set by ouiCodeBlock
     font-size: convertToRem($baseFontSize * .9);
   }
 }
 
-.euiText {
-  @include euiText;
-  @include euiFontSize;
-  // The euiText mixin forces a color. Since euiText is usually a child
+.ouiText {
+  @include ouiText;
+  @include ouiFontSize;
+  // The ouiText mixin forces a color. Since ouiText is usually a child
   // of other styling concerns, we should inherit their coloring. The default
   // coloring will likely coming from the reset.scss anyway.
   color: inherit;
-  // EuiImage with floats are often used within EuiText.
+  // OuiImage with floats are often used within OuiText.
   clear: both;
 
   // Style anchors that don't have a class. This prevents overwriting "buttons"
   // and other stylized elements passed in.
   a:not([class]) {
-    color: $euiLinkColor;
+    color: $ouiLinkColor;
 
     &:hover,
     &:focus {
-      color: darken($euiLinkColor, 10%);
+      color: darken($ouiLinkColor, 10%);
       text-decoration: underline;
     }
 
     &:focus {
-      @include euiFocusBackground($euiLinkColor);
-      @include euiFocusRing;
+      @include ouiFocusBackground($ouiLinkColor);
+      @include ouiFocusRing;
     }
   }
 
@@ -158,7 +169,7 @@
       width: 50%;
       right: 0;
       transform: translateX(-50%);
-      background: $euiColorDarkShade;
+      background: $ouiColorDarkShade;
     }
 
     &:before {
@@ -171,35 +182,35 @@
   }
 
   h1 {
-    @include euiTitle('l');
+    @include ouiTitle('l');
   }
 
   h2 {
-    @include euiTitle('m');
+    @include ouiTitle('m');
   }
 
   h3 {
-    @include euiTitle('s');
+    @include ouiTitle('s');
   }
 
   h4,
   dt {
-    @include euiTitle('xs');
+    @include ouiTitle('xs');
   }
 
   h5 {
-    @include euiTitle('xxs');
+    @include ouiTitle('xxs');
   }
 
   h6 {
-    @include euiTitle('xxxs');
+    @include ouiTitle('xxxs');
     text-transform: uppercase;
   }
 
   pre {
     white-space: pre-wrap;
-    background: $euiCodeBlockBackgroundColor;
-    color: $euiCodeBlockColor;
+    background: $ouiCodeBlockBackgroundColor;
+    color: $ouiCodeBlockColor;
   }
 
   pre,
@@ -207,35 +218,35 @@
     display: block;
   }
 
-  // unset font-size from euiCodeBlock so it doesn't doubly add 90%
+  // unset font-size from ouiCodeBlock so it doesn't doubly add 90%
 
   code {
-    @include euiCodeFont;
+    @include ouiCodeFont;
     display: inline-block; // ensures background stretches the full line-height
-    font-weight: $euiFontWeightRegular;
+    font-weight: $ouiFontWeightRegular;
   }
 
-  @include euiScaleText($euiFontSize);
+  @include ouiScaleText($ouiFontSize);
 
-  &.euiText--constrainedWidth {
-    max-width: $euiTextConstrainedMaxWidth;
+  &.ouiText--constrainedWidth {
+    max-width: $ouiTextConstrainedMaxWidth;
     // If the max-width is way too short of the width of the container,
     // at least make it 2/3 of its parent
     min-width: 75%;
   }
 
   > :last-child,
-  .euiTextColor > :last-child {
+  .ouiTextColor > :last-child {
     margin-bottom: 0 !important; // sass-lint:disable-line no-important
   }
 }
 
-.euiText--small {
-  @include fontSize($euiFontSizeS);
-  @include euiScaleText($euiFontSizeS);
+.ouiText--small {
+  @include fontSize($ouiFontSizeS);
+  @include ouiScaleText($ouiFontSizeS);
 }
 
-.euiText--extraSmall {
-  @include fontSize($euiFontSizeXS);
-  @include euiScaleText($euiFontSizeXS);
+.ouiText--extraSmall {
+  @include fontSize($ouiFontSizeXS);
+  @include ouiScaleText($ouiFontSizeXS);
 }

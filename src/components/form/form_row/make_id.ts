@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,7 +32,7 @@
 // inputs with their labels and other descriptive text elements.
 function makeId(): string {
   console.log(
-    'WARNING: makeId is deprecated. Use htmlIdGenerator from @elastic/eui instead.'
+    'WARNING: makeId is deprecated. Use htmlIdGenerator from @opensearch-project/oui instead.'
   );
   return Math.random().toString(36).slice(-8);
 }

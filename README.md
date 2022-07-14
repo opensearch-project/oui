@@ -1,24 +1,22 @@
-<img src="https://repository-images.githubusercontent.com/107422373/b6180480-a1d7-11eb-8a3c-902086232aa7" />
+# OpenSearch UI Framework
 
-# Elastic UI Framework
+> The OpenSearch UI Framework is a collection of React UI components for quickly building user interfaces
+> at OpenSearch Project. Not using React? No problem! You can still use the CSS behind each component.
 
-> The Elastic UI Framework is a collection of React UI components for quickly building user interfaces
-> at Elastic. Not using React? No problem! You can still use the CSS behind each component.
-
-You should check out our [living style guide][docs], which contains many examples of components in the EUI framework aesthetic, and how to use them in your products. We also have a [FAQ][faq] that covers common usage questions.
+You should check out our [living style guide][docs], which contains many examples of components in the OUI framework aesthetic, and how to use them in your products. We also have a [FAQ][faq] that covers common usage questions.
 
 ## Installation
 
-To install the Elastic UI Framework into an existing project, use the `yarn` CLI (`npm` is not supported).
+To install the OpenSearch UI Framework into an existing project, use the `yarn` CLI (`npm` is not supported).
 
 ```
-yarn add @elastic/eui
+yarn add @opensearch-project/oui
 ```
 
-Note that EUI has [several `peerDependencies` requirements](package.json) that will also need to be installed if starting with a blank project. You can read more about other ways to [consume EUI][consuming].
+Note that OUI has [several `peerDependencies` requirements](package.json) that will also need to be installed if starting with a blank project. You can read more about other ways to [consume OUI][consuming].
 
 ```
-yarn add @elastic/eui @elastic/datemath moment prop-types
+yarn add @opensearch-project/oui @elastic/datemath moment prop-types
 ```
 
 
@@ -64,8 +62,8 @@ directly in the code. And unit test coverage for the UI components allows us to 
 
 ### Consumption
 
-* [Consuming EUI][consuming]
-* [Using EUI with react-router](wiki/react-router.md)
+* [Consuming OUI][consuming]
+* [Using OUI with react-router](wiki/react-router.md)
 
 ### Maintenance / Contributing
 

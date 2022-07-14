@@ -1,49 +1,60 @@
-.euiDatePopoverButton {
-  @include euiSuperDatePickerText;
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiDatePopoverButton {
+  @include ouiSuperDatePickerText;
   background-size: 100%; // For the bottom "border" via background-image
 
   &:focus,
   &-isSelected {
-    background-image: euiFormControlGradient();
+    background-image: ouiFormControlGradient();
   }
 
   &-needsUpdating {
-    $backgroundColor: tintOrShade($euiColorSuccess, 90%, 70%);
-    $textColor: makeHighContrastColor($euiColorSuccess, $backgroundColor);
+    $backgroundColor: tintOrShade($ouiColorSuccess, 90%, 70%);
+    $textColor: makeHighContrastColor($ouiColorSuccess, $backgroundColor);
 
     background-color: $backgroundColor;
     color: $textColor;
 
     &:focus,
-    &.euiDatePopoverButton-isSelected {
-      background-image: euiFormControlGradient($euiColorSuccess);
+    &.ouiDatePopoverButton-isSelected {
+      background-image: ouiFormControlGradient($ouiColorSuccess);
     }
   }
 
   &-isInvalid {
-    $backgroundColor: tintOrShade($euiColorDanger, 90%, 70%);
-    $textColor: makeHighContrastColor($euiColorDanger, $backgroundColor);
+    $backgroundColor: tintOrShade($ouiColorDanger, 90%, 70%);
+    $textColor: makeHighContrastColor($ouiColorDanger, $backgroundColor);
 
     background-color: $backgroundColor;
     color: $textColor;
 
     &:focus,
-    &.euiDatePopoverButton-isSelected {
-      background-image: euiFormControlGradient($euiColorDanger);
+    &.ouiDatePopoverButton-isSelected {
+      background-image: ouiFormControlGradient($ouiColorDanger);
     }
   }
 
   &:disabled {
-    background-color: $euiFormBackgroundDisabledColor;
-    color: $euiColorDarkShade;
+    background-color: $ouiFormBackgroundDisabledColor;
+    color: $ouiColorDarkShade;
     cursor: default;
   }
 }
 
-.euiDatePopoverButton--start {
+.ouiDatePopoverButton--start {
   text-align: right;
 }
 
-.euiDatePopoverButton--end {
+.ouiDatePopoverButton--end {
   text-align: left;
 }

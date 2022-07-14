@@ -1,24 +1,35 @@
-.euiFormControlLayoutCustomIcon {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFormControlLayoutCustomIcon {
   pointer-events: none;
   font-size: 0; // ensures the icon stays vertically centered
 }
 
-.euiFormControlLayoutCustomIcon--clickable {
-  @include size($euiSize);
+.ouiFormControlLayoutCustomIcon--clickable {
+  @include size($ouiSize);
 
   pointer-events: all;
 
-  .euiFormControlLayoutCustomIcon__icon {
+  .ouiFormControlLayoutCustomIcon__icon {
     vertical-align: baseline;
     transform: none;
   }
 
   &:focus {
-    @include euiFocusRing;
+    @include ouiFocusRing;
   }
 
   &:disabled {
     cursor: not-allowed;
-    color: $euiFormControlDisabledColor;
+    color: $ouiFormControlDisabledColor;
   }
 }

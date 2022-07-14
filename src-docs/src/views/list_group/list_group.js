@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, Fragment } from 'react';
 
 import {
-  EuiListGroup,
-  EuiListGroupItem,
-  EuiSpacer,
-  EuiSwitch,
-  EuiCode,
-  EuiFlexGroup,
-  EuiFlexItem,
+  OuiListGroup,
+  OuiListGroupItem,
+  OuiSpacer,
+  OuiSwitch,
+  OuiCode,
+  OuiFlexGroup,
+  OuiFlexItem,
 } from '../../../../src/components';
 
 export default () => {
@@ -16,23 +27,23 @@ export default () => {
 
   return (
     <Fragment>
-      <EuiFlexGroup alignItems="center">
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+      <OuiFlexGroup alignItems="center">
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label={
               <span>
-                Show as <EuiCode>flush</EuiCode>
+                Show as <OuiCode>flush</OuiCode>
               </span>
             }
             checked={flushWidth}
             onChange={() => setFlushWidth(!flushWidth)}
           />
-        </EuiFlexItem>
-        <EuiFlexItem grow={false}>
-          <EuiSwitch
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
             label={
               <span>
-                Show as <EuiCode>bordered</EuiCode>
+                Show as <OuiCode>bordered</OuiCode>
               </span>
             }
             checked={showBorder}
@@ -40,20 +51,20 @@ export default () => {
               setShowBorder(!showBorder);
             }}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer size="l" />
+      <OuiSpacer size="l" />
 
-      <EuiListGroup flush={flushWidth} bordered={showBorder}>
-        <EuiListGroupItem onClick={() => {}} label="First item" />
+      <OuiListGroup flush={flushWidth} bordered={showBorder}>
+        <OuiListGroupItem onClick={() => {}} label="First item" />
 
-        <EuiListGroupItem onClick={() => {}} label="Second item" />
+        <OuiListGroupItem onClick={() => {}} label="Second item" />
 
-        <EuiListGroupItem onClick={() => {}} label="Third item" isActive />
+        <OuiListGroupItem onClick={() => {}} label="Third item" isActive />
 
-        <EuiListGroupItem onClick={() => {}} label="Fourth item" isDisabled />
-      </EuiListGroup>
+        <OuiListGroupItem onClick={() => {}} label="Fourth item" isDisabled />
+      </OuiListGroup>
     </Fragment>
   );
 };

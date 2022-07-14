@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -36,17 +47,17 @@ export type FlexItemGrowSize =
   | false
   | null;
 
-export interface EuiFlexItemProps {
+export interface OuiFlexItemProps {
   grow?: FlexItemGrowSize;
   component?: keyof JSX.IntrinsicElements;
 }
 
 export const GROW_SIZES: FlexItemGrowSize[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-export const EuiFlexItem: FunctionComponent<
+export const OuiFlexItem: FunctionComponent<
   CommonProps &
     HTMLAttributes<HTMLDivElement | HTMLSpanElement> &
-    EuiFlexItemProps
+    OuiFlexItemProps
 > = ({
   children,
   className,
@@ -57,10 +68,10 @@ export const EuiFlexItem: FunctionComponent<
   validateGrowValue(grow);
 
   const classes = classNames(
-    'euiFlexItem',
+    'ouiFlexItem',
     {
-      'euiFlexItem--flexGrowZero': !grow,
-      [`euiFlexItem--flexGrow${grow}`]:
+      'ouiFlexItem--flexGrowZero': !grow,
+      [`ouiFlexItem--flexGrow${grow}`]:
         typeof grow === 'number' ? GROW_SIZES.indexOf(grow) >= 0 : undefined,
     },
     className
@@ -74,12 +85,12 @@ export const EuiFlexItem: FunctionComponent<
   );
 };
 
-function validateGrowValue(value: EuiFlexItemProps['grow']) {
+function validateGrowValue(value: OuiFlexItemProps['grow']) {
   const validValues = [null, undefined, true, false, ...GROW_SIZES];
 
   if (validValues.indexOf(value) === -1) {
     throw new Error(
-      `Prop \`grow\` passed to \`EuiFlexItem\` must be a boolean or an integer between 1 and 10, received \`${value}\``
+      `Prop \`grow\` passed to \`OuiFlexItem\` must be a boolean or an integer between 1 and 10, received \`${value}\``
     );
   }
 }

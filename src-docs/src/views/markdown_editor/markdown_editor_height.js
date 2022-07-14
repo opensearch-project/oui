@@ -1,21 +1,32 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
 import {
-  EuiMarkdownEditor,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiSpacer,
+  OuiMarkdownEditor,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiSpacer,
 } from '../../../../src/components';
 
 const initialContent1 = `## 👋 Hello there!
 
-I'm a **EuiMarkdownEditor** with:
+I'm a **OuiMarkdownEditor** with:
 
 - a \`height\` set to \`200\`
 - my parent container is a flex item
 
 
-### Things you should know 
+### Things you should know
 
 When my content is very long 😅
 
@@ -29,26 +40,26 @@ To avoid a scrollbar 😌
 
 const initialContent2 = `## 👋 Hello again!
 
-I'm a **EuiMarkdownEditor** with:
+I'm a **OuiMarkdownEditor** with:
 - a \`height\` set to \`"full"\`
 - my parent container is a flex item with a \`height\` set to \`600\`
 `;
 
 const initialContent3 = `## 👋 Hi!
 
-I'm a **EuiMarkdownEditor** with:
+I'm a **OuiMarkdownEditor** with:
 - a \`height\` set to \`200\`
-- my parent container is a flex item. 
-- the \`autoExpandPreview\` is set to \`false\` 
+- my parent container is a flex item.
+- the \`autoExpandPreview\` is set to \`false\`
 
-### Things you should know 
+### Things you should know
 
-When the content grows the preview height is not automatically adjusted. Just because the \`autoExpandPreview\` is set to \`false\` 😉 
+When the content grows the preview height is not automatically adjusted. Just because the \`autoExpandPreview\` is set to \`false\` 😉
 `;
 
 const initialContent4 = `## 👋 Hello again!
 
-I'm just a **EuiMarkdownEditor** with:
+I'm just a **OuiMarkdownEditor** with:
 - a \`height\` set to \`200\`
 - a \`maxHeight\` set to \`300\`
 `;
@@ -61,51 +72,51 @@ export default () => {
 
   return (
     <div className="guideDemo__highlightGrid">
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiMarkdownEditor
-            aria-label="EUI markdown editor demo"
+      <OuiFlexGroup>
+        <OuiFlexItem>
+          <OuiMarkdownEditor
+            aria-label="OUI markdown editor demo"
             initialViewMode="viewing"
             value={value1}
             onChange={setValue1}
             height={200}
           />
-        </EuiFlexItem>
-        <EuiFlexItem style={{ height: '600px' }}>
-          <EuiMarkdownEditor
-            aria-label="EUI markdown editor demo"
+        </OuiFlexItem>
+        <OuiFlexItem style={{ height: '600px' }}>
+          <OuiMarkdownEditor
+            aria-label="OUI markdown editor demo"
             initialViewMode="viewing"
             value={value2}
             onChange={setValue2}
             height="full"
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
 
-      <EuiSpacer />
+      <OuiSpacer />
 
-      <EuiFlexGroup>
-        <EuiFlexItem>
-          <EuiMarkdownEditor
-            aria-label="EUI markdown editor demo"
+      <OuiFlexGroup>
+        <OuiFlexItem>
+          <OuiMarkdownEditor
+            aria-label="OUI markdown editor demo"
             initialViewMode="viewing"
             value={value3}
             onChange={setValue3}
             height={200}
             autoExpandPreview={false}
           />
-        </EuiFlexItem>
-        <EuiFlexItem>
-          <EuiMarkdownEditor
-            aria-label="EUI markdown editor demo"
+        </OuiFlexItem>
+        <OuiFlexItem>
+          <OuiMarkdownEditor
+            aria-label="OUI markdown editor demo"
             initialViewMode="viewing"
             value={value4}
             onChange={setValue4}
             height={200}
             maxHeight={300}
           />
-        </EuiFlexItem>
-      </EuiFlexGroup>
+        </OuiFlexItem>
+      </OuiFlexGroup>
     </div>
   );
 };

@@ -1,13 +1,24 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 import { getSassVars } from '../_get_sass_vars';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiIcon,
-  EuiCopy,
-  EuiScreenReaderOnly,
-  EuiPanel,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiIcon,
+  OuiCopy,
+  OuiScreenReaderOnly,
+  OuiPanel,
 } from '../../../../../src/components';
 import { rgbToHex } from '../../../../../src/services';
 
@@ -27,13 +38,13 @@ export const CorePalette = ({ theme, colors }) => {
   function renderPaletteColor(palette, color, index) {
     const hex = palette[color];
     const iconClass =
-      color === 'euiColorLightestShade' || color === 'euiColorEmptyShade'
+      color === 'ouiColorLightestShade' || color === 'ouiColorEmptyShade'
         ? 'colorGuidelines_colorPreviewTooLight'
         : undefined;
 
     return (
-      <EuiFlexItem key={index} grow={false}>
-        <EuiCopy
+      <OuiFlexItem key={index} grow={false}>
+        <OuiCopy
           title={`$${color}:
           ${rgbToHex(hex.rgba).toUpperCase()}`}
           beforeMessage={
@@ -47,33 +58,33 @@ export const CorePalette = ({ theme, colors }) => {
           textToCopy={color}>
           {(copy) => (
             <button
-              className="eui-isFocusable"
+              className="oui-isFocusable"
               onClick={(e) => {
                 e.shiftKey ? scrollToSelector(`#${color}`) : copy();
               }}>
-              <EuiIcon
+              <OuiIcon
                 className={iconClass}
                 size="xxl"
                 type="stopFilled"
                 color={rgbToHex(hex.rgba)}
               />
-              <EuiScreenReaderOnly>
+              <OuiScreenReaderOnly>
                 <span>{color}</span>
-              </EuiScreenReaderOnly>
+              </OuiScreenReaderOnly>
             </button>
           )}
-        </EuiCopy>
-      </EuiFlexItem>
+        </OuiCopy>
+      </OuiFlexItem>
     );
   }
 
   return (
-    <EuiPanel paddingSize="l" color="subdued">
-      <EuiFlexGroup gutterSize="s" wrap responsive={false}>
+    <OuiPanel paddingSize="l" color="subdued">
+      <OuiFlexGroup gutterSize="s" wrap responsive={false}>
         {colors.map(function (color, index) {
           return renderPaletteColor(palette, color, index);
         })}
-      </EuiFlexGroup>
-    </EuiPanel>
+      </OuiFlexGroup>
+    </OuiPanel>
   );
 };

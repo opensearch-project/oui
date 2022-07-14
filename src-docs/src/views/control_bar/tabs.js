@@ -1,6 +1,17 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
 
-import { EuiButton, EuiControlBar, EuiText } from '../../../../src/components';
+import { OuiButton, OuiControlBar, OuiText } from '../../../../src/components';
 
 export default () => {
   const [tabContent, setTabContent] = useState('');
@@ -80,23 +91,23 @@ export default () => {
 
   if (isDisplaying) {
     display = (
-      <EuiControlBar
+      <OuiControlBar
         controls={controls}
         size="m"
         showContent={contentIsVisible}
         showOnMobile>
         {tabContent !== '' && (
           <div style={{ padding: '1rem' }}>
-            <EuiText>{tabContent}</EuiText>
+            <OuiText>{tabContent}</OuiText>
           </div>
         )}
-      </EuiControlBar>
+      </OuiControlBar>
     );
   }
 
   return (
     <div>
-      <EuiButton onClick={toggleDisplay}>Toggle tabs example</EuiButton>
+      <OuiButton onClick={toggleDisplay}>Toggle tabs example</OuiButton>
       {display}
     </div>
   );

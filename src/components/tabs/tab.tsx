@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -28,25 +39,25 @@ import { CommonProps, ExclusiveUnion } from '../common';
 import { getSecureRelForTarget } from '../../services';
 import { validateHref } from '../../services/security/href_validator';
 
-export interface EuiTabProps extends CommonProps {
+export interface OuiTabProps extends CommonProps {
   isSelected?: boolean;
   disabled?: boolean;
 }
 
-type EuiTabPropsForAnchor = EuiTabProps &
+type OuiTabPropsForAnchor = OuiTabProps &
   Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'onClick' | 'href'> & {
     href?: string;
     onClick?: MouseEventHandler<HTMLAnchorElement>;
   };
 
-type EuiTabPropsForButton = EuiTabProps &
+type OuiTabPropsForButton = OuiTabProps &
   Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'> & {
     onClick?: MouseEventHandler<HTMLButtonElement>;
   };
 
-export type Props = ExclusiveUnion<EuiTabPropsForAnchor, EuiTabPropsForButton>;
+export type Props = ExclusiveUnion<OuiTabPropsForAnchor, OuiTabPropsForButton>;
 
-export const EuiTab: FunctionComponent<Props> = ({
+export const OuiTab: FunctionComponent<Props> = ({
   isSelected,
   children,
   className,
@@ -59,9 +70,9 @@ export const EuiTab: FunctionComponent<Props> = ({
   const isHrefValid = !href || validateHref(href);
   const disabled = _disabled || !isHrefValid;
 
-  const classes = classNames('euiTab', className, {
-    'euiTab-isSelected': isSelected,
-    'euiTab-isDisabled': disabled,
+  const classes = classNames('ouiTab', className, {
+    'ouiTab-isSelected': isSelected,
+    'ouiTab-isDisabled': disabled,
   });
 
   //  <a> elements don't respect the `disabled` attribute. So if we're disabled, we'll just pretend
@@ -78,7 +89,7 @@ export const EuiTab: FunctionComponent<Props> = ({
         target={target}
         rel={secureRel}
         {...(rest as AnchorHTMLAttributes<HTMLAnchorElement>)}>
-        <span className="euiTab__content">{children}</span>
+        <span className="ouiTab__content">{children}</span>
       </a>
     );
   }
@@ -91,7 +102,7 @@ export const EuiTab: FunctionComponent<Props> = ({
       className={classes}
       disabled={disabled}
       {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}>
-      <span className="euiTab__content">{children}</span>
+      <span className="ouiTab__content">{children}</span>
     </button>
   );
 };

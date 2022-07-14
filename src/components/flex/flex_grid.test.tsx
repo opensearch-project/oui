@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,14 +32,14 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
-import { EuiFlexGrid, GUTTER_SIZES, COLUMNS, DIRECTIONS } from './flex_grid';
+import { OuiFlexGrid, GUTTER_SIZES, COLUMNS, DIRECTIONS } from './flex_grid';
 
-describe('EuiFlexGrid', () => {
+describe('OuiFlexGrid', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiFlexGrid columns={3} {...requiredProps}>
+      <OuiFlexGrid columns={3} {...requiredProps}>
         <h2>My Child</h2>
-      </EuiFlexGrid>
+      </OuiFlexGrid>
     );
 
     expect(component).toMatchSnapshot();
@@ -38,7 +49,7 @@ describe('EuiFlexGrid', () => {
     describe('gutterSize', () => {
       GUTTER_SIZES.forEach((value) => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGrid gutterSize={value} />);
+          const component = render(<OuiFlexGrid gutterSize={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -48,7 +59,7 @@ describe('EuiFlexGrid', () => {
     describe('columns', () => {
       COLUMNS.forEach((value) => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGrid columns={value} />);
+          const component = render(<OuiFlexGrid columns={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -58,7 +69,7 @@ describe('EuiFlexGrid', () => {
     describe('direction', () => {
       DIRECTIONS.forEach((value) => {
         test(`${value} is rendered`, () => {
-          const component = render(<EuiFlexGrid direction={value} />);
+          const component = render(<OuiFlexGrid direction={value} />);
 
           expect(component).toMatchSnapshot();
         });
@@ -67,7 +78,7 @@ describe('EuiFlexGrid', () => {
 
     describe('responsive', () => {
       test('is rendered', () => {
-        const component = render(<EuiFlexGrid responsive={false} />);
+        const component = render(<OuiFlexGrid responsive={false} />);
 
         expect(component).toMatchSnapshot();
       });

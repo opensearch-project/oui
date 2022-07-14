@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,30 +32,30 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiFormLabel } from './form_label';
+import { OuiFormLabel } from './form_label';
 
-describe('EuiFormLabel', () => {
+describe('OuiFormLabel', () => {
   test('is rendered', () => {
-    const component = render(<EuiFormLabel {...requiredProps} />);
+    const component = render(<OuiFormLabel {...requiredProps} />);
 
     expect(component).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('isFocused is rendered', () => {
-      const component = render(<EuiFormLabel isFocused />);
+      const component = render(<OuiFormLabel isFocused />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('isInvalid is rendered', () => {
-      const component = render(<EuiFormLabel isInvalid />);
+      const component = render(<OuiFormLabel isInvalid />);
 
       expect(component).toMatchSnapshot();
     });
 
     test('type can be changed to legend', () => {
-      const component = render(<EuiFormLabel type="legend" />);
+      const component = render(<OuiFormLabel type="legend" />);
 
       expect(component).toMatchSnapshot();
     });

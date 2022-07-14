@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,9 +30,9 @@
 
 import { ReactNode, useEffect } from 'react';
 
-import { EuiObserver } from '../observer';
+import { OuiObserver } from '../observer';
 
-export interface EuiMutationObserverProps {
+export interface OuiMutationObserverProps {
   /**
    * ReactNode to render as this component's content
    */
@@ -30,8 +41,8 @@ export interface EuiMutationObserverProps {
   observerOptions?: MutationObserverInit;
 }
 
-export class EuiMutationObserver extends EuiObserver<EuiMutationObserverProps> {
-  name = 'EuiMutationObserver';
+export class OuiMutationObserver extends OuiObserver<OuiMutationObserverProps> {
+  name = 'OuiMutationObserver';
 
   // the `onMutation` prop may change while the observer is bound, abstracting
   // it out into a separate function means the current `onMutation` value is used

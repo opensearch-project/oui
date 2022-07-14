@@ -1,7 +1,18 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState } from 'react';
-import { EuiPanel } from '../../../../src/components/panel';
-import { EuiContextMenuItem } from '../../../../src/components/context_menu';
-import { EuiNotificationEvent } from '../../../../src/components/notification/notification_event';
+import { OuiPanel } from '../../../../src/components/panel';
+import { OuiContextMenuItem } from '../../../../src/components/context_menu';
+import { OuiNotificationEvent } from '../../../../src/components/notification/notification_event';
 
 export default () => {
   const [isRead, setIsRead] = useState(false);
@@ -12,25 +23,25 @@ export default () => {
 
   const onOpenContextMenu = (id) => {
     return [
-      <EuiContextMenuItem
+      <OuiContextMenuItem
         key="contextMenuItemA"
         onClick={() => onRead(id, isRead)}>
         {isRead ? 'Mark as unread' : 'Mark as read'}
-      </EuiContextMenuItem>,
+      </OuiContextMenuItem>,
 
-      <EuiContextMenuItem key="contextMenuItemB" onClick={() => {}}>
+      <OuiContextMenuItem key="contextMenuItemB" onClick={() => {}}>
         View messages like this
-      </EuiContextMenuItem>,
+      </OuiContextMenuItem>,
 
-      <EuiContextMenuItem key="contextMenuItemC" onClick={() => {}}>
+      <OuiContextMenuItem key="contextMenuItemC" onClick={() => {}}>
         Don’t notify me about this
-      </EuiContextMenuItem>,
+      </OuiContextMenuItem>,
     ];
   };
 
   return (
-    <EuiPanel paddingSize="none" hasShadow={true} style={{ maxWidth: '540px' }}>
-      <EuiNotificationEvent
+    <OuiPanel paddingSize="none" hasShadow={true} style={{ maxWidth: '540px' }}>
+      <OuiNotificationEvent
         id="report"
         type="Report"
         iconType="logoKibana"
@@ -48,6 +59,6 @@ export default () => {
         onClickPrimaryAction={() => {}}
         onClickTitle={() => {}}
       />
-    </EuiPanel>
+    </OuiPanel>
   );
 };

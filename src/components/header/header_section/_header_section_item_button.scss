@@ -1,41 +1,52 @@
-.euiHeaderSectionItemButton {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiHeaderSectionItemButton {
   position: relative; // For positioning the notification
-  height: $euiHeaderChildSize;
-  min-width: $euiHeaderChildSize;
+  height: $ouiHeaderChildSize;
+  min-width: $ouiHeaderChildSize;
   text-align: center;
   font-size: 0; // aligns icons better vertically
 }
 
-.euiHeaderSectionItemButton__notification {
+.ouiHeaderSectionItemButton__notification {
   position: absolute;
 
   &--dot {
     top: 0;
     right: 0;
-    stroke: $euiHeaderBackgroundColor;
+    stroke: $ouiHeaderBackgroundColor;
   }
 
   &--badge {
     top: 9%;
     right: 9%;
-    box-shadow: 0 0 0 1px $euiHeaderBackgroundColor;
+    box-shadow: 0 0 0 1px $ouiHeaderBackgroundColor;
   }
 }
 
 
-.euiHeaderSectionItemButton__content {
+.ouiHeaderSectionItemButton__content {
   // This element is a span and we're changing the display because inline elements can’t take a transform
   display: inline-block;
 }
 
-@include euiBreakpoint('xs') {
-  .euiHeaderSectionItemButton {
-    min-width: $euiHeaderChildSize * .75;
+@include ouiBreakpoint('xs') {
+  .ouiHeaderSectionItemButton {
+    min-width: $ouiHeaderChildSize * .75;
   }
 
   // Using specificity to override the default icon size
-  .euiHeaderSectionItemButton__notification.euiHeaderSectionItemButton__notification--dot {
-    @include size($euiSize);
+  .ouiHeaderSectionItemButton__notification.ouiHeaderSectionItemButton__notification--dot {
+    @include size($ouiSize);
     top: 9%;
   }
 }

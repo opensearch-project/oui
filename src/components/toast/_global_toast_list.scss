@@ -1,16 +1,27 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 /**
  * 1. Allow list to expand as items are added, but cap it at the screen height.
  * 2. Allow some padding for shadow
  */
-.euiGlobalToastList {
-  @include euiScrollBar;
+.ouiGlobalToastList {
+  @include ouiScrollBar;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   position: fixed;
-  z-index: $euiZToastList;
+  z-index: $ouiZToastList;
   bottom: 0;
-  width: $euiToastWidth + ($euiSize * 5); /* 2 */
+  width: $ouiToastWidth + ($ouiSize * 5); /* 2 */
   max-height: 100vh; /* 1 */
   overflow-y: auto;
 
@@ -28,23 +39,23 @@
   // when there's no toasts in the list, meaning you can't click anything beneath it.
   // Only add the padding if there's content.
   &:not(:empty) {
-    padding: $euiSize;
+    padding: $ouiSize;
   }
 }
 
-.euiGlobalToastList--right:not(:empty) {
+.ouiGlobalToastList--right:not(:empty) {
   right: 0;
-  padding-left: $euiSize * 4; /* 2 */
+  padding-left: $ouiSize * 4; /* 2 */
 }
 
-.euiGlobalToastList--left:not(:empty) {
+.ouiGlobalToastList--left:not(:empty) {
   left: 0;
-  padding-right: $euiSize * 4; /* 2 */
+  padding-right: $ouiSize * 4; /* 2 */
 }
 
-.euiGlobalToastListItem {
-  margin-bottom: $euiSize;
-  animation: $euiAnimSpeedNormal euiShowToast $euiAnimSlightResistance;
+.ouiGlobalToastListItem {
+  margin-bottom: $ouiSize;
+  animation: $ouiAnimSpeedNormal ouiShowToast $ouiAnimSlightResistance;
   opacity: 1;
 
   /**
@@ -59,15 +70,15 @@
     margin-bottom: 0;
   }
 
-  &.euiGlobalToastListItem-isDismissed {
-    transition: opacity $euiAnimSpeedNormal;
+  &.ouiGlobalToastListItem-isDismissed {
+    transition: opacity $ouiAnimSpeedNormal;
     opacity: 0;
   }
 }
 
-@keyframes euiShowToast {
+@keyframes ouiShowToast {
   from {
-    transform: translateY($euiSizeL) scale(.9);
+    transform: translateY($ouiSizeL) scale(.9);
     opacity: 0;
   }
 
@@ -77,14 +88,14 @@
   }
 }
 
-@include euiBreakpoint('xs', 's') {
+@include ouiBreakpoint('xs', 's') {
   /**
    * 1. Mobile we make these 100%. Matching change happens on the item as well.
    */
-  .euiGlobalToastList:not(:empty) {
+  .ouiGlobalToastList:not(:empty) {
     left: 0;
-    padding-left: $euiSize;
-    padding-right: $euiSize;
+    padding-left: $ouiSize;
+    padding-right: $ouiSize;
     width: 100%; /* 1 */
   }
 }

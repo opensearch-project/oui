@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -19,7 +30,7 @@
 
 import React, { FunctionComponent, useState } from 'react';
 import { mount } from 'enzyme';
-import { EuiResizeObserver, useResizeObserver } from './resize_observer';
+import { OuiResizeObserver, useResizeObserver } from './resize_observer';
 import { sleep } from '../../../test';
 import { act } from 'react-dom/test-utils';
 
@@ -28,13 +39,13 @@ export async function waitforResizeObserver(period = 30) {
   await sleep(period);
 }
 
-// EuiResizeObserver and useResizeObserver do not have a fallback for
+// OuiResizeObserver and useResizeObserver do not have a fallback for
 // environments that do not implement the ResizeObserver API.
 // jsdom does not implement ResizeObserver and we therefore
 // cannot currently test production functionality of those components.
 // Re-enable these tests when test support changes.
 describe.skip('testResizeObservers', () => {
-  // refactor the tests structure to make sure that `EuiResizeObserver` test can get
+  // refactor the tests structure to make sure that `OuiResizeObserver` test can get
   // the proper size of the dom element.
   type GetBoundingClientRect = typeof HTMLElement['prototype']['getBoundingClientRect'];
   let _originalgetBoundingClientRect: undefined | GetBoundingClientRect;
@@ -52,18 +63,18 @@ describe.skip('testResizeObservers', () => {
     HTMLElement.prototype.getBoundingClientRect = _originalgetBoundingClientRect!;
   });
 
-  describe('EuiResizeObserver', () => {
+  describe('OuiResizeObserver', () => {
     it('watches for a resize', async () => {
       expect.assertions(2);
       const onResize = jest.fn();
 
       const Wrapper: FunctionComponent<{}> = ({ children }) => {
         return (
-          <EuiResizeObserver onResize={onResize}>
+          <OuiResizeObserver onResize={onResize}>
             {(resizeRef: (e: HTMLElement | null) => void) => (
               <div ref={resizeRef}>{children}</div>
             )}
-          </EuiResizeObserver>
+          </OuiResizeObserver>
         );
       };
 

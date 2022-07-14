@@ -1,6 +1,6 @@
 [
   {
-    "token": "euiAccordion.isLoading",
+    "token": "ouiAccordion.isLoading",
     "defString": "Loading",
     "highlighting": "string",
     "loc": {
@@ -16,7 +16,7 @@
     "filepath": "src/components/accordion/accordion.tsx"
   },
   {
-    "token": "euiBasicTable.tableCaptionWithPagination",
+    "token": "ouiBasicTable.tableCaptionWithPagination",
     "defString": "{tableCaption}; Page {page} of {pageCount}.",
     "highlighting": "string",
     "loc": {
@@ -32,7 +32,7 @@
     "filepath": "src/components/basic_table/basic_table.tsx"
   },
   {
-    "token": "euiBasicTable.tableAutoCaptionWithPagination",
+    "token": "ouiBasicTable.tableAutoCaptionWithPagination",
     "defString": "This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}.",
     "highlighting": "string",
     "loc": {
@@ -48,7 +48,7 @@
     "filepath": "src/components/basic_table/basic_table.tsx"
   },
   {
-    "token": "euiBasicTable.tableSimpleAutoCaptionWithPagination",
+    "token": "ouiBasicTable.tableSimpleAutoCaptionWithPagination",
     "defString": "This table contains {itemCount} rows; Page {page} of {pageCount}.",
     "highlighting": "string",
     "loc": {
@@ -64,7 +64,7 @@
     "filepath": "src/components/basic_table/basic_table.tsx"
   },
   {
-    "token": "euiBasicTable.tableAutoCaptionWithoutPagination",
+    "token": "ouiBasicTable.tableAutoCaptionWithoutPagination",
     "defString": "This table contains {itemCount} rows.",
     "highlighting": "string",
     "loc": {
@@ -80,7 +80,7 @@
     "filepath": "src/components/basic_table/basic_table.tsx"
   },
   {
-    "token": "euiBasicTable.selectAllRows",
+    "token": "ouiBasicTable.selectAllRows",
     "defString": "Select all rows",
     "highlighting": "string",
     "loc": {
@@ -96,7 +96,7 @@
     "filepath": "src/components/basic_table/basic_table.tsx"
   },
   {
-    "token": "euiBasicTable.selectThisRow",
+    "token": "ouiBasicTable.selectThisRow",
     "defString": "Select this row",
     "highlighting": "string",
     "loc": {
@@ -112,7 +112,7 @@
     "filepath": "src/components/basic_table/basic_table.tsx"
   },
   {
-    "token": "euiBasicTable.tablePagination",
+    "token": "ouiBasicTable.tablePagination",
     "defString": "Pagination for preceding table: {tableCaption}",
     "highlighting": "string",
     "loc": {
@@ -128,7 +128,7 @@
     "filepath": "src/components/basic_table/basic_table.tsx"
   },
   {
-    "token": "euiCollapsedItemActions.allActions",
+    "token": "ouiCollapsedItemActions.allActions",
     "defString": "All actions",
     "highlighting": "string",
     "loc": {
@@ -144,7 +144,7 @@
     "filepath": "src/components/basic_table/collapsed_item_actions.tsx"
   },
   {
-    "token": "euiCollapsedItemActions.allActions",
+    "token": "ouiCollapsedItemActions.allActions",
     "defString": "All actions",
     "highlighting": "string",
     "loc": {
@@ -160,7 +160,7 @@
     "filepath": "src/components/basic_table/collapsed_item_actions.tsx"
   },
   {
-    "token": "euiBottomBar.screenReaderHeading",
+    "token": "ouiBottomBar.screenReaderHeading",
     "defString": "Page level controls",
     "highlighting": "string",
     "loc": {
@@ -176,7 +176,7 @@
     "filepath": "src/components/bottom_bar/bottom_bar.tsx"
   },
   {
-    "token": "euiBottomBar.customScreenReaderAnnouncement",
+    "token": "ouiBottomBar.customScreenReaderAnnouncement",
     "defString": "There is a new region landmark called {landmarkHeading} with page level controls at the end of the document.",
     "highlighting": "string",
     "loc": {
@@ -192,7 +192,7 @@
     "filepath": "src/components/bottom_bar/bottom_bar.tsx"
   },
   {
-    "token": "euiBottomBar.screenReaderAnnouncement",
+    "token": "ouiBottomBar.screenReaderAnnouncement",
     "defString": "There is a new region landmark with page level controls at the end of the document.",
     "highlighting": "string",
     "loc": {
@@ -208,7 +208,7 @@
     "filepath": "src/components/bottom_bar/bottom_bar.tsx"
   },
   {
-    "token": "euiBreadcrumbs.collapsedBadge.ariaLabel",
+    "token": "ouiBreadcrumbs.collapsedBadge.ariaLabel",
     "defString": "Show collapsed breadcrumbs",
     "highlighting": "string",
     "loc": {
@@ -224,7 +224,7 @@
     "filepath": "src/components/breadcrumbs/breadcrumbs.tsx"
   },
   {
-    "token": "euiCardSelect.selected",
+    "token": "ouiCardSelect.selected",
     "defString": "Selected",
     "highlighting": "string",
     "loc": {
@@ -240,7 +240,7 @@
     "filepath": "src/components/card/card_select.tsx"
   },
   {
-    "token": "euiCardSelect.unavailable",
+    "token": "ouiCardSelect.unavailable",
     "defString": "Unavailable",
     "highlighting": "string",
     "loc": {
@@ -256,7 +256,7 @@
     "filepath": "src/components/card/card_select.tsx"
   },
   {
-    "token": "euiCardSelect.select",
+    "token": "ouiCardSelect.select",
     "defString": "Select",
     "highlighting": "string",
     "loc": {
@@ -272,7 +272,7 @@
     "filepath": "src/components/card/card_select.tsx"
   },
   {
-    "token": "euiCodeEditor.startInteracting",
+    "token": "ouiCodeEditor.startInteracting",
     "defString": "Press Enter to start interacting with the code.",
     "highlighting": "string",
     "loc": {
@@ -288,7 +288,7 @@
     "filepath": "src/components/code_editor/code_editor.tsx"
   },
   {
-    "token": "euiCodeEditor.startEditing",
+    "token": "ouiCodeEditor.startEditing",
     "defString": "Press Enter to start editing.",
     "highlighting": "string",
     "loc": {
@@ -304,7 +304,7 @@
     "filepath": "src/components/code_editor/code_editor.tsx"
   },
   {
-    "token": "euiCodeEditor.stopInteracting",
+    "token": "ouiCodeEditor.stopInteracting",
     "defString": "When you're done, press Escape to stop interacting with the code.",
     "highlighting": "string",
     "loc": {
@@ -320,7 +320,7 @@
     "filepath": "src/components/code_editor/code_editor.tsx"
   },
   {
-    "token": "euiCodeEditor.stopEditing",
+    "token": "ouiCodeEditor.stopEditing",
     "defString": "When you're done, press Escape to stop editing.",
     "highlighting": "string",
     "loc": {
@@ -336,7 +336,7 @@
     "filepath": "src/components/code_editor/code_editor.tsx"
   },
   {
-    "token": "euiCodeBlock.copyButton",
+    "token": "ouiCodeBlock.copyButton",
     "defString": "Copy",
     "highlighting": "string",
     "loc": {
@@ -352,7 +352,7 @@
     "filepath": "src/components/code/_code_block.tsx"
   },
   {
-    "token": "euiCodeBlock.fullscreenCollapse",
+    "token": "ouiCodeBlock.fullscreenCollapse",
     "defString": "Collapse",
     "highlighting": "string",
     "loc": {
@@ -368,7 +368,7 @@
     "filepath": "src/components/code/_code_block.tsx"
   },
   {
-    "token": "euiCodeBlock.fullscreenExpand",
+    "token": "ouiCodeBlock.fullscreenExpand",
     "defString": "Expand",
     "highlighting": "string",
     "loc": {
@@ -384,7 +384,7 @@
     "filepath": "src/components/code/_code_block.tsx"
   },
   {
-    "token": "euiColorPicker.colorLabel",
+    "token": "ouiColorPicker.colorLabel",
     "defString": "Color value",
     "highlighting": "string",
     "loc": {
@@ -400,7 +400,7 @@
     "filepath": "src/components/color_picker/color_picker.tsx"
   },
   {
-    "token": "euiColorPicker.colorErrorMessage",
+    "token": "ouiColorPicker.colorErrorMessage",
     "defString": "Invalid color value",
     "highlighting": "string",
     "loc": {
@@ -416,7 +416,7 @@
     "filepath": "src/components/color_picker/color_picker.tsx"
   },
   {
-    "token": "euiColorPicker.transparent",
+    "token": "ouiColorPicker.transparent",
     "defString": "Transparent",
     "highlighting": "string",
     "loc": {
@@ -432,7 +432,7 @@
     "filepath": "src/components/color_picker/color_picker.tsx"
   },
   {
-    "token": "euiColorPicker.swatchAriaLabel",
+    "token": "ouiColorPicker.swatchAriaLabel",
     "defString": "Select {swatch} as the color",
     "highlighting": "string",
     "loc": {
@@ -448,7 +448,7 @@
     "filepath": "src/components/color_picker/color_picker.tsx"
   },
   {
-    "token": "euiColorPicker.alphaLabel",
+    "token": "ouiColorPicker.alphaLabel",
     "defString": "Alpha channel (opacity) value",
     "highlighting": "string",
     "loc": {
@@ -464,7 +464,7 @@
     "filepath": "src/components/color_picker/color_picker.tsx"
   },
   {
-    "token": "euiColorPicker.openLabel",
+    "token": "ouiColorPicker.openLabel",
     "defString": "Press the escape key to close the popover",
     "highlighting": "string",
     "loc": {
@@ -480,7 +480,7 @@
     "filepath": "src/components/color_picker/color_picker.tsx"
   },
   {
-    "token": "euiColorPicker.closeLabel",
+    "token": "ouiColorPicker.closeLabel",
     "defString": "Press the down key to open a popover containing color options",
     "highlighting": "string",
     "loc": {
@@ -496,7 +496,7 @@
     "filepath": "src/components/color_picker/color_picker.tsx"
   },
   {
-    "token": "euiColorPicker.transparent",
+    "token": "ouiColorPicker.transparent",
     "defString": "Transparent",
     "highlighting": "string",
     "loc": {
@@ -512,7 +512,7 @@
     "filepath": "src/components/color_picker/color_picker.tsx"
   },
   {
-    "token": "euiColorPicker.screenReaderAnnouncement",
+    "token": "ouiColorPicker.screenReaderAnnouncement",
     "defString": "A popup with a range of selectable colors opened.\n                Tab forward to cycle through colors choices or press\n                escape to close this popup.",
     "highlighting": "string",
     "loc": {
@@ -528,7 +528,7 @@
     "filepath": "src/components/color_picker/color_picker.tsx"
   },
   {
-    "token": "euiColorStopThumb.buttonAriaLabel",
+    "token": "ouiColorStopThumb.buttonAriaLabel",
     "defString": "Press the Enter key to modify this stop. Press Escape to focus the group",
     "highlighting": "string",
     "loc": {
@@ -544,7 +544,7 @@
     "filepath": "src/components/color_picker/color_stops/color_stop_thumb.tsx"
   },
   {
-    "token": "euiColorStopThumb.buttonTitle",
+    "token": "ouiColorStopThumb.buttonTitle",
     "defString": "Click to edit, drag to reposition",
     "highlighting": "string",
     "loc": {
@@ -560,7 +560,7 @@
     "filepath": "src/components/color_picker/color_stops/color_stop_thumb.tsx"
   },
   {
-    "token": "euiColorStopThumb.screenReaderAnnouncement",
+    "token": "ouiColorStopThumb.screenReaderAnnouncement",
     "defString": "A popup with a color stop edit form opened.\n            Tab forward to cycle through form controls or press\n            escape to close this popup.",
     "highlighting": "string",
     "loc": {
@@ -576,7 +576,7 @@
     "filepath": "src/components/color_picker/color_stops/color_stop_thumb.tsx"
   },
   {
-    "token": "euiColorStopThumb.stopLabel",
+    "token": "ouiColorStopThumb.stopLabel",
     "defString": "Stop value",
     "highlighting": "string",
     "loc": {
@@ -592,7 +592,7 @@
     "filepath": "src/components/color_picker/color_stops/color_stop_thumb.tsx"
   },
   {
-    "token": "euiColorStopThumb.stopErrorMessage",
+    "token": "ouiColorStopThumb.stopErrorMessage",
     "defString": "Value is out of range",
     "highlighting": "string",
     "loc": {
@@ -608,7 +608,7 @@
     "filepath": "src/components/color_picker/color_stops/color_stop_thumb.tsx"
   },
   {
-    "token": "euiColorStopThumb.removeLabel",
+    "token": "ouiColorStopThumb.removeLabel",
     "defString": "Remove this stop",
     "highlighting": "string",
     "loc": {
@@ -624,7 +624,7 @@
     "filepath": "src/components/color_picker/color_stops/color_stop_thumb.tsx"
   },
   {
-    "token": "euiColorStops.screenReaderAnnouncement",
+    "token": "ouiColorStops.screenReaderAnnouncement",
     "defString": "{label}: {readOnly} {disabled} Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.",
     "highlighting": "string",
     "loc": {
@@ -640,7 +640,7 @@
     "filepath": "src/components/color_picker/color_stops/color_stops.tsx"
   },
   {
-    "token": "euiHue.label",
+    "token": "ouiHue.label",
     "defString": "Select the HSV color mode 'hue' value",
     "highlighting": "string",
     "loc": {
@@ -656,7 +656,7 @@
     "filepath": "src/components/color_picker/hue.tsx"
   },
   {
-    "token": "euiSaturation.roleDescription",
+    "token": "ouiSaturation.roleDescription",
     "defString": "HSV color mode saturation and value selection",
     "highlighting": "string",
     "loc": {
@@ -672,7 +672,7 @@
     "filepath": "src/components/color_picker/saturation.tsx"
   },
   {
-    "token": "euiSaturation.screenReaderAnnouncement",
+    "token": "ouiSaturation.screenReaderAnnouncement",
     "defString": "Use the arrow keys to navigate the square color gradient. The coordinates resulting from each key press will be used to calculate HSV color mode 'saturation' and 'value' numbers, in the range of 0 to 1. Left and right decrease and increase (respectively) the 'saturation' value. Up and down decrease and increase (respectively) the 'value' value.",
     "highlighting": "string",
     "loc": {
@@ -688,7 +688,7 @@
     "filepath": "src/components/color_picker/saturation.tsx"
   },
   {
-    "token": "euiComboBoxPill.removeSelection",
+    "token": "ouiComboBoxPill.removeSelection",
     "defString": "Remove {children} from selection in this group",
     "highlighting": "string",
     "loc": {
@@ -704,7 +704,7 @@
     "filepath": "src/components/combo_box/combo_box_input/combo_box_pill.tsx"
   },
   {
-    "token": "euiComboBoxOptionsList.loadingOptions",
+    "token": "ouiComboBoxOptionsList.loadingOptions",
     "defString": "Loading options",
     "highlighting": "string",
     "loc": {
@@ -720,7 +720,7 @@
     "filepath": "src/components/combo_box/combo_box_options_list/combo_box_options_list.tsx"
   },
   {
-    "token": "euiComboBoxOptionsList.delimiterMessage",
+    "token": "ouiComboBoxOptionsList.delimiterMessage",
     "defString": "Add each item separated by {delimiter}",
     "highlighting": "string",
     "loc": {
@@ -736,7 +736,7 @@
     "filepath": "src/components/combo_box/combo_box_options_list/combo_box_options_list.tsx"
   },
   {
-    "token": "euiComboBoxOptionsList.alreadyAdded",
+    "token": "ouiComboBoxOptionsList.alreadyAdded",
     "defString": "{label} has already been added",
     "highlighting": "string",
     "loc": {
@@ -752,7 +752,7 @@
     "filepath": "src/components/combo_box/combo_box_options_list/combo_box_options_list.tsx"
   },
   {
-    "token": "euiComboBoxOptionsList.createCustomOption",
+    "token": "ouiComboBoxOptionsList.createCustomOption",
     "defString": "Add {searchValue} as a custom option",
     "highlighting": "string",
     "loc": {
@@ -768,7 +768,7 @@
     "filepath": "src/components/combo_box/combo_box_options_list/combo_box_options_list.tsx"
   },
   {
-    "token": "euiComboBoxOptionsList.noMatchingOptions",
+    "token": "ouiComboBoxOptionsList.noMatchingOptions",
     "defString": "{searchValue} doesn't match any options",
     "highlighting": "string",
     "loc": {
@@ -784,7 +784,7 @@
     "filepath": "src/components/combo_box/combo_box_options_list/combo_box_options_list.tsx"
   },
   {
-    "token": "euiComboBoxOptionsList.noAvailableOptions",
+    "token": "ouiComboBoxOptionsList.noAvailableOptions",
     "defString": "There aren't any options available",
     "highlighting": "string",
     "loc": {
@@ -800,7 +800,7 @@
     "filepath": "src/components/combo_box/combo_box_options_list/combo_box_options_list.tsx"
   },
   {
-    "token": "euiComboBoxOptionsList.allOptionsSelected",
+    "token": "ouiComboBoxOptionsList.allOptionsSelected",
     "defString": "You've selected all available options",
     "highlighting": "string",
     "loc": {
@@ -816,7 +816,7 @@
     "filepath": "src/components/combo_box/combo_box_options_list/combo_box_options_list.tsx"
   },
   {
-    "token": "euiControlBar.screenReaderHeading",
+    "token": "ouiControlBar.screenReaderHeading",
     "defString": "Page level controls",
     "highlighting": "string",
     "loc": {
@@ -832,7 +832,7 @@
     "filepath": "src/components/control_bar/control_bar.tsx"
   },
   {
-    "token": "euiControlBar.customScreenReaderAnnouncement",
+    "token": "ouiControlBar.customScreenReaderAnnouncement",
     "defString": "There is a new region landmark called {landmarkHeading} with page level controls at the end of the document.",
     "highlighting": "string",
     "loc": {
@@ -848,7 +848,7 @@
     "filepath": "src/components/control_bar/control_bar.tsx"
   },
   {
-    "token": "euiControlBar.screenReaderAnnouncement",
+    "token": "ouiControlBar.screenReaderAnnouncement",
     "defString": "There is a new region landmark with page level controls at the end of the document.",
     "highlighting": "string",
     "loc": {
@@ -864,7 +864,7 @@
     "filepath": "src/components/control_bar/control_bar.tsx"
   },
   {
-    "token": "euiColumnActions.hideColumn",
+    "token": "ouiColumnActions.hideColumn",
     "defString": "Hide column",
     "highlighting": "string",
     "loc": {
@@ -880,7 +880,7 @@
     "filepath": "src/components/datagrid/column_actions.tsx"
   },
   {
-    "token": "euiColumnActions.sort",
+    "token": "ouiColumnActions.sort",
     "defString": "Sort {schemaLabel}",
     "highlighting": "string",
     "loc": {
@@ -896,7 +896,7 @@
     "filepath": "src/components/datagrid/column_actions.tsx"
   },
   {
-    "token": "euiColumnActions.sort",
+    "token": "ouiColumnActions.sort",
     "defString": "Sort {schemaLabel}",
     "highlighting": "string",
     "loc": {
@@ -912,7 +912,7 @@
     "filepath": "src/components/datagrid/column_actions.tsx"
   },
   {
-    "token": "euiColumnActions.moveLeft",
+    "token": "ouiColumnActions.moveLeft",
     "defString": "Move left",
     "highlighting": "string",
     "loc": {
@@ -928,7 +928,7 @@
     "filepath": "src/components/datagrid/column_actions.tsx"
   },
   {
-    "token": "euiColumnActions.moveRight",
+    "token": "ouiColumnActions.moveRight",
     "defString": "Move right",
     "highlighting": "string",
     "loc": {
@@ -944,7 +944,7 @@
     "filepath": "src/components/datagrid/column_actions.tsx"
   },
   {
-    "token": "euiColumnSelector.button",
+    "token": "ouiColumnSelector.button",
     "defString": "Columns",
     "highlighting": "string",
     "loc": {
@@ -960,7 +960,7 @@
     "filepath": "src/components/datagrid/column_selector.tsx"
   },
   {
-    "token": "euiColumnSelector.buttonActiveSingular",
+    "token": "ouiColumnSelector.buttonActiveSingular",
     "defString": "{numberOfHiddenFields} column hidden",
     "highlighting": "string",
     "loc": {
@@ -976,7 +976,7 @@
     "filepath": "src/components/datagrid/column_selector.tsx"
   },
   {
-    "token": "euiColumnSelector.buttonActivePlural",
+    "token": "ouiColumnSelector.buttonActivePlural",
     "defString": "{numberOfHiddenFields} columns hidden",
     "highlighting": "string",
     "loc": {
@@ -992,7 +992,7 @@
     "filepath": "src/components/datagrid/column_selector.tsx"
   },
   {
-    "token": "euiColumnSelector.search",
+    "token": "ouiColumnSelector.search",
     "defString": "Search",
     "highlighting": "string",
     "loc": {
@@ -1008,7 +1008,7 @@
     "filepath": "src/components/datagrid/column_selector.tsx"
   },
   {
-    "token": "euiColumnSelector.searchcolumns",
+    "token": "ouiColumnSelector.searchcolumns",
     "defString": "Search columns",
     "highlighting": "string",
     "loc": {
@@ -1024,7 +1024,7 @@
     "filepath": "src/components/datagrid/column_selector.tsx"
   },
   {
-    "token": "euiColumnSelector.selectAll",
+    "token": "ouiColumnSelector.selectAll",
     "defString": "Show all",
     "highlighting": "string",
     "loc": {
@@ -1040,7 +1040,7 @@
     "filepath": "src/components/datagrid/column_selector.tsx"
   },
   {
-    "token": "euiColumnSelector.hideAll",
+    "token": "ouiColumnSelector.hideAll",
     "defString": "Hide all",
     "highlighting": "string",
     "loc": {
@@ -1056,7 +1056,7 @@
     "filepath": "src/components/datagrid/column_selector.tsx"
   },
   {
-    "token": "euiColumnSortingDraggable.defaultSortAsc",
+    "token": "ouiColumnSortingDraggable.defaultSortAsc",
     "defString": "A-Z",
     "highlighting": "string",
     "loc": {
@@ -1072,7 +1072,7 @@
     "filepath": "src/components/datagrid/column_sorting_draggable.tsx"
   },
   {
-    "token": "euiColumnSortingDraggable.defaultSortDesc",
+    "token": "ouiColumnSortingDraggable.defaultSortDesc",
     "defString": "Z-A",
     "highlighting": "string",
     "loc": {
@@ -1088,7 +1088,7 @@
     "filepath": "src/components/datagrid/column_sorting_draggable.tsx"
   },
   {
-    "token": "euiColumnSortingDraggable.activeSortLabel",
+    "token": "ouiColumnSortingDraggable.activeSortLabel",
     "defString": "is sorting this data grid",
     "highlighting": "string",
     "loc": {
@@ -1104,7 +1104,7 @@
     "filepath": "src/components/datagrid/column_sorting_draggable.tsx"
   },
   {
-    "token": "euiColumnSortingDraggable.removeSortLabel",
+    "token": "ouiColumnSortingDraggable.removeSortLabel",
     "defString": "Remove from data grid sort:",
     "highlighting": "string",
     "loc": {
@@ -1120,7 +1120,7 @@
     "filepath": "src/components/datagrid/column_sorting_draggable.tsx"
   },
   {
-    "token": "euiColumnSortingDraggable.toggleLegend",
+    "token": "ouiColumnSortingDraggable.toggleLegend",
     "defString": "Select sorting method for field: ",
     "highlighting": "string",
     "loc": {
@@ -1136,7 +1136,7 @@
     "filepath": "src/components/datagrid/column_sorting_draggable.tsx"
   },
   {
-    "token": "euiColumnSorting.button",
+    "token": "ouiColumnSorting.button",
     "defString": "Sort fields",
     "highlighting": "string",
     "loc": {
@@ -1152,7 +1152,7 @@
     "filepath": "src/components/datagrid/column_sorting.tsx"
   },
   {
-    "token": "euiColumnSorting.buttonActive",
+    "token": "ouiColumnSorting.buttonActive",
     "defString": "fields sorted",
     "highlighting": "string",
     "loc": {
@@ -1168,7 +1168,7 @@
     "filepath": "src/components/datagrid/column_sorting.tsx"
   },
   {
-    "token": "euiColumnSorting.emptySorting",
+    "token": "ouiColumnSorting.emptySorting",
     "defString": "Currently no fields are sorted",
     "highlighting": "string",
     "loc": {
@@ -1184,7 +1184,7 @@
     "filepath": "src/components/datagrid/column_sorting.tsx"
   },
   {
-    "token": "euiColumnSorting.pickFields",
+    "token": "ouiColumnSorting.pickFields",
     "defString": "Pick fields to sort by",
     "highlighting": "string",
     "loc": {
@@ -1200,7 +1200,7 @@
     "filepath": "src/components/datagrid/column_sorting.tsx"
   },
   {
-    "token": "euiColumnSorting.sortFieldAriaLabel",
+    "token": "ouiColumnSorting.sortFieldAriaLabel",
     "defString": "Sort by: ",
     "highlighting": "string",
     "loc": {
@@ -1216,7 +1216,7 @@
     "filepath": "src/components/datagrid/column_sorting.tsx"
   },
   {
-    "token": "euiColumnSorting.clearAll",
+    "token": "ouiColumnSorting.clearAll",
     "defString": "Clear sorting",
     "highlighting": "string",
     "loc": {
@@ -1232,7 +1232,7 @@
     "filepath": "src/components/datagrid/column_sorting.tsx"
   },
   {
-    "token": "euiDataGridCellButtons.expandButtonTitle",
+    "token": "ouiDataGridCellButtons.expandButtonTitle",
     "defString": "Click or hit enter to interact with cell content",
     "highlighting": "string",
     "loc": {
@@ -1248,7 +1248,7 @@
     "filepath": "src/components/datagrid/data_grid_cell_buttons.tsx"
   },
   {
-    "token": "euiDataGridCell.row",
+    "token": "ouiDataGridCell.row",
     "defString": "Row",
     "highlighting": "string",
     "loc": {
@@ -1264,7 +1264,7 @@
     "filepath": "src/components/datagrid/data_grid_cell.tsx"
   },
   {
-    "token": "euiDataGridCell.column",
+    "token": "ouiDataGridCell.column",
     "defString": "Column",
     "highlighting": "string",
     "loc": {
@@ -1280,7 +1280,7 @@
     "filepath": "src/components/datagrid/data_grid_cell.tsx"
   },
   {
-    "token": "euiDataGridHeaderCell.headerActions",
+    "token": "ouiDataGridHeaderCell.headerActions",
     "defString": "Header actions",
     "highlighting": "string",
     "loc": {
@@ -1296,7 +1296,7 @@
     "filepath": "src/components/datagrid/data_grid_header_cell.tsx"
   },
   {
-    "token": "euiDataGridSchema.booleanSortTextAsc",
+    "token": "ouiDataGridSchema.booleanSortTextAsc",
     "defString": "False-True",
     "highlighting": "string",
     "loc": {
@@ -1312,7 +1312,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGridSchema.booleanSortTextDesc",
+    "token": "ouiDataGridSchema.booleanSortTextDesc",
     "defString": "True-False",
     "highlighting": "string",
     "loc": {
@@ -1328,7 +1328,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGridSchema.currencySortTextAsc",
+    "token": "ouiDataGridSchema.currencySortTextAsc",
     "defString": "Low-High",
     "highlighting": "string",
     "loc": {
@@ -1344,7 +1344,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGridSchema.currencySortTextDesc",
+    "token": "ouiDataGridSchema.currencySortTextDesc",
     "defString": "High-Low",
     "highlighting": "string",
     "loc": {
@@ -1360,7 +1360,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGridSchema.dateSortTextAsc",
+    "token": "ouiDataGridSchema.dateSortTextAsc",
     "defString": "Old-New",
     "highlighting": "string",
     "loc": {
@@ -1376,7 +1376,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGridSchema.dateSortTextDesc",
+    "token": "ouiDataGridSchema.dateSortTextDesc",
     "defString": "New-Old",
     "highlighting": "string",
     "loc": {
@@ -1392,7 +1392,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGridSchema.numberSortTextAsc",
+    "token": "ouiDataGridSchema.numberSortTextAsc",
     "defString": "Low-High",
     "highlighting": "string",
     "loc": {
@@ -1408,7 +1408,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGridSchema.numberSortTextDesc",
+    "token": "ouiDataGridSchema.numberSortTextDesc",
     "defString": "High-Low",
     "highlighting": "string",
     "loc": {
@@ -1424,7 +1424,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGridSchema.jsonSortTextAsc",
+    "token": "ouiDataGridSchema.jsonSortTextAsc",
     "defString": "Small-Large",
     "highlighting": "string",
     "loc": {
@@ -1440,7 +1440,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGridSchema.jsonSortTextDesc",
+    "token": "ouiDataGridSchema.jsonSortTextDesc",
     "defString": "Large-Small",
     "highlighting": "string",
     "loc": {
@@ -1456,7 +1456,7 @@
     "filepath": "src/components/datagrid/data_grid_schema.tsx"
   },
   {
-    "token": "euiDataGrid.ariaLabelGridPagination",
+    "token": "ouiDataGrid.ariaLabelGridPagination",
     "defString": "Pagination for preceding grid: {label}",
     "highlighting": "string",
     "loc": {
@@ -1472,7 +1472,7 @@
     "filepath": "src/components/datagrid/data_grid.tsx"
   },
   {
-    "token": "euiDataGrid.ariaLabelledByGridPagination",
+    "token": "ouiDataGrid.ariaLabelledByGridPagination",
     "defString": "Pagination for preceding grid",
     "highlighting": "string",
     "loc": {
@@ -1488,7 +1488,7 @@
     "filepath": "src/components/datagrid/data_grid.tsx"
   },
   {
-    "token": "euiDataGrid.fullScreenButton",
+    "token": "ouiDataGrid.fullScreenButton",
     "defString": "Full screen",
     "highlighting": "string",
     "loc": {
@@ -1504,7 +1504,7 @@
     "filepath": "src/components/datagrid/data_grid.tsx"
   },
   {
-    "token": "euiDataGrid.fullScreenButtonActive",
+    "token": "ouiDataGrid.fullScreenButtonActive",
     "defString": "Exit full screen",
     "highlighting": "string",
     "loc": {
@@ -1520,7 +1520,7 @@
     "filepath": "src/components/datagrid/data_grid.tsx"
   },
   {
-    "token": "euiDataGrid.ariaLabel",
+    "token": "ouiDataGrid.ariaLabel",
     "defString": "{label}; Page {page} of {pageCount}.",
     "highlighting": "string",
     "loc": {
@@ -1536,7 +1536,7 @@
     "filepath": "src/components/datagrid/data_grid.tsx"
   },
   {
-    "token": "euiDataGrid.ariaLabelledBy",
+    "token": "ouiDataGrid.ariaLabelledBy",
     "defString": "Page {page} of {pageCount}.",
     "highlighting": "string",
     "loc": {
@@ -1552,7 +1552,7 @@
     "filepath": "src/components/datagrid/data_grid.tsx"
   },
   {
-    "token": "euiDataGrid.screenReaderNotice",
+    "token": "ouiDataGrid.screenReaderNotice",
     "defString": "Cell contains interactive content.",
     "highlighting": "string",
     "loc": {
@@ -1568,7 +1568,7 @@
     "filepath": "src/components/datagrid/data_grid.tsx"
   },
   {
-    "token": "euiStyleSelector.buttonText",
+    "token": "ouiStyleSelector.buttonText",
     "defString": "Density",
     "highlighting": "string",
     "loc": {
@@ -1584,7 +1584,7 @@
     "filepath": "src/components/datagrid/style_selector.tsx"
   },
   {
-    "token": "euiStyleSelector.buttonLegend",
+    "token": "ouiStyleSelector.buttonLegend",
     "defString": "Select the display density for the data grid",
     "highlighting": "string",
     "loc": {
@@ -1600,7 +1600,7 @@
     "filepath": "src/components/datagrid/style_selector.tsx"
   },
   {
-    "token": "euiStyleSelector.labelExpanded",
+    "token": "ouiStyleSelector.labelExpanded",
     "defString": "Expanded density",
     "highlighting": "string",
     "loc": {
@@ -1616,7 +1616,7 @@
     "filepath": "src/components/datagrid/style_selector.tsx"
   },
   {
-    "token": "euiStyleSelector.labelNormal",
+    "token": "ouiStyleSelector.labelNormal",
     "defString": "Normal density",
     "highlighting": "string",
     "loc": {
@@ -1632,7 +1632,7 @@
     "filepath": "src/components/datagrid/style_selector.tsx"
   },
   {
-    "token": "euiStyleSelector.labelCompact",
+    "token": "ouiStyleSelector.labelCompact",
     "defString": "Compact density",
     "highlighting": "string",
     "loc": {
@@ -1648,7 +1648,7 @@
     "filepath": "src/components/datagrid/style_selector.tsx"
   },
   {
-    "token": "euiRelativeTab.numberInputError",
+    "token": "ouiRelativeTab.numberInputError",
     "defString": "Must be >= 0",
     "highlighting": "string",
     "loc": {
@@ -1664,7 +1664,7 @@
     "filepath": "src/components/date_picker/super_date_picker/date_popover/relative_tab.tsx"
   },
   {
-    "token": "euiRelativeTab.numberInputLabel",
+    "token": "ouiRelativeTab.numberInputLabel",
     "defString": "Time span amount",
     "highlighting": "string",
     "loc": {
@@ -1680,7 +1680,7 @@
     "filepath": "src/components/date_picker/super_date_picker/date_popover/relative_tab.tsx"
   },
   {
-    "token": "euiRelativeTab.unitInputLabel",
+    "token": "ouiRelativeTab.unitInputLabel",
     "defString": "Relative time span",
     "highlighting": "string",
     "loc": {
@@ -1696,7 +1696,7 @@
     "filepath": "src/components/date_picker/super_date_picker/date_popover/relative_tab.tsx"
   },
   {
-    "token": "euiRelativeTab.roundingLabel",
+    "token": "ouiRelativeTab.roundingLabel",
     "defString": "Round to the {unit}",
     "highlighting": "string",
     "loc": {
@@ -1712,7 +1712,7 @@
     "filepath": "src/components/date_picker/super_date_picker/date_popover/relative_tab.tsx"
   },
   {
-    "token": "euiRelativeTab.relativeDate",
+    "token": "ouiRelativeTab.relativeDate",
     "defString": "{position} date",
     "highlighting": "string",
     "loc": {
@@ -1728,7 +1728,7 @@
     "filepath": "src/components/date_picker/super_date_picker/date_popover/relative_tab.tsx"
   },
   {
-    "token": "euiRelativeTab.fullDescription",
+    "token": "ouiRelativeTab.fullDescription",
     "defString": "The unit is changeable. Currently set to {unit}.",
     "highlighting": "string",
     "loc": {
@@ -1744,7 +1744,7 @@
     "filepath": "src/components/date_picker/super_date_picker/date_popover/relative_tab.tsx"
   },
   {
-    "token": "euiCommonlyUsedTimeRanges.legend",
+    "token": "ouiCommonlyUsedTimeRanges.legend",
     "defString": "Commonly used",
     "highlighting": "string",
     "loc": {
@@ -1760,7 +1760,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/commonly_used_time_ranges.tsx"
   },
   {
-    "token": "euiQuickSelect.legendText",
+    "token": "ouiQuickSelect.legendText",
     "defString": "Quick select a time range",
     "highlighting": "string",
     "loc": {
@@ -1776,7 +1776,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/quick_select.tsx"
   },
   {
-    "token": "euiQuickSelect.quickSelectTitle",
+    "token": "ouiQuickSelect.quickSelectTitle",
     "defString": "Quick select",
     "highlighting": "string",
     "loc": {
@@ -1792,7 +1792,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/quick_select.tsx"
   },
   {
-    "token": "euiQuickSelect.previousLabel",
+    "token": "ouiQuickSelect.previousLabel",
     "defString": "Previous time window",
     "highlighting": "string",
     "loc": {
@@ -1808,7 +1808,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/quick_select.tsx"
   },
   {
-    "token": "euiQuickSelect.nextLabel",
+    "token": "ouiQuickSelect.nextLabel",
     "defString": "Next time window",
     "highlighting": "string",
     "loc": {
@@ -1824,7 +1824,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/quick_select.tsx"
   },
   {
-    "token": "euiQuickSelect.tenseLabel",
+    "token": "ouiQuickSelect.tenseLabel",
     "defString": "Time tense",
     "highlighting": "string",
     "loc": {
@@ -1840,7 +1840,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/quick_select.tsx"
   },
   {
-    "token": "euiQuickSelect.valueLabel",
+    "token": "ouiQuickSelect.valueLabel",
     "defString": "Time value",
     "highlighting": "string",
     "loc": {
@@ -1856,7 +1856,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/quick_select.tsx"
   },
   {
-    "token": "euiQuickSelect.unitLabel",
+    "token": "ouiQuickSelect.unitLabel",
     "defString": "Time unit",
     "highlighting": "string",
     "loc": {
@@ -1872,7 +1872,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/quick_select.tsx"
   },
   {
-    "token": "euiQuickSelect.applyButton",
+    "token": "ouiQuickSelect.applyButton",
     "defString": "Apply",
     "highlighting": "string",
     "loc": {
@@ -1888,7 +1888,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/quick_select.tsx"
   },
   {
-    "token": "euiQuickSelect.fullDescription",
+    "token": "ouiQuickSelect.fullDescription",
     "defString": "Currently set to {timeTense} {timeValue} {timeUnit}.",
     "highlighting": "string",
     "loc": {
@@ -1904,7 +1904,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/quick_select.tsx"
   },
   {
-    "token": "euiRecentlyUsed.legend",
+    "token": "ouiRecentlyUsed.legend",
     "defString": "Recently used date ranges",
     "highlighting": "string",
     "loc": {
@@ -1920,7 +1920,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/recently_used.tsx"
   },
   {
-    "token": "euiRefreshInterval.legend",
+    "token": "ouiRefreshInterval.legend",
     "defString": "Refresh every",
     "highlighting": "string",
     "loc": {
@@ -1936,7 +1936,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/refresh_interval.tsx"
   },
   {
-    "token": "euiRefreshInterval.start",
+    "token": "ouiRefreshInterval.start",
     "defString": "Start",
     "highlighting": "string",
     "loc": {
@@ -1952,7 +1952,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/refresh_interval.tsx"
   },
   {
-    "token": "euiRefreshInterval.stop",
+    "token": "ouiRefreshInterval.stop",
     "defString": "Stop",
     "highlighting": "string",
     "loc": {
@@ -1968,7 +1968,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/refresh_interval.tsx"
   },
   {
-    "token": "euiRefreshInterval.fullDescription",
+    "token": "ouiRefreshInterval.fullDescription",
     "defString": "Refresh interval currently set to {optionValue} {optionText}.",
     "highlighting": "string",
     "loc": {
@@ -1984,7 +1984,7 @@
     "filepath": "src/components/date_picker/super_date_picker/quick_select_popover/refresh_interval.tsx"
   },
   {
-    "token": "euiSuperDatePicker.showDatesButtonLabel",
+    "token": "ouiSuperDatePicker.showDatesButtonLabel",
     "defString": "Show dates",
     "highlighting": "string",
     "loc": {
@@ -2000,7 +2000,7 @@
     "filepath": "src/components/date_picker/super_date_picker/super_date_picker.tsx"
   },
   {
-    "token": "euiSuperUpdateButton.refreshButtonLabel",
+    "token": "ouiSuperUpdateButton.refreshButtonLabel",
     "defString": "Refresh",
     "highlighting": "string",
     "loc": {
@@ -2016,7 +2016,7 @@
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
   },
   {
-    "token": "euiSuperUpdateButton.updatingButtonLabel",
+    "token": "ouiSuperUpdateButton.updatingButtonLabel",
     "defString": "Updating",
     "highlighting": "string",
     "loc": {
@@ -2032,7 +2032,7 @@
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
   },
   {
-    "token": "euiSuperUpdateButton.updateButtonLabel",
+    "token": "ouiSuperUpdateButton.updateButtonLabel",
     "defString": "Update",
     "highlighting": "string",
     "loc": {
@@ -2048,7 +2048,7 @@
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
   },
   {
-    "token": "euiSuperUpdateButton.cannotUpdateTooltip",
+    "token": "ouiSuperUpdateButton.cannotUpdateTooltip",
     "defString": "Cannot update",
     "highlighting": "string",
     "loc": {
@@ -2064,7 +2064,7 @@
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
   },
   {
-    "token": "euiSuperUpdateButton.clickToApplyTooltip",
+    "token": "ouiSuperUpdateButton.clickToApplyTooltip",
     "defString": "Click to apply",
     "highlighting": "string",
     "loc": {
@@ -2080,7 +2080,7 @@
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
   },
   {
-    "token": "euiFilterButton.filterBadge",
+    "token": "ouiFilterButton.filterBadge",
     "defString": "{count} {hasActiveFilters} filters",
     "highlighting": "string",
     "loc": {
@@ -2096,7 +2096,7 @@
     "filepath": "src/components/filter_group/filter_button.tsx"
   },
   {
-    "token": "euiFlyout.closeAriaLabel",
+    "token": "ouiFlyout.closeAriaLabel",
     "defString": "Close this dialog",
     "highlighting": "string",
     "loc": {
@@ -2112,7 +2112,7 @@
     "filepath": "src/components/flyout/flyout.tsx"
   },
   {
-    "token": "euiFieldPassword.showPassword",
+    "token": "ouiFieldPassword.showPassword",
     "defString": "Show password as plain text. Note: this will visually expose your password on the screen.",
     "highlighting": "string",
     "loc": {
@@ -2128,7 +2128,7 @@
     "filepath": "src/components/form/field_password/field_password.tsx"
   },
   {
-    "token": "euiFieldPassword.maskPassword",
+    "token": "ouiFieldPassword.maskPassword",
     "defString": "Mask password",
     "highlighting": "string",
     "loc": {
@@ -2144,7 +2144,7 @@
     "filepath": "src/components/form/field_password/field_password.tsx"
   },
   {
-    "token": "euiFilePicker.clearSelectedFiles",
+    "token": "ouiFilePicker.clearSelectedFiles",
     "defString": "Clear selected files",
     "highlighting": "string",
     "loc": {
@@ -2160,7 +2160,7 @@
     "filepath": "src/components/form/file_picker/file_picker.tsx"
   },
   {
-    "token": "euiFilePicker.filesSelected",
+    "token": "ouiFilePicker.filesSelected",
     "defString": "files selected",
     "highlighting": "string",
     "loc": {
@@ -2176,7 +2176,7 @@
     "filepath": "src/components/form/file_picker/file_picker.tsx"
   },
   {
-    "token": "euiFilePicker.removeSelected",
+    "token": "ouiFilePicker.removeSelected",
     "defString": "Remove",
     "highlighting": "string",
     "loc": {
@@ -2192,7 +2192,7 @@
     "filepath": "src/components/form/file_picker/file_picker.tsx"
   },
   {
-    "token": "euiFormControlLayoutClearButton.label",
+    "token": "ouiFormControlLayoutClearButton.label",
     "defString": "Clear input",
     "highlighting": "string",
     "loc": {
@@ -2208,7 +2208,7 @@
     "filepath": "src/components/form/form_control_layout/form_control_layout_clear_button.tsx"
   },
   {
-    "token": "euiForm.addressFormErrors",
+    "token": "ouiForm.addressFormErrors",
     "defString": "Please address the highlighted errors.",
     "highlighting": "string",
     "loc": {
@@ -2224,7 +2224,7 @@
     "filepath": "src/components/form/form.tsx"
   },
   {
-    "token": "euiSuperSelectControl.selectAnOption",
+    "token": "ouiSuperSelectControl.selectAnOption",
     "defString": "Select an option: {selectedValue}, is selected",
     "highlighting": "string",
     "loc": {
@@ -2240,7 +2240,7 @@
     "filepath": "src/components/form/super_select/super_select_control.tsx"
   },
   {
-    "token": "euiSuperSelect.screenReaderAnnouncement",
+    "token": "ouiSuperSelect.screenReaderAnnouncement",
     "defString": "You are in a form selector of {optionsCount} items and must select a single option.\n              Use the up and down keys to navigate or escape to close.",
     "highlighting": "string",
     "loc": {
@@ -2256,7 +2256,7 @@
     "filepath": "src/components/form/super_select/super_select.tsx"
   },
   {
-    "token": "euiHeaderLinks.openNavigationMenu",
+    "token": "ouiHeaderLinks.openNavigationMenu",
     "defString": "Open menu",
     "highlighting": "string",
     "loc": {
@@ -2272,7 +2272,7 @@
     "filepath": "src/components/header/header_links/header_links.tsx"
   },
   {
-    "token": "euiHeaderLinks.appNavigation",
+    "token": "ouiHeaderLinks.appNavigation",
     "defString": "App menu",
     "highlighting": "string",
     "loc": {
@@ -2288,7 +2288,7 @@
     "filepath": "src/components/header/header_links/header_links.tsx"
   },
   {
-    "token": "euiImage.closeImage",
+    "token": "ouiImage.closeImage",
     "defString": "Close full screen {alt} image",
     "highlighting": "string",
     "loc": {
@@ -2304,7 +2304,7 @@
     "filepath": "src/components/image/image.tsx"
   },
   {
-    "token": "euiImage.openImage",
+    "token": "ouiImage.openImage",
     "defString": "Open full screen {alt} image",
     "highlighting": "string",
     "loc": {
@@ -2320,7 +2320,7 @@
     "filepath": "src/components/image/image.tsx"
   },
   {
-    "token": "euiLink.external.ariaLabel",
+    "token": "ouiLink.external.ariaLabel",
     "defString": "External link",
     "highlighting": "string",
     "loc": {
@@ -2336,7 +2336,7 @@
     "filepath": "src/components/link/link.tsx"
   },
   {
-    "token": "euiLink.newTarget.screenReaderOnlyText",
+    "token": "ouiLink.newTarget.screenReaderOnlyText",
     "defString": "(opens in a new tab or window)",
     "highlighting": "string",
     "loc": {
@@ -2352,7 +2352,7 @@
     "filepath": "src/components/link/link.tsx"
   },
   {
-    "token": "euiPinnableListGroup.pinExtraActionLabel",
+    "token": "ouiPinnableListGroup.pinExtraActionLabel",
     "defString": "Pin item",
     "highlighting": "string",
     "loc": {
@@ -2368,7 +2368,7 @@
     "filepath": "src/components/list_group/pinnable_list_group/pinnable_list_group.tsx"
   },
   {
-    "token": "euiPinnableListGroup.pinnedExtraActionLabel",
+    "token": "ouiPinnableListGroup.pinnedExtraActionLabel",
     "defString": "Unpin item",
     "highlighting": "string",
     "loc": {
@@ -2384,7 +2384,7 @@
     "filepath": "src/components/list_group/pinnable_list_group/pinnable_list_group.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.uploadingFiles",
+    "token": "ouiMarkdownEditorFooter.uploadingFiles",
     "defString": "Click to upload files",
     "highlighting": "string",
     "loc": {
@@ -2400,7 +2400,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.openUploadModal",
+    "token": "ouiMarkdownEditorFooter.openUploadModal",
     "defString": "Open upload files modal",
     "highlighting": "string",
     "loc": {
@@ -2416,7 +2416,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.unsupportedFileType",
+    "token": "ouiMarkdownEditorFooter.unsupportedFileType",
     "defString": "File type not supported",
     "highlighting": "string",
     "loc": {
@@ -2432,7 +2432,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.supportedFileTypes",
+    "token": "ouiMarkdownEditorFooter.supportedFileTypes",
     "defString": "Supported files: {supportedFileTypes}",
     "highlighting": "string",
     "loc": {
@@ -2448,7 +2448,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.showSyntaxErrors",
+    "token": "ouiMarkdownEditorFooter.showSyntaxErrors",
     "defString": "Show errors",
     "highlighting": "string",
     "loc": {
@@ -2464,7 +2464,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.showMarkdownHelp",
+    "token": "ouiMarkdownEditorFooter.showMarkdownHelp",
     "defString": "Show markdown help",
     "highlighting": "string",
     "loc": {
@@ -2480,7 +2480,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.errorsTitle",
+    "token": "ouiMarkdownEditorFooter.errorsTitle",
     "defString": "Errors",
     "highlighting": "string",
     "loc": {
@@ -2496,7 +2496,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.syntaxTitle",
+    "token": "ouiMarkdownEditorFooter.syntaxTitle",
     "defString": "Syntax help",
     "highlighting": "string",
     "loc": {
@@ -2512,7 +2512,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.descriptionPrefix",
+    "token": "ouiMarkdownEditorFooter.descriptionPrefix",
     "defString": "This editor uses",
     "highlighting": "string",
     "loc": {
@@ -2528,7 +2528,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.descriptionSuffix",
+    "token": "ouiMarkdownEditorFooter.descriptionSuffix",
     "defString": "You can also utilize these additional syntax plugins to add rich content to your text.",
     "highlighting": "string",
     "loc": {
@@ -2544,7 +2544,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorFooter.closeButton",
+    "token": "ouiMarkdownEditorFooter.closeButton",
     "defString": "Close",
     "highlighting": "string",
     "loc": {
@@ -2560,7 +2560,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_footer.tsx"
   },
   {
-    "token": "euiMarkdownEditorToolbar.editor",
+    "token": "ouiMarkdownEditorToolbar.editor",
     "defString": "Editor",
     "highlighting": "string",
     "loc": {
@@ -2576,7 +2576,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_toolbar.tsx"
   },
   {
-    "token": "euiMarkdownEditorToolbar.previewMarkdown",
+    "token": "ouiMarkdownEditorToolbar.previewMarkdown",
     "defString": "Preview",
     "highlighting": "string",
     "loc": {
@@ -2592,7 +2592,7 @@
     "filepath": "src/components/markdown_editor/markdown_editor_toolbar.tsx"
   },
   {
-    "token": "euiModal.closeModal",
+    "token": "ouiModal.closeModal",
     "defString": "Closes this modal window",
     "highlighting": "string",
     "loc": {
@@ -2608,7 +2608,7 @@
     "filepath": "src/components/modal/modal.tsx"
   },
   {
-    "token": "euiNotificationEventMessages.accordionButtonText",
+    "token": "ouiNotificationEventMessages.accordionButtonText",
     "defString": "+ {messagesLength} more",
     "highlighting": "string",
     "loc": {
@@ -2624,7 +2624,7 @@
     "filepath": "src/components/notification/notification_event_messages.tsx"
   },
   {
-    "token": "euiNotificationEventMessages.accordionAriaLabelButtonText",
+    "token": "ouiNotificationEventMessages.accordionAriaLabelButtonText",
     "defString": "+ {messagesLength} messages for {eventName}",
     "highlighting": "string",
     "loc": {
@@ -2640,7 +2640,7 @@
     "filepath": "src/components/notification/notification_event_messages.tsx"
   },
   {
-    "token": "euiNotificationEventMessages.accordionHideText",
+    "token": "ouiNotificationEventMessages.accordionHideText",
     "defString": "hide",
     "highlighting": "string",
     "loc": {
@@ -2656,7 +2656,7 @@
     "filepath": "src/components/notification/notification_event_messages.tsx"
   },
   {
-    "token": "euiNotificationEventMeta.contextMenuButton",
+    "token": "ouiNotificationEventMeta.contextMenuButton",
     "defString": "Menu for {eventName}",
     "highlighting": "string",
     "loc": {
@@ -2672,7 +2672,7 @@
     "filepath": "src/components/notification/notification_event_meta.tsx"
   },
   {
-    "token": "euiNotificationEventReadButton.markAsReadAria",
+    "token": "ouiNotificationEventReadButton.markAsReadAria",
     "defString": "Mark {eventName} as read",
     "highlighting": "string",
     "loc": {
@@ -2688,7 +2688,7 @@
     "filepath": "src/components/notification/notification_event_read_button.tsx"
   },
   {
-    "token": "euiNotificationEventReadButton.markAsUnreadAria",
+    "token": "ouiNotificationEventReadButton.markAsUnreadAria",
     "defString": "Mark {eventName} as unread",
     "highlighting": "string",
     "loc": {
@@ -2704,7 +2704,7 @@
     "filepath": "src/components/notification/notification_event_read_button.tsx"
   },
   {
-    "token": "euiNotificationEventReadButton.markAsRead",
+    "token": "ouiNotificationEventReadButton.markAsRead",
     "defString": "Mark as read",
     "highlighting": "string",
     "loc": {
@@ -2720,7 +2720,7 @@
     "filepath": "src/components/notification/notification_event_read_button.tsx"
   },
   {
-    "token": "euiNotificationEventReadButton.markAsUnread",
+    "token": "ouiNotificationEventReadButton.markAsUnread",
     "defString": "Mark as unread",
     "highlighting": "string",
     "loc": {
@@ -2736,7 +2736,7 @@
     "filepath": "src/components/notification/notification_event_read_button.tsx"
   },
   {
-    "token": "euiNotificationEventReadIcon.readAria",
+    "token": "ouiNotificationEventReadIcon.readAria",
     "defString": "{eventName} is read",
     "highlighting": "string",
     "loc": {
@@ -2752,7 +2752,7 @@
     "filepath": "src/components/notification/notification_event_read_icon.tsx"
   },
   {
-    "token": "euiNotificationEventReadIcon.unreadAria",
+    "token": "ouiNotificationEventReadIcon.unreadAria",
     "defString": "{eventName} is unread",
     "highlighting": "string",
     "loc": {
@@ -2768,7 +2768,7 @@
     "filepath": "src/components/notification/notification_event_read_icon.tsx"
   },
   {
-    "token": "euiNotificationEventReadIcon.read",
+    "token": "ouiNotificationEventReadIcon.read",
     "defString": "Read",
     "highlighting": "string",
     "loc": {
@@ -2784,7 +2784,7 @@
     "filepath": "src/components/notification/notification_event_read_icon.tsx"
   },
   {
-    "token": "euiNotificationEventReadIcon.unread",
+    "token": "ouiNotificationEventReadIcon.unread",
     "defString": "Unread",
     "highlighting": "string",
     "loc": {
@@ -2800,7 +2800,7 @@
     "filepath": "src/components/notification/notification_event_read_icon.tsx"
   },
   {
-    "token": "euiPaginationButton.longPageString",
+    "token": "ouiPaginationButton.longPageString",
     "defString": "Page {page} of {totalPages}",
     "highlighting": "string",
     "loc": {
@@ -2816,7 +2816,7 @@
     "filepath": "src/components/pagination/pagination_button.tsx"
   },
   {
-    "token": "euiPaginationButton.shortPageString",
+    "token": "ouiPaginationButton.shortPageString",
     "defString": "Page {page}",
     "highlighting": "string",
     "loc": {
@@ -2832,7 +2832,7 @@
     "filepath": "src/components/pagination/pagination_button.tsx"
   },
   {
-    "token": "euiPagination.previousPage",
+    "token": "ouiPagination.previousPage",
     "defString": "Previous page, {page}",
     "highlighting": "string",
     "loc": {
@@ -2848,7 +2848,7 @@
     "filepath": "src/components/pagination/pagination.tsx"
   },
   {
-    "token": "euiPagination.disabledPreviousPage",
+    "token": "ouiPagination.disabledPreviousPage",
     "defString": "Previous page",
     "highlighting": "string",
     "loc": {
@@ -2864,7 +2864,7 @@
     "filepath": "src/components/pagination/pagination.tsx"
   },
   {
-    "token": "euiPagination.firstRangeAriaLabel",
+    "token": "ouiPagination.firstRangeAriaLabel",
     "defString": "Skipping pages 2 to {lastPage}",
     "highlighting": "string",
     "loc": {
@@ -2880,7 +2880,7 @@
     "filepath": "src/components/pagination/pagination.tsx"
   },
   {
-    "token": "euiPagination.lastRangeAriaLabel",
+    "token": "ouiPagination.lastRangeAriaLabel",
     "defString": "Skipping pages {firstPage} to {lastPage}",
     "highlighting": "string",
     "loc": {
@@ -2896,7 +2896,7 @@
     "filepath": "src/components/pagination/pagination.tsx"
   },
   {
-    "token": "euiPagination.nextPage",
+    "token": "ouiPagination.nextPage",
     "defString": "Next page, {page}",
     "highlighting": "string",
     "loc": {
@@ -2912,7 +2912,7 @@
     "filepath": "src/components/pagination/pagination.tsx"
   },
   {
-    "token": "euiPagination.disabledNextPage",
+    "token": "ouiPagination.disabledNextPage",
     "defString": "Next page",
     "highlighting": "string",
     "loc": {
@@ -2928,7 +2928,7 @@
     "filepath": "src/components/pagination/pagination.tsx"
   },
   {
-    "token": "euiPagination.pageOfTotalCompressed",
+    "token": "ouiPagination.pageOfTotalCompressed",
     "defString": "{page} of {total}",
     "highlighting": "string",
     "loc": {
@@ -2944,7 +2944,7 @@
     "filepath": "src/components/pagination/pagination.tsx"
   },
   {
-    "token": "euiPopover.screenReaderAnnouncement",
+    "token": "ouiPopover.screenReaderAnnouncement",
     "defString": "You are in a dialog. To close this dialog, hit escape.",
     "highlighting": "string",
     "loc": {
@@ -2960,7 +2960,7 @@
     "filepath": "src/components/popover/popover.tsx"
   },
   {
-    "token": "euiProgress.valueText",
+    "token": "ouiProgress.valueText",
     "defString": "{value}%",
     "highlighting": "string",
     "loc": {
@@ -2976,7 +2976,7 @@
     "filepath": "src/components/progress/progress.tsx"
   },
   {
-    "token": "euiResizableButton.horizontalResizerAriaLabel",
+    "token": "ouiResizableButton.horizontalResizerAriaLabel",
     "defString": "Press left or right to adjust panels size",
     "highlighting": "string",
     "loc": {
@@ -2992,7 +2992,7 @@
     "filepath": "src/components/resizable_container/resizable_button.tsx"
   },
   {
-    "token": "euiResizableButton.verticalResizerAriaLabel",
+    "token": "ouiResizableButton.verticalResizerAriaLabel",
     "defString": "Press up or down to adjust panels size",
     "highlighting": "string",
     "loc": {
@@ -3008,7 +3008,7 @@
     "filepath": "src/components/resizable_container/resizable_button.tsx"
   },
   {
-    "token": "euiResizablePanel.toggleButtonAriaLabel",
+    "token": "ouiResizablePanel.toggleButtonAriaLabel",
     "defString": "Press to toggle this panel",
     "highlighting": "string",
     "loc": {
@@ -3024,7 +3024,7 @@
     "filepath": "src/components/resizable_container/resizable_panel.tsx"
   },
   {
-    "token": "euiSelectableListItem.includedOption",
+    "token": "ouiSelectableListItem.includedOption",
     "defString": "Included option.",
     "highlighting": "string",
     "loc": {
@@ -3040,7 +3040,7 @@
     "filepath": "src/components/selectable/selectable_list/selectable_list_item.tsx"
   },
   {
-    "token": "euiSelectableListItem.includedOptionInstructions",
+    "token": "ouiSelectableListItem.includedOptionInstructions",
     "defString": "To exclude this option, press enter.",
     "highlighting": "string",
     "loc": {
@@ -3056,7 +3056,7 @@
     "filepath": "src/components/selectable/selectable_list/selectable_list_item.tsx"
   },
   {
-    "token": "euiSelectableListItem.excludedOption",
+    "token": "ouiSelectableListItem.excludedOption",
     "defString": "Excluded option.",
     "highlighting": "string",
     "loc": {
@@ -3072,7 +3072,7 @@
     "filepath": "src/components/selectable/selectable_list/selectable_list_item.tsx"
   },
   {
-    "token": "euiSelectableListItem.excludedOptionInstructions",
+    "token": "ouiSelectableListItem.excludedOptionInstructions",
     "defString": "To deselect this option, press enter.",
     "highlighting": "string",
     "loc": {
@@ -3088,7 +3088,7 @@
     "filepath": "src/components/selectable/selectable_list/selectable_list_item.tsx"
   },
   {
-    "token": "euiSelectableTemplateSitewide.searchPlaceholder",
+    "token": "ouiSelectableTemplateSitewide.searchPlaceholder",
     "defString": "Search for anything...",
     "highlighting": "string",
     "loc": {
@@ -3104,7 +3104,7 @@
     "filepath": "src/components/selectable/selectable_templates/selectable_template_sitewide.tsx"
   },
   {
-    "token": "euiSelectableTemplateSitewide.loadingResults",
+    "token": "ouiSelectableTemplateSitewide.loadingResults",
     "defString": "Loading results",
     "highlighting": "string",
     "loc": {
@@ -3120,7 +3120,7 @@
     "filepath": "src/components/selectable/selectable_templates/selectable_template_sitewide.tsx"
   },
   {
-    "token": "euiSelectableTemplateSitewide.noResults",
+    "token": "ouiSelectableTemplateSitewide.noResults",
     "defString": "No results available",
     "highlighting": "string",
     "loc": {
@@ -3136,7 +3136,7 @@
     "filepath": "src/components/selectable/selectable_templates/selectable_template_sitewide.tsx"
   },
   {
-    "token": "euiSelectableTemplateSitewide.onFocusBadgeGoTo",
+    "token": "ouiSelectableTemplateSitewide.onFocusBadgeGoTo",
     "defString": "Go to",
     "highlighting": "string",
     "loc": {
@@ -3152,7 +3152,7 @@
     "filepath": "src/components/selectable/selectable_templates/selectable_template_sitewide.tsx"
   },
   {
-    "token": "euiSelectable.loadingOptions",
+    "token": "ouiSelectable.loadingOptions",
     "defString": "Loading options",
     "highlighting": "string",
     "loc": {
@@ -3168,7 +3168,7 @@
     "filepath": "src/components/selectable/selectable.tsx"
   },
   {
-    "token": "euiSelectable.noMatchingOptions",
+    "token": "ouiSelectable.noMatchingOptions",
     "defString": "{searchValue} doesn't match any options",
     "highlighting": "string",
     "loc": {
@@ -3184,7 +3184,7 @@
     "filepath": "src/components/selectable/selectable.tsx"
   },
   {
-    "token": "euiSelectable.noAvailableOptions",
+    "token": "ouiSelectable.noAvailableOptions",
     "defString": "No options available",
     "highlighting": "string",
     "loc": {
@@ -3200,7 +3200,7 @@
     "filepath": "src/components/selectable/selectable.tsx"
   },
   {
-    "token": "euiSelectable.placeholderName",
+    "token": "ouiSelectable.placeholderName",
     "defString": "Filter options",
     "highlighting": "string",
     "loc": {
@@ -3216,7 +3216,7 @@
     "filepath": "src/components/selectable/selectable.tsx"
   },
   {
-    "token": "euiSelectable.placeholderName",
+    "token": "ouiSelectable.placeholderName",
     "defString": "Filter options",
     "highlighting": "string",
     "loc": {
@@ -3232,7 +3232,7 @@
     "filepath": "src/components/selectable/selectable.tsx"
   },
   {
-    "token": "euiStat.loadingText",
+    "token": "ouiStat.loadingText",
     "defString": "Statistic is loading",
     "highlighting": "string",
     "loc": {
@@ -3248,7 +3248,7 @@
     "filepath": "src/components/stat/stat.tsx"
   },
   {
-    "token": "euiStepStrings.step",
+    "token": "ouiStepStrings.step",
     "defString": "Step {number}: {title}",
     "highlighting": "string",
     "loc": {
@@ -3264,7 +3264,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.simpleStep",
+    "token": "ouiStepStrings.simpleStep",
     "defString": "Step {number}",
     "highlighting": "string",
     "loc": {
@@ -3280,7 +3280,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.complete",
+    "token": "ouiStepStrings.complete",
     "defString": "Step {number}: {title} is complete",
     "highlighting": "string",
     "loc": {
@@ -3296,7 +3296,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.simpleComplete",
+    "token": "ouiStepStrings.simpleComplete",
     "defString": "Step {number} is complete",
     "highlighting": "string",
     "loc": {
@@ -3312,7 +3312,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.warning",
+    "token": "ouiStepStrings.warning",
     "defString": "Step {number}: {title} has warnings",
     "highlighting": "string",
     "loc": {
@@ -3328,7 +3328,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.simpleWarning",
+    "token": "ouiStepStrings.simpleWarning",
     "defString": "Step {number} has warnings",
     "highlighting": "string",
     "loc": {
@@ -3344,7 +3344,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.errors",
+    "token": "ouiStepStrings.errors",
     "defString": "Step {number}: {title} has errors",
     "highlighting": "string",
     "loc": {
@@ -3360,7 +3360,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.simpleErrors",
+    "token": "ouiStepStrings.simpleErrors",
     "defString": "Step {number} has errors",
     "highlighting": "string",
     "loc": {
@@ -3376,7 +3376,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.incomplete",
+    "token": "ouiStepStrings.incomplete",
     "defString": "Step {number}: {title} is incomplete",
     "highlighting": "string",
     "loc": {
@@ -3392,7 +3392,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.simpleIncomplete",
+    "token": "ouiStepStrings.simpleIncomplete",
     "defString": "Step {number} is incomplete",
     "highlighting": "string",
     "loc": {
@@ -3408,7 +3408,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.disabled",
+    "token": "ouiStepStrings.disabled",
     "defString": "Step {number}: {title} is disabled",
     "highlighting": "string",
     "loc": {
@@ -3424,7 +3424,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.simpleDisabled",
+    "token": "ouiStepStrings.simpleDisabled",
     "defString": "Step {number} is disabled",
     "highlighting": "string",
     "loc": {
@@ -3440,7 +3440,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.loading",
+    "token": "ouiStepStrings.loading",
     "defString": "Step {number}: {title} is loading",
     "highlighting": "string",
     "loc": {
@@ -3456,7 +3456,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiStepStrings.simpleLoading",
+    "token": "ouiStepStrings.simpleLoading",
     "defString": "Step {number} is loading",
     "highlighting": "string",
     "loc": {
@@ -3472,7 +3472,7 @@
     "filepath": "src/components/steps/step_strings.tsx"
   },
   {
-    "token": "euiTableSortMobile.sorting",
+    "token": "ouiTableSortMobile.sorting",
     "defString": "Sorting",
     "highlighting": "string",
     "loc": {
@@ -3488,7 +3488,7 @@
     "filepath": "src/components/table/mobile/table_sort_mobile.tsx"
   },
   {
-    "token": "euiTableHeaderCell.titleTextWithDesc",
+    "token": "ouiTableHeaderCell.titleTextWithDesc",
     "defString": "{innerText}; {description}",
     "highlighting": "string",
     "loc": {
@@ -3504,7 +3504,7 @@
     "filepath": "src/components/table/table_header_cell.tsx"
   },
   {
-    "token": "euiTablePagination.rowsPerPage",
+    "token": "ouiTablePagination.rowsPerPage",
     "defString": "Rows per page",
     "highlighting": "string",
     "loc": {
@@ -3520,7 +3520,7 @@
     "filepath": "src/components/table/table_pagination/table_pagination.tsx"
   },
   {
-    "token": "euiTablePagination.rowsPerPageOption",
+    "token": "ouiTablePagination.rowsPerPageOption",
     "defString": "{rowsPerPage} rows",
     "highlighting": "string",
     "loc": {
@@ -3536,7 +3536,7 @@
     "filepath": "src/components/table/table_pagination/table_pagination.tsx"
   },
   {
-    "token": "euiToast.dismissToast",
+    "token": "ouiToast.dismissToast",
     "defString": "Dismiss toast",
     "highlighting": "string",
     "loc": {
@@ -3552,7 +3552,7 @@
     "filepath": "src/components/toast/toast.tsx"
   },
   {
-    "token": "euiToast.newNotification",
+    "token": "ouiToast.newNotification",
     "defString": "A new notification appears",
     "highlighting": "string",
     "loc": {
@@ -3568,7 +3568,7 @@
     "filepath": "src/components/toast/toast.tsx"
   },
   {
-    "token": "euiToast.notification",
+    "token": "ouiToast.notification",
     "defString": "Notification",
     "highlighting": "string",
     "loc": {
@@ -3584,7 +3584,7 @@
     "filepath": "src/components/toast/toast.tsx"
   },
   {
-    "token": "euiTourStepIndicator.isActive",
+    "token": "ouiTourStepIndicator.isActive",
     "defString": "active",
     "highlighting": "string",
     "loc": {
@@ -3600,7 +3600,7 @@
     "filepath": "src/components/tour/tour_step_indicator.tsx"
   },
   {
-    "token": "euiTourStepIndicator.isComplete",
+    "token": "ouiTourStepIndicator.isComplete",
     "defString": "complete",
     "highlighting": "string",
     "loc": {
@@ -3616,7 +3616,7 @@
     "filepath": "src/components/tour/tour_step_indicator.tsx"
   },
   {
-    "token": "euiTourStepIndicator.isIncomplete",
+    "token": "ouiTourStepIndicator.isIncomplete",
     "defString": "incomplete",
     "highlighting": "string",
     "loc": {
@@ -3632,7 +3632,7 @@
     "filepath": "src/components/tour/tour_step_indicator.tsx"
   },
   {
-    "token": "euiTourStepIndicator.ariaLabel",
+    "token": "ouiTourStepIndicator.ariaLabel",
     "defString": "Step {number} {status}",
     "highlighting": "string",
     "loc": {
@@ -3648,7 +3648,7 @@
     "filepath": "src/components/tour/tour_step_indicator.tsx"
   },
   {
-    "token": "euiTourStep.endTour",
+    "token": "ouiTourStep.endTour",
     "defString": "End tour",
     "highlighting": "string",
     "loc": {
@@ -3664,7 +3664,7 @@
     "filepath": "src/components/tour/tour_step.tsx"
   },
   {
-    "token": "euiTourStep.skipTour",
+    "token": "ouiTourStep.skipTour",
     "defString": "Skip tour",
     "highlighting": "string",
     "loc": {
@@ -3680,7 +3680,7 @@
     "filepath": "src/components/tour/tour_step.tsx"
   },
   {
-    "token": "euiTourStep.closeTour",
+    "token": "ouiTourStep.closeTour",
     "defString": "Close tour",
     "highlighting": "string",
     "loc": {
@@ -3696,7 +3696,7 @@
     "filepath": "src/components/tour/tour_step.tsx"
   },
   {
-    "token": "euiTreeView.listNavigationInstructions",
+    "token": "ouiTreeView.listNavigationInstructions",
     "defString": "You can quickly navigate this list using arrow keys.",
     "highlighting": "string",
     "loc": {
@@ -3712,7 +3712,7 @@
     "filepath": "src/components/tree_view/tree_view.tsx"
   },
   {
-    "token": "euiTreeView.ariaLabel",
+    "token": "ouiTreeView.ariaLabel",
     "defString": "{nodeLabel} child of {ariaLabel}",
     "highlighting": "string",
     "loc": {

@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -25,19 +36,19 @@ import React, {
 } from 'react';
 import classnames from 'classnames';
 
-import { EuiModal, EuiModalProps } from './modal';
-import { EuiModalFooter } from './modal_footer';
-import { EuiModalHeader } from './modal_header';
-import { EuiModalHeaderTitle } from './modal_header_title';
-import { EuiModalBody } from './modal_body';
+import { OuiModal, OuiModalProps } from './modal';
+import { OuiModalFooter } from './modal_footer';
+import { OuiModalHeader } from './modal_header';
+import { OuiModalHeaderTitle } from './modal_header_title';
+import { OuiModalBody } from './modal_body';
 
-import { ButtonColor, EuiButton, EuiButtonEmpty } from '../button';
+import { ButtonColor, OuiButton, OuiButtonEmpty } from '../button';
 
-import { EuiText } from '../text';
+import { OuiText } from '../text';
 
-export interface EuiConfirmModalProps
+export interface OuiConfirmModalProps
   extends Omit<
-    EuiModalProps,
+    OuiModalProps,
     'children' | 'initialFocus' | 'onClose' | 'title'
   > {
   /**
@@ -60,7 +71,7 @@ export interface EuiConfirmModalProps
   // For docs only, will get passed with ...rest
   /**
    * Sets the max-width of the modal.
-   * Set to `true` to use the default (`euiBreakpoints 'm'`),
+   * Set to `true` to use the default (`ouiBreakpoints 'm'`),
    * set to `false` to not restrict the width,
    * set to a number for a custom width in px,
    * set to a string for a custom width in custom measurement.
@@ -75,7 +86,7 @@ export interface EuiConfirmModalProps
 export const CONFIRM_BUTTON = 'confirm';
 export const CANCEL_BUTTON = 'cancel';
 
-export const EuiConfirmModal: FunctionComponent<EuiConfirmModalProps> = ({
+export const OuiConfirmModal: FunctionComponent<OuiConfirmModalProps> = ({
   children,
   title,
   onCancel,
@@ -98,7 +109,7 @@ export const EuiConfirmModal: FunctionComponent<EuiConfirmModalProps> = ({
 
   useEffect(() => {
     // We have to do this instead of using `autoFocus` because React's polyfill for auto-focusing
-    // elements conflicts with the focus-trap logic we have on EuiModal.
+    // elements conflicts with the focus-trap logic we have on OuiModal.
     // Wait a beat for the focus-trap to complete, and then set focus to the right button. Check that
     // the buttons exist first, because it's possible the modal has been closed already.
     requestAnimationFrame(() => {
@@ -114,17 +125,17 @@ export const EuiConfirmModal: FunctionComponent<EuiConfirmModalProps> = ({
   const cancelRef = (node: HTMLButtonElement | HTMLAnchorElement | null) =>
     setCancelButton(node);
 
-  const classes = classnames('euiModal--confirmation', className);
+  const classes = classnames('ouiModal--confirmation', className);
 
   let modalTitle;
 
   if (title) {
     modalTitle = (
-      <EuiModalHeader>
-        <EuiModalHeaderTitle data-test-subj="confirmModalTitleText">
+      <OuiModalHeader>
+        <OuiModalHeaderTitle data-test-subj="confirmModalTitleText">
           {title}
-        </EuiModalHeaderTitle>
-      </EuiModalHeader>
+        </OuiModalHeaderTitle>
+      </OuiModalHeader>
     );
   }
 
@@ -137,24 +148,24 @@ export const EuiConfirmModal: FunctionComponent<EuiConfirmModalProps> = ({
   }
 
   return (
-    <EuiModal className={classes} onClose={onCancel} {...rest}>
+    <OuiModal className={classes} onClose={onCancel} {...rest}>
       {modalTitle}
 
       {message && (
-        <EuiModalBody>
-          <EuiText data-test-subj="confirmModalBodyText">{message}</EuiText>
-        </EuiModalBody>
+        <OuiModalBody>
+          <OuiText data-test-subj="confirmModalBodyText">{message}</OuiText>
+        </OuiModalBody>
       )}
 
-      <EuiModalFooter>
-        <EuiButtonEmpty
+      <OuiModalFooter>
+        <OuiButtonEmpty
           data-test-subj="confirmModalCancelButton"
           onClick={onCancel}
           buttonRef={cancelRef}>
           {cancelButtonText}
-        </EuiButtonEmpty>
+        </OuiButtonEmpty>
 
-        <EuiButton
+        <OuiButton
           data-test-subj="confirmModalConfirmButton"
           onClick={onConfirm}
           isLoading={isLoading}
@@ -163,8 +174,8 @@ export const EuiConfirmModal: FunctionComponent<EuiConfirmModalProps> = ({
           color={buttonColor}
           isDisabled={confirmButtonDisabled}>
           {confirmButtonText}
-        </EuiButton>
-      </EuiModalFooter>
-    </EuiModal>
+        </OuiButton>
+      </OuiModalFooter>
+    </OuiModal>
   );
 };

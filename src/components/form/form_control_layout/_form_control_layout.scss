@@ -1,9 +1,20 @@
-.euiFormControlLayout {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiFormControlLayout {
   // Let the height expand as needed
-  @include euiFormControlSize($includeAlternates: true);
+  @include ouiFormControlSize($includeAlternates: true);
 }
 
-.euiFormControlLayout__childrenWrapper {
+.ouiFormControlLayout__childrenWrapper {
   position: relative;
 }
 
@@ -12,86 +23,86 @@
  * 2. Ensure truncation works in children elements
  */
 
-.euiFormControlLayout--group {
+.ouiFormControlLayout--group {
   // Match just the regular drop shadow of inputs
-  @include euiFormControlDefaultShadow;
+  @include ouiFormControlDefaultShadow;
   display: flex;
   align-items: stretch;
   padding: 1px; /* 1 */
 
   // Force the stretch of any children so they expand the full height of the control
   > *,
-  .euiPopover__anchor,
-  .euiButtonEmpty,
-  .euiText,
-  .euiFormLabel,
-  .euiButtonIcon {
+  .ouiPopover__anchor,
+  .ouiButtonEmpty,
+  .ouiText,
+  .ouiFormLabel,
+  .ouiButtonIcon {
     height: 100%;
   }
 
-  .euiFormControlLayout__childrenWrapper {
+  .ouiFormControlLayout__childrenWrapper {
     flex-grow: 1;
     overflow: hidden; /* 2 */
   }
 
-  .euiFormControlLayout__prepend,
-  .euiFormControlLayout__append {
-    @include euiTextTruncate;
+  .ouiFormControlLayout__prepend,
+  .ouiFormControlLayout__append {
+    @include ouiTextTruncate;
     flex-shrink: 0;
     height: 100%;
     border-radius: 0;
 
     // ICONS
 
-    &.euiIcon,
-    .euiIcon {
-      padding: 0 $euiSizeS;
-      width: $euiSizeXL;
+    &.ouiIcon,
+    .ouiIcon {
+      padding: 0 $ouiSizeS;
+      width: $ouiSizeXL;
       border-radius: 0;
-      background-color: $euiFormInputGroupLabelBackground;
+      background-color: $ouiFormInputGroupLabelBackground;
     }
 
 
-    &.euiButtonIcon,
-    &.euiButtonEmpty,
-    .euiButtonIcon,
-    .euiButtonEmpty {
+    &.ouiButtonIcon,
+    &.ouiButtonEmpty,
+    .ouiButtonIcon,
+    .ouiButtonEmpty {
       transform: none !important;
 
       // Undo sizing from icons inside buttons
-      .euiIcon {
+      .ouiIcon {
         background: none !important;
         padding: 0;
-        width: $euiSize;
+        width: $ouiSize;
       }
     }
   }
 
-  .euiButtonIcon {
-    padding: 0 $euiSizeS;
-    width: $euiSizeXL;
+  .ouiButtonIcon {
+    padding: 0 $ouiSizeS;
+    width: $ouiSizeXL;
     border-radius: 0;
 
     &:not(:focus) {
-      background-color: $euiFormInputGroupLabelBackground;
+      background-color: $ouiFormInputGroupLabelBackground;
     }
 
     &:focus-visible {
-      outline: 2px solid $euiFocusRingColor;
+      outline: 2px solid $ouiFocusRingColor;
       outline-offset: -2px;
     }
   }
 
-  .euiToolTipAnchor > .euiIcon {
+  .ouiToolTipAnchor > .ouiIcon {
     height: 100%;
-    background-color: $euiFormInputGroupLabelBackground;
-    padding: 0 $euiSizeS;
-    width: $euiSizeXL;
+    background-color: $ouiFormInputGroupLabelBackground;
+    padding: 0 $ouiSizeS;
+    width: $ouiSizeXL;
     border-radius: 0;
   }
 
-  > .euiFormControlLayout__prepend,
-  > .euiFormControlLayout__append {
+  > .ouiFormControlLayout__prepend,
+  > .ouiFormControlLayout__append {
     max-width: 50%; // Make sure max-width only applies to the outer most append/prepend element
   }
 
@@ -100,74 +111,74 @@
 
   // TEXT
 
-  .euiFormLabel,
-  .euiText {
-    background-color: $euiFormInputGroupLabelBackground;
-    padding: $euiFormControlPadding;
-    line-height: $euiSize !important;
+  .ouiFormLabel,
+  .ouiText {
+    background-color: $ouiFormInputGroupLabelBackground;
+    padding: $ouiFormControlPadding;
+    line-height: $ouiSize !important;
     cursor: default !important; // pointer cursor on some form labels but not others is confusing
 
     // If the next sibling is not the input, pull it closer to the text to reduce space
-    + *:not(.euiFormControlLayout__childrenWrapper):not(input) {
-      margin-left: -$euiFormControlPadding;
+    + *:not(.ouiFormControlLayout__childrenWrapper):not(input) {
+      margin-left: -$ouiFormControlPadding;
     }
   }
 
   // If any child that is not the input has a next sibling that is text, pull it closer to the text to reduce space
-  > *:not(.euiFormControlLayout__childrenWrapper) {
-    + .euiFormLabel,
-    + .euiText {
-      margin-left: -$euiFormControlPadding;
+  > *:not(.ouiFormControlLayout__childrenWrapper) {
+    + .ouiFormLabel,
+    + .ouiText {
+      margin-left: -$ouiFormControlPadding;
     }
   }
 
   //
   // BORDERS on buttons only
 
-  .euiButtonEmpty {
-    border-right: $euiFormInputGroupBorder;
+  .ouiButtonEmpty {
+    border-right: $ouiFormInputGroupBorder;
   }
 
   // Any buttons after the children wrapper or inside any elements after the children wrapper
   // Need to swap border sides
-  .euiFormControlLayout__childrenWrapper ~ .euiButtonEmpty,
-  .euiFormControlLayout__childrenWrapper ~ * .euiButtonEmpty {
+  .ouiFormControlLayout__childrenWrapper ~ .ouiButtonEmpty,
+  .ouiFormControlLayout__childrenWrapper ~ * .ouiButtonEmpty {
     border-right: none;
-    border-left: $euiFormInputGroupBorder;
+    border-left: $ouiFormInputGroupBorder;
   }
 
   //
   // Compressed alterations
 
-  &.euiFormControlLayout--compressed {
-    @include euiFormControlDefaultShadow($borderOnly: true);
-    border-radius: $euiBorderRadius / 2;
+  &.ouiFormControlLayout--compressed {
+    @include ouiFormControlDefaultShadow($borderOnly: true);
+    border-radius: $ouiBorderRadius / 2;
     overflow: hidden; // Keeps backgrounds inside border radius
 
     // Padding
-    .euiFormLabel,
-    .euiText {
-      padding: $euiFormControlCompressedPadding;
+    .ouiFormLabel,
+    .ouiText {
+      padding: $ouiFormControlCompressedPadding;
 
       // If the next sibling is not the input, pull it closer to the text to reduce space
-      + *:not(.euiFormControlLayout__childrenWrapper) {
-        margin-left: -$euiFormControlCompressedPadding;
+      + *:not(.ouiFormControlLayout__childrenWrapper) {
+        margin-left: -$ouiFormControlCompressedPadding;
       }
     }
 
     // If any child that is not the input has a next sibling that is text, pull it closer to the text to reduce space
-    > *:not(.euiFormControlLayout__childrenWrapper) {
-      + .euiFormLabel,
-      + .euiText {
-        margin-left: -$euiFormControlCompressedPadding;
+    > *:not(.ouiFormControlLayout__childrenWrapper) {
+      + .ouiFormLabel,
+      + .ouiText {
+        margin-left: -$ouiFormControlCompressedPadding;
       }
     }
   }
 
   //
   // ReadOnly alterations
-  &.euiFormControlLayout--readOnly {
-    @include euiFormControlReadOnlyStyle;
+  &.ouiFormControlLayout--readOnly {
+    @include ouiFormControlReadOnlyStyle;
 
     input {
       background-color: transparent; // Ensures the input and layout don't double up on background color

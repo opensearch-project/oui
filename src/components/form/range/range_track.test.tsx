@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,12 +32,12 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
-import { EuiRangeTrack } from './range_track';
+import { OuiRangeTrack } from './range_track';
 
-describe('EuiRangeTrack', () => {
+describe('OuiRangeTrack', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiRangeTrack
+      <OuiRangeTrack
         min={0}
         max={100}
         step={10}
@@ -42,14 +53,14 @@ describe('EuiRangeTrack', () => {
 
   test('should throw error if `max` does not line up with `step` interval', () => {
     const component = () =>
-      render(<EuiRangeTrack min={0} max={105} step={10} />);
+      render(<OuiRangeTrack min={0} max={105} step={10} />);
 
     expect(component).toThrowErrorMatchingSnapshot();
   });
 
   test('should throw error if there are too many ticks to render', () => {
     const component = () =>
-      render(<EuiRangeTrack min={0} max={21} showTicks />);
+      render(<OuiRangeTrack min={0} max={21} showTicks />);
 
     expect(component).toThrowErrorMatchingSnapshot();
   });
@@ -57,7 +68,7 @@ describe('EuiRangeTrack', () => {
   test('should throw error if `tickInterval` is off sequence from `step`', () => {
     const component = () =>
       render(
-        <EuiRangeTrack min={0} max={100} step={10} showTicks tickInterval={3} />
+        <OuiRangeTrack min={0} max={100} step={10} showTicks tickInterval={3} />
       );
 
     expect(component).toThrowErrorMatchingSnapshot();
@@ -66,7 +77,7 @@ describe('EuiRangeTrack', () => {
   test('should throw error if custom tick value is lower than `min`', () => {
     const component = () =>
       render(
-        <EuiRangeTrack
+        <OuiRangeTrack
           min={0}
           max={100}
           showTicks
@@ -80,7 +91,7 @@ describe('EuiRangeTrack', () => {
   test('should throw error if custom tick value is higher than `max`', () => {
     const component = () =>
       render(
-        <EuiRangeTrack
+        <OuiRangeTrack
           min={0}
           max={100}
           showTicks
@@ -94,7 +105,7 @@ describe('EuiRangeTrack', () => {
   test('should throw error if custom tick value is off sequence from `step`', () => {
     const component = () =>
       render(
-        <EuiRangeTrack
+        <OuiRangeTrack
           min={0}
           max={100}
           step={50}

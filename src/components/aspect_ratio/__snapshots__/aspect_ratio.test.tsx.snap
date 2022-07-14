@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiAspectRatio is rendered 1`] = `
+exports[`OuiAspectRatio is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="euiAspectRatio testClass1 testClass2"
+  class="ouiAspectRatio testClass1 testClass2"
   data-test-subj="test subject string"
   style="padding-bottom:44.44444444444444%;max-width:auto"
 >
@@ -19,13 +19,13 @@ exports[`EuiAspectRatio is rendered 1`] = `
 </div>
 `;
 
-exports[`EuiAspectRatio props maxWidth is rendered 1`] = `
+exports[`OuiAspectRatio props maxWidth is rendered 1`] = `
 <div
   style="max-width:500px"
 >
   <div
     aria-label="aria-label"
-    class="euiAspectRatio testClass1 testClass2"
+    class="ouiAspectRatio testClass1 testClass2"
     data-test-subj="test subject string"
     style="padding-bottom:177.77777777777777%;max-width:500px"
   >

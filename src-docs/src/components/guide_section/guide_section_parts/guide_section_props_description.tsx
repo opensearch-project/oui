@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { FunctionComponent, Fragment } from 'react';
-import { EuiLink } from '../../../../../src/components/link';
-import { EuiSpacer } from '../../../../../src/components/spacer';
-import { EuiText } from '../../../../../src/components/text';
-import { EuiHorizontalRule } from '../../../../../src/components/horizontal_rule';
-import { EuiFlexGroup, EuiFlexItem } from '../../../../../src/components/flex';
-import { EuiTitle } from '../../../../../src/components/title';
+import { OuiLink } from '../../../../../src/components/link';
+import { OuiSpacer } from '../../../../../src/components/spacer';
+import { OuiText } from '../../../../../src/components/text';
+import { OuiHorizontalRule } from '../../../../../src/components/horizontal_rule';
+import { OuiFlexGroup, OuiFlexItem } from '../../../../../src/components/flex';
+import { OuiTitle } from '../../../../../src/components/title';
 
 // @ts-ignore not TS
 import { extendedTypesInfo } from '../guide_section_extends';
@@ -41,9 +52,9 @@ export const GuideSectionPropsDescription: FunctionComponent<GuideSectionPropsDe
 
   const extendedTypesElements = extendedTypes.map((type: any, index: any) => (
     <Fragment key={`extendedTypeValue-${extendedTypesInfo[type].name}`}>
-      <EuiLink href={extendedTypesInfo[type].url}>
+      <OuiLink href={extendedTypesInfo[type].url}>
         {extendedTypesInfo[type].name}
-      </EuiLink>
+      </OuiLink>
       {index + 1 < extendedTypes.length && ', '}
     </Fragment>
   ));
@@ -53,34 +64,34 @@ export const GuideSectionPropsDescription: FunctionComponent<GuideSectionPropsDe
   if (description) {
     descriptionElement = (
       <>
-        <EuiText size="s">
+        <OuiText size="s">
           <p>{markup(description)}</p>
-        </EuiText>
-        <EuiSpacer size="s" />
+        </OuiText>
+        <OuiSpacer size="s" />
       </>
     );
   }
 
   return (
     <>
-      <EuiHorizontalRule margin="none" />
-      <EuiSpacer size="m" />
+      <OuiHorizontalRule margin="none" />
+      <OuiSpacer size="m" />
       <div className="guideSection__propsTableIntro">
-        <EuiFlexGroup alignItems="baseline" wrap>
-          <EuiFlexItem grow={false}>
-            <EuiTitle size="s">
+        <OuiFlexGroup alignItems="baseline" wrap>
+          <OuiFlexItem grow={false}>
+            <OuiTitle size="s">
               <h3 id={componentName}>{componentName}</h3>
-            </EuiTitle>
-          </EuiFlexItem>
+            </OuiTitle>
+          </OuiFlexItem>
           {extendedTypesElements.length > 0 && (
-            <EuiFlexItem>
-              <EuiText size="s">
+            <OuiFlexItem>
+              <OuiText size="s">
                 <p>[ extends {extendedTypesElements} ]</p>
-              </EuiText>
-            </EuiFlexItem>
+              </OuiText>
+            </OuiFlexItem>
           )}
-        </EuiFlexGroup>
-        <EuiSpacer size="s" />
+        </OuiFlexGroup>
+        <OuiSpacer size="s" />
         {descriptionElement}
       </div>
     </>

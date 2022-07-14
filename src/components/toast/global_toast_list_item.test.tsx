@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -20,14 +31,14 @@
 import React from 'react';
 import { render } from 'enzyme';
 
-import { EuiGlobalToastListItem } from './global_toast_list_item';
+import { OuiGlobalToastListItem } from './global_toast_list_item';
 
-describe('EuiGlobalToastListItem', () => {
+describe('OuiGlobalToastListItem', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiGlobalToastListItem>
+      <OuiGlobalToastListItem>
         <div>Hi</div>
-      </EuiGlobalToastListItem>
+      </OuiGlobalToastListItem>
     );
 
     expect(component).toMatchSnapshot();

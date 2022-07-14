@@ -1,4 +1,15 @@
 /*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+/*
  * Licensed to Elasticsearch B.V. under one or more contributor
  * license agreements. See the NOTICE file distributed with
  * this work for additional information regarding copyright
@@ -21,15 +32,15 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../test';
 
-import { EuiStat, COLORS, ALIGNMENTS } from './stat';
+import { OuiStat, COLORS, ALIGNMENTS } from './stat';
 import { TITLE_SIZES } from '../title/title';
 
 jest.mock('./../form/form_row/make_id', () => () => 'generated-id');
 
-describe('EuiStat', () => {
+describe('OuiStat', () => {
   test('is rendered', () => {
     const component = render(
-      <EuiStat title="title" description="description" {...requiredProps} />
+      <OuiStat title="title" description="description" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();
@@ -38,7 +49,7 @@ describe('EuiStat', () => {
   describe('props', () => {
     test('loading is rendered', () => {
       const component = render(
-        <EuiStat
+        <OuiStat
           title="title"
           description="description"
           isLoading
@@ -51,7 +62,7 @@ describe('EuiStat', () => {
 
     test('title and description are reversed', () => {
       const component = render(
-        <EuiStat title="title" description="description" reverse />
+        <OuiStat title="title" description="description" reverse />
       );
 
       expect(component).toMatchSnapshot();
@@ -60,7 +71,7 @@ describe('EuiStat', () => {
     ALIGNMENTS.forEach((alignment) => {
       test(`${alignment} is rendered`, () => {
         const component = render(
-          <EuiStat
+          <OuiStat
             title="title"
             description="description"
             textAlign={alignment}
@@ -74,7 +85,7 @@ describe('EuiStat', () => {
     COLORS.forEach((color) => {
       test(`${color} is rendered`, () => {
         const component = render(
-          <EuiStat title="title" description="description" titleColor={color} />
+          <OuiStat title="title" description="description" titleColor={color} />
         );
 
         expect(component).toMatchSnapshot();
@@ -83,7 +94,7 @@ describe('EuiStat', () => {
 
     test('hexcode colors are rendered', () => {
       const component = render(
-        <EuiStat title="title" description="description" titleColor="#EB1919" />
+        <OuiStat title="title" description="description" titleColor="#EB1919" />
       );
 
       expect(component).toMatchSnapshot();
@@ -91,7 +102,7 @@ describe('EuiStat', () => {
 
     test('render with custom description element', () => {
       const component = render(
-        <EuiStat
+        <OuiStat
           title="title"
           description={<div>description</div>}
           descriptionElement="div"
@@ -104,7 +115,7 @@ describe('EuiStat', () => {
 
     test('render with custom title element', () => {
       const component = render(
-        <EuiStat
+        <OuiStat
           title={<div>title</div>}
           titleElement="div"
           description="description"
@@ -117,7 +128,7 @@ describe('EuiStat', () => {
     TITLE_SIZES.forEach((size) => {
       test(`${size} is rendered`, () => {
         const component = render(
-          <EuiStat title="title" description="description" titleSize={size} />
+          <OuiStat title="title" description="description" titleSize={size} />
         );
 
         expect(component).toMatchSnapshot();

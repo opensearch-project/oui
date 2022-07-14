@@ -1,3 +1,14 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { Fragment } from 'react';
 
 import { Link } from 'react-router-dom';
@@ -5,12 +16,12 @@ import { Link } from 'react-router-dom';
 import { GuideSectionTypes } from '../../components';
 
 import {
-  EuiCallOut,
-  EuiCode,
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFlexGrid,
-  EuiLink,
+  OuiCallOut,
+  OuiCode,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFlexGrid,
+  OuiLink,
 } from '../../../../src/components';
 
 import { flexGroupConfig, flexGridConfig } from './playground';
@@ -63,106 +74,106 @@ const flexItemPanelSource = require('!!raw-loader!./flex_item_panel');
 import FlexGroupResponsive from './flex_responsive';
 const flexGroupResponsiveSource = require('!!raw-loader!./flex_responsive');
 
-const flexSnippet = `<EuiFlexGroup>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexSnippet = `<OuiFlexGroup>
+  <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>
+  <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>
+</OuiFlexGroup>`;
 
-const flexGroupWrap = `<EuiFlexGroup wrap>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexGroupWrap = `<OuiFlexGroup wrap>
+  <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>
+  <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>
+</OuiFlexGroup>`;
 
-const componentSpanSnippet = `<EuiFlexGroup component="span">
-  <EuiFlexItem component="span"><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem component="span"><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const componentSpanSnippet = `<OuiFlexGroup component="span">
+  <OuiFlexItem component="span"><!-- FlexItem content --></OuiFlexItem>
+  <OuiFlexItem component="span"><!-- FlexItem content --></OuiFlexItem>
+</OuiFlexGroup>`;
 
-const flexItemPanelSnippet = `<EuiFlexGroup>
-  <EuiFlexItem>
-    <EuiPanel><!-- Panel content --></EuiPanel>
-  </EuiFlexItem>
+const flexItemPanelSnippet = `<OuiFlexGroup>
+  <OuiFlexItem>
+    <OuiPanel><!-- Panel content --></OuiPanel>
+  </OuiFlexItem>
 
-  <EuiFlexItem>
-    <EuiPanel grow={false}><!-- Panel content --></EuiPanel>
-  </EuiFlexItem>
-</EuiFlexGroup>`;
+  <OuiFlexItem>
+    <OuiPanel grow={false}><!-- Panel content --></OuiPanel>
+  </OuiFlexItem>
+</OuiFlexGroup>`;
 
-const flexGrowZeroSnippet = `<EuiFlexGroup>
-  <EuiFlexItem grow={false}><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexGrowZeroSnippet = `<OuiFlexGroup>
+  <OuiFlexItem grow={false}><!-- FlexItem content --></OuiFlexItem>
+  <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>
+</OuiFlexGroup>`;
 
-const flexGrowNumericSnippet = `<EuiFlexGroup>
-  <EuiFlexItem grow={1}><!-- FlexItem with flew-grow 1 --></EuiFlexItem>
-  <EuiFlexItem grow={2}><!-- FlexItem with flew-grow 2 --></EuiFlexItem>
+const flexGrowNumericSnippet = `<OuiFlexGroup>
+  <OuiFlexItem grow={1}><!-- FlexItem with flew-grow 1 --></OuiFlexItem>
+  <OuiFlexItem grow={2}><!-- FlexItem with flew-grow 2 --></OuiFlexItem>
   ...
-  <EuiFlexItem grow={10}><!-- FlexItem with flew-grow 10 --></EuiFlexItem>
-</EuiFlexGroup>`;
+  <OuiFlexItem grow={10}><!-- FlexItem with flew-grow 10 --></OuiFlexItem>
+</OuiFlexGroup>`;
 
-const directionSnippet = `<EuiFlexGroup direction="column">
-  <EuiFlexItem><!-- FlexItem in column FlexGroup --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem in column FlexGroup --></EuiFlexItem>
-</EuiFlexGroup>`;
+const directionSnippet = `<OuiFlexGroup direction="column">
+  <OuiFlexItem><!-- FlexItem in column FlexGroup --></OuiFlexItem>
+  <OuiFlexItem><!-- FlexItem in column FlexGroup --></OuiFlexItem>
+</OuiFlexGroup>`;
 
-const flexGridColumnsSnippet = `<EuiFlexGrid columns={3}>
-  <EuiFlexItem>
+const flexGridColumnsSnippet = `<OuiFlexGrid columns={3}>
+  <OuiFlexItem>
     <!-- Item in 3-column FlexGrid-->
-  </EuiFlexItem>
-  <EuiFlexItem>
+  </OuiFlexItem>
+  <OuiFlexItem>
     <!-- Item in 3-column FlexGrid-->
-  </EuiFlexItem>
-  <EuiFlexItem>
+  </OuiFlexItem>
+  <OuiFlexItem>
     <!-- Item in 3-column FlexGrid-->
-  </EuiFlexItem>
-</EuiFlexGrid>`;
+  </OuiFlexItem>
+</OuiFlexGrid>`;
 
-const flexGridColumnFirstSnippet = `<EuiFlexGrid columns={2} direction="column">
-  <EuiFlexItem>
+const flexGridColumnFirstSnippet = `<OuiFlexGrid columns={2} direction="column">
+  <OuiFlexItem>
     <!-- Item in FlexGrid-->
-  </EuiFlexItem>
-  <EuiFlexItem>
+  </OuiFlexItem>
+  <OuiFlexItem>
     <!-- Item in FlexGrid-->
-  </EuiFlexItem>
-</EuiFlexGrid>`;
+  </OuiFlexItem>
+</OuiFlexGrid>`;
 
-const flexNestSnippet = `<EuiFlexGroup>
-  <EuiFlexItem>
-    <EuiFlexGroup>
-      <EuiFlexItem><!-- FlexGroup inside FlexGroup --></EuiFlexItem>
-      <EuiFlexItem><!-- FlexGroup inside FlexGroup --></EuiFlexItem>
-    </EuiFlexGroup>
-  </EuiFlexItem>
-  <EuiFlexItem>
-    <EuiFlexGrid>
-      <EuiFlexItem><!-- FlexGrid inside FlexGroup --></EuiFlexItem>
-      <EuiFlexItem><!-- FlexGrid inside FlexGroup --></EuiFlexItem>
-    </EuiFlexGrid>
-  </EuiFlexItem>
-</EuiFlexGroup>`;
+const flexNestSnippet = `<OuiFlexGroup>
+  <OuiFlexItem>
+    <OuiFlexGroup>
+      <OuiFlexItem><!-- FlexGroup inside FlexGroup --></OuiFlexItem>
+      <OuiFlexItem><!-- FlexGroup inside FlexGroup --></OuiFlexItem>
+    </OuiFlexGroup>
+  </OuiFlexItem>
+  <OuiFlexItem>
+    <OuiFlexGrid>
+      <OuiFlexItem><!-- FlexGrid inside FlexGroup --></OuiFlexItem>
+      <OuiFlexItem><!-- FlexGrid inside FlexGroup --></OuiFlexItem>
+    </OuiFlexGrid>
+  </OuiFlexItem>
+</OuiFlexGroup>`;
 
-const flexGutterSnippet = `<EuiFlexGroup gutterSize="none">
-  <EuiFlexItem><!-- FlexItem without gutter --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem without gutter --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexGutterSnippet = `<OuiFlexGroup gutterSize="none">
+  <OuiFlexItem><!-- FlexItem without gutter --></OuiFlexItem>
+  <OuiFlexItem><!-- FlexItem without gutter --></OuiFlexItem>
+</OuiFlexGroup>`;
 
-const flexGroupResponsiveSnippet = `<EuiFlexGroup responsive={false}>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`;
+const flexGroupResponsiveSnippet = `<OuiFlexGroup responsive={false}>
+  <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>
+  <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>
+</OuiFlexGroup>`;
 
 export const FlexExample = {
   title: 'Flex',
   intro: (
     <Fragment>
-      <EuiCallOut title="Coloring and padding exist for examples only">
+      <OuiCallOut title="Coloring and padding exist for examples only">
         <p>
           Padding and background-color are added to all the{' '}
-          <strong>EuiFlexItem</strong> components on this documentation page for
+          <strong>OuiFlexItem</strong> components on this documentation page for
           illustrative purposes only. You will need to add padding through
           additional components or classes if you need it.
         </p>
-      </EuiCallOut>
+      </OuiCallOut>
     </Fragment>
   ),
   sections: [
@@ -176,9 +187,9 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          <strong>EuiFlexGroup</strong> is useful for setting up layouts for a{' '}
+          <strong>OuiFlexGroup</strong> is useful for setting up layouts for a{' '}
           <strong>single row</strong> of content. By default any{' '}
-          <strong>EuiFlexItem</strong> within <strong>EuiFlexGroup</strong> will
+          <strong>OuiFlexItem</strong> within <strong>OuiFlexGroup</strong> will
           stretch and grow to match their siblings.
         </p>
       ),
@@ -188,7 +199,7 @@ export const FlexExample = {
         </div>
       ),
       playground: flexGroupConfig,
-      props: { EuiFlexGroup, EuiFlexItem },
+      props: { OuiFlexGroup, OuiFlexItem },
       snippet: flexSnippet,
     },
     {
@@ -203,28 +214,28 @@ export const FlexExample = {
         <>
           <p>
             To allow for continued stretching of nested{' '}
-            <strong>EuiFlexGroup</strong>&apos;s and its items, each{' '}
-            <strong>EuiFlexItem</strong> also has the property of{' '}
-            <EuiCode language="sass">display: flex</EuiCode>. This can cause
+            <strong>OuiFlexGroup</strong>&apos;s and its items, each{' '}
+            <strong>OuiFlexItem</strong> also has the property of{' '}
+            <OuiCode language="sass">display: flex</OuiCode>. This can cause
             unwanted layouts of your content when there are multiple elements or
             if the element itself also has some specific{' '}
-            <EuiCode language="sass">display</EuiCode> property.
+            <OuiCode language="sass">display</OuiCode> property.
           </p>
           <p>
             To alleviate this, the simplest method is to wrap your inner
             children with a simple HTML element like a{' '}
-            <EuiCode language="html">{'<div />'}</EuiCode> or{' '}
-            <EuiCode language="html">{'<span />'}</EuiCode>.
+            <OuiCode language="html">{'<div />'}</OuiCode> or{' '}
+            <OuiCode language="html">{'<span />'}</OuiCode>.
           </p>
         </>
       ),
-      snippet: `<EuiFlexGroup>
-  <EuiFlexItem>
+      snippet: `<OuiFlexGroup>
+  <OuiFlexItem>
     <div>
-      <EuiButton>Wrap them</EuiButton>
+      <OuiButton>Wrap them</OuiButton>
     </div>
-  </EuiFlexItem>
-</EuiFlexGroup>`,
+  </OuiFlexItem>
+</OuiFlexGroup>`,
       demo: (
         <div className="guideDemo__highlightGrid">
           <FlexItem />
@@ -241,9 +252,9 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          Specify <EuiCode>component=&ldquo;span&rdquo;</EuiCode> on{' '}
-          <strong>EuiFlexGroup</strong> and/or <strong>EuiFlexItem</strong> to
-          change from the default <EuiCode>div</EuiCode>.
+          Specify <OuiCode>component=&ldquo;span&rdquo;</OuiCode> on{' '}
+          <strong>OuiFlexGroup</strong> and/or <strong>OuiFlexItem</strong> to
+          change from the default <OuiCode>div</OuiCode>.
         </p>
       ),
       snippet: componentSpanSnippet,
@@ -265,9 +276,9 @@ export const FlexExample = {
         <p>
           The{' '}
           <Link to="/layout/panel">
-            <strong>EuiPanel</strong>
+            <strong>OuiPanel</strong>
           </Link>{' '}
-          component will naturally grow to fill the <strong>EuiFlexItem</strong>{' '}
+          component will naturally grow to fill the <strong>OuiFlexItem</strong>{' '}
           which contains it.
         </p>
       ),
@@ -284,7 +295,7 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          Sometimes you do not want a <strong>EuiFlexItem</strong> to grow
+          Sometimes you do not want a <strong>OuiFlexItem</strong> to grow
           horizontally. It can be turned off for each item individually.
         </p>
       ),
@@ -306,8 +317,8 @@ export const FlexExample = {
       text: (
         <p>
           You can specify a number between 1 and 10 for each{' '}
-          <strong>EuiFlexItem</strong> to take up a proportional percentage of
-          the <strong>EuiFlexGroup</strong> it is in.
+          <strong>OuiFlexItem</strong> to take up a proportional percentage of
+          the <strong>OuiFlexGroup</strong> it is in.
         </p>
       ),
       snippet: flexGrowNumericSnippet,
@@ -327,21 +338,21 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          <strong>EuiFlexGroups</strong> have the props{' '}
-          <EuiCode>justifyContent</EuiCode> and <EuiCode>alignItems</EuiCode>{' '}
+          <strong>OuiFlexGroups</strong> have the props{' '}
+          <OuiCode>justifyContent</OuiCode> and <OuiCode>alignItems</OuiCode>{' '}
           that accept{' '}
-          <EuiLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">
+          <OuiLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">
             normal flexbox parameters
-          </EuiLink>
+          </OuiLink>
           . Below are some common scenarios, where you need to separate two
           items, center justify a single one, or center an item vertically. Note
-          the usage of <strong>EuiFlexItems</strong> with{' '}
-          <EuiCode>grow=false</EuiCode> so that they do not stretch.
+          the usage of <strong>OuiFlexItems</strong> with{' '}
+          <OuiCode>grow=false</OuiCode> so that they do not stretch.
         </p>
       ),
-      snippet: `<EuiFlexGroup justifyContent="spaceAround">
-    <EuiFlexItem grow={false}><!-- FlexItem content --></EuiFlexItem>
-  </EuiFlexGroup>`,
+      snippet: `<OuiFlexGroup justifyContent="spaceAround">
+    <OuiFlexItem grow={false}><!-- FlexItem content --></OuiFlexItem>
+  </OuiFlexGroup>`,
       demo: (
         <div className="guideDemo__highlightGrid">
           <FlexJustify />
@@ -358,8 +369,8 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          You can set <EuiCode>wrap</EuiCode> on <strong>EuiFlexGroup</strong>{' '}
-          if it contains <strong>EuiFlexItems</strong> with minimum widths,
+          You can set <OuiCode>wrap</OuiCode> on <strong>OuiFlexGroup</strong>{' '}
+          if it contains <strong>OuiFlexItems</strong> with minimum widths,
           which you want to wrap as the container becomes narrower.
         </p>
       ),
@@ -382,10 +393,10 @@ export const FlexExample = {
           <FlexJustifyBetween />
         </div>
       ),
-      snippet: `<EuiFlexGroup justifyContent="spaceBetween">
-    <EuiFlexItem grow={false}><!-- FlexItem content --></EuiFlexItem>
-    <EuiFlexItem grow={false}><!-- FlexItem content --></EuiFlexItem>
-  </EuiFlexGroup>`,
+      snippet: `<OuiFlexGroup justifyContent="spaceBetween">
+    <OuiFlexItem grow={false}><!-- FlexItem content --></OuiFlexItem>
+    <OuiFlexItem grow={false}><!-- FlexItem content --></OuiFlexItem>
+  </OuiFlexGroup>`,
     },
     {
       source: [
@@ -399,10 +410,10 @@ export const FlexExample = {
           <FlexJustifyEvenly />
         </div>
       ),
-      snippet: `<EuiFlexGroup justifyContent="spaceEvenly">
-  <EuiFlexItem grow={false}><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem grow={false}><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`,
+      snippet: `<OuiFlexGroup justifyContent="spaceEvenly">
+  <OuiFlexItem grow={false}><!-- FlexItem content --></OuiFlexItem>
+  <OuiFlexItem grow={false}><!-- FlexItem content --></OuiFlexItem>
+</OuiFlexGroup>`,
     },
     {
       source: [
@@ -416,10 +427,10 @@ export const FlexExample = {
           <FlexAlignCenter />
         </div>
       ),
-      snippet: `<EuiFlexGroup alignItems="center">
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-  <EuiFlexItem><!-- FlexItem content --></EuiFlexItem>
-</EuiFlexGroup>`,
+      snippet: `<OuiFlexGroup alignItems="center">
+  <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>
+  <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>
+</OuiFlexGroup>`,
     },
     {
       title: 'Change direction',
@@ -431,7 +442,7 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          You can change direction using the <EuiCode>direction</EuiCode> prop.
+          You can change direction using the <OuiCode>direction</OuiCode> prop.
         </p>
       ),
       snippet: directionSnippet,
@@ -451,13 +462,13 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          <strong>EuiFlexGrid</strong> is a more rigid component that sets
+          <strong>OuiFlexGrid</strong> is a more rigid component that sets
           multiple, wrapping rows of same width items. You can set a{' '}
-          <EuiCode>columns</EuiCode> prop to specify anywhere between 1-4
+          <OuiCode>columns</OuiCode> prop to specify anywhere between 1-4
           columns. Any more would likely break on laptop screens.
         </p>
       ),
-      props: { EuiFlexGrid },
+      props: { OuiFlexGrid },
       playground: flexGridConfig,
       snippet: flexGridColumnsSnippet,
       demo: (
@@ -477,7 +488,7 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          Adding <EuiCode>direction=&quot;column&quot;</EuiCode> will re-orient
+          Adding <OuiCode>direction=&quot;column&quot;</OuiCode> will re-orient
           the flex items so they display top-down <strong>then</strong> left to
           right.
         </p>
@@ -500,20 +511,20 @@ export const FlexExample = {
       text: (
         <Fragment>
           <p>
-            <strong>EuiFlexGroup</strong> and <strong>EuiFlexGrid</strong> can
+            <strong>OuiFlexGroup</strong> and <strong>OuiFlexGrid</strong> can
             nest within themselves indefinitely. For example, here we turn off
-            the growth on a <strong>EuiFlexGroup</strong>, then nest a grid
+            the growth on a <strong>OuiFlexGroup</strong>, then nest a grid
             inside of it.
           </p>
-          <EuiCallOut color="warning" title="Flex items are also a flexbox">
+          <OuiCallOut color="warning" title="Flex items are also a flexbox">
             <p>
               To support nested stretching of items,{' '}
-              <strong>EuiFlexItem</strong> also has{' '}
-              <EuiCode>{'display: flex'}</EuiCode> on it so if your children are
+              <strong>OuiFlexItem</strong> also has{' '}
+              <OuiCode>{'display: flex'}</OuiCode> on it so if your children are
               not behaving correctly, you may want to wrap them in a{' '}
-              <EuiCode>{'<div />'}</EuiCode>.
+              <OuiCode>{'<div />'}</OuiCode>.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </Fragment>
       ),
       snippet: flexNestSnippet,
@@ -534,11 +545,11 @@ export const FlexExample = {
       text: (
         <>
           <p>
-            The <EuiCode>gutterSize</EuiCode> prop can be applied to either a{' '}
-            <strong>EuiFlexGroup</strong> or a <strong>EuiFlexGrid</strong> to
-            adjust the spacing between <strong>EuiFlexItems</strong>.
+            The <OuiCode>gutterSize</OuiCode> prop can be applied to either a{' '}
+            <strong>OuiFlexGroup</strong> or a <strong>OuiFlexGrid</strong> to
+            adjust the spacing between <strong>OuiFlexItems</strong>.
           </p>
-          <EuiCallOut
+          <OuiCallOut
             color="warning"
             title="Gutters are created with using negative margin">
             <p>
@@ -546,7 +557,7 @@ export const FlexExample = {
               sufficient padding to account for the negative margins, it may
               cause overflow scrolling.
             </p>
-          </EuiCallOut>
+          </OuiCallOut>
         </>
       ),
       snippet: flexGutterSnippet,
@@ -566,10 +577,10 @@ export const FlexExample = {
       ],
       text: (
         <p>
-          By default <strong>EuiFlexGroup</strong> is responsive by always
+          By default <strong>OuiFlexGroup</strong> is responsive by always
           stacking the items on smaller screens. However, often you only want to
           use groups for alignment and margins, rather than layouts. Simply
-          apply the <EuiCode>responsive={'{false}'}</EuiCode> prop to retain a
+          apply the <OuiCode>responsive={'{false}'}</OuiCode> prop to retain a
           single row layout for the group.
         </p>
       ),

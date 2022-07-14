@@ -1,42 +1,53 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 // Uncomment to use in consuming apps or CodeSandbox
-// import theme from '@elastic/eui/dist/eui_theme_light.json';
+// import theme from '@opensearch-project/oui/dist/oui_theme_light.json';
 
 import {
-  EuiAvatar,
-  EuiBadge,
-  EuiButton,
-  EuiCollapsibleNav,
-  EuiCollapsibleNavGroup,
-  EuiFlexItem,
-  EuiFlyout,
-  EuiFlyoutBody,
-  EuiFlyoutHeader,
-  EuiHeader,
-  EuiHeaderLink,
-  EuiHeaderLinks,
-  EuiHeaderLogo,
-  EuiHeaderSectionItemButton,
-  EuiIcon,
-  EuiListGroupItem,
-  EuiPageTemplate,
-  EuiPopover,
-  EuiPortal,
-  EuiShowFor,
-  EuiText,
-  EuiTitle,
-  EuiSelectableTemplateSitewide,
-  EuiSelectableMessage,
+  OuiAvatar,
+  OuiBadge,
+  OuiButton,
+  OuiCollapsibleNav,
+  OuiCollapsibleNavGroup,
+  OuiFlexItem,
+  OuiFlyout,
+  OuiFlyoutBody,
+  OuiFlyoutHeader,
+  OuiHeader,
+  OuiHeaderLink,
+  OuiHeaderLinks,
+  OuiHeaderLogo,
+  OuiHeaderSectionItemButton,
+  OuiIcon,
+  OuiListGroupItem,
+  OuiPageTemplate,
+  OuiPopover,
+  OuiPortal,
+  OuiShowFor,
+  OuiText,
+  OuiTitle,
+  OuiSelectableTemplateSitewide,
+  OuiSelectableMessage,
 } from '../../../../src/components';
 import { ExampleContext } from '../../services';
 
 export default ({ theme }) => {
   useEffect(() => {
-    document.body.classList.add('euiBody--headerIsFixed--double');
+    document.body.classList.add('ouiBody--headerIsFixed--double');
 
     return () => {
-      document.body.classList.remove('euiBody--headerIsFixed--double');
+      document.body.classList.remove('ouiBody--headerIsFixed--double');
     };
   }, []);
 
@@ -50,38 +61,38 @@ export default ({ theme }) => {
     JSON.parse(String(localStorage.getItem('navIsDocked'))) || false
   );
   const collapsibleNav = (
-    <EuiCollapsibleNav
+    <OuiCollapsibleNav
       id="guideHeaderCollapsibleNavExample"
       aria-label="Main navigation"
       isOpen={navIsOpen}
       isDocked={navIsDocked}
       button={
-        <EuiHeaderSectionItemButton
+        <OuiHeaderSectionItemButton
           aria-label="Toggle main navigation"
           onClick={() => setNavIsOpen(!navIsOpen)}>
-          <EuiIcon type={'menu'} size="m" aria-hidden="true" />
-        </EuiHeaderSectionItemButton>
+          <OuiIcon type={'menu'} size="m" aria-hidden="true" />
+        </OuiHeaderSectionItemButton>
       }
       onClose={() => setNavIsOpen(false)}>
-      <EuiFlexItem className="eui-yScroll">
+      <OuiFlexItem className="oui-yScroll">
         {/* Docs callout */}
-        <EuiCollapsibleNavGroup background="none" title="EuiCollapsibleNav">
-          <EuiText size="s" color="subdued" style={{ padding: '0 8px 8px' }}>
+        <OuiCollapsibleNavGroup background="none" title="OuiCollapsibleNav">
+          <OuiText size="s" color="subdued" style={{ padding: '0 8px 8px' }}>
             <p>
               Please see the component page for{' '}
               <Link to="/navigation/collapsible-nav">
-                <strong>EuiCollapsibleNav</strong>
+                <strong>OuiCollapsibleNav</strong>
               </Link>{' '}
               on how to configure your navigation.
             </p>
-          </EuiText>
-        </EuiCollapsibleNavGroup>
-      </EuiFlexItem>
-      <EuiFlexItem grow={false}>
+          </OuiText>
+        </OuiCollapsibleNavGroup>
+      </OuiFlexItem>
+      <OuiFlexItem grow={false}>
         {/* Docking button only for larger screens that can support it*/}
-        <EuiShowFor sizes={['l', 'xl']}>
-          <EuiCollapsibleNavGroup>
-            <EuiListGroupItem
+        <OuiShowFor sizes={['l', 'xl']}>
+          <OuiCollapsibleNavGroup>
+            <OuiListGroupItem
               size="xs"
               color="subdued"
               label={`${navIsDocked ? 'Undock' : 'Dock'} navigation`}
@@ -94,10 +105,10 @@ export default ({ theme }) => {
               }}
               iconType={navIsDocked ? 'lock' : 'lockOpen'}
             />
-          </EuiCollapsibleNavGroup>
-        </EuiShowFor>
-      </EuiFlexItem>
-    </EuiCollapsibleNav>
+          </OuiCollapsibleNavGroup>
+        </OuiShowFor>
+      </OuiFlexItem>
+    </OuiCollapsibleNav>
   );
 
   /**
@@ -105,30 +116,30 @@ export default ({ theme }) => {
    */
   const [isAlertFlyoutVisible, setIsAlertFlyoutVisible] = useState(false);
   const headerAlerts = (
-    <EuiPortal>
-      <EuiFlyout
+    <OuiPortal>
+      <OuiFlyout
         onClose={() => setIsAlertFlyoutVisible(false)}
         size="s"
         id="guideHeaderAlertExample"
         aria-labelledby="guideHeaderAlertExampleTitle">
-        <EuiFlyoutHeader hasBorder>
-          <EuiTitle size="s">
-            <h2 id="guideHeaderAlertExampleTitle">EuiHeaderAlert</h2>
-          </EuiTitle>
-        </EuiFlyoutHeader>
-        <EuiFlyoutBody>
-          <EuiText size="s" color="subdued">
+        <OuiFlyoutHeader hasBorder>
+          <OuiTitle size="s">
+            <h2 id="guideHeaderAlertExampleTitle">OuiHeaderAlert</h2>
+          </OuiTitle>
+        </OuiFlyoutHeader>
+        <OuiFlyoutBody>
+          <OuiText size="s" color="subdued">
             <p>
               Please see the component page for{' '}
               <Link to="/layout/header">
-                <strong>EuiHeaderAlert</strong>
+                <strong>OuiHeaderAlert</strong>
               </Link>{' '}
               on how to configure your alerts.
             </p>
-          </EuiText>
-        </EuiFlyoutBody>
-      </EuiFlyout>
-    </EuiPortal>
+          </OuiText>
+        </OuiFlyoutBody>
+      </OuiFlyout>
+    </OuiPortal>
   );
 
   /**
@@ -136,34 +147,34 @@ export default ({ theme }) => {
    */
   const [isUserMenuVisible, setIsUserMenuVisible] = useState(false);
   const userMenu = (
-    <EuiPopover
+    <OuiPopover
       id="guideHeaderUserMenuExample"
       repositionOnScroll
       button={
-        <EuiHeaderSectionItemButton
+        <OuiHeaderSectionItemButton
           aria-controls="guideHeaderUserMenuExample"
           aria-expanded={isUserMenuVisible}
           aria-haspopup="true"
           aria-label="User menu"
           onClick={() => setIsUserMenuVisible(!isUserMenuVisible)}>
-          <EuiAvatar name="John Username" size="s" />
-        </EuiHeaderSectionItemButton>
+          <OuiAvatar name="John Username" size="s" />
+        </OuiHeaderSectionItemButton>
       }
       isOpen={isUserMenuVisible}
       anchorPosition="downRight"
       closePopover={() => setIsUserMenuVisible(false)}>
       <div style={{ width: 320 }}>
-        <EuiText size="s" color="subdued">
+        <OuiText size="s" color="subdued">
           <p>
             Please see the component page for{' '}
             <Link to="/layout/header">
-              <strong>EuiHeader</strong>
+              <strong>OuiHeader</strong>
             </Link>{' '}
             on how to configure your user menu.
           </p>
-        </EuiText>
+        </OuiText>
       </div>
-    </EuiPopover>
+    </OuiPopover>
   );
 
   /**
@@ -171,34 +182,34 @@ export default ({ theme }) => {
    */
   const [isSpacesMenuVisible, setIsSpacesMenuVisible] = useState(false);
   const spacesMenu = (
-    <EuiPopover
+    <OuiPopover
       id="guideHeaderSpacesMenuExample"
       repositionOnScroll
       button={
-        <EuiHeaderSectionItemButton
+        <OuiHeaderSectionItemButton
           aria-controls="guideHeaderSpacesMenuExample"
           aria-expanded={isSpacesMenuVisible}
           aria-haspopup="true"
           aria-label="Spaces menu"
           onClick={() => setIsSpacesMenuVisible(!isSpacesMenuVisible)}>
-          <EuiAvatar type="space" name="Default Space" size="s" />
-        </EuiHeaderSectionItemButton>
+          <OuiAvatar type="space" name="Default Space" size="s" />
+        </OuiHeaderSectionItemButton>
       }
       isOpen={isSpacesMenuVisible}
       anchorPosition="downRight"
       closePopover={() => setIsSpacesMenuVisible(false)}>
       <div style={{ width: 320 }}>
-        <EuiText size="s" color="subdued">
+        <OuiText size="s" color="subdued">
           <p>
             Please see the component page for{' '}
             <Link to="/layout/header">
-              <strong>EuiHeader</strong>
+              <strong>OuiHeader</strong>
             </Link>{' '}
             on how to configure your spaces menu.
           </p>
-        </EuiText>
+        </OuiText>
       </div>
-    </EuiPopover>
+    </OuiPopover>
   );
 
   /**
@@ -206,12 +217,12 @@ export default ({ theme }) => {
    */
   const [isDeploymentMenuVisible, setIsDeploymentMenuVisible] = useState(false);
   const deploymentMenu = (
-    <EuiPopover
+    <OuiPopover
       id="guideHeaderDeploymentMenuExample"
       repositionOnScroll
       button={
-        <EuiBadge
-          color={theme.euiColorDarkestShade.rgba}
+        <OuiBadge
+          color={theme.ouiColorDarkestShade.rgba}
           iconType="arrowDown"
           iconSide="right"
           aria-controls="guideHeaderDeploymentMenuExample"
@@ -220,85 +231,85 @@ export default ({ theme }) => {
           onClickAriaLabel="Current deployment: Production logs. Click to open deployment menu."
           onClick={() => setIsDeploymentMenuVisible(!isDeploymentMenuVisible)}>
           Production logs
-        </EuiBadge>
+        </OuiBadge>
       }
       isOpen={isDeploymentMenuVisible}
       anchorPosition="downRight"
       closePopover={() => setIsDeploymentMenuVisible(false)}>
-      <EuiText size="s" color="subdued">
+      <OuiText size="s" color="subdued">
         <p>Deployment menu pattern TBD</p>
-      </EuiText>
-    </EuiPopover>
+      </OuiText>
+    </OuiPopover>
   );
 
   /**
    * Sitewide search
    */
   const search = (
-    <EuiSelectableTemplateSitewide
+    <OuiSelectableTemplateSitewide
       options={[]}
       searchProps={{
         append: '⌘K',
         compressed: true,
       }}
       popoverButton={
-        <EuiHeaderSectionItemButton aria-label="Sitewide search">
-          <EuiIcon type="search" size="m" />
-        </EuiHeaderSectionItemButton>
+        <OuiHeaderSectionItemButton aria-label="Sitewide search">
+          <OuiIcon type="search" size="m" />
+        </OuiHeaderSectionItemButton>
       }
       popoverButtonBreakpoints={['xs', 's']}
       popoverProps={{
         repositionOnScroll: true, // Necessary when placing search in a fixed component
       }}
       emptyMessage={
-        <EuiSelectableMessage style={{ minHeight: 300 }}>
+        <OuiSelectableMessage style={{ minHeight: 300 }}>
           <p>
             Please see the component page for{' '}
             <Link to="/forms/selectable">
-              <strong>EuiSelectableTemplateSitewide</strong>
+              <strong>OuiSelectableTemplateSitewide</strong>
             </Link>{' '}
             on how to configure your sitewide search.
           </p>
-        </EuiSelectableMessage>
+        </OuiSelectableMessage>
       }
     />
   );
 
   return (
     <>
-      <EuiHeader
+      <OuiHeader
         theme="dark"
         position="fixed"
         sections={[
           {
             items: [
-              <EuiHeaderLogo iconType="logoElastic" href="">
+              <OuiHeaderLogo iconType="logoElastic" href="">
                 Elastic
-              </EuiHeaderLogo>,
+              </OuiHeaderLogo>,
               deploymentMenu,
             ],
             borders: 'none',
           },
           {
-            items: [<EuiShowFor sizes={['m', 'l', 'xl']}>{search}</EuiShowFor>],
+            items: [<OuiShowFor sizes={['m', 'l', 'xl']}>{search}</OuiShowFor>],
             borders: 'none',
           },
           {
             items: [
-              <EuiShowFor sizes={['xs', 's']}>{search}</EuiShowFor>,
-              <EuiHeaderSectionItemButton
+              <OuiShowFor sizes={['xs', 's']}>{search}</OuiShowFor>,
+              <OuiHeaderSectionItemButton
                 notification={true}
                 aria-label="Notifications: Updates available"
                 onClick={() => setIsAlertFlyoutVisible(!isAlertFlyoutVisible)}>
-                <EuiIcon type="cheer" size="m" />
-              </EuiHeaderSectionItemButton>,
+                <OuiIcon type="cheer" size="m" />
+              </OuiHeaderSectionItemButton>,
               userMenu,
             ],
             borders: 'none',
           },
         ]}
       />
-      <EuiHeader
+      <OuiHeader
         position="fixed"
         sections={[
           {
@@ -316,32 +327,32 @@ export default ({ theme }) => {
           },
           {
             items: [
-              <EuiHeaderLinks
+              <OuiHeaderLinks
                 popoverProps={{
                   repositionOnScroll: true, // Necessary when placing search in a fixed component
                 }}>
-                <EuiHeaderLink color="primary">Share</EuiHeaderLink>
-                <EuiHeaderLink color="primary">Clone</EuiHeaderLink>
+                <OuiHeaderLink color="primary">Share</OuiHeaderLink>
+                <OuiHeaderLink color="primary">Clone</OuiHeaderLink>
                 <ExampleContext.Consumer>
                   {({ parentPath }) => (
-                    <EuiButton
+                    <OuiButton
                       iconType="exit"
                       style={{ minWidth: 80 }}
                       size="s"
                       color="primary"
                       href={`#${parentPath}`}>
                       Exit full screen
-                    </EuiButton>
+                    </OuiButton>
                   )}
                 </ExampleContext.Consumer>
-              </EuiHeaderLinks>,
+              </OuiHeaderLinks>,
             ],
           },
         ]}
       />
 
       {isAlertFlyoutVisible ? headerAlerts : null}
-      <EuiPageTemplate template="empty" />
+      <OuiPageTemplate template="empty" />
     </>
   );
 };

@@ -1,11 +1,22 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React, { useCallback, useState, useRef } from 'react';
 
 import {
-  EuiMarkdownEditor,
-  EuiSpacer,
-  EuiCodeBlock,
-  EuiButton,
-  EuiFormErrorText,
+  OuiMarkdownEditor,
+  OuiSpacer,
+  OuiCodeBlock,
+  OuiButton,
+  OuiFormErrorText,
 } from '../../../../src/components';
 
 import { htmlIdGenerator } from '../../../../src/services';
@@ -29,8 +40,8 @@ export default () => {
   }, []);
   return (
     <>
-      <EuiMarkdownEditor
-        aria-label="EUI markdown editor demo"
+      <OuiMarkdownEditor
+        aria-label="OUI markdown editor demo"
         aria-describedby={errorElementId.current}
         value={value}
         onChange={setValue}
@@ -38,29 +49,29 @@ export default () => {
         onParse={onParse}
         errors={messages}
       />
-      <EuiSpacer size="s" />
+      <OuiSpacer size="s" />
 
-      <EuiFormErrorText
+      <OuiFormErrorText
         id={errorElementId.current}
-        className="euiFormRow__text">
+        className="ouiFormRow__text">
         Utilize error text or{' '}
         <strong>
-          <a href="/#/forms/form-validation">EuiFormRow</a>
+          <a href="/#/forms/form-validation">OuiFormRow</a>
         </strong>{' '}
         for more permanent error feedback
-      </EuiFormErrorText>
+      </OuiFormErrorText>
 
-      <div className="eui-textRight">
-        <EuiButton
+      <div className="oui-textRight">
+        <OuiButton
           size="s"
           iconType={isAstShowing ? 'eyeClosed' : 'eye'}
           onClick={() => setIsAstShowing(!isAstShowing)}
           fill={isAstShowing}>
           {isAstShowing ? 'Hide editor AST' : 'Show editor AST'}
-        </EuiButton>
+        </OuiButton>
       </div>
 
-      {isAstShowing && <EuiCodeBlock language="json">{ast}</EuiCodeBlock>}
+      {isAstShowing && <OuiCodeBlock language="json">{ast}</OuiCodeBlock>}
     </>
   );
 };

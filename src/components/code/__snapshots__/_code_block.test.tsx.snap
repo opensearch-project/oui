@@ -1,31 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EuiCodeBlockImpl block highlights javascript code, adding "js" class 1`] = `
+exports[`OuiCodeBlockImpl block highlights javascript code, adding "js" class 1`] = `
 <div
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge prismjs language-js"
+  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-js"
 >
   <pre
-    class="euiCodeBlock__pre euiCodeBlock__pre--whiteSpacePreWrap"
+    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
     tabindex="-1"
   >
     <code
-      class="euiCodeBlock__code js"
+      class="ouiCodeBlock__code js"
     />
   </pre>
 </div>
 `;
 
-exports[`EuiCodeBlockImpl block renders a pre block tag 1`] = `
+exports[`OuiCodeBlockImpl block renders a pre block tag 1`] = `
 <div
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge prismjs language-none testClass1 testClass2"
+  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-none testClass1 testClass2"
 >
   <pre
-    class="euiCodeBlock__pre euiCodeBlock__pre--whiteSpacePreWrap"
+    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
     tabindex="-1"
   >
     <code
       aria-label="aria-label"
-      class="euiCodeBlock__code"
+      class="ouiCodeBlock__code"
       data-test-subj="test subject string"
     >
       var some = 'code';
@@ -35,17 +35,17 @@ console.log(some);
 </div>
 `;
 
-exports[`EuiCodeBlockImpl block renders a pre block tag with a css class modifier 1`] = `
+exports[`OuiCodeBlockImpl block renders a pre block tag with a css class modifier 1`] = `
 <div
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge prismjs language-none testClass1 testClass2"
+  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-none testClass1 testClass2"
 >
   <pre
-    class="euiCodeBlock__pre euiCodeBlock__pre--whiteSpacePre"
+    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePre"
     tabindex="-1"
   >
     <code
       aria-label="aria-label"
-      class="euiCodeBlock__code"
+      class="ouiCodeBlock__code"
       data-test-subj="test subject string"
     >
       var some = 'code';
@@ -55,38 +55,38 @@ console.log(some);
 </div>
 `;
 
-exports[`EuiCodeBlockImpl block renders with transparent background 1`] = `
+exports[`OuiCodeBlockImpl block renders with transparent background 1`] = `
 <div
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge euiCodeBlock--transparentBackground prismjs language-none"
+  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--transparentBackground prismjs language-none"
 >
   <pre
-    class="euiCodeBlock__pre euiCodeBlock__pre--whiteSpacePreWrap"
+    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
     tabindex="-1"
   >
     <code
-      class="euiCodeBlock__code"
+      class="ouiCodeBlock__code"
     />
   </pre>
 </div>
 `;
 
-exports[`EuiCodeBlockImpl inline highlights javascript code, adding "js" class 1`] = `
+exports[`OuiCodeBlockImpl inline highlights javascript code, adding "js" class 1`] = `
 <span
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge euiCodeBlock--inline prismjs language-js"
+  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--inline prismjs language-js"
 >
   <code
-    class="euiCodeBlock__code js"
+    class="ouiCodeBlock__code js"
   />
 </span>
 `;
 
-exports[`EuiCodeBlockImpl inline renders an inline code tag 1`] = `
+exports[`OuiCodeBlockImpl inline renders an inline code tag 1`] = `
 <span
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge euiCodeBlock--inline prismjs language-none testClass1 testClass2"
+  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--inline prismjs language-none testClass1 testClass2"
 >
   <code
     aria-label="aria-label"
-    class="euiCodeBlock__code"
+    class="ouiCodeBlock__code"
     data-test-subj="test subject string"
   >
     var some = 'code';
@@ -95,12 +95,12 @@ console.log(some);
 </span>
 `;
 
-exports[`EuiCodeBlockImpl inline renders with transparent background 1`] = `
+exports[`OuiCodeBlockImpl inline renders with transparent background 1`] = `
 <span
-  class="euiCodeBlock euiCodeBlock--fontSmall euiCodeBlock--paddingLarge euiCodeBlock--transparentBackground euiCodeBlock--inline prismjs language-none"
+  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--transparentBackground ouiCodeBlock--inline prismjs language-none"
 >
   <code
-    class="euiCodeBlock__code"
+    class="ouiCodeBlock__code"
   />
 </span>
 `;

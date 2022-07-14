@@ -1,42 +1,53 @@
-.euiSuperDatePicker__flexWrapper {
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiSuperDatePicker__flexWrapper {
   // Need to offset 8px because of negative margins added by small size gutter
-  max-width: calc(100% + #{$euiSizeS});
-  width: $euiSuperDatePickerWidth + $euiSuperDatePickerButtonWidth + $euiSizeS;
+  max-width: calc(100% + #{$ouiSizeS});
+  width: $ouiSuperDatePickerWidth + $ouiSuperDatePickerButtonWidth + $ouiSizeS;
 }
 
-.euiSuperDatePicker__flexWrapper--isAutoRefreshOnly {
-  width: $euiFormMaxWidth;
+.ouiSuperDatePicker__flexWrapper--isAutoRefreshOnly {
+  width: $ouiFormMaxWidth;
 }
 
-.euiSuperDatePicker__flexWrapper--noUpdateButton {
-  width: $euiSuperDatePickerWidth;
+.ouiSuperDatePicker__flexWrapper--noUpdateButton {
+  width: $ouiSuperDatePickerWidth;
 }
 
-.euiSuperDatePicker {
+.ouiSuperDatePicker {
   // sass-lint:disable-block no-important
   // Allow it to always grow to fit the container since the default form max width is too small
   max-width: 100% !important;
 
-  > .euiFormControlLayout__childrenWrapper {
+  > .ouiFormControlLayout__childrenWrapper {
     flex: 1 1 100%;
     overflow: hidden;
 
-    > .euiDatePickerRange {
+    > .ouiDatePickerRange {
       max-width: none;
       width: auto;
-      border-radius: 0 $euiFormControlBorderRadius $euiFormControlBorderRadius 0;
+      border-radius: 0 $ouiFormControlBorderRadius $ouiFormControlBorderRadius 0;
     }
   }
 }
 
-.euiSuperDatePicker__startPopoverButton {
+.ouiSuperDatePicker__startPopoverButton {
   // Fixes margin around delimiter
-  // Only needed on first popover since basic .euiFormControlLayout takes care of the last one
-  margin-right: -$euiSizeM;
+  // Only needed on first popover since basic .ouiFormControlLayout takes care of the last one
+  margin-right: -$ouiSizeM;
 }
 
-.euiSuperDatePicker__prettyFormat {
-  @include euiSuperDatePickerText;
+.ouiSuperDatePicker__prettyFormat {
+  @include ouiSuperDatePickerText;
   display: flex;
   justify-content: space-between;
   text-align: left;
@@ -45,34 +56,34 @@
   &:focus {
     text-decoration: none;
 
-    .euiSuperDatePicker__prettyFormatLink {
+    .ouiSuperDatePicker__prettyFormatLink {
       text-decoration: underline;
     }
   }
 
   &:disabled {
-    background-color: $euiFormBackgroundDisabledColor;
-    color: $euiColorDarkShade;
+    background-color: $ouiFormBackgroundDisabledColor;
+    color: $ouiColorDarkShade;
     cursor: not-allowed;
 
-    .euiSuperDatePicker__prettyFormatLink {
+    .ouiSuperDatePicker__prettyFormatLink {
       display: none;
     }
   }
 }
 
-.euiSuperDatePicker__prettyFormatLink {
-  color: $euiLinkColor;
-  padding-left: $euiSizeXS; // Adds some separation between date text and link
+.ouiSuperDatePicker__prettyFormatLink {
+  color: $ouiLinkColor;
+  padding-left: $ouiSizeXS; // Adds some separation between date text and link
   flex-shrink: 0;
 }
 
-@include euiBreakpoint('xs', 's') {
-  .euiSuperDatePicker__flexWrapper {
-    width: calc(100% + #{$euiSizeS});
+@include ouiBreakpoint('xs', 's') {
+  .ouiSuperDatePicker__flexWrapper {
+    width: calc(100% + #{$ouiSizeS});
   }
 
-  .euiSuperDatePicker__prettyFormatLink {
+  .ouiSuperDatePicker__prettyFormatLink {
     flex-shrink: 1;
     min-width: 3em; // Ensures at least "Show" is always visible
   }

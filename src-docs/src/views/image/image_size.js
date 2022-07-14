@@ -1,10 +1,21 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
-import { EuiImage, EuiSpacer } from '../../../../src/components';
+import { OuiImage, OuiSpacer } from '../../../../src/components';
 
 export default () => (
   <div>
-    <EuiImage
+    <OuiImage
       hasShadow
       allowFullScreen
       size={50}
@@ -12,8 +23,8 @@ export default () => (
       alt="Accessible image alt goes here"
       src="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <OuiSpacer />
+    <OuiImage
       size="s"
       hasShadow
       allowFullScreen
@@ -21,8 +32,8 @@ export default () => (
       alt="Accessible image alt goes here"
       src="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <OuiSpacer />
+    <OuiImage
       size="m"
       hasShadow
       allowFullScreen
@@ -30,8 +41,8 @@ export default () => (
       alt="Accessible image alt goes here"
       src="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <OuiSpacer />
+    <OuiImage
       size="l"
       hasShadow
       allowFullScreen
@@ -39,8 +50,8 @@ export default () => (
       alt="Accessible image alt goes here"
       src="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <OuiSpacer />
+    <OuiImage
       size="xl"
       hasShadow
       allowFullScreen
@@ -48,16 +59,16 @@ export default () => (
       alt="Accessible image alt goes here"
       src="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <OuiSpacer />
+    <OuiImage
       hasShadow
       allowFullScreen
       caption="Original"
       alt="Accessible image alt goes here"
       src="https://source.unsplash.com/1000x1000/?Nature"
     />
-    <EuiSpacer />
-    <EuiImage
+    <OuiSpacer />
+    <OuiImage
       hasShadow
       allowFullScreen
       size="fullWidth"

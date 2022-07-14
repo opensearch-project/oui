@@ -1,36 +1,47 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
 import React from 'react';
 
 import {
-  EuiFlexGroup,
-  EuiFlexItem,
-  EuiFormRow,
-  EuiButton,
-  EuiFieldText,
-  EuiFieldNumber,
-  EuiAvatar,
+  OuiFlexGroup,
+  OuiFlexItem,
+  OuiFormRow,
+  OuiButton,
+  OuiFieldText,
+  OuiFieldNumber,
+  OuiAvatar,
 } from '../../../../src/components/';
 
 export default () => (
-  <EuiFlexGroup style={{ maxWidth: 600 }}>
-    <EuiFlexItem grow={false} style={{ width: 100 }}>
-      <EuiFormRow label="Age">
-        <EuiFieldNumber max={10} placeholder={42} />
-      </EuiFormRow>
-    </EuiFlexItem>
-    <EuiFlexItem>
-      <EuiFormRow label="Full name">
-        <EuiFieldText icon="user" placeholder="John Doe" />
-      </EuiFormRow>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiFormRow label="Avatar" display="center">
-        <EuiAvatar name="John Doe" size="s" />
-      </EuiFormRow>
-    </EuiFlexItem>
-    <EuiFlexItem grow={false}>
-      <EuiFormRow hasEmptyLabelSpace display="center">
-        <EuiButton>Save</EuiButton>
-      </EuiFormRow>
-    </EuiFlexItem>
-  </EuiFlexGroup>
+  <OuiFlexGroup style={{ maxWidth: 600 }}>
+    <OuiFlexItem grow={false} style={{ width: 100 }}>
+      <OuiFormRow label="Age">
+        <OuiFieldNumber max={10} placeholder={42} />
+      </OuiFormRow>
+    </OuiFlexItem>
+    <OuiFlexItem>
+      <OuiFormRow label="Full name">
+        <OuiFieldText icon="user" placeholder="John Doe" />
+      </OuiFormRow>
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiFormRow label="Avatar" display="center">
+        <OuiAvatar name="John Doe" size="s" />
+      </OuiFormRow>
+    </OuiFlexItem>
+    <OuiFlexItem grow={false}>
+      <OuiFormRow hasEmptyLabelSpace display="center">
+        <OuiButton>Save</OuiButton>
+      </OuiFormRow>
+    </OuiFlexItem>
+  </OuiFlexGroup>
 );
