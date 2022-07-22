@@ -16,3 +16,13 @@ $ouiDataGridCellPaddingS: $ouiSizeXS;
 $ouiDataGridCellPaddingM: $ouiSizeM / 2;
 $ouiDataGridCellPaddingL: $ouiSizeS;
 $ouiDataGridVerticalBorder: solid 1px tintOrShade($ouiBorderColor, 60%, 30%);
+
+
+/* OUI -> EUI Aliases */
+$euiDataGridColumnResizerWidth: $ouiDataGridColumnResizerWidth;
+$euiDataGridPopoverMaxHeight: $ouiDataGridPopoverMaxHeight;
+$euiDataGridCellPaddingS: $ouiDataGridCellPaddingS;
+$euiDataGridCellPaddingM: $ouiDataGridCellPaddingM;
+$euiDataGridCellPaddingL: $ouiDataGridCellPaddingL;
+$euiDataGridVerticalBorder: $ouiDataGridVerticalBorder;
+/* End of Aliases */

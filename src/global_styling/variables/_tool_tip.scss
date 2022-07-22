@@ -17,3 +17,9 @@ $ouiTooltipAnimations: (
   bottom: ouiToolTipLeft,
   right: ouiToolTipRight,
 ) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiTooltipBackgroundColor: $ouiTooltipBackgroundColor;
+$euiTooltipAnimations: $ouiTooltipAnimations;
+/* End of Aliases */

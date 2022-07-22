@@ -37,3 +37,10 @@
 @mixin ouiToolTipAnimation($side: 'top') {
   animation: #{map-get($ouiTooltipAnimations, $side)} $ouiAnimSpeedSlow ease-out 0s forwards;
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiToolTipStyle($size: null) { @include ouiToolTipStyle($size); }
+@mixin euiToolTipTitle { @include ouiToolTipTitle; }
+@mixin euiToolTipAnimation($side: 'top') { @include ouiToolTipAnimation($side); }
+/* End of Aliases */

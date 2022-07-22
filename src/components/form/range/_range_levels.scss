@@ -51,3 +51,8 @@ $ouiRangeLevelColors: (
     background-color: transparentize($color, .7);
   }
 }
+
+
+/* OUI -> EUI Aliases */
+$euiRangeLevelColors: $ouiRangeLevelColors;
+/* End of Aliases */

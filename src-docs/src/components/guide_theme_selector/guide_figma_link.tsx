@@ -39,12 +39,13 @@ const GuideFigmaLinkComponent: React.FunctionComponent<GuideFigmaLinkProps> = ({
 }) => {
   const isMobileSize = useIsWithinBreakpoints(['xs', 's']);
 
-  const isAmsterdam = context.theme.includes('amsterdam');
+  const isCascadia = context.theme.includes('cascadia');
 
+  // ToDo: Fix the Figma links
   let href = 'https://www.figma.com/community/file/809845546262698150';
   const label = 'OUI Figma Design Library';
 
-  if (isAmsterdam) {
+  if (isCascadia) {
     href = 'https://www.figma.com/community/file/964536385682658129';
   }
 

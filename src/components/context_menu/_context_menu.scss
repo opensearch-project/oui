@@ -36,3 +36,8 @@ $ouiContextMenuWidth: $ouiSize * 16;
 .ouiContextMenu__icon {
   margin-right: $ouiSizeS;
 }
+
+
+/* OUI -> EUI Aliases */
+$euiContextMenuWidth: $ouiContextMenuWidth;
+/* End of Aliases */

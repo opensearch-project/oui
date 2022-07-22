@@ -19,3 +19,8 @@
   word-break: break-all;
   transition: background $ouiAnimSpeedFast ease-in;
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiSuperDatePickerText { @include ouiSuperDatePickerText; }
+/* End of Aliases */

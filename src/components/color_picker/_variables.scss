@@ -15,3 +15,13 @@ $ouiColorPickerSaturationRange0: rgba(0, 0, 0, 1);
 $ouiColorPickerSaturationRange1: rgba(0, 0, 0, 0);
 $ouiColorPickerIndicatorSize: $ouiSizeM;
 $ouiColorPickerWidth: ($ouiSizeL * 5) + ($ouiSizeS * 4); // 5 columns of swatches + margins + border
+
+
+/* OUI -> EUI Aliases */
+$euiColorPickerValueRange0: $ouiColorPickerValueRange0;
+$euiColorPickerValueRange1: $ouiColorPickerValueRange1;
+$euiColorPickerSaturationRange0: $ouiColorPickerSaturationRange0;
+$euiColorPickerSaturationRange1: $ouiColorPickerSaturationRange1;
+$euiColorPickerIndicatorSize: $ouiColorPickerIndicatorSize;
+$euiColorPickerWidth: $ouiColorPickerWidth;
+/* End of Aliases */

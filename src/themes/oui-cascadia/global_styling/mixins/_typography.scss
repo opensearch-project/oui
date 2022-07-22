@@ -1,0 +1,71 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Font sizing extends, using rem mixin
+// All line-heights are aligned to baseline grid
+// sass-lint:disable no-vendor-prefixes
+
+// Redoing this mixin mainly to remove the letter-spacing
+@mixin ouiFont {
+  font-family: $ouiFontFamily;
+  font-weight: $ouiFontWeightRegular;
+  letter-spacing: normal;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+@mixin ouiFontSizeXS {
+  @include fontSize($ouiFontSizeXS);
+  @include lineHeightFromBaseline(2);
+}
+
+@mixin ouiFontSizeS {
+  @include fontSize($ouiFontSizeS);
+  @include lineHeightFromBaseline(3);
+}
+
+@mixin ouiFontSize {
+  @include fontSize($ouiFontSize);
+  @include lineHeightFromBaseline(3);
+}
+
+@mixin ouiFontSizeM {
+  @include fontSize($ouiFontSizeM);
+  @include lineHeightFromBaseline(3);
+}
+
+@mixin ouiFontSizeL {
+  @include fontSize($ouiFontSizeL);
+  @include lineHeightFromBaseline(4);
+}
+
+@mixin ouiFontSizeXL {
+  @include fontSize($ouiFontSizeXL);
+  @include lineHeightFromBaseline(4);
+}
+
+@mixin ouiFontSizeXXL {
+  @include fontSize($ouiFontSizeXXL);
+  @include lineHeightFromBaseline(5);
+}
+
+
+/* OUI -> EUI Aliases */
+@mixin euiFont { @include ouiFont; }
+@mixin euiFontSizeXS { @include ouiFontSizeXS; }
+@mixin euiFontSizeS { @include ouiFontSizeS; }
+@mixin euiFontSize { @include ouiFontSize; }
+@mixin euiFontSizeM { @include ouiFontSizeM; }
+@mixin euiFontSizeL { @include ouiFontSizeL; }
+@mixin euiFontSizeXL { @include ouiFontSizeXL; }
+@mixin euiFontSizeXXL { @include ouiFontSizeXXL; }
+/* End of Aliases */

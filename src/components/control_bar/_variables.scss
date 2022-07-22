@@ -22,3 +22,13 @@ $ouiControlBarHeights: (
   l: 100vh,
 );
 
+
+
+/* OUI -> EUI Aliases */
+$euiControlBarBackground: $ouiControlBarBackground;
+$euiControlBarText: $ouiControlBarText;
+$euiControlBarBorderColor: $ouiControlBarBorderColor;
+$euiControlBarInitialHeight: $ouiControlBarInitialHeight;
+$euiControlBarMaxHeight: $ouiControlBarMaxHeight;
+$euiControlBarHeights: $ouiControlBarHeights;
+/* End of Aliases */

@@ -16,3 +16,8 @@ $ouiCallOutTypes: (
   warning: $ouiColorWarning,
   danger: $ouiColorDanger,
 );
+
+
+/* OUI -> EUI Aliases */
+$euiCallOutTypes: $ouiCallOutTypes;
+/* End of Aliases */

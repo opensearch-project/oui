@@ -149,7 +149,7 @@ export const OuiPanel: FunctionComponent<OuiPanelProps> = ({
     `ouiPanel--${color}`,
     {
       // The `no` classes turn off the option for default theme
-      // While the `has` classes turn it on for Amsterdam
+      // While the `has` classes turn it on for Cascadia
       'ouiPanel--hasShadow': canHaveShadow && hasShadow === true,
       'ouiPanel--noShadow': !canHaveShadow || hasShadow === false,
       'ouiPanel--hasBorder': canHaveBorder && hasBorder === true,

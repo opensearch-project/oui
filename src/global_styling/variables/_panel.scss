@@ -30,3 +30,10 @@ $ouiPanelBackgroundColorModifiers: (
   'warning': tintOrShade($ouiColorWarning, 90%, 70%),
   'danger':  tintOrShade($ouiColorDanger, 90%, 70%),
 ) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiPanelPaddingModifiers: $ouiPanelPaddingModifiers;
+$euiPanelBorderRadiusModifiers: $ouiPanelBorderRadiusModifiers;
+$euiPanelBackgroundColorModifiers: $ouiPanelBackgroundColorModifiers;
+/* End of Aliases */

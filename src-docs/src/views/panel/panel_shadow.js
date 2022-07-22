@@ -16,7 +16,7 @@ import { ThemeContext } from '../../components';
 
 export default () => {
   const themeContext = useContext(ThemeContext);
-  const isAmsterdamTheme = themeContext.theme.includes('amsterdam');
+  const isCascadiaTheme = themeContext.theme.includes('cascadia');
 
   return (
     <div>
@@ -26,8 +26,8 @@ export default () => {
 
       <OuiSpacer />
 
-      {/* This example only works for the Amsterdam theme. The default theme has `hasBorder={true}` by default. */}
-      {isAmsterdamTheme && (
+      {/* This example only works for the Cascadia theme. The default theme has `hasBorder={true}` by default. */}
+      {isCascadiaTheme && (
         <>
           <OuiPanel hasBorder={true}>
             <OuiCode>{'hasBorder={true}'}</OuiCode>

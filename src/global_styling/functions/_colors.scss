@@ -147,3 +147,10 @@ $ouiContrastRatioDisabled: 2;
 @function makeDisabledContrastColor($color, $background: $ouiPageBackgroundColor) {
   @return makeHighContrastColor($color, $background, $ouiContrastRatioDisabled);
 }
+
+
+/* OUI -> EUI Aliases */
+$euiContrastRatioText: $ouiContrastRatioText;
+$euiContrastRatioGraphic: $ouiContrastRatioGraphic;
+$euiContrastRatioDisabled: $ouiContrastRatioDisabled;
+/* End of Aliases */

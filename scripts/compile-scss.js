@@ -75,6 +75,32 @@ async function compileScssFiles(
           }`
         );
       }
+
+
+      /* OUI -> EUI Aliases */
+      try {
+        const { name } = path.parse(inputFilename);
+        const outputFilenames = await compileScssFile(
+          inputFilename,
+          path.join(destinationDirectory, `eui_${name.replace('cascadia', 'amsterdam')}.css`),
+          path.join(destinationDirectory, `eui_${name.replace('cascadia', 'amsterdam')}.json`),
+          path.join(destinationDirectory, `eui_${name.replace('cascadia', 'amsterdam')}.json.d.ts`),
+          packageName,
+          true
+        );
+        console.log(
+          chalk`{green ✔} Finished compiling {gray ${inputFilename}} to ${outputFilenames
+            .map(filename => chalk.gray(filename))
+            .join(', ')}`
+        );
+      } catch (error) {
+        console.log(
+          chalk`{red ✗} Failed to compile {gray ${inputFilename}} with ${
+            error.stack
+          }`
+        );
+      }
+      /* End of Aliases */
     })
   );
 }
@@ -84,7 +110,10 @@ async function compileScssFile(
   outputCssFilename,
   outputVarsFilename,
   outputVarTypesFilename,
-  packageName
+  packageName,
+  /* OUI -> EUI Aliases */
+  renameToEUI = false,
+  /* End of Aliases */
 ) {
   const outputCssMinifiedFilename = outputCssFilename.replace(
     /\.css$/,
@@ -108,7 +137,10 @@ async function compileScssFile(
   );
 
   const { css: postprocessedCss } = await postcss(postcssConfiguration).process(
-    renderedCss,
+    /* OUI -> EUI Aliases: Modified */
+    //renderedCss,
+    renameToEUI ? renderedCss.toString().replace(/([. '"-])oui/g, '$1eui') : renderedCss,
+    /* End of Aliases */
     {
       from: outputCssFilename,
       to: outputCssFilename,
@@ -117,10 +149,16 @@ async function compileScssFile(
 
   const { css: postprocessedMinifiedCss } = await postcss(
     postcssConfigurationWithMinification
-  ).process(renderedCss, {
-    from: outputCssFilename,
-    to: outputCssMinifiedFilename,
-  });
+  ).process(
+    /* OUI -> EUI Aliases: Modified */
+    //renderedCss,
+    renameToEUI ? renderedCss.toString().replace(/([. '"-])oui/g, '$1eui') : renderedCss,
+    /* End of Aliases */
+    {
+      from: outputCssFilename,
+      to: outputCssMinifiedFilename,
+    }
+  );
 
   await Promise.all([
     writeFile(outputCssFilename, postprocessedCss),

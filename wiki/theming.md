@@ -5,8 +5,8 @@ variables. Currently we maintain the following themes:
 
 * theme_light (the default OUI theme)
 * theme_dark (the same theme in dark)
-* theme_amsterdam_light (the next iteration of the OUI light theme)
-* theme_amsterdam_dark (the next iteration of the OUI dark theme)
+* theme_cascadia_light (the next iteration of the OUI light theme)
+* theme_cascadia_dark (the next iteration of the OUI dark theme)
 
 Each of these themes include variables,
 mixins, functions and other overwrites that adjust colors and sizing to fit the

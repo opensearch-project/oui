@@ -1,0 +1,59 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// This extra import allows any variables that are created via functions to work when loaded into JS
+@import '../../global_styling/variables/colors';
+
+// Core
+$ouiColorPrimary: #07C;
+$ouiColorSecondary: #00BFB3;
+$ouiColorAccent: #F04E98;
+
+// Status
+$ouiColorSuccess: $ouiColorSecondary;
+$ouiColorWarning: #FEC514;
+$ouiColorDisabled: #ABB4C4;
+
+// Grays are the same
+
+// Backgrounds
+$ouiPageBackgroundColor: tint($ouiColorLightestShade, 50%);
+$ouiColorHighlight: tint($ouiColorWarning, 90%);
+
+// Contrasty text variants
+$ouiTextSubduedColor: $ouiColorDarkShade;
+$ouiColorPrimaryText: makeHighContrastColor($ouiColorPrimary);
+$ouiColorSecondaryText: makeHighContrastColor($ouiColorSecondary);
+$ouiColorAccentText: makeHighContrastColor($ouiColorAccent);
+$ouiColorWarningText: makeHighContrastColor($ouiColorWarning);
+$ouiColorDisabledText: makeDisabledContrastColor($ouiColorDisabled);
+$ouiColorSuccessText: $ouiColorSecondaryText;
+$ouiLinkColor: $ouiColorPrimaryText;
+
+
+/* OUI -> EUI Aliases */
+$euiColorPrimary: $ouiColorPrimary;
+$euiColorSecondary: $ouiColorSecondary;
+$euiColorAccent: $ouiColorAccent;
+$euiColorSuccess: $ouiColorSuccess;
+$euiColorWarning: $ouiColorWarning;
+$euiColorDisabled: $ouiColorDisabled;
+$euiPageBackgroundColor: $ouiPageBackgroundColor;
+$euiColorHighlight: $ouiColorHighlight;
+$euiTextSubduedColor: $ouiTextSubduedColor;
+$euiColorPrimaryText: $ouiColorPrimaryText;
+$euiColorSecondaryText: $ouiColorSecondaryText;
+$euiColorAccentText: $ouiColorAccentText;
+$euiColorWarningText: $ouiColorWarningText;
+$euiColorDisabledText: $ouiColorDisabledText;
+$euiColorSuccessText: $ouiColorSuccessText;
+$euiLinkColor: $ouiLinkColor;
+/* End of Aliases */

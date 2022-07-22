@@ -30,3 +30,14 @@ $ouiButtonTypes: (
   ghost: $ouiColorGhost, // Ghost is special, and does not care about theming.
   text: $ouiColorDarkShade, // Reserved for special use cases
 ) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiButtonHeight: $ouiButtonHeight;
+$euiButtonHeightSmall: $ouiButtonHeightSmall;
+$euiButtonHeightXSmall: $ouiButtonHeightXSmall;
+$euiButtonColorDisabled: $ouiButtonColorDisabled;
+$euiButtonColorDisabledText: $ouiButtonColorDisabledText;
+$euiButtonColorGhostDisabled: $ouiButtonColorGhostDisabled;
+$euiButtonTypes: $ouiButtonTypes;
+/* End of Aliases */

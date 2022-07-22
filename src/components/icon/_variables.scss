@@ -32,3 +32,10 @@ $ouiIconSizes: (
   xLarge: $ouiSizeXL,
   xxLarge: $ouiSizeXXL
 );
+
+
+/* OUI -> EUI Aliases */
+$euiIconLoadingOpacity: $ouiIconLoadingOpacity;
+$euiIconColors: $ouiIconColors;
+$euiIconSizes: $ouiIconSizes;
+/* End of Aliases */

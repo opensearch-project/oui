@@ -58,3 +58,8 @@
     }
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiBreakpoint($sizes...) { @include ouiBreakpoint($sizes...); }
+/* End of Aliases */

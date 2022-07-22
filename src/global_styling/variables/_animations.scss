@@ -22,3 +22,14 @@ $ouiAnimSpeedExtraSlow: 500ms !default;
 
 // Keyframe animation declarations can be found in
 // utility/animations.scss
+
+
+/* OUI -> EUI Aliases */
+$euiAnimSlightBounce: $ouiAnimSlightBounce;
+$euiAnimSlightResistance: $ouiAnimSlightResistance;
+$euiAnimSpeedExtraFast: $ouiAnimSpeedExtraFast;
+$euiAnimSpeedFast: $ouiAnimSpeedFast;
+$euiAnimSpeedNormal: $ouiAnimSpeedNormal;
+$euiAnimSpeedSlow: $ouiAnimSpeedSlow;
+$euiAnimSpeedExtraSlow: $ouiAnimSpeedExtraSlow;
+/* End of Aliases */

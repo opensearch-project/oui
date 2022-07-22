@@ -175,3 +175,8 @@ $ouiProgressSizes: (
     @include ouiFontSizeS;
   }
 }
+
+
+/* OUI -> EUI Aliases */
+$euiProgressSizes: $ouiProgressSizes;
+/* End of Aliases */

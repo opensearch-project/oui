@@ -190,6 +190,31 @@ function compileBundle() {
 			return null;
 	  }
   });
+
+  /* OUI -> EUI Aliases */
+  execSync(
+    'webpack src/themes/charts/themes.ts -o dist/eui_charts_theme.js --output-library-target="commonjs" --config=src/webpack.config.js',
+    {
+      stdio: 'inherit',
+    }
+  );
+  dtsGenerator({
+    prefix: '',
+    out: 'dist/eui_charts_theme.d.ts',
+    baseDir: path.resolve(__dirname, '..', 'src/themes/charts/'),
+    files: ['themes.ts'],
+    resolveModuleId() {
+      return '@opensearch-project/oui/dist/eui_charts_theme';
+    },
+    resolveModuleImport(params) {
+      if (params.importedModuleId === '../../components/common') {
+        return '@opensearch-project/oui/src/components/common';
+      }
+      return null;
+    }
+  });
+  /* End of Aliases */
+
   console.log(chalk.green('✔ Finished chart theme module'));
 }
 

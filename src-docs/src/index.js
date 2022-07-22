@@ -24,16 +24,16 @@ import { registerTheme, ExampleContext } from './services';
 import Routes from './routes';
 import themeLight from './theme_light.scss';
 import themeDark from './theme_dark.scss';
-import themeAmsterdamLight from './theme_amsterdam_light.scss';
-import themeAmsterdamDark from './theme_amsterdam_dark.scss';
+import themeCascadiaLight from './theme_cascadia_light.scss';
+import themeCascadiaDark from './theme_cascadia_dark.scss';
 import { ThemeProvider } from './components/with_theme/theme_context';
 import ScrollToHash from './components/scroll_to_hash';
 import { LinkWrapper } from './views/link_wrapper';
 
 registerTheme('light', [themeLight]);
 registerTheme('dark', [themeDark]);
-registerTheme('amsterdam-light', [themeAmsterdamLight]);
-registerTheme('amsterdam-dark', [themeAmsterdamDark]);
+registerTheme('cascadia-light', [themeCascadiaLight]);
+registerTheme('cascadia-dark', [themeCascadiaDark]);
 
 // Set up app
 

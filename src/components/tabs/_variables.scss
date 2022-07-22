@@ -12,3 +12,10 @@
 $ouiTabFontSize: $ouiFontSize !default;
 $ouiTabFontSizeS: $ouiFontSizeS !default;
 $ouiTabFontSizeL: $ouiFontSizeM !default;
+
+
+/* OUI -> EUI Aliases */
+$euiTabFontSize: $ouiTabFontSize;
+$euiTabFontSizeS: $ouiTabFontSizeS;
+$euiTabFontSizeL: $ouiTabFontSizeL;
+/* End of Aliases */

@@ -137,3 +137,15 @@
     @content;
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiScrollBar($thumbColor: $ouiColorDarkShade, $trackBackgroundColor: transparent) { @include ouiScrollBar($thumbColor, $trackBackgroundColor); }
+@mixin euiYScroll { @include ouiYScroll; }
+@mixin euiXScroll { @include ouiXScroll; }
+@mixin euiYScrollWithShadows { @include ouiYScrollWithShadows; }
+@mixin euiXScrollWithShadows { @include ouiXScrollWithShadows; }
+@mixin euiScreenReaderOnly { @include ouiScreenReaderOnly; }
+@mixin euiCanAnimate { @include ouiCanAnimate; }
+@mixin euiCantAnimate { @include ouiCantAnimate; }
+/* End of Aliases */

@@ -1,0 +1,54 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+$ouiFormControlBorderRadius: $ouiBorderRadius;
+$ouiFormControlCompressedBorderRadius: $ouiBorderRadiusSmall;
+$ouiFormInputGroupBorder: none;
+$ouiFormBackgroundReadOnlyColor: $ouiColorEmptyShade;
+
+$ouiFormControlBoxShadow: 0 0 transparent;
+
+$ouiCheckboxBorderRadius: $ouiBorderRadiusSmall;
+
+// Range
+$ouiRangeTrackColor: $ouiColorLightShade;
+$ouiRangeHighlightColor: $ouiColorDarkShade;
+
+$ouiRangeThumbBorderColor: $ouiColorEmptyShade;
+$ouiRangeThumbBackgroundColor: $ouiRangeHighlightColor;
+
+$ouiRangeTrackHeight: $ouiSizeM / 2;
+$ouiRangeTrackCompressedHeight: $ouiSizeXS;
+$ouiRangeHighlightHeight: $ouiRangeTrackHeight;
+$ouiRangeHighlightCompressedHeight: $ouiRangeTrackCompressedHeight;
+
+$ouiRangeHeight: $ouiFormControlHeight;
+$ouiRangeCompressedHeight: $ouiFormControlCompressedHeight;
+
+
+/* OUI -> EUI Aliases */
+$euiFormControlBorderRadius: $ouiFormControlBorderRadius;
+$euiFormControlCompressedBorderRadius: $ouiFormControlCompressedBorderRadius;
+$euiFormInputGroupBorder: $ouiFormInputGroupBorder;
+$euiFormBackgroundReadOnlyColor: $ouiFormBackgroundReadOnlyColor;
+$euiFormControlBoxShadow: $ouiFormControlBoxShadow;
+$euiCheckboxBorderRadius: $ouiCheckboxBorderRadius;
+$euiRangeTrackColor: $ouiRangeTrackColor;
+$euiRangeHighlightColor: $ouiRangeHighlightColor;
+$euiRangeThumbBorderColor: $ouiRangeThumbBorderColor;
+$euiRangeThumbBackgroundColor: $ouiRangeThumbBackgroundColor;
+$euiRangeTrackHeight: $ouiRangeTrackHeight;
+$euiRangeTrackCompressedHeight: $ouiRangeTrackCompressedHeight;
+$euiRangeHighlightHeight: $ouiRangeHighlightHeight;
+$euiRangeHighlightCompressedHeight: $ouiRangeHighlightCompressedHeight;
+$euiRangeHeight: $ouiRangeHeight;
+$euiRangeCompressedHeight: $ouiRangeCompressedHeight;
+/* End of Aliases */

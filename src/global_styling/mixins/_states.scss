@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-@mixin ouiFocusRing($size: 'small', $amsterdamOnlyProp: null) {
+@mixin ouiFocusRing($size: 'small', $cascadiaOnlyProp: null) {
   @if $size == 'large' {
     // It's always OK to use the focus animation. This will take precedence over times we turn it off individually like OuiButtonEmpty
     // sass-lint:disable-block no-important
@@ -59,3 +59,13 @@
     @include ouiDisabledState($disabledColor);
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiFocusRing($size: 'small', $cascadiaOnlyProp: null) { @include ouiFocusRing($size, $cascadiaOnlyProp); }
+@mixin euiFocusBackground($color: $ouiColorPrimary) { @include ouiFocusBackground($color); }
+@mixin euiHoverState { @include ouiHoverState; }
+@mixin euiFocusState($color: $ouiColorPrimary) { @include ouiFocusState($color); }
+@mixin euiDisabledState($color: $ouiButtonColorDisabledText) { @include ouiDisabledState($color); }
+@mixin euiInteractiveStates($focusColor: $ouiColorPrimary, $disabledColor: $ouiButtonColorDisabledText) { @include ouiInteractiveStates($focusColor, $disabledColor); }
+/* End of Aliases */

@@ -113,3 +113,8 @@ $ouiToastTypes: (
 .ouiToastBody {
   word-wrap: break-word; /* 1 */
 }
+
+
+/* OUI -> EUI Aliases */
+$euiToastTypes: $ouiToastTypes;
+/* End of Aliases */

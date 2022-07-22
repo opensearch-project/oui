@@ -16,3 +16,8 @@
     linear-gradient(160deg, $ouiSideNavEmphasizedBackgroundColor 0, $ouiSideNavEmphasizedBackgroundColor $ouiSizeXL, rgba(red, 0) 0),
     linear-gradient(175deg, $ouiSideNavEmphasizedBackgroundColor 0, $ouiSideNavEmphasizedBackgroundColor $ouiSize, rgba(red, 0) 0);
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiSideNavEmbellish { @include ouiSideNavEmbellish; }
+/* End of Aliases */

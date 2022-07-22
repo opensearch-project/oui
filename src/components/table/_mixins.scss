@@ -29,3 +29,10 @@
   background-position-x: right;
   background-repeat: no-repeat;
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiTableCell { @include ouiTableCell; }
+@mixin euiTableCellCheckbox { @include ouiTableCellCheckbox; }
+@mixin euiTableActionsBackgroundMobile { @include ouiTableActionsBackgroundMobile; }
+/* End of Aliases */
