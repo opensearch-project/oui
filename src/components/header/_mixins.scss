@@ -45,3 +45,8 @@
     stroke: $backgroundColor;
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiHeaderDarkTheme($backgroundColor) { @include ouiHeaderDarkTheme($backgroundColor); }
+/* End of Aliases */

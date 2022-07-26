@@ -21,3 +21,8 @@
     background: $ouiFocusBackgroundColor;
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiLink { @include ouiLink; }
+/* End of Aliases */

@@ -21,3 +21,10 @@ $ouiCollapsibleNavGroupDarkHighContrastColor: makeGraphicContrastColor(
   $ouiColorPrimary,
   $ouiCollapsibleNavGroupDarkBackgroundColor
 ) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiCollapsibleNavGroupLightBackgroundColor: $ouiCollapsibleNavGroupLightBackgroundColor;
+$euiCollapsibleNavGroupDarkBackgroundColor: $ouiCollapsibleNavGroupDarkBackgroundColor;
+$euiCollapsibleNavGroupDarkHighContrastColor: $ouiCollapsibleNavGroupDarkHighContrastColor;
+/* End of Aliases */

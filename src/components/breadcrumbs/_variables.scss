@@ -11,3 +11,9 @@
 
 $ouiBreadcrumbSpacing: $ouiSizeS !default;
 $ouiBreadcrumbTruncateWidth: $ouiSize * 10 !default;
+
+
+/* OUI -> EUI Aliases */
+$euiBreadcrumbSpacing: $ouiBreadcrumbSpacing;
+$euiBreadcrumbTruncateWidth: $ouiBreadcrumbTruncateWidth;
+/* End of Aliases */

@@ -20,3 +20,8 @@
   border-bottom-left-radius: $ouiBorderRadius - 1px;
   border-bottom-right-radius: $ouiBorderRadius - 1px;
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiCardBottomNodePosition { @include ouiCardBottomNodePosition; }
+/* End of Aliases */

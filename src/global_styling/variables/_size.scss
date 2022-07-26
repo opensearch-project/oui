@@ -22,3 +22,17 @@ $ouiButtonMinWidth: $ouiSize * 7 !default;
 
 $ouiScrollBar: $ouiSize !default;
 $ouiScrollBarCorner: $ouiSizeS * .75 !default;
+
+
+/* OUI -> EUI Aliases */
+$euiSize: $ouiSize;
+$euiSizeXS: $ouiSizeXS;
+$euiSizeS: $ouiSizeS;
+$euiSizeM: $ouiSizeM;
+$euiSizeL: $ouiSizeL;
+$euiSizeXL: $ouiSizeXL;
+$euiSizeXXL: $ouiSizeXXL;
+$euiButtonMinWidth: $ouiButtonMinWidth;
+$euiScrollBar: $ouiScrollBar;
+$euiScrollBarCorner: $ouiScrollBarCorner;
+/* End of Aliases */

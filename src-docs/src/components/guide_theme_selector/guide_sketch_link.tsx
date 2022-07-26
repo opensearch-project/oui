@@ -38,13 +38,14 @@ const GuideSketchLinkComponent: React.FunctionComponent<GuideSketchLinkProps> = 
 }) => {
   const isMobileSize = useIsWithinBreakpoints(['xs', 's']);
 
+  // ToDo: Fix link or redo this interface
   const href =
-    'https://github.com/elastic/eui/releases/download/v8.0.0/oui_sketch_8.0.0.zip';
+    'https://github.com/elastic/eui/releases/download/v8.0.0/eui_sketch_8.0.0.zip';
   const label = 'OUI Sketch Library (download)';
 
-  const isAmsterdam = context.theme.includes('amsterdam');
+  const isCascadia = context.theme.includes('cascadia');
 
-  if (isAmsterdam) return <></>;
+  if (isCascadia) return <></>;
 
   return isMobileSize ? (
     <OuiButtonEmpty size="s" flush="both" iconType="logoSketch" href={href}>

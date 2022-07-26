@@ -106,3 +106,28 @@ $ouiTitles: (
     'letter-spacing': -.03em,
   ),
 ) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiFontFamily: $ouiFontFamily;
+$euiCodeFontFamily: $ouiCodeFontFamily;
+$euiFontFeatureSettings: $ouiFontFeatureSettings;
+$euiTextScale: $ouiTextScale;
+$euiFontSize: $ouiFontSize;
+$euiFontSizeXS: $ouiFontSizeXS;
+$euiFontSizeS: $ouiFontSizeS;
+$euiFontSizeM: $ouiFontSizeM;
+$euiFontSizeL: $ouiFontSizeL;
+$euiFontSizeXL: $ouiFontSizeXL;
+$euiFontSizeXXL: $ouiFontSizeXXL;
+$euiLineHeight: $ouiLineHeight;
+$euiBodyLineHeight: $ouiBodyLineHeight;
+$euiFontWeightLight: $ouiFontWeightLight;
+$euiFontWeightRegular: $ouiFontWeightRegular;
+$euiFontWeightMedium: $ouiFontWeightMedium;
+$euiFontWeightSemiBold: $ouiFontWeightSemiBold;
+$euiFontWeightBold: $ouiFontWeightBold;
+$euiCodeFontWeightRegular: $ouiCodeFontWeightRegular;
+$euiCodeFontWeightBold: $ouiCodeFontWeightBold;
+$euiTitles: $ouiTitles;
+/* End of Aliases */

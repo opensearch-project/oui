@@ -21,3 +21,8 @@
     max-width: $ouiPageDefaultMaxWidth;
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiPageRestrictWidth { @include ouiPageRestrictWidth; }
+/* End of Aliases */

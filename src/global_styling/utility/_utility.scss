@@ -153,3 +153,8 @@
 .oui-fullHeight {
   @include ouiFullHeight;
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiFullHeight { @include ouiFullHeight; }
+/* End of Aliases */

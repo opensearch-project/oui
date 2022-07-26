@@ -14,3 +14,8 @@ $ouiDragAndDropSpacing: (
   m: ($ouiSizeS / 2),
   l: ($ouiSize / 2),
 );
+
+
+/* OUI -> EUI Aliases */
+$euiDragAndDropSpacing: $ouiDragAndDropSpacing;
+/* End of Aliases */

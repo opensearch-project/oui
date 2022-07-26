@@ -27,3 +27,8 @@
   align-items: stretch;
   clip-path: polygon(-50% 0, 100% 0, 100% 100%, -50% 100%);
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiFlyout { @include ouiFlyout; }
+/* End of Aliases */

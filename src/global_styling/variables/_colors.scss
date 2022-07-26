@@ -155,3 +155,123 @@ $ouiCodeBlockAdditionColor: makeHighContrastColor($ouiColorVis0, $ouiCodeBlockBa
 $ouiCodeBlockDeletionColor: makeHighContrastColor($ouiColorDanger, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockSelectorClassColor: inherit !default;
 $ouiCodeBlockSelectorIdColor: inherit !default;
+
+
+/* OUI -> EUI Aliases */
+$euiColorGhost: $ouiColorGhost;
+$euiColorInk: $ouiColorInk;
+$euiColorPrimary: $ouiColorPrimary;
+$euiColorSecondary: $ouiColorSecondary;
+$euiColorAccent: $ouiColorAccent;
+$euiColorSuccess: $ouiColorSuccess;
+$euiColorWarning: $ouiColorWarning;
+$euiColorDanger: $ouiColorDanger;
+$euiColorEmptyShade: $ouiColorEmptyShade;
+$euiColorLightestShade: $ouiColorLightestShade;
+$euiColorLightShade: $ouiColorLightShade;
+$euiColorMediumShade: $ouiColorMediumShade;
+$euiColorDarkShade: $ouiColorDarkShade;
+$euiColorDarkestShade: $ouiColorDarkestShade;
+$euiColorFullShade: $ouiColorFullShade;
+$euiPageBackgroundColor: $ouiPageBackgroundColor;
+$euiColorHighlight: $ouiColorHighlight;
+$euiTextColor: $ouiTextColor;
+$euiTitleColor: $ouiTitleColor;
+$euiTextSubduedColor: $ouiTextSubduedColor;
+$euiColorDisabled: $ouiColorDisabled;
+$euiColorPrimaryText: $ouiColorPrimaryText;
+$euiColorSecondaryText: $ouiColorSecondaryText;
+$euiColorAccentText: $ouiColorAccentText;
+$euiColorWarningText: $ouiColorWarningText;
+$euiColorDangerText: $ouiColorDangerText;
+$euiColorDisabledText: $ouiColorDisabledText;
+$euiColorSuccessText: $ouiColorSuccessText;
+$euiLinkColor: $ouiLinkColor;
+$euiPaletteColorBlind: (
+  euiColorVis0: (
+    graphic: #54B399,
+    behindText: #6DCCB1,
+  ),
+  euiColorVis1: (
+    graphic: #6092C0,
+    behindText: #79AAD9,
+  ),
+  euiColorVis2: (
+    graphic: #D36086,
+    behindText: #EE789D,
+  ),
+  euiColorVis3: (
+    graphic: #9170B8,
+    behindText: #A987D1,
+  ),
+  euiColorVis4: (
+    graphic: #CA8EAE,
+    behindText: #E4A6C7,
+  ),
+  euiColorVis5: (
+    graphic: #D6BF57,
+    behindText: #F1D86F,
+  ),
+  euiColorVis6: (
+    graphic: #B9A888,
+    behindText: #D2C0A0,
+  ),
+  euiColorVis7: (
+    graphic: #DA8B45,
+    behindText: #F5A35C,
+  ),
+  euiColorVis8: (
+    graphic: #AA6556,
+    behindText: #C47C6C,
+  ),
+  euiColorVis9: (
+    graphic: #E7664C,
+    behindText: #FF7E62,
+  )
+) !default;
+$euiPaletteColorBlindKeys: map-keys($euiPaletteColorBlind);
+$euiColorVis0: $ouiColorVis0;
+$euiColorVis1: $ouiColorVis1;
+$euiColorVis2: $ouiColorVis2;
+$euiColorVis3: $ouiColorVis3;
+$euiColorVis4: $ouiColorVis4;
+$euiColorVis5: $ouiColorVis5;
+$euiColorVis6: $ouiColorVis6;
+$euiColorVis7: $ouiColorVis7;
+$euiColorVis8: $ouiColorVis8;
+$euiColorVis9: $ouiColorVis9;
+$euiColorVis0_behindText: $ouiColorVis0_behindText;
+$euiColorVis1_behindText: $ouiColorVis1_behindText;
+$euiColorVis2_behindText: $ouiColorVis2_behindText;
+$euiColorVis3_behindText: $ouiColorVis3_behindText;
+$euiColorVis4_behindText: $ouiColorVis4_behindText;
+$euiColorVis5_behindText: $ouiColorVis5_behindText;
+$euiColorVis6_behindText: $ouiColorVis6_behindText;
+$euiColorVis7_behindText: $ouiColorVis7_behindText;
+$euiColorVis8_behindText: $ouiColorVis8_behindText;
+$euiColorVis9_behindText: $ouiColorVis9_behindText;
+$euiColorChartLines: $ouiColorChartLines;
+$euiColorChartBand: $ouiColorChartBand;
+$euiCodeBlockBackgroundColor: $ouiCodeBlockBackgroundColor;
+$euiCodeBlockColor: $ouiCodeBlockColor;
+$euiCodeBlockSelectedBackgroundColor: $ouiCodeBlockSelectedBackgroundColor;
+$euiCodeBlockCommentColor: $ouiCodeBlockCommentColor;
+$euiCodeBlockSelectorTagColor: $ouiCodeBlockSelectorTagColor;
+$euiCodeBlockStringColor: $ouiCodeBlockStringColor;
+$euiCodeBlockTagColor: $ouiCodeBlockTagColor;
+$euiCodeBlockNameColor: $ouiCodeBlockNameColor;
+$euiCodeBlockNumberColor: $ouiCodeBlockNumberColor;
+$euiCodeBlockKeywordColor: $ouiCodeBlockKeywordColor;
+$euiCodeBlockFunctionTitleColor: $ouiCodeBlockFunctionTitleColor;
+$euiCodeBlockTypeColor: $ouiCodeBlockTypeColor;
+$euiCodeBlockAttributeColor: $ouiCodeBlockAttributeColor;
+$euiCodeBlockSymbolColor: $ouiCodeBlockSymbolColor;
+$euiCodeBlockParamsColor: $ouiCodeBlockParamsColor;
+$euiCodeBlockMetaColor: $ouiCodeBlockMetaColor;
+$euiCodeBlockTitleColor: $ouiCodeBlockTitleColor;
+$euiCodeBlockSectionColor: $ouiCodeBlockSectionColor;
+$euiCodeBlockAdditionColor: $ouiCodeBlockAdditionColor;
+$euiCodeBlockDeletionColor: $ouiCodeBlockDeletionColor;
+$euiCodeBlockSelectorClassColor: $ouiCodeBlockSelectorClassColor;
+$euiCodeBlockSelectorIdColor: $ouiCodeBlockSelectorIdColor;
+/* End of Aliases */

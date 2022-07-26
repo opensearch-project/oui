@@ -17,3 +17,9 @@ $ouiFlyoutPaddingModifiers: (
   'paddingMedium': $ouiSize,
   'paddingLarge': $ouiSizeL
 ) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiFlyoutBorder: $ouiFlyoutBorder;
+$euiFlyoutPaddingModifiers: $ouiFlyoutPaddingModifiers;
+/* End of Aliases */

@@ -22,3 +22,8 @@ $ouiSuggestItemColors: (
   tint9: $ouiColorVis9,
   tint10: $ouiColorDarkShade,
 );
+
+
+/* OUI -> EUI Aliases */
+$euiSuggestItemColors: $ouiSuggestItemColors;
+/* End of Aliases */

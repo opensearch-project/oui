@@ -19,3 +19,8 @@ $ouiExpressionColors: (
   danger: $ouiColorDangerText,
   accent: $ouiColorAccentText,
 );
+
+
+/* OUI -> EUI Aliases */
+$euiExpressionColors: $ouiExpressionColors;
+/* End of Aliases */

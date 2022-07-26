@@ -39,3 +39,8 @@
     }
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiHasBetaBadge($selector, $spacing: $ouiSize) { @include ouiHasBetaBadge($selector, $spacing); }
+/* End of Aliases */

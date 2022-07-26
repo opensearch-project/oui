@@ -250,3 +250,8 @@
   @include fontSize($ouiFontSizeXS);
   @include ouiScaleText($ouiFontSizeXS);
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiScaleText($baseFontSize) { @include ouiScaleText($baseFontSize); }
+/* End of Aliases */

@@ -59,11 +59,11 @@ export const CodeSandboxLinkComponent = ({
 }) => {
   let cssFile;
   switch (context.theme) {
-    case 'amsterdam-light':
-      cssFile = '@opensearch-project/oui/dist/oui_theme_amsterdam_light.css';
+    case 'cascadia-light':
+      cssFile = '@opensearch-project/oui/dist/oui_theme_cascadia_light.css';
       break;
-    case 'amsterdam-dark':
-      cssFile = '@opensearch-project/oui/dist/oui_theme_amsterdam_dark.css';
+    case 'cascadia-dark':
+      cssFile = '@opensearch-project/oui/dist/oui_theme_cascadia_dark.css';
       break;
     case 'dark':
       cssFile = '@opensearch-project/oui/dist/oui_theme_dark.css';

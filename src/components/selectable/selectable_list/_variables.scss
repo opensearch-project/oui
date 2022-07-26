@@ -11,3 +11,9 @@
 
 $ouiSelectableListItemBorder: 1px solid darken($ouiColorLightestShade, 2%);
 $ouiSelectableListItemPadding: $ouiSizeXS $ouiSizeM;
+
+
+/* OUI -> EUI Aliases */
+$euiSelectableListItemBorder: $ouiSelectableListItemBorder;
+$euiSelectableListItemPadding: $ouiSelectableListItemPadding;
+/* End of Aliases */

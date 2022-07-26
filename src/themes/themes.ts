@@ -43,11 +43,11 @@ export const OUI_THEMES: OUI_THEME[] = [
     value: 'dark',
   },
   {
-    text: 'Amsterdam: Light',
-    value: 'amsterdam-light',
+    text: 'Cascadia: Light',
+    value: 'cascadia-light',
   },
   {
-    text: 'Amsterdam: Dark',
-    value: 'amsterdam-dark',
+    text: 'Cascadia: Dark',
+    value: 'cascadia-dark',
   },
 ];

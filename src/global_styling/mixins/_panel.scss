@@ -67,3 +67,8 @@
     }
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiPanel($selector) { @include ouiPanel($selector); }
+/* End of Aliases */

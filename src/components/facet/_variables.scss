@@ -15,3 +15,8 @@ $ouiFacetGutterSizes: (
   gutterMedium: $ouiSizeS,
   gutterLarge: $ouiSizeM,
 );
+
+
+/* OUI -> EUI Aliases */
+$euiFacetGutterSizes: $ouiFacetGutterSizes;
+/* End of Aliases */

@@ -15,3 +15,8 @@ $ouiHeaderLinksGutterSizes: (
   'gutterM': $ouiSizeM,
   'gutterL': $ouiSizeL,
 );
+
+
+/* OUI -> EUI Aliases */
+$euiHeaderLinksGutterSizes: $ouiHeaderLinksGutterSizes;
+/* End of Aliases */

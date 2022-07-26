@@ -1,0 +1,87 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// In Cascadia, focus rings default to the browser's `outline`
+// However, some components need to be forced to have the same behavior
+// This re-uses the same faux focus ring mixin, but adjusts the outline instead
+// @param {size} Old param from default theme that won't be used, so it should always be `null`
+// @param {offset} Accepts a specific number or 'inner' or 'outer' to adjust outline position
+@mixin ouiFocusRing($size: null, $offset: false) {
+  // Safari & Firefox
+  outline: $ouiFocusRingSize solid currentColor;
+
+  // Chrome
+  &:focus-visible {
+    outline-style: auto;
+  }
+
+  &:not(:focus-visible) {
+    outline: none;
+  }
+
+  // Adjusting position with offset
+  @if (type-of($offset) == number) {
+    outline-offset: #{$offset}px;
+  } @else if ($offset == 'inner') {
+    outline-offset: -$ouiFocusRingSize;
+  } @else if ($offset == 'outer') {
+    outline-offset: $ouiFocusRingSize;
+  }
+}
+
+// Cascadia uses transparency instead of shading/tinting
+@mixin ouiFocusBackground($color: $ouiColorPrimary) {
+  background-color: transparentize($color, $ouiFocusTransparency);
+}
+
+@mixin ouiHoverState {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@mixin ouiFocusState($color: $ouiColorPrimary) {
+  @include ouiHoverState;
+  @include ouiFocusBackground($color);
+}
+
+@mixin ouiDisabledState($color: $ouiButtonColorDisabledText) {
+  cursor: not-allowed;
+  text-decoration: none;
+
+  @if ($color) {
+    color: $color;
+  }
+}
+
+@mixin ouiInteractiveStates($focusColor: $ouiColorPrimary, $disabledColor: $ouiButtonColorDisabledText) {
+  &:hover {
+    @include ouiHoverState;
+  }
+
+  &:focus {
+    @include ouiFocusState($focusColor);
+  }
+
+  &:disabled {
+    @include ouiDisabledState($disabledColor);
+  }
+}
+
+
+
+/* OUI -> EUI Aliases */
+@mixin euiFocusRing($size: null, $offset: false) { @include ouiFocusRing($size, $offset); }
+@mixin euiFocusBackground($color: $ouiColorPrimary) { @include ouiFocusBackground($color); }
+@mixin euiHoverState { @include ouiHoverState; }
+@mixin euiFocusState($color: $ouiColorPrimary) { @include ouiFocusState($color); }
+@mixin euiDisabledState($color: $ouiButtonColorDisabledText) { @include ouiDisabledState($color); }
+@mixin euiInteractiveStates($focusColor: $ouiColorPrimary, $disabledColor: $ouiButtonColorDisabledText) { @include ouiInteractiveStates($focusColor, $disabledColor); }
+/* End of Aliases */

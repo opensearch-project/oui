@@ -34,3 +34,12 @@ $ouiCardPaddingModifiers: (
   'paddingMedium': $ouiSize,
   'paddingLarge': $ouiSizeL
 ) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiCardSpacing: $ouiCardSpacing;
+$euiCardBottomNodeHeight: $ouiCardBottomNodeHeight;
+$euiCardSelectButtonBorders: $ouiCardSelectButtonBorders;
+$euiCardSelectButtonBackgrounds: $ouiCardSelectButtonBackgrounds;
+$euiCardPaddingModifiers: $ouiCardPaddingModifiers;
+/* End of Aliases */

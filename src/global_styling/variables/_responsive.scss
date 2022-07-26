@@ -18,3 +18,9 @@ $ouiBreakpoints: (
 ) !default;
 
 $ouiBreakpointKeys: map-keys($ouiBreakpoints);
+
+
+/* OUI -> EUI Aliases */
+$euiBreakpoints: $ouiBreakpoints;
+$euiBreakpointKeys: $ouiBreakpointKeys;
+/* End of Aliases */

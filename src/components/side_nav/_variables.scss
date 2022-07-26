@@ -24,3 +24,13 @@ $ouiSideNavRootTextcolor: ouiSideNavEmphasizedContrast($ouiTitleColor);
 $ouiSideNavBranchTextcolor: ouiSideNavEmphasizedContrast($ouiTextSubduedColor);
 $ouiSideNavSelectedTextcolor: ouiSideNavEmphasizedContrast($ouiColorPrimary);
 $ouiSideNavDisabledTextcolor: ouiSideNavEmphasizedContrast($ouiButtonColorDisabledText, $ouiContrastRatioDisabled);
+
+
+/* OUI -> EUI Aliases */
+$euiSideNavEmphasizedBackgroundColor: $ouiSideNavEmphasizedBackgroundColor;
+$euiSideNavRootTextcolor: $ouiSideNavRootTextcolor;
+$euiSideNavBranchTextcolor: $ouiSideNavBranchTextcolor;
+$euiSideNavSelectedTextcolor: $ouiSideNavSelectedTextcolor;
+$euiSideNavDisabledTextcolor: $ouiSideNavDisabledTextcolor;
+@function euiSideNavEmphasizedContrast($textColor, $ratio: $ouiContrastRatioText) { @return ouiSideNavEmphasizedContrast($textColor, $ratio); }
+/* End of Aliases */

@@ -20,3 +20,11 @@ $ouiStepStatusColorsToFade: (
   disabled: $ouiColorDarkShade,
   incomplete: $ouiColorDarkShade,
 ) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiStepNumberSize: $ouiStepNumberSize;
+$euiStepNumberSmallSize: $ouiStepNumberSmallSize;
+$euiStepNumberMargin: $ouiStepNumberMargin;
+$euiStepStatusColorsToFade: $ouiStepStatusColorsToFade;
+/* End of Aliases */

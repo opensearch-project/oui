@@ -30,3 +30,12 @@ $ouiListGroupItemSizeTypes: (
   medium: $ouiFontSize,
   large: $ouiFontSizeL,
 );
+
+
+/* OUI -> EUI Aliases */
+$euiListGroupItemHoverBackground: $ouiListGroupItemHoverBackground;
+$euiListGroupItemHoverBackgroundGhost: $ouiListGroupItemHoverBackgroundGhost;
+$euiListGroupGutterTypes: $ouiListGroupGutterTypes;
+$euiListGroupItemColorTypes: $ouiListGroupItemColorTypes;
+$euiListGroupItemSizeTypes: $ouiListGroupItemSizeTypes;
+/* End of Aliases */

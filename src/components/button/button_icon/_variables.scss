@@ -20,3 +20,8 @@ $ouiButtonIconTypes: (
   text: $ouiColorDarkShade,
   warning: $ouiColorWarningText,
 );
+
+
+/* OUI -> EUI Aliases */
+$euiButtonIconTypes: $ouiButtonIconTypes;
+/* End of Aliases */

@@ -38,3 +38,11 @@
   &::-moz-range-thumb { @content; }
   &::-ms-thumb { @content; }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiRangeTrackSize { @include ouiRangeTrackSize; }
+@mixin euiRangeTrackPerBrowser { @include ouiRangeTrackPerBrowser; }
+@mixin euiRangeThumbStyle { @include ouiRangeThumbStyle; }
+@mixin euiRangeThumbPerBrowser { @include ouiRangeThumbPerBrowser; }
+/* End of Aliases */

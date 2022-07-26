@@ -147,3 +147,22 @@
   }
 }
 
+
+
+/* OUI -> EUI Aliases */
+@mixin euiFont { @include ouiFont; }
+@mixin euiCodeFont { @include ouiCodeFont; }
+@mixin euiText { @include ouiText; }
+@mixin euiTitle($size: 'm') { @include ouiTitle($size); }
+@mixin euiFontSizeXS { @include ouiFontSizeXS; }
+@mixin euiFontSizeS { @include ouiFontSizeS; }
+@mixin euiFontSize { @include ouiFontSize; }
+@mixin euiFontSizeM { @include ouiFontSizeM; }
+@mixin euiFontSizeL { @include ouiFontSizeL; }
+@mixin euiFontSizeXL { @include ouiFontSizeXL; }
+@mixin euiFontSizeXXL { @include ouiFontSizeXXL; }
+@mixin euiTextBreakWord { @include ouiTextBreakWord; }
+@mixin euiTextTruncate { @include ouiTextTruncate; }
+@mixin euiNumberFormat { @include ouiNumberFormat; }
+@mixin euiTextShift($fontWeight: $ouiFontWeightBold, $attr: 'data-text') { @include ouiTextShift($fontWeight, $attr); }
+/* End of Aliases */

@@ -126,3 +126,28 @@
     @warn "ouiOverflowShadow() expects direction to be 'y' or 'x' but got '#{$direction}'";
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiSlightShadow($color: $ouiShadowColor, $opacity: .3) { @include ouiSlightShadow($color, $opacity); }
+@mixin euiBottomShadowSmall($color: $ouiShadowColor, $opacity: .3) { @include ouiBottomShadowSmall($color, $opacity); }
+@mixin euiBottomShadowMedium($color: $ouiShadowColor, $opacity: .2) { @include ouiBottomShadowMedium($color, $opacity); }
+@mixin euiBottomShadowFlat($color: $ouiShadowColor, $opacity: .2) { @include ouiBottomShadowFlat($color, $opacity); }
+@mixin euiBottomShadow($color: $ouiShadowColorLarge, $opacity: .1, $adjustBorders: false) { @include ouiBottomShadow($color, $opacity, $adjustBorders); }
+@mixin euiBottomShadowLarge(
+  $color: $ouiShadowColorLarge,
+  $opacity: .1,
+  $adjustBorders: false,
+  $reverse: false
+) {
+  @include ouiBottomShadowLarge(
+    $color,
+    $opacity,
+    $adjustBorders,
+    $reverse
+  );
+}
+@mixin euiSlightShadowHover($color: $ouiShadowColor, $opacity: .3) { @include ouiSlightShadowHover($color, $opacity); }
+@mixin euiSlightShadowActive($color: $ouiShadowColor, $opacity: .3) { @include ouiSlightShadowActive($color, $opacity); }
+@mixin euiOverflowShadow($direction: 'y', $side: 'both') { @include ouiOverflowShadow($direction, $side); }
+/* End of Aliases */

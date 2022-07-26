@@ -20,3 +20,15 @@ $ouiBorderRadiusSmall: $ouiBorderRadius / 2 !default;
 $ouiBorderThick: $ouiBorderWidthThick solid $ouiBorderColor !default;
 $ouiBorderThin: $ouiBorderWidthThin solid $ouiBorderColor !default;
 $ouiBorderEditable: $ouiBorderWidthThick dotted $ouiBorderColor !default;
+
+
+/* OUI -> EUI Aliases */
+$euiBorderWidthThin: $ouiBorderWidthThin;
+$euiBorderWidthThick: $ouiBorderWidthThick;
+$euiBorderColor: $ouiBorderColor;
+$euiBorderRadius: $ouiBorderRadius;
+$euiBorderRadiusSmall: $ouiBorderRadiusSmall;
+$euiBorderThick: $ouiBorderThick;
+$euiBorderThin: $ouiBorderThin;
+$euiBorderEditable: $ouiBorderEditable;
+/* End of Aliases */

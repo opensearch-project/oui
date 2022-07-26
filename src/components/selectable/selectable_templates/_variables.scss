@@ -31,3 +31,8 @@ $ouiSelectableTemplateSitewideTypes: (
     'font-weight': $ouiFontWeightMedium,
   ),
 );
+
+
+/* OUI -> EUI Aliases */
+$euiSelectableTemplateSitewideTypes: $ouiSelectableTemplateSitewideTypes;
+/* End of Aliases */

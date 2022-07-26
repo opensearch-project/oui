@@ -28,3 +28,9 @@
   padding: $ouiSizeM;
   border-top: $ouiBorderThin;
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiPopoverTitle($size: 'm') { @include ouiPopoverTitle($size); }
+@mixin euiPopoverFooter { @include ouiPopoverFooter; }
+/* End of Aliases */

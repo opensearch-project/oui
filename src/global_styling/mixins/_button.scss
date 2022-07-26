@@ -114,3 +114,12 @@
 
 // Keyframe animation declarations can be found in
 // utility/animations.scss
+
+
+/* OUI -> EUI Aliases */
+@mixin euiButtonBase { @include ouiButtonBase; }
+@mixin euiButtonFocus { @include ouiButtonFocus; }
+@mixin euiButton { @include ouiButton; }
+@mixin euiButtonContent($isReverse: false) { @include ouiButtonContent($isReverse); }
+@mixin euiButtonContentDisabled { @include ouiButtonContentDisabled; }
+/* End of Aliases */

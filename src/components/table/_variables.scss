@@ -26,3 +26,17 @@ $ouiTableHoverSelectedColor: tintOrShade($ouiFocusBackgroundColor, 0, 10%);
 $ouiTableActionsBorderColor: transparentize($ouiColorMediumShade, .9);
 $ouiTableHoverClickableColor: transparentize($ouiColorPrimary, .95);
 $ouiTableFocusClickableColor: transparentize($ouiColorPrimary, .9);
+
+
+/* OUI -> EUI Aliases */
+$euiTableCellContentPadding: $ouiTableCellContentPadding;
+$euiTableCellContentPaddingCompressed: $ouiTableCellContentPaddingCompressed;
+$euiTableCellCheckboxWidth: $ouiTableCellCheckboxWidth;
+$euiTableActionsAreaWidth: $ouiTableActionsAreaWidth;
+$euiTableHoverColor: $ouiTableHoverColor;
+$euiTableSelectedColor: $ouiTableSelectedColor;
+$euiTableHoverSelectedColor: $ouiTableHoverSelectedColor;
+$euiTableActionsBorderColor: $ouiTableActionsBorderColor;
+$euiTableHoverClickableColor: $ouiTableHoverClickableColor;
+$euiTableFocusClickableColor: $ouiTableFocusClickableColor;
+/* End of Aliases */

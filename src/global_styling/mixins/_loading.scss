@@ -15,3 +15,13 @@
 ) {
   @return $highlight $main $main $main;
 }
+
+
+/* OUI -> EUI Aliases */
+@function euiLoadingSpinnerBorderColors(
+  $main: $ouiColorLightShade,
+  $highlight: $ouiColorPrimary
+) {
+  @return ouiLoadingSpinnerBorderColors($main, $highlight);
+}
+/* End of Aliases */

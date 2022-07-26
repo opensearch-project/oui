@@ -21,3 +21,14 @@ $ouiHeaderChildSize: $ouiHeaderHeight !default;
 
 // Use the following variable in other components to afford for the fixed header
 $ouiHeaderHeightCompensation: $ouiHeaderHeight + 1px !default;
+
+
+/* OUI -> EUI Aliases */
+$euiHeaderBackgroundColor: $ouiHeaderBackgroundColor;
+$euiHeaderDarkBackgroundColor: $ouiHeaderDarkBackgroundColor;
+$euiHeaderBorderColor: $ouiHeaderBorderColor;
+$euiHeaderBreadcrumbColor: $ouiHeaderBreadcrumbColor;
+$euiHeaderHeight: $ouiHeaderHeight;
+$euiHeaderChildSize: $ouiHeaderChildSize;
+$euiHeaderHeightCompensation: $ouiHeaderHeightCompensation;
+/* End of Aliases */

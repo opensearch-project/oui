@@ -66,7 +66,7 @@ export interface OuiStepNumberProps
   status?: OuiStepStatus;
   number?: number;
   /**
-   * **DEPRECATED IN AMSTERDAM**
+   * **DEPRECATED IN CASCADIA**
    * Uses a border and removes the step number.
    */
   isHollow?: boolean;

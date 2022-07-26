@@ -74,3 +74,56 @@ $ouiRangeTrackRadius: $ouiBorderRadius !default;
 $ouiRangeDisabledOpacity: .25 !default;
 
 $ouiRangeHighlightHeight: $ouiSizeXS !default;
+
+
+/* OUI -> EUI Aliases */
+$euiFormMaxWidth: $ouiFormMaxWidth;
+$euiFormControlHeight: $ouiFormControlHeight;
+$euiFormControlCompressedHeight: $ouiFormControlCompressedHeight;
+$euiFormControlPadding: $ouiFormControlPadding;
+$euiFormControlCompressedPadding: $ouiFormControlCompressedPadding;
+$euiFormControlBorderRadius: $ouiFormControlBorderRadius;
+$euiFormControlCompressedBorderRadius: $ouiFormControlCompressedBorderRadius;
+$euiRadioSize: $ouiRadioSize;
+$euiCheckBoxSize: $ouiCheckBoxSize;
+$euiCheckboxBorderRadius: $ouiCheckboxBorderRadius;
+$euiSwitchHeight: $ouiSwitchHeight;
+$euiSwitchWidth: $ouiSwitchWidth;
+$euiSwitchThumbSize: $ouiSwitchThumbSize;
+$euiSwitchIconHeight: $ouiSwitchIconHeight;
+$euiSwitchHeightCompressed: $ouiSwitchHeightCompressed;
+$euiSwitchWidthCompressed: $ouiSwitchWidthCompressed;
+$euiSwitchThumbSizeCompressed: $ouiSwitchThumbSizeCompressed;
+$euiSwitchHeightMini: $ouiSwitchHeightMini;
+$euiSwitchWidthMini: $ouiSwitchWidthMini;
+$euiSwitchThumbSizeMini: $ouiSwitchThumbSizeMini;
+$euiFormBackgroundColor: $ouiFormBackgroundColor;
+$euiFormBackgroundDisabledColor: $ouiFormBackgroundDisabledColor;
+$euiFormBackgroundReadOnlyColor: $ouiFormBackgroundReadOnlyColor;
+$euiFormBorderOpaqueColor: $ouiFormBorderOpaqueColor;
+$euiFormBorderColor: $ouiFormBorderColor;
+$euiFormBorderDisabledColor: $ouiFormBorderDisabledColor;
+$euiFormCustomControlDisabledIconColor: $ouiFormCustomControlDisabledIconColor;
+$euiFormCustomControlBorderColor: $ouiFormCustomControlBorderColor;
+$euiFormControlDisabledColor: $ouiFormControlDisabledColor;
+$euiFormControlBoxShadow: $ouiFormControlBoxShadow;
+$euiFormControlPlaceholderText: $ouiFormControlPlaceholderText;
+$euiFormInputGroupLabelBackground: $ouiFormInputGroupLabelBackground;
+$euiFormInputGroupBorder: $ouiFormInputGroupBorder;
+$euiSwitchOffColor: $ouiSwitchOffColor;
+$euiFormControlLayoutGroupInputHeight: $ouiFormControlLayoutGroupInputHeight;
+$euiFormControlLayoutGroupInputCompressedHeight: $ouiFormControlLayoutGroupInputCompressedHeight;
+$euiFormControlLayoutGroupInputCompressedBorderRadius: $ouiFormControlLayoutGroupInputCompressedBorderRadius;
+$euiRangeTrackColor: $ouiRangeTrackColor;
+$euiRangeThumbRadius: $ouiRangeThumbRadius;
+$euiRangeThumbHeight: $ouiRangeThumbHeight;
+$euiRangeThumbWidth: $ouiRangeThumbWidth;
+$euiRangeThumbBorderColor: $ouiRangeThumbBorderColor;
+$euiRangeTrackWidth: $ouiRangeTrackWidth;
+$euiRangeTrackHeight: $ouiRangeTrackHeight;
+$euiRangeTrackBorderWidth: $ouiRangeTrackBorderWidth;
+$euiRangeTrackBorderColor: $ouiRangeTrackBorderColor;
+$euiRangeTrackRadius: $ouiRangeTrackRadius;
+$euiRangeDisabledOpacity: $ouiRangeDisabledOpacity;
+$euiRangeHighlightHeight: $ouiRangeHighlightHeight;
+/* End of Aliases */

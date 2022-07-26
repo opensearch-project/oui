@@ -36,3 +36,9 @@
     font-weight: $ouiFontWeightRegular;
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@function euiCallOutColor($type: 'primary', $returnBackgroundOrForeground: 'background') { @return ouiCallOutColor($type, $returnBackgroundOrForeground); }
+@mixin euiCallOutTitle($size: null) { @include ouiCallOutTitle($size); }
+/* End of Aliases */

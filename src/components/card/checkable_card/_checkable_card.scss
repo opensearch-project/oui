@@ -38,3 +38,8 @@ $ouiCheckableCardPadding: map-get($ouiPanelPaddingModifiers, 'paddingMedium');
 .ouiCheckableCard__children {
   margin-top: $ouiSize;
 }
+
+
+/* OUI -> EUI Aliases */
+$euiCheckableCardPadding: $ouiCheckableCardPadding;
+/* End of Aliases */

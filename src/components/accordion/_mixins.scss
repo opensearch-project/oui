@@ -23,3 +23,9 @@
     margin-right: $ouiSizeXS;
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiAccordionIconFocus { @include ouiAccordionIconFocus; }
+@mixin euiAccordionIconMargin($align: left) { @include ouiAccordionIconMargin($align); }
+/* End of Aliases */

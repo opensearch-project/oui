@@ -22,3 +22,15 @@ $ouiTokenTypes: map-merge($ouiPaletteColorBlind, (
 ));
 
 $ouiTokenTypeKeys: map-keys($ouiTokenTypes);
+
+
+/* OUI -> EUI Aliases */
+$euiTokenGrayColor: lightOrDarkTheme($euiColorDarkShade, $euiColorMediumShade);
+$euiTokenTypes: map-merge($euiPaletteColorBlind, (
+  'gray': (
+    graphic: $euiTokenGrayColor,
+    behindText: $euiTokenGrayColor,
+  )
+));
+$euiTokenTypeKeys: map-keys($euiTokenTypes);
+/* End of Aliases */

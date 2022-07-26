@@ -15,3 +15,8 @@ $ouiColorPaletteDisplaySizes: (
   sizeSmall: $ouiSizeS,
   sizeMedium: $ouiSize,
 );
+
+
+/* OUI -> EUI Aliases */
+$euiColorPaletteDisplaySizes: $ouiColorPaletteDisplaySizes;
+/* End of Aliases */

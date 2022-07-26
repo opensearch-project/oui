@@ -36,3 +36,8 @@
     }
   }
 }
+
+
+/* OUI -> EUI Aliases */
+@mixin euiHeaderAffordForFixed($headerHeight: $ouiHeaderHeightCompensation) { @include ouiHeaderAffordForFixed($headerHeight); }
+/* End of Aliases */

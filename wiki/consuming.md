@@ -60,10 +60,10 @@ Other compiled themes include:
 import '@opensearch-project/oui/dist/oui_theme_dark.css';
 ```
 ```js
-import '@opensearch-project/oui/dist/oui_theme_amsterdam_light.css';
+import '@opensearch-project/oui/dist/oui_theme_cascadia_light.css';
 ```
 ```js
-import '@opensearch-project/oui/dist/oui_theme_amsterdam_dark.css';
+import '@opensearch-project/oui/dist/oui_theme_cascadia_dark.css';
 ```
 
 ### Using our Sass variables on top of compiled CSS
@@ -84,11 +84,11 @@ For the dark theme, swap the first import for the dark colors file.
 @import '@opensearch-project/oui/src/themes/oui/oui_globals.scss';
 ```
 
-If you want to use the new, but in progress Amsterdam theme, you can import it similarly.
+If you want to use the new, but in progress Cascadia theme, you can import it similarly.
 
 ```scss
-@import '@opensearch-project/oui/src/themes/oui-amsterdam/oui_amsterdam_colors_light.scss';
-@import '@opensearch-project/oui/src/themes/oui-amsterdam/oui_amsterdam_globals.scss';
+@import '@opensearch-project/oui/src/themes/oui-cascadia/oui_cascadia_colors_light.scss';
+@import '@opensearch-project/oui/src/themes/oui-cascadia/oui_cascadia_globals.scss';
 ```
 
 ### Using Sass to customize OUI
@@ -116,7 +116,7 @@ By default, OUI ships with a font stack that includes some outside, open source 
 @import url('https://rsms.me/inter/inter-ui.css');
 ```
 
-The Amsterdam theme uses the latest version of Inter that can be grabbed from Google Fonts as well.
+The Cascadia theme uses the latest version of Inter that can be grabbed from Google Fonts as well.
 
 ```scss
 // index.scss
