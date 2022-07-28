@@ -183,3 +183,26 @@ declare module '@opensearch-project/oui' {
 }
   `;
 }
+
+/* OUI -> EUI Aliases */
+function buildEuiTokensObject() {
+  const { i18ndefs } = require('../i18ntokens.json').reduce(
+    ({ i18ndefs, tokens }, def) => {
+      if (!tokens.has(def.token)) {
+        tokens.add(def.token);
+        i18ndefs.push(def);
+      }
+      return { i18ndefs, tokens };
+    },
+    { i18ndefs: [], tokens: new Set() }
+  );
+  const caseSensitiveMapToE = {o: 'o', O: 'E'};
+  return `
+declare module '@opensearch-project/oui' {
+  export type EuiTokensObject = {
+    ${i18ndefs.map(({ token }) => `"${token.replace(/(o)(ui)/ig, (m, m1, m2) => caseSensitiveMapToE[m1] + m2)}": any;`).join('\n')}
+  }
+}
+  `;
+}
+/* End of Aliases */

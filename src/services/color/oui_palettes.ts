@@ -261,3 +261,20 @@ export const ouiPaletteGray = function (steps: number): OuiPalette {
     false
   );
 };
+
+/* OUI -> EUI Aliases */
+export type EuiPalette = OuiPalette;
+export interface EuiPaletteColorBlindProps extends OuiPaletteColorBlindProps {}
+export const euiPaletteColorBlind = ouiPaletteColorBlind;
+export const euiPaletteColorBlindBehindText = ouiPaletteColorBlindBehindText;
+export const euiPaletteForLightBackground = ouiPaletteForLightBackground;
+export const euiPaletteForDarkBackground = ouiPaletteForDarkBackground;
+export const euiPaletteForStatus = ouiPaletteForStatus;
+export const euiPaletteForTemperature = ouiPaletteForTemperature;
+export const euiPaletteComplimentary = ouiPaletteComplimentary;
+export const euiPaletteNegative = ouiPaletteNegative;
+export const euiPalettePositive = ouiPalettePositive;
+export const euiPaletteCool = ouiPaletteCool;
+export const euiPaletteWarm = ouiPaletteWarm;
+export const euiPaletteGray = ouiPaletteGray;
+/* End of Aliases */

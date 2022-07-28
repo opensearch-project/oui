@@ -28,6 +28,32 @@
  * under the License.
  */
 
+/**
+ * For new files created by OpenSearch Contributors
+ */
+const OSD_NEW_HEADER = `
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+`;
+
+/**
+ * For modified files and files with external open source code
+ */
+const OSD_HEADER = `
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+`;
+
 const APACHE_2_0_LICENSE_HEADER = `
 /*
  * Licensed to Elasticsearch B.V. under one or more contributor
@@ -85,9 +111,9 @@ module.exports = {
     'local/href-with-rel': 'error',
     'local/forward-ref': 'error',
     'local/require-license-header': [
-      'warn',
+      'error',
       {
-        license: APACHE_2_0_LICENSE_HEADER,
+        licenses: [OSD_NEW_HEADER, OSD_HEADER],
       },
     ],
     'no-use-before-define': 'off',

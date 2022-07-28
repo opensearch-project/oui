@@ -31,10 +31,10 @@
 import React, { ReactNode } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
-import { OuiIconProps, OuiIcon } from '../../../components/icon';
-import { OuiAvatarProps, OuiAvatar } from '../../../components/avatar/avatar';
+import { OuiIconProps, OuiIcon } from '../../icon';
+import { OuiAvatarProps, OuiAvatar } from '../../avatar';
 import { OuiSelectableOption } from '../selectable_option';
-import { OuiHighlight } from '../../../components/highlight';
+import { OuiHighlight } from '../../highlight';
 
 export interface OuiSelectableTemplateSitewideMetaData extends CommonProps {
   /**

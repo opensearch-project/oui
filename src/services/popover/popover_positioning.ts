@@ -824,3 +824,7 @@ export function getElementZIndex(
 
   return 0;
 }
+
+/* OUI -> EUI Aliases */
+export interface EuiClientRect extends OuiClientRect {}
+/* End of Aliases */

@@ -220,3 +220,10 @@ export const OUI_SPARKLINE_THEME_PARTIAL: PartialTheme = {
     },
   },
 };
+
+/* OUI -> EUI Aliases */
+export interface EuiChartThemeType extends OuiChartThemeType {}
+export const EUI_CHARTS_THEME_LIGHT = OUI_CHARTS_THEME_LIGHT;
+export const EUI_CHARTS_THEME_DARK = OUI_CHARTS_THEME_DARK;
+export const EUI_SPARKLINE_THEME_PARTIAL = OUI_SPARKLINE_THEME_PARTIAL;
+/* End of Aliases */

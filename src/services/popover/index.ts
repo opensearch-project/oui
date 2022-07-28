@@ -31,3 +31,7 @@
 export { calculatePopoverPosition } from './calculate_popover_position';
 export { findPopoverPosition, getElementZIndex } from './popover_positioning';
 export { OuiPopoverPosition } from './types';
+
+/* OUI -> EUI Aliases */
+export type { OuiPopoverPosition as EuiPopoverPosition } from './types';
+/* End of Aliases */
