@@ -35,3 +35,7 @@ export const OuiPropTypes = {
   is,
   withRequiredProp,
 };
+
+/* OUI -> EUI Aliases */
+export const EuiPropTypes = OuiPropTypes;
+/* End of Aliases */

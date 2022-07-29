@@ -134,3 +134,8 @@ export function isWithinBreakpoints(
   const currentBreakpoint = getBreakpoint(width, breakpoints);
   return currentBreakpoint ? sizes.includes(currentBreakpoint) : false;
 }
+
+/* OUI -> EUI Aliases */
+export type EuiBreakpointSize = OuiBreakpointSize;
+export type EuiBreakpoints = OuiBreakpoints;
+/* End of Aliases */

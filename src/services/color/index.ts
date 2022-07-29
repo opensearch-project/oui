@@ -61,3 +61,20 @@ export {
 } from './oui_palettes';
 export { rgbDef, HSV, RGB } from './color_types';
 export { getSteppedGradient } from './stepped_gradient';
+
+/* OUI -> EUI Aliases */
+export {
+  ouiPaletteForLightBackground as euiPaletteForLightBackground,
+  ouiPaletteForDarkBackground as euiPaletteForDarkBackground,
+  ouiPaletteColorBlind as euiPaletteColorBlind,
+  ouiPaletteColorBlindBehindText as euiPaletteColorBlindBehindText,
+  ouiPaletteForStatus as euiPaletteForStatus,
+  ouiPaletteForTemperature as euiPaletteForTemperature,
+  ouiPaletteComplimentary as euiPaletteComplimentary,
+  ouiPaletteNegative as euiPaletteNegative,
+  ouiPalettePositive as euiPalettePositive,
+  ouiPaletteCool as euiPaletteCool,
+  ouiPaletteWarm as euiPaletteWarm,
+  ouiPaletteGray as euiPaletteGray,
+} from './oui_palettes';
+/* End of Aliases */

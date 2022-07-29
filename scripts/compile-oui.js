@@ -37,6 +37,102 @@ const glob = require('glob');
 const fs = require('fs');
 const dtsGenerator = require('dts-generator').default;
 
+/* OUI -> EUI Aliases */
+function euiBuildTimeAliasSetup() {
+  console.log('Setting up build-time EUI aliases');
+  // Clean up before starting
+  shell.rm('-rf', 'src/eui_components');
+
+  // Create a copy and get rid of unnecessary content
+  shell.cp('-fR', 'src/components', 'src/eui_components');
+  shell.rm('-rf', 'src/eui_components/**/__snapshots__');
+  shell.rm('-rf', 'src/eui_components/**/*.scss');
+  shell.rm('-rf', 'src/eui_components/**/*.test.*');
+  shell.rm('-rf', 'src/eui_components/**/*.d.ts');
+
+  // Remove any existing `export * from './eui_components';` and add just one
+  fs.writeFileSync('src/index.js',
+    fs.readFileSync('src/index.js', 'utf8')
+      .replace(/[\r\n]export\s+\*\s+from\s+'\.\/eui_components';/g, ''),
+    'utf8'
+  );
+  fs.writeFileSync('src/index.js', `\nexport * from './eui_components';`, { flag: 'a' });
+
+  // Replace specific instances of oui with eui
+  shell.find('src/eui_components/**/*.*').forEach(file => {
+    shell.sed('-i', /oui/g, 'eui', file);
+    shell.sed('-i', /OUI/g, 'EUI', file);
+    shell.sed('-i', /Oui/g, 'Eui', file);
+    shell.sed('-i', /\/eui/g, '/oui', file);
+  });
+
+  // Rename files to *eui*
+  shell.find('src/eui_components/**/*Oui*.*').forEach(file => {
+    shell.mv('-f', file, file.replace('Oui', 'Eui'));
+  });
+
+  // Prevent exporting anything not *eui* from the root and the top-levels
+  shell.find([
+    'src/eui_components/*/index.ts',
+    'src/eui_components/observer/*/index.ts', // doesn't have top-level exporter
+    'src/eui_components/date_picker/super_date_picker/index.ts',
+    'src/eui_components/index.js'
+  ]).forEach(file => {
+    shell.sed('-i', /\{\s+/g, '{\n  ', file);
+    shell.sed('-i', /,?\s+}/g, ',\n}', file);
+    shell.sed('-i', /,\s+/g, ',\n', file);
+    fs.writeFileSync(
+      file,
+      fs.readFileSync(file, 'utf8')
+        .replace(/\/\*.+?\*\//sg, '')
+        .replace(/^.*(?<!eui\w+),\s*$/mig, ''),
+      'utf8'
+    );
+  });
+
+  // Replace all imports for the exported props that were removed above
+  const importableMatcher = /(import\s+\{(?:[^{]*\s)?)(IconType|IconSize|IconColor|PopoverAnchorPosition|useResizeObserver|useMutationObserver|PanelPaddingSize|FocusTarget|useInnerText|ToolTipPositions|Query|ButtonColor)[,\s\n]([^}]*}\s*from\s+['"]([^'"]+)['"])/gs;
+  shell.ls('src/eui_components/**/*.*').forEach(file => {
+    let content = fs.readFileSync(file, 'utf8');
+    const remapMap = new Map();
+    let changed;
+    do {
+      changed = false;
+      content = content.replace(importableMatcher, (m, m1, m2, m3, m4) => {
+        const importFrom = path.relative(path.dirname(file), path.join(file, '..', m4).replace('eui_components', 'components'));
+        if (!remapMap.has(importFrom)) remapMap.set(importFrom, []);
+        remapMap.get(importFrom).push(m2);
+        changed = true;
+        return m1 + m3;
+      });
+    } while (changed);
+
+    if (remapMap.size) {
+      for (const [key, value] of remapMap.entries()) {
+        content = `import { ${value.join(', ')} } from '${key}';\n` + content;
+      }
+
+      fs.writeFileSync(file, content, 'utf8');
+    }
+  });
+
+  // date_picker uses a type def
+  shell.sed('-i', `from './react-datepicker'`, `from '../../components/date_picker/react-datepicker'`, 'src/eui_components/date_picker/date_picker.tsx');
+}
+
+function euiBuildTimeAliasTearDown() {
+  console.log('Tearing build-time EUI aliases');
+  shell.rm('-rf', 'src/eui_components');
+
+  // Remove any added `export * from './eui_components';`
+  fs.writeFileSync('src/index.js',
+    fs.readFileSync('src/index.js', 'utf8')
+      .replace(/[\r\n]export\s+\*\s+from\s+'\.\/eui_components';/g, ''),
+    'utf8'
+  );
+}
+/* End of Aliases */
+
 function compileLib() {
   shell.mkdir(
     '-p',
@@ -145,11 +241,11 @@ function compileBundle() {
       return `@opensearch-project/oui/lib/test${currentModuleId !== 'index' ? `/${currentModuleId}` : ''}`;
     },
     resolveModuleImport({ currentModuleId, importedModuleId }) {
-   		if (currentModuleId === 'index') {
-  			return `@opensearch-project/oui/lib/test/${importedModuleId.replace('./', '')}`;
-  		}
-			return null;
-	  }
+      if (currentModuleId === 'index') {
+        return `@opensearch-project/oui/lib/test/${importedModuleId.replace('./', '')}`;
+      }
+      return null;
+    }
   });
   dtsGenerator({
     prefix: '',
@@ -160,11 +256,11 @@ function compileBundle() {
       return `@opensearch-project/oui/es/test${currentModuleId !== 'index' ? `/${currentModuleId}` : ''}`;
     },
     resolveModuleImport({ currentModuleId, importedModuleId }) {
-   		if (currentModuleId === 'index') {
-          return `@opensearch-project/oui/es/test/${importedModuleId.replace('./', '')}`;
-  		}
-			return null;
-	  }
+      if (currentModuleId === 'index') {
+        return `@opensearch-project/oui/es/test/${importedModuleId.replace('./', '')}`;
+      }
+      return null;
+    }
   });
   console.log(chalk.green('✔ Finished test utils files'));
 
@@ -184,11 +280,11 @@ function compileBundle() {
       return '@opensearch-project/oui/dist/oui_charts_theme';
     },
     resolveModuleImport(params) {
-   		if (params.importedModuleId === '../../components/common') {
-  			return '@opensearch-project/oui/src/components/common';
-  		}
-			return null;
-	  }
+      if (params.importedModuleId === '../../components/common') {
+        return '@opensearch-project/oui/src/components/common';
+      }
+      return null;
+    }
   });
 
   /* OUI -> EUI Aliases */
@@ -218,5 +314,19 @@ function compileBundle() {
   console.log(chalk.green('✔ Finished chart theme module'));
 }
 
+/* OUI -> EUI Aliases */
+// Make sure we tear down if an error occurs
+process.on('uncaughtException', err => {
+  euiBuildTimeAliasTearDown();
+
+  console.error(err);
+  process.exit(1);
+});
+
+euiBuildTimeAliasSetup();
+/* End of Aliases */
 compileLib();
+/* OUI -> EUI Aliases */
+euiBuildTimeAliasTearDown();
+/* End of Aliases */
 compileBundle();

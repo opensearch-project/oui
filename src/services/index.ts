@@ -139,3 +139,22 @@ export {
 } from './hooks';
 
 export { throttle } from './throttle';
+
+/* OUI -> EUI Aliases */
+export type { OuiBreakpointSize as EuiBreakpointSize } from './breakpoint';
+export {
+  ouiPaletteForLightBackground as euiPaletteForLightBackground,
+  ouiPaletteForDarkBackground as euiPaletteForDarkBackground,
+  ouiPaletteColorBlind as euiPaletteColorBlind,
+  ouiPaletteColorBlindBehindText as euiPaletteColorBlindBehindText,
+  ouiPaletteForStatus as euiPaletteForStatus,
+  ouiPaletteForTemperature as euiPaletteForTemperature,
+  ouiPaletteComplimentary as euiPaletteComplimentary,
+  ouiPaletteNegative as euiPaletteNegative,
+  ouiPalettePositive as euiPalettePositive,
+  ouiPaletteCool as euiPaletteCool,
+  ouiPaletteWarm as euiPaletteWarm,
+  ouiPaletteGray as euiPaletteGray,
+} from './color';
+export { OuiWindowEvent as EuiWindowEvent } from './window_event';
+/* End of Aliases */

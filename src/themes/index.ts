@@ -29,3 +29,8 @@
  */
 
 export { OUI_THEMES, OUI_THEME } from './themes';
+
+/* OUI -> EUI Aliases */
+export { OUI_THEMES as EUI_THEMES } from './themes';
+export type { OUI_THEME as EUI_THEME } from './themes';
+/* End of Aliases */

@@ -68,3 +68,7 @@ export class OuiWindowEvent<E extends EventNames> extends Component<Props<E>> {
     return null;
   }
 }
+
+/* OUI -> EUI Aliases */
+export class EuiWindowEvent<E extends EventNames> extends OuiWindowEvent<E> {}
+/* End of Aliases */

@@ -51,3 +51,8 @@ export const OUI_THEMES: OUI_THEME[] = [
     value: 'cascadia-dark',
   },
 ];
+
+/* OUI -> EUI Aliases */
+export interface EUI_THEME extends OUI_THEME {}
+export const EUI_THEMES = OUI_THEMES;
+/* End of Aliases */

@@ -29,3 +29,7 @@
  */
 
 export type OuiPopoverPosition = 'top' | 'right' | 'bottom' | 'left';
+
+/* OUI -> EUI Aliases */
+export type EuiPopoverPosition = OuiPopoverPosition;
+/* End of Aliases */

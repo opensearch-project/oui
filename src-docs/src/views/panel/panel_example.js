@@ -168,8 +168,8 @@ export const PanelExample = {
             title="Certain allowed combinations of shadow, border, and color depend on the current theme.">
             <p>
               For instance, only plain or transparent panels can have a border
-              and/or shadow. The Cascadia theme doesn&apos;t allow combining
-              the <OuiCode>hasBorder</OuiCode> option with{' '}
+              and/or shadow. The Cascadia theme doesn&apos;t allow combining the{' '}
+              <OuiCode>hasBorder</OuiCode> option with{' '}
               <OuiCode>hasShadow</OuiCode>. The default theme only allows
               removing the border if both <OuiCode>hasShadow</OuiCode> and{' '}
               <OuiCode>hasBorder</OuiCode> are set to <OuiCode>false</OuiCode>.

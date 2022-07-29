@@ -29,3 +29,7 @@
  */
 
 export { OuiWindowEvent } from './window_event';
+
+/* OUI -> EUI Aliases */
+export { OuiWindowEvent as EuiWindowEvent } from './window_event';
+/* End of Aliases */
