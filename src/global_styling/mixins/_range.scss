@@ -42,7 +42,15 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiRangeTrackSize { @include ouiRangeTrackSize; }
-@mixin euiRangeTrackPerBrowser { @include ouiRangeTrackPerBrowser; }
+@mixin euiRangeTrackPerBrowser {
+  @include ouiRangeTrackPerBrowser {
+    @content;
+  }
+}
 @mixin euiRangeThumbStyle { @include ouiRangeThumbStyle; }
-@mixin euiRangeThumbPerBrowser { @include ouiRangeThumbPerBrowser; }
+@mixin euiRangeThumbPerBrowser {
+  @include ouiRangeThumbPerBrowser {
+    @content;
+  }
+}
 /* End of Aliases */

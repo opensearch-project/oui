@@ -39,9 +39,10 @@ const dtsGenerator = require('dts-generator').default;
 
 /* OUI -> EUI Aliases */
 function euiBuildTimeAliasSetup() {
-  console.log('Setting up build-time EUI aliases');
   // Clean up before starting
-  shell.rm('-rf', 'src/eui_components');
+  euiBuildTimeAliasTearDown();
+
+  console.log('Setting up build-time EUI aliases');
 
   // Create a copy and get rid of unnecessary content
   shell.cp('-fR', 'src/components', 'src/eui_components');
@@ -49,14 +50,6 @@ function euiBuildTimeAliasSetup() {
   shell.rm('-rf', 'src/eui_components/**/*.scss');
   shell.rm('-rf', 'src/eui_components/**/*.test.*');
   shell.rm('-rf', 'src/eui_components/**/*.d.ts');
-
-  // Remove any existing `export * from './eui_components';` and add just one
-  fs.writeFileSync('src/index.js',
-    fs.readFileSync('src/index.js', 'utf8')
-      .replace(/[\r\n]export\s+\*\s+from\s+'\.\/eui_components';/g, ''),
-    'utf8'
-  );
-  fs.writeFileSync('src/index.js', `\nexport * from './eui_components';`, { flag: 'a' });
 
   // Replace specific instances of oui with eui
   shell.find('src/eui_components/**/*.*').forEach(file => {
@@ -71,48 +64,60 @@ function euiBuildTimeAliasSetup() {
     shell.mv('-f', file, file.replace('Oui', 'Eui'));
   });
 
-  // Prevent exporting anything not *eui* from the root and the top-levels
-  shell.find([
-    'src/eui_components/*/index.ts',
-    'src/eui_components/observer/*/index.ts', // doesn't have top-level exporter
-    'src/eui_components/date_picker/super_date_picker/index.ts',
-    'src/eui_components/index.js'
-  ]).forEach(file => {
-    shell.sed('-i', /\{\s+/g, '{\n  ', file);
-    shell.sed('-i', /,?\s+}/g, ',\n}', file);
-    shell.sed('-i', /,\s+/g, ',\n', file);
-    fs.writeFileSync(
-      file,
-      fs.readFileSync(file, 'utf8')
-        .replace(/\/\*.+?\*\//sg, '')
-        .replace(/^.*(?<!eui\w+),\s*$/mig, ''),
-      'utf8'
-    );
-  });
+  const o2eMapper = {o: 'e', O: 'E'};
+  const typeExportKeys = ['type', 'interface'];
+  const translateO2E = name => name.replace(/(o)(?=ui)/ig, (m, m1) => o2eMapper[m1]);
 
-  // Replace all imports for the exported props that were removed above
-  const importableMatcher = /(import\s+\{(?:[^{]*\s)?)(IconType|IconSize|IconColor|PopoverAnchorPosition|useResizeObserver|useMutationObserver|PanelPaddingSize|FocusTarget|useInnerText|ToolTipPositions|Query|ButtonColor)[,\s\n]([^}]*}\s*from\s+['"]([^'"]+)['"])/gs;
-  shell.ls('src/eui_components/**/*.*').forEach(file => {
-    let content = fs.readFileSync(file, 'utf8');
-    const remapMap = new Map();
-    let changed;
-    do {
-      changed = false;
-      content = content.replace(importableMatcher, (m, m1, m2, m3, m4) => {
-        const importFrom = path.relative(path.dirname(file), path.join(file, '..', m4).replace('eui_components', 'components'));
-        if (!remapMap.has(importFrom)) remapMap.set(importFrom, []);
-        remapMap.get(importFrom).push(m2);
-        changed = true;
-        return m1 + m3;
-      });
-    } while (changed);
+  // Re-export *eui* from eui_components via components
+  shell.ls('src/components/**/*.*').forEach(file => {
+    if (/__snapshots__|\.d\.ts|\.test\.|\.scss/.test(file)) return;
+    const content = fs.readFileSync(file, 'utf8');
 
-    if (remapMap.size) {
-      for (const [key, value] of remapMap.entries()) {
-        content = `import { ${value.join(', ')} } from '${key}';\n` + content;
+    const reExportStatements = [];
+    let match;
+    let hasOwnExports;
+    const typedExports = [];
+    const simpleExports = [];
+    const currentFileBaseName = path.dirname(file);
+
+    // Look for own `export const/type/...`
+    const ownExportMatcher = /(?<!\/\/\s*)export\s+(\w+)\s+(\w*oui\w+)([\s=;:<(]|$)/isg;
+    while ((match = ownExportMatcher.exec(content)) !== null) {
+      const [, type, name] = match;
+      hasOwnExports = true;
+      // `export type/interface` need `export type` when being re-exported; others don't
+      if (typeExportKeys.includes(type)) typedExports.push(translateO2E(name));
+      else simpleExports.push(translateO2E(name));
+    }
+
+    // If this has its own exports, combine them
+    if (hasOwnExports) {
+      const importFrom = path.relative(currentFileBaseName, translateO2E(file.replace(/\..*$/, '')).replace('components', 'eui_components'));
+      if (typedExports.length) {
+        reExportStatements.push(`/* OUI -> EUI Aliases: Build-Time */ export type { ${typedExports.join(', ')} } from '${importFrom}';`);
       }
+      if (simpleExports.length) {
+        reExportStatements.push(`/* OUI -> EUI Aliases: Build-Time */ export { ${simpleExports.join(', ')} } from '${importFrom}';`);
+      }
+    }
 
-      fs.writeFileSync(file, content, 'utf8');
+    // Look for `export {}` from other files
+    const externalExportMatcher = /export\s+\{\s*(.+?)\s*}\s+from\s+['"](.+?)['"]/sg;
+    while ((match = externalExportMatcher.exec(content)) !== null) {
+      const [, block, src] = match;
+      const reExportableProps = block.split(/[\s\r\n]*,[\s\r\n]*/)
+        // While we know all cases of "oui" can safely be replaced, it is better to be safe
+        .filter(token => /oui|Oui|OUI/.test(token))
+        .map(token => translateO2E(token));
+
+      if (reExportableProps.length) {
+        const importFrom = path.relative(currentFileBaseName, path.join(currentFileBaseName, translateO2E(src)).replace('components', 'eui_components'));
+        reExportStatements.push(`/* OUI -> EUI Aliases: Build-Time */ export { ${reExportableProps.join(', ')} } from '${importFrom}';`);
+      }
+    }
+
+    if (reExportStatements.length) {
+      fs.writeFileSync(file, '\n' + reExportStatements.join('\n'), { flag: 'a', encoding: 'utf8' });
     }
   });
 
@@ -120,16 +125,53 @@ function euiBuildTimeAliasSetup() {
   shell.sed('-i', `from './react-datepicker'`, `from '../../components/date_picker/react-datepicker'`, 'src/eui_components/date_picker/date_picker.tsx');
 }
 
+function euiBuildTimeAliasTypeDef(file) {
+  console.log('Back-porting typedef for EUI aliases');
+
+  const content = fs.readFileSync(file, 'utf8');
+  const declarationMatcher = /^declare\s+module\s+(['"]@opensearch-project\/oui(?!\/src\/eui_components).*?['"])\s*\{/msg;
+  let match;
+  const declarations = new Set();
+
+  while ((match = declarationMatcher.exec(content)) !== null) {
+    if (!match[1].includes('*')) declarations.add(match[1]);
+  }
+
+  const reExportStatements = [];
+  for (const declaration of declarations) {
+    reExportStatements.push(
+      "declare module " +
+      declaration.replace('@opensearch-project/oui', '@elastic/eui') +
+      " {\n  export * from " + declaration + ";\n" +
+      "}"
+    );
+  }
+
+  reExportStatements.push(
+    "declare module '@elastic/eui/dist/eui_theme_*.json' {\n" +
+    "  const value: any;\n" +
+    "  export default value;\n" +
+    "}"
+  );
+
+  fs.writeFileSync(file, '\n' + reExportStatements.join('\n'), { flag: 'a', encoding: 'utf8' });
+}
+
 function euiBuildTimeAliasTearDown() {
-  console.log('Tearing build-time EUI aliases');
+  console.log('Tearing down build-time EUI aliases');
   shell.rm('-rf', 'src/eui_components');
 
-  // Remove any added `export * from './eui_components';`
-  fs.writeFileSync('src/index.js',
-    fs.readFileSync('src/index.js', 'utf8')
-      .replace(/[\r\n]export\s+\*\s+from\s+'\.\/eui_components';/g, ''),
-    'utf8'
-  );
+  // Remove any changes made at build time
+  shell.ls('src/components/**/*.*').forEach(file => {
+    if (/__snapshots__|\.d\.ts|\.test\.|\.scss/.test(file)) return;
+    let changed;
+    const content = fs.readFileSync(file, 'utf8')
+      .replace(/\n\/\* OUI -> EUI Aliases: Build-Time \*\/.*$/mg, () => {
+        changed = true;
+        return '';
+      });
+    if (changed) fs.writeFileSync(file, content, 'utf8');
+  });
 }
 /* End of Aliases */
 
@@ -191,6 +233,9 @@ function compileLib() {
   execSync(`node ${path.resolve(__dirname, 'dtsgenerator.js')}`, {
     stdio: 'inherit',
   });
+  /* OUI -> EUI Aliases */
+  euiBuildTimeAliasTypeDef('oui.d.ts');
+  /* End of Aliases */
   // validate the generated oui.d.ts doesn't contain errors
   execSync('tsc --noEmit -p tsconfig-builttypes.json', { stdio: 'inherit' });
   console.log(chalk.green('✔ Finished generating definitions'));
@@ -300,11 +345,11 @@ function compileBundle() {
     baseDir: path.resolve(__dirname, '..', 'src/themes/charts/'),
     files: ['themes.ts'],
     resolveModuleId() {
-      return '@opensearch-project/oui/dist/eui_charts_theme';
+      return '@elastic/eui/dist/eui_charts_theme';
     },
     resolveModuleImport(params) {
       if (params.importedModuleId === '../../components/common') {
-        return '@opensearch-project/oui/src/components/common';
+        return '@elastic/eui/src/components/common';
       }
       return null;
     }

@@ -24,3 +24,19 @@
   @include fontSize($ouiTabFontSizeL);
   height: $ouiSizeXXL + $ouiSizeS;
 }
+
+/* OUI -> EUI Aliases */
+.euiTab {
+  font-weight: $euiFontWeightMedium;
+  height: $euiSizeXXL + $euiSizeS;
+}
+
+.euiTabs--small .euiTab {
+  height: $euiSizeXXL;
+}
+
+.euiTabs--large .euiTab {
+  @include fontSize($euiTabFontSizeL);
+  height: $euiSizeXXL + $euiSizeS;
+}
+/* End of Aliases */

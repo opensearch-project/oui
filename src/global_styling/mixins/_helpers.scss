@@ -146,6 +146,14 @@
 @mixin euiYScrollWithShadows { @include ouiYScrollWithShadows; }
 @mixin euiXScrollWithShadows { @include ouiXScrollWithShadows; }
 @mixin euiScreenReaderOnly { @include ouiScreenReaderOnly; }
-@mixin euiCanAnimate { @include ouiCanAnimate; }
-@mixin euiCantAnimate { @include ouiCantAnimate; }
+@mixin euiCanAnimate {
+  @include ouiCanAnimate {
+    @content;
+  }
+}
+@mixin euiCantAnimate {
+  @include ouiCantAnimate {
+    @content;
+  }
+}
 /* End of Aliases */

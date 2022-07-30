@@ -12,3 +12,9 @@
 .ouiOverlayMask {
   background: transparentize($ouiColorInk, .5);
 }
+
+/* OUI -> EUI Aliases */
+.euiOverlayMask {
+  background: transparentize($ouiColorInk, .5);
+}
+/* End of Aliases */

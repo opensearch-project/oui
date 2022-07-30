@@ -53,6 +53,9 @@ const generator = dtsGenerator({
   resolveModuleId(params) {
     if (
       path.basename(params.currentModuleId) === 'index' &&
+      /* OUI -> EUI Aliases */
+      !params.currentModuleId.includes('eui_components') &&
+      /* End of Aliases */
       !hasParentIndex(path.resolve(baseDir, params.currentModuleId))
     ) {
       // this module is exporting from an `index(.d)?.ts` file, declare its exports straight to @opensearch-project/oui module
@@ -158,6 +161,9 @@ generator.then(() => {
       ) // end 3.
       .replace(/$/, `\n\n${buildOuiTokensObject()}`) // 4.
   );
+  /* OUI -> EUI Aliases */
+  fs.writeFileSync(defsFilePath, `\n\n${buildEuiTokensObject()}`, {flag: 'a', encoding: 'utf8'});
+  /* End of Aliases */
 });
 
 /** For step 4 **/
@@ -178,7 +184,7 @@ function buildOuiTokensObject() {
   return `
 declare module '@opensearch-project/oui' {
   export type OuiTokensObject = {
-    ${i18ndefs.map(({ token }) => `"${token}": any;`).join('\n')}
+    ${i18ndefs.map(({ token }) => `"${token}": any;`).join('\n  ')}
   }
 }
   `;
@@ -196,11 +202,11 @@ function buildEuiTokensObject() {
     },
     { i18ndefs: [], tokens: new Set() }
   );
-  const caseSensitiveMapToE = {o: 'o', O: 'E'};
+  const o2eMapper = {o: 'e', O: 'E'};
   return `
 declare module '@opensearch-project/oui' {
   export type EuiTokensObject = {
-    ${i18ndefs.map(({ token }) => `"${token.replace(/(o)(ui)/ig, (m, m1, m2) => caseSensitiveMapToE[m1] + m2)}": any;`).join('\n')}
+    ${i18ndefs.map(({ token }) => `"${token.replace(/(o)(?=ui)/ig, (m, m1) => o2eMapper[m1])}": any;`).join('\n  ')}
   }
 }
   `;

@@ -12,3 +12,9 @@
 .ouiMark {
   background: $ouiFocusBackgroundColor;
 }
+
+/* OUI -> EUI Aliases */
+.ouiMark {
+  background: $euiFocusBackgroundColor;
+}
+/* End of Aliases */

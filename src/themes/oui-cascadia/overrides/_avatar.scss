@@ -16,3 +16,13 @@
     display: none;
   }
 }
+
+/* OUI -> EUI Aliases */
+.euiAvatar--space,
+.euiAvatar--user {
+  // Remove faux outline
+  &:after {
+    display: none;
+  }
+}
+/* End of Aliases */
