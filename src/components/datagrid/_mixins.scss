@@ -86,9 +86,25 @@ $ouiDataGridStyles: (
 $euiDataGridPrefix: $ouiDataGridPrefix;
 $euiDataGridStyles: $ouiDataGridStyles;
 @function euiDataGridSelector($selectorKeys...) { @return ouiDataGridSelector($selectorKeys...); }
-@mixin euiDataGridStyles($selectorKeys...) { @include ouiDataGridStyles($selectorKeys...); }
-@mixin euiDataGridHeaderCell { @include ouiDataGridHeaderCell; }
+@mixin euiDataGridStyles($selectorKeys...) {
+  @include ouiDataGridStyles($selectorKeys...) {
+    @content;
+  }
+}
+@mixin euiDataGridHeaderCell {
+  .euiDataGridHeaderCell {
+    @content;
+  }
+}
 @mixin euiDataGridCellFocus { @include ouiDataGridCellFocus; }
-@mixin euiDataGridRowCell { @include ouiDataGridRowCell; }
-@mixin euiDataGridFooterCell { @include ouiDataGridFooterCell; }
+@mixin euiDataGridRowCell {
+  .euiDataGridRowCell {
+    @content;
+  }
+}
+@mixin euiDataGridFooterCell {
+  .euiDataGridRowCell.euiDataGridFooterCell {
+    @content;
+  }
+}
 /* End of Aliases */

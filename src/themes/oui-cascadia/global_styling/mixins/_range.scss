@@ -70,11 +70,19 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiRangeTrackSize($compressed: false) { @include ouiRangeTrackSize($compressed); }
-@mixin euiRangeTrackPerBrowser { @include ouiRangeTrackPerBrowser; }
+@mixin euiRangeTrackPerBrowser {
+  @include ouiRangeTrackPerBrowser {
+    @content;
+  }
+}
 @mixin euiRangeThumbBorder { @include ouiRangeThumbBorder; }
 @mixin euiRangeThumbBoxShadow { @include ouiRangeThumbBoxShadow; }
 @mixin euiRangeThumbFocusBoxShadow { @include ouiRangeThumbFocusBoxShadow; }
 @mixin euiRangeThumbStyle { @include ouiRangeThumbStyle; }
-@mixin euiRangeThumbPerBrowser { @include ouiRangeThumbPerBrowser; }
+@mixin euiRangeThumbPerBrowser {
+  @include ouiRangeThumbPerBrowser {
+    @content;
+  }
+}
 @mixin euiRangeThumbFocus { @include ouiRangeThumbFocus; }
 /* End of Aliases */

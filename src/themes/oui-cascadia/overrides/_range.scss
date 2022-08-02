@@ -12,3 +12,9 @@
 .ouiRangeTooltip__value {
   border-radius: $ouiBorderRadiusSmall;
 }
+
+/* OUI -> EUI Aliases */
+.euiRangeTooltip__value {
+  border-radius: $ouiBorderRadiusSmall;
+}
+/* End of Aliases */

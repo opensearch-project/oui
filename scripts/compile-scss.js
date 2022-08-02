@@ -130,11 +130,31 @@ async function compileScssFile(
     }
   );
 
-  const extractedVarTypes = await deriveSassVariableTypes(
+  /* OUI -> EUI Aliases: Modified */
+  // const extractedVarTypes = await deriveSassVariableTypes(
+  const extractedVarTypes_ = await deriveSassVariableTypes(
+  /* End of Aliases */
     extractedVars,
     `${packageName}/${outputVarsFilename}`,
     outputVarTypesFilename
   );
+
+  /* OUI -> EUI Aliases */
+  const declarationMatcher = /^declare\s+module\s+(['"]@opensearch-project\/oui.*?['"])\s*\{/msg;
+  let match;
+  const declarations = [];
+
+  while ((match = declarationMatcher.exec(extractedVarTypes_)) !== null) {
+      declarations.push(
+        "declare module " +
+        match[1].replace('@opensearch-project/oui', '@elastic/eui') + " {\n" +
+        "  import _ from " + match[1] + ";\n" +
+        "  export default _;\n" +
+        "}"
+      );
+  }
+  const extractedVarTypes = extractedVarTypes_ + '\n' + declarations.join('\n');
+  /* End of Aliases */
 
   const { css: postprocessedCss } = await postcss(postcssConfiguration).process(
     /* OUI -> EUI Aliases: Modified */

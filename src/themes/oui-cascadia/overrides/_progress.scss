@@ -12,3 +12,9 @@
 .ouiProgress--native {
   border-radius: $ouiSizeS;
 }
+
+/* OUI -> EUI Aliases */
+.euiProgress--native {
+  border-radius: $ouiSizeS;
+}
+/* End of Aliases */

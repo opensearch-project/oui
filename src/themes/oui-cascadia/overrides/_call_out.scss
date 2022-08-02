@@ -16,3 +16,13 @@
     font-weight: $ouiFontWeightMedium;
   }
 }
+
+/* OUI -> EUI Aliases */
+.euiCallOut {
+  border-left: none;
+
+  .euiCallOutHeader__title {
+    font-weight: $euiFontWeightMedium;
+  }
+}
+/* End of Aliases */

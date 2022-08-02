@@ -14,3 +14,10 @@
   @include fontSize($ouiFontSizeM);
   @include ouiScaleText($ouiFontSizeM);
 }
+
+/* OUI -> EUI Aliases */
+.euiText--medium {
+  @include fontSize($euiFontSizeM);
+  @include euiScaleText($euiFontSizeM);
+}
+/* End of Aliases */

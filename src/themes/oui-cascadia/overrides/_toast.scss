@@ -33,5 +33,25 @@ $ouiToastTypes: (
 
 
 /* OUI -> EUI Aliases */
-$euiToastTypes: $ouiToastTypes;
+.euiToast {
+  border: none;
+  border-radius: $euiBorderRadius;
+}
+
+$euiToastTypes: (
+  primary: $euiColorPrimary,
+  success: $euiColorSuccess,
+  warning: $euiColorWarning,
+  danger: $euiColorDanger
+);
+
+@each $name, $color in $euiToastTypes {
+  .euiToast--#{$name} {
+    border-top: 2px solid $color;
+  }
+}
+
+.euiToastHeader__title {
+  font-weight: $euiFontWeightBold;
+}
 /* End of Aliases */

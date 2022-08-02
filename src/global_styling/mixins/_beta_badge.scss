@@ -42,5 +42,30 @@
 
 
 /* OUI -> EUI Aliases */
-@mixin euiHasBetaBadge($selector, $spacing: $ouiSize) { @include ouiHasBetaBadge($selector, $spacing); }
+@mixin euiHasBetaBadge($selector, $spacing: $ouiSize) {
+  #{$selector}--hasBetaBadge {
+    position: relative;
+    overflow: visible; // 2
+
+    #{$selector}__betaBadgeWrapper {
+      position: absolute;
+      top: ($ouiSizeL / -2);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3; // get above abs positioned image
+      min-width: 30%; // 1
+      max-width: calc(100% - #{($spacing * 2)});
+
+      .euiToolTipAnchor,
+      #{$selector}__betaBadge {
+        width: 100%; // 1
+      }
+
+      #{$selector}__betaBadge {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
 /* End of Aliases */

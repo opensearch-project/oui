@@ -61,5 +61,9 @@
 
 
 /* OUI -> EUI Aliases */
-@mixin euiBreakpoint($sizes...) { @include ouiBreakpoint($sizes...); }
+@mixin euiBreakpoint($sizes...) {
+  @include ouiBreakpoint($sizes...) {
+    @content;
+  }
+}
 /* End of Aliases */

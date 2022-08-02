@@ -48,5 +48,40 @@
 
 
 /* OUI -> EUI Aliases */
-@mixin euiHeaderDarkTheme($backgroundColor) { @include ouiHeaderDarkTheme($backgroundColor); }
+@mixin euiHeaderDarkTheme($backgroundColor) {
+  background-color: $backgroundColor;
+  border-bottom-color: lightOrDarkTheme($backgroundColor, $ouiHeaderBorderColor);
+
+  .euiHeaderLogo__text,
+  .euiHeaderLink,
+  .euiHeaderSectionItemButton {
+    color: $ouiColorGhost;
+  }
+
+  .euiHeaderLink-isActive {
+    color: makeHighContrastColor($ouiColorPrimary, $backgroundColor);
+  }
+
+  .euiHeaderSectionItem {
+    &:after {
+      background: lightOrDarkTheme($ouiColorDarkShade, $ouiColorLightestShade);
+    }
+  }
+
+  .euiHeaderLogo,
+  .euiHeaderLink,
+  .euiHeaderSectionItemButton {
+    &:focus {
+      background: shade($ouiColorPrimary, 50%);
+    }
+  }
+
+  .euiHeaderSectionItemButton__notification--badge {
+    box-shadow: 0 0 0 1px $backgroundColor;
+  }
+
+  .euiHeaderSectionItemButton__notification--dot {
+    stroke: $backgroundColor;
+  }
+}
 /* End of Aliases */

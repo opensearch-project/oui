@@ -39,5 +39,26 @@
 
 
 /* OUI -> EUI Aliases */
-@mixin euiHeaderAffordForFixed($headerHeight: $ouiHeaderHeightCompensation) { @include ouiHeaderAffordForFixed($headerHeight); }
+@mixin euiHeaderAffordForFixed($headerHeight: $ouiHeaderHeightCompensation) {
+  &.euiBody--headerIsFixed {
+    padding-top: $headerHeight;
+
+    .euiFlyout,
+    .euiCollapsibleNav {
+      top: $headerHeight;
+      height: calc(100% - #{$headerHeight});
+    }
+
+    @include euiBreakpoint('m', 'l', 'xl') {
+      .euiPageSideBar--sticky {
+        max-height: calc(100vh - #{$headerHeight});
+        top: #{$headerHeight};
+      }
+    }
+
+    .euiOverlayMask--belowHeader {
+      top: #{$headerHeight};
+    }
+  }
+}
 /* End of Aliases */

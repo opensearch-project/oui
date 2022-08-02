@@ -120,6 +120,23 @@
 @mixin euiButtonBase { @include ouiButtonBase; }
 @mixin euiButtonFocus { @include ouiButtonFocus; }
 @mixin euiButton { @include ouiButton; }
-@mixin euiButtonContent($isReverse: false) { @include ouiButtonContent($isReverse); }
-@mixin euiButtonContentDisabled { @include ouiButtonContentDisabled; }
+@mixin euiButtonContent($isReverse: false) {
+  @include ouiButtonContent($isReverse);
+
+  .euiButtonContent__icon,
+  .euiButtonContent__spinner {
+    flex-shrink: 0; // Ensures the icons/spinner don't scale down below their intended size
+  }
+}
+@mixin euiButtonContentDisabled {
+  @include ouiButtonContentDisabled;
+
+  .euiButtonContent__icon {
+    fill: currentColor;
+  }
+
+  .euiButtonContent__spinner {
+    border-color: ouiLoadingSpinnerBorderColors(currentColor);
+  }
+}
 /* End of Aliases */
