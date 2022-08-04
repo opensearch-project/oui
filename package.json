@@ -58,7 +58,9 @@
     "**/eslint/shelljs": "^0.8.5",
     "**/css-select/css-what": "^6.1.0",
     "**/css-select/nth-check": "^2.0.1",
-    "**/bin-version-check": "^5.0.0"
+    "**/bin-version-check": "^5.0.0",
+    "codesandbox/**/make-fetch-happen": "^4.0.1",
+    "**/meow/trim-newlines": "^4.0.2"
   },
   "pre-commit": [
     "test-staged"
