@@ -27,13 +27,13 @@ module.exports = class extends Generator {
         value: 'component',
       }],
     }]).then(answers => {
-      this.config = answers;
+      this.answers = answers;
     });
   }
 
   writing() {
     this.composeWith(componentGenerator, {
-      fileType: this.config.fileType,
+      fileType: this.answers.fileType,
     });
   }
 }

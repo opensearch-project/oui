@@ -37,7 +37,7 @@ module.exports = class extends Generator {
       type: 'confirm',
       default: true,
     }]).then(answers => {
-      this.config = answers;
+      this.answers = answers;
 
       if (!answers.name || !answers.name.trim()) {
         this.log.error('Sorry, please run this generator again and provide a component name.');
@@ -47,7 +47,7 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    const config = this.config;
+    const config = this.answers;
 
     const writeComponent = isStatelessFunction => {
       const componentName = utils.makeComponentName(config.name);
@@ -69,7 +69,7 @@ module.exports = class extends Generator {
       config.stylesImportPath = `./_${fileName}.scss`;
 
       // If it needs its own directory then it will need a root index file too.
-      if (this.config.shouldMakeDirectory) {
+      if (config.shouldMakeDirectory) {
         this.fs.copyTpl(
           this.templatePath('_index.scss'),
           this.destinationPath(`${path}/_index.scss`),
@@ -119,24 +119,26 @@ module.exports = class extends Generator {
   }
 
   end() {
+    const config = this.answers;
+
     const showImportComponentSnippet = () => {
-      const componentName = this.config.vars.componentName;
+      const componentName = config.vars.componentName;
 
       this.log(chalk.white(`\n// Export component (e.. from component's index.ts).`));
       this.log(
         `${chalk.magenta('export')} {\n` +
         `  ${componentName},\n` +
-        `} ${chalk.magenta('from')} ${chalk.cyan(`'./${this.config.name}'`)};`
+        `} ${chalk.magenta('from')} ${chalk.cyan(`'./${config.name}'`)};`
       );
 
       this.log(chalk.white('\n// Import styles.'));
       this.log(
-        `${chalk.magenta('@import')} ${chalk.cyan(`'${this.config.name}'`)};`
+        `${chalk.magenta('@import')} ${chalk.cyan(`'${config.name}'`)};`
       );
 
       this.log(chalk.white('\n// Import component styles into the root index.scss.'));
       this.log(
-        `${chalk.magenta('@import')} ${chalk.cyan(`'${this.config.name}/index'`)};`
+        `${chalk.magenta('@import')} ${chalk.cyan(`'${config.name}/index'`)};`
       );
     };
 

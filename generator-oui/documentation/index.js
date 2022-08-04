@@ -72,12 +72,12 @@ module.exports = class extends Generator {
     }
 
     return this.prompt(prompts).then(answers => {
-      this.config = answers;
+      this.answers = answers;
     });
   }
 
   writing() {
-    const config = this.config;
+    const config = this.answers;
 
     const writeDocumentationPage = () => {
       const componentExampleName = utils.makeComponentName(config.name, false);
@@ -146,12 +146,14 @@ module.exports = class extends Generator {
   }
 
   end() {
+    const config = this.answers;
+
     const showImportDemoSnippet = () => {
       const {
         componentExampleName,
         componentExamplePrefix,
         fileName,
-      } = this.config.documentationVars;
+      } = config.documentationVars;
 
       this.log(chalk.white('\n// Import demo into example.'));
       this.log(
@@ -190,7 +192,7 @@ module.exports = class extends Generator {
     };
 
     const showImportRouteSnippet = (suffix, appendToRoute) => {
-      const { componentExampleName, fileName } = this.config.documentationVars;
+      const { componentExampleName, fileName } = config.documentationVars;
 
       this.log(
         chalk.white(
