@@ -187,7 +187,7 @@
 
 // Fix ghost/disabled look specifically
 .euiButton.euiButton-isDisabled.euiButton--ghost,
-  // adding fill type to override default theme
+// adding fill type to override default theme
 .euiButton.euiButton-isDisabled.euiButton--ghost.euiButton--fill {
   &,
   &:focus {
@@ -226,7 +226,7 @@
 
 // Fix ghost/disabled look specifically
 .euiButtonIcon:not(.euiButtonIcon--empty).euiButtonIcon-isDisabled.euiButtonIcon--ghost,
-  // adding fill type to override default theme
+// adding fill type to override default theme
 .euiButtonIcon.euiButtonIcon-isDisabled.euiButtonIcon--ghost.euiButtonIcon--fill {
   &,
   &:focus {
