@@ -58,6 +58,8 @@
     "**/eslint/shelljs": "^0.8.5",
     "**/css-select/css-what": "^6.1.0",
     "**/css-select/nth-check": "^2.0.1",
+    "**/cheerio-select-tmp/css-what": "^6.1.0",
+    "**/cheerio-select-tmp/nth-check": "^2.0.1",
     "**/find-versions": "^4.0.0",
     "codesandbox/**/make-fetch-happen": "^4.0.1",
     "codesandbox/**/pacote": "^12.0.0",
