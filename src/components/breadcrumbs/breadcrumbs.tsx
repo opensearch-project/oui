@@ -33,6 +33,7 @@ import React, {
   FunctionComponent,
   MouseEventHandler,
   ReactNode,
+  useContext,
   useEffect,
   useState,
 } from 'react';
@@ -46,6 +47,7 @@ import { OuiPopover } from '../popover';
 import { OuiIcon } from '../icon';
 import { throttle } from '../../services';
 import { OuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
+import { ThemeContext } from '../../../src-docs/src/components/with_theme/theme_context';
 
 export type OuiBreadcrumbResponsiveMaxCount = {
   /**
@@ -200,6 +202,10 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   const [currentBreakpoint, setCurrentBreakpoint] = useState(
     getBreakpoint(typeof window === 'undefined' ? -Infinity : window.innerWidth)
   );
+  const themeContext = useContext(ThemeContext);
+  const isCascadiaTheme = themeContext.theme.includes('cascadia');
+  console.log(themeContext.theme);
+  console.log(isCascadiaTheme);
 
   const functionToCallOnWindowResize = throttle(() => {
     const newBreakpoint = getBreakpoint(window.innerWidth);
@@ -273,7 +279,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
 
     let separator;
 
-    if (!isLastBreadcrumb) {
+    if (!isLastBreadcrumb && isCascadiaTheme) {
       separator = <OuiBreadcrumbSeparator />;
     }
 
@@ -308,6 +314,8 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
 
   const classes = classNames('ouiBreadcrumbs', className, {
     'ouiBreadcrumbs--truncate': truncate,
+    'ouiBreadcrumb-New':
+      isCascadiaTheme && className !== 'ouiBreadcrumbs__inPopover',
   });
 
   return (

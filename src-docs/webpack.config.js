@@ -89,6 +89,7 @@ const webpackConfig = {
             options: { injectType: 'lazySingletonStyleTag' },
           },
           'css-loader',
+          'resolve-url-loader',
           'postcss-loader',
           'sass-loader',
         ]),

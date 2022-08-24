@@ -77,3 +77,56 @@
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
 }
+
+
+/* new style global breadcrumb when @useCascadia is true */
+
+$osdHeaderBreadcrumbCollapsedLink: #002a3a;
+$osdHeaderBreadcrumbMidnightSkyMediumLightColor: #96a0a5;
+
+$firstBreadcrumbPolygon: polygon(
+  0% 0%,
+  100% 0%,
+  calc(100% - #{$ouiSizeS}) 100%,
+  0% 100%
+);
+$breadcrumbPolygon: polygon(
+  $ouiSizeS 0%,
+  100% 0%,
+  calc(100% - #{$ouiSizeS}) 100%,
+  0% 100%
+);
+
+.ouiBreadcrumb-New{
+
+ filter:url('./public/assets/round-filter.svg#round');
+
+
+.ouiBreadcrumb{
+
+  clip-path: $breadcrumbPolygon;
+  padding: $ouiSizeXS - 2.5 $ouiSizeM;
+  background-color: $osdHeaderBreadcrumbSecondBackground;
+  &:hover {
+    color:$osdHeaderBreadcrumbHoverColor;
+  }
+  &:first-child {
+    clip-path: $firstBreadcrumbPolygon;
+  }
+  &:last-child {
+    background-color: $osdHeaderBreadcrumbFirstBackground;
+    &:hover{
+      color: inherit;
+    }
+  }
+  
+}
+.ouiBreadcrumb--collapsed{
+  color: $ouiColorGhost;
+  background: $ouiColorEmptyShade;
+}
+.ouiLink.ouiLink--subdued:hover{
+  color:$osdHeaderBreadcrumbHoverColor;
+}
+
+}
