@@ -277,7 +277,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
 
     let separator;
 
-    if (!isLastBreadcrumb && isCascadiaTheme) {
+    if (!isLastBreadcrumb) {
       separator = <OuiBreadcrumbSeparator />;
     }
 
