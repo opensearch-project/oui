@@ -204,8 +204,6 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   );
   const themeContext = useContext(ThemeContext);
   const isCascadiaTheme = themeContext.theme.includes('cascadia');
-  console.log(themeContext.theme);
-  console.log(isCascadiaTheme);
 
   const functionToCallOnWindowResize = throttle(() => {
     const newBreakpoint = getBreakpoint(window.innerWidth);
