@@ -65,7 +65,10 @@
     "codesandbox/**/pacote": "^12.0.0",
     "**/meow/trim-newlines": "^4.0.2",
     "**/stylelint/micromatch": "^3.1.0",
-    "webpack/**/serialize-javascript": "^3.1.0"
+    "webpack/**/serialize-javascript": "^3.1.0",
+    "**/scss-tokenizer": "^0.4.3",
+    "**/node-notifier": "^10.0.1",
+    "**/got": "^11.8.5"
   },
   "pre-commit": [
     "test-staged"
@@ -231,9 +234,9 @@
     "terser-webpack-plugin": "^4.1.0",
     "typescript": "4.0.5",
     "url-loader": "^4.1.0",
-    "webpack": "^4.44.1",
+    "webpack": "4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
+    "webpack-dev-server": "3.11.0",
     "yeoman-generator": "^5.7.0",
     "yo": "^4.3.0"
   },
