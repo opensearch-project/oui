@@ -68,7 +68,8 @@
     "webpack/**/serialize-javascript": "^3.1.0",
     "**/scss-tokenizer": "^0.4.3",
     "**/node-notifier": "^10.0.1",
-    "**/got": "^11.8.5"
+    "**/got": "^11.8.5",
+    "**/postcss": "^7.0.39"
   },
   "pre-commit": [
     "test-staged"
