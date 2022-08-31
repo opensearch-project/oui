@@ -62,7 +62,12 @@
     "codesandbox/**/make-fetch-happen": "^4.0.1",
     "**/meow/trim-newlines": "^4.0.2",
     "**/stylelint/micromatch": "^3.1.0",
-    "webpack/**/serialize-javascript": "^3.1.0"
+    "webpack/**/serialize-javascript": "^3.1.0",
+    "**/scss-tokenizer": "^0.4.3",
+    "**/node-notifier": "^10.0.1",
+    "**/got": "^11.8.5",
+    "**/postcss": "^7.0.39",
+    "**/eslint": "^7.10.0"
   },
   "pre-commit": [
     "test-staged"
