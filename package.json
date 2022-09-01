@@ -70,7 +70,8 @@
     "**/node-notifier": "^10.0.1",
     "**/got": "^11.8.5",
     "**/postcss": "^7.0.39",
-    "**/eslint": "^7.10.0"
+    "**/eslint": "^7.10.0",
+    "**/har-validator": "^5.1.5"
   },
   "pre-commit": [
     "test-staged"
