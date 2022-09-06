@@ -52,6 +52,7 @@ const OSD_HEADER = `
  * Modifications Copyright OpenSearch Contributors. See
  * GitHub history for details.
  */
+
 `;
 
 const APACHE_2_0_LICENSE_HEADER = `
