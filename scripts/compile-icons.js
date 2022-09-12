@@ -13,6 +13,9 @@ const glob = require('glob');
 const svgr = require('@svgr/core').default;
 const path = require('path');
 const fs = require('fs');
+const license = require('../.eslintrc.js').rules[
+  'local/require-license-header'
+][1].licenses[1];
 
 const rootDir = path.resolve(__dirname, '..');
 const srcDir = path.resolve(rootDir, 'src');
@@ -66,7 +69,7 @@ export const icon = ${componentName};
     );
 
     const outputFilePath = filePath.replace(/\.svg$/, '.js');
-    fs.writeFileSync(outputFilePath, jsxSource);
+    fs.writeFileSync(outputFilePath, license + jsxSource);
   } catch (e) {
     console.error(`Error processing ${filePath}`);
     console.error(e);

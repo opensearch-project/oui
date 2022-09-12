@@ -1,48 +1,99 @@
+- [Contributing to OUI](#contributing-to-oui)
+  - [First Things First](#first-things-first)
+  - [Ways to Contribute](#ways-to-contribute)
+    - [Bug Reports](#bug-reports)
+    - [Feature Requests](#feature-requests)
+    - [Documentation Changes](#documentation-changes)
+    - [Contributing Code](#contributing-code)
+  - [Developer Certificate of Origin](#developer-certificate-of-origin)
+  - [Review Process](#review-process)
+
 # Contributing to OUI
 
-🙌 Thanks for your interest in contributing to OUI! 🙌
+OpenSearch is a community project that is built and maintained by people just like you. We're glad you're interested in helping out. There are several ways you can do it, but before we talk about that, let's talk about how to get started.
 
-## New components, features, and bug fixes
+## First Things First
 
-When creating new components, adding new features, or fixing bugs, please refer to the [Component Development guidelines](wiki/component-development.md). If there isn't an associated issue on the bug tracker yet, consider creating one so that you get a chance to discuss the changes you have in mind with the rest of the team.
+**When in doubt, open an issue** - For almost any type of contribution the first step is opening an issue. Even if you think you already know what the solution is, writing down a description of the problem you're trying to solve will help others get the context when they review your pull request. If it's truly a trivial change (e.g. spelling error), you can skip this step -- but as the subject says, when in doubt, [open an issue](https://github.com/opensearch-project/oui/issues).
 
-### How we assign work and define our roadmap
+**Only submit your own work** (or work you have sufficient rights to submit) - Please make sure that any code or documentation you submit is your work or that you have the rights to submit. We respect the intellectual property rights of others, and as part of contributing, we'll ask you to sign your contribution with a "Developer Certificate of Origin" (DCO) that states you have the rights to submit this work and you understand we'll use your contribution. There's more information about this topic in the [DCO section](#developer-certificate-of-origin).
 
-OUI is built primarily by employees of Elastic. We try to do this in the open as much as possible, but do utilize closed meetings and other planning tools to dictate our longer term roadmap. We try to transcribe the decisions from these discussions in the form of specifications to Github issues for transparency. In general, once on Github, any issue can be worked on by the community. We sometimes reserve larger projects or ones that are core to our roadmap or design to be done internally. In these cases we mark these issues as `assigned` to a person using Github. We do not, as a policy, assign issues to community members. If you find an issue that is not assigned, assume that you are welcome to work on it and can submit a pull request. Feel free to leave a comment to mark intent and avoid conflict.
+## Ways to Contribute
+### Bug Reports
 
-### How to ensure the timely review of pull requests
+A bug is when software behaves in a way that you didn't expect and the developer didn't intend. To help us understand what's going on, we first want to make sure you're working from the latest version. Please make sure you're testing against the [latest version](https://github.com/opensearch-project/oui).
 
-To help the maintainers of OUI better respond to your pull requests please try to adhere to the following guidelines:
+Once you've confirmed that the bug still exists in the latest version, you'll want to check to make sure it's not something we already know about on the [open issues GitHub page](https://github.com/opensearch-project/oui/issues).
 
-1. Treat each other professionally and assume best intent in each others work and suggestions
-2. Include screenshots and a summary of your changes in the PR description
-3. Fill out the checklist, using ~strikethroughs~ to mark any items that are not applicable
-4. Make sure your changes are documented on the demo site and include liberal code comments
+If you've upgraded to the latest version and you can't find it in our open issues list, then you'll need to tell us how to reproduce it. Please provide us with as much context and information as possible (e.g. OS and browser version).
 
-Generally you can expect feedback and a review of your pull request from our team within a week. Contributors should limit themselves to three or less active PRs at any one time, which helps us focus review time towards PRs that are close to a merge event. Sometimes it is unclear who has the next step in getting a pull request over the line and the review can lag as a result. If this is the case, feel free to leave a new comment and ask for guidance.
+### Feature Requests
 
-### Feel free to submit pull requests in draft stages
+If you've thought of a way that OUI could be better, we want to hear about it. We track feature requests using GitHub, so please feel free to open an [issue](https://github.com/opensearch-project/oui/issues) which describes the feature you would like to see, why you need it, and how it should work.
 
-OUI has strict quality and testing standards due to its large downstream footprint and accessibility requirements. Don't feel intimidated and think you need to submit perfect PRs because of this. We welcome draft PRs to show conceptual ideas or enhancements you would like to see. The OUI team normally engages on these PRs in one of two ways, which is largely up to you.
+### Documentation Changes
 
-1. We can provide review and guidance for how to get the PR up to the library's standards. (slower, but you might enjoy this)
-2. We can commit directly to your PR to get it over the finish line. (faster)
+If you would like to contribute to the documentation, please do so in the [documentation-website](https://github.com/opensearch-project/documentation-website) repo.
 
-If you have a preference, let us know when you make your PR, but never feel guilty about just handing it off. We're here to help.
+### Contributing Code
 
-### We utilize Github actions to keep the repo tidy
+As with other types of contributions, the first step is to [**open an issue on GitHub**](https://github.com/opensearch-project/oui/issues/new/choose). Opening an issue before you make changes makes sure that someone else isn't already working on that particular problem. It also lets us all work together to find the right approach before you spend a bunch of time on a PR. So again, when in doubt, open an issue.
 
-We use Github actions for some automation tasks to keep this repo tidy. Specifically we close out issues and PRs using [the actions/stale workflow](https://github.com/actions/stale) when we notice a lack of activity over a long period of time. This is done as much to remind us of older issues that need attention as it is to keep our total issue count managable. These action counters can easily be soft reset by commenting on the issues/PRs directly.
+Once you've opened an issue, check out our [Developer Guide](./DEVELOPER_GUIDE.md) for instructions on how to get started.
 
-## Helpful documents
+## Developer Certificate of Origin
 
-* [Component design](wiki/component-design.md)
-* [Component development](wiki/component-development.md)
-  * [Creating components manually](wiki/creating-components-manually.md)
-  * [Creating components with Yeoman](wiki/creating-components-yeoman.md)
-* [Creating icons](wiki/creating-icons.md)
-* [Theming](wiki/theming.md)
-* [Testing](wiki/testing.md)
-  * [Accessibility Testing](wiki/automated-accessibility-testing.md)
-* [Documentation](wiki/documentation-guidelines.md)
-* [Releasing versions](wiki/releasing-versions.md)
+OUI is an open source product released under the Apache 2.0 license (see either [the Apache site](https://www.apache.org/licenses/LICENSE-2.0) or the [LICENSE.txt file](./LICENSE.txt)). The Apache 2.0 license allows you to freely use, modify, distribute, and sell your own products that include Apache 2.0 licensed software.
+
+We respect intellectual property rights of others and we want to make sure all incoming contributions are correctly attributed and licensed. A Developer Certificate of Origin (DCO) is a lightweight mechanism to do that.
+
+The DCO is a declaration attached to every contribution made by every developer. In the commit message of the contribution, the developer simply adds a `Signed-off-by` statement and thereby agrees to the DCO, which you can find below or at [DeveloperCertificate.org](http://developercertificate.org/).
+
+```
+Developer's Certificate of Origin 1.1
+
+By making a contribution to this project, I certify that:
+
+(a) The contribution was created in whole or in part by me and I
+    have the right to submit it under the open source license
+    indicated in the file; or
+
+(b) The contribution is based upon previous work that, to the
+    best of my knowledge, is covered under an appropriate open
+    source license and I have the right under that license to
+    submit that work with modifications, whether created in whole
+    or in part by me, under the same open source license (unless
+    I am permitted to submit under a different license), as
+    Indicated in the file; or
+
+(c) The contribution was provided directly to me by some other
+    person who certified (a), (b) or (c) and I have not modified
+    it.
+
+(d) I understand and agree that this project and the contribution
+    are public and that a record of the contribution (including
+    all personal information I submit with it, including my
+    sign-off) is maintained indefinitely and may be redistributed
+    consistent with this project or the open source license(s)
+    involved.
+ ```
+We require that every contribution to OUI is signed with a Developer Certificate of Origin. Additionally, please use your real name. We do not accept anonymous contributors nor those utilizing pseudonyms.
+
+Each commit must include a DCO which looks like this
+
+```
+Signed-off-by: Jane Smith <jane.smith@email.com>
+```
+You may type this line on your own when writing your commit messages. However, if your `user.name` and `user.email` are set in your git configs, you can use `-s` or `--signoff` to add the `Signed-off-by` line to the end of the commit message.
+
+## Review Process
+
+We deeply appreciate everyone who takes the time to make a contribution. We will review all contributions as quickly as possible. As a reminder, opening an issue and discussing your change before you make it is the best way to smooth the PR process. This will prevent a rejection because someone else is already working on the problem, or because the solution is incompatible with the architectural direction.
+
+During the PR process, expect that there will be some back-and-forth. Please try to respond to the comments in a timely fashion, and if you don't wish to continue with the PR, let us know. If a PR takes too many iterations for its complexity or size, we may reject it. Additionally, if you stop responding we may close the PR as abandoned. In either case, if you feel this was done in error, please add a comment on the PR.
+
+If we accept the PR, a [maintainer](MAINTAINERS.md) will merge your change and take care of backporting it to the appropriate branches ourselves. For the backporting process, once the PR is merged a [maintainer](MAINTAINERS.md) will label it with the appropriate target branch then the backport workflow will do the rest. For example, the `backport 1.x` label will be added to the PR that is to be backported to `1.x`. The backport branches are named in the form `backport/backport-<original PR number>-to-<base>`. These branches will be cleaned up by an auto delete workflow once the backport PR is merged. If documentation is required, a [maintainer](MAINTAINERS.md) will label the PR with the `needs-documentation` label which will then create an issue in the [Documentation Website repo](https://github.com/opensearch-project/documentation-website). Please follow up and provide support on the documentation issue to ensure it is successfully closed.
+
+
+If we reject the PR, we will close the pull request with a comment explaining why. This decision isn't always final: if you feel we have misunderstood your intended change or otherwise think that we should reconsider then please continue the conversation with a comment on the PR and we'll do our best to address any further points you raise.
+
