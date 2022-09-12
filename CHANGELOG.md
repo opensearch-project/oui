@@ -1,6 +1,25 @@
-## [`master`](https://github.com/opensearch-project/oui/tree/master)
+## [`1.0.1`](https://github.com/opensearch-project/oui/tree/1.0)
 
-No public interface changes since `34.6.0`.
+No public interface changes since `1.0.0`.
+
+- Bumped `react` 16.12.0 to 16.14.0 ([#55](https://github.com/opensearch-project/oui/pull/55))
+- Bumped `moment-timezone` from 0.5.31 to 0.5.35 ([#54](https://github.com/opensearch-project/oui/pull/54))
+- Bumped a nested dependency on `scss-tokenizer` from 0.3.0 to 0.4.3 ([#50](https://github.com/opensearch-project/oui/pull/50))
+- Bumped a nested dependency on `node-notifier` from 5.4.5 to 10.0.1 ([#50](https://github.com/opensearch-project/oui/pull/50))
+- Bumped a nested dependency on `got` from 6.7.1, 7.1.0, 8.3.2, and 10.7.0 to 11.8.5 ([#50](https://github.com/opensearch-project/oui/pull/50))
+- Bumped a nested dependency on `postcss` from 6.0.23 to 7.0.39 ([#50](https://github.com/opensearch-project/oui/pull/50))
+- Bumped a nested dependency on `eslint` from 2.13.1 to 7.10.0 ([#50](https://github.com/opensearch-project/oui/pull/50))
+- Fixed errors in tests caused by an updated `cheerio` 1.0.0-rc.8 by locking it down to 1.0.0-rc.5 ([#42](https://github.com/opensearch-project/oui/pull/42))
+- Fixed SCSS lint errors ([#39](https://github.com/opensearch-project/oui/pull/39))
+- Bumped a nested dependency on `pacote` from 2.7.38 to 12.0.3 ([#38](https://github.com/opensearch-project/oui/pull/38))
+- Bumped the supported `node` version in development from 14.19.1 to 14.20.0 ([#36](https://github.com/opensearch-project/oui/pull/36))
+- Fixed errors in tests thrown by `yodoctor` ([#24](https://github.com/opensearch-project/oui/pull/24))
+- Removed non-native methods from the post-install script ([#23](https://github.com/opensearch-project/oui/pull/23))
+- Bumped a nested dependency on `hosted-git-info` from 2.8.8 to 2.8.9 ([#19](https://github.com/opensearch-project/oui/pull/19))
+
+## [`1.0.0`](https://github.com/opensearch-project/oui/tree/1.0)
+
+No public interface changes since `@elastic/eui@34.6.0`.
 
 ## [`34.6.0`](https://github.com/elastic/eui/tree/v34.6.0)
 
