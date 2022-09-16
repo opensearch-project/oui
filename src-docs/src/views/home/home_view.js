@@ -35,7 +35,6 @@ import {
   OuiPageContent,
   OuiPageContentBody,
 } from '../../../../src/components';
-// import { HomeFooterElasticLogo } from './home_footer_elastic_logo';
 
 export const HomeView = () => (
   <OuiPageContent
