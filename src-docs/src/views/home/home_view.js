@@ -62,7 +62,7 @@ export const HomeView = () => (
             <OuiText grow={false}>
               <p>
                 The OpenSearch UI framework (OUI) is the design library we use
-                at at at the OpenSearch Project to build projects that share our
+                at the OpenSearch Project to build projects that share our
                 aesthetics. It distributes UI React components and static assets
                 for use in building web layouts.
               </p>
