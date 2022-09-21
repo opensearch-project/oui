@@ -1,6 +1,14 @@
+# OUI
 ## [`master`](https://github.com/opensearch-project/oui/tree/master)
 
-No public interface changes since `34.6.0`.
+## [`1.0.0`](https://github.com/opensearch-project/oui/tree/1.0.0)
+
+- Initial forked public release
+- No public interface changes since `EUI 34.6.0`.
+
+---
+
+# EUI
 
 ## [`34.6.0`](https://github.com/elastic/eui/tree/v34.6.0)
 
