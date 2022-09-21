@@ -35,7 +35,6 @@ import {
   OuiPageContent,
   OuiPageContentBody,
 } from '../../../../src/components';
-import { HomeFooterElasticLogo } from './home_footer_elastic_logo';
 
 export const HomeView = () => (
   <OuiPageContent
@@ -57,13 +56,13 @@ export const HomeView = () => (
             <OuiSpacer />
             <OuiSpacer />
             <OuiTitle size="s">
-              <h2>The framework powering the Elastic Stack</h2>
+              <h2>The framework powering OpenSearch</h2>
             </OuiTitle>
             <OuiSpacer size="s" />
             <OuiText grow={false}>
               <p>
-                The OpenSearch UI framework (OUI) is a design library in use at
-                Elastic to build internal products that need to share our
+                The OpenSearch UI framework (OUI) is the design library we use
+                at the OpenSearch Project to build projects that share our
                 aesthetics. It distributes UI React components and static assets
                 for use in building web layouts.
               </p>
@@ -231,17 +230,7 @@ export const HomeView = () => (
             <OuiLink href="https://github.com/opensearch-project/oui/blob/master/LICENSE">
               Apache License 2.0
             </OuiLink>{' '}
-            | Crafted with{' '}
-            <span
-              role="img"
-              aria-label="love"
-              className="guideHome__footerHeart">
-              ❤️
-            </span>{' '}
-            by{' '}
-            <OuiLink href="http://elastic.co/" external={false} target="_blank">
-              <HomeFooterElasticLogo />
-            </OuiLink>
+            | © OpenSearch contributors, {new Date().getFullYear()}.
           </p>
         </OuiText>
       </div>
