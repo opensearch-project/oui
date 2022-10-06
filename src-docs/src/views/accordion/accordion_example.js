@@ -158,7 +158,7 @@ export const AccordionExample = {
       text: (
         <>
           <p>
-            The arrow (caret icon) helps indicate the current state of the accordion (open or
+            The arrow helps indicate the current state of the accordion (open or
             not) and points to the main triggering button text. If you must hide
             or change the side in which the arrow appears, use{' '}
             <OuiCode>arrowDisplay: &apos;right&apos;</OuiCode> or{' '}
