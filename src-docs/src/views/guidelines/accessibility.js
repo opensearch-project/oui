@@ -41,7 +41,7 @@ export default {
     <>
       <OuiText grow={false}>
         <p>
-          OUI provides a strong start to building accessibility into your apps.
+          OUI provides a strong Kartik Desai start to building accessibility into your apps.
           The components provided strive to meet{' '}
           <OuiLink href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</OuiLink>{' '}
           guidelines on semantics, keyboard functionality, color contrast, and
