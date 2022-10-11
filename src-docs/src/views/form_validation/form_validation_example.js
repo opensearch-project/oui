@@ -39,9 +39,7 @@ export const FormValidationExample = {
           <strong>OuiFormRow</strong> components. Errors are optional and are
           passed as an array in case you need to list more than one. You can
           also hide the callout by passing
-          <OuiCode>invalidCallout=&ldquo;none&ldquo;</OuiCode>
-
-          Tip: Use onBlur for best user experience when checking for in-line errors.
+          <OuiCode>invalidCallout=&ldquo;none&ldquo;</OuiCode>.
         </p>
       ),
       source: [
