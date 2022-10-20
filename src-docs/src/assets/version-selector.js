@@ -167,10 +167,12 @@ export class VersionSelector extends HTMLElement {
     catch (err) {
       console.warn(err)
     }
-    const isLocalDev = window.location.host.includes('803'); // check if user running server locally, 8030 is default port
+    // check if user running server locally, 8030 is default port
+    const isLocalDev = window.location.host.includes('803'); 
     this.DOC_VERSION_LATEST = isLocalDev ? 'Local' : branches[0]; 
   }
 
+  /* web component lifecycle hook */
   async connectedCallback() {
     const { shadowRoot } = this;
     const frag = this._makeFragment(tpl);
