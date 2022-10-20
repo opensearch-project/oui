@@ -167,7 +167,7 @@ export class VersionSelector extends HTMLElement {
     catch (err) {
       console.warn(err)
     }
-    const isLocalDev = window.location.host.includes('803');
+    const isLocalDev = window.location.host.includes('803'); // check if user running server locally, 8030 is default port
     this.DOC_VERSION_LATEST = isLocalDev ? 'Local' : branches[0];
   }
 
