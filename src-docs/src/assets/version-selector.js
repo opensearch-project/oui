@@ -20,7 +20,6 @@ const tpl = `
     #root {
         text-decoration: none;
         color: #FFFFFF;
-        // background-color: #00509c;
         background-color: rgb(211, 218, 230);
         color: rgb(0, 0, 0);
         background-image: var(--normal-bg);
@@ -174,7 +173,6 @@ export class VersionSelector extends HTMLElement {
     await this.fetchVersionJson();
     const defaultVersion = this.getAttribute('selected') || this.DOC_VERSION_LATEST;
  
-
     frag.querySelector('#selected').textContent = `${PREFIX}.${defaultVersion}`;
 
     const pathName = location.pathname.replace(
