@@ -126,7 +126,11 @@ const tpl = `
     }
     </style>
     <a id="root" role="button" aria-labelledby="selected" aria-controls="dropdown" tabindex="0">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6l6-6"/></g></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" 
+       width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+       <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 9l6 6l6-6"/></g>
+      </svg>
       <span id="selected"></span>
     </a>
     <div id="dropdown" role="navigation"></div>
@@ -151,7 +155,7 @@ export class VersionSelector extends HTMLElement {
   }
 
   async fetchVersionJson() {
-    const url = '/versions.json';
+    const url = 'https://d2p80mijmsa0ui.cloudfront.net/versions.json';
     var branches = [];
     try{
       const response = await fetch(url);
@@ -183,7 +187,7 @@ export class VersionSelector extends HTMLElement {
       (v, idx) =>
         `<a href="/${v}/${pathName}"${
           v === this.DOC_VERSION_LATEST ? ' class="latest"' : ''
-        }>${PREFIX}${v}</a>`
+        }>${PREFIX}.${v}</a>`
     ).join('');
 
     frag
