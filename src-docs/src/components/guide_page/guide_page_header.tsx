@@ -33,6 +33,8 @@ import {
   GuideFigmaLink,
 } from '../guide_theme_selector';
 
+const pkg = require('../../../../package.json');
+
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
@@ -65,7 +67,7 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
   }
 
   function renderVersion() {
-    return <version-selector />;
+    return <version-selector selected={pkg.version} />;
   }
 
   function renderGithub() {
