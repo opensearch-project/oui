@@ -177,7 +177,7 @@ export class VersionSelector extends HTMLElement {
     await this.fetchVersionJson();
     const defaultVersion = this.getAttribute('selected') || this.DOC_VERSION_LATEST;
 
-    frag.querySelector('#selected').textContent = `${PREFIX}.${defaultVersion}`;
+    frag.querySelector('#selected').textContent = `${PREFIX}${defaultVersion}`;
 
     const pathName = location.pathname.replace(
       /(\/((latest|\d+\.\d+)\/?)?)?/,
@@ -186,7 +186,7 @@ export class VersionSelector extends HTMLElement {
     const versionsDOMText = this.DOC_VERSIONS.map(
       (v, idx) =>
         `<a href="/${v}/${pathName}"${v === this.DOC_VERSION_LATEST ? ' class="latest"' : ''
-        }>${PREFIX}.${v}</a>`
+        }>${PREFIX}${v}</a>`
     ).join('');
 
     frag
