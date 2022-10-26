@@ -11,12 +11,13 @@
 
 import React, { useState } from 'react';
 
+import '../../assets/version-selector';
+
 import {
   OuiHeaderLogo,
   OuiHeader,
   OuiHeaderSectionItemButton,
 } from '../../../../src/components/header';
-import { OuiBadge } from '../../../../src/components/badge';
 import { OuiIcon } from '../../../../src/components/icon';
 import { OuiToolTip } from '../../../../src/components/tool_tip';
 import { OuiPopover } from '../../../../src/components/popover';
@@ -33,6 +34,18 @@ import {
 } from '../guide_theme_selector';
 
 const pkg = require('../../../../package.json');
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/no-namespace
+  namespace JSX {
+    interface IntrinsicElements {
+      'version-selector': React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      >;
+    }
+  }
+}
 
 export type GuidePageHeaderProps = {
   onToggleLocale: () => {};
@@ -54,16 +67,7 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
   }
 
   function renderVersion() {
-    const isLocalDev = window.location.host.includes('803');
-
-    return (
-      <OuiBadge
-        href="#/package/changelog"
-        aria-label={`Version ${pkg.version}, View changelog`}
-        color={isLocalDev ? 'accent' : 'default'}>
-        {isLocalDev ? 'Local' : `v.${pkg.version}`}
-      </OuiBadge>
-    );
+    return <version-selector selected={pkg.version} />;
   }
 
   function renderGithub() {
