@@ -67,7 +67,8 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
   }
 
   function renderVersion() {
-    return <version-selector selected={pkg.version} />;
+    const trimVersion = pkg.version.replace(/^(\d+\.\d+)\..*/, '$1');
+    return <version-selector selected={trimVersion} />;
   }
 
   function renderGithub() {
