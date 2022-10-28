@@ -13,7 +13,7 @@ import React from 'react';
 
 import { OuiBetaBadge, OuiSpacer, OuiTitle } from '../../../../src/components';
 
-const colors = ['hollow', 'accent', 'subdued'];
+const colors = ['hollow', 'subdued'];
 
 export default () => (
   <div>

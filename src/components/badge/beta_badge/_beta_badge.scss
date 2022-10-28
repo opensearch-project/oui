@@ -86,13 +86,3 @@
     color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
   }
 }
-
-.ouiBetaBadge--accent {
-  $backgroundColor: $ouiColorAccentText;
-  background: $backgroundColor;
-  color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
-
-  &.ouiBetaBadge-isClickable {
-    color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
-  }
-}
