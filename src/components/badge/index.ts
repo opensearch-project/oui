@@ -30,7 +30,13 @@
 
 export { OuiBadge, OuiBadgeProps } from './badge';
 
-export { OuiBetaBadge, OuiBetaBadgeProps } from './beta_badge';
+export {
+  OuiExperimentalBadge,
+  OuiExperimentalBadgeProps,
+} from './experimental_badge';
+
+// TODO: remove in next major release
+export { OuiBetaBadge, OuiBetaBadgeProps } from './experimental_badge';
 
 export { OuiNotificationBadge } from './notification_badge';
 

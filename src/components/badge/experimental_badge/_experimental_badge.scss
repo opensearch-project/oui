@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-.ouiBetaBadge {
+.ouiExperimentalBadge {
   display: inline-block;
   padding: 0 $ouiSize;
   border-radius: $ouiSizeL;
@@ -33,11 +33,11 @@
     outline-offset: 2px;
   }
 
-  &:not(.ouiBetaBadge--hollow) {
+  &:not(.ouiExperimentalBadge--hollow) {
     box-shadow: none;
   }
 
-  &.ouiBetaBadge--small {
+  &.ouiExperimentalBadge--small {
     @include fontSize($ouiFontSize * .625);
     line-height: $ouiSize + $ouiSizeXS;
     padding: 0 $ouiSizeM;
@@ -45,54 +45,54 @@
 }
 
 // When it's just an icon, make it a circle
-.ouiBetaBadge--iconOnly {
+.ouiExperimentalBadge--iconOnly {
   padding: 0;
   width: $ouiSizeL;
 
-  .ouiBetaBadge__icon {
+  .ouiExperimentalBadge__icon {
     position: relative;
     margin-top: -1px;
   }
 
-  &.ouiBetaBadge--small {
+  &.ouiExperimentalBadge--small {
     width: $ouiSize + $ouiSizeXS;
     padding: 0;
   }
 }
 
-.ouiBetaBadge--singleLetter {
+.ouiExperimentalBadge--singleLetter {
   padding: 0 0 0 1px;
   width: $ouiSizeL;
 
-  &.ouiBetaBadge--small {
+  &.ouiExperimentalBadge--small {
     width: $ouiSize + $ouiSizeXS;
     padding: 0 0 0 1px;
   }
 }
 
-.ouiBetaBadge--subdued {
+.ouiExperimentalBadge--subdued {
   $backgroundColor: tint($ouiColorLightShade, 30%);
   background: $backgroundColor;
   color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
 
-  &.ouiBetaBadge-isClickable {
+  &.ouiExperimentalBadge-isClickable {
     color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
   }
 }
 
-.ouiBetaBadge--hollow {
-  &.ouiBetaBadge-isClickable {
+.ouiExperimentalBadge--hollow {
+  &.ouiExperimentalBadge-isClickable {
     $backgroundColor: tint($ouiColorLightShade, 30%);
     color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
   }
 }
 
-.ouiBetaBadge--accent {
+.ouiExperimentalBadge--accent {
   $backgroundColor: $ouiColorAccentText;
   background: $backgroundColor;
   color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
 
-  &.ouiBetaBadge-isClickable {
+  &.ouiExperimentalBadge-isClickable {
     color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
   }
 }

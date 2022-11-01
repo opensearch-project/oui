@@ -13,7 +13,7 @@
 // 1. Extend beta badges to at least 30% of the container's width
 // 2. Fix for IE to ensure badges are visible outside of a <button> tag
 
-@mixin ouiHasBetaBadge($selector, $spacing: $ouiSize) {
+@mixin ouiHasExperimentalBadge($selector, $spacing: $ouiSize) {
   #{$selector}--hasBetaBadge {
     position: relative;
     overflow: visible; // 2

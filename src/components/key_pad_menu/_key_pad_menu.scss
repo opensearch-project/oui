@@ -86,7 +86,7 @@
       z-index: 3;
 
       // sass-lint:disable-block nesting-depth
-      .ouiKeyPadMenuItem__betaBadge:not(.ouiBetaBadge--iconOnly) {
+      .ouiKeyPadMenuItem__betaBadge:not(.ouiExperimentalBadge--iconOnly) {
         padding: 0 ($ouiSizeM / 2);  /* 2 */
         overflow: hidden;  /* 2 */
         letter-spacing: 3rem;  /* 2 */
@@ -102,7 +102,7 @@
   background-color: tintOrShade($ouiColorLightShade, 50%, 0%);
   box-shadow: none;
 
-  .ouiBetaBadge__icon {
+  .ouiExperimentalBadge__icon {
     @include size($ouiSizeM);
   }
 }

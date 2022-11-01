@@ -42,13 +42,13 @@
       cursor: inherit;
     }
 
-    .ouiCard__betaBadge:not(.ouiBetaBadge-isClickable):not(.ouiBetaBadge--hollow) {
+    .ouiCard__experimentalBadge:not(.ouiExperimentalBadge-isClickable):not(.ouiExperimentalBadge--hollow) {
       box-shadow: inset 0 0 0 1px $ouiBorderColor;
       background: transparent;
       color: inherit;
     }
 
-    .ouiCard__betaBadge:not(.ouiBetaBadge-isClickable).ouiBetaBadge--hollow  {
+    .ouiCard__experimentalBadge:not(.ouiExperimentalBadge-isClickable).ouiExperimentalBadge--hollow  {
       background-color: $ouiColorEmptyShade;
     }
   }
@@ -110,10 +110,10 @@
   }
 }
 
-// This creates a bunch of sub selectors for the beta badge
-@include ouiHasBetaBadge($selector: '.ouiCard', $spacing: $ouiCardSpacing);
+// This creates a bunch of sub selectors for the experimental badge
+@include ouiHasExperimentalBadge($selector: '.ouiCard', $spacing: $ouiCardSpacing);
 
-.ouiCard__betaBadge.ouiBetaBadge--hollow {
+.ouiCard__experimentalBadge.ouiExperimentalBadge--hollow {
   background-color: $ouiColorEmptyShade;
 }
 

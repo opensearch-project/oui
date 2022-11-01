@@ -26,7 +26,7 @@ exports[`OuiCard betaBadgeProps renders href 1`] = `
     class="ouiCard__betaBadgeWrapper"
   >
     <a
-      class="ouiBetaBadge ouiBetaBadge-isClickable ouiBetaBadge--hollow ouiCard__betaBadge"
+      class="ouiExperimentalBadge ouiExperimentalBadge-isClickable ouiExperimentalBadge--hollow ouiCard__experimentalBadge"
       href="http://www.elastic.co/"
       id="generated-idBetaBadge"
       rel=""

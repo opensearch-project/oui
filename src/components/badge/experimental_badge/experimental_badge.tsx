@@ -46,18 +46,20 @@ import { OuiToolTip, ToolTipPositions } from '../../tool_tip';
 import { OuiIcon, IconType } from '../../icon';
 
 const colorToClassMap = {
-  accent: 'ouiBetaBadge--accent',
-  subdued: 'ouiBetaBadge--subdued',
-  hollow: 'ouiBetaBadge--hollow',
+  accent: 'ouiExperimentalBadge--accent',
+  subdued: 'ouiExperimentalBadge--subdued',
+  hollow: 'ouiExperimentalBadge--hollow',
 };
 
-export const COLORS: BetaBadgeColor[] = keysOf(colorToClassMap);
-export type BetaBadgeColor = keyof typeof colorToClassMap;
+export const COLORS: ExperimentalBadgeColor[] = keysOf(colorToClassMap);
+export type ExperimentalBadgeColor = keyof typeof colorToClassMap;
 
-export type BetaBadgeSize = 's' | 'm';
+export type ExperimentalBadgeSize = 's' | 'm';
 
-export const sizeToClassMap: { [size in BetaBadgeSize]: string | null } = {
-  s: 'ouiBetaBadge--small',
+export const sizeToClassMap: {
+  [size in ExperimentalBadgeSize]: string | null;
+} = {
+  s: 'ouiExperimentalBadge--small',
   m: null,
 };
 
@@ -102,7 +104,7 @@ type LabelAsNode = ExclusiveUnion<
 
 interface LabelAsString {
   /**
-   * One word label like "Beta" or "Lab"
+   * One word label like "Experimental" or "Lab"
    */
   label: string;
 }
@@ -114,7 +116,7 @@ type BadgeProps = {
   iconType?: IconType;
 
   /**
-   * One word label like "Beta" or "Lab"
+   * One word label like "Experimental" or "Lab"
    */
   label: ReactNode;
 
@@ -136,18 +138,18 @@ type BadgeProps = {
   /**
    * Accepts accent, subdued and hollow.
    */
-  color?: BetaBadgeColor;
-  size?: BetaBadgeSize;
+  color?: ExperimentalBadgeColor;
+  size?: ExperimentalBadgeSize;
 } & ExclusiveUnion<LabelAsNode, LabelAsString>;
 
-export type OuiBetaBadgeProps = CommonProps &
+export type OuiExperimentalBadgeProps = CommonProps &
   ExclusiveUnion<
     ExclusiveUnion<WithButtonProps, WithAnchorProps>,
     WithSpanProps
   > &
   BadgeProps;
 
-export const OuiBetaBadge: FunctionComponent<OuiBetaBadgeProps> = ({
+export const OuiExperimentalBadge: FunctionComponent<OuiExperimentalBadgeProps> = ({
   className,
   label,
   color = 'hollow',
@@ -169,11 +171,11 @@ export const OuiBetaBadge: FunctionComponent<OuiBetaBadgeProps> = ({
   }
 
   const classes = classNames(
-    'ouiBetaBadge',
+    'ouiExperimentalBadge',
     {
-      'ouiBetaBadge--iconOnly': iconType,
-      'ouiBetaBadge--singleLetter': singleLetter,
-      'ouiBetaBadge-isClickable': onClick || href,
+      'ouiExperimentalBadge--iconOnly': iconType,
+      'ouiExperimentalBadge--singleLetter': singleLetter,
+      'ouiExperimentalBadge-isClickable': onClick || href,
     },
     colorToClassMap[color],
     sizeToClassMap[size],
@@ -184,7 +186,7 @@ export const OuiBetaBadge: FunctionComponent<OuiBetaBadgeProps> = ({
   if (iconType) {
     icon = (
       <OuiIcon
-        className="ouiBetaBadge__icon"
+        className="ouiExperimentalBadge__icon"
         type={iconType}
         size={size === 'm' ? 'm' : 's'}
         aria-hidden="true"
@@ -263,3 +265,15 @@ export const OuiBetaBadge: FunctionComponent<OuiBetaBadgeProps> = ({
     }
   }
 };
+
+/** DEPRECATED: use ExperimentalBadgeColor */
+export type BetaBadgeColor = ExperimentalBadgeColor;
+
+/** DEPRECATED: use ExperimentalBadgeSize */
+export type BetaBadgeSize = ExperimentalBadgeSize;
+
+/** DEPRECATED: use OuiExperimentalBadgeProps */
+export type OuiBetaBadgeProps = OuiExperimentalBadgeProps;
+
+/** DEPRECATED: use OuiExperimentalBadge */
+export const OuiBetaBadge = OuiExperimentalBadge;

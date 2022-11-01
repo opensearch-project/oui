@@ -41,7 +41,10 @@ import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import { getSecureRelForTarget } from '../../services';
 import { OuiText } from '../text';
 import { OuiTitle } from '../title';
-import { OuiBetaBadge, OuiBetaBadgeProps } from '../badge/beta_badge';
+import {
+  OuiExperimentalBadge,
+  OuiExperimentalBadgeProps,
+} from '../badge/experimental_badge';
 import { OuiIconProps } from '../icon';
 import {
   OuiCardSelect,
@@ -161,7 +164,7 @@ export type OuiCardProps = Omit<CommonProps, 'aria-label'> &
      * **DEPRECATED: Use `betaBadgeProps.title` instead.**
      */
     betaBadgeTitle?: string;
-    betaBadgeProps?: Partial<OuiBetaBadgeProps>;
+    betaBadgeProps?: Partial<OuiExperimentalBadgeProps>;
     /**
      * Matches to the color property of OuiPanel. If defined, removes any border & shadow.
      * Leave as `undefined` to display as a default panel.
@@ -313,14 +316,14 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
     optionalBetaBadgeID = `${ariaId}BetaBadge`;
     optionalBetaBadge = (
       <span className="ouiCard__betaBadgeWrapper">
-        <OuiBetaBadge
+        <OuiExperimentalBadge
           id={optionalBetaBadgeID}
-          {...(betaBadgeProps as OuiBetaBadgeProps)}
+          {...(betaBadgeProps as OuiExperimentalBadgeProps)}
           label={betaBadgeLabel}
           title={betaBadgeTitle}
           tooltipContent={betaBadgeTooltipContent}
           className={classNames(
-            'ouiCard__betaBadge',
+            'ouiCard__experimentalBadge',
             betaBadgeProps?.className
           )}
         />

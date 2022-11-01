@@ -32,11 +32,13 @@ import React from 'react';
 import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
-import { OuiBetaBadge, COLORS, SIZES } from './beta_badge';
+import { OuiExperimentalBadge, COLORS, SIZES } from './experimental_badge';
 
-describe('OuiBetaBadge', () => {
+describe('OuiExperimentalBadge', () => {
   test('is rendered', () => {
-    const component = render(<OuiBetaBadge label="Beta" {...requiredProps} />);
+    const component = render(
+      <OuiExperimentalBadge label="Experimental" {...requiredProps} />
+    );
 
     expect(component).toMatchSnapshot();
   });
@@ -45,7 +47,9 @@ describe('OuiBetaBadge', () => {
     describe('color', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = render(<OuiBetaBadge label="Beta" color={color} />);
+          const component = render(
+            <OuiExperimentalBadge label="Experimental" color={color} />
+          );
 
           expect(component).toMatchSnapshot();
         });
@@ -55,7 +59,9 @@ describe('OuiBetaBadge', () => {
     describe('size', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(<OuiBetaBadge label="Beta" size={size} />);
+          const component = render(
+            <OuiExperimentalBadge label="Experimental" size={size} />
+          );
 
           expect(component).toMatchSnapshot();
         });

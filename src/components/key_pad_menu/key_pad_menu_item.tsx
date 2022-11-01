@@ -39,7 +39,7 @@ import classNames from 'classnames';
 
 import { CommonProps, ExclusiveUnion } from '../common';
 
-import { OuiBetaBadge } from '../badge/beta_badge';
+import { OuiExperimentalBadge } from '../badge/experimental_badge';
 
 import { getSecureRelForTarget } from '../../services';
 
@@ -56,7 +56,7 @@ const renderContent = (
   <div className="ouiKeyPadMenuItem__inner">
     {betaBadgeLabel && (
       <span className="ouiKeyPadMenuItem__betaBadgeWrapper">
-        <OuiBetaBadge
+        <OuiExperimentalBadge
           className="ouiKeyPadMenuItem__betaBadge"
           label={betaBadgeLabel}
           iconType={betaBadgeIconType}
