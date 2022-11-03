@@ -19,7 +19,7 @@ yarn add @opensearch-project/oui @elastic/datemath moment prop-types
 
 We depend upon the version of node defined in [.nvmrc](.nvmrc).
 
-We recommend installing a node version manager: [nvm](https://github.com/creationix/nvm) is recommended.
+We recommend installing a node version manager: [nvm](https://github.com/nvm-sh/nvm) is recommended.
 
 To install and use the correct node version with `nvm`:
 
