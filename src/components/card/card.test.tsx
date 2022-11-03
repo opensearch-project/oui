@@ -307,7 +307,7 @@ describe('OuiCard', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('betaBadgeProps renders href', () => {
+  test('experimentalBadgeProps renders href', () => {
     const component = render(
       <OuiCard
         title="Card title"

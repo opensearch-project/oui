@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OuiCard betaBadgeProps renders href 1`] = `
+exports[`OuiCard experimentalBadgeProps renders href 1`] = `
 <div
-  class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned ouiCard--hasBetaBadge"
+  class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned ouiCard--hasExperimentalBadge"
 >
   <div
     class="ouiCard__content"
@@ -23,12 +23,12 @@ exports[`OuiCard betaBadgeProps renders href 1`] = `
     </div>
   </div>
   <span
-    class="ouiCard__betaBadgeWrapper"
+    class="ouiCard__experimentalBadgeWrapper"
   >
     <a
       class="ouiExperimentalBadge ouiExperimentalBadge-isClickable ouiExperimentalBadge--hollow ouiCard__experimentalBadge"
       href="http://www.elastic.co/"
-      id="generated-idBetaBadge"
+      id="generated-idExperimentalBadge"
       rel=""
       title="Link"
     >

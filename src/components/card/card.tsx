@@ -259,7 +259,7 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
     layoutToClassNameMap[layout],
     {
       'ouiCard--isClickable': isClickable,
-      'ouiCard--hasBetaBadge': betaBadgeLabel,
+      'ouiCard--hasExperimentalBadge': betaBadgeLabel,
       'ouiCard--hasIcon': icon,
       'ouiCard--isSelectable': selectable,
       'ouiCard-isSelected': selectable && selectable.isSelected,
@@ -307,17 +307,17 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
   }
 
   /**
-   * Optional OuiBetaBadge
+   * Optional OuiExperimentalBadge
    */
 
-  let optionalBetaBadge;
-  let optionalBetaBadgeID = '';
+  let optionalExperimentalBadge;
+  let optionalExperimentalBadgeID = '';
   if (betaBadgeLabel) {
-    optionalBetaBadgeID = `${ariaId}BetaBadge`;
-    optionalBetaBadge = (
-      <span className="ouiCard__betaBadgeWrapper">
+    optionalExperimentalBadgeID = `${ariaId}ExperimentalBadge`;
+    optionalExperimentalBadge = (
+      <span className="ouiCard__experimentalBadgeWrapper">
         <OuiExperimentalBadge
-          id={optionalBetaBadgeID}
+          id={optionalExperimentalBadgeID}
           {...(betaBadgeProps as OuiExperimentalBadgeProps)}
           label={betaBadgeLabel}
           title={betaBadgeTitle}
@@ -330,7 +330,7 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
       </span>
     );
 
-    // Increase padding size when there is a beta badge unless it's already determined
+    // Increase padding size when there is a experimental badge unless it's already determined
     paddingSize = paddingSize || 'l';
   }
 
@@ -382,7 +382,7 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
         className="ouiCard__titleButton"
         onClick={onClick as React.MouseEventHandler<HTMLButtonElement>}
         disabled={isDisabled}
-        aria-describedby={`${optionalBetaBadgeID} ${ariaDesc}`}
+        aria-describedby={`${optionalExperimentalBadgeID} ${ariaDesc}`}
         ref={(node) => {
           link = node;
         }}>
@@ -428,8 +428,8 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
         {children && <div className="ouiCard__children">{children}</div>}
       </div>
 
-      {/* Beta badge should always be after the title/description but before any footer buttons */}
-      {optionalBetaBadge}
+      {/* Experimental badge should always be after the title/description but before any footer buttons */}
+      {optionalExperimentalBadge}
 
       {layout === 'vertical' && footer && (
         <div className="ouiCard__footer">{footer}</div>
