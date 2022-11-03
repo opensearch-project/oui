@@ -55,9 +55,9 @@ const renderContent = (
 ) => (
   <div className="ouiKeyPadMenuItem__inner">
     {betaBadgeLabel && (
-      <span className="ouiKeyPadMenuItem__betaBadgeWrapper">
+      <span className="ouiKeyPadMenuItem__experimentalBadgeWrapper">
         <OuiExperimentalBadge
-          className="ouiKeyPadMenuItem__betaBadge"
+          className="ouiKeyPadMenuItem__experimentalBadge"
           label={betaBadgeLabel}
           iconType={betaBadgeIconType}
           tooltipContent={betaBadgeTooltipContent}
@@ -80,7 +80,7 @@ interface OuiKeyPadMenuItemCommonProps {
   label: ReactNode;
 
   /**
-   * Add a badge to the card to label it as "Beta" or other non-GA state
+   * Add a badge to the card to label it as "Experimental" or other non-GA state
    */
   betaBadgeLabel?: string;
 
@@ -90,7 +90,7 @@ interface OuiKeyPadMenuItemCommonProps {
   betaBadgeIconType?: IconType;
 
   /**
-   * Add a description to the beta badge (will appear in a tooltip)
+   * Add a description to the experimental badge (will appear in a tooltip)
    */
   betaBadgeTooltipContent?: ReactNode;
   onClick?: () => void;
@@ -124,7 +124,7 @@ export const OuiKeyPadMenuItem: FunctionComponent<OuiKeyPadMenuItemProps> = ({
   const classes = classNames(
     'ouiKeyPadMenuItem',
     {
-      'ouiKeyPadMenuItem--hasBetaBadge': betaBadgeLabel,
+      'ouiKeyPadMenuItem--hasExperimentalBadge': betaBadgeLabel,
     },
     className
   );

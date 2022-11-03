@@ -22,7 +22,7 @@
 
 /**
  * 1. If this class is applied to a button, we need to override the Chrome default font.
- * 2. If it has a BetaBadge, make sure only the first letter shows
+ * 2. If it has a ExperimentalBadge, make sure only the first letter shows
  */
 .ouiKeyPadMenuItem {
   @include ouiFont; /* 1 */
@@ -76,17 +76,17 @@
   align-items: center;
   justify-content: center;
 
-  .ouiKeyPadMenuItem--hasBetaBadge & {
+  .ouiKeyPadMenuItem--hasExperimentalBadge & {
     position: relative;
 
-    .ouiKeyPadMenuItem__betaBadgeWrapper {
+    .ouiKeyPadMenuItem__experimentalBadgeWrapper {
       position: absolute;
       top: $ouiSizeXS;
       right: $ouiSizeS;
       z-index: 3;
 
       // sass-lint:disable-block nesting-depth
-      .ouiKeyPadMenuItem__betaBadge:not(.ouiExperimentalBadge--iconOnly) {
+      .ouiKeyPadMenuItem__experimentalBadge:not(.ouiExperimentalBadge--iconOnly) {
         padding: 0 ($ouiSizeM / 2);  /* 2 */
         overflow: hidden;  /* 2 */
         letter-spacing: 3rem;  /* 2 */
@@ -95,9 +95,9 @@
   }
 }
 
-.ouiKeyPadMenuItem__betaBadge {
-  @include size($ouiKeyPadMenuItemBetaBadgeSize);
-  line-height: $ouiKeyPadMenuItemBetaBadgeSize;
+.ouiKeyPadMenuItem__experimentalBadge {
+  @include size($ouiKeyPadMenuItemExperimentalBadgeSize);
+  line-height: $ouiKeyPadMenuItemExperimentalBadgeSize;
   color: $ouiColorFullShade;
   background-color: tintOrShade($ouiColorLightShade, 50%, 0%);
   box-shadow: none;
