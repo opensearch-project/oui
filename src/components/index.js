@@ -42,7 +42,7 @@ export {
 
 export {
   OuiBadge,
-  OuiBetaBadge, // TODO: remove in next major release
+  OuiBetaBadge,
   OuiExperimentalBadge,
   OuiNotificationBadge,
   OuiBadgeGroup,
