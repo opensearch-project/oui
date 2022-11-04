@@ -49,18 +49,18 @@ import { validateHref } from '../../services/security/href_validator';
 const renderContent = (
   children: ReactNode,
   label: ReactNode,
-  betaBadgeLabel?: ReactNode,
-  betaBadgeTooltipContent?: ReactNode,
-  betaBadgeIconType?: IconType
+  experimentalBadgeLabel?: ReactNode,
+  experimentalBadgeTooltipContent?: ReactNode,
+  experimentalBadgeIconType?: IconType
 ) => (
   <div className="ouiKeyPadMenuItem__inner">
-    {betaBadgeLabel && (
+    {experimentalBadgeLabel && (
       <span className="ouiKeyPadMenuItem__experimentalBadgeWrapper">
         <OuiExperimentalBadge
           className="ouiKeyPadMenuItem__experimentalBadge"
-          label={betaBadgeLabel}
-          iconType={betaBadgeIconType}
-          tooltipContent={betaBadgeTooltipContent}
+          label={experimentalBadgeLabel}
+          iconType={experimentalBadgeIconType}
+          tooltipContent={experimentalBadgeTooltipContent}
         />
       </span>
     )}
@@ -81,18 +81,36 @@ interface OuiKeyPadMenuItemCommonProps {
 
   /**
    * Add a badge to the card to label it as "Experimental" or other non-GA state
+   * **DEPRECATED: Use `experimentalBadgeLabel` instead.**
    */
   betaBadgeLabel?: string;
 
   /**
    * Supply an icon type if the badge should just be an icon
+   * **DEPRECATED: Use `experimentalBadgeIconType` instead.**
    */
   betaBadgeIconType?: IconType;
 
   /**
    * Add a description to the experimental badge (will appear in a tooltip)
+   * **DEPRECATED: Use `experimentalBadgeTooltipContent` instead.**
    */
   betaBadgeTooltipContent?: ReactNode;
+
+  /**
+   * Add a badge to the card to label it as "Experimental" or other non-GA state
+   */
+  experimentalBadgeLabel?: string;
+
+  /**
+   * Supply an icon type if the badge should just be an icon
+   */
+  experimentalBadgeIconType?: IconType;
+
+  /**
+   * Add a description to the experimental badge (will appear in a tooltip)
+   */
+  experimentalBadgeTooltipContent?: ReactNode;
   onClick?: () => void;
   href?: string;
   rel?: string;
@@ -113,6 +131,9 @@ export const OuiKeyPadMenuItem: FunctionComponent<OuiKeyPadMenuItemProps> = ({
   betaBadgeLabel,
   betaBadgeTooltipContent,
   betaBadgeIconType,
+  experimentalBadgeLabel,
+  experimentalBadgeTooltipContent,
+  experimentalBadgeIconType,
   href,
   rel,
   target,
@@ -124,7 +145,8 @@ export const OuiKeyPadMenuItem: FunctionComponent<OuiKeyPadMenuItemProps> = ({
   const classes = classNames(
     'ouiKeyPadMenuItem',
     {
-      'ouiKeyPadMenuItem--hasExperimentalBadge': betaBadgeLabel,
+      'ouiKeyPadMenuItem--hasExperimentalBadge':
+        betaBadgeLabel || experimentalBadgeLabel,
     },
     className
   );
@@ -156,9 +178,9 @@ export const OuiKeyPadMenuItem: FunctionComponent<OuiKeyPadMenuItemProps> = ({
       {renderContent(
         children,
         label,
-        betaBadgeLabel,
-        betaBadgeTooltipContent,
-        betaBadgeIconType
+        experimentalBadgeLabel ?? betaBadgeLabel,
+        experimentalBadgeTooltipContent ?? betaBadgeTooltipContent,
+        experimentalBadgeIconType ?? betaBadgeIconType
       )}
     </Element>
   );
