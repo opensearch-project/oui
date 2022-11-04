@@ -164,7 +164,12 @@ export type OuiCardProps = Omit<CommonProps, 'aria-label'> &
      * **DEPRECATED: Use `betaBadgeProps.title` instead.**
      */
     betaBadgeTitle?: string;
+
+    /**
+     * **DEPRECATED: Use `experimentalBadgeProps` instead.**
+     */
     betaBadgeProps?: Partial<OuiExperimentalBadgeProps>;
+    experimentalBadgeProps?: Partial<OuiExperimentalBadgeProps>;
     /**
      * Matches to the color property of OuiPanel. If defined, removes any border & shadow.
      * Leave as `undefined` to display as a default panel.
@@ -215,6 +220,7 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
   betaBadgeTooltipContent,
   betaBadgeTitle,
   betaBadgeProps,
+  experimentalBadgeProps,
   layout = 'vertical',
   selectable,
   display,
@@ -318,13 +324,17 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
       <span className="ouiCard__experimentalBadgeWrapper">
         <OuiExperimentalBadge
           id={optionalExperimentalBadgeID}
-          {...(betaBadgeProps as OuiExperimentalBadgeProps)}
+          {...({
+            ...betaBadgeProps,
+            ...experimentalBadgeProps,
+          } as OuiExperimentalBadgeProps)}
           label={betaBadgeLabel}
           title={betaBadgeTitle}
           tooltipContent={betaBadgeTooltipContent}
           className={classNames(
             'ouiCard__experimentalBadge',
-            betaBadgeProps?.className
+            betaBadgeProps?.className,
+            experimentalBadgeProps?.className
           )}
         />
       </span>
