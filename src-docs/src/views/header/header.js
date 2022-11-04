@@ -165,7 +165,7 @@ const HeaderUserMenu = () => {
       aria-haspopup="true"
       aria-label="Account menu"
       onClick={onMenuButtonClick}>
-      <OuiAvatar name="John Username" size="s" />
+      <OuiAvatar name="J. Username" size="s" />
     </OuiHeaderSectionItemButton>
   );
 
@@ -183,12 +183,12 @@ const HeaderUserMenu = () => {
           className="ouiHeaderProfile"
           responsive={false}>
           <OuiFlexItem grow={false}>
-            <OuiAvatar name="John Username" size="xl" />
+            <OuiAvatar name="J. Username" size="xl" />
           </OuiFlexItem>
 
           <OuiFlexItem>
             <OuiText>
-              <p>John Username</p>
+              <p>J. Username</p>
             </OuiText>
 
             <OuiSpacer size="m" />
@@ -261,7 +261,7 @@ const HeaderSpacesMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const isListExtended = () => {
-    return spaces.length > 4 ? true : false;
+    return spaces.length > 4;
   };
 
   const onMenuButtonClick = () => {
