@@ -28,10 +28,10 @@
  * under the License.
  */
 
+// TODO: remove beta badge in next major release
 export {
   OuiExperimentalBadge,
   OuiExperimentalBadgeProps,
+  OuiBetaBadge,
+  OuiBetaBadgeProps,
 } from './experimental_badge';
-
-// TODO: remove in next major release
-export { OuiBetaBadge, OuiBetaBadgeProps } from './experimental_badge';
