@@ -23,7 +23,7 @@ export default () => {
   return (
     <OuiHeader>
       <OuiHeaderSectionItem border="right">
-        <OuiHeaderLogo>Elastic</OuiHeaderLogo>
+        <OuiHeaderLogo iconType="logoOUI">OpenSearch</OuiHeaderLogo>
       </OuiHeaderSectionItem>
 
       <OuiHeaderSectionItem>

@@ -23,7 +23,7 @@ export default () => {
 
   const sections = [
     {
-      items: [<OuiHeaderLogo>Elastic</OuiHeaderLogo>],
+      items: [<OuiHeaderLogo iconType="logoOUI">OpenSearch</OuiHeaderLogo>],
       borders: 'right',
     },
   ];
