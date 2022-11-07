@@ -93,6 +93,26 @@
       }
     }
   }
+
+  /* Beta badge deprecation */
+  .ouiKeyPadMenuItem--hasBetaBadge & {
+    position: relative;
+
+    .ouiKeyPadMenuItem__betaBadgeWrapper {
+      position: absolute;
+      top: $ouiSizeXS;
+      right: $ouiSizeS;
+      z-index: 3;
+
+      // sass-lint:disable-block nesting-depth
+      .ouiKeyPadMenuItem__betaBadge:not(.ouiBetaBadge--iconOnly) {
+        padding: 0 ($ouiSizeM / 2);  /* 2 */
+        overflow: hidden;  /* 2 */
+        letter-spacing: 3rem;  /* 2 */
+      }
+    }
+  }
+  /* End of beta badge deprecation */
 }
 
 .ouiKeyPadMenuItem__experimentalBadge {
@@ -106,6 +126,20 @@
     @include size($ouiSizeM);
   }
 }
+
+/* Beta badge deprecation */
+.ouiKeyPadMenuItem__betaBadge {
+  @include size($ouiKeyPadMenuItemBetaBadgeSize);
+  line-height: $ouiKeyPadMenuItemBetaBadgeSize;
+  color: $ouiColorFullShade;
+  background-color: tintOrShade($ouiColorLightShade, 50%, 0%);
+  box-shadow: none;
+
+  .ouiBetaBadge__icon {
+    @include size($ouiSizeM);
+  }
+}
+/* End of beta badge deprecation */
 
 .ouiKeyPadMenuItem__icon {
   transition: transform $ouiAnimSpeedNormal $ouiAnimSlightBounce;

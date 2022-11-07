@@ -17,3 +17,10 @@ $ouiKeyPadMenuItemExperimentalBadgeSize: $ouiSize + $ouiSizeXS !default;
 $euiKeyPadMenuSize: $ouiKeyPadMenuSize;
 $euiKeyPadMenuItemExperimentalBadgeSize: $ouiKeyPadMenuItemExperimentalBadgeSize;
 /* End of Aliases */
+
+/* Beta badge deprecation */
+$ouiKeyPadMenuItemBetaBadgeSize: $ouiKeyPadMenuItemExperimentalBadgeSize;
+/* OUI -> EUI Aliases */
+$euiKeyPadMenuItemBetaBadgeSize: $euiKeyPadMenuItemExperimentalBadgeSize;
+/* End of Aliases */
+/* End of beta badge deprecation */

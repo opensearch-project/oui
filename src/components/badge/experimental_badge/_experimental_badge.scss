@@ -96,3 +96,93 @@
     color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
   }
 }
+
+/* Beta badge deprecation */
+.ouiBetaBadge {
+  display: inline-block;
+  padding: 0 $ouiSize;
+  border-radius: $ouiSizeL;
+  box-shadow: inset 0 0 0 1px $ouiBorderColor;
+  vertical-align: super; // if displayed inline with text
+
+  font-size: $ouiFontSizeXS;
+  font-weight: $ouiFontWeightBold;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  line-height: $ouiSizeL;
+  text-align: center;
+  white-space: nowrap;
+  cursor: default;
+
+  &:focus {
+    @include ouiFocusRing;
+    // Can't use `currentColor` because of possible white text, so always keep it black
+    outline-color: lightOrDarkTheme($ouiColorInk, $ouiColorGhost);
+    // The rounded corners of the badge doesn't match well with the outline, so push it outward
+    outline-offset: 2px;
+  }
+
+  &:not(.ouiBetaBadge--hollow) {
+    box-shadow: none;
+  }
+
+  &.ouiBetaBadge--small {
+    @include fontSize($ouiFontSize * .625);
+    line-height: $ouiSize + $ouiSizeXS;
+    padding: 0 $ouiSizeM;
+  }
+}
+
+// When it's just an icon, make it a circle
+.ouiBetaBadge--iconOnly {
+  padding: 0;
+  width: $ouiSizeL;
+
+  .ouiBetaBadge__icon {
+    position: relative;
+    margin-top: -1px;
+  }
+
+  &.ouiBetaBadge--small {
+    width: $ouiSize + $ouiSizeXS;
+    padding: 0;
+  }
+}
+
+.ouiBetaBadge--singleLetter {
+  padding: 0 0 0 1px;
+  width: $ouiSizeL;
+
+  &.ouiBetaBadge--small {
+    width: $ouiSize + $ouiSizeXS;
+    padding: 0 0 0 1px;
+  }
+}
+
+.ouiBetaBadge--subdued {
+  $backgroundColor: tint($ouiColorLightShade, 30%);
+  background: $backgroundColor;
+  color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
+
+  &.ouiBetaBadge-isClickable {
+    color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
+  }
+}
+
+.ouiBetaBadge--hollow {
+  &.ouiBetaBadge-isClickable {
+    $backgroundColor: tint($ouiColorLightShade, 30%);
+    color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
+  }
+}
+
+.ouiBetaBadge--accent {
+  $backgroundColor: $ouiColorAccentText;
+  background: $backgroundColor;
+  color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
+
+  &.ouiBetaBadge-isClickable {
+    color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
+  }
+}
+/* End of beta badge deprecation */
