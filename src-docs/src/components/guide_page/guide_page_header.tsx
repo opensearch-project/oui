@@ -27,11 +27,7 @@ import { OuiButtonEmpty } from '../../../../src/components/button';
 // @ts-ignore Not TS
 import { CodeSandboxLink } from '../../components/codesandbox/link';
 import logoOUI from '../../images/logo-oui.svg';
-import {
-  GuideThemeSelector,
-  GuideSketchLink,
-  GuideFigmaLink,
-} from '../guide_theme_selector';
+import { GuideThemeSelector, GuideSketchLink } from '../guide_theme_selector';
 
 const pkg = require('../../../../package.json');
 
@@ -131,7 +127,6 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
         <div className="guideOptionsPopover">
           {renderGithub()}
           <GuideSketchLink />
-          <GuideFigmaLink />
           {renderCodeSandbox()}
         </div>
       </OuiPopover>
@@ -153,7 +148,6 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
         />,
         renderGithub(),
         <GuideSketchLink key="sketch" />,
-        <GuideFigmaLink key="figma" />,
         renderCodeSandbox(),
       ];
 
