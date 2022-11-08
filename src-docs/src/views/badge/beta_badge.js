@@ -32,10 +32,6 @@ export default () => (
           tooltipContent="This module is not GA. Please help us by reporting any bugs."
         />
         &emsp;
-        <OuiBetaBadge label="B" color={item} />
-        &emsp;
-        <OuiBetaBadge size="s" label="B" color={item} />
-        &emsp;
         <OuiBetaBadge label="Lab" color={item} iconType="beaker" />
         &emsp;
         <OuiBetaBadge label="Lab" size="s" color={item} iconType="beaker" />

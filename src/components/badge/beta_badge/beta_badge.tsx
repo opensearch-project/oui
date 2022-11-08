@@ -163,16 +163,10 @@ export const OuiBetaBadge: FunctionComponent<OuiBetaBadgeProps> = ({
   size = 'm',
   ...rest
 }) => {
-  let singleLetter = false;
-  if (typeof label === 'string' && label.length === 1) {
-    singleLetter = true;
-  }
-
   const classes = classNames(
     'ouiBetaBadge',
     {
       'ouiBetaBadge--iconOnly': iconType,
-      'ouiBetaBadge--singleLetter': singleLetter,
       'ouiBetaBadge-isClickable': onClick || href,
     },
     colorToClassMap[color],
