@@ -25,7 +25,7 @@ import { useIsWithinBreakpoints } from '../../../../src/services/hooks';
 import { OuiButtonEmpty } from '../../../../src/components/button';
 
 import logoOUI from '../../images/logo-oui.svg';
-import { GuideThemeSelector, GuideSketchLink } from '../guide_theme_selector';
+import { GuideThemeSelector } from '../guide_theme_selector';
 
 const pkg = require('../../../../package.json');
 
@@ -103,10 +103,7 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
         button={button}
         isOpen={mobilePopoverIsOpen}
         closePopover={() => setMobilePopoverIsOpen(false)}>
-        <div className="guideOptionsPopover">
-          {renderGithub()}
-          <GuideSketchLink />
-        </div>
+        <div className="guideOptionsPopover">{renderGithub()}</div>
       </OuiPopover>
     );
   }
@@ -125,7 +122,6 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
           selectedLocale={selectedLocale}
         />,
         renderGithub(),
-        <GuideSketchLink key="sketch" />,
       ];
 
   return (
