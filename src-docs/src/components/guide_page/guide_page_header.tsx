@@ -24,8 +24,6 @@ import { OuiPopover } from '../../../../src/components/popover';
 import { useIsWithinBreakpoints } from '../../../../src/services/hooks';
 import { OuiButtonEmpty } from '../../../../src/components/button';
 
-// @ts-ignore Not TS
-import { CodeSandboxLink } from '../../components/codesandbox/link';
 import logoOUI from '../../images/logo-oui.svg';
 import { GuideThemeSelector, GuideSketchLink } from '../guide_theme_selector';
 
@@ -88,25 +86,6 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
     );
   }
 
-  function renderCodeSandbox() {
-    const label = 'Codesandbox';
-    return isMobileSize ? (
-      <CodeSandboxLink key="codesandbox">
-        <OuiButtonEmpty size="s" flush="both" iconType="logoCodesandbox">
-          {label}
-        </OuiButtonEmpty>
-      </CodeSandboxLink>
-    ) : (
-      <OuiToolTip content="Codesandbox" key="codesandbox">
-        <CodeSandboxLink>
-          <OuiHeaderSectionItemButton aria-label="Codesandbox">
-            <OuiIcon type="logoCodesandbox" aria-hidden="true" />
-          </OuiHeaderSectionItemButton>
-        </CodeSandboxLink>
-      </OuiToolTip>
-    );
-  }
-
   const [mobilePopoverIsOpen, setMobilePopoverIsOpen] = useState(false);
 
   function renderMobileMenu() {
@@ -127,7 +106,6 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
         <div className="guideOptionsPopover">
           {renderGithub()}
           <GuideSketchLink />
-          {renderCodeSandbox()}
         </div>
       </OuiPopover>
     );
@@ -148,7 +126,6 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
         />,
         renderGithub(),
         <GuideSketchLink key="sketch" />,
-        renderCodeSandbox(),
       ];
 
   return (
