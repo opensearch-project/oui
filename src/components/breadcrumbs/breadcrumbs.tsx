@@ -175,7 +175,6 @@ const limitBreadcrumbs = (
             max={0}
           />
         </OuiPopover>
-        <OuiBreadcrumbSeparator />
       </Fragment>
     );
   };
@@ -186,8 +185,6 @@ const limitBreadcrumbs = (
 
   return [...breadcrumbsAtStart, ...breadcrumbsAtEnd];
 };
-
-const OuiBreadcrumbSeparator = () => <div className="ouiBreadcrumbSeparator" />;
 
 export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   breadcrumbs,
@@ -271,16 +268,9 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       );
     }
 
-    let separator;
-
-    if (!isLastBreadcrumb) {
-      separator = <OuiBreadcrumbSeparator />;
-    }
-
     return (
       <Fragment key={index}>
         {link}
-        {separator}
       </Fragment>
     );
   });

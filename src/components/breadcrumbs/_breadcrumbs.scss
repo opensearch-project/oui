@@ -41,16 +41,6 @@
   flex-shrink: 0;
 }
 
-.ouiBreadcrumbSeparator {
-  flex-shrink: 0;
-  display: inline-block;
-  margin-right: $ouiBreadcrumbSpacing;
-  width: 1px;
-  height: $ouiSize;
-  transform: translateY(-1px) rotate(15deg);
-  background: $ouiColorLightShade;
-}
-
 .ouiBreadcrumbs__inPopover .ouiBreadcrumb--last {
   font-weight: $ouiFontWeightRegular;
   color: $ouiColorDarkShade !important; // sass-lint:disable-line no-important
