@@ -268,11 +268,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       );
     }
 
-    return (
-      <Fragment key={index}>
-        {link}
-      </Fragment>
-    );
+    return <Fragment key={index}>{link}</Fragment>;
   });
 
   // Use the default object if they simply passed `true` for responsive

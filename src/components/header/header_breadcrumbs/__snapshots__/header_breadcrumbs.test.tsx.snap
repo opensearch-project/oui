@@ -14,18 +14,12 @@ exports[`OuiHeaderBreadcrumbs is rendered 1`] = `
   >
     Animals
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <button
     class="ouiLink ouiLink--subdued ouiBreadcrumb"
     type="button"
   >
     Reptiles
   </button>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <a
     class="ouiLink ouiLink--subdued ouiBreadcrumb"
     href="#"
@@ -33,9 +27,6 @@ exports[`OuiHeaderBreadcrumbs is rendered 1`] = `
   >
     Boa constrictor
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="page"
     class="ouiBreadcrumb ouiBreadcrumb--last"

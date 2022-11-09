@@ -14,18 +14,12 @@ exports[`OuiBreadcrumbs is rendered 1`] = `
   >
     Animals
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Metazoans
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <div
     class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
   >
@@ -45,18 +39,12 @@ exports[`OuiBreadcrumbs is rendered 1`] = `
       </button>
     </div>
   </div>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <button
     class="ouiLink ouiLink--subdued ouiBreadcrumb"
     type="button"
   >
     Reptiles
   </button>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <a
     class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
     href="#"
@@ -64,9 +52,6 @@ exports[`OuiBreadcrumbs is rendered 1`] = `
   >
     Boa constrictor
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="page"
     class="ouiBreadcrumb ouiBreadcrumb--last"
@@ -89,54 +74,36 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
   >
     Animals
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Metazoans
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Chordates
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb ouiBreadcrumb--truncate"
   >
     Nebulosa subspecies is also a real mouthful, especially for creatures without mouths
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Tetrapods
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <button
     class="ouiLink ouiLink--subdued ouiBreadcrumb"
     type="button"
   >
     Reptiles
   </button>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <a
     class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
     href="#"
@@ -144,9 +111,6 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
   >
     Boa constrictor
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="page"
     class="ouiBreadcrumb ouiBreadcrumb--last"
@@ -180,9 +144,6 @@ exports[`OuiBreadcrumbs props max renders 1 item 1`] = `
       </button>
     </div>
   </div>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="page"
     class="ouiBreadcrumb ouiBreadcrumb--last"
@@ -205,54 +166,36 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
   >
     Animals
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Metazoans
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Chordates
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb ouiBreadcrumb--truncate"
   >
     Nebulosa subspecies is also a real mouthful, especially for creatures without mouths
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Tetrapods
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <button
     class="ouiLink ouiLink--subdued ouiBreadcrumb"
     type="button"
   >
     Reptiles
   </button>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <a
     class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
     href="#"
@@ -260,9 +203,6 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
   >
     Boa constrictor
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="page"
     class="ouiBreadcrumb ouiBreadcrumb--last"
@@ -285,18 +225,12 @@ exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
   >
     Animals
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Metazoans
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <div
     class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
   >
@@ -316,18 +250,12 @@ exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
       </button>
     </div>
   </div>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <button
     class="ouiLink ouiLink--subdued ouiBreadcrumb"
     type="button"
   >
     Reptiles
   </button>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <a
     class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
     href="#"
@@ -335,9 +263,6 @@ exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
   >
     Boa constrictor
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="page"
     class="ouiBreadcrumb ouiBreadcrumb--last"
@@ -360,18 +285,12 @@ exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
   >
     Animals
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Metazoans
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <div
     class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
   >
@@ -391,18 +310,12 @@ exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
       </button>
     </div>
   </div>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <button
     class="ouiLink ouiLink--subdued ouiBreadcrumb"
     type="button"
   >
     Reptiles
   </button>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <a
     class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
     href="#"
@@ -410,9 +323,6 @@ exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
   >
     Boa constrictor
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="page"
     class="ouiBreadcrumb ouiBreadcrumb--last"
@@ -446,9 +356,6 @@ exports[`OuiBreadcrumbs props responsive is rendered with custom breakpoints 1`]
       </button>
     </div>
   </div>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="page"
     class="ouiBreadcrumb ouiBreadcrumb--last"
@@ -471,18 +378,12 @@ exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
   >
     Animals
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="false"
     class="ouiBreadcrumb"
   >
     Metazoans
   </span>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <div
     class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
   >
@@ -502,18 +403,12 @@ exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
       </button>
     </div>
   </div>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <button
     class="ouiLink ouiLink--subdued ouiBreadcrumb"
     type="button"
   >
     Reptiles
   </button>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <a
     class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
     href="#"
@@ -521,9 +416,6 @@ exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
   >
     Boa constrictor
   </a>
-  <div
-    class="ouiBreadcrumbSeparator"
-  />
   <span
     aria-current="page"
     class="ouiBreadcrumb ouiBreadcrumb--last"
