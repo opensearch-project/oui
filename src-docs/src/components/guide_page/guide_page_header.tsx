@@ -39,10 +39,12 @@ declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace JSX {
     interface IntrinsicElements {
-      'version-selector': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement>,
-        HTMLElement
-      >;
+      'version-selector': VersionSelectorAttributes;
+    }
+
+    interface VersionSelectorAttributes
+      extends React.HTMLAttributes<HTMLElement> {
+      selected: string;
     }
   }
 }
