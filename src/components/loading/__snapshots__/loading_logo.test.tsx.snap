@@ -26,7 +26,7 @@ exports[`OuiLoadingLogo logo is rendered 1`] = `
     class="ouiLoadingLogo__icon"
   >
     <span
-      data-ouiicon-type="logoElastic"
+      data-ouiicon-type="logoOUI"
     />
   </span>
 </span>

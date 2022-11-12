@@ -28,7 +28,7 @@ export default () => (
     <OuiPageSideBar>SideBar nav</OuiPageSideBar>
     <OuiPageBody>
       <OuiPageHeader
-        iconType="logoElastic"
+        iconType="logoOUI"
         pageTitle="Page title"
         rightSideItems={[
           <OuiButton fill>Add something</OuiButton>,

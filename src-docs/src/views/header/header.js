@@ -41,7 +41,7 @@ import { htmlIdGenerator } from '../../../../src/services';
 export default () => {
   const renderLogo = () => (
     <OuiHeaderLogo
-      iconType="logoElastic"
+      iconType="logoOUI"
       href="#"
       onClick={(e) => e.preventDefault()}
       aria-label="Go to home page"

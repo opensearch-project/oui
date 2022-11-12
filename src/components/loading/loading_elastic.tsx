@@ -57,7 +57,7 @@ export const OuiLoadingElastic: FunctionComponent<
 
   return (
     <span className={classes} {...rest}>
-      <OuiIcon type="logoElastic" size={size} />
+      <OuiIcon type="logoOUI" size={size} />
     </span>
   );
 };

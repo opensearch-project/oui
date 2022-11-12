@@ -183,7 +183,7 @@ export const Table = () => {
           {
             name: 'Elastic.co',
             description: 'Go to elastic.co',
-            icon: 'logoElastic',
+            icon: 'logoOUI',
             type: 'icon',
             href: 'https://elastic.co',
             target: '_blank',

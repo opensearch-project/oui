@@ -4274,7 +4274,7 @@ exports[`OuiIcon props type logoDropwizard is rendered 1`] = `
 </svg>
 `;
 
-exports[`OuiIcon props type logoElastic is rendered 1`] = `
+exports[`OuiIcon props type logoOUI is rendered 1`] = `
 <svg
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"

@@ -237,7 +237,7 @@ const typeToPathMap = {
   logoCouchbase: 'logo_couchbase',
   logoDocker: 'logo_docker',
   logoDropwizard: 'logo_dropwizard',
-  logoElastic: 'logo_elastic',
+  logoOUI: 'logo_oui',
   logoElasticsearch: 'logo_elasticsearch',
   logoElasticStack: 'logo_elastic_stack',
   logoEnterpriseSearch: 'logo_enterprise_search',

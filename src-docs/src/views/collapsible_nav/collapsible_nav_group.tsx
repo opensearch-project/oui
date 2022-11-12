@@ -25,7 +25,7 @@ export default () => (
     <OuiCollapsibleNavGroup
       data-test-subj="TEST"
       title="Nav group"
-      iconType="logoElastic">
+      iconType="logoOUI">
       <OuiText size="s" color="subdued">
         <p>
           This is a nice group with a heading supplied via{' '}
@@ -38,7 +38,7 @@ export default () => (
       background="light"
       title="Nav group"
       isCollapsible={true}
-      iconType="logoElastic"
+      iconType="logoOUI"
       initialIsOpen={true}>
       <OuiText size="s" color="subdued">
         <p>

@@ -39,7 +39,7 @@ export default () => {
           <div className="guideDemo__notificationEventHighlight">
             <CircleIndicator name="B" />
             <OuiIcon
-              type="logoElastic"
+              type="logoOUI"
               className="guideDemo__notificationEventIcon"
             />
           </div>

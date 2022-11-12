@@ -52,9 +52,7 @@ export default () => {
         position={isFixed ? 'fixed' : 'static'}
         sections={[
           {
-            items: [
-              <OuiHeaderLogo iconType="logoElastic">Elastic</OuiHeaderLogo>,
-            ],
+            items: [<OuiHeaderLogo iconType="logoOUI">Elastic</OuiHeaderLogo>],
             borders: 'none',
           },
           {

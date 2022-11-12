@@ -260,7 +260,7 @@ const CollapsibleNavAll = () => {
 
   const leftSectionItems = [
     collapsibleNav,
-    <OuiHeaderLogo href={exitPath} iconType="logoElastic">
+    <OuiHeaderLogo href={exitPath} iconType="logoOUI">
       Elastic
     </OuiHeaderLogo>,
   ];

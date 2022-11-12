@@ -10,7 +10,7 @@ exports[`OuiHeaderLogo is rendered 1`] = `
   <span
     aria-label="Elastic"
     class="ouiHeaderLogo__icon"
-    data-ouiicon-type="logoElastic"
+    data-ouiicon-type="logoOUI"
   />
 </a>
 `;
@@ -24,7 +24,7 @@ exports[`OuiHeaderLogo renders href 1`] = `
   <span
     aria-label="Elastic"
     class="ouiHeaderLogo__icon"
-    data-ouiicon-type="logoElastic"
+    data-ouiicon-type="logoOUI"
   />
 </a>
 `;
@@ -38,7 +38,7 @@ exports[`OuiHeaderLogo renders href with rel 1`] = `
   <span
     aria-label="Elastic"
     class="ouiHeaderLogo__icon"
-    data-ouiicon-type="logoElastic"
+    data-ouiicon-type="logoOUI"
   />
 </a>
 `;

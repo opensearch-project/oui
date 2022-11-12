@@ -28,7 +28,7 @@ export const iconTypes = [
   'logoCode',
   'logoCloud',
   'logoCloudEnterprise',
-  'logoElastic',
+  'logoOUI',
   'logoElasticStack',
   'logoElasticsearch',
   'logoEnterpriseSearch',

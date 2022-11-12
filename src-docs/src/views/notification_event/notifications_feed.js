@@ -52,7 +52,7 @@ const notificationEventsData = [
   {
     id: 'news-01',
     type: 'News',
-    iconType: 'logoElastic',
+    iconType: 'logoOUI',
     iconAriaLabel: 'Elastic',
     time: '6 min ago',
     badgeColor: 'accent',

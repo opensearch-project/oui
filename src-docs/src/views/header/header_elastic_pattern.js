@@ -283,7 +283,7 @@ export default ({ theme }) => {
         sections={[
           {
             items: [
-              <OuiHeaderLogo iconType="logoElastic" href="">
+              <OuiHeaderLogo iconType="logoOUI" href="">
                 Elastic
               </OuiHeaderLogo>,
               deploymentMenu,
