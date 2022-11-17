@@ -25,10 +25,9 @@
 
 .ouiBreadcrumb {
   display: inline-block;
-  margin-bottom: $ouiSizeXS; /* 1 */
+  transform: skewX(20deg);
 
   &:not(.ouiBreadcrumb--last) {
-    margin-right: $ouiBreadcrumbSpacing;
     color: $ouiTextSubduedColor;
   }
 }
@@ -39,6 +38,7 @@
 
 .ouiBreadcrumb--collapsed {
   flex-shrink: 0;
+  color: $ouiBreadcrumbCollapsedLink;
 }
 
 .ouiBreadcrumbs__inPopover .ouiBreadcrumb--last {
@@ -52,7 +52,6 @@
 
   .ouiBreadcrumb:not(.ouiBreadcrumb--collapsed) {
     max-width: $ouiBreadcrumbTruncateWidth;
-    overflow: hidden;
     text-overflow: ellipsis;
 
     &.ouiBreadcrumb--last {
@@ -66,4 +65,20 @@
   max-width: $ouiBreadcrumbTruncateWidth;
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
+}
+
+.ouiBreadcrumbWrapper {
+  margin-bottom: $ouiSizeXS; /* 1 */
+  background-color: $ouiBreadcrumbGrayBackground;
+  transform: skewX(-20deg);
+  border-radius: $ouiSizeXS;
+  padding: $ouiSizeXS - 2.5 $ouiSizeL - $ouiSizeXS;
+
+  &:not(.ouiBreadcrumbWrapper--last) {
+    margin-right: $ouiBreadcrumbSpacing;
+  }
+}
+
+.ouiBreadcrumbWrapper--last {
+  background-color: $ouiBreadcrumbBlueBackground
 }

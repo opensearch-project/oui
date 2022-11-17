@@ -12,8 +12,15 @@
 $ouiBreadcrumbSpacing: $ouiSizeS !default;
 $ouiBreadcrumbTruncateWidth: $ouiSize * 10 !default;
 
+$ouiBreadcrumbBlueBackground: #b9d9eb;
+$ouiBreadcrumbGrayBackground: #d9e1e2;
+$ouiBreadcrumbCollapsedLink: #002a3a;
 
 /* OUI -> EUI Aliases */
 $euiBreadcrumbSpacing: $ouiBreadcrumbSpacing;
 $euiBreadcrumbTruncateWidth: $ouiBreadcrumbTruncateWidth;
+
+$euiBreadcrumbBlueBackground: $ouiBreadcrumbBlueBackground;
+$euiBreadcrumbGrayBackground: $ouiBreadcrumbGrayBackground;
+$euiBreadcrumbCollapsedLink: $ouiBreadcrumbCollapsedLink;
 /* End of Aliases */

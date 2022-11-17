@@ -227,6 +227,10 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
 
     const isLastBreadcrumb = index === breadcrumbs.length - 1;
 
+    const breadcrumbWrapperClasses = classNames('ouiBreadcrumbWrapper', {
+      'ouiBreadcrumbWrapper--last': isLastBreadcrumb,
+    });
+
     const breadcrumbClasses = classNames('ouiBreadcrumb', breadcrumbClassName, {
       'ouiBreadcrumb--last': isLastBreadcrumb,
       'ouiBreadcrumb--truncate': truncate,
@@ -238,13 +242,14 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       link = (
         <OuiInnerText>
           {(ref, innerText) => (
-            <span
-              ref={ref}
-              className={breadcrumbClasses}
-              title={innerText}
-              aria-current={isLastBreadcrumb ? 'page' : 'false'}
-              {...breadcrumbRest}>
-              {text}
+            <span ref={ref} className={breadcrumbWrapperClasses}>
+              <span
+                className={breadcrumbClasses}
+                title={innerText}
+                aria-current={isLastBreadcrumb ? 'page' : 'false'}
+                {...breadcrumbRest}>
+                {text}
+              </span>
             </span>
           )}
         </OuiInnerText>
@@ -253,16 +258,17 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       link = (
         <OuiInnerText>
           {(ref, innerText) => (
-            <OuiLink
-              ref={ref}
-              color={isLastBreadcrumb ? 'text' : 'subdued'}
-              onClick={onClick}
-              href={href}
-              className={breadcrumbClasses}
-              title={innerText}
-              {...breadcrumbRest}>
-              {text}
-            </OuiLink>
+            <span ref={ref} className={breadcrumbWrapperClasses}>
+              <OuiLink
+                color={isLastBreadcrumb ? 'text' : 'subdued'}
+                onClick={onClick}
+                href={href}
+                className={breadcrumbClasses}
+                title={innerText}
+                {...breadcrumbRest}>
+                {text}
+              </OuiLink>
+            </span>
           )}
         </OuiInnerText>
       );
