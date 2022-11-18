@@ -227,7 +227,6 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       ...breadcrumbRest
     } = breadcrumb;
 
-    // const isFirstBreadcrumb = index === 0;
     const isLastBreadcrumb = index === breadcrumbs.length - 1;
 
     const breadcrumbWrapperClasses = classNames('ouiBreadcrumbWrapper', {

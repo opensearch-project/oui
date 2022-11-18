@@ -68,15 +68,11 @@
   }
 }
 
-.ouiBreadcrumb--truncate,
-.ouiBreadcrumbWrapper--truncate {
+.ouiBreadcrumb--truncate {
   @include ouiTextTruncate;
+  max-width: 100%;
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
-}
-
-.ouiBreadcrumb--truncate {
-  max-width: 100%;
 }
 
 .ouiBreadcrumbWrapper--truncate {
