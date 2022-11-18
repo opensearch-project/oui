@@ -162,19 +162,21 @@ const limitBreadcrumbs = (
 
     return (
       <Fragment>
-        <OuiPopover
-          className="ouiBreadcrumb ouiBreadcrumb--collapsed"
-          button={ellipsisButton}
-          isOpen={isPopoverOpen}
-          closePopover={() => setIsPopoverOpen(false)}>
-          <OuiBreadcrumbs
-            className="ouiBreadcrumbs__inPopover"
-            breadcrumbs={overflowBreadcrumbs}
-            responsive={false}
-            truncate={false}
-            max={0}
-          />
-        </OuiPopover>
+        <div className="ouiBreadcrumbWrapper">
+          <OuiPopover
+            className="ouiBreadcrumb ouiBreadcrumb--collapsed"
+            button={ellipsisButton}
+            isOpen={isPopoverOpen}
+            closePopover={() => setIsPopoverOpen(false)}>
+            <OuiBreadcrumbs
+              className="ouiBreadcrumbs__inPopover"
+              breadcrumbs={overflowBreadcrumbs}
+              responsive={false}
+              truncate={false}
+              max={0}
+            />
+          </OuiPopover>
+        </div>
       </Fragment>
     );
   };
