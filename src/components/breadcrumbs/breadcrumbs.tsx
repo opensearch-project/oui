@@ -162,7 +162,7 @@ const limitBreadcrumbs = (
 
     return (
       <Fragment>
-        <div className="ouiBreadcrumbWrapper">
+        <div className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed">
           <OuiPopover
             className="ouiBreadcrumb ouiBreadcrumb--collapsed"
             button={ellipsisButton}
@@ -227,10 +227,12 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       ...breadcrumbRest
     } = breadcrumb;
 
+    // const isFirstBreadcrumb = index === 0;
     const isLastBreadcrumb = index === breadcrumbs.length - 1;
 
     const breadcrumbWrapperClasses = classNames('ouiBreadcrumbWrapper', {
       'ouiBreadcrumbWrapper--last': isLastBreadcrumb,
+      'ouiBreadcrumbWrapper--truncate': truncate,
     });
 
     const breadcrumbClasses = classNames('ouiBreadcrumb', breadcrumbClassName, {

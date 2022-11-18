@@ -51,20 +51,36 @@
   flex-wrap: nowrap;
 
   .ouiBreadcrumb:not(.ouiBreadcrumb--collapsed) {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
+  }
+
+  .ouiBreadcrumbWrapper:not(.ouiBreadcrumbWrapper--collapsed) {
     max-width: $ouiBreadcrumbTruncateWidth;
+    overflow: hidden;
     text-overflow: ellipsis;
 
-    &.ouiBreadcrumb--last {
+    &.ouiBreadcrumbWrapper--last {
       max-width: none;
     }
   }
 }
 
-.ouiBreadcrumb--truncate {
+.ouiBreadcrumb--truncate,
+.ouiBreadcrumbWrapper--truncate {
   @include ouiTextTruncate;
-  max-width: $ouiBreadcrumbTruncateWidth;
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
+}
+
+.ouiBreadcrumb--truncate {
+  max-width: 100%;
+}
+
+.ouiBreadcrumbWrapper--truncate {
+  max-width: $ouiBreadcrumbTruncateWidth;
 }
 
 .ouiBreadcrumbWrapper {
@@ -77,6 +93,12 @@
   &:not(.ouiBreadcrumbWrapper--last) {
     margin-right: $ouiBreadcrumbSpacing;
   }
+}
+
+.ouiBreadcrumbWrapper--first {
+  background-image: linear-gradient(to right, $ouiBreadcrumbGrayBackground 0 30px, transparent 30px);
+  border-radius: $ouiSizeXS;
+  overflow: hidden;
 }
 
 .ouiBreadcrumbWrapper--last {
