@@ -29,6 +29,10 @@
 
   &:not(.ouiBreadcrumb--last) {
     color: $ouiTextSubduedColor;
+
+    &:hover {
+      color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
+    }
   }
 }
 
@@ -39,6 +43,10 @@
 .ouiBreadcrumb--collapsed {
   flex-shrink: 0;
   color: $ouiBreadcrumbCollapsedLink;
+}
+
+.ouiBreadcrumb__collapsedLink:hover {
+  color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
 }
 
 .ouiBreadcrumbs__inPopover .ouiBreadcrumb--last {
