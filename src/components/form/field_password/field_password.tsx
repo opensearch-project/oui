@@ -187,6 +187,7 @@ export const OuiFieldPassword: FunctionComponent<OuiFieldPasswordProps> = ({
           value={value}
           ref={setInputRef}
           {...rest}
+          spellCheck="false"
         />
       </OuiValidatableControl>
     </OuiFormControlLayout>
