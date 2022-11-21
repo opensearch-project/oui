@@ -43,6 +43,7 @@
 .ouiBreadcrumb--collapsed {
   flex-shrink: 0;
   color: $ouiBreadcrumbCollapsedLink;
+  vertical-align: top !important; // sass-lint:disable-line no-important
 }
 
 .ouiBreadcrumb__collapsedLink:hover {
