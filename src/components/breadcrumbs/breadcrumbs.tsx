@@ -245,14 +245,13 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       link = (
         <OuiInnerText>
           {(ref, innerText) => (
-            <span ref={ref} className={breadcrumbWrapperClasses}>
-              <span
-                className={breadcrumbClasses}
-                title={innerText}
-                aria-current={isLastBreadcrumb ? 'page' : 'false'}
-                {...breadcrumbRest}>
-                {text}
-              </span>
+            <span
+              ref={ref}
+              className={breadcrumbClasses}
+              title={innerText}
+              aria-current={isLastBreadcrumb ? 'page' : 'false'}
+              {...breadcrumbRest}>
+              {text}
             </span>
           )}
         </OuiInnerText>
@@ -261,23 +260,26 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       link = (
         <OuiInnerText>
           {(ref, innerText) => (
-            <span ref={ref} className={breadcrumbWrapperClasses}>
-              <OuiLink
-                color={isLastBreadcrumb ? 'text' : 'subdued'}
-                onClick={onClick}
-                href={href}
-                className={breadcrumbClasses}
-                title={innerText}
-                {...breadcrumbRest}>
-                {text}
-              </OuiLink>
-            </span>
+            <OuiLink
+              ref={ref}
+              color={isLastBreadcrumb ? 'text' : 'subdued'}
+              onClick={onClick}
+              href={href}
+              className={breadcrumbClasses}
+              title={innerText}
+              {...breadcrumbRest}>
+              {text}
+            </OuiLink>
           )}
         </OuiInnerText>
       );
     }
 
-    return <Fragment key={index}>{link}</Fragment>;
+    return (
+      <Fragment key={index}>
+        <span className={breadcrumbWrapperClasses}>{link}</span>
+      </Fragment>
+    );
   });
 
   // Use the default object if they simply passed `true` for responsive
