@@ -80,21 +80,25 @@
 }
 
 .ouiBreadcrumbWrapper {
-  margin-bottom: $ouiSizeXS; /* 1 */
   background-color: $ouiBreadcrumbGrayBackground;
   transform: skewX(-20deg);
   border-radius: $ouiSizeXS;
   padding: $ouiSizeXS - 2.5 $ouiSizeL - $ouiSizeXS;
+
+  &:not(.ouiBreadcrumbWrapper--first) {
+    margin-bottom: $ouiSizeXS; /* 1 */
+  }
 
   &:not(.ouiBreadcrumbWrapper--last) {
     margin-right: $ouiBreadcrumbSpacing;
   }
 }
 
-.ouiBreadcrumbWrapper--first {
-  background-image: linear-gradient(to right, $ouiBreadcrumbGrayBackground 0 30px, transparent 30px);
+.ouiBreadcrumbWall {
+  background-image: linear-gradient(to right, $ouiBreadcrumbGrayBackground 0 $ouiSizeM, transparent $ouiSizeM);
   border-radius: $ouiSizeXS;
   overflow: hidden;
+  margin-bottom: $ouiSizeXS; /* 1 */
 }
 
 .ouiBreadcrumbWrapper--last {

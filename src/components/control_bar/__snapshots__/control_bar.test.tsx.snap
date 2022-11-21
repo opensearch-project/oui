@@ -19,18 +19,22 @@ exports[`OuiControlBar is rendered 1`] = `
       aria-label="breadcrumb"
       class="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
     >
-      <span
-        class="ouiBreadcrumbWrapper"
+      <div
+        class="ouiBreadcrumbWall"
       >
-        <span
-          aria-current="false"
-          class="ouiBreadcrumb"
-          title="src"
+        <div
+          class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
         >
-          src
-        </span>
-      </span>
-      <span
+          <span
+            aria-current="false"
+            class="ouiBreadcrumb"
+            title="src"
+          >
+            src
+          </span>
+        </div>
+      </div>
+      <div
         class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
       >
         <span
@@ -40,7 +44,7 @@ exports[`OuiControlBar is rendered 1`] = `
         >
           components
         </span>
-      </span>
+      </div>
     </nav>
     <button
       class="ouiButton ouiButton--ghost ouiButton--small ouiControlBar__button"
@@ -161,18 +165,22 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                 aria-label="breadcrumb"
                 class="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  class="ouiBreadcrumbWrapper"
+                <div
+                  class="ouiBreadcrumbWall"
                 >
-                  <span
-                    aria-current="false"
-                    class="ouiBreadcrumb"
-                    title="src"
+                  <div
+                    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
                   >
-                    src
-                  </span>
-                </span>
-                <span
+                    <span
+                      aria-current="false"
+                      class="ouiBreadcrumb"
+                      title="src"
+                    >
+                      src
+                    </span>
+                  </div>
+                </div>
+                <div
                   class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <span
@@ -182,7 +190,7 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                   >
                     components
                   </span>
-                </span>
+                </div>
               </nav>
               <button
                 class="ouiButton ouiButton--ghost ouiButton--small ouiControlBar__button"
@@ -276,20 +284,24 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                 aria-label="breadcrumb"
                 className="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  className="ouiBreadcrumbWrapper"
+                <div
+                  className="ouiBreadcrumbWall"
                 >
-                  <OuiInnerText>
-                    <span
-                      aria-current="false"
-                      className="ouiBreadcrumb"
-                      title="src"
-                    >
-                      src
-                    </span>
-                  </OuiInnerText>
-                </span>
-                <span
+                  <div
+                    className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
+                  >
+                    <OuiInnerText>
+                      <span
+                        aria-current="false"
+                        className="ouiBreadcrumb"
+                        title="src"
+                      >
+                        src
+                      </span>
+                    </OuiInnerText>
+                  </div>
+                </div>
+                <div
                   className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <OuiInnerText>
@@ -301,7 +313,7 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                       components
                     </span>
                   </OuiInnerText>
-                </span>
+                </div>
               </nav>
             </OuiBreadcrumbs>
             <OuiButton
@@ -493,18 +505,22 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                 aria-label="breadcrumb"
                 class="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  class="ouiBreadcrumbWrapper"
+                <div
+                  class="ouiBreadcrumbWall"
                 >
-                  <span
-                    aria-current="false"
-                    class="ouiBreadcrumb"
-                    title="src"
+                  <div
+                    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
                   >
-                    src
-                  </span>
-                </span>
-                <span
+                    <span
+                      aria-current="false"
+                      class="ouiBreadcrumb"
+                      title="src"
+                    >
+                      src
+                    </span>
+                  </div>
+                </div>
+                <div
                   class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <span
@@ -514,7 +530,7 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                   >
                     components
                   </span>
-                </span>
+                </div>
               </nav>
               <button
                 class="ouiButton ouiButton--ghost ouiButton--small ouiControlBar__button"
@@ -608,20 +624,24 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                 aria-label="breadcrumb"
                 className="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  className="ouiBreadcrumbWrapper"
+                <div
+                  className="ouiBreadcrumbWall"
                 >
-                  <OuiInnerText>
-                    <span
-                      aria-current="false"
-                      className="ouiBreadcrumb"
-                      title="src"
-                    >
-                      src
-                    </span>
-                  </OuiInnerText>
-                </span>
-                <span
+                  <div
+                    className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
+                  >
+                    <OuiInnerText>
+                      <span
+                        aria-current="false"
+                        className="ouiBreadcrumb"
+                        title="src"
+                      >
+                        src
+                      </span>
+                    </OuiInnerText>
+                  </div>
+                </div>
+                <div
                   className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <OuiInnerText>
@@ -633,7 +653,7 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                       components
                     </span>
                   </OuiInnerText>
-                </span>
+                </div>
               </nav>
             </OuiBreadcrumbs>
             <OuiButton
@@ -824,18 +844,22 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                 aria-label="breadcrumb"
                 class="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  class="ouiBreadcrumbWrapper"
+                <div
+                  class="ouiBreadcrumbWall"
                 >
-                  <span
-                    aria-current="false"
-                    class="ouiBreadcrumb"
-                    title="src"
+                  <div
+                    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
                   >
-                    src
-                  </span>
-                </span>
-                <span
+                    <span
+                      aria-current="false"
+                      class="ouiBreadcrumb"
+                      title="src"
+                    >
+                      src
+                    </span>
+                  </div>
+                </div>
+                <div
                   class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <span
@@ -845,7 +869,7 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                   >
                     components
                   </span>
-                </span>
+                </div>
               </nav>
               <button
                 class="ouiButton ouiButton--ghost ouiButton--small ouiControlBar__button"
@@ -939,20 +963,24 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                 aria-label="breadcrumb"
                 className="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  className="ouiBreadcrumbWrapper"
+                <div
+                  className="ouiBreadcrumbWall"
                 >
-                  <OuiInnerText>
-                    <span
-                      aria-current="false"
-                      className="ouiBreadcrumb"
-                      title="src"
-                    >
-                      src
-                    </span>
-                  </OuiInnerText>
-                </span>
-                <span
+                  <div
+                    className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
+                  >
+                    <OuiInnerText>
+                      <span
+                        aria-current="false"
+                        className="ouiBreadcrumb"
+                        title="src"
+                      >
+                        src
+                      </span>
+                    </OuiInnerText>
+                  </div>
+                </div>
+                <div
                   className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <OuiInnerText>
@@ -964,7 +992,7 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                       components
                     </span>
                   </OuiInnerText>
-                </span>
+                </div>
               </nav>
             </OuiBreadcrumbs>
             <OuiButton
@@ -1178,20 +1206,24 @@ exports[`OuiControlBar props position is rendered 1`] = `
             aria-label="breadcrumb"
             className="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
           >
-            <span
-              className="ouiBreadcrumbWrapper"
+            <div
+              className="ouiBreadcrumbWall"
             >
-              <OuiInnerText>
-                <span
-                  aria-current="false"
-                  className="ouiBreadcrumb"
-                  title="src"
-                >
-                  src
-                </span>
-              </OuiInnerText>
-            </span>
-            <span
+              <div
+                className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
+              >
+                <OuiInnerText>
+                  <span
+                    aria-current="false"
+                    className="ouiBreadcrumb"
+                    title="src"
+                  >
+                    src
+                  </span>
+                </OuiInnerText>
+              </div>
+            </div>
+            <div
               className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
             >
               <OuiInnerText>
@@ -1203,7 +1235,7 @@ exports[`OuiControlBar props position is rendered 1`] = `
                   components
                 </span>
               </OuiInnerText>
-            </span>
+            </div>
           </nav>
         </OuiBreadcrumbs>
         <OuiButton
@@ -1379,18 +1411,22 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                 aria-label="breadcrumb"
                 class="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  class="ouiBreadcrumbWrapper"
+                <div
+                  class="ouiBreadcrumbWall"
                 >
-                  <span
-                    aria-current="false"
-                    class="ouiBreadcrumb"
-                    title="src"
+                  <div
+                    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
                   >
-                    src
-                  </span>
-                </span>
-                <span
+                    <span
+                      aria-current="false"
+                      class="ouiBreadcrumb"
+                      title="src"
+                    >
+                      src
+                    </span>
+                  </div>
+                </div>
+                <div
                   class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <span
@@ -1400,7 +1436,7 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                   >
                     components
                   </span>
-                </span>
+                </div>
               </nav>
               <button
                 class="ouiButton ouiButton--ghost ouiButton--small ouiControlBar__button"
@@ -1494,20 +1530,24 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                 aria-label="breadcrumb"
                 className="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  className="ouiBreadcrumbWrapper"
+                <div
+                  className="ouiBreadcrumbWall"
                 >
-                  <OuiInnerText>
-                    <span
-                      aria-current="false"
-                      className="ouiBreadcrumb"
-                      title="src"
-                    >
-                      src
-                    </span>
-                  </OuiInnerText>
-                </span>
-                <span
+                  <div
+                    className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
+                  >
+                    <OuiInnerText>
+                      <span
+                        aria-current="false"
+                        className="ouiBreadcrumb"
+                        title="src"
+                      >
+                        src
+                      </span>
+                    </OuiInnerText>
+                  </div>
+                </div>
+                <div
                   className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <OuiInnerText>
@@ -1519,7 +1559,7 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                       components
                     </span>
                   </OuiInnerText>
-                </span>
+                </div>
               </nav>
             </OuiBreadcrumbs>
             <OuiButton
@@ -1710,18 +1750,22 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                 aria-label="breadcrumb"
                 class="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  class="ouiBreadcrumbWrapper"
+                <div
+                  class="ouiBreadcrumbWall"
                 >
-                  <span
-                    aria-current="false"
-                    class="ouiBreadcrumb"
-                    title="src"
+                  <div
+                    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
                   >
-                    src
-                  </span>
-                </span>
-                <span
+                    <span
+                      aria-current="false"
+                      class="ouiBreadcrumb"
+                      title="src"
+                    >
+                      src
+                    </span>
+                  </div>
+                </div>
+                <div
                   class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <span
@@ -1731,7 +1775,7 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                   >
                     components
                   </span>
-                </span>
+                </div>
               </nav>
               <button
                 class="ouiButton ouiButton--ghost ouiButton--small ouiControlBar__button"
@@ -1830,20 +1874,24 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                 aria-label="breadcrumb"
                 className="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  className="ouiBreadcrumbWrapper"
+                <div
+                  className="ouiBreadcrumbWall"
                 >
-                  <OuiInnerText>
-                    <span
-                      aria-current="false"
-                      className="ouiBreadcrumb"
-                      title="src"
-                    >
-                      src
-                    </span>
-                  </OuiInnerText>
-                </span>
-                <span
+                  <div
+                    className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
+                  >
+                    <OuiInnerText>
+                      <span
+                        aria-current="false"
+                        className="ouiBreadcrumb"
+                        title="src"
+                      >
+                        src
+                      </span>
+                    </OuiInnerText>
+                  </div>
+                </div>
+                <div
                   className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <OuiInnerText>
@@ -1855,7 +1903,7 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                       components
                     </span>
                   </OuiInnerText>
-                </span>
+                </div>
               </nav>
             </OuiBreadcrumbs>
             <OuiButton
@@ -2051,18 +2099,22 @@ exports[`OuiControlBar props size is rendered 1`] = `
                 aria-label="breadcrumb"
                 class="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  class="ouiBreadcrumbWrapper"
+                <div
+                  class="ouiBreadcrumbWall"
                 >
-                  <span
-                    aria-current="false"
-                    class="ouiBreadcrumb"
-                    title="src"
+                  <div
+                    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
                   >
-                    src
-                  </span>
-                </span>
-                <span
+                    <span
+                      aria-current="false"
+                      class="ouiBreadcrumb"
+                      title="src"
+                    >
+                      src
+                    </span>
+                  </div>
+                </div>
+                <div
                   class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <span
@@ -2072,7 +2124,7 @@ exports[`OuiControlBar props size is rendered 1`] = `
                   >
                     components
                   </span>
-                </span>
+                </div>
               </nav>
               <button
                 class="ouiButton ouiButton--ghost ouiButton--small ouiControlBar__button"
@@ -2166,20 +2218,24 @@ exports[`OuiControlBar props size is rendered 1`] = `
                 aria-label="breadcrumb"
                 className="ouiBreadcrumbs ouiControlBar__breadcrumbs ouiBreadcrumbs--truncate"
               >
-                <span
-                  className="ouiBreadcrumbWrapper"
+                <div
+                  className="ouiBreadcrumbWall"
                 >
-                  <OuiInnerText>
-                    <span
-                      aria-current="false"
-                      className="ouiBreadcrumb"
-                      title="src"
-                    >
-                      src
-                    </span>
-                  </OuiInnerText>
-                </span>
-                <span
+                  <div
+                    className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
+                  >
+                    <OuiInnerText>
+                      <span
+                        aria-current="false"
+                        className="ouiBreadcrumb"
+                        title="src"
+                      >
+                        src
+                      </span>
+                    </OuiInnerText>
+                  </div>
+                </div>
+                <div
                   className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
                 >
                   <OuiInnerText>
@@ -2191,7 +2247,7 @@ exports[`OuiControlBar props size is rendered 1`] = `
                       components
                     </span>
                   </OuiInnerText>
-                </span>
+                </div>
               </nav>
             </OuiBreadcrumbs>
             <OuiButton

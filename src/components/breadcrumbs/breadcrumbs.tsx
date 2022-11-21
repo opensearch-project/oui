@@ -227,9 +227,11 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       ...breadcrumbRest
     } = breadcrumb;
 
+    const isFirstBreadcrumb = index === 0;
     const isLastBreadcrumb = index === breadcrumbs.length - 1;
 
     const breadcrumbWrapperClasses = classNames('ouiBreadcrumbWrapper', {
+      'ouiBreadcrumbWrapper--first': isFirstBreadcrumb,
       'ouiBreadcrumbWrapper--last': isLastBreadcrumb,
       'ouiBreadcrumbWrapper--truncate': truncate,
     });
@@ -275,11 +277,15 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       );
     }
 
-    return (
-      <Fragment key={index}>
-        <span className={breadcrumbWrapperClasses}>{link}</span>
-      </Fragment>
-    );
+    let wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
+
+    if (isFirstBreadcrumb) {
+      const breadcrumbWallClasses = classNames('ouiBreadcrumbWall');
+
+      wrapper = <div className={breadcrumbWallClasses}>{wrapper}</div>;
+    }
+
+    return <Fragment key={index}>{wrapper}</Fragment>;
   });
 
   // Use the default object if they simply passed `true` for responsive

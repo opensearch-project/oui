@@ -6,19 +6,23 @@ exports[`OuiHeaderBreadcrumbs is rendered 1`] = `
   class="ouiBreadcrumbs ouiHeaderBreadcrumbs testClass1 testClass2 ouiBreadcrumbs--truncate"
   data-test-subj="test subject string"
 >
-  <span
-    class="ouiBreadcrumbWrapper"
+  <div
+    class="ouiBreadcrumbWall"
   >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-      data-test-subj="breadcrumbsAnimals"
-      href="#"
-      rel="noreferrer"
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
     >
-      Animals
-    </a>
-  </span>
-  <span
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+        data-test-subj="breadcrumbsAnimals"
+        href="#"
+        rel="noreferrer"
+      >
+        Animals
+      </a>
+    </div>
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <button
@@ -27,8 +31,8 @@ exports[`OuiHeaderBreadcrumbs is rendered 1`] = `
     >
       Reptiles
     </button>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <a
@@ -38,8 +42,8 @@ exports[`OuiHeaderBreadcrumbs is rendered 1`] = `
     >
       Boa constrictor
     </a>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
   >
     <span
@@ -48,6 +52,6 @@ exports[`OuiHeaderBreadcrumbs is rendered 1`] = `
     >
       Edit
     </span>
-  </span>
+  </div>
 </nav>
 `;

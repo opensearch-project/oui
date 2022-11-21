@@ -6,19 +6,23 @@ exports[`OuiBreadcrumbs is rendered 1`] = `
   class="ouiBreadcrumbs testClass1 testClass2 ouiBreadcrumbs--truncate"
   data-test-subj="test subject string"
 >
-  <span
-    class="ouiBreadcrumbWrapper"
+  <div
+    class="ouiBreadcrumbWall"
   >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-      data-test-subj="breadcrumbsAnimals"
-      href="#"
-      rel="noreferrer"
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
     >
-      Animals
-    </a>
-  </span>
-  <span
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+        data-test-subj="breadcrumbsAnimals"
+        href="#"
+        rel="noreferrer"
+      >
+        Animals
+      </a>
+    </div>
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -27,7 +31,7 @@ exports[`OuiBreadcrumbs is rendered 1`] = `
     >
       Metazoans
     </span>
-  </span>
+  </div>
   <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
   >
@@ -51,7 +55,7 @@ exports[`OuiBreadcrumbs is rendered 1`] = `
       </div>
     </div>
   </div>
-  <span
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <button
@@ -60,8 +64,8 @@ exports[`OuiBreadcrumbs is rendered 1`] = `
     >
       Reptiles
     </button>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
   >
     <a
@@ -71,8 +75,8 @@ exports[`OuiBreadcrumbs is rendered 1`] = `
     >
       Boa constrictor
     </a>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
   >
     <span
@@ -81,7 +85,7 @@ exports[`OuiBreadcrumbs is rendered 1`] = `
     >
       Edit
     </span>
-  </span>
+  </div>
 </nav>
 `;
 
@@ -90,19 +94,23 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
   aria-label="breadcrumb"
   class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
 >
-  <span
-    class="ouiBreadcrumbWrapper"
+  <div
+    class="ouiBreadcrumbWall"
   >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-      data-test-subj="breadcrumbsAnimals"
-      href="#"
-      rel="noreferrer"
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
     >
-      Animals
-    </a>
-  </span>
-  <span
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+        data-test-subj="breadcrumbsAnimals"
+        href="#"
+        rel="noreferrer"
+      >
+        Animals
+      </a>
+    </div>
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -111,8 +119,8 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
     >
       Metazoans
     </span>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -121,8 +129,8 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
     >
       Chordates
     </span>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
   >
     <span
@@ -131,8 +139,8 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
     >
       Nebulosa subspecies is also a real mouthful, especially for creatures without mouths
     </span>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -141,8 +149,8 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
     >
       Tetrapods
     </span>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <button
@@ -151,8 +159,8 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
     >
       Reptiles
     </button>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
   >
     <a
@@ -162,8 +170,8 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
     >
       Boa constrictor
     </a>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
   >
     <span
@@ -172,7 +180,7 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
     >
       Edit
     </span>
-  </span>
+  </div>
 </nav>
 `;
 
@@ -204,7 +212,7 @@ exports[`OuiBreadcrumbs props max renders 1 item 1`] = `
       </div>
     </div>
   </div>
-  <span
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
   >
     <span
@@ -213,7 +221,7 @@ exports[`OuiBreadcrumbs props max renders 1 item 1`] = `
     >
       Edit
     </span>
-  </span>
+  </div>
 </nav>
 `;
 
@@ -222,19 +230,23 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
   aria-label="breadcrumb"
   class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
 >
-  <span
-    class="ouiBreadcrumbWrapper"
+  <div
+    class="ouiBreadcrumbWall"
   >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-      data-test-subj="breadcrumbsAnimals"
-      href="#"
-      rel="noreferrer"
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
     >
-      Animals
-    </a>
-  </span>
-  <span
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+        data-test-subj="breadcrumbsAnimals"
+        href="#"
+        rel="noreferrer"
+      >
+        Animals
+      </a>
+    </div>
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -243,8 +255,8 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
     >
       Metazoans
     </span>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -253,8 +265,8 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
     >
       Chordates
     </span>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
   >
     <span
@@ -263,8 +275,8 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
     >
       Nebulosa subspecies is also a real mouthful, especially for creatures without mouths
     </span>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -273,8 +285,8 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
     >
       Tetrapods
     </span>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <button
@@ -283,8 +295,8 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
     >
       Reptiles
     </button>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
   >
     <a
@@ -294,8 +306,8 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
     >
       Boa constrictor
     </a>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
   >
     <span
@@ -304,7 +316,7 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
     >
       Edit
     </span>
-  </span>
+  </div>
 </nav>
 `;
 
@@ -313,19 +325,23 @@ exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
   aria-label="breadcrumb"
   class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
 >
-  <span
-    class="ouiBreadcrumbWrapper"
+  <div
+    class="ouiBreadcrumbWall"
   >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-      data-test-subj="breadcrumbsAnimals"
-      href="#"
-      rel="noreferrer"
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
     >
-      Animals
-    </a>
-  </span>
-  <span
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+        data-test-subj="breadcrumbsAnimals"
+        href="#"
+        rel="noreferrer"
+      >
+        Animals
+      </a>
+    </div>
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -334,7 +350,7 @@ exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
     >
       Metazoans
     </span>
-  </span>
+  </div>
   <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
   >
@@ -358,7 +374,7 @@ exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
       </div>
     </div>
   </div>
-  <span
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <button
@@ -367,8 +383,8 @@ exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
     >
       Reptiles
     </button>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
   >
     <a
@@ -378,8 +394,8 @@ exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
     >
       Boa constrictor
     </a>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
   >
     <span
@@ -388,7 +404,7 @@ exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
     >
       Edit
     </span>
-  </span>
+  </div>
 </nav>
 `;
 
@@ -397,19 +413,23 @@ exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
   aria-label="breadcrumb"
   class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
 >
-  <span
-    class="ouiBreadcrumbWrapper"
+  <div
+    class="ouiBreadcrumbWall"
   >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-      data-test-subj="breadcrumbsAnimals"
-      href="#"
-      rel="noreferrer"
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
     >
-      Animals
-    </a>
-  </span>
-  <span
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+        data-test-subj="breadcrumbsAnimals"
+        href="#"
+        rel="noreferrer"
+      >
+        Animals
+      </a>
+    </div>
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -418,7 +438,7 @@ exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
     >
       Metazoans
     </span>
-  </span>
+  </div>
   <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
   >
@@ -442,7 +462,7 @@ exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
       </div>
     </div>
   </div>
-  <span
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <button
@@ -451,8 +471,8 @@ exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
     >
       Reptiles
     </button>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
   >
     <a
@@ -462,8 +482,8 @@ exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
     >
       Boa constrictor
     </a>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
   >
     <span
@@ -472,7 +492,7 @@ exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
     >
       Edit
     </span>
-  </span>
+  </div>
 </nav>
 `;
 
@@ -504,7 +524,7 @@ exports[`OuiBreadcrumbs props responsive is rendered with custom breakpoints 1`]
       </div>
     </div>
   </div>
-  <span
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
   >
     <span
@@ -513,7 +533,7 @@ exports[`OuiBreadcrumbs props responsive is rendered with custom breakpoints 1`]
     >
       Edit
     </span>
-  </span>
+  </div>
 </nav>
 `;
 
@@ -522,19 +542,23 @@ exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
   aria-label="breadcrumb"
   class="ouiBreadcrumbs"
 >
-  <span
-    class="ouiBreadcrumbWrapper"
+  <div
+    class="ouiBreadcrumbWall"
   >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-      data-test-subj="breadcrumbsAnimals"
-      href="#"
-      rel="noreferrer"
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
     >
-      Animals
-    </a>
-  </span>
-  <span
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+        data-test-subj="breadcrumbsAnimals"
+        href="#"
+        rel="noreferrer"
+      >
+        Animals
+      </a>
+    </div>
+  </div>
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <span
@@ -543,7 +567,7 @@ exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
     >
       Metazoans
     </span>
-  </span>
+  </div>
   <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
   >
@@ -567,7 +591,7 @@ exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
       </div>
     </div>
   </div>
-  <span
+  <div
     class="ouiBreadcrumbWrapper"
   >
     <button
@@ -576,8 +600,8 @@ exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
     >
       Reptiles
     </button>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
   >
     <a
@@ -587,8 +611,8 @@ exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
     >
       Boa constrictor
     </a>
-  </span>
-  <span
+  </div>
+  <div
     class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
   >
     <span
@@ -597,6 +621,6 @@ exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
     >
       Edit
     </span>
-  </span>
+  </div>
 </nav>
 `;
