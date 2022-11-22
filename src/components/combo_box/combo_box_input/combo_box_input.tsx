@@ -42,6 +42,7 @@ import {
   OuiFormControlLayout,
   OuiFormControlLayoutProps,
 } from '../../form/form_control_layout';
+import { OuiIcon } from '../../icon';
 import { OuiComboBoxPill } from './combo_box_pill';
 import { htmlIdGenerator } from '../../../services';
 import { OuiFormControlLayoutIconsProps } from '../../form/form_control_layout/form_control_layout_icons';
@@ -74,6 +75,7 @@ export interface OuiComboBoxInputProps<T> extends CommonProps {
   onRemoveOption?: OptionHandler<T>;
   placeholder?: string;
   rootId: ReturnType<typeof htmlIdGenerator>;
+  searchIcon?: boolean;
   searchValue: string;
   selectedOptions?: Array<OuiComboBoxOptionOption<T>>;
   singleSelection?: boolean | OuiComboBoxSingleSelectionShape;
@@ -163,6 +165,7 @@ export class OuiComboBoxInput<T> extends Component<
       onRemoveOption,
       placeholder,
       rootId,
+      searchIcon: searchIconProp,
       searchValue,
       selectedOptions,
       singleSelection: singleSelectionProp,
@@ -272,6 +275,22 @@ export class OuiComboBoxInput<T> extends Component<
       };
     }
 
+    let searchIcon;
+    if (!!searchIconProp) {
+      const searchIconClasses = classNames(
+        'ouiComboBoxPill',
+        'ouiComboBoxSearchIcon'
+      );
+
+      searchIcon = (
+        <OuiIcon
+          type="search"
+          size={compressed ? 's' : 'm'}
+          className={searchIconClasses}
+        />
+      );
+    }
+
     const wrapClasses = classNames('ouiComboBox__inputWrap', {
       'ouiComboBox__inputWrap--compressed': compressed,
       'ouiComboBox__inputWrap--fullWidth': fullWidth,
@@ -296,6 +315,7 @@ export class OuiComboBoxInput<T> extends Component<
           onClick={onClick}
           tabIndex={-1} // becomes onBlur event's relatedTarget, otherwise relatedTarget is null when clicking on this div
         >
+          {searchIcon}
           {!singleSelection || !searchValue ? pills : null}
           {placeholderMessage}
           <AutosizeInput

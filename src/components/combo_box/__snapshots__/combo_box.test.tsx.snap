@@ -619,6 +619,47 @@ exports[`props options list is rendered 1`] = `
 </div>
 `;
 
+exports[`props searchIcon is rendered 1`] = `
+<div
+  aria-expanded={false}
+  aria-haspopup="listbox"
+  className="ouiComboBox"
+  onKeyDown={[Function]}
+  role="combobox"
+>
+  <OuiComboBoxInput
+    autoSizeInputRef={[Function]}
+    compressed={false}
+    fullWidth={false}
+    hasSelectedOptions={true}
+    inputRef={[Function]}
+    isListOpen={false}
+    noIcon={false}
+    onChange={[Function]}
+    onClear={[Function]}
+    onClick={[Function]}
+    onCloseListClick={[Function]}
+    onFocus={[Function]}
+    onOpenListClick={[Function]}
+    onRemoveOption={[Function]}
+    rootId={[Function]}
+    searchIcon={true}
+    searchValue=""
+    selectedOptions={
+      Array [
+        Object {
+          "label": "Mimas",
+        },
+      ]
+    }
+    singleSelection={false}
+    toggleButtonRef={[Function]}
+    updatePosition={[Function]}
+    value="Mimas"
+  />
+</div>
+`;
+
 exports[`props selectedOptions are rendered 1`] = `
 <div
   aria-expanded={false}

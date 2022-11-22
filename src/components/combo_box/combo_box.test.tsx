@@ -221,6 +221,18 @@ describe('props', () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  test('searchIcon is rendered', () => {
+    const component = shallow(
+      <OuiComboBox
+        options={options}
+        selectedOptions={[options[2]]}
+        searchIcon={true}
+      />
+    );
+
+    expect(component).toMatchSnapshot();
+  });
 });
 
 test('does not show multiple checkmarks with duplicate labels', () => {

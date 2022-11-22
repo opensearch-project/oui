@@ -136,6 +136,7 @@ export interface _OuiComboBoxProps<T>
    * Every option must be the same height and must be explicitly set if using a custom render
    */
   rowHeight?: number;
+  searchIcon?: boolean;
   /**
    * When `true` only allows the user to select a single option. Set to `{ asPlainText: true }` to not render input selection as pills
    */
@@ -939,6 +940,7 @@ export class OuiComboBox<T> extends Component<
       placeholder,
       renderOption,
       rowHeight,
+      searchIcon,
       selectedOptions,
       singleSelection,
       prepend,
@@ -1067,6 +1069,7 @@ export class OuiComboBox<T> extends Component<
           onRemoveOption={this.onRemoveOption}
           placeholder={placeholder}
           rootId={this.rootId}
+          searchIcon={searchIcon}
           searchValue={searchValue}
           selectedOptions={selectedOptions}
           singleSelection={singleSelection}
