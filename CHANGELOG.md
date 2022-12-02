@@ -1,5 +1,7 @@
 # OUI
-## [`master`](https://github.com/opensearch-project/oui/tree/master)
+## [`main`](https://github.com/opensearch-project/oui/tree/main)
+
+- Add release workflows ([134](https://github.com/opensearch-project/oui/pull/133))
 
 ## [`1.0.0`](https://github.com/opensearch-project/oui/tree/1.0.0)
 
