@@ -20,21 +20,21 @@ export default () => (
     {colors.map((item, index) => (
       <div key={index}>
         <OuiBetaBadge
-          label="Beta"
+          label="Experimental"
           color={item}
           tooltipContent="This module is not GA. Please help us by reporting any bugs."
         />
         &emsp;
         <OuiBetaBadge
-          label="Beta"
+          label="Experimental"
           color={item}
           size="s"
           tooltipContent="This module is not GA. Please help us by reporting any bugs."
         />
         &emsp;
-        <OuiBetaBadge label="B" color={item} />
+        <OuiBetaBadge label="E" color={item} />
         &emsp;
-        <OuiBetaBadge size="s" label="B" color={item} />
+        <OuiBetaBadge size="s" label="E" color={item} />
         &emsp;
         <OuiBetaBadge label="Lab" color={item} iconType="beaker" />
         &emsp;
@@ -63,7 +63,7 @@ export default () => (
     />
     &emsp;
     <OuiBetaBadge
-      label="Basic"
+      label="Experimental"
       href="http://www.elastic.co/subscriptions"
       target="_blank"
     />
