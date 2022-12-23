@@ -18,13 +18,10 @@ import {
   OuiContextMenuItem,
 } from '../../../../src/components/context_menu';
 import { OuiPopover } from '../../../../src/components/popover';
-import { OuiHorizontalRule } from '../../../../src/components/horizontal_rule';
 import { useIsWithinBreakpoints } from '../../../../src/services/hooks/useIsWithinBreakpoints';
 import { OUI_THEME, OUI_THEMES } from '../../../../src/themes';
 
 import { ThemeContext } from '../with_theme';
-// @ts-ignore Not TS
-import { GuideLocaleSelector } from '../guide_locale_selector';
 
 type GuideThemeSelectorProps = {
   onToggleLocale: () => {};
@@ -45,8 +42,6 @@ export const GuideThemeSelector: React.FunctionComponent<GuideThemeSelectorProps
 // @ts-ignore Context has no type
 const GuideThemeSelectorComponent: React.FunctionComponent<GuideThemeSelectorProps> = ({
   context,
-  onToggleLocale,
-  selectedLocale,
 }) => {
   const isMobileSize = useIsWithinBreakpoints(['xs', 's']);
   const [isPopoverOpen, setPopover] = useState(false);
@@ -102,17 +97,6 @@ const GuideThemeSelectorComponent: React.FunctionComponent<GuideThemeSelectorPro
       panelPaddingSize="none"
       anchorPosition="downRight">
       <OuiContextMenuPanel size="s" items={items} />
-      {location.host.includes('803') && (
-        <>
-          <OuiHorizontalRule margin="none" />
-          <div style={{ padding: 8 }}>
-            <GuideLocaleSelector
-              onToggleLocale={onToggleLocale}
-              selectedLocale={selectedLocale}
-            />
-          </div>
-        </>
-      )}
     </OuiPopover>
   );
 };
