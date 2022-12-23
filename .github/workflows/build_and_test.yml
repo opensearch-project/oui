@@ -2,7 +2,7 @@ name: Build and test
 
 on:
   push:
-    branches: ['**' '!backport/**']
+    branches: ['**', '!backport/**']
     paths-ignore:
       - '**/*.md'
   pull_request:
