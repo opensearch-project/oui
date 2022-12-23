@@ -1,0 +1,37 @@
+name: Build and test
+
+on:
+  push:
+    branches: ['**' '!backport/**']
+    paths-ignore:
+      - '**/*.md'
+  pull_request:
+    branches: ['**']
+    paths-ignore:
+      - '**/*.md'
+
+jobs:
+  build-lint-test:
+    runs-on: ubuntu-latest
+    name: Build and Verify
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+          yarn
+
+      - name: Run linter
+        run: yarn lint
+
+      - name: Run unit tests
+        run: yarn test-unit
