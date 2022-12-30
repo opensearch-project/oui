@@ -42,7 +42,7 @@ import {
   OuiFormControlLayout,
   OuiFormControlLayoutProps,
 } from '../../form/form_control_layout';
-import { OuiIcon } from '../../icon';
+import { OuiIcon, IconType } from '../../icon';
 import { OuiComboBoxPill } from './combo_box_pill';
 import { htmlIdGenerator } from '../../../services';
 import { OuiFormControlLayoutIconsProps } from '../../form/form_control_layout/form_control_layout_icons';
@@ -60,6 +60,7 @@ export interface OuiComboBoxInputProps<T> extends CommonProps {
   focusedOptionId?: string;
   fullWidth?: boolean;
   hasSelectedOptions: boolean;
+  icon?: IconType | boolean;
   id?: string;
   inputRef?: RefCallback<HTMLInputElement>;
   isDisabled?: boolean;
@@ -75,7 +76,6 @@ export interface OuiComboBoxInputProps<T> extends CommonProps {
   onRemoveOption?: OptionHandler<T>;
   placeholder?: string;
   rootId: ReturnType<typeof htmlIdGenerator>;
-  searchIcon?: boolean;
   searchValue: string;
   selectedOptions?: Array<OuiComboBoxOptionOption<T>>;
   singleSelection?: boolean | OuiComboBoxSingleSelectionShape;
@@ -153,6 +153,7 @@ export class OuiComboBoxInput<T> extends Component<
       focusedOptionId,
       fullWidth,
       hasSelectedOptions,
+      icon: iconProp,
       id,
       inputRef,
       isDisabled,
@@ -165,7 +166,6 @@ export class OuiComboBoxInput<T> extends Component<
       onRemoveOption,
       placeholder,
       rootId,
-      searchIcon: searchIconProp,
       searchValue,
       selectedOptions,
       singleSelection: singleSelectionProp,
@@ -260,9 +260,9 @@ export class OuiComboBoxInput<T> extends Component<
       };
     }
 
-    let icon: OuiFormControlLayoutIconsProps['icon'];
+    let formControlIcon: OuiFormControlLayoutIconsProps['icon'];
     if (!noIcon) {
-      icon = {
+      formControlIcon = {
         'aria-label': isListOpen
           ? 'Close list of options'
           : 'Open list of options',
@@ -275,18 +275,15 @@ export class OuiComboBoxInput<T> extends Component<
       };
     }
 
-    let searchIcon;
-    if (!!searchIconProp) {
-      const searchIconClasses = classNames(
-        'ouiComboBoxPill',
-        'ouiComboBoxSearchIcon'
-      );
+    let icon;
+    if (!!iconProp) {
+      const iconClasses = classNames('ouiComboBoxPill', 'ouiComboBoxIcon');
 
-      searchIcon = (
+      icon = (
         <OuiIcon
-          type="search"
+          type={typeof iconProp === 'string' ? iconProp : 'search'}
           size={compressed ? 's' : 'm'}
-          className={searchIconClasses}
+          className={iconClasses}
         />
       );
     }
@@ -302,7 +299,7 @@ export class OuiComboBoxInput<T> extends Component<
 
     return (
       <OuiFormControlLayout
-        icon={icon}
+        icon={formControlIcon}
         {...clickProps}
         isLoading={isLoading}
         compressed={compressed}
@@ -315,7 +312,7 @@ export class OuiComboBoxInput<T> extends Component<
           onClick={onClick}
           tabIndex={-1} // becomes onBlur event's relatedTarget, otherwise relatedTarget is null when clicking on this div
         >
-          {searchIcon}
+          {icon}
           {!singleSelection || !searchValue ? pills : null}
           {placeholderMessage}
           <AutosizeInput

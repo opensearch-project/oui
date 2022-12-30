@@ -222,12 +222,24 @@ describe('props', () => {
     expect(component).toMatchSnapshot();
   });
 
-  test('searchIcon is rendered', () => {
+  test('icon is rendered', () => {
     const component = shallow(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2]]}
-        searchIcon={true}
+        icon={true}
+      />
+    );
+
+    expect(component).toMatchSnapshot();
+  });
+
+  test('custom icon is rendered', () => {
+    const component = shallow(
+      <OuiComboBox
+        options={options}
+        selectedOptions={[options[2]]}
+        icon={'menu'}
       />
     );
 

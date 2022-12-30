@@ -70,6 +70,7 @@ import AutosizeInput from 'react-input-autosize';
 import { CommonProps } from '../common';
 import { OuiFormControlLayoutProps } from '../form';
 import { getElementZIndex } from '../../services/popover';
+import { IconType } from '../icon';
 
 type DrillProps<T> = Pick<
   OuiComboBoxOptionsListProps<T>,
@@ -98,6 +99,7 @@ export interface _OuiComboBoxProps<T>
    * When `true` expands to the entire width available
    */
   fullWidth: boolean;
+  icon?: IconType | boolean;
   id?: string;
   inputRef?: RefCallback<HTMLInputElement>;
   /**
@@ -136,7 +138,6 @@ export interface _OuiComboBoxProps<T>
    * Every option must be the same height and must be explicitly set if using a custom render
    */
   rowHeight?: number;
-  searchIcon?: boolean;
   /**
    * When `true` only allows the user to select a single option. Set to `{ asPlainText: true }` to not render input selection as pills
    */
@@ -925,6 +926,7 @@ export class OuiComboBox<T> extends Component<
       compressed,
       customOptionText,
       fullWidth,
+      icon,
       id,
       inputRef,
       isClearable,
@@ -940,7 +942,6 @@ export class OuiComboBox<T> extends Component<
       placeholder,
       renderOption,
       rowHeight,
-      searchIcon,
       selectedOptions,
       singleSelection,
       prepend,
@@ -1053,6 +1054,7 @@ export class OuiComboBox<T> extends Component<
           }
           fullWidth={fullWidth}
           hasSelectedOptions={selectedOptions.length > 0}
+          icon={icon}
           id={id}
           inputRef={this.searchInputRefCallback}
           isDisabled={isDisabled}
@@ -1069,7 +1071,6 @@ export class OuiComboBox<T> extends Component<
           onRemoveOption={this.onRemoveOption}
           placeholder={placeholder}
           rootId={this.rootId}
-          searchIcon={searchIcon}
           searchValue={searchValue}
           selectedOptions={selectedOptions}
           singleSelection={singleSelection}
