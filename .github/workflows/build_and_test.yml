@@ -12,8 +12,11 @@ on:
 
 jobs:
   build-lint-test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     name: Build and Verify
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
