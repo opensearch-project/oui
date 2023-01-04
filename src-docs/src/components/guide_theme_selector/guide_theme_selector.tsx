@@ -24,8 +24,6 @@ import { OUI_THEME, OUI_THEMES } from '../../../../src/themes';
 import { ThemeContext } from '../with_theme';
 
 type GuideThemeSelectorProps = {
-  onToggleLocale: () => {};
-  selectedLocale: string;
   context?: any;
 };
 

@@ -43,15 +43,7 @@ declare global {
   }
 }
 
-export type GuidePageHeaderProps = {
-  onToggleLocale: () => {};
-  selectedLocale: string;
-};
-
-export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
-  onToggleLocale,
-  selectedLocale,
-}) => {
+export const GuidePageHeader: React.FunctionComponent<{}> = () => {
   const isMobileSize = useIsWithinBreakpoints(['xs', 's']);
 
   function renderLogo() {
@@ -109,20 +101,8 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
   }
 
   const rightSideItems = isMobileSize
-    ? [
-        <GuideThemeSelector
-          onToggleLocale={onToggleLocale}
-          selectedLocale={selectedLocale}
-        />,
-        renderMobileMenu(),
-      ]
-    : [
-        <GuideThemeSelector
-          onToggleLocale={onToggleLocale}
-          selectedLocale={selectedLocale}
-        />,
-        renderGithub(),
-      ];
+    ? [<GuideThemeSelector />, renderMobileMenu()]
+    : [<GuideThemeSelector />, renderGithub()];
 
   return (
     <OuiHeader
