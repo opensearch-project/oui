@@ -284,6 +284,7 @@ export class OuiComboBoxInput<T> extends Component<
           type={typeof iconProp === 'string' ? iconProp : 'search'}
           size={compressed ? 's' : 'm'}
           className={iconClasses}
+          data-test-subj="comboBoxIcon"
         />
       );
     }

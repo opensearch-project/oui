@@ -223,7 +223,7 @@ describe('props', () => {
   });
 
   test('icon is rendered', () => {
-    const component = shallow(
+    const component = mount(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2]]}
@@ -232,10 +232,14 @@ describe('props', () => {
     );
 
     expect(component).toMatchSnapshot();
+
+    const icon = findTestSubject(component, 'comboBoxIcon');
+    expect(icon).toBeDefined();
+    expect(icon.render().attr('data-ouiicon-type')).toBe('search');
   });
 
   test('custom icon is rendered', () => {
-    const component = shallow(
+    const component = mount(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2]]}
@@ -244,6 +248,10 @@ describe('props', () => {
     );
 
     expect(component).toMatchSnapshot();
+
+    const icon = findTestSubject(component, 'comboBoxIcon');
+    expect(icon).toBeDefined();
+    expect(icon.render().attr('data-ouiicon-type')).toBe('menu');
   });
 });
 

@@ -101,44 +101,364 @@ exports[`props autoFocus is rendered 1`] = `
 `;
 
 exports[`props custom icon is rendered 1`] = `
-<div
-  aria-expanded={false}
-  aria-haspopup="listbox"
-  className="ouiComboBox"
-  onKeyDown={[Function]}
-  role="combobox"
+<OuiComboBox
+  async={false}
+  compressed={false}
+  fullWidth={false}
+  icon="menu"
+  isClearable={true}
+  options={
+    Array [
+      Object {
+        "data-test-subj": "titanOption",
+        "label": "Titan",
+      },
+      Object {
+        "label": "Enceladus",
+      },
+      Object {
+        "label": "Mimas",
+      },
+      Object {
+        "label": "Dione",
+      },
+      Object {
+        "label": "Iapetus",
+      },
+      Object {
+        "label": "Phoebe",
+      },
+      Object {
+        "label": "Rhea",
+      },
+      Object {
+        "label": "Pandora is one of Saturn's moons, named for a Titaness of Greek mythology",
+      },
+      Object {
+        "label": "Tethys",
+      },
+      Object {
+        "label": "Hyperion",
+      },
+    ]
+  }
+  selectedOptions={
+    Array [
+      Object {
+        "label": "Mimas",
+      },
+    ]
+  }
+  singleSelection={false}
+  sortMatchesBy="none"
 >
-  <OuiComboBoxInput
-    autoSizeInputRef={[Function]}
-    compressed={false}
-    fullWidth={false}
-    hasSelectedOptions={true}
-    icon="menu"
-    inputRef={[Function]}
-    isListOpen={false}
-    noIcon={false}
-    onChange={[Function]}
-    onClear={[Function]}
-    onClick={[Function]}
-    onCloseListClick={[Function]}
-    onFocus={[Function]}
-    onOpenListClick={[Function]}
-    onRemoveOption={[Function]}
-    rootId={[Function]}
-    searchValue=""
-    selectedOptions={
-      Array [
-        Object {
-          "label": "Mimas",
-        },
-      ]
-    }
-    singleSelection={false}
-    toggleButtonRef={[Function]}
-    updatePosition={[Function]}
-    value="Mimas"
-  />
-</div>
+  <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="ouiComboBox"
+    onKeyDown={[Function]}
+    role="combobox"
+  >
+    <OuiComboBoxInput
+      autoSizeInputRef={[Function]}
+      compressed={false}
+      fullWidth={false}
+      hasSelectedOptions={true}
+      icon="menu"
+      inputRef={[Function]}
+      isListOpen={false}
+      noIcon={false}
+      onChange={[Function]}
+      onClear={[Function]}
+      onClick={[Function]}
+      onCloseListClick={[Function]}
+      onFocus={[Function]}
+      onOpenListClick={[Function]}
+      onRemoveOption={[Function]}
+      rootId={[Function]}
+      searchValue=""
+      selectedOptions={
+        Array [
+          Object {
+            "label": "Mimas",
+          },
+        ]
+      }
+      singleSelection={false}
+      toggleButtonRef={[Function]}
+      updatePosition={[Function]}
+      value="Mimas"
+    >
+      <OuiFormControlLayout
+        clear={
+          Object {
+            "data-test-subj": "comboBoxClearButton",
+            "onClick": [Function],
+          }
+        }
+        compressed={false}
+        fullWidth={false}
+        icon={
+          Object {
+            "aria-label": "Open list of options",
+            "data-test-subj": "comboBoxToggleListButton",
+            "disabled": undefined,
+            "onClick": [Function],
+            "ref": [Function],
+            "side": "right",
+            "type": "arrowDown",
+          }
+        }
+      >
+        <div
+          className="ouiFormControlLayout"
+        >
+          <div
+            className="ouiFormControlLayout__childrenWrapper"
+          >
+            <div
+              className="ouiComboBox__inputWrap ouiComboBox__inputWrap-isClearable"
+              data-test-subj="comboBoxInput"
+              onClick={[Function]}
+              tabIndex={-1}
+            >
+              <OuiIcon
+                className="ouiComboBoxPill ouiComboBoxIcon"
+                data-test-subj="comboBoxIcon"
+                size="m"
+                type="menu"
+              >
+                <span
+                  className="ouiComboBoxPill ouiComboBoxIcon"
+                  data-ouiicon-type="menu"
+                  data-test-subj="comboBoxIcon"
+                  size="m"
+                />
+              </OuiIcon>
+              <OuiComboBoxPill
+                asPlainText={false}
+                color="hollow"
+                key="mimas"
+                onClose={[Function]}
+                option={
+                  Object {
+                    "label": "Mimas",
+                  }
+                }
+              >
+                <OuiI18n
+                  default="Remove {children} from selection in this group"
+                  token="ouiComboBoxPill.removeSelection"
+                  values={
+                    Object {
+                      "children": "Mimas",
+                    }
+                  }
+                >
+                  <OuiBadge
+                    className="ouiComboBoxPill"
+                    closeButtonProps={
+                      Object {
+                        "tabIndex": -1,
+                      }
+                    }
+                    color="hollow"
+                    iconOnClick={[Function]}
+                    iconOnClickAriaLabel="Remove Mimas from selection in this group"
+                    iconSide="right"
+                    iconType="cross"
+                    title="Mimas"
+                  >
+                    <OuiInnerText>
+                      <span
+                        className="ouiBadge ouiBadge--hollow ouiBadge--iconRight ouiComboBoxPill"
+                        title="Mimas"
+                      >
+                        <span
+                          className="ouiBadge__content"
+                        >
+                          <span
+                            className="ouiBadge__text"
+                          >
+                            Mimas
+                          </span>
+                          <button
+                            aria-label="Remove Mimas from selection in this group"
+                            className="ouiBadge__iconButton"
+                            disabled={false}
+                            onClick={[Function]}
+                            title="Remove Mimas from selection in this group"
+                            type="button"
+                          >
+                            <OuiIcon
+                              className="ouiBadge__icon"
+                              color="inherit"
+                              size="s"
+                              tabIndex={-1}
+                              type="cross"
+                            >
+                              <span
+                                className="ouiBadge__icon"
+                                color="inherit"
+                                data-ouiicon-type="cross"
+                                size="s"
+                                tabIndex={-1}
+                              />
+                            </OuiIcon>
+                          </button>
+                        </span>
+                      </span>
+                    </OuiInnerText>
+                  </OuiBadge>
+                </OuiI18n>
+              </OuiComboBoxPill>
+              <AutosizeInput
+                aria-controls=""
+                className="ouiComboBox__input"
+                data-test-subj="comboBoxSearchInput"
+                injectStyles={true}
+                inputRef={[Function]}
+                minWidth={1}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="textbox"
+                style={
+                  Object {
+                    "fontSize": 14,
+                  }
+                }
+                value=""
+              >
+                <div
+                  className="ouiComboBox__input"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "fontSize": 14,
+                    }
+                  }
+                >
+                  <input
+                    aria-controls=""
+                    data-test-subj="comboBoxSearchInput"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="textbox"
+                    style={
+                      Object {
+                        "boxSizing": "content-box",
+                        "width": "2px",
+                      }
+                    }
+                    value=""
+                  />
+                  <div
+                    style={
+                      Object {
+                        "height": 0,
+                        "left": 0,
+                        "overflow": "scroll",
+                        "position": "absolute",
+                        "top": 0,
+                        "visibility": "hidden",
+                        "whiteSpace": "pre",
+                      }
+                    }
+                  />
+                </div>
+              </AutosizeInput>
+            </div>
+            <OuiFormControlLayoutIcons
+              clear={
+                Object {
+                  "data-test-subj": "comboBoxClearButton",
+                  "onClick": [Function],
+                }
+              }
+              compressed={false}
+              icon={
+                Object {
+                  "aria-label": "Open list of options",
+                  "data-test-subj": "comboBoxToggleListButton",
+                  "disabled": undefined,
+                  "onClick": [Function],
+                  "ref": [Function],
+                  "side": "right",
+                  "type": "arrowDown",
+                }
+              }
+            >
+              <div
+                className="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+              >
+                <OuiFormControlLayoutClearButton
+                  data-test-subj="comboBoxClearButton"
+                  onClick={[Function]}
+                  size="m"
+                >
+                  <OuiI18n
+                    default="Clear input"
+                    token="ouiFormControlLayoutClearButton.label"
+                  >
+                    <button
+                      aria-label="Clear input"
+                      className="ouiFormControlLayoutClearButton"
+                      data-test-subj="comboBoxClearButton"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <OuiIcon
+                        className="ouiFormControlLayoutClearButton__icon"
+                        type="cross"
+                      >
+                        <span
+                          className="ouiFormControlLayoutClearButton__icon"
+                          data-ouiicon-type="cross"
+                        />
+                      </OuiIcon>
+                    </button>
+                  </OuiI18n>
+                </OuiFormControlLayoutClearButton>
+                <OuiFormControlLayoutCustomIcon
+                  aria-label="Open list of options"
+                  data-test-subj="comboBoxToggleListButton"
+                  iconRef={[Function]}
+                  onClick={[Function]}
+                  size="m"
+                  type="arrowDown"
+                >
+                  <button
+                    aria-label="Open list of options"
+                    className="ouiFormControlLayoutCustomIcon ouiFormControlLayoutCustomIcon--clickable"
+                    data-test-subj="comboBoxToggleListButton"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <OuiIcon
+                      aria-hidden="true"
+                      className="ouiFormControlLayoutCustomIcon__icon"
+                      size="m"
+                      type="arrowDown"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="ouiFormControlLayoutCustomIcon__icon"
+                        data-ouiicon-type="arrowDown"
+                        size="m"
+                      />
+                    </OuiIcon>
+                  </button>
+                </OuiFormControlLayoutCustomIcon>
+              </div>
+            </OuiFormControlLayoutIcons>
+          </div>
+        </div>
+      </OuiFormControlLayout>
+    </OuiComboBoxInput>
+  </div>
+</OuiComboBox>
 `;
 
 exports[`props delimiter is rendered 1`] = `
@@ -225,44 +545,364 @@ exports[`props full width is rendered 1`] = `
 `;
 
 exports[`props icon is rendered 1`] = `
-<div
-  aria-expanded={false}
-  aria-haspopup="listbox"
-  className="ouiComboBox"
-  onKeyDown={[Function]}
-  role="combobox"
+<OuiComboBox
+  async={false}
+  compressed={false}
+  fullWidth={false}
+  icon={true}
+  isClearable={true}
+  options={
+    Array [
+      Object {
+        "data-test-subj": "titanOption",
+        "label": "Titan",
+      },
+      Object {
+        "label": "Enceladus",
+      },
+      Object {
+        "label": "Mimas",
+      },
+      Object {
+        "label": "Dione",
+      },
+      Object {
+        "label": "Iapetus",
+      },
+      Object {
+        "label": "Phoebe",
+      },
+      Object {
+        "label": "Rhea",
+      },
+      Object {
+        "label": "Pandora is one of Saturn's moons, named for a Titaness of Greek mythology",
+      },
+      Object {
+        "label": "Tethys",
+      },
+      Object {
+        "label": "Hyperion",
+      },
+    ]
+  }
+  selectedOptions={
+    Array [
+      Object {
+        "label": "Mimas",
+      },
+    ]
+  }
+  singleSelection={false}
+  sortMatchesBy="none"
 >
-  <OuiComboBoxInput
-    autoSizeInputRef={[Function]}
-    compressed={false}
-    fullWidth={false}
-    hasSelectedOptions={true}
-    icon={true}
-    inputRef={[Function]}
-    isListOpen={false}
-    noIcon={false}
-    onChange={[Function]}
-    onClear={[Function]}
-    onClick={[Function]}
-    onCloseListClick={[Function]}
-    onFocus={[Function]}
-    onOpenListClick={[Function]}
-    onRemoveOption={[Function]}
-    rootId={[Function]}
-    searchValue=""
-    selectedOptions={
-      Array [
-        Object {
-          "label": "Mimas",
-        },
-      ]
-    }
-    singleSelection={false}
-    toggleButtonRef={[Function]}
-    updatePosition={[Function]}
-    value="Mimas"
-  />
-</div>
+  <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    className="ouiComboBox"
+    onKeyDown={[Function]}
+    role="combobox"
+  >
+    <OuiComboBoxInput
+      autoSizeInputRef={[Function]}
+      compressed={false}
+      fullWidth={false}
+      hasSelectedOptions={true}
+      icon={true}
+      inputRef={[Function]}
+      isListOpen={false}
+      noIcon={false}
+      onChange={[Function]}
+      onClear={[Function]}
+      onClick={[Function]}
+      onCloseListClick={[Function]}
+      onFocus={[Function]}
+      onOpenListClick={[Function]}
+      onRemoveOption={[Function]}
+      rootId={[Function]}
+      searchValue=""
+      selectedOptions={
+        Array [
+          Object {
+            "label": "Mimas",
+          },
+        ]
+      }
+      singleSelection={false}
+      toggleButtonRef={[Function]}
+      updatePosition={[Function]}
+      value="Mimas"
+    >
+      <OuiFormControlLayout
+        clear={
+          Object {
+            "data-test-subj": "comboBoxClearButton",
+            "onClick": [Function],
+          }
+        }
+        compressed={false}
+        fullWidth={false}
+        icon={
+          Object {
+            "aria-label": "Open list of options",
+            "data-test-subj": "comboBoxToggleListButton",
+            "disabled": undefined,
+            "onClick": [Function],
+            "ref": [Function],
+            "side": "right",
+            "type": "arrowDown",
+          }
+        }
+      >
+        <div
+          className="ouiFormControlLayout"
+        >
+          <div
+            className="ouiFormControlLayout__childrenWrapper"
+          >
+            <div
+              className="ouiComboBox__inputWrap ouiComboBox__inputWrap-isClearable"
+              data-test-subj="comboBoxInput"
+              onClick={[Function]}
+              tabIndex={-1}
+            >
+              <OuiIcon
+                className="ouiComboBoxPill ouiComboBoxIcon"
+                data-test-subj="comboBoxIcon"
+                size="m"
+                type="search"
+              >
+                <span
+                  className="ouiComboBoxPill ouiComboBoxIcon"
+                  data-ouiicon-type="search"
+                  data-test-subj="comboBoxIcon"
+                  size="m"
+                />
+              </OuiIcon>
+              <OuiComboBoxPill
+                asPlainText={false}
+                color="hollow"
+                key="mimas"
+                onClose={[Function]}
+                option={
+                  Object {
+                    "label": "Mimas",
+                  }
+                }
+              >
+                <OuiI18n
+                  default="Remove {children} from selection in this group"
+                  token="ouiComboBoxPill.removeSelection"
+                  values={
+                    Object {
+                      "children": "Mimas",
+                    }
+                  }
+                >
+                  <OuiBadge
+                    className="ouiComboBoxPill"
+                    closeButtonProps={
+                      Object {
+                        "tabIndex": -1,
+                      }
+                    }
+                    color="hollow"
+                    iconOnClick={[Function]}
+                    iconOnClickAriaLabel="Remove Mimas from selection in this group"
+                    iconSide="right"
+                    iconType="cross"
+                    title="Mimas"
+                  >
+                    <OuiInnerText>
+                      <span
+                        className="ouiBadge ouiBadge--hollow ouiBadge--iconRight ouiComboBoxPill"
+                        title="Mimas"
+                      >
+                        <span
+                          className="ouiBadge__content"
+                        >
+                          <span
+                            className="ouiBadge__text"
+                          >
+                            Mimas
+                          </span>
+                          <button
+                            aria-label="Remove Mimas from selection in this group"
+                            className="ouiBadge__iconButton"
+                            disabled={false}
+                            onClick={[Function]}
+                            title="Remove Mimas from selection in this group"
+                            type="button"
+                          >
+                            <OuiIcon
+                              className="ouiBadge__icon"
+                              color="inherit"
+                              size="s"
+                              tabIndex={-1}
+                              type="cross"
+                            >
+                              <span
+                                className="ouiBadge__icon"
+                                color="inherit"
+                                data-ouiicon-type="cross"
+                                size="s"
+                                tabIndex={-1}
+                              />
+                            </OuiIcon>
+                          </button>
+                        </span>
+                      </span>
+                    </OuiInnerText>
+                  </OuiBadge>
+                </OuiI18n>
+              </OuiComboBoxPill>
+              <AutosizeInput
+                aria-controls=""
+                className="ouiComboBox__input"
+                data-test-subj="comboBoxSearchInput"
+                injectStyles={true}
+                inputRef={[Function]}
+                minWidth={1}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="textbox"
+                style={
+                  Object {
+                    "fontSize": 14,
+                  }
+                }
+                value=""
+              >
+                <div
+                  className="ouiComboBox__input"
+                  style={
+                    Object {
+                      "display": "inline-block",
+                      "fontSize": 14,
+                    }
+                  }
+                >
+                  <input
+                    aria-controls=""
+                    data-test-subj="comboBoxSearchInput"
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    role="textbox"
+                    style={
+                      Object {
+                        "boxSizing": "content-box",
+                        "width": "2px",
+                      }
+                    }
+                    value=""
+                  />
+                  <div
+                    style={
+                      Object {
+                        "height": 0,
+                        "left": 0,
+                        "overflow": "scroll",
+                        "position": "absolute",
+                        "top": 0,
+                        "visibility": "hidden",
+                        "whiteSpace": "pre",
+                      }
+                    }
+                  />
+                </div>
+              </AutosizeInput>
+            </div>
+            <OuiFormControlLayoutIcons
+              clear={
+                Object {
+                  "data-test-subj": "comboBoxClearButton",
+                  "onClick": [Function],
+                }
+              }
+              compressed={false}
+              icon={
+                Object {
+                  "aria-label": "Open list of options",
+                  "data-test-subj": "comboBoxToggleListButton",
+                  "disabled": undefined,
+                  "onClick": [Function],
+                  "ref": [Function],
+                  "side": "right",
+                  "type": "arrowDown",
+                }
+              }
+            >
+              <div
+                className="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+              >
+                <OuiFormControlLayoutClearButton
+                  data-test-subj="comboBoxClearButton"
+                  onClick={[Function]}
+                  size="m"
+                >
+                  <OuiI18n
+                    default="Clear input"
+                    token="ouiFormControlLayoutClearButton.label"
+                  >
+                    <button
+                      aria-label="Clear input"
+                      className="ouiFormControlLayoutClearButton"
+                      data-test-subj="comboBoxClearButton"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <OuiIcon
+                        className="ouiFormControlLayoutClearButton__icon"
+                        type="cross"
+                      >
+                        <span
+                          className="ouiFormControlLayoutClearButton__icon"
+                          data-ouiicon-type="cross"
+                        />
+                      </OuiIcon>
+                    </button>
+                  </OuiI18n>
+                </OuiFormControlLayoutClearButton>
+                <OuiFormControlLayoutCustomIcon
+                  aria-label="Open list of options"
+                  data-test-subj="comboBoxToggleListButton"
+                  iconRef={[Function]}
+                  onClick={[Function]}
+                  size="m"
+                  type="arrowDown"
+                >
+                  <button
+                    aria-label="Open list of options"
+                    className="ouiFormControlLayoutCustomIcon ouiFormControlLayoutCustomIcon--clickable"
+                    data-test-subj="comboBoxToggleListButton"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <OuiIcon
+                      aria-hidden="true"
+                      className="ouiFormControlLayoutCustomIcon__icon"
+                      size="m"
+                      type="arrowDown"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="ouiFormControlLayoutCustomIcon__icon"
+                        data-ouiicon-type="arrowDown"
+                        size="m"
+                      />
+                    </OuiIcon>
+                  </button>
+                </OuiFormControlLayoutCustomIcon>
+              </div>
+            </OuiFormControlLayoutIcons>
+          </div>
+        </div>
+      </OuiFormControlLayout>
+    </OuiComboBoxInput>
+  </div>
+</OuiComboBox>
 `;
 
 exports[`props isClearable=false disallows user from clearing input when no options are selected 1`] = `
