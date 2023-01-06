@@ -24,14 +24,8 @@ import { OuiPopover } from '../../../../src/components/popover';
 import { useIsWithinBreakpoints } from '../../../../src/services/hooks';
 import { OuiButtonEmpty } from '../../../../src/components/button';
 
-// @ts-ignore Not TS
-import { CodeSandboxLink } from '../../components/codesandbox/link';
 import logoOUI from '../../images/logo-oui.svg';
-import {
-  GuideThemeSelector,
-  GuideSketchLink,
-  GuideFigmaLink,
-} from '../guide_theme_selector';
+import { GuideThemeSelector } from '../guide_theme_selector';
 
 const pkg = require('../../../../package.json');
 
@@ -47,15 +41,7 @@ declare global {
   }
 }
 
-export type GuidePageHeaderProps = {
-  onToggleLocale: () => {};
-  selectedLocale: string;
-};
-
-export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
-  onToggleLocale,
-  selectedLocale,
-}) => {
+export const GuidePageHeader: React.FunctionComponent<{}> = () => {
   const isMobileSize = useIsWithinBreakpoints(['xs', 's']);
 
   function renderLogo() {
@@ -89,25 +75,6 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
     );
   }
 
-  function renderCodeSandbox() {
-    const label = 'Codesandbox';
-    return isMobileSize ? (
-      <CodeSandboxLink key="codesandbox">
-        <OuiButtonEmpty size="s" flush="both" iconType="logoCodesandbox">
-          {label}
-        </OuiButtonEmpty>
-      </CodeSandboxLink>
-    ) : (
-      <OuiToolTip content="Codesandbox" key="codesandbox">
-        <CodeSandboxLink>
-          <OuiHeaderSectionItemButton aria-label="Codesandbox">
-            <OuiIcon type="logoCodesandbox" aria-hidden="true" />
-          </OuiHeaderSectionItemButton>
-        </CodeSandboxLink>
-      </OuiToolTip>
-    );
-  }
-
   const [mobilePopoverIsOpen, setMobilePopoverIsOpen] = useState(false);
 
   function renderMobileMenu() {
@@ -125,34 +92,14 @@ export const GuidePageHeader: React.FunctionComponent<GuidePageHeaderProps> = ({
         button={button}
         isOpen={mobilePopoverIsOpen}
         closePopover={() => setMobilePopoverIsOpen(false)}>
-        <div className="guideOptionsPopover">
-          {renderGithub()}
-          <GuideSketchLink />
-          <GuideFigmaLink />
-          {renderCodeSandbox()}
-        </div>
+        <div className="guideOptionsPopover">{renderGithub()}</div>
       </OuiPopover>
     );
   }
 
   const rightSideItems = isMobileSize
-    ? [
-        <GuideThemeSelector
-          onToggleLocale={onToggleLocale}
-          selectedLocale={selectedLocale}
-        />,
-        renderMobileMenu(),
-      ]
-    : [
-        <GuideThemeSelector
-          onToggleLocale={onToggleLocale}
-          selectedLocale={selectedLocale}
-        />,
-        renderGithub(),
-        <GuideSketchLink key="sketch" />,
-        <GuideFigmaLink key="figma" />,
-        renderCodeSandbox(),
-      ];
+    ? [<GuideThemeSelector />, renderMobileMenu()]
+    : [<GuideThemeSelector />, renderGithub()];
 
   return (
     <OuiHeader
