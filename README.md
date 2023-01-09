@@ -16,7 +16,7 @@ yarn add @opensearch-project/oui
 Note that OUI has [several `peerDependencies` requirements](package.json) that will also need to be installed if starting with a blank project. You can read more about other ways to [consume OUI][consuming].
 
 ```
-yarn add @opensearch-project/oui @elastic/datemath moment prop-types
+yarn add @opensearch-project/oui moment prop-types
 ```
 
 

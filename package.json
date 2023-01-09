@@ -131,8 +131,8 @@
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.12.1",
     "@elastic/charts": "^30.2.0",
-    "@elastic/datemath": "^5.0.3",
     "@elastic/eslint-config-kibana": "^0.15.0",
+    "@opensearch/datemath": "file:./packages/opensearch-datemath",
     "@svgr/core": "5.4.0",
     "@svgr/plugin-svgo": "^4.0.3",
     "@types/classnames": "^2.2.10",
@@ -244,7 +244,6 @@
     "yo": "^4.3.0"
   },
   "peerDependencies": {
-    "@elastic/datemath": "^5.0.2",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "moment": "^2.13.0",
