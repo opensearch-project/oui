@@ -19,9 +19,7 @@ export default () => {
   let completeButton;
   if (status !== 'complete') {
     completeButton = (
-      <OuiButton onClick={() => setStatus('complete')}>
-        You complete me
-      </OuiButton>
+      <OuiButton onClick={() => setStatus('complete')}>Submit</OuiButton>
     );
   } else {
     completeButton = (
@@ -33,7 +31,7 @@ export default () => {
   if (status !== 'warning') {
     warningButton = (
       <OuiButton color="warning" onClick={() => setStatus('warning')}>
-        Uh oh!
+        Warning
       </OuiButton>
     );
   } else {
@@ -48,7 +46,7 @@ export default () => {
   if (status !== 'danger') {
     dangerButton = (
       <OuiButton color="danger" onClick={() => setStatus('danger')}>
-        Something terrible
+        Danger
       </OuiButton>
     );
   } else {
