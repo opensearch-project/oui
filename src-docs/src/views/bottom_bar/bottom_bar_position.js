@@ -28,7 +28,7 @@ export default () => {
       <OuiSpacer size="xl" />
       <OuiBottomBar position="sticky" bottom={10}>
         <OuiText color="ghost" textAlign="center">
-          <p>Scroll to see!</p>
+          <p>Scroll to demo</p>
         </OuiText>
       </OuiBottomBar>
     </>
