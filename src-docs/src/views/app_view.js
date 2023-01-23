@@ -86,10 +86,7 @@ export class AppView extends Component {
             sizes="96x96"
           />
         </Helmet>
-        <GuidePageHeader
-          onToggleLocale={toggleLocale}
-          selectedLocale={locale}
-        />
+        <GuidePageHeader />
         <OuiPage paddingSize="none">
           <OuiErrorBoundary>
             <GuidePageChrome

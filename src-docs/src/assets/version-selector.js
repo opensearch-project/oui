@@ -63,7 +63,7 @@ const tpl = `
     #root > svg {
         position: absolute;
         right: .5em;
-        top: .6em;
+        top: .3em;
     }
     
     #dropdown {
