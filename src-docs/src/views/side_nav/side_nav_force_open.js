@@ -11,7 +11,7 @@
 
 import React, { useState } from 'react';
 
-import { OuiIcon, OuiSideNav } from '../../../../src/components';
+import { OuiSideNav } from '../../../../src/components';
 
 export default () => {
   const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);

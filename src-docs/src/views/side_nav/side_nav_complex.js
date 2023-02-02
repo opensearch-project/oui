@@ -75,8 +75,7 @@ export default () => {
         createItem('Operational panels'),
         createItem('Notebooks'),
       ],
-    }
-    ),
+    }),
   ];
 
   return (
