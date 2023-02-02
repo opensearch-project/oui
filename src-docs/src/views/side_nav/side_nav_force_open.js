@@ -38,9 +38,8 @@ export default () => {
 
   const sideNav = [
     {
-      name: 'Kibana',
-      id: 'Kibana',
-      icon: <OuiIcon type="logoKibana" />,
+      name: 'OpenSearch Dashboards',
+      id: 'OpenSearch Dashboards',
       items: [
         createItem('Has normal children', {
           items: [
