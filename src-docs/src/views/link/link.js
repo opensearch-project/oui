@@ -17,15 +17,15 @@ export default () => (
   <OuiText>
     <p>
       Open the{' '}
-      <OuiLink href="http://www.elastic.co" target="_blank">
-        Elastic website
+      <OuiLink href=" https://Opensearch.org" target="_blank">
+        Opensearch website
       </OuiLink>{' '}
       in a new tab. Setting <OuiCode>target=&ldquo;_blank&rdquo;</OuiCode> also
       defaults to <OuiCode>{'external={true}'}</OuiCode>.
     </p>
     <p>
       This{' '}
-      <OuiLink href="http://www.elastic.co" external>
+      <OuiLink href=" https://Opensearch.org" external>
         link
       </OuiLink>{' '}
       has the <OuiCode>external</OuiCode> prop set to true.
@@ -37,7 +37,7 @@ export default () => (
     <p>
       Here is an example of a{' '}
       <OuiLink
-        href="https://github.com/elastic/eui"
+        href="https://github.com/opensearch-project/oui"
         onClick={(e) => {
           e.preventDefault();
         }}>
