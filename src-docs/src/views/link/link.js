@@ -18,7 +18,7 @@ export default () => (
     <p>
       Open the{' '}
       <OuiLink href=" https://Opensearch.org" target="_blank">
-        Opensearch website
+        OpenSearch website
       </OuiLink>{' '}
       in a new tab. Setting <OuiCode>target=&ldquo;_blank&rdquo;</OuiCode> also
       defaults to <OuiCode>{'external={true}'}</OuiCode>.
