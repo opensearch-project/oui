@@ -52,7 +52,7 @@ for (let i = 1; i < 5; i++) {
   let json;
   let franchise;
   if (i < 3) {
-    franchise = 'Star Wars';
+    franchise = 'Oranges';
     json = JSON.stringify([
       {
         default: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
@@ -64,7 +64,7 @@ for (let i = 1; i < 5; i++) {
       },
     ]);
   } else {
-    franchise = 'Star Trek';
+    franchise = 'Apples';
     json = JSON.stringify([
       {
         name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
@@ -87,26 +87,26 @@ const Franchise = (props) => {
   return (
     <div>
       <OuiTitle size="s">
-        <h3>{props.name} is the best!</h3>
+        <h3>{props.name} Oranges </h3>
       </OuiTitle>
       <OuiSpacer size="s" />
-      {props.name === 'Star Wars' ? (
+      {props.name === 'Oranges' ? (
         <OuiImage
           allowFullScreen
           size="m"
           hasShadow
-          caption="Random star wars image"
-          alt="Random star wars image"
-          url="https://source.unsplash.com/600x600/?starwars"
+          caption="Random Oranges image"
+          alt="Random Oranges image"
+          url="https://source.unsplash.com/600x600/?oranges"
         />
       ) : (
         <OuiImage
           allowFullScreen
           size="m"
           hasShadow
-          caption="Random star trek image"
+          caption="Random Apples image"
           alt="Random trek image"
-          url="https://source.unsplash.com/600x600/?startrek"
+          url="https://source.unsplash.com/600x600/?apples"
         />
       )}
     </div>
@@ -193,20 +193,20 @@ const DataGridSchema = () => {
           type: 'favoriteFranchise',
           textTransform: 'capitalize',
           detector(value) {
-            return value.toLowerCase() === 'star wars' ||
-              value.toLowerCase() === 'star trek'
+            return value.toLowerCase() === 'Oranges' ||
+              value.toLowerCase() === 'Apples'
               ? 1
               : 0;
           },
           comparator(a, b, direction) {
-            const aValue = a.toLowerCase() === 'star wars';
-            const bValue = b.toLowerCase() === 'star wars';
+            const aValue = a.toLowerCase() === 'Oranges';
+            const bValue = b.toLowerCase() === 'Oranges';
             if (aValue < bValue) return direction === 'asc' ? 1 : -1;
             if (aValue > bValue) return direction === 'asc' ? -1 : 1;
             return 0;
           },
-          sortTextAsc: 'Star wars-Star trek',
-          sortTextDesc: 'Star trek-Star wars',
+          sortTextAsc: 'Oranges-Apples',
+          sortTextDesc: 'Apples-Oranges',
           icon: 'starFilled',
           color: '#800080',
         },
