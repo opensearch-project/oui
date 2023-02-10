@@ -74,7 +74,9 @@ export default () => {
         label="Select (with no initial selection)"
         labelAppend={
           <OuiText size="xs">
-            <OuiLink>Link to some help</OuiLink>
+            <OuiLink href="https://opensearch.org/docs/latest/">
+              Link to some help
+            </OuiLink>
           </OuiText>
         }>
         <OuiSelect
