@@ -77,9 +77,7 @@ export const ToolTipExample = {
           </p>
 
           <OuiTitle size="xs">
-            <h2>
-              <small>Applying tooltips to custom components</small>
-            </h2>
+            <h2>Applying tooltips to custom components</h2>
           </OuiTitle>
 
           <p>
