@@ -74,7 +74,8 @@
     "**/d3-color": "^3.1.0",
     "**/@miksu/prettier/minimatch": "^3.0.8",
     "**/request/qs": "^6.11.0",
-    "nodegit/ramda": "^0.27.1"
+    "nodegit/ramda": "^0.27.1",
+    "**/cacheable-request": "^10.2.7"
   },
   "pre-commit": [
     "test-staged"
