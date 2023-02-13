@@ -79,7 +79,7 @@ export default () => {
           isSelected={toggle0On}
           fill={toggle0On}
           onClick={onToggle0Change}>
-          Toggle me
+          Toggle
         </OuiButton>
       </OuiFlexItem>
     </OuiFlexGroup>
