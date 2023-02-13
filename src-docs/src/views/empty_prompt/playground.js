@@ -46,7 +46,7 @@ export default () => {
   propsToUse.actions.type = PropTypes.String;
   propsToUse.body.type = PropTypes.String;
   propsToUse.body.value =
-    'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec accumsan, nulla sed blandit semper.';
+    'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec accumsan, nulla sed blandit semper, tellus est convallis mauris, eget consequat mi lacus non ante.';
 
   propsToUse.iconType = iconValidator(propsToUse.iconType, 'database');
 

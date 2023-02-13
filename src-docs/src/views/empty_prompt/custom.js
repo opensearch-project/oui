@@ -23,9 +23,7 @@ export default () => (
       <Fragment>
         <p>
           Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Donec accumsan, nulla sed blandit semper.
-        </p>
-        <p>
+          fames ac turpis egestas. Donec accumsan, nulla sed blandit semper
           tell&rsquo;us est convallis mauris, eget consequat mi lacus non ante.
         </p>
       </Fragment>
