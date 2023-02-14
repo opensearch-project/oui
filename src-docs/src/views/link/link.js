@@ -17,7 +17,7 @@ export default () => (
   <OuiText>
     <p>
       Open the{' '}
-      <OuiLink href=" https://Opensearch.org" target="_blank">
+      <OuiLink href="https://Opensearch.org" target="_blank">
         OpenSearch website
       </OuiLink>{' '}
       in a new tab. Setting <OuiCode>target=&ldquo;_blank&rdquo;</OuiCode> also
@@ -25,7 +25,7 @@ export default () => (
     </p>
     <p>
       This{' '}
-      <OuiLink href=" https://Opensearch.org" external>
+      <OuiLink href="https://Opensearch.org" external>
         link
       </OuiLink>{' '}
       has the <OuiCode>external</OuiCode> prop set to true.
