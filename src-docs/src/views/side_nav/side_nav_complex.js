@@ -40,7 +40,6 @@ export default () => {
   const sideNav = [
     createItem('OpenSearch', {
       onClick: undefined,
-      icon: <OuiIcon type="logoElasticsearch" />,
       items: [
         createItem('Discover'),
         createItem('Dashboard'),
@@ -52,13 +51,27 @@ export default () => {
             createItem('Discover'),
             createItem('Advanced settings', {
               items: [
-                createItem('General'),
-                createItem('Accessibility'),
-                createItem('Discover'),
-                createItem('Notifications'),
-                createItem('Search'),
-                createItem('Timeline'),
-                createItem('Visualizations'),
+                createItem('General', {
+                  icon: <OuiIcon type="gear" />,
+                }),
+                createItem('Accessibility', {
+                  icon: <OuiIcon type="accessibility" />,
+                }),
+                createItem('Discover', {
+                  icon: <OuiIcon type="discoverApp" />,
+                }),
+                createItem('Notifications', {
+                  icon: <OuiIcon type="bell" />,
+                }),
+                createItem('Search', {
+                  icon: <OuiIcon type="search" />,
+                }),
+                createItem('Timeline', {
+                  icon: <OuiIcon type="timeline" />,
+                }),
+                createItem('Visualizations', {
+                  icon: <OuiIcon type="visArea" />,
+                }),
               ],
             }),
             createItem('Saved Objects'),
