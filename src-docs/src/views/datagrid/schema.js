@@ -87,7 +87,7 @@ const Franchise = (props) => {
   return (
     <div>
       <OuiTitle size="s">
-        <h3>{props.name} Oranges </h3>
+        <h3>{props.name}</h3>
       </OuiTitle>
       <OuiSpacer size="s" />
       {props.name === 'Oranges' ? (
@@ -105,7 +105,7 @@ const Franchise = (props) => {
           size="m"
           hasShadow
           caption="Random Apples image"
-          alt="Random trek image"
+          alt="Random Apples image"
           url="https://source.unsplash.com/600x600/?apples"
         />
       )}
@@ -193,14 +193,14 @@ const DataGridSchema = () => {
           type: 'favoriteFranchise',
           textTransform: 'capitalize',
           detector(value) {
-            return value.toLowerCase() === 'Oranges' ||
-              value.toLowerCase() === 'Apples'
+            return value.toLowerCase() === 'oranges' ||
+              value.toLowerCase() === 'apples'
               ? 1
               : 0;
           },
           comparator(a, b, direction) {
-            const aValue = a.toLowerCase() === 'Oranges';
-            const bValue = b.toLowerCase() === 'Oranges';
+            const aValue = a.toLowerCase() === 'oranges';
+            const bValue = b.toLowerCase() === 'oranges';
             if (aValue < bValue) return direction === 'asc' ? 1 : -1;
             if (aValue > bValue) return direction === 'asc' ? -1 : 1;
             return 0;
