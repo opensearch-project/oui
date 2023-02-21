@@ -95,7 +95,7 @@ export const Table = () => {
           field: 'github',
           name: 'Github',
           render: (username) => (
-            <OuiLink href={`https://github.com/${username}`} target="_blank">
+            <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
               {username}
             </OuiLink>
           ),
