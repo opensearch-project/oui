@@ -72,7 +72,7 @@ const iconTypes = [
 export default () => (
   <>
     <OuiCodeBlock language="html" isCopyable paddingSize="m">
-      {'<OuiIcon type="addDataApp" size="xl" />'}
+      {'<OuiIcon type="advancedSettingsApp" size="xl" />'}
     </OuiCodeBlock>
     <OuiSpacer />
     <OuiFlexGrid direction="column" columns={3}>

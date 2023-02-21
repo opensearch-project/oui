@@ -21,12 +21,12 @@ import {
   OuiCopy,
 } from '../../../../src/components';
 
-export const iconTypes = ['logoOpensearch'].sort();
+export const iconTypes = ['logoOpenSearch'].sort();
 
 export default () => (
   <>
     <OuiCodeBlock language="html" isCopyable paddingSize="m">
-      {'<OuiIcon type="logoElasticsearch" size="xl" />'}
+      {'<OuiIcon type="logoOpenSearch" size="xl" />'}
     </OuiCodeBlock>
     <OuiSpacer />
     <OuiFlexGrid direction="column" columns={3}>
