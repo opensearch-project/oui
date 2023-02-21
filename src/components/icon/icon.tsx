@@ -263,6 +263,7 @@ const typeToPathMap = {
   logoMySQL: 'logo_mysql',
   logoNginx: 'logo_nginx',
   logoObservability: 'logo_observability',
+  logoOpensearch: 'logo_opensearch',
   logoOsquery: 'logo_osquery',
   logoPhp: 'logo_php',
   logoPostgres: 'logo_postgres',

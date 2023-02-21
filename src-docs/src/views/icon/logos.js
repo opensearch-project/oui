@@ -21,28 +21,7 @@ import {
   OuiCopy,
 } from '../../../../src/components';
 
-export const iconTypes = [
-  'logoAppSearch',
-  'logoBeats',
-  'logoBusinessAnalytics',
-  'logoCode',
-  'logoCloud',
-  'logoCloudEnterprise',
-  'logoElastic',
-  'logoElasticStack',
-  'logoElasticsearch',
-  'logoEnterpriseSearch',
-  'logoKibana',
-  'logoLogging',
-  'logoLogstash',
-  'logoMaps',
-  'logoMetrics',
-  'logoObservability',
-  'logoSecurity',
-  'logoSiteSearch',
-  'logoUptime',
-  'logoWorkplaceSearch',
-].sort();
+export const iconTypes = ['logoOpensearch'].sort();
 
 export default () => (
   <>

@@ -22,7 +22,6 @@ import {
 } from '../../../../src/components';
 
 const iconTypes = [
-  'addDataApp',
   'advancedSettingsApp',
   'apmApp',
   'appSearchApp',
