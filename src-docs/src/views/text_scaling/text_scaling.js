@@ -40,7 +40,7 @@ const text = [
   <ul key={3}>
     <li>List item one</li>
     <li>List item two</li>
-    <li>Dolphins</li>
+    <li>List item three</li>
   </ul>,
 
   <p key={4}>
@@ -57,7 +57,7 @@ const text = [
   <ol key={6}>
     <li>Number one</li>
     <li>Number two</li>
-    <li>Dolphins</li>
+    <li>Number three</li>
   </ol>,
 
   <p key={7}>

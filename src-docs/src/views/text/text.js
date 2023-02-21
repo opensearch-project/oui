@@ -58,7 +58,7 @@ export default () => (
       <ul>
         <li>List item one</li>
         <li>List item two</li>
-        <li>Dolphins</li>
+        <li>List item three</li>
       </ul>
 
       <p>
@@ -77,7 +77,7 @@ export default () => (
       <ol>
         <li>Number one</li>
         <li>Number two</li>
-        <li>Dolphins</li>
+        <li>Number three</li>
       </ol>
 
       <p>
