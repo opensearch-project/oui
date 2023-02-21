@@ -139,11 +139,11 @@ Right aligned columns
 
 ## Links
 
-[link text](http://dev.nodeca.com)
+[link text](https://opensearch.org/)
 
-[link with title](http://nodeca.github.io/pica/demo/ "title text!")
+[link with title](https://opensearch.org/ "OpenSearch.org")
 
-Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
+Autoconverted link https://opensearch.org/ (enable linkify to see)
 
 
 ## Images
