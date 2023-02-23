@@ -24,6 +24,7 @@ const GuidePageComponent = ({
   title,
   intro,
   isBeta,
+  isExperimental,
   playground,
   guidelines,
   location,
@@ -32,8 +33,14 @@ const GuidePageComponent = ({
 }) => {
   const betaBadge = isBeta ? (
     <OuiBetaBadge
-      label="Experimental"
+      label="Beta"
       tooltipContent="This component is still under development and may contain breaking changes in the nearby future."
+    />
+  ) : undefined;
+  const experimentalBadge = isExperimental ? (
+    <OuiBetaBadge
+      label="Experimental"
+      tooltipContent="This module is not GA. Please help us by reporting any bugs."
     />
   ) : undefined;
 
@@ -95,7 +102,7 @@ const GuidePageComponent = ({
         restrictWidth
         pageTitle={
           <>
-            {title} {betaBadge}
+            {title} {betaBadge || experimentalBadge}
           </>
         }
         tabs={renderTabs()}>
@@ -131,6 +138,7 @@ GuidePageComponent.propTypes = {
   intro: PropTypes.node,
   componentLinkTo: PropTypes.string,
   isBeta: PropTypes.bool,
+  isExperimental: PropTypes.bool,
   playground: PropTypes.node,
   guidelines: PropTypes.node,
   location: PropTypes.object,

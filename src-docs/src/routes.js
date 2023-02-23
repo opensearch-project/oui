@@ -257,6 +257,7 @@ const createExample = (example, customTitle) => {
     intro,
     sections,
     beta,
+    isExperimental,
     isNew,
     playground,
     guidelines,
@@ -288,6 +289,7 @@ const createExample = (example, customTitle) => {
         title={title}
         intro={intro}
         isBeta={beta}
+        isExperimental={isExperimental}
         playground={playgroundComponent}
         guidelines={guidelines}>
         {renderedSections}
