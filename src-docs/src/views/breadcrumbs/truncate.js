@@ -22,32 +22,53 @@ export default () => {
     {
       text: 'Animals',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text:
         'Metazoans is a real mouthful, especially for creatures without mouths',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
       truncate: true,
     },
     {
       text: 'Chordates',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Vertebrates',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Tetrapods',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Reptiles',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Boa constrictor',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text:

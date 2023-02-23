@@ -22,30 +22,51 @@ export default () => {
     {
       text: 'Animals',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Metazoans',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Chordates',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Vertebrates',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Tetrapods',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Reptiles',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Boa constrictor',
       href: '#',
+      onClick: (e) => {
+        e.preventDefault();
+      },
     },
     {
       text: 'Nebulosa subspecies',
