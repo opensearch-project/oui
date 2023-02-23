@@ -81,11 +81,6 @@ export default () => {
         },
       ],
     },
-    {
-      label: 'smokeMonster',
-      id: 'smokeMonster',
-      icon: <OuiToken size="xs" iconType="tokenMethod" />,
-    },
   ];
 
   return (

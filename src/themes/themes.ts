@@ -42,14 +42,6 @@ export const OUI_THEMES: OUI_THEME[] = [
     text: 'Dark',
     value: 'dark',
   },
-  {
-    text: 'Cascadia: Light',
-    value: 'cascadia-light',
-  },
-  {
-    text: 'Cascadia: Dark',
-    value: 'cascadia-dark',
-  },
 ];
 
 /* OUI -> EUI Aliases */
