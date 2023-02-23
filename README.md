@@ -52,7 +52,7 @@ yarn start --port 9000
 ## Goals
 
 The primary goal of this library is to provide reusable UI components that can be used throughout
-Elastic's web products. As React components, they remove CSS from the process of building UIs.
+OpenSearch's web products. As React components, they remove CSS from the process of building UIs.
 As a single source of truth, the framework allows our designers to make changes to our aesthetic
 directly in the code. And unit test coverage for the UI components allows us to deliver a stable
 "API for user interfaces".
