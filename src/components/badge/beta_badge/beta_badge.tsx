@@ -46,7 +46,6 @@ import { OuiToolTip, ToolTipPositions } from '../../tool_tip';
 import { OuiIcon, IconType } from '../../icon';
 
 const colorToClassMap = {
-  accent: 'ouiBetaBadge--accent',
   subdued: 'ouiBetaBadge--subdued',
   hollow: 'ouiBetaBadge--hollow',
 };
@@ -134,7 +133,7 @@ type BadgeProps = {
    */
   title?: string;
   /**
-   * Accepts accent, subdued and hollow.
+   * Accepts subdued and hollow.
    */
   color?: BetaBadgeColor;
   size?: BetaBadgeSize;

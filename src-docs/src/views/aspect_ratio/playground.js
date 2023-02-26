@@ -27,7 +27,7 @@ export default () => {
     title="Elastic is a search company"
     width="560"
     height="315"
-    src="https://www.youtube.com/embed/yJarWSLRM24"
+    src="https://www.youtube.com/embed/yO96yqpcycY"
     frameBorder="0"
     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
     allowFullScreen
