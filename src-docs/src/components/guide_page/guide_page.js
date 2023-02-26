@@ -32,7 +32,7 @@ const GuidePageComponent = ({
 }) => {
   const betaBadge = isBeta ? (
     <OuiBetaBadge
-      label="Beta"
+      label="Experimental"
       tooltipContent="This component is still under development and may contain breaking changes in the nearby future."
     />
   ) : undefined;

@@ -61,22 +61,25 @@ export default () => (
             size="s"
             style={{ padding: 16 }}>
             <p>
-              Orbiting this at a distance of roughly ninety-two million miles is
-              an utterly insignificant little blue green planet whose
-              ape-descended life forms are so amazingly primitive that they
-              still think digital watches are a pretty neat idea.
+              Vestibulum ipsum ipsum, dapibus iaculis rutrum sed, ullamcorper
+              eget nibh. Donec ligula orci, vestibulum eget lacus eget, luctus
+              feugiat sapien. Aliquam et elementum ante. Donec malesuada tellus
+              sit amet lorem convallis, et convallis massa suscipit. Nullam
+              dolor libero, placerat ac mi at, ultrices scelerisque neque
             </p>
             <p>
-              Orbiting this at a distance of roughly ninety-two million miles is
-              an utterly insignificant little blue green planet whose
-              ape-descended life forms are so amazingly primitive that they
-              still think digital watches are a pretty neat idea.
+              Vestibulum ipsum ipsum, dapibus iaculis rutrum sed, ullamcorper
+              eget nibh. Donec ligula orci, vestibulum eget lacus eget, luctus
+              feugiat sapien. Aliquam et elementum ante. Donec malesuada tellus
+              sit amet lorem convallis, et convallis massa suscipit. Nullam
+              dolor libero, placerat ac mi at, ultrices scelerisque neque
             </p>
             <p>
-              Orbiting this at a distance of roughly ninety-two million miles is
-              an utterly insignificant little blue green planet whose
-              ape-descended life forms are so amazingly primitive that they
-              still think digital watches are a pretty neat idea.
+              Vestibulum ipsum ipsum, dapibus iaculis rutrum sed, ullamcorper
+              eget nibh. Donec ligula orci, vestibulum eget lacus eget, luctus
+              feugiat sapien. Aliquam et elementum ante. Donec malesuada tellus
+              sit amet lorem convallis, et convallis massa suscipit. Nullam
+              dolor libero, placerat ac mi at, ultrices scelerisque neque
             </p>
           </OuiText>
         </OuiPanel>
@@ -117,10 +120,12 @@ export default () => (
           <div tabIndex={0} className="oui-xScrollWithShadows">
             <OuiText size="s" style={{ width: '150%', padding: 16 }}>
               <p>
-                Orbiting this at a distance of roughly ninety-two million miles
-                is an utterly insignificant little blue green planet whose
-                ape-descended life forms are so amazingly primitive that they
-                still think digital watches are a pretty neat idea.
+                Vestibulum ipsum ipsum, dapibus iaculis rutrum sed, ullamcorper
+                eget nibh. Donec ligula orci, vestibulum eget lacus eget, luctus
+                feugiat sapien. Aliquam et elementum ante. Donec malesuada
+                tellus sit amet lorem convallis, et convallis massa suscipit.
+                Nullam dolor libero, placerat ac mi at, ultrices scelerisque
+                neque.
               </p>
             </OuiText>
           </div>
@@ -166,11 +171,12 @@ export default () => (
               <OuiPanel className="oui-yScroll" color="warning" tabIndex="0">
                 <OuiText size="s">
                   <p>
-                    Orbiting this at a distance of roughly ninety-two million
-                    miles is an utterly insignificant little blue green planet
-                    whose ape-descended life forms are so amazingly primitive
-                    that they still think digital watches are a pretty neat
-                    idea.
+                    Vestibulum ipsum ipsum, dapibus iaculis rutrum sed,
+                    ullamcorper eget nibh. Donec ligula orci, vestibulum eget
+                    lacus eget, luctus feugiat sapien. Aliquam et elementum
+                    ante. Donec malesuada tellus sit amet lorem convallis, et
+                    convallis massa suscipit. Nullam dolor libero, placerat ac
+                    mi at, ultrices scelerisque neque.
                   </p>
                 </OuiText>
               </OuiPanel>
@@ -179,11 +185,12 @@ export default () => (
               <OuiPanel className="oui-yScroll" color="warning" tabIndex="0">
                 <OuiText size="s">
                   <p>
-                    Orbiting this at a distance of roughly ninety-two million
-                    miles is an utterly insignificant little blue green planet
-                    whose ape-descended life forms are so amazingly primitive
-                    that they still think digital watches are a pretty neat
-                    idea.
+                    Vestibulum ipsum ipsum, dapibus iaculis rutrum sed,
+                    ullamcorper eget nibh. Donec ligula orci, vestibulum eget
+                    lacus eget, luctus feugiat sapien. Aliquam et elementum
+                    ante. Donec malesuada tellus sit amet lorem convallis, et
+                    convallis massa suscipit. Nullam dolor libero, placerat ac
+                    mi at, ultrices scelerisque neque.
                   </p>
                 </OuiText>
               </OuiPanel>

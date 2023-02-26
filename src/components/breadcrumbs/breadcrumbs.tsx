@@ -162,20 +162,21 @@ const limitBreadcrumbs = (
 
     return (
       <Fragment>
-        <OuiPopover
-          className="ouiBreadcrumb ouiBreadcrumb--collapsed"
-          button={ellipsisButton}
-          isOpen={isPopoverOpen}
-          closePopover={() => setIsPopoverOpen(false)}>
-          <OuiBreadcrumbs
-            className="ouiBreadcrumbs__inPopover"
-            breadcrumbs={overflowBreadcrumbs}
-            responsive={false}
-            truncate={false}
-            max={0}
-          />
-        </OuiPopover>
-        <OuiBreadcrumbSeparator />
+        <div className="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed">
+          <OuiPopover
+            className="ouiBreadcrumb ouiBreadcrumb--collapsed"
+            button={ellipsisButton}
+            isOpen={isPopoverOpen}
+            closePopover={() => setIsPopoverOpen(false)}>
+            <OuiBreadcrumbs
+              className="ouiBreadcrumbs__inPopover"
+              breadcrumbs={overflowBreadcrumbs}
+              responsive={false}
+              truncate={false}
+              max={0}
+            />
+          </OuiPopover>
+        </div>
       </Fragment>
     );
   };
@@ -186,8 +187,6 @@ const limitBreadcrumbs = (
 
   return [...breadcrumbsAtStart, ...breadcrumbsAtEnd];
 };
-
-const OuiBreadcrumbSeparator = () => <div className="ouiBreadcrumbSeparator" />;
 
 export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   breadcrumbs,
@@ -228,7 +227,14 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       ...breadcrumbRest
     } = breadcrumb;
 
+    const isFirstBreadcrumb = index === 0;
     const isLastBreadcrumb = index === breadcrumbs.length - 1;
+
+    const breadcrumbWrapperClasses = classNames('ouiBreadcrumbWrapper', {
+      'ouiBreadcrumbWrapper--first': isFirstBreadcrumb,
+      'ouiBreadcrumbWrapper--last': isLastBreadcrumb,
+      'ouiBreadcrumbWrapper--truncate': truncate,
+    });
 
     const breadcrumbClasses = classNames('ouiBreadcrumb', breadcrumbClassName, {
       'ouiBreadcrumb--last': isLastBreadcrumb,
@@ -271,18 +277,15 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       );
     }
 
-    let separator;
+    let wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
 
-    if (!isLastBreadcrumb) {
-      separator = <OuiBreadcrumbSeparator />;
+    if (isFirstBreadcrumb) {
+      const breadcrumbWallClasses = classNames('ouiBreadcrumbWall');
+
+      wrapper = <div className={breadcrumbWallClasses}>{wrapper}</div>;
     }
 
-    return (
-      <Fragment key={index}>
-        {link}
-        {separator}
-      </Fragment>
-    );
+    return <Fragment key={index}>{wrapper}</Fragment>;
   });
 
   // Use the default object if they simply passed `true` for responsive
