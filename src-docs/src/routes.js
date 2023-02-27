@@ -27,8 +27,6 @@ import ColorGuidelines from './views/guidelines/colors';
 
 import { SassGuidelines } from './views/guidelines/sass';
 
-import WritingGuidelines from './views/guidelines/writing';
-
 // Services
 
 import { ColorPaletteExample } from './views/color_palette/color_palette_example';
@@ -340,7 +338,6 @@ const navigation = [
         name: 'Sass',
         component: SassGuidelines,
       },
-      createExample(WritingGuidelines, 'Writing'),
     ],
   },
   {
