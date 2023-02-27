@@ -26,8 +26,8 @@ export default () => {
     isOpen: false,
     value: (
       <Fragment>
-        <p>.kibana_task_manager,</p>
-        <p>kibana_sample_data_ecommerce</p>
+        <p>.opensearch_dashboards_task_manager,</p>
+        <p>opensearch_dashboards_sample_data_ecommerce</p>
       </Fragment>
     ),
   });
@@ -39,19 +39,19 @@ export default () => {
 
   const options = [
     {
-      label: '.kibana_task_manager',
+      label: '.opensearch_dashboards_task_manager',
     },
     {
-      label: 'kibana_sample_data_ecommerce',
+      label: 'opensearch_dashboards_sample_data_ecommerce',
     },
     {
-      label: '.kibana-event-log-8.0.0-000001',
+      label: '.opensearch_dashboards-event-log-8.0.0-000001',
     },
     {
-      label: 'kibana_sample_data_flights',
+      label: 'opensearch_dashboards_sample_data_flights',
     },
     {
-      label: '.kibana-event-log-8.0.0',
+      label: '.opensearch_dashboards-event-log-8.0.0',
     },
   ];
 
@@ -193,7 +193,7 @@ export default () => {
       <OuiExpression
         display="columns"
         description="Except"
-        value="kibana_sample_data_ky_counties"
+        value="opensearch_dashboards_sample_data_ky_counties"
       />
       <OuiSpacer />
       <OuiTitle size="xxs">
@@ -203,7 +203,7 @@ export default () => {
         description="join"
         display="columns"
         descriptionWidth={50}
-        value="kibana_sample_data_ky_avl"
+        value="opensearch_dashboards_sample_data_ky_avl"
         onClick={() => {}}
       />
     </div>
