@@ -46,7 +46,7 @@ export const BeaconExample = {
             color="warning"
             title="OuiBeacon should only be used in conjunction with OuiTour."
           />
-          <OuiSpacer/>
+          <OuiSpacer />
           <p>
             Use the <strong>OuiBeacon</strong> component to draw visual
             attention to a specific location or element.
