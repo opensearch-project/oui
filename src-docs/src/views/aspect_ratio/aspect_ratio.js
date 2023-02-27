@@ -28,7 +28,7 @@ export default () => (
         title="Elastic is a search company"
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/yJarWSLRM24"
+        src="https://www.youtube.com/embed/yO96yqpcycY"
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -44,7 +44,7 @@ export default () => (
         title="Elastic is a search company"
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/yJarWSLRM24"
+        src="https://www.youtube.com/embed/yO96yqpcycY"
         frameBorder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -57,7 +57,7 @@ export default () => (
     <OuiSpacer size="s" />
     <OuiAspectRatio width={220} height={150} maxWidth={500}>
       <iframe
-        src="https://app.stitcher.com/splayer/f/13377/54057816"
+        src="https://www.youtube.com/embed/yO96yqpcycY"
         title="something"
         frameBorder="0"
         scrolling="no"
