@@ -16,7 +16,7 @@ const OuiIconLogoOpenSearch = ({ title, titleId, ...props }) => (
     width={32}
     height={32}
     fill="none"
-    viewBox="0 0 32 32"
+    viewBox="0 0 64 64"
     xmlns="http://www.w3.org/2000/svg"
     aria-labelledby={titleId}
     {...props}>
