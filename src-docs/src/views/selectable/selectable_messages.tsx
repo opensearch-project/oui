@@ -19,7 +19,7 @@ export default () => {
   const [useCustomMessage, setUseCustomMessage] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const emptyMessage = 'You have no spice';
+  const emptyMessage = 'No custom tags created';
   const loadingMessage = "Hey, I'm loading here!";
 
   return (
