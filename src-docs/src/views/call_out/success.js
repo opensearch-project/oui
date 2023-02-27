@@ -11,13 +11,10 @@
 
 import React from 'react';
 
-import { OuiCallOut, OuiLink } from '../../../../src/components';
+import { OuiCallOut } from '../../../../src/components';
 
 export default () => (
-  <OuiCallOut title="Good news, everyone!" color="success" iconType="user">
-    <p>
-      I have no news. Which is good! And{' '}
-      <OuiLink href="#">here&rsquo;s a link</OuiLink>.
-    </p>
+  <OuiCallOut title="Success" color="success" iconType="user">
+    <p>A system status message that reflects success.</p>
   </OuiCallOut>
 );
