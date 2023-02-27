@@ -21,6 +21,7 @@ import { beaconConfig } from './playground';
 
 import Beacon from './beacon';
 import { OuiCallOut } from '../../../../src/components/call_out';
+import { OuiSpacer } from '../../../../src/components/spacer';
 const beaconSource = require('!!raw-loader!./beacon');
 const beaconHtml = renderToHtml(Beacon);
 const beaconSnippet = '<OuiBeacon />';
@@ -45,6 +46,7 @@ export const BeaconExample = {
             color="warning"
             title="OuiBeacon should only be used in conjunction with OuiTour."
           />
+          <OuiSpacer/>
           <p>
             Use the <strong>OuiBeacon</strong> component to draw visual
             attention to a specific location or element.
