@@ -12,11 +12,7 @@
 import React, { useState } from 'react';
 import { formatDate } from '../../../../../src/services/format';
 import { createDataStore } from '../data_store';
-import {
-  OuiInMemoryTable,
-  OuiLink,
-  OuiHealth,
-} from '../../../../../src/components';
+import { OuiInMemoryTable, OuiHealth } from '../../../../../src/components';
 
 /*
 Example user object:
@@ -25,7 +21,6 @@ Example user object:
   id: '1',
   firstName: 'john',
   lastName: 'doe',
-  github: 'johndoe',
   dateOfBirth: Date.now(),
   nationality: 'NL',
   online: true
@@ -90,15 +85,6 @@ export const Table = () => {
           field: 'lastName',
           name: 'Last Name',
           truncateText: true,
-        },
-        {
-          field: 'github',
-          name: 'Github',
-          render: (username) => (
-            <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
-              {username}
-            </OuiLink>
-          ),
         },
         {
           field: 'dateOfBirth',
