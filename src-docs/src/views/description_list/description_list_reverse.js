@@ -13,21 +13,23 @@ import React from 'react';
 
 import { OuiDescriptionList } from '../../../../src/components';
 
-const favoriteVideoGame = [
+const list = [
   {
-    title: 'Name',
-    description: 'The Elder Scrolls: Morrowind',
+    title: 'Item 1',
+    description:
+      'Aliqua reprehenderit voluptate laborum sit irure proident veniam sint laborum amet elit.',
   },
   {
-    title: 'Game style',
-    description: 'Open-world, fantasy, action role-playing',
+    title: 'Item 2',
+    description:
+      'Officia nostrud pariatur sint pariatur ea esse non ea tempor laboris sint.',
   },
   {
-    title: 'Release date',
-    description: '2002',
+    title: 'Item 3',
+    description: 'Qui ea duis veniam nisi commodo laborum.',
   },
 ];
 
 export default () => (
-  <OuiDescriptionList textStyle="reverse" listItems={favoriteVideoGame} />
+  <OuiDescriptionList textStyle="reverse" listItems={list} />
 );
