@@ -47,9 +47,9 @@ const tabs = [
   },
   {
     id: 'elastic_link',
-    name: 'Elastic Website',
+    name: 'OpenSearch Website',
     disabled: false,
-    href: 'https://www.elastic.co/',
+    href: 'https://opensearch.org/',
   },
 ];
 

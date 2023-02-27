@@ -51,7 +51,6 @@ export default () => {
         onCancel={closeModal}
         onConfirm={() => {
           closeModal();
-          window.alert('Shame on you!');
         }}
         confirmButtonText="Delete"
         cancelButtonText="Cancel"

@@ -67,7 +67,7 @@ const steps = [
         </p>
         <p>
           Go to <strong>Overview &gt;&gt; Endpoints</strong> note{' '}
-          <strong>Elasticsearch</strong> as <OuiCode>&lt;thing&gt;</OuiCode>.
+          <strong>OpenSearch</strong> as <OuiCode>&lt;thing&gt;</OuiCode>.
         </p>
       </OuiText>
     ),
