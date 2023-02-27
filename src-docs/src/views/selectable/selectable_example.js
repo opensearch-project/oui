@@ -350,7 +350,7 @@ export const SelectableExample = {
   options={[]}
   listProps={{ bordered: true }}
   isLoading={isLoading}>
-  {list => isLoading ? <OuiSelectableMessage bordered={true}>You have no spice</OuiSelectableMessage> : list}
+  {list => isLoading ? <OuiSelectableMessage bordered={true}>No custom tags created</OuiSelectableMessage> : list}
 </OuiSelectable>`,
       ],
     },
