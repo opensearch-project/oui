@@ -24,8 +24,7 @@ export default () => {
     type: PropTypes.ReactNode,
     value: `<OuiText size="s">
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Tempor minim eiusmod consequat eu in ea eu occaecat nulla adipisicing. Aliqua dolore magna occaecat laborum laborum id enim ipsum pariatur. Voluptate dolor do aliquip dolor quis velit laboris. In ipsum ea nostrud quis eu.
     </p>
   </OuiText>`,
     hidden: false,
