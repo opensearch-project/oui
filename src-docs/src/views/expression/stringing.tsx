@@ -18,11 +18,11 @@ export default () => (
     <OuiExpression description="Select" value="count(*)" onClick={() => {}} />
     <OuiExpression
       description="From"
-      value="kibana_sample_data_ky_counties left"
+      value="opensearch_dashboards_sample_data_ky_counties left"
     />
     <OuiExpression
       description="join"
-      value="kibana_sample_data_ky_avl right"
+      value="opensearch_dashboards_sample_data_ky_avl right"
       onClick={() => {}}
     />
     <OuiExpression description="on" value="left.smis = right.kytccountynmbr" />

@@ -19,8 +19,6 @@ import imageFlexgrid from '../../images/flexgrid.svg';
 import imageCards from '../../images/cards.svg';
 import imagePages from '../../images/page.svg';
 import imageText from '../../images/text.svg';
-import imageCharts from '../../images/charts.svg';
-import HomeIllustration from './home_illustration';
 import {
   OuiCard,
   OuiFlexGroup,
@@ -85,9 +83,6 @@ export const HomeView = () => (
               </OuiFlexGroup>
             </OuiText>
           </OuiFlexItem>
-          <OuiFlexItem>
-            <HomeIllustration />
-          </OuiFlexItem>
         </OuiFlexGroup>
       </OuiPanel>
       <OuiSpacer size="xxl" />
@@ -148,16 +143,6 @@ export const HomeView = () => (
             image={imageCards}
             title="Cards"
             description="Cards like these help you make repeatable content more presentable"
-          />
-        </OuiFlexItem>
-        <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
-          <OuiCard
-            hasBorder
-            href="#/elastic-charts/creating-charts"
-            textAlign="left"
-            image={imageCharts}
-            title="Charts"
-            description="Learn charting best practices and how to integrate OUI with the Elastic Charts library"
           />
         </OuiFlexItem>
         <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
