@@ -23,8 +23,6 @@ import { playgroundCreator } from './services/playground';
 // Guidelines
 // const GettingStarted = require('!!raw-loader!./views/guidelines/getting_started.md');
 
-import AccessibilityGuidelines from './views/guidelines/accessibility';
-
 import ColorGuidelines from './views/guidelines/colors';
 
 import { SassGuidelines } from './views/guidelines/sass';
@@ -332,7 +330,6 @@ const navigation = [
     items: [
       // TODO uncomment when OuiMarkdownFormat has a better text formatting
       // createMarkdownExample(GettingStarted, 'Getting started'),
-      createExample(AccessibilityGuidelines, 'Accessibility'),
       {
         name: 'Colors',
         component: ColorGuidelines,
