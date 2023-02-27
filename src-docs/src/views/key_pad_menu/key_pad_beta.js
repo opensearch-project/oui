@@ -26,7 +26,7 @@ export default () => (
     <OuiKeyPadMenuItem
       label="Dashboard"
       href="#"
-      betaBadgeLabel="Beta"
+      betaBadgeLabel="Experimental"
       betaBadgeTooltipContent="This module is not GA. Please help us by reporting any bugs.">
       <OuiIcon type="dashboardApp" size="l" />
     </OuiKeyPadMenuItem>
