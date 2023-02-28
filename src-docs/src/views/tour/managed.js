@@ -32,7 +32,7 @@ const demoTourSteps = [
         <p>Copy and paste this sample query.</p>
         <OuiSpacer />
         <OuiCodeBlock language="html" paddingSize="s" isCopyable>
-          {'SELECT email FROM “kibana_sample_data_ecommerce”'}
+          {'SELECT email FROM “opensearch_dashboards_sample_data_ecommerce”'}
         </OuiCodeBlock>
       </span>
     ),
@@ -96,7 +96,7 @@ export default () => {
             </OuiButtonEmpty>
             <OuiSpacer />
             <OuiForm component="form">
-              <OuiFormRow label="Enter an ES SQL query">
+              <OuiFormRow label="Enter an SQL query">
                 <OuiTourStep {...ouiTourStepOne}>
                   <OuiTextArea
                     placeholder="Placeholder text"
