@@ -10,8 +10,6 @@
  */
 
 import React, { useState } from 'react';
-import find from 'lodash/find';
-import findIndex from 'lodash/findIndex';
 
 import {
   OuiCollapsibleNav,
@@ -26,47 +24,20 @@ import { OuiIcon } from '../../../../src/components/icon';
 import { OuiButtonEmpty } from '../../../../src/components/button';
 import { OuiPageTemplate } from '../../../../src/components/page';
 import {
-  OuiPinnableListGroup,
   OuiListGroupItem,
-  OuiPinnableListGroupItemProps,
+  OuiListGroup,
 } from '../../../../src/components/list_group';
 import { OuiFlexItem } from '../../../../src/components/flex';
-import { OuiHorizontalRule } from '../../../../src/components/horizontal_rule';
 
 import {
-  DeploymentsGroup,
-  KibanaNavLinks,
-  SecurityGroup,
+  ManagementLinks,
+  OpenSearchDashboardsLinks,
+  OpenSearchPluginLinks,
 } from './collapsible_nav_list';
 import { OuiShowFor } from '../../../../src/components/responsive';
 import { OuiImage } from '../../../../src/components/image';
 import contentSvg from '../../images/content.svg';
 import { useExitPath } from '../../services/routing/routing';
-
-const TopLinks: OuiPinnableListGroupItemProps[] = [
-  {
-    label: 'Home',
-    iconType: 'home',
-    isActive: true,
-    'aria-current': true,
-    onClick: () => {},
-    pinnable: false,
-  },
-];
-const KibanaLinks: OuiPinnableListGroupItemProps[] = KibanaNavLinks.map(
-  (link) => {
-    return {
-      ...link,
-      onClick: () => {},
-    };
-  }
-);
-const LearnLinks: OuiPinnableListGroupItemProps[] = [
-  { label: 'Docs', onClick: () => {} },
-  { label: 'Blogs', onClick: () => {} },
-  { label: 'Webinars', onClick: () => {} },
-  { label: 'Elastic.co', href: 'https://elastic.co' },
-];
 
 const CollapsibleNavAll = () => {
   const exitPath = useExitPath();
@@ -80,8 +51,9 @@ const CollapsibleNavAll = () => {
    */
   const [openGroups, setOpenGroups] = useState(
     JSON.parse(String(localStorage.getItem('openNavGroups'))) || [
-      'Kibana',
-      'Learn',
+      'OpenSearch Dashboards',
+      'OpenSearch Plugins',
+      'Management',
     ]
   );
 
@@ -102,55 +74,6 @@ const CollapsibleNavAll = () => {
     localStorage.setItem('openNavGroups', JSON.stringify(openGroups));
   };
 
-  /**
-   * Pinning
-   */
-  const [pinnedItems, setPinnedItems] = useState<
-    OuiPinnableListGroupItemProps[]
-  >(JSON.parse(String(localStorage.getItem('pinnedItems'))) || []);
-
-  const addPin = (item: any) => {
-    if (!item || find(pinnedItems, { label: item.label })) {
-      return;
-    }
-    item.pinned = true;
-    const newPinnedItems = pinnedItems ? pinnedItems.concat(item) : [item];
-    setPinnedItems(newPinnedItems);
-    localStorage.setItem('pinnedItems', JSON.stringify(newPinnedItems));
-  };
-
-  const removePin = (item: any) => {
-    const pinIndex = findIndex(pinnedItems, { label: item.label });
-    if (pinIndex > -1) {
-      item.pinned = false;
-      const newPinnedItems = pinnedItems;
-      newPinnedItems.splice(pinIndex, 1);
-      setPinnedItems([...newPinnedItems]);
-      localStorage.setItem('pinnedItems', JSON.stringify(newPinnedItems));
-    }
-  };
-
-  function alterLinksWithCurrentState(
-    links: OuiPinnableListGroupItemProps[],
-    showPinned = false
-  ): OuiPinnableListGroupItemProps[] {
-    return links.map((link) => {
-      const { pinned, ...rest } = link;
-      return {
-        pinned: showPinned ? pinned : false,
-        ...rest,
-      };
-    });
-  }
-
-  function addLinkNameToPinTitle(listItem: OuiPinnableListGroupItemProps) {
-    return `Pin ${listItem.label} to top`;
-  }
-
-  function addLinkNameToUnpinTitle(listItem: OuiPinnableListGroupItemProps) {
-    return `Unpin ${listItem.label}`;
-  }
-
   const collapsibleNav = (
     <OuiCollapsibleNav
       id="guideCollapsibleNavAllExampleNav"
@@ -165,48 +88,36 @@ const CollapsibleNavAll = () => {
         </OuiHeaderSectionItemButton>
       }
       onClose={() => setNavIsOpen(false)}>
-      {/* Dark deployments section */}
-      <OuiFlexItem grow={false} style={{ flexShrink: 0 }}>
-        {DeploymentsGroup}
-      </OuiFlexItem>
-
-      {/* Shaded pinned section always with a home item */}
-      <OuiFlexItem grow={false} style={{ flexShrink: 0 }}>
+      {/* BOTTOM */}
+      <OuiFlexItem className="oui-yScroll">
+        {/* OpenSearch Dashboards section */}
         <OuiCollapsibleNavGroup
-          background="light"
-          className="oui-yScroll"
-          style={{ maxHeight: '40vh' }}>
-          <OuiPinnableListGroup
-            aria-label="Pinned links" // A11y : Since this group doesn't have a visible `title` it should be provided an accessible description
-            listItems={alterLinksWithCurrentState(TopLinks).concat(
-              alterLinksWithCurrentState(pinnedItems, true)
-            )}
-            unpinTitle={addLinkNameToUnpinTitle}
-            onPinClick={removePin}
+          title="OpenSearch Dashboards"
+          iconType="logoOpenSearch"
+          isCollapsible={true}
+          initialIsOpen={openGroups.includes('OpenSearch Dashboards')}
+          onToggle={(isOpen: boolean) =>
+            toggleAccordion(isOpen, 'OpenSearch Dashboards')
+          }>
+          <OuiListGroup
+            aria-label="OpenSearch Dashboards" // A11y : OuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
+            listItems={OpenSearchDashboardsLinks}
             maxWidth="none"
-            color="text"
+            color="subdued"
             gutterSize="none"
             size="s"
           />
         </OuiCollapsibleNavGroup>
-      </OuiFlexItem>
-
-      <OuiHorizontalRule margin="none" />
-
-      {/* BOTTOM */}
-      <OuiFlexItem className="oui-yScroll">
-        {/* Kibana section */}
         <OuiCollapsibleNavGroup
-          title="Kibana"
-          iconType="logoKibana"
+          title="OpenSearch Plugins"
           isCollapsible={true}
-          initialIsOpen={openGroups.includes('Kibana')}
-          onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Kibana')}>
-          <OuiPinnableListGroup
-            aria-label="Kibana" // A11y : OuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
-            listItems={alterLinksWithCurrentState(KibanaLinks)}
-            pinTitle={addLinkNameToPinTitle}
-            onPinClick={addPin}
+          initialIsOpen={openGroups.includes('OpenSearch Plugins')}
+          onToggle={(isOpen: boolean) =>
+            toggleAccordion(isOpen, 'OpenSearch Plugins')
+          }>
+          <OuiListGroup
+            aria-label="OpenSearch Plugins" // A11y : OuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
+            listItems={OpenSearchPluginLinks}
             maxWidth="none"
             color="subdued"
             gutterSize="none"
@@ -214,21 +125,14 @@ const CollapsibleNavAll = () => {
           />
         </OuiCollapsibleNavGroup>
 
-        {/* Security callout */}
-        {SecurityGroup}
-
-        {/* Learn section */}
         <OuiCollapsibleNavGroup
-          title="Learn"
-          iconType="training"
+          title="Management"
           isCollapsible={true}
-          initialIsOpen={openGroups.includes('Learn')}
-          onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Learn')}>
-          <OuiPinnableListGroup
-            aria-label="Learn" // A11y : OuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
-            listItems={alterLinksWithCurrentState(LearnLinks)}
-            pinTitle={addLinkNameToPinTitle}
-            onPinClick={addPin}
+          initialIsOpen={openGroups.includes('Management')}
+          onToggle={(isOpen: boolean) => toggleAccordion(isOpen, 'Management')}>
+          <OuiListGroup
+            aria-label="Management" // A11y : OuiCollapsibleNavGroup can't correctly pass the `title` as the `aria-label` to the right HTML element, so it must be added manually
+            listItems={ManagementLinks}
             maxWidth="none"
             color="subdued"
             gutterSize="none"
@@ -260,8 +164,8 @@ const CollapsibleNavAll = () => {
 
   const leftSectionItems = [
     collapsibleNav,
-    <OuiHeaderLogo href={exitPath} iconType="logoElastic">
-      Elastic
+    <OuiHeaderLogo href={exitPath} iconType="logoOpenSearch">
+      OpenSearch UI
     </OuiHeaderLogo>,
   ];
 
