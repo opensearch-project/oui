@@ -23,8 +23,7 @@ import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
 const body = (
   <OuiText size="s">
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Quisque a nisi lacinia, ultrices ipsum sed, tempor odio. Nulla facilisi.
     </p>
   </OuiText>
 );
@@ -62,12 +61,10 @@ const complexUsername = (
 const longBody = (
   <OuiText size="s">
     <p>
-      This planet has - or rather had - a problem, which was this: most of the
-      people living on it were unhappy for pretty much of the time. Many
-      solutions were suggested for this problem, but most of these were largely
-      concerned with the movements of small green pieces of paper, which is odd
-      because on the whole it was not the small green pieces of paper that were
-      unhappy.
+      Mauris mauris orci, volutpat id blandit eu, sodales a quam. In convallis
+      pulvinar sollicitudin. Vivamus luctus sed mauris quis tincidunt. Nunc at
+      congue metus, vitae tincidunt ligula. In finibus nisi non mollis
+      convallis.
     </p>
   </OuiText>
 );

@@ -14,9 +14,7 @@ import React from 'react';
 import { OuiErrorBoundary } from '../../../../src/components';
 
 const BadComponent = () => {
-  throw new Error(
-    "I'm here to kick butt and chew bubblegum. And I'm all out of gum."
-  );
+  throw new Error('An unhandled exception occurred.');
 };
 
 export default () => (
