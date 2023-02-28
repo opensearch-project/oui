@@ -39,6 +39,7 @@ const comboBoxSnippet = `<OuiComboBox
   onChange={onChange}
   onCreateOption={onCreateOption}
   isClearable={true}
+  clearOnBlur={true}
 />`;
 
 import Containers from './containers';
@@ -205,6 +206,17 @@ const duplicateOptionsSnippet = `const options = [{
   label: 'Label',
   key: 'Label2',
 }]`;
+
+import ClearOnBlur from './clear_on_blur';
+const clearOnBlurSource = require('!!raw-loader!./clear_on_blur');
+const clearOnBlurSourceOptionsHtml = renderToHtml(ClearOnBlur);
+const clearOnBlurSnippet = `<OuiComboBox
+  placeholder="Select one or more options"
+  options={options}
+  onChange={onChange}
+  onSearchChange={onSearchChange}
+  clearOnBlur={true}
+/>`;
 
 export const ComboBoxExample = {
   title: 'Combo box',
@@ -599,6 +611,28 @@ export const ComboBoxExample = {
       props: { OuiComboBox, OuiComboBoxOptionOption },
       demo: <DuplicateOptions />,
       snippet: duplicateOptionsSnippet,
+    },
+    {
+      title: 'Clear on blur',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: clearOnBlurSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: clearOnBlurSourceOptionsHtml,
+        },
+      ],
+      text: (
+        <p>
+          Set the prop <OuiCode>clearOnBlur</OuiCode> to make the combo box
+          input text clear when user focuses out of text box.
+        </p>
+      ),
+      props: { OuiComboBox, OuiComboBoxOptionOption },
+      snippet: clearOnBlurSnippet,
+      demo: <ClearOnBlur />,
     },
   ],
 };

@@ -26,15 +26,11 @@ export default () => (
       }
       example={
         <p>
-          <OuiIcon
-            type="logoElasticStack"
-            size="xxl"
-            className="oui-alignTop"
-          />
+          <OuiIcon type="grid" size="xxl" className="oui-alignTop" />
           &emsp; Icon is aligned to the top of the text
         </p>
       }
-      snippet={'<OuiIcon className="oui-alignTop" type="logoElasticStack" />'}
+      snippet={'<OuiIcon className="oui-alignTop" type="grid" />'}
     />
     <OuiSpacer />
     <UtilityClassesSection
@@ -47,17 +43,11 @@ export default () => (
       }
       example={
         <p>
-          <OuiIcon
-            type="logoElasticStack"
-            size="xxl"
-            className="oui-alignMiddle"
-          />
+          <OuiIcon type="grid" size="xxl" className="oui-alignMiddle" />
           &emsp; Icon is aligned to the middle of the text
         </p>
       }
-      snippet={
-        '<OuiIcon className="oui-alignMiddle" type="logoElasticStack" />'
-      }
+      snippet={'<OuiIcon className="oui-alignMiddle" type="grid" />'}
     />
     <OuiSpacer />
     <UtilityClassesSection
@@ -70,17 +60,11 @@ export default () => (
       }
       example={
         <p>
-          <OuiIcon
-            type="logoElasticStack"
-            size="xxl"
-            className="oui-alignBottom"
-          />
+          <OuiIcon type="grid" size="xxl" className="oui-alignBottom" />
           &emsp; Icon is aligned to the bottom of the text
         </p>
       }
-      snippet={
-        '<OuiIcon className="oui-alignBottom" type="logoElasticStack" />'
-      }
+      snippet={'<OuiIcon className="oui-alignBottom" type="grid" />'}
     />
     <OuiSpacer />
     <UtilityClassesSection
@@ -93,17 +77,11 @@ export default () => (
       }
       example={
         <p>
-          <OuiIcon
-            type="logoElasticStack"
-            size="xxl"
-            className="oui-alignBaseline"
-          />
+          <OuiIcon type="grid" size="xxl" className="oui-alignBaseline" />
           &emsp; Icon is aligned to the baseline of the text
         </p>
       }
-      snippet={
-        '<OuiIcon className="oui-alignBaseline" type="logoElasticStack" />'
-      }
+      snippet={'<OuiIcon className="oui-alignBaseline" type="grid" />'}
     />
   </>
 );
