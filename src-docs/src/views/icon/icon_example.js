@@ -105,7 +105,7 @@ export const IconExample = {
       demo: <Editor />,
     },
     {
-      title: 'Elastic logos',
+      title: 'OpenSearch logos',
       text: (
         <p>
           Product logos follow similar rules as app logos. Note the use of{' '}
