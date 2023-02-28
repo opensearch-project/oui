@@ -19,7 +19,7 @@ export default () => (
       <h3>Spaces</h3>
     </OuiTitle>
     <OuiSpacer />
-    <OuiAvatar size="s" type="space" name="Kibana" />
+    <OuiAvatar size="s" type="space" name="Dashboards" />
     &emsp;
     <OuiAvatar type="space" name="Leonardo Space" />
     &emsp;
