@@ -14,6 +14,7 @@ import React, { useState } from 'react';
 import {
   OuiButton,
   OuiControlBar,
+  OuiLink,
   OuiPanel,
   OuiText,
 } from '../../../../src/components';
@@ -105,47 +106,114 @@ export default () => {
         <div style={{ padding: '2rem', maxWidth: '60rem', margin: '0 auto' }}>
           <OuiPanel>
             <OuiText>
-              <h1>1984</h1>
-              <h3>By: George Orwell</h3>
               <p>
-                It was a bright cold day in April, and the clocks were striking
-                thirteen. Winston Smith, his chin nuzzled into his breast in an
-                effort to escape the vile wind, slipped quickly through the
-                glass doors of Victory Mansions, though not quickly enough to
-                prevent a swirl of gritty dust from entering along with him.
+                OpenSearch is a scalable, flexible, and extensible open-source
+                software suite for search, analytics, and observability
+                applications licensed under Apache 2.0. Powered by{' '}
+                <OuiLink href="https://lucene.apache.org/">
+                  Apache Lucene
+                </OuiLink>{' '}
+                and driven by the{' '}
+                <OuiLink href="https://opensearch.org/about.html">
+                  OpenSearch Project community
+                </OuiLink>
+                , OpenSearch offers a vendor-agnostic toolset you can use to
+                build secure, high-performance, cost-efficient applications. Use
+                OpenSearch as an end-to-end solution or connect it with your
+                preferred open-source tools or{' '}
+                <OuiLink href="https://opensearch.org/partners">
+                  partner projects
+                </OuiLink>
+                .
               </p>
+              <h3>Build powerful search solutions</h3>
               <p>
-                The hallway smelt of boiled cabbage and old rag mats. At one end
-                of it a coloured poster, too large for indoor display, had been
-                tacked to the wall. It depicted simply an enormous face, more
-                than a metre wide: the face of a man of about forty-five, with a
-                heavy black moustache and ruggedly handsome features. Winston
-                made for the stairs. It was no use trying the lift. Even at the
-                best of times it was seldom working, and at present the electric
-                current was cut off during daylight hours. It was part of the
-                economy drive in preparation for Hate Week. The flat was seven
-                flights up, and Winston, who was thirty-nine and had a varicose
-                ulcer above his right ankle, went slowly, resting several times
-                on the way. On each landing, opposite the lift-shaft, the poster
-                with the enormous face gazed from the wall. It was one of those
-                pictures which are so contrived that the eyes follow you about
-                when you move. BIG BROTHER IS WATCHING YOU, the caption beneath
-                it ran.
+                Deploy e-commerce, application, and document search with
+                community-built tools. Support for{' '}
+                <OuiLink href="https://opensearch.org/docs/latest/opensearch/query-dsl/full-text/">
+                  full text queries
+                </OuiLink>
+                , natural language processing, custom dictionaries, and a{' '}
+                <OuiLink href="https://opensearch.org/docs/latest/opensearch/ux/">
+                  range of search features
+                </OuiLink>{' '}
+                provides a flexible foundation for structured and unstructured
+                search applications. With built-in faceting, relevance ranking
+                and scoring, and a selection of machine learning (ML) features,
+                you can build search solutions that are finely tuned to your
+                data.
               </p>
+              <h3>Analyze and discover at scale</h3>
               <p>
-                Inside the flat a fruity voice was reading out a list of figures
-                which had something to do with the production of pig-iron. The
-                voice came from an oblong metal plaque like a dulled mirror
-                which formed part of the surface of the right-hand wall. Winston
-                turned a switch and the voice sank somewhat, though the words
-                were still distinguishable. The instrument (the telescreen, it
-                was called) could be dimmed, but there was no way of shutting it
-                off completely. He moved over to the window: a smallish, frail
-                figure, the meagreness of his body merely emphasized by the blue
-                overalls which were the uniform of the party. His hair was very
-                fair, his face naturally sanguine, his skin roughened by coarse
-                soap and blunt razor blades and the cold of the winter that had
-                just ended.
+                Capture, store, and analyze your business, operational, and
+                security data from a variety of sources. Use your preferred data
+                collector and enrich your analytics pipeline with integrated ML
+                tools like{' '}
+                <OuiLink href="https://opensearch.org/docs/latest/monitoring-plugins/ad/index/">
+                  anomaly detection
+                </OuiLink>
+                . Built-in search functionality supports fast, accurate query
+                results and time-sensitive insights. Visualize and report
+                discoveries with{' '}
+                <OuiLink href="https://opensearch.org/docs/latest/dashboards/index/">
+                  OpenSearch Dashboards
+                </OuiLink>{' '}
+                and use{' '}
+                <OuiLink href="https://opensearch.org/docs/latest/search-plugins/sql/sql/jdbc/">
+                  JDBC
+                </OuiLink>{' '}
+                to connect to popular business intelligence systems.
+              </p>
+              <h3>Achieve end-to-end observability</h3>
+              <p>
+                Visualize your monitored environments from end to end and
+                identify and resolve issues as they arise with flexible{' '}
+                <OuiLink href="https://opensearch.org/docs/latest/observability-plugin/index/">
+                  observability tools
+                </OuiLink>
+                . Build visualizations from your metrics, traces, and logs, with
+                the option to use{' '}
+                <OuiLink href="https://opensearch.org/docs/latest/data-prepper/index/">
+                  Data Prepper
+                </OuiLink>{' '}
+                to transform and enrich your source data. Support for
+                open-source systems like OpenTelemetry and Prometheus means you
+                can create powerful, customized observability solutions using
+                state-of-the-art components.
+              </p>
+              <h3>Getting started</h3>
+              <p>
+                OpenSearch includes a data store and search engine, a
+                visualization and user interface, and a{' '}
+                <OuiLink href="https://opensearch.org/docs/latest/install-and-configure/install-opensearch/plugins/#available-plugins">
+                  library of plugins
+                </OuiLink>{' '}
+                you can use to tailor your tools to your requirements. Get
+                started in the way that best suits your team and your
+                environment. To configure your first OpenSearch cluster, you can{' '}
+                <OuiLink href="https://opensearch.org/downloads.html">
+                  download the OpenSearch components
+                </OuiLink>{' '}
+                in a variety of distributions or start with the official{' '}
+                <OuiLink href="https://hub.docker.com/r/opensearchproject/opensearch">
+                  Docker Image
+                </OuiLink>
+                .
+              </p>
+              <h3>OpenSearch Project partners</h3>
+              <p>
+                Visit the OpenSearch Project{' '}
+                <OuiLink href="https://opensearch.org/partners">
+                  partner page
+                </OuiLink>{' '}
+                for a network of organizations who offer hosted solutions,
+                provide help with technical challenges, and build tools to
+                extend the capabilities of OpenSearch. Interested in becoming a
+                project partner?{' '}
+                <OuiLink href="https://opensearch.org/new-partner.html">
+                  Learn how
+                </OuiLink>
+                .
               </p>
             </OuiText>
           </OuiPanel>

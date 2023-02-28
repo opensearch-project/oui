@@ -34,7 +34,7 @@ export default () => {
         onClick={() => {
           setToggle0On((isOn) => !isOn);
         }}>
-        {toggle0On ? 'Hey there good lookin' : 'Toggle me'}
+        {toggle0On ? 'Tada!' : 'Toggle'}
       </OuiButton>
       &emsp;
       <OuiButtonIcon
@@ -57,7 +57,7 @@ export default () => {
         onClick={() => {
           setToggle2On((isOn) => !isOn);
         }}>
-        Toggle me
+        Toggle
       </OuiButton>
       &emsp;
       <OuiButtonIcon
