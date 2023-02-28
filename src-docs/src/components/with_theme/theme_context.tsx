@@ -17,7 +17,7 @@ import { applyTheme } from '../../services';
 const THEME_NAMES = OUI_THEMES.map(({ value }) => value);
 
 const defaultState = {
-  theme: THEME_NAMES[2],
+  theme: THEME_NAMES[0],
   changeTheme: (themeValue: OUI_THEME['value']) => {
     applyTheme(themeValue);
   },
