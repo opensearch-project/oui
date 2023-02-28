@@ -157,10 +157,10 @@ export const SuggestExample = {
         <div>
           <OuiCallOut color="warning" title="Demo of visual pattern only">
             <p>
-              This documents a <strong>visual</strong> pattern for Kibana&apos;s
-              global query and filter bars. The filter bar has been broken down
-              into multiple components. There are still bugs and not all the
-              logic is well-formed.
+              This documents a <strong>visual</strong> pattern for OpenSearch
+              Dashboard&apos;s global query and filter bars. The filter bar has
+              been broken down into multiple components. There are still bugs
+              and not all the logic is well-formed.
             </p>
           </OuiCallOut>
           <OuiSpacer />

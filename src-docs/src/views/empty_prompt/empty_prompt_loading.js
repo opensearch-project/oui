@@ -15,7 +15,7 @@ import { OuiEmptyPrompt, OuiLoadingLogo } from '../../../../src/components';
 
 export default () => (
   <OuiEmptyPrompt
-    icon={<OuiLoadingLogo logo="logoKibana" size="xl" />}
+    icon={<OuiLoadingLogo logo="visPie" size="xl" />}
     title={<h2>Loading Dashboards</h2>}
   />
 );

@@ -17,8 +17,10 @@ const value = 'and a very long string as value';
 const description = 'some very very long description';
 const nodes = (
   <Fragment>
-    <p className="oui-textTruncate">.kibana_task_manager</p>
-    <p className="oui-textTruncate">kibana_sample_data_ecommerce</p>
+    <p className="oui-textTruncate">.opensearch_dashboards_task_manager</p>
+    <p className="oui-textTruncate">
+      opensearch_dashboards_sample_data_ecommerce
+    </p>
   </Fragment>
 );
 

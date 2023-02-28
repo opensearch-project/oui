@@ -47,7 +47,7 @@ export default () => (
       size="xl"
       type="alert"
       color="warning"
-      content="I do not think it means what you think it means"
+      content="Proceed with caution"
     />
 
     <OuiSpacer />
