@@ -15,23 +15,22 @@ import { OuiEmptyPrompt, OuiButton } from '../../../../src/components';
 
 export default () => (
   <OuiEmptyPrompt
-    iconType="dataVisualizer"
+    iconType="database"
     iconColor="default"
-    title={<h2>You have no spice</h2>}
+    title={<h2>No data available</h2>}
     titleSize="xs"
     body={
       <Fragment>
         <p>
-          Navigators use massive amounts of spice to gain a limited form of
-          prescience. This allows them to safely navigate interstellar space,
-          enabling trade and travel throughout the galaxy.
+          Pellentesque habitant morbi tristique senectus et netus et malesuada
+          fames ac turpis egestas. Donec accumsan, nulla sed blandit semper
+          tell&rsquo;us est convallis mauris, eget consequat mi lacus non ante.
         </p>
-        <p>You&rsquo;ll need spice to rule Arrakis, young Atreides.</p>
       </Fragment>
     }
     actions={
       <OuiButton size="s" color="primary" fill>
-        Harvest spice
+        Connect to a data source
       </OuiButton>
     }
   />

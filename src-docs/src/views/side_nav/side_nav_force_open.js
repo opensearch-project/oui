@@ -11,7 +11,7 @@
 
 import React, { useState } from 'react';
 
-import { OuiIcon, OuiSideNav } from '../../../../src/components';
+import { OuiSideNav } from '../../../../src/components';
 
 export default () => {
   const [isSideNavOpenOnMobile, setIsSideNavOpenOnMobile] = useState(false);
@@ -38,9 +38,8 @@ export default () => {
 
   const sideNav = [
     {
-      name: 'Kibana',
-      id: 'Kibana',
-      icon: <OuiIcon type="logoKibana" />,
+      name: 'OpenSearch Dashboards',
+      id: 'OpenSearch Dashboards',
       items: [
         createItem('Has normal children', {
           items: [

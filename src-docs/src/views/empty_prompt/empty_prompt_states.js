@@ -52,7 +52,7 @@ export default () => {
       break;
     case 'empty':
       emptyPromptProps = {
-        iconType: 'dashboardApp',
+        iconType: 'visAreaStacked',
         iconColor: 'default',
         title: <h2>Dashboards</h2>,
         body: <p>You don&apos;t have any dashboards yet.</p>,
@@ -66,7 +66,7 @@ export default () => {
 
     default:
       emptyPromptProps = {
-        icon: <OuiLoadingLogo logo="logoKibana" size="xl" />,
+        icon: <OuiLoadingLogo logo="visPie" size="xl" />,
         title: <h2>Loading Dashboards</h2>,
       };
       break;
