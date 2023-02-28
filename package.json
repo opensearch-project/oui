@@ -75,7 +75,7 @@
     "**/@miksu/prettier/minimatch": "^3.0.8",
     "**/request/qs": "^6.11.0",
     "nodegit/ramda": "^0.27.1",
-    "**/make-fetch-happen/http-cache-semantics": "^4.0.0"
+    "**/make-fetch-happen/http-cache-semantics": "^4.1.1"
   },
   "pre-commit": [
     "test-staged"
