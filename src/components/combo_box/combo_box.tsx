@@ -70,6 +70,7 @@ import AutosizeInput from 'react-input-autosize';
 import { CommonProps } from '../common';
 import { OuiFormControlLayoutProps } from '../form';
 import { getElementZIndex } from '../../services/popover';
+import { IconType } from '../icon';
 
 type DrillProps<T> = Pick<
   OuiComboBoxOptionsListProps<T>,
@@ -98,6 +99,7 @@ export interface _OuiComboBoxProps<T>
    * When `true` expands to the entire width available
    */
   fullWidth: boolean;
+  icon?: IconType | boolean;
   id?: string;
   inputRef?: RefCallback<HTMLInputElement>;
   /**
@@ -924,6 +926,7 @@ export class OuiComboBox<T> extends Component<
       compressed,
       customOptionText,
       fullWidth,
+      icon,
       id,
       inputRef,
       isClearable,
@@ -1051,6 +1054,7 @@ export class OuiComboBox<T> extends Component<
           }
           fullWidth={fullWidth}
           hasSelectedOptions={selectedOptions.length > 0}
+          icon={icon}
           id={id}
           inputRef={this.searchInputRefCallback}
           isDisabled={isDisabled}
