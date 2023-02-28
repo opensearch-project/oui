@@ -87,10 +87,10 @@ If a component has subcomponents (`<OuiToolBar>` and `<OuiToolBarSearch>`), tigh
 Refer to the [SASS page][sass] of our documentation site for a guide to writing styles.
 
 [component-design]: component-design.md
-[docs]: https://elastic.github.io/eui/
+[docs]: https://oui.opensearch.org/1.0/#/
 [docs-yeoman]: creating-components-yeoman.md
 [docs-manual]: creating-components-manually.md
-[sass]: https://elastic.github.io/eui/#/guidelines/sass
+[sass]: https://oui.opensearch.org/1.0/#/guidelines/sass
 
 ## TypeScript definitions
 
@@ -191,7 +191,7 @@ MyComponent.displayName = 'MyComponent';
 
 #### Providing custom or additional data 
 
-Rarely, a component's ref needs to be something other than a DOM element, or provide additional information. In these cases, React's `useImperativeHandle` can be used to provide a custom object as the ref's value. For example, **OuiMarkdownEditor**'s ref includes both its textarea element and the `replaceNode` method to interact with the abstract syntax tree. https://github.com/elastic/eui/blob/v31.10.0/src/components/markdown_editor/markdown_editor.tsx#L331
+Rarely, a component's ref needs to be something other than a DOM element, or provide additional information. In these cases, React's `useImperativeHandle` can be used to provide a custom object as the ref's value. For example, **OuiMarkdownEditor**'s ref includes both its textarea element and the `replaceNode` method to interact with the abstract syntax tree. https://github.com/opensearch-project/oui/blob/main/src/components/markdown_editor/markdown_editor.tsx#L342
 
 ```ts
 import React, { useImperativeHandle } from 'react';
