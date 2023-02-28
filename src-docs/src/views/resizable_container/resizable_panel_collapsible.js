@@ -48,7 +48,7 @@ export default () => {
     },
     {
       id: 4,
-      label: 'Forth item',
+      label: 'Fourth item',
       text: texts[3],
     },
   ];
@@ -60,6 +60,7 @@ export default () => {
       onClick={() => setItemSelected(item)}
       label={item.label}
       size="s"
+      isActive={item.id === itemSelected.id}
     />
   ));
 

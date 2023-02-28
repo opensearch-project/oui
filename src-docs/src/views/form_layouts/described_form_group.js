@@ -39,7 +39,7 @@ export default () => {
           <Fragment>
             A single text field that can be used to display additional text. It
             can have{' '}
-            <OuiLink href="http://www.elastic.co" target="_blank">
+            <OuiLink href="https://opensearch.org/docs/latest/" target="_blank">
               links
             </OuiLink>{' '}
             or any other type of content.

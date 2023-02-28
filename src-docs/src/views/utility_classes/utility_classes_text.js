@@ -20,7 +20,7 @@ import {
 import { UtilityClassesSection } from './utility_classes_section';
 
 const longLink =
-  'http://www.hithereimalongurl.com/dave_will_just_ramble_on_in_a_long_sentence_like_this/?ok=cool';
+  'https://playground.opensearch.org/app/dashboards#/list?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))';
 
 const wrappingExampleStyle = {
   background: 'rgba(254, 228, 181, 0.5)',

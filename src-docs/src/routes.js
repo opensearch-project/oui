@@ -23,13 +23,9 @@ import { playgroundCreator } from './services/playground';
 // Guidelines
 // const GettingStarted = require('!!raw-loader!./views/guidelines/getting_started.md');
 
-import AccessibilityGuidelines from './views/guidelines/accessibility';
-
 import ColorGuidelines from './views/guidelines/colors';
 
 import { SassGuidelines } from './views/guidelines/sass';
-
-import WritingGuidelines from './views/guidelines/writing';
 
 // Services
 
@@ -257,6 +253,7 @@ const createExample = (example, customTitle) => {
     intro,
     sections,
     beta,
+    isExperimental,
     isNew,
     playground,
     guidelines,
@@ -288,6 +285,7 @@ const createExample = (example, customTitle) => {
         title={title}
         intro={intro}
         isBeta={beta}
+        isExperimental={isExperimental}
         playground={playgroundComponent}
         guidelines={guidelines}>
         {renderedSections}
@@ -332,7 +330,6 @@ const navigation = [
     items: [
       // TODO uncomment when OuiMarkdownFormat has a better text formatting
       // createMarkdownExample(GettingStarted, 'Getting started'),
-      createExample(AccessibilityGuidelines, 'Accessibility'),
       {
         name: 'Colors',
         component: ColorGuidelines,
@@ -341,7 +338,6 @@ const navigation = [
         name: 'Sass',
         component: SassGuidelines,
       },
-      createExample(WritingGuidelines, 'Writing'),
     ],
   },
   {

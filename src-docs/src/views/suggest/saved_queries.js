@@ -120,7 +120,7 @@ export default () => {
     console.log(dateRange);
   };
 
-  const append = <OuiButtonEmpty>KQL</OuiButtonEmpty>;
+  const append = <OuiButtonEmpty>DQL</OuiButtonEmpty>;
 
   return (
     <div className="savedQueriesInput">
