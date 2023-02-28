@@ -10,8 +10,6 @@
  */
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-
 import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
@@ -106,10 +104,9 @@ export const ColorPaletteExample = {
             demographic-based data sets.
           </p>
           <p>
-            OUI provides the following common palettes for quantitative data and{' '}
-            <Link to="/elastic-charts/creating-charts">charts</Link>. Just pass
-            in the number of steps needed and the function will interpolate
-            between the colors.
+            OUI provides the following common palettes for quantitative data and
+            charts. Just pass in the number of steps needed and the function
+            will interpolate between the colors.
           </p>
           <OuiCallOut
             color="warning"

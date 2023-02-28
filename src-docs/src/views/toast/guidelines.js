@@ -138,7 +138,7 @@ and space to read it properly. Alternatively just link to a full page.
           <OuiFlexItem grow={false} style={{ minWidth: 120 }}>
             <OuiToast
               style={{ width: 300 }}
-              title="Search failed.  Check your Elasticsearch connection."
+              title="Search failed. Check your connection to the cluster."
               color="danger"
             />
           </OuiFlexItem>

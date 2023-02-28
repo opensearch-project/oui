@@ -19,7 +19,7 @@ yarn add @opensearch-project/oui @elastic/datemath moment prop-types
 
 We depend upon the version of node defined in [.nvmrc](.nvmrc).
 
-You will probably want to install a node version manager. [nvm](https://github.com/creationix/nvm) is recommended.
+We recommend installing a node version manager: [nvm](https://github.com/nvm-sh/nvm) is recommended.
 
 To install and use the correct node version with `nvm`:
 
@@ -29,7 +29,7 @@ nvm install
 
 ### Documentation
 
-You can run the documentation locally at [http://localhost:8030/](http://localhost:8030/) by running the following.
+You can run the documentation locally at [http://localhost:8030/](http://localhost:8030/) by running the following:
 
 ```js
 yarn
@@ -49,11 +49,9 @@ OUI also has `moment` and `@elastic/datemath` as dependencies itself. These are 
 
 ## What's available
 
-OUI publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [OpenSearch UI Framework website](https://elastic.github.io/eui) for comprehensive info on what's available.
+OUI publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [OpenSearch UI Framework website](https://oui.opensearch.org) for comprehensive info on what's available.
 
-OUI is published through [NPM](https://www.npmjs.com/package/@opensearch-project/oui) as a dependency. We also provide a starter projects for:
-- [GatsbyJS](https://github.com/elastic/gatsby-oui-starter)
-- [NextJS](https://github.com/elastic/next-oui-starter)
+OUI is published through [NPM](https://www.npmjs.com/package/@opensearch-project/oui) as a dependency.
 
 ### Components
 
@@ -100,12 +98,6 @@ Other compiled themes include:
 ```js
 import '@opensearch-project/oui/dist/oui_theme_dark.css';
 ```
-```js
-import '@opensearch-project/oui/dist/oui_theme_cascadia_light.css';
-```
-```js
-import '@opensearch-project/oui/dist/oui_theme_cascadia_dark.css';
-```
 
 ### Using our Sass variables on top of compiled CSS
 
@@ -123,13 +115,6 @@ For the dark theme, swap the first import for the dark colors file.
 ```scss
 @import '@opensearch-project/oui/src/themes/oui/oui_colors_dark.scss';
 @import '@opensearch-project/oui/src/themes/oui/oui_globals.scss';
-```
-
-If you want to use the new, but in progress Cascadia theme, you can import it similarly.
-
-```scss
-@import '@opensearch-project/oui/src/themes/oui-cascadia/oui_cascadia_colors_light.scss';
-@import '@opensearch-project/oui/src/themes/oui-cascadia/oui_cascadia_globals.scss';
 ```
 
 ### Using Sass to customize OUI
@@ -155,13 +140,6 @@ By default, OUI ships with a font stack that includes some outside, open source 
 // index.scss
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i');
 @import url('https://rsms.me/inter/inter-ui.css');
-```
-
-The Cascadia theme uses the latest version of Inter that can be grabbed from Google Fonts as well.
-
-```scss
-// index.scss
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 ```
 
 ### Reusing the variables in JavaScript
@@ -221,11 +199,11 @@ We do not recommend customizing OUI components by applying styles directly to OU
 
 ## Using the test environment build
 
-OUI provides a separate babel-transformed and partially mocked commonjs build for testing environments in consuming projects. The output is identical to that of `lib/`, but has transformed async functions and dynamic import statements, and also applies some useful mocks. This build mainly targets Kibana's Jest environment, but may be helpful for testing environments in other projects.
+OUI provides a separate babel-transformed and partially mocked commonjs build for testing environments in consuming projects. The output is identical to that of `lib/`, but has transformed async functions and dynamic import statements, and also applies some useful mocks. This build mainly targets OpenSearch Dashboards Jest environment, but may be helpful for testing environments in other projects.
 
 ### Mapping to the `test-env` directory
 
-In Kibana's Jest configuration, the `moduleNameMapper` option is used to resolve standard OUI import statements with `test-env` aliases.
+In OpenSearch Dashboards Jest configuration, the `moduleNameMapper` option is used to resolve standard OUI import statements with `test-env` aliases.
 
 ```js
 moduleNameMapper: {

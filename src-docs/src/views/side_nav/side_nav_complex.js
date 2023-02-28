@@ -38,48 +38,56 @@ export default () => {
   };
 
   const sideNav = [
-    createItem('Elasticsearch', {
+    createItem('OpenSearch', {
       onClick: undefined,
-      icon: <OuiIcon type="logoElasticsearch" />,
       items: [
-        createItem('Data sources'),
-        createItem('Users'),
-        createItem('Roles'),
-        createItem('Watches'),
-        createItem(
-          'Extremely long title will become truncated when the browser is narrow enough'
-        ),
-      ],
-    }),
-    createItem('Kibana', {
-      onClick: undefined,
-      icon: <OuiIcon type="logoKibana" />,
-      items: [
-        createItem('Advanced settings', {
+        createItem('Discover'),
+        createItem('Dashboard'),
+        createItem('Visualize'),
+        createItem('Stack Management', {
           items: [
-            createItem('General', { disabled: true }),
-            createItem('Timelion', {
+            createItem('Index Pattern'),
+            createItem('Data Sources'),
+            createItem('Discover'),
+            createItem('Advanced settings', {
               items: [
-                createItem('Time stuff', {
-                  icon: <OuiIcon type="clock" />,
+                createItem('General', {
+                  icon: <OuiIcon type="gear" />,
                 }),
-                createItem('Lion stuff', {
-                  icon: <OuiIcon type="stats" />,
+                createItem('Accessibility', {
+                  icon: <OuiIcon type="accessibility" />,
+                }),
+                createItem('Discover', {
+                  icon: <OuiIcon type="discoverApp" />,
+                }),
+                createItem('Notifications', {
+                  icon: <OuiIcon type="bell" />,
+                }),
+                createItem('Search', {
+                  icon: <OuiIcon type="search" />,
+                }),
+                createItem('Timeline', {
+                  icon: <OuiIcon type="timeline" />,
+                }),
+                createItem('Visualizations', {
+                  icon: <OuiIcon type="visArea" />,
                 }),
               ],
             }),
-            createItem('Visualizations'),
+            createItem('Saved Objects'),
           ],
         }),
-        createItem('Index Patterns'),
-        createItem('Saved Objects'),
-        createItem('Reporting'),
       ],
     }),
-    createItem('Logstash', {
-      onClick: undefined,
-      icon: <OuiIcon type="logoLogstash" />,
-      items: [createItem('Pipeline viewer')],
+    createItem('Observability', {
+      items: [
+        createItem('Application analytics'),
+        createItem('Trace analytics'),
+        createItem('Event analytics'),
+        createItem('Metrics analytics'),
+        createItem('Operational panels'),
+        createItem('Notebooks'),
+      ],
     }),
   ];
 

@@ -12,128 +12,89 @@
 import React from 'react';
 
 import { OuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
-import { OuiText } from '../../../../src/components/text';
 import {
   OuiListGroup,
-  OuiListGroupProps,
-  OuiPinnableListGroup,
-  OuiPinnableListGroupItemProps,
+  OuiListGroupItemProps,
 } from '../../../../src/components/list_group';
-import { OuiSpacer } from '../../../../src/components/spacer';
-import { OuiButton, OuiButtonIcon } from '../../../../src/components/button';
-import { OuiLink } from '../../../../src/components/link';
 
-const deploymentsList: OuiListGroupProps['listItems'] = [
-  {
-    label: 'combining-binaries',
-    iconType: 'logoAzureMono',
-    size: 's',
-  },
-  {
-    label: 'stack-monitoring',
-    iconType: 'logoAWSMono',
-    size: 's',
-  },
-];
-
-export const TopNavLinks: OuiPinnableListGroupItemProps[] = [
-  {
-    label: 'Home',
-    iconType: 'home',
-    isActive: true,
-    pinnable: false,
-  },
-  { label: 'Dashboards', pinned: true },
-  { label: 'Dev tools', pinned: true },
-  { label: 'Maps', pinned: true },
-];
-
-export const KibanaNavLinks: OuiPinnableListGroupItemProps[] = [
+export const OpenSearchDashboardsLinks: OuiListGroupItemProps[] = [
+  { label: 'Overview' },
   { label: 'Discover' },
+  { label: 'Dashboard' },
   { label: 'Visualize' },
-  { label: 'Dashboards' },
-  { label: 'Canvas' },
-  { label: 'Maps' },
-  { label: 'Machine Learning' },
-  { label: 'Graph' },
-];
+].map((link) => {
+  return {
+    ...link,
+    onClick: () => {},
+  };
+});
 
-export const DeploymentsGroup = (
-  <OuiCollapsibleNavGroup
-    title={
-      <span>
-        <small style={{ fontWeight: 'normal' }}>Deployment</small> <br />
-        <strong>personal-databoard</strong>
-      </span>
-    }
-    iconType="logoGCPMono"
-    iconSize="xl"
-    isCollapsible={true}
-    initialIsOpen={false}
-    background="dark">
-    <div role="group" className="kibanaNavDeployment__content">
-      <OuiListGroup listItems={deploymentsList} flush />
-      <OuiSpacer size="s" />
-      <OuiButton color="ghost" fullWidth>
-        Manage deployments
-      </OuiButton>
-    </div>
-  </OuiCollapsibleNavGroup>
-);
+export const OpenSearchPluginLinks: OuiListGroupItemProps[] = [
+  { label: 'Query Workbench' },
+  { label: 'Reporting' },
+  { label: 'Alerting' },
+  { label: 'Anomaly Detection' },
+  { label: 'Notification' },
+  { label: 'Observability' },
+  { label: 'Security Analytics' },
+  { label: 'Index Management' },
+  { label: 'Search Relevance' },
+].map((link) => {
+  return {
+    ...link,
+    onClick: () => {},
+  };
+});
 
-export const SecurityGroup = (
-  <OuiCollapsibleNavGroup
-    background="light"
-    iconType="logoSecurity"
-    title="Elastic Security"
-    isCollapsible={true}
-    initialIsOpen={true}
-    arrowDisplay="none"
-    extraAction={
-      <OuiButtonIcon
-        aria-label="Hide and never show again"
-        title="Hide and never show again"
-        iconType="cross"
-      />
-    }>
-    <OuiText size="s" color="subdued" style={{ padding: '0 8px 8px' }}>
-      <p>
-        Threat prevention, detection, and response with SIEM and endpoint
-        security.
-        <br />
-        <OuiLink>Learn more</OuiLink>
-      </p>
-    </OuiText>
-  </OuiCollapsibleNavGroup>
-);
+export const ManagementLinks: OuiListGroupItemProps[] = [
+  { label: 'Dev Tools' },
+  { label: 'Stack Management' },
+].map((link) => {
+  return {
+    ...link,
+    onClick: () => {},
+  };
+});
 
 export default () => (
   <>
-    {DeploymentsGroup}
-    <OuiCollapsibleNavGroup background="light">
-      <OuiPinnableListGroup
-        listItems={TopNavLinks}
-        onPinClick={() => {}}
-        maxWidth="none"
-        color="text"
-        gutterSize="none"
-        size="s"
-      />
-    </OuiCollapsibleNavGroup>
     <OuiCollapsibleNavGroup
-      title="Kibana"
-      iconType="logoKibana"
+      title="OpenSearch Dashboards"
+      iconType="logoOpenSearch"
       isCollapsible={true}
       initialIsOpen={true}>
-      <OuiPinnableListGroup
-        listItems={KibanaNavLinks}
-        onPinClick={() => {}}
+      <OuiListGroup
+        listItems={OpenSearchDashboardsLinks}
         maxWidth="none"
         color="subdued"
         gutterSize="none"
         size="s"
       />
     </OuiCollapsibleNavGroup>
-    {SecurityGroup}
+    <OuiCollapsibleNavGroup
+      title="OpenSearch Plugins"
+      isCollapsible={true}
+      initialIsOpen={true}>
+      <OuiListGroup
+        listItems={OpenSearchPluginLinks}
+        maxWidth="none"
+        color="subdued"
+        gutterSize="none"
+        size="s"
+      />
+    </OuiCollapsibleNavGroup>
+    <OuiCollapsibleNavGroup
+      title="Management"
+      iconType="gear"
+      isCollapsible={true}
+      initialIsOpen={true}>
+      <OuiListGroup
+        listItems={ManagementLinks}
+        maxWidth="none"
+        color="subdued"
+        gutterSize="none"
+        size="s"
+      />
+    </OuiCollapsibleNavGroup>
   </>
 );
