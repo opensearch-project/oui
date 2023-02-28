@@ -64,14 +64,14 @@ This will create a `.tgz` file with the changes in your OUI directory. At this p
 
 #### In OpenSearch Dashboards:
 
-Point the `package.json` file in OpenSearch Dashboards to that file: `"@opensearch-project/oui": "/path/to/elastic-oui-xx.x.x.tgz"`. Then run the following commands at OpenSearch Dashboards root folder:
+Point the `package.json` file in OpenSearch Dashboards to that file: `"@opensearch-project/oui": "/path/to/opensearch-project-oui-xx.x.x.tgz"`. Then run the following commands at OpenSearch Dashboards root folder:
 
 ```bash
 yarn osd bootstrap --no-validate && cd packages/osd-ui-shared-deps/ && yarn osd:bootstrap && cd ../../ && FORCE_DLL_CREATION=true node scripts/osd --dev
 ```
 
 * The `--no-validate` flag is required when bootstrapping with a `.tgz`.
-  * Change the name of the `.tgz` after subsequent `yarn build` and `npm pack` steps (e.g., `elastic-oui-xx.x.x-1.tgz`, `elastic-oui-xx.x.x-2.tgz`). This is required for `yarn` to recognize new changes to the package.
+  * Change the name of the `.tgz` after subsequent `yarn build` and `npm pack` steps (e.g., `opensearch-project-oui-xx.x.x-1.tgz`, `opensearch-project-oui-xx.x.x-2.tgz`). This is required for `yarn` to recognize new changes to the package.
 * Running `yarn osd:bootstrap` inside of `OpenSearch-Dashboards/packages/osd-ui-shared-deps/` rebuilds OpenSearch Dashboards shared-ui-deps.
 * Running OpenSearch Dashboards with `FORCE_DLL_CREATION=true node scripts/osd --dev` ensures it doesn't use a previously cached version of OUI.
 
