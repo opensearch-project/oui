@@ -166,6 +166,10 @@ export interface _OuiComboBoxProps<T>
    * Specifies that the input should have focus when the component loads
    */
   autoFocus?: boolean;
+  /**
+   * When `true` clears the input text when user focus out of the input box
+   */
+  clearOnBlur?: boolean;
 }
 
 /**
@@ -466,9 +470,19 @@ export class OuiComboBox<T> extends Component<
       options,
       selectedOptions,
       singleSelection,
+      clearOnBlur,
     } = this.props;
-
     const { matchingOptions } = this.state;
+
+    const { hasFocus, isListOpen } = this.state;
+    if (
+      clearOnBlur &&
+      searchValue &&
+      (hasFocus === false || isListOpen === false)
+    ) {
+      this.clearSearchValue();
+      return;
+    }
 
     if (this.doesSearchMatchOnlyOption()) {
       this.onAddOption(matchingOptions[0], isContainerBlur);
