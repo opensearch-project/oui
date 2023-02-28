@@ -19,35 +19,37 @@ import {
   OuiDescriptionListDescription,
 } from '../../../../src/components';
 
-const favoriteVideoGames = [
+const list = [
   {
-    title: 'The Elder Scrolls: Morrowind',
-    description: 'The opening music alone evokes such strong memories.',
-  },
-  {
-    title: 'TIE Fighter',
+    title: 'Item 1',
     description:
-      'The sequel to XWING, join the dark side and fly for the Emporer.',
+      'Aliqua reprehenderit voluptate laborum sit irure proident veniam sint laborum amet elit.',
   },
   {
-    title: 'Quake 2',
-    description: 'The game that made me drop out of college.',
+    title: 'Item 2',
+    description:
+      'Officia nostrud pariatur sint pariatur ea esse non ea tempor laboris sint.',
+  },
+  {
+    title: 'Item 3',
+    description: 'Qui ea duis veniam nisi commodo laborum.',
   },
 ];
 export default () => (
   <OuiFlexGroup>
     <OuiFlexItem>
-      <OuiDescriptionList listItems={favoriteVideoGames} />
+      <OuiDescriptionList listItems={list} />
     </OuiFlexItem>
     <OuiFlexItem>
       <OuiDescriptionList>
-        <OuiDescriptionListTitle>Dota 2</OuiDescriptionListTitle>
+        <OuiDescriptionListTitle>List item 1</OuiDescriptionListTitle>
         <OuiDescriptionListDescription>
-          A videogame that I have spent way too much time on over the years.
+          Voluptate aliqua officia excepteur labore anim non aute tempor id
+          commodo pariatur exercitation sunt.
         </OuiDescriptionListDescription>
-        <OuiDescriptionListTitle>Kings Quest VI</OuiDescriptionListTitle>
+        <OuiDescriptionListTitle>List item 2</OuiDescriptionListTitle>
         <OuiDescriptionListDescription>
-          The game that forced me to learn DOS.
+          Sunt mollit commodo do occaecat do dolor.
         </OuiDescriptionListDescription>
       </OuiDescriptionList>
     </OuiFlexItem>
