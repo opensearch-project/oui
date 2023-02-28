@@ -57,7 +57,7 @@ export default () => (
     <OuiSpacer size="s" />
     <OuiAspectRatio width={220} height={150} maxWidth={500}>
       <iframe
-        src="https://app.stitcher.com/splayer/f/13377/54057816"
+        src="https://www.youtube.com/embed/yO96yqpcycY"
         title="something"
         frameBorder="0"
         scrolling="no"

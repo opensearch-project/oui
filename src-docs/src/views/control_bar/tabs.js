@@ -26,7 +26,7 @@ export default () => {
     setVisibility(true);
 
     setTabContent(
-      "Oceanic Airlines Flight 815 was a scheduled flight from Sydney, Australia to Los Angeles, California, United States, on a Boeing 777-200ER. On September 22, 2004 at 4:16 P.M., the airliner, carrying 324 passengers, deviated from its original course and disappeared over the Pacific Ocean. This is the central moment in the series that kicked off its plotline, and marked the chronological beginning of the main characters' adventures on the Island."
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     );
   };
 
@@ -34,7 +34,7 @@ export default () => {
     setVisibility(true);
 
     setTabContent(
-      'The Others, referred to by the DHARMA Initiative as the Hostiles or the Natives, and also by the tail section survivors of Oceanic Flight 815 as Them, are a group of people living on the Island who were followers of Jacob, intermediated by Richard Alpert. Jacob never showed himself to his people, and they took orders from a succession of leaders including Eloise Hawking, Charles Widmore, Benjamin Linus, and briefly, John Locke.'
+      'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.'
     );
   };
 
@@ -47,20 +47,20 @@ export default () => {
   const controls = [
     {
       controlType: 'tab',
-      id: 'flight_815',
-      label: 'Flight 815',
+      id: 'tab_1',
+      label: 'Tab 1',
       onClick: tabOne,
     },
     {
       controlType: 'tab',
-      id: 'the_others',
-      label: 'The Others',
+      id: 'tab_2',
+      label: 'Tab 2',
       onClick: tabTwo,
     },
     {
       controlType: 'button',
-      id: 'sound_the_alarm',
-      label: 'Sound the Alarm',
+      id: 'notifications',
+      label: 'Notifications',
       onClick: () => {},
       color: 'danger',
       iconType: 'bell',
@@ -68,22 +68,12 @@ export default () => {
     },
     {
       controlType: 'button',
-      id: 'close_the_hatch',
-      label: 'Close the Hatch',
+      id: 'close',
+      label: 'Close',
       fill: true,
       onClick: closeTheHatch,
       className: 'customClassName',
       color: 'primary',
-    },
-    {
-      controlType: 'spacer',
-    },
-    {
-      controlType: 'icon',
-      id: 'set_the_timer',
-      iconType: 'clock',
-      onClick: closeTheHatch,
-      'aria-label': 'Set the Timer',
     },
   ];
 
