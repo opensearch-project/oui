@@ -29,15 +29,15 @@ const descriptionListSnippet = [
   `<OuiDescriptionList
   listItems={[
     {
-      title: 'The Elder Scrolls: Morrowind',
-      description: 'The opening music alone evokes such strong memories.',
+      title: 'List item 1',
+      description: 'Minim consectetur irure ullamco magna et veniam deserunt veniam do eiusmod.',
     },
   ]}
 />`,
   `<OuiDescriptionList>
-  <OuiDescriptionListTitle>Dota 2</OuiDescriptionListTitle>
+  <OuiDescriptionListTitle>Item 2</OuiDescriptionListTitle>
   <OuiDescriptionListDescription>
-    A videogame that I have spent way too much time on over the years.
+    Irure do elit elit sint ex excepteur nisi.
   </OuiDescriptionListDescription>
 </OuiDescriptionList>`,
 ];
@@ -48,11 +48,11 @@ const descriptionListColumnHtml = renderToHtml(DescriptionListColumn);
 const descriptionListColumnSnippet = [
   `<OuiDescriptionList
   type="column"
-  listItems={favoriteVideoGames}
+  listItems={list}
 />`,
   `<OuiDescriptionList
   type="responsiveColumn"
-  listItems={favoriteVideoGames}
+  listItems={list}
 />`,
 ];
 
@@ -61,7 +61,7 @@ const descriptionListStylingSource = require('!!raw-loader!./description_list_st
 const descriptionListStylingHtml = renderToHtml(DescriptionListStyling);
 const descriptionListStylingSnippet = [
   `<OuiDescriptionList
-  listItems={favoriteVideoGames}
+  listItems={list}
   align="center"
   compressed
 />`,
@@ -73,7 +73,7 @@ const descriptionListInlineHtml = renderToHtml(DescriptionListInline);
 const descriptionListInlineSnippet = [
   `<OuiDescriptionList
   type="inline"
-  listItems={favoriteVideoGames}
+  listItems={list}
 />`,
 ];
 
@@ -83,7 +83,7 @@ const descriptionListReverseHtml = renderToHtml(DescriptionListReverse);
 const descriptionListReverseSnippet = [
   `<OuiDescriptionList
   textStyle="reverse"
-  listItems={favoriteVideoGames}
+  listItems={list}
 />`,
 ];
 
@@ -94,7 +94,7 @@ const descriptionListClassesSnippet = [
   `<OuiDescriptionList
   titleProps={{ className: 'oui-textTruncate' }}
   descriptionProps={{ className: 'oui-textTruncate' }}
-  listItems={favoriteVideoGames}
+  listItems={list}
 />`,
 ];
 
