@@ -23,10 +23,7 @@ import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
 const body = (
   <OuiText size="s">
     <p>
-      Irure non eiusmod minim id aliqua esse proident veniam cillum amet. Est
-      nulla ea amet culpa. Non tempor magna eiusmod ex eu anim. Commodo nulla
-      nisi et et nisi elit sit. Do veniam occaecat proident qui proident et
-      occaecat.
+      Quisque a nisi lacinia, ultrices ipsum sed, tempor odio. Nulla facilisi.
     </p>
   </OuiText>
 );
@@ -64,10 +61,10 @@ const complexUsername = (
 const longBody = (
   <OuiText size="s">
     <p>
-      Irure veniam mollit elit esse proident ex tempor ad Lorem pariatur.
-      Incididunt enim cillum in occaecat esse pariatur veniam proident aute.
-      Reprehenderit quis nulla labore velit ipsum duis exercitation cupidatat
-      cupidatat deserunt ut magna duis nulla.
+      Mauris mauris orci, volutpat id blandit eu, sodales a quam. In convallis
+      pulvinar sollicitudin. Vivamus luctus sed mauris quis tincidunt. Nunc at
+      congue metus, vitae tincidunt ligula. In finibus nisi non mollis
+      convallis.
     </p>
   </OuiText>
 );

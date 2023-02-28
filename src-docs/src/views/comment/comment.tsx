@@ -17,13 +17,7 @@ import { OuiText } from '../../../../src/components/text';
 const body = (
   <OuiText size="s">
     <p>
-      Officia tempor minim dolore adipisicing non irure irure consectetur
-      pariatur. Consequat occaecat cillum et et pariatur. Officia dolore
-      reprehenderit sint aute ut cupidatat consectetur nulla nostrud incididunt
-      pariatur nulla velit ut. Minim quis adipisicing non minim. Ullamco elit
-      dolore enim Lorem proident do exercitation aute laboris. Eu aliqua labore
-      enim minim deserunt dolor. Nisi labore occaecat mollit mollit irure
-      reprehenderit.
+      Quisque a nisi lacinia, ultrices ipsum sed, tempor odio. Nulla facilisi.
     </p>
   </OuiText>
 );
