@@ -24,8 +24,11 @@ export default () => (
         narrow, it will wrap, too.
       </p>
       <p>
-        And some other stuff on another line, just for kicks. And{' '}
-        <OuiLink href="#">here&rsquo;s a link</OuiLink>.
+        When possible, its recommended to include links to product{' '}
+        <OuiLink href="https://opensearch.org/docs/latest/">
+          documentation
+        </OuiLink>
+        .
       </p>
     </OuiCallOut>
 
@@ -33,7 +36,7 @@ export default () => (
 
     <OuiCallOut
       title="Callouts can exist as just a title. Simply omit the child content."
-      iconType="lensApp"
+      iconType="visVisualBuilder"
     />
 
     <OuiSpacer size="m" />
