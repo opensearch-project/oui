@@ -16,7 +16,7 @@ import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
 export default () => (
   <OuiFlexGroup>
     <OuiFlexItem>
-      <OuiButton fill>Buttons will widen</OuiButton>
+      <OuiButton fill>buttons will span</OuiButton>
     </OuiFlexItem>
     <OuiFlexItem>
       <div>
