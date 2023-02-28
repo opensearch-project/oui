@@ -17,8 +17,13 @@ import { OuiText } from '../../../../src/components/text';
 const body = (
   <OuiText size="s">
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Officia tempor minim dolore adipisicing non irure irure consectetur
+      pariatur. Consequat occaecat cillum et et pariatur. Officia dolore
+      reprehenderit sint aute ut cupidatat consectetur nulla nostrud incididunt
+      pariatur nulla velit ut. Minim quis adipisicing non minim. Ullamco elit
+      dolore enim Lorem proident do exercitation aute laboris. Eu aliqua labore
+      enim minim deserunt dolor. Nisi labore occaecat mollit mollit irure
+      reprehenderit.
     </p>
   </OuiText>
 );
