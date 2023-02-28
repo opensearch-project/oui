@@ -16,8 +16,12 @@ import { OuiCallOut, OuiLink, OuiButton } from '../../../../src/components';
 export default () => (
   <OuiCallOut title="Proceed with caution!" color="warning" iconType="help">
     <p>
-      Here be dragons. Don&rsquo;t wanna mess with no dragons. And{' '}
-      <OuiLink href="#">here&rsquo;s a link</OuiLink>.
+      This feature is experimental, and should not be run in production. For
+      more information on this feature, visit{' '}
+      <OuiLink href="https://opensearch.org/docs/latest/">
+        documentation
+      </OuiLink>
+      .
     </p>
     <OuiButton href="#" color="warning">
       Link button
