@@ -22,6 +22,6 @@ export default () => (
       <p>tall</p>
       <p>item</p>
     </OuiFlexItem>
-    <OuiFlexItem>I am vertically centered!</OuiFlexItem>
+    <OuiFlexItem>I am vertically centered</OuiFlexItem>
   </OuiFlexGroup>
 );
