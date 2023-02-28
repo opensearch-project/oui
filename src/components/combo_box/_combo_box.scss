@@ -44,6 +44,10 @@
       max-width: calc(100% - #{$ouiSizeXS * .5} - #{$inputMinWidth});
     }
 
+    .ouiComboBoxIcon {
+      align-self: center;
+    }
+
     &:not(.ouiComboBox__inputWrap--noWrap) {
       padding-top: $ouiSizeXS;
       padding-bottom: $ouiSizeXS;
