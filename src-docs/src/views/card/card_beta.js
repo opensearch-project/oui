@@ -18,15 +18,25 @@ import {
   OuiFlexItem,
 } from '../../../../src/components';
 
-const icons = ['dashboard', 'monitoring'];
-const badges = [null, 'Beta'];
+const badges = [null, 'Experimental'];
 
-const cardNodes = icons.map(function (item, index) {
+const cards = {
+  dashboard: {
+    title: 'Dashboards',
+    icon: 'dashboardApp',
+  },
+  monitoring: {
+    title: 'Discover',
+    icon: 'discoverApp',
+  },
+};
+
+const cardNodes = Object.keys(cards).map(function (item, index) {
   return (
     <OuiFlexItem key={index}>
       <OuiCard
-        icon={<OuiIcon size="xxl" type={`${item}App`} />}
-        title={`Kibana ${item}`}
+        icon={<OuiIcon size="xxl" type={cards[item].icon} />}
+        title={cards[item].title}
         description="Example of a card's description. Stick to one or two sentences."
         betaBadgeLabel={badges[index]}
         betaBadgeTooltipContent={
@@ -40,23 +50,4 @@ const cardNodes = icons.map(function (item, index) {
   );
 });
 
-export default () => (
-  <OuiFlexGroup gutterSize="l">
-    {cardNodes}
-    <OuiFlexItem>
-      <OuiCard
-        icon={<OuiIcon size="xxl" type="lensApp" />}
-        title="Lens"
-        isDisabled
-        description="Disabled cards can have active links using OuiBetaBadge."
-        betaBadgeProps={{
-          href: 'http://www.elastic.co/subscriptions',
-          target: '_blank',
-        }}
-        betaBadgeLabel="Basic"
-        betaBadgeTooltipContent="This feature requires a Basic License"
-        onClick={() => {}}
-      />
-    </OuiFlexItem>
-  </OuiFlexGroup>
-);
+export default () => <OuiFlexGroup gutterSize="l">{cardNodes}</OuiFlexGroup>;

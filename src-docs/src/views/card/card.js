@@ -18,14 +18,31 @@ import {
   OuiFlexItem,
 } from '../../../../src/components';
 
-const icons = ['Beats', 'Cloud', 'Logging', 'Kibana'];
+const cards = {
+  Beats: {
+    title: 'Dashboards',
+    iconType: 'dashboardApp',
+  },
+  Cloud: {
+    title: 'Visualize',
+    iconType: 'visualizeApp',
+  },
+  Logging: {
+    title: 'Discover',
+    iconType: 'discoverApp',
+  },
+  Kibana: {
+    title: 'Search',
+    iconType: 'search',
+  },
+};
 
-const cardNodes = icons.map(function (item, index) {
+const cardNodes = Object.keys(cards).map(function (item, index) {
   return (
     <OuiFlexItem key={index}>
       <OuiCard
-        icon={<OuiIcon size="xxl" type={`logo${item}`} />}
-        title={`Elastic ${item}`}
+        icon={<OuiIcon size="xxl" type={cards[item].iconType} />}
+        title={cards[item].title}
         isDisabled={item === 'Kibana' ? true : false}
         description="Example of a card's description. Stick to one or two sentences."
         onClick={() => {}}

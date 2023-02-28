@@ -19,6 +19,8 @@ import {
   OuiFlexItem,
 } from '../../../../src/components';
 
+import figmaSvg from '../../images/figma.svg';
+
 export default () => {
   const [card1Selected, setCard1] = useState(true);
   const [card2Selected, setCard2] = useState(false);
@@ -79,8 +81,8 @@ export default () => {
       </OuiFlexItem>
       <OuiFlexItem>
         <OuiCard
-          icon={<OuiIcon size="xxl" type="logoAerospike" />}
-          title="Not Adobe"
+          icon={<OuiIcon size="xxl" type={figmaSvg} />}
+          title="Figma"
           description="Example of a short card description."
           footer={
             <OuiButtonEmpty
