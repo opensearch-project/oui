@@ -23,18 +23,20 @@ export default () => (
   <Fragment>
     <OuiFlexGroup gutterSize="s" alignItems="center">
       <OuiFlexItem grow={false}>
-        <OuiButton href="http://www.elastic.co">Link to elastic.co</OuiButton>
+        <OuiButton href="https://opensearch.org/">
+          Link to OpenSearch.org
+        </OuiButton>
       </OuiFlexItem>
 
       <OuiFlexItem grow={false}>
-        <OuiButtonEmpty href="http://www.elastic.co">
-          Link to elastic.co
+        <OuiButtonEmpty href="https://opensearch.org/">
+          Link to OpenSearch.org
         </OuiButtonEmpty>
       </OuiFlexItem>
 
       <OuiFlexItem grow={false}>
         <OuiButtonIcon
-          href="http://www.elastic.co"
+          href="https://opensearch.org/"
           iconType="link"
           aria-label="This is a link"
         />
@@ -43,20 +45,20 @@ export default () => (
 
     <OuiFlexGroup gutterSize="s" alignItems="center">
       <OuiFlexItem grow={false}>
-        <OuiButton href="http://www.elastic.co" isDisabled>
+        <OuiButton href="https://opensearch.org/" isDisabled>
           Disabled link
         </OuiButton>
       </OuiFlexItem>
 
       <OuiFlexItem grow={false}>
-        <OuiButtonEmpty href="http://www.elastic.co" isDisabled>
+        <OuiButtonEmpty href="https://opensearch.org/" isDisabled>
           Disabled empty link
         </OuiButtonEmpty>
       </OuiFlexItem>
 
       <OuiFlexItem grow={false}>
         <OuiButtonIcon
-          href="http://www.elastic.co"
+          href="https://opensearch.org/"
           iconType="link"
           aria-label="This is a link"
           isDisabled
