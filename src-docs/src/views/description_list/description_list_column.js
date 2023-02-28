@@ -17,26 +17,27 @@ import {
   OuiTitle,
 } from '../../../../src/components';
 
-const favoriteVideoGames = [
+const list = [
   {
-    title: 'The Elder Scrolls: Morrowind',
-    description: 'The opening music alone evokes such strong memories.',
-  },
-  {
-    title: 'TIE Fighter',
+    title: 'Item 1',
     description:
-      'The sequel to XWING, join the dark side and fly for the Emporer.',
+      'Aliqua reprehenderit voluptate laborum sit irure proident veniam sint laborum amet elit.',
   },
   {
-    title: 'Quake 2',
-    description: 'The game that made me drop out of college.',
+    title: 'Item 2',
+    description:
+      'Officia nostrud pariatur sint pariatur ea esse non ea tempor laboris sint.',
+  },
+  {
+    title: 'Item 3',
+    description: 'Qui ea duis veniam nisi commodo laborum.',
   },
 ];
 export default () => (
   <Fragment>
     <OuiDescriptionList
       type="column"
-      listItems={favoriteVideoGames}
+      listItems={list}
       style={{ maxWidth: '400px' }}
     />
 
@@ -52,7 +53,7 @@ export default () => (
 
     <OuiDescriptionList
       type="responsiveColumn"
-      listItems={favoriteVideoGames}
+      listItems={list}
       style={{ maxWidth: '400px' }}
     />
   </Fragment>

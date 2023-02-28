@@ -28,7 +28,6 @@ export default () => (
         <OuiResizablePanel initialSize={50} minSize="30%">
           <OuiText>
             <div>{text}</div>
-            <a href="">Hello world</a>
           </OuiText>
         </OuiResizablePanel>
 

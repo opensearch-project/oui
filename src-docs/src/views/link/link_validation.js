@@ -13,8 +13,8 @@ import React from 'react';
 import { OuiLink } from '../../../../src/components';
 
 const urls = [
-  'https://elastic.co',
-  '//elastic.co',
+  'https://opensearch.org',
+  '//opensearch.org',
   'relative/url/somewhere',
   'http://username:password@example.com/',
   // eslint-disable-next-line no-script-url

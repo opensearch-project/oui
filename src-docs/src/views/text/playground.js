@@ -23,9 +23,9 @@ export const textConfig = () => {
     type: PropTypes.ReactNode,
     value: `<h1>This is Heading One</h1>
     <p>
-      Far out in the uncharted backwaters of the <a href="#">unfashionable</a>{' '}
-      end of the western spiral arm of the Galaxy lies a small unregarded
-      yellow sun. When suddenly some wild JavaScript code appeared!{' '}
+      Ea mollit ullamco cillum ipsum adipisicing ea aute id. Cillum <a href="#">unfashionable</a> amet 
+      proident irure Lorem irure consequat veniam. Excepteur exercitation ex officia 
+      minim excepteur consequat sint id Lorem est officia cupidatat excepteur commodo.
     </p>`,
     hidden: false,
   };
