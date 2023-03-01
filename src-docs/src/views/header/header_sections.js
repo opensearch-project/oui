@@ -27,7 +27,7 @@ import {
 export default () => {
   const renderLogo = (
     <OuiHeaderLogo
-      iconType="logoOUI"
+      iconType="logoOpenSearch"
       href="#"
       onClick={(e) => e.preventDefault()}
       aria-label="Navigate to home page"
