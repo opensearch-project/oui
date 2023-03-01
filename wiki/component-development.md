@@ -87,10 +87,10 @@ If a component has subcomponents (`<OuiToolBar>` and `<OuiToolBarSearch>`), tigh
 Refer to the [SASS page][sass] of our documentation site for a guide to writing styles.
 
 [component-design]: component-design.md
-[docs]: https://oui.opensearch.org/1.0/#/
+[docs]: https://oui.opensearch.org/
 [docs-yeoman]: creating-components-yeoman.md
 [docs-manual]: creating-components-manually.md
-[sass]: https://oui.opensearch.org/1.0/#/guidelines/sass
+[sass]: https://oui.opensearch.org/#/guidelines/sass
 
 ## TypeScript definitions
 
