@@ -148,11 +148,11 @@ export const CardExample = {
         color: 'subdued',
       },
       snippet: `<OuiCard
-  layout="horizontal"
-  icon={icon}
-  title="title"
-  description="description"
-  onClick={handleClick}
+layout="horizontal"
+icon={icon}
+title="title"
+description="description"
+onClick={handleClick}
 />`,
     },
     {
@@ -193,11 +193,11 @@ export const CardExample = {
         color: 'subdued',
       },
       snippet: `<OuiCard
-  textAlign="left"
-  image="https://source.unsplash.com/400x200/?Nature"
-  title="title"
-  description="description"
-  onClick={handleClick}
+textAlign="left"
+image="https://source.unsplash.com/400x200/?Nature"
+title="title"
+description="description"
+onClick={handleClick}
 />`,
     },
     {
@@ -242,7 +242,7 @@ export const CardExample = {
 />`,
     },
     {
-      title: 'Beta badge',
+      title: 'Experimental badge',
       source: [
         {
           type: GuideSectionTypes.JS,
@@ -252,11 +252,12 @@ export const CardExample = {
       text: (
         <p>
           If the card links to or references a module that is not GA (beta, lab,
-          etc), you can add a <OuiCode>betaBadgeLabel</OuiCode> and{' '}
-          <OuiCode>betaBadgeTooltipContent</OuiCode> to the card and it will
-          properly create and position an <strong>OuiBetaBadge</strong>. If you
-          want to change the title of the tooltip, supply a{' '}
-          <OuiCode>betaBadgeTitle</OuiCode> prop.
+          etc), you can add a <OuiCode>ExperimentalBadgeLabel</OuiCode> and{' '}
+          <OuiCode>experimentalBadgeTooltipContent</OuiCode> to the card and it
+          will properly create and position an{' '}
+          <strong>OuiExperimentalBadge</strong>. If you want to change the title
+          of the tooltip, supply a <OuiCode>experimentalBadgeTitle</OuiCode>{' '}
+          prop.
         </p>
       ),
       props: { OuiCard },
