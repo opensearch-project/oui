@@ -283,7 +283,7 @@ export default ({ theme }) => {
         sections={[
           {
             items: [
-              <OuiHeaderLogo iconType="logoOUI" href="">
+              <OuiHeaderLogo iconType="logoOpenSearch" href="">
                 OpenSearch
               </OuiHeaderLogo>,
               deploymentMenu,
