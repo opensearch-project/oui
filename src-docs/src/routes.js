@@ -229,18 +229,6 @@ import { I18nTokens } from './views/package/i18n_tokens';
 
 import { SuperSelectExample } from './views/super_select/super_select_example';
 
-/** Elastic Charts */
-
-import { ElasticChartsThemingExample } from './views/elastic_charts/theming_example';
-
-import { ElasticChartsTimeExample } from './views/elastic_charts/time_example';
-
-import { ElasticChartsCategoryExample } from './views/elastic_charts/category_example';
-
-import { ElasticChartsSparklinesExample } from './views/elastic_charts/sparklines_example';
-
-import { ElasticChartsPieExample } from './views/elastic_charts/pie_example';
-
 const createExample = (example, customTitle) => {
   if (!example) {
     throw new Error(
@@ -447,16 +435,6 @@ const navigation = [
       MarkdownPluginExample,
       CodeEditorExample,
       CodeExample,
-    ].map((example) => createExample(example)),
-  },
-  {
-    name: 'Elastic Charts',
-    items: [
-      ElasticChartsThemingExample,
-      ElasticChartsSparklinesExample,
-      ElasticChartsTimeExample,
-      ElasticChartsCategoryExample,
-      ElasticChartsPieExample,
     ].map((example) => createExample(example)),
   },
   {
