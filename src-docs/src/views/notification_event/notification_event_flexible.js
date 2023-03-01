@@ -20,8 +20,6 @@ const notificationEventsData = [
   {
     id: 'report',
     type: 'Report',
-    iconType: 'logoKibana',
-    iconAriaLabel: 'Kibana',
     time: '1 min ago',
     title: '[Error Monitoring Report] is generated',
     primaryAction: 'Download',
@@ -34,9 +32,7 @@ const notificationEventsData = [
   {
     id: 'alert',
     type: 'Alert',
-    iconType: 'logoMaps',
     severity: 'Warning',
-    iconAriaLabel: 'Maps',
     badgeColor: 'warning',
     time: '2 min ago',
     title: '[Maps] Geo Alert',
@@ -51,8 +47,6 @@ const notificationEventsData = [
   {
     id: 'news',
     type: 'News',
-    iconType: 'logoElastic',
-    iconAriaLabel: 'Elastic',
     time: '3 min ago',
     badgeColor: 'accent',
     title: 'Search more, spend less',

@@ -44,8 +44,6 @@ export default () => {
       <OuiNotificationEvent
         id="report"
         type="Report"
-        iconType="logoKibana"
-        iconAriaLabel="Kibana"
         time="1 min ago"
         title="[Error Monitoring Report] is generated"
         primaryAction="Download"
