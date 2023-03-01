@@ -44,7 +44,7 @@ export default () => {
         onClose={() => setNavIsOpen(false)}>
         <div style={{ padding: 16 }}>
           <OuiTitle>
-            <h2>I am some nav</h2>
+            <h2>Navigation</h2>
           </OuiTitle>
           <OuiSpacer />
           <OuiText size="s" color="subdued">

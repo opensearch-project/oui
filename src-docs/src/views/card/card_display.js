@@ -15,7 +15,6 @@ import {
   OuiCard,
   OuiFlexGroup,
   OuiFlexItem,
-  OuiIcon,
   OuiSpacer,
 } from '../../../../src/components';
 
@@ -26,7 +25,6 @@ export default () => (
       <OuiFlexItem>
         <OuiCard
           layout="horizontal"
-          icon={<OuiIcon size="xl" type="logoLogging" />}
           onClick={() => {}}
           title="Plain"
           display="plain"
@@ -35,7 +33,6 @@ export default () => (
       </OuiFlexItem>
       <OuiFlexItem>
         <OuiCard
-          icon={<OuiIcon size="xl" type="logoLogging" />}
           title="Subdued"
           display="subdued"
           description="This one has a subdued background color."
@@ -45,11 +42,10 @@ export default () => (
       <OuiFlexItem>
         <OuiCard
           layout="horizontal"
-          icon={<OuiIcon size="xl" type="logoLogging" />}
           title="Transparent"
           display="transparent"
           description="This one doesn't have a background color anymore."
-          betaBadgeLabel="Beta"
+          betaBadgeLabel="experimental"
           betaBadgeTooltipContent="This module is not GA. Please help us by reporting any bugs."
           onClick={() => {}}
         />

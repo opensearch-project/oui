@@ -179,7 +179,7 @@ export const CollapsibleNavExample = {
 </OuiCollapsibleNavGroup>`,
     },
     {
-      title: 'Full pattern with header and saved pins',
+      title: 'Full pattern with header',
       source: [
         {
           type: GuideSectionTypes.JS,
@@ -196,8 +196,7 @@ export const CollapsibleNavExample = {
             </Link>{' '}
             with a toggle button to open an <strong>OuiCollapsibleNav</strong>.
             The contents of which are multiple{' '}
-            <strong>OuiCollapsibleNavGroups</strong> and saves the
-            open/closed/pinned state for each section and item in local store.
+            <strong>OuiCollapsibleNavGroups</strong>
           </p>
           <p>
             This is just a pattern and should be treated as such. Consuming

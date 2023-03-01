@@ -31,7 +31,7 @@ export default () => (
       <h4>Custom</h4>
     </OuiTitle>
     <OuiSpacer />
-    <OuiAvatar name="Kibana" initialsLength={2} />
+    <OuiAvatar name="Dashboards" initialsLength={2} />
     &emsp;
     <OuiAvatar name="Leonardo Dude" initialsLength={1} />
     &emsp;

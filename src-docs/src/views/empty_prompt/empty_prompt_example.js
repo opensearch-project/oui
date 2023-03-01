@@ -22,7 +22,7 @@ import EmptyPrompt from './empty_prompt';
 const emptyPromptSource = require('!!raw-loader!./empty_prompt');
 const emptyPromptSnippet = `<OuiEmptyPrompt
   iconType="editorStrike"
-  title={<h2>You have no spice</h2>}
+  title={<h2>No data available</h2>}
   body={bodyContent}
   actions={actions}
 />`;
@@ -31,7 +31,7 @@ import Custom from './custom';
 const customSource = require('!!raw-loader!./custom');
 const customSnippet = `<OuiEmptyPrompt
   iconType="editorStrike"
-  title={<h2>You have no spice</h2>}
+  title={<h2>No data available</h2>}
   titleSize="xs"
   body={bodyContent}
   actions={actions}
@@ -40,7 +40,7 @@ const customSnippet = `<OuiEmptyPrompt
 import Simple from './simple';
 const simpleSource = require('!!raw-loader!./simple');
 const simpleSnippet = `<OuiEmptyPrompt
-  title={<h2>You have no spice</h2>}
+  title={<h2>No data available</h2>}
   actions={multipleActions}
 />`;
 
