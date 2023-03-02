@@ -84,7 +84,7 @@ export default () => {
       <OuiFlexItem>
         <OuiCard
           textAlign="left"
-          title="Just about anything"
+          title="Written content"
           description={
             <span>
               Just be sure not to add any <OuiCode>onClick</OuiCode> handler to
@@ -92,7 +92,7 @@ export default () => {
             </span>
           }>
           <OuiCodeBlock language="html" paddingSize="s">
-            {'<yoda>Hello, young Skywalker</yoda>'}
+            {'<yoda>Hello, world!</yoda>'}
           </OuiCodeBlock>
         </OuiCard>
       </OuiFlexItem>
