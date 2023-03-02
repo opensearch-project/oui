@@ -53,7 +53,7 @@ export default () => {
         sections={[
           {
             items: [
-              <OuiHeaderLogo iconType="logoOUI">OpenSearch</OuiHeaderLogo>,
+              <OuiHeaderLogo iconType="logoOpenSearch">OpenSearch</OuiHeaderLogo>,
             ],
             borders: 'none',
           },
