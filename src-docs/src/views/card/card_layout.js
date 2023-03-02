@@ -23,8 +23,8 @@ export default () => (
     <OuiFlexItem>
       <OuiCard
         layout="horizontal"
-        icon={<OuiIcon size="xl" type={'logoBeats'} />}
-        title={'Elastic Beats'}
+        icon={<OuiIcon size="xl" type="dashboardApp" />}
+        title={'Dashboards'}
         description="This card adds uses an 'xl' size icon which works well in a horizontal layout."
         onClick={() => {}}
       />
@@ -32,9 +32,9 @@ export default () => (
     <OuiFlexItem>
       <OuiCard
         layout="horizontal"
-        icon={<OuiIcon size="l" type={'logoCloud'} />}
+        icon={<OuiIcon size="l" type="visualizeApp" />}
         titleSize="xs"
-        title={'Elastic Cloud'}
+        title={'Visualize'}
         description="This card uses an 'l' size icon but also shrinks the 'titleSize' to 'xs'."
         onClick={() => {}}
       />

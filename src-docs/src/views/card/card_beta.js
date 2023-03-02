@@ -18,45 +18,36 @@ import {
   OuiFlexItem,
 } from '../../../../src/components';
 
-const icons = ['dashboard', 'monitoring'];
-const badges = [null, 'Beta'];
+const cards = {
+  dashboard: {
+    title: 'Dashboards',
+    icon: 'dashboardApp',
+    betaBadgeLabel: null,
+    betaBadgeTooltipContent: undefined,
+  },
+  monitoring: {
+    title: 'Discover',
+    icon: 'discoverApp',
+    betaBadgeLabel: 'Experimental',
+    betaBadgeTooltipContent:
+      'This module is not GA. Please help us by reporting any bugs.',
+  },
+};
 
-const cardNodes = icons.map(function (item, index) {
+const cardNodes = Object.keys(cards).map(function (item, index) {
+  const { title, icon, betaBadgeLabel, betaBadgeTooltipContent } = cards[item];
   return (
     <OuiFlexItem key={index}>
       <OuiCard
-        icon={<OuiIcon size="xxl" type={`${item}App`} />}
-        title={`Kibana ${item}`}
+        icon={<OuiIcon size="xxl" type={icon} />}
+        title={title}
         description="Example of a card's description. Stick to one or two sentences."
-        betaBadgeLabel={badges[index]}
-        betaBadgeTooltipContent={
-          badges[index]
-            ? 'This module is not GA. Please help us by reporting any bugs.'
-            : undefined
-        }
+        betaBadgeLabel={betaBadgeLabel}
+        betaBadgeTooltipContent={betaBadgeTooltipContent}
         onClick={() => {}}
       />
     </OuiFlexItem>
   );
 });
 
-export default () => (
-  <OuiFlexGroup gutterSize="l">
-    {cardNodes}
-    <OuiFlexItem>
-      <OuiCard
-        icon={<OuiIcon size="xxl" type="lensApp" />}
-        title="Lens"
-        isDisabled
-        description="Disabled cards can have active links using OuiBetaBadge."
-        betaBadgeProps={{
-          href: 'http://www.elastic.co/subscriptions',
-          target: '_blank',
-        }}
-        betaBadgeLabel="Basic"
-        betaBadgeTooltipContent="This feature requires a Basic License"
-        onClick={() => {}}
-      />
-    </OuiFlexItem>
-  </OuiFlexGroup>
-);
+export default () => <OuiFlexGroup gutterSize="l">{cardNodes}</OuiFlexGroup>;
