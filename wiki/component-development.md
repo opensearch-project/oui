@@ -50,9 +50,9 @@ Refer to the [testing guide](testing.md) for guidelines on writing and designing
 
 Refer to the [automated accessibility testing guide](automated-accessibility-testing.md) for info more info on those.
 
-### Testing the component with Kibana
+### Testing the component with OpenSearch Dashboards
 
-Note that `yarn link` currently does not work with Kibana. You'll need to manually pack and insert it into Kibana to test locally.
+Note that `yarn link` currently does not work with OpenSearch Dashboards. You'll need to manually pack and insert it into OpenSearch Dashboards to test locally.
 
 #### In OUI run:
 
@@ -62,18 +62,18 @@ yarn build && npm pack
 
 This will create a `.tgz` file with the changes in your OUI directory. At this point you can move it anywhere.
 
-#### In Kibana:
+#### In OpenSearch Dashboards:
 
-Point the `package.json` file in Kibana to that file: `"@opensearch-project/oui": "/path/to/elastic-oui-xx.x.x.tgz"`. Then run the following commands at Kibana's root folder:
+Point the `package.json` file in OpenSearch Dashboards to that file: `"@opensearch-project/oui": "/path/to/opensearch-project-oui-xx.x.x.tgz"`. Then run the following commands at OpenSearch Dashboards root folder:
 
 ```bash
-yarn kbn bootstrap --no-validate && cd packages/kbn-ui-shared-deps/ && yarn kbn:bootstrap && cd ../../ && FORCE_DLL_CREATION=true node scripts/kibana --dev
+yarn osd bootstrap --no-validate && cd packages/osd-ui-shared-deps/ && yarn osd:bootstrap && cd ../../ && FORCE_DLL_CREATION=true node scripts/osd --dev
 ```
 
 * The `--no-validate` flag is required when bootstrapping with a `.tgz`.
-  * Change the name of the `.tgz` after subsequent `yarn build` and `npm pack` steps (e.g., `elastic-oui-xx.x.x-1.tgz`, `elastic-oui-xx.x.x-2.tgz`). This is required for `yarn` to recognize new changes to the package.
-* Running `yarn kbn:bootstrap` inside of `kibana/packages/kbn-ui-shared-deps/` rebuilds Kibana's shared-ui-deps.
-* Running Kibana with `FORCE_DLL_CREATION=true node scripts/kibana --dev` ensures it doesn't use a previously cached version of OUI.
+  * Change the name of the `.tgz` after subsequent `yarn build` and `npm pack` steps (e.g., `opensearch-project-oui-xx.x.x-1.tgz`, `opensearch-project-oui-xx.x.x-2.tgz`). This is required for `yarn` to recognize new changes to the package.
+* Running `yarn osd:bootstrap` inside of `OpenSearch-Dashboards/packages/osd-ui-shared-deps/` rebuilds OpenSearch Dashboards shared-ui-deps.
+* Running OpenSearch Dashboards with `FORCE_DLL_CREATION=true node scripts/osd --dev` ensures it doesn't use a previously cached version of OUI.
 
 
 ## Principles
@@ -87,10 +87,10 @@ If a component has subcomponents (`<OuiToolBar>` and `<OuiToolBarSearch>`), tigh
 Refer to the [SASS page][sass] of our documentation site for a guide to writing styles.
 
 [component-design]: component-design.md
-[docs]: https://elastic.github.io/eui/
+[docs]: https://oui.opensearch.org/
 [docs-yeoman]: creating-components-yeoman.md
 [docs-manual]: creating-components-manually.md
-[sass]: https://elastic.github.io/eui/#/guidelines/sass
+[sass]: https://oui.opensearch.org/#/guidelines/sass
 
 ## TypeScript definitions
 
@@ -191,7 +191,7 @@ MyComponent.displayName = 'MyComponent';
 
 #### Providing custom or additional data 
 
-Rarely, a component's ref needs to be something other than a DOM element, or provide additional information. In these cases, React's `useImperativeHandle` can be used to provide a custom object as the ref's value. For example, **OuiMarkdownEditor**'s ref includes both its textarea element and the `replaceNode` method to interact with the abstract syntax tree. https://github.com/elastic/eui/blob/v31.10.0/src/components/markdown_editor/markdown_editor.tsx#L331
+Rarely, a component's ref needs to be something other than a DOM element, or provide additional information. In these cases, React's `useImperativeHandle` can be used to provide a custom object as the ref's value. For example, **OuiMarkdownEditor**'s ref includes both its textarea element and the `replaceNode` method to interact with the abstract syntax tree. https://github.com/opensearch-project/oui/blob/main/src/components/markdown_editor/markdown_editor.tsx#L342
 
 ```ts
 import React, { useImperativeHandle } from 'react';
