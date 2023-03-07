@@ -15,7 +15,7 @@
 > The OpenSearch UI (OUI) Framework is a collection of React UI components for quickly building user interfaces
 > for the OpenSearch Project.
 
-You should check out our [living style guide][docs], which contains many examples of components in the OUI framework aesthetic, and how to use them in your products. We also have a [FAQ][FAQ.md] that covers common usage questions.
+You should check out our [living style guide][docs], which contains many examples of components in the OUI framework aesthetic, and how to use them in your products. We also have a [FAQ](FAQ.md) that covers common usage questions.
 
 ### Goals
 
