@@ -14,7 +14,6 @@ import { Link } from 'react-router-dom';
 
 import {
   OuiAvatar,
-  OuiButton,
   OuiFlexGroup,
   OuiFlexItem,
   OuiHeader,
@@ -28,9 +27,6 @@ import {
   OuiKeyPadMenuItem,
   OuiLink,
   OuiPopover,
-  OuiPopoverFooter,
-  OuiPopoverTitle,
-  OuiSelectable,
   OuiSelectableMessage,
   OuiSelectableTemplateSitewide,
   OuiSpacer,
@@ -41,7 +37,7 @@ import { htmlIdGenerator } from '../../../../src/services';
 export default () => {
   const renderLogo = () => (
     <OuiHeaderLogo
-      iconType="logoElastic"
+      iconType="logoOpenSearch"
       href="#"
       onClick={(e) => e.preventDefault()}
       aria-label="Go to home page"
@@ -60,7 +56,7 @@ export default () => {
         className: 'customClass',
       },
       {
-        text: 'Truncation test is here for a really long item',
+        text: 'Truncation of a really long item',
         href: '#',
         onClick: (e) => {
           e.preventDefault();
@@ -124,9 +120,6 @@ export default () => {
         <OuiHeaderSectionItem border="right">
           {renderLogo()}
         </OuiHeaderSectionItem>
-        <OuiHeaderSectionItem border="right">
-          <HeaderSpacesMenu />
-        </OuiHeaderSectionItem>
       </OuiHeaderSection>
 
       {renderBreadcrumbs()}
@@ -165,7 +158,7 @@ const HeaderUserMenu = () => {
       aria-haspopup="true"
       aria-label="Account menu"
       onClick={onMenuButtonClick}>
-      <OuiAvatar name="John Username" size="s" />
+      <OuiAvatar name="A. User" size="s" />
     </OuiHeaderSectionItemButton>
   );
 
@@ -183,12 +176,12 @@ const HeaderUserMenu = () => {
           className="ouiHeaderProfile"
           responsive={false}>
           <OuiFlexItem grow={false}>
-            <OuiAvatar name="John Username" size="xl" />
+            <OuiAvatar name="A. User" size="xl" />
           </OuiFlexItem>
 
           <OuiFlexItem>
             <OuiText>
-              <p>John Username</p>
+              <p>A. User</p>
             </OuiText>
 
             <OuiSpacer size="m" />
@@ -209,130 +202,6 @@ const HeaderUserMenu = () => {
           </OuiFlexItem>
         </OuiFlexGroup>
       </div>
-    </OuiPopover>
-  );
-};
-
-const HeaderSpacesMenu = () => {
-  const id = htmlIdGenerator()();
-  const spacesValues = [
-    {
-      label: 'Sales team',
-      prepend: <OuiAvatar type="space" name="Sales Team" size="s" />,
-      checked: 'on',
-    },
-    {
-      label: 'Engineering',
-      prepend: <OuiAvatar type="space" name="Engineering" size="s" />,
-    },
-    {
-      label: 'Security',
-      prepend: <OuiAvatar type="space" name="Security" size="s" />,
-    },
-    {
-      label: 'Default',
-      prepend: <OuiAvatar type="space" name="Default" size="s" />,
-    },
-  ];
-
-  const additionalSpaces = [
-    {
-      label: 'Sales team 2',
-      prepend: <OuiAvatar type="space" name="Sales Team 2" size="s" />,
-    },
-    {
-      label: 'Engineering 2',
-      prepend: <OuiAvatar type="space" name="Engineering 2" size="s" />,
-    },
-    {
-      label: 'Security 2',
-      prepend: <OuiAvatar type="space" name="Security 2" size="s" />,
-    },
-    {
-      label: 'Default 2',
-      prepend: <OuiAvatar type="space" name="Default 2" size="s" />,
-    },
-  ];
-
-  const [spaces, setSpaces] = useState(spacesValues);
-  const [selectedSpace, setSelectedSpace] = useState(
-    spaces.filter((option) => option.checked)[0]
-  );
-  const [isOpen, setIsOpen] = useState(false);
-
-  const isListExtended = () => {
-    return spaces.length > 4 ? true : false;
-  };
-
-  const onMenuButtonClick = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closePopover = () => {
-    setIsOpen(false);
-  };
-
-  const onChange = (options) => {
-    setSpaces(options);
-    setSelectedSpace(options.filter((option) => option.checked)[0]);
-    setIsOpen(false);
-  };
-
-  const addMoreSpaces = () => {
-    setSpaces(spaces.concat(additionalSpaces));
-  };
-
-  const button = (
-    <OuiHeaderSectionItemButton
-      aria-controls={id}
-      aria-expanded={isOpen}
-      aria-haspopup="true"
-      aria-label="Spaces menu"
-      onClick={onMenuButtonClick}>
-      {selectedSpace.prepend}
-    </OuiHeaderSectionItemButton>
-  );
-
-  return (
-    <OuiPopover
-      id={id}
-      button={button}
-      isOpen={isOpen}
-      anchorPosition="downLeft"
-      closePopover={closePopover}
-      panelPaddingSize="none">
-      <OuiSelectable
-        searchable={isListExtended()}
-        searchProps={{
-          placeholder: 'Find a space',
-          compressed: true,
-        }}
-        options={spaces}
-        singleSelection="always"
-        style={{ width: 300 }}
-        onChange={onChange}
-        listProps={{
-          rowHeight: 40,
-          showIcons: false,
-        }}>
-        {(list, search) => (
-          <>
-            <OuiPopoverTitle paddingSize="s">
-              {search || 'Your spaces'}
-            </OuiPopoverTitle>
-            {list}
-            <OuiPopoverFooter paddingSize="s">
-              <OuiButton
-                size="s"
-                fullWidth
-                onClick={addMoreSpaces}
-                disabled={isListExtended()}>
-                Add more spaces
-              </OuiButton>
-            </OuiPopoverFooter>
-          </>
-        )}
-      </OuiSelectable>
     </OuiPopover>
   );
 };
@@ -384,20 +253,8 @@ const HeaderAppMenu = () => {
           <OuiIcon type="devToolsApp" size="l" />
         </OuiKeyPadMenuItem>
 
-        <OuiKeyPadMenuItem label="Machine Learning">
-          <OuiIcon type="machineLearningApp" size="l" />
-        </OuiKeyPadMenuItem>
-
-        <OuiKeyPadMenuItem label="Graph">
-          <OuiIcon type="graphApp" size="l" />
-        </OuiKeyPadMenuItem>
-
         <OuiKeyPadMenuItem label="Visualize">
           <OuiIcon type="visualizeApp" size="l" />
-        </OuiKeyPadMenuItem>
-
-        <OuiKeyPadMenuItem label="Timelion" betaBadgeLabel="Beta">
-          <OuiIcon type="timelionApp" size="l" />
         </OuiKeyPadMenuItem>
       </OuiKeyPadMenu>
     </OuiPopover>
