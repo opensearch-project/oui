@@ -22,7 +22,7 @@ That's it. The latest changes were published to GitHub, a new `git` tag now exis
 
 For information on releasing the eslint plugin checkout the readme in [packages/eslint-plugin/README.md](../packages/eslint-plugin/README.md)
 
-[docs]: https://elastic.github.io/eui/
+[docs]: https://oui.opensearch.org/
 
 # Backport process
 
