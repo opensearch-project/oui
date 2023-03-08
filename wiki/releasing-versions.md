@@ -59,7 +59,6 @@ This provides a walkthrough of the patching & backport release process; examples
 * Once everything looks correct, it's time to release; the `yarn release` script only works when releasing from `master`, so we'll run [a subset of those steps](https://github.com/elastic/eui/blob/06fc9a6880766168aec1a622873e7f6fe1b3d42b/scripts/release.js#L34-L57) manually
   * Run the unit tests again - `npm test`
   * Create the release builds - `npm run build`
-  * Update the I18n tokens - `npm run update-token-changelog -- patch`
   * Use npm to update package.json & package-lock.json version, git commit, and git tag - `npm version patch`
   * Push the version commit & tag to upstream - `git push upstream --tags`
   * Publish the new version to npm
