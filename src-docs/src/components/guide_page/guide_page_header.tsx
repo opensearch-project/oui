@@ -24,7 +24,6 @@ import { OuiPopover } from '../../../../src/components/popover';
 import { useIsWithinBreakpoints } from '../../../../src/services/hooks';
 import { OuiButtonEmpty } from '../../../../src/components/button';
 
-import logoOUI from '../../images/logo-oui.svg';
 import { GuideThemeSelector } from '../guide_theme_selector';
 
 const pkg = require('../../../../package.json');
@@ -48,7 +47,7 @@ export const GuidePageHeader: React.FunctionComponent<{}> = () => {
 
   function renderLogo() {
     return (
-      <OuiHeaderLogo iconType={logoOUI} href="#/" aria-label="OUI home">
+      <OuiHeaderLogo iconType="logoOpenSearch" href="#/" aria-label="OUI home">
         OpenSearch UI
       </OuiHeaderLogo>
     );
