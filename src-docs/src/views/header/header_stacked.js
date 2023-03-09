@@ -53,14 +53,16 @@ export default () => {
         sections={[
           {
             items: [
-              <OuiHeaderLogo iconType="logoElastic">Elastic</OuiHeaderLogo>,
+              <OuiHeaderLogo iconType="logoOpenSearch">
+                OpenSearch
+              </OuiHeaderLogo>,
             ],
             borders: 'none',
           },
           {
             items: [
               <OuiHeaderSectionItemButton aria-label="Account menu">
-                <OuiAvatar name="John Username" size="s" />
+                <OuiAvatar name="A. User" size="s" />
               </OuiHeaderSectionItemButton>,
             ],
             borders: 'none',
