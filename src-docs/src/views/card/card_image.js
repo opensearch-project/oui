@@ -57,7 +57,7 @@ export default () => (
     <OuiFlexItem>
       <OuiCard
         textAlign="left"
-        href="https://elastic.github.io/eui/"
+        href="https://oui.opensearch.org/"
         image="https://source.unsplash.com/400x200/?City"
         icon={<OuiIcon size="xxl" type="logoBeats" />}
         title={'Title'}
