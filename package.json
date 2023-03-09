@@ -1,7 +1,7 @@
 {
   "name": "@opensearch-project/oui",
   "description": "OpenSearch UI Component Library",
-  "version": "1.0.1-rc.1",
+  "version": "1.0.1-pink.1",
   "license": "Apache-2.0",
   "main": "lib",
   "module": "es",
