@@ -58,6 +58,11 @@ const webpackConfig = {
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    fallback: {
+      fs: false,
+      path: require.resolve('path-browserify'),
+      os: require.resolve('os-browserify/browser'),
+    },
   },
 
   resolveLoader: {
@@ -154,9 +159,6 @@ const webpackConfig = {
           : undefined,
       }
     : undefined,
-  node: {
-    fs: 'empty',
-  },
 };
 
 // Inspired by `get-port-sync`, but propogates options

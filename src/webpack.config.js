@@ -57,7 +57,9 @@ const plugins = [
 ];
 
 const terserPlugin = new TerserPlugin({
-  sourceMap: true,
+  terserOptions: {
+    sourceMap: true,
+  },
 });
 
 module.exports = {
@@ -78,6 +80,9 @@ module.exports = {
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    fallback: {
+      path: require.resolve('path-browserify'),
+    },
   },
 
   // Specify where these libraries should be found
