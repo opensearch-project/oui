@@ -27,5 +27,5 @@ This makes your React component available for import into your project.
 
 ### 👉 Refer to the [Documentation Guidelines](documentation-guidelines.md) for more instruction on writing docs.
 
-[docs]: https://oui.opensearch.org/
+[docs]: https://oui.opensearch.org
 [docs-logical-group]: component-development.md#logically-grouped-components
