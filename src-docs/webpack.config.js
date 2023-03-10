@@ -73,7 +73,7 @@ const webpackConfig = {
     rules: [
       {
         test: /\.(js|tsx?)$/,
-        loaders: employCache([
+        use: employCache([
           {
             loader: 'babel-loader',
             options: { babelrc: false, ...babelConfig },
@@ -83,7 +83,7 @@ const webpackConfig = {
       },
       {
         test: /\.scss$/,
-        loaders: employCache([
+        use: employCache([
           {
             loader: 'style-loader',
             options: { injectType: 'lazySingletonStyleTag' },
@@ -96,7 +96,7 @@ const webpackConfig = {
       },
       {
         test: /\.css$/,
-        loaders: employCache(['style-loader', 'css-loader']),
+        use: employCache(['style-loader', 'css-loader']),
         exclude: /node_modules/,
       },
       {
