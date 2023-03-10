@@ -4,15 +4,13 @@
 
 OUI expects that you polyfill ES2015 features, e.g. [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/). Without an ES2015 polyfill your app might throw errors on certain browsers.
 
-OUI also has `moment` and `@elastic/datemath` as dependencies itself. These are already loaded in most Elastic repos, but make sure to install them if you are starting from scratch.
+OUI also has `moment` and `@elastic/datemath` as dependencies itself. These are already loaded in most OpenSearch repos, but make sure to install them if you are starting from scratch.
 
 ## What's available
 
-OUI publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [OpenSearch UI Framework website](https://elastic.github.io/eui) for comprehensive info on what's available.
+OUI publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [OpenSearch UI website](https://oui.opensearch.org) for comprehensive info on what's available.
 
-OUI is published through [NPM](https://www.npmjs.com/package/@opensearch-project/oui) as a dependency. We also provide a starter projects for:
-- [GatsbyJS](https://github.com/elastic/gatsby-oui-starter)
-- [NextJS](https://github.com/elastic/next-oui-starter)
+OUI is published through [NPM](https://www.npmjs.com/package/@opensearch-project/oui) as a dependency.
 
 ### Components
 
@@ -180,11 +178,11 @@ We do not recommend customizing OUI components by applying styles directly to OU
 
 ## Using the `test-env` build
 
-OUI provides a separate babel-transformed and partially mocked commonjs build for testing environments in consuming projects. The output is identical to that of `lib/`, but has transformed async functions and dynamic import statements, and also applies some useful mocks. This build mainly targets Kibana's Jest environment, but may be helpful for testing environments in other projects.
+OUI provides a separate babel-transformed and partially mocked commonjs build for testing environments in consuming projects. The output is identical to that of `lib/`, but has transformed async functions and dynamic import statements, and also applies some useful mocks. This build mainly targets OpenSearch Dashboard's Jest environment, but may be helpful for testing environments in other projects.
 
 ### Mapping to the `test-env` directory
 
-In Kibana's Jest configuration, the `moduleNameMapper` option is used to resolve standard OUI import statements with `test-env` aliases.
+In OpenSearch Dashboard's Jest configuration, the `moduleNameMapper` option is used to resolve standard OUI import statements with `test-env` aliases.
 
 ```js
 moduleNameMapper: {
