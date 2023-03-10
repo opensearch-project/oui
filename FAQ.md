@@ -4,15 +4,15 @@ Here are our responses to questions we expect to get frequently.
 
 ## What is the OpenSearch UI Framework?
 
-The OpenSearch UI Framework (OUI) is a design library in use at OpenSearch Project to build React applications that need to share our branding and aesthetics. It distributes UI React components and static assets for use in building web layouts. Alongside the React components is a SASS/CSS layer that can be used independently on its own.
+The OpenSearch UI Framework (OUI) is a design library used by the OpenSearch Project to build React applications that need to share our branding and aesthetics. It distributes UI React components and static assets for use in building web layouts.
 
 ## Can I use OUI?
 
-Yes, but be aware of the [license](LICENSE) as always. Although the roadmap and priorities are directed by our own usage within Elastic, we do attempt to make the platform generically useful for any React application and try to test for it.
+Yes, but be aware of the [license](LICENSE) as always. The roadmap and priorities are directed by usage within the OpenSearch project.
 
 ## What is the versioning, releases and upgrade strategy?
 
-We use [semver](https://semver.org/) for versioning and use that to denote breaking changes in OUI upgrades. Traditionally we consider API changes in our prop names or existing component functionality to be a reason for a breaking change, but do not track the renaming of CSS selectors, mixins or other style changes under this same rigor.
+We use [semver](https://semver.org/) for versioning and use that to denote breaking changes in OUI upgrades. We consider API changes in our prop names or existing component functionality to be a reason for a breaking change, but do not consider renaming of CSS selectors, mixins, or other style changes to be breaking.
 
 Traditionally releases are made weekly against whatever is in master and you can upgrade from NPM as you see fit.
 
@@ -24,12 +24,8 @@ For styling we use Sass and generate a final CSS blob for the entire library, wi
 
 ## Can I contribute to OUI
 
-Yes! We accept PRs regularly similar to our other Elastic repos. You can find documentation around creating and submitting new components in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## Why is OUI open source?
-
-Many of our products themselves are open source and rely upon this library to function. The OpenSearch UI Framework began as a folder of code in Kibana and we decided it could be used beyond that codebase. It exists as an independent library so that patterns can be shared across teams and design standards can be scaled across our organization. Since most of our products are open source, we treat this one similarly as far as public publishing and conversation even if its usage tends to focus more inward towards Elastic itself.
+Yes! We accept PRs regularly similar to our other OpenSearch repos. You can find documentation around creating and submitting new components in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## What about reporting bugs and feature requests?
 
-Bug reports and feature requests are most welcome, but our roadmap is driven primarily by internal usage.
+Bug reports and feature requests are welcome!
