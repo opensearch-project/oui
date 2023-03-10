@@ -32,7 +32,6 @@
     "test-staged": "yarn lint && node scripts/test-staged.js",
     "start-test-server": "BABEL_MODULES=false NODE_ENV=puppeteer NODE_OPTIONS=--max-old-space-size=4096 webpack-dev-server --config src-docs/webpack.config.js --port 9999",
     "yo-component": "yo ./generator-oui/app/component.js",
-    "update-token-changelog": "node ./scripts/update-token-changelog.js",
     "start-test-server-and-a11y-test": "cross-env WAIT_ON_TIMEOUT=600000 start-server-and-test start-test-server http-get://localhost:9999 test-a11y",
     "yo-doc": "yo ./generator-oui/app/documentation.js",
     "release": "node ./scripts/release.js",
@@ -74,6 +73,7 @@
     "**/d3-color": "^3.1.0",
     "**/@miksu/prettier/minimatch": "^3.0.8",
     "**/request/qs": "^6.11.0",
+    "**/make-fetch-happen": "^11.0.3",
     "nodegit/ramda": "^0.27.1",
     "sass-lint/front-matter": "^4.0.2"
   },
@@ -204,7 +204,6 @@
     "moment": "^2.27.0",
     "moment-timezone": "^0.5.31",
     "node-sass": "^7.0.1",
-    "nodegit": "^0.27.0",
     "pegjs": "^0.10.0",
     "postcss-cli": "^7.1.2",
     "postcss-inline-svg": "^4.1.0",
