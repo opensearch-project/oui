@@ -106,14 +106,21 @@ const webpackConfig = {
       },
       {
         test: /\.(woff|woff2|ttf|eot|ico)(\?|$)/,
-        loader: 'file-loader',
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[name][ext]',
+        },
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 8000, // Convert images < 8kb to base64 strings
-          name: 'images/[hash]-[name].[ext]',
+        type: 'asset',
+        generator: {
+          filename: 'images/[contenthash]-[name][ext]',
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 8 * 1024,
+          },
         },
       },
     ],
