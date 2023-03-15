@@ -2556,7 +2556,7 @@ export { Foo };
         babelOptions
       );
 
-      expect(result.code).toBe('');
+      expect(result.code).toBe('export {};');
     });
 
     it('removes multiple type export from ExportNamedDeclaration', () => {
@@ -2569,7 +2569,7 @@ export { Foo, Bar };
         babelOptions
       );
 
-      expect(result.code).toBe('');
+      expect(result.code).toBe('export {};');
     });
 
     it('removes type exports from ExportNamedDeclaration, leaving legitimate exports', () => {
@@ -2666,7 +2666,7 @@ export type Foo = string;
         babelOptions
       );
 
-      expect(result.code).toBe('');
+      expect(result.code).toBe('export {};');
     });
 
     it('removes 3rd-party type exports', () => {

@@ -89,6 +89,6 @@ _\** Run `yarn && yarn start` to view the OUI docs site locally._
 
 
 [icons]: https://oui.opensearch.org/#/display/icons
-[docs]: https://oui.opensearch.org/
+[docs]: https://oui.opensearch.org
 [sketch-SVGO-plugin]: [https://www.sketch.com/extensions/plugins/svgo-compressor/]
 [sketch-symbol-organizer-plugin]: [https://github.com/sonburn/symbol-organizer]

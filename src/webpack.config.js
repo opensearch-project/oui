@@ -118,6 +118,6 @@ module.exports = {
   optimization: {
     minimize: isProduction,
     minimizer: [terserPlugin],
-    noEmitOnErrors: true,
+    emitOnErrors: false,
   },
 };
