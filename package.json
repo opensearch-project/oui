@@ -12,7 +12,7 @@
     "*.scss"
   ],
   "scripts": {
-    "start": "cross-env BABEL_MODULES=false webpack-dev-server --inline --hot --config=src-docs/webpack.config.js",
+    "start": "cross-env BABEL_MODULES=false webpack-dev-server --hot --config=src-docs/webpack.config.js",
     "test-docker": "node ./scripts/test-docker.js",
     "sync-docs": "node ./scripts/docs-sync.js",
     "build-docs": "cross-env BABEL_MODULES=false cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=4096 webpack --config=src-docs/webpack.config.js",
@@ -52,7 +52,8 @@
     "cacache/y18n": "^4.0.1",
     "**/glob-parent": "^6.0.1",
     "**/svgo/js-yaml": "^3.13.1",
-    "webpack-dev-server/selfsigned": "^2.0.1",
+    "**/@types/express": "4.17.13",
+    "**/@types/express-serve-static-core": "4.17.30",
     "**/eslint/shelljs": "^0.8.5",
     "**/css-select/css-what": "^6.1.0",
     "**/css-select/nth-check": "^2.0.1",
@@ -63,7 +64,6 @@
     "codesandbox/**/pacote": "^12.0.0",
     "**/meow/trim-newlines": "^4.0.2",
     "**/stylelint/micromatch": "^3.1.0",
-    "webpack/**/serialize-javascript": "^3.1.0",
     "**/scss-tokenizer": "^0.4.3",
     "**/node-notifier": "^10.0.1",
     "**/got": "^11.8.5",
@@ -242,7 +242,7 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.76.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^3.11.0",
+    "webpack-dev-server": "^4.12.0",
     "yeoman-generator": "^5.7.0",
     "yo": "^4.3.0"
   },

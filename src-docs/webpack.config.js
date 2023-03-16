@@ -166,6 +166,11 @@ const webpackConfig = {
           : undefined,
       }
     : undefined,
+
+  optimization: {
+    providedExports: false,
+    concatenateModules: false,
+  },
 };
 
 // Inspired by `get-port-sync`, but propogates options

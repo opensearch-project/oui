@@ -119,5 +119,6 @@ module.exports = {
     minimize: isProduction,
     minimizer: [terserPlugin],
     emitOnErrors: false,
+    usedExports: false,
   },
 };
