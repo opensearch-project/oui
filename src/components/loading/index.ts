@@ -28,8 +28,6 @@
  * under the License.
  */
 
-export { OuiLoadingKibana, OuiLoadingKibanaProps } from './loading_kibana';
-export { OuiLoadingElastic, OuiLoadingElasticProps } from './loading_elastic';
 export { OuiLoadingChart, OuiLoadingChartProps } from './loading_chart';
 export { OuiLoadingContent, OuiLoadingContentProps } from './loading_content';
 export { OuiLoadingSpinner, OuiLoadingSpinnerProps } from './loading_spinner';

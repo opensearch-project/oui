@@ -9,40 +9,13 @@
  * GitHub history for details.
  */
 
+import { PropTypes } from 'react-view';
+import { propUtilityForPlayground } from '../../services/playground';
 import {
-  propUtilityForPlayground,
-  iconValidator,
-} from '../../services/playground';
-import {
-  OuiLoadingElastic,
   OuiLoadingChart,
-  OuiLoadingLogo,
   OuiLoadingSpinner,
   OuiLoadingContent,
 } from '../../../../src/components/';
-import { PropTypes } from 'react-view';
-
-export const loadingElasticConfig = () => {
-  const docgenInfo = Array.isArray(OuiLoadingElastic.__docgenInfo)
-    ? OuiLoadingElastic.__docgenInfo[0]
-    : OuiLoadingElastic.__docgenInfo;
-  const propsToUse = propUtilityForPlayground(docgenInfo.props);
-
-  return {
-    config: {
-      componentName: 'OuiLoadingElastic',
-      props: propsToUse,
-      scope: {
-        OuiLoadingElastic,
-      },
-      imports: {
-        '@opensearch-project/oui': {
-          named: ['OuiLoadingElastic'],
-        },
-      },
-    },
-  };
-};
 
 export const loadingChartConfig = () => {
   const docgenInfo = Array.isArray(OuiLoadingChart.__docgenInfo)
@@ -60,29 +33,6 @@ export const loadingChartConfig = () => {
       imports: {
         '@opensearch-project/oui': {
           named: ['OuiLoadingChart'],
-        },
-      },
-    },
-  };
-};
-
-export const loadingLogoConfig = () => {
-  const docgenInfo = Array.isArray(OuiLoadingLogo.__docgenInfo)
-    ? OuiLoadingLogo.__docgenInfo[0]
-    : OuiLoadingLogo.__docgenInfo;
-  const propsToUse = propUtilityForPlayground(docgenInfo.props);
-  propsToUse.logo = iconValidator(propsToUse.logo);
-
-  return {
-    config: {
-      componentName: 'OuiLoadingLogo',
-      props: propsToUse,
-      scope: {
-        OuiLoadingLogo,
-      },
-      imports: {
-        '@opensearch-project/oui': {
-          named: ['OuiLoadingLogo'],
         },
       },
     },

@@ -9,8 +9,7 @@
  * GitHub history for details.
  */
 
-.ouiLoadingLogo,
-.ouiLoadingKibana {
+.ouiLoadingLogo {
   position: relative;
   display: inline-block;
 
@@ -29,21 +28,20 @@
 
     &:before {
       box-shadow: 0 0 8px $ouiColorFullShade;
-      animation: 1s ouiLoadingKibanaPulsateAndFade $ouiAnimSlightResistance infinite;
+      animation: 1s ouiLoadingLogoPulsateAndFade $ouiAnimSlightResistance infinite;
     }
 
     &:after {
       background-color: $ouiColorFullShade;
-      animation: 1s ouiLoadingKibanaPulsate $ouiAnimSlightResistance infinite;
+      animation: 1s ouiLoadingLogoPulsate $ouiAnimSlightResistance infinite;
     }
   }
 
-  .ouiLoadingLogo__icon,
-  .ouiLoadingKibana__icon {
+  .ouiLoadingLogo__icon {
     display: block;
 
     @include ouiCanAnimate {
-      animation: 1s ouiLoadingKibanaBounceMedium $ouiAnimSlightResistance infinite;
+      animation: 1s ouiLoadingLogoBounceMedium $ouiAnimSlightResistance infinite;
     }
   }
 }
@@ -51,8 +49,7 @@
 /**
  * 1. Requires pixel math for animation.
  */
-.ouiLoadingLogo--medium,
-.ouiLoadingKibana--medium {
+.ouiLoadingLogo--medium {
   width: $ouiSize;
 
   &:before,
@@ -61,15 +58,13 @@
     bottom: -$ouiSizeXS;
   }
 
-  .ouiLoadingLogo__icon,
-  .ouiLoadingKibana__icon {
+  .ouiLoadingLogo__icon {
     z-index: 999;
-    animation-name: ouiLoadingKibanaBounceMedium;
+    animation-name: ouiLoadingLogoBounceMedium;
   }
 }
 
-.ouiLoadingLogo--large,
-.ouiLoadingKibana--large {
+.ouiLoadingLogo--large {
   width: $ouiSizeL;
 
   &:before,
@@ -78,14 +73,12 @@
     bottom: -$ouiSizeS;
   }
 
-  .ouiLoadingLogo__icon,
-  .ouiLoadingKibana__icon {
-    animation-name: ouiLoadingKibanaBounceLarge;
+  .ouiLoadingLogo__icon {
+    animation-name: ouiLoadingLogoBounceLarge;
   }
 }
 
-.ouiLoadingLogo--xLarge,
-.ouiLoadingKibana--xLarge {
+.ouiLoadingLogo--xLarge {
   width: $ouiSizeXL;
 
   &:before,
@@ -94,31 +87,30 @@
     bottom: -$ouiSizeM;
   }
 
-  .ouiLoadingLogo__icon,
-  .ouiLoadingKibana__icon {
-    animation-name: ouiLoadingKibanaBounceXLarge;
+  .ouiLoadingLogo__icon {
+    animation-name: ouiLoadingLogoBounceXLarge;
   }
 }
 
-@keyframes ouiLoadingKibanaBounceMedium {
+@keyframes ouiLoadingLogoBounceMedium {
   50% {
     transform: translateY(-$ouiSizeS);
   }
 }
 
-@keyframes ouiLoadingKibanaBounceLarge {
+@keyframes ouiLoadingLogoBounceLarge {
   50% {
     transform: translateY(-$ouiSizeM);
   }
 }
 
-@keyframes ouiLoadingKibanaBounceXLarge {
+@keyframes ouiLoadingLogoBounceXLarge {
   50% {
     transform: translateY(-$ouiSize);
   }
 }
 
-@keyframes ouiLoadingKibanaPulsateAndFade {
+@keyframes ouiLoadingLogoPulsateAndFade {
   0% {
     opacity: 0;
   }
@@ -133,7 +125,7 @@
   }
 }
 
-@keyframes ouiLoadingKibanaPulsate {
+@keyframes ouiLoadingLogoPulsate {
   0% {
     opacity: .15;
   }
