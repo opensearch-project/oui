@@ -12,6 +12,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 const babelConfig = require('./.babelrc.js');
 // const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
@@ -144,6 +145,10 @@ const webpackConfig = {
     //   typescript: { configFile: path.resolve(__dirname, '..', 'tsconfig.json') },
     //   async: false, // makes errors more visible, but potentially less performant
     // }),
+
+    new NodePolyfillPlugin({
+      includeAliases: ['Buffer', 'process'],
+    }),
   ],
 
   devServer: isDevelopment
@@ -166,11 +171,6 @@ const webpackConfig = {
           : undefined,
       }
     : undefined,
-
-  optimization: {
-    providedExports: false,
-    concatenateModules: false,
-  },
 };
 
 // Inspired by `get-port-sync`, but propogates options
