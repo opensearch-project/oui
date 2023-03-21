@@ -76,7 +76,7 @@ export const ToolTipExample = {
             to the edge of the screen.
           </p>
 
-          <OuiTitle size="md">
+          <OuiTitle size="m">
             <h2>Applying tooltips to custom components</h2>
           </OuiTitle>
 
