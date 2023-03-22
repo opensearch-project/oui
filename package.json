@@ -90,8 +90,11 @@
     "@types/refractor": "^3.0.0",
     "@types/resize-observer-browser": "^0.1.5",
     "@types/vfile-message": "^2.0.0",
+    "brace": "0.11.1",
+    "cheerio": "1.0.0-rc.5",
     "chroma-js": "^2.1.0",
     "classnames": "^2.2.6",
+    "history": "4.10.1",
     "lodash": "^4.17.21",
     "mdast-util-to-hast": "^10.0.0",
     "numeral": "^2.0.6",
@@ -117,7 +120,8 @@
     "unist-util-visit": "^2.0.3",
     "url-parse": "^1.5.9",
     "uuid": "^8.3.0",
-    "vfile": "^4.2.0"
+    "vfile": "^4.2.0",
+    "vfile-message": "2.0.4"
   },
   "devDependencies": {
     "@axe-core/puppeteer": "^4.1.1",
@@ -131,6 +135,8 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@babel/preset-typescript": "^7.12.1",
+    "@babel/template": "7.10.4",
+    "@babel/types": "7.12.10",
     "@elastic/charts": "^30.2.0",
     "@elastic/datemath": "^5.0.3",
     "@elastic/eslint-config-kibana": "^0.15.0",

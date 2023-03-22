@@ -105,8 +105,16 @@ module.exports = {
     'prettier/standard',
     'plugin:prettier/recommended',
   ],
-  plugins: ['jsx-a11y', 'prettier', 'local', 'react-hooks'],
+  plugins: ['jsx-a11y', 'prettier', 'local', 'react-hooks', 'import'],
   rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+        optionalDependencies: false,
+        peerDependencies: false,
+      },
+    ],
     'prefer-template': 'error',
     'local/i18n': 'error',
     'local/href-with-rel': 'error',
