@@ -212,6 +212,7 @@ export { useInnerText, OuiInnerText, useRenderToText } from './inner_text';
 export { OuiI18n, OuiI18nNumber, useOuiI18n } from './i18n';
 
 export {
+  OuiLoadingDashboards,
   OuiLoadingKibana,
   OuiLoadingElastic,
   OuiLoadingChart,
