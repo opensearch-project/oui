@@ -49,7 +49,7 @@ export const cardConfig = () => {
   propsToUse.icon = {
     ...propsToUse.icon,
     type: PropTypes.ReactNode,
-    value: '<OuiIcon type="logoElastic" size="xl" />',
+    value: '<OuiIcon type="logoOpenSearch" size="xl" />',
   };
 
   propsToUse.children = {
