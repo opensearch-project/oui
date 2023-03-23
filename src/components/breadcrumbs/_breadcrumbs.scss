@@ -16,7 +16,8 @@
 
 .ouiBreadcrumbs {
   @include ouiFontSizeS;
-  margin-bottom: -$ouiSizeXS; /* 1 */
+  margin-bottom: -$ouiSizeXS;
+  /* 1 */
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -29,10 +30,6 @@
 
   &:not(.ouiBreadcrumb--last) {
     color: $ouiTextSubduedColor;
-
-    &:hover {
-      color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
-    }
   }
 }
 
@@ -43,16 +40,10 @@
 .ouiBreadcrumb--collapsed {
   flex-shrink: 0;
   color: $ouiBreadcrumbCollapsedLink;
-  vertical-align: top !important; // sass-lint:disable-line no-important
-}
-
-.ouiBreadcrumb__collapsedLink:hover {
-  color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
 }
 
 .ouiBreadcrumbs__inPopover .ouiBreadcrumb--last {
   font-weight: $ouiFontWeightRegular;
-  color: $ouiColorDarkShade !important; // sass-lint:disable-line no-important
 }
 
 .ouiBreadcrumbs--truncate {
@@ -95,7 +86,8 @@
   padding: $ouiSizeXS - 2.5 $ouiSizeL - $ouiSizeXS;
 
   &:not(.ouiBreadcrumbWrapper--first) {
-    margin-bottom: $ouiSizeXS; /* 1 */
+    margin-bottom: $ouiSizeXS;
+    /* 1 */
   }
 
   &:not(.ouiBreadcrumbWrapper--last) {
@@ -107,7 +99,8 @@
   background-image: linear-gradient(to right, $ouiBreadcrumbGrayBackground 0 $ouiSizeM, transparent $ouiSizeM);
   border-radius: $ouiSizeXS;
   overflow: hidden;
-  margin-bottom: $ouiSizeXS; /* 1 */
+  margin-bottom: $ouiSizeXS;
+  /* 1 */
 }
 
 .ouiBreadcrumbWrapper--last {

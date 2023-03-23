@@ -29,6 +29,13 @@ exports[`OuiLink button respects the type property 1`] = `
 />
 `;
 
+exports[`OuiLink coin is rendered 1`] = `
+<button
+  class="ouiLink ouiLink--coin"
+  type="button"
+/>
+`;
+
 exports[`OuiLink danger is rendered 1`] = `
 <button
   class="ouiLink ouiLink--danger"
