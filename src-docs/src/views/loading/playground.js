@@ -14,6 +14,7 @@ import {
   iconValidator,
 } from '../../services/playground';
 import {
+  OuiLoadingDashboards,
   OuiLoadingElastic,
   OuiLoadingChart,
   OuiLoadingLogo,
@@ -21,6 +22,28 @@ import {
   OuiLoadingContent,
 } from '../../../../src/components/';
 import { PropTypes } from 'react-view';
+
+export const loadingDashboardsConfig = () => {
+  const docgenInfo = Array.isArray(OuiLoadingDashboards.__docgenInfo)
+    ? OuiLoadingDashboards.__docgenInfo[0]
+    : OuiLoadingDashboards.__docgenInfo;
+  const propsToUse = propUtilityForPlayground(docgenInfo.props);
+
+  return {
+    config: {
+      componentName: 'OuiLoadingDashboards',
+      props: propsToUse,
+      scope: {
+        OuiLoadingDashboards,
+      },
+      imports: {
+        '@opensearch-project/oui': {
+          named: ['OuiLoadingDashboards'],
+        },
+      },
+    },
+  };
+};
 
 export const loadingElasticConfig = () => {
   const docgenInfo = Array.isArray(OuiLoadingElastic.__docgenInfo)
