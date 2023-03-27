@@ -124,7 +124,7 @@ export default () => {
       <OuiHeader
         sections={[
           {
-            items: [<OuiHeaderLogo>Elastic</OuiHeaderLogo>],
+            items: [<OuiHeaderLogo>OpenSearch</OuiHeaderLogo>],
             borders: 'none',
           },
           {
