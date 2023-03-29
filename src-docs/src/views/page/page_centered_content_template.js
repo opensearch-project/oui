@@ -19,7 +19,6 @@ export default ({ button = <></>, content, sideNav }) => (
     pageContentProps={{ paddingSize: 'none' }}
     pageSideBar={sideNav}
     pageHeader={{
-      iconType: 'logoOpenSearch',
       pageTitle: 'Page title',
       rightSideItems: [button],
     }}>
