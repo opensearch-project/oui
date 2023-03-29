@@ -1,9 +1,9 @@
 ### Description
 [Describe what this change achieves]
- 
+
 ### Issues Resolved
-[List any issues this PR will resolve]
- 
+Fixes [issues this PR will resolve]
+
 ### Check List
 - [ ] New functionality includes testing.
 - [ ] New functionality has been documented.
