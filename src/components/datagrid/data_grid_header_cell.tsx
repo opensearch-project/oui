@@ -46,7 +46,7 @@ import { OuiDataGridColumnResizer } from './data_grid_column_resizer';
 import { OuiPopover } from '../popover';
 import { OuiListGroup } from '../list_group';
 import { OuiScreenReaderOnly } from '../accessibility';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 import { OuiDataGridColumn } from './data_grid_types';
 import { getColumnActions } from './column_actions';
 import { useOuiI18n } from '../i18n';
