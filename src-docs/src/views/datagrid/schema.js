@@ -56,7 +56,7 @@ for (let i = 1; i < 5; i++) {
     json = JSON.stringify([
       {
         default: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-        boolean: fake('{{random.boolean}}'),
+        boolean: fake('{{datatype.boolean}}'),
         numeric: fake('{{finance.account}}'),
         currency: fake('${{finance.amount}}'),
         date: fake('{{date.past}}'),
@@ -74,7 +74,7 @@ for (let i = 1; i < 5; i++) {
 
   storeData.push({
     default: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-    boolean: fake('{{random.boolean}}'),
+    boolean: fake('{{datatype.boolean}}'),
     numeric: fake('{{finance.account}}'),
     currency: fake('${{finance.amount}}'),
     datetime: fake('{{date.past}}'),
