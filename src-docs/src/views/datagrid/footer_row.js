@@ -10,7 +10,7 @@
  */
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
   OuiDataGrid,
@@ -23,11 +23,13 @@ const raw_data = [];
 
 for (let i = 1; i < 20; i++) {
   raw_data.push({
-    name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-    date: fake('{{date.past}}'),
-    amount: fake('${{commerce.price}}'),
-    phone: fake('{{phone.phoneNumber}}'),
-    version: fake('{{system.semver}}'),
+    name: faker.helpers.fake(
+      '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+    ),
+    date: faker.helpers.fake('{{date.past}}'),
+    amount: faker.helpers.fake('${{commerce.price}}'),
+    phone: faker.helpers.fake('{{phone.number}}'),
+    version: faker.helpers.fake('{{system.semver}}'),
   });
 }
 

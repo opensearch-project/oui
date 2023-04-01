@@ -10,7 +10,7 @@
  */
 
 import React, { useState, useCallback } from 'react';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
   OuiDataGrid,
@@ -55,29 +55,35 @@ for (let i = 1; i < 5; i++) {
     franchise = 'Oranges';
     json = JSON.stringify([
       {
-        default: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-        boolean: fake('{{random.boolean}}'),
-        numeric: fake('{{finance.account}}'),
-        currency: fake('${{finance.amount}}'),
-        date: fake('{{date.past}}'),
-        custom: fake('{{date.past}}'),
+        default: faker.helpers.fake(
+          '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+        ),
+        boolean: faker.helpers.fake('{{datatype.boolean}}'),
+        numeric: faker.helpers.fake('{{finance.account}}'),
+        currency: faker.helpers.fake('${{finance.amount}}'),
+        date: faker.helpers.fake('{{date.past}}'),
+        custom: faker.helpers.fake('{{date.past}}'),
       },
     ]);
   } else {
     franchise = 'Apples';
     json = JSON.stringify([
       {
-        name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
+        name: faker.helpers.fake(
+          '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+        ),
       },
     ]);
   }
 
   storeData.push({
-    default: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-    boolean: fake('{{random.boolean}}'),
-    numeric: fake('{{finance.account}}'),
-    currency: fake('${{finance.amount}}'),
-    datetime: fake('{{date.past}}'),
+    default: faker.helpers.fake(
+      '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+    ),
+    boolean: faker.helpers.fake('{{datatype.boolean}}'),
+    numeric: faker.helpers.fake('{{finance.account}}'),
+    currency: faker.helpers.fake('${{finance.amount}}'),
+    datetime: faker.helpers.fake('{{date.past}}'),
     json: json,
     custom: franchise,
   });
