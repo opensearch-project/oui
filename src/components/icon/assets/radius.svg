@@ -1,0 +1,14 @@
+<!--
+  - SPDX-License-Identifier: Apache-2.0
+  -
+  - The OpenSearch Contributors require contributions made to
+  - this file be licensed under the Apache-2.0 license or a
+  - compatible open source license.
+  -
+  - Modifications Copyright OpenSearch Contributors. See
+  - GitHub history for details.
+  -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.05025 12.9497C5.78391 15.6834 10.2161 15.6834 12.9497 12.9497C15.6834 10.2161 15.6834 5.7839 12.9497 3.05025C10.2161 0.316595 5.78393 0.316574 3.05025 3.05025C0.316581 5.78392 0.316603 10.2161 3.05025 12.9497ZM3.75736 12.2426C6.10052 14.5858 9.89949 14.5858 12.2426 12.2426C14.4667 10.0185 14.5798 6.4828 12.5817 4.12543L10 6.7071V10H6V5.99999H9.2929L11.8746 3.41832C9.51719 1.42024 5.98146 1.53325 3.75736 3.75735C1.41421 6.10051 1.41421 9.89948 3.75736 12.2426ZM9 6.99999L8.99998 8.99997L7 9L7.00002 7.00001L9 6.99999Z"/>
+</svg>

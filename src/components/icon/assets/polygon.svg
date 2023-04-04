@@ -1,0 +1,14 @@
+<!--
+  - SPDX-License-Identifier: Apache-2.0
+  -
+  - The OpenSearch Contributors require contributions made to
+  - this file be licensed under the Apache-2.0 license or a
+  - compatible open source license.
+  -
+  - Modifications Copyright OpenSearch Contributors. See
+  - GitHub history for details.
+  -->
+
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <path d="M1 5V1H5V2.29999H11V1H15V5H12.0658L11.2581 6H12V10H11.2403L12.0403 11H15V15H11V13.5H5V15H1V11H2.5V5H1ZM2 2H4V4H2V2ZM11 12.5V11.3004L9.95972 10H8V6H9.97266L11 4.72806V3.29999H5V5H3.5V11H5V12.5H11ZM12 2H14V4H12V2ZM4 12H2V14H4V12ZM9 7H11V9H9V7ZM12 12H14V14H12V12Z"/>
+</svg>
