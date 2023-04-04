@@ -1,5 +1,5 @@
 ### Description
-[Describe what this change achieves]
+<!-- Describe what this change achieves -->
 
 ### Issues Resolved
 Fixes [issues this PR will resolve]
