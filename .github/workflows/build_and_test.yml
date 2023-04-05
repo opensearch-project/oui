@@ -11,9 +11,9 @@ on:
       - '**/*.md'
 
 jobs:
-  build-lint-test:
+  lint-test:
     runs-on: ${{ matrix.os }}
-    name: Build and Verify
+    name: Lint and Test on ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
@@ -39,3 +39,33 @@ jobs:
 
       - name: Run unit tests
         run: yarn test-unit
+
+  build:
+    runs-on: ${{ matrix.os }}
+    name: Build on ${{ matrix.os }}
+    needs: lint-test
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+          yarn install --frozen-lockfile
+
+      - name: Build
+        run: yarn build
+
+      - name: Build Docs
+        run: yarn build-docs
