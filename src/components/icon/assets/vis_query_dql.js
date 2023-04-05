@@ -11,7 +11,7 @@
 
 import * as React from 'react';
 
-const OuiIconVisBuilderDql = ({ title, titleId, ...props }) => (
+const OuiIconVisQueryDql = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -30,4 +30,4 @@ const OuiIconVisBuilderDql = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = OuiIconVisBuilderDql;
+export const icon = OuiIconVisQueryDql;

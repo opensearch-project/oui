@@ -11,7 +11,7 @@
 
 import * as React from 'react';
 
-const OuiIconVisBuilderSql = ({ title, titleId, ...props }) => (
+const OuiIconVisQuerySql = ({ title, titleId, ...props }) => (
   <svg
     width={16}
     height={16}
@@ -30,4 +30,4 @@ const OuiIconVisBuilderSql = ({ title, titleId, ...props }) => (
   </svg>
 );
 
-export const icon = OuiIconVisBuilderSql;
+export const icon = OuiIconVisQuerySql;
