@@ -18,7 +18,9 @@ exports[`OuiLoadingKibana is rendered 1`] = `
 
 exports[`OuiLoadingKibana size l is rendered 1`] = `
 <span
-  class="ouiLoadingKibana ouiLoadingKibana--large"
+  aria-label="aria-label"
+  class="ouiLoadingKibana ouiLoadingKibana--large testClass1 testClass2"
+  data-test-subj="test subject string"
 >
   <span
     class="ouiLoadingKibana__icon"
@@ -32,7 +34,9 @@ exports[`OuiLoadingKibana size l is rendered 1`] = `
 
 exports[`OuiLoadingKibana size m is rendered 1`] = `
 <span
-  class="ouiLoadingKibana ouiLoadingKibana--medium"
+  aria-label="aria-label"
+  class="ouiLoadingKibana ouiLoadingKibana--medium testClass1 testClass2"
+  data-test-subj="test subject string"
 >
   <span
     class="ouiLoadingKibana__icon"
@@ -46,7 +50,9 @@ exports[`OuiLoadingKibana size m is rendered 1`] = `
 
 exports[`OuiLoadingKibana size xl is rendered 1`] = `
 <span
-  class="ouiLoadingKibana ouiLoadingKibana--xLarge"
+  aria-label="aria-label"
+  class="ouiLoadingKibana ouiLoadingKibana--xLarge testClass1 testClass2"
+  data-test-subj="test subject string"
 >
   <span
     class="ouiLoadingKibana__icon"
