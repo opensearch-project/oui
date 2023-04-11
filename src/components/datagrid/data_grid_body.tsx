@@ -39,7 +39,7 @@ import React, {
   useState,
 } from 'react';
 import classNames from 'classnames';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 import {
   GridChildComponentProps,
   VariableSizeGrid as Grid,
