@@ -99,7 +99,7 @@
     "prop-types": "^15.6.0",
     "react-ace": "^7.0.5",
     "react-beautiful-dnd": "^13.0.0",
-    "react-dropzone": "^11.2.0",
+    "react-dropzone": "^14.2.3",
     "react-focus-on": "^3.5.0",
     "react-input-autosize": "^2.2.2",
     "react-is": "~16.3.0",
