@@ -120,6 +120,7 @@
     "vfile": "^4.2.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
     "@axe-core/puppeteer": "^4.1.1",
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",
@@ -188,7 +189,6 @@
     "eslint-plugin-react": "^7.21.3",
     "eslint-plugin-react-hooks": "^4.1.2",
     "expose-gc": "^1.0.0",
-    "faker": "^4.1.0",
     "file-loader": "^6.1.0",
     "findup": "^0.1.5",
     "fork-ts-checker-webpack-plugin": "^5.1.0",
