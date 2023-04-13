@@ -33,7 +33,10 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
 
     for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
       const srcItem = path.join(src, entry.name);
-      const destItem = path.join(dest, entry.name);
+      const destItem = path
+        .join(dest, entry.name)
+        .replace('oui', 'eui')
+        .replace('cascadia', 'amsterdam');
 
       if (entry.isDirectory()) copyDirectory(srcItem, destItem);
       else fs.copyFileSync(srcItem, destItem);
