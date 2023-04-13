@@ -25,14 +25,11 @@
 
 .ouiBreadcrumb {
   display: inline-block;
-  transform: skewX(20deg);
+  margin-bottom: $ouiSizeXS; /* 1 */
 
   &:not(.ouiBreadcrumb--last) {
+    margin-right: $ouiBreadcrumbSpacing;
     color: $ouiTextSubduedColor;
-
-    &:hover {
-      color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
-    }
   }
 }
 
@@ -42,12 +39,16 @@
 
 .ouiBreadcrumb--collapsed {
   flex-shrink: 0;
-  color: $ouiBreadcrumbCollapsedLink;
-  vertical-align: top !important; // sass-lint:disable-line no-important
 }
 
-.ouiBreadcrumb__collapsedLink:hover {
-  color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
+.ouiBreadcrumbSeparator {
+  flex-shrink: 0;
+  display: inline-block;
+  margin-right: $ouiBreadcrumbSpacing;
+  width: 1px;
+  height: $ouiSize;
+  transform: translateY(-1px) rotate(15deg);
+  background: $ouiColorLightShade;
 }
 
 .ouiBreadcrumbs__inPopover .ouiBreadcrumb--last {
@@ -60,18 +61,11 @@
   flex-wrap: nowrap;
 
   .ouiBreadcrumb:not(.ouiBreadcrumb--collapsed) {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
-  }
-
-  .ouiBreadcrumbWrapper:not(.ouiBreadcrumbWrapper--collapsed) {
     max-width: $ouiBreadcrumbTruncateWidth;
     overflow: hidden;
     text-overflow: ellipsis;
 
-    &.ouiBreadcrumbWrapper--last {
+    &.ouiBreadcrumb--last {
       max-width: none;
     }
   }
@@ -79,37 +73,7 @@
 
 .ouiBreadcrumb--truncate {
   @include ouiTextTruncate;
-  max-width: 100%;
+  max-width: $ouiBreadcrumbTruncateWidth;
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
-}
-
-.ouiBreadcrumbWrapper--truncate {
-  max-width: $ouiBreadcrumbTruncateWidth;
-}
-
-.ouiBreadcrumbWrapper {
-  background-color: $ouiBreadcrumbGrayBackground;
-  transform: skewX(-20deg);
-  border-radius: $ouiSizeXS;
-  padding: $ouiSizeXS - 2.5 $ouiSizeL - $ouiSizeXS;
-
-  &:not(.ouiBreadcrumbWrapper--first) {
-    margin-bottom: $ouiSizeXS; /* 1 */
-  }
-
-  &:not(.ouiBreadcrumbWrapper--last) {
-    margin-right: $ouiBreadcrumbSpacing;
-  }
-}
-
-.ouiBreadcrumbWall {
-  background-image: linear-gradient(to right, $ouiBreadcrumbGrayBackground 0 $ouiSizeM, transparent $ouiSizeM);
-  border-radius: $ouiSizeXS;
-  overflow: hidden;
-  margin-bottom: $ouiSizeXS; /* 1 */
-}
-
-.ouiBreadcrumbWrapper--last {
-  background-color: $ouiBreadcrumbBlueBackground;
 }

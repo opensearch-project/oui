@@ -6,52 +6,41 @@ exports[`OuiHeaderBreadcrumbs is rendered 1`] = `
   class="ouiBreadcrumbs ouiHeaderBreadcrumbs testClass1 testClass2 ouiBreadcrumbs--truncate"
   data-test-subj="test subject string"
 >
-  <div
-    class="ouiBreadcrumbWall"
+  <a
+    class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+    data-test-subj="breadcrumbsAnimals"
+    href="#"
+    rel="noreferrer"
   >
-    <div
-      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
-    >
-      <a
-        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-        data-test-subj="breadcrumbsAnimals"
-        href="#"
-        rel="noreferrer"
-      >
-        Animals
-      </a>
-    </div>
-  </div>
+    Animals
+  </a>
   <div
-    class="ouiBreadcrumbWrapper"
+    class="ouiBreadcrumbSeparator"
+  />
+  <button
+    class="ouiLink ouiLink--subdued ouiBreadcrumb"
+    type="button"
   >
-    <button
-      class="ouiLink ouiLink--subdued ouiBreadcrumb"
-      type="button"
-    >
-      Reptiles
-    </button>
-  </div>
+    Reptiles
+  </button>
   <div
-    class="ouiBreadcrumbWrapper"
+    class="ouiBreadcrumbSeparator"
+  />
+  <a
+    class="ouiLink ouiLink--subdued ouiBreadcrumb"
+    href="#"
+    rel="noreferrer"
   >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb"
-      href="#"
-      rel="noreferrer"
-    >
-      Boa constrictor
-    </a>
-  </div>
+    Boa constrictor
+  </a>
   <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
+    class="ouiBreadcrumbSeparator"
+  />
+  <span
+    aria-current="page"
+    class="ouiBreadcrumb ouiBreadcrumb--last"
   >
-    <span
-      aria-current="page"
-      class="ouiBreadcrumb ouiBreadcrumb--last"
-    >
-      Edit
-    </span>
-  </div>
+    Edit
+  </span>
 </nav>
 `;
