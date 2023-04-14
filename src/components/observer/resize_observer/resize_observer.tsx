@@ -28,7 +28,15 @@
  * under the License.
  */
 
-import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
+import {
+  MutableRefObject,
+  ReactNode,
+  RefObject,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { OuiObserver } from '../observer';
 
 export interface OuiResizeObserverProps {
@@ -87,58 +95,90 @@ const makeResizeObserver = (
   return observer;
 };
 
-export const useResizeObserver = (
-  container: Element | null,
-  dimension?: 'width' | 'height'
-) => {
-  const [size, _setSize] = useState({ width: 0, height: 0 });
+export interface UseResizeObserverProps {
+  element?: HTMLElement | null;
+  elementRef?: MutableRefObject<any> | RefObject<any> | null;
+  elementId?: string;
+  observableDimension?: 'all' | 'width' | 'height';
+  shouldObserve?: boolean;
+}
 
-  // _currentDimensions and _setSize are used to only store the
+export const useResizeObserver = ({
+  element,
+  elementRef,
+  elementId,
+  observableDimension = 'all',
+  shouldObserve = true,
+}: UseResizeObserverProps) => {
+  const animationFrameRef = useRef<number | null>(null);
+  const [size, setSize] = useState({ width: 0, height: 0 });
+
+  // currentDimensions and handleElementResize are used to only store the
   // new state (and trigger a re-render) when the new dimensions actually differ
-  const _currentDimensions = useRef(size);
-  const setSize = useCallback(
+  const currentDimensions = useRef(size);
+  const handleElementResize = useCallback(
     (dimensions) => {
-      const doesWidthMatter = dimension !== 'height';
-      const doesHeightMatter = dimension !== 'width';
+      const isAllObservable = observableDimension === 'all';
+      const isWidthObservable = observableDimension === 'width';
+      const isHeightObservable = observableDimension === 'height';
+
+      const isWidthChanged =
+        currentDimensions.current.width !== dimensions.width;
+      const isHeightChanged =
+        currentDimensions.current.height !== dimensions.height;
+
       if (
-        (doesWidthMatter &&
-          _currentDimensions.current.width !== dimensions.width) ||
-        (doesHeightMatter &&
-          _currentDimensions.current.height !== dimensions.height)
+        (isAllObservable && (isWidthChanged || isHeightChanged)) ||
+        (isWidthObservable && isWidthChanged) ||
+        (isHeightObservable && isHeightChanged)
       ) {
-        _currentDimensions.current = dimensions;
-        _setSize(dimensions);
+        cancelAnimationFrame(animationFrameRef.current!);
+        animationFrameRef.current = requestAnimationFrame(() => {
+          currentDimensions.current = dimensions;
+          setSize(dimensions);
+        });
       }
     },
-    [dimension]
+    [observableDimension]
   );
 
   useEffect(() => {
-    if (container != null) {
-      // ResizeObserver's first call to the observation callback is scheduled in the future
-      // so find the container's initial dimensions now
-      const boundingRect = container.getBoundingClientRect();
-      setSize({
-        width: boundingRect.width,
-        height: boundingRect.height,
-      });
+    if (shouldObserve) {
+      let observableElement: HTMLElement | undefined | null = element;
+      if (elementRef) observableElement = elementRef.current;
+      if (elementId) observableElement = document.getElementById(elementId);
 
-      const observer = makeResizeObserver(container, () => {
-        // `entry.contentRect` provides incomplete `height` and `width` data.
-        // Use `getBoundingClientRect` to account for padding and border.
-        // https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly
-        const { height, width } = container.getBoundingClientRect();
-        setSize({
-          width,
-          height,
+      if (observableElement) {
+        // ResizeObserver's first call to the observation callback is scheduled in the future
+        // so find the container's initial dimensions now
+        const { height, width } = observableElement.getBoundingClientRect();
+        setSize({ width, height });
+
+        const observer = makeResizeObserver(observableElement, () => {
+          // `entry.contentRect` provides incomplete `height` and `width` data.
+          // Use `getBoundingClientRect` to account for padding and border.
+          // https://developer.mozilla.org/en-US/docs/Web/API/DOMRectReadOnly
+          const { height, width } = observableElement!.getBoundingClientRect();
+          handleElementResize({ width, height });
         });
-      });
 
-      return () => observer && observer.disconnect();
-    } else {
-      setSize({ width: 0, height: 0 });
+        return () => {
+          observer && observer.disconnect();
+          animationFrameRef.current &&
+            cancelAnimationFrame(animationFrameRef.current);
+        };
+      } else {
+        handleElementResize({ width: 0, height: 0 });
+      }
     }
-  }, [container, setSize]);
+  }, [
+    element,
+    elementRef,
+    elementId,
+    shouldObserve,
+    setSize,
+    handleElementResize,
+  ]);
 
   return size;
 };

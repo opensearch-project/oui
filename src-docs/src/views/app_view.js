@@ -97,7 +97,7 @@ export class AppView extends Component {
             />
           </OuiErrorBoundary>
 
-          <OuiPageBody panelled>
+          <OuiPageBody id="page-main-section" panelled>
             <OuiContext i18n={i18n}>
               <ThemeContext.Consumer>
                 {(context) => {

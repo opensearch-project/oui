@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import React, { FunctionComponent, useEffect } from 'react';
+import React, { FunctionComponent, useEffect, useRef } from 'react';
 import classNames from 'classnames';
 import { useDropzone } from 'react-dropzone';
 import { OuiMarkdownEditorFooter } from './markdown_editor_footer';
@@ -102,15 +102,12 @@ export const OuiMarkdownEditorDropZone: FunctionComponent<OuiMarkdownEditorDropZ
     'ouiMarkdownEditorDropZone--isDraggingError': isDraggingError,
   });
 
-  const [
-    editorFooterRef,
-    setEditorFooterRef,
-  ] = React.useState<HTMLDivElement | null>(null);
+  const editorFooterRef = useRef<HTMLDivElement>(null);
 
-  const { height: editorFooterHeight } = useResizeObserver(
-    editorFooterRef,
-    'height'
-  );
+  const { height: editorFooterHeight } = useResizeObserver({
+    elementRef: editorFooterRef,
+    observableDimension: 'height',
+  });
 
   useEffect(() => {
     if (editorFooterHeight !== 0) {
@@ -222,7 +219,7 @@ export const OuiMarkdownEditorDropZone: FunctionComponent<OuiMarkdownEditorDropZ
     <div {...getRootProps()} className={classes}>
       {children}
       <OuiMarkdownEditorFooter
-        ref={setEditorFooterRef}
+        ref={editorFooterRef}
         uiPlugins={uiPlugins}
         openFiles={() => {
           setHasUnacceptedItems(false);

@@ -129,10 +129,10 @@ export const OuiResizableContainer: FunctionComponent<OuiResizableContainerProps
     onPanelWidthChange,
   });
 
-  const containerSize = useResizeObserver(
-    containerRef.current,
-    isHorizontal ? 'width' : 'height'
-  );
+  const containerSize = useResizeObserver({
+    elementRef: containerRef,
+    observableDimension: isHorizontal ? 'width' : 'height',
+  });
 
   const initialize = useCallback(() => {
     actions.initContainer(isHorizontal);

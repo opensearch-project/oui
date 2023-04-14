@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import React, { FunctionComponent, useState } from 'react';
+import React, { FunctionComponent, useRef } from 'react';
 import { mount } from 'enzyme';
 import { OuiResizeObserver, useResizeObserver } from './resize_observer';
 import { sleep } from '../../../test';
@@ -105,9 +105,9 @@ describe.skip('testResizeObservers', () => {
       expect.assertions(2);
 
       const Wrapper: FunctionComponent<{}> = jest.fn(({ children }) => {
-        const [ref, setRef] = useState<Element | null>(null);
-        useResizeObserver(ref);
-        return <div ref={setRef}>{children}</div>;
+        const ref = useRef<HTMLDivElement>(null);
+        useResizeObserver({ elementRef: ref });
+        return <div ref={ref}>{children}</div>;
       });
 
       const component = mount(<Wrapper children={<div>Hello World</div>} />);

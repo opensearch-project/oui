@@ -363,15 +363,21 @@ export const OuiDataGridBody: FunctionComponent<OuiDataGridBodyProps> = (
     gridStyles,
   } = props;
 
-  const [headerRowRef, setHeaderRowRef] = useState<HTMLDivElement | null>(null);
-  const [footerRowRef, setFooterRowRef] = useState<HTMLDivElement | null>(null);
+  const headerRowRef = useRef<HTMLDivElement>(null);
+  const footerRowRef = useRef<HTMLDivElement>(null);
 
   useMutationObserver(headerRowRef, handleHeaderMutation, {
     subtree: true,
     childList: true,
   });
-  const { height: headerRowHeight } = useResizeObserver(headerRowRef, 'height');
-  const { height: footerRowHeight } = useResizeObserver(footerRowRef, 'height');
+  const { height: headerRowHeight } = useResizeObserver({
+    elementRef: headerRowRef,
+    observableDimension: 'height',
+  });
+  const { height: footerRowHeight } = useResizeObserver({
+    elementRef: footerRowRef,
+    observableDimension: 'height',
+  });
 
   const startRow = pagination ? pagination.pageIndex * pagination.pageSize : 0;
   let endRow = pagination
@@ -462,7 +468,7 @@ export const OuiDataGridBody: FunctionComponent<OuiDataGridBodyProps> = (
   const headerRow = useMemo(() => {
     return (
       <OuiDataGridHeaderRow
-        ref={setHeaderRowRef}
+        ref={headerRowRef}
         switchColumnPos={switchColumnPos}
         setVisibleColumns={setVisibleColumns}
         leadingControlColumns={leadingControlColumns}
@@ -494,7 +500,7 @@ export const OuiDataGridBody: FunctionComponent<OuiDataGridBodyProps> = (
     if (renderFooterCellValue == null) return null;
     return (
       <OuiDataGridFooterRow
-        ref={setFooterRowRef}
+        ref={footerRowRef}
         leadingControlColumns={leadingControlColumns}
         trailingControlColumns={trailingControlColumns}
         columns={columns}
@@ -641,7 +647,7 @@ export const OuiDataGridBody: FunctionComponent<OuiDataGridBodyProps> = (
   const [width, setWidth] = useState<number | undefined>(undefined);
 
   const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const wrapperDimensions = useResizeObserver(wrapperRef.current);
+  const wrapperDimensions = useResizeObserver({ elementRef: wrapperRef });
 
   // reset height constraint when rowCount changes
   useEffect(() => {

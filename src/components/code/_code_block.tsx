@@ -35,6 +35,7 @@ import React, {
   ReactNode,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from 'react';
 import classNames from 'classnames';
@@ -227,19 +228,19 @@ export const OuiCodeBlockImpl: FunctionComponent<OuiCodeBlockImplProps> = ({
   overflowHeight,
   ...rest
 }) => {
-  const [isFullScreen, setIsFullScreen] = useState(false);
-  const [wrapperRef, setWrapperRef] = useState<Element | null>(null);
+  const ref = useRef<HTMLPreElement>(null);
   const [innerTextRef, _innerText] = useInnerText('');
+  const combinedRef = useCombinedRefs<HTMLPreElement>([ref, innerTextRef]);
+
+  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [tabIndex, setTabIndex] = useState<-1 | 0>(-1);
+
+  const { width, height } = useResizeObserver({ elementRef: ref });
+
   const innerText = useMemo(
     () => _innerText?.replace(/[\r\n?]{2}|\n\n/g, '\n'),
     [_innerText]
   );
-  const [tabIndex, setTabIndex] = useState<-1 | 0>(-1);
-  const combinedRef = useCombinedRefs<HTMLPreElement>([
-    innerTextRef,
-    setWrapperRef,
-  ]);
-  const { width, height } = useResizeObserver(wrapperRef);
 
   const content = useMemo(() => {
     if (!language || typeof children !== 'string') {
@@ -252,21 +253,26 @@ export const OuiCodeBlockImpl: FunctionComponent<OuiCodeBlockImplProps> = ({
   }, [children, language, inline]);
 
   const doesOverflow = () => {
-    if (!wrapperRef) return;
+    if (!ref.current) return;
 
-    const { clientWidth, clientHeight, scrollWidth, scrollHeight } = wrapperRef;
+    const {
+      clientWidth,
+      clientHeight,
+      scrollWidth,
+      scrollHeight,
+    } = ref.current;
     const doesOverflow =
       scrollHeight > clientHeight || scrollWidth > clientWidth;
 
     setTabIndex(doesOverflow ? 0 : -1);
   };
 
-  useMutationObserver(wrapperRef, doesOverflow, {
+  useMutationObserver(ref, doesOverflow, {
     subtree: true,
     childList: true,
   });
 
-  useEffect(doesOverflow, [width, height, wrapperRef]);
+  useEffect(doesOverflow, [width, height, ref]);
 
   const onKeyDown = (event: KeyboardEvent<HTMLElement>) => {
     if (event.key === keys.ESCAPE) {

@@ -44,7 +44,6 @@ import classnames from 'classnames';
 import {
   keys,
   OuiWindowEvent,
-  useCombinedRefs,
   OuiBreakpointSize,
   isWithinMinBreakpoint,
   throttle,
@@ -250,16 +249,10 @@ const OuiFlyout = forwardRef(
       // reacts every 50ms to resize changes and always gets the final update
     }, 50);
 
-    /**
-     * Setting up the refs on the actual flyout element in order to
-     * accommodate for the `isPushed` state by adding padding to the body equal to the width of the element
-     */
-    const [resizeRef, setResizeRef] = useState<ComponentPropsWithRef<T> | null>(
-      null
-    );
-    const setRef = useCombinedRefs([setResizeRef, ref]);
-    // TODO: Allow this hooke to be conditional
-    const dimensions = useResizeObserver(resizeRef as Element);
+    const dimensions = useResizeObserver({
+      elementRef: ref as MutableRefObject<ComponentPropsWithRef<T> | null>,
+      shouldObserve: isPushed,
+    });
 
     useEffect(() => {
       // This class doesn't actually do anything by OUI, but is nice to add for consumers (JIC)
@@ -374,7 +367,7 @@ const OuiFlyout = forwardRef(
         className={classes}
         tabIndex={-1}
         style={newStyle || style}
-        ref={setRef}>
+        ref={ref}>
         {closeButton}
         {children}
       </Element>

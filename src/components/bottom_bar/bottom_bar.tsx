@@ -33,8 +33,9 @@ import React, {
   CSSProperties,
   forwardRef,
   HTMLAttributes,
+  RefObject,
   useEffect,
-  useState,
+  useRef,
 } from 'react';
 import { useCombinedRefs } from '../../services';
 import { OuiScreenReaderOnly } from '../accessibility';
@@ -83,6 +84,14 @@ export type OuiBottomBarProps = CommonProps &
   HTMLAttributes<HTMLElement> &
   _BottomBarExclusivePositions & {
     /**
+     * Whether the bottom bar should be the same width as the container element, using its ref.
+     */
+    containerElementRef?: RefObject<any>;
+    /**
+     * Whether the bottom bar should be the same width as the container element, using its id.
+     */
+    containerElementId?: string;
+    /**
      * Padding applied to the bar. Default is 'm'.
      */
     paddingSize?: BottomBarPaddingSize;
@@ -124,6 +133,8 @@ export const OuiBottomBar = forwardRef<
 >(
   (
     {
+      containerElementRef,
+      containerElementId,
       position = 'fixed',
       paddingSize = 'm',
       affordForDisplacement = true,
@@ -146,10 +157,21 @@ export const OuiBottomBar = forwardRef<
       position !== 'fixed' ? false : affordForDisplacement;
     usePortal = position !== 'fixed' ? false : usePortal;
 
-    const [resizeRef, setResizeRef] = useState<HTMLElement | null>(null);
-    const setRef = useCombinedRefs([setResizeRef, ref]);
-    // TODO: Allow this hooke to be conditional
-    const dimensions = useResizeObserver(resizeRef);
+    const resizeRef = useRef<HTMLElement>(null);
+    const combinedRef = useCombinedRefs([ref, resizeRef]);
+
+    const dimensions = useResizeObserver({
+      elementRef: resizeRef,
+      observableDimension: 'height',
+      shouldObserve: affordForDisplacement,
+    });
+
+    const containerDimensions = useResizeObserver({
+      elementRef: containerElementRef,
+      elementId: containerElementId,
+      observableDimension: 'width',
+      shouldObserve: !!containerElementRef || !!containerElementId,
+    });
 
     useEffect(() => {
       if (affordForDisplacement && usePortal) {
@@ -178,13 +200,17 @@ export const OuiBottomBar = forwardRef<
       className
     );
 
-    const newStyle = {
+    const newStyle: CSSProperties = {
       left,
       right,
       bottom,
       top,
       ...style,
     };
+
+    if (containerElementRef || containerElementId) {
+      newStyle.width = containerDimensions.width;
+    }
 
     const bar = (
       <>
@@ -199,7 +225,7 @@ export const OuiBottomBar = forwardRef<
                 landmarkHeading ? landmarkHeading : screenReaderHeading
               }
               className={classes}
-              ref={setRef}
+              ref={combinedRef}
               style={newStyle}
               {...rest}>
               <OuiScreenReaderOnly>

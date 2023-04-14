@@ -36,7 +36,7 @@ export const ResizeObserverHookExample = () => {
   };
 
   const resizeRef = useRef();
-  const dimensions = useResizeObserver(resizeRef.current);
+  const dimensions = useResizeObserver({ elementRef: resizeRef });
 
   return (
     <div>

@@ -24,6 +24,9 @@ const bottomBarSource = require('!!raw-loader!./bottom_bar');
 import BottomBarDisplacement from './bottom_bar_displacement';
 const bottomBarDisplacementSource = require('!!raw-loader!./bottom_bar_displacement');
 
+import BottomBarContainerWidth from './bottom_bar_container_width';
+const bottomBarContainerWidthSource = require('!!raw-loader!./bottom_bar_container_width');
+
 import BottomBarPosition from './bottom_bar_position';
 import { OuiCallOut } from '../../../../src/components/call_out';
 const bottomBarPositionSource = require('!!raw-loader!./bottom_bar_position');
@@ -128,6 +131,30 @@ export const BottomBarExample = {
       props: { OuiBottomBar },
       demo: <BottomBarDisplacement />,
       snippet: `<OuiBottomBar affordForDisplacement={false}>
+  <!-- Content goes here -->
+</OuiBottomBar>`,
+    },
+    {
+      title: 'Container width',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: bottomBarContainerWidthSource,
+        },
+      ],
+      text: (
+        <p>
+          The props <OuiCode>containerElementRef</OuiCode> and{' '}
+          <OuiCode>containerElementId</OuiCode> are optional and can be used to
+          control how the component determines its width. They allow you to
+          specify a container element, and the component will take the width of
+          that element instead of its default behavior of taking up the full
+          width available to it.
+        </p>
+      ),
+      props: { OuiBottomBar },
+      demo: <BottomBarContainerWidth />,
+      snippet: `<OuiBottomBar left="unset" containerElementId="page-main-section">
   <!-- Content goes here -->
 </OuiBottomBar>`,
     },

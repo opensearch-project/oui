@@ -41,6 +41,7 @@ import React, {
   useRef,
   MutableRefObject,
   CSSProperties,
+  RefObject,
 } from 'react';
 import classNames from 'classnames';
 import { tabbable } from 'tabbable';
@@ -325,16 +326,16 @@ function renderPagination(props: OuiDataGridProps, controls: string) {
  * @param pageSize the currently applied page size
  */
 function useVirtualizeContainerWidth(
-  resizeRef: HTMLDivElement | null,
+  resizeRef: RefObject<HTMLDivElement>,
   pageSize: number | undefined
 ) {
   const [virtualizeContainerWidth, setVirtualizeContainerWidth] = useState(0);
-  const virtualizeContainer = resizeRef?.getElementsByClassName(
+  const virtualizeContainer = resizeRef.current?.getElementsByClassName(
     VIRTUALIZED_CONTAINER_CLASS
   )[0] as HTMLDivElement | null;
 
   // re-render data grid on size changes
-  useResizeObserver(virtualizeContainer);
+  useResizeObserver({ element: virtualizeContainer });
 
   useEffect(() => {
     if (virtualizeContainer?.clientWidth) {
@@ -788,10 +789,16 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
   };
 
   // enables/disables grid controls based on available width
-  const [resizeRef, setResizeRef] = useState<HTMLDivElement | null>(null);
-  const [toolbarRef, setToolbarRef] = useState<HTMLDivElement | null>(null);
-  const gridDimensions = useResizeObserver(resizeRef, 'width');
-  const toolbarDemensions = useResizeObserver(toolbarRef, 'height');
+  const resizeRef = useRef<HTMLDivElement>(null);
+  const toolbarRef = useRef<HTMLDivElement>(null);
+  const gridDimensions = useResizeObserver({
+    elementRef: resizeRef,
+    observableDimension: 'width',
+  });
+  const toolbarDimensions = useResizeObserver({
+    elementRef: toolbarRef,
+    observableDimension: 'height',
+  });
   useEffect(() => {
     if (resizeRef) {
       const { width } = gridDimensions;
@@ -1077,13 +1084,13 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
             className={classes}
             onKeyDown={handleGridKeyDown}
             style={isFullScreen ? undefined : { width, height }}
-            ref={setResizeRef}
+            ref={resizeRef}
             {...rest}>
             {(IS_JEST_ENVIRONMENT || defaultColumnWidth) && (
               <>
                 {showToolbar ? (
                   <div
-                    ref={setToolbarRef}
+                    ref={toolbarRef}
                     className="ouiDataGrid__controls"
                     data-test-sub="dataGridControls">
                     {hasRoomForGridControls ? gridControls : null}
@@ -1136,7 +1143,7 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
                         columns={orderedVisibleColumns}
                         columnWidths={columnWidths}
                         defaultColumnWidth={defaultColumnWidth}
-                        toolbarHeight={toolbarDemensions.height}
+                        toolbarHeight={toolbarDimensions.height}
                         leadingControlColumns={leadingControlColumns}
                         schema={mergedSchema}
                         trailingControlColumns={trailingControlColumns}

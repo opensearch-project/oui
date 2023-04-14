@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import { ReactNode, useEffect } from 'react';
+import { ReactNode, RefObject, useEffect } from 'react';
 
 import { OuiObserver } from '../observer';
 
@@ -87,23 +87,20 @@ const makeMutationObserver = (
 };
 
 export const useMutationObserver = (
-  container: Element | null,
+  elementRef: RefObject<any>,
   callback: MutationCallback,
   observerOptions?: MutationObserverInit
 ) => {
-  useEffect(
-    () => {
-      if (container != null) {
-        const observer = makeMutationObserver(
-          container,
-          observerOptions,
-          callback
-        );
-        return () => observer.disconnect();
-      }
-    },
+  useEffect(() => {
+    if (elementRef.current != null) {
+      const observer = makeMutationObserver(
+        elementRef.current,
+        observerOptions,
+        callback
+      );
+      return () => observer.disconnect();
+    }
     // ignore changing observerOptions
-    // eslint-disable-next-line
-    [container, callback]
-  );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [elementRef, callback]);
 };
