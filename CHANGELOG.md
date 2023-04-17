@@ -3,6 +3,27 @@
 
 - Add release workflows ([134](https://github.com/opensearch-project/oui/pull/133))
 
+## [`1.1.0`](https://github.com/opensearch-project/oui/tree/1.1.0)
+
+- Bump sass-loader to 10.4.1 ([#715](https://github.com/opensearch-project/oui/pull/715))
+- Revert updated breadcrumb styling ([#706](https://github.com/opensearch-project/oui/pull/706))
+- Update loader-utils to 1.4.2 ([#704](https://github.com/opensearch-project/oui/pull/704))
+- Fix aliasing issue ([#702](https://github.com/opensearch-project/oui/pull/702))
+- Add icons for Dashboards 2.7 ([#685](https://github.com/opensearch-project/oui/pull/685))
+- Rectify super date picker functionality ([#682](https://github.com/opensearch-project/oui/pull/682))
+- Remove docs folder ([#678](https://github.com/opensearch-project/oui/pull/678))
+- Add leading slash to test in .npmignore ([#690](https://github.com/opensearch-project/oui/pull/690))
+- Bump node-sass from 7.0.1 to 8.0.0 ([#673](https://github.com/opensearch-project/oui/pull/673))
+- Publish OUI to npmjs using tarball ([#667](https://github.com/opensearch-project/oui/pull/667))
+- Add build artifacts to release ([#664](https://github.com/opensearch-project/oui/pull/664))
+- Create OuiLoadingDashboards component ([#620](https://github.com/opensearch-project/oui/pull/620))
+- Fix yo-doc and yo-component crashes ([#616](https://github.com/opensearch-project/oui/pull/616))
+- Update logo_opensearch.js file ([#614](https://github.com/opensearch-project/oui/pull/614))
+- Change OuiTitle size property to m in tooltip example ([#612](https://github.com/opensearch-project/oui/pull/612))
+- Readme Opensearch Logo linking to non-existent file ([#589](https://github.com/opensearch-project/oui/pull/589))
+- Remove Elastic references from .md docs ([#588](https://github.com/opensearch-project/oui/pull/588))
+- Fix deprecated webpack configuration ([#586](https://github.com/opensearch-project/oui/pull/586))
+
 ## [`1.0.0`](https://github.com/opensearch-project/oui/tree/1.0.0)
 
 - Initial forked public release
