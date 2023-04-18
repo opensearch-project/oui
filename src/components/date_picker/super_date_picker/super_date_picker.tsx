@@ -317,7 +317,7 @@ export class OuiSuperDatePicker extends Component<
   };
 
   hidePrettyDuration = () => {
-    this.setState({ showPrettyDuration: false, isStartDatePopoverOpen: true });
+    this.setState({ showPrettyDuration: false });
   };
 
   onStartDatePopoverToggle = () => {
