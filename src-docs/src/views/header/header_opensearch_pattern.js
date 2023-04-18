@@ -11,8 +11,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// Uncomment to use in consuming apps or CodeSandbox
-// import theme from '@opensearch-project/oui/dist/oui_theme_light.json';
 
 import {
   OuiAvatar,
