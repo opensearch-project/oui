@@ -715,6 +715,10 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
     ...rest
   } = props;
 
+  if (pagination) {
+    pagination.pageSize = Math.min(pagination.pageSize, rowCount);
+  }
+
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [gridWidth, setGridWidth] = useState(0);
 
