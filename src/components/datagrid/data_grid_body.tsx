@@ -629,7 +629,7 @@ export const OuiDataGridBody: FunctionComponent<OuiDataGridBodyProps> = (
   }, [getRowHeight]);
 
   const rowCountToAffordFor = pagination
-    ? pagination.pageSize
+    ? Math.min(pagination.pageSize, rowCount)
     : visibleRowIndices.length;
   const unconstrainedHeight =
     defaultHeight * rowCountToAffordFor + headerRowHeight + footerRowHeight;
