@@ -3,6 +3,10 @@
 
 - Add release workflows ([134](https://github.com/opensearch-project/oui/pull/133))
 
+## [`1.1.1`](https://github.com/opensearch-project/oui/tree/1.1.1)
+
+- Revert "Rectify super date picker functionality" ([#724](https://github.com/opensearch-project/oui/pull/724))
+
 ## [`1.1.0`](https://github.com/opensearch-project/oui/tree/1.1.0)
 
 - Bump sass-loader to 10.4.1 ([#715](https://github.com/opensearch-project/oui/pull/715))
