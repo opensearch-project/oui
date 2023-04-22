@@ -16,11 +16,11 @@ import { OuiCallOut, OuiCode } from '../../../../src/components';
 import { GuideSectionTypes } from '../../components';
 
 import DataGridVirtualization from './virtualization';
-const dataGridVirtualizationSource = require('!!raw-loader!./virtualization');
+const dataGridVirtualizationSource = require('./virtualization?raw');
 const dataGridVirtualizationHtml = renderToHtml(DataGridVirtualization);
 
 import DataGridVirtualizationConstrained from './virtualization_constrained';
-const dataGridVirtualizationConstrainedSource = require('!!raw-loader!./virtualization_constrained');
+const dataGridVirtualizationConstrainedSource = require('./virtualization_constrained?raw');
 const dataGridVirtualizationConstrainedHtml = renderToHtml(
   DataGridVirtualizationConstrained
 );

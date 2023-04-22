@@ -31,31 +31,31 @@ import {
 import { OuiHeaderSectionsProp } from './props';
 
 import Header from './header';
-const headerSource = require('!!raw-loader!./header');
+const headerSource = require('./header?raw');
 
 import HeaderSections from './header_sections';
-const headerSectionsSource = require('!!raw-loader!./header_sections');
+const headerSectionsSource = require('./header_sections?raw');
 
 import HeaderPosition from './header_position';
-const headerPositionSource = require('!!raw-loader!./header_position');
+const headerPositionSource = require('./header_position?raw');
 
 import HeaderAlert from './header_alert';
-const headerAlertSource = require('!!raw-loader!./header_alert');
+const headerAlertSource = require('./header_alert?raw');
 
 import HeaderAnimate from './header_animate';
-const headerAnimateSource = require('!!raw-loader!./header_animate');
+const headerAnimateSource = require('./header_animate?raw');
 
 import HeaderLinks from './header_links';
-const headerLinksSource = require('!!raw-loader!./header_links');
+const headerLinksSource = require('./header_links?raw');
 
 import HeaderDark from './header_dark';
-const headerDarkSource = require('!!raw-loader!./header_dark');
+const headerDarkSource = require('./header_dark?raw');
 
 import HeaderStacked from './header_stacked';
-const headerStackedSource = require('!!raw-loader!./header_stacked');
+const headerStackedSource = require('./header_stacked?raw');
 
 import HeaderElasticPattern from './header_elastic_pattern';
-const headerElasticPatternSource = require('!!raw-loader!./header_elastic_pattern');
+const headerElasticPatternSource = require('./header_elastic_pattern?raw');
 
 const headerSnippet = `<OuiHeader>
   <OuiHeaderSection grow={false}>

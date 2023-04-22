@@ -25,27 +25,27 @@ import {
 } from '../../../../src/components';
 import Guidelines from './guidelines';
 import FormRows from './form_rows';
-const formRowsSource = require('!!raw-loader!./form_rows');
+const formRowsSource = require('./form_rows?raw');
 const formRowsHtml = renderToHtml(FormRows);
 
 import DescribedFormGroup from './described_form_group';
-const describedFormGroupSource = require('!!raw-loader!./described_form_group');
+const describedFormGroupSource = require('./described_form_group?raw');
 const describedFormGroupHtml = renderToHtml(DescribedFormGroup);
 
 import FullWidth from './full_width';
-const fullWidthSource = require('!!raw-loader!./full_width');
+const fullWidthSource = require('./full_width?raw');
 const fullWidthHtml = renderToHtml(FullWidth);
 
 import Inline from './inline';
-const inlineSource = require('!!raw-loader!./inline');
+const inlineSource = require('./inline?raw');
 const inlineHtml = renderToHtml(Inline);
 
 import InlineSizing from './inline_sizing';
-const inlineSizingSource = require('!!raw-loader!./inline_sizing');
+const inlineSizingSource = require('./inline_sizing?raw');
 const inlineSizingHtml = renderToHtml(InlineSizing);
 
 import InlinePopover from './inline_popover';
-const inlinePopoverSource = require('!!raw-loader!./inline_popover');
+const inlinePopoverSource = require('./inline_popover?raw');
 const inlinePopoverHtml = renderToHtml(InlinePopover);
 
 export const FormLayoutsExample = {

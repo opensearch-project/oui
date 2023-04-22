@@ -24,15 +24,15 @@ import {
 } from '../../../../src/components';
 
 import Suggest from './suggest';
-const suggestSource = require('!!raw-loader!./suggest');
+const suggestSource = require('./suggest?raw');
 const suggestHtml = renderToHtml(Suggest);
 
 import SavedQueries from './saved_queries';
-const savedQueriesSource = require('!!raw-loader!./saved_queries');
+const savedQueriesSource = require('./saved_queries?raw');
 const savedQueriesHtml = renderToHtml(SavedQueries);
 
 import SuggestItem from './suggest_item';
-const suggestItemSource = require('!!raw-loader!./suggest_item');
+const suggestItemSource = require('./suggest_item?raw');
 const suggestItemHtml = renderToHtml(SuggestItem);
 const suggestItemSnippet = [
   `<OuiSuggestItem

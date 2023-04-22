@@ -249,6 +249,8 @@ export const OuiSelectableTemplateSitewide: FunctionComponent<OuiSelectableTempl
       options={formattedOptions}
       renderOption={ouiSelectableTemplateSitewideRenderOptions}
       singleSelection={true}
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       searchProps={{
         placeholder: searchPlaceholder,
         isClearable: true,

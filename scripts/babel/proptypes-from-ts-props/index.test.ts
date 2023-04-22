@@ -41,9 +41,9 @@ const babelPlugin = require('./index');
 
 const transform = (input: string, options: object) => {
   const result = core.transform(input, options);
-  result.code = result.code.replace(/[\r\n]+/g, '\n')
+  result.code = result.code.replace(/[\r\n]+/g, '\n');
   return result;
-}
+};
 
 beforeEach(() => babelPlugin.clearImportCache());
 
@@ -496,11 +496,11 @@ const FooComponent: React.SFC<IFooProps> = () => {
 
           expect(result.code).toBe(`import React from 'react';
 import PropTypes from "prop-types";
-var Foo;
-(function (Foo) {
+var Foo = /*#__PURE__*/function (Foo) {
   Foo["bar"] = "BAR";
   Foo["baz"] = "BAZ";
-})(Foo || (Foo = {}));
+  return Foo;
+}(Foo || {});
 ;
 const FooComponent = () => {
   return <div>Hello World</div>;
@@ -527,11 +527,11 @@ const FooComponent: React.SFC<IFooProps> = () => {
 
           expect(result.code).toBe(`import React from 'react';
 import PropTypes from "prop-types";
-var Foo;
-(function (Foo) {
+var Foo = /*#__PURE__*/function (Foo) {
   Foo[Foo["bar"] = 3] = "bar";
   Foo[Foo["baz"] = 54] = "baz";
-})(Foo || (Foo = {}));
+  return Foo;
+}(Foo || {});
 ;
 const FooComponent = () => {
   return <div>Hello World</div>;
@@ -559,12 +559,12 @@ const FooComponent: React.SFC<IFooProps> = () => {
 
           expect(result.code).toBe(`import React from 'react';
 import PropTypes from "prop-types";
-var Foo;
-(function (Foo) {
+var Foo = /*#__PURE__*/function (Foo) {
   Foo["bar"] = "BAR";
   Foo[Foo["baz"] = 5] = "baz";
   Foo[Foo["buzz"] = false] = "buzz";
-})(Foo || (Foo = {}));
+  return Foo;
+}(Foo || {});
 ;
 const FooComponent = () => {
   return <div>Hello World</div>;
@@ -591,11 +591,11 @@ const FooComponent: React.SFC<IFooProps> = () => {
 
           expect(result.code).toBe(`import React from 'react';
 import PropTypes from "prop-types";
-var Foo;
-(function (Foo) {
+var Foo = /*#__PURE__*/function (Foo) {
   Foo["bar"] = "BAR";
   Foo["baz"] = "BAZ";
-})(Foo || (Foo = {}));
+  return Foo;
+}(Foo || {});
 ;
 const FooComponent = () => {
   return <div>Hello World</div>;
@@ -1825,7 +1825,7 @@ const FooComponent: React.SFC<{foo: Foo, bar?: Bar} & CommonProps> = () => {
                       fs: {
                         existsSync: () => true,
                         statSync: () => ({ isDirectory: () => true }),
-                        readFileSync: filepath => {
+                        readFileSync: (filepath) => {
                           if (
                             filepath !==
                             path.resolve(
@@ -1931,7 +1931,7 @@ const FooComponent: React.SFC<CommonProps & FooProps> = () => {
                       fs: {
                         existsSync: () => true,
                         statSync: () => ({ isDirectory: () => false }),
-                        readFileSync: filepath => {
+                        readFileSync: (filepath) => {
                           if (
                             filepath ===
                             path.resolve(process.cwd(), 'common.ts')
@@ -1990,7 +1990,7 @@ const FooComponent: React.SFC<Foo> = () => {
                       fs: {
                         existsSync: () => true,
                         statSync: () => ({ isDirectory: () => false }),
-                        readFileSync: filepath => {
+                        readFileSync: (filepath) => {
                           if (
                             filepath ===
                             path.resolve(process.cwd(), 'types', 'foo.ts')
@@ -2085,7 +2085,7 @@ const FooComponent: React.SFC<{foo: Foo}> = () => {
                       fs: {
                         existsSync: () => true,
                         statSync: () => ({ isDirectory: () => false }),
-                        readFileSync: filepath => {
+                        readFileSync: (filepath) => {
                           if (filepath.endsWith(`${path.sep}foo`)) {
                             return Buffer.from(`
                               export { Foo } from './Foo';
@@ -2556,7 +2556,7 @@ export { Foo };
         babelOptions
       );
 
-      expect(result.code).toBe('');
+      expect(result.code).toBe('export {};');
     });
 
     it('removes multiple type export from ExportNamedDeclaration', () => {
@@ -2569,7 +2569,7 @@ export { Foo, Bar };
         babelOptions
       );
 
-      expect(result.code).toBe('');
+      expect(result.code).toBe('export {};');
     });
 
     it('removes type exports from ExportNamedDeclaration, leaving legitimate exports', () => {
@@ -2605,7 +2605,7 @@ export { Foo, A } from './foo';
                 fs: {
                   existsSync: () => true,
                   statSync: () => ({ isDirectory: () => false }),
-                  readFileSync: filepath => {
+                  readFileSync: (filepath) => {
                     if (filepath.endsWith(`${path.sep}foo`)) {
                       return Buffer.from(`
                         export type Foo = string;
@@ -2638,7 +2638,7 @@ export { Foo as Bar, A as B } from './foo';
                 fs: {
                   existsSync: () => true,
                   statSync: () => ({ isDirectory: () => false }),
-                  readFileSync: filepath => {
+                  readFileSync: (filepath) => {
                     if (filepath.endsWith(`${path.sep}foo`)) {
                       return Buffer.from(`
                         export const A = 5;
@@ -2666,7 +2666,7 @@ export type Foo = string;
         babelOptions
       );
 
-      expect(result.code).toBe('');
+      expect(result.code).toBe('export {};');
     });
 
     it('removes 3rd-party type exports', () => {

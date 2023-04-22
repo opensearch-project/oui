@@ -32,23 +32,23 @@ import { panelConfig } from './playground';
 import Guidelines from './guidelines';
 
 import Panel from './panel';
-const panelSource = require('!!raw-loader!./panel');
+const panelSource = require('./panel?raw');
 const panelHtml = renderToHtml(Panel);
 
 import PanelShadow from './panel_shadow';
-const panelShadowSource = require('!!raw-loader!./panel_shadow');
+const panelShadowSource = require('./panel_shadow?raw');
 const panelShadowHtml = renderToHtml(PanelShadow);
 
 import PanelColor from './panel_color';
-const panelColorSource = require('!!raw-loader!./panel_color');
+const panelColorSource = require('./panel_color?raw');
 const panelColorHtml = renderToHtml(PanelColor);
 
 import PanelGrow from './panel_grow';
-const panelGrowSource = require('!!raw-loader!./panel_grow');
+const panelGrowSource = require('./panel_grow?raw');
 const panelGrowHtml = renderToHtml(PanelGrow);
 
 import SplitPanel from './split_panel';
-const splitPanelSource = require('!!raw-loader!./split_panel');
+const splitPanelSource = require('./split_panel?raw');
 const splitPanelHtml = renderToHtml(SplitPanel);
 
 const panelSnippet = `<OuiPanel paddingSize="none">

@@ -19,7 +19,7 @@ import { OuiCallOut, OuiText, OuiCode } from '../../../../src/components';
 import callOutConfig from './playground';
 
 import Info from './info';
-const infoSource = require('!!raw-loader!./info');
+const infoSource = require('./info?raw');
 const infoHtml = renderToHtml(Info);
 const infoSnippet = [
   `<OuiCallOut size="m" title="Just a title. No content." iconType="gear" />
@@ -34,7 +34,7 @@ const infoSnippet = [
 ];
 
 import Success from './success';
-const successSource = require('!!raw-loader!./success');
+const successSource = require('./success?raw');
 const successHtml = renderToHtml(Success);
 const successSnippet = [
   `<OuiCallOut title="Good news, everyone!" color="success" iconType="user">
@@ -44,7 +44,7 @@ const successSnippet = [
 ];
 
 import Warning from './warning';
-const warningSource = require('!!raw-loader!./warning');
+const warningSource = require('./warning?raw');
 const warningHtml = renderToHtml(Warning);
 const warningSnippet = [
   `<OuiCallOut title="Proceed with caution!" color="warning" iconType="help">
@@ -54,7 +54,7 @@ const warningSnippet = [
 ];
 
 import Danger from './danger';
-const dangerSource = require('!!raw-loader!./danger');
+const dangerSource = require('./danger?raw');
 const dangerHtml = renderToHtml(Danger);
 const dangerSnippet = [
   `<OuiCallOut title="Sorry, there was an error" color="danger" iconType="alert">

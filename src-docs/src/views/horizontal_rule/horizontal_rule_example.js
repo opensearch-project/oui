@@ -18,10 +18,10 @@ import { OuiHorizontalRule, OuiCode } from '../../../../src/components';
 import { horizontalRuleConfig } from './playground';
 
 import HorizontalRule from './horizontal_rule';
-const horizontalRuleSource = require('!!raw-loader!./horizontal_rule');
+const horizontalRuleSource = require('./horizontal_rule?raw');
 
 import HorizontalRuleMargin from './horizontal_rule_margin';
-const horizontalRuleMarginSource = require('!!raw-loader!./horizontal_rule_margin');
+const horizontalRuleMarginSource = require('./horizontal_rule_margin?raw');
 
 const horizontalRuleSnippet = '<OuiHorizontalRule />';
 const horizontalRuleMarginSnippet = '<OuiHorizontalRule margin="xs" />';

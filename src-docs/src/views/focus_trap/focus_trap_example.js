@@ -17,7 +17,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCode, OuiFocusTrap } from '../../../../src/components';
 
 import FocusTrap from './focus_trap';
-const focusTrapSource = require('!!raw-loader!./focus_trap');
+const focusTrapSource = require('./focus_trap?raw');
 const focusTrapHtml = renderToHtml(FocusTrap);
 
 export const FocusTrapExample = {

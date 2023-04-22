@@ -31,7 +31,7 @@
 import React from 'react';
 import { requiredProps } from '../../../test';
 import { shallow } from 'enzyme';
-import { Query } from '../query';
+import { Query } from '../query/query';
 import {
   FieldValueToggleFilter,
   FieldValueToggleFilterProps,

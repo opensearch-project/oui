@@ -19,11 +19,11 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCode, OuiLink } from '../../../../src/components';
 
 import { ResizeObserverExample as ResizeObserver } from './resize_observer';
-const resizeObserverSource = require('!!raw-loader!./resize_observer');
+const resizeObserverSource = require('./resize_observer?raw');
 const resizeObserverHtml = renderToHtml(ResizeObserver);
 
 import { ResizeObserverHookExample as ResizeObserverHook } from './resize_observer_hook';
-const resizeObserverHookSource = require('!!raw-loader!./resize_observer_hook');
+const resizeObserverHookSource = require('./resize_observer_hook?raw');
 const resizeObserverHookHtml = renderToHtml(ResizeObserverHook);
 
 export const ResizeObserverExample = {

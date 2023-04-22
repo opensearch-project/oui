@@ -22,25 +22,25 @@ import {
 } from '../../../../src/components';
 
 import DataGridContainer from './container';
-const dataGridContainerSource = require('!!raw-loader!./container');
+const dataGridContainerSource = require('./container?raw');
 const dataGridContainerHtml = renderToHtml(DataGridContainer);
 
 import DataGridStyling from './styling';
-const dataGridStylingSource = require('!!raw-loader!./styling');
+const dataGridStylingSource = require('./styling?raw');
 const dataGridStylingHtml = renderToHtml(DataGridStyling);
 
 import DataGridControls from './additional_controls';
-const dataGridControlsSource = require('!!raw-loader!./additional_controls');
+const dataGridControlsSource = require('./additional_controls?raw');
 const dataGridControlsHtml = renderToHtml(DataGridControls);
 
 import DataGridColumnWidths from './column_widths';
 import DataGridColumnActions from './column_actions';
 import DataGridColumnCellActions from './column_cell_actions';
-const dataGridColumnWidthsSource = require('!!raw-loader!./column_widths');
+const dataGridColumnWidthsSource = require('./column_widths?raw');
 const dataGridColumnWidthsHtml = renderToHtml(DataGridColumnWidths);
-const dataGridColumnActionsSource = require('!!raw-loader!./column_actions');
+const dataGridColumnActionsSource = require('./column_actions?raw');
 const dataGridColumnActionsHtml = renderToHtml(DataGridColumnActions);
-const dataGridColumnCellActionsSource = require('!!raw-loader!./column_cell_actions');
+const dataGridColumnCellActionsSource = require('./column_cell_actions?raw');
 const dataGridColumnCellActionsHtml = renderToHtml(DataGridColumnActions);
 
 import {

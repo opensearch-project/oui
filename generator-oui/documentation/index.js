@@ -59,7 +59,7 @@ module.exports = class extends Generator {
         name: 'folderName',
         type: 'input',
         store: true,
-        default: answers => answers.name,
+        default: (answers) => answers.name,
       });
 
       prompts.push({
@@ -71,7 +71,7 @@ module.exports = class extends Generator {
       });
     }
 
-    return this.prompt(prompts).then(answers => {
+    return this.prompt(prompts).then((answers) => {
       this.answers = answers;
     });
   }
@@ -96,9 +96,7 @@ module.exports = class extends Generator {
         fileName,
       });
 
-      const documentationPagePath = (config.documentationPagePath = `${path}/${
-        config.name
-      }/${config.name}_example.js`);
+      const documentationPagePath = (config.documentationPagePath = `${path}/${config.name}/${config.name}_example.js`);
 
       this.fs.copyTpl(
         this.templatePath('documentation_page.js'),
@@ -163,7 +161,7 @@ module.exports = class extends Generator {
           `${chalk.magenta(
             'const'
           )} ${componentExamplePrefix}Source = require(${chalk.cyan(
-            `'!!raw-loader!./${fileName}'`
+            `'./${fileName}?raw'`
           )});\n` +
           `${chalk.magenta(
             'const'

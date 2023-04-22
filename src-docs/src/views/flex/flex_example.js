@@ -27,52 +27,52 @@ import {
 import { flexGroupConfig, flexGridConfig } from './playground';
 
 import FlexGroup from './flex_group';
-const flexGroupSource = require('!!raw-loader!./flex_group');
+const flexGroupSource = require('./flex_group?raw');
 
 import FlexItem from './flex_item';
-const flexItemSource = require('!!raw-loader!./flex_item');
+const flexItemSource = require('./flex_item?raw');
 
 import FlexGroupWrap from './flex_group_wrap';
-const flexGroupWrapSource = require('!!raw-loader!./flex_group_wrap');
+const flexGroupWrapSource = require('./flex_group_wrap?raw');
 
 import ComponentSpan from './component_span';
-const componentSpanSource = require('!!raw-loader!./component_span');
+const componentSpanSource = require('./component_span?raw');
 
 import FlexGutter from './flex_gutter';
-const flexGutterSource = require('!!raw-loader!./flex_gutter');
+const flexGutterSource = require('./flex_gutter?raw');
 
 import FlexGrowZero from './flex_grow_zero';
-const flexGrowZeroSource = require('!!raw-loader!./flex_grow_zero');
+const flexGrowZeroSource = require('./flex_grow_zero?raw');
 
 import FlexGrowNumeric from './flex_grow_numeric';
-const flexGrowNumericSource = require('!!raw-loader!./flex_grow_numeric');
+const flexGrowNumericSource = require('./flex_grow_numeric?raw');
 
 import FlexJustify from './flex_justify';
-const flexJustifySource = require('!!raw-loader!./flex_justify');
+const flexJustifySource = require('./flex_justify?raw');
 import FlexJustifyBetween from './flex_justify_between';
-const flexJustifyBetweenSource = require('!!raw-loader!./flex_justify_between');
+const flexJustifyBetweenSource = require('./flex_justify_between?raw');
 import FlexJustifyEvenly from './flex_justify_evenly';
-const flexJustifyEvenlySource = require('!!raw-loader!./flex_justify_evenly');
+const flexJustifyEvenlySource = require('./flex_justify_evenly?raw');
 import FlexAlignCenter from './flex_align_center';
-const flexAlignCenterSource = require('!!raw-loader!./flex_align_center');
+const flexAlignCenterSource = require('./flex_align_center?raw');
 
 import Direction from './direction';
-const directionSource = require('!!raw-loader!./direction');
+const directionSource = require('./direction?raw');
 
 import FlexGridColumns from './flex_grid_columns';
-const flexGridColumnsSource = require('!!raw-loader!./flex_grid_columns');
+const flexGridColumnsSource = require('./flex_grid_columns?raw');
 
 import FlexGridColumnFirst from './flex_grid_column_first';
-const flexGridColumnFirstSource = require('!!raw-loader!./flex_grid_column_first');
+const flexGridColumnFirstSource = require('./flex_grid_column_first?raw');
 
 import FlexNest from './flex_nest';
-const flexNestSource = require('!!raw-loader!./flex_nest');
+const flexNestSource = require('./flex_nest?raw');
 
 import FlexItemPanel from './flex_item_panel';
-const flexItemPanelSource = require('!!raw-loader!./flex_item_panel');
+const flexItemPanelSource = require('./flex_item_panel?raw');
 
 import FlexGroupResponsive from './flex_responsive';
-const flexGroupResponsiveSource = require('!!raw-loader!./flex_responsive');
+const flexGroupResponsiveSource = require('./flex_responsive?raw');
 
 const flexSnippet = `<OuiFlexGroup>
   <OuiFlexItem><!-- FlexItem content --></OuiFlexItem>

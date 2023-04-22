@@ -18,11 +18,11 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCode, OuiPortal } from '../../../../src/components';
 
 import { Portal } from './portal';
-const portalSource = require('!!raw-loader!./portal');
+const portalSource = require('./portal?raw');
 const portalHtml = renderToHtml(Portal);
 
 import { PortalInsert } from './portal_insert';
-const portalInsertSource = require('!!raw-loader!./portal_insert');
+const portalInsertSource = require('./portal_insert?raw');
 const portalInsertHtml = renderToHtml(PortalInsert);
 
 export const PortalExample = {

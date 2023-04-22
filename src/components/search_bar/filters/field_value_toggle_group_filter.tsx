@@ -30,7 +30,7 @@
 
 import React, { Component } from 'react';
 import { OuiFilterButton } from '../../filter_group';
-import { Query } from '../query';
+import { Query } from '../query/query';
 import { OperatorType } from '../query/ast';
 
 export interface FieldValueToggleGroupFilterItemType {

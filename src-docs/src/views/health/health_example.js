@@ -19,7 +19,7 @@ import { OuiHealth, OuiCode } from '../../../../src/components';
 import healthConfig from './playground';
 
 import Health from './health';
-const healthSource = require('!!raw-loader!./health');
+const healthSource = require('./health?raw');
 const healthHtml = renderToHtml(Health);
 const healthSnippet = [
   '<OuiHealth color="success">Healthy</OuiHealth>',
@@ -27,7 +27,7 @@ const healthSnippet = [
 ];
 
 import HealthSize from './health_size';
-const healthTextSizeSource = require('!!raw-loader!./health_size');
+const healthTextSizeSource = require('./health_size?raw');
 const healthTextSizeHtml = renderToHtml(HealthSize);
 const healthTextSizeSnippet = [
   '<OuiHealth textSize="inherit">Text inherited from the parent element</OuiHealth>',

@@ -60,7 +60,7 @@ function testIcon(props: PropsOf<OuiIcon>) {
       const onIconLoad = () => {
         component.update();
         expect(prettyHtml(component.html())).toMatchSnapshot();
-        resolve();
+        resolve(null);
       };
       const component = mount(<OuiIcon {...props} onIconLoad={onIconLoad} />);
     });

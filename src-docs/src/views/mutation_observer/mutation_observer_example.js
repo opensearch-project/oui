@@ -22,7 +22,7 @@ import {
 } from '../../../../src/components';
 
 import { MutationObserver } from './mutation_observer';
-const mutationObserverSource = require('!!raw-loader!./mutation_observer');
+const mutationObserverSource = require('./mutation_observer?raw');
 const mutationObserverHtml = renderToHtml(MutationObserver);
 
 export const MutationObserverExample = {

@@ -26,23 +26,23 @@ import {
 } from '../../../../src/components';
 
 import FormCompressed from './form_compressed';
-const formCompressedSource = require('!!raw-loader!./form_compressed');
+const formCompressedSource = require('./form_compressed?raw');
 const formCompressedHtml = renderToHtml(FormCompressed);
 
 import FormHorizontal from './form_horizontal';
-const formHorizontalSource = require('!!raw-loader!./form_horizontal');
+const formHorizontalSource = require('./form_horizontal?raw');
 const formHorizontalHtml = renderToHtml(FormHorizontal);
 
 import FormHelp from './form_horizontal_help';
-const formHelpSource = require('!!raw-loader!./form_horizontal_help');
+const formHelpSource = require('./form_horizontal_help?raw');
 const formHelpHtml = renderToHtml(FormHelp);
 
 import FormPopover from './form_compressed_popover';
-const formPopoverSource = require('!!raw-loader!./form_compressed_popover');
+const formPopoverSource = require('./form_compressed_popover?raw');
 const formPopoverHtml = renderToHtml(FormPopover);
 
 import ComplexExample from './complex_example';
-const ComplexExampleSource = require('!!raw-loader!./complex_example');
+const ComplexExampleSource = require('./complex_example?raw');
 const ComplexExampleHtml = renderToHtml(ComplexExample);
 
 export const FormCompressedExample = {

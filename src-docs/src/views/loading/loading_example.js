@@ -30,16 +30,16 @@ import {
 } from './playground';
 
 import LoadingDashboards from './loading_dashboards';
-const loadingDashboardsSource = require('!!raw-loader!./loading_dashboards');
+const loadingDashboardsSource = require('./loading_dashboards?raw');
 
 import LoadingChart from './loading_chart';
-const loadingChartSource = require('!!raw-loader!./loading_chart');
+const loadingChartSource = require('./loading_chart?raw');
 
 import LoadingSpinner from './loading_spinner';
-const loadingSpinnerSource = require('!!raw-loader!./loading_spinner');
+const loadingSpinnerSource = require('./loading_spinner?raw');
 
 import LoadingContent from './loading_content';
-const loadingContentSource = require('!!raw-loader!./loading_content');
+const loadingContentSource = require('./loading_content?raw');
 
 export const LoadingExample = {
   title: 'Loading',

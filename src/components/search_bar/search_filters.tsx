@@ -30,7 +30,7 @@
 
 import React, { Component, Fragment, ReactElement } from 'react';
 import { createFilter, SearchFilterConfig } from './filters';
-import { Query } from './query';
+import { Query } from './query/query';
 import { OuiFilterGroup } from '../filter_group';
 
 export { SearchFilterConfig } from './filters';

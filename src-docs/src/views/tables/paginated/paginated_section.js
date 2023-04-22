@@ -15,7 +15,7 @@ import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
 import { Table } from './paginated';
-const source = require('!!raw-loader!./paginated');
+const source = require('./paginated?raw');
 const html = renderToHtml(Table);
 
 export const section = {

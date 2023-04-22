@@ -19,15 +19,15 @@ import { OuiAccordion, OuiCode, OuiCallOut } from '../../../../src/components';
 import { accordionConfig } from './playground';
 
 import Accordion from './accordion';
-const accordionSource = require('!!raw-loader!./accordion');
+const accordionSource = require('./accordion?raw');
 
 import AccordionArrow from './accordion_arrow';
-const accordionArrowSource = require('!!raw-loader!./accordion_arrow');
+const accordionArrowSource = require('./accordion_arrow?raw');
 import AccordionArrowRight from './accordion_arrow_right';
-const accordionArrowRightSource = require('!!raw-loader!./accordion_arrow_right');
+const accordionArrowRightSource = require('./accordion_arrow_right?raw');
 
 import AccordionMultiple from './accordion_multiple';
-const accordionMultipleSource = require('!!raw-loader!./accordion_multiple');
+const accordionMultipleSource = require('./accordion_multiple?raw');
 const accordionMultipleSnippet = `<OuiAccordion
   id={accordionId}
   buttonContent="Clickable title for first item"
@@ -44,10 +44,10 @@ const accordionMultipleSnippet = `<OuiAccordion
 `;
 
 import AccordionForm from './accordion_form';
-const accordionFormSource = require('!!raw-loader!./accordion_form');
+const accordionFormSource = require('./accordion_form?raw');
 
 import AccordionExtra from './accordion_extra';
-const accordionExtraSource = require('!!raw-loader!./accordion_extra');
+const accordionExtraSource = require('./accordion_extra?raw');
 const accordionExtraSnippet = `<OuiAccordion
   id={accordionId}
   buttonContent="Clickable title"
@@ -58,7 +58,7 @@ const accordionExtraSnippet = `<OuiAccordion
 `;
 
 import AccordionOpen from './accordion_open';
-const accordionOpenSource = require('!!raw-loader!./accordion_open');
+const accordionOpenSource = require('./accordion_open?raw');
 const accordionOpenSnippet = `<OuiAccordion
   id={accordionId}
   buttonContent="Clickable title"
@@ -68,10 +68,10 @@ const accordionOpenSnippet = `<OuiAccordion
 `;
 
 import AccordionGrow from './accordion_grow';
-const accordionGrowSource = require('!!raw-loader!./accordion_grow');
+const accordionGrowSource = require('./accordion_grow?raw');
 
 import AccordionForceState from './accordion_forceState';
-const accordionForceStateSource = require('!!raw-loader!./accordion_forceState');
+const accordionForceStateSource = require('./accordion_forceState?raw');
 const accordionForceStateSnippet = `<OuiAccordion
   id={accordionId}
   forceState="open"
@@ -81,7 +81,7 @@ const accordionForceStateSnippet = `<OuiAccordion
 </OuiAccordion>`;
 
 import AccordionIsLoading from './accordion_isLoading';
-const accordionIsLoadingSource = require('!!raw-loader!./accordion_isLoading');
+const accordionIsLoadingSource = require('./accordion_isLoading?raw');
 const accordionIsLoadingSnippet = [
   `<OuiAccordion
   id={accordionId}

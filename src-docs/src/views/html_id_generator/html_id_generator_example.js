@@ -21,19 +21,19 @@ import { HtmlIdGeneratorPrefix } from './html_id_generator_prefix';
 import { HtmlIdGeneratorSuffix } from './html_id_generator_suffix';
 import { PrefixSufix } from './bothPrefixSuffix';
 
-const htmlIdGeneratorSource = require('!!raw-loader!./html_id_generator');
+const htmlIdGeneratorSource = require('./html_id_generator?raw');
 const htmlIdGeneratorHtml = renderToHtml(IdGenerator);
 const htmlIdGeneratorSnippet = ' htmlIdGenerator()()';
 
-const htmlIdGeneratorPrefixSource = require('!!raw-loader!./html_id_generator_prefix');
+const htmlIdGeneratorPrefixSource = require('./html_id_generator_prefix?raw');
 const htmlIdGeneratorPrefixHtml = renderToHtml(HtmlIdGeneratorPrefix);
 const htmlIdGeneratorPrefixSnippet = " htmlIdGenerator('prefix')()";
 
-const HtmlIdGeneratorSuffixSource = require('!!raw-loader!./html_id_generator_suffix');
+const HtmlIdGeneratorSuffixSource = require('./html_id_generator_suffix?raw');
 const HtmlIdGeneratorSuffixHtml = renderToHtml(HtmlIdGeneratorSuffix);
 const suffixSnippet = " htmlIdGenerator()('suffix')";
 
-const PrefixSufixSource = require('!!raw-loader!./bothPrefixSuffix');
+const PrefixSufixSource = require('./bothPrefixSuffix?raw');
 const PrefixSufixHtml = renderToHtml(PrefixSufix);
 const prefixSuffixSnippet = " htmlIdGenerator('prefix')('suffix')";
 

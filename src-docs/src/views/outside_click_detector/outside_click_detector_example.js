@@ -22,7 +22,7 @@ import {
 } from '../../../../src/components';
 
 import OutsideClickDetector from './outside_click_detector';
-const outsideClickDetectorSource = require('!!raw-loader!./outside_click_detector');
+const outsideClickDetectorSource = require('./outside_click_detector?raw');
 const outsideClickDetectorHtml = renderToHtml(OutsideClickDetector);
 
 export const OutsideClickDetectorExample = {

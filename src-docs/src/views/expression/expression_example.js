@@ -22,7 +22,7 @@ import { OuiExpression } from '../../../../src/components/expression';
 import { expressionConfig } from './playground';
 
 import Expression from './expression';
-const expressionSource = require('!!raw-loader!./expression');
+const expressionSource = require('./expression?raw');
 const expressionHtml = renderToHtml(Expression);
 const expressionSnippet = `<OuiExpression
   description={description}
@@ -32,7 +32,7 @@ const expressionSnippet = `<OuiExpression
 />`;
 
 import Colors from './colors';
-const colorSource = require('!!raw-loader!./colors');
+const colorSource = require('./colors?raw');
 const colorHtml = renderToHtml(Colors);
 const colorSnippet = `<OuiExpression
   description={description}
@@ -41,7 +41,7 @@ const colorSnippet = `<OuiExpression
 />`;
 
 import Stringing from './stringing';
-const stringingSource = require('!!raw-loader!./stringing');
+const stringingSource = require('./stringing?raw');
 const stringingHtml = renderToHtml(Stringing);
 const stringingSnippet = `<div>
   <OuiExpression
@@ -57,7 +57,7 @@ const stringingSnippet = `<div>
 </div>`;
 
 import Columns from './columns';
-const columnsSource = require('!!raw-loader!./columns');
+const columnsSource = require('./columns?raw');
 const columnsHtml = renderToHtml(Columns);
 const columnsSnippet = `<OuiExpression
   description={description}
@@ -66,7 +66,7 @@ const columnsSnippet = `<OuiExpression
 />`;
 
 import Invalid from './invalid';
-const invalidSource = require('!!raw-loader!./invalid');
+const invalidSource = require('./invalid?raw');
 const invalidHtml = renderToHtml(Invalid);
 const invalidSnippet = `<OuiExpression
   description={description}
@@ -75,7 +75,7 @@ const invalidSnippet = `<OuiExpression
 />`;
 
 import Truncate from './truncate';
-const truncateSource = require('!!raw-loader!./truncate');
+const truncateSource = require('./truncate?raw');
 const truncateHtml = renderToHtml(Truncate);
 const truncateSnippet = `<OuiExpression
   description={description}

@@ -17,7 +17,7 @@ import { renderToHtml } from '../../../services';
 import { OuiTableSortingType } from '!!prop-loader!../../../../../src/components/basic_table/table_types';
 
 import { Table } from './sorting';
-const source = require('!!raw-loader!./sorting');
+const source = require('./sorting?raw');
 const html = renderToHtml(Table);
 
 export const section = {

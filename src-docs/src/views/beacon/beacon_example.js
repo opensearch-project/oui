@@ -22,7 +22,7 @@ import { beaconConfig } from './playground';
 import Beacon from './beacon';
 import { OuiCallOut } from '../../../../src/components/call_out';
 import { OuiSpacer } from '../../../../src/components/spacer';
-const beaconSource = require('!!raw-loader!./beacon');
+const beaconSource = require('./beacon?raw');
 const beaconHtml = renderToHtml(Beacon);
 const beaconSnippet = '<OuiBeacon />';
 

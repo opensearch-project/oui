@@ -18,7 +18,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCopy, OuiCode } from '../../../../src/components';
 
 import Copy from './copy';
-const copySource = require('!!raw-loader!./copy');
+const copySource = require('./copy?raw');
 const copyHtml = renderToHtml(Copy);
 
 export const CopyExample = {

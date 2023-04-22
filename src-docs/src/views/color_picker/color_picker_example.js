@@ -35,7 +35,7 @@ import { ColorStop } from '!!prop-loader!../../../../src/components/color_picker
 import playgrounds from './playground';
 
 import ColorPicker from './color_picker';
-const colorPickerSource = require('!!raw-loader!./color_picker');
+const colorPickerSource = require('./color_picker?raw');
 const colorPickerHtml = renderToHtml(ColorPicker);
 const colorPickerSnippet = `<OuiColorPicker
   id={colorPickerId}
@@ -46,7 +46,7 @@ const colorPickerSnippet = `<OuiColorPicker
 `;
 
 import ColorPaletteDisplay from './color_palette_display';
-const colorPaletteDisplaySource = require('!!raw-loader!./color_palette_display');
+const colorPaletteDisplaySource = require('./color_palette_display?raw');
 const colorPaletteDisplayHtml = renderToHtml(ColorPaletteDisplay);
 const colorPaletteDisplaySnippet = [
   `<OuiColorPaletteDisplay
@@ -73,7 +73,7 @@ const colorPaletteDisplaySnippet = [
 ];
 
 import ColorPalettePicker from './color_palette_picker';
-const colorPalettePickerSource = require('!!raw-loader!./color_palette_picker');
+const colorPalettePickerSource = require('./color_palette_picker?raw');
 const colorPalettePickerHtml = renderToHtml(ColorPalettePicker);
 const colorPalettePickerSnippet = `<OuiColorPalettePicker
   palettes={[
@@ -90,7 +90,7 @@ const colorPalettePickerSnippet = `<OuiColorPalettePicker
 `;
 
 import ColorStops from './color_stops';
-const colorStopsSource = require('!!raw-loader!./color_stops');
+const colorStopsSource = require('./color_stops?raw');
 const colorStopsHtml = renderToHtml(ColorStops);
 const colorStopsSnippetStandard = `<OuiColorStops
   label="Standard"
@@ -131,7 +131,7 @@ const colorStopsSnippetStepped = `<OuiColorStops
 `;
 
 import ColorStopsRange from './color_stops_range';
-const colorStopsRangeSource = require('!!raw-loader!./color_stops_range');
+const colorStopsRangeSource = require('./color_stops_range?raw');
 const colorStopsRangeHtml = renderToHtml(ColorStopsRange);
 const colorPickerRangeSnippet = `<OuiColorStops
   label="Free-range color stops"
@@ -141,7 +141,7 @@ const colorPickerRangeSnippet = `<OuiColorStops
 `;
 
 import Alpha from './alpha';
-const alphaSource = require('!!raw-loader!./alpha');
+const alphaSource = require('./alpha?raw');
 const alphaHtml = renderToHtml(Alpha);
 const alphaSnippet = `<OuiColorPicker
   id={colorPickerId}
@@ -152,7 +152,7 @@ const alphaSnippet = `<OuiColorPicker
 />`;
 
 import Formats from './formats';
-const formatsSource = require('!!raw-loader!./formats');
+const formatsSource = require('./formats?raw');
 const formatsHtml = renderToHtml(Formats);
 const formatsSnippet = `<OuiColorPicker
   format="hex"
@@ -163,7 +163,7 @@ const formatsSnippet = `<OuiColorPicker
 />`;
 
 import CustomSwatches from './custom_swatches';
-const customSwatchesSource = require('!!raw-loader!./custom_swatches');
+const customSwatchesSource = require('./custom_swatches?raw');
 const customSwatchesHtml = renderToHtml(CustomSwatches);
 const customSwatchesSnippet = `<OuiColorPicker
   id={colorPickerId}
@@ -194,7 +194,7 @@ const stopCustomSwatchesSnippet = `<OuiColorStops
 `;
 
 import CustomButton from './custom_button';
-const customButtonSource = require('!!raw-loader!./custom_button');
+const customButtonSource = require('./custom_button?raw');
 const customButtonHtml = renderToHtml(CustomButton);
 const customButtonSnippet = `<OuiColorPicker
   onChange={handleChange}
@@ -226,7 +226,7 @@ const customBadgeSnippet = `// Be sure to provide relevant accessibility to unma
 `;
 
 import Empty from './empty_state';
-const emptySource = require('!!raw-loader!./empty_state');
+const emptySource = require('./empty_state?raw');
 const emptyHtml = renderToHtml(CustomButton);
 const emptySnippet = `<OuiColorPicker
   onChange={handleChange}
@@ -237,7 +237,7 @@ const emptySnippet = `<OuiColorPicker
 `;
 
 import Modes from './modes';
-const modesSource = require('!!raw-loader!./modes');
+const modesSource = require('./modes?raw');
 const modesHtml = renderToHtml(Modes);
 const modesSwatchSnippet = `// Swatches only
 <OuiColorPicker
@@ -277,7 +277,7 @@ const stopModesPickerSnippet = `// Gradient map only
 `;
 
 import Inline from './inline';
-const inlineSource = require('!!raw-loader!./inline');
+const inlineSource = require('./inline?raw');
 const inlineHtml = renderToHtml(Inline);
 const inlineSnippet = `<OuiColorPicker
   onChange={handleChange}
@@ -288,11 +288,11 @@ const inlineSnippet = `<OuiColorPicker
 `;
 
 import Containers from './containers';
-const containersSource = require('!!raw-loader!./containers');
+const containersSource = require('./containers?raw');
 const containersHtml = renderToHtml(Containers);
 
 import KitchenSink from './kitchen_sink';
-const kitchenSinkSource = require('!!raw-loader!./kitchen_sink');
+const kitchenSinkSource = require('./kitchen_sink?raw');
 const kitchenSinkHtml = renderToHtml(KitchenSink);
 const kitchenSinkSnippet = `<OuiColorPicker
   onChange={handleChange}

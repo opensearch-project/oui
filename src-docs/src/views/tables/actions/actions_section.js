@@ -16,7 +16,7 @@ import { renderToHtml } from '../../../services';
 
 import { Table } from './actions';
 import { OuiCode } from '../../../../../src/components/code';
-const source = require('!!raw-loader!./actions');
+const source = require('./actions?raw');
 const html = renderToHtml(Table);
 
 export const section = {

@@ -21,10 +21,10 @@ import { OuiTreeViewNode } from './tree_view_props';
 import TreeView from './tree_view';
 import TreeViewCompressed from './compressed';
 
-const treeViewSource = require('!!raw-loader!./tree_view');
+const treeViewSource = require('./tree_view?raw');
 const treeViewHtml = renderToHtml(TreeView);
 
-const treeViewCompressedSource = require('!!raw-loader!./compressed');
+const treeViewCompressedSource = require('./compressed?raw');
 const treeViewCompressedHtml = renderToHtml(TreeViewCompressed);
 
 const treeViewSnippet = [

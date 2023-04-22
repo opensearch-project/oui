@@ -18,7 +18,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCode, OuiI18n, OuiContext } from '../../../../src/components';
 
 import I18nBasic from './i18n_basic';
-const i18nBasicSource = require('!!raw-loader!./i18n_basic');
+const i18nBasicSource = require('./i18n_basic?raw');
 const i18nBasicHtml = renderToHtml(I18nBasic);
 const basicSnippet = [
   `useOuiI18n('filename.token', 'default value')
@@ -28,7 +28,7 @@ const basicSnippet = [
 ];
 
 import I18nInterpolation from './i18n_interpolation';
-const i18nInterpolationSource = require('!!raw-loader!./i18n_interpolation');
+const i18nInterpolationSource = require('./i18n_interpolation?raw');
 const i18nInterpolationHtml = renderToHtml(I18nInterpolation);
 const interpolationSnippet = [
   `useOuiI18n('filename.greeting', 'Hello, {planet}', { planet: 'world' })
@@ -44,7 +44,7 @@ const interpolationSnippet = [
 ];
 
 import I18nAttribute from './i18n_attribute';
-const i18nAttributeSource = require('!!raw-loader!./i18n_attribute');
+const i18nAttributeSource = require('./i18n_attribute?raw');
 const i18nAttributeHtml = renderToHtml(I18nAttribute);
 const attributeSnippet = [
   `<p aria-label={useOuiI18n('filename.token', 'default value')}><!-- Text here--></p>
@@ -56,7 +56,7 @@ const attributeSnippet = [
 ];
 
 import I18nMulti from './i18n_multi';
-const I18nMultiSource = require('!!raw-loader!./i18n_multi');
+const I18nMultiSource = require('./i18n_multi?raw');
 const I18nMultiHtml = renderToHtml(I18nMulti);
 const multiValueSnippet = [
   `const [label, text] = useOuiI18n(
@@ -75,7 +75,7 @@ return <p aria-label={label}>{text}</p>;
 ];
 
 import I18nNumber from './i18n_number';
-const I18nNumberSource = require('!!raw-loader!./i18n_number');
+const I18nNumberSource = require('./i18n_number?raw');
 const I18nNumberHtml = renderToHtml(I18nNumber);
 const numberSnippet = [
   `Formatted count of users: <OuiI18nNumber value={5000000} />
@@ -83,7 +83,7 @@ const numberSnippet = [
 ];
 
 import Context from './context';
-const contextSource = require('!!raw-loader!./context');
+const contextSource = require('./context?raw');
 const contextHtml = renderToHtml(Context);
 
 import { I18nShapeProps } from './props';

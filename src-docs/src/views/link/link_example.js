@@ -23,13 +23,13 @@ import Link from './link';
 import { LinkDisable } from './link_disable';
 import { LinkValidation } from './link_validation';
 
-const linkSource = require('!!raw-loader!./link');
+const linkSource = require('./link?raw');
 const linkHtml = renderToHtml(Link);
 
-const linkDisableSource = require('!!raw-loader!./link_disable');
+const linkDisableSource = require('./link_disable?raw');
 const linkDisableHtml = renderToHtml(LinkDisable);
 
-const linkValidationSource = require('!!raw-loader!./link_validation');
+const linkValidationSource = require('./link_validation?raw');
 const linkValidationHtml = renderToHtml(LinkValidation);
 
 const linkSnippet = [

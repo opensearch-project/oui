@@ -17,7 +17,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiDataGrid, OuiCodeBlock, OuiCode } from '../../../../src/components';
 
 import DataGridControlColumns from './control_columns';
-const dataGridControlColumnsSource = require('!!raw-loader!./control_columns');
+const dataGridControlColumnsSource = require('./control_columns?raw');
 const dataGridControlColumnsHtml = renderToHtml(DataGridControlColumns);
 
 import { OuiDataGridControlColumn } from '!!prop-loader!../../../../src/components/datagrid/data_grid_types';

@@ -22,7 +22,7 @@ import {
 } from '../../../../src/components';
 
 import <%= componentExampleName %> from './<%= fileName %>';
-const <%= componentExamplePrefix %>Source = require('!!raw-loader!./<%= fileName %>');
+const <%= componentExamplePrefix %>Source = require('./<%= fileName %>?raw');
 const <%= componentExamplePrefix %>Html = renderToHtml(<%= componentExampleName %>);
 
 export const <%= componentExampleName %>Example = {

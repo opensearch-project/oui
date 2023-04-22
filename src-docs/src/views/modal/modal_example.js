@@ -27,19 +27,19 @@ import {
 import Guidelines from './guidelines';
 
 import Modal from './modal';
-const modalSource = require('!!raw-loader!./modal');
+const modalSource = require('./modal?raw');
 
 import ModalForm from './modal_form';
-const modalFormSource = require('!!raw-loader!./modal_form');
+const modalFormSource = require('./modal_form?raw');
 
 import ConfirmModal from './confirm_modal';
-const confirmModalSource = require('!!raw-loader!./confirm_modal');
+const confirmModalSource = require('./confirm_modal?raw');
 
 import ConfirmLoadingModal from './confirm_modal_loading';
-const confirmModalLoadingSource = require('!!raw-loader!./confirm_modal_loading');
+const confirmModalLoadingSource = require('./confirm_modal_loading?raw');
 
 import ModalWidth from './modal_width';
-const modalWidthSource = require('!!raw-loader!./modal_width');
+const modalWidthSource = require('./modal_width?raw');
 
 const modalSnippet = `<OuiModal onClose={closeModal}>
   <OuiModalHeader>

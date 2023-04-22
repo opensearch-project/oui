@@ -14,6 +14,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const babelConfig = require('./.babelrc.js');
 // const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 const getPort = require('get-port');
 const deasync = require('deasync');
@@ -58,6 +59,9 @@ const webpackConfig = {
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    fallback: {
+      fs: false,
+    },
   },
 
   resolveLoader: {
@@ -71,6 +75,10 @@ const webpackConfig = {
 
   module: {
     rules: [
+      {
+        resourceQuery: /raw/,
+        type: 'asset/source',
+      },
       {
         test: /\.(js|tsx?)$/,
         use: employCache([
@@ -101,14 +109,18 @@ const webpackConfig = {
       },
       {
         test: /\.(woff|woff2|ttf|eot|ico)(\?|$)/,
-        loader: 'file-loader',
+        type: 'asset/resource',
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 8000, // Convert images < 8kb to base64 strings
-          name: 'images/[hash]-[name].[ext]',
+        type: 'asset',
+        generator: {
+          filename: 'images/[contenthash]-[name].[ext]',
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 8 * 1024,
+          },
         },
       },
     ],
@@ -127,6 +139,7 @@ const webpackConfig = {
       failOnError: true,
     }),
 
+    new NodePolyfillPlugin(),
     // run TypeScript during webpack build
     // new ForkTsCheckerWebpackPlugin({
     //   typescript: { configFile: path.resolve(__dirname, '..', 'tsconfig.json') },
@@ -154,9 +167,6 @@ const webpackConfig = {
           : undefined,
       }
     : undefined,
-  node: {
-    fs: 'empty',
-  },
 };
 
 // Inspired by `get-port-sync`, but propogates options

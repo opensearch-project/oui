@@ -19,11 +19,11 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCode } from '../../../../src/components';
 import { useOuiTextDiffProp } from './props';
 import TextDiff from './text_diff';
-const textDiffSource = require('!!raw-loader!./text_diff');
+const textDiffSource = require('./text_diff?raw');
 const textDiffHtml = renderToHtml(TextDiff);
 
 import TextDiffCustomComponents from './text_diff_custom_components';
-const customComponentsSource = require('!!raw-loader!./text_diff_custom_components');
+const customComponentsSource = require('./text_diff_custom_components?raw');
 const customComponentsHtml = renderToHtml(TextDiffCustomComponents);
 
 export const TextDiffExample = {

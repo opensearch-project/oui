@@ -19,7 +19,7 @@ import { OuiCode, OuiStat } from '../../../../src/components';
 import statConfig from './playground';
 
 import Stat from './stat';
-const statSource = require('!!raw-loader!./stat');
+const statSource = require('./stat?raw');
 const statHtml = renderToHtml(Stat);
 const statSnippet = `<OuiStat
   title="22,123"
@@ -28,7 +28,7 @@ const statSnippet = `<OuiStat
 `;
 
 import StatColors from './stat_colors';
-const statColorsSource = require('!!raw-loader!./stat_colors');
+const statColorsSource = require('./stat_colors?raw');
 const statColorsHtml = renderToHtml(StatColors);
 const statColorSnippet = `<OuiStat
   title="22,123"
@@ -38,7 +38,7 @@ const statColorSnippet = `<OuiStat
 `;
 
 import StatAlign from './stat_align';
-const statAlignSource = require('!!raw-loader!./stat_align');
+const statAlignSource = require('./stat_align?raw');
 const statAlignHtml = renderToHtml(StatAlign);
 const statAlignSnippet = `<OuiStat
   title="22,123"
@@ -48,7 +48,7 @@ const statAlignSnippet = `<OuiStat
 `;
 
 import StatSize from './stat_size';
-const statSizeSource = require('!!raw-loader!./stat_size');
+const statSizeSource = require('./stat_size?raw');
 const statSizeHtml = renderToHtml(StatSize);
 const statSizeSnippet = `<OuiStat
   title="22,123"
@@ -58,7 +58,7 @@ const statSizeSnippet = `<OuiStat
 `;
 
 import StatOrder from './stat_order';
-const statOrderSource = require('!!raw-loader!./stat_order');
+const statOrderSource = require('./stat_order?raw');
 const statOrderHtml = renderToHtml(StatOrder);
 const statOrderSnippet = `<OuiStat
   title="22,123"
@@ -68,11 +68,11 @@ const statOrderSnippet = `<OuiStat
 `;
 
 import StatCombos from './stat_combos';
-const statCombosSource = require('!!raw-loader!./stat_combos');
+const statCombosSource = require('./stat_combos?raw');
 const statCombosHtml = renderToHtml(StatCombos);
 
 import StatLoading from './stat_loading';
-const statLoadingSource = require('!!raw-loader!./stat_loading');
+const statLoadingSource = require('./stat_loading?raw');
 const statLoadingHtml = renderToHtml(StatLoading);
 const statLoadingSnippet = `<OuiStat
   title={someNumber}

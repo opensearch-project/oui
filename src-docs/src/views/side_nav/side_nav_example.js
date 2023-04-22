@@ -17,7 +17,7 @@ import { OuiCode, OuiSideNav, OuiCallOut } from '../../../../src/components';
 import { OuiSideNavItem, OuiSideNavHeading } from './props';
 
 import SideNav from './side_nav';
-const sideNavSource = require('!!raw-loader!./side_nav');
+const sideNavSource = require('./side_nav?raw');
 const sideNavSnippet = `<OuiSideNav
   mobileTitle="Nav Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
@@ -43,7 +43,7 @@ const sideNavSnippet = `<OuiSideNav
 />`;
 
 import SideNavHeading from './side_nav_heading';
-const sideNavHeadingSource = require('!!raw-loader!./side_nav_heading');
+const sideNavHeadingSource = require('./side_nav_heading?raw');
 const sideNavHeadingSnippet = `<OuiSideNav
   heading="Nav items"
   toggleOpenOnMobile={toggleOpenOnMobile}
@@ -53,7 +53,7 @@ const sideNavHeadingSnippet = `<OuiSideNav
 `;
 
 import SideNavComplex from './side_nav_complex';
-const sideNavComplexSource = require('!!raw-loader!./side_nav_complex');
+const sideNavComplexSource = require('./side_nav_complex?raw');
 const sideNavComplexSnippet = `<OuiSideNav
   mobileTitle="Nav Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
@@ -118,7 +118,7 @@ const sideNavComplexSnippet = `<OuiSideNav
 `;
 
 import SideNavForceOpen from './side_nav_force_open';
-const sideNavForceOpenSource = require('!!raw-loader!./side_nav_force_open');
+const sideNavForceOpenSource = require('./side_nav_force_open?raw');
 const sideNavForceSnippet = `<OuiSideNav
   mobileTitle="Nav Items"
   toggleOpenOnMobile={toggleOpenOnMobile}
@@ -193,7 +193,7 @@ const sideNavForceSnippet = `<OuiSideNav
 `;
 
 import SideNavEmphasis from './side_nav_emphasis';
-const sideNavEmphasisSource = require('!!raw-loader!./side_nav_emphasis');
+const sideNavEmphasisSource = require('./side_nav_emphasis?raw');
 const sideNavEmphasisSnippet = `<OuiSideNav
   mobileTitle="Nav Items"
   toggleOpenOnMobile={toggleOpenOnMobile}

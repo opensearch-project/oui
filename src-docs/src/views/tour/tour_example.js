@@ -28,7 +28,7 @@ import Managed from './managed';
 import ManagedHook from './managed_hook';
 import FullScreen from './fullscreen';
 
-const stepSource = require('!!raw-loader!./step');
+const stepSource = require('./step?raw');
 const stepHtml = renderToHtml(Step);
 const stepSnippet = `
 <OuiTourStep
@@ -51,14 +51,14 @@ const stepSnippet = `
   </OuiText>
 </OuiTourStep>
 `;
-const tourSource = require('!!raw-loader!./tour');
+const tourSource = require('./tour?raw');
 const tourHtml = renderToHtml(Tour);
-const managedSource = require('!!raw-loader!./managed');
+const managedSource = require('./managed?raw');
 const managedHtml = renderToHtml(Managed);
-const managedHookSource = require('!!raw-loader!./managed_hook');
+const managedHookSource = require('./managed_hook?raw');
 const managedHookHtml = renderToHtml(ManagedHook);
 
-const fullSource = require('!!raw-loader!./fullscreen');
+const fullSource = require('./fullscreen?raw');
 const fullHtml = renderToHtml(FullScreen);
 
 export const TourExample = {

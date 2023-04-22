@@ -30,14 +30,14 @@ import KeyboardAccessible from './keyboard_accessible';
 import ScreenReaderOnly from './screen_reader';
 import SkipLink from './skip_link';
 
-const keyboardAccessibleSource = require('!!raw-loader!./keyboard_accessible');
+const keyboardAccessibleSource = require('./keyboard_accessible?raw');
 const keyboardAccessibleHtml = renderToHtml(KeyboardAccessible);
 const keyboardAccessibleSnippet = `<OuiKeyboardAccessible>
   <!-- interactive child element -->
 </OuiKeyboardAccessible>`;
 
 const screenReaderOnlyHtml = renderToHtml(ScreenReaderOnly);
-const screenReaderOnlySource = require('!!raw-loader!./screen_reader');
+const screenReaderOnlySource = require('./screen_reader?raw');
 const screenReaderOnlySnippet = [
   `<OuiScreenReaderOnly>
   <!-- visually hidden content -->
@@ -50,7 +50,7 @@ const screenReaderOnlySnippet = [
 ];
 
 const skipLinkHtml = renderToHtml(SkipLink);
-const skipLinkSource = require('!!raw-loader!./skip_link');
+const skipLinkSource = require('./skip_link?raw');
 const skipLinkSnippet = [
   `<OuiSkipLink destinationId="myAnchorId">
   Skip to content

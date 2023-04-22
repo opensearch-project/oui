@@ -38,7 +38,7 @@ import {
 import { FieldValueOptionType } from '!!prop-loader!../../../../../src/components/search_bar/filters/field_value_selection_filter';
 import { FieldValueToggleGroupFilterItemType } from '!prop-loader!../../../../../src/components/search_bar/filters/field_value_toggle_group_filter.tsx';
 
-const source = require('!!raw-loader!./in_memory_custom_sorting');
+const source = require('./in_memory_custom_sorting?raw');
 const html = renderToHtml(Table);
 
 export const customSortingSection = {

@@ -24,7 +24,7 @@ import {
 import { Link } from 'react-router-dom';
 
 import MarkdownEditor from './markdown_editor';
-const markdownEditorSource = require('!!raw-loader!./markdown_editor');
+const markdownEditorSource = require('./markdown_editor?raw');
 const markdownEditorHtml = renderToHtml(MarkdownEditor);
 const markdownEditorSnippet = `<OuiMarkdownEditor
   value={value}
@@ -32,7 +32,7 @@ const markdownEditorSnippet = `<OuiMarkdownEditor
 />`;
 
 import MarkdownEditorErrors from './markdown_editor_errors';
-const markdownEditorErrorsSource = require('!!raw-loader!./markdown_editor_errors');
+const markdownEditorErrorsSource = require('./markdown_editor_errors?raw');
 const markdownEditorErrorsHtml = renderToHtml(MarkdownEditorErrors);
 const markdownEditorErrorsSnippet = `<OuiMarkdownEditor
   value={value}
@@ -42,7 +42,7 @@ const markdownEditorErrorsSnippet = `<OuiMarkdownEditor
 />`;
 
 import MarkdownEditorHeight from './markdown_editor_height';
-const markdownEditorHeightSource = require('!!raw-loader!./markdown_editor_height');
+const markdownEditorHeightSource = require('./markdown_editor_height?raw');
 const markdownEditorHeightHtml = renderToHtml(MarkdownEditorHeight);
 const markdownEditorHeightSnippet = [
   `// Custom height with auto-expanding preview

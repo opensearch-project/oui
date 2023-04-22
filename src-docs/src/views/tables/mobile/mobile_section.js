@@ -17,7 +17,7 @@ import { Table } from './mobile';
 import { propsInfo } from './props_info';
 import { OuiTextColor } from '../../../../../src/components/text';
 import { OuiCode, OuiCodeBlock } from '../../../../../src/components/code';
-const source = require('!!raw-loader!./mobile');
+const source = require('./mobile?raw');
 const html = renderToHtml(Table);
 
 const exampleItem = `{

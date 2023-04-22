@@ -33,7 +33,7 @@ import {
 
 import Badge from './badge';
 
-const badgeSource = require('!!raw-loader!./badge');
+const badgeSource = require('./badge?raw');
 const badgeHtml = renderToHtml(Badge);
 const badgeSnippet = [
   `<OuiBadge>Default</OuiBadge>
@@ -49,13 +49,13 @@ const badgeSnippet = [
 ];
 
 import BadgeWithIcon from './badge_with_icon';
-const badgeWithIconSource = require('!!raw-loader!./badge_with_icon');
+const badgeWithIconSource = require('./badge_with_icon?raw');
 const badgeWithIconHtml = renderToHtml(BadgeWithIcon);
 const badgeWithIconSnippet = `<OuiBadge color="hollow" iconType="cross" iconSide="right">Label</OuiBadge>
 `;
 
 import BadgeButton from './badge_button';
-const badgeButtonSource = require('!!raw-loader!./badge_button');
+const badgeButtonSource = require('./badge_button?raw');
 const badgeButtonHtml = renderToHtml(BadgeButton);
 const badgeButtonSnippet = [
   `<OuiBadge
@@ -88,7 +88,7 @@ const badgeButtonSnippet = [
 ];
 
 import BadgeHealth from './badge_health';
-const badgeHealthSource = require('!!raw-loader!./badge_health');
+const badgeHealthSource = require('./badge_health?raw');
 const badgeHealthHtml = renderToHtml(BadgeHealth);
 const badgeHealthSnippet = [
   `<OuiBadge color="success">Healthy</OuiBadge>
@@ -100,14 +100,14 @@ const badgeHealthSnippet = [
 ];
 
 import BadgeHref from './badge_href';
-const badgeHrefSource = require('!!raw-loader!./badge_href');
+const badgeHrefSource = require('./badge_href?raw');
 const badgeHrefHtml = renderToHtml(BadgeHref);
 const badgeHrefSnippet = [
   '<OuiBadge href="https://oui.opensearch.org/latest/" />',
 ];
 
 import BadgeTruncate from './badge_truncate';
-const badgeTruncateSource = require('!!raw-loader!./badge_truncate');
+const badgeTruncateSource = require('./badge_truncate?raw');
 const badgeTruncateHtml = renderToHtml(BadgeTruncate);
 const badgeTruncateSnippet = [
   `<OuiBadgeGroup gutterSize="s">
@@ -117,7 +117,7 @@ const badgeTruncateSnippet = [
 ];
 
 import BetaBadge from './beta_badge';
-const betaBadgeSource = require('!!raw-loader!./beta_badge');
+const betaBadgeSource = require('./beta_badge?raw');
 const betaBadgeHtml = renderToHtml(BetaBadge);
 const betaBadgeSnippet = [
   `<OuiBetaBadge label="Beta" />
@@ -129,7 +129,7 @@ const betaBadgeSnippet = [
 ];
 
 import NotificationBadge from './notification_badge';
-const notificationBadgeSource = require('!!raw-loader!./notification_badge');
+const notificationBadgeSource = require('./notification_badge?raw');
 const notificationBadgeHtml = renderToHtml(NotificationBadge);
 const notificationBadgeSnippet = `<OuiNotificationBadge>3</OuiNotificationBadge>
 `;

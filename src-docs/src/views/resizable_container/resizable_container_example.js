@@ -28,8 +28,11 @@ import {
 import { OuiResizablePanel } from '../../../../src/components/resizable_container/resizable_panel';
 import { OuiResizableButton } from '../../../../src/components/resizable_container/resizable_button';
 
-// eslint-disable-next-line
-import { ModeOptions, ToggleOptions } from '!!prop-loader!../../../../src/components/resizable_container/resizable_panel';
+import {
+  ModeOptions,
+  ToggleOptions,
+  // eslint-disable-next-line
+} from '!!prop-loader!../../../../src/components/resizable_container/resizable_panel';
 import { PanelModeType } from '!!prop-loader!../../../../src/components/resizable_container/types';
 
 import ResizableContainerBasic from './resizable_container_basic';
@@ -41,14 +44,14 @@ import ResizablePanelCollapsibleResponsive from './resizable_panel_collapsible_r
 import ResizablePanelCollapsibleOpts from './resizable_panel_collapsible_options';
 import ResizablePanelCollapsibleExt from './resizable_panel_collapsible_external';
 
-const ResizableContainerSource = require('!!raw-loader!./resizable_container_basic');
-const ResizableContainerVerticalSource = require('!!raw-loader!./resizable_container_vertical');
-const ResizableContainerResetValuesSource = require('!!raw-loader!./resizable_container_reset_values');
-const ResizablePanelsSource = require('!!raw-loader!./resizable_panels');
-const ResizablePanelCollapsibleSource = require('!!raw-loader!./resizable_panel_collapsible');
-const ResizablePanelCollapsibleResponsiveSource = require('!!raw-loader!./resizable_panel_collapsible_responsive');
-const ResizablePanelCollapsibleOptsSource = require('!!raw-loader!./resizable_panel_collapsible_options');
-const ResizablePanelCollapsibleExtSource = require('!!raw-loader!./resizable_panel_collapsible_external');
+const ResizableContainerSource = require('./resizable_container_basic?raw');
+const ResizableContainerVerticalSource = require('./resizable_container_vertical?raw');
+const ResizableContainerResetValuesSource = require('./resizable_container_reset_values?raw');
+const ResizablePanelsSource = require('./resizable_panels?raw');
+const ResizablePanelCollapsibleSource = require('./resizable_panel_collapsible?raw');
+const ResizablePanelCollapsibleResponsiveSource = require('./resizable_panel_collapsible_responsive?raw');
+const ResizablePanelCollapsibleOptsSource = require('./resizable_panel_collapsible_options?raw');
+const ResizablePanelCollapsibleExtSource = require('./resizable_panel_collapsible_external?raw');
 
 const ResizableContainerHtml = renderToHtml(ResizableContainerBasic);
 const basicSnippet = `<OuiResizableContainer>

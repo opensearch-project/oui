@@ -42,7 +42,7 @@ import {
   FieldValueToggleGroupFilter,
   FieldValueToggleGroupFilterConfigType,
 } from './field_value_toggle_group_filter';
-import { Query } from '../query';
+import { Query } from '../query/query';
 
 export const createFilter = (
   index: number,

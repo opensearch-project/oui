@@ -25,7 +25,7 @@ import {
 import { paginationConfig } from './playground';
 
 import ManyPages from './many_pages';
-const manyPagesSource = require('!!raw-loader!./many_pages');
+const manyPagesSource = require('./many_pages?raw');
 const manyPagesHtml = renderToHtml(ManyPages);
 const manyPagesSnippet = `<OuiPagination
   aria-label="my pagination"
@@ -36,7 +36,7 @@ const manyPagesSnippet = `<OuiPagination
 `;
 
 import FewPages from './few_pages';
-const fewPagesSource = require('!!raw-loader!./few_pages');
+const fewPagesSource = require('./few_pages?raw');
 const fewPagesHtml = renderToHtml(FewPages);
 const fewPagesSnippet = `<OuiPagination
   aria-label="my pagination"
@@ -47,7 +47,7 @@ const fewPagesSnippet = `<OuiPagination
 `;
 
 import CenteredPagination from './centered_pagination';
-const centeredPaginationSource = require('!!raw-loader!./centered_pagination');
+const centeredPaginationSource = require('./centered_pagination?raw');
 const centeredPaginationHtml = renderToHtml(CenteredPagination);
 const centeredPaginationSnippet = `<OuiFlexGroup justifyContent="spaceAround">
   <OuiFlexItem grow={false}>
@@ -62,7 +62,7 @@ const centeredPaginationSnippet = `<OuiFlexGroup justifyContent="spaceAround">
 `;
 
 import CustomizablePagination from './customizable_pagination';
-const customizablePaginationSource = require('!!raw-loader!./customizable_pagination');
+const customizablePaginationSource = require('./customizable_pagination?raw');
 const customizablePaginationHtml = renderToHtml(CustomizablePagination);
 const customizablePaginationSnippet = `<OuiFlexGroup justifyContent="spaceBetween" alignItems="center">
   <OuiFlexItem grow={false}>
@@ -86,7 +86,7 @@ const customizablePaginationSnippet = `<OuiFlexGroup justifyContent="spaceBetwee
 `;
 
 import Compressed from './compressed';
-const compressedSource = require('!!raw-loader!./compressed');
+const compressedSource = require('./compressed?raw');
 const compressedHtml = renderToHtml(Compressed);
 const compressedSnippet = `<OuiPagination
   aria-label="my pagination"

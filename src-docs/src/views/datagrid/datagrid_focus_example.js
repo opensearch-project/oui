@@ -17,7 +17,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCallOut, OuiCode } from '../../../../src/components';
 
 import DataGridFocus from './focus';
-const dataGridFocusSource = require('!!raw-loader!./focus');
+const dataGridFocusSource = require('./focus?raw');
 const dataGridFocusHtml = renderToHtml(DataGridFocus);
 
 export const DataGridFocusExample = {

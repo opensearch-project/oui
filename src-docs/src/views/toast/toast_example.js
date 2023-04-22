@@ -27,7 +27,7 @@ import Guidelines from './guidelines';
 import toastConfig from './playground';
 
 import ToastList from './toast_list';
-const toastListSource = require('!!raw-loader!./toast_list');
+const toastListSource = require('./toast_list?raw');
 const toastListHtml = renderToHtml(ToastList);
 const toastListSnippet = [
   `<OuiGlobalToastList
@@ -43,7 +43,7 @@ const toastListSnippet = [
 ];
 
 import Default from './default';
-const defaultSource = require('!!raw-loader!./default');
+const defaultSource = require('./default?raw');
 const defaultHtml = renderToHtml(Default);
 const defaultToastSnippet = [
   `<OuiToast
@@ -54,7 +54,7 @@ const defaultToastSnippet = [
 ];
 
 import Info from './info';
-const infoSource = require('!!raw-loader!./info');
+const infoSource = require('./info?raw');
 const infoHtml = renderToHtml(Info);
 const infoToastSnippet = [
   `<OuiToast
@@ -66,7 +66,7 @@ const infoToastSnippet = [
 ];
 
 import Success from './success';
-const successSource = require('!!raw-loader!./success');
+const successSource = require('./success?raw');
 const successHtml = renderToHtml(Success);
 const successToastSnippet = [
   `<OuiToast
@@ -79,7 +79,7 @@ const successToastSnippet = [
 ];
 
 import Warning from './warning';
-const warningSource = require('!!raw-loader!./warning');
+const warningSource = require('./warning?raw');
 const warningHtml = renderToHtml(Warning);
 const warningToastSnippet = [
   `<OuiToast
@@ -92,7 +92,7 @@ const warningToastSnippet = [
 ];
 
 import Danger from './danger';
-const dangerSource = require('!!raw-loader!./danger');
+const dangerSource = require('./danger?raw');
 const dangerHtml = renderToHtml(Danger);
 const dangerToastSnippet = [
   `<OuiToast

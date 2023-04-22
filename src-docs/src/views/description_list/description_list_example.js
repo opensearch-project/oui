@@ -23,7 +23,7 @@ import {
 } from '../../../../src/components';
 
 import DescriptionList from './description_list';
-const descriptionListSource = require('!!raw-loader!./description_list');
+const descriptionListSource = require('./description_list?raw');
 const descriptionListHtml = renderToHtml(DescriptionList);
 const descriptionListSnippet = [
   `<OuiDescriptionList
@@ -43,7 +43,7 @@ const descriptionListSnippet = [
 ];
 
 import DescriptionListColumn from './description_list_column';
-const descriptionListColumnSource = require('!!raw-loader!./description_list_column');
+const descriptionListColumnSource = require('./description_list_column?raw');
 const descriptionListColumnHtml = renderToHtml(DescriptionListColumn);
 const descriptionListColumnSnippet = [
   `<OuiDescriptionList
@@ -57,7 +57,7 @@ const descriptionListColumnSnippet = [
 ];
 
 import DescriptionListStyling from './description_list_styling';
-const descriptionListStylingSource = require('!!raw-loader!./description_list_styling');
+const descriptionListStylingSource = require('./description_list_styling?raw');
 const descriptionListStylingHtml = renderToHtml(DescriptionListStyling);
 const descriptionListStylingSnippet = [
   `<OuiDescriptionList
@@ -68,7 +68,7 @@ const descriptionListStylingSnippet = [
 ];
 
 import DescriptionListInline from './description_list_inline';
-const descriptionListInlineSource = require('!!raw-loader!./description_list_inline');
+const descriptionListInlineSource = require('./description_list_inline?raw');
 const descriptionListInlineHtml = renderToHtml(DescriptionListInline);
 const descriptionListInlineSnippet = [
   `<OuiDescriptionList
@@ -78,7 +78,7 @@ const descriptionListInlineSnippet = [
 ];
 
 import DescriptionListReverse from './description_list_reverse';
-const descriptionListReverseSource = require('!!raw-loader!./description_list_reverse');
+const descriptionListReverseSource = require('./description_list_reverse?raw');
 const descriptionListReverseHtml = renderToHtml(DescriptionListReverse);
 const descriptionListReverseSnippet = [
   `<OuiDescriptionList
@@ -88,7 +88,7 @@ const descriptionListReverseSnippet = [
 ];
 
 import DescriptionListClasses from './description_list_classes';
-const descriptionListClassesSource = require('!!raw-loader!./description_list_classes');
+const descriptionListClassesSource = require('./description_list_classes?raw');
 const descriptionListClassesHtml = renderToHtml(DescriptionListClasses);
 const descriptionListClassesSnippet = [
   `<OuiDescriptionList

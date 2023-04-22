@@ -33,11 +33,11 @@ import { isString } from '../../services/predicate';
 import { OuiFlexGroup, OuiFlexItem } from '../flex';
 import { OuiSearchBox, SchemaType } from './search_box';
 import { OuiSearchFilters, SearchFilterConfig } from './search_filters';
-import { Query } from './query';
+import { Query } from './query/query';
 import { CommonProps } from '../common';
 import { OuiFieldSearchProps } from '../form/field_search';
 
-export { Query, AST as Ast } from './query';
+export { AST as Ast } from './query';
 
 export type QueryType = Query | string;
 

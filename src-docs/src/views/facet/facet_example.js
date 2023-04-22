@@ -24,7 +24,7 @@ import {
 import { facetButtonConfig, facetLayoutConfig } from './playground';
 
 import Facet from './facet';
-const facetSource = require('!!raw-loader!./facet');
+const facetSource = require('./facet?raw');
 const facetHtml = renderToHtml(Facet);
 const facetSnippet = `<OuiFacetButton
   quantity={6}
@@ -35,7 +35,7 @@ const facetSnippet = `<OuiFacetButton
 `;
 
 import FacetLayout from './facet_layout';
-const facetLayoutSource = require('!!raw-loader!./facet_layout');
+const facetLayoutSource = require('./facet_layout?raw');
 const facetLayoutHtml = renderToHtml(FacetLayout);
 
 export const FacetExample = {

@@ -21,7 +21,7 @@ import {
 } from '../../../../src/components';
 
 import DataGridRowHeightOptions from './row_height_options';
-const dataGridRowHeightOptionsSource = require('!!raw-loader!./row_height_options');
+const dataGridRowHeightOptionsSource = require('./row_height_options?raw');
 const dataGridRowHeightOptionsHtml = renderToHtml(DataGridRowHeightOptions);
 
 const rowHeightsSnippet = `

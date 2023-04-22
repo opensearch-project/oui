@@ -18,15 +18,15 @@ import { qualitativePropsInfo, palettePropsInfo } from './props_info';
 import { OuiCode, OuiText, OuiCallOut } from '../../../../src/components';
 
 import ColorPalette from './color_palette';
-const colorPaletteSource = require('!!raw-loader!./color_palette');
+const colorPaletteSource = require('./color_palette?raw');
 const colorPaletteHtml = renderToHtml(ColorPalette);
 
 import ColorPaletteQuant from './color_palette_quantitative';
-const colorPaletteQuantSource = require('!!raw-loader!./color_palette_quantitative');
+const colorPaletteQuantSource = require('./color_palette_quantitative?raw');
 const colorPaletteQuantHtml = renderToHtml(ColorPaletteQuant);
 
 import ColorPaletteCustom from './color_palette_custom';
-const colorPaletteCustomSource = require('!!raw-loader!./color_palette_custom');
+const colorPaletteCustomSource = require('./color_palette_custom?raw');
 const colorPaletteCustomHtml = renderToHtml(ColorPaletteCustom);
 
 export const ColorPaletteExample = {

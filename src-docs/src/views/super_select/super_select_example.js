@@ -18,7 +18,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCode, OuiSuperSelect } from '../../../../src/components';
 
 import SuperSelectBasic from './super_select_basic';
-const superSelectBasicSource = require('!!raw-loader!./super_select_basic');
+const superSelectBasicSource = require('./super_select_basic?raw');
 const superSelectBasicHtml = renderToHtml(SuperSelectBasic);
 const superSelectBasicSnippet = `<OuiSuperSelect
   options={[
@@ -33,7 +33,7 @@ const superSelectBasicSnippet = `<OuiSuperSelect
 `;
 
 import SuperSelectComplex from './super_select_complex';
-const superSelectComplexSource = require('!!raw-loader!./super_select_complex');
+const superSelectComplexSource = require('./super_select_complex?raw');
 const superSelectComplexHtml = renderToHtml(SuperSelectComplex);
 const superSelectComplexSnippet = `<OuiSuperSelect
   options={[
@@ -50,7 +50,7 @@ const superSelectComplexSnippet = `<OuiSuperSelect
 `;
 
 import SuperSelectStates from './super_select_states';
-const superSelectStatesSource = require('!!raw-loader!./super_select_states');
+const superSelectStatesSource = require('./super_select_states?raw');
 const superSelectStatesHtml = renderToHtml(SuperSelectStates);
 const superSelectStatesSnippet = `<OuiSuperSelect
   options={[

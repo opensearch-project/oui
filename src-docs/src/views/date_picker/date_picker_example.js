@@ -23,47 +23,47 @@ import {
 } from '../../../../src/components';
 
 import DatePicker from './date_picker';
-const datePickerSource = require('!!raw-loader!./date_picker');
+const datePickerSource = require('./date_picker?raw');
 const datePickerHtml = renderToHtml(DatePicker);
 
 import States from './states';
-const statesSource = require('!!raw-loader!./states');
+const statesSource = require('./states?raw');
 const statesHtml = renderToHtml(States);
 
 import Locale from './locale';
-const localeSource = require('!!raw-loader!./locale');
+const localeSource = require('./locale?raw');
 const localeHtml = renderToHtml(Locale);
 
 import Time from './time_select';
-const timeSource = require('!!raw-loader!./time_select');
+const timeSource = require('./time_select?raw');
 const timeHtml = renderToHtml(Time);
 
 import Inline from './inline';
-const inlineSource = require('!!raw-loader!./inline');
+const inlineSource = require('./inline?raw');
 const inlineHtml = renderToHtml(Inline);
 
 import Range from './range';
-const rangeSource = require('!!raw-loader!./range');
+const rangeSource = require('./range?raw');
 const rangeHtml = renderToHtml(Range);
 
 import MinMax from './min_max';
-const minMaxSource = require('!!raw-loader!./min_max');
+const minMaxSource = require('./min_max?raw');
 const minMaxHtml = renderToHtml(MinMax);
 
 import Classes from './classes';
-const classesSource = require('!!raw-loader!./classes');
+const classesSource = require('./classes?raw');
 const classesHtml = renderToHtml(Classes);
 
 import OpenToDate from './open_to_date';
-const openToDateSource = require('!!raw-loader!./open_to_date');
+const openToDateSource = require('./open_to_date?raw');
 const openToDateHtml = renderToHtml(OpenToDate);
 
 import CustomInput from './custom_input';
-const customInputSource = require('!!raw-loader!./custom_input');
+const customInputSource = require('./custom_input?raw');
 const customInputHtml = renderToHtml(CustomInput);
 
 import Utc from './utc';
-const utcSource = require('!!raw-loader!./utc');
+const utcSource = require('./utc?raw');
 const utcHtml = renderToHtml(Utc);
 
 const datePickerSnippet =

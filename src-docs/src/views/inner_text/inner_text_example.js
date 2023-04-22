@@ -18,7 +18,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCode, OuiText } from '../../../../src/components';
 
 import InnerText from './inner_text';
-const innerTextSource = require('!!raw-loader!./inner_text');
+const innerTextSource = require('./inner_text?raw');
 const innerTextHtml = renderToHtml(InnerText);
 const useInnerTextSnippet = `const [ref, innerText] = useInnerText();
 <span ref={ref} title={innerText}>

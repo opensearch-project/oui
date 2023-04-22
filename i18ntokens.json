@@ -3533,14 +3533,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 267,
+        "line": 269,
         "column": 12,
-        "index": 7947
+        "index": 8035
       },
       "end": {
-        "line": 270,
+        "line": 272,
         "column": 14,
-        "index": 8069
+        "index": 8157
       }
     },
     "filepath": "src/components/selectable/selectable_templates/selectable_template_sitewide.tsx"

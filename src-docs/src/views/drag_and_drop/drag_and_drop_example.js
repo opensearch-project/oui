@@ -24,35 +24,35 @@ import {
 import { renderToHtml } from '../../services';
 
 import DragAndDropBare from './drag_and_drop_bare';
-const dragAndDropBareSource = require('!!raw-loader!./drag_and_drop_bare');
+const dragAndDropBareSource = require('./drag_and_drop_bare?raw');
 const dragAndDropBareHtml = renderToHtml(DragAndDropBare);
 
 import DragAndDrop from './drag_and_drop';
-const dragAndDropSource = require('!!raw-loader!./drag_and_drop');
+const dragAndDropSource = require('./drag_and_drop?raw');
 const dragAndDropHtml = renderToHtml(DragAndDrop);
 
 import DragAndDropCustomHandle from './drag_and_drop_custom_handle';
-const dragAndDropCustomHandleSource = require('!!raw-loader!./drag_and_drop_custom_handle');
+const dragAndDropCustomHandleSource = require('./drag_and_drop_custom_handle?raw');
 const dragAndDropCustomHandleHtml = renderToHtml(DragAndDropCustomHandle);
 
 import DragAndDropDisableBlocking from './drag_and_drop_disable_blocking';
-const dragAndDropDisableBlockingSource = require('!!raw-loader!./drag_and_drop_disable_blocking');
+const dragAndDropDisableBlockingSource = require('./drag_and_drop_disable_blocking?raw');
 const dragAndDropDisableBlockingHtml = renderToHtml(DragAndDropDisableBlocking);
 
 import DragAndDropMoveLists from './drag_and_drop_move_lists';
-const dragAndDropMoveListsSource = require('!!raw-loader!./drag_and_drop_move_lists');
+const dragAndDropMoveListsSource = require('./drag_and_drop_move_lists?raw');
 const dragAndDropMoveListsHtml = renderToHtml(DragAndDropMoveLists);
 
 import DragAndDropTypes from './drag_and_drop_types';
-const dragAndDropTypesSource = require('!!raw-loader!./drag_and_drop_types');
+const dragAndDropTypesSource = require('./drag_and_drop_types?raw');
 const dragAndDropTypesHtml = renderToHtml(DragAndDropTypes);
 
 import DragAndDropClone from './drag_and_drop_clone';
-const dragAndDropCloneSource = require('!!raw-loader!./drag_and_drop_clone');
+const dragAndDropCloneSource = require('./drag_and_drop_clone?raw');
 const dragAndDropCloneHtml = renderToHtml(DragAndDropClone);
 
 import DragAndDropComplex from './drag_and_drop_complex';
-const dragAndDropComplexSource = require('!!raw-loader!./drag_and_drop_complex');
+const dragAndDropComplexSource = require('./drag_and_drop_complex?raw');
 const dragAndDropComplexHtml = renderToHtml(DragAndDropComplex);
 
 export const DragAndDropExample = {

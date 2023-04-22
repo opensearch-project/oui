@@ -24,7 +24,7 @@ import {
 } from '../../../../src/components';
 
 import ContextMenu from './context_menu';
-const contextMenuSource = require('!!raw-loader!./context_menu');
+const contextMenuSource = require('./context_menu?raw');
 const contextMenuHtml = renderToHtml(ContextMenu);
 const contextMenuSnippet = `<OuiContextMenu
   initialPanelId={0}
@@ -46,7 +46,7 @@ const contextMenuSnippet = `<OuiContextMenu
 />`;
 
 import SinglePanel from './single_panel';
-const singlePanelSource = require('!!raw-loader!./single_panel');
+const singlePanelSource = require('./single_panel?raw');
 const singlePanelHtml = renderToHtml(SinglePanel);
 const singlePanelSnippet = `<OuiContextMenuPanel
   items={[
@@ -59,7 +59,7 @@ const singlePanelSnippet = `<OuiContextMenuPanel
 />`;
 
 import Small from './small';
-const smallSizeSource = require('!!raw-loader!./small');
+const smallSizeSource = require('./small?raw');
 const smallSizeHtml = renderToHtml(SinglePanel);
 const smallSnippet = `<OuiContextMenuPanel
   size="s"
@@ -67,7 +67,7 @@ const smallSnippet = `<OuiContextMenuPanel
 />`;
 
 import ContentPanel from './content_panel';
-const contentPanelSource = require('!!raw-loader!./content_panel');
+const contentPanelSource = require('./content_panel?raw');
 const contentPanelHtml = renderToHtml(ContentPanel);
 const contentPanelSnippet = `<OuiContextMenuPanel>
   <!-- React element as child -->
@@ -75,7 +75,7 @@ const contentPanelSnippet = `<OuiContextMenuPanel>
 `;
 
 import ContextMenuWithContent from './context_menu_with_content';
-const contextMenuWithContentSource = require('!!raw-loader!./context_menu_with_content');
+const contextMenuWithContentSource = require('./context_menu_with_content?raw');
 const contextMenuWithContentHtml = renderToHtml(ContextMenuWithContent);
 
 export const ContextMenuExample = {

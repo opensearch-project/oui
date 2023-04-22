@@ -15,7 +15,7 @@ import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
 import { Table } from './selection';
-const source = require('!!raw-loader!./selection');
+const source = require('./selection?raw');
 const html = renderToHtml(Table);
 
 export const section = {

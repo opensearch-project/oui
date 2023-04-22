@@ -31,7 +31,7 @@ import Guidelines from './guidelines';
 import Playground from './playground';
 
 import Button from './button';
-const buttonSource = require('!!raw-loader!./button');
+const buttonSource = require('./button?raw');
 const buttonHtml = renderToHtml(Button);
 const buttonSnippet = [
   `<OuiButton><!-- Primary button --></OuiButton>
@@ -45,26 +45,26 @@ const buttonSnippet = [
 ];
 
 import ButtonWithIcon from './button_with_icon';
-const buttonWithIconSource = require('!!raw-loader!./button_with_icon');
+const buttonWithIconSource = require('./button_with_icon?raw');
 const buttonWithIconHtml = renderToHtml(Button);
 const buttonWithIconSnippet = `<OuiButton iconType={icon}><!-- Button text --></OuiButton>
 `;
 
 import ButtonOption from './button_empty';
-const buttonOptionSource = require('!!raw-loader!./button_empty');
+const buttonOptionSource = require('./button_empty?raw');
 const buttonOptionHtml = renderToHtml(ButtonOption);
 const buttonOptionSnippet = `<OuiButtonEmpty>
   <!-- Button text -->
 </OuiButtonEmpty>`;
 
 import ButtonOptionFlush from './button_empty_flush';
-const buttonOptionFlushSource = require('!!raw-loader!./button_empty_flush');
+const buttonOptionFlushSource = require('./button_empty_flush?raw');
 const buttonOptionFlushHtml = renderToHtml(ButtonOptionFlush);
 const buttonOptionFlushSnippet = `<OuiButtonEmpty flush="left"><!-- Button text --></OuiButtonEmpty>
 `;
 
 import ButtonIcon from './button_icon';
-const buttonIconSource = require('!!raw-loader!./button_icon');
+const buttonIconSource = require('./button_icon?raw');
 const buttonIconHtml = renderToHtml(ButtonIcon);
 const buttonIconSnippet = [
   `<OuiButtonIcon
@@ -82,27 +82,27 @@ const buttonIconSnippet = [
 ];
 
 import ButtonGhost from './button_ghost';
-const buttonGhostSource = require('!!raw-loader!./button_ghost');
+const buttonGhostSource = require('./button_ghost?raw');
 const buttonGhostHtml = renderToHtml(ButtonGhost);
 const buttonGhostSnippet = `<OuiButton color="ghost">
   <!-- Button text -->
 </OuiButton>`;
 
 import ButtonAsLink from './button_as_link';
-const buttonAsLinkSource = require('!!raw-loader!./button_as_link');
+const buttonAsLinkSource = require('./button_as_link?raw');
 const buttonAsLinkHtml = renderToHtml(ButtonAsLink);
 const buttonAsLinkSnippet = `<OuiButton href={someUrl}><!-- Button text --></OuiButton>
 `;
 
 import ButtonLoading from './button_loading';
-const buttonLoadingSource = require('!!raw-loader!./button_loading');
+const buttonLoadingSource = require('./button_loading?raw');
 const buttonLoadingHtml = renderToHtml(ButtonLoading);
 const buttonLoadingSnippet = `<OuiButton isLoading={true}>
   <!-- Button text -->
 </OuiButton>`;
 
 import ButtonToggle from './button_toggle';
-const buttonToggleSource = require('!!raw-loader!./button_toggle');
+const buttonToggleSource = require('./button_toggle?raw');
 const buttonToggleHtml = renderToHtml(ButtonToggle);
 const buttonToggleSnippet = [
   `<OuiButton
@@ -129,15 +129,15 @@ const buttonToggleSnippet = [
 ];
 
 import ButtonGroup from './button_group';
-const buttonGroupSource = require('!!raw-loader!./button_group');
+const buttonGroupSource = require('./button_group?raw');
 const buttonGroupHtml = renderToHtml(ButtonGroup);
 
 import ButtonGroupIcons from './button_group_icon';
-const buttonGroupIconsSource = require('!!raw-loader!./button_group_icon');
+const buttonGroupIconsSource = require('./button_group_icon?raw');
 const buttonGroupIconsHtml = renderToHtml(ButtonGroupIcons);
 
 import ButtonGroupCompressed from './button_group_compressed';
-const buttonGroupCompressedSource = require('!!raw-loader!./button_group_compressed');
+const buttonGroupCompressedSource = require('./button_group_compressed?raw');
 const buttonGroupCompressedHtml = renderToHtml(ButtonGroupCompressed);
 const buttonGroupSnippet = [
   `<OuiButtonGroup
