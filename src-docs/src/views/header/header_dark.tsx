@@ -33,7 +33,7 @@ export default ({ theme }: { theme: any }) => (
     sections={[
       {
         items: [
-          <OuiHeaderLogo>Elastic</OuiHeaderLogo>,
+          <OuiHeaderLogo>OpenSearch</OuiHeaderLogo>,
           <OuiHeaderLinks aria-label="App navigation dark theme example">
             <OuiHeaderLink isActive>Docs</OuiHeaderLink>
             <OuiHeaderLink>Code</OuiHeaderLink>
