@@ -74,7 +74,8 @@
     "**/request/qs": "^6.11.0",
     "**/make-fetch-happen": "^11.0.3",
     "nodegit/ramda": "^0.27.1",
-    "sass-lint/front-matter": "^4.0.2"
+    "sass-lint/front-matter": "^4.0.2",
+    "postcss-loader/cosmiconfig": "^8.0.0"
   },
   "pre-commit": [
     "test-staged"
