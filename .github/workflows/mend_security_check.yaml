@@ -1,0 +1,58 @@
+name: Mend Security Check
+
+on:
+  push:
+    branches: ['**']
+    paths:
+      - 'yarn.lock'
+  pull_request:
+    branches: ['**']
+    paths:
+      - 'yarn.lock'
+
+jobs:
+  security-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Install Dependencies
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+          yarn install
+
+      - name: Check if dependencies were updated
+        id: dependency-check
+        run: |
+          if git diff --name-only origin/main...HEAD | grep --quiet 'yarn.lock'; then
+            echo "Dependencies updated. Running Mend Security Check..."
+            echo "run-mend=true" >> $GITHUB_ENV
+          else
+            echo "No dependency updates. Skipping Mend Security Check."
+            echo "run-mend=false" >> $GITHUB_ENV
+          fi
+
+      - name: Set Mend Configuration and Run Security Check
+        if: ${{ env.run-mend == 'true' }}
+        env:
+          MEND_EMAIL: ${{secrets.MEND_EMAIL}}
+          MEND_USER_KEY: ${{secrets.MEND_USER_KEY}}
+          MEND_URL: https://saas.mend.io
+        run: |
+          echo "Downloading Mend CLI"
+          curl https://downloads.mend.io/production/unified/latest/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
+
+          echo "Running Mend security check..."
+          mend sca
