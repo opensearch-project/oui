@@ -342,7 +342,7 @@ export default () => {
       <OuiHeader position={position} theme={theme}>
         <OuiHeaderSection grow={false}>
           <OuiHeaderSectionItem border="right">
-            <OuiHeaderLogo>Elastic</OuiHeaderLogo>
+            <OuiHeaderLogo>OpenSearch</OuiHeaderLogo>
           </OuiHeaderSectionItem>
         </OuiHeaderSection>
         <OuiHeaderSection side="right">

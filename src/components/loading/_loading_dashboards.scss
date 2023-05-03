@@ -1,0 +1,25 @@
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+.ouiLoadingDashboards {
+  position: relative;
+  display: inline-block;
+}
+
+.ouiLoadingDashboards--medium {
+  width: $ouiSize;
+}
+
+.ouiLoadingDashboards--large {
+  width: $ouiSizeL;
+}
+
+.ouiLoadingDashboards--xLarge {
+  width: $ouiSizeXL;
+}
+
+.ouiLoadingDashboards--xxLarge {
+  width: $ouiSizeXXL;
+}

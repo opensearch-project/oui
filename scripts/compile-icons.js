@@ -10,7 +10,7 @@
  */
 
 const glob = require('glob');
-const svgr = require('@svgr/core').default;
+const { transform } = require('@svgr/core');
 const path = require('path');
 const fs = require('fs');
 const license = require('../.eslintrc.js').rules[
@@ -29,38 +29,41 @@ function pascalCase(x) {
 
 const iconFiles = glob.sync('**/*.svg', { cwd: iconsDir, realpath: true });
 
-iconFiles.forEach(async filePath => {
-  const svgSource = fs.readFileSync(filePath);
+iconFiles.forEach(async (filePath) => {
+  const svgSourceBuffer = fs.readFileSync(filePath);
+  const svgSource = svgSourceBuffer.toString();
 
   try {
-    const viewBoxPosition = svgSource.toString().indexOf('viewBox');
+    const viewBoxPosition = svgSource.indexOf('viewBox');
     if (viewBoxPosition === -1) {
       throw new Error(`${filePath} is missing a 'viewBox' attribute`);
     }
 
-    const jsxSource = await svgr(
+    const jsxSource = await transform(
       svgSource,
       {
         plugins: ['@svgr/plugin-svgo', '@svgr/plugin-jsx'],
         svgoConfig: {
           plugins: [
-            { cleanupIDs: false },
-            { prefixIds: false },
-            { removeViewBox: false },
+            {
+              name: 'preset-default',
+              params: {
+                overrides: {
+                  cleanupIds: false,
+                  removeViewBox: false,
+                },
+              },
+            },
           ],
         },
         svgProps: {
           xmlns: 'http://www.w3.org/2000/svg',
         },
         titleProp: true,
-        template: (
-          { template },
-          opts,
-          { imports, componentName, props, jsx }
-        ) => template.ast`
-${imports}
-const ${componentName} = (${props}) => ${jsx}
-export const icon = ${componentName};
+        template: ({ imports, componentName, props, jsx }, { tpl }) => tpl`
+            ${imports}
+            const ${componentName} = (${props}) => ${jsx}
+            export const icon = ${componentName};
         `,
       },
       {

@@ -478,7 +478,7 @@ export const HeaderExample = {
       },
     },
     {
-      title: 'The Elastic navigation pattern',
+      title: 'The OpenSearch navigation pattern',
       source: [
         {
           type: GuideSectionTypes.JS,
@@ -507,7 +507,7 @@ export const HeaderExample = {
         </>
       ),
       fullScreen: {
-        slug: 'elastic-pattern',
+        slug: 'opensearch-pattern',
         demo: <HeaderElasticPattern theme={lightColors} />,
       },
     },

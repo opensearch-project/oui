@@ -10,18 +10,16 @@
  */
 
 import * as React from 'react';
-
 const OuiIconTokenNull = ({ title, titleId, ...props }) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
     width={16}
     height={16}
     viewBox="0 0 16 16"
-    xmlns="http://www.w3.org/2000/svg"
     aria-labelledby={titleId}
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
-    <path d="M5.002 12.412l-.962.962a1 1 0 01-1.414-1.414l.962-.962a5.333 5.333 0 017.41-7.41l.962-.962a1 1 0 111.414 1.414l-.962.962a5.333 5.333 0 01-7.41 7.41zm.966-.966a4 4 0 005.478-5.478l-5.478 5.478zm-1.414-1.414l5.478-5.478a4 4 0 00-5.478 5.478z" />
+    <path d="m5.002 12.412-.962.962a1 1 0 0 1-1.414-1.414l.962-.962a5.333 5.333 0 0 1 7.41-7.41l.962-.962a1 1 0 1 1 1.414 1.414l-.962.962a5.333 5.333 0 0 1-7.41 7.41Zm.966-.966a4 4 0 0 0 5.478-5.478l-5.478 5.478Zm-1.414-1.414 5.478-5.478a4 4 0 0 0-5.478 5.478Z" />
   </svg>
 );
-
 export const icon = OuiIconTokenNull;

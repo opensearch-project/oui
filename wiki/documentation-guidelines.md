@@ -130,7 +130,7 @@ There are a couple themes to keep in mind when adding snippets:
 
 ## Adding playground toggles
 
-Most documentation pages include a [playground section](https://elastic.github.io/eui/#/layout/accordion/playground) where consumers can interact with the component's props to see in real time how different configurations affect visual and functional output. Generally, the playground system will automatically generate the correct toggle type; for instance, a text input for props that accept string values, and a switch input for props that accept boolean values.
+Most documentation pages include a [playground section](https://oui.opensearch.org/#/layout/accordion/playground) where consumers can interact with the component's props to see in real time how different configurations affect visual and functional output. Generally, the playground system will automatically generate the correct toggle type; for instance, a text input for props that accept string values, and a switch input for props that accept boolean values.
 
 ### Toggles for required props
 
@@ -220,4 +220,4 @@ Any updates to the `src/` folder require an entry in the [CHANGELOG.md](../CHANG
 * Avoid documenting internal implementation changes that don't affect the public interface
 * Write your entry in the **past tense**, starting with a verb (e.g. Added... , Fixed...)
 
-[docs]: https://elastic.github.io/eui/
+[docs]: https://oui.opensearch.org
