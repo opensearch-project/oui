@@ -24,7 +24,7 @@ export default ({ button = <></> }) => (
     restrictWidth={false}
     template="empty"
     pageHeader={{
-      iconType: 'logoElastic',
+      iconType: 'logoOpenSearch',
       pageTitle: 'Page title',
       rightSideItems: [button, <OuiButton>Do something</OuiButton>],
     }}>
