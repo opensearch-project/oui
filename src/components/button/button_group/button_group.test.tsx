@@ -46,6 +46,11 @@ const SIZES: Array<OuiButtonGroupProps['buttonSize']> = [
   'compressed',
 ];
 
+const ORIENTATIONS: Array<OuiButtonGroupProps['orientation']> = [
+  'horizontal',
+  'vertical',
+];
+
 const options: OuiButtonGroupOptionProps[] = [
   {
     id: 'button00',
@@ -102,6 +107,39 @@ describe('OuiButtonGroup', () => {
   });
 
   describe('button props', () => {
+    describe('orientation', () => {
+      ORIENTATIONS.forEach((orientation) => {
+        test(`${orientation} is rendered for single`, () => {
+          const component = render(
+            <OuiButtonGroup
+              {...requiredSingleProps}
+              orientation={orientation}
+            />
+          );
+
+          expect(component).toMatchSnapshot();
+        });
+        test(`${orientation} is rendered for multi`, () => {
+          const component = render(
+            <OuiButtonGroup {...requiredMultiProps} orientation={orientation} />
+          );
+
+          expect(component).toMatchSnapshot();
+        });
+        test(`${orientation} is rendered with compressed`, () => {
+          const component = render(
+            <OuiButtonGroup
+              {...requiredSingleProps}
+              buttonSize="compressed"
+              orientation={orientation}
+            />
+          );
+
+          expect(component).toMatchSnapshot();
+        });
+      });
+    });
+
     describe('buttonSize', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered for single`, () => {
