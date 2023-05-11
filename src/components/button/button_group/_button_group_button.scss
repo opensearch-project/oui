@@ -127,8 +127,6 @@
 
   &:not(.ouiButtonGroup--vertical) {
     .ouiButtonGroupButton {
-      border: $ouiBorderThin;
-
       &:not(:first-child) {
         margin-left: -1px;
       }
