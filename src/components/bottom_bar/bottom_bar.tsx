@@ -41,7 +41,7 @@ import { OuiScreenReaderOnly } from '../accessibility';
 import { CommonProps, ExclusiveUnion } from '../common';
 import { OuiI18n } from '../i18n';
 import { useResizeObserver } from '../observer/resize_observer';
-import { OuiPortal } from '../portal';
+import { OuiPortal, OuiPortalInsert } from '../portal';
 
 type BottomBarPaddingSize = 'none' | 's' | 'm' | 'l';
 
@@ -59,26 +59,27 @@ export const POSITIONS = ['static', 'fixed', 'sticky'] as const;
 export type _BottomBarPosition = typeof POSITIONS[number];
 
 type _BottomBarExclusivePositions = ExclusiveUnion<
+  { position?: 'static' | 'sticky' },
   {
     position?: 'fixed';
     /**
-     * Whether to wrap in an OuiPortal which appends the component to the body element.
+     * Whether to wrap in OuiPortal. Can be configured using "insert" prop.
      * Only works if `position` is `fixed`.
      */
     usePortal?: boolean;
     /**
+     * Configuration for placing children in the DOM. By default, attaches children to the body element.
+     * Only works if `position` is `fixed` and `usePortal` is true.
+     */
+    insert?: OuiPortalInsert;
+    /**
      * Whether the component should apply padding on the document body element to afford for its own displacement height.
-     * Only works if `usePortal` is true and `position` is `fixed`.
+     * Only works if `position` is `fixed` and `usePortal` is true.
      */
     affordForDisplacement?: boolean;
-  },
-  {
-    /**
-     * How to position the bottom bar against its parent.
-     */
-    position: 'static' | 'sticky';
   }
 >;
+
 export type OuiBottomBarProps = CommonProps &
   HTMLAttributes<HTMLElement> &
   _BottomBarExclusivePositions & {
@@ -132,6 +133,7 @@ export const OuiBottomBar = forwardRef<
       bodyClassName,
       landmarkHeading,
       usePortal = true,
+      insert,
       left,
       right,
       bottom,
@@ -230,7 +232,7 @@ export const OuiBottomBar = forwardRef<
       </>
     );
 
-    return usePortal ? <OuiPortal>{bar}</OuiPortal> : bar;
+    return usePortal ? <OuiPortal insert={insert}>{bar}</OuiPortal> : bar;
   }
 );
 

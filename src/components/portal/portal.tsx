@@ -35,7 +35,7 @@
 
 import { Component, ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { keysOf } from '../common';
+import { ExclusiveUnion, keysOf } from '../common';
 
 interface InsertPositionsMap {
   after: InsertPosition;
@@ -52,18 +52,22 @@ export const INSERT_POSITIONS: OuiPortalInsertPosition[] = keysOf(
 );
 
 type OuiPortalInsertPosition = keyof typeof insertPositions;
+export type OuiPortalInsert = ExclusiveUnion<
+  { root?: HTMLElement },
+  { sibling: HTMLElement; position: OuiPortalInsertPosition }
+>;
 
 export interface OuiPortalProps {
   /**
    * ReactNode to render as this component's content
    */
   children: ReactNode;
-  insert?: { sibling: HTMLElement; position: OuiPortalInsertPosition };
-  portalRef?: (ref: HTMLDivElement | null) => void;
+  insert?: OuiPortalInsert;
+  portalRef?: (ref: HTMLElement | null) => void;
 }
 
 export class OuiPortal extends Component<OuiPortalProps> {
-  portalNode: HTMLDivElement;
+  portalNode: HTMLElement;
   constructor(props: OuiPortalProps) {
     super(props);
 
@@ -71,12 +75,22 @@ export class OuiPortal extends Component<OuiPortalProps> {
 
     this.portalNode = document.createElement('div');
 
+    // no insertion defined, append to body
     if (insert == null) {
-      // no insertion defined, append to body
       document.body.appendChild(this.portalNode);
-    } else {
-      // inserting before or after an element
-      const { sibling, position } = insert;
+      return;
+    }
+
+    const { root, sibling, position } = insert;
+
+    // inserting within an element
+    if (root) {
+      this.portalNode = root;
+      return;
+    }
+
+    // inserting before or after an element
+    if (sibling && position) {
       sibling.insertAdjacentElement(insertPositions[position], this.portalNode);
     }
   }
@@ -92,7 +106,7 @@ export class OuiPortal extends Component<OuiPortalProps> {
     this.updatePortalRef(null);
   }
 
-  updatePortalRef(ref: HTMLDivElement | null) {
+  updatePortalRef(ref: HTMLElement | null) {
     if (this.props.portalRef) {
       this.props.portalRef(ref);
     }

@@ -33,13 +33,49 @@ import { mount } from 'enzyme';
 import { OuiPortal } from './portal';
 
 describe('OuiPortal', () => {
-  test('is rendered', () => {
-    const component = mount(
-      <div>
-        <OuiPortal>Content</OuiPortal>
-      </div>
-    );
+  afterEach(() => {
+    document.body.innerHTML = '';
+  });
+
+  it('should render OuiPortal', () => {
+    const component = mount(<OuiPortal>Content</OuiPortal>);
 
     expect(component).toMatchSnapshot();
+  });
+
+  it('should attach Content to body', () => {
+    mount(<OuiPortal>Content</OuiPortal>);
+
+    expect(document.body.innerHTML).toEqual('<div>Content</div>');
+  });
+
+  it('should attach Content inside an element', () => {
+    const container = document.createElement('div');
+    container.setAttribute('id', 'container');
+    document.body.appendChild(container);
+    document.body.appendChild(document.createElement('div'));
+
+    mount(<OuiPortal insert={{ root: container }}>Content</OuiPortal>);
+
+    expect(document.body.innerHTML).toEqual(
+      '<div id="container">Content</div><div></div>'
+    );
+  });
+
+  it('should attach Content before an element', () => {
+    const container = document.createElement('div');
+    container.setAttribute('id', 'container');
+    document.body.appendChild(container);
+
+    mount(
+      <OuiPortal insert={{ sibling: container, position: 'before' }}>
+        Content
+      </OuiPortal>,
+      { attachTo: document.body }
+    );
+
+    expect(document.body.innerHTML).toEqual(
+      '<div>Content</div><div id="container"></div>'
+    );
   });
 });

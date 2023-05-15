@@ -56,7 +56,7 @@ import { OuiScreenReaderOnly } from '../accessibility';
 
 import { OuiPanel, PanelPaddingSize, OuiPanelProps } from '../panel';
 
-import { OuiPortal } from '../portal';
+import { OuiPortal, OuiPortalInsert } from '../portal';
 
 import { OuiMutationObserver } from '../observer/mutation_observer';
 
@@ -141,10 +141,7 @@ export interface OuiPopoverProps {
    * Passed directly to OuiPortal for DOM positioning. Both properties are
    * required if prop is specified
    */
-  insert?: {
-    sibling: HTMLElement;
-    position: 'before' | 'after';
-  };
+  insert?: OuiPortalInsert;
   /**
    * Visibility state of the popover
    */
