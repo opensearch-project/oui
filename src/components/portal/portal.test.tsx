@@ -40,13 +40,8 @@ describe('OuiPortal', () => {
   it('should render OuiPortal', () => {
     const component = mount(<OuiPortal>Content</OuiPortal>);
 
-    expect(component).toMatchSnapshot();
-  });
-
-  it('should attach Content to body', () => {
-    mount(<OuiPortal>Content</OuiPortal>);
-
     expect(document.body.innerHTML).toEqual('<div>Content</div>');
+    expect(component).toMatchSnapshot();
   });
 
   it('should attach Content inside an element', () => {

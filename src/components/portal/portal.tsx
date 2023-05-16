@@ -53,7 +53,7 @@ export const INSERT_POSITIONS: OuiPortalInsertPosition[] = keysOf(
 
 type OuiPortalInsertPosition = keyof typeof insertPositions;
 export type OuiPortalInsert = ExclusiveUnion<
-  { root?: HTMLElement },
+  { root: HTMLElement },
   { sibling: HTMLElement; position: OuiPortalInsertPosition }
 >;
 

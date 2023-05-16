@@ -94,7 +94,7 @@ describe('OuiBottomBar', () => {
 
     test('insert root prop is altered', () => {
       const component = render(
-        <OuiBottomBar insert={{ root: document.getElementById('main')! }} />
+        <OuiBottomBar insert={{ root: document.body }} />
       );
 
       expect(component).toMatchSnapshot();
@@ -102,12 +102,7 @@ describe('OuiBottomBar', () => {
 
     test('insert sibling prop is altered', () => {
       const component = render(
-        <OuiBottomBar
-          insert={{
-            sibling: document.getElementById('main')!,
-            position: 'after',
-          }}
-        />
+        <OuiBottomBar insert={{ sibling: document.body, position: 'after' }} />
       );
 
       expect(component).toMatchSnapshot();
