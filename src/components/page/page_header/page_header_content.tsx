@@ -58,10 +58,12 @@ export type OuiPageHeaderContentTitle = {
   pageTitle?: ReactNode;
   /**
    * Optional icon to place to the left of the title
+   * @deprecated The `iconType` prop is deprecated and will be removed in the future.
    */
   iconType?: IconType;
   /**
    * Additional OuiIcon props to apply to the optional icon
+   * @deprecated The `iconProps` prop is deprecated and will be removed in the future.
    */
   iconProps?: Partial<Omit<OuiIconProps, 'type'>>;
 };

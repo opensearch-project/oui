@@ -64,9 +64,6 @@ export type OuiPageHeaderProps = CommonProps &
     bottomBorder?: boolean;
   };
 
-/**
- * @deprecated The `iconType` and `iconProps` properties are deprecated and will be removed in the future.
- */
 export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
   className,
   restrictWidth = false,
