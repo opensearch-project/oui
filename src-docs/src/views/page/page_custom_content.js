@@ -26,7 +26,7 @@ export default ({ button = <></> }) => (
   <OuiPage paddingSize="l">
     <OuiPageBody>
       <OuiPageHeader
-        iconType="logoElastic"
+        iconType="logoOpenSearch"
         pageTitle="Page title"
         rightSideItems={[button, <OuiButton>Do something</OuiButton>]}
         bottomBorder
