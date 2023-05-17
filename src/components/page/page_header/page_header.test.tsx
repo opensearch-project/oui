@@ -29,8 +29,8 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
-import { requiredProps } from '../../../test/required_props';
+import { mount, render } from 'enzyme';
+import { requiredProps } from '../../../test';
 
 import { OuiPageHeader, OuiPageHeaderProps } from './page_header';
 import { ALIGN_ITEMS } from './page_header_content';
@@ -123,5 +123,29 @@ describe('OuiPageHeader', () => {
         expect(component).toMatchSnapshot();
       });
     });
+  });
+
+  it('should console deprecation warning', () => {
+    console.warn = jest.fn();
+
+    mount(
+      <OuiPageHeader iconType="dashboardApp" iconProps={{ color: 'red' }} />
+    );
+
+    expect(console.warn).toHaveBeenCalledTimes(2);
+    expect(console.warn).toHaveBeenCalledWith(
+      '[DEPRECATED] The `iconType` prop is deprecated and will be removed in v2.0.0'
+    );
+    expect(console.warn).toHaveBeenCalledWith(
+      '[DEPRECATED] The `iconProps` prop is deprecated and will be removed in v2.0.0'
+    );
+  });
+
+  it('should not console deprecation warning', () => {
+    console.warn = jest.fn();
+
+    mount(<OuiPageHeader />);
+
+    expect(console.warn).not.toHaveBeenCalled();
   });
 });

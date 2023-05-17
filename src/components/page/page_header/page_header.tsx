@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import React, { FunctionComponent, HTMLAttributes, useEffect } from 'react';
+import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../../common';
 import {
@@ -39,6 +39,7 @@ import {
   _OuiPageRestrictWidth,
   setPropsForRestrictedPageWidth,
 } from '../_restrict_width';
+import { useDeprecatedPropWarning } from '../../../utils';
 
 const paddingSizeToClassNameMap = {
   none: null,
@@ -92,13 +93,17 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
     style
   );
 
-  useEffect(() => {
-    if (iconType || iconProps) {
-      console.warn(
-        'WARNING: The `iconType` and `iconProps` properties in `OuiPageHeader` are deprecated and will be removed in the future. Please update your code accordingly.'
-      );
-    }
-  }, [iconType, iconProps]);
+  useDeprecatedPropWarning({
+    deprecatedProp: iconType,
+    deprecatedPropName: 'iconType',
+    version: '2.0.0',
+  });
+
+  useDeprecatedPropWarning({
+    deprecatedProp: iconProps,
+    deprecatedPropName: 'iconProps',
+    version: '2.0.0',
+  });
 
   const classes = classNames(
     'ouiPageHeader',
