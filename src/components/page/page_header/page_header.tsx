@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import React, { FunctionComponent, HTMLAttributes, useEffect } from 'react';
+import React, { FunctionComponent, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../../common';
 import {
@@ -78,8 +78,6 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
 
   // Page header content only props:
   pageTitle,
-  iconType,
-  iconProps,
   tabs,
   tabsProps,
   description,
@@ -91,14 +89,6 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
     restrictWidth,
     style
   );
-
-  useEffect(() => {
-    if (iconType || iconProps) {
-      console.warn(
-        'WARNING: The `iconType` and `iconProps` properties in `OuiPageHeader` are deprecated and will be removed in the future. Please update your code accordingly.'
-      );
-    }
-  }, [iconType, iconProps]);
 
   const classes = classNames(
     'ouiPageHeader',
@@ -128,8 +118,6 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
         alignItems={alignItems}
         responsive={responsive}
         pageTitle={pageTitle}
-        iconType={iconType}
-        iconProps={iconProps}
         tabs={tabs}
         tabsProps={tabsProps}
         description={description}
