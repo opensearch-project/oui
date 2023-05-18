@@ -32,7 +32,7 @@ import React from 'react';
 import { requiredProps } from '../../../test';
 import { shallow } from 'enzyme';
 import { IsFilter, IsFilterProps } from './is_filter';
-import { Query } from '../query';
+import { Query } from '../query/query';
 
 describe('IsFilter', () => {
   test('render', () => {

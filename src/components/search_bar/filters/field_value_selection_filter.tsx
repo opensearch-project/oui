@@ -37,7 +37,7 @@ import { OuiFilterButton, OuiFilterSelectItem } from '../../filter_group';
 import { OuiLoadingChart } from '../../loading';
 import { OuiSpacer } from '../../spacer';
 import { OuiIcon } from '../../icon';
-import { Query } from '../query';
+import { Query } from '../query/query';
 import { Clause, Operator, OperatorType, Value } from '../query/ast';
 
 export interface FieldValueOptionType {
