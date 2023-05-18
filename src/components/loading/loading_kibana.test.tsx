@@ -29,10 +29,10 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
-import { requiredProps } from '../../test/required_props';
-
-import { OuiLoadingKibana, SIZES } from './loading_kibana';
+import { render, mount } from 'enzyme';
+import { requiredProps } from '../../test';
+import { getDeprecatedMessage } from '../../utils';
+import { OuiLoadingKibana, SIZES, WARNING } from './loading_kibana';
 
 describe('OuiLoadingKibana', () => {
   test('is rendered', () => {
@@ -44,10 +44,19 @@ describe('OuiLoadingKibana', () => {
   describe('size', () => {
     SIZES.forEach((size) => {
       test(`${size} is rendered`, () => {
-        const component = render(<OuiLoadingKibana size={size} />);
+        const component = render(
+          <OuiLoadingKibana {...requiredProps} size={size} />
+        );
 
         expect(component).toMatchSnapshot();
       });
     });
+  });
+
+  it('should console warning about a deprecated component', () => {
+    console.warn = jest.fn();
+    mount(<OuiLoadingKibana {...requiredProps} />);
+
+    expect(console.warn).toHaveBeenCalledWith(getDeprecatedMessage(WARNING));
   });
 });
