@@ -22,7 +22,6 @@ import {
 } from '../../../../src/components/';
 import {
   propUtilityForPlayground,
-  iconValidator,
   simulateFunction,
   generateCustomProps,
   createOptionalEnum,
@@ -52,8 +51,6 @@ export const pageHeaderConfig = () => {
     ? OuiPageHeader.__docgenInfo[0]
     : OuiPageHeader.__docgenInfo;
   const propsToUse = propUtilityForPlayground(docgenInfo.props);
-
-  propsToUse.iconType = iconValidator(propsToUse.iconType);
 
   propsToUse.pageTitle = {
     ...propsToUse.pageTitle,
