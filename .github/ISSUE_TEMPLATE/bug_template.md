@@ -20,23 +20,15 @@ Steps to reproduce the behavior:
 **Expected behavior**
 A clear and concise description of what you expected to happen.
 
-**OpenSearch Version**
-Please list the version of OpenSearch being used.
-
-**Dashboards Version**
-Please list the version of OpenSearch Dashboards being used.
-
-**Plugins**
-
-Please list all plugins currently enabled.
-
 **Screenshots**
 
 If applicable, add screenshots to help explain your problem.
 
 **Host/Environment (please complete the following information):**
+ - OUI Version: [e.g. 1.0]
+ - OSD Version (if applicable): [e.g. 2.7.0]
  - OS: [e.g. iOS]
- - Browser and version [e.g. 22]
+ - Browser and version [e.g. Chrome 90]
 
 **Additional context**
 
