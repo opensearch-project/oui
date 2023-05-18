@@ -39,7 +39,7 @@ import React, {
   useState,
 } from 'react';
 import classNames from 'classnames';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 import {
   GridChildComponentProps,
   VariableSizeGrid as Grid,
@@ -629,7 +629,7 @@ export const OuiDataGridBody: FunctionComponent<OuiDataGridBodyProps> = (
   }, [getRowHeight]);
 
   const rowCountToAffordFor = pagination
-    ? pagination.pageSize
+    ? Math.min(pagination.pageSize, rowCount)
     : visibleRowIndices.length;
   const unconstrainedHeight =
     defaultHeight * rowCountToAffordFor + headerRowHeight + footerRowHeight;

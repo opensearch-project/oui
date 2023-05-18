@@ -19,7 +19,7 @@ import React, {
   useContext,
   useRef,
 } from 'react';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
   OuiDataGrid,
@@ -36,31 +36,33 @@ const DataContext = createContext();
 const raw_data = [];
 
 for (let i = 1; i < 100; i++) {
-  const email = fake('{{internet.email}}');
-  const name = fake('{{name.lastName}}, {{name.firstName}}');
-  const suffix = fake('{{name.suffix}}');
+  const email = faker.helpers.fake('{{internet.email}}');
+  const name = faker.helpers.fake('{{name.lastName}}, {{name.firstName}}');
+  const suffix = faker.helpers.fake('{{name.suffix}}');
   raw_data.push({
     name: {
       formatted: `${name} ${suffix}`,
       raw: name,
     },
     email: {
-      formatted: <OuiLink href="">{fake('{{internet.email}}')}</OuiLink>,
+      formatted: (
+        <OuiLink href="">{faker.helpers.fake('{{internet.email}}')}</OuiLink>
+      ),
       raw: email,
     },
     location: (
       <Fragment>
-        {`${fake('{{address.city}}')}, `}
+        {`${faker.helpers.fake('{{address.city}}')}, `}
         <OuiLink href="https://google.com">
-          {fake('{{address.country}}')}
+          {faker.helpers.fake('{{address.country}}')}
         </OuiLink>
       </Fragment>
     ),
-    date: fake('{{date.past}}'),
-    account: fake('{{finance.account}}'),
-    amount: fake('${{commerce.price}}'),
-    phone: fake('{{phone.phoneNumber}}'),
-    version: fake('{{system.semver}}'),
+    date: faker.helpers.fake('{{date.past}}'),
+    account: faker.helpers.fake('{{finance.account}}'),
+    amount: faker.helpers.fake('${{commerce.price}}'),
+    phone: faker.helpers.fake('{{phone.number}}'),
+    version: faker.helpers.fake('{{system.semver}}'),
   });
 }
 

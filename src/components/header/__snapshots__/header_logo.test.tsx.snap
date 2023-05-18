@@ -8,9 +8,9 @@ exports[`OuiHeaderLogo is rendered 1`] = `
   rel="noreferrer"
 >
   <span
-    aria-label="Elastic"
+    aria-label="OpenSearch"
     class="ouiHeaderLogo__icon"
-    data-ouiicon-type="logoElastic"
+    data-ouiicon-type="logoOpenSearch"
   />
 </a>
 `;
@@ -22,9 +22,9 @@ exports[`OuiHeaderLogo renders href 1`] = `
   rel="noreferrer"
 >
   <span
-    aria-label="Elastic"
+    aria-label="OpenSearch"
     class="ouiHeaderLogo__icon"
-    data-ouiicon-type="logoElastic"
+    data-ouiicon-type="logoOpenSearch"
   />
 </a>
 `;
@@ -36,9 +36,9 @@ exports[`OuiHeaderLogo renders href with rel 1`] = `
   rel="noreferrer"
 >
   <span
-    aria-label="Elastic"
+    aria-label="OpenSearch"
     class="ouiHeaderLogo__icon"
-    data-ouiicon-type="logoElastic"
+    data-ouiicon-type="logoOpenSearch"
   />
 </a>
 `;
