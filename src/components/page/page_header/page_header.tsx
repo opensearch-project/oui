@@ -94,14 +94,7 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
   );
 
   useDeprecatedPropWarning({
-    deprecatedProp: iconType,
-    deprecatedPropName: 'iconType',
-    version: '2.0.0',
-  });
-
-  useDeprecatedPropWarning({
-    deprecatedProp: iconProps,
-    deprecatedPropName: 'iconProps',
+    props: { iconType, iconProps },
     version: '2.0.0',
   });
 

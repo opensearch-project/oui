@@ -33,7 +33,6 @@ import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 import { OuiIcon } from '../icon';
 import { deprecatedComponentWarning } from '../../utils';
-import { OuiLoadingDashboards } from './loading_dashboards';
 
 const sizeToClassNameMap = {
   m: 'ouiLoadingElastic--medium',
@@ -70,6 +69,6 @@ OuiLoadingElasticComponent.displayName = 'OuiLoadingElastic';
  * @deprecated OuiLoadingElastic is deprecated in favor of OuiLoadingDashboards and will be removed in v2.0.0.
  */
 export const OuiLoadingElastic = deprecatedComponentWarning({
-  NewComponent: OuiLoadingDashboards,
+  newComponentName: 'OuiLoadingDashboards',
   version: '2.0.0',
 })(OuiLoadingElasticComponent);

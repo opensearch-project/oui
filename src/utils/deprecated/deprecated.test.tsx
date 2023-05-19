@@ -14,16 +14,16 @@ describe('deprecatedComponentWarning', () => {
   it('should console warning', () => {
     console.warn = jest.fn();
 
-    const NewComponent = () => <div id="new-component" />;
     const ExampleComponent = () => <div id="example-component" />;
     ExampleComponent.displayName = 'Example';
 
     const Example = deprecatedComponentWarning({
-      NewComponent,
+      newComponentName: 'NewComponent',
       version: '2.0.0',
     })(ExampleComponent);
 
-    mount(<Example />);
+    const component = mount(<Example />);
+    component.setProps({ name: 'new' });
 
     expect(console.warn).toHaveBeenCalledTimes(1);
     expect(console.warn).toHaveBeenCalledWith(
@@ -34,12 +34,11 @@ describe('deprecatedComponentWarning', () => {
   it('should render wrapped component', () => {
     console.warn = jest.fn();
 
-    const NewComponent = () => <div id="new-component" />;
     const ExampleComponent = () => <div id="example-component" />;
     ExampleComponent.displayName = 'Example';
 
     const Example = deprecatedComponentWarning({
-      NewComponent,
+      newComponentName: 'New Component',
       version: '2.0.0',
     })(ExampleComponent);
 
@@ -48,12 +47,11 @@ describe('deprecatedComponentWarning', () => {
   });
 
   it('should properly name DeprecatedWrapper function', () => {
-    const NewComponent = () => <div id="new-component" />;
     const ExampleComponent = () => <div id="example-component" />;
     ExampleComponent.displayName = 'Example';
 
     const Example = deprecatedComponentWarning({
-      NewComponent,
+      newComponentName: 'New Component',
       version: '2.0.0',
     })(ExampleComponent);
 
@@ -62,25 +60,44 @@ describe('deprecatedComponentWarning', () => {
 });
 
 describe('useDeprecatedPropWarning', () => {
-  const ExampleComponent = ({ name }: { name?: string }) => {
+  const ExampleComponent = ({ name, age }: { name?: string; age?: number }) => {
     useDeprecatedPropWarning({
-      deprecatedProp: name,
-      deprecatedPropName: 'name',
+      props: { name, age },
       version: '2.0.0',
     });
 
-    return <div>{name}</div>;
+    return (
+      <div>
+        {name} {age}
+      </div>
+    );
   };
 
-  it('should console warning', () => {
+  it('should console 1 warning without repetition', () => {
     console.warn = jest.fn();
 
-    mount(<ExampleComponent name="name" />);
+    const component = mount(<ExampleComponent name="name" />);
+    component.setProps({ name: 'new name' });
 
     expect(console.warn).toHaveBeenCalledTimes(1);
     expect(console.warn).toHaveBeenCalledWith(
       '[DEPRECATED] The `name` prop is deprecated and will be removed in v2.0.0'
     );
+  });
+
+  it('should console 2 warning without repetition', () => {
+    console.warn = jest.fn();
+
+    const component = mount(<ExampleComponent name="name" age={21} />);
+    component.setProps({ name: 'new name', age: 22 });
+
+    const results = [
+      '[DEPRECATED] The `name` prop is deprecated and will be removed in v2.0.0',
+      '[DEPRECATED] The `age` prop is deprecated and will be removed in v2.0.0',
+    ];
+
+    expect(console.warn).toHaveBeenCalledTimes(2);
+    results.forEach((item) => expect(console.warn).toHaveBeenCalledWith(item));
   });
 
   it('should not console warning', () => {

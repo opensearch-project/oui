@@ -3,34 +3,31 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useEffect } from 'react';
-
-interface IDeprecatedComponentWarning {
-  NewComponent: React.ComponentType<any>;
-  version: string;
-}
-
-interface IDeprecatedPropWarning {
-  deprecatedProp: any;
-  deprecatedPropName: string;
-  version: string;
-}
+import React, { useEffect, useRef } from 'react';
 
 export const getDeprecatedMessage = (message: string): string =>
   `[DEPRECATED] ${message}`;
 
+interface IDeprecatedComponentWarning {
+  newComponentName: string;
+  version?: string;
+  getMessage?: (deprecatedComponentName: string) => string;
+}
+
 export const deprecatedComponentWarning = ({
-  NewComponent,
+  newComponentName,
   version,
+  getMessage,
 }: IDeprecatedComponentWarning) => {
   return <T extends React.ComponentType<any>>(Component: T): T => {
     const deprecatedComponentName = Component.displayName || Component.name;
-    const newComponentName = NewComponent.displayName || NewComponent.name;
 
     const DeprecatedWrapper = (props: React.ComponentProps<T>) => {
       useEffect(() => {
-        const formattedMessage = `${deprecatedComponentName} is deprecated in favor of ${newComponentName} and will be removed in v${version}.`;
-        const deprecatedMessage = getDeprecatedMessage(formattedMessage);
+        const message =
+          getMessage?.(deprecatedComponentName) ||
+          `${deprecatedComponentName} is deprecated in favor of ${newComponentName} and will be removed in v${version}.`;
+        const deprecatedMessage = getDeprecatedMessage(message);
 
         console.warn(deprecatedMessage);
       }, []);
@@ -39,24 +36,32 @@ export const deprecatedComponentWarning = ({
     };
 
     Object.defineProperty(DeprecatedWrapper, 'name', {
-      value: Component.displayName || Component.name,
+      value: deprecatedComponentName,
     });
 
     return DeprecatedWrapper as T;
   };
 };
 
+interface IDeprecatedPropWarning {
+  props: Record<string, any>;
+  version: string;
+}
 export const useDeprecatedPropWarning = ({
-  deprecatedProp,
-  deprecatedPropName,
+  props,
   version,
 }: IDeprecatedPropWarning): void => {
-  useEffect(() => {
-    if (deprecatedProp !== undefined) {
-      const formattedMessage = `The \`${deprecatedPropName}\` prop is deprecated and will be removed in v${version}`;
-      const deprecatedMessage = getDeprecatedMessage(formattedMessage);
+  const warnedProps = useRef(new Set()).current;
 
-      console.warn(deprecatedMessage);
-    }
-  }, [deprecatedProp, deprecatedPropName, version]);
+  useEffect(() => {
+    Object.entries(props).forEach(([name, value]) => {
+      if (value !== undefined && !warnedProps.has(name)) {
+        const message = `The \`${name}\` prop is deprecated and will be removed in v${version}`;
+        const deprecatedMessage = getDeprecatedMessage(message);
+
+        warnedProps.add(name);
+        console.warn(deprecatedMessage);
+      }
+    });
+  }, [warnedProps, props, version]);
 };
