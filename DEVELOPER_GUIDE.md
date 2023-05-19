@@ -24,7 +24,7 @@ nvm install
 
 ### Start documentation server
 
-You can run the documentation locally at [http://localhost:8030/](http://localhost:8030/) by running the following.
+You can run the documentation locally at [http://localhost:8030/](http://localhost:8030/) by running the following. Yarn may give error about failing to install Puppeteer, but you will still be able to do everything except run a11y tests.
 
 ```
 yarn
