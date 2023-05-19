@@ -4,7 +4,6 @@ test/spec/screenshots/baseline/**/*.png
 test/spec/screenshots/diff/**/*.png
 test/spec/screenshots/screen/**/*.png
 test/failure-screenshots/**/*.png
-
 coverage/
 reports/
 tmp/
@@ -13,7 +12,6 @@ docs/
 lib/
 es/
 test-env/
-.idea
 .vscode/
 .DS_Store
 .eslintcache
@@ -21,6 +19,9 @@ test-env/
 npm-debug.log
 yarn-error.log
 .cache-loader
+/docs
+/docs-site
+/examples
 **/*.out
 
 # typescript output
