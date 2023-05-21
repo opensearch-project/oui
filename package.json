@@ -12,7 +12,7 @@
     "*.scss"
   ],
   "scripts": {
-    "start": "cross-env BABEL_MODULES=false webpack-dev-server --hot --config=src-docs/webpack.config.js",
+    "start": "cross-env BABEL_MODULES=false webpack serve --hot --config=src-docs/webpack.config.js",
     "test-docker": "node ./scripts/test-docker.js",
     "sync-docs": "node ./scripts/docs-sync.js",
     "build-docs": "cross-env BABEL_MODULES=false cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=4096 webpack --config=src-docs/webpack.config.js",
@@ -30,7 +30,7 @@
     "test-unit": "cross-env NODE_ENV=test jest --config ./scripts/jest/config.json",
     "test-a11y": "node ./scripts/a11y-testing",
     "test-staged": "yarn lint && node scripts/test-staged.js",
-    "start-test-server": "BABEL_MODULES=false NODE_ENV=puppeteer NODE_OPTIONS=--max-old-space-size=4096 webpack-dev-server --config src-docs/webpack.config.js --port 9999",
+    "start-test-server": "BABEL_MODULES=false NODE_ENV=puppeteer NODE_OPTIONS=--max-old-space-size=4096 webpack serve --config src-docs/webpack.config.js --port 9999",
     "yo-component": "yo ./generator-oui/app/component.js",
     "start-test-server-and-a11y-test": "cross-env WAIT_ON_TIMEOUT=600000 start-server-and-test start-test-server http-get://localhost:9999 test-a11y",
     "yo-doc": "yo ./generator-oui/app/documentation.js",
@@ -174,7 +174,6 @@
     "cross-env": "^7.0.3",
     "css-loader": "^4.2.2",
     "cssnano": "^6.0.1",
-    "deasync": "^0.1.20",
     "dedent": "^0.7.0",
     "dts-generator": "^3.0.0",
     "enzyme": "^3.11.0",

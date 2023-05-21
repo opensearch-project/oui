@@ -17,11 +17,10 @@ const babelConfig = require('./.babelrc.js');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 const getPort = require('get-port');
-const deasync = require('deasync');
 
-const { NODE_ENV, CI, WEBPACK_DEV_SERVER } = process.env;
+const { NODE_ENV, CI, WEBPACK_SERVE } = process.env;
 
-const isDevelopment = WEBPACK_DEV_SERVER === 'true' && CI == null;
+const isDevelopment = WEBPACK_SERVE === 'true' && CI == null;
 const isProduction = NODE_ENV === 'production';
 const isPuppeteer = NODE_ENV === 'puppeteer';
 
@@ -41,158 +40,133 @@ function employCache(loaders) {
   return loaders;
 }
 
-const webpackConfig = {
-  mode: isProduction ? 'production' : 'development',
+const webpackConfig = async () => {
+  const port = await getPort({
+    port: getPort.makeRange(8030, 8130),
+    host: '0.0.0.0',
+  });
 
-  devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
+  return {
+    mode: isProduction ? 'production' : 'development',
 
-  entry: {
-    bundle: './index.js',
-  },
+    devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
 
-  context: path.resolve(__dirname, 'src'),
-
-  output: {
-    path: path.resolve(__dirname, '../docs'),
-    filename: `[name]${isProduction ? '.min' : ''}.js`,
-  },
-
-  resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
-    fallback: {
-      fs: false,
+    entry: {
+      bundle: './index.js',
     },
-  },
 
-  resolveLoader: {
-    alias: {
-      'prop-loader': path.resolve(
-        __dirname,
-        '../scripts/loaders/prop-loader.js'
-      ),
+    context: path.resolve(__dirname, 'src'),
+
+    output: {
+      path: path.resolve(__dirname, '../docs'),
+      filename: `[name]${isProduction ? '.min' : ''}.js`,
     },
-  },
 
-  module: {
-    rules: [
-      {
-        resourceQuery: /raw/,
-        type: 'asset/source',
+    resolve: {
+      extensions: ['.ts', '.tsx', '.js', '.json'],
+      fallback: {
+        fs: false,
       },
-      {
-        test: /\.(js|tsx?)$/,
-        use: employCache([
-          {
-            loader: 'babel-loader',
-            options: { babelrc: false, ...babelConfig },
-          },
-        ]),
-        exclude: [/node_modules/, /packages(\/|\\)react-datepicker/],
+    },
+
+    resolveLoader: {
+      alias: {
+        'prop-loader': path.resolve(
+          __dirname,
+          '../scripts/loaders/prop-loader.js'
+        ),
       },
-      {
-        test: /\.scss$/,
-        use: employCache([
-          {
-            loader: 'style-loader',
-            options: { injectType: 'lazySingletonStyleTag' },
-          },
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
-        ]),
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.css$/,
-        use: employCache(['style-loader', 'css-loader']),
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.(woff|woff2|ttf|eot|ico)(\?|$)/,
-        type: 'asset/resource',
-      },
-      {
-        test: /\.(png|jp(e*)g|svg|gif)$/,
-        type: 'asset',
-        generator: {
-          filename: 'images/[contenthash]-[name].[ext]',
+    },
+
+    module: {
+      rules: [
+        {
+          resourceQuery: /raw/,
+          type: 'asset/source',
         },
-        parser: {
-          dataUrlCondition: {
-            maxSize: 8 * 1024,
+        {
+          test: /\.(js|tsx?)$/,
+          use: employCache([
+            {
+              loader: 'babel-loader',
+              options: { babelrc: false, ...babelConfig },
+            },
+          ]),
+          exclude: [/node_modules/, /packages(\/|\\)react-datepicker/],
+        },
+        {
+          test: /\.scss$/,
+          use: employCache([
+            {
+              loader: 'style-loader',
+              options: { injectType: 'lazySingletonStyleTag' },
+            },
+            'css-loader',
+            'postcss-loader',
+            'sass-loader',
+          ]),
+          exclude: /node_modules/,
+        },
+        {
+          test: /\.css$/,
+          use: employCache(['style-loader', 'css-loader']),
+          exclude: /node_modules/,
+        },
+        {
+          test: /\.(woff|woff2|ttf|eot|ico)(\?|$)/,
+          type: 'asset/resource',
+        },
+        {
+          test: /\.(png|jp(e*)g|svg|gif)$/,
+          type: 'asset',
+          generator: {
+            filename: 'images/[contenthash]-[name].[ext]',
+          },
+          parser: {
+            dataUrlCondition: {
+              maxSize: 8 * 1024,
+            },
           },
         },
-      },
+      ],
+    },
+
+    plugins: [
+      new HtmlWebpackPlugin({
+        template: 'index.html',
+        inject: 'body',
+        cache: true,
+        showErrors: true,
+      }),
+
+      new CircularDependencyPlugin({
+        exclude: /node_modules/,
+        failOnError: true,
+      }),
+
+      new NodePolyfillPlugin(),
+      // run TypeScript during webpack build
+      // new ForkTsCheckerWebpackPlugin({
+      //   typescript: { configFile: path.resolve(__dirname, '..', 'tsconfig.json') },
+      //   async: false, // makes errors more visible, but potentially less performant
+      // }),
     ],
-  },
 
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'index.html',
-      inject: 'body',
-      cache: true,
-      showErrors: true,
-    }),
-
-    new CircularDependencyPlugin({
-      exclude: /node_modules/,
-      failOnError: true,
-    }),
-
-    new NodePolyfillPlugin(),
-    // run TypeScript during webpack build
-    // new ForkTsCheckerWebpackPlugin({
-    //   typescript: { configFile: path.resolve(__dirname, '..', 'tsconfig.json') },
-    //   async: false, // makes errors more visible, but potentially less performant
-    // }),
-  ],
-
-  devServer: isDevelopment
-    ? {
-        contentBase: 'src-docs/build',
-        host: '0.0.0.0',
-        allowedHosts: ['*'],
-        port: getPortSync({
-          port: getPort.makeRange(8030, 8130),
+    devServer: isDevelopment
+      ? {
+          static: {
+            directory: path.resolve(__dirname, 'build'),
+            // prevent file watching while running on CI
+            // /app/ represents the entire docker environment
+            watch: isPuppeteer ? { ignored: '**/*' } : undefined,
+          },
           host: '0.0.0.0',
-        }),
-        disableHostCheck: true,
-        historyApiFallback: true,
-        // prevent file watching while running on CI
-        // /app/ represents the entire docker environment
-        watchOptions: isPuppeteer
-          ? {
-              ignored: '**/*',
-            }
-          : undefined,
-      }
-    : undefined,
+          port,
+          allowedHosts: 'all',
+          historyApiFallback: true,
+        }
+      : undefined,
+  };
 };
-
-// Inspired by `get-port-sync`, but propogates options
-function getPortSync(options) {
-  let isDone = false;
-  let freeport = null;
-  let error = null;
-
-  getPort(options)
-    .then((port) => {
-      isDone = true;
-      freeport = port;
-    })
-    .catch((err) => {
-      isDone = true;
-      error = err;
-    });
-
-  // wait until we're done'
-  deasync.loopWhile(() => !isDone);
-
-  if (error) {
-    throw error;
-  } else {
-    return freeport;
-  }
-}
 
 module.exports = webpackConfig;
