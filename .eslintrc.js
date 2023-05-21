@@ -108,6 +108,7 @@ module.exports = {
   plugins: ['jsx-a11y', 'prettier', 'local', 'react-hooks'],
   rules: {
     'prefer-template': 'error',
+    'import/no-unresolved': 'off',
     'local/i18n': 'error',
     'local/href-with-rel': 'error',
     'local/forward-ref': 'error',
