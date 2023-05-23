@@ -43,7 +43,6 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
     name: Build on ${{ matrix.os }}
-    needs: lint-test
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
@@ -64,24 +63,8 @@ jobs:
           npm i -g yarn@1.22.10
           yarn install --frozen-lockfile
 
-      - name: Path filter
-        uses: dorny/paths-filter@v2
-        id: filter
-        with:
-          filters: |
-            src:
-              - 'src/**'
-              - package.json
-              - yarn.lock
-            docs:
-              - 'src-docs/**'
-              - package.json
-              - yarn.lock
-
       - name: Build
-        if: steps.filter.outputs.src == 'true'
         run: yarn build
 
       - name: Build Docs
-        if: steps.filter.outputs.docs == 'true'
         run: yarn build-docs
