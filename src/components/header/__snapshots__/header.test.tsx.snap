@@ -42,20 +42,12 @@ exports[`OuiHeader sections render breadcrumbs and props 1`] = `
     aria-label="breadcrumb"
     class="ouiBreadcrumbs ouiHeaderBreadcrumbs ouiBreadcrumbs--truncate"
   >
-    <div
-      class="ouiBreadcrumbWall"
+    <span
+      aria-current="page"
+      class="ouiBreadcrumb ouiBreadcrumb--last"
     >
-      <div
-        class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first ouiBreadcrumbWrapper--last"
-      >
-        <span
-          aria-current="page"
-          class="ouiBreadcrumb ouiBreadcrumb--last"
-        >
-          Breadcrumb
-        </span>
-      </div>
-    </div>
+      Breadcrumb
+    </span>
   </nav>
 </div>
 `;
