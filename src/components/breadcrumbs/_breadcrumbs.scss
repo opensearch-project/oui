@@ -98,7 +98,8 @@
     margin-bottom: $ouiSizeXS; /* 1 */
   }
 
-  &:not(.ouiBreadcrumbWrapper--last) {
+  &:not(.ouiBreadcrumbWrapper--last),
+  &.ouiBreadcrumbWrapper--first.ouiBreadcrumbWrapper--last {
     margin-right: $ouiBreadcrumbSpacing;
   }
 }
@@ -108,6 +109,10 @@
   border-radius: $ouiSizeXS;
   overflow: hidden;
   margin-bottom: $ouiSizeXS; /* 1 */
+}
+
+.ouiBreadcrumbWall--single {
+  background-image: linear-gradient(to right, $ouiBreadcrumbBlueBackground 0 $ouiSizeM, transparent $ouiSizeM);
 }
 
 .ouiBreadcrumbWrapper--last {
