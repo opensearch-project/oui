@@ -21,7 +21,7 @@ export default ({ button = <></>, content, sideNav }) => {
       pageSideBar={sideNav}
       bottomBar={showBottomBar ? 'Bottom bar' : undefined}
       pageHeader={{
-        iconType: 'logoElastic',
+        iconType: 'logoOpenSearch',
         pageTitle: 'Page title',
         rightSideItems: [button],
         tabs: [
