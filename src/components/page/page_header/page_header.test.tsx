@@ -134,7 +134,7 @@ describe('OuiPageHeader', () => {
 
       expect(console.warn).toHaveBeenCalledTimes(1);
       expect(console.warn).toHaveBeenCalledWith(
-        '[DEPRECATED] The `iconType` prop is deprecated and will be removed in v2.0.0'
+        '[DEPRECATED] The `iconType` prop is deprecated and will be removed in v2.0.0.'
       );
     });
 
@@ -150,8 +150,8 @@ describe('OuiPageHeader', () => {
       });
 
       const results = [
-        '[DEPRECATED] The `iconType` prop is deprecated and will be removed in v2.0.0',
-        '[DEPRECATED] The `iconProps` prop is deprecated and will be removed in v2.0.0',
+        '[DEPRECATED] The `iconType` prop is deprecated and will be removed in v2.0.0.',
+        '[DEPRECATED] The `iconProps` prop is deprecated and will be removed in v2.0.0.',
       ];
 
       expect(console.warn).toHaveBeenCalledTimes(2);
