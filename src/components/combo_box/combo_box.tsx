@@ -544,6 +544,10 @@ export class OuiComboBox<T> extends Component<
   };
 
   onComboBoxFocus: FocusEventHandler<HTMLInputElement> = (event) => {
+    if (this.state.hasFocus) {
+      return;
+    }
+
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
@@ -937,6 +941,7 @@ export class OuiComboBox<T> extends Component<
       onBlur,
       onChange,
       onCreateOption,
+      onFocus,
       onSearchChange,
       options,
       placeholder,
