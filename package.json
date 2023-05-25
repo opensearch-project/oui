@@ -225,7 +225,7 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "resolve": "^1.17.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^5.0.0",
     "sass-extract": "^2.1.0",
     "sass-lint": "^1.13.1",
     "sass-lint-auto-fix": "^0.21.2",
