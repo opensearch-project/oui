@@ -56,11 +56,11 @@ const prettyHtml = cheerio.load('');
 function testIcon(props: PropsOf<OuiIcon>) {
   return () => {
     expect.assertions(1);
-    return new Promise((resolve) => {
+    return new Promise<void>((resolve) => {
       const onIconLoad = () => {
         component.update();
         expect(prettyHtml(component.html())).toMatchSnapshot();
-        resolve(null);
+        resolve();
       };
       const component = mount(<OuiIcon {...props} onIconLoad={onIconLoad} />);
     });
