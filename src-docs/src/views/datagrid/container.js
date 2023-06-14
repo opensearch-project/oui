@@ -37,16 +37,16 @@ const data = [];
 for (let i = 1; i < 20; i++) {
   data.push({
     name: faker.helpers.fake(
-      '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+      '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
     ),
     email: faker.helpers.fake('{{internet.email}}'),
     city: (
       <OuiLink href="http://google.com">
-        {faker.helpers.fake('{{address.city}}')}
+        {faker.helpers.fake('{{location.city}}')}
       </OuiLink>
     ),
-    country: faker.helpers.fake('{{address.country}}'),
-    account: faker.helpers.fake('{{finance.account}}'),
+    country: faker.helpers.fake('{{location.country}}'),
+    account: faker.helpers.fake('{{finance.accountNumber}}'),
   });
 }
 

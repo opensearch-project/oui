@@ -121,7 +121,7 @@
     "vfile": "^4.2.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.6.0",
+    "@faker-js/faker": "^8.0.1",
     "@axe-core/puppeteer": "^4.1.1",
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.11.4",

@@ -46,21 +46,21 @@ const raw_data = [];
 for (let i = 1; i < 100; i++) {
   raw_data.push({
     name: faker.helpers.fake(
-      '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+      '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
     ),
     email: (
       <OuiLink href="">{faker.helpers.fake('{{internet.email}}')}</OuiLink>
     ),
     location: (
       <Fragment>
-        {`${faker.helpers.fake('{{address.city}}')}, `}
+        {`${faker.helpers.fake('{{location.city}}')}, `}
         <OuiLink href="https://google.com">
-          {faker.helpers.fake('{{address.country}}')}
+          {faker.helpers.fake('{{location.country}}')}
         </OuiLink>
       </Fragment>
     ),
     date: faker.helpers.fake('{{date.past}}'),
-    account: faker.helpers.fake('{{finance.account}}'),
+    account: faker.helpers.fake('{{finance.accountNumber}}'),
     amount: faker.helpers.fake('${{commerce.price}}'),
     phone: faker.helpers.fake('{{phone.number}}'),
     version: faker.helpers.fake('{{system.semver}}'),
