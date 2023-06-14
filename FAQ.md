@@ -14,7 +14,7 @@ Yes, but be aware of the [license](https://github.com/opensearch-project/oui/blo
 
 We use [semver](https://semver.org/) for versioning and use that to denote breaking changes in OUI upgrades. We consider API changes in our prop names or existing component functionality to be a reason for a breaking change, but do not consider renaming of CSS selectors, mixins, or other style changes to be breaking.
 
-Traditionally releases are made weekly against whatever is in master and you can upgrade from NPM as you see fit.
+Traditionally releases are made weekly against whatever is in main and you can upgrade from NPM as you see fit.
 
 ## How do you handle Typescript, Sass and theming?
 
