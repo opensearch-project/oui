@@ -31,8 +31,7 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test';
-import { getDeprecatedMessage } from '../../utils';
-import { OuiLoadingKibana, SIZES, WARNING } from './loading_kibana';
+import { OuiLoadingKibana, SIZES } from './loading_kibana';
 
 describe('OuiLoadingKibana', () => {
   test('is rendered', () => {
@@ -53,10 +52,14 @@ describe('OuiLoadingKibana', () => {
     });
   });
 
-  it('should console warning about a deprecated component', () => {
+  it('should console deprecation warning', () => {
     console.warn = jest.fn();
+
     mount(<OuiLoadingKibana {...requiredProps} />);
 
-    expect(console.warn).toHaveBeenCalledWith(getDeprecatedMessage(WARNING));
+    expect(console.warn).toHaveBeenCalledTimes(1);
+    expect(console.warn).toHaveBeenCalledWith(
+      '[DEPRECATED] OuiLoadingKibana is deprecated in favor of OuiLoadingLogo and will be removed in v2.0.0.'
+    );
   });
 });

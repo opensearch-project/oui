@@ -6,8 +6,7 @@
 import React from 'react';
 import { render, mount } from 'enzyme';
 import { requiredProps } from '../../test';
-import { getDeprecatedMessage } from '../../utils';
-import { OuiLoadingElastic, SIZES, WARNING } from './loading_elastic';
+import { OuiLoadingElastic, SIZES } from './loading_elastic';
 
 describe('OuiLoadingElastic', () => {
   test('is rendered', () => {
@@ -28,10 +27,14 @@ describe('OuiLoadingElastic', () => {
     });
   });
 
-  it('should console warning about a deprecated component', () => {
+  it('should console deprecation warning', () => {
     console.warn = jest.fn();
+
     mount(<OuiLoadingElastic {...requiredProps} />);
 
-    expect(console.warn).toHaveBeenCalledWith(getDeprecatedMessage(WARNING));
+    expect(console.warn).toHaveBeenCalledTimes(1);
+    expect(console.warn).toHaveBeenCalledWith(
+      '[DEPRECATED] OuiLoadingElastic is deprecated in favor of OuiLoadingDashboards and will be removed in v2.0.0.'
+    );
   });
 });
