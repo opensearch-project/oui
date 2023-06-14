@@ -30,8 +30,8 @@ const data = [];
 
 for (let i = 0; i < 10; i++) {
   data.push([
-    <span>{faker.helpers.fake('{{name.firstName}}')}</span>,
-    <span>{faker.helpers.fake('{{name.firstName}}')}</span>,
+    <span>{faker.helpers.fake('{{person.firstName}}')}</span>,
+    <span>{faker.helpers.fake('{{person.firstName}}')}</span>,
 
     <span>
       <OuiLink href="#/tabular-content/data-grid-focus">

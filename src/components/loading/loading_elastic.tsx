@@ -32,7 +32,7 @@ import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 import { OuiIcon } from '../icon';
-import { deprecated } from '../../utils';
+import { deprecatedComponentWarning } from '../../utils';
 
 const sizeToClassNameMap = {
   m: 'ouiLoadingElastic--medium',
@@ -42,9 +42,6 @@ const sizeToClassNameMap = {
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
-
-export const WARNING =
-  'OuiLoadingElastic is deprecated in favor of OuiLoadingDashboards and will be removed in v2.0.0.';
 
 export interface OuiLoadingElasticProps {
   size?: keyof typeof sizeToClassNameMap;
@@ -66,9 +63,12 @@ const OuiLoadingElasticComponent: FunctionComponent<
   );
 };
 
+OuiLoadingElasticComponent.displayName = 'OuiLoadingElastic';
+
 /**
  * @deprecated OuiLoadingElastic is deprecated in favor of OuiLoadingDashboards and will be removed in v2.0.0.
  */
-export const OuiLoadingElastic = deprecated(WARNING)(
-  OuiLoadingElasticComponent
-);
+export const OuiLoadingElastic = deprecatedComponentWarning({
+  newComponentName: 'OuiLoadingDashboards',
+  version: '2.0.0',
+})(OuiLoadingElasticComponent);

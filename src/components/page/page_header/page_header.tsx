@@ -39,6 +39,7 @@ import {
   _OuiPageRestrictWidth,
   setPropsForRestrictedPageWidth,
 } from '../_restrict_width';
+import { useDeprecatedPropWarning } from '../../../utils';
 
 const paddingSizeToClassNameMap = {
   none: null,
