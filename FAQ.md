@@ -8,7 +8,7 @@ The OpenSearch UI Framework (OUI) is a design library used by the OpenSearch Pro
 
 ## Can I use OUI?
 
-Yes, but be aware of the [license](LICENSE) as always. The roadmap and priorities are directed by usage within the OpenSearch project.
+Yes, but be aware of the [license](https://github.com/opensearch-project/oui/blob/main/LICENSE.txt) as always. The roadmap and priorities are directed by usage within the OpenSearch project.
 
 ## What is the versioning, releases and upgrade strategy?
 
