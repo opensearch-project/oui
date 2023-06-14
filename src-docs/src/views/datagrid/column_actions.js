@@ -68,16 +68,16 @@ for (let i = 1; i < 5; i++) {
     avatar: (
       <OuiAvatar
         size="s"
-        name={faker.helpers.fake('{{name.lastName}}, {{name.firstName}}')}
+        name={faker.helpers.fake('{{person.lastName}}, {{person.firstName}}')}
       />
     ),
     name: faker.helpers.fake(
-      '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+      '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
     ),
     email: faker.helpers.fake('{{internet.email}}'),
-    city: faker.helpers.fake('{{address.city}}'),
-    country: faker.helpers.fake('{{address.country}}'),
-    account: faker.helpers.fake('{{finance.account}}'),
+    city: faker.helpers.fake('{{location.city}}'),
+    country: faker.helpers.fake('{{location.country}}'),
+    account: faker.helpers.fake('{{finance.accountNumber}}'),
   });
 }
 
