@@ -76,11 +76,13 @@ $ouiTitles: (
     'font-size': $ouiFontSizeXS,
     'line-height': lineHeightFromBaseline(3),
     'font-weight': $ouiFontWeightBold,
+    'letter-spacing': -.005em,
   ),
   'xxs': (
     'font-size': $ouiFontSizeS,
     'line-height': lineHeightFromBaseline(3),
     'font-weight': $ouiFontWeightBold,
+    'letter-spacing': -.005em,
   ),
   'xs': (
     'font-size': $ouiFontSize,
