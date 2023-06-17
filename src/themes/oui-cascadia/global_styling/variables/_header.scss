@@ -9,17 +9,25 @@
  * GitHub history for details.
  */
 
-// Curated border color to fade into the shadow without looking too much like a border
-// It adds separation between the header and flyout
-$ouiHeaderBorderColor: lightOrDarkTheme(shade($ouiBorderColor, 3%), shade($ouiColorEmptyShade, 35%));
+// Themeable colors
+$ouiHeaderBackgroundColor: $ouiColorEmptyShade !default;
+$ouiHeaderDarkBackgroundColor: lightOrDarkTheme(shade($ouiColorDarkestShade, 28%), shade($ouiColorLightestShade, 50%)) !default;
+$ouiHeaderBorderColor: $ouiBorderColor !default;
+$ouiHeaderBreadcrumbColor: $ouiColorDarkestShade !default;
 
-$ouiHeaderHeight: $ouiSizeXXL + $ouiSizeS;
-$ouiHeaderChildSize: $ouiSizeXXL;
-$ouiHeaderHeightCompensation: $ouiHeaderHeight;
+// Layout vars
+$ouiHeaderHeight: $ouiSizeXXL + $ouiSizeS !default;
+$ouiHeaderChildSize: $ouiHeaderHeight !default;
+
+// Use the following variable in other components to afford for the fixed header
+$ouiHeaderHeightCompensation: $ouiHeaderHeight + 1px !default;
 
 
 /* OUI -> EUI Aliases */
+$euiHeaderBackgroundColor: $ouiHeaderBackgroundColor;
+$euiHeaderDarkBackgroundColor: $ouiHeaderDarkBackgroundColor;
 $euiHeaderBorderColor: $ouiHeaderBorderColor;
+$euiHeaderBreadcrumbColor: $ouiHeaderBreadcrumbColor;
 $euiHeaderHeight: $ouiHeaderHeight;
 $euiHeaderChildSize: $ouiHeaderChildSize;
 $euiHeaderHeightCompensation: $ouiHeaderHeightCompensation;

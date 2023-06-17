@@ -1,0 +1,68 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Z-Index
+
+// Remember that z-index is relative to parent and based on the stacking context.
+// z-indexes only compete against other z-indexes when they exist as children of
+// that shared parent.
+
+// That means a popover with a settings of 2, will still show above a modal
+// with a setting of 100, if it is within that modal and not besides it.
+
+// Generally that means it's a good idea to consider things added to this file
+// as competitive only as siblings.
+
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
+
+$ouiZLevel0: 0;
+$ouiZLevel1: 1000;
+$ouiZLevel2: 2000;
+$ouiZLevel3: 3000;
+$ouiZLevel4: 4000;
+$ouiZLevel5: 5000;
+$ouiZLevel6: 6000;
+$ouiZLevel7: 7000;
+$ouiZLevel8: 8000;
+$ouiZLevel9: 9000;
+
+$ouiZToastList: $ouiZLevel9;
+$ouiZModal: $ouiZLevel8;
+$ouiZMask: $ouiZLevel6;
+$ouiZNavigation: $ouiZLevel6;
+$ouiZContentMenu: $ouiZLevel2;
+$ouiZHeader: $ouiZLevel1;
+$ouiZFlyout: $ouiZHeader;
+$ouiZMaskBelowHeader: $ouiZHeader;
+$ouiZContent: $ouiZLevel0;
+
+
+/* OUI -> EUI Aliases */
+$euiZLevel0: $ouiZLevel0;
+$euiZLevel1: $ouiZLevel1;
+$euiZLevel2: $ouiZLevel2;
+$euiZLevel3: $ouiZLevel3;
+$euiZLevel4: $ouiZLevel4;
+$euiZLevel5: $ouiZLevel5;
+$euiZLevel6: $ouiZLevel6;
+$euiZLevel7: $ouiZLevel7;
+$euiZLevel8: $ouiZLevel8;
+$euiZLevel9: $ouiZLevel9;
+$euiZToastList: $ouiZToastList;
+$euiZModal: $ouiZModal;
+$euiZMask: $ouiZMask;
+$euiZNavigation: $ouiZNavigation;
+$euiZContentMenu: $ouiZContentMenu;
+$euiZHeader: $ouiZHeader;
+$euiZFlyout: $ouiZFlyout;
+$euiZMaskBelowHeader: $ouiZMaskBelowHeader;
+$euiZContent: $ouiZContent;
+/* End of Aliases */

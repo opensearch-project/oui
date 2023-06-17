@@ -9,7 +9,8 @@
  * GitHub history for details.
  */
 
-// Import base theme first, then override
-@import '../../../../global_styling/functions/index';
+// Math needs to be first in the load order
+@import 'math';
 
-@import './shadows';
+// Using math, we have functions to manipulate contrast / luminosity for accessibility
+@import 'colors';
