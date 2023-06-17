@@ -52,7 +52,7 @@ $ouiColorWarningText: makeHighContrastColor($ouiColorWarning);
 $ouiColorDangerText: makeHighContrastColor($ouiColorDanger);
 $ouiColorDisabledText: makeDisabledContrastColor($ouiColorDisabled);
 $ouiColorSuccessText: $ouiColorSecondaryText;
-$ouiLinkColor: #1BA9F5;
+$ouiLinkColor: $ouiColorPrimaryText;
 
 // Charts
 $ouiColorChartLines: $ouiColorLightShade;
