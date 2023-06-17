@@ -13,11 +13,11 @@
 @import '../functions/index';
 
 // These colors stay the same no matter the theme
-$ouiColorGhost: #FFF !default;
-$ouiColorInk: #000 !default;
+$ouiColorGhost: #FCFEFF !default;
+$ouiColorInk: #0A121A !default;
 
 // Core
-$ouiColorPrimary: #006BB4 !default;
+$ouiColorPrimary: #159D8D !default;
 $ouiColorSecondary: #017D73 !default;
 $ouiColorAccent: #DD0A73 !default;
 
@@ -27,16 +27,16 @@ $ouiColorWarning: #F5A700 !default;
 $ouiColorDanger: #BD271E !default;
 
 // Grays
-$ouiColorEmptyShade: #FFF !default;
-$ouiColorLightestShade: #F5F7FA !default;
-$ouiColorLightShade: #D3DAE6 !default;
-$ouiColorMediumShade: #98A2B3 !default;
-$ouiColorDarkShade: #69707D !default;
-$ouiColorDarkestShade: #343741 !default;
-$ouiColorFullShade: #000 !default;
+$ouiColorEmptyShade: #FCFEFF !default;
+$ouiColorLightestShade: #E3E5E8 !default;
+$ouiColorLightShade: #D6D9DD !default;
+$ouiColorMediumShade: #ADB4BA !default;
+$ouiColorDarkShade: #5A6875 !default;
+$ouiColorDarkestShade: #2A3947 !default;
+$ouiColorFullShade: #0A1219 !default;
 
 // Backgrounds
-$ouiPageBackgroundColor: tint($ouiColorLightestShade, 50%) !default;
+$ouiPageBackgroundColor: #F0F2F4 !default;
 $ouiColorHighlight: #FFFCDD !default;
 
 // Every color below must be based mathematically on the set above and in a particular order.
@@ -53,7 +53,7 @@ $ouiColorWarningText: makeHighContrastColor($ouiColorWarning) !default;
 $ouiColorDangerText: makeHighContrastColor($ouiColorDanger) !default;
 $ouiColorDisabledText: makeDisabledContrastColor($ouiColorDisabled) !default;
 $ouiColorSuccessText: $ouiColorSecondaryText !default;
-$ouiLinkColor: $ouiColorPrimaryText !default;
+$ouiLinkColor: #006BB4 !default;
 
 // Visualization colors
 
