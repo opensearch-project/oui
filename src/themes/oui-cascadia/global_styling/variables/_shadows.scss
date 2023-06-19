@@ -9,8 +9,10 @@
  * GitHub history for details.
  */
 
-$ouiShadowColor: $ouiColorInk;
-$ouiShadowColorLarge: $ouiColorInk;
+// Shadows
+// Transparency only affects the use of variable this outside of the shadow mixins (borders)
+$ouiShadowColor: $ouiColorMediumShade !default;
+$ouiShadowColorLarge: shade(saturate($ouiColorMediumShade, 25%), 50%) !default;
 
 
 /* OUI -> EUI Aliases */

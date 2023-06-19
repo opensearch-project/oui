@@ -9,13 +9,28 @@
  * GitHub history for details.
  */
 
-@mixin ouiPopoverTitle($size: null) {
-  @include ouiTitle('xxs');
+@mixin ouiPopoverTitle($size: 'm') {
+  @if ($size == 's') {
+    @include ouiTitle('xxxs');
+  } @else if ($size == 'm') {
+    @include ouiTitle('xxs');
+  } @else {
+    @warn 'ouiPopoverTitle only accepts "s" or "m" sizes';
+  }
+
   padding: $ouiSizeM;
+  text-transform: uppercase;
   border-bottom: $ouiBorderThin;
+}
+
+@mixin ouiPopoverFooter {
+  @include ouiFontSizeS;
+  padding: $ouiSizeM;
+  border-top: $ouiBorderThin;
 }
 
 
 /* OUI -> EUI Aliases */
-@mixin euiPopoverTitle($size: null) { @include ouiPopoverTitle($size); }
+@mixin euiPopoverTitle($size: 'm') { @include ouiPopoverTitle($size); }
+@mixin euiPopoverFooter { @include ouiPopoverFooter; }
 /* End of Aliases */

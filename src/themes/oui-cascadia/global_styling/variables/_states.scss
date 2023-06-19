@@ -9,21 +9,27 @@
  * GitHub history for details.
  */
 
-// Color when not using currentColor
-$ouiFocusRingColor: $ouiColorPrimaryText;
+// Colors
+$ouiFocusRingColor: rgba($ouiColorPrimary, .3) !default;
+$ouiFocusRingAnimStartColor: rgba($ouiColorPrimary, 0) !default;
+$ouiFocusRingAnimStartSize: 6px !default;
+$ouiFocusRingAnimStartSizeLarge: 10px !default;
 
 // Sizing
-$ouiFocusRingAnimStartSize: 2px;
-$ouiFocusRingSize: 2px;
+$ouiFocusRingSizeLarge: $ouiSizeXS !default;
+$ouiFocusRingSize: $ouiFocusRingSizeLarge * .75 !default;
 
 // Transparency
-$ouiFocusTransparency: lightOrDarkTheme(.9, .7);
-$ouiFocusBackgroundColor: transparentize($ouiColorPrimary, $ouiFocusTransparency);
+$ouiFocusTransparency: lightOrDarkTheme(.1, .3) !default;
+$ouiFocusBackgroundColor: tintOrShade($ouiColorPrimary, ((1 - $ouiFocusTransparency) * 100%), ((1 - $ouiFocusTransparency) * 100%)) !default;
 
 
 /* OUI -> EUI Aliases */
 $euiFocusRingColor: $ouiFocusRingColor;
+$euiFocusRingAnimStartColor: $ouiFocusRingAnimStartColor;
 $euiFocusRingAnimStartSize: $ouiFocusRingAnimStartSize;
+$euiFocusRingAnimStartSizeLarge: $ouiFocusRingAnimStartSizeLarge;
+$euiFocusRingSizeLarge: $ouiFocusRingSizeLarge;
 $euiFocusRingSize: $ouiFocusRingSize;
 $euiFocusTransparency: $ouiFocusTransparency;
 $euiFocusBackgroundColor: $ouiFocusBackgroundColor;

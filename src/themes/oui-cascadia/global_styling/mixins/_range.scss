@@ -12,13 +12,10 @@
 // Prefixes are unique in this file
 // sass-lint:disable no-vendor-prefixes
 
-@mixin ouiRangeTrackSize($compressed: false) {
+@mixin ouiRangeTrackSize {
   height: $ouiRangeTrackHeight;
+  transition: all $ouiAnimSpeedNormal ease-in;
   width: $ouiRangeTrackWidth;
-
-  @if ($compressed) {
-    height: $ouiRangeTrackCompressedHeight;
-  }
 }
 
 @mixin ouiRangeTrackPerBrowser {
@@ -28,30 +25,12 @@
   &::-ms-fill-upper { @content; }
 }
 
-@mixin ouiRangeThumbBorder {
-  border: 2px solid $ouiRangeThumbBorderColor;
-}
-
-@mixin ouiRangeThumbBoxShadow {
-  // sass-lint:disable-block no-color-literals
-  box-shadow: 0 0 0 1px $ouiRangeThumbBorderColor,
-  0 2px 2px -1px rgba($ouiShadowColor, .2),
-  0 1px 5px -2px rgba($ouiShadowColor, .2);
-}
-
-@mixin ouiRangeThumbFocusBoxShadow {
-  box-shadow: 0 0 0 2px $ouiFocusRingColor;
-}
-
 @mixin ouiRangeThumbStyle {
-  @include ouiRangeThumbBoxShadow;
-  @include ouiRangeThumbBorder;
   cursor: pointer;
-  background-color: $ouiRangeThumbBackgroundColor;
+  border-color: $ouiRangeThumbBorderColor;
   padding: 0;
   height: $ouiRangeThumbHeight;
   width: $ouiRangeThumbWidth;
-  box-sizing: border-box;  // required for firefox or the border makes the width and height to increase
 }
 
 @mixin ouiRangeThumbPerBrowser {
@@ -61,28 +40,17 @@
 }
 
 
-@mixin ouiRangeThumbFocus {
-  @include ouiRangeThumbBorder;
-  @include ouiRangeThumbFocusBoxShadow;
-  background-color: $ouiColorPrimary;
-}
-
-
 /* OUI -> EUI Aliases */
-@mixin euiRangeTrackSize($compressed: false) { @include ouiRangeTrackSize($compressed); }
+@mixin euiRangeTrackSize { @include ouiRangeTrackSize; }
 @mixin euiRangeTrackPerBrowser {
   @include ouiRangeTrackPerBrowser {
     @content;
   }
 }
-@mixin euiRangeThumbBorder { @include ouiRangeThumbBorder; }
-@mixin euiRangeThumbBoxShadow { @include ouiRangeThumbBoxShadow; }
-@mixin euiRangeThumbFocusBoxShadow { @include ouiRangeThumbFocusBoxShadow; }
 @mixin euiRangeThumbStyle { @include ouiRangeThumbStyle; }
 @mixin euiRangeThumbPerBrowser {
   @include ouiRangeThumbPerBrowser {
     @content;
   }
 }
-@mixin euiRangeThumbFocus { @include ouiRangeThumbFocus; }
 /* End of Aliases */

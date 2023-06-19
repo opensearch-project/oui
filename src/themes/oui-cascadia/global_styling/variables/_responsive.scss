@@ -9,11 +9,18 @@
  * GitHub history for details.
  */
 
-$ouiPageDefaultMaxWidth: 1000px !default;
-$ouiPageSidebarMinWidth: $ouiSizeL * 8 !default;
+$ouiBreakpoints: (
+  'xs': 0,
+  's':  575px,
+  'm':  768px,
+  'l':  992px,
+  'xl': 1200px
+) !default;
+
+$ouiBreakpointKeys: map-keys($ouiBreakpoints);
 
 
 /* OUI -> EUI Aliases */
-$euiPageDefaultMaxWidth: $ouiPageDefaultMaxWidth;
-$euiPageSidebarMinWidth: $ouiPageSidebarMinWidth;
+$euiBreakpoints: $ouiBreakpoints;
+$euiBreakpointKeys: $ouiBreakpointKeys;
 /* End of Aliases */

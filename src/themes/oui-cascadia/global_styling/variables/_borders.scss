@@ -9,11 +9,26 @@
  * GitHub history for details.
  */
 
-$ouiBorderRadius: $ouiSizeS * .75;
-$ouiBorderRadiusSmall: $ouiSizeS * .5;
+// Borders
+
+$ouiBorderWidthThin: 1px !default;
+$ouiBorderWidthThick: 2px !default;
+
+$ouiBorderColor: $ouiColorLightShade !default;
+$ouiBorderRadius: 4px !default;
+$ouiBorderRadiusSmall: $ouiBorderRadius / 2 !default;
+$ouiBorderThick: $ouiBorderWidthThick solid $ouiBorderColor !default;
+$ouiBorderThin: $ouiBorderWidthThin solid $ouiBorderColor !default;
+$ouiBorderEditable: $ouiBorderWidthThick dotted $ouiBorderColor !default;
 
 
 /* OUI -> EUI Aliases */
+$euiBorderWidthThin: $ouiBorderWidthThin;
+$euiBorderWidthThick: $ouiBorderWidthThick;
+$euiBorderColor: $ouiBorderColor;
 $euiBorderRadius: $ouiBorderRadius;
 $euiBorderRadiusSmall: $ouiBorderRadiusSmall;
+$euiBorderThick: $ouiBorderThick;
+$euiBorderThin: $ouiBorderThin;
+$euiBorderEditable: $ouiBorderEditable;
 /* End of Aliases */
