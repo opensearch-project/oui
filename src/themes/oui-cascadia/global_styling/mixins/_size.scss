@@ -9,11 +9,7 @@
  * GitHub history for details.
  */
 
-$ouiPageDefaultMaxWidth: 1000px !default;
-$ouiPageSidebarMinWidth: $ouiSizeL * 8 !default;
-
-
-/* OUI -> EUI Aliases */
-$euiPageDefaultMaxWidth: $ouiPageDefaultMaxWidth;
-$euiPageSidebarMinWidth: $ouiPageSidebarMinWidth;
-/* End of Aliases */
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
