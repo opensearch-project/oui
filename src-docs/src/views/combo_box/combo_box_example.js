@@ -218,6 +218,28 @@ const clearOnBlurSnippet = `<OuiComboBox
   clearOnBlur={true}
 />`;
 
+import ComboBoxDefaultIcon from './combo_box_default_icon';
+const comboBoxDefaultIconSource = require('!!raw-loader!./combo_box_default_icon');
+const comboBoxDefaultIconSourceOptionsHtml = renderToHtml(ComboBoxDefaultIcon);
+const comboBoxDefaultIconSnippet = `<OuiComboBox
+  placeholder="Select one or more options"
+  options={options}
+  onChange={onChange}
+  onSearchChange={onSearchChange}
+  icon={true}
+/>`;
+
+import ComboBoxCustomIcon from './combo_box_custom_icon';
+const comboBoxCustomIconSource = require('!!raw-loader!./combo_box_custom_icon');
+const comboBoxCustomIconSourceOptionsHtml = renderToHtml(ComboBoxCustomIcon);
+const comboBoxCustomIconSnippet = `<OuiComboBox
+  placeholder="Select one or more options"
+  options={options}
+  onChange={onChange}
+  onSearchChange={onSearchChange}
+  icon="menu"
+/>`;
+
 export const ComboBoxExample = {
   title: 'Combo box',
   intro: (
@@ -633,6 +655,50 @@ export const ComboBoxExample = {
       props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: clearOnBlurSnippet,
       demo: <ClearOnBlur />,
+    },
+    {
+      title: 'Combox box default icon',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: comboBoxDefaultIconSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: comboBoxDefaultIconSourceOptionsHtml,
+        },
+      ],
+      text: (
+        <p>
+          Set the prop <OuiCode>icon</OuiCode> to make the combo box input text
+          appear with a default search icon.
+        </p>
+      ),
+      props: { OuiComboBox, OuiComboBoxOptionOption },
+      snippet: comboBoxDefaultIconSnippet,
+      demo: <ComboBoxDefaultIcon />,
+    },
+    {
+      title: 'Combox box custom icon',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: comboBoxCustomIconSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: comboBoxCustomIconSourceOptionsHtml,
+        },
+      ],
+      text: (
+        <p>
+          Set the prop <OuiCode>icon</OuiCode> with a valid IconType to make the
+          combo box input text appear with an given icon type.
+        </p>
+      ),
+      props: { OuiComboBox, OuiComboBoxOptionOption },
+      snippet: comboBoxCustomIconSnippet,
+      demo: <ComboBoxCustomIcon />,
     },
   ],
 };
