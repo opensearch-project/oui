@@ -41,7 +41,7 @@ time, mark, audio, video {
 }
 
 code, pre, kbd, samp {
-  font-family: $ouiCodeFontFamily;
+  font-family: var(--oui-code-font-family);
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 input, textarea, select, button {
-  font-family: $ouiFontFamily;
+  font-family: var(--oui-font-family);
 }
 
 em {
