@@ -81,27 +81,6 @@ const buttonIconSnippet = [
 />`,
 ];
 
-import SplitButton from './split_button';
-const splitButtonSource = require('!!raw-loader!./split_button');
-const splitButtonHtml = renderToHtml(SplitButton);
-const splitButtonSnippet = [
-  `<OuiFlexGroup responsive={false} gutterSize="s" alignItems="center">
-  <OuiFlexItem grow={false}>
-    <OuiButton size="s">
-      Primary action
-    </OuiButton>
-  </OuiFlexItem>
-  <OuiFlexItem grow={false}>
-    <OuiButtonIcon
-      display="base"
-      size="s"
-      iconType="boxesVertical"
-      aria-label="More"
-    />
-  </OuiFlexItem>
-</OuiFlexGroup>`,
-];
-
 import ButtonGhost from './button_ghost';
 const buttonGhostSource = require('!!raw-loader!./button_ghost');
 const buttonGhostHtml = renderToHtml(ButtonGhost);
@@ -378,33 +357,6 @@ export const ButtonExample = {
       props: { OuiButtonIcon },
       snippet: buttonIconSnippet,
       demo: <ButtonIcon />,
-    },
-    {
-      title: 'Split buttons',
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: splitButtonSource,
-        },
-        {
-          type: GuideSectionTypes.HTML,
-          code: splitButtonHtml,
-        },
-      ],
-      text: (
-        <>
-          <p>
-            OUI does not support split buttons specifically. Instead, we
-            recommend using separate buttons for the main and overflow actions.
-            You can achieve this by simply using the <OuiCode>display</OuiCode>{' '}
-            and <OuiCode>size</OuiCode> props <strong>OuiButtonIcon</strong> to
-            match that of the primary action button.
-          </p>
-        </>
-      ),
-      props: { OuiButton, OuiButtonIcon },
-      snippet: splitButtonSnippet,
-      demo: <SplitButton />,
     },
     {
       title: 'Toggle buttons',
