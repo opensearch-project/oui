@@ -39,6 +39,7 @@ const comboBoxSnippet = `<OuiComboBox
   onChange={onChange}
   onCreateOption={onCreateOption}
   isClearable={true}
+  clearOnBlur={true}
 />`;
 
 import Containers from './containers';
@@ -181,6 +182,19 @@ const delimiterSnippet = `<OuiComboBox
   isClearable={true}
 />`;
 
+import WithIcon from './combo_box_icon';
+const withIconSource = require('!!raw-loader!./combo_box_icon');
+const withIconHtml = renderToHtml(WithIcon);
+const withIconSnippet = `<OuiComboBox
+  placeholder="Select or create options"
+  options={options}
+  icon={true}
+  selectedOptions={selectedOptions}
+  onChange={onChange}
+  onCreateOption={onCreateOption}
+  isClearable={true}
+/>`;
+
 import StartingWith from './startingWith';
 const startingWithSource = require('!!raw-loader!./startingWith');
 const startingWithHtml = renderToHtml(StartingWith);
@@ -205,6 +219,38 @@ const duplicateOptionsSnippet = `const options = [{
   label: 'Label',
   key: 'Label2',
 }]`;
+
+import ClearOnBlur from './clear_on_blur';
+const clearOnBlurSource = require('!!raw-loader!./clear_on_blur');
+const clearOnBlurSourceOptionsHtml = renderToHtml(ClearOnBlur);
+const clearOnBlurSnippet = `<OuiComboBox
+  placeholder="Select one or more options"
+  options={options}
+  onChange={onChange}
+  clearOnBlur={true}
+/>`;
+
+import ComboBoxDefaultIcon from './combo_box_default_icon';
+const comboBoxDefaultIconSource = require('!!raw-loader!./combo_box_default_icon');
+const comboBoxDefaultIconSourceOptionsHtml = renderToHtml(ComboBoxDefaultIcon);
+const comboBoxDefaultIconSnippet = `<OuiComboBox
+  placeholder="Select one or more options"
+  options={options}
+  onChange={onChange}
+  onSearchChange={onSearchChange}
+  icon={true}
+/>`;
+
+import ComboBoxCustomIcon from './combo_box_custom_icon';
+const comboBoxCustomIconSource = require('!!raw-loader!./combo_box_custom_icon');
+const comboBoxCustomIconSourceOptionsHtml = renderToHtml(ComboBoxCustomIcon);
+const comboBoxCustomIconSnippet = `<OuiComboBox
+  placeholder="Select one or more options"
+  options={options}
+  onChange={onChange}
+  onSearchChange={onSearchChange}
+  icon="menu"
+/>`;
 
 export const ComboBoxExample = {
   title: 'Combo box',
@@ -552,6 +598,29 @@ export const ComboBoxExample = {
       demo: <Delimiter />,
     },
     {
+      title: 'With icon',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: withIconSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: withIconHtml,
+        },
+      ],
+      text: (
+        <p>
+          Pass an <OuiCode>IconType</OuiCode> string to show the icon in the
+          combo box, or set it to <OuiCode>true</OuiCode> to show the search
+          icon.
+        </p>
+      ),
+      props: { OuiComboBox, OuiComboBoxOptionOption },
+      snippet: withIconSnippet,
+      demo: <WithIcon />,
+    },
+    {
       title: 'Sorting matches',
       source: [
         {
@@ -599,6 +668,72 @@ export const ComboBoxExample = {
       props: { OuiComboBox, OuiComboBoxOptionOption },
       demo: <DuplicateOptions />,
       snippet: duplicateOptionsSnippet,
+    },
+    {
+      title: 'Clear on blur',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: clearOnBlurSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: clearOnBlurSourceOptionsHtml,
+        },
+      ],
+      text: (
+        <p>
+          Set the prop <OuiCode>clearOnBlur</OuiCode> to make the combo box
+          input text clear when user focuses out of text box.
+        </p>
+      ),
+      props: { OuiComboBox, OuiComboBoxOptionOption },
+      snippet: clearOnBlurSnippet,
+      demo: <ClearOnBlur />,
+    },
+    {
+      title: 'Combox box default icon',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: comboBoxDefaultIconSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: comboBoxDefaultIconSourceOptionsHtml,
+        },
+      ],
+      text: (
+        <p>
+          Set the prop <OuiCode>icon</OuiCode> to make the combo box input text
+          appear with a default search icon.
+        </p>
+      ),
+      props: { OuiComboBox, OuiComboBoxOptionOption },
+      snippet: comboBoxDefaultIconSnippet,
+      demo: <ComboBoxDefaultIcon />,
+    },
+    {
+      title: 'Combox box custom icon',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: comboBoxCustomIconSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: comboBoxCustomIconSourceOptionsHtml,
+        },
+      ],
+      text: (
+        <p>
+          Set the prop <OuiCode>icon</OuiCode> with a valid IconType to make the
+          combo box input text appear with an given icon type.
+        </p>
+      ),
+      props: { OuiComboBox, OuiComboBoxOptionOption },
+      snippet: comboBoxCustomIconSnippet,
+      demo: <ComboBoxCustomIcon />,
     },
   ],
 };

@@ -23,5 +23,8 @@
 // Utility classes provide one-off selectors for common css problems
 @import 'utility/index';
 
+// CSS variables of SCSS variables
+@import 'css_variables/index';
+
 // The reset file makes use of variables and mixins
 @import 'reset/index';

@@ -27,17 +27,11 @@ import {
 export default () => {
   const renderLogo = (
     <OuiHeaderLogo
-      iconType="logoElastic"
+      iconType="logoOpenSearch"
       href="#"
       onClick={(e) => e.preventDefault()}
-      aria-label="Go to home page"
+      aria-label="Navigate to home page"
     />
-  );
-
-  const renderSpaces = (
-    <OuiHeaderSectionItemButton aria-label="Spaces menu">
-      <OuiAvatar type="space" name="Sales Team" size="s" />
-    </OuiHeaderSectionItemButton>
   );
 
   const breadcrumbs = [
@@ -67,22 +61,22 @@ export default () => {
   );
   const renderUser = (
     <OuiHeaderSectionItemButton disabled aria-label="Account menu">
-      <OuiAvatar isDisabled name="John Username" size="s" />
+      <OuiAvatar isDisabled name="A. User" size="s" />
     </OuiHeaderSectionItemButton>
   );
 
   const renderApps = (
     <OuiHeaderSectionItemButton
       disabled
-      aria-label="Apps menu with 1 new app"
-      notification="1">
+      aria-label="Apps menu with 3 new apps"
+      notification="3">
       <OuiIcon type="apps" size="m" />
     </OuiHeaderSectionItemButton>
   );
 
   const sections = [
     {
-      items: [renderLogo, renderSpaces],
+      items: [renderLogo],
       borders: 'right',
       breadcrumbs: breadcrumbs,
       breadcrumbProps: {

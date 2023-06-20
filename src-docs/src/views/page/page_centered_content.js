@@ -29,7 +29,6 @@ export default ({ button = <></>, content, sideNav }) => (
     <OuiPageBody panelled>
       <OuiPageHeader
         restrictWidth
-        iconType="logoElastic"
         pageTitle="Page title"
         rightSideItems={[button]}
       />

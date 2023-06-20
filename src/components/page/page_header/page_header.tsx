@@ -78,8 +78,6 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
 
   // Page header content only props:
   pageTitle,
-  iconType,
-  iconProps,
   tabs,
   tabsProps,
   description,
@@ -120,8 +118,6 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
         alignItems={alignItems}
         responsive={responsive}
         pageTitle={pageTitle}
-        iconType={iconType}
-        iconProps={iconProps}
         tabs={tabs}
         tabsProps={tabsProps}
         description={description}

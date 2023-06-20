@@ -21,17 +21,20 @@ const { version } = require(pathToPackage);
 const pathToChangelog = path.resolve(cwd, 'CHANGELOG.md');
 let changelogContents = fs.readFileSync(pathToChangelog).toString();
 
-const masterHeading = '## [`master`](https://github.com/opensearch-project/oui/tree/master)';
-// sanity check, changelog should start with master heading
-if (changelogContents.indexOf(masterHeading) !== 0) {
-  console.error(`Cannot update CHANGELOG.md: does not start with expected heading "${masterHeading}"`);
+const mainHeading =
+  '## [`main`](https://github.com/opensearch-project/oui/tree/main)';
+// sanity check, changelog should start with main heading
+if (changelogContents.indexOf(mainHeading) !== 0) {
+  console.error(
+    `Cannot update CHANGELOG.md: does not start with expected heading "${mainHeading}"`
+  );
   process.exit(1);
 }
 
-// Insert the changelog template after the master header
+// Insert the changelog template after the main header
 changelogContents = changelogContents.replace(
-  masterHeading,
-  `${masterHeading}
+  mainHeading,
+  `${mainHeading}
 
 No public interface changes since \`${version}\`.
 

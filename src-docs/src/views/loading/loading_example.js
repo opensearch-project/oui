@@ -17,25 +17,20 @@ import { GuideSectionTypes } from '../../components';
 import {
   OuiCode,
   OuiText,
-  OuiLoadingLogo,
-  OuiLoadingElastic,
+  OuiLoadingDashboards,
   OuiLoadingSpinner,
   OuiLoadingChart,
   OuiLoadingContent,
 } from '../../../../src/components';
 import {
-  loadingElasticConfig,
+  loadingDashboardsConfig,
   loadingChartConfig,
-  loadingLogoConfig,
   loadingSpinnerConfig,
   loadingContentConfig,
 } from './playground';
 
-import LoadingLogo from './loading_kibana';
-const loadingLogoSource = require('!!raw-loader!./loading_kibana');
-
-import LoadingElastic from './loading_elastic';
-const loadingElasticSource = require('!!raw-loader!./loading_elastic');
+import LoadingDashboards from './loading_dashboards';
+const loadingDashboardsSource = require('!!raw-loader!./loading_dashboards');
 
 import LoadingChart from './loading_chart';
 const loadingChartSource = require('!!raw-loader!./loading_chart');
@@ -61,46 +56,23 @@ export const LoadingExample = {
   ),
   sections: [
     {
-      title: 'Elastic',
+      title: 'Dashboards',
       source: [
         {
           type: GuideSectionTypes.JS,
-          code: loadingElasticSource,
+          code: loadingDashboardsSource,
         },
       ],
       text: (
         <p>
-          The <strong>OuiLoadingElastic</strong> loader is great for full page
-          or Elastic product loading screens.
+          The <strong>OuiLoadingDashboards</strong> loader is great for full
+          page or Dashboards product loading screens.
         </p>
       ),
-      props: { OuiLoadingElastic },
-      demo: <LoadingElastic />,
-      snippet: '<OuiLoadingElastic size="m" />',
-      playground: loadingElasticConfig,
-    },
-    {
-      title: 'Logos',
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: loadingLogoSource,
-        },
-      ],
-      text: (
-        <p>
-          <strong>OuiLoadingLogo</strong> accepts any of our{' '}
-          <Link to="/display/icons#elastic-logos">
-            <strong>OuiIcon</strong>
-          </Link>{' '}
-          logos. It should only be used in very large panels, like full screen
-          pages.
-        </p>
-      ),
-      props: { OuiLoadingLogo },
-      demo: <LoadingLogo />,
-      snippet: '<OuiLoadingLogo size="m" />',
-      playground: loadingLogoConfig,
+      props: { OuiLoadingDashboards },
+      demo: <LoadingDashboards />,
+      snippet: '<OuiLoadingDashboards size="m" />',
+      playground: loadingDashboardsConfig,
     },
     {
       title: 'Chart',

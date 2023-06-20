@@ -221,6 +221,38 @@ describe('props', () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  test('icon is rendered', () => {
+    const component = mount(
+      <OuiComboBox
+        options={options}
+        selectedOptions={[options[2]]}
+        icon={true}
+      />
+    );
+
+    expect(component).toMatchSnapshot();
+
+    const icon = findTestSubject(component, 'comboBoxIcon');
+    expect(icon).toBeDefined();
+    expect(icon.render().attr('data-ouiicon-type')).toBe('search');
+  });
+
+  test('custom icon is rendered', () => {
+    const component = mount(
+      <OuiComboBox
+        options={options}
+        selectedOptions={[options[2]]}
+        icon={'menu'}
+      />
+    );
+
+    expect(component).toMatchSnapshot();
+
+    const icon = findTestSubject(component, 'comboBoxIcon');
+    expect(icon).toBeDefined();
+    expect(icon.render().attr('data-ouiicon-type')).toBe('menu');
+  });
 });
 
 test('does not show multiple checkmarks with duplicate labels', () => {

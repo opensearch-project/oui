@@ -31,11 +31,13 @@ export default () => (
         description="Example of a short card description."
         footer={
           <div>
-            <OuiButton aria-label="Go to Developers Tools">Go for it</OuiButton>
+            <OuiButton aria-label="Go to Developers Tools">
+              Choice One
+            </OuiButton>
             <OuiSpacer size="xs" />
             <OuiText size="s">
               <p>
-                Or try <OuiLink href="http://google.com">this</OuiLink>
+                Choice <OuiLink href="https://opensearch.org">Two</OuiLink>
               </p>
             </OuiText>
           </div>
@@ -49,11 +51,11 @@ export default () => (
         description="Example of a longer card description. See how the footers stay lined up."
         footer={
           <div>
-            <OuiButton aria-label="Go to Dashboards">Go for it</OuiButton>
+            <OuiButton aria-label="Go to Dashboards">Choice One</OuiButton>
             <OuiSpacer size="xs" />
             <OuiText size="s">
               <p>
-                Or try <OuiLink href="http://google.com">this</OuiLink>
+                Choice <OuiLink href="https://opensearch.org">Two</OuiLink>
               </p>
             </OuiText>
           </div>
@@ -67,11 +69,11 @@ export default () => (
         description="Example of a short card description."
         footer={
           <div>
-            <OuiButton aria-label="Go to Save Objects">Go for it</OuiButton>
+            <OuiButton aria-label="Go to Save Objects">Choice One</OuiButton>
             <OuiSpacer size="xs" />
             <OuiText size="s">
               <p>
-                Or try <OuiLink href="http://google.com">this</OuiLink>
+                Choice <OuiLink href="https://opensearch.org">Two</OuiLink>
               </p>
             </OuiText>
           </div>

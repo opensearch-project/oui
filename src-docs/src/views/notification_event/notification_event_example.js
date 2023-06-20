@@ -41,8 +41,6 @@ const notificationsFeedHtml = renderToHtml(NotificationsFeed);
 const notificationEventSnippet = `<OuiNotificationEvent
   id={id}
   type="Alert"
-  iconType= "logoMaps"
-  iconAriaLabel="Maps"
   time={time}
   title={title}
   isRead={isRead}
@@ -82,8 +80,8 @@ const notificationEvents = events.map((event) => (
 
 export const NotificationEventExample = {
   title: 'Notification event',
-  beta: true,
-  isNew: true,
+  beta: false,
+  isNew: false,
   intro: (
     <OuiText>
       <p>
@@ -158,10 +156,6 @@ export const NotificationEventExample = {
                 the current <OuiCode>isRead</OuiCode> state of the event. Use{' '}
                 <OuiCode>onRead</OuiCode> to allow users to toggle between read
                 and unread states.
-              </li>
-              <li>
-                <OuiCode>iconType</OuiCode>: Display an icon or logo to help
-                users quickly identify where the event originated.
               </li>
               <li>
                 <OuiCode>type</OuiCode> (required): Shows inside a badge

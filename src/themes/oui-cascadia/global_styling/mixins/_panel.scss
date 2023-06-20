@@ -9,30 +9,27 @@
  * GitHub history for details.
  */
 
-// Forcing Cascadia to get the theme-appropriate value for $ouiBorderRadius.
-$ouiPanelBorderRadiusModifiers: (
-  'borderRadiusNone': 0,
-  'borderRadiusMedium': $ouiBorderRadius,
-);
-
 @mixin ouiPanel($selector) {
   @if variable-exists(selector) == false {
     @error 'A $selector must be provided to @mixin ouiPanel().';
   } @else {
     #{$selector} {
+      background-color: $ouiColorEmptyShade;
+      border: $ouiBorderThin;
+      border-radius: $ouiBorderRadius;
       flex-grow: 1;
 
       &#{$selector}--flexGrowZero {
         flex-grow: 0;
       }
 
-      &#{$selector}--hasShadow {
-        @include ouiBottomShadowMedium;
+      &#{$selector}--noBorder {
+        border: none;
       }
 
-      &#{$selector}--hasBorder {
+      &#{$selector}--hasShadow {
+        @include ouiBottomShadowSmall;
         border: $ouiBorderThin;
-        box-shadow: none;
       }
 
       &#{$selector}--isClickable {
@@ -48,13 +45,13 @@ $ouiPanelBorderRadiusModifiers: (
 
         &:hover,
         &:focus {
-          @include ouiBottomShadow($color: $ouiShadowColor);
+          @include ouiSlightShadowHover;
           transform: translateY(-2px);
           cursor: pointer;
         }
       }
 
-      // Border Radii
+      // Border Radius
       @each $modifier, $amount in $ouiPanelBorderRadiusModifiers {
         &#{$selector}--#{$modifier} {
           border-radius: $amount;
@@ -62,9 +59,9 @@ $ouiPanelBorderRadiusModifiers: (
       }
 
       // Background colors
-      @each $modifier, $amount in $ouiPanelBackgroundColorModifiers {
+      @each $modifier, $color in $ouiPanelBackgroundColorModifiers {
         &#{$selector}--#{$modifier} {
-          background-color: $amount;
+          background-color: $color;
         }
       }
     }
@@ -73,6 +70,5 @@ $ouiPanelBorderRadiusModifiers: (
 
 
 /* OUI -> EUI Aliases */
-$euiPanelBorderRadiusModifiers: $ouiPanelBorderRadiusModifiers;
 @mixin euiPanel($selector) { @include ouiPanel($selector); }
 /* End of Aliases */

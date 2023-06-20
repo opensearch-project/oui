@@ -1,6 +1,6 @@
 ## How OUI theming works
 
-OUI can be easily themed by overwriting the [global styling](https://github.com/elastic/eui/tree/master/src/global_styling)
+OUI can be easily themed by overwriting the [global styling](https://github.com/opensearch-project/oui/tree/main/src/global_styling)
 variables. Currently we maintain the following themes:
 
 * theme_light (the default OUI theme)

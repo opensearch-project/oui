@@ -13,7 +13,6 @@ import React from 'react';
 import { OuiPanel } from '../../../../src/components/panel';
 import { OuiBadge } from '../../../../src/components/badge';
 import { OuiButtonIcon } from '../../../../src/components/button';
-import { OuiIcon } from '../../../../src/components/icon';
 
 const CircleIndicator = ({ name }) => (
   <span className="guideDemo__notificationEventCircleIndicator">{name}</span>
@@ -35,17 +34,8 @@ export default () => {
               aria-hidden="true"
             />
           </div>
-
-          <div className="guideDemo__notificationEventHighlight">
-            <CircleIndicator name="B" />
-            <OuiIcon
-              type="logoElastic"
-              className="guideDemo__notificationEventIcon"
-            />
-          </div>
-
           <div className="guideDemo__notificationEventBadge  guideDemo__notificationEventHighlight">
-            <CircleIndicator name="C" />
+            <CircleIndicator name="B" />
             <OuiBadge
               className="ouiNotificationEventMeta__badge"
               color="hollow">
@@ -54,12 +44,12 @@ export default () => {
           </div>
 
           <div className="guideDemo__notificationEventHighlight">
-            <CircleIndicator name="D" />
+            <CircleIndicator name="C" />
             time
           </div>
 
           <div className="guideDemo__notificationEventHighlight">
-            <CircleIndicator name="E" />
+            <CircleIndicator name="D" />
             <OuiButtonIcon
               aria-hidden="true"
               iconType="boxesVertical"
@@ -69,10 +59,10 @@ export default () => {
         </div>
         <div className="guideDemo__notificationEventSections">
           <div className="guideDemo__notificationEventHighlight">
-            <CircleIndicator name="F" /> <span>title</span>
+            <CircleIndicator name="E" /> <span>title</span>
           </div>
           <div className="guideDemo__notificationEventHighlight">
-            <CircleIndicator name="G" /> <span>messages</span>
+            <CircleIndicator name="F" /> <span>messages</span>
           </div>
           <div className="guideDemo__notificationEventHighlight">
             <CircleIndicator name="G" /> <span>primaryAction</span>

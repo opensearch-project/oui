@@ -11,13 +11,13 @@
 
 import React from 'react';
 import { OuiText, OuiResizableContainer } from '../../../../src/components';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 const text = (
   <>
-    <p>{fake('{{lorem.paragraphs}}')}</p>
-    <p>{fake('{{lorem.paragraphs}}')}</p>
-    <p>{fake('{{lorem.paragraphs}}')}</p>
+    <p>{faker.helpers.fake('{{lorem.paragraphs}}')}</p>
+    <p>{faker.helpers.fake('{{lorem.paragraphs}}')}</p>
+    <p>{faker.helpers.fake('{{lorem.paragraphs}}')}</p>
   </>
 );
 
@@ -28,7 +28,6 @@ export default () => (
         <OuiResizablePanel initialSize={50} minSize="30%">
           <OuiText>
             <div>{text}</div>
-            <a href="">Hello world</a>
           </OuiText>
         </OuiResizablePanel>
 

@@ -70,6 +70,7 @@ import AutosizeInput from 'react-input-autosize';
 import { CommonProps } from '../common';
 import { OuiFormControlLayoutProps } from '../form';
 import { getElementZIndex } from '../../services/popover';
+import { IconType } from '../icon';
 
 type DrillProps<T> = Pick<
   OuiComboBoxOptionsListProps<T>,
@@ -98,6 +99,7 @@ export interface _OuiComboBoxProps<T>
    * When `true` expands to the entire width available
    */
   fullWidth: boolean;
+  icon?: IconType | boolean;
   id?: string;
   inputRef?: RefCallback<HTMLInputElement>;
   /**
@@ -164,6 +166,10 @@ export interface _OuiComboBoxProps<T>
    * Specifies that the input should have focus when the component loads
    */
   autoFocus?: boolean;
+  /**
+   * When `true` clears the input text when user focus out of the input box
+   */
+  clearOnBlur?: boolean;
 }
 
 /**
@@ -464,9 +470,19 @@ export class OuiComboBox<T> extends Component<
       options,
       selectedOptions,
       singleSelection,
+      clearOnBlur,
     } = this.props;
-
     const { matchingOptions } = this.state;
+
+    const { hasFocus, isListOpen } = this.state;
+    if (
+      clearOnBlur &&
+      searchValue &&
+      (hasFocus === false || isListOpen === false)
+    ) {
+      this.clearSearchValue();
+      return;
+    }
 
     if (this.doesSearchMatchOnlyOption()) {
       this.onAddOption(matchingOptions[0], isContainerBlur);
@@ -542,6 +558,10 @@ export class OuiComboBox<T> extends Component<
   };
 
   onComboBoxFocus: FocusEventHandler<HTMLInputElement> = (event) => {
+    if (this.state.hasFocus) {
+      return;
+    }
+
     if (this.props.onFocus) {
       this.props.onFocus(event);
     }
@@ -924,6 +944,7 @@ export class OuiComboBox<T> extends Component<
       compressed,
       customOptionText,
       fullWidth,
+      icon,
       id,
       inputRef,
       isClearable,
@@ -934,6 +955,7 @@ export class OuiComboBox<T> extends Component<
       onBlur,
       onChange,
       onCreateOption,
+      onFocus,
       onSearchChange,
       options,
       placeholder,
@@ -1051,6 +1073,7 @@ export class OuiComboBox<T> extends Component<
           }
           fullWidth={fullWidth}
           hasSelectedOptions={selectedOptions.length > 0}
+          icon={icon}
           id={id}
           inputRef={this.searchInputRefCallback}
           isDisabled={isDisabled}

@@ -10,7 +10,7 @@
  */
 
 import React, { useState, useCallback } from 'react';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 import { OuiDataGrid, OuiPanel, OuiLink } from '../../../../src/components/';
 
@@ -36,13 +36,17 @@ const data = [];
 
 for (let i = 1; i < 20; i++) {
   data.push({
-    name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-    email: fake('{{internet.email}}'),
-    city: (
-      <OuiLink href="http://google.com">{fake('{{address.city}}')}</OuiLink>
+    name: faker.helpers.fake(
+      '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
     ),
-    country: fake('{{address.country}}'),
-    account: fake('{{finance.account}}'),
+    email: faker.helpers.fake('{{internet.email}}'),
+    city: (
+      <OuiLink href="http://google.com">
+        {faker.helpers.fake('{{location.city}}')}
+      </OuiLink>
+    ),
+    country: faker.helpers.fake('{{location.country}}'),
+    account: faker.helpers.fake('{{finance.accountNumber}}'),
   });
 }
 

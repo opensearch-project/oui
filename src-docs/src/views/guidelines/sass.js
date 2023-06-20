@@ -611,11 +611,11 @@ export const SassGuidelines = ({ selectedTheme }) => {
       <OuiText grow={false}>
         <p>
           View the{' '}
-          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/variables/_typography.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/variables/_typography.scss">
             variable
           </OuiLink>{' '}
           and{' '}
-          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_typography.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/mixins/_typography.scss">
             mixins
           </OuiLink>{' '}
           Sass code for typography. For most of your components we recommend
@@ -753,7 +753,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
           <OuiText>
             <p>
-              <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_shadow.scss">
+              <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/mixins/_shadow.scss">
                 View the Sass code for shadow mixins
               </OuiLink>
               .
@@ -888,7 +888,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
             <p>
               If you need to further customize the position or side of the
               overflow shadow use the <OuiCode>ouiOverflowShadow</OuiCode>{' '}
-              <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_shadow.scss">
+              <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/mixins/_shadow.scss">
                 mixin
               </OuiLink>
               .
@@ -903,7 +903,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
       <OuiText>
         <p>
-          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_responsive.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/mixins/_responsive.scss">
             View the Sass code for media queries
           </OuiLink>
           .
@@ -983,7 +983,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
       <GuideRuleTitle>Animation</GuideRuleTitle>
       <OuiText grow={false}>
         <p>
-          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/variables/_animations.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/variables/_animations.scss">
             View the Sass code for animation
           </OuiLink>
           .

@@ -181,11 +181,11 @@ export const Table = () => {
             'data-test-subj': 'action-share',
           },
           {
-            name: 'Elastic.co',
-            description: 'Go to elastic.co',
-            icon: 'logoElastic',
+            name: 'opensearch.org',
+            description: 'Go to opensearch.org',
+            icon: 'logoOpenSearch',
             type: 'icon',
-            href: 'https://elastic.co',
+            href: 'https://opensearch.org/',
             target: '_blank',
             'data-test-subj': 'action-outboundlink',
           },
@@ -205,12 +205,12 @@ export const Table = () => {
         ]
       : [
           {
-            name: 'Elastic.co',
-            description: 'Go to elastic.co',
+            name: 'opensearch.org',
+            description: 'Go to opensearch.org',
             icon: 'editorLink',
             color: 'primary',
             type: 'icon',
-            href: 'https://elastic.co',
+            href: 'https://opensearch.org/',
             target: '_blank',
             'data-test-subj': 'action-outboundlink',
           },
@@ -247,7 +247,7 @@ export const Table = () => {
       field: 'github',
       name: 'Github',
       render: (username) => (
-        <OuiLink href={`https://github.com/${username}`} target="_blank">
+        <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
           {username}
         </OuiLink>
       ),

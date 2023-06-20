@@ -51,7 +51,7 @@ import {
 
 // ...
 
-<OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_shadow.scss">View the Sass code for shadow mixins</OuiLink>.
+<OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/mixins/_shadow.scss">View the Sass code for shadow mixins</OuiLink>.
 ```
 
 ## Adding snippets
@@ -130,11 +130,11 @@ There are a couple themes to keep in mind when adding snippets:
 
 ## Adding playground toggles
 
-Most documentation pages include a [playground section](https://elastic.github.io/eui/#/layout/accordion/playground) where consumers can interact with the component's props to see in real time how different configurations affect visual and functional output. Generally, the playground system will automatically generate the correct toggle type; for instance, a text input for props that accept string values, and a switch input for props that accept boolean values.
+Most documentation pages include a [playground section](https://oui.opensearch.org/#/layout/accordion/playground) where consumers can interact with the component's props to see in real time how different configurations affect visual and functional output. Generally, the playground system will automatically generate the correct toggle type; for instance, a text input for props that accept string values, and a switch input for props that accept boolean values.
 
 ### Toggles for required props
 
-Props marked required for a component typically do not have default values and therefore need to be set for the playground to work well. For example, the `children` prop, which can be set in the component's [`playground.js` file](https://github.com/opensearch-project/oui/blob/master/src-docs/src/views/accordion/playground.js):
+Props marked required for a component typically do not have default values and therefore need to be set for the playground to work well. For example, the `children` prop, which can be set in the component's [`playground.js` file](https://github.com/opensearch-project/oui/blob/main/src-docs/src/views/accordion/playground.js):
 
 ```js
 propsToUse.children = {
@@ -213,11 +213,11 @@ import { ExampleContext } from '../../services';
 
 Any updates to the `src/` folder require an entry in the [CHANGELOG.md](../CHANGELOG.md) file. Documentation-only changes do not. Here are our guidelines for updating the file:
 
-* Append your changes to the `master` sub-heading of `CHANGELOG.md`.
+* Append your changes to the `main` sub-heading of `CHANGELOG.md`.
 * Add a list item for each significant change in the PR: bugs that were fixed, new features, new components, or changes to the public API
 * In the list item, always link to any relevant pull requests
 * Add a summary of what has changed, making sure it's informative to consumers who might be unaware of implementation details
 * Avoid documenting internal implementation changes that don't affect the public interface
 * Write your entry in the **past tense**, starting with a verb (e.g. Added... , Fixed...)
 
-[docs]: https://elastic.github.io/eui/
+[docs]: https://oui.opensearch.org

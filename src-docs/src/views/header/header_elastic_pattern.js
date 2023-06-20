@@ -76,7 +76,7 @@ export default ({ theme }) => {
       onClose={() => setNavIsOpen(false)}>
       <OuiFlexItem className="oui-yScroll">
         {/* Docs callout */}
-        <OuiCollapsibleNavGroup background="none" title="OuiCollapsibleNav">
+        <OuiCollapsibleNavGroup title="OuiCollapsibleNav">
           <OuiText size="s" color="subdued" style={{ padding: '0 8px 8px' }}>
             <p>
               Please see the component page for{' '}
@@ -157,7 +157,7 @@ export default ({ theme }) => {
           aria-haspopup="true"
           aria-label="User menu"
           onClick={() => setIsUserMenuVisible(!isUserMenuVisible)}>
-          <OuiAvatar name="John Username" size="s" />
+          <OuiAvatar name="A. User" size="s" />
         </OuiHeaderSectionItemButton>
       }
       isOpen={isUserMenuVisible}
@@ -283,8 +283,8 @@ export default ({ theme }) => {
         sections={[
           {
             items: [
-              <OuiHeaderLogo iconType="logoElastic" href="">
-                Elastic
+              <OuiHeaderLogo iconType="logoOpenSearch" href="">
+                OpenSearch
               </OuiHeaderLogo>,
               deploymentMenu,
             ],

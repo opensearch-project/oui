@@ -22,36 +22,38 @@ const exampleText = (
   <div>
     <h1>This is Heading One</h1>
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun. When
-      suddenly some wild JavaScript code appeared!{' '}
-      <code>const whoa = &quot;!&quot;</code>
+      Exercitation laboris aute cillum eiusmod occaecat tempor. Esse occaecat
+      voluptate consequat consequat dolor consequat. Duis nostrud officia
+      nostrud deserunt sunt consequat officia consequat sit reprehenderit velit
+      fugiat ad proident. Fugiat nulla ex deserunt sint ea. Excepteur ut laboris
+      proident ullamco duis proident eiusmod enim ad sint. Consectetur aliqua
+      mollit enim veniam. <code>const whoa = &quot;!&quot;</code>
     </p>
 
     <pre>
-      <code>const completelyUnexpected = &quot;the audacity!&quot;;</code>
+      <code>const a = &quot;Lorem ipsum!&quot;;</code>
     </pre>
 
     <p>
-      Orbiting this at a distance of roughly ninety-two million miles is an
-      utterly insignificant little blue green planet whose ape- descended life
-      forms are so amazingly primitive that they still think digital watches are
-      a pretty neat idea.
+      Proident velit aliqua veniam reprehenderit. Dolore amet occaecat do
+      deserunt excepteur nulla Lorem velit qui id ea duis. Dolore nostrud
+      reprehenderit ex est ad excepteur ipsum aute ex. Aute ut mollit duis non
+      aliqua mollit id dolore id nisi sint amet minim magna. Mollit veniam
+      commodo laboris qui incididunt adipisicing laborum. Quis officia enim
+      deserunt laboris anim qui culpa tempor aliquip enim elit.
     </p>
 
     <ul>
       <li>List item one</li>
       <li>List item two</li>
-      <li>Dolphins</li>
+      <li>List item three</li>
     </ul>
 
     <p>
-      This planet has - or rather had - a problem, which was this: most of the
-      people living on it were unhappy for pretty much of the time. Many
-      solutions were suggested for this problem, but most of these were largely
-      concerned with the movements of small green pieces of paper, which is odd
-      because on the whole it was not the small green pieces of paper that were
-      unhappy.
+      Veniam consectetur adipisicing commodo ipsum adipisicing eu commodo culpa
+      ipsum minim proident. Est aute commodo ex in ullamco nostrud officia
+      pariatur esse duis consequat deserunt. Occaecat aliquip id commodo aute
+      mollit mollit labore occaecat. Aliqua aute ea reprehenderit cillum anim.
     </p>
 
     <h2>This is Heading Two</h2>
@@ -59,41 +61,54 @@ const exampleText = (
     <ol>
       <li>Number one</li>
       <li>Number two</li>
-      <li>Dolphins again</li>
+      <li>Number three</li>
     </ol>
 
     <p>
-      But the dog wasn&rsquo;t lazy, it was just practicing mindfulness, so it
-      had a greater sense of life-satisfaction than that fox with all its silly
-      jumping.
+      Sint ullamco fugiat adipisicing dolore est cupidatat esse ea nostrud.
+      Labore aliqua pariatur nulla aliqua reprehenderit. Ullamco minim pariatur
+      aliqua culpa exercitation sit occaecat excepteur aliquip labore esse
+      culpa. Reprehenderit esse sunt esse ad ad laborum elit incididunt Lorem
+      exercitation laborum cillum.
     </p>
 
     <p>
-      And from the fox&rsquo;s perspective, life was full of hoops to jump{' '}
-      <em>through</em>, low-hanging fruit to jump <em>for</em>, and dead car
-      batteries to jump-<em>start</em>.
+      Amet qui est et elit magna veniam id enim consequat in. Sunt anim mollit
+      mollit amet. Dolor amet amet aliquip aute qui aliqua do aliqua id sunt ea.
+      Velit sit officia veniam dolore ea anim adipisicing nostrud occaecat
+      veniam in. Velit est non exercitation aliqua occaecat aute qui ullamco
+      officia pariatur. <em>through</em>.
     </p>
 
     <h3>This is Heading Three</h3>
 
     <p>
-      So it thought the dog was making a poor life choice by focusing so much on
-      mindfulness. What if its car broke down?
+      Minim amet duis elit aute ipsum non anim consectetur aliquip quis amet.
+      Reprehenderit ullamco do irure mollit amet non duis velit dolore ea.
+      Commodo mollit aute dolore ea non minim nulla commodo ipsum pariatur sit.
+      Sint commodo labore ullamco anim excepteur aute ut non elit ipsum. Velit
+      amet magna culpa voluptate labore cupidatat pariatur irure velit non irure
+      id dolore officia. Ex aliquip labore ipsum aliquip magna sunt irure
+      deserunt aliqua deserunt proident labore occaecat. Duis proident irure
+      ipsum proident est officia cillum proident labore sit labore.
     </p>
 
     <h4>This is Heading Four</h4>
 
     <p>
-      So it thought the dog was making a poor life choice by focusing so much on
-      mindfulness. What if its car broke down?
+      Veniam nulla dolor amet Lorem irure exercitation incididunt consequat.
+      Veniam reprehenderit ipsum nulla enim laboris sit non cupidatat. Veniam
+      fugiat qui minim culpa sint officia incididunt elit labore veniam cillum
+      est. Consequat id enim sint velit consectetur dolor sint deserunt.
     </p>
 
     <h5>This is Heading Five</h5>
 
     <p>
       <small>
-        So it thought the dog was making a poor life choice by focusing so much
-        on mindfulness. What if its car broke down?
+        Incididunt magna anim do elit commodo labore occaecat. Tempor laboris
+        nostrud et ad proident quis et sit eiusmod officia incididunt enim
+        deserunt officia. Dolore in velit officia irure labore proident cillum.
       </small>
     </p>
 
@@ -102,12 +117,12 @@ const exampleText = (
     <OuiHorizontalRule />
 
     <dl>
-      <dt>The Elder Scrolls: Morrowind</dt>
-      <dd>The opening music alone evokes such strong memories.</dd>
-      <dt>TIE Fighter</dt>
-      <dd>The sequel to XWING, join the dark side and fly for the Emporer.</dd>
-      <dt>Quake 2</dt>
-      <dd>The game that made me drop out of college.</dd>
+      <dt>Aliquip laborum anim ipsumd et Lorem qui voluptate laborum.</dt>
+      <dd>Consequat voluptate occaecat nisiincididunt sunt.</dd>
+      <dt>Velit in ad do esse.</dt>
+      <dd>Sint officia incididunt veniam commodo cillum in sunt.</dd>
+      <dt>Laboris sit nisi culpa nulla id aute.</dt>
+      <dd>Nisi cupidatat sit commodo aliqua.</dd>
     </dl>
   </div>
 );

@@ -43,7 +43,7 @@ describe('OuiLoadingLogo', () => {
 
   test('logo is rendered', () => {
     const component = render(
-      <OuiLoadingLogo logo="logoElastic" {...requiredProps} />
+      <OuiLoadingLogo logo="logoOpenSearch" {...requiredProps} />
     );
 
     expect(component).toMatchSnapshot();

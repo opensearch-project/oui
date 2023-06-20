@@ -10,7 +10,7 @@
  */
 
 import React, { useState, useCallback } from 'react';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
   OuiDataGrid,
@@ -52,32 +52,38 @@ for (let i = 1; i < 5; i++) {
   let json;
   let franchise;
   if (i < 3) {
-    franchise = 'Star Wars';
+    franchise = 'Oranges';
     json = JSON.stringify([
       {
-        default: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-        boolean: fake('{{random.boolean}}'),
-        numeric: fake('{{finance.account}}'),
-        currency: fake('${{finance.amount}}'),
-        date: fake('{{date.past}}'),
-        custom: fake('{{date.past}}'),
+        default: faker.helpers.fake(
+          '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
+        ),
+        boolean: faker.helpers.fake('{{datatype.boolean}}'),
+        numeric: faker.helpers.fake('{{finance.accountNumber}}'),
+        currency: faker.helpers.fake('${{finance.amount}}'),
+        date: faker.helpers.fake('{{date.past}}'),
+        custom: faker.helpers.fake('{{date.past}}'),
       },
     ]);
   } else {
-    franchise = 'Star Trek';
+    franchise = 'Apples';
     json = JSON.stringify([
       {
-        name: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
+        name: faker.helpers.fake(
+          '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
+        ),
       },
     ]);
   }
 
   storeData.push({
-    default: fake('{{name.lastName}}, {{name.firstName}} {{name.suffix}}'),
-    boolean: fake('{{random.boolean}}'),
-    numeric: fake('{{finance.account}}'),
-    currency: fake('${{finance.amount}}'),
-    datetime: fake('{{date.past}}'),
+    default: faker.helpers.fake(
+      '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
+    ),
+    boolean: faker.helpers.fake('{{datatype.boolean}}'),
+    numeric: faker.helpers.fake('{{finance.accountNumber}}'),
+    currency: faker.helpers.fake('${{finance.amount}}'),
+    datetime: faker.helpers.fake('{{date.past}}'),
     json: json,
     custom: franchise,
   });
@@ -87,26 +93,26 @@ const Franchise = (props) => {
   return (
     <div>
       <OuiTitle size="s">
-        <h3>{props.name} is the best!</h3>
+        <h3>{props.name}</h3>
       </OuiTitle>
       <OuiSpacer size="s" />
-      {props.name === 'Star Wars' ? (
+      {props.name === 'Oranges' ? (
         <OuiImage
           allowFullScreen
           size="m"
           hasShadow
-          caption="Random star wars image"
-          alt="Random star wars image"
-          url="https://source.unsplash.com/600x600/?starwars"
+          caption="Random Oranges image"
+          alt="Random Oranges image"
+          url="https://source.unsplash.com/600x600/?oranges"
         />
       ) : (
         <OuiImage
           allowFullScreen
           size="m"
           hasShadow
-          caption="Random star trek image"
-          alt="Random trek image"
-          url="https://source.unsplash.com/600x600/?startrek"
+          caption="Random Apples image"
+          alt="Random Apples image"
+          url="https://source.unsplash.com/600x600/?apples"
         />
       )}
     </div>
@@ -193,20 +199,20 @@ const DataGridSchema = () => {
           type: 'favoriteFranchise',
           textTransform: 'capitalize',
           detector(value) {
-            return value.toLowerCase() === 'star wars' ||
-              value.toLowerCase() === 'star trek'
+            return value.toLowerCase() === 'oranges' ||
+              value.toLowerCase() === 'apples'
               ? 1
               : 0;
           },
           comparator(a, b, direction) {
-            const aValue = a.toLowerCase() === 'star wars';
-            const bValue = b.toLowerCase() === 'star wars';
+            const aValue = a.toLowerCase() === 'oranges';
+            const bValue = b.toLowerCase() === 'oranges';
             if (aValue < bValue) return direction === 'asc' ? 1 : -1;
             if (aValue > bValue) return direction === 'asc' ? -1 : 1;
             return 0;
           },
-          sortTextAsc: 'Star wars-Star trek',
-          sortTextDesc: 'Star trek-Star wars',
+          sortTextAsc: 'Oranges-Apples',
+          sortTextDesc: 'Apples-Oranges',
           icon: 'starFilled',
           color: '#800080',
         },

@@ -16,15 +16,20 @@ import { OuiText } from '../../../../src/components';
 export default () => (
   <OuiText grow>
     <p>
-      Far out in the uncharted backwaters of the unfashionable end of the
-      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Ad officia qui cupidatat enim est. Ipsum laborum dolore tempor voluptate
+      tempor consectetur Lorem labore pariatur quis. Fugiat excepteur veniam id
+      aliquip sint do aliquip fugiat esse irure esse qui nisi nulla. Culpa non
+      consequat cillum in officia aliquip dolore adipisicing minim ad.
+      Reprehenderit adipisicing excepteur consequat ex ipsum velit. Pariatur
+      excepteur adipisicing officia qui velit.
     </p>
 
     <p>
-      Orbiting this at a distance of roughly ninety-two million miles is an
-      utterly insignificant little blue green planet whose ape- descended life
-      forms are so amazingly primitive that they still think digital watches are
-      a pretty neat idea.
+      Labore laboris velit ipsum nisi eiusmod sint proident cupidatat. Cillum
+      duis labore minim est ea mollit labore do officia irure consectetur ea et.
+      Amet id et cupidatat veniam veniam aute non in esse. Aute amet ex laborum
+      id amet culpa sint enim est ut. Aliquip enim veniam enim tempor incididunt
+      anim cupidatat ut do ut.
     </p>
   </OuiText>
 );

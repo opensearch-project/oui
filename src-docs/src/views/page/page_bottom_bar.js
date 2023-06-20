@@ -34,7 +34,6 @@ export default ({ button = <></>, content, sideNav, bottomBar }) => {
           <OuiPageHeader
             bottomBorder
             restrictWidth
-            iconType="logoElastic"
             pageTitle="Page title"
             rightSideItems={[button]}
           />

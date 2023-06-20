@@ -8,11 +8,44 @@ on:
 jobs:
   draft_release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - id: get_data
+        run: |
+          echo "approvers=$(cat .github/CODEOWNERS | grep @ | tr -d '* ' | sed 's/@/,/g' | sed 's/,//1')" >> $GITHUB_OUTPUT
+          echo "version=$(cat package.json | grep '"version": "[^ ]\+"' | cut -c15- | cut -d'"' -f1)" >> $GITHUB_OUTPUT
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: ${{ steps.get_data.outputs.approvers }}
+          minimum-approvals: 2
+          issue-title: 'Release OUI: ${{ steps.get_data.outputs.version }}'
+          issue-body: "Please approve or deny the release of OUI. **VERSION**: ${{ steps.get_data.outputs.version }} **TAG**: ${{ github.ref_name }}  **COMMIT**: ${{ github.sha }}"
+          exclude-workflow-initiator-as-approver: true
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+          yarn install --frozen-lockfile
+      - name: Generate build
+        run: |
+          yarn build
+          yarn pack --filename oui.tar.gz
+          mkdir oui && mv oui.tar.gz oui/oui.tar.gz
+          tar -cvf artifacts.tar.gz oui
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           draft: true
           generate_release_notes: true
+          files: |
+            artifacts.tar.gz

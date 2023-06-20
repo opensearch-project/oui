@@ -8,11 +8,9 @@ OUI also has `moment` as a dependency itself. This is already loaded in most Ope
 
 ## What's available
 
-OUI publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [OpenSearch UI Framework website](https://elastic.github.io/eui) for comprehensive info on what's available.
+OUI publishes React UI components, JavaScript helpers called services, and utilities for writing Jest tests. Please refer to the [OpenSearch UI website](https://oui.opensearch.org) for comprehensive info on what's available.
 
-OUI is published through [NPM](https://www.npmjs.com/package/@opensearch-project/oui) as a dependency. We also provide a starter projects for:
-- [GatsbyJS](https://github.com/elastic/gatsby-oui-starter)
-- [NextJS](https://github.com/elastic/next-oui-starter)
+OUI is published through [NPM](https://www.npmjs.com/package/@opensearch-project/oui) as a dependency.
 
 ### Components
 
@@ -180,11 +178,11 @@ We do not recommend customizing OUI components by applying styles directly to OU
 
 ## Using the `test-env` build
 
-OUI provides a separate babel-transformed and partially mocked commonjs build for testing environments in consuming projects. The output is identical to that of `lib/`, but has transformed async functions and dynamic import statements, and also applies some useful mocks. This build mainly targets Kibana's Jest environment, but may be helpful for testing environments in other projects.
+OUI provides a separate babel-transformed and partially mocked commonjs build for testing environments in consuming projects. The output is identical to that of `lib/`, but has transformed async functions and dynamic import statements, and also applies some useful mocks. This build mainly targets OpenSearch Dashboard's Jest environment, but may be helpful for testing environments in other projects.
 
 ### Mapping to the `test-env` directory
 
-In Kibana's Jest configuration, the `moduleNameMapper` option is used to resolve standard OUI import statements with `test-env` aliases.
+In OpenSearch Dashboard's Jest configuration, the `moduleNameMapper` option is used to resolve standard OUI import statements with `test-env` aliases.
 
 ```js
 moduleNameMapper: {

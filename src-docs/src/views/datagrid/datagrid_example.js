@@ -120,29 +120,29 @@ const gridSnippet = `
       header: 'shade',
     }}
     // Optional. Provide additional schemas to use in the grid.
-    // This schema 'franchise' essentially acts like a boolean, looking for Star Wars or Star Trek in a column.
+    // This schema 'franchise' essentially acts like a boolean, looking for Oranges or Apples in a column.
     schemaDetectors={[
       {
         type: 'franchise',
         // Try to detect if column data is this schema. A value of 1 is the highest possible. A (mean_average - standard_deviation) of .5 will be good enough for the autodetector to assign.
         detector(value) {
-          return value.toLowerCase() === 'star wars' ||
-            value.toLowerCase() === 'star trek'
+          return value.toLowerCase() === 'oranges' ||
+            value.toLowerCase() === 'apples'
             ? 1
             : 0;
         },
         // How we should sort data matching this schema. Again, a value of 1 is the highest value.
         comparator(a, b, direction) {
-          const aValue = a.toLowerCase() === 'star wars';
-          const bValue = b.toLowerCase() === 'star wars';
+          const aValue = a.toLowerCase() === 'oranges';
+          const bValue = b.toLowerCase() === 'oranges';
           if (aValue < bValue) return direction === 'asc' ? 1 : -1;
           if (aValue > bValue) return direction === 'asc' ? -1 : 1;
           return 0;
         },
         // Text for what the ASC sort does.
-        sortTextAsc: 'Star Wars-Star Trek',
+        sortTextAsc: 'Oranges-Apples',
         // Text for what the DESC sort does.
-        sortTextDesc: 'Star Trek-Star Wars',
+        sortTextDesc: 'Apples-Oranges',
         // OuiIcon or Token to signify this schema.
         icon: 'star',
         // The color to use for the icon token.
@@ -427,7 +427,7 @@ export const DataGridExample = {
               explanation on the lower level object types. The majority of the
               types are defined in the{' '}
               <a
-                href="https://github.com/elastic/eui/tree/master/src/components/datagrid/data_grid_types.ts"
+                href="https://github.com/opensearch-project/oui/blob/main/src/components/datagrid/data_grid_types.ts"
                 target="_blank">
                 /datagrid/data_grid_types.ts
               </a>{' '}

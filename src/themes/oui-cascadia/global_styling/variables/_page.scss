@@ -9,9 +9,11 @@
  * GitHub history for details.
  */
 
-$ouiPageDefaultMaxWidth: map-get($ouiBreakpoints, 'xl');
+$ouiPageDefaultMaxWidth: 1000px !default;
+$ouiPageSidebarMinWidth: $ouiSizeL * 8 !default;
 
 
 /* OUI -> EUI Aliases */
 $euiPageDefaultMaxWidth: $ouiPageDefaultMaxWidth;
+$euiPageSidebarMinWidth: $ouiPageSidebarMinWidth;
 /* End of Aliases */

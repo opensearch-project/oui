@@ -9,37 +9,22 @@
  * GitHub history for details.
  */
 
-// In Cascadia, focus rings default to the browser's `outline`
-// However, some components need to be forced to have the same behavior
-// This re-uses the same faux focus ring mixin, but adjusts the outline instead
-// @param {size} Old param from default theme that won't be used, so it should always be `null`
-// @param {offset} Accepts a specific number or 'inner' or 'outer' to adjust outline position
-@mixin ouiFocusRing($size: null, $offset: false) {
-  // Safari & Firefox
-  outline: $ouiFocusRingSize solid currentColor;
-
-  // Chrome
-  &:focus-visible {
-    outline-style: auto;
-  }
-
-  &:not(:focus-visible) {
-    outline: none;
-  }
-
-  // Adjusting position with offset
-  @if (type-of($offset) == number) {
-    outline-offset: #{$offset}px;
-  } @else if ($offset == 'inner') {
-    outline-offset: -$ouiFocusRingSize;
-  } @else if ($offset == 'outer') {
-    outline-offset: $ouiFocusRingSize;
+@mixin ouiFocusRing($size: 'small', $cascadiaOnlyProp: null) {
+  @if $size == 'large' {
+    // It's always OK to use the focus animation. This will take precedence over times we turn it off individually like OuiButtonEmpty
+    // sass-lint:disable-block no-important
+    animation: $ouiAnimSpeedSlow $ouiAnimSlightResistance 1 normal forwards focusRingAnimateLarge !important;
+  } @else {
+    // sass-lint:disable-block no-important
+    animation: $ouiAnimSpeedSlow $ouiAnimSlightResistance 1 normal forwards focusRingAnimate !important;
   }
 }
 
-// Cascadia uses transparency instead of shading/tinting
+// Keyframe animation declarations can be found in
+// utility/animations.scss
+
 @mixin ouiFocusBackground($color: $ouiColorPrimary) {
-  background-color: transparentize($color, $ouiFocusTransparency);
+  background-color: tintOrShade($ouiColorPrimary, ((1 - $ouiFocusTransparency) * 100%), ((1 - $ouiFocusTransparency) * 100%));
 }
 
 @mixin ouiHoverState {
@@ -76,9 +61,8 @@
 }
 
 
-
 /* OUI -> EUI Aliases */
-@mixin euiFocusRing($size: null, $offset: false) { @include ouiFocusRing($size, $offset); }
+@mixin euiFocusRing($size: 'small', $cascadiaOnlyProp: null) { @include ouiFocusRing($size, $cascadiaOnlyProp); }
 @mixin euiFocusBackground($color: $ouiColorPrimary) { @include ouiFocusBackground($color); }
 @mixin euiHoverState { @include ouiHoverState; }
 @mixin euiFocusState($color: $ouiColorPrimary) { @include ouiFocusState($color); }

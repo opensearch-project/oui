@@ -22,7 +22,7 @@ import {
 const cardFooterContent = (
   <OuiFlexGroup justifyContent="flexEnd">
     <OuiFlexItem grow={false}>
-      <OuiButton>Go for it</OuiButton>
+      <OuiButton>View Details</OuiButton>
     </OuiFlexItem>
   </OuiFlexGroup>
 );
@@ -40,7 +40,7 @@ export default () => (
             />
           </div>
         }
-        title="Elastic in Nature"
+        title="Title"
         description="Example of a card's description. Stick to one or two sentences."
         footer={cardFooterContent}
       />
@@ -49,7 +49,7 @@ export default () => (
       <OuiCard
         textAlign="left"
         image="https://source.unsplash.com/400x200/?Water"
-        title="Elastic in Water"
+        title="Title"
         description="Example of a card's description. Stick to one or two sentences."
         footer={cardFooterContent}
       />
@@ -57,10 +57,10 @@ export default () => (
     <OuiFlexItem>
       <OuiCard
         textAlign="left"
-        href="https://elastic.github.io/eui/"
+        href="https://oui.opensearch.org/"
         image="https://source.unsplash.com/400x200/?City"
         icon={<OuiIcon size="xxl" type="logoBeats" />}
-        title={'Beats in the City'}
+        title={'Title'}
         description="This card has an href and should be a link."
       />
     </OuiFlexItem>

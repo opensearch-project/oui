@@ -23,13 +23,9 @@ import { playgroundCreator } from './services/playground';
 // Guidelines
 // const GettingStarted = require('!!raw-loader!./views/guidelines/getting_started.md');
 
-import AccessibilityGuidelines from './views/guidelines/accessibility';
-
 import ColorGuidelines from './views/guidelines/colors';
 
 import { SassGuidelines } from './views/guidelines/sass';
-
-import WritingGuidelines from './views/guidelines/writing';
 
 // Services
 
@@ -233,18 +229,6 @@ import { I18nTokens } from './views/package/i18n_tokens';
 
 import { SuperSelectExample } from './views/super_select/super_select_example';
 
-/** Elastic Charts */
-
-import { ElasticChartsThemingExample } from './views/elastic_charts/theming_example';
-
-import { ElasticChartsTimeExample } from './views/elastic_charts/time_example';
-
-import { ElasticChartsCategoryExample } from './views/elastic_charts/category_example';
-
-import { ElasticChartsSparklinesExample } from './views/elastic_charts/sparklines_example';
-
-import { ElasticChartsPieExample } from './views/elastic_charts/pie_example';
-
 const createExample = (example, customTitle) => {
   if (!example) {
     throw new Error(
@@ -257,6 +241,7 @@ const createExample = (example, customTitle) => {
     intro,
     sections,
     beta,
+    isExperimental,
     isNew,
     playground,
     guidelines,
@@ -288,6 +273,7 @@ const createExample = (example, customTitle) => {
         title={title}
         intro={intro}
         isBeta={beta}
+        isExperimental={isExperimental}
         playground={playgroundComponent}
         guidelines={guidelines}>
         {renderedSections}
@@ -332,7 +318,6 @@ const navigation = [
     items: [
       // TODO uncomment when OuiMarkdownFormat has a better text formatting
       // createMarkdownExample(GettingStarted, 'Getting started'),
-      createExample(AccessibilityGuidelines, 'Accessibility'),
       {
         name: 'Colors',
         component: ColorGuidelines,
@@ -341,7 +326,6 @@ const navigation = [
         name: 'Sass',
         component: SassGuidelines,
       },
-      createExample(WritingGuidelines, 'Writing'),
     ],
   },
   {
@@ -451,16 +435,6 @@ const navigation = [
       MarkdownPluginExample,
       CodeEditorExample,
       CodeExample,
-    ].map((example) => createExample(example)),
-  },
-  {
-    name: 'Elastic Charts',
-    items: [
-      ElasticChartsThemingExample,
-      ElasticChartsSparklinesExample,
-      ElasticChartsTimeExample,
-      ElasticChartsCategoryExample,
-      ElasticChartsPieExample,
     ].map((example) => createExample(example)),
   },
   {
