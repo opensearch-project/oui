@@ -182,6 +182,19 @@ const delimiterSnippet = `<OuiComboBox
   isClearable={true}
 />`;
 
+import WithIcon from './combo_box_icon';
+const withIconSource = require('!!raw-loader!./combo_box_icon');
+const withIconHtml = renderToHtml(WithIcon);
+const withIconSnippet = `<OuiComboBox
+  placeholder="Select or create options"
+  options={options}
+  icon={true}
+  selectedOptions={selectedOptions}
+  onChange={onChange}
+  onCreateOption={onCreateOption}
+  isClearable={true}
+/>`;
+
 import StartingWith from './startingWith';
 const startingWithSource = require('!!raw-loader!./startingWith');
 const startingWithHtml = renderToHtml(StartingWith);
@@ -214,7 +227,6 @@ const clearOnBlurSnippet = `<OuiComboBox
   placeholder="Select one or more options"
   options={options}
   onChange={onChange}
-  onSearchChange={onSearchChange}
   clearOnBlur={true}
 />`;
 
@@ -584,6 +596,29 @@ export const ComboBoxExample = {
       props: { OuiComboBox, OuiComboBoxOptionOption },
       snippet: delimiterSnippet,
       demo: <Delimiter />,
+    },
+    {
+      title: 'With icon',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: withIconSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: withIconHtml,
+        },
+      ],
+      text: (
+        <p>
+          Pass an <OuiCode>IconType</OuiCode> string to show the icon in the
+          combo box, or set it to <OuiCode>true</OuiCode> to show the search
+          icon.
+        </p>
+      ),
+      props: { OuiComboBox, OuiComboBoxOptionOption },
+      snippet: withIconSnippet,
+      demo: <WithIcon />,
     },
     {
       title: 'Sorting matches',
