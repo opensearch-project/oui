@@ -12,11 +12,11 @@
 @import 'global_styling/functions/index';
 
 // These colors stay the same no matter the theme
-$ouiColorGhost: #FFF;
-$ouiColorInk: #000;
+$ouiColorGhost: #FCFEFF;
+$ouiColorInk: #0A121A;
 
 // Core
-$ouiColorPrimary: #1BA9F5;
+$ouiColorPrimary: #159D8D;
 $ouiColorSecondary: #7DE2D1;
 $ouiColorAccent: #F990C0;
 
@@ -26,16 +26,16 @@ $ouiColorWarning: #FFCE7A;
 $ouiColorDanger: #F66;
 
 // Grays
-$ouiColorEmptyShade: #1D1E24;
-$ouiColorLightestShade: #25262E;
-$ouiColorLightShade: #343741;
-$ouiColorMediumShade: #535966;
-$ouiColorDarkShade: #98A2B3;
-$ouiColorDarkestShade: #D4DAE5;
-$ouiColorFullShade: #FFF;
+$ouiColorEmptyShade: #0A121A;
+$ouiColorLightestShade: #101B25;
+$ouiColorLightShade: #293847;
+$ouiColorMediumShade: #5B6875;
+$ouiColorDarkShade: #8D98A3;
+$ouiColorDarkestShade: #DFE3E8;
+$ouiColorFullShade: #FCFEFF;
 
 // Backgrounds
-$ouiPageBackgroundColor: shade($ouiColorLightestShade, 45%);
+$ouiPageBackgroundColor: #172430;
 $ouiColorHighlight: #2E2D25;
 
 // Variations from core
