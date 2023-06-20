@@ -187,12 +187,12 @@
       "start": {
         "line": 191,
         "column": 8,
-        "index": 5650
+        "index": 5638
       },
       "end": {
         "line": 193,
         "column": 40,
-        "index": 5750
+        "index": 5738
       }
     },
     "filepath": "src/components/bottom_bar/bottom_bar.tsx"
@@ -205,12 +205,12 @@
       "start": {
         "line": 217,
         "column": 14,
-        "index": 6647
+        "index": 6635
       },
       "end": {
         "line": 221,
         "column": 16,
-        "index": 6920
+        "index": 6908
       }
     },
     "filepath": "src/components/bottom_bar/bottom_bar.tsx"
@@ -223,12 +223,12 @@
       "start": {
         "line": 223,
         "column": 14,
-        "index": 6953
+        "index": 6941
       },
       "end": {
         "line": 226,
         "column": 16,
-        "index": 7150
+        "index": 7138
       }
     },
     "filepath": "src/components/bottom_bar/bottom_bar.tsx"
@@ -2239,12 +2239,12 @@
       "start": {
         "line": 429,
         "column": 14,
-        "index": 11289
+        "index": 11292
       },
       "end": {
         "line": 432,
         "column": 16,
-        "index": 11415
+        "index": 11418
       }
     },
     "filepath": "src/components/date_picker/super_date_picker/super_date_picker.tsx"
