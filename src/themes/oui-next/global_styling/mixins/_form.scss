@@ -356,27 +356,9 @@
   }
 }
 
-@mixin ouiCustomControlFocused($cascadiaSelector: null) {
-  // Requires a selector to work with the Cascadia outline styles
-  @if ($cascadiaSelector) {
-    + #{$cascadiaSelector} {
-      outline: $ouiFocusRingSize solid currentColor;
-    }
-
-    // Chrome
-    &:focus-visible + #{$cascadiaSelector} {
-      outline-style: auto;
-      outline-offset: 3px;
-    }
-
-    &:not(:focus-visible) + #{$cascadiaSelector} {
-      outline: none;
-    }
-  } @else {
-    // Default theme
-    @include ouiFocusRing('small', 'outer');
-    border-color: $ouiColorPrimary;
-  }
+@mixin ouiCustomControlFocused {
+  @include ouiFocusRing('small');
+  border-color: $ouiColorPrimary;
 }
 
 @mixin ouiHiddenSelectableInput {
@@ -423,6 +405,6 @@
 @mixin euiCustomControl($type: null, $size: $ouiSize) { @include ouiCustomControl($type, $size); }
 @mixin euiCustomControlSelected($type: null) { @include ouiCustomControlSelected($type); }
 @mixin euiCustomControlDisabled($type: null) { @include ouiCustomControlDisabled($type); }
-@mixin euiCustomControlFocused($cascadiaSelector: null) { @include ouiCustomControlFocused($cascadiaSelector); }
+@mixin euiCustomControlFocused { @include ouiCustomControlFocused; }
 @mixin euiHiddenSelectableInput { @include ouiHiddenSelectableInput; }
 /* End of Aliases */
