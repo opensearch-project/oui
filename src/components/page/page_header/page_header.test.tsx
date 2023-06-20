@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { mount, render } from 'enzyme';
+import { render } from 'enzyme';
 import { requiredProps } from '../../../test';
 
 import { OuiPageHeader, OuiPageHeaderProps } from './page_header';
@@ -65,8 +65,6 @@ describe('OuiPageHeader', () => {
         const component = render(
           <OuiPageHeader
             pageTitle="Page title"
-            iconType="logoKibana"
-            iconProps={requiredProps}
             tabs={tabs}
             tabsProps={requiredProps}
             description="Description"
@@ -122,50 +120,6 @@ describe('OuiPageHeader', () => {
 
         expect(component).toMatchSnapshot();
       });
-    });
-  });
-
-  describe('deprecation', () => {
-    it('should console 1 deprecation warning without repetition', () => {
-      console.warn = jest.fn();
-
-      const component = mount(<OuiPageHeader iconType="dashboardApp" />);
-      component.setProps({ iconType: 'database' });
-
-      expect(console.warn).toHaveBeenCalledTimes(1);
-      expect(console.warn).toHaveBeenCalledWith(
-        '[DEPRECATED] The `iconType` prop is deprecated and will be removed in v2.0.0.'
-      );
-    });
-
-    it('should console 2 deprecation warning without repetition', () => {
-      console.warn = jest.fn();
-
-      const component = mount(
-        <OuiPageHeader iconType="dashboardApp" iconProps={{ color: 'red' }} />
-      );
-      component.setProps({
-        iconType: 'database',
-        iconProps: { color: 'blue' },
-      });
-
-      const results = [
-        '[DEPRECATED] The `iconType` prop is deprecated and will be removed in v2.0.0.',
-        '[DEPRECATED] The `iconProps` prop is deprecated and will be removed in v2.0.0.',
-      ];
-
-      expect(console.warn).toHaveBeenCalledTimes(2);
-      results.forEach((item) =>
-        expect(console.warn).toHaveBeenCalledWith(item)
-      );
-    });
-
-    it('should not console deprecation warning', () => {
-      console.warn = jest.fn();
-
-      mount(<OuiPageHeader />);
-
-      expect(console.warn).not.toHaveBeenCalled();
     });
   });
 });

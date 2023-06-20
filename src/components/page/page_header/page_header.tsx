@@ -39,7 +39,6 @@ import {
   _OuiPageRestrictWidth,
   setPropsForRestrictedPageWidth,
 } from '../_restrict_width';
-import { useDeprecatedPropWarning } from '../../../utils';
 
 const paddingSizeToClassNameMap = {
   none: null,
@@ -79,8 +78,6 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
 
   // Page header content only props:
   pageTitle,
-  iconType,
-  iconProps,
   tabs,
   tabsProps,
   description,
@@ -92,11 +89,6 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
     restrictWidth,
     style
   );
-
-  useDeprecatedPropWarning({
-    props: { iconType, iconProps },
-    version: '2.0.0',
-  });
 
   const classes = classNames(
     'ouiPageHeader',
@@ -126,8 +118,6 @@ export const OuiPageHeader: FunctionComponent<OuiPageHeaderProps> = ({
         alignItems={alignItems}
         responsive={responsive}
         pageTitle={pageTitle}
-        iconType={iconType}
-        iconProps={iconProps}
         tabs={tabs}
         tabsProps={tabsProps}
         description={description}
