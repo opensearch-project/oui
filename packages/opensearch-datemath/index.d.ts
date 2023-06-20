@@ -5,7 +5,7 @@
  * this file be licensed under the Apache-2.0 license or a
  * compatible open source license.
  *
- * Modifications Copyright OpenSearch Contributors. See
+ * Any modifications Copyright OpenSearch Contributors. See
  * GitHub history for details.
  */
 
@@ -28,48 +28,35 @@
  * under the License.
  */
 
-import dateMath from '@opensearch/datemath';
-import {
-  parseRelativeParts,
-  toRelativeStringFromParts,
-} from './relative_utils';
-import {
-  AbsoluteDateMode,
-  RelativeDateMode,
-  NowDateMode,
-  ShortDate,
-} from '../types';
+import moment from 'moment';
+export type Unit = 'ms' | 's' | 'm' | 'h' | 'd' | 'w' | 'M' | 'y';
 
-export const DATE_MODES: {
-  ABSOLUTE: AbsoluteDateMode;
-  RELATIVE: RelativeDateMode;
-  NOW: NowDateMode;
-} = {
-  ABSOLUTE: 'absolute',
-  RELATIVE: 'relative',
-  NOW: 'now',
+declare const datemath: {
+  unitsMap: {
+    [k in Unit]: {
+      weight: number;
+      type: 'calendar' | 'fixed' | 'mixed';
+      base: number;
+    };
+  };
+  units: Unit[];
+  unitsAsc: Unit[];
+  unitsDesc: Unit[];
+
+  /**
+   * Parses a string into a moment object. The string can be something like "now - 15m".
+   * @param options.forceNow If this optional parameter is supplied, "now" will be treated as this
+   * date, rather than the real "now".
+   */
+  parse(
+    input: string,
+    options?: {
+      roundUp?: boolean;
+      forceNow?: Date;
+      momentInstance?: typeof moment;
+    }
+  ): moment.Moment | undefined;
 };
 
-export function getDateMode(value: ShortDate) {
-  if (value === 'now') {
-    return DATE_MODES.NOW;
-  }
-
-  if (value.includes('now')) {
-    return DATE_MODES.RELATIVE;
-  }
-
-  return DATE_MODES.ABSOLUTE;
-}
-
-export function toAbsoluteString(value: string, roundUp: boolean = false) {
-  const valueAsMoment = dateMath.parse(value, { roundUp });
-  if (!valueAsMoment) {
-    return value;
-  }
-  return valueAsMoment.toISOString();
-}
-
-export function toRelativeString(value: string) {
-  return toRelativeStringFromParts(parseRelativeParts(value));
-}
+// eslint-disable-next-line import/no-default-export
+export default datemath;
