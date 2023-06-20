@@ -9,11 +9,17 @@
  * GitHub history for details.
  */
 
-$ouiPageDefaultMaxWidth: 1000px !default;
-$ouiPageSidebarMinWidth: $ouiSizeL * 8 !default;
+$ouiTooltipBackgroundColor: tintOrShade($ouiColorFullShade, 25%, 100%) !default;
+
+$ouiTooltipAnimations: (
+  top: ouiToolTipTop,
+  left: ouiToolTipBottom,
+  bottom: ouiToolTipLeft,
+  right: ouiToolTipRight,
+) !default;
 
 
 /* OUI -> EUI Aliases */
-$euiPageDefaultMaxWidth: $ouiPageDefaultMaxWidth;
-$euiPageSidebarMinWidth: $ouiPageSidebarMinWidth;
+$euiTooltipBackgroundColor: $ouiTooltipBackgroundColor;
+$euiTooltipAnimations: $ouiTooltipAnimations;
 /* End of Aliases */

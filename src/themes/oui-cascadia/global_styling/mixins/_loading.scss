@@ -9,11 +9,19 @@
  * GitHub history for details.
  */
 
-$ouiPageDefaultMaxWidth: 1000px !default;
-$ouiPageSidebarMinWidth: $ouiSizeL * 8 !default;
+@function ouiLoadingSpinnerBorderColors(
+  $main: $ouiColorLightShade,
+  $highlight: $ouiColorPrimary
+) {
+  @return $highlight $main $main $main;
+}
 
 
 /* OUI -> EUI Aliases */
-$euiPageDefaultMaxWidth: $ouiPageDefaultMaxWidth;
-$euiPageSidebarMinWidth: $ouiPageSidebarMinWidth;
+@function euiLoadingSpinnerBorderColors(
+  $main: $ouiColorLightShade,
+  $highlight: $ouiColorPrimary
+) {
+  @return ouiLoadingSpinnerBorderColors($main, $highlight);
+}
 /* End of Aliases */
