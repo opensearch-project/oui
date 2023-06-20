@@ -46,7 +46,7 @@ $ouiLinkColors: (
 
       &:focus {
         @include ouiFocusBackground($color);
-        @include ouiFocusRing(null, 0);
+        @include ouiFocusRing(null);
       }
     }
   }

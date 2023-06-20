@@ -36,7 +36,7 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
       const destItem = path
         .join(dest, entry.name)
         .replace('oui', 'eui')
-        .replace('cascadia', 'amsterdam');
+        .replace('next', 'amsterdam');
 
       if (entry.isDirectory()) copyDirectory(srcItem, destItem);
       else fs.copyFileSync(srcItem, destItem);
@@ -44,6 +44,6 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
   };
 
   copyDirectory('src/themes/oui', 'src/themes/eui');
-  copyDirectory('src/themes/oui-cascadia', 'src/themes/eui-amsterdam');
+  copyDirectory('src/themes/oui-next', 'src/themes/eui-amsterdam');
 }
 /* End of Aliases */

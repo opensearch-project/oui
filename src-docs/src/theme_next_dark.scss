@@ -10,9 +10,9 @@
  */
 
 // sass-lint:disable no-url-domains, no-url-protocols
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
-@import '../../src/theme_cascadia_light';
+@import '../../src/theme_next_dark';
 @import './components/guide_components';
 @import './services/playground/index';
 @import './views/suggest/global_filter_group';
