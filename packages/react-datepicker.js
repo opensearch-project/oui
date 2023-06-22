@@ -1,3 +1,28 @@
+HTTP/2 200 
+cache-control: max-age=300
+content-security-policy: default-src 'none'; style-src 'unsafe-inline'; sandbox
+content-type: text/plain; charset=utf-8
+etag: "80dc1cd73751f128bde69ec3104715f46afad04f9ade1cf4c39099479bf71b16"
+strict-transport-security: max-age=31536000
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+x-github-request-id: 7664:4D3B:3533D3:3F672F:6494AA1D
+accept-ranges: bytes
+date: Thu, 22 Jun 2023 20:08:16 GMT
+via: 1.1 varnish
+x-served-by: cache-bfi-krnt7300051-BFI
+x-cache: HIT
+x-cache-hits: 1
+x-timer: S1687464496.150922,VS0,VE1
+vary: Authorization,Accept-Encoding,Origin
+access-control-allow-origin: *
+cross-origin-resource-policy: cross-origin
+x-fastly-request-id: 67de64f577119f47cc1936ea50fdfd47159eedf0
+expires: Thu, 22 Jun 2023 20:13:16 GMT
+source-age: 19
+content-length: 310617
+
 /*
  * SPDX-License-Identifier: Apache-2.0
  *
