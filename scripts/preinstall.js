@@ -18,8 +18,10 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
    * be empty.
    */
   const depsToKeep = [
+    '@opensearch',
     '@types',
     'csstype',
+    'detect-node',
     'is-buffer',
     'is-plain-obj',
     'mdast-util-definitions',
@@ -60,7 +62,6 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
     'numeral',
     'prismjs',
     'prop-types',
-    'react',
     'react-beautiful-dnd',
     'react-dom',
     'react-input-autosize',
