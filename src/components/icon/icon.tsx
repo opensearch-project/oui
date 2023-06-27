@@ -55,6 +55,7 @@ const typeToPathMap = {
   alert: 'alert',
   analyzeEvent: 'analyze_event',
   annotation: 'annotation',
+  anomalyDetection: 'anomaly_detection',
   apmApp: 'app_apm',
   apmTrace: 'apm_trace',
   apps: 'apps',
