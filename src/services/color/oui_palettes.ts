@@ -60,7 +60,7 @@ export interface OuiPaletteColorBlindProps {
   /**
    * Order similar colors as `group`s or just `append` each variation
    */
-  order?: 'append' | 'group';
+  order?: 'append' | 'group' | 'middle-out';
   /**
    * Specifies if the direction of the color variations
    */
@@ -132,6 +132,24 @@ export const ouiPaletteColorBlind = ({
       for (let i = 0; i < rotations; i++) {
         const rotation = palettes.map((palette) => palette[i]);
         colors.push(...rotation);
+      }
+    }
+
+    // start with the appended order, then pick from both ends
+    if (order === 'middle-out') {
+      const shadePalettes = [];
+      while (colors.length) {
+        shadePalettes.push(colors.splice(0, base.length));
+      }
+      while (shadePalettes.length) {
+        const firstPalette = shadePalettes.shift();
+        if (firstPalette) {
+          colors.unshift(...firstPalette);
+        }
+        const lastPalette = shadePalettes.pop();
+        if (lastPalette) {
+          colors.unshift(...lastPalette);
+        }
       }
     }
   } else {

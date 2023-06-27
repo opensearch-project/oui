@@ -38,6 +38,16 @@ const customPalettes = [
     code: 'ouiPaletteColorBlind({rotations: 2})',
   },
   {
+    title: 'Lots of colors, with the extremes last',
+    palette: ouiPaletteColorBlind({
+      rotations: 9,
+      direction: 'both',
+      order: 'middle-out',
+    }),
+    code:
+      "ouiPaletteColorBlind({ rotations: 9, direction: 'both', order: 'middle-out' })",
+  },
+  {
     title:
       'Series may have multiple metrics and so the colors must coordinate but be distinguishable',
     palette: ouiPaletteColorBlind({
