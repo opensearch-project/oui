@@ -1,7 +1,29 @@
 # OUI
-## [`main`](https://github.com/opensearch-project/oui/tree/main)
 
-- Add release workflows ([134](https://github.com/opensearch-project/oui/pull/133))
+## [Unreleased](https://github.com/opensearch-project/oui/tree/main)
+
+### 💥 Breaking Changes
+
+### Deprecations
+
+### 🛡 Security
+
+### 📈 Features/Enhancements
+
+### 🐛 Bug Fixes
+
+### 🚞 Infrastructure
+
+- Add release workflows ([#134](https://github.com/opensearch-project/oui/pull/133))
+- Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
+
+### 📝 Documentation
+
+### 🛠 Maintenance
+
+### 🪛 Refactoring
+
+### 🔩 Tests
 
 ## [`1.0.0`](https://github.com/opensearch-project/oui/tree/1.0.0)
 
