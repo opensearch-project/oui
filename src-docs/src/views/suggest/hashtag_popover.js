@@ -71,7 +71,7 @@ export default (props) => {
                 iconType: 'trash',
                 iconSize: 's',
               }}
-              href="#"
+              href="https://oui.opensearch.org/latest/"
               label="Popular shoes in America"
             />
             <OuiListGroupItem
@@ -80,7 +80,7 @@ export default (props) => {
                 iconType: 'trash',
                 iconSize: 's',
               }}
-              href="#"
+              href="https://oui.opensearch.org/latest/"
               label="Popular shirts in Canada"
             />
           </OuiListGroup>

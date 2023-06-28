@@ -102,7 +102,9 @@ const badgeHealthSnippet = [
 import BadgeHref from './badge_href';
 const badgeHrefSource = require('!!raw-loader!./badge_href');
 const badgeHrefHtml = renderToHtml(BadgeHref);
-const badgeHrefSnippet = ['<OuiBadge href="#" />'];
+const badgeHrefSnippet = [
+  '<OuiBadge href="https://oui.opensearch.org/latest/" />',
+];
 
 import BadgeTruncate from './badge_truncate';
 const badgeTruncateSource = require('!!raw-loader!./badge_truncate');

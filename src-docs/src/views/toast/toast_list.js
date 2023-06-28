@@ -62,7 +62,10 @@ export default () => {
             </p>
             <p>
               And some other stuff on another line, just for kicks. And{' '}
-              <OuiLink href="#">here&rsquo;s a link</OuiLink>.
+              <OuiLink href="https://opensearch.org/docs/latest/">
+                here&rsquo;s a link
+              </OuiLink>
+              .
             </p>
           </Fragment>
         ),

@@ -27,10 +27,10 @@ import KeyPadMenu from './key_pad_menu';
 const keyPadMenuSource = require('!!raw-loader!./key_pad_menu');
 const keyPadMenuHtml = renderToHtml(KeyPadMenu);
 const keyPadMenuSnippet = `<OuiKeyPadMenu>
-  <OuiKeyPadMenuItem label={label1} href="#">
+  <OuiKeyPadMenuItem label={label1} href="https://oui.opensearch.org/latest/">
     <OuiIcon type={icon1} size="l" />
   </OuiKeyPadMenuItem>
-  <OuiKeyPadMenuItem label={label2} href="#">
+  <OuiKeyPadMenuItem label={label2} href="https://oui.opensearch.org/latest/">
     <OuiIcon type={icon2} size="l" />
   </OuiKeyPadMenuItem>
 </OuiKeyPadMenu>
@@ -51,7 +51,7 @@ const keyPadBetaSource = require('!!raw-loader!./key_pad_beta');
 const keyPadBetaHtml = renderToHtml(KeyPadBeta);
 const keyPadBetaSnippet = `<OuiKeyPadMenuItem
   label={label}
-  href="#"
+  href="https://oui.opensearch.org/latest/"
   betaBadgeLabel={betaBadgeLabel}
   betaBadgeTooltipContent={tooltipContent}
   betaBadgeIconType={badgeIconType}>

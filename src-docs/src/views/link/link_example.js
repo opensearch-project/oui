@@ -33,9 +33,9 @@ const linkValidationSource = require('!!raw-loader!./link_validation');
 const linkValidationHtml = renderToHtml(LinkValidation);
 
 const linkSnippet = [
-  `<OuiLink href="#"><!-- Link text --></OuiLink>
+  `<OuiLink href="https://oui.opensearch.org/latest/"><!-- Link text --></OuiLink>
 `,
-  `<OuiLink href="#" color="success">
+  `<OuiLink href="https://oui.opensearch.org/latest/" color="success">
   <!-- Colored link text -->
 </OuiLink>
 `,

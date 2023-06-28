@@ -35,7 +35,8 @@ export default () => {
     <OuiCallOut iconType="help">
       <p>
         Here&rsquo;s some stuff that you need to know. This banner helps
-        highlight important information. <OuiLink href="#">View docs</OuiLink>
+        highlight important information.{' '}
+        <OuiLink href="https://oui.opensearch.org/latest/">View docs</OuiLink>
       </p>
     </OuiCallOut>
   );
