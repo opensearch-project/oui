@@ -24,8 +24,6 @@ import {
   OuiHeaderSectionItemButton,
   OuiHeaderLogo,
   OuiCode,
-  OuiHeaderLinks,
-  OuiHeaderLink,
 } from '../../../../src/components';
 
 import { OuiHeaderSectionsProp } from './props';
@@ -36,17 +34,8 @@ const headerSource = require('!!raw-loader!./header');
 import HeaderSections from './header_sections';
 const headerSectionsSource = require('!!raw-loader!./header_sections');
 
-import HeaderPosition from './header_position';
-const headerPositionSource = require('!!raw-loader!./header_position');
-
 import HeaderAlert from './header_alert';
 const headerAlertSource = require('!!raw-loader!./header_alert');
-
-import HeaderAnimate from './header_animate';
-const headerAnimateSource = require('!!raw-loader!./header_animate');
-
-import HeaderLinks from './header_links';
-const headerLinksSource = require('!!raw-loader!./header_links');
 
 import HeaderDark from './header_dark';
 const headerDarkSource = require('!!raw-loader!./header_dark');
@@ -54,8 +43,8 @@ const headerDarkSource = require('!!raw-loader!./header_dark');
 import HeaderStacked from './header_stacked';
 const headerStackedSource = require('!!raw-loader!./header_stacked');
 
-import HeaderElasticPattern from './header_elastic_pattern';
-const headerElasticPatternSource = require('!!raw-loader!./header_elastic_pattern');
+import HeaderOpenSearchPattern from './header_opensearch_pattern';
+const headerOpenSearchPatternSource = require('!!raw-loader!./header_opensearch_pattern');
 
 const headerSnippet = `<OuiHeader>
   <OuiHeaderSection grow={false}>
@@ -91,25 +80,6 @@ const headerSectionsSnippet = `<OuiHeader
   ]}
 />`;
 
-const headerLinksSnippet = `<OuiHeader>
-  <OuiHeaderSectionItem border="right">
-    <OuiHeaderLogo
-      iconType="iconName"
-      href=""
-    />
-  </OuiHeaderSectionItem>
-
-  <OuiHeaderLinks>
-    <OuiHeaderLink href="" isActive>
-      <!-- First link -->
-    </OuiHeaderLink>
-
-    <OuiHeaderLink href="">
-      <!-- Second link -->
-    </OuiHeaderLink>
-  </OuiHeaderLinks>
-</OuiHeader>`;
-
 const headerAlertSnippet = `<OuiHeader>
   <OuiHeaderSection grow={false}>
     <OuiHeaderSectionItem>
@@ -132,31 +102,6 @@ const headerAlertSnippet = `<OuiHeader>
     </OuiHeaderSectionItem>
   </OuiHeaderSection>
 </OuiHeader>`;
-
-const headerAnimateSnippet = `const bellRef = useRef();
-
-// wrapping the 'ouiAnimate' methods to make them available through this component's 'ref'
-const ouiAnimate = useCallback(() => {
-  bellRef.current?.ouiAnimate();
-}, []);
-
-// we're using the useImperativeHandle which allows the child to expose a function to the parent
-useImperativeHandle(
-  ref,
-  () => ({
-    ouiAnimate,
-  }),
-  [ouiAnimate]
-);
-
-const bellButton = (
-  <OuiHeaderSectionItemButton
-    ref={bellRef}
-    aria-label={ariaLabel}
-    notification={notification}>
-    <OuiIcon type="bell" />
-  </OuiHeaderSectionItemButton>
-);`;
 
 export const HeaderExample = {
   title: 'Header',
@@ -264,79 +209,6 @@ export const HeaderExample = {
       },
     },
     {
-      title: 'Header links',
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: headerLinksSource,
-        },
-      ],
-      text: (
-        <>
-          <p>
-            In addition to the components mentioned prior, which lend themselves
-            to more application style navigation patterns,{' '}
-            <strong>OuiHeaderLinks</strong> and <strong>OuiHeaderLink</strong>{' '}
-            supply the ability to inline a list of navigational or menu style
-            links.
-          </p>
-          <p>
-            <strong>OuiHeaderLinks</strong> comes with responsive functionality
-            built-in which will convert the inline list of links to a popover
-            list triggered by a <strong>OuiHeaderSectionItemButton</strong>. You
-            can adjust at which breakpoints to switch to the popover display by
-            passing your own array of named breakpoints to{' '}
-            <OuiCode>popoverBreakpoints</OuiCode>.
-          </p>
-        </>
-      ),
-      props: {
-        OuiHeaderLinks,
-        OuiHeaderLink,
-      },
-      snippet: headerLinksSnippet,
-      demo: <HeaderLinks />,
-      demoPanelProps: {
-        color: 'subdued',
-      },
-    },
-    {
-      title: 'Fixed header',
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: headerPositionSource,
-        },
-      ],
-      text: (
-        <>
-          <p>
-            Most consumers need a header that does not scroll away with the page
-            contents. You can apply this display by applying the property{' '}
-            <OuiCode language="ts">{'position="fixed"'}</OuiCode>. This will
-            also add a class of <OuiCode>.ouiBody--headerIsFixed</OuiCode> to
-            the window body.
-          </p>
-          <p>
-            You will then need to apply your own padding to this body class to
-            afford for the header height. OUI supplies a helper mixin that also
-            accounts for this height in flyouts and the collapsible nav. Simply
-            add{' '}
-            <OuiCode language="sass">@include ouiHeaderAffordForFixed;</OuiCode>{' '}
-            anywhere in your SASS.
-          </p>
-        </>
-      ),
-      snippet: [
-        '<OuiHeader position="fixed" />',
-        '@include ouiHeaderAffordForFixed;',
-      ],
-      demo: <HeaderPosition />,
-      demoPanelProps: {
-        color: 'subdued',
-      },
-    },
-    {
       title: 'Dark theme',
       source: [
         {
@@ -418,38 +290,6 @@ export const HeaderExample = {
       },
     },
     {
-      title: 'Header notifications',
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: headerAnimateSource,
-        },
-      ],
-      text: (
-        <>
-          <p>
-            To alert or notify users about the additional information they are
-            receiving, use the <strong>OuiHeaderSectionItemButton</strong>{' '}
-            <OuiCode>notification</OuiCode> prop. You can pass a{' '}
-            <OuiCode>node</OuiCode> that will render inside a{' '}
-            <strong>OuiBadgeNotification</strong> or pass{' '}
-            <OuiCode>true</OuiCode> to render a simple dot. You can also animate
-            the button by calling the <OuiCode>ouiAnimate()</OuiCode> method on
-            the <strong>OuiHeaderSectionItemButton</strong>{' '}
-            <OuiCode>ref</OuiCode>.
-          </p>
-        </>
-      ),
-      props: {
-        OuiHeaderSectionItemButton,
-      },
-      snippet: headerAnimateSnippet,
-      demo: <HeaderAnimate />,
-      demoPanelProps: {
-        color: 'subdued',
-      },
-    },
-    {
       title: 'Stacked headers',
       source: [
         {
@@ -482,7 +322,7 @@ export const HeaderExample = {
       source: [
         {
           type: GuideSectionTypes.JS,
-          code: headerElasticPatternSource,
+          code: headerOpenSearchPatternSource,
         },
       ],
       text: (
@@ -508,7 +348,7 @@ export const HeaderExample = {
       ),
       fullScreen: {
         slug: 'opensearch-pattern',
-        demo: <HeaderElasticPattern theme={lightColors} />,
+        demo: <HeaderOpenSearchPattern theme={lightColors} />,
       },
     },
   ],
