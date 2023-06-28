@@ -58,7 +58,7 @@ const columns = [
       render: (item) => (
         <span>
           {item.firstName}{' '}
-          <OuiLink href="#" target="_blank">
+          <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
             {item.lastName}
           </OuiLink>
         </span>
@@ -73,7 +73,7 @@ const columns = [
     field: 'lastName',
     name: 'Last Name',
     render: (name) => (
-      <OuiLink href="#" target="_blank">
+      <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
         {name}
       </OuiLink>
     ),
@@ -99,7 +99,7 @@ const customColumns = [
       render: (item) => (
         <span>
           {item.firstName}{' '}
-          <OuiLink href="#" target="_blank">
+          <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
             {item.lastName}
           </OuiLink>
         </span>
@@ -114,7 +114,7 @@ const customColumns = [
     field: 'lastName',
     name: 'Last Name',
     render: (name) => (
-      <OuiLink href="#" target="_blank">
+      <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
         {name}
       </OuiLink>
     ),

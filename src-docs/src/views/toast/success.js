@@ -33,7 +33,10 @@ export default () => (
 
     <p>
       And some other stuff on another line, just for kicks. And{' '}
-      <OuiLink href="#">here&rsquo;s a link</OuiLink>.
+      <OuiLink href="https://oui.opensearch.org/latest/">
+        here&rsquo;s a link
+      </OuiLink>
+      .
     </p>
 
     <OuiFlexGroup justifyContent="flexEnd" gutterSize="s">

@@ -23,7 +23,7 @@ export default () => (
       </OuiLink>
       .
     </p>
-    <OuiButton href="#" color="warning">
+    <OuiButton href="https://opensearch.org/docs/latest/" color="warning">
       Link button
     </OuiButton>
   </OuiCallOut>
