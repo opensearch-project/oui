@@ -18,7 +18,6 @@ export default ({ button = <></>, content, sideNav, bottomBar }) => {
     <OuiPageTemplate
       pageSideBar={sideNav}
       pageHeader={{
-        iconType: 'logoOpenSearch',
         pageTitle: 'Page title',
         rightSideItems: [button],
       }}
