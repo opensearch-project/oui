@@ -50,12 +50,14 @@ for (let i = 1; i < 100; i++) {
       '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
     ),
     email: (
-      <OuiLink href="">{faker.helpers.fake('{{internet.email}}')}</OuiLink>
+      <OuiLink href="https://oui.opensearch.org/latest/">
+        {faker.helpers.fake('{{internet.email}}')}
+      </OuiLink>
     ),
     location: (
       <Fragment>
         {`${faker.helpers.fake('{{location.city}}')}, `}
-        <OuiLink href="https://google.com">
+        <OuiLink href="https://oui.opensearch.org/latest/">
           {faker.helpers.fake('{{location.country}}')}
         </OuiLink>
       </Fragment>

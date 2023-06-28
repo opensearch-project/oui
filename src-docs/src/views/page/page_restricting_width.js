@@ -27,7 +27,7 @@ export default ({ button = <></>, content, sideNav }) => {
         {sideNav}
       </OuiPageSideBar>
 
-      <OuiPageBody panelled>
+      <OuiPageBody>
         <OuiPageHeader
           restrictWidth={'75%'}
           pageTitle="Page title"
