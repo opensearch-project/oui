@@ -37,7 +37,8 @@ export default () => (
             <OuiSpacer size="xs" />
             <OuiText size="s">
               <p>
-                Choice <OuiLink href="https://opensearch.org">Two</OuiLink>
+                Choice{' '}
+                <OuiLink href="https://oui.opensearch.org/latest/">Two</OuiLink>
               </p>
             </OuiText>
           </div>
@@ -55,7 +56,8 @@ export default () => (
             <OuiSpacer size="xs" />
             <OuiText size="s">
               <p>
-                Choice <OuiLink href="https://opensearch.org">Two</OuiLink>
+                Choice{' '}
+                <OuiLink href="https://oui.opensearch.org/latest/">Two</OuiLink>
               </p>
             </OuiText>
           </div>
@@ -73,7 +75,8 @@ export default () => (
             <OuiSpacer size="xs" />
             <OuiText size="s">
               <p>
-                Choice <OuiLink href="https://opensearch.org">Two</OuiLink>
+                Choice{' '}
+                <OuiLink href="https://oui.opensearch.org/latest/">Two</OuiLink>
               </p>
             </OuiText>
           </div>

@@ -29,9 +29,8 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
-import { requiredProps } from '../../test/required_props';
-
+import { render, mount } from 'enzyme';
+import { requiredProps } from '../../test';
 import { OuiLoadingKibana, SIZES } from './loading_kibana';
 
 describe('OuiLoadingKibana', () => {
@@ -44,10 +43,23 @@ describe('OuiLoadingKibana', () => {
   describe('size', () => {
     SIZES.forEach((size) => {
       test(`${size} is rendered`, () => {
-        const component = render(<OuiLoadingKibana size={size} />);
+        const component = render(
+          <OuiLoadingKibana {...requiredProps} size={size} />
+        );
 
         expect(component).toMatchSnapshot();
       });
     });
+  });
+
+  it('should console deprecation warning', () => {
+    console.warn = jest.fn();
+
+    mount(<OuiLoadingKibana {...requiredProps} />);
+
+    expect(console.warn).toHaveBeenCalledTimes(1);
+    expect(console.warn).toHaveBeenCalledWith(
+      '[DEPRECATED] OuiLoadingKibana is deprecated in favor of OuiLoadingLogo and will be removed in v2.0.0.'
+    );
   });
 });

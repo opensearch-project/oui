@@ -14,7 +14,7 @@ import React, { useState } from 'react';
 import { OuiComboBox } from '../../../../src/components';
 
 export default () => {
-  const [options, updateOptions] = useState([
+  const [options] = useState([
     {
       label: 'Titan',
       'data-test-subj': 'titanOption',
@@ -55,38 +55,12 @@ export default () => {
     setSelected(selectedOptions);
   };
 
-  const onCreateOption = (searchValue, flattenedOptions) => {
-    const normalizedSearchValue = searchValue.trim().toLowerCase();
-
-    if (!normalizedSearchValue) {
-      return;
-    }
-
-    const newOption = {
-      label: searchValue,
-    };
-
-    // Create the option if it doesn't exist.
-    if (
-      flattenedOptions.findIndex(
-        (option) => option.label.trim().toLowerCase() === normalizedSearchValue
-      ) === -1
-    ) {
-      updateOptions([...options, newOption]);
-    }
-
-    // Select the option.
-    setSelected((prevSelected) => [...prevSelected, newOption]);
-  };
-
   return (
     <OuiComboBox
-      placeholder="Select or create options"
+      placeholder="Select one or more options"
       options={options}
-      selectedOptions={selectedOptions}
       onChange={onChange}
-      onCreateOption={onCreateOption}
-      isClearable={true}
+      selectedOptions={selectedOptions}
       clearOnBlur={true}
     />
   );

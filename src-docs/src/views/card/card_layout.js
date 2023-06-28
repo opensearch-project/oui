@@ -45,7 +45,7 @@ export default () => (
         title={'No icon example'}
         description="Example of a card's description. Stick to one or two sentences."
         onClick={() => {}}
-        href="#"
+        href="https://oui.opensearch.org/latest/"
       />
     </OuiFlexItem>
   </OuiFlexGroup>

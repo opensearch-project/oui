@@ -148,8 +148,12 @@ export const OuiPanel: FunctionComponent<OuiPanelProps> = ({
     borderRadiusToClassNameMap[borderRadius],
     `ouiPanel--${color}`,
     {
+      /* ToDo: Remove unnecessary logic: the old beta theme has
+       * evolved and the statement below about the `Next` theme
+       * is not valid.
+       */
       // The `no` classes turn off the option for default theme
-      // While the `has` classes turn it on for Cascadia
+      // While the `has` classes turn it on for Next
       'ouiPanel--hasShadow': canHaveShadow && hasShadow === true,
       'ouiPanel--noShadow': !canHaveShadow || hasShadow === false,
       'ouiPanel--hasBorder': canHaveBorder && hasBorder === true,

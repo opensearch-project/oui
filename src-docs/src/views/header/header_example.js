@@ -95,16 +95,16 @@ const headerLinksSnippet = `<OuiHeader>
   <OuiHeaderSectionItem border="right">
     <OuiHeaderLogo
       iconType="iconName"
-      href=""
+      href="https://oui.opensearch.org/latest/"
     />
   </OuiHeaderSectionItem>
 
   <OuiHeaderLinks>
-    <OuiHeaderLink href="" isActive>
+    <OuiHeaderLink href="https://oui.opensearch.org/latest/" isActive>
       <!-- First link -->
     </OuiHeaderLink>
 
-    <OuiHeaderLink href="">
+    <OuiHeaderLink href="https://oui.opensearch.org/latest/">
       <!-- Second link -->
     </OuiHeaderLink>
   </OuiHeaderLinks>
@@ -478,7 +478,7 @@ export const HeaderExample = {
       },
     },
     {
-      title: 'The Elastic navigation pattern',
+      title: 'The OpenSearch navigation pattern',
       source: [
         {
           type: GuideSectionTypes.JS,
@@ -507,7 +507,7 @@ export const HeaderExample = {
         </>
       ),
       fullScreen: {
-        slug: 'elastic-pattern',
+        slug: 'opensearch-pattern',
         demo: <HeaderElasticPattern theme={lightColors} />,
       },
     },

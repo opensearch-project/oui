@@ -38,7 +38,7 @@ import React, {
   RefCallback,
 } from 'react';
 import classNames from 'classnames';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 
 import { CommonProps, NoArgCallback } from '../common';
 import { FocusTarget, OuiFocusTrap, OuiFocusTrapProps } from '../focus_trap';

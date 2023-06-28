@@ -18,7 +18,6 @@ export default ({ button = <></>, content }) => (
     template="centeredContent"
     pageContentProps={{ paddingSize: 'none' }}
     pageHeader={{
-      iconType: 'logoElastic',
       pageTitle: 'Page title',
       rightSideItems: [button],
     }}>

@@ -37,7 +37,7 @@ import React, {
 } from 'react';
 import classnames from 'classnames';
 import { keys } from '../../services';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 import { OuiDataGridControlColumn } from './data_grid_types';
 import { DataGridFocusContext } from './data_grid_context';
 

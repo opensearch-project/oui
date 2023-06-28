@@ -4,7 +4,7 @@ reports/
 tmp/
 wiki/
 generator-oui/
-test/
+/test/
 src-docs/
 packages/react-datepicker
 packages/eslint-plugin
@@ -13,8 +13,8 @@ packages/eslint-plugin
 # typescript output
 types/
 
-# ignore everything in `scripts` except postinstall.js
-scripts/!(postinstall.js)
+# ignore everything in `scripts` except postinstall.js and preinstall.js
+scripts/!(postinstall.js|preinstall.js)
 
 src/**/*.!(scss)
 
