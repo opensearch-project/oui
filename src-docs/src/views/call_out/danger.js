@@ -17,7 +17,10 @@ export default () => (
   <OuiCallOut title="There was an error" color="danger" iconType="alert">
     <p>
       Now you have to fix it, but maybe{' '}
-      <OuiLink href="#">this link can help</OuiLink>.
+      <OuiLink href="https://opensearch.org/docs/latest/">
+        this link can help
+      </OuiLink>
+      .
     </p>
   </OuiCallOut>
 );

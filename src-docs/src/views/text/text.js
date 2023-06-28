@@ -19,10 +19,10 @@ export default () => (
       <h1>This is Heading One</h1>
       <p>
         Veniam et quis in dolor aliqua dolor laboris nostrud nostrud Lorem.
-        <a href="#">unfashionable</a> Irure et et adipisicing eu mollit. Ullamco
-        laborum cillum ea id occaecat cupidatat ex dolor consequat ex mollit do.
-        Irure commodo incididunt reprehenderit deserunt cillum quis ad nostrud!{' '}
-        <code>const whoa = &quot;!&quot;</code>
+        Irure et et <a href="https://oui.opensearch.org/latest/">adipisicing</a>{' '}
+        eu mollit. Ullamco laborum cillum ea id occaecat cupidatat ex dolor
+        consequat ex mollit do. Irure commodo incididunt reprehenderit deserunt
+        cillum quis ad nostrud! <code>const whoa = &quot;!&quot;</code>
       </p>
 
       <pre>

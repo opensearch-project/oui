@@ -28,7 +28,7 @@ export default () => {
   const renderLogo = (
     <OuiHeaderLogo
       iconType="logoOpenSearch"
-      href="#"
+      href="https://oui.opensearch.org/latest/"
       onClick={(e) => e.preventDefault()}
       aria-label="Navigate to home page"
     />

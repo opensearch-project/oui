@@ -40,7 +40,7 @@
   text-align-last: left;
 
   &:focus {
-    @include ouiFocusRing('small', 'inner');
+    @include ouiFocusRing('small');
   }
 
   &:hover,

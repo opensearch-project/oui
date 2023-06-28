@@ -1,0 +1,56 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Prefixes are unique in this file
+// sass-lint:disable no-vendor-prefixes
+
+@mixin ouiRangeTrackSize {
+  height: $ouiRangeTrackHeight;
+  transition: all $ouiAnimSpeedNormal ease-in;
+  width: $ouiRangeTrackWidth;
+}
+
+@mixin ouiRangeTrackPerBrowser {
+  &::-webkit-slider-runnable-track { @content; }
+  &::-moz-range-track { @content; }
+  &::-ms-fill-lower { @content; }
+  &::-ms-fill-upper { @content; }
+}
+
+@mixin ouiRangeThumbStyle {
+  cursor: pointer;
+  border-color: $ouiRangeThumbBorderColor;
+  padding: 0;
+  height: $ouiRangeThumbHeight;
+  width: $ouiRangeThumbWidth;
+}
+
+@mixin ouiRangeThumbPerBrowser {
+  &::-webkit-slider-thumb { @content; }
+  &::-moz-range-thumb { @content; }
+  &::-ms-thumb { @content; }
+}
+
+
+/* OUI -> EUI Aliases */
+@mixin euiRangeTrackSize { @include ouiRangeTrackSize; }
+@mixin euiRangeTrackPerBrowser {
+  @include ouiRangeTrackPerBrowser {
+    @content;
+  }
+}
+@mixin euiRangeThumbStyle { @include ouiRangeThumbStyle; }
+@mixin euiRangeThumbPerBrowser {
+  @include ouiRangeThumbPerBrowser {
+    @content;
+  }
+}
+/* End of Aliases */

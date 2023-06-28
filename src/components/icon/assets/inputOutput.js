@@ -10,13 +10,12 @@
  */
 
 import * as React from 'react';
-
 const OuiIconInputOutput = ({ title, titleId, ...props }) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
     width={16}
     height={16}
     viewBox="0 0 16 16"
-    xmlns="http://www.w3.org/2000/svg"
     aria-labelledby={titleId}
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
@@ -25,5 +24,4 @@ const OuiIconInputOutput = ({ title, titleId, ...props }) => (
     <path d="M5.5 6.5v6l-3-3zM7 7V6h6.5v1z" />
   </svg>
 );
-
 export const icon = OuiIconInputOutput;

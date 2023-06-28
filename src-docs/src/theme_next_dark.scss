@@ -1,0 +1,21 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// sass-lint:disable no-url-domains, no-url-protocols
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+@import '../../src/theme_next_dark';
+@import './components/guide_components';
+@import './services/playground/index';
+@import './views/suggest/global_filter_group';
+
+// Elastic charts
+@import '~@elastic/charts/dist/theme';

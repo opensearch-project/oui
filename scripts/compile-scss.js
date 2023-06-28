@@ -82,9 +82,9 @@ async function compileScssFiles(
         const { name } = path.parse(inputFilename);
         const outputFilenames = await compileScssFile(
           inputFilename,
-          path.join(destinationDirectory, `eui_${name.replace('cascadia', 'amsterdam')}.css`),
-          path.join(destinationDirectory, `eui_${name.replace('cascadia', 'amsterdam')}.json`),
-          path.join(destinationDirectory, `eui_${name.replace('cascadia', 'amsterdam')}.json.d.ts`),
+          path.join(destinationDirectory, `eui_${name.replace('next', 'amsterdam')}.css`),
+          path.join(destinationDirectory, `eui_${name.replace('next', 'amsterdam')}.json`),
+          path.join(destinationDirectory, `eui_${name.replace('next', 'amsterdam')}.json.d.ts`),
           packageName,
           true
         );

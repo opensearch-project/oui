@@ -191,6 +191,7 @@ exports[`OuiMarkdownEditor is rendered 1`] = `
   >
     <div
       class="ouiMarkdownEditorDropZone"
+      role="presentation"
     >
       <textarea
         aria-label="aria-label"
@@ -219,7 +220,6 @@ exports[`OuiMarkdownEditor is rendered 1`] = `
         </button>
       </div>
       <input
-        autocomplete="off"
         multiple=""
         style="display:none"
         tabindex="-1"
@@ -421,6 +421,7 @@ exports[`OuiMarkdownEditor props autoExpandPreview is rendered with false 1`] = 
   >
     <div
       class="ouiMarkdownEditorDropZone"
+      role="presentation"
     >
       <textarea
         aria-label="aria-label"
@@ -449,7 +450,6 @@ exports[`OuiMarkdownEditor props autoExpandPreview is rendered with false 1`] = 
         </button>
       </div>
       <input
-        autocomplete="off"
         multiple=""
         style="display:none"
         tabindex="-1"
@@ -651,6 +651,7 @@ exports[`OuiMarkdownEditor props height is rendered in full mode 1`] = `
   >
     <div
       class="ouiMarkdownEditorDropZone"
+      role="presentation"
     >
       <textarea
         aria-label="aria-label"
@@ -679,7 +680,6 @@ exports[`OuiMarkdownEditor props height is rendered in full mode 1`] = `
         </button>
       </div>
       <input
-        autocomplete="off"
         multiple=""
         style="display:none"
         tabindex="-1"
@@ -881,6 +881,7 @@ exports[`OuiMarkdownEditor props height is rendered with a custom size 1`] = `
   >
     <div
       class="ouiMarkdownEditorDropZone"
+      role="presentation"
     >
       <textarea
         aria-label="aria-label"
@@ -909,7 +910,6 @@ exports[`OuiMarkdownEditor props height is rendered with a custom size 1`] = `
         </button>
       </div>
       <input
-        autocomplete="off"
         multiple=""
         style="display:none"
         tabindex="-1"
@@ -1111,6 +1111,7 @@ exports[`OuiMarkdownEditor props maxHeight is rendered with a custom size 1`] = 
   >
     <div
       class="ouiMarkdownEditorDropZone"
+      role="presentation"
     >
       <textarea
         aria-label="aria-label"
@@ -1139,7 +1140,6 @@ exports[`OuiMarkdownEditor props maxHeight is rendered with a custom size 1`] = 
         </button>
       </div>
       <input
-        autocomplete="off"
         multiple=""
         style="display:none"
         tabindex="-1"

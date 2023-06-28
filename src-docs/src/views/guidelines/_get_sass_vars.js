@@ -11,17 +11,17 @@
 
 import lightColors from '!!sass-vars-to-js-loader!../../../../src/global_styling/variables/_colors.scss';
 import darkColors from '!!sass-vars-to-js-loader!../../../../src/themes/oui/oui_colors_dark.scss';
-import lightCascadiaColors from '!!sass-vars-to-js-loader!../../../../src/themes/oui-cascadia/oui_cascadia_colors_light.scss';
-import darkCascadiaColors from '!!sass-vars-to-js-loader!../../../../src/themes/oui-cascadia/oui_cascadia_colors_dark.scss';
+import lightNextColors from '!!sass-vars-to-js-loader!../../../../src/themes/oui-next/oui_next_colors_light.scss';
+import darkNextColors from '!!sass-vars-to-js-loader!../../../../src/themes/oui-next/oui_next_colors_dark.scss';
 
 export const getSassVars = (theme) => {
   let palette;
   switch (theme) {
-    case 'cascadia-dark':
-      palette = { ...darkColors, ...darkCascadiaColors };
+    case 'next-dark':
+      palette = { ...darkColors, ...darkNextColors };
       break;
-    case 'cascadia-light':
-      palette = { ...lightColors, ...lightCascadiaColors };
+    case 'next-light':
+      palette = { ...lightColors, ...lightNextColors };
       break;
     case 'dark':
       palette = darkColors;

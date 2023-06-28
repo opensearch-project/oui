@@ -27,10 +27,9 @@ export default ({ button = <></>, content, sideNav }) => {
         {sideNav}
       </OuiPageSideBar>
 
-      <OuiPageBody panelled>
+      <OuiPageBody>
         <OuiPageHeader
           restrictWidth={'75%'}
-          iconType="logoOpenSearch"
           pageTitle="Page title"
           rightSideItems={[button]}
           description="Restricting the width to 75%."

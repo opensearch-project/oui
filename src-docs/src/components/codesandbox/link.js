@@ -59,11 +59,11 @@ export const CodeSandboxLinkComponent = ({
 }) => {
   let cssFile;
   switch (context.theme) {
-    case 'cascadia-light':
-      cssFile = '@opensearch-project/oui/dist/oui_theme_cascadia_light.css';
+    case 'next-light':
+      cssFile = '@opensearch-project/oui/dist/oui_theme_next_light.css';
       break;
-    case 'cascadia-dark':
-      cssFile = '@opensearch-project/oui/dist/oui_theme_cascadia_dark.css';
+    case 'next-dark':
+      cssFile = '@opensearch-project/oui/dist/oui_theme_next_dark.css';
       break;
     case 'dark':
       cssFile = '@opensearch-project/oui/dist/oui_theme_dark.css';
@@ -152,7 +152,7 @@ ${exampleClose}
           dependencies: {
             '@opensearch-project/oui': pkg.version,
             ...[
-              '@elastic/datemath',
+              '@opensearch/datemath',
               'moment',
               'react',
               'react-dom',

@@ -19,13 +19,13 @@ import {
   OuiButton,
   OuiSpacer,
 } from '../../../../src/components';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 const text = (
   <>
-    <p>{fake('{{lorem.paragraphs}}')}</p>
-    <p>{fake('{{lorem.paragraphs}}')}</p>
-    <p>{fake('{{lorem.paragraphs}}')}</p>
+    <p>{faker.helpers.fake('{{lorem.paragraphs}}')}</p>
+    <p>{faker.helpers.fake('{{lorem.paragraphs}}')}</p>
+    <p>{faker.helpers.fake('{{lorem.paragraphs}}')}</p>
   </>
 );
 

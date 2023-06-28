@@ -20,12 +20,12 @@ import {
   OuiSpacer,
   OuiPage,
 } from '../../../../src/components';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 const texts = [];
 
 for (let i = 0; i < 4; i++) {
-  texts.push(<p>{fake('{{lorem.paragraph}}')}</p>);
+  texts.push(<p>{faker.helpers.fake('{{lorem.paragraph}}')}</p>);
 }
 
 export default () => {
