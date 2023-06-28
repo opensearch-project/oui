@@ -13,6 +13,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - id: get_data
+        run: |
+          echo "approvers=$(cat .github/CODEOWNERS | grep @ | tr -d '* ' | sed 's/@/,/g' | sed 's/,//1')" >> $GITHUB_OUTPUT
+          echo "version=$(cat package.json | grep '"version": "[^ ]\+"' | cut -c15- | cut -d'"' -f1)" >> $GITHUB_OUTPUT
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ github.TOKEN }}
+          approvers: ${{ steps.get_data.outputs.approvers }}
+          minimum-approvals: 2
+          issue-title: 'Release OUI: ${{ steps.get_data.outputs.version }}'
+          issue-body: "Please approve or deny the release of OUI. **VERSION**: ${{ steps.get_data.outputs.version }} **TAG**: ${{ github.ref_name }}  **COMMIT**: ${{ github.sha }}"
+          exclude-workflow-initiator-as-approver: true
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
