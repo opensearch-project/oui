@@ -16,6 +16,7 @@
 
 - Add release workflows ([#134](https://github.com/opensearch-project/oui/pull/133))
 - Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
+- Upgrade the backport workflow ([#862](https://github.com/opensearch-project/oui/pull/862))
 
 ### 📝 Documentation
 
