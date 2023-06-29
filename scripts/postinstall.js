@@ -26,7 +26,7 @@ const { INIT_CWD, PWD = process.cwd() } = process.env;
 if (!INIT_CWD?.startsWith?.(PWD)) {
   // Clean up and recreate the folders
   fs.rmSync('src/themes/eui', { recursive: true, force: true });
-  fs.rmSync('src/themes/eui-amsterdam', { recursive: true, force: true });
+  fs.rmSync('src/themes/eui-next', { recursive: true, force: true });
 
   const copyDirectory = (src, dest) => {
     fs.mkdirSync(dest, { recursive: true });
@@ -35,8 +35,7 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
       const srcItem = path.join(src, entry.name);
       const destItem = path
         .join(dest, entry.name)
-        .replace('oui', 'eui')
-        .replace('next', 'amsterdam');
+        .replace('oui', 'eui');
 
       if (entry.isDirectory()) copyDirectory(srcItem, destItem);
       else fs.copyFileSync(srcItem, destItem);
@@ -44,6 +43,6 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
   };
 
   copyDirectory('src/themes/oui', 'src/themes/eui');
-  copyDirectory('src/themes/oui-next', 'src/themes/eui-amsterdam');
+  copyDirectory('src/themes/oui-next', 'src/themes/eui-next');
 }
 /* End of Aliases */
