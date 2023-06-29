@@ -9,6 +9,8 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
+- Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
+
 
 ### 🐛 Bug Fixes
 
