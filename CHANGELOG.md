@@ -10,6 +10,7 @@
 
 ### 📈 Features/Enhancements
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
+- Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
 
 
 ### 🐛 Bug Fixes
