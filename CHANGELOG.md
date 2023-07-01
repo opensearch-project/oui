@@ -10,7 +10,7 @@
 
 ### 📈 Features/Enhancements
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
-
+- Allow to portale BottomBar to any referenced DOM element ([#758](https://github.com/opensearch-project/oui/pull/758))
 
 ### 🐛 Bug Fixes
 
