@@ -183,7 +183,7 @@ const delimiterSnippet = `<OuiComboBox
 />`;
 
 import WithIcon from './combo_box_icon';
-const withIconSource = require('!!raw-loader!./combo_box_icon');
+const withIconSource = require('./combo_box_icon?raw');
 const withIconHtml = renderToHtml(WithIcon);
 const withIconSnippet = `<OuiComboBox
   placeholder="Select or create options"
@@ -231,7 +231,7 @@ const clearOnBlurSnippet = `<OuiComboBox
 />`;
 
 import ComboBoxDefaultIcon from './combo_box_default_icon';
-const comboBoxDefaultIconSource = require('!!raw-loader!./combo_box_default_icon');
+const comboBoxDefaultIconSource = require('./combo_box_default_icon?raw');
 const comboBoxDefaultIconSourceOptionsHtml = renderToHtml(ComboBoxDefaultIcon);
 const comboBoxDefaultIconSnippet = `<OuiComboBox
   placeholder="Select one or more options"
@@ -242,7 +242,7 @@ const comboBoxDefaultIconSnippet = `<OuiComboBox
 />`;
 
 import ComboBoxCustomIcon from './combo_box_custom_icon';
-const comboBoxCustomIconSource = require('!!raw-loader!./combo_box_custom_icon');
+const comboBoxCustomIconSource = require('./combo_box_custom_icon?raw');
 const comboBoxCustomIconSourceOptionsHtml = renderToHtml(ComboBoxCustomIcon);
 const comboBoxCustomIconSnippet = `<OuiComboBox
   placeholder="Select one or more options"
