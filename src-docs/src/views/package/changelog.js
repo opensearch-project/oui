@@ -15,7 +15,7 @@ import { OuiMarkdownFormat } from '../../../../src';
 import { GuidePage } from '../../components/guide_page';
 
 const changelogSource = require('../../../../CHANGELOG.md?raw').replace(
-  /## \[`main`\].+?##/s, // remove the `master` heading & contents
+  /## \[`main`\].+?##/s, // remove the `main` heading & contents
   '##'
 );
 
