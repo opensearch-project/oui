@@ -23,6 +23,7 @@
 ### 📝 Documentation
 
 ### 🛠 Maintenance
+- Bump webpack to v5
 
 ### 🪛 Refactoring
 
