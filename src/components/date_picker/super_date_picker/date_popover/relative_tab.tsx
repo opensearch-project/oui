@@ -29,7 +29,7 @@
  */
 
 import React, { Component, ChangeEventHandler } from 'react';
-import dateMath from '@elastic/datemath';
+import dateMath from '@opensearch/datemath';
 import { toSentenceCase } from '../../../../services/string/to_case';
 import { htmlIdGenerator } from '../../../../services';
 import { OuiFlexGroup, OuiFlexItem } from '../../../flex';

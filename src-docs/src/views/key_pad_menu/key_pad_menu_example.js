@@ -27,10 +27,10 @@ import KeyPadMenu from './key_pad_menu';
 const keyPadMenuSource = require('!!raw-loader!./key_pad_menu');
 const keyPadMenuHtml = renderToHtml(KeyPadMenu);
 const keyPadMenuSnippet = `<OuiKeyPadMenu>
-  <OuiKeyPadMenuItem label={label1} href="#">
+  <OuiKeyPadMenuItem label={label1} href="https://oui.opensearch.org/latest/">
     <OuiIcon type={icon1} size="l" />
   </OuiKeyPadMenuItem>
-  <OuiKeyPadMenuItem label={label2} href="#">
+  <OuiKeyPadMenuItem label={label2} href="https://oui.opensearch.org/latest/">
     <OuiIcon type={icon2} size="l" />
   </OuiKeyPadMenuItem>
 </OuiKeyPadMenu>
@@ -51,7 +51,7 @@ const keyPadBetaSource = require('!!raw-loader!./key_pad_beta');
 const keyPadBetaHtml = renderToHtml(KeyPadBeta);
 const keyPadBetaSnippet = `<OuiKeyPadMenuItem
   label={label}
-  href="#"
+  href="https://oui.opensearch.org/latest/"
   betaBadgeLabel={betaBadgeLabel}
   betaBadgeTooltipContent={tooltipContent}
   betaBadgeIconType={badgeIconType}>
@@ -122,7 +122,7 @@ export const KeyPadMenuExample = {
       demo: <KeyPadMenuItemButton />,
     },
     {
-      title: 'Beta item',
+      title: 'Experimental item',
       source: [
         {
           type: GuideSectionTypes.JS,
@@ -136,16 +136,14 @@ export const KeyPadMenuExample = {
       text: (
         <div>
           <p>
-            If the item links to a module that is not GA (beta, lab, etc), you
-            can add a <OuiCode>betaBadgeLabel</OuiCode> and{' '}
+            If the item links to a module that is not GA (experimental, lab,
+            etc), you can add a <OuiCode>betaBadgeLabel</OuiCode> and{' '}
             <OuiCode>betaBadgeTooltipContent</OuiCode> to the card and it will
             properly create and position an <strong>OuiBetaBadge</strong>.
           </p>
           <p>
-            Supplying just a label will only show the first letter in the badge
-            and supply the full label to the tooltip. You can also pass an{' '}
-            <OuiCode>iconType</OuiCode> to replace the letter only badge and the
-            label will still become the title.
+            You can pass an <OuiCode>iconType</OuiCode> and the label will
+            become the title.
           </p>
         </div>
       ),

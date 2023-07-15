@@ -167,9 +167,7 @@ export const CommentListExample = {
           <p>
             Change the type to <OuiCode>update</OuiCode> to display comments
             that generally do not have a body and are logging actions that
-            either the user or the system has performed (e.g. &ldquo;jsmith
-            edited a case&rdquo; or &ldquo;kibanamachine added the review
-            label&rdquo;).
+            either the user or the system has performed.
           </p>
         </div>
       ),

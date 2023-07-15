@@ -19,19 +19,28 @@ import {
 
 export default () => (
   <OuiKeyPadMenu>
-    <OuiKeyPadMenuItem label="Dashboard" href="#">
+    <OuiKeyPadMenuItem
+      label="Dashboard"
+      href="https://oui.opensearch.org/latest/">
       <OuiIcon type="dashboardApp" size="l" />
     </OuiKeyPadMenuItem>
 
-    <OuiKeyPadMenuItem label="Dashboard" href="#">
+    <OuiKeyPadMenuItem
+      label="Dashboard"
+      href="https://oui.opensearch.org/latest/">
       <OuiIcon type="dashboardApp" size="l" />
     </OuiKeyPadMenuItem>
 
-    <OuiKeyPadMenuItem label="Dashboard" href="#">
+    <OuiKeyPadMenuItem
+      label="Dashboard"
+      href="https://oui.opensearch.org/latest/">
       <OuiIcon type="dashboardApp" size="l" />
     </OuiKeyPadMenuItem>
 
-    <OuiKeyPadMenuItem isDisabled label="Dashboard" href="#">
+    <OuiKeyPadMenuItem
+      isDisabled
+      label="Dashboard"
+      href="https://oui.opensearch.org/latest/">
       <OuiIcon type="dashboardApp" size="l" />
     </OuiKeyPadMenuItem>
   </OuiKeyPadMenu>

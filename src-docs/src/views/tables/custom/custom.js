@@ -587,7 +587,9 @@ export default class extends Component {
             ? item.title.value
             : item.title;
           const title = item.title.isLink ? (
-            <OuiLink href="">{item.title.value}</OuiLink>
+            <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
+              {item.title.value}
+            </OuiLink>
           ) : (
             titleText
           );
@@ -595,7 +597,11 @@ export default class extends Component {
         } else if (column.cellProvider) {
           child = column.cellProvider(cell);
         } else if (cell.isLink) {
-          child = <OuiLink href="">{cell.value}</OuiLink>;
+          child = (
+            <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
+              {cell.value}
+            </OuiLink>
+          );
         } else if (cell.truncateText) {
           child = cell.value;
         } else {

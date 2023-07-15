@@ -48,7 +48,11 @@ const HeaderUpdates = () => {
     {
       title: 'Control access to features',
       text: 'Show or hide applications and features per space in Kibana.',
-      action: <OuiLink href="">Learn about feature controls</OuiLink>,
+      action: (
+        <OuiLink href="https://oui.opensearch.org/latest/">
+          Learn about feature controls
+        </OuiLink>
+      ),
       date: '1 May 2019',
       badge: <OuiBadge>7.1</OuiBadge>,
     },
@@ -71,7 +75,11 @@ const HeaderUpdates = () => {
       title: 'Enter dark mode',
       text:
         'Kibana now supports the easy-on-the-eyes theme across the entire UI.',
-      action: <OuiLink href="">Go to Advanced Settings</OuiLink>,
+      action: (
+        <OuiLink href="https://oui.opensearch.org/latest/">
+          Go to Advanced Settings
+        </OuiLink>
+      ),
       date: '10 April 2019',
       badge: <OuiBadge color="hollow">7.0</OuiBadge>,
     },

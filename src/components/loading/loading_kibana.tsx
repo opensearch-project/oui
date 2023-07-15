@@ -32,7 +32,7 @@ import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps, keysOf } from '../common';
 import { OuiIcon } from '../icon';
-import { deprecated } from '../../utils';
+import { deprecatedComponentWarning } from '../../utils';
 
 const sizeToClassNameMap = {
   m: 'ouiLoadingKibana--medium',
@@ -41,9 +41,6 @@ const sizeToClassNameMap = {
 };
 
 export const SIZES = keysOf(sizeToClassNameMap);
-
-export const WARNING =
-  'OuiLoadingKibana is deprecated in favor of OuiLoadingLogo and will be removed in v2.0.0.';
 
 export type OuiLoadingKibanaProps = CommonProps &
   HTMLAttributes<HTMLDivElement> & {
@@ -70,7 +67,12 @@ const OuiLoadingKibanaComponent: FunctionComponent<OuiLoadingKibanaProps> = ({
   );
 };
 
+OuiLoadingKibanaComponent.displayName = 'OuiLoadingKibana';
+
 /**
  * @deprecated OuiLoadingKibana is deprecated in favor of OuiLoadingLogo and will be removed in v2.0.0.
  */
-export const OuiLoadingKibana = deprecated(WARNING)(OuiLoadingKibanaComponent);
+export const OuiLoadingKibana = deprecatedComponentWarning({
+  newComponentName: 'OuiLoadingLogo',
+  version: '2.0.0',
+})(OuiLoadingKibanaComponent);

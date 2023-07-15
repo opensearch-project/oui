@@ -22,10 +22,7 @@ export default () => (
         <p>This is a basic group without any modifications</p>
       </OuiText>
     </OuiCollapsibleNavGroup>
-    <OuiCollapsibleNavGroup
-      data-test-subj="TEST"
-      title="Nav group"
-      iconType="logoElastic">
+    <OuiCollapsibleNavGroup data-test-subj="TEST" title="Nav group">
       <OuiText size="s" color="subdued">
         <p>
           This is a nice group with a heading supplied via{' '}
@@ -38,7 +35,6 @@ export default () => (
       background="light"
       title="Nav group"
       isCollapsible={true}
-      iconType="logoElastic"
       initialIsOpen={true}>
       <OuiText size="s" color="subdued">
         <p>
@@ -51,8 +47,6 @@ export default () => (
     </OuiCollapsibleNavGroup>
     <OuiCollapsibleNavGroup
       title="Nav group"
-      iconType="logoGCPMono"
-      iconSize="xxl"
       titleSize="s"
       isCollapsible={true}
       initialIsOpen={false}

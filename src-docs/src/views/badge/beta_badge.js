@@ -13,7 +13,7 @@ import React from 'react';
 
 import { OuiBetaBadge, OuiSpacer, OuiTitle } from '../../../../src/components';
 
-const colors = ['hollow', 'accent', 'subdued'];
+const colors = ['hollow', 'subdued'];
 
 export default () => (
   <div>
@@ -36,9 +36,14 @@ export default () => (
         &emsp;
         <OuiBetaBadge size="s" label="E" color={item} />
         &emsp;
-        <OuiBetaBadge label="Lab" color={item} iconType="beaker" />
+        <OuiBetaBadge label="experimental" color={item} iconType="beaker" />
         &emsp;
-        <OuiBetaBadge label="Lab" size="s" color={item} iconType="beaker" />
+        <OuiBetaBadge
+          label="experimental"
+          size="s"
+          color={item}
+          iconType="beaker"
+        />
         <OuiSpacer size="s" />
       </div>
     ))}
@@ -47,7 +52,7 @@ export default () => (
       <h3>
         Beta badges will also line up nicely with titles &nbsp;
         <OuiBetaBadge
-          label="Lab"
+          label="experimental"
           tooltipContent="This module is not GA. Please help us by reporting any bugs."
         />
       </h3>
@@ -57,14 +62,15 @@ export default () => (
     </OuiTitle>
     <OuiSpacer size="s" />
     <OuiBetaBadge
-      label="Lens"
-      iconType="lensApp"
-      onClick={() => alert('Goes to Lens')}
+      label="Visualize"
+      iconType="visVisualBuilder"
+      href="https://playground.opensearch.org/app/visualize#/?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))"
+      target="_blank"
     />
     &emsp;
     <OuiBetaBadge
       label="Experimental"
-      href="http://www.elastic.co/subscriptions"
+      href="https://opensearch.org/docs/latest/"
       target="_blank"
     />
   </div>
