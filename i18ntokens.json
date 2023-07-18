@@ -2653,12 +2653,12 @@
       "start": {
         "line": 143,
         "column": 4,
-        "index": 4714
+        "index": 4700
       },
       "end": {
         "line": 148,
         "column": 44,
-        "index": 4899
+        "index": 4885
       }
     },
     "filepath": "src/components/list_group/pinnable_list_group/pinnable_list_group.tsx"
@@ -2671,12 +2671,12 @@
       "start": {
         "line": 143,
         "column": 4,
-        "index": 4714
+        "index": 4700
       },
       "end": {
         "line": 148,
         "column": 44,
-        "index": 4899
+        "index": 4885
       }
     },
     "filepath": "src/components/list_group/pinnable_list_group/pinnable_list_group.tsx"

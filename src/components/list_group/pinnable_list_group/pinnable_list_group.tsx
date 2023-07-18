@@ -115,7 +115,7 @@ export const OuiPinnableListGroup: FunctionComponent<OuiPinnableListGroupProps> 
       );
 
       // Add the pinning action unless the item has it's own extra action
-      if (onPinClick && !itemProps.extraAction && pinnable) {
+      if (pinnable && !itemProps.extraAction) {
         // Different displays for pinned vs unpinned
         if (pinned) {
           itemProps.extraAction = {
