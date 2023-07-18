@@ -4,6 +4,8 @@
 
 ### 💥 Breaking Changes
 
+- Upgraded to TypeScript v4.6.4
+
 ### Deprecations
 
 ### 🛡 Security
