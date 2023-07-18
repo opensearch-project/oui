@@ -135,7 +135,7 @@ export const GuideSection: FunctionComponent<GuideSection> = ({
     const isPlaygroundUnsupported =
       typeof window !== 'undefined' &&
       typeof document !== 'undefined' &&
-      !!window.MSInputMethodContext &&
+      !!(window as any).MSInputMethodContext &&
       // @ts-ignore doesn't exist?
       !!document.documentMode;
 
