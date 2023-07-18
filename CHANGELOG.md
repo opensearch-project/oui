@@ -2,10 +2,6 @@
 
 ## [Unreleased](https://github.com/opensearch-project/oui/tree/main)
 
-- Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
-- Bump @typescript-eslint/eslint-plugin to v5.62.0 ([#879](https://github.com/opensearch-project/oui/pull/879))
-- Bump @typescript-eslint/parser to  v5.62.0 ([#879](https://github.com/opensearch-project/oui/pull/879))
-
 ### 💥 Breaking Changes
 
 ### Deprecations
@@ -27,6 +23,8 @@
 ### 📝 Documentation
 
 ### 🛠 Maintenance
+
+- Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 
 ### 🪛 Refactoring
 
