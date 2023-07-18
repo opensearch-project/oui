@@ -3535,12 +3535,12 @@
       "start": {
         "line": 267,
         "column": 12,
-        "index": 7947
+        "index": 7990
       },
       "end": {
         "line": 270,
         "column": 14,
-        "index": 8069
+        "index": 8112
       }
     },
     "filepath": "src/components/selectable/selectable_templates/selectable_template_sitewide.tsx"

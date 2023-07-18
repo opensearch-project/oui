@@ -193,9 +193,9 @@ export const OuiSuggestItem: FunctionComponent<OuiSuggestItemProps> = ({
   if (onClick) {
     return (
       <button
-        onClick={onClick}
         className={classes}
-        {...(rest as PropsForButton)}>
+        {...(rest as PropsForButton)}
+        onClick={onClick}>
         {innerContent}
       </button>
     );
