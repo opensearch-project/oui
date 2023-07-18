@@ -2543,14 +2543,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 125,
+        "line": 124,
         "column": 4,
-        "index": 3690
+        "index": 3665
       },
       "end": {
-        "line": 125,
+        "line": 124,
         "column": 75,
-        "index": 3761
+        "index": 3736
       }
     },
     "filepath": "src/components/header/header_links/header_links.tsx"
@@ -2561,14 +2561,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 138,
+        "line": 137,
         "column": 4,
-        "index": 4083
+        "index": 4058
       },
       "end": {
-        "line": 138,
+        "line": 137,
         "column": 69,
-        "index": 4148
+        "index": 4123
       }
     },
     "filepath": "src/components/header/header_links/header_links.tsx"

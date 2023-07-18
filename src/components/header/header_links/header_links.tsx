@@ -95,16 +95,15 @@ export const OuiHeaderLinks: FunctionComponent<OuiHeaderLinksProps> = ({
   popoverProps,
   ...rest
 }) => {
-  const { onClick: _onClick, iconType = 'apps', ...popoverButtonRest } = {
-    ...popoverButtonProps,
-  };
+  const { onClick, iconType = 'apps', ...popoverButtonRest } =
+    popoverButtonProps || {};
 
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   const onMenuButtonClick: MouseEventHandler<
     HTMLButtonElement & HTMLAnchorElement
   > = (e) => {
-    _onClick && _onClick(e);
+    onClick?.(e);
     setMobileMenuIsOpen(!mobileMenuIsOpen);
   };
 
