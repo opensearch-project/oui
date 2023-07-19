@@ -96,7 +96,7 @@ export const OuiHeaderLinks: FunctionComponent<OuiHeaderLinksProps> = ({
   ...rest
 }) => {
   const { onClick, iconType = 'apps', ...popoverButtonRest } =
-    popoverButtonProps || {};
+    popoverButtonProps ?? {};
 
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
