@@ -20,7 +20,6 @@
   $iconSize: $ouiSize;
   $iconPadding: $ouiFormControlPadding;
   $marginBetweenIcons: $ouiFormControlPadding / 2;
-
   @if ($compressed) {
     $iconPadding: $ouiFormControlCompressedPadding;
   }
@@ -268,15 +267,15 @@
        * making their colors non-overridable. `-webkit-text-fill-color` is able to overwrite the
        * appearance of texts and is used here as a workaround.
        */
-      -webkit-text-fill-color: $ouiColorDarkestShade;
+      -webkit-text-fill-color: $ouiTextColor;
 
       ~ .ouiFormControlLayoutIcons {
-        color: $ouiColorDarkestShade;
+        color: $ouiTextColor;
       }
 
       /* OUI -> EUI Aliases */
       ~ .euiFormControlLayoutIcons {
-        color: $ouiColorDarkestShade;
+        color: $ouiTextColor;
       }
       /* End of Aliases */
     }
