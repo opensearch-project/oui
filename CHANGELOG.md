@@ -24,6 +24,8 @@
 
 ### 🛠 Maintenance
 
+- Remove Internet Explorer specific code (#886)
+
 ### 🪛 Refactoring
 
 ### 🔩 Tests
