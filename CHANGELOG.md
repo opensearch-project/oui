@@ -24,6 +24,8 @@
 
 ### 🛠 Maintenance
 
+- [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
+
 ### 🪛 Refactoring
 
 ### 🔩 Tests
