@@ -20,7 +20,6 @@
   $iconSize: $ouiSize;
   $iconPadding: $ouiFormControlPadding;
   $marginBetweenIcons: $ouiFormControlPadding / 2;
-
   @if ($compressed) {
     $iconPadding: $ouiFormControlCompressedPadding;
   }
@@ -262,16 +261,21 @@
 
     // Needs to be set for autofill
     // sass-lint:disable-block no-vendor-prefixes
-    &:-webkit-autofill {
-      -webkit-text-fill-color: lightOrDarkTheme($ouiColorDarkestShade, $ouiColorLightShade);
+    &:-webkit-autofill,
+    &:autofill {
+      /* Many browsers use `!important` in their built-in `:-webkit-autofill` style declarations,
+       * making their colors non-overridable. `-webkit-text-fill-color` is able to overwrite the
+       * appearance of texts and is used here as a workaround.
+       */
+      -webkit-text-fill-color: $ouiTextColor;
 
       ~ .ouiFormControlLayoutIcons {
-        color: lightOrDarkTheme($ouiColorDarkestShade, $ouiColorLightShade);
+        color: $ouiTextColor;
       }
 
       /* OUI -> EUI Aliases */
       ~ .euiFormControlLayoutIcons {
-        color: lightOrDarkTheme($ouiColorDarkestShade, $ouiColorLightShade);
+        color: $ouiTextColor;
       }
       /* End of Aliases */
     }
