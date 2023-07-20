@@ -77,8 +77,8 @@ const sideNavComplexSnippet = `<OuiSideNav
       ],
     },
     {
-      name: 'Kibana',
-      icon: <OuiIcon type="logoKibana" />,
+      name: 'OpenSearch Dashborads',
+      icon: <OuiIcon type="logoOpenSearch" />,
       id: '1',
       items: [
         {
@@ -125,11 +125,11 @@ const sideNavForceSnippet = `<OuiSideNav
   isOpenOnMobile={isSideNavOpenOnMobile}
   items={[
     {
-      name: 'Kibana',
+      name: 'OpenSearch Dashborads',
       id: '1',
       items: [
         {
-          name: 'Kibana',
+          name: 'OpenSearch Dashborads',
           id: '1',
           items: [
             {
