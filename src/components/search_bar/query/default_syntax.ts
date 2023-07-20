@@ -353,7 +353,7 @@ const validateFieldValue = (
     try {
       schemaField.validate(value);
     } catch (e) {
-      const message = e instanceof Error ? e.message : e;
+      const message = e instanceof Error ? e.message : String(e);
 
       error(
         `Invalid value \`${expression}\` set for field \`${field}\` - ${message}`,
