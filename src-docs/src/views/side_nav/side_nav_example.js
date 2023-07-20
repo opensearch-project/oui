@@ -77,7 +77,7 @@ const sideNavComplexSnippet = `<OuiSideNav
       ],
     },
     {
-      name: 'OpenSearch Dashborads',
+      name: 'OpenSearch Dashboards',
       icon: <OuiIcon type="logoOpenSearch" />,
       id: '1',
       items: [
@@ -125,11 +125,11 @@ const sideNavForceSnippet = `<OuiSideNav
   isOpenOnMobile={isSideNavOpenOnMobile}
   items={[
     {
-      name: 'OpenSearch Dashborads',
+      name: 'OpenSearch Dashboards',
       id: '1',
       items: [
         {
-          name: 'OpenSearch Dashborads',
+          name: 'OpenSearch Dashboards',
           id: '1',
           items: [
             {
