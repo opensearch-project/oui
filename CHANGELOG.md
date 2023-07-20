@@ -25,6 +25,7 @@
 ### 🛠 Maintenance
 
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
+- [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
 
 ### 🪛 Refactoring
 
