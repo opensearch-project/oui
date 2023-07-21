@@ -132,7 +132,10 @@ export const GuideSection: FunctionComponent<GuideSection> = ({
   };
 
   const renderPlaygroundToggle = () => {
-    if (!!playground) {
+    const isPlaygroundUnsupported =
+      typeof window !== 'undefined' && typeof document !== 'undefined';
+
+    if (!isPlaygroundUnsupported && !!playground) {
       return (
         <OuiSwitch
           onChange={() => {
