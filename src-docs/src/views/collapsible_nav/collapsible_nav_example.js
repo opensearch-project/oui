@@ -160,12 +160,12 @@ export const CollapsibleNavExample = {
         paddingSize: 'none',
       },
       snippet: `<OuiCollapsibleNavGroup
-  title="Kibana"
-  iconType="logoKibana"
+  title="OpenSearch Dashboards"
+  iconType="logoOpenSearch"
   isCollapsible={true}
   initialIsOpen={true}>
   <OuiPinnableListGroup
-    aria-label="Kibana"
+    aria-label="OpenSearch Dashboards"
     listItems={[
       { label: 'Discover' },
       { label: 'Visualize' }
