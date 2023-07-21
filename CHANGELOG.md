@@ -24,7 +24,7 @@
 
 ### 🛠 Maintenance
 
-- Remove Internet Explorer specific code (#890)
+- Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
 
 ### 🪛 Refactoring
 
