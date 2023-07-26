@@ -39,3 +39,6 @@ jobs:
 
       - name: Run unit tests
         run: yarn test-unit
+
+      - name: Run accessibility tests
+        run: yarn start-test-server-and-a11y-test
