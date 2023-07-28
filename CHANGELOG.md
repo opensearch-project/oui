@@ -11,7 +11,7 @@
 ### 📈 Features/Enhancements
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
-
+- [Header] Update background color in next theme ([#936](https://github.com/opensearch-project/oui/pull/936))
 
 ### 🐛 Bug Fixes
 
