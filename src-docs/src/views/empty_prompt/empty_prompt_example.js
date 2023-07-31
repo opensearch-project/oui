@@ -47,7 +47,7 @@ const simpleSnippet = `<OuiEmptyPrompt
 import Loading from './empty_prompt_loading';
 const loadingSource = require('!!raw-loader!./empty_prompt_loading');
 const loadingSnippet = `<OuiEmptyPrompt
-  icon={<OuiLoadingLogo logo="logoKibana" size="xl" />}
+  icon={<OuiLoadingLogo logo="logoOpenSearch" size="xl" />}
   title={<h2>Loading</h2>}
 />`;
 
