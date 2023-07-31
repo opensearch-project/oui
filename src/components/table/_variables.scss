@@ -22,7 +22,7 @@ $ouiTableActionsAreaWidth: $ouiSizeXXL;
 
 $ouiTableHoverColor: tintOrShade($ouiColorLightestShade, 50%, 20%);
 $ouiTableSelectedColor: tintOrShade($ouiFocusBackgroundColor, 30%, 0%);
-$ouiTableHoverSelectedColor: tintOrShade($ouiFocusBackgroundColor, 0, 10%);
+$ouiTableHoverSelectedColor: tintOrShade($ouiFocusBackgroundColor, 0%, 10%);
 $ouiTableActionsBorderColor: transparentize($ouiColorMediumShade, .9);
 $ouiTableHoverClickableColor: transparentize($ouiColorPrimary, .95);
 $ouiTableFocusClickableColor: transparentize($ouiColorPrimary, .9);

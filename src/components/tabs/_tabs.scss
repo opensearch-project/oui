@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiTabs {
   @include ouiScrollBar;
   display: flex;
@@ -126,8 +128,8 @@
   }
 
   .ouiTabs--small.ouiTabs--condensed & {
-    padding-top: ($ouiSizeM / 2);
-    padding-bottom: ($ouiSizeM / 2);
+    padding-top: math.div($ouiSizeM, 2);
+    padding-bottom: math.div($ouiSizeM, 2);
   }
 
   .ouiTabs--large.ouiTabs--condensed & + .ouiTab {

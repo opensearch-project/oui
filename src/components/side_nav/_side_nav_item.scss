@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /**
  * 1. Text-align defaults to center, so we have to override that.
  * 2. Color the text at the item level and then have the button inherit so overrides are easier
@@ -22,7 +24,7 @@
   text-align: left; /* 1 */
   display: block;
   width: 100%;
-  padding: ($ouiSizeXS / 2) 0;
+  padding: math.div($ouiSizeXS, 2) 0;
   color: inherit; /* 2 */
 
   &.ouiSideNavItemButton--isClickable:not(:disabled) {

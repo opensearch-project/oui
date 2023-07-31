@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiCheckbox {
   position: relative;
 
@@ -31,7 +33,7 @@
       display: inline-block;
       position: absolute;
       left: 0;
-      top: (($ouiSizeL - $ouiCheckBoxSize) / 2) - 1px;
+      top: math.div(($ouiSizeL - $ouiCheckBoxSize), 2) - 1px;
     }
 
     &:checked {

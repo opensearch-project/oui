@@ -13,7 +13,7 @@
   @if (map-has-key($ouiCallOutTypes, $type)) {
     $color: map-get($ouiCallOutTypes, $type);
     $backgroundColor: tintOrShade($color, 90%, 70%);
-    $foregroundColor: shadeOrTint(makeHighContrastColor($color, $backgroundColor), 0, 20%);
+    $foregroundColor: shadeOrTint(makeHighContrastColor($color, $backgroundColor), 0%, 20%);
 
     @if ($returnBackgroundOrForeground == 'background') {
       @return $backgroundColor;

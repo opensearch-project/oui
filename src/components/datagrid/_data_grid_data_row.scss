@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiDataGridRow {
   display: flex;
 }
@@ -172,7 +174,7 @@
 
 .ouiDataGridRowCell__expandButtonIcon {
   height: $ouiSizeM;
-  border-radius: $ouiBorderRadius / 2;
+  border-radius: math.div($ouiBorderRadius, 2);
   width: 0;
   overflow: hidden;
   transition: none; // Have to take out the generic transition so it is instaneous on focus
@@ -194,7 +196,7 @@
 
 .ouiDataGridRowCell__actionButtonIcon {
   height: $ouiSizeM;
-  border-radius: $ouiBorderRadius / 2;
+  border-radius: math.div($ouiBorderRadius, 2);
   width: 0;
   overflow: hidden;
   transition: none; // Have to take out the generic transition so it is instaneous on focus

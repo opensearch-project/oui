@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /**
  * 1. Keep each expression's text together as much as possible,
  *    but then wrap long words
@@ -21,7 +23,7 @@
   border-bottom: $ouiBorderWidthThick solid transparent;
   display: inline-block; /* 1 */
   text-align: left;
-  padding: ($ouiSizeXS / 2) 0;
+  padding: math.div($ouiSizeXS, 2) 0;
   transition: all $ouiAnimSpeedNormal ease-in-out;
   color: $ouiTextColor;
 

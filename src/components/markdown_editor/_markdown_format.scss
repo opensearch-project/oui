@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // Default styles for Markdown Format
 // 1. Headings
 // 2. Images
@@ -26,7 +28,7 @@ $browserDefaultFontSize: 16px;
 // We're setting a function o transform px in em
 // because it's easier to think in px
 @function em($pixels, $context: $browserDefaultFontSize) {
-  @return #{$pixels/$context}em;
+  @return #{math.div($pixels, $context)}em;
 }
 
 .ouiMarkdownFormat {

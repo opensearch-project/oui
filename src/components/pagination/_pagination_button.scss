@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiPaginationButton {
   font-size: $ouiFontSizeS;
   padding: 0;
@@ -39,7 +41,7 @@
   font-size: $ouiFontSizeS;
   padding: 0 $ouiSizeS;
   height: $ouiSizeL;
-  padding-top: $ouiSizeM / 2;
+  padding-top: math.div($ouiSizeM, 2);
 }
 
 @include ouiBreakpoint('xs', 's') {

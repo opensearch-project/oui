@@ -9,12 +9,14 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 @each $gutterName, $gutterSize in $ouiFacetGutterSizes {
   .ouiFacetGroup--#{$gutterName} {
     .ouiFacetButton {
       // Split the margin between top and bottom
-      margin-top: $gutterSize / 2;
-      margin-bottom: $gutterSize / 2;
+      margin-top: math.div($gutterSize, 2);
+      margin-bottom: math.div($gutterSize, 2);
     }
 
     &.ouiFacetGroup--horizontal {

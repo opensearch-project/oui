@@ -16,9 +16,9 @@ const globModule = require('glob');
 
 const chalk = require('chalk');
 const postcss = require('postcss');
-const sassExtract = require('sass-extract');
+const sass = require('sass-embedded');
+const childProcess = require('child_process');
 const { deriveSassVariableTypes } = require('./derive-sass-variable-types');
-const sassExtractJsPlugin = require('./sass-extract-js-plugin');
 
 const postcssConfiguration = require('../postcss.config.js');
 
@@ -33,6 +33,17 @@ const postcssConfigurationWithMinification = {
     require('cssnano')({ preset: 'default' }),
   ],
 };
+
+function exec(command, options) {
+  const child = childProcess.exec(command, options);
+
+  return new Promise((resolve, reject) => {
+    child.addListener('error', reject);
+    child.addListener('exit', (...args) => {
+      resolve(...args);
+    });
+  });
+}
 
 async function compileScssFiles(
   sourcePattern,
@@ -120,15 +131,27 @@ async function compileScssFile(
     '.min.css'
   );
 
-  const { css: renderedCss, vars: extractedVars } = await sassExtract.render(
-    {
-      file: inputFilename,
-      outFile: outputCssFilename,
-    },
-    {
-      plugins: [sassExtractJsPlugin],
-    }
+  const sassExtractCommand = `sass_extract -o ${path.resolve(
+    __dirname,
+    '..',
+    outputVarsFilename
+  )} ${path.resolve(__dirname, '..', inputFilename)}`;
+
+  const [result] = await Promise.all([
+    sass.compileAsync(inputFilename),
+    exec(sassExtractCommand),
+  ]);
+
+  const extractedVars = JSON.parse(
+    fs.readFileSync(outputVarsFilename, {
+      encoding: 'utf-8',
+    })
   );
+
+  // const result = await sass.compileAsync(inputFilename);
+  fs.writeFileSync(outputCssFilename, result.css);
+
+  const renderedCss = fs.readFileSync(outputCssFilename, { encoding: 'utf-8' });
 
   /* OUI -> EUI Aliases: Modified */
   // const extractedVarTypes = await deriveSassVariableTypes(
@@ -183,7 +206,6 @@ async function compileScssFile(
   await Promise.all([
     writeFile(outputCssFilename, postprocessedCss),
     writeFile(outputCssMinifiedFilename, postprocessedMinifiedCss),
-    writeFile(outputVarsFilename, JSON.stringify(extractedVars, undefined, 2)),
     writeFile(outputVarTypesFilename, extractedVarTypes),
   ]);
 

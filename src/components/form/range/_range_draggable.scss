@@ -9,16 +9,18 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiRangeDraggable {
-  height: $ouiFormControlHeight / 2;
+  height: math.div($ouiFormControlHeight, 2);
   position: absolute;
-  top: $ouiFormControlHeight / 4;
+  top: math.div($ouiFormControlHeight, 4);
   pointer-events: none;
   z-index: 2;
 
   &.ouiRangeDraggable--compressed {
-    height: $ouiFormControlCompressedHeight / 2;
-    top: $ouiFormControlCompressedHeight / 4;
+    height: math.div($ouiFormControlCompressedHeight, 2);
+    top: math.div($ouiFormControlCompressedHeight, 4);
   }
 
   &.ouiRangeDraggable--hasTicks {

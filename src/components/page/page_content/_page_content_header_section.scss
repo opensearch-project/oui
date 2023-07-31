@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiPageContentHeaderSection {
   & + & {
     margin-left: $ouiSizeXL;
@@ -21,7 +23,7 @@
     .ouiPageContent[class*='#{$modifier}'] .ouiPageContentHeader--responsive {
       .ouiPageContentHeaderSection + .ouiPageContentHeaderSection {
         margin-left: 0;
-        margin-top: $amount / 2;
+        margin-top: math.div($amount, 2);
       }
     }
   }

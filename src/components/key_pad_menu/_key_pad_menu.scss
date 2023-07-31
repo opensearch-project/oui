@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /**
  * 1. Default to grid of 3
  */
@@ -87,7 +89,7 @@
 
       // sass-lint:disable-block nesting-depth
       .ouiKeyPadMenuItem__betaBadge:not(.ouiBetaBadge--iconOnly) {
-        padding: 0 ($ouiSizeM / 2);  /* 2 */
+        padding: 0 math.div($ouiSizeM, 2);  /* 2 */
         overflow: hidden;  /* 2 */
         letter-spacing: 3rem;  /* 2 */
       }

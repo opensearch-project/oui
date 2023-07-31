@@ -9,6 +9,7 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
 
 // 1. Extend beta badges to at least 30% of the container's width
 // 2. Fix for IE to ensure badges are visible outside of a <button> tag
@@ -20,7 +21,7 @@
 
     #{$selector}__betaBadgeWrapper {
       position: absolute;
-      top: ($ouiSizeL / -2);
+      top: math.div($ouiSizeL, -2);
       left: 50%;
       transform: translateX(-50%);
       z-index: 3; // get above abs positioned image
@@ -49,7 +50,7 @@
 
     #{$selector}__betaBadgeWrapper {
       position: absolute;
-      top: ($ouiSizeL / -2);
+      top: math.div($ouiSizeL, -2);
       left: 50%;
       transform: translateX(-50%);
       z-index: 3; // get above abs positioned image

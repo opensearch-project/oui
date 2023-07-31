@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiTableRowCell__mobileHeader {
   // Don't display by default unless table is responsive
   display: none;
@@ -126,12 +128,12 @@
       }
 
       &.ouiTableRow-isSelectable {
-        padding-left: $ouiTableCellCheckboxWidth + ($ouiTableCellContentPadding / 2);
+        padding-left: $ouiTableCellCheckboxWidth + math.div($ouiTableCellContentPadding, 2);
         position: relative;
 
         .ouiTableRowCellCheckbox {
           position: absolute;
-          left: $ouiTableCellContentPadding / 2;
+          left: math.div($ouiTableCellContentPadding, 2);
           top: $ouiSizeS;
         }
       }

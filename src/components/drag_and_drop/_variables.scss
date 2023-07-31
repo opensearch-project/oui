@@ -9,10 +9,12 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 $ouiDragAndDropSpacing: (
-  s: ($ouiSizeXS / 2),
-  m: ($ouiSizeS / 2),
-  l: ($ouiSize / 2),
+  s: math.div($ouiSizeXS, 2),
+  m: math.div($ouiSizeS, 2),
+  l: math.div($ouiSize, 2),
 );
 
 

@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiControlBar {
   background: $ouiControlBarBackground;
   color: $ouiControlBarText;
@@ -100,7 +102,7 @@
 
 .ouiControlBar__button {
   flex-shrink: 0;
-  border-radius: $ouiBorderRadius / 2;
+  border-radius: math.div($ouiBorderRadius, 2);
   margin-left: $ouiSizeXS;
   font-size: $ouiFontSizeS;
 

@@ -9,10 +9,12 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiRange__horizontalSpacer {
   width: $ouiSize;
 }
 
 .ouiRange__slimHorizontalSpacer {
-  width: $ouiSize / 2;
+  width: math.div($ouiSize, 2);
 }

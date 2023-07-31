@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiFormControlLayoutDelimited {
   // Match just the regular drop shadow of inputs
   @include ouiFormControlDefaultShadow;
@@ -29,7 +31,7 @@
   // Target when the ouiFormControlLayout is compressed without specifying the full class name in case it ever changes
   &[class*='--compressed'] {
     @include ouiFormControlDefaultShadow($borderOnly: true);
-    border-radius: $ouiBorderRadius / 2;
+    border-radius: math.div($ouiBorderRadius, 2);
 
     .ouiFormControlLayoutDelimited__input {
       height: 100%;
@@ -102,6 +104,6 @@
   // sass-lint:disable-block no-important
   line-height: 1 !important; // Override OuiText line-height
   flex: 0 0 auto;
-  padding-left: $ouiFormControlPadding / 2;
-  padding-right: $ouiFormControlPadding / 2;
+  padding-left: math.div($ouiFormControlPadding, 2);
+  padding-right: math.div($ouiFormControlPadding, 2);
 }

@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // This file uses RGBA literal values responsibly
 // This file uses off-pattern indentation to be more readable
 
@@ -89,7 +91,7 @@
 
 @mixin ouiSlightShadowHover($color: $ouiShadowColor, $opacity: .3) {
   box-shadow:
-    0 4px 8px 0 rgba($color, $opacity/2),
+    0 4px 8px 0 rgba($color, math.div($opacity, 2)),
     0 2px 2px -1px rgba($color, $opacity);
 }
 

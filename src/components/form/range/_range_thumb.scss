@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiRangeThumb {
   @include ouiCustomControl($type: 'round');
   @include ouiRangeThumbStyle;
@@ -16,7 +18,7 @@
   position: absolute;
   left: 0;
   top: 50%;
-  margin-top: -($ouiRangeThumbHeight / 2);
+  margin-top: math.div($ouiRangeThumbHeight, -2);
   pointer-events: none;
   z-index: 1; // higher than .ouiRangeHighlight that is 0
 

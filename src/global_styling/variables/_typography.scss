@@ -13,10 +13,12 @@
 // Essentially, fonts across oui should scale against the root html element, not
 // against parent inheritance.
 
+@use 'sass:math';
+
 // Typography mixins
 
 @function convertToRem($size) {
-  @return #{$size / $ouiFontSize}rem;
+  @return #{math.div($size, $ouiFontSize)}rem;
 }
 
 // Spit out rem and px
@@ -30,7 +32,7 @@
 //     If our base font size (ouiFontSize) is 16, our baseline is 8 (16*1.5 / 3). To ensure the
 //     text stays on the baseline, we pass a multiplier to calculate a line-height in rems.
 @function lineHeightFromBaseline($multiplier: 3) {
-  @return convertToRem(($ouiFontSize/2)*$multiplier);
+  @return convertToRem(math.div($ouiFontSize, 2) * $multiplier);
 }
 @mixin lineHeightFromBaseline($multiplier: 3) {
   line-height: lineHeightFromBaseline($multiplier);

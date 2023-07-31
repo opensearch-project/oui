@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiFormControlLayout {
   // Let the height expand as needed
   @include ouiFormControlSize($includeAlternates: true);
@@ -152,7 +154,7 @@
 
   &.ouiFormControlLayout--compressed {
     @include ouiFormControlDefaultShadow($borderOnly: true);
-    border-radius: $ouiBorderRadius / 2;
+    border-radius: math.div($ouiBorderRadius, 2);
     overflow: hidden; // Keeps backgrounds inside border radius
 
     // Padding

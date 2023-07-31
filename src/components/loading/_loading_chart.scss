@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiLoadingChart {
   height: $ouiSizeXL;
   z-index: 500;
@@ -25,7 +27,7 @@
   width: $ouiSizeS;
   display: inline-block;
   margin-bottom: -$ouiSize;
-  margin-left: $ouiSizeXS / 2;
+  margin-left: math.div($ouiSizeXS, 2);
 
   // sass-lint:disable-block mixins-before-declarations
   @include ouiCanAnimate {
@@ -88,8 +90,8 @@
   height: $ouiSize;
 
   > span {
-    width: $ouiSizeXS / 2;
-    margin-left: $ouiSizeXS / 2;
+    width: math.div($ouiSizeXS, 2);
+    margin-left: math.div($ouiSizeXS, 2);
     margin-bottom: $ouiSizeS;
   }
 }
@@ -99,8 +101,8 @@
 
   > span {
     width: $ouiSizeXS;
-    margin-left: $ouiSizeXS / 2;
-    margin-bottom: $ouiSizeL / 2;
+    margin-left: math.div($ouiSizeXS, 2);
+    margin-bottom: math.div($ouiSizeL, 2);
   }
 }
 
@@ -110,7 +112,7 @@
   > span {
     width: $ouiSizeS;
     margin-left: $ouiSizeXS;
-    margin-bottom: $ouiSizeXL / 2;
+    margin-bottom: math.div($ouiSizeXL, 2);
   }
 }
 

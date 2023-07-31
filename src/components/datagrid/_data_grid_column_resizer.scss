@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // Resizer straddles the column border and is an invisible hitzone for dragging
 .ouiDataGridColumnResizer {
   position: absolute;
@@ -49,7 +51,7 @@
 
     .ouiDataGridColumnResizer {
       right: 0;
-      width: $ouiSize / 2;
+      width: math.div($ouiSize, 2);
 
       &:after {
         left: auto;

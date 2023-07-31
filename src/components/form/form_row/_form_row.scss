@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /**
  * 1. Coerce inline form elements to behave as block-level elements.
  * 2. For inline forms, we need to add margin if the label doesn't exist.
@@ -85,7 +87,7 @@
       width: auto;
 
       .ouiSwitch--compressed {
-        margin-top: $ouiSizeXS / 2; // Better vertical alignment of a compressed switch to the horizontal label
+        margin-top: math.div($ouiSizeXS, 2); // Better vertical alignment of a compressed switch to the horizontal label
       }
     }
 

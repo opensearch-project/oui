@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /**
  * 1. Ensure that the step number vertically aligns with the title text
  */
@@ -37,10 +39,10 @@
 
     .ouiStep__content {
       // Align the content's contents with the title
-      padding-left: ($ouiStepNumberSmallSize / 2) + $ouiStepNumberMargin;
+      padding-left: math.div($ouiStepNumberSmallSize, 2) + $ouiStepNumberMargin;
 
       // Align content border to horizontal center of step number
-      margin-left: ($ouiStepNumberSmallSize / 2);
+      margin-left: math.div($ouiStepNumberSmallSize, 2);
     }
   }
 }
@@ -64,8 +66,8 @@
   margin: $ouiSizeS 0;
 
   // Align the content's contents with the title
-  padding-left: ($ouiStepNumberSize / 2) + $ouiStepNumberMargin;
+  padding-left: math.div($ouiStepNumberSize, 2) + $ouiStepNumberMargin;
 
   // Align content border to horizontal center of step number
-  margin-left: ($ouiStepNumberSize / 2);
+  margin-left: math.div($ouiStepNumberSize, 2);
 }

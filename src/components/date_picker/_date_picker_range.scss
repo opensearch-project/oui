@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /**
  * 1. Account for inner box-shadow style border
  */
@@ -52,8 +54,8 @@
     background-color: transparent !important; // override .ouiFormControlLayout--group .ouiText
     line-height: 1 !important;
     flex: 0 0 auto;
-    padding-left: $ouiFormControlPadding / 2;
-    padding-right: $ouiFormControlPadding / 2;
+    padding-left: math.div($ouiFormControlPadding, 2);
+    padding-right: math.div($ouiFormControlPadding, 2);
   }
 }
 

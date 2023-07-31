@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /*
  * 1. Shift arrow 1px more than half its size to account for border radius
  */
@@ -21,8 +23,8 @@
 
   // Custom sizing
   $arrowSize: $ouiSizeM;
-  $arrowPlusSize: (($arrowSize/2) + 1px) * -1; /* 1 */
-  $arrowMinusSize: (($arrowSize/2) - 1px) * -1; /* 1 */
+  $arrowPlusSize: (math.div($arrowSize, 2) + 1px) * -1; /* 1 */
+  $arrowMinusSize: (math.div($arrowSize, 2) - 1px) * -1; /* 1 */
 
   .ouiToolTip__arrow {
     content: '';

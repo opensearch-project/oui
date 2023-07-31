@@ -9,12 +9,13 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
 
 .ouiColorPickerSwatch {
   display: inline-block;
   height: $ouiSizeL;
   width: $ouiSizeL;
-  border-radius: $ouiBorderRadius / 2;
+  border-radius: math.div($ouiBorderRadius, 2);
   cursor: pointer;
   border: solid 1px transparentize($ouiColorFullShade, .9);
   box-shadow: inset 0 0 0 1px transparentize($ouiColorEmptyShade, .95);

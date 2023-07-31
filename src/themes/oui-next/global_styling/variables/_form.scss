@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // Sizing
 $ouiFormMaxWidth: $ouiSizeXXL * 10 !default;
 $ouiFormControlHeight: $ouiSizeXXL !default;
@@ -55,7 +57,7 @@ $ouiSwitchOffColor: lightOrDarkTheme(transparentize($ouiColorMediumShade, .8), t
 // Control Layout
 $ouiFormControlLayoutGroupInputHeight: $ouiFormControlHeight - 2px !default;
 $ouiFormControlLayoutGroupInputCompressedHeight: $ouiFormControlCompressedHeight - 2px !default;
-$ouiFormControlLayoutGroupInputCompressedBorderRadius: $ouiFormControlCompressedBorderRadius / 2 !default;
+$ouiFormControlLayoutGroupInputCompressedBorderRadius: math.div($ouiFormControlCompressedBorderRadius, 2) !default;
 
 // Range
 $ouiRangeTrackColor: $ouiColorDarkShade !default;

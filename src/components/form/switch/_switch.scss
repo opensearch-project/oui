@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiSwitch {
   position: relative;
   display: inline-flex;
@@ -71,7 +73,7 @@
 
         &.ouiSwitch__icon--checked {
           right: auto;
-          left: -($ouiSwitchWidth - ($ouiSwitchThumbSize / 2));
+          left: -($ouiSwitchWidth - math.div($ouiSwitchThumbSize, 2));
         }
       }
     }
@@ -109,10 +111,10 @@
 
   .ouiSwitch__icon {
     position: absolute;
-    right: -($ouiSwitchWidth - ($ouiSwitchThumbSize / 2));
-    top: ($ouiSwitchHeight - $ouiSwitchIconHeight) / 2;
+    right: -($ouiSwitchWidth - math.div($ouiSwitchThumbSize, 2));
+    top: math.div(($ouiSwitchHeight - $ouiSwitchIconHeight), 2);
     bottom: 0;
-    width: $ouiSwitchWidth - ($ouiSwitchThumbSize / 2) + $ouiSizeS;
+    width: $ouiSwitchWidth - math.div($ouiSwitchThumbSize, 2) + $ouiSizeS;
     height: $ouiSwitchIconHeight;
     transition: left $ouiAnimSpeedNormal $ouiAnimSlightBounce, right $ouiAnimSpeedNormal $ouiAnimSlightBounce;
     fill: $ouiTextColor;

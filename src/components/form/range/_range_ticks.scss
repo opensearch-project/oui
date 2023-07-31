@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 @mixin tickStyles {
   @include size($ouiSizeXS);
 
@@ -26,8 +28,8 @@
   display: flex;
 
   &--isCustom {
-    left: ($ouiRangeThumbWidth / 8);
-    right: ($ouiRangeThumbWidth / 8);
+    left: math.div($ouiRangeThumbWidth, 8);
+    right: math.div($ouiRangeThumbWidth, 8);
   }
 }
 
@@ -42,7 +44,7 @@
   &:not(.ouiRangeTick--hasTickMark)::before {
     @include tickStyles;
     content: '';
-    left: calc(50% - #{($ouiSizeXS/2)});
+    left: calc(50% - #{math.div($ouiSizeXS, 2)});
   }
 
   .ouiRangeTick__pseudo {

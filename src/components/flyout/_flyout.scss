@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiFlyout {
   @include ouiFlyout;
   animation: ouiFlyout $ouiAnimSpeedNormal $ouiAnimSlightResistance;
@@ -103,7 +105,7 @@ $flyoutSizes: (
 
     .ouiFlyoutFooter {
       @if $paddingAmount == $ouiSizeL {
-        padding: ($paddingAmount / 1.5) $paddingAmount;
+        padding: math.div($paddingAmount, 1.5) $paddingAmount;
       } @else if $paddingAmount == $ouiSize {
         padding: ($paddingAmount * .75) $paddingAmount;
       } @else {

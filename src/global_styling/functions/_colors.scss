@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // Converting a normal hex color to RBG
 @function hexToRGB($color) {
   @return 'rgb%28#{round(red($color))}, #{round(green($color))}, #{round(blue($color))}%29';
@@ -62,9 +64,9 @@
 
   @for $i from 1 through 3 {
     $rgb: nth($rgba, $i);
-    $rgb: $rgb / 255;
+    $rgb: math.div($rgb, 255);
 
-    $rgb: if($rgb < .03928, $rgb / 12.92, pow(($rgb + .055) / 1.055, 2.4));
+    $rgb: if($rgb < .03928, math.div($rgb, 12.92), pow(math.div($rgb + .055, 1.055), 2.4));
 
     $rgba2: append($rgba2, $rgb);
   }
@@ -77,7 +79,7 @@
   $backgroundLum: luminance($background) + .05;
   $foregroundLum: luminance($foreground) + .05;
 
-  @return max($backgroundLum, $foregroundLum) / min($backgroundLum, $foregroundLum);
+  @return math.div(max($backgroundLum, $foregroundLum), min($backgroundLum, $foregroundLum));
 }
 
 // Given $color, decide whether $lightText or $darkText should be used as the text color
@@ -120,12 +122,12 @@ $ouiContrastRatioText: 4.5;
     $contrast: contrastRatio($highContrastTextColor, $background);
 
     @if (lightness($highContrastTextColor) < 5) {
-      @warn 'High enough contrast could not be determined. Most likely your background color does not adjust for light mode.';
+      //@warn 'High enough contrast could not be determined. Most likely your background color does not adjust for light mode.';
       @return $highContrastTextColor;
     }
 
     @if (lightness($highContrastTextColor) > 95) {
-      @warn 'High enough contrast could not be determined. Most likely your background color does not adjust for dark mode.';
+      //@warn 'High enough contrast could not be determined. Most likely your background color does not adjust for dark mode.';
       @return $highContrastTextColor;
     }
   }

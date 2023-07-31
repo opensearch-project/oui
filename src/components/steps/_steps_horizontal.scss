@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 @mixin makeLineProgress {
   height: 2px;
   background-color: $ouiColorPrimary;
@@ -75,9 +77,9 @@
   &::after {
     content: '';
     position: absolute;
-    width: calc(50% - #{$ouiStepNumberSize / 2});
+    width: calc(50% - #{math.div($ouiStepNumberSize, 2)});
     height: 1px;
-    top: $ouiSizeL + ($ouiStepNumberSize / 2);
+    top: $ouiSizeL + math.div($ouiStepNumberSize, 2);
     background-color: $ouiColorLightShade;
     z-index: $ouiZLevel0; /* 1 */
   }
@@ -135,7 +137,7 @@
 
     &::before,
     &::after {
-      top: $ouiSize + $ouiStepNumberSize / 2;
+      top: $ouiSize + math.div($ouiStepNumberSize, 2);
     }
   }
 

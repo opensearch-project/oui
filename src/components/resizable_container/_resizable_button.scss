@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // Mimics the "grab" icon with CSS psuedo-elements.
 // The "grab" icon transforms into a 2px straight line on :hover and :focus.
 .ouiResizableButton {
@@ -35,8 +37,8 @@
   &.ouiResizableButton--horizontal {
     cursor: col-resize;
     width: $ouiResizableButtonSize;
-    margin-left: -($ouiResizableButtonSize / 2);
-    margin-right: -($ouiResizableButtonSize / 2);
+    margin-left: math.div($ouiResizableButtonSize, -2);
+    margin-right: math.div($ouiResizableButtonSize, -2);
 
     &:before,
     &:after {
@@ -56,8 +58,8 @@
   &.ouiResizableButton--vertical {
     cursor: row-resize;
     height: $ouiResizableButtonSize;
-    margin-top: -($ouiResizableButtonSize / 2);
-    margin-bottom: -($ouiResizableButtonSize / 2);
+    margin-top: math.div($ouiResizableButtonSize, -2);
+    margin-bottom: math.div($ouiResizableButtonSize, -2);
 
     &:before,
     &:after {
@@ -96,7 +98,7 @@
         height $ouiResizableButtonTransitionSpeed ease,
         transform $ouiResizableButtonTransitionSpeed ease
       );
-      transition-delay: $ouiResizableButtonTransitionSpeed / 2;
+      transition-delay: math.div($ouiResizableButtonTransitionSpeed, 2);
     }
   }
 

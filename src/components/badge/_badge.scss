@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /**
  * 1. Accounts for the border
  */
@@ -19,7 +21,7 @@
   padding: 0 $ouiSizeS;
   display: inline-block;
   text-decoration: none;
-  border-radius: $ouiBorderRadius / 2;
+  border-radius: math.div($ouiBorderRadius, 2);
   border: solid 1px transparent;
   background-color: transparent;
   white-space: nowrap;

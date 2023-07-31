@@ -9,11 +9,13 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiRangeHighlight {
   position: absolute;
   left: 0;
   width: 100%;
-  top: calc(50% - #{($ouiRangeHighlightHeight / 2)});
+  top: calc(50% - #{math.div($ouiRangeHighlightHeight, 2)});
   overflow: hidden;
 
   &__progress {
@@ -27,10 +29,10 @@
   }
 
   &--hasTicks {
-    top: ($ouiFormControlHeight / 4) - ($ouiRangeHighlightHeight / 2);
+    top: math.div($ouiFormControlHeight, 4) - math.div($ouiRangeHighlightHeight, 2);
   }
 
   &--hasTicks.ouiRangeHighlight--compressed {
-    top: ($ouiFormControlCompressedHeight / 4) - ($ouiRangeHighlightHeight / 2);
+    top: math.div($ouiFormControlCompressedHeight, 4) - math.div($ouiRangeHighlightHeight, 2);
   }
 }

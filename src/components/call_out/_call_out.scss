@@ -9,9 +9,11 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiCallOut {
   padding: $ouiSize;
-  border-left: $ouiSizeXS / 2 solid transparent;
+  border-left: math.div($ouiSizeXS, 2) solid transparent;
 
   &.ouiCallOut--small {
     padding: $ouiSizeS;

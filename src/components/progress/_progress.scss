@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // This file uses uncommon vendor prefixes not covered by our compilers
 // sass-lint:disable no-vendor-prefixes
 
@@ -20,7 +22,7 @@
 
 // Progress bars come in different sizes.
 $ouiProgressSizes: (
-  xs: $ouiSizeXS / 2,
+  xs: math.div($ouiSizeXS, 2),
   s: $ouiSizeXS,
   m: $ouiSizeS,
   l: $ouiSize,

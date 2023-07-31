@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiComment {
   font-size: $ouiFontSizeS;
   display: flex;
@@ -27,9 +29,9 @@
     &::before {
       content: '';
       position: absolute;
-      left: $ouiSizeXXL / 2;
+      left: math.div($ouiSizeXXL, 2);
       top: $ouiSizeL;
-      width: $ouiSizeXS / 2;
+      width: math.div($ouiSizeXS, 2);
       background-color: $ouiColorLightShade;
       height: calc(100% + #{$ouiSizeL});
     }

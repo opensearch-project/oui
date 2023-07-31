@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // Labels
 @mixin ouiFormLabel {
   @include ouiFontSizeXS;
@@ -19,7 +21,7 @@
 @mixin ouiFormControlLayoutPadding($numOfIcons, $side: 'right', $compressed: false) {
   $iconSize: $ouiSize;
   $iconPadding: $ouiFormControlPadding;
-  $marginBetweenIcons: $ouiFormControlPadding / 2;
+  $marginBetweenIcons: math.div($ouiFormControlPadding, 2);
   @if ($compressed) {
     $iconPadding: $ouiFormControlCompressedPadding;
   }
@@ -55,7 +57,7 @@
   }
 
   #{$iconClass} {
-    @include size($clearSize / 2);
+    @include size(math.div($clearSize, 2));
     fill: $ouiColorEmptyShade;
     // increase thickness of icon at such a small size
     stroke: $ouiColorEmptyShade;
@@ -326,7 +328,7 @@
 
   @if $size {
     $size: $size - 2px; // subtract 2px from size to account for border size
-    padding: $size / 2;
+    padding: math.div($size, 2);
   }
 
   border: 1px solid $ouiFormCustomControlBorderColor;

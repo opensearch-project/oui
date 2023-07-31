@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /*
  *  Input Range Customization by browser
  */
@@ -102,7 +104,7 @@
   // sass-lint:disable-block no-vendor-prefixes
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    margin-top: ((-$ouiRangeTrackBorderWidth * 2 + $ouiRangeTrackHeight) / 2) - ($ouiRangeThumbHeight / 2);
+    margin-top: math.div((-$ouiRangeTrackBorderWidth * 2 + $ouiRangeTrackHeight), 2) - math.div($ouiRangeThumbHeight, 2);
   }
 
   &::-ms-thumb {
@@ -117,20 +119,20 @@
     @include ouiRangeTrackSize;
     background: transparent;
     border-color: transparent;
-    border-width: ($ouiRangeThumbHeight / 2) 0;
+    border-width: math.div($ouiRangeThumbHeight, 2) 0;
     color: transparent;
   }
 
   // States
   &--hasTicks {
-    height: $ouiFormControlHeight / 2; // Adjust vertical alignment based on extras
+    height: math.div($ouiFormControlHeight, 2); // Adjust vertical alignment based on extras
   }
 
   &--compressed {
     height: $ouiFormControlCompressedHeight;
 
     &.ouiRangeSlider--hasTicks {
-      height: $ouiFormControlCompressedHeight / 2;
+      height: math.div($ouiFormControlCompressedHeight, 2);
     }
   }
 }

@@ -9,8 +9,10 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiSearchBar__searchHolder {
-  min-width: $ouiFormMaxWidth / 2;
+  min-width: math.div($ouiFormMaxWidth, 2);
 }
 
 @include ouiBreakpoint('m', 'l', 'xl') {

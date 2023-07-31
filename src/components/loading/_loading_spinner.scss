@@ -9,13 +9,15 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiLoadingSpinner {
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
   width: $ouiSizeXL;
   height: $ouiSizeXL;
   border-radius: 50%;
-  border: solid $ouiSizeXS / 2 $ouiColorLightShade;
+  border: solid math.div($ouiSizeXS, 2) $ouiColorLightShade;
   border-color: ouiLoadingSpinnerBorderColors();
 
   // sass-lint:disable-block mixins-before-declarations

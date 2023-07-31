@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiTour--minWidth-default {
   min-width: $ouiSizeL * 10;
 }
@@ -45,7 +47,7 @@
   .ouiPopover__panelArrow.ouiPopover__panelArrow--right {
     .ouiTour__beacon {
       opacity: 1;
-      top: $ouiPopoverArrowSize / 2;
+      top: math.div($ouiPopoverArrowSize, 2);
       left: -$ouiPopoverArrowSize * 2;
     }
   }
@@ -53,7 +55,7 @@
   .ouiPopover__panelArrow.ouiPopover__panelArrow--left {
     .ouiTour__beacon {
       opacity: 1;
-      top: $ouiPopoverArrowSize / 2;
+      top: math.div($ouiPopoverArrowSize, 2);
       left: $ouiPopoverArrowSize;
     }
   }
@@ -66,7 +68,7 @@
     .ouiTour__beacon {
       opacity: 1;
       top: $ouiPopoverArrowSize;
-      left: $ouiPopoverArrowSize / 2;
+      left: math.div($ouiPopoverArrowSize, 2);
     }
   }
 
@@ -74,7 +76,7 @@
     .ouiTour__beacon {
       opacity: 1;
       top: -$ouiPopoverArrowSize * 2;
-      left: $ouiPopoverArrowSize / 2;
+      left: math.div($ouiPopoverArrowSize, 2);
     }
   }
 }

@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /* This file is a heavy retheme of react-datepicker's Sass as of v1.4.0
 ** https://github.com/Hacker0x01/react-datepicker
 **
@@ -196,7 +198,7 @@
   cursor: pointer;
   position: absolute;
   // Pixel pushing because these are icons against text
-  top: $ouiSize + ($ouiSizeXS / 2);
+  top: $ouiSize + math.div($ouiSizeXS, 2);
   width: 0;
   padding: 0;
   z-index: 1;
@@ -218,12 +220,12 @@
 
     &:hover {
       background-color: $ouiColorLightestShade;
-      box-shadow: 0 0 0 ($ouiSizeXS / 2) $ouiColorLightestShade;
+      box-shadow: 0 0 0 math.div($ouiSizeXS, 2) $ouiColorLightestShade;
     }
 
     &:focus {
       background-color: $ouiFocusBackgroundColor;
-      box-shadow: 0 0 0 ($ouiSizeXS / 2) $ouiFocusBackgroundColor;
+      box-shadow: 0 0 0 math.div($ouiSizeXS, 2) $ouiFocusBackgroundColor;
     }
 
     &--disabled,
@@ -254,12 +256,12 @@
 
     &:hover {
       background-color: $ouiColorLightestShade;
-      box-shadow: 0 0 0 ($ouiSizeXS / 2) $ouiColorLightestShade;
+      box-shadow: 0 0 0 math.div($ouiSizeXS, 2) $ouiColorLightestShade;
     }
 
     &:focus {
       background-color: $ouiFocusBackgroundColor;
-      box-shadow: 0 0 0 ($ouiSizeXS / 2) $ouiFocusBackgroundColor;
+      box-shadow: 0 0 0 math.div($ouiSizeXS, 2) $ouiFocusBackgroundColor;
     }
 
     &--disabled,
@@ -355,7 +357,7 @@
           &--selected {
             background-color: $ouiColorPrimary;
             color: white;
-            border-radius: $ouiBorderRadius / 2;
+            border-radius: math.div($ouiBorderRadius, 2);
             &:hover {
               background-color: $ouiColorPrimary;
             }
@@ -404,7 +406,7 @@
   width: $ouiSizeXL;
   line-height: $ouiSizeXL - $ouiSizeXS;
   text-align: center;
-  margin: 0 $ouiSizeXS / 2;
+  margin: 0 math.div($ouiSizeXS, 2);
 }
 
 .react-datepicker__day-name {
@@ -455,11 +457,11 @@
   &--selected,
   &--in-selecting-range {
     height: $ouiSizeXL;
-    margin: 0 $ouiSizeXS / 2;
+    margin: 0 math.div($ouiSizeXS, 2);
     border-radius: $ouiBorderRadius;
     background-color: $ouiColorPrimary;
     line-height: $ouiSizeL + $ouiSizeXS;
-    border: solid $ouiSizeXS / 2 $ouiColorPrimary;
+    border: solid math.div($ouiSizeXS, 2) $ouiColorPrimary;
     color: $ouiColorGhost;
 
     &:hover {
@@ -469,7 +471,7 @@
 
   &--keyboard-selected {
     border-radius: $ouiBorderRadius;
-    border: solid $ouiSizeXS / 2 $ouiColorPrimary;
+    border: solid math.div($ouiSizeXS, 2) $ouiColorPrimary;
     font-weight: $ouiFontWeightBold;
 
     &:hover {

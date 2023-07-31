@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiFormControlLayoutIcons {
   pointer-events: none;
   position: absolute;
@@ -19,7 +21,7 @@
   align-items: center;
 
   > * + * {
-    margin-left: $ouiFormControlPadding / 2;
+    margin-left: math.div($ouiFormControlPadding, 2);
   }
 
   .ouiFormControlLayout--compressed & {

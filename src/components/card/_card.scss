@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 /**
  * 1. Footer is always at the bottom.
  * 2. Fix for IE where the image correctly resizes in width but doesn't collapse its height
@@ -176,7 +178,7 @@
   }
 
   .ouiCard__icon {
-    margin-top: $ouiCardSpacing / 2;
+    margin-top: math.div($ouiCardSpacing, 2);
   }
 }
 
@@ -207,7 +209,7 @@
 
   .ouiCard__description,
   .ouiCard__children {
-    margin-top: $ouiCardSpacing / 2;
+    margin-top: math.div($ouiCardSpacing, 2);
   }
 
   .ouiCard__titleAnchor,

@@ -61,6 +61,12 @@ async function deriveSassVariableTypes(
 function deriveValueType(extractedValue) {
   switch (typeof extractedValue) {
     case 'object':
+      if (Array.isArray(extractedValue)) {
+        return ts.createTupleTypeNode(
+          extractedValue.map((value) => deriveValueType(value))
+        );
+      }
+
       return ts.createTypeLiteralNode(
         Object.keys(extractedValue).map(key =>
           ts.createPropertySignature(

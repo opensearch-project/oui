@@ -9,10 +9,12 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // This should only be used for .ouiText, therefore it's not included in a separate mixin file
 
 @mixin ouiScaleText($baseFontSize) {
-  $baseLineHeightMultiplier: $baseFontSize / 2;
+  $baseLineHeightMultiplier: math.div($baseFontSize, 2);
   line-height: convertToRem($baseLineHeightMultiplier * 3);
 
   p,

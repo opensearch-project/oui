@@ -9,23 +9,25 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 .ouiRangeLevels {
   display: flex;
   justify-content: stretch;
   position: absolute;
   left: 0;
   right: 0;
-  top: ($ouiFormControlHeight / 2) + 2px;
+  top: math.div($ouiFormControlHeight, 2) + 2px;
 
   &--hasTicks {
-    top: ($ouiFormControlHeight / 4) + 2px;
+    top: math.div($ouiFormControlHeight, 4) + 2px;
   }
 
   &--compressed {
-    top: ($ouiFormControlCompressedHeight / 2) + 2px;
+    top: math.div($ouiFormControlCompressedHeight, 2) + 2px;
 
     &.ouiRangeLevels--hasTicks {
-      top: ($ouiFormControlCompressedHeight / 4) + 2px;
+      top: math.div($ouiFormControlCompressedHeight, 4) + 2px;
     }
   }
 }
