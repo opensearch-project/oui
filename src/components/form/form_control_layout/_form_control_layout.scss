@@ -26,6 +26,7 @@
 .ouiFormControlLayout--group {
   // Match just the regular drop shadow of inputs
   @include ouiFormControlDefaultShadow;
+
   display: flex;
   align-items: stretch;
   padding: 1px; /* 1 */
@@ -48,6 +49,7 @@
   .ouiFormControlLayout__prepend,
   .ouiFormControlLayout__append {
     @include ouiTextTruncate;
+
     flex-shrink: 0;
     height: 100%;
     border-radius: 0;
@@ -119,7 +121,7 @@
     cursor: default !important; // pointer cursor on some form labels but not others is confusing
 
     // If the next sibling is not the input, pull it closer to the text to reduce space
-    + *:not(.ouiFormControlLayout__childrenWrapper):not(input) {
+    + *:not(.ouiFormControlLayout__childrenWrapper, input) {
       margin-left: -$ouiFormControlPadding;
     }
   }
@@ -152,6 +154,7 @@
 
   &.ouiFormControlLayout--compressed {
     @include ouiFormControlDefaultShadow($borderOnly: true);
+
     border-radius: $ouiBorderRadius / 2;
     overflow: hidden; // Keeps backgrounds inside border radius
 

@@ -12,10 +12,9 @@
 .ouiNotificationEventMeta {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   margin-right: $ouiSizeXS;
   min-height: $ouiSizeL; // ensures the same size of the read button to properly center align
 

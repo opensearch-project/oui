@@ -24,7 +24,7 @@
   }
 
   .ouiHeaderSectionItem {
-    &:after {
+    &::after {
       background: lightOrDarkTheme($ouiColorDarkShade, $ouiColorLightestShade);
     }
   }
@@ -63,7 +63,7 @@
   }
 
   .euiHeaderSectionItem {
-    &:after {
+    &::after {
       background: lightOrDarkTheme($ouiColorDarkShade, $ouiColorLightestShade);
     }
   }
@@ -84,4 +84,5 @@
     stroke: $backgroundColor;
   }
 }
+
 /* End of Aliases */

@@ -11,6 +11,7 @@
 
 .ouiSelectableListItem {
   @include ouiFontSizeS;
+
   display: inline-flex; // Necessary to make sure it doesn't force the whole popover to be too wide
   width: 100%;
   text-align: left;
@@ -57,5 +58,6 @@
 
 .ouiSelectableListItem__text {
   @include ouiTextTruncate;
+
   flex-grow: 1; // Pushes appended content to the far right
 }

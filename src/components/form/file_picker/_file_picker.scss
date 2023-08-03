@@ -15,6 +15,7 @@
 
 .ouiFilePicker {
   @include ouiFormControlSize($includeAlternates: true);
+
   position: relative;
 
   &.ouiFilePicker--large {
@@ -81,6 +82,7 @@
 .ouiFilePicker__prompt {
   @include ouiFormControlDefaultShadow;
   @include ouiFormControlWithIcon; /* 2 */
+
   height: $ouiFormControlHeight;
   padding-top: $ouiFormControlPadding;
   padding-right: $ouiFormControlPadding;
@@ -98,6 +100,7 @@
   .ouiFilePicker--compressed & {
     @include ouiFormControlStyleCompressed($includeStates: false);
     @include ouiFormControlWithIcon($compressed: true); /* 2 */
+
     height: $ouiFormControlCompressedHeight;
     border-radius: $ouiFormControlCompressedBorderRadius;
   }
@@ -123,10 +126,11 @@
 .ouiFilePicker__promptText {
   @include ouiFontSizeS;
   @include ouiTextTruncate;
+
   line-height: $ouiSize;
 
   // make normal sized prompt look like placeholder
-  .ouiFilePicker:not(.ouiFilePicker--large):not(.ouiFilePicker-hasFiles) & {
+  .ouiFilePicker:not(.ouiFilePicker--large, .ouiFilePicker-hasFiles) & {
     color: $ouiColorMediumShade;
   }
 }

@@ -12,6 +12,7 @@
 .ouiCardSelect {
   // Option select button that expands to sides and bottom
   @include ouiCardBottomNodePosition;
+
   font-weight: $ouiFontWeightBold;
 
   // Create button modifiers based upon the map.
@@ -20,7 +21,7 @@
       background-color: $color;
 
       // Custom success text color since it doesn't exist on OuiButtonEmpty
-      @if ($name == 'success') {
+      @if  $name == 'success' {
         color: makeHighContrastColor($ouiColorSuccess, $color);
       }
     }

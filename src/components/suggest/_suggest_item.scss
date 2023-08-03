@@ -34,6 +34,7 @@
   @each $name, $color in $ouiSuggestItemColors {
     .ouiSuggestItem__type--#{$name} {
       $backgroundColor: tintOrShade($color, 82%, 70%);
+
       background-color: $backgroundColor;
       color: makeHighContrastColor($color, $backgroundColor);
     }
@@ -62,6 +63,7 @@
 
   .ouiSuggestItem__label {
     @include ouiTextTruncate;
+
     font-family: var(--oui-code-font-family);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -74,6 +76,7 @@
       &.ouiSuggestItem__label--width#{$i} {
         flex-basis: $i * 1%;
         min-width: $i * 1%;
+
         $i: $i + 10;
       }
     }
@@ -92,12 +95,14 @@
 
     &.ouiSuggestItem__description--wrap {
       @include ouiTextBreakWord;
+
       white-space: normal;
       line-height: $ouiSizeM + 2px;
     }
 
     &.ouiSuggestItem__description--truncate {
       @include ouiTextTruncate;
+
       line-height: $ouiLineHeight;
     }
 

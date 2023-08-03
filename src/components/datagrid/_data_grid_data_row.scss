@@ -41,6 +41,7 @@
 
   &:focus {
     @include ouiDataGridCellFocus;
+
     margin-top: -1px;
   }
 
@@ -88,7 +89,7 @@
   }
 
   // if a cell is not hovered nor focused nor open via popover, don't show buttons in general
-  &:not(:hover):not(:focus):not(.ouiDataGridRowCell--open) {
+  &:not(:hover, :focus, .ouiDataGridRowCell--open) {
     .ouiDataGridRowCell__expandButtonIcon,
     .ouiDataGridRowCell__actionButtonIcon {
       display: none;
@@ -127,6 +128,7 @@
     &.ouiDataGridRowCell__truncate,
     .ouiDataGridRowCell__expandContent {
       @include ouiTextTruncate;
+
       overflow: hidden;
       white-space: nowrap;
     }
@@ -135,7 +137,9 @@
 
 .ouiDataGridRowCell__popover {
   @include ouiScrollBar;
+
   overflow: auto;
+
   // sass-lint:disable-block no-important
   max-width: 400px !important;
   max-height: 400px !important;

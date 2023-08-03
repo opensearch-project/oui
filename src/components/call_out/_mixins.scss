@@ -10,14 +10,14 @@
  */
 
 @function ouiCallOutColor($type: 'primary', $returnBackgroundOrForeground: 'background') {
-  @if (map-has-key($ouiCallOutTypes, $type)) {
+  @if  map-has-key($ouiCallOutTypes, $type) {
     $color: map-get($ouiCallOutTypes, $type);
     $backgroundColor: tintOrShade($color, 90%, 70%);
     $foregroundColor: shadeOrTint(makeHighContrastColor($color, $backgroundColor), 0, 20%);
 
-    @if ($returnBackgroundOrForeground == 'background') {
+    @if  $returnBackgroundOrForeground == 'background' {
       @return $backgroundColor;
-    } @else if ($returnBackgroundOrForeground == 'foreground') {
+    } @else if $returnBackgroundOrForeground == 'foreground' {
       @return $foregroundColor;
     } @else {
       @warn 'Incorrect value provided as $returnBackgroundOrForeground';
@@ -28,11 +28,13 @@
 }
 
 @mixin ouiCallOutTitle($size: null) {
-  @if ($size == 's') {
+  @if  $size == 's' {
     @include ouiTitle('xxs');
+
     font-weight: $ouiFontWeightRegular;
   } @else {
     @include ouiTitle('xs');
+
     font-weight: $ouiFontWeightRegular;
   }
 }
@@ -40,5 +42,7 @@
 
 /* OUI -> EUI Aliases */
 @function euiCallOutColor($type: 'primary', $returnBackgroundOrForeground: 'background') { @return ouiCallOutColor($type, $returnBackgroundOrForeground); }
+
 @mixin euiCallOutTitle($size: null) { @include ouiCallOutTitle($size); }
+
 /* End of Aliases */

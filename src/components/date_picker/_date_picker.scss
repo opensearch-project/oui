@@ -28,10 +28,11 @@
 // There is one for light and dark.
 @mixin datePicker__arrow {
   background-position: center;
-  @if (lightness($ouiColorEmptyShade) > 50) {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+ICA8ZGVmcz4gICAgPHBhdGggaWQ9ImFycm93X2Rvd24tYSIgZD0iTTEzLjA2ODg1MDgsNS4xNTcyNTAzOCBMOC4zODQyMzk3NSw5Ljc2ODI3NDI4IEM4LjE3MDU0NDE1LDkuOTc4NjEzMDggNy44Mjk5OTIxNCw5Ljk3OTE0MDk1IDcuNjE1NzYwMjUsOS43NjgyNzQyOCBMMi45MzExNDkxNSw1LjE1NzI1MDM4IEMyLjcxODEzNTksNC45NDc1ODMyMSAyLjM3Mjc3MzE5LDQuOTQ3NTgzMjEgMi4xNTk3NTk5NCw1LjE1NzI1MDM4IEMxLjk0Njc0NjY5LDUuMzY2OTE3NTYgMS45NDY3NDY2OSw1LjcwNjg1NTIyIDIuMTU5NzU5OTQsNS45MTY1MjI0IEw2Ljg0NDM3MTA0LDEwLjUyNzU0NjMgQzcuNDg1MTc0MjQsMTEuMTU4MjgzNiA4LjUxNjQ0OTc5LDExLjE1NjY4NTEgOS4xNTU2Mjg5NiwxMC41Mjc1NDYzIEwxMy44NDAyNDAxLDUuOTE2NTIyNCBDMTQuMDUzMjUzMyw1LjcwNjg1NTIyIDE0LjA1MzI1MzMsNS4zNjY5MTc1NiAxMy44NDAyNDAxLDUuMTU3MjUwMzggQzEzLjYyNzIyNjgsNC45NDc1ODMyMSAxMy4yODE4NjQxLDQuOTQ3NTgzMjEgMTMuMDY4ODUwOCw1LjE1NzI1MDM4IFoiLz4gIDwvZGVmcz4gIDxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgIDx1c2UgZmlsbC1ydWxlPSJub256ZXJvIiB4bGluazpocmVmPSIjYXJyb3dfZG93bi1hIi8+ICA8L2c+PC9zdmc+);
+
+  @if  lightness($ouiColorEmptyShade) > 50 {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+ICA8ZGVmcz4gICAgPHBhdGggaWQ9ImFycm93X2Rvd24tYSIgZD0iTTEzLjA2ODg1MDgsNS4xNTcyNTAzOCBMOC4zODQyMzk3NSw5Ljc2ODI3NDI4IEM4LjE3MDU0NDE1LDkuOTc4NjEzMDggNy44Mjk5OTIxNCw5Ljk3OTE0MDk1IDcuNjE1NzYwMjUsOS43NjgyNzQyOCBMMi45MzExNDkxNSw1LjE1NzI1MDM4IEMyLjcxODEzNTksNC45NDc1ODMyMSAyLjM3Mjc3MzE5LDQuOTQ3NTgzMjEgMi4xNTk3NTk5NCw1LjE1NzI1MDM4IEMxLjk0Njc0NjY5LDUuMzY2OTE3NTYgMS45NDY3NDY2OSw1LjcwNjg1NTIyIDIuMTU5NzU5OTQsNS45MTY1MjI0IEw2Ljg0NDM3MTA0LDEwLjUyNzU0NjMgQzcuNDg1MTc0MjQsMTEuMTU4MjgzNiA4LjUxNjQ0OTc5LDExLjE1NjY4NTEgOS4xNTU2Mjg5NiwxMC41Mjc1NDYzIEwxMy44NDAyNDAxLDUuOTE2NTIyNCBDMTQuMDUzMjUzMyw1LjcwNjg1NTIyIDE0LjA1MzI1MzMsNS4zNjY5MTc1NiAxMy44NDAyNDAxLDUuMTU3MjUwMzggQzEzLjYyNzIyNjgsNC45NDc1ODMyMSAxMy4yODE4NjQxLDQuOTQ3NTgzMjEgMTMuMDY4ODUwOCw1LjE1NzI1MDM4IFoiLz4gIDwvZGVmcz4gIDxnIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgIDx1c2UgZmlsbC1ydWxlPSJub256ZXJvIiB4bGluazpocmVmPSIjYXJyb3dfZG93bi1hIi8+ICA8L2c+PC9zdmc+");
   } @else {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+ICA8ZGVmcz4gICAgPHBhdGggaWQ9ImRvd25hcnJvd3doaXRlLWEiIGQ9Ik0xMy4wNjg4NTA4LDUuMTU3MjUwMzggTDguMzg0MjM5NzUsOS43NjgyNzQyOCBDOC4xNzA1NDQxNSw5Ljk3ODYxMzA4IDcuODI5OTkyMTQsOS45NzkxNDA5NSA3LjYxNTc2MDI1LDkuNzY4Mjc0MjggTDIuOTMxMTQ5MTUsNS4xNTcyNTAzOCBDMi43MTgxMzU5LDQuOTQ3NTgzMjEgMi4zNzI3NzMxOSw0Ljk0NzU4MzIxIDIuMTU5NzU5OTQsNS4xNTcyNTAzOCBDMS45NDY3NDY2OSw1LjM2NjkxNzU2IDEuOTQ2NzQ2NjksNS43MDY4NTUyMiAyLjE1OTc1OTk0LDUuOTE2NTIyNCBMNi44NDQzNzEwNCwxMC41Mjc1NDYzIEM3LjQ4NTE3NDI0LDExLjE1ODI4MzYgOC41MTY0NDk3OSwxMS4xNTY2ODUxIDkuMTU1NjI4OTYsMTAuNTI3NTQ2MyBMMTMuODQwMjQwMSw1LjkxNjUyMjQgQzE0LjA1MzI1MzMsNS43MDY4NTUyMiAxNC4wNTMyNTMzLDUuMzY2OTE3NTYgMTMuODQwMjQwMSw1LjE1NzI1MDM4IEMxMy42MjcyMjY4LDQuOTQ3NTgzMjEgMTMuMjgxODY0MSw0Ljk0NzU4MzIxIDEzLjA2ODg1MDgsNS4xNTcyNTAzOCBaIi8+ICA8L2RlZnM+ICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICA8dXNlIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgeGxpbms6aHJlZj0iI2Rvd25hcnJvd3doaXRlLWEiLz4gIDwvZz48L3N2Zz4=);
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiI+ICA8ZGVmcz4gICAgPHBhdGggaWQ9ImRvd25hcnJvd3doaXRlLWEiIGQ9Ik0xMy4wNjg4NTA4LDUuMTU3MjUwMzggTDguMzg0MjM5NzUsOS43NjgyNzQyOCBDOC4xNzA1NDQxNSw5Ljk3ODYxMzA4IDcuODI5OTkyMTQsOS45NzkxNDA5NSA3LjYxNTc2MDI1LDkuNzY4Mjc0MjggTDIuOTMxMTQ5MTUsNS4xNTcyNTAzOCBDMi43MTgxMzU5LDQuOTQ3NTgzMjEgMi4zNzI3NzMxOSw0Ljk0NzU4MzIxIDIuMTU5NzU5OTQsNS4xNTcyNTAzOCBDMS45NDY3NDY2OSw1LjM2NjkxNzU2IDEuOTQ2NzQ2NjksNS43MDY4NTUyMiAyLjE1OTc1OTk0LDUuOTE2NTIyNCBMNi44NDQzNzEwNCwxMC41Mjc1NDYzIEM3LjQ4NTE3NDI0LDExLjE1ODI4MzYgOC41MTY0NDk3OSwxMS4xNTY2ODUxIDkuMTU1NjI4OTYsMTAuNTI3NTQ2MyBMMTMuODQwMjQwMSw1LjkxNjUyMjQgQzE0LjA1MzI1MzMsNS43MDY4NTUyMiAxNC4wNTMyNTMzLDUuMzY2OTE3NTYgMTMuODQwMjQwMSw1LjE1NzI1MDM4IEMxMy42MjcyMjY4LDQuOTQ3NTgzMjEgMTMuMjgxODY0MSw0Ljk0NzU4MzIxIDEzLjA2ODg1MDgsNS4xNTcyNTAzOCBaIi8+ICA8L2RlZnM+ICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICA8dXNlIGZpbGw9IiNGRkYiIGZpbGwtcnVsZT0ibm9uemVybyIgeGxpbms6aHJlZj0iI2Rvd25hcnJvd3doaXRlLWEiLz4gIDwvZz48L3N2Zz4=");
   }
 }
 
@@ -71,6 +72,7 @@
 
 .react-datepicker {
   @include ouiFont;
+
   font-size: $ouiFontSizeXS;
   color: $ouiColorFullShade;
   display: flex;
@@ -80,11 +82,8 @@
 
 // When in time only mode we make the dropdown look more like the combo box styling.
 .react-datepicker--time-only {
-
   .react-datepicker__time-container {
-
     .react-datepicker__time {
-
       .react-datepicker__time-box {
         width: 100%;
 
@@ -128,7 +127,6 @@
   animation: ouiAnimFadeIn $ouiAnimSpeedFast ease-in;
 
   &[data-placement^="bottom"] {
-
     // .react-datepicker__triangle {
     // }
   }
@@ -195,6 +193,7 @@
 .react-datepicker__navigation {
   cursor: pointer;
   position: absolute;
+
   // Pixel pushing because these are icons against text
   top: $ouiSize + ($ouiSizeXS / 2);
   width: 0;
@@ -205,6 +204,7 @@
 
   &--previous {
     @include datePicker__arrow;
+
     left: $ouiSize + $ouiSizeXS;
     height: $ouiSize;
     width: $ouiSize;
@@ -235,6 +235,7 @@
 
   &--next {
     @include datePicker__arrow;
+
     // Pixel value because of some padding on the icon
     right: 20px;
     height: $ouiSize;
@@ -331,6 +332,7 @@
 
       ul.react-datepicker__time-list {
         @include ouiScrollBar;
+
         height: 204px !important;
         display: flex;
         flex-direction: column;
@@ -344,6 +346,7 @@
           text-align: right;
           color: $ouiColorDarkShade;
           white-space: nowrap;
+
           // IE needs this to fix collapsing flex
           line-height: $ouiSizeM;
 
@@ -352,14 +355,17 @@
             cursor: pointer;
             text-decoration: underline;
           }
+
           &--selected {
             background-color: $ouiColorPrimary;
             color: white;
             border-radius: $ouiBorderRadius / 2;
+
             &:hover {
               background-color: $ouiColorPrimary;
             }
           }
+
           &--disabled {
             color: $ouiColorLightShade;
 
@@ -382,8 +388,10 @@
   line-height: $ouiSizeXL - $ouiSizeXS;
   text-align: center;
   margin: 0 $ouiSizeXS;
+
   &.react-datepicker__week-number--clickable {
     cursor: pointer;
+
     &:hover {
       border-radius: $ouiBorderRadius;
       background-color: $ouiColorEmptyShade;
@@ -427,6 +435,7 @@
     font-weight: bold;
     color: $ouiColorPrimary;
   }
+
   &--outside-month {
     color: $ouiColorDarkShade;
   }
@@ -539,10 +548,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
+  inset: 0;
   z-index: 1;
   text-align: center;
   border-radius: $ouiBorderRadius;
@@ -566,8 +572,7 @@
 
 // Strike that, reverse it Willy Wonka style
 .react-datepicker__year-dropdown {
-  flex-wrap: wrap-reverse;
-  flex-direction: row-reverse;
+  flex-flow: row-reverse wrap-reverse;
   justify-content: flex-end;
 }
 
@@ -592,9 +597,9 @@
   }
 
   &:last-of-type {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    user-select: none;
+    user-select: none;
+    user-select: none;
     user-select: none;
     border-bottom-left-radius: $ouiBorderRadius;
     border-bottom-right-radius: $ouiBorderRadius;
@@ -659,6 +664,7 @@
     border-bottom-color: $ouiFocusBackgroundColor;
   }
 }
+
 .react-datepicker__navigation:focus {
   background-color: $ouiFocusBackgroundColor;
 }

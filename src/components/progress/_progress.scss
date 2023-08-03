@@ -60,7 +60,7 @@ $ouiProgressSizes: (
  * See https://css-tricks.com/html5-progress-element/ for more info.
  */
 .ouiProgress--indeterminate {
-  &:before {
+  &::before {
     position: absolute;
     content: '';
     width: 100%;
@@ -113,13 +113,13 @@ $ouiProgressSizes: (
     }
 
     &.ouiProgress--indeterminate {
-      &:before {
+      &::before {
         background-color: $color;
       }
     }
   }
 
-  @if ($name != 'customColor') {
+  @if  $name != 'customColor' {
     .ouiProgress__data--#{$name} {
       .ouiProgress__valueText {
         color: makeHighContrastColor($color);
@@ -179,4 +179,5 @@ $ouiProgressSizes: (
 
 /* OUI -> EUI Aliases */
 $euiProgressSizes: $ouiProgressSizes;
+
 /* End of Aliases */

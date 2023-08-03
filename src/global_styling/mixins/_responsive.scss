@@ -24,27 +24,27 @@
     $index: index($ouiBreakpointKeys, $size);
 
     // Check to make sure it exists in the allowed breakpoint names
-    @if ( $index ) {
-
+    @if   $index  {
       // Set the min size to the value of the size
       $minSize: map-get($ouiBreakpoints, $size);
 
       // If it is the last item, don't give it a max-width
-      @if ( $index == length($ouiBreakpointKeys) ) {
+      @if   $index == length($ouiBreakpointKeys)  {
         @media only screen and (min-width: $minSize) {
           @content;
         }
+
       // If it's not the last item, add a max-width
       } @else {
-
         // Set the max size to the value of the next size (-1px as to not overlap)
         $maxSize: map-get($ouiBreakpoints, nth($ouiBreakpointKeys, $index + 1)) - 1px;
 
         // If it's the the first item, don't set a min-width
-        @if ( $index == 1 ) {
+        @if   $index == 1  {
           @media only screen and (max-width: $maxSize) {
             @content;
           }
+
         // Otherwise it should have a min and max width
         } @else {
           @media only screen and (min-width: $minSize) and (max-width: $maxSize) {
@@ -52,6 +52,7 @@
           }
         }
       }
+
     // If it's not a known breakpoint, throw a warning
     } @else {
       @warn "ouiBreakpoint(): '#{$size}' is not a valid size in $ouiBreakpoints. Accepted values are '#{$ouiBreakpointKeys}'";
@@ -66,4 +67,5 @@
     @content;
   }
 }
+
 /* End of Aliases */

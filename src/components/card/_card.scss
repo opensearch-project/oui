@@ -42,7 +42,7 @@
       cursor: inherit;
     }
 
-    .ouiCard__betaBadge:not(.ouiBetaBadge-isClickable):not(.ouiBetaBadge--hollow) {
+    .ouiCard__betaBadge:not(.ouiBetaBadge-isClickable, .ouiBetaBadge--hollow) {
       box-shadow: inset 0 0 0 1px $ouiBorderColor;
       background: transparent;
       color: inherit;
@@ -131,7 +131,6 @@
     }
 
     .ouiCard__top {
-
       .ouiCard__image {
         width: calc(100% + (#{$paddingAmount} * 2));
         left: $paddingAmount * -1;
@@ -233,6 +232,7 @@
   // otherwise the button tag won't properly align contents to top
   &.ouiCard--hasIcon {
     flex-direction: row;
+
     // sass-lint:disable-block no-important
     align-items: flex-start !important; /* 3 */
 

@@ -21,7 +21,7 @@
   z-index: 2; // Needs to be a level above the cells themselves in case of overlaps
 
   // Center a vertical line within the button above
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     left: $ouiSizeS - 1px;
@@ -46,12 +46,11 @@
 // we don't use negative positioning and the borders from the cell will match the container.
 @include ouiDataGridHeaderCell {
   &:last-child {
-
     .ouiDataGridColumnResizer {
       right: 0;
       width: $ouiSize / 2;
 
-      &:after {
+      &::after {
         left: auto;
         right: 0;
       }

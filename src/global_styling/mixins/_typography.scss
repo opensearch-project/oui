@@ -18,8 +18,8 @@
   font-family: var(--oui-font-family);
   font-weight: $ouiFontWeightRegular;
   letter-spacing: -.005em;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-size-adjust: 100%;
   font-kerning: normal;
 }
 
@@ -36,9 +36,9 @@
 @mixin ouiTitle($size: 'm') {
   color: $ouiTitleColor;
 
-  @if (map-has-key($ouiTitles, $size)) {
+  @if  map-has-key($ouiTitles, $size) {
     @each $property, $value in map-get($ouiTitles, $size) {
-      @if ($property == 'font-size') {
+      @if  $property == 'font-size' {
         @include fontSize($value);
       } @else {
         #{$property}: $value;
@@ -54,48 +54,55 @@
 
 @mixin ouiFontSizeXS {
   @include fontSize($ouiFontSizeXS);
+
   line-height: $ouiLineHeight;
 }
 
 @mixin ouiFontSizeS {
   @include fontSize($ouiFontSizeS);
+
   line-height: $ouiLineHeight;
 }
 
 @mixin ouiFontSize {
   @include fontSize($ouiFontSize);
+
   line-height: $ouiLineHeight;
 }
 
 @mixin ouiFontSizeM {
   @include fontSize($ouiFontSizeM);
+
   line-height: $ouiLineHeight;
 }
 
 @mixin ouiFontSizeL {
   @include fontSize($ouiFontSizeL);
+
   line-height: $ouiLineHeight;
 }
 
 @mixin ouiFontSizeXL {
   @each $property, $value in map-get($ouiTitles, 'm') {
-    @if ($property == 'font-size') {
+    @if  $property == 'font-size' {
       @include fontSize($value);
     } @else {
       #{$property}: $value;
     }
   }
+
   line-height: 1.25;
 }
 
 @mixin ouiFontSizeXXL {
   @each $property, $value in map-get($ouiTitles, 'l') {
-    @if ($property == 'font-size') {
+    @if  $property == 'font-size' {
       @include fontSize($value);
     } @else {
       #{$property}: $value;
     }
   }
+
   line-height: 1.25;
 }
 
@@ -151,18 +158,33 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiFont { @include ouiFont; }
+
 @mixin euiCodeFont { @include ouiCodeFont; }
+
 @mixin euiText { @include ouiText; }
+
 @mixin euiTitle($size: 'm') { @include ouiTitle($size); }
+
 @mixin euiFontSizeXS { @include ouiFontSizeXS; }
+
 @mixin euiFontSizeS { @include ouiFontSizeS; }
+
 @mixin euiFontSize { @include ouiFontSize; }
+
 @mixin euiFontSizeM { @include ouiFontSizeM; }
+
 @mixin euiFontSizeL { @include ouiFontSizeL; }
+
 @mixin euiFontSizeXL { @include ouiFontSizeXL; }
+
 @mixin euiFontSizeXXL { @include ouiFontSizeXXL; }
+
 @mixin euiTextBreakWord { @include ouiTextBreakWord; }
+
 @mixin euiTextTruncate { @include ouiTextTruncate; }
+
 @mixin euiNumberFormat { @include ouiNumberFormat; }
+
 @mixin euiTextShift($fontWeight: $ouiFontWeightBold, $attr: 'data-text') { @include ouiTextShift($fontWeight, $attr); }
+
 /* End of Aliases */

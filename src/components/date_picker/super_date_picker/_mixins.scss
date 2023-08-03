@@ -11,6 +11,7 @@
 
 @mixin ouiSuperDatePickerText {
   @include ouiFormControlText;
+
   display: block;
   width: 100%;
   padding: 0 $ouiSizeS;
@@ -23,4 +24,5 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiSuperDatePickerText { @include ouiSuperDatePickerText; }
+
 /* End of Aliases */

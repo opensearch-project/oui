@@ -11,13 +11,16 @@
 
 .ouiPageBody {
   @include ouiPageRestrictWidth;
+
   display: flex;
   flex-direction: column;
   align-items: stretch;
   flex: 1 1 100%;
+
   // Make sure that inner flex layouts don't get larger than this container
   max-width: 100%;
   min-width: 0;
+
   // Commenting out for posterity
   // Adding z-index disallows fullscreens like OuiDataGrid to get above the headers
   // z-index: 1; // Ensures any side nav emphasis gets rendered under shadow
@@ -38,6 +41,7 @@
     & > .ouiPageHeader:not([class*='--padding']) {
       // Match the body's padding for spacing if it doesn't have it's own
       margin-bottom: $amount;
+
       // When the page header is actually inside of a panelled page body,
       // We want to add some extra separation between it and the content body
       border-bottom: $ouiBorderThin;

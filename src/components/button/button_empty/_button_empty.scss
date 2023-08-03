@@ -20,6 +20,7 @@
   border-color: transparent;
   background-color: transparent;
   box-shadow: none;
+
   // sass-lint:disable-block no-important
   transform: none !important; /* 1 */
   animation: none !important; /* 1 */
@@ -92,10 +93,10 @@ $ouiButtonEmptyTypes: (
 // Create button modifiers based upon the map.
 @each $name, $color in $ouiButtonEmptyTypes {
   .ouiButtonEmpty--#{$name} {
-    @if ($name == 'ghost') {
+    @if  $name == 'ghost' {
       // Ghost is unique and ALWAYS sits against a dark background.
       color: $color;
-    } @else if ($name == 'text') {
+    } @else if $name == 'text' {
       // The default color is lighter than the normal text color, make the it the text color
       color: $ouiTextColor;
     } @else {
@@ -108,7 +109,7 @@ $ouiButtonEmptyTypes: (
     }
 
     &:hover {
-      @if ($name == 'disabled') {
+      @if  $name == 'disabled' {
         cursor: not-allowed;
       }
     }
@@ -119,4 +120,5 @@ $ouiButtonEmptyTypes: (
 
 /* OUI -> EUI Aliases */
 $euiButtonEmptyTypes: $ouiButtonEmptyTypes;
+
 /* End of Aliases */

@@ -11,6 +11,7 @@
 
 .ouiComboBox {
   @include ouiFormControlSize(auto, $includeAlternates: true);
+
   position: relative;
 
   /**
@@ -28,6 +29,7 @@
     @include ouiFormControlStyle($includeStates: false, $includeSizes: true);
     @include ouiFormControlWithIcon($isIconOptional: true);
     @include ouiFormControlSize(auto, $includeAlternates: true);
+
     padding: $ouiSizeXS $ouiSizeS;
     display: flex; /* 1 */
     outline: none; // Fixes an intermittent focus ring in Firefox
@@ -93,6 +95,7 @@
 
     > input {
       @include ouiFont;
+
       appearance: none; /* 3 */
       padding: 0;
       border: none;
@@ -124,6 +127,7 @@
     .ouiComboBox__inputWrap {
       // sass-lint:disable-block no-vendor-prefixes
       @include ouiFormControlDisabledStyle;
+
       -webkit-text-fill-color: unset; // overrides $ouiFormControlDisabledColor because the color doesn't work with multiple background colors
     }
 

@@ -24,7 +24,6 @@ $ouiIconColors: (
   warning: makeGraphicContrastColor($ouiColorWarning),
   inherit: inherit
 );
-
 $ouiIconSizes: (
   small: $ouiSizeM,
   medium: $ouiSize,
@@ -38,4 +37,5 @@ $ouiIconSizes: (
 $euiIconLoadingOpacity: $ouiIconLoadingOpacity;
 $euiIconColors: $ouiIconColors;
 $euiIconSizes: $ouiIconSizes;
+
 /* End of Aliases */

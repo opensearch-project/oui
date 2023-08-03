@@ -12,6 +12,7 @@
 .ouiFormControlLayoutDelimited {
   // Match just the regular drop shadow of inputs
   @include ouiFormControlDefaultShadow;
+
   display: flex;
   align-items: stretch;
   padding: 1px; /* 1 */
@@ -29,14 +30,12 @@
   // Target when the ouiFormControlLayout is compressed without specifying the full class name in case it ever changes
   &[class*='--compressed'] {
     @include ouiFormControlDefaultShadow($borderOnly: true);
+
     border-radius: $ouiBorderRadius / 2;
 
     .ouiFormControlLayoutDelimited__input {
       height: 100%;
-      padding-top: 0; // Fixes IE
-      padding-bottom: 0; // Fixes IE
-      padding-left: $ouiFormControlCompressedPadding;
-      padding-right: $ouiFormControlCompressedPadding;
+      padding: 0 $ouiFormControlCompressedPadding 0 $ouiFormControlCompressedPadding; // Fixes IE // Fixes IE
     }
 
     .ouiFormControlLayoutIcons {

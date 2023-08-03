@@ -27,7 +27,7 @@
 // For theming. Checks the text color and tells us whether it's light or dark.
 // Based on that we either tint (add white) or shade (add black).
 @function tintOrShade($color, $tint, $shade) {
-  @if (lightness($ouiTextColor) > 50) {
+  @if  lightness($ouiTextColor) > 50 {
     @return shade($color, $shade);
   } @else {
     @return tint($color, $tint);
@@ -36,7 +36,7 @@
 
 // The reverse of the above
 @function shadeOrTint($color, $shade, $tint) {
-  @if (lightness($ouiTextColor) < 50) {
+  @if  lightness($ouiTextColor) < 50 {
     @return shade($color, $shade);
   } @else {
     @return tint($color, $tint);
@@ -46,7 +46,7 @@
 // Similar to above, but uses the light or dark color based
 // on whether it's the light or dark theme
 @function lightOrDarkTheme($lightColor, $darkColor) {
-  @if (lightness($ouiTextColor) < 50) {
+  @if  lightness($ouiTextColor) < 50 {
     @return $lightColor;
   } @else {
     @return $darkColor;
@@ -63,9 +63,7 @@
   @for $i from 1 through 3 {
     $rgb: nth($rgba, $i);
     $rgb: $rgb / 255;
-
     $rgb: if($rgb < .03928, $rgb / 12.92, pow(($rgb + .055) / 1.055, 2.4));
-
     $rgba2: append($rgba2, $rgb);
   }
 
@@ -87,7 +85,7 @@
   $lightContrast: contrastRatio($background, $lightText);
   $darkContrast: contrastRatio($background, $darkText);
 
-  @if ($lightContrast > $darkContrast) {
+  @if  $lightContrast > $darkContrast {
     @return $lightText;
   } @else {
     @return $darkText;
@@ -101,17 +99,17 @@
 // ex: makeContrastColor($lightPink, #FFF) would continually shade the pink until
 //     it had higher than 4.5 contrast on a white background.
 $ouiContrastRatioText: 4.5;
+
 @function makeHighContrastColor($foreground, $background: $ouiPageBackgroundColor, $ratio: $ouiContrastRatioText) {
   $contrast: contrastRatio($foreground, $background);
 
   // Determine the lightness factor of the background color first to
   // determine whether to shade or tint the foreground.
   $brightness: lightness($background);
-
   $highContrastTextColor: $foreground;
 
-  @while ($contrast < $ratio) {
-    @if ($brightness > 50) {
+  @while  $contrast < $ratio {
+    @if  $brightness > 50 {
       $highContrastTextColor: shade($highContrastTextColor, 5%);
     } @else {
       $highContrastTextColor: tint($highContrastTextColor, 5%);
@@ -119,12 +117,12 @@ $ouiContrastRatioText: 4.5;
 
     $contrast: contrastRatio($highContrastTextColor, $background);
 
-    @if (lightness($highContrastTextColor) < 5) {
+    @if  lightness($highContrastTextColor) < 5 {
       @warn 'High enough contrast could not be determined. Most likely your background color does not adjust for light mode.';
       @return $highContrastTextColor;
     }
 
-    @if (lightness($highContrastTextColor) > 95) {
+    @if  lightness($highContrastTextColor) > 95 {
       @warn 'High enough contrast could not be determined. Most likely your background color does not adjust for dark mode.';
       @return $highContrastTextColor;
     }
@@ -138,12 +136,14 @@ $ouiContrastRatioText: 4.5;
 // It is still recommended to use `makeHighContrastColor()` to attain a 4.5:1 ratio if the graphic is small or thinly stroked.
 // https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Informational_Graphic_Contrast_(Minimum)
 $ouiContrastRatioGraphic: 3;
+
 @function makeGraphicContrastColor($color, $background: $ouiPageBackgroundColor) {
   @return makeHighContrastColor($color, $background, $ouiContrastRatioGraphic);
 }
 
 // Disabled content only needs a contrast of at least 2 because there is no interaction available
 $ouiContrastRatioDisabled: 2;
+
 @function makeDisabledContrastColor($color, $background: $ouiPageBackgroundColor) {
   @return makeHighContrastColor($color, $background, $ouiContrastRatioDisabled);
 }
@@ -153,4 +153,5 @@ $ouiContrastRatioDisabled: 2;
 $euiContrastRatioText: $ouiContrastRatioText;
 $euiContrastRatioGraphic: $ouiContrastRatioGraphic;
 $euiContrastRatioDisabled: $ouiContrastRatioDisabled;
+
 /* End of Aliases */

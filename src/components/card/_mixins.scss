@@ -16,6 +16,7 @@
   height: $ouiCardBottomNodeHeight !important;  // sass-lint:disable-line no-important -- To override .ouiButtonEmpty--xSmall
   width: 100%;
   overflow: hidden;
+
   // Subtract 1px from border radius since it sits inside a border-radius
   border-bottom-left-radius: $ouiBorderRadius - 1px;
   border-bottom-right-radius: $ouiBorderRadius - 1px;
@@ -24,4 +25,5 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiCardBottomNodePosition { @include ouiCardBottomNodePosition; }
+
 /* End of Aliases */

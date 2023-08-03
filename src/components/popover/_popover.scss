@@ -43,6 +43,7 @@
   // Ignore linting for legibility of transition property, and the mixin performs an overwrite
   // sass-lint:disable-block indentation
   @include ouiBottomShadow($adjustBorders: true);
+
   position: absolute;
   min-width: $ouiButtonMinWidth; /* 1 */
   max-width: calc(100vw - #{$ouiSizeXL}); /* 3 */
@@ -75,7 +76,7 @@
     height: 0;
 
     // This fakes a border on the arrow.
-    &:before {
+    &::before {
       position: absolute;
       content: '';
       height: 0;
@@ -83,7 +84,7 @@
     }
 
     // This part of the arrow matches the panel.
-    &:after {
+    &::after {
       position: absolute;
       content: '';
       height: 0;
@@ -91,14 +92,14 @@
     }
 
     &.ouiPopover__panelArrow--top {
-      &:before {
+      &::before {
         bottom: -$ouiPopoverArrowSize + 2;
         border-left: $ouiPopoverArrowSize solid transparent;
         border-right: $ouiPopoverArrowSize solid transparent;
         border-top: $ouiPopoverArrowSize solid $ouiBorderColor;
       }
 
-      &:after {
+      &::after {
         bottom: -$ouiPopoverArrowSize + 3;
         border-left: $ouiPopoverArrowSize solid transparent;
         border-right: $ouiPopoverArrowSize solid transparent;
@@ -107,7 +108,7 @@
     }
 
     &.ouiPopover__panelArrow--right {
-      &:before {
+      &::before {
         left: -$ouiPopoverArrowSize;
         top: 50%;
         border-top: $ouiPopoverArrowSize solid transparent;
@@ -115,7 +116,7 @@
         border-right: $ouiPopoverArrowSize solid $ouiBorderColor;
       }
 
-      &:after {
+      &::after {
         left: -$ouiPopoverArrowSize + 1;
         top: 50%;
         border-top: $ouiPopoverArrowSize solid transparent;
@@ -125,14 +126,14 @@
     }
 
     &.ouiPopover__panelArrow--bottom {
-      &:before {
+      &::before {
         top: -$ouiPopoverArrowSize;
         border-left: $ouiPopoverArrowSize solid transparent;
         border-right: $ouiPopoverArrowSize solid transparent;
         border-bottom: $ouiPopoverArrowSize solid $ouiBorderColor;
       }
 
-      &:after {
+      &::after {
         top: -$ouiPopoverArrowSize + 1;
         border-left: $ouiPopoverArrowSize solid transparent;
         border-right: $ouiPopoverArrowSize solid transparent;
@@ -141,7 +142,7 @@
     }
 
     &.ouiPopover__panelArrow--left {
-      &:before {
+      &::before {
         right: -$ouiPopoverArrowSize + 1;
         top: 50%;
         border-top: $ouiPopoverArrowSize solid transparent;
@@ -149,7 +150,7 @@
         border-left: $ouiPopoverArrowSize solid $ouiBorderColor;
       }
 
-      &:after {
+      &::after {
         right: -$ouiPopoverArrowSize + 2;
         top: 50%;
         border-top: $ouiPopoverArrowSize solid transparent;

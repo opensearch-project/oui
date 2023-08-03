@@ -30,6 +30,7 @@
 
 .ouiResizablePanel__content--scrollable {
   @include ouiScrollBar;
+
   overflow-y: auto;
 }
 

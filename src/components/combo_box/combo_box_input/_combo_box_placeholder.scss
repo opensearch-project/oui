@@ -11,8 +11,10 @@
 
 .ouiComboBoxPlaceholder {
   @include ouiTextTruncate;
+
   // Afford for the caret. The loading state is accounted for in _combo_box.scss
   @include ouiFormControlLayoutPadding(1, 'right');
+
   position: absolute;
   pointer-events: none;
   padding-left: $ouiSizeXS;

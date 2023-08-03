@@ -11,6 +11,7 @@
 
 .ouiPage {
   @include ouiPageRestrictWidth;
+
   display: flex;
   background-color: $ouiPageBackgroundColor;
   flex-shrink: 0; // Ensures Safari doesn't shrink height beyond contents

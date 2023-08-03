@@ -16,11 +16,11 @@ $ouiBreakpoints: (
   'l':  992px,
   'xl': 1200px
 ) !default;
-
 $ouiBreakpointKeys: map-keys($ouiBreakpoints);
 
 
 /* OUI -> EUI Aliases */
 $euiBreakpoints: $ouiBreakpoints;
 $euiBreakpointKeys: $ouiBreakpointKeys;
+
 /* End of Aliases */

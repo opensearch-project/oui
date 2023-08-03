@@ -16,8 +16,8 @@
 
   // sass-lint:disable-block mixins-before-declarations
   @include ouiCanAnimate {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       content: '';
       width: 90%;
@@ -27,12 +27,12 @@
       z-index: 1;
     }
 
-    &:before {
+    &::before {
       box-shadow: 0 0 8px $ouiColorFullShade;
       animation: 1s ouiLoadingKibanaPulsateAndFade $ouiAnimSlightResistance infinite;
     }
 
-    &:after {
+    &::after {
       background-color: $ouiColorFullShade;
       animation: 1s ouiLoadingKibanaPulsate $ouiAnimSlightResistance infinite;
     }
@@ -55,8 +55,8 @@
 .ouiLoadingKibana--medium {
   width: $ouiSize;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     height: $ouiSizeXS - 1; /* 1 */
     bottom: -$ouiSizeXS;
   }
@@ -72,8 +72,8 @@
 .ouiLoadingKibana--large {
   width: $ouiSizeL;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     height: $ouiSizeS - 2; /* 1 */
     bottom: -$ouiSizeS;
   }
@@ -88,8 +88,8 @@
 .ouiLoadingKibana--xLarge {
   width: $ouiSizeXL;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     height: $ouiSizeS;
     bottom: -$ouiSizeM;
   }

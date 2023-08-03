@@ -20,7 +20,6 @@ $ouiTokenTypes: map-merge($ouiPaletteColorBlind, (
     behindText: $ouiTokenGrayColor,
   )
 ));
-
 $ouiTokenTypeKeys: map-keys($ouiTokenTypes);
 
 
@@ -33,4 +32,5 @@ $euiTokenTypes: map-merge($euiPaletteColorBlind, (
   )
 ));
 $euiTokenTypeKeys: map-keys($euiTokenTypes);
+
 /* End of Aliases */

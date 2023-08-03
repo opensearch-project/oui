@@ -14,8 +14,8 @@
   background-color: $ouiColorVis0;
   border-radius: 50%;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     position: absolute;
     content: '';
     height: 100%;
@@ -27,11 +27,11 @@
     box-shadow: 0 0 1px 1px $ouiColorVis0;
   }
 
-  &:before {
+  &::before {
     animation: ouiBeaconPulseLarge 2.5s infinite ease-out;
   }
 
-  &:after {
+  &::after {
     animation: ouiBeaconPulseSmall 2.5s infinite ease-out .25s;
   }
 }

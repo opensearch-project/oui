@@ -21,10 +21,7 @@
   .ouiSaturation__lightness,
   .ouiSaturation__saturation {
     position: absolute;
-    top: -1px; // hides a slight color inconsistency
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: -1px 0 0; // hides a slight color inconsistency
     border-radius: $ouiBorderRadius / 2;
   }
 
@@ -45,13 +42,10 @@
     margin-left: $ouiColorPickerIndicatorSize * -.5;
     border: 1px solid $ouiColorDarkestShade;
 
-    &:before {
+    &::before {
       content: '';
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       border-radius: 100%;
       border: 1px solid $ouiColorLightestShade;
     }

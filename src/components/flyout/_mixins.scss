@@ -12,9 +12,11 @@
 
 @mixin ouiFlyout {
   border-left: $ouiFlyoutBorder;
+
   // The mixin augments the above
   // sass-lint:disable mixins-before-declarations
   @include ouiBottomShadowLarge($adjustBorders: true);
+
   position: fixed;
   top: 0;
   bottom: 0;
@@ -31,4 +33,5 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiFlyout { @include ouiFlyout; }
+
 /* End of Aliases */

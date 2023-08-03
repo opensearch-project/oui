@@ -37,6 +37,7 @@
   .ouiTable--compressed {
     .ouiTableCellContent {
       @include ouiFontSizeXS;
+
       padding: $ouiTableCellContentPaddingCompressed;
     }
   }
@@ -46,6 +47,7 @@
 .ouiTableHeaderCell {
   @include ouiTableCell;
   @include ouiTitle('xxs');
+
   font-weight: $ouiFontWeightMedium;
   border-top: none;
 
@@ -56,12 +58,14 @@
 
   .ouiTableCellContent__text {
     @include ouiFontSizeXS;
+
     font-weight: $ouiFontWeightSemiBold;
   }
 }
 
 .ouiTableHeaderButton {
   @include ouiFontSizeS;
+
   color: inherit;
   width: 100%;
 
@@ -89,6 +93,7 @@
 
 .ouiTableHeaderCellCheckbox {
   @include ouiTableCellCheckbox;
+
   border-top: none;
 }
 
@@ -99,7 +104,6 @@
 
 
   &.ouiTableRow-isClickable {
-
     &:hover {
       background-color: $ouiTableHoverClickableColor;
       cursor: pointer;
@@ -169,6 +173,7 @@
 
 .ouiTableCellContent__text {
   @include ouiTextBreakWord; /* 4 */
+
   min-width: 0;
   text-overflow: ellipsis;
 }
@@ -196,6 +201,7 @@
 .ouiTableCellContent--overflowingContent {
   overflow: visible;
   white-space: normal;
+
   //* 4 */ overflow-wrap is not supported on flex parents
   word-break: break-all; // Fallback for FF and IE
   word-break: break-word;

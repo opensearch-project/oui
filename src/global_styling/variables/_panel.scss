@@ -14,12 +14,10 @@ $ouiPanelPaddingModifiers: (
   'paddingMedium': $ouiSize,
   'paddingLarge':  $ouiSizeL
 ) !default;
-
 $ouiPanelBorderRadiusModifiers: (
   'borderRadiusNone': 0,
   'borderRadiusMedium': $ouiBorderRadius,
 ) !default;
-
 $ouiPanelBackgroundColorModifiers: (
   'transparent': transparent,
   'plain': $ouiColorEmptyShade,
@@ -36,4 +34,5 @@ $ouiPanelBackgroundColorModifiers: (
 $euiPanelPaddingModifiers: $ouiPanelPaddingModifiers;
 $euiPanelBorderRadiusModifiers: $ouiPanelBorderRadiusModifiers;
 $euiPanelBackgroundColorModifiers: $ouiPanelBackgroundColorModifiers;
+
 /* End of Aliases */

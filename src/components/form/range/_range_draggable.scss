@@ -27,10 +27,7 @@
 
   .ouiRangeDraggle__inner {
     position: absolute;
-    left: $ouiRangeThumbWidth;
-    right: $ouiRangeThumbWidth;
-    top: 0;
-    bottom: 0;
+    inset: 0 $ouiRangeThumbWidth 0 $ouiRangeThumbWidth;
   }
 
   &:not(.ouiRangeDraggable--disabled) {

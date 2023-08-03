@@ -11,6 +11,7 @@
 
 .ouiDatePopoverButton {
   @include ouiSuperDatePickerText;
+
   background-size: 100%; // For the bottom "border" via background-image
 
   &:focus,

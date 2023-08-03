@@ -11,6 +11,7 @@
 
 @mixin ouiToolTipStyle($size: null) {
   @include ouiBottomShadow($color: $ouiColorInk);
+
   border-radius: $ouiBorderRadius;
   background-color: $ouiTooltipBackgroundColor;
   color: $ouiColorGhost;
@@ -18,11 +19,13 @@
   max-width: 256px;
   overflow-wrap: break-word;
 
-  @if ($size == 's') {
+  @if  $size == 's' {
     @include ouiFontSizeXS;
+
     padding: $ouiSizeS;
   } @else {
     @include ouiFontSizeS;
+
     padding: $ouiSizeM;
   }
 }
@@ -41,6 +44,9 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiToolTipStyle($size: null) { @include ouiToolTipStyle($size); }
+
 @mixin euiToolTipTitle { @include ouiToolTipTitle; }
+
 @mixin euiToolTipAnimation($side: 'top') { @include ouiToolTipAnimation($side); }
+
 /* End of Aliases */

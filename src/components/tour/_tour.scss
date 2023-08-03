@@ -15,6 +15,7 @@
 
 .ouiTourHeader {
   border-bottom: none;
+
   // Overriding default `OuiPopoverTitle` styles
   margin-bottom: $ouiSizeS !important; // sass-lint:disable-line no-important
 
@@ -30,6 +31,7 @@
 
 .ouiTourFooter {
   background-color: $ouiColorLightestShade;
+
   // Overriding default `OuiPopoverFooter` styles
   margin-top: $ouiSizeL !important; // sass-lint:disable-line no-important
 }
@@ -59,7 +61,7 @@
   }
 
   .ouiPopover__panelArrow.ouiPopover__panelArrow--top {
-    &:after {
+    &::after {
       border-top-color: $ouiColorLightestShade;
     }
 

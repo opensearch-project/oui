@@ -42,6 +42,7 @@
 
   &:focus {
     @include ouiDataGridCellFocus;
+
     border-top: none;
   }
 
@@ -49,6 +50,7 @@
   &:not(.ouiDataGridHeaderCell--controlColumn) {
     &:focus-within {
       @include ouiDataGridCellFocus;
+
       border-top: none;
     }
 
@@ -76,6 +78,7 @@
 
     .ouiDataGridHeaderCell__content {
       @include ouiTextTruncate;
+
       overflow: hidden;
       white-space: nowrap;
       text-align: left;

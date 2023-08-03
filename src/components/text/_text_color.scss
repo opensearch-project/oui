@@ -24,7 +24,6 @@ $ouiTextColors: (
 // Create color modifiers based on the map
 @each $name, $color in $ouiTextColors {
   .ouiTextColor--#{$name} {
-
     // The below function makes sure the color is accessible on our default background.
     color: makeHighContrastColor($color, $ouiColorEmptyShade);
 
@@ -37,4 +36,5 @@ $ouiTextColors: (
 
 /* OUI -> EUI Aliases */
 $euiTextColors: $ouiTextColors;
+
 /* End of Aliases */

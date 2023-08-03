@@ -21,12 +21,9 @@
 
   position: relative;
 
-  &:after {
+  &::after {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     border-radius: $borderRadius;
     content: '';
     pointer-events: none;
@@ -69,6 +66,7 @@
 // Just overflow and scrollbars
 @mixin ouiYScroll {
   @include ouiScrollBar;
+
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -84,6 +82,7 @@
 
 @mixin ouiXScroll {
   @include ouiScrollBar;
+
   overflow-x: auto;
 
   &:focus {
@@ -141,19 +140,27 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiScrollBar($thumbColor: $ouiColorDarkShade, $trackBackgroundColor: transparent) { @include ouiScrollBar($thumbColor, $trackBackgroundColor); }
+
 @mixin euiYScroll { @include ouiYScroll; }
+
 @mixin euiXScroll { @include ouiXScroll; }
+
 @mixin euiYScrollWithShadows { @include ouiYScrollWithShadows; }
+
 @mixin euiXScrollWithShadows { @include ouiXScrollWithShadows; }
+
 @mixin euiScreenReaderOnly { @include ouiScreenReaderOnly; }
+
 @mixin euiCanAnimate {
   @include ouiCanAnimate {
     @content;
   }
 }
+
 @mixin euiCantAnimate {
   @include ouiCantAnimate {
     @content;
   }
 }
+
 /* End of Aliases */

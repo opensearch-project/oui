@@ -15,8 +15,10 @@
 
 .ouiDatePickerRange {
   @include ouiFormControlSize(auto, $includeAlternates: true);
+
   // Match just the regular drop shadow of inputs
-  @include ouiFormControlDefaultShadow();
+  @include ouiFormControlDefaultShadow;
+
   display: flex;
   align-items: center;
   padding: 1px; /* 1 */

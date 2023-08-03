@@ -16,6 +16,7 @@
 
 .ouiAccordion__button {
   @include ouiFontSize;
+
   text-align: left;
   width: 100%;
   flex-grow: 1;
@@ -31,6 +32,7 @@
   &:focus {
     .ouiAccordion__iconWrapper {
       @include ouiAccordionIconFocus;
+
       outline: none; // The `outline` gets applied to the whole button, we don't need a second one on the icon
     }
   }
@@ -49,6 +51,7 @@
 .ouiAccordion__iconWrapper {
   @include size($ouiSize);
   @include ouiAccordionIconMargin;
+
   border-radius: $ouiBorderRadius;
   flex-shrink: 0;
 
@@ -81,6 +84,7 @@
   opacity: 0;
   overflow: hidden;
   transform: translatez(0);
+
   // sass-lint:disable-block indentation
   transition:
     height $ouiAnimSpeedNormal $ouiAnimSlightResistance,

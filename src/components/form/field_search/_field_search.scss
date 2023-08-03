@@ -21,11 +21,11 @@
   @include ouiFormControlIsLoading;
 
   // sass-lint:disable-block no-vendor-prefixes
-  -webkit-appearance: textfield; /* 1 */
+  appearance: textfield; /* 1 */
 
   &::-webkit-search-decoration,
   &::-webkit-search-cancel-button {
-    -webkit-appearance: none;  /* 1, 2 */
+    appearance: none;  /* 1, 2 */
   }
 
   &::-ms-clear {

@@ -17,7 +17,6 @@ $ouiFormControlPadding: $ouiSizeM !default;
 $ouiFormControlCompressedPadding: $ouiSizeS !default;
 $ouiFormControlBorderRadius: 0 !default;
 $ouiFormControlCompressedBorderRadius: $ouiBorderRadiusSmall !default;
-
 $ouiRadioSize: $ouiSize !default;
 $ouiCheckBoxSize: $ouiSize !default;
 $ouiCheckboxBorderRadius: $ouiBorderRadius !default;
@@ -27,11 +26,9 @@ $ouiSwitchHeight: $ouiSize * 1.25 !default;
 $ouiSwitchWidth: ($ouiSize * 2.5) + $ouiSizeXS !default;
 $ouiSwitchThumbSize: $ouiSwitchHeight !default;
 $ouiSwitchIconHeight: $ouiSize !default;
-
 $ouiSwitchHeightCompressed: $ouiSize !default;
 $ouiSwitchWidthCompressed: $ouiSize * 1.75 !default;
 $ouiSwitchThumbSizeCompressed: $ouiSwitchHeightCompressed !default;
-
 $ouiSwitchHeightMini: $ouiSwitchHeight * .5 !default;
 $ouiSwitchWidthMini: $ouiSwitchWidth * .5 !default;
 $ouiSwitchThumbSizeMini: $ouiSwitchHeightMini !default;
@@ -59,20 +56,16 @@ $ouiFormControlLayoutGroupInputCompressedBorderRadius: $ouiFormControlCompressed
 
 // Range
 $ouiRangeTrackColor: $ouiColorDarkShade !default;
-
 $ouiRangeThumbRadius: 50% !default;
 $ouiRangeThumbHeight: $ouiSize !default;
 $ouiRangeThumbWidth: $ouiSize !default;
 $ouiRangeThumbBorderColor: $ouiRangeTrackColor !default;
-
 $ouiRangeTrackWidth: 100% !default;
 $ouiRangeTrackHeight: 2px !default;
 $ouiRangeTrackBorderWidth: 0 !default;
 $ouiRangeTrackBorderColor: $ouiRangeTrackColor !default;
 $ouiRangeTrackRadius: $ouiBorderRadius !default;
-
 $ouiRangeDisabledOpacity: .25 !default;
-
 $ouiRangeHighlightHeight: $ouiSizeXS !default;
 
 
@@ -126,4 +119,5 @@ $euiRangeTrackBorderColor: $ouiRangeTrackBorderColor;
 $euiRangeTrackRadius: $ouiRangeTrackRadius;
 $euiRangeDisabledOpacity: $ouiRangeDisabledOpacity;
 $euiRangeHighlightHeight: $ouiRangeHighlightHeight;
+
 /* End of Aliases */

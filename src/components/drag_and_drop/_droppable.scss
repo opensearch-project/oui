@@ -11,6 +11,7 @@
 
 .ouiDroppable {
   $ouiDroppableColor: $ouiColorSecondary;
+
   transition: background-color $ouiAnimSpeedExtraSlow ease;
 
   &.ouiDroppable--isDraggingType:not(.ouiDroppable--isDisabled) {
@@ -33,6 +34,7 @@
 
 .ouiDroppable--withPanel {
   @include ouiBottomShadowMedium;
+
   border-radius: $ouiBorderRadius;
 }
 

@@ -13,6 +13,7 @@
 
 @mixin ouiScaleText($baseFontSize) {
   $baseLineHeightMultiplier: $baseFontSize / 2;
+
   line-height: convertToRem($baseLineHeightMultiplier * 3);
 
   p,
@@ -111,10 +112,12 @@
 .ouiText {
   @include ouiText;
   @include ouiFontSize;
+
   // The ouiText mixin forces a color. Since ouiText is usually a child
   // of other styling concerns, we should inherit their coloring. The default
   // coloring will likely coming from the reset.scss anyway.
   color: inherit;
+
   // OuiImage with floats are often used within OuiText.
   clear: both;
 
@@ -160,8 +163,8 @@
       margin-bottom: 0;
     }
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       position: absolute;
       content: '';
       height: 2px;
@@ -171,11 +174,11 @@
       background: $ouiColorDarkShade;
     }
 
-    &:before {
+    &::before {
       top: 0;
     }
 
-    &:after {
+    &::after {
       bottom: 0;
     }
   }
@@ -203,6 +206,7 @@
 
   h6 {
     @include ouiTitle('xxxs');
+
     text-transform: uppercase;
   }
 
@@ -221,6 +225,7 @@
 
   code {
     @include ouiCodeFont;
+
     display: inline-block; // ensures background stretches the full line-height
     font-weight: $ouiFontWeightRegular;
   }
@@ -229,6 +234,7 @@
 
   &.ouiText--constrainedWidth {
     max-width: $ouiTextConstrainedMaxWidth;
+
     // If the max-width is way too short of the width of the container,
     // at least make it 2/3 of its parent
     min-width: 75%;
@@ -253,4 +259,5 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiScaleText($baseFontSize) { @include ouiScaleText($baseFontSize); }
+
 /* End of Aliases */

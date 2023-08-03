@@ -48,6 +48,7 @@
 
 .ouiSuperDatePicker__prettyFormat {
   @include ouiSuperDatePickerText;
+
   display: flex;
   justify-content: space-between;
   text-align: left;

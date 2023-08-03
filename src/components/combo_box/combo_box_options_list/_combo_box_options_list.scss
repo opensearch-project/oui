@@ -25,6 +25,7 @@
 
 .ouiComboBoxOptionsList__empty {
   @include ouiTextBreakWord; /* 2 */
+
   padding: $ouiSizeS;
   text-align: center;
   word-wrap: break-word;

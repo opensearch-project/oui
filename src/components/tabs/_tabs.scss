@@ -11,6 +11,7 @@
 
 .ouiTabs {
   @include ouiScrollBar;
+
   display: flex;
   max-width: 100%;
   overflow-x: auto;
@@ -37,6 +38,7 @@
 
 .ouiTab {
   @include fontSize($ouiTabFontSize);
+
   color: $ouiTextColor;
   background-color: transparent;
   cursor: pointer;
@@ -99,6 +101,7 @@
 
   .ouiTabs--small & {
     @include fontSize($ouiTabFontSizeS);
+
     padding: $ouiSizeS;
   }
 

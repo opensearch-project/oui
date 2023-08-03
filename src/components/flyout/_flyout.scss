@@ -11,6 +11,7 @@
 
 .ouiFlyout {
   @include ouiFlyout;
+
   animation: ouiFlyout $ouiAnimSpeedNormal $ouiAnimSlightResistance;
 
   // Remove focus ring because of `tabindex=0`
@@ -29,8 +30,10 @@
   &--outside {
     // match dropshadow
     @include ouiBottomShadowLarge;
+
     right: auto;
     left: 0;
+
     // Override the hover and focus transitions of buttons
     // sass-lint:disable-block no-important
     transform: translateX(calc(-100% - #{$ouiSizeL})) !important;
@@ -83,7 +86,6 @@ $flyoutSizes: (
 
 @each $modifier, $paddingAmount in $ouiFlyoutPaddingModifiers {
   .ouiFlyout--#{$modifier} {
-
     .ouiFlyoutHeader {
       padding: $paddingAmount $paddingAmount 0;
     }

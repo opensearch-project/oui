@@ -18,6 +18,7 @@
 
 .ouiRangeWrapper {
   @include ouiFormControlSize($includeAlternates: true);
+
   display: flex;
   align-items: center;
 

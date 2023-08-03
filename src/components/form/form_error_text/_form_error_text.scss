@@ -11,6 +11,7 @@
 
 .ouiFormErrorText {
   @include ouiFontSizeXS;
+
   padding-top: $ouiSizeXS;
   color: $ouiColorDanger;
 }

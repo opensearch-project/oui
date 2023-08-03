@@ -29,7 +29,6 @@
 }
 
 @include ouiBreakpoint('xs', 's') {
-
   .ouiTable.ouiTable--responsive {
     // Not allowing compressed styles in mobile view (for now)
 
@@ -77,6 +76,7 @@
 
     .ouiTableRow {
       @include ouiBottomShadowSmall;
+
       background-color: map-get($ouiPanelBackgroundColorModifiers, 'plain');
       border-radius: $ouiBorderRadius;
       display: flex;
@@ -91,6 +91,7 @@
       &.ouiTableRow-isExpandable,
       &.ouiTableRow-hasActions {
         @include ouiTableActionsBackgroundMobile;
+
         padding-right: $ouiSizeXXL;
         position: relative;
       }
@@ -149,6 +150,7 @@
       &.ouiTableRow-isExpandedRow {
         @include ouiTableActionsBackgroundMobile;
         @include ouiBottomShadowSmall;
+
         margin-top: -$ouiTableCellContentPadding * 2;
         position: relative;
         z-index: 2; // on top of its parent/previous row

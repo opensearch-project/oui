@@ -14,8 +14,7 @@
  */
 .ouiKeyPadMenu {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   width: $ouiKeyPadMenuSize * 3;
   max-width: 100%;
 }
@@ -44,6 +43,7 @@
     &:hover,
     &:focus {
       @include ouiSlightShadow;
+
       border-color: $ouiBorderColor;
 
       .ouiKeyPadMenuItem__icon { // sass-lint:disable-line nesting-depth
@@ -97,6 +97,7 @@
 
 .ouiKeyPadMenuItem__betaBadge {
   @include size($ouiKeyPadMenuItemBetaBadgeSize);
+
   line-height: $ouiKeyPadMenuItemBetaBadgeSize;
   color: $ouiColorFullShade;
   background-color: tintOrShade($ouiColorLightShade, 50%, 0%);

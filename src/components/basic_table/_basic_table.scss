@@ -10,7 +10,6 @@
  */
 
 .ouiBasicTable {
-
   &-loading {
     position: relative;
 
@@ -18,7 +17,7 @@
       overflow: hidden;
     }
 
-    tbody:before {
+    tbody::before {
       position: absolute;
       content: '';
       width: 100%;
@@ -33,7 +32,7 @@
 
 
 @keyframes ouiBasicTableLoading {
-  from {
+  0% {
     left: 0;
     width: 0;
   }

@@ -20,10 +20,7 @@
 .ouiDataGrid--fullScreen {
   height: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: $ouiZModal;
   background: $ouiColorEmptyShade;
 
@@ -91,7 +88,6 @@
 }
 
 .ouiDataGrid__pagination {
-
   padding-top: $ouiSizeXS;
   flex-grow: 0;
 }
@@ -117,6 +113,7 @@
 
 .ouiDataGrid__controlScroll {
   @include ouiYScrollWithShadows;
+
   max-height: $ouiDataGridPopoverMaxHeight;
   padding: $ouiSizeS;
   margin: -$ouiSizeS; // Offset against the panel to make the scrollbar flush scrollbars
@@ -128,5 +125,6 @@
 
 .ouiDataGrid__virtualized {
   @include ouiScrollBar($ouiColorDarkShade, $ouiColorEmptyShade);
+
   scroll-padding: 0;
 }

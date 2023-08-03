@@ -11,6 +11,7 @@
 
 .ouiToast {
   border: $ouiBorderThin;
+
   // This overwrites some of the border above
   // sass-lint:disable-block mixins-before-declarations
   @include ouiBottomShadowLarge($adjustBorders: true);
@@ -100,6 +101,7 @@ $ouiToastTypes: (
 .ouiToastHeader__title {
   @include ouiTitle('xs');
   @include ouiTextBreakWord;
+
   font-weight: $ouiFontWeightLight;
 }
 
@@ -117,4 +119,5 @@ $ouiToastTypes: (
 
 /* OUI -> EUI Aliases */
 $euiToastTypes: $ouiToastTypes;
+
 /* End of Aliases */

@@ -26,6 +26,7 @@
   cursor: default;
 
   $backgroundColor: $ouiColorAccentText;
+
   background: $backgroundColor;
   color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
 }
@@ -33,6 +34,7 @@
 .ouiNotificationBadge--medium {
   // Increase the default size a bit
   $size: $ouiSize + $ouiSizeXS;
+
   line-height: $size;
   height: $size;
   min-width: $ouiSizeL;
@@ -40,6 +42,7 @@
 
 .ouiNotificationBadge--subdued {
   $backgroundColor: tint($ouiColorLightShade, 30%);
+
   background: $backgroundColor;
   color: chooseLightOrDarkText($backgroundColor, $ouiColorGhost, $ouiColorInk);
 }

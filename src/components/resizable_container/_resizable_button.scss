@@ -16,8 +16,8 @@
   flex-shrink: 0;
   z-index: $ouiZLevel1;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     display: block;
     position: absolute;
@@ -38,17 +38,17 @@
     margin-left: -($ouiResizableButtonSize / 2);
     margin-right: -($ouiResizableButtonSize / 2);
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       width: 1px;
       height: $ouiSizeM;
     }
 
-    &:before {
+    &::before {
       transform: translate(-2px, -50%);
     }
 
-    &:after {
+    &::after {
       transform: translate(1px, -50%);
     }
   }
@@ -59,25 +59,25 @@
     margin-top: -($ouiResizableButtonSize / 2);
     margin-bottom: -($ouiResizableButtonSize / 2);
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       width: $ouiSizeM;
       height: 1px;
     }
 
-    &:before {
+    &::before {
       transform: translate(-50%, -2px);
     }
 
-    &:after {
+    &::after {
       transform: translate(-50%, 1px);
     }
   }
 
   //Lighten the "grab" icon on :hover
   &:hover:not(:disabled) {
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       background-color: $ouiColorMediumShade;
       transition-delay: $ouiResizableButtonTransitionSpeed; //Delay transition on hover so animation is not accidentally triggered on mouse over
     }
@@ -87,9 +87,10 @@
   &:focus:not(:disabled) {
     background-color: transparentize($ouiColorPrimary, .9);
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
       background-color: $ouiColorPrimary;
+
       // Overrides default transition so that "grab" icon background-color doesn't animate
       transition: (
         width $ouiResizableButtonTransitionSpeed ease,
@@ -104,31 +105,31 @@
   &:hover:not(:disabled),
   &:focus:not(:disabled) {
     &.ouiResizableButton--horizontal {
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         height: 100%;
       }
 
-      &:before {
+      &::before {
         transform: translate(-1px, -50%);
       }
 
-      &:after {
+      &::after {
         transform: translate(0, -50%);
       }
     }
 
     &.ouiResizableButton--vertical {
-      &:before,
-      &:after {
+      &::before,
+      &::after {
         width: 100%;
       }
 
-      &:before {
+      &::before {
         transform: translate(-50%, -1px);
       }
 
-      &:after {
+      &::after {
         transform: translate(-50%, 0);
       }
     }

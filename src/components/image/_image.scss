@@ -143,6 +143,7 @@
 
 .ouiImage__caption {
   @include ouiFontSizeS;
+
   margin-top: $ouiSizeXS;
   text-align: center;
 }
@@ -203,9 +204,7 @@
 }
 
 @include ouiBreakpoint('xs', 's', 'm') {
-
   .ouiImage {
-
     &.ouiImage--floatLeft,
     &.ouiImage--floatRight {
       float: none;

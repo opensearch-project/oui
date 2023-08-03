@@ -47,6 +47,7 @@
   // Using specificity to override the default icon size
   .ouiHeaderSectionItemButton__notification.ouiHeaderSectionItemButton__notification--dot {
     @include size($ouiSize);
+
     top: 9%;
   }
 }

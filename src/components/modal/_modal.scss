@@ -18,10 +18,11 @@
 
 .ouiModal {
   border: $ouiBorderThin;
+
   // This mixin overwrites some of the border above
   @include ouiBottomShadowLarge($adjustBorders: true); // sass-lint:disable-line mixins-before-declarations
-  display: flex; /* 1 */
 
+  display: flex; /* 1 */
   position: relative;
   background-color: $ouiColorEmptyShade;
   border-radius: $ouiBorderRadius;
@@ -71,12 +72,14 @@
 .ouiModalBody {
   flex-grow: 1;
   overflow: hidden;
+
   // The below fixes scroll on Chrome and Safari
   display: flex;
   flex-direction: column;
 
   .ouiModalBody__overflow {
     @include ouiYScrollWithShadows;
+
     padding: $ouiSizeS $ouiSizeL;
   }
 }
@@ -134,15 +137,13 @@
     width: 100vw !important;
     max-width: none !important;
     min-width: 0 !important;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
+    inset: 0;
     border-radius: 0;
     border: none;
 
     &.ouiModal--confirmation {
       @include ouiBottomShadowLarge($ouiShadowColorLarge, $reverse: true);
+
       top: auto;
     }
 

@@ -12,18 +12,21 @@
 .ouiMarkdownEditorTextArea {
   @include ouiFormControlText;
   @include ouiScrollBar;
+
   width: 100%;
   height: 100%;
   min-height: $ouiMarkdownEditorMinHeight;
   padding: $ouiSizeM;
   border: $ouiBorderThin;
   border-bottom: none;
+
   // Overrides the ouiFormControlText line-height that is very small
   line-height: $ouiLineHeight;
   resize: vertical;
   background-color: $ouiFormBackgroundColor;
   background-repeat: no-repeat;
   background-size: 0% 100%;
+
   // Removes default firefox margin
   margin: 0;
 

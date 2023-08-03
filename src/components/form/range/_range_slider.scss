@@ -58,6 +58,7 @@
 
   @include ouiRangeTrackPerBrowser {
     @include ouiRangeTrackSize;
+
     background: $ouiRangeTrackColor;
     border: $ouiRangeTrackBorderWidth solid $ouiRangeTrackBorderColor;
     border-radius: $ouiRangeTrackRadius;
@@ -101,7 +102,7 @@
   // Disable linter for these very unique vendor controls
   // sass-lint:disable-block no-vendor-prefixes
   &::-webkit-slider-thumb {
-    -webkit-appearance: none;
+    appearance: none;
     margin-top: ((-$ouiRangeTrackBorderWidth * 2 + $ouiRangeTrackHeight) / 2) - ($ouiRangeThumbHeight / 2);
   }
 
@@ -115,6 +116,7 @@
 
   &::-ms-track {
     @include ouiRangeTrackSize;
+
     background: transparent;
     border-color: transparent;
     border-width: ($ouiRangeThumbHeight / 2) 0;

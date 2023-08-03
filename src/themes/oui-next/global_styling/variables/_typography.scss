@@ -32,6 +32,7 @@
 @function lineHeightFromBaseline($multiplier: 3) {
   @return convertToRem(($ouiFontSize/2)*$multiplier);
 }
+
 @mixin lineHeightFromBaseline($multiplier: 3) {
   line-height: lineHeightFromBaseline($multiplier);
 }
@@ -39,34 +40,34 @@
 // sass-lint:disable quotes
 $ouiFontFamily: #{"'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"} !default;
 $ouiCodeFontFamily: #{"'Source Code Pro', Consolas, Menlo, Courier, monospace"} !default;
+
 // sass-lint:enable quotes
 
 // Careful using ligatures. Code editors like ACE will often error because of width calculations
 $ouiFontFeatureSettings: 'calt' 1, 'kern' 1, 'liga' 1 !default;
 
 // Font sizes -- scale is loosely based on Major Third (1.250)
-$ouiTextScale:      2.25, 1.75, 1.25, 1.125, 1, .875, .75 !default;
-
-$ouiFontSize:       $ouiSize !default; // 5th position in scale
-$ouiFontSizeXS:     $ouiFontSize * nth($ouiTextScale, 7) !default; // 12px
-$ouiFontSizeS:      $ouiFontSize * nth($ouiTextScale, 6) !default; // 14px
-$ouiFontSizeM:      $ouiFontSize * nth($ouiTextScale, 4) !default; // 18px
-$ouiFontSizeL:      $ouiFontSize * nth($ouiTextScale, 3) !default; // 20px
-$ouiFontSizeXL:     $ouiFontSize * nth($ouiTextScale, 2) !default; // 28px
-$ouiFontSizeXXL:    $ouiFontSize * nth($ouiTextScale, 1) !default; // 36px
+$ouiTextScale: 2.25, 1.75, 1.25, 1.125, 1, .875, .75 !default;
+$ouiFontSize: $ouiSize !default; // 5th position in scale
+$ouiFontSizeXS: $ouiFontSize * nth($ouiTextScale, 7) !default; // 12px
+$ouiFontSizeS: $ouiFontSize * nth($ouiTextScale, 6) !default; // 14px
+$ouiFontSizeM: $ouiFontSize * nth($ouiTextScale, 4) !default; // 18px
+$ouiFontSizeL: $ouiFontSize * nth($ouiTextScale, 3) !default; // 20px
+$ouiFontSizeXL: $ouiFontSize * nth($ouiTextScale, 2) !default; // 28px
+$ouiFontSizeXXL: $ouiFontSize * nth($ouiTextScale, 1) !default; // 36px
 
 // Line height
-$ouiLineHeight:     1.5 !default;
+$ouiLineHeight: 1.5 !default;
 $ouiBodyLineHeight: 1 !default;
 
 // Font weights
-$ouiFontWeightLight:        300 !default;
-$ouiFontWeightRegular:      400 !default;
-$ouiFontWeightMedium:       500 !default;
-$ouiFontWeightSemiBold:     600 !default;
-$ouiFontWeightBold:         700 !default;
-$ouiCodeFontWeightRegular:  400 !default;
-$ouiCodeFontWeightBold:     700 !default;
+$ouiFontWeightLight: 300 !default;
+$ouiFontWeightRegular: 400 !default;
+$ouiFontWeightMedium: 500 !default;
+$ouiFontWeightSemiBold: 600 !default;
+$ouiFontWeightBold: 700 !default;
+$ouiCodeFontWeightRegular: 400 !default;
+$ouiCodeFontWeightBold: 700 !default;
 
 // Titles map
 // Lists all the properties per OuiTitle size that then gets looped through to create the selectors.
@@ -133,4 +134,5 @@ $euiFontWeightBold: $ouiFontWeightBold;
 $euiCodeFontWeightRegular: $ouiCodeFontWeightRegular;
 $euiCodeFontWeightBold: $ouiCodeFontWeightBold;
 $euiTitles: $ouiTitles;
+
 /* End of Aliases */

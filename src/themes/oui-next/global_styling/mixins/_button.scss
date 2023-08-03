@@ -82,7 +82,7 @@
     flex-shrink: 0; // Ensures the icons/spinner don't scale down below their intended size
   }
 
-  @if ($isReverse) {
+  @if  $isReverse {
     flex-direction: row-reverse;
 
     > * + * {
@@ -119,8 +119,11 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiButtonBase { @include ouiButtonBase; }
+
 @mixin euiButtonFocus { @include ouiButtonFocus; }
+
 @mixin euiButton { @include ouiButton; }
+
 @mixin euiButtonContent($isReverse: false) {
   @include ouiButtonContent($isReverse);
 
@@ -129,6 +132,7 @@
     flex-shrink: 0; // Ensures the icons/spinner don't scale down below their intended size
   }
 }
+
 @mixin euiButtonContentDisabled {
   @include ouiButtonContentDisabled;
 
@@ -140,4 +144,5 @@
     border-color: ouiLoadingSpinnerBorderColors(currentColor);
   }
 }
+
 /* End of Aliases */

@@ -15,6 +15,6 @@
   }
 }
 
-.ouiPinnableListGroup__itemExtraAction-pinned:not(:hover):not(:focus) {
+.ouiPinnableListGroup__itemExtraAction-pinned:not(:hover, :focus) {
   color: makeGraphicContrastColor($ouiColorLightShade);
 }

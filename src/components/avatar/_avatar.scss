@@ -23,11 +23,13 @@
 
 .ouiAvatar--user {
   @include innerBorder('dark', 50%, .05);
+
   border-radius: 50%;
 }
 
 .ouiAvatar--space {
   @include innerBorder('dark', $ouiBorderRadius, .05);
+
   border-radius: $ouiBorderRadius;
 }
 
@@ -63,6 +65,7 @@ $avatarSizing: (
 @each $size, $map in $avatarSizing {
   .ouiAvatar--#{$size} {
     @include size(map-get($map, 'size'));
+
     line-height: map-get($map, 'size');
     font-size: map-get($map, 'font-size');
   }

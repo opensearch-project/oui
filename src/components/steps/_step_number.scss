@@ -59,7 +59,8 @@
   @each $name, $color in $ouiStepStatusColorsToFade {
     &--#{$name} {
       $backgroundColor: $color;
-      @if (saturation($color) > 0%) {
+
+      @if  saturation($color) > 0% {
         $backgroundColor: tintOrShade($color, 90%, 70%);
       }
 

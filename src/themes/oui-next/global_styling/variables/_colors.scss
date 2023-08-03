@@ -102,9 +102,7 @@ $ouiPaletteColorBlind: (
     behindText: #FF7E62,
   )
 ) !default;
-
 $ouiPaletteColorBlindKeys: map-keys($ouiPaletteColorBlind);
-
 $ouiColorVis0: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis0'), 'graphic') !default;
 $ouiColorVis1: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis1'), 'graphic') !default;
 $ouiColorVis2: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis2'), 'graphic') !default;
@@ -148,7 +146,7 @@ $ouiCodeBlockTypeColor: makeHighContrastColor($ouiColorVis1, $ouiCodeBlockBackgr
 $ouiCodeBlockAttributeColor: inherit !default;
 $ouiCodeBlockSymbolColor: makeHighContrastColor($ouiColorVis9, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockParamsColor: inherit !default;
-$ouiCodeBlockMetaColor:  makeHighContrastColor($ouiTextSubduedColor, $ouiCodeBlockBackgroundColor) !default;
+$ouiCodeBlockMetaColor: makeHighContrastColor($ouiTextSubduedColor, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockTitleColor: makeHighContrastColor($ouiColorVis7, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockSectionColor: makeHighContrastColor($ouiColorVis9, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockAdditionColor: makeHighContrastColor($ouiColorVis0, $ouiCodeBlockBackgroundColor) !default;
@@ -274,4 +272,5 @@ $euiCodeBlockAdditionColor: $ouiCodeBlockAdditionColor;
 $euiCodeBlockDeletionColor: $ouiCodeBlockDeletionColor;
 $euiCodeBlockSelectorClassColor: $ouiCodeBlockSelectorClassColor;
 $euiCodeBlockSelectorIdColor: $ouiCodeBlockSelectorIdColor;
+
 /* End of Aliases */

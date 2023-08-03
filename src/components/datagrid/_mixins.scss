@@ -37,11 +37,13 @@ $ouiDataGridStyles: (
 // will produce `.ouiDataGrid--headerShade.ouiDataGrid--fontSizeLarge
 @function ouiDataGridSelector($selectorKeys...) {
   $selectorList: '';
+
   @each $selector in $selectorKeys {
     // Spit out warnings when you make typos!
-    @if (index($ouiDataGridStyles, $selector != true)) {
+    @if  index($ouiDataGridStyles, $selector != true) {
       @error '#{$selector} is not an allowed value in the ouiDataGridStyles() mixin';
     }
+
     $selctorValue: #{$ouiDataGridPrefix}#{$selector};
     $selectorList: str-insert($selectorList, $selctorValue, 1000);
   }
@@ -85,26 +87,33 @@ $ouiDataGridStyles: (
 /* OUI -> EUI Aliases */
 $euiDataGridPrefix: $ouiDataGridPrefix;
 $euiDataGridStyles: $ouiDataGridStyles;
+
 @function euiDataGridSelector($selectorKeys...) { @return ouiDataGridSelector($selectorKeys...); }
+
 @mixin euiDataGridStyles($selectorKeys...) {
   @include ouiDataGridStyles($selectorKeys...) {
     @content;
   }
 }
+
 @mixin euiDataGridHeaderCell {
   .euiDataGridHeaderCell {
     @content;
   }
 }
+
 @mixin euiDataGridCellFocus { @include ouiDataGridCellFocus; }
+
 @mixin euiDataGridRowCell {
   .euiDataGridRowCell {
     @content;
   }
 }
+
 @mixin euiDataGridFooterCell {
   .euiDataGridRowCell.euiDataGridFooterCell {
     @content;
   }
 }
+
 /* End of Aliases */

@@ -14,6 +14,7 @@
  */
 .ouiFormLabel {
   @include ouiFormLabel;
+
   display: inline-block;
   transition: all $ouiAnimSpeedFast $ouiAnimSlightResistance;
 

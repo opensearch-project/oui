@@ -25,6 +25,7 @@
 
 .ouiNotificationEvent__title {
   @include ouiTitle('xs');
+
   display: flex;
 
   // ensure links get the right color

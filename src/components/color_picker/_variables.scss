@@ -9,10 +9,10 @@
  * GitHub history for details.
  */
 
-$ouiColorPickerValueRange0: rgba(255, 255, 255, 1);
-$ouiColorPickerValueRange1: rgba(255, 255, 255, 0);
-$ouiColorPickerSaturationRange0: rgba(0, 0, 0, 1);
-$ouiColorPickerSaturationRange1: rgba(0, 0, 0, 0);
+$ouiColorPickerValueRange0: rgba(255, 255, 255, 100%);
+$ouiColorPickerValueRange1: rgba(255, 255, 255, 0%);
+$ouiColorPickerSaturationRange0: rgba(0, 0, 0, 100%);
+$ouiColorPickerSaturationRange1: rgba(0, 0, 0, 0%);
 $ouiColorPickerIndicatorSize: $ouiSizeM;
 $ouiColorPickerWidth: ($ouiSizeL * 5) + ($ouiSizeS * 4); // 5 columns of swatches + margins + border
 
@@ -24,4 +24,5 @@ $euiColorPickerSaturationRange0: $ouiColorPickerSaturationRange0;
 $euiColorPickerSaturationRange1: $ouiColorPickerSaturationRange1;
 $euiColorPickerIndicatorSize: $ouiColorPickerIndicatorSize;
 $euiColorPickerWidth: $ouiColorPickerWidth;
+
 /* End of Aliases */

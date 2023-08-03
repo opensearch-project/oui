@@ -41,6 +41,7 @@
 
   &:not(.ouiRangeTick--hasTickMark)::before {
     @include tickStyles;
+
     content: '';
     left: calc(50% - #{($ouiSizeXS/2)});
   }

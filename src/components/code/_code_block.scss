@@ -18,6 +18,7 @@
 
   .ouiCodeBlock__pre {
     @include ouiScrollBar;
+
     height: 100%;
     overflow: auto;
     display: block;
@@ -33,6 +34,7 @@
 
   .ouiCodeBlock__code {
     @include ouiCodeFont;
+
     display: block;
     line-height: $ouiLineHeight;
     font-weight: $ouiCodeFontWeightRegular;
@@ -55,10 +57,7 @@
 
   &.ouiCodeBlock-isFullScreen {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
 
     .ouiCodeBlock__pre {
       // sass-lint:disable-block no-important
@@ -187,7 +186,7 @@
     }
   }
 
-  .token.punctuation:not(.interpolation-punctuation):not([class*='attr-']) {
+  .token.punctuation:not(.interpolation-punctuation, [class*='attr-']) {
     opacity: .7;
   }
 

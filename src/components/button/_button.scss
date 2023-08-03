@@ -49,6 +49,7 @@
 
   &.ouiButton-isDisabled {
     @include ouiButtonContentDisabled;
+
     color: $ouiButtonColorDisabledText;
     border-color: $ouiButtonColorDisabled;
 
@@ -70,6 +71,7 @@
     &:focus,
     &:focus-within {
       @include ouiSlightShadow;
+
       text-decoration: none;
     }
   }
@@ -78,10 +80,10 @@
 // Create button modifiers based upon the map.
 @each $name, $color in $ouiButtonTypes {
   .ouiButton--#{$name} {
-    @if ($name == 'ghost') {
+    @if  $name == 'ghost' {
       // Ghost is unique and ALWAYS sits against a dark background.
       color: $color;
-    } @else if ($name == 'text') {
+    } @else if $name == 'text' {
       // The default color is lighter than the normal text color, make the it the text color
       color: $ouiTextColor;
     } @else {
@@ -112,9 +114,10 @@
 
     &:not([class*='isDisabled']) {
       $shadowColor: $ouiShadowColor;
-      @if ($name == 'ghost') {
+
+      @if  $name == 'ghost' {
         $shadowColor: $ouiColorInk;
-      } @else if (lightness($ouiTextColor) < 50) {
+      } @else if lightness($ouiTextColor) < 50 {
         // Only if this is the light theme do we use the button variant color to colorize the shadow
         $shadowColor: desaturate($color, 60%);
       }
@@ -125,6 +128,7 @@
       &:focus,
       &:focus-within {
         @include ouiSlightShadowHover($shadowColor);
+
         background-color: transparentize($color, .9);
       }
     }
@@ -138,6 +142,7 @@
   &:focus,
   &:focus-within {
     @include ouiSlightShadow($ouiColorInk);
+
     color: $ouiButtonColorGhostDisabled;
     border-color: $ouiButtonColorGhostDisabled;
   }

@@ -16,6 +16,7 @@
 
 .ouiBreadcrumbs {
   @include ouiFontSizeS;
+
   margin-bottom: -$ouiSizeXS; /* 1 */
   display: flex;
   align-items: center;
@@ -79,6 +80,7 @@
 
 .ouiBreadcrumb--truncate {
   @include ouiTextTruncate;
+
   max-width: 100%;
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that

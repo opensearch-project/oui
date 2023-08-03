@@ -53,6 +53,7 @@
 
   &.ouiButtonGroupButton-isDisabled {
     @include ouiButtonContentDisabled;
+
     color: $ouiButtonColorDisabledText;
 
     &.ouiButtonGroupButton-isSelected {
@@ -71,11 +72,11 @@
 
   @each $name, $color in $ouiButtonTypes {
     &.ouiButtonGroupButton--#{$name}:not([class*='isDisabled']) {
-      @if ($name == 'ghost') {
+      @if  $name == 'ghost' {
         // Ghost is unique and ALWAYS sits against a dark background.
         // Compressed styles don't support ghost color, it defaults to the text color
         color: $color;
-      } @else if ($name == 'text') {
+      } @else if $name == 'text' {
         // The default color is lighter than the normal text color, make the it the text color
         color: $ouiTextColor;
       } @else {
@@ -175,6 +176,7 @@
     line-height: $ouiFormControlCompressedHeight - 2px; // prevents descenders from getting cut off
     font-size: $ouiFontSizeS;
     border-radius: $ouiBorderRadius;
+
     // Offset the background color from the border by 2px
     // by clipping background to before the padding starts
     padding: 2px;

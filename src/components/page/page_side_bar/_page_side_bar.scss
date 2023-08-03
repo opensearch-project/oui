@@ -33,6 +33,7 @@
 @include ouiBreakpoint('m', 'l', 'xl') {
   .ouiPageSideBar--sticky {
     @include ouiScrollBar;
+
     overflow-y: auto;
     flex-grow: 1;
     position: sticky;

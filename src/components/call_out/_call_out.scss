@@ -19,12 +19,14 @@
 
   .ouiCallOutHeader__icon {
     flex: 0 0 auto;
+
     // Vertically center icon with first line of title
     transform: translateY(2px);
   }
 
   .ouiCallOutHeader__title {
     @include ouiCallOutTitle;
+
     margin-bottom: 0; // In case it's nested inside OuiText
   }
 }

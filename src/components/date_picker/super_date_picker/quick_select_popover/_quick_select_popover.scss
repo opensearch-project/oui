@@ -16,6 +16,7 @@
 
 .ouiQuickSelectPopover__section {
   @include ouiScrollBar;
+
   max-height: $ouiSizeM * 11;
   overflow: hidden;
   overflow-y: auto;

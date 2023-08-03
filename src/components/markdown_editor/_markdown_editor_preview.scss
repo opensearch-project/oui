@@ -11,6 +11,7 @@
 
 .ouiMarkdownEditorPreview {
   @include ouiScrollBar;
+
   background: $ouiColorEmptyShade;
   min-height: $ouiMarkdownEditorMinHeight;
   overflow-y: auto;

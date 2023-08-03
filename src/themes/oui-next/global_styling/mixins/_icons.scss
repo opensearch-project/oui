@@ -30,4 +30,5 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiIconBackground($type, $color: $ouiColorEmptyShade) { @include ouiIconBackground($type, $color); }
+
 /* End of Aliases */

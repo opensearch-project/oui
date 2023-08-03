@@ -16,6 +16,7 @@
 .ouiToolTip {
   @include ouiToolTipStyle;
   @include ouiToolTipAnimation('top');
+
   position: absolute;
   opacity: 0;
 
@@ -32,7 +33,6 @@
     background-color: $ouiTooltipBackgroundColor;
     width: $arrowSize;
     height: $arrowSize;
-
     transform: translateY($arrowPlusSize) rotateZ(45deg); /* 1 */
   }
 

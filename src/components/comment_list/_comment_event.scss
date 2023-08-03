@@ -37,6 +37,7 @@
 
 .ouiCommentEvent--regular {
   @include ouiSlightShadow;
+
   border-radius: $ouiBorderRadius;
   border: $ouiBorderThin;
 
@@ -54,6 +55,7 @@
     @include internetExplorerOnly {
       &::after {
         content: '';
+
         // Calculates the minimum height based on full header's min-height minus the vertical padding
         min-height: $ouiSizeXXL - $ouiSizeS;
         font-size: 0;
