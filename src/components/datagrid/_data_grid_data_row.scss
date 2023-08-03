@@ -139,8 +139,6 @@
   @include ouiScrollBar;
 
   overflow: auto;
-
-  // sass-lint:disable-block no-important
   max-width: 400px !important;
   max-height: 400px !important;
 }
@@ -180,7 +178,7 @@
   width: 0;
   overflow: hidden;
   transition: none; // Have to take out the generic transition so it is instaneous on focus
-  box-shadow: none !important; // sass-lint:disable-line no-important
+  box-shadow: none !important;
 
   /* ToDo: Remove unnecessary logic: the old beta theme has
    * evolved and the statement below about the `Next` theme
@@ -208,7 +206,6 @@
 @include ouiDataGridStyles(rowHoverHighlight) {
   .ouiDataGridRow:hover {
     @include ouiDataGridRowCell {
-      // sass-lint:disable-block no-important
       // Needed to overtake striping
       background-color: $ouiColorHighlight !important;
     }
@@ -227,7 +224,6 @@
 // Border alternates
 @include ouiDataGridStyles(bordersNone) {
   @include ouiDataGridRowCell {
-    // sass-lint:disable-block no-important
     border-color: transparent !important;
   }
 }

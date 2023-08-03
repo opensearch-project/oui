@@ -18,7 +18,6 @@
     flex-grow: 0;
 
     &.ouiFlexItem--flexGrowZero {
-      // sass-lint:disable-block no-important
       flex-grow: 0 !important;
       flex-basis: auto !important;
     }
@@ -103,7 +102,6 @@ $fractions: (
 
 @include ouiBreakpoint('xs', 's') {
   .ouiFlexGrid.ouiFlexGrid--responsive {
-    // sass-lint:disable-block no-important
     margin-left: 0 !important;
     margin-right: 0 !important;
     column-count: 1 !important;

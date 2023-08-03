@@ -24,7 +24,6 @@
 
 .ouiRangeTooltip__value {
   // Indentation for legibility in transition
-  // sass-lint:disable-block indentation
   @include ouiFontSizeS;
 
   border: 1px solid $ouiTooltipBackgroundColor;

@@ -12,5 +12,5 @@
 // Extends <OuiFlyout>
 
 .ouiCollapsibleNav:not([class*='push']) {
-  z-index: $ouiZNavigation !important; // sass-lint:disable-line no-important
+  z-index: $ouiZNavigation !important;
 }

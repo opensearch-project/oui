@@ -38,7 +38,6 @@
     $ouiGradientStartStop 55%,
     );
 
-  // sass-lint:disable-block mixins-before-declarations
   @include ouiCanAnimate {
     animation: ouiLoadingContentGradientLoad 1.5s $ouiAnimSlightResistance infinite;
   }

@@ -86,7 +86,6 @@
   &.ouiExpression-isClickable {
     background-color: $ouiColorLightestShade;
 
-    // sass-lint:disable-block nesting-depth
     &:focus,
     &:hover:not(:disabled) {
       .ouiExpression__description,

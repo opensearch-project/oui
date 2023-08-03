@@ -20,8 +20,6 @@
   border-color: transparent;
   background-color: transparent;
   box-shadow: none;
-
-  // sass-lint:disable-block no-important
   transform: none !important; /* 1 */
   animation: none !important; /* 1 */
   transition-timing-function: ease-in; /* 2 */

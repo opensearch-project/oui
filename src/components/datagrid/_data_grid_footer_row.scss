@@ -23,8 +23,6 @@
 @include ouiDataGridStyles(footerOverline) {
   @include ouiDataGridFooterCell {
     border-top: $ouiBorderThick;
-
-    // sass-lint:disable-block no-important
     border-top-color: $ouiTextColor !important;
     background: $ouiColorEmptyShade !important;
   }

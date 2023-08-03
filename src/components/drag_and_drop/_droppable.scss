@@ -25,7 +25,7 @@
   .ouiDroppable__placeholder {
     &.ouiDroppable__placeholder--isHidden {
       // Overriding inline styles on JS-inserted HTML elements
-      display: none !important; // sass-lint:disable-line no-important
+      display: none !important;
     }
   }
 }

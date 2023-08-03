@@ -10,7 +10,6 @@
  */
 
 // This file has lots of modifiers and is somewhat nesty by nature
-// sass-lint:disable nesting-depth
 
 .ouiButtonIcon {
   @include ouiButton;
@@ -31,7 +30,7 @@
   }
 
   &.ouiButtonIcon--empty {
-    box-shadow: none !important; // sass-lint:disable-line no-important
+    box-shadow: none !important;
     border: none;
   }
 

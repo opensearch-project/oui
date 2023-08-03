@@ -14,7 +14,6 @@
  */
 
 .ouiStep {
-  // sass-lint:disable indentation
   // Create border on all but the last step
   &:not(:last-of-type) {
     background-image: linear-gradient(

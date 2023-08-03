@@ -10,8 +10,6 @@
  */
 
 .ouiDescriptionList {
-  // sass-lint:disable-block nesting-depth
-
   &.ouiDescriptionList--row {
     .ouiDescriptionList__title {
       @include ouiTitle('xs');

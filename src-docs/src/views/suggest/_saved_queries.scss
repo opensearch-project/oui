@@ -39,5 +39,5 @@
   max-height: inherit; // Fixes overflow for applied max-height
   // Left/Right padding is calculated to match the left alignment of the
   // popover text and buttons
-  padding: ($ouiSizeM / 2) $ouiSizeXS !important; // sass-lint:disable-line no-important
+  padding: ($ouiSizeM / 2) $ouiSizeXS !important;
 }

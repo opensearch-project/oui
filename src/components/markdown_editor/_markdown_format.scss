@@ -70,7 +70,6 @@ $browserDefaultFontSize: 16px;
   }
 
   > div > *:first-child {
-    // sass-lint:disable-block no-important
     margin-top: 0 !important;
   }
 
@@ -81,7 +80,6 @@ $browserDefaultFontSize: 16px;
 
   > div > *:last-child,
   .ouiCheckbox {
-    // sass-lint:disable-block no-important
     margin-bottom: 0 !important;
   }
 

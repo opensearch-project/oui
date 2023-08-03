@@ -26,7 +26,6 @@
 .ouiKeyPadMenuItem {
   @include ouiFont; /* 1 */
   // Disable indentation for transition legibility
-  // sass-lint:disable-block indentation
   display: block;
   padding: $ouiSizeXS;
   height: $ouiKeyPadMenuSize;
@@ -46,7 +45,7 @@
 
       border-color: $ouiBorderColor;
 
-      .ouiKeyPadMenuItem__icon { // sass-lint:disable-line nesting-depth
+      .ouiKeyPadMenuItem__icon {
         transform: translateY(0);
       }
     }
@@ -60,7 +59,7 @@
     .ouiKeyPadMenuItem__icon  {
       filter: grayscale(100%);
 
-      svg * { // sass-lint:disable-line nesting-depth
+      svg * {
         fill: $ouiButtonColorDisabledText;
       }
     }
@@ -85,7 +84,6 @@
       right: $ouiSizeS;
       z-index: 3;
 
-      // sass-lint:disable-block nesting-depth
       .ouiKeyPadMenuItem__betaBadge:not(.ouiBetaBadge--iconOnly) {
         padding: 0 ($ouiSizeM / 2);  /* 2 */
         overflow: hidden;  /* 2 */

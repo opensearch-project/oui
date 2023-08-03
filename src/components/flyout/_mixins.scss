@@ -14,7 +14,6 @@
   border-left: $ouiFlyoutBorder;
 
   // The mixin augments the above
-  // sass-lint:disable mixins-before-declarations
   @include ouiBottomShadowLarge($adjustBorders: true);
 
   position: fixed;

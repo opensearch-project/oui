@@ -39,7 +39,6 @@
       min-width: $ouiPageSidebarMinWidth;
       margin-right: $amount;
 
-      // sass-lint:disable-block mixins-before-declarations
       @include ouiBreakpoint('xs', 's') {
         margin-right: 0;
         margin-bottom: $amount;

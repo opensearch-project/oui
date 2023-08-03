@@ -33,7 +33,7 @@
   // Forcing better contrast of focus state on OuiAccordion toggle icon
   .ouiCollapsibleNavGroup__heading:focus .ouiAccordion__iconWrapper {
     color: $ouiCollapsibleNavGroupDarkHighContrastColor;
-    animation-name: ouiCollapsibleNavGroupDarkFocusRingAnimate !important; // sass-lint:disable-line no-important
+    animation-name: ouiCollapsibleNavGroupDarkFocusRingAnimate !important;
   }
 
   .ouiCollapsibleNavGroup__title {

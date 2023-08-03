@@ -51,7 +51,6 @@
      * Fix for IE when using align-items:center in an item that has min-height
         (https://github.com/philipwalton/flexbugs/issues/231#issuecomment-362790042)
      */
-    // sass-lint:disable-block mixins-before-declarations
     @include internetExplorerOnly {
       &::after {
         content: '';

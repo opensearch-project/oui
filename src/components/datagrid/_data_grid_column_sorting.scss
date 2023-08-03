@@ -19,7 +19,6 @@
 
 .ouiDataGridColumnSortingPopover {
   // Hack because the fixed positions of drag and drop don't work inside of transformed elements
-  // sass-lint:disable-block no-important
   transform: none !important;
   transition: none !important;
   margin-top: -$ouiSizeS;
@@ -61,7 +60,6 @@
     border: none;
 
     // Hack to overwrite some nested, unreachable component code with button groups
-    // sass-lint:disable-block no-important
     button {
       font-size: $ouiFontSizeXS !important;
     }

@@ -35,7 +35,6 @@
     left: 0;
 
     // Override the hover and focus transitions of buttons
-    // sass-lint:disable-block no-important
     transform: translateX(calc(-100% - #{$ouiSizeL})) !important;
     animation: none !important;
 
@@ -132,7 +131,6 @@ $flyoutSizes: (
  * 2. If a custom maxWidth is set, we need to override it.
  */
 @include ouiBreakpoint('xs', 's') {
-  // sass-lint:disable-block no-important
   .ouiFlyout {
     max-width: 90vw !important; /* 1, 2 */
   }
@@ -155,7 +153,6 @@ $flyoutSizes: (
   // Pull in close buttons a little
   .ouiFlyout__closeButton--outside {
     // Override the hover and focus transitions of buttons
-    // sass-lint:disable-block no-important
     transform: translateX(calc(-100% - #{$ouiSizeXS})) !important;
 
     .ouiFlyout--left & {

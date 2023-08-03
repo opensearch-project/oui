@@ -27,7 +27,6 @@
   margin-bottom: -$ouiSize;
   margin-left: $ouiSizeXS / 2;
 
-  // sass-lint:disable-block mixins-before-declarations
   @include ouiCanAnimate {
     animation: ouiLoadingChart 1s infinite;
   }

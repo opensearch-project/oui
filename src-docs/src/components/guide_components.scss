@@ -16,7 +16,7 @@ $guideZLevelHighest: $ouiZLevel9 + 1000;
 $elasticLogoTextLight: #FFF;
 $elasticLogoTextDark: #1C1E23;
 
-#guide { // sass-lint:disable-line no-ids
+#guide {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -31,7 +31,7 @@ $elasticLogoTextDark: #1C1E23;
 .ouiBody--headerIsFixed--double {
   @include ouiHeaderAffordForFixed($ouiHeaderHeightCompensation * 2);
 
-  #guide { // sass-lint:disable-line no-ids
+  #guide {
     min-height: calc(100vh - #{$ouiHeaderHeightCompensation * 2});
   }
 
@@ -100,7 +100,7 @@ $elasticLogoTextDark: #1C1E23;
 .guideDemo__highlightLayout--playground > div:not(.ouiPage) {
   height: 100%;
   width: 100%;
-  padding: 0 !important; // sass-lint:disable-line no-important
+  padding: 0 !important;
 
   > .ouiPage--grow {
     height: 100%;
@@ -137,14 +137,12 @@ $elasticLogoTextDark: #1C1E23;
   padding: $ouiSize;
 }
 
-// sass-lint:disable no-important
 .guideDemo__textLines {
   background-image: linear-gradient($ouiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 8px !important;
   background-position-y: 2px;
 }
 
-// sass-lint:disable no-important
 .guideDemo__textLines--s {
   background-image: linear-gradient($ouiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 7px !important;
@@ -350,17 +348,16 @@ $elasticLogoTextDark: #1C1E23;
   min-width: 200px;
   flex-basis: 100% !important;
 
-  // sass-lint:disable-block mixins-before-declarations
   @include ouiBreakpoint('s', 'm') {
-    flex-basis: 45% !important; // sass-lint:disable-line no-important
+    flex-basis: 45% !important;
   }
 
   @include ouiBreakpoint('l') {
-    flex-basis: 30% !important; // sass-lint:disable-line no-important
+    flex-basis: 30% !important;
   }
 
   @include ouiBreakpoint('xl') {
-    flex-basis: 22% !important; // sass-lint:disable-line no-important
+    flex-basis: 22% !important;
   }
 }
 
@@ -460,7 +457,6 @@ $elasticLogoTextDark: #1C1E23;
 }
 
 .guideHome__footerLogo {
-  // sass-lint:disable-block no-important
   vertical-align: middle;
   display: inline-block !important;
   margin-bottom: 0 !important;

@@ -10,7 +10,6 @@
  */
 
 // This file has lots of modifiers and is somewhat nesty by nature because of positioning
-// sass-lint:disable nesting-depth
 
 /**
  * 1. The default position of the button should always be `middle`, so
@@ -26,7 +25,8 @@
   z-index: $ouiZLevel1 + 1;
 
   // Remove animations from OuiButtonIcon because of the custom transforms
-  animation: none !important; // sass-lint:disable-line no-important
+  animation: none !important;
+
   // Remove transition from OuiButtonIcon because of the custom transforms
   transition-property: background, box-shadow;
 
@@ -82,9 +82,9 @@
     }
 
     &.ouiResizableToggleButton-isCollapsed {
-      top: 0 !important; // sass-lint:disable-line no-important
-      bottom: 0 !important; // sass-lint:disable-line no-important
-      transform: none !important; // sass-lint:disable-line no-important
+      top: 0 !important;
+      bottom: 0 !important;
+      transform: none !important;
       height: 100%;
 
       &.ouiResizableToggleButton--top {
@@ -137,10 +137,10 @@
     }
 
     &.ouiResizableToggleButton-isCollapsed {
-      top: 0 !important; // sass-lint:disable-line no-important
-      bottom: 0 !important; // sass-lint:disable-line no-important
-      left: 0 !important; // sass-lint:disable-line no-important
-      transform: none !important; // sass-lint:disable-line no-important
+      top: 0 !important;
+      bottom: 0 !important;
+      left: 0 !important;
+      transform: none !important;
       width: 100%;
 
       &.ouiResizableToggleButton--left {

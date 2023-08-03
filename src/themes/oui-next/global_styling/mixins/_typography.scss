@@ -9,9 +9,6 @@
  * GitHub history for details.
  */
 
-// sass-lint:disable no-vendor-prefixes
-// sass-lint:disable no-important
-
 // Our base fonts
 
 @mixin ouiFont {
@@ -120,7 +117,6 @@
 //    nodes.
 
 @mixin ouiTextTruncate {
-  // sass-lint:disable-block no-important
   max-width: 100%; // 1
   overflow: hidden !important;
   text-overflow: ellipsis !important;

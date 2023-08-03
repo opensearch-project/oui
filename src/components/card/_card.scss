@@ -24,7 +24,6 @@
   min-height: 1px; /* 2 */
 
   &.ouiCard-isDisabled {
-    // sass-lint:disable-block no-important
     cursor: not-allowed !important; // duplicate property due to Chrome bug
     transform: none !important;
     box-shadow: none !important;
@@ -140,7 +139,7 @@
         // IF both exist, position the icon centered on top of image
         + .ouiCard__icon {
           transform: translate(-50%, -75%); // Fallback for IE as it doesn't accept calcs in translates
-          transform: translate(-50%, calc(-50% + #{$paddingAmount * -1})); // sass-lint:disable-line no-duplicate-properties
+          transform: translate(-50%, calc(-50% + #{$paddingAmount * -1}));
         }
       }
     }
@@ -192,7 +191,7 @@
 @each $name, $color in $ouiCardSelectButtonBorders {
   .ouiCard--isSelectable--#{$name}.ouiCard-isSelected:not(.ouiCard-isDisabled) {
     // Override .ouiPanel.has--Border
-    border-color: $color !important; // sass-lint:disable-line no-important
+    border-color: $color !important;
   }
 }
 
@@ -232,8 +231,6 @@
   // otherwise the button tag won't properly align contents to top
   &.ouiCard--hasIcon {
     flex-direction: row;
-
-    // sass-lint:disable-block no-important
     align-items: flex-start !important; /* 3 */
 
     .ouiCard__top,

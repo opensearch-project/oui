@@ -42,7 +42,7 @@
 
 .ouiButtonGroup--compressed {
   .ouiButtonGroup__buttons {
-    box-shadow: none !important; // sass-lint:disable-line no-important
+    box-shadow: none !important;
     border-radius: $ouiFormControlCompressedBorderRadius;
     background-color: $ouiFormBackgroundColor;
     height: $ouiFormControlCompressedHeight;

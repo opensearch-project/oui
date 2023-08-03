@@ -25,7 +25,7 @@
       cursor: pointer;
       background-color: $ouiColorLightestShade;
 
-      .ouiSuggestItem__type { // sass-lint:disable-line nesting-depth
+      .ouiSuggestItem__type {
         color: $ouiColorDarkestShade;
       }
     }

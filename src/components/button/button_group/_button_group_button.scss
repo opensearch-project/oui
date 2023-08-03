@@ -14,7 +14,6 @@
   @include ouiFont;
   @include ouiFontSize;
 
-  // sass-lint:disable-block indentation
   transition: background-color $ouiAnimSpeedNormal ease-in-out,
               border-color $ouiAnimSpeedNormal ease-in-out,
               color $ouiAnimSpeedNormal ease-in-out;

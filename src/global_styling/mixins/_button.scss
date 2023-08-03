@@ -52,7 +52,6 @@
   text-decoration: none;
   border: solid 1px transparent;
 
-  // sass-lint:disable mixins-before-declarations
   // focus states should come after all default styles
   @include ouiButtonFocus;
 

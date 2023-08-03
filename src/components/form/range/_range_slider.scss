@@ -35,7 +35,6 @@
   &:disabled {
     cursor: not-allowed;
 
-    // sass-lint:disable-block mixins-before-declarations
     @include ouiRangeThumbPerBrowser {
       cursor: not-allowed;
       border-color: $ouiRangeThumbBorderColor;
@@ -100,7 +99,6 @@
   // Resets
 
   // Disable linter for these very unique vendor controls
-  // sass-lint:disable-block no-vendor-prefixes
   &::-webkit-slider-thumb {
     appearance: none;
     margin-top: ((-$ouiRangeTrackBorderWidth * 2 + $ouiRangeTrackHeight) / 2) - ($ouiRangeThumbHeight / 2);

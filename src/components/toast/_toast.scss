@@ -13,7 +13,6 @@
   border: $ouiBorderThin;
 
   // This overwrites some of the border above
-  // sass-lint:disable-block mixins-before-declarations
   @include ouiBottomShadowLarge($adjustBorders: true);
 
   position: relative;

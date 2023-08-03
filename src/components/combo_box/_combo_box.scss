@@ -34,7 +34,6 @@
     display: flex; /* 1 */
     outline: none; // Fixes an intermittent focus ring in Firefox
 
-    // sass-lint:disable-block mixins-before-declarations
     // to override the padding added above
     @include ouiFormControlLayoutPadding(1); /* 2 */
 
@@ -88,7 +87,6 @@
    * 5. Prevent a lot of input from causing the react-input-autosize to overflow the container.
    */
   .ouiComboBox__input {
-    // sass-lint:disable-block no-important
     display: inline-flex !important; /* 1 */
     height: $ouiSizeXL; /* 2 */
     overflow: hidden; /* 5 */
@@ -125,7 +123,6 @@
 
   &.ouiComboBox-isDisabled {
     .ouiComboBox__inputWrap {
-      // sass-lint:disable-block no-vendor-prefixes
       @include ouiFormControlDisabledStyle;
 
       -webkit-text-fill-color: unset; // overrides $ouiFormControlDisabledColor because the color doesn't work with multiple background colors
@@ -148,7 +145,6 @@
       padding-top: 0;
       padding-bottom: 0;
 
-      // sass-lint:disable-block mixins-before-declarations
       @include ouiFormControlLayoutPadding(1, $compressed: true); /* 2 */
 
       &.ouiComboBox__inputWrap-isClearable {
@@ -172,7 +168,6 @@
   // Overrides the ouiFormControlLayout prepend and append height that is 100%
   .ouiFormControlLayout__prepend,
   .ouiFormControlLayout__append {
-    // sass-lint:disable-block no-important
     height: auto !important;
   }
 }

@@ -17,7 +17,7 @@
   border-bottom: none;
 
   // Overriding default `OuiPopoverTitle` styles
-  margin-bottom: $ouiSizeS !important; // sass-lint:disable-line no-important
+  margin-bottom: $ouiSizeS !important;
 
 
   .ouiTourHeader__title { // nested for additional specificity to override OuiTitle styles
@@ -33,7 +33,7 @@
   background-color: $ouiColorLightestShade;
 
   // Overriding default `OuiPopoverFooter` styles
-  margin-top: $ouiSizeL !important; // sass-lint:disable-line no-important
+  margin-top: $ouiSizeL !important;
 }
 
 .ouiTour {

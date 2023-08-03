@@ -19,7 +19,6 @@
   background: $ouiHeaderDarkBackgroundColor;
   color: $ouiColorGhost;
 
-  // sass-lint:disable-block mixins-before-declarations
   @include ouiCanAnimate {
     animation: ouiBottomBarAppear $ouiAnimSpeedSlow $ouiAnimSlightResistance;
   }

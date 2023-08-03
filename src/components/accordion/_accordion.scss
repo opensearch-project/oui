@@ -84,8 +84,6 @@
   opacity: 0;
   overflow: hidden;
   transform: translatez(0);
-
-  // sass-lint:disable-block indentation
   transition:
     height $ouiAnimSpeedNormal $ouiAnimSlightResistance,
     opacity $ouiAnimSpeedNormal $ouiAnimSlightResistance;

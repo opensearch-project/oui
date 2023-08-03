@@ -41,7 +41,6 @@
  */
 .ouiPopover__panel {
   // Ignore linting for legibility of transition property, and the mixin performs an overwrite
-  // sass-lint:disable-block indentation
   @include ouiBottomShadow($adjustBorders: true);
 
   position: absolute;

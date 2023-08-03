@@ -84,7 +84,6 @@
 }
 
 .ouiColorStopThumb.ouiRangeThumb:not(:disabled) {
-  // sass-lint:disable-block no-color-literals, indentation
   top: 0;
   margin-top: 0;
   pointer-events: auto;
@@ -101,7 +100,6 @@
 }
 
 .ouiColorStopPopover-isLoadingPanel {
-  // sass-lint:disable-block no-important
   visibility: hidden !important; // Overrides a stateful class on OuiPopover -> OuiPanel
 }
 

@@ -89,8 +89,6 @@
   padding-bottom: $ouiFormControlPadding;
   pointer-events: none; /* 1 */
   border-radius: $ouiFormControlBorderRadius;
-
-  // sass-lint:disable-block indentation
   transition:
     box-shadow $ouiAnimSpeedFast ease-in,
     background-color $ouiAnimSpeedFast ease-in,
@@ -193,7 +191,6 @@
 
 // Large styles only
 .ouiFilePicker--large {
-  // sass-lint:disable-block nesting-depth
   // Hover and focus
   .ouiFilePicker__input:hover:not(:disabled),
   .ouiFilePicker__input:focus {

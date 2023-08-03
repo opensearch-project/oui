@@ -44,20 +44,20 @@
 
 .ouiResizableContainer--horizontal {
   .ouiResizablePanel-isCollapsed {
-    min-width: 0 !important; // sass-lint:disable-line no-important
+    min-width: 0 !important;
   }
 
   .ouiResizablePanel--collapsible.ouiResizablePanel-isCollapsed {
-    min-width: $ouiSizeL !important; // sass-lint:disable-line no-important
+    min-width: $ouiSizeL !important;
   }
 }
 
 .ouiResizableContainer--vertical {
   .ouiResizablePanel-isCollapsed {
-    min-height: 0 !important; // sass-lint:disable-line no-important
+    min-height: 0 !important;
   }
 
   .ouiResizablePanel--collapsible.ouiResizablePanel-isCollapsed {
-    min-height: $ouiSizeL !important; // sass-lint:disable-line no-important
+    min-height: $ouiSizeL !important;
   }
 }

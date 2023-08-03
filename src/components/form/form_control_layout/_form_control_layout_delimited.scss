@@ -85,7 +85,6 @@
 }
 
 .ouiFormControlLayoutDelimited__input {
-  // sass-lint:disable-block no-important
   box-shadow: none !important;
   border-radius: 0 !important;
   text-align: center;
@@ -99,7 +98,6 @@
 }
 
 .ouiFormControlLayoutDelimited__delimeter {
-  // sass-lint:disable-block no-important
   line-height: 1 !important; // Override OuiText line-height
   flex: 0 0 auto;
   padding-left: $ouiFormControlPadding / 2;

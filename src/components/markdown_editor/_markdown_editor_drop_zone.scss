@@ -38,13 +38,11 @@
     .ouiMarkdownEditorTextArea,
     .ouiMarkdownEditorTextArea:focus,
     .ouiMarkdownEditor:focus-within .ouiMarkdownEditorTextArea {
-      // sass-lint:disable-block no-important
       background-color: transparentize($ouiColorPrimary, .9) !important;
     }
 
     .ouiMarkdownEditorTextArea,
     .ouiMarkdownEditorTextArea:focus {
-      // sass-lint:disable-block no-important
       background-image: ouiFormControlGradient($ouiColorPrimary) !important;
     }
   }
@@ -54,7 +52,6 @@
     .ouiMarkdownEditorTextArea,
     .ouiMarkdownEditorTextArea:focus,
     .ouiMarkdownEditor:focus-within .ouiMarkdownEditorTextArea {
-      // sass-lint:disable-block no-important
       background-color: transparentize($ouiColorDanger, .9) !important;
     }
   }
@@ -62,7 +59,6 @@
   &--hasError {
     .ouiMarkdownEditorTextArea,
     .ouiMarkdownEditorTextArea:focus {
-      // sass-lint:disable-block no-important
       background-image: ouiFormControlGradient($ouiColorDanger) !important;
     }
   }

@@ -20,7 +20,6 @@
   @include ouiFormControlWithIcon($isIconOptional: false);
   @include ouiFormControlIsLoading;
 
-  // sass-lint:disable-block no-vendor-prefixes
   appearance: textfield; /* 1 */
 
   &::-webkit-search-decoration,

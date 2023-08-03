@@ -15,7 +15,7 @@
  */
 .ouiComboBoxOptionsList {
   // Remove transforms from popover panel
-  transform: none !important; // sass-lint:disable-line no-important
+  transform: none !important;
   top: 0;
 
   &.ouiPopover__panel-isAttached.ouiComboBoxOptionsList--top { /* 1 */

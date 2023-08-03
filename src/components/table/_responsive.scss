@@ -16,14 +16,12 @@
 
 @include ouiBreakpoint('xs', 's') {
   .ouiTableRowCell--hideForMobile { // must come last to override any special cases
-    // sass-lint:disable-block no-important
     display: none !important;
   }
 }
 
 @include ouiBreakpoint('m', 'l', 'xl') {
   .ouiTableRowCell--hideForDesktop { // must come last to override any special cases
-    // sass-lint:disable-block no-important
     display: none !important;
   }
 }

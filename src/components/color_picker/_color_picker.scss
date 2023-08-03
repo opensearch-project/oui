@@ -38,11 +38,9 @@
 
 .ouiColorPicker__popoverPanel--pickerOnly {
   // Override of OuiPanel padding
-  // sass-lint:disable no-important
   padding-bottom: 0 !important;
 }
 
-// sass-lint:disable no-important
 .ouiColorPicker__input--inGroup {
   height: $ouiFormControlLayoutGroupInputHeight !important;
   box-shadow: none !important;

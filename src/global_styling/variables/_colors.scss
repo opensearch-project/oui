@@ -113,8 +113,6 @@ $ouiColorVis6: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis6'), 'graphic'
 $ouiColorVis7: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis7'), 'graphic') !default;
 $ouiColorVis8: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis8'), 'graphic') !default;
 $ouiColorVis9: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis9'), 'graphic') !default;
-
-// sass-lint:disable-block variable-name-format
 $ouiColorVis0_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis0'), 'behindText') !default;
 $ouiColorVis1_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis1'), 'behindText') !default;
 $ouiColorVis2_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis2'), 'behindText') !default;
