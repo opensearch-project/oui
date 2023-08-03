@@ -29,11 +29,12 @@ export const CodeEditorExample = {
               </OuiLink>
               .
               <br />
-              If you are a Kibana developer, we recommend using the{' '}
-              <OuiLink href="https://github.com/elastic/kibana/tree/master/packages/kbn-monaco">
-                <OuiCode>@kbn/monaco</OuiCode> package
+              If you are a OpenSearch Dashboards developer, we recommend using
+              the{' '}
+              <OuiLink href="https://github.com/opensearch-project/OpenSearch-Dashboards/tree/main/packages/osd-monaco">
+                <OuiCode>@osd/monaco</OuiCode> package
               </OuiLink>{' '}
-              within the Kibana codebase.
+              within the OpenSearch Dashboards codebase.
             </p>
           </OuiCallOut>
         </>
