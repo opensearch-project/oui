@@ -182,12 +182,14 @@
 
   .guideSass__overflowShadowText {
     @include ouiYScrollWithShadows;
+
     padding: $ouiSizeS;
   }
 }
 
 .guideSass__overflowShadowsX {
   @include ouiXScrollWithShadows;
+
   padding: $ouiSizeS $ouiSizeS 0;
 
   .guideSass__overflowShadowTextX {
@@ -338,13 +340,15 @@
   background-color: $ouiColorEmptyShade;
 }
 
+/* stylelint-disable no-invalid-position-at-import-rule */
 @import 'colors/color_section';
+/* stylelint-enable no-invalid-position-at-import-rule */
 
 @include ouiBreakpoint('xl') {
   .guideSass__breakpointExample {
     background: $ouiColorPrimary;
 
-    &:before {
+    &::before {
       content: 'You are currently in the xl breakpoint';
     }
   }
@@ -354,7 +358,7 @@
   .guideSass__breakpointExample {
     background: $ouiColorSecondary;
 
-    &:before {
+    &::before {
       content: 'You are currently in the l breakpoint';
     }
   }
@@ -364,7 +368,7 @@
   .guideSass__breakpointExample {
     background: $ouiColorAccent;
 
-    &:before {
+    &::before {
       content: 'You are currently in the m breakpoint';
     }
   }
@@ -374,7 +378,7 @@
   .guideSass__breakpointExample {
     background: $ouiColorWarning;
 
-    &:before {
+    &::before {
       content: 'You are currently in the s breakpoint';
     }
   }
@@ -384,7 +388,7 @@
   .guideSass__breakpointExample {
     background: $ouiColorDanger;
 
-    &:before {
+    &::before {
       content: 'You are currently in the xs breakpoint';
     }
   }

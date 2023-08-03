@@ -44,11 +44,13 @@ $elasticLogoTextDark: #1C1E23;
 
 .guideSideNav {
   @include ouiSideNavEmbellish;
+
   min-width: $guideSideNavWidth;
 }
 
 .guideSideNav__content {
   @include ouiYScroll;
+
   padding: 0 $ouiSizeL $ouiSizeL;
 }
 
@@ -177,7 +179,7 @@ $elasticLogoTextDark: #1C1E23;
 }
 
 .guideDemo__ghostBackground {
-  @if (lightness($ouiTextColor) < 50) {
+  @if  lightness($ouiTextColor) < 50 {
     color: $ouiColorGhost;
     background: $ouiColorDarkestShade !important; // Override OuiPanel specificity
   }
@@ -245,6 +247,7 @@ $elasticLogoTextDark: #1C1E23;
 
 .guideDemo__notificationEvent {
   @include ouiFontSizeS;
+
   display: flex;
   flex-direction: column;
 
@@ -322,10 +325,11 @@ $elasticLogoTextDark: #1C1E23;
   color: $ouiColorAccentText;
 }
 
-
+/* stylelint-disable no-invalid-position-at-import-rule */
 @import '../views/guidelines/index';
 @import 'guide_section/index';
 @import 'guide_rule/index';
+/* stylelint-enable no-invalid-position-at-import-rule */
 
 @include ouiBreakpoint('xs', 's') {
   .guideSideNav {
@@ -381,7 +385,7 @@ $elasticLogoTextDark: #1C1E23;
     width: 100%;
     height: auto;
 
-    &:before {
+    &::before {
       content: '';
       display: block;
       position: absolute;

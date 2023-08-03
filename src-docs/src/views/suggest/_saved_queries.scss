@@ -35,6 +35,7 @@
 
 .savedQueryManagement__list {
   @include ouiYScrollWithShadows;
+
   max-height: inherit; // Fixes overflow for applied max-height
   // Left/Right padding is calculated to match the left alignment of the
   // popover text and buttons
