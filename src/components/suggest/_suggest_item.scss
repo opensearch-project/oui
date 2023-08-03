@@ -25,7 +25,7 @@
       cursor: pointer;
       background-color: $ouiColorLightestShade;
 
-      .ouiSuggestItem__type { //sass-lint:disable-line nesting-depth
+      .ouiSuggestItem__type { // sass-lint:disable-line nesting-depth
         color: $ouiColorDarkestShade;
       }
     }
@@ -77,7 +77,7 @@
         flex-basis: $i * 1%;
         min-width: $i * 1%;
 
-        $i: $i + 10;
+        $i: $i + 10; /* stylelint-disable-line scss/dollar-variable-pattern */
       }
     }
 

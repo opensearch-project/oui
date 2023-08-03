@@ -134,7 +134,6 @@
     }
   }
 
-  //
   // BORDERS on buttons only
 
   .ouiButtonEmpty {
@@ -149,7 +148,6 @@
     border-left: $ouiFormInputGroupBorder;
   }
 
-  //
   // Compressed alterations
 
   &.ouiFormControlLayout--compressed {
@@ -178,7 +176,6 @@
     }
   }
 
-  //
   // ReadOnly alterations
   &.ouiFormControlLayout--readOnly {
     @include ouiFormControlReadOnlyStyle;

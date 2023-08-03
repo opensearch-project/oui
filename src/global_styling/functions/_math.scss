@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
 @function pow($number, $power) {
   @if  $power != $power or ($power != 0 and $power == $power / 2) {
     @return $power;
@@ -77,6 +77,7 @@
 }
 
 // From: http://rosettacode.org/wiki/Nth_root#JavaScript
+/* stylelint-disable scss/dollar-variable-pattern */
 @function nthRoot($num, $n: 2, $prec: 12) {
   $x: 1;
 
@@ -86,3 +87,4 @@
 
   @return $x;
 }
+/* stylelint-enable scss/dollar-variable-pattern */

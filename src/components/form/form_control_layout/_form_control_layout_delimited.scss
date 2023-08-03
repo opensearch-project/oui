@@ -92,6 +92,7 @@
   height: 100%;
   min-width: 0; // Fixes FF
 
+  /* stylelint-disable-next-line no-duplicate-selectors */
   .ouiFormControlLayoutDelimited[class*='--compressed'] & {
     max-width: none;
   }

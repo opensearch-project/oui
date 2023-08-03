@@ -26,7 +26,7 @@ $browserDefaultFontSize: 16px;
 // We're setting a function o transform px in em
 // because it's easier to think in px
 @function em($pixels, $context: $browserDefaultFontSize) {
-  @return #{$pixels/$context}em;
+  @return #{$pixels / $context}em;
 }
 
 .ouiMarkdownFormat {
@@ -118,13 +118,13 @@ $browserDefaultFontSize: 16px;
 
   h1 {
     font-size: $ouiMarkdownFontSizeXXL;
-    line-height: 1.333333em;
+    line-height: 1.333333em; /* stylelint-disable-line number-max-precision */
     font-weight: 300;
   }
 
   h2 {
     font-size: $ouiMarkdownFontSizeXL;
-    line-height: 1.428571em;
+    line-height: 1.428571em; /* stylelint-disable-line number-max-precision */
     font-weight: 300;
   }
 
@@ -142,13 +142,13 @@ $browserDefaultFontSize: 16px;
 
   h5 {
     font-size: $ouiMarkdownFontSizeS;
-    line-height: 1.142857em;
+    line-height: 1.142857em; /* stylelint-disable-line number-max-precision */
     font-weight: 700;
   }
 
   h6 {
     font-size: $ouiMarkdownFontSizeXS;
-    line-height: 1.333333em;
+    line-height: 1.333333em; /* stylelint-disable-line number-max-precision */
     font-weight: 700;
     text-transform: uppercase;
   }

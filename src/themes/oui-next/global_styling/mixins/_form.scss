@@ -71,11 +71,13 @@
 @mixin ouiPlaceholderPerBrowser {
   // sass-lint:disable-block no-vendor-prefixes
   // Each prefix must be its own content block
+  /* stylelint-disable selector-pseudo-element-no-unknown, selector-pseudo-class-no-unknown, no-duplicate-selectors, scss/at-if-no-null */
   &::input-placeholder { @content; opacity: 1; }
   &::placeholder { @content; opacity: 1; }
   &:input-placeholder { @content; opacity: 1; }
   &:placeholder { @content; opacity: 1; }
   &::placeholder { @content; opacity: 1; }
+  /* stylelint-enable selector-pseudo-element-no-unknown, selector-pseudo-class-no-unknown, no-duplicate-selectors, scss/at-if-no-null */
 }
 
 @function ouiFormControlGradient($color: $ouiColorPrimary) {
@@ -353,7 +355,7 @@
   border-color: $ouiColorPrimary;
   background-color: $ouiColorPrimary;
 
-  @if $type != null {
+  @if not $type {
     @include ouiIconBackground($type, $ouiColorEmptyShade);
   }
 }
@@ -363,7 +365,7 @@
   background-color: $ouiColorLightShade;
   box-shadow: none;
 
-  @if $type != null {
+  @if not $type {
     @include ouiIconBackground($type, $ouiFormCustomControlDisabledIconColor);
   }
 }

@@ -50,15 +50,15 @@ $avatarSizing: (
   ),
   m: (
     size: $ouiSizeXL,
-    font-size: $ouiSize*.9
+    font-size: $ouiSize * .9
   ),
   l: (
     size: $ouiSizeXXL,
-    font-size: $ouiSizeL*.8
+    font-size: $ouiSizeL * .8
   ),
   xl: (
     size: ($ouiSize * 4),
-    font-size: $ouiSizeXL*.8
+    font-size: $ouiSizeXL * .8
   ),
 );
 

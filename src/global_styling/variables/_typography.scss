@@ -30,7 +30,7 @@
 //     If our base font size (ouiFontSize) is 16, our baseline is 8 (16*1.5 / 3). To ensure the
 //     text stays on the baseline, we pass a multiplier to calculate a line-height in rems.
 @function lineHeightFromBaseline($multiplier: 3) {
-  @return convertToRem(($ouiFontSize/2)*$multiplier);
+  @return convertToRem(($ouiFontSize / 2) * $multiplier);
 }
 
 @mixin lineHeightFromBaseline($multiplier: 3) {

@@ -19,7 +19,6 @@
   font-weight: $ouiFontWeightRegular;
   letter-spacing: -.005em;
   text-size-adjust: 100%;
-  text-size-adjust: 100%;
   font-kerning: normal;
 }
 
@@ -114,10 +113,8 @@
 }
 
 // Text truncation
-//
 // Prevent text from wrapping onto multiple lines, and truncate with an
 // ellipsis.
-//
 // 1. Ensure that the node has a maximum width after which truncation can
 //    occur.
 // 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
@@ -138,7 +135,6 @@
 
 
 // Text weight shifting
-//
 // When changing the font-weight based the state of the component
 // this mixin will ensure that the sizing is dependent on the boldest
 // weight so it doesn't shifter sibling content.

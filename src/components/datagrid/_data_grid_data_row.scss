@@ -81,7 +81,7 @@
   }
 
   // on focus, directly show action buttons (without animation), but still slide in the open popover button
-  &:focus {
+  &:focus { /* stylelint-disable-line no-duplicate-selectors */
     .ouiDataGridRowCell__actionButtonIcon {
       margin-left: $ouiDataGridCellPaddingM;
       width: $ouiSizeM;

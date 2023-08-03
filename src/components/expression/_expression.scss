@@ -120,7 +120,7 @@
 
     &.ouiExpression-isActive {
       border-bottom-color: $color;
-      border-color: $color;
+      border-color: $color; /* stylelint-disable-line declaration-block-no-shorthand-property-overrides */
     }
 
     .ouiExpression__description {

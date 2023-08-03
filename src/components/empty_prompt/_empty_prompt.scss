@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-@import '../text/_variables';
+@import '../text/_variables'; /* stylelint-disable-line scss/at-import-no-partial-leading-underscore */
 
 .ouiEmptyPrompt {
   max-width: $ouiTextConstrainedMaxWidth;

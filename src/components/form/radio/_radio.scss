@@ -41,7 +41,6 @@
     }
 
     &[disabled] {
-      //sass-lint:disable no-important
       cursor: not-allowed !important;
 
       ~ .ouiRadio__label {

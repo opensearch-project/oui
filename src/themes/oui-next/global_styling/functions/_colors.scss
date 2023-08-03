@@ -63,7 +63,7 @@
   @for $i from 1 through 3 {
     $rgb: nth($rgba, $i);
     $rgb: $rgb / 255;
-    $rgb: if($rgb < .03928, $rgb / 12.92, pow(($rgb + .055) / 1.055, 2.4));
+    $rgb: if($rgb < .03928, $rgb / 12.92, pow(($rgb + .055) / 1.055, 2.4)); /* stylelint-disable-line number-max-precision */
     $rgba2: append($rgba2, $rgb);
   }
 

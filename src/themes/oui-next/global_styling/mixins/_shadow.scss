@@ -89,7 +89,7 @@
 
 @mixin ouiSlightShadowHover($color: $ouiShadowColor, $opacity: .3) {
   box-shadow:
-    0 4px 8px 0 rgba($color, $opacity/2),
+    0 4px 8px 0 rgba($color, $opacity / 2),
     0 2px 2px -1px rgba($color, $opacity);
 }
 
