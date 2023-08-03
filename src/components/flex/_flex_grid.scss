@@ -38,14 +38,16 @@
   }
 }
 
+/* stylelint-disable length-zero-no-unit */
 $gutterTypes: (
   // We're using calc which requires the px unit
-  gutterNone: 0px, // sass-lint:disable-line zero-unit
+  gutterNone: 0px,
   gutterSmall: $ouiSizeS,
   gutterMedium: $ouiSize,
   gutterLarge: $ouiSizeL,
   gutterXLarge: $ouiSizeXL,
 );
+/* stylelint-enable */
 $fractions: (
   fourths: (
     percentage: 25%,
