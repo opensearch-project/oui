@@ -131,7 +131,6 @@
 // On mobile we fix modals as a takeover.
 @include ouiBreakpoint('xs', 's') {
   .ouiModal {
-    // sass-lint:disable-block no-important
     position: fixed;
     width: 100vw !important;
     max-width: none !important;

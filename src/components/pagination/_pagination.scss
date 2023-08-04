@@ -14,7 +14,6 @@
   align-items: center;
 
   &__compressedText {
-    // sass-lint:disable-block no-important
     display: inline-flex;
     align-items: center;
     line-height: 1 !important; // Override OuiText line-height
