@@ -10,6 +10,7 @@
 
 ### 📈 Features/Enhancements
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
+- Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
 
 
 ### 🐛 Bug Fixes
@@ -22,8 +23,12 @@
 
 ### 📝 Documentation
 
+- Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
+
 ### 🛠 Maintenance
 
+- [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
+- [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
 
 ### 🪛 Refactoring

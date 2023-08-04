@@ -201,23 +201,8 @@ const searchData: OuiSelectableTemplateSitewideOption[] = [
     label: 'Dashboards',
     url: 'dashboards',
     icon: {
-      type: 'logoKibana',
+      type: 'logoOpenSearch',
     },
-  },
-  {
-    label:
-      'Generate HAR Archive of Network Timings/Details for Kibana requests',
-    meta: [
-      {
-        text: 'Article',
-        type: 'article',
-      },
-      {
-        text:
-          'https://discuss.elastic.co/t/generate-har-archive-of-network-timings',
-        highlightSearchString: true,
-      },
-    ],
   },
   {
     label: '[Logs] Web Traffic',
@@ -293,7 +278,7 @@ const searchData: OuiSelectableTemplateSitewideOption[] = [
   {
     label: 'Maps',
     url: 'maps',
-    icon: { type: 'logoKibana' },
+    icon: { type: 'logoOpenSearch' },
     meta: [
       {
         text: 'Analyze application',
@@ -301,19 +286,6 @@ const searchData: OuiSelectableTemplateSitewideOption[] = [
       },
     ],
     space: 'Hello World',
-  },
-  {
-    label: 'Kibana monitoring with MB',
-    searchableLabel: 'Kibana monitoring with MB; Case no. 00508173',
-    meta: [
-      {
-        text: 'Case',
-        type: 'case',
-      },
-      {
-        text: '00508173',
-      },
-    ],
   },
   {
     label: 'My support tickets',

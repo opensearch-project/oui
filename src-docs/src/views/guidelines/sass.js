@@ -321,10 +321,6 @@ const borderRadiusSmallExample = `border: $ouiBorderThin;
 border-radius: $ouiBorderRadiusSmall;
 `;
 
-const importKibanaExample = `// In Kibana you can add this to the top of your Sass file
-@import 'ui/public/styles/styling_constants';
-`;
-
 const importOutsideExample = `// In an outside project, import the core variables like so
 @import '@opensearch-project/oui/src/global_styling/functions/index';
 @import '@opensearch-project/oui/src/global_styling/variables/index';
@@ -1096,21 +1092,6 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
           <OuiSpacer />
 
-          <OuiText grow={false}>
-            <p>
-              Most OUI based projects should already import the OUI global
-              scope. For example, Kibana has its own liner that will give you
-              everything on this page.
-            </p>
-          </OuiText>
-          <OuiSpacer />
-          <OuiCodeBlock
-            language="scss"
-            transparentBackground
-            paddingSize="none">
-            {importKibanaExample}
-          </OuiCodeBlock>
-          <OuiSpacer />
           <OuiText grow={false}>
             <p>
               If you want to construct your own import, you would just need to
