@@ -77,7 +77,8 @@
         flex-basis: $i * 1%;
         min-width: $i * 1%;
 
-        $i: $i + 10; /* stylelint-disable-line scss/dollar-variable-pattern */
+        /* stylelint-disable-next-line scss/dollar-variable-pattern */
+        $i: $i + 10;
       }
     }
 

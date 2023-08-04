@@ -119,7 +119,8 @@
 
     &.ouiExpression-isActive {
       border-bottom-color: $color;
-      border-color: $color; /* stylelint-disable-line declaration-block-no-shorthand-property-overrides */
+      /* stylelint-disable-next-line declaration-block-no-shorthand-property-overrides */
+      border-color: $color;
     }
 
     .ouiExpression__description {

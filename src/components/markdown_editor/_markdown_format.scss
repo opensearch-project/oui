@@ -116,13 +116,15 @@ $browserDefaultFontSize: 16px;
 
   h1 {
     font-size: $ouiMarkdownFontSizeXXL;
-    line-height: 1.333333em; /* stylelint-disable-line number-max-precision */
+    /* stylelint-disable-next-line number-max-precision */
+    line-height: 1.333333em;
     font-weight: 300;
   }
 
   h2 {
     font-size: $ouiMarkdownFontSizeXL;
-    line-height: 1.428571em; /* stylelint-disable-line number-max-precision */
+    /* stylelint-disable-next-line number-max-precision */
+    line-height: 1.428571em;
     font-weight: 300;
   }
 
@@ -140,13 +142,15 @@ $browserDefaultFontSize: 16px;
 
   h5 {
     font-size: $ouiMarkdownFontSizeS;
-    line-height: 1.142857em; /* stylelint-disable-line number-max-precision */
+    /* stylelint-disable-next-line number-max-precision */
+    line-height: 1.142857em;
     font-weight: 700;
   }
 
   h6 {
     font-size: $ouiMarkdownFontSizeXS;
-    line-height: 1.333333em; /* stylelint-disable-line number-max-precision */
+    /* stylelint-disable-next-line number-max-precision */
+    line-height: 1.333333em;
     font-weight: 700;
     text-transform: uppercase;
   }
