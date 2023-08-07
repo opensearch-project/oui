@@ -41,11 +41,8 @@ jobs:
         run: yarn test-unit
 
   build:
-    runs-on: ${{ matrix.os }}
-    name: Build on ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
+    runs-on: ubuntu-latest
+    name: Build on ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
