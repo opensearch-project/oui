@@ -63,5 +63,17 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: dist/
+
       - name: Build Docs
         run: yarn build-docs
+
+      - name: Upload doc artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: docs
+          path: docs/
