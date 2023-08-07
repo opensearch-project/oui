@@ -63,11 +63,14 @@ jobs:
       - name: Build
         run: yarn build
 
+      - name: Package artifacts
+        run: yarn pack --filename oui.tgz
+
       - name: Upload build artifacts
         uses: actions/upload-artifact@v3
         with:
           name: build
-          path: dist/
+          path: oui.tgz
 
       - name: Build Docs
         run: yarn build-docs
