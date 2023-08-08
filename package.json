@@ -24,7 +24,7 @@
     "lint-fix": "yarn lint-es-fix",
     "lint-es": "eslint --cache \"{src,src-docs}/**/*.{ts,tsx,js}\" --max-warnings 0",
     "lint-es-fix": "yarn lint-es --fix",
-    "lint-style": "stylelint '{src,src-docs}/**/*.scss' --max-warnings 0",
+    "lint-style": "stylelint {src,src-docs}/**/*.scss --max-warnings 0",
     "lint-style-fix": "yarn lint-style --fix",
     "test": "yarn lint && yarn test-unit",
     "test-unit": "cross-env NODE_ENV=test jest --config ./scripts/jest/config.json",
