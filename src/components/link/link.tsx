@@ -52,7 +52,8 @@ export type OuiLinkColor =
   | 'danger'
   | 'warning'
   | 'text'
-  | 'ghost';
+  | 'ghost'
+  | 'coin';
 
 const colorsToClassNameMap: { [color in OuiLinkColor]: string } = {
   primary: 'ouiLink--primary',
@@ -64,6 +65,7 @@ const colorsToClassNameMap: { [color in OuiLinkColor]: string } = {
   warning: 'ouiLink--warning',
   ghost: 'ouiLink--ghost',
   text: 'ouiLink--text',
+  coin: 'ouiLink--coin',
 };
 
 export const COLORS = keysOf(colorsToClassNameMap);

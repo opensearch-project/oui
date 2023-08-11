@@ -41,7 +41,7 @@ import classNames from 'classnames';
 import { CommonProps } from '../common';
 import { OuiI18n } from '../i18n';
 import { OuiInnerText } from '../inner_text';
-import { OuiLink } from '../link';
+import { OuiLink, OuiLinkColor } from '../link';
 import { OuiPopover } from '../popover';
 import { OuiIcon } from '../icon';
 import { throttle } from '../../services';
@@ -196,6 +196,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   max = 5,
   ...rest
 }) => {
+  const isBreadCrumInPopover = className === 'ouiBreadcrumbs__inPopover';
   const [currentBreakpoint, setCurrentBreakpoint] = useState(
     getBreakpoint(typeof window === 'undefined' ? -Infinity : window.innerWidth)
   );
@@ -226,9 +227,10 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       className: breadcrumbClassName,
       ...breadcrumbRest
     } = breadcrumb;
-
     const isFirstBreadcrumb = index === 0;
     const isLastBreadcrumb = index === breadcrumbs.length - 1;
+    const lastBreadCrumbColor: OuiLinkColor =
+      isBreadCrumInPopover && isLastBreadcrumb ? 'coin' : 'subdued';
 
     const breadcrumbWrapperClasses = classNames('ouiBreadcrumbWrapper', {
       'ouiBreadcrumbWrapper--first': isFirstBreadcrumb,
@@ -264,7 +266,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
           {(ref, innerText) => (
             <OuiLink
               ref={ref}
-              color={isLastBreadcrumb ? 'text' : 'subdued'}
+              color={lastBreadCrumbColor}
               onClick={onClick}
               href={href}
               className={breadcrumbClasses}

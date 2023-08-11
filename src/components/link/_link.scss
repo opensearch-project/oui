@@ -19,6 +19,7 @@ $ouiLinkColors: (
   danger: $ouiColorDangerText,
   text: $ouiTextColor,
   ghost: $ouiColorGhost,
+  coin: $ouiColorDarkShade,
 );
 
 .ouiLink {
@@ -34,7 +35,8 @@ $ouiLinkColors: (
   }
 
   // Create color modifiers based on the map
-  @each $name, $color in $ouiLinkColors {
+  @each $name,
+  $color in $ouiLinkColors {
     &.ouiLink--#{$name} {
       color: $color;
 
@@ -53,7 +55,8 @@ $ouiLinkColors: (
 }
 
 // Make button OuiLink's text selectable
-button.ouiLink { // sass-lint:disable-line no-qualifying-elements
+button.ouiLink {
+  // sass-lint:disable-line no-qualifying-elements
   user-select: text;
 }
 
