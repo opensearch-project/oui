@@ -15,7 +15,7 @@
 
 ### 🐛 Bug Fixes
 
-- Fix blurry text in breadcrumbs ([#959](https://github.com/opensearch-project/oui/pull/959))
+- Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
 
 ### 🚞 Infrastructure
 

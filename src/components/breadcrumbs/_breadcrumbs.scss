@@ -27,7 +27,8 @@
   display: inline-block;
 
   &:not(.ouiBreadcrumb--last) {
-    color: $ouiBreadcrumbTextColor !important; // sass-lint:disable-line no-important
+    // TODO: remove important: https://github.com/opensearch-project/oui/issues/376
+    color: $ouiBreadcrumbInactiveTextColor !important; // sass-lint:disable-line no-important
 
     &:hover {
       color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
@@ -102,11 +103,11 @@
   }
 
   &:not(.ouiBreadcrumbWrapper--last)::before {
-    background-color: $ouiBreadcrumbGrayBackground;
+    background-color: $ouiBreadcrumbInactiveBackground;
   }
 
   &.ouiBreadcrumbWrapper--last::before {
-    background-color: $ouiBreadcrumbBlueBackground;
+    background-color: $ouiBreadcrumbActiveBackground;
   }
 
   &:not(.ouiBreadcrumbWrapper--first) {
@@ -116,12 +117,12 @@
 }
 
 .ouiBreadcrumbWall {
-  background-image: linear-gradient(to right, $ouiBreadcrumbGrayBackground 0 $ouiSizeM, transparent $ouiSizeM);
+  background-image: linear-gradient(to right, $ouiBreadcrumbInactiveBackground 0 $ouiSizeM, transparent $ouiSizeM);
   border-radius: $ouiSizeXS;
   overflow: hidden;
   margin-bottom: $ouiSizeXS; /* 1 */
 }
 
 .ouiBreadcrumbWall--single {
-  background-image: linear-gradient(to right, $ouiBreadcrumbBlueBackground 0 $ouiSizeM, transparent $ouiSizeM);
+  background-image: linear-gradient(to right, $ouiBreadcrumbActiveBackground 0 $ouiSizeM, transparent $ouiSizeM);
 }
