@@ -15,6 +15,8 @@
 
 ### 🐛 Bug Fixes
 
+- Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
+
 ### 🚞 Infrastructure
 
 - Add release workflows ([#134](https://github.com/opensearch-project/oui/pull/133))
