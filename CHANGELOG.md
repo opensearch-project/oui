@@ -36,6 +36,8 @@
 
 ### 🪛 Refactoring
 
+- Clean up focus background implementation ([#962](https://github.com/opensearch-project/oui/pull/962))
+
 ### 🔩 Tests
 
 ## [`1.1.1`](https://github.com/opensearch-project/oui/tree/1.1.1)
