@@ -24,7 +24,7 @@
 // utility/animations.scss
 
 @mixin ouiFocusBackground($color: $ouiColorPrimary) {
-  background-color: tintOrShade($color, $ouiFocusTransparency, $ouiFocusTransparency);
+  background-color: tintOrShade($color, $ouiFocusChangePercent, $ouiFocusChangePercent);
 }
 
 @mixin ouiHoverState {
