@@ -11,6 +11,7 @@
 ### 📈 Features/Enhancements
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
+- Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
 
 
 ### 🐛 Bug Fixes
@@ -22,6 +23,7 @@
 - Add release workflows ([#134](https://github.com/opensearch-project/oui/pull/133))
 - Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
 - Upgrade the backport workflow ([#862](https://github.com/opensearch-project/oui/pull/862))
+- Add build steps to CI workflow ([#665](https://github.com/opensearch-project/oui/pull/665))
 
 ### 📝 Documentation
 
