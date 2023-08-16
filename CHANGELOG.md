@@ -11,23 +11,30 @@
 ### 📈 Features/Enhancements
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
+- Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
 
 
 ### 🐛 Bug Fixes
+
+- Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
 
 ### 🚞 Infrastructure
 
 - Add release workflows ([#134](https://github.com/opensearch-project/oui/pull/133))
 - Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
 - Upgrade the backport workflow ([#862](https://github.com/opensearch-project/oui/pull/862))
+- Add build steps to CI workflow ([#665](https://github.com/opensearch-project/oui/pull/665))
 
 ### 📝 Documentation
+
+- Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
 
 ### 🛠 Maintenance
 
 - [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
 - [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
+- Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#912](https://github.com/opensearch-project/oui/pull/912)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
 
 ### 🪛 Refactoring
 
