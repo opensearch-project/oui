@@ -214,7 +214,7 @@
     "jest-cli": "^24.1.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.41",
-    "node-sass": "npm:@amoo-miki/node-sass@9.0.0-libsass-3.6.5",
+    "node-sass": "^8.0.0",
     "pegjs": "^0.10.0",
     "postcss-cli": "^7.1.2",
     "postcss-inline-svg": "^4.1.0",
