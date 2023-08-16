@@ -11,15 +11,19 @@
 ### 📈 Features/Enhancements
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
+- Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
 
 
 ### 🐛 Bug Fixes
+
+- Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
 
 ### 🚞 Infrastructure
 
 - Add release workflows ([#134](https://github.com/opensearch-project/oui/pull/133))
 - Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
 - Upgrade the backport workflow ([#862](https://github.com/opensearch-project/oui/pull/862))
+- Add build steps to CI workflow ([#665](https://github.com/opensearch-project/oui/pull/665))
 
 ### 📝 Documentation
 
@@ -30,6 +34,7 @@
 - [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
 - [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Migrate to Dart Sass ([#942](https://github.com/opensearch-project/oui/pull/942))
+- Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
 
 ### 🪛 Refactoring
 
