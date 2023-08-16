@@ -28,7 +28,7 @@ $browserDefaultFontSize: 16px;
 // We're setting a function o transform px in em
 // because it's easier to think in px
 @function em($pixels, $context: $browserDefaultFontSize) {
-  @return #{math.div($pixels, $context)}em;
+  @return #{calc($pixels / $context)}em;
 }
 
 .ouiMarkdownFormat {

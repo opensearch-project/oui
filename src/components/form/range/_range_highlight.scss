@@ -15,7 +15,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  top: calc(50% - #{math.div($ouiRangeHighlightHeight, 2)});
+  top: calc(50% - $ouiRangeHighlightHeight / 2);
   overflow: hidden;
 
   &__progress {

@@ -77,7 +77,7 @@
   &::after {
     content: '';
     position: absolute;
-    width: calc(50% - #{math.div($ouiStepNumberSize, 2)});
+    width: calc(50% - $ouiStepNumberSize / 2);
     height: 1px;
     top: $ouiSizeL + math.div($ouiStepNumberSize, 2);
     background-color: $ouiColorLightShade;

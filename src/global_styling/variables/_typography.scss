@@ -18,7 +18,7 @@
 // Typography mixins
 
 @function convertToRem($size) {
-  @return #{math.div($size, $ouiFontSize)}rem;
+  @return #{calc($size / $ouiFontSize)}rem;
 }
 
 // Spit out rem and px

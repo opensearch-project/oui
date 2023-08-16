@@ -58,7 +58,7 @@
   }
 
   #{$iconClass} {
-    @include size(math.div($clearSize, 2));
+    @include size(calc($clearSize / 2));
     fill: $ouiColorEmptyShade;
     // increase thickness of icon at such a small size
     stroke: $ouiColorEmptyShade;
