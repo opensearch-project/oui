@@ -22,6 +22,8 @@ const { deriveSassVariableTypes } = require('./derive-sass-variable-types');
 
 const postcssConfiguration = require('../postcss.config.js');
 
+const copyFile = util.promisify(fs.copyFile);
+const readFile = util.promisify(fs.readFile);
 const writeFile = util.promisify(fs.writeFile);
 const mkdir = util.promisify(fs.mkdir);
 const glob = util.promisify(globModule);
@@ -89,13 +91,15 @@ async function compileScssFiles(
       /* OUI -> EUI Aliases */
       try {
         const { name } = path.parse(inputFilename);
-        const outputFilenames = await compileScssFile(
-          inputFilename,
+        const outputFilenames = await renameCssToEui(
+          path.join(destinationDirectory, `oui_${name}.css`),
+          path.join(destinationDirectory, `oui_${name}.min.css`),
+          path.join(destinationDirectory, `oui_${name}.json`),
+          path.join(destinationDirectory, `oui_${name}.json.d.ts`),
           path.join(destinationDirectory, `eui_${name}.css`),
+          path.join(destinationDirectory, `eui_${name}.min.css`),
           path.join(destinationDirectory, `eui_${name}.json`),
-          path.join(destinationDirectory, `eui_${name}.json.d.ts`),
-          packageName,
-          true
+          path.join(destinationDirectory, `eui_${name}.json.d.ts`)
         );
         console.log(
           chalk`{green ✔} Finished compiling {gray ${inputFilename}} to ${outputFilenames
@@ -119,10 +123,7 @@ async function compileScssFile(
   outputCssFilename,
   outputVarsFilename,
   outputVarTypesFilename,
-  packageName,
-  /* OUI -> EUI Aliases */
-  renameToEUI = false,
-  /* End of Aliases */
+  packageName
 ) {
   const outputCssMinifiedFilename = outputCssFilename.replace(
     /\.css$/,
@@ -146,42 +147,18 @@ async function compileScssFile(
     })
   );
 
-  // const result = await sass.compileAsync(inputFilename);
   fs.writeFileSync(outputCssFilename, result.css);
 
   const renderedCss = result.css;
 
-  /* OUI -> EUI Aliases: Modified */
-  // const extractedVarTypes = await deriveSassVariableTypes(
-  const extractedVarTypes_ = await deriveSassVariableTypes(
-  /* End of Aliases */
+  const extractedVarTypes = await deriveSassVariableTypes(
     extractedVars,
     `${packageName}/${outputVarsFilename}`,
     outputVarTypesFilename
   );
 
-  /* OUI -> EUI Aliases */
-  const declarationMatcher = /^declare\s+module\s+(['"]@opensearch-project\/oui.*?['"])\s*\{/msg;
-  let match;
-  const declarations = [];
-
-  while ((match = declarationMatcher.exec(extractedVarTypes_)) !== null) {
-      declarations.push(
-        "declare module " +
-        match[1].replace('@opensearch-project/oui', '@elastic/eui') + " {\n" +
-        "  import _ from " + match[1] + ";\n" +
-        "  export default _;\n" +
-        "}"
-      );
-  }
-  const extractedVarTypes = extractedVarTypes_ + '\n' + declarations.join('\n');
-  /* End of Aliases */
-
   const { css: postprocessedCss } = await postcss(postcssConfiguration).process(
-    /* OUI -> EUI Aliases: Modified */
-    //renderedCss,
-    renameToEUI ? renderedCss.toString().replace(/([. '"-])oui/g, '$1eui') : renderedCss,
-    /* End of Aliases */
+    renderedCss,
     {
       from: outputCssFilename,
       to: outputCssFilename,
@@ -191,10 +168,7 @@ async function compileScssFile(
   const { css: postprocessedMinifiedCss } = await postcss(
     postcssConfigurationWithMinification
   ).process(
-    /* OUI -> EUI Aliases: Modified */
-    //renderedCss,
-    renameToEUI ? renderedCss.toString().replace(/([. '"-])oui/g, '$1eui') : renderedCss,
-    /* End of Aliases */
+    renderedCss,
     {
       from: outputCssFilename,
       to: outputCssMinifiedFilename,
@@ -214,6 +188,65 @@ async function compileScssFile(
     outputVarTypesFilename,
   ];
 }
+
+/* OUI -> EUI Aliases */
+async function renameCssToEui(
+  inputCssFilename,
+  inputCssMinifiedFilename,
+  inputVarsFilename,
+  inputVarTypesFilename,
+  outputCssFilename,
+  outputCssMinifiedFilename,
+  outputVarsFilename,
+  outputVarTypesFilename
+) {
+  const [cssContents, cssMinifiedContents, varTypesContents] = (
+    await Promise.all([
+      readFile(inputCssFilename),
+      readFile(inputCssMinifiedFilename),
+      readFile(inputVarTypesFilename),
+    ])
+  ).map((buffer) => buffer.toString('utf-8'));
+
+  const declarationMatcher = /^declare\s+module\s+(['"]@opensearch-project\/oui.*?['"])\s*\{/gms;
+  let match;
+  const declarations = [];
+
+  while ((match = declarationMatcher.exec(varTypesContents)) !== null) {
+    declarations.push(
+      `declare module ${match[1].replace(
+        '@opensearch-project/oui',
+        '@elastic/eui'
+      )} {\n` +
+        `  import _ from ${match[1]};\n` +
+        '  export default _;\n' +
+        '}'
+    );
+  }
+
+  const varTypes = `${varTypesContents}\n${declarations.join('\n')}`;
+
+  await Promise.all([
+    writeFile(
+      outputCssFilename,
+      cssContents.replace(/([. '"-=])oui/g, '$1eui')
+    ),
+    writeFile(
+      outputCssMinifiedFilename,
+      cssMinifiedContents.replace(/([. '"-=])oui/g, '$1eui')
+    ),
+    copyFile(inputVarsFilename, outputVarsFilename),
+    writeFile(outputVarTypesFilename, varTypes),
+  ]);
+
+  return [
+    outputCssFilename,
+    outputCssMinifiedFilename,
+    outputVarsFilename,
+    outputVarTypesFilename,
+  ];
+}
+/* End of Aliases */
 
 if (require.main === module) {
   const [nodeBin, scriptName, ouiPackageName] = process.argv;
