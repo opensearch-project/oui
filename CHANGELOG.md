@@ -12,7 +12,7 @@
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
 - Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
-
+- Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
 
 ### 🐛 Bug Fixes
 
