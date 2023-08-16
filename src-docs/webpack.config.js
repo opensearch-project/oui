@@ -66,6 +66,10 @@ const webpackConfig = {
         __dirname,
         '../scripts/loaders/prop-loader.js'
       ),
+      'sass-vars-to-js-loader': path.resolve(
+        __dirname,
+        '../scripts/loaders/sass-vars-to-js-loader.js'
+      ),
     },
   },
 

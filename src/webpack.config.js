@@ -80,6 +80,15 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js', '.json'],
   },
 
+  resolveLoader: {
+    alias: {
+      'sass-vars-to-js-loader': path.resolve(
+        __dirname,
+        '../scripts/loaders/sass-vars-to-js-loader.js'
+      ),
+    },
+  },
+
   // Specify where these libraries should be found
   externals: {
     moment: 'window.moment',

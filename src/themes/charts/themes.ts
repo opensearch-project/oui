@@ -57,13 +57,13 @@ function createTheme(colors: any): OuiChartThemeType {
     lineAnnotation: {
       line: {
         strokeWidth: 1,
-        stroke: colors.ouiColorDarkShade.rgba,
+        stroke: colors.ouiColorDarkShade,
         opacity: 1,
       },
       details: {
         fontSize: 10,
         fontFamily: fontFamily,
-        fill: colors.ouiColorDarkShade.rgba,
+        fill: colors.ouiColorDarkShade,
         padding: 0,
       },
     },
@@ -80,16 +80,16 @@ function createTheme(colors: any): OuiChartThemeType {
       linkLabel: {
         maxCount: 5,
         fontSize: 11,
-        textColor: colors.ouiColorDarkestShade.rgba,
+        textColor: colors.ouiColorDarkestShade,
       },
       outerSizeRatio: 1,
       circlePadding: 4,
-      sectorLineStroke: colors.ouiColorEmptyShade.rgba,
+      sectorLineStroke: colors.ouiColorEmptyShade,
       sectorLineWidth: 1.5,
     },
     theme: {
       background: {
-        color: colors.ouiColorEmptyShade.rgba,
+        color: colors.ouiColorEmptyShade,
       },
       chartMargins: {
         left: 0,
@@ -102,7 +102,7 @@ function createTheme(colors: any): OuiChartThemeType {
           strokeWidth: 2,
         },
         point: {
-          fill: colors.ouiColorEmptyShade.rgba,
+          fill: colors.ouiColorEmptyShade,
           strokeWidth: 2,
           radius: 3,
         },
@@ -116,7 +116,7 @@ function createTheme(colors: any): OuiChartThemeType {
         },
         point: {
           visible: false,
-          fill: colors.ouiColorEmptyShade.rgba,
+          fill: colors.ouiColorEmptyShade,
           strokeWidth: 2,
           radius: 3,
         },
@@ -125,7 +125,7 @@ function createTheme(colors: any): OuiChartThemeType {
         displayValue: {
           fontSize: 8,
           fontFamily: fontFamily,
-          fill: colors.ouiColorDarkShade.rgba,
+          fill: colors.ouiColorDarkShade,
         },
       },
       scales: {
@@ -136,19 +136,19 @@ function createTheme(colors: any): OuiChartThemeType {
         axisTitle: {
           fontSize: 12,
           fontFamily: fontFamily,
-          fill: colors.ouiColorDarkestShade.rgba,
+          fill: colors.ouiColorDarkestShade,
           padding: {
             inner: 10,
             outer: 0,
           },
         },
         axisLine: {
-          stroke: colors.ouiColorChartLines.rgba,
+          stroke: colors.ouiColorChartLines,
         },
         tickLabel: {
           fontSize: 10,
           fontFamily: fontFamily,
-          fill: colors.ouiColorDarkShade.rgba,
+          fill: colors.ouiColorDarkShade,
           padding: {
             outer: 8,
             inner: 10,
@@ -156,20 +156,20 @@ function createTheme(colors: any): OuiChartThemeType {
         },
         tickLine: {
           visible: false,
-          stroke: colors.ouiColorChartLines.rgba,
+          stroke: colors.ouiColorChartLines,
           strokeWidth: 1,
         },
         gridLine: {
           horizontal: {
             visible: true,
-            stroke: colors.ouiColorChartLines.rgba,
+            stroke: colors.ouiColorChartLines,
             strokeWidth: 1,
             opacity: 1,
             dash: [0, 0],
           },
           vertical: {
             visible: true,
-            stroke: colors.ouiColorChartLines.rgba,
+            stroke: colors.ouiColorChartLines,
             strokeWidth: 1,
             opacity: 1,
             dash: [4, 4],
@@ -182,15 +182,15 @@ function createTheme(colors: any): OuiChartThemeType {
       },
       crosshair: {
         band: {
-          fill: colors.ouiColorChartBand.rgba,
+          fill: colors.ouiColorChartBand,
         },
         line: {
-          stroke: colors.ouiColorDarkShade.rgba,
+          stroke: colors.ouiColorDarkShade,
           strokeWidth: 1,
           dash: [4, 4],
         },
         crossLine: {
-          stroke: colors.ouiColorDarkShade.rgba,
+          stroke: colors.ouiColorDarkShade,
           strokeWidth: 1,
           dash: [4, 4],
         },
