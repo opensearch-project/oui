@@ -42,7 +42,56 @@ export default () => (
         </OuiButton>
       </OuiFlexItem>
     </OuiFlexGroup>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="secondary" onClick={() => {}}>
+          Secondary
+        </OuiButton>
+      </OuiFlexItem>
 
+      <OuiFlexItem grow={false}>
+        <OuiButton color="secondary" fill onClick={() => {}}>
+          Filled
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="secondary" size="s" onClick={() => {}}>
+          Small
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="secondary" size="s" fill onClick={() => {}}>
+          Small and filled
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiButton color="accent" onClick={() => {}}>
+          Accent
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="accent" fill onClick={() => {}}>
+          Filled
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="accent" size="s" onClick={() => {}}>
+          Small
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="accent" size="s" fill onClick={() => {}}>
+          Small and filled
+        </OuiButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
     <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
       <OuiFlexItem grow={false}>
         <OuiButton color="success" onClick={() => {}}>
@@ -68,7 +117,6 @@ export default () => (
         </OuiButton>
       </OuiFlexItem>
     </OuiFlexGroup>
-
     <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
       <OuiFlexItem grow={false}>
         <OuiButton color="warning" onClick={() => {}}>
@@ -94,7 +142,6 @@ export default () => (
         </OuiButton>
       </OuiFlexItem>
     </OuiFlexGroup>
-
     <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
       <OuiFlexItem grow={false}>
         <OuiButton color="danger" onClick={() => {}}>
@@ -120,7 +167,6 @@ export default () => (
         </OuiButton>
       </OuiFlexItem>
     </OuiFlexGroup>
-
     <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
       <OuiFlexItem grow={false}>
         <OuiButton color="text" onClick={() => {}}>

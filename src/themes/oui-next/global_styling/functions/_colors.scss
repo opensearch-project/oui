@@ -87,7 +87,8 @@
   $lightContrast: contrastRatio($background, $lightText);
   $darkContrast: contrastRatio($background, $darkText);
 
-  @if ($lightContrast > $darkContrast) {
+  // in this theme prefer light text as long as it has sufficient contrast
+  @if ($lightContrast > $ouiContrastRatioGraphic) {
     @return $lightText;
   } @else {
     @return $darkText;
