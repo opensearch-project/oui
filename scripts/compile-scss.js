@@ -39,9 +39,7 @@ function exec(command, options) {
 
   return new Promise((resolve, reject) => {
     child.addListener('error', reject);
-    child.addListener('exit', (...args) => {
-      resolve(...args);
-    });
+    child.addListener('exit', resolve);
   });
 }
 
@@ -151,7 +149,7 @@ async function compileScssFile(
   // const result = await sass.compileAsync(inputFilename);
   fs.writeFileSync(outputCssFilename, result.css);
 
-  const renderedCss = fs.readFileSync(outputCssFilename, { encoding: 'utf-8' });
+  const renderedCss = result.css;
 
   /* OUI -> EUI Aliases: Modified */
   // const extractedVarTypes = await deriveSassVariableTypes(
