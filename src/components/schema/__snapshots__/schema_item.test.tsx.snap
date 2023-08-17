@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OuiSchema is rendered 1`] = `
+<div
+  aria-label="aria-label"
+  class="ouiSchemaItem testClass1 testClass2"
+  data-test-subj="test subject string"
+>
+  <div
+    class="ouiSchemaItem__label"
+  >
+    Test
+  </div>
+  <div
+    class="ouiSchemaItem__actions"
+  />
+</div>
+`;
