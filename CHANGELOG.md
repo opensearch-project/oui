@@ -17,20 +17,28 @@
 
 ### 🐛 Bug Fixes
 
+- Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
+
 ### 🚞 Infrastructure
 
 - Add release workflows ([#134](https://github.com/opensearch-project/oui/pull/133))
 - Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
 - Upgrade the backport workflow ([#862](https://github.com/opensearch-project/oui/pull/862))
+- Add build steps to CI workflow ([#665](https://github.com/opensearch-project/oui/pull/665))
 
 ### 📝 Documentation
+
+- Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
 
 ### 🛠 Maintenance
 
 - [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
 - [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
+- Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
 
 ### 🪛 Refactoring
+
+- Clean up focus background implementation ([#962](https://github.com/opensearch-project/oui/pull/962))
 
 ### 🔩 Tests
 
