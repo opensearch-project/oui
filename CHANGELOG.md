@@ -13,6 +13,7 @@
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
 - [Header] Update background color in next theme ([#936](https://github.com/opensearch-project/oui/pull/936))
 - Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
+- Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
 
 ### 🐛 Bug Fixes
 
