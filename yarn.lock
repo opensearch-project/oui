@@ -14814,10 +14814,10 @@ sass-lint@^1.13.1:
     path-is-absolute "^1.0.0"
     util "^0.10.3"
 
-sass-loader@^10.0.1:
-  version "10.4.1"
-  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-10.4.1.tgz#bea4e173ddf512c9d7f53e9ec686186146807cbf"
-  integrity sha512-aX/iJZTTpNUNx/OSYzo2KsjIUQHqvWsAhhUijFjAPdZTEhstjZI9zTNvkTTwsx+uNUJqUwOw5gacxQMx4hJxGQ==
+"sass-loader@npm:@bsfishy/sass-loader@support-sass-embedded":
+  version "10.4.1-support-sass-embedded.3"
+  resolved "https://registry.yarnpkg.com/@bsfishy/sass-loader/-/sass-loader-10.4.1-support-sass-embedded.3.tgz#5be3f0a6bc1eb20e081a336fb1d3474b5c8d7259"
+  integrity sha512-IcMG8iVIzAjLI9t3S4ucZAwDo6uAiQ+F+1G+TxSv5dt3isHYvDM3T7RgagILdP8i8JcJicfX3GiG8N8/2B/xVQ==
   dependencies:
     klona "^2.0.4"
     loader-utils "^2.0.0"

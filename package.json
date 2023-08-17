@@ -239,7 +239,7 @@
     "sass-extract-dart": "^1.1.1",
     "sass-lint": "^1.13.1",
     "sass-lint-auto-fix": "^0.21.2",
-    "sass-loader": "^10.0.1",
+    "sass-loader": "npm:@bsfishy/sass-loader@support-sass-embedded",
     "shelljs": "^0.8.5",
     "start-server-and-test": "^2.0.0",
     "style-loader": "^1.2.1",

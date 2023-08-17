@@ -12,7 +12,7 @@
  */
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const sass = require('sass-embedded');
+const sassExtract = require('sass-extract-dart');
 
 /**
  * @param {string} source
@@ -34,55 +34,12 @@ function loader(source, app, meta) {
  * @returns {Promise<string>}
  */
 const generateJsFromScss = async (loader, source) => {
-  const variableNames = extractScssVariableNames(source);
-  const variableClasses = variableNames
-    .map((name) => `.${name}{value:$${name}}`)
-    .join('\n');
-
-  const sourceWithClasses = source + variableClasses;
-  const { css } = await sass.compileStringAsync(sourceWithClasses, {
-    loadPaths: [loader.context],
-    style: 'compressed',
+  const variableValues = sassExtract.extractVariablesFromString(source, {
+    path: loader.context,
+    url: loader.resourcePath,
   });
 
-  const variableValues = extractVariableValues(css);
-
   return `module.exports=${JSON.stringify(variableValues)};`;
-};
-
-/**
- * @param {string} source
- * @return {string[]}
- */
-const extractScssVariableNames = (source) => {
-  const names = [];
-  const regex = /^\$([\w\-]+):[^;\n]*;$/gm;
-
-  let m;
-  while ((m = regex.exec(source)) !== null) {
-    const variableName = m[1];
-    names.push(variableName);
-  }
-
-  return names;
-};
-
-/**
- * @param {string} css
- * @return {Record<string, string>}
- */
-const extractVariableValues = (css) => {
-  const values = {};
-  const regex = /\.(\w+){value:([^}]+)}/g;
-
-  let m;
-  while ((m = regex.exec(css)) !== null) {
-    const variableName = m[1];
-
-    values[variableName] = m[2];
-  }
-
-  return values;
 };
 
 module.exports = loader;
