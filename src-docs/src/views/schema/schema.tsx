@@ -12,9 +12,10 @@
 import React from 'react';
 
 import { OuiSchemaItem } from '../../../../src/components/schema';
+import { OuiSpacer } from '../../../../src/components/spacer';
 
 export default () => (
-  <div>
+  <>
     <OuiSchemaItem label="Simple" />
     <OuiSchemaItem iconType="tokenString" label="Simple with icon" />
     <OuiSchemaItem
@@ -62,7 +63,7 @@ export default () => (
       ]}
       compressed
     />
-    <br />
+    <OuiSpacer />
     <OuiSchemaItem
       iconType="tokenShape"
       label="With a panel"
@@ -86,7 +87,7 @@ export default () => (
       ]}
       withPanel
     />
-    <br />
+    <OuiSpacer />
     <OuiSchemaItem
       iconType="tokenShape"
       label="With a panel and compressed"
@@ -111,7 +112,7 @@ export default () => (
       withPanel
       compressed
     />
-    <br />
+    <OuiSpacer />
     <div style={{ width: '300px' }}>
       <OuiSchemaItem
         iconType="tokenShape"
@@ -137,5 +138,5 @@ export default () => (
         withPanel
       />
     </div>
-  </div>
+  </>
 );

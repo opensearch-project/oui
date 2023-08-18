@@ -76,11 +76,7 @@ export const OuiSchemaItem: FunctionComponent<OuiSchemaItemProps> = ({
         {filteredActions.map(({ tooltip, ...action }, index) =>
           tooltip ? (
             <OuiToolTip key={index} {...tooltip}>
-              <OuiButtonIcon
-                key={index}
-                {...action}
-                size={compressed ? 'xs' : 's'}
-              />
+              <OuiButtonIcon {...action} size={compressed ? 'xs' : 's'} />
             </OuiToolTip>
           ) : (
             <OuiButtonIcon

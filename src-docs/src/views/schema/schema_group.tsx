@@ -14,7 +14,6 @@ import React from 'react';
 import { OuiSchemaItem } from '../../../../src/components/schema';
 import { OuiFlexGroup, OuiFlexItem } from '../../../../src/components/flex';
 import { OuiSpacer } from '../../../../src/components/spacer';
-// import { OuiPanel } from '../../../../src/components/panel';
 
 export default () => {
   const actions = [

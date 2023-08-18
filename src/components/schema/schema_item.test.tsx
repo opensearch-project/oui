@@ -21,4 +21,24 @@ describe('OuiSchema', () => {
 
     expect(component).toMatchSnapshot();
   });
+
+  test('it only renders at most 2 actions', () => {
+    const actions = Array(3)
+      .fill(null)
+      .map(() => ({
+        iconType: 'trash',
+        onClick: () => {},
+      }));
+    const component = render(
+      <OuiSchemaItem {...requiredProps} label="Test" actions={actions} />
+    );
+    expect(component.find('.ouiSchemaItem__actions').children().length).toBe(2);
+  });
+
+  test('it renders compressed correctly', () => {
+    const component = render(
+      <OuiSchemaItem {...requiredProps} label="Test" compressed />
+    );
+    expect(component).toMatchSnapshot();
+  });
 });
