@@ -15,6 +15,7 @@
 - Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
 - Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
 - Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
+- Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
 
 ### 🐛 Bug Fixes
 
