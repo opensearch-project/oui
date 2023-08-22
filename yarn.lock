@@ -11815,10 +11815,10 @@ node-releases@^2.0.8:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.10.tgz#c311ebae3b6a148c89b1813fd7c4d3c024ef537f"
   integrity sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==
 
-node-sass@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-8.0.0.tgz#c80d52148db0ce88610bcf1e1d112027393c13e1"
-  integrity sha512-jPzqCF2/e6JXw6r3VxfIqYc8tKQdkj5Z/BDATYyG6FL6b/LuYBNFGFVhus0mthcWifHm/JzBpKAd+3eXsWeK/A==
+"node-sass@npm:@amoo-miki/node-sass@9.0.0-libsass-3.6.5":
+  version "9.0.0-libsass-3.6.5"
+  resolved "https://registry.yarnpkg.com/@amoo-miki/node-sass/-/node-sass-9.0.0-libsass-3.6.5.tgz#0536f4890b2a7a9143ce536f0fecde0a02ee389b"
+  integrity sha512-KalEkSO9qBbenHS1fXwz6UAf3x2oUKguJ6DRbTyDn8lYiZqNrEcbaD3hE8eZiLOrH662n8MF7fVzLp+oMQNiEA==
   dependencies:
     async-foreach "^0.1.3"
     chalk "^4.1.2"
@@ -14872,10 +14872,10 @@ sass-lint@^1.13.1:
     path-is-absolute "^1.0.0"
     util "^0.10.3"
 
-sass-loader@^10.0.1:
-  version "10.4.1"
-  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-10.4.1.tgz#bea4e173ddf512c9d7f53e9ec686186146807cbf"
-  integrity sha512-aX/iJZTTpNUNx/OSYzo2KsjIUQHqvWsAhhUijFjAPdZTEhstjZI9zTNvkTTwsx+uNUJqUwOw5gacxQMx4hJxGQ==
+"sass-loader@npm:@bsfishy/sass-loader@node-sass-9":
+  version "10.4.1-node-sass-9.1"
+  resolved "https://registry.yarnpkg.com/@bsfishy/sass-loader/-/sass-loader-10.4.1-node-sass-9.1.tgz#08b1a2106ebee373a3ce87933c010542c84a8f2e"
+  integrity sha512-AnVEci9dZCxCmPTg+bB0gUhp6FO6v+KmWH4wRbLMztfK5JxS8o+0s/bKCZwK7EY0TpxcjRTj34oW48OQHm0Hjg==
   dependencies:
     klona "^2.0.4"
     loader-utils "^2.0.0"
