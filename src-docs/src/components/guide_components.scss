@@ -26,7 +26,9 @@ $elasticLogoTextDark: #1C1E23;
   }
 }
 
-@include ouiHeaderAffordForFixed;
+body {
+  @include ouiHeaderAffordForFixed;
+}
 
 .ouiBody--headerIsFixed--double {
   @include ouiHeaderAffordForFixed($ouiHeaderHeightCompensation * 2);
