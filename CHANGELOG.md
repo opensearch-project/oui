@@ -13,6 +13,7 @@
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
 - [Header] Update background color in next theme ([#936](https://github.com/opensearch-project/oui/pull/936))
 - Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
+- Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
 - Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
 - Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
