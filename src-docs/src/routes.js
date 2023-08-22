@@ -189,6 +189,8 @@ import { ResizableContainerExample } from './views/resizable_container/resizable
 
 import { ResponsiveExample } from './views/responsive/responsive_example';
 
+import { SchemaExample } from './views/schema/schema_example';
+
 import { SearchBarExample } from './views/search_bar/search_bar_example';
 
 import { SelectableExample } from './views/selectable/selectable_example';
@@ -402,6 +404,7 @@ const navigation = [
       LoadingExample,
       NotificationEventExample,
       ProgressExample,
+      SchemaExample,
       StatExample,
       TextExample,
       TitleExample,
