@@ -1,4 +1,4 @@
-/*!
+/*
  * SPDX-License-Identifier: Apache-2.0
  *
  * The OpenSearch Contributors require contributions made to
@@ -9,5 +9,4 @@
  * GitHub history for details.
  */
 
-@import 'collapsible_nav';
-@import 'collapsible_nav_group/index';
+export { OuiSchemaItem } from './schema_item';

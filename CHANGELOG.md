@@ -11,8 +11,12 @@
 ### 📈 Features/Enhancements
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
+- [Header] Update background color in next theme ([#936](https://github.com/opensearch-project/oui/pull/936))
 - Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+- Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
+- Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
+- Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
 
 ### 🐛 Bug Fixes
 
@@ -34,6 +38,7 @@
 - [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
 - [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
+- Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
 
 ### 🪛 Refactoring
 

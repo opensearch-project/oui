@@ -9,7 +9,9 @@
  * GitHub history for details.
  */
 
-// Sizing
+// Should be same as OuiFlyout background color
+$ouiCollapsibleNavGroupNoneBackgroundColor: inherit !default;
+
 $ouiCollapsibleNavGroupLightBackgroundColor: $ouiPageBackgroundColor !default;
 
 $ouiCollapsibleNavGroupDarkBackgroundColor: lightOrDarkTheme(
