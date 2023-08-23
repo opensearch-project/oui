@@ -29,10 +29,11 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { mount, render } from 'enzyme';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiCallOut, COLORS, HEADINGS } from './call_out';
+import { findTestSubject } from '../../test';
 
 describe('OuiCallOut', () => {
   test('is rendered', () => {
@@ -79,6 +80,36 @@ describe('OuiCallOut', () => {
 
           expect(component).toMatchSnapshot();
         });
+      });
+    });
+
+    describe('dismissible', () => {
+      it('is rendered when set to true', () => {
+        const component = render(<OuiCallOut dismissible={true} />);
+
+        expect(component).toMatchSnapshot();
+      });
+
+      it('is not rendered when in warning color', () => {
+        const component = render(
+          <OuiCallOut dismissible={true} color={'warning'} />
+        );
+
+        expect(component).toMatchSnapshot();
+      });
+
+      it('is not rendered when in danger color', () => {
+        const component = render(
+          <OuiCallOut dismissible={true} color={'danger'} />
+        );
+
+        expect(component).toMatchSnapshot();
+      });
+
+      it('close callout after click', () => {
+        const component = mount(<OuiCallOut dismissible={true} />);
+        findTestSubject(component, 'closeCallOutButton').simulate('click');
+        expect(component).toMatchSnapshot();
       });
     });
   });

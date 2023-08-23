@@ -28,7 +28,13 @@
  * under the License.
  */
 
-import React, { forwardRef, Ref, HTMLAttributes, ReactNode } from 'react';
+import React, {
+  forwardRef,
+  Ref,
+  HTMLAttributes,
+  ReactNode,
+  useState,
+} from 'react';
 
 import classNames from 'classnames';
 
@@ -36,6 +42,7 @@ import { CommonProps, keysOf } from '../common';
 import { IconType, OuiIcon } from '../icon';
 
 import { OuiText } from '../text';
+import { OuiButtonIcon } from '../button';
 
 type Color = 'primary' | 'success' | 'warning' | 'danger';
 type Size = 's' | 'm';
@@ -48,6 +55,7 @@ export type OuiCallOutProps = CommonProps &
     color?: Color;
     size?: Size;
     heading?: Heading;
+    dismissible?: boolean;
   };
 
 const colorToClassNameMap: { [color in Color]: string } = {
@@ -75,10 +83,12 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
       children,
       className,
       heading,
+      dismissible = false,
       ...rest
     },
     ref: Ref<HTMLDivElement>
   ) => {
+    const [isCalloutVisible, setIsCalloutVisible] = useState(true);
     const classes = classNames(
       'ouiCallOut',
       colorToClassNameMap[color],
@@ -96,6 +106,21 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
           size="m"
           aria-hidden="true"
           color="inherit" // forces the icon to inherit its parent color
+        />
+      );
+    }
+
+    const onClose = () => setIsCalloutVisible(false);
+
+    let dismissibleIcon;
+    if (dismissible && color !== 'warning' && color !== 'danger') {
+      dismissibleIcon = (
+        <OuiButtonIcon
+          iconType="cross"
+          onClick={onClose}
+          className="ouiCallOut__closeIcon"
+          aria-label="dismissible_icon"
+          data-test-subj="closeCallOutButton"
         />
       );
     }
@@ -126,9 +151,16 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
         </div>
       );
     }
+
+    if (!isCalloutVisible) {
+      return <></>;
+    }
+
     return (
       <div className={classes} ref={ref} {...rest}>
         {header}
+
+        {dismissibleIcon}
 
         {optionalChildren}
       </div>

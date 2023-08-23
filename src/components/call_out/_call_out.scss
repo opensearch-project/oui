@@ -12,6 +12,7 @@
 .ouiCallOut {
   padding: $ouiSize;
   border-left: $ouiSizeXS / 2 solid transparent;
+  position: relative;
 
   &.ouiCallOut--small {
     padding: $ouiSizeS;
@@ -26,6 +27,12 @@
   .ouiCallOutHeader__title {
     @include ouiCallOutTitle;
     margin-bottom: 0; // In case it's nested inside OuiText
+  }
+
+  .ouiCallOut__closeIcon {
+    position: absolute;
+    right: 6px;
+    top: 0;
   }
 }
 
@@ -46,6 +53,10 @@
 
     .ouiCallOutHeader__title {
       color: ouiCallOutColor($name, 'foreground');
+    }
+
+    .ouiCallOut__closeIcon {
+      fill: ouiCallOutColor($name, 'foreground');
     }
   }
 }

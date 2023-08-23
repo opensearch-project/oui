@@ -42,6 +42,44 @@ exports[`OuiCallOut props color warning is rendered 1`] = `
 />
 `;
 
+exports[`OuiCallOut props dismissible close callout after click 1`] = `
+<OuiCallOut
+  dismissible={true}
+/>
+`;
+
+exports[`OuiCallOut props dismissible is not rendered when in danger color 1`] = `
+<div
+  class="ouiCallOut ouiCallOut--danger"
+/>
+`;
+
+exports[`OuiCallOut props dismissible is not rendered when in warning color 1`] = `
+<div
+  class="ouiCallOut ouiCallOut--warning"
+/>
+`;
+
+exports[`OuiCallOut props dismissible is rendered when set to true 1`] = `
+<div
+  class="ouiCallOut ouiCallOut--primary"
+>
+  <button
+    aria-label="dismissible_icon"
+    class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiCallOut__closeIcon"
+    data-test-subj="closeCallOutButton"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="ouiButtonIcon__icon"
+      color="inherit"
+      data-ouiicon-type="cross"
+    />
+  </button>
+</div>
+`;
+
 exports[`OuiCallOut props heading h1 is rendered 1`] = `
 <div
   class="ouiCallOut ouiCallOut--primary"
