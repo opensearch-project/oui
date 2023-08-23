@@ -153,7 +153,7 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
     }
 
     if (!isCalloutVisible) {
-      return <></>;
+      return null;
     }
 
     return (

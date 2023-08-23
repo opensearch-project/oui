@@ -107,7 +107,10 @@ describe('OuiCallOut', () => {
       });
 
       it('close callout after click', () => {
-        const component = mount(<OuiCallOut dismissible={true} />);
+        const component = mount(
+          <OuiCallOut dismissible={true} title="This is a callout" />
+        );
+        expect(component).toMatchSnapshot();
         findTestSubject(component, 'closeCallOutButton').simulate('click');
         expect(component).toMatchSnapshot();
       });

@@ -45,6 +45,60 @@ exports[`OuiCallOut props color warning is rendered 1`] = `
 exports[`OuiCallOut props dismissible close callout after click 1`] = `
 <OuiCallOut
   dismissible={true}
+  title="This is a callout"
+>
+  <div
+    className="ouiCallOut ouiCallOut--primary"
+  >
+    <div
+      className="ouiCallOutHeader"
+    >
+      <span
+        className="ouiCallOutHeader__title"
+      >
+        This is a callout
+      </span>
+    </div>
+    <OuiButtonIcon
+      aria-label="dismissible_icon"
+      className="ouiCallOut__closeIcon"
+      data-test-subj="closeCallOutButton"
+      iconType="cross"
+      onClick={[Function]}
+    >
+      <button
+        aria-label="dismissible_icon"
+        className="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiCallOut__closeIcon"
+        data-test-subj="closeCallOutButton"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        <OuiIcon
+          aria-hidden="true"
+          className="ouiButtonIcon__icon"
+          color="inherit"
+          size="m"
+          type="cross"
+        >
+          <span
+            aria-hidden="true"
+            className="ouiButtonIcon__icon"
+            color="inherit"
+            data-ouiicon-type="cross"
+            size="m"
+          />
+        </OuiIcon>
+      </button>
+    </OuiButtonIcon>
+  </div>
+</OuiCallOut>
+`;
+
+exports[`OuiCallOut props dismissible close callout after click 2`] = `
+<OuiCallOut
+  dismissible={true}
+  title="This is a callout"
 />
 `;
 

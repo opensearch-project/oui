@@ -44,7 +44,7 @@ export default () => (
     <OuiCallOut
       title="Callouts can be dismissed when dismissible is set to true unless the color is danger or warning. "
       iconType="wrench"
-      dismissible="true"
+      dismissible
     />
 
     <OuiSpacer size="m" />
