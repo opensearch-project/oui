@@ -31,6 +31,7 @@
 
 ### 📝 Documentation
 
+- Replace Avatar in favor of Icon in OuiFacetButtons example ([#987](https://github.com/opensearch-project/oui/pull/987))
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
 
 ### 🛠 Maintenance
