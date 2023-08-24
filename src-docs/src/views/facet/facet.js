@@ -11,7 +11,7 @@
 
 import React from 'react';
 
-import { OuiFacetButton, OuiIcon, OuiAvatar } from '../../../../src/components';
+import { OuiFacetButton, OuiIcon } from '../../../../src/components';
 
 export default () => (
   <div>
@@ -29,10 +29,8 @@ export default () => (
       Disabled
     </OuiFacetButton>
     <br />
-    <OuiFacetButton
-      quantity={6}
-      icon={<OuiAvatar size="s" name="Avatar Jones" />}>
-      Avatar as icon
+    <OuiFacetButton quantity={6} icon={<OuiIcon type="tokenObject" />}>
+      Facet with Icon example
     </OuiFacetButton>
     <br />
     <OuiFacetButton quantity={6} isLoading>
