@@ -37,9 +37,7 @@ export const FormValidationExample = {
           Validation is achieved by applying <OuiCode>isInvalid</OuiCode> and
           optionally error props onto the <strong>OuiForm</strong> or{' '}
           <strong>OuiFormRow</strong> components. Errors are optional and are
-          passed as an array in case you need to list more than one. You can
-          also hide the callout by passing
-          <OuiCode>invalidCallout=&ldquo;none&ldquo;</OuiCode>.
+          passed as an array in case you need to list more than one.
         </p>
       ),
       source: [
