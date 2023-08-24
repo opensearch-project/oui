@@ -32,6 +32,7 @@
 ### 📝 Documentation
 
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
+- Form validation page updated ([#986](https://github.com/opensearch-project/oui/pull/986))
 
 ### 🛠 Maintenance
 
