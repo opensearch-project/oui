@@ -32,7 +32,7 @@
 ### 📝 Documentation
 
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
-- Form validation page updated ([#986](https://github.com/opensearch-project/oui/pull/986))
+- Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
 
 ### 🛠 Maintenance
 
