@@ -20,8 +20,8 @@ $ouiFocusRingSizeLarge: $ouiSizeXS !default;
 $ouiFocusRingSize: $ouiFocusRingSizeLarge * .75 !default;
 
 // Transparency
-$ouiFocusTransparency: lightOrDarkTheme(.1, .3) !default;
-$ouiFocusBackgroundColor: tintOrShade($ouiColorPrimary, ((1 - $ouiFocusTransparency) * 100%), ((1 - $ouiFocusTransparency) * 100%)) !default;
+$ouiFocusChangePercent: lightOrDarkTheme(90%, 65%) !default;
+$ouiFocusBackgroundColor: tintOrShade($ouiColorPrimary, $ouiFocusChangePercent, $ouiFocusChangePercent) !default;
 
 
 /* OUI -> EUI Aliases */
@@ -31,7 +31,7 @@ $euiFocusRingAnimStartSize: $ouiFocusRingAnimStartSize;
 $euiFocusRingAnimStartSizeLarge: $ouiFocusRingAnimStartSizeLarge;
 $euiFocusRingSizeLarge: $ouiFocusRingSizeLarge;
 $euiFocusRingSize: $ouiFocusRingSize;
-$euiFocusTransparency: $ouiFocusTransparency;
+$euiFocusChangePercent: $ouiFocusChangePercent;
 $euiFocusBackgroundColor: $ouiFocusBackgroundColor;
 
 /* End of Aliases */

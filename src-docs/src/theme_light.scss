@@ -9,8 +9,11 @@
  * GitHub history for details.
  */
 
-@import 'https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i';
-@import 'https://rsms.me/inter/inter-ui.css';
+/* stylelint-disable-next-line import-notation */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i');
+
+/* stylelint-disable-next-line import-notation */
+@import url('https://rsms.me/inter/inter-ui.css');
 @import '../../src/theme_light';
 @import './components/guide_components';
 @import './services/playground/index';

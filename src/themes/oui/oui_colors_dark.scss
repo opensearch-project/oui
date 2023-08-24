@@ -62,12 +62,6 @@ $ouiColorChartBand: tint($ouiColorLightestShade, 2.5%);
 $ouiShadowColor: #000;
 $ouiShadowColorLarge: #000;
 
-// Breadcrumbs
-$ouiBreadcrumbBlueBackground: #163F66;
-$ouiBreadcrumbGrayBackground: #4C636F;
-$ouiBreadcrumbCollapsedLink: #FFF;
-$ouiBreadCrumbHoverColor: #B0B8BB;
-
 
 /* OUI -> EUI Aliases */
 $euiColorGhost: $ouiColorGhost;
@@ -103,9 +97,5 @@ $euiColorChartLines: $ouiColorChartLines;
 $euiColorChartBand: $ouiColorChartBand;
 $euiShadowColor: $ouiShadowColor;
 $euiShadowColorLarge: $ouiShadowColorLarge;
-$euiBreadcrumbBlueBackground: $ouiBreadcrumbBlueBackground;
-$euiBreadcrumbGrayBackground: $ouiBreadcrumbGrayBackground;
-$euiBreadcrumbCollapsedLink: $ouiBreadcrumbCollapsedLink;
-$euiBreadCrumbHoverColor: $ouiBreadCrumbHoverColor;
 
 /* End of Aliases */

@@ -10,8 +10,10 @@
  */
 
 // Themeable colors
-$ouiHeaderBackgroundColor: $ouiColorEmptyShade !default;
-$ouiHeaderDarkBackgroundColor: lightOrDarkTheme(shade($ouiColorDarkestShade, 28%), shade($ouiColorLightestShade, 50%)) !default;
+$ouiHeaderBackgroundColor: $ouiPageBackgroundColor !default;
+
+// Always use the dark theme value of $ouiPageBackgroundColor for the dark header background
+$ouiHeaderDarkBackgroundColor: #172430 !default;
 $ouiHeaderBorderColor: $ouiBorderColor !default;
 $ouiHeaderBreadcrumbColor: $ouiColorDarkestShade !default;
 

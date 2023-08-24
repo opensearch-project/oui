@@ -1,0 +1,77 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+.ouiSchemaItem {
+  display: flex;
+  gap: $ouiSizeS;
+  align-items: center;
+  padding: $ouiSizeS;
+  border-radius: $ouiBorderRadius;
+
+  &:hover {
+    @include ouiFocusBackground($ouiTextColor);
+
+    .ouiSchemaItem__actions .ouiButtonIcon {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.ouiSchemaItem__icon {
+  align-self: flex-start;
+  margin: calc($ouiSize / 2) 0; // To align with buttonIcon
+}
+
+.ouiSchemaItem__label {
+  flex: 1;
+  margin: calc($ouiSize / 2) 0; // To align with buttonIcon
+}
+
+.ouiSchemaItem__actions {
+  gap: $ouiSizeXS;
+  display: flex;
+
+  .ouiButtonIcon {
+    opacity: 0;
+    transition: opacity $ouiAnimSpeedNormal $ouiAnimSlightResistance;
+
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+
+.ouiSchemaItem--withPanel {
+  @include ouiBottomShadowSmall;
+
+  border: $ouiBorderThin;
+
+  &:hover {
+    background-color: tintOrShade($ouiColorLightestShade, 50%, 20%);
+  }
+}
+
+.ouiSchemaItem--compressed {
+  padding: $ouiSizeXS;
+  gap: $ouiSizeXS;
+  font-size: $ouiFontSizeXS;
+
+  .ouiSchemaItem__icon {
+    margin: calc($ouiSizeM / 2) 0;
+    margin-left: $ouiSizeXS;
+  }
+
+  .ouiSchemaItem__label {
+    flex: 1;
+    margin: calc($ouiSizeM / 2) 0;
+  }
+}

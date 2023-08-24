@@ -9,7 +9,8 @@
  * GitHub history for details.
  */
 
-// Sizing
+// No distinction between none and light backgrounds in this theme
+$ouiCollapsibleNavGroupNoneBackgroundColor: $ouiPageBackgroundColor !default;
 $ouiCollapsibleNavGroupLightBackgroundColor: $ouiPageBackgroundColor !default;
 $ouiCollapsibleNavGroupDarkBackgroundColor: lightOrDarkTheme(
   shade($ouiColorDarkestShade, 20%),

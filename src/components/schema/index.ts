@@ -1,4 +1,4 @@
-/*!
+/*
  * SPDX-License-Identifier: Apache-2.0
  *
  * The OpenSearch Contributors require contributions made to
@@ -9,22 +9,4 @@
  * GitHub history for details.
  */
 
-@mixin ouiLink {
-  text-align: left;
-  font-weight: 600;
-
-  &:hover {
-    text-decoration: underline;
-  }
-
-  &:focus {
-    text-decoration: underline;
-    background: $ouiFocusBackgroundColor;
-  }
-}
-
-
-/* OUI -> EUI Aliases */
-@mixin euiLink { @include ouiLink; }
-
-/* End of Aliases */
+export { OuiSchemaItem } from './schema_item';

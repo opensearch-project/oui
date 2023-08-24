@@ -335,9 +335,8 @@
   background-color: $ouiColorEmptyShade;
 }
 
-/* stylelint-disable no-invalid-position-at-import-rule */
+/* stylelint-disable-next-line no-invalid-position-at-import-rule */
 @import 'colors/color_section';
-/* stylelint-enable no-invalid-position-at-import-rule */
 
 @include ouiBreakpoint('xl') {
   .guideSass__breakpointExample {

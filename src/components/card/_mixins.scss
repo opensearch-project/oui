@@ -13,8 +13,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  height: $ouiCardBottomNodeHeight !important;  // To override .ouiButtonEmpty--xSmall
   width: 100%;
+  height: $ouiCardBottomNodeHeight !important;
   overflow: hidden;
 
   // Subtract 1px from border radius since it sits inside a border-radius
