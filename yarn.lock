@@ -1647,6 +1647,90 @@
     "@types/underscore" "^1.8.13"
     underscore "^1.9.1"
 
+"@node-rs/xxhash-android-arm-eabi@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-android-arm-eabi/-/xxhash-android-arm-eabi-1.4.2.tgz#936b6b9b78035e1d136dd7bdf8296ad31fe1f4af"
+  integrity sha512-6aonl3wNY/axTiW9jSz+Z2RduP2xCZTgX1M1ur8uCJcUVv/kkv+dEMFb3o/k19qBGntPWvGXZTj2mYO6onDr/g==
+
+"@node-rs/xxhash-android-arm64@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-android-arm64/-/xxhash-android-arm64-1.4.2.tgz#4a51efb021ffeaad9c36ec85e21233166e27c17c"
+  integrity sha512-Uhwsk3mp++Op2Sl/TzR1VfFqHx5sGMAwQGhQKThc/w8QSrDNfWKd1R9rjohIDWeNbmRguUCDPEKEOZwGewWacw==
+
+"@node-rs/xxhash-darwin-arm64@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-darwin-arm64/-/xxhash-darwin-arm64-1.4.2.tgz#f51f02ccc0dd734db171c75a00a3cc0b2aceb595"
+  integrity sha512-0JYLJQ9C8prYbPPr3WlScYnAgIxLwitUwx2FnxNmBNH9bCDFoMdFXylzlxdYPHEYcXMsvWWcOnf9cESBH0WqzA==
+
+"@node-rs/xxhash-darwin-x64@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-darwin-x64/-/xxhash-darwin-x64-1.4.2.tgz#cf70a5c5558dd825c1eb67e497f6c4dd1f0cc1ca"
+  integrity sha512-9CMuC7PZqHDaPCnOUrW6AIL+2gzLq22klGKBRXHXVfUELuNEqp7N0HyHheoQ99U0otCNnsA54zkfBw9cL1pcIA==
+
+"@node-rs/xxhash-freebsd-x64@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-freebsd-x64/-/xxhash-freebsd-x64-1.4.2.tgz#5ce9441127fab0709189ccef5a24c328a0de233d"
+  integrity sha512-pPvuivkR3oyZ6DocgX6LSN2GpgF6Z4DK8M0UwDlY5P2wAUoi1JIOJBLjOrQmiaCUIIGCTTDBKTPwgIDUh6A7mg==
+
+"@node-rs/xxhash-linux-arm-gnueabihf@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-linux-arm-gnueabihf/-/xxhash-linux-arm-gnueabihf-1.4.2.tgz#897e5612782279aff7d45b1a1a09e68f5b9709b6"
+  integrity sha512-LzI9WMW2scTG3/87/9j+oE0njz1o/2s7c61h1rEZyP1WBGA1cZ2xn3wAnwqFOPKE3s7QvONXoYjMMqa+BtDNNg==
+
+"@node-rs/xxhash-linux-arm64-gnu@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-linux-arm64-gnu/-/xxhash-linux-arm64-gnu-1.4.2.tgz#46417a0253efd4d0b972f1b501d269590036a109"
+  integrity sha512-BeOlxfDzdnYRfK0nEyG8gpA6AGpamZVe2FNBl96xB5eVYiPp8PhIFLFsfoPURqa/Abm8+JV+QHzf3sngD1Gr+Q==
+
+"@node-rs/xxhash-linux-arm64-musl@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-linux-arm64-musl/-/xxhash-linux-arm64-musl-1.4.2.tgz#3ea61d8236c0a36316130d167075a838508a47e7"
+  integrity sha512-u6l7mE5jmEWwUghZbfVHhhN9pMDkE0pjxjZu52bd8Ohk8LkbFDOJVNG2AWkWkjdInP31PmhvtCgE2laKCCQeRQ==
+
+"@node-rs/xxhash-linux-x64-gnu@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-linux-x64-gnu/-/xxhash-linux-x64-gnu-1.4.2.tgz#6165e3a5db08f88a0c47ad4d93ab464212e5ecad"
+  integrity sha512-h3FUuuDBGdJ42HgA9lxX9cNSussF1lO/04OKXkVuJGRPR6mBCqBZ9SPNhzSk2PyYEqHimXIBYr+CdDRCS1xsfQ==
+
+"@node-rs/xxhash-linux-x64-musl@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-linux-x64-musl/-/xxhash-linux-x64-musl-1.4.2.tgz#6668fd667f25cd2ff60a7f15e406e2e0cb5c9b56"
+  integrity sha512-W3/lMn1IBeTAcYVJEycxeyiMLD05M7OGsCZLAE0PB/t8dC+tH5jayVrYRhj+ZznK3V3pZfZb7cCVvZD2eCMb3g==
+
+"@node-rs/xxhash-win32-arm64-msvc@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-win32-arm64-msvc/-/xxhash-win32-arm64-msvc-1.4.2.tgz#674fad808e8569ebd75f38fb22f9bee119864bda"
+  integrity sha512-53WhZY+khV/d8qmbLimCLXptq6/r1KD61Hi8I96KWxP6WiDl7Himhi5Pm2SbA2YK1WA3xPCaHj/LkPRks8Zi2g==
+
+"@node-rs/xxhash-win32-ia32-msvc@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-win32-ia32-msvc/-/xxhash-win32-ia32-msvc-1.4.2.tgz#8b5b47051c555516fcc23c232497c5af42d31489"
+  integrity sha512-F1gWrwrNmw9rjxGphsDw9iGttXDEaGnAAj9U14+9n3WREMsmCRsKfoSZ41ln9KHH8hEABsxL15Tiutm++S3LmA==
+
+"@node-rs/xxhash-win32-x64-msvc@1.4.2":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash-win32-x64-msvc/-/xxhash-win32-x64-msvc-1.4.2.tgz#6dc64bd8e3461398e2caebe6b895b687bee9a80c"
+  integrity sha512-d7CUKK3IFYbED/0w6RosCKWL/RODfmA6yMfQdu3BZvh9Y8GTjRLE+DAIOOklP9Rb9qkKYSyzp2ALrHSkrHdRXQ==
+
+"@node-rs/xxhash@^1.3.0":
+  version "1.4.2"
+  resolved "https://registry.yarnpkg.com/@node-rs/xxhash/-/xxhash-1.4.2.tgz#91e4c74db14e7f078c06359a2ff2f85c3a24b84d"
+  integrity sha512-PvFTpG5z8tdXdZNkHUpjHDnBAKLxn6Xwp4yH8nfuVA2NcO3J970IHnm9yWcs9VVNwLr2aJx0lb8OvBAuLUNiEw==
+  optionalDependencies:
+    "@node-rs/xxhash-android-arm-eabi" "1.4.2"
+    "@node-rs/xxhash-android-arm64" "1.4.2"
+    "@node-rs/xxhash-darwin-arm64" "1.4.2"
+    "@node-rs/xxhash-darwin-x64" "1.4.2"
+    "@node-rs/xxhash-freebsd-x64" "1.4.2"
+    "@node-rs/xxhash-linux-arm-gnueabihf" "1.4.2"
+    "@node-rs/xxhash-linux-arm64-gnu" "1.4.2"
+    "@node-rs/xxhash-linux-arm64-musl" "1.4.2"
+    "@node-rs/xxhash-linux-x64-gnu" "1.4.2"
+    "@node-rs/xxhash-linux-x64-musl" "1.4.2"
+    "@node-rs/xxhash-win32-arm64-msvc" "1.4.2"
+    "@node-rs/xxhash-win32-ia32-msvc" "1.4.2"
+    "@node-rs/xxhash-win32-x64-msvc" "1.4.2"
+
 "@nodelib/fs.scandir@2.1.3":
   version "2.1.3"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz#3a582bdb53804c6ba6d146579c46e52130cf4a3b"
@@ -4455,7 +4539,7 @@ chokidar@^3.3.0, chokidar@^3.4.1:
   optionalDependencies:
     fsevents "~2.1.2"
 
-chokidar@^3.5.3:
+chokidar@^3.4.2, chokidar@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -7528,17 +7612,19 @@ forever-agent@~0.6.1:
   resolved "https://registry.yarnpkg.com/forever-agent/-/forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91"
   integrity sha1-+8cfDEGt6zf5bFd60e1C2P2sypE=
 
-fork-ts-checker-webpack-plugin@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-5.1.0.tgz#586fbee24aeea950c53bab529e32017f543e71cf"
-  integrity sha512-vuKyEjSLGbhQbEr5bifXXOkr9iV73L6n72mHoHIv7okvrf7O7z6RKeplM6C6ATPsukoQivij+Ba1vcptL60Z2g==
+fork-ts-checker-webpack-plugin@^6.5.3:
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/fork-ts-checker-webpack-plugin/-/fork-ts-checker-webpack-plugin-6.5.3.tgz#eda2eff6e22476a2688d10661688c47f611b37f3"
+  integrity sha512-SbH/l9ikmMWycd5puHJKTkZJKddF4iRLyW3DeZ08HTI7NGyLS38MXd/KGgeWumQO7YNQbW2u/NtPT2YowbPaGQ==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@types/json-schema" "^7.0.5"
     chalk "^4.1.0"
+    chokidar "^3.4.2"
     cosmiconfig "^6.0.0"
     deepmerge "^4.2.2"
     fs-extra "^9.0.0"
+    glob "^7.1.6"
     memfs "^3.1.2"
     minimatch "^3.0.4"
     schema-utils "2.7.0"
@@ -10589,7 +10675,7 @@ loader-utils@^1.2.3, loader-utils@^1.4.0:
     emojis-list "^3.0.0"
     json5 "^1.0.1"
 
-loader-utils@^2.0.0:
+loader-utils@^2.0.0, loader-utils@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.4.tgz#8b5cb38b5c34a9a018ee1fc0e6a066d1dfcc528c"
   integrity sha512-xXqpXoINfFhgua9xiqD8fPFHgkoq1mmmpE92WlDbm9rNRd/EbRb+Gqf908T2DMfuHjjJlksiK2RbHVOdD/MqSw==
@@ -11729,10 +11815,10 @@ node-releases@^2.0.8:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.10.tgz#c311ebae3b6a148c89b1813fd7c4d3c024ef537f"
   integrity sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==
 
-node-sass@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-8.0.0.tgz#c80d52148db0ce88610bcf1e1d112027393c13e1"
-  integrity sha512-jPzqCF2/e6JXw6r3VxfIqYc8tKQdkj5Z/BDATYyG6FL6b/LuYBNFGFVhus0mthcWifHm/JzBpKAd+3eXsWeK/A==
+"node-sass@npm:@amoo-miki/node-sass@9.0.0-libsass-3.6.5":
+  version "9.0.0-libsass-3.6.5"
+  resolved "https://registry.yarnpkg.com/@amoo-miki/node-sass/-/node-sass-9.0.0-libsass-3.6.5.tgz#0536f4890b2a7a9143ce536f0fecde0a02ee389b"
+  integrity sha512-KalEkSO9qBbenHS1fXwz6UAf3x2oUKguJ6DRbTyDn8lYiZqNrEcbaD3hE8eZiLOrH662n8MF7fVzLp+oMQNiEA==
   dependencies:
     async-foreach "^0.1.3"
     chalk "^4.1.2"
@@ -14786,10 +14872,10 @@ sass-lint@^1.13.1:
     path-is-absolute "^1.0.0"
     util "^0.10.3"
 
-sass-loader@^10.0.1:
-  version "10.4.1"
-  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-10.4.1.tgz#bea4e173ddf512c9d7f53e9ec686186146807cbf"
-  integrity sha512-aX/iJZTTpNUNx/OSYzo2KsjIUQHqvWsAhhUijFjAPdZTEhstjZI9zTNvkTTwsx+uNUJqUwOw5gacxQMx4hJxGQ==
+"sass-loader@npm:@bsfishy/sass-loader@node-sass-9":
+  version "10.4.1-node-sass-9.1"
+  resolved "https://registry.yarnpkg.com/@bsfishy/sass-loader/-/sass-loader-10.4.1-node-sass-9.1.tgz#08b1a2106ebee373a3ce87933c010542c84a8f2e"
+  integrity sha512-AnVEci9dZCxCmPTg+bB0gUhp6FO6v+KmWH4wRbLMztfK5JxS8o+0s/bKCZwK7EY0TpxcjRTj34oW48OQHm0Hjg==
   dependencies:
     klona "^2.0.4"
     loader-utils "^2.0.0"
@@ -14968,17 +15054,10 @@ serialize-error@^7.0.1:
   dependencies:
     type-fest "^0.13.1"
 
-serialize-javascript@^2.1.2, serialize-javascript@^3.1.0:
+serialize-javascript@^3.1.0, serialize-javascript@^4.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-3.1.0.tgz#8bf3a9170712664ef2561b44b691eafe399214ea"
   integrity sha512-JIJT1DGiWmIKhzRsG91aS6Ze4sFUrYbltlkg2onR5OrnNM02Kl/hnY/T4FN2omvyeBbQmMJv+K4cPOpGzOTFBg==
-  dependencies:
-    randombytes "^2.1.0"
-
-serialize-javascript@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-4.0.0.tgz#b525e1238489a5ecfc42afacc3fe99e666f4b1aa"
-  integrity sha512-GaNA54380uFefWghODBWEGisLZFj00nS5ACs6yHa9nLqlLpVLO8ChDGeKRjZnV4Nh4n0Qi7nhYZD/9fCPzEqkw==
   dependencies:
     randombytes "^2.1.0"
 
@@ -16027,21 +16106,6 @@ term-size@^1.2.0:
   dependencies:
     execa "^0.7.0"
 
-terser-webpack-plugin@^1.4.3:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-1.4.3.tgz#5ecaf2dbdc5fb99745fd06791f46fc9ddb1c9a7c"
-  integrity sha512-QMxecFz/gHQwteWwSo5nTc6UaICqN1bMedC5sMtUc7y3Ha3Q8y6ZO0iCR8pq4RJC8Hjf0FEPEHZqcMB/+DFCrA==
-  dependencies:
-    cacache "^12.0.2"
-    find-cache-dir "^2.1.0"
-    is-wsl "^1.1.0"
-    schema-utils "^1.0.0"
-    serialize-javascript "^2.1.2"
-    source-map "^0.6.1"
-    terser "^4.1.2"
-    webpack-sources "^1.4.0"
-    worker-farm "^1.7.0"
-
 terser-webpack-plugin@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-4.1.0.tgz#6e9d6ae4e1a900d88ddce8da6a47507ea61f44bc"
@@ -16056,6 +16120,22 @@ terser-webpack-plugin@^4.1.0:
     source-map "^0.6.1"
     terser "^5.0.0"
     webpack-sources "^1.4.3"
+
+"terser-webpack-plugin@npm:@amoo-miki/terser-webpack-plugin@1.4.5-rc.2":
+  version "1.4.5-rc.2"
+  resolved "https://registry.yarnpkg.com/@amoo-miki/terser-webpack-plugin/-/terser-webpack-plugin-1.4.5-rc.2.tgz#046c062ef22c126c2544718674bc6624e3651b9c"
+  integrity sha512-JFSGSzsWgSHEqQXlnHDh3gw+jdVdVlWM2Irdps9P/yWYNY/5VjuG8sdoW4mbuP8/HM893/k8N+ipbeqsd8/xpA==
+  dependencies:
+    "@node-rs/xxhash" "^1.3.0"
+    cacache "^12.0.2"
+    find-cache-dir "^2.1.0"
+    is-wsl "^1.1.0"
+    schema-utils "^1.0.0"
+    serialize-javascript "^4.0.0"
+    source-map "^0.6.1"
+    terser "^4.1.2"
+    webpack-sources "^1.4.0"
+    worker-farm "^1.7.0"
 
 terser@^4.1.2, terser@^4.6.3:
   version "4.8.1"
@@ -17207,11 +17287,12 @@ webpack-sources@^1.4.0, webpack-sources@^1.4.1, webpack-sources@^1.4.3:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.44.1:
-  version "4.46.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.46.0.tgz#bf9b4404ea20a073605e0a011d188d77cb6ad542"
-  integrity sha512-6jJuJjg8znb/xRItk7bkT0+Q7AHCYjjFnvKIWQPkNIOyRqoCGvkOs0ipeQzrqz4l5FtN5ZI/ukEHroeX/o1/5Q==
+"webpack@npm:@amoo-miki/webpack@4.46.0-rc.2":
+  version "4.46.0-rc.2"
+  resolved "https://registry.yarnpkg.com/@amoo-miki/webpack/-/webpack-4.46.0-rc.2.tgz#36824597c14557a7bb0a8e13203e30275e7b02bd"
+  integrity sha512-Y/ZqxTHOoDF1kz3SR63Y9SZGTDUpZNNFrisTRHofWhP8QvNX3LMN+TCmEP56UfLaiLVKMcaiFjx8kFb2TgyBaQ==
   dependencies:
+    "@node-rs/xxhash" "^1.3.0"
     "@webassemblyjs/ast" "1.9.0"
     "@webassemblyjs/helper-module-context" "1.9.0"
     "@webassemblyjs/wasm-edit" "1.9.0"
@@ -17224,7 +17305,7 @@ webpack@^4.44.1:
     eslint-scope "^4.0.3"
     json-parse-better-errors "^1.0.2"
     loader-runner "^2.4.0"
-    loader-utils "^1.2.3"
+    loader-utils "^2.0.4"
     memory-fs "^0.4.1"
     micromatch "^3.1.10"
     mkdirp "^0.5.3"
@@ -17232,7 +17313,7 @@ webpack@^4.44.1:
     node-libs-browser "^2.2.1"
     schema-utils "^1.0.0"
     tapable "^1.1.3"
-    terser-webpack-plugin "^1.4.3"
+    terser-webpack-plugin "npm:@amoo-miki/terser-webpack-plugin@1.4.5-rc.2"
     watchpack "^1.7.4"
     webpack-sources "^1.4.1"
 
