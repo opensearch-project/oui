@@ -28,13 +28,7 @@
  * under the License.
  */
 
-import React, {
-  forwardRef,
-  Ref,
-  HTMLAttributes,
-  ReactNode,
-  useState,
-} from 'react';
+import React, { forwardRef, Ref, HTMLAttributes, ReactNode } from 'react';
 
 import classNames from 'classnames';
 
@@ -56,6 +50,11 @@ export type OuiCallOutProps = CommonProps &
     size?: Size;
     heading?: Heading;
     dismissible?: boolean;
+    onDismissible?: (
+      event?:
+        | React.KeyboardEvent<HTMLDivElement>
+        | React.MouseEvent<HTMLButtonElement>
+    ) => void;
   };
 
 const colorToClassNameMap: { [color in Color]: string } = {
@@ -84,11 +83,11 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
       className,
       heading,
       dismissible = false,
+      onDismissible = () => {},
       ...rest
     },
     ref: Ref<HTMLDivElement>
   ) => {
-    const [isCalloutVisible, setIsCalloutVisible] = useState(true);
     const classes = classNames(
       'ouiCallOut',
       colorToClassNameMap[color],
@@ -110,14 +109,12 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
       );
     }
 
-    const onClose = () => setIsCalloutVisible(false);
-
     let dismissibleIcon;
     if (dismissible && color !== 'warning' && color !== 'danger') {
       dismissibleIcon = (
         <OuiButtonIcon
           iconType="cross"
-          onClick={onClose}
+          onClick={onDismissible}
           className="ouiCallOut__closeIcon"
           aria-label="dismissible_icon"
           data-test-subj="closeCallOutButton"
@@ -150,10 +147,6 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
           <H className="ouiCallOutHeader__title">{title}</H>
         </div>
       );
-    }
-
-    if (!isCalloutVisible) {
-      return null;
     }
 
     return (

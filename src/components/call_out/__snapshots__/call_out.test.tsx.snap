@@ -45,6 +45,7 @@ exports[`OuiCallOut props color warning is rendered 1`] = `
 exports[`OuiCallOut props dismissible close callout after click 1`] = `
 <OuiCallOut
   dismissible={true}
+  onDismissible={[MockFunction]}
   title="This is a callout"
 >
   <div
@@ -64,14 +65,14 @@ exports[`OuiCallOut props dismissible close callout after click 1`] = `
       className="ouiCallOut__closeIcon"
       data-test-subj="closeCallOutButton"
       iconType="cross"
-      onClick={[Function]}
+      onClick={[MockFunction]}
     >
       <button
         aria-label="dismissible_icon"
         className="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiCallOut__closeIcon"
         data-test-subj="closeCallOutButton"
         disabled={false}
-        onClick={[Function]}
+        onClick={[MockFunction]}
         type="button"
       >
         <OuiIcon
@@ -93,13 +94,6 @@ exports[`OuiCallOut props dismissible close callout after click 1`] = `
     </OuiButtonIcon>
   </div>
 </OuiCallOut>
-`;
-
-exports[`OuiCallOut props dismissible close callout after click 2`] = `
-<OuiCallOut
-  dismissible={true}
-  title="This is a callout"
-/>
 `;
 
 exports[`OuiCallOut props dismissible is not rendered when in danger color 1`] = `
