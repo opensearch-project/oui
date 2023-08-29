@@ -36,6 +36,7 @@ import { CommonProps, keysOf } from '../common';
 import { IconType, OuiIcon } from '../icon';
 
 import { OuiText } from '../text';
+import { OuiButtonIcon } from '../button';
 
 type Color = 'primary' | 'success' | 'warning' | 'danger';
 type Size = 's' | 'm';
@@ -48,6 +49,12 @@ export type OuiCallOutProps = CommonProps &
     color?: Color;
     size?: Size;
     heading?: Heading;
+    dismissible?: boolean;
+    onDismissible?: (
+      event?:
+        | React.KeyboardEvent<HTMLDivElement>
+        | React.MouseEvent<HTMLButtonElement>
+    ) => void;
   };
 
 const colorToClassNameMap: { [color in Color]: string } = {
@@ -75,6 +82,8 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
       children,
       className,
       heading,
+      dismissible = false,
+      onDismissible = () => {},
       ...rest
     },
     ref: Ref<HTMLDivElement>
@@ -96,6 +105,19 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
           size="m"
           aria-hidden="true"
           color="inherit" // forces the icon to inherit its parent color
+        />
+      );
+    }
+
+    let dismissibleIcon;
+    if (dismissible && color !== 'warning' && color !== 'danger') {
+      dismissibleIcon = (
+        <OuiButtonIcon
+          iconType="cross"
+          onClick={onDismissible}
+          className="ouiCallOut__closeIcon"
+          aria-label="dismissible_icon"
+          data-test-subj="closeCallOutButton"
         />
       );
     }
@@ -126,9 +148,12 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
         </div>
       );
     }
+
     return (
       <div className={classes} ref={ref} {...rest}>
         {header}
+
+        {dismissibleIcon}
 
         {optionalChildren}
       </div>
