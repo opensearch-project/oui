@@ -34,7 +34,7 @@ import React, {
   KeyboardEventHandler,
 } from 'react';
 import moment from 'moment';
-import dateMath from '@opensearch/datemath';
+import dateMath from '@elastic/datemath';
 import { htmlIdGenerator } from '../../../../services';
 import { OuiButton, OuiButtonIcon } from '../../../button';
 import { OuiFlexGroup, OuiFlexItem } from '../../../flex';

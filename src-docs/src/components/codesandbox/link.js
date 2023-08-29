@@ -152,7 +152,7 @@ ${exampleClose}
           dependencies: {
             '@opensearch-project/oui': pkg.version,
             ...[
-              '@opensearch/datemath',
+              '@elastic/datemath',
               'moment',
               'react',
               'react-dom',

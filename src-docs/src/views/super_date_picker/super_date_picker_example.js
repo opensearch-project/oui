@@ -90,7 +90,7 @@ export const SuperDatePickerExample = {
             to convert start and end strings into moment objects.
           </p>
           <OuiCodeBlock language="js" paddingSize="none" isCopyable>
-            {`import dateMath from '@opensearch/datemath';
+            {`import dateMath from '@elastic/datemath';
 
 const startMoment = dateMath.parse(start);
 // dateMath.parse is inconsistent with unparsable strings.

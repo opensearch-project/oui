@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import dateMath from '@opensearch/datemath';
+import dateMath from '@elastic/datemath';
 import {
   parseRelativeParts,
   toRelativeStringFromParts,

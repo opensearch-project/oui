@@ -29,7 +29,7 @@
  */
 
 import moment from 'moment';
-import dateMath from '@opensearch/datemath';
+import dateMath from '@elastic/datemath';
 import { isString } from '../../../../services/predicate';
 import { relativeUnitsFromLargestToSmallest } from '../relative_options';
 import { DATE_MODES } from '../date_modes';
