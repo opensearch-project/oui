@@ -17,10 +17,12 @@
 - Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
 - Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
 - Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
+- Add dismissible prop to OuiCallOut ([#985](https://github.com/opensearch-project/oui/pull/985))
 
 ### 🐛 Bug Fixes
 
 - Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
+- Remove `calc` usage from SchemaItem styles ([#990](https://github.com/opensearch-project/oui/pull/990))
 
 ### 🚞 Infrastructure
 
@@ -32,6 +34,7 @@
 ### 📝 Documentation
 
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
+- Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
 
 ### 🛠 Maintenance
 
