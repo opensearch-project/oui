@@ -19,7 +19,7 @@
 
 .guideColorSection__button {
   padding: $ouiSizeXS;
-  margin-bottom: $ouiSizeXS / 2;
+  margin-bottom: calc($ouiSizeXS / 2);
   border-radius: $ouiBorderRadius;
   width: 100%;
   max-width: 300px;

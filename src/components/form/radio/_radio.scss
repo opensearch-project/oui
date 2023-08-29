@@ -31,7 +31,7 @@
       display: inline-block;
       position: absolute;
       left: 0;
-      top: (($ouiSizeL - $ouiRadioSize) / 2) - 1px;
+      top: calc(($ouiSizeL - $ouiRadioSize) / 2) - 1px;
     }
 
     &:checked {

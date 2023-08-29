@@ -26,8 +26,8 @@
   display: flex;
 
   &--isCustom {
-    left: ($ouiRangeThumbWidth / 8);
-    right: ($ouiRangeThumbWidth / 8);
+    left: calc($ouiRangeThumbWidth / 8);
+    right: calc($ouiRangeThumbWidth / 8);
   }
 }
 
@@ -42,7 +42,7 @@
   &:not(.ouiRangeTick--hasTickMark)::before {
     @include tickStyles;
     content: '';
-    left: calc(50% - #{($ouiSizeXS/2)});
+    left: calc(50% - #{calc($ouiSizeXS/2)});
   }
 
   .ouiRangeTick__pseudo {
