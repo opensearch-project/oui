@@ -17,6 +17,7 @@
 - Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
 - Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
 - Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
+- Add dismissible prop to OuiCallOut ([#985](https://github.com/opensearch-project/oui/pull/985))
 
 ### 🐛 Bug Fixes
 
