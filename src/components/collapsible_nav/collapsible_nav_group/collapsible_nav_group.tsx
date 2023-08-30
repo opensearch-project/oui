@@ -76,7 +76,8 @@ export interface OuiCollapsibleNavGroupInterface extends CommonProps {
   id?: string;
   /**
    * Adds a background color to the entire group,
-   * applying the correct text color to the `title` only
+   * applying the correct text color to the `title` only.
+   * Note: Some themes choose to ignore this prop.
    */
   background?: Background;
   /**

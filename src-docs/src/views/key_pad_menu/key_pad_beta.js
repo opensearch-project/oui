@@ -19,13 +19,15 @@ import {
 
 export default () => (
   <OuiKeyPadMenu>
-    <OuiKeyPadMenuItem label="Dashboard" href="#">
+    <OuiKeyPadMenuItem
+      label="Dashboard"
+      href="https://oui.opensearch.org/latest/">
       <OuiIcon type="dashboardApp" size="l" />
     </OuiKeyPadMenuItem>
 
     <OuiKeyPadMenuItem
       label="Dashboard"
-      href="#"
+      href="https://oui.opensearch.org/latest/"
       betaBadgeLabel="Experimental"
       betaBadgeTooltipContent="This module is not GA. Please help us by reporting any bugs.">
       <OuiIcon type="dashboardApp" size="l" />
@@ -33,7 +35,7 @@ export default () => (
 
     <OuiKeyPadMenuItem
       label="Dashboard"
-      href="#"
+      href="https://oui.opensearch.org/latest/"
       betaBadgeLabel="External"
       betaBadgeTooltipContent="This module is an external app."
       betaBadgeIconType="popout">

@@ -19,6 +19,8 @@ import {
   DataGenerator,
 } from '@elastic/charts';
 
+import { OUI_CHARTS_THEME_LIGHT } from '../../../../src/themes/charts/themes';
+
 import {
   getDefaultOuiMarkdownParsingPlugins,
   getDefaultOuiMarkdownProcessingPlugins,
@@ -246,7 +248,7 @@ const ChartMarkdownRenderer = ({ palette, categories }) => {
   return (
     <Chart size={{ height: 320 }}>
       <Settings
-        theme={[customColors]}
+        theme={[customColors, OUI_CHARTS_THEME_LIGHT]}
         showLegend={false}
         showLegendDisplayValue={false}
       />

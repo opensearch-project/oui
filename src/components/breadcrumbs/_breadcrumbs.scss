@@ -25,10 +25,10 @@
 
 .ouiBreadcrumb {
   display: inline-block;
-  transform: skewX(20deg);
 
   &:not(.ouiBreadcrumb--last) {
-    color: $ouiTextSubduedColor;
+    // TODO: remove important: https://github.com/opensearch-project/oui/issues/376
+    color: $ouiBreadcrumbInactiveTextColor !important; // sass-lint:disable-line no-important
 
     &:hover {
       color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
@@ -36,23 +36,18 @@
   }
 }
 
-.ouiBreadcrumb--last {
+.ouiBreadcrumbs:not(.ouiBreadcrumbs__inPopover) .ouiBreadcrumb--last {
   font-weight: $ouiFontWeightMedium;
 }
 
 .ouiBreadcrumb--collapsed {
   flex-shrink: 0;
-  color: $ouiBreadcrumbCollapsedLink;
+  color: $ouiBreadcrumbCollapsedLink !important; // sass-lint:disable-line no-important
   vertical-align: top !important; // sass-lint:disable-line no-important
 }
 
 .ouiBreadcrumb__collapsedLink:hover {
   color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
-}
-
-.ouiBreadcrumbs__inPopover .ouiBreadcrumb--last {
-  font-weight: $ouiFontWeightRegular;
-  color: $ouiColorDarkShade !important; // sass-lint:disable-line no-important
 }
 
 .ouiBreadcrumbs--truncate {
@@ -89,32 +84,45 @@
 }
 
 .ouiBreadcrumbWrapper {
-  background-color: $ouiBreadcrumbGrayBackground;
-  transform: skewX(-20deg);
-  border-radius: $ouiSizeXS;
+  position: relative;
+  z-index: 0;
   padding: $ouiSizeXS - 2.5 $ouiSizeL - $ouiSizeXS;
+  padding-right: $ouiSizeL - $ouiSizeXS + $ouiBreadcrumbSpacing / 2;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: $ouiBreadcrumbSpacing / 2;
+    right: $ouiBreadcrumbSpacing / 2;
+    z-index: -1;
+
+    transform: skewX(-20deg);
+    border-radius: $ouiSizeXS;
+  }
+
+  &:not(.ouiBreadcrumbWrapper--last)::before {
+    background-color: $ouiBreadcrumbInactiveBackground;
+  }
+
+  &.ouiBreadcrumbWrapper--last::before {
+    background-color: $ouiBreadcrumbActiveBackground;
+  }
 
   &:not(.ouiBreadcrumbWrapper--first) {
     margin-bottom: $ouiSizeXS; /* 1 */
-  }
-
-  &:not(.ouiBreadcrumbWrapper--last),
-  &.ouiBreadcrumbWrapper--first.ouiBreadcrumbWrapper--last {
-    margin-right: $ouiBreadcrumbSpacing;
+    padding-left: $ouiSizeL - $ouiSizeXS + $ouiBreadcrumbSpacing / 2;
   }
 }
 
 .ouiBreadcrumbWall {
-  background-image: linear-gradient(to right, $ouiBreadcrumbGrayBackground 0 $ouiSizeM, transparent $ouiSizeM);
+  background-image: linear-gradient(to right, $ouiBreadcrumbInactiveBackground 0 $ouiSizeM, transparent $ouiSizeM);
   border-radius: $ouiSizeXS;
   overflow: hidden;
   margin-bottom: $ouiSizeXS; /* 1 */
 }
 
 .ouiBreadcrumbWall--single {
-  background-image: linear-gradient(to right, $ouiBreadcrumbBlueBackground 0 $ouiSizeM, transparent $ouiSizeM);
-}
-
-.ouiBreadcrumbWrapper--last {
-  background-color: $ouiBreadcrumbBlueBackground;
+  background-image: linear-gradient(to right, $ouiBreadcrumbActiveBackground 0 $ouiSizeM, transparent $ouiSizeM);
 }

@@ -94,8 +94,8 @@ export default () => {
           <OuiHeaderSection grow={false}>
             <OuiHeaderSectionItem border="right">
               <OuiHeaderLogo
-                iconType="logoKibana"
-                href="#"
+                iconType="logoOpenSearch"
+                href="https://oui.opensearch.org/latest/"
                 aria-label="Go to home page"
               />
             </OuiHeaderSectionItem>

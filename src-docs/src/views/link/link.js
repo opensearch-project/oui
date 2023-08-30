@@ -17,7 +17,7 @@ export default () => (
   <OuiText>
     <p>
       Open the{' '}
-      <OuiLink href="https://Opensearch.org" target="_blank">
+      <OuiLink href="https://opensearch.org/" target="_blank">
         OpenSearch website
       </OuiLink>{' '}
       in a new tab. Setting <OuiCode>target=&ldquo;_blank&rdquo;</OuiCode> also
@@ -25,7 +25,7 @@ export default () => (
     </p>
     <p>
       This{' '}
-      <OuiLink href="https://Opensearch.org" external>
+      <OuiLink href="https://oui.opensearch.org/latest/" external>
         link
       </OuiLink>{' '}
       has the <OuiCode>external</OuiCode> prop set to true.
@@ -37,7 +37,7 @@ export default () => (
     <p>
       Here is an example of a{' '}
       <OuiLink
-        href="https://github.com/opensearch-project/oui"
+        href="https://oui.opensearch.org/latest/"
         onClick={(e) => {
           e.preventDefault();
         }}>
@@ -49,38 +49,38 @@ export default () => (
     <p>Links can be colored as well.</p>
     <ul>
       <li>
-        <OuiLink color="subdued" href="#">
+        <OuiLink color="subdued" href="https://oui.opensearch.org/latest/">
           subdued
         </OuiLink>
       </li>
       <li>
-        <OuiLink color="success" href="#">
+        <OuiLink color="success" href="https://oui.opensearch.org/latest/">
           success
         </OuiLink>
       </li>
       <li>
-        <OuiLink color="accent" href="#">
+        <OuiLink color="accent" href="https://oui.opensearch.org/latest/">
           accent
         </OuiLink>
       </li>
       <li>
-        <OuiLink color="danger" href="#">
+        <OuiLink color="danger" href="https://oui.opensearch.org/latest/">
           danger
         </OuiLink>
       </li>
       <li>
-        <OuiLink color="warning" href="#">
+        <OuiLink color="warning" href="https://oui.opensearch.org/latest/">
           warning
         </OuiLink>
       </li>
       <li>
-        <OuiLink color="text" href="#">
+        <OuiLink color="text" href="https://oui.opensearch.org/latest/">
           text
         </OuiLink>
       </li>
       <li>
         <span style={{ background: 'black' }}>
-          <OuiLink color="ghost" href="#">
+          <OuiLink color="ghost" href="https://oui.opensearch.org/latest/">
             ghost
           </OuiLink>
         </span>

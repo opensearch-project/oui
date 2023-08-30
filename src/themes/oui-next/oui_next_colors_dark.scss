@@ -41,7 +41,9 @@ $ouiColorHighlight: #2E2D25;
 // Variations from core
 $ouiTextColor: #DFE5EF;
 $ouiTitleColor: $ouiTextColor;
-$ouiTextSubduedColor: makeHighContrastColor($ouiColorMediumShade);
+// Ensure contrast between subdued text and the page background
+// Should not be shaded as much as $ouiColorDisabled
+$ouiTextSubduedColor: makeHighContrastColor(shade($ouiTextColor, 30%), $ouiPageBackgroundColor);
 $ouiColorDisabled: shade($ouiTextColor, 70%);
 
 // Contrasty text variants
@@ -61,12 +63,6 @@ $ouiColorChartBand: tint($ouiColorLightestShade, 2.5%);
 // Shadows
 $ouiShadowColor: #000;
 $ouiShadowColorLarge: #000;
-
-// Breadcrumbs
-$ouiBreadcrumbBlueBackground: #163F66;
-$ouiBreadcrumbGrayBackground: #4C636F;
-$ouiBreadcrumbCollapsedLink: #FFF;
-$ouiBreadCrumbHoverColor: #B0B8BB;
 
 
 /* OUI -> EUI Aliases */
@@ -103,8 +99,4 @@ $euiColorChartLines: $ouiColorChartLines;
 $euiColorChartBand: $ouiColorChartBand;
 $euiShadowColor: $ouiShadowColor;
 $euiShadowColorLarge: $ouiShadowColorLarge;
-$euiBreadcrumbBlueBackground: $ouiBreadcrumbBlueBackground;
-$euiBreadcrumbGrayBackground: $ouiBreadcrumbGrayBackground;
-$euiBreadcrumbCollapsedLink: $ouiBreadcrumbCollapsedLink;
-$euiBreadCrumbHoverColor: $ouiBreadCrumbHoverColor;
 /* End of Aliases */

@@ -45,7 +45,7 @@ for (let i = 1; i < 20; i++) {
     ),
     email: faker.helpers.fake('{{internet.email}}'),
     city: (
-      <OuiLink href="http://google.com">
+      <OuiLink href="https://oui.opensearch.org/latest/">
         {faker.helpers.fake('{{location.city}}')}
       </OuiLink>
     ),
