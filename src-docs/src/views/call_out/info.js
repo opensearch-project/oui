@@ -26,7 +26,7 @@ export default () => {
         title="Callouts can be dismissed when dismissible is set to true unless the color is danger or warning. "
         iconType="wrench"
         dismissible
-        onDismissible={closeCallOut}
+        onDismiss={closeCallOut}
       />
     );
   }
