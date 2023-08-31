@@ -45,7 +45,7 @@ exports[`OuiCallOut props color warning is rendered 1`] = `
 exports[`OuiCallOut props dismissible close callout after click 1`] = `
 <OuiCallOut
   dismissible={true}
-  onDismissible={[MockFunction]}
+  onDismiss={[MockFunction]}
   title="This is a callout"
 >
   <div

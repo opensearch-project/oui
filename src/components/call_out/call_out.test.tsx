@@ -107,17 +107,17 @@ describe('OuiCallOut', () => {
       });
 
       it('close callout after click', () => {
-        const onDismissible = jest.fn();
+        const onDismiss = jest.fn();
         const component = mount(
           <OuiCallOut
             dismissible={true}
-            onDismissible={onDismissible}
+            onDismiss={onDismiss}
             title="This is a callout"
           />
         );
         expect(component).toMatchSnapshot();
         findTestSubject(component, 'closeCallOutButton').simulate('click');
-        expect(onDismissible).toBeCalled();
+        expect(onDismiss).toBeCalled();
       });
     });
   });

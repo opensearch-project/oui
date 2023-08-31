@@ -50,7 +50,7 @@ export type OuiCallOutProps = CommonProps &
     size?: Size;
     heading?: Heading;
     dismissible?: boolean;
-    onDismissible?: (
+    onDismiss?: (
       event?:
         | React.KeyboardEvent<HTMLDivElement>
         | React.MouseEvent<HTMLButtonElement>
@@ -83,7 +83,7 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
       className,
       heading,
       dismissible = false,
-      onDismissible = () => {},
+      onDismiss = () => {},
       ...rest
     },
     ref: Ref<HTMLDivElement>
@@ -114,7 +114,7 @@ export const OuiCallOut = forwardRef<HTMLDivElement, OuiCallOutProps>(
       dismissibleIcon = (
         <OuiButtonIcon
           iconType="cross"
-          onClick={onDismissible}
+          onClick={onDismiss}
           className="ouiCallOut__closeIcon"
           aria-label="dismissible_icon"
           data-test-subj="closeCallOutButton"
