@@ -21,6 +21,7 @@
 - Add dismissible prop to OuiCallOut ([#985](https://github.com/opensearch-project/oui/pull/985))
 - Adjust $ouiFormInputGroupLabelBackground color in dark `next` theme ([#1005](https://github.com/opensearch-project/oui/pull/1005))
 - Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
+- Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 
 ### 🐛 Bug Fixes
 
