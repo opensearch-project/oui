@@ -82,11 +82,13 @@ function RenderCellValue({ rowIndex, columnId }) {
     const suffix = faker.helpers.fake('{{person.suffix}}');
     data[rowIndex] = {
       name: `${name} ${suffix}`,
-      email: <OuiLink href="">{email}</OuiLink>,
+      email: (
+        <OuiLink href="https://oui.opensearch.org/latest/">{email}</OuiLink>
+      ),
       location: (
         <Fragment>
           {`${faker.helpers.fake('{{location.city}}')}, `}
-          <OuiLink href="https://google.com">
+          <OuiLink href="https://oui.opensearch.org/latest/">
             {faker.helpers.fake('{{location.country}}')}
           </OuiLink>
         </Fragment>

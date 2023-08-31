@@ -46,14 +46,16 @@ for (let i = 1; i < 100; i++) {
     },
     email: {
       formatted: (
-        <OuiLink href="">{faker.helpers.fake('{{internet.email}}')}</OuiLink>
+        <OuiLink href="https://oui.opensearch.org/latest/">
+          {faker.helpers.fake('{{internet.email}}')}
+        </OuiLink>
       ),
       raw: email,
     },
     location: (
       <Fragment>
         {`${faker.helpers.fake('{{location.city}}')}, `}
-        <OuiLink href="https://google.com">
+        <OuiLink href="https://oui.opensearch.org/latest/">
           {faker.helpers.fake('{{location.country}}')}
         </OuiLink>
       </Fragment>

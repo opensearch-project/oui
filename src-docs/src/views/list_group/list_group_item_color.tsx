@@ -20,7 +20,11 @@ import { OuiSpacer } from '../../../../src/components/spacer';
 export default () => (
   <>
     <OuiListGroup>
-      <OuiListGroupItem href="#" label="Inherit by default (xs)" size="xs" />
+      <OuiListGroupItem
+        href="https://oui.opensearch.org/latest/"
+        label="Inherit by default (xs)"
+        size="xs"
+      />
 
       <OuiListGroupItem
         onClick={() => {}}
@@ -29,15 +33,28 @@ export default () => (
         size="s"
       />
 
-      <OuiListGroupItem href="#" label="Text (m)" color="text" />
+      <OuiListGroupItem
+        href="https://oui.opensearch.org/latest/"
+        label="Text (m)"
+        color="text"
+      />
 
-      <OuiListGroupItem href="#" label="Subdued (l)" color="subdued" size="l" />
+      <OuiListGroupItem
+        href="https://oui.opensearch.org/latest/"
+        label="Subdued (l)"
+        color="subdued"
+        size="l"
+      />
     </OuiListGroup>
 
     <OuiSpacer size="s" />
 
     <OuiListGroup style={{ background: 'black' }}>
-      <OuiListGroupItem href="#" label="Ghost" color="ghost" />
+      <OuiListGroupItem
+        href="https://oui.opensearch.org/latest/"
+        label="Ghost"
+        color="ghost"
+      />
     </OuiListGroup>
   </>
 );

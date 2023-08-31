@@ -23,8 +23,8 @@ export const textConfig = () => {
     type: PropTypes.ReactNode,
     value: `<h1>This is Heading One</h1>
     <p>
-      Ea mollit ullamco cillum ipsum adipisicing ea aute id. Cillum <a href="#">unfashionable</a> amet 
-      proident irure Lorem irure consequat veniam. Excepteur exercitation ex officia 
+      Ea mollit ullamco cillum ipsum adipisicing ea aute id. Cillum <a href="https://oui.opensearch.org/latest/">unfashionable</a> amet
+      proident irure Lorem irure consequat veniam. Excepteur exercitation ex officia
       minim excepteur consequat sint id Lorem est officia cupidatat excepteur commodo.
     </p>`,
     hidden: false,
