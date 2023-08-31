@@ -9,6 +9,7 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
+
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
 - [Header] Update background color in next theme ([#936](https://github.com/opensearch-project/oui/pull/936))
@@ -18,6 +19,7 @@
 - Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
 - Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
 - Add dismissible prop to OuiCallOut ([#985](https://github.com/opensearch-project/oui/pull/985))
+- Adjust $ouiFormInputGroupLabelBackground color in dark `next` theme ([#1005](https://github.com/opensearch-project/oui/pull/1005))
 - Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
 
 ### 🐛 Bug Fixes
