@@ -19,6 +19,7 @@
 - Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
 - Add dismissible prop to OuiCallOut ([#985](https://github.com/opensearch-project/oui/pull/985))
 - Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
+- Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 
 ### 🐛 Bug Fixes
 
