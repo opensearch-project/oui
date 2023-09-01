@@ -1058,10 +1058,8 @@ exports[`OuiIcon props type chatLeft is rendered 1`] = `
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
   focusable="false"
-  height="16"
   role="img"
   viewBox="0 0 16 16"
-  width="16"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -1077,10 +1075,8 @@ exports[`OuiIcon props type chatRight is rendered 1`] = `
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
   focusable="false"
-  height="16"
   role="img"
   viewBox="0 0 16 16"
-  width="16"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -1114,10 +1110,8 @@ exports[`OuiIcon props type checkInCircleEmpty is rendered 1`] = `
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
   focusable="false"
-  height="16"
   role="img"
   viewBox="0 0 16 16"
-  width="16"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -7356,10 +7350,8 @@ exports[`OuiIcon props type redeploy is rendered 1`] = `
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
   focusable="false"
-  height="16"
   role="img"
   viewBox="0 0 16 16"
-  width="16"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -8323,10 +8315,8 @@ exports[`OuiIcon props type thumbsDown is rendered 1`] = `
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
   focusable="false"
-  height="16"
   role="img"
   viewBox="0 0 16 16"
-  width="16"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -8342,10 +8332,8 @@ exports[`OuiIcon props type thumbsUp is rendered 1`] = `
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
   focusable="false"
-  height="16"
   role="img"
   viewBox="0 0 16 16"
-  width="16"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
@@ -9364,10 +9352,8 @@ exports[`OuiIcon props type undeploy is rendered 1`] = `
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
   focusable="false"
-  height="16"
   role="img"
   viewBox="0 0 16 16"
-  width="16"
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
