@@ -211,7 +211,7 @@ const typeToPathMap = {
   integrationGeneral: 'integrationGeneral',
   integrationObservability: 'integrationObservability',
   integrationSearch: 'integrationSearch',
-  integrationSecurityAnalytics: 'integrationSecurityAnalytics',
+  integrationSecurity: 'integrationSecurity',
   invert: 'invert',
   ip: 'ip',
   keyboardShortcut: 'keyboard_shortcut',

@@ -10,7 +10,7 @@
  */
 
 import * as React from 'react';
-const OuiIconIntegrationSecurityAnalytics = ({ title, titleId, ...props }) => (
+const OuiIconIntegrationSecurity = ({ title, titleId, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 12 12"
@@ -25,4 +25,4 @@ const OuiIconIntegrationSecurityAnalytics = ({ title, titleId, ...props }) => (
     />
   </svg>
 );
-export const icon = OuiIconIntegrationSecurityAnalytics;
+export const icon = OuiIconIntegrationSecurity;

@@ -130,7 +130,7 @@ export const iconTypes = [
   'integrationGeneral',
   'integrationObservability',
   'integrationSearch',
-  'integrationSecurityAnalytics',
+  'integrationSecurity',
   'invert',
   'ip',
   'keyboardShortcut',

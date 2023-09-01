@@ -3489,7 +3489,7 @@ exports[`OuiIcon props type integrationSearch is rendered 1`] = `
 </svg>
 `;
 
-exports[`OuiIcon props type integrationSecurityAnalytics is rendered 1`] = `
+exports[`OuiIcon props type integrationSecurity is rendered 1`] = `
 <svg
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
