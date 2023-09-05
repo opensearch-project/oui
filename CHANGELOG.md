@@ -16,7 +16,7 @@
 - Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
-- Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
+- Make `CollapsibleNav` and `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968), [#1016](https://github.com/opensearch-project/oui/pull/1016))
 - Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
 - Add dismissible prop to OuiCallOut ([#985](https://github.com/opensearch-project/oui/pull/985))
 - Adjust $ouiFormInputGroupLabelBackground color in dark `next` theme ([#1005](https://github.com/opensearch-project/oui/pull/1005))
@@ -28,6 +28,7 @@
 
 - Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
 - Remove `calc` usage from SchemaItem styles ([#990](https://github.com/opensearch-project/oui/pull/990))
+- Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
 
 ### 🚞 Infrastructure
 
