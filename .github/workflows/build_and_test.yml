@@ -12,8 +12,8 @@ on:
 
 jobs:
   lint-test:
-    runs-on: ${{ matrix.os }}
     name: Lint and Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
@@ -41,8 +41,8 @@ jobs:
         run: yarn test-unit
 
   build:
-    runs-on: ubuntu-latest
     name: Build on ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -72,6 +72,26 @@ jobs:
           name: build
           path: oui.tgz
 
+  build-docs:
+    name: Build Docs on ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+          yarn install --frozen-lockfile
+
       - name: Build Docs
         run: yarn build-docs
 
@@ -80,3 +100,95 @@ jobs:
         with:
           name: docs
           path: docs/
+
+  osd-unit:
+    name: OSD Jest test
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: opensearch-project/OpenSearch-Dashboards
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+
+      - name: Download build
+        id: download
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+
+      - run: echo ${{ steps.download.outputs.download-path }}
+
+      - name: Get Escaped Download Path
+        run: |
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}"
+          OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
+          echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
+
+      - name: Update OUI version in OSD
+        run: |
+          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
+
+      - name: Bootstrap OSD
+        run: yarn osd bootstrap
+
+      - name: Run Jest Tests
+        run: yarn test:jest:ci
+
+  osd-integration:
+    name: OSD Integration test
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: opensearch-project/OpenSearch-Dashboards
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+
+      - name: Download build
+        id: download
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+
+      - run: echo ${{ steps.download.outputs.download-path }}
+
+      - name: Get Escaped Download Path
+        run: |
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}"
+          OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
+          echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
+
+      - name: Update OUI version in OSD
+        run: |
+          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
+
+      - name: Bootstrap OSD
+        run: yarn osd bootstrap
+
+      - name: Run Integration Tests
+        run: yarn test:jest_integration:ci
