@@ -106,22 +106,22 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-#      - name: Checkout
-#        uses: actions/checkout@v4
-#        with:
-#          repository: opensearch-project/OpenSearch-Dashboards
-#
-#      - name: Setup Node
-#        uses: actions/setup-node@v3
-#        with:
-#          node-version-file: '.nvmrc'
-#          registry-url: 'https://registry.npmjs.org'
-#          cache: 'yarn'
-#
-#      - name: Setup Yarn
-#        run: |
-#          npm uninstall -g yarn
-#          npm i -g yarn@1.22.10
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: opensearch-project/OpenSearch-Dashboards
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
 
       - name: Download build
         id: download
@@ -129,25 +129,21 @@ jobs:
         with:
           name: build
 
-      - run: |
-          echo ${{ steps.download.outputs.download-path }}
-          ls -l ${{ steps.download.outputs.download-path }}
+      - name: Get Escaped Download Path
+        run: |
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/oui.tgz"
+          OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
+          echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
 
-#      - name: Get Escaped Download Path
-#        run: |
-#          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}"
-#          OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
-#          echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
-#
-#      - name: Update OUI version in OSD
-#        run: |
-#          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
-#
-#      - name: Bootstrap OSD
-#        run: yarn osd bootstrap
-#
-#      - name: Run Jest Tests
-#        run: yarn test:jest:ci
+      - name: Update OUI version in OSD
+        run: |
+          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
+
+      - name: Bootstrap OSD
+        run: yarn osd bootstrap
+
+      - name: Run Jest Tests
+        run: yarn test:jest:ci
 
   osd-integration:
     name: OSD Integration test
@@ -177,11 +173,9 @@ jobs:
         with:
           name: build
 
-      - run: echo ${{ steps.download.outputs.download-path }}
-
       - name: Get Escaped Download Path
         run: |
-          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}"
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/oui.tgz"
           OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
           echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
 
