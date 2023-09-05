@@ -1,0 +1,58 @@
+name: Dashboards Integration
+
+on:
+  push:
+    branches: ['**', '!backport/**', '!whitesource-remediate/**']
+    paths-ignore:
+      - '**/*.md'
+  pull_request:
+    branches: ['**']
+    paths-ignore:
+      - '**/*.md'
+
+jobs:
+  jest:
+    name: Jest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          path: oui
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          repository: opensearch-project/OpenSearch-Dashboards
+          path: osd
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: 'osd/.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+
+      - name: Build OUI
+        working-directory: oui
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: Update OUI version in OSD
+        working-directory: osd
+        run: |
+          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ github.workspace }}/oui"/g' {} \;
+
+      - name: Bootstrap OSD
+        working-directory: osd
+        run: yarn osd bootstrap
+
+      - name: Run Jest Tests
+        working-directory: osd
+        run: yarn test:jest
