@@ -16,5 +16,7 @@
 }
 
 .ouiCollapsibleNav.ouiFlyout {
-  background-color: $ouiCollapsibleNavBackgroundColor;
+  @if $ouiCollapsibleNavBackgroundColor != false {
+    background-color: $ouiCollapsibleNavBackgroundColor;
+  }
 }
