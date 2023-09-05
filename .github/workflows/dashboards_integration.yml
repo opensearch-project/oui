@@ -15,12 +15,12 @@ jobs:
     name: Jest
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout OUI
         uses: actions/checkout@v4
         with:
           path: oui
 
-      - name: Checkout code
+      - name: Checkout OSD
         uses: actions/checkout@v4
         with:
           repository: opensearch-project/OpenSearch-Dashboards
@@ -37,16 +37,34 @@ jobs:
           npm uninstall -g yarn
           npm i -g yarn@1.22.10
 
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "dir=$(yarn cache dir)" >> $GITHUB_OUTPUT
+
+      - name: Set up Yarn Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
       - name: Build OUI
         working-directory: oui
         run: |
           yarn install --frozen-lockfile
           yarn build
 
+      - name: Get Escaped Workspace Path
+        run: |
+          RAW_OUI_WORKSPACE="$GITHUB_WORKSPACE/oui"
+          OUI_WORKSPACE=$(echo $RAW_OUI_WORKSPACE | sed 's/\//\\\//g')
+          echo "OUI_WORKSPACE=$OUI_WORKSPACE" >> "$GITHUB_ENV"
+
       - name: Update OUI version in OSD
         working-directory: osd
         run: |
-          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ github.workspace }}/oui"/g' {} \;
+          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_WORKSPACE }}"/g' {} \;
 
       - name: Bootstrap OSD
         working-directory: osd
