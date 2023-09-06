@@ -14,3 +14,7 @@
 .ouiCollapsibleNav:not([class*='push']) {
   z-index: $ouiZNavigation !important;
 }
+
+.ouiCollapsibleNav.ouiFlyout {
+  background-color: $ouiCollapsibleNavBackgroundColor;
+}

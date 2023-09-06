@@ -9,20 +9,26 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
+
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
 - [Header] Update background color in next theme ([#936](https://github.com/opensearch-project/oui/pull/936))
 - Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
-- Make `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968))
+- Make `CollapsibleNav` and `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968), [#1016](https://github.com/opensearch-project/oui/pull/1016))
 - Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
 - Add dismissible prop to OuiCallOut ([#985](https://github.com/opensearch-project/oui/pull/985))
+- Adjust $ouiFormInputGroupLabelBackground color in dark `next` theme ([#1005](https://github.com/opensearch-project/oui/pull/1005))
+- Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
+- Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
+- Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
 
 ### 🐛 Bug Fixes
 
 - Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
 - Remove `calc` usage from SchemaItem styles ([#990](https://github.com/opensearch-project/oui/pull/990))
+- Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
 
 ### 🚞 Infrastructure
 
@@ -33,6 +39,7 @@
 
 ### 📝 Documentation
 
+- Replace Avatar in favor of Icon in OuiFacetButtons example ([#987](https://github.com/opensearch-project/oui/pull/987))
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
 - Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
 

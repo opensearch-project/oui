@@ -21,9 +21,9 @@ export const qualitativePropsInfo = {
         },
         order: {
           description:
-            'Order similar colors as `group`s or just `append` each variation',
+            'Order similar colors as `group`s, just `append` each variation (from dark to light), or append from the `middle-out`',
           required: false,
-          type: { name: "'append' | 'group'" },
+          type: { name: "'append' | 'group' | 'middle-out'" },
           defaultValue: { value: "'append'" },
         },
         direction: {

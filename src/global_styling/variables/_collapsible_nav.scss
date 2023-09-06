@@ -10,6 +10,8 @@
  */
 
 // Should be same as OuiFlyout background color
+$ouiCollapsibleNavBackgroundColor: null !default;
+
 $ouiCollapsibleNavGroupNoneBackgroundColor: inherit !default;
 $ouiCollapsibleNavGroupLightBackgroundColor: $ouiPageBackgroundColor !default;
 $ouiCollapsibleNavGroupDarkBackgroundColor: lightOrDarkTheme(
@@ -23,6 +25,8 @@ $ouiCollapsibleNavGroupDarkHighContrastColor: makeGraphicContrastColor(
 
 
 /* OUI -> EUI Aliases */
+$euiCollapsibleNavBackgroundColor: $ouiCollapsibleNavBackgroundColor;
+$euiCollapsibleNavGroupNoneBackgroundColor: $ouiCollapsibleNavGroupNoneBackgroundColor;
 $euiCollapsibleNavGroupLightBackgroundColor: $ouiCollapsibleNavGroupLightBackgroundColor;
 $euiCollapsibleNavGroupDarkBackgroundColor: $ouiCollapsibleNavGroupDarkBackgroundColor;
 $euiCollapsibleNavGroupDarkHighContrastColor: $ouiCollapsibleNavGroupDarkHighContrastColor;

@@ -9,6 +9,9 @@
  * GitHub history for details.
  */
 
+// Override OuiFlyout background
+$ouiCollapsibleNavBackgroundColor: $ouiPageBackgroundColor !default;
+
 // No distinction between none and light backgrounds in this theme
 $ouiCollapsibleNavGroupNoneBackgroundColor: $ouiPageBackgroundColor !default;
 $ouiCollapsibleNavGroupLightBackgroundColor: $ouiPageBackgroundColor !default;
@@ -23,6 +26,8 @@ $ouiCollapsibleNavGroupDarkHighContrastColor: makeGraphicContrastColor(
 
 
 /* OUI -> EUI Aliases */
+$euiCollapsibleNavBackgroundColor: $ouiCollapsibleNavBackgroundColor;
+$euiCollapsibleNavGroupNoneBackgroundColor: $ouiCollapsibleNavGroupNoneBackgroundColor;
 $euiCollapsibleNavGroupLightBackgroundColor: $ouiCollapsibleNavGroupLightBackgroundColor;
 $euiCollapsibleNavGroupDarkBackgroundColor: $ouiCollapsibleNavGroupDarkBackgroundColor;
 $euiCollapsibleNavGroupDarkHighContrastColor: $ouiCollapsibleNavGroupDarkHighContrastColor;
