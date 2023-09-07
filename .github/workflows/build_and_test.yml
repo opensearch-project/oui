@@ -10,6 +10,14 @@ on:
     paths-ignore:
       - '**/*.md'
 
+env:
+  CI: 1
+  TEST_OPENSEARCH_DASHBOARDS_HOST: localhost
+  TEST_OPENSEARCH_DASHBOARDS_PORT: 6610
+  TEST_OPENSEARCH_TRANSPORT_PORT: 9403
+  TEST_OPENSEARCH_PORT: 9400
+  NODE_OPTIONS: "--max-old-space-size=6144 --dns-result-order=ipv4first"
+
 jobs:
   lint-test:
     name: Lint and Test on ${{ matrix.os }}
@@ -102,9 +110,13 @@ jobs:
           path: docs/
 
   osd-unit:
-    name: OSD Jest test
+    name: OSD Jest test (ciGroup${{ matrix.group }})
     runs-on: ubuntu-latest
     needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [1, 2, 3, 4]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -143,7 +155,7 @@ jobs:
         run: yarn osd bootstrap
 
       - name: Run Jest Tests
-        run: yarn test:jest:ci
+        run: yarn test:jest:ci --ci-group=${{ matrix.group }}
 
   osd-integration:
     name: OSD Integration test
