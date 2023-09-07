@@ -74,6 +74,9 @@ async function compileScssFiles(
             error.stack
           }`
         );
+
+        process.exitCode = 1;
+        return;
       }
 
 
@@ -99,6 +102,8 @@ async function compileScssFiles(
             error.stack
           }`
         );
+
+        process.exitCode = 1;
       }
       /* End of Aliases */
     })
