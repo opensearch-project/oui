@@ -45,6 +45,7 @@ $ouiFormCustomControlBorderColor: shadeOrTint($ouiColorLightestShade, 18%, 30%) 
 $ouiFormControlDisabledColor: $ouiColorMediumShade !default;
 $ouiFormControlBoxShadow: 0 1px 1px -1px transparentize($ouiShadowColor, .8), 0 3px 2px -2px transparentize($ouiShadowColor, .8) !default;
 $ouiFormControlPlaceholderText: makeHighContrastColor($ouiTextSubduedColor, $ouiFormBackgroundColor) !default;
+/* stylelint-disable-next-line scss/dollar-variable-pattern */
 $_ouiFormInputGroupLabelDarkBackgroundColor: #293847 !default;
 $ouiFormInputGroupLabelBackground: lightOrDarkTheme(tint($ouiColorLightShade, 50%), $_ouiFormInputGroupLabelDarkBackgroundColor) !default;
 $ouiFormInputGroupBorder: 1px solid shadeOrTint($ouiFormInputGroupLabelBackground, 2%, 4%) !default;
