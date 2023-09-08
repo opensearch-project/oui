@@ -197,3 +197,102 @@ jobs:
 
       - name: Run Integration Tests
         run: yarn test:jest_integration:ci
+
+  osd-build:
+    name: OSD Build on ${{ matrix.name }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            name: Linux x64
+            ext: tar.gz
+            suffix: linux-x64
+            script: build-platform --linux --skip-os-packages
+          - os: ubuntu-latest
+            name: Linux ARM64
+            ext: tar.gz
+            suffix: linux-arm64
+            script: build-platform --linux-arm --skip-os-packages
+          - os: windows-latest
+            name: Windows x64
+            ext: zip
+            suffix: windows-x64
+            script: build-platform --windows --skip-os-packages
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: ./artifacts
+    steps:
+      - name: Configure git's autocrlf (Windows only)
+        if: matrix.os == 'windows-latest'
+        run: |
+          git config --global core.autocrlf false
+        working-directory: .
+
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          path: ./artifacts
+          repository: opensearch-project/OpenSearch-Dashboards
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: './artifacts/.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+
+      - name: Download build
+        id: download
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+
+      - name: Get Escaped Download Path
+        run: |
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/oui.tgz"
+          OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
+          echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
+
+      - name: Update OUI version in OSD
+        run: |
+          find artifacts -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
+
+
+      - name: Get package version (Linux)
+        if: matrix.os != 'windows-latest'
+        run: |
+          echo "VERSION=$(yarn --silent pkg-version)" >> $GITHUB_ENV
+
+      - name: Get artifact build name (Linux)
+        if: matrix.os != 'windows-latest'
+        run: |
+          echo "ARTIFACT_BUILD_NAME=opensearch-dashboards-${{ env.VERSION }}-${{ matrix.suffix }}.${{ matrix.ext }}" >> $GITHUB_ENV
+
+      - name: Get package version (Windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          echo "VERSION=$(yarn --silent pkg-version)" >> $env:GITHUB_ENV
+
+      - name: Get artifact build name (Windows)
+        if: matrix.os == 'windows-latest'
+        run: |
+          echo "ARTIFACT_BUILD_NAME=opensearch-dashboards-${{ env.VERSION }}-${{ matrix.suffix }}.${{ matrix.ext }}" >> $env:GITHUB_ENV
+
+      - name: Run bootstrap
+        run: yarn osd bootstrap
+
+      - name: Build `${{ matrix.name }}`
+        run: yarn ${{ matrix.script }} --release
+
+      - uses: actions/upload-artifact@v3
+        if: success()
+        with:
+          name: ${{ matrix.suffix }}-${{ env.VERSION }}
+          path: ./artifacts/target/${{ env.ARTIFACT_BUILD_NAME }}
+          retention-days: 7
