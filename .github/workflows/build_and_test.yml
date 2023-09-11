@@ -213,23 +213,12 @@ jobs:
             ext: tar.gz
             suffix: linux-arm64
             script: build-platform --linux-arm --skip-os-packages
-          - os: windows-latest
-            name: Windows x64
-            ext: zip
-            suffix: windows-x64
-            script: build-platform --windows --skip-os-packages
     runs-on: ${{ matrix.os }}
     needs: build
     defaults:
       run:
         working-directory: ./artifacts
     steps:
-      - name: Configure git's autocrlf (Windows only)
-        if: matrix.os == 'windows-latest'
-        run: |
-          git config --global core.autocrlf false
-        working-directory: .
-
       - name: Checkout code
         uses: actions/checkout@v3
         with:
@@ -243,12 +232,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Configure Yarn Cache (Linux)
-        if: matrix.os != 'windows-latest'
         run: echo "YARN_CACHE_LOCATION=$(yarn cache dir)" >> $GITHUB_ENV
 
       - name: Initialize Yarn Cache
         uses: actions/cache@v3
-        if: matrix.os != 'windows-latest'
         with:
           path: ${{ env.YARN_CACHE_LOCATION }}
           key: yarn-${{ hashFiles('**/yarn.lock') }}
@@ -277,25 +264,13 @@ jobs:
           find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
 
 
-      - name: Get package version (Linux)
-        if: matrix.os != 'windows-latest'
+      - name: Get package version
         run: |
           echo "VERSION=$(yarn --silent pkg-version)" >> $GITHUB_ENV
 
-      - name: Get artifact build name (Linux)
-        if: matrix.os != 'windows-latest'
+      - name: Get artifact build name
         run: |
           echo "ARTIFACT_BUILD_NAME=opensearch-dashboards-${{ env.VERSION }}-${{ matrix.suffix }}.${{ matrix.ext }}" >> $GITHUB_ENV
-
-      - name: Get package version (Windows)
-        if: matrix.os == 'windows-latest'
-        run: |
-          echo "VERSION=$(yarn --silent pkg-version)" >> $env:GITHUB_ENV
-
-      - name: Get artifact build name (Windows)
-        if: matrix.os == 'windows-latest'
-        run: |
-          echo "ARTIFACT_BUILD_NAME=opensearch-dashboards-${{ env.VERSION }}-${{ matrix.suffix }}.${{ matrix.ext }}" >> $env:GITHUB_ENV
 
       - name: Run bootstrap
         run: yarn osd bootstrap
