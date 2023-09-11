@@ -241,7 +241,19 @@ jobs:
         with:
           node-version-file: './artifacts/.nvmrc'
           registry-url: 'https://registry.npmjs.org'
-          cache: 'yarn'
+
+      - name: Configure Yarn Cache (Linux)
+        if: matrix.os != 'windows-latest'
+        run: echo "YARN_CACHE_LOCATION=$(yarn cache dir)" >> $GITHUB_ENV
+
+      - name: Initialize Yarn Cache
+        uses: actions/cache@v3
+        if: matrix.os != 'windows-latest'
+        with:
+          path: ${{ env.YARN_CACHE_LOCATION }}
+          key: yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            yarn-
 
       - name: Setup Yarn
         run: |
