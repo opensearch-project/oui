@@ -74,6 +74,9 @@ async function compileScssFiles(
             error.stack
           }`
         );
+
+        process.exitCode = 1;
+        return;
       }
 
 
@@ -82,9 +85,9 @@ async function compileScssFiles(
         const { name } = path.parse(inputFilename);
         const outputFilenames = await compileScssFile(
           inputFilename,
-          path.join(destinationDirectory, `eui_${name.replace('cascadia', 'amsterdam')}.css`),
-          path.join(destinationDirectory, `eui_${name.replace('cascadia', 'amsterdam')}.json`),
-          path.join(destinationDirectory, `eui_${name.replace('cascadia', 'amsterdam')}.json.d.ts`),
+          path.join(destinationDirectory, `eui_${name}.css`),
+          path.join(destinationDirectory, `eui_${name}.json`),
+          path.join(destinationDirectory, `eui_${name}.json.d.ts`),
           packageName,
           true
         );
@@ -99,6 +102,8 @@ async function compileScssFiles(
             error.stack
           }`
         );
+
+        process.exitCode = 1;
       }
       /* End of Aliases */
     })

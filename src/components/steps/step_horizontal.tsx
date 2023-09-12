@@ -49,12 +49,10 @@ export interface OuiStepHorizontalProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'onClick'>,
     CommonProps {
   /**
-   * **DEPRECATED IN CASCADIA**
    * Adds to the line before the indicator for showing current progress
    */
   isSelected?: boolean;
   /**
-   * **DEPRECATED IN CASCADIA**
    * Adds to the line after the indicator for showing current progress
    */
   isComplete?: boolean;

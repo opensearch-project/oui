@@ -54,7 +54,7 @@ export const Table = () => {
         render: (item) => (
           <span>
             {item.firstName}{' '}
-            <OuiLink href="#" target="_blank">
+            <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
               {item.lastName}
             </OuiLink>
           </span>
@@ -70,7 +70,7 @@ export const Table = () => {
       name: 'Last Name',
       truncateText: true,
       render: (name) => (
-        <OuiLink href="#" target="_blank">
+        <OuiLink href="https://oui.opensearch.org/latest/" target="_blank">
           {name}
         </OuiLink>
       ),

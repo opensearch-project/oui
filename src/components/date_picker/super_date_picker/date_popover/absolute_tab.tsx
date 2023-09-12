@@ -32,7 +32,7 @@ import React, { Component, ChangeEventHandler } from 'react';
 
 import moment, { Moment, LocaleSpecifier } from 'moment'; // eslint-disable-line import/named
 
-import dateMath from '@elastic/datemath';
+import dateMath from '@opensearch/datemath';
 
 import { OuiDatePicker, OuiDatePickerProps } from '../../date_picker';
 import { OuiFormRow, OuiFieldText, OuiFormLabel } from '../../../form';

@@ -75,9 +75,8 @@ export const PageHeaderExample = {
             and primary array item will be displayed on the far right.
           </p>
           <p>
-            You can further adjust the display of these content types with an
-            optional <OuiCode>iconType</OuiCode> placed to the left of the
-            title, <OuiCode>alignItems</OuiCode> for adjusting the vertical
+            You can further adjust the display of these content types by
+            utilizing <OuiCode>alignItems</OuiCode> for adjusting the vertical
             alignment of the two sides, and <OuiCode>responsiveOrder</OuiCode>{' '}
             to determine which content side to display first on smaller screens.
           </p>

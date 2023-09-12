@@ -62,7 +62,7 @@
 
   .ouiSuggestItem__label {
     @include ouiTextTruncate;
-    font-family: $ouiCodeFontFamily;
+    font-family: var(--oui-code-font-family);
     overflow: hidden;
     text-overflow: ellipsis;
     padding: $ouiSizeXS $ouiSizeS;

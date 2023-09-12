@@ -20,3 +20,12 @@
 
 // Packages
 @import '../packages/index';
+
+/* During creation of the new theme, these rules had to be
+ * removed from the components. To make sure the theme retains
+ * its looks, they are reintroduced here.
+ */
+
+.ouiText blockquote {
+  font-family: Georgia, Times, Times New Roman, serif;
+}

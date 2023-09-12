@@ -13,12 +13,6 @@
   width: 100%;
 }
 
-.ouiPageHeaderContent__titleIcon {
-  top: -$ouiSizeXS;
-  position: relative;
-  margin-right: $ouiSize;
-}
-
 @include ouiBreakpoint('m', 'l', 'xl') {
   .ouiPageHeaderContent__rightSideItems {
     flex-direction: row-reverse;

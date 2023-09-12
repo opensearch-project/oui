@@ -36,7 +36,7 @@ const columns = [
           <OuiLink
             target="_blank"
             color="subdued"
-            href={`https://github.com/opensearch-project/oui/blob/master/${filepath}#L${loc.start.line}`}>
+            href={`https://github.com/opensearch-project/oui/blob/main/${filepath}#L${loc.start.line}`}>
             {filepath}:{loc.start.line}:{loc.start.column}
           </OuiLink>
         </div>

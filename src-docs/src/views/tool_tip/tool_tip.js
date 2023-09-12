@@ -60,7 +60,7 @@ export default () => (
       <p>
         This tooltip appears on the bottom of this icon:{' '}
         <OuiToolTip position="bottom" content="Here is some tooltip text">
-          <OuiIcon tabIndex="0" type="alert" />
+          <OuiIcon tabIndex="0" type="alert" aria-label="Alert" />
         </OuiToolTip>
       </p>
     </OuiText>

@@ -9,7 +9,7 @@ yarn add @opensearch-project/oui
 Note that OUI has [several `peerDependencies` requirements](package.json) that will also need to be installed if starting with a blank project. You can read more about other ways to [consume OUI][consuming].
 
 ```js
-yarn add @opensearch-project/oui @elastic/datemath moment prop-types
+yarn add @opensearch-project/oui moment prop-types
 ```
 
 
@@ -45,7 +45,7 @@ yarn start --port 9000
 
 OUI expects that you polyfill ES2015 features, e.g. [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/). Without an ES2015 polyfill your app might throw errors on certain browsers.
 
-OUI also has `moment` and `@elastic/datemath` as dependencies itself. These are already loaded in most OpenSearch repos, but make sure to install them if you are starting from scratch.
+OUI also has `moment` as a dependency itself. This is already loaded in most OpenSearch repos, but make sure to install it if you are starting from scratch.
 
 ## What's available
 

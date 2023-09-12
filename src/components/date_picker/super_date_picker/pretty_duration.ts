@@ -28,7 +28,7 @@
  * under the License.
  */
 
-import dateMath from '@elastic/datemath';
+import dateMath from '@opensearch/datemath';
 import moment, { LocaleSpecifier } from 'moment'; // eslint-disable-line import/named
 import { timeUnits, timeUnitsPlural } from './time_units';
 import { getDateMode, DATE_MODES } from './date_modes';

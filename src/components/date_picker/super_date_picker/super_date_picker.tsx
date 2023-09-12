@@ -37,7 +37,7 @@ import {
 } from './pretty_duration';
 import { prettyInterval } from './pretty_interval';
 
-import dateMath from '@elastic/datemath';
+import dateMath from '@opensearch/datemath';
 
 import {
   OuiSuperUpdateButton,

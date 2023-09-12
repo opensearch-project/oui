@@ -177,8 +177,13 @@
   overflow: hidden;
   transition: none; // Have to take out the generic transition so it is instaneous on focus
   box-shadow: none !important; // sass-lint:disable-line no-important
+
+  /* ToDo: Remove unnecessary logic: the old beta theme has
+   * evolved and the statement below about the `Next` theme
+   * is not valid.
+   */
   // Remove default .ouiButtonIcon--fill border
-  // This way we don't need to animate the border that is inexistent in Cascadia and unnecessary for a fill button
+  // This way we don't need to animate the border that is inexistent in Next and unnecessary for a fill button
   border: none;
 
   &-isActive {

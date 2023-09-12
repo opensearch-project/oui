@@ -43,7 +43,7 @@ exports[`OuiHeader sections render breadcrumbs and props 1`] = `
     class="ouiBreadcrumbs ouiHeaderBreadcrumbs ouiBreadcrumbs--truncate"
   >
     <div
-      class="ouiBreadcrumbWall"
+      class="ouiBreadcrumbWall ouiBreadcrumbWall--single"
     >
       <div
         class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first ouiBreadcrumbWrapper--last"

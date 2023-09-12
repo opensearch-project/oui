@@ -31,7 +31,6 @@
 import React, { FunctionComponent, ReactNode, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../../common';
-import { OuiIcon, OuiIconProps, IconType } from '../../icon';
 import { OuiTab, OuiTabs, OuiTabsProps } from '../../tabs';
 import { Props as OuiTabProps } from '../../tabs/tab';
 import { OuiFlexGroup, OuiFlexItem, OuiFlexGroupProps } from '../../flex';
@@ -56,16 +55,6 @@ export type OuiPageHeaderContentTitle = {
    * A simple string is best
    */
   pageTitle?: ReactNode;
-  /**
-   * Optional icon to place to the left of the title
-   * @deprecated The `iconType` prop is deprecated and will be removed in the future.
-   */
-  iconType?: IconType;
-  /**
-   * Additional OuiIcon props to apply to the optional icon
-   * @deprecated The `iconProps` prop is deprecated and will be removed in the future.
-   */
-  iconProps?: Partial<Omit<OuiIconProps, 'type'>>;
 };
 
 export type OuiPageHeaderContentTabs = {
@@ -83,7 +72,7 @@ export type OuiPageHeaderContentTabs = {
 };
 
 /**
- * The left side can either be a title with optional description and/or icon;
+ * The left side can either be a title with optional description;
  * Or a list of tabs,
  * Or a custom node
  */
@@ -128,8 +117,6 @@ export type OuiPageHeaderContentProps = CommonProps &
 export const OuiPageHeaderContent: FunctionComponent<OuiPageHeaderContentProps> = ({
   className,
   pageTitle,
-  iconType,
-  iconProps,
   tabs,
   tabsProps,
   description,
@@ -161,24 +148,9 @@ export const OuiPageHeaderContent: FunctionComponent<OuiPageHeaderContentProps> 
 
   let pageTitleNode;
   if (pageTitle) {
-    const icon = iconType ? (
-      <OuiIcon
-        size="xl"
-        {...iconProps}
-        type={iconType}
-        className={classNames(
-          'ouiPageHeaderContent__titleIcon',
-          iconProps?.className
-        )}
-      />
-    ) : undefined;
-
     pageTitleNode = (
       <OuiTitle size="l">
-        <h1>
-          {icon}
-          {pageTitle}
-        </h1>
+        <h1>{pageTitle}</h1>
       </OuiTitle>
     );
   }

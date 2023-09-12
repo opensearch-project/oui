@@ -56,10 +56,10 @@ for (let i = 1; i < 5; i++) {
     json = JSON.stringify([
       {
         default: faker.helpers.fake(
-          '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+          '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
         ),
         boolean: faker.helpers.fake('{{datatype.boolean}}'),
-        numeric: faker.helpers.fake('{{finance.account}}'),
+        numeric: faker.helpers.fake('{{finance.accountNumber}}'),
         currency: faker.helpers.fake('${{finance.amount}}'),
         date: faker.helpers.fake('{{date.past}}'),
         custom: faker.helpers.fake('{{date.past}}'),
@@ -70,7 +70,7 @@ for (let i = 1; i < 5; i++) {
     json = JSON.stringify([
       {
         name: faker.helpers.fake(
-          '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+          '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
         ),
       },
     ]);
@@ -78,10 +78,10 @@ for (let i = 1; i < 5; i++) {
 
   storeData.push({
     default: faker.helpers.fake(
-      '{{name.lastName}}, {{name.firstName}} {{name.suffix}}'
+      '{{person.lastName}}, {{person.firstName}} {{person.suffix}}'
     ),
     boolean: faker.helpers.fake('{{datatype.boolean}}'),
-    numeric: faker.helpers.fake('{{finance.account}}'),
+    numeric: faker.helpers.fake('{{finance.accountNumber}}'),
     currency: faker.helpers.fake('${{finance.amount}}'),
     datetime: faker.helpers.fake('{{date.past}}'),
     json: json,

@@ -30,9 +30,9 @@
 
 import { getDateMode, toAbsoluteString, toRelativeString } from './date_modes';
 
-jest.mock('@elastic/datemath', () => {
+jest.mock('@opensearch/datemath', () => {
   const moment = jest.requireActual('moment');
-  const datemath = jest.requireActual('@elastic/datemath');
+  const datemath = jest.requireActual('@opensearch/datemath');
   const anchor = '2019-03-19T00:00:00.000Z';
   const anchoredDate = new Date(Date.parse(anchor));
   // https://momentjs.com/docs/#/customization/now/

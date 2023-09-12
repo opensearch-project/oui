@@ -8,13 +8,13 @@ The OpenSearch UI Framework (OUI) is a design library used by the OpenSearch Pro
 
 ## Can I use OUI?
 
-Yes, but be aware of the [license](LICENSE) as always. The roadmap and priorities are directed by usage within the OpenSearch project.
+Yes, but be aware of the [license](https://github.com/opensearch-project/oui/blob/main/LICENSE.txt) as always. The roadmap and priorities are directed by usage within the OpenSearch project.
 
 ## What is the versioning, releases and upgrade strategy?
 
 We use [semver](https://semver.org/) for versioning and use that to denote breaking changes in OUI upgrades. We consider API changes in our prop names or existing component functionality to be a reason for a breaking change, but do not consider renaming of CSS selectors, mixins, or other style changes to be breaking.
 
-Traditionally releases are made weekly against whatever is in master and you can upgrade from NPM as you see fit.
+Traditionally releases are made weekly against whatever is in main and you can upgrade from NPM as you see fit.
 
 ## How do you handle Typescript, Sass and theming?
 

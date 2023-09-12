@@ -148,7 +148,7 @@ Autoconverted link https://opensearch.org/ (enable linkify to see)
 
 ## Images
 
-![Kibana](https://user-images.githubusercontent.com/2750668/74490344-2f271800-4ec0-11ea-8614-8651cd47eab1.png)
+![OpenSearch Dashboards](https://user-images.githubusercontent.com/2750668/74490344-2f271800-4ec0-11ea-8614-8651cd47eab1.png)
 
 
 ### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
