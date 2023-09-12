@@ -11,7 +11,7 @@
 
 import lightColors from '!!sass-vars-to-js-loader!../../../../src/global_styling/variables/_colors.scss';
 import darkColors from '!!sass-vars-to-js-loader!../../../../src/themes/oui/oui_colors_dark.scss';
-import lightNextColors from '!!sass-vars-to-js-loader!../../../../src/themes/oui-next/oui_next_colors_light.scss';
+import lightNextColors from '!!sass-vars-to-js-loader!../../../../src/themes/oui-next/global_styling/variables/_colors.scss';
 import darkNextColors from '!!sass-vars-to-js-loader!../../../../src/themes/oui-next/oui_next_colors_dark.scss';
 
 export const getSassVars = (theme) => {

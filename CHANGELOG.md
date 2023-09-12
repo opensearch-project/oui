@@ -10,11 +10,33 @@
 
 ### 📈 Features/Enhancements
 
+- Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+
+### 🐛 Bug Fixes
+
+### 🚞 Infrastructure
+
+- Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
+
+### 📝 Documentation
+
+- Update default docsite theme to Next Dark ([#1029](https://github.com/opensearch-project/oui/pull/1029))
+- Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
+
+### 🛠 Maintenance
+
+### 🪛 Refactoring
+
+### 🔩 Tests
+
+## [`1.3.0`](https://github.com/opensearch-project/oui/tree/1.3.0)
+
+### 📈 Features/Enhancements
+
 - Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 - Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
 - [Header] Update background color in next theme ([#936](https://github.com/opensearch-project/oui/pull/936))
 - Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
-- Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
 - Make `CollapsibleNav` and `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968), [#1016](https://github.com/opensearch-project/oui/pull/1016))
 - Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
@@ -54,8 +76,6 @@
 ### 🪛 Refactoring
 
 - Clean up focus background implementation ([#962](https://github.com/opensearch-project/oui/pull/962))
-
-### 🔩 Tests
 
 ## [`1.1.1`](https://github.com/opensearch-project/oui/tree/1.1.1)
 
