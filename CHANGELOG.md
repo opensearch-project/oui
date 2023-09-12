@@ -22,6 +22,7 @@
 
 - Update default docsite theme to Next Dark ([#1029](https://github.com/opensearch-project/oui/pull/1029))
 - Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
+- Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
 
 ### 🛠 Maintenance
 
@@ -64,7 +65,6 @@
 - Replace Avatar in favor of Icon in OuiFacetButtons example ([#987](https://github.com/opensearch-project/oui/pull/987))
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
 - Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
-- Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
 
 ### 🛠 Maintenance
 
