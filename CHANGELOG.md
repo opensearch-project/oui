@@ -14,6 +14,8 @@
 
 ### 🐛 Bug Fixes
 
+- Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+
 ### 🚞 Infrastructure
 
 - Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
@@ -51,7 +53,6 @@
 - Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
 - Remove `calc` usage from SchemaItem styles ([#990](https://github.com/opensearch-project/oui/pull/990))
 - Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
-- Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
 
 ### 🚞 Infrastructure
 
