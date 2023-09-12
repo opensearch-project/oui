@@ -14,6 +14,8 @@
 
 ### 🐛 Bug Fixes
 
+- Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+
 ### 🚞 Infrastructure
 
 - Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
