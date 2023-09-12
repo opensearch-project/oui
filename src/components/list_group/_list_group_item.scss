@@ -92,6 +92,10 @@
     }
   }
 
+  .ouiListGroupItem__icon {
+    height: $ouiSizeL;
+  }
+
   .ouiListGroupItem-isActive:not(.ouiListGroupItem--ghost) & {
     color: $ouiTextColor;
   }
@@ -117,6 +121,7 @@
 }
 
 .ouiListGroupItem__icon {
+  align-self: flex-start;
   margin-right: $ouiSizeM;
   flex-grow: 0;
   flex-shrink: 0;
@@ -140,12 +145,20 @@
   .ouiListGroupItem__text {
     line-height: $ouiSize;
   }
+
+  .ouiListGroupItem__icon {
+    height: $ouiSize;
+  }
 }
 
 .ouiListGroupItem--large {
   .ouiListGroupItem__button,
   .ouiListGroupItem__text {
     line-height: $ouiSizeXL;
+  }
+
+  .ouiListGroupItem__icon {
+    height: $ouiSizeXL;
   }
 }
 
