@@ -53,12 +53,15 @@
 - Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
 - Upgrade the backport workflow ([#862](https://github.com/opensearch-project/oui/pull/862))
 - Add build steps to CI workflow ([#665](https://github.com/opensearch-project/oui/pull/665))
+- Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
 
 ### 📝 Documentation
 
 - Replace Avatar in favor of Icon in OuiFacetButtons example ([#987](https://github.com/opensearch-project/oui/pull/987))
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
 - Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
+- Update default docsite theme to Next Dark ([#1029](https://github.com/opensearch-project/oui/pull/1029))
+- Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
 
 ### 🛠 Maintenance
 

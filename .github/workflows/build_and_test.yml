@@ -10,10 +10,15 @@ on:
     paths-ignore:
       - '**/*.md'
 
+env:
+  CI: 1
+  GCS_UPLOAD_PREFIX: fake
+  NODE_OPTIONS: "--max-old-space-size=6144 --dns-result-order=ipv4first"
+
 jobs:
   lint-test:
-    runs-on: ${{ matrix.os }}
     name: Lint and Test on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
@@ -41,8 +46,8 @@ jobs:
         run: yarn test-unit
 
   build:
-    runs-on: ubuntu-latest
     name: Build on ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -72,6 +77,26 @@ jobs:
           name: build
           path: oui.tgz
 
+  build-docs:
+    name: Build Docs on ubuntu-latest
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+          yarn install --frozen-lockfile
+
       - name: Build Docs
         run: yarn build-docs
 
@@ -80,3 +105,182 @@ jobs:
         with:
           name: docs
           path: docs/
+
+  osd-unit:
+    name: OSD Jest test (ciGroup${{ matrix.group }})
+    runs-on: ubuntu-latest
+    needs: build
+    strategy:
+      fail-fast: false
+      matrix:
+        group: [1, 2, 3, 4]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: opensearch-project/OpenSearch-Dashboards
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+
+      - name: Download build
+        id: download
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+
+      - name: Get Escaped Download Path
+        run: |
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/oui.tgz"
+          OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
+          echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
+
+      - name: Update OUI version in OSD
+        run: |
+          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
+
+      - name: Bootstrap OSD
+        run: yarn osd bootstrap
+
+      - name: Run Jest Tests
+        run: yarn test:jest:ci --ci-group=${{ matrix.group }}
+
+  osd-integration:
+    name: OSD Integration test
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          repository: opensearch-project/OpenSearch-Dashboards
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+
+      - name: Download build
+        id: download
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+
+      - name: Get Escaped Download Path
+        run: |
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/oui.tgz"
+          OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
+          echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
+
+      - name: Update OUI version in OSD
+        run: |
+          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
+
+      - name: Bootstrap OSD
+        run: yarn osd bootstrap
+
+      - name: Run Integration Tests
+        run: yarn test:jest_integration:ci
+
+  osd-build:
+    name: OSD Build on ${{ matrix.name }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            name: Linux x64
+            ext: tar.gz
+            suffix: linux-x64
+            script: build-platform --linux --skip-os-packages
+          - os: ubuntu-latest
+            name: Linux ARM64
+            ext: tar.gz
+            suffix: linux-arm64
+            script: build-platform --linux-arm --skip-os-packages
+    runs-on: ${{ matrix.os }}
+    needs: build
+    defaults:
+      run:
+        working-directory: ./artifacts
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          path: ./artifacts
+          repository: opensearch-project/OpenSearch-Dashboards
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: './artifacts/.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Configure Yarn Cache (Linux)
+        run: echo "YARN_CACHE_LOCATION=$(yarn cache dir)" >> $GITHUB_ENV
+
+      - name: Initialize Yarn Cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.YARN_CACHE_LOCATION }}
+          key: yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            yarn-
+
+      - name: Setup Yarn
+        run: |
+          npm uninstall -g yarn
+          npm i -g yarn@1.22.10
+
+      - name: Download build
+        id: download
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+
+      - name: Get Escaped Download Path
+        run: |
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/oui.tgz"
+          OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
+          echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
+
+      - name: Update OUI version in OSD
+        run: |
+          find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
+
+
+      - name: Get package version
+        run: |
+          echo "VERSION=$(yarn --silent pkg-version)" >> $GITHUB_ENV
+
+      - name: Get artifact build name
+        run: |
+          echo "ARTIFACT_BUILD_NAME=opensearch-dashboards-${{ env.VERSION }}-${{ matrix.suffix }}.${{ matrix.ext }}" >> $GITHUB_ENV
+
+      - name: Run bootstrap
+        run: yarn osd bootstrap
+
+      - name: Build `${{ matrix.name }}`
+        run: yarn ${{ matrix.script }} --release
+
+      - uses: actions/upload-artifact@v3
+        if: success()
+        with:
+          name: ${{ matrix.suffix }}-${{ env.VERSION }}
+          path: ./artifacts/target/${{ env.ARTIFACT_BUILD_NAME }}
+          retention-days: 7
