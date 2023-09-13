@@ -33,7 +33,7 @@ import AvatarInitials from './avatar_initials';
 const avatarInitialsSource = require('./avatar_initials?raw');
 const avatarInitialsHtml = renderToHtml(AvatarInitials);
 const avatarInitialsSnippet = [
-  `<OuiAvatar name="Kibana" initialsLength={2}/>
+  `<OuiAvatar name="OpenSearch Dashboards" initialsLength={2}/>
 `,
   `<OuiAvatar name="Undefined" initials="?" />
 `,

@@ -495,7 +495,7 @@ export const SelectableExample = {
   {
     label: 'Label',
     icon: {
-      type: 'logoKibana'
+      type: 'logoOpenSearch'
     }
     avatar: {
       name: 'Default',
@@ -534,9 +534,8 @@ export const SelectableExample = {
               overridden.
             </li>
             <li>
-              <OuiCode>avatar</OuiCode>: Represents the Kibana Space that the
-              item is located in, <strong>if</strong> multiple spaces are
-              present. Type and size are predetermined but can be overridden.
+              <OuiCode>avatar</OuiCode>: Type and size are predetermined but can
+              be overridden.
             </li>
             <li>
               <OuiCode>meta</OuiCode>: This bottom line should only contain

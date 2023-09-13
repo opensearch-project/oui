@@ -11,6 +11,7 @@
 
 @mixin ouiLink {
   text-align: left;
+  font-weight: 600;
 
   &:hover {
     text-decoration: underline;
