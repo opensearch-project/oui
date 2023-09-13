@@ -9,13 +9,15 @@
  * GitHub history for details.
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { OuiCollapsibleNavGroup } from '../../../../src/components/collapsible_nav';
 import {
   OuiListGroup,
   OuiListGroupItemProps,
 } from '../../../../src/components/list_group';
+import { OuiSelect } from '../../../../src/components/form';
+import { OuiSpacer } from '../../../../src/components/spacer';
 
 export const OpenSearchDashboardsLinks: OuiListGroupItemProps[] = [
   { label: 'Overview' },
@@ -56,45 +58,75 @@ export const ManagementLinks: OuiListGroupItemProps[] = [
   };
 });
 
-export default () => (
-  <>
-    <OuiCollapsibleNavGroup
-      title="OpenSearch Dashboards"
-      iconType="logoOpenSearch"
-      isCollapsible={true}
-      initialIsOpen={true}>
-      <OuiListGroup
-        listItems={OpenSearchDashboardsLinks}
-        maxWidth="none"
-        color="subdued"
-        gutterSize="none"
-        size="s"
+export default () => {
+  const [background, setBackground] = useState<'dark' | 'light' | 'none'>(
+    'none'
+  );
+  return (
+    <>
+      <OuiSelect
+        prepend="Set background"
+        options={[
+          {
+            value: 'none',
+            text: 'none (default)',
+          },
+          {
+            value: 'dark',
+            text: 'dark',
+          },
+          {
+            value: 'light',
+            text: 'light',
+          },
+        ]}
+        value={background}
+        onChange={(e: { target: { value: any } }) =>
+          setBackground(e.target.value)
+        }
       />
-    </OuiCollapsibleNavGroup>
-    <OuiCollapsibleNavGroup
-      title="OpenSearch Plugins"
-      isCollapsible={true}
-      initialIsOpen={true}>
-      <OuiListGroup
-        listItems={OpenSearchPluginLinks}
-        maxWidth="none"
-        color="subdued"
-        gutterSize="none"
-        size="s"
-      />
-    </OuiCollapsibleNavGroup>
-    <OuiCollapsibleNavGroup
-      title="Management"
-      iconType="gear"
-      isCollapsible={true}
-      initialIsOpen={true}>
-      <OuiListGroup
-        listItems={ManagementLinks}
-        maxWidth="none"
-        color="subdued"
-        gutterSize="none"
-        size="s"
-      />
-    </OuiCollapsibleNavGroup>
-  </>
-);
+      <OuiSpacer />
+      <OuiCollapsibleNavGroup
+        background={background}
+        title="OpenSearch Dashboards"
+        iconType="logoOpenSearch"
+        isCollapsible={true}
+        initialIsOpen={true}>
+        <OuiListGroup
+          listItems={OpenSearchDashboardsLinks}
+          maxWidth="none"
+          color="subdued"
+          gutterSize="none"
+          size="s"
+        />
+      </OuiCollapsibleNavGroup>
+      <OuiCollapsibleNavGroup
+        background={background}
+        title="OpenSearch Plugins"
+        isCollapsible={true}
+        initialIsOpen={true}>
+        <OuiListGroup
+          listItems={OpenSearchPluginLinks}
+          maxWidth="none"
+          color="subdued"
+          gutterSize="none"
+          size="s"
+        />
+      </OuiCollapsibleNavGroup>
+      <OuiCollapsibleNavGroup
+        background={background}
+        title="Management"
+        iconType="gear"
+        isCollapsible={true}
+        initialIsOpen={true}>
+        <OuiListGroup
+          listItems={ManagementLinks}
+          maxWidth="none"
+          color="subdued"
+          gutterSize="none"
+          size="s"
+        />
+      </OuiCollapsibleNavGroup>
+    </>
+  );
+};

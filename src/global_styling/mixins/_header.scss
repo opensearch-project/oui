@@ -12,8 +12,6 @@
 @import '../variables/header';
 
 @mixin ouiHeaderAffordForFixed($headerHeight: $ouiHeaderHeightCompensation) {
-  // The `&` allows for grouping inside another specific body class.
-  // When not applied inside of another selector, it simply renders with the single class
   &.ouiBody--headerIsFixed {
     padding-top: $headerHeight;
 

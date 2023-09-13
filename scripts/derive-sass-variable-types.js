@@ -61,6 +61,10 @@ async function deriveSassVariableTypes(
 function deriveValueType(extractedValue) {
   switch (typeof extractedValue) {
     case 'object':
+      if (extractedValue === null) {
+        return ts.createKeywordTypeNode(ts.SyntaxKind.NullKeyword);
+      }
+
       return ts.createTypeLiteralNode(
         Object.keys(extractedValue).map(key =>
           ts.createPropertySignature(

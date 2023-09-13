@@ -9,27 +9,76 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
-- Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
 
+- Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 
 ### 🐛 Bug Fixes
+
+- Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+
+### 🚞 Infrastructure
+
+- Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
+
+### 📝 Documentation
+
+- Update default docsite theme to Next Dark ([#1029](https://github.com/opensearch-project/oui/pull/1029))
+- Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
+
+### 🛠 Maintenance
+
+### 🪛 Refactoring
+
+### 🔩 Tests
+
+## [`1.3.0`](https://github.com/opensearch-project/oui/tree/1.3.0)
+
+### 📈 Features/Enhancements
+
+- Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
+- Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
+- [Header] Update background color in next theme ([#936](https://github.com/opensearch-project/oui/pull/936))
+- Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
+- Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
+- Make `CollapsibleNav` and `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968), [#1016](https://github.com/opensearch-project/oui/pull/1016))
+- Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
+- Add dismissible prop to OuiCallOut ([#985](https://github.com/opensearch-project/oui/pull/985))
+- Adjust $ouiFormInputGroupLabelBackground color in dark `next` theme ([#1005](https://github.com/opensearch-project/oui/pull/1005))
+- Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
+- Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
+- Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
+
+### 🐛 Bug Fixes
+
+- Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
+- Remove `calc` usage from SchemaItem styles ([#990](https://github.com/opensearch-project/oui/pull/990))
+- Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
+- Fix alignment of left icon for OuiListGroupItem with multiline text ([#1027](https://github.com/opensearch-project/oui/pull/1027))
 
 ### 🚞 Infrastructure
 
 - Add release workflows ([#134](https://github.com/opensearch-project/oui/pull/133))
 - Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
 - Upgrade the backport workflow ([#862](https://github.com/opensearch-project/oui/pull/862))
+- Add build steps to CI workflow ([#665](https://github.com/opensearch-project/oui/pull/665))
 
 ### 📝 Documentation
+
+- Replace Avatar in favor of Icon in OuiFacetButtons example ([#987](https://github.com/opensearch-project/oui/pull/987))
+- Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
+- Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
 
 ### 🛠 Maintenance
 
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 - [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
+- [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
+- Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
+- Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
 
 ### 🪛 Refactoring
 
-### 🔩 Tests
+- Clean up focus background implementation ([#962](https://github.com/opensearch-project/oui/pull/962))
 
 ## [`1.1.1`](https://github.com/opensearch-project/oui/tree/1.1.1)
 

@@ -297,6 +297,8 @@ export {
   useResizeObserver,
 } from './observer/resize_observer';
 
+export { OuiSchemaItem } from './schema';
+
 export { OuiSearchBar, Query, Ast } from './search_bar';
 
 export {

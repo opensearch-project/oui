@@ -34,5 +34,12 @@ export default () => (
       wrapText
       label="Fourth very, very long item with wrapping enabled that will not force truncation"
     />
+
+    <OuiListGroupItem
+      iconType={'package'}
+      onClick={() => {}}
+      wrapText
+      label="Fifth very long item with wrapping enabled and icon included"
+    />
   </OuiListGroup>
 );
