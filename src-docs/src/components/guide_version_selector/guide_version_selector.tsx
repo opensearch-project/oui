@@ -23,7 +23,10 @@ export type GuideVersionSelectorProps = {
 export const GuideVersionSelector: FunctionComponent<GuideVersionSelectorProps> = ({
   selected,
 }) => {
-  const isLocalDev = window.location.host.includes('803');
+  const isLocalDev = ['localhost', '127.0.0.1'].includes(
+    window.location.hostname
+  );
+
   const [isPopoverOpen, setPopoverOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>(selected);
   const [options, setOptions] = useState<string[]>([selected]);
