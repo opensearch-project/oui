@@ -26,33 +26,33 @@ import { cardConfig, checkableCardConfig } from './playground';
 import { OuiCardSelect } from '../../../../src/components/card/card_select';
 
 import Card from './card';
-const cardSource = require('!!raw-loader!./card');
+const cardSource = require('./card?raw');
 
 import CardImage from './card_image';
-const cardImageSource = require('!!raw-loader!./card_image');
+const cardImageSource = require('./card_image?raw');
 
 import CardFooter from './card_footer';
-const cardFooterSource = require('!!raw-loader!./card_footer');
+const cardFooterSource = require('./card_footer?raw');
 
 import CardBeta from './card_beta';
-const cardBetaSource = require('!!raw-loader!./card_beta');
+const cardBetaSource = require('./card_beta?raw');
 
 import CardLayout from './card_layout';
-const cardLayoutSource = require('!!raw-loader!./card_layout');
+const cardLayoutSource = require('./card_layout?raw');
 
 import CardSelectable from './card_selectable';
-const cardSelectableSource = require('!!raw-loader!./card_selectable');
+const cardSelectableSource = require('./card_selectable?raw');
 
 import CardChildren from './card_children';
-const cardChildrenSource = require('!!raw-loader!./card_children');
+const cardChildrenSource = require('./card_children?raw');
 
 import CardCheckable from './card_checkable';
-const cardCheckableSource = require('!!raw-loader!./card_checkable');
+const cardCheckableSource = require('./card_checkable?raw');
 import CardCheckableCheckbox from './card_checkable_checkbox';
-const cardCheckableCheckboxSource = require('!!raw-loader!./card_checkable_checkbox');
+const cardCheckableCheckboxSource = require('./card_checkable_checkbox?raw');
 
 import CardDisplay from './card_display';
-const cardDisplaySource = require('!!raw-loader!./card_display');
+const cardDisplaySource = require('./card_display?raw');
 
 export const CardExample = {
   title: 'Card',

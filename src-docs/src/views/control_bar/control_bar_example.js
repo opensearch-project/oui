@@ -34,10 +34,10 @@ import Controls from './controls';
 import ControlBarWithTabs from './tabs';
 import ControlBarMobile from './mobile';
 
-const controlsSource = require('!!raw-loader!./controls');
+const controlsSource = require('./controls?raw');
 const controlsHtml = renderToHtml(Controls);
 
-const controlBarSource = require('!!raw-loader!./control_bar');
+const controlBarSource = require('./control_bar?raw');
 const controlBarHtml = renderToHtml(ControlBar);
 const controlBarSnippet = `<OuiControlBar
   showContent={false}
@@ -84,11 +84,11 @@ const controlBarSnippet = `<OuiControlBar
   }
 />`;
 
-const tabsBarSource = require('!!raw-loader!./tabs');
+const tabsBarSource = require('./tabs?raw');
 const tabsBarHtml = renderToHtml(ControlBarWithTabs);
 const tabsBarSnippet = '<OuiControlBar controls={items} size="m"/>';
 
-const mobileBarSource = require('!!raw-loader!./mobile');
+const mobileBarSource = require('./mobile?raw');
 const mobileBarHtml = renderToHtml(ControlBarMobile);
 const mobileBarSnippet = `<OuiControlBar
   showOnMobile

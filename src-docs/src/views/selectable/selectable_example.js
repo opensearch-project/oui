@@ -35,37 +35,37 @@ import {
 } from './props';
 
 import Selectable from './selectable';
-const selectableSource = require('!!raw-loader!./selectable');
+const selectableSource = require('./selectable?raw');
 const selectableHtml = renderToHtml(Selectable);
 
 import SelectablePopover from './selectable_popover';
-const selectablePopoverSource = require('!!raw-loader!./selectable_popover');
+const selectablePopoverSource = require('./selectable_popover?raw');
 const selectablePopoverHtml = renderToHtml(SelectablePopover);
 
 import SelectableSearch from './selectable_search';
-const selectableSearchSource = require('!!raw-loader!./selectable_search');
+const selectableSearchSource = require('./selectable_search?raw');
 const selectableSearchHtml = renderToHtml(SelectableSearch);
 
 import SelectableSingle from './selectable_single';
-const selectableSingleSource = require('!!raw-loader!./selectable_single');
+const selectableSingleSource = require('./selectable_single?raw');
 const selectableSingleHtml = renderToHtml(SelectableSingle);
 
 import SelectableExclusion from './selectable_exclusion';
-const selectableExclusionSource = require('!!raw-loader!./selectable_exclusion');
+const selectableExclusionSource = require('./selectable_exclusion?raw');
 const selectableExclusionHtml = renderToHtml(SelectableExclusion);
 
 import SelectableMessages from './selectable_messages';
-const selectableMessagesSource = require('!!raw-loader!./selectable_messages');
+const selectableMessagesSource = require('./selectable_messages?raw');
 const selectableMessagesHtml = renderToHtml(SelectableMessages);
 
 import SelectableCustomRender from './selectable_custom_render';
-const selectableCustomRenderSource = require('!!raw-loader!./selectable_custom_render');
+const selectableCustomRenderSource = require('./selectable_custom_render?raw');
 const selectableCustomRenderHtml = renderToHtml(SelectableCustomRender);
 
 import SearchOption from './sitewide_option';
 import Search from './search';
 import { OuiCallOut } from '../../../../src/components/call_out';
-const searchSource = require('!!raw-loader!./search');
+const searchSource = require('./search?raw');
 const searchHtml = renderToHtml(Search);
 
 export const SelectableExample = {

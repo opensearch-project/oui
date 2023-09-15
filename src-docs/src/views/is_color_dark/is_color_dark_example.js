@@ -18,7 +18,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCode } from '../../../../src/components';
 
 import IsColorDark from './is_color_dark';
-const isColorDarkSource = require('!!raw-loader!./is_color_dark');
+const isColorDarkSource = require('./is_color_dark?raw');
 const isColorDarkHtml = renderToHtml(IsColorDark);
 
 export const IsColorDarkExample = {

@@ -22,14 +22,14 @@ import { highlightConfig, markConfig } from './playground';
 import { Highlight } from './highlight';
 import { Mark } from './mark';
 
-const highlightSource = require('!!raw-loader!./highlight');
+const highlightSource = require('./highlight?raw');
 const highlightHtml = renderToHtml(Highlight);
 const highlightSnippet = `<OuiHighlight search={searchValue} highlightAll={isHighlightAll}>
   <!-- A text where all your search matches will be highlighted -->
 </OuiHighlight>
 `;
 
-const markSource = require('!!raw-loader!./mark');
+const markSource = require('./mark?raw');
 const markHtml = renderToHtml(Mark);
 const markSnippet = '<OuiMark><!-- Mark text --></OuiMark>';
 

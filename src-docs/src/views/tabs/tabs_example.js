@@ -25,19 +25,19 @@ import {
 import { tabConfig, tabsConfig } from './playground';
 
 import Tabs from './tabs';
-const tabsSource = require('!!raw-loader!./tabs');
+const tabsSource = require('./tabs?raw');
 const tabsHtml = renderToHtml(Tabs);
 
 import TabsCondensed from './tabs_condensed';
-const tabsCondensedSource = require('!!raw-loader!./tabs_condensed');
+const tabsCondensedSource = require('./tabs_condensed?raw');
 const tabsCondensedHtml = renderToHtml(TabsCondensed);
 
 import TabbedContent from './tabbed_content';
-const tabbedContentSource = require('!!raw-loader!./tabbed_content');
+const tabbedContentSource = require('./tabbed_content?raw');
 const tabbedContentHtml = renderToHtml(TabbedContent);
 
 import Controlled from './controlled';
-const controlledSource = require('!!raw-loader!./controlled');
+const controlledSource = require('./controlled?raw');
 const controlledHtml = renderToHtml(Controlled);
 const controlledSnippet = `<OuiTabbedContent
   tabs={tabs}

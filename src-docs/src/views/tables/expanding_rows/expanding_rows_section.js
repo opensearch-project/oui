@@ -15,7 +15,7 @@ import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
 import { Table } from './expanding_rows';
-const source = require('!!raw-loader!./expanding_rows');
+const source = require('./expanding_rows?raw');
 const html = renderToHtml(Table);
 
 export const section = {

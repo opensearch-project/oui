@@ -23,14 +23,14 @@ import {
 import { pageHeaderConfig } from './playground';
 
 import PageHeader from './page_header';
-const pageHeaderSource = require('!!raw-loader!./page_header');
+const pageHeaderSource = require('./page_header?raw');
 
 import PageHeaderTabs from './page_header_tabs';
-const pageHeaderTabsSource = require('!!raw-loader!./page_header_tabs');
+const pageHeaderTabsSource = require('./page_header_tabs?raw');
 
 import PageHeaderCustom from './page_header_custom';
 import { OuiText } from '../../../../src/components/text';
-const pageHeaderCustomSource = require('!!raw-loader!./page_header_custom');
+const pageHeaderCustomSource = require('./page_header_custom?raw');
 
 export const PageHeaderExample = {
   title: 'Page header',

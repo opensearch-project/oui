@@ -21,11 +21,11 @@ import { OuiCode } from '../../../../src/components';
 import { OuiOverlayMaskProps } from './props';
 
 import OverlayMask from './overlay_mask';
-const overlayMaskSource = require('!!raw-loader!./overlay_mask');
+const overlayMaskSource = require('./overlay_mask?raw');
 const overlayMaskHtml = renderToHtml(OverlayMask);
 
 import OverlayMaskHeader from './overlay_mask_header';
-const overlayMaskHeaderSource = require('!!raw-loader!./overlay_mask_header');
+const overlayMaskHeaderSource = require('./overlay_mask_header?raw');
 const overlayMaskHeaderHtml = renderToHtml(OverlayMaskHeader);
 
 export const OverlayMaskExample = {

@@ -20,17 +20,17 @@ import { OuiCallOut, OuiCode, OuiProgress } from '../../../../src/components';
 import progressConfig from './playground';
 
 import Progress from './progress';
-const progressSource = require('!!raw-loader!./progress');
+const progressSource = require('./progress?raw');
 const progressHtml = renderToHtml(Progress);
 const progressSnippet = '<OuiProgress size="xs" color="accent" />';
 
 import ProgressValue from './progress_value';
-const progressValueSource = require('!!raw-loader!./progress_value');
+const progressValueSource = require('./progress_value?raw');
 const progressValueHtml = renderToHtml(ProgressValue);
 const progressValueSnippet = '<OuiProgress value={22} max={100} size="xs" />';
 
 import ProgressFixed from './progress_fixed';
-const progressFixedSource = require('!!raw-loader!./progress_fixed');
+const progressFixedSource = require('./progress_fixed?raw');
 const progressFixedHtml = renderToHtml(ProgressFixed);
 const progressFixedSnippet = `<!-- Position at top of parent container -->
 <OuiProgress size="xs" color="accent" position="absolute" />
@@ -41,7 +41,7 @@ const progressFixedSnippet = `<!-- Position at top of parent container -->
 </OuiPortal>`;
 
 import ProgressSizes from './progress_sizes';
-const progressSizesSource = require('!!raw-loader!./progress_sizes');
+const progressSizesSource = require('./progress_sizes?raw');
 const progressSizesHtml = renderToHtml(ProgressSizes);
 const progressSizesSnippet = `<OuiProgress
   value={20}
@@ -50,7 +50,7 @@ const progressSizesSnippet = `<OuiProgress
 />`;
 
 import ProgressColors from './progress_colors';
-const progressColorsSource = require('!!raw-loader!./progress_colors');
+const progressColorsSource = require('./progress_colors?raw');
 const progressColorsHtml = renderToHtml(ProgressColors);
 const progressColorsSnippet = `<OuiProgress
   value={20}
@@ -59,7 +59,7 @@ const progressColorsSnippet = `<OuiProgress
 />`;
 
 import ProgressChart from './progress_chart';
-const progressChartSource = require('!!raw-loader!./progress_chart');
+const progressChartSource = require('./progress_chart?raw');
 const progressChartHtml = renderToHtml(ProgressChart);
 const progressChartSnippet = `<OuiProgress
   value={20}

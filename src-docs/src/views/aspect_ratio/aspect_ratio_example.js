@@ -23,7 +23,7 @@ import {
 import aspectRatioConfig from './playground';
 
 import AspectRatio from './aspect_ratio';
-const aspectRatioSource = require('!!raw-loader!./aspect_ratio');
+const aspectRatioSource = require('./aspect_ratio?raw');
 const aspectRatioHtml = renderToHtml(AspectRatio);
 
 const aspectRatioSnippet = `<OuiAspectRatio width={16} height={9}>

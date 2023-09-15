@@ -19,7 +19,7 @@ import { OuiTitle } from '../../../../src/components';
 import { titleConfig } from './playground';
 
 import Title from './title';
-const titleSource = require('!!raw-loader!./title');
+const titleSource = require('./title?raw');
 const titleHtml = renderToHtml(Title);
 const titleSnippet = [
   `<OuiTitle>

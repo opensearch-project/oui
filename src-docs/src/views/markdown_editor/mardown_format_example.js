@@ -24,11 +24,11 @@ import {
 import { Link } from 'react-router-dom';
 
 import MarkdownFormat from './markdown_format';
-const markdownFormatSource = require('!!raw-loader!./markdown_format');
+const markdownFormatSource = require('./markdown_format?raw');
 const markdownFormatHtml = renderToHtml(MarkdownFormat);
 
 import MarkdownFormatSink from './markdown_format_sink';
-const markdownFormatSinkSource = require('!!raw-loader!./markdown_format_sink');
+const markdownFormatSinkSource = require('./markdown_format_sink?raw');
 const markdownFormatSinkHtml = renderToHtml(MarkdownFormatSink);
 
 export const MarkdownFormatExample = {

@@ -28,7 +28,7 @@ import { GuideSectionTypes } from '../../../components';
 import { renderToHtml } from '../../../services';
 
 import Custom from './custom';
-const source = require('!!raw-loader!./custom');
+const source = require('./custom?raw');
 const html = renderToHtml(Custom);
 import { cellPropsInfo } from './props_info';
 

@@ -30,7 +30,7 @@ import {
 import { CustomItemAction } from '!!prop-loader!../../../../../src/components/basic_table/action_types';
 import { DefaultItemActionProps as DefaultItemAction } from '../props/props';
 
-const source = require('!!raw-loader!./basic');
+const source = require('./basic?raw');
 const html = renderToHtml(Table);
 
 export const section = {

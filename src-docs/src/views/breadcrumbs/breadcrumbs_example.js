@@ -20,19 +20,19 @@ import { OuiCode, OuiBreadcrumbs } from '../../../../src/components';
 import { BreadcrumbResponsiveMaxCount, BreadcrumbProps } from './props';
 
 import Breadcrumbs from './breadcrumbs';
-const breadcrumbsSource = require('!!raw-loader!./breadcrumbs');
+const breadcrumbsSource = require('./breadcrumbs?raw');
 const breadcrumbsHtml = renderToHtml(Breadcrumbs);
 
 import Responsive from './responsive';
-const responsiveSource = require('!!raw-loader!./responsive');
+const responsiveSource = require('./responsive?raw');
 const responsiveHtml = renderToHtml(Responsive);
 
 import Truncate from './truncate';
-const truncateSource = require('!!raw-loader!./truncate');
+const truncateSource = require('./truncate?raw');
 const truncateHtml = renderToHtml(Truncate);
 
 import Max from './max';
-const maxSource = require('!!raw-loader!./max');
+const maxSource = require('./max?raw');
 const maxHtml = renderToHtml(Max);
 
 const breadcrumpProps = {

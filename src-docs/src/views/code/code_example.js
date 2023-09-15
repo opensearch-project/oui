@@ -24,12 +24,12 @@ import {
 import { codeBlockConfig, codeConfig } from './playground';
 
 import Code from './code';
-const codeSource = require('!!raw-loader!./code');
+const codeSource = require('./code?raw');
 const codeHtml = renderToHtml(Code);
 const codeSnippet = '<OuiCode>Text to be formatted</OuiCode>';
 
 import CodeBlock from './code_block';
-const codeBlockSource = require('!!raw-loader!./code_block');
+const codeBlockSource = require('./code_block?raw');
 const codeBlockHtml = renderToHtml(CodeBlock);
 const codeBlockSnippet = `<OuiCodeBlock language="html" paddingSize="s" isCopyable>
 { \`<h1>Title</h1>\` }
@@ -37,7 +37,7 @@ const codeBlockSnippet = `<OuiCodeBlock language="html" paddingSize="s" isCopyab
 `;
 
 import CodeBlockPre from './code_block_pre';
-const codeBlockPreSource = require('!!raw-loader!./code_block_pre');
+const codeBlockPreSource = require('./code_block_pre?raw');
 const codeBlockPreHtml = renderToHtml(CodeBlockPre);
 
 export const CodeExample = {

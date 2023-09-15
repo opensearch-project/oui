@@ -22,13 +22,13 @@ import { SearchBar } from './search_bar';
 import { ControlledSearchBar } from './controlled_search_bar';
 import { SearchBarFilters } from './search_bar_filters';
 
-const searchBarSource = require('!!raw-loader!./search_bar');
+const searchBarSource = require('./search_bar?raw');
 const searchBarHtml = renderToHtml(SearchBar);
 
-const controlledSearchBarSource = require('!!raw-loader!./controlled_search_bar');
+const controlledSearchBarSource = require('./controlled_search_bar?raw');
 const controlledSearchBarHtml = renderToHtml(ControlledSearchBar);
 
-const searchBarFiltersSource = require('!!raw-loader!./search_bar_filters');
+const searchBarFiltersSource = require('./search_bar_filters?raw');
 const searchBarFiltersHtml = renderToHtml(SearchBarFilters);
 
 export const SearchBarExample = {

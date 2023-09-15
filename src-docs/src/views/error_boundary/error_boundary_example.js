@@ -18,7 +18,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiErrorBoundary } from '../../../../src/components';
 
 import ErrorBoundary from './error_boundary';
-const errorBoundarySource = require('!!raw-loader!./error_boundary');
+const errorBoundarySource = require('./error_boundary?raw');
 const errorBoundaryHtml = renderToHtml(ErrorBoundary);
 
 export const ErrorBoundaryExample = {

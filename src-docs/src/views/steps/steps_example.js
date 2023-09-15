@@ -28,7 +28,7 @@ import { OuiStepHorizontal } from '../../../../src/components/steps/step_horizon
 import { stepConfig, stepHorizontalConfig } from './playground';
 
 import Steps from './steps';
-const stepsSource = require('!!raw-loader!./steps');
+const stepsSource = require('./steps?raw');
 const stepsHtml = renderToHtml(Steps);
 const stepsSnippet = [
   `<OuiSteps
@@ -51,7 +51,7 @@ const stepsSnippet = [
 ];
 
 import StepsComplex from './steps_complex';
-const stepsComplexSource = require('!!raw-loader!./steps_complex');
+const stepsComplexSource = require('./steps_complex?raw');
 const stepsComplexHtml = renderToHtml(StepsComplex);
 const stepsComplexSnippet = [
   `<OuiSteps
@@ -100,13 +100,13 @@ const stepsComplexSnippet = [
 ];
 
 import HeadingElementSteps from './heading_element_steps';
-const headingElementStepsSource = require('!!raw-loader!./heading_element_steps');
+const headingElementStepsSource = require('./heading_element_steps?raw');
 const headingElementStepsHtml = renderToHtml(HeadingElementSteps);
 const headingElementStepsSnippet = `<OuiSteps steps={steps} headingElement="h2" />
 `;
 
 import StepsHorizontal from './steps_horizontal';
-const stepsHorizontalSource = require('!!raw-loader!./steps_horizontal');
+const stepsHorizontalSource = require('./steps_horizontal?raw');
 const stepsHorizontalHtml = renderToHtml(StepsHorizontal);
 const stepsHorizontalSnippet = `<OuiStepsHorizontal steps={[{
   title: 'Completed step',
@@ -116,7 +116,7 @@ const stepsHorizontalSnippet = `<OuiStepsHorizontal steps={[{
 `;
 
 import Status from './status';
-const statusSource = require('!!raw-loader!./status');
+const statusSource = require('./status?raw');
 const statusHtml = renderToHtml(Steps);
 const statusSnippet = `<OuiSteps
   steps={[
@@ -129,7 +129,7 @@ const statusSnippet = `<OuiSteps
 />`;
 
 import StepsTitleSizes from './steps_title_sizes';
-const stepsTitleSizesSource = require('!!raw-loader!./steps_title_sizes');
+const stepsTitleSizesSource = require('./steps_title_sizes?raw');
 const stepsTitleSizesHtml = renderToHtml(StepsTitleSizes);
 const stepsTitleSizesSnippet = `<OuiSteps titleSize="xs" steps={steps} />
 `;

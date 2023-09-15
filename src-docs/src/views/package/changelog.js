@@ -14,7 +14,7 @@ import React from 'react';
 import { OuiMarkdownFormat } from '../../../../src';
 import { GuidePage } from '../../components/guide_page';
 
-const changelogSource = require('!!raw-loader!../../../../CHANGELOG.md').default.replace(
+const changelogSource = require('../../../../CHANGELOG.md?raw').replace(
   /## \[`main`\].+?##/s, // remove the `main` heading & contents
   '##'
 );

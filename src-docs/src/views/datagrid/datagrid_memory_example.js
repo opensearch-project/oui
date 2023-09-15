@@ -23,21 +23,21 @@ import {
 } from '../../../../src/components';
 
 import InMemoryDataGrid from './in_memory';
-const inMemoryDataGridSource = require('!!raw-loader!./in_memory');
+const inMemoryDataGridSource = require('./in_memory?raw');
 const inMemoryDataGridHtml = renderToHtml(InMemoryDataGrid);
 
 import InMemoryEnhancementsDataGrid from './in_memory_enhancements';
-const inMemoryEnhancementsDataGridSource = require('!!raw-loader!./in_memory_enhancements');
+const inMemoryEnhancementsDataGridSource = require('./in_memory_enhancements?raw');
 const inMemoryEnhancementsDataGridHtml = renderToHtml(
   InMemoryEnhancementsDataGrid
 );
 
 import InMemoryPaginationDataGrid from './in_memory_pagination';
-const inMemoryPaginationDataGridSource = require('!!raw-loader!./in_memory_pagination');
+const inMemoryPaginationDataGridSource = require('./in_memory_pagination?raw');
 const inMemoryPaginationDataGridHtml = renderToHtml(InMemoryPaginationDataGrid);
 
 import InMemorySortingDataGrid from './in_memory_sorting';
-const inMemorySortingDataGridSource = require('!!raw-loader!./in_memory_sorting');
+const inMemorySortingDataGridSource = require('./in_memory_sorting?raw');
 const inMemorySortingDataGridHtml = renderToHtml(InMemorySortingDataGrid);
 
 import {

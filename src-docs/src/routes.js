@@ -21,7 +21,7 @@ import { OuiErrorBoundary } from '../../src/components';
 import { playgroundCreator } from './services/playground';
 
 // Guidelines
-// const GettingStarted = require('!!raw-loader!./views/guidelines/getting_started.md');
+// const GettingStarted = require('./views/guidelines/getting_started.md?raw');
 
 import ColorGuidelines from './views/guidelines/colors';
 

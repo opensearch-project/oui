@@ -38,7 +38,7 @@ import {
 import { FieldValueOptionType } from '!!prop-loader!../../../../../src/components/search_bar/filters/field_value_selection_filter';
 import { FieldValueToggleGroupFilterItemType } from '!prop-loader!../../../../../src/components/search_bar/filters/field_value_toggle_group_filter.tsx';
 
-const source = require('!!raw-loader!./in_memory');
+const source = require('./in_memory?raw');
 const html = renderToHtml(Table);
 
 export const section = {

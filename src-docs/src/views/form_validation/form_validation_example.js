@@ -25,7 +25,7 @@ import {
 } from '../../../../src/components';
 
 import Validation from './validation';
-const validationSource = require('!!raw-loader!./validation');
+const validationSource = require('./validation?raw');
 const validationHtml = renderToHtml(Validation);
 
 export const FormValidationExample = {

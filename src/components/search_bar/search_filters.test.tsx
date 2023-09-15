@@ -32,7 +32,7 @@ import React from 'react';
 import { requiredProps } from '../../test';
 import { shallow } from 'enzyme';
 import { OuiSearchFilters, SearchFilterConfig } from './search_filters';
-import { Query } from './query';
+import { Query } from './query/query';
 
 describe('OuiSearchFilters', () => {
   test('render - no filters', () => {

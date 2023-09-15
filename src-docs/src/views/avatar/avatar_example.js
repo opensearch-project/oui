@@ -19,7 +19,7 @@ import { OuiAvatar, OuiCode } from '../../../../src/components';
 import avatarConfig from './playground';
 
 import Avatar from './avatar';
-const avatarSource = require('!!raw-loader!./avatar');
+const avatarSource = require('./avatar?raw');
 const avatarHtml = renderToHtml(Avatar);
 const avatarSnippet = [
   `<OuiAvatar name="Raphael" />
@@ -30,7 +30,7 @@ const avatarSnippet = [
 ];
 
 import AvatarInitials from './avatar_initials';
-const avatarInitialsSource = require('!!raw-loader!./avatar_initials');
+const avatarInitialsSource = require('./avatar_initials?raw');
 const avatarInitialsHtml = renderToHtml(AvatarInitials);
 const avatarInitialsSnippet = [
   `<OuiAvatar name="OpenSearch Dashboards" initialsLength={2}/>
@@ -42,7 +42,7 @@ const avatarInitialsSnippet = [
 ];
 
 import AvatarTypes from './avatar_type';
-const avatarTypesSource = require('!!raw-loader!./avatar_type');
+const avatarTypesSource = require('./avatar_type?raw');
 const avatarTypesHtml = renderToHtml(AvatarTypes);
 const avatarTypesSnippet = [
   `<OuiAvatar type="space" name="Engineering Space" />
@@ -50,7 +50,7 @@ const avatarTypesSnippet = [
 ];
 
 import AvatarIcons from './avatar_icon';
-const avatarIconsSource = require('!!raw-loader!./avatar_icon');
+const avatarIconsSource = require('./avatar_icon?raw');
 const avatarIconsHtml = renderToHtml(AvatarIcons);
 const avatarIconsSnippet = [
   `<OuiAvatar name="Management" iconType="managementApp" />
@@ -62,7 +62,7 @@ const avatarIconsSnippet = [
 ];
 
 import AvatarDisabled from './avatar_disabled';
-const avatarDisabledSource = require('!!raw-loader!./avatar_disabled');
+const avatarDisabledSource = require('./avatar_disabled?raw');
 const avatarDisabledHtml = renderToHtml(AvatarDisabled);
 const avatarDisabledSnippet = [
   `<OuiAvatar isDisabled={true} name="Avatar" />

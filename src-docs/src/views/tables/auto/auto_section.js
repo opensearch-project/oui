@@ -16,7 +16,7 @@ import { OuiCode } from '../../../../../src/components';
 
 import { Table } from './auto';
 
-const source = require('!!raw-loader!./auto');
+const source = require('./auto?raw');
 const html = renderToHtml(Table);
 const layoutSnippet = [
   `<OuiBasicTable

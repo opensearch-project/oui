@@ -25,13 +25,13 @@ import Guidelines from '../text_scaling/text_scaling_sandbox';
 import { textConfig, textColorConfig } from './playground';
 
 import Text from './text';
-const textSource = require('!!raw-loader!./text');
+const textSource = require('./text?raw');
 const textHtml = renderToHtml(Text);
 const textSnippet = `<OuiText grow={false}><!-- Raw HTML content --></OuiText>
 `;
 
 import TextSmall from './text_small';
-const textSmallSource = require('!!raw-loader!./text_small');
+const textSmallSource = require('./text_small?raw');
 const textSmallHtml = renderToHtml(TextSmall);
 const textSmallSnippet = [
   `<OuiText size="s"><!-- Raw HTML content --></OuiText>
@@ -39,7 +39,7 @@ const textSmallSnippet = [
 ];
 
 import TextColor from './text_color';
-const textColorSource = require('!!raw-loader!./text_color');
+const textColorSource = require('./text_color?raw');
 const textColorHtml = renderToHtml(TextColor);
 const textColorSnippet = [
   `<OuiText color="danger"><!-- Raw HTML content --></OuiText>
@@ -49,7 +49,7 @@ const textColorSnippet = [
 ];
 
 import TextAlign from './text_align';
-const textAlignSource = require('!!raw-loader!./text_align');
+const textAlignSource = require('./text_align?raw');
 const textAlignHtml = renderToHtml(TextAlign);
 const textAlignSnippet = [
   `<OuiText textAlign="center"><!-- Raw HTML content --></OuiText>

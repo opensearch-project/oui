@@ -33,7 +33,7 @@ import React from 'react';
 import { requiredProps } from '../../test';
 import { mount, shallow } from 'enzyme';
 import { OuiSearchBar } from './search_bar';
-import { Query } from './query';
+import { Query } from './query/query';
 import { keys } from '../../services';
 import { SearchFilterConfig } from './search_filters';
 

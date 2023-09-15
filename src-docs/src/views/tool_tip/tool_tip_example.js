@@ -27,7 +27,7 @@ import {
 import toolTipConfig from './playground';
 
 import ToolTip from './tool_tip';
-const toolTipSource = require('!!raw-loader!./tool_tip');
+const toolTipSource = require('./tool_tip?raw');
 const toolTipHtml = renderToHtml(ToolTip);
 const tooltipSnippet = [
   `<OuiToolTip position="top" content="Tooltip text">
@@ -45,7 +45,7 @@ const tooltipSnippet = [
 ];
 
 import IconTip from './icon_tip';
-const infoTipSource = require('!!raw-loader!./icon_tip');
+const infoTipSource = require('./icon_tip?raw');
 const infoTipHtml = renderToHtml(IconTip);
 const infoTipSnippet = `<OuiIconTip
   content="Tooltip text for the icon"

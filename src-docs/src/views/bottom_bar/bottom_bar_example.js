@@ -19,14 +19,14 @@ import { OuiBottomBar, OuiCode } from '../../../../src/components';
 import { bottomBarConfig } from './playground';
 
 import BottomBar from './bottom_bar';
-const bottomBarSource = require('!!raw-loader!./bottom_bar');
+const bottomBarSource = require('./bottom_bar?raw');
 
 import BottomBarDisplacement from './bottom_bar_displacement';
-const bottomBarDisplacementSource = require('!!raw-loader!./bottom_bar_displacement');
+const bottomBarDisplacementSource = require('./bottom_bar_displacement?raw');
 
 import BottomBarPosition from './bottom_bar_position';
 import { OuiCallOut } from '../../../../src/components/call_out';
-const bottomBarPositionSource = require('!!raw-loader!./bottom_bar_position');
+const bottomBarPositionSource = require('./bottom_bar_position?raw');
 
 export const BottomBarExample = {
   title: 'Bottom bar',

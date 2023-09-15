@@ -25,27 +25,27 @@ import {
 import { OuiPinnableListGroupItem } from './props';
 
 import ListGroup from './list_group';
-const listGroupSource = require('!!raw-loader!./list_group');
+const listGroupSource = require('./list_group?raw');
 const listGroupHtml = renderToHtml(ListGroup);
 
 import ListGroupLinks from './list_group_links';
-const listGroupLinksSource = require('!!raw-loader!./list_group_links');
+const listGroupLinksSource = require('./list_group_links?raw');
 const listGroupLinksHtml = renderToHtml(ListGroupLinks);
 
 import ListGroupLinkActions from './list_group_link_actions';
-const listGroupLinkActionsSource = require('!!raw-loader!./list_group_link_actions');
+const listGroupLinkActionsSource = require('./list_group_link_actions?raw');
 const listGroupLinkActionsHtml = renderToHtml(ListGroupLinkActions);
 
 import ListGroupExtra from './list_group_extra';
-const listGroupExtraSource = require('!!raw-loader!./list_group_extra');
+const listGroupExtraSource = require('./list_group_extra?raw');
 const listGroupExtraHtml = renderToHtml(ListGroupExtra);
 
 import ListGroupItemColor from './list_group_item_color';
-const listGroupItemColorSource = require('!!raw-loader!./list_group_item_color');
+const listGroupItemColorSource = require('./list_group_item_color?raw');
 const listGroupItemColorHtml = renderToHtml(ListGroupItemColor);
 
 import PinnableListGroup from './pinnable_list_group';
-const pinnableListGroupSource = require('!!raw-loader!./pinnable_list_group');
+const pinnableListGroupSource = require('./pinnable_list_group?raw');
 const pinnableListGroupHtml = renderToHtml(PinnableListGroup);
 
 export const ListGroupExample = {

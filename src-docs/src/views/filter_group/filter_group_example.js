@@ -23,15 +23,15 @@ import {
 } from '../../../../src/components';
 
 import FilterGroup from './filter_group';
-const filterGroupSource = require('!!raw-loader!./filter_group');
+const filterGroupSource = require('./filter_group?raw');
 const filterGroupHtml = renderToHtml(FilterGroup);
 
 import FilterGroupSimple from './filter_group_simple';
-const filterGroupSimpleSource = require('!!raw-loader!./filter_group_simple');
+const filterGroupSimpleSource = require('./filter_group_simple?raw');
 const filterGroupSimpleHtml = renderToHtml(FilterGroup);
 
 import FilterGroupMulti from './filter_group_multi';
-const filterGroupMultiSource = require('!!raw-loader!./filter_group_multi');
+const filterGroupMultiSource = require('./filter_group_multi?raw');
 const filterGroupMultiHtml = renderToHtml(FilterGroup);
 
 export const FilterGroupExample = {

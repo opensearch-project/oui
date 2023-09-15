@@ -17,7 +17,7 @@ import { GuideSectionTypes } from '../../components';
 import { OuiDataGrid, OuiCode } from '../../../../src/components';
 
 import DataGridSchema from './schema';
-const dataGridSchemaSource = require('!!raw-loader!./schema');
+const dataGridSchemaSource = require('./schema?raw');
 const dataGridSchemaHtml = renderToHtml(DataGridSchema);
 
 import {

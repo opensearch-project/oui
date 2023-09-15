@@ -34,31 +34,31 @@ import { OuiRangeTicks } from '../../../../src/components/form/range/range_ticks
 import { OuiRangeInput } from '../../../../src/components/form/range/range_input';
 
 import DualRangeExample from './dual_range';
-const dualRangeSource = require('!!raw-loader!./dual_range');
+const dualRangeSource = require('./dual_range?raw');
 const dualRangeHtml = renderToHtml(DualRangeExample);
 
 import RangeExample from './range';
-const rangeSource = require('!!raw-loader!./range');
+const rangeSource = require('./range?raw');
 const rangeHtml = renderToHtml(RangeExample);
 
 import InputExample from './input';
-const inputSource = require('!!raw-loader!./input');
+const inputSource = require('./input?raw');
 const inputHtml = renderToHtml(InputExample);
 
 import TicksExample from './ticks';
-const ticksSource = require('!!raw-loader!./ticks');
+const ticksSource = require('./ticks?raw');
 const ticksHtml = renderToHtml(TicksExample);
 
 import LevelsExample from './levels';
-const levelsSource = require('!!raw-loader!./levels');
+const levelsSource = require('./levels?raw');
 const levelsHtml = renderToHtml(LevelsExample);
 
 import StatesExample from './states';
-const statesSource = require('!!raw-loader!./states');
+const statesSource = require('./states?raw');
 const statesHtml = renderToHtml(StatesExample);
 
 import InputOnlyExample from './input_only';
-const inputOnlySource = require('!!raw-loader!./input_only');
+const inputOnlySource = require('./input_only?raw');
 const inputOnlyHtml = renderToHtml(InputOnlyExample);
 
 export const RangeControlExample = {

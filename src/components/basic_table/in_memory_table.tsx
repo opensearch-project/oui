@@ -48,11 +48,12 @@ import {
 } from './pagination_bar';
 import { isString } from '../../services/predicate';
 import { Comparators, Direction } from '../../services/sort';
-import { OuiSearchBar, Query } from '../search_bar';
+import { OuiSearchBar } from '../search_bar';
 import { OuiSpacer } from '../spacer';
 import { CommonProps } from '../common';
 import { OuiSearchBarProps } from '../search_bar/search_bar';
 import { SchemaType } from '../search_bar/search_box';
+import { Query } from '../search_bar/query';
 
 interface onChangeArgument {
   query: Query | null;

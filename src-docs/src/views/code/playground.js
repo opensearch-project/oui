@@ -14,7 +14,7 @@ import { OuiCodeBlock, OuiCode } from '../../../../src/components/';
 import { propUtilityForPlayground } from '../../services/playground';
 
 const codeDemo = `\n{\`${
-  require('!!raw-loader!./code_examples/example.html').default
+  require('./code_examples/example.html?raw').default
 }\`}\n`;
 
 export const codeBlockConfig = () => {

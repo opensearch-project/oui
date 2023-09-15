@@ -19,7 +19,7 @@ import { OuiCode, OuiEmptyPrompt } from '../../../../src/components';
 import emptyPromptConfig from './playground';
 
 import EmptyPrompt from './empty_prompt';
-const emptyPromptSource = require('!!raw-loader!./empty_prompt');
+const emptyPromptSource = require('./empty_prompt?raw');
 const emptyPromptSnippet = `<OuiEmptyPrompt
   iconType="editorStrike"
   title={<h2>No data available</h2>}
@@ -28,7 +28,7 @@ const emptyPromptSnippet = `<OuiEmptyPrompt
 />`;
 
 import Custom from './custom';
-const customSource = require('!!raw-loader!./custom');
+const customSource = require('./custom?raw');
 const customSnippet = `<OuiEmptyPrompt
   iconType="editorStrike"
   title={<h2>No data available</h2>}
@@ -38,21 +38,21 @@ const customSnippet = `<OuiEmptyPrompt
 />`;
 
 import Simple from './simple';
-const simpleSource = require('!!raw-loader!./simple');
+const simpleSource = require('./simple?raw');
 const simpleSnippet = `<OuiEmptyPrompt
   title={<h2>No data available</h2>}
   actions={multipleActions}
 />`;
 
 import Loading from './empty_prompt_loading';
-const loadingSource = require('!!raw-loader!./empty_prompt_loading');
+const loadingSource = require('./empty_prompt_loading?raw');
 const loadingSnippet = `<OuiEmptyPrompt
   icon={<OuiLoadingLogo logo="logoOpenSearch" size="xl" />}
   title={<h2>Loading</h2>}
 />`;
 
 import Error from './empty_prompt_error';
-const errorSource = require('!!raw-loader!./empty_prompt_error');
+const errorSource = require('./empty_prompt_error?raw');
 const errorSnippet = `<OuiEmptyPrompt
   iconType="alert"
   iconColor="danger"
@@ -60,7 +60,7 @@ const errorSnippet = `<OuiEmptyPrompt
 />`;
 
 import States from './empty_prompt_states';
-const statesSource = require('!!raw-loader!./empty_prompt_states');
+const statesSource = require('./empty_prompt_states?raw');
 
 export const EmptyPromptExample = {
   title: 'Empty prompt',

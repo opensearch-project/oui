@@ -24,28 +24,28 @@ import {
 } from '../../../../src/components';
 
 import Flyout from './flyout';
-const flyoutSource = require('!!raw-loader!./flyout');
+const flyoutSource = require('./flyout?raw');
 
 import FlyoutComplicated from './flyout_complicated';
-const flyoutComplicatedSource = require('!!raw-loader!./flyout_complicated');
+const flyoutComplicatedSource = require('./flyout_complicated?raw');
 
 import FlyoutSmall from './flyout_small';
-const flyoutSmallSource = require('!!raw-loader!./flyout_small');
+const flyoutSmallSource = require('./flyout_small?raw');
 
 import FlyoutLarge from './flyout_large';
-const flyoutLargeSource = require('!!raw-loader!./flyout_large');
+const flyoutLargeSource = require('./flyout_large?raw');
 
 import FlyoutPaddingMedium from './flyout_padding_medium';
-const FlyoutPaddingMediumSource = require('!!raw-loader!./flyout_padding_medium');
+const FlyoutPaddingMediumSource = require('./flyout_padding_medium?raw');
 
 import FlyoutMaxWidth from './flyout_max_width';
-const flyoutMaxWidthSource = require('!!raw-loader!./flyout_max_width');
+const flyoutMaxWidthSource = require('./flyout_max_width?raw');
 
 import FlyoutWithBanner from './flyout_banner';
-const flyoutWithBannerSource = require('!!raw-loader!./flyout_banner');
+const flyoutWithBannerSource = require('./flyout_banner?raw');
 
 import FlyoutPush from './flyout_push';
-const flyoutPushSource = require('!!raw-loader!./flyout_push');
+const flyoutPushSource = require('./flyout_push?raw');
 
 const flyOutSnippet = `<OuiFlyout onClose={closeFlyout}>
   <OuiFlyoutHeader hasBorder aria-labelledby={flyoutHeadingId}>

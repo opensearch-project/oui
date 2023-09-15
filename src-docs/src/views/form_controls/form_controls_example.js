@@ -53,7 +53,7 @@ import {
 } from './playground';
 
 import FieldSearch from './field_search';
-const fieldSearchSource = require('!!raw-loader!./field_search');
+const fieldSearchSource = require('./field_search?raw');
 const fieldSearchHtml = renderToHtml(FieldSearch);
 const fieldSearchSnippet = [
   `<OuiFieldSearch
@@ -65,7 +65,7 @@ const fieldSearchSnippet = [
 ];
 
 import FieldText from './field_text';
-const fieldTextSource = require('!!raw-loader!./field_text');
+const fieldTextSource = require('./field_text?raw');
 const fieldTextHtml = renderToHtml(FieldText);
 const fieldTextSnippet = [
   `<OuiFieldText
@@ -76,7 +76,7 @@ const fieldTextSnippet = [
 ];
 
 import FieldNumber from './field_number';
-const fieldNumberSource = require('!!raw-loader!./field_number');
+const fieldNumberSource = require('./field_number?raw');
 const fieldNumberHtml = renderToHtml(FieldNumber);
 const fieldNumberSnippet = [
   `<OuiFieldNumber
@@ -87,7 +87,7 @@ const fieldNumberSnippet = [
 ];
 
 import FieldPassword from './field_password';
-const fieldPasswordSource = require('!!raw-loader!./field_password');
+const fieldPasswordSource = require('./field_password?raw');
 const fieldPasswordHtml = renderToHtml(FieldPassword);
 const fieldPasswordSnippet = [
   `<OuiFieldPassword
@@ -99,7 +99,7 @@ const fieldPasswordSnippet = [
 ];
 
 import TextArea from './text_area';
-const textAreaSource = require('!!raw-loader!./text_area');
+const textAreaSource = require('./text_area?raw');
 const textAreaHtml = renderToHtml(TextArea);
 const textAreaSnippet = [
   `<OuiTextArea
@@ -110,7 +110,7 @@ const textAreaSnippet = [
 ];
 
 import FilePicker from './file_picker';
-const filePickerSource = require('!!raw-loader!./file_picker');
+const filePickerSource = require('./file_picker?raw');
 const filePickerHtml = renderToHtml(FilePicker);
 const filePickerSnippet = [
   `<OuiFilePicker
@@ -122,7 +122,7 @@ const filePickerSnippet = [
 ];
 
 import Select from './select';
-const selectSource = require('!!raw-loader!./select');
+const selectSource = require('./select?raw');
 const selectHtml = renderToHtml(Select);
 const selectSnippet = [
   `<OuiSelect
@@ -138,7 +138,7 @@ const selectSnippet = [
 ];
 
 import Checkbox from './checkbox';
-const checkboxSource = require('!!raw-loader!./checkbox');
+const checkboxSource = require('./checkbox?raw');
 const checkboxHtml = renderToHtml(Checkbox);
 const checkboxSnippet = [
   `<OuiCheckbox
@@ -156,11 +156,11 @@ const checkboxSnippet = [
 ];
 
 import CheckboxGroup from './checkbox_group';
-const checkboxGroupSource = require('!!raw-loader!./checkbox_group');
+const checkboxGroupSource = require('./checkbox_group?raw');
 const checkboxGroupHtml = renderToHtml(CheckboxGroup);
 
 import Radio from './radio';
-const radioSource = require('!!raw-loader!./radio');
+const radioSource = require('./radio?raw');
 const radioHtml = renderToHtml(Radio);
 const radioSnippet = [
   `<OuiRadio
@@ -171,11 +171,11 @@ const radioSnippet = [
 ];
 
 import RadioGroup from './radio_group';
-const radioGroupSource = require('!!raw-loader!./radio_group');
+const radioGroupSource = require('./radio_group?raw');
 const radioGroupHtml = renderToHtml(RadioGroup);
 
 import Switch from './switch';
-const switchSource = require('!!raw-loader!./switch');
+const switchSource = require('./switch?raw');
 const switchHtml = renderToHtml(Switch);
 const switchSnippet = [
   `<OuiSwitch
@@ -186,19 +186,19 @@ const switchSnippet = [
 ];
 
 import PrependAppend from './prepend_append';
-const PrependAppendSource = require('!!raw-loader!./prepend_append');
+const PrependAppendSource = require('./prepend_append?raw');
 const PrependAppendHtml = renderToHtml(PrependAppend);
 
 import Fieldset from './fieldset';
-const fieldsetSource = require('!!raw-loader!./fieldset');
+const fieldsetSource = require('./fieldset?raw');
 const fieldsetHtml = renderToHtml(Fieldset);
 
 import FormControlLayout from './form_control_layout';
-const formControlLayoutSource = require('!!raw-loader!./form_control_layout');
+const formControlLayoutSource = require('./form_control_layout?raw');
 const formControlLayoutHtml = renderToHtml(FormControlLayout);
 
 import FormControlLayoutRange from './form_control_layout_range';
-const formControlLayoutRangeSource = require('!!raw-loader!./form_control_layout_range');
+const formControlLayoutRangeSource = require('./form_control_layout_range?raw');
 const formControlLayoutRangeHtml = renderToHtml(FormControlLayoutRange);
 
 export const FormControlsExample = {

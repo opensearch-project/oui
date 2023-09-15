@@ -25,23 +25,23 @@ import {
 import commentConfig from './playground';
 
 import Comment from './comment';
-const commentSource = require('!!raw-loader!./comment');
+const commentSource = require('./comment?raw');
 const commentHtml = renderToHtml(Comment);
 
 import CommentTypes from './comment_types';
-const commentTypesSource = require('!!raw-loader!./comment_types');
+const commentTypesSource = require('./comment_types?raw');
 const commentTypesHtml = renderToHtml(CommentTypes);
 
 import CommentTimelineIcons from './comment_timelineIcons';
-const commentTimelineIconsSource = require('!!raw-loader!./comment_timelineIcons');
+const commentTimelineIconsSource = require('./comment_timelineIcons?raw');
 const commentTimelineIconsHtml = renderToHtml(CommentTimelineIcons);
 
 import CommentActions from './comment_actions';
-const commentActionsSource = require('!!raw-loader!./comment_actions');
+const commentActionsSource = require('./comment_actions?raw');
 const commentActionsHtml = renderToHtml(CommentActions);
 
 import CommentList from './comment_list';
-const commentListSource = require('!!raw-loader!./comment_list');
+const commentListSource = require('./comment_list?raw');
 const commentListHtml = renderToHtml(CommentList);
 
 const commentSnippet = `<OuiComment username="janed">

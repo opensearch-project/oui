@@ -28,12 +28,7 @@
  * under the License.
  */
 
-export {
-  OuiSearchBar,
-  OuiSearchBarProps,
-  QueryType,
-  Query,
-  Ast,
-} from './search_bar';
+export { OuiSearchBar, OuiSearchBarProps, QueryType, Ast } from './search_bar';
+export { Query } from './query/query';
 export { SearchFilterConfig } from './search_filters';
 export { FieldValueOptionType } from './filters/field_value_selection_filter';

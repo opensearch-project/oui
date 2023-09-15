@@ -10,13 +10,7 @@
  */
 
 module.exports = {
-  "extends": "../../.babelrc.js",
-  "presets": [
-    ["@babel/env", {
-      "targets": { "node": "current" }
-    }],
-  ],
-  "plugins": [
-    "dynamic-import-node"
-  ],
+  extends: '../../.babelrc.js',
+  presets: [['@babel/preset-env', { targets: { node: 'current' } }]],
+  plugins: ['dynamic-import-node'],
 };

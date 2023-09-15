@@ -27,7 +27,7 @@ import {
 import { OuiComboBoxOptionOption } from '!!prop-loader!../../../../src/components/combo_box/types';
 
 import ComboBox from './combo_box';
-const comboBoxSource = require('!!raw-loader!./combo_box');
+const comboBoxSource = require('./combo_box?raw');
 const comboBoxHtml = renderToHtml(ComboBox);
 const comboBoxSnippet = `<OuiComboBox
   placeholder="Select or create options"
@@ -43,11 +43,11 @@ const comboBoxSnippet = `<OuiComboBox
 />`;
 
 import Containers from './containers';
-const containersSource = require('!!raw-loader!./containers');
+const containersSource = require('./containers?raw');
 const containersHtml = renderToHtml(Containers);
 
 import Colors from './colors';
-const colorsSource = require('!!raw-loader!./colors');
+const colorsSource = require('./colors?raw');
 const colorsHtml = renderToHtml(Colors);
 const colorsSnippet = `<OuiComboBox
   placeholder="Select or create options"
@@ -64,7 +64,7 @@ const colorsSnippet = `<OuiComboBox
 />`;
 
 import RenderOption from './render_option';
-const renderOptionSource = require('!!raw-loader!./render_option');
+const renderOptionSource = require('./render_option?raw');
 const renderOptionHtml = renderToHtml(RenderOption);
 const renderOptionSnippet = `<OuiComboBox
   placeholder="Select or create options"
@@ -76,7 +76,7 @@ const renderOptionSnippet = `<OuiComboBox
 />`;
 
 import Groups from './groups';
-const groupsSource = require('!!raw-loader!./groups');
+const groupsSource = require('./groups?raw');
 const groupsHtml = renderToHtml(Groups);
 const groupsSnippet = `<OuiComboBox
   placeholder="These options are grouped"
@@ -87,7 +87,7 @@ const groupsSnippet = `<OuiComboBox
 />`;
 
 import SingleSelection from './single_selection';
-const singleSelectionSource = require('!!raw-loader!./single_selection');
+const singleSelectionSource = require('./single_selection?raw');
 const singleSelectionHtml = renderToHtml(SingleSelection);
 const singleSelectionSnippet = `<OuiComboBox
   placeholder="Select a single option"
@@ -98,7 +98,7 @@ const singleSelectionSnippet = `<OuiComboBox
 />`;
 
 import SingleSelectionCustomOptions from './single_selection_custom_options';
-const singleSelectionCustomOptionsSource = require('!!raw-loader!./single_selection_custom_options');
+const singleSelectionCustomOptionsSource = require('./single_selection_custom_options?raw');
 const singleSelectionCustomOptionsHtml = renderToHtml(
   SingleSelectionCustomOptions
 );
@@ -112,7 +112,7 @@ const singleSelectionCustomOptionsSnippet = `<OuiComboBox
 />`;
 
 import DisallowCustomOptions from './disallow_custom_options';
-const disallowCustomOptionsSource = require('!!raw-loader!./disallow_custom_options');
+const disallowCustomOptionsSource = require('./disallow_custom_options?raw');
 const disallowCustomOptionsHtml = renderToHtml(DisallowCustomOptions);
 const disallowCustomOptionsSnippet = `<OuiComboBox
   placeholder="Select one or more options"
@@ -122,7 +122,7 @@ const disallowCustomOptionsSnippet = `<OuiComboBox
 />`;
 
 import CustomOptionsOnly from './custom_options_only';
-const customOptionsOnlySource = require('!!raw-loader!./custom_options_only');
+const customOptionsOnlySource = require('./custom_options_only?raw');
 const customOptionsOnlyHtml = renderToHtml(CustomOptionsOnly);
 const customOptionsOnlySnippet = `<OuiComboBox
   noSuggestions
@@ -135,7 +135,7 @@ const customOptionsOnlySnippet = `<OuiComboBox
 />`;
 
 import Async from './async';
-const asyncSource = require('!!raw-loader!./async');
+const asyncSource = require('./async?raw');
 const asyncHtml = renderToHtml(Async);
 const asyncSnippet = `<OuiComboBox
   placeholder="Search asynchronously"
@@ -149,7 +149,7 @@ const asyncSnippet = `<OuiComboBox
 />`;
 
 import Virtualized from './virtualized';
-const virtualizedSource = require('!!raw-loader!./virtualized');
+const virtualizedSource = require('./virtualized?raw');
 const virtualizedHtml = renderToHtml(Virtualized);
 const virtualizedSnippet = `<OuiComboBox
   placeholder="Select one or more options"
@@ -159,7 +159,7 @@ const virtualizedSnippet = `<OuiComboBox
 />`;
 
 import Disabled from './disabled';
-const disabledSource = require('!!raw-loader!./disabled');
+const disabledSource = require('./disabled?raw');
 const disabledHtml = renderToHtml(Disabled);
 const disabledSnippet = `<OuiComboBox
   placeholder="Select or create options"
@@ -170,7 +170,7 @@ const disabledSnippet = `<OuiComboBox
 />`;
 
 import Delimiter from './combo_box_delimiter';
-const delimiterSource = require('!!raw-loader!./combo_box_delimiter');
+const delimiterSource = require('./combo_box_delimiter?raw');
 const delimiterHtml = renderToHtml(Delimiter);
 const delimiterSnippet = `<OuiComboBox
   placeholder="Select or create options"
@@ -183,7 +183,7 @@ const delimiterSnippet = `<OuiComboBox
 />`;
 
 import WithIcon from './combo_box_icon';
-const withIconSource = require('!!raw-loader!./combo_box_icon');
+const withIconSource = require('./combo_box_icon?raw');
 const withIconHtml = renderToHtml(WithIcon);
 const withIconSnippet = `<OuiComboBox
   placeholder="Select or create options"
@@ -196,7 +196,7 @@ const withIconSnippet = `<OuiComboBox
 />`;
 
 import StartingWith from './startingWith';
-const startingWithSource = require('!!raw-loader!./startingWith');
+const startingWithSource = require('./startingWith?raw');
 const startingWithHtml = renderToHtml(StartingWith);
 const startingWithSnippet = `<OuiComboBox
   placeholder="Select or create options"
@@ -209,7 +209,7 @@ const startingWithSnippet = `<OuiComboBox
 />`;
 
 import DuplicateOptions from './combo_box_duplicates';
-const duplicateOptionsSource = require('!!raw-loader!./combo_box_duplicates');
+const duplicateOptionsSource = require('./combo_box_duplicates?raw');
 const duplicateOptionsHtml = renderToHtml(DuplicateOptions);
 const duplicateOptionsSnippet = `const options = [{
   label: 'Label',
@@ -221,7 +221,7 @@ const duplicateOptionsSnippet = `const options = [{
 }]`;
 
 import ClearOnBlur from './clear_on_blur';
-const clearOnBlurSource = require('!!raw-loader!./clear_on_blur');
+const clearOnBlurSource = require('./clear_on_blur?raw');
 const clearOnBlurSourceOptionsHtml = renderToHtml(ClearOnBlur);
 const clearOnBlurSnippet = `<OuiComboBox
   placeholder="Select one or more options"
@@ -231,7 +231,7 @@ const clearOnBlurSnippet = `<OuiComboBox
 />`;
 
 import ComboBoxDefaultIcon from './combo_box_default_icon';
-const comboBoxDefaultIconSource = require('!!raw-loader!./combo_box_default_icon');
+const comboBoxDefaultIconSource = require('./combo_box_default_icon?raw');
 const comboBoxDefaultIconSourceOptionsHtml = renderToHtml(ComboBoxDefaultIcon);
 const comboBoxDefaultIconSnippet = `<OuiComboBox
   placeholder="Select one or more options"
@@ -242,7 +242,7 @@ const comboBoxDefaultIconSnippet = `<OuiComboBox
 />`;
 
 import ComboBoxCustomIcon from './combo_box_custom_icon';
-const comboBoxCustomIconSource = require('!!raw-loader!./combo_box_custom_icon');
+const comboBoxCustomIconSource = require('./combo_box_custom_icon?raw');
 const comboBoxCustomIconSourceOptionsHtml = renderToHtml(ComboBoxCustomIcon);
 const comboBoxCustomIconSnippet = `<OuiComboBox
   placeholder="Select one or more options"

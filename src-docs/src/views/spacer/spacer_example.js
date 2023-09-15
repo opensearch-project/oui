@@ -18,7 +18,7 @@ import { OuiCode, OuiSpacer } from '../../../../src/components';
 import { spacerConfig } from './playground';
 
 import Spacer from './spacer';
-const spacerSource = require('!!raw-loader!./spacer');
+const spacerSource = require('./spacer?raw');
 
 const spacerSnippet = '<OuiSpacer size="xs" />';
 

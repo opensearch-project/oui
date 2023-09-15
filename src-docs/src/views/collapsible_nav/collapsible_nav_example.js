@@ -26,16 +26,16 @@ import {
 import { collapsibleNavConfig } from './playground';
 
 import CollapsibleNav from './collapsible_nav';
-const collapsibleNavSource = require('!!raw-loader!./collapsible_nav');
+const collapsibleNavSource = require('./collapsible_nav?raw');
 
 import CollapsibleNavGroup from './collapsible_nav_group';
-const collapsibleNavGroupSource = require('!!raw-loader!./collapsible_nav_group');
+const collapsibleNavGroupSource = require('./collapsible_nav_group?raw');
 
 import CollapsibleNavList from './collapsible_nav_list';
-const collapsibleNavListSource = require('!!raw-loader!./collapsible_nav_list');
+const collapsibleNavListSource = require('./collapsible_nav_list?raw');
 
 import CollapsibleNavAll from './collapsible_nav_all';
-const collapsibleNavAllSource = require('!!raw-loader!./collapsible_nav_all');
+const collapsibleNavAllSource = require('./collapsible_nav_all?raw');
 
 export const CollapsibleNavExample = {
   title: 'Collapsible nav',

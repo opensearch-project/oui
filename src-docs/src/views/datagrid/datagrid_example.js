@@ -26,7 +26,7 @@ import {
 import { Link } from 'react-router-dom';
 
 import DataGrid from './datagrid';
-const dataGridSource = require('!!raw-loader!./datagrid');
+const dataGridSource = require('./datagrid?raw');
 const dataGridHtml = renderToHtml(DataGrid);
 
 import {

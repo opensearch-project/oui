@@ -16,10 +16,10 @@ import { OuiDelayRender, OuiDelayHide } from '../../../../src/components';
 import { renderToHtml } from '../../services';
 import DelayHide from './delay_hide';
 
-const delayHideSource = require('!!raw-loader!./delay_hide');
+const delayHideSource = require('./delay_hide?raw');
 const delayHideHtml = renderToHtml(DelayHide);
 
-const delayRenderSource = require('!!raw-loader!./delay_render');
+const delayRenderSource = require('./delay_render?raw');
 const delayRenderHtml = renderToHtml(DelayRender);
 
 export const DelayRenderExample = {

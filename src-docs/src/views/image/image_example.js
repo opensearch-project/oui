@@ -21,7 +21,7 @@ OuiImage.__docgenInfo.props.src.required = true;
 import imageConfig from './playground';
 
 import Image from './image';
-const imageSource = require('!!raw-loader!./image');
+const imageSource = require('./image?raw');
 const imageHtml = renderToHtml(Image);
 const imageSnippet = `<OuiImage
   alt={description}
@@ -30,7 +30,7 @@ const imageSnippet = `<OuiImage
 `;
 
 import ImageSizes from './image_size';
-const imageSizesSource = require('!!raw-loader!./image_size');
+const imageSizesSource = require('./image_size?raw');
 const imageSizesHtml = renderToHtml(ImageSizes);
 const imageSizesSnippet = `<OuiImage
   size="l"
@@ -40,7 +40,7 @@ const imageSizesSnippet = `<OuiImage
 `;
 
 import ImageZoom from './image_zoom';
-const imageZoomSource = require('!!raw-loader!./image_zoom');
+const imageZoomSource = require('./image_zoom?raw');
 const imageZoomHtml = renderToHtml(ImageZoom);
 const imageZoomSnippet = `<OuiImage
   allowFullScreen
@@ -52,7 +52,7 @@ const imageZoomSnippet = `<OuiImage
 import ImageFloat from './float';
 import { OuiCallOut } from '../../../../src/components/call_out';
 import { Fragment } from 'react-is';
-const imageFloatSource = require('!!raw-loader!./float');
+const imageFloatSource = require('./float?raw');
 const imageFloatHtml = renderToHtml(ImageFloat);
 const imageFloatSnippet = `<OuiImage
   alt={description}

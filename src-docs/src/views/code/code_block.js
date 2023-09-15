@@ -13,11 +13,11 @@ import React from 'react';
 
 import { OuiCodeBlock, OuiSpacer } from '../../../../src/components';
 
-const htmlCode = require('!!raw-loader!./code_examples/example.html').default;
+const htmlCode = require('./code_examples/example.html?raw').default;
 
-const jsCode = require('!!raw-loader!./code_examples/example.js').default;
+const jsCode = require('./code_examples/example.js?raw').default;
 
-const sqlCode = require('!!raw-loader!./code_examples/example.sql').default;
+const sqlCode = require('./code_examples/example.sql?raw').default;
 
 export default () => (
   <div>

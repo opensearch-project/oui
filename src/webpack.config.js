@@ -35,6 +35,7 @@ const webpack = require('webpack');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -54,10 +55,13 @@ const plugins = [
   new webpack.optimize.LimitChunkCountPlugin({
     maxChunks: 1,
   }),
+  new NodePolyfillPlugin(),
 ];
 
 const terserPlugin = new TerserPlugin({
-  sourceMap: true,
+  terserOptions: {
+    sourceMap: true,
+  },
 });
 
 module.exports = {
@@ -78,6 +82,9 @@ module.exports = {
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    fallback: {
+      fs: false,
+    },
   },
 
   // Specify where these libraries should be found
@@ -91,6 +98,10 @@ module.exports = {
   module: {
     rules: [
       {
+        resourceQuery: /raw/,
+        type: 'asset/source',
+      },
+      {
         test: /\.(js|tsx?)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
@@ -102,7 +113,7 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|ttf|eot|ico|png|gif|jpg|jpeg)(\?|$)/,
-        loader: 'file-loader',
+        type: 'asset/resource',
       },
     ],
     strictExportPresence: isProduction,
@@ -113,6 +124,6 @@ module.exports = {
   optimization: {
     minimize: isProduction,
     minimizer: [terserPlugin],
-    noEmitOnErrors: true,
+    emitOnErrors: true,
   },
 };

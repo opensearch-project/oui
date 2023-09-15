@@ -24,15 +24,15 @@ import {
 } from '../../../../src/components';
 
 import SuperDatePicker from './super_date_picker';
-const superDatePickerSource = require('!!raw-loader!./super_date_picker');
+const superDatePickerSource = require('./super_date_picker?raw');
 const superDatePickerHtml = renderToHtml(SuperDatePicker);
 
 import SuperDatePickerConfig from './super_date_picker_config';
-const superDatePickerConfigSource = require('!!raw-loader!./super_date_picker_config');
+const superDatePickerConfigSource = require('./super_date_picker_config?raw');
 const superDatePickerConfigHtml = renderToHtml(SuperDatePicker);
 
 import SuperDatePickerCustomQuickSelect from './super_date_picker_custom_quick_select';
-const superDatePickerCustomQuickSelectSource = require('!!raw-loader!./super_date_picker_custom_quick_select');
+const superDatePickerCustomQuickSelectSource = require('./super_date_picker_custom_quick_select?raw');
 const superDatePickerCustomQuickSelectHtml = renderToHtml(SuperDatePicker);
 
 const superDatePickerSnippet = `<OuiSuperDatePicker

@@ -44,7 +44,7 @@ import IconColors from './icon_colors';
 import AppIconColors from './icon_colors_apps';
 
 import IconTypes from './icon_types';
-const iconTypesSource = require('!!raw-loader!./icon_types');
+const iconTypesSource = require('./icon_types?raw');
 
 export const IconExample = {
   title: 'Icons',

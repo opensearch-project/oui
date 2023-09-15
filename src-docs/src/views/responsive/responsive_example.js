@@ -26,7 +26,7 @@ import { BREAKPOINTS, BREAKPOINT_KEYS } from '../../../../src/services';
 import { OuiBreakpointSize } from '!!prop-loader!../../../../src/services/breakpoint';
 
 import Responsive from './responsive';
-const responsiveSource = require('!!raw-loader!./responsive');
+const responsiveSource = require('./responsive?raw');
 const responsiveHtml = renderToHtml(Responsive);
 const responsiveSnippet = [
   `<OuiHideFor sizes={['xs', 's']}>

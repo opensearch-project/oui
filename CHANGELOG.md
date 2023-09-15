@@ -27,6 +27,7 @@
 - Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
 
 ### 🛠 Maintenance
+- Bump webpack to v5
 
 ### 🪛 Refactoring
 

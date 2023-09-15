@@ -24,7 +24,7 @@ import {
 } from '../../../../src/components';
 
 import PrettyDuration from './pretty_duration';
-const prettyDurationSource = require('!!raw-loader!./pretty_duration');
+const prettyDurationSource = require('./pretty_duration?raw');
 const prettyDurationHtml = renderToHtml(PrettyDuration);
 
 export const PrettyDurationExample = {

@@ -35,7 +35,7 @@ import {
   FieldValueSelectionFilter,
   FieldValueSelectionFilterProps,
 } from './field_value_selection_filter';
-import { Query } from '../query';
+import { Query } from '../query/query';
 
 describe('FieldValueSelectionFilter', () => {
   test('render - options as a function', () => {

@@ -24,7 +24,7 @@ import {
 import { keyPadMenuItemConfig } from './playground';
 
 import KeyPadMenu from './key_pad_menu';
-const keyPadMenuSource = require('!!raw-loader!./key_pad_menu');
+const keyPadMenuSource = require('./key_pad_menu?raw');
 const keyPadMenuHtml = renderToHtml(KeyPadMenu);
 const keyPadMenuSnippet = `<OuiKeyPadMenu>
   <OuiKeyPadMenuItem label={label1} href="https://oui.opensearch.org/latest/">
@@ -37,7 +37,7 @@ const keyPadMenuSnippet = `<OuiKeyPadMenu>
 `;
 
 import KeyPadMenuItemButton from './key_pad_menu_item_button';
-const keyPadMenuItemButtonSource = require('!!raw-loader!./key_pad_menu_item_button');
+const keyPadMenuItemButtonSource = require('./key_pad_menu_item_button?raw');
 const keyPadMenuItemButtonHtml = renderToHtml(KeyPadMenuItemButton);
 const keyPadMenuItemButtonSnippet = `<OuiKeyPadMenuItem
   label={label}
@@ -47,7 +47,7 @@ const keyPadMenuItemButtonSnippet = `<OuiKeyPadMenuItem
 `;
 
 import KeyPadBeta from './key_pad_beta';
-const keyPadBetaSource = require('!!raw-loader!./key_pad_beta');
+const keyPadBetaSource = require('./key_pad_beta?raw');
 const keyPadBetaHtml = renderToHtml(KeyPadBeta);
 const keyPadBetaSnippet = `<OuiKeyPadMenuItem
   label={label}

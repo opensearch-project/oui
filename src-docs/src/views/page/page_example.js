@@ -33,57 +33,57 @@ import {
 } from '../../../../src/components';
 
 import PageNew from './page_new';
-const pageNewSource = require('!!raw-loader!./page_new');
+const pageNewSource = require('./page_new?raw');
 import PageTemplate from './page_template';
-const PageTemplateSource = require('!!raw-loader!./page_template');
+const PageTemplateSource = require('./page_template?raw');
 
 import PageBottomBar from './page_bottom_bar';
-const pageBottomBarSource = require('!!raw-loader!./page_bottom_bar');
+const pageBottomBarSource = require('./page_bottom_bar?raw');
 import PageBottomBarTemplate from './page_bottom_bar_template';
-const PageBottomBarTemplateSource = require('!!raw-loader!./page_bottom_bar_template');
+const PageBottomBarTemplateSource = require('./page_bottom_bar_template?raw');
 
 import PageRestrictingWidth from './page_restricting_width';
-const PageRestrictingWidthSource = require('!!raw-loader!./page_restricting_width');
+const PageRestrictingWidthSource = require('./page_restricting_width?raw');
 import PageRestrictingWidthTemplate from './page_restricting_width_template';
-const PageRestrictingWidthTemplateSource = require('!!raw-loader!./page_restricting_width_template');
+const PageRestrictingWidthTemplateSource = require('./page_restricting_width_template?raw');
 
 import PageCenteredBody from './page_centered_body';
-const PageCenteredBodySource = require('!!raw-loader!./page_centered_body');
+const PageCenteredBodySource = require('./page_centered_body?raw');
 import PageCenteredBodyTemplate from './page_centered_body_template';
-const PageCenteredBodyTemplateSource = require('!!raw-loader!./page_centered_body_template');
+const PageCenteredBodyTemplateSource = require('./page_centered_body_template?raw');
 
 import PageCenteredContent from './page_centered_content';
-const PageCenteredContentSource = require('!!raw-loader!./page_centered_content');
+const PageCenteredContentSource = require('./page_centered_content?raw');
 import PageCenteredContentTemplate from './page_centered_content_template';
-const PageCenteredContentTemplateSource = require('!!raw-loader!./page_centered_content_template');
+const PageCenteredContentTemplateSource = require('./page_centered_content_template?raw');
 
 import PageSimple from './page_simple';
-const PageSimpleSource = require('!!raw-loader!./page_simple');
+const PageSimpleSource = require('./page_simple?raw');
 import PageSimpleTemplate from './page_simple_template';
-const PageSimpleTemplateSource = require('!!raw-loader!./page_simple_template');
+const PageSimpleTemplateSource = require('./page_simple_template?raw');
 
 import PageFullHeight from './page_full_height';
-const PageFullHeightSource = require('!!raw-loader!./page_full_height');
+const PageFullHeightSource = require('./page_full_height?raw');
 import PageFullHeightTemplate from './page_full_height_template';
-const PageFullHeightTemplateSource = require('!!raw-loader!./page_full_height_template');
+const PageFullHeightTemplateSource = require('./page_full_height_template?raw');
 
 import PageSimpleCenteredBody from './page_simple_content_body';
-const PageSimpleCenteredBodySource = require('!!raw-loader!./page_simple_content_body');
+const PageSimpleCenteredBodySource = require('./page_simple_content_body?raw');
 import PageSimpleCenteredBodyTemplate from './page_simple_content_body_template';
-const PageSimpleCenteredBodyTemplateSource = require('!!raw-loader!./page_simple_content_body_template');
+const PageSimpleCenteredBodyTemplateSource = require('./page_simple_content_body_template?raw');
 
 import PageSimpleEmptyContent from './page_simple_empty_content';
-const PageSimpleEmptyContentSource = require('!!raw-loader!./page_simple_empty_content');
+const PageSimpleEmptyContentSource = require('./page_simple_empty_content?raw');
 import PageSimpleEmptyContentTemplate from './page_simple_empty_content_template';
-const PageSimpleEmptyContentTemplateSource = require('!!raw-loader!./page_simple_empty_content_template');
+const PageSimpleEmptyContentTemplateSource = require('./page_simple_empty_content_template?raw');
 
 import PageCustomContent from './page_custom_content';
-const PageCustomContentSource = require('!!raw-loader!./page_custom_content');
+const PageCustomContentSource = require('./page_custom_content?raw');
 import PageCustomContentTemplate from './page_custom_content_template';
-const PageCustomContentTemplateSource = require('!!raw-loader!./page_custom_content_template');
+const PageCustomContentTemplateSource = require('./page_custom_content_template?raw');
 
 import PageLegacy from './page';
-const PageLegacySource = require('!!raw-loader!./page');
+const PageLegacySource = require('./page?raw');
 
 export const PageExample = {
   title: 'Page',

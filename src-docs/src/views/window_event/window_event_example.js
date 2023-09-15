@@ -20,15 +20,15 @@ import { OuiWindowEvent } from '../../../../src/services';
 import { OuiCode, OuiCallOut, OuiSpacer } from '../../../../src/components';
 
 import { BasicWindowEvent } from './basic_window_event';
-const basicSource = require('!!raw-loader!./basic_window_event');
+const basicSource = require('./basic_window_event?raw');
 const basicHtml = renderToHtml(BasicWindowEvent);
 
 import { WindowEventConflict } from './window_event_conflict';
-const conflictSource = require('!!raw-loader!./window_event_conflict');
+const conflictSource = require('./window_event_conflict?raw');
 const conflictHtml = renderToHtml(WindowEventConflict);
 
 import { MousePosition } from './mouse_position';
-const mousePositionSource = require('!!raw-loader!./mouse_position');
+const mousePositionSource = require('./mouse_position?raw');
 const mousePositionHtml = renderToHtml(MousePosition);
 
 export const WindowEventExample = {

@@ -27,15 +27,15 @@ import {
 import NotificationEventPropsMethods from './notification_event_props_methods';
 
 import NotificationEvent from './notification_event';
-const notificationEventSource = require('!!raw-loader!./notification_event');
+const notificationEventSource = require('./notification_event?raw');
 const notificationEventHtml = renderToHtml(NotificationEvent);
 
 import NotificationEventFlexible from './notification_event_flexible';
-const notificationEventFlexibleSource = require('!!raw-loader!./notification_event_flexible');
+const notificationEventFlexibleSource = require('./notification_event_flexible?raw');
 const notificationEventFlexibleHtml = renderToHtml(NotificationEventFlexible);
 
 import NotificationsFeed from './notifications_feed';
-const notificationsFeedSource = require('!!raw-loader!./notifications_feed');
+const notificationsFeedSource = require('./notifications_feed?raw');
 const notificationsFeedHtml = renderToHtml(NotificationsFeed);
 
 const notificationEventSnippet = `<OuiNotificationEvent
