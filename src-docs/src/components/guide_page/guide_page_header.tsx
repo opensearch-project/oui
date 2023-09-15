@@ -11,8 +11,6 @@
 
 import React, { useState } from 'react';
 
-import '../../assets/version-selector';
-
 import {
   OuiHeaderLogo,
   OuiHeader,
@@ -25,22 +23,9 @@ import { useIsWithinBreakpoints } from '../../../../src/services/hooks';
 import { OuiButtonEmpty } from '../../../../src/components/button';
 
 import { GuideThemeSelector } from '../guide_theme_selector';
+import { GuideVersionSelector } from '../guide_version_selector';
 
 const pkg = require('../../../../package.json');
-
-declare global {
-  // eslint-disable-next-line @typescript-eslint/no-namespace
-  namespace JSX {
-    interface IntrinsicElements {
-      'version-selector': VersionSelectorAttributes;
-    }
-
-    interface VersionSelectorAttributes
-      extends React.HTMLAttributes<HTMLElement> {
-      selected: string;
-    }
-  }
-}
 
 export const GuidePageHeader: React.FunctionComponent<{}> = () => {
   const isMobileSize = useIsWithinBreakpoints(['xs', 's']);
@@ -55,7 +40,7 @@ export const GuidePageHeader: React.FunctionComponent<{}> = () => {
 
   function renderVersion() {
     const trimVersion = pkg.version.replace(/^(\d+\.\d+)\..*/, '$1');
-    return <version-selector selected={trimVersion} />;
+    return <GuideVersionSelector selected={trimVersion} />;
   }
 
   function renderGithub() {
