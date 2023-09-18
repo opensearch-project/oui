@@ -47,6 +47,49 @@
 
 - Clean up focus background implementation ([#962](https://github.com/opensearch-project/oui/pull/962))
 
+## [`1.2.0`](https://github.com/opensearch-project/oui/tree/1.2.0)
+
+- [CVE-2022-25881] Bump node-sass from 7.0.1 to 8.0.0 ([#592](https://github.com/opensearch-project/oui/pull/592))
+- Add icons for Dashboards 2.7 ([#658](https://github.com/opensearch-project/oui/pull/658))
+- Update loader-utils to 1.4.2 ([#672](https://github.com/opensearch-project/oui/pull/672))
+- Add deprecation comments to OuiLoadingElastic and OuiLoadingKibana ([#606](https://github.com/opensearch-project/oui/pull/606))
+- Deprecate `iconType` and `iconProps` from `OuiPageHeader` ([#759](https://github.com/opensearch-project/oui/pull/759))
+- Bump rimraf from 3.0.2 to 5.0.0 ([#717](https://github.com/opensearch-project/oui/pull/717))
+- Update header logo defaults ([#621](https://github.com/opensearch-project/oui/pull/621))
+- Bump sass-loader to 10.4.1 ([#713](https://github.com/opensearch-project/oui/pull/713))
+- Fix combo box onFocus bug ([#775](https://github.com/opensearch-project/oui/pull/775))
+- Fix breadcrumb styling with a single breadcrumb ([#778](https://github.com/opensearch-project/oui/pull/778))
+
+## [`1.1.2`](https://github.com/opensearch-project/oui/tree/1.1.2)
+
+- Add anomaly detection icon ([#781](https://github.com/opensearch-project/oui/pull/781))
+- Replace Elastic with OpenSearch in the examples ([#622](https://github.com/opensearch-project/oui/issues/622))
+
+## [`1.1.1`](https://github.com/opensearch-project/oui/tree/1.1.1)
+
+- Revert "Rectify super date picker functionality" ([#724](https://github.com/opensearch-project/oui/pull/724))
+
+## [`1.1.0`](https://github.com/opensearch-project/oui/tree/1.1.0)
+
+- Bump sass-loader to 10.4.1 ([#715](https://github.com/opensearch-project/oui/pull/715))
+- Revert updated breadcrumb styling ([#706](https://github.com/opensearch-project/oui/pull/706))
+- Update loader-utils to 1.4.2 ([#704](https://github.com/opensearch-project/oui/pull/704))
+- Fix aliasing issue ([#702](https://github.com/opensearch-project/oui/pull/702))
+- Add icons for Dashboards 2.7 ([#685](https://github.com/opensearch-project/oui/pull/685))
+- Rectify super date picker functionality ([#682](https://github.com/opensearch-project/oui/pull/682))
+- Remove docs folder ([#678](https://github.com/opensearch-project/oui/pull/678))
+- Add leading slash to test in .npmignore ([#690](https://github.com/opensearch-project/oui/pull/690))
+- Bump node-sass from 7.0.1 to 8.0.0 ([#673](https://github.com/opensearch-project/oui/pull/673))
+- Publish OUI to npmjs using tarball ([#667](https://github.com/opensearch-project/oui/pull/667))
+- Add build artifacts to release ([#664](https://github.com/opensearch-project/oui/pull/664))
+- Create OuiLoadingDashboards component ([#620](https://github.com/opensearch-project/oui/pull/620))
+- Fix yo-doc and yo-component crashes ([#616](https://github.com/opensearch-project/oui/pull/616))
+- Update logo_opensearch.js file ([#614](https://github.com/opensearch-project/oui/pull/614))
+- Change OuiTitle size property to m in tooltip example ([#612](https://github.com/opensearch-project/oui/pull/612))
+- Readme Opensearch Logo linking to non-existent file ([#589](https://github.com/opensearch-project/oui/pull/589))
+- Remove Elastic references from .md docs ([#588](https://github.com/opensearch-project/oui/pull/588))
+- Fix deprecated webpack configuration ([#586](https://github.com/opensearch-project/oui/pull/586))
+
 ## [`1.0.0`](https://github.com/opensearch-project/oui/tree/1.0.0)
 
 - Initial forked public release
