@@ -11,6 +11,7 @@
 ### 📈 Features/Enhancements
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+- Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
 
 ### 🐛 Bug Fixes
 
