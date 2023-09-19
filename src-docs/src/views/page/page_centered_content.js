@@ -26,10 +26,9 @@ export default ({ button = <></>, content, sideNav }) => (
       {sideNav}
     </OuiPageSideBar>
 
-    <OuiPageBody panelled>
+    <OuiPageBody>
       <OuiPageHeader
         restrictWidth
-        iconType="logoElastic"
         pageTitle="Page title"
         rightSideItems={[button]}
       />

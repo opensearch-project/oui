@@ -9,15 +9,11 @@
  * GitHub history for details.
  */
 
-import React, { useContext } from 'react';
+import React from 'react';
 
 import { OuiPanel, OuiCode, OuiSpacer } from '../../../../src/components';
-import { ThemeContext } from '../../components';
 
 export default () => {
-  const themeContext = useContext(ThemeContext);
-  const isCascadiaTheme = themeContext.theme.includes('cascadia');
-
   return (
     <div>
       <OuiPanel hasShadow={false}>
@@ -25,16 +21,6 @@ export default () => {
       </OuiPanel>
 
       <OuiSpacer />
-
-      {/* This example only works for the Cascadia theme. The default theme has `hasBorder={true}` by default. */}
-      {isCascadiaTheme && (
-        <>
-          <OuiPanel hasBorder={true}>
-            <OuiCode>{'hasBorder={true}'}</OuiCode>
-          </OuiPanel>
-          <OuiSpacer />
-        </>
-      )}
 
       <OuiPanel hasShadow={false} hasBorder={false}>
         <OuiCode>{'hasShadow={false} hasBorder={false}'}</OuiCode>

@@ -10,6 +10,8 @@
  */
 
 .ouiCollapsibleNavGroup {
+  background-color: $ouiCollapsibleNavGroupNoneBackgroundColor;
+
   &:not(:first-child) {
     border-top: $ouiBorderThin;
   }

@@ -10,13 +10,12 @@
  */
 
 import * as React from 'react';
-
 const OuiIconLogoBusinessAnalytics = ({ title, titleId, ...props }) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
     width={32}
     height={32}
     viewBox="0 0 32 32"
-    xmlns="http://www.w3.org/2000/svg"
     aria-labelledby={titleId}
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
@@ -26,8 +25,8 @@ const OuiIconLogoBusinessAnalytics = ({ title, titleId, ...props }) => (
         d="M0 22c0 5.522 4.478 10 10 10V12C4.478 12 0 16.478 0 22"
       />
       <path
-        className="ouiIcon__fillNegative"
         d="M10 12v10h10c0-5.522-4.478-10-10-10"
+        className="ouiIcon__fillNegative"
       />
       <path
         fill="#F04E98"
@@ -36,5 +35,4 @@ const OuiIconLogoBusinessAnalytics = ({ title, titleId, ...props }) => (
     </g>
   </svg>
 );
-
 export const icon = OuiIconLogoBusinessAnalytics;

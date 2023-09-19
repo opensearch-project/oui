@@ -29,12 +29,11 @@ export default ({ button = <></>, content, sideNav, bottomBar }) => {
       </OuiPageSideBar>
 
       {/* Double OuiPageBody to accommodate for the bottom bar */}
-      <OuiPageBody panelled paddingSize="none">
+      <OuiPageBody paddingSize="none">
         <OuiPageBody paddingSize="l">
           <OuiPageHeader
             bottomBorder
             restrictWidth
-            iconType="logoElastic"
             pageTitle="Page title"
             rightSideItems={[button]}
           />

@@ -28,6 +28,10 @@
  * under the License.
  */
 
+export {
+  OuiLoadingDashboards,
+  OuiLoadingDashboardsProps,
+} from './loading_dashboards';
 export { OuiLoadingKibana, OuiLoadingKibanaProps } from './loading_kibana';
 export { OuiLoadingElastic, OuiLoadingElasticProps } from './loading_elastic';
 export { OuiLoadingChart, OuiLoadingChartProps } from './loading_chart';

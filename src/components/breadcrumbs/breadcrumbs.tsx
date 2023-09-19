@@ -280,7 +280,9 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
     let wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
 
     if (isFirstBreadcrumb) {
-      const breadcrumbWallClasses = classNames('ouiBreadcrumbWall');
+      const breadcrumbWallClasses = classNames('ouiBreadcrumbWall', {
+        'ouiBreadcrumbWall--single': isLastBreadcrumb,
+      });
 
       wrapper = <div className={breadcrumbWallClasses}>{wrapper}</div>;
     }

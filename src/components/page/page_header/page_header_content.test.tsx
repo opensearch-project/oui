@@ -69,26 +69,6 @@ describe('OuiPageHeaderContent', () => {
 
         expect(component).toMatchSnapshot();
       });
-
-      test('is rendered with icon', () => {
-        const component = render(
-          <OuiPageHeaderContent pageTitle="Page title" iconType="logoKibana" />
-        );
-
-        expect(component).toMatchSnapshot();
-      });
-
-      test('is rendered with icon and iconProps', () => {
-        const component = render(
-          <OuiPageHeaderContent
-            pageTitle="Page title"
-            iconType="logoKibana"
-            iconProps={requiredProps}
-          />
-        );
-
-        expect(component).toMatchSnapshot();
-      });
     });
 
     describe('tabs', () => {

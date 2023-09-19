@@ -17,7 +17,7 @@ import React, {
   useMemo,
   useEffect,
 } from 'react';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 import { OuiDataGrid, OuiText } from '../../../../src/components/';
 
@@ -48,8 +48,8 @@ function RenderCellValue({ rowIndex, columnId }) {
 
   if (data[rowIndex] == null) {
     data[rowIndex] = {
-      name: fake('{{lorem.text}}'),
-      text: fake('{{lorem.text}}'),
+      name: faker.helpers.fake('{{lorem.text}}'),
+      text: faker.helpers.fake('{{lorem.text}}'),
     };
   }
 

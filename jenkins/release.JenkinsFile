@@ -1,4 +1,4 @@
-lib = library(identifier: 'jenkins@1.1.1', retriever: modernSCM([
+lib = library(identifier: 'jenkins@3.0.0', retriever: modernSCM([
     $class: 'GitSCMSource',
     remote: 'https://github.com/opensearch-project/opensearch-build-libraries.git',
 ]))
@@ -6,6 +6,10 @@ lib = library(identifier: 'jenkins@1.1.1', retriever: modernSCM([
 standardReleasePipelineWithGenericTrigger(
     tokenIdCredential: 'jenkins-oui-generic-webhook-token',
     causeString: 'A tag was cut on opensearch-project/oui repository causing this workflow to run',
+    downloadReleaseAsset: true,
     publishRelease: true) {
-        publishToNpm(repository: 'https://github.com/opensearch-project/oui', tag: "$tag")
+        publishToNpm(
+            publicationType: 'artifact',
+            artifactPath: "${WORKSPACE}/oui/oui.tar.gz"
+            )
     }

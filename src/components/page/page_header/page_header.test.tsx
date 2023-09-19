@@ -30,7 +30,7 @@
 
 import React from 'react';
 import { render } from 'enzyme';
-import { requiredProps } from '../../../test/required_props';
+import { requiredProps } from '../../../test';
 
 import { OuiPageHeader, OuiPageHeaderProps } from './page_header';
 import { ALIGN_ITEMS } from './page_header_content';
@@ -65,8 +65,6 @@ describe('OuiPageHeader', () => {
         const component = render(
           <OuiPageHeader
             pageTitle="Page title"
-            iconType="logoKibana"
-            iconProps={requiredProps}
             tabs={tabs}
             tabsProps={requiredProps}
             description="Description"

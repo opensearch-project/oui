@@ -66,7 +66,7 @@ export const HomeView = () => (
               </p>
               <OuiFlexGroup gutterSize="xl" wrap responsive={false}>
                 <OuiFlexItem grow={false}>
-                  <OuiLink href="https://github.com/opensearch-project/oui/blob/master/wiki/consuming.md">
+                  <OuiLink href="https://github.com/opensearch-project/oui/blob/main/wiki/consuming.md">
                     <strong>Getting started</strong>
                   </OuiLink>
                 </OuiFlexItem>
@@ -76,7 +76,7 @@ export const HomeView = () => (
                   </Link>
                 </OuiFlexItem>
                 <OuiFlexItem grow={false}>
-                  <OuiLink href="https://github.com/opensearch-project/oui/blob/master/CONTRIBUTING.md">
+                  <OuiLink href="https://github.com/opensearch-project/oui/blob/main/CONTRIBUTING.md">
                     <strong>Contributing</strong>
                   </OuiLink>
                 </OuiFlexItem>
@@ -212,7 +212,7 @@ export const HomeView = () => (
         <OuiText size="xs" textAlign="center" color="subdued">
           <p>
             OUI is licensed under{' '}
-            <OuiLink href="https://github.com/opensearch-project/oui/blob/master/LICENSE">
+            <OuiLink href="https://github.com/opensearch-project/oui/blob/main/LICENSE">
               Apache License 2.0
             </OuiLink>{' '}
             | © OpenSearch contributors, {new Date().getFullYear()}.

@@ -46,77 +46,71 @@ const HeaderUpdates = () => {
 
   const alerts = [
     {
-      title: 'Control access to features',
-      text: 'Show or hide applications and features per space in Kibana.',
-      action: <OuiLink href="">Learn about feature controls</OuiLink>,
-      date: '1 May 2019',
-      badge: <OuiBadge>7.1</OuiBadge>,
+      title: 'New release coming soon',
+      text: 'Lots of requested features',
+      action: (
+        <OuiLink href="https://opensearch.org/blog">Review the roadmap</OuiLink>
+      ),
+      date: '20 Jul 2023',
+      badge: <OuiBadge>2.10</OuiBadge>,
     },
     {
-      title: 'Kibana 7.0 is turning heads',
+      title: 'OpenSearch 2.8 is here!',
       text:
-        'Simplified navigation, responsive dashboards, dark mode… pick your favorite.',
+        'OpenSearch 2.8.0 is now available, with a host of new features and enhancements and experimental functionality that are sure to generate excitement within the community!',
       action: (
-        <OuiLink
-          target="_blank"
-          external
-          href="https://www.elastic.co/blog/kibana-7-0-0-released">
+        <OuiLink target="_blank" external href="https://opensearch.org/blog">
           Read the blog
         </OuiLink>
       ),
-      date: '10 April 2019',
-      badge: <OuiBadge color="hollow">7.0</OuiBadge>,
+      date: '06 Jun 2023',
+      badge: <OuiBadge color="hollow">2.8</OuiBadge>,
     },
     {
-      title: 'Enter dark mode',
+      title: 'Query your data across OpenSearch clusters with PPL',
       text:
-        'Kibana now supports the easy-on-the-eyes theme across the entire UI.',
-      action: <OuiLink href="">Go to Advanced Settings</OuiLink>,
-      date: '10 April 2019',
-      badge: <OuiBadge color="hollow">7.0</OuiBadge>,
-    },
-    {
-      title: 'Pixel-perfect Canvas is production ready',
-      text: 'Your creative space for visualizing data awaits.',
+        'This release expands the OpenSearch observability toolkit, including cross-cluster support for queries using Piped Processing Language (PPL).',
       action: (
-        <OuiLink
-          target="_blank"
-          external
-          href="https://www.elastic.co/webinars/intro-to-canvas-a-new-way-to-tell-visual-stories-in-kibana">
-          Watch the webinar
-        </OuiLink>
+        <OuiLink href="https://opensearch.org/blog">Check out the docs</OuiLink>
       ),
-      date: '26 March 2019',
-      badge: <OuiBadge color="hollow">6.7</OuiBadge>,
+      date: '06 Jun 2023',
+      badge: <OuiBadge color="hollow">2.8</OuiBadge>,
     },
     {
-      title: '6.7 release notes',
-      text: 'Stay up-to-date on the latest and greatest features.',
+      title: 'Simplify index management tasks',
+      text:
+        'Now, operations like refreshing the index to make the latest data available for search are point-and-click.',
       action: (
-        <OuiLink
-          target="_blank"
-          external
-          href="https://www.elastic.co/guide/en/kibana/6.7/release-notes-6.7.0.html">
+        <OuiLink target="_blank" external href="https://opensearch.org/blog">
           Check out the docs
         </OuiLink>
       ),
-      date: '26 March 2019',
-      badge: <OuiBadge color="hollow">6.7</OuiBadge>,
+      date: '06 Jun 2023',
+      badge: <OuiBadge color="hollow">2.8</OuiBadge>,
     },
     {
-      title: 'Rollups made simple in Kibana',
+      title: 'Augment search applications with experimental functionality',
       text:
-        'Save space and preserve the integrity of your data directly in the UI.',
+        'For search application builders, this functionality unlocks the ability to integrate complex chains of search processors within OpenSearch with no additional processing required by end users.',
       action: (
-        <OuiLink
-          target="_blank"
-          external
-          href="https://www.elastic.co/blog/how-to-create-manage-and-visualize-elasticsearch-rollup-data-in-kibana">
-          Read the blog
+        <OuiLink target="_blank" external href="https://opensearch.org/blog">
+          Leave feeback
         </OuiLink>
       ),
-      date: '10 January 2019',
-      badge: <OuiBadge color="hollow">6.5</OuiBadge>,
+      date: '06 Jun 2023',
+      badge: <OuiBadge color="hollow">2.8</OuiBadge>,
+    },
+    {
+      title: 'Enhancements to existing features',
+      text:
+        'This release includes a range of enhancements to existing features. ',
+      action: (
+        <OuiLink target="_blank" external href="https://opensearch.org/blog">
+          Check out the release notes
+        </OuiLink>
+      ),
+      date: '06 Jun 2023',
+      badge: <OuiBadge color="hollow">2.8</OuiBadge>,
     },
   ];
 
@@ -342,7 +336,7 @@ export default () => {
       <OuiHeader position={position} theme={theme}>
         <OuiHeaderSection grow={false}>
           <OuiHeaderSectionItem border="right">
-            <OuiHeaderLogo>Elastic</OuiHeaderLogo>
+            <OuiHeaderLogo>OpenSearch</OuiHeaderLogo>
           </OuiHeaderSectionItem>
         </OuiHeaderSection>
         <OuiHeaderSection side="right">

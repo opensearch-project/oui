@@ -17,15 +17,20 @@ import { GuideSectionTypes } from '../../components';
 import {
   OuiCode,
   OuiText,
+  OuiLoadingDashboards,
   OuiLoadingSpinner,
   OuiLoadingChart,
   OuiLoadingContent,
 } from '../../../../src/components';
 import {
+  loadingDashboardsConfig,
   loadingChartConfig,
   loadingSpinnerConfig,
   loadingContentConfig,
 } from './playground';
+
+import LoadingDashboards from './loading_dashboards';
+const loadingDashboardsSource = require('!!raw-loader!./loading_dashboards');
 
 import LoadingChart from './loading_chart';
 const loadingChartSource = require('!!raw-loader!./loading_chart');
@@ -50,6 +55,25 @@ export const LoadingExample = {
     </OuiText>
   ),
   sections: [
+    {
+      title: 'Dashboards',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: loadingDashboardsSource,
+        },
+      ],
+      text: (
+        <p>
+          The <strong>OuiLoadingDashboards</strong> loader is great for full
+          page or Dashboards product loading screens.
+        </p>
+      ),
+      props: { OuiLoadingDashboards },
+      demo: <LoadingDashboards />,
+      snippet: '<OuiLoadingDashboards size="m" />',
+      playground: loadingDashboardsConfig,
+    },
     {
       title: 'Chart',
       source: [

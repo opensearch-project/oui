@@ -36,7 +36,7 @@ import React, {
   useCallback,
 } from 'react';
 import classnames from 'classnames';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 
 import { CommonProps } from '../common';
 import { OuiFocusTrap } from '../focus_trap';
@@ -101,7 +101,7 @@ export const OuiInputPopover: FunctionComponent<OuiInputPopoverProps> = ({
 
   const onKeyDown = (event: React.KeyboardEvent) => {
     if (panelEl && event.key === cascadingMenuKeys.TAB) {
-      const tabbableItems = tabbable(panelEl).filter((el: HTMLElement) => {
+      const tabbableItems = tabbable(panelEl).filter((el) => {
         return (
           Array.from(el.attributes)
             .map((el) => el.name)

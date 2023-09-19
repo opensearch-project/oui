@@ -19,7 +19,6 @@ export default ({ button = <></>, content, sideNav }) => {
       pageSideBar={sideNav}
       restrictWidth="75%"
       pageHeader={{
-        iconType: 'logoElastic',
         pageTitle: 'Page title',
         rightSideItems: [button],
         description: 'Restricting the width to 75%.',

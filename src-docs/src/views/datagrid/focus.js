@@ -11,7 +11,7 @@
 
 /* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState, useCallback, useMemo } from 'react';
-import { fake } from 'faker';
+import { faker } from '@faker-js/faker';
 
 import {
   OuiDataGrid,
@@ -30,17 +30,17 @@ const data = [];
 
 for (let i = 0; i < 10; i++) {
   data.push([
-    <span>{fake('{{name.firstName}}')}</span>,
-    <span>{fake('{{name.firstName}}')}</span>,
+    <span>{faker.helpers.fake('{{person.firstName}}')}</span>,
+    <span>{faker.helpers.fake('{{person.firstName}}')}</span>,
 
     <span>
       <OuiLink href="#/tabular-content/data-grid-focus">
-        {fake('{{internet.email}}')}
+        {faker.helpers.fake('{{internet.email}}')}
       </OuiLink>
     </span>,
     <span>
       <OuiLink href="#/tabular-content/data-grid-focus">
-        {fake('{{internet.email}}')}
+        {faker.helpers.fake('{{internet.email}}')}
       </OuiLink>
     </span>,
 

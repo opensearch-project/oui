@@ -321,10 +321,6 @@ const borderRadiusSmallExample = `border: $ouiBorderThin;
 border-radius: $ouiBorderRadiusSmall;
 `;
 
-const importKibanaExample = `// In Kibana you can add this to the top of your Sass file
-@import 'ui/public/styles/styling_constants';
-`;
-
 const importOutsideExample = `// In an outside project, import the core variables like so
 @import '@opensearch-project/oui/src/global_styling/functions/index';
 @import '@opensearch-project/oui/src/global_styling/variables/index';
@@ -611,11 +607,11 @@ export const SassGuidelines = ({ selectedTheme }) => {
       <OuiText grow={false}>
         <p>
           View the{' '}
-          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/variables/_typography.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/variables/_typography.scss">
             variable
           </OuiLink>{' '}
           and{' '}
-          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_typography.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/mixins/_typography.scss">
             mixins
           </OuiLink>{' '}
           Sass code for typography. For most of your components we recommend
@@ -753,7 +749,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
           <OuiText>
             <p>
-              <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_shadow.scss">
+              <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/mixins/_shadow.scss">
                 View the Sass code for shadow mixins
               </OuiLink>
               .
@@ -888,7 +884,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
             <p>
               If you need to further customize the position or side of the
               overflow shadow use the <OuiCode>ouiOverflowShadow</OuiCode>{' '}
-              <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_shadow.scss">
+              <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/mixins/_shadow.scss">
                 mixin
               </OuiLink>
               .
@@ -903,7 +899,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
       <OuiText>
         <p>
-          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/mixins/_responsive.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/mixins/_responsive.scss">
             View the Sass code for media queries
           </OuiLink>
           .
@@ -983,7 +979,7 @@ export const SassGuidelines = ({ selectedTheme }) => {
       <GuideRuleTitle>Animation</GuideRuleTitle>
       <OuiText grow={false}>
         <p>
-          <OuiLink href="https://github.com/opensearch-project/oui/blob/master/src/global_styling/variables/_animations.scss">
+          <OuiLink href="https://github.com/opensearch-project/oui/blob/main/src/global_styling/variables/_animations.scss">
             View the Sass code for animation
           </OuiLink>
           .
@@ -1096,21 +1092,6 @@ export const SassGuidelines = ({ selectedTheme }) => {
 
           <OuiSpacer />
 
-          <OuiText grow={false}>
-            <p>
-              Most OUI based projects should already import the OUI global
-              scope. For example, Kibana has its own liner that will give you
-              everything on this page.
-            </p>
-          </OuiText>
-          <OuiSpacer />
-          <OuiCodeBlock
-            language="scss"
-            transparentBackground
-            paddingSize="none">
-            {importKibanaExample}
-          </OuiCodeBlock>
-          <OuiSpacer />
           <OuiText grow={false}>
             <p>
               If you want to construct your own import, you would just need to

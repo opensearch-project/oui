@@ -68,7 +68,7 @@ export default () => (
         Sometimes you need to color entire blocks of text, no matter what is in
         them. You can always apply color directly (versus using the separated
         component) to make it easy. Links should still{' '}
-        <a href="#">properly color</a>.
+        <a href="https://oui.opensearch.org/latest/">properly color</a>.
       </p>
     </OuiText>
   </div>

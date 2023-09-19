@@ -354,56 +354,6 @@ exports[`OuiPageHeaderContent props pageTitle is rendered 1`] = `
 </div>
 `;
 
-exports[`OuiPageHeaderContent props pageTitle is rendered with icon 1`] = `
-<div
-  class="ouiPageHeaderContent"
->
-  <div
-    class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsFlexStart ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiPageHeaderContent__top"
-  >
-    <div
-      class="ouiFlexItem"
-    >
-      <h1
-        class="ouiTitle ouiTitle--large"
-      >
-        <span
-          class="ouiPageHeaderContent__titleIcon"
-          data-ouiicon-type="logoKibana"
-        />
-        Page title
-      </h1>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`OuiPageHeaderContent props pageTitle is rendered with icon and iconProps 1`] = `
-<div
-  class="ouiPageHeaderContent"
->
-  <div
-    class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsFlexStart ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiPageHeaderContent__top"
-  >
-    <div
-      class="ouiFlexItem"
-    >
-      <h1
-        class="ouiTitle ouiTitle--large"
-      >
-        <span
-          aria-label="aria-label"
-          class="ouiPageHeaderContent__titleIcon testClass1 testClass2"
-          data-ouiicon-type="logoKibana"
-          data-test-subj="test subject string"
-        />
-        Page title
-      </h1>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`OuiPageHeaderContent props responsive is rendered as false 1`] = `
 <div
   class="ouiPageHeaderContent"

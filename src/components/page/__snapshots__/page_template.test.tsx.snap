@@ -1098,7 +1098,6 @@ exports[`OuiPageTemplate with bottomBar is rendered 1`] = `
     <section
       aria-label="Page level controls"
       class="ouiBottomBar ouiBottomBar--sticky"
-      style="left:0;right:0;bottom:0"
     >
       <h2
         class="ouiScreenReaderOnly"

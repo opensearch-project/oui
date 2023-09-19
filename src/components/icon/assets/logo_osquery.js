@@ -10,13 +10,12 @@
  */
 
 import * as React from 'react';
-
 const OuiIconLogoOsquery = ({ title, titleId, ...props }) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
     width={32}
     height={32}
     viewBox="0 0 32 32"
-    xmlns="http://www.w3.org/2000/svg"
     aria-labelledby={titleId}
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
@@ -44,5 +43,4 @@ const OuiIconLogoOsquery = ({ title, titleId, ...props }) => (
     </g>
   </svg>
 );
-
 export const icon = OuiIconLogoOsquery;

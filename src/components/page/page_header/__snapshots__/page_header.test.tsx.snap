@@ -210,12 +210,6 @@ exports[`OuiPageHeader props page content props are passed down is rendered 1`] 
         <h1
           class="ouiTitle ouiTitle--large"
         >
-          <span
-            aria-label="aria-label"
-            class="ouiPageHeaderContent__titleIcon testClass1 testClass2"
-            data-ouiicon-type="logoKibana"
-            data-test-subj="test subject string"
-          />
           Page title
         </h1>
         <div

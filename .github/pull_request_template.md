@@ -1,15 +1,17 @@
 ### Description
-[Describe what this change achieves]
- 
+<!-- Describe what this change achieves -->
+
 ### Issues Resolved
-[List any issues this PR will resolve]
- 
+<!-- List any issues this PR will resolve. -->
+<!-- Example: Fixes #1234 -->
+
 ### Check List
 - [ ] New functionality includes testing.
 - [ ] New functionality has been documented.
 - [ ] All tests pass
   - [ ] `yarn lint`
   - [ ] `yarn test-unit`
+- [ ] Update [CHANGELOG.md](./../CHANGELOG.md)
 - [ ] Commits are signed per the DCO using --signoff
 
 By submitting this pull request, I confirm that my contribution is made under the terms of the Apache 2.0 license.

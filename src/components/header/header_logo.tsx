@@ -54,8 +54,8 @@ export type OuiHeaderLogoProps = CommonProps &
   };
 
 export const OuiHeaderLogo: FunctionComponent<OuiHeaderLogoProps> = ({
-  iconType = 'logoElastic',
-  iconTitle = 'Elastic',
+  iconType = 'logoOpenSearch',
+  iconTitle = 'OpenSearch',
   href,
   rel,
   target,

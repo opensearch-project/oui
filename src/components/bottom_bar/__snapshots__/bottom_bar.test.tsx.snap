@@ -6,7 +6,6 @@ Array [
     aria-label="aria-label"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium testClass1 testClass2"
     data-test-subj="test subject string"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -29,7 +28,6 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -50,7 +48,6 @@ exports[`OuiBottomBar props bodyClassName is rendered 1`] = `
 <section
   aria-label="Page level controls"
   class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
-  style="left: 0px; right: 0px; bottom: 0px;"
 >
   <h2
     class="ouiScreenReaderOnly"
@@ -65,7 +62,6 @@ Array [
   <section
     aria-label="This should have been label"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -87,7 +83,6 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingLarge"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -109,7 +104,6 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -131,7 +125,6 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -153,7 +146,6 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingSmall"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -175,7 +167,6 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -219,7 +210,6 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--static ouiBottomBar--paddingMedium"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -241,7 +231,6 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--sticky ouiBottomBar--paddingMedium"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -263,7 +252,7 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
-    style="left:12px;right:0;bottom:0"
+    style="left:12px"
   >
     <h2
       class="ouiScreenReaderOnly"
@@ -285,7 +274,6 @@ Array [
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
-    style="left:0;right:0;bottom:0"
   >
     <h2
       class="ouiScreenReaderOnly"

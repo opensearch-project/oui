@@ -43,7 +43,7 @@ import React, {
   CSSProperties,
 } from 'react';
 import classNames from 'classnames';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 import { OuiI18n, useOuiI18n } from '../i18n';
 import { CommonProps, OneOf } from '../common';
 import {

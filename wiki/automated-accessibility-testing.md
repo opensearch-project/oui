@@ -46,4 +46,4 @@ The **set** of failures for each page will be denoted by a line with the URL of 
 
 ## Testing environment
 
-This testing suite runs in a Docker container built and maintained by the OUI team and published to the Elastic Container Registry. Any environment-related failures should be investigated starting with the Docker directory located at [`scripts/docker-puppeteer/`](../scripts/docker-puppeteer/README.md).
+This testing suite runs in a Docker container built and maintained by the OUI team. Any environment-related failures should be investigated starting with the Docker directory located at [`scripts/docker-puppeteer/`](../scripts/docker-puppeteer/README.md).

@@ -1,5 +1,4 @@
-![OpenSearch logo](OpenSearch.svg)
-
+![OpenSearch logo](https://opensearch.org/assets/img/opensearch-logo-themed.svg)
 # OpenSearch UI Framework
 
 - [Welcome!](#welcome)

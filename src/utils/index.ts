@@ -29,3 +29,4 @@
  */
 
 export * from './prop_types';
+export * from './deprecated';

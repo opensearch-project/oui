@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-const rimraf = require('rimraf');
+const { rimraf } = require('rimraf');
 
 rimraf.sync('dist');
 rimraf.sync('lib');

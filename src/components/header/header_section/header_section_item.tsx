@@ -44,7 +44,6 @@ const borderToClassNameMap: { [border in Border]: string | undefined } = {
 export type OuiHeaderSectionItemProps = CommonProps & {
   /**
    * Side to display a short border on.
-   * Not supported in Cascadia theme.
    */
   border?: Border;
   /**

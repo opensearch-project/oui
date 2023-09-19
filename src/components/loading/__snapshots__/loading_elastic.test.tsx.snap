@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OuiLoadingElastic is rendered 1`] = `
+<span
+  aria-label="aria-label"
+  class="ouiLoadingElastic ouiLoadingElastic--medium testClass1 testClass2"
+  data-test-subj="test subject string"
+>
+  <span
+    data-ouiicon-type="logoOpenSearch"
+  />
+</span>
+`;
+
+exports[`OuiLoadingElastic size l is rendered 1`] = `
+<span
+  aria-label="aria-label"
+  class="ouiLoadingElastic ouiLoadingElastic--large testClass1 testClass2"
+  data-test-subj="test subject string"
+>
+  <span
+    data-ouiicon-type="logoOpenSearch"
+  />
+</span>
+`;
+
+exports[`OuiLoadingElastic size m is rendered 1`] = `
+<span
+  aria-label="aria-label"
+  class="ouiLoadingElastic ouiLoadingElastic--medium testClass1 testClass2"
+  data-test-subj="test subject string"
+>
+  <span
+    data-ouiicon-type="logoOpenSearch"
+  />
+</span>
+`;
+
+exports[`OuiLoadingElastic size xl is rendered 1`] = `
+<span
+  aria-label="aria-label"
+  class="ouiLoadingElastic ouiLoadingElastic--xLarge testClass1 testClass2"
+  data-test-subj="test subject string"
+>
+  <span
+    data-ouiicon-type="logoOpenSearch"
+  />
+</span>
+`;
+
+exports[`OuiLoadingElastic size xxl is rendered 1`] = `
+<span
+  aria-label="aria-label"
+  class="ouiLoadingElastic ouiLoadingElastic--xxLarge testClass1 testClass2"
+  data-test-subj="test subject string"
+>
+  <span
+    data-ouiicon-type="logoOpenSearch"
+  />
+</span>
+`;

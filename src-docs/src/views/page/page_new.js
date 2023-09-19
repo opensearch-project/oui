@@ -29,7 +29,6 @@ export default ({ button = <></>, content, sideNav }) => (
     <OuiPageBody panelled>
       <OuiPageHeader
         restrictWidth
-        iconType="logoElastic"
         pageTitle="Page title"
         rightSideItems={[button]}
         tabs={[{ label: 'Tab 1', isSelected: true }, { label: 'Tab 2' }]}

@@ -63,7 +63,7 @@ import { OuiCodeBlock, OuiCode } from '../../code';
 export const getDefaultOuiMarkdownParsingPlugins = (): PluggableList => [
   [markdown, {}],
   [highlight, {}],
-  [emoji, { emoticon: true }],
+  [emoji, { emoticon: false }],
   [MarkdownTooltip.parser, {}],
   [MarkdownCheckbox.parser, {}],
   [markdownLinkValidator, {}],

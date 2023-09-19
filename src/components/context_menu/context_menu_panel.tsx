@@ -36,7 +36,7 @@ import React, {
   ReactNode,
 } from 'react';
 import classNames from 'classnames';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 
 import { CommonProps, NoArgCallback, keysOf } from '../common';
 import { OuiIcon } from '../icon';
@@ -270,7 +270,10 @@ export class OuiContextMenuPanel extends Component<Props, State> {
 
         // Otherwise let's focus the first tabbable item and expedite input from the user.
         if (this.content) {
-          const tabbableItems = tabbable(this.content);
+          const tabbableItems = tabbable(this.content, {
+            displayCheck: 'legacy-full',
+          });
+
           if (tabbableItems.length) {
             tabbableItems[0].focus();
           }

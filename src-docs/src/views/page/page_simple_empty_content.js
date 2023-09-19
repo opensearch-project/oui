@@ -24,7 +24,6 @@ export default ({ button = <></>, content }) => (
     <OuiPageBody>
       <OuiPageHeader
         restrictWidth
-        iconType="logoElastic"
         pageTitle="Page title"
         rightSideItems={[button]}
         paddingSize="l"

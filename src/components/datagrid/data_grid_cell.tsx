@@ -42,7 +42,7 @@ import React, {
   ReactNode,
 } from 'react';
 import classNames from 'classnames';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 import { CommonProps } from '../common';
 import { OuiScreenReaderOnly } from '../accessibility';
 import { OuiI18n } from '../i18n';

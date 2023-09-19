@@ -10,13 +10,12 @@
  */
 
 import * as React from 'react';
-
 const OuiIconLogoSiteSearch = ({ title, titleId, ...props }) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
     width={32}
     height={32}
     viewBox="0 0 32 32"
-    xmlns="http://www.w3.org/2000/svg"
     aria-labelledby={titleId}
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
@@ -27,14 +26,13 @@ const OuiIconLogoSiteSearch = ({ title, titleId, ...props }) => (
       />
       <path
         fill="#00BFB3"
-        d="M21.355 0H7.533L.427 14.211C-.903 16.871 1.032 20 4.004 20h7.351l10-20z"
+        d="M21.355 0H7.533L.427 14.211C-.903 16.871 1.032 20 4.004 20h7.351l10-20Z"
       />
       <path
+        d="M2.533 10 .428 14.211C-.903 16.871 1.032 20 4.005 20h7.35l5-10H2.533Z"
         className="ouiIcon__fillNegative"
-        d="M2.533 10L.428 14.211C-.903 16.871 1.032 20 4.005 20h7.35l5-10H2.533z"
       />
     </g>
   </svg>
 );
-
 export const icon = OuiIconLogoSiteSearch;

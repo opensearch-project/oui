@@ -39,7 +39,6 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const isProduction = process.env.NODE_ENV === 'production';
 
 const plugins = [
-  new webpack.NoEmitOnErrorsPlugin(),
   new CircularDependencyPlugin({
     exclude: /node_modules/,
     failOnError: true,
@@ -98,12 +97,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loaders: [
-          'style-loader',
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
-        ],
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
         exclude: /node_modules/,
       },
       {
@@ -117,6 +111,8 @@ module.exports = {
   plugins,
 
   optimization: {
-    minimizer: isProduction ? [terserPlugin] : [],
+    minimize: isProduction,
+    minimizer: [terserPlugin],
+    noEmitOnErrors: true,
   },
 };

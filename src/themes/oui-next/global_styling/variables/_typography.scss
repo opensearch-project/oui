@@ -1,0 +1,136 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Some mixins that help us deal with browser scaling of text more consistently.
+// Essentially, fonts across oui should scale against the root html element, not
+// against parent inheritance.
+
+// Typography mixins
+
+@function convertToRem($size) {
+  @return #{$size / $ouiFontSize}rem;
+}
+
+// Spit out rem and px
+@mixin fontSize($size: $ouiFontSize) {
+  font-size: $size;
+  font-size: convertToRem($size);
+}
+
+// Our base gridline is at 1/2 the font-size, ensure line-heights stay on that gridline.
+// EX: A proper line-height for text is 1.5 times the font-size.
+//     If our base font size (ouiFontSize) is 16, our baseline is 8 (16*1.5 / 3). To ensure the
+//     text stays on the baseline, we pass a multiplier to calculate a line-height in rems.
+@function lineHeightFromBaseline($multiplier: 3) {
+  @return convertToRem(($ouiFontSize/2)*$multiplier);
+}
+@mixin lineHeightFromBaseline($multiplier: 3) {
+  line-height: lineHeightFromBaseline($multiplier);
+}
+
+// sass-lint:disable quotes
+$ouiFontFamily: #{"'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"} !default;
+$ouiCodeFontFamily: #{"'Source Code Pro', Consolas, Menlo, Courier, monospace"} !default;
+// sass-lint:enable quotes
+
+// Careful using ligatures. Code editors like ACE will often error because of width calculations
+$ouiFontFeatureSettings: 'calt' 1, 'kern' 1, 'liga' 1 !default;
+
+// Font sizes -- scale is loosely based on Major Third (1.250)
+$ouiTextScale:      2.25, 1.75, 1.25, 1.125, 1, .875, .75 !default;
+
+$ouiFontSize:       $ouiSize !default; // 5th position in scale
+$ouiFontSizeXS:     $ouiFontSize * nth($ouiTextScale, 7) !default; // 12px
+$ouiFontSizeS:      $ouiFontSize * nth($ouiTextScale, 6) !default; // 14px
+$ouiFontSizeM:      $ouiFontSize * nth($ouiTextScale, 4) !default; // 18px
+$ouiFontSizeL:      $ouiFontSize * nth($ouiTextScale, 3) !default; // 20px
+$ouiFontSizeXL:     $ouiFontSize * nth($ouiTextScale, 2) !default; // 28px
+$ouiFontSizeXXL:    $ouiFontSize * nth($ouiTextScale, 1) !default; // 36px
+
+// Line height
+$ouiLineHeight:     1.5 !default;
+$ouiBodyLineHeight: 1 !default;
+
+// Font weights
+$ouiFontWeightLight:        300 !default;
+$ouiFontWeightRegular:      400 !default;
+$ouiFontWeightMedium:       500 !default;
+$ouiFontWeightSemiBold:     600 !default;
+$ouiFontWeightBold:         700 !default;
+$ouiCodeFontWeightRegular:  400 !default;
+$ouiCodeFontWeightBold:     700 !default;
+
+// Titles map
+// Lists all the properties per OuiTitle size that then gets looped through to create the selectors.
+// The map allows for tokenization and easier customization per theme, otherwise you'd have to override the selectors themselves
+$ouiTitles: (
+  'xxxs': (
+    'font-size': $ouiFontSizeXS,
+    'line-height': lineHeightFromBaseline(3),
+    'font-weight': $ouiFontWeightBold,
+    'letter-spacing': -.005em,
+  ),
+  'xxs': (
+    'font-size': $ouiFontSizeS,
+    'line-height': lineHeightFromBaseline(3),
+    'font-weight': $ouiFontWeightBold,
+    'letter-spacing': -.005em,
+  ),
+  'xs': (
+    'font-size': $ouiFontSize,
+    'line-height': lineHeightFromBaseline(3),
+    'font-weight': $ouiFontWeightSemiBold,
+    'letter-spacing': -.02em,
+  ),
+  's': (
+    'font-size': $ouiFontSizeL,
+    'line-height': lineHeightFromBaseline(4),
+    'font-weight': $ouiFontWeightMedium,
+    'letter-spacing': -.025em,
+  ),
+  'm': (
+    'font-size': $ouiFontSizeXL,
+    'line-height': lineHeightFromBaseline(5),
+    'font-weight': $ouiFontWeightLight,
+    'letter-spacing': -.04em,
+  ),
+  'l': (
+    'font-size': $ouiFontSizeXXL,
+    'line-height': lineHeightFromBaseline(6),
+    'font-weight': $ouiFontWeightLight,
+    'letter-spacing': -.03em,
+  ),
+) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiFontFamily: $ouiFontFamily;
+$euiCodeFontFamily: $ouiCodeFontFamily;
+$euiFontFeatureSettings: $ouiFontFeatureSettings;
+$euiTextScale: $ouiTextScale;
+$euiFontSize: $ouiFontSize;
+$euiFontSizeXS: $ouiFontSizeXS;
+$euiFontSizeS: $ouiFontSizeS;
+$euiFontSizeM: $ouiFontSizeM;
+$euiFontSizeL: $ouiFontSizeL;
+$euiFontSizeXL: $ouiFontSizeXL;
+$euiFontSizeXXL: $ouiFontSizeXXL;
+$euiLineHeight: $ouiLineHeight;
+$euiBodyLineHeight: $ouiBodyLineHeight;
+$euiFontWeightLight: $ouiFontWeightLight;
+$euiFontWeightRegular: $ouiFontWeightRegular;
+$euiFontWeightMedium: $ouiFontWeightMedium;
+$euiFontWeightSemiBold: $ouiFontWeightSemiBold;
+$euiFontWeightBold: $ouiFontWeightBold;
+$euiCodeFontWeightRegular: $ouiCodeFontWeightRegular;
+$euiCodeFontWeightBold: $ouiCodeFontWeightBold;
+$euiTitles: $ouiTitles;
+/* End of Aliases */

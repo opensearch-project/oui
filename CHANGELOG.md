@@ -1,7 +1,130 @@
 # OUI
-## [`main`](https://github.com/opensearch-project/oui/tree/main)
 
-- Add release workflows ([134](https://github.com/opensearch-project/oui/pull/133))
+## [Unreleased](https://github.com/opensearch-project/oui/tree/main)
+
+### 💥 Breaking Changes
+
+### Deprecations
+
+### 🛡 Security
+
+### 📈 Features/Enhancements
+
+- Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+- Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
+
+### 🐛 Bug Fixes
+
+- Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+
+### 🚞 Infrastructure
+
+- Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
+
+### 📝 Documentation
+
+- Update default docsite theme to Next Dark ([#1029](https://github.com/opensearch-project/oui/pull/1029))
+- Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
+- Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
+
+### 🛠 Maintenance
+
+- Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
+
+### 🪛 Refactoring
+
+### 🔩 Tests
+
+## [`1.3.0`](https://github.com/opensearch-project/oui/tree/1.3.0)
+
+### 📈 Features/Enhancements
+
+- Rename the aliased theme files ([#863](https://github.com/opensearch-project/oui/pull/863))
+- Fix `autofill` text color in dark themes ([#871](https://github.com/opensearch-project/oui/pull/871))
+- [Header] Update background color in next theme ([#936](https://github.com/opensearch-project/oui/pull/936))
+- Set link to use semi bold font weight ([#961](https://github.com/opensearch-project/oui/pull/961))
+- Adds `SchemaItem` as an experimental component ([#974](https://github.com/opensearch-project/oui/pull/974))
+- Make `CollapsibleNav` and `CollapsibleNavGroup` background colors theme-able ([#968](https://github.com/opensearch-project/oui/pull/968), [#1016](https://github.com/opensearch-project/oui/pull/1016))
+- Update next light theme primary color to #07827E ([#981](https://github.com/opensearch-project/oui/pull/981))
+- Add dismissible prop to OuiCallOut ([#985](https://github.com/opensearch-project/oui/pull/985))
+- Adjust $ouiFormInputGroupLabelBackground color in dark `next` theme ([#1005](https://github.com/opensearch-project/oui/pull/1005))
+- Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
+- Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
+- Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
+
+### 🐛 Bug Fixes
+
+- Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
+- Remove `calc` usage from SchemaItem styles ([#990](https://github.com/opensearch-project/oui/pull/990))
+- Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
+- Fix alignment of left icon for OuiListGroupItem with multiline text ([#1027](https://github.com/opensearch-project/oui/pull/1027))
+
+### 🚞 Infrastructure
+
+- Add release workflows ([#134](https://github.com/opensearch-project/oui/pull/133))
+- Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
+- Upgrade the backport workflow ([#862](https://github.com/opensearch-project/oui/pull/862))
+- Add build steps to CI workflow ([#665](https://github.com/opensearch-project/oui/pull/665))
+
+### 📝 Documentation
+
+- Replace Avatar in favor of Icon in OuiFacetButtons example ([#987](https://github.com/opensearch-project/oui/pull/987))
+- Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
+- Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
+
+### 🛠 Maintenance
+
+- [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
+- [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
+- Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
+- Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
+
+### 🪛 Refactoring
+
+- Clean up focus background implementation ([#962](https://github.com/opensearch-project/oui/pull/962))
+
+## [`1.2.0`](https://github.com/opensearch-project/oui/tree/1.2.0)
+
+- [CVE-2022-25881] Bump node-sass from 7.0.1 to 8.0.0 ([#592](https://github.com/opensearch-project/oui/pull/592))
+- Add icons for Dashboards 2.7 ([#658](https://github.com/opensearch-project/oui/pull/658))
+- Update loader-utils to 1.4.2 ([#672](https://github.com/opensearch-project/oui/pull/672))
+- Add deprecation comments to OuiLoadingElastic and OuiLoadingKibana ([#606](https://github.com/opensearch-project/oui/pull/606))
+- Deprecate `iconType` and `iconProps` from `OuiPageHeader` ([#759](https://github.com/opensearch-project/oui/pull/759))
+- Bump rimraf from 3.0.2 to 5.0.0 ([#717](https://github.com/opensearch-project/oui/pull/717))
+- Update header logo defaults ([#621](https://github.com/opensearch-project/oui/pull/621))
+- Bump sass-loader to 10.4.1 ([#713](https://github.com/opensearch-project/oui/pull/713))
+- Fix combo box onFocus bug ([#775](https://github.com/opensearch-project/oui/pull/775))
+- Fix breadcrumb styling with a single breadcrumb ([#778](https://github.com/opensearch-project/oui/pull/778))
+
+## [`1.1.2`](https://github.com/opensearch-project/oui/tree/1.1.2)
+
+- Add anomaly detection icon ([#781](https://github.com/opensearch-project/oui/pull/781))
+- Replace Elastic with OpenSearch in the examples ([#622](https://github.com/opensearch-project/oui/issues/622))
+
+## [`1.1.1`](https://github.com/opensearch-project/oui/tree/1.1.1)
+
+- Revert "Rectify super date picker functionality" ([#724](https://github.com/opensearch-project/oui/pull/724))
+
+## [`1.1.0`](https://github.com/opensearch-project/oui/tree/1.1.0)
+
+- Bump sass-loader to 10.4.1 ([#715](https://github.com/opensearch-project/oui/pull/715))
+- Revert updated breadcrumb styling ([#706](https://github.com/opensearch-project/oui/pull/706))
+- Update loader-utils to 1.4.2 ([#704](https://github.com/opensearch-project/oui/pull/704))
+- Fix aliasing issue ([#702](https://github.com/opensearch-project/oui/pull/702))
+- Add icons for Dashboards 2.7 ([#685](https://github.com/opensearch-project/oui/pull/685))
+- Rectify super date picker functionality ([#682](https://github.com/opensearch-project/oui/pull/682))
+- Remove docs folder ([#678](https://github.com/opensearch-project/oui/pull/678))
+- Add leading slash to test in .npmignore ([#690](https://github.com/opensearch-project/oui/pull/690))
+- Bump node-sass from 7.0.1 to 8.0.0 ([#673](https://github.com/opensearch-project/oui/pull/673))
+- Publish OUI to npmjs using tarball ([#667](https://github.com/opensearch-project/oui/pull/667))
+- Add build artifacts to release ([#664](https://github.com/opensearch-project/oui/pull/664))
+- Create OuiLoadingDashboards component ([#620](https://github.com/opensearch-project/oui/pull/620))
+- Fix yo-doc and yo-component crashes ([#616](https://github.com/opensearch-project/oui/pull/616))
+- Update logo_opensearch.js file ([#614](https://github.com/opensearch-project/oui/pull/614))
+- Change OuiTitle size property to m in tooltip example ([#612](https://github.com/opensearch-project/oui/pull/612))
+- Readme Opensearch Logo linking to non-existent file ([#589](https://github.com/opensearch-project/oui/pull/589))
+- Remove Elastic references from .md docs ([#588](https://github.com/opensearch-project/oui/pull/588))
+- Fix deprecated webpack configuration ([#586](https://github.com/opensearch-project/oui/pull/586))
 
 ## [`1.0.0`](https://github.com/opensearch-project/oui/tree/1.0.0)
 
