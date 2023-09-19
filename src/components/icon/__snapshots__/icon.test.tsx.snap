@@ -1636,6 +1636,26 @@ exports[`OuiIcon props type crossInACircleFilled is rendered 1`] = `
 </svg>
 `;
 
+exports[`OuiIcon props type crossInCircleEmpty is rendered 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
+  focusable="false"
+  role="img"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    clip-rule="evenodd"
+    d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+    fill-rule="evenodd"
+  />
+  <path
+    d="M11.854 4.854a.5.5 0 0 0-.707-.707L8 7.293 4.854 4.147a.5.5 0 1 0-.707.707L7.293 8l-3.146 3.146a.5.5 0 0 0 .707.708L8 8.707l3.147 3.147a.5.5 0 0 0 .707-.708L8.707 8l3.147-3.146z"
+  />
+</svg>
+`;
+
 exports[`OuiIcon props type crosshairs is rendered 1`] = `
 <svg
   aria-hidden="true"
@@ -7247,6 +7267,24 @@ exports[`OuiIcon props type popout is rendered 1`] = `
 >
   <path
     d="M13 8.5a.5.5 0 1 1 1 0V12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h3.5a.5.5 0 0 1 0 1H4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V8.5Zm-5.12.339a.5.5 0 1 1-.706-.707L13.305 2H10.5a.5.5 0 1 1 0-1H14a1 1 0 0 1 1 1v3.5a.5.5 0 1 1-1 0V2.72L7.88 8.838Z"
+  />
+</svg>
+`;
+
+exports[`OuiIcon props type power is rendered 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
+  focusable="false"
+  role="img"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M8 0a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0v-5A.5.5 0 0 1 8 0z"
+  />
+  <path
+    d="M10.55.932a.5.5 0 0 1 .663-.246C13.849 1.896 16 4.437 16 7.809 16 12.32 12.43 16 8 16s-8-3.68-8-8.191C0 4.436 2.17 1.896 4.79.686a.5.5 0 0 1 .42.908C2.86 2.68 1 4.908 1 7.808 1 11.792 4.146 15 8 15s7-3.208 7-7.192c0-2.901-1.845-5.13-4.204-6.213a.5.5 0 0 1-.246-.663z"
   />
 </svg>
 `;
