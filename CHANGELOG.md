@@ -28,6 +28,8 @@
 
 ### 🛠 Maintenance
 
+- Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
+
 ### 🪛 Refactoring
 
 ### 🔩 Tests
