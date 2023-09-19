@@ -12,6 +12,7 @@
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
+- Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
 
 ### 🐛 Bug Fixes
 
@@ -28,6 +29,8 @@
 - Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
 
 ### 🛠 Maintenance
+
+- Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
 
 ### 🪛 Refactoring
 
