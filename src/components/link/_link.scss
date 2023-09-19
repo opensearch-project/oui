@@ -53,11 +53,12 @@ $ouiLinkColors: (
 }
 
 // Make button OuiLink's text selectable
-button.ouiLink { // sass-lint:disable-line no-qualifying-elements
+button.ouiLink {
   user-select: text;
 }
 
 
 /* OUI -> EUI Aliases */
 $euiLinkColors: $ouiLinkColors;
+
 /* End of Aliases */

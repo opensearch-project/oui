@@ -11,7 +11,6 @@
 
 $ouiCardSpacing: map-get($ouiPanelPaddingModifiers, 'paddingMedium');
 $ouiCardBottomNodeHeight: $ouiSizeXXL;
-
 $ouiCardSelectButtonBorders: (
   text: $ouiColorSuccess, // Default for selected
   primary: $ouiColorPrimary,
@@ -19,7 +18,6 @@ $ouiCardSelectButtonBorders: (
   danger: $ouiColorDanger,
   ghost: $ouiColorDarkShade,
 );
-
 $ouiCardSelectButtonBackgrounds: (
   text: $ouiColorLightestShade, // Default for unselected
   primary: tintOrShade($ouiColorPrimary, 90%, 70%),
@@ -27,7 +25,6 @@ $ouiCardSelectButtonBackgrounds: (
   danger: tintOrShade($ouiColorDanger, 90%, 70%),
   ghost: $ouiColorDarkShade,
 );
-
 $ouiCardPaddingModifiers: (
   'paddingNone': 0,
   'paddingSmall': $ouiSizeS,
@@ -42,4 +39,5 @@ $euiCardBottomNodeHeight: $ouiCardBottomNodeHeight;
 $euiCardSelectButtonBorders: $ouiCardSelectButtonBorders;
 $euiCardSelectButtonBackgrounds: $ouiCardSelectButtonBackgrounds;
 $euiCardPaddingModifiers: $ouiCardPaddingModifiers;
+
 /* End of Aliases */

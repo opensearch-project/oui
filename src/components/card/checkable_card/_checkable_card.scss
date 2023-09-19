@@ -23,6 +23,7 @@ $ouiCheckableCardPadding: map-get($ouiPanelPaddingModifiers, 'paddingMedium');
 
 .ouiCheckableCard__label {
   cursor: pointer;
+
   // Expand the label to cover the whole panel for easier click target
   display: block;
   width: calc(100% + #{$ouiCheckableCardPadding * 2});
@@ -42,4 +43,5 @@ $ouiCheckableCardPadding: map-get($ouiPanelPaddingModifiers, 'paddingMedium');
 
 /* OUI -> EUI Aliases */
 $euiCheckableCardPadding: $ouiCheckableCardPadding;
+
 /* End of Aliases */

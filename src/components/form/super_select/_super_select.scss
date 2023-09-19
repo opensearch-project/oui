@@ -11,6 +11,7 @@
 
 .ouiSuperSelect__listbox {
   @include ouiScrollBar;
+
   max-height: 300px;
   overflow: hidden;
   overflow-y: auto;
@@ -19,6 +20,7 @@
 .ouiSuperSelect__item {
   @include ouiFontSizeS;
   @include ouiInteractiveStates;
+
   padding: $ouiSizeS;
 }
 

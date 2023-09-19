@@ -21,12 +21,9 @@
 
   position: relative;
 
-  &:after {
+  &::after {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     border-radius: $borderRadius;
     content: '';
     pointer-events: none;
@@ -38,10 +35,8 @@
 @mixin ouiScrollBar($thumbColor: $ouiColorDarkShade, $trackBackgroundColor: transparent) {
   // Firefox's scrollbar coloring cascades, but the sizing does not,
   // so it's being added to this mixin for allowing support wherever custom scrollbars are
-  // sass-lint:disable-block no-misspelled-properties
   scrollbar-width: thin;
 
-  // sass-lint:disable-block no-vendor-prefixes
   &::-webkit-scrollbar {
     width: $ouiScrollBar;
     height: $ouiScrollBar;
@@ -69,6 +64,7 @@
 // Just overflow and scrollbars
 @mixin ouiYScroll {
   @include ouiScrollBar;
+
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -84,6 +80,7 @@
 
 @mixin ouiXScroll {
   @include ouiScrollBar;
+
   overflow-x: auto;
 
   &:focus {
@@ -118,7 +115,6 @@
 
 // Specifically target IE11, but not Edge.
 @mixin internetExplorerOnly {
-  // sass-lint:disable-block no-vendor-prefixes
   @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
     @content;
   }
@@ -141,19 +137,27 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiScrollBar($thumbColor: $ouiColorDarkShade, $trackBackgroundColor: transparent) { @include ouiScrollBar($thumbColor, $trackBackgroundColor); }
+
 @mixin euiYScroll { @include ouiYScroll; }
+
 @mixin euiXScroll { @include ouiXScroll; }
+
 @mixin euiYScrollWithShadows { @include ouiYScrollWithShadows; }
+
 @mixin euiXScrollWithShadows { @include ouiXScrollWithShadows; }
+
 @mixin euiScreenReaderOnly { @include ouiScreenReaderOnly; }
+
 @mixin euiCanAnimate {
   @include ouiCanAnimate {
     @content;
   }
 }
+
 @mixin euiCantAnimate {
   @include ouiCantAnimate {
     @content;
   }
 }
+
 /* End of Aliases */

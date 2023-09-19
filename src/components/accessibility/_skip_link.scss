@@ -10,10 +10,10 @@
  */
 
 .ouiSkipLink {
-  transition: none !important; // sass-lint:disable-line no-important
+  transition: none !important;
 
   &:focus {
-    animation: none !important; // sass-lint:disable-line no-important
+    animation: none !important;
   }
 
   // Set positions on focus only as to no override screenReaderOnly position

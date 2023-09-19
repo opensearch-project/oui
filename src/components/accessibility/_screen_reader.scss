@@ -11,6 +11,6 @@
 
 // The `:active` selector is necessary for Safari which removes `:focus` when a button is pressed
 .ouiScreenReaderOnly,
-.ouiScreenReaderOnly--showOnFocus:not(:focus):not(:active) {
+.ouiScreenReaderOnly--showOnFocus:not(:focus, :active) {
   @include ouiScreenReaderOnly;
 }

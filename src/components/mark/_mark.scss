@@ -12,6 +12,7 @@
 .ouiMark {
   background-color: transparent;
   font-weight: $ouiFontWeightBold;
+
   // Override the browser's black color.
   // Can't use `inherit` because the text to background color contrast may not be sufficient
   color: $ouiTextColor;

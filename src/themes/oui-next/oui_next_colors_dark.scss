@@ -41,6 +41,7 @@ $ouiColorHighlight: #2E2D25;
 // Variations from core
 $ouiTextColor: #DFE5EF;
 $ouiTitleColor: $ouiTextColor;
+
 // Ensure contrast between subdued text and the page background
 // Should not be shaded as much as $ouiColorDisabled
 $ouiTextSubduedColor: makeHighContrastColor(shade($ouiTextColor, 30%), $ouiPageBackgroundColor);
@@ -99,4 +100,5 @@ $euiColorChartLines: $ouiColorChartLines;
 $euiColorChartBand: $ouiColorChartBand;
 $euiShadowColor: $ouiShadowColor;
 $euiShadowColorLarge: $ouiShadowColorLarge;
+
 /* End of Aliases */

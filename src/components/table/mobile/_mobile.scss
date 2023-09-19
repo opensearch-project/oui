@@ -16,7 +16,6 @@
 }
 
 @include ouiBreakpoint('xs', 's') {
-
   .ouiTableHeaderMobile {
     display: flex;
     justify-content: flex-end;

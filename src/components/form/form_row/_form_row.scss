@@ -50,6 +50,7 @@
 
   .ouiFormRow__label {
     @include ouiTextBreakWord;
+
     hyphens: auto;
     max-width: 100%; // Fixes IE
   }

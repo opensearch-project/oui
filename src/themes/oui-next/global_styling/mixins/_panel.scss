@@ -29,6 +29,7 @@
 
       &#{$selector}--hasShadow {
         @include ouiBottomShadowSmall;
+
         border: $ouiBorderThin;
       }
 
@@ -46,6 +47,7 @@
         &:hover,
         &:focus {
           @include ouiSlightShadowHover;
+
           transform: translateY(-2px);
           cursor: pointer;
         }
@@ -71,4 +73,5 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiPanel($selector) { @include ouiPanel($selector); }
+
 /* End of Aliases */

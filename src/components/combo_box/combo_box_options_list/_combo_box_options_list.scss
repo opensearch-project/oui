@@ -15,7 +15,7 @@
  */
 .ouiComboBoxOptionsList {
   // Remove transforms from popover panel
-  transform: none !important; // sass-lint:disable-line no-important
+  transform: none !important;
   top: 0;
 
   &.ouiPopover__panel-isAttached.ouiComboBoxOptionsList--top { /* 1 */
@@ -25,6 +25,7 @@
 
 .ouiComboBoxOptionsList__empty {
   @include ouiTextBreakWord; /* 2 */
+
   padding: $ouiSizeS;
   text-align: center;
   word-wrap: break-word;

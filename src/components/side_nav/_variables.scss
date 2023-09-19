@@ -16,6 +16,7 @@ $ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorLightShade, .7);
 @function ouiSideNavEmphasizedContrast($textColor, $ratio: $ouiContrastRatioText) {
   $backgroundColorSimulated: mix($ouiPageBackgroundColor, $ouiColorLightShade, 70%);
   $color: makeHighContrastColor($textColor, $backgroundColorSimulated, $ratio);
+
   @return $color;
 }
 
@@ -32,5 +33,7 @@ $euiSideNavRootTextcolor: $ouiSideNavRootTextcolor;
 $euiSideNavBranchTextcolor: $ouiSideNavBranchTextcolor;
 $euiSideNavSelectedTextcolor: $ouiSideNavSelectedTextcolor;
 $euiSideNavDisabledTextcolor: $ouiSideNavDisabledTextcolor;
+
 @function euiSideNavEmphasizedContrast($textColor, $ratio: $ouiContrastRatioText) { @return ouiSideNavEmphasizedContrast($textColor, $ratio); }
+
 /* End of Aliases */

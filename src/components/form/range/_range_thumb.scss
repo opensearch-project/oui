@@ -12,6 +12,7 @@
 .ouiRangeThumb {
   @include ouiCustomControl($type: 'round');
   @include ouiRangeThumbStyle;
+
   content: '';
   position: absolute;
   left: 0;

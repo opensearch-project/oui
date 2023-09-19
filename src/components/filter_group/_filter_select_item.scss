@@ -25,6 +25,7 @@
   &:focus,
   &-isFocused {
     @include ouiFocusBackground;
+
     color: $ouiColorPrimary;
   }
 }

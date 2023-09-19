@@ -11,7 +11,6 @@
 
 $ouiBreadcrumbSpacing: $ouiSizeS !default;
 $ouiBreadcrumbTruncateWidth: $ouiSize * 10 !default;
-
 $ouiBreadcrumbActiveBackground: tintOrShade($ouiColorPrimary, 72%, 41%) !default;
 $ouiBreadcrumbInactiveBackground: tint($ouiColorLightShade, 14%) !default;
 $ouiBreadcrumbCollapsedLink: shadeOrTint($ouiColorPrimaryText, 61%, 20%) !default;
@@ -21,10 +20,10 @@ $ouiBreadCrumbHoverColor: shadeOrTint($ouiBreadcrumbInactiveTextColor, 16%, 6%) 
 /* OUI -> EUI Aliases */
 $euiBreadcrumbSpacing: $ouiBreadcrumbSpacing;
 $euiBreadcrumbTruncateWidth: $ouiBreadcrumbTruncateWidth;
-
 $euiBreadcrumbActiveBackground: $ouiBreadcrumbActiveBackground;
 $euiBreadcrumbInactiveBackground: $ouiBreadcrumbInactiveBackground;
 $euiBreadcrumbCollapsedLink: $ouiBreadcrumbCollapsedLink;
 $euiBreadcrumbInactiveTextColor: $ouiBreadcrumbInactiveTextColor;
 $euiBreadCrumbHoverColor: $ouiBreadCrumbHoverColor;
+
 /* End of Aliases */

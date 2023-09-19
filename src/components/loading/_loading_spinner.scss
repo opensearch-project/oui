@@ -18,7 +18,6 @@
   border: solid $ouiSizeXS / 2 $ouiColorLightShade;
   border-color: ouiLoadingSpinnerBorderColors();
 
-  // sass-lint:disable-block mixins-before-declarations
   @include ouiCanAnimate {
     animation: ouiLoadingSpinner .6s infinite linear;
   }

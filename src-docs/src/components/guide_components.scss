@@ -16,7 +16,7 @@ $guideZLevelHighest: $ouiZLevel9 + 1000;
 $elasticLogoTextLight: #FFF;
 $elasticLogoTextDark: #1C1E23;
 
-#guide { // sass-lint:disable-line no-ids
+#guide {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -33,7 +33,7 @@ body {
 .ouiBody--headerIsFixed--double {
   @include ouiHeaderAffordForFixed($ouiHeaderHeightCompensation * 2);
 
-  #guide { // sass-lint:disable-line no-ids
+  #guide {
     min-height: calc(100vh - #{$ouiHeaderHeightCompensation * 2});
   }
 
@@ -46,11 +46,13 @@ body {
 
 .guideSideNav {
   @include ouiSideNavEmbellish;
+
   min-width: $guideSideNavWidth;
 }
 
 .guideSideNav__content {
   @include ouiYScroll;
+
   padding: 0 $ouiSizeL $ouiSizeL;
 }
 
@@ -100,7 +102,7 @@ body {
 .guideDemo__highlightLayout--playground > div:not(.ouiPage) {
   height: 100%;
   width: 100%;
-  padding: 0 !important; // sass-lint:disable-line no-important
+  padding: 0 !important;
 
   > .ouiPage--grow {
     height: 100%;
@@ -137,14 +139,12 @@ body {
   padding: $ouiSize;
 }
 
-// sass-lint:disable no-important
 .guideDemo__textLines {
   background-image: linear-gradient($ouiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 8px !important;
   background-position-y: 2px;
 }
 
-// sass-lint:disable no-important
 .guideDemo__textLines--s {
   background-image: linear-gradient($ouiFocusBackgroundColor 1px, transparent 1px) !important;
   background-size: 100% 7px !important;
@@ -179,7 +179,7 @@ body {
 }
 
 .guideDemo__ghostBackground {
-  @if (lightness($ouiTextColor) < 50) {
+  @if  lightness($ouiTextColor) < 50 {
     color: $ouiColorGhost;
     background: $ouiColorDarkestShade !important; // Override OuiPanel specificity
   }
@@ -247,6 +247,7 @@ body {
 
 .guideDemo__notificationEvent {
   @include ouiFontSizeS;
+
   display: flex;
   flex-direction: column;
 
@@ -324,10 +325,11 @@ body {
   color: $ouiColorAccentText;
 }
 
-
+/* stylelint-disable no-invalid-position-at-import-rule */
 @import '../views/guidelines/index';
 @import 'guide_section/index';
 @import 'guide_rule/index';
+/* stylelint-enable no-invalid-position-at-import-rule */
 
 @include ouiBreakpoint('xs', 's') {
   .guideSideNav {
@@ -348,17 +350,16 @@ body {
   min-width: 200px;
   flex-basis: 100% !important;
 
-  // sass-lint:disable-block mixins-before-declarations
   @include ouiBreakpoint('s', 'm') {
-    flex-basis: 45% !important; // sass-lint:disable-line no-important
+    flex-basis: 45% !important;
   }
 
   @include ouiBreakpoint('l') {
-    flex-basis: 30% !important; // sass-lint:disable-line no-important
+    flex-basis: 30% !important;
   }
 
   @include ouiBreakpoint('xl') {
-    flex-basis: 22% !important; // sass-lint:disable-line no-important
+    flex-basis: 22% !important;
   }
 }
 
@@ -383,7 +384,7 @@ body {
     width: 100%;
     height: auto;
 
-    &:before {
+    &::before {
       content: '';
       display: block;
       position: absolute;
@@ -458,7 +459,6 @@ body {
 }
 
 .guideHome__footerLogo {
-  // sass-lint:disable-block no-important
   vertical-align: middle;
   display: inline-block !important;
   margin-bottom: 0 !important;

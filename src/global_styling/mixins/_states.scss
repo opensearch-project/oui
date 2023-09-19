@@ -12,10 +12,8 @@
 @mixin ouiFocusRing($size: 'small') {
   @if $size == 'large' {
     // It's always OK to use the focus animation. This will take precedence over times we turn it off individually like OuiButtonEmpty
-    // sass-lint:disable-block no-important
     animation: $ouiAnimSpeedSlow $ouiAnimSlightResistance 1 normal forwards focusRingAnimateLarge !important;
   } @else {
-    // sass-lint:disable-block no-important
     animation: $ouiAnimSpeedSlow $ouiAnimSlightResistance 1 normal forwards focusRingAnimate !important;
   }
 }
@@ -41,7 +39,7 @@
   cursor: not-allowed;
   text-decoration: none;
 
-  @if ($color) {
+  @if  $color {
     color: $color;
   }
 }
@@ -63,9 +61,15 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiFocusRing($size: 'small') { @include ouiFocusRing($size); }
+
 @mixin euiFocusBackground($color: $ouiColorPrimary) { @include ouiFocusBackground($color); }
+
 @mixin euiHoverState { @include ouiHoverState; }
+
 @mixin euiFocusState($color: $ouiColorPrimary) { @include ouiFocusState($color); }
+
 @mixin euiDisabledState($color: $ouiButtonColorDisabledText) { @include ouiDisabledState($color); }
+
 @mixin euiInteractiveStates($focusColor: $ouiColorPrimary, $disabledColor: $ouiButtonColorDisabledText) { @include ouiInteractiveStates($focusColor, $disabledColor); }
+
 /* End of Aliases */

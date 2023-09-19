@@ -42,7 +42,6 @@
 @include ouiBreakpoint('xs', 's') {
   .ouiFlexGroup--responsive > .ouiFlexItem,
   .ouiFlexGrid--responsive > .ouiFlexItem {
-    // sass-lint:disable-block no-important
     width: 100% !important;
     flex-basis: 100% !important;
     margin-left: 0 !important;

@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
 
-  &:after {
+  &::after {
     position: absolute;
     content: '';
     top: $ouiSize;
@@ -27,14 +27,14 @@
 }
 
 .ouiHeaderSectionItem--borderLeft {
-  &:after {
+  &::after {
     left: 0;
     width: 1px;
   }
 }
 
 .ouiHeaderSectionItem--borderRight {
-  &:after {
+  &::after {
     width: 1px;
     left: auto;
     right: 0;
@@ -48,7 +48,7 @@
 
   .ouiHeaderSectionItem--borderLeft,
   .ouiHeaderSectionItem--borderRight {
-    &:after {
+    &::after {
       display: none;
     }
   }

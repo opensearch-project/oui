@@ -16,13 +16,13 @@
 
 .ouiQuickSelectPopover__section {
   @include ouiScrollBar;
+
   max-height: $ouiSizeM * 11;
   overflow: hidden;
   overflow-y: auto;
   padding: $ouiSizeS 0 $ouiSizeXS; // Offset negative margin from flex items
 }
 
-// sass-lint:disable no-important
 .ouiQuickSelectPopover__buttonText {
   // Override specificity from universal and sibling selectors
   margin-right: $ouiSizeXS !important;

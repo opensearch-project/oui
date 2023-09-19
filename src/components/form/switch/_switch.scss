@@ -44,6 +44,7 @@
 
       .ouiSwitch__thumb {
         @include ouiCustomControlDisabled;
+
         background-color: $ouiSwitchOffColor;
       }
 
@@ -99,10 +100,7 @@
 
   .ouiSwitch__track {
     position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     overflow: hidden;
     border-radius: $ouiSwitchHeight;
   }
@@ -192,7 +190,6 @@
   // Compressed and mini switches have some style overlap
   &.ouiSwitch--compressed,
   &.ouiSwitch--mini {
-
     .ouiSwitch__button[aria-checked='false'] {
       .ouiSwitch__thumb {
         left: 1px;

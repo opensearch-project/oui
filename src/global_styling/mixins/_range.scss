@@ -10,7 +10,6 @@
  */
 
 // Prefixes are unique in this file
-// sass-lint:disable no-vendor-prefixes
 
 @mixin ouiRangeTrackSize {
   height: $ouiRangeTrackHeight;
@@ -42,15 +41,19 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiRangeTrackSize { @include ouiRangeTrackSize; }
+
 @mixin euiRangeTrackPerBrowser {
   @include ouiRangeTrackPerBrowser {
     @content;
   }
 }
+
 @mixin euiRangeThumbStyle { @include ouiRangeThumbStyle; }
+
 @mixin euiRangeThumbPerBrowser {
   @include ouiRangeThumbPerBrowser {
     @content;
   }
 }
+
 /* End of Aliases */

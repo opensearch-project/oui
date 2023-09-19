@@ -32,11 +32,13 @@
 
   .ouiHeaderAlert__title {
     @include ouiTitle('xs');
+
     margin-bottom: $ouiSizeS;
   }
 
   .ouiHeaderAlert__text {
     @include ouiFontSizeS;
+
     margin-bottom: $ouiSize;
   }
 
@@ -46,6 +48,7 @@
 
   .ouiHeaderAlert__date {
     @include ouiFontSizeXS;
+
     color: $ouiColorDarkShade;
   }
 }

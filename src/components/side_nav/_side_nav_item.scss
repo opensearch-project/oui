@@ -19,6 +19,7 @@
 
 .ouiSideNavItemButton {
   @include ouiFontSizeS;
+
   text-align: left; /* 1 */
   display: block;
   width: 100%;
@@ -92,6 +93,7 @@
 
     .ouiSideNavItemButton__label {
       @include ouiTitle('xs');
+
       color: inherit;
     }
   }
@@ -100,7 +102,7 @@
     position: static;
     margin-left: 0;
 
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -159,7 +161,7 @@
     padding-left: $ouiSizeS;
     padding-right: $ouiSizeS; /* 2 */
 
-    &:after {
+    &::after {
       position: absolute; /* 2 */
       content: '';
       top: $ouiSizeM;
@@ -178,6 +180,7 @@
 .ouiSideNavItem--emphasized {
   background: $ouiSideNavEmphasizedBackgroundColor;
   color: $ouiSideNavRootTextcolor;
+
   // The large y values allow the shadow to stretch beyond the side nav bounds to it's parents container
   box-shadow: 100px 0 0 0 $ouiSideNavEmphasizedBackgroundColor, -100px 0 0 0 $ouiSideNavEmphasizedBackgroundColor;
 

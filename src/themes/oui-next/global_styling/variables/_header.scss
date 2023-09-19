@@ -11,6 +11,7 @@
 
 // Themeable colors
 $ouiHeaderBackgroundColor: $ouiPageBackgroundColor !default;
+
 // Always use the dark theme value of $ouiPageBackgroundColor for the dark header background
 $ouiHeaderDarkBackgroundColor: #172430 !default;
 $ouiHeaderBorderColor: $ouiBorderColor !default;
@@ -32,4 +33,5 @@ $euiHeaderBreadcrumbColor: $ouiHeaderBreadcrumbColor;
 $euiHeaderHeight: $ouiHeaderHeight;
 $euiHeaderChildSize: $ouiHeaderChildSize;
 $euiHeaderHeightCompensation: $ouiHeaderHeightCompensation;
+
 /* End of Aliases */

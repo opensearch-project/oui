@@ -99,6 +99,7 @@
 
 .ouiStepHorizontal__title {
   @include ouiTitle('xs');
+
   margin-top: $ouiSizeS;
   font-weight: $ouiFontWeightRegular;
   text-align: center;
@@ -118,7 +119,7 @@
 
 // Selected state
 .ouiStepHorizontal-isSelected {
-  .ouiStepHorizontal__number:not([class*='danger']):not([class*='warning']):not([class*='loading']) {
+  .ouiStepHorizontal__number:not([class*='danger'], [class*='warning'], [class*='loading']) {
     @include ouiSlightShadow(desaturate($ouiColorPrimary, 20%));
   }
 

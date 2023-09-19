@@ -11,19 +11,16 @@
 
 $ouiListGroupItemHoverBackground: transparentize($ouiColorLightShade, .75);
 $ouiListGroupItemHoverBackgroundGhost: transparentize($ouiColorGhost, .9);
-
 $ouiListGroupGutterTypes: (
   gutterSmall: $ouiSizeS,
   gutterMedium: $ouiSize,
 );
-
 $ouiListGroupItemColorTypes: (
   primary: $ouiColorPrimaryText,
   text: $ouiTextColor,
   subdued: $ouiTextSubduedColor,
   ghost: $ouiColorGhost,
 );
-
 $ouiListGroupItemSizeTypes: (
   xSmall: $ouiFontSizeXS,
   small: $ouiFontSizeS,
@@ -38,4 +35,5 @@ $euiListGroupItemHoverBackgroundGhost: $ouiListGroupItemHoverBackgroundGhost;
 $euiListGroupGutterTypes: $ouiListGroupGutterTypes;
 $euiListGroupItemColorTypes: $ouiListGroupItemColorTypes;
 $euiListGroupItemSizeTypes: $ouiListGroupItemSizeTypes;
+
 /* End of Aliases */

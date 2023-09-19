@@ -33,7 +33,6 @@
   font-size: $ouiFontSizeS;
 }
 
-// sass-lint:disable no-important
 .guidelineColor__title {
   color: $ouiColorMediumShade !important;
 }
@@ -79,12 +78,10 @@
   background: shade($ouiColorDanger, 30%);
 }
 
-// sass-lint:disable no-color-literals
 .guideSass__swatch--primaryLight {
   background: #0079A5;
 }
 
-// sass-lint:disable no-color-literals
 .guideSass__swatch--primaryDark {
   background: #4DA1C0;
 }
@@ -182,12 +179,14 @@
 
   .guideSass__overflowShadowText {
     @include ouiYScrollWithShadows;
+
     padding: $ouiSizeS;
   }
 }
 
 .guideSass__overflowShadowsX {
   @include ouiXScrollWithShadows;
+
   padding: $ouiSizeS $ouiSizeS 0;
 
   .guideSass__overflowShadowTextX {
@@ -305,7 +304,6 @@
   border-left: $ouiBorderThick;
 }
 
-// sass-lint:disable no-color-literals
 .guideSass__themedBox--light {
   border-color: #0079A5;
   background: tint(#0079A5, 90%);
@@ -313,7 +311,6 @@
 }
 
 .guideSass__themedBox--dark {
-  // sass-lint:disable no-color-literals
   border-color: #4DA1C0;
   background: shade(#4DA1C0, 70%);
   color: #FFF;
@@ -338,13 +335,14 @@
   background-color: $ouiColorEmptyShade;
 }
 
+/* stylelint-disable-next-line no-invalid-position-at-import-rule */
 @import 'colors/color_section';
 
 @include ouiBreakpoint('xl') {
   .guideSass__breakpointExample {
     background: $ouiColorPrimary;
 
-    &:before {
+    &::before {
       content: 'You are currently in the xl breakpoint';
     }
   }
@@ -354,7 +352,7 @@
   .guideSass__breakpointExample {
     background: $ouiColorSecondary;
 
-    &:before {
+    &::before {
       content: 'You are currently in the l breakpoint';
     }
   }
@@ -364,7 +362,7 @@
   .guideSass__breakpointExample {
     background: $ouiColorAccent;
 
-    &:before {
+    &::before {
       content: 'You are currently in the m breakpoint';
     }
   }
@@ -374,7 +372,7 @@
   .guideSass__breakpointExample {
     background: $ouiColorWarning;
 
-    &:before {
+    &::before {
       content: 'You are currently in the s breakpoint';
     }
   }
@@ -384,7 +382,7 @@
   .guideSass__breakpointExample {
     background: $ouiColorDanger;
 
-    &:before {
+    &::before {
       content: 'You are currently in the xs breakpoint';
     }
   }

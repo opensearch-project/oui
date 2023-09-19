@@ -10,7 +10,6 @@
  */
 
 // This file utilizes !importants on purpose
-// sass-lint:disable no-important
 
 // Vertical alignment
 .oui-alignBaseline { vertical-align: baseline !important; }
@@ -55,6 +54,7 @@
   @include internetExplorerOnly {
     word-break: break-all !important;
   }
+
   overflow-wrap: break-word !important;
 }
 
@@ -101,9 +101,7 @@
   */
 .ouiIEFlexWrapFix {
   @include internetExplorerOnly {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 0%;
+    flex: 1 1 0%;
   }
 }
 
@@ -157,4 +155,5 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiFullHeight { @include ouiFullHeight; }
+
 /* End of Aliases */

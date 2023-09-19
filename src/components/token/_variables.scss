@@ -9,8 +9,6 @@
  * GitHub history for details.
  */
 
-// sass-lint:disable indentation
-
 $ouiTokenGrayColor: lightOrDarkTheme($ouiColorDarkShade, $ouiColorMediumShade);
 
 // Appends the gray color to the color blind palette
@@ -20,7 +18,6 @@ $ouiTokenTypes: map-merge($ouiPaletteColorBlind, (
     behindText: $ouiTokenGrayColor,
   )
 ));
-
 $ouiTokenTypeKeys: map-keys($ouiTokenTypes);
 
 
@@ -33,4 +30,5 @@ $euiTokenTypes: map-merge($euiPaletteColorBlind, (
   )
 ));
 $euiTokenTypeKeys: map-keys($euiTokenTypes);
+
 /* End of Aliases */

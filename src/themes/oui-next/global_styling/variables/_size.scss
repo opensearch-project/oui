@@ -9,17 +9,14 @@
  * GitHub history for details.
  */
 
-$ouiSize:     16px !default;
-
-$ouiSizeXS:   $ouiSize * .25 !default;
-$ouiSizeS:    $ouiSize * .5 !default;
-$ouiSizeM:    $ouiSize * .75 !default;
-$ouiSizeL:    $ouiSize * 1.5 !default;
-$ouiSizeXL:   $ouiSize * 2 !default;
-$ouiSizeXXL:  $ouiSize * 2.5 !default;
-
+$ouiSize: 16px !default;
+$ouiSizeXS: $ouiSize * .25 !default;
+$ouiSizeS: $ouiSize * .5 !default;
+$ouiSizeM: $ouiSize * .75 !default;
+$ouiSizeL: $ouiSize * 1.5 !default;
+$ouiSizeXL: $ouiSize * 2 !default;
+$ouiSizeXXL: $ouiSize * 2.5 !default;
 $ouiButtonMinWidth: $ouiSize * 7 !default;
-
 $ouiScrollBar: $ouiSize !default;
 $ouiScrollBarCorner: $ouiSizeS * .75 !default;
 
@@ -35,4 +32,5 @@ $euiSizeXXL: $ouiSizeXXL;
 $euiButtonMinWidth: $ouiButtonMinWidth;
 $euiScrollBar: $ouiScrollBar;
 $euiScrollBarCorner: $ouiScrollBarCorner;
+
 /* End of Aliases */

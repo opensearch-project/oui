@@ -10,25 +10,26 @@
  */
 
 .ouiDataGridColumnSorting__item {
-
   &-isDragging {
     @include ouiBottomShadow;
+
     background: $ouiColorEmptyShade;
   }
 }
 
 .ouiDataGridColumnSortingPopover {
   // Hack because the fixed positions of drag and drop don't work inside of transformed elements
-  // sass-lint:disable-block no-important
   transform: none !important;
   transition: none !important;
   margin-top: -$ouiSizeS;
+
   // IE11 needs a min-width
   min-width: $ouiSize * 12;
 }
 
 .ouiDataGridColumnSorting__fieldList {
   @include ouiYScrollWithShadows;
+
   padding-top: $ouiSizeXS;
   padding-bottom: $ouiSizeXS;
   max-height: 300px;
@@ -36,6 +37,7 @@
 
 .ouiDataGridColumnSorting__field {
   @include ouiInteractiveStates;
+
   display: block;
   padding: $ouiSizeXS $ouiSizeS;
   width: 100%;
@@ -46,17 +48,18 @@
   @include ouiBreakpoint('xs', 's') {
     padding-left: $ouiSizeXS;
   }
+
   padding-left: $ouiSizeL;
 
   .ouiDataGridColumnSorting__order {
     @include ouiBreakpoint('xs', 's') {
       min-width: unset;
     }
+
     min-width: 200px;
     border: none;
 
     // Hack to overwrite some nested, unreachable component code with button groups
-    // sass-lint:disable-block no-important
     button {
       font-size: $ouiFontSizeXS !important;
     }

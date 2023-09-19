@@ -47,7 +47,6 @@
     }
 
     &[disabled] {
-      // sass-lint:disable-block no-important
       cursor: not-allowed !important;
 
       ~ .ouiCheckbox__label {

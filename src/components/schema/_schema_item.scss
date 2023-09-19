@@ -11,7 +11,6 @@
 
 .ouiSchemaItem {
   display: flex;
-  // sass-lint:disable-block no-misspelled-properties
   gap: $ouiSizeS;
   align-items: center;
   padding: $ouiSizeS;
@@ -38,7 +37,6 @@
 }
 
 .ouiSchemaItem__actions {
-  // sass-lint:disable-block no-misspelled-properties
   gap: $ouiSizeXS;
   display: flex;
 
@@ -54,6 +52,7 @@
 
 .ouiSchemaItem--withPanel {
   @include ouiBottomShadowSmall;
+
   border: $ouiBorderThin;
 
   &:hover {
@@ -63,7 +62,6 @@
 
 .ouiSchemaItem--compressed {
   padding: $ouiSizeXS;
-  // sass-lint:disable-block no-misspelled-properties
   gap: $ouiSizeXS;
   font-size: $ouiFontSizeXS;
 

@@ -15,7 +15,7 @@
   border-bottom: $ouiBorderThin;
   width: 100%;
   text-align: left;
-  border-radius: 0 !important; // sass-lint:disable-line no-important
+  border-radius: 0 !important;
   font-size: $ouiFontSizeM;
   padding: 0 $ouiSize; // This plus the inner padding is equal to paddingSize large for OuiPage
 

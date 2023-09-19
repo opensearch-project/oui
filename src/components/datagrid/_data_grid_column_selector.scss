@@ -14,6 +14,7 @@
 
   &-isDragging {
     @include ouiBottomShadow;
+
     background: $ouiColorEmptyShade;
   }
 }
@@ -21,6 +22,7 @@
 // Because we only want this to scroll vertically, we need to offset inner ouiFlexGroup negative padding by adding padding
 .ouiDataGridColumnSelector__columnList {
   @include ouiYScrollWithShadows;
+
   max-height: 400px;
   margin: 0 (-$ouiSizeS);
 }
@@ -31,10 +33,10 @@
 
 .ouiDataGridColumnSelectorPopover {
   // Hack because the fixed positions of drag and drop don't work inside of transformed elements
-  // sass-lint:disable-block no-important
   transform: none !important;
   transition: none !important;
   margin-top: -$ouiSizeS;
+
   // IE11 needs a min-width
   min-width: $ouiSize * 12;
 }

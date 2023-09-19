@@ -32,6 +32,7 @@
 
 .ouiHeaderLogo__text {
   @include ouiTitle('s');
+
   padding-left: $ouiSize;
   font-weight: $ouiFontWeightLight;
 }
@@ -48,6 +49,7 @@
 
   .ouiHeaderLogo__text {
     @include ouiTitle('xs');
+
     font-weight: $ouiFontWeightRegular;
   }
 }

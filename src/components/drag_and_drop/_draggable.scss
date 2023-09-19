@@ -9,22 +9,20 @@
  * GitHub history for details.
  */
 
-// sass-lint:disable no-empty-rulesets
-
 .ouiDraggable {
   &.ouiDraggable--isDragging {
     // Overriding inline styles on JS-inserted HTML elements
-    z-index: $ouiZLevel9 !important; // sass-lint:disable-line no-important
+    z-index: $ouiZLevel9 !important;
   }
 
   &.ouiDraggable--hasClone:not(.ouiDraggable--isDragging) {
     // Overriding inline styles on JS-inserted HTML elements
-    transform: none !important; // sass-lint:disable-line no-important
+    transform: none !important;
   }
 
   &.ouiDraggable--withoutDropAnimation {
     // Overriding inline styles on JS-inserted HTML elements
-    transition-duration: .001s !important; // sass-lint:disable-line no-important
+    transition-duration: .001s !important;
   }
 
   &:focus > .ouiDraggable__item,

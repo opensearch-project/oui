@@ -10,7 +10,6 @@
  */
 
 $ouiTooltipBackgroundColor: tintOrShade($ouiColorFullShade, 25%, 100%) !default;
-
 $ouiTooltipAnimations: (
   top: ouiToolTipTop,
   left: ouiToolTipBottom,
@@ -22,4 +21,5 @@ $ouiTooltipAnimations: (
 /* OUI -> EUI Aliases */
 $euiTooltipBackgroundColor: $ouiTooltipBackgroundColor;
 $euiTooltipAnimations: $ouiTooltipAnimations;
+
 /* End of Aliases */

@@ -15,6 +15,7 @@
 
 .ouiFilePicker {
   @include ouiFormControlSize($includeAlternates: true);
+
   position: relative;
 
   &.ouiFilePicker--large {
@@ -81,14 +82,13 @@
 .ouiFilePicker__prompt {
   @include ouiFormControlDefaultShadow;
   @include ouiFormControlWithIcon; /* 2 */
+
   height: $ouiFormControlHeight;
   padding-top: $ouiFormControlPadding;
   padding-right: $ouiFormControlPadding;
   padding-bottom: $ouiFormControlPadding;
   pointer-events: none; /* 1 */
   border-radius: $ouiFormControlBorderRadius;
-
-  // sass-lint:disable-block indentation
   transition:
     box-shadow $ouiAnimSpeedFast ease-in,
     background-color $ouiAnimSpeedFast ease-in,
@@ -98,6 +98,7 @@
   .ouiFilePicker--compressed & {
     @include ouiFormControlStyleCompressed($includeStates: false);
     @include ouiFormControlWithIcon($compressed: true); /* 2 */
+
     height: $ouiFormControlCompressedHeight;
     border-radius: $ouiFormControlCompressedBorderRadius;
   }
@@ -123,10 +124,11 @@
 .ouiFilePicker__promptText {
   @include ouiFontSizeS;
   @include ouiTextTruncate;
+
   line-height: $ouiSize;
 
   // make normal sized prompt look like placeholder
-  .ouiFilePicker:not(.ouiFilePicker--large):not(.ouiFilePicker-hasFiles) & {
+  .ouiFilePicker:not(.ouiFilePicker--large, .ouiFilePicker-hasFiles) & {
     color: $ouiColorMediumShade;
   }
 }
@@ -189,7 +191,6 @@
 
 // Large styles only
 .ouiFilePicker--large {
-  // sass-lint:disable-block nesting-depth
   // Hover and focus
   .ouiFilePicker__input:hover:not(:disabled),
   .ouiFilePicker__input:focus {

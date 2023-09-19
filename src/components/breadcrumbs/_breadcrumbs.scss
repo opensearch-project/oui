@@ -16,6 +16,7 @@
 
 .ouiBreadcrumbs {
   @include ouiFontSizeS;
+
   margin-bottom: -$ouiSizeXS; /* 1 */
   display: flex;
   align-items: center;
@@ -28,10 +29,10 @@
 
   &:not(.ouiBreadcrumb--last) {
     // TODO: remove important: https://github.com/opensearch-project/oui/issues/376
-    color: $ouiBreadcrumbInactiveTextColor !important; // sass-lint:disable-line no-important
+    color: $ouiBreadcrumbInactiveTextColor !important;
 
     &:hover {
-      color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
+      color: $ouiBreadCrumbHoverColor !important;
     }
   }
 }
@@ -42,12 +43,12 @@
 
 .ouiBreadcrumb--collapsed {
   flex-shrink: 0;
-  color: $ouiBreadcrumbCollapsedLink !important; // sass-lint:disable-line no-important
-  vertical-align: top !important; // sass-lint:disable-line no-important
+  color: $ouiBreadcrumbCollapsedLink !important;
+  vertical-align: top !important;
 }
 
 .ouiBreadcrumb__collapsedLink:hover {
-  color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
+  color: $ouiBreadCrumbHoverColor !important;
 }
 
 .ouiBreadcrumbs--truncate {
@@ -74,6 +75,7 @@
 
 .ouiBreadcrumb--truncate {
   @include ouiTextTruncate;
+
   max-width: 100%;
   text-align: center;
   vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
@@ -92,12 +94,8 @@
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: $ouiBreadcrumbSpacing / 2;
-    right: $ouiBreadcrumbSpacing / 2;
+    inset: 0 $ouiBreadcrumbSpacing / 2 0 $ouiBreadcrumbSpacing / 2;
     z-index: -1;
-
     transform: skewX(-20deg);
     border-radius: $ouiSizeXS;
   }

@@ -11,6 +11,7 @@
 
 .ouiTextArea {
   @include ouiFormControlStyle;
+
   line-height: $ouiLineHeight; // give more spacing between multiple lines
 
   // Textareas have their own sizing

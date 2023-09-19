@@ -10,9 +10,9 @@
  */
 
 @mixin ouiPopoverTitle($size: 'm') {
-  @if ($size == 's') {
+  @if  $size == 's' {
     @include ouiTitle('xxxs');
-  } @else if ($size == 'm') {
+  } @else if $size == 'm' {
     @include ouiTitle('xxs');
   } @else {
     @warn 'ouiPopoverTitle only accepts "s" or "m" sizes';
@@ -25,6 +25,7 @@
 
 @mixin ouiPopoverFooter {
   @include ouiFontSizeS;
+
   padding: $ouiSizeM;
   border-top: $ouiBorderThin;
 }
@@ -32,5 +33,7 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiPopoverTitle($size: 'm') { @include ouiPopoverTitle($size); }
+
 @mixin euiPopoverFooter { @include ouiPopoverFooter; }
+
 /* End of Aliases */

@@ -10,12 +10,10 @@
  */
 
 .ouiDescriptionList {
-  // sass-lint:disable-block nesting-depth
-
   &.ouiDescriptionList--row {
-
     .ouiDescriptionList__title {
       @include ouiTitle('xs');
+
       line-height: $ouiLineHeight;
       margin-top: $ouiSize;
 
@@ -48,9 +46,9 @@
 
     // Compressed gets smaller fonts.
     &.ouiDescriptionList--compressed {
-
       .ouiDescriptionList__title {
         @include ouiTitle('xxs');
+
         line-height: $ouiLineHeight;
       }
 
@@ -66,6 +64,7 @@
 
         .ouiDescriptionList__description {
           @include ouiTitle('xxs');
+
           line-height: $ouiLineHeight;
         }
       }
@@ -91,6 +90,7 @@
 
     .ouiDescriptionList__title {
       @include ouiTitle('xs');
+
       line-height: $ouiLineHeight;
       width: 50%; // Flex-basis doesn't work in IE with padding
       padding-right: $ouiSizeS;
@@ -98,6 +98,7 @@
 
     .ouiDescriptionList__description {
       @include ouiFontSize;
+
       width: 50%; // Flex-basis doesn't work in IE with padding
       padding-left: $ouiSizeS;
     }
@@ -117,6 +118,7 @@
 
       .ouiDescriptionList__description {
         @include ouiTitle('xs');
+
         line-height: $ouiLineHeight;
       }
     }
@@ -124,6 +126,7 @@
     &.ouiDescriptionList--compressed {
       .ouiDescriptionList__title {
         @include ouiTitle('xxs');
+
         line-height: $ouiLineHeight;
       }
 
@@ -139,6 +142,7 @@
 
         .ouiDescriptionList__description {
           @include ouiTitle('xxs');
+
           line-height: $ouiLineHeight;
         }
       }
@@ -157,6 +161,7 @@
 
       .ouiDescriptionList__description {
         @include ouiFontSizeS;
+
         margin-top: 0;
       }
 
@@ -180,9 +185,9 @@
   }
 
   &.ouiDescriptionList--inline {
-
     .ouiDescriptionList__title {
       @include ouiFontSizeS;
+
       display: inline;
       border-radius: $ouiBorderRadius;
       font-weight: $ouiFontWeightRegular;
@@ -199,13 +204,13 @@
 
     .ouiDescriptionList__description {
       @include ouiFontSizeS;
+
       display: inline;
       word-break: break-all;
     }
 
     // Compressed when inline is even smaller.
     &.ouiDescriptionList--compressed {
-
       .ouiDescriptionList__title {
         @include ouiFontSizeXS;
       }

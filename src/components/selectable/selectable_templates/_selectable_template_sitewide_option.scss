@@ -11,7 +11,7 @@
 
 .ouiSelectableTemplateSitewide__listItem {
   .ouiSelectableListItem__text {
-    text-decoration: none !important; // sass-lint:disable-line no-important
+    text-decoration: none !important;
   }
 
   // TODO: Any better way to override this focus underline?

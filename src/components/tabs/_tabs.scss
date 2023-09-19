@@ -11,6 +11,7 @@
 
 .ouiTabs {
   @include ouiScrollBar;
+
   display: flex;
   max-width: 100%;
   overflow-x: auto;
@@ -19,7 +20,6 @@
   flex-shrink: 0; // don't ever let this shrink in height if direct descendent of flex
 
   // Changing height of scrollbar so it sits flush with border
-  // sass-lint:disable no-vendor-prefixes
   &::-webkit-scrollbar {
     height: 3px;
   }
@@ -37,6 +37,7 @@
 
 .ouiTab {
   @include fontSize($ouiTabFontSize);
+
   color: $ouiTextColor;
   background-color: transparent;
   cursor: pointer;
@@ -99,6 +100,7 @@
 
   .ouiTabs--small & {
     @include fontSize($ouiTabFontSizeS);
+
     padding: $ouiSizeS;
   }
 

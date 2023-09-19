@@ -33,6 +33,7 @@
 
 .ouiSelectableList__groupLabel {
   @include ouiTitle('xxxs');
+
   display: flex;
   align-items: center;
   border-bottom: $ouiSelectableListItemBorder;

@@ -11,6 +11,7 @@
 
 .ouiDroppable {
   $ouiDroppableColor: $ouiColorSecondary;
+
   transition: background-color $ouiAnimSpeedExtraSlow ease;
 
   &.ouiDroppable--isDraggingType:not(.ouiDroppable--isDisabled) {
@@ -24,7 +25,7 @@
   .ouiDroppable__placeholder {
     &.ouiDroppable__placeholder--isHidden {
       // Overriding inline styles on JS-inserted HTML elements
-      display: none !important; // sass-lint:disable-line no-important
+      display: none !important;
     }
   }
 }
@@ -33,6 +34,7 @@
 
 .ouiDroppable--withPanel {
   @include ouiBottomShadowMedium;
+
   border-radius: $ouiBorderRadius;
 }
 

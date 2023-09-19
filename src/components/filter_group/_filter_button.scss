@@ -68,5 +68,6 @@
 .ouiFilterButton__textShift {
   @include ouiTextShift;
   @include ouiTextTruncate;
+
   min-width: $ouiSize * 3;
 }

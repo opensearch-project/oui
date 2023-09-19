@@ -35,6 +35,7 @@
 
   &.ouiExpression--columns {
     border-color: transparent;
+
     // Ensures there's no flash of the dashed style before turning solid for the active state
     border-bottom-style: solid;
     margin-bottom: $ouiSizeXS;
@@ -46,6 +47,7 @@
     .ouiExpression__description,
     .ouiExpression__value {
       @include ouiTextTruncate;
+
       display: inline-block;
       vertical-align: bottom;
     }
@@ -84,7 +86,6 @@
   &.ouiExpression-isClickable {
     background-color: $ouiColorLightestShade;
 
-    // sass-lint:disable-block nesting-depth
     &:focus,
     &:hover:not(:disabled) {
       .ouiExpression__description,
@@ -118,6 +119,7 @@
 
     &.ouiExpression-isActive {
       border-bottom-color: $color;
+      /* stylelint-disable-next-line declaration-block-no-shorthand-property-overrides */
       border-color: $color;
     }
 

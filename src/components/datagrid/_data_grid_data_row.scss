@@ -41,6 +41,7 @@
 
   &:focus {
     @include ouiDataGridCellFocus;
+
     margin-top: -1px;
   }
 
@@ -80,6 +81,7 @@
   }
 
   // on focus, directly show action buttons (without animation), but still slide in the open popover button
+  /* stylelint-disable-next-line no-duplicate-selectors */
   &:focus {
     .ouiDataGridRowCell__actionButtonIcon {
       margin-left: $ouiDataGridCellPaddingM;
@@ -88,7 +90,7 @@
   }
 
   // if a cell is not hovered nor focused nor open via popover, don't show buttons in general
-  &:not(:hover):not(:focus):not(.ouiDataGridRowCell--open) {
+  &:not(:hover, :focus, .ouiDataGridRowCell--open) {
     .ouiDataGridRowCell__expandButtonIcon,
     .ouiDataGridRowCell__actionButtonIcon {
       display: none;
@@ -127,6 +129,7 @@
     &.ouiDataGridRowCell__truncate,
     .ouiDataGridRowCell__expandContent {
       @include ouiTextTruncate;
+
       overflow: hidden;
       white-space: nowrap;
     }
@@ -135,8 +138,8 @@
 
 .ouiDataGridRowCell__popover {
   @include ouiScrollBar;
+
   overflow: auto;
-  // sass-lint:disable-block no-important
   max-width: 400px !important;
   max-height: 400px !important;
 }
@@ -176,7 +179,7 @@
   width: 0;
   overflow: hidden;
   transition: none; // Have to take out the generic transition so it is instaneous on focus
-  box-shadow: none !important; // sass-lint:disable-line no-important
+  box-shadow: none !important;
 
   /* ToDo: Remove unnecessary logic: the old beta theme has
    * evolved and the statement below about the `Next` theme
@@ -204,7 +207,6 @@
 @include ouiDataGridStyles(rowHoverHighlight) {
   .ouiDataGridRow:hover {
     @include ouiDataGridRowCell {
-      // sass-lint:disable-block no-important
       // Needed to overtake striping
       background-color: $ouiColorHighlight !important;
     }
@@ -223,7 +225,6 @@
 // Border alternates
 @include ouiDataGridStyles(bordersNone) {
   @include ouiDataGridRowCell {
-    // sass-lint:disable-block no-important
     border-color: transparent !important;
   }
 }

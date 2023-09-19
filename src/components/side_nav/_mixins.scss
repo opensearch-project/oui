@@ -9,8 +9,6 @@
  * GitHub history for details.
  */
 
-// sass-lint:disable indentation no-color-keywords no-color-literals
-
 @mixin ouiSideNavEmbellish {
   background:
     linear-gradient(160deg, $ouiSideNavEmphasizedBackgroundColor 0, $ouiSideNavEmphasizedBackgroundColor $ouiSizeXL, rgba(red, 0) 0),
@@ -20,4 +18,5 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiSideNavEmbellish { @include ouiSideNavEmbellish; }
+
 /* End of Aliases */

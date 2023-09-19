@@ -13,7 +13,6 @@
 
 $ouiAnimSlightBounce: cubic-bezier(.34, 1.61, .7, 1) !default;
 $ouiAnimSlightResistance: cubic-bezier(.694, .0482, .335, 1) !default;
-
 $ouiAnimSpeedExtraFast: 90ms !default;
 $ouiAnimSpeedFast: 150ms !default;
 $ouiAnimSpeedNormal: 250ms !default;
@@ -32,4 +31,5 @@ $euiAnimSpeedFast: $ouiAnimSpeedFast;
 $euiAnimSpeedNormal: $ouiAnimSpeedNormal;
 $euiAnimSpeedSlow: $ouiAnimSpeedSlow;
 $euiAnimSpeedExtraSlow: $ouiAnimSpeedExtraSlow;
+
 /* End of Aliases */

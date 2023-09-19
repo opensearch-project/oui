@@ -11,7 +11,6 @@
 
 // For using icons as background images (data-uri)
 @mixin ouiIconBackground($type, $color: $ouiColorEmptyShade) {
-  // sass-lint:disable-block quotes
   @if variable-exists(type) == false {
     @error 'A $type:string must be provided to @mixin ouiIconBackground().';
   } @else if type-of($color) != color {
@@ -30,4 +29,5 @@
 
 /* OUI -> EUI Aliases */
 @mixin euiIconBackground($type, $color: $ouiColorEmptyShade) { @include ouiIconBackground($type, $color); }
+
 /* End of Aliases */

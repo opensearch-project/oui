@@ -31,6 +31,7 @@
 
   &:focus {
     background-color: $ouiFocusBackgroundColor;
+
     // use box-shadow as a "faux outline" to apply left/right padding only
     box-shadow: -$ouiSizeXS 0 $ouiFocusBackgroundColor, $ouiSizeXS 0 $ouiFocusBackgroundColor;
   }
@@ -67,6 +68,7 @@
 .ouiFacetButton__text {
   @include ouiTextShift;
   @include ouiTextTruncate;
+
   flex-grow: 1;
   vertical-align: middle;
 
