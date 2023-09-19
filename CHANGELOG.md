@@ -11,6 +11,7 @@
 ### 📈 Features/Enhancements
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+- Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
 
 ### 🐛 Bug Fixes
 
