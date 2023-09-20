@@ -165,6 +165,10 @@ type CommonGridProps = CommonProps &
      */
     onColumnResize?: OuiDataGridOnColumnResizeHandler;
     /**
+     * A callback fired when the internal full screen state changes.
+     */
+    onFullScreenChange?: (isFullScreen: boolean) => void;
+    /**
      * Defines a minimum width for the grid to show all controls in its header.
      */
     minSizeForControls?: number;
@@ -690,6 +694,7 @@ function notifyCellOfFocusState(
 }
 
 const emptyArrayDefault: OuiDataGridControlColumn[] = [];
+
 export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
   const {
     leadingControlColumns = emptyArrayDefault,
@@ -708,6 +713,7 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
     inMemory,
     popoverContents,
     onColumnResize,
+    onFullScreenChange,
     minSizeForControls = MINIMUM_WIDTH_FOR_GRID_CONTROLS,
     height,
     width,
@@ -715,7 +721,7 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
     ...rest
   } = props;
 
-  const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isFullScreen, setFullScreen] = useState(false);
   const [gridWidth, setGridWidth] = useState(0);
 
   const [interactiveCellId] = useState(htmlIdGenerator()());
@@ -756,6 +762,17 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
     [headerIsInteractive, setHeaderIsInteractive, setFocusedCell]
   );
 
+  const handleFullScreenChange = useCallback(
+    (isFullScreen: boolean) => {
+      setFullScreen(isFullScreen);
+
+      if (onFullScreenChange) {
+        onFullScreenChange(isFullScreen);
+      }
+    },
+    [onFullScreenChange]
+  );
+
   const handleHeaderMutation = useCallback<MutationCallback>(
     (records) => {
       const [{ target }] = records;
@@ -781,7 +798,7 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
       case keys.ESCAPE:
         if (isFullScreen) {
           event.preventDefault();
-          setIsFullScreen(false);
+          handleFullScreenChange(false);
         }
         break;
     }
@@ -1000,7 +1017,7 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
           color="text"
           className={controlBtnClasses}
           data-test-subj="dataGridFullScrenButton"
-          onClick={() => setIsFullScreen(!isFullScreen)}>
+          onClick={() => handleFullScreenChange(!isFullScreen)}>
           {isFullScreen ? fullScreenButtonActive : fullScreenButton}
         </OuiButtonEmpty>
       )}

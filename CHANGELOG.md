@@ -51,6 +51,7 @@
 - Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
 - Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 - Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
+- Added onFullScreenChange to OuiDataGrid ([#1015](https://github.com/opensearch-project/oui/pull/1015))
 
 ### 🐛 Bug Fixes
 
