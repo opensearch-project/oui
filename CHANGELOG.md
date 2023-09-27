@@ -30,6 +30,7 @@
 ### 🛠 Maintenance
 
 - Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
+- Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 
 ### 🪛 Refactoring
 
@@ -74,7 +75,6 @@
 
 ### 🛠 Maintenance
 
-- Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 - [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
 - [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
