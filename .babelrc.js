@@ -29,6 +29,7 @@ module.exports = {
     "@babel/plugin-syntax-dynamic-import",
     "pegjs-inline-precompile",
     "./scripts/babel/proptypes-from-ts-props",
+    "./scripts/babel/variables-from-scss",
     "add-module-exports",
     // stage 3
     "@babel/proposal-object-rest-spread",

@@ -85,7 +85,7 @@
       width: auto;
 
       .ouiSwitch--compressed {
-        margin-top: $ouiSizeXS / 2; // Better vertical alignment of a compressed switch to the horizontal label
+        margin-top: calc($ouiSizeXS / 2); // Better vertical alignment of a compressed switch to the horizontal label
       }
     }
 

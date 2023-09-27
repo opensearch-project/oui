@@ -15,7 +15,7 @@
   width: $ouiSizeXL;
   height: $ouiSizeXL;
   border-radius: 50%;
-  border: solid $ouiSizeXS / 2 $ouiColorLightShade;
+  border: solid calc($ouiSizeXS / 2) $ouiColorLightShade;
   border-color: ouiLoadingSpinnerBorderColors();
 
   // sass-lint:disable-block mixins-before-declarations

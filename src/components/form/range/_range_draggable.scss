@@ -10,15 +10,15 @@
  */
 
 .ouiRangeDraggable {
-  height: $ouiFormControlHeight / 2;
+  height: calc($ouiFormControlHeight / 2);
   position: absolute;
-  top: $ouiFormControlHeight / 4;
+  top: calc($ouiFormControlHeight / 4);
   pointer-events: none;
   z-index: 2;
 
   &.ouiRangeDraggable--compressed {
-    height: $ouiFormControlCompressedHeight / 2;
-    top: $ouiFormControlCompressedHeight / 4;
+    height: calc($ouiFormControlCompressedHeight / 2);
+    top: calc($ouiFormControlCompressedHeight / 4);
   }
 
   &.ouiRangeDraggable--hasTicks {

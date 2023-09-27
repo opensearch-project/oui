@@ -13,8 +13,8 @@
   .ouiFacetGroup--#{$gutterName} {
     .ouiFacetButton {
       // Split the margin between top and bottom
-      margin-top: $gutterSize / 2;
-      margin-bottom: $gutterSize / 2;
+      margin-top: calc($gutterSize / 2);
+      margin-bottom: calc($gutterSize / 2);
     }
 
     &.ouiFacetGroup--horizontal {

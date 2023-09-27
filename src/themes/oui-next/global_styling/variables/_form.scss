@@ -56,7 +56,7 @@ $ouiSwitchOffColor: lightOrDarkTheme(transparentize($ouiColorMediumShade, .8), t
 // Control Layout
 $ouiFormControlLayoutGroupInputHeight: $ouiFormControlHeight - 2px !default;
 $ouiFormControlLayoutGroupInputCompressedHeight: $ouiFormControlCompressedHeight - 2px !default;
-$ouiFormControlLayoutGroupInputCompressedBorderRadius: $ouiFormControlCompressedBorderRadius / 2 !default;
+$ouiFormControlLayoutGroupInputCompressedBorderRadius: calc($ouiFormControlCompressedBorderRadius / 2) !default;
 
 // Range
 $ouiRangeTrackColor: $ouiColorDarkShade !default;
@@ -68,7 +68,7 @@ $ouiRangeThumbBorderColor: $ouiRangeTrackColor !default;
 
 $ouiRangeTrackWidth: 100% !default;
 $ouiRangeTrackHeight: 2px !default;
-$ouiRangeTrackBorderWidth: 0 !default;
+$ouiRangeTrackBorderWidth: 0px !default;
 $ouiRangeTrackBorderColor: $ouiRangeTrackColor !default;
 $ouiRangeTrackRadius: $ouiBorderRadius !default;
 
