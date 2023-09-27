@@ -20,7 +20,7 @@
 
 // Progress bars come in different sizes.
 $ouiProgressSizes: (
-  xs: $ouiSizeXS / 2,
+  xs: calc($ouiSizeXS / 2),
   s: $ouiSizeXS,
   m: $ouiSizeS,
   l: $ouiSize,

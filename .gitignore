@@ -8,9 +8,9 @@ test/failure-screenshots/**/*.png
 coverage/
 reports/
 tmp/
-dist/
-docs/
-lib/
+/dist/
+/docs/
+/lib/
 es/
 test-env/
 .idea

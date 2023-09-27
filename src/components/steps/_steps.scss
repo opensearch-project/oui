@@ -37,10 +37,10 @@
 
     .ouiStep__content {
       // Align the content's contents with the title
-      padding-left: ($ouiStepNumberSmallSize / 2) + $ouiStepNumberMargin;
+      padding-left: calc($ouiStepNumberSmallSize / 2) + $ouiStepNumberMargin;
 
       // Align content border to horizontal center of step number
-      margin-left: ($ouiStepNumberSmallSize / 2);
+      margin-left: calc($ouiStepNumberSmallSize / 2);
     }
   }
 }
@@ -64,8 +64,8 @@
   margin: $ouiSizeS 0;
 
   // Align the content's contents with the title
-  padding-left: ($ouiStepNumberSize / 2) + $ouiStepNumberMargin;
+  padding-left: calc($ouiStepNumberSize / 2) + $ouiStepNumberMargin;
 
   // Align content border to horizontal center of step number
-  margin-left: ($ouiStepNumberSize / 2);
+  margin-left: calc($ouiStepNumberSize / 2);
 }

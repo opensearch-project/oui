@@ -10,10 +10,10 @@
  */
 
 import React from 'react';
-import sizes from '!!sass-vars-to-js-loader?preserveKeys=true!../../../../src/global_styling/variables/_size.scss';
-import zindexs from '!!sass-vars-to-js-loader?preserveKeys=true!../../../../src/global_styling/variables/_z_index.scss';
-import animations from '!!sass-vars-to-js-loader?preserveKeys=true!../../../../src/global_styling/variables/_animations.scss';
-import breakpoints from '!!sass-vars-to-js-loader?preserveKeys=true!../../../../src/global_styling/variables/_responsive.scss';
+import sizes from '!!variables-from-scss!!../../../../src/global_styling/variables/_size.scss';
+import zindexs from '!!variables-from-scss!!../../../../src/global_styling/variables/_z_index.scss';
+import animations from '!!variables-from-scss!!../../../../src/global_styling/variables/_animations.scss';
+import breakpoints from '!!variables-from-scss!!../../../../src/global_styling/variables/_responsive.scss';
 import { rgbToHex } from '../../../../src/services';
 
 import { Link } from 'react-router-dom';
