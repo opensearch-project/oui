@@ -353,8 +353,8 @@ const validateFieldValue = (
     try {
       schemaField.validate(value);
     } catch (e) {
-      // While e.message is the normal convention, it is optional. e.code and e.name are checked for completeness
-      const message = (e instanceof Error ? e.message || e.code || e.name : String(e))?.trim();
+      // While e.message is the normal convention, it is optional. e.name is used for completeness
+      const message = (e instanceof Error ? e.message || e.name : String(e))?.trim();
 
       error(
         `Invalid value \`${expression}\` set for field \`${field}\`${message ? ` - ${message}` : '' }`,
