@@ -217,7 +217,7 @@ body {
 .guideCharts__customLegendLine {
   display: inline-block;
   width: $ouiSize;
-  height: $ouiSizeM / 2;
+  height: calc($ouiSizeM / 2);
   background-color: currentColor;
   vertical-align: middle;
   margin-right: $ouiSizeS;

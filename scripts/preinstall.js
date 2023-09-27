@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-const { rmSync, readdirSync } = require('fs');
+const { rmSync, readdirSync, existsSync } = require('fs');
 const { join } = require('path');
 
 const { INIT_CWD, PWD = process.cwd() } = process.env;
@@ -51,8 +51,10 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
     'vfile-message',
   ];
 
-  for (const name of readdirSync('node_modules')) {
-    if (!depsToKeep.includes(name)) rmSync(join('node_modules', name), { recursive: true, force: true });
+  if (existsSync('node_modules')) {
+    for (const name of readdirSync('node_modules')) {
+      if (!depsToKeep.includes(name)) rmSync(join('node_modules', name), { recursive: true, force: true });
+    }
   }
 
   const typesToKeep = [
@@ -74,8 +76,10 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
     'vfile-message',
   ];
 
-  for (const name of readdirSync('node_modules/@types')) {
-    if (!typesToKeep.includes(name)) rmSync(join('node_modules/@types', name), { recursive: true, force: true });
+  if (existsSync('node_modules/@types')) {
+    for (const name of readdirSync('node_modules/@types')) {
+      if (!typesToKeep.includes(name)) rmSync(join('node_modules/@types', name), { recursive: true, force: true });
+    }
   }
 
   const toDeleteFromRoot = [

@@ -20,7 +20,7 @@
 
     #{$selector}__betaBadgeWrapper {
       position: absolute;
-      top: ($ouiSizeL / -2);
+      top: calc($ouiSizeL / -2);
       left: 50%;
       transform: translateX(-50%);
       z-index: 3; // get above abs positioned image
@@ -49,7 +49,7 @@
 
     #{$selector}__betaBadgeWrapper {
       position: absolute;
-      top: ($ouiSizeL / -2);
+      top: calc($ouiSizeL / -2);
       left: 50%;
       transform: translateX(-50%);
       z-index: 3; // get above abs positioned image

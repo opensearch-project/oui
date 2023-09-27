@@ -17,7 +17,7 @@
   top: 0;
   bottom: 0;
   width: calc(100% - #{$ouiRangeThumbWidth});
-  margin-left: $ouiRangeThumbWidth / 2;
+  margin-left: calc($ouiRangeThumbWidth / 2);
   pointer-events: none;
   z-index: 2; // higher than .ouiRangeSlider that is 1
 }
@@ -29,7 +29,7 @@
   border: 1px solid $ouiTooltipBackgroundColor;
   position: absolute;
   border-radius: $ouiBorderRadius;
-  padding: ($ouiSizeXS / 2) $ouiSizeS;
+  padding: calc($ouiSizeXS / 2) $ouiSizeS;
   background-color: $ouiTooltipBackgroundColor;
   color: $ouiColorGhost;
   max-width: 256px;
@@ -40,13 +40,13 @@
 
   // Custom sizing
   $arrowSize: $ouiSizeM;
-  $arrowMinusSize: (($arrowSize / 2) - 1px) * -1;
+  $arrowMinusSize: (calc($arrowSize / 2) - 1px) * -1;
 
   &::after,
   &::before {
     content: '';
     position: absolute;
-    bottom: -$arrowSize / 2;
+    bottom: calc(-1 * $arrowSize / 2);
     left: 50%;
     transform-origin: center;
     background-color: $ouiTooltipBackgroundColor;
@@ -99,10 +99,10 @@
   }
 
   &--hasTicks {
-    top: ($ouiFormControlHeight / 4);
+    top: calc($ouiFormControlHeight / 4);
 
     .ouiRangeTooltip--compressed & {
-      top: ($ouiFormControlCompressedHeight / 4);
+      top: calc($ouiFormControlCompressedHeight / 4);
     }
   }
 }

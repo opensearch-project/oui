@@ -11,7 +11,7 @@
 
 //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
 @function pow($number, $power) {
-  @if ($power != $power or ($power != 0 and $power == $power / 2)) {
+  @if ($power != $power or ($power != 0 and $power == calc($power / 2))) {
     @return $power;
   }
   @if ($power == 1) {
@@ -46,7 +46,7 @@
     @if ($hasTrailingOne) {
       $power: $power - 1;
     }
-    $halfPower: pow($number, floor($power / 2));
+    $halfPower: pow($number, floor(calc($power / 2)));
     $fullPower: $halfPower * $halfPower;
     @if ($hasTrailingOne) {
       $fullPower: $fullPower * $number;
@@ -67,7 +67,7 @@
   $x: 1;
 
   @for $i from 0 through $prec {
-    $x: 1 / $n * (($n - 1) * $x + ($num / pow($x, $n - 1)));
+    $x: calc(1 / $n) * (($n - 1) * $x + calc($num / pow($x, $n - 1)));
   }
 
   @return $x;

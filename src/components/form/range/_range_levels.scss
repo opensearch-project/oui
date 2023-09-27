@@ -15,17 +15,17 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: ($ouiFormControlHeight / 2) + 2px;
+  top: calc($ouiFormControlHeight / 2) + 2px;
 
   &--hasTicks {
-    top: ($ouiFormControlHeight / 4) + 2px;
+    top: calc($ouiFormControlHeight / 4) + 2px;
   }
 
   &--compressed {
-    top: ($ouiFormControlCompressedHeight / 2) + 2px;
+    top: calc($ouiFormControlCompressedHeight / 2) + 2px;
 
     &.ouiRangeLevels--hasTicks {
-      top: ($ouiFormControlCompressedHeight / 4) + 2px;
+      top: calc($ouiFormControlCompressedHeight / 4) + 2px;
     }
   }
 }
