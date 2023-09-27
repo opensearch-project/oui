@@ -132,8 +132,8 @@ export const OuiPinnableListGroup: FunctionComponent<OuiPinnableListGroupProps> 
             'aria-label': pinTitle ? pinTitle(item) : pinExtraActionLabel,
           };
         }
-        // Return the item on click
-        itemProps.extraAction.onClick = () => onPinClick(item);
+        // On click, return the item
+        if (onPinClick) itemProps.extraAction.onClick = () => onPinClick(item);
       }
 
       return itemProps;
