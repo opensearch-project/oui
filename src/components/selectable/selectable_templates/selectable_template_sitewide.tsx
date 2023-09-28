@@ -252,7 +252,7 @@ export const OuiSelectableTemplateSitewide: FunctionComponent<OuiSelectableTempl
       searchProps={{
         placeholder: searchPlaceholder,
         isClearable: true,
-        ...searchProps,
+        ...(searchProps as Omit<typeof searchProps, 'className'>),
         onFocus: searchOnFocus,
         onBlur: searchOnBlur,
         onInput: onSearchInput,
