@@ -115,7 +115,7 @@ export const OuiPinnableListGroup: FunctionComponent<OuiPinnableListGroupProps> 
       );
 
       // Add the pinning action unless the item has it's own extra action
-      if (onPinClick && !itemProps.extraAction && pinnable) {
+      if (pinnable && !itemProps.extraAction) {
         // Different displays for pinned vs unpinned
         if (pinned) {
           itemProps.extraAction = {
@@ -132,8 +132,8 @@ export const OuiPinnableListGroup: FunctionComponent<OuiPinnableListGroupProps> 
             'aria-label': pinTitle ? pinTitle(item) : pinExtraActionLabel,
           };
         }
-        // Return the item on click
-        itemProps.extraAction.onClick = () => onPinClick(item);
+        // On click, return the item
+        if (onPinClick) itemProps.extraAction.onClick = () => onPinClick(item);
       }
 
       return itemProps;

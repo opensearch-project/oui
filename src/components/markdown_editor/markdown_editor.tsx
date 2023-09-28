@@ -260,7 +260,7 @@ export const OuiMarkdownEditor = forwardRef<
         const parsed = parser.processSync(value);
         return [parsed, null];
       } catch (e) {
-        return [null, e];
+        return [null, e as OuiMarkdownParseError];
       }
     }, [parser, value]);
 

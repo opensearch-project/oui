@@ -32,7 +32,6 @@ import React, {
   FunctionComponent,
   HTMLAttributes,
   ButtonHTMLAttributes,
-  MouseEventHandler,
 } from 'react';
 import { CommonProps, ExclusiveUnion, keysOf } from '../common';
 import classNames from 'classnames';
@@ -77,12 +76,7 @@ interface OuiSuggestItemPropsBase {
 }
 
 type PropsForDiv = Omit<HTMLAttributes<HTMLDivElement>, 'onClick'>;
-type PropsForButton = Omit<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  'onClick' | 'type'
-> & {
-  onClick: MouseEventHandler<HTMLButtonElement> | undefined;
-};
+type PropsForButton = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'type'>;
 
 export type OuiSuggestItemProps = CommonProps &
   OuiSuggestItemPropsBase &
@@ -193,8 +187,8 @@ export const OuiSuggestItem: FunctionComponent<OuiSuggestItemProps> = ({
   if (onClick) {
     return (
       <button
-        onClick={onClick}
         className={classes}
+        onClick={onClick}
         {...(rest as PropsForButton)}>
         {innerContent}
       </button>
