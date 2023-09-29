@@ -100,7 +100,7 @@
 
 .ouiControlBar__button {
   flex-shrink: 0;
-  border-radius: $ouiBorderRadius / 2;
+  border-radius: calc($ouiBorderRadius / 2);
   margin-left: $ouiSizeXS;
   font-size: $ouiFontSizeS;
 

@@ -21,7 +21,7 @@
   border-bottom: $ouiBorderWidthThick solid transparent;
   display: inline-block; /* 1 */
   text-align: left;
-  padding: ($ouiSizeXS / 2) 0;
+  padding: calc($ouiSizeXS / 2) 0;
   transition: all $ouiAnimSpeedNormal ease-in-out;
   color: $ouiTextColor;
 

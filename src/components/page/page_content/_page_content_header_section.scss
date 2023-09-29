@@ -21,7 +21,7 @@
     .ouiPageContent[class*='#{$modifier}'] .ouiPageContentHeader--responsive {
       .ouiPageContentHeaderSection + .ouiPageContentHeaderSection {
         margin-left: 0;
-        margin-top: $amount / 2;
+        margin-top: calc($amount / 2);
       }
     }
   }

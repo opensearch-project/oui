@@ -37,7 +37,7 @@
     left: 0;
     width: $ouiSizeXS;
     background-color: $ouiColorSuccess;
-    border-top-left-radius: $ouiBorderRadius / 2;
-    border-bottom-left-radius: $ouiBorderRadius / 2;
+    border-top-left-radius: calc($ouiBorderRadius / 2);
+    border-bottom-left-radius: calc($ouiBorderRadius / 2);
   }
 }

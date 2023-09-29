@@ -9,8 +9,471 @@
  * GitHub history for details.
  */
 
-// There should be a good default in EC too
+/*!
+ * Licensed to Elasticsearch B.V. under one or more contributor
+ * license agreements. See the NOTICE file distributed with
+ * this work for additional information regarding copyright
+ * ownership. Elasticsearch B.V. licenses this file to you under
+ * the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+/* This is the content of @elastic/charts@30.2.0/dist/theme.scss, modified to compile
+ * with dart sass.
+ */
+
+// sass-lint:disable no-important, leading-zero, border-zero
+
+.echChartStatus {
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -100000;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.echChartBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.echChart {
+  position: relative;
+  display: flex;
+  height: 100%;
+
+  &--column {
+    flex-direction: column;
+  }
+}
+
+.echContainer {
+  flex: 1;
+  position: relative;
+}
+
+.echChartPointerContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.echChartResizer {
+  z-index: -10000000;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+
+.echBrushTool {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+
+.echTooltip {
+  @include euiToolTipStyle;
+  @include euiFontSizeXS;
+  padding: 0;
+  transition: opacity $ouiAnimSpeedNormal;
+  pointer-events: none;
+  user-select: none;
+  max-width: 256px;
+
+  &__list {
+    padding: $ouiSizeXS;
+  }
+
+  &__header {
+    @include euiToolTipTitle;
+    margin-bottom: 0;
+    padding: $ouiSizeXS ($ouiSizeXS * 2);
+  }
+
+  &__item {
+    display: flex;
+    min-width: 1px;
+
+    &--container {
+      display: flex;
+      flex: 1 1 auto;
+      padding: 3px;
+      padding-left: 0;
+      min-width: 1px;
+    }
+
+    &--backgroundColor {
+      position: relative;
+      width: $ouiSizeXS;
+      margin-right: 3px;
+      flex-shrink: 0;
+    }
+
+    &--color {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  &__label {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    min-width: 1px;
+    flex: 1 1 auto;
+  }
+
+  &__value {
+    font-weight: $ouiFontWeightBold;
+    text-align: right;
+    font-feature-settings: 'tnum';
+    margin-left: $ouiSizeS;
+  }
+
+  &__rowHighlighted {
+    background-color: transparentize($ouiColorGhost, 0.9);
+  }
+
+  &--hidden {
+    opacity: 0;
+  }
+}
+
+
+[id^='echTooltipPortal'] {
+  pointer-events: none;
+}
+
+[id^='echAnchor'] {
+  position: absolute;
+  pointer-events: none;
+}
+
+.echTooltipPortal__invisible {
+  position: fixed;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+
+.echIcon {
+  flex-shrink: 0; // Ensures it never scales down below it's intended size
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+
+  svg {
+    transform: translate(0, 0); // Hack to fix Firefox "softness"
+  }
+
+  &:focus {
+    opacity: 1; // We often hide icons on hover. Make sure they appear on focus.
+    background: $ouiFocusBackgroundColor;
+  }
+}
+
+$echLegendMaxWidth: 200px;
+$echLegendRowGap: 8px;
+$echLegendColumnGap: 24px;
+
+.echLegend {
+  .echLegendList {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  &--horizontal {
+    .echLegendList {
+      grid-column-gap: $echLegendColumnGap;
+      grid-row-gap: $echLegendRowGap;
+      margin-top: $echLegendRowGap;
+      margin-bottom: $echLegendRowGap;
+    }
+  }
+
+  &--top,
+  &--left {
+    order: 0;
+  }
+
+  &--bottom,
+  &--right {
+    order: 1;
+  }
+
+  &--debug {
+    // sass-lint:disable-block no-color-literals
+    background: rgba(238, 130, 238, 0.2);
+    position: relative;
+  }
+
+  .echLegendListContainer {
+    @include euiYScrollWithShadows;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    :focus {
+      @include euiFocusRing;
+      background-color: $ouiFocusBackgroundColor;
+      border-radius: calc($ouiBorderRadius / 2);
+    }
+  }
+}
+
+$legendItemVerticalPadding: calc($echLegendRowGap / 2);
+$legendItemHeight: #{$ouiFontSizeXS * $ouiLineHeight};
+
+.echLegendItem {
+  color: $ouiTextColor;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  > *:not(.background) {
+    // euiPopover adds a div with height of 19px otherwise
+    height: $legendItemHeight; // prevents color dot from shifting
+    margin-left: $ouiSizeXS;
+
+    &:last-child:not(.echLegendItem__extra) {
+      margin-right: $ouiSizeXS;
+    }
+  }
+
+  &:not(&--hidden) {
+    .echLegendItem__color--changable {
+      cursor: pointer;
+    }
+  }
+
+  &:hover .background {
+    background-color: $ouiColorLightestShade;
+  }
+
+  .background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__action {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(#{$legendItemHeight} + #{$ouiSizeXS * 2});
+
+    .euiPopover,
+    .euiPopover__anchor,
+    .euiPopover__anchor > *:first-child {
+      // makes custom buttons in eui popover take full action size
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__color {
+    display: flex;
+    line-height: 1.5;
+    align-items: center;
+  }
+
+  &__label {
+    @include euiFontSizeXS;
+    @include euiTextTruncate;
+    flex: 1 1 auto;
+    text-align: left;
+    vertical-align: baseline;
+    letter-spacing: unset;
+    align-items: center;
+
+    &--clickable {
+      &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__extra {
+    @include euiFontSizeXS;
+    text-align: right;
+    flex: 0 0 auto;
+    margin-left: $ouiSizeXS;
+    font-feature-settings: 'tnum';
+    letter-spacing: unset;
+  }
+
+  &--vertical {
+    padding-top: calc($legendItemVerticalPadding / 2);
+    padding-bottom: calc($legendItemVerticalPadding / 2);
+
+    &:first-of-type {
+      margin-top: calc($legendItemVerticalPadding / 2);
+    }
+
+    .background {
+      margin-top: calc($legendItemVerticalPadding / 2);
+      margin-bottom: calc($legendItemVerticalPadding / 2);
+    }
+  }
+
+  &--hidden {
+    color: $ouiColorDarkShade;
+  }
+}
+
+.echReactiveChart_noResults {
+  // sass-lint:disable-block mixins-before-declarations
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  @include euiFontSizeXS;
+  color: $ouiColorDarkShade;
+}
+
+.echHighlighter {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.echHighlighterOverlay__fill {
+  fill: transparentize($ouiColorGhost, 0.8);
+}
+
+.echHighlighterOverlay__stroke {
+  stroke: transparentize($ouiColorGhost, 0.8);
+}
+
+.echHighlighter__mask {
+  fill: transparentize($ouiColorEmptyShade, 0.5);
+}
+
+.echCrosshair,
+.echCrosshair__cursor,
+.echCrosshair__crossLine {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.echScreenReaderOnly {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.echScreenReaderOnlyDebug {
+  // sass-lint:disable-block no-color-literals, no-color-keywords
+  left: 0 !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: auto !important;
+  background: rgba(255, 255, 255, 0.8);
+
+  table,
+  td,
+  th {
+    border: 1px solid black;
+    font-size: 12px;
+  }
+}
+
+.echScreenReaderTable {
+  overflow-x: auto;
+  text-align: left;
+}
+
 .echAnnotation {
+  position: absolute;
+  user-select: none;
   font-size: $ouiFontSizeXS;
   font-weight: $ouiFontWeightBold;
+
+  &__tooltip {
+    @include euiToolTipStyle;
+    @include euiFontSizeXS;
+    padding: 0;
+    transition: opacity $ouiAnimSpeedNormal;
+    pointer-events: none;
+    user-select: none;
+    max-width: 256px;
+  }
+
+  &__header {
+    @include euiToolTipTitle;
+    padding: $ouiSizeXS ($ouiSizeXS * 2);
+  }
+
+  &__details {
+    padding: $ouiSizeXS ($ouiSizeXS * 2);
+  }
+
+  &__icon {
+    position: relative;
+  }
+
+  &__body {
+    white-space: nowrap;
+  }
+}
+
+.echCanvasRenderer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
 }

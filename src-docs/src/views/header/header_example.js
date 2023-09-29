@@ -13,7 +13,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { GuideSectionTypes } from '../../components';
-import lightColors from '!!sass-vars-to-js-loader!../../../../src/global_styling/variables/_colors.scss';
+import lightColors from '!!variables-from-scss!!../../../../src/global_styling/variables/_colors.scss';
 
 import {
   OuiHeader,

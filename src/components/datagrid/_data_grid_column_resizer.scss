@@ -49,7 +49,7 @@
 
     .ouiDataGridColumnResizer {
       right: 0;
-      width: $ouiSize / 2;
+      width: calc($ouiSize / 2);
 
       &:after {
         left: auto;

@@ -10,9 +10,9 @@
  */
 
 $ouiDragAndDropSpacing: (
-  s: ($ouiSizeXS / 2),
-  m: ($ouiSizeS / 2),
-  l: ($ouiSize / 2),
+  s: calc($ouiSizeXS / 2),
+  m: calc($ouiSizeS / 2),
+  l: calc($ouiSize / 2),
 );
 
 
