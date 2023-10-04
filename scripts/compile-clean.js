@@ -11,6 +11,7 @@
 
 const { rimraf } = require('rimraf');
 
+rimraf.sync('.cache-loader');
 rimraf.sync('dist');
 rimraf.sync('lib');
 rimraf.sync('es');
