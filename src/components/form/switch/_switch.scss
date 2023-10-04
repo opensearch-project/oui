@@ -71,7 +71,7 @@
 
         &.ouiSwitch__icon--checked {
           right: auto;
-          left: -($ouiSwitchWidth - ($ouiSwitchThumbSize / 2));
+          left: -($ouiSwitchWidth - calc($ouiSwitchThumbSize / 2));
         }
       }
     }
@@ -109,10 +109,10 @@
 
   .ouiSwitch__icon {
     position: absolute;
-    right: -($ouiSwitchWidth - ($ouiSwitchThumbSize / 2));
-    top: ($ouiSwitchHeight - $ouiSwitchIconHeight) / 2;
+    right: -($ouiSwitchWidth - calc($ouiSwitchThumbSize / 2));
+    top: calc(($ouiSwitchHeight - $ouiSwitchIconHeight) / 2);
     bottom: 0;
-    width: $ouiSwitchWidth - ($ouiSwitchThumbSize / 2) + $ouiSizeS;
+    width: $ouiSwitchWidth - calc($ouiSwitchThumbSize / 2) + $ouiSizeS;
     height: $ouiSwitchIconHeight;
     transition: left $ouiAnimSpeedNormal $ouiAnimSlightBounce, right $ouiAnimSpeedNormal $ouiAnimSlightBounce;
     fill: $ouiTextColor;

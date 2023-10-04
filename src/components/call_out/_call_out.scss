@@ -11,7 +11,7 @@
 
 .ouiCallOut {
   padding: $ouiSize;
-  border-left: $ouiSizeXS / 2 solid transparent;
+  border-left: calc($ouiSizeXS / 2) solid transparent;
   position: relative;
 
   &.ouiCallOut--small {
@@ -31,7 +31,7 @@
 
   .ouiCallOut__closeIcon {
     position: absolute;
-    right: $ouiSizeS / 2;
+    right: calc($ouiSizeS / 2);
     top: 0;
   }
 }

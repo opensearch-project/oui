@@ -35,8 +35,8 @@
   &.ouiResizableButton--horizontal {
     cursor: col-resize;
     width: $ouiResizableButtonSize;
-    margin-left: -($ouiResizableButtonSize / 2);
-    margin-right: -($ouiResizableButtonSize / 2);
+    margin-left: calc(-1 * $ouiResizableButtonSize / 2);
+    margin-right: calc(-1 * $ouiResizableButtonSize / 2);
 
     &:before,
     &:after {
@@ -56,8 +56,8 @@
   &.ouiResizableButton--vertical {
     cursor: row-resize;
     height: $ouiResizableButtonSize;
-    margin-top: -($ouiResizableButtonSize / 2);
-    margin-bottom: -($ouiResizableButtonSize / 2);
+    margin-top: calc(-1 * $ouiResizableButtonSize / 2);
+    margin-bottom: calc(-1 * $ouiResizableButtonSize / 2);
 
     &:before,
     &:after {
@@ -96,7 +96,7 @@
         height $ouiResizableButtonTransitionSpeed ease,
         transform $ouiResizableButtonTransitionSpeed ease
       );
-      transition-delay: $ouiResizableButtonTransitionSpeed / 2;
+      transition-delay: calc($ouiResizableButtonTransitionSpeed / 2);
     }
   }
 

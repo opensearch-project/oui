@@ -13,7 +13,7 @@ $ouiDataGridColumnResizerWidth: 3px; // Odd number because it straddles a border
 $ouiDataGridPopoverMaxHeight: $ouiSize * 25;
 
 $ouiDataGridCellPaddingS: $ouiSizeXS;
-$ouiDataGridCellPaddingM: $ouiSizeM / 2;
+$ouiDataGridCellPaddingM: calc($ouiSizeM / 2);
 $ouiDataGridCellPaddingL: $ouiSizeS;
 $ouiDataGridVerticalBorder: solid 1px tintOrShade($ouiBorderColor, 60%, 30%);
 

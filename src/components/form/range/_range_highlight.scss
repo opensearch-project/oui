@@ -13,7 +13,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  top: calc(50% - #{($ouiRangeHighlightHeight / 2)});
+  top: calc(50% - #{calc($ouiRangeHighlightHeight / 2)});
   overflow: hidden;
 
   &__progress {
@@ -27,10 +27,10 @@
   }
 
   &--hasTicks {
-    top: ($ouiFormControlHeight / 4) - ($ouiRangeHighlightHeight / 2);
+    top: calc($ouiFormControlHeight / 4) - calc($ouiRangeHighlightHeight / 2);
   }
 
   &--hasTicks.ouiRangeHighlight--compressed {
-    top: ($ouiFormControlCompressedHeight / 4) - ($ouiRangeHighlightHeight / 2);
+    top: calc($ouiFormControlCompressedHeight / 4) - calc($ouiRangeHighlightHeight / 2);
   }
 }

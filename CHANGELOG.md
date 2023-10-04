@@ -11,6 +11,7 @@
 ### 📈 Features/Enhancements
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+- Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
 
 ### 🐛 Bug Fixes
 
@@ -28,6 +29,9 @@
 
 ### 🛠 Maintenance
 - Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
+
+- Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
+- Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 
 ### 🪛 Refactoring
 
@@ -76,10 +80,29 @@
 - [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
 - Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
+- Replace `node-sass` with `sass-embedded` ([#1001](https://github.com/opensearch-project/oui/pull/1001))
 
 ### 🪛 Refactoring
 
 - Clean up focus background implementation ([#962](https://github.com/opensearch-project/oui/pull/962))
+
+## [`1.2.0`](https://github.com/opensearch-project/oui/tree/1.2.0)
+
+- [CVE-2022-25881] Bump node-sass from 7.0.1 to 8.0.0 ([#592](https://github.com/opensearch-project/oui/pull/592))
+- Add icons for Dashboards 2.7 ([#658](https://github.com/opensearch-project/oui/pull/658))
+- Update loader-utils to 1.4.2 ([#672](https://github.com/opensearch-project/oui/pull/672))
+- Add deprecation comments to OuiLoadingElastic and OuiLoadingKibana ([#606](https://github.com/opensearch-project/oui/pull/606))
+- Deprecate `iconType` and `iconProps` from `OuiPageHeader` ([#759](https://github.com/opensearch-project/oui/pull/759))
+- Bump rimraf from 3.0.2 to 5.0.0 ([#717](https://github.com/opensearch-project/oui/pull/717))
+- Update header logo defaults ([#621](https://github.com/opensearch-project/oui/pull/621))
+- Bump sass-loader to 10.4.1 ([#713](https://github.com/opensearch-project/oui/pull/713))
+- Fix combo box onFocus bug ([#775](https://github.com/opensearch-project/oui/pull/775))
+- Fix breadcrumb styling with a single breadcrumb ([#778](https://github.com/opensearch-project/oui/pull/778))
+
+## [`1.1.2`](https://github.com/opensearch-project/oui/tree/1.1.2)
+
+- Add anomaly detection icon ([#781](https://github.com/opensearch-project/oui/pull/781))
+- Replace Elastic with OpenSearch in the examples ([#622](https://github.com/opensearch-project/oui/issues/622))
 
 ## [`1.1.1`](https://github.com/opensearch-project/oui/tree/1.1.1)
 

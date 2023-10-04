@@ -222,7 +222,7 @@ export default ({ theme }) => {
       repositionOnScroll
       button={
         <OuiBadge
-          color={theme.ouiColorDarkestShade.rgba}
+          color={theme.ouiColorDarkestShade}
           iconType="arrowDown"
           iconSide="right"
           aria-controls="guideHeaderDeploymentMenuExample"

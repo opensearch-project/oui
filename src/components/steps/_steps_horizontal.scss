@@ -75,9 +75,9 @@
   &::after {
     content: '';
     position: absolute;
-    width: calc(50% - #{$ouiStepNumberSize / 2});
+    width: calc(50% - #{calc($ouiStepNumberSize / 2)});
     height: 1px;
-    top: $ouiSizeL + ($ouiStepNumberSize / 2);
+    top: $ouiSizeL + calc($ouiStepNumberSize / 2);
     background-color: $ouiColorLightShade;
     z-index: $ouiZLevel0; /* 1 */
   }
@@ -135,7 +135,7 @@
 
     &::before,
     &::after {
-      top: $ouiSize + $ouiStepNumberSize / 2;
+      top: $ouiSize + calc($ouiStepNumberSize / 2);
     }
   }
 

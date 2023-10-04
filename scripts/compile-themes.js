@@ -11,19 +11,17 @@
 
 const path = require('path');
 const util = require('util');
-const fs = require('fs');
+const { writeFile, mkdir, readFile } = require('fs/promises');
 const globModule = require('glob');
 
 const chalk = require('chalk');
 const postcss = require('postcss');
-const sassExtract = require('sass-extract');
-const { deriveSassVariableTypes } = require('./derive-sass-variable-types');
-const sassExtractJsPlugin = require('./sass-extract-js-plugin');
+
+const { compileWithVariables } = require('./lib/compile-scss-with-variables');
+const { deriveSassVariableTypes } = require('./lib/derive-sass-variable-types');
 
 const postcssConfiguration = require('../postcss.config.js');
 
-const writeFile = util.promisify(fs.writeFile);
-const mkdir = util.promisify(fs.mkdir);
 const glob = util.promisify(globModule);
 
 const postcssConfigurationWithMinification = {
@@ -125,15 +123,7 @@ async function compileScssFile(
     '.min.css'
   );
 
-  const { css: renderedCss, vars: extractedVars } = await sassExtract.render(
-    {
-      file: inputFilename,
-      outFile: outputCssFilename,
-    },
-    {
-      plugins: [sassExtractJsPlugin],
-    }
-  );
+  const { css: renderedCss, variables: extractedVars } = await compileWithVariables(path.resolve(inputFilename));
 
   /* OUI -> EUI Aliases: Modified */
   // const extractedVarTypes = await deriveSassVariableTypes(
@@ -208,5 +198,9 @@ if (require.main === module) {
     process.exit(1);
   }
 
-  compileScssFiles(path.join('src', 'theme_*.scss'), 'dist', ouiPackageName);
+  compileScssFiles(path.join('src', 'theme_*.scss'), 'dist', ouiPackageName)
+      .catch((err) => {
+        console.error(err);
+        process.exit(2);
+      });
 }

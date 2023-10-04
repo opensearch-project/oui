@@ -61,6 +61,8 @@ rules:
   space-around-operator: 2
   # We minify css, so this doesn't apply
   no-css-comments: 0
+  # sass wants units
+  zero-unit: 0
   # We use _ (underscores) for import path that don't directly compile
   clean-import-paths: 0
   # Allows input[type=search]
