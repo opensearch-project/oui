@@ -31,6 +31,7 @@
 
 - Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
+- Bump @types/react to 16.14.24 ([#1062](https://github.com/opensearch-project/oui/pull/1062))
 
 ### 🪛 Refactoring
 
