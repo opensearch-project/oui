@@ -17,6 +17,7 @@ We depend upon the version of node defined in [.nvmrc](.nvmrc).
 You will probably want to install a node version manager. [nvm](https://github.com/creationix/nvm) is recommended.
 
 To install and use the correct node version v with `nvm`:
+
 v - verion mentioned in [.nvmrc](.nvmrc).
 
 ```
