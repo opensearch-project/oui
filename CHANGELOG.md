@@ -11,6 +11,7 @@
 ### 📈 Features/Enhancements
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+- Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
 
 ### 🐛 Bug Fixes
 
@@ -27,6 +28,9 @@
 - Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
 
 ### 🛠 Maintenance
+
+- Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
+- Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 
 ### 🪛 Refactoring
 
@@ -75,6 +79,7 @@
 - [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
 - Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
+- Replace `node-sass` with `sass-embedded` ([#1001](https://github.com/opensearch-project/oui/pull/1001))
 
 ### 🪛 Refactoring
 

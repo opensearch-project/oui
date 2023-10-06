@@ -10,7 +10,7 @@
  */
 
 .ouiSearchBar__searchHolder {
-  min-width: $ouiFormMaxWidth / 2;
+  min-width: calc($ouiFormMaxWidth / 2);
 }
 
 @include ouiBreakpoint('m', 'l', 'xl') {

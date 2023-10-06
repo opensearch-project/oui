@@ -25,7 +25,7 @@
   width: $ouiSizeS;
   display: inline-block;
   margin-bottom: -$ouiSize;
-  margin-left: $ouiSizeXS / 2;
+  margin-left: calc($ouiSizeXS / 2);
 
   // sass-lint:disable-block mixins-before-declarations
   @include ouiCanAnimate {
@@ -88,8 +88,8 @@
   height: $ouiSize;
 
   > span {
-    width: $ouiSizeXS / 2;
-    margin-left: $ouiSizeXS / 2;
+    width: calc($ouiSizeXS / 2);
+    margin-left: calc($ouiSizeXS / 2);
     margin-bottom: $ouiSizeS;
   }
 }
@@ -99,8 +99,8 @@
 
   > span {
     width: $ouiSizeXS;
-    margin-left: $ouiSizeXS / 2;
-    margin-bottom: $ouiSizeL / 2;
+    margin-left: calc($ouiSizeXS / 2);
+    margin-bottom: calc($ouiSizeL / 2);
   }
 }
 
@@ -110,7 +110,7 @@
   > span {
     width: $ouiSizeS;
     margin-left: $ouiSizeXS;
-    margin-bottom: $ouiSizeXL / 2;
+    margin-bottom: calc($ouiSizeXL / 2);
   }
 }
 

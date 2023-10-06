@@ -14,7 +14,7 @@ import React from 'react';
 import { OuiCode, OuiSpacer, OuiText } from '../../../../src/components';
 import { UtilityClassesSection } from './utility_classes_section';
 import { renderBreakpoint } from '../guidelines/sass';
-import breakpoints from '!!sass-vars-to-js-loader?preserveKeys=true!../../../../src/global_styling/variables/_responsive.scss';
+import breakpoints from '!!variables-from-scss!!../../../../src/global_styling/variables/_responsive.scss';
 
 const ouiBreakPoints = Object.getOwnPropertyNames(breakpoints.ouiBreakpoints);
 

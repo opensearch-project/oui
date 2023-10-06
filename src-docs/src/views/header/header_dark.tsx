@@ -56,7 +56,7 @@ export default ({ theme }: { theme: any }) => {
           {
             items: [
               <OuiBadge
-                color={theme.ouiColorDarkestShade.rgba}
+                color={theme.ouiColorDarkestShade}
                 iconType="arrowDown"
                 iconSide="right">
                 Production logs

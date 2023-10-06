@@ -60,12 +60,12 @@
 }
 
 .ouiTreeView__iconWrapper {
-  margin-top: -($ouiSizeXS / 2);
+  margin-top: calc(-1 * $ouiSizeXS / 2);
   margin-right: $ouiSizeS;
 
   // This helps tokens appear vertically centered
   .ouiToken {
-    margin-top: $ouiSizeXS / 2;
+    margin-top: calc($ouiSizeXS / 2);
   }
 }
 

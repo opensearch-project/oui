@@ -102,7 +102,7 @@
   // sass-lint:disable-block no-vendor-prefixes
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    margin-top: ((-$ouiRangeTrackBorderWidth * 2 + $ouiRangeTrackHeight) / 2) - ($ouiRangeThumbHeight / 2);
+    margin-top: calc(calc($ouiRangeTrackBorderWidth * -2 + $ouiRangeTrackHeight) / 2) - calc($ouiRangeThumbHeight / 2);
   }
 
   &::-ms-thumb {
@@ -117,20 +117,20 @@
     @include ouiRangeTrackSize;
     background: transparent;
     border-color: transparent;
-    border-width: ($ouiRangeThumbHeight / 2) 0;
+    border-width: calc($ouiRangeThumbHeight / 2) 0;
     color: transparent;
   }
 
   // States
   &--hasTicks {
-    height: $ouiFormControlHeight / 2; // Adjust vertical alignment based on extras
+    height: calc($ouiFormControlHeight / 2); // Adjust vertical alignment based on extras
   }
 
   &--compressed {
     height: $ouiFormControlCompressedHeight;
 
     &.ouiRangeSlider--hasTicks {
-      height: $ouiFormControlCompressedHeight / 2;
+      height: calc($ouiFormControlCompressedHeight / 2);
     }
   }
 }

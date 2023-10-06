@@ -52,8 +52,8 @@
     background-color: transparent !important; // override .ouiFormControlLayout--group .ouiText
     line-height: 1 !important;
     flex: 0 0 auto;
-    padding-left: $ouiFormControlPadding / 2;
-    padding-right: $ouiFormControlPadding / 2;
+    padding-left: calc($ouiFormControlPadding / 2);
+    padding-right: calc($ouiFormControlPadding / 2);
   }
 }
 
