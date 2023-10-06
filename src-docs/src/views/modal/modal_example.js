@@ -243,32 +243,5 @@ export const ModalExample = {
       snippet: confirmModalLoadingSnippet,
       demo: <ConfirmLoadingModal />,
     },
-    {
-      title: 'Widths',
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: modalWidthSource,
-        },
-      ],
-      text: (
-        <>
-          <p>
-            Modals start with a minimum width of <OuiCode>400px</OuiCode>, just
-            enough to display form rows. They will grow to fit the contents
-            until it reaches the specified <OuiCode>maxWidth</OuiCode>, the
-            default of which is set to the medium breakpoint.
-          </p>
-          <p>
-            If the modal is not growing wide enough to fit your contents, you
-            can pass a specific <OuiCode>style.width</OuiCode>, just remember
-            that modals will always shrink to fit the window width.
-          </p>
-        </>
-      ),
-      props: { OuiModal },
-      snippet: modalWidthSnippet,
-      demo: <ModalWidth />,
-    },
   ],
 };
