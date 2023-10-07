@@ -18,16 +18,16 @@ You will probably want to install a node version manager. [nvm](https://github.c
 
 To install and use the correct node version v with `nvm`:
 
-v - verion mentioned in [.nvmrc](.nvmrc).
+v - version mentioned in [.nvmrc](.nvmrc).
 
 ```
-nvm install v
+nvm install
 ```
 
 And then also set the node version to use in your terminal
 
 ```
-nvm use v
+nvm use
 ```
 
 Confirm the version of node by running:
