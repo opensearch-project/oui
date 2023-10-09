@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
+@use 'sass:math';
+
 // Converting a normal hex color to RBG
 @function hexToRGB($color) {
   @return 'rgb%28#{round(red($color))}, #{round(green($color))}, #{round(blue($color))}%29';
@@ -62,9 +64,9 @@
 
   @for $i from 1 through 3 {
     $rgb: nth($rgba, $i);
-    $rgb: calc($rgb / 255);
+    $rgb: math.div($rgb, 255);
 
-    $rgb: if($rgb < .03928, calc($rgb / 12.92), pow(calc(($rgb + .055) / 1.055), 2.4));
+    $rgb: if($rgb < .03928, math.div($rgb, 12.92), math.pow(math.div($rgb + .055, 1.055), 2.4));
 
     $rgba2: append($rgba2, $rgb);
   }
