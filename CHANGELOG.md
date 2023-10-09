@@ -16,6 +16,7 @@
 ### 🐛 Bug Fixes
 
 - Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+- Clarify file path for Query export ([#1069](https://github.com/opensearch-project/oui/pull/1069))
 
 ### 🚞 Infrastructure
 
