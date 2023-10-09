@@ -26,6 +26,7 @@
 - Update default docsite theme to Next Dark ([#1029](https://github.com/opensearch-project/oui/pull/1029))
 - Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
 - Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
+- Remove "Widths" section from the OuiModal docs ([#1066](https://github.com/opensearch-project/oui/pull/1066))
 
 ### 🛠 Maintenance
 
