@@ -29,7 +29,7 @@
     "test": "yarn lint && yarn test-unit",
     "test-unit": "cross-env NODE_ENV=test jest --config ./scripts/jest/config.json",
     "test-a11y": "node ./scripts/a11y-testing",
-    "test-staged": "yarn lint && node scripts/test-staged.js",
+    "test-staged": "node scripts/test-staged.js",
     "start-test-server": "BABEL_MODULES=false NODE_ENV=puppeteer NODE_OPTIONS=--max-old-space-size=4096 webpack-dev-server --config src-docs/webpack.config.js --port 9999",
     "yo-component": "yo ./generator-oui/app/component.js",
     "start-test-server-and-a11y-test": "cross-env WAIT_ON_TIMEOUT=600000 start-server-and-test start-test-server http-get://localhost:9999 test-a11y",
@@ -90,7 +90,7 @@
     "yo/meow": "^9.0.0"
   },
   "pre-commit": [
-    "test-staged"
+    "yarn lint"
   ],
   "dependencies": {
     "@types/chroma-js": "^2.4.0",
