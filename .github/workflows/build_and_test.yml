@@ -260,6 +260,9 @@ jobs:
           find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
           cat package.json
 
+      - name: Run bootstrap
+        run: yarn osd bootstrap
+
       - name: Get package version
         run: |
           echo "VERSION=$(yarn --silent pkg-version)" >> $GITHUB_ENV
@@ -267,9 +270,6 @@ jobs:
       - name: Get artifact build name
         run: |
           echo "ARTIFACT_BUILD_NAME=opensearch-dashboards-${{ env.VERSION }}-${{ matrix.suffix }}.${{ matrix.ext }}" >> $GITHUB_ENV
-
-      - name: Run bootstrap
-        run: yarn osd bootstrap
 
       - name: Build `${{ matrix.name }}`
         run: yarn ${{ matrix.script }} --release
