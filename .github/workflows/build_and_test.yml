@@ -138,9 +138,12 @@ jobs:
         with:
           name: build
 
+      - name: Extract build archive
+        run: tar -xf ${{ steps.download.outputs.download-path }}/oui.tgz
+
       - name: Get Escaped Download Path
         run: |
-          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/oui.tgz"
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/package"
           OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
           echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
 
@@ -182,9 +185,12 @@ jobs:
         with:
           name: build
 
+      - name: Extract build archive
+        run: tar -xf ${{ steps.download.outputs.download-path }}/oui.tgz
+
       - name: Get Escaped Download Path
         run: |
-          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/oui.tgz"
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/package"
           OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
           echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
 
@@ -253,9 +259,12 @@ jobs:
         with:
           name: build
 
+      - name: Extract build archive
+        run: tar -xf ${{ steps.download.outputs.download-path }}/oui.tgz
+
       - name: Get Escaped Download Path
         run: |
-          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/oui.tgz"
+          RAW_OUI_PATH="${{ steps.download.outputs.download-path }}/package"
           OUI_PATH=$(echo $RAW_OUI_PATH | sed 's/\//\\\//g')
           echo "OUI_PATH=$OUI_PATH" >> "$GITHUB_ENV"
 
