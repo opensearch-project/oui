@@ -271,7 +271,7 @@ jobs:
       - name: Update OUI version in OSD
         run: |
           find . -type f -name package.json -exec sed -i 's/"@elastic\/eui": ".*"/"@elastic\/eui": "file:${{ env.OUI_PATH }}"/g' {} \;
-
+          cat package.json
 
       - name: Get package version
         run: |
