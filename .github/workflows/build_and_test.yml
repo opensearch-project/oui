@@ -219,20 +219,16 @@ jobs:
             script: build-platform --linux-arm --skip-os-packages
     runs-on: ${{ matrix.os }}
     needs: build
-    defaults:
-      run:
-        working-directory: ./artifacts
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
-          path: ./artifacts
           repository: opensearch-project/OpenSearch-Dashboards
 
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version-file: './artifacts/.nvmrc'
+          node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Setup Yarn
@@ -278,5 +274,5 @@ jobs:
         if: success()
         with:
           name: ${{ matrix.suffix }}-${{ env.VERSION }}
-          path: ./artifacts/target/${{ env.ARTIFACT_BUILD_NAME }}
+          path: ./target/${{ env.ARTIFACT_BUILD_NAME }}
           retention-days: 7
