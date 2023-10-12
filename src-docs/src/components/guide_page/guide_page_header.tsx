@@ -52,10 +52,7 @@ export const GuidePageHeader: React.FunctionComponent<{}> = () => {
       </OuiButtonEmpty>
     ) : (
       <OuiToolTip content="Github">
-        <OuiHeaderSectionItemButton
-          aria-label={label}
-          // @ts-ignore TODO: FIX
-          href={href}>
+        <OuiHeaderSectionItemButton aria-label={label} href={href}>
           <OuiIcon type="logoGithub" aria-hidden="true" />
         </OuiHeaderSectionItemButton>
       </OuiToolTip>
@@ -71,10 +68,7 @@ export const GuidePageHeader: React.FunctionComponent<{}> = () => {
       </OuiButtonEmpty>
     ) : (
       <OuiToolTip content="Figma Component Library">
-        <OuiHeaderSectionItemButton
-          aria-label={label}
-          // @ts-ignore TODO: FIX
-          href={href}>
+        <OuiHeaderSectionItemButton aria-label={label} href={href}>
           <OuiIcon type="logoFigma" aria-hidden="true" />
         </OuiHeaderSectionItemButton>
       </OuiToolTip>
