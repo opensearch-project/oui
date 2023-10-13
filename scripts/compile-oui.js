@@ -36,6 +36,7 @@ const path = require('path');
 const glob = require('glob');
 const fs = require('fs');
 const dtsGenerator = require('dts-generator').default;
+const { euiBuildTimeAliasTearDown} = require('./utils'); // Import the utility functions
 
 /* OUI -> EUI Aliases */
 function euiBuildTimeAliasSetup() {
@@ -157,22 +158,22 @@ function euiBuildTimeAliasTypeDef(file) {
   fs.writeFileSync(file, '\n' + reExportStatements.join('\n'), { flag: 'a', encoding: 'utf8' });
 }
 
-function euiBuildTimeAliasTearDown() {
-  console.log('Tearing down build-time EUI aliases');
-  shell.rm('-rf', 'src/eui_components');
+// function euiBuildTimeAliasTearDown() {
+//   console.log('Tearing down build-time EUI aliases');
+//   shell.rm('-rf', 'src/eui_components');
 
-  // Remove any changes made at build time
-  shell.ls('src/components/**/*.*').forEach(file => {
-    if (/__snapshots__|\.d\.ts|\.test\.|\.scss/.test(file)) return;
-    let changed;
-    const content = fs.readFileSync(file, 'utf8')
-      .replace(/\n\/\* OUI -> EUI Aliases: Build-Time \*\/.*$/mg, () => {
-        changed = true;
-        return '';
-      });
-    if (changed) fs.writeFileSync(file, content, 'utf8');
-  });
-}
+//   // Remove any changes made at build time
+//   shell.ls('src/components/**/*.*').forEach(file => {
+//     if (/__snapshots__|\.d\.ts|\.test\.|\.scss/.test(file)) return;
+//     let changed;
+//     const content = fs.readFileSync(file, 'utf8')
+//       .replace(/\n\/\* OUI -> EUI Aliases: Build-Time \*\/.*$/mg, () => {
+//         changed = true;
+//         return '';
+//       });
+//     if (changed) fs.writeFileSync(file, content, 'utf8');
+//   });
+// }
 /* End of Aliases */
 
 function compileLib() {

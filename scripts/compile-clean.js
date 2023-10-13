@@ -10,6 +10,7 @@
  */
 
 const { rimraf } = require('rimraf');
+const { euiBuildTimeAliasTearDown } = require('./utils'); // Import the utility function
 
 rimraf.sync('.cache-loader');
 rimraf.sync('dist');
@@ -17,3 +18,5 @@ rimraf.sync('lib');
 rimraf.sync('es');
 rimraf.sync('test-env');
 rimraf.sync('types');
+
+euiBuildTimeAliasTearDown(); // Call the utility function
