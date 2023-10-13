@@ -16,6 +16,7 @@
 ### 🐛 Bug Fixes
 
 - Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+- Fix compile warning by de-aliasing `AST` module export ([#1082](https://github.com/opensearch-project/oui/pull/1082))
 
 ### 🚞 Infrastructure
 
