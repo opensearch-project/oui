@@ -251,7 +251,6 @@ const typeToPathMap = {
   logoElasticStack: 'logo_elastic_stack',
   logoEnterpriseSearch: 'logo_enterprise_search',
   logoEtcd: 'logo_etcd',
-  logoFigma: 'logo_figma',
   logoGCP: 'logo_gcp',
   logoGCPMono: 'logo_gcp_mono',
   logoGithub: 'logo_github',

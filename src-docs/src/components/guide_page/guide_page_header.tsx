@@ -24,6 +24,7 @@ import { OuiButtonEmpty } from '../../../../src/components/button';
 
 import { GuideThemeSelector } from '../guide_theme_selector';
 import { GuideVersionSelector } from '../guide_version_selector';
+import figmaLogo from '../../images/logo-figma.svg';
 
 const pkg = require('../../../../package.json');
 
@@ -63,13 +64,13 @@ export const GuidePageHeader: React.FunctionComponent<{}> = () => {
     const href = 'https://www.figma.com/community/file/1240039515407642648';
     const label = 'OUI Figma component library';
     return isMobileSize ? (
-      <OuiButtonEmpty size="s" flush="both" iconType="logoFigma" href={href}>
+      <OuiButtonEmpty size="s" flush="both" iconType={figmaLogo} href={href}>
         {label}
       </OuiButtonEmpty>
     ) : (
       <OuiToolTip content="Figma Component Library">
         <OuiHeaderSectionItemButton aria-label={label} href={href}>
-          <OuiIcon type="logoFigma" aria-hidden="true" />
+          <OuiIcon type={figmaLogo} aria-hidden="true" />
         </OuiHeaderSectionItemButton>
       </OuiToolTip>
     );

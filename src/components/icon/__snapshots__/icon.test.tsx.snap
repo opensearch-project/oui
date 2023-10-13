@@ -4621,40 +4621,6 @@ exports[`OuiIcon props type logoEtcd is rendered 1`] = `
 </svg>
 `;
 
-exports[`OuiIcon props type logoFigma is rendered 1`] = `
-<svg
-  aria-hidden="true"
-  class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
-  focusable="false"
-  height="32"
-  role="img"
-  viewBox="0 0 32 32"
-  width="32"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M10.733 32a5.335 5.335 0 0 0 5.334-5.333v-5.334h-5.334A5.335 5.335 0 0 0 5.4 26.667 5.335 5.335 0 0 0 10.733 32z"
-    fill="#0ACF83"
-  />
-  <path
-    d="M5.4 16a5.335 5.335 0 0 1 5.333-5.333h5.334v10.666h-5.334A5.335 5.335 0 0 1 5.4 16z"
-    fill="#A259FF"
-  />
-  <path
-    d="M5.4 5.333A5.335 5.335 0 0 1 10.733 0h5.334v10.667h-5.334A5.335 5.335 0 0 1 5.4 5.333z"
-    fill="#F24E1E"
-  />
-  <path
-    d="M16.067 0H21.4a5.335 5.335 0 0 1 5.333 5.333 5.335 5.335 0 0 1-5.333 5.334h-5.333V0z"
-    fill="#FF7262"
-  />
-  <path
-    d="M26.733 16a5.335 5.335 0 0 1-5.333 5.333A5.335 5.335 0 0 1 16.067 16a5.335 5.335 0 0 1 5.333-5.333A5.335 5.335 0 0 1 26.733 16z"
-    fill="#1ABCFE"
-  />
-</svg>
-`;
-
 exports[`OuiIcon props type logoGCP is rendered 1`] = `
 <svg
   aria-hidden="true"
