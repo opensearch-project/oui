@@ -60,6 +60,7 @@
 - Remove `calc` usage from SchemaItem styles ([#990](https://github.com/opensearch-project/oui/pull/990))
 - Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
 - Fix alignment of left icon for OuiListGroupItem with multiline text ([#1027](https://github.com/opensearch-project/oui/pull/1027))
+- Update new polygon icon svg ([#1068](https://github.com/opensearch-project/oui/pull/1083))
 
 ### 🚞 Infrastructure
 
