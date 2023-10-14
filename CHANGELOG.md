@@ -73,6 +73,7 @@
 - Replace Avatar in favor of Icon in OuiFacetButtons example ([#987](https://github.com/opensearch-project/oui/pull/987))
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
 - Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
+- Remove "Emphasized Side Nav" section from OUI docs site ([#1084](https://github.com/opensearch-project/oui/pull/1084))
 
 ### 🛠 Maintenance
 
