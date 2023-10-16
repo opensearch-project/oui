@@ -103,8 +103,6 @@ function renderPaletteColor(palette, color) {
     );
   }
 
-  console.log(palette, color, palette[color]);
-
   return (
     <OuiFlexGroup
       responsive={false}
