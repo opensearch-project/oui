@@ -192,46 +192,6 @@ const sideNavForceSnippet = `<OuiSideNav
 />
 `;
 
-import SideNavEmphasis from './side_nav_emphasis';
-const sideNavEmphasisSource = require('!!raw-loader!./side_nav_emphasis');
-const sideNavEmphasisSnippet = `<OuiSideNav
-  mobileTitle="Nav Items"
-  toggleOpenOnMobile={toggleOpenOnMobile}
-  isOpenOnMobile={isSideNavOpenOnMobile}
-  items={[
-    {
-      name: 'APM',
-      id: '1',
-      items: [
-        {
-          name: 'Services',
-          id: '2',
-          items: [
-            {
-              name: 'opbeans-java',
-              emphasize: true,
-              isOpen: true,
-              items: [
-                {
-                  name: 'Transactions',
-                  id: '0.1.1',
-                  onClick: () => selectItem('General'),
-                },
-                {
-                  name: 'Errors',
-                  id: '0.1.2',
-                  onClick: () => selectItem('Timelion'),
-                },
-              ],
-            },
-          ],
-        },
-      ],
-    },
-  ]}
-/>
-`;
-
 export const SideNavExample = {
   title: 'Side nav',
   sections: [
@@ -371,41 +331,6 @@ export const SideNavExample = {
         OuiSideNavItem,
       },
       demo: <SideNavForceOpen />,
-    },
-    {
-      title: 'Emphasized side nav sections',
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: sideNavEmphasisSource,
-        },
-      ],
-      text: (
-        <>
-          <p>
-            Adding the <OuiCode>emphasize = true</OuiCode> prop to a{' '}
-            <strong>OuiSideNav</strong> item will enhance the visual appearance
-            of that section and its nested items. This is helpful for when you
-            need to indicate a dynamic navigational item like a user-created
-            object.
-          </p>
-          <OuiCallOut iconType="editorCodeBlock" title="Extra style needed">
-            <p>
-              The emphasized nav item&apos;s background color extends beyond the
-              horizontal bounds of the component to allow it to reach it&apos;s
-              parents bounds. Be sure to add{' '}
-              <OuiCode language="sass">{'overflow: hidden'}</OuiCode> to
-              whichever container you&apos;d like it to stop at.
-            </p>
-          </OuiCallOut>
-        </>
-      ),
-      snippet: sideNavEmphasisSnippet,
-      demo: <SideNavEmphasis />,
-      props: {
-        OuiSideNav,
-        OuiSideNavItem,
-      },
     },
   ],
 };
