@@ -19,4 +19,6 @@ rimraf.sync('es');
 rimraf.sync('test-env');
 rimraf.sync('types');
 
-euiBuildTimeAliasTearDown(); // Call the utility function
+/* OUI -> EUI Aliases */
+euiBuildTimeAliasTearDown();
+/* End of Aliases */
