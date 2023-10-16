@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiSuperSelectControl is rendered 1`] = `
-Array [
+[
   <input
     type="hidden"
     value=""
@@ -45,7 +45,7 @@ Array [
 `;
 
 exports[`OuiSuperSelectControl props compressed is rendered 1`] = `
-Array [
+[
   <input
     type="hidden"
     value=""
@@ -87,7 +87,7 @@ Array [
 `;
 
 exports[`OuiSuperSelectControl props disabled options are rendered 1`] = `
-Array [
+[
   <input
     type="hidden"
     value=""
@@ -129,7 +129,7 @@ Array [
 `;
 
 exports[`OuiSuperSelectControl props empty value option is rendered 1`] = `
-Array [
+[
   <input
     type="hidden"
     value=""
@@ -171,7 +171,7 @@ Array [
 `;
 
 exports[`OuiSuperSelectControl props fullWidth is rendered 1`] = `
-Array [
+[
   <input
     type="hidden"
     value=""
@@ -213,7 +213,7 @@ Array [
 `;
 
 exports[`OuiSuperSelectControl props isInvalid is rendered 1`] = `
-Array [
+[
   <input
     type="hidden"
     value=""
@@ -255,7 +255,7 @@ Array [
 `;
 
 exports[`OuiSuperSelectControl props isLoading is rendered 1`] = `
-Array [
+[
   <input
     type="hidden"
     value=""
@@ -300,7 +300,7 @@ Array [
 `;
 
 exports[`OuiSuperSelectControl props value option is rendered 1`] = `
-Array [
+[
   <input
     type="hidden"
     value="1"

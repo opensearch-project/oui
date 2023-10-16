@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiHue accepts a hex value 1`] = `
-Array [
+[
   <label
     class="ouiScreenReaderOnly"
     for="undefined-hue"
@@ -33,7 +33,7 @@ Array [
 `;
 
 exports[`OuiHue accepts a hue value 1`] = `
-Array [
+[
   <label
     class="ouiScreenReaderOnly"
     for="undefined-hue"
@@ -63,7 +63,7 @@ Array [
 `;
 
 exports[`OuiHue is rendered 1`] = `
-Array [
+[
   <label
     class="ouiScreenReaderOnly"
     for="undefined-hue"

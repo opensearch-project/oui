@@ -14,7 +14,7 @@ exports[`OuiSuperUpdateButton is rendered 1`] = `
     isLoading={false}
     onClick={[Function]}
     textProps={
-      Object {
+      {
         "className": "ouiSuperUpdateButton__text",
       }
     }
@@ -47,7 +47,7 @@ exports[`OuiSuperUpdateButton isDisabled 1`] = `
     isLoading={false}
     onClick={[Function]}
     textProps={
-      Object {
+      {
         "className": "ouiSuperUpdateButton__text",
       }
     }
@@ -74,7 +74,7 @@ exports[`OuiSuperUpdateButton isLoading 1`] = `
     isLoading={true}
     onClick={[Function]}
     textProps={
-      Object {
+      {
         "className": "ouiSuperUpdateButton__text",
       }
     }
@@ -107,7 +107,7 @@ exports[`OuiSuperUpdateButton needsUpdate 1`] = `
     isLoading={false}
     onClick={[Function]}
     textProps={
-      Object {
+      {
         "className": "ouiSuperUpdateButton__text",
       }
     }
@@ -134,7 +134,7 @@ exports[`OuiSuperUpdateButton showTooltip 1`] = `
     isLoading={false}
     onClick={[Function]}
     textProps={
-      Object {
+      {
         "className": "ouiSuperUpdateButton__text",
       }
     }

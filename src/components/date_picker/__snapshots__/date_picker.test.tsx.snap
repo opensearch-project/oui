@@ -880,8 +880,8 @@ exports[`OuiDatePicker popoverPlacement top-end is rendered 1`] = `
                   hidePopper={true}
                   popperComponent={null}
                   popperModifiers={
-                    Object {
-                      "preventOverflow": Object {
+                    {
+                      "preventOverflow": {
                         "boundariesElement": "viewport",
                         "enabled": true,
                         "escapeWithReference": true,
@@ -889,7 +889,7 @@ exports[`OuiDatePicker popoverPlacement top-end is rendered 1`] = `
                     }
                   }
                   popperPlacement="top-end"
-                  popperProps={Object {}}
+                  popperProps={{}}
                   targetComponent={
                     <div
                       className="react-datepicker__input-container"

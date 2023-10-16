@@ -35,7 +35,7 @@ exports[`OuiBasicTable cellProps renders cells with custom props from a callback
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                 }
               }
@@ -65,7 +65,7 @@ exports[`OuiBasicTable cellProps renders cells with custom props from a callback
             data-test-subj="cell-1-name"
             key="_data_column_name_0_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -86,7 +86,7 @@ exports[`OuiBasicTable cellProps renders cells with custom props from a callback
             data-test-subj="cell-2-name"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -107,7 +107,7 @@ exports[`OuiBasicTable cellProps renders cells with custom props from a callback
             data-test-subj="cell-3-name"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -160,7 +160,7 @@ exports[`OuiBasicTable cellProps renders rows with custom props from an object 1
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                 }
               }
@@ -190,7 +190,7 @@ exports[`OuiBasicTable cellProps renders rows with custom props from an object 1
             data-test-subj="cell"
             key="_data_column_name_0_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -211,7 +211,7 @@ exports[`OuiBasicTable cellProps renders rows with custom props from an object 1
             data-test-subj="cell"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -232,7 +232,7 @@ exports[`OuiBasicTable cellProps renders rows with custom props from an object 1
             data-test-subj="cell"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -287,7 +287,7 @@ exports[`OuiBasicTable empty is rendered 1`] = `
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 0,
                 }
               }
@@ -356,7 +356,7 @@ exports[`OuiBasicTable empty renders a node as a custom message 1`] = `
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 0,
                 }
               }
@@ -433,7 +433,7 @@ exports[`OuiBasicTable empty renders a string as a custom message 1`] = `
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 0,
                 }
               }
@@ -502,7 +502,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                 }
               }
@@ -546,7 +546,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -560,7 +560,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
             align="left"
             key="_data_column_id_1_1"
             mobileOptions={
-              Object {
+              {
                 "header": "ID",
                 "render": undefined,
               }
@@ -574,7 +574,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
             align="left"
             key="_data_column_age_1_2"
             mobileOptions={
-              Object {
+              {
                 "header": "Age",
                 "render": undefined,
               }
@@ -592,7 +592,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -606,7 +606,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
             align="left"
             key="_data_column_id_2_1"
             mobileOptions={
-              Object {
+              {
                 "header": "ID",
                 "render": undefined,
               }
@@ -620,7 +620,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
             align="left"
             key="_data_column_age_2_2"
             mobileOptions={
-              Object {
+              {
                 "header": "Age",
                 "render": undefined,
               }
@@ -638,7 +638,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -652,7 +652,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
             align="left"
             key="_data_column_id_3_1"
             mobileOptions={
-              Object {
+              {
                 "header": "ID",
                 "render": undefined,
               }
@@ -666,7 +666,7 @@ exports[`OuiBasicTable footers do not render without a column footer definition 
             align="left"
             key="_data_column_age_3_2"
             mobileOptions={
-              Object {
+              {
                 "header": "Age",
                 "render": undefined,
               }
@@ -709,8 +709,8 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
         >
           <OuiTableSortMobile
             items={
-              Array [
-                Object {
+              [
+                {
                   "isSortAscending": true,
                   "isSorted": true,
                   "key": "_data_s_name_0",
@@ -739,7 +739,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -810,7 +810,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -824,7 +824,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
             align="left"
             key="_data_column_id_1_1"
             mobileOptions={
-              Object {
+              {
                 "header": "ID",
                 "render": undefined,
               }
@@ -838,7 +838,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
             align="left"
             key="_data_column_age_1_2"
             mobileOptions={
-              Object {
+              {
                 "header": "Age",
                 "render": undefined,
               }
@@ -867,7 +867,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -881,7 +881,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
             align="left"
             key="_data_column_id_2_1"
             mobileOptions={
-              Object {
+              {
                 "header": "ID",
                 "render": undefined,
               }
@@ -895,7 +895,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
             align="left"
             key="_data_column_age_2_2"
             mobileOptions={
-              Object {
+              {
                 "header": "Age",
                 "render": undefined,
               }
@@ -924,7 +924,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -938,7 +938,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
             align="left"
             key="_data_column_id_3_1"
             mobileOptions={
-              Object {
+              {
                 "header": "ID",
                 "render": undefined,
               }
@@ -952,7 +952,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
             align="left"
             key="_data_column_age_3_2"
             mobileOptions={
-              Object {
+              {
                 "header": "Age",
                 "render": undefined,
               }
@@ -999,7 +999,7 @@ exports[`OuiBasicTable footers render with pagination, selection, sorting, and f
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 0,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -1044,7 +1044,7 @@ exports[`OuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                 }
               }
@@ -1073,7 +1073,7 @@ exports[`OuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -1104,7 +1104,7 @@ exports[`OuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -1122,7 +1122,7 @@ exports[`OuiBasicTable itemIdToExpandedRowMap renders an expanded row 1`] = `
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -1174,7 +1174,7 @@ exports[`OuiBasicTable rowProps renders rows with custom props from a callback 1
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                 }
               }
@@ -1206,7 +1206,7 @@ exports[`OuiBasicTable rowProps renders rows with custom props from a callback 1
               align="left"
               key="_data_column_name_0_0"
               mobileOptions={
-                Object {
+                {
                   "header": "Name",
                   "render": undefined,
                 }
@@ -1229,7 +1229,7 @@ exports[`OuiBasicTable rowProps renders rows with custom props from a callback 1
               align="left"
               key="_data_column_name_1_0"
               mobileOptions={
-                Object {
+                {
                   "header": "Name",
                   "render": undefined,
                 }
@@ -1252,7 +1252,7 @@ exports[`OuiBasicTable rowProps renders rows with custom props from a callback 1
               align="left"
               key="_data_column_name_2_0"
               mobileOptions={
-                Object {
+                {
                   "header": "Name",
                   "render": undefined,
                 }
@@ -1305,7 +1305,7 @@ exports[`OuiBasicTable rowProps renders rows with custom props from an object 1`
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                 }
               }
@@ -1337,7 +1337,7 @@ exports[`OuiBasicTable rowProps renders rows with custom props from an object 1`
               align="left"
               key="_data_column_name_0_0"
               mobileOptions={
-                Object {
+                {
                   "header": "Name",
                   "render": undefined,
                 }
@@ -1360,7 +1360,7 @@ exports[`OuiBasicTable rowProps renders rows with custom props from an object 1`
               align="left"
               key="_data_column_name_1_0"
               mobileOptions={
-                Object {
+                {
                   "header": "Name",
                   "render": undefined,
                 }
@@ -1383,7 +1383,7 @@ exports[`OuiBasicTable rowProps renders rows with custom props from an object 1`
               align="left"
               key="_data_column_name_2_0"
               mobileOptions={
-                Object {
+                {
                   "header": "Name",
                   "render": undefined,
                 }
@@ -1404,8 +1404,8 @@ exports[`OuiBasicTable rowProps renders rows with custom props from an object 1`
 exports[`OuiBasicTable with initial selection 1`] = `
 <OuiBasicTable
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1414,16 +1414,16 @@ exports[`OuiBasicTable with initial selection 1`] = `
   }
   itemId="id"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
@@ -1432,9 +1432,9 @@ exports[`OuiBasicTable with initial selection 1`] = `
   noItemsMessage="No items found"
   responsive={true}
   selection={
-    Object {
-      "initialSelected": Array [
-        Object {
+    {
+      "initialSelected": [
+        {
           "id": "1",
           "name": "name1",
         },
@@ -1546,7 +1546,7 @@ exports[`OuiBasicTable with initial selection 1`] = `
                     className="ouiTableHeaderCellCheckbox"
                     scope="col"
                     style={
-                      Object {
+                      {
                         "width": undefined,
                       }
                     }
@@ -1604,7 +1604,7 @@ exports[`OuiBasicTable with initial selection 1`] = `
                     role="columnheader"
                     scope="col"
                     style={
-                      Object {
+                      {
                         "width": undefined,
                       }
                     }
@@ -1622,7 +1622,7 @@ exports[`OuiBasicTable with initial selection 1`] = `
                             default="{innerText}; {description}"
                             token="ouiTableHeaderCell.titleTextWithDesc"
                             values={
-                              Object {
+                              {
                                 "description": "description",
                                 "innerText": "Name",
                               }
@@ -1713,7 +1713,7 @@ exports[`OuiBasicTable with initial selection 1`] = `
                     align="left"
                     key="_data_column_name_1_0"
                     mobileOptions={
-                      Object {
+                      {
                         "header": "Name",
                         "render": undefined,
                       }
@@ -1724,7 +1724,7 @@ exports[`OuiBasicTable with initial selection 1`] = `
                     <td
                       className="ouiTableRowCell"
                       style={
-                        Object {
+                        {
                           "width": undefined,
                         }
                       }
@@ -1806,7 +1806,7 @@ exports[`OuiBasicTable with initial selection 1`] = `
                     align="left"
                     key="_data_column_name_2_0"
                     mobileOptions={
-                      Object {
+                      {
                         "header": "Name",
                         "render": undefined,
                       }
@@ -1817,7 +1817,7 @@ exports[`OuiBasicTable with initial selection 1`] = `
                     <td
                       className="ouiTableRowCell"
                       style={
-                        Object {
+                        {
                           "width": undefined,
                         }
                       }
@@ -1899,7 +1899,7 @@ exports[`OuiBasicTable with initial selection 1`] = `
                     align="left"
                     key="_data_column_name_3_0"
                     mobileOptions={
-                      Object {
+                      {
                         "header": "Name",
                         "render": undefined,
                       }
@@ -1910,7 +1910,7 @@ exports[`OuiBasicTable with initial selection 1`] = `
                     <td
                       className="ouiTableRowCell"
                       style={
-                        Object {
+                        {
                           "width": undefined,
                         }
                       }
@@ -1977,7 +1977,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 4,
                 }
               }
@@ -2012,7 +2012,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2032,8 +2032,8 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "description": "copy",
                     "icon": "copy",
                     "isPrimary": true,
@@ -2041,7 +2041,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
                     "onClick": [Function],
                     "type": "icon",
                   },
-                  Object {
+                  {
                     "description": "delete",
                     "icon": "trash",
                     "isPrimary": true,
@@ -2049,14 +2049,14 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
                     "onClick": [Function],
                     "type": "icon",
                   },
-                  Object {
+                  {
                     "name": "All actions",
                     "render": [Function],
                   },
                 ]
               }
               item={
-                Object {
+                {
                   "id": "1",
                   "name": "name1",
                 }
@@ -2073,7 +2073,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2093,8 +2093,8 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "available": [Function],
                     "description": "edit",
                     "icon": "pencil",
@@ -2103,7 +2103,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
                     "onClick": [Function],
                     "type": "icon",
                   },
-                  Object {
+                  {
                     "description": "copy",
                     "icon": "copy",
                     "isPrimary": true,
@@ -2111,14 +2111,14 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
                     "onClick": [Function],
                     "type": "icon",
                   },
-                  Object {
+                  {
                     "name": "All actions",
                     "render": [Function],
                   },
                 ]
               }
               item={
-                Object {
+                {
                   "id": "2",
                   "name": "name2",
                 }
@@ -2135,7 +2135,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2155,8 +2155,8 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "description": "copy",
                     "icon": "copy",
                     "isPrimary": true,
@@ -2164,7 +2164,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
                     "onClick": [Function],
                     "type": "icon",
                   },
-                  Object {
+                  {
                     "description": "delete",
                     "icon": "trash",
                     "isPrimary": true,
@@ -2175,7 +2175,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
                 ]
               }
               item={
-                Object {
+                {
                   "id": "3",
                   "name": "name3",
                 }
@@ -2192,7 +2192,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
             align="left"
             key="_data_column_name_4_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2212,8 +2212,8 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "available": [Function],
                     "description": "edit",
                     "icon": "pencil",
@@ -2222,7 +2222,7 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
                     "onClick": [Function],
                     "type": "icon",
                   },
-                  Object {
+                  {
                     "description": "copy",
                     "icon": "copy",
                     "isPrimary": true,
@@ -2230,14 +2230,14 @@ exports[`OuiBasicTable with multiple record actions with custom availability 1`]
                     "onClick": [Function],
                     "type": "icon",
                   },
-                  Object {
+                  {
                     "name": "All actions",
                     "render": [Function],
                   },
                 ]
               }
               item={
-                Object {
+                {
                   "id": "4",
                   "name": "name3",
                 }
@@ -2287,7 +2287,7 @@ exports[`OuiBasicTable with pagination - 2nd page 1`] = `
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 2,
                   "page": 2,
                   "pageCount": 2,
@@ -2318,7 +2318,7 @@ exports[`OuiBasicTable with pagination - 2nd page 1`] = `
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2336,7 +2336,7 @@ exports[`OuiBasicTable with pagination - 2nd page 1`] = `
             align="left"
             key="_data_column_name_4_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2355,7 +2355,7 @@ exports[`OuiBasicTable with pagination - 2nd page 1`] = `
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 1,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -2400,7 +2400,7 @@ exports[`OuiBasicTable with pagination 1`] = `
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -2431,7 +2431,7 @@ exports[`OuiBasicTable with pagination 1`] = `
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2449,7 +2449,7 @@ exports[`OuiBasicTable with pagination 1`] = `
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2467,7 +2467,7 @@ exports[`OuiBasicTable with pagination 1`] = `
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2486,7 +2486,7 @@ exports[`OuiBasicTable with pagination 1`] = `
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 0,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -2531,7 +2531,7 @@ exports[`OuiBasicTable with pagination and error 1`] = `
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -2615,7 +2615,7 @@ exports[`OuiBasicTable with pagination and selection 1`] = `
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -2667,7 +2667,7 @@ exports[`OuiBasicTable with pagination and selection 1`] = `
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2696,7 +2696,7 @@ exports[`OuiBasicTable with pagination and selection 1`] = `
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2725,7 +2725,7 @@ exports[`OuiBasicTable with pagination and selection 1`] = `
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2744,7 +2744,7 @@ exports[`OuiBasicTable with pagination and selection 1`] = `
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 0,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -2789,7 +2789,7 @@ exports[`OuiBasicTable with pagination, hiding the per page options 1`] = `
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -2820,7 +2820,7 @@ exports[`OuiBasicTable with pagination, hiding the per page options 1`] = `
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2838,7 +2838,7 @@ exports[`OuiBasicTable with pagination, hiding the per page options 1`] = `
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2856,7 +2856,7 @@ exports[`OuiBasicTable with pagination, hiding the per page options 1`] = `
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -2875,7 +2875,7 @@ exports[`OuiBasicTable with pagination, hiding the per page options 1`] = `
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "hidePerPageOptions": true,
         "pageIndex": 0,
         "pageSize": 3,
@@ -2912,8 +2912,8 @@ exports[`OuiBasicTable with pagination, selection and sorting 1`] = `
         >
           <OuiTableSortMobile
             items={
-              Array [
-                Object {
+              [
+                {
                   "isSortAscending": true,
                   "isSorted": true,
                   "key": "_data_s_name_0",
@@ -2942,7 +2942,7 @@ exports[`OuiBasicTable with pagination, selection and sorting 1`] = `
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -2997,7 +2997,7 @@ exports[`OuiBasicTable with pagination, selection and sorting 1`] = `
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3026,7 +3026,7 @@ exports[`OuiBasicTable with pagination, selection and sorting 1`] = `
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3055,7 +3055,7 @@ exports[`OuiBasicTable with pagination, selection and sorting 1`] = `
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3074,7 +3074,7 @@ exports[`OuiBasicTable with pagination, selection and sorting 1`] = `
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 0,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -3110,8 +3110,8 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
         >
           <OuiTableSortMobile
             items={
-              Array [
-                Object {
+              [
+                {
                   "isSortAscending": true,
                   "isSorted": true,
                   "key": "_data_s_name_0",
@@ -3140,7 +3140,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -3202,7 +3202,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3222,8 +3222,8 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "description": "edit",
                     "name": "Edit",
                     "onClick": [Function],
@@ -3232,7 +3232,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
                 ]
               }
               item={
-                Object {
+                {
                   "id": "1",
                   "name": "name1",
                 }
@@ -3260,7 +3260,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3280,8 +3280,8 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "description": "edit",
                     "name": "Edit",
                     "onClick": [Function],
@@ -3290,7 +3290,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
                 ]
               }
               item={
-                Object {
+                {
                   "id": "2",
                   "name": "name2",
                 }
@@ -3318,7 +3318,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3338,8 +3338,8 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "description": "edit",
                     "name": "Edit",
                     "onClick": [Function],
@@ -3348,7 +3348,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
                 ]
               }
               item={
-                Object {
+                {
                   "id": "3",
                   "name": "name3",
                 }
@@ -3365,7 +3365,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and a single record a
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 0,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -3401,8 +3401,8 @@ exports[`OuiBasicTable with pagination, selection, sorting and column dataType 1
         >
           <OuiTableSortMobile
             items={
-              Array [
-                Object {
+              [
+                {
                   "isSortAscending": true,
                   "isSorted": true,
                   "key": "_data_s_count_0",
@@ -3431,7 +3431,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column dataType 1
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -3486,7 +3486,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column dataType 1
             align="right"
             key="_data_column_count_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Count",
                 "render": undefined,
               }
@@ -3515,7 +3515,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column dataType 1
             align="right"
             key="_data_column_count_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Count",
                 "render": undefined,
               }
@@ -3544,7 +3544,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column dataType 1
             align="right"
             key="_data_column_count_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Count",
                 "render": undefined,
               }
@@ -3563,7 +3563,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column dataType 1
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 0,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -3599,8 +3599,8 @@ exports[`OuiBasicTable with pagination, selection, sorting and column renderer 1
         >
           <OuiTableSortMobile
             items={
-              Array [
-                Object {
+              [
+                {
                   "isSortAscending": true,
                   "isSorted": true,
                   "key": "_data_s_name_0",
@@ -3629,7 +3629,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column renderer 1
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -3684,7 +3684,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column renderer 1
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3713,7 +3713,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column renderer 1
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3742,7 +3742,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column renderer 1
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3761,7 +3761,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and column renderer 1
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 0,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -3797,8 +3797,8 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
         >
           <OuiTableSortMobile
             items={
-              Array [
-                Object {
+              [
+                {
                   "isSortAscending": true,
                   "isSorted": true,
                   "key": "_data_s_name_0",
@@ -3827,7 +3827,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -3889,7 +3889,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3909,14 +3909,14 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "description": "edit",
                     "name": "Edit",
                     "onClick": [Function],
                     "type": "button",
                   },
-                  Object {
+                  {
                     "description": "delete",
                     "name": "Delete",
                     "onClick": [Function],
@@ -3925,7 +3925,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
                 ]
               }
               item={
-                Object {
+                {
                   "id": "1",
                   "name": "name1",
                 }
@@ -3953,7 +3953,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -3973,14 +3973,14 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "description": "edit",
                     "name": "Edit",
                     "onClick": [Function],
                     "type": "button",
                   },
-                  Object {
+                  {
                     "description": "delete",
                     "name": "Delete",
                     "onClick": [Function],
@@ -3989,7 +3989,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
                 ]
               }
               item={
-                Object {
+                {
                   "id": "2",
                   "name": "name2",
                 }
@@ -4017,7 +4017,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
             align="left"
             key="_data_column_name_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -4037,14 +4037,14 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
             <ExpandedItemActions
               actionEnabled={[Function]}
               actions={
-                Array [
-                  Object {
+                [
+                  {
                     "description": "edit",
                     "name": "Edit",
                     "onClick": [Function],
                     "type": "button",
                   },
-                  Object {
+                  {
                     "description": "delete",
                     "name": "Delete",
                     "onClick": [Function],
@@ -4053,7 +4053,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
                 ]
               }
               item={
-                Object {
+                {
                   "id": "3",
                   "name": "name3",
                 }
@@ -4070,7 +4070,7 @@ exports[`OuiBasicTable with pagination, selection, sorting and multiple record a
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 0,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -4106,8 +4106,8 @@ exports[`OuiBasicTable with pagination, selection, sorting, column renderer and 
         >
           <OuiTableSortMobile
             items={
-              Array [
-                Object {
+              [
+                {
                   "isSortAscending": true,
                   "isSorted": true,
                   "key": "_data_s_count_0",
@@ -4136,7 +4136,7 @@ exports[`OuiBasicTable with pagination, selection, sorting, column renderer and 
               default="This table contains {itemCount} rows out of {totalItemCount} rows; Page {page} of {pageCount}."
               token="ouiBasicTable.tableAutoCaptionWithPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                   "page": 1,
                   "pageCount": 2,
@@ -4191,7 +4191,7 @@ exports[`OuiBasicTable with pagination, selection, sorting, column renderer and 
             align="right"
             key="_data_column_count_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Count",
                 "render": undefined,
               }
@@ -4220,7 +4220,7 @@ exports[`OuiBasicTable with pagination, selection, sorting, column renderer and 
             align="right"
             key="_data_column_count_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Count",
                 "render": undefined,
               }
@@ -4249,7 +4249,7 @@ exports[`OuiBasicTable with pagination, selection, sorting, column renderer and 
             align="right"
             key="_data_column_count_3_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Count",
                 "render": undefined,
               }
@@ -4268,7 +4268,7 @@ exports[`OuiBasicTable with pagination, selection, sorting, column renderer and 
     onPageChange={[Function]}
     onPageSizeChange={[Function]}
     pagination={
-      Object {
+      {
         "pageIndex": 0,
         "pageSize": 3,
         "totalItemCount": 5,
@@ -4313,7 +4313,7 @@ exports[`OuiBasicTable with sortable columns and sorting disabled 1`] = `
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                 }
               }
@@ -4341,7 +4341,7 @@ exports[`OuiBasicTable with sortable columns and sorting disabled 1`] = `
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -4359,7 +4359,7 @@ exports[`OuiBasicTable with sortable columns and sorting disabled 1`] = `
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -4377,7 +4377,7 @@ exports[`OuiBasicTable with sortable columns and sorting disabled 1`] = `
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -4413,8 +4413,8 @@ exports[`OuiBasicTable with sorting 1`] = `
         >
           <OuiTableSortMobile
             items={
-              Array [
-                Object {
+              [
+                {
                   "isSortAscending": true,
                   "isSorted": true,
                   "key": "_data_s_name_0",
@@ -4443,7 +4443,7 @@ exports[`OuiBasicTable with sorting 1`] = `
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                 }
               }
@@ -4474,7 +4474,7 @@ exports[`OuiBasicTable with sorting 1`] = `
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -4492,7 +4492,7 @@ exports[`OuiBasicTable with sorting 1`] = `
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -4510,7 +4510,7 @@ exports[`OuiBasicTable with sorting 1`] = `
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -4546,8 +4546,8 @@ exports[`OuiBasicTable with sorting enabled and enable all columns for sorting 1
         >
           <OuiTableSortMobile
             items={
-              Array [
-                Object {
+              [
+                {
                   "isSortAscending": true,
                   "isSorted": true,
                   "key": "_data_s_name_0",
@@ -4576,7 +4576,7 @@ exports[`OuiBasicTable with sorting enabled and enable all columns for sorting 1
               default="This table contains {itemCount} rows."
               token="ouiBasicTable.tableAutoCaptionWithoutPagination"
               values={
-                Object {
+                {
                   "itemCount": 3,
                 }
               }
@@ -4607,7 +4607,7 @@ exports[`OuiBasicTable with sorting enabled and enable all columns for sorting 1
             align="left"
             key="_data_column_name_0_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -4625,7 +4625,7 @@ exports[`OuiBasicTable with sorting enabled and enable all columns for sorting 1
             align="left"
             key="_data_column_name_1_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }
@@ -4643,7 +4643,7 @@ exports[`OuiBasicTable with sorting enabled and enable all columns for sorting 1
             align="left"
             key="_data_column_name_2_0"
             mobileOptions={
-              Object {
+              {
                 "header": "Name",
                 "render": undefined,
               }

@@ -58,35 +58,38 @@ describe('AsyncInterval', () => {
     await instance.__pendingFn;
   }
 
-  describe('when creating a 1000ms interval', async () => {
-    let instance: AsyncInterval;
+  describe('when creating a 1000ms interval', () => {
     let spy: jest.Mock;
     beforeEach(() => {
       spy = jest.fn();
-      instance = new AsyncInterval(spy, 1000);
     });
 
     it('should not call fn immediately', async () => {
+      const instance = new AsyncInterval(spy, 1000);
       await advanceTimerAndAwaitFn(instance, 0);
       expect(spy).toHaveBeenCalledTimes(0);
     });
 
     it('should have called fn once after 1000ms', async () => {
+      const instance = new AsyncInterval(spy, 1000);
       await advanceTimerAndAwaitFn(instance, 1000);
       expect(spy).toHaveBeenCalledTimes(1);
     });
 
     it('should have called fn twice after 2000ms', async () => {
+      const instance = new AsyncInterval(spy, 1000);
       await advanceTimerAndAwaitFn(instance, 2000);
       expect(spy).toHaveBeenCalledTimes(2);
     });
 
     it('should have called fn three times after 3000ms', async () => {
+      const instance = new AsyncInterval(spy, 1000);
       await advanceTimerAndAwaitFn(instance, 3000);
       expect(spy).toHaveBeenCalledTimes(3);
     });
 
     it('should not call fn after stop has been invoked', async () => {
+      const instance = new AsyncInterval(spy, 1000);
       await advanceTimerAndAwaitFn(instance, 1000);
       expect(spy).toHaveBeenCalledTimes(1);
       instance.stop();
@@ -95,30 +98,32 @@ describe('AsyncInterval', () => {
     });
   });
 
-  describe('when creating a 1000ms interval that calls a fn that takes 2000ms to complete', async () => {
-    let instance: AsyncInterval;
+  describe('when creating a 1000ms interval that calls a fn that takes 2000ms to complete', () => {
     let spy: jest.Mock;
     beforeEach(() => {
       spy = jest.fn(async () => await sleep(2000));
-      instance = new AsyncInterval(spy, 1000);
     });
 
     it('should not call fn immediately', async () => {
+      const instance = new AsyncInterval(spy, 1000);
       await advanceTimerAndAwaitFn(instance, 0);
       expect(spy).toHaveBeenCalledTimes(0);
     });
 
     it('should have called fn once after 1000ms', async () => {
+      const instance = new AsyncInterval(spy, 1000);
       await advanceTimerAndAwaitFn(instance, 1000);
       expect(spy).toHaveBeenCalledTimes(1);
     });
 
     it('should have called fn twice after 4000ms', async () => {
+      const instance = new AsyncInterval(spy, 1000);
       await advanceTimerAndAwaitFn(instance, 4000);
       expect(spy).toHaveBeenCalledTimes(2);
     });
 
     it('should have called fn tree times after 7000ms', async () => {
+      const instance = new AsyncInterval(spy, 1000);
       await advanceTimerAndAwaitFn(instance, 7000);
       expect(spy).toHaveBeenCalledTimes(3);
     });

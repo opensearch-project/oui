@@ -52,7 +52,7 @@ exports[`CollapsedItemActions render with href and _target provided 1`] = `
   <OuiContextMenuPanel
     hasFocus={true}
     items={
-      Array [
+      [
         <OuiContextMenuItem
           disabled={false}
           onClick={[Function]}

@@ -192,7 +192,7 @@ exports[`OuiDataGrid render column actions renders various column actions config
         default="Sort {schemaLabel}"
         token="ouiColumnActions.sort"
         values={
-          Object {
+          {
             "schemaLabel": <OuiI18n
               default="A-Z"
               token="ouiColumnSortingDraggable.defaultSortAsc"
@@ -234,7 +234,7 @@ exports[`OuiDataGrid render column actions renders various column actions config
             default="Sort {schemaLabel}"
             token="ouiColumnActions.sort"
             values={
-              Object {
+              {
                 "schemaLabel": <OuiI18n
                   default="A-Z"
                   token="ouiColumnSortingDraggable.defaultSortAsc"
@@ -275,7 +275,7 @@ exports[`OuiDataGrid render column actions renders various column actions config
         default="Sort {schemaLabel}"
         token="ouiColumnActions.sort"
         values={
-          Object {
+          {
             "schemaLabel": <OuiI18n
               default="Z-A"
               token="ouiColumnSortingDraggable.defaultSortDesc"
@@ -317,7 +317,7 @@ exports[`OuiDataGrid render column actions renders various column actions config
             default="Sort {schemaLabel}"
             token="ouiColumnActions.sort"
             values={
-              Object {
+              {
                 "schemaLabel": <OuiI18n
                   default="Z-A"
                   token="ouiColumnSortingDraggable.defaultSortDesc"
@@ -499,7 +499,7 @@ exports[`OuiDataGrid render column actions renders various column actions config
         default="Sort {schemaLabel}"
         token="ouiColumnActions.sort"
         values={
-          Object {
+          {
             "schemaLabel": <OuiI18n
               default="A-Z"
               token="ouiColumnSortingDraggable.defaultSortAsc"
@@ -541,7 +541,7 @@ exports[`OuiDataGrid render column actions renders various column actions config
             default="Sort {schemaLabel}"
             token="ouiColumnActions.sort"
             values={
-              Object {
+              {
                 "schemaLabel": <OuiI18n
                   default="A-Z"
                   token="ouiColumnSortingDraggable.defaultSortAsc"
@@ -582,7 +582,7 @@ exports[`OuiDataGrid render column actions renders various column actions config
         default="Sort {schemaLabel}"
         token="ouiColumnActions.sort"
         values={
-          Object {
+          {
             "schemaLabel": <OuiI18n
               default="Z-A"
               token="ouiColumnSortingDraggable.defaultSortDesc"
@@ -624,7 +624,7 @@ exports[`OuiDataGrid render column actions renders various column actions config
             default="Sort {schemaLabel}"
             token="ouiColumnActions.sort"
             values={
-              Object {
+              {
                 "schemaLabel": <OuiI18n
                   default="Z-A"
                   token="ouiColumnSortingDraggable.defaultSortDesc"
@@ -917,7 +917,7 @@ exports[`OuiDataGrid render column actions renders various column actions config
 `;
 
 exports[`OuiDataGrid rendering renders additional toolbar controls 1`] = `
-Array [
+[
   <div
     data-focus-guard="true"
     style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
@@ -1283,7 +1283,7 @@ Array [
 `;
 
 exports[`OuiDataGrid rendering renders control columns 1`] = `
-Array [
+[
   <div
     data-focus-guard="true"
     style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
@@ -1949,7 +1949,7 @@ Array [
 `;
 
 exports[`OuiDataGrid rendering renders custom column headers 1`] = `
-Array [
+[
   <div
     data-focus-guard="true"
     style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
@@ -2314,7 +2314,7 @@ Array [
 `;
 
 exports[`OuiDataGrid rendering renders with common and div attributes 1`] = `
-Array [
+[
   <div
     data-focus-guard="true"
     style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"

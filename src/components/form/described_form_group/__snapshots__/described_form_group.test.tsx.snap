@@ -67,7 +67,7 @@ exports[`OuiDescribedFormGroup is rendered 1`] = `
             className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
-              describedByIds={Array []}
+              describedByIds={[]}
               display="row"
               fullWidth={false}
               hasChildLabel={true}
@@ -143,7 +143,7 @@ exports[`OuiDescribedFormGroup props description is not rendered when it's not p
             className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
-              describedByIds={Array []}
+              describedByIds={[]}
               display="row"
               fullWidth={false}
               hasChildLabel={true}
@@ -241,7 +241,7 @@ exports[`OuiDescribedFormGroup props fullWidth is rendered 1`] = `
             className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
-              describedByIds={Array []}
+              describedByIds={[]}
               display="row"
               fullWidth={true}
               hasChildLabel={true}
@@ -339,7 +339,7 @@ exports[`OuiDescribedFormGroup props gutterSize is rendered 1`] = `
             className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
-              describedByIds={Array []}
+              describedByIds={[]}
               display="row"
               fullWidth={false}
               hasChildLabel={true}
@@ -376,12 +376,12 @@ exports[`OuiDescribedFormGroup props props for the flex item containers are pass
   data-test-subj="test subject string"
   description="Test description"
   descriptionFlexItemProps={
-    Object {
+    {
       "grow": 2,
     }
   }
   fieldFlexItemProps={
-    Object {
+    {
       "component": "section",
     }
   }
@@ -449,7 +449,7 @@ exports[`OuiDescribedFormGroup props props for the flex item containers are pass
             className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
-              describedByIds={Array []}
+              describedByIds={[]}
               display="row"
               fullWidth={false}
               hasChildLabel={true}
@@ -547,7 +547,7 @@ exports[`OuiDescribedFormGroup props titleSize is rendered 1`] = `
             className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--large"
           >
             <OuiFormRow
-              describedByIds={Array []}
+              describedByIds={[]}
               display="row"
               fullWidth={false}
               hasChildLabel={true}
@@ -644,10 +644,10 @@ exports[`OuiDescribedFormGroup ties together parts for accessibility 1`] = `
             className="ouiFlexItem ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
-              describedByIds={Array []}
+              describedByIds={[]}
               display="row"
               error={
-                Array [
+                [
                   "Error one",
                   "Error two",
                 ]

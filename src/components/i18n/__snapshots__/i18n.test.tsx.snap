@@ -3,13 +3,13 @@
 exports[`OuiI18n default rendering render prop with multiple tokens renders render prop result to the dom 1`] = `
 <OuiI18n
   defaults={
-    Array [
+    [
       "This is the first basic string.",
       "This is the second basic string.",
     ]
   }
   tokens={
-    Array [
+    [
       "test1",
       "test2",
     ]
@@ -27,16 +27,16 @@ exports[`OuiI18n default rendering render prop with single token calls a functio
 <OuiI18n
   default={
     [MockFunction] {
-      "calls": Array [
-        Array [
-          Object {
+      "calls": [
+        [
+          {
             "special": "values",
             "type": "callback",
           },
         ],
       ],
-      "results": Array [
-        Object {
+      "results": [
+        {
           "type": "return",
           "value": "This is a callback with values.",
         },
@@ -45,7 +45,7 @@ exports[`OuiI18n default rendering render prop with single token calls a functio
   }
   token="test"
   values={
-    Object {
+    {
       "special": "values",
       "type": "callback",
     }
@@ -69,7 +69,7 @@ exports[`OuiI18n default rendering render prop with single token renders render 
   default="This is a {type} with {special}."
   token="test"
   values={
-    Object {
+    {
       "special": "values",
       "type": "string",
     }
@@ -83,16 +83,16 @@ exports[`OuiI18n default rendering rendering to dom calls a function and renders
 <OuiI18n
   default={
     [MockFunction] {
-      "calls": Array [
-        Array [
-          Object {
+      "calls": [
+        [
+          {
             "special": "values",
             "type": "callback",
           },
         ],
       ],
-      "results": Array [
-        Object {
+      "results": [
+        {
           "type": "return",
           "value": "This is a callback with values.",
         },
@@ -101,7 +101,7 @@ exports[`OuiI18n default rendering rendering to dom calls a function and renders
   }
   token="test"
   values={
-    Object {
+    {
       "special": "values",
       "type": "callback",
     }
@@ -125,7 +125,7 @@ exports[`OuiI18n default rendering rendering to dom renders a string with placeh
   default="This is a {type} with {special}."
   token="test"
   values={
-    Object {
+    {
       "special": "values",
       "type": "string",
     }
@@ -140,7 +140,7 @@ exports[`OuiI18n default rendering rendering to dom renders when value is null 1
   default="{arg}"
   token="test"
   values={
-    Object {
+    {
       "arg": null,
     }
   }
@@ -154,8 +154,8 @@ exports[`OuiI18n default rendering rendering to dom renders when value is null 1
 exports[`OuiI18n mapped tokens handles multiple tokens 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test1": "first value",
         "test2": "second value",
       },
@@ -178,8 +178,8 @@ exports[`OuiI18n mapped tokens handles multiple tokens 1`] = `
 exports[`OuiI18n mapped tokens handles single token with values 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "myToken": "In reverse order: {second}, then {first}",
       },
     }
@@ -196,8 +196,8 @@ exports[`OuiI18n mapped tokens handles single token with values 1`] = `
 exports[`OuiI18n mapped tokens handles single token without values 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "token": "This is the mapped value.",
       },
     }
@@ -214,8 +214,8 @@ exports[`OuiI18n mapped tokens handles single token without values 1`] = `
 exports[`OuiI18n mapped tokens mappingFunc calls the mapping function with the source string 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test1": "This is the mapped value.",
       },
       "mappingFunc": [Function],
@@ -235,8 +235,8 @@ exports[`OuiI18n mapped tokens mappingFunc calls the mapping function with the s
 exports[`OuiI18n reading values from context mappingFunc calls the mapping function with the source string 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test1": "This is the mapped value.",
       },
       "mappingFunc": [Function],
@@ -259,8 +259,8 @@ exports[`OuiI18n reading values from context mappingFunc calls the mapping funct
 exports[`OuiI18n reading values from context render prop with multiple tokens renders mapped render prop result to the dom 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test1": "This is the first mapped value.",
         "test2": "This is the second mapped value.",
       },
@@ -269,13 +269,13 @@ exports[`OuiI18n reading values from context render prop with multiple tokens re
 >
   <OuiI18n
     defaults={
-      Array [
+      [
         "This is the first basic string.",
         "This is the second basic string.",
       ]
     }
     tokens={
-      Array [
+      [
         "test1",
         "test2",
       ]
@@ -293,19 +293,19 @@ exports[`OuiI18n reading values from context render prop with multiple tokens re
 exports[`OuiI18n reading values from context render prop with single token calls a mapped function and renders render prop result to the dom 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
+          "calls": [
+            [
+              {
                 "special": "values",
                 "type": "callback",
               },
             ],
           ],
-          "results": Array [
-            Object {
+          "results": [
+            {
               "type": "return",
               "value": "This is a callback with values.",
             },
@@ -318,16 +318,16 @@ exports[`OuiI18n reading values from context render prop with single token calls
   <OuiI18n
     default={
       [MockFunction] {
-        "calls": Array [
-          Array [
-            Object {
+        "calls": [
+          [
+            {
               "special": "values",
               "type": "callback",
             },
           ],
         ],
-        "results": Array [
-          Object {
+        "results": [
+          {
             "type": "return",
             "value": "This is a callback with values.",
           },
@@ -336,7 +336,7 @@ exports[`OuiI18n reading values from context render prop with single token calls
     }
     token="test"
     values={
-      Object {
+      {
         "special": "values",
         "type": "callback",
       }
@@ -350,8 +350,8 @@ exports[`OuiI18n reading values from context render prop with single token calls
 exports[`OuiI18n reading values from context render prop with single token renders mapped render prop result to the dom 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test": "An overridden string.",
       },
     }
@@ -369,8 +369,8 @@ exports[`OuiI18n reading values from context render prop with single token rende
 exports[`OuiI18n reading values from context render prop with single token renders mapped render prop result with placeholders to the dom 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test": "An overridden {type} with {special}.",
       },
     }
@@ -380,7 +380,7 @@ exports[`OuiI18n reading values from context render prop with single token rende
     default="This is a {type} with {special}."
     token="test"
     values={
-      Object {
+      {
         "special": "values",
         "type": "string",
       }
@@ -394,19 +394,19 @@ exports[`OuiI18n reading values from context render prop with single token rende
 exports[`OuiI18n reading values from context rendering to dom calls a mapped function and renders the result to the dom 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
+          "calls": [
+            [
+              {
                 "special": "values",
                 "type": "callback",
               },
             ],
           ],
-          "results": Array [
-            Object {
+          "results": [
+            {
               "type": "return",
               "value": "This is a mapped callback with values.",
             },
@@ -420,7 +420,7 @@ exports[`OuiI18n reading values from context rendering to dom calls a mapped fun
     default={[Function]}
     token="test"
     values={
-      Object {
+      {
         "special": "values",
         "type": "callback",
       }
@@ -434,8 +434,8 @@ exports[`OuiI18n reading values from context rendering to dom calls a mapped fun
 exports[`OuiI18n reading values from context rendering to dom renders a mapped basic string to the dom 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test": "An overridden string.",
       },
     }
@@ -453,8 +453,8 @@ exports[`OuiI18n reading values from context rendering to dom renders a mapped b
 exports[`OuiI18n reading values from context rendering to dom renders a mapped string with placeholders to the dom 1`] = `
 <OuiContext
   i18n={
-    Object {
-      "mapping": Object {
+    {
+      "mapping": {
         "test": "An overridden {type} with {special}.",
       },
     }
@@ -464,7 +464,7 @@ exports[`OuiI18n reading values from context rendering to dom renders a mapped s
     default="This is a {type} with {special}."
     token="test"
     values={
-      Object {
+      {
         "special": "values",
         "type": "string",
       }

@@ -15,7 +15,7 @@ exports[`OuiQuickSelectPopover is rendered 1`] = `
       onClick={[Function]}
       size="xs"
       textProps={
-        Object {
+        {
           "className": "ouiQuickSelectPopover__buttonText",
         }
       }
@@ -44,8 +44,8 @@ exports[`OuiQuickSelectPopover is rendered 1`] = `
     <OuiCommonlyUsedTimeRanges
       applyTime={[Function]}
       commonlyUsedRanges={
-        Array [
-          Object {
+        [
+          {
             "end": "now/d",
             "label": "Today",
             "start": "now/d",
@@ -56,8 +56,8 @@ exports[`OuiQuickSelectPopover is rendered 1`] = `
     <OuiRecentlyUsed
       applyTime={[Function]}
       commonlyUsedRanges={
-        Array [
-          Object {
+        [
+          {
             "end": "now/d",
             "label": "Today",
             "start": "now/d",
@@ -66,8 +66,8 @@ exports[`OuiQuickSelectPopover is rendered 1`] = `
       }
       dateFormat="MMM D, YYYY @ HH:mm:ss.SSS"
       recentlyUsedRanges={
-        Array [
-          Object {
+        [
+          {
             "end": "now/d",
             "label": "Today",
             "start": "now/d",
@@ -99,7 +99,7 @@ exports[`OuiQuickSelectPopover isAutoRefreshOnly 1`] = `
       onClick={[Function]}
       size="xs"
       textProps={
-        Object {
+        {
           "className": "ouiQuickSelectPopover__buttonText",
         }
       }

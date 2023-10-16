@@ -54,15 +54,15 @@ exports[`OuiTabbedContent behavior when uncontrolled, the selected tab should up
 <OuiTabbedContent
   autoFocus="initial"
   tabs={
-    Array [
-      Object {
+    [
+      {
         "content": <p>
           Elasticsearch content
         </p>,
         "id": "es",
         "name": "Elasticsearch",
       },
-      Object {
+      {
         "content": <p>
           updated Kibana content
         </p>,

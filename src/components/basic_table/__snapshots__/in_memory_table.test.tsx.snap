@@ -5,8 +5,8 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -15,28 +15,28 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
   }
   data-test-subj="test subject string"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
-      Object {
+      {
         "id": "4",
         "name": "name4",
       },
     ]
   }
   pagination={
-    Object {
-      "pageSizeOptions": Array [
+    {
+      "pageSizeOptions": [
         2,
         4,
         6,
@@ -50,8 +50,8 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
     aria-label="aria-label"
     className="testClass1 testClass2"
     columns={
-      Array [
-        Object {
+      [
+        {
           "description": "description",
           "field": "name",
           "name": "Name",
@@ -60,12 +60,12 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
     }
     data-test-subj="test subject string"
     items={
-      Array [
-        Object {
+      [
+        {
           "id": "3",
           "name": "name3",
         },
-        Object {
+        {
           "id": "4",
           "name": "name4",
         },
@@ -74,11 +74,11 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
     noItemsMessage="No items found"
     onChange={[Function]}
     pagination={
-      Object {
+      {
         "hidePerPageOptions": undefined,
         "pageIndex": 1,
         "pageSize": 2,
-        "pageSizeOptions": Array [
+        "pageSizeOptions": [
           2,
           4,
           6,
@@ -159,7 +159,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                       role="columnheader"
                       scope="col"
                       style={
-                        Object {
+                        {
                           "width": undefined,
                         }
                       }
@@ -177,7 +177,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                               default="{innerText}; {description}"
                               token="ouiTableHeaderCell.titleTextWithDesc"
                               values={
-                                Object {
+                                {
                                   "description": "description",
                                   "innerText": "Name",
                                 }
@@ -219,7 +219,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                       align="left"
                       key="_data_column_name_2_0"
                       mobileOptions={
-                        Object {
+                        {
                           "header": "Name",
                           "render": undefined,
                         }
@@ -230,7 +230,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                       <td
                         className="ouiTableRowCell"
                         style={
-                          Object {
+                          {
                             "width": undefined,
                           }
                         }
@@ -263,7 +263,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                       align="left"
                       key="_data_column_name_3_0"
                       mobileOptions={
-                        Object {
+                        {
                           "header": "Name",
                           "render": undefined,
                         }
@@ -274,7 +274,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                       <td
                         className="ouiTableRowCell"
                         style={
-                          Object {
+                          {
                             "width": undefined,
                           }
                         }
@@ -307,11 +307,11 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
         onPageChange={[Function]}
         onPageSizeChange={[Function]}
         pagination={
-          Object {
+          {
             "hidePerPageOptions": undefined,
             "pageIndex": 1,
             "pageSize": 2,
-            "pageSizeOptions": Array [
+            "pageSizeOptions": [
               2,
               4,
               6,
@@ -333,7 +333,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
             aria-controls="__table_generated-id"
             itemsPerPage={2}
             itemsPerPageOptions={
-              Array [
+              [
                 2,
                 4,
                 6,
@@ -410,7 +410,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                 iconSize="s"
                                 iconType="arrowDown"
                                 textProps={
-                                  Object {
+                                  {
                                     "className": "ouiButtonEmpty__text",
                                   }
                                 }
@@ -471,7 +471,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                           default="Previous page, {page}"
                           token="ouiPagination.previousPage"
                           values={
-                            Object {
+                            {
                               "page": 1,
                             }
                           }
@@ -539,7 +539,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                   default="Page {page} of {totalPages}"
                                   token="ouiPaginationButton.longPageString"
                                   values={
-                                    Object {
+                                    {
                                       "page": 1,
                                       "totalPages": 2,
                                     }
@@ -549,7 +549,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                     default="Page {page}"
                                     token="ouiPaginationButton.shortPageString"
                                     values={
-                                      Object {
+                                      {
                                         "page": 1,
                                       }
                                     }
@@ -579,7 +579,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                           iconSide="left"
                                           iconSize="m"
                                           textProps={
-                                            Object {
+                                            {
                                               "className": "ouiButtonEmpty__text",
                                             }
                                           }
@@ -620,7 +620,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                   default="Page {page} of {totalPages}"
                                   token="ouiPaginationButton.longPageString"
                                   values={
-                                    Object {
+                                    {
                                       "page": 2,
                                       "totalPages": 2,
                                     }
@@ -630,7 +630,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                     default="Page {page}"
                                     token="ouiPaginationButton.shortPageString"
                                     values={
-                                      Object {
+                                      {
                                         "page": 2,
                                       }
                                     }
@@ -662,7 +662,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                           iconSide="left"
                                           iconSize="m"
                                           textProps={
-                                            Object {
+                                            {
                                               "className": "ouiButtonEmpty__text",
                                             }
                                           }
@@ -689,7 +689,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                           default="Next page, {page}"
                           token="ouiPagination.nextPage"
                           values={
-                            Object {
+                            {
                               "page": 3,
                             }
                           }
@@ -752,8 +752,8 @@ exports[`OuiInMemoryTable empty array 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -761,7 +761,7 @@ exports[`OuiInMemoryTable empty array 1`] = `
     ]
   }
   data-test-subj="test subject string"
-  items={Array []}
+  items={[]}
   noItemsMessage="No items found"
   onChange={[Function]}
   responsive={true}
@@ -774,8 +774,8 @@ exports[`OuiInMemoryTable with executeQueryOptions 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -783,7 +783,7 @@ exports[`OuiInMemoryTable with executeQueryOptions 1`] = `
     ]
   }
   data-test-subj="test subject string"
-  items={Array []}
+  items={[]}
   noItemsMessage="No items found"
   onChange={[Function]}
   responsive={true}
@@ -796,8 +796,8 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -807,16 +807,16 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
   data-test-subj="test subject string"
   itemId="id"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
@@ -824,9 +824,9 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
   }
   responsive={true}
   selection={
-    Object {
-      "initialSelected": Array [
-        Object {
+    {
+      "initialSelected": [
+        {
           "id": "1",
           "name": "name1",
         },
@@ -840,8 +840,8 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
     aria-label="aria-label"
     className="testClass1 testClass2"
     columns={
-      Array [
-        Object {
+      [
+        {
           "description": "description",
           "field": "name",
           "name": "Name",
@@ -851,16 +851,16 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
     data-test-subj="test subject string"
     itemId="id"
     items={
-      Array [
-        Object {
+      [
+        {
           "id": "1",
           "name": "name1",
         },
-        Object {
+        {
           "id": "2",
           "name": "name2",
         },
-        Object {
+        {
           "id": "3",
           "name": "name3",
         },
@@ -870,9 +870,9 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
     onChange={[Function]}
     responsive={true}
     selection={
-      Object {
-        "initialSelected": Array [
-          Object {
+      {
+        "initialSelected": [
+          {
             "id": "1",
             "name": "name1",
           },
@@ -986,7 +986,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                       className="ouiTableHeaderCellCheckbox"
                       scope="col"
                       style={
-                        Object {
+                        {
                           "width": undefined,
                         }
                       }
@@ -1044,7 +1044,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                       role="columnheader"
                       scope="col"
                       style={
-                        Object {
+                        {
                           "width": undefined,
                         }
                       }
@@ -1062,7 +1062,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                               default="{innerText}; {description}"
                               token="ouiTableHeaderCell.titleTextWithDesc"
                               values={
-                                Object {
+                                {
                                   "description": "description",
                                   "innerText": "Name",
                                 }
@@ -1153,7 +1153,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                       align="left"
                       key="_data_column_name_1_0"
                       mobileOptions={
-                        Object {
+                        {
                           "header": "Name",
                           "render": undefined,
                         }
@@ -1164,7 +1164,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                       <td
                         className="ouiTableRowCell"
                         style={
-                          Object {
+                          {
                             "width": undefined,
                           }
                         }
@@ -1246,7 +1246,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                       align="left"
                       key="_data_column_name_2_0"
                       mobileOptions={
-                        Object {
+                        {
                           "header": "Name",
                           "render": undefined,
                         }
@@ -1257,7 +1257,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                       <td
                         className="ouiTableRowCell"
                         style={
-                          Object {
+                          {
                             "width": undefined,
                           }
                         }
@@ -1339,7 +1339,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                       align="left"
                       key="_data_column_name_3_0"
                       mobileOptions={
-                        Object {
+                        {
                           "header": "Name",
                           "render": undefined,
                         }
@@ -1350,7 +1350,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                       <td
                         className="ouiTableRowCell"
                         style={
-                          Object {
+                          {
                             "width": undefined,
                           }
                         }
@@ -1388,8 +1388,8 @@ exports[`OuiInMemoryTable with initial sorting 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1399,16 +1399,16 @@ exports[`OuiInMemoryTable with initial sorting 1`] = `
   }
   data-test-subj="test subject string"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "3",
         "name": "name3",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "1",
         "name": "name1",
       },
@@ -1418,9 +1418,9 @@ exports[`OuiInMemoryTable with initial sorting 1`] = `
   onChange={[Function]}
   responsive={true}
   sorting={
-    Object {
+    {
       "allowNeutralSort": true,
-      "sort": Object {
+      "sort": {
         "direction": "desc",
         "field": "Name",
       },
@@ -1435,8 +1435,8 @@ exports[`OuiInMemoryTable with items 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1445,16 +1445,16 @@ exports[`OuiInMemoryTable with items 1`] = `
   }
   data-test-subj="test subject string"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
@@ -1472,8 +1472,8 @@ exports[`OuiInMemoryTable with items and expanded item 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1483,23 +1483,23 @@ exports[`OuiInMemoryTable with items and expanded item 1`] = `
   data-test-subj="test subject string"
   itemId="id"
   itemIdToExpandedRowMap={
-    Object {
+    {
       "1": <div>
         expanded row content
       </div>,
     }
   }
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
@@ -1517,8 +1517,8 @@ exports[`OuiInMemoryTable with items and message - expecting to show the items 1
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1527,16 +1527,16 @@ exports[`OuiInMemoryTable with items and message - expecting to show the items 1
   }
   data-test-subj="test subject string"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
@@ -1554,8 +1554,8 @@ exports[`OuiInMemoryTable with message 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1563,7 +1563,7 @@ exports[`OuiInMemoryTable with message 1`] = `
     ]
   }
   data-test-subj="test subject string"
-  items={Array []}
+  items={[]}
   noItemsMessage="where my items at?"
   onChange={[Function]}
   responsive={true}
@@ -1576,8 +1576,8 @@ exports[`OuiInMemoryTable with message and loading 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1585,7 +1585,7 @@ exports[`OuiInMemoryTable with message and loading 1`] = `
     ]
   }
   data-test-subj="test subject string"
-  items={Array []}
+  items={[]}
   loading={true}
   noItemsMessage="Loading items...."
   onChange={[Function]}
@@ -1599,8 +1599,8 @@ exports[`OuiInMemoryTable with pagination 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1609,12 +1609,12 @@ exports[`OuiInMemoryTable with pagination 1`] = `
   }
   data-test-subj="test subject string"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
@@ -1623,11 +1623,11 @@ exports[`OuiInMemoryTable with pagination 1`] = `
   noItemsMessage="No items found"
   onChange={[Function]}
   pagination={
-    Object {
+    {
       "hidePerPageOptions": undefined,
       "pageIndex": 0,
       "pageSize": 2,
-      "pageSizeOptions": Array [
+      "pageSizeOptions": [
         2,
         4,
         6,
@@ -1645,8 +1645,8 @@ exports[`OuiInMemoryTable with pagination and default page size and index 1`] = 
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1655,8 +1655,8 @@ exports[`OuiInMemoryTable with pagination and default page size and index 1`] = 
   }
   data-test-subj="test subject string"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "3",
         "name": "name3",
       },
@@ -1665,11 +1665,11 @@ exports[`OuiInMemoryTable with pagination and default page size and index 1`] = 
   noItemsMessage="No items found"
   onChange={[Function]}
   pagination={
-    Object {
+    {
       "hidePerPageOptions": undefined,
       "pageIndex": 1,
       "pageSize": 2,
-      "pageSizeOptions": Array [
+      "pageSizeOptions": [
         1,
         2,
         3,
@@ -1687,8 +1687,8 @@ exports[`OuiInMemoryTable with pagination and selection 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1698,16 +1698,16 @@ exports[`OuiInMemoryTable with pagination and selection 1`] = `
   data-test-subj="test subject string"
   itemId="id"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
@@ -1716,11 +1716,11 @@ exports[`OuiInMemoryTable with pagination and selection 1`] = `
   noItemsMessage="No items found"
   onChange={[Function]}
   pagination={
-    Object {
+    {
       "hidePerPageOptions": undefined,
       "pageIndex": 0,
       "pageSize": 10,
-      "pageSizeOptions": Array [
+      "pageSizeOptions": [
         10,
         25,
         50,
@@ -1730,7 +1730,7 @@ exports[`OuiInMemoryTable with pagination and selection 1`] = `
   }
   responsive={true}
   selection={
-    Object {
+    {
       "onSelectionChange": [Function],
     }
   }
@@ -1743,8 +1743,8 @@ exports[`OuiInMemoryTable with pagination, default page size and error 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1754,8 +1754,8 @@ exports[`OuiInMemoryTable with pagination, default page size and error 1`] = `
   data-test-subj="test subject string"
   error="ouch!"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
@@ -1764,11 +1764,11 @@ exports[`OuiInMemoryTable with pagination, default page size and error 1`] = `
   noItemsMessage="No items found"
   onChange={[Function]}
   pagination={
-    Object {
+    {
       "hidePerPageOptions": undefined,
       "pageIndex": 0,
       "pageSize": 4,
-      "pageSizeOptions": Array [
+      "pageSizeOptions": [
         2,
         4,
         6,
@@ -1786,8 +1786,8 @@ exports[`OuiInMemoryTable with pagination, hiding the per page options 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1796,16 +1796,16 @@ exports[`OuiInMemoryTable with pagination, hiding the per page options 1`] = `
   }
   data-test-subj="test subject string"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
@@ -1814,11 +1814,11 @@ exports[`OuiInMemoryTable with pagination, hiding the per page options 1`] = `
   noItemsMessage="No items found"
   onChange={[Function]}
   pagination={
-    Object {
+    {
       "hidePerPageOptions": true,
       "pageIndex": 0,
       "pageSize": 10,
-      "pageSizeOptions": Array [
+      "pageSizeOptions": [
         10,
         25,
         50,
@@ -1836,8 +1836,8 @@ exports[`OuiInMemoryTable with pagination, selection and sorting 1`] = `
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -1848,16 +1848,16 @@ exports[`OuiInMemoryTable with pagination, selection and sorting 1`] = `
   data-test-subj="test subject string"
   itemId="id"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
@@ -1866,11 +1866,11 @@ exports[`OuiInMemoryTable with pagination, selection and sorting 1`] = `
   noItemsMessage="No items found"
   onChange={[Function]}
   pagination={
-    Object {
+    {
       "hidePerPageOptions": undefined,
       "pageIndex": 0,
       "pageSize": 10,
-      "pageSizeOptions": Array [
+      "pageSizeOptions": [
         10,
         25,
         50,
@@ -1880,12 +1880,12 @@ exports[`OuiInMemoryTable with pagination, selection and sorting 1`] = `
   }
   responsive={true}
   selection={
-    Object {
+    {
       "onSelectionChange": [Function],
     }
   }
   sorting={
-    Object {
+    {
       "allowNeutralSort": true,
       "sort": undefined,
     }
@@ -1906,16 +1906,16 @@ exports[`OuiInMemoryTable with pagination, selection, sorting  and simple search
     aria-label="aria-label"
     className="testClass1 testClass2"
     columns={
-      Array [
-        Object {
+      [
+        {
           "description": "description",
           "field": "name",
           "name": "Name",
           "sortable": true,
         },
-        Object {
-          "actions": Array [
-            Object {
+        {
+          "actions": [
+            {
               "description": "edit",
               "name": "Edit",
               "onClick": [Function],
@@ -1928,16 +1928,16 @@ exports[`OuiInMemoryTable with pagination, selection, sorting  and simple search
     data-test-subj="test subject string"
     itemId="id"
     items={
-      Array [
-        Object {
+      [
+        {
           "id": "1",
           "name": "name1",
         },
-        Object {
+        {
           "id": "2",
           "name": "name2",
         },
-        Object {
+        {
           "id": "3",
           "name": "name3",
         },
@@ -1946,11 +1946,11 @@ exports[`OuiInMemoryTable with pagination, selection, sorting  and simple search
     noItemsMessage="No items found"
     onChange={[Function]}
     pagination={
-      Object {
+      {
         "hidePerPageOptions": undefined,
         "pageIndex": 0,
         "pageSize": 10,
-        "pageSizeOptions": Array [
+        "pageSizeOptions": [
           10,
           25,
           50,
@@ -1960,12 +1960,12 @@ exports[`OuiInMemoryTable with pagination, selection, sorting  and simple search
     }
     responsive={true}
     selection={
-      Object {
+      {
         "onSelectionChange": [Function],
       }
     }
     sorting={
-      Object {
+      {
         "allowNeutralSort": true,
         "sort": undefined,
       }
@@ -1980,16 +1980,16 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and a single recor
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
         "sortable": true,
       },
-      Object {
-        "actions": Array [
-          Object {
+      {
+        "actions": [
+          {
             "description": "edit",
             "name": "Edit",
             "onClick": [Function],
@@ -2002,16 +2002,16 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and a single recor
   data-test-subj="test subject string"
   itemId="id"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
-      Object {
+      {
         "id": "3",
         "name": "name3",
       },
@@ -2020,11 +2020,11 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and a single recor
   noItemsMessage="No items found"
   onChange={[Function]}
   pagination={
-    Object {
+    {
       "hidePerPageOptions": undefined,
       "pageIndex": 0,
       "pageSize": 10,
-      "pageSizeOptions": Array [
+      "pageSizeOptions": [
         10,
         25,
         50,
@@ -2034,12 +2034,12 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and a single recor
   }
   responsive={true}
   selection={
-    Object {
+    {
       "onSelectionChange": [Function],
     }
   }
   sorting={
-    Object {
+    {
       "allowNeutralSort": true,
       "sort": undefined,
     }
@@ -2053,8 +2053,8 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and column rendere
   aria-label="aria-label"
   className="testClass1 testClass2"
   columns={
-    Array [
-      Object {
+    [
+      {
         "description": "description",
         "field": "name",
         "name": "Name",
@@ -2066,12 +2066,12 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and column rendere
   data-test-subj="test subject string"
   itemId="id"
   items={
-    Array [
-      Object {
+    [
+      {
         "id": "1",
         "name": "name1",
       },
-      Object {
+      {
         "id": "2",
         "name": "name2",
       },
@@ -2080,11 +2080,11 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and column rendere
   noItemsMessage="No items found"
   onChange={[Function]}
   pagination={
-    Object {
+    {
       "hidePerPageOptions": undefined,
       "pageIndex": 0,
       "pageSize": 2,
-      "pageSizeOptions": Array [
+      "pageSizeOptions": [
         2,
         4,
         6,
@@ -2094,12 +2094,12 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and column rendere
   }
   responsive={true}
   selection={
-    Object {
+    {
       "onSelectionChange": [Function],
     }
   }
   sorting={
-    Object {
+    {
       "allowNeutralSort": true,
       "sort": undefined,
     }
@@ -2112,14 +2112,14 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and configured sea
 <div>
   <OuiSearchBar
     box={
-      Object {
+      {
         "incremental": true,
       }
     }
     defaultQuery="name:name1"
     filters={
-      Array [
-        Object {
+      [
+        {
           "field": "name",
           "name": "Name1",
           "negatedName": "Not Name1",
@@ -2137,16 +2137,16 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and configured sea
     aria-label="aria-label"
     className="testClass1 testClass2"
     columns={
-      Array [
-        Object {
+      [
+        {
           "description": "description",
           "field": "name",
           "name": "Name",
           "sortable": true,
         },
-        Object {
-          "actions": Array [
-            Object {
+        {
+          "actions": [
+            {
               "description": "edit",
               "name": "Edit",
               "onClick": [Function],
@@ -2159,8 +2159,8 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and configured sea
     data-test-subj="test subject string"
     itemId="id"
     items={
-      Array [
-        Object {
+      [
+        {
           "id": "1",
           "name": "name1",
         },
@@ -2169,11 +2169,11 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and configured sea
     noItemsMessage="No items found"
     onChange={[Function]}
     pagination={
-      Object {
+      {
         "hidePerPageOptions": undefined,
         "pageIndex": 0,
         "pageSize": 10,
-        "pageSizeOptions": Array [
+        "pageSizeOptions": [
           10,
           25,
           50,
@@ -2183,12 +2183,12 @@ exports[`OuiInMemoryTable with pagination, selection, sorting and configured sea
     }
     responsive={true}
     selection={
-      Object {
+      {
         "onSelectionChange": [Function],
       }
     }
     sorting={
-      Object {
+      {
         "allowNeutralSort": true,
         "sort": undefined,
       }
@@ -2213,16 +2213,16 @@ exports[`OuiInMemoryTable with search and component between search and table 1`]
     aria-label="aria-label"
     className="testClass1 testClass2"
     columns={
-      Array [
-        Object {
+      [
+        {
           "description": "description",
           "field": "name",
           "name": "Name",
           "sortable": true,
         },
-        Object {
-          "actions": Array [
-            Object {
+        {
+          "actions": [
+            {
               "description": "edit",
               "name": "Edit",
               "onClick": [Function],
@@ -2235,16 +2235,16 @@ exports[`OuiInMemoryTable with search and component between search and table 1`]
     data-test-subj="test subject string"
     itemId="id"
     items={
-      Array [
-        Object {
+      [
+        {
           "id": "1",
           "name": "name1",
         },
-        Object {
+        {
           "id": "2",
           "name": "name2",
         },
-        Object {
+        {
           "id": "3",
           "name": "name3",
         },

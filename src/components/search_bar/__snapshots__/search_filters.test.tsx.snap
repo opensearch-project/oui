@@ -6,7 +6,7 @@ exports[`OuiSearchFilters render - with filters 1`] = `
 <OuiFilterGroup>
   <IsFilter
     config={
-      Object {
+      {
         "field": "open",
         "name": "Open",
         "type": "is",
@@ -17,15 +17,15 @@ exports[`OuiSearchFilters render - with filters 1`] = `
     query={
       Query {
         "ast": _AST {
-          "_clauses": Array [],
-          "_indexedClauses": Object {
-            "field": Object {},
-            "group": Array [],
-            "is": Object {},
-            "term": Array [],
+          "_clauses": [],
+          "_indexedClauses": {
+            "field": {},
+            "group": [],
+            "is": {},
+            "term": [],
           },
         },
-        "syntax": Object {
+        "syntax": {
           "parse": [Function],
           "print": [Function],
           "printClause": [Function],
@@ -36,7 +36,7 @@ exports[`OuiSearchFilters render - with filters 1`] = `
   />
   <FieldValueSelectionFilter
     config={
-      Object {
+      {
         "field": "tag",
         "name": "Tag",
         "options": [Function],
@@ -48,15 +48,15 @@ exports[`OuiSearchFilters render - with filters 1`] = `
     query={
       Query {
         "ast": _AST {
-          "_clauses": Array [],
-          "_indexedClauses": Object {
-            "field": Object {},
-            "group": Array [],
-            "is": Object {},
-            "term": Array [],
+          "_clauses": [],
+          "_indexedClauses": {
+            "field": {},
+            "group": [],
+            "is": {},
+            "term": [],
           },
         },
-        "syntax": Object {
+        "syntax": {
           "parse": [Function],
           "print": [Function],
           "printClause": [Function],

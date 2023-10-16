@@ -2,9 +2,9 @@
 
 exports[`OuiCodeBlock dynamic content updates DOM when input changes 1`] = `
 "<div>
-  <div class=\\"ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-javascript\\">
-    <pre class=\\"ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap\\" tabindex=\\"-1\\">
-      <code class=\\"ouiCodeBlock__code javascript\\">const value = 'State 1'</code>
+  <div class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-javascript">
+    <pre class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap" tabindex="-1">
+      <code class="ouiCodeBlock__code javascript">const value = 'State 1'</code>
     </pre>
   </div>
 </div>"
@@ -12,9 +12,9 @@ exports[`OuiCodeBlock dynamic content updates DOM when input changes 1`] = `
 
 exports[`OuiCodeBlock dynamic content updates DOM when input changes 2`] = `
 "<div>
-  <div class=\\"ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-javascript\\">
-    <pre class=\\"ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap\\" tabindex=\\"-1\\">
-      <code class=\\"ouiCodeBlock__code javascript\\">const value = 'State 2'</code>
+  <div class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-javascript">
+    <pre class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap" tabindex="-1">
+      <code class="ouiCodeBlock__code javascript">const value = 'State 2'</code>
     </pre>
   </div>
 </div>"
@@ -84,11 +84,11 @@ exports[`OuiCodeBlock props isCopyable is rendered 1`] = `
   >
     <div
       className="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--hasControls prismjs language-none"
-      style={Object {}}
+      style={{}}
     >
       <pre
         className="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-        style={Object {}}
+        style={{}}
         tabIndex={-1}
       >
         <code

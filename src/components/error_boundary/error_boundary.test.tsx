@@ -58,7 +58,8 @@ describe('OuiErrorBoundary', () => {
 
   test('is rendered with an error', () => {
     // Prevent the React boundary error from appearing in the terminal.
-    spyOn(console, 'error'); // eslint-disable-line no-undef
+    const consoleError = console.error;
+    console.error = jest.fn();
 
     // Because the error contains the stack trace, it's non-deterministic. So we'll just check that
     // it contains our error message.
@@ -69,5 +70,7 @@ describe('OuiErrorBoundary', () => {
     ).text();
 
     expect(errorText).toContain(errorMessage);
+
+    console.error = consoleError;
   });
 });

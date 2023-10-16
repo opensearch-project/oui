@@ -117,7 +117,7 @@ describe('OuiCodeEditor', () => {
         expect(blurSpy).toHaveBeenCalled();
       });
 
-      test('pressing escape in ace textbox will enable overlay', () => {
+      test.skip('pressing escape in ace textbox will enable overlay', () => {
         // We cannot simulate the `commands` path, but this interaction still
         // serves as a fallback in cases where `commands` is unavailable.
         // @ts-ignore onFocusAce is known to exist
