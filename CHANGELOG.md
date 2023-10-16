@@ -74,7 +74,8 @@
 - Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
 
 ### 🛠 Maintenance
-- Made changes to ```pre-commit``` hook to only use ```yarn lint``` instead of running ```test-staged``` script ([#1072](https://github.com/opensearch-project/oui/pull/1072))
+
+- Made changes to `pre-commit` hook to only use `lint` instead of running `test-staged` script ([#1072](https://github.com/opensearch-project/oui/pull/1072))
 - [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
 - [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
