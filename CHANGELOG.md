@@ -31,6 +31,7 @@
 - Remove "Widths" section from the OuiModal docs ([#1066](https://github.com/opensearch-project/oui/pull/1066))
 
 ### 🛠 Maintenance
+- Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
 
 - Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
