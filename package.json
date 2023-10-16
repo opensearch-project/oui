@@ -69,9 +69,11 @@
     "jest/**/tough-cookie": "^4.1.3",
     "postcss-cli/chokidar/glob-parent": "^6.0.1",
     "postcss-inline-svg/css-select/nth-check": "^2.0.1",
-    "react-view/**/ansi-regex": "^5.0.1",
     "react-view/**/minimist": "^1.2.6",
+    "react-view/@miksu/prettier/angular-estree-parser/@angular/compiler": "^7.0.0",
     "react-view/@miksu/prettier/minimatch": "^3.0.8",
+    "react-view/@miksu/prettier/remark-math/remark-parse": "^5.0.0",
+    "react-view/@miksu/prettier/yaml-unist-parser/yaml": "^1.0.2",
     "remark-parse/trim": "0.0.3",
     "sass-lint-auto-fix/**/minimist": "^1.2.6",
     "sass-lint-auto-fix/merge": "^2.1.1",
@@ -84,10 +86,10 @@
     "webpack-dev-server/chokidar/glob-parent": "^6.0.1",
     "webpack-dev-server/selfsigned": "^2.0.1",
     "webpack/**/chokidar/glob-parent": "^6.0.1",
-    "webpack/terser-webpack-plugin/serialize-javascript": "^3.1.0",
     "yo/**/find-versions": "^4.0.0",
     "yo/**/got": "^11.8.5",
-    "yo/meow": "^9.0.0"
+    "yo/meow": "^9.0.0",
+    "yo/yeoman-environment/mem-fs": "^2.0.0"
   },
   "pre-commit": [
     "test-staged"
@@ -228,7 +230,7 @@
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4",
     "react-router-redux": "^4.0.8",
-    "react-view": "^2.3.2",
+    "react-view": "^2.3.7",
     "redux": "^4.2.1",
     "redux-thunk": "^2.4.2",
     "resolve": "^1.22.1",
