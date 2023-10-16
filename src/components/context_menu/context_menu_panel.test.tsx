@@ -39,7 +39,6 @@ import { OuiContextMenuItem } from './context_menu_item';
 import { tick } from './context_menu.test';
 
 import { keys } from '../../services';
-import { OuiHeaderSectionItemButton } from '../header';
 
 const items = [
   <OuiContextMenuItem key="A" data-test-subj="itemA">
