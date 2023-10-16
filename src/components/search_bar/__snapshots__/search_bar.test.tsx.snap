@@ -69,13 +69,13 @@ exports[`SearchBar render - provided query, filters 1`] = `
   >
     <OuiSearchFilters
       filters={
-        Array [
-          Object {
+        [
+          {
             "field": "open",
             "name": "Open",
             "type": "is",
           },
-          Object {
+          {
             "field": "tag",
             "name": "Tag",
             "options": [Function],
@@ -87,49 +87,49 @@ exports[`SearchBar render - provided query, filters 1`] = `
       query={
         Query {
           "ast": _AST {
-            "_clauses": Array [
-              Object {
+            "_clauses": [
+              {
                 "match": "must",
                 "type": "term",
                 "value": "this",
               },
-              Object {
+              {
                 "match": "must",
                 "type": "term",
                 "value": "is",
               },
-              Object {
+              {
                 "match": "must",
                 "type": "term",
                 "value": "a",
               },
-              Object {
+              {
                 "match": "must",
                 "type": "term",
                 "value": "query",
               },
             ],
-            "_indexedClauses": Object {
-              "field": Object {},
-              "group": Array [],
-              "is": Object {},
-              "term": Array [
-                Object {
+            "_indexedClauses": {
+              "field": {},
+              "group": [],
+              "is": {},
+              "term": [
+                {
                   "match": "must",
                   "type": "term",
                   "value": "this",
                 },
-                Object {
+                {
                   "match": "must",
                   "type": "term",
                   "value": "is",
                 },
-                Object {
+                {
                   "match": "must",
                   "type": "term",
                   "value": "a",
                 },
-                Object {
+                {
                   "match": "must",
                   "type": "term",
                   "value": "query",
@@ -137,7 +137,7 @@ exports[`SearchBar render - provided query, filters 1`] = `
               ],
             },
           },
-          "syntax": Object {
+          "syntax": {
             "parse": [Function],
             "print": [Function],
             "printClause": [Function],

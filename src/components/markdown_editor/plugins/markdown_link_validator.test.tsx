@@ -75,7 +75,7 @@ describe('mutateLinkToText', () => {
         children: [{ value: 'Cats' }],
       })
     ).toMatchInlineSnapshot(`
-      Object {
+      {
         "type": "text",
         "value": "[Cats](https://cats.com)",
       }
@@ -88,7 +88,7 @@ describe('mutateLinkToText', () => {
         children: [],
       })
     ).toMatchInlineSnapshot(`
-      Object {
+      {
         "type": "text",
         "value": "[](https://cats.com)",
       }

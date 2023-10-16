@@ -4,7 +4,7 @@ exports[`ExpandedItemActions render 1`] = `
 <Fragment>
   <DefaultItemAction
     action={
-      Object {
+      {
         "description": "default 1",
         "name": "default1",
         "onClick": [Function],
@@ -13,7 +13,7 @@ exports[`ExpandedItemActions render 1`] = `
     className=""
     enabled={true}
     item={
-      Object {
+      {
         "id": "xyz",
       }
     }
@@ -21,7 +21,7 @@ exports[`ExpandedItemActions render 1`] = `
   />
   <CustomItemAction
     action={
-      Object {
+      {
         "description": "custom 1",
         "name": "custom1",
         "render": [Function],
@@ -31,7 +31,7 @@ exports[`ExpandedItemActions render 1`] = `
     enabled={true}
     index={1}
     item={
-      Object {
+      {
         "id": "xyz",
       }
     }

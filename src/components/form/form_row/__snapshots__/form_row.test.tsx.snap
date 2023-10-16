@@ -2,7 +2,7 @@
 
 exports[`OuiFormRow behavior onBlur is called in child 1`] = `
 <OuiFormRow
-  describedByIds={Array []}
+  describedByIds={[]}
   display="row"
   fullWidth={false}
   hasChildLabel={true}
@@ -52,7 +52,7 @@ exports[`OuiFormRow behavior onBlur is called in child 1`] = `
 
 exports[`OuiFormRow behavior onBlur works in parent even if not in child 1`] = `
 <OuiFormRow
-  describedByIds={Array []}
+  describedByIds={[]}
   display="row"
   fullWidth={false}
   hasChildLabel={true}
@@ -102,7 +102,7 @@ exports[`OuiFormRow behavior onBlur works in parent even if not in child 1`] = `
 
 exports[`OuiFormRow behavior onFocus is called in child 1`] = `
 <OuiFormRow
-  describedByIds={Array []}
+  describedByIds={[]}
   display="row"
   fullWidth={false}
   hasChildLabel={true}
@@ -152,7 +152,7 @@ exports[`OuiFormRow behavior onFocus is called in child 1`] = `
 
 exports[`OuiFormRow behavior onFocus works in parent even if not in child 1`] = `
 <OuiFormRow
-  describedByIds={Array []}
+  describedByIds={[]}
   display="row"
   fullWidth={false}
   hasChildLabel={true}

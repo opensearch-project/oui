@@ -131,7 +131,7 @@ describe('OuiSelect', () => {
           disabled={true}
           hidden={true}
           style={
-            Object {
+            {
               "display": "none",
             }
           }
@@ -139,7 +139,7 @@ describe('OuiSelect', () => {
         >
            
         </option>
-`);
+      `);
     });
 
     it('can be reset to an empty initial selection', () => {

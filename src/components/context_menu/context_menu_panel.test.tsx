@@ -39,6 +39,7 @@ import { OuiContextMenuItem } from './context_menu_item';
 import { tick } from './context_menu.test';
 
 import { keys } from '../../services';
+import { OuiHeaderSectionItemButton } from '../header';
 
 const items = [
   <OuiContextMenuItem key="A" data-test-subj="itemA">
@@ -189,22 +190,31 @@ describe('OuiContextMenuPanel', () => {
         const component = mount(
           <OuiContextMenuPanel items={items} initialFocusedItemIndex={1} />
         );
+        const itemB = findTestSubject(
+          component,
+          'itemB'
+        ).getDOMNode() as HTMLElement;
+
+        jest.spyOn(itemB, 'focus');
+        expect(itemB.focus).not.toHaveBeenCalled();
 
         await tick(20);
 
-        expect(findTestSubject(component, 'itemB').getDOMNode()).toBe(
-          document.activeElement
-        );
+        expect(itemB.focus).toHaveBeenCalledTimes(1);
       });
 
       it('sets focus on the panel when set to `-1`', async () => {
         const component = mount(
           <OuiContextMenuPanel items={items} initialFocusedItemIndex={-1} />
         );
+        const element = component.getDOMNode() as HTMLElement;
+
+        jest.spyOn(element, 'focus');
+        expect(element.focus).not.toHaveBeenCalled();
 
         await tick(20);
 
-        expect(component.getDOMNode()).toBe(document.activeElement);
+        expect(element.focus).toHaveBeenCalledTimes(1);
       });
     });
 
@@ -309,24 +319,37 @@ describe('OuiContextMenuPanel', () => {
             <button data-test-subj="button" />
           </OuiContextMenuPanel>
         );
+        const button = findTestSubject(
+          component,
+          'button'
+        ).getDOMNode() as HTMLButtonElement;
+
+        jest.spyOn(button, 'focus');
+        expect(button.focus).not.toHaveBeenCalled();
 
         await tick(20);
 
-        expect(findTestSubject(component, 'button').getDOMNode()).toBe(
-          document.activeElement
-        );
+        expect(button.focus).toHaveBeenCalledTimes(1);
       });
 
-      it('is not set on anything if hasFocus is false', () => {
+      it('is not set on anything if hasFocus is false', async () => {
         const component = mount(
           <OuiContextMenuPanel hasFocus={false}>
             <button data-test-subj="button" />
           </OuiContextMenuPanel>
         );
 
-        expect(findTestSubject(component, 'button').getDOMNode()).not.toBe(
-          document.activeElement
-        );
+        const button = findTestSubject(
+          component,
+          'button'
+        ).getDOMNode() as HTMLButtonElement;
+
+        jest.spyOn(button, 'focus');
+        expect(button.focus).not.toHaveBeenCalled();
+
+        await tick(20);
+
+        expect(button.focus).not.toHaveBeenCalled();
       });
     });
 
@@ -334,6 +357,9 @@ describe('OuiContextMenuPanel', () => {
       let component: ReactWrapper;
       let showNextPanelHandler: jest.Mock;
       let showPreviousPanelHandler: jest.Mock;
+      let itemA: HTMLElement;
+      let itemB: HTMLElement;
+      let itemC: HTMLElement;
 
       beforeEach(() => {
         showNextPanelHandler = jest.fn();
@@ -346,70 +372,84 @@ describe('OuiContextMenuPanel', () => {
             showPreviousPanel={showPreviousPanelHandler}
           />
         );
+        itemA = findTestSubject(component, 'itemA').getDOMNode() as HTMLElement;
+        jest.spyOn(itemA, 'focus');
+        itemB = findTestSubject(component, 'itemB').getDOMNode() as HTMLElement;
+        jest.spyOn(itemB, 'focus');
+        itemC = findTestSubject(component, 'itemC').getDOMNode() as HTMLElement;
+        jest.spyOn(itemC, 'focus');
       });
 
       it('focuses the panel by default', async () => {
+        const element = component.getDOMNode() as HTMLElement;
+        jest.spyOn(element, 'focus');
+
+        expect(element.focus).not.toHaveBeenCalled();
+
         await tick(20);
 
-        expect(component.getDOMNode()).toBe(document.activeElement);
+        expect(element.focus).toHaveBeenCalledTimes(1);
       });
 
       it('down arrow key focuses the first menu item', async () => {
+        expect(itemA.focus).not.toHaveBeenCalled();
+
         component.simulate('keydown', { key: keys.ARROW_DOWN });
 
         await tick(20);
-        expect(findTestSubject(component, 'itemA').getDOMNode()).toBe(
-          document.activeElement
-        );
+
+        expect(itemA.focus).toHaveBeenCalled();
       });
 
       it('subsequently, down arrow key focuses the next menu item', async () => {
+        expect(itemB.focus).not.toHaveBeenCalled();
         component.simulate('keydown', { key: keys.ARROW_DOWN });
         component.simulate('keydown', { key: keys.ARROW_DOWN });
 
         await tick(20);
-        expect(findTestSubject(component, 'itemB').getDOMNode()).toBe(
-          document.activeElement
-        );
+
+        expect(itemB.focus).toHaveBeenCalled();
       });
 
       it('down arrow key wraps to first menu item', async () => {
+        expect(itemA.focus).not.toHaveBeenCalled();
+
         component.simulate('keydown', { key: keys.ARROW_UP });
         component.simulate('keydown', { key: keys.ARROW_DOWN });
 
         await tick(20);
-        expect(findTestSubject(component, 'itemA').getDOMNode()).toBe(
-          document.activeElement
-        );
+        expect(itemA.focus).toHaveBeenCalled();
       });
 
       it('up arrow key focuses the last menu item', async () => {
+        expect(itemC.focus).not.toHaveBeenCalled();
         component.simulate('keydown', { key: keys.ARROW_UP });
 
         await tick(20);
-        expect(findTestSubject(component, 'itemC').getDOMNode()).toBe(
-          document.activeElement
-        );
+
+        expect(itemC.focus).toHaveBeenCalled();
       });
 
       it('subsequently, up arrow key focuses the previous menu item', async () => {
+        expect(itemB.focus).not.toHaveBeenCalled();
+
         component.simulate('keydown', { key: keys.ARROW_UP });
         component.simulate('keydown', { key: keys.ARROW_UP });
 
         await tick(20);
-        expect(findTestSubject(component, 'itemB').getDOMNode()).toBe(
-          document.activeElement
-        );
+
+        expect(itemB.focus).toHaveBeenCalled();
       });
 
       it('up arrow key wraps to last menu item', async () => {
+        expect(itemB.focus).not.toHaveBeenCalled();
+
         component.simulate('keydown', { key: keys.ARROW_DOWN });
         component.simulate('keydown', { key: keys.ARROW_UP });
 
         await tick(20);
-        expect(findTestSubject(component, 'itemC').getDOMNode()).toBe(
-          document.activeElement
-        );
+
+        expect(itemC.focus).toHaveBeenCalled();
       });
 
       it("right arrow key shows next panel with focused item's index", () => {

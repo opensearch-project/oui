@@ -90,13 +90,13 @@ exports[`OuiControlBar is rendered 1`] = `
 exports[`OuiControlBar props leftOffset is rendered 1`] = `
 <OuiControlBar
   controls={
-    Array [
-      Object {
-        "breadcrumbs": Array [
-          Object {
+    [
+      {
+        "breadcrumbs": [
+          {
             "text": "src",
           },
-          Object {
+          {
             "text": "components",
           },
         ],
@@ -104,32 +104,32 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
         "id": "current_file_path",
         "responsive": false,
       },
-      Object {
+      {
         "controlType": "button",
         "data-test-subj": "dts",
         "id": "sound_the_alarm",
         "label": "Sound the Alarm",
         "onClick": [Function],
       },
-      Object {
+      {
         "controlType": "text",
         "id": "close_the_hatch",
         "text": "Close the Hatch",
       },
-      Object {
+      {
         "controlType": "divider",
       },
-      Object {
+      {
         "aria-label": "Sample Icon",
         "color": "danger",
         "controlType": "icon",
         "iconType": "alert",
         "id": "sample_icon",
       },
-      Object {
+      {
         "controlType": "spacer",
       },
-      Object {
+      {
         "controlType": "tab",
         "id": "flight_815",
         "label": "Flight 815",
@@ -248,7 +248,7 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
           aria-label="Page level controls"
           className="ouiControlBar ouiControlBar--large ouiControlBar--fixed"
           style={
-            Object {
+            {
               "left": 200,
               "maxHeight": undefined,
               "right": 0,
@@ -267,11 +267,11 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
           >
             <OuiBreadcrumbs
               breadcrumbs={
-                Array [
-                  Object {
+                [
+                  {
                     "text": "src",
                   },
-                  Object {
+                  {
                     "text": "components",
                   },
                 ]
@@ -342,7 +342,7 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                   disabled={false}
                   onClick={[Function]}
                   style={
-                    Object {
+                    {
                       "minWidth": undefined,
                     }
                   }
@@ -352,7 +352,7 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                     className="ouiButton__content"
                     iconSide="left"
                     textProps={
-                      Object {
+                      {
                         "className": "ouiButton__text",
                       }
                     }
@@ -429,13 +429,13 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
 exports[`OuiControlBar props maxHeight is rendered 1`] = `
 <OuiControlBar
   controls={
-    Array [
-      Object {
-        "breadcrumbs": Array [
-          Object {
+    [
+      {
+        "breadcrumbs": [
+          {
             "text": "src",
           },
-          Object {
+          {
             "text": "components",
           },
         ],
@@ -443,32 +443,32 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
         "id": "current_file_path",
         "responsive": false,
       },
-      Object {
+      {
         "controlType": "button",
         "data-test-subj": "dts",
         "id": "sound_the_alarm",
         "label": "Sound the Alarm",
         "onClick": [Function],
       },
-      Object {
+      {
         "controlType": "text",
         "id": "close_the_hatch",
         "text": "Close the Hatch",
       },
-      Object {
+      {
         "controlType": "divider",
       },
-      Object {
+      {
         "aria-label": "Sample Icon",
         "color": "danger",
         "controlType": "icon",
         "iconType": "alert",
         "id": "sample_icon",
       },
-      Object {
+      {
         "controlType": "spacer",
       },
-      Object {
+      {
         "controlType": "tab",
         "id": "flight_815",
         "label": "Flight 815",
@@ -588,7 +588,7 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
           aria-label="Page level controls"
           className="ouiControlBar ouiControlBar--large ouiControlBar--fixed"
           style={
-            Object {
+            {
               "left": 0,
               "maxHeight": "20rem",
               "right": 0,
@@ -607,11 +607,11 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
           >
             <OuiBreadcrumbs
               breadcrumbs={
-                Array [
-                  Object {
+                [
+                  {
                     "text": "src",
                   },
-                  Object {
+                  {
                     "text": "components",
                   },
                 ]
@@ -682,7 +682,7 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                   disabled={false}
                   onClick={[Function]}
                   style={
-                    Object {
+                    {
                       "minWidth": undefined,
                     }
                   }
@@ -692,7 +692,7 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                     className="ouiButton__content"
                     iconSide="left"
                     textProps={
-                      Object {
+                      {
                         "className": "ouiButton__text",
                       }
                     }
@@ -769,13 +769,13 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
 exports[`OuiControlBar props mobile is rendered 1`] = `
 <OuiControlBar
   controls={
-    Array [
-      Object {
-        "breadcrumbs": Array [
-          Object {
+    [
+      {
+        "breadcrumbs": [
+          {
             "text": "src",
           },
-          Object {
+          {
             "text": "components",
           },
         ],
@@ -783,32 +783,32 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
         "id": "current_file_path",
         "responsive": false,
       },
-      Object {
+      {
         "controlType": "button",
         "data-test-subj": "dts",
         "id": "sound_the_alarm",
         "label": "Sound the Alarm",
         "onClick": [Function],
       },
-      Object {
+      {
         "controlType": "text",
         "id": "close_the_hatch",
         "text": "Close the Hatch",
       },
-      Object {
+      {
         "controlType": "divider",
       },
-      Object {
+      {
         "aria-label": "Sample Icon",
         "color": "danger",
         "controlType": "icon",
         "iconType": "alert",
         "id": "sample_icon",
       },
-      Object {
+      {
         "controlType": "spacer",
       },
-      Object {
+      {
         "controlType": "tab",
         "id": "flight_815",
         "label": "Flight 815",
@@ -927,7 +927,7 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
           aria-label="Page level controls"
           className="ouiControlBar ouiControlBar--large ouiControlBar--fixed ouiControlBar--showOnMobile"
           style={
-            Object {
+            {
               "left": 0,
               "maxHeight": undefined,
               "right": 0,
@@ -946,11 +946,11 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
           >
             <OuiBreadcrumbs
               breadcrumbs={
-                Array [
-                  Object {
+                [
+                  {
                     "text": "src",
                   },
-                  Object {
+                  {
                     "text": "components",
                   },
                 ]
@@ -1021,7 +1021,7 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                   disabled={false}
                   onClick={[Function]}
                   style={
-                    Object {
+                    {
                       "minWidth": undefined,
                     }
                   }
@@ -1031,7 +1031,7 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                     className="ouiButton__content"
                     iconSide="left"
                     textProps={
-                      Object {
+                      {
                         "className": "ouiButton__text",
                       }
                     }
@@ -1108,13 +1108,13 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
 exports[`OuiControlBar props position is rendered 1`] = `
 <OuiControlBar
   controls={
-    Array [
-      Object {
-        "breadcrumbs": Array [
-          Object {
+    [
+      {
+        "breadcrumbs": [
+          {
             "text": "src",
           },
-          Object {
+          {
             "text": "components",
           },
         ],
@@ -1122,32 +1122,32 @@ exports[`OuiControlBar props position is rendered 1`] = `
         "id": "current_file_path",
         "responsive": false,
       },
-      Object {
+      {
         "controlType": "button",
         "data-test-subj": "dts",
         "id": "sound_the_alarm",
         "label": "Sound the Alarm",
         "onClick": [Function],
       },
-      Object {
+      {
         "controlType": "text",
         "id": "close_the_hatch",
         "text": "Close the Hatch",
       },
-      Object {
+      {
         "controlType": "divider",
       },
-      Object {
+      {
         "aria-label": "Sample Icon",
         "color": "danger",
         "controlType": "icon",
         "iconType": "alert",
         "id": "sample_icon",
       },
-      Object {
+      {
         "controlType": "spacer",
       },
-      Object {
+      {
         "controlType": "tab",
         "id": "flight_815",
         "label": "Flight 815",
@@ -1170,7 +1170,7 @@ exports[`OuiControlBar props position is rendered 1`] = `
       aria-label="Page level controls"
       className="ouiControlBar ouiControlBar--large ouiControlBar--absolute"
       style={
-        Object {
+        {
           "left": 0,
           "maxHeight": undefined,
           "right": 0,
@@ -1189,11 +1189,11 @@ exports[`OuiControlBar props position is rendered 1`] = `
       >
         <OuiBreadcrumbs
           breadcrumbs={
-            Array [
-              Object {
+            [
+              {
                 "text": "src",
               },
-              Object {
+              {
                 "text": "components",
               },
             ]
@@ -1264,7 +1264,7 @@ exports[`OuiControlBar props position is rendered 1`] = `
               disabled={false}
               onClick={[Function]}
               style={
-                Object {
+                {
                   "minWidth": undefined,
                 }
               }
@@ -1274,7 +1274,7 @@ exports[`OuiControlBar props position is rendered 1`] = `
                 className="ouiButton__content"
                 iconSide="left"
                 textProps={
-                  Object {
+                  {
                     "className": "ouiButton__text",
                   }
                 }
@@ -1336,13 +1336,13 @@ exports[`OuiControlBar props position is rendered 1`] = `
 exports[`OuiControlBar props rightOffset is rendered 1`] = `
 <OuiControlBar
   controls={
-    Array [
-      Object {
-        "breadcrumbs": Array [
-          Object {
+    [
+      {
+        "breadcrumbs": [
+          {
             "text": "src",
           },
-          Object {
+          {
             "text": "components",
           },
         ],
@@ -1350,32 +1350,32 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
         "id": "current_file_path",
         "responsive": false,
       },
-      Object {
+      {
         "controlType": "button",
         "data-test-subj": "dts",
         "id": "sound_the_alarm",
         "label": "Sound the Alarm",
         "onClick": [Function],
       },
-      Object {
+      {
         "controlType": "text",
         "id": "close_the_hatch",
         "text": "Close the Hatch",
       },
-      Object {
+      {
         "controlType": "divider",
       },
-      Object {
+      {
         "aria-label": "Sample Icon",
         "color": "danger",
         "controlType": "icon",
         "iconType": "alert",
         "id": "sample_icon",
       },
-      Object {
+      {
         "controlType": "spacer",
       },
-      Object {
+      {
         "controlType": "tab",
         "id": "flight_815",
         "label": "Flight 815",
@@ -1494,7 +1494,7 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
           aria-label="Page level controls"
           className="ouiControlBar ouiControlBar--large ouiControlBar--fixed"
           style={
-            Object {
+            {
               "left": 0,
               "maxHeight": undefined,
               "right": 200,
@@ -1513,11 +1513,11 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
           >
             <OuiBreadcrumbs
               breadcrumbs={
-                Array [
-                  Object {
+                [
+                  {
                     "text": "src",
                   },
-                  Object {
+                  {
                     "text": "components",
                   },
                 ]
@@ -1588,7 +1588,7 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                   disabled={false}
                   onClick={[Function]}
                   style={
-                    Object {
+                    {
                       "minWidth": undefined,
                     }
                   }
@@ -1598,7 +1598,7 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                     className="ouiButton__content"
                     iconSide="left"
                     textProps={
-                      Object {
+                      {
                         "className": "ouiButton__text",
                       }
                     }
@@ -1675,13 +1675,13 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
 exports[`OuiControlBar props showContent is rendered 1`] = `
 <OuiControlBar
   controls={
-    Array [
-      Object {
-        "breadcrumbs": Array [
-          Object {
+    [
+      {
+        "breadcrumbs": [
+          {
             "text": "src",
           },
-          Object {
+          {
             "text": "components",
           },
         ],
@@ -1689,32 +1689,32 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
         "id": "current_file_path",
         "responsive": false,
       },
-      Object {
+      {
         "controlType": "button",
         "data-test-subj": "dts",
         "id": "sound_the_alarm",
         "label": "Sound the Alarm",
         "onClick": [Function],
       },
-      Object {
+      {
         "controlType": "text",
         "id": "close_the_hatch",
         "text": "Close the Hatch",
       },
-      Object {
+      {
         "controlType": "divider",
       },
-      Object {
+      {
         "aria-label": "Sample Icon",
         "color": "danger",
         "controlType": "icon",
         "iconType": "alert",
         "id": "sample_icon",
       },
-      Object {
+      {
         "controlType": "spacer",
       },
-      Object {
+      {
         "controlType": "tab",
         "id": "flight_815",
         "label": "Flight 815",
@@ -1838,7 +1838,7 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
           aria-label="Page level controls"
           className="ouiControlBar ouiControlBar-isOpen ouiControlBar--large ouiControlBar--fixed"
           style={
-            Object {
+            {
               "left": 0,
               "maxHeight": undefined,
               "right": 0,
@@ -1857,11 +1857,11 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
           >
             <OuiBreadcrumbs
               breadcrumbs={
-                Array [
-                  Object {
+                [
+                  {
                     "text": "src",
                   },
-                  Object {
+                  {
                     "text": "components",
                   },
                 ]
@@ -1932,7 +1932,7 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                   disabled={false}
                   onClick={[Function]}
                   style={
-                    Object {
+                    {
                       "minWidth": undefined,
                     }
                   }
@@ -1942,7 +1942,7 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                     className="ouiButton__content"
                     iconSide="left"
                     textProps={
-                      Object {
+                      {
                         "className": "ouiButton__text",
                       }
                     }
@@ -2024,13 +2024,13 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
 exports[`OuiControlBar props size is rendered 1`] = `
 <OuiControlBar
   controls={
-    Array [
-      Object {
-        "breadcrumbs": Array [
-          Object {
+    [
+      {
+        "breadcrumbs": [
+          {
             "text": "src",
           },
-          Object {
+          {
             "text": "components",
           },
         ],
@@ -2038,32 +2038,32 @@ exports[`OuiControlBar props size is rendered 1`] = `
         "id": "current_file_path",
         "responsive": false,
       },
-      Object {
+      {
         "controlType": "button",
         "data-test-subj": "dts",
         "id": "sound_the_alarm",
         "label": "Sound the Alarm",
         "onClick": [Function],
       },
-      Object {
+      {
         "controlType": "text",
         "id": "close_the_hatch",
         "text": "Close the Hatch",
       },
-      Object {
+      {
         "controlType": "divider",
       },
-      Object {
+      {
         "aria-label": "Sample Icon",
         "color": "danger",
         "controlType": "icon",
         "iconType": "alert",
         "id": "sample_icon",
       },
-      Object {
+      {
         "controlType": "spacer",
       },
-      Object {
+      {
         "controlType": "tab",
         "id": "flight_815",
         "label": "Flight 815",
@@ -2182,7 +2182,7 @@ exports[`OuiControlBar props size is rendered 1`] = `
           aria-label="Page level controls"
           className="ouiControlBar ouiControlBar--small ouiControlBar--fixed"
           style={
-            Object {
+            {
               "left": 0,
               "maxHeight": undefined,
               "right": 0,
@@ -2201,11 +2201,11 @@ exports[`OuiControlBar props size is rendered 1`] = `
           >
             <OuiBreadcrumbs
               breadcrumbs={
-                Array [
-                  Object {
+                [
+                  {
                     "text": "src",
                   },
-                  Object {
+                  {
                     "text": "components",
                   },
                 ]
@@ -2276,7 +2276,7 @@ exports[`OuiControlBar props size is rendered 1`] = `
                   disabled={false}
                   onClick={[Function]}
                   style={
-                    Object {
+                    {
                       "minWidth": undefined,
                     }
                   }
@@ -2286,7 +2286,7 @@ exports[`OuiControlBar props size is rendered 1`] = `
                     className="ouiButton__content"
                     iconSide="left"
                     textProps={
-                      Object {
+                      {
                         "className": "ouiButton__text",
                       }
                     }

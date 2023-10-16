@@ -9,7 +9,7 @@ exports[`PaginationBar render - custom page size options 1`] = `
     activePage={0}
     itemsPerPage={5}
     itemsPerPageOptions={
-      Array [
+      [
         1,
         2,
         3,
@@ -32,7 +32,7 @@ exports[`PaginationBar render - hiding per page options 1`] = `
     hidePerPageOptions={true}
     itemsPerPage={5}
     itemsPerPageOptions={
-      Array [
+      [
         10,
         25,
         50,
@@ -54,7 +54,7 @@ exports[`PaginationBar render 1`] = `
     activePage={0}
     itemsPerPage={5}
     itemsPerPageOptions={
-      Array [
+      [
         10,
         25,
         50,

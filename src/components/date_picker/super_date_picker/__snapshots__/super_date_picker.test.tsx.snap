@@ -14,43 +14,43 @@ exports[`OuiSuperDatePicker is rendered 1`] = `
         <OuiQuickSelectPopover
           applyTime={[Function]}
           commonlyUsedRanges={
-            Array [
-              Object {
+            [
+              {
                 "end": "now/d",
                 "label": "Today",
                 "start": "now/d",
               },
-              Object {
+              {
                 "end": "now/w",
                 "label": "This week",
                 "start": "now/w",
               },
-              Object {
+              {
                 "end": "now/M",
                 "label": "This month",
                 "start": "now/M",
               },
-              Object {
+              {
                 "end": "now/y",
                 "label": "This year",
                 "start": "now/y",
               },
-              Object {
+              {
                 "end": "now-1d/d",
                 "label": "Yesterday",
                 "start": "now-1d/d",
               },
-              Object {
+              {
                 "end": "now",
                 "label": "Week to date",
                 "start": "now/w",
               },
-              Object {
+              {
                 "end": "now",
                 "label": "Month to date",
                 "start": "now/M",
               },
-              Object {
+              {
                 "end": "now",
                 "label": "Year to date",
                 "start": "now/y",
@@ -62,7 +62,7 @@ exports[`OuiSuperDatePicker is rendered 1`] = `
           isAutoRefreshOnly={false}
           isDisabled={false}
           isPaused={true}
-          recentlyUsedRanges={Array []}
+          recentlyUsedRanges={[]}
           refreshInterval={0}
           start="now-15m"
         />

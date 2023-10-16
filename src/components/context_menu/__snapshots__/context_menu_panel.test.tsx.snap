@@ -560,23 +560,23 @@ exports[`OuiContextMenuPanel props transitionDirection previous with transitionT
 
 exports[`OuiContextMenuPanel updating items and content updates to items should not re-render if any items's watchedItemProps did not change 1`] = `
 "<OuiContextMenuPanel items={{...}} hasFocus={true}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+  <div className="ouiContextMenuPanel" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
     <div>
       <OuiResizeObserver onResize={[Function: onResize]}>
         <div>
           <OuiContextMenuItem data-counter={0} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={0}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
+            <button disabled={false} className="ouiContextMenuItem" type="button" data-counter={0}>
+              <span className="ouiContextMenu__itemLayout">
+                <span className="ouiContextMenuItem__text">
                   Option A
                 </span>
               </span>
             </button>
           </OuiContextMenuItem>
           <OuiContextMenuItem data-counter={1} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={1}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
+            <button disabled={false} className="ouiContextMenuItem" type="button" data-counter={1}>
+              <span className="ouiContextMenu__itemLayout">
+                <span className="ouiContextMenuItem__text">
                   Option B
                 </span>
               </span>
@@ -591,23 +591,23 @@ exports[`OuiContextMenuPanel updating items and content updates to items should 
 
 exports[`OuiContextMenuPanel updating items and content updates to items should not re-render if any items's watchedItemProps did not change 2`] = `
 "<OuiContextMenuPanel items={{...}} hasFocus={true}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+  <div className="ouiContextMenuPanel" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
     <div>
       <OuiResizeObserver onResize={[Function: onResize]}>
         <div>
           <OuiContextMenuItem data-counter={0} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={0}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
+            <button disabled={false} className="ouiContextMenuItem" type="button" data-counter={0}>
+              <span className="ouiContextMenu__itemLayout">
+                <span className="ouiContextMenuItem__text">
                   Option A
                 </span>
               </span>
             </button>
           </OuiContextMenuItem>
           <OuiContextMenuItem data-counter={1} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={1}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
+            <button disabled={false} className="ouiContextMenuItem" type="button" data-counter={1}>
+              <span className="ouiContextMenu__itemLayout">
+                <span className="ouiContextMenuItem__text">
                   Option B
                 </span>
               </span>
@@ -622,7 +622,7 @@ exports[`OuiContextMenuPanel updating items and content updates to items should 
 
 exports[`OuiContextMenuPanel updating items and content updates to items should re-render at all times when children exists 1`] = `
 "<OuiContextMenuPanel hasFocus={true} items={{...}}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+  <div className="ouiContextMenuPanel" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
     <div>
       <OuiResizeObserver onResize={[Function: onResize]}>
         <div>
@@ -636,7 +636,7 @@ exports[`OuiContextMenuPanel updating items and content updates to items should 
 
 exports[`OuiContextMenuPanel updating items and content updates to items should re-render at all times when children exists 2`] = `
 "<OuiContextMenuPanel hasFocus={true} items={{...}}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+  <div className="ouiContextMenuPanel" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
     <div>
       <OuiResizeObserver onResize={[Function: onResize]}>
         <div>
@@ -650,23 +650,23 @@ exports[`OuiContextMenuPanel updating items and content updates to items should 
 
 exports[`OuiContextMenuPanel updating items and content updates to items should re-render if any items's watchedItemProps did change 1`] = `
 "<OuiContextMenuPanel watchedItemProps={{...}} items={{...}} hasFocus={true}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+  <div className="ouiContextMenuPanel" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
     <div>
       <OuiResizeObserver onResize={[Function: onResize]}>
         <div>
           <OuiContextMenuItem data-counter={0} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={0}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
+            <button disabled={false} className="ouiContextMenuItem" type="button" data-counter={0}>
+              <span className="ouiContextMenu__itemLayout">
+                <span className="ouiContextMenuItem__text">
                   Option A
                 </span>
               </span>
             </button>
           </OuiContextMenuItem>
           <OuiContextMenuItem data-counter={1} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={1}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
+            <button disabled={false} className="ouiContextMenuItem" type="button" data-counter={1}>
+              <span className="ouiContextMenu__itemLayout">
+                <span className="ouiContextMenuItem__text">
                   Option B
                 </span>
               </span>
@@ -681,23 +681,23 @@ exports[`OuiContextMenuPanel updating items and content updates to items should 
 
 exports[`OuiContextMenuPanel updating items and content updates to items should re-render if any items's watchedItemProps did change 2`] = `
 "<OuiContextMenuPanel watchedItemProps={{...}} items={{...}} hasFocus={true}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+  <div className="ouiContextMenuPanel" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
     <div>
       <OuiResizeObserver onResize={[Function: onResize]}>
         <div>
           <OuiContextMenuItem data-counter={2} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={2}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
+            <button disabled={false} className="ouiContextMenuItem" type="button" data-counter={2}>
+              <span className="ouiContextMenu__itemLayout">
+                <span className="ouiContextMenuItem__text">
                   Option A
                 </span>
               </span>
             </button>
           </OuiContextMenuItem>
           <OuiContextMenuItem data-counter={3} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={3}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
+            <button disabled={false} className="ouiContextMenuItem" type="button" data-counter={3}>
+              <span className="ouiContextMenu__itemLayout">
+                <span className="ouiContextMenuItem__text">
                   Option B
                 </span>
               </span>

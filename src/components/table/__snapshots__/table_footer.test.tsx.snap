@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiTableFooter is rendered 1`] = `
-Array [
+[
   <tfoot
     aria-label="aria-label"
     class="testClass1 testClass2"

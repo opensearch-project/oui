@@ -110,7 +110,7 @@ exports[`OuiProgress color warning is rendered 1`] = `
 `;
 
 exports[`OuiProgress has labelProps 1`] = `
-Array [
+[
   <div
     class="ouiProgress__data ouiProgress__data--success"
   >
@@ -150,7 +150,7 @@ exports[`OuiProgress has value 1`] = `
 `;
 
 exports[`OuiProgress has valueText and label 1`] = `
-Array [
+[
   <div
     class="ouiProgress__data ouiProgress__data--success"
   >
@@ -228,7 +228,7 @@ exports[`OuiProgress size xs is rendered 1`] = `
 `;
 
 exports[`OuiProgress valueText is true 1`] = `
-Array [
+[
   <div
     class="ouiProgress__data ouiProgress__data--success"
   >

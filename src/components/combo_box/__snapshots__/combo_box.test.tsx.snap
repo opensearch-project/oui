@@ -83,11 +83,11 @@ exports[`props autoFocus is rendered 1`] = `
     rootId={[Function]}
     searchValue=""
     selectedOptions={
-      Array [
-        Object {
+      [
+        {
           "label": "Mimas",
         },
-        Object {
+        {
           "label": "Dione",
         },
       ]
@@ -108,43 +108,43 @@ exports[`props custom icon is rendered 1`] = `
   icon="menu"
   isClearable={true}
   options={
-    Array [
-      Object {
+    [
+      {
         "data-test-subj": "titanOption",
         "label": "Titan",
       },
-      Object {
+      {
         "label": "Enceladus",
       },
-      Object {
+      {
         "label": "Mimas",
       },
-      Object {
+      {
         "label": "Dione",
       },
-      Object {
+      {
         "label": "Iapetus",
       },
-      Object {
+      {
         "label": "Phoebe",
       },
-      Object {
+      {
         "label": "Rhea",
       },
-      Object {
+      {
         "label": "Pandora is one of Saturn's moons, named for a Titaness of Greek mythology",
       },
-      Object {
+      {
         "label": "Tethys",
       },
-      Object {
+      {
         "label": "Hyperion",
       },
     ]
   }
   selectedOptions={
-    Array [
-      Object {
+    [
+      {
         "label": "Mimas",
       },
     ]
@@ -178,8 +178,8 @@ exports[`props custom icon is rendered 1`] = `
       rootId={[Function]}
       searchValue=""
       selectedOptions={
-        Array [
-          Object {
+        [
+          {
             "label": "Mimas",
           },
         ]
@@ -191,7 +191,7 @@ exports[`props custom icon is rendered 1`] = `
     >
       <OuiFormControlLayout
         clear={
-          Object {
+          {
             "data-test-subj": "comboBoxClearButton",
             "onClick": [Function],
           }
@@ -199,7 +199,7 @@ exports[`props custom icon is rendered 1`] = `
         compressed={false}
         fullWidth={false}
         icon={
-          Object {
+          {
             "aria-label": "Open list of options",
             "data-test-subj": "comboBoxToggleListButton",
             "disabled": undefined,
@@ -241,7 +241,7 @@ exports[`props custom icon is rendered 1`] = `
                 key="mimas"
                 onClose={[Function]}
                 option={
-                  Object {
+                  {
                     "label": "Mimas",
                   }
                 }
@@ -250,7 +250,7 @@ exports[`props custom icon is rendered 1`] = `
                   default="Remove {children} from selection in this group"
                   token="ouiComboBoxPill.removeSelection"
                   values={
-                    Object {
+                    {
                       "children": "Mimas",
                     }
                   }
@@ -258,7 +258,7 @@ exports[`props custom icon is rendered 1`] = `
                   <OuiBadge
                     className="ouiComboBoxPill"
                     closeButtonProps={
-                      Object {
+                      {
                         "tabIndex": -1,
                       }
                     }
@@ -324,7 +324,7 @@ exports[`props custom icon is rendered 1`] = `
                 onFocus={[Function]}
                 role="textbox"
                 style={
-                  Object {
+                  {
                     "fontSize": 14,
                   }
                 }
@@ -333,7 +333,7 @@ exports[`props custom icon is rendered 1`] = `
                 <div
                   className="ouiComboBox__input"
                   style={
-                    Object {
+                    {
                       "display": "inline-block",
                       "fontSize": 14,
                     }
@@ -347,7 +347,7 @@ exports[`props custom icon is rendered 1`] = `
                     onFocus={[Function]}
                     role="textbox"
                     style={
-                      Object {
+                      {
                         "boxSizing": "content-box",
                         "width": "2px",
                       }
@@ -356,7 +356,7 @@ exports[`props custom icon is rendered 1`] = `
                   />
                   <div
                     style={
-                      Object {
+                      {
                         "height": 0,
                         "left": 0,
                         "overflow": "scroll",
@@ -372,14 +372,14 @@ exports[`props custom icon is rendered 1`] = `
             </div>
             <OuiFormControlLayoutIcons
               clear={
-                Object {
+                {
                   "data-test-subj": "comboBoxClearButton",
                   "onClick": [Function],
                 }
               }
               compressed={false}
               icon={
-                Object {
+                {
                   "aria-label": "Open list of options",
                   "data-test-subj": "comboBoxToggleListButton",
                   "disabled": undefined,
@@ -487,11 +487,11 @@ exports[`props delimiter is rendered 1`] = `
     rootId={[Function]}
     searchValue=""
     selectedOptions={
-      Array [
-        Object {
+      [
+        {
           "label": "Mimas",
         },
-        Object {
+        {
           "label": "Dione",
         },
       ]
@@ -530,8 +530,8 @@ exports[`props full width is rendered 1`] = `
     rootId={[Function]}
     searchValue=""
     selectedOptions={
-      Array [
-        Object {
+      [
+        {
           "label": "Mimas",
         },
       ]
@@ -552,43 +552,43 @@ exports[`props icon is rendered 1`] = `
   icon={true}
   isClearable={true}
   options={
-    Array [
-      Object {
+    [
+      {
         "data-test-subj": "titanOption",
         "label": "Titan",
       },
-      Object {
+      {
         "label": "Enceladus",
       },
-      Object {
+      {
         "label": "Mimas",
       },
-      Object {
+      {
         "label": "Dione",
       },
-      Object {
+      {
         "label": "Iapetus",
       },
-      Object {
+      {
         "label": "Phoebe",
       },
-      Object {
+      {
         "label": "Rhea",
       },
-      Object {
+      {
         "label": "Pandora is one of Saturn's moons, named for a Titaness of Greek mythology",
       },
-      Object {
+      {
         "label": "Tethys",
       },
-      Object {
+      {
         "label": "Hyperion",
       },
     ]
   }
   selectedOptions={
-    Array [
-      Object {
+    [
+      {
         "label": "Mimas",
       },
     ]
@@ -622,8 +622,8 @@ exports[`props icon is rendered 1`] = `
       rootId={[Function]}
       searchValue=""
       selectedOptions={
-        Array [
-          Object {
+        [
+          {
             "label": "Mimas",
           },
         ]
@@ -635,7 +635,7 @@ exports[`props icon is rendered 1`] = `
     >
       <OuiFormControlLayout
         clear={
-          Object {
+          {
             "data-test-subj": "comboBoxClearButton",
             "onClick": [Function],
           }
@@ -643,7 +643,7 @@ exports[`props icon is rendered 1`] = `
         compressed={false}
         fullWidth={false}
         icon={
-          Object {
+          {
             "aria-label": "Open list of options",
             "data-test-subj": "comboBoxToggleListButton",
             "disabled": undefined,
@@ -685,7 +685,7 @@ exports[`props icon is rendered 1`] = `
                 key="mimas"
                 onClose={[Function]}
                 option={
-                  Object {
+                  {
                     "label": "Mimas",
                   }
                 }
@@ -694,7 +694,7 @@ exports[`props icon is rendered 1`] = `
                   default="Remove {children} from selection in this group"
                   token="ouiComboBoxPill.removeSelection"
                   values={
-                    Object {
+                    {
                       "children": "Mimas",
                     }
                   }
@@ -702,7 +702,7 @@ exports[`props icon is rendered 1`] = `
                   <OuiBadge
                     className="ouiComboBoxPill"
                     closeButtonProps={
-                      Object {
+                      {
                         "tabIndex": -1,
                       }
                     }
@@ -768,7 +768,7 @@ exports[`props icon is rendered 1`] = `
                 onFocus={[Function]}
                 role="textbox"
                 style={
-                  Object {
+                  {
                     "fontSize": 14,
                   }
                 }
@@ -777,7 +777,7 @@ exports[`props icon is rendered 1`] = `
                 <div
                   className="ouiComboBox__input"
                   style={
-                    Object {
+                    {
                       "display": "inline-block",
                       "fontSize": 14,
                     }
@@ -791,7 +791,7 @@ exports[`props icon is rendered 1`] = `
                     onFocus={[Function]}
                     role="textbox"
                     style={
-                      Object {
+                      {
                         "boxSizing": "content-box",
                         "width": "2px",
                       }
@@ -800,7 +800,7 @@ exports[`props icon is rendered 1`] = `
                   />
                   <div
                     style={
-                      Object {
+                      {
                         "height": 0,
                         "left": 0,
                         "overflow": "scroll",
@@ -816,14 +816,14 @@ exports[`props icon is rendered 1`] = `
             </div>
             <OuiFormControlLayoutIcons
               clear={
-                Object {
+                {
                   "data-test-subj": "comboBoxClearButton",
                   "onClick": [Function],
                 }
               }
               compressed={false}
               icon={
-                Object {
+                {
                   "aria-label": "Open list of options",
                   "data-test-subj": "comboBoxToggleListButton",
                   "disabled": undefined,
@@ -929,7 +929,7 @@ exports[`props isClearable=false disallows user from clearing input when no opti
     onRemoveOption={[Function]}
     rootId={[Function]}
     searchValue=""
-    selectedOptions={Array []}
+    selectedOptions={[]}
     singleSelection={false}
     toggleButtonRef={[Function]}
     updatePosition={[Function]}
@@ -963,11 +963,11 @@ exports[`props isClearable=false disallows user from clearing input when options
     rootId={[Function]}
     searchValue=""
     selectedOptions={
-      Array [
-        Object {
+      [
+        {
           "label": "Mimas",
         },
-        Object {
+        {
           "label": "Iapetus",
         },
       ]
@@ -1006,8 +1006,8 @@ exports[`props isDisabled is rendered 1`] = `
     rootId={[Function]}
     searchValue=""
     selectedOptions={
-      Array [
-        Object {
+      [
+        {
           "label": "Mimas",
         },
       ]
@@ -1367,11 +1367,11 @@ exports[`props selectedOptions are rendered 1`] = `
     rootId={[Function]}
     searchValue=""
     selectedOptions={
-      Array [
-        Object {
+      [
+        {
           "label": "Mimas",
         },
-        Object {
+        {
           "label": "Iapetus",
         },
       ]
@@ -1410,8 +1410,8 @@ exports[`props singleSelection is rendered 1`] = `
     rootId={[Function]}
     searchValue=""
     selectedOptions={
-      Array [
-        Object {
+      [
+        {
           "label": "Mimas",
         },
       ]
@@ -1451,7 +1451,7 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
     prepend="String"
     rootId={[Function]}
     searchValue=""
-    selectedOptions={Array []}
+    selectedOptions={[]}
     singleSelection={true}
     toggleButtonRef={[Function]}
     updatePosition={[Function]}
@@ -1466,36 +1466,36 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
       getSelectedOptionForSearchValue={[Function]}
       listRef={[Function]}
       matchingOptions={
-        Array [
-          Object {
+        [
+          {
             "data-test-subj": "titanOption",
             "label": "Titan",
           },
-          Object {
+          {
             "label": "Enceladus",
           },
-          Object {
+          {
             "label": "Mimas",
           },
-          Object {
+          {
             "label": "Dione",
           },
-          Object {
+          {
             "label": "Iapetus",
           },
-          Object {
+          {
             "label": "Phoebe",
           },
-          Object {
+          {
             "label": "Rhea",
           },
-          Object {
+          {
             "label": "Pandora is one of Saturn's moons, named for a Titaness of Greek mythology",
           },
-          Object {
+          {
             "label": "Tethys",
           },
-          Object {
+          {
             "label": "Hyperion",
           },
         ]
@@ -1506,36 +1506,36 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
       onScroll={[Function]}
       optionRef={[Function]}
       options={
-        Array [
-          Object {
+        [
+          {
             "data-test-subj": "titanOption",
             "label": "Titan",
           },
-          Object {
+          {
             "label": "Enceladus",
           },
-          Object {
+          {
             "label": "Mimas",
           },
-          Object {
+          {
             "label": "Dione",
           },
-          Object {
+          {
             "label": "Iapetus",
           },
-          Object {
+          {
             "label": "Phoebe",
           },
-          Object {
+          {
             "label": "Rhea",
           },
-          Object {
+          {
             "label": "Pandora is one of Saturn's moons, named for a Titaness of Greek mythology",
           },
-          Object {
+          {
             "label": "Tethys",
           },
-          Object {
+          {
             "label": "Hyperion",
           },
         ]
@@ -1545,7 +1545,7 @@ exports[`props singleSelection prepend and append is rendered 1`] = `
       rowHeight={29}
       scrollToIndex={-1}
       searchValue=""
-      selectedOptions={Array []}
+      selectedOptions={[]}
       singleSelection={true}
       updatePosition={[Function]}
       width={0}
@@ -1580,8 +1580,8 @@ exports[`props singleSelection selects existing option when opened 1`] = `
     rootId={[Function]}
     searchValue=""
     selectedOptions={
-      Array [
-        Object {
+      [
+        {
           "label": "Mimas",
         },
       ]
@@ -1600,36 +1600,36 @@ exports[`props singleSelection selects existing option when opened 1`] = `
       getSelectedOptionForSearchValue={[Function]}
       listRef={[Function]}
       matchingOptions={
-        Array [
-          Object {
+        [
+          {
             "data-test-subj": "titanOption",
             "label": "Titan",
           },
-          Object {
+          {
             "label": "Enceladus",
           },
-          Object {
+          {
             "label": "Mimas",
           },
-          Object {
+          {
             "label": "Dione",
           },
-          Object {
+          {
             "label": "Iapetus",
           },
-          Object {
+          {
             "label": "Phoebe",
           },
-          Object {
+          {
             "label": "Rhea",
           },
-          Object {
+          {
             "label": "Pandora is one of Saturn's moons, named for a Titaness of Greek mythology",
           },
-          Object {
+          {
             "label": "Tethys",
           },
-          Object {
+          {
             "label": "Hyperion",
           },
         ]
@@ -1640,36 +1640,36 @@ exports[`props singleSelection selects existing option when opened 1`] = `
       onScroll={[Function]}
       optionRef={[Function]}
       options={
-        Array [
-          Object {
+        [
+          {
             "data-test-subj": "titanOption",
             "label": "Titan",
           },
-          Object {
+          {
             "label": "Enceladus",
           },
-          Object {
+          {
             "label": "Mimas",
           },
-          Object {
+          {
             "label": "Dione",
           },
-          Object {
+          {
             "label": "Iapetus",
           },
-          Object {
+          {
             "label": "Phoebe",
           },
-          Object {
+          {
             "label": "Rhea",
           },
-          Object {
+          {
             "label": "Pandora is one of Saturn's moons, named for a Titaness of Greek mythology",
           },
-          Object {
+          {
             "label": "Tethys",
           },
-          Object {
+          {
             "label": "Hyperion",
           },
         ]
@@ -1680,8 +1680,8 @@ exports[`props singleSelection selects existing option when opened 1`] = `
       scrollToIndex={-1}
       searchValue=""
       selectedOptions={
-        Array [
-          Object {
+        [
+          {
             "label": "Mimas",
           },
         ]

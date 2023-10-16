@@ -114,7 +114,7 @@ exports[`OuiQuickSelect is rendered 1`] = `
         default="Currently set to {timeTense} {timeValue} {timeUnit}."
         token="ouiQuickSelect.fullDescription"
         values={
-          Object {
+          {
             "timeTense": "last",
             "timeUnit": "minutes",
             "timeValue": 15,
@@ -240,7 +240,7 @@ exports[`OuiQuickSelect prevQuickSelect 1`] = `
         default="Currently set to {timeTense} {timeValue} {timeUnit}."
         token="ouiQuickSelect.fullDescription"
         values={
-          Object {
+          {
             "timeTense": "Next",
             "timeUnit": "months",
             "timeValue": 32,
