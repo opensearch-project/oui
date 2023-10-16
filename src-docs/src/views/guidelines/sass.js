@@ -103,6 +103,8 @@ function renderPaletteColor(palette, color) {
     );
   }
 
+  console.log(palette, color, palette[color]);
+
   return (
     <OuiFlexGroup
       responsive={false}
@@ -113,7 +115,7 @@ function renderPaletteColor(palette, color) {
       <OuiFlexItem grow={false}>
         <div
           className="guideSass__swatch"
-          style={{ background: rgbToHex(palette[color].rgba).toUpperCase() }}
+          style={{ background: rgbToHex(palette[color]).toUpperCase() }}
         />
       </OuiFlexItem>
       <OuiFlexItem grow={false}>

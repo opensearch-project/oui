@@ -46,7 +46,7 @@ export const CorePalette = ({ theme, colors }) => {
       <OuiFlexItem key={index} grow={false}>
         <OuiCopy
           title={`$${color}:
-          ${rgbToHex(hex.rgba).toUpperCase()}`}
+          ${rgbToHex(hex).toUpperCase()}`}
           beforeMessage={
             <small>
               <kbd>Click</kbd> to copy color name
@@ -66,7 +66,7 @@ export const CorePalette = ({ theme, colors }) => {
                 className={iconClass}
                 size="xxl"
                 type="stopFilled"
-                color={rgbToHex(hex.rgba)}
+                color={rgbToHex(hex)}
               />
               <OuiScreenReaderOnly>
                 <span>{color}</span>

@@ -151,8 +151,8 @@ color: $${foreground};`;
             onClickAriaLabel="Click to copy SASS configurations"
             disabled={!contastIsAcceptableToCopy}
             style={{
-              backgroundColor: palette[background].rgba,
-              color: palette[foreground].rgba,
+              backgroundColor: palette[background],
+              color: palette[foreground],
             }}>
             {foreground}
           </OuiBadge>
@@ -164,5 +164,5 @@ color: $${foreground};`;
 
 export function getHexValueFromColorName(palette, colorName, key) {
   const hex = key ? palette[colorName][key] : palette[colorName];
-  return rgbToHex(hex.rgba).toUpperCase();
+  return rgbToHex(hex).toUpperCase();
 }

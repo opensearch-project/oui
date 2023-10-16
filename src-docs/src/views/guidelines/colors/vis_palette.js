@@ -41,7 +41,7 @@ export const VisPalette = ({ variant }) => {
                   onClick={copy}
                   size="xl"
                   type="stopFilled"
-                  color={rgbToHex(hex.rgba)}
+                  color={rgbToHex(hex)}
                 />
               )}
             </OuiCopy>
@@ -54,7 +54,7 @@ export const VisPalette = ({ variant }) => {
           <OuiFlexItem>
             <OuiText size="s" color="subdued">
               <p>
-                <code>{rgbToHex(hex.rgba).toUpperCase()}</code>
+                <code>{rgbToHex(hex).toUpperCase()}</code>
               </p>
             </OuiText>
           </OuiFlexItem>
