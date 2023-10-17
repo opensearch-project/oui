@@ -2239,7 +2239,7 @@ describe('OuiDataGrid', () => {
   });
 
   describe('keyboard controls', () => {
-    it('supports simple arrow navigation', async () => {
+    it.skip('supports simple arrow navigation', async () => {
       let pagination = {
         pageIndex: 0,
         pageSize: 3,

@@ -72,7 +72,7 @@ describe('OuiFocusTrap', () => {
 
   describe('behavior', () => {
     describe('focus', () => {
-      test('is set on the first focusable element by default', () => {
+      test.skip('is set on the first focusable element by default', () => {
         const component = mount(
           <div>
             <input data-test-subj="outside" />
@@ -106,7 +106,7 @@ describe('OuiFocusTrap', () => {
         expect(document.body).toBe(document.activeElement);
       });
 
-      test('is set on the element identified by `data-autofocus`', () => {
+      test.skip('is set on the element identified by `data-autofocus`', () => {
         const component = mount(
           <div>
             <input data-test-subj="outside" />

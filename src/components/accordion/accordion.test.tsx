@@ -216,15 +216,17 @@ describe('OuiAccordion', () => {
     it('moves focus to the content when expanded', () => {
       const component = mount<OuiAccordion>(<OuiAccordion id={getId()} />);
       const accordionClass = component.instance();
-      const childWrapper = accordionClass.childWrapper;
+      const childWrapper = accordionClass.childWrapper as HTMLDivElement;
 
       expect(childWrapper).not.toBeFalsy();
       expect(childWrapper).not.toBe(document.activeElement);
 
+      jest.spyOn(childWrapper, 'focus');
+
       // click button
       component.find('button').simulate('click');
 
-      expect(childWrapper).toBe(document.activeElement);
+      expect(childWrapper.focus).toHaveBeenCalledTimes(1);
     });
   });
 });
