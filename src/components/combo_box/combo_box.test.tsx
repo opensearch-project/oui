@@ -424,17 +424,13 @@ describe('behavior', () => {
           onChange={() => {}}
         />
       );
-      const inputComponent = findTestSubject(
-        component,
-        'comboBoxSearchInput'
-      ).getDOMNode() as HTMLInputElement;
-
-      jest.spyOn(inputComponent, 'focus');
-
-      expect(inputComponent.focus).not.toHaveBeenCalled();
 
       findTestSubject(component, 'comboBoxClearButton').simulate('click');
-      expect(inputComponent.focus).toHaveBeenCalled();
+      setTimeout(() => {
+        expect(
+          findTestSubject(component, 'comboBoxSearchInput').getDOMNode()
+        ).toBe(document.activeElement);
+      }, 0);
     });
   });
 

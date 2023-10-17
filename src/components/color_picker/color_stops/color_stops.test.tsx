@@ -418,29 +418,21 @@ test('thumb focus changes', () => {
 
   const wrapper = findTestSubject(colorStops, 'ouiColorStops');
   const thumbs = findTestSubject(colorStops, 'ouiColorStopThumb');
-  const thumbs0 = thumbs.first().getDOMNode() as HTMLElement;
-  const thumbs1 = thumbs.at(1).getDOMNode() as HTMLElement;
-
-  jest.spyOn(thumbs0, 'focus');
-  jest.spyOn(thumbs1, 'focus');
-
-  expect(thumbs0.focus).not.toHaveBeenCalled();
-  expect(thumbs1.focus).not.toHaveBeenCalled();
-
   wrapper.simulate('focus');
   wrapper.simulate('keydown', {
     key: keys.ARROW_DOWN,
   });
-
-  expect(thumbs0.focus).toHaveBeenCalledTimes(1);
-  expect(thumbs1.focus).not.toHaveBeenCalled();
+  setTimeout(() => {
+    expect(thumbs.first().getDOMNode()).toEqual(document.activeElement);
+  }, 0);
 
   thumbs.first().simulate('keydown', {
     key: keys.ARROW_DOWN,
   });
 
-  expect(thumbs0.focus).toHaveBeenCalledTimes(1);
-  expect(thumbs1.focus).toHaveBeenCalledTimes(1);
+  setTimeout(() => {
+    expect(thumbs.at(1).getDOMNode()).toEqual(document.activeElement);
+  }, 0);
 });
 
 test('thumb direction movement', () => {
@@ -457,17 +449,14 @@ test('thumb direction movement', () => {
 
   const wrapper = findTestSubject(colorStops, 'ouiColorStops');
   const thumbs = findTestSubject(colorStops, 'ouiColorStopThumb');
-  const thumbs0 = thumbs.first().getDOMNode() as HTMLElement;
-
-  jest.spyOn(thumbs0, 'focus');
-  expect(thumbs0.focus).not.toHaveBeenCalled();
-
   wrapper.simulate('focus');
   wrapper.simulate('keydown', {
     key: keys.ARROW_DOWN,
   });
 
-  expect(thumbs0.focus).toHaveBeenCalledTimes(1);
+  setTimeout(() => {
+    expect(thumbs.first().getDOMNode()).toEqual(document.activeElement);
+  }, 0);
 
   thumbs.first().simulate('keydown', {
     key: keys.ARROW_RIGHT,

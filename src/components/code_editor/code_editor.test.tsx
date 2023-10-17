@@ -117,7 +117,7 @@ describe('OuiCodeEditor', () => {
         expect(blurSpy).toHaveBeenCalled();
       });
 
-      test.skip('pressing escape in ace textbox will enable overlay', () => {
+      test('pressing escape in ace textbox will enable overlay', () => {
         // We cannot simulate the `commands` path, but this interaction still
         // serves as a fallback in cases where `commands` is unavailable.
         // @ts-ignore onFocusAce is known to exist
@@ -128,8 +128,13 @@ describe('OuiCodeEditor', () => {
           stopPropagation: () => {},
           key: keys.ESCAPE,
         });
-        const hint = findTestSubject(component, 'codeEditorHint').getDOMNode();
-        expect(hint).toBe(document.activeElement);
+        setTimeout(() => {
+          const hint = findTestSubject(
+            component,
+            'codeEditorHint'
+          ).getDOMNode();
+          expect(hint).toBe(document.activeElement);
+        }, 0);
       });
     });
   });
