@@ -8,6 +8,8 @@
 
 ### 🛡 Security
 
+- [CVE-2023-28155] Bump `jest` from `24.9.0` to `26.6.2` ([#1102](https://github.com/opensearch-project/oui/pull/1102))
+
 ### 📈 Features/Enhancements
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
