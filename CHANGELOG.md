@@ -12,6 +12,7 @@
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
+- Match .browserlist with OpenSearch Dashboards ([#1023](https://github.com/opensearch-project/oui/issues/1023))
 
 ### 🐛 Bug Fixes
 
@@ -52,7 +53,7 @@
 - Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
 - Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 - Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
-- Match .browserlist with OpenSearch Dashboards ([#1023](https://github.com/opensearch-project/oui/issues/1023)) 
+ 
 
 ### 🐛 Bug Fixes
 
