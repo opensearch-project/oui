@@ -299,7 +299,7 @@ export {
 
 export { OuiSchemaItem } from './schema';
 
-export { OuiSearchBar, Query, AST } from './search_bar';
+export { OuiSearchBar, Query, Ast } from './search_bar';
 
 export {
   OuiSelectable,
