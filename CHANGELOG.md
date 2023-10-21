@@ -18,6 +18,7 @@
 
 - Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
 - Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
+- Fix "Guidelines" documentation rendering blank pages ([#1109](https://github.com/opensearch-project/oui/pull/1110))
 
 ### 🚞 Infrastructure
 
