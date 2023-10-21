@@ -34,6 +34,10 @@ function asHex(value: string): string {
 }
 
 export function rgbToHex(rgb: string): string {
+  if (!rgb) {
+    return '';
+  }
+
   const withoutWhitespace = rgb.replace(/\s+/g, '');
   const rgbMatch = withoutWhitespace.match(
     /^rgba?\((\d+),(\d+),(\d+)(?:,(?:1(?:\.0*)?|0(?:\.\d+)?))?\)$/i
