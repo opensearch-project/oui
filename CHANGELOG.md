@@ -20,6 +20,7 @@
 ### 🚞 Infrastructure
 
 - Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
+- Add file utils for teardown function ([#1080](https://github.com/opensearch-project/oui/pull/1080))
 
 ### 📝 Documentation
 
