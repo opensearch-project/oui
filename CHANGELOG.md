@@ -13,7 +13,7 @@
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
-- Rename `crossInACircleFilled` to `crossInCircleFilled` ([#1113](https://github.com/opensearch-project/oui/pull/1113))`
+- Rename `crossInACircleFilled` to `crossInCircleFilled` ([#1113](https://github.com/opensearch-project/oui/pull/1113))
 
 ### 🐛 Bug Fixes
 
