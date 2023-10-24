@@ -16,6 +16,7 @@
 - Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
 - Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 - Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
+- Add error handling when staged files are empty([#1114](https://github.com/opensearch-project/oui/pull/1114))
 
 ### 🐛 Bug Fixes
 
