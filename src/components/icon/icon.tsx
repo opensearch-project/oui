@@ -111,7 +111,7 @@ const typeToPathMap = {
   crossClusterReplicationApp: 'app_cross_cluster_replication',
   crosshairs: 'crosshairs',
   crossInCircleEmpty: 'crossInCircleEmpty',
-  crossInACircleFilled: 'crossInACircleFilled',
+  crossInCircleFilled: 'crossInCircleFilled',
   currency: 'currency',
   cut: 'cut',
   dashboardApp: 'app_dashboard',

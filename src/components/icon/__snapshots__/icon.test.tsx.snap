@@ -1619,7 +1619,7 @@ exports[`OuiIcon props type crossClusterReplicationApp is rendered 1`] = `
 </svg>
 `;
 
-exports[`OuiIcon props type crossInACircleFilled is rendered 1`] = `
+exports[`OuiIcon props type crossInCircleFilled is rendered 1`] = `
 <svg
   aria-hidden="true"
   class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"

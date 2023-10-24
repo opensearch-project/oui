@@ -48,7 +48,7 @@ export const ResizeObserverHookExample = () => {
           </p>
         ) : (
           <p>
-            <OuiIcon type="crossInACircleFilled" color="danger" /> Browser does
+            <OuiIcon type="crossInCircleFilled" color="danger" /> Browser does
             not support ResizeObserver API. Using MutationObserver.
           </p>
         )}
