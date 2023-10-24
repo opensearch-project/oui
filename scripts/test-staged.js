@@ -12,9 +12,15 @@
 const { execSync } = require('child_process');
 
 // find names of staged files
-const stagedFiles = execSync('git diff --cached --name-only --diff-filter=ACMR')
+const stagedFiles = execSync(
+  'git diff --cached --name-only --diff-filter=ACDMR'
+)
   .toString()
   .split(/[\r\n]+/g);
+
+if (stagedFiles.length === 1 && stagedFiles[0] === '') {
+  process.exit(0);
+}
 
 // execute tests related to the staged files
 execSync(`yarn test-unit --findRelatedTests ${stagedFiles.join(' ')}`, {
