@@ -765,10 +765,7 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
   const handleFullScreenChange = useCallback(
     (isFullScreen: boolean) => {
       setFullScreen(isFullScreen);
-
-      if (onFullScreenChange) {
-        onFullScreenChange(isFullScreen);
-      }
+      onFullScreenChange?.(isFullScreen);
     },
     [onFullScreenChange]
   );
