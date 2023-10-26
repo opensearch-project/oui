@@ -312,6 +312,7 @@ export const OuiDataGridHeaderCell: FunctionComponent<OuiDataGridHeaderCellProps
   ) : null;
 
   return (
+    // add tooltip to column header
     <div>
       <OuiToolTip position="top" content={id}>
         <div
