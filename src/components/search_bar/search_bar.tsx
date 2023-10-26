@@ -33,7 +33,7 @@ import { isString } from '../../services/predicate';
 import { OuiFlexGroup, OuiFlexItem } from '../flex';
 import { OuiSearchBox, SchemaType } from './search_box';
 import { OuiSearchFilters, SearchFilterConfig } from './search_filters';
-import { Query } from './query';
+import { Query } from './query/query';
 import { CommonProps } from '../common';
 import { OuiFieldSearchProps } from '../form/field_search';
 
@@ -189,7 +189,11 @@ export class OuiSearchBar extends Component<OuiSearchBarProps, State> {
       this.notifyControllingParent({ query, queryText, error: null });
       this.setState({ query, queryText, error: null });
     } catch (e) {
-      const error: Error = { name: e.name, message: e.message };
+      const error: Error =
+        e instanceof Error
+          ? { name: e.name, message: e.message }
+          : { name: 'Unexpected error', message: String(e) };
+
       this.notifyControllingParent({ query: null, queryText, error });
       this.setState({ queryText, error });
     }

@@ -12,10 +12,12 @@
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
+- Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
 
 ### 🐛 Bug Fixes
 
 - Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+- Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
 
 ### 🚞 Infrastructure
 
@@ -26,10 +28,14 @@
 - Update default docsite theme to Next Dark ([#1029](https://github.com/opensearch-project/oui/pull/1029))
 - Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
 - Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
+- Remove "Widths" section from the OuiModal docs ([#1066](https://github.com/opensearch-project/oui/pull/1066))
 
 ### 🛠 Maintenance
-
+- Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
 - Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
+- Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
+- Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
+- Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
 
 ### 🪛 Refactoring
 
@@ -59,6 +65,7 @@
 - Remove `calc` usage from SchemaItem styles ([#990](https://github.com/opensearch-project/oui/pull/990))
 - Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
 - Fix alignment of left icon for OuiListGroupItem with multiline text ([#1027](https://github.com/opensearch-project/oui/pull/1027))
+- Update new polygon icon svg ([#1068](https://github.com/opensearch-project/oui/pull/1083))
 
 ### 🚞 Infrastructure
 
@@ -72,13 +79,16 @@
 - Replace Avatar in favor of Icon in OuiFacetButtons example ([#987](https://github.com/opensearch-project/oui/pull/987))
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
 - Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
+- Remove "Emphasized Side Nav" section from OUI docs site ([#1084](https://github.com/opensearch-project/oui/pull/1084))
 
 ### 🛠 Maintenance
 
+- Made changes to `pre-commit` hook to only use `lint` instead of running `test-staged` script ([#1072](https://github.com/opensearch-project/oui/pull/1072))
 - [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
 - [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
 - Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
+- Replace `node-sass` with `sass-embedded` ([#1001](https://github.com/opensearch-project/oui/pull/1001))
 
 ### 🪛 Refactoring
 

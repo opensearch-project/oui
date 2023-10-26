@@ -176,7 +176,7 @@
   }
 
   .ouiCard__icon {
-    margin-top: $ouiCardSpacing / 2;
+    margin-top: calc($ouiCardSpacing / 2);
   }
 }
 
@@ -207,7 +207,7 @@
 
   .ouiCard__description,
   .ouiCard__children {
-    margin-top: $ouiCardSpacing / 2;
+    margin-top: calc($ouiCardSpacing / 2);
   }
 
   .ouiCard__titleAnchor,

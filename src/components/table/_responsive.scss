@@ -126,12 +126,12 @@
       }
 
       &.ouiTableRow-isSelectable {
-        padding-left: $ouiTableCellCheckboxWidth + ($ouiTableCellContentPadding / 2);
+        padding-left: $ouiTableCellCheckboxWidth + calc($ouiTableCellContentPadding / 2);
         position: relative;
 
         .ouiTableRowCellCheckbox {
           position: absolute;
-          left: $ouiTableCellContentPadding / 2;
+          left: calc($ouiTableCellContentPadding / 2);
           top: $ouiSizeS;
         }
       }

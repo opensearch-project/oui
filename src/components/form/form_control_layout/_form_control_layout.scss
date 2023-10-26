@@ -152,7 +152,7 @@
 
   &.ouiFormControlLayout--compressed {
     @include ouiFormControlDefaultShadow($borderOnly: true);
-    border-radius: $ouiBorderRadius / 2;
+    border-radius: calc($ouiBorderRadius / 2);
     overflow: hidden; // Keeps backgrounds inside border radius
 
     // Padding

@@ -56,7 +56,7 @@
   flex-grow: 0;
 
   > * {
-    margin-left: $ouiSizeXS / 2;
+    margin-left: calc($ouiSizeXS / 2);
   }
 }
 
