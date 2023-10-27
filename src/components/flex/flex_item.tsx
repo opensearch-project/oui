@@ -46,13 +46,43 @@ export type FlexItemGrowSize =
   | true
   | false
   | null;
+export type FlexItemShrinkSize =
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | true
+  | false
+  | null;
+export type FlexItemBasisValue = string | true | false | null;
 
 export interface OuiFlexItemProps {
   grow?: FlexItemGrowSize;
+  shrink?: FlexItemShrinkSize;
+  basis?: FlexItemBasisValue;
   component?: keyof JSX.IntrinsicElements;
 }
 
 export const GROW_SIZES: FlexItemGrowSize[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const SHRINK_SIZES: FlexItemShrinkSize[] = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+];
+export const BASIS_VALUES:FlexItemBasisValue[] = ['auto','0%','25%','50%','75%','100%']
 
 export const OuiFlexItem: FunctionComponent<
   CommonProps &
@@ -61,11 +91,15 @@ export const OuiFlexItem: FunctionComponent<
 > = ({
   children,
   className,
-  grow = true,
+  grow = true, // default true -> keep grow 1 coming from flex_grid
+  shrink = 1, // default 1 for shrink
+  basis = 'auto', // default 'auto' basis
   component: Component = 'div',
   ...rest
 }) => {
   validateGrowValue(grow);
+  validateShrinkValue(shrink);
+  validateBasisValue(basis);
 
   const classes = classNames(
     'ouiFlexItem',
@@ -73,6 +107,10 @@ export const OuiFlexItem: FunctionComponent<
       'ouiFlexItem--flexGrowZero': !grow,
       [`ouiFlexItem--flexGrow${grow}`]:
         typeof grow === 'number' ? GROW_SIZES.indexOf(grow) >= 0 : undefined,
+      [`ouiFlexItem--flexShrink${shrink}`]:
+        typeof shrink === 'number' ? SHRINK_SIZES.indexOf(shrink) >= 0 : undefined,
+      [`ouiFlexItem--flexBasis${basis}`]:
+        typeof shrink === 'string' ? BASIS_VALUES.indexOf(shrink) >= 0 : undefined,
     },
     className
   );
@@ -91,6 +129,29 @@ function validateGrowValue(value: OuiFlexItemProps['grow']) {
   if (validValues.indexOf(value) === -1) {
     throw new Error(
       `Prop \`grow\` passed to \`OuiFlexItem\` must be a boolean or an integer between 1 and 10, received \`${value}\``
+    );
+  }
+}
+
+function validateShrinkValue(value: OuiFlexItemProps['shrink']) {
+  // New function
+  const validValues = [null, undefined, true, false, ...SHRINK_SIZES];
+
+  if (validValues.indexOf(value) === -1) {
+    throw new Error(
+      `Prop \`shrink\` passed to \`OuiFlexItem\` must be a boolean or an integer between 1 and 10, received \`${value}\``
+    );
+  }
+}
+
+function validateBasisValue(value: OuiFlexItemProps['basis']) {
+  // Define the valid values for 'flex-basis'. These can be 'auto' or specific percentages.
+  const validValues = [null, undefined, true, false, ...BASIS_VALUES];
+
+  // Check if the passed value is one of the valid values.
+  if (!validValues.includes(value)) {
+    throw new Error(
+      `Prop \`basis\` passed to \`OuiFlexItem\` must be one of ['auto', '0%', '25%', '50%', '75%', '100%'], received \`${value}\``
     );
   }
 }
