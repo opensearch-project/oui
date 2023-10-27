@@ -36,7 +36,7 @@ import {
   stopThrowingReactWarnings,
 } from '../../test';
 
-import { OuiFlexItem, GROW_SIZES } from './flex_item';
+import { OuiFlexItem, GROW_SIZES, SHRINK_SIZES, BASIS_VALUES } from './flex_item';
 
 beforeAll(startThrowingReactWarnings);
 afterAll(stopThrowingReactWarnings);
@@ -52,6 +52,26 @@ describe('OuiFlexItem', () => {
     GROW_SIZES.concat([true, false]).forEach((value) => {
       test(`${value} is rendered`, () => {
         const component = render(<OuiFlexItem grow={value} />);
+
+        expect(component).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('shrink', () => {
+    SHRINK_SIZES.forEach((value) => {
+      test(`${value} is rendered`, () => {
+        const component = render(<OuiFlexItem shrink={value} />);
+
+        expect(component).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('basis', () => {
+    BASIS_VALUES.forEach((value) => {
+      test(`${value} is rendered`, () => {
+        const component = render(<OuiFlexItem basis={value} />);
 
         expect(component).toMatchSnapshot();
       });

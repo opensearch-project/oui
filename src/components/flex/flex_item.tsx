@@ -82,7 +82,14 @@ export const SHRINK_SIZES: FlexItemShrinkSize[] = [
   9,
   10,
 ];
-export const BASIS_VALUES:FlexItemBasisValue[] = ['auto','0%','25%','50%','75%','100%']
+export const BASIS_VALUES: FlexItemBasisValue[] = [
+  'auto',
+  '0%',
+  '25%',
+  '50%',
+  '75%',
+  '100%',
+];
 
 export const OuiFlexItem: FunctionComponent<
   CommonProps &
@@ -108,9 +115,13 @@ export const OuiFlexItem: FunctionComponent<
       [`ouiFlexItem--flexGrow${grow}`]:
         typeof grow === 'number' ? GROW_SIZES.indexOf(grow) >= 0 : undefined,
       [`ouiFlexItem--flexShrink${shrink}`]:
-        typeof shrink === 'number' ? SHRINK_SIZES.indexOf(shrink) >= 0 : undefined,
+        typeof shrink === 'number'
+          ? SHRINK_SIZES.indexOf(shrink) >= 0
+          : undefined,
       [`ouiFlexItem--flexBasis${basis}`]:
-        typeof shrink === 'string' ? BASIS_VALUES.indexOf(shrink) >= 0 : undefined,
+        typeof shrink === 'string'
+          ? BASIS_VALUES.indexOf(shrink) >= 0
+          : undefined,
     },
     className
   );

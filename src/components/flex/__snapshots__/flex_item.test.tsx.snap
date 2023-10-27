@@ -79,3 +79,75 @@ exports[`OuiFlexItem is rendered 1`] = `
   data-test-subj="test subject string"
 />
 `;
+
+exports[`OuiFlexItem shrink 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem shrink 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem shrink 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem shrink 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem shrink 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem shrink 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem shrink 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem shrink 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem shrink 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem shrink 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem shrink false is rendered 1`] = `
+<div
+  class="ouiFlexItem"
+/>
+`;
+
+exports[`OuiFlexItem shrink true is rendered 1`] = `
+<div
+  class="ouiFlexItem"
+/>
+`;
