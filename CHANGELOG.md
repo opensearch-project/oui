@@ -12,7 +12,8 @@
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
-
+- Add CSS `display-none` utility ([#1120](https://github.com/opensearch-project/oui/pull/1120))
+- 
 ### 🐛 Bug Fixes
 
 - Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
