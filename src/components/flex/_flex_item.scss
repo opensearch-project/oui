@@ -24,14 +24,19 @@
 
   /*
    * 1. We need the extra specificity here to override the FlexGroup > FlexItem styles.
-   * 2. FlexItem can be manually set to not grow if needed (default).
+   * 2. FlexItem can be manually set to not grow or shrink if needed (default).
    * 3. FlexItem also can be given values for grow, shrink and basis:
    *    - grow: 1..10
    *    - shrink: 1..10
-   *    - basis: auto, 0%, 25%, 50%, 75% or 100%
+   *    - basis: auto, max-content, min-content, fit-content
    */
 
   &.ouiFlexItem--flexGrowZero { /* 1 */
+    flex-grow: 0; /* 2 */
+    flex-basis: auto; /* 2 */
+  }
+
+  &.ouiFlexItem--flexShrinkZero { /* 1 */
     flex-grow: 0; /* 2 */
     flex-basis: auto; /* 2 */
   }
@@ -48,7 +53,7 @@
     }
   }
 
-  $flexBasisOptions: 'auto', '0%', '25%', '50%', '75%', '100%'; /* 3 */
+  $flexBasisOptions: 'auto', 'max-content', 'min-content', 'fit-content'; /* 3 */
 
   @each $basis in $flexBasisOptions { /* 3 */
     .ouiFlexItem--flexBasis#{$basis} { /* 3 */

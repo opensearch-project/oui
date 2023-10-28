@@ -36,7 +36,12 @@ import {
   stopThrowingReactWarnings,
 } from '../../test';
 
-import { OuiFlexItem, GROW_SIZES, SHRINK_SIZES, BASIS_VALUES } from './flex_item';
+import {
+  OuiFlexItem,
+  GROW_SIZES,
+  SHRINK_SIZES,
+  BASIS_VALUES,
+} from './flex_item';
 
 beforeAll(startThrowingReactWarnings);
 afterAll(stopThrowingReactWarnings);

@@ -84,11 +84,9 @@ export const SHRINK_SIZES: FlexItemShrinkSize[] = [
 ];
 export const BASIS_VALUES: FlexItemBasisValue[] = [
   'auto',
-  '0%',
-  '25%',
-  '50%',
-  '75%',
-  '100%',
+  'max-content',
+  'min-content',
+  'fit-content',
 ];
 
 export const OuiFlexItem: FunctionComponent<
@@ -112,6 +110,7 @@ export const OuiFlexItem: FunctionComponent<
     'ouiFlexItem',
     {
       'ouiFlexItem--flexGrowZero': !grow,
+      'ouiFlexItem--flexShrinkZero': !shrink,
       [`ouiFlexItem--flexGrow${grow}`]:
         typeof grow === 'number' ? GROW_SIZES.indexOf(grow) >= 0 : undefined,
       [`ouiFlexItem--flexShrink${shrink}`]:

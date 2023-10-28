@@ -1,81 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`OuiFlexItem basis auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem basis fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem basis max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem basis min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1"
+/>
+`;
+
 exports[`OuiFlexItem grow 1 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow1"
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow 2 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow2"
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow 3 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow3"
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow 4 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow4"
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow 5 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow5"
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow 6 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow6"
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow 7 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow7"
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow 8 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow8"
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow 9 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow9"
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow 10 is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrow10"
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow false is rendered 1`] = `
 <div
-  class="ouiFlexItem ouiFlexItem--flexGrowZero"
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem grow true is rendered 1`] = `
 <div
-  class="ouiFlexItem"
+  class="ouiFlexItem ouiFlexItem--flexShrink1"
 />
 `;
 
 exports[`OuiFlexItem is rendered 1`] = `
 <div
   aria-label="aria-label"
-  class="ouiFlexItem testClass1 testClass2"
+  class="ouiFlexItem ouiFlexItem--flexShrink1 testClass1 testClass2"
   data-test-subj="test subject string"
 />
 `;
@@ -137,17 +161,5 @@ exports[`OuiFlexItem shrink 9 is rendered 1`] = `
 exports[`OuiFlexItem shrink 10 is rendered 1`] = `
 <div
   class="ouiFlexItem ouiFlexItem--flexShrink10"
-/>
-`;
-
-exports[`OuiFlexItem shrink false is rendered 1`] = `
-<div
-  class="ouiFlexItem"
-/>
-`;
-
-exports[`OuiFlexItem shrink true is rendered 1`] = `
-<div
-  class="ouiFlexItem"
 />
 `;
