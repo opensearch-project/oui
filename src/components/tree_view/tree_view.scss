@@ -24,7 +24,7 @@
 }
 
 .ouiTreeView__node--expanded {
-  max-height: 100vh;
+  max-height: none !important;
 }
 
 .ouiTreeView__nodeInner {
