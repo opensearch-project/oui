@@ -5,7 +5,7 @@ exports[`OuiDataGrid pagination renders 1`] = `
   class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsCenter ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow"
 >
   <div
-    class="ouiFlexItem ouiFlexItem--flexGrowZero"
+    class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
   >
     <div
       class="ouiPopover ouiPopover--anchorUpRight"
@@ -37,7 +37,7 @@ exports[`OuiDataGrid pagination renders 1`] = `
     </div>
   </div>
   <div
-    class="ouiFlexItem ouiFlexItem--flexGrowZero"
+    class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
   >
     <nav
       aria-label="Pagination for preceding grid: test grid"

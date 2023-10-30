@@ -111,14 +111,14 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
                   />
                 </OuiFlexItem>
                 <OuiFlexItem
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
                   />
                 </OuiFlexItem>
               </div>
@@ -355,7 +355,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
                   >
                     <OuiPopover
                       anchorPosition="upRight"
@@ -456,7 +456,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
                   >
                     <OuiPagination
                       activePage={1}
@@ -904,7 +904,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
                   >
                     <OuiI18n
                       default="Select all rows"
@@ -950,7 +950,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
                   />
                 </OuiFlexItem>
               </div>
