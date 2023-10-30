@@ -23,7 +23,7 @@ import {
 } from '../../../../../src/components';
 
 export const VisPalette = ({ variant }) => {
-  // TODO: Make this dynamic once we have ouiPaletteColorBlind in the dark and next-dark theme
+  // ouiPaletteColorBlind() is currently shared across themes and dark/light modes. This will need to be  made dynamic once we have different visualization palettes as in https://github.com/opensearch-project/oui/issues/818
   const visColors = getSassVars('light').ouiPaletteColorBlind;
   const visColorKeys = Object.keys(getSassVars('light').ouiPaletteColorBlind);
 
