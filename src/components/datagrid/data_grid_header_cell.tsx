@@ -313,71 +313,71 @@ export const OuiDataGridHeaderCell: FunctionComponent<OuiDataGridHeaderCellProps
 
   return (
     <OuiToolTip position="top" content={id}>
-    <div
-      role="columnheader"
-      {...ariaProps}
-      ref={headerRef}
-      tabIndex={isFocused && !isCellEntered ? 0 : -1}
-      className={classes}
-      data-test-subj={`dataGridHeaderCell-${id}`}
-      style={width != null ? { width: `${width}px` } : {}}>
-      {column.isResizable !== false && width != null ? (
-        <OuiDataGridColumnResizer
-          columnId={id}
-          columnWidth={width}
-          setColumnWidth={setColumnWidth}
-        />
-      ) : null}
+      <div
+        role="columnheader"
+        {...ariaProps}
+        ref={headerRef}
+        tabIndex={isFocused && !isCellEntered ? 0 : -1}
+        className={classes}
+        data-test-subj={`dataGridHeaderCell-${id}`}
+        style={width != null ? { width: `${width}px` } : {}}>
+        {column.isResizable !== false && width != null ? (
+          <OuiDataGridColumnResizer
+            columnId={id}
+            columnWidth={width}
+            setColumnWidth={setColumnWidth}
+          />
+        ) : null}
 
-      {sorting && sorting.columns.length >= 2 && (
-        <OuiScreenReaderOnly>
-          <div id={screenReaderId}>{sortString}</div>
-        </OuiScreenReaderOnly>
-      )}
-      {!showColumnActions ? (
-        <>
-          {sortingArrow}
-          <div className="ouiDataGridHeaderCell__content">
-            {display || displayAsText || id}
-          </div>
-        </>
-      ) : (
-        <OuiPopover
-          anchorClassName="ouiDataGridHeaderCell__anchor"
-          panelPaddingSize="none"
-          offset={7}
-          button={
-            <button
-              className="ouiDataGridHeaderCell__button"
-              onClick={() =>
-                setIsPopoverOpen((isPopoverOpen) => !isPopoverOpen)
-              }>
-              {sortingArrow}
-              <div className="ouiDataGridHeaderCell__content">
-                {display || displayAsText || id}
-              </div>
-              <OuiIcon
-                className="ouiDataGridHeaderCell__icon"
-                type="arrowDown"
-                size="s"
-                color="text"
-                aria-label={actionButtonAriaLabel}
-                data-test-subj={`dataGridHeaderCellActionButton-${id}`}
+        {sorting && sorting.columns.length >= 2 && (
+          <OuiScreenReaderOnly>
+            <div id={screenReaderId}>{sortString}</div>
+          </OuiScreenReaderOnly>
+        )}
+        {!showColumnActions ? (
+          <>
+            {sortingArrow}
+            <div className="ouiDataGridHeaderCell__content">
+              {display || displayAsText || id}
+            </div>
+          </>
+        ) : (
+          <OuiPopover
+            anchorClassName="ouiDataGridHeaderCell__anchor"
+            panelPaddingSize="none"
+            offset={7}
+            button={
+              <button
+                className="ouiDataGridHeaderCell__button"
+                onClick={() =>
+                  setIsPopoverOpen((isPopoverOpen) => !isPopoverOpen)
+                }>
+                {sortingArrow}
+                <div className="ouiDataGridHeaderCell__content">
+                  {display || displayAsText || id}
+                </div>
+                <OuiIcon
+                  className="ouiDataGridHeaderCell__icon"
+                  type="arrowDown"
+                  size="s"
+                  color="text"
+                  aria-label={actionButtonAriaLabel}
+                  data-test-subj={`dataGridHeaderCellActionButton-${id}`}
+                />
+              </button>
+            }
+            isOpen={isPopoverOpen}
+            closePopover={() => setIsPopoverOpen(false)}>
+            <div>
+              <OuiListGroup
+                listItems={columnActions}
+                gutterSize="none"
+                data-test-subj={`dataGridHeaderCellActionGroup-${id}`}
               />
-            </button>
-          }
-          isOpen={isPopoverOpen}
-          closePopover={() => setIsPopoverOpen(false)}>
-          <div>
-            <OuiListGroup
-              listItems={columnActions}
-              gutterSize="none"
-              data-test-subj={`dataGridHeaderCellActionGroup-${id}`}
-            />
-          </div>
-        </OuiPopover>
-      )}
-    </div>
+            </div>
+          </OuiPopover>
+        )}
+      </div>
     </OuiToolTip>
   );
 };
