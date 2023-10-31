@@ -55,6 +55,7 @@ import {
   DataGridFocusContext,
   DataGridSortingContext,
 } from './data_grid_context';
+import { OuiToolTip } from '../tool_tip';
 
 export interface OuiDataGridHeaderCellProps
   extends Omit<
@@ -311,6 +312,7 @@ export const OuiDataGridHeaderCell: FunctionComponent<OuiDataGridHeaderCellProps
   ) : null;
 
   return (
+    <OuiToolTip position="top" content={id}>
     <div
       role="columnheader"
       {...ariaProps}
@@ -376,5 +378,6 @@ export const OuiDataGridHeaderCell: FunctionComponent<OuiDataGridHeaderCellProps
         </OuiPopover>
       )}
     </div>
+    </OuiToolTip>
   );
 };
