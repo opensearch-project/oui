@@ -163,7 +163,7 @@ export const OuiMarkdownEditorFooter = forwardRef<
       <OuiPopover
         button={
           <OuiButtonEmpty
-            iconType="crossInCircleFilled"
+            iconType="crossInACircleFilled"
             size="s"
             color="danger"
             aria-label={ariaLabels.showSyntaxErrors}

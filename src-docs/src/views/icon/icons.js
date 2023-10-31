@@ -71,7 +71,7 @@ export const iconTypes = [
   'cross',
   'crosshairs',
   'crossInCircleEmpty',
-  'crossInCircleFilled',
+  'crossInACircleFilled',
   'currency',
   'cut',
   'database',

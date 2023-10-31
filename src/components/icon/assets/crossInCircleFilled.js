@@ -10,7 +10,7 @@
  */
 
 import * as React from 'react';
-const OuiIconCrossInCircleFilled = ({ title, titleId, ...props }) => (
+const OuiIconCrossInACircleFilled = ({ title, titleId, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={16}
@@ -22,4 +22,4 @@ const OuiIconCrossInCircleFilled = ({ title, titleId, ...props }) => (
     <path d="m8.746 8 3.1-3.1a.527.527 0 1 0-.746-.746L8 7.254l-3.1-3.1a.527.527 0 1 0-.746.746l3.1 3.1-3.1 3.1a.527.527 0 1 0 .746.746l3.1-3.1 3.1 3.1a.527.527 0 1 0 .746-.746L8.746 8ZM8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16Z" />
   </svg>
 );
-export const icon = OuiIconCrossInCircleFilled;
+export const icon = OuiIconCrossInACircleFilled;
