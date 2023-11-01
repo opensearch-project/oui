@@ -96,9 +96,9 @@ export const OuiFlexItem: FunctionComponent<
 > = ({
   children,
   className,
-  grow = true, // default true -> keep grow 1 coming from flex_grid
-  shrink = 1, // default 1 for shrink
-  basis = 'auto', // default 'auto' basis
+  grow = true, // default true -> flex-grow: 1 and flex-basis: 0%
+  shrink = null, // default null for flex-shrink
+  basis = null, // default null flex-basis
   component: Component = 'div',
   ...rest
 }) => {
