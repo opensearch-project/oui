@@ -21,7 +21,7 @@ exports[`OuiPageHeader props alignItems bottom is rendered 1`] = `
       class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsFlexEnd ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiPageHeaderContent__top"
     >
       <div
-        class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem"
       >
         <h1
           class="ouiTitle ouiTitle--large"
@@ -30,20 +30,20 @@ exports[`OuiPageHeader props alignItems bottom is rendered 1`] = `
         </h1>
       </div>
       <div
-        class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem ouiFlexItem--flexGrowZero"
       >
         <div
           class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--wrap ouiPageHeaderContent__rightSideItems"
         >
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 1
             </button>
           </div>
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 2
@@ -67,7 +67,7 @@ exports[`OuiPageHeader props alignItems center is rendered 1`] = `
       class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiPageHeaderContent__top"
     >
       <div
-        class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem"
       >
         <h1
           class="ouiTitle ouiTitle--large"
@@ -76,20 +76,20 @@ exports[`OuiPageHeader props alignItems center is rendered 1`] = `
         </h1>
       </div>
       <div
-        class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem ouiFlexItem--flexGrowZero"
       >
         <div
           class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--wrap ouiPageHeaderContent__rightSideItems"
         >
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 1
             </button>
           </div>
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 2
@@ -113,7 +113,7 @@ exports[`OuiPageHeader props alignItems stretch is rendered 1`] = `
       class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiPageHeaderContent__top"
     >
       <div
-        class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem"
       >
         <h1
           class="ouiTitle ouiTitle--large"
@@ -122,20 +122,20 @@ exports[`OuiPageHeader props alignItems stretch is rendered 1`] = `
         </h1>
       </div>
       <div
-        class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem ouiFlexItem--flexGrowZero"
       >
         <div
           class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--wrap ouiPageHeaderContent__rightSideItems"
         >
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 1
             </button>
           </div>
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 2
@@ -159,7 +159,7 @@ exports[`OuiPageHeader props alignItems top is rendered 1`] = `
       class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsFlexStart ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiPageHeaderContent__top"
     >
       <div
-        class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem"
       >
         <h1
           class="ouiTitle ouiTitle--large"
@@ -168,20 +168,20 @@ exports[`OuiPageHeader props alignItems top is rendered 1`] = `
         </h1>
       </div>
       <div
-        class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem ouiFlexItem--flexGrowZero"
       >
         <div
           class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--directionRow ouiFlexGroup--wrap ouiPageHeaderContent__rightSideItems"
         >
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 1
             </button>
           </div>
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 2
@@ -205,7 +205,7 @@ exports[`OuiPageHeader props page content props are passed down is rendered 1`] 
       class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsFlexStart ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiPageHeaderContent__top"
     >
       <div
-        class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem"
       >
         <h1
           class="ouiTitle ouiTitle--large"
@@ -224,7 +224,7 @@ exports[`OuiPageHeader props page content props are passed down is rendered 1`] 
         </div>
       </div>
       <div
-        class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+        class="ouiFlexItem ouiFlexItem--flexGrowZero"
       >
         <div
           aria-label="aria-label"
@@ -232,14 +232,14 @@ exports[`OuiPageHeader props page content props are passed down is rendered 1`] 
           data-test-subj="test subject string"
         >
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 1
             </button>
           </div>
           <div
-            class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+            class="ouiFlexItem ouiFlexItem--flexGrowZero"
           >
             <button>
               Button 2

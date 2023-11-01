@@ -12,14 +12,14 @@ exports[`OuiFilterSelectItem is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         data-ouiicon-type="empty"
       />
     </div>
     <span
-      class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+      class="ouiFlexItem ouiFilterSelectItem__content"
     />
   </span>
 </button>

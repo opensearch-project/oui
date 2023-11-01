@@ -11,7 +11,7 @@ exports[`OuiHeaderAlert is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow ouiFlexGroup--responsive"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem"
     >
       <div
         class="ouiHeaderAlert__date"
@@ -43,7 +43,7 @@ exports[`OuiHeaderAlert renders action 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow ouiFlexGroup--responsive"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem"
     >
       <div
         class="ouiHeaderAlert__date"
@@ -82,7 +82,7 @@ exports[`OuiHeaderAlert renders date as an element 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow ouiFlexGroup--responsive"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem"
     >
       <div
         class="ouiHeaderAlert__date"
@@ -116,7 +116,7 @@ exports[`OuiHeaderAlert renders title as an element 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow ouiFlexGroup--responsive"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem"
     >
       <div
         class="ouiHeaderAlert__date"

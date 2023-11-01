@@ -1104,7 +1104,7 @@ exports[`props options list is rendered 1`] = `
               class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
                   class="ouiComboBoxOption__contentWrapper"
@@ -1131,7 +1131,7 @@ exports[`props options list is rendered 1`] = `
               class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
                   class="ouiComboBoxOption__contentWrapper"
@@ -1158,7 +1158,7 @@ exports[`props options list is rendered 1`] = `
               class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
                   class="ouiComboBoxOption__contentWrapper"
@@ -1185,7 +1185,7 @@ exports[`props options list is rendered 1`] = `
               class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
                   class="ouiComboBoxOption__contentWrapper"
@@ -1212,7 +1212,7 @@ exports[`props options list is rendered 1`] = `
               class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
                   class="ouiComboBoxOption__contentWrapper"
@@ -1239,7 +1239,7 @@ exports[`props options list is rendered 1`] = `
               class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
                   class="ouiComboBoxOption__contentWrapper"
@@ -1266,7 +1266,7 @@ exports[`props options list is rendered 1`] = `
               class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
                   class="ouiComboBoxOption__contentWrapper"
@@ -1293,7 +1293,7 @@ exports[`props options list is rendered 1`] = `
               class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
                   class="ouiComboBoxOption__contentWrapper"
@@ -1320,7 +1320,7 @@ exports[`props options list is rendered 1`] = `
               class="ouiFlexGroup ouiFlexGroup--gutterSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
             >
               <span
-                class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiFilterSelectItem__content"
+                class="ouiFlexItem ouiFilterSelectItem__content"
               >
                 <span
                   class="ouiComboBoxOption__contentWrapper"

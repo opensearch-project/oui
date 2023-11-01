@@ -10,14 +10,14 @@ exports[`OuiHealth is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         data-ouiicon-type="dot"
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -31,7 +31,7 @@ exports[`OuiHealth props color #000000 is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="#000000"
@@ -39,7 +39,7 @@ exports[`OuiHealth props color #000000 is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -53,7 +53,7 @@ exports[`OuiHealth props color accent is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="accent"
@@ -61,7 +61,7 @@ exports[`OuiHealth props color accent is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -75,7 +75,7 @@ exports[`OuiHealth props color danger is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="danger"
@@ -83,7 +83,7 @@ exports[`OuiHealth props color danger is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -97,7 +97,7 @@ exports[`OuiHealth props color default is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="default"
@@ -105,7 +105,7 @@ exports[`OuiHealth props color default is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -119,7 +119,7 @@ exports[`OuiHealth props color ghost is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="ghost"
@@ -127,7 +127,7 @@ exports[`OuiHealth props color ghost is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -141,7 +141,7 @@ exports[`OuiHealth props color inherit is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="inherit"
@@ -149,7 +149,7 @@ exports[`OuiHealth props color inherit is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -163,7 +163,7 @@ exports[`OuiHealth props color primary is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="primary"
@@ -171,7 +171,7 @@ exports[`OuiHealth props color primary is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -185,7 +185,7 @@ exports[`OuiHealth props color secondary is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="secondary"
@@ -193,7 +193,7 @@ exports[`OuiHealth props color secondary is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -207,7 +207,7 @@ exports[`OuiHealth props color subdued is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="subdued"
@@ -215,7 +215,7 @@ exports[`OuiHealth props color subdued is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -229,7 +229,7 @@ exports[`OuiHealth props color success is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="success"
@@ -237,7 +237,7 @@ exports[`OuiHealth props color success is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -251,7 +251,7 @@ exports[`OuiHealth props color text is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="text"
@@ -259,7 +259,7 @@ exports[`OuiHealth props color text is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -273,7 +273,7 @@ exports[`OuiHealth props color warning is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="warning"
@@ -281,7 +281,7 @@ exports[`OuiHealth props color warning is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -295,7 +295,7 @@ exports[`OuiHealth props textSize inherit is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="success"
@@ -303,7 +303,7 @@ exports[`OuiHealth props textSize inherit is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -317,7 +317,7 @@ exports[`OuiHealth props textSize m is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="success"
@@ -325,7 +325,7 @@ exports[`OuiHealth props textSize m is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -339,7 +339,7 @@ exports[`OuiHealth props textSize s is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="success"
@@ -347,7 +347,7 @@ exports[`OuiHealth props textSize s is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
@@ -361,7 +361,7 @@ exports[`OuiHealth props textSize xs is rendered 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterExtraSmall ouiFlexGroup--alignItemsCenter ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <span
         color="success"
@@ -369,7 +369,7 @@ exports[`OuiHealth props textSize xs is rendered 1`] = `
       />
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     />
   </div>
 </div>
