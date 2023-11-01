@@ -47,6 +47,12 @@ const flexGrowZeroSource = require('!!raw-loader!./flex_grow_zero');
 import FlexGrowNumeric from './flex_grow_numeric';
 const flexGrowNumericSource = require('!!raw-loader!./flex_grow_numeric');
 
+import FlexShrinkNumeric from './flex_shrink_numeric';
+const flexShrinkNumericSource = require('!!raw-loader!./flex_shrink_numeric');
+
+import FlexBasisString from './flex_basis_string';
+const FlexBasisStringSource = require('!!raw-loader!./flex_basis_string');
+
 import FlexJustify from './flex_justify';
 const flexJustifySource = require('!!raw-loader!./flex_justify');
 import FlexJustifyBetween from './flex_justify_between';
@@ -105,10 +111,31 @@ const flexGrowZeroSnippet = `<OuiFlexGroup>
 </OuiFlexGroup>`;
 
 const flexGrowNumericSnippet = `<OuiFlexGroup>
-  <OuiFlexItem grow={1}><!-- FlexItem with flew-grow 1 --></OuiFlexItem>
-  <OuiFlexItem grow={2}><!-- FlexItem with flew-grow 2 --></OuiFlexItem>
+  <OuiFlexItem grow={1}><!-- FlexItem with flex-grow 1 --></OuiFlexItem>
+  <OuiFlexItem grow={2}><!-- FlexItem with flex-grow 2 --></OuiFlexItem>
   ...
-  <OuiFlexItem grow={10}><!-- FlexItem with flew-grow 10 --></OuiFlexItem>
+  <OuiFlexItem grow={10}><!-- FlexItem with flex-grow 10 --></OuiFlexItem>
+</OuiFlexGroup>`;
+
+const flexShrinkNumericSnippet = `<OuiFlexGroup>
+  <OuiFlexItem grow={false} shrink={1}><!-- FlexItem with flex-shrink 1 --></OuiFlexItem>
+  <OuiFlexItem grow={false} shrink={2}><!-- FlexItem with flex-shrink 2 --></OuiFlexItem>
+  ...
+  <OuiFlexItem grow={false} shrink={10}><!-- FlexItem with flex-shrink 10 --></OuiFlexItem>
+</OuiFlexGroup>
+
+<OuiFlexGroup>
+  <OuiFlexItem shrink={1} basis={'auto'}><!-- FlexItem with flex-shrink 1 --></OuiFlexItem>
+  <OuiFlexItem shrink={2} basis={'auto'}><!-- FlexItem with flex-shrink 2 --></OuiFlexItem>
+  ...
+  <OuiFlexItem shrink={10} basis={'auto'}><!-- FlexItem with flex-shrink 10 --></OuiFlexItem>
+</OuiFlexGroup>`;
+
+const flexBasisStringSnippet = `<OuiFlexGroup>
+  <OuiFlexItem basis={'auto'}><!-- FlexItem with flex-basis 'auto' --></OuiFlexItem>
+  <OuiFlexItem basis={'fit-content'}><!-- FlexItem with flex-basis 'fit-content' --></OuiFlexItem>
+  <OuiFlexItem basis={'max-content'}><!-- FlexItem with flex-basis 'max-content' --></OuiFlexItem>
+  <OuiFlexItem basis={'min-content'}><!-- FlexItem with flex-basis 'min-content' --></OuiFlexItem>
 </OuiFlexGroup>`;
 
 const directionSnippet = `<OuiFlexGroup direction="column">
@@ -325,6 +352,55 @@ export const FlexExample = {
       demo: (
         <div className="guideDemo__highlightGrid">
           <FlexGrowNumeric />
+        </div>
+      ),
+    },
+    {
+      title: 'Proportional shrinking of items',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: flexShrinkNumericSource,
+        },
+      ],
+      text: (
+        <p>
+          You can specify a number between 1 and 10 for each{' '}
+          <strong>OuiFlexItem</strong> to take up a proportional shrinking of
+          the <strong>OuiFlexGroup</strong> it is in. For this to apply: (1) the
+          prop <strong>grow</strong> should set into <strong>false</strong> or
+          change the <strong>basis</strong> prop to <strong>auto</strong> and
+          (2) the content in the all flex item should be sufficient enough to
+          reach the width of the flex parent.
+        </p>
+      ),
+      snippet: flexShrinkNumericSnippet,
+      demo: (
+        <div className="guideDemo__highlightGrid">
+          <FlexShrinkNumeric />
+        </div>
+      ),
+    },
+    {
+      title: 'Basis of flex items',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: FlexBasisStringSource,
+        },
+      ],
+      text: (
+        <p>
+          You can also specify the <strong>flex-basis</strong> CSS property of a
+          flex item using the <strong>basis</strong> prop with one of the
+          following options: <strong>auto</strong>, <strong>content-fit</strong>
+          , <strong>content-max</strong>, <strong>content-min</strong>
+        </p>
+      ),
+      snippet: flexBasisStringSnippet,
+      demo: (
+        <div className="guideDemo__highlightGrid">
+          <FlexBasisString />
         </div>
       ),
     },
