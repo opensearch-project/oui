@@ -26,7 +26,7 @@ exports[`OuiDescribedFormGroup is rendered 1`] = `
       >
         <OuiFlexItem>
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
           >
             <OuiTitle
               className="ouiDescribedFormGroup__title"
@@ -64,7 +64,7 @@ exports[`OuiDescribedFormGroup is rendered 1`] = `
           className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
               describedByIds={Array []}
@@ -122,7 +122,7 @@ exports[`OuiDescribedFormGroup props description is not rendered when it's not p
       >
         <OuiFlexItem>
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
           >
             <OuiTitle
               className="ouiDescribedFormGroup__title"
@@ -140,7 +140,7 @@ exports[`OuiDescribedFormGroup props description is not rendered when it's not p
           className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
               describedByIds={Array []}
@@ -200,7 +200,7 @@ exports[`OuiDescribedFormGroup props fullWidth is rendered 1`] = `
       >
         <OuiFlexItem>
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
           >
             <OuiTitle
               className="ouiDescribedFormGroup__title"
@@ -238,7 +238,7 @@ exports[`OuiDescribedFormGroup props fullWidth is rendered 1`] = `
           className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
               describedByIds={Array []}
@@ -298,7 +298,7 @@ exports[`OuiDescribedFormGroup props gutterSize is rendered 1`] = `
       >
         <OuiFlexItem>
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
           >
             <OuiTitle
               className="ouiDescribedFormGroup__title"
@@ -336,7 +336,7 @@ exports[`OuiDescribedFormGroup props gutterSize is rendered 1`] = `
           className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
               describedByIds={Array []}
@@ -407,7 +407,7 @@ exports[`OuiDescribedFormGroup props props for the flex item containers are pass
           grow={2}
         >
           <div
-            className="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink1"
+            className="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
           >
             <OuiTitle
               className="ouiDescribedFormGroup__title"
@@ -446,7 +446,7 @@ exports[`OuiDescribedFormGroup props props for the flex item containers are pass
           component="section"
         >
           <section
-            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
               describedByIds={Array []}
@@ -506,7 +506,7 @@ exports[`OuiDescribedFormGroup props titleSize is rendered 1`] = `
       >
         <OuiFlexItem>
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
           >
             <OuiTitle
               className="ouiDescribedFormGroup__title"
@@ -544,7 +544,7 @@ exports[`OuiDescribedFormGroup props titleSize is rendered 1`] = `
           className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--large"
         >
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--large"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--large"
           >
             <OuiFormRow
               describedByIds={Array []}
@@ -603,7 +603,7 @@ exports[`OuiDescribedFormGroup ties together parts for accessibility 1`] = `
       >
         <OuiFlexItem>
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
           >
             <OuiTitle
               className="ouiDescribedFormGroup__title"
@@ -641,7 +641,7 @@ exports[`OuiDescribedFormGroup ties together parts for accessibility 1`] = `
           className="ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
         >
           <div
-            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
+            className="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto ouiDescribedFormGroup__fields ouiDescribedFormGroup__fieldPadding--xsmall"
           >
             <OuiFormRow
               describedByIds={Array []}

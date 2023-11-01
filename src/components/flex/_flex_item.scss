@@ -56,7 +56,7 @@
   $flexBasisOptions: auto, max-content, min-content, fit-content; /* 3 */
 
   @each $basis in $flexBasisOptions { /* 3 */
-    .ouiFlexItem--flexBasis#{$basis} { /* 3 */
+    &.ouiFlexItem--flexBasis-#{$basis} { /* 3 */
       flex-basis: $basis; /* 3 */
     }
   }

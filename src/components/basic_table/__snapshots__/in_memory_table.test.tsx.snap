@@ -111,14 +111,14 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
                   />
                 </OuiFlexItem>
                 <OuiFlexItem
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
                   />
                 </OuiFlexItem>
               </div>
@@ -355,7 +355,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
                   >
                     <OuiPopover
                       anchorPosition="upRight"
@@ -456,7 +456,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
                   >
                     <OuiPagination
                       activePage={1}
@@ -904,7 +904,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
                   >
                     <OuiI18n
                       default="Select all rows"
@@ -950,7 +950,7 @@ exports[`OuiInMemoryTable with initial selection 1`] = `
                   grow={false}
                 >
                   <div
-                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
+                    className="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
                   />
                 </OuiFlexItem>
               </div>

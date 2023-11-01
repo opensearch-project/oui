@@ -63,12 +63,12 @@ exports[`OuiEmptyPrompt props actions renders an array 1`] = `
     class="ouiFlexGroup ouiFlexGroup--gutterMedium ouiFlexGroup--alignItemsCenter ouiFlexGroup--justifyContentCenter ouiFlexGroup--directionColumn ouiFlexGroup--responsive"
   >
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
     >
       action1
     </div>
     <div
-      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
     >
       action2
     </div>
