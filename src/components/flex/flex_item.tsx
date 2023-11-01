@@ -118,8 +118,8 @@ export const OuiFlexItem: FunctionComponent<
           ? SHRINK_SIZES.indexOf(shrink) >= 0
           : undefined,
       [`ouiFlexItem--flexBasis${basis}`]:
-        typeof shrink === 'string'
-          ? BASIS_VALUES.indexOf(shrink) >= 0
+        typeof basis === 'string'
+          ? BASIS_VALUES.indexOf(basis) >= 0
           : undefined,
     },
     className
