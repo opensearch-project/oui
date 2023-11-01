@@ -36,11 +36,6 @@
     flex-basis: auto; /* 2 */
   }
 
-  &.ouiFlexItem--flexShrinkZero { /* 1 */
-    flex-grow: 0; /* 2 */
-    flex-basis: auto; /* 2 */
-  }
-
   @for $i from 1 through 10 { /* 3 */
     &.ouiFlexItem--flexGrow#{$i} { /* 3 */
       flex-grow: $i; /* 3 */

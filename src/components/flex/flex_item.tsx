@@ -110,7 +110,6 @@ export const OuiFlexItem: FunctionComponent<
     'ouiFlexItem',
     {
       'ouiFlexItem--flexGrowZero': !grow,
-      'ouiFlexItem--flexShrinkZero': !shrink,
       [`ouiFlexItem--flexGrow${grow}`]:
         typeof grow === 'number' ? GROW_SIZES.indexOf(grow) >= 0 : undefined,
       [`ouiFlexItem--flexShrink${shrink}`]:
@@ -161,7 +160,7 @@ function validateBasisValue(value: OuiFlexItemProps['basis']) {
   // Check if the passed value is one of the valid values.
   if (!validValues.includes(value)) {
     throw new Error(
-      `Prop \`basis\` passed to \`OuiFlexItem\` must be one of ['auto', '0%', '25%', '50%', '75%', '100%'], received \`${value}\``
+      `Prop \`basis\` passed to \`OuiFlexItem\` must be one of ['auto', 'min-content', 'max-content', 'fit-content'], received \`${value}\``
     );
   }
 }
