@@ -20,7 +20,6 @@ import {
   OuiScreenReaderOnly,
   OuiPanel,
 } from '../../../../../src/components';
-import { rgbToHex } from '../../../../../src/services';
 
 export function scrollToSelector(selector, attempts = 5) {
   const element = document.querySelector(selector);
@@ -46,7 +45,7 @@ export const CorePalette = ({ theme, colors }) => {
       <OuiFlexItem key={index} grow={false}>
         <OuiCopy
           title={`$${color}:
-          ${rgbToHex(hex.rgba).toUpperCase()}`}
+          ${hex}`}
           beforeMessage={
             <small>
               <kbd>Click</kbd> to copy color name
@@ -66,7 +65,7 @@ export const CorePalette = ({ theme, colors }) => {
                 className={iconClass}
                 size="xxl"
                 type="stopFilled"
-                color={rgbToHex(hex.rgba)}
+                color={hex}
               />
               <OuiScreenReaderOnly>
                 <span>{color}</span>
