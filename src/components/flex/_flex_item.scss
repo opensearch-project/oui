@@ -53,7 +53,7 @@
     }
   }
 
-  $flexBasisOptions: 'auto', 'max-content', 'min-content', 'fit-content'; /* 3 */
+  $flexBasisOptions: auto, max-content, min-content, fit-content; /* 3 */
 
   @each $basis in $flexBasisOptions { /* 3 */
     .ouiFlexItem--flexBasis#{$basis} { /* 3 */
