@@ -91,7 +91,7 @@ If you want to use the new, but in progress Next theme, you can import it simila
 
 ### Using Sass to customize OUI
 
-OUI's Sass themes are token based, which can be altered to suite your theming needs like changing the primary color. Simply declare your token overrides before importing the whole OUI theme. This will re-compile **all of the OUI components** with your colors.
+OUI's Sass themes are token based, which can be altered to suit your theming needs like changing the primary color. Simply declare your token overrides before importing the whole OUI theme. This will re-compile **all of the OUI components** with your colors.
 
 *Do not use in conjunction with the compiled CSS.*
 
