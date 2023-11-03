@@ -191,5 +191,11 @@ module.exports = {
         'react/prefer-stateless-function': 'off',
       },
     },
+    {
+      files: ['scripts/**/*.{ts,tsx,js}'], // Modify the pattern to match your specific directory
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
   ],
 };

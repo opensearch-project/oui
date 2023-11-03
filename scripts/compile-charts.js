@@ -28,7 +28,6 @@
  * under the License.
  */
 
-
 const { execSync } = require('child_process');
 const chalk = require('chalk');
 const path = require('path');
@@ -55,7 +54,7 @@ function compileChartsBundle() {
         return '@opensearch-project/oui/src/components/common';
       }
       return null;
-    }
+    },
   });
 
   /* OUI -> EUI Aliases */
@@ -78,7 +77,7 @@ function compileChartsBundle() {
         return '@elastic/eui/src/components/common';
       }
       return null;
-    }
+    },
   });
   /* End of Aliases */
 

@@ -96,7 +96,7 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `,
 
-      options: [{ license: `// one\n// two` }],
+      options: [{ license: '// one\n// two' }],
       errors: [
         {
           message: '"license" option must only include a single comment',
@@ -131,7 +131,7 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `,
 
-      options: [{ license: `console.log('hello world');` }],
+      options: [{ license: "console.log('hello world');" }],
       errors: [
         {
           message: '"license" option must only include a single comment',
@@ -161,13 +161,11 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
 
     // strips newlines before the license comment
     {
-      code:
-        '\n\n' +
-        dedent`
+      code: `\n\n${dedent`
         /* license */
 
         console.log('foo')
-      `,
+      `}`,
 
       options: [{ license: '/* license */' }],
       errors: [

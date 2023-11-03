@@ -11,7 +11,7 @@
 
 const path = require('path');
 const util = require('util');
-const { writeFile, mkdir, readFile } = require('fs/promises');
+const { writeFile, mkdir } = require('fs/promises');
 const globModule = require('glob');
 
 const chalk = require('chalk');
@@ -48,7 +48,7 @@ async function compileScssFiles(
   const inputFilenames = await glob(sourcePattern, undefined);
 
   await Promise.all(
-    inputFilenames.map(async inputFilename => {
+    inputFilenames.map(async (inputFilename) => {
       console.log(chalk`{cyan …} Compiling {gray ${inputFilename}}`);
 
       try {
@@ -63,20 +63,17 @@ async function compileScssFiles(
 
         console.log(
           chalk`{green ✔} Finished compiling {gray ${inputFilename}} to ${outputFilenames
-            .map(filename => chalk.gray(filename))
+            .map((filename) => chalk.gray(filename))
             .join(', ')}`
         );
       } catch (error) {
         console.log(
-          chalk`{red ✗} Failed to compile {gray ${inputFilename}} with ${
-            error.stack
-          }`
+          chalk`{red ✗} Failed to compile {gray ${inputFilename}} with ${error.stack}`
         );
 
         process.exitCode = 1;
         return;
       }
-
 
       /* OUI -> EUI Aliases */
       try {
@@ -91,14 +88,12 @@ async function compileScssFiles(
         );
         console.log(
           chalk`{green ✔} Finished compiling {gray ${inputFilename}} to ${outputFilenames
-            .map(filename => chalk.gray(filename))
+            .map((filename) => chalk.gray(filename))
             .join(', ')}`
         );
       } catch (error) {
         console.log(
-          chalk`{red ✗} Failed to compile {gray ${inputFilename}} with ${
-            error.stack
-          }`
+          chalk`{red ✗} Failed to compile {gray ${inputFilename}} with ${error.stack}`
         );
 
         process.exitCode = 1;
@@ -115,7 +110,7 @@ async function compileScssFile(
   outputVarTypesFilename,
   packageName,
   /* OUI -> EUI Aliases */
-  renameToEUI = false,
+  renameToEUI = false
   /* End of Aliases */
 ) {
   const outputCssMinifiedFilename = outputCssFilename.replace(
@@ -123,38 +118,45 @@ async function compileScssFile(
     '.min.css'
   );
 
-  const { css: renderedCss, variables: extractedVars } = await compileWithVariables(path.resolve(inputFilename));
+  const {
+    css: renderedCss,
+    variables: extractedVars,
+  } = await compileWithVariables(path.resolve(inputFilename));
 
   /* OUI -> EUI Aliases: Modified */
   // const extractedVarTypes = await deriveSassVariableTypes(
   const extractedVarTypes_ = await deriveSassVariableTypes(
-  /* End of Aliases */
+    /* End of Aliases */
     extractedVars,
     `${packageName}/${outputVarsFilename}`,
     outputVarTypesFilename
   );
 
   /* OUI -> EUI Aliases */
-  const declarationMatcher = /^declare\s+module\s+(['"]@opensearch-project\/oui.*?['"])\s*\{/msg;
+  const declarationMatcher = /^declare\s+module\s+(['"]@opensearch-project\/oui.*?['"])\s*\{/gms;
   let match;
   const declarations = [];
 
   while ((match = declarationMatcher.exec(extractedVarTypes_)) !== null) {
-      declarations.push(
-        "declare module " +
-        match[1].replace('@opensearch-project/oui', '@elastic/eui') + " {\n" +
-        "  import _ from " + match[1] + ";\n" +
-        "  export default _;\n" +
-        "}"
-      );
+    declarations.push(
+      `declare module ${match[1].replace(
+        '@opensearch-project/oui',
+        '@elastic/eui'
+      )} {\n` +
+        `  import _ from ${match[1]};\n` +
+        '  export default _;\n' +
+        '}'
+    );
   }
-  const extractedVarTypes = extractedVarTypes_ + '\n' + declarations.join('\n');
+  const extractedVarTypes = `${extractedVarTypes_}\n${declarations.join('\n')}`;
   /* End of Aliases */
 
   const { css: postprocessedCss } = await postcss(postcssConfiguration).process(
     /* OUI -> EUI Aliases: Modified */
     //renderedCss,
-    renameToEUI ? renderedCss.toString().replace(/([. '"-])oui/g, '$1eui') : renderedCss,
+    renameToEUI
+      ? renderedCss.toString().replace(/([. '"-])oui/g, '$1eui')
+      : renderedCss,
     /* End of Aliases */
     {
       from: outputCssFilename,
@@ -167,7 +169,9 @@ async function compileScssFile(
   ).process(
     /* OUI -> EUI Aliases: Modified */
     //renderedCss,
-    renameToEUI ? renderedCss.toString().replace(/([. '"-])oui/g, '$1eui') : renderedCss,
+    renameToEUI
+      ? renderedCss.toString().replace(/([. '"-])oui/g, '$1eui')
+      : renderedCss,
     /* End of Aliases */
     {
       from: outputCssFilename,
@@ -198,9 +202,12 @@ if (require.main === module) {
     process.exit(1);
   }
 
-  compileScssFiles(path.join('src', 'theme_*.scss'), 'dist', ouiPackageName)
-      .catch((err) => {
-        console.error(err);
-        process.exit(2);
-      });
+  compileScssFiles(
+    path.join('src', 'theme_*.scss'),
+    'dist',
+    ouiPackageName
+  ).catch((err) => {
+    console.error(err);
+    process.exit(2);
+  });
 }
