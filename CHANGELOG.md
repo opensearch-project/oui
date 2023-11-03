@@ -67,7 +67,6 @@
 - Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
 - Fix alignment of left icon for OuiListGroupItem with multiline text ([#1027](https://github.com/opensearch-project/oui/pull/1027))
 - Update new polygon icon svg ([#1068](https://github.com/opensearch-project/oui/pull/1083))
-- Remove max-height for TreeView node ([[#1118](https://github.com/opensearch-project/oui/issues/1118)])
 
 ### 🚞 Infrastructure
 
