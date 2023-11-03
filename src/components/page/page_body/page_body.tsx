@@ -88,6 +88,7 @@ export const OuiPageBody = <T extends ComponentTypes>({
     style
   );
 
+  useDeprecatedPropWarning({ props: { panelled }, version: '2.0.0' });
   const nonBreakingDefaultPadding = panelled ? 'l' : 'none';
   paddingSize = paddingSize || nonBreakingDefaultPadding;
 
@@ -113,7 +114,6 @@ export const OuiPageBody = <T extends ComponentTypes>({
       paddingSize={paddingSize}
       {...panelProps}
       {...rest}>
-      {useDeprecatedPropWarning({ props: { panelled }, version: '2.0.0' })}
       {children}
     </OuiPanel>
   ) : (
