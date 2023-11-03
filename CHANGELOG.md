@@ -13,6 +13,7 @@
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
+- Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
 
 ### 🐛 Bug Fixes
 
