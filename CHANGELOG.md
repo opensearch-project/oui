@@ -60,7 +60,6 @@
 - Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 - Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
 
-
 ### 🐛 Bug Fixes
 
 - Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
