@@ -114,6 +114,7 @@
 
   // This targets the last breadcrumb wrapper and sets a different text color for the breadcrumb inside it.
   &.ouiBreadcrumbWrapper--last .ouiBreadcrumb {
+    // TODO: remove important: https://github.com/opensearch-project/oui/issues/376
     color: inherit !important; // sass-lint:disable-line no-important
 
     &:hover {
