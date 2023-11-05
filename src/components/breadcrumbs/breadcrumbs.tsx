@@ -241,10 +241,8 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       'ouiBreadcrumb--truncate': truncate,
     });
 
-    let link;
-
-    if (!href && !onClick) {
-      link = (
+    const link =
+      !href && !onClick ? (
         <OuiInnerText>
           {(ref, innerText) => (
             <span
@@ -257,9 +255,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
             </span>
           )}
         </OuiInnerText>
-      );
-    } else {
-      link = (
+      ) : (
         <OuiInnerText>
           {(ref, innerText) => (
             <OuiLink
@@ -275,17 +271,22 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
           )}
         </OuiInnerText>
       );
-    }
 
-    let wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
+    const breadcrumbWallClasses = isFirstBreadcrumb
+      ? classNames('ouiBreadcrumbWall', {
+          'ouiBreadcrumbWall--single': isLastBreadcrumb,
+        })
+      : breadcrumbWrapperClasses;
 
-    if (isFirstBreadcrumb) {
-      const breadcrumbWallClasses = classNames('ouiBreadcrumbWall', {
-        'ouiBreadcrumbWall--single': isLastBreadcrumb,
-      });
-
-      wrapper = <div className={breadcrumbWallClasses}>{wrapper}</div>;
-    }
+    const wrapper = (
+      <div className={breadcrumbWallClasses}>
+        {isFirstBreadcrumb ? (
+          <div className={breadcrumbWrapperClasses}>{link}</div>
+        ) : (
+          link
+        )}
+      </div>
+    );
 
     return <Fragment key={index}>{wrapper}</Fragment>;
   });
