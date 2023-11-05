@@ -298,15 +298,16 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   // The max property collapses any breadcrumbs past the max quantity.
   // This is the same behavior we want for responsiveness.
   // So calculate the max value based on the combination of `max` and `responsive`
-  let calculatedMax: OuiBreadcrumbsProps['max'] = max;
-  // Set the calculated max to the number associated with the currentBreakpoint key if it exists
-  if (responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]) {
-    calculatedMax = responsiveObject[currentBreakpoint as OuiBreakpointSize];
-  }
-  // Final check is to make sure max is used over a larger breakpoint value
-  if (max && calculatedMax) {
-    calculatedMax = max < calculatedMax ? max : calculatedMax;
-  }
+
+  // First, calculate the responsive max value
+  const responsiveMax =
+    responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]
+      ? responsiveObject[currentBreakpoint as OuiBreakpointSize]
+      : null;
+
+  // Second, if both max and responsiveMax are set, use the smaller of the two. Otherwise, use the one that is set.
+  const calculatedMax: OuiBreadcrumbsProps['max'] =
+    max && responsiveMax ? Math.min(max, responsiveMax) : max;
 
   const limitedBreadcrumbs = calculatedMax
     ? limitBreadcrumbs(breadcrumbElements, calculatedMax, breadcrumbs)
