@@ -20,7 +20,6 @@
 ### 🚞 Infrastructure
 
 - Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
-- Add file utils for teardown function ([#1080](https://github.com/opensearch-project/oui/pull/1080))
 
 ### 📝 Documentation
 
@@ -34,6 +33,9 @@
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 
 ### 🪛 Refactoring
+
+- Improve organization of build scripts by isolating utilities ([#1080](https://github.com/opensearch-project/oui/pull/1080))
+
 
 ### 🔩 Tests
 
