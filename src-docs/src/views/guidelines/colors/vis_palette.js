@@ -21,9 +21,9 @@ import {
   OuiText,
   OuiPanel,
 } from '../../../../../src/components';
-import { rgbToHex } from '../../../../../src/services';
 
 export const VisPalette = ({ variant }) => {
+  // ouiPaletteColorBlind() is currently shared across themes and dark/light modes. This will need to be  made dynamic once we have different visualization palettes as in https://github.com/opensearch-project/oui/issues/818
   const visColors = getSassVars('light').ouiPaletteColorBlind;
   const visColorKeys = Object.keys(getSassVars('light').ouiPaletteColorBlind);
 
@@ -41,7 +41,7 @@ export const VisPalette = ({ variant }) => {
                   onClick={copy}
                   size="xl"
                   type="stopFilled"
-                  color={rgbToHex(hex.rgba)}
+                  color={hex}
                 />
               )}
             </OuiCopy>
@@ -54,7 +54,7 @@ export const VisPalette = ({ variant }) => {
           <OuiFlexItem>
             <OuiText size="s" color="subdued">
               <p>
-                <code>{rgbToHex(hex.rgba).toUpperCase()}</code>
+                <code>{hex}</code>
               </p>
             </OuiText>
           </OuiFlexItem>
