@@ -23,7 +23,6 @@ import {
   OuiPanel,
 } from '../../../../../src/components';
 import {
-  getHexValueFromColorName,
   ColorsContrastItem,
   allowedColors,
   textVariants,
@@ -40,7 +39,7 @@ export const ColorSection = ({
   const theme = useContext(ThemeContext).theme;
   const palette = getSassVars(theme);
   const colorsForContrast = showTextVariants ? textVariants : allowedColors;
-  const hex = getHexValueFromColorName(palette, color);
+  const hex = palette[color];
   const iconClass =
     color.includes('Lightest') ||
     color.includes('Empty') ||
