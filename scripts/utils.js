@@ -1,7 +1,10 @@
 const shell = require('shelljs');
 const fs = require('fs');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cc445de2f11c9b8239d710133673ddc534d73b8f
 /* OUI -> EUI Aliases */
 function euiBuildTimeAliasTearDown() {
   console.log('Tearing down build-time EUI aliases');
