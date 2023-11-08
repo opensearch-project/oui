@@ -39,7 +39,6 @@
 - Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
 - Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
 
-
 ### 🪛 Refactoring
 
 ### 🔩 Tests
