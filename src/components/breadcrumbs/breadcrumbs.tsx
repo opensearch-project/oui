@@ -307,7 +307,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
 
   // Second, if both max and responsiveMax are set, use the smaller of the two. Otherwise, use the one that is set.
   const calculatedMax: OuiBreadcrumbsProps['max'] =
-    max && responsiveMax ? Math.min(max, responsiveMax) : max;
+    max && responsiveMax ? Math.min(max, responsiveMax) : max || responsiveMax;
 
   const limitedBreadcrumbs = calculatedMax
     ? limitBreadcrumbs(breadcrumbElements, calculatedMax, breadcrumbs)
