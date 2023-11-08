@@ -40,7 +40,7 @@
 
 ### 🪛 Refactoring
 
-- Improve organization of build scripts by isolating utilities ([#1080](https://github.com/opensearch-project/oui/pull/1080))
+- Improve organization of the build scripts by isolating utilities ([#1080](https://github.com/opensearch-project/oui/pull/1080))
 
 
 ### 🔩 Tests
