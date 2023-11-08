@@ -24,6 +24,7 @@ import { OuiButtonEmpty } from '../../../../src/components/button';
 
 import { GuideThemeSelector } from '../guide_theme_selector';
 import { GuideVersionSelector } from '../guide_version_selector';
+import figmaLogo from '../../images/logo-figma.svg';
 
 const pkg = require('../../../../package.json');
 
@@ -52,11 +53,24 @@ export const GuidePageHeader: React.FunctionComponent<{}> = () => {
       </OuiButtonEmpty>
     ) : (
       <OuiToolTip content="Github">
-        <OuiHeaderSectionItemButton
-          aria-label={label}
-          // @ts-ignore TODO: FIX
-          href={href}>
+        <OuiHeaderSectionItemButton aria-label={label} href={href}>
           <OuiIcon type="logoGithub" aria-hidden="true" />
+        </OuiHeaderSectionItemButton>
+      </OuiToolTip>
+    );
+  }
+
+  function renderFigma() {
+    const href = 'https://www.figma.com/community/file/1240039515407642648';
+    const label = 'OUI Figma component library';
+    return isMobileSize ? (
+      <OuiButtonEmpty size="s" flush="both" iconType={figmaLogo} href={href}>
+        {label}
+      </OuiButtonEmpty>
+    ) : (
+      <OuiToolTip content="Figma Component Library">
+        <OuiHeaderSectionItemButton aria-label={label} href={href}>
+          <OuiIcon type={figmaLogo} aria-hidden="true" />
         </OuiHeaderSectionItemButton>
       </OuiToolTip>
     );
@@ -80,13 +94,14 @@ export const GuidePageHeader: React.FunctionComponent<{}> = () => {
         isOpen={mobilePopoverIsOpen}
         closePopover={() => setMobilePopoverIsOpen(false)}>
         <div className="guideOptionsPopover">{renderGithub()}</div>
+        <div className="guideOptionsPopover">{renderFigma()}</div>
       </OuiPopover>
     );
   }
 
   const rightSideItems = isMobileSize
     ? [<GuideThemeSelector />, renderMobileMenu()]
-    : [<GuideThemeSelector />, renderGithub()];
+    : [<GuideThemeSelector />, renderGithub(), renderFigma()];
 
   return (
     <OuiHeader

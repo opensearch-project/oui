@@ -38,24 +38,7 @@ const confirmModalSource = require('!!raw-loader!./confirm_modal');
 import ConfirmLoadingModal from './confirm_modal_loading';
 const confirmModalLoadingSource = require('!!raw-loader!./confirm_modal_loading');
 
-import ModalWidth from './modal_width';
-const modalWidthSource = require('!!raw-loader!./modal_width');
-
 const modalSnippet = `<OuiModal onClose={closeModal}>
-  <OuiModalHeader>
-    <OuiModalHeaderTitle><h1><!-- Modal title --></h1></OuiModalHeaderTitle>
-  </OuiModalHeader>
-
-  <OuiModalBody>
-    <!-- Modal body -->
-  </OuiModalBody>
-
-  <OuiModalFooter>
-    <OuiButton onClick={closeModal} fill>Close</OuiButton>
-  </OuiModalFooter>
-</OuiModal>`;
-
-const modalWidthSnippet = `<OuiModal style={{ width: 800 }} onClose={closeModal}>
   <OuiModalHeader>
     <OuiModalHeaderTitle><h1><!-- Modal title --></h1></OuiModalHeaderTitle>
   </OuiModalHeader>
@@ -242,33 +225,6 @@ export const ModalExample = {
       props: { OuiConfirmModal },
       snippet: confirmModalLoadingSnippet,
       demo: <ConfirmLoadingModal />,
-    },
-    {
-      title: 'Widths',
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: modalWidthSource,
-        },
-      ],
-      text: (
-        <>
-          <p>
-            Modals start with a minimum width of <OuiCode>400px</OuiCode>, just
-            enough to display form rows. They will grow to fit the contents
-            until it reaches the specified <OuiCode>maxWidth</OuiCode>, the
-            default of which is set to the medium breakpoint.
-          </p>
-          <p>
-            If the modal is not growing wide enough to fit your contents, you
-            can pass a specific <OuiCode>style.width</OuiCode>, just remember
-            that modals will always shrink to fit the window width.
-          </p>
-        </>
-      ),
-      props: { OuiModal },
-      snippet: modalWidthSnippet,
-      demo: <ModalWidth />,
     },
   ],
 };
