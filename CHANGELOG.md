@@ -40,6 +40,9 @@
 
 ### 🪛 Refactoring
 
+- Improve organization of the build scripts by isolating utilities ([#1080](https://github.com/opensearch-project/oui/pull/1080))
+
+
 ### 🔩 Tests
 
 ## [`1.3.0`](https://github.com/opensearch-project/oui/tree/1.3.0)
