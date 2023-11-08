@@ -192,9 +192,10 @@ module.exports = {
       },
     },
     {
-      files: ['scripts/**/*.{ts,tsx,js}'], // Modify the pattern to match your specific directory
+      // Currently supressing the following rules for files in the scirpts directory
+      files: ['scripts/**/*.{ts,tsx,js}'],
       rules: {
-        '@typescript-eslint/no-var-requires': 'off',
+        '@typescript-eslint/no-var-requires': 'off', // not enforcing ES6-style import statements
       },
     },
   ],
