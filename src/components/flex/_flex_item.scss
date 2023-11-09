@@ -24,8 +24,9 @@
 
   /*
    * 1. We need the extra specificity here to override the FlexGroup > FlexItem styles.
-   * 2. FlexItem can be manually set to not grow or shrink if needed (default).
-   * 3. FlexItem also can be given values for grow, shrink and basis:
+   * 2. FlexItem can be manually set to not grow or shrink if needed (default allows grow and shrink).
+   * 3. FlexItem basis can be set to 'auto' (defaul use flex-basis: 0%)
+   * 4. FlexItem also can be given values for grow, shrink and basis:
    *    - grow: 1..10
    *    - shrink: 1..10
    *    - basis: auto, max-content, min-content, fit-content
@@ -36,22 +37,31 @@
     flex-basis: auto; /* 2 */
   }
 
-  @for $i from 1 through 10 { /* 3 */
-    &.ouiFlexItem--flexGrow#{$i} { /* 3 */
-      flex-grow: $i; /* 3 */
+  &.ouiFlexItem--flexShrinkZero { /* 1 */
+    flex-shrink: 0; /* 2 */
+    flex-basis: auto; /* 2 */
+  }
+
+  &.ouiFlexItem--flexBasisAuto { /* 1 */
+    flex-basis: auto; /* 3 */
+  }
+
+  @for $i from 1 through 10 { /* 4 */
+    &.ouiFlexItem--flexGrow#{$i} { /* 4 */
+      flex-grow: $i; /* 4 */
     }
   }
 
-  @for $i from 1 through 10 { /* 3 */
-    &.ouiFlexItem--flexShrink#{$i} { /* 3 */
-      flex-shrink: $i; /* 3 */
+  @for $i from 1 through 10 { /* 4 */
+    &.ouiFlexItem--flexShrink#{$i} { /* 4 */
+      flex-shrink: $i; /* 4 */
     }
   }
 
-  $flexBasisOptions: auto, max-content, min-content, fit-content; /* 3 */
+  $flexBasisOptions: auto, max-content, min-content, fit-content; /* 4 */
 
-  @each $basis in $flexBasisOptions { /* 3 */
-    &.ouiFlexItem--flexBasis-#{$basis} { /* 3 */
+  @each $basis in $flexBasisOptions { /* 4 */
+    &.ouiFlexItem--flexBasis-#{$basis} { /* 4 */
       flex-basis: $basis; /* 3 */
     }
   }
