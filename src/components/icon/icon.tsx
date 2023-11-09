@@ -42,7 +42,7 @@ import { CommonProps, keysOf } from '../common';
 // because we'd need to dynamically know if we're importing the
 // TS file (dev/docs) or the JS file (distributed), and it's more effort than worth
 // to generate & git track a TS module definition for each icon component
-import { icon as empty } from './assets/empty.js';
+import { icon as defaultIcon } from './assets/beaker.js';
 import { enqueueStateChange } from '../../services/react';
 
 import { htmlIdGenerator } from '../../services';
@@ -587,17 +587,7 @@ function isOuiIconType(x: OuiIconProps['type']): x is OuiIconType {
 }
 
 function getInitialIcon(icon: OuiIconProps['type']) {
-  if (icon == null) {
-    return undefined;
-  }
-  if (isOuiIconType(icon)) {
-    if (iconComponentCache.hasOwnProperty(icon)) {
-      return iconComponentCache[icon];
-    }
-    return undefined;
-  }
-
-  return icon;
+  return icon && isOuiIconType(icon) ? iconComponentCache[icon] : icon;
 }
 
 const generateId = htmlIdGenerator();
@@ -631,11 +621,15 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
     const initialIcon = getInitialIcon(type);
     let isLoading = false;
 
-    if (isOuiIconType(type) && initialIcon == null) {
-      isLoading = true;
-      this.loadIconComponent(type);
-    } else {
+    // URL or relative path
+    if (
+      typeof type === 'string' &&
+      (type.includes('/') || type.includes('.'))
+    ) {
       this.onIconLoad();
+    } else {
+      isLoading = true;
+      this.loadIconComponent(type as OuiIconType);
     }
 
     this.state = {
@@ -683,12 +677,14 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
       return;
     }
 
+    const iconPath = typeToPathMap[iconType] || 'beaker';
+
     import(
       /* webpackChunkName: "icon.[request]" */
       // It's important that we don't use a template string here, it
       // stops webpack from building a dynamic require context.
       // eslint-disable-next-line prefer-template
-      './assets/' + typeToPathMap[iconType] + '.js'
+      './assets/' + iconPath + '.js'
     ).then(({ icon }) => {
       iconComponentCache[iconType] = icon;
       enqueueStateChange(() => {
@@ -761,7 +757,7 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
       className
     );
 
-    const icon = this.state.icon || (empty as ComponentType);
+    const icon = this.state.icon || (defaultIcon as ComponentType);
 
     // This is a fix for IE and Edge, which ignores tabindex="-1" on an SVG, but respects
     // focusable="false".
@@ -771,6 +767,7 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
     //   - For all other values, the consumer wants the icon to be focusable.
     const focusable = tabIndex == null || tabIndex === -1 ? 'false' : 'true';
 
+    // relative, absolute path
     if (typeof icon === 'string') {
       return (
         <img
@@ -784,9 +781,9 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
     } else {
       const Svg = icon;
 
-      // If it's an empty icon, or if there is no aria-label, aria-labelledby, or title it gets aria-hidden true
+      // If it's a default icon, or if there is no aria-label, aria-labelledby, or title it gets aria-hidden true
       const isAriaHidden =
-        icon === empty ||
+        icon === defaultIcon ||
         !(
           this.props['aria-label'] ||
           this.props['aria-labelledby'] ||
