@@ -109,17 +109,23 @@ export const OuiFlexItem: FunctionComponent<
   const classes = classNames(
     'ouiFlexItem',
     {
-      'ouiFlexItem--flexGrowZero': !grow, // use flex-grow: 0 and flex-basis: auto
-      'ouiFlexItem--flexShrinkZero': !shrink, // use flex-shrink: 0 and flex-basis: auto
-      'ouiFlexItem--flexBasisAuto': !basis, // use flex-basis: auto
-      [`ouiFlexItem--flexGrow${grow}`]: // use flex-grow: {grow} and flex-basis: auto
+      // use flex-grow: 0 and flex-basis: auto
+      'ouiFlexItem--flexGrowZero': !grow,
+      // use flex-shrink: 0 and flex-basis: auto
+      'ouiFlexItem--flexShrinkZero': !shrink,
+      // use flex-basis: auto
+      'ouiFlexItem--flexBasisAuto': !basis,
+      // use flex-grow: {grow} and flex-basis: auto
+      [`ouiFlexItem--flexGrow${grow}`]:
         typeof grow === 'number' ? GROW_SIZES.indexOf(grow) >= 0 : undefined,
+      // use flex-shrink: {shrink} and flex-basis: auto
       [`ouiFlexItem--flexShrink${shrink}`]:
-        typeof shrink === 'number' // use flex-shrink: {shrink} and flex-basis: auto
+        typeof shrink === 'number'
           ? SHRINK_SIZES.indexOf(shrink) >= 0
           : undefined,
+      // use flex-basis: {basis}
       [`ouiFlexItem--flexBasis-${basis}`]:
-        typeof basis === 'string' // use flex-basis: {basis}
+        typeof basis === 'string'
           ? BASIS_VALUES.indexOf(basis) >= 0
           : undefined,
     },
