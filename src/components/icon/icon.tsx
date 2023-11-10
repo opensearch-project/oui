@@ -48,10 +48,6 @@ import { enqueueStateChange } from '../../services/react';
 import { htmlIdGenerator } from '../../services';
 
 const typeToPathMap = {
-  accessibility: 'accessibility',
-  addDataApp: 'app_add_data',
-  advancedSettingsApp: 'app_advanced_settings',
-  aggregate: 'aggregate',
   alert: 'alert',
   analyzeEvent: 'analyze_event',
   annotation: 'annotation',
@@ -582,12 +578,12 @@ interface State {
   neededLoading: boolean; // controls the fade-in animation, cached icons are immediately rendered
 }
 
-function isOuiIconType(x: OuiIconProps['type']): x is OuiIconType {
-  return typeof x === 'string' && typeToPathMap.hasOwnProperty(x);
+function isOuiIconType(type: OuiIconProps['type']): type is OuiIconType {
+  return typeof type === 'string' && typeToPathMap.hasOwnProperty(type);
 }
 
-function isUrl(x: OuiIconProps['type']) {
-  return typeof x === 'string' && (x.includes('.') || x.includes('/'));
+function isUrl(type: OuiIconProps['type']) {
+  return typeof type === 'string' && (type.includes('.') || type.includes('/'));
 }
 
 function isCachedIcon(type: OuiIconProps['type']) {
