@@ -683,7 +683,7 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
     }
 
     const iconPath = typeToPathMap[iconType] || 'beaker';
-    console.log('iconPath', iconPath);
+
     import(
       /* webpackChunkName: "icon.[request]" */
       // It's important that we don't use a template string here, it
@@ -706,16 +706,6 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
       });
     });
   };
-
-  // loadComponentFromUrl = (iconUrl: string) => {
-  //   this.setState({
-  //     isLoading: false,
-  //     neededLoading: false,
-  //     icon: iconUrl,
-  //   });
-  //   this.onIconLoad();
-  //   return;
-  // };
 
   onIconLoad = () => {
     const { onIconLoad } = this.props;
@@ -804,7 +794,7 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
           this.props['aria-labelledby'] ||
           this.props.title
         );
-      const hideIconBeaker = isAriaHidden && { 'aria-hidden': true };
+      const hideDefaultIcon = isAriaHidden && { 'aria-hidden': true };
 
       let titleId: any;
 
@@ -829,7 +819,7 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
           title={title}
           {...titleId}
           {...rest}
-          {...hideIconBeaker}
+          {...hideDefaultIcon}
         />
       );
     }
