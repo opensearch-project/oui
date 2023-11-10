@@ -48,6 +48,10 @@ import { enqueueStateChange } from '../../services/react';
 import { htmlIdGenerator } from '../../services';
 
 const typeToPathMap = {
+  accessibility: 'accessibility',
+  addDataApp: 'app_add_data',
+  advancedSettingsApp: 'app_advanced_settings',
+  aggregate: 'aggregate',
   alert: 'alert',
   analyzeEvent: 'analyze_event',
   annotation: 'annotation',
@@ -628,9 +632,13 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
     } else if (isUrl(type)) {
       initialIcon = type;
       // Category 3: non-cached oui icon or new icon
-    } else {
+    } else if (typeof type === 'string') {
       isLoading = true;
       this.loadIconComponent(type as OuiIconType);
+    } else {
+      // Category 4: custom icon component
+      initialIcon = type;
+      this.onIconLoad();
     }
 
     this.state = {
