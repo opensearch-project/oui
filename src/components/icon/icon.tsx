@@ -586,8 +586,12 @@ function isOuiIconType(x: OuiIconProps['type']): x is OuiIconType {
   return typeof x === 'string' && typeToPathMap.hasOwnProperty(x);
 }
 
-function getInitialIcon(icon: OuiIconProps['type']) {
-  return icon && isOuiIconType(icon) ? iconComponentCache[icon] : icon;
+function isUrl(x: OuiIconProps['type']) {
+  return typeof x === 'string' && (x.includes('.') || x.includes('/'));
+}
+
+function isCachedIcon(type: OuiIconProps['type']) {
+  return isOuiIconType(type) && iconComponentCache.hasOwnProperty(type);
 }
 
 const generateId = htmlIdGenerator();
@@ -618,15 +622,16 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
     super(props);
 
     const { type } = props;
-    const initialIcon = getInitialIcon(type);
+    let initialIcon;
     let isLoading = false;
 
-    // URL or relative path
-    if (
-      typeof type === 'string' &&
-      (type.includes('/') || type.includes('.'))
-    ) {
-      this.onIconLoad();
+    // Category 1: cached oui icons
+    if (isCachedIcon(type)) {
+      initialIcon = iconComponentCache[type as string];
+      // Category 2: URL (relative, absolute)
+    } else if (isUrl(type)) {
+      initialIcon = type;
+      // Category 3: non-cached oui icon or new icon
     } else {
       isLoading = true;
       this.loadIconComponent(type as OuiIconType);
@@ -678,7 +683,7 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
     }
 
     const iconPath = typeToPathMap[iconType] || 'beaker';
-
+    console.log('iconPath', iconPath);
     import(
       /* webpackChunkName: "icon.[request]" */
       // It's important that we don't use a template string here, it
@@ -701,6 +706,16 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
       });
     });
   };
+
+  // loadComponentFromUrl = (iconUrl: string) => {
+  //   this.setState({
+  //     isLoading: false,
+  //     neededLoading: false,
+  //     icon: iconUrl,
+  //   });
+  //   this.onIconLoad();
+  //   return;
+  // };
 
   onIconLoad = () => {
     const { onIconLoad } = this.props;
@@ -789,7 +804,7 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
           this.props['aria-labelledby'] ||
           this.props.title
         );
-      const hideIconEmpty = isAriaHidden && { 'aria-hidden': true };
+      const hideIconBeaker = isAriaHidden && { 'aria-hidden': true };
 
       let titleId: any;
 
@@ -814,7 +829,7 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
           title={title}
           {...titleId}
           {...rest}
-          {...hideIconEmpty}
+          {...hideIconBeaker}
         />
       );
     }

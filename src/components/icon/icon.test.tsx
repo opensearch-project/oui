@@ -151,7 +151,7 @@ describe('OuiIcon', () => {
     it('does nothing if not called', () => {
       const component = mount(<OuiIcon type="videoPlayer" />);
       expect(
-        component.find('OuiIcon[type="videoPlayer"] > OuiIconEmpty').length
+        component.find('OuiIcon[type="videoPlayer"] > OuiIconBeaker').length
       ).toBe(1);
     });
 
@@ -172,7 +172,7 @@ describe('OuiIcon', () => {
       });
       const component = mount(<OuiIcon type="accessibility" />);
       expect(
-        component.find('OuiIcon[type="accessibility"] > OuiIconEmpty').length
+        component.find('OuiIcon[type="accessibility"] > OuiIconBeaker').length
       ).toBe(1);
     });
   });
