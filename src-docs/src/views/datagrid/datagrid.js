@@ -312,6 +312,10 @@ export default () => {
     console.log(eventData);
   });
 
+  const onFullScreenChange = useRef((eventData) => {
+    console.log('isFullScreen:', eventData);
+  });
+
   return (
     <DataContext.Provider value={raw_data}>
       <OuiDataGrid
@@ -330,6 +334,7 @@ export default () => {
           onChangePage: onChangePage,
         }}
         onColumnResize={onColumnResize.current}
+        onFullScreenChange={onFullScreenChange.current}
       />
     </DataContext.Provider>
   );
