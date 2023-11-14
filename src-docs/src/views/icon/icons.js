@@ -71,7 +71,7 @@ export const iconTypes = [
   'cross',
   'crosshairs',
   'crossInCircleEmpty',
-  'crossInACircleFilled',
+  'crossInCircleFilled',
   'currency',
   'cut',
   'database',
@@ -279,14 +279,6 @@ export const iconTypes = [
   'wrench',
 ];
 
-// Add mapping icon name for backwards compatibility
-const normalizeIconType = (iconType) => {
-  const mapping = {
-    crossInACircleFilled: 'crossInCircleFilled',
-  };
-  return mapping[iconType] || iconType;
-};
-
 export default () => (
   <>
     <OuiCodeBlock language="html" isCopyable paddingSize="m">
@@ -298,8 +290,8 @@ export default () => (
         <OuiFlexItem key={iconType}>
           <OuiCopy
             display="block"
-            textToCopy={normalizeIconType(iconType)}
-            afterMessage={`${normalizeIconType(iconType)} copied`}>
+            textToCopy={iconType}
+            afterMessage={`${iconType} copied`}>
             {(copy) => (
               <OuiPanel
                 hasShadow={false}
@@ -307,7 +299,7 @@ export default () => (
                 onClick={copy}
                 paddingSize="s">
                 <OuiIcon className="oui-alignMiddle" type={iconType} /> &emsp;{' '}
-                <small>{normalizeIconType(iconType)}</small>
+                <small>{iconType}</small>
               </OuiPanel>
             )}
           </OuiCopy>
