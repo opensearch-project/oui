@@ -16,10 +16,23 @@ We depend upon the version of node defined in [.nvmrc](.nvmrc).
 
 You will probably want to install a node version manager. [nvm](https://github.com/creationix/nvm) is recommended.
 
-To install and use the correct node version with `nvm`:
+To install and use the correct node version v with `nvm`:
+
+v - version mentioned in [.nvmrc](.nvmrc).
 
 ```
 nvm install
+```
+
+And then also set the node version to use in your terminal
+
+```
+nvm use
+```
+
+Confirm the version of node by running:
+```
+yarn node --version
 ```
 
 ### Start documentation server
