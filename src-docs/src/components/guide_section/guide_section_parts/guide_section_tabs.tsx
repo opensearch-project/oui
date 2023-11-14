@@ -19,12 +19,10 @@ import {
 import { OuiErrorBoundary } from '../../../../../src/components/error_boundary';
 import { OuiHorizontalRule } from '../../../../../src/components/horizontal_rule';
 import { GuideSectionSnippets } from './guide_section_snippets';
-import { GuideSectionExampleCode } from './guide_section_code';
 import { GuideSectionPropsTable } from './guide_section_props_table';
 import { OuiFlexGroup, OuiFlexItem } from '../../../../../src/components/flex';
 import { ExclusiveUnion } from '../../../../../src/components/common';
 
-export type GuideSectionExampleTabCodeType = GuideSectionExampleCode;
 export type GuideSectionExampleTabSnippetType = GuideSectionSnippets;
 export type GuideSectionExampleTabPropsTableType = {
   props: any;
@@ -32,11 +30,8 @@ export type GuideSectionExampleTabPropsTableType = {
 
 export type GuideSectionExampleTabType = OuiTabProps &
   ExclusiveUnion<
-    GuideSectionExampleTabCodeType,
-    ExclusiveUnion<
-      GuideSectionExampleTabSnippetType,
-      GuideSectionExampleTabPropsTableType
-    >
+    GuideSectionExampleTabSnippetType,
+    GuideSectionExampleTabPropsTableType
   > & {
     displayName: string;
     name: string;
@@ -70,7 +65,7 @@ export const GuideSectionExampleTabs: FunctionComponent<GuideSectionExampleTabsP
     return (
       <OuiTabs size="s" display="condensed">
         {tabs.map((tab, index) => {
-          const { displayName, code, name, props, snippets, ...rest } = tab;
+          const { displayName, name, props, snippets, ...rest } = tab;
 
           return (
             <OuiTab
@@ -99,14 +94,6 @@ export const GuideSectionExampleTabs: FunctionComponent<GuideSectionExampleTabsP
         <OuiErrorBoundary>
           <OuiHorizontalRule margin="none" />
           <GuideSectionSnippets snippets={selectedTab.snippets} />
-        </OuiErrorBoundary>
-      );
-      // SOURCE CODE BLOCK
-    } else if (selectedTab && selectedTab.code) {
-      return (
-        <OuiErrorBoundary>
-          <OuiHorizontalRule margin="none" />
-          <GuideSectionExampleCode code={selectedTab.code} />
         </OuiErrorBoundary>
       );
       // PROPS TABLE
