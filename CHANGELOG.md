@@ -13,6 +13,7 @@
 ### 📈 Features/Enhancements
 
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+- Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
 
