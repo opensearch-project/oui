@@ -20,6 +20,7 @@
 
 - Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
 - Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
+- Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
 
 ### 🚞 Infrastructure
 
@@ -34,10 +35,10 @@
 
 ### 🛠 Maintenance
 - Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
-
 - Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
-- Clean up `react-datepicker` package to remove unnecessary directories and files([#1067](https://github.com/opensearch-project/oui/pull/1067))
+- Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
+- Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
 
 ### 🪛 Refactoring
 
@@ -59,6 +60,7 @@
 - Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
 - Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 - Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
+- Add `onFullScreenChange` to `OuiDataGrid` ([#1053](https://github.com/opensearch-project/oui/pull/1053))
 
 ### 🐛 Bug Fixes
 
