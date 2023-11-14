@@ -18,6 +18,7 @@
 
 - Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
 - Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
+- Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
 
 ### 🚞 Infrastructure
 
@@ -57,6 +58,7 @@
 - Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
 - Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 - Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
+- Add `onFullScreenChange` to `OuiDataGrid` ([#1053](https://github.com/opensearch-project/oui/pull/1053))
 
 ### 🐛 Bug Fixes
 
