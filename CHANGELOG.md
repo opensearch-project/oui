@@ -17,6 +17,7 @@
 - Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 - Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
 
+
 ### 🐛 Bug Fixes
 
 - Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
@@ -29,6 +30,7 @@
 - Change PR template and add changelog workflow ([#642](https://github.com/opensearch-project/oui/pull/642))
 - Upgrade the backport workflow ([#862](https://github.com/opensearch-project/oui/pull/862))
 - Add build steps to CI workflow ([#665](https://github.com/opensearch-project/oui/pull/665))
+- Add error handling when staged files are empty ([#1114](https://github.com/opensearch-project/oui/pull/1114))
 
 ### 📝 Documentation
 
