@@ -28,7 +28,6 @@
  * under the License.
  */
 
-
 const { execSync } = require('child_process');
 const chalk = require('chalk');
 const shell = require('shelljs');
@@ -52,7 +51,7 @@ function euiBuildTimeAliasSetup() {
   shell.rm('-rf', 'src/eui_components/**/*.d.ts');
 
   // Replace specific instances of oui with eui
-  shell.find('src/eui_components/**/*.*').forEach(file => {
+  shell.find('src/eui_components/**/*.*').forEach((file) => {
     shell.sed('-i', /oui/g, 'eui', file);
     shell.sed('-i', /OUI/g, 'EUI', file);
     shell.sed('-i', /Oui/g, 'Eui', file);
@@ -60,16 +59,17 @@ function euiBuildTimeAliasSetup() {
   });
 
   // Rename files to *eui*
-  shell.find('src/eui_components/**/*Oui*.*').forEach(file => {
+  shell.find('src/eui_components/**/*Oui*.*').forEach((file) => {
     shell.mv('-f', file, file.replace('Oui', 'Eui'));
   });
 
-  const o2eMapper = {o: 'e', O: 'E'};
+  const o2eMapper = { o: 'e', O: 'E' };
   const typeExportKeys = ['type', 'interface'];
-  const translateO2E = name => name.replace(/(o)(?=ui)/ig, (m, m1) => o2eMapper[m1]);
+  const translateO2E = (name) =>
+    name.replace(/(o)(?=ui)/gi, (m, m1) => o2eMapper[m1]);
 
   // Re-export *eui* from eui_components via components
-  shell.ls('src/components/**/*.*').forEach(file => {
+  shell.ls('src/components/**/*.*').forEach((file) => {
     if (/__snapshots__|\.d\.ts|\.test\.|\.scss/.test(file)) return;
     const content = fs.readFileSync(file, 'utf8');
 
@@ -81,7 +81,7 @@ function euiBuildTimeAliasSetup() {
     const currentFileBaseName = path.dirname(file);
 
     // Look for own `export const/type/...`
-    const ownExportMatcher = /(?<!\/\/\s*)export\s+(\w+)\s+(\w*oui\w+)([\s=;:<(]|$)/isg;
+    const ownExportMatcher = /(?<!\/\/\s*)export\s+(\w+)\s+(\w*oui\w+)([\s=;:<(]|$)/gis;
     while ((match = ownExportMatcher.exec(content)) !== null) {
       const [, type, name] = match;
       hasOwnExports = true;
@@ -92,44 +92,76 @@ function euiBuildTimeAliasSetup() {
 
     // If this has its own exports, combine them
     if (hasOwnExports) {
-      const importFrom = path.relative(currentFileBaseName, translateO2E(file.replace(/\..*$/, '')).replace('components', 'eui_components'));
+      const importFrom = path.relative(
+        currentFileBaseName,
+        translateO2E(file.replace(/\..*$/, '')).replace(
+          'components',
+          'eui_components'
+        )
+      );
       if (typedExports.length) {
-        reExportStatements.push(`/* OUI -> EUI Aliases: Build-Time */ export type { ${typedExports.join(', ')} } from '${importFrom}';`);
+        reExportStatements.push(
+          `/* OUI -> EUI Aliases: Build-Time */ export type { ${typedExports.join(
+            ', '
+          )} } from '${importFrom}';`
+        );
       }
       if (simpleExports.length) {
-        reExportStatements.push(`/* OUI -> EUI Aliases: Build-Time */ export { ${simpleExports.join(', ')} } from '${importFrom}';`);
+        reExportStatements.push(
+          `/* OUI -> EUI Aliases: Build-Time */ export { ${simpleExports.join(
+            ', '
+          )} } from '${importFrom}';`
+        );
       }
     }
 
     // Look for `export {}` from other files
-    const externalExportMatcher = /export\s+\{\s*(.+?)\s*}\s+from\s+['"](.+?)['"]/sg;
+    const externalExportMatcher = /export\s+\{\s*(.+?)\s*}\s+from\s+['"](.+?)['"]/gs;
     while ((match = externalExportMatcher.exec(content)) !== null) {
       const [, block, src] = match;
-      const reExportableProps = block.split(/[\s\r\n]*,[\s\r\n]*/)
+      const reExportableProps = block
+        .split(/[\s\r\n]*,[\s\r\n]*/)
         // While we know all cases of "oui" can safely be replaced, it is better to be safe
-        .filter(token => /oui|Oui|OUI/.test(token))
-        .map(token => translateO2E(token));
+        .filter((token) => /oui|Oui|OUI/.test(token))
+        .map((token) => translateO2E(token));
 
       if (reExportableProps.length) {
-        const importFrom = path.relative(currentFileBaseName, path.join(currentFileBaseName, translateO2E(src)).replace('components', 'eui_components'));
-        reExportStatements.push(`/* OUI -> EUI Aliases: Build-Time */ export { ${reExportableProps.join(', ')} } from '${importFrom}';`);
+        const importFrom = path.relative(
+          currentFileBaseName,
+          path
+            .join(currentFileBaseName, translateO2E(src))
+            .replace('components', 'eui_components')
+        );
+        reExportStatements.push(
+          `/* OUI -> EUI Aliases: Build-Time */ export { ${reExportableProps.join(
+            ', '
+          )} } from '${importFrom}';`
+        );
       }
     }
 
     if (reExportStatements.length) {
-      fs.writeFileSync(file, '\n' + reExportStatements.join('\n'), { flag: 'a', encoding: 'utf8' });
+      fs.writeFileSync(file, `\n${reExportStatements.join('\n')}`, {
+        flag: 'a',
+        encoding: 'utf8',
+      });
     }
   });
 
   // date_picker uses a type def
-  shell.sed('-i', `from './react-datepicker'`, `from '../../components/date_picker/react-datepicker'`, 'src/eui_components/date_picker/date_picker.tsx');
+  shell.sed(
+    '-i',
+    "from './react-datepicker'",
+    "from '../../components/date_picker/react-datepicker'",
+    'src/eui_components/date_picker/date_picker.tsx'
+  );
 }
 
 function euiBuildTimeAliasTypeDef(file) {
   console.log('Back-porting typedef for EUI aliases');
 
   const content = fs.readFileSync(file, 'utf8');
-  const declarationMatcher = /^declare\s+module\s+(['"]@opensearch-project\/oui(?!\/src\/eui_components).*?['"])\s*\{/msg;
+  const declarationMatcher = /^declare\s+module\s+(['"]@opensearch-project\/oui(?!\/src\/eui_components).*?['"])\s*\{/gms;
   let match;
   const declarations = new Set();
 
@@ -140,21 +172,24 @@ function euiBuildTimeAliasTypeDef(file) {
   const reExportStatements = [];
   for (const declaration of declarations) {
     reExportStatements.push(
-      "declare module " +
-      declaration.replace('@opensearch-project/oui', '@elastic/eui') +
-      " {\n  export * from " + declaration + ";\n" +
-      "}"
+      `declare module ${declaration.replace(
+        '@opensearch-project/oui',
+        '@elastic/eui'
+      )} {\n  export * from ${declaration};\n` + '}'
     );
   }
 
   reExportStatements.push(
     "declare module '@elastic/eui/dist/eui_theme_*.json' {\n" +
-    "  const value: any;\n" +
-    "  export default value;\n" +
-    "}"
+      '  const value: any;\n' +
+      '  export default value;\n' +
+      '}'
   );
 
-  fs.writeFileSync(file, '\n' + reExportStatements.join('\n'), { flag: 'a', encoding: 'utf8' });
+  fs.writeFileSync(file, `\n${reExportStatements.join('\n')}`, {
+    flag: 'a',
+    encoding: 'utf8',
+  });
 }
 
 function euiBuildTimeAliasTearDown() {
@@ -162,11 +197,12 @@ function euiBuildTimeAliasTearDown() {
   shell.rm('-rf', 'src/eui_components');
 
   // Remove any changes made at build time
-  shell.ls('src/components/**/*.*').forEach(file => {
+  shell.ls('src/components/**/*.*').forEach((file) => {
     if (/__snapshots__|\.d\.ts|\.test\.|\.scss/.test(file)) return;
     let changed;
-    const content = fs.readFileSync(file, 'utf8')
-      .replace(/\n\/\* OUI -> EUI Aliases: Build-Time \*\/.*$/mg, () => {
+    const content = fs
+      .readFileSync(file, 'utf8')
+      .replace(/\n\/\* OUI -> EUI Aliases: Build-Time \*\/.*$/gm, () => {
         changed = true;
         return '';
       });
@@ -218,7 +254,7 @@ function compileLib() {
     }
   );
   glob('./test-env/**/*.testenv.js', undefined, (error, files) => {
-    files.forEach(file => {
+    files.forEach((file) => {
       const dir = path.dirname(file);
       const fileName = path.basename(file, '.js');
       const targetName = fileName.replace('.testenv', '');
@@ -245,7 +281,7 @@ function compileLib() {
   shell.mkdir('-p', 'lib/components/icon/assets');
 
   glob('./src/components/**/*.svg', undefined, (error, files) => {
-    files.forEach(file => {
+    files.forEach((file) => {
       const splitPath = file.split('/');
       const basePath = splitPath.slice(2, splitPath.length).join('/');
       shell.cp('-f', `${file}`, `lib/${basePath}`);
@@ -268,13 +304,16 @@ function compileBundle() {
   });
 
   console.log('Building minified bundle...');
-  execSync('NODE_ENV=production NODE_OPTIONS=--max-old-space-size=4096 webpack --config=src/webpack.config.js', {
-    stdio: 'inherit',
-    env: {
-      ...process.env,
-      BABEL_MODULES: false,
-    },
-  });
+  execSync(
+    'NODE_ENV=production NODE_OPTIONS=--max-old-space-size=4096 webpack --config=src/webpack.config.js',
+    {
+      stdio: 'inherit',
+      env: {
+        ...process.env,
+        BABEL_MODULES: false,
+      },
+    }
+  );
 
   console.log('Building test utils .d.ts files...');
   dtsGenerator({
@@ -283,14 +322,19 @@ function compileBundle() {
     baseDir: path.resolve(__dirname, '..', 'src/test/'),
     files: ['index.ts'],
     resolveModuleId({ currentModuleId }) {
-      return `@opensearch-project/oui/lib/test${currentModuleId !== 'index' ? `/${currentModuleId}` : ''}`;
+      return `@opensearch-project/oui/lib/test${
+        currentModuleId !== 'index' ? `/${currentModuleId}` : ''
+      }`;
     },
     resolveModuleImport({ currentModuleId, importedModuleId }) {
       if (currentModuleId === 'index') {
-        return `@opensearch-project/oui/lib/test/${importedModuleId.replace('./', '')}`;
+        return `@opensearch-project/oui/lib/test/${importedModuleId.replace(
+          './',
+          ''
+        )}`;
       }
       return null;
-    }
+    },
   });
   dtsGenerator({
     prefix: '',
@@ -298,21 +342,26 @@ function compileBundle() {
     baseDir: path.resolve(__dirname, '..', 'src/test/'),
     files: ['index.ts'],
     resolveModuleId({ currentModuleId }) {
-      return `@opensearch-project/oui/es/test${currentModuleId !== 'index' ? `/${currentModuleId}` : ''}`;
+      return `@opensearch-project/oui/es/test${
+        currentModuleId !== 'index' ? `/${currentModuleId}` : ''
+      }`;
     },
     resolveModuleImport({ currentModuleId, importedModuleId }) {
       if (currentModuleId === 'index') {
-        return `@opensearch-project/oui/es/test/${importedModuleId.replace('./', '')}`;
+        return `@opensearch-project/oui/es/test/${importedModuleId.replace(
+          './',
+          ''
+        )}`;
       }
       return null;
-    }
+    },
   });
   console.log(chalk.green('✔ Finished test utils files'));
 }
 
 /* OUI -> EUI Aliases */
 // Make sure we tear down if an error occurs
-process.on('uncaughtException', err => {
+process.on('uncaughtException', (err) => {
   euiBuildTimeAliasTearDown();
 
   console.error(err);

@@ -13,7 +13,18 @@ const fs = require('fs');
 const path = require('path');
 
 // the jenkins CI job breaks when deleting the old workspace if it encounters the `这` file
-const targetFilePath = path.join(__dirname, '..', 'node_modules', 'nodegit', 'vendor', 'libgit2', 'tests', 'resources', 'status', '这');
+const targetFilePath = path.join(
+  __dirname,
+  '..',
+  'node_modules',
+  'nodegit',
+  'vendor',
+  'libgit2',
+  'tests',
+  'resources',
+  'status',
+  '这'
+);
 if (fs.existsSync(targetFilePath)) {
   console.log(`removing ${targetFilePath}`);
   fs.unlinkSync(targetFilePath);
@@ -33,9 +44,7 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
 
     for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
       const srcItem = path.join(src, entry.name);
-      const destItem = path
-        .join(dest, entry.name)
-        .replace('oui', 'eui');
+      const destItem = path.join(dest, entry.name).replace('oui', 'eui');
 
       if (entry.isDirectory()) copyDirectory(srcItem, destItem);
       else fs.copyFileSync(srcItem, destItem);

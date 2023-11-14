@@ -81,7 +81,7 @@ module.exports = {
       },
     ],
   },
-  create: context => {
+  create: (context) => {
     return {
       Program(program) {
         const licenses = init(context, program, function () {
@@ -114,7 +114,9 @@ module.exports = {
         const comment = sourceCode
           .getAllComments()
           .find((node) =>
-            licenses.map((license) => license.nodeValue).includes(normalizeWhitespace(node.value))
+            licenses
+              .map((license) => license.nodeValue)
+              .includes(normalizeWhitespace(node.value))
           );
 
         // no licence comment
@@ -130,7 +132,10 @@ module.exports = {
                 return undefined;
               }
 
-              return fixer.replaceTextRange([0, 0], licenses[0].source + '\n\n');
+              return fixer.replaceTextRange(
+                [0, 0],
+                `${licenses[0].source}\n\n`
+              );
             },
           });
           return;
@@ -157,7 +162,7 @@ module.exports = {
               // if removing whitespace is not possible
               return [
                 fixer.remove(comment),
-                fixer.replaceTextRange([0, 0], currentLicense.source + '\n\n'),
+                fixer.replaceTextRange([0, 0], `${currentLicense.source}\n\n`),
               ];
             },
           });

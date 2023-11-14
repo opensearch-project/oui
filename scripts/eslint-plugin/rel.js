@@ -16,7 +16,7 @@ module.exports = {
       description: 'Enforce rel prop if href exists',
     },
   },
-  create: function(context) {
+  create: function (context) {
     return {
       /**
        * Props of any component is defined in ArrowFunctions

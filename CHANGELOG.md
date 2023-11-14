@@ -9,6 +9,7 @@
 ### 🛡 Security
 
 - [CVE-2023-28155] Bump `jest` from `24.9.0` to `26.6.2` ([#1102](https://github.com/opensearch-project/oui/pull/1102))
+- Bump `babel-template` from `6.26.0` to `@babel/template` `7.10.4` ([#1095](https://github.com/opensearch-project/oui/pull/1095))
 
 ### 📈 Features/Enhancements
 
@@ -19,6 +20,7 @@
 ### 🐛 Bug Fixes
 
 - Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+- Extract build archive into a folder for OSD integration test CI ([#1075](https://github.com/opensearch-project/oui/pull/1075))
 - Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
 - Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
 
@@ -39,6 +41,7 @@
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 - Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
 - Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
+- Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
 
 ### 🪛 Refactoring
 
