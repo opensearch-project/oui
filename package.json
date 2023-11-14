@@ -1,7 +1,7 @@
 {
   "name": "@opensearch-project/oui",
   "description": "OpenSearch UI Component Library",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "Apache-2.0",
   "main": "lib",
   "module": "es",
@@ -29,7 +29,7 @@
     "test": "yarn lint && yarn test-unit",
     "test-unit": "cross-env NODE_ENV=test jest --config ./scripts/jest/config.json",
     "test-a11y": "node ./scripts/a11y-testing",
-    "test-staged": "yarn lint && node scripts/test-staged.js",
+    "test-staged": "node scripts/test-staged.js",
     "start-test-server": "BABEL_MODULES=false NODE_ENV=puppeteer NODE_OPTIONS=--max-old-space-size=4096 webpack-dev-server --config src-docs/webpack.config.js --port 9999",
     "yo-component": "yo ./generator-oui/app/component.js",
     "start-test-server-and-a11y-test": "cross-env WAIT_ON_TIMEOUT=600000 start-server-and-test start-test-server http-get://localhost:9999 test-a11y",
@@ -90,7 +90,7 @@
     "yo/meow": "^9.0.0"
   },
   "pre-commit": [
-    "test-staged"
+    "lint"
   ],
   "dependencies": {
     "@types/chroma-js": "^2.4.0",
@@ -237,7 +237,7 @@
     "sass-embedded": "^1.66.1",
     "sass-lint": "^1.13.1",
     "sass-lint-auto-fix": "^0.21.2",
-    "sass-loader": "npm:@bsfishy/sass-loader@10.4.1-support-sass-embedded.3",
+    "sass-loader": "npm:@amoo-miki/sass-loader@10.4.1-node-sass-9.0.0-libsass-3.6.5-with-sass-embedded.rc1",
     "shelljs": "^0.8.5",
     "start-server-and-test": "^2.0.0",
     "style-loader": "^1.2.1",

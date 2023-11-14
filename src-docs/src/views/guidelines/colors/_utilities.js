@@ -11,8 +11,9 @@
 
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../../components';
-import { calculateContrast, rgbToHex } from '../../../../../src/services';
+import { calculateContrast } from '../../../../../src/services';
 import { getSassVars } from '../_get_sass_vars';
+import { hexToRgb } from '../../../../../src/services/color/hex_to_rgb';
 
 import { OuiBadge, OuiCopy, OuiFlexItem } from '../../../../../src/components';
 import { OuiIcon } from '../../../../../src/components/icon';
@@ -74,8 +75,8 @@ export const ratingAll = <OuiBadge color="#eee">ALL</OuiBadge>;
 
 function getContrastRatings(background, foreground, palette) {
   const contrast = calculateContrast(
-    [palette[background].r, palette[background].g, palette[background].b],
-    [palette[foreground].r, palette[foreground].g, palette[foreground].b]
+    hexToRgb(palette[background]),
+    hexToRgb(palette[foreground])
   );
 
   let contrastRating;
@@ -151,8 +152,8 @@ color: $${foreground};`;
             onClickAriaLabel="Click to copy SASS configurations"
             disabled={!contastIsAcceptableToCopy}
             style={{
-              backgroundColor: palette[background].rgba,
-              color: palette[foreground].rgba,
+              backgroundColor: palette[background],
+              color: palette[foreground],
             }}>
             {foreground}
           </OuiBadge>
@@ -161,8 +162,3 @@ color: $${foreground};`;
     </OuiFlexItem>
   );
 };
-
-export function getHexValueFromColorName(palette, colorName, key) {
-  const hex = key ? palette[colorName][key] : palette[colorName];
-  return rgbToHex(hex.rgba).toUpperCase();
-}
