@@ -52,15 +52,18 @@ function euiBuildTimeAliasSetup() {
 
   // Replace specific instances of oui with eui
   shell.find('src/eui_components/**/*.*').forEach((file) => {
-    shell.sed('-i', /oui/g, 'eui', file);
-    shell.sed('-i', /OUI/g, 'EUI', file);
-    shell.sed('-i', /Oui/g, 'Eui', file);
-    shell.sed('-i', /\/eui/g, '/oui', file);
+    const quotedFile = `"${file}"`;
+    shell.sed('-i', /oui/g, 'eui', quotedFile);
+    shell.sed('-i', /OUI/g, 'EUI', quotedFile);
+    shell.sed('-i', /Oui/g, 'Eui', quotedFile);
+    shell.sed('-i', /\/eui/g, '/oui', quotedFile);
   });
 
   // Rename files to *eui*
   shell.find('src/eui_components/**/*Oui*.*').forEach((file) => {
-    shell.mv('-f', file, file.replace('Oui', 'Eui'));
+    const quotedFile = `"${file}"`;
+    const newFileName = `"${file.replace('Oui', 'Eui')}"`;
+    shell.mv('-f', quotedFile, newFileName);
   });
 
   const o2eMapper = { o: 'e', O: 'E' };
@@ -245,7 +248,7 @@ function compileLib() {
   );
 
   execSync(
-    'babel --quiet --out-dir=test-env --extensions .js,.ts,.tsx --config-file="./.babelrc-test-env.js" --ignore "**/webpack.config.js,**/*.test.js,**/*.test.ts,**/*.test.tsx,**/*.d.ts" src',
+    'babel --quiet --out-dir=test-env --extensions .js,.ts,.tsx --config-file="./.babelrc-test-env.js" --ignore "**/webpack.config.js,**/*.test.js,**/*.test.ts,**/*.test.tsx,**/*.d.ts" "src"',
     {
       env: {
         ...process.env,
