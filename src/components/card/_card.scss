@@ -133,7 +133,7 @@
     .ouiCard__top {
 
       .ouiCard__image {
-        width: calc(100% + (#{$paddingAmount} * 2));
+        width: calc(100% + #{$paddingAmount * 2});
         left: $paddingAmount * -1;
         top: $paddingAmount * -1;
         margin-bottom: $paddingAmount * -1; // ensure the parent is only as tall as the image
@@ -141,7 +141,7 @@
         // IF both exist, position the icon centered on top of image
         + .ouiCard__icon {
           transform: translate(-50%, -75%); // Fallback for IE as it doesn't accept calcs in translates
-          transform: translate(-50%, calc(-50% + #{$paddingAmount * -1})); // sass-lint:disable-line no-duplicate-properties
+          transform: translate(-50%, calc(-50% - #{$paddingAmount})); // sass-lint:disable-line no-duplicate-properties
         }
       }
     }
