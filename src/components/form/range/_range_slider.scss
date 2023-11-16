@@ -102,7 +102,7 @@
   // sass-lint:disable-block no-vendor-prefixes
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    margin-top: calc(calc($ouiRangeTrackBorderWidth * -2 + $ouiRangeTrackHeight) / 2) - calc($ouiRangeThumbHeight / 2);
+    margin-top: calc(($ouiRangeTrackBorderWidth * -2 + $ouiRangeTrackHeight - $ouiRangeThumbHeight) / 2);
   }
 
   &::-ms-thumb {
