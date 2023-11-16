@@ -206,7 +206,7 @@
 @keyframes ouiControlBarOpenPanelLarge {
   0% {
     // Accounts for the initial height offset from the top
-    transform: translateY(calc((#{$ouiControlBarInitialHeight} * 3) * -1));
+    transform: translateY(calc(#{$ouiControlBarInitialHeight} * -3));
   }
 
   100% {
