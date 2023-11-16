@@ -16,7 +16,7 @@
   position: absolute;
   left: 0;
   top: 50%;
-  margin-top: calc(-$ouiRangeThumbHeight / 2);
+  margin-top: calc($ouiRangeThumbHeight / -2);
   pointer-events: none;
   z-index: 1; // higher than .ouiRangeHighlight that is 0
 
