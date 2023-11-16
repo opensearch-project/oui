@@ -85,7 +85,7 @@ $fractions: (
   @each $fraction, $map in $fractions {
     .ouiFlexGrid--#{$gutterName}.ouiFlexGrid--#{$fraction} {
       > .ouiFlexItem {
-        flex-basis: calc(#{map-get($map, 'percentage')} - #{$gutterSize});
+        flex-basis: calc(map-get($map, 'percentage') - #{$gutterSize}); 
       }
 
       &.ouiFlexGrid--directionColumn { /* 1 */
