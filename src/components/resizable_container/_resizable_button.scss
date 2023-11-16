@@ -35,8 +35,8 @@
   &.ouiResizableButton--horizontal {
     cursor: col-resize;
     width: $ouiResizableButtonSize;
-    margin-left: calc(-1 * $ouiResizableButtonSize / 2);
-    margin-right: calc(-1 * $ouiResizableButtonSize / 2);
+    margin-left: calc( $ouiResizableButtonSize / -2);
+    margin-right: calc( $ouiResizableButtonSize / -2);
 
     &:before,
     &:after {
