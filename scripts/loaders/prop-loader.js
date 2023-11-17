@@ -45,7 +45,7 @@ const options = {
 
 const program = ts.createProgram(files, options);
 
-module.exports = function(fileSource) {
+module.exports = function (fileSource) {
   const docsInfo = [];
   const source = program.getSourceFile(this.resourcePath);
   if (!source) return fileSource;
@@ -55,7 +55,7 @@ module.exports = function(fileSource) {
   const interfaces = source
     .getChildAt(0)
     .getChildren()
-    .filter(child => {
+    .filter((child) => {
       if (child.kind !== SyntaxKind.InterfaceDeclaration) return false;
       // verify this interface is exported
       const isExported =
@@ -72,7 +72,7 @@ module.exports = function(fileSource) {
   const types = source
     .getChildAt(0)
     .getChildren()
-    .filter(child => {
+    .filter((child) => {
       if (child.kind !== SyntaxKind.TypeAliasDeclaration) return false;
       const isExported =
         child.modifiers &&
@@ -85,14 +85,14 @@ module.exports = function(fileSource) {
     });
 
   if (interfaces.length > 0) {
-    interfaces.map(interface => {
+    interfaces.map((interface) => {
       const displayName = interface.name.escapedText;
       /**
        * Get extended if interfaces extended props from a different interface.
        * All the extended interfaces are available in the heritageClauses property.
        */
       const props = getExtendedProps(interface.heritageClauses, checker);
-      interface.members.map(member => {
+      interface.members.map((member) => {
         if (member.name) {
           let generatedType = {};
           const propType = checker.getTypeAtLocation(member.type);
@@ -105,12 +105,12 @@ module.exports = function(fileSource) {
           if (
             propType.types &&
             propType.types.length < 6 &&
-            propType.types.every(type => type.isStringLiteral())
+            propType.types.every((type) => type.isStringLiteral())
           ) {
             generatedType = {
               name: 'enum',
               raw: generatedType.name,
-              value: propType.types.map(type => ({
+              value: propType.types.map((type) => ({
                 value: type.isStringLiteral()
                   ? `"${type.value}"`
                   : this.checker.typeToString(type),
@@ -134,12 +134,12 @@ module.exports = function(fileSource) {
   }
 
   if (types.length > 0) {
-    types.map(member => {
+    types.map((member) => {
       const displayName = member.name.escapedText;
       const props = {};
       const generatedTypes = [];
       if (member.type && member.type.types) {
-        member.type.types.map(member => {
+        member.type.types.map((member) => {
           const type = checker.getTypeAtLocation(member);
           const stringType = checker.typeToString(type);
           generatedTypes.push(stringType);
@@ -194,7 +194,7 @@ const getExtendedProps = (interfaces, checker) => {
 
   // base case for recursion
   if (!interfaces) return {};
-  interfaces.map(interface => {
+  interfaces.map((interface) => {
     const exportedInterface = checker.getTypeAtLocation(interface.types[0]);
     if (exportedInterface.symbol) {
       const heritageClauses =
@@ -217,7 +217,7 @@ const getExtendedProps = (interfaces, checker) => {
  */
 const getPropsFromInterface = (interface, checker) => {
   const props = {};
-  interface.members.forEach(value => {
+  interface.members.forEach((value) => {
     if (value.valueDeclaration) {
       const declaration = value.valueDeclaration;
       const type = checker.getTypeAtLocation(declaration.type);
@@ -252,7 +252,7 @@ const setPropInfo = (type, name, required, description) => ({
   description,
 });
 
-const generatePropsCodeBlock = options => {
+const generatePropsCodeBlock = (options) => {
   const sourceFile = ts.createSourceFile(
     options.filename,
     options.fileSource,
@@ -261,17 +261,17 @@ const generatePropsCodeBlock = options => {
 
   // create typescript object nodes for all interfaces and types that should be appended to node.
   const codeBlocks = options.docsInfo
-    .map(d => createDocObject(d))
-    .filter(source => source !== null);
+    .map((d) => createDocObject(d))
+    .filter((source) => source !== null);
 
   // To print the AST, we can use TypeScript's printer
   const printer = ts.createPrinter({ newLine: ts.NewLineKind.LineFeed });
 
   // print AST as string for source Node so that they can be added to the source file
-  const printNode = sourceNode =>
+  const printNode = (sourceNode) =>
     printer.printNode(ts.EmitHint.Unspecified, sourceNode, sourceFile);
 
-  return codeBlocks.map(node => printNode(node)).join('\n');
+  return codeBlocks.map((node) => printNode(node)).join('\n');
 };
 
 /**
@@ -279,7 +279,7 @@ const generatePropsCodeBlock = options => {
  *
  * @param {*} d interface definition
  */
-const createDocObject = d => {
+const createDocObject = (d) => {
   return ts.createVariableStatement(
     // export var Interface = { __docgenInfo: {}}
     [ts.createToken(ts.SyntaxKind.ExportKeyword)],
@@ -306,7 +306,7 @@ const createDocObject = d => {
  *
  * @param {*} d interface definition
  */
-const generateTypesDocgenInfo = d => {
+const generateTypesDocgenInfo = (d) => {
   // {displayName: InterfaceName, props: {}}
   return ts.createObjectLiteral([
     ts.createPropertyAssignment(
@@ -347,13 +347,13 @@ const createPropDefinition = (propName, prop) => {
    *
    * @param {*} typeValue for enums
    */
-  const setValue = typeValue =>
+  const setValue = (typeValue) =>
     Array.isArray(typeValue) &&
-    typeValue.every(value => typeof value.value === 'string')
+    typeValue.every((value) => typeof value.value === 'string')
       ? ts.createPropertyAssignment(
           ts.createLiteral('value'),
           ts.createArrayLiteral(
-            typeValue.map(value =>
+            typeValue.map((value) =>
               ts.createObjectLiteral([
                 ts.createPropertyAssignment(
                   ts.createLiteral('value'),

@@ -52,6 +52,7 @@ import rehype2react from 'rehype-react';
 import markdown from 'remark-parse';
 import emoji from 'remark-emoji';
 import remark2rehype from 'remark-rehype';
+import rehypeSlug from 'rehype-slug';
 import highlight from './remark/remark_prismjs';
 import * as MarkdownTooltip from './markdown_tooltip';
 import * as MarkdownCheckbox from './markdown_checkbox';
@@ -82,6 +83,7 @@ export interface Rehype2ReactOptions {
 
 export const getDefaultOuiMarkdownProcessingPlugins = (): [
   [Plugin, Remark2RehypeOptions], // first is well known
+  [Plugin, {}],
   [typeof rehype2react, Rehype2ReactOptions], // second is well known
   ...PluggableList // any additional are generic
 ] => [
@@ -93,6 +95,7 @@ export const getDefaultOuiMarkdownProcessingPlugins = (): [
       handlers: {}, // intentionally empty, allows plugins to extend if they need to
     },
   ],
+  [rehypeSlug, {}],
   [
     rehype2react,
     {

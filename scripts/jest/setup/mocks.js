@@ -28,14 +28,15 @@
  * under the License.
  */
 
-
 jest.mock('./../../../src/components/icon', () => {
   const { OuiIcon } = require('./../../../src/components/icon/icon.testenv');
-  return { OuiIcon }
+  return { OuiIcon };
 });
 
 jest.mock('./../../../src/services/accessibility', () => {
   const a11y = jest.requireActual('./../../../src/services/accessibility');
-  const { htmlIdGenerator } = require('./../../../src/services/accessibility/html_id_generator.testenv');
-  return { ...a11y, htmlIdGenerator }
+  const {
+    htmlIdGenerator,
+  } = require('./../../../src/services/accessibility/html_id_generator.testenv');
+  return { ...a11y, htmlIdGenerator };
 });
