@@ -53,6 +53,7 @@ describe('OuiFlexItem', () => {
     expect(component).toMatchSnapshot();
   });
 
+  // Grow Values Only
   describe('grow', () => {
     GROW_SIZES.concat([true, false]).forEach((value) => {
       test(`${value} is rendered`, () => {
@@ -63,6 +64,7 @@ describe('OuiFlexItem', () => {
     });
   });
 
+  // Shrink Values Only
   describe('shrink', () => {
     SHRINK_SIZES.forEach((value) => {
       test(`${value} is rendered`, () => {
@@ -73,12 +75,79 @@ describe('OuiFlexItem', () => {
     });
   });
 
+  // Basis Values Only
   describe('basis', () => {
     BASIS_VALUES.forEach((value) => {
       test(`${value} is rendered`, () => {
         const component = render(<OuiFlexItem basis={value} />);
 
         expect(component).toMatchSnapshot();
+      });
+    });
+  });
+
+  // Grow and Basis Combination
+  describe('grow and basis combination', () => {
+    GROW_SIZES.concat([true, false]).forEach((growValue) => {
+      BASIS_VALUES.forEach((basisValue) => {
+        test(`grow: ${growValue} and basis: ${basisValue} is rendered`, () => {
+          const component = render(
+            <OuiFlexItem grow={growValue} basis={basisValue} />
+          );
+
+          expect(component).toMatchSnapshot();
+        });
+      });
+    });
+  });
+
+  // Grow and Shrink Combination
+  describe('grow and shrink combination', () => {
+    GROW_SIZES.concat([true, false]).forEach((growValue) => {
+      SHRINK_SIZES.forEach((shrinkValue) => {
+        test(`grow: ${growValue} and shrink: ${shrinkValue} is rendered`, () => {
+          const component = render(
+            <OuiFlexItem grow={growValue} shrink={shrinkValue} />
+          );
+
+          expect(component).toMatchSnapshot();
+        });
+      });
+    });
+  });
+
+  // Shrink and Basis Combination
+  describe('shrink and basis combination', () => {
+    SHRINK_SIZES.forEach((shrinkValue) => {
+      BASIS_VALUES.forEach((basisValue) => {
+        test(`shrink: ${shrinkValue} and basis: ${basisValue} is rendered`, () => {
+          const component = render(
+            <OuiFlexItem shrink={shrinkValue} basis={basisValue} />
+          );
+
+          expect(component).toMatchSnapshot();
+        });
+      });
+    });
+  });
+
+  // Grow, Shrink, and Basis Combination
+  describe('grow, shrink, and basis combination', () => {
+    GROW_SIZES.concat([true, false]).forEach((growValue) => {
+      SHRINK_SIZES.forEach((shrinkValue) => {
+        BASIS_VALUES.forEach((basisValue) => {
+          test(`grow: ${growValue}, shrink: ${shrinkValue}, and basis: ${basisValue} is rendered`, () => {
+            const component = render(
+              <OuiFlexItem
+                grow={growValue}
+                shrink={shrinkValue}
+                basis={basisValue}
+              />
+            );
+
+            expect(component).toMatchSnapshot();
+          });
+        });
       });
     });
   });
