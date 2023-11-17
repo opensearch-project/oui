@@ -109,7 +109,9 @@ export const OuiButtonContent: FunctionComponent<
 
   return (
     <span {...contentProps} className={contentClassNames}>
-      {buttonIcon}
+      <span {...textProps} className="">
+        {buttonIcon}
+      </span>
       <span {...textProps}>{children}</span>
     </span>
   );
