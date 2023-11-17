@@ -1,14 +1,8 @@
-<!--
-  - SPDX-License-Identifier: Apache-2.0
-  -
-  - The OpenSearch Contributors require contributions made to
-  - this file be licensed under the Apache-2.0 license or a
-  - compatible open source license.
-  -
-  - Modifications Copyright OpenSearch Contributors. See
-  - GitHub history for details.
-  -->
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
 
-<svg  viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd">
-  <path d="m1 5v-4h4v1.3h6v-1.3h3.9999v4h-2.9342l-0.8077 1h0.7419v4h-0.7597l0.8 1h2.9599v4h-4v-1.5h-5.9999v1.5h-3.9999v-4h1.5v-6l-1.5002-6e-5zm1-3.0001h2v2h-2v-2zm9 10.5v-1.1996l-1.0402-1.3004h-1.9597v-4h1.9727l1.0273-1.272v-1.4281h-5.9999v1.7h-1.5v6h1.5v1.5001h5.9999zm1.0001-10.5h2v2h-2v-2zm-8.0002 10h-2v2h2v-2zm5.0001-5.0001h2v2h-2v-2zm3.0001 5.0001h2v2h-2v-2z" />
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+  <path d="m0 13.714v-13.714h13.714v4.4571h20.571v-4.4571h13.714v13.714h-10.06l-2.7693 3.4286h2.5437v13.714h-2.6047l2.7429 3.4286h10.148v13.714h-13.714v-5.1429h-20.571v5.1429h-13.714v-13.714h5.1429v-20.571h-5.1429zm3.4286-10.286h6.8571v6.8571h-6.8571v-6.8571zm30.857 36v-4.1129l-3.5667-4.4586h-6.719v-13.714h6.7634l3.5223-4.361v-4.8962h-20.571v5.8286h-5.1429v20.571h5.1429v5.1429h20.571zm3.4286-36h6.8571v6.8571h-6.8571v-6.8571zm-27.429 34.286h-6.8571v6.8571h6.8571v-6.8571zm17.143-17.143h6.8571v6.8572h-6.8571v-6.8572zm10.286 17.143h6.8571v6.8571h-6.8571v-6.8571z" clip-rule="evenodd" fill="#000000" fill-rule="evenodd"/>
 </svg>
