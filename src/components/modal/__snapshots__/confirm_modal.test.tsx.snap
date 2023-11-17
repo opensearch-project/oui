@@ -78,6 +78,9 @@ Array [
               class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
+                class=""
+              />
+              <span
                 class="ouiButtonEmpty__text"
               >
                 Cancel Button Text
@@ -92,6 +95,9 @@ Array [
             <span
               class="ouiButtonContent ouiButton__content"
             >
+              <span
+                class=""
+              />
               <span
                 class="ouiButton__text"
               >
@@ -175,6 +181,9 @@ Array [
               class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
+                class=""
+              />
+              <span
                 class="ouiButtonEmpty__text"
               >
                 Cancel Button Text
@@ -189,6 +198,9 @@ Array [
             <span
               class="ouiButtonContent ouiButton__content"
             >
+              <span
+                class=""
+              />
               <span
                 class="ouiButton__text"
               >

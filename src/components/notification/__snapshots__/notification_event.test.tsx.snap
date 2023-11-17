@@ -665,6 +665,9 @@ exports[`OuiNotificationEvent props primaryAction is rendered 1`] = `
           class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
+            class=""
+          />
+          <span
             class="ouiButtonEmpty__text"
           >
             primaryAction label
@@ -748,10 +751,14 @@ exports[`OuiNotificationEvent props primaryActionProps is rendered 1`] = `
           class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            class="ouiButtonContent__icon"
-            color="inherit"
-            data-ouiicon-type="download"
-          />
+            class=""
+          >
+            <span
+              class="ouiButtonContent__icon"
+              color="inherit"
+              data-ouiicon-type="download"
+            />
+          </span>
           <span
             class="ouiButtonEmpty__text"
           >

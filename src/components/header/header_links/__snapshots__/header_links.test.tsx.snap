@@ -87,6 +87,9 @@ exports[`OuiHeaderLinks popover props is rendered 1`] = `
           class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
+            class=""
+          />
+          <span
             class="ouiButtonEmpty__text"
           >
             <span

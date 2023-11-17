@@ -71,6 +71,9 @@ exports[`OuiCard horizontal selectable 1`] = `
       class="ouiButtonContent ouiButtonEmpty__content"
     >
       <span
+        class=""
+      />
+      <span
         class="ouiButtonEmpty__text"
       >
         Select
@@ -785,6 +788,9 @@ exports[`OuiCard props selectable 1`] = `
     <span
       class="ouiButtonContent ouiButtonEmpty__content"
     >
+      <span
+        class=""
+      />
       <span
         class="ouiButtonEmpty__text"
       >

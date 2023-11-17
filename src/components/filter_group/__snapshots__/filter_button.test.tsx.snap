@@ -11,6 +11,9 @@ exports[`OuiFilterButton is rendered 1`] = `
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
+      class=""
+    />
+    <span
       class="ouiButtonEmpty__text"
     >
       <span
@@ -29,6 +32,9 @@ exports[`OuiFilterButton props grow can be turned off 1`] = `
   <span
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
+    <span
+      class=""
+    />
     <span
       class="ouiButtonEmpty__text"
     >
@@ -49,10 +55,14 @@ exports[`OuiFilterButton props iconType and iconSide is rendered 1`] = `
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="user"
-    />
+      class=""
+    >
+      <span
+        class="ouiButtonContent__icon"
+        color="inherit"
+        data-ouiicon-type="user"
+      />
+    </span>
     <span
       class="ouiButtonEmpty__text"
     >
@@ -74,6 +84,9 @@ exports[`OuiFilterButton props isDisabled is rendered 1`] = `
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
+      class=""
+    />
+    <span
       class="ouiButtonEmpty__text"
     >
       <span
@@ -93,6 +106,9 @@ exports[`OuiFilterButton props isSelected is rendered 1`] = `
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
+      class=""
+    />
+    <span
       class="ouiButtonEmpty__text"
     >
       <span
@@ -111,6 +127,9 @@ exports[`OuiFilterButton props numActiveFilters and hasActiveFilters is rendered
   <span
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
+    <span
+      class=""
+    />
     <span
       class="ouiButtonEmpty__text ouiFilterButton__text-hasNotification"
     >
@@ -137,6 +156,9 @@ exports[`OuiFilterButton props numFilters is rendered 1`] = `
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
+      class=""
+    />
+    <span
       class="ouiButtonEmpty__text ouiFilterButton__text-hasNotification"
     >
       <span
@@ -162,6 +184,9 @@ exports[`OuiFilterButton props type is rendered 1`] = `
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
     <span
+      class=""
+    />
+    <span
       class="ouiButtonEmpty__text"
     >
       <span
@@ -180,6 +205,9 @@ exports[`OuiFilterButton props withNext is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
+    <span
+      class=""
+    />
     <span
       class="ouiButtonEmpty__text"
     >
@@ -201,6 +229,9 @@ exports[`OuiFilterButton renders zero properly 1`] = `
   <span
     class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
   >
+    <span
+      class=""
+    />
     <span
       class="ouiButtonEmpty__text ouiFilterButton__text-hasNotification"
     >

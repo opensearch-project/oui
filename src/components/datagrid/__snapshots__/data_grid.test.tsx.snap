@@ -22,10 +22,14 @@ exports[`OuiDataGrid pagination renders 1`] = `
             class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
           >
             <span
-              class="ouiButtonContent__icon"
-              color="inherit"
-              data-ouiicon-type="arrowDown"
-            />
+              class=""
+            >
+              <span
+                class="ouiButtonContent__icon"
+                color="inherit"
+                data-ouiicon-type="arrowDown"
+              />
+            </span>
             <span
               class="ouiButtonEmpty__text"
             >
@@ -77,6 +81,9 @@ exports[`OuiDataGrid pagination renders 1`] = `
               class="ouiButtonContent ouiButtonEmpty__content"
             >
               <span
+                class=""
+              />
+              <span
                 class="ouiButtonEmpty__text"
               >
                 1
@@ -99,6 +106,9 @@ exports[`OuiDataGrid pagination renders 1`] = `
             <span
               class="ouiButtonContent ouiButtonEmpty__content"
             >
+              <span
+                class=""
+              />
               <span
                 class="ouiButtonEmpty__text"
               >
@@ -959,10 +969,14 @@ Array [
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="ouiButtonContent__icon"
-                  color="inherit"
-                  data-ouiicon-type="listAdd"
-                />
+                  class=""
+                >
+                  <span
+                    class="ouiButtonContent__icon"
+                    color="inherit"
+                    data-ouiicon-type="listAdd"
+                  />
+                </span>
                 <span
                   class="ouiButtonEmpty__text"
                 >
@@ -988,10 +1002,14 @@ Array [
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="ouiButtonContent__icon"
-                  color="inherit"
-                  data-ouiicon-type="tableDensityExpanded"
-                />
+                  class=""
+                >
+                  <span
+                    class="ouiButtonContent__icon"
+                    color="inherit"
+                    data-ouiicon-type="tableDensityExpanded"
+                  />
+                </span>
                 <span
                   class="ouiButtonEmpty__text"
                 >
@@ -1010,10 +1028,14 @@ Array [
             class="ouiButtonContent ouiButtonEmpty__content"
           >
             <span
-              class="ouiButtonContent__icon"
-              color="inherit"
-              data-ouiicon-type="fullScreen"
-            />
+              class=""
+            >
+              <span
+                class="ouiButtonContent__icon"
+                color="inherit"
+                data-ouiicon-type="fullScreen"
+              />
+            </span>
             <span
               class="ouiButtonEmpty__text"
             >
@@ -1325,10 +1347,14 @@ Array [
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="ouiButtonContent__icon"
-                  color="inherit"
-                  data-ouiicon-type="listAdd"
-                />
+                  class=""
+                >
+                  <span
+                    class="ouiButtonContent__icon"
+                    color="inherit"
+                    data-ouiicon-type="listAdd"
+                  />
+                </span>
                 <span
                   class="ouiButtonEmpty__text"
                 >
@@ -1354,10 +1380,14 @@ Array [
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="ouiButtonContent__icon"
-                  color="inherit"
-                  data-ouiicon-type="tableDensityExpanded"
-                />
+                  class=""
+                >
+                  <span
+                    class="ouiButtonContent__icon"
+                    color="inherit"
+                    data-ouiicon-type="tableDensityExpanded"
+                  />
+                </span>
                 <span
                   class="ouiButtonEmpty__text"
                 >
@@ -1376,10 +1406,14 @@ Array [
             class="ouiButtonContent ouiButtonEmpty__content"
           >
             <span
-              class="ouiButtonContent__icon"
-              color="inherit"
-              data-ouiicon-type="fullScreen"
-            />
+              class=""
+            >
+              <span
+                class="ouiButtonContent__icon"
+                color="inherit"
+                data-ouiicon-type="fullScreen"
+              />
+            </span>
             <span
               class="ouiButtonEmpty__text"
             >
@@ -1988,10 +2022,14 @@ Array [
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="ouiButtonContent__icon"
-                  color="inherit"
-                  data-ouiicon-type="listAdd"
-                />
+                  class=""
+                >
+                  <span
+                    class="ouiButtonContent__icon"
+                    color="inherit"
+                    data-ouiicon-type="listAdd"
+                  />
+                </span>
                 <span
                   class="ouiButtonEmpty__text"
                 >
@@ -2017,10 +2055,14 @@ Array [
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="ouiButtonContent__icon"
-                  color="inherit"
-                  data-ouiicon-type="tableDensityExpanded"
-                />
+                  class=""
+                >
+                  <span
+                    class="ouiButtonContent__icon"
+                    color="inherit"
+                    data-ouiicon-type="tableDensityExpanded"
+                  />
+                </span>
                 <span
                   class="ouiButtonEmpty__text"
                 >
@@ -2039,10 +2081,14 @@ Array [
             class="ouiButtonContent ouiButtonEmpty__content"
           >
             <span
-              class="ouiButtonContent__icon"
-              color="inherit"
-              data-ouiicon-type="fullScreen"
-            />
+              class=""
+            >
+              <span
+                class="ouiButtonContent__icon"
+                color="inherit"
+                data-ouiicon-type="fullScreen"
+              />
+            </span>
             <span
               class="ouiButtonEmpty__text"
             >
@@ -2353,10 +2399,14 @@ Array [
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="ouiButtonContent__icon"
-                  color="inherit"
-                  data-ouiicon-type="listAdd"
-                />
+                  class=""
+                >
+                  <span
+                    class="ouiButtonContent__icon"
+                    color="inherit"
+                    data-ouiicon-type="listAdd"
+                  />
+                </span>
                 <span
                   class="ouiButtonEmpty__text"
                 >
@@ -2382,10 +2432,14 @@ Array [
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
                 <span
-                  class="ouiButtonContent__icon"
-                  color="inherit"
-                  data-ouiicon-type="tableDensityExpanded"
-                />
+                  class=""
+                >
+                  <span
+                    class="ouiButtonContent__icon"
+                    color="inherit"
+                    data-ouiicon-type="tableDensityExpanded"
+                  />
+                </span>
                 <span
                   class="ouiButtonEmpty__text"
                 >
@@ -2404,10 +2458,14 @@ Array [
             class="ouiButtonContent ouiButtonEmpty__content"
           >
             <span
-              class="ouiButtonContent__icon"
-              color="inherit"
-              data-ouiicon-type="fullScreen"
-            />
+              class=""
+            >
+              <span
+                class="ouiButtonContent__icon"
+                color="inherit"
+                data-ouiicon-type="fullScreen"
+              />
+            </span>
             <span
               class="ouiButtonEmpty__text"
             >

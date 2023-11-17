@@ -55,6 +55,9 @@ exports[`OuiControlBar is rendered 1`] = `
         class="ouiButtonContent ouiButton__content"
       >
         <span
+          class=""
+        />
+        <span
           class="ouiButton__text"
         >
           Sound the Alarm
@@ -200,6 +203,9 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                 <span
                   class="ouiButtonContent ouiButton__content"
                 >
+                  <span
+                    class=""
+                  />
                   <span
                     class="ouiButton__text"
                   >
@@ -360,6 +366,9 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
+                      <span
+                        className=""
+                      />
                       <span
                         className="ouiButton__text"
                       >
@@ -541,6 +550,9 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                   class="ouiButtonContent ouiButton__content"
                 >
                   <span
+                    class=""
+                  />
+                  <span
                     class="ouiButton__text"
                   >
                     Sound the Alarm
@@ -700,6 +712,9 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
+                      <span
+                        className=""
+                      />
                       <span
                         className="ouiButton__text"
                       >
@@ -880,6 +895,9 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                   class="ouiButtonContent ouiButton__content"
                 >
                   <span
+                    class=""
+                  />
+                  <span
                     class="ouiButton__text"
                   >
                     Sound the Alarm
@@ -1039,6 +1057,9 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
+                      <span
+                        className=""
+                      />
                       <span
                         className="ouiButton__text"
                       >
@@ -1283,6 +1304,9 @@ exports[`OuiControlBar props position is rendered 1`] = `
                   className="ouiButtonContent ouiButton__content"
                 >
                   <span
+                    className=""
+                  />
+                  <span
                     className="ouiButton__text"
                   >
                     Sound the Alarm
@@ -1447,6 +1471,9 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                   class="ouiButtonContent ouiButton__content"
                 >
                   <span
+                    class=""
+                  />
+                  <span
                     class="ouiButton__text"
                   >
                     Sound the Alarm
@@ -1606,6 +1633,9 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
+                      <span
+                        className=""
+                      />
                       <span
                         className="ouiButton__text"
                       >
@@ -1786,6 +1816,9 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                   class="ouiButtonContent ouiButton__content"
                 >
                   <span
+                    class=""
+                  />
+                  <span
                     class="ouiButton__text"
                   >
                     Sound the Alarm
@@ -1950,6 +1983,9 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
+                      <span
+                        className=""
+                      />
                       <span
                         className="ouiButton__text"
                       >
@@ -2135,6 +2171,9 @@ exports[`OuiControlBar props size is rendered 1`] = `
                   class="ouiButtonContent ouiButton__content"
                 >
                   <span
+                    class=""
+                  />
+                  <span
                     class="ouiButton__text"
                   >
                     Sound the Alarm
@@ -2294,6 +2333,9 @@ exports[`OuiControlBar props size is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
+                      <span
+                        className=""
+                      />
                       <span
                         className="ouiButton__text"
                       >

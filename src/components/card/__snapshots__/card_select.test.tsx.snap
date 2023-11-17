@@ -13,6 +13,9 @@ exports[`OuiCardSelect is rendered 1`] = `
     class="ouiButtonContent ouiButtonEmpty__content"
   >
     <span
+      class=""
+    />
+    <span
       class="ouiButtonEmpty__text"
     >
       Select
@@ -32,6 +35,9 @@ exports[`OuiCardSelect props can override color 1`] = `
     class="ouiButtonContent ouiButtonEmpty__content"
   >
     <span
+      class=""
+    />
+    <span
       class="ouiButtonEmpty__text"
     >
       Select
@@ -50,6 +56,9 @@ exports[`OuiCardSelect props can override text 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
+    <span
+      class=""
+    />
     <span
       class="ouiButtonEmpty__text"
     >
@@ -71,6 +80,9 @@ exports[`OuiCardSelect props isDisabled 1`] = `
     class="ouiButtonContent ouiButtonEmpty__content"
   >
     <span
+      class=""
+    />
+    <span
       class="ouiButtonEmpty__text"
     >
       Unavailable
@@ -90,10 +102,14 @@ exports[`OuiCardSelect props isSelected 1`] = `
     class="ouiButtonContent ouiButtonEmpty__content"
   >
     <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="check"
-    />
+      class=""
+    >
+      <span
+        class="ouiButtonContent__icon"
+        color="inherit"
+        data-ouiicon-type="check"
+      />
+    </span>
     <span
       class="ouiButtonEmpty__text"
     >
