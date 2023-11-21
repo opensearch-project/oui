@@ -78,7 +78,7 @@ export const GuideVersionSelector: FunctionComponent<GuideVersionSelectorProps> 
           href={`/${option}`}
           onClick={onChange(option)}>
           <OuiFlexGroup direction="row" wrap={false}>
-            <OuiFlexItem>v{option}</OuiFlexItem>
+            <OuiFlexItem>{option}</OuiFlexItem>
             {i === 0 && (
               <OuiFlexItem>
                 <OuiBadge>Latest</OuiBadge>
