@@ -96,9 +96,9 @@ export const OuiFlexItem: FunctionComponent<
 > = ({
   children,
   className,
-  grow = true, // true -> use default behaviour 'flex-grow: 1'
-  shrink = true, //  true -> use default behaviour 'flex-shrink: 1'
-  basis = true, //  true -> use default behaviour 'flex-basis: 0%'
+  grow = true, // use default behaviour 'flex-grow: 1'
+  shrink = true, //  use default behaviour 'flex-shrink: 1'
+  basis = undefined, //  Preserve basis prop coming from parent or grow prop unless specified
   component: Component = 'div',
   ...rest
 }) => {
@@ -114,7 +114,7 @@ export const OuiFlexItem: FunctionComponent<
       // use flex-shrink: 0 and flex-basis: auto
       'ouiFlexItem--flexShrinkZero': !shrink,
       // use flex-basis: auto
-      'ouiFlexItem--flexBasisAuto': !basis,
+      'ouiFlexItem--flexBasisAuto': basis === false,
       // use flex-grow: {grow} and flex-basis: auto
       [`ouiFlexItem--flexGrow${grow}`]:
         typeof grow === 'number' ? GROW_SIZES.indexOf(grow) >= 0 : undefined,
