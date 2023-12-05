@@ -272,23 +272,18 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
         </OuiInnerText>
       );
 
-    const breadcrumbWallClasses = isFirstBreadcrumb
-      ? classNames('ouiBreadcrumbWall', {
-          'ouiBreadcrumbWall--single': isLastBreadcrumb,
-        })
-      : breadcrumbWrapperClasses;
+    const breadcrumbWallClasses = classNames('ouiBreadcrumbWall', {
+      'ouiBreadcrumbWall--single': isFirstBreadcrumb && isLastBreadcrumb,
+    });
 
-    const wrapper = (
-      <div className={breadcrumbWallClasses}>
-        {isFirstBreadcrumb ? (
-          <div className={breadcrumbWrapperClasses}>{link}</div>
-        ) : (
-          link
-        )}
-      </div>
+    const wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
+    const wall = isFirstBreadcrumb ? (
+      <div className={breadcrumbWallClasses}>{wrapper}</div>
+    ) : (
+      wrapper
     );
 
-    return <Fragment key={index}>{wrapper}</Fragment>;
+    return <Fragment key={index}>{wall}</Fragment>;
   });
 
   // Use the default object if they simply passed `true` for responsive
