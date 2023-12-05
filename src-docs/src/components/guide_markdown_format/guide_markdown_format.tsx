@@ -26,7 +26,7 @@ export const GuideMarkdownFormat: FunctionComponent<GuideMarkdownFormatProps> = 
   children,
 }) => {
   const processingPlugins = getDefaultOuiMarkdownProcessingPlugins();
-  const rehype2reactConfig = processingPlugins[1][1];
+  const rehype2reactConfig = processingPlugins[2][1];
 
   rehype2reactConfig.components.h2 = ({ children }) => {
     const id = slugify(children[0]);

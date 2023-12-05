@@ -9,7 +9,12 @@
  * GitHub history for details.
  */
 
-import { MutationObserver, MutationNotifier } from '../polyfills/mutation_observer';
+import {
+  // eslint-disable-next-line import/named
+  MutationObserver,
+  // eslint-disable-next-line import/named
+  MutationNotifier,
+} from '../polyfills/mutation_observer';
 
 // used by data_grid.tsx to return a column size for the jest environment
 // long term, we need to find an in-browser test environment for these
@@ -28,12 +33,14 @@ afterAll(() => {
 });
 
 beforeAll(() => {
-  Object.defineProperty(window, 'MutationObserver', { value: MutationObserver });
+  Object.defineProperty(window, 'MutationObserver', {
+    value: MutationObserver,
+  });
   patchNotifyChange(window);
 
   function patchNotifyChange(window) {
     const notifyInstance = MutationNotifier.getInstance();
-    const notify = function(node) {
+    const notify = function (node) {
       notifyInstance.notifyChanged(node);
     };
 
@@ -60,7 +67,7 @@ beforeAll(() => {
 
   function intersectMethod(proto, methodName, intersect) {
     const orig = proto[methodName];
-    proto[methodName] = function(...args) {
+    proto[methodName] = function (...args) {
       const ret = orig.apply(this, args);
       intersect(this);
       return ret;

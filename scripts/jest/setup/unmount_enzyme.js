@@ -14,7 +14,7 @@ jest.mock('enzyme', () => {
   const enzyme = jest.requireActual('enzyme');
   return {
     ...enzyme,
-    mount: component => {
+    mount: (component) => {
       const mountedComponent = enzyme.mount(component);
       mockMountedComponents.push(mountedComponent);
       return mountedComponent;
