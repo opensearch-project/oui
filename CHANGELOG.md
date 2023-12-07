@@ -28,6 +28,7 @@
 ### 🚞 Infrastructure
 
 - Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
+- Skip build and test workflows on dependabot PR ([#1170](https://github.com/opensearch-project/oui/pull/1170))
 
 ### 📝 Documentation
 
