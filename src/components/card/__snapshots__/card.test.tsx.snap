@@ -70,9 +70,7 @@ exports[`OuiCard horizontal selectable 1`] = `
     <span
       class="ouiButtonContent ouiButtonEmpty__content"
     >
-      <span
-        class=""
-      />
+      <span />
       <span
         class="ouiButtonEmpty__text"
       >
@@ -788,9 +786,7 @@ exports[`OuiCard props selectable 1`] = `
     <span
       class="ouiButtonContent ouiButtonEmpty__content"
     >
-      <span
-        class=""
-      />
+      <span />
       <span
         class="ouiButtonEmpty__text"
       >

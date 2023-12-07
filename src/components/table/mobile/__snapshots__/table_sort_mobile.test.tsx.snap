@@ -18,9 +18,7 @@ exports[`OuiTableSortMobile is rendered 1`] = `
         <span
           class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
         >
-          <span
-            class=""
-          >
+          <span>
             <span
               class="ouiButtonContent__icon"
               color="inherit"

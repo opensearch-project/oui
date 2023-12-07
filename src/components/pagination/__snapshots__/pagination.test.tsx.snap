@@ -35,9 +35,7 @@ exports[`OuiPagination is rendered 1`] = `
         <span
           class="ouiButtonContent ouiButtonEmpty__content"
         >
-          <span
-            class=""
-          />
+          <span />
           <span
             class="ouiButtonEmpty__text"
           >

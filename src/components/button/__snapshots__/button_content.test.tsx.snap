@@ -6,9 +6,7 @@ exports[`OuiButtonContent is rendered 1`] = `
   class="ouiButtonContent testClass1 testClass2"
   data-test-subj="test subject string"
 >
-  <span
-    class=""
-  />
+  <span />
   <span />
 </span>
 `;
@@ -17,9 +15,7 @@ exports[`OuiButtonContent props children is rendered 1`] = `
 <span
   class="ouiButtonContent"
 >
-  <span
-    class=""
-  />
+  <span />
   <span>
     Content
   </span>
@@ -30,9 +26,7 @@ exports[`OuiButtonContent props iconSide is rendered 1`] = `
 <span
   class="ouiButtonContent ouiButtonContent--iconRight"
 >
-  <span
-    class=""
-  >
+  <span>
     <span
       class="ouiButtonContent__icon"
       color="inherit"
@@ -47,9 +41,7 @@ exports[`OuiButtonContent props iconType is rendered 1`] = `
 <span
   class="ouiButtonContent"
 >
-  <span
-    class=""
-  >
+  <span>
     <span
       class="ouiButtonContent__icon"
       color="inherit"
@@ -64,9 +56,7 @@ exports[`OuiButtonContent props isLoading is rendered 1`] = `
 <span
   class="ouiButtonContent"
 >
-  <span
-    class=""
-  >
+  <span>
     <span
       class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
     />
@@ -79,9 +69,7 @@ exports[`OuiButtonContent props isLoading replaces iconType with spinner 1`] = `
 <span
   class="ouiButtonContent"
 >
-  <span
-    class=""
-  >
+  <span>
     <span
       class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
     />
@@ -96,7 +84,6 @@ exports[`OuiButtonContent props textProps is rendered 1`] = `
 >
   <span
     aria-label="aria-label"
-    class=""
     data-test-subj="test subject string"
   />
   <span

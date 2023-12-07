@@ -10,9 +10,7 @@ exports[`OuiHeaderSectionItemButton is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
-    <span
-      class=""
-    />
+    <span />
     <span
       class="ouiButtonEmpty__text"
     >
@@ -33,9 +31,7 @@ exports[`OuiHeaderSectionItemButton renders a link 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
-    <span
-      class=""
-    />
+    <span />
     <span
       class="ouiButtonEmpty__text"
     >
@@ -55,9 +51,7 @@ exports[`OuiHeaderSectionItemButton renders children 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
-    <span
-      class=""
-    />
+    <span />
     <span
       class="ouiButtonEmpty__text"
     >
@@ -81,9 +75,7 @@ exports[`OuiHeaderSectionItemButton renders notification as a badge 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
-    <span
-      class=""
-    />
+    <span />
     <span
       class="ouiButtonEmpty__text"
     >
@@ -108,9 +100,7 @@ exports[`OuiHeaderSectionItemButton renders notification as a dot 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
-    <span
-      class=""
-    />
+    <span />
     <span
       class="ouiButtonEmpty__text"
     >
@@ -135,9 +125,7 @@ exports[`OuiHeaderSectionItemButton renders notification color 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
-    <span
-      class=""
-    />
+    <span />
     <span
       class="ouiButtonEmpty__text"
     >

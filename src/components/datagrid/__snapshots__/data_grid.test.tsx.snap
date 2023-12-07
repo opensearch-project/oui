@@ -21,9 +21,7 @@ exports[`OuiDataGrid pagination renders 1`] = `
           <span
             class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
           >
-            <span
-              class=""
-            >
+            <span>
               <span
                 class="ouiButtonContent__icon"
                 color="inherit"
@@ -80,9 +78,7 @@ exports[`OuiDataGrid pagination renders 1`] = `
             <span
               class="ouiButtonContent ouiButtonEmpty__content"
             >
-              <span
-                class=""
-              />
+              <span />
               <span
                 class="ouiButtonEmpty__text"
               >
@@ -106,9 +102,7 @@ exports[`OuiDataGrid pagination renders 1`] = `
             <span
               class="ouiButtonContent ouiButtonEmpty__content"
             >
-              <span
-                class=""
-              />
+              <span />
               <span
                 class="ouiButtonEmpty__text"
               >
@@ -968,9 +962,7 @@ Array [
               <span
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
-                <span
-                  class=""
-                >
+                <span>
                   <span
                     class="ouiButtonContent__icon"
                     color="inherit"
@@ -1001,9 +993,7 @@ Array [
               <span
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
-                <span
-                  class=""
-                >
+                <span>
                   <span
                     class="ouiButtonContent__icon"
                     color="inherit"
@@ -1027,9 +1017,7 @@ Array [
           <span
             class="ouiButtonContent ouiButtonEmpty__content"
           >
-            <span
-              class=""
-            >
+            <span>
               <span
                 class="ouiButtonContent__icon"
                 color="inherit"
@@ -1346,9 +1334,7 @@ Array [
               <span
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
-                <span
-                  class=""
-                >
+                <span>
                   <span
                     class="ouiButtonContent__icon"
                     color="inherit"
@@ -1379,9 +1365,7 @@ Array [
               <span
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
-                <span
-                  class=""
-                >
+                <span>
                   <span
                     class="ouiButtonContent__icon"
                     color="inherit"
@@ -1405,9 +1389,7 @@ Array [
           <span
             class="ouiButtonContent ouiButtonEmpty__content"
           >
-            <span
-              class=""
-            >
+            <span>
               <span
                 class="ouiButtonContent__icon"
                 color="inherit"
@@ -2021,9 +2003,7 @@ Array [
               <span
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
-                <span
-                  class=""
-                >
+                <span>
                   <span
                     class="ouiButtonContent__icon"
                     color="inherit"
@@ -2054,9 +2034,7 @@ Array [
               <span
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
-                <span
-                  class=""
-                >
+                <span>
                   <span
                     class="ouiButtonContent__icon"
                     color="inherit"
@@ -2080,9 +2058,7 @@ Array [
           <span
             class="ouiButtonContent ouiButtonEmpty__content"
           >
-            <span
-              class=""
-            >
+            <span>
               <span
                 class="ouiButtonContent__icon"
                 color="inherit"
@@ -2398,9 +2374,7 @@ Array [
               <span
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
-                <span
-                  class=""
-                >
+                <span>
                   <span
                     class="ouiButtonContent__icon"
                     color="inherit"
@@ -2431,9 +2405,7 @@ Array [
               <span
                 class="ouiButtonContent ouiButtonEmpty__content"
               >
-                <span
-                  class=""
-                >
+                <span>
                   <span
                     class="ouiButtonContent__icon"
                     color="inherit"
@@ -2457,9 +2429,7 @@ Array [
           <span
             class="ouiButtonContent ouiButtonEmpty__content"
           >
-            <span
-              class=""
-            >
+            <span>
               <span
                 class="ouiButtonContent__icon"
                 color="inherit"

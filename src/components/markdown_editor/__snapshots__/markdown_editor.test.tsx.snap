@@ -172,9 +172,7 @@ exports[`OuiMarkdownEditor is rendered 1`] = `
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span
-          class=""
-        >
+        <span>
           <span
             class="ouiButtonContent__icon"
             color="inherit"
@@ -406,9 +404,7 @@ exports[`OuiMarkdownEditor props autoExpandPreview is rendered with false 1`] = 
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span
-          class=""
-        >
+        <span>
           <span
             class="ouiButtonContent__icon"
             color="inherit"
@@ -640,9 +636,7 @@ exports[`OuiMarkdownEditor props height is rendered in full mode 1`] = `
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span
-          class=""
-        >
+        <span>
           <span
             class="ouiButtonContent__icon"
             color="inherit"
@@ -874,9 +868,7 @@ exports[`OuiMarkdownEditor props height is rendered with a custom size 1`] = `
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span
-          class=""
-        >
+        <span>
           <span
             class="ouiButtonContent__icon"
             color="inherit"
@@ -1108,9 +1100,7 @@ exports[`OuiMarkdownEditor props maxHeight is rendered with a custom size 1`] = 
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span
-          class=""
-        >
+        <span>
           <span
             class="ouiButtonContent__icon"
             color="inherit"
