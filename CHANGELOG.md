@@ -16,7 +16,7 @@
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
-- Match .browserlist with OpenSearch Dashboards ([#1023](https://github.com/opensearch-project/oui/issues/1023))
+- Match .browserlist with OpenSearch Dashboards ([#1104](https://github.com/opensearch-project/oui/pull/1104))
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
 - Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
 
