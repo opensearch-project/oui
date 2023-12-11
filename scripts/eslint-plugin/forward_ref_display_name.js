@@ -35,7 +35,7 @@ module.exports = {
       description: 'Enforce display name to forwardRef components',
     },
   },
-  create: function(context) {
+  create: function (context) {
     const forwardRefUsages = [];
     const displayNameUsages = [];
     return {
@@ -68,7 +68,7 @@ module.exports = {
         }
       },
       'Program:exit'() {
-        forwardRefUsages.forEach(identifier => {
+        forwardRefUsages.forEach((identifier) => {
           if (!isDisplayNameUsed(identifier)) {
             context.report({
               node: identifier,
@@ -80,7 +80,7 @@ module.exports = {
     };
     function isDisplayNameUsed(identifier) {
       const node = displayNameUsages.find(
-        displayName => displayName.name === identifier.name
+        (displayName) => displayName.name === identifier.name
       );
       return !!node;
     }

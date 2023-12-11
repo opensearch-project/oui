@@ -31,7 +31,7 @@
 import React, { Component } from 'react';
 import { OuiFilterButton } from '../../filter_group';
 import { isNil } from '../../../services/predicate';
-import { Query } from '../query';
+import { Query } from '../query/query';
 import { Clause, OperatorType, Value } from '../query/ast';
 
 export interface FieldValueToggleFilterConfigType {

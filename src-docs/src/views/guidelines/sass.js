@@ -14,7 +14,9 @@ import sizes from '!!variables-from-scss!!../../../../src/global_styling/variabl
 import zindexs from '!!variables-from-scss!!../../../../src/global_styling/variables/_z_index.scss';
 import animations from '!!variables-from-scss!!../../../../src/global_styling/variables/_animations.scss';
 import breakpoints from '!!variables-from-scss!!../../../../src/global_styling/variables/_responsive.scss';
+
 import { rgbToHex } from '../../../../src/services';
+
 
 import { Link } from 'react-router-dom';
 
@@ -113,7 +115,7 @@ function renderPaletteColor(palette, color) {
       <OuiFlexItem grow={false}>
         <div
           className="guideSass__swatch"
-          style={{ background: rgbToHex(palette[color].rgba).toUpperCase() }}
+          style={{ background: palette[color] }}
         />
       </OuiFlexItem>
       <OuiFlexItem grow={false}>

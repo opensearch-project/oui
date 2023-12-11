@@ -53,7 +53,10 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
 
   if (existsSync('node_modules')) {
     for (const name of readdirSync('node_modules')) {
-      if (!depsToKeep.includes(name)) rmSync(join('node_modules', name), { recursive: true, force: true });
+
+      if (!depsToKeep.includes(name))
+        rmSync(join('node_modules', name), { recursive: true, force: true });
+
     }
   }
 
@@ -78,7 +81,13 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
 
   if (existsSync('node_modules/@types')) {
     for (const name of readdirSync('node_modules/@types')) {
-      if (!typesToKeep.includes(name)) rmSync(join('node_modules/@types', name), { recursive: true, force: true });
+
+      if (!typesToKeep.includes(name))
+        rmSync(join('node_modules/@types', name), {
+          recursive: true,
+          force: true,
+        });
+
     }
   }
 
@@ -110,19 +119,18 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
     rmSync(name, { recursive: true, force: true });
   }
 
-  const scriptsToKeep = [
-    'postinstall.js',
-    'preinstall.js'
-  ];
+  const scriptsToKeep = ['postinstall.js', 'preinstall.js'];
 
   for (const name of readdirSync('scripts')) {
-    if (!scriptsToKeep.includes(name)) rmSync(join('scripts', name), { recursive: true, force: true });
+    if (!scriptsToKeep.includes(name))
+      rmSync(join('scripts', name), { recursive: true, force: true });
   }
 
   const deleteNonSCSS = (loc) => {
     for (const entry of readdirSync(loc, { withFileTypes: true })) {
       if (entry.isDirectory()) deleteNonSCSS(join(loc, entry.name));
-      else if (entry.isFile() && !entry.name.endsWith('.scss')) rmSync(join(loc, entry.name), { force: true });
+      else if (entry.isFile() && !entry.name.endsWith('.scss'))
+        rmSync(join(loc, entry.name), { force: true });
     }
   };
 

@@ -191,5 +191,12 @@ module.exports = {
         'react/prefer-stateless-function': 'off',
       },
     },
+    {
+      // Currently suppressing the following rules for files in the scripts directory
+      files: ['scripts/**/*.{ts,tsx,js}'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off', // not enforcing ES6-style import statements
+      },
+    },
   ],
 };
