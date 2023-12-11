@@ -8,6 +8,7 @@
 
 ### 🛡 Security
 
+- [CVE-2023-46234] Bump `browserify-sign` from `4.0.4` to `4.2.2` ([#1117](https://github.com/opensearch-project/oui/pull/1117))
 - Bump `babel-template` from `6.26.0` to `@babel/template` `7.10.4` ([#1095](https://github.com/opensearch-project/oui/pull/1095))
 
 ### 📈 Features/Enhancements
@@ -17,6 +18,7 @@
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
 - Match .browserlist with OpenSearch Dashboards ([#1023](https://github.com/opensearch-project/oui/issues/1023))
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
+- Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
 
 
 ### 🐛 Bug Fixes
