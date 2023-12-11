@@ -20,7 +20,6 @@
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
 - Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
 
-
 ### 🐛 Bug Fixes
 
 - Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
