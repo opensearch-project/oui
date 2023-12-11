@@ -1,4 +1,3 @@
-
 Firefox > 0 and last 2 years and > 0.01%
 Chrome > 0 and last 2 years and > 0.01%
 Safari > 0 and last 2 years and > 0.01%
@@ -9,5 +8,3 @@ not op_mini all
 not and_uc < 100
 not android < 100
 not dead
-
-
