@@ -20,6 +20,7 @@
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
 - Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
 - Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
+- Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
 
 ### 🐛 Bug Fixes
 
