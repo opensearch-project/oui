@@ -32,9 +32,9 @@ module.exports = {
     "./scripts/babel/variables-from-scss",
     "add-module-exports",
     // stage 3
-    "@babel/proposal-object-rest-spread",
+    "@babel/transform-object-rest-spread",
     // stage 2
-    "@babel/proposal-class-properties",
+    "@babel/transform-class-properties",
     [
       "inline-react-svg",
       {

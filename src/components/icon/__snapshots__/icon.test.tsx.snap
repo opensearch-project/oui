@@ -7249,7 +7249,7 @@ exports[`OuiIcon props type polygon is rendered 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   <path
-    d="M1 5V1h4v1.3h6V1h4v4h-2.934l-.808 1H12v4h-.76l.8 1H15v4h-4v-1.5H5V15H1v-4h1.5V5H1Zm1-3h2v2H2V2Zm9 10.5v-1.2L9.96 10H8V6h1.973L11 4.728V3.3H5V5H3.5v6H5v1.5h6ZM12 2h2v2h-2V2ZM4 12H2v2h2v-2Zm5-5h2v2H9V7Zm3 5h2v2h-2v-2Z"
+    d="M15 11v4h-4v-1.5H5V15H1v-4h1.5V5H1V1h4v1.3h6V1h4v4h-2.9l-.8 1h.7v4h-.8l.8 1h3zm-1 3v-2h-2v2h2zm0-10V2h-2v2h2zm-3 8.5v-1.2L10 10H8V6h2l1-1.3V3.3H5V5H3.5v6H5v1.5h6zM11 9V7H9v2h2zm-7 5v-2H2v2h2zM4 4V2H2v2h2z"
   />
 </svg>
 `;
@@ -10184,7 +10184,7 @@ exports[`OuiIcon props type wrench is rendered 1`] = `
 </svg>
 `;
 
-exports[`OuiIcon renders custom components 1`] = `
+exports[`OuiIcon render different types of icons renders custom components 1`] = `
 <span
   aria-hidden="true"
   aria-label="heart"
@@ -10194,4 +10194,54 @@ exports[`OuiIcon renders custom components 1`] = `
 >
   ❤️
 </span>
+`;
+
+exports[`OuiIcon render different types of icons renders custom svg from absolute url 1`] = `
+<img
+  alt=""
+  class="ouiIcon ouiIcon--medium"
+  src="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg"
+/>
+`;
+
+exports[`OuiIcon render different types of icons renders custom svg from relative url 1`] = `
+<img
+  alt=""
+  class="ouiIcon ouiIcon--medium"
+  src="./assets/beaker.svg"
+/>
+`;
+
+exports[`OuiIcon render different types of icons renders default icon when type is not in OuiIconType 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium ouiIcon-isLoading"
+  focusable="false"
+  height="16"
+  role="img"
+  viewBox="0 0 16 16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M5.277 10.088c.02.014.04.03.057.047.582.55 1.134.812 1.666.812.586 0 1.84-.293 3.713-.88L9 6.212V2H7v4.212l-1.723 3.876Zm-.438.987L3.539 14h8.922l-1.32-2.969C9.096 11.677 7.733 12 7 12c-.74 0-1.463-.315-2.161-.925ZM6 2H5V1h6v1h-1v4l3.375 7.594A1 1 0 0 1 12.461 15H3.54a1 1 0 0 1-.914-1.406L6 6V2Z"
+  />
+</svg>
+`;
+
+exports[`OuiIcon render different types of icons renders icon when type is in cache 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium"
+  focusable="false"
+  height="16"
+  role="img"
+  viewBox="0 0 16 16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0 1.994C0 .893.895 0 1.994 0h12.012C15.107 0 16 .895 16 1.994v12.012A1.995 1.995 0 0 1 14.006 16H1.994A1.995 1.995 0 0 1 0 14.006V1.994Zm1 0v12.012c0 .548.446.994.994.994h12.012a.995.995 0 0 0 .994-.994V1.994A.995.995 0 0 0 14.006 1H1.994A.995.995 0 0 0 1 1.994ZM1 4h14v1H1V4Zm1.5-1a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1h-1Zm3 0a.5.5 0 0 1 0-1h1a.5.5 0 0 1 0 1h-1Zm4.947 6.106a1 1 0 0 1 0 1.788l-3 2A1 1 0 0 1 6 12V8a1 1 0 0 1 1.447-.894l3 2ZM10 10 7 8v4l3-2Z"
+  />
+</svg>
 `;

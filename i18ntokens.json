@@ -1643,14 +1643,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 275,
+        "line": 279,
         "column": 4,
-        "index": 10041
+        "index": 10184
       },
       "end": {
-        "line": 278,
+        "line": 282,
         "column": 46,
-        "index": 10201
+        "index": 10344
       }
     },
     "filepath": "src/components/datagrid/data_grid.tsx"
@@ -1661,14 +1661,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 281,
+        "line": 285,
         "column": 10,
-        "index": 10275
+        "index": 10418
       },
       "end": {
-        "line": 283,
+        "line": 287,
         "column": 52,
-        "index": 10397
+        "index": 10540
       }
     },
     "filepath": "src/components/datagrid/data_grid.tsx"
@@ -1679,14 +1679,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 990,
+        "line": 1004,
         "column": 4,
-        "index": 32868
+        "index": 33235
       },
       "end": {
-        "line": 995,
+        "line": 1009,
         "column": 53,
-        "index": 33041
+        "index": 33408
       }
     },
     "filepath": "src/components/datagrid/data_grid.tsx"
@@ -1697,14 +1697,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 990,
+        "line": 1004,
         "column": 4,
-        "index": 32868
+        "index": 33235
       },
       "end": {
-        "line": 995,
+        "line": 1009,
         "column": 53,
-        "index": 33041
+        "index": 33408
       }
     },
     "filepath": "src/components/datagrid/data_grid.tsx"
@@ -1715,14 +1715,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 1031,
+        "line": 1045,
         "column": 20,
-        "index": 34079
+        "index": 34453
       },
       "end": {
-        "line": 1041,
+        "line": 1055,
         "column": 3,
-        "index": 34366
+        "index": 34740
       }
     },
     "filepath": "src/components/datagrid/data_grid.tsx"
@@ -1733,14 +1733,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 1043,
+        "line": 1057,
         "column": 25,
-        "index": 34394
+        "index": 34768
       },
       "end": {
-        "line": 1052,
+        "line": 1066,
         "column": 3,
-        "index": 34644
+        "index": 35018
       }
     },
     "filepath": "src/components/datagrid/data_grid.tsx"
@@ -1751,14 +1751,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 1171,
+        "line": 1185,
         "column": 18,
-        "index": 39758
+        "index": 40132
       },
       "end": {
-        "line": 1174,
+        "line": 1188,
         "column": 20,
-        "index": 39911
+        "index": 40285
       }
     },
     "filepath": "src/components/datagrid/data_grid.tsx"
@@ -2653,12 +2653,12 @@
       "start": {
         "line": 143,
         "column": 4,
-        "index": 4700
+        "index": 4717
       },
       "end": {
         "line": 148,
         "column": 44,
-        "index": 4885
+        "index": 4902
       }
     },
     "filepath": "src/components/list_group/pinnable_list_group/pinnable_list_group.tsx"
@@ -2671,12 +2671,12 @@
       "start": {
         "line": 143,
         "column": 4,
-        "index": 4700
+        "index": 4717
       },
       "end": {
         "line": 148,
         "column": 44,
-        "index": 4885
+        "index": 4902
       }
     },
     "filepath": "src/components/list_group/pinnable_list_group/pinnable_list_group.tsx"

@@ -133,11 +133,7 @@ export const GuideSection: FunctionComponent<GuideSection> = ({
 
   const renderPlaygroundToggle = () => {
     const isPlaygroundUnsupported =
-      typeof window !== 'undefined' &&
-      typeof document !== 'undefined' &&
-      !!(window as any).MSInputMethodContext &&
-      // @ts-ignore doesn't exist?
-      !!document.documentMode;
+      typeof window !== 'undefined' && typeof document !== 'undefined';
 
     if (!isPlaygroundUnsupported && !!playground) {
       return (
