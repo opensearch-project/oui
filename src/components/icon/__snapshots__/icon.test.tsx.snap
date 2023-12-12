@@ -1833,6 +1833,129 @@ exports[`OuiIcon props type discoverApp is rendered 1`] = `
 </svg>
 `;
 
+exports[`OuiIcon props type dockedBottom is rendered 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
+  focusable="false"
+  height="16"
+  role="img"
+  viewBox="0 0 16 16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3 1h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2Zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3Z"
+  />
+  <path
+    d="M3 9.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-3Z"
+  />
+</svg>
+`;
+
+exports[`OuiIcon props type dockedDetached is rendered 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
+  focusable="false"
+  height="16"
+  role="img"
+  viewBox="0 0 16 16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M9 1H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h-1v7a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h6V1Z"
+  />
+  <rect
+    height="5"
+    rx="0.5"
+    width="6"
+    x="10"
+  />
+</svg>
+`;
+
+exports[`OuiIcon props type dockedLeft is rendered 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
+  focusable="false"
+  height="16"
+  role="img"
+  viewBox="0 0 16 16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3 1h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2Zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3Z"
+  />
+  <path
+    d="M3 3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-9Z"
+  />
+</svg>
+`;
+
+exports[`OuiIcon props type dockedRight is rendered 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
+  focusable="false"
+  height="16"
+  role="img"
+  viewBox="0 0 16 16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3 1h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2Zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3Z"
+  />
+  <path
+    d="M9 3.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-9Z"
+  />
+</svg>
+`;
+
+exports[`OuiIcon props type dockedTakeover is rendered 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
+  focusable="false"
+  height="16"
+  role="img"
+  viewBox="0 0 16 16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3 1h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2Zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3Z"
+  />
+  <path
+    d="M3 5.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-7Z"
+  />
+</svg>
+`;
+
+exports[`OuiIcon props type dockedTop is rendered 1`] = `
+<svg
+  aria-hidden="true"
+  class="ouiIcon ouiIcon--medium ouiIcon-isLoaded"
+  focusable="false"
+  height="16"
+  role="img"
+  viewBox="0 0 16 16"
+  width="16"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3 1h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2Zm0 1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H3Z"
+  />
+  <path
+    d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5v-3Z"
+  />
+</svg>
+`;
+
 exports[`OuiIcon props type document is rendered 1`] = `
 <svg
   aria-hidden="true"
