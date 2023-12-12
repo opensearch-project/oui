@@ -1,9 +1,8 @@
-<!--
+<!-- 
   - Copyright OpenSearch Contributors
-  - SPDX-License-Identifier: Apache-2.0
+  - SPDX-License-Identifier: Apache-2.0 
   -->
 
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-  <path
-    d="M15 11v4h-4v-1.5H5V15H1v-4h1.5V5H1V1h4v1.3h6V1h4v4h-2.9l-.8 1h.7v4h-.8l.8 1h3zm-1 3v-2h-2v2h2zm0-10V2h-2v2h2zm-3 8.5v-1.2L10 10H8V6h2l1-1.3V3.3H5V5H3.5v6H5v1.5h6zM11 9V7H9v2h2zm-7 5v-2H2v2h2zM4 4V2H2v2h2z" />
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48">
+  <path d="m0 13.714v-13.714h13.714v4.4571h20.571v-4.4571h13.714v13.714h-10.06l-2.7693 3.4286h2.5437v13.714h-2.6047l2.7429 3.4286h10.148v13.714h-13.714v-5.1429h-20.571v5.1429h-13.714v-13.714h5.1429v-20.571h-5.1429zm3.4286-10.286h6.8571v6.8571h-6.8571v-6.8571zm30.857 36v-4.1129l-3.5667-4.4586h-6.719v-13.714h6.7634l3.5223-4.361v-4.8962h-20.571v5.8286h-5.1429v20.571h5.1429v5.1429h20.571zm3.4286-36h6.8571v6.8571h-6.8571v-6.8571zm-27.429 34.286h-6.8571v6.8571h6.8571v-6.8571zm17.143-17.143h6.8571v6.8572h-6.8571v-6.8572zm10.286 17.143h6.8571v6.8571h-6.8571v-6.8571z" fill-rule="evenodd"/>
 </svg>

@@ -28,6 +28,7 @@
 - Extract build archive into a folder for OSD integration test CI ([#1075](https://github.com/opensearch-project/oui/pull/1075))
 - Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
 - Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
+- Fix `Polygon` icon sizing issue ([#1139](https://github.com/opensearch-project/oui/pull/1139))
 
 ### 🚞 Infrastructure
 
