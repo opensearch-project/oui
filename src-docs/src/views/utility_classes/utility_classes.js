@@ -106,7 +106,7 @@ export default () => (
       }
       example={
         <OuiMark style={wrappingExampleStyle} className="oui-displayNone">
-          Displaying None
+          Displaying none
         </OuiMark>
       }
       snippet={`<span className="oui-displayNone">
