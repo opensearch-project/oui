@@ -135,23 +135,11 @@ describe('OuiIcon', () => {
     });
   });
 
-  it('renders custom components', () => {
-    const CustomIcon = ({ ...props }) => {
-      return (
-        <span role="img" aria-label="heart" {...props}>
-          ❤️
-        </span>
-      );
-    };
-    const component = mount(<OuiIcon type={CustomIcon} />);
-    expect(prettyHtml(component.html())).toMatchSnapshot();
-  });
-
   describe('appendIconComponentCache', () => {
     it('does nothing if not called', () => {
       const component = mount(<OuiIcon type="videoPlayer" />);
       expect(
-        component.find('OuiIcon[type="videoPlayer"] > OuiIconEmpty').length
+        component.find('OuiIcon[type="videoPlayer"] > OuiIconBeaker').length
       ).toBe(1);
     });
 
@@ -172,8 +160,47 @@ describe('OuiIcon', () => {
       });
       const component = mount(<OuiIcon type="accessibility" />);
       expect(
-        component.find('OuiIcon[type="accessibility"] > OuiIconEmpty').length
+        component.find('OuiIcon[type="accessibility"] > OuiIconBeaker').length
       ).toBe(1);
+    });
+  });
+
+  describe('render different types of icons', () => {
+    it('renders icon when type is in cache', () => {
+      appendIconComponentCache({
+        videoPlayer: OuiIconVideoPlayer,
+      });
+      const component = mount(<OuiIcon type="videoPlayer" />);
+      expect(prettyHtml(component.html())).toMatchSnapshot();
+    });
+
+    it('renders custom svg from absolute url', () => {
+      const component = mount(
+        <OuiIcon type="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg" />
+      );
+      expect(prettyHtml(component.html())).toMatchSnapshot();
+    });
+
+    it('renders custom svg from relative url', () => {
+      const component = mount(<OuiIcon type="./assets/beaker.svg" />);
+      expect(prettyHtml(component.html())).toMatchSnapshot();
+    });
+
+    it('renders default icon when type is not in OuiIconType', () => {
+      const component = mount(<OuiIcon type="foo" />);
+      expect(prettyHtml(component.html())).toMatchSnapshot();
+    });
+
+    it('renders custom components', () => {
+      const CustomIcon = ({ ...props }) => {
+        return (
+          <span role="img" aria-label="heart" {...props}>
+            ❤️
+          </span>
+        );
+      };
+      const component = mount(<OuiIcon type={CustomIcon} />);
+      expect(prettyHtml(component.html())).toMatchSnapshot();
     });
   });
 });

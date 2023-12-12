@@ -63,7 +63,10 @@ const generator = dtsGenerator({
     } else {
       // otherwise export as the module's path relative to the @opensearch-project/oui namespace
       if (params.currentModuleId.endsWith('/index')) {
-        return path.join('@opensearch-project/oui', path.dirname(params.currentModuleId));
+        return path.join(
+          '@opensearch-project/oui',
+          path.dirname(params.currentModuleId)
+        );
       } else {
         return path.join('@opensearch-project/oui', params.currentModuleId);
       }
@@ -120,7 +123,10 @@ generator.then(() => {
       .readFileSync(defsFilePath)
       .toString()
       .replace(/\/\/\/\W+<reference.*/g, '') // 1.
-      .replace(/import\("src\/(.*?)"\)/g, 'import("@opensearch-project/oui/src/$1")') // 2.
+      .replace(
+        /import\("src\/(.*?)"\)/g,
+        'import("@opensearch-project/oui/src/$1")'
+      ) // 2.
       .replace(
         // start 3.
         // find any singular `declare module { ... }` block
@@ -140,7 +146,10 @@ generator.then(() => {
               let target = path.join(path.dirname(moduleName), importPath);
 
               // if the target resolves to an orphaned index.ts file, remap to '@opensearch-project/oui'
-              const filePath = target.replace('@opensearch-project/oui', baseDir);
+              const filePath = target.replace(
+                '@opensearch-project/oui',
+                baseDir
+              );
               const filePathTs = `${filePath}.ts`;
               const filePathTsx = `${filePath}.tsx`;
               const filePathResolvedToIndex = path.join(filePath, 'index.ts');
@@ -162,7 +171,10 @@ generator.then(() => {
       .replace(/$/, `\n\n${buildOuiTokensObject()}`) // 4.
   );
   /* OUI -> EUI Aliases */
-  fs.writeFileSync(defsFilePath, `\n\n${buildEuiTokensObject()}`, {flag: 'a', encoding: 'utf8'});
+  fs.writeFileSync(defsFilePath, `\n\n${buildEuiTokensObject()}`, {
+    flag: 'a',
+    encoding: 'utf8',
+  });
   /* End of Aliases */
 });
 
@@ -202,11 +214,16 @@ function buildEuiTokensObject() {
     },
     { i18ndefs: [], tokens: new Set() }
   );
-  const o2eMapper = {o: 'e', O: 'E'};
+  const o2eMapper = { o: 'e', O: 'E' };
   return `
 declare module '@opensearch-project/oui' {
   export type EuiTokensObject = {
-    ${i18ndefs.map(({ token }) => `"${token.replace(/(o)(?=ui)/ig, (m, m1) => o2eMapper[m1])}": any;`).join('\n  ')}
+    ${i18ndefs
+      .map(
+        ({ token }) =>
+          `"${token.replace(/(o)(?=ui)/gi, (m, m1) => o2eMapper[m1])}": any;`
+      )
+      .join('\n  ')}
   }
 }
   `;
