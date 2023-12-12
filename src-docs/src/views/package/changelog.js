@@ -15,8 +15,8 @@ import { OuiMarkdownFormat } from '../../../../src';
 import { GuidePage } from '../../components/guide_page';
 
 const changelogSource = require('!!raw-loader!../../../../CHANGELOG.md').default.replace(
-  /## \[`main`\].+?##/s, // remove the `main` heading & contents
-  '##'
+  /[\r\n]##\s+\[Unreleased\].+?[\r\n]+(?=##\s)/s, // remove the `unreleased` heading & contents
+  ''
 );
 
 export const Changelog = {
