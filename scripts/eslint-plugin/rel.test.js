@@ -13,7 +13,7 @@ const rule = require('./rel');
 const RuleTester = require('eslint').RuleTester;
 
 const ruleTester = new RuleTester({
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
 });
 
 const valid = [

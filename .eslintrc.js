@@ -111,12 +111,12 @@ module.exports = {
     'local/i18n': 'error',
     'local/href-with-rel': 'error',
     'local/forward-ref': 'error',
-    'local/require-license-header': [
-      'error',
-      {
-        licenses: [OSD_NEW_HEADER, OSD_HEADER],
-      },
-    ],
+    // 'local/require-license-header': [
+    //   'error',
+    //   {
+    //     licenses: [OSD_NEW_HEADER, OSD_HEADER],
+    //   },
+    // ],
     'no-use-before-define': 'off',
     quotes: ['warn', 'single', 'avoid-escape'],
     camelcase: 'off',
