@@ -95,7 +95,7 @@ export default () => (
   /* Your content */
 </span>`}
     />
-        <OuiSpacer />
+    <OuiSpacer />
     <UtilityClassesSection
       code="oui-displayNone"
       description={
