@@ -57,7 +57,7 @@ const webpackConfig = {
   },
 
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.json'],
+    extensions: ['.ts', '.tsx', '.js', '.json', '.mjs'],
   },
 
   resolveLoader: {
@@ -110,6 +110,11 @@ const webpackConfig = {
           limit: 8000, // Convert images < 8kb to base64 strings
           name: 'images/[hash]-[name].[ext]',
         },
+      },
+      {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: 'javascript/auto',
       },
     ],
   },
