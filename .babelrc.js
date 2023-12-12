@@ -31,10 +31,8 @@ module.exports = {
     "./scripts/babel/proptypes-from-ts-props",
     "./scripts/babel/variables-from-scss",
     "add-module-exports",
-    // stage 3
-    "@babel/proposal-object-rest-spread",
-    // stage 2
-    "@babel/proposal-class-properties",
+    "@babel/plugin-transform-object-rest-spread",
+    "@babel/plugin-transform-class-properties",
     [
       "inline-react-svg",
       {

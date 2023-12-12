@@ -28,7 +28,7 @@
  * under the License.
  */
 
-const babelEslint = require('babel-eslint');
+const babelEslint = require('@babel/eslint-parser');
 
 function assert(truth, message) {
   if (truth) {
