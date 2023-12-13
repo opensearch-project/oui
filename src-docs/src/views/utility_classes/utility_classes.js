@@ -101,7 +101,7 @@ export default () => (
       description={
         <p>
           Changes the element’s display property to{' '}
-          <OuiCode language="sass">display: none;</OuiCode> 
+          <OuiCode language="sass">display: none;</OuiCode>
         </p>
       }
       example={
