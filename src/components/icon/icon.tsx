@@ -625,21 +625,27 @@ export class OuiIcon extends PureComponent<OuiIconProps, State> {
     let initialIcon;
     let isLoading = false;
 
-    // Category 1: cached oui icons
+    // Define helper function
+    const getIconAndLoadingStatus = (type: any) => {
+      // Category 1: cached oui icons
     if (isCachedIcon(type)) {
-      initialIcon = iconComponentCache[type as string];
+      return { icon: iconComponentCache[type as string], isLoading: false };
       // Category 2: URL (relative, absolute)
     } else if (isUrl(type)) {
-      initialIcon = type;
+      return { icon: type, isLoading: false };
       // Category 3: non-cached oui icon or new icon
     } else if (typeof type === 'string') {
-      isLoading = true;
       this.loadIconComponent(type as OuiIconType);
+      return { icon: undefined, isLoading: true };
     } else {
       // Category 4: custom icon component
-      initialIcon = type;
       this.onIconLoad();
+      return { icon: type, isLoading: false };
     }
+    };
+
+    // Use the helper function
+    const { icon: initialIcon, isLoading } = getIconAndLoadingStatus(type);
 
     this.state = {
       icon: initialIcon,
