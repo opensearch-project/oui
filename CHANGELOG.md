@@ -10,6 +10,7 @@
 
 - [CVE-2023-46234] Bump `browserify-sign` from `4.0.4` to `4.2.2` ([#1117](https://github.com/opensearch-project/oui/pull/1117))
 - Bump `babel-template` from `6.26.0` to `@babel/template` `7.10.4` ([#1095](https://github.com/opensearch-project/oui/pull/1095))
+- [CVE-2023-45133] Bump `@babel/traverse` from `7.12.10` to `7.23.6` ([#1174](https://github.com/opensearch-project/oui/pull/1174))
 
 ### 📈 Features/Enhancements
 
@@ -17,8 +18,11 @@
 - Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
+- Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
 - Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
 - Rewrite `InitialIcon` computation without mutable variables ([#1186](https://github.com/opensearch-project/oui/pull/1186))
+- Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
+
 
 ### 🐛 Bug Fixes
 
@@ -30,6 +34,7 @@
 ### 🚞 Infrastructure
 
 - Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
+- Skip build and test workflows on dependabot PR ([#1170](https://github.com/opensearch-project/oui/pull/1170))
 
 ### 📝 Documentation
 
@@ -45,6 +50,7 @@
 - Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
 - Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
 - Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
+- Update deprecated Babel plugins ([#1155](https://github.com/opensearch-project/oui/pull/1155))
 
 ### 🪛 Refactoring
 
@@ -75,6 +81,7 @@
 - Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
 - Fix alignment of left icon for OuiListGroupItem with multiline text ([#1027](https://github.com/opensearch-project/oui/pull/1027))
 - Update new polygon icon svg ([#1068](https://github.com/opensearch-project/oui/pull/1083))
+- Remove max-height for TreeView node ([[#1118](https://github.com/opensearch-project/oui/issues/1118)])
 
 ### 🚞 Infrastructure
 
