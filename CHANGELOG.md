@@ -1,6 +1,69 @@
 # OUI
 
+## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
+
+### 🛡 Security
+
+- Bump `babel-template` from `6.26.0` to `@babel/template` `7.10.4` ([#1095](https://github.com/opensearch-project/oui/pull/1095))
+- [CVE-2023-46234] Bump `browserify-sign` from `4.0.4` to `4.2.2` ([#1117](https://github.com/opensearch-project/oui/pull/1117))
+- [CVE-2023-45133] Bump `@babel/traverse` from `7.12.10` to `7.23.6` ([#1174](https://github.com/opensearch-project/oui/pull/1174))
+
+### 📈 Features/Enhancements
+
+- Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+- Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
+- Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
+- Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
+- Add `onFullScreenChange` to `OuiDataGrid` ([#1053](https://github.com/opensearch-project/oui/pull/1053))
+- Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
+- Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
+- Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
+
+### 🐛 Bug Fixes
+
+- Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+- Fix alignment of left icon for OuiListGroupItem with multiline text ([#1027](https://github.com/opensearch-project/oui/pull/1027))
+- Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
+- Update polygon icon SVG ([#1083](https://github.com/opensearch-project/oui/pull/1083))
+- Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
+
+### 🚞 Infrastructure
+
+- Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
+- Extract build archive into a folder for OSD integration test CI ([#1075](https://github.com/opensearch-project/oui/pull/1075))
+- Add error handling when staged files are empty ([#1114](https://github.com/opensearch-project/oui/pull/1114))
+- Skip build and test workflows on dependabot PR ([#1170](https://github.com/opensearch-project/oui/pull/1170))
+
+### 📝 Documentation
+
+- Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
+- Update default docsite theme to Next Dark ([#1029](https://github.com/opensearch-project/oui/pull/1029))
+- Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
+- Remove "Widths" section from the OuiModal docs ([#1066](https://github.com/opensearch-project/oui/pull/1066))
+- Remove "Emphasized Side Nav" section from OUI docs site ([#1084](https://github.com/opensearch-project/oui/pull/1084))
+
+### 🛠 Maintenance
+
+- Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
+- Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
+- Replace `node-sass` with `sass-embedded` ([#1001](https://github.com/opensearch-project/oui/pull/1001))
+- Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
+- Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
+- Update `pre-commit` hook to only use `lint` instead of running `test-staged` script ([#1072](https://github.com/opensearch-project/oui/pull/1072))
+- Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
+- Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
+- Update deprecated Babel plugins ([#1155](https://github.com/opensearch-project/oui/pull/1155))
+- Move @seanneumann to emeritus maintainer ([#1188](https://github.com/opensearch-project/oui/pull/1188))
+
+### 🪛 Refactoring
+
+
 ## [`1.3.0`](https://github.com/opensearch-project/oui/tree/1.3.0)
+
+### 🛡 Security
+- [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
+- [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
+- Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
 
 ### 📈 Features/Enhancements
 
@@ -38,10 +101,7 @@
 
 ### 🛠 Maintenance
 
-- [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
-- [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
-- Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
 
 ### 🪛 Refactoring
 
