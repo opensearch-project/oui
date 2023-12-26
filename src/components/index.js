@@ -315,6 +315,8 @@ export { OuiSideNav } from './side_nav';
 
 export { OuiSpacer } from './spacer';
 
+export { OuiSplitButton } from './split_button';
+
 export { OuiStat } from './stat';
 
 export { OuiStep, OuiSteps, OuiSubSteps, OuiStepsHorizontal } from './steps';

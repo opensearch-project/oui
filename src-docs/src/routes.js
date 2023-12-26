@@ -197,6 +197,8 @@ import { SideNavExample } from './views/side_nav/side_nav_example';
 
 import { SpacerExample } from './views/spacer/spacer_example';
 
+import { SplitButtonExample } from './views/split_button/split_button_example';
+
 import { StatExample } from './views/stat/stat_example';
 
 import { StepsExample } from './views/steps/steps_example';
@@ -353,6 +355,7 @@ const navigation = [
     items: [
       BreadcrumbsExample,
       ButtonExample,
+      SplitButtonExample,
       CollapsibleNavExample,
       ContextMenuExample,
       ControlBarExample,
