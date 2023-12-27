@@ -20,7 +20,7 @@ import { CommonProps } from '../common';
 
 // import { htmlIdGenerator } from '../../services/accessibility';
 // import { OuiFormControlLayoutProps } from '../form/form_control_layout';
-import { OuiFlexGroup, OuiFlexItem } from '../flex';
+// import { OuiFlexGroup, OuiFlexItem } from '../flex';
 import {
   ButtonColor,
   ButtonSize,
@@ -91,26 +91,22 @@ export const OuiSplitButtonControl = ({
   // const screenReaderId = htmlIdGenerator()();
 
   return (
-    <OuiFlexGroup gutterSize="none" className="ouiSplitButton">
-      <OuiFlexItem>
-        <OuiButton
-          className="ouiSplitButton--primary"
-          fill={fill}
-          color={color}
-          size={size}
-          fullWidth={fullWidth}>
-          {children}
-        </OuiButton>
-      </OuiFlexItem>
-      <OuiFlexItem>
-        <OuiButtonIcon
-          className="ouiSplitButton--dropdown"
-          display={iconDisplay}
-          color={color as OuiButtonIconColor}
-          size={size || 'm'}
-          iconType="arrowDown"
-        />
-      </OuiFlexItem>
-    </OuiFlexGroup>
+    <div className="ouiSplitButtonControl">
+      <OuiButton
+        className="ouiSplitButtonControl--primary"
+        fill={fill}
+        color={color}
+        size={size}
+        fullWidth={fullWidth}>
+        {children}
+      </OuiButton>
+      <OuiButtonIcon
+        className="ouiSplitButtonControl--dropdown"
+        display={iconDisplay}
+        color={color as OuiButtonIconColor}
+        size={size || 'm'}
+        iconType="arrowDown"
+      />
+    </div>
   );
 };
