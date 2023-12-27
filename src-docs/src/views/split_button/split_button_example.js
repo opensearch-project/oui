@@ -18,7 +18,6 @@ import { GuideSectionTypes } from '../../components';
 import { OuiCode, OuiSplitButton } from '../../../../src/components';
 
 import SplitButtonBasic from './split_button_basic';
-import SplitButton from './split_button';
 const splitButtonBasicSource = require('!!raw-loader!./split_button_basic');
 const splitButtonBasicHtml = renderToHtml(SplitButtonBasic);
 const splitButtonBasicSnippet = `<OuiSplitButton

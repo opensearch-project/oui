@@ -11,11 +11,11 @@
 
 import React, { useState } from 'react';
 
-import { OuiSplitButton, OuiHealth } from '../../../../src/components';
+import { OuiSplitButton } from '../../../../src/components';
 
 export default () => {
   const options = ['Option 1', 'Option 2'];
-  const [_value, setValue] = useState();
+  const [, setValue] = useState();
 
   const onChange = (value) => {
     setValue(value);
@@ -23,7 +23,7 @@ export default () => {
 
   return (
     <OuiSplitButton options={options} onChange={(value) => onChange(value)}>
-      "Basic Split Button"
+      Basic Split Button
     </OuiSplitButton>
   );
 };
