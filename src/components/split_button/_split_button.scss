@@ -9,21 +9,19 @@
  * GitHub history for details.
  */
 
-.ouiSplitButton {
+.ouiSplitButton__listbox {
+  @include ouiScrollBar;
+  max-height: 300px;
+  overflow: hidden;
+  overflow-y: auto;
+}
 
-  .ouiSplitButton--primary {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: none;
-    margin-right: -1px;
+.ouiSplitButton__item {
+  @include ouiFontSizeS;
+  @include ouiInteractiveStates;
+  padding: $ouiSizeS;
+}
 
-  }
-
-  .ouiSplitButton--dropdown {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-
-    border-left: $ouiBorderThin;
-  }
-
+.ouiSplitButton__item--hasDividers:not(:last-of-type) {
+  border-bottom: $ouiBorderThin;
 }

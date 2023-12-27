@@ -1,0 +1,305 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OuiSplitButtonControl is rendered 1`] = `
+<div
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiSplitButton"
+>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButton ouiButton--primary ouiSplitButton--primary"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButton__content"
+      >
+        <span
+          class="ouiButton__text"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButton--dropdown"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiButtonIcon__icon"
+        color="inherit"
+        data-ouiicon-type="arrowDown"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`OuiSplitButtonControl props compressed is rendered 1`] = `
+<div
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiSplitButton"
+>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButton ouiButton--primary ouiSplitButton--primary"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButton__content"
+      >
+        <span
+          class="ouiButton__text"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButton--dropdown"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiButtonIcon__icon"
+        color="inherit"
+        data-ouiicon-type="arrowDown"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`OuiSplitButtonControl props disabled options are rendered 1`] = `
+<div
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiSplitButton"
+>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButton ouiButton--primary ouiSplitButton--primary"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButton__content"
+      >
+        <span
+          class="ouiButton__text"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButton--dropdown"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiButtonIcon__icon"
+        color="inherit"
+        data-ouiicon-type="arrowDown"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`OuiSplitButtonControl props empty value option is rendered 1`] = `
+<div
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiSplitButton"
+>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButton ouiButton--primary ouiSplitButton--primary"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButton__content"
+      >
+        <span
+          class="ouiButton__text"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButton--dropdown"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiButtonIcon__icon"
+        color="inherit"
+        data-ouiicon-type="arrowDown"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`OuiSplitButtonControl props fullWidth is rendered 1`] = `
+<div
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiSplitButton"
+>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButton ouiButton--primary ouiButton--fullWidth ouiSplitButton--primary"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButton__content"
+      >
+        <span
+          class="ouiButton__text"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButton--dropdown"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiButtonIcon__icon"
+        color="inherit"
+        data-ouiicon-type="arrowDown"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`OuiSplitButtonControl props isInvalid is rendered 1`] = `
+<div
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiSplitButton"
+>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButton ouiButton--primary ouiSplitButton--primary"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButton__content"
+      >
+        <span
+          class="ouiButton__text"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButton--dropdown"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiButtonIcon__icon"
+        color="inherit"
+        data-ouiicon-type="arrowDown"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`OuiSplitButtonControl props isLoading is rendered 1`] = `
+<div
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiSplitButton"
+>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButton ouiButton--primary ouiSplitButton--primary"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButton__content"
+      >
+        <span
+          class="ouiButton__text"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButton--dropdown"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiButtonIcon__icon"
+        color="inherit"
+        data-ouiicon-type="arrowDown"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`OuiSplitButtonControl props value option is rendered 1`] = `
+<div
+  class="ouiFlexGroup ouiFlexGroup--directionRow ouiFlexGroup--responsive ouiSplitButton"
+>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButton ouiButton--primary ouiSplitButton--primary"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButton__content"
+      >
+        <span
+          class="ouiButton__text"
+        />
+      </span>
+    </button>
+  </div>
+  <div
+    class="ouiFlexItem"
+  >
+    <button
+      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButton--dropdown"
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiButtonIcon__icon"
+        color="inherit"
+        data-ouiicon-type="arrowDown"
+      />
+    </button>
+  </div>
+</div>
+`;

@@ -15,34 +15,15 @@ import { OuiSuperSelect, OuiHealth } from '../../../../src/components';
 
 export default () => {
   const options = [
-    {
-      value: 'warning',
-      inputDisplay: (
-        <OuiHealth color="subdued" style={{ lineHeight: 'inherit' }}>
-          Warning
-        </OuiHealth>
-      ),
-      'data-test-subj': 'option-warning',
-      disabled: true,
-    },
-    {
-      value: 'minor',
-      inputDisplay: (
-        <OuiHealth color="warning" style={{ lineHeight: 'inherit' }}>
-          Minor
-        </OuiHealth>
-      ),
-      'data-test-subj': 'option-minor',
-    },
-    {
-      value: 'critical',
-      inputDisplay: (
-        <OuiHealth color="danger" style={{ lineHeight: 'inherit' }}>
-          Critical
-        </OuiHealth>
-      ),
-      'data-test-subj': 'option-critical',
-    },
+    <OuiHealth color="subdued" style={{ lineHeight: 'inherit' }}>
+      Warning
+    </OuiHealth>,
+    <OuiHealth color="warning" style={{ lineHeight: 'inherit' }}>
+      Minor
+    </OuiHealth>,
+    <OuiHealth color="danger" style={{ lineHeight: 'inherit' }}>
+      Critical
+    </OuiHealth>,
   ];
   const [value, setValue] = useState(options[1].value);
 
