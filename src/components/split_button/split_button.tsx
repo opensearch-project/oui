@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
 import { CommonProps } from '../common';
@@ -39,13 +39,13 @@ export type OuiSplitButtonProps = CommonProps &
     'onChange' | 'onClick' | 'options' | 'value'
   > & {
     /**
-     * Pass an array of options that must at least include:
-     * `value`: storing unique value of item,
-     * `inputDisplay`: what shows inside the form input when selected
-     * `dropdownDisplay` (optional): what shows for the item in the dropdown
+     * Pass an array of options : string or ReactNode
      */
     options: OuiSplitButtonOption[];
 
+    /**
+     * optional index of options item to mark with checkmark
+     */
     selectedIndex?: string;
 
     /**
@@ -80,53 +80,32 @@ export type OuiSplitButtonProps = CommonProps &
     isOpen?: boolean;
   };
 
-export class OuiSplitButton extends Component<OuiSplitButtonProps> {
-  static defaultProps = {
-    hasDividers: false,
-    fullWidth: false,
-    compressed: false,
-    isInvalid: false,
-    isLoading: false,
-  };
+export const OuiSplitButton = ({
+  fullWidth,
+  options = [],
+  selectedIndex,
+  hasDividers,
+  itemClassName,
+  onChange,
+  isOpen: propIsOpen,
+  className,
+  popoverClassName,
+  children,
+  ...rest
+}: OuiSplitButtonProps) => {
+  const itemNodes: Array<HTMLButtonElement | null> = [];
+  const [isOpen, setIsOpen] = useState(propIsOpen || false);
 
-  private itemNodes: Array<HTMLButtonElement | null> = [];
-  private _isMounted: boolean = false;
+  let selectedIndexInt: number | undefined = Number(selectedIndex);
+  if (Number.isNaN(selectedIndexInt)) selectedIndexInt = undefined;
 
-  state = {
-    isPopoverOpen: this.props.isOpen || false,
-  };
-
-  componentDidMount() {
-    this._isMounted = true;
-    if (this.props.isOpen) {
-      this.openPopover();
-    }
-  }
-
-  componentWillUnmount() {
-    this._isMounted = false;
-  }
-
-  setItemNode = (node: HTMLButtonElement | null, index: number) => {
-    this.itemNodes[index] = node;
-  };
-
-  openPopover = () => {
-    this.setState({
-      isPopoverOpen: true,
-    });
+  const openPopover = () => {
+    setIsOpen(true);
 
     const focusSelected = () => {
-      const selectedIndex = this.props.selectedIndex
-        ? parseInt(this.props.selectedIndex)
-        : null;
       requestAnimationFrame(() => {
-        if (!this._isMounted) {
-          return;
-        }
-
-        if (selectedIndex != null) {
-          this.focusItemAt(selectedIndex);
+        if (selectedIndexInt != null) {
+          focusItemAt(selectedIndexInt);
         } else {
           focusSelected();
         }
@@ -136,36 +115,42 @@ export class OuiSplitButton extends Component<OuiSplitButtonProps> {
     requestAnimationFrame(focusSelected);
   };
 
-  closePopover = () => {
-    this.setState({
-      isPopoverOpen: false,
-    });
+  useEffect(() => {
+    if (isOpen) {
+      openPopover();
+    }
+  });
+
+  const setItemNode = (node: HTMLButtonElement | null, index: number) => {
+    itemNodes[index] = node;
   };
 
-  itemClicked = (index: number) => {
-    this.setState({
-      isPopoverOpen: false,
-    });
-    if (this.props.onChange) {
-      this.props.onChange(index);
+  const closePopover = () => {
+    setIsOpen(false);
+  };
+
+  const itemClicked = (index: number) => {
+    setIsOpen(false);
+    if (onChange) {
+      onChange(index);
     }
   };
 
-  onSelectKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+  const onSelectKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
     if (event.key === keys.ARROW_UP || event.key === keys.ARROW_DOWN) {
       event.preventDefault();
       event.stopPropagation();
-      this.openPopover();
+      openPopover();
     }
   };
 
-  onItemKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+  const onItemKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
     switch (event.key) {
       case keys.ESCAPE:
         // close the popover and prevent ancestors from handling
         event.preventDefault();
         event.stopPropagation();
-        this.closePopover();
+        closePopover();
         break;
 
       case keys.TAB:
@@ -177,26 +162,26 @@ export class OuiSplitButton extends Component<OuiSplitButtonProps> {
       case keys.ARROW_UP:
         event.preventDefault();
         event.stopPropagation();
-        this.shiftFocus(ShiftDirection.BACK);
+        shiftFocus(ShiftDirection.BACK);
         break;
 
       case keys.ARROW_DOWN:
         event.preventDefault();
         event.stopPropagation();
-        this.shiftFocus(ShiftDirection.FORWARD);
+        shiftFocus(ShiftDirection.FORWARD);
         break;
     }
   };
 
-  focusItemAt(index: number) {
-    const targetElement = this.itemNodes[index];
+  const focusItemAt = (index: number) => {
+    const targetElement = itemNodes[index];
     if (targetElement != null) {
       targetElement.focus();
     }
-  }
+  };
 
-  shiftFocus(direction: ShiftDirection) {
-    const currentIndex = this.itemNodes.indexOf(
+  const shiftFocus = (direction: ShiftDirection) => {
+    const currentIndex = itemNodes.indexOf(
       document.activeElement as HTMLButtonElement
     );
     let targetElementIndex: number;
@@ -207,114 +192,93 @@ export class OuiSplitButton extends Component<OuiSplitButtonProps> {
     } else {
       if (direction === ShiftDirection.BACK) {
         targetElementIndex =
-          currentIndex === 0 ? this.itemNodes.length - 1 : currentIndex - 1;
+          currentIndex === 0 ? itemNodes.length - 1 : currentIndex - 1;
       } else {
         targetElementIndex =
-          currentIndex === this.itemNodes.length - 1 ? 0 : currentIndex + 1;
+          currentIndex === itemNodes.length - 1 ? 0 : currentIndex + 1;
       }
     }
 
-    this.focusItemAt(targetElementIndex);
-  }
+    focusItemAt(targetElementIndex);
+  };
 
-  render() {
-    const {
-      className,
-      options,
-      selectedIndex,
-      onChange,
-      isOpen,
-      isInvalid,
-      hasDividers,
-      itemClassName,
-      itemLayoutAlign,
-      fullWidth,
-      popoverClassName,
-      compressed,
-      ...rest
-    } = this.props;
+  const popoverClasses = classNames('ouiSplitButton', popoverClassName);
 
-    const popoverClasses = classNames('ouiSplitButton', popoverClassName);
+  const buttonClasses = classNames(
+    {
+      'ouiSplitButton--isOpen__button': isOpen,
+    },
+    className
+  );
 
-    const buttonClasses = classNames(
-      {
-        'ouiSplitButton--isOpen__button': this.state.isPopoverOpen,
-      },
-      className
-    );
+  const itemClasses = classNames(
+    'ouiSplitButton__item',
+    {
+      'ouiSplitButton__item--hasDividers': hasDividers,
+    },
+    itemClassName
+  );
 
-    const itemClasses = classNames(
-      'ouiSplitButton__item',
-      {
-        'ouiSplitButton__item--hasDividers': hasDividers,
-      },
-      itemClassName
-    );
+  const button = (
+    <OuiSplitButtonControl
+      options={options}
+      selectedIndex={selectedIndex}
+      onClick={isOpen ? closePopover : openPopover}
+      onKeyDown={onSelectKeyDown}
+      className={buttonClasses}
+      fullWidth={fullWidth}
+      // compressed={compressed}
+      {...rest}>
+      {children}
+    </OuiSplitButtonControl>
+  );
 
-    const button = (
-      <OuiSplitButtonControl
-        options={options}
-        selectedIndex={selectedIndex}
-        onClick={
-          this.state.isPopoverOpen ? this.closePopover : this.openPopover
-        }
-        onKeyDown={this.onSelectKeyDown}
-        className={buttonClasses}
-        fullWidth={fullWidth}
-        isInvalid={isInvalid}
-        compressed={compressed}
-        {...rest}
-      />
-    );
-
-    const items = options.map((option, index) => {
-      const isSelected =
-        this.props.selectedIndex &&
-        parseInt(this.props.selectedIndex) === index;
-
-      return (
-        <OuiContextMenuItem
-          key={index}
-          className={itemClasses}
-          icon={isSelected ? 'check' : 'empty'}
-          onClick={() => this.itemClicked(index)}
-          onKeyDown={this.onItemKeyDown}
-          layoutAlign={itemLayoutAlign}
-          buttonRef={(node) => this.setItemNode(node, index)}
-          role="option"
-          id={`splitButtonItem_${index}`}
-          aria-selected={isSelected ? 'true' : 'false'}>
-          {option}
-        </OuiContextMenuItem>
-      );
-    });
+  const items = options.map((option, index) => {
+    const isSelected = selectedIndexInt && selectedIndexInt === index;
 
     return (
-      <OuiInputPopover
-        className={popoverClasses}
-        input={button}
-        isOpen={isOpen || this.state.isPopoverOpen}
-        closePopover={this.closePopover}
-        panelPaddingSize="none"
-        fullWidth={fullWidth}>
-        <OuiScreenReaderOnly>
-          <p role="alert">
-            <OuiI18n
-              token="ouiSplitButton.screenReaderAnnouncement"
-              default="You are in a form selector of {optionsCount} items and must select a single option.
-              Use the up and down keys to navigate or escape to close."
-              values={{ optionsCount: options.length }}
-            />
-          </p>
-        </OuiScreenReaderOnly>
-        <div
-          className="ouiSplitButton__listbox"
-          role="listbox"
-          aria-activedescendant={`${selectedIndex}`}
-          tabIndex={0}>
-          {items}
-        </div>
-      </OuiInputPopover>
+      <OuiContextMenuItem
+        key={index}
+        className={itemClasses}
+        icon={isSelected ? 'check' : 'empty'}
+        onClick={() => itemClicked(index)}
+        onKeyDown={onItemKeyDown}
+        layoutAlign="center"
+        buttonRef={(node) => setItemNode(node, index)}
+        role="option"
+        id={`splitButtonItem_${index}`}
+        aria-selected={isSelected ? 'true' : 'false'}>
+        {option}
+      </OuiContextMenuItem>
     );
-  }
-}
+  });
+
+  // return <div>SplitButton</div>;
+  return (
+    <OuiInputPopover
+      className={popoverClasses}
+      input={button}
+      isOpen={isOpen || isOpen}
+      closePopover={closePopover}
+      panelPaddingSize="none"
+      fullWidth={fullWidth}>
+      <OuiScreenReaderOnly>
+        <p role="alert">
+          <OuiI18n
+            token="ouiSplitButton.screenReaderAnnouncement"
+            default="You are in a form selector of {optionsCount} items and must select a single option.
+              Use the up and down keys to navigate or escape to close."
+            values={{ optionsCount: options.length }}
+          />
+        </p>
+      </OuiScreenReaderOnly>
+      <div
+        className="ouiSplitButton__listbox"
+        role="listbox"
+        aria-activedescendant={`${selectedIndex}`}
+        tabIndex={0}>
+        {items}
+      </div>
+    </OuiInputPopover>
+  );
+};
