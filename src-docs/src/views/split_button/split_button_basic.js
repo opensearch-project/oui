@@ -11,31 +11,19 @@
 
 import React, { useState } from 'react';
 
-import { OuiSuperSelect, OuiHealth } from '../../../../src/components';
+import { OuiSplitButton, OuiHealth } from '../../../../src/components';
 
 export default () => {
-  const options = [
-    <OuiHealth color="subdued" style={{ lineHeight: 'inherit' }}>
-      Warning
-    </OuiHealth>,
-    <OuiHealth color="warning" style={{ lineHeight: 'inherit' }}>
-      Minor
-    </OuiHealth>,
-    <OuiHealth color="danger" style={{ lineHeight: 'inherit' }}>
-      Critical
-    </OuiHealth>,
-  ];
-  const [value, setValue] = useState(options[1].value);
+  const options = ['Option 1', 'Option 2'];
+  const [_value, setValue] = useState();
 
   const onChange = (value) => {
     setValue(value);
   };
 
   return (
-    <OuiSuperSelect
-      options={options}
-      valueOfSelected={value}
-      onChange={(value) => onChange(value)}
-    />
+    <OuiSplitButton options={options} onChange={(value) => onChange(value)}>
+      "Basic Split Button"
+    </OuiSplitButton>
   );
 };

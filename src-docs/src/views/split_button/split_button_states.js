@@ -9,46 +9,229 @@
  * GitHub history for details.
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 
-import { OuiSuperSelect } from '../../../../src/components';
-import { DisplayToggles } from '../form_controls/display_toggles';
+import {
+  OuiSplitButton,
+  OuiFlexGroup,
+  OuiFlexItem,
+} from '../../../../src/components/';
 
-export default () => {
-  const options = [
-    {
-      value: 'option_one',
-      inputDisplay: 'Option one',
-      disabled: true,
-      'data-test-subj': 'option one',
-    },
-    {
-      value: 'option_two',
-      inputDisplay: 'Option two',
-    },
-    {
-      value: 'option_three',
-      inputDisplay: (
-        <span className="oui-textTruncate oui-displayBlock">
-          Option three has a super long text and added truncation
-        </span>
-      ),
-    },
-  ];
-  const [value, setValue] = useState(options[1].value);
+const options = ['option'];
 
-  const onChange = (value) => {
-    setValue(value);
-  };
+export default () => (
+  <div>
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton options={options} onClick={() => {}}>
+          Primary
+        </OuiSplitButton>
+      </OuiFlexItem>
 
-  return (
-    /* DisplayToggles wrapper for Docs only */
-    <DisplayToggles canPrepend={true} canAppend={true}>
-      <OuiSuperSelect
-        options={options}
-        valueOfSelected={value}
-        onChange={(value) => onChange(value)}
-      />
-    </DisplayToggles>
-  );
-};
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton fill options={options} onClick={() => {}}>
+          Filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton size="s" options={options} onClick={() => {}}>
+          Small
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton size="s" fill options={options} onClick={() => {}}>
+          Small and filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton color="success" options={options} onClick={() => {}}>
+          Success
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="success"
+          fill
+          options={options}
+          onClick={() => {}}>
+          Filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="success"
+          size="s"
+          options={options}
+          onClick={() => {}}>
+          Small
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="success"
+          size="s"
+          fill
+          options={options}
+          onClick={() => {}}>
+          Small and filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton color="warning" options={options} onClick={() => {}}>
+          Warning
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="warning"
+          fill
+          options={options}
+          onClick={() => {}}>
+          Filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="warning"
+          size="s"
+          options={options}
+          onClick={() => {}}>
+          Small
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="warning"
+          size="s"
+          fill
+          options={options}
+          onClick={() => {}}>
+          Small and filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton color="danger" options={options} onClick={() => {}}>
+          Danger
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="danger"
+          fill
+          options={options}
+          onClick={() => {}}>
+          Filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="danger"
+          size="s"
+          options={options}
+          onClick={() => {}}>
+          Small
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="danger"
+          size="s"
+          fill
+          options={options}
+          onClick={() => {}}>
+          Small and filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton color="text" options={options} onClick={() => {}}>
+          Text
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton color="text" fill options={options} onClick={() => {}}>
+          Filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="text"
+          size="s"
+          options={options}
+          onClick={() => {}}>
+          Small
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          color="text"
+          size="s"
+          fill
+          options={options}
+          onClick={() => {}}>
+          Small and filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton isDisabled options={options} onClick={() => {}}>
+          Disabled
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton isDisabled fill options={options} onClick={() => {}}>
+          Filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          isDisabled
+          size="s"
+          options={options}
+          onClick={() => {}}>
+          Small
+        </OuiSplitButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiSplitButton
+          isDisabled
+          size="s"
+          fill
+          options={options}
+          onClick={() => {}}>
+          Small and filled
+        </OuiSplitButton>
+      </OuiFlexItem>
+    </OuiFlexGroup>
+  </div>
+);

@@ -50,24 +50,17 @@ const splitButtonBasicSnippet = `<OuiSplitButton
 // />
 // `;
 
-// import SplitButtonStates from './super_select_states';
-// const splitButtonStatesSource = require('!!raw-loader!./super_select_states');
-// const splitButtonStatesHtml = renderToHtml(SplitButtonStates);
-// const splitButtonStatesSnippet = `<OuiSplitButton
-//   options={[
-//     {
-//       value: 'option_one',
-//       inputDisplay: 'Option one',
-//     },
-//   ]}
-//   valueOfSelected={value}
-//   onChange={onChange}
-//   compressed={true}
-//   fullWidth={true}
-//   prepend={prepend}
-//   append={append}
-// />
-// `;
+import SplitButtonStates from './split_button_states';
+const splitButtonStatesSource = require('!!raw-loader!./split_button_states');
+const splitButtonStatesHtml = renderToHtml(SplitButtonStates);
+const splitButtonStatesSnippet = `<OuiSplitButton
+  options={[
+     'Option one',
+  ]}
+  onChange={onChange}
+  fullWidth={true}
+/>
+`;
 
 export const SplitButtonExample = {
   title: 'Split Button',
@@ -88,15 +81,11 @@ export const SplitButtonExample = {
           <p>
             This is a replacement component for <strong>OuiButton</strong> if
             you need a Button with additional options or modes. Simply pass an
-            array of option objects:
+            array of options:
           </p>
           <ul>
             <li>
-              <OuiCode>value</OuiCode>: for storing unique value of item,{' '}
-            </li>
-            <li>
-              <OuiCode>display</OuiCode>: (optional) what shows for the item in
-              the dropdown
+              <OuiCode>string</OuiCode> or <OuiCode>React component</OuiCode>
             </li>
           </ul>
           <p>
@@ -107,7 +96,7 @@ export const SplitButtonExample = {
       ),
       props: { OuiSplitButton },
       snippet: splitButtonBasicSnippet,
-      demo: <SplitButton />,
+      demo: <SplitButtonBasic />,
     },
     // {
     //   title: 'More complex',
@@ -134,28 +123,27 @@ export const SplitButtonExample = {
     //   snippet: splitButtonComplexSnippet,
     //   demo: <SplitButtonComplex />,
     // },
-    // {
-    //   title: 'States',
-    //   source: [
-    //     {
-    //       type: GuideSectionTypes.JS,
-    //       code: splitButtonStatesSource,
-    //     },
-    //     {
-    //       type: GuideSectionTypes.HTML,
-    //       code: splitButtonStatesHtml,
-    //     },
-    //   ],
-    //   text: (
-    //     <p>
-    //       You can pass the same props as you normally would to{' '}
-    //       <strong>OuiSelect</strong> like disabled, isLoading, compressed,
-    //       etc&hellip;
-    //     </p>
-    //   ),
-    //   props: { OuiSplitButton },
-    //   snippet: splitButtonStatesSnippet,
-    //   demo: <SplitButtonStates />,
-    // },
+    {
+      title: 'States',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: splitButtonStatesSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: splitButtonStatesHtml,
+        },
+      ],
+      text: (
+        <p>
+          You can pass the same props as you normally would to{' '}
+          <strong>OuiButton</strong> like filled, small, etc&hellip;
+        </p>
+      ),
+      props: { OuiSplitButton },
+      snippet: splitButtonStatesSnippet,
+      demo: <SplitButtonStates />,
+    },
   ],
 };
