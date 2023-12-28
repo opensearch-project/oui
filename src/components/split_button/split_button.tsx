@@ -41,7 +41,7 @@ export type OuiSplitButtonProps = CommonProps &
     /**
      * Pass an array of options : string or ReactNode
      */
-    options: OuiSplitButtonOption[];
+    options?: OuiSplitButtonOption[];
 
     /**
      * optional index of options item to mark with checkmark
@@ -54,9 +54,14 @@ export type OuiSplitButtonProps = CommonProps &
     itemClassName?: string;
 
     /**
-     * You must pass an `onChange` function to handle the update of the value
+     * You must pass an `onChange` function to handle selection of an option item
      */
     onChange?: (index: number) => void;
+
+    /**
+     * You must pass `onClick` function to handle click of the Primary button
+     */
+    onClick?: () => void;
 
     /**
      * Change to `true` if you want horizontal lines between options.
@@ -87,6 +92,7 @@ export const OuiSplitButton = ({
   hasDividers,
   itemClassName,
   onChange,
+  onClick,
   isOpen: propIsOpen,
   className,
   popoverClassName,
@@ -97,6 +103,7 @@ export const OuiSplitButton = ({
   const [isOpen, setIsOpen] = useState(propIsOpen || false);
 
   let selectedIndexInt: number | undefined = Number(selectedIndex);
+  console.log('selectedIndex', { selectedIndex, selectedIndexInt });
   if (Number.isNaN(selectedIndexInt)) selectedIndexInt = undefined;
 
   const openPopover = () => {
@@ -132,6 +139,7 @@ export const OuiSplitButton = ({
   const itemClicked = (index: number) => {
     setIsOpen(false);
     if (onChange) {
+      console.log('calling onchange', index);
       onChange(index);
     }
   };
@@ -221,9 +229,8 @@ export const OuiSplitButton = ({
 
   const button = (
     <OuiSplitButtonControl
-      options={options}
-      selectedIndex={selectedIndex}
-      onClick={isOpen ? closePopover : openPopover}
+      onDropdownClick={isOpen ? closePopover : openPopover}
+      onClick={onClick}
       onKeyDown={onSelectKeyDown}
       className={buttonClasses}
       fullWidth={fullWidth}
@@ -234,7 +241,7 @@ export const OuiSplitButton = ({
   );
 
   const items = options.map((option, index) => {
-    const isSelected = selectedIndexInt && selectedIndexInt === index;
+    const isSelected = selectedIndexInt === index;
 
     return (
       <OuiContextMenuItem

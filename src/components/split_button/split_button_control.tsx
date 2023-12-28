@@ -34,27 +34,31 @@ export type OuiSplitButtonOption = string | ReactNode;
 export interface OuiSplitButtonControlProps
   extends CommonProps,
     ButtonHTMLAttributes<HTMLButtonElement> {
-  compressed?: boolean;
   fullWidth?: boolean;
-  isInvalid?: boolean;
   isLoading?: boolean;
-  readOnly?: boolean;
-
-  name?: string;
-
-  options?: OuiSplitButtonOption[];
-
-  selectedIndex?: string;
 
   fill?: boolean;
+
   /**
    * Any of our named colors.
    */
   color?: ButtonColor;
+
   /**
    * Use size `s` in confined spaces
    */
   size?: ButtonSize;
+
+  /**
+   * Click handler of Primary button
+   */
+  onClick?: () => void;
+
+  /**
+   * Click handler for drop-down button
+   */
+  onDropdownClick?: () => void;
+
   /**
    * Content of Primary (left-side) button
    */
@@ -67,6 +71,8 @@ export const OuiSplitButtonControl = ({
   color,
   children,
   fullWidth = false,
+  onClick,
+  onDropdownClick,
 }: OuiSplitButtonControlProps): ReturnType<
   FunctionComponent<OuiSplitButtonControlProps>
 > => {
@@ -97,7 +103,8 @@ export const OuiSplitButtonControl = ({
         fill={fill}
         color={color}
         size={size}
-        fullWidth={fullWidth}>
+        fullWidth={fullWidth}
+        onClick={onClick}>
         {children}
       </OuiButton>
       <OuiButtonIcon
@@ -106,6 +113,9 @@ export const OuiSplitButtonControl = ({
         color={color as OuiButtonIconColor}
         size={size || 'm'}
         iconType="arrowDown"
+        onClick={onDropdownClick}
+        aria-label="Open Selections"
+        data-test-subj="splitButton--dropdown"
       />
     </div>
   );

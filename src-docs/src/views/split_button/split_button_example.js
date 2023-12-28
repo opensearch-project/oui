@@ -32,22 +32,18 @@ const splitButtonBasicSnippet = `<OuiSplitButton
 />
 `;
 
-// import SplitButtonComplex from './super_select_complex';
-// const splitButtonComplexSource = require('!!raw-loader!./super_select_complex');
-// const splitButtonComplexHtml = renderToHtml(SplitButtonComplex);
-// const splitButtonComplexSnippet = `<OuiSplitButton
-//   options={[
-//     {
-//       value: 'option_one',
-//       inputDisplay: 'Option one',
-//       dropdownDisplay: dropdownDisplay,
-//     },
-//   ]}
-//   valueOfSelected={value}
-//   onChange={onChange}
-//   hasDividers
-// />
-// `;
+import SplitButtonComplex from './split_button_complex';
+const splitButtonComplexSource = require('!!raw-loader!./split_button_complex');
+const splitButtonComplexHtml = renderToHtml(SplitButtonComplex);
+const splitButtonComplexSnippet = `<OuiSplitButton
+  options={[
+      'Option one',
+  ]}
+  valueOfSelected={value}
+  onChange={onChange}
+  hasDividers
+/>
+`;
 
 import SplitButtonStates from './split_button_states';
 const splitButtonStatesSource = require('!!raw-loader!./split_button_states');
@@ -97,31 +93,30 @@ export const SplitButtonExample = {
       snippet: splitButtonBasicSnippet,
       demo: <SplitButtonBasic />,
     },
-    // {
-    //   title: 'More complex',
-    //   source: [
-    //     {
-    //       type: GuideSectionTypes.JS,
-    //       code: splitButtonComplexSource,
-    //     },
-    //     {
-    //       type: GuideSectionTypes.HTML,
-    //       code: splitButtonComplexHtml,
-    //     },
-    //   ],
-    //   text: (
-    //     <p>
-    //       Both <OuiCode>inputDisplay</OuiCode> and{' '}
-    //       <OuiCode>dropdownDisplay</OuiCode> accept React nodes. Therefore you
-    //       can pass some descriptions with each option to show in the dropdown.
-    //       If your options will most likely be multi-line, add the{' '}
-    //       <OuiCode>hasDividers</OuiCode> prop to show borders between options.
-    //     </p>
-    //   ),
-    //   props: {},
-    //   snippet: splitButtonComplexSnippet,
-    //   demo: <SplitButtonComplex />,
-    // },
+    {
+      title: 'More complex',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: splitButtonComplexSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: splitButtonComplexHtml,
+        },
+      ],
+      text: (
+        <p>
+          <OuiCode>options</OuiCode> accept React nodes. Therefore you can pass
+          some descriptions with each option to show in the dropdown. If your
+          options will most likely be multi-line, add the{' '}
+          <OuiCode>hasDividers</OuiCode> prop to show borders between options.
+        </p>
+      ),
+      props: {},
+      snippet: splitButtonComplexSnippet,
+      demo: <SplitButtonComplex />,
+    },
     {
       title: 'States',
       source: [
@@ -137,7 +132,7 @@ export const SplitButtonExample = {
       text: (
         <p>
           You can pass the same props as you normally would to{' '}
-          <strong>OuiButton</strong> like filled, small, etc&hellip;
+          <strong>OuiButton</strong> like fill, small, etc&hellip;
         </p>
       ),
       props: { OuiSplitButton },

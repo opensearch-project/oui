@@ -17,97 +17,9 @@ exports[`OuiSplitButtonControl is rendered 1`] = `
     </span>
   </button>
   <button
+    aria-label="Open Selections"
     class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
-    type="button"
-  >
-    <span
-      aria-hidden="true"
-      class="ouiButtonIcon__icon"
-      color="inherit"
-      data-ouiicon-type="arrowDown"
-    />
-  </button>
-</div>
-`;
-
-exports[`OuiSplitButtonControl props compressed is rendered 1`] = `
-<div
-  class="ouiSplitButtonControl"
->
-  <button
-    class="ouiButton ouiButton--primary ouiSplitButtonControl--primary"
-    type="button"
-  >
-    <span
-      class="ouiButtonContent ouiButton__content"
-    >
-      <span
-        class="ouiButton__text"
-      />
-    </span>
-  </button>
-  <button
-    class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
-    type="button"
-  >
-    <span
-      aria-hidden="true"
-      class="ouiButtonIcon__icon"
-      color="inherit"
-      data-ouiicon-type="arrowDown"
-    />
-  </button>
-</div>
-`;
-
-exports[`OuiSplitButtonControl props disabled options are rendered 1`] = `
-<div
-  class="ouiSplitButtonControl"
->
-  <button
-    class="ouiButton ouiButton--primary ouiSplitButtonControl--primary"
-    type="button"
-  >
-    <span
-      class="ouiButtonContent ouiButton__content"
-    >
-      <span
-        class="ouiButton__text"
-      />
-    </span>
-  </button>
-  <button
-    class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
-    type="button"
-  >
-    <span
-      aria-hidden="true"
-      class="ouiButtonIcon__icon"
-      color="inherit"
-      data-ouiicon-type="arrowDown"
-    />
-  </button>
-</div>
-`;
-
-exports[`OuiSplitButtonControl props empty value option is rendered 1`] = `
-<div
-  class="ouiSplitButtonControl"
->
-  <button
-    class="ouiButton ouiButton--primary ouiSplitButtonControl--primary"
-    type="button"
-  >
-    <span
-      class="ouiButtonContent ouiButton__content"
-    >
-      <span
-        class="ouiButton__text"
-      />
-    </span>
-  </button>
-  <button
-    class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
+    data-test-subj="splitButton--dropdown"
     type="button"
   >
     <span
@@ -137,37 +49,9 @@ exports[`OuiSplitButtonControl props fullWidth is rendered 1`] = `
     </span>
   </button>
   <button
+    aria-label="Open Selections"
     class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
-    type="button"
-  >
-    <span
-      aria-hidden="true"
-      class="ouiButtonIcon__icon"
-      color="inherit"
-      data-ouiicon-type="arrowDown"
-    />
-  </button>
-</div>
-`;
-
-exports[`OuiSplitButtonControl props isInvalid is rendered 1`] = `
-<div
-  class="ouiSplitButtonControl"
->
-  <button
-    class="ouiButton ouiButton--primary ouiSplitButtonControl--primary"
-    type="button"
-  >
-    <span
-      class="ouiButtonContent ouiButton__content"
-    >
-      <span
-        class="ouiButton__text"
-      />
-    </span>
-  </button>
-  <button
-    class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
+    data-test-subj="splitButton--dropdown"
     type="button"
   >
     <span
@@ -197,37 +81,9 @@ exports[`OuiSplitButtonControl props isLoading is rendered 1`] = `
     </span>
   </button>
   <button
+    aria-label="Open Selections"
     class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
-    type="button"
-  >
-    <span
-      aria-hidden="true"
-      class="ouiButtonIcon__icon"
-      color="inherit"
-      data-ouiicon-type="arrowDown"
-    />
-  </button>
-</div>
-`;
-
-exports[`OuiSplitButtonControl props value option is rendered 1`] = `
-<div
-  class="ouiSplitButtonControl"
->
-  <button
-    class="ouiButton ouiButton--primary ouiSplitButtonControl--primary"
-    type="button"
-  >
-    <span
-      class="ouiButtonContent ouiButton__content"
-    >
-      <span
-        class="ouiButton__text"
-      />
-    </span>
-  </button>
-  <button
-    class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
+    data-test-subj="splitButton--dropdown"
     type="button"
   >
     <span

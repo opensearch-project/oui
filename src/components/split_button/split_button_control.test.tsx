@@ -48,64 +48,8 @@ describe('OuiSplitButtonControl', () => {
       expect(component).toMatchSnapshot();
     });
 
-    test('compressed is rendered', () => {
-      const component = render(<OuiSplitButtonControl compressed />);
-
-      expect(component).toMatchSnapshot();
-    });
-
     test('isLoading is rendered', () => {
       const component = render(<OuiSplitButtonControl isLoading />);
-
-      expect(component).toMatchSnapshot();
-    });
-
-    test('isInvalid is rendered', () => {
-      const component = render(<OuiSplitButtonControl isInvalid />);
-
-      expect(component).toMatchSnapshot();
-    });
-
-    test('disabled options are rendered', () => {
-      const component = render(
-        <OuiSplitButtonControl
-          options={[
-            { value: '1', inputDisplay: 'Option #1', disabled: false },
-            { value: '2', inputDisplay: 'Option #2', disabled: true },
-          ]}
-        />
-      );
-
-      expect(component).toMatchSnapshot();
-    });
-
-    test('value option is rendered', () => {
-      const component = render(
-        <OuiSplitButtonControl
-          options={[
-            { value: '1', inputDisplay: 'Option #1' },
-            { value: '2', inputDisplay: 'Option #2' },
-          ]}
-          value={'1'}
-          onChange={() => {}}
-        />
-      );
-
-      expect(component).toMatchSnapshot();
-    });
-
-    test('empty value option is rendered', () => {
-      const value = undefined;
-      const component = render(
-        <OuiSplitButtonControl
-          options={[
-            { value: '1', inputDisplay: 'Option #1' },
-            { value: '2', inputDisplay: 'Option #2' },
-          ]}
-          value={value}
-          onChange={() => {}}
-        />
-      );
 
       expect(component).toMatchSnapshot();
     });
