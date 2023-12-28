@@ -103,7 +103,6 @@ export const OuiSplitButton = ({
   const [isOpen, setIsOpen] = useState(propIsOpen || false);
 
   let selectedIndexInt: number | undefined = Number(selectedIndex);
-  console.log('selectedIndex', { selectedIndex, selectedIndexInt });
   if (Number.isNaN(selectedIndexInt)) selectedIndexInt = undefined;
 
   const openPopover = () => {
@@ -139,7 +138,6 @@ export const OuiSplitButton = ({
   const itemClicked = (index: number) => {
     setIsOpen(false);
     if (onChange) {
-      console.log('calling onchange', index);
       onChange(index);
     }
   };

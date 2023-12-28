@@ -10,7 +10,7 @@
  */
 
 import React from 'react';
-import { configure, mount, render } from 'enzyme';
+import { mount, render } from 'enzyme';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
 import { OuiSplitButton } from './split_button';

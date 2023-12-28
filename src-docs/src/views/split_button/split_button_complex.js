@@ -34,7 +34,7 @@ export default () => {
     'Just some Text',
   ];
 
-  const [_, setValue] = useState('option_one');
+  const [, setValue] = useState('option_one');
 
   const onChange = (value) => {
     setValue(value);
