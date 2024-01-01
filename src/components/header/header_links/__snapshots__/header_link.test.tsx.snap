@@ -8,7 +8,6 @@ exports[`OuiHeaderLink can render as specific color 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
-    <span />
     <span
       class="ouiButtonEmpty__text"
     />
@@ -26,7 +25,6 @@ exports[`OuiHeaderLink is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
-    <span />
     <span
       class="ouiButtonEmpty__text"
     />
@@ -42,7 +40,6 @@ exports[`OuiHeaderLink is rendered as active 1`] = `
   <span
     class="ouiButtonContent ouiButtonEmpty__content"
   >
-    <span />
     <span
       class="ouiButtonEmpty__text"
     />

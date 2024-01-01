@@ -54,7 +54,6 @@ exports[`OuiControlBar is rendered 1`] = `
       <span
         class="ouiButtonContent ouiButton__content"
       >
-        <span />
         <span
           class="ouiButton__text"
         >
@@ -201,7 +200,6 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                 <span
                   class="ouiButtonContent ouiButton__content"
                 >
-                  <span />
                   <span
                     class="ouiButton__text"
                   >
@@ -362,7 +360,6 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
-                      <span />
                       <span
                         className="ouiButton__text"
                       >
@@ -543,7 +540,6 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                 <span
                   class="ouiButtonContent ouiButton__content"
                 >
-                  <span />
                   <span
                     class="ouiButton__text"
                   >
@@ -704,7 +700,6 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
-                      <span />
                       <span
                         className="ouiButton__text"
                       >
@@ -884,7 +879,6 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                 <span
                   class="ouiButtonContent ouiButton__content"
                 >
-                  <span />
                   <span
                     class="ouiButton__text"
                   >
@@ -1045,7 +1039,6 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
-                      <span />
                       <span
                         className="ouiButton__text"
                       >
@@ -1289,7 +1282,6 @@ exports[`OuiControlBar props position is rendered 1`] = `
                 <span
                   className="ouiButtonContent ouiButton__content"
                 >
-                  <span />
                   <span
                     className="ouiButton__text"
                   >
@@ -1454,7 +1446,6 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                 <span
                   class="ouiButtonContent ouiButton__content"
                 >
-                  <span />
                   <span
                     class="ouiButton__text"
                   >
@@ -1615,7 +1606,6 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
-                      <span />
                       <span
                         className="ouiButton__text"
                       >
@@ -1795,7 +1785,6 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                 <span
                   class="ouiButtonContent ouiButton__content"
                 >
-                  <span />
                   <span
                     class="ouiButton__text"
                   >
@@ -1961,7 +1950,6 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
-                      <span />
                       <span
                         className="ouiButton__text"
                       >
@@ -2146,7 +2134,6 @@ exports[`OuiControlBar props size is rendered 1`] = `
                 <span
                   class="ouiButtonContent ouiButton__content"
                 >
-                  <span />
                   <span
                     class="ouiButton__text"
                   >
@@ -2307,7 +2294,6 @@ exports[`OuiControlBar props size is rendered 1`] = `
                     <span
                       className="ouiButtonContent ouiButton__content"
                     >
-                      <span />
                       <span
                         className="ouiButton__text"
                       >

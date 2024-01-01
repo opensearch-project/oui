@@ -11,7 +11,6 @@ exports[`OuiSkipLink is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     >
@@ -30,7 +29,6 @@ exports[`OuiSkipLink props onClick is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -47,7 +45,6 @@ exports[`OuiSkipLink props position absolute is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -65,7 +62,6 @@ exports[`OuiSkipLink props position fixed is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -82,7 +78,6 @@ exports[`OuiSkipLink props position static is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -100,7 +95,6 @@ exports[`OuiSkipLink props tabIndex is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />

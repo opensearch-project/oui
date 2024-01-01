@@ -532,13 +532,11 @@ exports[`OuiSideNav props mobileBreakpoints can be adjusted is rendered 1`] = `
       <span
         class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content ouiSideNav__mobileToggleContent"
       >
-        <span>
-          <span
-            class="ouiButtonContent__icon"
-            color="inherit"
-            data-ouiicon-type="apps"
-          />
-        </span>
+        <span
+          class="ouiButtonContent__icon"
+          color="inherit"
+          data-ouiicon-type="apps"
+        />
         <span
           class="ouiButtonEmpty__text ouiSideNav__mobileToggleText"
         />

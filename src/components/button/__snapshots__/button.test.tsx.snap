@@ -10,7 +10,6 @@ exports[`OuiButton is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     >
@@ -28,7 +27,6 @@ exports[`OuiButton props color accent is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -44,7 +42,6 @@ exports[`OuiButton props color danger is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -60,7 +57,6 @@ exports[`OuiButton props color ghost is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -76,7 +72,6 @@ exports[`OuiButton props color primary is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -92,7 +87,6 @@ exports[`OuiButton props color secondary is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -108,7 +102,6 @@ exports[`OuiButton props color success is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -124,7 +117,6 @@ exports[`OuiButton props color text is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -140,7 +132,6 @@ exports[`OuiButton props color warning is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -158,7 +149,6 @@ exports[`OuiButton props contentProps is rendered 1`] = `
     class="ouiButtonContent ouiButton__content testClass1 testClass2"
     data-test-subj="test subject string"
   >
-    <span />
     <span
       class="ouiButton__text"
     >
@@ -176,7 +166,6 @@ exports[`OuiButton props fill is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -192,7 +181,6 @@ exports[`OuiButton props fullWidth is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -210,7 +198,6 @@ exports[`OuiButton props href secures the rel attribute when the target is _blan
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -226,13 +213,11 @@ exports[`OuiButton props iconSide left is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span>
-      <span
-        class="ouiButtonContent__icon"
-        color="inherit"
-        data-ouiicon-type="user"
-      />
-    </span>
+    <span
+      class="ouiButtonContent__icon"
+      color="inherit"
+      data-ouiicon-type="user"
+    />
     <span
       class="ouiButton__text"
     >
@@ -250,13 +235,11 @@ exports[`OuiButton props iconSide right is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButtonContent--iconRight ouiButton__content"
   >
-    <span>
-      <span
-        class="ouiButtonContent__icon"
-        color="inherit"
-        data-ouiicon-type="user"
-      />
-    </span>
+    <span
+      class="ouiButtonContent__icon"
+      color="inherit"
+      data-ouiicon-type="user"
+    />
     <span
       class="ouiButton__text"
     >
@@ -274,13 +257,11 @@ exports[`OuiButton props iconType is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span>
-      <span
-        class="ouiButtonContent__icon"
-        color="inherit"
-        data-ouiicon-type="user"
-      />
-    </span>
+    <span
+      class="ouiButtonContent__icon"
+      color="inherit"
+      data-ouiicon-type="user"
+    />
     <span
       class="ouiButton__text"
     />
@@ -297,7 +278,6 @@ exports[`OuiButton props isDisabled is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -314,7 +294,6 @@ exports[`OuiButton props isDisabled renders a button even when href is defined 1
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -331,7 +310,6 @@ exports[`OuiButton props isDisabled renders if passed as disabled 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -348,11 +326,9 @@ exports[`OuiButton props isLoading is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span>
-      <span
-        class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
-      />
-    </span>
+    <span
+      class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
+    />
     <span
       class="ouiButton__text"
     />
@@ -369,7 +345,6 @@ exports[`OuiButton props isSelected is rendered as false 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -386,7 +361,6 @@ exports[`OuiButton props isSelected is rendered as true 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -403,7 +377,6 @@ exports[`OuiButton props minWidth is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -419,7 +392,6 @@ exports[`OuiButton props size m is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -435,7 +407,6 @@ exports[`OuiButton props size s is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span />
     <span
       class="ouiButton__text"
     />
@@ -451,10 +422,6 @@ exports[`OuiButton props textProps is rendered 1`] = `
   <span
     class="ouiButtonContent ouiButton__content"
   >
-    <span
-      aria-label="aria-label"
-      data-test-subj="test subject string"
-    />
     <span
       aria-label="aria-label"
       class="ouiButton__text testClass1 testClass2"

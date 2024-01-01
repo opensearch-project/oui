@@ -7,7 +7,6 @@ exports[`OuiButtonContent is rendered 1`] = `
   data-test-subj="test subject string"
 >
   <span />
-  <span />
 </span>
 `;
 
@@ -15,7 +14,6 @@ exports[`OuiButtonContent props children is rendered 1`] = `
 <span
   class="ouiButtonContent"
 >
-  <span />
   <span>
     Content
   </span>
@@ -26,13 +24,11 @@ exports[`OuiButtonContent props iconSide is rendered 1`] = `
 <span
   class="ouiButtonContent ouiButtonContent--iconRight"
 >
-  <span>
-    <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="bolt"
-    />
-  </span>
+  <span
+    class="ouiButtonContent__icon"
+    color="inherit"
+    data-ouiicon-type="bolt"
+  />
   <span />
 </span>
 `;
@@ -41,13 +37,11 @@ exports[`OuiButtonContent props iconType is rendered 1`] = `
 <span
   class="ouiButtonContent"
 >
-  <span>
-    <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="bolt"
-    />
-  </span>
+  <span
+    class="ouiButtonContent__icon"
+    color="inherit"
+    data-ouiicon-type="bolt"
+  />
   <span />
 </span>
 `;
@@ -56,11 +50,9 @@ exports[`OuiButtonContent props isLoading is rendered 1`] = `
 <span
   class="ouiButtonContent"
 >
-  <span>
-    <span
-      class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
-    />
-  </span>
+  <span
+    class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
+  />
   <span />
 </span>
 `;
@@ -69,11 +61,9 @@ exports[`OuiButtonContent props isLoading replaces iconType with spinner 1`] = `
 <span
   class="ouiButtonContent"
 >
-  <span>
-    <span
-      class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
-    />
-  </span>
+  <span
+    class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
+  />
   <span />
 </span>
 `;
@@ -82,10 +72,6 @@ exports[`OuiButtonContent props textProps is rendered 1`] = `
 <span
   class="ouiButtonContent"
 >
-  <span
-    aria-label="aria-label"
-    data-test-subj="test subject string"
-  />
   <span
     aria-label="aria-label"
     class="testClass1 testClass2"

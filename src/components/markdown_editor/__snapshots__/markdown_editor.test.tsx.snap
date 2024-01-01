@@ -172,13 +172,11 @@ exports[`OuiMarkdownEditor is rendered 1`] = `
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span>
-          <span
-            class="ouiButtonContent__icon"
-            color="inherit"
-            data-ouiicon-type="eye"
-          />
-        </span>
+        <span
+          class="ouiButtonContent__icon"
+          color="inherit"
+          data-ouiicon-type="eye"
+        />
         <span
           class="ouiButtonEmpty__text"
         >
@@ -404,13 +402,11 @@ exports[`OuiMarkdownEditor props autoExpandPreview is rendered with false 1`] = 
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span>
-          <span
-            class="ouiButtonContent__icon"
-            color="inherit"
-            data-ouiicon-type="eye"
-          />
-        </span>
+        <span
+          class="ouiButtonContent__icon"
+          color="inherit"
+          data-ouiicon-type="eye"
+        />
         <span
           class="ouiButtonEmpty__text"
         >
@@ -636,13 +632,11 @@ exports[`OuiMarkdownEditor props height is rendered in full mode 1`] = `
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span>
-          <span
-            class="ouiButtonContent__icon"
-            color="inherit"
-            data-ouiicon-type="eye"
-          />
-        </span>
+        <span
+          class="ouiButtonContent__icon"
+          color="inherit"
+          data-ouiicon-type="eye"
+        />
         <span
           class="ouiButtonEmpty__text"
         >
@@ -868,13 +862,11 @@ exports[`OuiMarkdownEditor props height is rendered with a custom size 1`] = `
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span>
-          <span
-            class="ouiButtonContent__icon"
-            color="inherit"
-            data-ouiicon-type="eye"
-          />
-        </span>
+        <span
+          class="ouiButtonContent__icon"
+          color="inherit"
+          data-ouiicon-type="eye"
+        />
         <span
           class="ouiButtonEmpty__text"
         >
@@ -1100,13 +1092,11 @@ exports[`OuiMarkdownEditor props maxHeight is rendered with a custom size 1`] = 
       <span
         class="ouiButtonContent ouiButtonEmpty__content"
       >
-        <span>
-          <span
-            class="ouiButtonContent__icon"
-            color="inherit"
-            data-ouiicon-type="eye"
-          />
-        </span>
+        <span
+          class="ouiButtonContent__icon"
+          color="inherit"
+          data-ouiicon-type="eye"
+        />
         <span
           class="ouiButtonEmpty__text"
         >

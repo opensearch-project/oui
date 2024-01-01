@@ -418,21 +418,19 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                 <span
                                   className="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
                                 >
-                                  <span>
-                                    <OuiIcon
+                                  <OuiIcon
+                                    className="ouiButtonContent__icon"
+                                    color="inherit"
+                                    size="s"
+                                    type="arrowDown"
+                                  >
+                                    <span
                                       className="ouiButtonContent__icon"
                                       color="inherit"
+                                      data-ouiicon-type="arrowDown"
                                       size="s"
-                                      type="arrowDown"
-                                    >
-                                      <span
-                                        className="ouiButtonContent__icon"
-                                        color="inherit"
-                                        data-ouiicon-type="arrowDown"
-                                        size="s"
-                                      />
-                                    </OuiIcon>
-                                  </span>
+                                    />
+                                  </OuiIcon>
                                   <span
                                     className="ouiButtonEmpty__text"
                                   >
@@ -589,7 +587,6 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                           <span
                                             className="ouiButtonContent ouiButtonEmpty__content"
                                           >
-                                            <span />
                                             <span
                                               className="ouiButtonEmpty__text"
                                             >
@@ -673,7 +670,6 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                           <span
                                             className="ouiButtonContent ouiButtonEmpty__content"
                                           >
-                                            <span />
                                             <span
                                               className="ouiButtonEmpty__text"
                                             >

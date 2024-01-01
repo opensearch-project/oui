@@ -18,13 +18,11 @@ exports[`OuiTableSortMobile is rendered 1`] = `
         <span
           class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
         >
-          <span>
-            <span
-              class="ouiButtonContent__icon"
-              color="inherit"
-              data-ouiicon-type="arrowDown"
-            />
-          </span>
+          <span
+            class="ouiButtonContent__icon"
+            color="inherit"
+            data-ouiicon-type="arrowDown"
+          />
           <span
             class="ouiButtonEmpty__text"
           >
