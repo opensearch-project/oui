@@ -2473,10 +2473,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/chroma-js@^2.4.2":
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/@types/chroma-js/-/chroma-js-2.4.2.tgz#5c57e9f9ce5343f134e376fb76e07fd3271f150f"
-  integrity sha512-gbiHvCuBS9aXkE3OEDfS69bscNLTYtbbx2TQf6WyOu+4eCH1AH1gPSiDGF2UzwkRFAbqKNsC5F0mY0xcaEHCbg==
+"@types/chroma-js@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@types/chroma-js/-/chroma-js-2.4.0.tgz#476a16ae848c77478079d6749236fdb98837b92c"
+  integrity sha512-JklMxityrwjBTjGY2anH8JaTx3yjRU3/sEHSblLH1ba5lqcSh1LnImXJZO5peJfXyqKYWjHTGy4s5Wz++hARrw==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
@@ -2599,10 +2599,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/lodash@^4.14.200":
-  version "4.14.200"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.200.tgz#435b6035c7eba9cdf1e039af8212c9e9281e7149"
-  integrity sha512-YI/M/4HRImtNf3pJgbF+W6FrXovqj+T+/HpENLTooK9PnkacBsDpeP3IpHab40CClUfhNmdM2WTNP2sa2dni5Q==
+"@types/lodash@^4.14.192":
+  version "4.14.192"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.192.tgz#5790406361a2852d332d41635d927f1600811285"
+  integrity sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==
 
 "@types/mdast@^3.0.0":
   version "3.0.3"
@@ -2636,10 +2636,10 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz#e486d0d97396d79beedd0a6e33f4534ff6b4973e"
   integrity sha512-f5j5b/Gf71L+dbqxIpQ4Z2WlmI/mPJ0fOkGGmFgtb6sAu97EPczzbS3/tJKxmcYDj55OX6ssqwDAWOHIYDRDGA==
 
-"@types/numeral@^2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@types/numeral/-/numeral-2.0.4.tgz#b86d29e9d13a88b44bb557d3847024155cb1107f"
-  integrity sha512-lIsqeNjP4xtPplUyVrfYR08aZtkdMQyyet+8zd9xD8HVgNGcLdKhtb6A1qDQ15n+AgAMZQwimlaaNOktLQpb2A==
+"@types/numeral@2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@types/numeral/-/numeral-2.0.2.tgz#8ea2c4f4e64c0cc948ad7da375f6f827778a7912"
+  integrity sha512-A8F30k2gYJ/6e07spSCPpkuZu79LCnkPTvqmIWQzNGcrzwFKpVOydG41lNt5wZXjSI149qjyzC2L1+F2PD/NUA==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -2661,10 +2661,10 @@
   resolved "https://registry.yarnpkg.com/@types/q/-/q-1.5.2.tgz#690a1475b84f2a884fd07cd797c00f5f31356ea8"
   integrity sha512-ce5d3q03Ex0sy4R14722Rmt6MT07Ua+k4FwDfdcToYJcMKNtRVQvJ6JCAPdAmAnbRb6CsX6aYb9m96NGod9uTw==
 
-"@types/react-beautiful-dnd@^13.1.6":
-  version "13.1.6"
-  resolved "https://registry.yarnpkg.com/@types/react-beautiful-dnd/-/react-beautiful-dnd-13.1.6.tgz#a616443903bfc370fee298b0144dbce7234d5561"
-  integrity sha512-FXAuaa52ux7HWQDumi3MFSAAsW8OKfDImy1pSZPKe85nV9mZ1f4spVzW0a2boYvkIhphjbWUi5EwUiRG8Rq/Qg==
+"@types/react-beautiful-dnd@13.1.3":
+  version "13.1.3"
+  resolved "https://registry.yarnpkg.com/@types/react-beautiful-dnd/-/react-beautiful-dnd-13.1.3.tgz#9812f6086c4b77ce08c83120788d92084a26db0f"
+  integrity sha512-BNdmvONKtsrZq3AGrujECQrIn8cDT+fZsxBLXuX3YWY/nHfZinUFx4W88eS0rkcXzuLbXpKOsu/1WCMPMLEpPg==
   dependencies:
     "@types/react" "*"
 
@@ -2675,10 +2675,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-input-autosize@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@types/react-input-autosize/-/react-input-autosize-2.2.3.tgz#68467edf97a763ec7057feac7f71320f657a3b9c"
-  integrity sha512-eqqDwi5VMJFzPstR6FkDq5X6yqPkD50Wkvhu1fgIG0qFM2lLRH0gxRNW82IcpRI4OAeSoQkyZjaxY5Gu053+Ow==
+"@types/react-input-autosize@2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@types/react-input-autosize/-/react-input-autosize-2.2.1.tgz#6a335212e7fce1e1a4da56ae2095c8c5c35fbfe6"
+  integrity sha512-RxzEjd4gbLAAdLQ92Q68/AC+TfsAKTc4evsArUH1aIShIMqQMIMjsxoSnwyjtbFTO/AGIW/RQI94XSdvOxCz/w==
   dependencies:
     "@types/react" "*"
 
@@ -2716,10 +2716,10 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react-virtualized-auto-sizer@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@types/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.2.tgz#eab00178fd4b73d40f5d5ff9ad25717965cb5f54"
-  integrity sha512-UKIhAsnn1GknB0ewLXmwiGPVhU9m58gq56HcS1+G9L+TUtwgLMJoCREH0k303t3ZdDhNWt8TyxWE9iLYzWSnew==
+"@types/react-virtualized-auto-sizer@1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.1.tgz#b3187dae1dfc4c15880c9cfc5b45f2719ea6ebd4"
+  integrity sha512-GH8sAnBEM5GV9LTeiz56r4ZhMOUSrP43tAQNSRVxNexDjcNKLCEtnxusAItg1owFUFE6k0NslV26gqVClVvong==
   dependencies:
     "@types/react" "*"
 
@@ -2739,10 +2739,10 @@
     "@types/scheduler" "*"
     csstype "^3.0.2"
 
-"@types/refractor@^3.0.5":
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/@types/refractor/-/refractor-3.0.5.tgz#1a78c4e6a76ed773901bb16fa2ef1bc6f33c47fa"
-  integrity sha512-+JwkwHx46EhFByX9YJBO1TKb7kWkZtJxjehk2+Qg8r0Wrb7+rWzn001z4JWd9AU2gYuF1oiJkFf0KIqSFdyjHA==
+"@types/refractor@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@types/refractor/-/refractor-3.0.0.tgz#c535cfad1c54cf377ae2984f6cf6e9627a36ea66"
+  integrity sha512-jkCqkTpxMXXfN03Xpzj+mBMxo9IxG616SV2U42iwHkBGq/f8RrX3DCzLayIqUV+MAIBCUvl5xPnjqpUtZRnMqA==
   dependencies:
     "@types/prismjs" "*"
 
