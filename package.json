@@ -156,7 +156,7 @@
     "@types/react-is": "^16.7.1",
     "@types/react-router-dom": "^5.3.3",
     "@types/react-virtualized-auto-sizer": "^1.0.2",
-    "@types/react-window": "^1.8.7",
+    "@types/react-window": "1.8.5",
     "@types/refractor": "^3.0.5",
     "@types/url-parse": "^1.4.8",
     "@types/uuid": "^9.0.1",
