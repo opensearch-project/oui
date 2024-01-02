@@ -91,13 +91,12 @@ export const OuiButtonContent: FunctionComponent<
       <OuiLoadingSpinner className="ouiButtonContent__spinner" size="m" />
     );
   } else if (iconType) {
-    const { title } = { ...textProps };
     buttonIcon = (
       <OuiIcon
         className="ouiButtonContent__icon"
         type={iconType}
         size={iconSize}
-        title={title}
+        title={textProps?.title}
         color="inherit" // forces the icon to inherit its parent color
       />
     );
