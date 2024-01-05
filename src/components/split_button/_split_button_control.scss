@@ -9,6 +9,36 @@
  * GitHub history for details.
  */
 
+.ouiSplitButton {
+  .ouiButton, .ouiButtonIcon {
+    &:hover, &:focus, &:active {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+  .ouiSplitButtonControl {
+
+    &:hover:not([class*='isDisabled']) {
+      -webkit-transform: translateY(-1px);
+      transform: translateY(-1px);
+    }
+
+    &:focus {
+      animation: ouiButtonActive $ouiAnimSpeedNormal $ouiAnimSlightBounce;
+    }
+
+    &:active:not([class*='isDisabled']) {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+  }
+ }
+
+.ouiSplitButtonControl {
+  display: block;
+}
+
 .ouiSplitButtonControl--primary {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
@@ -26,10 +56,11 @@
 
 .ouiButton--fill {
   &.ouiSplitButtonControl--primary {
-    border-right-color: $ouiColorLightShade;
+    margin-right: 1px;
+    border-right-color: $ouiColorLightestShade;
   }
 
   &.ouiSplitButtonControl--dropdown {
-    border-left-color: $ouiColorLightShade;
+    border-left-color: $ouiColorLightestShade;
   }
 }
