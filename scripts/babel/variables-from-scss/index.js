@@ -1,4 +1,3 @@
-
 /*
  * Copyright OpenSearch Contributors
  * SPDX-License-Identifier: Apache-2.0
@@ -9,16 +8,13 @@ const {
   compileWithVariablesSync,
 } = require('../../lib/compile-scss-with-variables');
 
-
 const idKey = '!!variables-from-scss!!';
 const keyLength = idKey.length;
-
 
 const forbiddenKeyNames = [
   ...Object.getOwnPropertyNames(Object.prototype),
   'prototype',
 ];
-
 
 module.exports = (babel) => ({
   visitor: {
