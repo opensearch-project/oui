@@ -15,6 +15,9 @@ import zindexs from '!!variables-from-scss!!../../../../src/global_styling/varia
 import animations from '!!variables-from-scss!!../../../../src/global_styling/variables/_animations.scss';
 import breakpoints from '!!variables-from-scss!!../../../../src/global_styling/variables/_responsive.scss';
 
+import { rgbToHex } from '../../../../src/services';
+
+
 import { Link } from 'react-router-dom';
 
 import { GuidePage, GuideRuleTitle } from '../../components';

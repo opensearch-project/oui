@@ -2653,7 +2653,9 @@
       "start": {
         "line": 143,
         "column": 4,
+
         "index": 4717
+
       },
       "end": {
         "line": 148,
@@ -2672,11 +2674,12 @@
         "line": 143,
         "column": 4,
         "index": 4717
+
       },
       "end": {
         "line": 148,
         "column": 44,
-        "index": 4902
+        index": 4902
       }
     },
     "filepath": "src/components/list_group/pinnable_list_group/pinnable_list_group.tsx"

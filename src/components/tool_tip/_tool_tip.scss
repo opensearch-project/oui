@@ -21,8 +21,10 @@
 
   // Custom sizing
   $arrowSize: $ouiSizeM;
-  $arrowPlusSize: (calc($arrowSize/2) + 1px) * -1; /* 1 */
-  $arrowMinusSize: (calc($arrowSize/2) - 1px) * -1; /* 1 */
+
+  $arrowPlusSize: calc(-($arrowSize/2 + 1px)); /* 1 */
+  $arrowMinusSize: calc(-($arrowSize/2 - 1px)); /* 1 */
+
 
   .ouiToolTip__arrow {
     content: '';

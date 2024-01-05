@@ -53,8 +53,10 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
 
   if (existsSync('node_modules')) {
     for (const name of readdirSync('node_modules')) {
+
       if (!depsToKeep.includes(name))
         rmSync(join('node_modules', name), { recursive: true, force: true });
+
     }
   }
 
@@ -79,11 +81,13 @@ if (!INIT_CWD?.startsWith?.(PWD)) {
 
   if (existsSync('node_modules/@types')) {
     for (const name of readdirSync('node_modules/@types')) {
+
       if (!typesToKeep.includes(name))
         rmSync(join('node_modules/@types', name), {
           recursive: true,
           force: true,
         });
+
     }
   }
 

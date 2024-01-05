@@ -17,10 +17,14 @@
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
+
+- Optimize `calc()` usage in scss files ([#1002](https://github.com/opensearch-project/oui/issues/1002))
+
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
 - Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
 - Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
 - Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
+
 
 ### 🐛 Bug Fixes
 
@@ -45,11 +49,13 @@
 - Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
 - Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
+
 - Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
 - Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
 - Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
 - Update deprecated Babel plugins ([#1155](https://github.com/opensearch-project/oui/pull/1155))
 - Move @seanneumann to emeritus maintainer ([#1188](https://github.com/opensearch-project/oui/pull/1188))
+
 
 ### 🪛 Refactoring
 

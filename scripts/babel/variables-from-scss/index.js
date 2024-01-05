@@ -28,6 +28,7 @@ module.exports = (babel) => ({
             assignments.push(specifier.local.name);
           } else if (specifier.type === 'ImportSpecifier') {
             usedVariableNames.push(specifier.imported.name);
+
             deconstructedAssignments.push(
               specifier.imported.name === specifier.local.name
                 ? specifier.local.name
@@ -64,4 +65,5 @@ module.exports = (babel) => ({
       }
     },
   },
+
 });

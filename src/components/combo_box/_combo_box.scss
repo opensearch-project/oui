@@ -41,7 +41,7 @@
 
       // Ensure the input doesn't drop to the next line when the OuiBadge has a very long text
       // Overrides the default OuiBadge max-width that is 100%
-      max-width: calc(100% - #{$ouiSizeXS * .5} - #{$inputMinWidth});
+      max-width: calc(100% - #{$ouiSizeXS * 0.5} - #{$inputMinWidth});
     }
 
     .ouiComboBoxIcon {
