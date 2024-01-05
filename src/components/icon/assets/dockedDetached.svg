@@ -1,0 +1,8 @@
+<!--
+  - Copyright OpenSearch Contributors
+  - SPDX-License-Identifier: Apache-2.0
+  -->
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9 1H3C1.89543 1 1 1.89543 1 3V13C1 14.1046 1.89543 15 3 15H13C14.1046 15 15 14.1046 15 13V6H14V13C14 13.5523 13.5523 14 13 14H3C2.44772 14 2 13.5523 2 13V3C2 2.44772 2.44772 2 3 2H9V1Z" />
+  <rect x="10" width="6" height="5" rx="0.5" />
+</svg>
