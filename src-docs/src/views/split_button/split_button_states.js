@@ -16,222 +16,42 @@ import {
   OuiFlexGroup,
   OuiFlexItem,
 } from '../../../../src/components/';
+import { flatten } from 'lodash';
 
-const options = ['option'];
+const options = [{ display: 'option' }];
 
-export default () => (
-  <div>
-    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton options={options} onClick={() => {}}>
-          Primary
-        </OuiSplitButton>
-      </OuiFlexItem>
+const colors = ['primary', 'success', 'warning', 'danger', 'text', 'disabled'];
+const fills = [false, true];
+const smalls = [undefined, 's'];
 
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton fill options={options} onClick={() => {}}>
-          Filled
-        </OuiSplitButton>
-      </OuiFlexItem>
+const name = (color, filled, small) => {
+  if (filled && small) return 'Filled and Small';
+  if (filled) return 'Filled';
+  if (small) return 'Small';
 
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton size="s" options={options} onClick={() => {}}>
-          Small
-        </OuiSplitButton>
-      </OuiFlexItem>
+  return color;
+};
 
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton size="s" fill options={options} onClick={() => {}}>
-          Small and filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-    </OuiFlexGroup>
+const iterations = flatten(fills.map((f) => smalls.map((s) => [f, s])));
 
-    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton color="success" options={options} onClick={() => {}}>
-          Success
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="success"
-          fill
-          options={options}
-          onClick={() => {}}>
-          Filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="success"
-          size="s"
-          options={options}
-          onClick={() => {}}>
-          Small
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="success"
-          size="s"
-          fill
-          options={options}
-          onClick={() => {}}>
-          Small and filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-    </OuiFlexGroup>
-
-    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton color="warning" options={options} onClick={() => {}}>
-          Warning
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="warning"
-          fill
-          options={options}
-          onClick={() => {}}>
-          Filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="warning"
-          size="s"
-          options={options}
-          onClick={() => {}}>
-          Small
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="warning"
-          size="s"
-          fill
-          options={options}
-          onClick={() => {}}>
-          Small and filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-    </OuiFlexGroup>
-
-    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton color="danger" options={options} onClick={() => {}}>
-          Danger
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="danger"
-          fill
-          options={options}
-          onClick={() => {}}>
-          Filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="danger"
-          size="s"
-          options={options}
-          onClick={() => {}}>
-          Small
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="danger"
-          size="s"
-          fill
-          options={options}
-          onClick={() => {}}>
-          Small and filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-    </OuiFlexGroup>
-
-    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton color="text" options={options} onClick={() => {}}>
-          Text
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton color="text" fill options={options} onClick={() => {}}>
-          Filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="text"
-          size="s"
-          options={options}
-          onClick={() => {}}>
-          Small
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          color="text"
-          size="s"
-          fill
-          options={options}
-          onClick={() => {}}>
-          Small and filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-    </OuiFlexGroup>
-
-    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton isDisabled options={options} onClick={() => {}}>
-          Disabled
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton isDisabled fill options={options} onClick={() => {}}>
-          Filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          isDisabled
-          size="s"
-          options={options}
-          onClick={() => {}}>
-          Small
-        </OuiSplitButton>
-      </OuiFlexItem>
-
-      <OuiFlexItem grow={false}>
-        <OuiSplitButton
-          isDisabled
-          size="s"
-          fill
-          options={options}
-          onClick={() => {}}>
-          Small and filled
-        </OuiSplitButton>
-      </OuiFlexItem>
-    </OuiFlexGroup>
-  </div>
+const button = (color, fill, size) => (
+  <OuiFlexItem grow={false}>
+    <OuiSplitButton {...{ color, fill, size, options }}>
+      {name(color, fill, size)}
+    </OuiSplitButton>
+  </OuiFlexItem>
 );
+
+const colorGroup = (color) => {
+  const buttons = iterations.map(([fill, size]) => button(color, fill, size));
+
+  return (
+    <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
+      {buttons}
+    </OuiFlexGroup>
+  );
+};
+
+const colorGroups = colors.map((color) => colorGroup(color));
+
+export default () => <div>{colorGroups}</div>;

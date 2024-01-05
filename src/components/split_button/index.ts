@@ -32,5 +32,5 @@ export { OuiSplitButton, OuiSplitButtonProps } from './split_button';
 export {
   OuiSplitButtonControl,
   OuiSplitButtonControlProps,
-  OuiSplitButtonOption,
+  OuiSplitButtonColor,
 } from './split_button_control';

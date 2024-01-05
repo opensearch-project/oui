@@ -9,44 +9,42 @@
  * GitHub history for details.
  */
 
-import React, { Fragment, useState } from 'react';
+import React, { Fragment } from 'react';
 
 import { OuiSplitButton, OuiText } from '../../../../src/components';
 
 export default () => {
   const options = [
-    <Fragment>
-      <strong>Option one</strong>
-      <OuiText isDisabled size="s" color="subdued">
-        <p className="ouiTextColor--subdued">
-          Has a short description giving more detail to the option.
-        </p>
-      </OuiText>
-    </Fragment>,
-    <Fragment>
-      <strong>Option two</strong>
-      <OuiText size="s" color="subdued">
-        <p className="ouiTextColor--subdued">
-          Has a short description giving more detail to the option.
-        </p>
-      </OuiText>
-    </Fragment>,
-    'Just some Text',
+    {
+      display: (
+        <Fragment>
+          <strong>Option one</strong>
+          <OuiText isDisabled size="s" color="subdued">
+            Has a short description giving more detail to the option.
+          </OuiText>
+        </Fragment>
+      ),
+      onClick: () => console.log('Option one clicked'),
+    },
+    {
+      display: (
+        <Fragment>
+          <strong>Option two</strong>
+          <OuiText size="s" color="subdued">
+            Has a short description giving more detail to the option.
+          </OuiText>
+        </Fragment>
+      ),
+      onClick: () => console.log('Option 2 clicked'),
+    },
+    {
+      display: 'Just some Text',
+      onClick: () => console.log('Option 3 Clicked'),
+    },
   ];
 
-  const [, setValue] = useState('option_one');
-
-  const onChange = (value) => {
-    setValue(value);
-  };
-
   return (
-    <OuiSplitButton
-      options={options}
-      selectedIndex="1"
-      onChange={(value) => onChange(value)}
-      // itemLayoutAlign="top"
-      hasDividers>
+    <OuiSplitButton options={options} selectedIndex={1} hasDividers>
       Complex Selections
     </OuiSplitButton>
   );

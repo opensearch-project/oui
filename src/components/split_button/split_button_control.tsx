@@ -14,35 +14,34 @@ import React, {
   ButtonHTMLAttributes,
   ReactNode,
 } from 'react';
-// import classNames from 'classnames';
 
 import { CommonProps } from '../common';
 
-// import { htmlIdGenerator } from '../../services/accessibility';
-// import { OuiFormControlLayoutProps } from '../form/form_control_layout';
-// import { OuiFlexGroup, OuiFlexItem } from '../flex';
 import {
   ButtonColor,
   ButtonSize,
   OuiButton,
   OuiButtonIcon,
   OuiButtonIconColor,
+  OuiButtonProps,
 } from '../button';
 
-export type OuiSplitButtonOption = string | ReactNode;
+// this intersection still does not satisfy OuiButtonIconColor
+// https://github.com/opensearch-project/oui/issues/1196
+export type OuiSplitButtonColor = OuiButtonIconColor & ButtonColor;
 
 export interface OuiSplitButtonControlProps
   extends CommonProps,
-    ButtonHTMLAttributes<HTMLButtonElement> {
+    Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'color'> {
   fullWidth?: boolean;
   isLoading?: boolean;
 
   fill?: boolean;
 
   /**
-   * Any of our named colors.
+   * Color of buttons and options
    */
-  color?: ButtonColor;
+  color?: OuiSplitButtonColor;
 
   /**
    * Use size `s` in confined spaces
@@ -55,46 +54,47 @@ export interface OuiSplitButtonControlProps
   onClick?: () => void;
 
   /**
-   * Click handler for drop-down button
+   * Click handler for drop-down button -- used by SplitButton to control
+   * OuiPopover
    */
   onDropdownClick?: () => void;
 
   /**
+   * Handle key-events for dropdown control
+   */
+  onKeyDown?: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
+
+  /**
+   * Optional additional props to send to Primary Button
+   */
+  propsForPrimaryButton?: OuiButtonProps;
+
+  /**
+   * Optional additional props to send to Dropdown Button
+   */
+  propsForDropdownButton?: OuiButtonProps;
+
+  /**
    * Content of Primary (left-side) button
    */
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 export const OuiSplitButtonControl = ({
   fill,
   size,
-  color,
+  color = 'primary',
   children,
-  fullWidth = false,
+  fullWidth,
   onClick,
   onDropdownClick,
+  onKeyDown: onSelectKeydown,
+  propsForDropdownButton,
+  propsForPrimaryButton,
 }: OuiSplitButtonControlProps): ReturnType<
   FunctionComponent<OuiSplitButtonControlProps>
 > => {
-  // const classes = classNames(
-  //   'ouiSplitButtonControl',
-  //   {
-  //     'ouiSplitButtonControl--fullWidth': fullWidth,
-  //     'ouiSplitButtonControl--compressed': compressed,
-  //     'ouiSplitButtonControl-isLoading': isLoading,
-  //     'ouiSplitButtonControl-isInvalid': isInvalid,
-  //   },
-  //   className
-  // );
-
-  // const icon: OuiFormControlLayoutProps['icon'] = {
-  //   type: 'arrowDown',
-  //   side: 'right',
-  // };
-
   const iconDisplay = fill ? 'fill' : 'base';
-
-  // const screenReaderId = htmlIdGenerator()();
 
   return (
     <div className="ouiSplitButtonControl">
@@ -104,18 +104,23 @@ export const OuiSplitButtonControl = ({
         color={color}
         size={size}
         fullWidth={fullWidth}
-        onClick={onClick}>
+        onClick={onClick}
+        onKeyDown={onSelectKeydown}
+        {...propsForPrimaryButton}>
         {children}
       </OuiButton>
       <OuiButtonIcon
-        className="ouiSplitButtonControl--dropdown"
         display={iconDisplay}
-        color={color as OuiButtonIconColor}
+        //@ts-ignore - typedef conflict between ButtonColor, OuiButtonIconColor
+        // https://github.com/opensearch-project/oui/issues/1196
+        color={color}
         size={size || 'm'}
         iconType="arrowDown"
         onClick={onDropdownClick}
+        onKeyDown={onSelectKeydown}
         aria-label="Open Selections"
         data-test-subj="splitButton--dropdown"
+        {...propsForDropdownButton}
       />
     </div>
   );

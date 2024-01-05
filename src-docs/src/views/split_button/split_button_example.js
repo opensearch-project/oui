@@ -23,13 +23,16 @@ const splitButtonBasicHtml = renderToHtml(SplitButtonBasic);
 const splitButtonBasicSnippet = `<OuiSplitButton
   options={[
     {
-      value: 'warning',
-      inputDisplay: inputDisplay,
+      display: 'Option 1',
+      href: '#"
+    },
+    {
+      display: 'Option2', 
+      onClick: () => console.log('Option 2 clicked')
     },
   ]}
-  valueOfSelected={value}
-  onChange={onChange}
-/>
+  onClick={() => console.log("Primary clicked")}
+>Basic Split Button</OuiSplitButton>
 `;
 
 import SplitButtonComplex from './split_button_complex';
@@ -37,23 +40,47 @@ const splitButtonComplexSource = require('!!raw-loader!./split_button_complex');
 const splitButtonComplexHtml = renderToHtml(SplitButtonComplex);
 const splitButtonComplexSnippet = `<OuiSplitButton
   options={[
-      'Option one',
-  ]}
-  valueOfSelected={value}
-  onChange={onChange}
+    {
+      display: (
+        <Fragment>
+          <strong>Option one</strong>
+          <OuiText isDisabled size="s" color="subdued">
+            Has a short description giving more detail to the option.
+          </OuiText>
+        </Fragment>
+      ),
+      onClick: () => console.log('Option one clicked'),
+    },
+    {
+      display: (
+        <Fragment>
+          <strong>Option two</strong>
+          <OuiText size="s" color="subdued">
+            Has a short description giving more detail to the option.
+          </OuiText>
+        </Fragment>
+      ),
+      onClick: () => console.log('Option 2 clicked'),
+    },
+    {
+      display: 'Just some Text',
+      onClick: () => console.log('Option 3 Clicked'),
+    },
+  ]},
   hasDividers
-/>
+  selectedIndex={1}
+>
+  Complex Selections
+</OuiSplitButton>
 `;
 
 import SplitButtonStates from './split_button_states';
 const splitButtonStatesSource = require('!!raw-loader!./split_button_states');
 const splitButtonStatesHtml = renderToHtml(SplitButtonStates);
 const splitButtonStatesSnippet = `<OuiSplitButton
-  options={[
-     'Option one',
-  ]}
-  onChange={onChange}
-  fullWidth={true}
+  options={[{ display: 'Option one' }]}
+  fill
+  size="s"
 />
 `;
 
@@ -80,7 +107,20 @@ export const SplitButtonExample = {
           </p>
           <ul>
             <li>
-              <OuiCode>string</OuiCode> or <OuiCode>React component</OuiCode>
+              <OuiCode>display</OuiCode>: string or ReactNode - what shows for
+              the item in the dropdown
+            </li>
+            <li>
+              <OuiCode>onClick</OuiCode>: (optional) handler to call when this
+              item is clicked
+            </li>
+            <li>
+              <OuiCode>href</OuiCode>: (optional) URL to follow when this item
+              is clicked
+            </li>
+            <li>
+              <OuiCode>target</OuiCode>: (optional) along with href, browser
+              target to apply to link
             </li>
           </ul>
           <p>
@@ -132,7 +172,7 @@ export const SplitButtonExample = {
       text: (
         <p>
           You can pass the same props as you normally would to{' '}
-          <strong>OuiButton</strong> like fill, small, etc&hellip;
+          <strong>OuiButton</strong> like fill, size, etc&hellip;
         </p>
       ),
       props: { OuiSplitButton },

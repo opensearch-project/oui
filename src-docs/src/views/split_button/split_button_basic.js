@@ -9,20 +9,24 @@
  * GitHub history for details.
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import { OuiSplitButton } from '../../../../src/components';
 
 export default () => {
-  const options = ['Option 1', 'Option 2'];
-  const [, setValue] = useState();
+  const options = [
+    { id: '1', display: 'Option 1', href: '#' },
+    {
+      id: '2',
+      display: 'Option 2',
+      onClick: () => console.log('Option 2 clicked'),
+    },
+  ];
 
-  const onChange = (value) => {
-    setValue(value);
-  };
+  const primaryClick = () => console.log('Primary clicked');
 
   return (
-    <OuiSplitButton options={options} onChange={(value) => onChange(value)}>
+    <OuiSplitButton options={options} onClick={primaryClick}>
       Basic Split Button
     </OuiSplitButton>
   );

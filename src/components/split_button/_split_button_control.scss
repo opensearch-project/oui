@@ -9,9 +9,13 @@
  * GitHub history for details.
  */
 
+// sass-lint:disable no-vendor-prefixes
 .ouiSplitButton {
-  .ouiButton, .ouiButtonIcon {
-    &:hover, &:focus, &:active {
+  .ouiButton,
+  .ouiButtonIcon {
+    &:hover,
+    &:focus,
+    &:active {
       -webkit-transform: none;
       transform: none;
     }
