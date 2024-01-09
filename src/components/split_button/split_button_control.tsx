@@ -15,7 +15,7 @@ import React, {
   ReactNode,
 } from 'react';
 
-import { CommonProps } from '../common';
+import { CommonProps, ExclusiveUnion } from '../common';
 
 import {
   ButtonColor,
@@ -25,10 +25,22 @@ import {
   OuiButtonIconColor,
   OuiButtonProps,
 } from '../button';
+import {
+  OuiButtonPropsForAnchor,
+  OuiButtonPropsForButton,
+  colorToClassNameMap,
+  sizeToClassNameMap,
+} from '../button/button';
+import classNames from 'classnames';
 
 // this intersection still does not satisfy OuiButtonIconColor
 // https://github.com/opensearch-project/oui/issues/1196
 export type OuiSplitButtonColor = OuiButtonIconColor & ButtonColor;
+
+type OuiSplitButtonActionProps = ExclusiveUnion<
+  OuiButtonPropsForAnchor,
+  OuiButtonPropsForButton
+>;
 
 export interface OuiSplitButtonControlProps
   extends CommonProps,
@@ -62,17 +74,22 @@ export interface OuiSplitButtonControlProps
   /**
    * Handle key-events for dropdown control
    */
-  onKeyDown?: (event: React.KeyboardEvent<HTMLButtonElement>) => void;
+  onKeyDown?: (
+    event: ExclusiveUnion<
+      React.KeyboardEvent<HTMLButtonElement>,
+      React.KeyboardEvent<HTMLAnchorElement>
+    >
+  ) => void;
 
   /**
    * Optional additional props to send to Primary Button
    */
-  propsForPrimaryButton?: OuiButtonProps;
+  buttonProps?: OuiButtonProps;
 
   /**
    * Optional additional props to send to Dropdown Button
    */
-  propsForDropdownButton?: OuiButtonProps;
+  dropdownProps?: OuiButtonProps;
 
   /**
    * Content of Primary (left-side) button
@@ -80,47 +97,69 @@ export interface OuiSplitButtonControlProps
   children: ReactNode;
 }
 
-export const OuiSplitButtonControl = ({
+export const OuiSplitButtonControl: FunctionComponent<
+  OuiSplitButtonControlProps & OuiSplitButtonActionProps
+> = ({
   fill,
   size,
   color = 'primary',
+  disabled = false,
   children,
   fullWidth,
   onClick,
+  href,
+  target,
+  rel,
   onDropdownClick,
   onKeyDown: onSelectKeydown,
-  propsForDropdownButton,
-  propsForPrimaryButton,
-}: OuiSplitButtonControlProps): ReturnType<
-  FunctionComponent<OuiSplitButtonControlProps>
-> => {
+  buttonProps,
+  dropdownProps,
+}) => {
   const iconDisplay = fill ? 'fill' : 'base';
 
+  const className = classNames(
+    'ouiSplitButtonControl',
+    color ? `ouiButton${colorToClassNameMap[color]}` : null
+  );
+
+  const hairlineColor = `ouiSplitButtonHairline${colorToClassNameMap[color]}`;
+
+  const actionProps = {
+    href,
+    target,
+    rel,
+    onClick,
+  };
   return (
-    <div className="ouiSplitButtonControl">
+    <div className={className}>
       <OuiButton
         className="ouiSplitButtonControl--primary"
         fill={fill}
         color={color}
         size={size}
         fullWidth={fullWidth}
-        onClick={onClick}
+        isDisabled={disabled || false}
         onKeyDown={onSelectKeydown}
-        {...propsForPrimaryButton}>
+        data-test-subj="splitButton--primary"
+        {...actionProps}
+        {...buttonProps}>
         {children}
       </OuiButton>
       <OuiButtonIcon
         display={iconDisplay}
+        className="ouiSplitButtonControl--dropdown"
         //@ts-ignore - typedef conflict between ButtonColor, OuiButtonIconColor
         // https://github.com/opensearch-project/oui/issues/1196
         color={color}
         size={size || 'm'}
+        disabled={disabled}
+        isDisabled={disabled}
         iconType="arrowDown"
         onClick={onDropdownClick}
         onKeyDown={onSelectKeydown}
         aria-label="Open Selections"
         data-test-subj="splitButton--dropdown"
-        {...propsForDropdownButton}
+        {...dropdownProps}
       />
     </div>
   );

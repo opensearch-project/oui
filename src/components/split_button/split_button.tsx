@@ -26,12 +26,14 @@ import {
   OuiSplitButtonControl,
   OuiSplitButtonControlProps,
 } from './split_button_control';
-import { OuiInputPopover } from '../popover';
+import { OuiPopover } from '../popover';
 import { OuiContextMenuItem } from '../context_menu';
-import { keys } from '../../services';
+import { cascadingMenuKeys, keys } from '../../services';
 import { OuiI18n } from '../i18n';
 import { OuiButtonProps } from '../button';
 import { OuiText, OuiTextProps } from '../text';
+import { OuiFocusTrap } from '../focus_trap';
+import { tabbable } from 'tabbable';
 
 enum ShiftDirection {
   BACK = 'back',
@@ -124,14 +126,34 @@ export const OuiSplitButton = ({
 }: OuiSplitButtonProps) => {
   const itemNodes: Array<HTMLButtonElement | null> = useMemo(() => [], []);
   const [isOpen, setIsOpen] = useState(!!initiallyOpen);
+  const [panelEl, setPanelEl] = useState<HTMLElement | null>(null);
+  const panelRef = (node: HTMLElement | null) => setPanelEl(node);
+
+  const onKeyDown = (event: React.KeyboardEvent) => {
+    if (panelEl && event.key === cascadingMenuKeys.TAB) {
+      const tabbableItems = tabbable(panelEl).filter((el) => {
+        return (
+          Array.from(el.attributes)
+            .map((el) => el.name)
+            .indexOf('data-focus-guard') < 0
+        );
+      });
+      if (
+        tabbableItems.length &&
+        tabbableItems[tabbableItems.length - 1] === document.activeElement
+      ) {
+        setIsOpen(false);
+      }
+    }
+  };
 
   const focusItemAt = useCallback(
     (index: number) => {
       const targetElement = itemNodes[index];
       if (targetElement != null) {
         targetElement.focus();
-        const hasFocus = targetElement.matches(':focus');
-        return hasFocus;
+
+        return targetElement.matches(':focus');
       }
     },
     [itemNodes]
@@ -277,13 +299,14 @@ export const OuiSplitButton = ({
 
   // return <div>SplitButton</div>;
   return (
-    <OuiInputPopover
+    <OuiPopover
+      ownFocus={false}
+      button={button}
+      panelRef={panelRef}
       className={popoverClasses}
-      input={button}
       isOpen={isOpen}
       closePopover={() => setIsOpen(false)}
-      panelPaddingSize="none"
-      fullWidth={false}>
+      panelPaddingSize="none">
       <OuiScreenReaderOnly>
         <p role="alert">
           <OuiI18n
@@ -294,13 +317,17 @@ export const OuiSplitButton = ({
           />
         </p>
       </OuiScreenReaderOnly>
-      <div
-        className="ouiSplitButton__listbox"
-        role="listbox"
-        aria-activedescendant={`${selectedIndex}`}
-        tabIndex={0}>
-        {items}
-      </div>
-    </OuiInputPopover>
+      <OuiFocusTrap clickOutsideDisables={true}>
+        <div onKeyDown={onKeyDown}>
+          <div
+            className="ouiSplitButton__listbox"
+            role="listbox"
+            aria-activedescendant={`${selectedIndex}`}
+            tabIndex={0}>
+            {items}
+          </div>
+        </div>
+      </OuiFocusTrap>
+    </OuiPopover>
   );
 };
