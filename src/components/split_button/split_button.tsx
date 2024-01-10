@@ -22,7 +22,6 @@ import { CommonProps } from '../common';
 
 import { OuiScreenReaderOnly } from '../accessibility';
 import {
-  OuiSplitButtonColor,
   OuiSplitButtonControl,
   OuiSplitButtonControlProps,
 } from './split_button_control';
@@ -50,7 +49,7 @@ export interface OuiSplitButtonOption {
 export type OuiSplitButtonProps = CommonProps &
   Omit<
     OuiSplitButtonControlProps,
-    'onKeyDown' | 'onChange' | 'onDropdownClick' | 'options' | 'value'
+    'onChange' | 'onDropdownClick' | 'options' | 'value'
   > & {
     /**
      * Pass an array of options
@@ -106,7 +105,6 @@ export const OuiSplitButton = ({
   disabled,
   options = [],
   selectedIndex,
-  onSelection,
   initiallyOpen = false,
   hasDividers,
   itemClassName,
@@ -167,7 +165,7 @@ export const OuiSplitButton = ({
     isOpen && requestAnimationFrame(focusSelected);
   }, [isOpen, focusSelected]);
 
-  const onSelectKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+  const onSelectKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
     if (event.key === keys.ARROW_UP || event.key === keys.ARROW_DOWN) {
       event.preventDefault();
       event.stopPropagation();
@@ -261,12 +259,6 @@ export const OuiSplitButton = ({
     </OuiSplitButtonControl>
   );
 
-  const textColor = (color: OuiSplitButtonColor) => {
-    if (color === 'primary') return 'success';
-    if (color === 'text') return 'default';
-
-    return color;
-  };
   const itemIcon = (index: number) => {
     if (selectedIndex === undefined) return;
 

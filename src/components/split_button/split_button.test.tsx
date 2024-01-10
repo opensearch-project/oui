@@ -27,6 +27,7 @@ interface WaitForOptions {
   timeout?: number;
   message?: string;
 }
+
 /**
  * Iterate a callback until callback's expect() is pass.
  * @param callback - fn to iterate until expect pass
@@ -111,13 +112,15 @@ describe('OuiSplitButton', () => {
 
   describe('options rendering', () => {
     test('options are rendered when select is open', async () => {
-      const component = render(
+      const component = mount(
         <OuiSplitButton options={options} initiallyOpen>
           Test
         </OuiSplitButton>
       );
 
-      expect(component.find('button[aria-selected="false"]')).toHaveLength(2);
+      component.update();
+      expect(component.find('button.ouiSplitButton__item')).toHaveLength(1);
+      expect(component.find('a.ouiSplitButton__item')).toHaveLength(1);
       expect(component).toMatchSnapshot();
     });
 
@@ -128,10 +131,10 @@ describe('OuiSplitButton', () => {
         </OuiSplitButton>
       );
 
-      expect(component).toMatchSnapshot();
-      const selected = component.find('button[aria-selected="true"]');
+      const selected = component.find('a[aria-selected="true"]');
       expect(selected).toHaveLength(1);
       expect(selected.text()).toEqual('Option #1');
+      expect(component).toMatchSnapshot();
     });
 
     test('selectedItem last is rendered', async () => {

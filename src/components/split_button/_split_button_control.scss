@@ -9,11 +9,7 @@
  * GitHub history for details.
  */
 
-// sass-lint:disable no-vendor-prefixes
-.ouiInputPopover.ouiSplitButton {
-  width: fit-content !important;
-  max-width: fit-content !important;
-}
+// sass-lint:disable no-vendor-prefixes no-qualifying-elements nesting-depth
 
 $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
 
@@ -22,6 +18,7 @@ $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
   //width: 100% !important;
 
   // Remove individual button style
+  //@eslint
   button.ouiSplitButtonControl--primary {
     // reset all but right border
     border-top-width: 0px;

@@ -29,7 +29,6 @@ import {
   OuiButtonPropsForAnchor,
   OuiButtonPropsForButton,
   colorToClassNameMap,
-  sizeToClassNameMap,
 } from '../button/button';
 import classNames from 'classnames';
 
@@ -74,12 +73,7 @@ export interface OuiSplitButtonControlProps
   /**
    * Handle key-events for dropdown control
    */
-  onKeyDown?: (
-    event: ExclusiveUnion<
-      React.KeyboardEvent<HTMLButtonElement>,
-      React.KeyboardEvent<HTMLAnchorElement>
-    >
-  ) => void;
+  onKeyDown?: (event: React.KeyboardEvent<HTMLElement>) => void;
 
   /**
    * Optional additional props to send to Primary Button
@@ -146,7 +140,7 @@ export const OuiSplitButtonControl: FunctionComponent<
         color={color}
         size={size}
         fullWidth={fullWidth}
-        disabled={disabled || false}
+        isDisabled={disabled || false}
         onKeyDown={onSelectKeydown}
         data-test-subj="splitButton--primary"
         {...actionProps}
