@@ -90,7 +90,7 @@ $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
 
       &.ouiSplitButtonHairline--filled {
         &:not([class*='isDisabled']) {
-          border-right-color: darken($color, 25%);
+          border-right-color: darken($color, 10%);
         }
       }
     }

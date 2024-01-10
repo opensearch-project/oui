@@ -9,11 +9,13 @@
  * GitHub history for details.
  */
 
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 
 import { OuiSplitButton, OuiText } from '../../../../src/components';
 
 export default () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
   const options = [
     {
       display: (
@@ -24,7 +26,9 @@ export default () => {
           </OuiText>
         </Fragment>
       ),
-      onClick: () => console.log('Option one clicked'),
+      button: 'Option one',
+      onClick: () => setSelectedIndex(0),
+      onButtonClick: () => console.log('Option one clicked'),
     },
     {
       display: (
@@ -35,21 +39,26 @@ export default () => {
           </OuiText>
         </Fragment>
       ),
-      onClick: () => console.log('Option 2 clicked'),
+      button: 'Option two',
+      onClick: () => setSelectedIndex(1),
+      onButtonClick: () => console.log('Option two clicked'),
     },
     {
       display: 'Just some Text',
-      onClick: () => console.log('Option 3 Clicked'),
+      button: 'Option three',
+      onClick: () => setSelectedIndex(2),
+      onButtonClick: () => console.log('Option three clicked'),
     },
   ];
 
   return (
     <OuiSplitButton
       options={options}
-      selectedIndex={1}
+      selectedIndex={selectedIndex}
+      onClick={options[selectedIndex].onButtonClick}
       hasDividers
       optionProps={{ textAlign: 'left' }}>
-      Complex Selections
+      {options[selectedIndex].button}
     </OuiSplitButton>
   );
 };

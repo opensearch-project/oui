@@ -27,7 +27,7 @@ const splitButtonBasicSnippet = `<OuiSplitButton
       href: '#"
     },
     {
-      display: 'Option2', 
+      display: 'Option2',
       onClick: () => console.log('Option 2 clicked')
     },
   ]}
@@ -82,6 +82,59 @@ const splitButtonStatesSnippet = `<OuiSplitButton
   fill
   size="s"
 />
+`;
+
+import SplitButtonChangeDemo from './split_button_change_demo';
+const splitButtonChangeDemoSource = require('!!raw-loader!./split_button_change_demo');
+const splitButtonChangeDemoHtml = renderToHtml(SplitButtonChangeDemo);
+const splitButtonChangeDemoSnippet = `export default () => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const options = [
+    {
+      display: (
+        <Fragment>
+          <strong>Option one</strong>
+          <OuiText disabled size="s" color="subdued">
+            Has a short description giving more detail to the option.
+          </OuiText>
+        </Fragment>
+      ),
+      button: 'Option one',
+      onClick: () => setSelectedIndex(0),
+      onButtonClick: () => console.log('Option one clicked'),
+    },
+    {
+      display: (
+        <Fragment>
+          <strong>Option two</strong>
+          <OuiText size="s" color="subdued">
+            Has a short description giving more detail to the option.
+          </OuiText>
+        </Fragment>
+      ),
+      button: 'Option two',
+      onClick: () => setSelectedIndex(1),
+      onButtonClick: () => console.log('Option two clicked'),
+    },
+    {
+      display: 'Just some Text',
+      button: 'Option three',
+      onClick: () => setSelectedIndex(2),
+      onButtonClick: () => console.log('Option three clicked'),
+    },
+  ];
+
+  return (
+    <OuiSplitButton
+      options={options}
+      selectedIndex={selectedIndex}
+      onClick={options[selectedIndex].onButtonClick}
+      hasDividers>
+      {options[selectedIndex].button}
+    </OuiSplitButton>
+  );
+};
 `;
 
 export const SplitButtonExample = {
@@ -178,6 +231,31 @@ export const SplitButtonExample = {
       props: { OuiSplitButton },
       snippet: splitButtonStatesSnippet,
       demo: <SplitButtonStates />,
+    },
+    {
+      title: 'Change Primary Button',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: splitButtonChangeDemoSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: splitButtonChangeDemoHtml,
+        },
+      ],
+      text: (
+        <p>
+          A special interaction between option-items and the Primary button can
+          be achieved through use of the `selectedIndex` and option-item&rsquo;s
+          `onClick`. In this way, the user &ldquo;selects&rdquo; the primary
+          action from the options, then clicks the Primary button to execute
+          that action.
+        </p>
+      ),
+      props: { OuiSplitButton },
+      snippet: splitButtonChangeDemoSnippet,
+      demo: <SplitButtonChangeDemo />,
     },
   ],
 };

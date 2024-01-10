@@ -20,13 +20,21 @@ import { flatten } from 'lodash';
 
 const options = [{ display: 'option' }];
 
-const colors = ['primary', 'success', 'warning', 'danger', 'text', 'disabled'];
+const colors = [
+  'primary',
+  'success',
+  'warning',
+  'danger',
+  'text',
+  'disabled',
+  'ghost',
+];
 const fills = [false, true];
 const smalls = [undefined, 's'];
 
-const Name = ({ color, filled, small }) => {
-  if (filled && small) return 'Filled and Small';
-  if (filled) return 'Filled';
+const Name = ({ color, fill, small }) => {
+  if (fill && small) return 'Filled and Small';
+  if (fill) return 'Filled';
   if (small) return 'Small';
 
   return color;
@@ -35,7 +43,7 @@ const Name = ({ color, filled, small }) => {
 const iterations = flatten(fills.map((f) => smalls.map((s) => [f, s])));
 
 const button = (groupColor, fill, size) => {
-  const disabled = groupColor === 'disabled';
+  const disabled = groupColor === 'disabled' || groupColor === 'ghost';
   const color = disabled ? 'text' : groupColor;
 
   return (
@@ -46,7 +54,7 @@ const button = (groupColor, fill, size) => {
         fill={fill}
         size={size}
         options={options}>
-        <Name color={groupColor} fill={fill} size={size} />
+        <Name color={groupColor} fill={fill} small={size} />
       </OuiSplitButton>
     </OuiFlexItem>
   );

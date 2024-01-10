@@ -68,12 +68,6 @@ export type OuiSplitButtonProps = CommonProps &
     selectedIndex?: number;
 
     /**
-     * This callback will be executed when an option is clicked, in addition to possible
-     * href/onClick of the option-item itself.
-     */
-    onSelection?: (index: number) => void;
-
-    /**
      * Change to `true` if you want horizontal lines between options.
      * This is best used when options are multi-line.
      */
@@ -92,23 +86,24 @@ export type OuiSplitButtonProps = CommonProps &
     /**
      * Optional additional props to send to Primary Button
      */
-    propsForPrimaryButton?: OuiButtonProps;
+    buttonProps?: OuiButtonProps;
 
     /**
      * Optional additional props to send to Dropdown Button
      */
-    propsForDropdownButton?: OuiButtonProps;
+    dropdownProps?: OuiButtonProps;
 
     /**
      * Optional additional props to send to each Option Item, when
      * it is string, rendered with OuiText wrapper
      */
-    propsForOptionItems?: OuiTextProps;
+    optionProps?: OuiTextProps;
   };
 
 export const OuiSplitButton = ({
   color = 'primary',
-  fullWidth,
+  fullWidth = false,
+  disabled,
   options = [],
   selectedIndex,
   onSelection,
@@ -119,9 +114,9 @@ export const OuiSplitButton = ({
   className,
   popoverClassName,
   children,
-  propsForDropdownButton,
-  propsForOptionItems,
-  propsForPrimaryButton,
+  dropdownProps,
+  optionProps,
+  buttonProps,
   ...rest
 }: OuiSplitButtonProps) => {
   const itemNodes: Array<HTMLButtonElement | null> = useMemo(() => [], []);
@@ -245,16 +240,22 @@ export const OuiSplitButton = ({
     itemClassName
   );
 
+  const onPrimaryClick = () => {
+    onClick?.();
+    setIsOpen(false);
+  };
+
   const button = (
     <OuiSplitButtonControl
       color={color}
       onDropdownClick={() => setIsOpen(!isOpen)}
-      onClick={onClick}
+      onClick={onPrimaryClick}
       onKeyDown={onSelectKeyDown}
       className={buttonClasses}
       fullWidth={fullWidth}
-      propsForDropdownButton={propsForDropdownButton}
-      propsForPrimaryButton={propsForPrimaryButton}
+      dropdownProps={dropdownProps}
+      buttonProps={buttonProps}
+      disabled={disabled}
       {...rest}>
       {children}
     </OuiSplitButtonControl>
@@ -266,28 +267,42 @@ export const OuiSplitButton = ({
 
     return color;
   };
+  const itemIcon = (index: number) => {
+    if (selectedIndex === undefined) return;
+
+    if (selectedIndex === index) return 'check';
+
+    return 'empty';
+  };
 
   const items = options.map((option, index) => {
     const isSelected = selectedIndex === index;
 
     const content =
       typeof option.display === 'string' ? (
-        <OuiText color={textColor(color)}>{option.display}</OuiText>
+        <OuiText textAlign="center" {...optionProps}>
+          {option.display}
+        </OuiText>
       ) : (
         option.display
       );
+
+    const itemOnClick = () => {
+      setIsOpen(false);
+      option.onClick?.();
+    };
 
     return (
       <OuiContextMenuItem
         key={`optionItem_${index}`}
         className={itemClasses}
         color={color}
-        icon={isSelected ? 'check' : 'empty'}
+        icon={itemIcon(index)}
         href={option.href}
         target={option.target}
-        onClick={option.onClick}
+        onClick={itemOnClick}
         onKeyDown={onItemKeyDown}
-        layoutAlign="right"
+        layoutAlign="center"
         buttonRef={(node) => (itemNodes[index] = node)}
         role="option"
         id={`splitButtonItem_${index}`}
