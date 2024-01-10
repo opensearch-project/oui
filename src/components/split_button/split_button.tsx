@@ -287,7 +287,7 @@ export const OuiSplitButton = ({
         target={option.target}
         onClick={option.onClick}
         onKeyDown={onItemKeyDown}
-        layoutAlign="center"
+        layoutAlign="right"
         buttonRef={(node) => (itemNodes[index] = node)}
         role="option"
         id={`splitButtonItem_${index}`}
@@ -301,6 +301,8 @@ export const OuiSplitButton = ({
   return (
     <OuiPopover
       ownFocus={false}
+      hasArrow={false}
+      anchorPosition="downRight"
       button={button}
       panelRef={panelRef}
       className={popoverClasses}

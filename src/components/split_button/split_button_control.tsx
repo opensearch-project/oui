@@ -119,10 +119,18 @@ export const OuiSplitButtonControl: FunctionComponent<
 
   const className = classNames(
     'ouiSplitButtonControl',
-    color ? `ouiButton${colorToClassNameMap[color]}` : null
+    color && `ouiSplitButtonColor${colorToClassNameMap[color]}`,
+    disabled && 'ouiSplitButtonColor-isDisabled',
+    fill && 'ouiSplitButtonColor--filled'
   );
 
-  const hairlineColor = `ouiSplitButtonHairline${colorToClassNameMap[color]}`;
+  const primaryButtonClasses = classNames(
+    'ouiSplitButtonControl',
+    'ouiSplitButtonControl--primary',
+    color && `ouiSplitButtonHairline${colorToClassNameMap[color]}`,
+    disabled && 'ouiSplitButtonHairline--isDisabled',
+    fill && 'ouiSplitButtonHairline--filled'
+  );
 
   const actionProps = {
     href,
@@ -133,12 +141,12 @@ export const OuiSplitButtonControl: FunctionComponent<
   return (
     <div className={className}>
       <OuiButton
-        className="ouiSplitButtonControl--primary"
+        className={primaryButtonClasses}
         fill={fill}
         color={color}
         size={size}
         fullWidth={fullWidth}
-        isDisabled={disabled || false}
+        disabled={disabled || false}
         onKeyDown={onSelectKeydown}
         data-test-subj="splitButton--primary"
         {...actionProps}

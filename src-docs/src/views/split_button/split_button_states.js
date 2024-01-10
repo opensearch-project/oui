@@ -24,7 +24,7 @@ const colors = ['primary', 'success', 'warning', 'danger', 'text', 'disabled'];
 const fills = [false, true];
 const smalls = [undefined, 's'];
 
-const name = (color, filled, small) => {
+const Name = ({ color, filled, small }) => {
   if (filled && small) return 'Filled and Small';
   if (filled) return 'Filled';
   if (small) return 'Small';
@@ -34,13 +34,23 @@ const name = (color, filled, small) => {
 
 const iterations = flatten(fills.map((f) => smalls.map((s) => [f, s])));
 
-const button = (color, fill, size) => (
-  <OuiFlexItem grow={false}>
-    <OuiSplitButton {...{ color, fill, size, options }}>
-      {name(color, fill, size)}
-    </OuiSplitButton>
-  </OuiFlexItem>
-);
+const button = (groupColor, fill, size) => {
+  const disabled = groupColor === 'disabled';
+  const color = disabled ? 'text' : groupColor;
+
+  return (
+    <OuiFlexItem grow={false}>
+      <OuiSplitButton
+        color={color}
+        disabled={disabled}
+        fill={fill}
+        size={size}
+        options={options}>
+        <Name color={groupColor} fill={fill} size={size} />
+      </OuiSplitButton>
+    </OuiFlexItem>
+  );
+};
 
 const colorGroup = (color) => {
   const buttons = iterations.map(([fill, size]) => button(color, fill, size));
