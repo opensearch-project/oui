@@ -21,6 +21,7 @@
 - Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
 - Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
 - Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
+- Add SplitButton control ([#1193](https://github.com/opensearch-project/oui/pull/1193))
 
 ### 🐛 Bug Fixes
 
@@ -29,6 +30,7 @@
 - Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
 - Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
 - Fix bug in OuiButtonContent for showing info tooltip in icon-only buttons when hovered([#1160](https://github.com/opensearch-project/oui/pull/1160))
+- Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
 
 ### 🚞 Infrastructure
 
@@ -49,6 +51,7 @@
 - Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
 - Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
 - Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
+- Clean up code OUI Breadcrumb component from previous updates ([#1144](https://github.com/opensearch-project/oui/pull/1144))
 - Update deprecated Babel plugins ([#1155](https://github.com/opensearch-project/oui/pull/1155))
 - Move @seanneumann to emeritus maintainer ([#1188](https://github.com/opensearch-project/oui/pull/1188))
 
