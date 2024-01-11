@@ -1,12 +1,6 @@
 /*
+ * Copyright OpenSearch Contributors
  * SPDX-License-Identifier: Apache-2.0
- *
- * The OpenSearch Contributors require contributions made to
- * this file be licensed under the Apache-2.0 license or a
- * compatible open source license.
- *
- * Modifications Copyright OpenSearch Contributors. See
- * GitHub history for details.
  */
 
 import React, { createElement, Fragment } from 'react';
@@ -197,6 +191,8 @@ import { SideNavExample } from './views/side_nav/side_nav_example';
 
 import { SpacerExample } from './views/spacer/spacer_example';
 
+import { SplitButtonExample } from './views/split_button/split_button_example';
+
 import { StatExample } from './views/stat/stat_example';
 
 import { StepsExample } from './views/steps/steps_example';
@@ -353,6 +349,7 @@ const navigation = [
     items: [
       BreadcrumbsExample,
       ButtonExample,
+      SplitButtonExample,
       CollapsibleNavExample,
       ContextMenuExample,
       ControlBarExample,

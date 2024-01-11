@@ -6,7 +6,6 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 
 | Maintainer               | GitHub ID                                         | Affiliation |
 | ------------------------ | ------------------------------------------------- | ----------- |
-| Sean Neumann             | [seanneumann](https://github.com/seanneumann)     | Amazon      |
 | Miki Barahmand           | [AMoo-Miki](https://github.com/AMoo-Miki)         | Amazon      |
 | Iskander Rakhmanberdiyev | [rednaksi91](https://github.com/rednaksi91)       | Amazon      |
 | Kroosh                   | [KrooshalUX](https://github.com/KrooshalUX)       | Amazon      |
@@ -16,3 +15,10 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | Josh Romero              | [joshuarrrr](https://github.com/joshuarrrr)       | Amazon      |
 | Andrey Myssak            | [andreymyssak](https://github.com/andreymyssak)   | Contributor |
 | Sergey Myssak            | [SergeyMyssak](https://github.com/SergeyMyssak)   | Contributor |
+
+
+## Emeritus
+
+| Maintainer               | GitHub ID                                         | Affiliation |
+|--------------------------|---------------------------------------------------|-------------|
+| Sean Neumann             | [seanneumann](https://github.com/seanneumann)     | Contributor |
