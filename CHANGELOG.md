@@ -29,6 +29,7 @@
 - Extract build archive into a folder for OSD integration test CI ([#1075](https://github.com/opensearch-project/oui/pull/1075))
 - Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
 - Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
+- Fix bug in OuiButtonContent for showing info tooltip in icon-only buttons when hovered([#1160](https://github.com/opensearch-project/oui/pull/1160))
 - Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
 
 ### 🚞 Infrastructure
