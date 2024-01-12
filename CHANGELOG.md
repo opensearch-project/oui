@@ -31,6 +31,7 @@
 - Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
 - Fix bug in OuiButtonContent for showing info tooltip in icon-only buttons when hovered([#1160](https://github.com/opensearch-project/oui/pull/1160))
 - Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
+- Fix SplitButton when no options ([#1208](https://github.com/opensearch-project/oui/pull/1208))
 
 ### 🚞 Infrastructure
 
