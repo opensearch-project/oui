@@ -32,6 +32,7 @@ import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
+// TODO: Remove 'true' and 'false' from the type definitions on next major release
 export type FlexItemGrowSize =
   | 0
   | 1
@@ -44,9 +45,19 @@ export type FlexItemGrowSize =
   | 8
   | 9
   | 10
+  /**
+   * @deprecated `true` will be removed in the next major release.
+   * Use numeric values instead.
+   */
   | true
+  /**
+   * @deprecated `false` will be removed in the next major release.
+   * Use numeric values instead.
+   */
   | false
   | null;
+
+// TODO: Remove 'true' and 'false' from the type definitions on next major release
 export type FlexItemShrinkSize =
   | 0
   | 1
@@ -59,7 +70,15 @@ export type FlexItemShrinkSize =
   | 8
   | 9
   | 10
+  /**
+   * @deprecated `true` will be removed in the next major release.
+   * Use numeric values instead.
+   */
   | true
+  /**
+   * @deprecated `false` will be removed in the next major release.
+   * Use numeric values instead.
+   */
   | false
   | null;
 export type FlexItemBasisValue = string | true | false | null;
