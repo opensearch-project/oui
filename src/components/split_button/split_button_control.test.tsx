@@ -18,6 +18,17 @@ describe('OuiSplitButtonControl', () => {
     expect(component).toMatchSnapshot();
   });
 
+  test('is rendered without dropdown', () => {
+    const component = render(
+      <OuiSplitButtonControl displayDropdown={false} {...requiredProps}>
+        Test
+      </OuiSplitButtonControl>
+    );
+
+    expect(component.find('.ouiSplitButtonControl--dropdown')).toHaveLength(0);
+    expect(component).toMatchSnapshot();
+  });
+
   describe('props', () => {
     test('fullWidth is rendered', () => {
       const component = render(
