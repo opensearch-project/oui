@@ -33,6 +33,7 @@ import classNames from 'classnames';
 import { CommonProps } from '../common';
 
 export type FlexItemGrowSize =
+  | 0
   | 1
   | 2
   | 3
@@ -47,6 +48,7 @@ export type FlexItemGrowSize =
   | false
   | null;
 export type FlexItemShrinkSize =
+  | 0
   | 1
   | 2
   | 3
@@ -69,8 +71,21 @@ export interface OuiFlexItemProps {
   component?: keyof JSX.IntrinsicElements;
 }
 
-export const GROW_SIZES: FlexItemGrowSize[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const GROW_SIZES: FlexItemGrowSize[] = [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+];
 export const SHRINK_SIZES: FlexItemShrinkSize[] = [
+  0,
   1,
   2,
   3,
