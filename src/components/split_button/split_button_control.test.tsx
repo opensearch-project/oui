@@ -26,6 +26,13 @@ describe('OuiSplitButtonControl', () => {
     );
 
     expect(component.find('.ouiSplitButtonControl--dropdown')).toHaveLength(0);
+
+    expect(
+      component.find(
+        '.ouiSplitButtonControl--primary.ouiSplitButtonHairline--primary'
+      )
+    ).toHaveLength(0);
+
     expect(component).toMatchSnapshot();
   });
 

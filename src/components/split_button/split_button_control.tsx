@@ -122,9 +122,11 @@ export const OuiSplitButtonControl: FunctionComponent<
   const primaryButtonClasses = classNames(
     'ouiSplitButtonControl',
     'ouiSplitButtonControl--primary',
-    color && `ouiSplitButtonHairline${colorToClassNameMap[color]}`,
-    disabled && 'ouiSplitButtonHairline--isDisabled',
-    fill && 'ouiSplitButtonHairline--filled'
+    color &&
+      displayDropdown &&
+      `ouiSplitButtonHairline${colorToClassNameMap[color]}`,
+    disabled && displayDropdown && 'ouiSplitButtonHairline--isDisabled',
+    fill && displayDropdown && 'ouiSplitButtonHairline--filled'
   );
 
   const actionProps = {

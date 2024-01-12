@@ -11,7 +11,7 @@ exports[`OuiSplitButton is rendered 1`] = `
       class="ouiSplitButtonControl ouiSplitButtonColor--primary"
     >
       <button
-        class="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+        class="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary"
         data-test-subj="splitButton--primary"
         type="button"
       >
@@ -5341,7 +5341,7 @@ exports[`OuiSplitButton props fullWidth is rendered 1`] = `
       class="ouiSplitButtonControl ouiSplitButtonColor--primary"
     >
       <button
-        class="ouiButton ouiButton--primary ouiButton--fullWidth ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+        class="ouiButton ouiButton--primary ouiButton--fullWidth ouiSplitButtonControl ouiSplitButtonControl--primary"
         data-test-subj="splitButton--primary"
         type="button"
       >
@@ -5415,7 +5415,7 @@ exports[`OuiSplitButton simple button display display simple button when options
               className="ouiSplitButtonControl ouiSplitButtonColor--primary"
             >
               <OuiButton
-                className="ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+                className="ouiSplitButtonControl ouiSplitButtonControl--primary"
                 color="primary"
                 data-test-subj="splitButton--primary"
                 fullWidth={false}
@@ -5425,7 +5425,7 @@ exports[`OuiSplitButton simple button display display simple button when options
               >
                 <OuiButtonDisplay
                   baseClassName="ouiButton"
-                  className="ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+                  className="ouiSplitButtonControl ouiSplitButtonControl--primary"
                   color="primary"
                   data-test-subj="splitButton--primary"
                   disabled={false}
@@ -5437,7 +5437,7 @@ exports[`OuiSplitButton simple button display display simple button when options
                   type="button"
                 >
                   <button
-                    className="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+                    className="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary"
                     data-test-subj="splitButton--primary"
                     disabled={false}
                     onClick={[Function]}
@@ -5536,7 +5536,7 @@ exports[`OuiSplitButton simple button display ignore initiallyOpen when options 
               className="ouiSplitButtonControl ouiSplitButtonColor--primary"
             >
               <OuiButton
-                className="ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+                className="ouiSplitButtonControl ouiSplitButtonControl--primary"
                 color="primary"
                 data-test-subj="splitButton--primary"
                 fullWidth={false}
@@ -5546,7 +5546,7 @@ exports[`OuiSplitButton simple button display ignore initiallyOpen when options 
               >
                 <OuiButtonDisplay
                   baseClassName="ouiButton"
-                  className="ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+                  className="ouiSplitButtonControl ouiSplitButtonControl--primary"
                   color="primary"
                   data-test-subj="splitButton--primary"
                   disabled={false}
@@ -5558,7 +5558,7 @@ exports[`OuiSplitButton simple button display ignore initiallyOpen when options 
                   type="button"
                 >
                   <button
-                    className="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+                    className="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary"
                     data-test-subj="splitButton--primary"
                     disabled={false}
                     onClick={[Function]}

@@ -40,7 +40,7 @@ exports[`OuiSplitButtonControl is rendered without dropdown 1`] = `
   class="ouiSplitButtonControl ouiSplitButtonColor--primary"
 >
   <button
-    class="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+    class="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary"
     data-test-subj="splitButton--primary"
     type="button"
   >
