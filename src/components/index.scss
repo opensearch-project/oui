@@ -1,12 +1,6 @@
-/*!
+/*
+ * Copyright OpenSearch Contributors
  * SPDX-License-Identifier: Apache-2.0
- *
- * The OpenSearch Contributors require contributions made to
- * this file be licensed under the Apache-2.0 license or a
- * compatible open source license.
- *
- * Modifications Copyright OpenSearch Contributors. See
- * GitHub history for details.
  */
 
 // Components
@@ -70,6 +64,7 @@
 @import 'spacer/index';
 @import 'search_bar/index';
 @import 'selectable/index';
+@import 'split_button/index';
 @import 'stat/index';
 @import 'steps/index';
 @import 'suggest/index';

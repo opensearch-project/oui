@@ -133,7 +133,7 @@ export const GuideSection: FunctionComponent<GuideSection> = ({
 
   const renderPlaygroundToggle = () => {
     const isPlaygroundUnsupported =
-      typeof window !== 'undefined' && typeof document !== 'undefined';
+      typeof window === 'undefined' || typeof document === 'undefined';
 
     if (!isPlaygroundUnsupported && !!playground) {
       return (

@@ -95,5 +95,23 @@ export default () => (
   /* Your content */
 </span>`}
     />
+    <OuiSpacer />
+    <UtilityClassesSection
+      code="oui-displayNone"
+      description={
+        <p>
+          Changes the element’s display property to{' '}
+          <OuiCode language="sass">display: none;</OuiCode>
+        </p>
+      }
+      example={
+        <OuiMark style={wrappingExampleStyle} className="oui-displayNone">
+          Displaying none
+        </OuiMark>
+      }
+      snippet={`<span className="oui-displayNone">
+  /* Your content */
+</span>`}
+    />
   </>
 );

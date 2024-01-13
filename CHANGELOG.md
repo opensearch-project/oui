@@ -17,10 +17,12 @@
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
+- Add CSS `display-none` utility ([#1120](https://github.com/opensearch-project/oui/pull/1120))
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
 - Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
 - Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
 - Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
+- Add SplitButton control ([#1193](https://github.com/opensearch-project/oui/pull/1193))
 
 ### 🐛 Bug Fixes
 
@@ -28,6 +30,8 @@
 - Extract build archive into a folder for OSD integration test CI ([#1075](https://github.com/opensearch-project/oui/pull/1075))
 - Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
 - Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
+- Fix bug in OuiButtonContent for showing info tooltip in icon-only buttons when hovered([#1160](https://github.com/opensearch-project/oui/pull/1160))
+- Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
 
 ### 🚞 Infrastructure
 
@@ -49,6 +53,7 @@
 - Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
 - Clean up unused runtime and dev dependencies ([#1135](https://github.com/opensearch-project/oui/pull/1135))
 - Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
+- Clean up code OUI Breadcrumb component from previous updates ([#1144](https://github.com/opensearch-project/oui/pull/1144))
 - Update deprecated Babel plugins ([#1155](https://github.com/opensearch-project/oui/pull/1155))
 - Move @seanneumann to emeritus maintainer ([#1188](https://github.com/opensearch-project/oui/pull/1188))
 
