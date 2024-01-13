@@ -37,6 +37,7 @@ import { OuiScreenReaderOnly } from '../accessibility';
 import { OuiText } from '../text';
 import { keys, htmlIdGenerator } from '../../services';
 import { OuiInnerText } from '../inner_text';
+import { OuiFacetButton } from '../facet';
 
 const OuiTreeViewContext = createContext<string>('');
 
@@ -118,6 +119,8 @@ export type CommonTreeProps = CommonProps &
      * that contain children
      */
     showExpansionArrows?: boolean;
+    /** Number of child components within tree view node
+     */
   };
 
 export type OuiTreeViewProps = Omit<
@@ -307,7 +310,7 @@ export class OuiTreeView extends Component<OuiTreeViewProps, OuiTreeViewState> {
             {items.map((node, index) => {
               const buttonId = node.id;
               const wrappingId = this.treeIdGenerator(buttonId);
-
+              const count = node.children?.length;
               return (
                 <OuiInnerText
                   key={node.id + index}
@@ -389,11 +392,23 @@ export class OuiTreeView extends Component<OuiTreeViewProps, OuiTreeViewState> {
                                 {node.useEmptyIcon && !node.icon ? (
                                   <span className="ouiTreeView__iconPlaceholder" />
                                 ) : null}
-                                <span
-                                  ref={ref}
-                                  className="ouiTreeView__nodeLabel">
-                                  {node.label}
-                                </span>
+                                {count === 0 ? (
+                                  <span
+                                    ref={ref}
+                                    className="ouiTreeView__nodeLabel">
+                                    {node.label}
+                                  </span>
+                                ) : (
+                                  <OuiFacetButton
+                                    quantity={count}
+                                    className="ouiTreeView_ouiFacetButton">
+                                    <span
+                                      ref={ref}
+                                      className="ouiTreeView__nodeLabel">
+                                      {node.label}
+                                    </span>
+                                  </OuiFacetButton>
+                                )}
                               </button>
                               <div
                                 id={wrappingId}
