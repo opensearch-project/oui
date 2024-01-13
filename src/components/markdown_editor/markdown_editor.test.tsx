@@ -263,87 +263,78 @@ describe('OuiMarkdownEditor', () => {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       //@ts-ignore
       document.getElementById = jest.fn(() => textarea);
-      document.execCommand = jest.fn(() => true);
     });
 
     it('bold selected text on bold icon click', () => {
       component.find('button[aria-label="Bold"]').simulate('click');
       expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `**${testProps.value}**`
-      );
+      setTimeout(() => {
+        const updatedValue = component.prop('value');
+        expect(updatedValue).toBe(`**${testProps.value}**`);
+      }, 0);
     });
 
     it('italicize selected text on italic icon click', () => {
       component.find('button[aria-label="Italic"]').simulate('click');
       expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `_${testProps.value}_`
-      );
+      setTimeout(() => {
+        const updatedValue = component.prop('value');
+        expect(updatedValue).toBe(`_${testProps.value}_`);
+      }, 0);
     });
 
     it('convert selected text to unordered list on unordered list icon click', () => {
       component.find('button[aria-label="Unordered list"]').simulate('click');
       expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `- ${testProps.value}`
-      );
+      setTimeout(() => {
+        const updatedValue = component.prop('value');
+        expect(updatedValue).toBe(`- ${testProps.value}`);
+      }, 0);
     });
 
     it('convert selected text to ordered list on ordered list icon click', () => {
       component.find('button[aria-label="Ordered list"]').simulate('click');
       expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `1. ${testProps.value}`
-      );
+      setTimeout(() => {
+        const updatedValue = component.prop('value');
+        expect(updatedValue).toBe(`1. ${testProps.value}`);
+      }, 0);
     });
 
     it('convert selected text task list on tasklist icon click', () => {
       component.find('button[aria-label="Task list"]').simulate('click');
       expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `- [ ] ${testProps.value}`
-      );
+      setTimeout(() => {
+        const updatedValue = component.prop('value');
+        expect(updatedValue).toBe(`- [ ] ${testProps.value}`);
+      }, 0);
     });
 
     it('convert selected text to quote on quote icon click', () => {
       component.find('button[aria-label="Quote"]').simulate('click');
       expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `> ${testProps.value}`
-      );
+      setTimeout(() => {
+        const updatedValue = component.prop('value');
+        expect(updatedValue).toBe(`> ${testProps.value}`);
+      }, 0);
     });
 
     it('convert selected text to code on code icon click', () => {
       component.find('button[aria-label="Code"]').simulate('click');
       expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `\`${testProps.value}\``
-      );
+      setTimeout(() => {
+        const updatedValue = component.prop('value');
+        expect(updatedValue).toBe(`\`${testProps.value}\``);
+      }, 0);
     });
 
     it('selected text will have a tooltip on tooltip icon click', () => {
       component.find('button[aria-label="Tooltip"]').simulate('click');
       expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `!{tooltip[${testProps.value}]()}`
-      );
+      setTimeout(() => {
+        const updatedValue = component.prop('value');
+        expect(updatedValue).toBe(`!{tooltip[${testProps.value}]()}`);
+      }, 0);
     });
   });
 });

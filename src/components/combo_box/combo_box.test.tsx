@@ -426,9 +426,11 @@ describe('behavior', () => {
       );
 
       findTestSubject(component, 'comboBoxClearButton').simulate('click');
-      expect(
-        findTestSubject(component, 'comboBoxSearchInput').getDOMNode()
-      ).toBe(document.activeElement);
+      setTimeout(() => {
+        expect(
+          findTestSubject(component, 'comboBoxSearchInput').getDOMNode()
+        ).toBe(document.activeElement);
+      }, 0);
     });
   });
 

@@ -8,6 +8,7 @@
 
 ### 🛡 Security
 
+- [CVE-2023-28155] Bump `jest` from `24.9.0` to `26.6.2` ([#1102](https://github.com/opensearch-project/oui/pull/1102))
 - [CVE-2023-46234] Bump `browserify-sign` from `4.0.4` to `4.2.2` ([#1117](https://github.com/opensearch-project/oui/pull/1117))
 - Bump `babel-template` from `6.26.0` to `@babel/template` `7.10.4` ([#1095](https://github.com/opensearch-project/oui/pull/1095))
 - [CVE-2023-45133] Bump `@babel/traverse` from `7.12.10` to `7.23.6` ([#1174](https://github.com/opensearch-project/oui/pull/1174))

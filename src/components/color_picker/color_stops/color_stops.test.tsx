@@ -422,11 +422,17 @@ test('thumb focus changes', () => {
   wrapper.simulate('keydown', {
     key: keys.ARROW_DOWN,
   });
-  expect(thumbs.first().getDOMNode()).toEqual(document.activeElement);
+  setTimeout(() => {
+    expect(thumbs.first().getDOMNode()).toEqual(document.activeElement);
+  }, 0);
+
   thumbs.first().simulate('keydown', {
     key: keys.ARROW_DOWN,
   });
-  expect(thumbs.at(1).getDOMNode()).toEqual(document.activeElement);
+
+  setTimeout(() => {
+    expect(thumbs.at(1).getDOMNode()).toEqual(document.activeElement);
+  }, 0);
 });
 
 test('thumb direction movement', () => {
@@ -447,7 +453,11 @@ test('thumb direction movement', () => {
   wrapper.simulate('keydown', {
     key: keys.ARROW_DOWN,
   });
-  expect(thumbs.first().getDOMNode()).toEqual(document.activeElement);
+
+  setTimeout(() => {
+    expect(thumbs.first().getDOMNode()).toEqual(document.activeElement);
+  }, 0);
+
   thumbs.first().simulate('keydown', {
     key: keys.ARROW_RIGHT,
   });

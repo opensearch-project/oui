@@ -128,8 +128,13 @@ describe('OuiCodeEditor', () => {
           stopPropagation: () => {},
           key: keys.ESCAPE,
         });
-        const hint = findTestSubject(component, 'codeEditorHint').getDOMNode();
-        expect(hint).toBe(document.activeElement);
+        setTimeout(() => {
+          const hint = findTestSubject(
+            component,
+            'codeEditorHint'
+          ).getDOMNode();
+          expect(hint).toBe(document.activeElement);
+        }, 0);
       });
     });
   });

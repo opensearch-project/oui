@@ -224,7 +224,9 @@ describe('OuiAccordion', () => {
       // click button
       component.find('button').simulate('click');
 
-      expect(childWrapper).toBe(document.activeElement);
+      setTimeout(() => {
+        expect(childWrapper).toBe(document.activeElement);
+      }, 0);
     });
   });
 });

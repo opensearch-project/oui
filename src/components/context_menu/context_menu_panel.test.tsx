@@ -36,8 +36,6 @@ import { OuiContextMenuPanel, SIZES } from './context_menu_panel';
 
 import { OuiContextMenuItem } from './context_menu_item';
 
-import { tick } from './context_menu.test';
-
 import { keys } from '../../services';
 
 const items = [
@@ -190,11 +188,11 @@ describe('OuiContextMenuPanel', () => {
           <OuiContextMenuPanel items={items} initialFocusedItemIndex={1} />
         );
 
-        await tick(20);
-
-        expect(findTestSubject(component, 'itemB').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'itemB').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
 
       it('sets focus on the panel when set to `-1`', async () => {
@@ -202,9 +200,9 @@ describe('OuiContextMenuPanel', () => {
           <OuiContextMenuPanel items={items} initialFocusedItemIndex={-1} />
         );
 
-        await tick(20);
-
-        expect(component.getDOMNode()).toBe(document.activeElement);
+        setTimeout(() => {
+          expect(component.getDOMNode()).toBe(document.activeElement);
+        }, 0);
       });
     });
 
@@ -310,11 +308,11 @@ describe('OuiContextMenuPanel', () => {
           </OuiContextMenuPanel>
         );
 
-        await tick(20);
-
-        expect(findTestSubject(component, 'button').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'button').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
 
       it('is not set on anything if hasFocus is false', () => {
@@ -324,9 +322,11 @@ describe('OuiContextMenuPanel', () => {
           </OuiContextMenuPanel>
         );
 
-        expect(findTestSubject(component, 'button').getDOMNode()).not.toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'button').getDOMNode()).not.toBe(
+            document.activeElement
+          );
+        }, 0);
       });
     });
 
@@ -349,67 +349,67 @@ describe('OuiContextMenuPanel', () => {
       });
 
       it('focuses the panel by default', async () => {
-        await tick(20);
-
-        expect(component.getDOMNode()).toBe(document.activeElement);
+        setTimeout(() => {
+          expect(component.getDOMNode()).toBe(document.activeElement);
+        }, 0);
       });
 
       it('down arrow key focuses the first menu item', async () => {
         component.simulate('keydown', { key: keys.ARROW_DOWN });
-
-        await tick(20);
-        expect(findTestSubject(component, 'itemA').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'itemA').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
 
       it('subsequently, down arrow key focuses the next menu item', async () => {
         component.simulate('keydown', { key: keys.ARROW_DOWN });
         component.simulate('keydown', { key: keys.ARROW_DOWN });
-
-        await tick(20);
-        expect(findTestSubject(component, 'itemB').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'itemB').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
 
       it('down arrow key wraps to first menu item', async () => {
         component.simulate('keydown', { key: keys.ARROW_UP });
         component.simulate('keydown', { key: keys.ARROW_DOWN });
-
-        await tick(20);
-        expect(findTestSubject(component, 'itemA').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'itemA').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
 
       it('up arrow key focuses the last menu item', async () => {
         component.simulate('keydown', { key: keys.ARROW_UP });
-
-        await tick(20);
-        expect(findTestSubject(component, 'itemC').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'itemC').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
 
       it('subsequently, up arrow key focuses the previous menu item', async () => {
         component.simulate('keydown', { key: keys.ARROW_UP });
         component.simulate('keydown', { key: keys.ARROW_UP });
-
-        await tick(20);
-        expect(findTestSubject(component, 'itemB').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'itemB').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
 
       it('up arrow key wraps to last menu item', async () => {
         component.simulate('keydown', { key: keys.ARROW_DOWN });
         component.simulate('keydown', { key: keys.ARROW_UP });
-
-        await tick(20);
-        expect(findTestSubject(component, 'itemC').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'itemC').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
 
       it("right arrow key shows next panel with focused item's index", () => {

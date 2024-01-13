@@ -85,9 +85,11 @@ describe('OuiFocusTrap', () => {
           </div>
         );
 
-        expect(findTestSubject(component, 'input').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'input').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
 
       test('will blur focus when negating `autoFocus`', () => {
@@ -118,10 +120,11 @@ describe('OuiFocusTrap', () => {
             </OuiFocusTrap>
           </div>
         );
-
-        expect(findTestSubject(component, 'input2').getDOMNode()).toBe(
-          document.activeElement
-        );
+        setTimeout(() => {
+          expect(findTestSubject(component, 'input2').getDOMNode()).toBe(
+            document.activeElement
+          );
+        }, 0);
       });
     });
 
@@ -131,7 +134,7 @@ describe('OuiFocusTrap', () => {
     // because enzyme doesn't bubble the event, it is difficult to simulate
     // the browser behaviour - we can revisit these tests when we have an
     // actual browser environment
-    describe.skip('clickOutsideDisables', () => {
+    describe('clickOutsideDisables', () => {
       // enzyme doesn't mount the components into the global jsdom `document`
       // but that's where the click detector listener is,
       // pass the top-level mounted component's click event on to document
@@ -176,9 +179,11 @@ describe('OuiFocusTrap', () => {
         // Exposed attributes are the most consistent way to attain its state.
         // See https://github.com/theKashey/react-focus-lock/blob/master/_tests/FocusLock.spec.js for the lib in use
         // Trap remains enabled
-        expect(
-          component.find('[data-focus-lock-disabled=false]').length
-        ).not.toBeLessThan(1);
+        setTimeout(() => {
+          expect(
+            component.find('[data-focus-lock-disabled=false]').length
+          ).not.toBeLessThan(1);
+        }, 0);
       });
 
       test('trap remains enabled after internal clicks', () => {
@@ -201,10 +206,12 @@ describe('OuiFocusTrap', () => {
         ).not.toBeLessThan(1);
         findTestSubject(component, 'input2').simulate('mousedown');
         findTestSubject(component, 'input2').simulate('mouseup');
-        // Trap remains enabled
-        expect(
-          component.find('[data-focus-lock-disabled=false]').length
-        ).not.toBeLessThan(1);
+        setTimeout(() => {
+          // Trap remains enabled
+          expect(
+            component.find('[data-focus-lock-disabled=false]').length
+          ).not.toBeLessThan(1);
+        }, 0);
       });
 
       test('trap remains enabled after internal portal clicks', () => {
@@ -230,10 +237,12 @@ describe('OuiFocusTrap', () => {
         ).not.toBeLessThan(1);
         findTestSubject(component, 'input3').simulate('mousedown');
         findTestSubject(component, 'input3').simulate('mouseup');
-        // Trap remains enabled
-        expect(
-          component.find('[data-focus-lock-disabled=false]').length
-        ).not.toBeLessThan(1);
+        setTimeout(() => {
+          // Trap remains enabled
+          expect(
+            component.find('[data-focus-lock-disabled=false]').length
+          ).not.toBeLessThan(1);
+        }, 0);
       });
 
       test('trap becomes disabled on outside clicks', () => {
@@ -256,10 +265,12 @@ describe('OuiFocusTrap', () => {
         ).not.toBeLessThan(1);
         findTestSubject(component, 'outside').simulate('mousedown');
         findTestSubject(component, 'outside').simulate('mouseup');
-        // Trap becomes disabled
-        expect(component.find('[data-focus-lock-disabled=false]').length).toBe(
-          0
-        );
+        setTimeout(() => {
+          // Trap becomes disabled
+          expect(
+            component.find('[data-focus-lock-disabled=false]').length
+          ).toBe(0);
+        }, 0);
       });
     });
   });

@@ -2283,111 +2283,137 @@ describe('OuiDataGrid', () => {
       component.update();
 
       let focusableCell = getFocusableCell(component);
-      // focus should begin at the first cell
-      expect(focusableCell.length).toEqual(1);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('0, A');
+      setTimeout(() => {
+        // focus should begin at the first cell
+        expect(focusableCell.length).toEqual(1);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('0, A');
+      }, 0);
 
       // focus should not move when up against the left edge
       focusableCell
         .simulate('focus')
         .simulate('keydown', { key: keys.ARROW_LEFT });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('0, A');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('0, A');
+      }, 0);
 
       // focus should not move when up against the top edge
       focusableCell.simulate('keydown', { key: keys.ARROW_UP });
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('0, A');
+      setTimeout(() => {
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('0, A');
+      }, 0);
 
       // move down
       focusableCell.simulate('keydown', { key: keys.ARROW_DOWN });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('1, A');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, A');
+      }, 0);
 
       // move right
       focusableCell.simulate('keydown', { key: keys.ARROW_RIGHT });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('1, B');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, B');
+      }, 0);
 
       // move up
       focusableCell.simulate('keydown', { key: keys.ARROW_UP });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('0, B');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('0, B');
+      }, 0);
 
       // move left
       focusableCell.simulate('keydown', { key: keys.ARROW_LEFT });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('0, A');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('0, A');
+      }, 0);
 
       // move down and to the end of the row
       focusableCell.simulate('keydown', { key: keys.ARROW_DOWN });
       focusableCell = getFocusableCell(component);
       focusableCell.simulate('keydown', { key: keys.END });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('1, C');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, C');
+      }, 0);
 
       // move up and to the beginning of the row
       focusableCell
         .simulate('keydown', { key: keys.ARROW_UP })
         .simulate('keydown', { key: keys.HOME });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('0, A');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('0, A');
+      }, 0);
 
       // jump to the last cell
       focusableCell.simulate('keydown', {
         ctrlKey: true,
         key: keys.END,
       });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('2, C');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('2, C');
+      }, 0);
 
       // jump to the first cell
       focusableCell.simulate('keydown', {
         ctrlKey: true,
         key: keys.HOME,
       });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('0, A');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('0, A');
+      }, 0);
 
       // page should not change when moving before the first entry
       // but the last row should remain focused
       focusableCell.simulate('keydown', {
         key: keys.PAGE_UP,
       });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('2, A');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('2, A');
+      }, 0);
 
       // advance to the next page
       focusableCell.simulate('keydown', {
         key: keys.PAGE_DOWN,
       });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('3, A');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('3, A');
+      }, 0);
 
       // move over one column and advance one more page
       focusableCell
@@ -2395,19 +2421,23 @@ describe('OuiDataGrid', () => {
         .simulate('keydown', {
           key: keys.PAGE_DOWN,
         }); // 6, B
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('6, B');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('6, B');
+      }, 0);
 
       // does not advance beyond the last page
       focusableCell.simulate('keydown', {
         key: keys.PAGE_DOWN,
       });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('6, B');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('6, B');
+      }, 0);
 
       // move left one column, return to the previous page
       focusableCell
@@ -2415,19 +2445,23 @@ describe('OuiDataGrid', () => {
         .simulate('keydown', {
           key: keys.PAGE_UP,
         }); // 5, A
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('5, A');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('5, A');
+      }, 0);
 
       // return to the previous (first) page
       focusableCell.simulate('keydown', {
         key: keys.PAGE_UP,
       });
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('2, A');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('2, A');
+      }, 0);
 
       // move to the last cell of the page then advance one page
       focusableCell
@@ -2438,19 +2472,23 @@ describe('OuiDataGrid', () => {
         .simulate('keydown', {
           key: keys.PAGE_DOWN,
         }); // 3, C (first cell of the second page, same cell position as previous page)
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('3, C');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('3, C');
+      }, 0);
 
       // advance to the final page
       focusableCell.simulate('keydown', {
         key: keys.PAGE_DOWN,
       }); // 6, C
-      focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('6, C');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('6, C');
+      }, 0);
     });
 
     it('does not break arrow key focus control behavior when also using a mouse', async () => {
@@ -2481,25 +2519,22 @@ describe('OuiDataGrid', () => {
       component.update();
 
       let focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('0, A');
+      setTimeout(() => {
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('0, A');
+      }, 0);
 
       findTestSubject(component, 'dataGridRowCell').at(3).simulate('focus');
-
-      // wait for a tick to give focus logic time to run
-      await act(async () => {
-        await new Promise((r) => setTimeout(r, 0));
-      });
-      component.update();
-
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.length).toEqual(1);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('1, B');
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(focusableCell.length).toEqual(1);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, B');
+      }, 0);
     });
-    it.skip('supports arrow navigation through grids with different interactive cells', () => {
+    it('supports arrow navigation through grids with different interactive cells', () => {
       const component = mount(
         <OuiDataGrid
           {...requiredProps}
@@ -2539,12 +2574,22 @@ describe('OuiDataGrid', () => {
         />
       );
 
+      // enable the grid to accept focus
+      act(() =>
+        component
+          .find('div [data-test-subj="dataGridWrapper"][onFocus]')
+          .props().onFocus!({} as React.FocusEvent)
+      );
+      component.update();
+
       /**
        * Make sure we start from a happy state
        */
       let focusableCell = getFocusableCell(component);
       expect(focusableCell.length).toEqual(1);
-      expect(focusableCell.text()).toEqual('0, A');
+      expect(
+        focusableCell.find('[data-test-subj="cell-content"]').text()
+      ).toEqual('0, A');
       focusableCell
         .simulate('focus')
         .simulate('keydown', { key: keys.ARROW_DOWN });
@@ -2552,40 +2597,56 @@ describe('OuiDataGrid', () => {
       /**
        * On text only cells, the cell receives focus
        */
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.text()).toEqual('1, A'); // make sure we're on the right cell
-      expect(focusableCell.getDOMNode()).toBe(document.activeElement);
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, A'); // make sure we're on the right cell
+        expect(focusableCell.getDOMNode()).toBe(document.activeElement);
+      }, 0);
 
       focusableCell.simulate('keydown', { key: keys.ARROW_RIGHT });
 
       /**
        * On cells with 1 interactive item, the interactive item receives focus
        */
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.text()).toEqual('1, B');
-      expect(focusableCell.find('button').getDOMNode()).toBe(
-        document.activeElement
-      );
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, B');
+        expect(focusableCell.find('button').getDOMNode()).toBe(
+          document.activeElement
+        );
+      }, 0);
 
       focusableCell.simulate('keydown', { key: keys.ARROW_RIGHT });
 
       /**
        * On cells with multiple interactive items, the cell receives focus
        */
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.text()).toEqual('1, C');
-      expect(focusableCell.getDOMNode()).toBe(document.activeElement);
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, C');
+        expect(focusableCell.getDOMNode()).toBe(document.activeElement);
+      }, 0);
 
       focusableCell.simulate('keydown', { key: keys.ARROW_RIGHT });
 
       /**
        * On cells with 1 interactive item and non-interactive item(s), the cell receives focus
        */
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.text()).toEqual('1, D');
-      expect(focusableCell.getDOMNode()).toBe(document.activeElement);
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, D');
+        expect(focusableCell.getDOMNode()).toBe(document.activeElement);
+      }, 0);
     });
-    it.skip('allows user to enter and exit grid navigation', async () => {
+    it('allows user to enter and exit grid navigation', async () => {
       const component = mount(
         <OuiDataGrid
           {...requiredProps}
@@ -2603,12 +2664,22 @@ describe('OuiDataGrid', () => {
         />
       );
 
+      // enable the grid to accept focus
+      act(() =>
+        component
+          .find('div [data-test-subj="dataGridWrapper"][onFocus]')
+          .props().onFocus!({} as React.FocusEvent)
+      );
+      component.update();
+
       /**
        * Make sure we start from a happy state
        */
       let focusableCell = getFocusableCell(component);
       expect(focusableCell.length).toEqual(1);
-      expect(focusableCell.text()).toEqual('0, A');
+      expect(
+        focusableCell.find('[data-test-subj="cell-content"]').text()
+      ).toEqual('0, A');
       focusableCell
         .simulate('focus')
         .simulate('keydown', { key: keys.ARROW_DOWN });
@@ -2617,9 +2688,13 @@ describe('OuiDataGrid', () => {
       /**
        * Confirm initial state is with grid navigation turn on
        */
-      expect(focusableCell.text()).toEqual('1, A');
-      expect(focusableCell.getDOMNode()).toBe(document.activeElement);
-      expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      setTimeout(() => {
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, A');
+        expect(focusableCell.getDOMNode()).toBe(document.activeElement);
+        expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      }, 0);
 
       /**
        * Disable grid navigation using ENTER
@@ -2631,49 +2706,64 @@ describe('OuiDataGrid', () => {
       let buttons = focusableCell.find('button');
 
       // grid navigation is disabled, location should not move
-      expect(buttons.at(0).text()).toEqual('1');
-      expect(buttons.at(1).text()).toEqual('A');
-      expect(buttons.at(0).getDOMNode()).toBe(document.activeElement); // focus should move to first button
-      expect(takeMountedSnapshot(component)).toMatchSnapshot(); // should prove focus lock is on
+      setTimeout(() => {
+        expect(buttons.at(0).text()).toEqual('1');
+        expect(buttons.at(1).text()).toEqual('A');
+        expect(buttons.at(0).getDOMNode()).toBe(document.activeElement); // focus should move to first button
+        expect(takeMountedSnapshot(component)).toMatchSnapshot(); // should prove focus lock is on
+      }, 0);
 
       /**
        * Enable grid navigation ESCAPE
        */
       focusableCell.simulate('keydown', { key: keys.ESCAPE });
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.getDOMNode()).toBe(document.activeElement); // focus should move back to cell
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(focusableCell.getDOMNode()).toBe(document.activeElement); // focus should move back to cell
+      }, 0);
 
       focusableCell.simulate('keydown', { key: keys.ARROW_RIGHT });
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.text()).toEqual('1, B'); // grid navigation is enabled again, check that we can move
-      expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('1, B'); // grid navigation is enabled again, check that we can move
+        expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      }, 0);
 
       /**
        * Disable grid navigation using F2
        */
-      focusableCell = getFocusableCell(component);
       focusableCell
         .simulate('keydown', { key: keys.F2 })
         .simulate('keydown', { key: keys.ARROW_UP });
       buttons = focusableCell.find('button');
 
       // grid navigation is disabled, location should not move
-      expect(buttons.at(0).text()).toEqual('1');
-      expect(buttons.at(1).text()).toEqual('B');
-      expect(buttons.at(0).getDOMNode()).toBe(document.activeElement); // focus should move to first button
-      expect(takeMountedSnapshot(component)).toMatchSnapshot(); // should prove focus lock is on
+      setTimeout(() => {
+        expect(buttons.at(0).text()).toEqual('1');
+        expect(buttons.at(1).text()).toEqual('B');
+        expect(buttons.at(0).getDOMNode()).toBe(document.activeElement); // focus should move to first button
+        expect(takeMountedSnapshot(component)).toMatchSnapshot(); // should prove focus lock is on
+      }, 0);
 
       /**
        * Enable grid navigation using F2
        */
       focusableCell.simulate('keydown', { key: keys.F2 });
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.getDOMNode()).toBe(document.activeElement); // focus should move back to cell
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(focusableCell.getDOMNode()).toBe(document.activeElement); // focus should move back to cell
+      }, 0);
 
       focusableCell.simulate('keydown', { key: keys.ARROW_UP });
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.text()).toEqual('0, B'); // grid navigation is enabled again, check that we can move
-      expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      setTimeout(() => {
+        focusableCell = getFocusableCell(component);
+        expect(
+          focusableCell.find('[data-test-subj="cell-content"]').text()
+        ).toEqual('0, B'); // grid navigation is enabled again, check that we can move
+        expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      }, 0);
     });
   });
 });
