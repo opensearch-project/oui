@@ -28,4 +28,4 @@
  * under the License.
  */
 
-export { OuiPortal, OuiPortalProps } from './portal';
+export { OuiPortal, OuiPortalProps, OuiPortalInsert } from './portal';
