@@ -11,12 +11,7 @@
 
 import React, { Fragment } from 'react';
 
-import { renderToHtml } from '../../services';
-
-import { GuideSectionTypes } from '../../components';
-
 import {
-  OuiMarkdownEditor,
   OuiText,
   OuiTitle,
   OuiSpacer,
@@ -28,10 +23,6 @@ import {
 } from '../../../../src/components';
 
 import { Link } from 'react-router-dom';
-
-import MarkdownEditorWithPlugins from './markdown_editor_with_plugins';
-const markdownEditorWithPluginsSource = require('!!raw-loader!./markdown_editor_with_plugins');
-const markdownEditorWithPluginsHtml = renderToHtml(MarkdownEditorWithPlugins);
 
 const pluginSnippet = `<OuiMarkdownEditor
   uiPlugin={myPluginUI}
@@ -360,38 +351,6 @@ processingList[1][1].components.emojiPlugin = EmojiMarkdownRenderer;`}</OuiCodeB
           ),
         </>
       ),
-    },
-    {
-      source: [
-        {
-          type: GuideSectionTypes.JS,
-          code: markdownEditorWithPluginsSource,
-        },
-        {
-          type: GuideSectionTypes.HTML,
-          code: markdownEditorWithPluginsHtml,
-        },
-      ],
-      title: 'Putting it all together: a simple chart plugin',
-      text: (
-        <Fragment>
-          <p>
-            The below example takes the concepts from above to construct a
-            simple chart embed that is initiated from a new button in the editor
-            toolbar.
-          </p>
-          <p>
-            Note that the <strong>OuiMarkdownEditor</strong> and{' '}
-            <strong>OuiMarkdownFormat</strong> examples utilize the same prop
-            list. The editor manages additional controls through the{' '}
-            <OuiCode>uiPlugins</OuiCode> prop.
-          </p>
-        </Fragment>
-      ),
-      props: {
-        OuiMarkdownEditor,
-      },
-      demo: <MarkdownEditorWithPlugins />,
     },
   ],
 };
