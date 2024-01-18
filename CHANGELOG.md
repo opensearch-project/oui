@@ -51,6 +51,7 @@
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 - Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
 - Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
+- Clean up unused runtime and dev dependencies ([#1135](https://github.com/opensearch-project/oui/pull/1135))
 - Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
 - Clean up code OUI Breadcrumb component from previous updates ([#1144](https://github.com/opensearch-project/oui/pull/1144))
 - Update deprecated Babel plugins ([#1155](https://github.com/opensearch-project/oui/pull/1155))
