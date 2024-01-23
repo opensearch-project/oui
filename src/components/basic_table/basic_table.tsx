@@ -44,9 +44,12 @@ import {
   formatDate,
   formatNumber,
   formatText,
+  getBreakpoint,
   LEFT_ALIGNMENT,
+  OuiBreakpointSize,
   RIGHT_ALIGNMENT,
   SortDirection,
+  throttle,
 } from '../../services';
 import { CommonProps } from '../common';
 import { isFunction } from '../../services/predicate';
@@ -310,6 +313,7 @@ export type OuiBasicTableProps<T> = CommonProps &
 interface State<T> {
   initialSelectionRendered: boolean;
   selection: T[];
+  currentBreakpoint: OuiBreakpointSize | undefined;
 }
 
 interface SortOptions {
@@ -326,7 +330,7 @@ function hasPagination<T>(
   return x.hasOwnProperty('pagination') && !!x.pagination;
 }
 
-export class OuiBasicTable<T = any> extends Component<
+export class OuiBasicTable<T extends {} = any> extends Component<
   OuiBasicTableProps<T>,
   State<T>
 > {
@@ -375,12 +379,16 @@ export class OuiBasicTable<T = any> extends Component<
       // used for checking if  initial selection is rendered
       initialSelectionRendered: false,
       selection: [],
+      currentBreakpoint: getBreakpoint(
+        typeof window === 'undefined' ? -Infinity : window.innerWidth
+      ),
     };
   }
 
   componentDidMount() {
     if (this.props.loading && this.tbody) this.addLoadingListeners(this.tbody);
     this.getInitialSelection();
+    window.addEventListener('resize', this.functionToCallOnWindowResize);
   }
 
   componentDidUpdate(prevProps: OuiBasicTableProps<T>) {
@@ -396,6 +404,7 @@ export class OuiBasicTable<T = any> extends Component<
 
   componentWillUnmount() {
     this.removeLoadingListeners();
+    window.removeEventListener('resize', this.functionToCallOnWindowResize);
   }
 
   getInitialSelection() {
@@ -456,6 +465,14 @@ export class OuiBasicTable<T = any> extends Component<
     this.cleanups.forEach((cleanup) => cleanup());
     this.cleanups.length = 0;
   };
+
+  private functionToCallOnWindowResize = throttle(() => {
+    const newBreakpoint = getBreakpoint(window.innerWidth);
+    if (newBreakpoint !== this.state.currentBreakpoint) {
+      this.setState({ currentBreakpoint: newBreakpoint });
+    }
+    // reacts every 50ms to resize changes and always gets the final update
+  }, 50);
 
   buildCriteria(props: OuiBasicTableProps<T>): Criteria<T> {
     const criteria: Criteria<T> = {};
@@ -898,13 +915,13 @@ export class OuiBasicTable<T = any> extends Component<
       }
       headers.push(
         <OuiTableHeaderCell
-          key={`_data_h_${field}_${index}`}
+          key={`_data_h_${String(field)}_${index}`}
           align={columnAlign}
           width={width}
           isMobileHeader={isMobileHeader}
           hideForMobile={hideForMobile}
           mobileOptions={mobileOptions}
-          data-test-subj={`tableHeaderCell_${field}_${index}`}
+          data-test-subj={`tableHeaderCell_${String(field)}_${index}`}
           description={description}
           {...sorting}>
           {name}
@@ -946,7 +963,7 @@ export class OuiBasicTable<T = any> extends Component<
       if (footer) {
         footers.push(
           <OuiTableFooterCell
-            key={`footer_${field}_${footers.length - 1}`}
+            key={`footer_${String(field)}_${footers.length - 1}`}
             align={align}>
             {footer}
           </OuiTableFooterCell>
@@ -1207,10 +1224,12 @@ export class OuiBasicTable<T = any> extends Component<
     let actualActions = column.actions.filter(
       (action: Action<T>) => !action.available || action.available(item)
     );
+
     if (actualActions.length > 2) {
       // if any of the actions `isPrimary`, add them inline as well, but only the first 2
       const primaryActions = actualActions.filter((o) => o.isPrimary);
-      actualActions = primaryActions.slice(0, 2);
+      const numItemMax = this.state.currentBreakpoint === 'm' ? 0 : 2;
+      actualActions = primaryActions.slice(0, numItemMax);
 
       // if we have more than 1 action, we don't show them all in the cell, instead we
       // put them all in a popover tool. This effectively means we can only have a maximum
@@ -1264,7 +1283,7 @@ export class OuiBasicTable<T = any> extends Component<
   ) {
     const { field, render, dataType } = column;
 
-    const key = `_data_column_${field}_${itemId}_${columnIndex}`;
+    const key = `_data_column_${String(field)}_${itemId}_${columnIndex}`;
     const contentRenderer = render || this.getRendererForDataType(dataType);
     const value = get(item, field as string);
     const content = contentRenderer(value, item);
