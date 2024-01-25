@@ -162,6 +162,30 @@ describe('OuiSplitButton', () => {
     });
   });
 
+  describe('simple button display', () => {
+    test('display simple button when options are blank', () => {
+      const component = mount(
+        <OuiSplitButton options={[]}>Test</OuiSplitButton>
+      );
+
+      expect(component.find('.ouiSplitButtonControl--dropdown')).toHaveLength(
+        0
+      );
+      expect(component).toMatchSnapshot();
+    });
+
+    test('ignore initiallyOpen when options are blank', () => {
+      const component = mount(
+        <OuiSplitButton initiallyOpen options={[]}>
+          Test
+        </OuiSplitButton>
+      );
+
+      expect(component.find('.ouiSplitButton__listbox')).toHaveLength(0);
+      expect(component).toMatchSnapshot();
+    });
+  });
+
   describe('onClick events', () => {
     test('selection list is opened on drop-down button click', async () => {
       const component = mount(
