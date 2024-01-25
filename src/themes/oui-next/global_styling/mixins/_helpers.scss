@@ -114,6 +114,7 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
+  user-select: none;
 }
 
 // Specifically target IE11, but not Edge.
