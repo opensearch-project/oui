@@ -24,6 +24,7 @@
 - Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
 - Add SplitButton control ([#1193](https://github.com/opensearch-project/oui/pull/1193))
 - Eliminate screenreader content when copying and pasting data grid table ([#1198](https://github.com/opensearch-project/oui/pull/1198))
+- [Next Theme] Set base font size to 18px ([#1221](https://github.com/opensearch-project/oui/pull/1221))
 - [Next Theme] Revert `font-weight` of OuiButton to normal from semi-bold ([#1222](https://github.com/opensearch-project/oui/pull/1222))
 
 ### 🐛 Bug Fixes
