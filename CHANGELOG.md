@@ -35,6 +35,7 @@
 - Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
 - Fix bug in OuiButtonContent for showing info tooltip in icon-only buttons when hovered([#1160](https://github.com/opensearch-project/oui/pull/1160))
 - Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
+- Prevent collapsable button of a resizable from adding to the height when hidden ([#1223](https://github.com/opensearch-project/oui/pull/1223))
 
 ### 🚞 Infrastructure
 
