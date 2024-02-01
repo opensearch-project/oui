@@ -165,17 +165,7 @@
   align-items: baseline;
 }
 
-.ouiDataGridRowCell__expandButton {
-  display: flex;
-  flex-grow: 0;
-}
-
-.ouiDataGridRowCell__expandButtonIcon {
-  height: $ouiSizeM;
-  border-radius: calc($ouiBorderRadius / 2);
-  width: 0;
-  overflow: hidden;
-  transition: none; // Have to take out the generic transition so it is instaneous on focus
+.ouiDataGridRowCell {
   box-shadow: none !important; // sass-lint:disable-line no-important
 
   /* ToDo: Remove unnecessary logic: the old beta theme has
@@ -190,14 +180,52 @@
     margin-left: $ouiDataGridCellPaddingM;
     width: $ouiSizeM;
   }
-}
 
-.ouiDataGridRowCell__actionButtonIcon {
-  height: $ouiSizeM;
-  border-radius: calc($ouiBorderRadius / 2);
-  width: 0;
-  overflow: hidden;
-  transition: none; // Have to take out the generic transition so it is instaneous on focus
+  &__actionButtonIcon,
+  &__expandButtonIcon {
+    height: $ouiSizeM;
+    border-radius: calc($ouiBorderRadius / 2);
+    width: 0;
+    overflow: hidden;
+    transition: none; // Have to take out the generic transition so it is instantaneous on focus
+  }
+
+  &__expandButton > * {
+    z-index: 2;
+  }
+
+  &__expandButton {
+    display: flex;
+    flex-grow: 0;
+    position: absolute;
+    // Vertically align the button group with the first line of text
+    top: calc(#{$ouiLineHeight}em / 2 + #{$ouiDataGridCellPaddingM});
+    transform: translateY(-50%);
+    // Stick it to the right but use the padding of the container to distance it from the edge
+    right: 0;
+    padding-right: $ouiDataGridCellPaddingM;
+    z-index: 1;
+    // Just to have some distance from the content behind it; larger for left so we can show a gradiant
+    padding-left: 2 * $ouiDataGridCellPaddingM;
+    padding-top: $ouiDataGridCellPaddingM;
+    padding-bottom: $ouiDataGridCellPaddingM;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(to right, transparent 0, $ouiColorEmptyShade calc(2 * $ouiDataGridCellPaddingM));
+      z-index: 1;
+    }
+
+    & > * {
+      z-index: 2;
+    }
+  }
 }
 
 // Row highlights
