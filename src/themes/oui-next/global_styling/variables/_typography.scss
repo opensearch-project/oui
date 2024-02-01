@@ -29,8 +29,10 @@
 // EX: A proper line-height for text is 1.5 times the font-size.
 //     If our base font size (ouiFontSize) is 16, our baseline is 8 (16*1.5 / 3). To ensure the
 //     text stays on the baseline, we pass a multiplier to calculate a line-height in rems.
+// To maintain v7 line-heights, $ouiFontSize is replaced with 16px
 @function lineHeightFromBaseline($multiplier: 3) {
-  @return convertToRem(calc($ouiFontSize/2)*$multiplier);
+  @return convertToRem(calc(16px/2)*$multiplier);
+  //@return convertToRem(calc($ouiFontSize/2)*$multiplier);
 }
 @mixin lineHeightFromBaseline($multiplier: 3) {
   line-height: lineHeightFromBaseline($multiplier);
@@ -47,7 +49,7 @@ $ouiFontFeatureSettings: 'calt' 1, 'kern' 1, 'liga' 1 !default;
 // Font sizes -- scale is loosely based on Major Third (1.250)
 $ouiTextScale:      2.25, 1.75, 1.25, 1.125, 1, .875, .75 !default;
 
-$ouiFontSize:       $ouiSize !default; // 5th position in scale
+$ouiFontSize:       18px !default; // 5th position in scale
 $ouiFontSizeXS:     $ouiFontSize * nth($ouiTextScale, 7) !default; // 12px
 $ouiFontSizeS:      $ouiFontSize * nth($ouiTextScale, 6) !default; // 14px
 $ouiFontSizeM:      $ouiFontSize * nth($ouiTextScale, 4) !default; // 18px
@@ -56,7 +58,7 @@ $ouiFontSizeXL:     $ouiFontSize * nth($ouiTextScale, 2) !default; // 28px
 $ouiFontSizeXXL:    $ouiFontSize * nth($ouiTextScale, 1) !default; // 36px
 
 // Line height
-$ouiLineHeight:     1.5 !default;
+$ouiLineHeight:     1.333333 !default;
 $ouiBodyLineHeight: 1 !default;
 
 // Font weights
