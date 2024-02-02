@@ -25,6 +25,7 @@
 @mixin ouiCodeFont {
   font-family: var(--oui-code-font-family);
   letter-spacing: normal;
+  line-height: 1.5;
 }
 
 @mixin ouiText {
@@ -84,7 +85,7 @@
       #{$property}: $value;
     }
   }
-  line-height: 1.25;
+  line-height: 1.111111;
 }
 
 @mixin ouiFontSizeXXL {
@@ -95,7 +96,7 @@
       #{$property}: $value;
     }
   }
-  line-height: 1.25;
+  line-height: 1.111111;
 }
 
 @mixin ouiTextBreakWord {
