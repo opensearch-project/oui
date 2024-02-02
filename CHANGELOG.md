@@ -38,6 +38,7 @@
 - Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
 - Prevent collapsable button of a resizable from adding to the height when hidden ([#1223](https://github.com/opensearch-project/oui/pull/1223))
 - Prevent action buttons of OuiDataGridCell from moving the content ([#1224](https://github.com/opensearch-project/oui/pull/1224))
+- Fix vertical alignment and font weight of breadcrumbs that are buttons or links ([#1232](https://github.com/opensearch-project/oui/pull/1232))
 
 ### 🚞 Infrastructure
 
