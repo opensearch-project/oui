@@ -126,3 +126,8 @@
 .ouiBreadcrumbWall--single {
   background-image: linear-gradient(to right, $ouiBreadcrumbActiveBackground 0 $ouiSizeM, transparent $ouiSizeM);
 }
+
+.euiLink.euiBreadcrumb {
+  line-height: inherit;
+  font-weight: inherit;
+}
