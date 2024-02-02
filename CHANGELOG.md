@@ -10,6 +10,7 @@
 
 - [CVE-2023-46234] Bump `browserify-sign` from `4.0.4` to `4.2.2` ([#1117](https://github.com/opensearch-project/oui/pull/1117))
 - Bump `babel-template` from `6.26.0` to `@babel/template` `7.10.4` ([#1095](https://github.com/opensearch-project/oui/pull/1095))
+- [CVE-2023-45857] Remediate `axios` vulnerabilities ([#1152](https://github.com/opensearch-project/oui/pull/1152))
 - [CVE-2023-45133] Bump `@babel/traverse` from `7.12.10` to `7.23.6` ([#1174](https://github.com/opensearch-project/oui/pull/1174))
 
 ### 📈 Features/Enhancements
@@ -17,10 +18,15 @@
 - Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
 - Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
 - Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
+- Add CSS `display-none` utility ([#1120](https://github.com/opensearch-project/oui/pull/1120))
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
 - Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
 - Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
 - Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
+- Add SplitButton control ([#1193](https://github.com/opensearch-project/oui/pull/1193))
+- Eliminate screenreader content when copying and pasting data grid table ([#1198](https://github.com/opensearch-project/oui/pull/1198))
+- [Next Theme] Set base font size to 18px ([#1221](https://github.com/opensearch-project/oui/pull/1221))
+- [Next Theme] Revert `font-weight` of OuiButton to normal from semi-bold ([#1222](https://github.com/opensearch-project/oui/pull/1222))
 
 ### 🐛 Bug Fixes
 
@@ -28,6 +34,10 @@
 - Extract build archive into a folder for OSD integration test CI ([#1075](https://github.com/opensearch-project/oui/pull/1075))
 - Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
 - Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
+- Fix bug in OuiButtonContent for showing info tooltip in icon-only buttons when hovered([#1160](https://github.com/opensearch-project/oui/pull/1160))
+- Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
+- Prevent collapsable button of a resizable from adding to the height when hidden ([#1223](https://github.com/opensearch-project/oui/pull/1223))
+- Prevent action buttons of OuiDataGridCell from moving the content ([#1224](https://github.com/opensearch-project/oui/pull/1224))
 
 ### 🚞 Infrastructure
 
@@ -47,7 +57,9 @@
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
 - Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
 - Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
+- Clean up unused runtime and dev dependencies ([#1135](https://github.com/opensearch-project/oui/pull/1135))
 - Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
+- Clean up code OUI Breadcrumb component from previous updates ([#1144](https://github.com/opensearch-project/oui/pull/1144))
 - Update deprecated Babel plugins ([#1155](https://github.com/opensearch-project/oui/pull/1155))
 - Move @seanneumann to emeritus maintainer ([#1188](https://github.com/opensearch-project/oui/pull/1188))
 

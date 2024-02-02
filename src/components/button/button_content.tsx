@@ -96,6 +96,7 @@ export const OuiButtonContent: FunctionComponent<
         className="ouiButtonContent__icon"
         type={iconType}
         size={iconSize}
+        title={textProps?.title}
         color="inherit" // forces the icon to inherit its parent color
       />
     );
