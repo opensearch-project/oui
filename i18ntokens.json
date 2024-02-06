@@ -3636,6 +3636,24 @@
     "filepath": "src/components/selectable/selectable.tsx"
   },
   {
+    "token": "ouiSplitButton.screenReaderAnnouncement",
+    "defString": "You are in a selector of {optionsCount} items and must select a single option.\n              Use the up and down keys to navigate or escape to close.",
+    "highlighting": "string",
+    "loc": {
+      "start": {
+        "line": 315,
+        "column": 10,
+        "index": 7897
+      },
+      "end": {
+        "line": 320,
+        "column": 12,
+        "index": 8205
+      }
+    },
+    "filepath": "src/components/split_button/split_button.tsx"
+  },
+  {
     "token": "ouiStat.loadingText",
     "defString": "Statistic is loading",
     "highlighting": "string",
