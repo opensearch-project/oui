@@ -241,10 +241,8 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       'ouiBreadcrumb--truncate': truncate,
     });
 
-    let link;
-
-    if (!href && !onClick) {
-      link = (
+    const link =
+      !href && !onClick ? (
         <OuiInnerText>
           {(ref, innerText) => (
             <span
@@ -257,9 +255,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
             </span>
           )}
         </OuiInnerText>
-      );
-    } else {
-      link = (
+      ) : (
         <OuiInnerText>
           {(ref, innerText) => (
             <OuiLink
@@ -275,19 +271,19 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
           )}
         </OuiInnerText>
       );
-    }
 
-    let wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
+    const breadcrumbWallClasses = classNames('ouiBreadcrumbWall', {
+      'ouiBreadcrumbWall--single': isFirstBreadcrumb && isLastBreadcrumb,
+    });
 
-    if (isFirstBreadcrumb) {
-      const breadcrumbWallClasses = classNames('ouiBreadcrumbWall', {
-        'ouiBreadcrumbWall--single': isLastBreadcrumb,
-      });
+    const wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
+    const wall = isFirstBreadcrumb ? (
+      <div className={breadcrumbWallClasses}>{wrapper}</div>
+    ) : (
+      wrapper
+    );
 
-      wrapper = <div className={breadcrumbWallClasses}>{wrapper}</div>;
-    }
-
-    return <Fragment key={index}>{wrapper}</Fragment>;
+    return <Fragment key={index}>{wall}</Fragment>;
   });
 
   // Use the default object if they simply passed `true` for responsive
@@ -297,15 +293,16 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   // The max property collapses any breadcrumbs past the max quantity.
   // This is the same behavior we want for responsiveness.
   // So calculate the max value based on the combination of `max` and `responsive`
-  let calculatedMax: OuiBreadcrumbsProps['max'] = max;
-  // Set the calculated max to the number associated with the currentBreakpoint key if it exists
-  if (responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]) {
-    calculatedMax = responsiveObject[currentBreakpoint as OuiBreakpointSize];
-  }
-  // Final check is to make sure max is used over a larger breakpoint value
-  if (max && calculatedMax) {
-    calculatedMax = max < calculatedMax ? max : calculatedMax;
-  }
+
+  // First, calculate the responsive max value
+  const responsiveMax =
+    responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]
+      ? responsiveObject[currentBreakpoint as OuiBreakpointSize]
+      : null;
+
+  // Second, if both max and responsiveMax are set, use the smaller of the two. Otherwise, use the one that is set.
+  const calculatedMax: OuiBreadcrumbsProps['max'] =
+    max && responsiveMax ? Math.min(max, responsiveMax) : max || responsiveMax;
 
   const limitedBreadcrumbs = calculatedMax
     ? limitBreadcrumbs(breadcrumbElements, calculatedMax, breadcrumbs)
