@@ -1,6 +1,43 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
+## [`1.5.0`](https://github.com/opensearch-project/oui/tree/1.5.0)
+
+### 🛡 Security
+
+- [CVE-2023-45857] Remediate `axios` vulnerabilities ([#1152](https://github.com/opensearch-project/oui/pull/1152))
+- [CVE-2023-26159] Bump follow-redirects to 1.15.5 ([#1245](https://github.com/opensearch-project/oui/pull/1245))
+
+### 📈 Features/Enhancements
+
+- Add CSS `display-none` utility ([#1120](https://github.com/opensearch-project/oui/pull/1120))
+- Add SplitButton control ([#1193](https://github.com/opensearch-project/oui/pull/1193))
+- Eliminate screenreader content when copying and pasting data grid table ([#1198](https://github.com/opensearch-project/oui/pull/1198))
+- [Next Theme] Set base font size to 18px ([#1221](https://github.com/opensearch-project/oui/pull/1221))
+- [Next Theme] Revert `font-weight` of OuiButton to normal from semi-bold ([#1222](https://github.com/opensearch-project/oui/pull/1222))
+
+### 🐛 Bug Fixes
+
+- Fix bug in OuiButtonContent for showing info tooltip in icon-only buttons when hovered([#1160](https://github.com/opensearch-project/oui/pull/1160))
+- Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
+- Prevent collapsable button of a resizable from adding to the height when hidden ([#1241](https://github.com/opensearch-project/oui/pull/1241))
+- Prevent action buttons of OuiDataGridCell from moving the content ([#1224](https://github.com/opensearch-project/oui/pull/1224))
+- Fix vertical alignment and font weight of breadcrumbs that are buttons or links ([#1232](https://github.com/opensearch-project/oui/pull/1232))
+
+### 🚞 Infrastructure
+
+
+### 📝 Documentation
+
+- Removed the chart section that's using elastic charts ([#370](https://github.com/opensearch-project/oui/pull/370))
+
+### 🛠 Maintenance
+
+
+### 🪛 Refactoring
+
+
+
+## [`1.4.0`](https://github.com/opensearch-project/oui/tree/1.4.0)
 
 ### 🛡 Security
 
