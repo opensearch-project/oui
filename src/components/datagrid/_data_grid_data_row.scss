@@ -166,21 +166,6 @@
 }
 
 .ouiDataGridRowCell {
-  box-shadow: none !important; // sass-lint:disable-line no-important
-
-  /* ToDo: Remove unnecessary logic: the old beta theme has
-   * evolved and the statement below about the `Next` theme
-   * is not valid.
-   */
-  // Remove default .ouiButtonIcon--fill border
-  // This way we don't need to animate the border that is inexistent in Next and unnecessary for a fill button
-  border: none;
-
-  &-isActive {
-    margin-left: $ouiDataGridCellPaddingM;
-    width: $ouiSizeM;
-  }
-
   &__actionButtonIcon,
   &__expandButtonIcon {
     height: $ouiSizeM;
@@ -188,6 +173,23 @@
     width: 0;
     overflow: hidden;
     transition: none; // Have to take out the generic transition so it is instantaneous on focus
+  }
+
+  &__expandButtonIcon {
+    box-shadow: none !important; // sass-lint:disable-line no-important
+
+    /* ToDo: Remove unnecessary logic: the old beta theme has
+     * evolved and the statement below about the `Next` theme
+     * is not valid.
+     */
+    // Remove default .ouiButtonIcon--fill border
+    // This way we don't need to animate the border that is inexistent in Next and unnecessary for a fill button
+    border: none;
+
+    &-isActive {
+      margin-left: $ouiDataGridCellPaddingM;
+      width: $ouiSizeM;
+    }
   }
 
   &__expandButton > * {
