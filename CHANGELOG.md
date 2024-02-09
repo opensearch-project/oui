@@ -39,6 +39,7 @@
 - Prevent collapsable button of a resizable from adding to the height when hidden ([#1241](https://github.com/opensearch-project/oui/pull/1241))
 - Prevent action buttons of OuiDataGridCell from moving the content ([#1224](https://github.com/opensearch-project/oui/pull/1224))
 - Fix vertical alignment and font weight of breadcrumbs that are buttons or links ([#1232](https://github.com/opensearch-project/oui/pull/1232))
+- Fix datagrid lines ([#1250](https://github.com/opensearch-project/oui/pull/1250))
 
 ### 🚞 Infrastructure
 
