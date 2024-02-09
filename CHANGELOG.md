@@ -1,5 +1,12 @@
 # OUI
 
+## [`1.5.1`](https://github.com/opensearch-project/oui/tree/1.5.1)
+
+### 🐛 Bug Fixes
+
+- Fix datagrid lines ([#1250](https://github.com/opensearch-project/oui/pull/1250))
+
+
 ## [`1.5.0`](https://github.com/opensearch-project/oui/tree/1.5.0)
 
 ### 🛡 Security
