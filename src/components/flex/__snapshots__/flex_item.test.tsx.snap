@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`OuiFlexItem basis auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem basis fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem basis max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem basis min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0"
+/>
+`;
+
 exports[`OuiFlexItem grow 1 is rendered 1`] = `
 <div
   class="ouiFlexItem ouiFlexItem--flexGrow1"
@@ -60,6 +90,1176 @@ exports[`OuiFlexItem grow 10 is rendered 1`] = `
 />
 `;
 
+exports[`OuiFlexItem grow and basis combination grow: 0 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 0 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 0 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 0 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 1 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 1 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 1 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 1 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 2 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 2 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 2 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 2 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 3 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 3 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 3 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 3 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 4 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 4 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 4 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 4 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 5 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 5 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 5 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 5 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 6 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 6 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 6 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 6 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 7 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 7 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 7 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 7 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 8 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 8 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 8 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 8 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 9 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 9 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 9 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 9 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 10 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 10 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 10 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: 10 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: false and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: false and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: false and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: false and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: true and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: true and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: true and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and basis combination grow: true and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 0 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 1 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 2 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 3 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 4 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 5 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 6 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 7 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 8 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 9 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: 10 and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: false and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem grow and shrink combination grow: true and shrink: 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10"
+/>
+`;
+
 exports[`OuiFlexItem grow false is rendered 1`] = `
 <div
   class="ouiFlexItem ouiFlexItem--flexGrowZero"
@@ -72,10 +1272,3772 @@ exports[`OuiFlexItem grow true is rendered 1`] = `
 />
 `;
 
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 0, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexGrow0 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 1, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow1 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 2, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow2 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 3, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow3 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 4, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow4 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 5, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow5 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 6, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow6 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 7, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow7 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 8, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow8 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 9, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow9 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: 10, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrow10 ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: false, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexGrowZero ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 0, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 0, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 0, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 0, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 1, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 1, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 1, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 1, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 2, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 2, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 2, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 2, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 3, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 3, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 3, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 3, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 4, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 4, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 4, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 4, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 5, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 5, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 5, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 5, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 6, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 6, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 6, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 6, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 7, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 7, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 7, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 7, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 8, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 8, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 8, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 8, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 9, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 9, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 9, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 9, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 10, and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 10, and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 10, and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem grow, shrink, and basis combination grow: true, shrink: 10, and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
 exports[`OuiFlexItem is rendered 1`] = `
 <div
   aria-label="aria-label"
   class="ouiFlexItem testClass1 testClass2"
   data-test-subj="test subject string"
+/>
+`;
+
+exports[`OuiFlexItem shrink 0 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0"
+/>
+`;
+
+exports[`OuiFlexItem shrink 1 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1"
+/>
+`;
+
+exports[`OuiFlexItem shrink 2 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2"
+/>
+`;
+
+exports[`OuiFlexItem shrink 3 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3"
+/>
+`;
+
+exports[`OuiFlexItem shrink 4 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4"
+/>
+`;
+
+exports[`OuiFlexItem shrink 5 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5"
+/>
+`;
+
+exports[`OuiFlexItem shrink 6 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6"
+/>
+`;
+
+exports[`OuiFlexItem shrink 7 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7"
+/>
+`;
+
+exports[`OuiFlexItem shrink 8 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8"
+/>
+`;
+
+exports[`OuiFlexItem shrink 9 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9"
+/>
+`;
+
+exports[`OuiFlexItem shrink 10 is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 0 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 0 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 0 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 0 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrinkZero ouiFlexItem--flexShrink0 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 1 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 1 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 1 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 1 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink1 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 2 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 2 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 2 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 2 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink2 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 3 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 3 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 3 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 3 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink3 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 4 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 4 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 4 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 4 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink4 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 5 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 5 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 5 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 5 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink5 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 6 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 6 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 6 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 6 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink6 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 7 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 7 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 7 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 7 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink7 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 8 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 8 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 8 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 8 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink8 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 9 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 9 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 9 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 9 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink9 ouiFlexItem--flexBasis-min-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 10 and basis: auto is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-auto"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 10 and basis: fit-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-fit-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 10 and basis: max-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-max-content"
+/>
+`;
+
+exports[`OuiFlexItem shrink and basis combination shrink: 10 and basis: min-content is rendered 1`] = `
+<div
+  class="ouiFlexItem ouiFlexItem--flexShrink10 ouiFlexItem--flexBasis-min-content"
 />
 `;
