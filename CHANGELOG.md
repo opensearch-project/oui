@@ -6,6 +6,8 @@
 
 ### Deprecations
 
+- Added useDeprecatedPropWarning for panelled prop ([#843](https://github.com/opensearch-project/oui/pull/1142))
+
 ### 🛡 Security
 
 - [CVE-2023-46234] Bump `browserify-sign` from `4.0.4` to `4.2.2` ([#1117](https://github.com/opensearch-project/oui/pull/1117))
