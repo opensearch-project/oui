@@ -178,7 +178,7 @@ export const ouiPaletteForLightBackground = function (): OuiPalette {
 };
 
 export const ouiPaletteForDarkBackground = function (): OuiPalette {
-  return ['#1BA9F5', '#7DE2D1', '#F990C0', '#F66', '#FFCE7A'];
+  return ['#1BA9F5', '#7DE2D1', '#F990C0', '#FF6666', '#FFCE7A'];
 };
 
 const positiveColor: HEX = '#209280';
