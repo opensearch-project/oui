@@ -27,6 +27,7 @@
 - Eliminate screenreader content when copying and pasting data grid table ([#1198](https://github.com/opensearch-project/oui/pull/1198))
 - [Next Theme] Set base font size to 18px ([#1221](https://github.com/opensearch-project/oui/pull/1221))
 - [Next Theme] Revert `font-weight` of OuiButton to normal from semi-bold ([#1222](https://github.com/opensearch-project/oui/pull/1222))
+- Convert shorthand palette colors to full 6-char hex ([#1262](https://github.com/opensearch-project/oui/pull/1262))
 
 ### 🐛 Bug Fixes
 
