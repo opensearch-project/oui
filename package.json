@@ -239,7 +239,7 @@
     "url-loader": "^4.1.0",
     "webpack": "npm:@amoo-miki/webpack@4.46.0-rc.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
+    "webpack-dev-server": "^4.0.0",
     "yeoman-generator": "^5.8.0",
     "yo": "^4.3.1"
   },
