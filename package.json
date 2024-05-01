@@ -12,7 +12,7 @@
     "*.scss"
   ],
   "scripts": {
-    "start": "cross-env BABEL_MODULES=false webpack-dev-server --inline --hot --config=src-docs/webpack.config.js",
+    "start": "cross-env BABEL_MODULES=false webpack-dev-server --hot --config=src-docs/webpack.config.js",
     "test-docker": "node ./scripts/test-docker.js",
     "sync-docs": "node ./scripts/docs-sync.js",
     "build-docs": "cross-env BABEL_MODULES=false cross-env NODE_ENV=production NODE_OPTIONS=--max-old-space-size=4096 webpack --config=src-docs/webpack.config.js",
@@ -77,9 +77,6 @@
     "sass-lint/merge": "^2.1.1",
     "start-server-and-test/**/minimist": "^1.2.6",
     "start-server-and-test/wait-on": "^7.1.0",
-    "webpack-dev-server/**/ansi-regex": "^5.0.1",
-    "webpack-dev-server/chokidar/glob-parent": "^6.0.1",
-    "webpack-dev-server/selfsigned": "^2.0.1",
     "webpack/**/chokidar/glob-parent": "^6.0.1",
     "webpack/terser-webpack-plugin/serialize-javascript": "^3.1.0",
     "yo/**/find-versions": "^4.0.0",
@@ -159,6 +156,7 @@
     "@types/uuid": "^9.0.1",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
+    "@webpack-cli/serve": "^2.0.5",
     "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^24.1.0",
@@ -238,8 +236,8 @@
     "typescript": "4.6.4",
     "url-loader": "^4.1.0",
     "webpack": "npm:@amoo-miki/webpack@4.46.0-rc.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.6.0",
     "yeoman-generator": "^5.8.0",
     "yo": "^4.3.1"
   },
