@@ -7,6 +7,8 @@
 - Bump `babel-template` from `6.26.0` to `@babel/template` `7.10.4` ([#1095](https://github.com/opensearch-project/oui/pull/1095))
 - [CVE-2023-46234] Bump `browserify-sign` from `4.0.4` to `4.2.2` ([#1117](https://github.com/opensearch-project/oui/pull/1117))
 - [CVE-2023-45133] Bump `@babel/traverse` from `7.12.10` to `7.23.6` ([#1174](https://github.com/opensearch-project/oui/pull/1174))
+- [CVE-2024-28863] Bump `tar` from `6.1.11` to `6.2.1` ([#1260](https://github.com/opensearch-project/oui/pull/1260))
+- [CVE-2024-28849] Bump `follow-redirects` from `1.15.4` to `1.15.6` ([#1258](https://github.com/opensearch-project/oui/pull/1258))
 
 ### 📈 Features/Enhancements
 
