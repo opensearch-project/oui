@@ -65,6 +65,7 @@
 - Clean up code OUI Breadcrumb component from previous updates ([#1144](https://github.com/opensearch-project/oui/pull/1144))
 - Update deprecated Babel plugins ([#1155](https://github.com/opensearch-project/oui/pull/1155))
 - Move @seanneumann to emeritus maintainer ([#1188](https://github.com/opensearch-project/oui/pull/1188))
+- Move @BSFishy and @KrooshalUX to emeritus maintainer ([#1272](https://github.com/opensearch-project/oui/pull/1272))
 
 ### 🪛 Refactoring
 
