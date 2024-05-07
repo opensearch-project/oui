@@ -41,6 +41,7 @@
 - Prevent action buttons of OuiDataGridCell from moving the content ([#1224](https://github.com/opensearch-project/oui/pull/1224))
 - Fix vertical alignment and font weight of breadcrumbs that are buttons or links ([#1232](https://github.com/opensearch-project/oui/pull/1232))
 - Fix datagrid lines ([#1250](https://github.com/opensearch-project/oui/pull/1250))
+- Fix OuiPopover does not change position on the scroll ([#1184](https://github.com/opensearch-project/oui/pull/1184))
 
 ### 🚞 Infrastructure
 
