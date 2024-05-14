@@ -22,12 +22,14 @@
 - Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
 - Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
 - Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
+- Rewrite `InitialIcon` computation without mutable variables ([#1186](https://github.com/opensearch-project/oui/pull/1186))
 - Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
 - Add SplitButton control ([#1193](https://github.com/opensearch-project/oui/pull/1193))
 - Eliminate screenreader content when copying and pasting data grid table ([#1198](https://github.com/opensearch-project/oui/pull/1198))
 - [Next Theme] Set base font size to 18px ([#1221](https://github.com/opensearch-project/oui/pull/1221))
 - [Next Theme] Revert `font-weight` of OuiButton to normal from semi-bold ([#1222](https://github.com/opensearch-project/oui/pull/1222))
 - Convert shorthand palette colors to full 6-char hex ([#1262](https://github.com/opensearch-project/oui/pull/1262))
+
 
 ### 🐛 Bug Fixes
 
