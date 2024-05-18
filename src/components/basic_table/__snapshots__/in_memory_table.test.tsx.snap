@@ -380,75 +380,84 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                       display="inlineBlock"
                       hasArrow={true}
                       isOpen={false}
-                      ownFocus={true}
+                      ownFocus={false}
                       panelPaddingSize="none"
                     >
-                      <div
-                        className="ouiPopover ouiPopover--anchorUpRight"
+                      <OuiOutsideClickDetector
+                        onOutsideClick={[Function]}
                       >
                         <div
-                          className="ouiPopover__anchor"
+                          className="ouiPopover ouiPopover--anchorUpRight"
+                          onKeyDown={[Function]}
+                          onMouseDown={[Function]}
+                          onMouseUp={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
                         >
-                          <OuiButtonEmpty
-                            color="text"
-                            data-test-subj="tablePaginationPopoverButton"
-                            iconSide="right"
-                            iconType="arrowDown"
-                            onClick={[Function]}
-                            size="xs"
+                          <div
+                            className="ouiPopover__anchor"
                           >
-                            <button
-                              className="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall"
+                            <OuiButtonEmpty
+                              color="text"
                               data-test-subj="tablePaginationPopoverButton"
-                              disabled={false}
+                              iconSide="right"
+                              iconType="arrowDown"
                               onClick={[Function]}
-                              type="button"
+                              size="xs"
                             >
-                              <OuiButtonContent
-                                className="ouiButtonEmpty__content"
-                                iconSide="right"
-                                iconSize="s"
-                                iconType="arrowDown"
-                                textProps={
-                                  Object {
-                                    "className": "ouiButtonEmpty__text",
-                                  }
-                                }
+                              <button
+                                className="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall"
+                                data-test-subj="tablePaginationPopoverButton"
+                                disabled={false}
+                                onClick={[Function]}
+                                type="button"
                               >
-                                <span
-                                  className="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
+                                <OuiButtonContent
+                                  className="ouiButtonEmpty__content"
+                                  iconSide="right"
+                                  iconSize="s"
+                                  iconType="arrowDown"
+                                  textProps={
+                                    Object {
+                                      "className": "ouiButtonEmpty__text",
+                                    }
+                                  }
                                 >
-                                  <OuiIcon
-                                    className="ouiButtonContent__icon"
-                                    color="inherit"
-                                    size="s"
-                                    type="arrowDown"
+                                  <span
+                                    className="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
                                   >
-                                    <span
+                                    <OuiIcon
                                       className="ouiButtonContent__icon"
                                       color="inherit"
-                                      data-ouiicon-type="arrowDown"
                                       size="s"
-                                    />
-                                  </OuiIcon>
-                                  <span
-                                    className="ouiButtonEmpty__text"
-                                  >
-                                    <OuiI18n
-                                      default="Rows per page"
-                                      token="ouiTablePagination.rowsPerPage"
+                                      type="arrowDown"
                                     >
-                                      Rows per page
-                                    </OuiI18n>
-                                    : 
-                                    2
+                                      <span
+                                        className="ouiButtonContent__icon"
+                                        color="inherit"
+                                        data-ouiicon-type="arrowDown"
+                                        size="s"
+                                      />
+                                    </OuiIcon>
+                                    <span
+                                      className="ouiButtonEmpty__text"
+                                    >
+                                      <OuiI18n
+                                        default="Rows per page"
+                                        token="ouiTablePagination.rowsPerPage"
+                                      >
+                                        Rows per page
+                                      </OuiI18n>
+                                      : 
+                                      2
+                                    </span>
                                   </span>
-                                </span>
-                              </OuiButtonContent>
-                            </button>
-                          </OuiButtonEmpty>
+                                </OuiButtonContent>
+                              </button>
+                            </OuiButtonEmpty>
+                          </div>
                         </div>
-                      </div>
+                      </OuiOutsideClickDetector>
                     </OuiPopover>
                   </div>
                 </OuiFlexItem>
