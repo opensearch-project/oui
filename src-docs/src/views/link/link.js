@@ -11,7 +11,7 @@
 
 import React from 'react';
 
-import { OuiCode, OuiLink, OuiText } from '../../../../src/components';
+import { OuiCode, OuiLink, OuiText, OuiIcon } from '../../../../src/components';
 
 export default () => (
   <OuiText>
@@ -28,7 +28,9 @@ export default () => (
       <OuiLink href="https://oui.opensearch.org/latest/" external>
         link
       </OuiLink>{' '}
-      has the <OuiCode>external</OuiCode> prop set to true.
+      has the <OuiCode>external</OuiCode> prop set to true. A pop-out icon{' '}
+      <OuiIcon type="popout" size="s" /> will be automatically rendered to
+      indicate that it leads to an external resource.
     </p>
     <p>
       This link is actually a <OuiLink onClick={() => {}}>button</OuiLink> with
