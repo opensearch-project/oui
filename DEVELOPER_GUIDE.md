@@ -61,5 +61,6 @@ yarn start --port 9000
 * [Theming](wiki/theming.md)
 * [Testing](wiki/testing.md)
   * [Accessibility Testing](wiki/automated-accessibility-testing.md)
+  * [Validating with OpenSearch Dashboards](wiki/validating-with-opensearch-dashboards.md)
 * [Documentation](wiki/documentation-guidelines.md)
 * [Releasing versions](wiki/releasing-versions.md)
