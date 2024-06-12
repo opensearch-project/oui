@@ -5,11 +5,9 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 ## Current Maintainers
 
 | Maintainer               | GitHub ID                                         | Affiliation |
-| ------------------------ | ------------------------------------------------- | ----------- |
+|--------------------------|---------------------------------------------------|-------------|
 | Miki Barahmand           | [AMoo-Miki](https://github.com/AMoo-Miki)         | Amazon      |
 | Iskander Rakhmanberdiyev | [rednaksi91](https://github.com/rednaksi91)       | Amazon      |
-| Kroosh                   | [KrooshalUX](https://github.com/KrooshalUX)       | Amazon      |
-| Matt Provost             | [BSFishy](https://github.com/BSFishy)             | Amazon      |
 | Bandini                  | [bandinib-amzn](https://github.com/bandinib-amzn) | Amazon      |
 | Ashwin P Chandran        | [ashwin-pc](https://github.com/ashwin-pc)         | Amazon      |
 | Josh Romero              | [joshuarrrr](https://github.com/joshuarrrr)       | Amazon      |
@@ -21,4 +19,6 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 
 | Maintainer               | GitHub ID                                         | Affiliation |
 |--------------------------|---------------------------------------------------|-------------|
+| Matt Provost             | [BSFishy](https://github.com/BSFishy)             | Contributor |
+| Kroosh                   | [KrooshalUX](https://github.com/KrooshalUX)       | Contributor |
 | Sean Neumann             | [seanneumann](https://github.com/seanneumann)     | Contributor |
