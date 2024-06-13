@@ -32,7 +32,9 @@ import React, { HTMLAttributes, FunctionComponent } from 'react';
 import classNames from 'classnames';
 import { CommonProps } from '../common';
 
+// TODO: Remove 'true' and 'false' from the type definitions on next major release
 export type FlexItemGrowSize =
+  | 0
   | 1
   | 2
   | 3
@@ -43,16 +45,83 @@ export type FlexItemGrowSize =
   | 8
   | 9
   | 10
+  /**
+   * @deprecated `true` will be removed in the next major release.
+   * Use numeric values instead.
+   */
   | true
+  /**
+   * @deprecated `false` will be removed in the next major release.
+   * Use numeric values instead.
+   */
   | false
   | null;
 
+// TODO: Remove 'true' and 'false' from the type definitions on next major release
+export type FlexItemShrinkSize =
+  | 0
+  | 1
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  /**
+   * @deprecated `true` will be removed in the next major release.
+   * Use numeric values instead.
+   */
+  | true
+  /**
+   * @deprecated `false` will be removed in the next major release.
+   * Use numeric values instead.
+   */
+  | false
+  | null;
+export type FlexItemBasisValue = string | true | false | null;
+
 export interface OuiFlexItemProps {
   grow?: FlexItemGrowSize;
+  shrink?: FlexItemShrinkSize;
+  basis?: FlexItemBasisValue;
   component?: keyof JSX.IntrinsicElements;
 }
 
-export const GROW_SIZES: FlexItemGrowSize[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const GROW_SIZES: FlexItemGrowSize[] = [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+];
+export const SHRINK_SIZES: FlexItemShrinkSize[] = [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+];
+export const BASIS_VALUES: FlexItemBasisValue[] = [
+  'auto',
+  'max-content',
+  'min-content',
+  'fit-content',
+];
 
 export const OuiFlexItem: FunctionComponent<
   CommonProps &
@@ -61,18 +130,38 @@ export const OuiFlexItem: FunctionComponent<
 > = ({
   children,
   className,
-  grow = true,
+  grow = true, // use default behaviour 'flex-grow: 1'
+  shrink = true, //  use default behaviour 'flex-shrink: 1'
+  basis = undefined, //  Preserve basis prop coming from parent or grow prop unless specified
   component: Component = 'div',
   ...rest
 }) => {
   validateGrowValue(grow);
+  validateShrinkValue(shrink);
+  validateBasisValue(basis);
 
   const classes = classNames(
     'ouiFlexItem',
     {
+      // use flex-grow: 0 and flex-basis: auto
       'ouiFlexItem--flexGrowZero': !grow,
+      // use flex-shrink: 0 and flex-basis: auto
+      'ouiFlexItem--flexShrinkZero': !shrink,
+      // use flex-basis: auto
+      'ouiFlexItem--flexBasisAuto': basis === false,
+      // use flex-grow: {grow} and flex-basis: auto
       [`ouiFlexItem--flexGrow${grow}`]:
         typeof grow === 'number' ? GROW_SIZES.indexOf(grow) >= 0 : undefined,
+      // use flex-shrink: {shrink} and flex-basis: auto
+      [`ouiFlexItem--flexShrink${shrink}`]:
+        typeof shrink === 'number'
+          ? SHRINK_SIZES.indexOf(shrink) >= 0
+          : undefined,
+      // use flex-basis: {basis}
+      [`ouiFlexItem--flexBasis-${basis}`]:
+        typeof basis === 'string'
+          ? BASIS_VALUES.indexOf(basis) >= 0
+          : undefined,
     },
     className
   );
@@ -91,6 +180,29 @@ function validateGrowValue(value: OuiFlexItemProps['grow']) {
   if (validValues.indexOf(value) === -1) {
     throw new Error(
       `Prop \`grow\` passed to \`OuiFlexItem\` must be a boolean or an integer between 1 and 10, received \`${value}\``
+    );
+  }
+}
+
+function validateShrinkValue(value: OuiFlexItemProps['shrink']) {
+  // New function
+  const validValues = [null, undefined, true, false, ...SHRINK_SIZES];
+
+  if (validValues.indexOf(value) === -1) {
+    throw new Error(
+      `Prop \`shrink\` passed to \`OuiFlexItem\` must be a boolean or an integer between 1 and 10, received \`${value}\``
+    );
+  }
+}
+
+function validateBasisValue(value: OuiFlexItemProps['basis']) {
+  // Define the valid values for 'flex-basis'. These can be 'auto' or specific percentages.
+  const validValues = [null, undefined, true, false, ...BASIS_VALUES];
+
+  // Check if the passed value is one of the valid values.
+  if (!validValues.includes(value)) {
+    throw new Error(
+      `Prop \`basis\` passed to \`OuiFlexItem\` must be one of ['auto', 'min-content', 'max-content', 'fit-content'], received \`${value}\``
     );
   }
 }
