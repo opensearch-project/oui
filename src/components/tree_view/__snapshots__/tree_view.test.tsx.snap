@@ -34,10 +34,28 @@ exports[`OuiTreeView is rendered 1`] = `
             data-ouiicon-type="folderOpen"
           />
         </span>
+      </button>
+      <button
+        class="ouiFacetButton ouiFacetButton--unSelected ouiTreeView_ouiFacetButton"
+        type="button"
+      >
         <span
-          class="ouiTreeView__nodeLabel"
+          class="ouiFacetButton__content"
         >
-          Item One
+          <span
+            class="ouiFacetButton__text"
+          >
+            <span
+              class="ouiTreeView__nodeLabel"
+            >
+              Item One
+            </span>
+          </span>
+          <span
+            class="ouiNotificationBadge ouiNotificationBadge--medium ouiNotificationBadge--subdued ouiFacetButton__quantity"
+          >
+            3
+          </span>
         </span>
       </button>
       <div
@@ -67,10 +85,23 @@ exports[`OuiTreeView is rendered 1`] = `
                     data-ouiicon-type="document"
                   />
                 </span>
+              </button>
+              <button
+                class="ouiFacetButton ouiFacetButton--unSelected ouiTreeView_ouiFacetButton"
+                type="button"
+              >
                 <span
-                  class="ouiTreeView__nodeLabel"
+                  class="ouiFacetButton__content"
                 >
-                  Item A
+                  <span
+                    class="ouiFacetButton__text"
+                  >
+                    <span
+                      class="ouiTreeView__nodeLabel"
+                    >
+                      Item A
+                    </span>
+                  </span>
                 </span>
               </button>
               <div
@@ -94,10 +125,28 @@ exports[`OuiTreeView is rendered 1`] = `
                     data-ouiicon-type="arrowRight"
                   />
                 </span>
+              </button>
+              <button
+                class="ouiFacetButton ouiFacetButton--unSelected ouiTreeView_ouiFacetButton"
+                type="button"
+              >
                 <span
-                  class="ouiTreeView__nodeLabel"
+                  class="ouiFacetButton__content"
                 >
-                  Item B
+                  <span
+                    class="ouiFacetButton__text"
+                  >
+                    <span
+                      class="ouiTreeView__nodeLabel"
+                    >
+                      Item B
+                    </span>
+                  </span>
+                  <span
+                    class="ouiNotificationBadge ouiNotificationBadge--medium ouiNotificationBadge--subdued ouiFacetButton__quantity"
+                  >
+                    2
+                  </span>
                 </span>
               </button>
               <div
@@ -121,10 +170,28 @@ exports[`OuiTreeView is rendered 1`] = `
                     data-ouiicon-type="arrowRight"
                   />
                 </span>
+              </button>
+              <button
+                class="ouiFacetButton ouiFacetButton--unSelected ouiTreeView_ouiFacetButton"
+                type="button"
+              >
                 <span
-                  class="ouiTreeView__nodeLabel"
+                  class="ouiFacetButton__content"
                 >
-                  Item C
+                  <span
+                    class="ouiFacetButton__text"
+                  >
+                    <span
+                      class="ouiTreeView__nodeLabel"
+                    >
+                      Item C
+                    </span>
+                  </span>
+                  <span
+                    class="ouiNotificationBadge ouiNotificationBadge--medium ouiNotificationBadge--subdued ouiFacetButton__quantity"
+                  >
+                    2
+                  </span>
                 </span>
               </button>
               <div
@@ -144,11 +211,23 @@ exports[`OuiTreeView is rendered 1`] = `
         class="ouiTreeView__nodeInner"
         data-test-subj="ouiTreeViewButton-ouiTreeView_generated-id"
         id="item_two"
+      />
+      <button
+        class="ouiFacetButton ouiFacetButton--unSelected ouiTreeView_ouiFacetButton"
+        type="button"
       >
         <span
-          class="ouiTreeView__nodeLabel"
+          class="ouiFacetButton__content"
         >
-          Item Two
+          <span
+            class="ouiFacetButton__text"
+          >
+            <span
+              class="ouiTreeView__nodeLabel"
+            >
+              Item Two
+            </span>
+          </span>
         </span>
       </button>
       <div
