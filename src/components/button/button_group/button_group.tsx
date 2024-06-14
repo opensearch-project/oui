@@ -91,6 +91,10 @@ export type OuiButtonGroupProps = CommonProps & {
    */
   type?: 'single' | 'multi';
   /**
+   * Determines if the buttons should be horizontal oriented or vertical oriented
+   */
+  orientation?: 'horizontal' | 'vertical';
+  /**
    * An array of #OuiButtonGroupOptionProps
    */
   options: OuiButtonGroupOptionProps[];
@@ -155,6 +159,7 @@ export const OuiButtonGroup: FunctionComponent<Props> = ({
   onChange,
   options = [],
   type = 'single',
+  orientation = 'horizontal',
   ...rest
 }) => {
   // Compressed style can't support `ghost` color because it's more like a form field than a button
@@ -166,6 +171,16 @@ export const OuiButtonGroup: FunctionComponent<Props> = ({
     );
   }
 
+  // Compressed style can't support `vertical` orientation because compressed button group has a fixed height
+  const badOrientationCombo =
+    buttonSize === 'compressed' && orientation === 'vertical';
+  const resolvedOrientation = badOrientationCombo ? 'horizontal' : orientation;
+  if (badOrientationCombo) {
+    console.warn(
+      'OuiButtonGroup of compressed size does not support the vertical orientation. It will render as horizontal instead.'
+    );
+  }
+
   const classes = classNames(
     'ouiButtonGroup',
     `ouiButtonGroup${groupSizeToClassNameMap[buttonSize]}`,
@@ -173,6 +188,7 @@ export const OuiButtonGroup: FunctionComponent<Props> = ({
     {
       'ouiButtonGroup--fullWidth': isFullWidth,
       'ouiButtonGroup--isDisabled': isDisabled,
+      'ouiButtonGroup--vertical': resolvedOrientation === 'vertical',
     },
     className
   );
