@@ -38,10 +38,10 @@ import React, {
 } from 'react';
 import { useCombinedRefs } from '../../services';
 import { OuiScreenReaderOnly } from '../accessibility';
-import { CommonProps, ExclusiveUnion } from '../common';
+import { CommonProps } from '../common';
 import { OuiI18n } from '../i18n';
 import { useResizeObserver } from '../observer/resize_observer';
-import { OuiPortal } from '../portal';
+import { OuiPortal, OuiPortalInsert } from '../portal';
 
 type BottomBarPaddingSize = 'none' | 's' | 'm' | 'l';
 
@@ -58,32 +58,30 @@ export const paddingSizeToClassNameMap: {
 export const POSITIONS = ['static', 'fixed', 'sticky'] as const;
 export type _BottomBarPosition = typeof POSITIONS[number];
 
-type _BottomBarExclusivePositions = ExclusiveUnion<
-  {
-    position?: 'fixed';
+export type OuiBottomBarProps = CommonProps &
+  HTMLAttributes<HTMLElement> & {
     /**
-     * Whether to wrap in an OuiPortal which appends the component to the body element.
-     * Only works if `position` is `fixed`.
+     * How to position the bottom bar against its parent.
+     * Defaults to `fixed`.
+     */
+    position?: 'static' | 'sticky' | 'fixed';
+    /**
+     * Whether to wrap in OuiPortal. Can be configured using "insert" prop.
      */
     usePortal?: boolean;
     /**
-     * Whether the component should apply padding on the document body element to afford for its own displacement height.
-     * Only works if `usePortal` is true and `position` is `fixed`.
+     * Configuration for placing children in the DOM. By default, attaches children to the body element.
+     * Only works if `usePortal` is true.
+     */
+    insert?: OuiPortalInsert;
+    /**
+     * Whether to apply padding to the document body to afford for its own displacement height.
+     * Only works if `position` is `fixed`.
      */
     affordForDisplacement?: boolean;
-  },
-  {
     /**
-     * How to position the bottom bar against its parent.
-     */
-    position: 'static' | 'sticky';
-  }
->;
-export type OuiBottomBarProps = CommonProps &
-  HTMLAttributes<HTMLElement> &
-  _BottomBarExclusivePositions & {
-    /**
-     * Padding applied to the bar. Default is 'm'.
+     * Padding applied to the bar.
+     * Defaults to 'm'.
      */
     paddingSize?: BottomBarPaddingSize;
     /**
@@ -126,12 +124,13 @@ export const OuiBottomBar = forwardRef<
     {
       position = 'fixed',
       paddingSize = 'm',
-      affordForDisplacement = true,
+      affordForDisplacement,
       children,
       className,
       bodyClassName,
       landmarkHeading,
-      usePortal = true,
+      usePortal,
+      insert,
       left,
       right,
       bottom,
@@ -141,18 +140,13 @@ export const OuiBottomBar = forwardRef<
     },
     ref
   ) => {
-    // Force some props if `fixed` position, but not if the user has supplied these
-    affordForDisplacement =
-      position !== 'fixed' ? false : affordForDisplacement;
-    usePortal = position !== 'fixed' ? false : usePortal;
-
     const [resizeRef, setResizeRef] = useState<HTMLElement | null>(null);
     const setRef = useCombinedRefs([setResizeRef, ref]);
     // TODO: Allow this hooke to be conditional
     const dimensions = useResizeObserver(resizeRef);
 
     useEffect(() => {
-      if (affordForDisplacement && usePortal) {
+      if (affordForDisplacement) {
         document.body.style.paddingBottom = `${dimensions.height}px`;
       }
 
@@ -161,7 +155,7 @@ export const OuiBottomBar = forwardRef<
       }
 
       return () => {
-        if (affordForDisplacement && usePortal) {
+        if (affordForDisplacement) {
           document.body.style.paddingBottom = '';
         }
 
@@ -169,7 +163,7 @@ export const OuiBottomBar = forwardRef<
           document.body.classList.remove(bodyClassName);
         }
       };
-    }, [affordForDisplacement, usePortal, dimensions, bodyClassName]);
+    }, [affordForDisplacement, dimensions, bodyClassName]);
 
     const classes = classNames(
       'ouiBottomBar',
@@ -230,7 +224,7 @@ export const OuiBottomBar = forwardRef<
       </>
     );
 
-    return usePortal ? <OuiPortal>{bar}</OuiPortal> : bar;
+    return usePortal ? <OuiPortal insert={insert}>{bar}</OuiPortal> : bar;
   }
 );
 

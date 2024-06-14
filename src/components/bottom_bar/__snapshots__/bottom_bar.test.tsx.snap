@@ -57,6 +57,48 @@ exports[`OuiBottomBar props bodyClassName is rendered 1`] = `
 </section>
 `;
 
+exports[`OuiBottomBar props insert root prop is altered 1`] = `
+Array [
+  <section
+    aria-label="Page level controls"
+    class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
+  >
+    <h2
+      class="ouiScreenReaderOnly"
+    >
+      Page level controls
+    </h2>
+  </section>,
+  <p
+    aria-live="assertive"
+    class="ouiScreenReaderOnly"
+  >
+    There is a new region landmark with page level controls at the end of the document.
+  </p>,
+]
+`;
+
+exports[`OuiBottomBar props insert sibling prop is altered 1`] = `
+Array [
+  <section
+    aria-label="Page level controls"
+    class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
+  >
+    <h2
+      class="ouiScreenReaderOnly"
+    >
+      Page level controls
+    </h2>
+  </section>,
+  <p
+    aria-live="assertive"
+    class="ouiScreenReaderOnly"
+  >
+    There is a new region landmark with page level controls at the end of the document.
+  </p>,
+]
+`;
+
 exports[`OuiBottomBar props landmarkHeading 1`] = `
 Array [
   <section
@@ -253,27 +295,6 @@ Array [
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
     style="left:12px"
-  >
-    <h2
-      class="ouiScreenReaderOnly"
-    >
-      Page level controls
-    </h2>
-  </section>,
-  <p
-    aria-live="assertive"
-    class="ouiScreenReaderOnly"
-  >
-    There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
-`;
-
-exports[`OuiBottomBar props usePortal can be false 1`] = `
-Array [
-  <section
-    aria-label="Page level controls"
-    class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
   >
     <h2
       class="ouiScreenReaderOnly"

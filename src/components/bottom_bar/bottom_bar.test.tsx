@@ -92,8 +92,18 @@ describe('OuiBottomBar', () => {
       expect(component).toMatchSnapshot();
     });
 
-    test('usePortal can be false', () => {
-      const component = render(<OuiBottomBar usePortal={false} />);
+    test('insert root prop is altered', () => {
+      const component = render(
+        <OuiBottomBar insert={{ root: document.body }} />
+      );
+
+      expect(component).toMatchSnapshot();
+    });
+
+    test('insert sibling prop is altered', () => {
+      const component = render(
+        <OuiBottomBar insert={{ sibling: document.body, position: 'after' }} />
+      );
 
       expect(component).toMatchSnapshot();
     });

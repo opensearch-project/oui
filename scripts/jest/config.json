@@ -19,6 +19,7 @@
   },
   "setupFiles": [
     "<rootDir>/scripts/jest/setup/enzyme.js",
+    "<rootDir>/scripts/jest/setup/html_element.js",
     "<rootDir>/scripts/jest/setup/throw_on_console_error.js"
   ],
   "setupFilesAfterEnv": [

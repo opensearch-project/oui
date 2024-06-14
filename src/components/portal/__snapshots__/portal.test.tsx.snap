@@ -1,17 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`OuiPortal is rendered 1`] = `
-<div>
-  <OuiPortal>
-    <Portal
-      containerInfo={
-        <div>
-          Content
-        </div>
-      }
-    >
-      Content
-    </Portal>
-  </OuiPortal>
-</div>
+exports[`OuiPortal should render OuiPortal 1`] = `
+<OuiPortal>
+  <Portal
+    containerInfo={
+      <div>
+        Content
+      </div>
+    }
+  >
+    Content
+  </Portal>
+</OuiPortal>
 `;
