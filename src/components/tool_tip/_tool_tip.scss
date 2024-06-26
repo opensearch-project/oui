@@ -86,47 +86,39 @@
 @keyframes ouiToolTipTop {
   0% {
     opacity: 0;
-    transform: translateY(-$ouiSize);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 @keyframes ouiToolTipBottom {
   0% {
     opacity: 0;
-    transform: translateY($ouiSize);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 @keyframes ouiToolTipLeft {
   0% {
     opacity: 0;
-    transform: translateX(-$ouiSize);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
 @keyframes ouiToolTipRight {
   0% {
     opacity: 0;
-    transform: translateX($ouiSize);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
   }
 }
