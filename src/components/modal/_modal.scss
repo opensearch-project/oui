@@ -27,7 +27,7 @@
   border-radius: $ouiBorderRadius;
   z-index: $ouiZModal;
   min-width: $ouiFormMaxWidth;
-  animation: ouiModal $ouiAnimSpeedSlow $ouiAnimSlightBounce;
+  animation: ouiModal $ouiAnimSpeedExtraFast $ouiAnimSlightBounce;
   max-width: calc(100vw - #{$ouiSize});
 
   // Remove the outline from the focusable container

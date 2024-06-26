@@ -51,16 +51,16 @@
   opacity: 0; /* 2 */
   visibility: hidden; /* 2 */
   transition: /* 2 */
-    opacity $ouiAnimSlightBounce $ouiAnimSpeedSlow,
-    visibility $ouiAnimSlightBounce $ouiAnimSpeedSlow;
+    opacity $ouiAnimSlightBounce $ouiAnimSpeedExtraFast,
+    visibility $ouiAnimSlightBounce $ouiAnimSpeedExtraFast;
 
   // Don't animate when using the attached mode like for inputs
   &:not(.ouiPopover__panel-isAttached) {
     transform: translateY(0) translateX(0) translateZ(0); /* 2 */
     transition: /* 2 */
-      opacity $ouiAnimSlightBounce $ouiAnimSpeedSlow,
-      visibility $ouiAnimSlightBounce $ouiAnimSpeedSlow,
-      transform $ouiAnimSlightBounce ($ouiAnimSpeedSlow + 100ms);
+      opacity $ouiAnimSlightBounce $ouiAnimSpeedExtraFast,
+      visibility $ouiAnimSlightBounce $ouiAnimSpeedExtraFast,
+      transform $ouiAnimSlightBounce ($ouiAnimSpeedExtraFast + 100ms);
   }
 
   &.ouiPopover__panel-isOpen {
