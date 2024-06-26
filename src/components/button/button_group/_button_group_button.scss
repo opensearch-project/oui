@@ -12,7 +12,7 @@
 .ouiButtonGroupButton {
   @include ouiButtonBase;
   @include ouiFont;
-  @include ouiFontSize;
+  @include ouiFontSizeS;
 
   // sass-lint:disable-block indentation
   transition: background-color $ouiAnimSpeedNormal ease-in-out,
