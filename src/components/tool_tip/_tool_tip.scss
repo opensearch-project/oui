@@ -14,7 +14,7 @@
  */
 
 .ouiToolTip {
-  @include ouiToolTipStyle;
+  @include ouiToolTipStyle('s');
   @include ouiToolTipAnimation('top');
   position: absolute;
   opacity: 0;
