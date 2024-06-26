@@ -62,7 +62,7 @@
   }
 
   &--small {
-    @include ouiPopoverTitle('s');
+    @include ouiPopoverTitle;
     padding: ($ouiSizeS * .75) $ouiSizeS;
   }
 }
