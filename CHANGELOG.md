@@ -28,7 +28,7 @@
 - [Next Theme] Set base font size to 18px ([#1221](https://github.com/opensearch-project/oui/pull/1221))
 - [Next Theme] Revert `font-weight` of OuiButton to normal from semi-bold ([#1222](https://github.com/opensearch-project/oui/pull/1222))
 - Convert shorthand palette colors to full 6-char hex ([#1262](https://github.com/opensearch-project/oui/pull/1262))
-- Make Super Update Button secondary instead of primary ([]())
+- Make Super Update Button secondary instead of primary ([#1286](https://github.com/opensearch-project/oui/pull/1286))
 
 ### 🐛 Bug Fixes
 
