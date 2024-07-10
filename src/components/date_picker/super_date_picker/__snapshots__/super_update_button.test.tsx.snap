@@ -8,7 +8,6 @@ exports[`OuiSuperUpdateButton is rendered 1`] = `
   <OuiButton
     className="ouiSuperUpdateButton"
     color="primary"
-    fill={true}
     iconType="refresh"
     isDisabled={false}
     isLoading={false}
@@ -41,7 +40,6 @@ exports[`OuiSuperUpdateButton isDisabled 1`] = `
   <OuiButton
     className="ouiSuperUpdateButton"
     color="primary"
-    fill={true}
     iconType="refresh"
     isDisabled={true}
     isLoading={false}
@@ -68,7 +66,6 @@ exports[`OuiSuperUpdateButton isLoading 1`] = `
   <OuiButton
     className="ouiSuperUpdateButton"
     color="success"
-    fill={true}
     iconType="kqlFunction"
     isDisabled={false}
     isLoading={true}
@@ -101,7 +98,6 @@ exports[`OuiSuperUpdateButton needsUpdate 1`] = `
   <OuiButton
     className="ouiSuperUpdateButton"
     color="success"
-    fill={true}
     iconType="kqlFunction"
     isDisabled={false}
     isLoading={false}
@@ -128,7 +124,6 @@ exports[`OuiSuperUpdateButton showTooltip 1`] = `
   <OuiButton
     className="ouiSuperUpdateButton"
     color="primary"
-    fill={true}
     iconType="refresh"
     isDisabled={false}
     isLoading={false}
