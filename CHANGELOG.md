@@ -29,6 +29,7 @@
 - [Next Theme] Revert `font-weight` of OuiButton to normal from semi-bold ([#1222](https://github.com/opensearch-project/oui/pull/1222))
 - Convert shorthand palette colors to full 6-char hex ([#1262](https://github.com/opensearch-project/oui/pull/1262))
 - Use small font size consistently in buttons and button groups ([#1281](https://github.com/opensearch-project/oui/pull/1281))
+- Make Super Update Button secondary instead of primary ([#1286](https://github.com/opensearch-project/oui/pull/1286))
 - Adjust popover and context menu title styles and tooltip padding ([#1283](https://github.com/opensearch-project/oui/pull/1283))
 
 ### 🐛 Bug Fixes
