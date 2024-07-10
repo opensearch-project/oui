@@ -30,7 +30,9 @@
 - Convert shorthand palette colors to full 6-char hex ([#1262](https://github.com/opensearch-project/oui/pull/1262))
 - Use small font size consistently in buttons and button groups ([#1281](https://github.com/opensearch-project/oui/pull/1281))
 - Make Super Update Button secondary instead of primary ([#1286](https://github.com/opensearch-project/oui/pull/1286))
+- Use faster animations for modals, popovers, and tooltips ([#1282](https://github.com/opensearch-project/oui/pull/1282))
 - Adjust popover and context menu title styles and tooltip padding ([#1283](https://github.com/opensearch-project/oui/pull/1283))
+- Make Super Update Button secondary instead of primary ([#1286](https://github.com/opensearch-project/oui/pull/1286))
 
 ### 🐛 Bug Fixes
 
