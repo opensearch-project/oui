@@ -162,6 +162,23 @@ export {
   OuiSwitch,
   OuiTextArea,
   OuiValidatableControl,
+  OuiCompressedCheckbox,
+  OuiCompressedCheckboxGroup,
+  OuiCompressedDualRange,
+  OuiCompressedFieldNumber,
+  OuiCompressedFieldPassword,
+  OuiCompressedFieldSearch,
+  OuiCompressedFieldText,
+  OuiCompressedFilePicker,
+  OuiCompressedFormLegend,
+  OuiCompressedFormRow,
+  OuiCompressedRadio,
+  OuiCompressedRadioGroup,
+  OuiCompressedRange,
+  OuiCompressedSelect,
+  OuiCompressedSuperSelect,
+  OuiCompressedSwitch,
+  OuiCompressedTextArea,
 } from './form';
 
 export {

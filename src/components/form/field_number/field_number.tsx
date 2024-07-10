@@ -149,3 +149,14 @@ export const OuiFieldNumber: FunctionComponent<OuiFieldNumberProps> = ({
     </OuiFormControlLayout>
   );
 };
+
+// @internal
+export type OuiCompressedFieldNumberProps = Omit<
+  OuiFieldNumberProps,
+  'compressed'
+>;
+
+// @internal
+export const OuiCompressedFieldNumber: FunctionComponent<OuiCompressedFieldNumberProps> = (
+  props
+) => <OuiFieldNumber {...props} compressed />;

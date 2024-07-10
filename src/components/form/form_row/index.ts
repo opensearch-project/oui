@@ -28,4 +28,9 @@
  * under the License.
  */
 
-export { OuiFormRow, OuiFormRowProps } from './form_row';
+export {
+  OuiFormRow,
+  OuiFormRowProps,
+  OuiCompressedFormRow,
+  OuiCompressedFormRowProps,
+} from './form_row';

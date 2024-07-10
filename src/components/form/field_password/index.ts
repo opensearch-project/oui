@@ -28,4 +28,9 @@
  * under the License.
  */
 
-export { OuiFieldPassword, OuiFieldPasswordProps } from './field_password';
+export {
+  OuiFieldPassword,
+  OuiFieldPasswordProps,
+  OuiCompressedFieldPassword,
+  OuiCompressedFieldPasswordProps,
+} from './field_password';
