@@ -28,7 +28,8 @@
 - [Next Theme] Set base font size to 18px ([#1221](https://github.com/opensearch-project/oui/pull/1221))
 - [Next Theme] Revert `font-weight` of OuiButton to normal from semi-bold ([#1222](https://github.com/opensearch-project/oui/pull/1222))
 - Convert shorthand palette colors to full 6-char hex ([#1262](https://github.com/opensearch-project/oui/pull/1262))
-- Remove Button translations and add inset shadow on active ([#1285](https://github.com/opensearch-project/oui/pull))
+- Remove Button translations and add inset shadow on active ([#1285](https://github.com/opensearch-project/oui/pull/1285))
+- Adjust popover and context menu title styles and tooltip padding ([#1283](https://github.com/opensearch-project/oui/pull/1283))
 
 ### 🐛 Bug Fixes
 
