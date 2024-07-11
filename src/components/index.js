@@ -60,7 +60,7 @@ export {
   OuiCompressedColorPicker,
 } from './color_picker';
 
-export { OuiComboBox } from './combo_box';
+export { OuiComboBox, OuiCompressedComboBox } from './combo_box';
 
 export { OuiComment, OuiCommentList } from './comment_list';
 
