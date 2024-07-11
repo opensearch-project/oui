@@ -47,27 +47,6 @@ $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
   .ouiSplitButtonControl {
     border: $ouiBorderWidthThick solid $ouiBorderColor;
     border-radius: $ouiBorderRadius;
-
-    // Animate wrapper element only when primary button activated
-    &:has(.ouiSplitButtonControl--primary:hover:not([class*='isDisabled'])) {
-      -webkit-transform: translateY(-1px);
-      transform: translateY(-1px);
-    }
-
-    &:has(.ouiSplitButtonControl--primary:active:not([class*='isDisabled'])) {
-      -webkit-transform: translateY(1px);
-      transform: translateY(1px);
-    }
-
-    &:has(.ouiSplitButtonControl--primary:focus:not([class*='isDisabled'])) {
-      animation: ouiButtonActive $ouiAnimSpeedNormal $ouiAnimSlightBounce;
-    }
-
-    //.ouiSplitButtonControl--primary {
-    //  border-right: $ouiBorderWidthThin solid $splitButtonSeparatorColor;
-    //
-    //}
-
   }
 
   // Create button modifiers based upon the map.
