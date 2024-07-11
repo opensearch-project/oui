@@ -35,7 +35,7 @@
 @mixin ouiButton {
   @include ouiButtonBase;
   @include ouiFont;
-  @include ouiFontSize;
+  @include ouiFontSizeS;
 
   text-decoration: none;
   border: solid 1px transparent;
