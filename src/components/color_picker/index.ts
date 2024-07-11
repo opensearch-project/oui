@@ -28,7 +28,12 @@
  * under the License.
  */
 
-export { OuiColorPicker, OuiColorPickerProps } from './color_picker';
+export {
+  OuiColorPicker,
+  OuiColorPickerProps,
+  OuiCompressedColorPicker,
+  OuiCompressedColorPickerProps,
+} from './color_picker';
 export {
   OuiColorPickerSwatch,
   OuiColorPickerSwatchProps,

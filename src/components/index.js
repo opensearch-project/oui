@@ -57,6 +57,7 @@ export {
   OuiColorStops,
   OuiHue,
   OuiSaturation,
+  OuiCompressedColorPicker,
 } from './color_picker';
 
 export { OuiComboBox } from './combo_box';
