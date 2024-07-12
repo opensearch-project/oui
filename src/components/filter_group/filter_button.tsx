@@ -33,7 +33,12 @@ import classNames from 'classnames';
 
 import { OuiI18n } from '../i18n';
 import { OuiNotificationBadge } from '../badge/notification_badge';
-import { OuiButtonEmpty, OuiButtonEmptyProps } from '../button/button_empty';
+
+import {
+  OuiButtonEmpty,
+  OuiButtonEmptyProps,
+  OuiSmallButtonEmptyProps,
+} from '../button/button_empty';
 
 import { useInnerText } from '../inner_text';
 
@@ -168,3 +173,43 @@ export const OuiFilterButton: FunctionComponent<OuiFilterButtonProps> = ({
     </OuiButtonEmpty>
   );
 };
+
+// @internal
+export type OuiSmallFilterButtonProps = OuiSmallButtonEmptyProps & {
+  /**
+   * Bolds the button if true
+   */
+  hasActiveFilters?: boolean;
+  /**
+   * Pass the total number of filters available and it will
+   * add a subdued notification badge showing the number
+   */
+  numFilters?: number;
+  /**
+   * Pass the number of selected filters and it will
+   * add a bright notification badge showing the number
+   */
+  numActiveFilters?: number;
+  /**
+   * Applies a visual state to the button useful when using with a popover.
+   */
+  isSelected?: boolean;
+  /**
+   * Should the button grow to fill its container, best used for dropdown buttons
+   */
+  grow?: boolean;
+  /**
+   * Remove border after button, good for opposite filters
+   */
+  withNext?: boolean;
+  /**
+   * _DEPRECATED: use `withNext`_
+   * Remove border after button, good for opposite filters
+   */
+  noDivider?: boolean;
+};
+
+// @internal
+export const OuiSmallFilterButton: FunctionComponent<OuiSmallFilterButtonProps> = (
+  props
+) => <OuiFilterButton {...props} size="s" />;

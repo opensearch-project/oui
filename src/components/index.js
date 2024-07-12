@@ -120,6 +120,7 @@ export {
   OuiFilterButton,
   OuiFilterGroup,
   OuiFilterSelectItem,
+  OuiSmallFilterButton,
 } from './filter_group';
 
 export { OuiFacetButton, OuiFacetGroup } from './facet';
