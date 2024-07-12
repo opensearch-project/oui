@@ -90,3 +90,5 @@ rules:
   no-warn: 0
   # Transition all is useful in certain situations and there's no recent info to suggest slowdown
   no-transition-all: 0
+
+  hex-length: 'long'

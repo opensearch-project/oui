@@ -11,7 +11,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-// Uncomment to use in consuming apps or CodeSandbox
+// Uncomment to use in consuming apps
 // import theme from '@opensearch-project/oui/dist/oui_theme_light.json';
 
 import {
