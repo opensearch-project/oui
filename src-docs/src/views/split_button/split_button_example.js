@@ -29,6 +29,15 @@ const splitButtonBasicSnippet = `<OuiSplitButton
 >Basic Split Button</OuiSplitButton>
 `;
 
+import SplitButtonSimple from './split_button_simple';
+const splitButtonSimpleSource = require('!!raw-loader!./split_button_simple');
+const splitButtonSimpleHtml = renderToHtml(SplitButtonSimple);
+const splitButtonSimpleSnippet = `<OuiSplitButton
+  options={[]} initiallyOpen
+  onClick={() => console.log("Primary clicked")}
+>Simple Split Button</OuiSplitButton>
+`;
+
 import SplitButtonComplex from './split_button_complex';
 const splitButtonComplexSource = require('!!raw-loader!./split_button_complex');
 const splitButtonComplexHtml = renderToHtml(SplitButtonComplex);
@@ -179,6 +188,30 @@ export const SplitButtonExample = {
       props: { OuiSplitButton },
       snippet: splitButtonBasicSnippet,
       demo: <SplitButtonBasic />,
+    },
+    {
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: splitButtonSimpleSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: splitButtonSimpleHtml,
+        },
+      ],
+      text: (
+        <div>
+          <p>
+            When no options are provided, SplitButton displays a simple Button
+            in it&apos;s place, even if other dropdown options are present (like
+            <OuiCode>intiallyOpen</OuiCode>)
+          </p>
+        </div>
+      ),
+      props: { OuiSplitButton },
+      snippet: splitButtonSimpleSnippet,
+      demo: <SplitButtonSimple />,
     },
     {
       title: 'More complex',

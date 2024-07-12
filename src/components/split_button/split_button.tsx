@@ -111,8 +111,9 @@ export const OuiSplitButton = ({
   buttonProps,
   ...rest
 }: OuiSplitButtonProps) => {
+  const displayDropdown = options.length > 0;
   const itemNodes: Array<HTMLButtonElement | null> = useMemo(() => [], []);
-  const [isOpen, setIsOpen] = useState(!!initiallyOpen);
+  const [isOpen, setIsOpen] = useState(!!initiallyOpen && displayDropdown);
   const [panelEl, setPanelEl] = useState<HTMLElement | null>(null);
   const panelRef = (node: HTMLElement | null) => setPanelEl(node);
 
@@ -239,6 +240,7 @@ export const OuiSplitButton = ({
 
   const button = (
     <OuiSplitButtonControl
+      displayDropdown={displayDropdown}
       color={color}
       onDropdownClick={() => setIsOpen(!isOpen)}
       onClick={onPrimaryClick}
