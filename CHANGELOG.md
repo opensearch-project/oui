@@ -11,6 +11,8 @@
 ### 📈 Features/Enhancements
 
 - [OuiFilterGroup] Allow popovers to size to content ([#1280](https://github.com/opensearch-project/oui/pull/1280))
+- Add compressed form, color-picker, and combo-box internal components ([#1301](https://github.com/opensearch-project/oui/pull/1301))
+- Add small button and filter-button internal components ([#1301](https://github.com/opensearch-project/oui/pull/1301))
 
 ### 🐛 Bug Fixes
 
