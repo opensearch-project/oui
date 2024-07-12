@@ -26,19 +26,7 @@
 // Adds the focus (and hover) animation for translating up 1px
 @mixin ouiButtonFocus {
   @include ouiCanAnimate {
-    transition: transform $ouiAnimSpeedNormal ease-in-out, background $ouiAnimSpeedNormal ease-in-out;
-
-    &:hover:not([class*='isDisabled']) {
-      transform: translateY(-1px);
-    }
-
-    &:focus {
-      animation: ouiButtonActive $ouiAnimSpeedNormal $ouiAnimSlightBounce;
-    }
-
-    &:active:not([class*='isDisabled']) {
-      transform: translateY(1px);
-    }
+    transition: background $ouiAnimSpeedNormal ease-in-out;
   }
 }
 
@@ -47,7 +35,7 @@
 @mixin ouiButton {
   @include ouiButtonBase;
   @include ouiFont;
-  @include ouiFontSize;
+  @include ouiFontSizeS;
 
   text-decoration: none;
   border: solid 1px transparent;

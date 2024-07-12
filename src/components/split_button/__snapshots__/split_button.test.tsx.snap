@@ -11,7 +11,7 @@ exports[`OuiSplitButton is rendered 1`] = `
       class="ouiSplitButtonControl ouiSplitButtonColor--primary"
     >
       <button
-        class="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+        class="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary"
         data-test-subj="splitButton--primary"
         type="button"
       >
@@ -24,19 +24,6 @@ exports[`OuiSplitButton is rendered 1`] = `
             Test
           </span>
         </span>
-      </button>
-      <button
-        aria-label="Open Selections"
-        class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
-        data-test-subj="splitButton--dropdown"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="ouiButtonIcon__icon"
-          color="inherit"
-          data-ouiicon-type="arrowDown"
-        />
       </button>
     </div>
   </div>
@@ -64,6 +51,7 @@ exports[`OuiSplitButton onClick events selection list is opened on drop-down but
       <OuiSplitButtonControl
         className="ouiSplitButton--isOpen__button"
         color="primary"
+        displayDropdown={true}
         fullWidth={false}
         onClick={[Function]}
         onDropdownClick={[Function]}
@@ -98,6 +86,7 @@ exports[`OuiSplitButton onClick events selection list is opened on drop-down but
           <OuiSplitButtonControl
             className="ouiSplitButton--isOpen__button"
             color="primary"
+            displayDropdown={true}
             fullWidth={false}
             onClick={[Function]}
             onDropdownClick={[Function]}
@@ -1139,6 +1128,7 @@ exports[`OuiSplitButton options rendering option with href renders link 1`] = `
       <OuiSplitButtonControl
         className="ouiSplitButton--isOpen__button"
         color="primary"
+        displayDropdown={true}
         fullWidth={false}
         onClick={[Function]}
         onDropdownClick={[Function]}
@@ -1173,6 +1163,7 @@ exports[`OuiSplitButton options rendering option with href renders link 1`] = `
           <OuiSplitButtonControl
             className="ouiSplitButton--isOpen__button"
             color="primary"
+            displayDropdown={true}
             fullWidth={false}
             onClick={[Function]}
             onDropdownClick={[Function]}
@@ -1995,6 +1986,7 @@ exports[`OuiSplitButton options rendering options are rendered when select is op
       <OuiSplitButtonControl
         className="ouiSplitButton--isOpen__button"
         color="primary"
+        displayDropdown={true}
         fullWidth={false}
         onClick={[Function]}
         onDropdownClick={[Function]}
@@ -2029,6 +2021,7 @@ exports[`OuiSplitButton options rendering options are rendered when select is op
           <OuiSplitButtonControl
             className="ouiSplitButton--isOpen__button"
             color="primary"
+            displayDropdown={true}
             fullWidth={false}
             onClick={[Function]}
             onDropdownClick={[Function]}
@@ -3006,6 +2999,7 @@ exports[`OuiSplitButton options rendering selectedItem 0 is rendered 1`] = `
       <OuiSplitButtonControl
         className="ouiSplitButton--isOpen__button"
         color="primary"
+        displayDropdown={true}
         fullWidth={false}
         onClick={[Function]}
         onDropdownClick={[Function]}
@@ -3040,6 +3034,7 @@ exports[`OuiSplitButton options rendering selectedItem 0 is rendered 1`] = `
           <OuiSplitButtonControl
             className="ouiSplitButton--isOpen__button"
             color="primary"
+            displayDropdown={true}
             fullWidth={false}
             onClick={[Function]}
             onDropdownClick={[Function]}
@@ -4088,6 +4083,7 @@ exports[`OuiSplitButton options rendering selectedItem last is rendered 1`] = `
       <OuiSplitButtonControl
         className="ouiSplitButton--isOpen__button"
         color="primary"
+        displayDropdown={true}
         fullWidth={false}
         onClick={[Function]}
         onDropdownClick={[Function]}
@@ -4122,6 +4118,7 @@ exports[`OuiSplitButton options rendering selectedItem last is rendered 1`] = `
           <OuiSplitButtonControl
             className="ouiSplitButton--isOpen__button"
             color="primary"
+            displayDropdown={true}
             fullWidth={false}
             onClick={[Function]}
             onDropdownClick={[Function]}
@@ -5344,7 +5341,7 @@ exports[`OuiSplitButton props fullWidth is rendered 1`] = `
       class="ouiSplitButtonControl ouiSplitButtonColor--primary"
     >
       <button
-        class="ouiButton ouiButton--primary ouiButton--fullWidth ouiSplitButtonControl ouiSplitButtonControl--primary ouiSplitButtonHairline--primary"
+        class="ouiButton ouiButton--primary ouiButton--fullWidth ouiSplitButtonControl ouiSplitButtonControl--primary"
         data-test-subj="splitButton--primary"
         type="button"
       >
@@ -5358,20 +5355,248 @@ exports[`OuiSplitButton props fullWidth is rendered 1`] = `
           </span>
         </span>
       </button>
-      <button
-        aria-label="Open Selections"
-        class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--medium ouiSplitButtonControl--dropdown"
-        data-test-subj="splitButton--dropdown"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="ouiButtonIcon__icon"
-          color="inherit"
-          data-ouiicon-type="arrowDown"
-        />
-      </button>
     </div>
   </div>
 </div>
+`;
+
+exports[`OuiSplitButton simple button display display simple button when options are blank 1`] = `
+<OuiSplitButton
+  options={Array []}
+>
+  <OuiPopover
+    anchorPosition="downRight"
+    button={
+      <OuiSplitButtonControl
+        className=""
+        color="primary"
+        displayDropdown={false}
+        fullWidth={false}
+        onClick={[Function]}
+        onDropdownClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        Test
+      </OuiSplitButtonControl>
+    }
+    className="ouiSplitButton"
+    closePopover={[Function]}
+    display="inlineBlock"
+    hasArrow={false}
+    isOpen={false}
+    ownFocus={false}
+    panelPaddingSize="none"
+    panelRef={[Function]}
+  >
+    <OuiOutsideClickDetector
+      onOutsideClick={[Function]}
+    >
+      <div
+        className="ouiPopover ouiPopover--anchorDownRight ouiSplitButton"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="ouiPopover__anchor"
+        >
+          <OuiSplitButtonControl
+            className=""
+            color="primary"
+            displayDropdown={false}
+            fullWidth={false}
+            onClick={[Function]}
+            onDropdownClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            <div
+              className="ouiSplitButtonControl ouiSplitButtonColor--primary"
+            >
+              <OuiButton
+                className="ouiSplitButtonControl ouiSplitButtonControl--primary"
+                color="primary"
+                data-test-subj="splitButton--primary"
+                fullWidth={false}
+                isDisabled={false}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                <OuiButtonDisplay
+                  baseClassName="ouiButton"
+                  className="ouiSplitButtonControl ouiSplitButtonControl--primary"
+                  color="primary"
+                  data-test-subj="splitButton--primary"
+                  disabled={false}
+                  element="button"
+                  fullWidth={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  type="button"
+                >
+                  <button
+                    className="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary"
+                    data-test-subj="splitButton--primary"
+                    disabled={false}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    style={
+                      Object {
+                        "minWidth": undefined,
+                      }
+                    }
+                    type="button"
+                  >
+                    <OuiButtonContent
+                      className="ouiButton__content"
+                      iconSide="left"
+                      textProps={
+                        Object {
+                          "className": "ouiButton__text",
+                        }
+                      }
+                    >
+                      <span
+                        className="ouiButtonContent ouiButton__content"
+                      >
+                        <span
+                          className="ouiButton__text"
+                        >
+                          Test
+                        </span>
+                      </span>
+                    </OuiButtonContent>
+                  </button>
+                </OuiButtonDisplay>
+              </OuiButton>
+            </div>
+          </OuiSplitButtonControl>
+        </div>
+      </div>
+    </OuiOutsideClickDetector>
+  </OuiPopover>
+</OuiSplitButton>
+`;
+
+exports[`OuiSplitButton simple button display ignore initiallyOpen when options are blank 1`] = `
+<OuiSplitButton
+  initiallyOpen={true}
+  options={Array []}
+>
+  <OuiPopover
+    anchorPosition="downRight"
+    button={
+      <OuiSplitButtonControl
+        className=""
+        color="primary"
+        displayDropdown={false}
+        fullWidth={false}
+        onClick={[Function]}
+        onDropdownClick={[Function]}
+        onKeyDown={[Function]}
+      >
+        Test
+      </OuiSplitButtonControl>
+    }
+    className="ouiSplitButton"
+    closePopover={[Function]}
+    display="inlineBlock"
+    hasArrow={false}
+    isOpen={false}
+    ownFocus={false}
+    panelPaddingSize="none"
+    panelRef={[Function]}
+  >
+    <OuiOutsideClickDetector
+      onOutsideClick={[Function]}
+    >
+      <div
+        className="ouiPopover ouiPopover--anchorDownRight ouiSplitButton"
+        onKeyDown={[Function]}
+        onMouseDown={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchStart={[Function]}
+      >
+        <div
+          className="ouiPopover__anchor"
+        >
+          <OuiSplitButtonControl
+            className=""
+            color="primary"
+            displayDropdown={false}
+            fullWidth={false}
+            onClick={[Function]}
+            onDropdownClick={[Function]}
+            onKeyDown={[Function]}
+          >
+            <div
+              className="ouiSplitButtonControl ouiSplitButtonColor--primary"
+            >
+              <OuiButton
+                className="ouiSplitButtonControl ouiSplitButtonControl--primary"
+                color="primary"
+                data-test-subj="splitButton--primary"
+                fullWidth={false}
+                isDisabled={false}
+                onClick={[Function]}
+                onKeyDown={[Function]}
+              >
+                <OuiButtonDisplay
+                  baseClassName="ouiButton"
+                  className="ouiSplitButtonControl ouiSplitButtonControl--primary"
+                  color="primary"
+                  data-test-subj="splitButton--primary"
+                  disabled={false}
+                  element="button"
+                  fullWidth={false}
+                  isDisabled={false}
+                  onClick={[Function]}
+                  onKeyDown={[Function]}
+                  type="button"
+                >
+                  <button
+                    className="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary"
+                    data-test-subj="splitButton--primary"
+                    disabled={false}
+                    onClick={[Function]}
+                    onKeyDown={[Function]}
+                    style={
+                      Object {
+                        "minWidth": undefined,
+                      }
+                    }
+                    type="button"
+                  >
+                    <OuiButtonContent
+                      className="ouiButton__content"
+                      iconSide="left"
+                      textProps={
+                        Object {
+                          "className": "ouiButton__text",
+                        }
+                      }
+                    >
+                      <span
+                        className="ouiButtonContent ouiButton__content"
+                      >
+                        <span
+                          className="ouiButton__text"
+                        >
+                          Test
+                        </span>
+                      </span>
+                    </OuiButtonContent>
+                  </button>
+                </OuiButtonDisplay>
+              </OuiButton>
+            </div>
+          </OuiSplitButtonControl>
+        </div>
+      </div>
+    </OuiOutsideClickDetector>
+  </OuiPopover>
+</OuiSplitButton>
 `;
