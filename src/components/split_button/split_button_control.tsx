@@ -44,6 +44,12 @@ export interface OuiSplitButtonControlProps
   fill?: boolean;
 
   /**
+   * Display dropdown button
+   * False renders SplitButton as a simple Button.
+   */
+  displayDropdown?: boolean;
+
+  /**
    * Color of buttons and options
    */
   color?: OuiSplitButtonColor;
@@ -88,6 +94,7 @@ export interface OuiSplitButtonControlProps
 export const OuiSplitButtonControl: FunctionComponent<
   OuiSplitButtonControlProps & OuiSplitButtonActionProps
 > = ({
+  displayDropdown = true,
   fill,
   size,
   color = 'primary',
@@ -115,9 +122,11 @@ export const OuiSplitButtonControl: FunctionComponent<
   const primaryButtonClasses = classNames(
     'ouiSplitButtonControl',
     'ouiSplitButtonControl--primary',
-    color && `ouiSplitButtonHairline${colorToClassNameMap[color]}`,
-    disabled && 'ouiSplitButtonHairline--isDisabled',
-    fill && 'ouiSplitButtonHairline--filled'
+    color &&
+      displayDropdown &&
+      `ouiSplitButtonHairline${colorToClassNameMap[color]}`,
+    disabled && displayDropdown && 'ouiSplitButtonHairline--isDisabled',
+    fill && displayDropdown && 'ouiSplitButtonHairline--filled'
   );
 
   const actionProps = {
@@ -141,22 +150,24 @@ export const OuiSplitButtonControl: FunctionComponent<
         {...buttonProps}>
         {children}
       </OuiButton>
-      <OuiButtonIcon
-        display={iconDisplay}
-        className="ouiSplitButtonControl--dropdown"
-        //@ts-ignore - typedef conflict between ButtonColor, OuiButtonIconColor
-        // https://github.com/opensearch-project/oui/issues/1196
-        color={color}
-        size={size || 'm'}
-        disabled={disabled}
-        isDisabled={disabled}
-        iconType="arrowDown"
-        onClick={onDropdownClick}
-        onKeyDown={onSelectKeydown}
-        aria-label="Open Selections"
-        data-test-subj="splitButton--dropdown"
-        {...dropdownProps}
-      />
+      {displayDropdown && (
+        <OuiButtonIcon
+          display={iconDisplay}
+          className="ouiSplitButtonControl--dropdown"
+          //@ts-ignore - typedef conflict between ButtonColor, OuiButtonIconColor
+          // https://github.com/opensearch-project/oui/issues/1196
+          color={color}
+          size={size || 'm'}
+          disabled={disabled}
+          isDisabled={disabled}
+          iconType="arrowDown"
+          onClick={onDropdownClick}
+          onKeyDown={onSelectKeydown}
+          aria-label="Open Selections"
+          data-test-subj="splitButton--dropdown"
+          {...dropdownProps}
+        />
+      )}
     </div>
   );
 };
