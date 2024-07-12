@@ -59,6 +59,7 @@
 - Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
 - Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
 - Remove "Widths" section from the OuiModal docs ([#1066](https://github.com/opensearch-project/oui/pull/1066))
+- Add instructions on how to test with OpenSearch Dashboards ([1279](https://github.com/opensearch-project/oui/pull/1279))
 
 ### 🛠 Maintenance
 - Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
