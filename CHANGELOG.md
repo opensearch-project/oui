@@ -8,21 +8,64 @@
 
 ### 🛡 Security
 
-- [CVE-2023-46234] Bump `browserify-sign` from `4.0.4` to `4.2.2` ([#1117](https://github.com/opensearch-project/oui/pull/1117))
-- Bump `babel-template` from `6.26.0` to `@babel/template` `7.10.4` ([#1095](https://github.com/opensearch-project/oui/pull/1095))
-- [CVE-2023-45857] Remediate `axios` vulnerabilities ([#1152](https://github.com/opensearch-project/oui/pull/1152))
-- [CVE-2023-45133] Bump `@babel/traverse` from `7.12.10` to `7.23.6` ([#1174](https://github.com/opensearch-project/oui/pull/1174))
+### 📈 Features/Enhancements
+
+- [OuiFilterGroup] Allow popovers to size to content ([#1280](https://github.com/opensearch-project/oui/pull/1280))
+
+### 🐛 Bug Fixes
+
+### 🚞 Infrastructure
+
+### 📝 Documentation
+
+- Add instructions on how to test with OpenSearch Dashboards ([1279](https://github.com/opensearch-project/oui/pull/1279))
+
+### 🛠 Maintenance
+
+### 🪛 Refactoring
+
+### 🔩 Tests
+
+## [`1.6.0`](https://github.com/opensearch-project/oui/tree/1.6.0)
+
+### 🛡 Security
+
+- [CVE-2024-28849] Bump `follow-redirects` from `1.15.4` to `1.15.6` ([#1258](https://github.com/opensearch-project/oui/pull/1258))
+- [CVE-2024-28863] Bump `tar` from `6.1.11` to `6.2.1` ([#1260](https://github.com/opensearch-project/oui/pull/1260))
+- [CVE-2024-33883] Bump `ejs` from `3.1.8` to `3.1.10` ([#1263](https://github.com/opensearch-project/oui/pull/1263))
+- [CVE-2024-29041] Bump `express` from `4.18.2` to `4.19.2` ([#1259](https://github.com/opensearch-project/oui/pull/1259))
+- [CVE-2023-42282] Bump `ip` from `1.1.5` to `1.1.9` ([#1255](https://github.com/opensearch-project/oui/pull/1255))
 
 ### 📈 Features/Enhancements
 
-- Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
-- Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
-- Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
+- Convert shorthand palette colors to full 6-char hex ([#1262](https://github.com/opensearch-project/oui/pull/1262))
+
+### 🐛 Bug Fixes
+
+- Fix cell lines in OuiDataGrid ([#1250](https://github.com/opensearch-project/oui/pull/1250))
+
+### 🪛 Refactoring
+
+- Refactor CSS modifiers and keywords in OuiBreadcrumb ([#1144](https://github.com/opensearch-project/oui/pull/1144))
+
+
+## [`1.5.1`](https://github.com/opensearch-project/oui/tree/1.5.1)
+
+### 🐛 Bug Fixes
+
+- Fix datagrid lines ([#1250](https://github.com/opensearch-project/oui/pull/1250))
+
+
+## [`1.5.0`](https://github.com/opensearch-project/oui/tree/1.5.0)
+
+### 🛡 Security
+
+- [CVE-2023-45857] Remediate `axios` vulnerabilities ([#1152](https://github.com/opensearch-project/oui/pull/1152))
+- [CVE-2023-26159] Bump follow-redirects to 1.15.5 ([#1245](https://github.com/opensearch-project/oui/pull/1245))
+
+### 📈 Features/Enhancements
+
 - Add CSS `display-none` utility ([#1120](https://github.com/opensearch-project/oui/pull/1120))
-- Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
-- Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
-- Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
-- Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
 - Add SplitButton control ([#1193](https://github.com/opensearch-project/oui/pull/1193))
 - Eliminate screenreader content when copying and pasting data grid table ([#1198](https://github.com/opensearch-project/oui/pull/1198))
 - [Next Theme] Set base font size to 18px ([#1221](https://github.com/opensearch-project/oui/pull/1221))
@@ -36,49 +79,91 @@
 
 ### 🐛 Bug Fixes
 
-- Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
-- Extract build archive into a folder for OSD integration test CI ([#1075](https://github.com/opensearch-project/oui/pull/1075))
-- Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
-- Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
 - Fix bug in OuiButtonContent for showing info tooltip in icon-only buttons when hovered([#1160](https://github.com/opensearch-project/oui/pull/1160))
 - Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
 - Make a OuiSplitButton with no options present as a button ([#1208](https://github.com/opensearch-project/oui/pull/1208))
 - Prevent collapsable button of a resizable from adding to the height when hidden ([#1241](https://github.com/opensearch-project/oui/pull/1241))
 - Prevent action buttons of OuiDataGridCell from moving the content ([#1224](https://github.com/opensearch-project/oui/pull/1224))
 - Fix vertical alignment and font weight of breadcrumbs that are buttons or links ([#1232](https://github.com/opensearch-project/oui/pull/1232))
-- Fix datagrid lines ([#1250](https://github.com/opensearch-project/oui/pull/1250))
+
+### 🚞 Infrastructure
+
+
+### 📝 Documentation
+
+- Removed the chart section that's using elastic charts ([#370](https://github.com/opensearch-project/oui/pull/370))
+
+### 🛠 Maintenance
+
+
+### 🪛 Refactoring
+
+
+
+## [`1.4.0`](https://github.com/opensearch-project/oui/tree/1.4.0)
+
+### 🛡 Security
+
+- Bump `babel-template` from `6.26.0` to `@babel/template` `7.10.4` ([#1095](https://github.com/opensearch-project/oui/pull/1095))
+- [CVE-2023-46234] Bump `browserify-sign` from `4.0.4` to `4.2.2` ([#1117](https://github.com/opensearch-project/oui/pull/1117))
+- [CVE-2023-45133] Bump `@babel/traverse` from `7.12.10` to `7.23.6` ([#1174](https://github.com/opensearch-project/oui/pull/1174))
+
+### 📈 Features/Enhancements
+
+- Update ouiTextSubduedColor in `next` dark theme ([#973](https://github.com/opensearch-project/oui/pull/973))
+- Add `Docking` icons ([#1041](https://github.com/opensearch-project/oui/pull/1041))
+- Add `crossInCircleEmpty` and `power` icons ([#1044](https://github.com/opensearch-project/oui/pull/1044))
+- Add slugs to markdown headers ([#1051](https://github.com/opensearch-project/oui/pull/1051))
+- Add `onFullScreenChange` to `OuiDataGrid` ([#1053](https://github.com/opensearch-project/oui/pull/1053))
+- Add `Figma` icon and link to OUI Figma resources ([#1064](https://github.com/opensearch-project/oui/pull/1064))
+- Rename `crossInACircleFilled` asset files and ensure backward compatibility ([#1113](https://github.com/opensearch-project/oui/pull/1113))
+- Implement validation for icon input source & set default icon to `Beaker` ([#1137](https://github.com/opensearch-project/oui/pull/1137))
+
+### 🐛 Bug Fixes
+
+- Add exit code to compile-scss script on failure ([#1024](https://github.com/opensearch-project/oui/pull/1024))
+- Fix alignment of left icon for OuiListGroupItem with multiline text ([#1027](https://github.com/opensearch-project/oui/pull/1027))
+- Correct file path for import of Query component ([#1069](https://github.com/opensearch-project/oui/pull/1069))
+- Update polygon icon SVG ([#1083](https://github.com/opensearch-project/oui/pull/1083))
+- Fix "Guidelines" documentation links rendering blank pages ([#1111](https://github.com/opensearch-project/oui/pull/1111))
 
 ### 🚞 Infrastructure
 
 - Add integration test with OSD workflows ([#1017](https://github.com/opensearch-project/oui/pull/1017))
+- Extract build archive into a folder for OSD integration test CI ([#1075](https://github.com/opensearch-project/oui/pull/1075))
+- Add error handling when staged files are empty ([#1114](https://github.com/opensearch-project/oui/pull/1114))
 - Skip build and test workflows on dependabot PR ([#1170](https://github.com/opensearch-project/oui/pull/1170))
 
 ### 📝 Documentation
 
+- Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
 - Update default docsite theme to Next Dark ([#1029](https://github.com/opensearch-project/oui/pull/1029))
 - Fix next light color guidelines ([#1030](https://github.com/opensearch-project/oui/pull/1030))
-- Update docsite version selector to use OUI components ([#1028](https://github.com/opensearch-project/oui/pull/1028))
 - Remove "Widths" section from the OuiModal docs ([#1066](https://github.com/opensearch-project/oui/pull/1066))
-- Add instructions on how to test with OpenSearch Dashboards ([1279](https://github.com/opensearch-project/oui/pull/1279))
+- Remove "Emphasized Side Nav" section from OUI docs site ([#1084](https://github.com/opensearch-project/oui/pull/1084))
 
 ### 🛠 Maintenance
-- Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
-- Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
+
 - Bump TypeScript to v4.6.4 ([#879](https://github.com/opensearch-project/oui/pull/879))
+- Remove Internet Explorer specific code ([#890](https://github.com/opensearch-project/oui/pull/890))
+- Replace `node-sass` with `sass-embedded` ([#1001](https://github.com/opensearch-project/oui/pull/1001))
+- Update caniuse database ([#1046](https://github.com/opensearch-project/oui/pull/1046))
 - Clean up `react-datepicker` package to remove unnecessary directories and files ([#1067](https://github.com/opensearch-project/oui/pull/1067))
+- Update `pre-commit` hook to only use `lint` instead of running `test-staged` script ([#1072](https://github.com/opensearch-project/oui/pull/1072))
 - Bump `@types/react` and `csstype` ([#1105](https://github.com/opensearch-project/oui/pull/1105))
-- Clean up unused runtime and dev dependencies ([#1135](https://github.com/opensearch-project/oui/pull/1135))
 - Add `scripts` folder to lint-es script ([#1143](https://github.com/opensearch-project/oui/pull/1143))
-- Clean up code OUI Breadcrumb component from previous updates ([#1144](https://github.com/opensearch-project/oui/pull/1144))
 - Update deprecated Babel plugins ([#1155](https://github.com/opensearch-project/oui/pull/1155))
 - Move @seanneumann to emeritus maintainer ([#1188](https://github.com/opensearch-project/oui/pull/1188))
-- Move @BSFishy and @KrooshalUX to emeritus maintainer ([#1272](https://github.com/opensearch-project/oui/pull/1272))
 
 ### 🪛 Refactoring
 
-### 🔩 Tests
 
 ## [`1.3.0`](https://github.com/opensearch-project/oui/tree/1.3.0)
+
+### 🛡 Security
+- [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
+- [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
+- Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
 
 ### 📈 Features/Enhancements
 
@@ -94,16 +179,12 @@
 - Adjust background color of OuiToolTip in `next` theme ([#1004](https://github.com/opensearch-project/oui/pull/1004))
 - Add new `middle-out` order prop option to `OuiPaletteColorBlind` ([#856](https://github.com/opensearch-project/oui/pull/856))
 - Add new icons for OpenSearch Dashboards v2.10.0 ([#1014](https://github.com/opensearch-project/oui/pull/1014))
-- Add `onFullScreenChange` to `OuiDataGrid` ([#1053](https://github.com/opensearch-project/oui/pull/1053))
 
 ### 🐛 Bug Fixes
 
 - Fix blurry text in breadcrumbs by avoiding skewing text ([#959](https://github.com/opensearch-project/oui/pull/959))
 - Remove `calc` usage from SchemaItem styles ([#990](https://github.com/opensearch-project/oui/pull/990))
 - Add support for null types when deriving JSON from Sass variables ([#1019](https://github.com/opensearch-project/oui/pull/1019))
-- Fix alignment of left icon for OuiListGroupItem with multiline text ([#1027](https://github.com/opensearch-project/oui/pull/1027))
-- Update new polygon icon svg ([#1068](https://github.com/opensearch-project/oui/pull/1083))
-- Remove max-height for TreeView node ([[#1118](https://github.com/opensearch-project/oui/issues/1118)])
 
 ### 🚞 Infrastructure
 
@@ -117,16 +198,10 @@
 - Replace Avatar in favor of Icon in OuiFacetButtons example ([#987](https://github.com/opensearch-project/oui/pull/987))
 - Add dark prop toggles ([#910](https://github.com/opensearch-project/oui/pull/910))
 - Remove language from the form validation documentation that doesn't align with the updated guidelines ([#986](https://github.com/opensearch-project/oui/pull/986))
-- Remove "Emphasized Side Nav" section from OUI docs site ([#1084](https://github.com/opensearch-project/oui/pull/1084))
 
 ### 🛠 Maintenance
 
-- Made changes to `pre-commit` hook to only use `lint` instead of running `test-staged` script ([#1072](https://github.com/opensearch-project/oui/pull/1072))
-- [CVE-2023-26136] Add resolution for tough-cookie to ^4.1.3 ([#889](https://github.com/opensearch-project/oui/pull/889))
-- [CVE-2023-26115] Bump word-wrap from 1.2.3 to 1.2.4 ([#891](https://github.com/opensearch-project/oui/pull/891))
 - Bump Node version to 18.16.0 ([#900](https://github.com/opensearch-project/oui/pull/900))
-- Bump `node-sass` to a patched version based on `libsass@3.6.5` ([#977](https://github.com/opensearch-project/oui/pull/977)); see [patch commit](https://github.com/AMoo-Miki/node-sass/commit/43c74c0966b05c1e21a1e5e20a0c467ec8e669b4) for details.
-- Replace `node-sass` with `sass-embedded` ([#1001](https://github.com/opensearch-project/oui/pull/1001))
 
 ### 🪛 Refactoring
 
@@ -2005,7 +2080,7 @@
 
 - Re-enabled `width` property for `EuiTable` cell components ([#2452](https://github.com/elastic/eui/pull/2452))
 - Fixed `EuiNavDrawer` collapse/expand button height issue
- ([#2463](https://github.com/elastic/eui/pull/2463))
+  ([#2463](https://github.com/elastic/eui/pull/2463))
 
 ## [`14.6.0`](https://github.com/elastic/eui/tree/v14.6.0)
 
@@ -2076,7 +2151,7 @@
 
 - Added `compressed` option to `buttonSize` prop of EuiButtonGroup ([#2343](https://github.com/elastic/eui/pull/2343))
 - Added disabled states to `EuiCard`, `EuiKeyPadMenuItem` and `EuiKeyPadMenuItemButton`
- ([#2333](https://github.com/elastic/eui/pull/2340))
+  ([#2333](https://github.com/elastic/eui/pull/2340))
 - Added missing `compressed` TS definitions to `EuiComboBox`, `EuiCheckboxGroup`, `EuiCheckbox`, `EuiFieldSearch`, `EuiRadioGroup`, `EuiSwitch` ([#2338](https://github.com/elastic/eui/pull/2338))
 - Added auto-margin between `EuiFormRow` and `EuiButton` ([#2338](https://github.com/elastic/eui/pull/2338))
 - Added border to `[readOnly]` inputs ([#2338](https://github.com/elastic/eui/pull/2338))
@@ -3237,7 +3312,7 @@
 
 - Added `email` icon to `EuiIcon` ([#1331](https://github.com/elastic/eui/pull/1331))
 - Added IBM logo in colour and mono
-([#1321](https://github.com/elastic/eui/pull/1321))
+  ([#1321](https://github.com/elastic/eui/pull/1321))
 - Added support for nodes as "Action" column headers in `EuiBasicTable`, which was overlooked in the original change in `4.5.0` ([#1312](https://github.com/elastic/eui/pull/1312))
 - Updated `GlobalDatePicker` example to include all Kibana features ([#1219](https://github.com/elastic/eui/pull/1219))
 - Adjusted `EuiDatePickerRange` to allow for deeper customization ([#1219](https://github.com/elastic/eui/pull/1219))
@@ -3489,7 +3564,7 @@
 **Bug fixes**
 
 - `EuiWrappingPopover` only re-attach anchor element on unmount if anchor element is still attached to DOM
-([#1114](https://github.com/elastic/eui/pull/1114))
+  ([#1114](https://github.com/elastic/eui/pull/1114))
 
 - Fixed `EuiSeriesChart` overrides `react-vis` classes ([#1123](https://github.com/elastic/eui/pull/1123))
 
@@ -3538,7 +3613,7 @@
 
 **Experimental breaking change**
 
- - Renamed `EuiXYChart` to `EuiSeriesChart`, `EuiXYChartUtils` to `EuiSeriesChartUtils`, `EuiXYChartAxisUtils` to `EuiSeriesChartAxisUtils`, and  `EuiXYChartTextUtils` to `EuiSeriesChartTextUtils` ([#1066](https://github.com/elastic/eui/pull/1066))
+- Renamed `EuiXYChart` to `EuiSeriesChart`, `EuiXYChartUtils` to `EuiSeriesChartUtils`, `EuiXYChartAxisUtils` to `EuiSeriesChartAxisUtils`, and  `EuiXYChartTextUtils` to `EuiSeriesChartTextUtils` ([#1066](https://github.com/elastic/eui/pull/1066))
 
 ## [`3.2.1`](https://github.com/elastic/eui/tree/v3.2.1)
 
@@ -3921,9 +3996,9 @@
 - `EuiInMemoryTable` pagination state is now reset automatically when a search is executed ([#686](https://github.com/elastic/eui/pull/686))
 - Fixed slow performance of `EuiComboBox` when there are hundreds or thousands of options by virtualizing `EuiComboBoxOptionsList` ([#670](https://github.com/elastic/eui/pull/670))
 - Fixed some text styles ([#683](https://github.com/elastic/eui/pull/683))
-    - Fixed font-family of input, textarea, select, and buttons
-    - Fixed style of code, pre, and dl’s inside `EuiText`
-    - Fixed ghost text color which was being set to a dark gray
+  - Fixed font-family of input, textarea, select, and buttons
+  - Fixed style of code, pre, and dl’s inside `EuiText`
+  - Fixed ghost text color which was being set to a dark gray
 
 **Breaking changes**
 
@@ -4090,7 +4165,7 @@
 - `EuiInMemoryTable` pass items to BasicTable when message is provided ([#517](https://github.com/elastic/eui/pull/517)).
 - `EuiSearchBox` now passes unused props through to `EuiFieldSearch` ([#514](https://github.com/elastic/eui/pull/514))
 - Change `EuiBasicTable` `noItemsMessage` and `EuiInMemoryTable` `message` propType to node
-instead of just string ([#516](https://github.com/elastic/eui/pull/516))
+  instead of just string ([#516](https://github.com/elastic/eui/pull/516))
 
 ## [`0.0.27`](https://github.com/elastic/eui/tree/v0.0.27)
 
