@@ -105,6 +105,10 @@
           background-color: darken($color, 5%);
           border-color: darken($color, 5%);
         }
+
+        &:active {
+          @include ouiSlightShadowActive(darken($color, 10%), .4);
+        }
       }
     }
 
@@ -124,6 +128,10 @@
       &:focus-within {
         @include ouiSlightShadowHover($shadowColor);
         background-color: transparentize($color, .9);
+      }
+
+      &:active {
+        @include ouiSlightShadowActive($color);
       }
     }
   }

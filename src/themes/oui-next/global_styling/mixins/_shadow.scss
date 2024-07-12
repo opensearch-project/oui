@@ -93,8 +93,8 @@
     0 2px 2px -1px rgba($color, $opacity);
 }
 
-@mixin ouiSlightShadowActive($color: $ouiShadowColor, $opacity: .3) {
-  @include ouiSlightShadowHover($color, $opacity);
+@mixin ouiSlightShadowActive($color: $ouiShadowColor, $opacity: .15) {
+  box-shadow: inset 1px 2px 8px rgba($color, $opacity);
 }
 
 @mixin ouiOverflowShadow($direction: 'y', $side: 'both') {
