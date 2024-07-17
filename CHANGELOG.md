@@ -1,6 +1,6 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
+## [`1.7.0`](https://github.com/opensearch-project/oui/tree/1.7.0)
 
 ### 🛡 Security
 
