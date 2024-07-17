@@ -163,3 +163,11 @@ export const OuiSwitch: FunctionComponent<OuiSwitchProps> = ({
     </div>
   );
 };
+
+// @internal
+export type OuiCompressedSwitchProps = Omit<OuiSwitchProps, 'compressed'>;
+
+// @internal
+export const OuiCompressedSwitch: FunctionComponent<OuiCompressedSwitchProps> = (
+  props
+) => <OuiSwitch {...props} compressed />;

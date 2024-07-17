@@ -28,7 +28,13 @@
  * under the License.
  */
 
-export { OuiComboBox, OuiComboBoxProps } from './combo_box';
+export {
+  OuiComboBox,
+  OuiComboBoxProps,
+  OuiCompressedComboBox,
+  OuiCompressedComboBoxProps,
+} from './combo_box';
+
 export * from './combo_box_input';
 export * from './combo_box_options_list';
 export {

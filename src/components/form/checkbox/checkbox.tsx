@@ -161,3 +161,14 @@ export class OuiCheckbox extends Component<OuiCheckboxProps> {
     }
   }
 }
+
+// @internal
+export type OuiCompressedCheckboxProps = Omit<OuiCheckboxProps, 'compressed'>;
+
+// @internal
+export class OuiCompressedCheckbox extends OuiCheckbox {
+  static defaultProps = {
+    ...OuiCheckbox.defaultProps,
+    compressed: true,
+  };
+}

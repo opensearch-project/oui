@@ -28,4 +28,9 @@
  * under the License.
  */
 
-export { OuiFieldText, OuiFieldTextProps } from './field_text';
+export {
+  OuiFieldText,
+  OuiFieldTextProps,
+  OuiCompressedFieldText,
+  OuiCompressedFieldTextProps,
+} from './field_text';

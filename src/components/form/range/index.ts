@@ -28,5 +28,16 @@
  * under the License.
  */
 
-export { OuiDualRange, OuiDualRangeProps } from './dual_range';
-export { OuiRange, OuiRangeProps } from './range';
+export {
+  OuiDualRange,
+  OuiDualRangeProps,
+  OuiCompressedDualRange,
+  OuiCompressedDualRangeProps,
+} from './dual_range';
+
+export {
+  OuiRange,
+  OuiRangeProps,
+  OuiCompressedRange,
+  OuiCompressedRangeProps,
+} from './range';

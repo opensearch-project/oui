@@ -33,6 +33,10 @@ export {
   OuiButtonEmpty,
   OuiButtonIcon,
   OuiButtonGroup,
+  OuiSmallButton,
+  OuiSmallButtonEmpty,
+  OuiSmallButtonIcon,
+  OuiSmallButtonGroup,
 } from './button';
 
 export { OuiCallOut } from './call_out';
@@ -53,9 +57,10 @@ export {
   OuiColorStops,
   OuiHue,
   OuiSaturation,
+  OuiCompressedColorPicker,
 } from './color_picker';
 
-export { OuiComboBox } from './combo_box';
+export { OuiComboBox, OuiCompressedComboBox } from './combo_box';
 
 export { OuiComment, OuiCommentList } from './comment_list';
 
@@ -115,6 +120,7 @@ export {
   OuiFilterButton,
   OuiFilterGroup,
   OuiFilterSelectItem,
+  OuiSmallFilterButton,
 } from './filter_group';
 
 export { OuiFacetButton, OuiFacetGroup } from './facet';
@@ -158,6 +164,23 @@ export {
   OuiSwitch,
   OuiTextArea,
   OuiValidatableControl,
+  OuiCompressedCheckbox,
+  OuiCompressedCheckboxGroup,
+  OuiCompressedDualRange,
+  OuiCompressedFieldNumber,
+  OuiCompressedFieldPassword,
+  OuiCompressedFieldSearch,
+  OuiCompressedFieldText,
+  OuiCompressedFilePicker,
+  OuiCompressedFormLegend,
+  OuiCompressedFormRow,
+  OuiCompressedRadio,
+  OuiCompressedRadioGroup,
+  OuiCompressedRange,
+  OuiCompressedSelect,
+  OuiCompressedSuperSelect,
+  OuiCompressedSwitch,
+  OuiCompressedTextArea,
 } from './form';
 
 export {

@@ -120,3 +120,16 @@ export const OuiRadio: FunctionComponent<OuiRadioProps> = ({
     </div>
   );
 };
+
+// @internal
+export type OuiCompressedRadioProps = CommonProps &
+  Omit<HTMLAttributes<HTMLDivElement>, 'onChange' | 'id'> &
+  ExclusiveUnion<
+    ExclusiveUnion<Omit<RadioProps, 'compressed'>, idWithLabel>,
+    withId
+  >;
+
+// @internal
+export const OuiCompressedRadio: FunctionComponent<OuiCompressedRadioProps> = (
+  props
+) => <OuiRadio {...props} compressed />;

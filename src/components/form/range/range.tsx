@@ -357,3 +357,14 @@ export class OuiRange extends Component<OuiRangeProps> {
     return thePopover ? thePopover : theRange;
   }
 }
+
+// @internal
+export type OuiCompressedRangeProps = Omit<OuiRangeProps, 'compressed'>;
+
+// @internal
+export class OuiCompressedRange extends OuiRange {
+  static defaultProps = {
+    ...OuiRange.defaultProps,
+    compressed: true,
+  };
+}
