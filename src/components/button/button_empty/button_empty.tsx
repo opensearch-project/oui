@@ -227,3 +227,14 @@ export const OuiButtonEmpty: FunctionComponent<OuiButtonEmptyProps> = ({
     </button>
   );
 };
+
+// @internal
+export type OuiSmallButtonEmptyProps = ExclusiveUnion<
+  Omit<OuiButtonEmptyPropsForAnchor, 'size'>,
+  Omit<OuiButtonEmptyPropsForButton, 'size'>
+>;
+
+// @internal
+export const OuiSmallButtonEmpty: FunctionComponent<OuiSmallButtonEmptyProps> = (
+  props
+) => <OuiButtonEmpty {...props} size="s" />;

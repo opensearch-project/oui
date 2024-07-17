@@ -28,9 +28,17 @@
  * under the License.
  */
 
-export { OuiCheckbox, OuiCheckboxProps } from './checkbox';
+export {
+  OuiCheckbox,
+  OuiCheckboxProps,
+  OuiCompressedCheckbox,
+  OuiCompressedCheckboxProps,
+} from './checkbox';
+
 export {
   OuiCheckboxGroup,
   OuiCheckboxGroupProps,
   OuiCheckboxGroupOption,
+  OuiCompressedCheckboxGroup,
+  OuiCompressedCheckboxGroupProps,
 } from './checkbox_group';

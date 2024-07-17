@@ -28,7 +28,13 @@
  * under the License.
  */
 
-export { OuiSuperSelect, OuiSuperSelectProps } from './super_select';
+export {
+  OuiSuperSelect,
+  OuiSuperSelectProps,
+  OuiCompressedSuperSelect,
+  OuiCompressedSuperSelectProps,
+} from './super_select';
+
 export {
   OuiSuperSelectControl,
   OuiSuperSelectControlProps,

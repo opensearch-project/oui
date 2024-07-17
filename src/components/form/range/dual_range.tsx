@@ -794,3 +794,14 @@ export class OuiDualRange extends Component<OuiDualRangeProps> {
     return thePopover || theRange;
   }
 }
+
+// @internal
+export type OuiCompressedDualRangeProps = Omit<OuiDualRangeProps, 'compressed'>;
+
+// @internal
+export class OuiCompressedDualRange extends OuiDualRange {
+  static defaultProps = {
+    ...OuiDualRange.defaultProps,
+    compressed: true,
+  };
+}

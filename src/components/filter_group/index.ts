@@ -30,7 +30,12 @@
 
 export { OuiFilterGroup, OuiFilterGroupProps } from './filter_group';
 
-export { OuiFilterButton, OuiFilterButtonProps } from './filter_button';
+export {
+  OuiFilterButton,
+  OuiFilterButtonProps,
+  OuiSmallFilterButton,
+  OuiSmallFilterButtonProps,
+} from './filter_button';
 
 export {
   OuiFilterSelectItem,
