@@ -29,4 +29,9 @@
  */
 
 export { OuiFormFieldset, OuiFormFieldsetProps } from './form_fieldset';
-export { OuiFormLegend, OuiFormLegendProps } from './form_legend';
+export {
+  OuiFormLegend,
+  OuiFormLegendProps,
+  OuiCompressedFormLegend,
+  OuiCompressedFormLegendProps,
+} from './form_legend';

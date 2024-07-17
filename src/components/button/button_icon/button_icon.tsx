@@ -239,3 +239,17 @@ export const OuiButtonIcon: FunctionComponent<Props> = ({
     </button>
   );
 };
+
+// @internal
+export type OuiSmallButtonIconProps = Omit<OuiButtonIconProps, 'size'>;
+
+// @internal
+type SmallProps = ExclusiveUnion<
+  Omit<OuiButtonIconPropsForAnchor, 'size'>,
+  Omit<OuiButtonIconPropsForButton, 'size'>
+>;
+
+// @internal
+export const OuiSmallButtonIcon: FunctionComponent<SmallProps> = (props) => (
+  <OuiButtonIcon {...props} size="s" />
+);

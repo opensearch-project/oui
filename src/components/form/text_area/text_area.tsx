@@ -105,3 +105,11 @@ export const OuiTextArea: FunctionComponent<OuiTextAreaProps> = ({
     </OuiValidatableControl>
   );
 };
+
+// @internal
+export type OuiCompressedTextAreaProps = Omit<OuiTextAreaProps, 'compressed'>;
+
+// @internal
+export const OuiCompressedTextArea: FunctionComponent<OuiCompressedTextAreaProps> = (
+  props
+) => <OuiTextArea {...props} compressed />;

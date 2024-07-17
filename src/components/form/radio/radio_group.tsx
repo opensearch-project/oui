@@ -126,3 +126,17 @@ export const OuiRadioGroup: FunctionComponent<OuiRadioGroupProps> = ({
     </div>
   );
 };
+
+// @internal
+export type OuiCompressedRadioGroupProps = CommonProps & {
+  disabled?: boolean;
+  name?: string;
+  options: OuiRadioGroupOption[];
+  idSelected?: string;
+  onChange: OuiRadioGroupChangeCallback;
+} & ExclusiveUnion<AsDivProps, WithLegendProps>;
+
+// @internal
+export const OuiCompressedRadioGroup: FunctionComponent<OuiCompressedRadioGroupProps> = (
+  props
+) => <OuiRadioGroup {...props} compressed />;

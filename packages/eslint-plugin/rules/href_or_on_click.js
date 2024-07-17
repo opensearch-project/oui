@@ -9,7 +9,14 @@
  * GitHub history for details.
  */
 
-const componentNames = ['OuiButton', 'OuiButtonEmpty', 'OuiLink', 'OuiBadge'];
+const componentNames = [
+  'OuiButton',
+  'OuiSmallButton',
+  'OuiButtonEmpty',
+  'OuiSmallButtonEmpty',
+  'OuiLink',
+  'OuiBadge',
+];
 
 module.exports = {
   meta: {

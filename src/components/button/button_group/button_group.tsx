@@ -211,3 +211,92 @@ export const OuiButtonGroup: FunctionComponent<Props> = ({
     </fieldset>
   );
 };
+
+// @internal
+export type OuiSmallButtonGroupProps = CommonProps & {
+  isDisabled?: boolean;
+  /**
+   * Expands the whole group to the full width of the container.
+   * Each button gets equal widths no matter the content
+   */
+  isFullWidth?: boolean;
+  /**
+   * Hides the label to only show the `iconType` provided by the `option`
+   */
+  isIconOnly?: boolean;
+  /**
+   * A hidden group title (required for accessibility)
+   */
+  legend: string;
+  /**
+   * Compressed styles don't support `ghost` color (Color will be changed to "text")
+   */
+  color?: ButtonColor;
+  /**
+   * Actual type is `'single' | 'multi'`.
+   * Determines how the selection of the group should be handled.
+   * With `'single'` only one option can be selected at a time (similar to radio group).
+   * With `'multi'` multiple options selected (similar to checkbox group).
+   */
+  type?: 'single' | 'multi';
+  /**
+   * An array of #OuiButtonGroupOptionProps
+   */
+  options: OuiButtonGroupOptionProps[];
+} & (
+    | {
+        /**
+         * Default for `type` is single so it can also be excluded
+         */
+        type?: 'single';
+        /**
+         * The `name` attribute for radio inputs;
+         * Defaults to a random string
+         */
+        name?: string;
+        /**
+         * Styles the selected option to look selected (usually with `fill`)
+         * Required by and only used in `type='single'`.
+         */
+        idSelected: string;
+        /**
+         * Single: Returns the `id` of the clicked option and the `value`
+         */
+        onChange: (id: string, value?: any) => void;
+        idToSelectedMap?: never;
+      }
+    | {
+        type: 'multi';
+        /**
+         * A map of `id`s as keys with the selected boolean values.
+         * Required by and only used in `type='multi'`.
+         */
+        idToSelectedMap?: { [id: string]: boolean };
+        /**
+         * Multi: Returns the `id` of the clicked option
+         */
+        onChange: (id: string) => void;
+        idSelected?: never;
+        name?: never;
+      }
+  );
+
+// @internal
+type SmallProps = Omit<
+  HTMLAttributes<HTMLFieldSetElement>,
+  'onChange' | 'color'
+> &
+  OuiSmallButtonGroupProps;
+
+// @internal
+export const OuiSmallButtonGroup: FunctionComponent<SmallProps> = (props) => (
+  <OuiButtonGroup {...props} buttonSize="s" />
+);
+
+// @internal
+export type OuiCompressedButtonGroupProps = OuiSmallButtonGroupProps;
+
+// @internal
+export const OuiCompressedButtonGroup: FunctionComponent<SmallProps> = (
+  props
+) => <OuiButtonGroup {...props} buttonSize="compressed" />;

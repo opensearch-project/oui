@@ -314,3 +314,15 @@ export const OuiButton: FunctionComponent<Props> = ({
     />
   );
 };
+
+export type OuiSmallButtonProps = Omit<OuiButtonProps, 'size'>;
+
+// Cannot Omit<Props, 'size'> directly due to Exclude changing optional prop types
+type SmallProps = ExclusiveUnion<
+  Omit<OuiButtonPropsForAnchor, 'size'>,
+  Omit<OuiButtonPropsForButton, 'size'>
+>;
+
+export const OuiSmallButton: FunctionComponent<SmallProps> = (props) => (
+  <OuiButton {...props} size="s" />
+);

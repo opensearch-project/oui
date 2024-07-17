@@ -130,3 +130,11 @@ export const OuiFieldText: FunctionComponent<OuiFieldTextProps> = ({
     </OuiFormControlLayout>
   );
 };
+
+// @internal
+export type OuiCompressedFieldTextProps = Omit<OuiFieldTextProps, 'compressed'>;
+
+// @internal
+export const OuiCompressedFieldText: FunctionComponent<OuiCompressedFieldTextProps> = (
+  props
+) => <OuiFieldText {...props} compressed />;

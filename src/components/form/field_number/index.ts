@@ -28,4 +28,9 @@
  * under the License.
  */
 
-export { OuiFieldNumber, OuiFieldNumberProps } from './field_number';
+export {
+  OuiFieldNumber,
+  OuiFieldNumberProps,
+  OuiCompressedFieldNumber,
+  OuiCompressedFieldNumberProps,
+} from './field_number';
