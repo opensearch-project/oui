@@ -170,7 +170,7 @@ export class OuiSuperUpdateButton extends Component<OuiSuperUpdateButtonProps> {
           className={classes}
           color={needsUpdate || isLoading ? 'success' : 'primary'}
           fill
-          iconType={needsUpdate || isLoading ? 'kqlFunction' : 'refresh'}
+          iconType="refresh"
           textProps={{
             ...restTextProps,
             className: classNames(
