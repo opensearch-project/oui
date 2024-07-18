@@ -49,6 +49,11 @@
     color: $ouiColorDarkShade;
     cursor: default;
   }
+
+  &-compressed {
+    line-height: $ouiFormControlLayoutGroupInputCompressedHeight;
+    height: $ouiFormControlLayoutGroupInputCompressedHeight;
+  }
 }
 
 .ouiDatePopoverButton--start {
