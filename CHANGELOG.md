@@ -15,6 +15,7 @@
 ### 🐛 Bug Fixes
 
 - Fix next reset for code blocks and super update button icon ([#1306])(https://github.com/opensearch-project/oui/pull/1306)
+- Fix the appearance of form controls in grouped layouts ([#1311])(https://github.com/opensearch-project/oui/pull/1311)
 
 ### 🚞 Infrastructure
 
