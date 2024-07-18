@@ -69,6 +69,11 @@ export type OuiDatePickerRangeProps = CommonProps & {
    * The start date `OuiDatePicker` element
    */
   startDateControl: ReactNode;
+
+  /**
+   * when `true` creates a shorter input
+   */
+  compressed?: boolean;
 };
 
 export const OuiDatePickerRange: FunctionComponent<OuiDatePickerRangeProps> = ({
@@ -80,6 +85,7 @@ export const OuiDatePickerRange: FunctionComponent<OuiDatePickerRangeProps> = ({
   fullWidth,
   isCustom,
   readOnly,
+  compressed,
   ...rest
 }) => {
   const classes = classNames(
@@ -87,6 +93,7 @@ export const OuiDatePickerRange: FunctionComponent<OuiDatePickerRangeProps> = ({
     {
       'ouiDatePickerRange--fullWidth': fullWidth,
       'ouiDatePickerRange--readOnly': readOnly,
+      'ouiDatePickerRange--compressed': compressed,
     },
     className
   );

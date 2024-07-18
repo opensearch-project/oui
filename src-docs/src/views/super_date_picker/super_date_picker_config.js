@@ -23,6 +23,7 @@ export default () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showUpdateButton, setShowUpdateButton] = useState(true);
   const [isAutoRefreshOnly, setIsAutoRefreshOnly] = useState(false);
+  const [compressed, setCompressed] = useState(false);
   const [start, setStart] = useState('now-30m');
   const [end, setEnd] = useState('now');
   const [isPaused, setIsPaused] = useState(true);
@@ -78,6 +79,10 @@ export default () => {
     setIsAutoRefreshOnly(!isAutoRefreshOnly);
   };
 
+  const toggleCompressed = () => {
+    setCompressed(!compressed);
+  };
+
   return (
     <Fragment>
       <OuiSwitch
@@ -98,6 +103,12 @@ export default () => {
         onChange={toggleDisabled}
         checked={isDisabled}
       />
+      &emsp;
+      <OuiSwitch
+        label="Compressed"
+        onChange={toggleCompressed}
+        checked={compressed}
+      />
       <OuiSpacer />
       <OuiSuperDatePicker
         isDisabled={isDisabled}
@@ -112,6 +123,7 @@ export default () => {
         recentlyUsedRanges={recentlyUsedRanges}
         showUpdateButton={showUpdateButton}
         isAutoRefreshOnly={isAutoRefreshOnly}
+        compressed={compressed}
       />
       <OuiSpacer />
     </Fragment>
