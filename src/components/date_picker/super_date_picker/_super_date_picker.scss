@@ -44,6 +44,10 @@
   // Fixes margin around delimiter
   // Only needed on first popover since basic .ouiFormControlLayout takes care of the last one
   margin-right: -$ouiSizeM;
+
+  &.ouiSuperDatePicker__startPopoverButton--compressed {
+    margin-right: -$ouiSizeS;
+  }
 }
 
 .ouiSuperDatePicker__prettyFormat {
@@ -69,6 +73,11 @@
     .ouiSuperDatePicker__prettyFormatLink {
       display: none;
     }
+  }
+
+  &--compressed {
+    line-height: $ouiFormControlLayoutGroupInputCompressedHeight;
+    height: $ouiFormControlLayoutGroupInputCompressedHeight;
   }
 }
 
