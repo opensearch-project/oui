@@ -24,6 +24,8 @@
 
 ### 🛠 Maintenance
 
+- Add @virajsanghvi as a maintainer
+
 ### 🪛 Refactoring
 
 ### 🔩 Tests
