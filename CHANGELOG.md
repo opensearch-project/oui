@@ -15,6 +15,7 @@
 - Add small button and filter-button internal components ([#1301](https://github.com/opensearch-project/oui/pull/1301))
 
 ### 🐛 Bug Fixes
+- Fix next reset for code blocks and super update button icon ([1306])(https://github.com/opensearch-project/oui/pull/1306)
 
 ### 🚞 Infrastructure
 
