@@ -28,9 +28,16 @@
  * under the License.
  */
 
-export { OuiRadio, OuiRadioProps } from './radio';
+export {
+  OuiRadio,
+  OuiRadioProps,
+  OuiCompressedRadio,
+  OuiCompressedRadioProps,
+} from './radio';
 export {
   OuiRadioGroup,
   OuiRadioGroupProps,
   OuiRadioGroupOption,
+  OuiCompressedRadioGroup,
+  OuiCompressedRadioGroupProps,
 } from './radio_group';

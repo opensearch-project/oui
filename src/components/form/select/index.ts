@@ -28,4 +28,10 @@
  * under the License.
  */
 
-export { OuiSelect, OuiSelectProps, OuiSelectOption } from './select';
+export {
+  OuiSelect,
+  OuiSelectProps,
+  OuiSelectOption,
+  OuiCompressedSelect,
+  OuiCompressedSelectProps,
+} from './select';

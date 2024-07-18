@@ -263,3 +263,17 @@ export class OuiFilePicker extends Component<OuiFilePickerProps> {
     );
   }
 }
+
+// @internal
+export type OuiCompressedFilePickerProps = Omit<
+  OuiFilePickerProps,
+  'compressed'
+>;
+
+// @internal
+export class OuiCompressedFilePicker extends OuiFilePicker {
+  static defaultProps = {
+    ...OuiFilePicker.defaultProps,
+    compressed: true,
+  };
+}

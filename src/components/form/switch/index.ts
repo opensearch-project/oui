@@ -28,4 +28,10 @@
  * under the License.
  */
 
-export { OuiSwitch, OuiSwitchProps, OuiSwitchEvent } from './switch';
+export {
+  OuiSwitch,
+  OuiSwitchProps,
+  OuiSwitchEvent,
+  OuiCompressedSwitch,
+  OuiCompressedSwitchProps,
+} from './switch';

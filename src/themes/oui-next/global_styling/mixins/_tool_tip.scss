@@ -35,7 +35,7 @@
 }
 
 @mixin ouiToolTipAnimation($side: 'top') {
-  animation: #{map-get($ouiTooltipAnimations, $side)} $ouiAnimSpeedSlow ease-out 0s forwards;
+  animation: #{map-get($ouiTooltipAnimations, $side)} $ouiAnimSpeedExtraFast ease-out 0s forwards;
 }
 
 

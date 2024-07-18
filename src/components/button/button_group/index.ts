@@ -32,4 +32,8 @@ export {
   OuiButtonGroup,
   OuiButtonGroupOptionProps,
   OuiButtonGroupProps,
+  OuiSmallButtonGroup,
+  OuiSmallButtonGroupProps,
+  OuiCompressedButtonGroup,
+  OuiCompressedButtonGroupProps,
 } from './button_group';

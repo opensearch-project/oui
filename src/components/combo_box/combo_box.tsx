@@ -1106,3 +1106,17 @@ export class OuiComboBox<T> extends Component<
     );
   }
 }
+
+// @internal
+export type OuiCompressedComboBoxProps<T> = Omit<
+  OuiComboBoxProps<T>,
+  'compressed'
+>;
+
+// @internal
+export class OuiCompressedComboBox<T> extends OuiComboBox<T> {
+  static defaultProps = {
+    ...OuiComboBox.defaultProps,
+    compressed: true,
+  };
+}

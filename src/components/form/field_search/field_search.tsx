@@ -291,3 +291,17 @@ export class OuiFieldSearch extends Component<
     );
   }
 }
+
+// @internal
+export type OuiCompressedFieldSearchProps = Omit<
+  OuiFieldSearchProps,
+  'compressed'
+>;
+
+// @internal
+export class OuiCompressedFieldSearch extends OuiFieldSearch {
+  static defaultProps = {
+    ...OuiFieldSearch.defaultProps,
+    compressed: true,
+  };
+}

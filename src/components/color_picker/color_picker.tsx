@@ -695,3 +695,14 @@ export const OuiColorPicker: FunctionComponent<OuiColorPickerProps> = ({
     </OuiPopover>
   );
 };
+
+// @internal
+export type OuiCompressedColorPickerProps = Omit<
+  OuiColorPickerProps,
+  'compressed'
+>;
+
+// @internal
+export const OuiCompressedColorPicker: FunctionComponent<OuiCompressedColorPickerProps> = (
+  props
+) => <OuiColorPicker {...props} compressed />;

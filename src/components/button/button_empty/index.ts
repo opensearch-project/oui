@@ -34,4 +34,6 @@ export {
   OuiButtonEmptyColor,
   OuiButtonEmptyProps,
   OuiButtonEmptySizes,
+  OuiSmallButtonEmpty,
+  OuiSmallButtonEmptyProps,
 } from './button_empty';

@@ -35,6 +35,28 @@ exports[`OuiSplitButtonControl is rendered 1`] = `
 </div>
 `;
 
+exports[`OuiSplitButtonControl is rendered without dropdown 1`] = `
+<div
+  class="ouiSplitButtonControl ouiSplitButtonColor--primary"
+>
+  <button
+    class="ouiButton ouiButton--primary ouiSplitButtonControl ouiSplitButtonControl--primary"
+    data-test-subj="splitButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      >
+        Test
+      </span>
+    </span>
+  </button>
+</div>
+`;
+
 exports[`OuiSplitButtonControl props fullWidth is rendered 1`] = `
 <div
   class="ouiSplitButtonControl ouiSplitButtonColor--primary"

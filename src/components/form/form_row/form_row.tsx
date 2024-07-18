@@ -328,3 +328,17 @@ export class OuiFormRow extends Component<OuiFormRowProps, OuiFormRowState> {
     );
   }
 }
+
+// @internal
+export type OuiCompressedFormRowProps = ExclusiveUnion<
+  Omit<LabelProps, 'display'>,
+  Omit<LegendProps, 'display'>
+>;
+
+// @internal
+export class OuiCompressedFormRow extends OuiFormRow {
+  static defaultProps = {
+    ...OuiFormRow.defaultProps,
+    display: 'rowCompressed',
+  };
+}
