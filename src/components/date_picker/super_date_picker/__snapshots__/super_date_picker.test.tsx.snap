@@ -9,6 +9,7 @@ exports[`OuiSuperDatePicker is rendered 1`] = `
   <OuiFlexItem>
     <OuiFormControlLayout
       className="ouiSuperDatePicker"
+      compressed={false}
       isDisabled={false}
       prepend={
         <OuiQuickSelectPopover
@@ -98,6 +99,7 @@ exports[`OuiSuperDatePicker is rendered 1`] = `
     grow={false}
   >
     <OuiSuperUpdateButton
+      compressed={false}
       data-test-subj="superDatePickerApplyTimeButton"
       isDisabled={false}
       isLoading={false}
