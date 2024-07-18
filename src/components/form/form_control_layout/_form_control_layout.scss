@@ -32,6 +32,7 @@
 
   // Force the stretch of any children so they expand the full height of the control
   > *,
+  > .ouiFormControlLayout > *,
   .ouiPopover__anchor,
   .ouiButtonEmpty,
   .ouiText,
@@ -74,6 +75,31 @@
         background: none !important;
         padding: 0;
         width: $ouiSize;
+      }
+    }
+  }
+
+  /* Hide the box-shadow and grouping border combining */
+  .ouiFieldText,
+  .ouiFieldNumber,
+  .ouiFieldSearch,
+  .ouiFieldPassword,
+  .ouiSelect {
+    &.ouiFormControlLayout__prepend,
+    &.ouiFormControlLayout__append {
+      height: calc(100% + 2px);
+      margin: -1px -1px 0 1px;
+
+      &:focus {
+        background-position: 1px -1px;
+      }
+    }
+
+    &.ouiFormControlLayout__prepend {
+      margin: -1px 1px 0 -1px;
+
+      &:focus {
+        background-position: -1px -1px;
       }
     }
   }
