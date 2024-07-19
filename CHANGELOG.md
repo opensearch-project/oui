@@ -2,11 +2,18 @@
 
 ## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
 
+### Deprecations
+
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
 
+- Introduce compressed appearance for OuiSuperDatePicker ([#1307](https://github.com/opensearch-project/oui/pull/1307))
+
 ### 🐛 Bug Fixes
+
+- Fix next reset for code blocks and super update button icon ([#1306])(https://github.com/opensearch-project/oui/pull/1306)
+- Fix the appearance of form controls in grouped layouts ([#1311])(https://github.com/opensearch-project/oui/pull/1311)
 
 ### 🚞 Infrastructure
 
@@ -14,7 +21,11 @@
 
 ### 🛠 Maintenance
 
+- Add @virajsanghvi as a maintainer ([#1309])(https://github.com/opensearch-project/oui/pull/1309)
+
 ### 🪛 Refactoring
+
+### 🔩 Tests
 
 
 ## [`1.7.0`](https://github.com/opensearch-project/oui/tree/1.7.0)
