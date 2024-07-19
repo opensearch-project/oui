@@ -104,14 +104,11 @@ exports[`OuiPopover props arrowChildren is rendered 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
-        data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
@@ -119,12 +116,6 @@ exports[`OuiPopover props arrowChildren is rendered 1`] = `
         >
           <span />
         </div>
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -162,25 +153,16 @@ exports[`OuiPopover props buffer 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
-        data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -218,25 +200,16 @@ exports[`OuiPopover props buffer for all sides 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
-        data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -287,25 +260,16 @@ exports[`OuiPopover props focusTrapProps is rendered 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
-        data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -356,25 +320,16 @@ exports[`OuiPopover props isOpen renders true 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
-        data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -413,25 +368,16 @@ exports[`OuiPopover props offset with arrow 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
-        data-autofocus="true"
         role="dialog"
         style="top: 26px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -470,24 +416,15 @@ exports[`OuiPopover props offset without arrow 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen ouiPopover__panel-noArrow"
-        data-autofocus="true"
         role="dialog"
         style="top: 18px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -525,25 +462,16 @@ exports[`OuiPopover props ownFocus defaults to true 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
-        data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -628,25 +556,16 @@ exports[`OuiPopover props panelClassName is rendered 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen test"
-        data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -684,25 +603,16 @@ exports[`OuiPopover props panelPaddingSize is rendered 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingSmall ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen"
-        data-autofocus="true"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
@@ -740,26 +650,17 @@ exports[`OuiPopover props panelProps is rendered 1`] = `
       data-focus-lock-disabled="disabled"
     >
       <div
-        aria-describedby="generated-id"
-        aria-live="off"
+        aria-live="assertive"
         aria-modal="true"
         class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--bottom ouiPopover__panel-isOpen testClass1 testClass2"
-        data-autofocus="true"
         data-test-subj="test subject string"
         role="dialog"
         style="top: 16px; left: -22px; will-change: transform, opacity; z-index: 2000;"
-        tabindex="0"
       >
         <div
           class="ouiPopover__panelArrow ouiPopover__panelArrow--bottom"
           style="left: 10px; top: 0px;"
         />
-        <p
-          class="ouiScreenReaderOnly"
-          id="generated-id"
-        >
-          You are in a dialog. To close this dialog, hit escape.
-        </p>
         <div />
       </div>
     </div>
