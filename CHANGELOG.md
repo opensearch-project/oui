@@ -1,6 +1,26 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
+## [Unreleased `1.8.x`](https://github.com/opensearch-project/oui/tree/1.8)
+
+### Deprecations
+
+### 🛡 Security
+
+### 📈 Features/Enhancements
+
+### 🐛 Bug Fixes
+
+### 🚞 Infrastructure
+
+### 📝 Documentation
+
+### 🛠 Maintenance
+
+### 🪛 Refactoring
+
+### 🔩 Tests
+
+## [`1.8.0`](https://github.com/opensearch-project/oui/tree/1.8.0)
 
 ### Deprecations
 
