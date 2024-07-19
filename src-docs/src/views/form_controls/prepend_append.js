@@ -18,6 +18,7 @@ import {
   OuiIcon,
   OuiIconTip,
   OuiPopover,
+  OuiSelect,
   OuiSpacer,
   OuiSwitch,
   OuiText,
@@ -189,6 +190,58 @@ export default () => {
         disabled={isDisabled}
         readOnly={isReadOnly}
         aria-label="Use aria labels when no actual label is in use"
+      />
+      <OuiSpacer />
+      <OuiFieldText
+        placeholder="Text field with select"
+        prepend={
+          <OuiFieldText
+            placeholder="..."
+            compressed={isCompressed}
+            disabled={isDisabled}
+            readOnly={isReadOnly}
+            aria-label="Use aria labels when no actual label is in use"
+          />
+        }
+        append={
+          <OuiSelect
+            compressed={isCompressed}
+            disabled={isDisabled}
+            readOnly={isReadOnly}
+            value="hours"
+            options={[
+              { value: 'hours', text: 'hours' },
+              { value: 'days', text: 'days' },
+              { value: 'weeks', text: 'weeks' },
+            ]}
+          />
+        }
+        compressed={isCompressed}
+        disabled={isDisabled}
+        readOnly={isReadOnly}
+        aria-label="Use aria labels when no actual label is in use"
+      />
+      <OuiSpacer />
+      <OuiSelect
+        prepend="String"
+        compressed={isCompressed}
+        disabled={isDisabled}
+        readOnly={isReadOnly}
+        value="hours"
+        options={[
+          { value: 'hours', text: 'hours' },
+          { value: 'days', text: 'days' },
+          { value: 'weeks', text: 'weeks' },
+        ]}
+        append={
+          <OuiFieldText
+            placeholder="Select with text field"
+            compressed={isCompressed}
+            disabled={isDisabled}
+            readOnly={isReadOnly}
+            aria-label="Use aria labels when no actual label is in use"
+          />
+        }
       />
     </Fragment>
   );
