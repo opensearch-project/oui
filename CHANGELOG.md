@@ -2,7 +2,39 @@
 
 ## [Unreleased](https://github.com/opensearch-project/oui/tree/main)
 
-### 💥 Breaking Changes
+### Deprecations
+
+### 🛡 Security
+
+### 📈 Features/Enhancements
+
+### 🐛 Bug Fixes
+
+### 🚞 Infrastructure
+
+### 📝 Documentation
+
+### 🛠 Maintenance
+
+### 🪛 Refactoring
+
+### 🔩 Tests
+
+## [`1.8.2`](https://github.com/opensearch-project/oui/tree/1.8.1)
+
+### 🐛 Bug Fixes
+
+- Fix the availability of OuiCompressedSuperDatePicker ([#1325](https://github.com/opensearch-project/oui/pull/1325))
+
+
+## [`1.8.1`](https://github.com/opensearch-project/oui/tree/1.8.1)
+
+### 🐛 Bug Fixes
+
+- Fix compressed appearance for OuiSuperDatePicker ([#1307](https://github.com/opensearch-project/oui/pull/1307))
+
+
+## [`1.8.0`](https://github.com/opensearch-project/oui/tree/1.8.0)
 
 ### Deprecations
 
