@@ -20,7 +20,14 @@
 
 ### 🔩 Tests
 
-## [`1.8.1`](https://github.com/opensearch-project/oui/tree/1.8)
+## [`1.8.2`](https://github.com/opensearch-project/oui/tree/1.8.1)
+
+### 🐛 Bug Fixes
+
+- Fix the availability of OuiCompressedSuperDatePicker ([#1325](https://github.com/opensearch-project/oui/pull/1325))
+
+
+## [`1.8.1`](https://github.com/opensearch-project/oui/tree/1.8.1)
 
 ### 🐛 Bug Fixes
 
