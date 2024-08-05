@@ -36,6 +36,19 @@ $ouiSwitchHeightMini: $ouiSwitchHeight * .5 !default;
 $ouiSwitchWidthMini: $ouiSwitchWidth * .5 !default;
 $ouiSwitchThumbSizeMini: $ouiSwitchHeightMini !default;
 
+// Modifier naming and colors.
+$ouiSwitchColors: (
+  primary: $ouiColorPrimary,
+  accent: $ouiColorAccent,
+  secondary: $ouiColorSecondary,
+  success: $ouiColorSuccess,
+  warning: $ouiColorWarning,
+  danger: $ouiColorDanger,
+  subdued: $ouiTextSubduedColor, // Should get deprecated in favor of `text`
+  ghost: $ouiColorGhost, // Ghost is special, and does not care about theming.
+  text: $ouiColorDarkShade, // Reserved for special use cases
+) !default;
+
 // Coloring
 $ouiFormBackgroundColor: tintOrShade($ouiColorLightestShade, 60%, 40%) !default;
 $ouiFormBackgroundDisabledColor: darken($ouiColorLightestShade, 2%) !default;
@@ -98,6 +111,7 @@ $euiSwitchThumbSizeCompressed: $ouiSwitchThumbSizeCompressed;
 $euiSwitchHeightMini: $ouiSwitchHeightMini;
 $euiSwitchWidthMini: $ouiSwitchWidthMini;
 $euiSwitchThumbSizeMini: $ouiSwitchThumbSizeMini;
+$euiSwitchColors: $ouiSwitchColors;
 $euiFormBackgroundColor: $ouiFormBackgroundColor;
 $euiFormBackgroundDisabledColor: $ouiFormBackgroundDisabledColor;
 $euiFormBackgroundReadOnlyColor: $ouiFormBackgroundReadOnlyColor;
