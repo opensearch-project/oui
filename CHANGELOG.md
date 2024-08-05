@@ -20,11 +20,17 @@
 
 ### 🔩 Tests
 
-## [`1.8.2`](https://github.com/opensearch-project/oui/tree/1.8.1)
+## [`1.9.0`](https://github.com/opensearch-project/oui/tree/1.8.1)
+
+### 📈 Features/Enhancements
+
+- Add display type and color to OuiSwitch ([#1332](https://github.com/opensearch-project/oui/pull/1332))
 
 ### 🐛 Bug Fixes
 
 - Fix the availability of OuiCompressedSuperDatePicker ([#1325](https://github.com/opensearch-project/oui/pull/1325))
+- Fix now button to be secondary in SuperDatePicker ([#1320](https://github.com/opensearch-project/oui/pull/1320))
+
 
 
 ## [`1.8.1`](https://github.com/opensearch-project/oui/tree/1.8.1)

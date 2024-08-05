@@ -31,6 +31,8 @@
 export {
   OuiSwitch,
   OuiSwitchProps,
+  OuiSwitchColor,
+  OuiSwitchDisplay,
   OuiSwitchEvent,
   OuiCompressedSwitch,
   OuiCompressedSwitchProps,
