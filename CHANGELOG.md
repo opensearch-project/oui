@@ -10,6 +10,8 @@
 
 ### 🐛 Bug Fixes
 
+- Fixes combobox height with appendees ([#1338](https://github.com/opensearch-project/oui/pull/1338))
+
 ### 🚞 Infrastructure
 
 ### 📝 Documentation
