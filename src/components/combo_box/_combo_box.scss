@@ -165,6 +165,19 @@
     }
   }
 
+  // Overrides the top and bottom padding of 8px with ouiFormControlLayout--group 
+  // when append/prepend is enabled, original top, bottom padding was 1px
+  .ouiFormControlLayout--group {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  // Overrides line-height of 16px coming from ouiFormControlLayout--group .ouiText
+  .ouiFormControlLayout--group .ouiText {
+    // sass-lint:disable-block no-important
+    line-height: 0 !important;
+  }
+
   // Overrides the ouiFormControlLayout prepend and append height that is 100%
   .ouiFormControlLayout__prepend,
   .ouiFormControlLayout__append {
