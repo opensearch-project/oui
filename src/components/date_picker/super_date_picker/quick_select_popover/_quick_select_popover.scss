@@ -23,11 +23,9 @@
 }
 
 // sass-lint:disable no-important
-.ouiFormControlLayout__prepend{
-  .ouiQuickSelectPopover__buttonText {
-    // Override specificity from universal and sibling selectors
-    margin-right: calc($ouiSizeXS/2) !important;
-  }
+.ouiQuickSelectPopover__buttonText {
+  // Override specificity from universal and sibling selectors
+  margin-right: calc($ouiSizeXS/2) !important;
 }
 
 .ouiQuickSelectPopover__anchor {
