@@ -11,6 +11,7 @@
 ### 🐛 Bug Fixes
 
 - Fixes combobox height with appendees ([#1338](https://github.com/opensearch-project/oui/pull/1338))
+- Update styling for empty button and date picker icon ([#1342](https://github.com/opensearch-project/oui/pull/1342))
 
 ### 🚞 Infrastructure
 
