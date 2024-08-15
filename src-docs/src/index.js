@@ -26,6 +26,8 @@ import themeLight from './theme_light.scss';
 import themeDark from './theme_dark.scss';
 import themeNextLight from './theme_next_light.scss';
 import themeNextDark from './theme_next_dark.scss';
+import themeV9Light from './theme_v9_light.scss';
+import themeV9Dark from './theme_v9_dark.scss';
 import { ThemeProvider } from './components/with_theme/theme_context';
 import ScrollToHash from './components/scroll_to_hash';
 import { LinkWrapper } from './views/link_wrapper';
@@ -34,6 +36,8 @@ registerTheme('light', [themeLight]);
 registerTheme('dark', [themeDark]);
 registerTheme('next-light', [themeNextLight]);
 registerTheme('next-dark', [themeNextDark]);
+registerTheme('v9-light', [themeV9Light]);
+registerTheme('v9-dark', [themeV9Dark]);
 
 // Set up app
 
