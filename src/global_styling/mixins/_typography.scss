@@ -147,6 +147,19 @@
   }
 }
 
+// Lowest max-width
+//
+// Legibility research specific to digital text has shown that line length can affect reading
+// speed. If lines are too long it is difficult for the reader to quickly return to the start
+// of the next line, whereas if lines are too short more scrolling or paging will be required.
+//
+// This mixin will choose the lesser of the magic $ouiLegibilityMaxWidth number and the
+// supplied $maxWidth to allow controlling the max-width without needing media-queries.
+
+@mixin ouiLegibilityMaxWidth($maxWidth) {
+  max-width: min($ouiLegibilityMaxWidth, $maxWidth);
+}
+
 
 
 /* OUI -> EUI Aliases */
@@ -165,4 +178,5 @@
 @mixin euiTextTruncate { @include ouiTextTruncate; }
 @mixin euiNumberFormat { @include ouiNumberFormat; }
 @mixin euiTextShift($fontWeight: $ouiFontWeightBold, $attr: 'data-text') { @include ouiTextShift($fontWeight, $attr); }
+@mixin euiLegibilityMaxWidth($maxWidth) { @include ouiLegibilityMaxWidth($maxWidth); }
 /* End of Aliases */

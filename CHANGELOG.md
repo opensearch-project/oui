@@ -11,6 +11,7 @@
 - Add V9 Theme ([#1344](https://github.com/opensearch-project/oui/pull/1344))
 - Add history icon and alias it as recent ([#1346](https://github.com/opensearch-project/oui/pull/1346))
 - Introduce compressed OuiSearchBar ([#1354](https://github.com/opensearch-project/oui/pull/1354))
+- Introduce `$ouiLegibilityMaxWidth` variable and `ouiLegibilityMaxWidth` mixin ([#1359](https://github.com/opensearch-project/oui/pull/1359))
 
 ### 🐛 Bug Fixes
 
