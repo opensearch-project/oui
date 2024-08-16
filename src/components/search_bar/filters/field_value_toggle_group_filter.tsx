@@ -48,6 +48,7 @@ export interface FieldValueToggleGroupFilterConfigType {
    */
   items: FieldValueToggleGroupFilterItemType[];
   available?: () => boolean;
+  compressed?: boolean;
 }
 
 export interface FieldValueToggleGroupFilterProps {
@@ -100,6 +101,7 @@ export class FieldValueToggleGroupFilter extends Component<
       const isLastItem = index === config.items.length - 1;
       return (
         <OuiFilterButton
+          size={config.compressed ? 's' : undefined}
           key={key}
           onClick={onClick}
           hasActiveFilters={active}

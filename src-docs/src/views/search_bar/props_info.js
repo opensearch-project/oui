@@ -47,6 +47,11 @@ export const propsInfo = {
           required: false,
           type: { name: '#SearchFilters[]' },
         },
+        compressed: {
+          description: 'Creates shorter form elements',
+          required: false,
+          type: { name: 'boolean' },
+        },
       },
     },
   },
