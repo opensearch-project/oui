@@ -25,6 +25,7 @@
   animation: none !important; /* 1 */
   transition-timing-function: ease-in; /* 2 */
   transition-duration: $ouiAnimSpeedFast; /* 2 */
+  line-height: inherit;
 
   .ouiButtonEmpty__content {
     padding: 0 $ouiSizeS;
