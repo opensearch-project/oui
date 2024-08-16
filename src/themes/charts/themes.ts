@@ -84,6 +84,29 @@ import {
 const ouiNextFontFamily =
   "'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'";
 
+// @ts-ignore typescript doesn't understand the babel preprocessor
+import {
+  ouiColorChartBand as ouiV9ColorChartBand,
+  ouiColorChartLines as ouiV9ColorChartLines,
+  ouiColorDarkShade as ouiV9ColorDarkShade,
+  ouiColorDarkestShade as ouiV9ColorDarkestShade,
+  ouiColorEmptyShade as ouiV9ColorEmptyShade,
+  // @ts-ignore typescript doesn't understand the babel preprocessor
+} from '!!variables-from-scss!!../v9/global_styling/variables/_colors.scss';
+
+// @ts-ignore typescript doesn't understand the babel preprocessor
+import {
+  ouiColorChartBand as ouiV9ColorChartBandDark,
+  ouiColorChartLines as ouiV9ColorChartLinesDark,
+  ouiColorDarkShade as ouiV9ColorDarkShadeDark,
+  ouiColorDarkestShade as ouiV9ColorDarkestShadeDark,
+  ouiColorEmptyShade as ouiV9ColorEmptyShadeDark,
+  // @ts-ignore typescript doesn't understand the babel preprocessor
+} from '!!variables-from-scss!!../v9/v9_colors_dark.scss';
+
+const ouiV9FontFamily =
+  "'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'";
+
 export interface OuiChartThemeType {
   lineAnnotation: LineAnnotationStyle;
   theme: PartialTheme;
@@ -269,6 +292,22 @@ export const OUI_CHARTS_NEXT_THEME_DARK: OuiChartThemeType = createTheme({
   ouiColorEmptyShade: ouiNextColorEmptyShadeDark,
   ouiFontFamily: ouiNextFontFamily,
 });
+export const OUI_CHARTS_V9_THEME_LIGHT: OuiChartThemeType = createTheme({
+  ouiColorChartBand: ouiV9ColorChartBand,
+  ouiColorChartLines: ouiV9ColorChartLines,
+  ouiColorDarkShade: ouiV9ColorDarkShade,
+  ouiColorDarkestShade: ouiV9ColorDarkestShade,
+  ouiColorEmptyShade: ouiV9ColorEmptyShade,
+  ouiFontFamily: ouiV9FontFamily,
+});
+export const OUI_CHARTS_V9_THEME_DARK: OuiChartThemeType = createTheme({
+  ouiColorChartBand: ouiV9ColorChartBandDark,
+  ouiColorChartLines: ouiV9ColorChartLinesDark,
+  ouiColorDarkShade: ouiV9ColorDarkShadeDark,
+  ouiColorDarkestShade: ouiV9ColorDarkestShadeDark,
+  ouiColorEmptyShade: ouiV9ColorEmptyShadeDark,
+  ouiFontFamily: ouiV9FontFamily,
+});
 
 export const OUI_SPARKLINE_THEME_PARTIAL: PartialTheme = {
   lineSeriesStyle: {
@@ -293,5 +332,7 @@ export const EUI_CHARTS_THEME_LIGHT = OUI_CHARTS_THEME_LIGHT;
 export const EUI_CHARTS_THEME_DARK = OUI_CHARTS_THEME_DARK;
 export const EUI_CHARTS_NEXT_THEME_LIGHT = OUI_CHARTS_NEXT_THEME_LIGHT;
 export const EUI_CHARTS_NEXT_THEME_DARK = OUI_CHARTS_NEXT_THEME_DARK;
+export const EUI_CHARTS_V9_THEME_LIGHT = OUI_CHARTS_V9_THEME_LIGHT;
+export const EUI_CHARTS_V9_THEME_DARK = OUI_CHARTS_V9_THEME_DARK;
 export const EUI_SPARKLINE_THEME_PARTIAL = OUI_SPARKLINE_THEME_PARTIAL;
 /* End of Aliases */

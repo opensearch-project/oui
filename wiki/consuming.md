@@ -122,6 +122,13 @@ The Next theme uses the [Source Sans 3](https://github.com/adobe-fonts/source-sa
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 ```
 
+// TODO update weights
+The v9 theme uses the [Rubik](https://fonts.google.com/specimen/Rubik) and [Fira code](https://fonts.google.com/specimen/Fira+Code) fonts:
+ ```scss
+// index.scss
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+```
+
 ### Reusing the variables in JavaScript
 
 The Sass variables are also made available for consumption as json files. This enables reuse of values in css-in-js systems like [styled-components](https://www.styled-components.com). As the following example shows, it can also make the downstream components theme-aware without much extra effort:

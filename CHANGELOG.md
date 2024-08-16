@@ -7,6 +7,7 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
+- Add V9 Theme ([#1344](https://github.com/opensearch-project/oui/pull/1344))
 
 ### 🐛 Bug Fixes
 
