@@ -50,6 +50,14 @@ export const OUI_THEMES: OUI_THEME[] = [
     text: 'Next Dark',
     value: 'next-dark',
   },
+  {
+    text: 'v9 Light',
+    value: 'v9-light',
+  },
+  {
+    text: 'v9 Dark',
+    value: 'v9-dark',
+  },
 ];
 
 /* OUI -> EUI Aliases */

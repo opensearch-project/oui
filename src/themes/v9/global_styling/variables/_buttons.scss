@@ -13,12 +13,12 @@ $ouiButtonHeight: $ouiSizeXXL !default;
 $ouiButtonHeightSmall: $ouiSizeXL !default;
 $ouiButtonHeightXSmall: $ouiSizeL !default;
 
-$ouiButtonColorDisabled: tintOrShade($ouiTextColor, 70%, 70%) !default;
+$ouiButtonColorDisabled: #AFAFAF !default;
 // Only increase the contrast of background color to text to 2.0 for disabled
-$ouiButtonColorDisabledText: makeDisabledContrastColor($ouiButtonColorDisabled) !default;
-$ouiButtonColorGhostDisabled: lightOrDarkTheme($ouiColorDarkShade, $ouiColorLightShade) !default;
+$ouiButtonColorDisabledText: #8E8E8E !default;
+$ouiButtonColorGhostDisabled: lightOrDarkTheme($ouiColorDarkShade, $ouiColorDarkShade) !default;
 
-$ouiButtonBorderRadius: $ouiBorderRadius !default;
+$ouiButtonBorderRadius: 0 !default;
 
 // Modifier naming and colors.
 $ouiButtonTypes: (
