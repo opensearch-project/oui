@@ -16,6 +16,7 @@
 
 - Update styling for empty button and date picker icon ([#1342](https://github.com/opensearch-project/oui/pull/1342))
 - Fix height of OuiCombobox when `append` is used  ([#1338](https://github.com/opensearch-project/oui/pull/1338))
+- Fix `docgenInfo` errors when accessing the props or playground of some docs ([#1355](https://github.com/opensearch-project/oui/pull/1355))
 
 ### 🚞 Infrastructure
 
