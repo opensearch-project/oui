@@ -7,6 +7,7 @@ exports[`OuiSearchFilters render - with filters 1`] = `
   <IsFilter
     config={
       Object {
+        "compressed": undefined,
         "field": "open",
         "name": "Open",
         "type": "is",
@@ -37,6 +38,7 @@ exports[`OuiSearchFilters render - with filters 1`] = `
   <FieldValueSelectionFilter
     config={
       Object {
+        "compressed": undefined,
         "field": "tag",
         "name": "Tag",
         "options": [Function],

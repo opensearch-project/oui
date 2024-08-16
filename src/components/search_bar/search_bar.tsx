@@ -97,6 +97,8 @@ export interface OuiSearchBarProps extends CommonProps {
    * Date formatter to use when parsing date values
    */
   dateFormat?: object;
+
+  compressed?: boolean;
 }
 
 const parseQuery = (
@@ -231,6 +233,7 @@ export class OuiSearchBar extends Component<OuiSearchBarProps, State> {
       filters,
       toolsLeft,
       toolsRight,
+      compressed,
     } = this.props;
 
     const toolsLeftEl = this.renderTools(toolsLeft);
@@ -241,6 +244,7 @@ export class OuiSearchBar extends Component<OuiSearchBarProps, State> {
           filters={filters}
           query={query}
           onChange={this.onFiltersChange}
+          compressed={compressed}
         />
       </OuiFlexItem>
     );
@@ -252,6 +256,7 @@ export class OuiSearchBar extends Component<OuiSearchBarProps, State> {
         {toolsLeftEl}
         <OuiFlexItem className="ouiSearchBar__searchHolder" grow={true}>
           <OuiSearchBox
+            compressed={compressed}
             {...box}
             query={queryText}
             onSearch={this.onSearch}
