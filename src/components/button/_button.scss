@@ -17,7 +17,7 @@
   @include ouiButton;
   @include ouiSlightShadow;
 
-  border-radius: $ouiBorderRadius;
+  border-radius: $ouiButtonBorderRadius;
   min-width: $ouiButtonMinWidth;
 
   .ouiButton__content {

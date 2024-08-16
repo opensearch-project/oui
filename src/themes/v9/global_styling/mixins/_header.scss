@@ -1,0 +1,62 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@import '../variables/header';
+
+@mixin ouiHeaderAffordForFixed($headerHeight: $ouiHeaderHeightCompensation) {
+  &.ouiBody--headerIsFixed {
+    padding-top: $headerHeight;
+
+    // When the OuiHeader is fixed, we need to account for it in the position of the flyout
+    .ouiFlyout,
+    .ouiCollapsibleNav {
+      top: $headerHeight;
+      height: calc(100% - #{$headerHeight});
+    }
+
+    @include ouiBreakpoint('m', 'l', 'xl') {
+      .ouiPageSideBar--sticky {
+        max-height: calc(100vh - #{$headerHeight});
+        top: #{$headerHeight};
+      }
+    }
+
+    .ouiOverlayMask--belowHeader {
+      top: #{$headerHeight};
+    }
+  }
+}
+
+
+/* OUI -> EUI Aliases */
+@mixin euiHeaderAffordForFixed($headerHeight: $ouiHeaderHeightCompensation) {
+  &.euiBody--headerIsFixed {
+    padding-top: $headerHeight;
+
+    .euiFlyout,
+    .euiCollapsibleNav {
+      top: $headerHeight;
+      height: calc(100% - #{$headerHeight});
+    }
+
+    @include euiBreakpoint('m', 'l', 'xl') {
+      .euiPageSideBar--sticky {
+        max-height: calc(100vh - #{$headerHeight});
+        top: #{$headerHeight};
+      }
+    }
+
+    .euiOverlayMask--belowHeader {
+      top: #{$headerHeight};
+    }
+  }
+}
+/* End of Aliases */

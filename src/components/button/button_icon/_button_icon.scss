@@ -16,7 +16,7 @@
   @include ouiButton;
   @include ouiSlightShadow;
 
-  border-radius: $ouiBorderRadius;
+  border-radius: $ouiButtonBorderRadius;
   width: $ouiButtonHeight;
 
   // Ensures center alignment of any sized icon inside buttons and anchors

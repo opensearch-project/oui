@@ -1,0 +1,30 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Core
+
+// Functions need to be first, since we use them in our variables and mixin definitions
+@import 'functions/index';
+
+// Variables come next, and are used in some mixins
+@import 'variables/index';
+
+// Mixins provide generic code expansion through helpers
+@import 'mixins/index';
+
+// Utility classes provide one-off selectors for common css problems
+@import 'utility/index';
+
+// CSS variables of SCSS variables
+@import 'css_variables/index';
+
+// The reset file makes use of variables and mixins
+@import 'reset/index';

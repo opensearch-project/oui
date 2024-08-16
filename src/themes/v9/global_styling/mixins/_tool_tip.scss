@@ -1,0 +1,46 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@mixin ouiToolTipStyle($size: null) {
+  @include ouiBottomShadow($color: $ouiColorInk);
+  border-radius: $ouiBorderRadius;
+  background-color: $ouiTooltipBackgroundColor;
+  color: $ouiColorGhost;
+  z-index: $ouiZLevel9;
+  max-width: 256px;
+  overflow-wrap: break-word;
+
+  @if ($size == 's') {
+    @include ouiFontSizeXS;
+    padding: $ouiSizeS;
+  } @else {
+    @include ouiFontSizeS;
+    padding: $ouiSizeM;
+  }
+}
+
+@mixin ouiToolTipTitle {
+  font-weight: $ouiFontWeightBold;
+  border-bottom: solid 1px tintOrShade($ouiColorFullShade, 35%, 80%);
+  padding-bottom: $ouiSizeXS;
+  margin-bottom: $ouiSizeXS;
+}
+
+@mixin ouiToolTipAnimation($side: 'top') {
+  animation: #{map-get($ouiTooltipAnimations, $side)} $ouiAnimSpeedExtraFast ease-out 0s forwards;
+}
+
+
+/* OUI -> EUI Aliases */
+@mixin euiToolTipStyle($size: null) { @include ouiToolTipStyle($size); }
+@mixin euiToolTipTitle { @include ouiToolTipTitle; }
+@mixin euiToolTipAnimation($side: 'top') { @include ouiToolTipAnimation($side); }
+/* End of Aliases */

@@ -46,7 +46,7 @@ $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
 
   .ouiSplitButtonControl {
     border: $ouiBorderWidthThick solid $ouiBorderColor;
-    border-radius: $ouiBorderRadius;
+    border-radius: $ouiButtonBorderRadius;
   }
 
   // Create button modifiers based upon the map.
