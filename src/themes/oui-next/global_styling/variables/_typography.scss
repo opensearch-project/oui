@@ -57,6 +57,9 @@ $ouiFontSizeL:      $ouiFontSize * nth($ouiTextScale, 3) !default; // 20px
 $ouiFontSizeXL:     $ouiFontSize * nth($ouiTextScale, 2) !default; // 28px
 $ouiFontSizeXXL:    $ouiFontSize * nth($ouiTextScale, 1) !default; // 36px
 
+// This value is impacted by font-size
+$ouiLegibilityMaxWidth: 80ch !default;
+
 // Line height
 $ouiLineHeight:     1.333333 !default;
 $ouiBodyLineHeight: 1 !default;
@@ -125,6 +128,7 @@ $euiFontSizeM: $ouiFontSizeM;
 $euiFontSizeL: $ouiFontSizeL;
 $euiFontSizeXL: $ouiFontSizeXL;
 $euiFontSizeXXL: $ouiFontSizeXXL;
+$euiLegibilityMaxWidth: $ouiLegibilityMaxWidth;
 $euiLineHeight: $ouiLineHeight;
 $euiBodyLineHeight: $ouiBodyLineHeight;
 $euiFontWeightLight: $ouiFontWeightLight;
