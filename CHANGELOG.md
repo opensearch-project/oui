@@ -9,7 +9,8 @@
 ### 📈 Features/Enhancements
 
 - Add V9 Theme ([#1344](https://github.com/opensearch-project/oui/pull/1344))
-- Add history icon and alias it as recent  ([#1346](https://github.com/opensearch-project/oui/pull/1346))
+- Add history icon and alias it as recent ([#1346](https://github.com/opensearch-project/oui/pull/1346))
+- Introduce compressed OuiSearchBar ([#1354](https://github.com/opensearch-project/oui/pull/1354))
 
 ### 🐛 Bug Fixes
 
