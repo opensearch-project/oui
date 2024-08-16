@@ -20,6 +20,23 @@
 
 ### 🔩 Tests
 
+## [Unreleased `1.10.0`](https://github.com/opensearch-project/oui/tree/1.10)
+
+### 📈 Features/Enhancements
+
+- Add V9 Theme ([#1344](https://github.com/opensearch-project/oui/pull/1344))
+- Add history icon and alias it as recent ([#1346](https://github.com/opensearch-project/oui/pull/1346))
+- Introduce compressed OuiSearchBar ([#1354](https://github.com/opensearch-project/oui/pull/1354))
+- Introduce `$ouiLegibilityMaxWidth` variable and `ouiLegibilityMaxWidth` mixin ([#1359](https://github.com/opensearch-project/oui/pull/1359))
+
+### 🐛 Bug Fixes
+
+- Fix now button to be secondary in SuperDatePicker ([#1320](https://github.com/opensearch-project/oui/pull/1320))
+- Update styling for empty button and date picker icon ([#1342](https://github.com/opensearch-project/oui/pull/1342))
+- Fix height of OuiCombobox when `append` is used  ([#1338](https://github.com/opensearch-project/oui/pull/1338))
+- Fix `docgenInfo` errors when accessing the props or playground of some docs ([#1355](https://github.com/opensearch-project/oui/pull/1355))
+
+
 ## [`1.9.0`](https://github.com/opensearch-project/oui/tree/1.9.0)
 
 ### 📈 Features/Enhancements
@@ -29,8 +46,6 @@
 ### 🐛 Bug Fixes
 
 - Fix the availability of OuiCompressedSuperDatePicker ([#1325](https://github.com/opensearch-project/oui/pull/1325))
-- Fix now button to be secondary in SuperDatePicker ([#1320](https://github.com/opensearch-project/oui/pull/1320))
-
 
 ## [`1.8.1`](https://github.com/opensearch-project/oui/tree/1.8.1)
 
