@@ -40,6 +40,7 @@ export interface IsFilterConfigType {
   name: string;
   negatedName?: string;
   available?: () => boolean;
+  compressed?: boolean;
 }
 
 export interface IsFilterProps {
@@ -80,6 +81,7 @@ export class IsFilter extends Component<IsFilterProps> {
     };
     return (
       <OuiFilterButton
+        size={config.compressed ? 's' : undefined}
         onClick={onClick}
         hasActiveFilters={hasActiveFilters}
         aria-pressed={!!hasActiveFilters}>
