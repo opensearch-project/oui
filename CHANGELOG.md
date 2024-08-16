@@ -7,12 +7,14 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
+
 - Add V9 Theme ([#1344](https://github.com/opensearch-project/oui/pull/1344))
+- Add history icon and alias it as recent  ([#1346](https://github.com/opensearch-project/oui/pull/1346))
 
 ### 🐛 Bug Fixes
 
-- Fixes combobox height with appendees ([#1338](https://github.com/opensearch-project/oui/pull/1338))
 - Update styling for empty button and date picker icon ([#1342](https://github.com/opensearch-project/oui/pull/1342))
+- Fix height of OuiCombobox when `append` is used  ([#1338](https://github.com/opensearch-project/oui/pull/1338))
 
 ### 🚞 Infrastructure
 
