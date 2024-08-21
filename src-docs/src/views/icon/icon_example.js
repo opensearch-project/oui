@@ -38,6 +38,8 @@ import Ml from './ml';
 
 import Logos from './logos';
 
+import Workspace from './workspace';
+
 import IconSizes from './icon_sizes';
 
 import IconColors from './icon_colors';
@@ -114,6 +116,15 @@ export const IconExample = {
         </p>
       ),
       demo: <Logos />,
+    },
+    {
+      title: 'Workspaces',
+      text: (
+        <p>
+          Workspace logos are usually displayed at <OuiCode>16x16</OuiCode> or above.
+        </p>
+      ),
+      demo: <Workspace />,
     },
     {
       title: 'Apps',
