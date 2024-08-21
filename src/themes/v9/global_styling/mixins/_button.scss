@@ -77,6 +77,16 @@
       margin-inline-start: 0; // 1, 2
       margin-inline-end: $ouiSizeS; // 1, 2
     }
+
+    &.ouiButtonContent--smallIconGap > * + * {
+      margin-inline-start: 0; // 1, 2
+      margin-inline-end: $ouiSizeXXS; // 1, 2
+    }
+
+    &.ouiButtonContent--noIconGap > * + * {
+      margin-inline-start: 0; // 1, 2
+      margin-inline-end: 0; // 1, 2
+    }
   } @else {
     display: flex;
     justify-content: center;
@@ -84,6 +94,14 @@
 
     > * + * {
       margin-inline-start: $ouiSizeS; // 1
+    }
+
+    &.ouiButtonContent--smallIconGap > * + * {
+      margin-inline-start: $ouiSizeXXS; // 1
+    }
+
+    &.ouiButtonContent--noIconGap > * + * {
+      margin-inline-start: 0; // 1
     }
   }
 }
