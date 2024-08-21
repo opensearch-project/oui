@@ -8,6 +8,9 @@
 
 ### 📈 Features/Enhancements
 
+- Add new icons for workspaces ([#1365](https://github.com/opensearch-project/oui/pull/1365))
+- Add a property to control the gap between an icon and the content of OuiButton and OuiButtonEmpty ([#1367](https://github.com/opensearch-project/oui/pull/1367))
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
