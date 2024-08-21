@@ -8,16 +8,9 @@
 
 ### 📈 Features/Enhancements
 
-- Add V9 Theme ([#1344](https://github.com/opensearch-project/oui/pull/1344))
-- Add history icon and alias it as recent ([#1346](https://github.com/opensearch-project/oui/pull/1346))
-- Introduce compressed OuiSearchBar ([#1354](https://github.com/opensearch-project/oui/pull/1354))
-- Introduce `$ouiLegibilityMaxWidth` variable and `ouiLegibilityMaxWidth` mixin ([#1359](https://github.com/opensearch-project/oui/pull/1359))
+- Add new icons for workspaces ([#1365](https://github.com/opensearch-project/oui/pull/1365))
 
 ### 🐛 Bug Fixes
-
-- Update styling for empty button and date picker icon ([#1342](https://github.com/opensearch-project/oui/pull/1342))
-- Fix height of OuiCombobox when `append` is used  ([#1338](https://github.com/opensearch-project/oui/pull/1338))
-- Fix `docgenInfo` errors when accessing the props or playground of some docs ([#1355](https://github.com/opensearch-project/oui/pull/1355))
 
 ### 🚞 Infrastructure
 
@@ -29,7 +22,24 @@
 
 ### 🔩 Tests
 
-## [`1.9.0`](https://github.com/opensearch-project/oui/tree/1.8.1)
+## [Unreleased `1.10.0`](https://github.com/opensearch-project/oui/tree/1.10)
+
+### 📈 Features/Enhancements
+
+- Add V9 Theme ([#1344](https://github.com/opensearch-project/oui/pull/1344))
+- Add history icon and alias it as recent ([#1346](https://github.com/opensearch-project/oui/pull/1346))
+- Introduce compressed OuiSearchBar ([#1354](https://github.com/opensearch-project/oui/pull/1354))
+- Introduce `$ouiLegibilityMaxWidth` variable and `ouiLegibilityMaxWidth` mixin ([#1359](https://github.com/opensearch-project/oui/pull/1359))
+
+### 🐛 Bug Fixes
+
+- Fix now button to be secondary in SuperDatePicker ([#1320](https://github.com/opensearch-project/oui/pull/1320))
+- Update styling for empty button and date picker icon ([#1342](https://github.com/opensearch-project/oui/pull/1342))
+- Fix height of OuiCombobox when `append` is used  ([#1338](https://github.com/opensearch-project/oui/pull/1338))
+- Fix `docgenInfo` errors when accessing the props or playground of some docs ([#1355](https://github.com/opensearch-project/oui/pull/1355))
+
+
+## [`1.9.0`](https://github.com/opensearch-project/oui/tree/1.9.0)
 
 ### 📈 Features/Enhancements
 
@@ -38,9 +48,6 @@
 ### 🐛 Bug Fixes
 
 - Fix the availability of OuiCompressedSuperDatePicker ([#1325](https://github.com/opensearch-project/oui/pull/1325))
-- Fix now button to be secondary in SuperDatePicker ([#1320](https://github.com/opensearch-project/oui/pull/1320))
-
-
 
 ## [`1.8.1`](https://github.com/opensearch-project/oui/tree/1.8.1)
 
@@ -108,6 +115,7 @@
 
 - Clean up unused runtime and dev dependencies ([#1135](https://github.com/opensearch-project/oui/pull/1135))
 
+### 🪛 Refactoring
 
 ## [`1.6.0`](https://github.com/opensearch-project/oui/tree/1.6.0)
 
@@ -153,18 +161,11 @@
 - Eliminate screenreader content when copying and pasting data grid table ([#1198](https://github.com/opensearch-project/oui/pull/1198))
 - [Next Theme] Set base font size to 18px ([#1221](https://github.com/opensearch-project/oui/pull/1221))
 - [Next Theme] Revert `font-weight` of OuiButton to normal from semi-bold ([#1222](https://github.com/opensearch-project/oui/pull/1222))
-- Convert shorthand palette colors to full 6-char hex ([#1262](https://github.com/opensearch-project/oui/pull/1262))
-- Use small font size consistently in buttons and button groups ([#1281](https://github.com/opensearch-project/oui/pull/1281))
-- Use faster animations for modals, popovers, and tooltips ([#1282](https://github.com/opensearch-project/oui/pull/1282))
-- Adjust popover and context menu title styles and tooltip padding ([#1283](https://github.com/opensearch-project/oui/pull/1283))
-- Remove Button translations and add inset shadow on active ([#1285](https://github.com/opensearch-project/oui/pull/1285))
-- Make Super Update Button secondary instead of primary ([#1286](https://github.com/opensearch-project/oui/pull/1286))
 
 ### 🐛 Bug Fixes
 
 - Fix bug in OuiButtonContent for showing info tooltip in icon-only buttons when hovered([#1160](https://github.com/opensearch-project/oui/pull/1160))
 - Fix playground support check ([#1162](https://github.com/opensearch-project/oui/pull/1162))
-- Make a OuiSplitButton with no options present as a button ([#1208](https://github.com/opensearch-project/oui/pull/1208))
 - Prevent collapsable button of a resizable from adding to the height when hidden ([#1241](https://github.com/opensearch-project/oui/pull/1241))
 - Prevent action buttons of OuiDataGridCell from moving the content ([#1224](https://github.com/opensearch-project/oui/pull/1224))
 - Fix vertical alignment and font weight of breadcrumbs that are buttons or links ([#1232](https://github.com/opensearch-project/oui/pull/1232))

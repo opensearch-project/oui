@@ -504,6 +504,12 @@ const typeToPathMap = {
   tokenTokenCount: 'tokens/tokenTokenCount',
   tokenSearchType: 'tokens/tokenSearchType',
   tokenHistogram: 'tokens/tokenHistogram',
+  wsAnalytics: 'workspace/wsAnalytics',
+  wsEssentials: 'workspace/wsEssentials',
+  wsObservability: 'workspace/wsObservability',
+  wsSearch: 'workspace/wsSearch',
+  wsSecurityAnalytics: 'workspace/wsSecurityAnalytics',
+  wsSelector: 'workspace/wsSelector',
 };
 
 export const TYPES = keysOf(typeToPathMap);
