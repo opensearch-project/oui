@@ -85,7 +85,7 @@ export const FLUSH_TYPES = keysOf(flushTypeToClassNameMap);
 
 /**
  * Extends OuiButtonContentProps which provides
- * `iconType`, `iconSide`, and `textProps`
+ * `iconType`, `iconSide`, `iconGap`, and `textProps`
  */
 export interface CommonOuiButtonEmptyProps
   extends OuiButtonContentProps,
@@ -136,6 +136,7 @@ export const OuiButtonEmpty: FunctionComponent<OuiButtonEmptyProps> = ({
   children,
   className,
   iconType,
+  iconGap = 'm',
   iconSide = 'left',
   color = 'primary',
   size,
@@ -189,6 +190,7 @@ export const OuiButtonEmpty: FunctionComponent<OuiButtonEmptyProps> = ({
       iconType={iconType}
       iconSide={iconSide}
       iconSize={iconSize}
+      iconGap={iconGap}
       textProps={{ ...textProps, className: textClassNames }}
       {...contentProps}
       // className has to come last to override contentProps.className
