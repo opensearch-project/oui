@@ -132,6 +132,7 @@ exports[`OuiSplitButton onClick events selection list is opened on drop-down but
                   >
                     <OuiButtonContent
                       className="ouiButton__content"
+                      iconGap="m"
                       iconSide="left"
                       textProps={
                         Object {
@@ -1209,6 +1210,7 @@ exports[`OuiSplitButton options rendering option with href renders link 1`] = `
                   >
                     <OuiButtonContent
                       className="ouiButton__content"
+                      iconGap="m"
                       iconSide="left"
                       textProps={
                         Object {
@@ -2067,6 +2069,7 @@ exports[`OuiSplitButton options rendering options are rendered when select is op
                   >
                     <OuiButtonContent
                       className="ouiButton__content"
+                      iconGap="m"
                       iconSide="left"
                       textProps={
                         Object {
@@ -3080,6 +3083,7 @@ exports[`OuiSplitButton options rendering selectedItem 0 is rendered 1`] = `
                   >
                     <OuiButtonContent
                       className="ouiButton__content"
+                      iconGap="m"
                       iconSide="left"
                       textProps={
                         Object {
@@ -4164,6 +4168,7 @@ exports[`OuiSplitButton options rendering selectedItem last is rendered 1`] = `
                   >
                     <OuiButtonContent
                       className="ouiButton__content"
+                      iconGap="m"
                       iconSide="left"
                       textProps={
                         Object {
@@ -5451,6 +5456,7 @@ exports[`OuiSplitButton simple button display display simple button when options
                   >
                     <OuiButtonContent
                       className="ouiButton__content"
+                      iconGap="m"
                       iconSide="left"
                       textProps={
                         Object {
@@ -5572,6 +5578,7 @@ exports[`OuiSplitButton simple button display ignore initiallyOpen when options 
                   >
                     <OuiButtonContent
                       className="ouiButton__content"
+                      iconGap="m"
                       iconSide="left"
                       textProps={
                         Object {

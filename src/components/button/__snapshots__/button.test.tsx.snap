@@ -205,6 +205,72 @@ exports[`OuiButton props href secures the rel attribute when the target is _blan
 </a>
 `;
 
+exports[`OuiButton props iconGap m is rendered 1`] = `
+<button
+  class="ouiButton ouiButton--primary"
+  type="button"
+>
+  <span
+    class="ouiButtonContent ouiButton__content"
+  >
+    <span
+      class="ouiButtonContent__icon"
+      color="inherit"
+      data-ouiicon-type="user"
+    />
+    <span
+      class="ouiButton__text"
+    >
+      Content
+    </span>
+  </span>
+</button>
+`;
+
+exports[`OuiButton props iconGap none is rendered 1`] = `
+<button
+  class="ouiButton ouiButton--primary"
+  type="button"
+>
+  <span
+    class="ouiButtonContent ouiButtonContent--noIconGap ouiButton__content"
+  >
+    <span
+      class="ouiButtonContent__icon"
+      color="inherit"
+      data-ouiicon-type="user"
+    />
+    <span
+      class="ouiButton__text"
+    >
+      Content
+    </span>
+  </span>
+</button>
+`;
+
+exports[`OuiButton props iconGap s is rendered 1`] = `
+<button
+  class="ouiButton ouiButton--primary"
+  type="button"
+>
+  <span
+    class="ouiButtonContent ouiButtonContent--smallIconGap ouiButton__content"
+  >
+    <span
+      class="ouiButtonContent__icon"
+      color="inherit"
+      data-ouiicon-type="user"
+    />
+    <span
+      class="ouiButton__text"
+    >
+      Content
+    </span>
+  </span>
+</button>
+`;
+
 exports[`OuiButton props iconSide left is rendered 1`] = `
 <button
   class="ouiButton ouiButton--primary"

@@ -406,6 +406,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                             >
                               <OuiButtonContent
                                 className="ouiButtonEmpty__content"
+                                iconGap="m"
                                 iconSide="right"
                                 iconSize="s"
                                 iconType="arrowDown"
@@ -576,6 +577,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                       >
                                         <OuiButtonContent
                                           className="ouiButtonEmpty__content"
+                                          iconGap="m"
                                           iconSide="left"
                                           iconSize="m"
                                           textProps={
@@ -659,6 +661,7 @@ exports[`OuiInMemoryTable behavior pagination 1`] = `
                                       >
                                         <OuiButtonContent
                                           className="ouiButtonEmpty__content"
+                                          iconGap="m"
                                           iconSide="left"
                                           iconSize="m"
                                           textProps={

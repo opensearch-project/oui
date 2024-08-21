@@ -350,6 +350,7 @@ exports[`OuiControlBar props leftOffset is rendered 1`] = `
                 >
                   <OuiButtonContent
                     className="ouiButton__content"
+                    iconGap="m"
                     iconSide="left"
                     textProps={
                       Object {
@@ -690,6 +691,7 @@ exports[`OuiControlBar props maxHeight is rendered 1`] = `
                 >
                   <OuiButtonContent
                     className="ouiButton__content"
+                    iconGap="m"
                     iconSide="left"
                     textProps={
                       Object {
@@ -1029,6 +1031,7 @@ exports[`OuiControlBar props mobile is rendered 1`] = `
                 >
                   <OuiButtonContent
                     className="ouiButton__content"
+                    iconGap="m"
                     iconSide="left"
                     textProps={
                       Object {
@@ -1272,6 +1275,7 @@ exports[`OuiControlBar props position is rendered 1`] = `
             >
               <OuiButtonContent
                 className="ouiButton__content"
+                iconGap="m"
                 iconSide="left"
                 textProps={
                   Object {
@@ -1596,6 +1600,7 @@ exports[`OuiControlBar props rightOffset is rendered 1`] = `
                 >
                   <OuiButtonContent
                     className="ouiButton__content"
+                    iconGap="m"
                     iconSide="left"
                     textProps={
                       Object {
@@ -1940,6 +1945,7 @@ exports[`OuiControlBar props showContent is rendered 1`] = `
                 >
                   <OuiButtonContent
                     className="ouiButton__content"
+                    iconGap="m"
                     iconSide="left"
                     textProps={
                       Object {
@@ -2284,6 +2290,7 @@ exports[`OuiControlBar props size is rendered 1`] = `
                 >
                   <OuiButtonContent
                     className="ouiButton__content"
+                    iconGap="m"
                     iconSide="left"
                     textProps={
                       Object {
