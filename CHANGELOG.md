@@ -8,10 +8,9 @@
 
 ### 📈 Features/Enhancements
 
-- Add new icons for workspaces ([#1365](https://github.com/opensearch-project/oui/pull/1365))
-- Add a property to control the gap between an icon and the content of OuiButton and OuiButtonEmpty ([#1367](https://github.com/opensearch-project/oui/pull/1367))
-
 ### 🐛 Bug Fixes
+
+- Fix combobox appearance when compressed and in-group ([#1371](https://github.com/opensearch-project/oui/pull/1371))
 
 ### 🚞 Infrastructure
 
@@ -23,7 +22,16 @@
 
 ### 🔩 Tests
 
-## [Unreleased `1.10.0`](https://github.com/opensearch-project/oui/tree/1.10)
+
+## [`1.11.0`](https://github.com/opensearch-project/oui/tree/1.11)
+
+### 📈 Features/Enhancements
+
+- Add new icons for workspaces ([#1365](https://github.com/opensearch-project/oui/pull/1365))
+- Add a property to control the gap between an icon and the content of OuiButton and OuiButtonEmpty ([#1367](https://github.com/opensearch-project/oui/pull/1367))
+
+
+## [`1.10.0`](https://github.com/opensearch-project/oui/tree/1.10)
 
 ### 📈 Features/Enhancements
 
@@ -72,7 +80,6 @@
 - Fix next reset for code blocks and super update button icon ([#1306])(https://github.com/opensearch-project/oui/pull/1306)
 - Fix the appearance of form controls in grouped layouts ([#1311])(https://github.com/opensearch-project/oui/pull/1311)
 - Fix QuickSelectPopover padding in SuperDatePicker ([#1315](https://github.com/opensearch-project/oui/pull/1315))
-- Fix now button to be secondary in SuperDatePicker ([#1320](https://github.com/opensearch-project/oui/pull/1320))
 
 ### 🚞 Infrastructure
 
