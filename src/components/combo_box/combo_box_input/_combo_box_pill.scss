@@ -18,14 +18,44 @@
   line-height: $ouiSizeL - 2px;
   vertical-align: baseline;
 
+  &.ouiBadge {
+    // A badge adds 1px border around the pill
+    line-height: $ouiSizeL - 4px;
+  }
+
   &,
   & + & /* 1 */ {
     margin: $ouiSizeXS;
   }
 
+  // In a group, reduce top and left margins and increase right margin by 1px
+  .ouiFormControlLayout--group &,
+  .ouiFormControlLayout--group & + & /* 1 */ {
+    margin: ($ouiSizeXS - 1px) ($ouiSizeXS + 1px) $ouiSizeXS ($ouiSizeXS - 1px);
+  }
+
+  &.ouiBadge,
+  &.ouiBadge + &.ouiBadge /* 1 */ {
+    margin: ($ouiSizeXS + 1px) $ouiSizeXS;
+  }
+
   .ouiComboBox--compressed &,
   .ouiComboBox--compressed & + & /* 1 */ {
+    margin: $ouiSizeXS $ouiSizeXS 0 0;
+    line-height: calc($ouiSizeL - 2px);
+  }
+
+  // In a group, reduce top and left margins and increase right margin by 1px
+  .ouiComboBox--compressed .ouiFormControlLayout--group &,
+  .ouiComboBox--compressed .ouiFormControlLayout--group & + & /* 1 */ {
+    margin: ($ouiSizeXS - 1px) ($ouiSizeXS + 1px) 0 -1px;
+  }
+
+  .ouiComboBox--compressed &.ouiBadge,
+  .ouiComboBox--compressed &.ouiBadge + &.ouiBadge /* 1 */ {
     margin: ($ouiSizeXS + 1px) $ouiSizeXS 0 0;
+    // A badge adds 1px border around
+    line-height: calc($ouiSizeL - 4px);
   }
 
   &--plainText {
