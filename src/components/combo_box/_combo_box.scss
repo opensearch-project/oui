@@ -76,6 +76,20 @@
     &.ouiComboBox__inputWrap-isLoading.ouiComboBox__inputWrap-isClearable {
       @include ouiFormControlLayoutPadding(3); /* 2 */
     }
+
+    &--inGroup#{&}--compressed {
+      height: $ouiFormControlLayoutGroupInputCompressedHeight; /* 2 */
+      line-height: $ouiFormControlLayoutGroupInputCompressedHeight; /* 2 */
+
+      .ouiComboBoxPill,
+      .ouiComboBoxPill + .ouiComboBoxPill {
+        margin: $ouiSizeXS $ouiSizeXS 0 0;
+      }
+
+      .ouiComboBoxPill--plainText {
+        line-height: calc($ouiSizeL - 2px);
+      }
+    }
   }
 
   /**
@@ -138,7 +152,19 @@
     }
   }
 
+  .ouiFormControlLayout--group {
+    .ouiComboBox__input {
+      height: ($ouiSizeXL - 2px);
+    }
+  }
+
   &.ouiComboBox--compressed {
+    .ouiFormControlLayout--group {
+      .ouiComboBox__input {
+        height: $ouiFormControlLayoutGroupInputCompressedHeight;
+      }
+    }
+
     .ouiComboBox__inputWrap {
       line-height: $ouiFormControlCompressedHeight; /* 2 */
       padding-top: 0;
@@ -163,13 +189,6 @@
         @include ouiFormControlLayoutPadding(3, $compressed: true); /* 2 */
       }
     }
-  }
-
-  // Overrides the top and bottom padding of 8px with ouiFormControlLayout--group 
-  // when append/prepend is enabled, original top, bottom padding was 1px
-  .ouiFormControlLayout--group {
-    padding-top: 0;
-    padding-bottom: 0;
   }
 
   // Overrides line-height of 16px coming from ouiFormControlLayout--group .ouiText
