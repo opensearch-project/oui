@@ -46,7 +46,7 @@ $ouiTextSubduedColor: #707070 !default;
 $ouiColorDisabled: #CDCDCD !default;
 
 // Contrasty text variants
-$ouiColorPrimaryText: #0249D8 !default;
+$ouiColorPrimaryText: $ouiColorPrimary !default;
 $ouiColorSecondaryText: #117F6A !default;
 $ouiColorAccentText: #B92FC5 !default;
 $ouiColorWarningText: #986600 !default;

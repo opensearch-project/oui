@@ -16,30 +16,30 @@ $ouiColorGhost: #FCFEFF;
 $ouiColorInk: #0A121A;
 
 // Core
-$ouiColorPrimary: #FFC0CB;
-$ouiColorSecondary: #FFC0CB;
-$ouiColorAccent: #FFC0CB;
+$ouiColorPrimary: #0249D8;
+$ouiColorSecondary: #00A3E0;
+$ouiColorAccent: #B92FC5;
 
 // Status
-$ouiColorSuccess: $ouiColorSecondary;
-$ouiColorWarning: #FFCE7A;
-$ouiColorDanger: #FF6666;
+$ouiColorSuccess: #117F6A !default;
+$ouiColorWarning: #ED9F00 !default;
+$ouiColorDanger: #C84133 !default;
 
 // Grays
-$ouiColorEmptyShade: #0A121A;
-$ouiColorLightestShade: #101B25;
-$ouiColorLightShade: #293847;
-$ouiColorMediumShade: #5B6875;
-$ouiColorDarkShade: #8D98A3;
-$ouiColorDarkestShade: #DFE3E8;
-$ouiColorFullShade: #FCFEFF;
+$ouiColorEmptyShade: #131313;
+$ouiColorLightestShade: #2A2A2A;
+$ouiColorLightShade: #585858;
+$ouiColorMediumShade: #AFAFAF;
+$ouiColorDarkShade: #CDCDCD;
+$ouiColorDarkestShade: #E5E5E5;
+$ouiColorFullShade: #FFFFFF;
 
 // Backgrounds
-$ouiPageBackgroundColor: #172430;
+$ouiPageBackgroundColor: #181818;
 $ouiColorHighlight: #2E2D25;
 
 // Variations from core
-$ouiTextColor: #DFE5EF;
+$ouiTextColor: #FFFFFF;
 $ouiTitleColor: $ouiTextColor;
 // Ensure contrast between subdued text and the page background
 // Should not be shaded as much as $ouiColorDisabled
@@ -47,14 +47,14 @@ $ouiTextSubduedColor: makeHighContrastColor(shade($ouiTextColor, 30%), $ouiPageB
 $ouiColorDisabled: shade($ouiTextColor, 70%);
 
 // Contrasty text variants
-$ouiColorPrimaryText: makeHighContrastColor($ouiColorPrimary);
-$ouiColorSecondaryText: makeHighContrastColor($ouiColorSecondary);
-$ouiColorAccentText: makeHighContrastColor($ouiColorAccent);
+$ouiColorPrimaryText: #0249D8;
+$ouiColorSecondaryText: #117F6A;
+$ouiColorAccentText: #B92FC5;
 $ouiColorWarningText: makeHighContrastColor($ouiColorWarning);
 $ouiColorDangerText: makeHighContrastColor($ouiColorDanger);
 $ouiColorDisabledText: makeDisabledContrastColor($ouiColorDisabled);
 $ouiColorSuccessText: $ouiColorSecondaryText;
-$ouiLinkColor: $ouiColorPrimaryText;
+$ouiLinkColor: $ouiColorSecondary;
 
 // Charts
 $ouiColorChartLines: $ouiColorLightShade;

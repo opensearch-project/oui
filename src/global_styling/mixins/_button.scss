@@ -121,6 +121,12 @@
 // Keyframe animation declarations can be found in
 // utility/animations.scss
 
+// Helper to contextually turn off button shadows in default states
+@mixin ouiUseDefaultButtonShadows($useShadows: true) {
+  @if ($useShadows) {
+    @content;
+  }
+}
 
 /* OUI -> EUI Aliases */
 @mixin euiButtonBase { @include ouiButtonBase; }
@@ -145,4 +151,5 @@
     border-color: ouiLoadingSpinnerBorderColors(currentColor);
   }
 }
+@mixin euiUseDefaultButtonShadows($useShadows: true) { @include ouiUseDefaultButtonShadows($useShadows); }
 /* End of Aliases */

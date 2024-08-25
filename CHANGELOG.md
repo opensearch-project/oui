@@ -12,6 +12,7 @@
 ### 🐛 Bug Fixes
 
 - Fix combobox appearance when compressed and in-group ([#1371](https://github.com/opensearch-project/oui/pull/1371))
+- Updates to v9 colors, button/input styles, and typography ([#](https://github.com/opensearch-project/oui/pull/))
 
 ### 🚞 Infrastructure
 
