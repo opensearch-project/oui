@@ -7,6 +7,7 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
+- Create Create OuiSimplifiedBreadcrumbs and update OuiHeaderBreadcrumbs ([#1374](https://github.com/opensearch-project/oui/pull/1374))
 
 ### 🐛 Bug Fixes
 

@@ -234,6 +234,24 @@
     "filepath": "src/components/bottom_bar/bottom_bar.tsx"
   },
   {
+    "token": "ouiBreadcrumbsSimplified.collapsedBadge.ariaLabel",
+    "defString": "Show collapsed breadcrumbs",
+    "highlighting": "string",
+    "loc": {
+      "start": {
+        "line": 79,
+        "column": 6,
+        "index": 2234
+      },
+      "end": {
+        "line": 81,
+        "column": 45,
+        "index": 2354
+      }
+    },
+    "filepath": "src/components/breadcrumbs/breadcrumbs_simplified.tsx"
+  },
+  {
     "token": "ouiBreadcrumbs.collapsedBadge.ariaLabel",
     "defString": "Show collapsed breadcrumbs",
     "highlighting": "string",
@@ -2237,14 +2255,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 439,
+        "line": 437,
         "column": 14,
-        "index": 11503
+        "index": 11485
       },
       "end": {
-        "line": 442,
+        "line": 440,
         "column": 16,
-        "index": 11629
+        "index": 11611
       }
     },
     "filepath": "src/components/date_picker/super_date_picker/super_date_picker.tsx"
