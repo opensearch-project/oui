@@ -55,3 +55,71 @@ exports[`OuiHeaderBreadcrumbs is rendered 1`] = `
   </div>
 </nav>
 `;
+
+exports[`OuiHeaderBreadcrumbs is rendered with simplified breadcrumbs 1`] = `
+<nav
+  aria-label="aria-label"
+  class="ouiSimplifiedBreadcrumbs ouiHeaderBreadcrumbs ouiHeaderBreadcrumbs--simplified testClass1 testClass2 ouiSimplifiedBreadcrumbs--truncate"
+  data-test-subj="test subject string"
+>
+  <div
+    class="ouiSimplifiedBreadcrumbWall"
+  >
+    <div
+      class="ouiSimplifiedBreadcrumbWrapper ouiSimplifiedBreadcrumbWrapper--first"
+    >
+      <a
+        class="ouiLink ouiLink--subdued ouiSimplifiedBreadcrumb customClass"
+        data-test-subj="breadcrumbsAnimals"
+        href="#"
+        rel="noreferrer"
+      >
+        Animals
+      </a>
+    </div>
+  </div>
+  <div
+    class="ouiBreadcrumbSeparator"
+  />
+  <div
+    class="ouiSimplifiedBreadcrumbWrapper"
+  >
+    <button
+      class="ouiLink ouiLink--subdued ouiSimplifiedBreadcrumb"
+      type="button"
+    >
+      Reptiles
+    </button>
+  </div>
+  <div
+    class="ouiBreadcrumbSeparator"
+  />
+  <div
+    class="ouiSimplifiedBreadcrumbWrapper"
+  >
+    <a
+      class="ouiLink ouiLink--subdued ouiSimplifiedBreadcrumb"
+      href="#"
+      rel="noreferrer"
+    >
+      Boa constrictor
+    </a>
+  </div>
+  <div
+    class="ouiBreadcrumbSeparator"
+  />
+  <div
+    class="ouiSimplifiedBreadcrumbWrapper ouiSimplifiedBreadcrumbWrapper--last"
+  >
+    <span
+      aria-current="page"
+      class="ouiSimplifiedBreadcrumb ouiSimplifiedBreadcrumb--last"
+    >
+      Edit
+    </span>
+  </div>
+  <div
+    class="ouiBreadcrumbSeparator"
+  />
+</nav>
+`;

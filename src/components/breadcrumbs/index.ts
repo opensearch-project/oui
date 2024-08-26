@@ -34,3 +34,5 @@ export {
   OuiBreadcrumbsProps,
   OuiBreadcrumbResponsiveMaxCount,
 } from './breadcrumbs';
+
+export { OuiSimplifiedBreadcrumbs } from './breadcrumbs_simplified';
