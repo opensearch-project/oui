@@ -35,36 +35,48 @@ import { requiredProps } from '../../../test/required_props';
 import { OuiHeaderBreadcrumbs } from './header_breadcrumbs';
 
 describe('OuiHeaderBreadcrumbs', () => {
-  test('is rendered', () => {
-    const breadcrumbs = [
-      {
-        text: 'Animals',
-        href: '#',
-        onClick: (e: React.MouseEvent) => {
-          e.preventDefault();
-          console.log('You clicked Animals');
-        },
-        'data-test-subj': 'breadcrumbsAnimals',
-        className: 'customClass',
+  const breadcrumbs = [
+    {
+      text: 'Animals',
+      href: '#',
+      onClick: (e: React.MouseEvent) => {
+        e.preventDefault();
+        console.log('You clicked Animals');
       },
-      {
-        text: 'Reptiles',
-        onClick: (e: React.MouseEvent) => {
-          e.preventDefault();
-          console.log('You clicked Reptiles');
-        },
+      'data-test-subj': 'breadcrumbsAnimals',
+      className: 'customClass',
+    },
+    {
+      text: 'Reptiles',
+      onClick: (e: React.MouseEvent) => {
+        e.preventDefault();
+        console.log('You clicked Reptiles');
       },
-      {
-        text: 'Boa constrictor',
-        href: '#',
-      },
-      {
-        text: 'Edit',
-      },
-    ];
+    },
+    {
+      text: 'Boa constrictor',
+      href: '#',
+    },
+    {
+      text: 'Edit',
+    },
+  ];
 
+  test('is rendered', () => {
     const component = render(
       <OuiHeaderBreadcrumbs breadcrumbs={breadcrumbs} {...requiredProps} />
+    );
+
+    expect(component).toMatchSnapshot();
+  });
+
+  test('is rendered with simplified breadcrumbs', () => {
+    const component = render(
+      <OuiHeaderBreadcrumbs
+        breadcrumbs={breadcrumbs}
+        simplify={true}
+        {...requiredProps}
+      />
     );
 
     expect(component).toMatchSnapshot();
