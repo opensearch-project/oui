@@ -16,45 +16,45 @@ $ouiColorGhost: #FCFEFF;
 $ouiColorInk: #0A121A;
 
 // Core
-$ouiColorPrimary: #0249D8;
-$ouiColorSecondary: #00A3E0;
+$ouiColorPrimary: #005EB8;
+$ouiColorSecondary: #199863;
 $ouiColorAccent: #B92FC5;
 
 // Status
 $ouiColorSuccess: #117F6A !default;
 $ouiColorWarning: #ED9F00 !default;
-$ouiColorDanger: #C84133 !default;
+$ouiColorDanger: #E42C19 !default;
 
 // Grays
-$ouiColorEmptyShade: #131313;
-$ouiColorLightestShade: #2A2A2A;
-$ouiColorLightShade: #585858;
-$ouiColorMediumShade: #AFAFAF;
-$ouiColorDarkShade: #CDCDCD;
-$ouiColorDarkestShade: #E5E5E5;
-$ouiColorFullShade: #FFFFFF;
+$ouiColorEmptyShade: #212324;
+$ouiColorLightestShade: #303234;
+$ouiColorLightShade: #4B4E51;
+$ouiColorMediumShade: #616C72;
+$ouiColorDarkShade: #778388;
+$ouiColorDarkestShade: #8C9BA2;
+$ouiColorFullShade: #F3F8FF;
 
 // Backgrounds
-$ouiPageBackgroundColor: #181818;
-$ouiColorHighlight: #2E2D25;
+$ouiPageBackgroundColor: #131313;
+$ouiColorHighlight: #494735;
 
 // Variations from core
-$ouiTextColor: #FFFFFF;
+$ouiTextColor: #F3F8FF;
 $ouiTitleColor: $ouiTextColor;
 // Ensure contrast between subdued text and the page background
 // Should not be shaded as much as $ouiColorDisabled
-$ouiTextSubduedColor: makeHighContrastColor(shade($ouiTextColor, 30%), $ouiPageBackgroundColor);
-$ouiColorDisabled: shade($ouiTextColor, 70%);
+$ouiTextSubduedColor: #A0A9B5;
+$ouiColorDisabled: #AFAFAF;
 
 // Contrasty text variants
-$ouiColorPrimaryText: #0249D8;
+$ouiColorPrimaryText: #005EB8;
 $ouiColorSecondaryText: #117F6A;
 $ouiColorAccentText: #B92FC5;
-$ouiColorWarningText: makeHighContrastColor($ouiColorWarning);
-$ouiColorDangerText: makeHighContrastColor($ouiColorDanger);
-$ouiColorDisabledText: makeDisabledContrastColor($ouiColorDisabled);
+$ouiColorWarningText: #C48600;
+$ouiColorDangerText: #C84133;
+$ouiColorDisabledText: #60656B;
 $ouiColorSuccessText: $ouiColorSecondaryText;
-$ouiLinkColor: $ouiColorSecondary;
+$ouiLinkColor: $ouiColorPrimaryText;
 
 // Charts
 $ouiColorChartLines: $ouiColorLightShade;
