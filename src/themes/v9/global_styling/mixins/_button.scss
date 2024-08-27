@@ -152,5 +152,5 @@
     border-color: ouiLoadingSpinnerBorderColors(currentColor);
   }
 }
-@mixin euiUseDefaultButtonShadows($useShadows: true) { @include ouiUseDefaultButtonShadows($useShadows); }
+@mixin euiUseDefaultButtonShadows($useShadows: false) { @include ouiUseDefaultButtonShadows($useShadows); }
 /* End of Aliases */
