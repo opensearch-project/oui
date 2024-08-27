@@ -26,7 +26,7 @@ export { OuiBeacon } from './beacon';
 
 export { OuiBottomBar } from './bottom_bar';
 
-export { OuiBreadcrumbs } from './breadcrumbs';
+export { OuiBreadcrumbs, OuiSimplifiedBreadcrumbs } from './breadcrumbs';
 
 export {
   OuiButton,
