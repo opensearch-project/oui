@@ -31,16 +31,32 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
 
-import { OuiBreadcrumbs, OuiBreadcrumbsProps } from '../../breadcrumbs';
+import {
+  OuiBreadcrumbs,
+  OuiBreadcrumbsProps,
+  OuiSimplifiedBreadcrumbs,
+} from '../../breadcrumbs';
 
-export const OuiHeaderBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
-  className,
-  breadcrumbs,
-  ...rest
-}) => {
-  const classes = classNames('ouiHeaderBreadcrumbs', className);
+export const OuiHeaderBreadcrumbs: FunctionComponent<
+  OuiBreadcrumbsProps & { simplify?: boolean }
+> = ({ className, breadcrumbs, simplify, ...rest }) => {
+  const classes = classNames(
+    'ouiHeaderBreadcrumbs',
+    {
+      'ouiHeaderBreadcrumbs--simplified': simplify,
+    },
+    className
+  );
 
-  return (
+  return simplify ? (
+    <OuiSimplifiedBreadcrumbs
+      max={4}
+      truncate
+      breadcrumbs={breadcrumbs}
+      className={classes}
+      {...rest}
+    />
+  ) : (
     <OuiBreadcrumbs
       max={4}
       truncate
