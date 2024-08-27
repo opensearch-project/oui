@@ -28,7 +28,9 @@
 }
 
 .ouiButtonGroup__buttons {
-  @include ouiSlightShadow;
+  @include ouiUseDefaultButtonShadows {
+    @include ouiSlightShadow;
+  }
   border-radius: $ouiButtonBorderRadius + 1px; // Simply for the box-shadow
   max-width: 100%;
   display: flex;

@@ -18,7 +18,7 @@ $ouiColorInk: #131313 !default;
 
 // Core
 $ouiColorPrimary: #003B5C !default;
-$ouiColorSecondary: #0249D8 !default;
+$ouiColorSecondary: #199863 !default;
 $ouiColorAccent: #B92FC5 !default;
 
 // Status
@@ -46,14 +46,14 @@ $ouiTextSubduedColor: #707070 !default;
 $ouiColorDisabled: #CDCDCD !default;
 
 // Contrasty text variants
-$ouiColorPrimaryText: #0249D8 !default;
+$ouiColorPrimaryText: $ouiColorPrimary !default;
 $ouiColorSecondaryText: #117F6A !default;
 $ouiColorAccentText: #B92FC5 !default;
-$ouiColorWarningText: #986600 !default;
-$ouiColorDangerText: #973A2E !default;
+$ouiColorWarningText: #C48600 !default;
+$ouiColorDangerText: #C84133 !default;
 $ouiColorDisabledText: #AFAFAF !default;
 $ouiColorSuccessText: #0D6453 !default;
-$ouiLinkColor: #2452AD !default;
+$ouiLinkColor: $ouiColorPrimaryText !default;
 
 // Visualization colors
 
