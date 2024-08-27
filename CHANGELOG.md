@@ -1,27 +1,11 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
-
-### Deprecations
-
-### 🛡 Security
-
-### 📈 Features/Enhancements
+## [`1.12.0`](https://github.com/opensearch-project/oui/tree/1.12)
 
 ### 🐛 Bug Fixes
 - Fix combobox appearance when compressed and in-group ([#1371](https://github.com/opensearch-project/oui/pull/1371))
 - Updates to v9 colors, button/input styles, and typography ([#1373](https://github.com/opensearch-project/oui/pull/1373))
 
-### 🚞 Infrastructure
-
-### 📝 Documentation
-
-### 🛠 Maintenance
-
-### 🪛 Refactoring
-
-### 🔩 Tests
- 
 ## [`1.11.0`](https://github.com/opensearch-project/oui/tree/1.11)
 
 ### 📈 Features/Enhancements
