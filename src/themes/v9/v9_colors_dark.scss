@@ -16,43 +16,43 @@ $ouiColorGhost: #FCFEFF;
 $ouiColorInk: #0A121A;
 
 // Core
-$ouiColorPrimary: #FFC0CB;
-$ouiColorSecondary: #FFC0CB;
-$ouiColorAccent: #FFC0CB;
+$ouiColorPrimary: #005EB8;
+$ouiColorSecondary: #199863;
+$ouiColorAccent: #B92FC5;
 
 // Status
-$ouiColorSuccess: $ouiColorSecondary;
-$ouiColorWarning: #FFCE7A;
-$ouiColorDanger: #FF6666;
+$ouiColorSuccess: #117F6A !default;
+$ouiColorWarning: #ED9F00 !default;
+$ouiColorDanger: #E42C19 !default;
 
 // Grays
-$ouiColorEmptyShade: #0A121A;
-$ouiColorLightestShade: #101B25;
-$ouiColorLightShade: #293847;
-$ouiColorMediumShade: #5B6875;
-$ouiColorDarkShade: #8D98A3;
-$ouiColorDarkestShade: #DFE3E8;
-$ouiColorFullShade: #FCFEFF;
+$ouiColorEmptyShade: #212324;
+$ouiColorLightestShade: #303234;
+$ouiColorLightShade: #4B4E51;
+$ouiColorMediumShade: #616C72;
+$ouiColorDarkShade: #778388;
+$ouiColorDarkestShade: #8C9BA2;
+$ouiColorFullShade: #F3F8FF;
 
 // Backgrounds
-$ouiPageBackgroundColor: #172430;
-$ouiColorHighlight: #2E2D25;
+$ouiPageBackgroundColor: #131313;
+$ouiColorHighlight: #494735;
 
 // Variations from core
-$ouiTextColor: #DFE5EF;
+$ouiTextColor: #F3F8FF;
 $ouiTitleColor: $ouiTextColor;
 // Ensure contrast between subdued text and the page background
 // Should not be shaded as much as $ouiColorDisabled
-$ouiTextSubduedColor: makeHighContrastColor(shade($ouiTextColor, 30%), $ouiPageBackgroundColor);
-$ouiColorDisabled: shade($ouiTextColor, 70%);
+$ouiTextSubduedColor: #A0A9B5;
+$ouiColorDisabled: #AFAFAF;
 
 // Contrasty text variants
-$ouiColorPrimaryText: makeHighContrastColor($ouiColorPrimary);
-$ouiColorSecondaryText: makeHighContrastColor($ouiColorSecondary);
-$ouiColorAccentText: makeHighContrastColor($ouiColorAccent);
-$ouiColorWarningText: makeHighContrastColor($ouiColorWarning);
-$ouiColorDangerText: makeHighContrastColor($ouiColorDanger);
-$ouiColorDisabledText: makeDisabledContrastColor($ouiColorDisabled);
+$ouiColorPrimaryText: #005EB8;
+$ouiColorSecondaryText: #117F6A;
+$ouiColorAccentText: #B92FC5;
+$ouiColorWarningText: #C48600;
+$ouiColorDangerText: #C84133;
+$ouiColorDisabledText: #60656B;
 $ouiColorSuccessText: $ouiColorSecondaryText;
 $ouiLinkColor: $ouiColorPrimaryText;
 

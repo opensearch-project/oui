@@ -111,7 +111,9 @@ $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
           $shadowColor: desaturate($color, 60%);
         }
 
-        @include ouiSlightShadow($shadowColor);
+        @include ouiUseDefaultButtonShadows {
+          @include ouiSlightShadow($shadowColor);
+        }
 
         &:hover,
         &:focus,
@@ -125,7 +127,14 @@ $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
 
   // Fix ghost/disabled look specifically
   .ouiSplitButtonColor.ouiSplitButtonColor-isDisabled.ouiSplitButtonColor--ghost {
-    &,
+    & {
+      @include ouiUseDefaultButtonShadows {
+        @include ouiSlightShadow($ouiColorInk);
+      }
+      color: $ouiButtonColorGhostDisabled;
+      border-color: $ouiButtonColorGhostDisabled;
+    }
+
     &:hover,
     &:focus,
     &:focus-within {

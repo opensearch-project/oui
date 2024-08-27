@@ -257,7 +257,9 @@
 @each $name, $color in $ouiSwitchColors {
   .ouiSwitch--#{$name} {
     &.ouiSwitch--base {
-      @include ouiSlightShadow;
+      @include ouiUseDefaultButtonShadows {
+        @include ouiSlightShadow;
+      }
       @include ouiButtonFocus;
 
       border-color: $color;
@@ -282,7 +284,9 @@
           $shadowColor: desaturate($color, 60%);
         }
 
-        @include ouiSlightShadow($shadowColor);
+        @include ouiUseDefaultButtonShadows {
+          @include ouiSlightShadow($shadowColor);
+        }
 
         &:hover,
         &:focus,
