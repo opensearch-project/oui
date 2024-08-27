@@ -15,7 +15,9 @@
 // Our base button
 .ouiButton {
   @include ouiButton;
-  @include ouiSlightShadow;
+  @include ouiUseDefaultButtonShadows {
+    @include ouiSlightShadow;
+  }
 
   border-radius: $ouiButtonBorderRadius;
   min-width: $ouiButtonMinWidth;
@@ -123,7 +125,9 @@
         $shadowColor: desaturate($color, 60%);
       }
 
-      @include ouiSlightShadow($shadowColor);
+      @include ouiUseDefaultButtonShadows {
+        @include ouiSlightShadow($shadowColor);
+      }
 
       &:hover,
       &:focus,
@@ -141,7 +145,14 @@
 
 // Fix ghost/disabled look specifically
 .ouiButton.ouiButton-isDisabled.ouiButton--ghost {
-  &,
+  & {
+    @include ouiUseDefaultButtonShadows {
+      @include ouiSlightShadow($ouiColorInk);
+    }
+    color: $ouiButtonColorGhostDisabled;
+    border-color: $ouiButtonColorGhostDisabled;
+  }
+
   &:hover,
   &:focus,
   &:focus-within {
