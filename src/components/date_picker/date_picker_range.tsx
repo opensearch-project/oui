@@ -109,6 +109,7 @@ export const OuiDatePickerRange: FunctionComponent<OuiDatePickerRangeProps> = ({
         readOnly: readOnly,
         iconType: typeof iconType === 'boolean' ? undefined : iconType,
         showIcon: !!iconType,
+        compressed,
       }
     );
 
@@ -119,6 +120,7 @@ export const OuiDatePickerRange: FunctionComponent<OuiDatePickerRangeProps> = ({
         fullWidth: fullWidth,
         readOnly: readOnly,
         popoverPlacement: 'bottom-end',
+        compressed,
       }
     );
   }
