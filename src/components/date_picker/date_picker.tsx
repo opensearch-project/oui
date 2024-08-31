@@ -110,6 +110,11 @@ interface OuiExtendedDatePickerProps extends ReactDatePickerProps {
    * Sets the placement of the popover. It accepts: `"bottom"`, `"bottom-end"`, `"bottom-start"`, `"left"`, `"left-end"`, `"left-start"`, `"right"`, `"right-end"`, `"right-start"`, `"top"`, `"top-end"`, `"top-start"`
    */
   popoverPlacement?: ReactDatePickerProps['popperPlacement'];
+
+  /**
+   * Reduces the size to a typical (compressed) input
+   */
+  compressed?: boolean;
 }
 
 type _OuiDatePickerProps = CommonProps &
@@ -148,6 +153,7 @@ export class OuiDatePicker extends Component<_OuiDatePickerProps> {
     showTimeSelect: false,
     timeFormat: ouiDatePickerDefaultTimeFormat,
     popoverPlacement: 'bottom-start',
+    compressed: false,
   };
 
   render() {
@@ -187,6 +193,7 @@ export class OuiDatePicker extends Component<_OuiDatePickerProps> {
       showTimeSelectOnly,
       timeFormat,
       utcOffset,
+      compressed,
       ...rest
     } = this.props;
 
@@ -203,6 +210,7 @@ export class OuiDatePicker extends Component<_OuiDatePickerProps> {
         'ouiFieldText-isLoading': isLoading,
         'ouiFieldText--withIcon': !inline && showIcon,
         'ouiFieldText-isInvalid': isInvalid,
+        'ouiFieldText--compressed': compressed,
       },
       className
     );
