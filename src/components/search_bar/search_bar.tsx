@@ -99,6 +99,12 @@ export interface OuiSearchBarProps extends CommonProps {
   dateFormat?: object;
 
   compressed?: boolean;
+
+  // @deprecated This property has never been consumed despite being defined
+  'aria-label'?: string;
+
+  // @deprecated This property has never been consumed despite being defined
+  'data-test-subj'?: string;
 }
 
 const parseQuery = (
@@ -234,6 +240,7 @@ export class OuiSearchBar extends Component<OuiSearchBarProps, State> {
       toolsLeft,
       toolsRight,
       compressed,
+      className,
     } = this.props;
 
     const toolsLeftEl = this.renderTools(toolsLeft);
@@ -252,7 +259,11 @@ export class OuiSearchBar extends Component<OuiSearchBarProps, State> {
     const toolsRightEl = this.renderTools(toolsRight);
 
     return (
-      <OuiFlexGroup gutterSize="m" alignItems="center" wrap>
+      <OuiFlexGroup
+        gutterSize="m"
+        alignItems="center"
+        className={className}
+        wrap>
         {toolsLeftEl}
         <OuiFlexItem className="ouiSearchBar__searchHolder" grow={true}>
           <OuiSearchBox
