@@ -15,6 +15,11 @@
 
 .ouiDatePickerRange {
   @include ouiFormControlSize(auto, $includeAlternates: true);
+
+  .ouiDatePicker.ouiFieldText--compressed {
+    height: $ouiFormControlLayoutGroupInputCompressedHeight;
+  }
+
   // Match just the regular drop shadow of inputs
   @include ouiFormControlDefaultShadow();
   display: flex;

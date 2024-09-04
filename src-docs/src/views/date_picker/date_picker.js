@@ -23,7 +23,7 @@ export default () => {
   };
 
   return (
-    <OuiFormRow label="Select a date">
+    <OuiFormRow label="Select a date" fullWidth>
       <OuiDatePicker selected={startDate} onChange={handleChange} />
     </OuiFormRow>
   );
