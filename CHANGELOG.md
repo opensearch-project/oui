@@ -4,6 +4,8 @@
 
 ### Deprecations
 
+- Deprecate `aria-label` and `data-test-subj` of OuiSearchBar which have never been consumed despite being defined ([#1381](https://github.com/opensearch-project/oui/pull/1381))
+
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
@@ -13,6 +15,7 @@
 ### 🐛 Bug Fixes
 
 - Fix `compressed` styling of OuiDatePickerRange ([#1380](https://github.com/opensearch-project/oui/pull/1380))
+- Make OuiSearchBar consume a provided `className` ([#1381](https://github.com/opensearch-project/oui/pull/1381))
 
 ### 🚞 Infrastructure
 

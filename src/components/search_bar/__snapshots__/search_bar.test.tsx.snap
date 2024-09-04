@@ -27,6 +27,7 @@ exports[`SearchBar render - box 1`] = `
 exports[`SearchBar render - no config, no query 1`] = `
 <OuiFlexGroup
   alignItems="center"
+  className="testClass1 testClass2"
   gutterSize="m"
   wrap={true}
 >
@@ -48,6 +49,7 @@ exports[`SearchBar render - no config, no query 1`] = `
 exports[`SearchBar render - provided query, filters 1`] = `
 <OuiFlexGroup
   alignItems="center"
+  className="testClass1 testClass2"
   gutterSize="m"
   wrap={true}
 >
@@ -153,6 +155,7 @@ exports[`SearchBar render - provided query, filters 1`] = `
 exports[`SearchBar render - tools 1`] = `
 <OuiFlexGroup
   alignItems="center"
+  className="testClass1 testClass2"
   gutterSize="m"
   wrap={true}
 >
