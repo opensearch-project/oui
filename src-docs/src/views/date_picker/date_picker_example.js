@@ -22,6 +22,8 @@ import {
   OuiDatePickerRange,
 } from '../../../../src/components';
 
+import { datePickerConfig } from './playground';
+
 import DatePicker from './date_picker';
 const datePickerSource = require('!!raw-loader!./date_picker');
 const datePickerHtml = renderToHtml(DatePicker);
@@ -231,6 +233,7 @@ export const DatePickerExample = {
       snippet: datePickerSnippet,
       demo: <DatePicker />,
       props: { OuiDatePicker },
+      playground: datePickerConfig,
     },
     {
       title: 'Date picker states',

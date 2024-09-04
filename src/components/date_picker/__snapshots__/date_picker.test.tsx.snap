@@ -805,9 +805,11 @@ exports[`OuiDatePicker localization inherits locale from context 1`] = `
 
 exports[`OuiDatePicker popoverPlacement top-end is rendered 1`] = `
 <OuiDatePicker
+  accessibleMode={true}
   adjustDateOnChange={true}
   aria-label="aria-label"
   className="testClass1 testClass2"
+  compressed={false}
   data-test-subj="test subject string"
   dateFormat="MM/DD/YYYY"
   fullWidth={false}
@@ -817,8 +819,11 @@ exports[`OuiDatePicker popoverPlacement top-end is rendered 1`] = `
   shadow={true}
   shouldCloseOnSelect={true}
   showIcon={true}
+  showMonthDropdown={true}
   showTimeSelect={false}
+  showYearDropdown={true}
   timeFormat="hh:mm A"
+  yearDropdownItemNumber={7}
 >
   <span>
     <span

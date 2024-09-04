@@ -7,16 +7,18 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
-- Create Create OuiSimplifiedBreadcrumbs and update OuiHeaderBreadcrumbs ([#1374](https://github.com/opensearch-project/oui/pull/1374))
+
+- Add `compressed` to OuiDatePicker ([#1380](https://github.com/opensearch-project/oui/pull/1380))
 
 ### 🐛 Bug Fixes
 
-- Fix combobox appearance when compressed and in-group ([#1371](https://github.com/opensearch-project/oui/pull/1371))
-- Updates to v9 colors, button/input styles, and typography ([#1373](https://github.com/opensearch-project/oui/pull/1373))
+- Fix `compressed` styling of OuiDatePickerRange ([#1380](https://github.com/opensearch-project/oui/pull/1380))
 
 ### 🚞 Infrastructure
 
 ### 📝 Documentation
+
+- Add a playground for OuiDatePicker ([#1380](https://github.com/opensearch-project/oui/pull/1380))
 
 ### 🛠 Maintenance
 
@@ -25,13 +27,19 @@
 ### 🔩 Tests
 
 
+## [`1.12.0`](https://github.com/opensearch-project/oui/tree/1.12)
+
+### 🐛 Bug Fixes
+
+- Fix combobox appearance when compressed and in-group ([#1371](https://github.com/opensearch-project/oui/pull/1371))
+- Updates to v9 colors, button/input styles, and typography ([#1373](https://github.com/opensearch-project/oui/pull/1373))
+
 ## [`1.11.0`](https://github.com/opensearch-project/oui/tree/1.11)
 
 ### 📈 Features/Enhancements
 
 - Add new icons for workspaces ([#1365](https://github.com/opensearch-project/oui/pull/1365))
 - Add a property to control the gap between an icon and the content of OuiButton and OuiButtonEmpty ([#1367](https://github.com/opensearch-project/oui/pull/1367))
-
 
 ## [`1.10.0`](https://github.com/opensearch-project/oui/tree/1.10)
 

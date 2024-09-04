@@ -110,9 +110,27 @@ interface OuiExtendedDatePickerProps extends ReactDatePickerProps {
    * Sets the placement of the popover. It accepts: `"bottom"`, `"bottom-end"`, `"bottom-start"`, `"left"`, `"left-end"`, `"left-start"`, `"right"`, `"right-end"`, `"right-start"`, `"top"`, `"top-end"`, `"top-start"`
    */
   popoverPlacement?: ReactDatePickerProps['popperPlacement'];
+
+  /**
+   * Reduces the size to a typical (compressed) input
+   */
+  compressed?: boolean;
 }
 
-type _OuiDatePickerProps = CommonProps & OuiExtendedDatePickerProps;
+type _OuiDatePickerProps = CommonProps &
+  Omit<
+    OuiExtendedDatePickerProps,
+    | 'monthsShown'
+    | 'showWeekNumbers'
+    | 'fixedHeight'
+    | 'dropdownMode'
+    | 'useShortMonthInDropdown'
+    | 'todayButton'
+    | 'timeCaption'
+    | 'disabledKeyboardNavigation'
+    | 'isClearable'
+    | 'withPortal'
+  >;
 
 export type OuiDatePickerProps = ApplyClassComponentDefaults<
   typeof OuiDatePicker
@@ -127,10 +145,15 @@ export class OuiDatePicker extends Component<_OuiDatePickerProps> {
     isLoading: false,
     shadow: true,
     shouldCloseOnSelect: true,
+    showMonthDropdown: true,
+    showYearDropdown: true,
+    yearDropdownItemNumber: 7,
+    accessibleMode: true,
     showIcon: true,
     showTimeSelect: false,
     timeFormat: ouiDatePickerDefaultTimeFormat,
     popoverPlacement: 'bottom-start',
+    compressed: false,
   };
 
   render() {
@@ -170,6 +193,7 @@ export class OuiDatePicker extends Component<_OuiDatePickerProps> {
       showTimeSelectOnly,
       timeFormat,
       utcOffset,
+      compressed,
       ...rest
     } = this.props;
 
@@ -186,6 +210,7 @@ export class OuiDatePicker extends Component<_OuiDatePickerProps> {
         'ouiFieldText-isLoading': isLoading,
         'ouiFieldText--withIcon': !inline && showIcon,
         'ouiFieldText-isInvalid': isInvalid,
+        'ouiFieldText--compressed': compressed,
       },
       className
     );
@@ -216,24 +241,34 @@ export class OuiDatePicker extends Component<_OuiDatePickerProps> {
     };
 
     if (
+      // @ts-ignore for guard against omitted prop
       // We don't want to show multiple months next to each other
       this.props.monthsShown ||
+      // @ts-ignore for guard against omitted prop
       // There is no need to show week numbers
       this.props.showWeekNumbers ||
+      // @ts-ignore for guard against omitted prop
       // Our css adapts to height, no need to fix it
       this.props.fixedHeight ||
+      // @ts-ignore for guard against omitted prop
       // We force the month / year selection UI. No need to configure it
       this.props.dropdownMode ||
+      // @ts-ignore for guard against omitted prop
       // Short month is unnecessary. Our UI has plenty of room for full months
       this.props.useShortMonthInDropdown ||
+      // @ts-ignore for guard against omitted prop
       // The today button is not needed. This should always be external to the calendar
       this.props.todayButton ||
+      // @ts-ignore for guard against omitted prop
       // We hide the time caption, so there is no need to overwrite its text
       this.props.timeCaption ||
+      // @ts-ignore for guard against omitted prop
       // We always want keyboard accessibility on
       this.props.disabledKeyboardNavigation ||
+      // @ts-ignore for guard against omitted prop
       // This is easy enough to do. It can conflict with isLoading state
       this.props.isClearable ||
+      // @ts-ignore for guard against omitted prop
       // There is no reason to launch the datepicker in its own modal. Can always build these ourselves
       this.props.withPortal
     ) {
