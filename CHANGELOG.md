@@ -11,6 +11,7 @@
 ### 📈 Features/Enhancements
 
 - Add `compressed` to OuiDatePicker ([#1380](https://github.com/opensearch-project/oui/pull/1380))
+- Expand the definitions of `$ouiBreakpoints` to include `xxl` and `xxxl` ([#1387](https://github.com/opensearch-project/oui/pull/1387))
 
 ### 🐛 Bug Fixes
 
