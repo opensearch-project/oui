@@ -85,6 +85,10 @@ export default () => (
         sint deserunt laboris. Excepteur nisi sint do non.
       </p>
 
+      <h2>This is Heading Two</h2>
+
+      <h3>This is Heading Three</h3>
+
       <p>
         Consequat consequat duis commodo magna fugiat commodo. Pariatur elit in
         sunt eu officia minim ipsum laborum non occaecat magna. Tempor fugiat ex

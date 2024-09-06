@@ -72,6 +72,10 @@ const exampleText = (
       exercitation laborum cillum.
     </p>
 
+    <h2>This is Heading Two</h2>
+
+    <h3>This is Heading Three</h3>
+
     <p>
       Amet qui est et elit magna veniam id enim consequat in. Sunt anim mollit
       mollit amet. Dolor amet amet aliquip aute qui aliqua do aliqua id sunt ea.

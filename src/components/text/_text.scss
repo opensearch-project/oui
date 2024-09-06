@@ -35,43 +35,10 @@
     font-size: convertToRem($baseFontSize * nth($ouiTextScale, 4));
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-bottom: convertToRem($baseLineHeightMultiplier * 1);
-  }
-
   dd + dt {
     margin-top: convertToRem($baseLineHeightMultiplier * 2);
   }
 
-  * + h2,
-  * + h3,
-  * + h4,
-  * + h5,
-  * + h6 {
-    margin-top: convertToRem($baseLineHeightMultiplier * 4);
-  }
-
-  h1 {
-    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 1));
-    line-height: convertToRem($baseLineHeightMultiplier * 6);
-  }
-
-  h2 {
-    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 2));
-    line-height: convertToRem($baseLineHeightMultiplier * 5);
-  }
-
-  h3 {
-    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 3));
-    line-height: convertToRem($baseLineHeightMultiplier * 4);
-  }
-
-  h4,
   dt,
   .oui-definitionListReverse dd {
     font-size: convertToRem($baseFontSize * nth($ouiTextScale, 5)); // skip level 4 on purpose
@@ -81,16 +48,6 @@
   .oui-definitionListReverse dt {
     font-size: convertToRem($baseFontSize * nth($ouiTextScale, 7));
     color: $ouiTextColor;
-  }
-
-  h5 {
-    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 6));
-    line-height: convertToRem($baseLineHeightMultiplier * 2);
-  }
-
-  h6 {
-    font-size: convertToRem($baseFontSize * nth($ouiTextScale, 7));
-    line-height: convertToRem($baseLineHeightMultiplier * 2);
   }
 
   small {
@@ -178,6 +135,23 @@
     &:after {
       bottom: 0;
     }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: convertToRem(calc($ouiFontSize / 2));
+  }
+
+  * + h2,
+  * + h3,
+  * + h4,
+  * + h5,
+  * + h6 {
+    margin-top: convertToRem(calc($ouiFontSize / 2) * 4);
   }
 
   h1 {
