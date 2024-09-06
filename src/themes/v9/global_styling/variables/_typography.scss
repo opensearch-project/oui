@@ -47,15 +47,15 @@ $ouiCodeFontFamily: #{"'Fira Code', Consolas, Menlo, Courier, monospace"} !defau
 $ouiFontFeatureSettings: 'calt' 1, 'kern' 1, 'liga' 1 !default;
 
 // Font sizes -- scale is loosely based on Major Third (1.250)
-$ouiTextScale:      2, 1.7143, 1.2857, 1.125, 1, .875, .75 !default;
+$ouiTextScale:      2, 1.714286, 1.285714, 1.1429, 1, .857143, .75 !default;
 
-$ouiFontSize:       16px !default; // 5th position in scale
-$ouiFontSizeXS:     $ouiFontSize * nth($ouiTextScale, 7) !default; // 12px
-$ouiFontSizeS:      $ouiFontSize * nth($ouiTextScale, 6) !default; // 14px
-$ouiFontSizeM:      $ouiFontSize * nth($ouiTextScale, 4) !default; // 18px
-$ouiFontSizeL:      $ouiFontSize * nth($ouiTextScale, 3) !default; // 20px
-$ouiFontSizeXL:     $ouiFontSize * nth($ouiTextScale, 2) !default; // 28px
-$ouiFontSizeXXL:    $ouiFontSize * nth($ouiTextScale, 1) !default; // 36px
+$ouiFontSize:       14px !default; // 5th position in scale
+$ouiFontSizeXS:     $ouiFontSize * nth($ouiTextScale, 6) !default; // 12px
+$ouiFontSizeS:      $ouiFontSize * nth($ouiTextScale, 5) !default; // 14px
+$ouiFontSizeM:      $ouiFontSize * nth($ouiTextScale, 4) !default; // 16px
+$ouiFontSizeL:      $ouiFontSize * nth($ouiTextScale, 3) !default; // 18px
+$ouiFontSizeXL:     $ouiFontSize * nth($ouiTextScale, 2) !default; // 24px
+$ouiFontSizeXXL:    $ouiFontSize * nth($ouiTextScale, 1) !default; // 28px
 
 // This value is impacted by font-size
 $ouiLegibilityMaxWidth: 80ch !default;
@@ -77,41 +77,41 @@ $ouiCodeFontWeightBold:     700 !default;
 // Lists all the properties per OuiTitle size that then gets looped through to create the selectors.
 // The map allows for tokenization and easier customization per theme, otherwise you'd have to override the selectors themselves
 $ouiTitles: (
+  // h4: 12px / 15px / 400
   'xxxs': (
     'font-size': $ouiFontSizeXS,
-    'line-height': lineHeightFromBaseline(3),
-    'font-weight': $ouiFontWeightBold,
-    'letter-spacing': -.005em,
+    'line-height': lineHeightFromBaseline(2.1429),
+    'font-weight': $ouiFontWeightMedium,
   ),
+  // h4: 12px / 15px / 400
   'xxs': (
-    'font-size': $ouiFontSizeS,
-    'line-height': lineHeightFromBaseline(3),
-    'font-weight': $ouiFontWeightSemiBold,
-    'letter-spacing': -.005em,
+    'font-size': $ouiFontSizeXS,
+    'line-height': lineHeightFromBaseline(2.1429),
+    'font-weight': $ouiFontWeightMedium,
   ),
+  // h4: 14px / 17px / 400
   'xs': (
     'font-size': $ouiFontSize,
-    'line-height': lineHeightFromBaseline(3),
-    'font-weight': $ouiFontWeightSemiBold,
-    'letter-spacing': -.02em,
+    'line-height': lineHeightFromBaseline(2.8286),
+    'font-weight': $ouiFontWeightMedium,
   ),
+  // h3: 18px / 22px / 400
   's': (
     'font-size': $ouiFontSizeL,
-    'line-height': lineHeightFromBaseline(4),
+    'line-height': lineHeightFromBaseline(3.1429),
     'font-weight': $ouiFontWeightMedium,
-    'letter-spacing': -.025em,
   ),
+  // h2: 24px / 29px / 400
   'm': (
     'font-size': $ouiFontSizeXL,
-    'line-height': lineHeightFromBaseline(5),
-    'font-weight': $ouiFontWeightRegular,
-    'letter-spacing': -.04em,
+    'line-height': lineHeightFromBaseline(4.1429),
+    'font-weight': $ouiFontWeightLight,
   ),
+  // h1: 28px / 34px / 400
   'l': (
     'font-size': $ouiFontSizeXXL,
-    'line-height': lineHeightFromBaseline(6),
-    'font-weight': $ouiFontWeightRegular,
-    'letter-spacing': -.03em,
+    'line-height': lineHeightFromBaseline(4.857),
+    'font-weight': $ouiFontWeightLight,
   ),
 ) !default;
 
