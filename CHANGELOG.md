@@ -9,8 +9,6 @@
 ### 📈 Features/Enhancements
 
 ### 🐛 Bug Fixes
-- Fix combobox appearance when compressed and in-group ([#1371](https://github.com/opensearch-project/oui/pull/1371))
-- Updates to v9 colors, button/input styles, and typography ([#1373](https://github.com/opensearch-project/oui/pull/1373))
 
 ### 🚞 Infrastructure
 
@@ -21,13 +19,72 @@
 ### 🪛 Refactoring
 
 ### 🔩 Tests
- 
+
+
+## [`1.13.0`](https://github.com/opensearch-project/oui/tree/1.13)
+
+### Deprecations
+
+- Deprecate `aria-label` and `data-test-subj` of OuiSearchBar which have never been consumed despite being defined ([#1381](https://github.com/opensearch-project/oui/pull/1381))
+- Deprecate the unexported `OuiBreadcrumbsSimplified` ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+
+### 🛡 Security
+
+- [CVE-2024-39338] Bumps `axios` from 1.6.2 to 1.7.4 ([#1357](https://github.com/opensearch-project/oui/pull/1357))
+- [CVE-2024-42459][CVE-2024-42460][CVE-2024-42461] Bumps `elliptic` from 6.5.4 to 6.5.7 ([#1358](https://github.com/opensearch-project/oui/pull/1358))
+
+### 📈 Features/Enhancements
+
+- Add `compressed` to OuiDatePicker ([#1380](https://github.com/opensearch-project/oui/pull/1380))
+- Expand the definitions of `$ouiBreakpoints` to include `xxl` and `xxxl` ([#1387](https://github.com/opensearch-project/oui/pull/1387))
+- Remove scaling of heading elements ([#1389](https://github.com/opensearch-project/oui/pull/1389))
+- Make the space between search bar and table rows match the compressed state of the search box ([#1391](https://github.com/opensearch-project/oui/pull/1391))
+- Update primary color for the v9 light theme ([#1398](https://github.com/opensearch-project/oui/pull/1398))
+- Update colors for the v9 theme ([#1402](https://github.com/opensearch-project/oui/pull/1402))
+- Add CSS breakpoints to OuiBreakpointSize ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Allow limiting the allowed breakpoints when calling `getBreakpoint()` ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Adjust number of responsive breadcrumbs shown per breakpoint ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+
+### 🐛 Bug Fixes
+
+- Fix `compressed` styling of OuiDatePickerRange ([#1380](https://github.com/opensearch-project/oui/pull/1380))
+- Make OuiSearchBar consume a provided `className` ([#1381](https://github.com/opensearch-project/oui/pull/1381))
+- Add methods to control the appearance of trailing and last breadcrumbs in OuiSimplifiedBreadcrumbs ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Adjust alignments, colors, and separator in OuiSimplifiedBreadcrumbs ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Remove the unwanted OuiBreadcrumbs focus rectangle ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Correctly color the OuiBreadcrumbs when focused ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Display the last breadcrumb in a nested breadcrumb as a normal breadcrumb ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Limit allowed breakpoints to those provided by the `responsive` prop of Oui*Breadcrumbs ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+
+### 📝 Documentation
+
+- Add a playground for OuiDatePicker ([#1380](https://github.com/opensearch-project/oui/pull/1380))
+- Add documentation for OuiSimplifiedBreadcrumbs ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+
+### 🛠 Maintenance
+
+- Move Iskander, Andrey, and Sergey to the Emeritus list ([#1394](https://github.com/opensearch-project/oui/pull/1394))
+
+### 🪛 Refactoring
+
+- Refactor OuiSimplifiedBreadcrumbs into its own folder ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+
+
+## [`1.12.0`](https://github.com/opensearch-project/oui/tree/1.12)
+
+### 🐛 Bug Fixes
+
+- Fix combobox appearance when compressed and in-group ([#1371](https://github.com/opensearch-project/oui/pull/1371))
+- Updates to v9 colors, button/input styles, and typography ([#1373](https://github.com/opensearch-project/oui/pull/1373))
+
+
 ## [`1.11.0`](https://github.com/opensearch-project/oui/tree/1.11)
 
 ### 📈 Features/Enhancements
 
 - Add new icons for workspaces ([#1365](https://github.com/opensearch-project/oui/pull/1365))
 - Add a property to control the gap between an icon and the content of OuiButton and OuiButtonEmpty ([#1367](https://github.com/opensearch-project/oui/pull/1367))
+
 
 ## [`1.10.0`](https://github.com/opensearch-project/oui/tree/1.10)
 
