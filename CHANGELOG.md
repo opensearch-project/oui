@@ -8,6 +8,9 @@
 
 ### 🛡 Security
 
+- [CVE-2024-39338] Bumps `axios` from 1.6.2 to 1.7.4 ([#1357](https://github.com/opensearch-project/oui/pull/1357))
+- [CVE-2024-42459][CVE-2024-42460][CVE-2024-42461] Bumps `elliptic` from 6.5.4 to 6.5.7 ([#1358](https://github.com/opensearch-project/oui/pull/1358))
+
 ### 📈 Features/Enhancements
 
 - Add `compressed` to OuiDatePicker ([#1380](https://github.com/opensearch-project/oui/pull/1380))
@@ -27,6 +30,8 @@
 - Add a playground for OuiDatePicker ([#1380](https://github.com/opensearch-project/oui/pull/1380))
 
 ### 🛠 Maintenance
+
+- Move Iskander, Andrey, and Sergey to the Emeritus list ([#1394](https://github.com/opensearch-project/oui/pull/1394))
 
 ### 🪛 Refactoring
 
