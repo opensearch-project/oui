@@ -1,0 +1,102 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@import 'global_styling/functions/index';
+
+// These colors stay the same no matter the theme
+$ouiColorGhost: #FCFEFF;
+$ouiColorInk: #0A121A;
+
+// Core
+$ouiColorPrimary: #005EB8;
+$ouiColorSecondary: #199863;
+$ouiColorAccent: #B92FC5;
+
+// Status
+$ouiColorSuccess: #117F6A !default;
+$ouiColorWarning: #ED9F00 !default;
+$ouiColorDanger: #E42C19 !default;
+
+// Grays
+$ouiColorEmptyShade: #212324;
+$ouiColorLightestShade: #303234;
+$ouiColorLightShade: #4B4E51;
+$ouiColorMediumShade: #616C72;
+$ouiColorDarkShade: #778388;
+$ouiColorDarkestShade: #8C9BA2;
+$ouiColorFullShade: #F3F8FF;
+
+// Backgrounds
+$ouiPageBackgroundColor: #131313;
+$ouiColorHighlight: #494735;
+
+// Variations from core
+$ouiTextColor: #F3F8FF;
+$ouiTitleColor: $ouiTextColor;
+// Ensure contrast between subdued text and the page background
+// Should not be shaded as much as $ouiColorDisabled
+$ouiTextSubduedColor: #A0A9B5;
+$ouiColorDisabled: #AFAFAF;
+
+// Contrasty text variants
+$ouiColorPrimaryText: #005EB8;
+$ouiColorSecondaryText: #117F6A;
+$ouiColorAccentText: #B92FC5;
+$ouiColorWarningText: #C48600;
+$ouiColorDangerText: #C84133;
+$ouiColorDisabledText: #60656B;
+$ouiColorSuccessText: $ouiColorSecondaryText;
+$ouiLinkColor: $ouiColorPrimaryText;
+
+// Charts
+$ouiColorChartLines: $ouiColorLightShade;
+$ouiColorChartBand: tint($ouiColorLightestShade, 2.5%);
+
+// Shadows
+$ouiShadowColor: #000;
+$ouiShadowColorLarge: #000;
+
+
+/* OUI -> EUI Aliases */
+$euiColorGhost: $ouiColorGhost;
+$euiColorInk: $ouiColorInk;
+$euiColorPrimary: $ouiColorPrimary;
+$euiColorSecondary: $ouiColorSecondary;
+$euiColorAccent: $ouiColorAccent;
+$euiColorSuccess: $ouiColorSuccess;
+$euiColorWarning: $ouiColorWarning;
+$euiColorDanger: $ouiColorDanger;
+$euiColorEmptyShade: $ouiColorEmptyShade;
+$euiColorLightestShade: $ouiColorLightestShade;
+$euiColorLightShade: $ouiColorLightShade;
+$euiColorMediumShade: $ouiColorMediumShade;
+$euiColorDarkShade: $ouiColorDarkShade;
+$euiColorDarkestShade: $ouiColorDarkestShade;
+$euiColorFullShade: $ouiColorFullShade;
+$euiPageBackgroundColor: $ouiPageBackgroundColor;
+$euiColorHighlight: $ouiColorHighlight;
+$euiTextColor: $ouiTextColor;
+$euiTitleColor: $ouiTitleColor;
+$euiTextSubduedColor: $ouiTextSubduedColor;
+$euiColorDisabled: $ouiColorDisabled;
+$euiColorPrimaryText: $ouiColorPrimaryText;
+$euiColorSecondaryText: $ouiColorSecondaryText;
+$euiColorAccentText: $ouiColorAccentText;
+$euiColorWarningText: $ouiColorWarningText;
+$euiColorDangerText: $ouiColorDangerText;
+$euiColorDisabledText: $ouiColorDisabledText;
+$euiColorSuccessText: $ouiColorSuccessText;
+$euiLinkColor: $ouiLinkColor;
+$euiColorChartLines: $ouiColorChartLines;
+$euiColorChartBand: $ouiColorChartBand;
+$euiShadowColor: $ouiShadowColor;
+$euiShadowColorLarge: $ouiShadowColorLarge;
+/* End of Aliases */

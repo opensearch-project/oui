@@ -39,6 +39,7 @@ interface OuiSearchFiltersProps {
   query: Query;
   onChange: (query: Query) => void;
   filters: SearchFilterConfig[];
+  compressed?: boolean;
 }
 
 type DefaultProps = Pick<OuiSearchFiltersProps, 'filters'>;
@@ -49,7 +50,7 @@ export class OuiSearchFilters extends Component<OuiSearchFiltersProps> {
   };
 
   render() {
-    const { filters = [], query, onChange } = this.props;
+    const { filters = [], query, compressed, onChange } = this.props;
 
     const items: ReactElement[] = [];
 
@@ -58,7 +59,12 @@ export class OuiSearchFilters extends Component<OuiSearchFiltersProps> {
         return;
       }
       const key = `filter_${index}`;
-      const control = createFilter(index, filterConfig, query, onChange);
+      const control = createFilter(
+        index,
+        { compressed, ...filterConfig },
+        query,
+        onChange
+      );
       items.push(<Fragment key={key}>{control}</Fragment>);
     });
 

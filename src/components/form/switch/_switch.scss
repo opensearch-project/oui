@@ -81,7 +81,6 @@
     pointer-events: none;
     width: $ouiSwitchWidth;
     height: $ouiSwitchHeight;
-    background-color: $ouiColorPrimary;
     display: inline-block;
     position: relative;
     border-radius: $ouiSwitchHeight;
@@ -211,6 +210,107 @@
     .ouiSwitch__button[aria-checked='true'] {
       .ouiSwitch__thumb {
         border-color: $ouiColorPrimary;
+      }
+    }
+  }
+
+  &.ouiSwitch--base {
+    border: solid 1px transparent;
+    cursor: pointer;
+    height: $ouiButtonHeight;
+    line-height: $ouiButtonHeight;
+    vertical-align: middle;
+    align-items: stretch;
+    border-radius: $ouiBorderRadius;
+    padding: 0 $ouiSize - $ouiSizeXS;
+
+    .ouiSwitch__label {
+      // sass-lint:disable-block no-important
+      line-height: $ouiFormControlLayoutGroupInputHeight !important;
+    }
+
+    &.ouiSwitch--compressed,
+    &.ouiSwitch--mini {
+      height: $ouiButtonHeightSmall;
+      line-height: $ouiButtonHeightSmall;
+
+      .ouiSwitch__label {
+        // sass-lint:disable-block no-important
+        line-height: $ouiFormControlLayoutGroupInputCompressedHeight !important;
+      }
+    }
+
+    &.ouiSwitch-isDisabled {
+      border-color: $ouiButtonColorDisabled;
+      cursor: not-allowed;
+
+      &:hover,
+      &:focus,
+      &:focus-within {
+        @include ouiSlightShadow;
+      }
+    }
+  }
+}
+
+// sass-lint:disable-block nesting-depth
+@each $name, $color in $ouiSwitchColors {
+  .ouiSwitch--#{$name} {
+    &.ouiSwitch--base {
+      @include ouiUseDefaultButtonShadows {
+        @include ouiSlightShadow;
+      }
+      @include ouiButtonFocus;
+
+      border-color: $color;
+
+      @if ($name == 'ghost') {
+        // Ghost is unique and ALWAYS sits against a dark background.
+        color: $color;
+      } @else if ($name == 'text') {
+        // The default color is lighter than the normal text color, make the it the text color
+        color: $ouiTextColor;
+      } @else {
+        // Other colors need to check their contrast against the page background color.
+        color: makeHighContrastColor($color, $ouiPageBackgroundColor);
+      }
+
+      &:not([class*='isDisabled']) {
+        $shadowColor: $ouiShadowColor;
+        @if ($name == 'ghost') {
+          $shadowColor: $ouiColorInk;
+        } @else if (lightness($ouiTextColor) < 50) {
+          // Only if this is the light theme do we use the button variant color to colorize the shadow
+          $shadowColor: desaturate($color, 60%);
+        }
+
+        @include ouiUseDefaultButtonShadows {
+          @include ouiSlightShadow($shadowColor);
+        }
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+          @include ouiSlightShadowHover($shadowColor);
+          background-color: transparentize($color, .9);
+        }
+
+        &:active {
+          @include ouiSlightShadowActive($color);
+        }
+      }
+    }
+
+    .ouiSwitch__body {
+      background-color: $color;
+    }
+
+    &.ouiSwitch--compressed,
+    &.ouiSwitch--mini {
+      .ouiSwitch__button[aria-checked='true'] {
+        .ouiSwitch__thumb {
+          border-color: $color;
+        }
       }
     }
   }

@@ -34,6 +34,8 @@ export {
   ButtonSize,
   OuiButton,
   OuiButtonProps,
+  OuiSmallButton,
+  OuiSmallButtonProps,
 } from './button';
 
 export {
@@ -41,6 +43,8 @@ export {
   OuiButtonEmptyColor,
   OuiButtonEmptyProps,
   OuiButtonEmptySizes,
+  OuiSmallButtonEmpty,
+  OuiSmallButtonEmptyProps,
 } from './button_empty';
 
 export {
@@ -48,10 +52,16 @@ export {
   OuiButtonIconColor,
   OuiButtonIconProps,
   OuiButtonIconPropsForButton,
+  OuiSmallButtonIcon,
+  OuiSmallButtonIconProps,
 } from './button_icon';
 
 export {
   OuiButtonGroup,
   OuiButtonGroupOptionProps,
   OuiButtonGroupProps,
+  OuiSmallButtonGroup,
+  OuiSmallButtonGroupProps,
+  OuiCompressedButtonGroup,
+  OuiCompressedButtonGroupProps,
 } from './button_group';

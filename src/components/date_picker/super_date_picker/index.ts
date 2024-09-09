@@ -35,6 +35,8 @@ export { AsyncInterval } from './async_interval';
 export {
   OuiSuperDatePicker,
   OuiSuperDatePickerProps,
+  OuiCompressedSuperDatePicker,
+  OuiCompressedSuperDatePickerProps,
   OnTimeChangeProps,
   OnRefreshProps,
 } from './super_date_picker';

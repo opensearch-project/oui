@@ -28,4 +28,9 @@
  * under the License.
  */
 
-export { OuiTextArea, OuiTextAreaProps } from './text_area';
+export {
+  OuiTextArea,
+  OuiTextAreaProps,
+  OuiCompressedTextArea,
+  OuiCompressedTextAreaProps,
+} from './text_area';

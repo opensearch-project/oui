@@ -75,3 +75,14 @@ export const OuiFormLegend: FunctionComponent<OuiFormLegendProps> = ({
     </legend>
   );
 };
+
+// @internal
+export type OuiCompressedFormLegendProps = Omit<
+  OuiFormLegendProps,
+  'compressed'
+>;
+
+// @internal
+export const OuiCompressedFormLegend: FunctionComponent<OuiCompressedFormLegendProps> = (
+  props
+) => <OuiFormLegend {...props} compressed />;

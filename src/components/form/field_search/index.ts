@@ -28,4 +28,9 @@
  * under the License.
  */
 
-export { OuiFieldSearch, OuiFieldSearchProps } from './field_search';
+export {
+  OuiFieldSearch,
+  OuiFieldSearchProps,
+  OuiCompressedFieldSearch,
+  OuiCompressedFieldSearchProps,
+} from './field_search';

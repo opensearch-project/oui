@@ -33,7 +33,7 @@ export default () => {
   return (
     /* DisplayToggles wrapper for Docs only */
     <div>
-      <DisplayToggles canCompressed={false}>
+      <DisplayToggles>
         <OuiDatePicker
           showTimeSelect
           selected={startDate}

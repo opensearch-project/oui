@@ -121,3 +121,16 @@ export const OuiCheckboxGroup: FunctionComponent<OuiCheckboxGroupProps> = ({
     </div>
   );
 };
+
+// @internal
+export type OuiCompressedCheckboxGroupProps = CommonProps & {
+  options: OuiCheckboxGroupOption[];
+  idToSelectedMap: OuiCheckboxGroupIdToSelectedMap;
+  onChange: (optionId: string) => void;
+  disabled?: boolean;
+} & ExclusiveUnion<AsDivProps, WithLegendProps>;
+
+// @internal
+export const OuiCompressedCheckboxGroup: FunctionComponent<OuiCompressedCheckboxGroupProps> = (
+  props
+) => <OuiCheckboxGroup {...props} compressed />;

@@ -61,6 +61,7 @@ export interface OuiDatePopoverButtonProps {
   timeFormat: string;
   value: string;
   utcOffset?: number;
+  compressed?: boolean;
 }
 
 export const OuiDatePopoverButton: FunctionComponent<OuiDatePopoverButtonProps> = (
@@ -82,6 +83,7 @@ export const OuiDatePopoverButton: FunctionComponent<OuiDatePopoverButtonProps> 
     isOpen,
     onPopoverToggle,
     onPopoverClose,
+    compressed,
     ...rest
   } = props;
 
@@ -93,6 +95,7 @@ export const OuiDatePopoverButton: FunctionComponent<OuiDatePopoverButtonProps> 
       'ouiDatePopoverButton-isInvalid': isInvalid,
       'ouiDatePopoverButton-needsUpdating': needsUpdating,
       'ouiDatePopoverButton-disabled': isDisabled,
+      'ouiDatePopoverButton-compressed': compressed,
     },
   ]);
 

@@ -196,6 +196,7 @@ export class OuiQuickSelectPopover extends Component<
         button={quickSelectButton}
         isOpen={isOpen}
         closePopover={this.closePopover}
+        panelPaddingSize="s"
         anchorPosition="downLeft"
         anchorClassName="ouiQuickSelectPopover__anchor">
         <div

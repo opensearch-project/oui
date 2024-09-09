@@ -30,7 +30,7 @@ exports[`OuiQuickSelectPopover is rendered 1`] = `
   hasArrow={true}
   isOpen={false}
   ownFocus={true}
-  panelPaddingSize="m"
+  panelPaddingSize="s"
 >
   <div
     className="ouiQuickSelectPopover__content"
@@ -114,7 +114,7 @@ exports[`OuiQuickSelectPopover isAutoRefreshOnly 1`] = `
   hasArrow={true}
   isOpen={false}
   ownFocus={true}
-  panelPaddingSize="m"
+  panelPaddingSize="s"
 >
   <div
     className="ouiQuickSelectPopover__content"

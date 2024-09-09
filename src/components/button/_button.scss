@@ -15,9 +15,11 @@
 // Our base button
 .ouiButton {
   @include ouiButton;
-  @include ouiSlightShadow;
+  @include ouiUseDefaultButtonShadows {
+    @include ouiSlightShadow;
+  }
 
-  border-radius: $ouiBorderRadius;
+  border-radius: $ouiButtonBorderRadius;
   min-width: $ouiButtonMinWidth;
 
   .ouiButton__content {
@@ -107,6 +109,10 @@
           background-color: darken($color, 5%);
           border-color: darken($color, 5%);
         }
+
+        &:active {
+          @include ouiSlightShadowActive(darken($color, 10%), .4);
+        }
       }
     }
 
@@ -119,7 +125,9 @@
         $shadowColor: desaturate($color, 60%);
       }
 
-      @include ouiSlightShadow($shadowColor);
+      @include ouiUseDefaultButtonShadows {
+        @include ouiSlightShadow($shadowColor);
+      }
 
       &:hover,
       &:focus,
@@ -127,13 +135,24 @@
         @include ouiSlightShadowHover($shadowColor);
         background-color: transparentize($color, .9);
       }
+
+      &:active {
+        @include ouiSlightShadowActive($color);
+      }
     }
   }
 }
 
 // Fix ghost/disabled look specifically
 .ouiButton.ouiButton-isDisabled.ouiButton--ghost {
-  &,
+  & {
+    @include ouiUseDefaultButtonShadows {
+      @include ouiSlightShadow($ouiColorInk);
+    }
+    color: $ouiButtonColorGhostDisabled;
+    border-color: $ouiButtonColorGhostDisabled;
+  }
+
   &:hover,
   &:focus,
   &:focus-within {

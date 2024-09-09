@@ -26,19 +26,7 @@
 // Adds the focus (and hover) animation for translating up 1px
 @mixin ouiButtonFocus {
   @include ouiCanAnimate {
-    transition: transform $ouiAnimSpeedNormal ease-in-out, background $ouiAnimSpeedNormal ease-in-out;
-
-    &:hover:not([class*='isDisabled']) {
-      transform: translateY(-1px);
-    }
-
-    &:focus {
-      animation: ouiButtonActive $ouiAnimSpeedNormal $ouiAnimSlightBounce;
-    }
-
-    &:active:not([class*='isDisabled']) {
-      transform: translateY(1px);
-    }
+    transition: background $ouiAnimSpeedNormal ease-in-out;
   }
 }
 
@@ -47,11 +35,11 @@
 @mixin ouiButton {
   @include ouiButtonBase;
   @include ouiFont;
-  @include ouiFontSize;
+  @include ouiFontSizeS;
 
   text-decoration: none;
   border: solid 1px transparent;
-  font-weight: 600;
+  font-weight: 400;
 
   // sass-lint:disable mixins-before-declarations
   // focus states should come after all default styles
@@ -89,6 +77,16 @@
       margin-inline-start: 0; // 1, 2
       margin-inline-end: $ouiSizeS; // 1, 2
     }
+
+    &.ouiButtonContent--smallIconGap > * + * {
+      margin-inline-start: 0; // 1, 2
+      margin-inline-end: $ouiSizeXXS;
+    }
+
+    &.ouiButtonContent--noIconGap > * + * {
+      margin-inline-start: 0; // 1, 2
+      margin-inline-end: 0;
+    }
   } @else {
     display: flex;
     justify-content: center;
@@ -96,6 +94,14 @@
 
     > * + * {
       margin-inline-start: $ouiSizeS; // 1
+    }
+
+    &.ouiButtonContent--smallIconGap > * + * {
+      margin-inline-start: $ouiSizeXXS; // 1
+    }
+
+    &.ouiButtonContent--noIconGap > * + * {
+      margin-inline-start: 0; // 1
     }
   }
 }
@@ -116,6 +122,12 @@
 // Keyframe animation declarations can be found in
 // utility/animations.scss
 
+// Helper to contextually turn off button shadows in default states
+@mixin ouiUseDefaultButtonShadows($useShadows: true) {
+  @if ($useShadows) {
+    @content;
+  }
+}
 
 /* OUI -> EUI Aliases */
 @mixin euiButtonBase { @include ouiButtonBase; }
@@ -140,4 +152,5 @@
     border-color: ouiLoadingSpinnerBorderColors(currentColor);
   }
 }
+@mixin euiUseDefaultButtonShadows($useShadows: true) { @include ouiUseDefaultButtonShadows($useShadows); }
 /* End of Aliases */

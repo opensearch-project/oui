@@ -200,3 +200,14 @@ OuiFieldPassword.defaultProps = {
   isLoading: false,
   compressed: false,
 };
+
+// @internal
+export type OuiCompressedFieldPasswordProps = Omit<
+  OuiFieldPasswordProps,
+  'compressed'
+>;
+
+// @internal
+export const OuiCompressedFieldPassword: FunctionComponent<OuiFieldPasswordProps> = (
+  props
+) => <OuiFieldPassword {...props} compressed />;

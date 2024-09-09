@@ -241,10 +241,8 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
       'ouiBreadcrumb--truncate': truncate,
     });
 
-    let link;
-
-    if (!href && !onClick) {
-      link = (
+    const link =
+      !href && !onClick ? (
         <OuiInnerText>
           {(ref, innerText) => (
             <span
@@ -257,9 +255,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
             </span>
           )}
         </OuiInnerText>
-      );
-    } else {
-      link = (
+      ) : (
         <OuiInnerText>
           {(ref, innerText) => (
             <OuiLink
@@ -275,19 +271,19 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
           )}
         </OuiInnerText>
       );
-    }
 
-    let wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
+    const breadcrumbWallClasses = classNames('ouiBreadcrumbWall', {
+      'ouiBreadcrumbWall--single': isFirstBreadcrumb && isLastBreadcrumb,
+    });
 
-    if (isFirstBreadcrumb) {
-      const breadcrumbWallClasses = classNames('ouiBreadcrumbWall', {
-        'ouiBreadcrumbWall--single': isLastBreadcrumb,
-      });
+    const wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
+    const wall = isFirstBreadcrumb ? (
+      <div className={breadcrumbWallClasses}>{wrapper}</div>
+    ) : (
+      wrapper
+    );
 
-      wrapper = <div className={breadcrumbWallClasses}>{wrapper}</div>;
-    }
-
-    return <Fragment key={index}>{wrapper}</Fragment>;
+    return <Fragment key={index}>{wall}</Fragment>;
   });
 
   // Use the default object if they simply passed `true` for responsive
@@ -297,15 +293,147 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   // The max property collapses any breadcrumbs past the max quantity.
   // This is the same behavior we want for responsiveness.
   // So calculate the max value based on the combination of `max` and `responsive`
-  let calculatedMax: OuiBreadcrumbsProps['max'] = max;
-  // Set the calculated max to the number associated with the currentBreakpoint key if it exists
-  if (responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]) {
-    calculatedMax = responsiveObject[currentBreakpoint as OuiBreakpointSize];
-  }
-  // Final check is to make sure max is used over a larger breakpoint value
-  if (max && calculatedMax) {
-    calculatedMax = max < calculatedMax ? max : calculatedMax;
-  }
+
+  // First, calculate the responsive max value
+  const responsiveMax =
+    responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]
+      ? responsiveObject[currentBreakpoint as OuiBreakpointSize]
+      : null;
+
+  // Second, if both max and responsiveMax are set, use the smaller of the two. Otherwise, use the one that is set.
+  const calculatedMax: OuiBreadcrumbsProps['max'] =
+    max && responsiveMax ? Math.min(max, responsiveMax) : max || responsiveMax;
+
+  const limitedBreadcrumbs = calculatedMax
+    ? limitBreadcrumbs(breadcrumbElements, calculatedMax, breadcrumbs)
+    : breadcrumbElements;
+
+  const classes = classNames('ouiBreadcrumbs', className, {
+    'ouiBreadcrumbs--truncate': truncate,
+  });
+
+  return (
+    <nav aria-label="breadcrumb" className={classes} {...rest}>
+      {limitedBreadcrumbs}
+    </nav>
+  );
+};
+
+export const OuiBreadcrumbsSimplified: FunctionComponent<OuiBreadcrumbsProps> = ({
+  breadcrumbs,
+  className,
+  responsive = responsiveDefault,
+  truncate = true,
+  max = 5,
+  ...rest
+}) => {
+  const [currentBreakpoint, setCurrentBreakpoint] = useState(
+    getBreakpoint(typeof window === 'undefined' ? -Infinity : window.innerWidth)
+  );
+
+  const functionToCallOnWindowResize = throttle(() => {
+    const newBreakpoint = getBreakpoint(window.innerWidth);
+    if (newBreakpoint !== currentBreakpoint) {
+      setCurrentBreakpoint(newBreakpoint);
+    }
+    // reacts every 50ms to resize changes and always gets the final update
+  }, 50);
+
+  // Add window resize handlers
+  useEffect(() => {
+    window.addEventListener('resize', functionToCallOnWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', functionToCallOnWindowResize);
+    };
+  }, [responsive, functionToCallOnWindowResize]);
+
+  const breadcrumbElements = breadcrumbs.map((breadcrumb, index) => {
+    const {
+      text,
+      href,
+      onClick,
+      truncate,
+      className: breadcrumbClassName,
+      ...breadcrumbRest
+    } = breadcrumb;
+
+    const isFirstBreadcrumb = index === 0;
+    const isLastBreadcrumb = index === breadcrumbs.length - 1;
+
+    const breadcrumbWrapperClasses = classNames('ouiBreadcrumbWrapper', {
+      'ouiBreadcrumbWrapper--first': isFirstBreadcrumb,
+      'ouiBreadcrumbWrapper--last': isLastBreadcrumb,
+      'ouiBreadcrumbWrapper--truncate': truncate,
+    });
+
+    const breadcrumbClasses = classNames('ouiBreadcrumb', breadcrumbClassName, {
+      'ouiBreadcrumb--last': isLastBreadcrumb,
+      'ouiBreadcrumb--truncate': truncate,
+    });
+
+    const link =
+      !href && !onClick ? (
+        <OuiInnerText>
+          {(ref, innerText) => (
+            <span
+              ref={ref}
+              className={breadcrumbClasses}
+              title={innerText}
+              aria-current={isLastBreadcrumb ? 'page' : 'false'}
+              {...breadcrumbRest}>
+              {text}
+            </span>
+          )}
+        </OuiInnerText>
+      ) : (
+        <OuiInnerText>
+          {(ref, innerText) => (
+            <OuiLink
+              ref={ref}
+              color={isLastBreadcrumb ? 'text' : 'subdued'}
+              onClick={onClick}
+              href={href}
+              className={breadcrumbClasses}
+              title={innerText}
+              {...breadcrumbRest}>
+              {text}
+            </OuiLink>
+          )}
+        </OuiInnerText>
+      );
+
+    const breadcrumbWallClasses = classNames('ouiBreadcrumbWall', {
+      'ouiBreadcrumbWall--single': isFirstBreadcrumb && isLastBreadcrumb,
+    });
+
+    const wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
+    const wall = isFirstBreadcrumb ? (
+      <div className={breadcrumbWallClasses}>{wrapper}</div>
+    ) : (
+      wrapper
+    );
+
+    return <Fragment key={index}>{wall}</Fragment>;
+  });
+
+  // Use the default object if they simply passed `true` for responsive
+  const responsiveObject =
+    typeof responsive === 'object' ? responsive : responsiveDefault;
+
+  // The max property collapses any breadcrumbs past the max quantity.
+  // This is the same behavior we want for responsiveness.
+  // So calculate the max value based on the combination of `max` and `responsive`
+
+  // First, calculate the responsive max value
+  const responsiveMax =
+    responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]
+      ? responsiveObject[currentBreakpoint as OuiBreakpointSize]
+      : null;
+
+  // Second, if both max and responsiveMax are set, use the smaller of the two. Otherwise, use the one that is set.
+  const calculatedMax: OuiBreadcrumbsProps['max'] =
+    max && responsiveMax ? Math.min(max, responsiveMax) : max || responsiveMax;
 
   const limitedBreadcrumbs = calculatedMax
     ? limitBreadcrumbs(breadcrumbElements, calculatedMax, breadcrumbs)

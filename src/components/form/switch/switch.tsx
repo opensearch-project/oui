@@ -38,9 +38,33 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { CommonProps } from '../../common';
+import { CommonProps, keysOf } from '../../common';
 import { htmlIdGenerator } from '../../../services/accessibility';
 import { OuiIcon } from '../../icon';
+
+const baseClassName = 'ouiSwitch';
+
+const colorToClassNameMap = {
+  primary: `${baseClassName}--primary`,
+  accent: `${baseClassName}--accent`,
+  secondary: `${baseClassName}--secondary`,
+  success: `${baseClassName}--success`,
+  warning: `${baseClassName}--warning`,
+  danger: `${baseClassName}--danger`,
+  ghost: `${baseClassName}--ghost`,
+  text: `${baseClassName}--text`,
+};
+
+export const COLORS = keysOf(colorToClassNameMap);
+export type OuiSwitchColor = keyof typeof colorToClassNameMap;
+
+const displayToClassNameMap = {
+  base: `${baseClassName}--base`,
+  empty: null,
+};
+
+export const DISPLAYS = keysOf(displayToClassNameMap);
+export type OuiSwitchDisplay = keyof typeof displayToClassNameMap;
 
 export type OuiSwitchEvent = React.BaseSyntheticEvent<
   React.MouseEvent<HTMLButtonElement>,
@@ -56,7 +80,7 @@ export type OuiSwitchProps = CommonProps &
     'onChange' | 'type' | 'disabled'
   > & {
     /**
-     * Whether to render the render the text label
+     * Whether to render the text label
      */
     showLabel?: boolean;
     /**
@@ -65,6 +89,11 @@ export type OuiSwitchProps = CommonProps &
     label: ReactNode | string;
     checked: boolean;
     onChange: (event: OuiSwitchEvent) => void;
+    /**
+     * Any of the named color palette options.
+     * **`subdued` set to be DEPRECATED, use `text` instead**
+     */
+    color?: OuiSwitchColor;
     disabled?: boolean;
     compressed?: boolean;
     type?: 'submit' | 'reset' | 'button';
@@ -72,6 +101,12 @@ export type OuiSwitchProps = CommonProps &
      * Object of props passed to the label's <span/>
      */
     labelProps?: CommonProps & HTMLAttributes<HTMLSpanElement>;
+    /**
+     * Sets the display style for matching other OuiButton types.
+     * `base` is equivalent to a typical OuiButton
+     * `empty` (default) is equivalent to an OuiButtonEmpty
+     */
+    display?: OuiSwitchDisplay;
   };
 
 export const OuiSwitch: FunctionComponent<OuiSwitchProps> = ({
@@ -85,6 +120,8 @@ export const OuiSwitch: FunctionComponent<OuiSwitchProps> = ({
   showLabel = true,
   type = 'button',
   labelProps,
+  color = 'primary',
+  display = 'empty',
   ...rest
 }) => {
   const [switchId] = useState(id || htmlIdGenerator()());
@@ -105,8 +142,11 @@ export const OuiSwitch: FunctionComponent<OuiSwitchProps> = ({
 
   const classes = classNames(
     'ouiSwitch',
+    color && colorToClassNameMap[color],
+    display && displayToClassNameMap[display],
     {
       'ouiSwitch--compressed': compressed,
+      'ouiSwitch-isDisabled': disabled,
     },
     className
   );
@@ -163,3 +203,11 @@ export const OuiSwitch: FunctionComponent<OuiSwitchProps> = ({
     </div>
   );
 };
+
+// @internal
+export type OuiCompressedSwitchProps = Omit<OuiSwitchProps, 'compressed'>;
+
+// @internal
+export const OuiCompressedSwitch: FunctionComponent<OuiCompressedSwitchProps> = (
+  props
+) => <OuiSwitch {...props} compressed />;

@@ -2,7 +2,7 @@
 
 exports[`OuiSwitch assigns automatically generated ID to label 1`] = `
 <div
-  class="ouiSwitch"
+  class="ouiSwitch ouiSwitch--primary"
 >
   <button
     aria-checked="false"
@@ -43,7 +43,7 @@ exports[`OuiSwitch assigns automatically generated ID to label 1`] = `
 
 exports[`OuiSwitch is rendered 1`] = `
 <div
-  class="ouiSwitch testClass1 testClass2"
+  class="ouiSwitch ouiSwitch--primary testClass1 testClass2"
 >
   <button
     aria-checked="false"
@@ -86,7 +86,7 @@ exports[`OuiSwitch is rendered 1`] = `
 
 exports[`OuiSwitch labelProps is rendered 1`] = `
 <div
-  class="ouiSwitch"
+  class="ouiSwitch ouiSwitch--primary"
 >
   <button
     aria-checked="false"

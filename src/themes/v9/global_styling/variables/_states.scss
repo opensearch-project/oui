@@ -1,0 +1,36 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Colors
+$ouiFocusRingColor: rgba($ouiColorPrimary, .3) !default;
+$ouiFocusRingAnimStartColor: rgba($ouiColorPrimary, 0) !default;
+$ouiFocusRingAnimStartSize: 6px !default;
+$ouiFocusRingAnimStartSizeLarge: 10px !default;
+
+// Sizing
+$ouiFocusRingSizeLarge: $ouiSizeXS !default;
+$ouiFocusRingSize: $ouiFocusRingSizeLarge * .75 !default;
+
+// Transparency
+$ouiFocusChangePercent: lightOrDarkTheme(90%, 65%) !default;
+$ouiFocusBackgroundColor: tintOrShade($ouiColorPrimary, $ouiFocusChangePercent, $ouiFocusChangePercent) !default;
+
+
+/* OUI -> EUI Aliases */
+$euiFocusRingColor: $ouiFocusRingColor;
+$euiFocusRingAnimStartColor: $ouiFocusRingAnimStartColor;
+$euiFocusRingAnimStartSize: $ouiFocusRingAnimStartSize;
+$euiFocusRingAnimStartSizeLarge: $ouiFocusRingAnimStartSizeLarge;
+$euiFocusRingSizeLarge: $ouiFocusRingSizeLarge;
+$euiFocusRingSize: $ouiFocusRingSize;
+$euiFocusChangePercent: $ouiFocusChangePercent;
+$euiFocusBackgroundColor: $ouiFocusBackgroundColor;
+/* End of Aliases */

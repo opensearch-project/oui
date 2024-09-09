@@ -14,7 +14,9 @@ $ouiBreakpoints: (
   's':  575px,
   'm':  768px,
   'l':  992px,
-  'xl': 1200px
+  'xl': 1200px,
+  'xxl': 1680px,
+  'xxxl': 1920px
 ) !default;
 
 $ouiBreakpointKeys: map-keys($ouiBreakpoints);

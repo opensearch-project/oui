@@ -42,6 +42,7 @@ export interface FieldValueToggleFilterConfigType {
   negatedName?: string;
   available?: () => boolean;
   operator?: OperatorType;
+  compressed?: boolean;
 }
 
 export interface FieldValueToggleFilterProps {
@@ -85,6 +86,7 @@ export class FieldValueToggleFilter extends Component<
     };
     return (
       <OuiFilterButton
+        size={config.compressed ? 's' : undefined}
         onClick={onClick}
         hasActiveFilters={hasActiveFilters}
         aria-pressed={!!hasActiveFilters}>

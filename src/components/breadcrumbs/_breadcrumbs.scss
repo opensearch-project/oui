@@ -25,18 +25,15 @@
 
 .ouiBreadcrumb {
   display: inline-block;
+  // TODO: remove important: https://github.com/opensearch-project/oui/issues/376
+  color: $ouiBreadcrumbInactiveTextColor !important; // sass-lint:disable-line no-important
 
-  &:not(.ouiBreadcrumb--last) {
-    // TODO: remove important: https://github.com/opensearch-project/oui/issues/376
-    color: $ouiBreadcrumbInactiveTextColor !important; // sass-lint:disable-line no-important
-
-    &:hover {
-      color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
-    }
+  &:hover {
+    color: $ouiBreadCrumbHoverColor !important; // sass-lint:disable-line no-important
   }
 }
 
-.ouiBreadcrumbs:not(.ouiBreadcrumbs__inPopover) .ouiBreadcrumb--last {
+.ouiBreadcrumbs:not(.ouiBreadcrumbs__inPopover) .ouiBreadcrumbWrapper--last .ouiBreadcrumb {
   font-weight: $ouiFontWeightMedium;
 }
 
@@ -114,6 +111,16 @@
     margin-bottom: $ouiSizeXS; /* 1 */
     padding-left: $ouiSizeL - $ouiSizeXS + calc($ouiBreadcrumbSpacing / 2);
   }
+
+  // This targets the last breadcrumb wrapper and sets a different text color for the breadcrumb inside it.
+  &.ouiBreadcrumbWrapper--last .ouiBreadcrumb {
+    // TODO: remove important: https://github.com/opensearch-project/oui/issues/376
+    color: inherit !important; // sass-lint:disable-line no-important
+
+    &:hover {
+      color: inherit !important; // sass-lint:disable-line no-important
+    }
+  }
 }
 
 .ouiBreadcrumbWall {
@@ -125,4 +132,9 @@
 
 .ouiBreadcrumbWall--single {
   background-image: linear-gradient(to right, $ouiBreadcrumbActiveBackground 0 $ouiSizeM, transparent $ouiSizeM);
+}
+
+.euiLink.euiBreadcrumb {
+  line-height: inherit;
+  font-weight: inherit;
 }

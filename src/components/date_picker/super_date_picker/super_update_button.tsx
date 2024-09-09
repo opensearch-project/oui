@@ -53,6 +53,7 @@ export type OuiSuperUpdateButtonProps = CommonProps &
      * Show the "Click to apply" tooltip
      */
     showTooltip: boolean;
+    compressed?: boolean;
   };
 
 export class OuiSuperUpdateButton extends Component<OuiSuperUpdateButtonProps> {
@@ -61,6 +62,7 @@ export class OuiSuperUpdateButton extends Component<OuiSuperUpdateButtonProps> {
     isLoading: false,
     isDisabled: false,
     showTooltip: false,
+    compressed: false,
   };
 
   _isMounted = false;
@@ -116,7 +118,7 @@ export class OuiSuperUpdateButton extends Component<OuiSuperUpdateButtonProps> {
       onClick,
       toolTipProps,
       showTooltip,
-
+      compressed,
       textProps: restTextProps,
       ...rest
     } = this.props;
@@ -169,8 +171,7 @@ export class OuiSuperUpdateButton extends Component<OuiSuperUpdateButtonProps> {
         <OuiButton
           className={classes}
           color={needsUpdate || isLoading ? 'success' : 'primary'}
-          fill
-          iconType={needsUpdate || isLoading ? 'kqlFunction' : 'refresh'}
+          iconType="refresh"
           textProps={{
             ...restTextProps,
             className: classNames(
@@ -181,6 +182,7 @@ export class OuiSuperUpdateButton extends Component<OuiSuperUpdateButtonProps> {
           isDisabled={isDisabled}
           onClick={onClick}
           isLoading={isLoading}
+          size={compressed ? 's' : 'm'}
           {...rest}>
           {buttonText}
         </OuiButton>

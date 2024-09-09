@@ -346,3 +346,19 @@ export class OuiSuperSelect<T extends string> extends Component<
     );
   }
 }
+
+// @internal
+export type OuiCompressedSuperSelectProps<T extends string> = Omit<
+  OuiSuperSelectProps<T>,
+  'compressed'
+>;
+
+// @internal
+export class OuiCompressedSuperSelect<T extends string> extends OuiSuperSelect<
+  T
+> {
+  static defaultProps = {
+    ...OuiSuperSelect.defaultProps,
+    compressed: true,
+  };
+}

@@ -33,4 +33,6 @@ export {
   OuiButtonIconColor,
   OuiButtonIconProps,
   OuiButtonIconPropsForButton,
+  OuiSmallButtonIcon,
+  OuiSmallButtonIconProps,
 } from './button_icon';

@@ -28,4 +28,9 @@
  * under the License.
  */
 
-export { OuiFilePicker, OuiFilePickerProps } from './file_picker';
+export {
+  OuiFilePicker,
+  OuiFilePickerProps,
+  OuiCompressedFilePicker,
+  OuiCompressedFilePickerProps,
+} from './file_picker';

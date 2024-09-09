@@ -234,6 +234,24 @@
     "filepath": "src/components/bottom_bar/bottom_bar.tsx"
   },
   {
+    "token": "ouiBreadcrumbsSimplified.collapsedBadge.ariaLabel",
+    "defString": "Show collapsed breadcrumbs",
+    "highlighting": "string",
+    "loc": {
+      "start": {
+        "line": 79,
+        "column": 6,
+        "index": 2234
+      },
+      "end": {
+        "line": 81,
+        "column": 45,
+        "index": 2354
+      }
+    },
+    "filepath": "src/components/breadcrumbs/breadcrumbs_simplified.tsx"
+  },
+  {
     "token": "ouiBreadcrumbs.collapsedBadge.ariaLabel",
     "defString": "Show collapsed breadcrumbs",
     "highlighting": "string",
@@ -2237,14 +2255,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 429,
+        "line": 437,
         "column": 14,
-        "index": 11292
+        "index": 11485
       },
       "end": {
-        "line": 432,
+        "line": 440,
         "column": 16,
-        "index": 11418
+        "index": 11611
       }
     },
     "filepath": "src/components/date_picker/super_date_picker/super_date_picker.tsx"
@@ -2255,14 +2273,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 127,
+        "line": 129,
         "column": 6,
-        "index": 3258
+        "index": 3324
       },
       "end": {
-        "line": 130,
+        "line": 132,
         "column": 8,
-        "index": 3357
+        "index": 3423
       }
     },
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
@@ -2273,14 +2291,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 134,
+        "line": 136,
         "column": 8,
-        "index": 3442
+        "index": 3508
       },
       "end": {
-        "line": 137,
+        "line": 139,
         "column": 10,
-        "index": 3549
+        "index": 3615
       }
     },
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
@@ -2291,14 +2309,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 139,
+        "line": 141,
         "column": 8,
-        "index": 3570
+        "index": 3636
       },
       "end": {
-        "line": 142,
+        "line": 144,
         "column": 10,
-        "index": 3673
+        "index": 3739
       }
     },
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
@@ -2309,14 +2327,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 149,
+        "line": 151,
         "column": 8,
-        "index": 3769
+        "index": 3835
       },
       "end": {
-        "line": 152,
+        "line": 154,
         "column": 10,
-        "index": 3881
+        "index": 3947
       }
     },
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
@@ -2327,14 +2345,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 156,
+        "line": 158,
         "column": 8,
-        "index": 3968
+        "index": 4034
       },
       "end": {
-        "line": 159,
+        "line": 161,
         "column": 10,
-        "index": 4081
+        "index": 4147
       }
     },
     "filepath": "src/components/date_picker/super_date_picker/super_update_button.tsx"
@@ -2345,14 +2363,14 @@
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 134,
+        "line": 139,
         "column": 8,
-        "index": 3779
+        "index": 3813
       },
       "end": {
-        "line": 140,
+        "line": 145,
         "column": 55,
-        "index": 4046
+        "index": 4080
       }
     },
     "filepath": "src/components/filter_group/filter_button.tsx"
@@ -3634,6 +3652,24 @@
       }
     },
     "filepath": "src/components/selectable/selectable.tsx"
+  },
+  {
+    "token": "ouiSplitButton.screenReaderAnnouncement",
+    "defString": "You are in a selector of {optionsCount} items and must select a single option.\n              Use the up and down keys to navigate or escape to close.",
+    "highlighting": "string",
+    "loc": {
+      "start": {
+        "line": 317,
+        "column": 10,
+        "index": 8002
+      },
+      "end": {
+        "line": 322,
+        "column": 12,
+        "index": 8310
+      }
+    },
+    "filepath": "src/components/split_button/split_button.tsx"
   },
   {
     "token": "ouiStat.loadingText",

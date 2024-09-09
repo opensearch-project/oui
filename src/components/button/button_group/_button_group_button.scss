@@ -12,7 +12,7 @@
 .ouiButtonGroupButton {
   @include ouiButtonBase;
   @include ouiFont;
-  @include ouiFontSize;
+  @include ouiFontSizeS;
 
   // sass-lint:disable-block indentation
   transition: background-color $ouiAnimSpeedNormal ease-in-out,
@@ -129,11 +129,11 @@
     }
 
     &:first-child {
-      border-radius: $ouiBorderRadius 0 0 $ouiBorderRadius;
+      border-radius: $ouiButtonBorderRadius 0 0 $ouiButtonBorderRadius;
     }
 
     &:last-child {
-      border-radius: 0 $ouiBorderRadius $ouiBorderRadius 0;
+      border-radius: 0 $ouiButtonBorderRadius $ouiButtonBorderRadius 0;
     }
   }
 
@@ -174,7 +174,7 @@
     height: $ouiFormControlCompressedHeight - 2px;
     line-height: $ouiFormControlCompressedHeight - 2px; // prevents descenders from getting cut off
     font-size: $ouiFontSizeS;
-    border-radius: $ouiBorderRadius;
+    border-radius: $ouiButtonBorderRadius;
     // Offset the background color from the border by 2px
     // by clipping background to before the padding starts
     padding: 2px;

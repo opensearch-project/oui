@@ -90,7 +90,7 @@ export const SIZES = keysOf(sizeToClassNameMap);
 
 /**
  * Extends OuiButtonContentProps which provides
- * `iconType`, `iconSide`, and `textProps`
+ * `iconType`, `iconSide`, `iconGap`, and `textProps`
  */
 export interface OuiButtonProps extends OuiButtonContentProps, CommonProps {
   children?: ReactNode;
@@ -161,6 +161,7 @@ const OuiButtonDisplay = forwardRef<HTMLElement, OuiButtonDisplayProps>(
       children,
       className,
       iconType,
+      iconGap = 'm',
       iconSide = 'left',
       color = 'primary',
       size = 'm',
@@ -210,6 +211,7 @@ const OuiButtonDisplay = forwardRef<HTMLElement, OuiButtonDisplayProps>(
         isLoading={isLoading}
         iconType={iconType}
         iconSide={iconSide}
+        iconGap={iconGap}
         textProps={{ ...textProps, className: textClassNames }}
         {...contentProps}
         // className has to come last to override contentProps.className
@@ -314,3 +316,15 @@ export const OuiButton: FunctionComponent<Props> = ({
     />
   );
 };
+
+export type OuiSmallButtonProps = Omit<OuiButtonProps, 'size'>;
+
+// Cannot Omit<Props, 'size'> directly due to Exclude changing optional prop types
+type SmallProps = ExclusiveUnion<
+  Omit<OuiButtonPropsForAnchor, 'size'>,
+  Omit<OuiButtonPropsForButton, 'size'>
+>;
+
+export const OuiSmallButton: FunctionComponent<SmallProps> = (props) => (
+  <OuiButton {...props} size="s" />
+);

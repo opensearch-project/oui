@@ -1,31 +1,6 @@
 /*
+ * Copyright OpenSearch Contributors
  * SPDX-License-Identifier: Apache-2.0
- *
- * The OpenSearch Contributors require contributions made to
- * this file be licensed under the Apache-2.0 license or a
- * compatible open source license.
- *
- * Modifications Copyright OpenSearch Contributors. See
- * GitHub history for details.
- */
-
-/*
- * Licensed to Elasticsearch B.V. under one or more contributor
- * license agreements. See the NOTICE file distributed with
- * this work for additional information regarding copyright
- * ownership. Elasticsearch B.V. licenses this file to you under
- * the Apache License, Version 2.0 (the "License"); you may
- * not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *    http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
  */
 
 export { OuiAccordion } from './accordion';
@@ -51,13 +26,17 @@ export { OuiBeacon } from './beacon';
 
 export { OuiBottomBar } from './bottom_bar';
 
-export { OuiBreadcrumbs } from './breadcrumbs';
+export { OuiBreadcrumbs, OuiSimplifiedBreadcrumbs } from './breadcrumbs';
 
 export {
   OuiButton,
   OuiButtonEmpty,
   OuiButtonIcon,
   OuiButtonGroup,
+  OuiSmallButton,
+  OuiSmallButtonEmpty,
+  OuiSmallButtonIcon,
+  OuiSmallButtonGroup,
 } from './button';
 
 export { OuiCallOut } from './call_out';
@@ -78,9 +57,10 @@ export {
   OuiColorStops,
   OuiHue,
   OuiSaturation,
+  OuiCompressedColorPicker,
 } from './color_picker';
 
-export { OuiComboBox } from './combo_box';
+export { OuiComboBox, OuiCompressedComboBox } from './combo_box';
 
 export { OuiComment, OuiCommentList } from './comment_list';
 
@@ -107,6 +87,7 @@ export {
   OuiDatePicker,
   OuiDatePickerRange,
   OuiSuperDatePicker,
+  OuiCompressedSuperDatePicker,
   OuiSuperUpdateButton,
   prettyDuration,
   commonDurationRanges,
@@ -140,6 +121,7 @@ export {
   OuiFilterButton,
   OuiFilterGroup,
   OuiFilterSelectItem,
+  OuiSmallFilterButton,
 } from './filter_group';
 
 export { OuiFacetButton, OuiFacetGroup } from './facet';
@@ -183,6 +165,23 @@ export {
   OuiSwitch,
   OuiTextArea,
   OuiValidatableControl,
+  OuiCompressedCheckbox,
+  OuiCompressedCheckboxGroup,
+  OuiCompressedDualRange,
+  OuiCompressedFieldNumber,
+  OuiCompressedFieldPassword,
+  OuiCompressedFieldSearch,
+  OuiCompressedFieldText,
+  OuiCompressedFilePicker,
+  OuiCompressedFormLegend,
+  OuiCompressedFormRow,
+  OuiCompressedRadio,
+  OuiCompressedRadioGroup,
+  OuiCompressedRange,
+  OuiCompressedSelect,
+  OuiCompressedSuperSelect,
+  OuiCompressedSwitch,
+  OuiCompressedTextArea,
 } from './form';
 
 export {
@@ -314,6 +313,8 @@ export {
 export { OuiSideNav } from './side_nav';
 
 export { OuiSpacer } from './spacer';
+
+export { OuiSplitButton } from './split_button';
 
 export { OuiStat } from './stat';
 

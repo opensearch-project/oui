@@ -178,3 +178,11 @@ export const OuiSelect: FunctionComponent<OuiSelectProps> = ({
     </OuiFormControlLayout>
   );
 };
+
+// @internal
+export type OuiCompressedSelectProps = Omit<OuiSelectProps, 'compressed'>;
+
+// @internal
+export const OuiCompressedSelect: FunctionComponent<OuiCompressedSelectProps> = (
+  props
+) => <OuiSelect {...props} compressed />;

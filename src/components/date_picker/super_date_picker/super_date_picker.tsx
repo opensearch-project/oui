@@ -144,6 +144,11 @@ export type OuiSuperDatePickerProps = CommonProps & {
       'needsUpdate' | 'showTooltip' | 'isLoading' | 'isDisabled' | 'onClick'
     >
   >;
+
+  /**
+   * when `true` creates a shorter input
+   */
+  compressed?: boolean;
 };
 
 interface OuiSuperDatePickerState {
@@ -198,6 +203,7 @@ export class OuiSuperDatePicker extends Component<
     showUpdateButton: true,
     start: 'now-15m',
     timeFormat: 'HH:mm',
+    compressed: false,
   };
 
   asyncInterval?: AsyncInterval;
@@ -387,6 +393,7 @@ export class OuiSuperDatePicker extends Component<
       refreshInterval,
       timeFormat,
       utcOffset,
+      compressed,
     } = this.props;
 
     if (isAutoRefreshOnly) {
@@ -420,6 +427,7 @@ export class OuiSuperDatePicker extends Component<
           <button
             className={classNames('ouiSuperDatePicker__prettyFormat', {
               'ouiSuperDatePicker__prettyFormat--disabled': isDisabled,
+              'ouiSuperDatePicker__prettyFormat--compressed': compressed,
             })}
             data-test-subj="superDatePickerShowDatesButton"
             disabled={isDisabled}
@@ -445,7 +453,12 @@ export class OuiSuperDatePicker extends Component<
             isCustom
             startDateControl={
               <OuiDatePopoverButton
-                className="ouiSuperDatePicker__startPopoverButton"
+                className={classNames(
+                  'ouiSuperDatePicker__startPopoverButton',
+                  {
+                    'ouiSuperDatePicker__startPopoverButton--compressed': compressed,
+                  }
+                )}
                 position="start"
                 needsUpdating={hasChanged}
                 isInvalid={isInvalid}
@@ -459,6 +472,7 @@ export class OuiSuperDatePicker extends Component<
                 isOpen={this.state.isStartDatePopoverOpen}
                 onPopoverToggle={this.onStartDatePopoverToggle}
                 onPopoverClose={this.onStartDatePopoverClose}
+                compressed={compressed}
               />
             }
             endDateControl={
@@ -477,6 +491,7 @@ export class OuiSuperDatePicker extends Component<
                 isOpen={this.state.isEndDatePopoverOpen}
                 onPopoverToggle={this.onEndDatePopoverToggle}
                 onPopoverClose={this.onEndDatePopoverClose}
+                compressed={compressed}
               />
             }
           />
@@ -507,6 +522,7 @@ export class OuiSuperDatePicker extends Component<
             !this.state.isStartDatePopoverOpen &&
             !this.state.isEndDatePopoverOpen
           }
+          compressed={this.props.compressed}
           isLoading={this.props.isLoading}
           isDisabled={this.props.isDisabled || this.state.isInvalid}
           onClick={this.handleClickUpdateButton}
@@ -531,6 +547,7 @@ export class OuiSuperDatePicker extends Component<
       refreshInterval,
       showUpdateButton,
       start,
+      compressed,
     } = this.props;
 
     const quickSelect = (
@@ -566,7 +583,8 @@ export class OuiSuperDatePicker extends Component<
           <OuiFormControlLayout
             className="ouiSuperDatePicker"
             isDisabled={isDisabled}
-            prepend={quickSelect}>
+            prepend={quickSelect}
+            compressed={compressed}>
             {this.renderDatePickerRange()}
           </OuiFormControlLayout>
         </OuiFlexItem>
@@ -574,4 +592,18 @@ export class OuiSuperDatePicker extends Component<
       </OuiFlexGroup>
     );
   }
+}
+
+// @internal
+export type OuiCompressedSuperDatePickerProps = Omit<
+  OuiSuperDatePickerProps,
+  'compressed'
+>;
+
+// @internal
+export class OuiCompressedSuperDatePicker extends OuiSuperDatePicker {
+  static defaultProps = {
+    ...OuiSuperDatePicker.defaultProps,
+    compressed: true,
+  };
 }

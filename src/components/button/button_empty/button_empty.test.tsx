@@ -33,7 +33,7 @@ import { render, mount } from 'enzyme';
 import { requiredProps } from '../../../test/required_props';
 
 import { OuiButtonEmpty, COLORS, SIZES, FLUSH_TYPES } from './button_empty';
-import { ICON_SIDES } from '../button_content';
+import { ICON_GAPS, ICON_SIDES } from '../button_content';
 
 describe('OuiButtonEmpty', () => {
   test('is rendered', () => {
@@ -120,6 +120,20 @@ describe('OuiButtonEmpty', () => {
         test(`${iconSide} is rendered`, () => {
           const component = render(
             <OuiButtonEmpty iconType="user" iconSide={iconSide}>
+              Content
+            </OuiButtonEmpty>
+          );
+
+          expect(component).toMatchSnapshot();
+        });
+      });
+    });
+
+    describe('iconGap', () => {
+      ICON_GAPS.forEach((iconGap) => {
+        test(`${iconGap} is rendered`, () => {
+          const component = render(
+            <OuiButtonEmpty iconType="user" iconGap={iconGap}>
               Content
             </OuiButtonEmpty>
           );

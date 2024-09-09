@@ -35,6 +35,7 @@ import { OuiLoadingSpinner } from '../loading';
 import { OuiIcon, IconType } from '../icon';
 
 export type ButtonContentIconSide = 'left' | 'right';
+export type ButtonContentIconGap = 's' | 'm' | 'none';
 
 const iconSideToClassNameMap: {
   [side in ButtonContentIconSide]: string | null;
@@ -43,7 +44,17 @@ const iconSideToClassNameMap: {
   right: 'ouiButtonContent--iconRight',
 };
 
+const iconGapToClassNameMap: {
+  [gap in ButtonContentIconGap]: string | null;
+} = {
+  m: null,
+  s: 'ouiButtonContent--smallIconGap',
+  none: 'ouiButtonContent--noIconGap',
+};
+
 export const ICON_SIDES = keysOf(iconSideToClassNameMap);
+
+export const ICON_GAPS = keysOf(iconGapToClassNameMap);
 
 export type OuiButtonContentType = HTMLAttributes<HTMLSpanElement>;
 
@@ -70,6 +81,10 @@ export interface OuiButtonContentProps extends CommonProps {
       'data-text'?: string;
     };
   iconSize?: 's' | 'm';
+  /**
+   * The gap between the icon and the content
+   */
+  iconGap?: ButtonContentIconGap;
 }
 
 export const OuiButtonContent: FunctionComponent<
@@ -80,6 +95,7 @@ export const OuiButtonContent: FunctionComponent<
   isLoading = false,
   iconType,
   iconSize = 'm',
+  iconGap = 'm',
   iconSide = 'left',
   ...contentProps
 }) => {
@@ -96,6 +112,7 @@ export const OuiButtonContent: FunctionComponent<
         className="ouiButtonContent__icon"
         type={iconType}
         size={iconSize}
+        title={textProps?.title}
         color="inherit" // forces the icon to inherit its parent color
       />
     );
@@ -104,6 +121,7 @@ export const OuiButtonContent: FunctionComponent<
   const contentClassNames = classNames(
     'ouiButtonContent',
     iconSide ? iconSideToClassNameMap[iconSide] : null,
+    iconGap ? iconGapToClassNameMap[iconGap] : null,
     contentProps && contentProps.className
   );
 

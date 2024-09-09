@@ -59,6 +59,41 @@ ruleTester.run('@opensearch-project/oui/href-or-on-click', rule, {
         )
       `),
     },
+    {
+      code: dedent(`
+        module.export = () => (
+          <OuiSmallButton />
+        )
+      `),
+    },
+    {
+      code: dedent(`
+        module.export = () => (
+          <OuiSmallButton href="/" />
+        )
+      `),
+    },
+    {
+      code: dedent(`
+        module.export = () => (
+          <OuiSmallButton href={'/' + 'home'} />
+        )
+      `),
+    },
+    {
+      code: dedent(`
+        module.export = () => (
+          <OuiSmallButton onClick={executeAction} />
+        )
+      `),
+    },
+    {
+      code: dedent(`
+        module.export = () => (
+          <OuiSmallButton onClick={() => executeAction()} />
+        )
+      `),
+    },
   ],
 
   invalid: [
@@ -99,6 +134,33 @@ ruleTester.run('@opensearch-project/oui/href-or-on-click', rule, {
       errors: [
         {
           message: '<OuiLink> accepts either `href` or `onClick`, not both.',
+        },
+      ],
+    },
+    {
+      code: dedent(`
+        module.export = () => (
+          <OuiSmallButton href="/" onClick={fooBar} />
+        )
+      `),
+
+      errors: [
+        {
+          message: '<OuiSmallButton> accepts either `href` or `onClick`, not both.',
+        },
+      ],
+    },
+    {
+      code: dedent(`
+        module.export = () => (
+          <OuiSmallButtonEmpty href="/" onClick={fooBar} />
+        )
+      `),
+
+      errors: [
+        {
+          message:
+            '<OuiSmallButtonEmpty> accepts either `href` or `onClick`, not both.',
         },
       ],
     },

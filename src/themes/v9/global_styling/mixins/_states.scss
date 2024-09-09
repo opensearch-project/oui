@@ -1,0 +1,71 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@mixin ouiFocusRing($size: 'small') {
+  @if $size == 'large' {
+    // It's always OK to use the focus animation. This will take precedence over times we turn it off individually like OuiButtonEmpty
+    // sass-lint:disable-block no-important
+    animation: $ouiAnimSpeedSlow $ouiAnimSlightResistance 1 normal forwards focusRingAnimateLarge !important;
+  } @else {
+    // sass-lint:disable-block no-important
+    animation: $ouiAnimSpeedSlow $ouiAnimSlightResistance 1 normal forwards focusRingAnimate !important;
+  }
+}
+
+// Keyframe animation declarations can be found in
+// utility/animations.scss
+
+@mixin ouiFocusBackground($color: $ouiColorPrimary) {
+  background-color: tintOrShade($color, $ouiFocusChangePercent, $ouiFocusChangePercent);
+}
+
+@mixin ouiHoverState {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@mixin ouiFocusState($color: $ouiColorPrimary) {
+  @include ouiHoverState;
+  @include ouiFocusBackground($color);
+}
+
+@mixin ouiDisabledState($color: $ouiButtonColorDisabledText) {
+  cursor: not-allowed;
+  text-decoration: none;
+
+  @if ($color) {
+    color: $color;
+  }
+}
+
+@mixin ouiInteractiveStates($focusColor: $ouiColorPrimary, $disabledColor: $ouiButtonColorDisabledText) {
+  &:hover {
+    @include ouiHoverState;
+  }
+
+  &:focus {
+    @include ouiFocusState($focusColor);
+  }
+
+  &:disabled {
+    @include ouiDisabledState($disabledColor);
+  }
+}
+
+
+/* OUI -> EUI Aliases */
+@mixin euiFocusRing($size: 'small') { @include ouiFocusRing($size); }
+@mixin euiFocusBackground($color: $ouiColorPrimary) { @include ouiFocusBackground($color); }
+@mixin euiHoverState { @include ouiHoverState; }
+@mixin euiFocusState($color: $ouiColorPrimary) { @include ouiFocusState($color); }
+@mixin euiDisabledState($color: $ouiButtonColorDisabledText) { @include ouiDisabledState($color); }
+@mixin euiInteractiveStates($focusColor: $ouiColorPrimary, $disabledColor: $ouiButtonColorDisabledText) { @include ouiInteractiveStates($focusColor, $disabledColor); }
+/* End of Aliases */

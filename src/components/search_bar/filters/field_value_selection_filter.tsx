@@ -74,6 +74,7 @@ export interface FieldValueSelectionFilterConfigType {
   available?: () => boolean;
   autoClose?: boolean;
   operator?: OperatorType;
+  compressed?: boolean;
 }
 
 export interface FieldValueSelectionFilterProps {
@@ -368,6 +369,7 @@ export class FieldValueSelectionFilter extends Component<
 
     const button = (
       <OuiFilterButton
+        size={config.compressed ? 's' : undefined}
         iconType="arrowDown"
         iconSide="right"
         onClick={this.onButtonClick.bind(this)}
