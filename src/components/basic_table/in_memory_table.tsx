@@ -520,7 +520,7 @@ export class OuiInMemoryTable<T> extends Component<
       return (
         <>
           <OuiSearchBar onChange={this.onQueryChange} {...searchBarProps} />
-          <OuiSpacer size="l" />
+          <OuiSpacer size={searchBarProps.compressed ? 'm' : 'l'} />
         </>
       );
     }

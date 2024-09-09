@@ -13,6 +13,7 @@
 - Add `compressed` to OuiDatePicker ([#1380](https://github.com/opensearch-project/oui/pull/1380))
 - Expand the definitions of `$ouiBreakpoints` to include `xxl` and `xxxl` ([#1387](https://github.com/opensearch-project/oui/pull/1387))
 - Remove scaling of heading elements ([#1389](https://github.com/opensearch-project/oui/pull/1389))
+- Make the space between search bar and table rows match the compressed state of the search box ([#1391](https://github.com/opensearch-project/oui/pull/1391))
 
 ### 🐛 Bug Fixes
 
