@@ -7,12 +7,9 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | Maintainer               | GitHub ID                                         | Affiliation |
 |--------------------------|---------------------------------------------------|-------------|
 | Miki Barahmand           | [AMoo-Miki](https://github.com/AMoo-Miki)         | Amazon      |
-| Iskander Rakhmanberdiyev | [rednaksi91](https://github.com/rednaksi91)       | Amazon      |
 | Bandini                  | [bandinib-amzn](https://github.com/bandinib-amzn) | Amazon      |
 | Ashwin P Chandran        | [ashwin-pc](https://github.com/ashwin-pc)         | Amazon      |
 | Josh Romero              | [joshuarrrr](https://github.com/joshuarrrr)       | Amazon      |
-| Andrey Myssak            | [andreymyssak](https://github.com/andreymyssak)   | Contributor |
-| Sergey Myssak            | [SergeyMyssak](https://github.com/SergeyMyssak)   | Contributor |
 | Viraj Sanghvi            | [virajsanghvi](https://github.com/virajsanghvi)   | Amazon      |
 
 
@@ -23,3 +20,6 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | Matt Provost             | [BSFishy](https://github.com/BSFishy)             | Contributor |
 | Kroosh                   | [KrooshalUX](https://github.com/KrooshalUX)       | Contributor |
 | Sean Neumann             | [seanneumann](https://github.com/seanneumann)     | Contributor |
+| Iskander Rakhmanberdiyev | [rednaksi91](https://github.com/rednaksi91)       | Amazon      |
+| Andrey Myssak            | [andreymyssak](https://github.com/andreymyssak)   | Contributor |
+| Sergey Myssak            | [SergeyMyssak](https://github.com/SergeyMyssak)   | Contributor |
