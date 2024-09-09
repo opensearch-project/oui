@@ -50,6 +50,8 @@ export const Table = () => {
   const [incremental, setIncremental] = useState(false);
   const [filters, setFilters] = useState(false);
   const [contentBetween, setContentBetween] = useState(false);
+  const [compressed, setCompressed] = useState(false);
+  const [compressedSearch, setCompressedSearch] = useState(false);
 
   const columns = [
     {
@@ -95,6 +97,7 @@ export const Table = () => {
       incremental: incremental,
       schema: true,
     },
+    compressed: compressedSearch,
     filters: !filters
       ? undefined
       : [
@@ -142,12 +145,27 @@ export const Table = () => {
             onChange={() => setContentBetween(!contentBetween)}
           />
         </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
+            label="Compressed table"
+            checked={compressed}
+            onChange={() => setCompressed(!compressed)}
+          />
+        </OuiFlexItem>
+        <OuiFlexItem grow={false}>
+          <OuiSwitch
+            label="Compressed search"
+            checked={compressedSearch}
+            onChange={() => setCompressedSearch(!compressedSearch)}
+          />
+        </OuiFlexItem>
       </OuiFlexGroup>
       <OuiSpacer size="l" />
       <OuiInMemoryTable
         items={store.users}
         columns={columns}
         search={search}
+        compressed={compressed}
         pagination={true}
         sorting={true}
         childrenBetween={
