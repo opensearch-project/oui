@@ -18,23 +18,33 @@ import React, {
 } from 'react';
 import classNames from 'classnames';
 
-import { OuiI18n } from '../i18n';
-import { OuiInnerText } from '../inner_text';
-import { OuiLink } from '../link';
-import { OuiPopover } from '../popover';
-import { OuiIcon } from '../icon';
-import { throttle } from '../../services';
-import { OuiBreakpointSize, getBreakpoint } from '../../services/breakpoint';
+import { OuiI18n } from '../../i18n';
+import { OuiInnerText } from '../../inner_text';
+import { OuiLink } from '../../link';
+import { OuiPopover } from '../../popover';
+import { OuiIcon } from '../../icon';
+import { throttle } from '../../../services';
+import { OuiBreakpointSize, getBreakpoint } from '../../../services/breakpoint';
 import {
   OuiBreadcrumbResponsiveMaxCount,
   OuiBreadcrumb,
   OuiBreadcrumbsProps,
-} from './breadcrumbs';
+} from '../breadcrumbs';
+
+export type OuiSimplifiedBreadcrumbsProps = OuiBreadcrumbsProps & {
+  hideTrailingSeparator?: boolean;
+  disableTrailingLink?: boolean;
+  hideLastBreadCrumb?: boolean;
+};
 
 const responsiveDefault: OuiBreadcrumbResponsiveMaxCount = {
   xs: 1,
   s: 2,
   m: 4,
+  l: 6,
+  xl: 8,
+  xxl: 10,
+  xxxl: 12,
 };
 
 const limitBreadcrumbs = (
@@ -77,12 +87,11 @@ const limitBreadcrumbs = (
 
     const ellipsisButton = (
       <OuiI18n
-        token="ouiBreadcrumbsSimplified.collapsedBadge.ariaLabel"
+        token="ouiSimplifiedBreadcrumbs.collapsedBadge.ariaLabel"
         default="Show collapsed breadcrumbs">
         {(ariaLabel: string) => (
           <OuiLink
-            className="ouiSimplifiedBreadcrumb__collapsedLink"
-            color="subdued"
+            className="ouiSimplifiedBreadcrumb ouiSimplifiedBreadcrumb__collapsedLink"
             aria-label={ariaLabel}
             title={ariaLabel}
             onClick={() => setIsPopoverOpen(!isPopoverOpen)}>
@@ -94,21 +103,22 @@ const limitBreadcrumbs = (
 
     return (
       <Fragment>
-        <div className="ouiSimplifiedBreadcrumbWrapper ouiSimplifiedBreadcrumbWrapper--collapsed">
-          <OuiPopover
-            className="ouiSimplifiedBreadcrumb ouiSimplifiedBreadcrumb--collapsed"
-            button={ellipsisButton}
-            isOpen={isPopoverOpen}
-            closePopover={() => setIsPopoverOpen(false)}>
-            <OuiSimplifiedBreadcrumbs
-              className="ouiSimplifiedBreadcrumbs__inPopover"
-              breadcrumbs={overflowBreadcrumbs}
-              responsive={false}
-              truncate={false}
-              max={0}
-            />
-          </OuiPopover>
-        </div>
+        <OuiPopover
+          className="ouiSimplifiedBreadcrumb ouiSimplifiedBreadcrumb--collapsed"
+          button={ellipsisButton}
+          isOpen={isPopoverOpen}
+          closePopover={() => setIsPopoverOpen(false)}>
+          <OuiSimplifiedBreadcrumbs
+            className="ouiSimplifiedBreadcrumbs__inPopover"
+            breadcrumbs={overflowBreadcrumbs}
+            responsive={false}
+            truncate={false}
+            hideLastBreadCrumb={false}
+            hideTrailingSeparator={true}
+            disableTrailingLink={false}
+            max={0}
+          />
+        </OuiPopover>
         <OuiBreadcrumbSeparator />
       </Fragment>
     );
@@ -121,14 +131,26 @@ const limitBreadcrumbs = (
   return [...breadcrumbsAtStart, ...breadcrumbsAtEnd];
 };
 
-const OuiBreadcrumbSeparator = () => <div className="ouiBreadcrumbSeparator" />;
+const OuiBreadcrumbSeparator = () => (
+  // preserveAspectRatio is none so we can stretch it vertically and keep the width fixed
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 8 12"
+    preserveAspectRatio="none"
+    className="ouiBreadcrumbSeparator">
+    <path fill="currentColor" d="M2 12H0L6 0h2z" />
+  </svg>
+);
 
-export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
+export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiSimplifiedBreadcrumbsProps> = ({
   breadcrumbs,
   className,
   responsive = responsiveDefault,
   truncate = true,
   max = 5,
+  hideTrailingSeparator,
+  disableTrailingLink,
+  hideLastBreadCrumb,
   ...rest
 }) => {
   const [currentBreakpoint, setCurrentBreakpoint] = useState(
@@ -162,17 +184,15 @@ export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = 
       ...breadcrumbRest
     } = breadcrumb;
 
-    const isFirstBreadcrumb = index === 0;
-    const isLastBreadcrumb = index === breadcrumbs.length - 1;
+    const breadcrumbsLength = breadcrumbs.length;
+    const isLastBreadcrumb = index === breadcrumbsLength - 1;
 
-    const breadcrumbWrapperClasses = classNames(
-      'ouiSimplifiedBreadcrumbWrapper',
-      {
-        'ouiSimplifiedBreadcrumbWrapper--first': isFirstBreadcrumb,
-        'ouiSimplifiedBreadcrumbWrapper--last': isLastBreadcrumb,
-        'ouiSimplifiedBreadcrumbWrapper--truncate': truncate,
-      }
-    );
+    if (isLastBreadcrumb && hideLastBreadCrumb) return null;
+
+    const isFirstBreadcrumb = index === 0;
+    // If hideLastBreadCrumb, the trailing breadcrumb would be the one before the last
+    const isTrailingBreadcrumb =
+      index >= breadcrumbsLength - (hideLastBreadCrumb ? 2 : 1);
 
     const breadcrumbClasses = classNames(
       'ouiSimplifiedBreadcrumb',
@@ -184,7 +204,7 @@ export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = 
     );
 
     const link =
-      !href && !onClick ? (
+      !(href || onClick) || (isTrailingBreadcrumb && disableTrailingLink) ? (
         <OuiInnerText>
           {(ref, innerText) => (
             <span
@@ -202,7 +222,6 @@ export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = 
           {(ref, innerText) => (
             <OuiLink
               ref={ref}
-              color={isLastBreadcrumb ? 'text' : 'subdued'}
               onClick={onClick}
               href={href}
               className={breadcrumbClasses}
@@ -214,19 +233,22 @@ export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = 
         </OuiInnerText>
       );
 
-    const breadcrumbWallClasses = classNames('ouiSimplifiedBreadcrumbWall', {
-      'ouiSimplifiedBreadcrumbWall--single':
-        isFirstBreadcrumb && isLastBreadcrumb,
-    });
-
-    const wrapper = <div className={breadcrumbWrapperClasses}>{link}</div>;
     const wall = isFirstBreadcrumb ? (
-      <div className={breadcrumbWallClasses}>{wrapper}</div>
+      <div
+        className={classNames('ouiSimplifiedBreadcrumbWall', {
+          'ouiSimplifiedBreadcrumbWall--single':
+            isFirstBreadcrumb && isLastBreadcrumb,
+        })}>
+        {link}
+      </div>
     ) : (
-      wrapper
+      link
     );
 
-    const separator = <OuiBreadcrumbSeparator />;
+    const separator =
+      hideTrailingSeparator && isTrailingBreadcrumb ? null : (
+        <OuiBreadcrumbSeparator />
+      );
 
     return (
       <Fragment key={index}>
@@ -246,9 +268,8 @@ export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = 
 
   // First, calculate the responsive max value
   const responsiveMax =
-    responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]
-      ? responsiveObject[currentBreakpoint as OuiBreakpointSize]
-      : null;
+    (responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]) ||
+    null;
 
   // Second, if both max and responsiveMax are set, use the smaller of the two. Otherwise, use the one that is set.
   const calculatedMax: OuiBreadcrumbsProps['max'] =

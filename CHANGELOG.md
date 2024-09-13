@@ -22,6 +22,7 @@
 
 - Fix `compressed` styling of OuiDatePickerRange ([#1380](https://github.com/opensearch-project/oui/pull/1380))
 - Make OuiSearchBar consume a provided `className` ([#1381](https://github.com/opensearch-project/oui/pull/1381))
+- Adjust OuiSimplifiedBreadcrumbs alignment, colors, and tailing slash ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 
 ### 🚞 Infrastructure
 

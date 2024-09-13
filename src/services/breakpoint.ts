@@ -30,7 +30,7 @@
 
 import { keysOf } from '../components/common';
 
-export type OuiBreakpointSize = 'xs' | 's' | 'm' | 'l' | 'xl';
+export type OuiBreakpointSize = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl';
 
 export type OuiBreakpoints = {
   /**
@@ -40,6 +40,8 @@ export type OuiBreakpoints = {
 };
 
 export const BREAKPOINTS: OuiBreakpoints = {
+  xxxl: 1920,
+  xxl: 1680,
   xl: 1200,
   l: 992,
   m: 768,

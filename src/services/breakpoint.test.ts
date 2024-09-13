@@ -36,6 +36,8 @@ import {
 } from './breakpoint';
 
 const CUSTOM_BREAKPOINTS: OuiBreakpoints = {
+  xxxl: 2100,
+  xxl: 1800,
   xl: 1400,
   l: 1078,
   m: 812,
@@ -60,6 +62,12 @@ describe('getBreakpoint', () => {
     it("should return 'xl' for 1400", () => {
       expect(getBreakpoint(1400)).toBe('xl');
     });
+    it("should return 'xxl' for 1800", () => {
+      expect(getBreakpoint(1800)).toBe('xxl');
+    });
+    it("should return 'xxxl' for 2100", () => {
+      expect(getBreakpoint(2100)).toBe('xxxl');
+    });
   });
 
   describe('with custom breakpoints', () => {
@@ -78,8 +86,14 @@ describe('getBreakpoint', () => {
     it("should return 'l' for 1200", () => {
       expect(getBreakpoint(1200, CUSTOM_BREAKPOINTS)).toBe('l');
     });
-    it("should return 'xl' for 1400", () => {
-      expect(getBreakpoint(1400, CUSTOM_BREAKPOINTS)).toBe('xl');
+    it("should return 'xl' for 1500", () => {
+      expect(getBreakpoint(1500, CUSTOM_BREAKPOINTS)).toBe('xl');
+    });
+    it("should return 'xxl' for 2000", () => {
+      expect(getBreakpoint(2000, CUSTOM_BREAKPOINTS)).toBe('xxl');
+    });
+    it("should return 'xxxl' for 3000", () => {
+      expect(getBreakpoint(3000, CUSTOM_BREAKPOINTS)).toBe('xxxl');
     });
   });
 });
@@ -101,6 +115,12 @@ describe('isWithinMaxBreakpoint', () => {
     it("should return 'true' for 'xl' and 1400", () => {
       expect(isWithinMaxBreakpoint(1400, 'xl')).toBe(true);
     });
+    it("should return 'true' for 'xxl' and 1800", () => {
+      expect(isWithinMaxBreakpoint(1800, 'xxl')).toBe(true);
+    });
+    it("should return 'true' for 'xxxl' and 2100", () => {
+      expect(isWithinMaxBreakpoint(2100, 'xxxl')).toBe(true);
+    });
   });
 
   describe('with custom breakpoints', () => {
@@ -121,6 +141,14 @@ describe('isWithinMaxBreakpoint', () => {
     });
     it("should return 'true' for 'xl' and 1400", () => {
       expect(isWithinMaxBreakpoint(1400, 'xl', CUSTOM_BREAKPOINTS)).toBe(true);
+    });
+    it("should return 'true' for 'xxl' and 1800", () => {
+      expect(isWithinMaxBreakpoint(1800, 'xxl', CUSTOM_BREAKPOINTS)).toBe(true);
+    });
+    it("should return 'true' for 'xxxl' and 2100", () => {
+      expect(isWithinMaxBreakpoint(2100, 'xxxl', CUSTOM_BREAKPOINTS)).toBe(
+        true
+      );
     });
   });
 
@@ -147,6 +175,12 @@ describe('isWithinMaxBreakpoint', () => {
       it("should return 'true' for 'xl' and 1400", () => {
         expect(isWithinBreakpoints(1400, ['xl'])).toBe(true);
       });
+      it("should return 'true' for 'xxl' and 1800", () => {
+        expect(isWithinBreakpoints(1800, ['xxl'])).toBe(true);
+      });
+      it("should return 'true' for 'xxxl' and 2100", () => {
+        expect(isWithinBreakpoints(2100, ['xxxl'])).toBe(true);
+      });
     });
 
     describe('with custom breakpoints', () => {
@@ -169,6 +203,16 @@ describe('isWithinMaxBreakpoint', () => {
       });
       it("should return 'true' for 'xl' and 1400", () => {
         expect(isWithinBreakpoints(1400, ['xl'], CUSTOM_BREAKPOINTS)).toBe(
+          true
+        );
+      });
+      it("should return 'true' for 'xxl' and 1800", () => {
+        expect(isWithinBreakpoints(1800, ['xxl'], CUSTOM_BREAKPOINTS)).toBe(
+          true
+        );
+      });
+      it("should return 'true' for 'xxxl' and 2100", () => {
+        expect(isWithinBreakpoints(2100, ['xxxl'], CUSTOM_BREAKPOINTS)).toBe(
           true
         );
       });

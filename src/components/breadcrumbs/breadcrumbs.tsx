@@ -319,6 +319,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   );
 };
 
+// @deprecated This component has never been exported out the component's folder
 export const OuiBreadcrumbsSimplified: FunctionComponent<OuiBreadcrumbsProps> = ({
   breadcrumbs,
   className,
