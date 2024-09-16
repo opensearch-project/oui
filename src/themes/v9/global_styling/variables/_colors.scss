@@ -17,14 +17,14 @@ $ouiColorGhost: #FFFFFF !default;
 $ouiColorInk: #131313 !default;
 
 // Core
-$ouiColorPrimary: #1D70C0 !default;
-$ouiColorSecondary: #199863 !default;
-$ouiColorAccent: #B92FC5 !default;
+$ouiColorPrimary: #0974BE !default;
+$ouiColorSecondary: #0F7F6B !default;
+$ouiColorAccent: #9E4DC0 !default;
 
 // Status
-$ouiColorSuccess: #117F6A !default;
-$ouiColorWarning: #ED9F00 !default;
-$ouiColorDanger: #C84133 !default;
+$ouiColorSuccess: $ouiColorSecondary !default;
+$ouiColorWarning: #E4A330 !default;
+$ouiColorDanger: #C84233 !default;
 
 // Grays
 $ouiColorEmptyShade: #FFFFFF !default;
@@ -36,8 +36,8 @@ $ouiColorDarkestShade: #2A2A2A !default;
 $ouiColorFullShade: #131313 !default;
 
 // Backgrounds
-$ouiPageBackgroundColor: #F5F5F5 !default;
-$ouiColorHighlight: #FEF4E0 !default;
+$ouiPageBackgroundColor: #F9F9F9 !default;
+$ouiColorHighlight: #FFF3E1 !default;
 
 // Every color below must be based mathematically on the set above and in a particular order.
 $ouiTextColor: $ouiColorFullShade !default;
@@ -47,12 +47,12 @@ $ouiColorDisabled: #CDCDCD !default;
 
 // Contrasty text variants
 $ouiColorPrimaryText: $ouiColorPrimary !default;
-$ouiColorSecondaryText: #117F6A !default;
-$ouiColorAccentText: #B92FC5 !default;
-$ouiColorWarningText: #C48600 !default;
-$ouiColorDangerText: #C84133 !default;
-$ouiColorDisabledText: #AFAFAF !default;
-$ouiColorSuccessText: #117F6A !default;
+$ouiColorSecondaryText: $ouiColorSecondary !default;
+$ouiColorAccentText: $ouiColorAccent !default;
+$ouiColorWarningText: #91691F !default;
+$ouiColorDangerText: $ouiColorDanger !default;
+$ouiColorDisabledText: #8E8E8E !default;
+$ouiColorSuccessText: $ouiColorSuccess !default;
 $ouiLinkColor: $ouiColorPrimaryText !default;
 
 // Visualization colors
