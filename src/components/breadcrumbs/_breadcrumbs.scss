@@ -33,6 +33,16 @@
   }
 }
 
+.ouiBreadcrumb,
+.ouiBreadcrumb__collapsedLink {
+  &.ouiLink {
+    &[class*='ouiLink--']:focus {
+      // .ouiLink uses a rule with !important which shows an outline
+      animation: none !important; // sass-lint:disable-line no-important
+    }
+  }
+}
+
 .ouiBreadcrumbs:not(.ouiBreadcrumbs__inPopover) .ouiBreadcrumbWrapper--last .ouiBreadcrumb {
   font-weight: $ouiFontWeightMedium;
 }
@@ -97,29 +107,31 @@
 
     transform: skewX(-20deg);
     border-radius: $ouiSizeXS;
-  }
 
-  &:not(.ouiBreadcrumbWrapper--last)::before {
     background-color: $ouiBreadcrumbInactiveBackground;
   }
 
-  &.ouiBreadcrumbWrapper--last::before {
-    background-color: $ouiBreadcrumbActiveBackground;
+  .ouiBreadcrumbs:not(.ouiBreadcrumbs__inPopover) & {
+    &.ouiBreadcrumbWrapper--last {
+      // This targets the last breadcrumb wrapper and sets a different text color for the breadcrumb inside it.
+      .ouiBreadcrumb,
+      .ouiBreadcrumb:hover {
+        color: inherit !important; // sass-lint:disable-line no-important
+      }
+
+      &::before {
+        background-color: $ouiBreadcrumbActiveBackground;
+      }
+    }
+  }
+
+  &:has(.ouiLink--subdued:focus)::before {
+    background-color: $ouiBreadcrumbFocusBackground;
   }
 
   &:not(.ouiBreadcrumbWrapper--first) {
     margin-bottom: $ouiSizeXS; /* 1 */
     padding-left: $ouiSizeL - $ouiSizeXS + calc($ouiBreadcrumbSpacing / 2);
-  }
-
-  // This targets the last breadcrumb wrapper and sets a different text color for the breadcrumb inside it.
-  &.ouiBreadcrumbWrapper--last .ouiBreadcrumb {
-    // TODO: remove important: https://github.com/opensearch-project/oui/issues/376
-    color: inherit !important; // sass-lint:disable-line no-important
-
-    &:hover {
-      color: inherit !important; // sass-lint:disable-line no-important
-    }
   }
 }
 
@@ -128,6 +140,10 @@
   border-radius: $ouiSizeXS;
   overflow: hidden;
   margin-bottom: $ouiSizeXS; /* 1 */
+
+  &:has(.ouiLink--subdued:focus) {
+    background-image: linear-gradient(to right, $ouiBreadcrumbFocusBackground 0 $ouiSizeM, transparent $ouiSizeM);
+  }
 }
 
 .ouiBreadcrumbWall--single {

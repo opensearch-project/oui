@@ -217,6 +217,8 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
     };
   }, [responsive, functionToCallOnWindowResize]);
 
+  const isInPopover = className === 'ouiBreadcrumbs__inPopover';
+
   const breadcrumbElements = breadcrumbs.map((breadcrumb, index) => {
     const {
       text,
@@ -249,7 +251,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
               ref={ref}
               className={breadcrumbClasses}
               title={innerText}
-              aria-current={isLastBreadcrumb ? 'page' : 'false'}
+              aria-current={isLastBreadcrumb && !isInPopover ? 'page' : 'false'}
               {...breadcrumbRest}>
               {text}
             </span>
@@ -260,7 +262,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
           {(ref, innerText) => (
             <OuiLink
               ref={ref}
-              color={isLastBreadcrumb ? 'text' : 'subdued'}
+              color={isLastBreadcrumb && !isInPopover ? 'text' : 'subdued'}
               onClick={onClick}
               href={href}
               className={breadcrumbClasses}
