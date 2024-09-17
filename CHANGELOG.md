@@ -22,6 +22,7 @@
 
 - Fix `compressed` styling of OuiDatePickerRange ([#1380](https://github.com/opensearch-project/oui/pull/1380))
 - Make OuiSearchBar consume a provided `className` ([#1381](https://github.com/opensearch-project/oui/pull/1381))
+- Fixes iInCircle and questionInCircle icons to be correct size ([#1404](https://github.com/opensearch-project/oui/pull/1404))
 
 ### 🚞 Infrastructure
 
