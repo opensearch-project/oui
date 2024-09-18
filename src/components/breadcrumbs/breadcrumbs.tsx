@@ -99,10 +99,20 @@ export type OuiBreadcrumbsProps = CommonProps & {
   breadcrumbs: OuiBreadcrumb[];
 };
 
+/* Try to fit breadcrumbs with at least 160px into the width of each of the BREAKPOINTS
+ *    1. put aside 275px for the last breadcrumb and possible loss due to layout
+ *    2. provide at least 160px for each remaining breadcrumb
+ *
+ *    numberOfBreadcrumbs = (breakpointWidth - 275) / 160 + 1
+ */
 const responsiveDefault: OuiBreadcrumbResponsiveMaxCount = {
-  xs: 1,
-  s: 2,
-  m: 4,
+  xs: 1, // Show only one
+  s: 2, //  (575 - 275) / 160 + 1 = 2.88
+  m: 4, //  (768 - 275) / 160 + 1 = 4.08
+  l: 5, //  (992 - 275) / 160 + 1 = 5.48
+  xl: 6, // (1200 - 275) / 160 + 1 = 6.78
+  xxl: 9, // (1680 - 275) / 160 + 1 = 9.78
+  xxxl: 11, // (1920 - 275) / 160 + 1 = 11.28
 };
 
 const limitBreadcrumbs = (
@@ -196,12 +206,28 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   max = 5,
   ...rest
 }) => {
+  // Use the default object if they simply passed `true` for responsive
+  const responsiveObject =
+    typeof responsive === 'object' ? responsive : responsiveDefault;
+
+  const allowedBreakpoints = responsive
+    ? (Object.keys(responsiveObject) as OuiBreakpointSize[])
+    : undefined;
+
   const [currentBreakpoint, setCurrentBreakpoint] = useState(
-    getBreakpoint(typeof window === 'undefined' ? -Infinity : window.innerWidth)
+    getBreakpoint(
+      typeof window === 'undefined' ? -Infinity : window.innerWidth,
+      undefined,
+      allowedBreakpoints
+    )
   );
 
   const functionToCallOnWindowResize = throttle(() => {
-    const newBreakpoint = getBreakpoint(window.innerWidth);
+    const newBreakpoint = getBreakpoint(
+      window.innerWidth,
+      undefined,
+      allowedBreakpoints
+    );
     if (newBreakpoint !== currentBreakpoint) {
       setCurrentBreakpoint(newBreakpoint);
     }
@@ -215,7 +241,9 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
     return () => {
       window.removeEventListener('resize', functionToCallOnWindowResize);
     };
-  }, [responsive, functionToCallOnWindowResize]);
+  }, [responsive, responsiveObject, functionToCallOnWindowResize]);
+
+  const isInPopover = className === 'ouiBreadcrumbs__inPopover';
 
   const breadcrumbElements = breadcrumbs.map((breadcrumb, index) => {
     const {
@@ -249,7 +277,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
               ref={ref}
               className={breadcrumbClasses}
               title={innerText}
-              aria-current={isLastBreadcrumb ? 'page' : 'false'}
+              aria-current={isLastBreadcrumb && !isInPopover ? 'page' : 'false'}
               {...breadcrumbRest}>
               {text}
             </span>
@@ -260,7 +288,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
           {(ref, innerText) => (
             <OuiLink
               ref={ref}
-              color={isLastBreadcrumb ? 'text' : 'subdued'}
+              color={isLastBreadcrumb && !isInPopover ? 'text' : 'subdued'}
               onClick={onClick}
               href={href}
               className={breadcrumbClasses}
@@ -286,19 +314,14 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
     return <Fragment key={index}>{wall}</Fragment>;
   });
 
-  // Use the default object if they simply passed `true` for responsive
-  const responsiveObject =
-    typeof responsive === 'object' ? responsive : responsiveDefault;
-
   // The max property collapses any breadcrumbs past the max quantity.
   // This is the same behavior we want for responsiveness.
   // So calculate the max value based on the combination of `max` and `responsive`
 
   // First, calculate the responsive max value
   const responsiveMax =
-    responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]
-      ? responsiveObject[currentBreakpoint as OuiBreakpointSize]
-      : null;
+    (responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]) ||
+    null;
 
   // Second, if both max and responsiveMax are set, use the smaller of the two. Otherwise, use the one that is set.
   const calculatedMax: OuiBreadcrumbsProps['max'] =
@@ -319,6 +342,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   );
 };
 
+// @deprecated This component has never been exported out the component's folder
 export const OuiBreadcrumbsSimplified: FunctionComponent<OuiBreadcrumbsProps> = ({
   breadcrumbs,
   className,

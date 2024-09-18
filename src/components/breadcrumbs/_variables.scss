@@ -12,6 +12,7 @@
 $ouiBreadcrumbSpacing: $ouiSizeS !default;
 $ouiBreadcrumbTruncateWidth: $ouiSize * 10 !default;
 
+$ouiBreadcrumbFocusBackground: tintOrShade($ouiTextSubduedColor, $ouiFocusChangePercent, $ouiFocusChangePercent) !default;
 $ouiBreadcrumbActiveBackground: tintOrShade($ouiColorPrimary, 72%, 41%) !default;
 $ouiBreadcrumbInactiveBackground: tint($ouiColorLightShade, 14%) !default;
 $ouiBreadcrumbCollapsedLink: shadeOrTint($ouiColorPrimaryText, 61%, 20%) !default;

@@ -30,7 +30,7 @@
 
 import { keysOf } from '../components/common';
 
-export type OuiBreakpointSize = 'xs' | 's' | 'm' | 'l' | 'xl';
+export type OuiBreakpointSize = 'xs' | 's' | 'm' | 'l' | 'xl' | 'xxl' | 'xxxl';
 
 export type OuiBreakpoints = {
   /**
@@ -40,6 +40,8 @@ export type OuiBreakpoints = {
 };
 
 export const BREAKPOINTS: OuiBreakpoints = {
+  xxxl: 1920,
+  xxl: 1680,
   xl: 1200,
   l: 992,
   m: 768,
@@ -56,14 +58,18 @@ export const BREAKPOINT_KEYS = keysOf(BREAKPOINTS);
  *
  * @param {number} width Can either be the full window width or any width
  * @param {OuiBreakpoints} breakpoints An object with keys for sizing and values for minimum width
+ * @param {OuiBreakpointSize[] | undefined} allowedBreakpoints An array of allowed breakpoints
  * @returns {string | undefined} Name of the breakpoint key or `undefined` if a key doesn't exist
  */
 export function getBreakpoint(
   width: number,
-  breakpoints: OuiBreakpoints = BREAKPOINTS
+  breakpoints: OuiBreakpoints = BREAKPOINTS,
+  allowedBreakpoints: OuiBreakpointSize[] = keysOf(BREAKPOINTS)
 ): OuiBreakpointSize | undefined {
-  // Find the breakpoint (key) whose value is <= windowWidth starting with largest first
-  return keysOf(BREAKPOINTS).find((key) => breakpoints[key] <= width);
+  // Find the breakpoint (key) whose value is <= windowWidth starting with the largest first
+  return keysOf(BREAKPOINTS).find(
+    (key) => allowedBreakpoints.includes(key) && breakpoints[key] <= width
+  );
 }
 
 /**
