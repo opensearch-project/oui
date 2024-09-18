@@ -14,11 +14,11 @@ $ouiButtonHeightSmall: $ouiSizeXL !default;
 $ouiButtonHeightXSmall: $ouiSizeL !default;
 
 // sass-lint:disable no-color-literals
-$ouiButtonColorDisabled: lightOrDarkTheme(#AFAFAF, #595F64) !default;
+$ouiButtonColorDisabled: lightOrDarkTheme($ouiColorMediumShade, $ouiColorLightShade) !default;
 // Only increase the contrast of background color to text to 2.0 for disabled
-$ouiButtonColorDisabledText: #8E8E8E !default;
+$ouiButtonColorDisabledText: lightOrDarkTheme(#8E8E8E, #585858) !default;
 // sass-lint:disable no-color-literals
-$ouiButtonColorGhostDisabled: lightOrDarkTheme($ouiColorDarkShade, #585858) !default;
+$ouiButtonColorGhostDisabled: lightOrDarkTheme(#585858, #353535) !default;
 
 $ouiButtonBorderRadius: 0 !default;
 
