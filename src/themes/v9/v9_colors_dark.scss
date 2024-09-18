@@ -12,48 +12,48 @@
 @import 'global_styling/functions/index';
 
 // These colors stay the same no matter the theme
-$ouiColorGhost: #FCFEFF;
-$ouiColorInk: #0A121A;
+$ouiColorGhost: #FFFFFF;
+$ouiColorInk: #131313;
 
 // Core
-$ouiColorPrimary: #005EB8;
-$ouiColorSecondary: #199863;
-$ouiColorAccent: #B92FC5;
+$ouiColorPrimary: #009DD9;
+$ouiColorSecondary: #A9DFCB;
+$ouiColorAccent: #CCA1DA;
 
 // Status
-$ouiColorSuccess: #117F6A !default;
-$ouiColorWarning: #ED9F00 !default;
-$ouiColorDanger: #E42C19 !default;
+$ouiColorSuccess: $ouiColorSecondary !default;
+$ouiColorWarning: #FFCB78 !default;
+$ouiColorDanger: #EB6C5F !default;
 
 // Grays
-$ouiColorEmptyShade: #212324;
-$ouiColorLightestShade: #303234;
-$ouiColorLightShade: #4B4E51;
-$ouiColorMediumShade: #616C72;
-$ouiColorDarkShade: #778388;
-$ouiColorDarkestShade: #8C9BA2;
-$ouiColorFullShade: #F3F8FF;
+$ouiColorEmptyShade: #131313;
+$ouiColorLightestShade: #2C2C2C;
+$ouiColorLightShade: #444444;
+$ouiColorMediumShade: #757575;
+$ouiColorDarkShade: #AFAFAF;
+$ouiColorDarkestShade: #D3D3D3;
+$ouiColorFullShade: #F5F5F5;
 
 // Backgrounds
 $ouiPageBackgroundColor: #131313;
-$ouiColorHighlight: #494735;
+$ouiColorHighlight: #39290C;
 
 // Variations from core
-$ouiTextColor: #F3F8FF;
-$ouiTitleColor: $ouiTextColor;
+$ouiTextColor: $ouiColorFullShade;
+$ouiTitleColor: $ouiColorFullShade;
 // Ensure contrast between subdued text and the page background
 // Should not be shaded as much as $ouiColorDisabled
-$ouiTextSubduedColor: #A0A9B5;
-$ouiColorDisabled: #AFAFAF;
+$ouiTextSubduedColor: #AFAFAF;
+$ouiColorDisabled: #585858;
 
 // Contrasty text variants
 $ouiColorPrimaryText: $ouiColorPrimary;
-$ouiColorSecondaryText: #117F6A;
-$ouiColorAccentText: #B92FC5;
-$ouiColorWarningText: #C48600;
-$ouiColorDangerText: #C84133;
-$ouiColorDisabledText: #60656B;
-$ouiColorSuccessText: $ouiColorSecondaryText;
+$ouiColorSecondaryText: $ouiColorSecondary;
+$ouiColorAccentText: $ouiColorAccent;
+$ouiColorWarningText: $ouiColorWarning;
+$ouiColorDangerText: $ouiColorDanger;
+$ouiColorDisabledText: $ouiColorDisabled;
+$ouiColorSuccessText: $ouiColorSuccess;
 $ouiLinkColor: $ouiColorPrimaryText;
 
 // Charts
