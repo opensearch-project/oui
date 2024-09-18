@@ -21,6 +21,7 @@
 - Make the space between search bar and table rows match the compressed state of the search box ([#1391](https://github.com/opensearch-project/oui/pull/1391))
 - Add CSS breakpoints to OuiBreakpointSize ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 - Allow limiting the allowed breakpoints when calling `getBreakpoint()` ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Adjust number of responsive breadcrumbs shown per breakpoint ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 
 ### 🐛 Bug Fixes
 

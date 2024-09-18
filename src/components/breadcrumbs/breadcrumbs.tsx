@@ -99,10 +99,20 @@ export type OuiBreadcrumbsProps = CommonProps & {
   breadcrumbs: OuiBreadcrumb[];
 };
 
+/* Try to fit breadcrumbs with at least 160px into the width of each of the BREAKPOINTS
+ *    1. put aside 275px for the last breadcrumb and possible loss due to layout
+ *    2. provide at least 160px for each remaining breadcrumb
+ *
+ *    numberOfBreadcrumbs = (breakpointWidth - 275) / 160 + 1
+ */
 const responsiveDefault: OuiBreadcrumbResponsiveMaxCount = {
-  xs: 1,
-  s: 2,
-  m: 4,
+  xs: 1, // Show only one
+  s: 2, //  (575 - 275) / 160 + 1 = 2.88
+  m: 4, //  (768 - 275) / 160 + 1 = 4.08
+  l: 5, //  (992 - 275) / 160 + 1 = 5.48
+  xl: 6, // (1200 - 275) / 160 + 1 = 6.78
+  xxl: 9, // (1680 - 275) / 160 + 1 = 9.78
+  xxxl: 11, // (1920 - 275) / 160 + 1 = 11.28
 };
 
 const limitBreadcrumbs = (

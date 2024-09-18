@@ -56,15 +56,35 @@ export type OuiSimplifiedBreadcrumbsProps = OuiBreadcrumbsProps & {
   hideLastBreadCrumb?: boolean;
 };
 
+/* Try to fit breadcrumbs with at least 135px into the width of each of the BREAKPOINTS
+ *    1. put aside 250px for the last breadcrumb and possible loss due to layout
+ *    2. provide at least 135px for each remaining breadcrumb
+ *
+ *     * OuiBreadcrumbs has 48px padding on the side with a max-width of 160px
+ *     * OuiSimplifiedBreadcrumbs has 24px for gap and separator
+ *     * To be uniform
+ *           160px - 48px + 24px ≈ 135px for each simplified breadcrumb
+ *           275px - 48px + 24px ≈ 250px for last simplified breadcrumb and external spacing
+ *
+ *    numberOfBreadcrumbs = (breakpointWidth - 251) / 136 + 1
+ */
 const responsiveDefault: OuiBreadcrumbResponsiveMaxCount = {
-  xs: 1,
-  s: 2,
-  m: 4,
-  l: 6,
-  xl: 8,
-  xxl: 10,
-  xxxl: 12,
+  xs: 1, // Show only one
+  s: 3, //  (575 - 250) / 135 + 1 = 3.40
+  m: 4, //  (768 - 250) / 135 + 1 = 4.83
+  l: 6, //  (992 - 250) / 135 + 1 = 6.49
+  xl: 8, // (1200 - 250) / 135 + 1 = 8.04
+  xxl: 11, // (1680 - 250) / 135 + 1 = 11.59
+  xxxl: 13, // (1920 - 250) / 135 + 1 = 13.37
 };
+/*
+  xxxl: 1920,
+  xxl: 1680,
+  xl: 1200,
+  l: 992,
+  m: 768,
+  s: 575,
+ */
 
 const limitBreadcrumbs = (
   breadcrumbs: ReactNode[],

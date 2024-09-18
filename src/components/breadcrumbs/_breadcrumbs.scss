@@ -67,16 +67,6 @@
     text-overflow: ellipsis;
     vertical-align: top; // overflow hidden causes misalignment of links and slashes, this fixes that
   }
-
-  .ouiBreadcrumbWrapper:not(.ouiBreadcrumbWrapper--collapsed) {
-    max-width: $ouiBreadcrumbTruncateWidth;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    &.ouiBreadcrumbWrapper--last {
-      max-width: none;
-    }
-  }
 }
 
 .ouiBreadcrumb--truncate {
@@ -93,8 +83,12 @@
 .ouiBreadcrumbWrapper {
   position: relative;
   z-index: 0;
-  padding: $ouiSizeXS - 2.5 $ouiSizeL - $ouiSizeXS;
-  padding-right: $ouiSizeL - $ouiSizeXS + calc($ouiBreadcrumbSpacing / 2);
+
+  $paddingTop: $ouiSizeXS - 2.5;
+  $paddingBottom: $paddingTop;
+  $paddingLeft: $ouiSizeL - $ouiSizeXS;
+  $paddingRight: $paddingLeft + calc($ouiBreadcrumbSpacing / 2);
+  padding: $paddingTop $paddingRight $paddingBottom $paddingLeft;
 
   &::before {
     content: '';
@@ -109,6 +103,22 @@
     border-radius: $ouiSizeXS;
 
     background-color: $ouiBreadcrumbInactiveBackground;
+  }
+
+  .ouiBreadcrumbs--truncate &:not(.ouiBreadcrumbWrapper--collapsed) {
+    max-width: $ouiBreadcrumbTruncateWidth;
+    // At least one letter + ellipsis but add 1ch because 1ch for each might not be enough
+    min-width: calc(3ch + $paddingLeft + $paddingRight);
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &.ouiBreadcrumbWrapper--last {
+      max-width: none;
+    }
+  }
+
+  .ouiBreadcrumbWall:has(&:not(.ouiBreadcrumbWrapper--collapsed)) {
+    min-width: calc(3ch + $paddingLeft + $paddingRight);
   }
 
   .ouiBreadcrumbs:not(.ouiBreadcrumbs__inPopover) & {
@@ -131,7 +141,14 @@
 
   &:not(.ouiBreadcrumbWrapper--first) {
     margin-bottom: $ouiSizeXS; /* 1 */
-    padding-left: $ouiSizeL - $ouiSizeXS + calc($ouiBreadcrumbSpacing / 2);
+
+    $paddingLeft: $paddingRight;
+    padding-left: $paddingLeft;
+
+    .ouiBreadcrumbs--truncate &:not(.ouiBreadcrumbWrapper--collapsed) {
+      // At least one letter + ellipsis but add 1ch because 1ch for each might not be enough
+      min-width: calc(3ch + $paddingLeft + $paddingRight);
+    }
   }
 }
 
