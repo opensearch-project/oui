@@ -121,34 +121,27 @@ exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of b
     </span>
   </div>
   <div
-    class="ouiBreadcrumbWrapper"
+    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
   >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
+    <div
+      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
     >
-      Chordates
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb ouiBreadcrumb--truncate"
-    >
-      Nebulosa subspecies is also a real mouthful, especially for creatures without mouths
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
-    >
-      Tetrapods
-    </span>
+      <div
+        class="ouiPopover__anchor"
+      >
+        <button
+          aria-label="Show collapsed breadcrumbs"
+          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+          title="Show collapsed breadcrumbs"
+          type="button"
+        >
+          … 
+          <span
+            data-ouiicon-type="arrowDown"
+          />
+        </button>
+      </div>
+    </div>
   </div>
   <div
     class="ouiBreadcrumbWrapper"
@@ -257,34 +250,27 @@ exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
     </span>
   </div>
   <div
-    class="ouiBreadcrumbWrapper"
+    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
   >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
+    <div
+      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
     >
-      Chordates
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb ouiBreadcrumb--truncate"
-    >
-      Nebulosa subspecies is also a real mouthful, especially for creatures without mouths
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
-    >
-      Tetrapods
-    </span>
+      <div
+        class="ouiPopover__anchor"
+      >
+        <button
+          aria-label="Show collapsed breadcrumbs"
+          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+          title="Show collapsed breadcrumbs"
+          type="button"
+        >
+          … 
+          <span
+            data-ouiicon-type="arrowDown"
+          />
+        </button>
+      </div>
+    </div>
   </div>
   <div
     class="ouiBreadcrumbWrapper"
