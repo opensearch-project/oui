@@ -11,8 +11,8 @@
 
 import React from 'react';
 import { render } from 'enzyme';
-import { requiredProps } from '../../test';
-import { OuiSimplifiedBreadcrumbs } from './breadcrumbs_simplified';
+import { requiredProps } from '../../../test';
+import { OuiSimplifiedBreadcrumbs } from './simplified_breadcrumbs';
 
 const breadcrumbs = [
   {
