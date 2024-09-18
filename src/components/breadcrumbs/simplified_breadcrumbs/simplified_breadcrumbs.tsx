@@ -9,6 +9,25 @@
  * GitHub history for details.
  */
 
+/*
+ * Licensed to Elasticsearch B.V. under one or more contributor
+ * license agreements. See the NOTICE file distributed with
+ * this work for additional information regarding copyright
+ * ownership. Elasticsearch B.V. licenses this file to you under
+ * the Apache License, Version 2.0 (the "License"); you may
+ * not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
 import React, {
   Fragment,
   FunctionComponent,
@@ -153,12 +172,28 @@ export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiSimplifiedBreadcrumb
   hideLastBreadCrumb,
   ...rest
 }) => {
+  // Use the default object if they simply passed `true` for responsive
+  const responsiveObject =
+    typeof responsive === 'object' ? responsive : responsiveDefault;
+
+  const allowedBreakpoints = responsive
+    ? (Object.keys(responsiveObject) as OuiBreakpointSize[])
+    : undefined;
+
   const [currentBreakpoint, setCurrentBreakpoint] = useState(
-    getBreakpoint(typeof window === 'undefined' ? -Infinity : window.innerWidth)
+    getBreakpoint(
+      typeof window === 'undefined' ? -Infinity : window.innerWidth,
+      undefined,
+      allowedBreakpoints
+    )
   );
 
   const functionToCallOnWindowResize = throttle(() => {
-    const newBreakpoint = getBreakpoint(window.innerWidth);
+    const newBreakpoint = getBreakpoint(
+      window.innerWidth,
+      undefined,
+      allowedBreakpoints
+    );
     if (newBreakpoint !== currentBreakpoint) {
       setCurrentBreakpoint(newBreakpoint);
     }
@@ -172,7 +207,9 @@ export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiSimplifiedBreadcrumb
     return () => {
       window.removeEventListener('resize', functionToCallOnWindowResize);
     };
-  }, [responsive, functionToCallOnWindowResize]);
+  }, [responsive, responsiveObject, functionToCallOnWindowResize]);
+
+  const isInPopover = className === 'ouiSimplifiedBreadcrumbs__inPopover';
 
   const breadcrumbElements = breadcrumbs.map((breadcrumb, index) => {
     const {
@@ -211,7 +248,7 @@ export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiSimplifiedBreadcrumb
               ref={ref}
               className={breadcrumbClasses}
               title={innerText}
-              aria-current={isLastBreadcrumb ? 'page' : 'false'}
+              aria-current={isLastBreadcrumb && !isInPopover ? 'page' : 'false'}
               {...breadcrumbRest}>
               {text}
             </span>
@@ -257,10 +294,6 @@ export const OuiSimplifiedBreadcrumbs: FunctionComponent<OuiSimplifiedBreadcrumb
       </Fragment>
     );
   });
-
-  // Use the default object if they simply passed `true` for responsive
-  const responsiveObject =
-    typeof responsive === 'object' ? responsive : responsiveDefault;
 
   // The max property collapses any breadcrumbs past the max quantity.
   // This is the same behavior we want for responsiveness.

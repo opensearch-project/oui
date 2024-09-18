@@ -20,6 +20,7 @@
 - Remove scaling of heading elements ([#1389](https://github.com/opensearch-project/oui/pull/1389))
 - Make the space between search bar and table rows match the compressed state of the search box ([#1391](https://github.com/opensearch-project/oui/pull/1391))
 - Add CSS breakpoints to OuiBreakpointSize ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Allow limiting the allowed breakpoints when calling `getBreakpoint()` ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 
 ### 🐛 Bug Fixes
 
@@ -30,6 +31,7 @@
 - Remove the unwanted OuiBreadcrumbs focus rectangle ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 - Correctly color the OuiBreadcrumbs when focused ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 - Display the last breadcrumb in a nested breadcrumb as a normal breadcrumb ([#1401](https://github.com/opensearch-project/oui/pull/1401))
+- Limit allowed breakpoints to those provided by the `responsive` prop of Oui*Breadcrumbs ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 
 ### 🚞 Infrastructure
 

@@ -196,12 +196,28 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
   max = 5,
   ...rest
 }) => {
+  // Use the default object if they simply passed `true` for responsive
+  const responsiveObject =
+    typeof responsive === 'object' ? responsive : responsiveDefault;
+
+  const allowedBreakpoints = responsive
+    ? (Object.keys(responsiveObject) as OuiBreakpointSize[])
+    : undefined;
+
   const [currentBreakpoint, setCurrentBreakpoint] = useState(
-    getBreakpoint(typeof window === 'undefined' ? -Infinity : window.innerWidth)
+    getBreakpoint(
+      typeof window === 'undefined' ? -Infinity : window.innerWidth,
+      undefined,
+      allowedBreakpoints
+    )
   );
 
   const functionToCallOnWindowResize = throttle(() => {
-    const newBreakpoint = getBreakpoint(window.innerWidth);
+    const newBreakpoint = getBreakpoint(
+      window.innerWidth,
+      undefined,
+      allowedBreakpoints
+    );
     if (newBreakpoint !== currentBreakpoint) {
       setCurrentBreakpoint(newBreakpoint);
     }
@@ -215,7 +231,7 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
     return () => {
       window.removeEventListener('resize', functionToCallOnWindowResize);
     };
-  }, [responsive, functionToCallOnWindowResize]);
+  }, [responsive, responsiveObject, functionToCallOnWindowResize]);
 
   const isInPopover = className === 'ouiBreadcrumbs__inPopover';
 
@@ -288,19 +304,14 @@ export const OuiBreadcrumbs: FunctionComponent<OuiBreadcrumbsProps> = ({
     return <Fragment key={index}>{wall}</Fragment>;
   });
 
-  // Use the default object if they simply passed `true` for responsive
-  const responsiveObject =
-    typeof responsive === 'object' ? responsive : responsiveDefault;
-
   // The max property collapses any breadcrumbs past the max quantity.
   // This is the same behavior we want for responsiveness.
   // So calculate the max value based on the combination of `max` and `responsive`
 
   // First, calculate the responsive max value
   const responsiveMax =
-    responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]
-      ? responsiveObject[currentBreakpoint as OuiBreakpointSize]
-      : null;
+    (responsive && responsiveObject[currentBreakpoint as OuiBreakpointSize]) ||
+    null;
 
   // Second, if both max and responsiveMax are set, use the smaller of the two. Otherwise, use the one that is set.
   const calculatedMax: OuiBreadcrumbsProps['max'] =
