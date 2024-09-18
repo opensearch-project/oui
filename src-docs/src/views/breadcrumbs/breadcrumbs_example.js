@@ -16,7 +16,11 @@ import { renderToHtml } from '../../services';
 
 import { GuideSectionTypes } from '../../components';
 
-import { OuiCode, OuiBreadcrumbs } from '../../../../src/components';
+import {
+  OuiCode,
+  OuiBreadcrumbs,
+  OuiSimplifiedBreadcrumbs,
+} from '../../../../src/components';
 import { BreadcrumbResponsiveMaxCount, BreadcrumbProps } from './props';
 
 import Breadcrumbs from './breadcrumbs';
@@ -35,8 +39,18 @@ import Max from './max';
 const maxSource = require('!!raw-loader!./max');
 const maxHtml = renderToHtml(Max);
 
-const breadcrumpProps = {
+import Simplified from './simplified_breadcrumbs';
+const simplifiedSource = require('!!raw-loader!./simplified_breadcrumbs');
+const simplifiedHtml = renderToHtml(Simplified);
+
+const breadcrumbProps = {
   OuiBreadcrumbs,
+  OuiBreadcrumb: BreadcrumbProps,
+  OuiBreadcrumbResponsiveMaxCount: BreadcrumbResponsiveMaxCount,
+};
+
+const simplifiedProps = {
+  OuiSimplifiedBreadcrumbs,
   OuiBreadcrumb: BreadcrumbProps,
   OuiBreadcrumbResponsiveMaxCount: BreadcrumbResponsiveMaxCount,
 };
@@ -73,7 +87,7 @@ export const BreadcrumbsExample = {
           .
         </p>
       ),
-      props: breadcrumpProps,
+      props: breadcrumbProps,
       snippet: `<OuiBreadcrumbs
   breadcrumbs={[
     {
@@ -112,7 +126,7 @@ export const BreadcrumbsExample = {
           </p>
         </>
       ),
-      props: breadcrumpProps,
+      props: breadcrumbProps,
       snippet: `<OuiBreadcrumbs
   max={4}
   breadcrumbs={breadcrumbs}
@@ -144,7 +158,7 @@ export const BreadcrumbsExample = {
           </p>
         </>
       ),
-      props: breadcrumpProps,
+      props: breadcrumbProps,
       demo: <Truncate />,
       snippet: [
         `<OuiBreadcrumbs
@@ -190,7 +204,7 @@ export const BreadcrumbsExample = {
           </p>
         </>
       ),
-      props: breadcrumpProps,
+      props: breadcrumbProps,
       snippet: [
         `<OuiBreadcrumbs
   responsive={false}
@@ -209,6 +223,34 @@ export const BreadcrumbsExample = {
 />`,
       ],
       demo: <Responsive />,
+    },
+    {
+      title: 'Simplified breadcrumbs',
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: simplifiedSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: simplifiedHtml,
+        },
+      ],
+      text: (
+        <>
+          <p>
+            <strong>OuiSimplifiedBreadcrumbs</strong> are a variant of
+            OuiBreadcrumbs using a simplified appearence.
+          </p>
+        </>
+      ),
+      props: simplifiedProps,
+      snippet: [
+        `<OuiSimplifiedBreadcrumbs
+  breadcrumbs={breadcrumbs}
+/>`,
+      ],
+      demo: <Simplified />,
     },
   ],
 };
