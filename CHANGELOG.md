@@ -4,9 +4,37 @@
 
 ### Deprecations
 
+
+### 🛡 Security
+
+
+### 📈 Features/Enhancements
+
+
+### 🐛 Bug Fixes
+
+-  Add Temporary fix for Chrome's problem with rendering mask images ([#1414](https://github.com/opensearch-project/oui/pull/1414))
+
+### 🚞 Infrastructure
+
+
+### 📝 Documentation
+
+
+### 🛠 Maintenance
+
+
+### 🪛 Refactoring
+
+
+### 🔩 Tests
+
+## [`1.13.0`](https://github.com/opensearch-project/oui/tree/1.13)
+
+### Deprecations
+
 - Deprecate `aria-label` and `data-test-subj` of OuiSearchBar which have never been consumed despite being defined ([#1381](https://github.com/opensearch-project/oui/pull/1381))
 - Deprecate the unexported `OuiBreadcrumbsSimplified` ([#1401](https://github.com/opensearch-project/oui/pull/1401))
-
 
 ### 🛡 Security
 
@@ -19,6 +47,8 @@
 - Expand the definitions of `$ouiBreakpoints` to include `xxl` and `xxxl` ([#1387](https://github.com/opensearch-project/oui/pull/1387))
 - Remove scaling of heading elements ([#1389](https://github.com/opensearch-project/oui/pull/1389))
 - Make the space between search bar and table rows match the compressed state of the search box ([#1391](https://github.com/opensearch-project/oui/pull/1391))
+- Update primary color for the v9 light theme ([#1398](https://github.com/opensearch-project/oui/pull/1398))
+- Update colors for the v9 theme ([#1402](https://github.com/opensearch-project/oui/pull/1402))
 - Add CSS breakpoints to OuiBreakpointSize ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 - Allow limiting the allowed breakpoints when calling `getBreakpoint()` ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 - Adjust number of responsive breadcrumbs shown per breakpoint ([#1401](https://github.com/opensearch-project/oui/pull/1401))
@@ -34,8 +64,6 @@
 - Display the last breadcrumb in a nested breadcrumb as a normal breadcrumb ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 - Limit allowed breakpoints to those provided by the `responsive` prop of Oui*Breadcrumbs ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 
-### 🚞 Infrastructure
-
 ### 📝 Documentation
 
 - Add a playground for OuiDatePicker ([#1380](https://github.com/opensearch-project/oui/pull/1380))
@@ -48,8 +76,6 @@
 ### 🪛 Refactoring
 
 - Refactor OuiSimplifiedBreadcrumbs into its own folder ([#1401](https://github.com/opensearch-project/oui/pull/1401))
-
-### 🔩 Tests
 
 
 ## [`1.12.0`](https://github.com/opensearch-project/oui/tree/1.12)
