@@ -4,6 +4,35 @@
 
 ### Deprecations
 
+
+### 🛡 Security
+
+
+### 📈 Features/Enhancements
+
+
+### 🐛 Bug Fixes
+- Update components to respect new breakpoints
+
+### 🚞 Infrastructure
+
+
+### 📝 Documentation
+
+
+### 🛠 Maintenance
+
+
+### 🪛 Refactoring
+
+
+### 🔩 Tests
+
+
+## [`1.13.0`](https://github.com/opensearch-project/oui/tree/1.13)
+
+### Deprecations
+
 - Deprecate `aria-label` and `data-test-subj` of OuiSearchBar which have never been consumed despite being defined ([#1381](https://github.com/opensearch-project/oui/pull/1381))
 - Deprecate the unexported `OuiBreadcrumbsSimplified` ([#1401](https://github.com/opensearch-project/oui/pull/1401))
 
