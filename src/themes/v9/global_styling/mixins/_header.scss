@@ -22,7 +22,7 @@
       height: calc(100% - #{$headerHeight});
     }
 
-    @include ouiBreakpoint('m', 'l', 'xl') {
+    @include ouiBreakpoint('m', 'l', 'xl', 'xxl', 'xxxl') {
       .ouiPageSideBar--sticky {
         max-height: calc(100vh - #{$headerHeight});
         top: #{$headerHeight};
@@ -47,7 +47,7 @@
       height: calc(100% - #{$headerHeight});
     }
 
-    @include euiBreakpoint('m', 'l', 'xl') {
+    @include euiBreakpoint('m', 'l', 'xl', 'xxl', 'xxxl') {
       .euiPageSideBar--sticky {
         max-height: calc(100vh - #{$headerHeight});
         top: #{$headerHeight};

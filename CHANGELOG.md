@@ -9,6 +9,7 @@
 ### 📈 Features/Enhancements
 
 ### 🐛 Bug Fixes
+- Update components to respect new breakpoints
 
 ### 🚞 Infrastructure
 
