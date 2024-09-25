@@ -234,40 +234,40 @@
     "filepath": "src/components/bottom_bar/bottom_bar.tsx"
   },
   {
+    "token": "ouiBreadcrumbsSimplified.collapsedBadge.ariaLabel",
+    "defString": "Show collapsed breadcrumbs",
+    "highlighting": "string",
+    "loc": {
+      "start": {
+        "line": 79,
+        "column": 6,
+        "index": 2234
+      },
+      "end": {
+        "line": 81,
+        "column": 45,
+        "index": 2354
+      }
+    },
+    "filepath": "src/components/breadcrumbs/breadcrumbs_simplified.tsx"
+  },
+  {
     "token": "ouiBreadcrumbs.collapsedBadge.ariaLabel",
     "defString": "Show collapsed breadcrumbs",
     "highlighting": "string",
     "loc": {
       "start": {
-        "line": 157,
+        "line": 147,
         "column": 6,
-        "index": 4951
+        "index": 4396
       },
       "end": {
-        "line": 159,
+        "line": 149,
         "column": 45,
-        "index": 5061
+        "index": 4506
       }
     },
     "filepath": "src/components/breadcrumbs/breadcrumbs.tsx"
-  },
-  {
-    "token": "ouiSimplifiedBreadcrumbs.collapsedBadge.ariaLabel",
-    "defString": "Show collapsed breadcrumbs",
-    "highlighting": "string",
-    "loc": {
-      "start": {
-        "line": 128,
-        "column": 6,
-        "index": 4196
-      },
-      "end": {
-        "line": 130,
-        "column": 45,
-        "index": 4316
-      }
-    },
-    "filepath": "src/components/breadcrumbs/simplified_breadcrumbs/simplified_breadcrumbs.tsx"
   },
   {
     "token": "ouiCardSelect.selected",
