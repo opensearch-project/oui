@@ -55,7 +55,7 @@ describe('OuiHeaderLinks', () => {
     test('is rendered', () => {
       const component = render(
         <OuiHeaderLinks
-          popoverBreakpoints={['xs', 's', 'm', 'l', 'xl']}
+          popoverBreakpoints={['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}
           popoverButtonProps={{
             iconType: 'bolt',
             className: 'customButtonClass',

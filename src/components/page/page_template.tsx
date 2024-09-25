@@ -135,7 +135,7 @@ export const OuiPageTemplate: FunctionComponent<OuiPageTemplateProps> = ({
    * Full height ~madness~ logic
    */
   const canFullHeight =
-    useIsWithinBreakpoints(['m', 'l', 'xl']) &&
+    useIsWithinBreakpoints(['m', 'l', 'xl', 'xxl', 'xxxl']) &&
     (template === 'default' || template === 'empty');
   const fullHeightClass = { 'oui-fullHeight': fullHeight && canFullHeight };
   const yScrollClass = { 'oui-yScroll': fullHeight && canFullHeight };
