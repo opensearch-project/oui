@@ -65,11 +65,11 @@ $ouiLineHeight:     1.5 !default;
 $ouiBodyLineHeight: 1 !default;
 
 // Font weights
-$ouiFontWeightLight:        200 !default;
-$ouiFontWeightRegular:      300 !default;
-$ouiFontWeightMedium:       400 !default;
+$ouiFontWeightLight:        400 !default;
+$ouiFontWeightRegular:      400 !default;
+$ouiFontWeightMedium:       500 !default;
 $ouiFontWeightSemiBold:     500 !default;
-$ouiFontWeightBold:         600 !default;
+$ouiFontWeightBold:         500 !default;
 $ouiCodeFontWeightRegular:  400 !default;
 $ouiCodeFontWeightBold:     700 !default;
 
@@ -77,25 +77,25 @@ $ouiCodeFontWeightBold:     700 !default;
 // Lists all the properties per OuiTitle size that then gets looped through to create the selectors.
 // The map allows for tokenization and easier customization per theme, otherwise you'd have to override the selectors themselves
 $ouiTitles: (
-  // h4: 12px / 15px / 400
+  // h6: 14px / 17px / 500
   'xxxs': (
-    'font-size': $ouiFontSizeXS,
-    'line-height': lineHeightFromBaseline(2.1429),
+    'font-size': $ouiFontSizeS,
+    'line-height': lineHeightFromBaseline(2.4286),
     'font-weight': $ouiFontWeightMedium,
   ),
-  // h4: 12px / 15px / 400
+  // h5: 14px / 17px / 500
   'xxs': (
-    'font-size': $ouiFontSizeXS,
-    'line-height': lineHeightFromBaseline(2.1429),
+    'font-size': $ouiFontSizeS,
+    'line-height': lineHeightFromBaseline(2.4286),
     'font-weight': $ouiFontWeightMedium,
   ),
-  // h4: 14px / 17px / 400
+  // h4: 16px / 19px / 500
   'xs': (
-    'font-size': $ouiFontSize,
-    'line-height': lineHeightFromBaseline(2.8286),
+    'font-size': $ouiFontSizeM,
+    'line-height': lineHeightFromBaseline(2.7143),
     'font-weight': $ouiFontWeightMedium,
   ),
-  // h3: 18px / 22px / 400
+  // h3: 18px / 22px / 500
   's': (
     'font-size': $ouiFontSizeL,
     'line-height': lineHeightFromBaseline(3.1429),
@@ -105,13 +105,13 @@ $ouiTitles: (
   'm': (
     'font-size': $ouiFontSizeXL,
     'line-height': lineHeightFromBaseline(4.1429),
-    'font-weight': $ouiFontWeightLight,
+    'font-weight': $ouiFontWeightRegular,
   ),
   // h1: 28px / 34px / 400
   'l': (
     'font-size': $ouiFontSizeXXL,
     'line-height': lineHeightFromBaseline(4.857),
-    'font-weight': $ouiFontWeightLight,
+    'font-weight': $ouiFontWeightRegular,
   ),
 ) !default;
 

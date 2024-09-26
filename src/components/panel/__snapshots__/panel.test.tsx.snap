@@ -8,6 +8,12 @@ exports[`OuiPanel is rendered 1`] = `
 />
 `;
 
+exports[`OuiPanel props borderRadius l is rendered 1`] = `
+<div
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusLarge ouiPanel--plain ouiPanel--hasShadow"
+/>
+`;
+
 exports[`OuiPanel props borderRadius m is rendered 1`] = `
 <div
   class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow"
@@ -17,6 +23,12 @@ exports[`OuiPanel props borderRadius m is rendered 1`] = `
 exports[`OuiPanel props borderRadius none is rendered 1`] = `
 <div
   class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusNone ouiPanel--plain ouiPanel--hasShadow"
+/>
+`;
+
+exports[`OuiPanel props borderRadius xl is rendered 1`] = `
+<div
+  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusXLarge ouiPanel--plain ouiPanel--hasShadow"
 />
 `;
 
