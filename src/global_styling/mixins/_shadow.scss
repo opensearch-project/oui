@@ -120,8 +120,10 @@
 
   @if ($direction == 'y') {
     mask-image: linear-gradient(to bottom, #{$gradient});
+    contain: paint;
   } @else if ($direction == 'x') {
     mask-image: linear-gradient(to right, #{$gradient});
+    contain: paint;
   } @else {
     @warn "ouiOverflowShadow() expects direction to be 'y' or 'x' but got '#{$direction}'";
   }
