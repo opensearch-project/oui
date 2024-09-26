@@ -30,7 +30,7 @@
   }
 }
 
-@include ouiBreakpoint('m', 'l', 'xl') {
+@include ouiBreakpoint('m', 'l', 'xl', 'xxl', 'xxxl') {
   .ouiPageSideBar--sticky {
     @include ouiScrollBar;
     overflow-y: auto;

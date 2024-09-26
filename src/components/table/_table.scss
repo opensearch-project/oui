@@ -33,7 +33,7 @@
 }
 
 // Compressed styles not for mobile
-@include ouiBreakpoint('m', 'l', 'xl') {
+@include ouiBreakpoint('m', 'l', 'xl', 'xxl', 'xxxl') {
   .ouiTable--compressed {
     .ouiTableCellContent {
       @include ouiFontSizeXS;

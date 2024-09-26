@@ -13,7 +13,7 @@
   min-width: calc($ouiFormMaxWidth / 2);
 }
 
-@include ouiBreakpoint('m', 'l', 'xl') {
+@include ouiBreakpoint('m', 'l', 'xl', 'xxl', 'xxxl') {
   .ouiSearchBar__filtersHolder {
     // Helps with flex-wrapping
     max-width: calc(100% - #{$ouiSize});
