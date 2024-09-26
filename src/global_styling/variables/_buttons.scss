@@ -19,6 +19,7 @@ $ouiButtonColorDisabledText: makeDisabledContrastColor($ouiButtonColorDisabled) 
 $ouiButtonColorGhostDisabled: lightOrDarkTheme($ouiColorDarkShade, $ouiColorLightShade) !default;
 
 $ouiButtonBorderRadius: $ouiBorderRadius !default;
+$ouiButtonBackgroundColor: transparent;
 
 // Modifier naming and colors.
 $ouiButtonTypes: (
@@ -42,5 +43,6 @@ $euiButtonColorDisabled: $ouiButtonColorDisabled;
 $euiButtonColorDisabledText: $ouiButtonColorDisabledText;
 $euiButtonColorGhostDisabled: $ouiButtonColorGhostDisabled;
 $euiButtonBorderRadius: $ouiButtonBorderRadius;
+$euiButtonBackgroundColor: $ouiButtonBackgroundColor;
 $euiButtonTypes: $ouiButtonTypes;
 /* End of Aliases */

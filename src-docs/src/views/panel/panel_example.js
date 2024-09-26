@@ -71,6 +71,12 @@ const panelColorSnippet = [
   `<OuiPanel color="transparent" hasBorder={false}>
   <!-- Transparent panel -->
 </OuiPanel>`,
+  ...['m', 'l', 'xl'].map(
+    (borderRadius) =>
+      `<OuiPanel color="subdued" borderRadius="${borderRadius}">
+  <!-- Panel with gray background and ${borderRadius} corners -->
+</OuiPanel>`
+  ),
 ];
 
 const panelGrowSnippet = `<OuiPanel grow={false}>
@@ -198,7 +204,8 @@ export const PanelExample = {
             and provide an additional helpful aesthetic to your container in
             context. Be mindful to use color sparingly. You can also remove the
             rounded corners depending on the placement of your panel with{' '}
-            <OuiCode language="tsx">{'borderRadius="none"'}</OuiCode>
+            <OuiCode language="tsx">{'borderRadius="none"'}</OuiCode> or the
+            border radius size.
           </p>
           <p>
             Passing <OuiCode language="ts">{'color="transparent"'}</OuiCode> can

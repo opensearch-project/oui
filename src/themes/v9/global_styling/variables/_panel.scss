@@ -18,6 +18,8 @@ $ouiPanelPaddingModifiers: (
 $ouiPanelBorderRadiusModifiers: (
   'borderRadiusNone': 0,
   'borderRadiusMedium': $ouiBorderRadius,
+  'borderRadiusLarge': $ouiBorderRadius * 2,
+  'borderRadiusXLarge': $ouiBorderRadius * 4,
 ) !default;
 
 $ouiPanelBackgroundColorModifiers: (
