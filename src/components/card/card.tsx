@@ -180,6 +180,10 @@ export type OuiCardProps = Omit<CommonProps, 'aria-label'> &
      * Use a border style of card instead of shadow
      */
     hasBorder?: OuiPanelProps['hasBorder'];
+    /**
+     * Customize card border radius
+     */
+    borderRadius?: OuiPanelProps['borderRadius'];
   } & (
     | {
         // description becomes optional when children is present
@@ -216,6 +220,7 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
   selectable,
   display,
   paddingSize,
+  borderRadius,
   ...rest
 }) => {
   const isHrefValid = !href || validateHref(href);
@@ -405,6 +410,7 @@ export const OuiCard: FunctionComponent<OuiCardProps> = ({
       hasShadow={isDisabled || display ? false : true}
       hasBorder={display ? false : undefined}
       paddingSize={paddingSize}
+      borderRadius={borderRadius}
       {...rest}>
       {optionalCardTop}
 

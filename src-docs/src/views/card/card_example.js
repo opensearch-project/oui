@@ -421,7 +421,8 @@ onClick={handleClick}
           </p>
           <p>
             For non-interactive cards, reduce or eliminate the padding as needed
-            to suit your layout with the prop <OuiCode>paddingSize</OuiCode>.
+            to suit your layout with the prop <OuiCode>paddingSize</OuiCode>, or
+            adjust border radius with <OuiCode>borderRadius</OuiCode>.
           </p>
         </Fragment>
       ),
