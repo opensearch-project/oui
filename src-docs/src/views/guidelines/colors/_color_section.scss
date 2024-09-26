@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-@include ouiBreakpoint('m', 'l', 'xl') {
+@include ouiBreakpoint('m', 'l', 'xl', 'xxl', 'xxxl') {
   .guideColorsPage__stickySlider {
     position: sticky;
     top: $ouiHeaderHeightCompensation;

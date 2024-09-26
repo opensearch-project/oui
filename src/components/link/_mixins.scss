@@ -11,7 +11,7 @@
 
 @mixin ouiLink {
   text-align: left;
-  font-weight: 600;
+  font-weight: $ouiFontWeightSemiBold;
 
   &:hover {
     text-decoration: underline;

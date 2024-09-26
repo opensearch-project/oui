@@ -57,6 +57,8 @@ export const SIZES = keysOf(paddingSizeToClassNameMap);
 const borderRadiusToClassNameMap = {
   none: 'ouiPanel--borderRadiusNone',
   m: 'ouiPanel--borderRadiusMedium',
+  l: 'ouiPanel--borderRadiusLarge',
+  xl: 'ouiPanel--borderRadiusXLarge',
 };
 
 export const BORDER_RADII = keysOf(borderRadiusToClassNameMap);

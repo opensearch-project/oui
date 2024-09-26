@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-$ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorLightShade, .7);
+$ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorLightShade, .7) !default;
 
 // Simulates the transparent backround on top of the page background to get an opaque color
 // in order to get the right contrast for text
@@ -20,10 +20,10 @@ $ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorLightShade, .7);
 }
 
 // Ensure all the possible text color have proper contrast when "emphasized"
-$ouiSideNavRootTextcolor: ouiSideNavEmphasizedContrast($ouiTitleColor);
-$ouiSideNavBranchTextcolor: ouiSideNavEmphasizedContrast($ouiTextSubduedColor);
-$ouiSideNavSelectedTextcolor: ouiSideNavEmphasizedContrast($ouiColorPrimary);
-$ouiSideNavDisabledTextcolor: ouiSideNavEmphasizedContrast($ouiButtonColorDisabledText, $ouiContrastRatioDisabled);
+$ouiSideNavRootTextcolor: ouiSideNavEmphasizedContrast($ouiTitleColor) !default;
+$ouiSideNavBranchTextcolor: ouiSideNavEmphasizedContrast($ouiTextSubduedColor) !default;
+$ouiSideNavSelectedTextcolor: ouiSideNavEmphasizedContrast($ouiColorPrimary) !default;
+$ouiSideNavDisabledTextcolor: ouiSideNavEmphasizedContrast($ouiButtonColorDisabledText, $ouiContrastRatioDisabled) !default;
 
 
 /* OUI -> EUI Aliases */

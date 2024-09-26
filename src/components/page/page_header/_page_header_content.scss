@@ -13,7 +13,7 @@
   width: 100%;
 }
 
-@include ouiBreakpoint('m', 'l', 'xl') {
+@include ouiBreakpoint('m', 'l', 'xl', 'xxl', 'xxxl') {
   .ouiPageHeaderContent__rightSideItems {
     flex-direction: row-reverse;
   }
