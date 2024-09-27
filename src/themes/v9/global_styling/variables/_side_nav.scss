@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-$ouiSideNavEmphasizedBackgroundColor: rgba(9, 116, 190, .1) !default;
+$ouiSideNavEmphasizedBackgroundColor: lightOrDarkTheme(transparentize($ouiColorPrimary, .7), transparentize($ouiColorPrimary, .1)) !default;
 
 // Simulates the transparent backround on top of the page background to get an opaque color
 // in order to get the right contrast for text
