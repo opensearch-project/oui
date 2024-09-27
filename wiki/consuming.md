@@ -123,10 +123,10 @@ The Next theme uses the [Source Sans 3](https://github.com/adobe-fonts/source-sa
 ```
 
 // TODO update weights
-The v9 theme uses the [Rubik](https://fonts.google.com/specimen/Rubik) and [Fira code](https://fonts.google.com/specimen/Fira+Code) fonts:
+The v9 theme uses the [Rubik](https://fonts.google.com/specimen/Rubik) and [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) fonts:
  ```scss
 // index.scss
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 ```
 
 ### Reusing the variables in JavaScript
