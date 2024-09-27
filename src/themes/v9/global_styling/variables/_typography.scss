@@ -40,7 +40,7 @@
 
 // sass-lint:disable quotes
 $ouiFontFamily: #{"'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"} !default;
-$ouiCodeFontFamily: #{"'Fira Code', Consolas, Menlo, Courier, monospace"} !default;
+$ouiCodeFontFamily: #{"'Source Code Pro', Consolas, Menlo, Courier, monospace"} !default;
 // sass-lint:enable quotes
 
 // Careful using ligatures. Code editors like ACE will often error because of width calculations
