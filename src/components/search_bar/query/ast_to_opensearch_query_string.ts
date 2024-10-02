@@ -257,10 +257,15 @@ function emitClause(clause: Clause, isGroupMember = false) {
   throw new Error(`unknown clause type [${JSON.stringify(clause)}]`);
 }
 
-export const astToEsQueryString = (ast: _AST) => {
+export const astToOpenSearchQueryString = (ast: _AST) => {
   if (ast.clauses.length === 0) {
     return '*';
   }
 
   return ast.clauses.map((clause) => emitClause(clause)).join(' ');
+};
+
+// @deprecated Use `astToOpenSearchQueryString` instead
+export const astToEsQueryString = (ast: _AST) => {
+  return astToOpenSearchQueryString(ast);
 };

@@ -72,12 +72,12 @@ export const propsInfo = {
               'static (query: #Query | string, items: Object[], options?: #ExecuteQueryOptions) => Object[]',
           },
         },
-        toESQuery: {
+        toOpenSearchQuery: {
           description:
-            'Builds and returns an Elasticsearch query object out of the given query',
+            'Builds and returns an OpenSearch query object out of the given query',
           type: {
             name:
-              'static (query: #Query | string, options?: #ToESQueryOptions) => ESQuery',
+              'static (query: #Query | string, options?: #ToOpenSearchQueryOptions) => OpenSearchQuery',
           },
         },
       },
@@ -458,7 +458,7 @@ export const propsInfo = {
     },
   },
 
-  ToESQueryOptions: {
+  ToOpenSearchQueryOptions: {
     __docgenInfo: {
       _ouiObjectType: 'type',
       props: {
@@ -466,13 +466,13 @@ export const propsInfo = {
           description:
             'An array of additional queries to add as a `must` clause to the generated query',
           required: false,
-          type: { name: 'ESQuery[]' },
+          type: { name: 'OpenSearchQuery[]' },
         },
         extraMustNotQueries: {
           description:
             'An array of additional queries to add as a `must_not` clause to the generated query',
           required: false,
-          type: { name: 'ESQuery[]' },
+          type: { name: 'OpenSearchQuery[]' },
         },
       },
     },
