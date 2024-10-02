@@ -32,26 +32,26 @@ import { AST } from './ast';
 import moment from 'moment/moment';
 import { dateValue } from './date_value';
 import { Granularity } from './date_format';
-import { astToEsQueryDsl } from './ast_to_es_query_dsl';
+import { astToOpenSearchQueryDsl } from './ast_to_opensearch_query_dsl';
 
-describe('astToEsQueryDsl', () => {
+describe('astToOpenSearchQueryDsl', () => {
   test("ast - ''", () => {
-    const query = astToEsQueryDsl(AST.create([]));
+    const query = astToOpenSearchQueryDsl(AST.create([]));
     expect(query).toMatchSnapshot();
   });
 
   test("ast - 'john -sales'", () => {
-    const query = astToEsQueryDsl(
+    const query = astToOpenSearchQueryDsl(
       AST.create([AST.Term.must('john'), AST.Term.mustNot('sales')])
     );
     expect(query).toMatchSnapshot();
   });
 
-  test("ast - '-group:es group:kibana -group:beats group:logstash'", () => {
-    const query = astToEsQueryDsl(
+  test("ast - '-group:opensearch group:dashboards -group:beats group:logstash'", () => {
+    const query = astToOpenSearchQueryDsl(
       AST.create([
-        AST.Field.mustNot.eq('group', 'es'),
-        AST.Field.must.eq('group', 'kibana'),
+        AST.Field.mustNot.eq('group', 'opensearch'),
+        AST.Field.must.eq('group', 'dashboards'),
         AST.Field.mustNot.eq('group', 'beats'),
         AST.Field.must.eq('group', 'logstash'),
       ])
@@ -59,61 +59,63 @@ describe('astToEsQueryDsl', () => {
     expect(query).toMatchSnapshot();
   });
 
-  test("ast - 'is:online group:kibana john'", () => {
-    const query = astToEsQueryDsl(
+  test("ast - 'is:online group:dashboards john'", () => {
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Is.must('online'),
-        AST.Field.must.eq('group', 'kibana'),
+        AST.Field.must.eq('group', 'dashboards'),
         AST.Term.must('john'),
       ])
     );
     expect(query).toMatchSnapshot();
   });
 
-  test("ast - 'john -doe is:online group:eng group:es -group:kibana -is:active'", () => {
-    const query = astToEsQueryDsl(
+  test("ast - 'john -doe is:online group:eng group:opensearch -group:dashboards -is:active'", () => {
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Term.must('john'),
         AST.Term.mustNot('doe'),
         AST.Is.must('online'),
         AST.Field.must.eq('group', 'eng'),
-        AST.Field.must.eq('group', 'es'),
-        AST.Field.mustNot.eq('group', 'kibana'),
+        AST.Field.must.eq('group', 'opensearch'),
+        AST.Field.mustNot.eq('group', 'dashboards'),
         AST.Is.mustNot('active'),
       ])
     );
     expect(query).toMatchSnapshot();
   });
 
-  test("ast - 'john group:(eng or es) -group:kibana'", () => {
-    const query = astToEsQueryDsl(
+  test("ast - 'john group:(eng or opensearch) -group:dashboards'", () => {
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Term.must('john'),
-        AST.Field.must.eq('group', ['eng', 'es']),
-        AST.Field.mustNot.eq('group', 'kibana'),
+        AST.Field.must.eq('group', ['eng', 'opensearch']),
+        AST.Field.mustNot.eq('group', 'dashboards'),
       ])
     );
     expect(query).toMatchSnapshot();
   });
 
-  test('ast - \'john group:(eng or "marketing org") -group:"kibana team"', () => {
-    const query = astToEsQueryDsl(
+  test('ast - \'john group:(eng or "marketing org") -group:"dashboards team"', () => {
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Term.must('john'),
         AST.Field.must.eq('group', ['eng', 'marketing org']),
-        AST.Field.mustNot.eq('group', 'kibana team'),
+        AST.Field.mustNot.eq('group', 'dashboards team'),
       ])
     );
     expect(query).toMatchSnapshot();
   });
 
   test('ast - count>3', () => {
-    const query = astToEsQueryDsl(AST.create([AST.Field.must.gt('count', 3)]));
+    const query = astToOpenSearchQueryDsl(
+      AST.create([AST.Field.must.gt('count', 3)])
+    );
     expect(query).toMatchSnapshot();
   });
 
   test('ast - -count<=4 size<5 age>=3 -number>9', () => {
-    const query = astToEsQueryDsl(
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Field.mustNot.lte('count', 4),
         AST.Field.must.lt('size', 5),
@@ -125,7 +127,7 @@ describe('astToEsQueryDsl', () => {
   });
 
   test("ast - date>='2004-03-22'", () => {
-    const query = astToEsQueryDsl(
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Field.must.gte(
           'date',
@@ -137,7 +139,7 @@ describe('astToEsQueryDsl', () => {
   });
 
   test("ast - date:'2004-03' -date<'2004-03-10'", () => {
-    const query = astToEsQueryDsl(
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Field.must.eq(
           'date',
@@ -153,7 +155,7 @@ describe('astToEsQueryDsl', () => {
   });
 
   test("ast - date>'2004-02' -otherDate>='2004-03-10'", () => {
-    const query = astToEsQueryDsl(
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Field.must.gt(
           'date',
@@ -169,14 +171,14 @@ describe('astToEsQueryDsl', () => {
   });
 
   test('ast - (name:john)', () => {
-    const query = astToEsQueryDsl(
+    const query = astToOpenSearchQueryDsl(
       AST.create([AST.Group.must([AST.Field.must.eq('name', 'john')])])
     );
     expect(query).toMatchSnapshot();
   });
 
   test('ast - (name:john OR name:fred)', () => {
-    const query = astToEsQueryDsl(
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Group.must([
           AST.Field.must.eq('name', 'john'),
@@ -188,7 +190,7 @@ describe('astToEsQueryDsl', () => {
   });
 
   test('ast - name:john (is:enrolled OR Teacher)', () => {
-    const query = astToEsQueryDsl(
+    const query = astToOpenSearchQueryDsl(
       AST.create([
         AST.Field.must.eq('name', 'john'),
         AST.Group.must([AST.Is.must('enrolled'), AST.Term.must('Teacher')]),
@@ -198,7 +200,7 @@ describe('astToEsQueryDsl', () => {
   });
 
   test('ast - name:"First \\"Nickname\\" Last"', () => {
-    const query = astToEsQueryDsl(
+    const query = astToOpenSearchQueryDsl(
       AST.create([AST.Field.must.eq('name', 'First "Nickname" Last')])
     );
     expect(query).toMatchSnapshot();
