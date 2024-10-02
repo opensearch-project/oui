@@ -260,7 +260,7 @@ export class OuiSearchBar extends Component<OuiSearchBarProps, State> {
 
     return (
       <OuiFlexGroup
-        gutterSize="m"
+        gutterSize={compressed ? 's' : 'm'}
         alignItems="center"
         className={className}
         wrap>
