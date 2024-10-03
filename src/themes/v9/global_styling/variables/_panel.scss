@@ -25,7 +25,7 @@ $ouiPanelBorderRadiusModifiers: (
 $ouiPanelBackgroundColorModifiers: (
   'transparent': transparent,
   'plain': $ouiColorEmptyShade,
-  'subdued': $ouiPageBackgroundColor,
+  'subdued': $ouiColorLightestShade,
   'accent':  tintOrShade($ouiColorAccent, 90%, 70%),
   'primary': tintOrShade($ouiColorPrimary, 90%, 70%),
   'success': tintOrShade($ouiColorSuccess, 90%, 70%),
