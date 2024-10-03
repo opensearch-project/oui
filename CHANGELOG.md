@@ -4,19 +4,20 @@
 
 ### Deprecations
 
+- Deprecate Query.toESQuery and Query.toESQueryString in favor of Query.toOpenSearchQuery and Query.toOpenSearchQueryString ([#1426](https://github.com/opensearch-project/oui/pull/1426))
 
 ### 🛡 Security
 
 
 ### 📈 Features/Enhancements
 
+- Reduce the gap between the elements of a compressed OuiSearchBar ([#1426](https://github.com/opensearch-project/oui/pull/1426))
+- Update colors for v9 theme ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
 
 ### 🐛 Bug Fixes
 
-- Add Temporary fix for Chrome's problem with rendering mask images ([#1414](https://github.com/opensearch-project/oui/pull/1414))
-- Additional borderRadius sizes on Panels ([#1417](https://github.com/opensearch-project/oui/pull/1417))
-- Configuration of borderRadius on Cards ([#1417](https://github.com/opensearch-project/oui/pull/1417))
-- Update components to respect new breakpoints ([#1416])(https://github.com/opensearch-project/oui/pull/1416)
+- Fix naming conventions in OuiSearchBar code and docs ([#1426](https://github.com/opensearch-project/oui/pull/1426))
+- Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
 
 ### 🚞 Infrastructure
 
@@ -28,11 +29,24 @@
 
 
 ### 🪛 Refactoring
+
+
+### 🔩 Tests
+
+
+## [`1.14.0`](https://github.com/opensearch-project/oui/tree/1.14)
+
+### 🐛 Bug Fixes
+
+- Add Temporary fix for Chrome's problem with rendering mask images ([#1414](https://github.com/opensearch-project/oui/pull/1414))
+- Additional borderRadius sizes on Panels ([#1417](https://github.com/opensearch-project/oui/pull/1417))
+- Configuration of borderRadius on Cards ([#1417](https://github.com/opensearch-project/oui/pull/1417))
+- Update components to respect new breakpoints ([#1416](https://github.com/opensearch-project/oui/pull/1416))
+
+### 🪛 Refactoring
 - Make Side Nav variables themeable ([#1417](https://github.com/opensearch-project/oui/pull/1417))
 - Make Links use font-weight `$ouiFontWeightSemiBold` (no change for existing themes) ([#1417](https://github.com/opensearch-project/oui/pull/1417))
 - Enable themes to define background colors for Buttons ([#1417](https://github.com/opensearch-project/oui/pull/1417))
-
-### 🔩 Tests
 
 
 ## [`1.13.0`](https://github.com/opensearch-project/oui/tree/1.13)
