@@ -12,10 +12,12 @@
 ### 📈 Features/Enhancements
 
 - Reduce the gap between the elements of a compressed OuiSearchBar ([#1426](https://github.com/opensearch-project/oui/pull/1426))
+- Update colors for v9 theme ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
 
 ### 🐛 Bug Fixes
 
 - Fix naming conventions in OuiSearchBar code and docs ([#1426](https://github.com/opensearch-project/oui/pull/1426))
+- Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
 
 ### 🚞 Infrastructure
 
