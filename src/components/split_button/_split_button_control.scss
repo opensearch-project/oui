@@ -24,10 +24,6 @@ $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
     border-bottom-right-radius: 0px;
     border-bottom-left-radius: 0px;
 
-    &:not(.ouiButton--fill) {
-      background: transparent;
-    }
-
     &:hover,
     &:active,
     &:focus {
@@ -40,10 +36,6 @@ $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
     border-width: 0px;
     border-radius: 0px;
 
-    &:not(.ouiButtonIcon--fill) {
-      background: transparent;
-    }
-
     &:hover,
     &:active,
     &:focus {
@@ -55,10 +47,6 @@ $splitButtonSeparatorColor: shade($ouiColorPrimary, 50%);
   .ouiSplitButtonControl {
     border: $ouiBorderWidthThick solid $ouiBorderColor;
     border-radius: $ouiButtonBorderRadius;
-
-    &:not(.ouiButton) {
-      background: $ouiButtonBackgroundColor;
-    }
   }
 
   // Create button modifiers based upon the map.

@@ -32,7 +32,6 @@
     @include ouiSlightShadow;
   }
   border-radius: $ouiButtonBorderRadius + 1px; // Simply for the box-shadow
-  background-color: $ouiButtonBackgroundColor;
   max-width: 100%;
   display: flex;
   overflow: hidden;

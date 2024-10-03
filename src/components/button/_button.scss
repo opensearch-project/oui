@@ -20,7 +20,6 @@
   }
 
   border-radius: $ouiButtonBorderRadius;
-  background-color: $ouiButtonBackgroundColor;
   min-width: $ouiButtonMinWidth;
 
   .ouiButton__content {
@@ -84,7 +83,6 @@
     @if ($name == 'ghost') {
       // Ghost is unique and ALWAYS sits against a dark background.
       color: $color;
-      background-color: transparent;
     } @else if ($name == 'text') {
       // The default color is lighter than the normal text color, make the it the text color
       color: $ouiTextColor;

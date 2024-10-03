@@ -9,6 +9,9 @@
  * GitHub history for details.
  */
 
+// Value not currently consumed by Side nav component
+$ouiSideNavBackgroundColor: $ouiPageBackgroundColor !default;
+
 $ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorLightShade, .7) !default;
 
 // Simulates the transparent backround on top of the page background to get an opaque color
@@ -27,6 +30,7 @@ $ouiSideNavDisabledTextcolor: ouiSideNavEmphasizedContrast($ouiButtonColorDisabl
 
 
 /* OUI -> EUI Aliases */
+$euiSideNavBackgroundColor: $ouiSideNavBackgroundColor;
 $euiSideNavEmphasizedBackgroundColor: $ouiSideNavEmphasizedBackgroundColor;
 $euiSideNavRootTextcolor: $ouiSideNavRootTextcolor;
 $euiSideNavBranchTextcolor: $ouiSideNavBranchTextcolor;
