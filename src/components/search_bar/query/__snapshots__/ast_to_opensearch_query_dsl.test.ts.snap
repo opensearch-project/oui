@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`astToEsQueryDsl ast - '' 1`] = `
+exports[`astToOpenSearchQueryDsl ast - '' 1`] = `
 Object {
   "match_all": Object {},
 }
 `;
 
-exports[`astToEsQueryDsl ast - '-group:es group:kibana -group:beats group:logstash' 1`] = `
+exports[`astToOpenSearchQueryDsl ast - '-group:opensearch group:dashboards -group:beats group:logstash' 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -14,7 +14,7 @@ Object {
         "match": Object {
           "group": Object {
             "operator": "and",
-            "query": "kibana logstash",
+            "query": "dashboards logstash",
           },
         },
       },
@@ -24,7 +24,7 @@ Object {
         "match": Object {
           "group": Object {
             "operator": "and",
-            "query": "es beats",
+            "query": "opensearch beats",
           },
         },
       },
@@ -33,7 +33,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - 'is:online group:kibana john' 1`] = `
+exports[`astToOpenSearchQueryDsl ast - 'is:online group:dashboards john' 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -46,7 +46,7 @@ Object {
         "match": Object {
           "group": Object {
             "operator": "and",
-            "query": "kibana",
+            "query": "dashboards",
           },
         },
       },
@@ -60,7 +60,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - 'john -doe is:online group:eng group:es -group:kibana -is:active' 1`] = `
+exports[`astToOpenSearchQueryDsl ast - 'john -doe is:online group:eng group:opensearch -group:dashboards -is:active' 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -73,7 +73,7 @@ Object {
         "match": Object {
           "group": Object {
             "operator": "and",
-            "query": "eng es",
+            "query": "eng opensearch",
           },
         },
       },
@@ -98,7 +98,7 @@ Object {
         "match": Object {
           "group": Object {
             "operator": "and",
-            "query": "kibana",
+            "query": "dashboards",
           },
         },
       },
@@ -107,7 +107,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - 'john -sales' 1`] = `
+exports[`astToOpenSearchQueryDsl ast - 'john -sales' 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -128,7 +128,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - 'john group:(eng or "marketing org") -group:"kibana team" 1`] = `
+exports[`astToOpenSearchQueryDsl ast - 'john group:(eng or "marketing org") -group:"dashboards team" 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -160,7 +160,7 @@ Object {
     "must_not": Array [
       Object {
         "match_phrase": Object {
-          "group": "kibana team",
+          "group": "dashboards team",
         },
       },
     ],
@@ -168,7 +168,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - 'john group:(eng or es) -group:kibana' 1`] = `
+exports[`astToOpenSearchQueryDsl ast - 'john group:(eng or opensearch) -group:dashboards' 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -181,7 +181,7 @@ Object {
         "match": Object {
           "group": Object {
             "operator": "or",
-            "query": "eng es",
+            "query": "eng opensearch",
           },
         },
       },
@@ -191,7 +191,7 @@ Object {
         "match": Object {
           "group": Object {
             "operator": "and",
-            "query": "kibana",
+            "query": "dashboards",
           },
         },
       },
@@ -200,7 +200,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - (name:john OR name:fred) 1`] = `
+exports[`astToOpenSearchQueryDsl ast - (name:john OR name:fred) 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -243,7 +243,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - (name:john) 1`] = `
+exports[`astToOpenSearchQueryDsl ast - (name:john) 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -272,7 +272,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - -count<=4 size<5 age>=3 -number>9 1`] = `
+exports[`astToOpenSearchQueryDsl ast - -count<=4 size<5 age>=3 -number>9 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -311,7 +311,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - count>3 1`] = `
+exports[`astToOpenSearchQueryDsl ast - count>3 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -327,7 +327,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - date:'2004-03' -date<'2004-03-10' 1`] = `
+exports[`astToOpenSearchQueryDsl ast - date:'2004-03' -date<'2004-03-10' 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -350,7 +350,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - date>'2004-02' -otherDate>='2004-03-10' 1`] = `
+exports[`astToOpenSearchQueryDsl ast - date>'2004-02' -otherDate>='2004-03-10' 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -375,7 +375,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - date>='2004-03-22' 1`] = `
+exports[`astToOpenSearchQueryDsl ast - date>='2004-03-22' 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -391,7 +391,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - name:"First \\"Nickname\\" Last" 1`] = `
+exports[`astToOpenSearchQueryDsl ast - name:"First \\"Nickname\\" Last" 1`] = `
 Object {
   "bool": Object {
     "must": Array [
@@ -405,7 +405,7 @@ Object {
 }
 `;
 
-exports[`astToEsQueryDsl ast - name:john (is:enrolled OR Teacher) 1`] = `
+exports[`astToOpenSearchQueryDsl ast - name:john (is:enrolled OR Teacher) 1`] = `
 Object {
   "bool": Object {
     "must": Array [

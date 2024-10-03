@@ -31,8 +31,8 @@
 import { defaultSyntax, ParseOptions, Syntax } from './default_syntax';
 import { executeAst } from './execute_ast';
 import { isNil, isString } from '../../../services/predicate';
-import { astToEsQueryDsl } from './ast_to_es_query_dsl';
-import { astToEsQueryString } from './ast_to_es_query_string';
+import { astToOpenSearchQueryDsl } from './ast_to_opensearch_query_dsl';
+import { astToOpenSearchQueryString } from './ast_to_opensearch_query_string';
 import { _AST, AST, Clause, Operator, OperatorType, Value } from './ast';
 
 /**
@@ -67,7 +67,7 @@ export class Query {
     return AST.Field.isInstance(clause);
   }
 
-  // This ought to be `private`, but Kibana has some customizations that rely on access to this field
+  // This ought to be `private`, but OSD has some customizations that rely on access to this field
   public ast: _AST;
   public text: string;
   private syntax: Syntax;
@@ -159,7 +159,7 @@ export class Query {
 
   /**
    * Executes this query over the given iterable item and returns
-   * an new array of all items that matched this query. Options:
+   * a new array of all items that matched this query. Options:
    *
    * defaultFields: string[]
    *
@@ -168,10 +168,10 @@ export class Query {
    *
    * isClauseMatcher?: (record: any, flag: string, applied: boolean, explain?: []) => boolean
    *
-   *    By default the 'is' clauses will try to match against boolean fields - where the flag of the clause
+   *    By default, the 'is' clauses will try to match against boolean fields - where the flag of the clause
    *    indicates the field name. You can change this behaviour by providing this matcher function for the
    *    is clause. For example, if the object has a `tags` field, one can create a matcher that checks if
-   *    an object has a specific tag (e.g. "is:marketing", "is:kitchen", etc..)
+   *    an object has a specific tag (e.g. "is:marketing", "is:kitchen", etc.)
    *
    * explain?: boolean
    *
@@ -185,38 +185,48 @@ export class Query {
   }
 
   /**
-   * Builds and returns an Elasticsearch query out this query. Options:
+   * Builds and returns an OpenSearch query out this query. Options:
    *
    * defaultFields?: string[]
    *
    *    An array of field names to match the default clauses against. When not specified, the query
    *    will pick up all the string fields of each record and try to match against those.
    *
-   * isToQuery?: (flag: string, on: boolean) => Object (elasticsearch query object)
+   * isToQuery?: (flag: string, on: boolean) => Object (OpenSearch query object)
    *
    *    By default, "is" clauses will be translated to a term query where the flag is the field
    *    and the "on" value will be the value of the field. This function lets you change this default
    *    translation and provide your own custom one.
    *
-   * termValuesToQuery?: (values: string[]) => Object (elasticsearch query object)
+   * termValuesToQuery?: (values: string[]) => Object (OpenSearch query object)
    *
    *    By default, "term" clauses will be translated to a "simple_query_string" query where all
    *    the values serve as terms in the query string. This function lets you change this default
    *    translation and provide your own custom one.
    *
-   * fieldValuesToAndQuery?: (field: string, values: string[]) => Object (elasticsearch query object)
+   * fieldValuesToAndQuery?: (field: string, values: string[]) => Object (OpenSearch query object)
    *
    *    By default, "field" clauses will be translated to a match query where all the values serve as
-   *    terms in the query(the operator is AND). This function lets you change this default translation
+   *    terms in the query (the operator is AND). This function lets you change this default translation
    *    and provide your own custom one.
    */
-  static toESQuery(query: string | Query, options = {}) {
+  static toOpenSearchQuery(query: string | Query, options = {}) {
     const q = isString(query) ? Query.parse(query) : query;
-    return astToEsQueryDsl(q.ast, options);
+    return astToOpenSearchQueryDsl(q.ast, options);
   }
 
-  static toESQueryString(query: string | Query) {
+  static toOpenSearchQueryString(query: string | Query) {
     const q = isString(query) ? Query.parse(query) : query;
-    return astToEsQueryString(q.ast);
+    return astToOpenSearchQueryString(q.ast);
+  }
+
+  // @deprecated Use `toOpenSearchQuery` instead
+  static toESQuery(query: string | Query, options = {}) {
+    return Query.toOpenSearchQuery(query, options);
+  }
+
+  // @deprecated Use `toOpenSearchQueryString` instead
+  static toESQueryString(query: string | Query) {
+    return Query.toOpenSearchQueryString(query);
   }
 }

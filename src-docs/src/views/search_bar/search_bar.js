@@ -253,39 +253,41 @@ export const SearchBar = () => {
     return <OuiBasicTable items={queriedItems} columns={columns} />;
   };
 
-  let esQueryDsl;
-  let esQueryString;
+  let opensearchQueryDsl;
+  let opensearchQueryString;
 
   try {
-    esQueryDsl = OuiSearchBar.Query.toESQuery(query);
+    opensearchQueryDsl = OuiSearchBar.Query.toOpenSearchQuery(query);
   } catch (e) {
-    esQueryDsl = e.toString();
+    opensearchQueryDsl = e.toString();
   }
   try {
-    esQueryString = OuiSearchBar.Query.toESQueryString(query);
+    opensearchQueryString = OuiSearchBar.Query.toOpenSearchQueryString(query);
   } catch (e) {
-    esQueryString = e.toString();
+    opensearchQueryString = e.toString();
   }
 
   const content = renderError() || (
     <OuiFlexGroup>
       <OuiFlexItem grow={4}>
         <OuiTitle size="s">
-          <h3>Elasticsearch Query String</h3>
+          <h3>OpenSearch Query String</h3>
         </OuiTitle>
         <OuiSpacer size="s" />
         <OuiCodeBlock language="js">
-          {esQueryString ? esQueryString : ''}
+          {opensearchQueryString ? opensearchQueryString : ''}
         </OuiCodeBlock>
 
         <OuiSpacer size="l" />
 
         <OuiTitle size="s">
-          <h3>Elasticsearch Query DSL</h3>
+          <h3>OpenSearch Query DSL</h3>
         </OuiTitle>
         <OuiSpacer size="s" />
         <OuiCodeBlock language="js">
-          {esQueryDsl ? JSON.stringify(esQueryDsl, null, 2) : ''}
+          {opensearchQueryDsl
+            ? JSON.stringify(opensearchQueryDsl, null, 2)
+            : ''}
         </OuiCodeBlock>
       </OuiFlexItem>
 

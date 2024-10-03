@@ -294,7 +294,7 @@ const collectFields = (clauses: FieldClause[]) => {
   );
 };
 
-const clausesToEsQueryDsl = (
+const clausesToOpenSearchQueryDsl = (
   {
     fields,
     terms,
@@ -355,7 +355,10 @@ const EMPTY_FIELDS: FieldsQuery = {
   mustNot: { and: {}, or: {} },
 };
 
-export const astToEsQueryDsl = (ast: _AST, options = {}): QueryContainer => {
+export const astToOpenSearchQueryDsl = (
+  ast: _AST,
+  options = {}
+): QueryContainer => {
   if (ast.clauses.length === 0) {
     return { match_all: {} };
   }
@@ -364,7 +367,10 @@ export const astToEsQueryDsl = (ast: _AST, options = {}): QueryContainer => {
   const fields = collectFields(ast.getFieldClauses());
   const is = ast.getIsClauses();
 
-  const matchesBool = clausesToEsQueryDsl({ terms, fields, is }, options);
+  const matchesBool = clausesToOpenSearchQueryDsl(
+    { terms, fields, is },
+    options
+  );
   const hasTopMatches = Object.keys(matchesBool).length > 0;
 
   const groupClauses = ast.getGroupClauses();
@@ -378,7 +384,7 @@ export const astToEsQueryDsl = (ast: _AST, options = {}): QueryContainer => {
         const clauses = groupClause.value.reduce((clauses, clause) => {
           if (AST.Term.isInstance(clause)) {
             clauses.push(
-              clausesToEsQueryDsl({
+              clausesToOpenSearchQueryDsl({
                 terms: collectTerms([clause]),
                 fields: EMPTY_FIELDS,
                 is: [],
@@ -386,7 +392,7 @@ export const astToEsQueryDsl = (ast: _AST, options = {}): QueryContainer => {
             );
           } else if (AST.Field.isInstance(clause)) {
             clauses.push(
-              clausesToEsQueryDsl({
+              clausesToOpenSearchQueryDsl({
                 terms: EMPTY_TERMS,
                 fields: collectFields([clause]),
                 is: [],
@@ -394,7 +400,7 @@ export const astToEsQueryDsl = (ast: _AST, options = {}): QueryContainer => {
             );
           } else if (AST.Is.isInstance(clause)) {
             clauses.push(
-              clausesToEsQueryDsl({
+              clausesToOpenSearchQueryDsl({
                 terms: EMPTY_TERMS,
                 fields: EMPTY_FIELDS,
                 is: [clause],
@@ -421,3 +427,7 @@ export const astToEsQueryDsl = (ast: _AST, options = {}): QueryContainer => {
     };
   }
 };
+
+// @deprecated Use `astToOpenSearchQueryDsl` instead
+export const astToEsQueryDsl = (ast: _AST, options = {}): QueryContainer =>
+  astToOpenSearchQueryDsl(ast, options);
