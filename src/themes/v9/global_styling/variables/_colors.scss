@@ -13,37 +13,37 @@
 @import '../functions/index';
 
 // These colors stay the same no matter the theme
-$ouiColorGhost: #F7F4F2 !default;
-$ouiColorInk: #262626 !default;
+$ouiColorGhost: #FFFFFF !default;
+$ouiColorInk: #001522 !default;
 
 // Core
-$ouiColorPrimary: #0974BE !default;
+$ouiColorPrimary: #006EDB !default;
 $ouiColorSecondary: #107F6B !default;
-$ouiColorAccent: #7F389D !default;
+$ouiColorAccent: #9E4DC0 !default;
 
 // Status
 $ouiColorSuccess: $ouiColorSecondary !default;
-$ouiColorWarning: #FFC460 !default;
-$ouiColorDanger: #C84233 !default;
+$ouiColorWarning: #F25F25 !default;
+$ouiColorDanger: #BD271E !default;
 
 // Grays
 $ouiColorEmptyShade: #FFFFFF !default;
-$ouiColorLightestShade: #F7F4F2 !default;
-$ouiColorLightShade: #EBE4DF !default;
-$ouiColorMediumShade: #D8CBC1 !default;
+$ouiColorLightestShade: #F5F5F5 !default;
+$ouiColorLightShade: #E5E5E5 !default;
+$ouiColorMediumShade: #A5A5A5 !default;
 $ouiColorDarkShade: #585858 !default;
 $ouiColorDarkestShade: #262626 !default;
 $ouiColorFullShade: #131313 !default;
 
 // Backgrounds
-$ouiPageBackgroundColor: #F3EFEC !default;
+$ouiPageBackgroundColor: #F7F4F2 !default;
 $ouiColorHighlight: #FFF3E1 !default;
 
 // Every color below must be based mathematically on the set above and in a particular order.
-$ouiTextColor: $ouiColorDarkestShade !default;
-$ouiTitleColor: shade($ouiTextColor, 50%) !default;
+$ouiTextColor: #042839 !default;
+$ouiTitleColor: #002E48 !default;
 $ouiTextSubduedColor: makeHighContrastColor($ouiColorMediumShade) !default;
-$ouiColorDisabled: tint($ouiTextColor, 70%) !default;
+$ouiColorDisabled: #707070 !default;
 
 // Contrasty text variants
 $ouiColorPrimaryText: makeHighContrastColor($ouiColorPrimary) !default;
@@ -133,7 +133,7 @@ $ouiColorChartLines: shade($ouiColorLightestShade, 3%) !default;
 $ouiColorChartBand: $ouiColorLightestShade !default;
 
 // Code
-$ouiCodeBlockBackgroundColor: $ouiColorLightestShade !default;
+$ouiCodeBlockBackgroundColor: $ouiColorLightShade !default;
 $ouiCodeBlockColor: makeHighContrastColor($ouiTextColor, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockSelectedBackgroundColor: inherit !default;
 $ouiCodeBlockCommentColor: makeHighContrastColor($ouiTextSubduedColor, $ouiCodeBlockBackgroundColor) !default;
