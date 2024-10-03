@@ -1,13 +1,10 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
+## [`1.15.0`](https://github.com/opensearch-project/oui/tree/1.15)
 
 ### Deprecations
 
 - Deprecate Query.toESQuery and Query.toESQueryString in favor of Query.toOpenSearchQuery and Query.toOpenSearchQueryString ([#1426](https://github.com/opensearch-project/oui/pull/1426))
-
-### 🛡 Security
-
 
 ### 📈 Features/Enhancements
 
@@ -18,20 +15,6 @@
 
 - Fix naming conventions in OuiSearchBar code and docs ([#1426](https://github.com/opensearch-project/oui/pull/1426))
 - Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
-
-### 🚞 Infrastructure
-
-
-### 📝 Documentation
-
-
-### 🛠 Maintenance
-
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
 
 
 ## [`1.14.0`](https://github.com/opensearch-project/oui/tree/1.14)
