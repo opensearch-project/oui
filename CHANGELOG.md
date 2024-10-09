@@ -4,20 +4,14 @@
 
 ### Deprecations
 
-- Deprecate Query.toESQuery and Query.toESQueryString in favor of Query.toOpenSearchQuery and Query.toOpenSearchQueryString ([#1426](https://github.com/opensearch-project/oui/pull/1426))
-
 ### 🛡 Security
 
 
 ### 📈 Features/Enhancements
-
-- Reduce the gap between the elements of a compressed OuiSearchBar ([#1426](https://github.com/opensearch-project/oui/pull/1426))
-- Update colors for v9 theme ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
+- Update filter icon ([#1435](https://github.com/opensearch-project/oui/pull/1435))
 
 ### 🐛 Bug Fixes
 
-- Fix naming conventions in OuiSearchBar code and docs ([#1426](https://github.com/opensearch-project/oui/pull/1426))
-- Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
 
 ### 🚞 Infrastructure
 
@@ -34,8 +28,25 @@
 ### 🔩 Tests
 
 
-## [`1.14.0`](https://github.com/opensearch-project/oui/tree/1.14)
+## [`1.15.0`](https://github.com/opensearch-project/oui/tree/1.15)
+ 
+### Deprecations
 
+- Deprecate Query.toESQuery and Query.toESQueryString in favor of Query.toOpenSearchQuery and Query.toOpenSearchQueryString ([#1426](https://github.com/opensearch-project/oui/pull/1426))
+
+### 📈 Features/Enhancements
+
+- Reduce the gap between the elements of a compressed OuiSearchBar ([#1426](https://github.com/opensearch-project/oui/pull/1426))
+- Update colors for v9 theme ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
+
+### 🐛 Bug Fixes
+
+- Fix naming conventions in OuiSearchBar code and docs ([#1426](https://github.com/opensearch-project/oui/pull/1426))
+- Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
+
+
+## [`1.14.0`](https://github.com/opensearch-project/oui/tree/1.14)
+ 
 ### 🐛 Bug Fixes
 
 - Add Temporary fix for Chrome's problem with rendering mask images ([#1414](https://github.com/opensearch-project/oui/pull/1414))
