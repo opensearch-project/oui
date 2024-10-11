@@ -9,6 +9,7 @@
 
 ### 📈 Features/Enhancements
 - Update filter icon ([#1435](https://github.com/opensearch-project/oui/pull/1435))
+- Update v9 colors for side nav and tooltip ([#])(https://github.com/opensearch-project/oui/pull/)
 
 ### 🐛 Bug Fixes
 
