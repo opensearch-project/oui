@@ -1,32 +1,10 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
-
-### Deprecations
-
-### 🛡 Security
-
+## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)
 
 ### 📈 Features/Enhancements
 - Update filter icon ([#1435](https://github.com/opensearch-project/oui/pull/1435))
 - Update v9 colors for side nav and tooltip ([#1437](https://github.com/opensearch-project/oui/pull/1437))
-
-### 🐛 Bug Fixes
-
-
-### 🚞 Infrastructure
-
-
-### 📝 Documentation
-
-
-### 🛠 Maintenance
-
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
 
 
 ## [`1.15.0`](https://github.com/opensearch-project/oui/tree/1.15)
