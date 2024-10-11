@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-$ouiTooltipBackgroundColor: $ouiColorDarkestShade !default;
+$ouiTooltipBackgroundColor: lightOrDarkTheme($ouiColorDarkestShade, #293847) !default; // sass-lint:disable-line no-color-literals
 
 $ouiTooltipAnimations: (
   top: ouiToolTipTop,
