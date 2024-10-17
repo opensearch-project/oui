@@ -1,15 +1,14 @@
 # OUI
 
 ## [Unreleased](https://github.com/opensearch-project/oui/tree/main)
-
+ 
 ### Deprecations
 
 ### 🛡 Security
 
 
 ### 📈 Features/Enhancements
-- Update filter icon ([#1435](https://github.com/opensearch-project/oui/pull/1435))
-- Update v9 colors for side nav and tooltip ([#])(https://github.com/opensearch-project/oui/pull/)
+- Add bookOpen, compass, dashboard, functionAdd, lineChart, pulse, radar, and rocket icons
 
 ### 🐛 Bug Fixes
 
@@ -27,6 +26,13 @@
 
 
 ### 🔩 Tests
+
+
+## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)
+
+### 📈 Features/Enhancements
+- Update filter icon ([#1435](https://github.com/opensearch-project/oui/pull/1435))
+- Update v9 colors for side nav and tooltip ([#1437](https://github.com/opensearch-project/oui/pull/1437))
 
 
 ## [`1.15.0`](https://github.com/opensearch-project/oui/tree/1.15)
