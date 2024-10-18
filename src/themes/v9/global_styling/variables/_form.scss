@@ -50,12 +50,12 @@ $ouiSwitchColors: (
 ) !default;
 
 // Coloring
-$ouiFormBackgroundColor: tintOrShade($ouiColorLightestShade, 60%, 40%) !default;
-$ouiFormBackgroundDisabledColor: darken($ouiColorLightestShade, 2%) !default;
-$ouiFormBackgroundReadOnlyColor: transparentize(lightOrDarkTheme($ouiColorLightShade, $ouiColorInk), .95) !default;
+$ouiFormBackgroundColor: $ouiColorEmptyShade !default;
+$ouiFormBackgroundDisabledColor: $ouiColorLightestShade !default;
+$ouiFormBackgroundReadOnlyColor: $ouiColorEmptyShade !default;
 $ouiFormBorderOpaqueColor: shadeOrTint(desaturate(adjust-hue($ouiColorPrimary, 22), 22.95), 26%, 100%) !default;
-$ouiFormBorderColor: transparentize($ouiFormBorderOpaqueColor, .9) !default;
-$ouiFormBorderDisabledColor: transparentize($ouiFormBorderOpaqueColor, .9) !default;
+$ouiFormBorderColor: lightOrDarkTheme(transparentize($ouiFormBorderOpaqueColor, .9), $ouiColorLightShade) !default;
+$ouiFormBorderDisabledColor: lightOrDarkTheme(transparentize($ouiFormBorderOpaqueColor, .9), $ouiColorLightestShade) !default;
 $ouiFormCustomControlDisabledIconColor: shadeOrTint($ouiColorMediumShade, 38%, 48.5%) !default; // exact 508c foreground for $ouiColorLightShade
 $ouiFormCustomControlBorderColor: shadeOrTint($ouiColorLightestShade, 18%, 30%) !default;
 $ouiFormControlDisabledColor: $ouiColorMediumShade !default;

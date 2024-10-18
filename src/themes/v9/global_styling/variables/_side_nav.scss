@@ -10,7 +10,7 @@
  */
 
 // Value not currently consumed by Side nav component
-$ouiSideNavBackgroundColor: lightOrDarkTheme(#EFE9E5, #001C28) !default; // sass-lint:disable-line no-color-literals
+$ouiSideNavBackgroundColor: $ouiColorEmptyShade !default; // sass-lint:disable-line no-color-literals
 
 $ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorPrimary, .8) !default;
 
