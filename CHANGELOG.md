@@ -8,7 +8,8 @@
 
 
 ### 📈 Features/Enhancements
-- Add bookOpen, compass, dashboard, functionAdd, lineChart, pulse, radar, and rocket icons
+- Add bookOpen, compass, dashboard, functionAdd, lineChart, pulse, radar, and rocket icons ([#1443](https://github.com/opensearch-project/oui/pull/1443))
+- Update v9 theme colors ([#1446](https://github.com/opensearch-project/oui/pull/1446))
 
 ### 🐛 Bug Fixes
 
