@@ -40,9 +40,9 @@ $ouiPageBackgroundColor: #F0F2F4 !default;
 $ouiColorHighlight: #FFE1B0 !default;
 
 // Every color below must be based mathematically on the set above and in a particular order.
-$ouiTextColor: #2A3947 !default;
-$ouiTitleColor: #1A2631 !default;
-$ouiTextSubduedColor: #676E75 !default;
+$ouiTextColor: $ouiColorDarkestShade !default;
+$ouiTitleColor: shade($ouiTextColor, 50%) !default;
+$ouiTextSubduedColor: makeHighContrastColor($ouiColorMediumShade) !default;
 $ouiColorDisabled: tint($ouiTextColor, 70%) !default;
 
 // Contrasty text variants
