@@ -133,7 +133,7 @@ $ouiColorChartLines: shade($ouiColorLightestShade, 3%) !default;
 $ouiColorChartBand: $ouiColorLightestShade !default;
 
 // Code
-$ouiCodeBlockBackgroundColor: $ouiColorLightShade !default;
+$ouiCodeBlockBackgroundColor: $ouiColorLightestShade !default;
 $ouiCodeBlockColor: makeHighContrastColor($ouiTextColor, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockSelectedBackgroundColor: inherit !default;
 $ouiCodeBlockCommentColor: makeHighContrastColor($ouiTextSubduedColor, $ouiCodeBlockBackgroundColor) !default;
