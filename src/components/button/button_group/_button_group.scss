@@ -54,10 +54,7 @@
 
 .ouiButtonGroup--vertical {
   .ouiButtonGroup__buttons {
-    flex-direction: column;
-  }
-
-  .ouiButtonGroup__buttons {
     height: auto;
+    flex-direction: column;
   }
 }
