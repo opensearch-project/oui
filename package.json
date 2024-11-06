@@ -208,7 +208,7 @@
     "moment-timezone": "^0.5.41",
     "pegjs": "^0.10.0",
     "postcss-cli": "^7.1.2",
-    "postcss-inline-svg": "^4.1.0",
+    "postcss-inline-svg": "^5.0.0",
     "postcss-loader": "^4.0.1",
     "pre-commit": "^1.2.2",
     "prettier": "^2.1.2",
