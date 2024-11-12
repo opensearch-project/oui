@@ -61,7 +61,7 @@ export const GuidePageHeader: React.FunctionComponent<{}> = () => {
   }
 
   function renderFigma() {
-    const href = 'https://www.figma.com/community/file/1240039515407642648';
+    const href = 'https://www.figma.com/community/file/1319043629276905995';
     const label = 'OUI Figma component library';
     return isMobileSize ? (
       <OuiButtonEmpty size="s" flush="both" iconType={figmaLogo} href={href}>

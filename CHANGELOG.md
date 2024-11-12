@@ -1,15 +1,13 @@
 # OUI
 
 ## [Unreleased](https://github.com/opensearch-project/oui/tree/main)
- 
+
 ### Deprecations
 
 ### 🛡 Security
 
 
 ### 📈 Features/Enhancements
-- Add bookOpen, compass, dashboard, functionAdd, lineChart, pulse, radar, and rocket icons ([#1443](https://github.com/opensearch-project/oui/pull/1443))
-- Update v9 theme colors ([#1446](https://github.com/opensearch-project/oui/pull/1446))
 - Add vertical oriented button group ([#755](https://github.com/opensearch-project/oui/pull/755))
 - Add sparkleFilled icon ([#1452](https://github.com/opensearch-project/oui/pull/1452))
 
@@ -20,6 +18,7 @@
 
 
 ### 📝 Documentation
+ - Update figma link to latest v2 ([#1456](https://github.com/opensearch-project/oui/pull/1456))
 
 
 ### 🛠 Maintenance
@@ -30,6 +29,12 @@
 
 ### 🔩 Tests
 
+## [`1.17.0`](https://github.com/opensearch-project/oui/tree/1.17)
+
+### 📈 Features/Enhancements
+- Add bookOpen, compass, dashboard, functionAdd, lineChart, pulse, radar, and rocket icons ([#1443](https://github.com/opensearch-project/oui/pull/1443))
+- Update v9 theme colors ([#1446](https://github.com/opensearch-project/oui/pull/1446))
+
 
 ## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)
 
@@ -39,7 +44,7 @@
 
 
 ## [`1.15.0`](https://github.com/opensearch-project/oui/tree/1.15)
- 
+
 ### Deprecations
 
 - Deprecate Query.toESQuery and Query.toESQueryString in favor of Query.toOpenSearchQuery and Query.toOpenSearchQueryString ([#1426](https://github.com/opensearch-project/oui/pull/1426))
@@ -47,16 +52,16 @@
 ### 📈 Features/Enhancements
 
 - Reduce the gap between the elements of a compressed OuiSearchBar ([#1426](https://github.com/opensearch-project/oui/pull/1426))
-- Update colors for v9 theme ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
+- Update colors for v9 theme ([#1430](https://github.com/opensearch-project/oui/pull/1430))
 
 ### 🐛 Bug Fixes
 
 - Fix naming conventions in OuiSearchBar code and docs ([#1426](https://github.com/opensearch-project/oui/pull/1426))
-- Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
+- Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430))
 
 
 ## [`1.14.0`](https://github.com/opensearch-project/oui/tree/1.14)
- 
+
 ### 🐛 Bug Fixes
 
 - Add Temporary fix for Chrome's problem with rendering mask images ([#1414](https://github.com/opensearch-project/oui/pull/1414))
