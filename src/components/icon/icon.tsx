@@ -388,6 +388,7 @@ const typeToPathMap = {
   sortRight: 'sortRight',
   sortUp: 'sort_up',
   spacesApp: 'app_spaces',
+  sparkleFilled: 'sparkle_filled',
   sqlApp: 'app_sql',
   starEmpty: 'star_empty',
   starEmptySpace: 'star_empty_space',
