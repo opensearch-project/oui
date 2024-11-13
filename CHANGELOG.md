@@ -8,6 +8,7 @@
 
 
 ### 📈 Features/Enhancements
+- Add vertical oriented button group ([#755](https://github.com/opensearch-project/oui/pull/755))
 - Add sparkleFilled icon ([#1452](https://github.com/opensearch-project/oui/pull/1452))
 
 ### 🐛 Bug Fixes

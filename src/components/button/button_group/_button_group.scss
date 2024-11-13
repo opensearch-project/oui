@@ -51,3 +51,10 @@
     overflow: visible;
   }
 }
+
+.ouiButtonGroup--vertical {
+  .ouiButtonGroup__buttons {
+    height: auto;
+    flex-direction: column;
+  }
+}
