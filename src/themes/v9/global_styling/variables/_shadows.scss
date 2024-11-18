@@ -11,8 +11,8 @@
 
 // Shadows
 // Transparency only affects the use of variable this outside of the shadow mixins (borders)
-$ouiShadowColor: #ADB2B8 !default;
-$ouiShadowColorLarge: $ouiShadowColor !default;
+$ouiShadowColor: $ouiColorMediumShade !default;
+$ouiShadowColorLarge: shade(saturate($ouiColorMediumShade, 25%), 50%) !default;
 
 
 /* OUI -> EUI Aliases */
