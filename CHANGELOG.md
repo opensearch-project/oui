@@ -10,6 +10,7 @@
 ### 📈 Features/Enhancements
 - Add vertical oriented button group ([#755](https://github.com/opensearch-project/oui/pull/755))
 - Add sparkleFilled icon ([#1452](https://github.com/opensearch-project/oui/pull/1452))
+- Update colors v9 theme ([#1460](https://github.com/opensearch-project/oui/pull/1460))
 
 ### 🐛 Bug Fixes
 
@@ -28,6 +29,7 @@
 
 
 ### 🔩 Tests
+
 
 ## [`1.17.0`](https://github.com/opensearch-project/oui/tree/1.17)
 
