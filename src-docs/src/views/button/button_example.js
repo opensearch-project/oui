@@ -139,6 +139,11 @@ const buttonGroupIconsHtml = renderToHtml(ButtonGroupIcons);
 import ButtonGroupCompressed from './button_group_compressed';
 const buttonGroupCompressedSource = require('!!raw-loader!./button_group_compressed');
 const buttonGroupCompressedHtml = renderToHtml(ButtonGroupCompressed);
+
+import ButtonGroupVertical from './button_group_vertical';
+const ButtonGroupVerticalSource = require('!!raw-loader!./button_group_vertical');
+const ButtonGroupVerticalHtml = renderToHtml(ButtonGroupVertical);
+
 const buttonGroupSnippet = [
   `<OuiButtonGroup
   type="single"
@@ -157,6 +162,23 @@ const buttonGroupSnippet = [
 const buttonGroupIconsSnippet = [
   `<OuiButtonGroup
   type="multi"
+  isIconOnly
+  legend={legend}
+  options={[
+    {
+      id,
+      label,
+      iconType,
+    }
+  ]}
+  idToSelectedMap={{ optionId: true }}
+  onChange={(optionId, optionValue) => {}}
+/>`,
+];
+
+const ButtonGroupVerticalSnippet = [
+  `<OuiButtonGroup
+  orientation="vertical"
   isIconOnly
   legend={legend}
   options={[
@@ -468,6 +490,26 @@ export const ButtonExample = {
       ),
       demo: <ButtonGroupIcons />,
       snippet: buttonGroupIconsSnippet,
+    },
+    {
+      source: [
+        {
+          type: GuideSectionTypes.JS,
+          code: ButtonGroupVerticalSource,
+        },
+        {
+          type: GuideSectionTypes.HTML,
+          code: ButtonGroupVerticalHtml,
+        },
+      ],
+      wrapText: false,
+      text: (
+        <OuiTitle size="xs">
+          <h3>Vertical orientated</h3>
+        </OuiTitle>
+      ),
+      demo: <ButtonGroupVertical />,
+      snippet: ButtonGroupVerticalSnippet,
     },
     {
       source: [

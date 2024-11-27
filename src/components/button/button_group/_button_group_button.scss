@@ -123,19 +123,40 @@
 .ouiButtonGroup--small {
   .ouiButtonGroupButton {
     border: $ouiBorderThin;
+  }
 
-    &:not(:first-child) {
-      margin-left: -1px;
-    }
+  &:not(.ouiButtonGroup--vertical) {
+    .ouiButtonGroupButton {
+      &:not(:first-child) {
+        margin-left: -1px;
+      }
 
-    &:first-child {
-      border-radius: $ouiButtonBorderRadius 0 0 $ouiButtonBorderRadius;
-    }
+      &:first-child {
+        border-radius: $ouiButtonBorderRadius 0 0 $ouiButtonBorderRadius;
+      }
 
-    &:last-child {
-      border-radius: 0 $ouiButtonBorderRadius $ouiButtonBorderRadius 0;
+      &:last-child {
+        border-radius: 0 $ouiButtonBorderRadius $ouiButtonBorderRadius 0;
+      }
     }
   }
+
+  &.ouiButtonGroup--vertical {
+    .ouiButtonGroupButton {
+      &:not(:first-child) {
+        margin-top: -1px;
+      }
+
+      &:first-child {
+        border-radius: $ouiButtonBorderRadius $ouiButtonBorderRadius 0 0;
+      }
+
+      &:last-child {
+        border-radius: 0 0 $ouiButtonBorderRadius $ouiButtonBorderRadius;
+      }
+    }
+  }
+
 
   // Fix ghost/disabled look specifically
   .ouiButtonGroupButton.ouiButtonGroupButton-isDisabled.ouiButtonGroupButton--ghost {
