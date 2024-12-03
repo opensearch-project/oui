@@ -1,35 +1,14 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
-
-### Deprecations
-
-
-### 🛡 Security
-
+## [`1.18.0`](https://github.com/opensearch-project/oui/tree/1.18)
 
 ### 📈 Features/Enhancements
 - Add vertical oriented button group ([#755](https://github.com/opensearch-project/oui/pull/755))
 - Add sparkleFilled icon ([#1452](https://github.com/opensearch-project/oui/pull/1452))
 - Update colors v9 theme ([#1460](https://github.com/opensearch-project/oui/pull/1460))
 
-### 🐛 Bug Fixes
-
-
-### 🚞 Infrastructure
-
-
 ### 📝 Documentation
  - Update figma link to latest v2 ([#1456](https://github.com/opensearch-project/oui/pull/1456))
-
-
-### 🛠 Maintenance
-
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
 
 
 ## [`1.17.0`](https://github.com/opensearch-project/oui/tree/1.17)
