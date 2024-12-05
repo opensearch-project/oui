@@ -38,6 +38,10 @@
 - Update v9 theme colors ([#1446](https://github.com/opensearch-project/oui/pull/1446))
 
 
+### 🛡 Security
+- Update cross-spawn to address CVE ([#1469](https://github.com/opensearch-project/oui/pull/1469))
+
+
 ## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)
 
 ### 📈 Features/Enhancements
