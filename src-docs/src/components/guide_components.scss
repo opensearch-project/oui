@@ -344,22 +344,10 @@ body {
   }
 }
 
-.guideHomePage__blockformCard {
-  min-width: 200px;
-  flex-basis: 100% !important;
-
-  // sass-lint:disable-block mixins-before-declarations
-  @include ouiBreakpoint('s', 'm') {
-    flex-basis: 45% !important; // sass-lint:disable-line no-important
-  }
-
-  @include ouiBreakpoint('l') {
-    flex-basis: 30% !important; // sass-lint:disable-line no-important
-  }
-
-  @include ouiBreakpoint('xl') {
-    flex-basis: 22% !important; // sass-lint:disable-line no-important
-  }
+.guideHomePage__blockformContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: $ouiSizeL;
 }
 
 .guideHomePage__illustration {
