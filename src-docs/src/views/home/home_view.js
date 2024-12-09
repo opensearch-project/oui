@@ -29,7 +29,6 @@ import {
   OuiTitle,
   OuiPanel,
   OuiIcon,
-  OuiFlexGrid,
   OuiPageContent,
   OuiPageContentBody,
 } from '../../../../src/components';
