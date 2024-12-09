@@ -85,42 +85,36 @@ export const HomeView = () => (
           </OuiFlexItem>
         </OuiFlexGroup>
       </OuiPanel>
-      <OuiSpacer size="xxl" />
-      <OuiFlexGrid columns={3}>
-        <OuiFlexItem>
-          <OuiCard
-            icon={<OuiIcon size="l" type="accessibility" />}
-            layout="horizontal"
-            display="plain"
-            titleSize="xs"
-            title="Accessible to everyone"
-            description="Uses high contrast, color-blind safe palettes and tested with most
+      <OuiSpacer size="xl" />
+      <div className="guideHomePage__benefitsContainer">
+        <OuiCard
+          icon={<OuiIcon size="l" type="accessibility" />}
+          layout="horizontal"
+          display="plain"
+          titleSize="xs"
+          title="Accessible to everyone"
+          description="Uses high contrast, color-blind safe palettes and tested with most
         assistive technology."
-          />
-        </OuiFlexItem>
-        <OuiFlexItem>
-          <OuiCard
-            icon={<OuiIcon size="l" type="controlsHorizontal" />}
-            layout="horizontal"
-            display="plain"
-            titleSize="xs"
-            title="Flexible and composable"
-            description="Configurable enough to meet the needs of a wide array of contexts while maintaining brand and low-level consistency."
-          />
-        </OuiFlexItem>
-        <OuiFlexItem>
-          <OuiCard
-            icon={<OuiIcon size="l" type="documentEdit" />}
-            layout="horizontal"
-            display="plain"
-            titleSize="xs"
-            title="Well documented and tested"
-            description="Code is friendly to the novice and expert alike."
-          />
-        </OuiFlexItem>
-      </OuiFlexGrid>
-      <OuiSpacer size="xxl" />
-      <div className="guideHomePage__blockformContainer">
+        />
+        <OuiCard
+          icon={<OuiIcon size="l" type="controlsHorizontal" />}
+          layout="horizontal"
+          display="plain"
+          titleSize="xs"
+          title="Flexible and composable"
+          description="Configurable enough to meet the needs of a wide array of contexts while maintaining brand and low-level consistency."
+        />
+        <OuiCard
+          icon={<OuiIcon size="l" type="documentEdit" />}
+          layout="horizontal"
+          display="plain"
+          titleSize="xs"
+          title="Well documented and tested"
+          description="Code is friendly to the novice and expert alike."
+        />
+      </div>
+      <OuiSpacer size="xl" />
+      <div className="guideHomePage__featuredComponents">
         <OuiCard
           hasBorder
           href="#/navigation/button"

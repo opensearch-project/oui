@@ -344,7 +344,17 @@ body {
   }
 }
 
-.guideHomePage__blockformContainer {
+.guideHomePage__benefitsContainer, .guideHomePage__featuredComponents {
+    padding-left: $ouiSizeL;
+    padding-right: $ouiSizeL;
+}
+.guideHomePage__benefitsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: $ouiSizeL;
+}
+
+.guideHomePage__featuredComponents {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: $ouiSizeL;
