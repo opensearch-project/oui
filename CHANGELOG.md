@@ -5,6 +5,10 @@
 ### Deprecations
 
 ### 🛡 Security
+- Update cross-spawn to address CVE ([#1469](https://github.com/opensearch-project/oui/pull/1469))
+- Update webpack and webpack-dev-server to address CVEs ([#1473](https://github.com/opensearch-project/oui/pull/1473))
+
+## [`1.18.0`](https://github.com/opensearch-project/oui/tree/1.18)
 
 
 ### 📈 Features/Enhancements
@@ -39,8 +43,6 @@
 
 
 ### 🛡 Security
-- Update cross-spawn to address CVE ([#1469](https://github.com/opensearch-project/oui/pull/1469))
-- Update webpack and webpack-dev-server to address CVEs ([#1473](https://github.com/opensearch-project/oui/pull/1473))
 
 
 ## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)
