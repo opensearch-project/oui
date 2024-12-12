@@ -54,6 +54,7 @@
     "babel-plugin-inline-react-svg/**/ansi-regex": "^5.0.1",
     "babel-plugin-inline-react-svg/svgo/js-yaml": "^3.13.1",
     "babel-template/**/ansi-regex": "^5.0.1",
+    "cross-spawn": "^7.0.6",
     "cssnano/**/css-select/nth-check": "^2.0.1",
     "cssnano/**/postcss": "^7.0.39",
     "enzyme/cheerio/cheerio-select-tmp/css-select/css-what": "^6.1.0",
