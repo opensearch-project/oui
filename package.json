@@ -202,7 +202,7 @@
     "html-format": "^1.0.2",
     "html-webpack-plugin": "^4.4.1",
     "jest": "^24.1.0",
-    "jest-cli": "^24.1.0",
+    "jest-cli": "^25.0.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.41",
     "pegjs": "^0.10.0",
