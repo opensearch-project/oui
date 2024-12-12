@@ -60,7 +60,7 @@ const terserPlugin = new TerserPlugin({
   sourceMap: true,
 });
 
-module.exports = {
+module.exports = (env) => ({
   mode: isProduction ? 'production' : 'development',
 
   devtool: isProduction ? 'source-map' : 'cheap-module-source-map',
@@ -73,7 +73,8 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: `oui${isProduction ? '.min' : ''}.js`,
+    filename: env.filename || `oui${isProduction ? '.min' : ''}.js`,
+    libraryTarget: env['library-target'] || undefined,
   },
 
   resolve: {
@@ -115,4 +116,4 @@ module.exports = {
     minimizer: [terserPlugin],
     noEmitOnErrors: true,
   },
-};
+});
