@@ -29,7 +29,6 @@ import {
   OuiTitle,
   OuiPanel,
   OuiIcon,
-  OuiFlexGrid,
   OuiPageContent,
   OuiPageContentBody,
 } from '../../../../src/components';
@@ -85,127 +84,101 @@ export const HomeView = () => (
           </OuiFlexItem>
         </OuiFlexGroup>
       </OuiPanel>
-      <OuiSpacer size="xxl" />
-      <OuiFlexGrid columns={3}>
-        <OuiFlexItem>
-          <OuiCard
-            icon={<OuiIcon size="l" type="accessibility" />}
-            layout="horizontal"
-            display="plain"
-            titleSize="xs"
-            title="Accessible to everyone"
-            description="Uses high contrast, color-blind safe palettes and tested with most
+      <OuiSpacer size="xl" />
+      <div className="guideHomePage__benefitsContainer">
+        <OuiCard
+          icon={<OuiIcon size="l" type="accessibility" />}
+          layout="horizontal"
+          display="plain"
+          titleSize="xs"
+          title="Accessible to everyone"
+          description="Uses high contrast, color-blind safe palettes and tested with most
         assistive technology."
-          />
-        </OuiFlexItem>
-        <OuiFlexItem>
-          <OuiCard
-            icon={<OuiIcon size="l" type="controlsHorizontal" />}
-            layout="horizontal"
-            display="plain"
-            titleSize="xs"
-            title="Flexible and composable"
-            description="Configurable enough to meet the needs of a wide array of contexts while maintaining brand and low-level consistency."
-          />
-        </OuiFlexItem>
-        <OuiFlexItem>
-          <OuiCard
-            icon={<OuiIcon size="l" type="documentEdit" />}
-            layout="horizontal"
-            display="plain"
-            titleSize="xs"
-            title="Well documented and tested"
-            description="Code is friendly to the novice and expert alike."
-          />
-        </OuiFlexItem>
-      </OuiFlexGrid>
-      <OuiSpacer size="xxl" />
-      <OuiFlexGroup
-        gutterSize="l"
-        wrap
-        responsive={false}
-        justifyContent="spaceBetween">
-        <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
-          <OuiCard
-            hasBorder
-            href="#/navigation/button"
-            textAlign="left"
-            image={imageButtons}
-            title="Buttons"
-            description="Buttons for every usage you might need"
-          />
-        </OuiFlexItem>
-        <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
-          <OuiCard
-            hasBorder
-            href="#/display/card"
-            textAlign="left"
-            image={imageCards}
-            title="Cards"
-            description="Cards like these help you make repeatable content more presentable"
-          />
-        </OuiFlexItem>
-        <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
-          <OuiCard
-            hasBorder
-            href="#/layout/flex"
-            textAlign="left"
-            image={imageFlexgrid}
-            title="Flexible layouts"
-            description="Create layouts by using flex groups, grids, and items"
-          />
-        </OuiFlexItem>
-        <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
-          <OuiCard
-            hasBorder
-            href="#/forms/form-layouts"
-            textAlign="left"
-            image={imageForms}
-            title="Forms"
-            description="Input tags, layouts, and validation for your forms"
-          />
-        </OuiFlexItem>
-        <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
-          <OuiCard
-            hasBorder
-            href="#/display/icons"
-            textAlign="left"
-            image={imageIcons}
-            title="Icons"
-            description="Our SVG icon library gives you full control over size and color"
-          />
-        </OuiFlexItem>
-        <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
-          <OuiCard
-            hasBorder
-            href="#/layout/page"
-            textAlign="left"
-            image={imagePages}
-            title="Pages"
-            description="Layout your whole application page with this component and its series of child components"
-          />
-        </OuiFlexItem>
-        <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
-          <OuiCard
-            hasBorder
-            href="#/tabular-content/tables"
-            textAlign="left"
-            image={imageTables}
-            title="Tables"
-            description="Build tables from individual components or high level wrappers"
-          />
-        </OuiFlexItem>
-        <OuiFlexItem grow={false} className="guideHomePage__blockformCard">
-          <OuiCard
-            hasBorder
-            href="#/display/text"
-            textAlign="left"
-            image={imageText}
-            title="Text"
-            description="Simple HTML text like paragraphs and lists are wrapped in a single text component for styling"
-          />
-        </OuiFlexItem>
-      </OuiFlexGroup>
+        />
+        <OuiCard
+          icon={<OuiIcon size="l" type="controlsHorizontal" />}
+          layout="horizontal"
+          display="plain"
+          titleSize="xs"
+          title="Flexible and composable"
+          description="Configurable enough to meet the needs of a wide array of contexts while maintaining brand and low-level consistency."
+        />
+        <OuiCard
+          icon={<OuiIcon size="l" type="documentEdit" />}
+          layout="horizontal"
+          display="plain"
+          titleSize="xs"
+          title="Well documented and tested"
+          description="Code is friendly to the novice and expert alike."
+        />
+      </div>
+      <OuiSpacer size="xl" />
+      <div className="guideHomePage__featuredComponents">
+        <OuiCard
+          hasBorder
+          href="#/navigation/button"
+          textAlign="left"
+          image={imageButtons}
+          title="Buttons"
+          description="Buttons for every usage you might need"
+        />
+        <OuiCard
+          hasBorder
+          href="#/display/card"
+          textAlign="left"
+          image={imageCards}
+          title="Cards"
+          description="Cards like these help you make repeatable content more presentable"
+        />
+        <OuiCard
+          hasBorder
+          href="#/layout/flex"
+          textAlign="left"
+          image={imageFlexgrid}
+          title="Flexible layouts"
+          description="Create layouts by using flex groups, grids, and items"
+        />
+        <OuiCard
+          hasBorder
+          href="#/forms/form-layouts"
+          textAlign="left"
+          image={imageForms}
+          title="Forms"
+          description="Input tags, layouts, and validation for your forms"
+        />
+        <OuiCard
+          hasBorder
+          href="#/display/icons"
+          textAlign="left"
+          image={imageIcons}
+          title="Icons"
+          description="Our SVG icon library gives you full control over size and color"
+        />
+        <OuiCard
+          hasBorder
+          href="#/layout/page"
+          textAlign="left"
+          image={imagePages}
+          title="Pages"
+          description="Layout your whole application page with this component and its series of child components"
+        />
+        <OuiCard
+          hasBorder
+          href="#/tabular-content/tables"
+          textAlign="left"
+          image={imageTables}
+          title="Tables"
+          description="Build tables from individual components or high level wrappers"
+        />
+        <OuiCard
+          hasBorder
+          href="#/display/text"
+          textAlign="left"
+          image={imageText}
+          title="Text"
+          description="Simple HTML text like paragraphs and lists are wrapped in a single text component for styling"
+        />
+      </div>
 
       <OuiSpacer size="xl" />
       <div>
