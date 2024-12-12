@@ -344,22 +344,20 @@ body {
   }
 }
 
-.guideHomePage__blockformCard {
-  min-width: 200px;
-  flex-basis: 100% !important;
+.guideHomePage__benefitsContainer,
+.guideHomePage__featuredComponents {
+  display: grid;
+  gap: $ouiSizeL; // sass-lint:disable-line no-misspelled-properties
+  padding-left: $ouiSizeL;
+  padding-right: $ouiSizeL;
+}
 
-  // sass-lint:disable-block mixins-before-declarations
-  @include ouiBreakpoint('s', 'm') {
-    flex-basis: 45% !important; // sass-lint:disable-line no-important
-  }
+.guideHomePage__benefitsContainer {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
 
-  @include ouiBreakpoint('l') {
-    flex-basis: 30% !important; // sass-lint:disable-line no-important
-  }
-
-  @include ouiBreakpoint('xl') {
-    flex-basis: 22% !important; // sass-lint:disable-line no-important
-  }
+.guideHomePage__featuredComponents {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
 .guideHomePage__illustration {
