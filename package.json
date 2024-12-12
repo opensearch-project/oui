@@ -236,7 +236,7 @@
     "terser-webpack-plugin": "^4.1.0",
     "typescript": "4.6.4",
     "url-loader": "^4.1.0",
-    "webpack": "^4.47.0",
+    "webpack": "npm:@amoo-miki/webpack@4.46.0-rc.2",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.15.2",
     "yeoman-generator": "^5.8.0",
