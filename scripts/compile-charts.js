@@ -35,12 +35,8 @@ const dtsGenerator = require('dts-generator').default;
 
 function compileChartsBundle() {
   console.log('Building chart theme module...');
-  execSync(
-    'webpack src/themes/charts/themes.ts -o dist/oui_charts_theme.js --output-library-target="commonjs" --config=src/webpack.config.js',
-    {
-      stdio: 'inherit',
-    }
-  );
+  webpackCompile('oui_charts_theme.js');
+
   dtsGenerator({
     prefix: '',
     out: 'dist/oui_charts_theme.d.ts',
@@ -58,12 +54,8 @@ function compileChartsBundle() {
   });
 
   /* OUI -> EUI Aliases */
-  execSync(
-    'webpack src/themes/charts/themes.ts -o dist/eui_charts_theme.js --output-library-target="commonjs" --config=src/webpack.config.js',
-    {
-      stdio: 'inherit',
-    }
-  );
+  webpackCompile('eui_charts_theme.js');
+
   dtsGenerator({
     prefix: '',
     out: 'dist/eui_charts_theme.d.ts',
@@ -82,6 +74,19 @@ function compileChartsBundle() {
   /* End of Aliases */
 
   console.log(chalk.green('✔ Finished chart theme module'));
+}
+
+function webpackCompile(outputFilename) {
+  execSync(
+    `webpack ${path.join(__dirname, '../src/themes/charts/themes.ts')} \
+        -o dist \
+        --config=src/webpack.config.js \
+        --env filename=${outputFilename} \
+        --env library-target=commonjs`,
+    {
+      stdio: 'inherit',
+    }
+  );
 }
 
 compileChartsBundle();
