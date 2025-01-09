@@ -9,8 +9,9 @@
 
 
 ### 📈 Features/Enhancements
-- Add bookOpen, compass, dashboard, functionAdd, lineChart, pulse, radar, and rocket icons ([#1443](https://github.com/opensearch-project/oui/pull/1443))
-- Update v9 theme colors ([#1446](https://github.com/opensearch-project/oui/pull/1446))
+- Add vertical oriented button group ([#755](https://github.com/opensearch-project/oui/pull/755))
+- Add sparkleFilled icon ([#1452](https://github.com/opensearch-project/oui/pull/1452))
+- Update colors v9 theme ([#1460](https://github.com/opensearch-project/oui/pull/1460))
 
 ### 🐛 Bug Fixes
 
@@ -19,6 +20,7 @@
 
 
 ### 📝 Documentation
+ - Update figma link to latest v2 ([#1456](https://github.com/opensearch-project/oui/pull/1456))
 
 
 ### 🛠 Maintenance
@@ -28,6 +30,13 @@
 
 
 ### 🔩 Tests
+
+
+## [`1.17.0`](https://github.com/opensearch-project/oui/tree/1.17)
+
+### 📈 Features/Enhancements
+- Add bookOpen, compass, dashboard, functionAdd, lineChart, pulse, radar, and rocket icons ([#1443](https://github.com/opensearch-project/oui/pull/1443))
+- Update v9 theme colors ([#1446](https://github.com/opensearch-project/oui/pull/1446))
 
 
 ## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)

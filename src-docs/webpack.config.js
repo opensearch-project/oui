@@ -10,6 +10,7 @@
  */
 
 const path = require('path');
+const { ProvidePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 const babelConfig = require('./.babelrc.js');
@@ -132,11 +133,13 @@ const webpackConfig = {
       failOnError: true,
     }),
 
-    // run TypeScript during webpack build
-    // new ForkTsCheckerWebpackPlugin({
-    //   typescript: { configFile: path.resolve(__dirname, '..', 'tsconfig.json') },
-    //   async: false, // makes errors more visible, but potentially less performant
-    // }),
+    new ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
+    }),
+
+    new ProvidePlugin({
+      process: 'process/browser',
+    }),
   ],
 
   devServer: isDevelopment
