@@ -1,9 +1,6 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
-
-### Deprecations
-
+## [`1.19.0`](https://github.com/opensearch-project/oui/tree/1.19)
 
 ### 🛡 Security
 - Update cross-spawn to address CVE ([#1469](https://github.com/opensearch-project/oui/pull/1469))
@@ -12,22 +9,8 @@
 ### 📈 Features/Enhancements
 - Add vertical oriented button group ([#755](https://github.com/opensearch-project/oui/pull/755))
 
-### 🐛 Bug Fixes
-
-
-### 🚞 Infrastructure
-
-
 ### 📝 Documentation
 - Refactor OUI Documentation homepage layout ([#1472](https://github.com/opensearch-project/oui/pull/1472))
-
-### 🛠 Maintenance
-
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
 
  
 ## [`1.18.0`](https://github.com/opensearch-project/oui/tree/1.18)
