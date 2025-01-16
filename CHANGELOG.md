@@ -21,6 +21,7 @@
 
 
 ### 🛠 Maintenance
+- Add @ruanyl and @d-rowe as maintainers ([#])(https://github.com/opensearch-project/oui/pull/)
 
 
 ### 🪛 Refactoring

@@ -11,6 +11,8 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | Ashwin P Chandran        | [ashwin-pc](https://github.com/ashwin-pc)         | Amazon      |
 | Josh Romero              | [joshuarrrr](https://github.com/joshuarrrr)       | Amazon      |
 | Viraj Sanghvi            | [virajsanghvi](https://github.com/virajsanghvi)   | Amazon      |
+| Yulong Ruan              | [ruanyl](https://github.com/ruanyl)               | Amazon      |
+| Daniel Rowe              | [d-rowe](https://github.com/d-rowe)               | Amazon      |
 
 
 ## Emeritus
