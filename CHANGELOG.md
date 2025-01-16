@@ -4,11 +4,8 @@
 
 ### Deprecations
 
-### 🛡 Security
-- Update cross-spawn to address CVE ([#1469](https://github.com/opensearch-project/oui/pull/1469))
-- Update webpack and webpack-dev-server to address CVEs ([#1473](https://github.com/opensearch-project/oui/pull/1473))
 
-## [`1.18.0`](https://github.com/opensearch-project/oui/tree/1.18)
+### 🛡 Security
 
 
 ### 📈 Features/Enhancements
@@ -21,7 +18,6 @@
 
 
 ### 📝 Documentation
- - Refactor OUI Documentation homepage layout ([#1472](https://github.com/opensearch-project/oui/pull/1472))
 
 
 ### 🛠 Maintenance
@@ -31,11 +27,24 @@
 
 
 ### 🔩 Tests
+ 
+
+## [`1.19.0`](https://github.com/opensearch-project/oui/tree/1.19)
+
+### 🛡 Security
+- Update cross-spawn to address CVE ([#1469](https://github.com/opensearch-project/oui/pull/1469))
+- Update webpack and webpack-dev-server to address CVEs ([#1473](https://github.com/opensearch-project/oui/pull/1473))
+
+### 📈 Features/Enhancements
+- Add vertical oriented button group ([#755](https://github.com/opensearch-project/oui/pull/755))
+
+### 📝 Documentation
+ - Refactor OUI Documentation homepage layout ([#1472](https://github.com/opensearch-project/oui/pull/1472))
+
 
 ## [`1.18.0`](https://github.com/opensearch-project/oui/tree/1.18)
 
 ### 📈 Features/Enhancements
-- Add vertical oriented button group ([#755](https://github.com/opensearch-project/oui/pull/755))
 - Add sparkleFilled icon ([#1452](https://github.com/opensearch-project/oui/pull/1452))
 - Update colors v9 theme ([#1460](https://github.com/opensearch-project/oui/pull/1460))
 
