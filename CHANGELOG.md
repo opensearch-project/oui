@@ -12,6 +12,7 @@
 
 
 ### 🐛 Bug Fixes
+- fix button line-height inherit causes text cut off ([#1490](https://github.com/opensearch-project/oui/pull/1490))
 
 
 ### 🚞 Infrastructure
