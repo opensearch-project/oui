@@ -16,6 +16,7 @@
 
 
 ### 🚞 Infrastructure
+- update actions/upload-artifact and actions/download-artifact to v4([#1491](https://github.com/opensearch-project/oui/pull/1491))
 
 
 ### 📝 Documentation
