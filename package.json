@@ -45,6 +45,9 @@
   },
   "resolutions": {
     "**/semver": "^7.5.3",
+    "**/@babel/runtime": "^7.27.0",
+    "**/@babel/runtime-corejs3": "^7.27.0",
+    "**/@babel/runtime-corejs2": "^7.27.0",
     "@babel/cli/**/ansi-regex": "^5.0.1",
     "@babel/cli/**/minimist": "^1.2.6",
     "@babel/cli/chokidar/glob-parent": "^6.0.1",
@@ -249,5 +252,6 @@
     "react": "^16.12",
     "react-dom": "^16.12",
     "typescript": "^4.0.5"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
