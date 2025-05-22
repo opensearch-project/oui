@@ -115,6 +115,15 @@ describe('OuiTabbedContent', () => {
         });
       });
     });
+
+    describe('cacheContent', () => {
+      test('content of all tabs should appear on dom', () => {
+        const component = render(
+          <OuiTabbedContent cacheContent={true} tabs={tabs} />
+        );
+        expect(component.find('div[role="tabpanel"]').length).toBe(2);
+      });
+    });
   });
 
   describe('behavior', () => {

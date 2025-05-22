@@ -84,14 +84,19 @@ export type OuiTabbedContentProps = CommonProps &
      * The name property (a node) is also required to display to the user.
      */
     tabs: OuiTabbedContentTab[];
+    /**
+     * Use this prop to control if tab content of unselected tab will stay in dom.
+     */
+    cacheContent?: boolean;
   };
 
 export class OuiTabbedContent extends Component<
   OuiTabbedContentProps,
   OuiTabbedContentState
 > {
-  static defaultProps = {
+  static defaultProps: Partial<OuiTabbedContentProps> = {
     autoFocus: 'initial',
+    cacheContent: false,
   };
 
   private readonly rootId = htmlIdGenerator()();
@@ -193,6 +198,7 @@ export class OuiTabbedContent extends Component<
       size,
       tabs,
       autoFocus,
+      cacheContent,
       ...rest
     } = this.props;
 
@@ -233,12 +239,30 @@ export class OuiTabbedContent extends Component<
           })}
         </OuiTabs>
 
-        <div
-          role="tabpanel"
-          id={`${this.rootId}`}
-          aria-labelledby={selectedTabId}>
-          {selectedTabContent}
-        </div>
+        {!cacheContent && (
+          <div
+            role="tabpanel"
+            id={`${this.rootId}`}
+            aria-labelledby={selectedTabId}>
+            {selectedTabContent}
+          </div>
+        )}
+
+        {cacheContent &&
+          tabs.map((tab: OuiTabbedContentTab) => {
+            const { id, content } = tab;
+
+            return (
+              <div
+                key={id}
+                role="tabpanel"
+                id={id}
+                aria-labelledby={id}
+                style={{ display: id === selectedTabId ? 'block' : 'none' }}>
+                {content}
+              </div>
+            );
+          })}
       </div>
     );
   }
