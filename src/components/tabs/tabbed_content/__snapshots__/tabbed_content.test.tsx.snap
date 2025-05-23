@@ -53,7 +53,7 @@ exports[`OuiTabbedContent behavior when selected tab state isn't controlled by t
 exports[`OuiTabbedContent behavior when uncontrolled, the selected tab should update if it receives new content 1`] = `
 <OuiTabbedContent
   autoFocus="initial"
-  cacheContent={false}
+  preserveTabContent={false}
   tabs={
     Array [
       Object {

@@ -49,6 +49,7 @@ export interface OuiTabbedContentTab {
 
 interface OuiTabbedContentState {
   selectedTabId: string | undefined;
+  preservedTabsId: string[];
   inFocus: boolean;
 }
 
@@ -85,9 +86,9 @@ export type OuiTabbedContentProps = CommonProps &
      */
     tabs: OuiTabbedContentTab[];
     /**
-     * Use this prop to control if tab content of unselected tab will stay in dom.
+     * Use this prop to allow tab content stay in dom, if the tab has been selected.
      */
-    cacheContent?: boolean;
+    preserveTabContent?: boolean;
   };
 
 export class OuiTabbedContent extends Component<
@@ -96,7 +97,7 @@ export class OuiTabbedContent extends Component<
 > {
   static defaultProps: Partial<OuiTabbedContentProps> = {
     autoFocus: 'initial',
-    cacheContent: false,
+    preserveTabContent: false,
   };
 
   private readonly rootId = htmlIdGenerator()();
@@ -115,8 +116,16 @@ export class OuiTabbedContent extends Component<
         (initialSelectedTab && initialSelectedTab.id) || tabs[0].id;
     }
 
+    const preservedTabsId = [];
+    preservedTabsId.push(
+      selectedTab
+        ? selectedTab.id
+        : (initialSelectedTab && initialSelectedTab.id) || tabs[0].id
+    );
+
     this.state = {
       selectedTabId,
+      preservedTabsId,
       inFocus: false,
     };
   }
@@ -180,11 +189,12 @@ export class OuiTabbedContent extends Component<
     }
 
     // Only track selection state if it's not controlled externally.
-    if (!externalSelectedTab) {
-      this.setState({ selectedTabId: selectedTab.id }, () => {
-        this.focusTab();
-      });
-    }
+    this.setState((prevState) => ({
+      selectedTabId: externalSelectedTab
+        ? prevState.selectedTabId
+        : selectedTab.id,
+      preservedTabsId: [...prevState.preservedTabsId, selectedTab.id],
+    }));
   };
 
   render() {
@@ -198,7 +208,7 @@ export class OuiTabbedContent extends Component<
       size,
       tabs,
       autoFocus,
-      cacheContent,
+      preserveTabContent,
       ...rest
     } = this.props;
 
@@ -239,7 +249,7 @@ export class OuiTabbedContent extends Component<
           })}
         </OuiTabs>
 
-        {!cacheContent && (
+        {!preserveTabContent && (
           <div
             role="tabpanel"
             id={`${this.rootId}`}
@@ -248,20 +258,24 @@ export class OuiTabbedContent extends Component<
           </div>
         )}
 
-        {cacheContent &&
+        {preserveTabContent &&
           tabs.map((tab: OuiTabbedContentTab) => {
             const { id, content } = tab;
 
-            return (
-              <div
-                key={id}
-                role="tabpanel"
-                id={id}
-                aria-labelledby={id}
-                style={{ display: id === selectedTabId ? 'block' : 'none' }}>
-                {content}
-              </div>
-            );
+            if (this.state.preservedTabsId.includes(id)) {
+              return (
+                <div
+                  key={id}
+                  role="tabpanel"
+                  id={id}
+                  aria-labelledby={id}
+                  style={
+                    id === selectedTabId ? undefined : { display: 'none' }
+                  }>
+                  {content}
+                </div>
+              );
+            }
           })}
       </div>
     );

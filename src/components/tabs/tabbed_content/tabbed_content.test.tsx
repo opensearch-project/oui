@@ -117,10 +117,13 @@ describe('OuiTabbedContent', () => {
     });
 
     describe('cacheContent', () => {
-      test('content of all tabs should appear on dom', () => {
-        const component = render(
-          <OuiTabbedContent cacheContent={true} tabs={tabs} />
+      test('content of tabs that has been selected before should stay in dom', () => {
+        const component = mount(
+          <OuiTabbedContent preserveTabContent={true} tabs={tabs} />
         );
+        expect(component.find('div[role="tabpanel"]').length).toBe(1);
+
+        component.find('OuiTab[id="kibana"] button').first().simulate('click');
         expect(component.find('div[role="tabpanel"]').length).toBe(2);
       });
     });
