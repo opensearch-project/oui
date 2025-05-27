@@ -72,7 +72,7 @@ jobs:
         run: yarn pack --filename oui.tgz
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: build
           path: oui.tgz
@@ -101,7 +101,7 @@ jobs:
         run: yarn build-docs
 
       - name: Upload doc artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: docs
           path: docs/
@@ -133,7 +133,7 @@ jobs:
 
       - name: Download build
         id: download
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build
 
@@ -185,7 +185,7 @@ jobs:
 
       - name: Download build
         id: download
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build
 
@@ -244,7 +244,7 @@ jobs:
 
       - name: Download build
         id: download
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: build
 
@@ -275,7 +275,7 @@ jobs:
       - name: Build `${{ matrix.name }}`
         run: yarn ${{ matrix.script }} --release
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         if: success()
         with:
           name: ${{ matrix.suffix }}-${{ env.VERSION }}
