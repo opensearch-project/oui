@@ -49,6 +49,7 @@ export interface OuiTabbedContentTab {
 
 interface OuiTabbedContentState {
   selectedTabId: string | undefined;
+  preservedTabsId: string[];
   inFocus: boolean;
 }
 
@@ -84,14 +85,19 @@ export type OuiTabbedContentProps = CommonProps &
      * The name property (a node) is also required to display to the user.
      */
     tabs: OuiTabbedContentTab[];
+    /**
+     * Use this prop to allow tab content stay in dom, if the tab has been selected.
+     */
+    preserveTabContent?: boolean;
   };
 
 export class OuiTabbedContent extends Component<
   OuiTabbedContentProps,
   OuiTabbedContentState
 > {
-  static defaultProps = {
+  static defaultProps: Partial<OuiTabbedContentProps> = {
     autoFocus: 'initial',
+    preserveTabContent: false,
   };
 
   private readonly rootId = htmlIdGenerator()();
@@ -110,8 +116,16 @@ export class OuiTabbedContent extends Component<
         (initialSelectedTab && initialSelectedTab.id) || tabs[0].id;
     }
 
+    const preservedTabsId = [];
+    preservedTabsId.push(
+      selectedTab
+        ? selectedTab.id
+        : (initialSelectedTab && initialSelectedTab.id) || tabs[0].id
+    );
+
     this.state = {
       selectedTabId,
+      preservedTabsId,
       inFocus: false,
     };
   }
@@ -175,11 +189,12 @@ export class OuiTabbedContent extends Component<
     }
 
     // Only track selection state if it's not controlled externally.
-    if (!externalSelectedTab) {
-      this.setState({ selectedTabId: selectedTab.id }, () => {
-        this.focusTab();
-      });
-    }
+    this.setState((prevState) => ({
+      selectedTabId: externalSelectedTab
+        ? prevState.selectedTabId
+        : selectedTab.id,
+      preservedTabsId: [...prevState.preservedTabsId, selectedTab.id],
+    }));
   };
 
   render() {
@@ -193,6 +208,7 @@ export class OuiTabbedContent extends Component<
       size,
       tabs,
       autoFocus,
+      preserveTabContent,
       ...rest
     } = this.props;
 
@@ -233,12 +249,34 @@ export class OuiTabbedContent extends Component<
           })}
         </OuiTabs>
 
-        <div
-          role="tabpanel"
-          id={`${this.rootId}`}
-          aria-labelledby={selectedTabId}>
-          {selectedTabContent}
-        </div>
+        {!preserveTabContent && (
+          <div
+            role="tabpanel"
+            id={`${this.rootId}`}
+            aria-labelledby={selectedTabId}>
+            {selectedTabContent}
+          </div>
+        )}
+
+        {preserveTabContent &&
+          tabs.map((tab: OuiTabbedContentTab) => {
+            const { id, content } = tab;
+
+            if (this.state.preservedTabsId.includes(id)) {
+              return (
+                <div
+                  key={id}
+                  role="tabpanel"
+                  id={id}
+                  aria-labelledby={id}
+                  style={
+                    id === selectedTabId ? undefined : { display: 'none' }
+                  }>
+                  {content}
+                </div>
+              );
+            }
+          })}
       </div>
     );
   }
