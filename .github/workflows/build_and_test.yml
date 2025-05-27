@@ -166,6 +166,12 @@ jobs:
         with:
           repository: opensearch-project/OpenSearch-Dashboards
 
+      - name: Setup JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'adopt'
+
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
