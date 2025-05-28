@@ -45,6 +45,7 @@
   },
   "resolutions": {
     "**/semver": "^7.5.3",
+    "**/braces": "^3.0.3",
     "@babel/cli/**/ansi-regex": "^5.0.1",
     "@babel/cli/**/minimist": "^1.2.6",
     "@babel/cli/chokidar/glob-parent": "^6.0.1",
@@ -250,5 +251,6 @@
     "react": "^16.12",
     "react-dom": "^16.12",
     "typescript": "^4.0.5"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
