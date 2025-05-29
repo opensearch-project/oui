@@ -12,7 +12,7 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | Josh Romero              | [joshuarrrr](https://github.com/joshuarrrr)       | Amazon      |
 | Viraj Sanghvi            | [virajsanghvi](https://github.com/virajsanghvi)   | Amazon      |
 | Yulong Ruan              | [ruanyl](https://github.com/ruanyl)               | Amazon      |
-| Daniel Rowe              | [d-rowe](https://github.com/d-rowe)               | Amazon      |
+| Daniel Rowe              | [d-buckner](https://github.com/d-buckner)         | Amazon      |
 
 
 ## Emeritus
