@@ -52,6 +52,7 @@
 
 - Fix naming conventions in OuiSearchBar code and docs ([#1426](https://github.com/opensearch-project/oui/pull/1426))
 - Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
+- Fix page title with os logo ([#1532](https://github.com/opensearch-project/oui/pull/1532))
 
 
 ## [`1.14.0`](https://github.com/opensearch-project/oui/tree/1.14)
