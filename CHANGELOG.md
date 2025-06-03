@@ -67,6 +67,7 @@
 
 ### 🛡 Security
 
+
 ## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)
 
 ### 📈 Features/Enhancements
