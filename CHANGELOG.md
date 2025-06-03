@@ -65,7 +65,7 @@
 
 
 ### 🛡 Security
-
+- update css loader to 5.0.0 ([1530](https://github.com/opensearch-project/oui/pull/1530))
 
 ## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)
 
