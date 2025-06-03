@@ -65,7 +65,7 @@
 
 
 ### 🛡 Security
-
+- Fix cve issue for transitive dependency @babel/runtime-corejs2 ([1531](https://github.com/opensearch-project/oui/pull/1531))
 
 ## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)
 
