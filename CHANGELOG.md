@@ -8,6 +8,7 @@
 ### 🛡 Security
 - Update react-router's dependency path-to-regexp to address CVE ([#1504](https://github.com/opensearch-project/oui/pull/1504))
 - Add package resolution to braces to address CVE ([#1524](https://github.com/opensearch-project/oui/pull/1524))
+- Update css loader to 5.0.0 ([1530](https://github.com/opensearch-project/oui/pull/1530))
 
 ### 📈 Features/Enhancements
 - Allow TabbedContent to preserve in dom #1500 ([#1500](https://github.com/opensearch-project/oui/pull/1500))
@@ -65,7 +66,6 @@
 
 
 ### 🛡 Security
-- update css loader to 5.0.0 ([1530](https://github.com/opensearch-project/oui/pull/1530))
 
 ## [`1.16.0`](https://github.com/opensearch-project/oui/tree/1.16)
 
