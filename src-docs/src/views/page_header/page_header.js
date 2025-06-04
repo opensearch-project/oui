@@ -21,7 +21,7 @@ import {
 export default () => (
   <OuiPageHeader
     pageTitle="Page title"
-    iconType="logoKibana"
+    iconType="logoOpenSearch"
     tabs={[
       {
         label: 'Tab 1',

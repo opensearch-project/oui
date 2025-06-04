@@ -6,6 +6,42 @@
 
 
 ### 🛡 Security
+<<<<<<< HEAD
+=======
+- Update react-router's dependency path-to-regexp to address CVE ([#1504](https://github.com/opensearch-project/oui/pull/1504))
+- Add package resolution to braces to address CVE ([#1524](https://github.com/opensearch-project/oui/pull/1524))
+
+### 📈 Features/Enhancements
+- Allow TabbedContent to preserve in dom #1500 ([#1500](https://github.com/opensearch-project/oui/pull/1500))
+
+
+### 🐛 Bug Fixes
+- fix button line-height inherit causes text cut off ([#1490](https://github.com/opensearch-project/oui/pull/1490))
+- Add OpenSearch logo to page title ([#1532](https://github.com/opensearch-project/oui/pull/1532))
+
+
+### 🚞 Infrastructure
+- update actions/upload-artifact and actions/download-artifact to v4([#1491](https://github.com/opensearch-project/oui/pull/1491))
+
+
+### 📝 Documentation
+
+
+### 🛠 Maintenance
+- Add @ruanyl and @d-rowe as maintainers ([#1485])(https://github.com/opensearch-project/oui/pull/1485)
+- Update maintainer alias from @d-rowe to @d-buckner ([#1492])(https://github.com/opensearch-project/oui/pull/1492)
+
+
+### 🪛 Refactoring
+
+
+### 🔩 Tests
+
+
+## [`1.19.0`](https://github.com/opensearch-project/oui/tree/1.19)
+
+### 🛡 Security
+>>>>>>> 9aa1cb00d (add opensearch logo to page title (#1533))
 - Update cross-spawn to address CVE ([#1469](https://github.com/opensearch-project/oui/pull/1469))
 - Update webpack and webpack-dev-server to address CVEs ([#1473](https://github.com/opensearch-project/oui/pull/1473))
 
