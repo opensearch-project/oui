@@ -8,6 +8,7 @@
 ### 🛡 Security
 - Update react-router's dependency path-to-regexp to address CVE ([#1504](https://github.com/opensearch-project/oui/pull/1504))
 - Add package resolution to braces to address CVE ([#1524](https://github.com/opensearch-project/oui/pull/1524))
+- Update css loader to 5.0.0 ([1530](https://github.com/opensearch-project/oui/pull/1530))
 - Fix cve issue for transitive dependency @babel/runtime-corejs2 ([1531](https://github.com/opensearch-project/oui/pull/1531))
 
 ### 📈 Features/Enhancements
