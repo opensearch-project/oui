@@ -40,7 +40,6 @@
 ## [`1.19.0`](https://github.com/opensearch-project/oui/tree/1.19)
 
 ### 🛡 Security
->>>>>>> 9aa1cb00d (add opensearch logo to page title (#1533))
 - Update cross-spawn to address CVE ([#1469](https://github.com/opensearch-project/oui/pull/1469))
 - Update webpack and webpack-dev-server to address CVEs ([#1473](https://github.com/opensearch-project/oui/pull/1473))
 
