@@ -46,6 +46,7 @@
   "resolutions": {
     "**/semver": "^7.5.3",
     "**/braces": "^3.0.3",
+    "**/@babel/runtime": "7.26.10",
     "@babel/cli/**/ansi-regex": "^5.0.1",
     "@babel/cli/**/minimist": "^1.2.6",
     "@babel/cli/chokidar/glob-parent": "^6.0.1",
@@ -174,7 +175,7 @@
     "circular-dependency-plugin": "^5.2.0",
     "core-js": "^3.29.1",
     "cross-env": "^7.0.3",
-    "css-loader": "^4.2.2",
+    "css-loader": "5.0.0",
     "cssnano": "^4.1.11",
     "deasync": "^0.1.28",
     "dedent": "^0.7.0",
