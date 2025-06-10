@@ -10,6 +10,7 @@
 - Add package resolution to braces to address CVE ([#1524](https://github.com/opensearch-project/oui/pull/1524))
 - Update css loader to 5.0.0 ([1530](https://github.com/opensearch-project/oui/pull/1530))
 - Fix cve issue for transitive dependency @babel/runtime-corejs2 ([1531](https://github.com/opensearch-project/oui/pull/1531))
+- Fix cve issue for elliptic and axios ([1549](https://github.com/opensearch-project/oui/pull/1549))
 
 ### 📈 Features/Enhancements
 - Allow TabbedContent to preserve in dom #1500 ([#1500](https://github.com/opensearch-project/oui/pull/1500))
