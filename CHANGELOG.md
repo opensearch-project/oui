@@ -31,6 +31,7 @@
 ### 🛠 Maintenance
 - Add @ruanyl and @d-rowe as maintainers ([#1485])(https://github.com/opensearch-project/oui/pull/1485)
 - Update maintainer alias from @d-rowe to @d-buckner ([#1492])(https://github.com/opensearch-project/oui/pull/1492)
+- Add @angle943, @Maosaic, and @ruchidh as maintainers ([#1553])(https://github.com/opensearch-project/oui/pull/1553)
 
 
 ### 🪛 Refactoring
