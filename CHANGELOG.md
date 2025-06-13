@@ -7,6 +7,7 @@
 
 ### 🛡 Security
 - Update react-router's dependency path-to-regexp to address CVE ([#1504](https://github.com/opensearch-project/oui/pull/1504))
+- chore(deps): update dependency puppeteer to v22 ([#15523](https://github.com/opensearch-project/oui/pull/1523))
 - Add package resolution to braces to address CVE ([#1524](https://github.com/opensearch-project/oui/pull/1524))
 - Update css loader to 5.0.0 ([1530](https://github.com/opensearch-project/oui/pull/1530))
 - Fix cve issue for transitive dependency @babel/runtime-corejs2 ([1531](https://github.com/opensearch-project/oui/pull/1531))
@@ -29,9 +30,10 @@
 
 
 ### 🛠 Maintenance
-- Add @ruanyl and @d-rowe as maintainers ([#1485])(https://github.com/opensearch-project/oui/pull/1485)
-- Update maintainer alias from @d-rowe to @d-buckner ([#1492])(https://github.com/opensearch-project/oui/pull/1492)
-- Add @angle943, @Maosaic, and @ruchidh as maintainers ([#1553])(https://github.com/opensearch-project/oui/pull/1553)
+- Add @ruanyl and @d-rowe as maintainers ([#1485](https://github.com/opensearch-project/oui/pull/1485))
+- Update maintainer alias from @d-rowe to @d-buckner ([#1492](https://github.com/opensearch-project/oui/pull/1492))
+- Add @angle943, @Maosaic, and @ruchidh as maintainers ([#1553](https://github.com/opensearch-project/oui/pull/1553))
+- Bump http-proxy-middleware from 2.0.7 to 2.0.9 ([#1551](https://github.com/opensearch-project/oui/pull/1551))
 
 
 ### 🪛 Refactoring
