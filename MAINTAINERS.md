@@ -13,6 +13,9 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | Viraj Sanghvi            | [virajsanghvi](https://github.com/virajsanghvi)   | Amazon      |
 | Yulong Ruan              | [ruanyl](https://github.com/ruanyl)               | Amazon      |
 | Daniel Rowe              | [d-buckner](https://github.com/d-buckner)         | Amazon      |
+| Justin Kim               | [angle943](https://github.com/angle943)           | Amazon      |
+| Joey Liu                 | [Maosaic](https://github.com/Maosaic)             | Amazon      |
+| Ruchi Sharma             | [ruchidh](https://github.com/ruchidh)             | Amazon      |
 
 
 ## Emeritus
