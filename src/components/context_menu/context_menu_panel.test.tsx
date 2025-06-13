@@ -53,6 +53,19 @@ const items = [
 ];
 
 describe('OuiContextMenuPanel', () => {
+  // Note: mounting to document because activeElement requires being part of document
+  let container: HTMLDivElement | null;
+
+  beforeEach(() => {
+    container = document.createElement('div');
+    document.body.appendChild(container);
+  });
+
+  afterEach(() => {
+    container?.parentNode?.removeChild(container);
+    container = null;
+  });
+
   test('is rendered', () => {
     const component = render(
       <OuiContextMenuPanel {...requiredProps}>Hello</OuiContextMenuPanel>
@@ -187,7 +200,8 @@ describe('OuiContextMenuPanel', () => {
     describe('initialFocusedItemIndex', () => {
       it('sets focus on the item occupying that index', async () => {
         const component = mount(
-          <OuiContextMenuPanel items={items} initialFocusedItemIndex={1} />
+          <OuiContextMenuPanel items={items} initialFocusedItemIndex={1} />,
+          { attachTo: container }
         );
 
         await tick(20);
@@ -199,7 +213,8 @@ describe('OuiContextMenuPanel', () => {
 
       it('sets focus on the panel when set to `-1`', async () => {
         const component = mount(
-          <OuiContextMenuPanel items={items} initialFocusedItemIndex={-1} />
+          <OuiContextMenuPanel items={items} initialFocusedItemIndex={-1} />,
+          { attachTo: container }
         );
 
         await tick(20);
@@ -310,23 +325,37 @@ describe('OuiContextMenuPanel', () => {
           </OuiContextMenuPanel>
         );
 
+        // Use the spy approach instead of checking document.activeElement
+        const buttonElement = findTestSubject(
+          component,
+          'button'
+        ).getDOMNode() as HTMLButtonElement;
+        const focusSpy = jest.spyOn(buttonElement, 'focus');
+
         await tick(20);
 
-        expect(findTestSubject(component, 'button').getDOMNode()).toBe(
-          document.activeElement
-        );
+        // Check if focus was called
+        expect(focusSpy).toHaveBeenCalled();
       });
 
-      it('is not set on anything if hasFocus is false', () => {
+      it('is not set on anything if hasFocus is false', async () => {
         const component = mount(
           <OuiContextMenuPanel hasFocus={false}>
             <button data-test-subj="button" />
           </OuiContextMenuPanel>
         );
 
-        expect(findTestSubject(component, 'button').getDOMNode()).not.toBe(
-          document.activeElement
-        );
+        // Use the spy approach instead of checking document.activeElement
+        const buttonElement = findTestSubject(
+          component,
+          'button'
+        ).getDOMNode() as HTMLButtonElement;
+        const focusSpy = jest.spyOn(buttonElement, 'focus');
+
+        await tick(20);
+
+        // Check if focus was called
+        expect(focusSpy).not.toHaveBeenCalled();
       });
     });
 
@@ -344,7 +373,8 @@ describe('OuiContextMenuPanel', () => {
             items={items}
             showNextPanel={showNextPanelHandler}
             showPreviousPanel={showPreviousPanelHandler}
-          />
+          />,
+          { attachTo: container }
         );
       });
 

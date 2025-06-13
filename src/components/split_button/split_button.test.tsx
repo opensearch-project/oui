@@ -241,6 +241,19 @@ describe('OuiSplitButton', () => {
     });
   });
   describe('Option-list keyboard control', () => {
+    // Note: providing container to optionally mount to document
+    let container: HTMLDivElement | null;
+
+    beforeEach(() => {
+      container = document.createElement('div');
+      document.body.appendChild(container);
+    });
+
+    afterEach(() => {
+      container?.parentNode?.removeChild(container);
+      container = null;
+    });
+
     describe('key up-down on buttons opens options list', () => {
       each([
         { key: keys.ARROW_DOWN, button: 'primary' },
@@ -310,7 +323,8 @@ describe('OuiSplitButton', () => {
               options={options}
               selectedIndex={startSelection}>
               test
-            </OuiSplitButton>
+            </OuiSplitButton>,
+            { attachTo: container }
           );
 
           await findByFocused(
@@ -342,7 +356,8 @@ describe('OuiSplitButton', () => {
       const component = mount(
         <OuiSplitButton initiallyOpen options={options} selectedIndex={1}>
           test
-        </OuiSplitButton>
+        </OuiSplitButton>,
+        { attachTo: container }
       );
 
       await findByFocused(component, 'button#splitButtonItem_1', {
