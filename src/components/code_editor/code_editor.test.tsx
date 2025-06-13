@@ -77,10 +77,18 @@ describe('OuiCodeEditor', () => {
   });
 
   describe('behavior', () => {
+    let container: HTMLDivElement | null;
     let component: ReactWrapper;
 
     beforeEach(() => {
-      component = mount(<OuiCodeEditor />);
+      container = document.createElement('div');
+      document.body.appendChild(container);
+      component = mount(<OuiCodeEditor />, { attachTo: container });
+    });
+
+    afterEach(() => {
+      container?.parentNode?.removeChild(container);
+      container = null;
     });
 
     describe('hint element', () => {

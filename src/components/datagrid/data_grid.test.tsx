@@ -2239,6 +2239,71 @@ describe('OuiDataGrid', () => {
   });
 
   describe('keyboard controls', () => {
+    // Note: mounting to document because activeElement requires being part of document
+    let container: HTMLDivElement | null;
+
+    beforeEach(() => {
+      container = document.createElement('div');
+      document.body.appendChild(container);
+    });
+
+    afterEach(() => {
+      container?.parentNode?.removeChild(container);
+      container = null;
+    });
+
+    // Note: This test fails if run after simple arrow navigation test
+    it('does not break arrow key focus control behavior when also using a mouse', async () => {
+      const component = mount(
+        <OuiDataGrid
+          {...requiredProps}
+          columns={[
+            { id: 'A', actions: false },
+            { id: 'B', actions: false },
+          ]}
+          columnVisibility={{
+            visibleColumns: ['A', 'B'],
+            setVisibleColumns: () => {},
+          }}
+          rowCount={3}
+          renderCellValue={({ rowIndex, columnId }) =>
+            `${rowIndex}, ${columnId}`
+          }
+        />,
+        { attachTo: container }
+      );
+
+      // enable the grid to accept focus
+      act(() =>
+        component
+          .find('div [data-test-subj="dataGridWrapper"][onFocus]')
+          .props().onFocus!({} as React.FocusEvent)
+      );
+      component.update();
+
+      let focusableCell = getFocusableCell(component);
+      expect(
+        focusableCell.find('[data-test-subj="cell-content"]').text()
+      ).toEqual('0, A');
+
+      findTestSubject(component, 'dataGridRowCell').at(3).simulate('focus');
+
+      // wait for a tick to give focus logic time to run
+      await act(async () => {
+        await new Promise((r) => setTimeout(r, 0));
+      });
+      component.update();
+
+      focusableCell = getFocusableCell(component);
+      expect(focusableCell.length).toEqual(1);
+      expect(
+        focusableCell.find('[data-test-subj="cell-content"]').text()
+      ).toEqual('1, B');
+
+      // Unmount the component to clean up any subscriptions
+      component.unmount();
+    });
+
     it('supports simple arrow navigation', async () => {
       let pagination = {
         pageIndex: 0,
@@ -2271,7 +2336,8 @@ describe('OuiDataGrid', () => {
             `${rowIndex}, ${columnId}`
           }
           pagination={pagination}
-        />
+        />,
+        { attachTo: container }
       );
 
       // enable the grid to accept focus
@@ -2453,52 +2519,6 @@ describe('OuiDataGrid', () => {
       ).toEqual('6, C');
     });
 
-    it('does not break arrow key focus control behavior when also using a mouse', async () => {
-      const component = mount(
-        <OuiDataGrid
-          {...requiredProps}
-          columns={[
-            { id: 'A', actions: false },
-            { id: 'B', actions: false },
-          ]}
-          columnVisibility={{
-            visibleColumns: ['A', 'B'],
-            setVisibleColumns: () => {},
-          }}
-          rowCount={3}
-          renderCellValue={({ rowIndex, columnId }) =>
-            `${rowIndex}, ${columnId}`
-          }
-        />
-      );
-
-      // enable the grid to accept focus
-      act(() =>
-        component
-          .find('div [data-test-subj="dataGridWrapper"][onFocus]')
-          .props().onFocus!({} as React.FocusEvent)
-      );
-      component.update();
-
-      let focusableCell = getFocusableCell(component);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('0, A');
-
-      findTestSubject(component, 'dataGridRowCell').at(3).simulate('focus');
-
-      // wait for a tick to give focus logic time to run
-      await act(async () => {
-        await new Promise((r) => setTimeout(r, 0));
-      });
-      component.update();
-
-      focusableCell = getFocusableCell(component);
-      expect(focusableCell.length).toEqual(1);
-      expect(
-        focusableCell.find('[data-test-subj="cell-content"]').text()
-      ).toEqual('1, B');
-    });
     it.skip('supports arrow navigation through grids with different interactive cells', () => {
       const component = mount(
         <OuiDataGrid

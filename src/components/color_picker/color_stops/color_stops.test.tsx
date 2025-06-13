@@ -53,6 +53,19 @@ const colorStopsArray = [
   { stop: 35, color: '#0000FF' },
 ];
 
+// Note: providing container to optionally mount to document
+let container: HTMLDivElement | null;
+
+beforeEach(() => {
+  container = document.createElement('div');
+  document.body.appendChild(container);
+});
+
+afterEach(() => {
+  container?.parentNode?.removeChild(container);
+  container = null;
+});
+
 // Note: A couple tests that would be nice, but can't be accomplished at the moment:
 // - Tab to bypass thumbs (tabindex="-1" not respected)
 // - Drag to reposition thumb (we can't get real page position info)
@@ -413,7 +426,8 @@ test('thumb focus changes', () => {
       min={0}
       max={100}
       {...requiredProps}
-    />
+    />,
+    { attachTo: container }
   );
 
   const wrapper = findTestSubject(colorStops, 'ouiColorStops');
@@ -438,7 +452,8 @@ test('thumb direction movement', () => {
       min={0}
       max={100}
       {...requiredProps}
-    />
+    />,
+    { attachTo: container }
   );
 
   const wrapper = findTestSubject(colorStops, 'ouiColorStops');

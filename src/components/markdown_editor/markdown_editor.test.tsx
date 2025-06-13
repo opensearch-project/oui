@@ -249,9 +249,14 @@ describe('OuiMarkdownEditor', () => {
       React.Component<{}, {}, any>
     >;
     let textareaNode: () => Element;
+    let container: HTMLDivElement | null;
+
     beforeEach(() => {
+      container = document.createElement('div');
+      document.body.appendChild(container);
       component = mount(
-        <OuiMarkdownEditor {...testProps} {...requiredProps} />
+        <OuiMarkdownEditor {...testProps} {...requiredProps} />,
+        { attachTo: container }
       );
       textareaNode = () =>
         component.find('OuiMarkdownEditorTextArea').getDOMNode();
@@ -264,6 +269,11 @@ describe('OuiMarkdownEditor', () => {
       //@ts-ignore
       document.getElementById = jest.fn(() => textarea);
       document.execCommand = jest.fn(() => true);
+    });
+
+    afterEach(() => {
+      container?.parentNode?.removeChild(container);
+      container = null;
     });
 
     it('bold selected text on bold icon click', () => {
