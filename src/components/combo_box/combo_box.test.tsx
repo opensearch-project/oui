@@ -417,18 +417,26 @@ describe('behavior', () => {
     });
 
     test('focuses the input', () => {
+      // Note: mounting to document because activeElement requires being part of document
+      const container = document.createElement('div');
+      document.body.appendChild(container);
+
       const component = mount(
         <OuiComboBox
           options={options}
           selectedOptions={[options[2]]}
           onChange={() => {}}
-        />
+        />,
+        { attachTo: container }
       );
 
       findTestSubject(component, 'comboBoxClearButton').simulate('click');
       expect(
         findTestSubject(component, 'comboBoxSearchInput').getDOMNode()
       ).toBe(document.activeElement);
+
+      // Clean up
+      document.body.removeChild(container);
     });
   });
 
