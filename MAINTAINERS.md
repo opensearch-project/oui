@@ -7,9 +7,7 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | Maintainer               | GitHub ID                                         | Affiliation |
 |--------------------------|---------------------------------------------------|-------------|
 | Miki Barahmand           | [AMoo-Miki](https://github.com/AMoo-Miki)         | Amazon      |
-| Bandini                  | [bandinib-amzn](https://github.com/bandinib-amzn) | Amazon      |
 | Ashwin P Chandran        | [ashwin-pc](https://github.com/ashwin-pc)         | Amazon      |
-| Josh Romero              | [joshuarrrr](https://github.com/joshuarrrr)       | Amazon      |
 | Viraj Sanghvi            | [virajsanghvi](https://github.com/virajsanghvi)   | Amazon      |
 | Yulong Ruan              | [ruanyl](https://github.com/ruanyl)               | Amazon      |
 | Daniel Rowe              | [d-buckner](https://github.com/d-buckner)         | Amazon      |
@@ -28,3 +26,5 @@ This document contains a list of maintainers in this repo. See [opensearch-proje
 | Iskander Rakhmanberdiyev | [rednaksi91](https://github.com/rednaksi91)       | Amazon      |
 | Andrey Myssak            | [andreymyssak](https://github.com/andreymyssak)   | Contributor |
 | Sergey Myssak            | [SergeyMyssak](https://github.com/SergeyMyssak)   | Contributor |
+| Bandini                  | [bandinib-amzn](https://github.com/bandinib-amzn) | Amazon      |
+| Josh Romero              | [joshuarrrr](https://github.com/joshuarrrr)       | Amazon      |
