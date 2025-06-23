@@ -34,6 +34,7 @@
 - Update maintainer alias from @d-rowe to @d-buckner ([#1492](https://github.com/opensearch-project/oui/pull/1492))
 - Add @angle943, @Maosaic, and @ruchidh as maintainers ([#1553](https://github.com/opensearch-project/oui/pull/1553))
 - Bump http-proxy-middleware from 2.0.7 to 2.0.9 ([#1551](https://github.com/opensearch-project/oui/pull/1551))
+- Moving @bandinib-amzn and @joshuarrrr to emeritus ([#1558](https://github.com/opensearch-project/oui/pull/1558))
 
 
 ### 🪛 Refactoring
