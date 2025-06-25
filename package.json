@@ -243,7 +243,7 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.15.2",
     "yeoman-generator": "^5.8.0",
-    "yo": "^4.3.1"
+    "yo": "^5.0.0"
   },
   "peerDependencies": {
     "@types/react": "^16.9.34",
