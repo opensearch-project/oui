@@ -30,7 +30,6 @@
 
 import React, { EventHandler } from 'react';
 import { render, mount } from 'enzyme';
-
 import { findTestSubject, takeMountedSnapshot } from '../../test';
 
 import { OuiEvent } from '../outside_click_detector/outside_click_detector';
@@ -72,8 +71,21 @@ describe('OuiFocusTrap', () => {
 
   describe('behavior', () => {
     describe('focus', () => {
+      // Note: mounting to document because activeElement requires being part of document
+      let container: HTMLDivElement | null;
+
+      beforeEach(() => {
+        container = document.createElement('div');
+        document.body.appendChild(container);
+      });
+
+      afterEach(() => {
+        container?.parentNode?.removeChild(container);
+        container = null;
+      });
+
       test('is set on the first focusable element by default', () => {
-        const component = mount(
+        mount(
           <div>
             <input data-test-subj="outside" />
             <OuiFocusTrap>
@@ -82,10 +94,11 @@ describe('OuiFocusTrap', () => {
                 <input data-test-subj="input2" />
               </div>
             </OuiFocusTrap>
-          </div>
+          </div>,
+          { attachTo: container }
         );
 
-        expect(findTestSubject(component, 'input').getDOMNode()).toBe(
+        expect(container?.querySelector('[data-test-subj="input"]')).toBe(
           document.activeElement
         );
       });
@@ -100,14 +113,15 @@ describe('OuiFocusTrap', () => {
                 <input data-test-subj="input2" />
               </div>
             </OuiFocusTrap>
-          </div>
+          </div>,
+          { attachTo: container }
         );
 
         expect(document.body).toBe(document.activeElement);
       });
 
       test('is set on the element identified by `data-autofocus`', () => {
-        const component = mount(
+        mount(
           <div>
             <input data-test-subj="outside" />
             <OuiFocusTrap>
@@ -116,10 +130,11 @@ describe('OuiFocusTrap', () => {
                 <input data-autofocus data-test-subj="input2" />
               </div>
             </OuiFocusTrap>
-          </div>
+          </div>,
+          { attachTo: container }
         );
 
-        expect(findTestSubject(component, 'input2').getDOMNode()).toBe(
+        expect(container?.querySelector('[data-test-subj="input2"]')).toBe(
           document.activeElement
         );
       });
