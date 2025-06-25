@@ -37,7 +37,7 @@ import { Query } from './query/query';
 import { CommonProps } from '../common';
 import { OuiFieldSearchProps } from '../form/field_search';
 
-export { Query, AST as Ast } from './query';
+export { Query, Ast } from './query';
 
 export type QueryType = Query | string;
 

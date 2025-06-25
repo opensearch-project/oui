@@ -181,6 +181,19 @@ describe('OuiAccordion', () => {
   });
 
   describe('behavior', () => {
+    // Note: mounting to document because activeElement requires being part of document
+    let container: HTMLDivElement | null;
+
+    beforeEach(() => {
+      container = document.createElement('div');
+      document.body.appendChild(container);
+    });
+
+    afterEach(() => {
+      container?.parentNode?.removeChild(container);
+      container = null;
+    });
+
     it('opens when clicked once', () => {
       const component = mount(<OuiAccordion id={getId()} />);
 
@@ -214,7 +227,9 @@ describe('OuiAccordion', () => {
     });
 
     it('moves focus to the content when expanded', () => {
-      const component = mount<OuiAccordion>(<OuiAccordion id={getId()} />);
+      const component = mount<OuiAccordion>(<OuiAccordion id={getId()} />, {
+        attachTo: container,
+      });
       const accordionClass = component.instance();
       const childWrapper = accordionClass.childWrapper;
 

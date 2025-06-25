@@ -605,3 +605,7 @@ export const AST = Object.freeze({
   Is,
   create: (clauses: Clause[]) => new _AST(clauses),
 });
+
+// Re-exporting as Ast so it does need to be renamed by consumers
+// in order to avoid babel error
+export const Ast = AST;
