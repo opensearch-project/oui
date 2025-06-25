@@ -33,11 +33,12 @@ import { isString } from '../../services/predicate';
 import { OuiFlexGroup, OuiFlexItem } from '../flex';
 import { OuiSearchBox, SchemaType } from './search_box';
 import { OuiSearchFilters, SearchFilterConfig } from './search_filters';
-import { Query } from './query/query';
+import { Query, Query as QueryForExport } from './query/query';
 import { CommonProps } from '../common';
 import { OuiFieldSearchProps } from '../form/field_search';
 
-export { Query, Ast } from './query';
+export { Ast } from './query';
+export { QueryForExport as Query }; // Explicity export and import due to webpack/babel re-export issue
 
 export type QueryType = Query | string;
 

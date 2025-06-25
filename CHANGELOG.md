@@ -21,6 +21,7 @@
 ### 🐛 Bug Fixes
 - fix button line-height inherit causes text cut off ([#1490](https://github.com/opensearch-project/oui/pull/1490))
 - Add OpenSearch logo to page title ([#1532](https://github.com/opensearch-project/oui/pull/1532))
+- Fix dev server configuration after webpack-dev-server upgrade in 1.19 ([#1567](https://github.com/opensearch-project/oui/pull/1567)) 
 
 
 ### 🚞 Infrastructure
