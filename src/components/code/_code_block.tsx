@@ -38,7 +38,7 @@ import React, {
   useState,
 } from 'react';
 import classNames from 'classnames';
-import { highlight, AST, RefractorNode } from 'refractor';
+import { refractor } from 'refractor/lib/all';
 import { keys, useCombinedRefs } from '../../services';
 import { OuiButtonIcon } from '../button';
 import { keysOf } from '../common';
@@ -49,13 +49,17 @@ import { useInnerText } from '../inner_text';
 import { useMutationObserver } from '../observer/mutation_observer';
 import { useResizeObserver } from '../observer/resize_observer';
 import { OuiOverlayMask } from '../overlay_mask';
+import type { RefractorElement } from 'refractor';
+import type { Properties, Text } from 'hast';
+
+type RefractorNode = RefractorElement | Text;
 
 type ExtendedRefractorNode = RefractorNode & {
   lineStart?: number;
   lineEnd?: number;
 };
 
-const isAstElement = (node: RefractorNode): node is AST.Element =>
+const isAstElement = (node: RefractorNode): boolean =>
   node.hasOwnProperty('type') && node.type === 'element';
 
 const nodeToHtml = (
@@ -68,17 +72,19 @@ const nodeToHtml = (
     const { properties, tagName, children } = node;
 
     return React.createElement(
-      tagName,
+      tagName as string,
       {
-        ...properties,
+        ...(properties as Properties),
         key: `node-${depth}-${idx}`,
-        className: classNames(properties.className),
+        className: classNames((properties as Properties)?.className),
       },
-      children && children.map((el, i) => nodeToHtml(el, i, nodes, depth + 1))
+      (children as RefractorNode[]).map((el, i) =>
+        nodeToHtml(el, i, nodes, depth + 1)
+      )
     );
   }
 
-  return node.value;
+  return node.value as string;
 };
 
 const addLineData = (
@@ -88,12 +94,12 @@ const addLineData = (
   return nodes.reduce<ExtendedRefractorNode[]>((result, node) => {
     const lineStart = data.lineNumber;
     if (node.type === 'text') {
-      if (!node.value.match(/\r\n?|\n/)) {
+      if (!(node.value as string).match(/\r\n?|\n/)) {
         node.lineStart = lineStart;
         node.lineEnd = lineStart;
         result.push(node);
       } else {
-        const lines = node.value.split(/\r\n?|\n/);
+        const lines = (node.value as string).split(/\r\n?|\n/);
         lines.forEach((line, i) => {
           const num = i === 0 ? data.lineNumber : ++data.lineNumber;
           result.push({
@@ -101,13 +107,14 @@ const addLineData = (
             value: i === lines.length - 1 ? line : `${line}\n`,
             lineStart: num,
             lineEnd: num,
+            children: [],
           });
         });
       }
       return result;
     }
 
-    if (node.children && node.children.length) {
+    if (Array.isArray(node.children) && node.children.length) {
       const children = addLineData(node.children, data);
       const first = children[0];
       const last = children[children.length - 1];
@@ -156,7 +163,12 @@ function wrapLines(nodes: ExtendedRefractorNode[]) {
 }
 
 const highlightByLine = (children: string, language: string) => {
-  return wrapLines(addLineData(highlight(children, language)));
+  return wrapLines(
+    addLineData(
+      refractor.highlight(children, language)
+        .children as ExtendedRefractorNode[]
+    )
+  );
 };
 
 const fontSizeToClassNameMap = {
@@ -246,7 +258,7 @@ export const OuiCodeBlockImpl: FunctionComponent<OuiCodeBlockImplProps> = ({
       return children;
     }
     const nodes = inline
-      ? highlight(children, language)
+      ? refractor.highlight(children, language).children
       : highlightByLine(children, language);
     return nodes.length === 0 ? children : nodes.map(nodeToHtml);
   }, [children, language, inline]);
