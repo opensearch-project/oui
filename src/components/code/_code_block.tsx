@@ -407,6 +407,7 @@ export const OuiCodeBlockImpl: FunctionComponent<OuiCodeBlockImplProps> = ({
         className
       );
 
+      /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
       fullScreenDisplay = (
         <OuiOverlayMask>
           <OuiFocusTrap clickOutsideDisables={true}>
@@ -422,6 +423,7 @@ export const OuiCodeBlockImpl: FunctionComponent<OuiCodeBlockImplProps> = ({
           </OuiFocusTrap>
         </OuiOverlayMask>
       );
+      /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
     }
 
     return fullScreenDisplay;

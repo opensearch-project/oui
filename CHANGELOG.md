@@ -11,10 +11,11 @@
 - chore(deps): update dependency eslint-import-resolver-webpack to v0.13.1 ([#1564](https://github.com/opensearch-project/oui/pull/1564))
 - Bump pbkdf2 from 3.0.14 to 3.1.3 ([#1560](https://github.com/opensearch-project/oui/pull/1560))
 - Add package resolution to braces to address CVE ([#1524](https://github.com/opensearch-project/oui/pull/1524))
-- Update css loader to 5.0.0 ([1530](https://github.com/opensearch-project/oui/pull/1530))
-- Fix cve issue for transitive dependency @babel/runtime-corejs2 ([1531](https://github.com/opensearch-project/oui/pull/1531))
-- Fix cve issue for elliptic and axios ([1549](https://github.com/opensearch-project/oui/pull/1549))
-- Fix cve issue for jest-cli ([1556](https://github.com/opensearch-project/oui/pull/1556))
+- Update css loader to 5.0.0 ([#1530](https://github.com/opensearch-project/oui/pull/1530))
+- Fix cve issue for transitive dependency @babel/runtime-corejs2 ([#1531](https://github.com/opensearch-project/oui/pull/1531))
+- Fix cve issue for elliptic and axios ([#1549](https://github.com/opensearch-project/oui/pull/1549))
+- Fix cve issue for jest-cli ([#1556](https://github.com/opensearch-project/oui/pull/1556))
+- Fix cve issue for eslint-plugin-jsx-a11y ([#1575](https://github.com/opensearch-project/oui/pull/1575))
 - Upgrade jest to v27 ([#1576](https://github.com/opensearch-project/oui/pull/1576))
 
 
