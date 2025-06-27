@@ -49,7 +49,7 @@ describe('OuiToolTip', () => {
   });
 
   test('shows tooltip on focus', () => {
-    jest.useFakeTimers();
+    jest.useFakeTimers('legacy');
     const component = mount(
       <OuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button data-test-subj="trigger">Trigger</button>

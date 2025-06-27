@@ -46,5 +46,6 @@
   },
   "snapshotSerializers": [
     "<rootDir>/node_modules/enzyme-to-json/serializer"
-  ]
+  ],
+  "testEnvironment": "jsdom"
 }
