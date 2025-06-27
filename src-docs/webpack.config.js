@@ -16,9 +16,6 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 const babelConfig = require('./.babelrc.js');
 // const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
-const getPort = require('get-port');
-const deasync = require('deasync');
-
 const { NODE_ENV, CI, WEBPACK_DEV_SERVER } = process.env;
 
 const isDevelopment = WEBPACK_DEV_SERVER === 'true' && CI == null;
@@ -41,6 +38,7 @@ function employCache(loaders) {
   return loaders;
 }
 
+// Must return an object/non-async function due to eslint-import-resolver-webpack
 const webpackConfig = {
   mode: isProduction ? 'production' : 'development',
 
@@ -144,53 +142,27 @@ const webpackConfig = {
 
   devServer: isDevelopment
     ? {
-        contentBase: 'src-docs/build',
+        static: { directory: 'src-docs/build' },
         host: '0.0.0.0',
         allowedHosts: ['*'],
-        port: getPortSync({
-          port: getPort.makeRange(8030, 8130),
-          host: '0.0.0.0',
-        }),
-        disableHostCheck: true,
+        port: 8030,
         historyApiFallback: true,
         // prevent file watching while running on CI
         // /app/ represents the entire docker environment
-        watchOptions: isPuppeteer
+        watchFiles: isPuppeteer
           ? {
               ignored: '**/*',
             }
           : undefined,
+        client: {
+          // Disable overlay for runtime errors as they cause ResizeObservable to throw loop errors
+          overlay: { runtimeErrors: false },
+        },
       }
     : undefined,
   node: {
     fs: 'empty',
   },
 };
-
-// Inspired by `get-port-sync`, but propogates options
-function getPortSync(options) {
-  let isDone = false;
-  let freeport = null;
-  let error = null;
-
-  getPort(options)
-    .then((port) => {
-      isDone = true;
-      freeport = port;
-    })
-    .catch((err) => {
-      isDone = true;
-      error = err;
-    });
-
-  // wait until we're done'
-  deasync.loopWhile(() => !isDone);
-
-  if (error) {
-    throw error;
-  } else {
-    return freeport;
-  }
-}
 
 module.exports = webpackConfig;
