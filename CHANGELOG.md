@@ -15,6 +15,8 @@
 - Fix cve issue for transitive dependency @babel/runtime-corejs2 ([1531](https://github.com/opensearch-project/oui/pull/1531))
 - Fix cve issue for elliptic and axios ([1549](https://github.com/opensearch-project/oui/pull/1549))
 - Fix cve issue for jest-cli ([1556](https://github.com/opensearch-project/oui/pull/1556))
+- Upgrade jest to v27 ([#1576](https://github.com/opensearch-project/oui/pull/1576))
+
 
 ### 📈 Features/Enhancements
 - Allow TabbedContent to preserve in dom #1500 ([#1500](https://github.com/opensearch-project/oui/pull/1500))
