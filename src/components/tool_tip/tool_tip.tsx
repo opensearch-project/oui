@@ -349,8 +349,8 @@ export class OuiToolTip extends Component<OuiToolTipProps, State> {
       );
     }
 
+    /* eslint-disable jsx-a11y/mouse-events-have-key-events */
     const anchor = (
-      // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
       <span
         ref={(anchor) => (this.anchor = anchor)}
         className={anchorClasses}
@@ -374,6 +374,7 @@ export class OuiToolTip extends Component<OuiToolTipProps, State> {
         })}
       </span>
     );
+    /* eslint-enable jsx-a11y/mouse-events-have-key-events */
 
     return (
       <Fragment>
