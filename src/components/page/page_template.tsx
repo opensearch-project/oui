@@ -410,7 +410,7 @@ export const OuiPageTemplate: FunctionComponent<OuiPageTemplateProps> = ({
           paddingSize={paddingSize}
           position={canFullHeight && fullHeight ? 'static' : 'sticky'}
           // Using uknown here because of the possible conflict with overriding props and position `sticky`
-          {...(bottomBarProps as unknown)}>
+          {...(bottomBarProps as Record<string, any>)}>
           {/* Wrapping the contents with OuiPageContentBody allows us to match the restrictWidth to keep the contents aligned */}
           <OuiPageContentBody
             paddingSize={'none'}
