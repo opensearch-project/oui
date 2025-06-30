@@ -38,6 +38,17 @@ import {
 import { OuiToolTip } from './tool_tip';
 
 describe('OuiToolTip', () => {
+  let container: HTMLDivElement;
+
+  beforeEach(() => {
+    container = document.createElement('div');
+    document.body.appendChild(container);
+  });
+
+  afterEach(() => {
+    document.body.removeChild(container);
+  });
+
   test('is rendered', () => {
     const component = render(
       <OuiToolTip title="title" id="id" content="content" {...requiredProps}>
@@ -49,11 +60,12 @@ describe('OuiToolTip', () => {
   });
 
   test('shows tooltip on focus', () => {
-    jest.useFakeTimers('legacy');
+    jest.useFakeTimers();
     const component = mount(
       <OuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button data-test-subj="trigger">Trigger</button>
-      </OuiToolTip>
+      </OuiToolTip>,
+      { attachTo: container }
     );
 
     const trigger = findTestSubject(component, 'trigger');
