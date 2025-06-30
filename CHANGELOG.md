@@ -18,6 +18,7 @@
 - Fix cve issue for eslint-plugin-jsx-a11y ([#1575](https://github.com/opensearch-project/oui/pull/1575))
 - Upgrade jest to v27 ([#1576](https://github.com/opensearch-project/oui/pull/1576))
 - Upgrade autoprefixer to v10 ([#1582](https://github.com/opensearch-project/oui/pull/1582))
+- Upgrade jest to v29 ([#1585](https://github.com/opensearch-project/oui/pull/1585))
 
 
 ### 📈 Features/Enhancements
