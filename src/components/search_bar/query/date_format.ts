@@ -43,9 +43,12 @@ export interface OuiMoment extends Moment {
   __oui_format?: string;
 }
 
+export type GranularityEsType = 'd' | 'w' | 'M' | 'y';
+export type GranularityJsType = 'day' | 'week' | 'month' | 'year';
+
 export interface GranularityType {
-  es: 'd' | 'w' | 'M' | 'y';
-  js: 'day' | 'week' | 'month' | 'year';
+  es: GranularityEsType;
+  js: GranularityJsType;
   isSame: (d1: Moment, d2: Moment) => boolean;
   start: (date: Moment) => Moment;
   startOfNext: (date: Moment) => Moment;
@@ -61,36 +64,36 @@ interface GranularitiesType {
 
 export const Granularity: GranularitiesType = Object.freeze({
   DAY: {
-    es: 'd',
-    js: 'day',
-    isSame: (d1, d2) => d1.isSame(d2, 'day'),
-    start: (date) => date.startOf('day'),
-    startOfNext: (date) => date.add(1, 'days').startOf('day'),
-    iso8601: (date) => date.format('YYYY-MM-DD'),
+    es: 'd' as GranularityEsType,
+    js: 'day' as GranularityJsType,
+    isSame: (d1: Moment, d2: Moment) => d1.isSame(d2, 'day'),
+    start: (date: Moment) => date.startOf('day'),
+    startOfNext: (date: Moment) => date.add(1, 'days').startOf('day'),
+    iso8601: (date: Moment) => date.format('YYYY-MM-DD'),
   },
   WEEK: {
-    es: 'w',
-    js: 'week',
-    isSame: (d1, d2) => d1.isSame(d2, 'week'),
-    start: (date) => date.startOf('week'),
-    startOfNext: (date) => date.add(1, 'weeks').startOf('week'),
-    iso8601: (date) => date.format('YYYY-MM-DD'),
+    es: 'w' as GranularityEsType,
+    js: 'week' as GranularityJsType,
+    isSame: (d1: Moment, d2: Moment) => d1.isSame(d2, 'week'),
+    start: (date: Moment) => date.startOf('week'),
+    startOfNext: (date: Moment) => date.add(1, 'weeks').startOf('week'),
+    iso8601: (date: Moment) => date.format('YYYY-MM-DD'),
   },
   MONTH: {
-    es: 'M',
-    js: 'month',
-    isSame: (d1, d2) => d1.isSame(d2, 'month'),
-    start: (date) => date.startOf('month'),
-    startOfNext: (date) => date.add(1, 'months').startOf('month'),
-    iso8601: (date) => date.format('YYYY-MM'),
+    es: 'M' as GranularityEsType,
+    js: 'month' as GranularityJsType,
+    isSame: (d1: Moment, d2: Moment) => d1.isSame(d2, 'month'),
+    start: (date: Moment) => date.startOf('month'),
+    startOfNext: (date: Moment) => date.add(1, 'months').startOf('month'),
+    iso8601: (date: Moment) => date.format('YYYY-MM'),
   },
   YEAR: {
-    es: 'y',
-    js: 'year',
-    isSame: (d1, d2) => d1.isSame(d2, 'year'),
-    start: (date) => date.startOf('year'),
-    startOfNext: (date) => date.add(1, 'years').startOf('year'),
-    iso8601: (date) => date.format('YYYY'),
+    es: 'y' as GranularityEsType,
+    js: 'year' as GranularityJsType,
+    isSame: (d1: Moment, d2: Moment) => d1.isSame(d2, 'year'),
+    start: (date: Moment) => date.startOf('year'),
+    startOfNext: (date: Moment) => date.add(1, 'years').startOf('year'),
+    iso8601: (date: Moment) => date.format('YYYY'),
   },
 });
 

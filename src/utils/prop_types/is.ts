@@ -35,7 +35,9 @@ export const is = <T>(expectedValue: any) => {
     const compName = componentName || 'ANONYMOUS';
     const value = props[propName];
     if (value !== expectedValue) {
-      return new Error(`[${propName}] property in [${compName}] component is expected to equal [${expectedValue}] but
+      return new Error(`[${String(
+        propName
+      )}] property in [${compName}] component is expected to equal [${expectedValue}] but
          [${value}] was provided instead.`);
     }
     return null;
@@ -50,7 +52,9 @@ export const is = <T>(expectedValue: any) => {
     const value = props[propName];
     if (isNil(value)) {
       return new Error(
-        `[${propName}] property in [${compName}] component is required but seems to be missing`
+        `[${String(
+          propName
+        )}] property in [${compName}] component is required but seems to be missing`
       );
     }
     return validator(props, propName, componentName);

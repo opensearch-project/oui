@@ -664,9 +664,9 @@ export class OuiBasicTable<T = any> extends Component<
 
       items.push({
         name: column.name,
-        key: `_data_s_${
+        key: `_data_s_${String(
           (column as OuiTableFieldDataColumnType<T>).field
-        }_${index}`,
+        )}_${index}`,
         onSort: this.resolveColumnOnSort(column),
         isSorted: !!sortDirection,
         isSortAscending: sortDirection
@@ -898,13 +898,13 @@ export class OuiBasicTable<T = any> extends Component<
       }
       headers.push(
         <OuiTableHeaderCell
-          key={`_data_h_${field}_${index}`}
+          key={`_data_h_${String(field)}_${index}`}
           align={columnAlign}
           width={width}
           isMobileHeader={isMobileHeader}
           hideForMobile={hideForMobile}
           mobileOptions={mobileOptions}
-          data-test-subj={`tableHeaderCell_${field}_${index}`}
+          data-test-subj={`tableHeaderCell_${String(field)}_${index}`}
           description={description}
           {...sorting}>
           {name}
@@ -946,7 +946,7 @@ export class OuiBasicTable<T = any> extends Component<
       if (footer) {
         footers.push(
           <OuiTableFooterCell
-            key={`footer_${field}_${footers.length - 1}`}
+            key={`footer_${String(field)}_${footers.length - 1}`}
             align={align}>
             {footer}
           </OuiTableFooterCell>
@@ -1264,7 +1264,7 @@ export class OuiBasicTable<T = any> extends Component<
   ) {
     const { field, render, dataType } = column;
 
-    const key = `_data_column_${field}_${itemId}_${columnIndex}`;
+    const key = `_data_column_${String(field)}_${itemId}_${columnIndex}`;
     const contentRenderer = render || this.getRendererForDataType(dataType);
     const value = get(item, field as string);
     const content = contentRenderer(value, item);
