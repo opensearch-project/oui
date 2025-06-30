@@ -43,6 +43,7 @@
 - Add @angle943, @Maosaic, and @ruchidh as maintainers ([#1553](https://github.com/opensearch-project/oui/pull/1553))
 - Bump http-proxy-middleware from 2.0.7 to 2.0.9 ([#1551](https://github.com/opensearch-project/oui/pull/1551))
 - Moving @bandinib-amzn and @joshuarrrr to emeritus ([#1558](https://github.com/opensearch-project/oui/pull/1558))
+- Update TypeScript to 4.7.4 ([#1586](https://github.com/opensearch-project/oui/pull/1586))
 
 
 ### 🪛 Refactoring
