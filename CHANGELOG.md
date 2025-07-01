@@ -19,7 +19,7 @@
 - Upgrade jest to v27 ([#1576](https://github.com/opensearch-project/oui/pull/1576))
 - Upgrade autoprefixer to v10 ([#1582](https://github.com/opensearch-project/oui/pull/1582))
 - Upgrade jest to v29 ([#1585](https://github.com/opensearch-project/oui/pull/1585))
-
+- Upgrade babel-plugin-add-module-exports to 1.0.4 ([#1593](https://github.com/opensearch-project/oui/pull/1593))
 
 ### 📈 Features/Enhancements
 - Allow TabbedContent to preserve in dom #1500 ([#1500](https://github.com/opensearch-project/oui/pull/1500))
