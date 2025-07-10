@@ -40,6 +40,8 @@ import Logos from './logos';
 
 import Workspace from './workspace';
 
+import Menus from './menus';
+
 import IconSizes from './icon_sizes';
 
 import IconColors from './icon_colors';
@@ -125,6 +127,15 @@ export const IconExample = {
         </p>
       ),
       demo: <Workspace />,
+    },
+    {
+      title: 'Menus',
+      text: (
+        <p>
+          Menus logos are usually displayed at <OuiCode>16x16</OuiCode> or above.
+        </p>
+      ),
+      demo: <Menus />,
     },
     {
       title: 'Apps',

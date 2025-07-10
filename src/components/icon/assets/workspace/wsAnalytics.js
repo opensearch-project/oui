@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-import * as React from "react";
+import * as React from 'react';
 const OuiIconWsAnalytics = ({ title, titleId, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"

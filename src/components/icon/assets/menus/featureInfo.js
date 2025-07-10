@@ -10,7 +10,7 @@
  */
 
 import * as React from 'react';
-const OuiIconWsEssentials = ({ title, titleId, ...props }) => (
+const OuiIconFeatureInfo = ({ title, titleId, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={16}
@@ -19,7 +19,7 @@ const OuiIconWsEssentials = ({ title, titleId, ...props }) => (
     aria-labelledby={titleId}
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
-    <path d="M6.552 11.929h.734V8.357h1.428v3.572h.734c.094-.859.532-1.567 1.243-2.341.08-.088.594-.62.655-.695a4.286 4.286 0 1 0-6.693-.001c.061.076.576.609.655.695.712.775 1.15 1.483 1.244 2.342Zm.02 1.428v.714h2.857v-.714H6.57ZM3.538 9.785a5.714 5.714 0 1 1 8.922.002c-.444.552-1.604 1.427-1.604 2.499v1.785c0 .79-.64 1.429-1.428 1.429H6.57c-.789 0-1.428-.64-1.428-1.429v-1.785c0-1.072-1.161-1.948-1.604-2.5Z" />
+    <path d="M8.96 11.294a.412.412 0 0 1-.411.412.96.96 0 0 1-.96-.96V8a.137.137 0 0 0-.138-.137.412.412 0 1 1 0-.824.96.96 0 0 1 .96.961v2.745a.137.137 0 0 0 .138.137.412.412 0 0 1 .412.412ZM7.726 5.667a.686.686 0 1 0 0-1.373.686.686 0 0 0 0 1.373ZM15 8a7 7 0 1 1-7-7 7.008 7.008 0 0 1 7 7Zm-.823 0A6.176 6.176 0 1 0 8 14.177 6.183 6.183 0 0 0 14.177 8Z" />
   </svg>
 );
-export const icon = OuiIconWsEssentials;
+export const icon = OuiIconFeatureInfo;
