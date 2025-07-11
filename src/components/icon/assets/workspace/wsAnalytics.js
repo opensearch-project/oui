@@ -9,7 +9,7 @@
  * GitHub history for details.
  */
 
-import * as React from "react";
+import * as React from 'react';
 const OuiIconWsAnalytics = ({ title, titleId, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,10 @@ const OuiIconWsAnalytics = ({ title, titleId, ...props }) => (
     aria-labelledby={titleId}
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
-    <path d="M1 8.7h4.2v5.6H1V8.7Zm9.8-3.5H15v9.1h-4.2V5.2ZM5.9 1.7h4.2v12.6H5.9V1.7Zm-3.5 8.4v2.8h1.4v-2.8H2.4Zm4.9-7v9.8h1.4V3.1H7.3Zm4.9 3.5v6.3h1.4V6.6h-1.4Z" />
+    <path
+      d="M4.329 9.433c.221 0 .4.18.4.4v4.668a.4.4 0 0 1-.4.4H1.53a.401.401 0 0 1-.402-.4V9.833c0-.22.18-.4.402-.4h2.798ZM1.933 14.1h1.994v-3.868H1.933v3.868ZM9.428 1.1c.222 0 .401.18.401.4v13c0 .22-.18.4-.4.4H6.63a.402.402 0 0 1-.402-.4v-13c0-.22.18-.4.402-.4h2.798Zm-2.395 13h1.993V1.9H7.033v12.2ZM14.528 4.663c.221 0 .4.18.4.4V14.5c0 .22-.179.4-.4.4H11.73a.402.402 0 0 1-.402-.4V5.063c0-.22.18-.4.402-.4h2.798Zm-2.396 9.438h1.994V5.464h-1.994V14.1Z"
+      clipRule="evenodd"
+    />
   </svg>
 );
 export const icon = OuiIconWsAnalytics;

@@ -23,7 +23,7 @@
 
 ### 📈 Features/Enhancements
 - Allow TabbedContent to preserve in dom #1500 ([#1500](https://github.com/opensearch-project/oui/pull/1500))
-
+- Add menus icons ([#1598](https://github.com/opensearch-project/oui/pull/1598))
 
 ### 🐛 Bug Fixes
 - fix button line-height inherit causes text cut off ([#1490](https://github.com/opensearch-project/oui/pull/1490))
