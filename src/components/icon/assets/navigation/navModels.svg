@@ -1,0 +1,29 @@
+<!--
+  - SPDX-License-Identifier: Apache-2.0
+  -
+  - The OpenSearch Contributors require contributions made to
+  - this file be licensed under the Apache-2.0 license or a
+  - compatible open source license.
+  -
+  - Modifications Copyright OpenSearch Contributors. See
+  - GitHub history for details.
+  -->
+<!--
+  - Copyright (C) 2004 Remix Icon
+  -
+  - Licensed under the Apache License, Version 2.0 (the "License");
+  - you may not use this file except in compliance with the License.
+  - You may obtain a copy of the License at
+  -
+  -         http://www.apache.org/licenses/LICENSE-2.0
+  -
+  - Unless required by applicable law or agreed to in writing, software
+  - distributed under the License is distributed on an "AS IS" BASIS,
+  - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  - See the License for the specific language governing permissions and
+  - limitations under the License.
+  -->
+
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path clip-rule="evenodd" d="M12.232 2.107a1.754 1.754 0 0 1 0.367 3.468v5.055a1.754 1.754 0 1 1 -0.811 0.019V5.557a1.882 1.882 0 0 1 -0.367 -0.141L9.387 8.038a1.754 1.754 0 1 1 -2.895 0.07L4.379 5.477q-0.151 0.064 -0.314 0.099v5.057a1.754 1.754 0 1 1 -0.811 0.018v-5.092a1.753 1.753 0 1 1 1.779 -0.565l2.05 2.552a1.741 1.741 0 0 1 1.69 -0.04l2.036 -2.622a1.741 1.741 0 0 1 -0.331 -1.023c0 -0.969 0.787 -1.753 1.755 -1.753m-8.538 9.296a0.943 0.943 0 1 0 0 1.886 0.943 0.943 0 0 0 0 -1.886m8.538 0a0.943 0.943 0 1 0 0 1.887 0.943 0.943 0 0 0 0 -1.887m-4.269 -3.285a0.943 0.943 0 1 0 0 1.886 0.943 0.943 0 0 0 0 -1.886m4.269 -5.2a0.943 0.943 0 1 0 0 1.887 0.943 0.943 0 0 0 0 -1.887m-8.538 0a0.943 0.943 0 0 0 -0.199 1.864h0.397a0.943 0.943 0 0 0 -0.199 -1.864"/>
+</svg>

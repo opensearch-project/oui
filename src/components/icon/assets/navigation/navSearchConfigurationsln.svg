@@ -1,0 +1,35 @@
+<!--
+  - SPDX-License-Identifier: Apache-2.0
+  -
+  - The OpenSearch Contributors require contributions made to
+  - this file be licensed under the Apache-2.0 license or a
+  - compatible open source license.
+  -
+  - Modifications Copyright OpenSearch Contributors. See
+  - GitHub history for details.
+  -->
+<!--
+  - Copyright (C) 2004 Remix Icon
+  -
+  - Licensed under the Apache License, Version 2.0 (the "License");
+  - you may not use this file except in compliance with the License.
+  - You may obtain a copy of the License at
+  -
+  -         http://www.apache.org/licenses/LICENSE-2.0
+  -
+  - Unless required by applicable law or agreed to in writing, software
+  - distributed under the License is distributed on an "AS IS" BASIS,
+  - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  - See the License for the specific language governing permissions and
+  - limitations under the License.
+  -->
+
+<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path d="M9.362 1.104a0.373 0.373 0 0 1 0.708 0.232L5.686 14.711a0.373 0.373 0 0 1 -0.708 -0.232z"/>
+  <path d="M2.469 9.317a0.348 0.348 0 0 1 0.348 0.348v2.886a0.117 0.117 0 0 0 0.117 0.116H4.329a0.349 0.349 0 1 1 0 0.698H2.934a0.815 0.815 0 0 1 -0.814 -0.814v-2.886a0.348 0.348 0 0 1 0.348 -0.348"/>
+  <path d="M12.706 10.805a0.348 0.348 0 0 1 0.348 0.349v1.397a0.815 0.815 0 0 1 -0.814 0.814H7.4a0.349 0.349 0 0 1 0 -0.698h1.862l0.015 0.002h1.552l0.015 -0.002h1.396a0.117 0.117 0 0 0 0.117 -0.116V11.153a0.348 0.348 0 0 1 0.348 -0.348"/>
+  <path d="M13.884 6.592a0.424 0.424 0 0 1 0.303 0.712l-0.002 0.003 -3.256 3.256a0.424 0.424 0 0 1 -0.6 0L8.934 9.167l-0.002 -0.002a0.424 0.424 0 0 1 0.534 -0.648l0.065 0.049 0.002 0.002 1.096 1.096 2.958 -2.958 0.002 -0.001 0.065 -0.05a0.424 0.424 0 0 1 0.231 -0.064"/>
+  <path d="M4.621 5.299a0.367 0.367 0 0 1 0.261 0.615l-0.002 0.002 -1.297 1.296L4.88 8.508a0.365 0.365 0 1 1 -0.518 0.517L3.066 7.729 1.769 9.026l-0.003 0.001a0.366 0.366 0 0 1 -0.517 -0.517l0.002 -0.002 1.296 -1.297L1.252 5.915l-0.001 -0.002a0.367 0.367 0 0 1 0.461 -0.56l0.056 0.042 0.002 0.002 1.296 1.296 1.296 -1.296 0.002 -0.002a0.376 0.376 0 0 1 0.256 -0.098"/>
+  <path d="M12.24 2.43a0.814 0.814 0 0 1 0.814 0.814v2.885a0.348 0.348 0 1 1 -0.697 0V3.244a0.117 0.117 0 0 0 -0.117 -0.117h-1.396a0.348 0.348 0 0 1 0 -0.697z"/>
+  <path d="M7.773 2.43a0.349 0.349 0 1 1 0 0.697H6.494v0.003H4.07v-0.003H2.934a0.117 0.117 0 0 0 -0.116 0.117V4.64a0.348 0.348 0 1 1 -0.698 0V3.244a0.815 0.815 0 0 1 0.814 -0.814z"/>
+</svg>
