@@ -133,6 +133,11 @@ export const IconExample = {
       text: (
         <p>
           Navigation icons are usually displayed at <OuiCode>16x16</OuiCode> or above.
+
+          The icons are designed to be used in navigation menus and
+          sidebars, and they are typically monochromatic. They are not intended
+          for use in other contexts, such as buttons or links.
+          <OuiSpacer size="s" />
         </p>
       ),
       demo: <Navigation />,
