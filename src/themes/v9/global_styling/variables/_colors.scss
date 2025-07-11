@@ -61,49 +61,58 @@ $ouiLinkColor: $ouiColorPrimaryText !default;
 // Use map_merge($ouiColorVisColors, $yourMap) to change individual colors after importing ths file
 // The `behindText` variant is a direct copy of the hex output by the JS ouiPaletteColorBlindBehindText() function
 $ouiPaletteColorBlind: (
-  ouiColorVis0: (
-    graphic: #54B399,
+  ouiColorVis0: (graphic: #54B399,
     behindText: #6DCCB1,
   ),
-  ouiColorVis1: (
-    graphic: #6092C0,
+  ouiColorVis1: (graphic: #6092C0,
     behindText: #79AAD9,
   ),
-  ouiColorVis2: (
-    graphic: #D36086,
+  ouiColorVis2: (graphic: #D36086,
     behindText: #EE789D,
   ),
-  ouiColorVis3: (
-    graphic: #9170B8,
+  ouiColorVis3: (graphic: #9170B8,
     behindText: #A987D1,
   ),
-  ouiColorVis4: (
-    graphic: #CA8EAE,
+  ouiColorVis4: (graphic: #CA8EAE,
     behindText: #E4A6C7,
   ),
-  ouiColorVis5: (
-    graphic: #D6BF57,
+  ouiColorVis5: (graphic: #D6BF57,
     behindText: #F1D86F,
   ),
-  ouiColorVis6: (
-    graphic: #B9A888,
+  ouiColorVis6: (graphic: #B9A888,
     behindText: #D2C0A0,
   ),
-  ouiColorVis7: (
-    graphic: #DA8B45,
+  ouiColorVis7: (graphic: #DA8B45,
     behindText: #F5A35C,
   ),
-  ouiColorVis8: (
-    graphic: #AA6556,
+  ouiColorVis8: (graphic: #AA6556,
     behindText: #C47C6C,
   ),
-  ouiColorVis9: (
-    graphic: #E7664C,
+  ouiColorVis9: (graphic: #E7664C,
     behindText: #FF7E62,
-  )
-) !default;
+  ),
+  ouiColorVis10: (graphic: #9C9DA0,
+    behindText: #9C9DA0,
+  ),
+  ouiColorVis11: (graphic: #D74987,
+    behindText: #D74987,
+  ),
+  ouiColorVis12: (graphic: #0D70CA,
+    behindText: #0D70CA,
+  ),
+  ouiColorVis13: (graphic: #0C8967,
+    behindText: #0C8967,
+  ),
+  ouiColorVis14: (graphic: #6E28C3,
+    behindText: #6E28C3,
+  ),
+  ouiColorVis15: (graphic: #D76813,
+    behindText: #D76813,
+  ),
+  ) !default;
 
-$ouiPaletteColorBlindKeys: map-keys($ouiPaletteColorBlind);
+$ouiPaletteColorBlindKeys: map-keys($ouiPaletteColorBlind
+);
 
 $ouiColorVis0: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis0'), 'graphic') !default;
 $ouiColorVis1: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis1'), 'graphic') !default;
@@ -115,6 +124,12 @@ $ouiColorVis6: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis6'), 'graphic'
 $ouiColorVis7: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis7'), 'graphic') !default;
 $ouiColorVis8: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis8'), 'graphic') !default;
 $ouiColorVis9: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis9'), 'graphic') !default;
+$ouiColorVis10: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis10'), 'graphic') !default;
+$ouiColorVis11: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis11'), 'graphic') !default;
+$ouiColorVis12: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis12'), 'graphic') !default;
+$ouiColorVis13: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis13'), 'graphic') !default;
+$ouiColorVis14: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis14'), 'graphic') !default;
+$ouiColorVis15: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis15'), 'graphic') !default;
 
 // sass-lint:disable-block variable-name-format
 $ouiColorVis0_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis0'), 'behindText') !default;
@@ -127,6 +142,12 @@ $ouiColorVis6_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis6')
 $ouiColorVis7_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis7'), 'behindText') !default;
 $ouiColorVis8_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis8'), 'behindText') !default;
 $ouiColorVis9_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis9'), 'behindText') !default;
+$ouiColorVis10_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis10'), 'behindText') !default;
+$ouiColorVis11_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis11'), 'behindText') !default;
+$ouiColorVis12_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis12'), 'behindText') !default;
+$ouiColorVis13_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis13'), 'behindText') !default;
+$ouiColorVis14_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis14'), 'behindText') !default;
+$ouiColorVis15_behindText: map-get(map-get($ouiPaletteColorBlind, 'ouiColorVis15'), 'behindText') !default;
 
 // Charts
 $ouiColorChartLines: shade($ouiColorLightestShade, 3%) !default;
@@ -136,20 +157,20 @@ $ouiColorChartBand: $ouiColorLightestShade !default;
 $ouiCodeBlockBackgroundColor: $ouiColorLightestShade !default;
 $ouiCodeBlockColor: makeHighContrastColor($ouiTextColor, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockSelectedBackgroundColor: inherit !default;
-$ouiCodeBlockCommentColor: makeHighContrastColor($ouiTextSubduedColor, $ouiCodeBlockBackgroundColor) !default;
+$ouiCodeBlockCommentColor: makeHighContrastColor($ouiColorVis10, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockSelectorTagColor: inherit !default;
-$ouiCodeBlockStringColor: makeHighContrastColor($ouiColorVis2, $ouiCodeBlockBackgroundColor) !default;
+$ouiCodeBlockStringColor: makeHighContrastColor($ouiColorVis11, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockTagColor: makeHighContrastColor($ouiColorVis1, $ouiCodeBlockBackgroundColor) !default;
-$ouiCodeBlockNameColor: makeHighContrastColor($ouiColorVis1, $ouiCodeBlockBackgroundColor) !default;
-$ouiCodeBlockNumberColor: makeHighContrastColor($ouiColorVis0, $ouiCodeBlockBackgroundColor) !default;
-$ouiCodeBlockKeywordColor: makeHighContrastColor($ouiColorVis3, $ouiCodeBlockBackgroundColor) !default;
+$ouiCodeBlockNameColor: makeHighContrastColor($ouiColorVis12, $ouiCodeBlockBackgroundColor) !default;
+$ouiCodeBlockNumberColor: makeHighContrastColor($ouiColorVis13, $ouiCodeBlockBackgroundColor) !default;
+$ouiCodeBlockKeywordColor: makeHighContrastColor($ouiColorVis14, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockFunctionTitleColor: inherit !default;
-$ouiCodeBlockTypeColor: makeHighContrastColor($ouiColorVis1, $ouiCodeBlockBackgroundColor) !default;
+$ouiCodeBlockTypeColor: makeHighContrastColor($ouiColorVis12, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockAttributeColor: inherit !default;
 $ouiCodeBlockSymbolColor: makeHighContrastColor($ouiColorVis9, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockParamsColor: inherit !default;
-$ouiCodeBlockMetaColor:  makeHighContrastColor($ouiTextSubduedColor, $ouiCodeBlockBackgroundColor) !default;
-$ouiCodeBlockTitleColor: makeHighContrastColor($ouiColorVis7, $ouiCodeBlockBackgroundColor) !default;
+$ouiCodeBlockMetaColor: makeHighContrastColor($ouiTextSubduedColor, $ouiCodeBlockBackgroundColor) !default;
+$ouiCodeBlockTitleColor: makeHighContrastColor($ouiColorVis15, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockSectionColor: makeHighContrastColor($ouiColorVis9, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockAdditionColor: makeHighContrastColor($ouiColorVis0, $ouiCodeBlockBackgroundColor) !default;
 $ouiCodeBlockDeletionColor: makeHighContrastColor($ouiColorDanger, $ouiCodeBlockBackgroundColor) !default;
@@ -188,48 +209,38 @@ $euiColorDisabledText: $ouiColorDisabledText;
 $euiColorSuccessText: $ouiColorSuccessText;
 $euiLinkColor: $ouiLinkColor;
 $euiPaletteColorBlind: (
-  euiColorVis0: (
-    graphic: #54B399,
+  euiColorVis0: (graphic: #54B399,
     behindText: #6DCCB1,
   ),
-  euiColorVis1: (
-    graphic: #6092C0,
+  euiColorVis1: (graphic: #6092C0,
     behindText: #79AAD9,
   ),
-  euiColorVis2: (
-    graphic: #D36086,
+  euiColorVis2: (graphic: #D36086,
     behindText: #EE789D,
   ),
-  euiColorVis3: (
-    graphic: #9170B8,
+  euiColorVis3: (graphic: #9170B8,
     behindText: #A987D1,
   ),
-  euiColorVis4: (
-    graphic: #CA8EAE,
+  euiColorVis4: (graphic: #CA8EAE,
     behindText: #E4A6C7,
   ),
-  euiColorVis5: (
-    graphic: #D6BF57,
+  euiColorVis5: (graphic: #D6BF57,
     behindText: #F1D86F,
   ),
-  euiColorVis6: (
-    graphic: #B9A888,
+  euiColorVis6: (graphic: #B9A888,
     behindText: #D2C0A0,
   ),
-  euiColorVis7: (
-    graphic: #DA8B45,
+  euiColorVis7: (graphic: #DA8B45,
     behindText: #F5A35C,
   ),
-  euiColorVis8: (
-    graphic: #AA6556,
+  euiColorVis8: (graphic: #AA6556,
     behindText: #C47C6C,
   ),
-  euiColorVis9: (
-    graphic: #E7664C,
+  euiColorVis9: (graphic: #E7664C,
     behindText: #FF7E62,
-  )
-) !default;
-$euiPaletteColorBlindKeys: map-keys($euiPaletteColorBlind);
+  )) !default;
+$euiPaletteColorBlindKeys: map-keys($euiPaletteColorBlind
+);
 $euiColorVis0: $ouiColorVis0;
 $euiColorVis1: $ouiColorVis1;
 $euiColorVis2: $ouiColorVis2;
