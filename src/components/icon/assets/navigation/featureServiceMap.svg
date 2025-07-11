@@ -1,3 +1,29 @@
+<!--
+  - SPDX-License-Identifier: Apache-2.0
+  -
+  - The OpenSearch Contributors require contributions made to
+  - this file be licensed under the Apache-2.0 license or a
+  - compatible open source license.
+  -
+  - Modifications Copyright OpenSearch Contributors. See
+  - GitHub history for details.
+  -->
+<!--
+  - Copyright (C) 2004 Remix Icon
+  -
+  - Licensed under the Apache License, Version 2.0 (the "License");
+  - you may not use this file except in compliance with the License.
+  - You may obtain a copy of the License at
+  -
+  -         http://www.apache.org/licenses/LICENSE-2.0
+  -
+  - Unless required by applicable law or agreed to in writing, software
+  - distributed under the License is distributed on an "AS IS" BASIS,
+  - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  - See the License for the specific language governing permissions and
+  - limitations under the License.
+  -->
+
 <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
   <path clip-rule="evenodd" d="M6.25642 1.92236C8.06172 1.92248 9.5258 3.38644 9.52582 5.19176C9.52582 5.76041 9.37904 6.29466 9.1237 6.76043L10.7234 7.98156C11.1561 7.57008 11.7415 7.31757 12.3857 7.3175C13.7184 7.3175 14.7992 8.39836 14.7992 9.731C14.7988 11.0633 13.7181 12.143 12.3857 12.143C11.0534 12.1429 9.97334 11.0632 9.97296 9.731C9.97296 9.37321 10.0509 9.03292 10.1906 8.72753L8.57548 7.49459C7.98332 8.09096 7.16324 8.46111 6.25642 8.46116C5.95865 8.46116 5.67024 8.41992 5.39609 8.34532L4.73351 10.0512C5.28973 10.456 5.65286 11.111 5.65286 11.8516C5.6526 13.081 4.6555 14.0776 3.42604 14.0777C2.19655 14.0777 1.19948 13.081 1.19922 11.8516C1.19922 10.6219 2.19639 9.62475 3.42604 9.62475C3.58753 9.62475 3.74506 9.64226 3.89679 9.67492L4.55421 7.98304C3.61453 7.40883 2.98702 6.37362 2.98702 5.19176C2.98704 3.38637 4.45103 1.92236 6.25642 1.92236ZM3.42604 10.5404C2.7023 10.5404 2.11563 11.1278 2.11563 11.8516C2.11589 12.5751 2.70246 13.1613 3.42604 13.1613C4.14959 13.1612 4.73619 12.5751 4.73646 11.8516C4.73646 11.1279 4.14976 10.5405 3.42604 10.5404ZM12.3857 8.23317C11.5591 8.23331 10.8894 8.90435 10.8894 9.731C10.8897 10.5573 11.5593 11.2272 12.3857 11.2274C13.2122 11.2274 13.8824 10.5574 13.8828 9.731C13.8828 8.90427 13.2125 8.23317 12.3857 8.23317ZM6.25642 2.83877C4.95694 2.83877 3.90345 3.89228 3.90343 5.19176C3.90343 6.49127 4.95692 7.54476 6.25642 7.54476C7.55583 7.54464 8.60868 6.4912 8.60868 5.19176C8.60866 3.89235 7.55581 2.83888 6.25642 2.83877Z"/>
 </svg>

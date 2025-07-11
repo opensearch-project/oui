@@ -1,3 +1,29 @@
+<!--
+  - SPDX-License-Identifier: Apache-2.0
+  -
+  - The OpenSearch Contributors require contributions made to
+  - this file be licensed under the Apache-2.0 license or a
+  - compatible open source license.
+  -
+  - Modifications Copyright OpenSearch Contributors. See
+  - GitHub history for details.
+  -->
+<!--
+  - Copyright (C) 2004 Remix Icon
+  -
+  - Licensed under the Apache License, Version 2.0 (the "License");
+  - you may not use this file except in compliance with the License.
+  - You may obtain a copy of the License at
+  -
+  -         http://www.apache.org/licenses/LICENSE-2.0
+  -
+  - Unless required by applicable law or agreed to in writing, software
+  - distributed under the License is distributed on an "AS IS" BASIS,
+  - WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  - See the License for the specific language governing permissions and
+  - limitations under the License.
+  -->
+
 <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
   <path d="M0.801065 10.1336C0.8025 9.97932 0.909387 9.84109 1.0709 9.785L4.09003 8.73643L4.17256 8.7161C4.36694 8.68626 4.5646 8.78117 4.63907 8.95115C4.72406 9.14529 4.61595 9.36427 4.39791 9.43999L2.36975 10.1441L8.03748 12.198L13.6326 10.1253L11.6162 9.44103L11.5395 9.40611C11.3733 9.31195 11.298 9.12407 11.3709 8.95375C11.4439 8.78344 11.6406 8.68729 11.8351 8.71558L11.9182 8.73539L14.928 9.7579C15.0901 9.81295 15.1981 9.95054 15.2007 10.105C15.2032 10.2593 15.0997 10.399 14.9397 10.4583L8.20313 12.9542C8.10007 12.9923 7.98403 12.9931 7.88062 12.9557L1.06505 10.4865C0.904336 10.4282 0.799802 10.2881 0.801065 10.1336Z"/>
   <path d="M0.832087 12.1025C0.909269 11.9336 1.10836 11.8416 1.30211 11.8737L1.38464 11.8951L8.03749 14.306L14.6142 11.8701L14.6962 11.8482C14.8897 11.8145 15.0892 11.905 15.168 12.0733C15.2466 12.2417 15.1784 12.4318 15.0152 12.5304L14.9397 12.5663L8.20313 15.0622C8.10007 15.1003 7.98403 15.1011 7.88062 15.0637L1.06505 12.5945L0.989541 12.5585C0.825412 12.4612 0.754874 12.2715 0.832087 12.1025Z"/>
