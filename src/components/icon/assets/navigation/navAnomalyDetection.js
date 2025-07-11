@@ -10,7 +10,7 @@
  */
 
 import * as React from 'react';
-const OuiIconFeatureAnomalyDetection = ({ title, titleId, ...props }) => (
+const OuiIconNavAnomalyDetection = ({ title, titleId, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={16}
@@ -24,4 +24,4 @@ const OuiIconFeatureAnomalyDetection = ({ title, titleId, ...props }) => (
     <path d="M12.696 1.882a.898.898 0 0 1 .897.898v2.358a.385.385 0 1 1-.77 0V2.78a.127.127 0 0 0-.128-.128h-.714v.001H9.384v-.001H6.365v.003H3.694v-.003H2.442a.128.128 0 0 0-.127.128v2.358a.386.386 0 1 1-.769 0V2.78a.898.898 0 0 1 .897-.898z" />
   </svg>
 );
-export const icon = OuiIconFeatureAnomalyDetection;
+export const icon = OuiIconNavAnomalyDetection;

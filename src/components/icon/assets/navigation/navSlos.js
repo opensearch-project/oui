@@ -10,7 +10,7 @@
  */
 
 import * as React from 'react';
-const OuiIconFeatureSlos = ({ title, titleId, ...props }) => (
+const OuiIconNavSlos = ({ title, titleId, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={16}
@@ -25,4 +25,4 @@ const OuiIconFeatureSlos = ({ title, titleId, ...props }) => (
     />
   </svg>
 );
-export const icon = OuiIconFeatureSlos;
+export const icon = OuiIconNavSlos;

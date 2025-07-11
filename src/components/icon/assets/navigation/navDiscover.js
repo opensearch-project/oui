@@ -10,7 +10,7 @@
  */
 
 import * as React from 'react';
-const OuiIconFeatureNotifications = ({ title, titleId, ...props }) => (
+const OuiIconNavDiscover = ({ title, titleId, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={16}
@@ -19,7 +19,7 @@ const OuiIconFeatureNotifications = ({ title, titleId, ...props }) => (
     aria-labelledby={titleId}
     {...props}>
     {title ? <title id={titleId}>{title}</title> : null}
-    <path d="M14.4 2.8H1.6a.4.4 0 0 0-.4.4v9.067a.933.933 0 0 0 .933.933h11.733a.934.934 0 0 0 .933-.933V3.2a.4.4 0 0 0-.4-.4ZM8 8.524 2.626 3.6h10.744L8 8.524ZM6.243 8l-4.245 3.89V4.11L6.244 8Zm.592.543.897.818a.4.4 0 0 0 .54 0l.893-.818L13.37 12.4H2.628l4.208-3.857ZM9.755 8l4.244-3.89v7.78L9.755 8Z" />
+    <path d="M8 .8A7.2 7.2 0 1 0 15.2 8 7.209 7.209 0 0 0 8 .8Zm0 13.553A6.353 6.353 0 1 1 14.355 8 6.36 6.36 0 0 1 8 14.353Zm3.2-10.12L6.682 6.492a.424.424 0 0 0-.19.19l-2.259 4.517a.423.423 0 0 0 .569.568L9.319 9.51a.424.424 0 0 0 .19-.19L11.77 4.8a.423.423 0 0 0-.57-.568Zm-2.385 4.58L5.56 10.442l1.623-3.255 3.255-1.623-1.623 3.25Z" />
   </svg>
 );
-export const icon = OuiIconFeatureNotifications;
+export const icon = OuiIconNavDiscover;

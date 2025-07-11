@@ -10,7 +10,7 @@
  */
 
 import * as React from 'react';
-const OuiIconFeatureNotebooks = ({ title, titleId, ...props }) => (
+const OuiIconNavNotebooks = ({ title, titleId, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={16}
@@ -23,4 +23,4 @@ const OuiIconFeatureNotebooks = ({ title, titleId, ...props }) => (
     <path d="M11.61 7.738a.386.386 0 0 1-.383.384H7.134a.384.384 0 0 1 0-.767h4.092a.386.386 0 0 1 .383.383M11.226 9.4H7.134a.384.384 0 0 0 0 .767h4.092a.384.384 0 1 0 0-.767M11.611 5.707a.386.386 0 0 1-.384.384H7.136a.384.384 0 0 1 0-.767h4.091a.386.386 0 0 1 .384.383" />
   </svg>
 );
-export const icon = OuiIconFeatureNotebooks;
+export const icon = OuiIconNavNotebooks;
