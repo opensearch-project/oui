@@ -71,7 +71,7 @@ const typeToPathMap = {
   bellSlash: 'bellSlash',
   bolt: 'bolt',
   bookOpen: 'bookOpen',
-  bookmark: 'bookmark',
+  addBookmark: 'addBookmark',
   boxesHorizontal: 'boxes_horizontal',
   boxesVertical: 'boxes_vertical',
   branch: 'branch',

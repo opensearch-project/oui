@@ -40,7 +40,7 @@ export const iconTypes = [
   'bellSlash',
   'bolt',
   'bookOpen',
-  'bookmark',
+  'addBookmark',
   'boxesHorizontal',
   'boxesVertical',
   'branch',
