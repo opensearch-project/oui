@@ -40,6 +40,8 @@ import Logos from './logos';
 
 import Workspace from './workspace';
 
+import Navigation from './navigation';
+
 import IconSizes from './icon_sizes';
 
 import IconColors from './icon_colors';
@@ -125,6 +127,20 @@ export const IconExample = {
         </p>
       ),
       demo: <Workspace />,
+    },
+    {
+      title: 'Naivgation',
+      text: (
+        <p>
+          Navigation icons are usually displayed at <OuiCode>16x16</OuiCode> or above.
+
+          The icons are designed to be used in navigation menus and
+          sidebars, and they are typically monochromatic. They are not intended
+          for use in other contexts, such as buttons or links.
+          <OuiSpacer size="s" />
+        </p>
+      ),
+      demo: <Navigation />,
     },
     {
       title: 'Apps',
