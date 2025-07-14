@@ -49,6 +49,7 @@ import { htmlIdGenerator } from '../../services';
 
 const typeToPathMap = {
   accessibility: 'accessibility',
+  addBookmark: 'addBookmark',
   addDataApp: 'app_add_data',
   advancedSettingsApp: 'app_advanced_settings',
   aggregate: 'aggregate',
@@ -71,7 +72,6 @@ const typeToPathMap = {
   bellSlash: 'bellSlash',
   bolt: 'bolt',
   bookOpen: 'bookOpen',
-  addBookmark: 'addBookmark',
   boxesHorizontal: 'boxes_horizontal',
   boxesVertical: 'boxes_vertical',
   branch: 'branch',

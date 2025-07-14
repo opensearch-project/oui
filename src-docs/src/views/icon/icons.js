@@ -23,6 +23,7 @@ import {
 
 export const iconTypes = [
   'accessibility',
+  'addBookmark',
   'aggregate',
   'alert',
   'analyzeEvent',
@@ -40,7 +41,6 @@ export const iconTypes = [
   'bellSlash',
   'bolt',
   'bookOpen',
-  'addBookmark',
   'boxesHorizontal',
   'boxesVertical',
   'branch',
