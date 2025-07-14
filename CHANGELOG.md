@@ -7,16 +7,29 @@
 
 ### 🛡 Security
 - Update react-router's dependency path-to-regexp to address CVE ([#1504](https://github.com/opensearch-project/oui/pull/1504))
+- chore(deps): update dependency puppeteer to v22 ([#15523](https://github.com/opensearch-project/oui/pull/1523))
+- chore(deps): update dependency eslint-import-resolver-webpack to v0.13.1 ([#1564](https://github.com/opensearch-project/oui/pull/1564))
+- Bump pbkdf2 from 3.0.14 to 3.1.3 ([#1560](https://github.com/opensearch-project/oui/pull/1560))
 - Add package resolution to braces to address CVE ([#1524](https://github.com/opensearch-project/oui/pull/1524))
-
+- Update css loader to 5.0.0 ([#1530](https://github.com/opensearch-project/oui/pull/1530))
+- Fix cve issue for transitive dependency @babel/runtime-corejs2 ([#1531](https://github.com/opensearch-project/oui/pull/1531))
+- Fix cve issue for elliptic and axios ([#1549](https://github.com/opensearch-project/oui/pull/1549))
+- Fix cve issue for jest-cli ([#1556](https://github.com/opensearch-project/oui/pull/1556))
+- Fix cve issue for eslint-plugin-jsx-a11y ([#1575](https://github.com/opensearch-project/oui/pull/1575))
+- chore(deps): update dependency @babel/core to v7.11.5 ([#1584](https://github.com/opensearch-project/oui/pull/1584))
+- Upgrade jest to v27 ([#1576](https://github.com/opensearch-project/oui/pull/1576))
+- Upgrade autoprefixer to v10 ([#1582](https://github.com/opensearch-project/oui/pull/1582))
+- Upgrade jest to v29 ([#1585](https://github.com/opensearch-project/oui/pull/1585))
+- Upgrade babel-plugin-add-module-exports to 1.0.4 ([#1593](https://github.com/opensearch-project/oui/pull/1593))
 
 ### 📈 Features/Enhancements
 - Allow TabbedContent to preserve in dom #1500 ([#1500](https://github.com/opensearch-project/oui/pull/1500))
-
+- Add menus icons ([#1598](https://github.com/opensearch-project/oui/pull/1598))
 
 ### 🐛 Bug Fixes
 - fix button line-height inherit causes text cut off ([#1490](https://github.com/opensearch-project/oui/pull/1490))
 - Add OpenSearch logo to page title ([#1532](https://github.com/opensearch-project/oui/pull/1532))
+- Fix dev server configuration after webpack-dev-server upgrade in 1.19 ([#1567](https://github.com/opensearch-project/oui/pull/1567)) 
 
 
 ### 🚞 Infrastructure
@@ -27,8 +40,12 @@
 
 
 ### 🛠 Maintenance
-- Add @ruanyl and @d-rowe as maintainers ([#1485])(https://github.com/opensearch-project/oui/pull/1485)
-- Update maintainer alias from @d-rowe to @d-buckner ([#1492])(https://github.com/opensearch-project/oui/pull/1492)
+- Add @ruanyl and @d-rowe as maintainers ([#1485](https://github.com/opensearch-project/oui/pull/1485))
+- Update maintainer alias from @d-rowe to @d-buckner ([#1492](https://github.com/opensearch-project/oui/pull/1492))
+- Add @angle943, @Maosaic, and @ruchidh as maintainers ([#1553](https://github.com/opensearch-project/oui/pull/1553))
+- Bump http-proxy-middleware from 2.0.7 to 2.0.9 ([#1551](https://github.com/opensearch-project/oui/pull/1551))
+- Moving @bandinib-amzn and @joshuarrrr to emeritus ([#1558](https://github.com/opensearch-project/oui/pull/1558))
+- Update TypeScript to 4.7.4 ([#1586](https://github.com/opensearch-project/oui/pull/1586))
 
 
 ### 🪛 Refactoring
@@ -46,22 +63,8 @@
 ### 📈 Features/Enhancements
 - Add vertical oriented button group ([#755](https://github.com/opensearch-project/oui/pull/755))
 
-### 🐛 Bug Fixes
-
-
-### 🚞 Infrastructure
-
-
 ### 📝 Documentation
-- Refactor OUI Documentation homepage layout ([#1472](https://github.com/opensearch-project/oui/pull/1472))
-
-### 🛠 Maintenance
-
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
+ - Refactor OUI Documentation homepage layout ([#1472](https://github.com/opensearch-project/oui/pull/1472))
 
  
 ## [`1.18.0`](https://github.com/opensearch-project/oui/tree/1.18)
