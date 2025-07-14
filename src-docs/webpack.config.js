@@ -57,6 +57,13 @@ const webpackConfig = {
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json', '.mjs'],
+    fallback: {
+      fs: false,
+      path: require.resolve('path-browserify'),
+      assert: require.resolve('assert/'),
+      os: require.resolve('os-browserify/browser'),
+      process: require.resolve('process/browser'),
+    },
   },
 
   resolveLoader: {
@@ -101,6 +108,9 @@ const webpackConfig = {
       {
         test: /\.(woff|woff2|ttf|eot|ico)(\?|$)/,
         loader: 'file-loader',
+        options: {
+          esModule: false,
+        },
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
@@ -108,6 +118,7 @@ const webpackConfig = {
         options: {
           limit: 8000, // Convert images < 8kb to base64 strings
           name: 'images/[hash]-[name].[ext]',
+          esModule: false,
         },
       },
       {
@@ -142,9 +153,11 @@ const webpackConfig = {
 
   devServer: isDevelopment
     ? {
-        static: { directory: 'src-docs/build' },
+        static: {
+          directory: path.join(__dirname, 'build'),
+        },
         host: '0.0.0.0',
-        allowedHosts: ['*'],
+        allowedHosts: 'all',
         port: 8030,
         historyApiFallback: true,
         // prevent file watching while running on CI
@@ -160,9 +173,6 @@ const webpackConfig = {
         },
       }
     : undefined,
-  node: {
-    fs: 'empty',
-  },
 };
 
 module.exports = webpackConfig;
