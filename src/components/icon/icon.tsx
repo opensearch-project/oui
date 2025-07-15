@@ -49,6 +49,7 @@ import { htmlIdGenerator } from '../../services';
 
 const typeToPathMap = {
   accessibility: 'accessibility',
+  addBookmark: 'addBookmark',
   addDataApp: 'app_add_data',
   advancedSettingsApp: 'app_advanced_settings',
   aggregate: 'aggregate',
@@ -192,6 +193,8 @@ const typeToPathMap = {
   function: 'function',
   functionAdd: 'functionAdd',
   gear: 'gear',
+  generate: 'generate',
+  generateContent: 'generate_content',
   gisApp: 'app_gis',
   glasses: 'glasses',
   globe: 'globe',

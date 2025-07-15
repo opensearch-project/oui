@@ -23,6 +23,7 @@ import {
 
 export const iconTypes = [
   'accessibility',
+  'addBookmark',
   'aggregate',
   'alert',
   'analyzeEvent',
@@ -117,6 +118,8 @@ export const iconTypes = [
   'function',
   'functionAdd',
   'gear',
+  'generate',
+  'generateContent',
   'glasses',
   'globe',
   'grab',
