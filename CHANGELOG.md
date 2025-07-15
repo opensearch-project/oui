@@ -16,6 +16,7 @@
 - Fix cve issue for elliptic and axios ([#1549](https://github.com/opensearch-project/oui/pull/1549))
 - Fix cve issue for jest-cli ([#1556](https://github.com/opensearch-project/oui/pull/1556))
 - Fix cve issue for eslint-plugin-jsx-a11y ([#1575](https://github.com/opensearch-project/oui/pull/1575))
+- chore(deps): update dependency @babel/core to v7.11.5 ([#1584](https://github.com/opensearch-project/oui/pull/1584))
 - Upgrade jest to v27 ([#1576](https://github.com/opensearch-project/oui/pull/1576))
 - Upgrade autoprefixer to v10 ([#1582](https://github.com/opensearch-project/oui/pull/1582))
 - Upgrade jest to v29 ([#1585](https://github.com/opensearch-project/oui/pull/1585))
