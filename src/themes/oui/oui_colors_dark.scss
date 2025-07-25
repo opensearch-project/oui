@@ -38,6 +38,15 @@ $ouiColorFullShade: #FFF;
 $ouiPageBackgroundColor: shade($ouiColorLightestShade, 45%);
 $ouiColorHighlight: #2E2D25;
 
+// CodeBlock
+$ouiCodeBlockCommentShade: #838B93;
+$ouiCodeBlockStringShade: #D0809B;
+$ouiCodeBlockNameShade: #6AB0F1;
+$ouiCodeBlockNumberShade: #10B688;
+$ouiCodeBlockKeywordShade: #B174FC;
+$ouiCodeBlockTypeShade: #6AB0F1;
+$ouiCodeBlockTitleShade: #DD8232;
+
 // Variations from core
 $ouiTextColor: #DFE5EF;
 $ouiTitleColor: $ouiTextColor;
@@ -62,8 +71,23 @@ $ouiColorChartBand: tint($ouiColorLightestShade, 2.5%);
 $ouiShadowColor: #000;
 $ouiShadowColorLarge: #000;
 
+//CodeBlock Colors
+$ouiCodeBlockCommentColor: makeHighContrastColor($ouiCodeBlockCommentShade);
+$ouiCodeBlockStringColor: makeHighContrastColor($ouiCodeBlockStringShade);
+$ouiCodeBlockNameColor: makeHighContrastColor($ouiCodeBlockNameShade);
+$ouiCodeBlockNumberColor: makeHighContrastColor($ouiCodeBlockNumberShade);
+$ouiCodeBlockKeywordColor: makeHighContrastColor($ouiCodeBlockKeywordShade);
+$ouiCodeBlockTypeColor: makeHighContrastColor($ouiCodeBlockTypeShade);
+$ouiCodeBlockTitleColor: makeHighContrastColor($ouiCodeBlockTitleShade);
 
 /* OUI -> EUI Aliases */
+$euiCodeBlockCommentColor: $ouiCodeBlockCommentColor;
+$euiCodeBlockStringColor: $ouiCodeBlockStringColor;
+$euiCodeBlockNameColor: $ouiCodeBlockNameColor;
+$euiCodeBlockNumberColor: $ouiCodeBlockNumberColor;
+$euiCodeBlockKeywordColor: $ouiCodeBlockKeywordColor;
+$euiCodeBlockTypeColor: $ouiCodeBlockTypeColor;
+$euiCodeBlockTitleColor: $ouiCodeBlockTitleColor;
 $euiColorGhost: $ouiColorGhost;
 $euiColorInk: $ouiColorInk;
 $euiColorPrimary: $ouiColorPrimary;
