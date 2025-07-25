@@ -64,6 +64,14 @@ $ouiColorChartBand: tint($ouiColorLightestShade, 2.5%);
 $ouiShadowColor: #000;
 $ouiShadowColorLarge: #000;
 
+//CodeBlock Colors
+$ouiCodeBlockCommentColor: $ouiCodeBlockCommentShade;
+$ouiCodeBlockStringColor: $ouiCodeBlockStringShade;
+$ouiCodeBlockNameColor: $ouiCodeBlockNameShade;
+$ouiCodeBlockNumberColor: $ouiCodeBlockNumberShade;
+$ouiCodeBlockKeywordColor: $ouiCodeBlockKeywordShade;
+$ouiCodeBlockTypeColor: $ouiCodeBlockTypeShade;
+$ouiCodeBlockTitleColor: $ouiCodeBlockTitleShade;
 
 /* OUI -> EUI Aliases */
 $euiColorGhost: $ouiColorGhost;

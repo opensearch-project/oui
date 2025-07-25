@@ -4,6 +4,27 @@
 
 ### Deprecations
 
+### 🛡 Security
+
+### 📈 Features/Enhancements
+- Update CodeBlock Colors ([#1615](https://github.com/opensearch-project/oui/pull/1615))
+
+### 🐛 Bug Fixes
+
+### 🚞 Infrastructure
+
+### 📝 Documentation
+
+### 🛠 Maintenance
+
+### 🪛 Refactoring
+
+### 🔩 Tests
+
+## [`1.20.0`](https://github.com/opensearch-project/oui/tree/1.20.0)
+
+### Deprecations
+
 
 ### 🛡 Security
 - Update react-router's dependency path-to-regexp to address CVE ([#1504](https://github.com/opensearch-project/oui/pull/1504))
