@@ -6,6 +6,32 @@
 
 
 ### 🛡 Security
+
+
+### 📈 Features/Enhancements
+- Update CodeBlock Colors ([#1615](https://github.com/opensearch-project/oui/pull/1615))
+
+
+### 🐛 Bug Fixes
+
+
+### 🚞 Infrastructure
+
+
+### 📝 Documentation
+
+
+### 🛠 Maintenance
+
+
+### 🪛 Refactoring
+
+
+### 🔩 Tests
+
+## [`1.20.0`](https://github.com/opensearch-project/oui/tree/1.20)
+
+### 🛡 Security
 - Update react-router's dependency path-to-regexp to address CVE ([#1504](https://github.com/opensearch-project/oui/pull/1504))
 - chore(deps): update dependency puppeteer to v22 ([#15523](https://github.com/opensearch-project/oui/pull/1523))
 - chore(deps): update dependency eslint-import-resolver-webpack to v0.13.1 ([#1564](https://github.com/opensearch-project/oui/pull/1564))
@@ -30,15 +56,11 @@
 ### 🐛 Bug Fixes
 - fix button line-height inherit causes text cut off ([#1490](https://github.com/opensearch-project/oui/pull/1490))
 - Add OpenSearch logo to page title ([#1532](https://github.com/opensearch-project/oui/pull/1532))
-- Fix dev server configuration after webpack-dev-server upgrade in 1.19 ([#1567](https://github.com/opensearch-project/oui/pull/1567)) 
+- Fix dev server configuration after webpack-dev-server upgrade in 1.19 ([#1567](https://github.com/opensearch-project/oui/pull/1567))
 
 
 ### 🚞 Infrastructure
 - update actions/upload-artifact and actions/download-artifact to v4([#1491](https://github.com/opensearch-project/oui/pull/1491))
-
-
-### 📝 Documentation
-
 
 ### 🛠 Maintenance
 - Add @ruanyl and @d-rowe as maintainers ([#1485](https://github.com/opensearch-project/oui/pull/1485))
@@ -47,12 +69,6 @@
 - Bump http-proxy-middleware from 2.0.7 to 2.0.9 ([#1551](https://github.com/opensearch-project/oui/pull/1551))
 - Moving @bandinib-amzn and @joshuarrrr to emeritus ([#1558](https://github.com/opensearch-project/oui/pull/1558))
 - Update TypeScript to 4.7.4 ([#1586](https://github.com/opensearch-project/oui/pull/1586))
-
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
 
 
 ## [`1.19.0`](https://github.com/opensearch-project/oui/tree/1.19)
@@ -67,7 +83,7 @@
 ### 📝 Documentation
  - Refactor OUI Documentation homepage layout ([#1472](https://github.com/opensearch-project/oui/pull/1472))
 
- 
+
 ## [`1.18.0`](https://github.com/opensearch-project/oui/tree/1.18)
 
 ### 📈 Features/Enhancements
@@ -93,7 +109,7 @@
 
 
 ## [`1.15.0`](https://github.com/opensearch-project/oui/tree/1.15)
- 
+
 ### Deprecations
 
 - Deprecate Query.toESQuery and Query.toESQueryString in favor of Query.toOpenSearchQuery and Query.toOpenSearchQueryString ([#1426](https://github.com/opensearch-project/oui/pull/1426))
@@ -101,12 +117,12 @@
 ### 📈 Features/Enhancements
 
 - Reduce the gap between the elements of a compressed OuiSearchBar ([#1426](https://github.com/opensearch-project/oui/pull/1426))
-- Update colors for v9 theme ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
+- Update colors for v9 theme ([#1430](https://github.com/opensearch-project/oui/pull/1430))
 
 ### 🐛 Bug Fixes
 
 - Fix naming conventions in OuiSearchBar code and docs ([#1426](https://github.com/opensearch-project/oui/pull/1426))
-- Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430)) 
+- Revert button background color configurability ([#1430](https://github.com/opensearch-project/oui/pull/1430))
 
 
 ## [`1.14.0`](https://github.com/opensearch-project/oui/tree/1.14)
