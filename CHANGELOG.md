@@ -1,33 +1,11 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
-
-### Deprecations
-
-
-### 🛡 Security
+## [`1.21.0`](https://github.com/opensearch-project/oui/tree/1.x)
 
 
 ### 📈 Features/Enhancements
 - Update CodeBlock Colors ([#1615](https://github.com/opensearch-project/oui/pull/1615))
 
-
-### 🐛 Bug Fixes
-
-
-### 🚞 Infrastructure
-
-
-### 📝 Documentation
-
-
-### 🛠 Maintenance
-
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
 
 ## [`1.20.0`](https://github.com/opensearch-project/oui/tree/1.20)
 
