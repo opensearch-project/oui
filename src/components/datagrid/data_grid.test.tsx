@@ -39,7 +39,7 @@ import {
 import { OuiDataGridColumnResizer } from './data_grid_column_resizer';
 import { OuiDataGridRowHeightOption } from './data_grid_types';
 import { keys } from '../../services';
-import { act } from 'react-dom/test-utils';
+import { act } from '../../test/react_test_utils';
 
 jest.mock('./row_height_utils', () => {
   return {

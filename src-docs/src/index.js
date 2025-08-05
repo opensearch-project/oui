@@ -10,8 +10,8 @@
  */
 
 import React, { createElement } from 'react';
-import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import { render } from '../../src/services/react_dom';
 import { Router, Switch, Route, Redirect } from 'react-router';
 
 import configureStore, { history } from './store/configure_store';
@@ -59,7 +59,7 @@ const routes = [
   ...childRoutes,
 ];
 
-ReactDOM.render(
+render(
   <Provider store={store}>
     <ThemeProvider>
       <Router history={history}>

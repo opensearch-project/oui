@@ -31,7 +31,7 @@
 import React from 'react';
 import { render, mount, ReactWrapper } from 'enzyme';
 import { requiredProps, findTestSubject } from '../../test';
-import { act } from 'react-dom/test-utils';
+import { act } from '../../test/react_test_utils';
 import { keys } from '../../services';
 
 import { OuiImage } from './image';
