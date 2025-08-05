@@ -15,11 +15,17 @@
   ],
   "moduleNameMapper": {
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/scripts/jest/mocks/file_mock.js",
-    "\\.(css|less|scss)$": "<rootDir>/scripts/jest/mocks/style_mock.js"
+    "\\.(css|less|scss)$": "<rootDir>/scripts/jest/mocks/style_mock.js",
+    "^react$": "react-18",
+    "^react-dom$": "react-dom-18",
+    "^react-dom/client$": "react-dom-18/client",
+    "./react-dom-client": "react-dom-18/client",
+    "^@testing-library/react$": "@testing-library/react-18"
   },
   "setupFiles": [
-    "<rootDir>/scripts/jest/setup/enzyme.js",
-    "<rootDir>/scripts/jest/setup/throw_on_console_error.js"
+    "<rootDir>/scripts/jest/setup/enzyme-react18.js",
+    "<rootDir>/scripts/jest/setup/throw_on_console_error_react18.js",
+    "<rootDir>/scripts/jest/setup/text_encoder_polyfill.js"
   ],
   "setupFilesAfterEnv": [
     "<rootDir>/scripts/jest/setup/mocks.js",
@@ -41,6 +47,10 @@
     "**/*.test.js",
     "**/*.test.ts",
     "**/*.test.tsx"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/src/services/react-dom-client.test.tsx"
   ],
   "transform": {
     "^.+\\.(js|tsx?)$": "babel-jest"
