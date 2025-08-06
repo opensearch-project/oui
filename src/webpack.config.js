@@ -57,7 +57,9 @@ const plugins = [
 ];
 
 const terserPlugin = new TerserPlugin({
-  sourceMap: true,
+  terserOptions: {
+    sourceMap: true,
+  },
 });
 
 module.exports = (env) => ({
@@ -79,6 +81,13 @@ module.exports = (env) => ({
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
+    fallback: {
+      fs: false,
+      path: require.resolve('path-browserify'),
+      assert: require.resolve('assert/'),
+      os: require.resolve('os-browserify/browser'),
+      process: require.resolve('process/browser'),
+    },
   },
 
   // Specify where these libraries should be found
@@ -104,6 +113,9 @@ module.exports = (env) => ({
       {
         test: /\.(woff|woff2|ttf|eot|ico|png|gif|jpg|jpeg)(\?|$)/,
         loader: 'file-loader',
+        options: {
+          esModule: false,
+        },
       },
     ],
     strictExportPresence: isProduction,
@@ -114,6 +126,7 @@ module.exports = (env) => ({
   optimization: {
     minimize: isProduction,
     minimizer: [terserPlugin],
-    noEmitOnErrors: true,
+    emitOnErrors: false,
+    usedExports: false, // prevents orphaning entire bundle in production mode
   },
 });

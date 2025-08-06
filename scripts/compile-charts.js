@@ -78,7 +78,10 @@ function compileChartsBundle() {
 
 function webpackCompile(outputFilename) {
   execSync(
-    `webpack ${path.join(__dirname, '../src/themes/charts/themes.ts')} \
+    `webpack --entry-reset --entry ${path.join(
+      __dirname,
+      '../src/themes/charts/themes.ts'
+    )} \
         -o dist \
         --config=src/webpack.config.js \
         --env filename=${outputFilename} \
