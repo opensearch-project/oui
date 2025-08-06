@@ -5,9 +5,9 @@
 ### Deprecations
 
 ### 🛡 Security
+- Upgrade webpack to v5 ([#1601](https://github.com/opensearch-project/oui/pull/1601))
 
 ### 📈 Features/Enhancements
-- Update CodeBlock Colors ([#1615](https://github.com/opensearch-project/oui/pull/1615))
 
 ### 🐛 Bug Fixes
 
@@ -21,10 +21,13 @@
 
 ### 🔩 Tests
 
+## [`1.21.0`](https://github.com/opensearch-project/oui/tree/1.21.0)
+
+### 📈 Features/Enhancements
+- Update CodeBlock Colors ([#1615](https://github.com/opensearch-project/oui/pull/1615))
+
+
 ## [`1.20.0`](https://github.com/opensearch-project/oui/tree/1.20.0)
-
-### Deprecations
-
 
 ### 🛡 Security
 - Update react-router's dependency path-to-regexp to address CVE ([#1504](https://github.com/opensearch-project/oui/pull/1504))
@@ -52,13 +55,8 @@
 - Add OpenSearch logo to page title ([#1532](https://github.com/opensearch-project/oui/pull/1532))
 - Fix dev server configuration after webpack-dev-server upgrade in 1.19 ([#1567](https://github.com/opensearch-project/oui/pull/1567)) 
 
-
 ### 🚞 Infrastructure
 - update actions/upload-artifact and actions/download-artifact to v4([#1491](https://github.com/opensearch-project/oui/pull/1491))
-
-
-### 📝 Documentation
-
 
 ### 🛠 Maintenance
 - Add @ruanyl and @d-rowe as maintainers ([#1485](https://github.com/opensearch-project/oui/pull/1485))
@@ -67,12 +65,6 @@
 - Bump http-proxy-middleware from 2.0.7 to 2.0.9 ([#1551](https://github.com/opensearch-project/oui/pull/1551))
 - Moving @bandinib-amzn and @joshuarrrr to emeritus ([#1558](https://github.com/opensearch-project/oui/pull/1558))
 - Update TypeScript to 4.7.4 ([#1586](https://github.com/opensearch-project/oui/pull/1586))
-
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
 
 
 ## [`1.19.0`](https://github.com/opensearch-project/oui/tree/1.19)
