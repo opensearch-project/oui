@@ -16,6 +16,7 @@
 ### 📝 Documentation
 
 ### 🛠 Maintenance
+- Update code base to work in react 16 and 18 ([#1628](https://github.com/opensearch-project/oui/pull/1628))
 
 ### 🪛 Refactoring
 

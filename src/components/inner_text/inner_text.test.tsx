@@ -29,8 +29,8 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { act } from 'react-dom/test-utils';
 import { render, mount } from 'enzyme';
+import { act } from '../../test/react_test_utils';
 import { findTestSubject, requiredProps } from '../../test';
 
 import { useInnerText, OuiInnerText } from './inner_text';
