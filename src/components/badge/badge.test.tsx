@@ -29,30 +29,30 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiBadge, COLORS, ICON_SIDES } from './badge';
 
 describe('OuiBadge', () => {
   test('is rendered', () => {
-    const component = render(<OuiBadge {...requiredProps}>Content</OuiBadge>);
-
-    expect(component).toMatchSnapshot();
+    const { container } = render(
+      <OuiBadge {...requiredProps}>Content</OuiBadge>
+    );
+    expect(container).toMatchSnapshot();
   });
 
   test('is disabled', () => {
-    const component = render(
+    const { container } = render(
       <OuiBadge isDisabled {...requiredProps}>
         Content
       </OuiBadge>
     );
-
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with onClick provided', () => {
-    const component = render(
+    const { container } = render(
       <OuiBadge
         {...requiredProps}
         onClick={jest.fn()}
@@ -60,22 +60,20 @@ describe('OuiBadge', () => {
         Content
       </OuiBadge>
     );
-
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with href provided', () => {
-    const component = render(
+    const { container } = render(
       <OuiBadge {...requiredProps} href="/#/">
         Content
       </OuiBadge>
     );
-
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with iconOnClick provided', () => {
-    const component = render(
+    const { container } = render(
       <OuiBadge
         {...requiredProps}
         iconOnClick={jest.fn()}
@@ -83,12 +81,11 @@ describe('OuiBadge', () => {
         Content
       </OuiBadge>
     );
-
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with iconOnClick and onClick provided', () => {
-    const component = render(
+    const { container } = render(
       <OuiBadge
         {...requiredProps}
         iconOnClick={jest.fn()}
@@ -98,12 +95,11 @@ describe('OuiBadge', () => {
         Content
       </OuiBadge>
     );
-
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with iconOnClick and href provided', () => {
-    const component = render(
+    const { container } = render(
       <OuiBadge
         {...requiredProps}
         iconOnClick={jest.fn()}
@@ -112,12 +108,11 @@ describe('OuiBadge', () => {
         Content
       </OuiBadge>
     );
-
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with href and rel provided', () => {
-    const component = render(
+    const { container } = render(
       <OuiBadge
         {...requiredProps}
         iconOnClick={jest.fn()}
@@ -127,53 +122,51 @@ describe('OuiBadge', () => {
         Content
       </OuiBadge>
     );
-
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('iconType', () => {
       it('is rendered', () => {
-        const component = render(<OuiBadge iconType="user">Content</OuiBadge>);
-
-        expect(component).toMatchSnapshot();
+        const { container } = render(
+          <OuiBadge iconType="user">Content</OuiBadge>
+        );
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('color', () => {
       COLORS.forEach((color) => {
         it(`${color} is rendered`, () => {
-          const component = render(<OuiBadge color={color}>Content</OuiBadge>);
-
-          expect(component).toMatchSnapshot();
+          const { container } = render(
+            <OuiBadge color={color}>Content</OuiBadge>
+          );
+          expect(container).toMatchSnapshot();
         });
       });
 
       it('accepts rgba', () => {
-        const component = render(
+        const { container } = render(
           <OuiBadge color="rgba(255,255,255,1)">Content</OuiBadge>
         );
-
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('accepts hex', () => {
-        const component = render(<OuiBadge color="#333">Content</OuiBadge>);
-
-        expect(component).toMatchSnapshot();
+        const { container } = render(<OuiBadge color="#333">Content</OuiBadge>);
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('iconSide', () => {
       ICON_SIDES.forEach((iconSide) => {
         it(`${iconSide} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiBadge iconType="user" iconSide={iconSide}>
               Content
             </OuiBadge>
           );
-
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
@@ -182,31 +175,30 @@ describe('OuiBadge', () => {
       const style = { border: '4px solid tomato' };
 
       it('is rendered', () => {
-        const component = render(<OuiBadge style={style}>Content</OuiBadge>);
-
-        expect(component).toMatchSnapshot();
+        const { container } = render(
+          <OuiBadge style={style}>Content</OuiBadge>
+        );
+        expect(container).toMatchSnapshot();
       });
 
       COLORS.forEach((color) => {
         it(`is rendered with ${color}`, () => {
-          const component = render(
+          const { container } = render(
             <OuiBadge style={style} color={color}>
               Content
             </OuiBadge>
           );
-
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
 
       it('is rendered with hollow', () => {
-        const component = render(
+        const { container } = render(
           <OuiBadge style={style} color="hollow">
             Content
           </OuiBadge>
         );
-
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
   });

@@ -1,500 +1,558 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiButton is rendered 1`] = `
-<button
-  aria-label="aria-label"
-  class="ouiButton ouiButton--primary testClass1 testClass2"
-  data-test-subj="test subject string"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    aria-label="aria-label"
+    class="ouiButton ouiButton--primary testClass1 testClass2"
+    data-test-subj="test subject string"
+    type="button"
   >
     <span
-      class="ouiButton__text"
+      class="ouiButtonContent ouiButton__content"
     >
-      Content
+      <span
+        class="ouiButton__text"
+      >
+        Content
+      </span>
     </span>
-  </span>
-</button>
+  </button>
+</div>
 `;
 
 exports[`OuiButton props color accent is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--accent"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    class="ouiButton ouiButton--accent"
+    type="button"
   >
     <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
 `;
 
 exports[`OuiButton props color danger is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--danger"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    class="ouiButton ouiButton--danger"
+    type="button"
   >
     <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
 `;
 
 exports[`OuiButton props color ghost is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--ghost"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    class="ouiButton ouiButton--ghost"
+    type="button"
   >
     <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
 `;
 
 exports[`OuiButton props color primary is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
   >
     <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
 `;
 
 exports[`OuiButton props color secondary is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--secondary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    class="ouiButton ouiButton--secondary"
+    type="button"
   >
     <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
 `;
 
 exports[`OuiButton props color success is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--success"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    class="ouiButton ouiButton--success"
+    type="button"
   >
     <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
 `;
 
 exports[`OuiButton props color text is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--text"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    class="ouiButton ouiButton--text"
+    type="button"
   >
     <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
 `;
 
 exports[`OuiButton props color warning is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--warning"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    class="ouiButton ouiButton--warning"
+    type="button"
   >
     <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
 `;
 
 exports[`OuiButton props contentProps is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    aria-label="aria-label"
-    class="ouiButtonContent ouiButton__content testClass1 testClass2"
-    data-test-subj="test subject string"
-  >
-    <span
-      class="ouiButton__text"
-    >
-      Content
-    </span>
-  </span>
-</button>
-`;
-
-exports[`OuiButton props fill is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary ouiButton--fill"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props fullWidth is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary ouiButton--fullWidth"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props href secures the rel attribute when the target is _blank 1`] = `
-<a
-  class="ouiButton ouiButton--primary"
-  href="#"
-  rel="noopener noreferrer"
-  target="_blank"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</a>
-`;
-
-exports[`OuiButton props iconGap m is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="user"
-    />
-    <span
-      class="ouiButton__text"
-    >
-      Content
-    </span>
-  </span>
-</button>
-`;
-
-exports[`OuiButton props iconGap none is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButtonContent--noIconGap ouiButton__content"
-  >
-    <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="user"
-    />
-    <span
-      class="ouiButton__text"
-    >
-      Content
-    </span>
-  </span>
-</button>
-`;
-
-exports[`OuiButton props iconGap s is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButtonContent--smallIconGap ouiButton__content"
-  >
-    <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="user"
-    />
-    <span
-      class="ouiButton__text"
-    >
-      Content
-    </span>
-  </span>
-</button>
-`;
-
-exports[`OuiButton props iconSide left is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="user"
-    />
-    <span
-      class="ouiButton__text"
-    >
-      Content
-    </span>
-  </span>
-</button>
-`;
-
-exports[`OuiButton props iconSide right is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButtonContent--iconRight ouiButton__content"
-  >
-    <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="user"
-    />
-    <span
-      class="ouiButton__text"
-    >
-      Content
-    </span>
-  </span>
-</button>
-`;
-
-exports[`OuiButton props iconType is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButtonContent__icon"
-      color="inherit"
-      data-ouiicon-type="user"
-    />
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props isDisabled is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary ouiButton-isDisabled"
-  disabled=""
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props isDisabled renders a button even when href is defined 1`] = `
-<button
-  class="ouiButton ouiButton--primary ouiButton-isDisabled"
-  disabled=""
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props isDisabled renders if passed as disabled 1`] = `
-<button
-  class="ouiButton ouiButton--primary ouiButton-isDisabled"
-  disabled=""
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props isLoading is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary ouiButton-isDisabled"
-  disabled=""
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
-    />
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props isSelected is rendered as false 1`] = `
-<button
-  aria-pressed="false"
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props isSelected is rendered as true 1`] = `
-<button
-  aria-pressed="true"
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props minWidth is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  style="min-width:0"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props size m is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props size s is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary ouiButton--small"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
-  >
-    <span
-      class="ouiButton__text"
-    />
-  </span>
-</button>
-`;
-
-exports[`OuiButton props textProps is rendered 1`] = `
-<button
-  class="ouiButton ouiButton--primary"
-  type="button"
->
-  <span
-    class="ouiButtonContent ouiButton__content"
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
   >
     <span
       aria-label="aria-label"
-      class="ouiButton__text testClass1 testClass2"
+      class="ouiButtonContent ouiButton__content testClass1 testClass2"
       data-test-subj="test subject string"
     >
-      Content
+      <span
+        class="ouiButton__text"
+      >
+        Content
+      </span>
     </span>
-  </span>
-</button>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props fill is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary ouiButton--fill"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props fullWidth is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary ouiButton--fullWidth"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props href secures the rel attribute when the target is _blank 1`] = `
+<div>
+  <a
+    class="ouiButton ouiButton--primary"
+    href="#"
+    rel="noopener noreferrer"
+    target="_blank"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </a>
+</div>
+`;
+
+exports[`OuiButton props iconGap m is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButtonContent__icon"
+        color="inherit"
+        data-ouiicon-type="user"
+      />
+      <span
+        class="ouiButton__text"
+      >
+        Content
+      </span>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props iconGap none is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButtonContent--noIconGap ouiButton__content"
+    >
+      <span
+        class="ouiButtonContent__icon"
+        color="inherit"
+        data-ouiicon-type="user"
+      />
+      <span
+        class="ouiButton__text"
+      >
+        Content
+      </span>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props iconGap s is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButtonContent--smallIconGap ouiButton__content"
+    >
+      <span
+        class="ouiButtonContent__icon"
+        color="inherit"
+        data-ouiicon-type="user"
+      />
+      <span
+        class="ouiButton__text"
+      >
+        Content
+      </span>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props iconSide left is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButtonContent__icon"
+        color="inherit"
+        data-ouiicon-type="user"
+      />
+      <span
+        class="ouiButton__text"
+      >
+        Content
+      </span>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props iconSide right is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButtonContent--iconRight ouiButton__content"
+    >
+      <span
+        class="ouiButtonContent__icon"
+        color="inherit"
+        data-ouiicon-type="user"
+      />
+      <span
+        class="ouiButton__text"
+      >
+        Content
+      </span>
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props iconType is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButtonContent__icon"
+        color="inherit"
+        data-ouiicon-type="user"
+      />
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props isDisabled is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary ouiButton-isDisabled"
+    disabled=""
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props isDisabled renders a button even when href is defined 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary ouiButton-isDisabled"
+    disabled=""
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props isDisabled renders if passed as disabled 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary ouiButton-isDisabled"
+    disabled=""
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props isLoading is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary ouiButton-isDisabled"
+    disabled=""
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiButtonContent__spinner"
+      />
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props isSelected is rendered as false 1`] = `
+<div>
+  <button
+    aria-pressed="false"
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props isSelected is rendered as true 1`] = `
+<div>
+  <button
+    aria-pressed="true"
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props minWidth is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    style="min-width: 0;"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props size m is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props size s is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary ouiButton--small"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
+exports[`OuiButton props textProps is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        aria-label="aria-label"
+        class="ouiButton__text testClass1 testClass2"
+        data-test-subj="test subject string"
+      >
+        Content
+      </span>
+    </span>
+  </button>
+</div>
 `;

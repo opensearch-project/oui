@@ -17,6 +17,7 @@
 
 ### 🛠 Maintenance
 - Update code base to work in react 16 and 18 ([#1628](https://github.com/opensearch-project/oui/pull/1628))
+- Setup devserver and tests to run in react 18 ([#1630](https://github.com/opensearch-project/oui/pull/1630)) 
 
 ### 🪛 Refactoring
 
