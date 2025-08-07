@@ -12,7 +12,7 @@
 /* eslint-disable react/no-multi-comp */
 import React, { useState, useEffect } from 'react';
 
-import { render, unmountComponentAtNode } from 'react-dom';
+import { render } from '../../../../src/services/react_dom';
 
 import { OuiWrappingPopover } from '../../../../src/components';
 
@@ -47,9 +47,11 @@ export default () => {
     const container = document.createElement('div');
     document.body.appendChild(container);
 
-    render(<PopoverApp anchor={thisAnchor} />, container);
+    const root = render(<PopoverApp anchor={thisAnchor} />, container);
 
-    return () => unmountComponentAtNode(container);
+    return () => {
+      root.unmount();
+    };
   }, []);
 
   return (

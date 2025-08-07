@@ -10,9 +10,8 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
-
 import html from 'html';
+import { render } from '../../../../src/services/react_dom';
 
 const renderTarget = document.createElement('div');
 export function renderToHtml(ComponentReference, props = {}) {
@@ -25,10 +24,10 @@ export function renderToHtml(ComponentReference, props = {}) {
 
     return {
       render() {
-        ReactDOM.render(element, renderTarget);
+        const root = render(element, renderTarget);
         const htmlString = renderTarget.innerHTML;
         const result = htmlString;
-        ReactDOM.unmountComponentAtNode(renderTarget);
+        root.unmount();
 
         return html.prettyPrint(result, {
           indent_size: 2,

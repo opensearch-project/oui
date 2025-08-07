@@ -10,7 +10,7 @@ import { ReactWrapper, mount, render } from 'enzyme';
 import { requiredProps } from '../../test';
 import { keys } from '../../services';
 import { OuiSplitButton, OuiSplitButtonOption } from './split_button';
-import { act } from 'react-dom/test-utils';
+import { act } from '../../test/react_test_utils';
 
 jest.mock('../portal', () => ({
   OuiPortal: ({ children }: any) => children,
@@ -35,7 +35,7 @@ const waitFor = (
 ) =>
   act(
     () =>
-      new Promise((resolve, reject) => {
+      new Promise<void>((resolve, reject) => {
         const startTime = Date.now();
 
         const nextInterval = () => {

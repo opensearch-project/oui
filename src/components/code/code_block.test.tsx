@@ -29,10 +29,9 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import { mount, render } from 'enzyme';
 import html from 'html';
-import { act } from 'react-dom/test-utils';
+import { renderTestElement, act } from '../../test/react_test_utils';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiCodeBlock } from './code_block';
@@ -118,17 +117,18 @@ describe('OuiCodeBlock', () => {
     it('updates DOM when input changes', (done) => {
       expect.assertions(2);
 
+      const { container } = renderTestElement(<App />, {
+        attachToDocument: false,
+      });
+
       function takeSnapshot() {
         expect(
-          html.prettyPrint(appDiv.innerHTML, {
+          html.prettyPrint(container.innerHTML, {
             indent_size: 2,
             unformatted: [], // Expand all tags, including spans
           })
         ).toMatchSnapshot();
       }
-
-      // enzyme does not recreate enough of the React<->DOM interaction to reproduce this bug
-      const appDiv = document.createElement('div');
 
       function App() {
         const [value, setValue] = useState('State 1');
@@ -158,8 +158,6 @@ describe('OuiCodeBlock', () => {
           </div>
         );
       }
-
-      ReactDOM.render(<App />, appDiv);
     });
 
     it('displays content in fullscreen mode', () => {

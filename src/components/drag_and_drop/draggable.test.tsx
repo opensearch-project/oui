@@ -29,8 +29,8 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { resetServerContext } from 'react-beautiful-dnd';
+import { renderTestElement } from '../../test/react_test_utils';
 import html from 'html';
 import { requiredProps } from '../../test/required_props';
 import { OuiDragDropContext, OuiDraggable, OuiDroppable } from './';
@@ -45,50 +45,41 @@ function takeSnapshot(element: HTMLElement) {
 }
 
 describe('OuiDraggable', () => {
-  let appDiv: HTMLElement;
-
   beforeEach(() => {
     resetServerContext(); // resets react-beautiful-dnd's internal instance counter which affects snapshots
-    appDiv = document.createElement('div');
-    document.body.appendChild(appDiv);
-  });
-
-  afterEach(() => {
-    ReactDOM.unmountComponentAtNode(appDiv);
-    document.body.removeChild(appDiv);
   });
 
   test('is rendered', () => {
     const handler = jest.fn();
 
-    ReactDOM.render(
+    const { container, cleanup } = renderTestElement(
       <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <OuiDroppable droppableId="testDroppable">
           <OuiDraggable draggableId="testDraggable" index={0}>
             {() => <div>Hello</div>}
           </OuiDraggable>
         </OuiDroppable>
-      </OuiDragDropContext>,
-      appDiv
+      </OuiDragDropContext>
     );
 
-    expect(takeSnapshot(appDiv)).toMatchSnapshot();
+    expect(takeSnapshot(container)).toMatchSnapshot();
+    cleanup();
   });
 
   test('can be given ReactElement children', () => {
     const handler = jest.fn();
 
-    ReactDOM.render(
+    const { container, cleanup } = renderTestElement(
       <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <OuiDroppable droppableId="testDroppable">
           <OuiDraggable draggableId="testDraggable" index={0}>
             <div>Hello</div>
           </OuiDraggable>
         </OuiDroppable>
-      </OuiDragDropContext>,
-      appDiv
+      </OuiDragDropContext>
     );
 
-    expect(takeSnapshot(appDiv)).toMatchSnapshot();
+    expect(takeSnapshot(container)).toMatchSnapshot();
+    cleanup();
   });
 });
