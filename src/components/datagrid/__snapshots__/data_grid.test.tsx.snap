@@ -1051,82 +1051,90 @@ Array [
                     data-test-subj="dataGridHeader"
                     role="row"
                   >
-                    <div
-                      class="ouiDataGridHeaderCell"
-                      data-test-subj="dataGridHeaderCell-A"
-                      role="columnheader"
-                      style="width:100px"
-                      tabindex="-1"
+                    <span
+                      class="ouiToolTipAnchor"
                     >
                       <div
-                        class="ouiDataGridColumnResizer"
-                        data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
-                      />
-                      <div
-                        class="ouiPopover ouiPopover--anchorDownCenter"
-                        offset="7"
+                        class="ouiDataGridHeaderCell"
+                        data-test-subj="dataGridHeaderCell-A"
+                        role="columnheader"
+                        style="width:100px"
+                        tabindex="-1"
                       >
                         <div
-                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
+                          class="ouiDataGridColumnResizer"
+                          data-test-subj="dataGridColumnResizer"
+                          style="margin-right:0px"
+                        />
+                        <div
+                          class="ouiPopover ouiPopover--anchorDownCenter"
+                          offset="7"
                         >
-                          <button
-                            class="ouiDataGridHeaderCell__button"
+                          <div
+                            class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                           >
-                            <div
-                              class="ouiDataGridHeaderCell__content"
+                            <button
+                              class="ouiDataGridHeaderCell__button"
                             >
-                              A
-                            </div>
-                            <span
-                              aria-label="Header actions"
-                              class="ouiDataGridHeaderCell__icon"
-                              color="text"
-                              data-ouiicon-type="arrowDown"
-                              data-test-subj="dataGridHeaderCellActionButton-A"
-                            />
-                          </button>
+                              <div
+                                class="ouiDataGridHeaderCell__content"
+                              >
+                                A
+                              </div>
+                              <span
+                                aria-label="Header actions"
+                                class="ouiDataGridHeaderCell__icon"
+                                color="text"
+                                data-ouiicon-type="arrowDown"
+                                data-test-subj="dataGridHeaderCellActionButton-A"
+                              />
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="ouiDataGridHeaderCell"
-                      data-test-subj="dataGridHeaderCell-B"
-                      role="columnheader"
-                      style="width:100px"
-                      tabindex="-1"
+                    </span>
+                    <span
+                      class="ouiToolTipAnchor"
                     >
                       <div
-                        class="ouiDataGridColumnResizer"
-                        data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
-                      />
-                      <div
-                        class="ouiPopover ouiPopover--anchorDownCenter"
-                        offset="7"
+                        class="ouiDataGridHeaderCell"
+                        data-test-subj="dataGridHeaderCell-B"
+                        role="columnheader"
+                        style="width:100px"
+                        tabindex="-1"
                       >
                         <div
-                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
+                          class="ouiDataGridColumnResizer"
+                          data-test-subj="dataGridColumnResizer"
+                          style="margin-right:0px"
+                        />
+                        <div
+                          class="ouiPopover ouiPopover--anchorDownCenter"
+                          offset="7"
                         >
-                          <button
-                            class="ouiDataGridHeaderCell__button"
+                          <div
+                            class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                           >
-                            <div
-                              class="ouiDataGridHeaderCell__content"
+                            <button
+                              class="ouiDataGridHeaderCell__button"
                             >
-                              B
-                            </div>
-                            <span
-                              aria-label="Header actions"
-                              class="ouiDataGridHeaderCell__icon"
-                              color="text"
-                              data-ouiicon-type="arrowDown"
-                              data-test-subj="dataGridHeaderCellActionButton-B"
-                            />
-                          </button>
+                              <div
+                                class="ouiDataGridHeaderCell__content"
+                              >
+                                B
+                              </div>
+                              <span
+                                aria-label="Header actions"
+                                class="ouiDataGridHeaderCell__icon"
+                                color="text"
+                                data-ouiicon-type="arrowDown"
+                                data-test-subj="dataGridHeaderCellActionButton-B"
+                              />
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </span>
                   </div>
                   <div
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
@@ -1432,82 +1440,90 @@ Array [
                         </span>
                       </div>
                     </div>
-                    <div
-                      class="ouiDataGridHeaderCell"
-                      data-test-subj="dataGridHeaderCell-A"
-                      role="columnheader"
-                      style="width:100px"
-                      tabindex="-1"
+                    <span
+                      class="ouiToolTipAnchor"
                     >
                       <div
-                        class="ouiDataGridColumnResizer"
-                        data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
-                      />
-                      <div
-                        class="ouiPopover ouiPopover--anchorDownCenter"
-                        offset="7"
+                        class="ouiDataGridHeaderCell"
+                        data-test-subj="dataGridHeaderCell-A"
+                        role="columnheader"
+                        style="width:100px"
+                        tabindex="-1"
                       >
                         <div
-                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
+                          class="ouiDataGridColumnResizer"
+                          data-test-subj="dataGridColumnResizer"
+                          style="margin-right:0px"
+                        />
+                        <div
+                          class="ouiPopover ouiPopover--anchorDownCenter"
+                          offset="7"
                         >
-                          <button
-                            class="ouiDataGridHeaderCell__button"
+                          <div
+                            class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                           >
-                            <div
-                              class="ouiDataGridHeaderCell__content"
+                            <button
+                              class="ouiDataGridHeaderCell__button"
                             >
-                              A
-                            </div>
-                            <span
-                              aria-label="Header actions"
-                              class="ouiDataGridHeaderCell__icon"
-                              color="text"
-                              data-ouiicon-type="arrowDown"
-                              data-test-subj="dataGridHeaderCellActionButton-A"
-                            />
-                          </button>
+                              <div
+                                class="ouiDataGridHeaderCell__content"
+                              >
+                                A
+                              </div>
+                              <span
+                                aria-label="Header actions"
+                                class="ouiDataGridHeaderCell__icon"
+                                color="text"
+                                data-ouiicon-type="arrowDown"
+                                data-test-subj="dataGridHeaderCellActionButton-A"
+                              />
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="ouiDataGridHeaderCell"
-                      data-test-subj="dataGridHeaderCell-B"
-                      role="columnheader"
-                      style="width:100px"
-                      tabindex="-1"
+                    </span>
+                    <span
+                      class="ouiToolTipAnchor"
                     >
                       <div
-                        class="ouiDataGridColumnResizer"
-                        data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
-                      />
-                      <div
-                        class="ouiPopover ouiPopover--anchorDownCenter"
-                        offset="7"
+                        class="ouiDataGridHeaderCell"
+                        data-test-subj="dataGridHeaderCell-B"
+                        role="columnheader"
+                        style="width:100px"
+                        tabindex="-1"
                       >
                         <div
-                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
+                          class="ouiDataGridColumnResizer"
+                          data-test-subj="dataGridColumnResizer"
+                          style="margin-right:0px"
+                        />
+                        <div
+                          class="ouiPopover ouiPopover--anchorDownCenter"
+                          offset="7"
                         >
-                          <button
-                            class="ouiDataGridHeaderCell__button"
+                          <div
+                            class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                           >
-                            <div
-                              class="ouiDataGridHeaderCell__content"
+                            <button
+                              class="ouiDataGridHeaderCell__button"
                             >
-                              B
-                            </div>
-                            <span
-                              aria-label="Header actions"
-                              class="ouiDataGridHeaderCell__icon"
-                              color="text"
-                              data-ouiicon-type="arrowDown"
-                              data-test-subj="dataGridHeaderCellActionButton-B"
-                            />
-                          </button>
+                              <div
+                                class="ouiDataGridHeaderCell__content"
+                              >
+                                B
+                              </div>
+                              <span
+                                aria-label="Header actions"
+                                class="ouiDataGridHeaderCell__icon"
+                                color="text"
+                                data-ouiicon-type="arrowDown"
+                                data-test-subj="dataGridHeaderCellActionButton-B"
+                              />
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </span>
                     <div
                       class="ouiDataGridHeaderCell ouiDataGridHeaderCell--controlColumn"
                       data-test-subj="dataGridHeaderCell-trailing"
@@ -2080,84 +2096,92 @@ Array [
                     data-test-subj="dataGridHeader"
                     role="row"
                   >
-                    <div
-                      class="ouiDataGridHeaderCell"
-                      data-test-subj="dataGridHeaderCell-A"
-                      role="columnheader"
-                      style="width:100px"
-                      tabindex="-1"
+                    <span
+                      class="ouiToolTipAnchor"
                     >
                       <div
-                        class="ouiDataGridColumnResizer"
-                        data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
-                      />
-                      <div
-                        class="ouiPopover ouiPopover--anchorDownCenter"
-                        offset="7"
+                        class="ouiDataGridHeaderCell"
+                        data-test-subj="dataGridHeaderCell-A"
+                        role="columnheader"
+                        style="width:100px"
+                        tabindex="-1"
                       >
                         <div
-                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
-                        >
-                          <button
-                            class="ouiDataGridHeaderCell__button"
-                          >
-                            <div
-                              class="ouiDataGridHeaderCell__content"
-                            >
-                              Column A
-                            </div>
-                            <span
-                              aria-label="Header actions"
-                              class="ouiDataGridHeaderCell__icon"
-                              color="text"
-                              data-ouiicon-type="arrowDown"
-                              data-test-subj="dataGridHeaderCellActionButton-A"
-                            />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                    <div
-                      class="ouiDataGridHeaderCell"
-                      data-test-subj="dataGridHeaderCell-B"
-                      role="columnheader"
-                      style="width:100px"
-                      tabindex="-1"
-                    >
-                      <div
-                        class="ouiDataGridColumnResizer"
-                        data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
-                      />
-                      <div
-                        class="ouiPopover ouiPopover--anchorDownCenter"
-                        offset="7"
-                      >
+                          class="ouiDataGridColumnResizer"
+                          data-test-subj="dataGridColumnResizer"
+                          style="margin-right:0px"
+                        />
                         <div
-                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
+                          class="ouiPopover ouiPopover--anchorDownCenter"
+                          offset="7"
                         >
-                          <button
-                            class="ouiDataGridHeaderCell__button"
+                          <div
+                            class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                           >
-                            <div
-                              class="ouiDataGridHeaderCell__content"
+                            <button
+                              class="ouiDataGridHeaderCell__button"
                             >
-                              <div>
-                                More Elements
+                              <div
+                                class="ouiDataGridHeaderCell__content"
+                              >
+                                Column A
                               </div>
-                            </div>
-                            <span
-                              aria-label="Header actions"
-                              class="ouiDataGridHeaderCell__icon"
-                              color="text"
-                              data-ouiicon-type="arrowDown"
-                              data-test-subj="dataGridHeaderCellActionButton-B"
-                            />
-                          </button>
+                              <span
+                                aria-label="Header actions"
+                                class="ouiDataGridHeaderCell__icon"
+                                color="text"
+                                data-ouiicon-type="arrowDown"
+                                data-test-subj="dataGridHeaderCellActionButton-A"
+                              />
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </span>
+                    <span
+                      class="ouiToolTipAnchor"
+                    >
+                      <div
+                        class="ouiDataGridHeaderCell"
+                        data-test-subj="dataGridHeaderCell-B"
+                        role="columnheader"
+                        style="width:100px"
+                        tabindex="-1"
+                      >
+                        <div
+                          class="ouiDataGridColumnResizer"
+                          data-test-subj="dataGridColumnResizer"
+                          style="margin-right:0px"
+                        />
+                        <div
+                          class="ouiPopover ouiPopover--anchorDownCenter"
+                          offset="7"
+                        >
+                          <div
+                            class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
+                          >
+                            <button
+                              class="ouiDataGridHeaderCell__button"
+                            >
+                              <div
+                                class="ouiDataGridHeaderCell__content"
+                              >
+                                <div>
+                                  More Elements
+                                </div>
+                              </div>
+                              <span
+                                aria-label="Header actions"
+                                class="ouiDataGridHeaderCell__icon"
+                                color="text"
+                                data-ouiicon-type="arrowDown"
+                                data-test-subj="dataGridHeaderCellActionButton-B"
+                              />
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </span>
                   </div>
                   <div
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
@@ -2445,82 +2469,90 @@ Array [
                     data-test-subj="dataGridHeader"
                     role="row"
                   >
-                    <div
-                      class="ouiDataGridHeaderCell"
-                      data-test-subj="dataGridHeaderCell-A"
-                      role="columnheader"
-                      style="width:100px"
-                      tabindex="-1"
+                    <span
+                      class="ouiToolTipAnchor"
                     >
                       <div
-                        class="ouiDataGridColumnResizer"
-                        data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
-                      />
-                      <div
-                        class="ouiPopover ouiPopover--anchorDownCenter"
-                        offset="7"
+                        class="ouiDataGridHeaderCell"
+                        data-test-subj="dataGridHeaderCell-A"
+                        role="columnheader"
+                        style="width:100px"
+                        tabindex="-1"
                       >
                         <div
-                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
+                          class="ouiDataGridColumnResizer"
+                          data-test-subj="dataGridColumnResizer"
+                          style="margin-right:0px"
+                        />
+                        <div
+                          class="ouiPopover ouiPopover--anchorDownCenter"
+                          offset="7"
                         >
-                          <button
-                            class="ouiDataGridHeaderCell__button"
+                          <div
+                            class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                           >
-                            <div
-                              class="ouiDataGridHeaderCell__content"
+                            <button
+                              class="ouiDataGridHeaderCell__button"
                             >
-                              A
-                            </div>
-                            <span
-                              aria-label="Header actions"
-                              class="ouiDataGridHeaderCell__icon"
-                              color="text"
-                              data-ouiicon-type="arrowDown"
-                              data-test-subj="dataGridHeaderCellActionButton-A"
-                            />
-                          </button>
+                              <div
+                                class="ouiDataGridHeaderCell__content"
+                              >
+                                A
+                              </div>
+                              <span
+                                aria-label="Header actions"
+                                class="ouiDataGridHeaderCell__icon"
+                                color="text"
+                                data-ouiicon-type="arrowDown"
+                                data-test-subj="dataGridHeaderCellActionButton-A"
+                              />
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div
-                      class="ouiDataGridHeaderCell"
-                      data-test-subj="dataGridHeaderCell-B"
-                      role="columnheader"
-                      style="width:100px"
-                      tabindex="-1"
+                    </span>
+                    <span
+                      class="ouiToolTipAnchor"
                     >
                       <div
-                        class="ouiDataGridColumnResizer"
-                        data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
-                      />
-                      <div
-                        class="ouiPopover ouiPopover--anchorDownCenter"
-                        offset="7"
+                        class="ouiDataGridHeaderCell"
+                        data-test-subj="dataGridHeaderCell-B"
+                        role="columnheader"
+                        style="width:100px"
+                        tabindex="-1"
                       >
                         <div
-                          class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
+                          class="ouiDataGridColumnResizer"
+                          data-test-subj="dataGridColumnResizer"
+                          style="margin-right:0px"
+                        />
+                        <div
+                          class="ouiPopover ouiPopover--anchorDownCenter"
+                          offset="7"
                         >
-                          <button
-                            class="ouiDataGridHeaderCell__button"
+                          <div
+                            class="ouiPopover__anchor ouiDataGridHeaderCell__anchor"
                           >
-                            <div
-                              class="ouiDataGridHeaderCell__content"
+                            <button
+                              class="ouiDataGridHeaderCell__button"
                             >
-                              B
-                            </div>
-                            <span
-                              aria-label="Header actions"
-                              class="ouiDataGridHeaderCell__icon"
-                              color="text"
-                              data-ouiicon-type="arrowDown"
-                              data-test-subj="dataGridHeaderCellActionButton-B"
-                            />
-                          </button>
+                              <div
+                                class="ouiDataGridHeaderCell__content"
+                              >
+                                B
+                              </div>
+                              <span
+                                aria-label="Header actions"
+                                class="ouiDataGridHeaderCell__icon"
+                                color="text"
+                                data-ouiicon-type="arrowDown"
+                                data-test-subj="dataGridHeaderCellActionButton-B"
+                              />
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                    </span>
                   </div>
                   <div
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
