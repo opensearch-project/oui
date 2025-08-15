@@ -5,6 +5,8 @@
 
 import React from 'react';
 import { render } from './react_dom';
+import { act } from '../test/react_test_utils';
+import type { Root } from './react-dom-client';
 
 // Simplified test that just verifies the basic functionality without trying to mock all
 // the internals - will be run against multiple versions of react to validate
@@ -14,7 +16,10 @@ describe('react_dom', () => {
     const container = document.createElement('div');
     const element = <div>Test</div>;
 
-    const root = render(element, container);
+    let root!: Root;
+    act(() => {
+      root = render(element, container);
+    });
 
     // Check that the returned object has the expected API
     expect(root).toBeDefined();

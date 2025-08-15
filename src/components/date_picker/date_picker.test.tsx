@@ -29,8 +29,8 @@
  */
 
 import React from 'react';
-import { shallow, mount } from 'enzyme';
-import { requiredProps, takeMountedSnapshot } from '../../test';
+import { render } from '@testing-library/react';
+import { requiredProps } from '../../test';
 import moment from 'moment';
 
 import { OuiDatePicker } from './date_picker';
@@ -38,21 +38,18 @@ import { OuiContext } from '../context';
 
 describe('OuiDatePicker', () => {
   test('is rendered', () => {
-    const component = shallow<OuiDatePicker>(
-      <OuiDatePicker {...requiredProps} />
-    );
+    const { container } = render(<OuiDatePicker {...requiredProps} />);
 
-    expect(component).toMatchSnapshot(); // snapshot of wrapping dom
-    expect(component.find('ContextConsumer').shallow()).toMatchSnapshot(); // snapshot of DatePicker usage
+    expect(container).toMatchSnapshot();
   });
 
   describe('popoverPlacement', () => {
     test('top-end is rendered', () => {
-      const component = mount(
+      const { container } = render(
         <OuiDatePicker {...requiredProps} popoverPlacement="top-end" />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
@@ -60,7 +57,7 @@ describe('OuiDatePicker', () => {
     const selectedDate = moment('2019-07-01T00:00:00-0700').locale('fr');
 
     test('accepts the locale prop', () => {
-      const component = mount(
+      const { container } = render(
         <OuiDatePicker
           {...requiredProps}
           inline
@@ -69,17 +66,17 @@ describe('OuiDatePicker', () => {
         />
       );
 
-      expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('inherits locale from context', () => {
-      const component = mount(
+      const { container } = render(
         <OuiContext i18n={{ locale: 'fr' }}>
           <OuiDatePicker {...requiredProps} inline selected={selectedDate} />
         </OuiContext>
       );
 
-      expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 });

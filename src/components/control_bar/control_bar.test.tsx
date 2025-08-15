@@ -29,8 +29,8 @@
  */
 
 import React from 'react';
-import { mount } from 'enzyme';
-import { requiredProps, takeMountedSnapshot } from '../../test';
+import { render } from '@testing-library/react';
+import { requiredProps } from '../../test';
 
 import { OuiControlBar, Control } from './control_bar';
 
@@ -87,80 +87,80 @@ const controls: Control[] = [
 
 describe('OuiControlBar', () => {
   test('is rendered', () => {
-    const component = takeMountedSnapshot(
-      mount(<OuiControlBar controls={controls} {...requiredProps} />)
+    const { container } = render(
+      <OuiControlBar controls={controls} {...requiredProps} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('mobile is rendered', () => {
-      const component = mount(
+      const { container } = render(
         <OuiControlBar controls={controls} showOnMobile />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('showContent is rendered', () => {
-      const component = mount(
+      const { container } = render(
         <OuiControlBar controls={controls} showContent>
           Content
         </OuiControlBar>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('size is rendered', () => {
-      const component = mount(
+      const { container } = render(
         <OuiControlBar controls={controls} size="s">
           Content
         </OuiControlBar>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('maxHeight is rendered', () => {
-      const component = mount(
+      const { container } = render(
         <OuiControlBar controls={controls} maxHeight="20rem">
           Content
         </OuiControlBar>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('leftOffset is rendered', () => {
-      const component = mount(
+      const { container } = render(
         <OuiControlBar controls={controls} leftOffset={200}>
           Content
         </OuiControlBar>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('rightOffset is rendered', () => {
-      const component = mount(
+      const { container } = render(
         <OuiControlBar controls={controls} rightOffset={200}>
           Content
         </OuiControlBar>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('position is rendered', () => {
-      const component = mount(
+      const { container } = render(
         <OuiControlBar controls={controls} position="absolute">
           Content
         </OuiControlBar>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 });

@@ -1,110 +1,112 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="0"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack"
+    class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="0"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiColorStops__highlight"
+      class="ouiRangeTrack"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer"
-      data-test-subj="ouiColorStopsAdd"
-    >
-      <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:0%"
-    >
-      <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiRangeHighlight ouiColorStops__highlight"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="24"
-          aria-valuemin="0"
-          aria-valuenow="0"
-          aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_0"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(255,0,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:21%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiColorStops__addContainer"
+        data-test-subj="ouiColorStopsAdd"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="34"
-          aria-valuemin="1"
-          aria-valuenow="25"
-          aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_1"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,255,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:29.4%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 0%;"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="100"
-          aria-valuemin="26"
-          aria-valuenow="35"
-          aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_2"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,0,255)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
-        />
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="24"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_0"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(255, 0, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 21%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="34"
+            aria-valuemin="1"
+            aria-valuenow="25"
+            aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_1"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 255, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 29.4%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="100"
+            aria-valuemin="26"
+            aria-valuenow="35"
+            aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_2"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 0, 255);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -112,110 +114,112 @@ exports[`renders OuiColorStops 1`] = `
 `;
 
 exports[`renders compressed OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="0"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack ouiRangeTrack--compressed"
+    class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="0"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiRangeHighlight--compressed ouiColorStops__highlight"
+      class="ouiRangeTrack ouiRangeTrack--compressed"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer"
-      data-test-subj="ouiColorStopsAdd"
-    >
-      <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:0%"
-    >
-      <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiRangeHighlight ouiRangeHighlight--compressed ouiColorStops__highlight"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="24"
-          aria-valuemin="0"
-          aria-valuenow="0"
-          aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_0"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(255,0,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:21%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiColorStops__addContainer"
+        data-test-subj="ouiColorStopsAdd"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="34"
-          aria-valuemin="1"
-          aria-valuenow="25"
-          aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_1"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,255,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:29.4%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 0%;"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="100"
-          aria-valuemin="26"
-          aria-valuenow="35"
-          aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_2"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,0,255)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
-        />
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="24"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_0"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(255, 0, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 21%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="34"
+            aria-valuemin="1"
+            aria-valuenow="25"
+            aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_1"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 255, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 29.4%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="100"
+            aria-valuemin="26"
+            aria-valuenow="35"
+            aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_2"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 0, 255);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -223,113 +227,115 @@ exports[`renders compressed OuiColorStops 1`] = `
 `;
 
 exports[`renders disabled OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiColorStops ouiColorStops-isDisabled testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="-1"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test:  Disabled. Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack ouiRangeTrack--disabled"
+    class="ouiRangeWrapper ouiColorStops ouiColorStops-isDisabled testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="-1"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test:  Disabled. Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiColorStops__highlight"
+      class="ouiRangeTrack ouiRangeTrack--disabled"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer ouiColorStops__addContainer-isDisabled"
-      data-test-subj="ouiColorStopsAdd"
-    >
-      <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:0%"
-    >
-      <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiRangeHighlight ouiColorStops__highlight"
       >
-        <button
-          aria-disabled="true"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="24"
-          aria-valuemin="0"
-          aria-valuenow="0"
-          aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_0"
-          data-test-subj="ouiColorStopThumb"
-          disabled=""
-          role="slider"
-          style="background:rgb(255,0,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:21%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiColorStops__addContainer ouiColorStops__addContainer-isDisabled"
+        data-test-subj="ouiColorStopsAdd"
       >
-        <button
-          aria-disabled="true"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="34"
-          aria-valuemin="1"
-          aria-valuenow="25"
-          aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_1"
-          data-test-subj="ouiColorStopThumb"
-          disabled=""
-          role="slider"
-          style="background:rgb(0,255,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:29.4%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 0%;"
       >
-        <button
-          aria-disabled="true"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="100"
-          aria-valuemin="26"
-          aria-valuenow="35"
-          aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_2"
-          data-test-subj="ouiColorStopThumb"
-          disabled=""
-          role="slider"
-          style="background:rgb(0,0,255)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
-        />
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="true"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="24"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_0"
+            data-test-subj="ouiColorStopThumb"
+            disabled=""
+            role="slider"
+            style="background: rgb(255, 0, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 21%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="true"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="34"
+            aria-valuemin="1"
+            aria-valuenow="25"
+            aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_1"
+            data-test-subj="ouiColorStopThumb"
+            disabled=""
+            role="slider"
+            style="background: rgb(0, 255, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 29.4%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="true"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="100"
+            aria-valuemin="26"
+            aria-valuenow="35"
+            aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_2"
+            data-test-subj="ouiColorStopThumb"
+            disabled=""
+            role="slider"
+            style="background: rgb(0, 0, 255);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -337,146 +343,150 @@ exports[`renders disabled OuiColorStops 1`] = `
 `;
 
 exports[`renders empty OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="0"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack"
+    class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="0"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiColorStops__highlight"
+      class="ouiRangeTrack"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer"
-      data-test-subj="ouiColorStopsAdd"
-    >
+        class="ouiRangeHighlight ouiColorStops__highlight"
+      >
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
+        />
+      </div>
       <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
+        class="ouiColorStops__addContainer"
+        data-test-subj="ouiColorStopsAdd"
+      >
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
+        />
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders fixed stop OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="0"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack"
+    class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="0"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiColorStops__highlight"
+      class="ouiRangeTrack"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%, rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer"
-      data-test-subj="ouiColorStopsAdd"
-    >
-      <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:0%"
-    >
-      <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiRangeHighlight ouiColorStops__highlight"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="24"
-          aria-valuemin="0"
-          aria-valuenow="0"
-          aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_0"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(255,0,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:21%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiColorStops__addContainer"
+        data-test-subj="ouiColorStopsAdd"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="34"
-          aria-valuemin="1"
-          aria-valuenow="25"
-          aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_1"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,255,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:29.4%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 0%;"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="100"
-          aria-valuemin="26"
-          aria-valuenow="35"
-          aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_2"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,0,255)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
-        />
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="24"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_0"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(255, 0, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 21%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="34"
+            aria-valuemin="1"
+            aria-valuenow="25"
+            aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_1"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 255, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 29.4%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="100"
+            aria-valuemin="26"
+            aria-valuenow="35"
+            aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_2"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 0, 255);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -484,146 +494,150 @@ exports[`renders fixed stop OuiColorStops 1`] = `
 `;
 
 exports[`renders free-range OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="0"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack"
+    class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="0"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiColorStops__highlight"
+      class="ouiRangeTrack"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer"
-      data-test-subj="ouiColorStopsAdd"
-    >
+        class="ouiRangeHighlight ouiColorStops__highlight"
+      >
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
+        />
+      </div>
       <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
+        class="ouiColorStops__addContainer"
+        data-test-subj="ouiColorStopsAdd"
+      >
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
+        />
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders fullWidth OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiRangeWrapper--fullWidth ouiColorStops testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="0"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack"
+    class="ouiRangeWrapper ouiRangeWrapper--fullWidth ouiColorStops testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="0"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiColorStops__highlight"
+      class="ouiRangeTrack"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer"
-      data-test-subj="ouiColorStopsAdd"
-    >
-      <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:0%"
-    >
-      <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiRangeHighlight ouiColorStops__highlight"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="24"
-          aria-valuemin="0"
-          aria-valuenow="0"
-          aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_0"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(255,0,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:21%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiColorStops__addContainer"
+        data-test-subj="ouiColorStopsAdd"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="34"
-          aria-valuemin="1"
-          aria-valuenow="25"
-          aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_1"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,255,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:29.4%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 0%;"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="100"
-          aria-valuemin="26"
-          aria-valuenow="35"
-          aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_2"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,0,255)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
-        />
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="24"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_0"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(255, 0, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 21%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="34"
+            aria-valuemin="1"
+            aria-valuenow="25"
+            aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_1"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 255, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 29.4%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="100"
+            aria-valuemin="26"
+            aria-valuenow="35"
+            aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_2"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 0, 255);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -631,182 +645,188 @@ exports[`renders fullWidth OuiColorStops 1`] = `
 `;
 
 exports[`renders max-only OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="0"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack"
+    class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="0"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiColorStops__highlight"
+      class="ouiRangeTrack"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer"
-      data-test-subj="ouiColorStopsAdd"
-    >
+        class="ouiRangeHighlight ouiColorStops__highlight"
+      >
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
+        />
+      </div>
       <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
+        class="ouiColorStops__addContainer"
+        data-test-subj="ouiColorStopsAdd"
+      >
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
+        />
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders min-only OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="0"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack"
+    class="ouiRangeWrapper ouiColorStops testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="0"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test:   Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiColorStops__highlight"
+      class="ouiRangeTrack"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer"
-      data-test-subj="ouiColorStopsAdd"
-    >
+        class="ouiRangeHighlight ouiColorStops__highlight"
+      >
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
+        />
+      </div>
       <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
+        class="ouiColorStops__addContainer"
+        data-test-subj="ouiColorStopsAdd"
+      >
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
+        />
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`renders readOnly OuiColorStops 1`] = `
-<div
-  class="ouiRangeWrapper ouiColorStops ouiColorStops-isReadOnly testClass1 testClass2"
-  data-test-subj="ouiColorStops"
-  tabindex="0"
->
-  <p
-    aria-live="polite"
-    class="ouiScreenReaderOnly"
-  >
-    Test: Read-only.  Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
-  </p>
+<div>
   <div
-    class="ouiRangeTrack"
+    class="ouiRangeWrapper ouiColorStops ouiColorStops-isReadOnly testClass1 testClass2"
+    data-test-subj="ouiColorStops"
+    tabindex="0"
   >
+    <p
+      aria-live="polite"
+      class="ouiScreenReaderOnly"
+    >
+      Test: Read-only.  Color stop picker. Each stop consists of a number and corresponding color value. Use the Down and Up arrow keys to select individual stops. Press the Enter key to create a new stop.
+    </p>
     <div
-      class="ouiRangeHighlight ouiColorStops__highlight"
+      class="ouiRangeTrack"
     >
       <div
-        class="ouiRangeHighlight__progress"
-        style="background:linear-gradient(to right,currentColor, currentColor undefined%, rgb(255,0,0) undefined%,rgb(0,255,0) undefined%,rgb(0,0,255) undefined%);margin-left:0%;width:100%"
-      />
-    </div>
-    <div
-      class="ouiColorStops__addContainer ouiColorStops__addContainer-isDisabled"
-      data-test-subj="ouiColorStopsAdd"
-    >
-      <div
-        class="ouiColorStops__addTarget"
-        style="left:0%"
-      />
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:0%"
-    >
-      <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiRangeHighlight ouiColorStops__highlight"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="24"
-          aria-valuemin="0"
-          aria-valuenow="0"
-          aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_0"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(255,0,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiRangeHighlight__progress"
+          style="margin-left: 0%; width: 100%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:21%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiColorStops__addContainer ouiColorStops__addContainer-isDisabled"
+        data-test-subj="ouiColorStopsAdd"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="34"
-          aria-valuemin="1"
-          aria-valuenow="25"
-          aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_1"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,255,0)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
+        <div
+          class="ouiColorStops__addTarget"
+          style="left: 0%;"
         />
       </div>
-    </div>
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
-      style="left:29.4%"
-    >
       <div
-        class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 0%;"
       >
-        <button
-          aria-disabled="false"
-          aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
-          aria-valuemax="100"
-          aria-valuemin="26"
-          aria-valuenow="35"
-          aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
-          class="ouiRangeThumb ouiColorStopThumb"
-          data-index="ouiColorStop_2"
-          data-test-subj="ouiColorStopThumb"
-          role="slider"
-          style="background:rgb(0,0,255)"
-          tabindex="-1"
-          title="Click to edit, drag to reposition"
-          type="button"
-        />
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="24"
+            aria-valuemin="0"
+            aria-valuenow="0"
+            aria-valuetext="Stop: 0, Color: #FF0000 (1 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_0"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(255, 0, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 21%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="34"
+            aria-valuemin="1"
+            aria-valuenow="25"
+            aria-valuetext="Stop: 25, Color: #00FF00 (2 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_1"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 255, 0);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
+      </div>
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiColorStopPopover"
+        style="left: 29.4%;"
+      >
+        <div
+          class="ouiPopover__anchor ouiColorStopPopover__anchor"
+        >
+          <button
+            aria-disabled="false"
+            aria-label="Press the Enter key to modify this stop. Press Escape to focus the group"
+            aria-valuemax="100"
+            aria-valuemin="26"
+            aria-valuenow="35"
+            aria-valuetext="Stop: 35, Color: #0000FF (3 of 3)"
+            class="ouiRangeThumb ouiColorStopThumb"
+            data-index="ouiColorStop_2"
+            data-test-subj="ouiColorStopThumb"
+            role="slider"
+            style="background: rgb(0, 0, 255);"
+            tabindex="-1"
+            title="Click to edit, drag to reposition"
+            type="button"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -814,9 +834,18 @@ exports[`renders readOnly OuiColorStops 1`] = `
 `;
 
 exports[`renders stepped stop OuiColorStops 1`] = `
-Object {
-  "background": "linear-gradient(to right, currentColor 0%, #ff0000 0% 2.94%, #d72800 2.94% 5.88%, #b04f00 5.880000000000001% 8.82%, #887700 8.82% 11.76%, #609f00 11.76% 14.7%, #39c600 14.700000000000001% 17.64%, #11ee00 17.64% 20.580000000000002%, #00c639 20.580000000000002% 23.520000000000003%, #00639c 23.520000000000003% 26.460000000000004%, #0000ff 26.460000000000004% 29.400000000000006%)",
-  "marginLeft": "0%",
-  "width": "100%",
+CSSStyleDeclaration {
+  "0": "margin-left",
+  "1": "width",
+  "_importants": Object {
+    "margin-left": undefined,
+    "width": undefined,
+  },
+  "_length": 2,
+  "_onChange": [Function],
+  "_values": Object {
+    "margin-left": "0%",
+    "width": "100%",
+  },
 }
 `;

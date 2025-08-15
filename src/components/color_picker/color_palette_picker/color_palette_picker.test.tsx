@@ -29,13 +29,13 @@
  */
 
 import React from 'react';
-import { mount, render } from 'enzyme';
+import { render, screen, fireEvent } from '@testing-library/react';
 
 import {
   OuiColorPalettePicker,
   OuiColorPalettePickerPaletteProps,
 } from './color_palette_picker';
-import { requiredProps, takeMountedSnapshot } from '../../../test';
+import { requiredProps } from '../../../test';
 
 const palettes: OuiColorPalettePickerPaletteProps[] = [
   {
@@ -89,7 +89,7 @@ const palettes: OuiColorPalettePickerPaletteProps[] = [
 
 describe('OuiColorPalettePicker', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
@@ -97,11 +97,11 @@ describe('OuiColorPalettePicker', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with a selected fixed palette', () => {
-    const component = render(
+    const { container } = render(
       <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
@@ -110,11 +110,11 @@ describe('OuiColorPalettePicker', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with a selected gradient palette', () => {
-    const component = render(
+    const { container } = render(
       <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
@@ -123,11 +123,11 @@ describe('OuiColorPalettePicker', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with a selected gradient palette with stops', () => {
-    const component = render(
+    const { container } = render(
       <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
@@ -136,11 +136,11 @@ describe('OuiColorPalettePicker', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with a selected custom text', () => {
-    const component = render(
+    const { container } = render(
       <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
@@ -149,11 +149,11 @@ describe('OuiColorPalettePicker', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with the prop selectionDisplay set as title ', () => {
-    const component = render(
+    const { container } = render(
       <OuiColorPalettePicker
         {...requiredProps}
         palettes={palettes}
@@ -163,11 +163,11 @@ describe('OuiColorPalettePicker', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('more props are propagated to each option', () => {
-    const component = mount(
+    const { container } = render(
       <OuiColorPalettePicker
         palettes={palettes}
         valueOfSelected="paletteFixed"
@@ -176,10 +176,9 @@ describe('OuiColorPalettePicker', () => {
       />
     );
 
-    component
-      .find('button[data-test-subj="colorPalettePicker"]')
-      .simulate('click');
+    const button = screen.getByTestId('colorPalettePicker');
+    fireEvent.click(button);
 
-    expect(takeMountedSnapshot(component)).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

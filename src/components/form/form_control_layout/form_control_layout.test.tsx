@@ -29,9 +29,9 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 
-import { findTestSubject, requiredProps } from '../../../test';
+import { requiredProps } from '../../../test';
 
 import { OuiFormControlLayout, ICON_SIDES } from './form_control_layout';
 
@@ -42,22 +42,22 @@ jest.mock('../../', () => ({
 
 describe('OuiFormControlLayout', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiFormControlLayout {...requiredProps}>
         <input />
       </OuiFormControlLayout>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('icon', () => {
       describe('is rendered', () => {
         test('as a string', () => {
-          const component = render(<OuiFormControlLayout icon="alert" />);
+          const { container } = render(<OuiFormControlLayout icon="alert" />);
 
-          expect(component).toMatchSnapshot();
+          expect(container.firstChild).toMatchSnapshot();
         });
 
         test('as an object', () => {
@@ -67,9 +67,9 @@ describe('OuiFormControlLayout', () => {
             'data-test-subj': 'myIcon',
           };
 
-          const component = render(<OuiFormControlLayout icon={icon} />);
+          const { container } = render(<OuiFormControlLayout icon={icon} />);
 
-          expect(component).toMatchSnapshot();
+          expect(container.firstChild).toMatchSnapshot();
         });
       });
 
@@ -81,9 +81,9 @@ describe('OuiFormControlLayout', () => {
               side,
             };
 
-            const component = render(<OuiFormControlLayout icon={icon} />);
+            const { container } = render(<OuiFormControlLayout icon={icon} />);
 
-            expect(component).toMatchSnapshot();
+            expect(container.firstChild).toMatchSnapshot();
           });
         });
       });
@@ -96,11 +96,11 @@ describe('OuiFormControlLayout', () => {
             'data-test-subj': 'myIcon',
           };
 
-          const component = mount(<OuiFormControlLayout icon={icon} />);
+          const { getByTestId } = render(<OuiFormControlLayout icon={icon} />);
 
-          const closeButton = findTestSubject(component, 'myIcon');
-          closeButton.simulate('click');
-          expect(icon.onClick).toBeCalled();
+          const iconButton = getByTestId('myIcon');
+          fireEvent.click(iconButton);
+          expect(icon.onClick).toHaveBeenCalled();
         });
       });
     });
@@ -114,9 +114,9 @@ describe('OuiFormControlLayout', () => {
             'data-test-subj': 'clearButton',
           };
 
-          const component = render(<OuiFormControlLayout clear={clear} />);
+          const { container } = render(<OuiFormControlLayout clear={clear} />);
 
-          expect(component).toMatchSnapshot();
+          expect(container.firstChild).toMatchSnapshot();
         });
 
         test('is called when clicked', () => {
@@ -125,83 +125,85 @@ describe('OuiFormControlLayout', () => {
             'data-test-subj': 'clearButton',
           };
 
-          const component = mount(<OuiFormControlLayout clear={clear} />);
+          const { getByTestId } = render(
+            <OuiFormControlLayout clear={clear} />
+          );
 
-          const closeButton = findTestSubject(component, 'clearButton');
-          closeButton.simulate('click');
-          expect(clear.onClick).toBeCalled();
+          const clearButton = getByTestId('clearButton');
+          fireEvent.click(clearButton);
+          expect(clear.onClick).toHaveBeenCalled();
         });
       });
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<OuiFormControlLayout isLoading />);
+      const { container } = render(<OuiFormControlLayout isLoading />);
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(<OuiFormControlLayout fullWidth />);
+      const { container } = render(<OuiFormControlLayout fullWidth />);
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('readOnly is rendered', () => {
-      const component = render(<OuiFormControlLayout readOnly />);
+      const { container } = render(<OuiFormControlLayout readOnly />);
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('one prepend node is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormControlLayout prepend={<span>1</span>} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('one prepend node is rendered with className', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormControlLayout prepend={<span className="myClass">1</span>} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('one prepend string is rendered', () => {
-      const component = render(<OuiFormControlLayout prepend="1" />);
+      const { container } = render(<OuiFormControlLayout prepend="1" />);
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('one append node is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormControlLayout append={<span>1</span>} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('one append string is rendered', () => {
-      const component = render(<OuiFormControlLayout append="1" />);
+      const { container } = render(<OuiFormControlLayout append="1" />);
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('multiple prepends are rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormControlLayout prepend={[<span>1</span>, <span>2</span>]} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('multiple appends are rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormControlLayout append={[<span>1</span>, <span>2</span>]} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

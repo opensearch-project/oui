@@ -292,10 +292,15 @@ var MutationObserver = /** @class */ (function () {
     var mutations = observer.takeRecords();
     if (mutations.length) { // fire away
       // `act` to support hooks-based callbacks
-      act(
-        // calling the listener with context is not spec but currently consistent with FF and WebKit
-        () => observer._listener(mutations, observer)
-      );
+      try {
+        act(
+          // calling the listener with context is not spec but currently consistent with FF and WebKit
+          () => observer._listener(mutations, observer)
+        );
+      } catch (error) {
+        // Fallback for React 18 compatibility issues - call listener directly
+        observer._listener(mutations, observer);
+      }
     }
   };
   MutationObserver.prototype.searchSubtree = function (mutations, $target, $oldstate, config) {

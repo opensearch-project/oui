@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 import cheerio from 'cheerio';
 
@@ -44,12 +44,31 @@ import {
 import { PropsOf } from '../common';
 // @ts-ignore importing from a JS file
 import { icon as OuiIconVideoPlayer } from './assets/videoPlayer.js';
+// @ts-ignore importing from a JS file
+import { icon as OuiIconBeaker } from './assets/beaker.js';
 
 jest.mock('./icon', () => {
   return jest.requireActual('./icon');
 });
 
+jest.mock('../../services/react', () => {
+  const originalModule = jest.requireActual('../../services/react');
+  const { act } = jest.requireActual('../../test/react_test_utils');
+  return {
+    ...originalModule,
+    enqueueStateChange: (fn: Function) => {
+      act(() => {
+        fn();
+      });
+    },
+  };
+});
+
 beforeEach(() => clearIconComponentCache());
+
+afterAll(() => {
+  jest.restoreAllMocks();
+});
 
 const prettyHtml = cheerio.load('');
 
@@ -58,11 +77,12 @@ function testIcon(props: PropsOf<OuiIcon>) {
     expect.assertions(1);
     return new Promise<void>((resolve) => {
       const onIconLoad = () => {
-        component.update();
-        expect(prettyHtml(component.html())).toMatchSnapshot();
+        expect(prettyHtml(container.innerHTML)).toMatchSnapshot();
         resolve();
       };
-      const component = mount(<OuiIcon {...props} onIconLoad={onIconLoad} />);
+      const { container } = render(
+        <OuiIcon {...props} onIconLoad={onIconLoad} />
+      );
     });
   };
 }
@@ -137,31 +157,33 @@ describe('OuiIcon', () => {
 
   describe('appendIconComponentCache', () => {
     it('does nothing if not called', () => {
-      const component = mount(<OuiIcon type="videoPlayer" />);
-      expect(
-        component.find('OuiIcon[type="videoPlayer"] > OuiIconBeaker').length
-      ).toBe(1);
+      const { container } = render(<OuiIcon type="videoPlayer" />);
+      const { container: expectedIcon } = render(<OuiIconBeaker />);
+      expect(container.querySelector('svg')?.innerHTML).toBe(
+        expectedIcon.querySelector('svg')?.innerHTML
+      );
     });
 
     it('injects the specified icon', () => {
       appendIconComponentCache({
         videoPlayer: OuiIconVideoPlayer,
       });
-      const component = mount(<OuiIcon type="videoPlayer" />);
-      expect(
-        component.find('OuiIcon[type="videoPlayer"] > OuiIconVideoPlayer')
-          .length
-      ).toBe(1);
+      const { container } = render(<OuiIcon type="videoPlayer" />);
+      const { container: expectedIcon } = render(<OuiIconVideoPlayer />);
+      expect(container.querySelector('svg')?.innerHTML).toBe(
+        expectedIcon.querySelector('svg')?.innerHTML
+      );
     });
 
     it('does not impact non-loaded icons', () => {
       appendIconComponentCache({
         videoPlayer: OuiIconVideoPlayer,
       });
-      const component = mount(<OuiIcon type="accessibility" />);
-      expect(
-        component.find('OuiIcon[type="accessibility"] > OuiIconBeaker').length
-      ).toBe(1);
+      const { container } = render(<OuiIcon type="accessibility" />);
+      const { container: expectedIcon } = render(<OuiIconBeaker />);
+      expect(container.querySelector('svg')?.innerHTML).toBe(
+        expectedIcon.querySelector('svg')?.innerHTML
+      );
     });
   });
 
@@ -170,25 +192,25 @@ describe('OuiIcon', () => {
       appendIconComponentCache({
         videoPlayer: OuiIconVideoPlayer,
       });
-      const component = mount(<OuiIcon type="videoPlayer" />);
-      expect(prettyHtml(component.html())).toMatchSnapshot();
+      const { container } = render(<OuiIcon type="videoPlayer" />);
+      expect(prettyHtml(container.innerHTML)).toMatchSnapshot();
     });
 
     it('renders custom svg from absolute url', () => {
-      const component = mount(
+      const { container } = render(
         <OuiIcon type="https://upload.wikimedia.org/wikipedia/commons/0/02/SVG_logo.svg" />
       );
-      expect(prettyHtml(component.html())).toMatchSnapshot();
+      expect(prettyHtml(container.innerHTML)).toMatchSnapshot();
     });
 
     it('renders custom svg from relative url', () => {
-      const component = mount(<OuiIcon type="./assets/beaker.svg" />);
-      expect(prettyHtml(component.html())).toMatchSnapshot();
+      const { container } = render(<OuiIcon type="./assets/beaker.svg" />);
+      expect(prettyHtml(container.innerHTML)).toMatchSnapshot();
     });
 
     it('renders default icon when type is not in OuiIconType', () => {
-      const component = mount(<OuiIcon type="foo" />);
-      expect(prettyHtml(component.html())).toMatchSnapshot();
+      const { container } = render(<OuiIcon type="foo" />);
+      expect(prettyHtml(container.innerHTML)).toMatchSnapshot();
     });
 
     it('renders custom components', () => {
@@ -199,8 +221,8 @@ describe('OuiIcon', () => {
           </span>
         );
       };
-      const component = mount(<OuiIcon type={CustomIcon} />);
-      expect(prettyHtml(component.html())).toMatchSnapshot();
+      const { container } = render(<OuiIcon type={CustomIcon} />);
+      expect(prettyHtml(container.innerHTML)).toMatchSnapshot();
     });
   });
 });

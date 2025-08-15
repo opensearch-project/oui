@@ -29,21 +29,21 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiBeacon } from './beacon';
 
 describe('OuiBeacon', () => {
   test('is rendered', () => {
-    const component = render(<OuiBeacon {...requiredProps} />);
+    const { container } = render(<OuiBeacon {...requiredProps} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('accepts size', () => {
-    const component = render(<OuiBeacon size={14} {...requiredProps} />);
+    const { container } = render(<OuiBeacon size={14} {...requiredProps} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

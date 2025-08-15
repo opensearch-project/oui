@@ -29,8 +29,9 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
-import { requiredProps, takeMountedSnapshot } from '../../test';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { requiredProps } from '../../test';
 
 import { OuiContextMenu, SIZES } from './context_menu';
 import { setTimeout } from 'timers';
@@ -92,21 +93,21 @@ export const tick = (ms = 0) =>
 
 describe('OuiContextMenu', () => {
   test('is rendered', () => {
-    const component = render(<OuiContextMenu {...requiredProps} />);
+    const { container } = render(<OuiContextMenu {...requiredProps} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('panel item can contain JSX', () => {
-    const component = render(
+    const { container } = render(
       <OuiContextMenu panels={panels} initialPanelId={3} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('panel item can be a separator line', () => {
-    const component = render(
+    const { container } = render(
       <OuiContextMenu
         panels={[
           {
@@ -123,11 +124,11 @@ describe('OuiContextMenu', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   it('can pass-through horizontal rule props', () => {
-    const component = render(
+    const { container } = render(
       <OuiContextMenu
         panels={[
           {
@@ -147,47 +148,49 @@ describe('OuiContextMenu', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('panels and initialPanelId', () => {
       it('renders the referenced panel', () => {
-        const component = render(
+        const { container } = render(
           <OuiContextMenu panels={panels} initialPanelId={2} />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('allows you to click the title button to go back to the previous panel', async () => {
-        const component = mount(
+        const { container } = render(
           <OuiContextMenu panels={panels} initialPanelId={2} />
         );
 
         await tick(20);
 
-        expect(takeMountedSnapshot(component)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
 
         // Navigate to a different panel.
-        component
-          .find('[data-test-subj="contextMenuPanelTitleButton"]')
-          .simulate('click');
+        const user = userEvent.setup();
+        const titleButton = screen.getByTestId('contextMenuPanelTitleButton');
 
-        await tick(20);
+        await act(async () => {
+          await user.click(titleButton);
+          await tick(20);
+        });
 
-        expect(takeMountedSnapshot(component)).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('size', () => {
       SIZES.forEach((size) => {
         it(`${size} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiContextMenu panels={panels} initialPanelId={2} size={size} />
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });

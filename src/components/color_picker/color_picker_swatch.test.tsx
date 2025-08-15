@@ -29,15 +29,15 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test';
 
 import { OuiColorPickerSwatch } from './color_picker_swatch';
 
 describe('OuiColorPickerSwatch', () => {
   test('is rendered', () => {
-    const component = render(<OuiColorPickerSwatch {...requiredProps} />);
+    const { container } = render(<OuiColorPickerSwatch {...requiredProps} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -29,8 +29,8 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
-import { requiredProps, findTestSubject } from '../../../test';
+import { render, fireEvent } from '@testing-library/react';
+import { requiredProps } from '../../../test';
 
 import { OuiTabbedContent, AUTOFOCUS } from './tabbed_content';
 
@@ -51,88 +51,96 @@ const tabs = [elasticsearchTab, kibanaTab];
 
 describe('OuiTabbedContent', () => {
   test('is rendered with required props and tabs', () => {
-    const component = render(
+    const { container } = render(
       <OuiTabbedContent {...requiredProps} tabs={tabs} />
     );
-    expect(component).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('onTabClick', () => {
       test('is called when a tab is clicked', () => {
         const onTabClickHandler = jest.fn();
-        const component = mount(
+        const { getByTestId } = render(
           <OuiTabbedContent onTabClick={onTabClickHandler} tabs={tabs} />
         );
-        findTestSubject(component, 'kibanaTab').simulate('click');
-        expect(onTabClickHandler).toBeCalledTimes(1);
-        expect(onTabClickHandler).toBeCalledWith(kibanaTab);
+
+        fireEvent.click(getByTestId('kibanaTab'));
+        expect(onTabClickHandler).toHaveBeenCalledTimes(1);
+        expect(onTabClickHandler).toHaveBeenCalledWith(kibanaTab);
       });
     });
 
     describe('selectedTab', () => {
       test('renders a selected tab', () => {
-        const component = render(
+        const { container } = render(
           <OuiTabbedContent selectedTab={kibanaTab} tabs={tabs} />
         );
-        expect(component).toMatchSnapshot();
+        expect(container.firstChild).toMatchSnapshot();
       });
     });
 
     describe('initialSelectedTab', () => {
       test('renders a selected tab', () => {
-        const component = render(
+        const { container } = render(
           <OuiTabbedContent initialSelectedTab={kibanaTab} tabs={tabs} />
         );
-        expect(component).toMatchSnapshot();
+        expect(container.firstChild).toMatchSnapshot();
       });
     });
 
     describe('size', () => {
       test('can be small', () => {
-        const component = render(<OuiTabbedContent size="s" tabs={tabs} />);
-        expect(component).toMatchSnapshot();
+        const { container } = render(<OuiTabbedContent size="s" tabs={tabs} />);
+        expect(container.firstChild).toMatchSnapshot();
       });
     });
 
     describe('display', () => {
       test('can be condensed', () => {
-        const component = render(
+        const { container } = render(
           <OuiTabbedContent display="condensed" tabs={tabs} />
         );
-        expect(component).toMatchSnapshot();
+        expect(container.firstChild).toMatchSnapshot();
       });
     });
 
     describe('autoFocus', () => {
       AUTOFOCUS.forEach((focusType) => {
         test(`${focusType} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiTabbedContent autoFocus={focusType} tabs={tabs} />
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container.firstChild).toMatchSnapshot();
         });
       });
     });
 
     describe('cacheContent', () => {
       test('content of tabs that has been selected before should stay in dom', () => {
-        const component = mount(
+        const { container } = render(
           <OuiTabbedContent preserveTabContent={true} tabs={tabs} />
         );
-        expect(component.find('div[role="tabpanel"]').length).toBe(1);
+        expect(container.querySelectorAll('div[role="tabpanel"]').length).toBe(
+          1
+        );
 
-        component.find('OuiTab[id="kibana"] button').first().simulate('click');
-        expect(component.find('div[role="tabpanel"]').length).toBe(2);
+        const kibanaTabButton = container.querySelector(
+          'button[id="kibana"]'
+        ) as HTMLButtonElement;
+        fireEvent.click(kibanaTabButton);
+        expect(container.querySelectorAll('div[role="tabpanel"]').length).toBe(
+          2
+        );
       });
     });
   });
 
   describe('behavior', () => {
     test("when selected tab state isn't controlled by the owner, select the first tab by default", () => {
-      const component = render(<OuiTabbedContent tabs={tabs} />);
-      expect(component).toMatchSnapshot();
+      const { container } = render(<OuiTabbedContent tabs={tabs} />);
+      expect(container.firstChild).toMatchSnapshot();
     });
 
     test('when uncontrolled, the selected tab should update if it receives new content', () => {
@@ -142,21 +150,26 @@ describe('OuiTabbedContent', () => {
           ...kibanaTab,
         },
       ];
-      const component = mount(<OuiTabbedContent tabs={tabs} />);
+      const { container, rerender } = render(<OuiTabbedContent tabs={tabs} />);
 
-      component.find('OuiTab[id="kibana"] button').first().simulate('click');
+      const kibanaTabButton = container.querySelector(
+        'button[id="kibana"]'
+      ) as HTMLButtonElement;
+      fireEvent.click(kibanaTabButton);
 
-      component.setProps({
-        tabs: [
-          elasticsearchTab,
-          {
-            ...kibanaTab,
-            content: <p>updated Kibana content</p>,
-          },
-        ],
-      });
+      rerender(
+        <OuiTabbedContent
+          tabs={[
+            elasticsearchTab,
+            {
+              ...kibanaTab,
+              content: <p>updated Kibana content</p>,
+            },
+          ]}
+        />
+      );
 
-      expect(component).toMatchSnapshot();
+      expect(container.firstChild).toMatchSnapshot();
     });
   });
 });

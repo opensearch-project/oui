@@ -1,332 +1,366 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiExpression props color accent is rendered 1`] = `
-<span
-  aria-label="aria-label"
-  class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--accent"
-  data-test-subj="test subject string"
->
+<div>
   <span
-    class="ouiExpression__description"
+    aria-label="aria-label"
+    class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--accent"
+    data-test-subj="test subject string"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props color danger is rendered 1`] = `
-<span
-  aria-label="aria-label"
-  class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--danger"
-  data-test-subj="test subject string"
->
+<div>
   <span
-    class="ouiExpression__description"
+    aria-label="aria-label"
+    class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--danger"
+    data-test-subj="test subject string"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props color primary is rendered 1`] = `
-<span
-  aria-label="aria-label"
-  class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--primary"
-  data-test-subj="test subject string"
->
+<div>
   <span
-    class="ouiExpression__description"
+    aria-label="aria-label"
+    class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--primary"
+    data-test-subj="test subject string"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props color secondary is rendered 1`] = `
-<span
-  aria-label="aria-label"
-  class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--secondary"
-  data-test-subj="test subject string"
->
+<div>
   <span
-    class="ouiExpression__description"
+    aria-label="aria-label"
+    class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--secondary"
+    data-test-subj="test subject string"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props color subdued is rendered 1`] = `
-<span
-  aria-label="aria-label"
-  class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--subdued"
-  data-test-subj="test subject string"
->
+<div>
   <span
-    class="ouiExpression__description"
+    aria-label="aria-label"
+    class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--subdued"
+    data-test-subj="test subject string"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props color success is rendered 1`] = `
-<span
-  aria-label="aria-label"
-  class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--success"
-  data-test-subj="test subject string"
->
+<div>
   <span
-    class="ouiExpression__description"
+    aria-label="aria-label"
+    class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--success"
+    data-test-subj="test subject string"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props color warning is rendered 1`] = `
-<span
-  aria-label="aria-label"
-  class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--warning"
-  data-test-subj="test subject string"
->
+<div>
   <span
-    class="ouiExpression__description"
+    aria-label="aria-label"
+    class="ouiExpression testClass1 testClass2 ouiExpression-isUppercase ouiExpression--warning"
+    data-test-subj="test subject string"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props descriptionWidth changes the description&apos;s width when using columns 1`] = `
-<span
-  class="ouiExpression ouiExpression-isUppercase ouiExpression--columns ouiExpression--danger"
->
+<div>
   <span
-    class="ouiExpression__description"
-    style="flex-basis:50px"
+    class="ouiExpression ouiExpression-isUppercase ouiExpression--columns ouiExpression--danger"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+      style="flex-basis: 50px;"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
+    <span
+      class="ouiExpression__icon"
+      color="danger"
+      data-ouiicon-type="alert"
+    />
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-  <span
-    class="ouiExpression__icon"
-    color="danger"
-    data-ouiicon-type="alert"
-  />
-</span>
+</div>
 `;
 
 exports[`OuiExpression props display can be columns 1`] = `
-<span
-  class="ouiExpression ouiExpression-isUppercase ouiExpression--columns ouiExpression--success"
->
+<div>
   <span
-    class="ouiExpression__description"
-    style="flex-basis:20%"
+    class="ouiExpression ouiExpression-isUppercase ouiExpression--columns ouiExpression--success"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+      style="flex-basis: 20%;"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props isActive false renders inactive 1`] = `
-<span
-  class="ouiExpression ouiExpression-isUppercase ouiExpression--success"
->
+<div>
   <span
-    class="ouiExpression__description"
+    class="ouiExpression ouiExpression-isUppercase ouiExpression--success"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props isActive true renders active 1`] = `
-<span
-  class="ouiExpression ouiExpression-isActive ouiExpression-isUppercase ouiExpression--success"
->
+<div>
   <span
-    class="ouiExpression__description"
+    class="ouiExpression ouiExpression-isActive ouiExpression-isUppercase ouiExpression--success"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props isInvalid renders error state 1`] = `
-<span
-  class="ouiExpression ouiExpression-isUppercase ouiExpression--danger"
->
+<div>
   <span
-    class="ouiExpression__description"
+    class="ouiExpression ouiExpression-isUppercase ouiExpression--danger"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
+    <span
+      class="ouiExpression__icon"
+      color="danger"
+      data-ouiicon-type="alert"
+    />
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-  <span
-    class="ouiExpression__icon"
-    color="danger"
-    data-ouiicon-type="alert"
-  />
-</span>
+</div>
 `;
 
 exports[`OuiExpression props textWrap can truncate text 1`] = `
-<span
-  class="ouiExpression ouiExpression-isUppercase ouiExpression--success ouiExpression--truncate"
->
+<div>
   <span
-    class="ouiExpression__description"
+    class="ouiExpression ouiExpression-isUppercase ouiExpression--success ouiExpression--truncate"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props uppercase false renders inherited case 1`] = `
-<span
-  class="ouiExpression ouiExpression--success"
->
+<div>
   <span
-    class="ouiExpression__description"
+    class="ouiExpression ouiExpression--success"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression props uppercase true renders uppercase 1`] = `
-<span
-  class="ouiExpression ouiExpression-isUppercase ouiExpression--success"
->
+<div>
   <span
-    class="ouiExpression__description"
+    class="ouiExpression ouiExpression-isUppercase ouiExpression--success"
   >
-    the answer is
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
   </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</span>
+</div>
 `;
 
 exports[`OuiExpression render with only description 1`] = `
-<button
-  aria-label="aria-label"
-  class="ouiExpression testClass1 testClass2 ouiExpression-isClickable ouiExpression-isUppercase ouiExpression--success"
-  data-test-subj="test subject string"
->
-  <span
-    class="ouiExpression__description"
+<div>
+  <button
+    aria-label="aria-label"
+    class="ouiExpression testClass1 testClass2 ouiExpression-isClickable ouiExpression-isUppercase ouiExpression--success"
+    data-test-subj="test subject string"
   >
-    the answer is
-  </span>
-   
-</button>
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+  </button>
+</div>
 `;
 
 exports[`OuiExpression renders 1`] = `
-<button
-  aria-label="aria-label"
-  class="ouiExpression testClass1 testClass2 ouiExpression-isClickable ouiExpression-isUppercase ouiExpression--success"
-  data-test-subj="test subject string"
->
-  <span
-    class="ouiExpression__description"
+<div>
+  <button
+    aria-label="aria-label"
+    class="ouiExpression testClass1 testClass2 ouiExpression-isClickable ouiExpression-isUppercase ouiExpression--success"
+    data-test-subj="test subject string"
   >
-    the answer is
-  </span>
-   
-  <span
-    class="ouiExpression__value"
-  >
-    42
-  </span>
-</button>
+    <span
+      class="ouiExpression__description"
+    >
+      the answer is
+    </span>
+     
+    <span
+      class="ouiExpression__value"
+    >
+      42
+    </span>
+  </button>
+</div>
 `;

@@ -1,19 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiHue accepts a hex value 1`] = `
-Array [
+<div>
   <label
     class="ouiScreenReaderOnly"
     for="undefined-hue"
   >
     Select the HSV color mode 'hue' value
-  </label>,
+  </label>
   <p
     aria-live="polite"
     class="ouiScreenReaderOnly"
   >
     #00FFFF
-  </p>,
+  </p>
   <div
     class="ouiHue testClass1 testClass2"
   >
@@ -28,22 +28,22 @@ Array [
       type="range"
       value="180"
     />
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`OuiHue accepts a hue value 1`] = `
-Array [
+<div>
   <label
     class="ouiScreenReaderOnly"
     for="undefined-hue"
   >
     Select the HSV color mode 'hue' value
-  </label>,
+  </label>
   <p
     aria-live="polite"
     class="ouiScreenReaderOnly"
-  />,
+  />
   <div
     class="ouiHue testClass1 testClass2"
   >
@@ -58,22 +58,22 @@ Array [
       type="range"
       value="180"
     />
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`OuiHue is rendered 1`] = `
-Array [
+<div>
   <label
     class="ouiScreenReaderOnly"
     for="undefined-hue"
   >
     Select the HSV color mode 'hue' value
-  </label>,
+  </label>
   <p
     aria-live="polite"
     class="ouiScreenReaderOnly"
-  />,
+  />
   <div
     class="ouiHue testClass1 testClass2"
   >
@@ -88,6 +88,6 @@ Array [
       type="range"
       value="1"
     />
-  </div>,
-]
+  </div>
+</div>
 `;

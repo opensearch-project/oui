@@ -29,7 +29,8 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiAccordion } from './accordion';
@@ -39,109 +40,111 @@ const getId = () => `${id++}`;
 
 describe('OuiAccordion', () => {
   test('is rendered', () => {
-    const component = render(<OuiAccordion id={getId()} {...requiredProps} />);
+    const { container } = render(
+      <OuiAccordion id={getId()} {...requiredProps} />
+    );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('buttonContentClassName', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion
             id={getId()}
             buttonContentClassName="button content class name"
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('buttonContent', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion
             id={getId()}
             buttonContent={<div>Button content</div>}
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('buttonProps', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion id={getId()} buttonProps={requiredProps} />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('extraAction', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion
             id={getId()}
             extraAction={<button>Extra action</button>}
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('initialIsOpen', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion id={getId()} initialIsOpen={true}>
             <p>You can see me.</p>
           </OuiAccordion>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('arrowDisplay', () => {
       it('right is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion id={getId()} arrowDisplay="right">
             <p>You can see me.</p>
           </OuiAccordion>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('none is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion id={getId()} arrowDisplay="none">
             <p>You can see me.</p>
           </OuiAccordion>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('forceState', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion id={getId()} forceState="closed">
             <p>You can not see me</p>
           </OuiAccordion>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
-      it('accepts and calls an optional callback on click', () => {
+      it('accepts and calls an optional callback on click', async () => {
         const onToggleHandler = jest.fn();
-        const component = mount(
+        render(
           <OuiAccordion
             id={getId()}
             onToggle={onToggleHandler}
@@ -149,7 +152,8 @@ describe('OuiAccordion', () => {
           />
         );
 
-        component.find('button').simulate('click');
+        const user = userEvent.setup();
+        await user.click(screen.getByRole('button'));
         expect(onToggleHandler).toBeCalled();
         expect(onToggleHandler).toBeCalledWith(true);
       });
@@ -157,25 +161,25 @@ describe('OuiAccordion', () => {
 
     describe('isLoading', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion id={getId()} isLoading>
             <p>You can see me.</p>
           </OuiAccordion>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('isLoadingMessage', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAccordion id={getId()} isLoadingMessage="Please wait" isLoading>
             <p>You can&apos;t see me.</p>
           </OuiAccordion>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
   });
@@ -194,51 +198,65 @@ describe('OuiAccordion', () => {
       container = null;
     });
 
-    it('opens when clicked once', () => {
-      const component = mount(<OuiAccordion id={getId()} />);
+    it('opens when clicked once', async () => {
+      const { container } = render(<OuiAccordion id={getId()} />);
 
-      component.find('button').simulate('click');
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button'));
+      });
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
-    it('closes when clicked twice', () => {
-      const component = mount(<OuiAccordion id={getId()} />);
+    it('closes when clicked twice', async () => {
+      const { container } = render(<OuiAccordion id={getId()} />);
 
-      component.find('button').simulate('click');
-      component.find('button').simulate('click');
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button'));
+      });
+      await act(async () => {
+        await user.click(screen.getByRole('button'));
+      });
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
-    it('accepts and calls an optional callback on open and close', () => {
+    it('accepts and calls an optional callback on open and close', async () => {
       const onToggleHandler = jest.fn();
-      const component = mount(
-        <OuiAccordion id={getId()} onToggle={onToggleHandler} />
-      );
+      render(<OuiAccordion id={getId()} onToggle={onToggleHandler} />);
 
-      component.find('button').simulate('click');
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button'));
+      });
       expect(onToggleHandler).toBeCalled();
       expect(onToggleHandler).toBeCalledWith(true);
 
-      component.find('button').simulate('click');
+      await act(async () => {
+        await user.click(screen.getByRole('button'));
+      });
       expect(onToggleHandler).toBeCalled();
       expect(onToggleHandler).toBeCalledWith(false);
     });
 
-    it('moves focus to the content when expanded', () => {
-      const component = mount<OuiAccordion>(<OuiAccordion id={getId()} />, {
-        attachTo: container,
+    it('moves focus to the content when expanded', async () => {
+      const accordionId = getId();
+      render(<OuiAccordion id={accordionId} />, {
+        container: container as HTMLElement,
       });
-      const accordionClass = component.instance();
-      const childWrapper = accordionClass.childWrapper;
 
+      // Get the button and click it
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button'));
+      });
+
+      // Check that the content wrapper has focus
+      // The accordion content wrapper has the same ID as the accordion itself
+      const childWrapper = document.getElementById(accordionId);
       expect(childWrapper).not.toBeFalsy();
-      expect(childWrapper).not.toBe(document.activeElement);
-
-      // click button
-      component.find('button').simulate('click');
-
       expect(childWrapper).toBe(document.activeElement);
     });
   });

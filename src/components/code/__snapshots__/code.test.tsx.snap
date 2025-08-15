@@ -1,16 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiCode renders a code snippet 1`] = `
-<span
-  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--inline prismjs language-none testClass1 testClass2"
->
-  <code
-    aria-label="aria-label"
-    class="ouiCodeBlock__code"
-    data-test-subj="test subject string"
+<div>
+  <span
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--inline prismjs language-none testClass1 testClass2"
   >
-    var some = 'code';
+    <code
+      aria-label="aria-label"
+      class="ouiCodeBlock__code"
+      data-test-subj="test subject string"
+    >
+      var some = 'code';
 console.log(some);
-  </code>
-</span>
+    </code>
+  </span>
+</div>
 `;

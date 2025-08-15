@@ -1,27 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiContextMenu can pass-through horizontal rule props 1`] = `
-<div
-  class="ouiContextMenu"
->
+<div>
   <div
-    class="ouiContextMenuPanel ouiContextMenu__panel"
-    tabindex="-1"
+    class="ouiContextMenu"
+    style="height: 0px;"
   >
     <div
-      class="ouiContextMenuPanelTitle"
+      class="ouiContextMenuPanel ouiContextMenu__panel"
+      tabindex="-1"
     >
-      <span
-        class="ouiContextMenu__itemLayout"
+      <div
+        class="ouiContextMenuPanelTitle"
       >
-        Testing separator
-      </span>
-    </div>
-    <div>
+        <span
+          class="ouiContextMenu__itemLayout"
+        >
+          Testing separator
+        </span>
+      </div>
       <div>
-        <hr
-          class="ouiHorizontalRule ouiHorizontalRule--half ouiHorizontalRule--marginSmall"
-        />
+        <div>
+          <hr
+            class="ouiHorizontalRule ouiHorizontalRule--half ouiHorizontalRule--marginSmall"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -29,63 +32,68 @@ exports[`OuiContextMenu can pass-through horizontal rule props 1`] = `
 `;
 
 exports[`OuiContextMenu is rendered 1`] = `
-<div
-  aria-label="aria-label"
-  class="ouiContextMenu testClass1 testClass2"
-  data-test-subj="test subject string"
-/>
+<div>
+  <div
+    aria-label="aria-label"
+    class="ouiContextMenu testClass1 testClass2"
+    data-test-subj="test subject string"
+  />
+</div>
 `;
 
 exports[`OuiContextMenu panel item can be a separator line 1`] = `
-<div
-  class="ouiContextMenu"
->
+<div>
   <div
-    class="ouiContextMenuPanel ouiContextMenu__panel"
-    tabindex="-1"
+    class="ouiContextMenu"
+    style="height: 0px;"
   >
     <div
-      class="ouiContextMenuPanelTitle"
+      class="ouiContextMenuPanel ouiContextMenu__panel"
+      tabindex="-1"
     >
-      <span
-        class="ouiContextMenu__itemLayout"
+      <div
+        class="ouiContextMenuPanelTitle"
       >
-        Testing separator
-      </span>
-    </div>
-    <div>
+        <span
+          class="ouiContextMenu__itemLayout"
+        >
+          Testing separator
+        </span>
+      </div>
       <div>
-        <button
-          class="ouiContextMenuItem"
-          type="button"
-        >
-          <span
-            class="ouiContextMenu__itemLayout"
+        <div>
+          <button
+            class="ouiContextMenuItem"
+            type="button"
           >
             <span
-              class="ouiContextMenuItem__text"
+              class="ouiContextMenu__itemLayout"
             >
-              Foo
+              <span
+                class="ouiContextMenuItem__text"
+              >
+                Foo
+              </span>
             </span>
-          </span>
-        </button>
-        <hr
-          class="ouiHorizontalRule ouiHorizontalRule--full"
-        />
-        <button
-          class="ouiContextMenuItem"
-          type="button"
-        >
-          <span
-            class="ouiContextMenu__itemLayout"
+          </button>
+          <hr
+            class="ouiHorizontalRule ouiHorizontalRule--full"
+          />
+          <button
+            class="ouiContextMenuItem"
+            type="button"
           >
             <span
-              class="ouiContextMenuItem__text"
+              class="ouiContextMenu__itemLayout"
             >
-              Bar
+              <span
+                class="ouiContextMenuItem__text"
+              >
+                Bar
+              </span>
             </span>
-          </span>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -93,42 +101,45 @@ exports[`OuiContextMenu panel item can be a separator line 1`] = `
 `;
 
 exports[`OuiContextMenu panel item can contain JSX 1`] = `
-<div
-  class="ouiContextMenu"
->
+<div>
   <div
-    class="ouiContextMenuPanel ouiContextMenu__panel"
-    tabindex="-1"
+    class="ouiContextMenu"
+    style="height: 0px;"
   >
     <div
-      class="ouiContextMenuPanelTitle"
+      class="ouiContextMenuPanel ouiContextMenu__panel"
+      tabindex="-1"
     >
-      <span
-        class="ouiContextMenu__itemLayout"
+      <div
+        class="ouiContextMenuPanelTitle"
       >
-        3
-      </span>
-    </div>
-    <div>
-      <div>
-        <button
-          class="ouiContextMenuItem"
-          type="button"
+        <span
+          class="ouiContextMenu__itemLayout"
         >
-          <span
-            class="ouiContextMenu__itemLayout"
+          3
+        </span>
+      </div>
+      <div>
+        <div>
+          <button
+            class="ouiContextMenuItem"
+            type="button"
           >
             <span
-              class="ouiContextMenuItem__text"
+              class="ouiContextMenu__itemLayout"
             >
               <span
-                style="color:tomato"
+                class="ouiContextMenuItem__text"
               >
-                foo
+                <span
+                  style="color: tomato;"
+                >
+                  foo
+                </span>
               </span>
             </span>
-          </span>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -136,37 +147,39 @@ exports[`OuiContextMenu panel item can contain JSX 1`] = `
 `;
 
 exports[`OuiContextMenu props panels and initialPanelId allows you to click the title button to go back to the previous panel 1`] = `
-<div
-  class="ouiContextMenu"
-  style="height: 0px;"
->
+<div>
   <div
-    class="ouiContextMenuPanel ouiContextMenu__panel"
-    tabindex="-1"
+    class="ouiContextMenu"
+    style="height: 0px;"
   >
-    <button
-      class="ouiContextMenuPanelTitle"
-      data-test-subj="contextMenuPanelTitleButton"
-      type="button"
+    <div
+      class="ouiContextMenuPanel ouiContextMenu__panel"
+      tabindex="-1"
     >
-      <span
-        class="ouiContextMenu__itemLayout"
+      <button
+        class="ouiContextMenuPanelTitle"
+        data-test-subj="contextMenuPanelTitleButton"
+        type="button"
       >
         <span
-          class="ouiContextMenu__icon"
-          data-ouiicon-type="arrowLeft"
-        />
-        <span
-          class="ouiContextMenu__text"
+          class="ouiContextMenu__itemLayout"
         >
-          2
+          <span
+            class="ouiContextMenu__icon"
+            data-ouiicon-type="arrowLeft"
+          />
+          <span
+            class="ouiContextMenu__text"
+          >
+            2
+          </span>
         </span>
-      </span>
-    </button>
-    <div>
+      </button>
       <div>
         <div>
-          2
+          <div>
+            2
+          </div>
         </div>
       </div>
     </div>
@@ -175,120 +188,122 @@ exports[`OuiContextMenu props panels and initialPanelId allows you to click the 
 `;
 
 exports[`OuiContextMenu props panels and initialPanelId allows you to click the title button to go back to the previous panel 2`] = `
-<div
-  class="ouiContextMenu"
-  style="height: 0px; width: 400px;"
->
+<div>
   <div
-    class="ouiContextMenuPanel ouiContextMenu__panel ouiContextMenuPanel-txOutRight"
-    tabindex="-1"
+    class="ouiContextMenu"
+    style="height: 0px; width: 400px;"
   >
-    <button
-      class="ouiContextMenuPanelTitle"
-      data-test-subj="contextMenuPanelTitleButton"
-      type="button"
+    <div
+      class="ouiContextMenuPanel ouiContextMenu__panel ouiContextMenuPanel-txOutRight"
+      tabindex="-1"
     >
-      <span
-        class="ouiContextMenu__itemLayout"
+      <button
+        class="ouiContextMenuPanelTitle"
+        data-test-subj="contextMenuPanelTitleButton"
+        type="button"
       >
         <span
-          class="ouiContextMenu__icon"
-          data-ouiicon-type="arrowLeft"
-        />
-        <span
-          class="ouiContextMenu__text"
+          class="ouiContextMenu__itemLayout"
         >
-          2
+          <span
+            class="ouiContextMenu__icon"
+            data-ouiicon-type="arrowLeft"
+          />
+          <span
+            class="ouiContextMenu__text"
+          >
+            2
+          </span>
         </span>
-      </span>
-    </button>
-    <div>
+      </button>
       <div>
         <div>
-          2
+          <div>
+            2
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiContextMenuPanel ouiContextMenu__panel ouiContextMenuPanel-txInRight"
-    tabindex="-1"
-  >
-    <button
-      class="ouiContextMenuPanelTitle"
-      data-test-subj="contextMenuPanelTitleButton"
-      type="button"
+    <div
+      class="ouiContextMenuPanel ouiContextMenu__panel ouiContextMenuPanel-txInRight"
+      tabindex="-1"
     >
-      <span
-        class="ouiContextMenu__itemLayout"
+      <button
+        class="ouiContextMenuPanelTitle"
+        data-test-subj="contextMenuPanelTitleButton"
+        type="button"
       >
         <span
-          class="ouiContextMenu__icon"
-          data-ouiicon-type="arrowLeft"
-        />
-        <span
-          class="ouiContextMenu__text"
+          class="ouiContextMenu__itemLayout"
         >
-          1
+          <span
+            class="ouiContextMenu__icon"
+            data-ouiicon-type="arrowLeft"
+          />
+          <span
+            class="ouiContextMenu__text"
+          >
+            1
+          </span>
         </span>
-      </span>
-    </button>
-    <div>
+      </button>
       <div>
-        <button
-          class="ouiContextMenuItem"
-          type="button"
-        >
-          <span
-            class="ouiContextMenu__itemLayout"
+        <div>
+          <button
+            class="ouiContextMenuItem"
+            type="button"
           >
             <span
-              class="ouiContextMenuItem__text"
+              class="ouiContextMenu__itemLayout"
             >
-              2a
+              <span
+                class="ouiContextMenuItem__text"
+              >
+                2a
+              </span>
+              <span
+                class="ouiContextMenu__arrow"
+                data-ouiicon-type="arrowRight"
+              />
             </span>
-            <span
-              class="ouiContextMenu__arrow"
-              data-ouiicon-type="arrowRight"
-            />
-          </span>
-        </button>
-        <button
-          class="ouiContextMenuItem"
-          type="button"
-        >
-          <span
-            class="ouiContextMenu__itemLayout"
+          </button>
+          <button
+            class="ouiContextMenuItem"
+            type="button"
           >
             <span
-              class="ouiContextMenuItem__text"
+              class="ouiContextMenu__itemLayout"
             >
-              2b
+              <span
+                class="ouiContextMenuItem__text"
+              >
+                2b
+              </span>
+              <span
+                class="ouiContextMenu__arrow"
+                data-ouiicon-type="arrowRight"
+              />
             </span>
-            <span
-              class="ouiContextMenu__arrow"
-              data-ouiicon-type="arrowRight"
-            />
-          </span>
-        </button>
-        <button
-          class="ouiContextMenuItem"
-          type="button"
-        >
-          <span
-            class="ouiContextMenu__itemLayout"
+          </button>
+          <button
+            class="ouiContextMenuItem"
+            type="button"
           >
             <span
-              class="ouiContextMenuItem__text"
+              class="ouiContextMenu__itemLayout"
             >
-              2c
+              <span
+                class="ouiContextMenuItem__text"
+              >
+                2c
+              </span>
+              <span
+                class="ouiContextMenu__arrow"
+                data-ouiicon-type="arrowRight"
+              />
             </span>
-            <span
-              class="ouiContextMenu__arrow"
-              data-ouiicon-type="arrowRight"
-            />
-          </span>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -296,36 +311,39 @@ exports[`OuiContextMenu props panels and initialPanelId allows you to click the 
 `;
 
 exports[`OuiContextMenu props panels and initialPanelId renders the referenced panel 1`] = `
-<div
-  class="ouiContextMenu"
->
+<div>
   <div
-    class="ouiContextMenuPanel ouiContextMenu__panel"
-    tabindex="-1"
+    class="ouiContextMenu"
+    style="height: 0px;"
   >
-    <button
-      class="ouiContextMenuPanelTitle"
-      data-test-subj="contextMenuPanelTitleButton"
-      type="button"
+    <div
+      class="ouiContextMenuPanel ouiContextMenu__panel"
+      tabindex="-1"
     >
-      <span
-        class="ouiContextMenu__itemLayout"
+      <button
+        class="ouiContextMenuPanelTitle"
+        data-test-subj="contextMenuPanelTitleButton"
+        type="button"
       >
         <span
-          class="ouiContextMenu__icon"
-          data-ouiicon-type="arrowLeft"
-        />
-        <span
-          class="ouiContextMenu__text"
+          class="ouiContextMenu__itemLayout"
         >
-          2
+          <span
+            class="ouiContextMenu__icon"
+            data-ouiicon-type="arrowLeft"
+          />
+          <span
+            class="ouiContextMenu__text"
+          >
+            2
+          </span>
         </span>
-      </span>
-    </button>
-    <div>
+      </button>
       <div>
         <div>
-          2
+          <div>
+            2
+          </div>
         </div>
       </div>
     </div>
@@ -334,11 +352,108 @@ exports[`OuiContextMenu props panels and initialPanelId renders the referenced p
 `;
 
 exports[`OuiContextMenu props size m is rendered 1`] = `
-<div
-  class="ouiContextMenu"
->
+<div>
   <div
-    class="ouiContextMenuPanel ouiContextMenu__panel"
+    class="ouiContextMenu"
+    style="height: 0px;"
+  >
+    <div
+      class="ouiContextMenuPanel ouiContextMenu__panel"
+      tabindex="-1"
+    >
+      <button
+        class="ouiContextMenuPanelTitle"
+        data-test-subj="contextMenuPanelTitleButton"
+        type="button"
+      >
+        <span
+          class="ouiContextMenu__itemLayout"
+        >
+          <span
+            class="ouiContextMenu__icon"
+            data-ouiicon-type="arrowLeft"
+          />
+          <span
+            class="ouiContextMenu__text"
+          >
+            2
+          </span>
+        </span>
+      </button>
+      <div>
+        <div>
+          <div>
+            2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiContextMenu props size s is rendered 1`] = `
+<div>
+  <div
+    class="ouiContextMenu ouiContextMenu--small"
+    style="height: 0px;"
+  >
+    <div
+      class="ouiContextMenuPanel ouiContextMenu__panel"
+      tabindex="-1"
+    >
+      <button
+        class="ouiContextMenuPanelTitle ouiContextMenuPanelTitle--small"
+        data-test-subj="contextMenuPanelTitleButton"
+        type="button"
+      >
+        <span
+          class="ouiContextMenu__itemLayout"
+        >
+          <span
+            class="ouiContextMenu__icon"
+            data-ouiicon-type="arrowLeft"
+          />
+          <span
+            class="ouiContextMenu__text"
+          >
+            2
+          </span>
+        </span>
+      </button>
+      <div>
+        <div>
+          <div>
+            2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiContextMenuPanel is rendered 1`] = `
+<div>
+  <div
+    aria-label="aria-label"
+    class="ouiContextMenuPanel testClass1 testClass2"
+    data-test-subj="test subject string"
+    tabindex="-1"
+  >
+    <div>
+      <div>
+        Hello
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiContextMenuPanel props onClose renders a button as a title 1`] = `
+<div>
+  <div
+    class="ouiContextMenuPanel"
     tabindex="-1"
   >
     <button
@@ -356,356 +471,337 @@ exports[`OuiContextMenu props size m is rendered 1`] = `
         <span
           class="ouiContextMenu__text"
         >
-          2
+          Title
         </span>
       </span>
     </button>
     <div>
-      <div>
-        <div>
-          2
-        </div>
-      </div>
+      <div />
     </div>
-  </div>
-</div>
-`;
-
-exports[`OuiContextMenu props size s is rendered 1`] = `
-<div
-  class="ouiContextMenu ouiContextMenu--small"
->
-  <div
-    class="ouiContextMenuPanel ouiContextMenu__panel"
-    tabindex="-1"
-  >
-    <button
-      class="ouiContextMenuPanelTitle ouiContextMenuPanelTitle--small"
-      data-test-subj="contextMenuPanelTitleButton"
-      type="button"
-    >
-      <span
-        class="ouiContextMenu__itemLayout"
-      >
-        <span
-          class="ouiContextMenu__icon"
-          data-ouiicon-type="arrowLeft"
-        />
-        <span
-          class="ouiContextMenu__text"
-        >
-          2
-        </span>
-      </span>
-    </button>
-    <div>
-      <div>
-        <div>
-          2
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`OuiContextMenuPanel is rendered 1`] = `
-<div
-  aria-label="aria-label"
-  class="ouiContextMenuPanel testClass1 testClass2"
-  data-test-subj="test subject string"
-  tabindex="-1"
->
-  <div>
-    <div>
-      Hello
-    </div>
-  </div>
-</div>
-`;
-
-exports[`OuiContextMenuPanel props onClose renders a button as a title 1`] = `
-<div
-  class="ouiContextMenuPanel"
-  tabindex="-1"
->
-  <button
-    class="ouiContextMenuPanelTitle"
-    data-test-subj="contextMenuPanelTitleButton"
-    type="button"
-  >
-    <span
-      class="ouiContextMenu__itemLayout"
-    >
-      <span
-        class="ouiContextMenu__icon"
-        data-ouiicon-type="arrowLeft"
-      />
-      <span
-        class="ouiContextMenu__text"
-      >
-        Title
-      </span>
-    </span>
-  </button>
-  <div>
-    <div />
   </div>
 </div>
 `;
 
 exports[`OuiContextMenuPanel props size m is rendered 1`] = `
-<div
-  class="ouiContextMenuPanel"
-  tabindex="-1"
->
+<div>
   <div
-    class="ouiContextMenuPanelTitle"
+    class="ouiContextMenuPanel"
+    tabindex="-1"
   >
-    <span
-      class="ouiContextMenu__itemLayout"
+    <div
+      class="ouiContextMenuPanelTitle"
     >
-      Title
-    </span>
-  </div>
-  <div>
-    <div />
+      <span
+        class="ouiContextMenu__itemLayout"
+      >
+        Title
+      </span>
+    </div>
+    <div>
+      <div />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiContextMenuPanel props size s is rendered 1`] = `
-<div
-  class="ouiContextMenuPanel"
-  tabindex="-1"
->
+<div>
   <div
-    class="ouiContextMenuPanelTitle ouiContextMenuPanelTitle--small"
+    class="ouiContextMenuPanel"
+    tabindex="-1"
   >
-    <span
-      class="ouiContextMenu__itemLayout"
+    <div
+      class="ouiContextMenuPanelTitle ouiContextMenuPanelTitle--small"
     >
-      Title
-    </span>
-  </div>
-  <div>
-    <div />
+      <span
+        class="ouiContextMenu__itemLayout"
+      >
+        Title
+      </span>
+    </div>
+    <div>
+      <div />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiContextMenuPanel props title is rendered 1`] = `
-<div
-  class="ouiContextMenuPanel"
-  tabindex="-1"
->
+<div>
   <div
-    class="ouiContextMenuPanelTitle"
+    class="ouiContextMenuPanel"
+    tabindex="-1"
   >
-    <span
-      class="ouiContextMenu__itemLayout"
+    <div
+      class="ouiContextMenuPanelTitle"
     >
-      Title
-    </span>
-  </div>
-  <div>
-    <div />
+      <span
+        class="ouiContextMenu__itemLayout"
+      >
+        Title
+      </span>
+    </div>
+    <div>
+      <div />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiContextMenuPanel props transitionDirection next with transitionType in is rendered 1`] = `
-<div
-  class="ouiContextMenuPanel ouiContextMenuPanel-txInLeft"
-  tabindex="-1"
->
-  <div>
-    <div />
+<div>
+  <div
+    class="ouiContextMenuPanel ouiContextMenuPanel-txInLeft"
+    tabindex="-1"
+  >
+    <div>
+      <div />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiContextMenuPanel props transitionDirection next with transitionType out is rendered 1`] = `
-<div
-  class="ouiContextMenuPanel ouiContextMenuPanel-txOutLeft"
-  tabindex="-1"
->
-  <div>
-    <div />
+<div>
+  <div
+    class="ouiContextMenuPanel ouiContextMenuPanel-txOutLeft"
+    tabindex="-1"
+  >
+    <div>
+      <div />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiContextMenuPanel props transitionDirection previous with transitionType in is rendered 1`] = `
-<div
-  class="ouiContextMenuPanel ouiContextMenuPanel-txInRight"
-  tabindex="-1"
->
-  <div>
-    <div />
+<div>
+  <div
+    class="ouiContextMenuPanel ouiContextMenuPanel-txInRight"
+    tabindex="-1"
+  >
+    <div>
+      <div />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiContextMenuPanel props transitionDirection previous with transitionType out is rendered 1`] = `
-<div
-  class="ouiContextMenuPanel ouiContextMenuPanel-txOutRight"
-  tabindex="-1"
->
-  <div>
-    <div />
+<div>
+  <div
+    class="ouiContextMenuPanel ouiContextMenuPanel-txOutRight"
+    tabindex="-1"
+  >
+    <div>
+      <div />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiContextMenuPanel updating items and content updates to items should not re-render if any items's watchedItemProps did not change 1`] = `
-"<OuiContextMenuPanel items={{...}} hasFocus={true}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+<div>
+  <div
+    class="ouiContextMenuPanel"
+    tabindex="-1"
+  >
     <div>
-      <OuiResizeObserver onResize={[Function: onResize]}>
-        <div>
-          <OuiContextMenuItem data-counter={0} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={0}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
-                  Option A
-                </span>
-              </span>
-            </button>
-          </OuiContextMenuItem>
-          <OuiContextMenuItem data-counter={1} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={1}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
-                  Option B
-                </span>
-              </span>
-            </button>
-          </OuiContextMenuItem>
-        </div>
-      </OuiResizeObserver>
+      <div>
+        <button
+          class="ouiContextMenuItem"
+          data-counter="0"
+          type="button"
+        >
+          <span
+            class="ouiContextMenu__itemLayout"
+          >
+            <span
+              class="ouiContextMenuItem__text"
+            >
+              Option A
+            </span>
+          </span>
+        </button>
+        <button
+          class="ouiContextMenuItem"
+          data-counter="1"
+          type="button"
+        >
+          <span
+            class="ouiContextMenu__itemLayout"
+          >
+            <span
+              class="ouiContextMenuItem__text"
+            >
+              Option B
+            </span>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
-</OuiContextMenuPanel>"
+</div>
 `;
 
 exports[`OuiContextMenuPanel updating items and content updates to items should not re-render if any items's watchedItemProps did not change 2`] = `
-"<OuiContextMenuPanel items={{...}} hasFocus={true}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+<div>
+  <div
+    class="ouiContextMenuPanel"
+    tabindex="-1"
+  >
     <div>
-      <OuiResizeObserver onResize={[Function: onResize]}>
-        <div>
-          <OuiContextMenuItem data-counter={0} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={0}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
-                  Option A
-                </span>
-              </span>
-            </button>
-          </OuiContextMenuItem>
-          <OuiContextMenuItem data-counter={1} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={1}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
-                  Option B
-                </span>
-              </span>
-            </button>
-          </OuiContextMenuItem>
-        </div>
-      </OuiResizeObserver>
+      <div>
+        <button
+          class="ouiContextMenuItem"
+          data-counter="0"
+          type="button"
+        >
+          <span
+            class="ouiContextMenu__itemLayout"
+          >
+            <span
+              class="ouiContextMenuItem__text"
+            >
+              Option A
+            </span>
+          </span>
+        </button>
+        <button
+          class="ouiContextMenuItem"
+          data-counter="1"
+          type="button"
+        >
+          <span
+            class="ouiContextMenu__itemLayout"
+          >
+            <span
+              class="ouiContextMenuItem__text"
+            >
+              Option B
+            </span>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
-</OuiContextMenuPanel>"
+</div>
 `;
 
 exports[`OuiContextMenuPanel updating items and content updates to items should re-render at all times when children exists 1`] = `
-"<OuiContextMenuPanel hasFocus={true} items={{...}}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+<div>
+  <div
+    class="ouiContextMenuPanel"
+    tabindex="-1"
+  >
     <div>
-      <OuiResizeObserver onResize={[Function: onResize]}>
-        <div>
-          Hello World
-        </div>
-      </OuiResizeObserver>
+      <div>
+        Hello World
+      </div>
     </div>
   </div>
-</OuiContextMenuPanel>"
+</div>
 `;
 
 exports[`OuiContextMenuPanel updating items and content updates to items should re-render at all times when children exists 2`] = `
-"<OuiContextMenuPanel hasFocus={true} items={{...}}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+<div>
+  <div
+    class="ouiContextMenuPanel"
+    tabindex="-1"
+  >
     <div>
-      <OuiResizeObserver onResize={[Function: onResize]}>
-        <div>
-          More Salutations
-        </div>
-      </OuiResizeObserver>
+      <div>
+        More Salutations
+      </div>
     </div>
   </div>
-</OuiContextMenuPanel>"
+</div>
 `;
 
 exports[`OuiContextMenuPanel updating items and content updates to items should re-render if any items's watchedItemProps did change 1`] = `
-"<OuiContextMenuPanel watchedItemProps={{...}} items={{...}} hasFocus={true}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+<div>
+  <div
+    class="ouiContextMenuPanel"
+    tabindex="-1"
+  >
     <div>
-      <OuiResizeObserver onResize={[Function: onResize]}>
-        <div>
-          <OuiContextMenuItem data-counter={0} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={0}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
-                  Option A
-                </span>
-              </span>
-            </button>
-          </OuiContextMenuItem>
-          <OuiContextMenuItem data-counter={1} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={1}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
-                  Option B
-                </span>
-              </span>
-            </button>
-          </OuiContextMenuItem>
-        </div>
-      </OuiResizeObserver>
+      <div>
+        <button
+          class="ouiContextMenuItem"
+          data-counter="0"
+          type="button"
+        >
+          <span
+            class="ouiContextMenu__itemLayout"
+          >
+            <span
+              class="ouiContextMenuItem__text"
+            >
+              Option A
+            </span>
+          </span>
+        </button>
+        <button
+          class="ouiContextMenuItem"
+          data-counter="1"
+          type="button"
+        >
+          <span
+            class="ouiContextMenu__itemLayout"
+          >
+            <span
+              class="ouiContextMenuItem__text"
+            >
+              Option B
+            </span>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
-</OuiContextMenuPanel>"
+</div>
 `;
 
 exports[`OuiContextMenuPanel updating items and content updates to items should re-render if any items's watchedItemProps did change 2`] = `
-"<OuiContextMenuPanel watchedItemProps={{...}} items={{...}} hasFocus={true}>
-  <div className=\\"ouiContextMenuPanel\\" onKeyDown={[Function]} tabIndex={-1} onAnimationEnd={[Function]}>
+<div>
+  <div
+    class="ouiContextMenuPanel"
+    tabindex="-1"
+  >
     <div>
-      <OuiResizeObserver onResize={[Function: onResize]}>
-        <div>
-          <OuiContextMenuItem data-counter={2} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={2}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
-                  Option A
-                </span>
-              </span>
-            </button>
-          </OuiContextMenuItem>
-          <OuiContextMenuItem data-counter={3} buttonRef={[Function: buttonRef]}>
-            <button disabled={false} className=\\"ouiContextMenuItem\\" type=\\"button\\" data-counter={3}>
-              <span className=\\"ouiContextMenu__itemLayout\\">
-                <span className=\\"ouiContextMenuItem__text\\">
-                  Option B
-                </span>
-              </span>
-            </button>
-          </OuiContextMenuItem>
-        </div>
-      </OuiResizeObserver>
+      <div>
+        <button
+          class="ouiContextMenuItem"
+          data-counter="2"
+          type="button"
+        >
+          <span
+            class="ouiContextMenu__itemLayout"
+          >
+            <span
+              class="ouiContextMenuItem__text"
+            >
+              Option A
+            </span>
+          </span>
+        </button>
+        <button
+          class="ouiContextMenuItem"
+          data-counter="3"
+          type="button"
+        >
+          <span
+            class="ouiContextMenu__itemLayout"
+          >
+            <span
+              class="ouiContextMenuItem__text"
+            >
+              Option B
+            </span>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
-</OuiContextMenuPanel>"
+</div>
 `;

@@ -29,13 +29,14 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { OuiNotificationEventReadButton } from './notification_event_read_button';
 
 describe('OuiNotificationEventReadButton', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiNotificationEventReadButton
         id="id"
         eventName="eventName"
@@ -44,11 +45,11 @@ describe('OuiNotificationEventReadButton', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('renders isRead to false', () => {
-    const component = render(
+    const { container } = render(
       <OuiNotificationEventReadButton
         id="id"
         eventName="eventName"
@@ -57,12 +58,12 @@ describe('OuiNotificationEventReadButton', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
-  test('onClick fires for buttons', () => {
+  test('onClick fires for buttons', async () => {
     const handler = jest.fn();
-    const component = mount(
+    render(
       <OuiNotificationEventReadButton
         id="id"
         eventName="eventName"
@@ -70,7 +71,12 @@ describe('OuiNotificationEventReadButton', () => {
         onClick={handler}
       />
     );
-    component.find('button').simulate('click');
-    expect(handler.mock.calls.length).toEqual(1);
+
+    const user = userEvent.setup();
+    await act(async () => {
+      await user.click(screen.getByRole('button'));
+    });
+
+    expect(handler).toHaveBeenCalledTimes(1);
   });
 });

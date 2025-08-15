@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiSaturation } from './saturation';
@@ -38,17 +38,17 @@ const onChange = () => {
   /* empty */
 };
 
-describe('OuiHue', () => {
+describe('OuiSaturation', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiSaturation onChange={onChange} {...requiredProps} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('accepts a color', () => {
-    const component = render(
+    const { container } = render(
       <OuiSaturation
         color={[180, 1, 0.5]}
         onChange={onChange}
@@ -56,6 +56,6 @@ describe('OuiHue', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

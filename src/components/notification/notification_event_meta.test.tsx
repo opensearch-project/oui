@@ -29,14 +29,14 @@
  */
 
 import React from 'react';
-import { mount, render } from 'enzyme';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { OuiNotificationEventMeta } from './notification_event_meta';
-import { OuiContextMenuPanel, OuiContextMenuItem } from '../context_menu';
-import { findTestSubject, takeMountedSnapshot } from '../../test';
+import { OuiContextMenuItem } from '../context_menu';
 
 describe('OuiNotificationEventMeta', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiNotificationEventMeta
         id="id"
         type="Alert"
@@ -45,12 +45,12 @@ describe('OuiNotificationEventMeta', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('severity is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiNotificationEventMeta
           id="id"
           type="Alert"
@@ -60,11 +60,11 @@ describe('OuiNotificationEventMeta', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
-    test('badgeColor  is rendered', () => {
-      const component = render(
+    test('badgeColor is rendered', () => {
+      const { container } = render(
         <OuiNotificationEventMeta
           id="id"
           type="Alert"
@@ -74,11 +74,11 @@ describe('OuiNotificationEventMeta', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
-    test('logoCloud  is rendered', () => {
-      const component = render(
+    test('logoCloud is rendered', () => {
+      const { container } = render(
         <OuiNotificationEventMeta
           id="id"
           type="Alert"
@@ -88,7 +88,7 @@ describe('OuiNotificationEventMeta', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('contextMenuItems are rendered', () => {
@@ -100,11 +100,11 @@ describe('OuiNotificationEventMeta', () => {
           View messages like this
         </OuiContextMenuItem>,
         <OuiContextMenuItem key="contextMenuItemC">
-          Don’t notify me about this
+          Don&apos;t notify me about this
         </OuiContextMenuItem>,
       ];
 
-      const component = mount(
+      render(
         <OuiNotificationEventMeta
           id="id"
           type="Alert"
@@ -115,15 +115,23 @@ describe('OuiNotificationEventMeta', () => {
         />
       );
 
-      expect(component.find(OuiContextMenuPanel)).toHaveLength(0);
-      findTestSubject(component, 'id-notificationEventMetaButton').simulate(
-        'click'
-      );
-      expect(component.find(OuiContextMenuPanel)).toHaveLength(1);
+      // Initially, context menu items should not be visible
+      expect(screen.queryByText('Mark as read')).not.toBeInTheDocument();
 
+      // Click the button to open the context menu
+      act(() => {
+        fireEvent.click(screen.getByTestId('id-notificationEventMetaButton'));
+      });
+
+      // Now the context menu items should be visible
+      expect(screen.getByText('Mark as read')).toBeInTheDocument();
+      expect(screen.getByText('View messages like this')).toBeInTheDocument();
       expect(
-        takeMountedSnapshot(component.find(OuiContextMenuPanel))
-      ).toMatchSnapshot();
+        screen.getByText("Don't notify me about this")
+      ).toBeInTheDocument();
+
+      // Take a snapshot of the entire container which should include the portal
+      expect(document.body).toMatchSnapshot();
     });
   });
 });

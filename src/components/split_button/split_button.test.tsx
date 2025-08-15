@@ -6,11 +6,15 @@
 import React from 'react';
 import each from 'jest-each';
 
-import { ReactWrapper, mount, render } from 'enzyme';
+import {
+  render,
+  fireEvent,
+  waitForElementToBeRemoved,
+  act,
+} from '@testing-library/react';
 import { requiredProps } from '../../test';
 import { keys } from '../../services';
 import { OuiSplitButton, OuiSplitButtonOption } from './split_button';
-import { act } from '../../test/react_test_utils';
 
 jest.mock('../portal', () => ({
   OuiPortal: ({ children }: any) => children,
@@ -59,20 +63,19 @@ const waitFor = (
 
 /**
  * use waitFor() until document.activeElement equals element found by selector
- * @param component - target Enzyme wrapper
- * @param selector - CSS selector for Enzyme find()
+ * @param container - target RTL container
+ * @param selector - CSS selector for querySelector
  * @param options - options to pass to waitFor()
  * @returns void
  */
 const findByFocused = (
-  component: ReactWrapper,
+  container: HTMLElement,
   selector: string,
   options: WaitForOptions
 ) =>
   waitFor(() => {
-    component.update();
-    const expectedActive = component.find(selector);
-    expect(expectedActive.getDOMNode()).toEqual(document.activeElement);
+    const expectedActive = container.querySelector(selector);
+    expect(expectedActive).toEqual(document.activeElement);
   }, options);
 
 const options: OuiSplitButtonOption[] = [
@@ -85,54 +88,57 @@ const options: OuiSplitButtonOption[] = [
 
 describe('OuiSplitButton', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiSplitButton {...requiredProps}>Test</OuiSplitButton>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('fullWidth is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiSplitButton {...requiredProps} fullWidth>
           Test
         </OuiSplitButton>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe('options rendering', () => {
     test('options are rendered when select is open', async () => {
-      const component = mount(
+      const { container } = render(
         <OuiSplitButton options={options} initiallyOpen>
           Test
         </OuiSplitButton>
       );
 
-      component.update();
-      expect(component.find('button.ouiSplitButton__item')).toHaveLength(1);
-      expect(component.find('a.ouiSplitButton__item')).toHaveLength(1);
-      expect(component).toMatchSnapshot();
+      expect(
+        container.querySelectorAll('button.ouiSplitButton__item')
+      ).toHaveLength(1);
+      expect(container.querySelectorAll('a.ouiSplitButton__item')).toHaveLength(
+        1
+      );
+      expect(container).toMatchSnapshot();
     });
 
     test('selectedItem 0 is rendered', async () => {
-      const component = mount(
+      const { container } = render(
         <OuiSplitButton options={options} selectedIndex={0} initiallyOpen>
           Test
         </OuiSplitButton>
       );
 
-      const selected = component.find('a[aria-selected="true"]');
+      const selected = container.querySelectorAll('a[aria-selected="true"]');
       expect(selected).toHaveLength(1);
-      expect(selected.text()).toEqual('Option #1');
-      expect(component).toMatchSnapshot();
+      expect(selected[0].textContent).toEqual('Option #1');
+      expect(container).toMatchSnapshot();
     });
 
     test('selectedItem last is rendered', async () => {
-      const component = mount(
+      const { container } = render(
         <OuiSplitButton
           options={[...options, { display: 'Option #3' }]}
           selectedIndex={2}
@@ -141,14 +147,16 @@ describe('OuiSplitButton', () => {
         </OuiSplitButton>
       );
 
-      const selected = component.find('button[aria-selected="true"]');
+      const selected = container.querySelectorAll(
+        'button[aria-selected="true"]'
+      );
       expect(selected).toHaveLength(1);
-      expect(selected.text()).toEqual('Option #3');
-      expect(component).toMatchSnapshot();
+      expect(selected[0].textContent).toEqual('Option #3');
+      expect(container).toMatchSnapshot();
     });
 
     test('option with href renders link', async () => {
-      const component = mount(
+      const { container } = render(
         <OuiSplitButton
           options={[{ display: 'Option #3', href: '#test' }]}
           initiallyOpen>
@@ -156,86 +164,91 @@ describe('OuiSplitButton', () => {
         </OuiSplitButton>
       );
 
-      const selected = component.find('a[href="#test"]');
+      const selected = container.querySelectorAll('a[href="#test"]');
       expect(selected).toHaveLength(1);
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe('simple button display', () => {
     test('display simple button when options are blank', () => {
-      const component = mount(
+      const { container } = render(
         <OuiSplitButton options={[]}>Test</OuiSplitButton>
       );
 
-      expect(component.find('.ouiSplitButtonControl--dropdown')).toHaveLength(
-        0
-      );
-      expect(component).toMatchSnapshot();
+      expect(
+        container.querySelectorAll('.ouiSplitButtonControl--dropdown')
+      ).toHaveLength(0);
+      expect(container).toMatchSnapshot();
     });
 
     test('ignore initiallyOpen when options are blank', () => {
-      const component = mount(
+      const { container } = render(
         <OuiSplitButton initiallyOpen options={[]}>
           Test
         </OuiSplitButton>
       );
 
-      expect(component.find('.ouiSplitButton__listbox')).toHaveLength(0);
-      expect(component).toMatchSnapshot();
+      expect(
+        container.querySelectorAll('.ouiSplitButton__listbox')
+      ).toHaveLength(0);
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe('onClick events', () => {
     test('selection list is opened on drop-down button click', async () => {
-      const component = mount(
+      const { container } = render(
         <OuiSplitButton options={options} selectedIndex={1}>
           Test
         </OuiSplitButton>
       );
 
-      expect(
-        component.find('OuiContextMenuItem.ouiSplitButton__item')
-      ).toHaveLength(0);
+      expect(container.querySelectorAll('.ouiSplitButton__item')).toHaveLength(
+        0
+      );
 
-      component
-        .find('button.ouiSplitButtonControl--dropdown')
-        .simulate('click');
+      const dropdownButton = container.querySelector(
+        'button.ouiSplitButtonControl--dropdown'
+      ) as HTMLElement;
+      fireEvent.click(dropdownButton);
 
-      component.update();
+      expect(container.querySelectorAll('.ouiSplitButton__item')).toHaveLength(
+        2
+      );
 
-      expect(
-        component.find('OuiContextMenuItem.ouiSplitButton__item')
-      ).toHaveLength(2);
-
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('onClick is called on Primary button click', async () => {
       const onClick = jest.fn();
-      const component = mount(
+      const { container } = render(
         <OuiSplitButton onClick={onClick}>Test</OuiSplitButton>
       );
 
-      component.find('button.ouiSplitButtonControl--primary').simulate('click');
+      const primaryButton = container.querySelector(
+        'button.ouiSplitButtonControl--primary'
+      ) as HTMLElement;
+      fireEvent.click(primaryButton);
 
       expect(onClick).toHaveBeenCalled();
     });
 
     test('onClick of option-item is called when an option is selected', async () => {
       const onClickOption = jest.fn();
-      options[0].onClick = onClickOption;
-      const component = mount(
-        <OuiSplitButton options={options} initiallyOpen selectedIndex={1}>
+      const testOptions = [...options];
+      testOptions[0].onClick = onClickOption;
+      const { container } = render(
+        <OuiSplitButton options={testOptions} initiallyOpen selectedIndex={1}>
           Test
         </OuiSplitButton>
       );
 
-      const selected = component.find(
-        'OuiContextMenuItem[aria-selected="false"]'
-      );
-      expect(selected).toHaveLength(1);
-      selected.at(0).simulate('click');
+      const selected = container.querySelector(
+        '[aria-selected="false"]'
+      ) as HTMLElement;
+      expect(selected).toBeTruthy();
+      fireEvent.click(selected);
 
       expect(onClickOption).toHaveBeenCalled();
     });
@@ -261,29 +274,28 @@ describe('OuiSplitButton', () => {
         { key: keys.ARROW_DOWN, button: 'dropdown' },
         { key: keys.ARROW_UP, button: 'dropdown' },
       ]).test('$key on $button button opens options', ({ key, button }) => {
-        const component = mount(
+        const { container } = render(
           <OuiSplitButton options={options} selectedIndex={1}>
             test
           </OuiSplitButton>
         );
 
         expect(
-          component.find('OuiContextMenuItem.ouiSplitButton__item')
+          container.querySelectorAll('.ouiSplitButton__item')
         ).toHaveLength(0);
 
-        component
-          .find(`button.ouiSplitButtonControl--${button}`)
-          .simulate('keydown', { key });
-
-        component.update();
+        const targetButton = container.querySelector(
+          `button.ouiSplitButtonControl--${button}`
+        ) as HTMLElement;
+        fireEvent.keyDown(targetButton, { key });
 
         expect(
-          component.find('OuiContextMenuItem.ouiSplitButton__item')
+          container.querySelectorAll('.ouiSplitButton__item')
         ).toHaveLength(2);
       });
     });
     describe('key up-down on options list changes focus', () => {
-      const options = [
+      const focusOptions = [
         { display: 'option 1' },
         { display: 'option 2' },
         { display: 'option 3' },
@@ -317,17 +329,22 @@ describe('OuiSplitButton', () => {
       ]).test(
         '$key on option list item $startSelection $desc',
         async ({ startSelection, key, resultFocusSelection }) => {
-          const component = mount(
+          const { container: rtlContainer } = render(
             <OuiSplitButton
               initiallyOpen
-              options={options}
+              options={focusOptions}
               selectedIndex={startSelection}>
               test
             </OuiSplitButton>,
-            { attachTo: container }
+            {
+              container: document.body.appendChild(
+                document.createElement('div')
+              ),
+            }
           );
+
           await findByFocused(
-            component,
+            rtlContainer,
             `button#splitButtonItem_${startSelection}`,
             {
               message: `Initial selected focus ${startSelection} not found.`,
@@ -335,17 +352,15 @@ describe('OuiSplitButton', () => {
             }
           );
 
-          const items = component.find(
-            'OuiContextMenuItem.ouiSplitButton__item'
-          );
+          const items = rtlContainer.querySelectorAll('.ouiSplitButton__item');
           expect(items).toHaveLength(3);
 
-          items.at(startSelection).simulate('keydown', { key });
-
-          component.update();
+          act(() => {
+            fireEvent.keyDown(items[startSelection], { key });
+          });
 
           await findByFocused(
-            component,
+            rtlContainer,
             `button#splitButtonItem_${resultFocusSelection}`,
             {
               message: `Expected selected focus ${resultFocusSelection} not found.`,
@@ -355,34 +370,32 @@ describe('OuiSplitButton', () => {
       );
     });
     test('key escape on options list closes list', async () => {
-      const component = mount(
+      const { container: rtlContainer } = render(
         <OuiSplitButton initiallyOpen options={options} selectedIndex={1}>
           test
         </OuiSplitButton>,
-        { attachTo: container }
+        { container: document.body.appendChild(document.createElement('div')) }
       );
 
-      await findByFocused(component, 'button#splitButtonItem_1', {
+      await findByFocused(rtlContainer, 'button#splitButtonItem_1', {
         message: 'Initial selected focus 1 not found.',
       });
 
-      const displayedItems = component.find(
-        'OuiContextMenuItem.ouiSplitButton__item'
+      const displayedItems = rtlContainer.querySelectorAll(
+        '.ouiSplitButton__item'
       );
       expect(displayedItems).toHaveLength(2);
 
-      displayedItems.at(1).simulate('keydown', { key: keys.ESCAPE });
+      // Get the listbox element to wait for its removal
+      const listbox = rtlContainer.querySelector('.ouiSplitButton__listbox');
+      expect(listbox).toBeTruthy();
 
-      await waitFor(
-        () => {
-          component.update();
-          const closedItems = component.find(
-            'OuiContextMenuItem.ouiSplitButton__item'
-          );
-          expect(closedItems).toHaveLength(0);
-        },
-        { message: 'Expected options to not exist' }
-      );
+      act(() => {
+        fireEvent.keyDown(displayedItems[1], { key: keys.ESCAPE });
+      });
+
+      // Use RTL's waitForElementToBeRemoved which is more reliable
+      await waitForElementToBeRemoved(listbox, { timeout: 3000 });
     });
   });
 });

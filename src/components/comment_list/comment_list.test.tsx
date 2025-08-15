@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiCommentList } from './comment_list';
@@ -42,10 +42,10 @@ const comments = [
 
 describe('OuiCommentList', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiCommentList comments={comments} {...requiredProps} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

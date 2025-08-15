@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { requiredProps } from '../../../test/required_props';
 
 import { OuiFieldPassword, OuiFieldPasswordProps } from './field_password';
@@ -46,7 +46,7 @@ const TYPES: Array<OuiFieldPasswordProps['type']> = [
 
 describe('OuiFieldPassword', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiFieldPassword
         name="elastic"
         id="1"
@@ -57,70 +57,70 @@ describe('OuiFieldPassword', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('isInvalid is rendered', () => {
-      const component = render(<OuiFieldPassword isInvalid />);
+      const { container } = render(<OuiFieldPassword isInvalid />);
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(<OuiFieldPassword fullWidth />);
+      const { container } = render(<OuiFieldPassword fullWidth />);
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('isLoading is rendered', () => {
-      const component = render(<OuiFieldPassword isLoading />);
+      const { container } = render(<OuiFieldPassword isLoading />);
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('prepend and append is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFieldPassword prepend="String" append="String" />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('compressed is rendered', () => {
-      const component = render(<OuiFieldPassword compressed />);
+      const { container } = render(<OuiFieldPassword compressed />);
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     describe('type', () => {
       TYPES.forEach((type) => {
         test(`${type} is rendered`, () => {
-          const component = render(<OuiFieldPassword type={type} />);
+          const { container } = render(<OuiFieldPassword type={type} />);
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
 
     describe('dual', () => {
       test('dualToggleProps is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiFieldPassword type="dual" dualToggleProps={requiredProps} />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('dual type also renders append', () => {
-        const component = render(
+        const { container } = render(
           <OuiFieldPassword
             type="dual"
             append={['String', <span>Span</span>]}
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('dual does not mutate the append array prop', () => {
@@ -131,29 +131,20 @@ describe('OuiFieldPassword', () => {
             'data-test-subj': 'toggleButton',
           },
         };
-        const component = mount(<OuiFieldPassword {...props} />);
+        const { container } = render(<OuiFieldPassword {...props} />);
 
-        expect(
-          component.find('button[data-test-subj="toggleButton"]').length
-        ).toBe(1);
-        expect(
-          component
-            .find('button[data-test-subj="toggleButton"] OuiIcon')
-            .props().type
-        ).toBe('eye');
+        const toggleButton = screen.getByTestId('toggleButton');
+        expect(toggleButton).toBeInTheDocument();
 
-        component
-          .find('button[data-test-subj="toggleButton"]')
-          .simulate('click');
+        const eyeIcon = container.querySelector('[data-ouiicon-type="eye"]');
+        expect(eyeIcon).toBeInTheDocument();
 
-        expect(
-          component.find('button[data-test-subj="toggleButton"]').length
-        ).toBe(1);
-        expect(
-          component
-            .find('button[data-test-subj="toggleButton"] OuiIcon')
-            .props().type
-        ).toBe('eyeClosed');
+        fireEvent.click(toggleButton);
+
+        const eyeClosedIcon = container.querySelector(
+          '[data-ouiicon-type="eyeClosed"]'
+        );
+        expect(eyeClosedIcon).toBeInTheDocument();
       });
     });
   });

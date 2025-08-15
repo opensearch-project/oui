@@ -1,211 +1,231 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiConfirmModal renders OuiConfirmModal 1`] = `
-Array [
+<body
+  class="ouiBody-hasOverlayMask"
+>
   <div
     aria-hidden="true"
     data-aria-hidden="true"
-    data-focus-guard="true"
-    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-    tabindex="0"
-  />,
+  />
   <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-    data-focus-guard="true"
-    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-    tabindex="1"
-  />,
-  <div
-    data-focus-lock-disabled="false"
+    class="ouiOverlayMask ouiOverlayMask--aboveHeader"
   >
     <div
-      aria-label="aria-label"
-      class="ouiModal ouiModal--maxWidth-default ouiModal--confirmation testClass1 testClass2"
-      data-test-subj="test subject string"
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
       tabindex="0"
+    />
+    <div
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="1"
+    />
+    <div
+      data-focus-lock-disabled="false"
     >
-      <button
-        aria-label="Closes this modal window"
-        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiModal__closeIcon"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="ouiButtonIcon__icon"
-          color="inherit"
-          data-ouiicon-type="cross"
-        />
-      </button>
       <div
-        class="ouiModal__flex"
+        aria-label="aria-label"
+        class="ouiModal ouiModal--maxWidth-default ouiModal--confirmation testClass1 testClass2"
+        data-test-subj="test subject string"
+        tabindex="0"
       >
+        <button
+          aria-label="Closes this modal window"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiModal__closeIcon"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="ouiButtonIcon__icon"
+            color="inherit"
+            data-ouiicon-type="cross"
+          />
+        </button>
         <div
-          class="ouiModalHeader"
+          class="ouiModal__flex"
         >
           <div
-            class="ouiModalHeader__title"
-            data-test-subj="confirmModalTitleText"
-          >
-            A confirmation modal
-          </div>
-        </div>
-        <div
-          class="ouiModalBody"
-        >
-          <div
-            class="ouiModalBody__overflow"
+            class="ouiModalHeader"
           >
             <div
-              class="ouiText ouiText--medium"
-              data-test-subj="confirmModalBodyText"
+              class="ouiModalHeader__title"
+              data-test-subj="confirmModalTitleText"
             >
-              <p>
-                This is a confirmation modal example
-              </p>
+              A confirmation modal
             </div>
           </div>
-        </div>
-        <div
-          class="ouiModalFooter"
-        >
-          <button
-            class="ouiButtonEmpty ouiButtonEmpty--primary"
-            data-test-subj="confirmModalCancelButton"
-            type="button"
+          <div
+            class="ouiModalBody"
           >
-            <span
-              class="ouiButtonContent ouiButtonEmpty__content"
+            <div
+              class="ouiModalBody__overflow"
+            >
+              <div
+                class="ouiText ouiText--medium"
+                data-test-subj="confirmModalBodyText"
+              >
+                <p>
+                  This is a confirmation modal example
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="ouiModalFooter"
+          >
+            <button
+              class="ouiButtonEmpty ouiButtonEmpty--primary"
+              data-test-subj="confirmModalCancelButton"
+              type="button"
             >
               <span
-                class="ouiButtonEmpty__text"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
-                Cancel Button Text
+                <span
+                  class="ouiButtonEmpty__text"
+                >
+                  Cancel Button Text
+                </span>
               </span>
-            </span>
-          </button>
-          <button
-            class="ouiButton ouiButton--primary ouiButton--fill"
-            data-test-subj="confirmModalConfirmButton"
-            type="button"
-          >
-            <span
-              class="ouiButtonContent ouiButton__content"
+            </button>
+            <button
+              class="ouiButton ouiButton--primary ouiButton--fill"
+              data-test-subj="confirmModalConfirmButton"
+              type="button"
             >
               <span
-                class="ouiButton__text"
+                class="ouiButtonContent ouiButton__content"
               >
-                Confirm Button Text
+                <span
+                  class="ouiButton__text"
+                >
+                  Confirm Button Text
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>,
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-    data-focus-guard="true"
-    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-    tabindex="0"
-  />,
-]
+    <div
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+  </div>
+</body>
 `;
 
 exports[`OuiConfirmModal renders OuiConfirmModal without OuiModalBody, if empty 1`] = `
-Array [
+<body
+  class="ouiBody-hasOverlayMask"
+>
   <div
     aria-hidden="true"
     data-aria-hidden="true"
-    data-focus-guard="true"
-    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-    tabindex="0"
-  />,
+  />
   <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-    data-focus-guard="true"
-    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-    tabindex="1"
-  />,
-  <div
-    data-focus-lock-disabled="false"
+    class="ouiOverlayMask ouiOverlayMask--aboveHeader"
   >
     <div
-      aria-label="aria-label"
-      class="ouiModal ouiModal--maxWidth-default ouiModal--confirmation testClass1 testClass2"
-      data-test-subj="test subject string"
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
       tabindex="0"
+    />
+    <div
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="1"
+    />
+    <div
+      data-focus-lock-disabled="false"
     >
-      <button
-        aria-label="Closes this modal window"
-        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiModal__closeIcon"
-        type="button"
-      >
-        <span
-          aria-hidden="true"
-          class="ouiButtonIcon__icon"
-          color="inherit"
-          data-ouiicon-type="cross"
-        />
-      </button>
       <div
-        class="ouiModal__flex"
+        aria-label="aria-label"
+        class="ouiModal ouiModal--maxWidth-default ouiModal--confirmation testClass1 testClass2"
+        data-test-subj="test subject string"
+        tabindex="0"
       >
+        <button
+          aria-label="Closes this modal window"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiModal__closeIcon"
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="ouiButtonIcon__icon"
+            color="inherit"
+            data-ouiicon-type="cross"
+          />
+        </button>
         <div
-          class="ouiModalHeader"
+          class="ouiModal__flex"
         >
           <div
-            class="ouiModalHeader__title"
-            data-test-subj="confirmModalTitleText"
+            class="ouiModalHeader"
           >
-            A confirmation modal
+            <div
+              class="ouiModalHeader__title"
+              data-test-subj="confirmModalTitleText"
+            >
+              A confirmation modal
+            </div>
           </div>
-        </div>
-        <div
-          class="ouiModalFooter"
-        >
-          <button
-            class="ouiButtonEmpty ouiButtonEmpty--primary"
-            data-test-subj="confirmModalCancelButton"
-            type="button"
+          <div
+            class="ouiModalFooter"
           >
-            <span
-              class="ouiButtonContent ouiButtonEmpty__content"
+            <button
+              class="ouiButtonEmpty ouiButtonEmpty--primary"
+              data-test-subj="confirmModalCancelButton"
+              type="button"
             >
               <span
-                class="ouiButtonEmpty__text"
+                class="ouiButtonContent ouiButtonEmpty__content"
               >
-                Cancel Button Text
+                <span
+                  class="ouiButtonEmpty__text"
+                >
+                  Cancel Button Text
+                </span>
               </span>
-            </span>
-          </button>
-          <button
-            class="ouiButton ouiButton--primary ouiButton--fill"
-            data-test-subj="confirmModalConfirmButton"
-            type="button"
-          >
-            <span
-              class="ouiButtonContent ouiButton__content"
+            </button>
+            <button
+              class="ouiButton ouiButton--primary ouiButton--fill"
+              data-test-subj="confirmModalConfirmButton"
+              type="button"
             >
               <span
-                class="ouiButton__text"
+                class="ouiButtonContent ouiButton__content"
               >
-                Confirm Button Text
+                <span
+                  class="ouiButton__text"
+                >
+                  Confirm Button Text
+                </span>
               </span>
-            </span>
-          </button>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>,
-  <div
-    aria-hidden="true"
-    data-aria-hidden="true"
-    data-focus-guard="true"
-    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
-    tabindex="0"
-  />,
-]
+    <div
+      aria-hidden="true"
+      data-aria-hidden="true"
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="0"
+    />
+  </div>
+</body>
 `;

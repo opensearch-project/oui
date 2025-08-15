@@ -1,576 +1,517 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiFormRow behavior onBlur is called in child 1`] = `
-<OuiFormRow
-  describedByIds={Array []}
-  display="row"
-  fullWidth={false}
-  hasChildLabel={true}
-  hasEmptyLabelSpace={false}
-  label={
-    <span>
-      Label
-    </span>
-  }
-  labelType="label"
->
+<div>
   <div
-    className="ouiFormRow"
+    class="ouiFormRow"
     id="generated-id-row"
   >
     <div
-      className="ouiFormRow__labelWrapper"
+      class="ouiFormRow__labelWrapper"
     >
-      <OuiFormLabel
-        className="ouiFormRow__label"
-        htmlFor="generated-id"
-        isFocused={false}
-        type="label"
+      <label
+        class="ouiFormLabel ouiFormRow__label"
+        for="generated-id"
       >
-        <label
-          className="ouiFormLabel ouiFormRow__label"
-          htmlFor="generated-id"
-        >
-          <span>
-            Label
-          </span>
-        </label>
-      </OuiFormLabel>
+        <span>
+          Label
+        </span>
+      </label>
     </div>
     <div
-      className="ouiFormRow__fieldWrapper"
+      class="ouiFormRow__fieldWrapper"
     >
       <input
         id="generated-id"
-        onBlur={[Function]}
-        onFocus={[Function]}
       />
     </div>
   </div>
-</OuiFormRow>
+</div>
 `;
 
 exports[`OuiFormRow behavior onBlur works in parent even if not in child 1`] = `
-<OuiFormRow
-  describedByIds={Array []}
-  display="row"
-  fullWidth={false}
-  hasChildLabel={true}
-  hasEmptyLabelSpace={false}
-  label={
-    <span>
-      Label
-    </span>
-  }
-  labelType="label"
->
+<div>
   <div
-    className="ouiFormRow"
+    class="ouiFormRow"
     id="generated-id-row"
   >
     <div
-      className="ouiFormRow__labelWrapper"
+      class="ouiFormRow__labelWrapper"
     >
-      <OuiFormLabel
-        className="ouiFormRow__label"
-        htmlFor="generated-id"
-        isFocused={false}
-        type="label"
+      <label
+        class="ouiFormLabel ouiFormRow__label"
+        for="generated-id"
       >
-        <label
-          className="ouiFormLabel ouiFormRow__label"
-          htmlFor="generated-id"
-        >
-          <span>
-            Label
-          </span>
-        </label>
-      </OuiFormLabel>
+        <span>
+          Label
+        </span>
+      </label>
     </div>
     <div
-      className="ouiFormRow__fieldWrapper"
+      class="ouiFormRow__fieldWrapper"
     >
       <input
         id="generated-id"
-        onBlur={[Function]}
-        onFocus={[Function]}
       />
     </div>
   </div>
-</OuiFormRow>
+</div>
 `;
 
 exports[`OuiFormRow behavior onFocus is called in child 1`] = `
-<OuiFormRow
-  describedByIds={Array []}
-  display="row"
-  fullWidth={false}
-  hasChildLabel={true}
-  hasEmptyLabelSpace={false}
-  label={
-    <span>
-      Label
-    </span>
-  }
-  labelType="label"
->
+<div>
   <div
-    className="ouiFormRow"
+    class="ouiFormRow"
     id="generated-id-row"
   >
     <div
-      className="ouiFormRow__labelWrapper"
+      class="ouiFormRow__labelWrapper"
     >
-      <OuiFormLabel
-        className="ouiFormRow__label"
-        htmlFor="generated-id"
-        isFocused={true}
-        type="label"
+      <label
+        class="ouiFormLabel ouiFormRow__label ouiFormLabel-isFocused"
+        for="generated-id"
       >
-        <label
-          className="ouiFormLabel ouiFormRow__label ouiFormLabel-isFocused"
-          htmlFor="generated-id"
-        >
-          <span>
-            Label
-          </span>
-        </label>
-      </OuiFormLabel>
+        <span>
+          Label
+        </span>
+      </label>
     </div>
     <div
-      className="ouiFormRow__fieldWrapper"
+      class="ouiFormRow__fieldWrapper"
     >
       <input
         id="generated-id"
-        onBlur={[Function]}
-        onFocus={[Function]}
       />
     </div>
   </div>
-</OuiFormRow>
+</div>
 `;
 
 exports[`OuiFormRow behavior onFocus works in parent even if not in child 1`] = `
-<OuiFormRow
-  describedByIds={Array []}
-  display="row"
-  fullWidth={false}
-  hasChildLabel={true}
-  hasEmptyLabelSpace={false}
-  label={
-    <span>
-      Label
-    </span>
-  }
-  labelType="label"
->
+<div>
   <div
-    className="ouiFormRow"
+    class="ouiFormRow"
     id="generated-id-row"
   >
     <div
-      className="ouiFormRow__labelWrapper"
+      class="ouiFormRow__labelWrapper"
     >
-      <OuiFormLabel
-        className="ouiFormRow__label"
-        htmlFor="generated-id"
-        isFocused={true}
-        type="label"
+      <label
+        class="ouiFormLabel ouiFormRow__label ouiFormLabel-isFocused"
+        for="generated-id"
       >
-        <label
-          className="ouiFormLabel ouiFormRow__label ouiFormLabel-isFocused"
-          htmlFor="generated-id"
-        >
-          <span>
-            Label
-          </span>
-        </label>
-      </OuiFormLabel>
+        <span>
+          Label
+        </span>
+      </label>
     </div>
     <div
-      className="ouiFormRow__fieldWrapper"
+      class="ouiFormRow__fieldWrapper"
     >
       <input
         id="generated-id"
-        onBlur={[Function]}
-        onFocus={[Function]}
       />
     </div>
   </div>
-</OuiFormRow>
+</div>
 `;
 
 exports[`OuiFormRow is rendered 1`] = `
-<div
-  aria-label="aria-label"
-  class="ouiFormRow testClass1 testClass2"
-  data-test-subj="test subject string"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    aria-label="aria-label"
+    class="ouiFormRow testClass1 testClass2"
+    data-test-subj="test subject string"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props describedByIds is rendered 1`] = `
-<div
-  className="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    className="ouiFormRow__fieldWrapper"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <input
-      aria-describedby="generated-id-additional"
-      id="generated-id"
-      onBlur={[Function]}
-      onFocus={[Function]}
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        aria-describedby="generated-id-additional"
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props display type center is rendered 1`] = `
-<div
-  class="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper ouiFormRow__fieldWrapperDisplayOnly"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper ouiFormRow__fieldWrapperDisplayOnly"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props display type centerCompressed is rendered 1`] = `
-<div
-  class="ouiFormRow ouiFormRow--compressed"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper ouiFormRow__fieldWrapperDisplayOnly"
+    class="ouiFormRow ouiFormRow--compressed"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper ouiFormRow__fieldWrapperDisplayOnly"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props display type columnCompressed is rendered 1`] = `
-<div
-  class="ouiFormRow ouiFormRow--compressed ouiFormRow--horizontal"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow ouiFormRow--compressed ouiFormRow--horizontal"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props display type columnCompressedSwitch is rendered 1`] = `
-<div
-  class="ouiFormRow ouiFormRow--compressed ouiFormRow--horizontal ouiFormRow--hasSwitch"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow ouiFormRow--compressed ouiFormRow--horizontal ouiFormRow--hasSwitch"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props display type row is rendered 1`] = `
-<div
-  class="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props display type rowCompressed is rendered 1`] = `
-<div
-  class="ouiFormRow ouiFormRow--compressed"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow ouiFormRow--compressed"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props error as array is rendered 1`] = `
-<div
-  class="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <input
-      aria-describedby="generated-id-error-0 generated-id-error-1"
-      id="generated-id"
-    />
     <div
-      aria-live="polite"
-      class="ouiFormErrorText ouiFormRow__text"
-      id="generated-id-error-0"
+      class="ouiFormRow__fieldWrapper"
     >
-      Error
-    </div>
-    <div
-      aria-live="polite"
-      class="ouiFormErrorText ouiFormRow__text"
-      id="generated-id-error-1"
-    >
-      Error2
+      <input
+        aria-describedby="generated-id-error-0 generated-id-error-1"
+        id="generated-id"
+      />
+      <div
+        aria-live="polite"
+        class="ouiFormErrorText ouiFormRow__text"
+        id="generated-id-error-0"
+      >
+        Error
+      </div>
+      <div
+        aria-live="polite"
+        class="ouiFormErrorText ouiFormRow__text"
+        id="generated-id-error-1"
+      >
+        Error2
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props error as string is rendered 1`] = `
-<div
-  class="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <input
-      aria-describedby="generated-id-error-0"
-      id="generated-id"
-    />
     <div
-      aria-live="polite"
-      class="ouiFormErrorText ouiFormRow__text"
-      id="generated-id-error-0"
+      class="ouiFormRow__fieldWrapper"
     >
-      Error
+      <input
+        aria-describedby="generated-id-error-0"
+        id="generated-id"
+      />
+      <div
+        aria-live="polite"
+        class="ouiFormErrorText ouiFormRow__text"
+        id="generated-id-error-0"
+      >
+        Error
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props error is not rendered if isInvalid is false 1`] = `
-<div
-  class="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props fullWidth is rendered 1`] = `
-<div
-  class="ouiFormRow ouiFormRow--fullWidth"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow ouiFormRow--fullWidth"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props hasEmptyLabelSpace is rendered 1`] = `
-<div
-  class="ouiFormRow ouiFormRow--hasEmptyLabelSpace"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow ouiFormRow--hasEmptyLabelSpace"
+    id="generated-id-row"
   >
-    <input
-      id="generated-id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props helpText is rendered 1`] = `
-<div
-  class="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <input
-      aria-describedby="generated-id-help-0"
-      id="generated-id"
-    />
     <div
-      class="ouiFormHelpText ouiFormRow__text"
-      id="generated-id-help-0"
+      class="ouiFormRow__fieldWrapper"
     >
-      <span>
-        This is help text.
-      </span>
+      <input
+        aria-describedby="generated-id-help-0"
+        id="generated-id"
+      />
+      <div
+        class="ouiFormHelpText ouiFormRow__text"
+        id="generated-id-help-0"
+      >
+        <span>
+          This is help text.
+        </span>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props id is rendered 1`] = `
-<div
-  class="ouiFormRow"
-  id="id-row"
->
+<div>
   <div
-    class="ouiFormRow__fieldWrapper"
+    class="ouiFormRow"
+    id="id-row"
   >
-    <input
-      id="id"
-    />
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props isInvalid is rendered 1`] = `
-<div
-  class="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    class="ouiFormRow__labelWrapper"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <label
-      aria-invalid="true"
-      class="ouiFormLabel ouiFormRow__label ouiFormLabel-isInvalid"
-      for="generated-id"
+    <div
+      class="ouiFormRow__labelWrapper"
     >
-      label
-    </label>
-  </div>
-  <div
-    class="ouiFormRow__fieldWrapper"
-  >
-    <input
-      id="generated-id"
-    />
+      <label
+        aria-invalid="true"
+        class="ouiFormLabel ouiFormRow__label ouiFormLabel-isInvalid"
+        for="generated-id"
+      >
+        label
+      </label>
+    </div>
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props label append is rendered 1`] = `
-<div
-  className="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    className="ouiFormRow__labelWrapper"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <OuiFormLabel
-      className="ouiFormRow__label"
-      htmlFor="generated-id"
-      isFocused={false}
-      type="label"
+    <div
+      class="ouiFormRow__labelWrapper"
     >
-      label
-    </OuiFormLabel>
-     
-    append
-  </div>
-  <div
-    className="ouiFormRow__fieldWrapper"
-  >
-    <input
-      id="generated-id"
-      onBlur={[Function]}
-      onFocus={[Function]}
-    />
+      <label
+        class="ouiFormLabel ouiFormRow__label"
+        for="generated-id"
+      >
+        label
+      </label>
+       
+      append
+    </div>
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props label is rendered 1`] = `
-<div
-  className="ouiFormRow"
-  id="generated-id-row"
->
+<div>
   <div
-    className="ouiFormRow__labelWrapper"
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <OuiFormLabel
-      className="ouiFormRow__label"
-      htmlFor="generated-id"
-      isFocused={false}
-      type="label"
+    <div
+      class="ouiFormRow__labelWrapper"
     >
-      label
-    </OuiFormLabel>
-  </div>
-  <div
-    className="ouiFormRow__fieldWrapper"
-  >
-    <input
-      id="generated-id"
-      onBlur={[Function]}
-      onFocus={[Function]}
-    />
+      <label
+        class="ouiFormLabel ouiFormRow__label"
+        for="generated-id"
+      >
+        label
+      </label>
+    </div>
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiFormRow props label renders as a legend and subsquently a fieldset wrapper 1`] = `
-<fieldset
-  className="ouiFormRow"
-  id="generated-id-row"
->
-  <div
-    className="ouiFormRow__labelWrapper"
+<div>
+  <fieldset
+    class="ouiFormRow"
+    id="generated-id-row"
   >
-    <OuiFormLabel
-      className="ouiFormRow__label"
-      type="legend"
+    <div
+      class="ouiFormRow__labelWrapper"
     >
-      label
-    </OuiFormLabel>
-  </div>
-  <div
-    className="ouiFormRow__fieldWrapper"
-  >
-    <input
-      id="generated-id"
-      onBlur={[Function]}
-      onFocus={[Function]}
-    />
-  </div>
-</fieldset>
+      <legend
+        class="ouiFormLabel ouiFormRow__label"
+      >
+        label
+      </legend>
+    </div>
+    <div
+      class="ouiFormRow__fieldWrapper"
+    >
+      <input
+        id="generated-id"
+      />
+    </div>
+  </fieldset>
+</div>
 `;

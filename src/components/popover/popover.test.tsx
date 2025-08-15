@@ -29,7 +29,7 @@
  */
 
 import React, { ReactNode } from 'react';
-import { render, mount } from 'enzyme';
+import { render, fireEvent, act } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import {
@@ -50,7 +50,7 @@ const getId = () => `${id++}`;
 
 describe('OuiPopover', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiPopover
         id={getId()}
         button={<button />}
@@ -59,23 +59,23 @@ describe('OuiPopover', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('children is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiPopover id={getId()} button={<button />} closePopover={() => {}}>
         Children
       </OuiPopover>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('display block', () => {
       test('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiPopover
             id={getId()}
             display="block"
@@ -84,13 +84,13 @@ describe('OuiPopover', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('anchorClassName', () => {
       test('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiPopover
             id={getId()}
             anchorClassName="test"
@@ -99,7 +99,7 @@ describe('OuiPopover', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
@@ -107,7 +107,7 @@ describe('OuiPopover', () => {
       it('is called when ESC key is hit and the popover is open', () => {
         const closePopoverHandler = jest.fn();
 
-        const component = mount(
+        const { container } = render(
           <OuiPopover
             ownFocus={false}
             id={getId()}
@@ -117,14 +117,17 @@ describe('OuiPopover', () => {
           />
         );
 
-        component.simulate('keydown', { key: keys.ESCAPE });
+        // Fire the keydown event on the popover element itself
+        fireEvent.keyDown(container.querySelector('.ouiPopover')!, {
+          key: keys.ESCAPE,
+        });
         expect(closePopoverHandler).toBeCalledTimes(1);
       });
 
       it('is not called when ESC key is hit and the popover is closed', () => {
         const closePopoverHandler = jest.fn();
 
-        const component = mount(
+        render(
           <OuiPopover
             id={getId()}
             button={<button />}
@@ -133,14 +136,14 @@ describe('OuiPopover', () => {
           />
         );
 
-        component.simulate('keydown', { key: keys.ESCAPE });
+        fireEvent.keyDown(document.body, { key: keys.ESCAPE });
         expect(closePopoverHandler).not.toBeCalled();
       });
     });
 
     describe('anchorPosition', () => {
       test('defaults to centerDown', () => {
-        const component = render(
+        const { container } = render(
           <OuiPopover
             id={getId()}
             button={<button />}
@@ -148,11 +151,11 @@ describe('OuiPopover', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('leftCenter is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiPopover
             id={getId()}
             button={<button />}
@@ -161,11 +164,11 @@ describe('OuiPopover', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('downRight is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiPopover
             id={getId()}
             button={<button />}
@@ -174,13 +177,13 @@ describe('OuiPopover', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('isOpen', () => {
       test('defaults to false', () => {
-        const component = render(
+        const { container } = render(
           <OuiPopover
             id={getId()}
             button={<button />}
@@ -188,11 +191,11 @@ describe('OuiPopover', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('renders true', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               id={getId()}
@@ -203,15 +206,13 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        // console.log(component.debug());
-
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('ownFocus', () => {
       test('defaults to true', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               id={getId()}
@@ -222,11 +223,11 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('renders false', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               ownFocus={false}
@@ -238,13 +239,13 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('panelClassName', () => {
       test('is rendered', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               id={getId()}
@@ -256,13 +257,13 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('panelPaddingSize', () => {
       test('is rendered', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               id={getId()}
@@ -274,13 +275,13 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('panelProps', () => {
       test('is rendered', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               id={getId()}
@@ -292,13 +293,13 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('focusTrapProps', () => {
       test('is rendered', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               id={getId()}
@@ -314,13 +315,13 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('offset', () => {
       test('with arrow', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               id={getId()}
@@ -332,11 +333,11 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('without arrow', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               id={getId()}
@@ -349,13 +350,13 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('arrowChildren', () => {
       test('is rendered', () => {
-        const component = mount(
+        const { container } = render(
           <div>
             <OuiPopover
               id={getId()}
@@ -367,12 +368,12 @@ describe('OuiPopover', () => {
           </div>
         );
 
-        expect(component.render()).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     test('buffer', () => {
-      const component = mount(
+      const { container } = render(
         <div>
           <OuiPopover
             id={getId()}
@@ -384,11 +385,11 @@ describe('OuiPopover', () => {
         </div>
       );
 
-      expect(component.render()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('buffer for all sides', () => {
-      const component = mount(
+      const { container } = render(
         <div>
           <OuiPopover
             id={getId()}
@@ -400,7 +401,7 @@ describe('OuiPopover', () => {
         </div>
       );
 
-      expect(component.render()).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
@@ -435,7 +436,7 @@ describe('OuiPopover', () => {
     });
 
     it('cleans up timeouts and rAFs on unmount', () => {
-      const component = mount(
+      const { unmount, rerender } = render(
         <OuiPopover
           id={getId()}
           button={<button />}
@@ -445,9 +446,17 @@ describe('OuiPopover', () => {
         />
       );
 
-      component.setProps({ isOpen: true });
+      rerender(
+        <OuiPopover
+          id={getId()}
+          button={<button />}
+          closePopover={() => {}}
+          panelPaddingSize="s"
+          isOpen={true}
+        />
+      );
 
-      component.unmount();
+      unmount();
 
       // OUI's jest configuration throws an error if there are any console.error calls, like
       // React's setState on an unmounted component warning
@@ -458,7 +467,9 @@ describe('OuiPopover', () => {
 
       // execute any pending timeouts or animation frame callbacks
       // and validate the timeout/rAF clearing done by OuiPopover
-      jest.advanceTimersByTime(10);
+      act(() => {
+        jest.advanceTimersByTime(10);
+      });
     });
   });
 });

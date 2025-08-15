@@ -29,8 +29,9 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
-import { requiredProps, findTestSubject } from '../../test';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { requiredProps } from '../../test';
 
 import {
   OuiGlobalToastList,
@@ -42,7 +43,7 @@ jest.useFakeTimers();
 
 describe('OuiGlobalToastList', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiGlobalToastList
         {...requiredProps}
         dismissToast={() => {}}
@@ -50,7 +51,7 @@ describe('OuiGlobalToastList', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
@@ -75,7 +76,7 @@ describe('OuiGlobalToastList', () => {
           },
         ];
 
-        const component = render(
+        const { container } = render(
           <OuiGlobalToastList
             toasts={toasts}
             dismissToast={() => {}}
@@ -83,7 +84,7 @@ describe('OuiGlobalToastList', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
@@ -108,7 +109,7 @@ describe('OuiGlobalToastList', () => {
           },
         ];
 
-        const component = render(
+        const { container } = render(
           <OuiGlobalToastList
             toasts={toasts}
             dismissToast={() => {}}
@@ -116,14 +117,14 @@ describe('OuiGlobalToastList', () => {
             side="left"
           />
         );
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('dismissToast', () => {
       test('is called when a toast is clicked', () => {
         const dismissToastSpy = jest.fn();
-        const component = mount(
+        render(
           <OuiGlobalToastList
             toasts={[
               {
@@ -136,20 +137,25 @@ describe('OuiGlobalToastList', () => {
           />
         );
 
-        const toastB = findTestSubject(component, 'b');
-        const closeButton = findTestSubject(toastB, 'toastCloseButton');
-        closeButton.simulate('click');
+        act(() => {
+          fireEvent.click(screen.getByTestId('toastCloseButton'));
+        });
 
-        jest.advanceTimersByTime(TOAST_FADE_OUT_MS - 1);
-        expect(dismissToastSpy).not.toBeCalled();
-        jest.advanceTimersByTime(1);
-        expect(dismissToastSpy).toBeCalled();
+        act(() => {
+          jest.advanceTimersByTime(TOAST_FADE_OUT_MS - 1);
+        });
+        expect(dismissToastSpy).not.toHaveBeenCalled();
+
+        act(() => {
+          jest.advanceTimersByTime(1);
+        });
+        expect(dismissToastSpy).toHaveBeenCalled();
       });
 
       test('is called when the toast lifetime elapses', () => {
         const TOAST_LIFE_TIME_MS = 5;
         const dismissToastSpy = jest.fn();
-        mount(
+        render(
           <OuiGlobalToastList
             toasts={[
               {
@@ -162,17 +168,22 @@ describe('OuiGlobalToastList', () => {
           />
         );
 
-        jest.advanceTimersByTime(TOAST_LIFE_TIME_MS + TOAST_FADE_OUT_MS - 1);
-        expect(dismissToastSpy).not.toBeCalled();
-        jest.advanceTimersByTime(1);
-        expect(dismissToastSpy).toBeCalled();
+        act(() => {
+          jest.advanceTimersByTime(TOAST_LIFE_TIME_MS + TOAST_FADE_OUT_MS - 1);
+        });
+        expect(dismissToastSpy).not.toHaveBeenCalled();
+
+        act(() => {
+          jest.advanceTimersByTime(1);
+        });
+        expect(dismissToastSpy).toHaveBeenCalled();
       });
 
       test('toastLifeTimeMs is overrideable by individidual toasts', () => {
         const TOAST_LIFE_TIME_MS = 10;
         const TOAST_LIFE_TIME_MS_OVERRIDE = 100;
         const dismissToastSpy = jest.fn();
-        mount(
+        render(
           <OuiGlobalToastList
             toasts={[
               {
@@ -188,10 +199,16 @@ describe('OuiGlobalToastList', () => {
 
         const notYetTime = TOAST_LIFE_TIME_MS + TOAST_FADE_OUT_MS;
         const nowItsTime = TOAST_LIFE_TIME_MS_OVERRIDE + TOAST_FADE_OUT_MS;
-        jest.advanceTimersByTime(notYetTime);
-        expect(dismissToastSpy).not.toBeCalled();
-        jest.advanceTimersByTime(nowItsTime - notYetTime);
-        expect(dismissToastSpy).toBeCalled();
+
+        act(() => {
+          jest.advanceTimersByTime(notYetTime);
+        });
+        expect(dismissToastSpy).not.toHaveBeenCalled();
+
+        act(() => {
+          jest.advanceTimersByTime(nowItsTime - notYetTime);
+        });
+        expect(dismissToastSpy).toHaveBeenCalled();
       });
     });
   });

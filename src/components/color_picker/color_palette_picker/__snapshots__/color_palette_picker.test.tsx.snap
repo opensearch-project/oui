@@ -1,49 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiColorPalettePicker is rendered 1`] = `
-<div
-  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
->
+<div>
   <div
-    class="ouiPopover__anchor"
+    class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
   >
-    <div>
-      <input
-        type="hidden"
-        value=""
-      />
-      <div
-        class="ouiFormControlLayout"
-      >
+    <div
+      class="ouiPopover__anchor"
+    >
+      <div>
+        <input
+          type="hidden"
+          value=""
+        />
         <div
-          class="ouiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout"
         >
-          <span
-            class="ouiScreenReaderOnly"
-            id="generated-id"
-          >
-            Select an option: , is selected
-          </span>
-          <button
-            aria-haspopup="true"
-            aria-label="aria-label"
-            aria-labelledby="undefined generated-id"
-            class="ouiSuperSelectControl testClass1 testClass2"
-            data-test-subj="test subject string"
-            type="button"
-          />
           <div
-            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            class="ouiFormControlLayout__childrenWrapper"
           >
             <span
-              class="ouiFormControlLayoutCustomIcon"
+              class="ouiScreenReaderOnly"
+              id="generated-id"
+            >
+              Select an option: , is selected
+            </span>
+            <button
+              aria-haspopup="true"
+              aria-label="aria-label"
+              aria-labelledby="undefined generated-id"
+              class="ouiSuperSelectControl testClass1 testClass2"
+              data-test-subj="test subject string"
+              type="button"
+            />
+            <div
+              class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
             >
               <span
-                aria-hidden="true"
-                class="ouiFormControlLayoutCustomIcon__icon"
-                data-ouiicon-type="arrowDown"
-              />
-            </span>
+                class="ouiFormControlLayoutCustomIcon"
+              >
+                <span
+                  aria-hidden="true"
+                  class="ouiFormControlLayoutCustomIcon__icon"
+                  data-ouiicon-type="arrowDown"
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -53,51 +55,53 @@ exports[`OuiColorPalettePicker is rendered 1`] = `
 `;
 
 exports[`OuiColorPalettePicker is rendered with a selected custom text 1`] = `
-<div
-  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
->
+<div>
   <div
-    class="ouiPopover__anchor"
+    class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
   >
-    <div>
-      <input
-        type="hidden"
-        value="custom"
-      />
-      <div
-        class="ouiFormControlLayout"
-      >
+    <div
+      class="ouiPopover__anchor"
+    >
+      <div>
+        <input
+          type="hidden"
+          value="custom"
+        />
         <div
-          class="ouiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout"
         >
-          <span
-            class="ouiScreenReaderOnly"
-            id="generated-id"
-          >
-            Select an option: Plain text as a custom option, is selected
-          </span>
-          <button
-            aria-haspopup="true"
-            aria-label="aria-label"
-            aria-labelledby="undefined generated-id"
-            class="ouiSuperSelectControl testClass1 testClass2"
-            data-test-subj="test subject string"
-            type="button"
-          >
-            Plain text as a custom option
-          </button>
           <div
-            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            class="ouiFormControlLayout__childrenWrapper"
           >
             <span
-              class="ouiFormControlLayoutCustomIcon"
+              class="ouiScreenReaderOnly"
+              id="generated-id"
+            >
+              Select an option: Plain text as a custom option, is selected
+            </span>
+            <button
+              aria-haspopup="true"
+              aria-label="aria-label"
+              aria-labelledby="undefined generated-id"
+              class="ouiSuperSelectControl testClass1 testClass2"
+              data-test-subj="test subject string"
+              type="button"
+            >
+              Plain text as a custom option
+            </button>
+            <div
+              class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
             >
               <span
-                aria-hidden="true"
-                class="ouiFormControlLayoutCustomIcon__icon"
-                data-ouiicon-type="arrowDown"
-              />
-            </span>
+                class="ouiFormControlLayoutCustomIcon"
+              >
+                <span
+                  aria-hidden="true"
+                  class="ouiFormControlLayoutCustomIcon__icon"
+                  data-ouiicon-type="arrowDown"
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -107,97 +111,99 @@ exports[`OuiColorPalettePicker is rendered with a selected custom text 1`] = `
 `;
 
 exports[`OuiColorPalettePicker is rendered with a selected fixed palette 1`] = `
-<div
-  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
->
+<div>
   <div
-    class="ouiPopover__anchor"
+    class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
   >
-    <div>
-      <input
-        type="hidden"
-        value="paletteFixed"
-      />
-      <div
-        class="ouiFormControlLayout"
-      >
+    <div
+      class="ouiPopover__anchor"
+    >
+      <div>
+        <input
+          type="hidden"
+          value="paletteFixed"
+        />
         <div
-          class="ouiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout"
         >
-          <span
-            class="ouiScreenReaderOnly"
-            id="generated-id"
-          >
-            Select an option: 
-            <span
-              class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
-            >
-              <span
-                class="ouiColorPaletteDisplayFixed__bleedArea"
-              >
-                <span
-                  style="background-color:#1fb0b2;width:20%"
-                />
-                <span
-                  style="background-color:#ffdb6d;width:20%"
-                />
-                <span
-                  style="background-color:#ee9191;width:20%"
-                />
-                <span
-                  style="background-color:#ffffff;width:20%"
-                />
-                <span
-                  style="background-color:#888094;width:20%"
-                />
-              </span>
-            </span>
-            , is selected
-          </span>
-          <button
-            aria-haspopup="true"
-            aria-label="aria-label"
-            aria-labelledby="undefined generated-id"
-            class="ouiSuperSelectControl testClass1 testClass2"
-            data-test-subj="test subject string"
-            type="button"
-          >
-            <span
-              class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
-            >
-              <span
-                class="ouiColorPaletteDisplayFixed__bleedArea"
-              >
-                <span
-                  style="background-color:#1fb0b2;width:20%"
-                />
-                <span
-                  style="background-color:#ffdb6d;width:20%"
-                />
-                <span
-                  style="background-color:#ee9191;width:20%"
-                />
-                <span
-                  style="background-color:#ffffff;width:20%"
-                />
-                <span
-                  style="background-color:#888094;width:20%"
-                />
-              </span>
-            </span>
-          </button>
           <div
-            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            class="ouiFormControlLayout__childrenWrapper"
           >
             <span
-              class="ouiFormControlLayoutCustomIcon"
+              class="ouiScreenReaderOnly"
+              id="generated-id"
+            >
+              Select an option: 
+              <span
+                class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
+              >
+                <span
+                  class="ouiColorPaletteDisplayFixed__bleedArea"
+                >
+                  <span
+                    style="background-color: rgb(31, 176, 178); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(255, 219, 109); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(238, 145, 145); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(255, 255, 255); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(136, 128, 148); width: 20%;"
+                  />
+                </span>
+              </span>
+              , is selected
+            </span>
+            <button
+              aria-haspopup="true"
+              aria-label="aria-label"
+              aria-labelledby="undefined generated-id"
+              class="ouiSuperSelectControl testClass1 testClass2"
+              data-test-subj="test subject string"
+              type="button"
             >
               <span
-                aria-hidden="true"
-                class="ouiFormControlLayoutCustomIcon__icon"
-                data-ouiicon-type="arrowDown"
-              />
-            </span>
+                class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
+              >
+                <span
+                  class="ouiColorPaletteDisplayFixed__bleedArea"
+                >
+                  <span
+                    style="background-color: rgb(31, 176, 178); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(255, 219, 109); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(238, 145, 145); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(255, 255, 255); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(136, 128, 148); width: 20%;"
+                  />
+                </span>
+              </span>
+            </button>
+            <div
+              class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            >
+              <span
+                class="ouiFormControlLayoutCustomIcon"
+              >
+                <span
+                  aria-hidden="true"
+                  class="ouiFormControlLayoutCustomIcon__icon"
+                  data-ouiicon-type="arrowDown"
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -207,59 +213,59 @@ exports[`OuiColorPalettePicker is rendered with a selected fixed palette 1`] = `
 `;
 
 exports[`OuiColorPalettePicker is rendered with a selected gradient palette 1`] = `
-<div
-  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
->
+<div>
   <div
-    class="ouiPopover__anchor"
+    class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
   >
-    <div>
-      <input
-        type="hidden"
-        value="paletteLinear"
-      />
-      <div
-        class="ouiFormControlLayout"
-      >
+    <div
+      class="ouiPopover__anchor"
+    >
+      <div>
+        <input
+          type="hidden"
+          value="paletteLinear"
+        />
         <div
-          class="ouiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout"
         >
-          <span
-            class="ouiScreenReaderOnly"
-            id="generated-id"
-          >
-            Select an option: 
-            <span
-              class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
-              style="background:linear-gradient(to right, #1fb0b2 0%, #ffdb6d 25%, #ee9191 50%, #ffffff 75%, #888094 100%)"
-            />
-            , is selected
-          </span>
-          <button
-            aria-haspopup="true"
-            aria-label="aria-label"
-            aria-labelledby="undefined generated-id"
-            class="ouiSuperSelectControl testClass1 testClass2"
-            data-test-subj="test subject string"
-            type="button"
-          >
-            <span
-              class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
-              style="background:linear-gradient(to right, #1fb0b2 0%, #ffdb6d 25%, #ee9191 50%, #ffffff 75%, #888094 100%)"
-            />
-          </button>
           <div
-            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            class="ouiFormControlLayout__childrenWrapper"
           >
             <span
-              class="ouiFormControlLayoutCustomIcon"
+              class="ouiScreenReaderOnly"
+              id="generated-id"
+            >
+              Select an option: 
+              <span
+                class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
+              />
+              , is selected
+            </span>
+            <button
+              aria-haspopup="true"
+              aria-label="aria-label"
+              aria-labelledby="undefined generated-id"
+              class="ouiSuperSelectControl testClass1 testClass2"
+              data-test-subj="test subject string"
+              type="button"
             >
               <span
-                aria-hidden="true"
-                class="ouiFormControlLayoutCustomIcon__icon"
-                data-ouiicon-type="arrowDown"
+                class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
               />
-            </span>
+            </button>
+            <div
+              class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            >
+              <span
+                class="ouiFormControlLayoutCustomIcon"
+              >
+                <span
+                  aria-hidden="true"
+                  class="ouiFormControlLayoutCustomIcon__icon"
+                  data-ouiicon-type="arrowDown"
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -269,59 +275,59 @@ exports[`OuiColorPalettePicker is rendered with a selected gradient palette 1`] 
 `;
 
 exports[`OuiColorPalettePicker is rendered with a selected gradient palette with stops 1`] = `
-<div
-  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
->
+<div>
   <div
-    class="ouiPopover__anchor"
+    class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
   >
-    <div>
-      <input
-        type="hidden"
-        value="paletteLinearStops"
-      />
-      <div
-        class="ouiFormControlLayout"
-      >
+    <div
+      class="ouiPopover__anchor"
+    >
+      <div>
+        <input
+          type="hidden"
+          value="paletteLinearStops"
+        />
         <div
-          class="ouiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout"
         >
-          <span
-            class="ouiScreenReaderOnly"
-            id="generated-id"
-          >
-            Select an option: 
-            <span
-              class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
-              style="background:linear-gradient(to right, #54B399 0%, #D36086 53%, #9170B8 74%, #F5A700 100%)"
-            />
-            , is selected
-          </span>
-          <button
-            aria-haspopup="true"
-            aria-label="aria-label"
-            aria-labelledby="undefined generated-id"
-            class="ouiSuperSelectControl testClass1 testClass2"
-            data-test-subj="test subject string"
-            type="button"
-          >
-            <span
-              class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
-              style="background:linear-gradient(to right, #54B399 0%, #D36086 53%, #9170B8 74%, #F5A700 100%)"
-            />
-          </button>
           <div
-            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            class="ouiFormControlLayout__childrenWrapper"
           >
             <span
-              class="ouiFormControlLayoutCustomIcon"
+              class="ouiScreenReaderOnly"
+              id="generated-id"
+            >
+              Select an option: 
+              <span
+                class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
+              />
+              , is selected
+            </span>
+            <button
+              aria-haspopup="true"
+              aria-label="aria-label"
+              aria-labelledby="undefined generated-id"
+              class="ouiSuperSelectControl testClass1 testClass2"
+              data-test-subj="test subject string"
+              type="button"
             >
               <span
-                aria-hidden="true"
-                class="ouiFormControlLayoutCustomIcon__icon"
-                data-ouiicon-type="arrowDown"
+                class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
               />
-            </span>
+            </button>
+            <div
+              class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            >
+              <span
+                class="ouiFormControlLayoutCustomIcon"
+              >
+                <span
+                  aria-hidden="true"
+                  class="ouiFormControlLayoutCustomIcon__icon"
+                  data-ouiicon-type="arrowDown"
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -331,51 +337,53 @@ exports[`OuiColorPalettePicker is rendered with a selected gradient palette with
 `;
 
 exports[`OuiColorPalettePicker is rendered with the prop selectionDisplay set as title  1`] = `
-<div
-  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
->
+<div>
   <div
-    class="ouiPopover__anchor"
+    class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
   >
-    <div>
-      <input
-        type="hidden"
-        value="paletteFixed"
-      />
-      <div
-        class="ouiFormControlLayout"
-      >
+    <div
+      class="ouiPopover__anchor"
+    >
+      <div>
+        <input
+          type="hidden"
+          value="paletteFixed"
+        />
         <div
-          class="ouiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout"
         >
-          <span
-            class="ouiScreenReaderOnly"
-            id="generated-id"
-          >
-            Select an option: Palette 1, is selected
-          </span>
-          <button
-            aria-haspopup="true"
-            aria-label="aria-label"
-            aria-labelledby="undefined generated-id"
-            class="ouiSuperSelectControl testClass1 testClass2"
-            data-test-subj="test subject string"
-            type="button"
-          >
-            Palette 1
-          </button>
           <div
-            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            class="ouiFormControlLayout__childrenWrapper"
           >
             <span
-              class="ouiFormControlLayoutCustomIcon"
+              class="ouiScreenReaderOnly"
+              id="generated-id"
+            >
+              Select an option: Palette 1, is selected
+            </span>
+            <button
+              aria-haspopup="true"
+              aria-label="aria-label"
+              aria-labelledby="undefined generated-id"
+              class="ouiSuperSelectControl testClass1 testClass2"
+              data-test-subj="test subject string"
+              type="button"
+            >
+              Palette 1
+            </button>
+            <div
+              class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
             >
               <span
-                aria-hidden="true"
-                class="ouiFormControlLayoutCustomIcon__icon"
-                data-ouiicon-type="arrowDown"
-              />
-            </span>
+                class="ouiFormControlLayoutCustomIcon"
+              >
+                <span
+                  aria-hidden="true"
+                  class="ouiFormControlLayoutCustomIcon__icon"
+                  data-ouiicon-type="arrowDown"
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -386,95 +394,100 @@ exports[`OuiColorPalettePicker is rendered with the prop selectionDisplay set as
 
 exports[`OuiColorPalettePicker more props are propagated to each option 1`] = `
 <div
-  class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
+  aria-hidden="true"
+  data-aria-hidden="true"
 >
   <div
-    class="ouiPopover__anchor"
+    class="ouiPopover ouiPopover--anchorDownLeft ouiPopover--displayBlock ouiInputPopover ouiSuperSelect"
   >
-    <div>
-      <input
-        type="hidden"
-        value="paletteFixed"
-      />
-      <div
-        class="ouiFormControlLayout"
-      >
+    <div
+      class="ouiPopover__anchor"
+    >
+      <div>
+        <input
+          type="hidden"
+          value="paletteFixed"
+        />
         <div
-          class="ouiFormControlLayout__childrenWrapper"
+          class="ouiFormControlLayout"
         >
-          <span
-            class="ouiScreenReaderOnly"
-            id="generated-id"
-          >
-            Select an option: 
-            <span
-              class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
-            >
-              <span
-                class="ouiColorPaletteDisplayFixed__bleedArea"
-              >
-                <span
-                  style="background-color: rgb(31, 176, 178); width: 20%;"
-                />
-                <span
-                  style="background-color: rgb(255, 219, 109); width: 20%;"
-                />
-                <span
-                  style="background-color: rgb(238, 145, 145); width: 20%;"
-                />
-                <span
-                  style="background-color: rgb(255, 255, 255); width: 20%;"
-                />
-                <span
-                  style="background-color: rgb(136, 128, 148); width: 20%;"
-                />
-              </span>
-            </span>
-            , is selected
-          </span>
-          <button
-            aria-haspopup="true"
-            aria-labelledby="undefined generated-id"
-            class="ouiSuperSelectControl ouiSuperSelect--isOpen__button"
-            data-test-subj="colorPalettePicker"
-            type="button"
-          >
-            <span
-              class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
-            >
-              <span
-                class="ouiColorPaletteDisplayFixed__bleedArea"
-              >
-                <span
-                  style="background-color: rgb(31, 176, 178); width: 20%;"
-                />
-                <span
-                  style="background-color: rgb(255, 219, 109); width: 20%;"
-                />
-                <span
-                  style="background-color: rgb(238, 145, 145); width: 20%;"
-                />
-                <span
-                  style="background-color: rgb(255, 255, 255); width: 20%;"
-                />
-                <span
-                  style="background-color: rgb(136, 128, 148); width: 20%;"
-                />
-              </span>
-            </span>
-          </button>
           <div
-            class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            class="ouiFormControlLayout__childrenWrapper"
           >
             <span
-              class="ouiFormControlLayoutCustomIcon"
+              class="ouiScreenReaderOnly"
+              id="generated-id"
+            >
+              Select an option: 
+              <span
+                class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
+              >
+                <span
+                  class="ouiColorPaletteDisplayFixed__bleedArea"
+                >
+                  <span
+                    style="background-color: rgb(31, 176, 178); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(255, 219, 109); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(238, 145, 145); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(255, 255, 255); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(136, 128, 148); width: 20%;"
+                  />
+                </span>
+              </span>
+              , is selected
+            </span>
+            <button
+              aria-haspopup="true"
+              aria-labelledby="undefined generated-id"
+              class="ouiSuperSelectControl ouiSuperSelect--isOpen__button"
+              data-test-subj="colorPalettePicker"
+              type="button"
             >
               <span
-                aria-hidden="true"
-                class="ouiFormControlLayoutCustomIcon__icon"
-                data-ouiicon-type="arrowDown"
-              />
-            </span>
+                class="ouiColorPaletteDisplay ouiColorPaletteDisplay--sizeSmall"
+              >
+                <span
+                  class="ouiColorPaletteDisplayFixed__bleedArea"
+                >
+                  <span
+                    style="background-color: rgb(31, 176, 178); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(255, 219, 109); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(238, 145, 145); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(255, 255, 255); width: 20%;"
+                  />
+                  <span
+                    style="background-color: rgb(136, 128, 148); width: 20%;"
+                  />
+                </span>
+              </span>
+            </button>
+            <div
+              class="ouiFormControlLayoutIcons ouiFormControlLayoutIcons--right"
+            >
+              <span
+                class="ouiFormControlLayoutCustomIcon"
+              >
+                <span
+                  aria-hidden="true"
+                  class="ouiFormControlLayoutCustomIcon__icon"
+                  data-ouiicon-type="arrowDown"
+                />
+              </span>
+            </div>
           </div>
         </div>
       </div>

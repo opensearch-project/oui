@@ -29,14 +29,14 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiAspectRatio } from './aspect_ratio';
 
 describe('OuiAspectRatio', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiAspectRatio height={4} width={9} {...requiredProps}>
         <iframe
           title="Elastic is a search company"
@@ -50,13 +50,13 @@ describe('OuiAspectRatio', () => {
       </OuiAspectRatio>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('maxWidth', () => {
       test('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAspectRatio
             height={16}
             width={9}
@@ -74,7 +74,7 @@ describe('OuiAspectRatio', () => {
           </OuiAspectRatio>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
   });

@@ -29,24 +29,24 @@
  */
 
 import React from 'react';
-import { render, mount, ReactWrapper } from 'enzyme';
-import { requiredProps, findTestSubject } from '../../test';
-import { act } from '../../test/react_test_utils';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { requiredProps } from '../../test';
 import { keys } from '../../services';
 
 import { OuiImage } from './image';
 
 describe('OuiImage', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiImage alt="alt" size="l" url="/cat.jpg" {...requiredProps} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered and allows full screen', () => {
-    const component = render(
+    const { container } = render(
       <OuiImage
         alt="alt"
         size="l"
@@ -56,131 +56,119 @@ describe('OuiImage', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with src', () => {
-    const component = render(
+    const { container } = render(
       <OuiImage alt="alt" float="left" src="/cat.jpg" />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with a float', () => {
-    const component = render(
+    const { container } = render(
       <OuiImage alt="alt" float="left" url="/cat.jpg" />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with a margin', () => {
-    const component = render(<OuiImage alt="alt" margin="l" url="/cat.jpg" />);
+    const { container } = render(
+      <OuiImage alt="alt" margin="l" url="/cat.jpg" />
+    );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with custom size', () => {
-    const component = render(<OuiImage alt="alt" size={50} url="/cat.jpg" />);
+    const { container } = render(
+      <OuiImage alt="alt" size={50} url="/cat.jpg" />
+    );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('is rendered with a node as the caption', () => {
-    const component = render(
+    const { container } = render(
       <OuiImage alt="alt" caption={<span>caption</span>} url="/cat.jpg" />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('Full screen behaviour', () => {
-    let component: ReactWrapper;
-
     beforeEach(() => {
-      const testProps = {
-        ...requiredProps,
-        'data-test-subj': 'ouiImage',
-      };
-
-      component = mount(
+      render(
         <OuiImage
           alt="alt"
           size="l"
           url="/cat.jpg"
           allowFullScreen
-          {...testProps}
+          {...requiredProps}
+          data-test-subj="ouiImage"
         />
       );
 
-      findTestSubject(component, 'activateFullScreenButton').simulate('click');
+      const activateButton = screen.getByTestId('activateFullScreenButton');
+      fireEvent.click(activateButton);
     });
 
     test('full screen image is rendered', () => {
-      const overlayMask = document.querySelectorAll(
-        '[data-test-subj=fullScreenOverlayMask]'
-      );
-      expect(overlayMask.length).toBe(1);
+      const overlayMask = screen.getByTestId('fullScreenOverlayMask');
+      expect(overlayMask).toBeInTheDocument();
 
-      const fullScreenImage = overlayMask[0].querySelectorAll(
-        '[data-test-subj=ouiImage]'
-      );
-      expect(fullScreenImage.length).toBe(1);
+      // Find the image within the full screen overlay
+      const fullScreenImage = screen.getAllByTestId('ouiImage')[1]; // Get the second instance which is in the overlay
+      expect(fullScreenImage).toBeInTheDocument();
     });
 
     test('close using close icon', () => {
-      const deactivateFullScreenBtn = document.querySelectorAll(
-        '[data-test-subj=deactivateFullScreenButton]'
+      const deactivateFullScreenBtn = screen.getByTestId(
+        'deactivateFullScreenButton'
       );
-      expect(deactivateFullScreenBtn.length).toBe(1);
+      expect(deactivateFullScreenBtn).toBeInTheDocument();
 
       act(() => {
-        (deactivateFullScreenBtn[0] as HTMLElement).click();
+        fireEvent.click(deactivateFullScreenBtn);
       });
 
-      const overlayMask = document.querySelectorAll(
-        '[data-test-subj=fullScreenOverlayMask]'
-      );
-      expect(overlayMask.length).toBe(0);
+      expect(
+        screen.queryByTestId('fullScreenOverlayMask')
+      ).not.toBeInTheDocument();
     });
 
     test('close using ESCAPE key', () => {
-      const deactivateFullScreenBtn = document.querySelectorAll(
-        '[data-test-subj=deactivateFullScreenButton]'
+      const deactivateFullScreenBtn = screen.getByTestId(
+        'deactivateFullScreenButton'
       );
-      expect(deactivateFullScreenBtn.length).toBe(1);
+      expect(deactivateFullScreenBtn).toBeInTheDocument();
 
       act(() => {
-        const escapeKeydownEvent = new KeyboardEvent('keydown', {
+        fireEvent.keyDown(deactivateFullScreenBtn, {
           key: keys.ESCAPE,
           bubbles: true,
         });
-        (deactivateFullScreenBtn[0] as HTMLElement).dispatchEvent(
-          escapeKeydownEvent
-        );
       });
 
-      const overlayMask = document.querySelectorAll(
-        '[data-test-subj=fullScreenOverlayMask]'
-      );
-      expect(overlayMask.length).toBe(0);
+      expect(
+        screen.queryByTestId('fullScreenOverlayMask')
+      ).not.toBeInTheDocument();
     });
 
     test('close using overlay mask', () => {
-      let overlayMask = document.querySelectorAll(
-        '[data-test-subj=fullScreenOverlayMask]'
-      );
-      expect(overlayMask.length).toBe(1);
+      const overlayMask = screen.getByTestId('fullScreenOverlayMask');
+      expect(overlayMask).toBeInTheDocument();
 
       act(() => {
-        (overlayMask[0] as HTMLElement).click();
+        fireEvent.click(overlayMask);
       });
 
-      overlayMask = document.querySelectorAll(
-        '[data-test-subj=fullScreenOverlayMask]'
-      );
-      expect(overlayMask.length).toBe(0);
+      expect(
+        screen.queryByTestId('fullScreenOverlayMask')
+      ).not.toBeInTheDocument();
     });
   });
 });

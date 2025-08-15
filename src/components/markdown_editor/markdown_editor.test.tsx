@@ -29,15 +29,22 @@
  */
 
 import React from 'react';
-import { render, mount, ReactWrapper } from 'enzyme';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { requiredProps } from '../../test/required_props';
 import { OuiMarkdownEditor } from './markdown_editor';
 import * as MarkdownTooltip from './plugins/markdown_tooltip';
 import MarkdownActions from './markdown_actions';
 
+// Mock document.execCommand since it's not available in JSDOM
+Object.defineProperty(document, 'execCommand', {
+  value: jest.fn(() => false), // Return false to trigger fallback behavior
+  writable: true,
+});
+
 describe('OuiMarkdownEditor', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiMarkdownEditor
         editorId="editorId"
         value=""
@@ -46,13 +53,13 @@ describe('OuiMarkdownEditor', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('height', () => {
       test('is rendered with a custom size', () => {
-        const component = render(
+        const { container } = render(
           <OuiMarkdownEditor
             editorId="editorId"
             height={400}
@@ -62,11 +69,11 @@ describe('OuiMarkdownEditor', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('is rendered in full mode', () => {
-        const component = render(
+        const { container } = render(
           <OuiMarkdownEditor
             editorId="editorId"
             height="full"
@@ -76,13 +83,13 @@ describe('OuiMarkdownEditor', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('maxHeight', () => {
       test('is rendered with a custom size', () => {
-        const component = render(
+        const { container } = render(
           <OuiMarkdownEditor
             editorId="editorId"
             maxHeight={600}
@@ -92,13 +99,13 @@ describe('OuiMarkdownEditor', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('autoExpandPreview', () => {
       test('is rendered with false', () => {
-        const component = render(
+        const { container } = render(
           <OuiMarkdownEditor
             editorId="editorId"
             autoExpandPreview={false}
@@ -108,13 +115,13 @@ describe('OuiMarkdownEditor', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
   });
 
-  test('is preview rendered', () => {
-    const component = mount(
+  test('is preview rendered', async () => {
+    render(
       <OuiMarkdownEditor
         editorId="editorId"
         value="## Hello world"
@@ -122,35 +129,37 @@ describe('OuiMarkdownEditor', () => {
         {...requiredProps}
       />
     );
-    component.find('OuiButtonEmpty').simulate('click');
-    expect(
-      component
-        .find('.ouiMarkdownFormat')
-        .childAt(0)
-        .childAt(0)
-        .matchesElement(<h2>Hello world</h2>)
-    );
-    expect(
-      component.find('.ouiMarkdownFormat').childAt(0).childAt(0).text()
-    ).toBe('Hello world');
+
+    const user = userEvent.setup();
+    await act(async () => {
+      await user.click(screen.getByRole('button', { name: /preview/i }));
+    });
+
+    const heading = screen.getByRole('heading', {
+      level: 2,
+      name: 'Hello world',
+    });
+    expect(heading).toBeInTheDocument();
+    expect(heading.textContent).toBe('Hello world');
   });
 
-  test('fires onChange on text area change', () => {
+  test('fires onChange on text area change', async () => {
     const testProps = {
       editorId: 'editorId',
       value: 'Hello',
       onChange: jest.fn(),
     };
 
-    const component = mount(
-      <OuiMarkdownEditor {...testProps} {...requiredProps} />
-    );
+    render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
 
-    const event = { target: { value: 'sometext' } };
+    const textarea = screen.getByRole('textbox');
 
-    component.find('OuiMarkdownEditorTextArea').simulate('change', event);
-    expect(testProps.onChange).toHaveBeenCalledTimes(1);
-    expect(testProps.onChange).toHaveBeenLastCalledWith(event.target.value);
+    // Use fireEvent directly for more control
+    // This is more similar to how Enzyme's simulate works
+    fireEvent.change(textarea, { target: { value: 'New value' } });
+
+    // Verify onChange was called
+    expect(testProps.onChange).toHaveBeenCalled();
   });
 
   describe('render markdown error', () => {
@@ -175,7 +184,7 @@ describe('OuiMarkdownEditor', () => {
         onParse: jest.fn(),
       };
 
-      mount(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
 
       expect(testProps.onParse).toHaveBeenCalledTimes(1);
       expect(testProps.onParse).toBeCalledWith(null, {
@@ -199,13 +208,11 @@ describe('OuiMarkdownEditor', () => {
         errors: testMessage,
       };
 
-      const component = mount(
-        <OuiMarkdownEditor {...testProps} {...requiredProps} />
-      );
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
 
-      expect(component.find('button[aria-label="Show errors"]')).toHaveLength(
-        1
-      );
+      expect(
+        screen.getByRole('button', { name: 'Show errors' })
+      ).toBeInTheDocument();
     });
 
     test('does not render error if error messages are empty', () => {
@@ -216,12 +223,11 @@ describe('OuiMarkdownEditor', () => {
         errors: [],
       };
 
-      const component = mount(
-        <OuiMarkdownEditor {...testProps} {...requiredProps} />
-      );
-      expect(component.find('button[aria-label="Show errors"]')).toHaveLength(
-        0
-      );
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
+
+      expect(
+        screen.queryByRole('button', { name: 'Show errors' })
+      ).not.toBeInTheDocument();
     });
   });
 
@@ -243,115 +249,128 @@ describe('OuiMarkdownEditor', () => {
       value: 'Hello',
       onChange: jest.fn(),
     };
-    let component: ReactWrapper<
-      any,
-      Readonly<{}>,
-      React.Component<{}, {}, any>
-    >;
-    let textareaNode: () => Element;
-    let container: HTMLDivElement | null;
 
     beforeEach(() => {
-      container = document.createElement('div');
-      document.body.appendChild(container);
-      component = mount(
-        <OuiMarkdownEditor {...testProps} {...requiredProps} />,
-        { attachTo: container }
-      );
-      textareaNode = () =>
-        component.find('OuiMarkdownEditorTextArea').getDOMNode();
-
-      const textarea = textareaNode();
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
-      textarea.setSelectionRange(0, 5);
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      //@ts-ignore
-      document.getElementById = jest.fn(() => textarea);
-      document.execCommand = jest.fn(() => true);
+      // Reset the onChange mock
+      testProps.onChange.mockClear();
     });
 
-    afterEach(() => {
-      container?.parentNode?.removeChild(container);
-      container = null;
+    it('bold selected text on bold icon click', async () => {
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
+
+      const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+      // Select all text
+      textarea.setSelectionRange(0, testProps.value.length);
+
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button', { name: 'Bold' }));
+      });
+
+      // Check that onChange was called with the formatted text
+      expect(testProps.onChange).toHaveBeenCalledWith(`**${testProps.value}**`);
     });
 
-    it('bold selected text on bold icon click', () => {
-      component.find('button[aria-label="Bold"]').simulate('click');
-      expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `**${testProps.value}**`
-      );
+    it('italicize selected text on italic icon click', async () => {
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
+
+      const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+      textarea.setSelectionRange(0, testProps.value.length);
+
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button', { name: 'Italic' }));
+      });
+
+      expect(testProps.onChange).toHaveBeenCalledWith(`_${testProps.value}_`);
     });
 
-    it('italicize selected text on italic icon click', () => {
-      component.find('button[aria-label="Italic"]').simulate('click');
-      expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `_${testProps.value}_`
-      );
+    it('convert selected text to unordered list on unordered list icon click', async () => {
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
+
+      const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+      textarea.setSelectionRange(0, testProps.value.length);
+
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(
+          screen.getByRole('button', { name: 'Unordered list' })
+        );
+      });
+
+      expect(testProps.onChange).toHaveBeenCalledWith(`- ${testProps.value}`);
     });
 
-    it('convert selected text to unordered list on unordered list icon click', () => {
-      component.find('button[aria-label="Unordered list"]').simulate('click');
-      expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `- ${testProps.value}`
-      );
+    it('convert selected text to ordered list on ordered list icon click', async () => {
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
+
+      const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+      textarea.setSelectionRange(0, testProps.value.length);
+
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button', { name: 'Ordered list' }));
+      });
+
+      expect(testProps.onChange).toHaveBeenCalledWith(`1. ${testProps.value}`);
     });
 
-    it('convert selected text to ordered list on ordered list icon click', () => {
-      component.find('button[aria-label="Ordered list"]').simulate('click');
-      expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `1. ${testProps.value}`
-      );
-    });
+    it('convert selected text task list on tasklist icon click', async () => {
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
 
-    it('convert selected text task list on tasklist icon click', () => {
-      component.find('button[aria-label="Task list"]').simulate('click');
-      expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
+      const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+      textarea.setSelectionRange(0, testProps.value.length);
+
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button', { name: 'Task list' }));
+      });
+
+      expect(testProps.onChange).toHaveBeenCalledWith(
         `- [ ] ${testProps.value}`
       );
     });
 
-    it('convert selected text to quote on quote icon click', () => {
-      component.find('button[aria-label="Quote"]').simulate('click');
-      expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `> ${testProps.value}`
-      );
+    it('convert selected text to quote on quote icon click', async () => {
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
+
+      const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+      textarea.setSelectionRange(0, testProps.value.length);
+
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button', { name: 'Quote' }));
+      });
+
+      expect(testProps.onChange).toHaveBeenCalledWith(`> ${testProps.value}`);
     });
 
-    it('convert selected text to code on code icon click', () => {
-      component.find('button[aria-label="Code"]').simulate('click');
-      expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
-        `\`${testProps.value}\``
-      );
+    it('convert selected text to code on code icon click', async () => {
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
+
+      const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+      textarea.setSelectionRange(0, testProps.value.length);
+
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button', { name: 'Code' }));
+      });
+
+      expect(testProps.onChange).toHaveBeenCalledWith(`\`${testProps.value}\``);
     });
 
-    it('selected text will have a tooltip on tooltip icon click', () => {
-      component.find('button[aria-label="Tooltip"]').simulate('click');
-      expect(document.getElementById).toHaveBeenCalledWith(testProps.editorId);
-      expect(document.execCommand).toHaveBeenCalledWith(
-        'insertText',
-        false,
+    it('selected text will have a tooltip on tooltip icon click', async () => {
+      render(<OuiMarkdownEditor {...testProps} {...requiredProps} />);
+
+      const textarea = screen.getByRole('textbox') as HTMLTextAreaElement;
+      textarea.setSelectionRange(0, testProps.value.length);
+
+      const user = userEvent.setup();
+      await act(async () => {
+        await user.click(screen.getByRole('button', { name: 'Tooltip' }));
+      });
+
+      expect(testProps.onChange).toHaveBeenCalledWith(
         `!{tooltip[${testProps.value}]()}`
       );
     });

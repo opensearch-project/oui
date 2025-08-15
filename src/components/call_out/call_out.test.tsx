@@ -29,46 +29,46 @@
  */
 
 import React from 'react';
-import { mount, render } from 'enzyme';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiCallOut, COLORS, HEADINGS } from './call_out';
-import { findTestSubject } from '../../test';
 
 describe('OuiCallOut', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiCallOut {...requiredProps}>Content</OuiCallOut>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('title', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiCallOut title="Title">Content</OuiCallOut>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('iconType', () => {
       it('is rendered', () => {
-        const component = render(<OuiCallOut iconType="user" />);
+        const { container } = render(<OuiCallOut iconType="user" />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('color', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = render(<OuiCallOut color={color} />);
+          const { container } = render(<OuiCallOut color={color} />);
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
@@ -76,47 +76,55 @@ describe('OuiCallOut', () => {
     describe('heading', () => {
       HEADINGS.forEach((heading) => {
         test(`${heading} is rendered`, () => {
-          const component = render(<OuiCallOut heading={heading} />);
+          const { container } = render(<OuiCallOut heading={heading} />);
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
 
     describe('dismissible', () => {
       it('is rendered when set to true', () => {
-        const component = render(<OuiCallOut dismissible={true} />);
+        const { container } = render(<OuiCallOut dismissible={true} />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('is not rendered when in warning color', () => {
-        const component = render(
+        const { container } = render(
           <OuiCallOut dismissible={true} color={'warning'} />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('is not rendered when in danger color', () => {
-        const component = render(
+        const { container } = render(
           <OuiCallOut dismissible={true} color={'danger'} />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
-      it('close callout after click', () => {
+      it('close callout after click', async () => {
         const onDismiss = jest.fn();
-        const component = mount(
+        const { container } = render(
           <OuiCallOut
             dismissible={true}
             onDismiss={onDismiss}
             title="This is a callout"
+            data-test-subj="callOut"
           />
         );
-        expect(component).toMatchSnapshot();
-        findTestSubject(component, 'closeCallOutButton').simulate('click');
+        expect(container).toMatchSnapshot();
+
+        const user = userEvent.setup();
+        const closeButton = screen.getByTestId('closeCallOutButton');
+
+        await act(async () => {
+          await user.click(closeButton);
+        });
+
         expect(onDismiss).toBeCalled();
       });
     });

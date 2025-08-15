@@ -1,201 +1,330 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiNotificationEventMeta is rendered 1`] = `
-<div
-  class="ouiNotificationEventMeta"
->
+<div>
   <div
-    class="ouiNotificationEventMeta__section"
+    class="ouiNotificationEventMeta"
   >
-    <span
-      class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+    <div
+      class="ouiNotificationEventMeta__section"
     >
       <span
-        class="ouiBadge__content"
+        class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+        title="Alert"
       >
         <span
-          class="ouiBadge__text"
+          class="ouiBadge__content"
         >
-          Alert
+          <span
+            class="ouiBadge__text"
+          >
+            Alert
+          </span>
         </span>
       </span>
-    </span>
-  </div>
-  <div
-    class="ouiNotificationEventMeta__section"
-  >
-    <span
-      class="ouiNotificationEventMeta__time"
-    >
-      <span>
-        2 min ago
-      </span>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`OuiNotificationEventMeta props badgeColor  is rendered 1`] = `
-<div
-  class="ouiNotificationEventMeta"
->
-  <div
-    class="ouiNotificationEventMeta__section"
-  >
-    <span
-      class="ouiBadge ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-      style="background-color:#6dccb1;color:#000"
+    </div>
+    <div
+      class="ouiNotificationEventMeta__section"
     >
       <span
-        class="ouiBadge__content"
+        class="ouiNotificationEventMeta__time"
       >
-        <span
-          class="ouiBadge__text"
-        >
-          Alert
+        <span>
+          2 min ago
         </span>
       </span>
-    </span>
-  </div>
-  <div
-    class="ouiNotificationEventMeta__section"
-  >
-    <span
-      class="ouiNotificationEventMeta__time"
-    >
-      <span>
-        2 min ago
-      </span>
-    </span>
-  </div>
-</div>
-`;
-
-exports[`OuiNotificationEventMeta props contextMenuItems are rendered 1`] = `
-<div
-  class="ouiContextMenuPanel"
-  tabindex="-1"
->
-  <div>
-    <div>
-      <button
-        class="ouiContextMenuItem"
-        type="button"
-      >
-        <span
-          class="ouiContextMenu__itemLayout"
-        >
-          <span
-            class="ouiContextMenuItem__text"
-          >
-            Mark as read
-          </span>
-        </span>
-      </button>
-      <button
-        class="ouiContextMenuItem"
-        type="button"
-      >
-        <span
-          class="ouiContextMenu__itemLayout"
-        >
-          <span
-            class="ouiContextMenuItem__text"
-          >
-            View messages like this
-          </span>
-        </span>
-      </button>
-      <button
-        class="ouiContextMenuItem"
-        type="button"
-      >
-        <span
-          class="ouiContextMenu__itemLayout"
-        >
-          <span
-            class="ouiContextMenuItem__text"
-          >
-            Don’t notify me about this
-          </span>
-        </span>
-      </button>
     </div>
   </div>
 </div>
 `;
 
-exports[`OuiNotificationEventMeta props logoCloud  is rendered 1`] = `
-<div
-  class="ouiNotificationEventMeta"
->
+exports[`OuiNotificationEventMeta props badgeColor is rendered 1`] = `
+<div>
   <div
-    class="ouiNotificationEventMeta__section"
+    class="ouiNotificationEventMeta"
   >
-    <span
-      aria-hidden="true"
-      class="ouiNotificationEventMeta__icon"
-      data-ouiicon-type="logoCloud"
-    />
-    <span
-      class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+    <div
+      class="ouiNotificationEventMeta__section"
     >
       <span
-        class="ouiBadge__content"
+        class="ouiBadge ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+        style="background-color: rgb(109, 204, 177); color: rgb(0, 0, 0);"
+        title="Alert"
       >
         <span
-          class="ouiBadge__text"
+          class="ouiBadge__content"
         >
-          Alert
+          <span
+            class="ouiBadge__text"
+          >
+            Alert
+          </span>
         </span>
       </span>
-    </span>
-  </div>
-  <div
-    class="ouiNotificationEventMeta__section"
-  >
-    <span
-      class="ouiNotificationEventMeta__time"
+    </div>
+    <div
+      class="ouiNotificationEventMeta__section"
     >
-      <span>
-        2 min ago
+      <span
+        class="ouiNotificationEventMeta__time"
+      >
+        <span>
+          2 min ago
+        </span>
       </span>
-    </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`OuiNotificationEventMeta props contextMenuItems are rendered 1`] = `
+<body>
+  <div>
+    <div
+      class="ouiNotificationEventMeta ouiNotificationEventMeta--hasContextMenu"
+    >
+      <div
+        class="ouiNotificationEventMeta__section"
+      >
+        <span
+          aria-hidden="true"
+          class="ouiNotificationEventMeta__icon"
+          data-ouiicon-type="logoCloud"
+        />
+        <span
+          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+          title="Alert"
+        >
+          <span
+            class="ouiBadge__content"
+          >
+            <span
+              class="ouiBadge__text"
+            >
+              Alert
+            </span>
+          </span>
+        </span>
+      </div>
+      <div
+        class="ouiNotificationEventMeta__section"
+      >
+        <span
+          class="ouiNotificationEventMeta__time"
+        >
+          <span>
+            2 min ago
+          </span>
+        </span>
+      </div>
+      <div
+        class="ouiNotificationEventMeta__contextMenuWrapper"
+      >
+        <div
+          class="ouiPopover ouiPopover--anchorLeftUp"
+          id="generated-id"
+        >
+          <div
+            class="ouiPopover__anchor"
+          >
+            <button
+              aria-controls="generated-id"
+              aria-expanded="true"
+              aria-haspopup="true"
+              aria-label="Menu for eventName"
+              class="ouiButtonIcon ouiButtonIcon--subdued ouiButtonIcon--empty ouiButtonIcon--xSmall"
+              data-test-subj="id-notificationEventMetaButton"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+                class="ouiButtonIcon__icon"
+                color="inherit"
+                data-ouiicon-type="boxesVertical"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="-1"
+    />
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="-1"
+    />
+    <div
+      data-focus-lock-disabled="disabled"
+    >
+      <div
+        aria-describedby="generated-id"
+        aria-live="off"
+        aria-modal="true"
+        class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--left"
+        data-autofocus="true"
+        role="dialog"
+        style="top: -22px; left: -16px; will-change: transform, opacity; z-index: 2000;"
+        tabindex="0"
+      >
+        <div
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--left"
+          style="left: 0px; top: 10px;"
+        />
+        <p
+          class="ouiScreenReaderOnly"
+          id="generated-id"
+        >
+          You are in a dialog. To close this dialog, hit escape.
+        </p>
+        <div>
+          <div>
+            <div
+              class="ouiContextMenuPanel"
+              tabindex="-1"
+            >
+              <div>
+                <div>
+                  <button
+                    class="ouiContextMenuItem"
+                    type="button"
+                  >
+                    <span
+                      class="ouiContextMenu__itemLayout"
+                    >
+                      <span
+                        class="ouiContextMenuItem__text"
+                      >
+                        Mark as read
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    class="ouiContextMenuItem"
+                    type="button"
+                  >
+                    <span
+                      class="ouiContextMenu__itemLayout"
+                    >
+                      <span
+                        class="ouiContextMenuItem__text"
+                      >
+                        View messages like this
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    class="ouiContextMenuItem"
+                    type="button"
+                  >
+                    <span
+                      class="ouiContextMenu__itemLayout"
+                    >
+                      <span
+                        class="ouiContextMenuItem__text"
+                      >
+                        Don't notify me about this
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="-1"
+    />
+  </div>
+</body>
+`;
+
+exports[`OuiNotificationEventMeta props logoCloud is rendered 1`] = `
+<div>
+  <div
+    class="ouiNotificationEventMeta"
+  >
+    <div
+      class="ouiNotificationEventMeta__section"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiNotificationEventMeta__icon"
+        data-ouiicon-type="logoCloud"
+      />
+      <span
+        class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+        title="Alert"
+      >
+        <span
+          class="ouiBadge__content"
+        >
+          <span
+            class="ouiBadge__text"
+          >
+            Alert
+          </span>
+        </span>
+      </span>
+    </div>
+    <div
+      class="ouiNotificationEventMeta__section"
+    >
+      <span
+        class="ouiNotificationEventMeta__time"
+      >
+        <span>
+          2 min ago
+        </span>
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiNotificationEventMeta props severity is rendered 1`] = `
-<div
-  class="ouiNotificationEventMeta"
->
+<div>
   <div
-    class="ouiNotificationEventMeta__section"
+    class="ouiNotificationEventMeta"
   >
-    <span
-      class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+    <div
+      class="ouiNotificationEventMeta__section"
     >
       <span
-        class="ouiBadge__content"
+        class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+        title="Alert: severity"
       >
         <span
-          class="ouiBadge__text"
+          class="ouiBadge__content"
         >
-          Alert: severity
+          <span
+            class="ouiBadge__text"
+          >
+            Alert: severity
+          </span>
         </span>
       </span>
-    </span>
-  </div>
-  <div
-    class="ouiNotificationEventMeta__section"
-  >
-    <span
-      class="ouiNotificationEventMeta__time"
+    </div>
+    <div
+      class="ouiNotificationEventMeta__section"
     >
-      <span>
-        2 min ago
+      <span
+        class="ouiNotificationEventMeta__time"
+      >
+        <span>
+          2 min ago
+        </span>
       </span>
-    </span>
+    </div>
   </div>
 </div>
 `;

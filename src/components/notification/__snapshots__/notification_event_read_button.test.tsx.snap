@@ -1,35 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiNotificationEventReadButton is rendered 1`] = `
-<button
-  aria-label="Mark eventName as unread"
-  class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiNotificationEventReadButton ouiNotificationEventReadButton--isRead"
-  data-test-subj="id-notificationEventReadButton"
-  title="Mark as unread"
-  type="button"
->
-  <span
-    aria-hidden="true"
-    class="ouiButtonIcon__icon"
-    color="inherit"
-    data-ouiicon-type="dot"
-  />
-</button>
+<div>
+  <button
+    aria-label="Mark eventName as unread"
+    class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiNotificationEventReadButton ouiNotificationEventReadButton--isRead"
+    data-test-subj="id-notificationEventReadButton"
+    title="Mark as unread"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="ouiButtonIcon__icon"
+      color="inherit"
+      data-ouiicon-type="dot"
+    />
+  </button>
+</div>
 `;
 
 exports[`OuiNotificationEventReadButton renders isRead to false 1`] = `
-<button
-  aria-label="Mark eventName as read"
-  class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiNotificationEventReadButton"
-  data-test-subj="id-notificationEventReadButton"
-  title="Mark as read"
-  type="button"
->
-  <span
-    aria-hidden="true"
-    class="ouiButtonIcon__icon"
-    color="inherit"
-    data-ouiicon-type="dot"
-  />
-</button>
+<div>
+  <button
+    aria-label="Mark eventName as read"
+    class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiNotificationEventReadButton"
+    data-test-subj="id-notificationEventReadButton"
+    title="Mark as read"
+    type="button"
+  >
+    <span
+      aria-hidden="true"
+      class="ouiButtonIcon__icon"
+      color="inherit"
+      data-ouiicon-type="dot"
+    />
+  </button>
+</div>
 `;

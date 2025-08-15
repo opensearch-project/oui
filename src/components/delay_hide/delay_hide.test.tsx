@@ -29,160 +29,236 @@
  */
 
 import React from 'react';
-import { mount } from 'enzyme';
+import { render, act } from '@testing-library/react';
 import { OuiDelayHide } from './index';
 
 describe('when OuiDelayHide is visible initially', () => {
   function getWrapper() {
     jest.useFakeTimers();
-    return mount(
+    return render(
       <OuiDelayHide hide={false} render={() => <div>Hello World</div>} />
     );
   }
 
   test('it should be visible initially', async () => {
-    const wrapper = getWrapper();
-    wrapper.setProps({ hide: true });
-    expect(wrapper.html()).toEqual('<div>Hello World</div>');
+    const { container, rerender } = getWrapper();
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    expect(container.innerHTML).toEqual('<div>Hello World</div>');
   });
 
   test('it should be visible after 900ms', () => {
-    const wrapper = getWrapper();
-    wrapper.setProps({ hide: true });
-    jest.advanceTimersByTime(900);
-    expect(wrapper.html()).toEqual('<div>Hello World</div>');
+    const { container, rerender } = getWrapper();
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    act(() => {
+      jest.advanceTimersByTime(900);
+    });
+    expect(container.innerHTML).toEqual('<div>Hello World</div>');
   });
 
   test('it should be hidden after 1100ms', () => {
-    const wrapper = getWrapper();
-    wrapper.setProps({ hide: true });
-    jest.advanceTimersByTime(1100);
-    wrapper.setProps({});
-    expect(wrapper.html()).toEqual(null);
+    const { container, rerender } = getWrapper();
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    expect(container.innerHTML).toEqual('');
   });
 
   test('it should be visible after 1100ms regardless of prop changes in-between', () => {
-    const wrapper = getWrapper();
-    wrapper.setProps({ hide: true });
-    wrapper.setProps({ hide: false });
-    jest.advanceTimersByTime(1100);
-    expect(wrapper.html()).toEqual('<div>Hello World</div>');
+    const { container, rerender } = getWrapper();
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    rerender(
+      <OuiDelayHide hide={false} render={() => <div>Hello World</div>} />
+    );
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+    expect(container.innerHTML).toEqual('<div>Hello World</div>');
   });
 
   test('it should hide immediately after prop change, if it has been displayed for 1100ms', () => {
-    const wrapper = getWrapper();
+    const { container, rerender } = getWrapper();
     const currentTime = Date.now();
-    jest.advanceTimersByTime(1100);
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
     jest.spyOn(Date, 'now').mockReturnValue(currentTime + 1100);
-    expect(wrapper.html()).toEqual('<div>Hello World</div>');
+    expect(container.innerHTML).toEqual('<div>Hello World</div>');
 
-    wrapper.setProps({ hide: true });
-    expect(wrapper.html()).toEqual(null);
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    expect(container.innerHTML).toEqual('');
   });
 });
 
 describe('when OuiDelayHide parent updates', () => {
   it('should still hide correctly', () => {
     jest.useFakeTimers();
-    const wrapper = mount(
+    const { container, rerender } = render(
       <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
     );
 
-    wrapper.setProps({ hide: false });
-    jest.advanceTimersByTime(1100);
-    wrapper.setProps({}); // simulate parent component re-rendering
-    wrapper.setProps({ hide: true });
-    jest.advanceTimersByTime(1100);
+    rerender(
+      <OuiDelayHide hide={false} render={() => <div>Hello World</div>} />
+    );
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+    rerender(
+      <OuiDelayHide hide={false} render={() => <div>Hello World</div>} />
+    ); // simulate parent component re-rendering
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
 
-    expect(wrapper.html()).toEqual(null);
+    expect(container.innerHTML).toEqual('');
   });
 });
 
 describe('when OuiDelayHide is hidden initially', () => {
   function getWrapper() {
     jest.useFakeTimers();
-    return mount(
+    return render(
       <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
     );
   }
 
   test('it should be hidden initially', async () => {
-    const wrapper = getWrapper();
-    expect(wrapper.html()).toEqual(null);
+    const { container } = getWrapper();
+    expect(container.innerHTML).toEqual('');
   });
 
   test('it should become visible immediately after prop change', async () => {
-    const wrapper = getWrapper();
-    wrapper.setProps({ hide: false });
-    expect(wrapper.html()).toEqual('<div>Hello World</div>');
+    const { container, rerender } = getWrapper();
+    rerender(
+      <OuiDelayHide hide={false} render={() => <div>Hello World</div>} />
+    );
+    expect(container.innerHTML).toEqual('<div>Hello World</div>');
   });
 
   test('it should be visible for at least 1100ms before hiding', async () => {
-    const wrapper = getWrapper();
-    wrapper.setProps({ hide: false });
-    wrapper.setProps({ hide: true });
-    jest.advanceTimersByTime(900);
+    const { container, rerender } = getWrapper();
+    rerender(
+      <OuiDelayHide hide={false} render={() => <div>Hello World</div>} />
+    );
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    act(() => {
+      jest.advanceTimersByTime(900);
+    });
 
-    expect(wrapper.html()).toEqual('<div>Hello World</div>');
+    expect(container.innerHTML).toEqual('<div>Hello World</div>');
 
-    jest.advanceTimersByTime(200);
-    wrapper.setProps({});
-    expect(wrapper.html()).toEqual(null);
+    act(() => {
+      jest.advanceTimersByTime(200);
+    });
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    expect(container.innerHTML).toEqual('');
   });
 });
 
 describe('when OuiDelayHide is visible initially and has a minimumDuration of 2000ms ', () => {
   function getWrapper() {
     jest.useFakeTimers();
-    const wrapper = mount(
+    const result = render(
       <OuiDelayHide
         hide={false}
         minimumDuration={2000}
         render={() => <div>Hello World</div>}
       />
     );
-    wrapper.setProps({ hide: true });
-    return wrapper;
+    result.rerender(
+      <OuiDelayHide
+        hide={true}
+        minimumDuration={2000}
+        render={() => <div>Hello World</div>}
+      />
+    );
+    return result;
   }
 
   test('it should be visible initially', async () => {
-    const wrapper = getWrapper();
-    expect(wrapper.html()).toEqual('<div>Hello World</div>');
+    const { container } = getWrapper();
+    expect(container.innerHTML).toEqual('<div>Hello World</div>');
   });
 
   test('it should be visible after 1900ms', () => {
-    const wrapper = getWrapper();
-    jest.advanceTimersByTime(1900);
-    expect(wrapper.html()).toEqual('<div>Hello World</div>');
+    const { container } = getWrapper();
+    act(() => {
+      jest.advanceTimersByTime(1900);
+    });
+    expect(container.innerHTML).toEqual('<div>Hello World</div>');
   });
 
   test('it should be hidden after 2100ms', () => {
-    const wrapper = getWrapper();
-    jest.advanceTimersByTime(2100);
-    wrapper.setProps({});
-    expect(wrapper.html()).toEqual(null);
+    const { container, rerender } = getWrapper();
+    act(() => {
+      jest.advanceTimersByTime(2100);
+    });
+    rerender(
+      <OuiDelayHide
+        hide={true}
+        minimumDuration={2000}
+        render={() => <div>Hello World</div>}
+      />
+    );
+    expect(container.innerHTML).toEqual('');
   });
 });
 
 describe('when OuiDelayHide has been visible and become hidden', () => {
   it('should still be visible for the minimum duration the second time', () => {
     jest.useFakeTimers();
-    const wrapper = mount(
+    const { container, rerender } = render(
       <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
     );
 
-    wrapper.setProps({ hide: false });
-    jest.advanceTimersByTime(1100);
-    wrapper.setProps({ hide: true });
-    jest.advanceTimersByTime(100);
-    wrapper.setProps({ hide: false });
-    wrapper.setProps({ hide: true });
+    rerender(
+      <OuiDelayHide hide={false} render={() => <div>Hello World</div>} />
+    );
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
+    act(() => {
+      jest.advanceTimersByTime(100);
+    });
+    rerender(
+      <OuiDelayHide hide={false} render={() => <div>Hello World</div>} />
+    );
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
 
-    expect(wrapper.html()).toEqual('<div>Hello World</div>');
+    expect(container.innerHTML).toEqual('<div>Hello World</div>');
 
-    jest.advanceTimersByTime(1100);
-    wrapper.setProps({});
+    act(() => {
+      jest.advanceTimersByTime(1100);
+    });
+    rerender(
+      <OuiDelayHide hide={true} render={() => <div>Hello World</div>} />
+    );
 
-    expect(wrapper.html()).toEqual(null);
+    expect(container.innerHTML).toEqual('');
   });
 });

@@ -29,32 +29,33 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { requiredProps } from '../../../test/required_props';
 
 import { OuiButtonIcon, COLORS, DISPLAYS, SIZES } from './button_icon';
 
 describe('OuiButtonIcon', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiButtonIcon iconType="user" {...requiredProps} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('isDisabled', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiButtonIcon iconType="user" aria-label="button" isDisabled />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('renders a button even when href is defined', () => {
-        const component = render(
+        const { container } = render(
           <OuiButtonIcon
             iconType="user"
             aria-label="button"
@@ -63,28 +64,28 @@ describe('OuiButtonIcon', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('iconType', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiButtonIcon aria-label="button" iconType="user" />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('color', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiButtonIcon iconType="user" aria-label="button" color={color} />
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
@@ -92,7 +93,7 @@ describe('OuiButtonIcon', () => {
     describe('display', () => {
       DISPLAYS.forEach((display) => {
         test(`${display} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiButtonIcon
               iconType="user"
               aria-label="button"
@@ -100,7 +101,7 @@ describe('OuiButtonIcon', () => {
             />
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
@@ -108,26 +109,26 @@ describe('OuiButtonIcon', () => {
     describe('size', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiButtonIcon iconType="user" aria-label="button" size={size} />
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
 
     describe('isSelected', () => {
       it('is rendered as true', () => {
-        const component = render(
+        const { container } = render(
           <OuiButtonIcon iconType="user" aria-label="button" isSelected />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('is rendered as false', () => {
-        const component = render(
+        const { container } = render(
           <OuiButtonIcon
             iconType="user"
             aria-label="button"
@@ -135,13 +136,13 @@ describe('OuiButtonIcon', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('href', () => {
       it('secures the rel attribute when the target is _blank', () => {
-        const component = render(
+        const { container } = render(
           <OuiButtonIcon
             iconType="user"
             aria-label="button"
@@ -150,14 +151,14 @@ describe('OuiButtonIcon', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('onClick', () => {
-      it('supports onClick and href', () => {
+      it('supports onClick and href', async () => {
         const handler = jest.fn();
-        const component = mount(
+        render(
           <OuiButtonIcon
             iconType="user"
             aria-label="hoi"
@@ -165,17 +166,27 @@ describe('OuiButtonIcon', () => {
             onClick={handler}
           />
         );
-        component.find('a').simulate('click');
-        expect(handler.mock.calls.length).toEqual(1);
+
+        const user = userEvent.setup();
+        await act(async () => {
+          await user.click(screen.getByRole('link'));
+        });
+
+        expect(handler).toHaveBeenCalledTimes(1);
       });
 
-      it('supports onClick as a button', () => {
+      it('supports onClick as a button', async () => {
         const handler = jest.fn();
-        const component = mount(
+        render(
           <OuiButtonIcon iconType="user" aria-label="hoi" onClick={handler} />
         );
-        component.find('button').simulate('click');
-        expect(handler.mock.calls.length).toEqual(1);
+
+        const user = userEvent.setup();
+        await act(async () => {
+          await user.click(screen.getByRole('button'));
+        });
+
+        expect(handler).toHaveBeenCalledTimes(1);
       });
     });
   });

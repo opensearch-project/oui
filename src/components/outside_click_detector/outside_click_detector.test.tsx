@@ -28,8 +28,9 @@
  * under the License.
  */
 
-import React, { EventHandler, MouseEvent as ReactMouseEvent } from 'react';
-import { render, mount } from 'enzyme';
+import React from 'react';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
 import { OuiOutsideClickDetector, OuiEvent } from './outside_click_detector';
 
@@ -39,13 +40,13 @@ jest.mock('./../../services/accessibility', () => {
 
 describe('OuiOutsideClickDetector', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiOutsideClickDetector onOutsideClick={() => {}}>
         <div />
       </OuiOutsideClickDetector>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('behavior', () => {
@@ -54,29 +55,8 @@ describe('OuiOutsideClickDetector', () => {
       const parentDetector = jest.fn();
       const childDetector = jest.fn();
 
-      // enzyme doesn't mount the components into the global jsdom `document`
-      // but that's where the click detector listener is,
-      // pass the top-level mounted component's click event on to document
-      const triggerDocumentMouseDown: EventHandler<any> = (
-        e: ReactMouseEvent
-      ) => {
-        const event = new Event('mousedown') as OuiEvent;
-        event.ouiGeneratedBy = ((e.nativeEvent as unknown) as OuiEvent).ouiGeneratedBy;
-        document.dispatchEvent(event);
-      };
-
-      const triggerDocumentMouseUp: EventHandler<any> = (
-        e: ReactMouseEvent
-      ) => {
-        const event = new Event('mouseup') as OuiEvent;
-        event.ouiGeneratedBy = ((e.nativeEvent as unknown) as OuiEvent).ouiGeneratedBy;
-        document.dispatchEvent(event);
-      };
-
-      const component = mount(
-        <div
-          onMouseDown={triggerDocumentMouseDown}
-          onMouseUp={triggerDocumentMouseUp}>
+      render(
+        <div>
           <div>
             <OuiOutsideClickDetector onOutsideClick={parentDetector}>
               <div>
@@ -93,8 +73,19 @@ describe('OuiOutsideClickDetector', () => {
         </div>
       );
 
-      component.find('[data-test-subj="target"]').simulate('mousedown');
-      component.find('[data-test-subj="target"]').simulate('mouseup');
+      const target = screen.getByTestId('target');
+
+      // Simulate a click sequence: mousedown on target, then mouseup outside
+      act(() => {
+        // First trigger mousedown on the target element to capture the ID
+        fireEvent.mouseDown(target);
+
+        // Then simulate mouseup outside by dispatching directly on document
+        // This simulates clicking outside all detectors
+        const outsideEvent = new Event('mouseup') as OuiEvent;
+        outsideEvent.ouiGeneratedBy = [];
+        document.dispatchEvent(outsideEvent);
+      });
 
       expect(unrelatedDetector).toHaveBeenCalledTimes(1);
       expect(parentDetector).toHaveBeenCalledTimes(0);

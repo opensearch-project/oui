@@ -29,15 +29,12 @@
  */
 
 import React, { ReactNode } from 'react';
-import { shallow, render, mount } from 'enzyme';
-import {
-  requiredProps,
-  findTestSubject,
-  takeMountedSnapshot,
-} from '../../test';
+import { render, fireEvent, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { requiredProps } from '../../test';
 import { comboBoxKeys } from '../../services';
 
-import { OuiComboBox, OuiComboBoxProps } from './combo_box';
+import { OuiComboBox } from './combo_box';
 
 jest.mock('../portal', () => ({
   OuiPortal: ({ children }: { children: ReactNode }) => children,
@@ -84,47 +81,52 @@ const options: TitanOption[] = [
 
 describe('OuiComboBox', () => {
   test('is rendered', () => {
-    const component = render(<OuiComboBox {...requiredProps} />);
+    const { container } = render(<OuiComboBox {...requiredProps} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });
 
 describe('props', () => {
   test('options list is rendered', () => {
-    const component = mount(
+    const { container } = render(
       <OuiComboBox
         options={options}
         data-test-subj="alsoGetsAppliedToOptionsList"
       />
     );
 
-    component.setState({ isListOpen: true });
-    expect(takeMountedSnapshot(component)).toMatchSnapshot();
+    // Simulate opening the list by focusing the input
+    const searchInput = container.querySelector(
+      '[data-test-subj="comboBoxSearchInput"]'
+    ) as HTMLInputElement;
+    fireEvent.focus(searchInput);
+
+    expect(container).toMatchSnapshot();
   });
 
   test('selectedOptions are rendered', () => {
-    const component = shallow(
+    const { container } = render(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2], options[4]]}
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('isClearable=false disallows user from clearing input', () => {
     test('when no options are selected', () => {
-      const component = shallow(
+      const { container } = render(
         <OuiComboBox options={options} isClearable={false} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('when options are selected', () => {
-      const component = shallow(
+      const { container } = render(
         <OuiComboBox
           options={options}
           selectedOptions={[options[2], options[4]]}
@@ -132,13 +134,13 @@ describe('props', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe('singleSelection', () => {
     test('is rendered', () => {
-      const component = shallow(
+      const { container } = render(
         <OuiComboBox
           options={options}
           selectedOptions={[options[2]]}
@@ -146,10 +148,10 @@ describe('props', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
     test('selects existing option when opened', () => {
-      const component = shallow(
+      const { container } = render(
         <OuiComboBox
           options={options}
           selectedOptions={[options[2]]}
@@ -157,11 +159,16 @@ describe('props', () => {
         />
       );
 
-      component.setState({ isListOpen: true });
-      expect(component).toMatchSnapshot();
+      // Open the list by focusing the input
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+      fireEvent.focus(searchInput);
+
+      expect(container).toMatchSnapshot();
     });
     test('prepend and append is rendered', () => {
-      const component = shallow(
+      const { container } = render(
         <OuiComboBox
           options={options}
           singleSelection={true}
@@ -170,13 +177,18 @@ describe('props', () => {
         />
       );
 
-      component.setState({ isListOpen: true });
-      expect(component).toMatchSnapshot();
+      // Open the list by focusing the input
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+      fireEvent.focus(searchInput);
+
+      expect(container).toMatchSnapshot();
     });
   });
 
   test('isDisabled is rendered', () => {
-    const component = shallow(
+    const { container } = render(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2]]}
@@ -184,11 +196,11 @@ describe('props', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('full width is rendered', () => {
-    const component = shallow(
+    const { container } = render(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2]]}
@@ -196,11 +208,11 @@ describe('props', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('delimiter is rendered', () => {
-    const component = shallow(
+    const { container } = render(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2], options[3]]}
@@ -208,22 +220,22 @@ describe('props', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('autoFocus is rendered', () => {
-    const component = shallow(
+    const { container } = render(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2], options[3]]}
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('icon is rendered', () => {
-    const component = mount(
+    const { container } = render(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2]]}
@@ -231,15 +243,15 @@ describe('props', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
 
-    const icon = findTestSubject(component, 'comboBoxIcon');
+    const icon = container.querySelector('[data-test-subj="comboBoxIcon"]');
     expect(icon).toBeDefined();
-    expect(icon.render().attr('data-ouiicon-type')).toBe('search');
+    expect(icon?.getAttribute('data-ouiicon-type')).toBe('search');
   });
 
   test('custom icon is rendered', () => {
-    const component = mount(
+    const { container } = render(
       <OuiComboBox
         options={options}
         selectedOptions={[options[2]]}
@@ -247,11 +259,11 @@ describe('props', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
 
-    const icon = findTestSubject(component, 'comboBoxIcon');
+    const icon = container.querySelector('[data-test-subj="comboBoxIcon"]');
     expect(icon).toBeDefined();
-    expect(icon.render().attr('data-ouiicon-type')).toBe('menu');
+    expect(icon?.getAttribute('data-ouiicon-type')).toBe('menu');
   });
 });
 
@@ -269,7 +281,7 @@ test('does not show multiple checkmarks with duplicate labels', () => {
       label: 'Tethys',
     },
   ];
-  const component = mount(
+  const { container } = render(
     <OuiComboBox
       singleSelection={{ asPlainText: true }}
       options={options}
@@ -277,18 +289,24 @@ test('does not show multiple checkmarks with duplicate labels', () => {
     />
   );
 
-  const searchInput = findTestSubject(component, 'comboBoxSearchInput');
-  searchInput.simulate('focus');
+  const searchInput = container.querySelector(
+    '[data-test-subj="comboBoxSearchInput"]'
+  ) as HTMLInputElement;
+  fireEvent.focus(searchInput);
 
-  expect(component.find('OuiFilterSelectItem[checked="on"]').length).toBe(1);
+  // Wait for the options list to render
+  const checkedItems = container.querySelectorAll(
+    '.ouiFilterSelectItem [data-ouiicon-type="check"]'
+  );
+  expect(checkedItems.length).toBe(1);
 });
 
 describe('behavior', () => {
   describe('hitting "Enter"', () => {
-    test('calls the onCreateOption callback when there is input', () => {
+    test('calls the onCreateOption callback when there is input', async () => {
       const onCreateOptionHandler = jest.fn();
 
-      const component = mount(
+      const { container } = render(
         <OuiComboBox
           options={options}
           selectedOptions={[options[2]]}
@@ -296,10 +314,15 @@ describe('behavior', () => {
         />
       );
 
-      component.setState({ searchValue: 'foo' });
-      const searchInput = findTestSubject(component, 'comboBoxSearchInput');
-      searchInput.simulate('focus');
-      searchInput.simulate('keyDown', { key: comboBoxKeys.ENTER });
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+
+      // Set search value and focus
+      fireEvent.change(searchInput, { target: { value: 'foo' } });
+      fireEvent.focus(searchInput);
+      fireEvent.keyDown(searchInput, { key: comboBoxKeys.ENTER });
+
       expect(onCreateOptionHandler).toHaveBeenCalledTimes(1);
       expect(onCreateOptionHandler).toHaveBeenNthCalledWith(1, 'foo', options);
     });
@@ -307,7 +330,7 @@ describe('behavior', () => {
     test("doesn't the onCreateOption callback when there is no input", () => {
       const onCreateOptionHandler = jest.fn();
 
-      const component = mount(
+      const { container } = render(
         <OuiComboBox
           options={options}
           selectedOptions={[options[2]]}
@@ -315,9 +338,11 @@ describe('behavior', () => {
         />
       );
 
-      const searchInput = findTestSubject(component, 'comboBoxSearchInput');
-      searchInput.simulate('focus');
-      searchInput.simulate('keyDown', { key: comboBoxKeys.ENTER });
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+      fireEvent.focus(searchInput);
+      fireEvent.keyDown(searchInput, { key: comboBoxKeys.ENTER });
       expect(onCreateOptionHandler).not.toHaveBeenCalled();
     });
   });
@@ -325,20 +350,24 @@ describe('behavior', () => {
   describe('tabbing', () => {
     test("off the search input closes the options list if the user isn't navigating the options", () => {
       const onKeyDownWrapper = jest.fn();
-      const component = mount(
+      const { container } = render(
         <div onKeyDown={onKeyDownWrapper}>
           <OuiComboBox options={options} selectedOptions={[options[2]]} />
         </div>
       );
 
-      const searchInput = findTestSubject(component, 'comboBoxSearchInput');
-      searchInput.simulate('focus');
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+      fireEvent.focus(searchInput);
 
       // Focusing the input should open the options list.
-      expect(findTestSubject(component, 'comboBoxOptionsList')).toBeDefined();
+      expect(
+        container.querySelector('[data-test-subj="comboBoxOptionsList"]')
+      ).toBeDefined();
 
       // Tab backwards to take focus off the combo box.
-      searchInput.simulate('keyDown', {
+      fireEvent.keyDown(searchInput, {
         key: comboBoxKeys.TAB,
         shiftKey: true,
       });
@@ -350,7 +379,7 @@ describe('behavior', () => {
     test('off the search input calls onCreateOption', () => {
       const onCreateOptionHandler = jest.fn();
 
-      const component = mount(
+      const { container } = render(
         <OuiComboBox
           options={options}
           selectedOptions={[options[2]]}
@@ -358,15 +387,16 @@ describe('behavior', () => {
         />
       );
 
-      component.setState({ searchValue: 'foo' });
-      const searchInput = findTestSubject(component, 'comboBoxSearchInput');
-      searchInput.simulate('focus');
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
 
-      const searchInputNode = searchInput.getDOMNode();
+      // Set search value and focus
+      fireEvent.change(searchInput, { target: { value: 'foo' } });
+      fireEvent.focus(searchInput);
+
       // React doesn't support `focusout` so we have to manually trigger it
-      searchInputNode.dispatchEvent(
-        new FocusEvent('focusout', { bubbles: true })
-      );
+      fireEvent.focusOut(searchInput);
 
       expect(onCreateOptionHandler).toHaveBeenCalledTimes(1);
       expect(onCreateOptionHandler).toHaveBeenNthCalledWith(1, 'foo', options);
@@ -374,23 +404,27 @@ describe('behavior', () => {
 
     test('off the search input does nothing if the user is navigating the options', () => {
       const onKeyDownWrapper = jest.fn();
-      const component = mount(
+      const { container } = render(
         <div onKeyDown={onKeyDownWrapper}>
           <OuiComboBox options={options} selectedOptions={[options[2]]} />
         </div>
       );
 
-      const searchInput = findTestSubject(component, 'comboBoxSearchInput');
-      searchInput.simulate('focus');
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+      fireEvent.focus(searchInput);
 
       // Focusing the input should open the options list.
-      expect(findTestSubject(component, 'comboBoxOptionsList')).toBeDefined();
+      expect(
+        container.querySelector('[data-test-subj="comboBoxOptionsList"]')
+      ).toBeDefined();
 
       // Navigate to an option.
-      searchInput.simulate('keyDown', { key: comboBoxKeys.ARROW_DOWN });
+      fireEvent.keyDown(searchInput, { key: comboBoxKeys.ARROW_DOWN });
 
       // Tab backwards to take focus off the combo box.
-      searchInput.simulate('keyDown', {
+      fireEvent.keyDown(searchInput, {
         key: comboBoxKeys.TAB,
         shiftKey: true,
       });
@@ -401,9 +435,9 @@ describe('behavior', () => {
   });
 
   describe('clear button', () => {
-    test('calls onChange callback with empty array', () => {
+    test('calls onChange callback with empty array', async () => {
       const onChangeHandler = jest.fn();
-      const component = mount(
+      const { container } = render(
         <OuiComboBox
           options={options}
           selectedOptions={[options[2]]}
@@ -411,32 +445,39 @@ describe('behavior', () => {
         />
       );
 
-      findTestSubject(component, 'comboBoxClearButton').simulate('click');
+      const user = userEvent.setup();
+      const clearButton = container.querySelector(
+        '[data-test-subj="comboBoxClearButton"]'
+      ) as HTMLElement;
+      await act(async () => {
+        await user.click(clearButton);
+      });
+
       expect(onChangeHandler).toHaveBeenCalledTimes(1);
       expect(onChangeHandler).toHaveBeenNthCalledWith(1, []);
     });
 
-    test('focuses the input', () => {
-      // Note: mounting to document because activeElement requires being part of document
-      const container = document.createElement('div');
-      document.body.appendChild(container);
-
-      const component = mount(
+    test('focuses the input', async () => {
+      const { container } = render(
         <OuiComboBox
           options={options}
           selectedOptions={[options[2]]}
           onChange={() => {}}
-        />,
-        { attachTo: container }
+        />
       );
 
-      findTestSubject(component, 'comboBoxClearButton').simulate('click');
-      expect(
-        findTestSubject(component, 'comboBoxSearchInput').getDOMNode()
-      ).toBe(document.activeElement);
+      const user = userEvent.setup();
+      const clearButton = container.querySelector(
+        '[data-test-subj="comboBoxClearButton"]'
+      ) as HTMLElement;
+      await act(async () => {
+        await user.click(clearButton);
+      });
 
-      // Clean up
-      document.body.removeChild(container);
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+      expect(document.activeElement).toBe(searchInput);
     });
   });
 
@@ -448,53 +489,54 @@ describe('behavior', () => {
       ...options,
     ];
     test('options "none"', () => {
-      const component = mount<
-        OuiComboBox<TitanOption>,
-        OuiComboBoxProps<TitanOption>,
-        { matchingOptions: TitanOption[] }
-      >(<OuiComboBox options={sortMatchesByOptions} sortMatchesBy="none" />);
-
-      findTestSubject(component, 'comboBoxSearchInput').simulate('change', {
-        target: { value: 'di' },
-      });
-
-      expect(component.state('matchingOptions')[0].label).toBe(
-        'Something is Disabled'
+      const { container } = render(
+        <OuiComboBox options={sortMatchesByOptions} sortMatchesBy="none" />
       );
+
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+      fireEvent.change(searchInput, { target: { value: 'di' } });
+
+      // Check the first matching option in the list
+      const firstOption = container.querySelector(
+        '[data-test-subj^="comboBoxOptionsList"] .ouiFilterSelectItem'
+      );
+      expect(firstOption?.textContent).toBe('Something is Disabled');
     });
 
     test('options "startsWith"', () => {
-      const component = mount<
-        OuiComboBox<TitanOption>,
-        OuiComboBoxProps<TitanOption>,
-        { matchingOptions: TitanOption[] }
-      >(
+      const { container } = render(
         <OuiComboBox
           options={sortMatchesByOptions}
           sortMatchesBy="startsWith"
         />
       );
 
-      findTestSubject(component, 'comboBoxSearchInput').simulate('change', {
-        target: { value: 'di' },
-      });
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+      fireEvent.change(searchInput, { target: { value: 'di' } });
 
-      expect(component.state('matchingOptions')[0].label).toBe('Dione');
+      // Check the first matching option in the list
+      const firstOption = container.querySelector(
+        '[data-test-subj^="comboBoxOptionsList"] .ouiFilterSelectItem'
+      );
+      expect(firstOption?.textContent).toBe('Dione');
     });
   });
 
   it('calls the inputRef prop with the input element', () => {
     const inputRefCallback = jest.fn();
 
-    const component = mount<
-      OuiComboBox<TitanOption>,
-      OuiComboBoxProps<TitanOption>,
-      { matchingOptions: TitanOption[] }
-    >(<OuiComboBox options={options} inputRef={inputRefCallback} />);
+    const { container } = render(
+      <OuiComboBox options={options} inputRef={inputRefCallback} />
+    );
 
     expect(inputRefCallback).toHaveBeenCalledTimes(1);
-    expect(component.find('input[role="textbox"]').getDOMNode()).toBe(
-      inputRefCallback.mock.calls[0][0]
-    );
+    const textboxInput = container.querySelector(
+      'input[role="textbox"]'
+    ) as HTMLInputElement;
+    expect(textboxInput).toBe(inputRefCallback.mock.calls[0][0]);
   });
 });

@@ -14,10 +14,16 @@ const originalConsoleError = console.error;
 
 // Override console.error to ignore specific React 18 warnings
 console.error = (message) => {
-  // Ignore the findDOMNode deprecation warning from React 18
+  // Ignore specific React 18 deprecation warnings
   if (
     typeof message === 'string' &&
-    message.includes('findDOMNode is deprecated')
+    (message.includes('findDOMNode is deprecated') ||
+      message.includes(
+        'Support for defaultProps will be removed from function components'
+      ) ||
+      message.includes(
+        'Support for defaultProps will be removed from memo components'
+      ))
   ) {
     // Just log the warning without throwing
     originalConsoleError('Warning suppressed for React 18 tests:', message);

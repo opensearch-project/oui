@@ -29,134 +29,138 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiAvatar, SIZES } from './avatar';
 
 describe('OuiAvatar', () => {
   test('is rendered', () => {
-    const component = render(<OuiAvatar name="name" {...requiredProps} />);
+    const { container } = render(<OuiAvatar name="name" {...requiredProps} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('allows a name composed entirely of whitespace', () => {
-    const component = render(<OuiAvatar name="  " {...requiredProps} />);
+    const { container } = render(<OuiAvatar name="  " {...requiredProps} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('imageUrl', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAvatar name="name" imageUrl="image url" />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('iconType', () => {
       it('is rendered', () => {
-        const component = render(<OuiAvatar name="name" iconType="bolt" />);
+        const { container } = render(<OuiAvatar name="name" iconType="bolt" />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('and iconSize is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAvatar name="name" iconType="bolt" iconSize="xl" />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('and iconColor is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAvatar name="name" iconType="bolt" iconColor="primary" />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('and iconColor as null is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiAvatar name="name" iconType="bolt" iconColor={null} />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('size', () => {
       SIZES.forEach((size) => {
         it(`${size} is rendered`, () => {
-          const component = render(<OuiAvatar name="name" size={size} />);
+          const { container } = render(<OuiAvatar name="name" size={size} />);
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
 
     describe('initials', () => {
       it('is rendered', () => {
-        const component = render(<OuiAvatar name="name" initials="lo" />);
+        const { container } = render(<OuiAvatar name="name" initials="lo" />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('initialsLength', () => {
       it('is rendered', () => {
-        const component = render(<OuiAvatar name="name" initialsLength={2} />);
+        const { container } = render(
+          <OuiAvatar name="name" initialsLength={2} />
+        );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('type', () => {
       it('is rendered', () => {
-        const component = render(<OuiAvatar name="name" type="space" />);
+        const { container } = render(<OuiAvatar name="name" type="space" />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('color', () => {
       it('as string is rendered', () => {
-        const component = render(<OuiAvatar name="name" color="#000" />);
+        const { container } = render(<OuiAvatar name="name" color="#000" />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('as null is rendered', () => {
-        const component = render(<OuiAvatar name="name" color={null} />);
+        const { container } = render(<OuiAvatar name="name" color={null} />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       it('as plain is rendered', () => {
-        const component = render(<OuiAvatar name="name" color="plain" />);
+        const { container } = render(<OuiAvatar name="name" color="plain" />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('isDisabled', () => {
       it('is rendered', () => {
-        const component = render(<OuiAvatar name="name" isDisabled={true} />);
+        const { container } = render(
+          <OuiAvatar name="name" isDisabled={true} />
+        );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
   });
 
   test('should throw error if color is not a hex', () => {
-    const component = () =>
+    const renderComponent = () =>
       render(<OuiAvatar name="name" color="rgba(0,0,0,0)" />);
 
-    expect(component).toThrowErrorMatchingSnapshot();
+    expect(renderComponent).toThrowErrorMatchingSnapshot();
   });
 });

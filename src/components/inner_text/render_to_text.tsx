@@ -49,8 +49,12 @@ export function useRenderToText(node: ReactNode, placeholder = ''): string {
     hostNode.current = (document.createDocumentFragment() as unknown) as Element;
     const root = render(<div ref={setRef}>{node}</div>, hostNode.current);
     return () => {
-      root.unmount();
-      hostNode.current = null;
+      // Use setTimeout to defer unmounting until after the current render cycle
+      // This prevents React 18's "synchronous unmount during render" warning
+      setTimeout(() => {
+        root.unmount();
+        hostNode.current = null;
+      }, 0);
     };
   }, [node, setRef]);
 
