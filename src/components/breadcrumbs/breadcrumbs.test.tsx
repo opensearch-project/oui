@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test';
 
 import { OuiBreadcrumbs } from './breadcrumbs';
@@ -78,69 +78,69 @@ const breadcrumbs = [
 
 describe('OuiBreadcrumbs', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiBreadcrumbs {...requiredProps} breadcrumbs={breadcrumbs} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('responsive', () => {
       test('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiBreadcrumbs breadcrumbs={breadcrumbs} responsive />
         );
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('is rendered as false', () => {
-        const component = render(
+        const { container } = render(
           <OuiBreadcrumbs breadcrumbs={breadcrumbs} responsive={false} />
         );
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('is rendered with custom breakpoints', () => {
-        const component = render(
+        const { container } = render(
           <OuiBreadcrumbs
             breadcrumbs={breadcrumbs}
             responsive={{ xs: 1, s: 1, m: 1, l: 1, xl: 1 }}
           />
         );
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('truncate as false', () => {
       test('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiBreadcrumbs breadcrumbs={breadcrumbs} truncate={false} />
         );
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('max', () => {
       test('renders 1 item', () => {
-        const component = render(
+        const { container } = render(
           <OuiBreadcrumbs breadcrumbs={breadcrumbs} max={1} />
         );
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('renders all items with null', () => {
-        const component = render(
+        const { container } = render(
           <OuiBreadcrumbs breadcrumbs={breadcrumbs} max={null} />
         );
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test("doesn't break when max exceeds the number of breadcrumbs", () => {
-        const component = render(
+        const { container } = render(
           <OuiBreadcrumbs breadcrumbs={breadcrumbs} max={20} />
         );
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
   });

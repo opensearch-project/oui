@@ -51,105 +51,53 @@ exports[`OuiTabbedContent behavior when selected tab state isn't controlled by t
 `;
 
 exports[`OuiTabbedContent behavior when uncontrolled, the selected tab should update if it receives new content 1`] = `
-<OuiTabbedContent
-  autoFocus="initial"
-  preserveTabContent={false}
-  tabs={
-    Array [
-      Object {
-        "content": <p>
-          Elasticsearch content
-        </p>,
-        "id": "es",
-        "name": "Elasticsearch",
-      },
-      Object {
-        "content": <p>
-          updated Kibana content
-        </p>,
-        "data-test-subj": "kibanaTab",
-        "id": "kibana",
-        "name": <strong>
-          Kibana
-        </strong>,
-      },
-    ]
-  }
->
-  <div>
-    <OuiTabs
-      onFocus={[Function]}
+<div>
+  <div
+    class="ouiTabs"
+    role="tablist"
+  >
+    <button
+      aria-controls="generated-id"
+      aria-selected="false"
+      class="ouiTab"
+      id="es"
+      role="tab"
+      type="button"
     >
-      <div
-        className="ouiTabs"
-        onFocus={[Function]}
-        role="tablist"
+      <span
+        class="ouiTab__content"
       >
-        <OuiTab
-          aria-controls="generated-id"
-          id="es"
-          isSelected={false}
-          key="es"
-          onClick={[Function]}
-        >
-          <button
-            aria-controls="generated-id"
-            aria-selected={false}
-            className="ouiTab"
-            disabled={false}
-            id="es"
-            onClick={[Function]}
-            role="tab"
-            type="button"
-          >
-            <span
-              className="ouiTab__content"
-            >
-              Elasticsearch
-            </span>
-          </button>
-        </OuiTab>
-        <OuiTab
-          aria-controls="generated-id"
-          data-test-subj="kibanaTab"
-          id="kibana"
-          isSelected={true}
-          key="kibana"
-          onClick={[Function]}
-        >
-          <button
-            aria-controls="generated-id"
-            aria-selected={true}
-            className="ouiTab ouiTab-isSelected"
-            data-test-subj="kibanaTab"
-            disabled={false}
-            id="kibana"
-            onClick={[Function]}
-            role="tab"
-            type="button"
-          >
-            <span
-              className="ouiTab__content"
-            >
-              <strong>
-                Kibana
-              </strong>
-            </span>
-          </button>
-        </OuiTab>
-      </div>
-    </OuiTabs>
-    <div
-      aria-labelledby="kibana"
-      id="generated-id"
-      role="tabpanel"
+        Elasticsearch
+      </span>
+    </button>
+    <button
+      aria-controls="generated-id"
+      aria-selected="true"
+      class="ouiTab ouiTab-isSelected"
+      data-test-subj="kibanaTab"
+      id="kibana"
+      role="tab"
+      type="button"
     >
-      <p>
-        updated Kibana content
-      </p>
-    </div>
+      <span
+        class="ouiTab__content"
+      >
+        <strong>
+          Kibana
+        </strong>
+      </span>
+    </button>
   </div>
-</OuiTabbedContent>
+  <div
+    aria-labelledby="kibana"
+    id="generated-id"
+    role="tabpanel"
+  >
+    <p>
+      updated Kibana content
+    </p>
+  </div>
+</div>
 `;
 
 exports[`OuiTabbedContent is rendered with required props and tabs 1`] = `

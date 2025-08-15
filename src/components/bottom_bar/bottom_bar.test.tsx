@@ -30,9 +30,9 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { render, mount } from 'enzyme';
+import { render } from '@testing-library/react';
 import { keysOf } from '../common';
-import { requiredProps, takeMountedSnapshot } from '../../test';
+import { requiredProps } from '../../test';
 
 import {
   OuiBottomBar,
@@ -50,20 +50,22 @@ ReactDOM.createPortal = (children) => {
 
 describe('OuiBottomBar', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiBottomBar {...requiredProps}>Content</OuiBottomBar>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('paddingSize', () => {
       keysOf(paddingSizeToClassNameMap).forEach((paddingSize) => {
         test(`${paddingSize} is rendered`, () => {
-          const component = render(<OuiBottomBar paddingSize={paddingSize} />);
+          const { container } = render(
+            <OuiBottomBar paddingSize={paddingSize} />
+          );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
@@ -71,52 +73,56 @@ describe('OuiBottomBar', () => {
     describe('position', () => {
       POSITIONS.forEach((position) => {
         test(`${position} is rendered`, () => {
-          const component = render(<OuiBottomBar position={position} />);
+          const { container } = render(<OuiBottomBar position={position} />);
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
 
     test('landmarkHeading', () => {
-      const component = render(
+      const { container } = render(
         <OuiBottomBar landmarkHeading="This should have been label" />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('affordForDisplacement can be false', () => {
-      const component = render(<OuiBottomBar affordForDisplacement={false} />);
+      const { container } = render(
+        <OuiBottomBar affordForDisplacement={false} />
+      );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('usePortal can be false', () => {
-      const component = render(<OuiBottomBar usePortal={false} />);
+      const { container } = render(<OuiBottomBar usePortal={false} />);
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('bodyClassName is rendered', () => {
-      const component = mount(<OuiBottomBar bodyClassName={'customClass'} />);
+      const { container } = render(
+        <OuiBottomBar bodyClassName={'customClass'} />
+      );
 
-      expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
       expect(document.body.classList.contains('customClass')).toBe(true);
     });
 
     test('style is customized', () => {
-      const component = render(<OuiBottomBar style={{ left: 12 }} />);
+      const { container } = render(<OuiBottomBar style={{ left: 12 }} />);
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('position props are altered', () => {
-      const component = render(
+      const { container } = render(
         <OuiBottomBar top={30} right={30} bottom={30} left={30} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 });

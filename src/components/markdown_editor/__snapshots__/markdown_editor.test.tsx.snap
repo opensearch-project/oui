@@ -1,1150 +1,1160 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiMarkdownEditor is rendered 1`] = `
-<div
-  class="ouiMarkdownEditor testClass1 testClass2"
-  data-test-subj="test subject string"
->
+<div>
   <div
-    class="ouiMarkdownEditorToolbar"
+    class="ouiMarkdownEditor testClass1 testClass2"
+    data-test-subj="test subject string"
   >
     <div
-      class="ouiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar"
     >
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Bold"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorBold"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Italic"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorItalic"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Unordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorUnorderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Ordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorOrderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Task list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="MarkdownCheckmark"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Quote"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="quote"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Code"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorCodeBlock"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Link"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorLink"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Tooltip"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorComment"
-          />
-        </button>
-      </span>
-    </div>
-    <button
-      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
-      type="button"
-    >
-      <span
-        class="ouiButtonContent ouiButtonEmpty__content"
-      >
-        <span
-          class="ouiButtonContent__icon"
-          color="inherit"
-          data-ouiicon-type="eye"
-        />
-        <span
-          class="ouiButtonEmpty__text"
-        >
-          Preview
-        </span>
-      </span>
-    </button>
-  </div>
-  <div
-    class="ouiMarkdownEditor__toggleContainer"
-    style="height:calc(100% - 0px)"
-  >
-    <div
-      class="ouiMarkdownEditorDropZone"
-      role="presentation"
-    >
-      <textarea
-        aria-label="aria-label"
-        class="ouiMarkdownEditorTextArea"
-        id="editorId"
-        rows="6"
-        style="height:calc(250px);max-height:500px"
-      />
       <div
-        class="ouiMarkdownEditorFooter"
+        class="ouiMarkdownEditorToolbar__buttons"
       >
-        <div
-          class="ouiMarkdownEditorFooter__actions"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Bold"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorBold"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Italic"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorItalic"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
         />
-        <button
-          aria-label="Show markdown help"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
-          type="button"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Unordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorUnorderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Ordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorOrderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Task list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownCheckmark"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Quote"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="quote"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Code"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorCodeBlock"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Link"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorLink"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Tooltip"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorComment"
+            />
+          </button>
+        </span>
+      </div>
+      <button
+        class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
+        type="button"
+      >
+        <span
+          class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
+            class="ouiButtonContent__icon"
             color="inherit"
-            data-ouiicon-type="MarkdownLogo"
+            data-ouiicon-type="eye"
           />
-        </button>
+          <span
+            class="ouiButtonEmpty__text"
+          >
+            Preview
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      class="ouiMarkdownEditor__toggleContainer"
+      style="height: calc(100% - 0px);"
+    >
+      <div
+        class="ouiMarkdownEditorDropZone"
+        role="presentation"
+      >
+        <textarea
+          aria-label="aria-label"
+          class="ouiMarkdownEditorTextArea"
+          id="editorId"
+          rows="6"
+          style="height: calc(250px); max-height: 500px;"
+        />
+        <div
+          class="ouiMarkdownEditorFooter"
+        >
+          <div
+            class="ouiMarkdownEditorFooter__actions"
+          />
+          <button
+            aria-label="Show markdown help"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownLogo"
+            />
+          </button>
+        </div>
+        <input
+          multiple=""
+          style="display: none;"
+          tabindex="-1"
+          type="file"
+        />
       </div>
-      <input
-        multiple=""
-        style="display:none"
-        tabindex="-1"
-        type="file"
-      />
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiMarkdownEditor props autoExpandPreview is rendered with false 1`] = `
-<div
-  class="ouiMarkdownEditor testClass1 testClass2"
-  data-test-subj="test subject string"
->
+<div>
   <div
-    class="ouiMarkdownEditorToolbar"
+    class="ouiMarkdownEditor testClass1 testClass2"
+    data-test-subj="test subject string"
   >
     <div
-      class="ouiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar"
     >
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Bold"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorBold"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Italic"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorItalic"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Unordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorUnorderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Ordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorOrderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Task list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="MarkdownCheckmark"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Quote"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="quote"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Code"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorCodeBlock"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Link"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorLink"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Tooltip"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorComment"
-          />
-        </button>
-      </span>
-    </div>
-    <button
-      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
-      type="button"
-    >
-      <span
-        class="ouiButtonContent ouiButtonEmpty__content"
-      >
-        <span
-          class="ouiButtonContent__icon"
-          color="inherit"
-          data-ouiicon-type="eye"
-        />
-        <span
-          class="ouiButtonEmpty__text"
-        >
-          Preview
-        </span>
-      </span>
-    </button>
-  </div>
-  <div
-    class="ouiMarkdownEditor__toggleContainer"
-    style="height:calc(100% - 0px)"
-  >
-    <div
-      class="ouiMarkdownEditorDropZone"
-      role="presentation"
-    >
-      <textarea
-        aria-label="aria-label"
-        class="ouiMarkdownEditorTextArea"
-        id="editorId"
-        rows="6"
-        style="height:calc(250px);max-height:500px"
-      />
       <div
-        class="ouiMarkdownEditorFooter"
+        class="ouiMarkdownEditorToolbar__buttons"
       >
-        <div
-          class="ouiMarkdownEditorFooter__actions"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Bold"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorBold"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Italic"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorItalic"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
         />
-        <button
-          aria-label="Show markdown help"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
-          type="button"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Unordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorUnorderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Ordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorOrderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Task list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownCheckmark"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Quote"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="quote"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Code"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorCodeBlock"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Link"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorLink"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Tooltip"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorComment"
+            />
+          </button>
+        </span>
+      </div>
+      <button
+        class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
+        type="button"
+      >
+        <span
+          class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
+            class="ouiButtonContent__icon"
             color="inherit"
-            data-ouiicon-type="MarkdownLogo"
+            data-ouiicon-type="eye"
           />
-        </button>
+          <span
+            class="ouiButtonEmpty__text"
+          >
+            Preview
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      class="ouiMarkdownEditor__toggleContainer"
+      style="height: calc(100% - 0px);"
+    >
+      <div
+        class="ouiMarkdownEditorDropZone"
+        role="presentation"
+      >
+        <textarea
+          aria-label="aria-label"
+          class="ouiMarkdownEditorTextArea"
+          id="editorId"
+          rows="6"
+          style="height: calc(250px); max-height: 500px;"
+        />
+        <div
+          class="ouiMarkdownEditorFooter"
+        >
+          <div
+            class="ouiMarkdownEditorFooter__actions"
+          />
+          <button
+            aria-label="Show markdown help"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownLogo"
+            />
+          </button>
+        </div>
+        <input
+          multiple=""
+          style="display: none;"
+          tabindex="-1"
+          type="file"
+        />
       </div>
-      <input
-        multiple=""
-        style="display:none"
-        tabindex="-1"
-        type="file"
-      />
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiMarkdownEditor props height is rendered in full mode 1`] = `
-<div
-  class="ouiMarkdownEditor ouiMarkdownEditor--fullHeight testClass1 testClass2"
-  data-test-subj="test subject string"
->
+<div>
   <div
-    class="ouiMarkdownEditorToolbar"
+    class="ouiMarkdownEditor ouiMarkdownEditor--fullHeight testClass1 testClass2"
+    data-test-subj="test subject string"
   >
     <div
-      class="ouiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar"
     >
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Bold"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorBold"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Italic"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorItalic"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Unordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorUnorderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Ordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorOrderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Task list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="MarkdownCheckmark"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Quote"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="quote"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Code"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorCodeBlock"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Link"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorLink"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Tooltip"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorComment"
-          />
-        </button>
-      </span>
-    </div>
-    <button
-      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
-      type="button"
-    >
-      <span
-        class="ouiButtonContent ouiButtonEmpty__content"
-      >
-        <span
-          class="ouiButtonContent__icon"
-          color="inherit"
-          data-ouiicon-type="eye"
-        />
-        <span
-          class="ouiButtonEmpty__text"
-        >
-          Preview
-        </span>
-      </span>
-    </button>
-  </div>
-  <div
-    class="ouiMarkdownEditor__toggleContainer"
-    style="height:calc(100% - 0px)"
-  >
-    <div
-      class="ouiMarkdownEditorDropZone"
-      role="presentation"
-    >
-      <textarea
-        aria-label="aria-label"
-        class="ouiMarkdownEditorTextArea"
-        id="editorId"
-        rows="6"
-        style="height:100%;max-height:"
-      />
       <div
-        class="ouiMarkdownEditorFooter"
+        class="ouiMarkdownEditorToolbar__buttons"
       >
-        <div
-          class="ouiMarkdownEditorFooter__actions"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Bold"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorBold"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Italic"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorItalic"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
         />
-        <button
-          aria-label="Show markdown help"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
-          type="button"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Unordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorUnorderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Ordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorOrderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Task list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownCheckmark"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Quote"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="quote"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Code"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorCodeBlock"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Link"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorLink"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Tooltip"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorComment"
+            />
+          </button>
+        </span>
+      </div>
+      <button
+        class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
+        type="button"
+      >
+        <span
+          class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
+            class="ouiButtonContent__icon"
             color="inherit"
-            data-ouiicon-type="MarkdownLogo"
+            data-ouiicon-type="eye"
           />
-        </button>
+          <span
+            class="ouiButtonEmpty__text"
+          >
+            Preview
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      class="ouiMarkdownEditor__toggleContainer"
+      style="height: calc(100% - 0px);"
+    >
+      <div
+        class="ouiMarkdownEditorDropZone"
+        role="presentation"
+      >
+        <textarea
+          aria-label="aria-label"
+          class="ouiMarkdownEditorTextArea"
+          id="editorId"
+          rows="6"
+          style="height: 100%;"
+        />
+        <div
+          class="ouiMarkdownEditorFooter"
+        >
+          <div
+            class="ouiMarkdownEditorFooter__actions"
+          />
+          <button
+            aria-label="Show markdown help"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownLogo"
+            />
+          </button>
+        </div>
+        <input
+          multiple=""
+          style="display: none;"
+          tabindex="-1"
+          type="file"
+        />
       </div>
-      <input
-        multiple=""
-        style="display:none"
-        tabindex="-1"
-        type="file"
-      />
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiMarkdownEditor props height is rendered with a custom size 1`] = `
-<div
-  class="ouiMarkdownEditor testClass1 testClass2"
-  data-test-subj="test subject string"
->
+<div>
   <div
-    class="ouiMarkdownEditorToolbar"
+    class="ouiMarkdownEditor testClass1 testClass2"
+    data-test-subj="test subject string"
   >
     <div
-      class="ouiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar"
     >
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Bold"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorBold"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Italic"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorItalic"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Unordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorUnorderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Ordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorOrderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Task list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="MarkdownCheckmark"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Quote"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="quote"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Code"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorCodeBlock"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Link"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorLink"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Tooltip"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorComment"
-          />
-        </button>
-      </span>
-    </div>
-    <button
-      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
-      type="button"
-    >
-      <span
-        class="ouiButtonContent ouiButtonEmpty__content"
-      >
-        <span
-          class="ouiButtonContent__icon"
-          color="inherit"
-          data-ouiicon-type="eye"
-        />
-        <span
-          class="ouiButtonEmpty__text"
-        >
-          Preview
-        </span>
-      </span>
-    </button>
-  </div>
-  <div
-    class="ouiMarkdownEditor__toggleContainer"
-    style="height:calc(100% - 0px)"
-  >
-    <div
-      class="ouiMarkdownEditorDropZone"
-      role="presentation"
-    >
-      <textarea
-        aria-label="aria-label"
-        class="ouiMarkdownEditorTextArea"
-        id="editorId"
-        rows="6"
-        style="height:calc(400px);max-height:500px"
-      />
       <div
-        class="ouiMarkdownEditorFooter"
+        class="ouiMarkdownEditorToolbar__buttons"
       >
-        <div
-          class="ouiMarkdownEditorFooter__actions"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Bold"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorBold"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Italic"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorItalic"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
         />
-        <button
-          aria-label="Show markdown help"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
-          type="button"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Unordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorUnorderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Ordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorOrderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Task list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownCheckmark"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Quote"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="quote"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Code"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorCodeBlock"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Link"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorLink"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Tooltip"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorComment"
+            />
+          </button>
+        </span>
+      </div>
+      <button
+        class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
+        type="button"
+      >
+        <span
+          class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
+            class="ouiButtonContent__icon"
             color="inherit"
-            data-ouiicon-type="MarkdownLogo"
+            data-ouiicon-type="eye"
           />
-        </button>
+          <span
+            class="ouiButtonEmpty__text"
+          >
+            Preview
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      class="ouiMarkdownEditor__toggleContainer"
+      style="height: calc(100% - 0px);"
+    >
+      <div
+        class="ouiMarkdownEditorDropZone"
+        role="presentation"
+      >
+        <textarea
+          aria-label="aria-label"
+          class="ouiMarkdownEditorTextArea"
+          id="editorId"
+          rows="6"
+          style="height: calc(400px); max-height: 500px;"
+        />
+        <div
+          class="ouiMarkdownEditorFooter"
+        >
+          <div
+            class="ouiMarkdownEditorFooter__actions"
+          />
+          <button
+            aria-label="Show markdown help"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownLogo"
+            />
+          </button>
+        </div>
+        <input
+          multiple=""
+          style="display: none;"
+          tabindex="-1"
+          type="file"
+        />
       </div>
-      <input
-        multiple=""
-        style="display:none"
-        tabindex="-1"
-        type="file"
-      />
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiMarkdownEditor props maxHeight is rendered with a custom size 1`] = `
-<div
-  class="ouiMarkdownEditor testClass1 testClass2"
-  data-test-subj="test subject string"
->
+<div>
   <div
-    class="ouiMarkdownEditorToolbar"
+    class="ouiMarkdownEditor testClass1 testClass2"
+    data-test-subj="test subject string"
   >
     <div
-      class="ouiMarkdownEditorToolbar__buttons"
+      class="ouiMarkdownEditorToolbar"
     >
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Bold"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorBold"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Italic"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorItalic"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Unordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorUnorderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Ordered list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorOrderedList"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Task list"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="MarkdownCheckmark"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Quote"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="quote"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Code"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorCodeBlock"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Link"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorLink"
-          />
-        </button>
-      </span>
-      <span
-        class="ouiMarkdownEditorToolbar__divider"
-      />
-      <span
-        class="ouiToolTipAnchor"
-      >
-        <button
-          aria-label="Tooltip"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-          type="button"
-        >
-          <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
-            color="inherit"
-            data-ouiicon-type="editorComment"
-          />
-        </button>
-      </span>
-    </div>
-    <button
-      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
-      type="button"
-    >
-      <span
-        class="ouiButtonContent ouiButtonEmpty__content"
-      >
-        <span
-          class="ouiButtonContent__icon"
-          color="inherit"
-          data-ouiicon-type="eye"
-        />
-        <span
-          class="ouiButtonEmpty__text"
-        >
-          Preview
-        </span>
-      </span>
-    </button>
-  </div>
-  <div
-    class="ouiMarkdownEditor__toggleContainer"
-    style="height:calc(100% - 0px)"
-  >
-    <div
-      class="ouiMarkdownEditorDropZone"
-      role="presentation"
-    >
-      <textarea
-        aria-label="aria-label"
-        class="ouiMarkdownEditorTextArea"
-        id="editorId"
-        rows="6"
-        style="height:calc(250px);max-height:600px"
-      />
       <div
-        class="ouiMarkdownEditorFooter"
+        class="ouiMarkdownEditorToolbar__buttons"
       >
-        <div
-          class="ouiMarkdownEditorFooter__actions"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Bold"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorBold"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Italic"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorItalic"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
         />
-        <button
-          aria-label="Show markdown help"
-          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
-          type="button"
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Unordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorUnorderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Ordered list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorOrderedList"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Task list"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownCheckmark"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Quote"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="quote"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Code"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorCodeBlock"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Link"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorLink"
+            />
+          </button>
+        </span>
+        <span
+          class="ouiMarkdownEditorToolbar__divider"
+        />
+        <span
+          class="ouiToolTipAnchor"
+        >
+          <button
+            aria-label="Tooltip"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="editorComment"
+            />
+          </button>
+        </span>
+      </div>
+      <button
+        class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small"
+        type="button"
+      >
+        <span
+          class="ouiButtonContent ouiButtonEmpty__content"
         >
           <span
-            aria-hidden="true"
-            class="ouiButtonIcon__icon"
+            class="ouiButtonContent__icon"
             color="inherit"
-            data-ouiicon-type="MarkdownLogo"
+            data-ouiicon-type="eye"
           />
-        </button>
+          <span
+            class="ouiButtonEmpty__text"
+          >
+            Preview
+          </span>
+        </span>
+      </button>
+    </div>
+    <div
+      class="ouiMarkdownEditor__toggleContainer"
+      style="height: calc(100% - 0px);"
+    >
+      <div
+        class="ouiMarkdownEditorDropZone"
+        role="presentation"
+      >
+        <textarea
+          aria-label="aria-label"
+          class="ouiMarkdownEditorTextArea"
+          id="editorId"
+          rows="6"
+          style="height: calc(250px); max-height: 600px;"
+        />
+        <div
+          class="ouiMarkdownEditorFooter"
+        >
+          <div
+            class="ouiMarkdownEditorFooter__actions"
+          />
+          <button
+            aria-label="Show markdown help"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiMarkdownEditorFooter__help"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="MarkdownLogo"
+            />
+          </button>
+        </div>
+        <input
+          multiple=""
+          style="display: none;"
+          tabindex="-1"
+          type="file"
+        />
       </div>
-      <input
-        multiple=""
-        style="display:none"
-        tabindex="-1"
-        type="file"
-      />
     </div>
   </div>
 </div>

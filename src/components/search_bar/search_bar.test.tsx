@@ -30,8 +30,9 @@
 
 /* eslint-disable react/no-multi-comp */
 import React from 'react';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { requiredProps } from '../../test';
-import { mount, shallow } from 'enzyme';
 import { OuiSearchBar } from './search_bar';
 import { Query } from './query';
 import { keys } from '../../services';
@@ -44,9 +45,9 @@ describe('SearchBar', () => {
       onChange: () => {},
     };
 
-    const component = shallow(<OuiSearchBar {...props} />);
+    const { container } = render(<OuiSearchBar {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('render - tools', () => {
@@ -57,9 +58,9 @@ describe('SearchBar', () => {
       toolsRight: <div>Right</div>,
     };
 
-    const component = shallow(<OuiSearchBar {...props} />);
+    const { container } = render(<OuiSearchBar {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('render - box', () => {
@@ -72,12 +73,12 @@ describe('SearchBar', () => {
       onChange: () => {},
     };
 
-    const component = shallow(<OuiSearchBar {...props} />);
+    const { container } = render(<OuiSearchBar {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
-  test('render - provided query, filters', () => {
+  test('render - provided query, filters', async () => {
     const filters: SearchFilterConfig[] = [
       {
         type: 'is',
@@ -99,16 +100,20 @@ describe('SearchBar', () => {
       onChange: () => {},
     };
 
-    const component = shallow(<OuiSearchBar {...props} />);
+    let container: HTMLElement;
+    await act(async () => {
+      const result = render(<OuiSearchBar {...props} />);
+      container = result.container;
+    });
 
-    expect(component).toMatchSnapshot();
+    expect(container!).toMatchSnapshot();
   });
 
   describe('controlled input', () => {
     test('calls onChange callback when the query is modified', () => {
       const onChange = jest.fn();
 
-      const component = mount(
+      render(
         <OuiSearchBar
           query="status:active"
           onChange={onChange}
@@ -116,9 +121,13 @@ describe('SearchBar', () => {
         />
       );
 
-      component.find('input[data-test-subj="searchbar"]').simulate('keyup', {
-        key: keys.ENTER,
-        target: { value: 'status:inactive' },
+      const input = screen.getByTestId('searchbar');
+
+      // In React Testing Library, we need to set the value and then trigger the keyUp event
+      Object.defineProperty(input, 'value', { value: 'status:inactive' });
+
+      act(() => {
+        fireEvent.keyUp(input, { key: keys.ENTER });
       });
 
       expect(onChange).toHaveBeenCalledTimes(1);

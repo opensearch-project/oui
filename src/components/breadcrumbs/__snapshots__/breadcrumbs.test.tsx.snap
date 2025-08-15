@@ -1,612 +1,660 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiBreadcrumbs is rendered 1`] = `
-<nav
-  aria-label="aria-label"
-  class="ouiBreadcrumbs testClass1 testClass2 ouiBreadcrumbs--truncate"
-  data-test-subj="test subject string"
->
-  <div
-    class="ouiBreadcrumbWall"
+<div>
+  <nav
+    aria-label="aria-label"
+    class="ouiBreadcrumbs testClass1 testClass2 ouiBreadcrumbs--truncate"
+    data-test-subj="test subject string"
   >
     <div
-      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
-    >
-      <a
-        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-        data-test-subj="breadcrumbsAnimals"
-        href="#"
-        rel="noreferrer"
-      >
-        Animals
-      </a>
-    </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
-    >
-      Metazoans
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
-  >
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      class="ouiBreadcrumbWall"
     >
       <div
-        class="ouiPopover__anchor"
+        class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
       >
-        <button
-          aria-label="Show collapsed breadcrumbs"
-          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
-          title="Show collapsed breadcrumbs"
-          type="button"
+        <a
+          class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+          data-test-subj="breadcrumbsAnimals"
+          href="#"
+          rel="noreferrer"
+          title="Animals"
         >
-          … 
-          <span
-            data-ouiicon-type="arrowDown"
-          />
-        </button>
+          Animals
+        </a>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <button
-      class="ouiLink ouiLink--subdued ouiBreadcrumb"
-      type="button"
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Reptiles
-    </button>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
-  >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
-      href="#"
-      rel="noreferrer"
+      <span
+        aria-current="false"
+        class="ouiBreadcrumb"
+        title="Metazoans"
+      >
+        Metazoans
+      </span>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
     >
-      Boa constrictor
-    </a>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
-  >
-    <span
-      aria-current="page"
-      class="ouiBreadcrumb ouiBreadcrumb--last"
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      >
+        <div
+          class="ouiPopover__anchor"
+        >
+          <button
+            aria-label="Show collapsed breadcrumbs"
+            class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+            title="Show collapsed breadcrumbs"
+            type="button"
+          >
+            … 
+            <span
+              data-ouiicon-type="arrowDown"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Edit
-    </span>
-  </div>
-</nav>
+      <button
+        class="ouiLink ouiLink--subdued ouiBreadcrumb"
+        title="Reptiles"
+        type="button"
+      >
+        Reptiles
+      </button>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
+    >
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
+        href="#"
+        rel="noreferrer"
+        title="Boa constrictor"
+      >
+        Boa constrictor
+      </a>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
+    >
+      <span
+        aria-current="page"
+        class="ouiBreadcrumb ouiBreadcrumb--last"
+        title="Edit"
+      >
+        Edit
+      </span>
+    </div>
+  </nav>
+</div>
 `;
 
 exports[`OuiBreadcrumbs props max doesn't break when max exceeds the number of breadcrumbs 1`] = `
-<nav
-  aria-label="breadcrumb"
-  class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
->
-  <div
-    class="ouiBreadcrumbWall"
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
   >
     <div
-      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
-    >
-      <a
-        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-        data-test-subj="breadcrumbsAnimals"
-        href="#"
-        rel="noreferrer"
-      >
-        Animals
-      </a>
-    </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
-    >
-      Metazoans
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
-  >
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      class="ouiBreadcrumbWall"
     >
       <div
-        class="ouiPopover__anchor"
+        class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
       >
-        <button
-          aria-label="Show collapsed breadcrumbs"
-          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
-          title="Show collapsed breadcrumbs"
-          type="button"
+        <a
+          class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+          data-test-subj="breadcrumbsAnimals"
+          href="#"
+          rel="noreferrer"
+          title="Animals"
         >
-          … 
-          <span
-            data-ouiicon-type="arrowDown"
-          />
-        </button>
+          Animals
+        </a>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <button
-      class="ouiLink ouiLink--subdued ouiBreadcrumb"
-      type="button"
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Reptiles
-    </button>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
-  >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
-      href="#"
-      rel="noreferrer"
+      <span
+        aria-current="false"
+        class="ouiBreadcrumb"
+        title="Metazoans"
+      >
+        Metazoans
+      </span>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
     >
-      Boa constrictor
-    </a>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
-  >
-    <span
-      aria-current="page"
-      class="ouiBreadcrumb ouiBreadcrumb--last"
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      >
+        <div
+          class="ouiPopover__anchor"
+        >
+          <button
+            aria-label="Show collapsed breadcrumbs"
+            class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+            title="Show collapsed breadcrumbs"
+            type="button"
+          >
+            … 
+            <span
+              data-ouiicon-type="arrowDown"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Edit
-    </span>
-  </div>
-</nav>
+      <button
+        class="ouiLink ouiLink--subdued ouiBreadcrumb"
+        title="Reptiles"
+        type="button"
+      >
+        Reptiles
+      </button>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
+    >
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
+        href="#"
+        rel="noreferrer"
+        title="Boa constrictor"
+      >
+        Boa constrictor
+      </a>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
+    >
+      <span
+        aria-current="page"
+        class="ouiBreadcrumb ouiBreadcrumb--last"
+        title="Edit"
+      >
+        Edit
+      </span>
+    </div>
+  </nav>
+</div>
 `;
 
 exports[`OuiBreadcrumbs props max renders 1 item 1`] = `
-<nav
-  aria-label="breadcrumb"
-  class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
->
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
   >
     <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
     >
       <div
-        class="ouiPopover__anchor"
+        class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
       >
-        <button
-          aria-label="Show collapsed breadcrumbs"
-          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
-          title="Show collapsed breadcrumbs"
-          type="button"
+        <div
+          class="ouiPopover__anchor"
         >
-          … 
-          <span
-            data-ouiicon-type="arrowDown"
-          />
-        </button>
+          <button
+            aria-label="Show collapsed breadcrumbs"
+            class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+            title="Show collapsed breadcrumbs"
+            type="button"
+          >
+            … 
+            <span
+              data-ouiicon-type="arrowDown"
+            />
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
-  >
-    <span
-      aria-current="page"
-      class="ouiBreadcrumb ouiBreadcrumb--last"
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
     >
-      Edit
-    </span>
-  </div>
-</nav>
+      <span
+        aria-current="page"
+        class="ouiBreadcrumb ouiBreadcrumb--last"
+        title="Edit"
+      >
+        Edit
+      </span>
+    </div>
+  </nav>
+</div>
 `;
 
 exports[`OuiBreadcrumbs props max renders all items with null 1`] = `
-<nav
-  aria-label="breadcrumb"
-  class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
->
-  <div
-    class="ouiBreadcrumbWall"
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
   >
     <div
-      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
-    >
-      <a
-        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-        data-test-subj="breadcrumbsAnimals"
-        href="#"
-        rel="noreferrer"
-      >
-        Animals
-      </a>
-    </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
-    >
-      Metazoans
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
-  >
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      class="ouiBreadcrumbWall"
     >
       <div
-        class="ouiPopover__anchor"
+        class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
       >
-        <button
-          aria-label="Show collapsed breadcrumbs"
-          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
-          title="Show collapsed breadcrumbs"
-          type="button"
+        <a
+          class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+          data-test-subj="breadcrumbsAnimals"
+          href="#"
+          rel="noreferrer"
+          title="Animals"
         >
-          … 
-          <span
-            data-ouiicon-type="arrowDown"
-          />
-        </button>
+          Animals
+        </a>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <button
-      class="ouiLink ouiLink--subdued ouiBreadcrumb"
-      type="button"
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Reptiles
-    </button>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
-  >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
-      href="#"
-      rel="noreferrer"
+      <span
+        aria-current="false"
+        class="ouiBreadcrumb"
+        title="Metazoans"
+      >
+        Metazoans
+      </span>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
     >
-      Boa constrictor
-    </a>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
-  >
-    <span
-      aria-current="page"
-      class="ouiBreadcrumb ouiBreadcrumb--last"
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      >
+        <div
+          class="ouiPopover__anchor"
+        >
+          <button
+            aria-label="Show collapsed breadcrumbs"
+            class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+            title="Show collapsed breadcrumbs"
+            type="button"
+          >
+            … 
+            <span
+              data-ouiicon-type="arrowDown"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Edit
-    </span>
-  </div>
-</nav>
+      <button
+        class="ouiLink ouiLink--subdued ouiBreadcrumb"
+        title="Reptiles"
+        type="button"
+      >
+        Reptiles
+      </button>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
+    >
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
+        href="#"
+        rel="noreferrer"
+        title="Boa constrictor"
+      >
+        Boa constrictor
+      </a>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
+    >
+      <span
+        aria-current="page"
+        class="ouiBreadcrumb ouiBreadcrumb--last"
+        title="Edit"
+      >
+        Edit
+      </span>
+    </div>
+  </nav>
+</div>
 `;
 
 exports[`OuiBreadcrumbs props responsive is rendered 1`] = `
-<nav
-  aria-label="breadcrumb"
-  class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
->
-  <div
-    class="ouiBreadcrumbWall"
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
   >
     <div
-      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
-    >
-      <a
-        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-        data-test-subj="breadcrumbsAnimals"
-        href="#"
-        rel="noreferrer"
-      >
-        Animals
-      </a>
-    </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
-    >
-      Metazoans
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
-  >
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      class="ouiBreadcrumbWall"
     >
       <div
-        class="ouiPopover__anchor"
+        class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
       >
-        <button
-          aria-label="Show collapsed breadcrumbs"
-          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
-          title="Show collapsed breadcrumbs"
-          type="button"
+        <a
+          class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+          data-test-subj="breadcrumbsAnimals"
+          href="#"
+          rel="noreferrer"
+          title="Animals"
         >
-          … 
-          <span
-            data-ouiicon-type="arrowDown"
-          />
-        </button>
+          Animals
+        </a>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <button
-      class="ouiLink ouiLink--subdued ouiBreadcrumb"
-      type="button"
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Reptiles
-    </button>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
-  >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
-      href="#"
-      rel="noreferrer"
+      <span
+        aria-current="false"
+        class="ouiBreadcrumb"
+        title="Metazoans"
+      >
+        Metazoans
+      </span>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
     >
-      Boa constrictor
-    </a>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
-  >
-    <span
-      aria-current="page"
-      class="ouiBreadcrumb ouiBreadcrumb--last"
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      >
+        <div
+          class="ouiPopover__anchor"
+        >
+          <button
+            aria-label="Show collapsed breadcrumbs"
+            class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+            title="Show collapsed breadcrumbs"
+            type="button"
+          >
+            … 
+            <span
+              data-ouiicon-type="arrowDown"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Edit
-    </span>
-  </div>
-</nav>
+      <button
+        class="ouiLink ouiLink--subdued ouiBreadcrumb"
+        title="Reptiles"
+        type="button"
+      >
+        Reptiles
+      </button>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
+    >
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
+        href="#"
+        rel="noreferrer"
+        title="Boa constrictor"
+      >
+        Boa constrictor
+      </a>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
+    >
+      <span
+        aria-current="page"
+        class="ouiBreadcrumb ouiBreadcrumb--last"
+        title="Edit"
+      >
+        Edit
+      </span>
+    </div>
+  </nav>
+</div>
 `;
 
 exports[`OuiBreadcrumbs props responsive is rendered as false 1`] = `
-<nav
-  aria-label="breadcrumb"
-  class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
->
-  <div
-    class="ouiBreadcrumbWall"
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
   >
     <div
-      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
-    >
-      <a
-        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-        data-test-subj="breadcrumbsAnimals"
-        href="#"
-        rel="noreferrer"
-      >
-        Animals
-      </a>
-    </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
-    >
-      Metazoans
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
-  >
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      class="ouiBreadcrumbWall"
     >
       <div
-        class="ouiPopover__anchor"
+        class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
       >
-        <button
-          aria-label="Show collapsed breadcrumbs"
-          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
-          title="Show collapsed breadcrumbs"
-          type="button"
+        <a
+          class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+          data-test-subj="breadcrumbsAnimals"
+          href="#"
+          rel="noreferrer"
+          title="Animals"
         >
-          … 
-          <span
-            data-ouiicon-type="arrowDown"
-          />
-        </button>
+          Animals
+        </a>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <button
-      class="ouiLink ouiLink--subdued ouiBreadcrumb"
-      type="button"
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Reptiles
-    </button>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
-  >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
-      href="#"
-      rel="noreferrer"
+      <span
+        aria-current="false"
+        class="ouiBreadcrumb"
+        title="Metazoans"
+      >
+        Metazoans
+      </span>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
     >
-      Boa constrictor
-    </a>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
-  >
-    <span
-      aria-current="page"
-      class="ouiBreadcrumb ouiBreadcrumb--last"
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      >
+        <div
+          class="ouiPopover__anchor"
+        >
+          <button
+            aria-label="Show collapsed breadcrumbs"
+            class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+            title="Show collapsed breadcrumbs"
+            type="button"
+          >
+            … 
+            <span
+              data-ouiicon-type="arrowDown"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Edit
-    </span>
-  </div>
-</nav>
+      <button
+        class="ouiLink ouiLink--subdued ouiBreadcrumb"
+        title="Reptiles"
+        type="button"
+      >
+        Reptiles
+      </button>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
+    >
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
+        href="#"
+        rel="noreferrer"
+        title="Boa constrictor"
+      >
+        Boa constrictor
+      </a>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
+    >
+      <span
+        aria-current="page"
+        class="ouiBreadcrumb ouiBreadcrumb--last"
+        title="Edit"
+      >
+        Edit
+      </span>
+    </div>
+  </nav>
+</div>
 `;
 
 exports[`OuiBreadcrumbs props responsive is rendered with custom breakpoints 1`] = `
-<nav
-  aria-label="breadcrumb"
-  class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
->
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="ouiBreadcrumbs ouiBreadcrumbs--truncate"
   >
     <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
     >
       <div
-        class="ouiPopover__anchor"
+        class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
       >
-        <button
-          aria-label="Show collapsed breadcrumbs"
-          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
-          title="Show collapsed breadcrumbs"
-          type="button"
+        <div
+          class="ouiPopover__anchor"
         >
-          … 
-          <span
-            data-ouiicon-type="arrowDown"
-          />
-        </button>
+          <button
+            aria-label="Show collapsed breadcrumbs"
+            class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+            title="Show collapsed breadcrumbs"
+            type="button"
+          >
+            … 
+            <span
+              data-ouiicon-type="arrowDown"
+            />
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
-  >
-    <span
-      aria-current="page"
-      class="ouiBreadcrumb ouiBreadcrumb--last"
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
     >
-      Edit
-    </span>
-  </div>
-</nav>
+      <span
+        aria-current="page"
+        class="ouiBreadcrumb ouiBreadcrumb--last"
+        title="Edit"
+      >
+        Edit
+      </span>
+    </div>
+  </nav>
+</div>
 `;
 
 exports[`OuiBreadcrumbs props truncate as false is rendered 1`] = `
-<nav
-  aria-label="breadcrumb"
-  class="ouiBreadcrumbs"
->
-  <div
-    class="ouiBreadcrumbWall"
+<div>
+  <nav
+    aria-label="breadcrumb"
+    class="ouiBreadcrumbs"
   >
     <div
-      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
-    >
-      <a
-        class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
-        data-test-subj="breadcrumbsAnimals"
-        href="#"
-        rel="noreferrer"
-      >
-        Animals
-      </a>
-    </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <span
-      aria-current="false"
-      class="ouiBreadcrumb"
-    >
-      Metazoans
-    </span>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
-  >
-    <div
-      class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      class="ouiBreadcrumbWall"
     >
       <div
-        class="ouiPopover__anchor"
+        class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--first"
       >
-        <button
-          aria-label="Show collapsed breadcrumbs"
-          class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
-          title="Show collapsed breadcrumbs"
-          type="button"
+        <a
+          class="ouiLink ouiLink--subdued ouiBreadcrumb customClass"
+          data-test-subj="breadcrumbsAnimals"
+          href="#"
+          rel="noreferrer"
+          title="Animals"
         >
-          … 
-          <span
-            data-ouiicon-type="arrowDown"
-          />
-        </button>
+          Animals
+        </a>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper"
-  >
-    <button
-      class="ouiLink ouiLink--subdued ouiBreadcrumb"
-      type="button"
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Reptiles
-    </button>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
-  >
-    <a
-      class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
-      href="#"
-      rel="noreferrer"
+      <span
+        aria-current="false"
+        class="ouiBreadcrumb"
+        title="Metazoans"
+      >
+        Metazoans
+      </span>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--collapsed"
     >
-      Boa constrictor
-    </a>
-  </div>
-  <div
-    class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
-  >
-    <span
-      aria-current="page"
-      class="ouiBreadcrumb ouiBreadcrumb--last"
+      <div
+        class="ouiPopover ouiPopover--anchorDownCenter ouiBreadcrumb ouiBreadcrumb--collapsed"
+      >
+        <div
+          class="ouiPopover__anchor"
+        >
+          <button
+            aria-label="Show collapsed breadcrumbs"
+            class="ouiLink ouiLink--subdued ouiBreadcrumb__collapsedLink"
+            title="Show collapsed breadcrumbs"
+            type="button"
+          >
+            … 
+            <span
+              data-ouiicon-type="arrowDown"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper"
     >
-      Edit
-    </span>
-  </div>
-</nav>
+      <button
+        class="ouiLink ouiLink--subdued ouiBreadcrumb"
+        title="Reptiles"
+        type="button"
+      >
+        Reptiles
+      </button>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--truncate"
+    >
+      <a
+        class="ouiLink ouiLink--subdued ouiBreadcrumb ouiBreadcrumb--truncate"
+        href="#"
+        rel="noreferrer"
+        title="Boa constrictor"
+      >
+        Boa constrictor
+      </a>
+    </div>
+    <div
+      class="ouiBreadcrumbWrapper ouiBreadcrumbWrapper--last"
+    >
+      <span
+        aria-current="page"
+        class="ouiBreadcrumb ouiBreadcrumb--last"
+        title="Edit"
+      >
+        Edit
+      </span>
+    </div>
+  </nav>
+</div>
 `;

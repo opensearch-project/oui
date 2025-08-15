@@ -29,94 +29,107 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { requiredProps } from '../../test';
 import { OuiLink, COLORS } from './link';
 
 describe('OuiLink', () => {
   COLORS.forEach((color) => {
     test(`${color} is rendered`, () => {
-      const component = render(<OuiLink color={color} />);
-      expect(component).toMatchSnapshot();
+      const { container } = render(<OuiLink color={color} />);
+      expect(container).toMatchSnapshot();
     });
   });
 
   test('it supports both href and onClick', () => {
-    const component = render(<OuiLink href="/imalink" onClick={() => null} />);
-    expect(component).toMatchSnapshot();
+    const { container } = render(
+      <OuiLink href="/imalink" onClick={() => null} />
+    );
+    expect(container).toMatchSnapshot();
   });
 
   test('it passes the default props through', () => {
-    const component = render(<OuiLink {...requiredProps} />);
-    expect(component).toMatchSnapshot();
+    const { container } = render(<OuiLink {...requiredProps} />);
+    expect(container).toMatchSnapshot();
   });
 
   test('supports children', () => {
-    const component = render(
+    const { container } = render(
       <OuiLink href="#">
         <span>Hiya!!!</span>
       </OuiLink>
     );
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('it is an external link', () => {
-    const component = render(<OuiLink external href="/baz/bing" />);
-    expect(component).toMatchSnapshot();
+    const { container } = render(<OuiLink external href="/baz/bing" />);
+    expect(container).toMatchSnapshot();
   });
 
   test('supports href', () => {
-    const component = render(<OuiLink href="/baz/bing" />);
-    expect(component).toMatchSnapshot();
+    const { container } = render(<OuiLink href="/baz/bing" />);
+    expect(container).toMatchSnapshot();
   });
 
   test('supports target', () => {
-    const component = render(<OuiLink href="#" target="_blank" />);
-    expect(component).toMatchSnapshot();
+    const { container } = render(<OuiLink href="#" target="_blank" />);
+    expect(container).toMatchSnapshot();
   });
 
   test('allows for target and external to be controlled independently', () => {
-    const component = render(
+    const { container } = render(
       <OuiLink href="#" target="_blank" external={false} />
     );
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('supports rel', () => {
-    const component = render(<OuiLink href="hoi" rel="stylesheet" />);
-    expect(component).toMatchSnapshot();
+    const { container } = render(<OuiLink href="hoi" rel="stylesheet" />);
+    expect(container).toMatchSnapshot();
   });
 
   test('supports disabled', () => {
-    const component = render(
+    const { container } = render(
       <OuiLink disabled onClick={() => 'hello, world!'} />
     );
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('if href is not specified, it renders a button of type=button', () => {
-    const component = render(<OuiLink />);
-    expect(component).toMatchSnapshot();
+    const { container } = render(<OuiLink />);
+    expect(container).toMatchSnapshot();
   });
 
   test('button respects the type property', () => {
-    const component = render(
+    const { container } = render(
       <OuiLink type="submit" onClick={() => 'hello, world!'} />
     );
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
-  test('onClick fires for buttons', () => {
+  test('onClick fires for buttons', async () => {
     const handler = jest.fn();
-    const component = mount(<OuiLink onClick={handler} />);
-    component.find('button').simulate('click');
-    expect(handler.mock.calls.length).toEqual(1);
+    render(<OuiLink onClick={handler} />);
+
+    const user = userEvent.setup();
+    await act(async () => {
+      await user.click(screen.getByRole('button'));
+    });
+
+    expect(handler).toHaveBeenCalledTimes(1);
   });
 
-  test('onClick fires for links', () => {
+  test('onClick fires for links', async () => {
     const handler = jest.fn();
-    const component = mount(<OuiLink href="#" onClick={handler} />);
-    component.find('a').simulate('click');
-    expect(handler.mock.calls.length).toEqual(1);
+    render(<OuiLink href="#" onClick={handler} />);
+
+    const user = userEvent.setup();
+    await act(async () => {
+      await user.click(screen.getByRole('link'));
+    });
+
+    expect(handler).toHaveBeenCalledTimes(1);
   });
 });

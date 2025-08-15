@@ -29,7 +29,8 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiFacetButton } from './facet_button';
@@ -37,72 +38,75 @@ import { OuiIcon } from '../icon';
 
 describe('OuiFacetButton', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiFacetButton {...requiredProps}>Content</OuiFacetButton>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('isDisabled', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiFacetButton isDisabled>Content</OuiFacetButton>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('isLoading', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiFacetButton isLoading>Content</OuiFacetButton>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('isSelected', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiFacetButton isSelected>Content</OuiFacetButton>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('quantity', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiFacetButton quantity={60}>Content</OuiFacetButton>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('icon', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiFacetButton icon={<OuiIcon type="dot" />}>Content</OuiFacetButton>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('onClick', () => {
-      it('supports onClick', () => {
+      it('supports onClick', async () => {
         const handler = jest.fn();
-        const component = mount(
-          <OuiFacetButton onClick={handler}>Content</OuiFacetButton>
-        );
-        component.find('button').simulate('click');
-        expect(handler.mock.calls.length).toEqual(1);
+        render(<OuiFacetButton onClick={handler}>Content</OuiFacetButton>);
+
+        const user = userEvent.setup();
+        await act(async () => {
+          await user.click(screen.getByRole('button'));
+        });
+
+        expect(handler).toHaveBeenCalledTimes(1);
       });
     });
   });

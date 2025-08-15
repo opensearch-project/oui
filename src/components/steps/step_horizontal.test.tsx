@@ -29,7 +29,8 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { requiredProps } from '../../test/required_props';
 
 import { STATUS } from './step_number';
@@ -37,54 +38,54 @@ import { OuiStepHorizontal } from './step_horizontal';
 
 describe('OuiStepHorizontal', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiStepHorizontal {...requiredProps} onClick={() => {}} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('step', () => {
-      const component = render(
+      const { container } = render(
         <OuiStepHorizontal step={5} onClick={() => {}} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('title', () => {
-      const component = render(
+      const { container } = render(
         <OuiStepHorizontal title={'First step'} onClick={() => {}} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('isSelected', () => {
-      const component = render(
+      const { container } = render(
         <OuiStepHorizontal isSelected onClick={() => {}} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('isComplete', () => {
-      const component = render(
+      const { container } = render(
         <OuiStepHorizontal isComplete onClick={() => {}} />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     describe('status', () => {
       STATUS.forEach((status) => {
         test(`${status} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiStepHorizontal status={status} onClick={() => {}} />
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
@@ -93,25 +94,27 @@ describe('OuiStepHorizontal', () => {
       test('is called when clicked', () => {
         const onClickHandler = jest.fn();
 
-        const component = mount(
-          <OuiStepHorizontal step={1} onClick={onClickHandler} />
-        );
+        render(<OuiStepHorizontal step={1} onClick={onClickHandler} />);
 
-        component.simulate('click');
+        act(() => {
+          fireEvent.click(screen.getByRole('button'));
+        });
 
-        expect(onClickHandler).toBeCalledTimes(1);
+        expect(onClickHandler).toHaveBeenCalledTimes(1);
       });
 
       test("isn't called when clicked if it's disabled", () => {
         const onClickHandler = jest.fn();
 
-        const component = mount(
+        render(
           <OuiStepHorizontal disabled step={1} onClick={onClickHandler} />
         );
 
-        component.simulate('click');
+        act(() => {
+          fireEvent.click(screen.getByRole('button'));
+        });
 
-        expect(onClickHandler).not.toBeCalled();
+        expect(onClickHandler).not.toHaveBeenCalled();
       });
     });
   });

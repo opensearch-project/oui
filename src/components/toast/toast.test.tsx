@@ -29,43 +29,48 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
-import { findTestSubject, requiredProps } from '../../test';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { requiredProps } from '../../test';
 
 import { COLORS, OuiToast } from './toast';
 
 describe('OuiToast', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiToast {...requiredProps} title="test title">
         <p>Hi</p>
       </OuiToast>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('Props', () => {
     describe('title', () => {
       test('is rendered', () => {
-        const component = <OuiToast title="toast title" />;
-        expect(mount(component)).toMatchSnapshot();
+        const { container } = render(<OuiToast title="toast title" />);
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('color', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = <OuiToast color={color} title="test title" />;
-          expect(mount(component)).toMatchSnapshot();
+          const { container } = render(
+            <OuiToast color={color} title="test title" />
+          );
+          expect(container).toMatchSnapshot();
         });
       });
     });
 
     describe('iconType', () => {
       test('is rendered', () => {
-        const component = <OuiToast iconType="user" title="test title" />;
-        expect(mount(component)).toMatchSnapshot();
+        const { container } = render(
+          <OuiToast iconType="user" title="test title" />
+        );
+        expect(container).toMatchSnapshot();
       });
     });
 
@@ -73,13 +78,13 @@ describe('OuiToast', () => {
       test('is called when the close button is clicked', () => {
         const onCloseHandler = jest.fn();
 
-        const component = mount(
-          <OuiToast onClose={onCloseHandler} title="test title" />
-        );
-        const closeButton = findTestSubject(component, 'toastCloseButton');
-        closeButton.simulate('click');
+        render(<OuiToast onClose={onCloseHandler} title="test title" />);
 
-        expect(onCloseHandler).toBeCalledTimes(1);
+        act(() => {
+          fireEvent.click(screen.getByTestId('toastCloseButton'));
+        });
+
+        expect(onCloseHandler).toHaveBeenCalledTimes(1);
       });
     });
   });

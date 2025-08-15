@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiHue } from './hue';
@@ -40,24 +40,26 @@ const onChange = () => {
 
 describe('OuiHue', () => {
   test('is rendered', () => {
-    const component = render(<OuiHue onChange={onChange} {...requiredProps} />);
+    const { container } = render(
+      <OuiHue onChange={onChange} {...requiredProps} />
+    );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('accepts a hue value', () => {
-    const component = render(
+    const { container } = render(
       <OuiHue hue={180} onChange={onChange} {...requiredProps} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('accepts a hex value', () => {
-    const component = render(
+    const { container } = render(
       <OuiHue hue={180} hex="#00FFFF" onChange={onChange} {...requiredProps} />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

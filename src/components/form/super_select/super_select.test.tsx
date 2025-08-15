@@ -29,8 +29,8 @@
  */
 
 import React from 'react';
-import { mount, render } from 'enzyme';
-import { requiredProps, takeMountedSnapshot } from '../../../test';
+import { render, fireEvent } from '@testing-library/react';
+import { requiredProps } from '../../../test';
 
 import { OuiSuperSelect } from './super_select';
 
@@ -45,7 +45,7 @@ const options = [
 
 describe('OuiSuperSelect', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiSuperSelect
         {...requiredProps}
         options={options}
@@ -53,12 +53,12 @@ describe('OuiSuperSelect', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('fullWidth is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiSuperSelect
           {...requiredProps}
           options={options}
@@ -67,11 +67,11 @@ describe('OuiSuperSelect', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('compressed is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiSuperSelect
           {...requiredProps}
           options={options}
@@ -80,11 +80,11 @@ describe('OuiSuperSelect', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('is rendered with a prepend and append', () => {
-      const component = render(
+      const { container } = render(
         <OuiSuperSelect
           {...requiredProps}
           options={options}
@@ -94,11 +94,11 @@ describe('OuiSuperSelect', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('select component is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiSuperSelect
           options={[
             { value: '1', inputDisplay: 'Option #1' },
@@ -108,11 +108,11 @@ describe('OuiSuperSelect', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('options are rendered when select is open', () => {
-      const component = mount(
+      const { getByTestId } = render(
         <OuiSuperSelect
           options={options}
           onChange={() => {}}
@@ -120,13 +120,13 @@ describe('OuiSuperSelect', () => {
         />
       );
 
-      component.find('button[data-test-subj="superSelect"]').simulate('click');
+      fireEvent.click(getByTestId('superSelect'));
 
-      expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      expect(document.body).toMatchSnapshot();
     });
 
     test('valueSelected is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiSuperSelect
           options={options}
           valueOfSelected="2"
@@ -134,11 +134,11 @@ describe('OuiSuperSelect', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('custom display is propagated to dropdown', () => {
-      const component = mount(
+      const { getByTestId } = render(
         <OuiSuperSelect
           options={[
             {
@@ -157,13 +157,13 @@ describe('OuiSuperSelect', () => {
         />
       );
 
-      component.find('button[data-test-subj="superSelect"]').simulate('click');
+      fireEvent.click(getByTestId('superSelect'));
 
-      expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      expect(document.body).toMatchSnapshot();
     });
 
     test('more props are propogated to each option', () => {
-      const component = mount(
+      const { getByTestId } = render(
         <OuiSuperSelect
           options={[
             { value: '1', inputDisplay: 'Option #1', disabled: true },
@@ -179,9 +179,9 @@ describe('OuiSuperSelect', () => {
         />
       );
 
-      component.find('button[data-test-subj="superSelect"]').simulate('click');
+      fireEvent.click(getByTestId('superSelect'));
 
-      expect(takeMountedSnapshot(component)).toMatchSnapshot();
+      expect(document.body).toMatchSnapshot();
     });
   });
 });
