@@ -1,586 +1,751 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiNotificationEvent is rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent"
->
-  <div
-    class="ouiNotificationEvent__content"
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent"
   >
     <div
-      class="ouiNotificationEventMeta"
+      class="ouiNotificationEvent__content"
     >
       <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-        >
-          <span
-            class="ouiBadge__content"
-          >
-            <span
-              class="ouiBadge__text"
-            >
-              Alert
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
-    </div>
-    <h2
-      class="ouiNotificationEvent__title"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h2>
-    <div
-      class="ouiNotificationEventMessages"
-    >
-      <div
-        class="ouiText ouiText--small"
+        class="ouiNotificationEventMeta"
       >
         <div
-          class="ouiTextColor ouiTextColor--subdued"
+          class="ouiNotificationEventMeta__section"
         >
-          <p>
-            message
-          </p>
+          <span
+            class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            title="Alert"
+          >
+            <span
+              class="ouiBadge__content"
+            >
+              <span
+                class="ouiBadge__text"
+              >
+                Alert
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiNotificationEventMeta__time"
+          >
+            1 min ago
+          </span>
+        </div>
+      </div>
+      <h2
+        class="ouiNotificationEvent__title"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
+      >
+        title
+      </h2>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</article>
-`;
-
-exports[`OuiNotificationEvent props badgeColor is rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent"
->
-  <div
-    class="ouiNotificationEvent__content"
-  >
-    <div
-      class="ouiNotificationEventMeta"
-    >
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiBadge ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-          style="background-color:#f1d86f;color:#000"
-        >
-          <span
-            class="ouiBadge__content"
-          >
-            <span
-              class="ouiBadge__text"
-            >
-              Alert
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
-    </div>
-    <h2
-      class="ouiNotificationEvent__title"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h2>
-    <div
-      class="ouiNotificationEventMessages"
-    >
-      <div
-        class="ouiText ouiText--small"
-      >
-        <div
-          class="ouiTextColor ouiTextColor--subdued"
-        >
-          <p>
-            message
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-`;
-
-exports[`OuiNotificationEvent props contextMenuItems are rendered 1`] = `
-<div
-  class="ouiContextMenuPanel"
-  tabindex="-1"
->
-  <div>
-    <div>
-      <button
-        class="ouiContextMenuItem"
-        type="button"
-      >
-        <span
-          class="ouiContextMenu__itemLayout"
-        >
-          <span
-            class="ouiContextMenuItem__text"
-          >
-            Context menu 1 for id: id
-          </span>
-        </span>
-      </button>
-      <button
-        class="ouiContextMenuItem"
-        type="button"
-      >
-        <span
-          class="ouiContextMenu__itemLayout"
-        >
-          <span
-            class="ouiContextMenuItem__text"
-          >
-            Context menu 2 for id: id
-          </span>
-        </span>
-      </button>
-      <button
-        class="ouiContextMenuItem"
-        type="button"
-      >
-        <span
-          class="ouiContextMenu__itemLayout"
-        >
-          <span
-            class="ouiContextMenuItem__text"
-          >
-            Context menu 3 for id: id
-          </span>
-        </span>
-      </button>
-    </div>
-  </div>
+  </article>
 </div>
 `;
 
-exports[`OuiNotificationEvent props headingLevel is rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent"
->
-  <div
-    class="ouiNotificationEvent__content"
+exports[`OuiNotificationEvent props badgeColor is rendered 1`] = `
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent"
   >
     <div
-      class="ouiNotificationEventMeta"
+      class="ouiNotificationEvent__content"
     >
       <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-        >
-          <span
-            class="ouiBadge__content"
-          >
-            <span
-              class="ouiBadge__text"
-            >
-              Alert
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
-    </div>
-    <h4
-      class="ouiNotificationEvent__title"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h4>
-    <div
-      class="ouiNotificationEventMessages"
-    >
-      <div
-        class="ouiText ouiText--small"
+        class="ouiNotificationEventMeta"
       >
         <div
-          class="ouiTextColor ouiTextColor--subdued"
+          class="ouiNotificationEventMeta__section"
         >
-          <p>
-            message
-          </p>
+          <span
+            class="ouiBadge ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            style="background-color: rgb(241, 216, 111); color: rgb(0, 0, 0);"
+            title="Alert"
+          >
+            <span
+              class="ouiBadge__content"
+            >
+              <span
+                class="ouiBadge__text"
+              >
+                Alert
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiNotificationEventMeta__time"
+          >
+            1 min ago
+          </span>
+        </div>
+      </div>
+      <h2
+        class="ouiNotificationEvent__title"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
+      >
+        title
+      </h2>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </article>
+</div>
+`;
+
+exports[`OuiNotificationEvent props contextMenuItems are rendered 1`] = `
+<body>
+  <div>
+    <article
+      aria-labelledby="generated-id"
+      class="ouiNotificationEvent"
+    >
+      <div
+        class="ouiNotificationEvent__content"
+      >
+        <div
+          class="ouiNotificationEventMeta ouiNotificationEventMeta--hasContextMenu"
+        >
+          <div
+            class="ouiNotificationEventMeta__section"
+          >
+            <span
+              class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+              title="Alert"
+            >
+              <span
+                class="ouiBadge__content"
+              >
+                <span
+                  class="ouiBadge__text"
+                >
+                  Alert
+                </span>
+              </span>
+            </span>
+          </div>
+          <div
+            class="ouiNotificationEventMeta__section"
+          >
+            <span
+              class="ouiNotificationEventMeta__time"
+            >
+              1 min ago
+            </span>
+          </div>
+          <div
+            class="ouiNotificationEventMeta__contextMenuWrapper"
+          >
+            <div
+              class="ouiPopover ouiPopover--anchorLeftUp"
+              id="generated-id"
+            >
+              <div
+                class="ouiPopover__anchor"
+              >
+                <button
+                  aria-controls="generated-id"
+                  aria-expanded="true"
+                  aria-haspopup="true"
+                  aria-label="Menu for title"
+                  class="ouiButtonIcon ouiButtonIcon--subdued ouiButtonIcon--empty ouiButtonIcon--xSmall"
+                  data-test-subj="id-notificationEventMetaButton"
+                  type="button"
+                >
+                  <span
+                    aria-hidden="true"
+                    class="ouiButtonIcon__icon"
+                    color="inherit"
+                    data-ouiicon-type="boxesVertical"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2
+          class="ouiNotificationEvent__title"
+          data-test-subj="id-notificationEventTitle"
+          id="generated-id"
+        >
+          title
+        </h2>
+        <div
+          class="ouiNotificationEventMessages"
+        >
+          <div
+            class="ouiText ouiText--small"
+          >
+            <div
+              class="ouiTextColor ouiTextColor--subdued"
+            >
+              <p>
+                message
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
   </div>
-</article>
+  <div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="-1"
+    />
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="-1"
+    />
+    <div
+      data-focus-lock-disabled="disabled"
+    >
+      <div
+        aria-describedby="generated-id"
+        aria-live="off"
+        aria-modal="true"
+        class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPopover__panel ouiPopover__panel--left"
+        data-autofocus="true"
+        role="dialog"
+        style="top: -22px; left: -16px; will-change: transform, opacity; z-index: 2000;"
+        tabindex="0"
+      >
+        <div
+          class="ouiPopover__panelArrow ouiPopover__panelArrow--left"
+          style="left: 0px; top: 10px;"
+        />
+        <p
+          class="ouiScreenReaderOnly"
+          id="generated-id"
+        >
+          You are in a dialog. To close this dialog, hit escape.
+        </p>
+        <div>
+          <div>
+            <div
+              class="ouiContextMenuPanel"
+              tabindex="-1"
+            >
+              <div>
+                <div>
+                  <button
+                    class="ouiContextMenuItem"
+                    type="button"
+                  >
+                    <span
+                      class="ouiContextMenu__itemLayout"
+                    >
+                      <span
+                        class="ouiContextMenuItem__text"
+                      >
+                        Context menu 1 for id: 
+                        id
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    class="ouiContextMenuItem"
+                    type="button"
+                  >
+                    <span
+                      class="ouiContextMenu__itemLayout"
+                    >
+                      <span
+                        class="ouiContextMenuItem__text"
+                      >
+                        Context menu 2 for id: 
+                        id
+                      </span>
+                    </span>
+                  </button>
+                  <button
+                    class="ouiContextMenuItem"
+                    type="button"
+                  >
+                    <span
+                      class="ouiContextMenu__itemLayout"
+                    >
+                      <span
+                        class="ouiContextMenuItem__text"
+                      >
+                        Context menu 3 for id: 
+                        id
+                      </span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      data-focus-guard="true"
+      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
+      tabindex="-1"
+    />
+  </div>
+</body>
+`;
+
+exports[`OuiNotificationEvent props headingLevel is rendered 1`] = `
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent"
+  >
+    <div
+      class="ouiNotificationEvent__content"
+    >
+      <div
+        class="ouiNotificationEventMeta"
+      >
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            title="Alert"
+          >
+            <span
+              class="ouiBadge__content"
+            >
+              <span
+                class="ouiBadge__text"
+              >
+                Alert
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiNotificationEventMeta__time"
+          >
+            1 min ago
+          </span>
+        </div>
+      </div>
+      <h4
+        class="ouiNotificationEvent__title"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
+      >
+        title
+      </h4>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
 `;
 
 exports[`OuiNotificationEvent props iconAriaLabel is rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent"
->
-  <div
-    class="ouiNotificationEvent__content"
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent"
   >
     <div
-      class="ouiNotificationEventMeta"
+      class="ouiNotificationEvent__content"
     >
       <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          aria-label="my icon aria label"
-          class="ouiNotificationEventMeta__icon"
-          data-ouiicon-type="logoCloud"
-        />
-        <span
-          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-        >
-          <span
-            class="ouiBadge__content"
-          >
-            <span
-              class="ouiBadge__text"
-            >
-              Alert
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
-    </div>
-    <h2
-      class="ouiNotificationEvent__title"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h2>
-    <div
-      class="ouiNotificationEventMessages"
-    >
-      <div
-        class="ouiText ouiText--small"
+        class="ouiNotificationEventMeta"
       >
         <div
-          class="ouiTextColor ouiTextColor--subdued"
+          class="ouiNotificationEventMeta__section"
         >
-          <p>
-            message
-          </p>
+          <span
+            aria-label="my icon aria label"
+            class="ouiNotificationEventMeta__icon"
+            data-ouiicon-type="logoCloud"
+          />
+          <span
+            class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            title="Alert"
+          >
+            <span
+              class="ouiBadge__content"
+            >
+              <span
+                class="ouiBadge__text"
+              >
+                Alert
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiNotificationEventMeta__time"
+          >
+            1 min ago
+          </span>
+        </div>
+      </div>
+      <h2
+        class="ouiNotificationEvent__title"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
+      >
+        title
+      </h2>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>
 `;
 
 exports[`OuiNotificationEvent props iconType is rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent"
->
-  <div
-    class="ouiNotificationEvent__content"
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent"
   >
     <div
-      class="ouiNotificationEventMeta"
+      class="ouiNotificationEvent__content"
     >
       <div
-        class="ouiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta"
+      >
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            aria-hidden="true"
+            class="ouiNotificationEventMeta__icon"
+            data-ouiicon-type="logoCloud"
+          />
+          <span
+            class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            title="Alert"
+          >
+            <span
+              class="ouiBadge__content"
+            >
+              <span
+                class="ouiBadge__text"
+              >
+                Alert
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiNotificationEventMeta__time"
+          >
+            1 min ago
+          </span>
+        </div>
+      </div>
+      <h2
+        class="ouiNotificationEvent__title"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
+      >
+        title
+      </h2>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+`;
+
+exports[`OuiNotificationEvent props isRead is rendered 1`] = `
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent ouiNotificationEvent--withReadState"
+  >
+    <div
+      class="ouiNotificationEvent__readButton"
+    >
+      <button
+        aria-label="Mark title as unread"
+        class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiNotificationEventReadButton ouiNotificationEventReadButton--isRead"
+        data-test-subj="id-notificationEventReadButton"
+        title="Mark as unread"
+        type="button"
       >
         <span
           aria-hidden="true"
-          class="ouiNotificationEventMeta__icon"
-          data-ouiicon-type="logoCloud"
+          class="ouiButtonIcon__icon"
+          color="inherit"
+          data-ouiicon-type="dot"
         />
-        <span
-          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-        >
-          <span
-            class="ouiBadge__content"
-          >
-            <span
-              class="ouiBadge__text"
-            >
-              Alert
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
+      </button>
     </div>
-    <h2
-      class="ouiNotificationEvent__title"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h2>
     <div
-      class="ouiNotificationEventMessages"
+      class="ouiNotificationEvent__content"
     >
       <div
-        class="ouiText ouiText--small"
+        class="ouiNotificationEventMeta"
       >
         <div
-          class="ouiTextColor ouiTextColor--subdued"
+          class="ouiNotificationEventMeta__section"
         >
-          <p>
-            message
-          </p>
+          <span
+            class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            title="Alert"
+          >
+            <span
+              class="ouiBadge__content"
+            >
+              <span
+                class="ouiBadge__text"
+              >
+                Alert
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiNotificationEventMeta__time"
+          >
+            1 min ago
+          </span>
+        </div>
+      </div>
+      <h2
+        class="ouiNotificationEvent__title ouiNotificationEvent__title--isRead"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
+      >
+        title
+      </h2>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</article>
-`;
-
-exports[`OuiNotificationEvent props isRead  is rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent ouiNotificationEvent--withReadState"
->
-  <div
-    class="ouiNotificationEvent__readButton"
-  >
-    <button
-      aria-label="Mark title as unread"
-      class="ouiButtonIcon ouiButtonIcon--primary ouiButtonIcon--empty ouiButtonIcon--xSmall ouiNotificationEventReadButton ouiNotificationEventReadButton--isRead"
-      data-test-subj="id-notificationEventReadButton"
-      title="Mark as unread"
-      type="button"
-    >
-      <span
-        aria-hidden="true"
-        class="ouiButtonIcon__icon"
-        color="inherit"
-        data-ouiicon-type="dot"
-      />
-    </button>
-  </div>
-  <div
-    class="ouiNotificationEvent__content"
-  >
-    <div
-      class="ouiNotificationEventMeta"
-    >
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-        >
-          <span
-            class="ouiBadge__content"
-          >
-            <span
-              class="ouiBadge__text"
-            >
-              Alert
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
-    </div>
-    <h2
-      class="ouiNotificationEvent__title ouiNotificationEvent__title--isRead"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h2>
-    <div
-      class="ouiNotificationEventMessages"
-    >
-      <div
-        class="ouiText ouiText--small"
-      >
-        <div
-          class="ouiTextColor ouiTextColor--subdued"
-        >
-          <p>
-            message
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
+  </article>
+</div>
 `;
 
 exports[`OuiNotificationEvent props multiple messages are rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent"
->
-  <div
-    class="ouiNotificationEvent__content"
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent"
   >
     <div
-      class="ouiNotificationEventMeta"
+      class="ouiNotificationEvent__content"
     >
       <div
-        class="ouiNotificationEventMeta__section"
+        class="ouiNotificationEventMeta"
       >
-        <span
-          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+        <div
+          class="ouiNotificationEventMeta__section"
         >
           <span
-            class="ouiBadge__content"
+            class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            title="Alert"
           >
             <span
-              class="ouiBadge__text"
+              class="ouiBadge__content"
             >
-              Alert
+              <span
+                class="ouiBadge__text"
+              >
+                Alert
+              </span>
             </span>
           </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
-    </div>
-    <h2
-      class="ouiNotificationEvent__title"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h2>
-    <div
-      class="ouiNotificationEventMessages"
-    >
-      <div
-        class="ouiText ouiText--small"
-      >
-        <div
-          class="ouiTextColor ouiTextColor--subdued"
-        >
-          <p>
-            message 1
-          </p>
         </div>
-      </div>
-      <div
-        class="ouiAccordion ouiNotificationEventMessages__accordion"
-      >
         <div
-          class="ouiAccordion__triggerWrapper"
+          class="ouiNotificationEventMeta__section"
         >
-          <button
-            aria-controls="ouiNotificationEventMessagesAccordion_generated-id"
-            aria-expanded="false"
-            aria-label="+ 2 messages for title"
-            class="ouiAccordion__button ouiNotificationEventMessages__accordionButton"
-            id="generated-id"
-            type="button"
+          <span
+            class="ouiNotificationEventMeta__time"
           >
-            <span
-              class="ouiIEFlexWrapFix"
-            >
-              + 2 more
-            </span>
-          </button>
+            1 min ago
+          </span>
+        </div>
+      </div>
+      <h2
+        class="ouiNotificationEvent__title"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
+      >
+        title
+      </h2>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message 1
+            </p>
+          </div>
         </div>
         <div
-          aria-labelledby="generated-id"
-          class="ouiAccordion__childWrapper"
-          id="ouiNotificationEventMessagesAccordion_generated-id"
-          role="region"
-          tabindex="-1"
+          class="ouiAccordion ouiNotificationEventMessages__accordion"
         >
-          <div>
-            <div
-              class=""
+          <div
+            class="ouiAccordion__triggerWrapper"
+          >
+            <button
+              aria-controls="ouiNotificationEventMessagesAccordion_generated-id"
+              aria-expanded="false"
+              aria-label="+ 2 messages for title"
+              class="ouiAccordion__button ouiNotificationEventMessages__accordionButton"
+              id="generated-id"
+              type="button"
             >
+              <span
+                class="ouiIEFlexWrapFix"
+              >
+                + 2 more
+              </span>
+            </button>
+          </div>
+          <div
+            aria-labelledby="generated-id"
+            class="ouiAccordion__childWrapper"
+            id="ouiNotificationEventMessagesAccordion_generated-id"
+            role="region"
+            tabindex="-1"
+          >
+            <div>
               <div
-                class="ouiNotificationEventMessages__accordionContent"
+                class=""
               >
                 <div
-                  class="ouiText ouiText--small"
+                  class="ouiNotificationEventMessages__accordionContent"
                 >
                   <div
-                    class="ouiTextColor ouiTextColor--subdued"
+                    class="ouiText ouiText--small"
                   >
-                    <p>
-                      message 2
-                    </p>
+                    <div
+                      class="ouiTextColor ouiTextColor--subdued"
+                    >
+                      <p>
+                        message 2
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div
-                  class="ouiText ouiText--small"
-                >
                   <div
-                    class="ouiTextColor ouiTextColor--subdued"
+                    class="ouiText ouiText--small"
                   >
-                    <p>
-                      message 3
-                    </p>
+                    <div
+                      class="ouiTextColor ouiTextColor--subdued"
+                    >
+                      <p>
+                        message 3
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -589,241 +754,250 @@ exports[`OuiNotificationEvent props multiple messages are rendered 1`] = `
         </div>
       </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>
 `;
 
 exports[`OuiNotificationEvent props primaryAction is rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent"
->
-  <div
-    class="ouiNotificationEvent__content"
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent"
   >
     <div
-      class="ouiNotificationEventMeta"
+      class="ouiNotificationEvent__content"
     >
       <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-        >
-          <span
-            class="ouiBadge__content"
-          >
-            <span
-              class="ouiBadge__text"
-            >
-              Alert
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
-    </div>
-    <h2
-      class="ouiNotificationEvent__title"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h2>
-    <div
-      class="ouiNotificationEventMessages"
-    >
-      <div
-        class="ouiText ouiText--small"
+        class="ouiNotificationEventMeta"
       >
         <div
-          class="ouiTextColor ouiTextColor--subdued"
-        >
-          <p>
-            message
-          </p>
-        </div>
-      </div>
-    </div>
-    <div
-      class="ouiNotificationEvent__primaryAction"
-    >
-      <button
-        class="ouiButtonEmpty ouiButtonEmpty--primary ouiButtonEmpty--small ouiButtonEmpty--flushLeft"
-        data-test-subj="id-notificationEventPrimaryAction"
-        type="button"
-      >
-        <span
-          class="ouiButtonContent ouiButtonEmpty__content"
+          class="ouiNotificationEventMeta__section"
         >
           <span
-            class="ouiButtonEmpty__text"
+            class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            title="Alert"
           >
-            primaryAction label
+            <span
+              class="ouiBadge__content"
+            >
+              <span
+                class="ouiBadge__text"
+              >
+                Alert
+              </span>
+            </span>
           </span>
-        </span>
-      </button>
+        </div>
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiNotificationEventMeta__time"
+          >
+            1 min ago
+          </span>
+        </div>
+      </div>
+      <h2
+        class="ouiNotificationEvent__title"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
+      >
+        title
+      </h2>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ouiNotificationEvent__primaryAction"
+      >
+        <button
+          class="ouiButtonEmpty ouiButtonEmpty--primary ouiButtonEmpty--small ouiButtonEmpty--flushLeft"
+          data-test-subj="id-notificationEventPrimaryAction"
+          type="button"
+        >
+          <span
+            class="ouiButtonContent ouiButtonEmpty__content"
+          >
+            <span
+              class="ouiButtonEmpty__text"
+            >
+              primaryAction label
+            </span>
+          </span>
+        </button>
+      </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>
 `;
 
 exports[`OuiNotificationEvent props primaryActionProps is rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent"
->
-  <div
-    class="ouiNotificationEvent__content"
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent"
   >
     <div
-      class="ouiNotificationEventMeta"
+      class="ouiNotificationEvent__content"
     >
       <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-        >
-          <span
-            class="ouiBadge__content"
-          >
-            <span
-              class="ouiBadge__text"
-            >
-              Alert
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
-    </div>
-    <h2
-      class="ouiNotificationEvent__title"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h2>
-    <div
-      class="ouiNotificationEventMessages"
-    >
-      <div
-        class="ouiText ouiText--small"
+        class="ouiNotificationEventMeta"
       >
         <div
-          class="ouiTextColor ouiTextColor--subdued"
+          class="ouiNotificationEventMeta__section"
         >
-          <p>
-            message
-          </p>
+          <span
+            class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            title="Alert"
+          >
+            <span
+              class="ouiBadge__content"
+            >
+              <span
+                class="ouiBadge__text"
+              >
+                Alert
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiNotificationEventMeta__time"
+          >
+            1 min ago
+          </span>
         </div>
       </div>
-    </div>
-    <div
-      class="ouiNotificationEvent__primaryAction"
-    >
-      <button
-        class="ouiButtonEmpty ouiButtonEmpty--primary ouiButtonEmpty--small ouiButtonEmpty--flushLeft"
-        data-test-subj="id-notificationEventPrimaryAction"
-        type="button"
+      <h2
+        class="ouiNotificationEvent__title"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
       >
-        <span
-          class="ouiButtonContent ouiButtonEmpty__content"
+        title
+      </h2>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message
+            </p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="ouiNotificationEvent__primaryAction"
+      >
+        <button
+          class="ouiButtonEmpty ouiButtonEmpty--primary ouiButtonEmpty--small ouiButtonEmpty--flushLeft"
+          data-test-subj="id-notificationEventPrimaryAction"
+          type="button"
         >
           <span
-            class="ouiButtonContent__icon"
-            color="inherit"
-            data-ouiicon-type="download"
-          />
-          <span
-            class="ouiButtonEmpty__text"
+            class="ouiButtonContent ouiButtonEmpty__content"
           >
-            primaryAction
+            <span
+              class="ouiButtonContent__icon"
+              color="inherit"
+              data-ouiicon-type="download"
+            />
+            <span
+              class="ouiButtonEmpty__text"
+            >
+              primaryAction
+            </span>
           </span>
-        </span>
-      </button>
+        </button>
+      </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>
 `;
 
-exports[`OuiNotificationEvent props severity  is rendered 1`] = `
-<article
-  aria-labelledby="generated-id"
-  class="ouiNotificationEvent"
->
-  <div
-    class="ouiNotificationEvent__content"
+exports[`OuiNotificationEvent props severity is rendered 1`] = `
+<div>
+  <article
+    aria-labelledby="generated-id"
+    class="ouiNotificationEvent"
   >
     <div
-      class="ouiNotificationEventMeta"
+      class="ouiNotificationEvent__content"
     >
       <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
-        >
-          <span
-            class="ouiBadge__content"
-          >
-            <span
-              class="ouiBadge__text"
-            >
-              Alert: severity
-            </span>
-          </span>
-        </span>
-      </div>
-      <div
-        class="ouiNotificationEventMeta__section"
-      >
-        <span
-          class="ouiNotificationEventMeta__time"
-        >
-          1 min ago
-        </span>
-      </div>
-    </div>
-    <h2
-      class="ouiNotificationEvent__title"
-      data-test-subj="id-notificationEventTitle"
-      id="generated-id"
-    >
-      title
-    </h2>
-    <div
-      class="ouiNotificationEventMessages"
-    >
-      <div
-        class="ouiText ouiText--small"
+        class="ouiNotificationEventMeta"
       >
         <div
-          class="ouiTextColor ouiTextColor--subdued"
+          class="ouiNotificationEventMeta__section"
         >
-          <p>
-            message
-          </p>
+          <span
+            class="ouiBadge ouiBadge--hollow ouiBadge--iconLeft ouiNotificationEventMeta__badge"
+            title="Alert: severity"
+          >
+            <span
+              class="ouiBadge__content"
+            >
+              <span
+                class="ouiBadge__text"
+              >
+                Alert: severity
+              </span>
+            </span>
+          </span>
+        </div>
+        <div
+          class="ouiNotificationEventMeta__section"
+        >
+          <span
+            class="ouiNotificationEventMeta__time"
+          >
+            1 min ago
+          </span>
+        </div>
+      </div>
+      <h2
+        class="ouiNotificationEvent__title"
+        data-test-subj="id-notificationEventTitle"
+        id="generated-id"
+      >
+        title
+      </h2>
+      <div
+        class="ouiNotificationEventMessages"
+      >
+        <div
+          class="ouiText ouiText--small"
+        >
+          <div
+            class="ouiTextColor ouiTextColor--subdued"
+          >
+            <p>
+              message
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</article>
+  </article>
+</div>
 `;

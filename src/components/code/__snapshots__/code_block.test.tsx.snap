@@ -21,323 +21,294 @@ exports[`OuiCodeBlock dynamic content updates DOM when input changes 2`] = `
 `;
 
 exports[`OuiCodeBlock props fontSize l is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontLarge ouiCodeBlock--paddingLarge prismjs language-none"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontLarge ouiCodeBlock--paddingLarge prismjs language-none"
   >
-    <code
-      class="ouiCodeBlock__code"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      var some = 'code';
+      <code
+        class="ouiCodeBlock__code"
+      >
+        var some = 'code';
 console.log(some);
-    </code>
-  </pre>
+      </code>
+    </pre>
+  </div>
 </div>
 `;
 
 exports[`OuiCodeBlock props fontSize m is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontMedium ouiCodeBlock--paddingLarge prismjs language-none"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontMedium ouiCodeBlock--paddingLarge prismjs language-none"
   >
-    <code
-      class="ouiCodeBlock__code"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      var some = 'code';
+      <code
+        class="ouiCodeBlock__code"
+      >
+        var some = 'code';
 console.log(some);
-    </code>
-  </pre>
+      </code>
+    </pre>
+  </div>
 </div>
 `;
 
 exports[`OuiCodeBlock props fontSize s is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-none"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-none"
   >
-    <code
-      class="ouiCodeBlock__code"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      var some = 'code';
+      <code
+        class="ouiCodeBlock__code"
+      >
+        var some = 'code';
 console.log(some);
-    </code>
-  </pre>
+      </code>
+    </pre>
+  </div>
 </div>
 `;
 
 exports[`OuiCodeBlock props isCopyable is rendered 1`] = `
-<OuiCodeBlock
-  isCopyable={true}
->
-  <OuiCodeBlockImpl
-    inline={false}
-    isCopyable={true}
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--hasControls prismjs language-none"
   >
-    <div
-      className="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--hasControls prismjs language-none"
-      style={Object {}}
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      <pre
-        className="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-        style={Object {}}
-        tabIndex={-1}
+      <code
+        class="ouiCodeBlock__code"
       >
-        <code
-          className="ouiCodeBlock__code"
-        >
-          var some = 'code';
+        var some = 'code';
 console.log(some);
-        </code>
-      </pre>
+      </code>
+    </pre>
+    <div
+      class="ouiCodeBlock__controls"
+    >
       <div
-        className="ouiCodeBlock__controls"
+        class="ouiCodeBlock__copyButton"
       >
-        <div
-          className="ouiCodeBlock__copyButton"
+        <span
+          class="ouiToolTipAnchor"
         >
-          <OuiI18n
-            default="Copy"
-            token="ouiCodeBlock.copyButton"
+          <button
+            aria-label="Copy"
+            class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+            type="button"
           >
-            <OuiCopy
-              afterMessage="Copied"
-              textToCopy="var some = 'code';
-console.log(some);"
-            >
-              <OuiToolTip
-                delay="regular"
-                onMouseOut={[Function]}
-                position="top"
-              >
-                <span
-                  className="ouiToolTipAnchor"
-                  onKeyUp={[Function]}
-                  onMouseOut={[Function]}
-                  onMouseOver={[Function]}
-                >
-                  <OuiButtonIcon
-                    aria-label="Copy"
-                    color="text"
-                    iconType="copy"
-                    onBlur={[Function]}
-                    onClick={[Function]}
-                    onFocus={[Function]}
-                  >
-                    <button
-                      aria-label="Copy"
-                      className="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-                      disabled={false}
-                      onBlur={[Function]}
-                      onClick={[Function]}
-                      onFocus={[Function]}
-                      type="button"
-                    >
-                      <OuiIcon
-                        aria-hidden="true"
-                        className="ouiButtonIcon__icon"
-                        color="inherit"
-                        size="m"
-                        type="copy"
-                      >
-                        <span
-                          aria-hidden="true"
-                          className="ouiButtonIcon__icon"
-                          color="inherit"
-                          data-ouiicon-type="copy"
-                          size="m"
-                        />
-                      </OuiIcon>
-                    </button>
-                  </OuiButtonIcon>
-                </span>
-              </OuiToolTip>
-            </OuiCopy>
-          </OuiI18n>
-        </div>
+            <span
+              aria-hidden="true"
+              class="ouiButtonIcon__icon"
+              color="inherit"
+              data-ouiicon-type="copy"
+            />
+          </button>
+        </span>
       </div>
     </div>
-  </OuiCodeBlockImpl>
-</OuiCodeBlock>
+  </div>
+</div>
 `;
 
 exports[`OuiCodeBlock props language is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-html"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-html"
   >
-    <code
-      class="ouiCodeBlock__code html"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      <span
-        class="ouiCodeBlock__line"
+      <code
+        class="ouiCodeBlock__code html"
       >
-        var some = 'code';
+        <span
+          class="ouiCodeBlock__line"
+        >
+          var some = 'code';
 
-      </span>
-      <span
-        class="ouiCodeBlock__line"
-      >
-        console.log(some);
-      </span>
-    </code>
-  </pre>
+        </span>
+        <span
+          class="ouiCodeBlock__line"
+        >
+          console.log(some);
+        </span>
+      </code>
+    </pre>
+  </div>
 </div>
 `;
 
 exports[`OuiCodeBlock props overflowHeight is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--hasControls prismjs language-none"
-  style="max-height:200px"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    style="max-height:200px"
-    tabindex="-1"
-  >
-    <code
-      class="ouiCodeBlock__code"
-    >
-      var some = 'code';
-console.log(some);
-    </code>
-  </pre>
+<div>
   <div
-    class="ouiCodeBlock__controls"
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--hasControls prismjs language-none"
+    style="max-height: 200px;"
   >
-    <button
-      aria-label="Expand"
-      class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiCodeBlock__fullScreenButton"
-      type="button"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      style="max-height: 200px;"
+      tabindex="-1"
     >
-      <span
-        aria-hidden="true"
-        class="ouiButtonIcon__icon"
-        color="inherit"
-        data-ouiicon-type="fullScreen"
-      />
-    </button>
+      <code
+        class="ouiCodeBlock__code"
+      >
+        var some = 'code';
+console.log(some);
+      </code>
+    </pre>
+    <div
+      class="ouiCodeBlock__controls"
+    >
+      <button
+        aria-label="Expand"
+        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall ouiCodeBlock__fullScreenButton"
+        type="button"
+      >
+        <span
+          aria-hidden="true"
+          class="ouiButtonIcon__icon"
+          color="inherit"
+          data-ouiicon-type="fullScreen"
+        />
+      </button>
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiCodeBlock props paddingSize l is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-none"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-none"
   >
-    <code
-      class="ouiCodeBlock__code"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      var some = 'code';
+      <code
+        class="ouiCodeBlock__code"
+      >
+        var some = 'code';
 console.log(some);
-    </code>
-  </pre>
+      </code>
+    </pre>
+  </div>
 </div>
 `;
 
 exports[`OuiCodeBlock props paddingSize m is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingMedium prismjs language-none"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingMedium prismjs language-none"
   >
-    <code
-      class="ouiCodeBlock__code"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      var some = 'code';
+      <code
+        class="ouiCodeBlock__code"
+      >
+        var some = 'code';
 console.log(some);
-    </code>
-  </pre>
+      </code>
+    </pre>
+  </div>
 </div>
 `;
 
 exports[`OuiCodeBlock props paddingSize none is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontSmall prismjs language-none"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontSmall prismjs language-none"
   >
-    <code
-      class="ouiCodeBlock__code"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      var some = 'code';
+      <code
+        class="ouiCodeBlock__code"
+      >
+        var some = 'code';
 console.log(some);
-    </code>
-  </pre>
+      </code>
+    </pre>
+  </div>
 </div>
 `;
 
 exports[`OuiCodeBlock props paddingSize s is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingSmall prismjs language-none"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingSmall prismjs language-none"
   >
-    <code
-      class="ouiCodeBlock__code"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      var some = 'code';
+      <code
+        class="ouiCodeBlock__code"
+      >
+        var some = 'code';
 console.log(some);
-    </code>
-  </pre>
+      </code>
+    </pre>
+  </div>
 </div>
 `;
 
 exports[`OuiCodeBlock props transparentBackground is rendered 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--transparentBackground prismjs language-none"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge ouiCodeBlock--transparentBackground prismjs language-none"
   >
-    <code
-      class="ouiCodeBlock__code"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      var some = 'code';
+      <code
+        class="ouiCodeBlock__code"
+      >
+        var some = 'code';
 console.log(some);
-    </code>
-  </pre>
+      </code>
+    </pre>
+  </div>
 </div>
 `;
 
 exports[`OuiCodeBlock renders a code block 1`] = `
-<div
-  class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-none testClass1 testClass2"
->
-  <pre
-    class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
-    tabindex="-1"
+<div>
+  <div
+    class="ouiCodeBlock ouiCodeBlock--fontSmall ouiCodeBlock--paddingLarge prismjs language-none testClass1 testClass2"
   >
-    <code
-      aria-label="aria-label"
-      class="ouiCodeBlock__code"
-      data-test-subj="test subject string"
+    <pre
+      class="ouiCodeBlock__pre ouiCodeBlock__pre--whiteSpacePreWrap"
+      tabindex="-1"
     >
-      var some = 'code';
+      <code
+        aria-label="aria-label"
+        class="ouiCodeBlock__code"
+        data-test-subj="test subject string"
+      >
+        var some = 'code';
 console.log(some);
-    </code>
-  </pre>
+      </code>
+    </pre>
+  </div>
 </div>
 `;

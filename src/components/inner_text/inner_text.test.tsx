@@ -29,9 +29,8 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { render, mount } from 'enzyme';
-import { act } from '../../test/react_test_utils';
-import { findTestSubject, requiredProps } from '../../test';
+import { render, act } from '@testing-library/react';
+import { requiredProps } from '../../test';
 
 import { useInnerText, OuiInnerText } from './inner_text';
 import { OuiBadge } from '../badge';
@@ -43,7 +42,7 @@ describe('useInnerText', () => {
       [ref] = useInnerText();
       return <span />;
     };
-    mount(<App />);
+    render(<App />);
 
     expect(ref).toBeInstanceOf(Function);
   });
@@ -56,7 +55,7 @@ describe('useInnerText', () => {
       [ref, innerText] = useInnerText();
       return <span ref={ref}>{text}</span>;
     };
-    mount(<App />);
+    render(<App />);
 
     expect(innerText).toEqual(text);
   });
@@ -69,7 +68,7 @@ describe('useInnerText', () => {
       [, innerText] = useInnerText(fallback);
       return <span>{text}</span>;
     };
-    mount(<App />);
+    render(<App />);
 
     expect(innerText).toEqual(fallback);
   });
@@ -102,11 +101,13 @@ describe('useInnerText', () => {
         </div>
       );
     };
-    mount(<App />);
+    render(<App />);
 
     expect(innerText).toEqual(first);
 
-    jest.advanceTimersByTime(timeout + 10);
+    act(() => {
+      jest.advanceTimersByTime(timeout + 10);
+    });
 
     expect(innerText).toEqual(second);
   });
@@ -134,13 +135,20 @@ describe('useInnerText', () => {
         </div>
       );
     };
-    mount(<App />);
+    render(<App />);
 
     expect(innerText).toEqual(first);
 
+    // Advance timers to trigger the state change
+    act(() => {
+      jest.advanceTimersByTime(timeout);
+    });
+
     // MutationObserver polyfill institutes a 30ms mutation timeout period
     const mutationObserverPolyfillPeriod = 30;
-    jest.advanceTimersByTime(timeout + mutationObserverPolyfillPeriod + 10);
+    act(() => {
+      jest.advanceTimersByTime(mutationObserverPolyfillPeriod + 10);
+    });
 
     expect(innerText).toEqual(second);
   });
@@ -148,7 +156,7 @@ describe('useInnerText', () => {
 
 describe('OuiInnerText', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiInnerText {...requiredProps}>
         {(ref, innerText) => (
           <span ref={ref} title={innerText}>
@@ -158,12 +166,12 @@ describe('OuiInnerText', () => {
       </OuiInnerText>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('uses innerText', () => {
     const text = 'Test';
-    const component = mount(
+    const { getByTestId } = render(
       <OuiInnerText {...requiredProps}>
         {(ref, innerText) => (
           <span ref={ref} title={innerText} data-test-subj="span">
@@ -173,14 +181,14 @@ describe('OuiInnerText', () => {
       </OuiInnerText>
     );
 
-    const span = findTestSubject(component, 'span');
-    expect(span.props().title).toBe(text);
+    const span = getByTestId('span');
+    expect(span.title).toBe(text);
   });
 
   test('accepts fallback prop', () => {
     const text = 'Test';
     const fallback = 'Fallback';
-    const component = mount(
+    const { getByTestId } = render(
       <OuiInnerText {...requiredProps} fallback={fallback}>
         {(_, innerText) => (
           <span title={innerText} data-test-subj="span">
@@ -190,12 +198,12 @@ describe('OuiInnerText', () => {
       </OuiInnerText>
     );
 
-    const span = findTestSubject(component, 'span');
-    expect(span.props().title).toBe(fallback);
+    const span = getByTestId('span');
+    expect(span.title).toBe(fallback);
   });
 
   test('works with wrapper and interspersed DOM elements', () => {
-    const component = mount(
+    const { getByTestId } = render(
       <OuiInnerText {...requiredProps}>
         {(ref, innerText) => (
           <span ref={ref} title={innerText} data-test-subj="span">
@@ -214,7 +222,7 @@ describe('OuiInnerText', () => {
       </OuiInnerText>
     );
 
-    const span = findTestSubject(component, 'span');
-    expect(span.props().title).toBe('I can still read this');
+    const span = getByTestId('span');
+    expect(span.title).toBe('I can still read this');
   });
 });

@@ -1,49 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiCommentList is rendered 1`] = `
-<div
-  aria-label="aria-label"
-  class="ouiCommentList testClass1 testClass2"
-  data-test-subj="test subject string"
->
+<div>
   <div
-    class="ouiComment"
+    aria-label="aria-label"
+    class="ouiCommentList testClass1 testClass2"
+    data-test-subj="test subject string"
   >
     <div
-      class="ouiCommentTimeline"
+      class="ouiComment"
     >
       <div
-        class="ouiCommentTimeline__content"
+        class="ouiCommentTimeline"
       >
         <div
-          class="ouiCommentTimeline__icon--default ouiCommentTimeline__icon--regular"
+          class="ouiCommentTimeline__content"
         >
-          <span
-            data-ouiicon-type="user"
-          />
+          <div
+            class="ouiCommentTimeline__icon--default ouiCommentTimeline__icon--regular"
+          >
+            <span
+              data-ouiicon-type="user"
+            />
+          </div>
         </div>
       </div>
-    </div>
-    <figure
-      class="ouiCommentEvent ouiCommentEvent--regular"
-    >
-      <figcaption
-        class="ouiCommentEvent__header"
+      <figure
+        class="ouiCommentEvent ouiCommentEvent--regular"
       >
-        <div
-          class="ouiCommentEvent__headerData"
+        <figcaption
+          class="ouiCommentEvent__header"
         >
           <div
-            class="ouiCommentEvent__headerUsername"
+            class="ouiCommentEvent__headerData"
           >
-            janed
+            <div
+              class="ouiCommentEvent__headerUsername"
+            >
+              janed
+            </div>
+            <div
+              class="ouiCommentEvent__headerEvent"
+            />
           </div>
-          <div
-            class="ouiCommentEvent__headerEvent"
-          />
-        </div>
-      </figcaption>
-    </figure>
+        </figcaption>
+      </figure>
+    </div>
   </div>
 </div>
 `;

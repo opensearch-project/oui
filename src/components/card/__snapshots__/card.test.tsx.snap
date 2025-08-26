@@ -1,895 +1,931 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiCard betaBadgeProps renders href 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned ouiCard--hasBetaBadge"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned ouiCard--hasBetaBadge"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
-  </div>
-  <span
-    class="ouiCard__betaBadgeWrapper"
-  >
-    <a
-      class="ouiBetaBadge ouiBetaBadge-isClickable ouiBetaBadge--hollow ouiCard__betaBadge"
-      href="http://www.elastic.co/"
-      id="generated-idBetaBadge"
-      rel=""
-      title="Link"
+    <span
+      class="ouiCard__betaBadgeWrapper"
     >
-      Link
-    </a>
-  </span>
+      <a
+        class="ouiBetaBadge ouiBetaBadge-isClickable ouiBetaBadge--hollow ouiCard__betaBadge"
+        href="http://www.elastic.co/"
+        id="generated-idBetaBadge"
+        rel=""
+        title="Link"
+      >
+        Link
+      </a>
+    </span>
+  </div>
 </div>
 `;
 
 exports[`OuiCard horizontal selectable 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--isClickable ouiCard ouiCard--centerAligned ouiCard--horizontal ouiCard--isClickable ouiCard--isSelectable ouiCard--isSelectable--text"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--isClickable ouiCard ouiCard--centerAligned ouiCard--horizontal ouiCard--isClickable ouiCard--isSelectable ouiCard--isSelectable--text"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
-    >
-      <p>
-        Card description
-      </p>
-    </div>
-  </div>
-  <button
-    aria-checked="false"
-    aria-describedby="generated-idTitle generated-idDescription"
-    class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiCardSelect ouiCardSelect--text"
-    role="switch"
-    type="button"
-  >
-    <span
-      class="ouiButtonContent ouiButtonEmpty__content"
+      class="ouiCard__content"
     >
       <span
-        class="ouiButtonEmpty__text"
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
       >
-        Select
+        Card title
       </span>
-    </span>
-  </button>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
+    </div>
+    <button
+      aria-checked="false"
+      aria-describedby="generated-idTitle generated-idDescription"
+      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiCardSelect ouiCardSelect--text"
+      role="switch"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButtonEmpty__content"
+      >
+        <span
+          class="ouiButtonEmpty__text"
+        >
+          Select
+        </span>
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
 exports[`OuiCard is rendered 1`] = `
-<div
-  aria-label="aria-label"
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned testClass1 testClass2"
-  data-test-subj="test subject string"
->
+<div>
   <div
-    class="ouiCard__content"
+    aria-label="aria-label"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned testClass1 testClass2"
+    data-test-subj="test subject string"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props a null icon 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props accepts div props like style 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
-  style="min-width:0"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
+    style="min-width: 0;"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props children 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiCard__children"
+      class="ouiCard__content"
     >
-      Child
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiCard__children"
+      >
+        Child
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props children with description 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
-    </div>
-    <div
-      class="ouiCard__children"
-    >
-      Child
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
+      <div
+        class="ouiCard__children"
+      >
+        Child
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props display accent is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--accent ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--accent ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props display danger is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--danger ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--danger ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props display plain is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props display primary is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--primary ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--primary ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props display subdued is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props display success is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--success ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--success ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props display transparent is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--transparent ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props display warning is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--warning ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--warning ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props footer 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
-  </div>
-  <div
-    class="ouiCard__footer"
-  >
-    <span>
-      Footer
-    </span>
+    <div
+      class="ouiCard__footer"
+    >
+      <span>
+        Footer
+      </span>
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props hasBorder 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--hasBorder ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--hasBorder ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props horizontal 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned ouiCard--horizontal"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned ouiCard--horizontal"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props href supports href as a link 1`] = `
-<OuiCard
-  description="There"
-  href="#"
-  title="Hoi"
->
-  <OuiPanel
-    className="ouiCard ouiCard--centerAligned ouiCard--isClickable"
-    element="div"
-    hasShadow={true}
-    onClick={[Function]}
+<div>
+  <div
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--isClickable ouiCard ouiCard--centerAligned ouiCard--isClickable"
   >
     <div
-      className="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--isClickable ouiCard ouiCard--centerAligned ouiCard--isClickable"
-      onClick={[Function]}
+      class="ouiCard__content"
     >
-      <div
-        className="ouiCard__content"
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
       >
-        <OuiTitle
-          className="ouiCard__title"
-          id="generated-idTitle"
-          size="s"
+        <a
+          aria-describedby="generated-idDescription"
+          class="ouiCard__titleAnchor"
+          href="#"
+          rel="noreferrer"
         >
-          <span
-            className="ouiTitle ouiTitle--small ouiCard__title"
-            id="generated-idTitle"
-          >
-            <a
-              aria-describedby="generated-idDescription"
-              className="ouiCard__titleAnchor"
-              href="#"
-              rel="noreferrer"
-            >
-              Hoi
-            </a>
-          </span>
-        </OuiTitle>
-        <OuiText
-          className="ouiCard__description"
-          id="generated-idDescription"
-          size="s"
-        >
-          <div
-            className="ouiText ouiText--small ouiCard__description"
-            id="generated-idDescription"
-          >
-            <p>
-              There
-            </p>
-          </div>
-        </OuiText>
+          Hoi
+        </a>
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          There
+        </p>
       </div>
     </div>
-  </OuiPanel>
-</OuiCard>
+  </div>
+</div>
 `;
 
 exports[`OuiCard props icon 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned ouiCard--hasIcon"
->
+<div>
   <div
-    class="ouiCard__top"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned ouiCard--hasIcon"
   >
-    <span
-      class="myIconClass ouiCard__icon"
-      data-ouiicon-type="apmApp"
-    />
-  </div>
-  <div
-    class="ouiCard__content"
-  >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__top"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="myIconClass ouiCard__icon"
+        data-ouiicon-type="apmApp"
+      />
+    </div>
+    <div
+      class="ouiCard__content"
+    >
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props image 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__top"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
     <div
-      class="ouiCard__image"
+      class="ouiCard__top"
     >
-      <div>
-        <img
-          alt="Nature"
-          src="https://source.unsplash.com/400x200/?Nature"
-        />
+      <div
+        class="ouiCard__image"
+      >
+        <div>
+          <img
+            alt="Nature"
+            src="https://source.unsplash.com/400x200/?Nature"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <div
-    class="ouiCard__content"
-  >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props isDisabled 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned ouiCard-isDisabled"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--subdued ouiPanel--noShadow ouiPanel--noBorder ouiCard ouiCard--centerAligned ouiCard-isDisabled"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      <button
-        aria-describedby=" generated-idDescription"
-        class="ouiCard__titleButton"
-        disabled=""
-      >
-        Card title
-      </button>
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        <button
+          aria-describedby=" generated-idDescription"
+          class="ouiCard__titleButton"
+          disabled=""
+        >
+          Card title
+        </button>
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props paddingSize l is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingLarge ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props paddingSize m is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props paddingSize none is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props paddingSize s is rendered 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingSmall ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingSmall ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props selectable 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--isClickable ouiCard ouiCard--centerAligned ouiCard--isClickable ouiCard--isSelectable ouiCard--isSelectable--text"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiPanel--isClickable ouiCard ouiCard--centerAligned ouiCard--isClickable ouiCard--isSelectable ouiCard--isSelectable--text"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
-    >
-      <p>
-        Card description
-      </p>
-    </div>
-  </div>
-  <button
-    aria-checked="false"
-    aria-describedby="generated-idTitle generated-idDescription"
-    class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiCardSelect ouiCardSelect--text"
-    role="switch"
-    type="button"
-  >
-    <span
-      class="ouiButtonContent ouiButtonEmpty__content"
+      class="ouiCard__content"
     >
       <span
-        class="ouiButtonEmpty__text"
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
       >
-        Select
+        Card title
       </span>
-    </span>
-  </button>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
+    </div>
+    <button
+      aria-checked="false"
+      aria-describedby="generated-idTitle generated-idDescription"
+      class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall ouiCardSelect ouiCardSelect--text"
+      role="switch"
+      type="button"
+    >
+      <span
+        class="ouiButtonContent ouiButtonEmpty__content"
+      >
+        <span
+          class="ouiButtonEmpty__text"
+        >
+          Select
+        </span>
+      </span>
+    </button>
+  </div>
 </div>
 `;
 
 exports[`OuiCard props textAlign 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--rightAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--rightAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props titleElement 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <h4
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </h4>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <h4
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </h4>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props titleElement with nodes 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <h4
-      class="ouiTitle ouiTitle--small ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </h4>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <h4
+        class="ouiTitle ouiTitle--small ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </h4>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>
 `;
 
 exports[`OuiCard props titleSize 1`] = `
-<div
-  class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
->
+<div>
   <div
-    class="ouiCard__content"
+    class="ouiPanel ouiPanel--paddingMedium ouiPanel--borderRadiusMedium ouiPanel--plain ouiPanel--hasShadow ouiCard ouiCard--centerAligned"
   >
-    <span
-      class="ouiTitle ouiTitle--xsmall ouiCard__title"
-      id="generated-idTitle"
-    >
-      Card title
-    </span>
     <div
-      class="ouiText ouiText--small ouiCard__description"
-      id="generated-idDescription"
+      class="ouiCard__content"
     >
-      <p>
-        Card description
-      </p>
+      <span
+        class="ouiTitle ouiTitle--xsmall ouiCard__title"
+        id="generated-idTitle"
+      >
+        Card title
+      </span>
+      <div
+        class="ouiText ouiText--small ouiCard__description"
+        id="generated-idDescription"
+      >
+        <p>
+          Card description
+        </p>
+      </div>
     </div>
   </div>
 </div>

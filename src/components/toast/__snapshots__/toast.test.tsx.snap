@@ -1,285 +1,190 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiToast Props color danger is rendered 1`] = `
-<OuiToast
-  color="danger"
-  title="test title"
->
+<div>
   <div
-    className="ouiToast ouiToast--danger"
+    class="ouiToast ouiToast--danger"
   >
-    <OuiScreenReaderOnly>
-      <p
-        className="ouiScreenReaderOnly"
-      >
-        <OuiI18n
-          default="A new notification appears"
-          token="ouiToast.newNotification"
-        >
-          A new notification appears
-        </OuiI18n>
-      </p>
-    </OuiScreenReaderOnly>
-    <OuiI18n
-      default="Notification"
-      token="ouiToast.notification"
+    <p
+      class="ouiScreenReaderOnly"
     >
-      <div
-        aria-label="Notification"
-        className="ouiToastHeader"
-        data-test-subj="ouiToastHeader"
+      A new notification appears
+    </p>
+    <div
+      aria-label="Notification"
+      class="ouiToastHeader"
+      data-test-subj="ouiToastHeader"
+    >
+      <span
+        class="ouiToastHeader__title"
       >
-        <span
-          className="ouiToastHeader__title"
-        >
-          test title
-        </span>
-      </div>
-    </OuiI18n>
+        test title
+      </span>
+    </div>
   </div>
-</OuiToast>
+</div>
 `;
 
 exports[`OuiToast Props color primary is rendered 1`] = `
-<OuiToast
-  color="primary"
-  title="test title"
->
+<div>
   <div
-    className="ouiToast ouiToast--primary"
+    class="ouiToast ouiToast--primary"
   >
-    <OuiScreenReaderOnly>
-      <p
-        className="ouiScreenReaderOnly"
-      >
-        <OuiI18n
-          default="A new notification appears"
-          token="ouiToast.newNotification"
-        >
-          A new notification appears
-        </OuiI18n>
-      </p>
-    </OuiScreenReaderOnly>
-    <OuiI18n
-      default="Notification"
-      token="ouiToast.notification"
+    <p
+      class="ouiScreenReaderOnly"
     >
-      <div
-        aria-label="Notification"
-        className="ouiToastHeader"
-        data-test-subj="ouiToastHeader"
+      A new notification appears
+    </p>
+    <div
+      aria-label="Notification"
+      class="ouiToastHeader"
+      data-test-subj="ouiToastHeader"
+    >
+      <span
+        class="ouiToastHeader__title"
       >
-        <span
-          className="ouiToastHeader__title"
-        >
-          test title
-        </span>
-      </div>
-    </OuiI18n>
+        test title
+      </span>
+    </div>
   </div>
-</OuiToast>
+</div>
 `;
 
 exports[`OuiToast Props color success is rendered 1`] = `
-<OuiToast
-  color="success"
-  title="test title"
->
+<div>
   <div
-    className="ouiToast ouiToast--success"
+    class="ouiToast ouiToast--success"
   >
-    <OuiScreenReaderOnly>
-      <p
-        className="ouiScreenReaderOnly"
-      >
-        <OuiI18n
-          default="A new notification appears"
-          token="ouiToast.newNotification"
-        >
-          A new notification appears
-        </OuiI18n>
-      </p>
-    </OuiScreenReaderOnly>
-    <OuiI18n
-      default="Notification"
-      token="ouiToast.notification"
+    <p
+      class="ouiScreenReaderOnly"
     >
-      <div
-        aria-label="Notification"
-        className="ouiToastHeader"
-        data-test-subj="ouiToastHeader"
+      A new notification appears
+    </p>
+    <div
+      aria-label="Notification"
+      class="ouiToastHeader"
+      data-test-subj="ouiToastHeader"
+    >
+      <span
+        class="ouiToastHeader__title"
       >
-        <span
-          className="ouiToastHeader__title"
-        >
-          test title
-        </span>
-      </div>
-    </OuiI18n>
+        test title
+      </span>
+    </div>
   </div>
-</OuiToast>
+</div>
 `;
 
 exports[`OuiToast Props color warning is rendered 1`] = `
-<OuiToast
-  color="warning"
-  title="test title"
->
+<div>
   <div
-    className="ouiToast ouiToast--warning"
+    class="ouiToast ouiToast--warning"
   >
-    <OuiScreenReaderOnly>
-      <p
-        className="ouiScreenReaderOnly"
-      >
-        <OuiI18n
-          default="A new notification appears"
-          token="ouiToast.newNotification"
-        >
-          A new notification appears
-        </OuiI18n>
-      </p>
-    </OuiScreenReaderOnly>
-    <OuiI18n
-      default="Notification"
-      token="ouiToast.notification"
+    <p
+      class="ouiScreenReaderOnly"
     >
-      <div
-        aria-label="Notification"
-        className="ouiToastHeader"
-        data-test-subj="ouiToastHeader"
+      A new notification appears
+    </p>
+    <div
+      aria-label="Notification"
+      class="ouiToastHeader"
+      data-test-subj="ouiToastHeader"
+    >
+      <span
+        class="ouiToastHeader__title"
       >
-        <span
-          className="ouiToastHeader__title"
-        >
-          test title
-        </span>
-      </div>
-    </OuiI18n>
+        test title
+      </span>
+    </div>
   </div>
-</OuiToast>
+</div>
 `;
 
 exports[`OuiToast Props iconType is rendered 1`] = `
-<OuiToast
-  iconType="user"
-  title="test title"
->
+<div>
   <div
-    className="ouiToast"
+    class="ouiToast"
   >
-    <OuiScreenReaderOnly>
-      <p
-        className="ouiScreenReaderOnly"
-      >
-        <OuiI18n
-          default="A new notification appears"
-          token="ouiToast.newNotification"
-        >
-          A new notification appears
-        </OuiI18n>
-      </p>
-    </OuiScreenReaderOnly>
-    <OuiI18n
-      default="Notification"
-      token="ouiToast.notification"
+    <p
+      class="ouiScreenReaderOnly"
     >
-      <div
-        aria-label="Notification"
-        className="ouiToastHeader"
-        data-test-subj="ouiToastHeader"
+      A new notification appears
+    </p>
+    <div
+      aria-label="Notification"
+      class="ouiToastHeader"
+      data-test-subj="ouiToastHeader"
+    >
+      <span
+        aria-hidden="true"
+        class="ouiToastHeader__icon"
+        data-ouiicon-type="user"
+      />
+      <span
+        class="ouiToastHeader__title"
       >
-        <OuiIcon
-          aria-hidden="true"
-          className="ouiToastHeader__icon"
-          size="m"
-          type="user"
-        >
-          <span
-            aria-hidden="true"
-            className="ouiToastHeader__icon"
-            data-ouiicon-type="user"
-            size="m"
-          />
-        </OuiIcon>
-        <span
-          className="ouiToastHeader__title"
-        >
-          test title
-        </span>
-      </div>
-    </OuiI18n>
+        test title
+      </span>
+    </div>
   </div>
-</OuiToast>
+</div>
 `;
 
 exports[`OuiToast Props title is rendered 1`] = `
-<OuiToast
-  title="toast title"
->
+<div>
   <div
-    className="ouiToast"
+    class="ouiToast"
   >
-    <OuiScreenReaderOnly>
-      <p
-        className="ouiScreenReaderOnly"
-      >
-        <OuiI18n
-          default="A new notification appears"
-          token="ouiToast.newNotification"
-        >
-          A new notification appears
-        </OuiI18n>
-      </p>
-    </OuiScreenReaderOnly>
-    <OuiI18n
-      default="Notification"
-      token="ouiToast.notification"
+    <p
+      class="ouiScreenReaderOnly"
     >
-      <div
-        aria-label="Notification"
-        className="ouiToastHeader"
-        data-test-subj="ouiToastHeader"
+      A new notification appears
+    </p>
+    <div
+      aria-label="Notification"
+      class="ouiToastHeader"
+      data-test-subj="ouiToastHeader"
+    >
+      <span
+        class="ouiToastHeader__title"
       >
-        <span
-          className="ouiToastHeader__title"
-        >
-          toast title
-        </span>
-      </div>
-    </OuiI18n>
+        toast title
+      </span>
+    </div>
   </div>
-</OuiToast>
+</div>
 `;
 
 exports[`OuiToast is rendered 1`] = `
-<div
-  aria-label="aria-label"
-  class="ouiToast testClass1 testClass2"
-  data-test-subj="test subject string"
->
-  <p
-    class="ouiScreenReaderOnly"
-  >
-    A new notification appears
-  </p>
+<div>
   <div
-    aria-label="Notification"
-    class="ouiToastHeader ouiToastHeader--withBody"
-    data-test-subj="ouiToastHeader"
+    aria-label="aria-label"
+    class="ouiToast testClass1 testClass2"
+    data-test-subj="test subject string"
   >
-    <span
-      class="ouiToastHeader__title"
+    <p
+      class="ouiScreenReaderOnly"
     >
-      test title
-    </span>
-  </div>
-  <div
-    class="ouiText ouiText--small ouiToastBody"
-  >
-    <p>
-      Hi
+      A new notification appears
     </p>
+    <div
+      aria-label="Notification"
+      class="ouiToastHeader ouiToastHeader--withBody"
+      data-test-subj="ouiToastHeader"
+    >
+      <span
+        class="ouiToastHeader__title"
+      >
+        test title
+      </span>
+    </div>
+    <div
+      class="ouiText ouiText--small ouiToastBody"
+    >
+      <p>
+        Hi
+      </p>
+    </div>
   </div>
 </div>
 `;

@@ -1,28 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiImage is rendered 1`] = `
-<figure
-  class="ouiImage testClass1 testClass2 ouiImage--large"
->
-  <img
-    alt="alt"
-    aria-label="aria-label"
-    class="ouiImage__img"
-    data-test-subj="test subject string"
-    src="/cat.jpg"
-  />
-</figure>
-`;
-
-exports[`OuiImage is rendered and allows full screen 1`] = `
-<figure
-  class="ouiImage ouiImage--allowFullScreen testClass1 testClass2 ouiImage--large"
->
-  <button
-    aria-label="Open full screen alt image"
-    class="ouiImage__button ouiImage__button--fullWidth"
-    data-test-subj="activateFullScreenButton"
-    type="button"
+<div>
+  <figure
+    class="ouiImage testClass1 testClass2 ouiImage--large"
   >
     <img
       alt="alt"
@@ -31,79 +12,113 @@ exports[`OuiImage is rendered and allows full screen 1`] = `
       data-test-subj="test subject string"
       src="/cat.jpg"
     />
-    <span
-      class="ouiImage__icon"
-      color="ghost"
-      data-ouiicon-type="fullScreen"
-    />
-  </button>
-</figure>
+  </figure>
+</div>
+`;
+
+exports[`OuiImage is rendered and allows full screen 1`] = `
+<div>
+  <figure
+    class="ouiImage ouiImage--allowFullScreen testClass1 testClass2 ouiImage--large"
+  >
+    <button
+      aria-label="Open full screen alt image"
+      class="ouiImage__button ouiImage__button--fullWidth"
+      data-test-subj="activateFullScreenButton"
+      type="button"
+    >
+      <img
+        alt="alt"
+        aria-label="aria-label"
+        class="ouiImage__img"
+        data-test-subj="test subject string"
+        src="/cat.jpg"
+      />
+      <span
+        class="ouiImage__icon"
+        color="ghost"
+        data-ouiicon-type="fullScreen"
+      />
+    </button>
+  </figure>
+</div>
 `;
 
 exports[`OuiImage is rendered with a float 1`] = `
-<figure
-  class="ouiImage ouiImage--floatLeft ouiImage--original"
->
-  <img
-    alt="alt"
-    class="ouiImage__img"
-    src="/cat.jpg"
-  />
-</figure>
+<div>
+  <figure
+    class="ouiImage ouiImage--floatLeft ouiImage--original"
+  >
+    <img
+      alt="alt"
+      class="ouiImage__img"
+      src="/cat.jpg"
+    />
+  </figure>
+</div>
 `;
 
 exports[`OuiImage is rendered with a margin 1`] = `
-<figure
-  class="ouiImage ouiImage--marginLarge ouiImage--original"
->
-  <img
-    alt="alt"
-    class="ouiImage__img"
-    src="/cat.jpg"
-  />
-</figure>
+<div>
+  <figure
+    class="ouiImage ouiImage--marginLarge ouiImage--original"
+  >
+    <img
+      alt="alt"
+      class="ouiImage__img"
+      src="/cat.jpg"
+    />
+  </figure>
+</div>
 `;
 
 exports[`OuiImage is rendered with a node as the caption 1`] = `
-<figure
-  class="ouiImage ouiImage--original"
->
-  <img
-    alt="alt"
-    class="ouiImage__img"
-    src="/cat.jpg"
-  />
-  <figcaption
-    class="ouiImage__caption"
+<div>
+  <figure
+    aria-label="caption"
+    class="ouiImage ouiImage--original"
   >
-    <span>
-      caption
-    </span>
-  </figcaption>
-</figure>
+    <img
+      alt="alt"
+      class="ouiImage__img"
+      src="/cat.jpg"
+    />
+    <figcaption
+      class="ouiImage__caption"
+    >
+      <span>
+        caption
+      </span>
+    </figcaption>
+  </figure>
+</div>
 `;
 
 exports[`OuiImage is rendered with custom size 1`] = `
-<figure
-  class="ouiImage"
->
-  <img
-    alt="alt"
-    class="ouiImage__img"
-    src="/cat.jpg"
-    style="max-width:50px;max-height:50px;width:auto"
-  />
-</figure>
+<div>
+  <figure
+    class="ouiImage"
+  >
+    <img
+      alt="alt"
+      class="ouiImage__img"
+      src="/cat.jpg"
+      style="max-width: 50px; max-height: 50px; width: auto;"
+    />
+  </figure>
+</div>
 `;
 
 exports[`OuiImage is rendered with src 1`] = `
-<figure
-  class="ouiImage ouiImage--floatLeft ouiImage--original"
->
-  <img
-    alt="alt"
-    class="ouiImage__img"
-    src="/cat.jpg"
-  />
-</figure>
+<div>
+  <figure
+    class="ouiImage ouiImage--floatLeft ouiImage--original"
+  >
+    <img
+      alt="alt"
+      class="ouiImage__img"
+      src="/cat.jpg"
+    />
+  </figure>
+</div>
 `;

@@ -29,14 +29,14 @@
  */
 
 import React from 'react';
-import { mount, render } from 'enzyme';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { OuiNotificationEvent } from './notification_event';
-import { OuiContextMenuPanel, OuiContextMenuItem } from '../context_menu';
-import { findTestSubject, takeMountedSnapshot } from '../../test';
+import { OuiContextMenuItem } from '../context_menu';
 
 describe('OuiNotificationEvent', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiNotificationEvent
         id="id"
         type="Alert"
@@ -46,12 +46,12 @@ describe('OuiNotificationEvent', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('multiple messages are rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -61,11 +61,11 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
-    test('isRead  is rendered', () => {
-      const component = render(
+    test('isRead is rendered', () => {
+      const { container } = render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -77,11 +77,11 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
-    test('severity  is rendered', () => {
-      const component = render(
+    test('severity is rendered', () => {
+      const { container } = render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -92,11 +92,11 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('badgeColor is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -107,11 +107,11 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('iconType is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -122,11 +122,11 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('headingLevel is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -137,11 +137,11 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('iconAriaLabel is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -153,11 +153,11 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('primaryAction is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -169,11 +169,11 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('primaryActionProps is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -186,7 +186,7 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('contextMenuItems are rendered', () => {
@@ -204,7 +204,7 @@ describe('OuiNotificationEvent', () => {
         ];
       };
 
-      const component = mount(
+      render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -215,15 +215,23 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      expect(component.find(OuiContextMenuPanel)).toHaveLength(0);
-      findTestSubject(component, 'id-notificationEventMetaButton').simulate(
-        'click'
-      );
-      expect(component.find(OuiContextMenuPanel)).toHaveLength(1);
-
+      // Initially, context menu items should not be visible
       expect(
-        takeMountedSnapshot(component.find(OuiContextMenuPanel))
-      ).toMatchSnapshot();
+        screen.queryByText('Context menu 1 for id: id')
+      ).not.toBeInTheDocument();
+
+      // Click the button to open the context menu
+      act(() => {
+        fireEvent.click(screen.getByTestId('id-notificationEventMetaButton'));
+      });
+
+      // Now the context menu items should be visible
+      expect(screen.getByText('Context menu 1 for id: id')).toBeInTheDocument();
+      expect(screen.getByText('Context menu 2 for id: id')).toBeInTheDocument();
+      expect(screen.getByText('Context menu 3 for id: id')).toBeInTheDocument();
+
+      // Take a snapshot of the entire body which should include the portal
+      expect(document.body).toMatchSnapshot();
     });
   });
 
@@ -231,7 +239,7 @@ describe('OuiNotificationEvent', () => {
     it('triggers the onRead callback', () => {
       const onRead = jest.fn();
 
-      const component = mount(
+      render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -243,9 +251,9 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      findTestSubject(component, 'id-notificationEventReadButton').simulate(
-        'click'
-      );
+      act(() => {
+        fireEvent.click(screen.getByTestId('id-notificationEventReadButton'));
+      });
 
       expect(onRead).toHaveBeenCalledTimes(1);
     });
@@ -253,7 +261,7 @@ describe('OuiNotificationEvent', () => {
     it('triggers the onClickPrimaryAction callback', () => {
       const onClickPrimaryAction = jest.fn();
 
-      const component = mount(
+      render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -267,9 +275,11 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      findTestSubject(component, 'id-notificationEventPrimaryAction').simulate(
-        'click'
-      );
+      act(() => {
+        fireEvent.click(
+          screen.getByTestId('id-notificationEventPrimaryAction')
+        );
+      });
 
       expect(onClickPrimaryAction).toHaveBeenCalledTimes(1);
     });
@@ -277,7 +287,7 @@ describe('OuiNotificationEvent', () => {
     it('triggers the onClickTitle callback', () => {
       const onClickTitle = jest.fn();
 
-      const component = mount(
+      render(
         <OuiNotificationEvent
           id="id"
           type="Alert"
@@ -288,7 +298,9 @@ describe('OuiNotificationEvent', () => {
         />
       );
 
-      findTestSubject(component, 'id-notificationEventTitle').simulate('click');
+      act(() => {
+        fireEvent.click(screen.getByTestId('id-notificationEventTitle'));
+      });
 
       expect(onClickTitle).toHaveBeenCalledTimes(1);
     });

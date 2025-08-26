@@ -164,7 +164,9 @@ const webpackConfig = {
         // /app/ represents the entire docker environment
         watchFiles: isPuppeteer
           ? {
-              ignored: '**/*',
+              options: {
+                ignored: '**/*',
+              },
             }
           : undefined,
         client: {

@@ -30,7 +30,7 @@
 
 /* eslint-disable jsx-a11y/tabindex-no-positive */
 import React from 'react';
-import { render, shallow } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 
 import { OuiKeyboardAccessible } from './keyboard_accessible';
 
@@ -62,7 +62,9 @@ describe('OuiKeyboardAccessible', () => {
       const component = <OuiKeyboardAccessible />; // eslint-disable-line @typescript-eslint/no-unused-vars
 
       expect(consoleStub).toBeCalled();
-      expect(consoleStub.mock.calls[0][0]).toMatch(
+      // React 18 formats PropTypes errors differently than React 16
+      const errorMessage = consoleStub.mock.calls[0].join(' ');
+      expect(errorMessage).toMatch(
         'needs to wrap an element with which the user interacts.'
       );
     });
@@ -76,9 +78,9 @@ describe('OuiKeyboardAccessible', () => {
       );
 
       expect(consoleStub).toBeCalled();
-      expect(consoleStub.mock.calls[0][0]).toMatch(
-        "doesn't need to be used on a button."
-      );
+      // React 18 formats PropTypes errors differently than React 16
+      const errorMessage = consoleStub.mock.calls[0].join(' ');
+      expect(errorMessage).toMatch("doesn't need to be used on a button.");
     });
 
     test('when the child is a link with an href', () => {
@@ -92,7 +94,9 @@ describe('OuiKeyboardAccessible', () => {
       );
 
       expect(consoleStub).toBeCalled();
-      expect(consoleStub.mock.calls[0][0]).toMatch(
+      // React 18 formats PropTypes errors differently than React 16
+      const errorMessage = consoleStub.mock.calls[0].join(' ');
+      expect(errorMessage).toMatch(
         "doesn't need to be used on a link if it has a href attribute."
       );
     });
@@ -106,7 +110,9 @@ describe('OuiKeyboardAccessible', () => {
       );
 
       expect(consoleStub).toBeCalled();
-      expect(consoleStub.mock.calls[0][0]).toMatch(
+      // React 18 formats PropTypes errors differently than React 16
+      const errorMessage = consoleStub.mock.calls[0].join(' ');
+      expect(errorMessage).toMatch(
         'needs to wrap an element which has an onClick prop assigned.'
       );
     });
@@ -123,7 +129,9 @@ describe('OuiKeyboardAccessible', () => {
       );
 
       expect(consoleStub).toBeCalled();
-      expect(consoleStub.mock.calls[0][0]).toMatch(
+      // React 18 formats PropTypes errors differently than React 16
+      const errorMessage = consoleStub.mock.calls[0].join(' ');
+      expect(errorMessage).toMatch(
         "child's onClick prop needs to be a function."
       );
     });
@@ -156,35 +164,35 @@ describe('OuiKeyboardAccessible', () => {
 
   describe('adds accessibility attributes', () => {
     test('tabindex and role', () => {
-      const $button = render(
+      const { container } = render(
         <OuiKeyboardAccessible>
           <div onClick={noop} />
         </OuiKeyboardAccessible>
       );
 
-      expect($button).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
   describe("doesn't override pre-existing accessibility attributes", () => {
     test('tabindex', () => {
-      const $button = render(
+      const { container } = render(
         <OuiKeyboardAccessible>
           <div onClick={noop} tabIndex={1} />
         </OuiKeyboardAccessible>
       );
 
-      expect($button).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('role', () => {
-      const $button = render(
+      const { container } = render(
         <OuiKeyboardAccessible>
           <div onClick={noop} role="button" tabIndex={0} />
         </OuiKeyboardAccessible>
       );
 
-      expect($button).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
@@ -192,13 +200,14 @@ describe('OuiKeyboardAccessible', () => {
     test('on ENTER keyup', () => {
       const onClickHandler = jest.fn();
 
-      const $button = shallow(
+      const { container } = render(
         <OuiKeyboardAccessible>
           <div data-div onClick={onClickHandler} />
         </OuiKeyboardAccessible>
       );
 
-      $button.find('[data-div]').simulate('keyup', {
+      const divElement = container.querySelector('[data-div]') as HTMLElement;
+      fireEvent.keyUp(divElement, {
         key: keys.ENTER,
       });
 
@@ -208,13 +217,14 @@ describe('OuiKeyboardAccessible', () => {
     test('on SPACE keyup', () => {
       const onClickHandler = jest.fn();
 
-      const $button = shallow(
+      const { container } = render(
         <OuiKeyboardAccessible>
           <div data-div onClick={onClickHandler} />
         </OuiKeyboardAccessible>
       );
 
-      $button.find('[data-div]').simulate('keyup', {
+      const divElement = container.querySelector('[data-div]') as HTMLElement;
+      fireEvent.keyUp(divElement, {
         key: keys.SPACE,
       });
 
@@ -226,13 +236,14 @@ describe('OuiKeyboardAccessible', () => {
     test('onKeyUp handler is called', () => {
       const onKeyUpHandler = jest.fn();
 
-      const $button = shallow(
+      const { container } = render(
         <OuiKeyboardAccessible>
           <div data-div onKeyUp={onKeyUpHandler} />
         </OuiKeyboardAccessible>
       );
 
-      $button.find('[data-div]').simulate('keyup', {
+      const divElement = container.querySelector('[data-div]') as HTMLElement;
+      fireEvent.keyUp(divElement, {
         keyCode: 0,
       });
 
@@ -242,13 +253,14 @@ describe('OuiKeyboardAccessible', () => {
     test('onKeyDown handler is called', () => {
       const onKeyDownHandler = jest.fn();
 
-      const $button = shallow(
+      const { container } = render(
         <OuiKeyboardAccessible>
           <div data-div onKeyDown={onKeyDownHandler} />
         </OuiKeyboardAccessible>
       );
 
-      $button.find('[data-div]').simulate('keydown', {
+      const divElement = container.querySelector('[data-div]') as HTMLElement;
+      fireEvent.keyDown(divElement, {
         keyCode: 0,
       });
 

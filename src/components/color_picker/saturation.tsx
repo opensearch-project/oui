@@ -47,6 +47,8 @@ import { OuiI18n } from '../i18n';
 
 import { getEventPosition } from './utils';
 
+const DEFAULT_COLOR = [1, 0, 0];
+
 export type SaturationClientRect = Pick<
   ClientRect,
   'left' | 'top' | 'width' | 'height'
@@ -71,7 +73,7 @@ export const OuiSaturation = forwardRef<HTMLDivElement, OuiSaturationProps>(
   (
     {
       className,
-      color = [1, 0, 0],
+      color = DEFAULT_COLOR,
       'data-test-subj': dataTestSubj = 'ouiSaturation',
       hex,
       id,
