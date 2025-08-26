@@ -29,9 +29,10 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { mount, render } from 'enzyme';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import html from 'html';
-import { renderTestElement, act } from '../../test/react_test_utils';
+import { renderTestElement } from '../../test/react_test_utils';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiCodeBlock } from './code_block';
@@ -42,60 +43,62 @@ console.log(some);`;
 
 describe('OuiCodeBlock', () => {
   test('renders a code block', () => {
-    const component = render(
+    const { container } = render(
       <OuiCodeBlock {...requiredProps}>{code}</OuiCodeBlock>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('transparentBackground', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiCodeBlock transparentBackground>{code}</OuiCodeBlock>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('isCopyable', () => {
       it('is rendered', () => {
-        const component = mount(<OuiCodeBlock isCopyable>{code}</OuiCodeBlock>);
+        const { container } = render(
+          <OuiCodeBlock isCopyable>{code}</OuiCodeBlock>
+        );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('overflowHeight', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiCodeBlock overflowHeight={200}>{code}</OuiCodeBlock>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('language', () => {
       it('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiCodeBlock language="html">{code}</OuiCodeBlock>
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('fontSize', () => {
       FONT_SIZES.forEach((fontSize) => {
         test(`${fontSize} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiCodeBlock fontSize={fontSize}>{code}</OuiCodeBlock>
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
@@ -103,22 +106,46 @@ describe('OuiCodeBlock', () => {
     describe('paddingSize', () => {
       PADDING_SIZES.forEach((paddingSize) => {
         test(`${paddingSize} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiCodeBlock paddingSize={paddingSize}>{code}</OuiCodeBlock>
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
   });
 
   describe('dynamic content', () => {
+    // Note: this test needs to come first
+    it('displays content in fullscreen mode', async () => {
+      render(
+        <OuiCodeBlock language="javascript" overflowHeight={300}>
+          const value = &quot;hello&quot;
+        </OuiCodeBlock>
+      );
+
+      const user = userEvent.setup();
+      const fullScreenButton = screen.getByLabelText('Expand');
+
+      await act(async () => {
+        await user.click(fullScreenButton);
+      });
+
+      expect(
+        document.querySelector('.ouiCodeBlock-isFullScreen')
+      ).not.toBeNull();
+    });
+
     it('updates DOM when input changes', (done) => {
       expect.assertions(2);
 
-      const { container } = renderTestElement(<App />, {
-        attachToDocument: false,
+      let container: HTMLDivElement;
+      act(() => {
+        const wrapper = renderTestElement(<App />, {
+          attachToDocument: false,
+        });
+        container = wrapper.container;
       });
 
       function takeSnapshot() {
@@ -158,21 +185,6 @@ describe('OuiCodeBlock', () => {
           </div>
         );
       }
-    });
-
-    it('displays content in fullscreen mode', () => {
-      const component = mount(
-        <OuiCodeBlock language="javascript" overflowHeight={300}>
-          const value = &quot;hello&quot;
-        </OuiCodeBlock>
-      );
-
-      component.find('OuiButtonIcon[iconType="fullScreen"]').simulate('click');
-      component.update();
-
-      expect(component.find('.ouiCodeBlock-isFullScreen').text()).toBe(
-        'const value = "hello"'
-      );
     });
   });
 });

@@ -1,19 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiBeacon accepts size 1`] = `
-<div
-  aria-label="aria-label"
-  class="ouiBeacon testClass1 testClass2"
-  data-test-subj="test subject string"
-  style="height:14px;width:14px"
-/>
+<div>
+  <div
+    aria-label="aria-label"
+    class="ouiBeacon testClass1 testClass2"
+    data-test-subj="test subject string"
+    style="height: 14px; width: 14px;"
+  />
+</div>
 `;
 
 exports[`OuiBeacon is rendered 1`] = `
-<div
-  aria-label="aria-label"
-  class="ouiBeacon testClass1 testClass2"
-  data-test-subj="test subject string"
-  style="height:12px;width:12px"
-/>
+<div>
+  <div
+    aria-label="aria-label"
+    class="ouiBeacon testClass1 testClass2"
+    data-test-subj="test subject string"
+    style="height: 12px; width: 12px;"
+  />
+</div>
 `;

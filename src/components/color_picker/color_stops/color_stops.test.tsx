@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, fireEvent, act } from '@testing-library/react';
 
 import { OuiColorStops } from './color_stops';
 
@@ -38,8 +38,7 @@ import {
   DEFAULT_VISUALIZATION_COLOR,
   keys,
 } from '../../../services';
-import { requiredProps, findTestSubject } from '../../../test';
-import { OuiFieldNumber } from '../../form/field_number';
+import { requiredProps } from '../../../test';
 
 jest.mock('../../portal', () => ({
   OuiPortal: ({ children }: { children: any }) => children,
@@ -71,7 +70,7 @@ afterEach(() => {
 // - Drag to reposition thumb (we can't get real page position info)
 
 test('renders OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -81,11 +80,11 @@ test('renders OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('renders free-range OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -93,11 +92,11 @@ test('renders free-range OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('renders min-only OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -106,11 +105,11 @@ test('renders min-only OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('renders max-only OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -119,11 +118,11 @@ test('renders max-only OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('renders compressed OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -134,11 +133,11 @@ test('renders compressed OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('renders readOnly OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -149,11 +148,11 @@ test('renders readOnly OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('renders fullWidth OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -164,11 +163,11 @@ test('renders fullWidth OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('renders disabled OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -179,11 +178,11 @@ test('renders disabled OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('renders fixed stop OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -194,11 +193,11 @@ test('renders fixed stop OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('renders stepped stop OuiColorStops', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -210,13 +209,14 @@ test('renders stepped stop OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(
-    colorStops.find('.ouiRangeHighlight__progress').prop('style')
-  ).toMatchSnapshot();
+  const progressElement = container.querySelector(
+    '.ouiRangeHighlight__progress'
+  ) as HTMLElement;
+  expect(progressElement?.style).toMatchSnapshot();
 });
 
 test('renders empty OuiColorStops', () => {
-  const colorStops = render(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -226,11 +226,11 @@ test('renders empty OuiColorStops', () => {
       {...requiredProps}
     />
   );
-  expect(colorStops).toMatchSnapshot();
+  expect(container).toMatchSnapshot();
 });
 
 test('popover color selector is shown when the thumb is clicked', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -241,15 +241,18 @@ test('popover color selector is shown when the thumb is clicked', () => {
     />
   );
 
-  findTestSubject(colorStops, 'ouiColorStopThumb')
-    .first()
-    .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const colorSelector = findTestSubject(colorStops, 'ouiColorStopPopover');
-  expect(colorSelector.length).toBe(1);
+  const thumb = container.querySelector(
+    '[data-test-subj="ouiColorStopThumb"]'
+  ) as HTMLElement;
+  fireEvent.mouseDown(thumb, { pageX: 0, pageY: 0 });
+  const colorSelector = container.querySelector(
+    '[data-test-subj="ouiColorStopPopover"]'
+  );
+  expect(colorSelector).toBeTruthy();
 });
 
 test('passes value input props to number input', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -263,15 +266,18 @@ test('passes value input props to number input', () => {
     />
   );
 
-  findTestSubject(colorStops, 'ouiColorStopThumb')
-    .first()
-    .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const colorSelector = findTestSubject(colorStops, 'ouiColorStopPopover');
-  expect(colorSelector.find(OuiFieldNumber).prop('append')).toEqual('%');
+  const thumb = container.querySelector(
+    '[data-test-subj="ouiColorStopThumb"]'
+  ) as HTMLElement;
+  fireEvent.mouseDown(thumb, { pageX: 0, pageY: 0 });
+  const appendElement = container.querySelector(
+    '.ouiFormControlLayout__append'
+  );
+  expect(appendElement?.textContent).toEqual('%');
 });
 
 test('stop input updates stops', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -282,13 +288,15 @@ test('stop input updates stops', () => {
     />
   );
 
-  findTestSubject(colorStops, 'ouiColorStopThumb')
-    .first()
-    .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const event = { target: { value: '10' } };
-  const inputs = colorStops.find('input[type="number"]');
-  expect(inputs.length).toBe(1);
-  inputs.simulate('change', event);
+  const thumb = container.querySelector(
+    '[data-test-subj="ouiColorStopThumb"]'
+  ) as HTMLElement;
+  fireEvent.mouseDown(thumb, { pageX: 0, pageY: 0 });
+  const numberInput = container.querySelector(
+    'input[type="number"]'
+  ) as HTMLInputElement;
+  expect(numberInput).toBeTruthy();
+  fireEvent.change(numberInput, { target: { value: '10' } });
   expect(onChange).toBeCalled();
   expect(onChange).toBeCalledWith(
     [
@@ -301,7 +309,7 @@ test('stop input updates stops', () => {
 });
 
 test('stop input updates stops with error prevention (reset to bounds)', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -312,12 +320,14 @@ test('stop input updates stops with error prevention (reset to bounds)', () => {
     />
   );
 
-  findTestSubject(colorStops, 'ouiColorStopThumb')
-    .first()
-    .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const event = { target: { value: '1000' } };
-  const inputs = colorStops.find('input[type="number"]');
-  inputs.simulate('change', event);
+  const thumb = container.querySelector(
+    '[data-test-subj="ouiColorStopThumb"]'
+  ) as HTMLElement;
+  fireEvent.mouseDown(thumb, { pageX: 0, pageY: 0 });
+  const numberInput = container.querySelector(
+    'input[type="number"]'
+  ) as HTMLInputElement;
+  fireEvent.change(numberInput, { target: { value: '1000' } });
   expect(onChange).toBeCalled();
   expect(onChange).toBeCalledWith(
     [
@@ -330,7 +340,7 @@ test('stop input updates stops with error prevention (reset to bounds)', () => {
 });
 
 test('hex input updates stops', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -341,13 +351,15 @@ test('hex input updates stops', () => {
     />
   );
 
-  findTestSubject(colorStops, 'ouiColorStopThumb')
-    .first()
-    .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const event = { target: { value: '#FFFFFF' } };
-  const inputs = colorStops.find('input[type="text"]');
-  expect(inputs.length).toBe(1);
-  inputs.simulate('change', event);
+  const thumb = container.querySelector(
+    '[data-test-subj="ouiColorStopThumb"]'
+  ) as HTMLElement;
+  fireEvent.mouseDown(thumb, { pageX: 0, pageY: 0 });
+  const textInput = container.querySelector(
+    'input[type="text"]'
+  ) as HTMLInputElement;
+  expect(textInput).toBeTruthy();
+  fireEvent.change(textInput, { target: { value: '#FFFFFF' } });
   expect(onChange).toBeCalled();
   expect(onChange).toBeCalledWith(
     [
@@ -360,7 +372,7 @@ test('hex input updates stops', () => {
 });
 
 test('hex input updates stops with error', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -371,12 +383,14 @@ test('hex input updates stops with error', () => {
     />
   );
 
-  findTestSubject(colorStops, 'ouiColorStopThumb')
-    .first()
-    .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const event = { target: { value: '#FFFFF' } };
-  const inputs = colorStops.find('input[type="text"]');
-  inputs.simulate('change', event);
+  const thumb = container.querySelector(
+    '[data-test-subj="ouiColorStopThumb"]'
+  ) as HTMLElement;
+  fireEvent.mouseDown(thumb, { pageX: 0, pageY: 0 });
+  const textInput = container.querySelector(
+    'input[type="text"]'
+  ) as HTMLInputElement;
+  fireEvent.change(textInput, { target: { value: '#FFFFF' } });
   expect(onChange).toBeCalled();
   expect(onChange).toBeCalledWith(
     [
@@ -389,7 +403,7 @@ test('hex input updates stops with error', () => {
 });
 
 test('picker updates stops', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -400,12 +414,15 @@ test('picker updates stops', () => {
     />
   );
 
-  findTestSubject(colorStops, 'ouiColorStopThumb')
-    .first()
-    .simulate('mousedown', { pageX: 0, pageY: 0 });
-  const swatches = colorStops.find('button.ouiColorPicker__swatchSelect');
+  const thumb = container.querySelector(
+    '[data-test-subj="ouiColorStopThumb"]'
+  ) as HTMLElement;
+  fireEvent.mouseDown(thumb, { pageX: 0, pageY: 0 });
+  const swatches = container.querySelectorAll(
+    'button.ouiColorPicker__swatchSelect'
+  );
   expect(swatches.length).toBe(VISUALIZATION_COLORS.length);
-  swatches.first().simulate('click');
+  fireEvent.click(swatches[0]);
   expect(onChange).toBeCalled();
   expect(onChange).toBeCalledWith(
     [
@@ -418,7 +435,7 @@ test('picker updates stops', () => {
 });
 
 test('thumb focus changes', () => {
-  const colorStops = mount(
+  const { container: rtlContainer } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -427,24 +444,35 @@ test('thumb focus changes', () => {
       max={100}
       {...requiredProps}
     />,
-    { attachTo: container }
+    { container: document.body.appendChild(document.createElement('div')) }
   );
 
-  const wrapper = findTestSubject(colorStops, 'ouiColorStops');
-  const thumbs = findTestSubject(colorStops, 'ouiColorStopThumb');
-  wrapper.simulate('focus');
-  wrapper.simulate('keydown', {
-    key: keys.ARROW_DOWN,
+  const wrapper = rtlContainer.querySelector(
+    '[data-test-subj="ouiColorStops"]'
+  ) as HTMLElement;
+  const thumbs = rtlContainer.querySelectorAll(
+    '[data-test-subj="ouiColorStopThumb"]'
+  );
+
+  act(() => {
+    wrapper.focus();
   });
-  expect(thumbs.first().getDOMNode()).toEqual(document.activeElement);
-  thumbs.first().simulate('keydown', {
-    key: keys.ARROW_DOWN,
+
+  act(() => {
+    fireEvent.keyDown(wrapper, { key: keys.ARROW_DOWN });
   });
-  expect(thumbs.at(1).getDOMNode()).toEqual(document.activeElement);
+
+  expect(thumbs[0]).toEqual(document.activeElement);
+
+  act(() => {
+    fireEvent.keyDown(thumbs[0], { key: keys.ARROW_DOWN });
+  });
+
+  expect(thumbs[1]).toEqual(document.activeElement);
 });
 
 test('thumb direction movement', () => {
-  const colorStops = mount(
+  const { container: rtlContainer } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -453,19 +481,30 @@ test('thumb direction movement', () => {
       max={100}
       {...requiredProps}
     />,
-    { attachTo: container }
+    { container: document.body.appendChild(document.createElement('div')) }
   );
 
-  const wrapper = findTestSubject(colorStops, 'ouiColorStops');
-  const thumbs = findTestSubject(colorStops, 'ouiColorStopThumb');
-  wrapper.simulate('focus');
-  wrapper.simulate('keydown', {
-    key: keys.ARROW_DOWN,
+  const wrapper = rtlContainer.querySelector(
+    '[data-test-subj="ouiColorStops"]'
+  ) as HTMLElement;
+  const thumbs = rtlContainer.querySelectorAll(
+    '[data-test-subj="ouiColorStopThumb"]'
+  );
+
+  act(() => {
+    wrapper.focus();
   });
-  expect(thumbs.first().getDOMNode()).toEqual(document.activeElement);
-  thumbs.first().simulate('keydown', {
-    key: keys.ARROW_RIGHT,
+
+  act(() => {
+    fireEvent.keyDown(wrapper, { key: keys.ARROW_DOWN });
   });
+
+  expect(thumbs[0]).toEqual(document.activeElement);
+
+  act(() => {
+    fireEvent.keyDown(thumbs[0], { key: keys.ARROW_RIGHT });
+  });
+
   expect(onChange).toBeCalledWith(
     [
       { color: '#FF0000', stop: 1 },
@@ -474,9 +513,11 @@ test('thumb direction movement', () => {
     ],
     false
   );
-  thumbs.first().simulate('keydown', {
-    key: keys.ARROW_LEFT,
+
+  act(() => {
+    fireEvent.keyDown(thumbs[0], { key: keys.ARROW_LEFT });
   });
+
   expect(onChange).toBeCalledWith(
     [
       { color: '#FF0000', stop: 0 },
@@ -488,7 +529,7 @@ test('thumb direction movement', () => {
 });
 
 test('add new thumb via keyboard', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -499,11 +540,18 @@ test('add new thumb via keyboard', () => {
     />
   );
 
-  const wrapper = findTestSubject(colorStops, 'ouiColorStops');
-  wrapper.simulate('focus');
-  wrapper.simulate('keydown', {
-    key: keys.ENTER,
+  const wrapper = container.querySelector(
+    '[data-test-subj="ouiColorStops"]'
+  ) as HTMLElement;
+
+  act(() => {
+    wrapper.focus();
   });
+
+  act(() => {
+    fireEvent.keyDown(wrapper, { key: keys.ENTER });
+  });
+
   expect(onChange).toBeCalled();
   expect(onChange).toBeCalledWith(
     [
@@ -517,7 +565,7 @@ test('add new thumb via keyboard', () => {
 });
 
 test('add new thumb via click', () => {
-  const colorStops = mount(
+  const { container } = render(
     <OuiColorStops
       label="Test"
       onChange={onChange}
@@ -528,8 +576,10 @@ test('add new thumb via click', () => {
     />
   );
 
-  const wrapper = findTestSubject(colorStops, 'ouiColorStopsAdd');
-  wrapper.simulate('click', { pageX: 45, pageY: 0 });
+  const wrapper = container.querySelector(
+    '[data-test-subj="ouiColorStopsAdd"]'
+  ) as HTMLElement;
+  fireEvent.click(wrapper, { pageX: 45, pageY: 0 });
   expect(onChange).toBeCalled();
   // This is a very odd expectation.
   // But we can't get actual page positions in this environment (no getBoundingClientRect)

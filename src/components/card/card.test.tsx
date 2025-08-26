@@ -29,7 +29,8 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
+import { render, screen, act } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { requiredProps } from '../../test';
 
 import { OuiCard } from './card';
@@ -40,7 +41,7 @@ import { COLORS, SIZES } from '../panel/panel';
 
 describe('OuiCard', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiCard
         title="Card title"
         description="Card description"
@@ -48,12 +49,12 @@ describe('OuiCard', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     test('icon', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title="Card title"
           description="Card description"
@@ -61,11 +62,11 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('a null icon', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title="Card title"
           description="Card description"
@@ -73,19 +74,19 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('hasBorder', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard title="Card title" description="Card description" hasBorder />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('horizontal', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title="Card title"
           description="Card description"
@@ -93,11 +94,11 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('image', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title="Card title"
           description="Card description"
@@ -112,41 +113,53 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     describe('href', () => {
       it('supports href as a link', () => {
-        const component = mount(
+        const { container } = render(
           <OuiCard title="Hoi" description="There" href="#" />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('onClick', () => {
-      it('supports onClick as a link', () => {
+      it('supports onClick as a link', async () => {
         const handler = jest.fn();
-        const component = mount(
+        render(
           <OuiCard title="Hoi" description="There" href="#" onClick={handler} />
         );
-        component.find('a').simulate('click');
-        expect(handler.mock.calls.length).toEqual(1);
+
+        const user = userEvent.setup();
+        const link = screen.getByRole('link');
+
+        await act(async () => {
+          await user.click(link);
+        });
+
+        expect(handler).toHaveBeenCalledTimes(1);
       });
 
-      it('supports onClick as a button', () => {
+      it('supports onClick as a button', async () => {
         const handler = jest.fn();
-        const component = mount(
-          <OuiCard title="Hoi" description="There" onClick={handler} />
-        );
-        component.find('button').simulate('click');
-        expect(handler.mock.calls.length).toEqual(1);
+        render(<OuiCard title="Hoi" description="There" onClick={handler} />);
+
+        const user = userEvent.setup();
+        const button = screen.getByRole('button');
+
+        await act(async () => {
+          await user.click(button);
+        });
+
+        expect(handler).toHaveBeenCalledTimes(1);
       });
     });
 
     test('titleElement', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title="Card title"
           description="Card description"
@@ -154,11 +167,11 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('titleElement with nodes', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title={
             <OuiI18n token="ouiCard.title" default="Card title" /> // eslint-disable-line
@@ -168,11 +181,11 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('titleSize', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title="Card title"
           description="Card description"
@@ -180,12 +193,12 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     describe('accepts div props', () => {
       test('like style', () => {
-        const component = render(
+        const { container } = render(
           <OuiCard
             title="Card title"
             description="Card description"
@@ -193,12 +206,12 @@ describe('OuiCard', () => {
           />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     test('footer', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title="Card title"
           description="Card description"
@@ -206,27 +219,27 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('children', () => {
-      const component = render(<OuiCard title="Card title">Child</OuiCard>);
+      const { container } = render(<OuiCard title="Card title">Child</OuiCard>);
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('children with description', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard title="Card title" description="Card description">
           Child
         </OuiCard>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('textAlign', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title="Card title"
           description="Card description"
@@ -234,21 +247,21 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('isDisabled', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard title="Card title" description="Card description" isDisabled />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     describe('paddingSize', () => {
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiCard
               title="Card title"
               description="Card description"
@@ -256,7 +269,7 @@ describe('OuiCard', () => {
             />
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
@@ -264,7 +277,7 @@ describe('OuiCard', () => {
     describe('display', () => {
       COLORS.forEach((color) => {
         test(`${color} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiCard
               title="Card title"
               description="Card description"
@@ -272,13 +285,13 @@ describe('OuiCard', () => {
             />
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
 
     test('selectable', () => {
-      const component = render(
+      const { container } = render(
         <OuiCard
           title="Card title"
           description="Card description"
@@ -288,12 +301,12 @@ describe('OuiCard', () => {
         />
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
   });
 
   test('horizontal selectable', () => {
-    const component = render(
+    const { container } = render(
       <OuiCard
         title="Card title"
         description="Card description"
@@ -304,11 +317,11 @@ describe('OuiCard', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('betaBadgeProps renders href', () => {
-    const component = render(
+    const { container } = render(
       <OuiCard
         title="Card title"
         description="Card description"
@@ -319,6 +332,6 @@ describe('OuiCard', () => {
       />
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

@@ -29,22 +29,39 @@
  */
 
 import React from 'react';
-import { mount, ReactWrapper } from 'enzyme';
+import { render } from '@testing-library/react';
 import { resetServerContext } from 'react-beautiful-dnd';
 
-import { findTestSubject } from '../../test';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiDragDropContext, OuiDroppable } from './';
 import { OuiDroppableContext } from './droppable';
 
-function snapshotDragDropContext(component: ReactWrapper) {
-  // Get the Portal's sibling and return its html
-  const renderedHtml = component.html();
-  const container = document.createElement('div');
-  container.innerHTML = renderedHtml;
-  return container.firstChild;
-}
+// Mock react-beautiful-dnd to avoid portal issues in tests
+jest.mock('react-beautiful-dnd', () => {
+  const originalModule = jest.requireActual('react-beautiful-dnd');
+  return {
+    ...originalModule,
+    Droppable: ({ children, droppableId }: any) => {
+      const provided = {
+        droppableProps: {
+          'data-rbd-droppable-id': droppableId,
+          'data-rbd-droppable-context-id': 'test',
+        },
+        innerRef: () => {},
+        placeholder: <div className="placeholder" />,
+      };
+      const snapshot = {
+        isDraggingOver: false,
+        draggingOverWith: null,
+        draggingFromThisWith: null,
+        isUsingPlaceholder: false,
+      };
+      return children(provided, snapshot);
+    },
+    DragDropContext: ({ children }: any) => children,
+  };
+});
 
 describe('OuiDroppable', () => {
   afterEach(() => {
@@ -53,32 +70,18 @@ describe('OuiDroppable', () => {
 
   test('is rendered', () => {
     const handler = jest.fn();
-    jest.mock('react', () => {
-      const react = jest.requireActual('react');
-      return {
-        ...react,
-        useLayoutEffect: react.useEffect,
-      };
-    });
-    const component = mount(
+    const { container } = render(
       <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <OuiDroppable droppableId="testDroppable">{() => <div />}</OuiDroppable>
       </OuiDragDropContext>
     );
 
-    expect(snapshotDragDropContext(component)).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('can be given ReactElement children', () => {
     const handler = jest.fn();
-    jest.mock('react', () => {
-      const react = jest.requireActual('react');
-      return {
-        ...react,
-        useLayoutEffect: react.useEffect,
-      };
-    });
-    const component = mount(
+    const { container } = render(
       <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <OuiDroppable droppableId="testDroppable">
           <div />
@@ -86,20 +89,12 @@ describe('OuiDroppable', () => {
       </OuiDragDropContext>
     );
 
-    expect(snapshotDragDropContext(component)).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('can be given multiple ReactElement children', () => {
     const handler = jest.fn();
-    jest.mock('react', () => {
-      const react = jest.requireActual('react');
-      return {
-        ...react,
-        useLayoutEffect: react.useEffect,
-      };
-    });
-
-    const component = mount(
+    const { container } = render(
       <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <OuiDroppable droppableId="testDroppable">
           <div />
@@ -109,22 +104,14 @@ describe('OuiDroppable', () => {
       </OuiDragDropContext>
     );
 
-    expect(snapshotDragDropContext(component)).toMatchSnapshot();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   describe('custom behavior', () => {
     describe('cloneDraggables', () => {
-      jest.mock('react', () => {
-        const react = jest.requireActual('react');
-        return {
-          ...react,
-          useLayoutEffect: react.useEffect,
-        };
-      });
-
       test('sets `cloneItems` on proprietary context', () => {
         const handler = jest.fn();
-        const component = mount(
+        const { getByTestId } = render(
           <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
             <OuiDroppable droppableId="testDroppable" cloneDraggables={true}>
               <OuiDroppableContext.Consumer>
@@ -138,12 +125,12 @@ describe('OuiDroppable', () => {
           </OuiDragDropContext>
         );
 
-        expect(findTestSubject(component, 'child').text()).toBe('true');
+        expect(getByTestId('child')).toHaveTextContent('true');
       });
 
       test('sets `isDropDisabled`', () => {
         const handler = jest.fn();
-        const component = mount(
+        const { container } = render(
           <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
             <OuiDroppable droppableId="testDroppable" cloneDraggables={true}>
               <OuiDroppableContext.Consumer>
@@ -157,7 +144,9 @@ describe('OuiDroppable', () => {
           </OuiDragDropContext>
         );
 
-        expect(component.find('.ouiDroppable--isDisabled').length).toBe(1);
+        expect(
+          container.querySelector('.ouiDroppable--isDisabled')
+        ).toBeInTheDocument();
       });
     });
   });

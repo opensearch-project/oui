@@ -1,7 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiInnerText is rendered 1`] = `
-<span>
-  Test
-</span>
+<div>
+  <span
+    title="Test"
+  >
+    Test
+  </span>
+</div>
 `;

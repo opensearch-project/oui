@@ -3,21 +3,25 @@
 exports[`OuiDroppable can be given ReactElement children 1`] = `
 <div
   class="ouiDroppable ouiDroppable--noGrow"
-  data-rbd-droppable-context-id="0"
+  data-rbd-droppable-context-id="test"
   data-rbd-droppable-id="testDroppable"
   data-test-subj="droppable"
 >
   <div />
   <div
     class="ouiDroppable__placeholder"
-  />
+  >
+    <div
+      class="placeholder"
+    />
+  </div>
 </div>
 `;
 
 exports[`OuiDroppable can be given multiple ReactElement children 1`] = `
 <div
   class="ouiDroppable ouiDroppable--noGrow"
-  data-rbd-droppable-context-id="0"
+  data-rbd-droppable-context-id="test"
   data-rbd-droppable-id="testDroppable"
   data-test-subj="droppable"
 >
@@ -26,20 +30,28 @@ exports[`OuiDroppable can be given multiple ReactElement children 1`] = `
   <div />
   <div
     class="ouiDroppable__placeholder"
-  />
+  >
+    <div
+      class="placeholder"
+    />
+  </div>
 </div>
 `;
 
 exports[`OuiDroppable is rendered 1`] = `
 <div
   class="ouiDroppable ouiDroppable--noGrow"
-  data-rbd-droppable-context-id="0"
+  data-rbd-droppable-context-id="test"
   data-rbd-droppable-id="testDroppable"
   data-test-subj="droppable"
 >
   <div />
   <div
     class="ouiDroppable__placeholder"
-  />
+  >
+    <div
+      class="placeholder"
+    />
+  </div>
 </div>
 `;

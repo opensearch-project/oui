@@ -29,20 +29,20 @@
  */
 
 import React from 'react';
-import { shallow, render, mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import { requiredProps } from '../../../test';
 
 import { OuiFormRow, DISPLAYS } from './form_row';
 
 describe('OuiFormRow', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiFormRow {...requiredProps}>
         <input />
       </OuiFormRow>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('ties together parts for accessibility', () => {
@@ -53,162 +53,161 @@ describe('OuiFormRow', () => {
       error: ['Error one', 'Error two'],
     };
 
-    const tree = shallow(
+    const { container } = render(
       <OuiFormRow {...requiredProps} {...props}>
         <input />
       </OuiFormRow>
     );
 
+    const input = container.querySelector('input') as HTMLInputElement;
+    const label = container.querySelector('label') as HTMLLabelElement;
+    const helpText = container.querySelector('[id*="-help-"]') as HTMLElement;
+    const errorTexts = container.querySelectorAll('[id*="-error-"]');
+
     // Input is labeled by the label.
-    expect(tree.find('input').prop('id')).toEqual('generated-id');
-    expect(tree.find('OuiFormLabel').prop('htmlFor')).toEqual('generated-id');
+    expect(input.id).toEqual('generated-id');
+    expect(label.getAttribute('for')).toEqual('generated-id');
 
     // Input is described by help and error text.
-    expect(tree.find('OuiFormHelpText').prop('id')).toEqual(
-      'generated-id-help-0'
-    );
-    expect(tree.find('OuiFormErrorText').at(0).prop('id')).toEqual(
-      'generated-id-error-0'
-    );
-    expect(tree.find('OuiFormErrorText').at(1).prop('id')).toEqual(
-      'generated-id-error-1'
-    );
-    expect(tree.find('input').prop('aria-describedby')).toEqual(
+    expect(helpText.id).toEqual('generated-id-help-0');
+    expect(errorTexts[0].id).toEqual('generated-id-error-0');
+    expect(errorTexts[1].id).toEqual('generated-id-error-1');
+    expect(input.getAttribute('aria-describedby')).toEqual(
       'generated-id-help-0 generated-id-error-0 generated-id-error-1'
     );
   });
 
   describe('props', () => {
     test('label is rendered', () => {
-      const component = shallow(
+      const { container } = render(
         <OuiFormRow label="label">
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('label append is rendered', () => {
-      const component = shallow(
+      const { container } = render(
         <OuiFormRow label="label" labelAppend="append">
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('label renders as a legend and subsquently a fieldset wrapper', () => {
-      const component = shallow(
+      const { container } = render(
         <OuiFormRow label="label" labelType="legend">
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('describedByIds is rendered', () => {
-      const component = shallow(
+      const { container } = render(
         <OuiFormRow describedByIds={['generated-id-additional']}>
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('id is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormRow id="id">
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('isInvalid is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormRow isInvalid label="label">
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('error as string is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormRow error="Error" isInvalid={true}>
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('error as array is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormRow error={['Error', 'Error2']} isInvalid={true}>
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('error is not rendered if isInvalid is false', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormRow error={['Error']} isInvalid={false}>
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('helpText is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormRow helpText={<span>This is help text.</span>}>
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('hasEmptyLabelSpace is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormRow hasEmptyLabelSpace>
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('fullWidth is rendered', () => {
-      const component = render(
+      const { container } = render(
         <OuiFormRow fullWidth>
           <input />
         </OuiFormRow>
       );
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     describe('display type', () => {
       DISPLAYS.forEach((display) => {
         test(`${display} is rendered`, () => {
-          const component = render(
+          const { container } = render(
             <OuiFormRow display={display}>
               <input />
             </OuiFormRow>
           );
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
@@ -219,33 +218,35 @@ describe('OuiFormRow', () => {
       test('is called in child', () => {
         const focusMock = jest.fn();
 
-        const component = mount(
+        const { container } = render(
           <OuiFormRow label={<span>Label</span>}>
             <input onFocus={focusMock} />
           </OuiFormRow>
         );
 
-        component.find('input').simulate('focus');
+        const input = container.querySelector('input') as HTMLInputElement;
+        fireEvent.focus(input);
 
         expect(focusMock).toBeCalledTimes(1);
 
         // Ensure the focus event is properly fired on the parent
         // which will pass down to the OuiFormLabel
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('works in parent even if not in child', () => {
-        const component = mount(
+        const { container } = render(
           <OuiFormRow label={<span>Label</span>}>
             <input />
           </OuiFormRow>
         );
 
-        component.find('input').simulate('focus');
+        const input = container.querySelector('input') as HTMLInputElement;
+        fireEvent.focus(input);
 
         // Ensure the focus event is properly fired on the parent
         // which will pass down to the OuiFormLabel
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
@@ -253,33 +254,35 @@ describe('OuiFormRow', () => {
       test('is called in child', () => {
         const blurMock = jest.fn();
 
-        const component = mount(
+        const { container } = render(
           <OuiFormRow label={<span>Label</span>}>
             <input onBlur={blurMock} />
           </OuiFormRow>
         );
 
-        component.find('input').simulate('blur');
+        const input = container.querySelector('input') as HTMLInputElement;
+        fireEvent.blur(input);
 
         expect(blurMock).toBeCalledTimes(1);
 
         // Ensure the blur event is properly fired on the parent
         // which will pass down to the OuiFormLabel
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test('works in parent even if not in child', () => {
-        const component = mount(
+        const { container } = render(
           <OuiFormRow label={<span>Label</span>}>
             <input />
           </OuiFormRow>
         );
 
-        component.find('input').simulate('blur');
+        const input = container.querySelector('input') as HTMLInputElement;
+        fireEvent.blur(input);
 
         // Ensure the blur event is properly fired on the parent
         // which will pass down to the OuiFormLabel
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
   });
