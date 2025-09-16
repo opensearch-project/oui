@@ -215,7 +215,7 @@
     "html-format": "^1.0.2",
     "html-webpack-plugin": "^5.6.3",
     "jest": "^29.7.0",
-    "jest-cli": "^29.7.0",
+    "jest-cli": "^30.0.0",
     "jest-environment-jsdom": "^29.7.0",
     "moment": "^2.29.4",
     "moment-timezone": "^0.5.41",
