@@ -6,6 +6,7 @@
 
 ### 🛡 Security
 - Upgrade webpack to v5 ([#1601](https://github.com/opensearch-project/oui/pull/1601))
+- Upgrade form-data to 4.0.4 ([#1642](https://github.com/opensearch-project/oui/pull/1642))
 
 ### 📈 Features/Enhancements
 
