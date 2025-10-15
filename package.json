@@ -229,7 +229,7 @@
     "pre-commit": "^1.2.2",
     "prettier": "^2.1.2",
     "process": "^0.11.10",
-    "puppeteer": "^22.0.0",
+    "puppeteer": "^23.0.0",
     "raw-loader": "^4.0.1",
     "react": "^16.14.0",
     "react-18": "npm:react@^18.0.0",
