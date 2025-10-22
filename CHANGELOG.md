@@ -57,6 +57,7 @@
 - fix button line-height inherit causes text cut off ([#1490](https://github.com/opensearch-project/oui/pull/1490))
 - Add OpenSearch logo to page title ([#1532](https://github.com/opensearch-project/oui/pull/1532))
 - Fix dev server configuration after webpack-dev-server upgrade in 1.19 ([#1567](https://github.com/opensearch-project/oui/pull/1567)) 
+- Fix DataGrid numeric cell content shifting on hover ([#1644](https://github.com/opensearch-project/oui/pull/1644)) 
 
 ### 🚞 Infrastructure
 - update actions/upload-artifact and actions/download-artifact to v4([#1491](https://github.com/opensearch-project/oui/pull/1491))
