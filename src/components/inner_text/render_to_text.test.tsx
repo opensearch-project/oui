@@ -29,8 +29,25 @@
  */
 
 import React, { FunctionComponent } from 'react';
-import { mount } from 'enzyme';
+import { render, act } from '@testing-library/react';
 import { useRenderToText } from './render_to_text';
+
+jest.mock('../../services/react', () => {
+  const originalModule = jest.requireActual('../../services/react');
+  const { act } = jest.requireActual('../../test/react_test_utils');
+  return {
+    ...originalModule,
+    enqueueStateChange: (fn: Function) => {
+      act(() => {
+        fn();
+      });
+    },
+  };
+});
+
+afterAll(() => {
+  jest.restoreAllMocks();
+});
 
 describe('useRenderToText', () => {
   it("Returns a ReactNode's rendered string content", () => {
@@ -42,7 +59,7 @@ describe('useRenderToText', () => {
       return <div>{text}</div>;
     };
 
-    const component = mount(
+    const { rerender } = render(
       <Component>
         <div>
           <button>Hello There</button>
@@ -50,8 +67,12 @@ describe('useRenderToText', () => {
       </Component>
     );
 
-    component.setProps({
-      children: <span>and this</span>,
+    act(() => {
+      rerender(
+        <Component>
+          <span>and this</span>
+        </Component>
+      );
     });
 
     expect(renderedTexts).toEqual([

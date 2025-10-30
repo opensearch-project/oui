@@ -29,20 +29,68 @@
  */
 
 import React from 'react';
+import { render } from '@testing-library/react';
 import { resetServerContext } from 'react-beautiful-dnd';
-import { renderTestElement } from '../../test/react_test_utils';
-import html from 'html';
+
 import { requiredProps } from '../../test/required_props';
 import { OuiDragDropContext, OuiDraggable, OuiDroppable } from './';
 
-function takeSnapshot(element: HTMLElement) {
-  expect(
-    html.prettyPrint(element.innerHTML, {
-      indent_size: 2,
-      unformatted: [], // Expand all tags, including spans
-    })
-  ).toMatchSnapshot();
-}
+// Mock react-beautiful-dnd to avoid portal issues in tests
+jest.mock('react-beautiful-dnd', () => {
+  const originalModule = jest.requireActual('react-beautiful-dnd');
+  return {
+    ...originalModule,
+    Draggable: ({ children, draggableId, index }: any) => {
+      const provided = {
+        draggableProps: {
+          'data-rbd-draggable-context-id': 'test',
+          'data-rbd-draggable-id': draggableId,
+        },
+        dragHandleProps: {
+          'data-rbd-drag-handle-draggable-id': draggableId,
+          'data-rbd-drag-handle-context-id': 'test',
+          'aria-describedby': 'rbd-hidden-text-test-hidden',
+          role: 'button',
+          tabIndex: 0,
+        },
+        innerRef: () => {},
+      };
+      const snapshot = {
+        isDragging: false,
+        isDropAnimating: false,
+        dropAnimation: null,
+        draggingOver: null,
+        combineWith: null,
+        combineTargetFor: null,
+        mode: null,
+      };
+      const rubric = {
+        draggableId,
+        type: 'OUI_DEFAULT',
+        source: { index, droppableId: 'testDroppable' },
+      };
+      return children(provided, snapshot, rubric);
+    },
+    Droppable: ({ children, droppableId }: any) => {
+      const provided = {
+        droppableProps: {
+          'data-rbd-droppable-id': droppableId,
+          'data-rbd-droppable-context-id': 'test',
+        },
+        innerRef: () => {},
+        placeholder: <div className="placeholder" />,
+      };
+      const snapshot = {
+        isDraggingOver: false,
+        draggingOverWith: null,
+        draggingFromThisWith: null,
+        isUsingPlaceholder: false,
+      };
+      return children(provided, snapshot);
+    },
+    DragDropContext: ({ children }: any) => children,
+  };
+});
 
 describe('OuiDraggable', () => {
   beforeEach(() => {
@@ -52,7 +100,7 @@ describe('OuiDraggable', () => {
   test('is rendered', () => {
     const handler = jest.fn();
 
-    const { container, cleanup } = renderTestElement(
+    const { container } = render(
       <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <OuiDroppable droppableId="testDroppable">
           <OuiDraggable draggableId="testDraggable" index={0}>
@@ -62,14 +110,13 @@ describe('OuiDraggable', () => {
       </OuiDragDropContext>
     );
 
-    expect(takeSnapshot(container)).toMatchSnapshot();
-    cleanup();
+    expect(container.firstChild).toMatchSnapshot();
   });
 
   test('can be given ReactElement children', () => {
     const handler = jest.fn();
 
-    const { container, cleanup } = renderTestElement(
+    const { container } = render(
       <OuiDragDropContext onDragEnd={handler} {...requiredProps}>
         <OuiDroppable droppableId="testDroppable">
           <OuiDraggable draggableId="testDraggable" index={0}>
@@ -79,7 +126,6 @@ describe('OuiDraggable', () => {
       </OuiDragDropContext>
     );
 
-    expect(takeSnapshot(container)).toMatchSnapshot();
-    cleanup();
+    expect(container.firstChild).toMatchSnapshot();
   });
 });

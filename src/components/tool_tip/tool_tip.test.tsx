@@ -29,53 +29,56 @@
  */
 
 import React from 'react';
-import { render, mount } from 'enzyme';
-import {
-  requiredProps,
-  findTestSubject,
-  takeMountedSnapshot,
-} from '../../test';
+import { render, screen, fireEvent, act } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { requiredProps } from '../../test';
 import { OuiToolTip } from './tool_tip';
 
 describe('OuiToolTip', () => {
-  let container: HTMLDivElement;
-
-  beforeEach(() => {
-    container = document.createElement('div');
-    document.body.appendChild(container);
-  });
-
-  afterEach(() => {
-    document.body.removeChild(container);
-  });
-
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button>Trigger</button>
       </OuiToolTip>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('shows tooltip on focus', () => {
     jest.useFakeTimers();
-    const component = mount(
+
+    render(
       <OuiToolTip title="title" id="id" content="content" {...requiredProps}>
         <button data-test-subj="trigger">Trigger</button>
-      </OuiToolTip>,
-      { attachTo: container }
+      </OuiToolTip>
     );
 
-    const trigger = findTestSubject(component, 'trigger');
-    trigger.simulate('focus');
-    jest.advanceTimersByTime(260); // wait for showToolTip setTimeout
-    expect(takeMountedSnapshot(component)).toMatchSnapshot();
+    // Initially tooltip should not be visible
+    expect(screen.queryByText('title')).not.toBeInTheDocument();
+
+    // Focus the trigger button
+    act(() => {
+      fireEvent.focus(screen.getByTestId('trigger'));
+    });
+
+    // Advance timers to trigger the tooltip display
+    act(() => {
+      jest.advanceTimersByTime(260); // wait for showToolTip setTimeout
+    });
+
+    // Now the tooltip should be visible
+    expect(screen.getByText('title')).toBeInTheDocument();
+    expect(screen.getByText('content')).toBeInTheDocument();
+
+    // Take a snapshot of the body which should include the portal
+    expect(document.body).toMatchSnapshot();
+
+    jest.useRealTimers();
   });
 
   test('display prop renders block', () => {
-    const component = render(
+    const { container } = render(
       <OuiToolTip
         title="title"
         id="id"
@@ -86,6 +89,6 @@ describe('OuiToolTip', () => {
       </OuiToolTip>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

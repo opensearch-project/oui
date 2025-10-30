@@ -2,932 +2,471 @@
 
 exports[`OuiDataGrid pagination renders 1`] = `
 <div
-  class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsCenter ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow"
+  class="ouiDataGrid__pagination"
 >
   <div
-    class="ouiFlexItem ouiFlexItem--flexGrowZero"
+    class="ouiFlexGroup ouiFlexGroup--gutterLarge ouiFlexGroup--alignItemsCenter ouiFlexGroup--justifyContentSpaceBetween ouiFlexGroup--directionRow"
   >
     <div
-      class="ouiPopover ouiPopover--anchorUpRight"
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
     >
       <div
-        class="ouiPopover__anchor"
+        class="ouiPopover ouiPopover--anchorUpRight"
       >
-        <button
-          class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall"
-          data-test-subj="tablePaginationPopoverButton"
-          type="button"
-        >
-          <span
-            class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
-          >
-            <span
-              class="ouiButtonContent__icon"
-              color="inherit"
-              data-ouiicon-type="arrowDown"
-            />
-            <span
-              class="ouiButtonEmpty__text"
-            >
-              Rows per page: 6
-            </span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div
-    class="ouiFlexItem ouiFlexItem--flexGrowZero"
-  >
-    <nav
-      aria-label="Pagination for preceding grid: test grid"
-      class="ouiPagination"
-    >
-      <a
-        aria-controls="generated-id"
-        aria-label="Previous page, 1"
-        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-        data-test-subj="pagination-button-previous"
-        href="#generated-id"
-        rel="noreferrer"
-      >
-        <span
-          aria-hidden="true"
-          class="ouiButtonIcon__icon"
-          color="inherit"
-          data-ouiicon-type="arrowLeft"
-        />
-      </a>
-      <ul
-        aria-label="Pagination for preceding grid: test grid"
-        class="ouiPagination__list"
-      >
-        <li
-          class="ouiPagination__item"
-        >
-          <a
-            aria-controls="generated-id"
-            aria-label="Page 1 of 2"
-            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
-            data-test-subj="pagination-button-0"
-            href="#generated-id"
-            rel="noreferrer"
-          >
-            <span
-              class="ouiButtonContent ouiButtonEmpty__content"
-            >
-              <span
-                class="ouiButtonEmpty__text"
-              >
-                1
-              </span>
-            </span>
-          </a>
-        </li>
-        <li
-          class="ouiPagination__item"
+        <div
+          class="ouiPopover__anchor"
         >
           <button
-            aria-controls="generated-id"
-            aria-current="true"
-            aria-label="Page 2 of 2"
-            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiButtonEmpty-isDisabled ouiPaginationButton ouiPaginationButton-isActive ouiPaginationButton--hideOnMobile"
-            data-test-subj="pagination-button-1"
-            disabled=""
+            class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--xSmall"
+            data-test-subj="tablePaginationPopoverButton"
             type="button"
           >
             <span
-              class="ouiButtonContent ouiButtonEmpty__content"
+              class="ouiButtonContent ouiButtonContent--iconRight ouiButtonEmpty__content"
             >
+              <span
+                class="ouiButtonContent__icon"
+                color="inherit"
+                data-ouiicon-type="arrowDown"
+              />
               <span
                 class="ouiButtonEmpty__text"
               >
-                2
+                Rows per page
+                : 
+                6
               </span>
             </span>
           </button>
-        </li>
-      </ul>
-      <button
-        aria-label="Next page"
-        class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
-        data-test-subj="pagination-button-next"
-        disabled=""
-        type="button"
+        </div>
+      </div>
+    </div>
+    <div
+      class="ouiFlexItem ouiFlexItem--flexGrowZero"
+    >
+      <nav
+        aria-label="Pagination for preceding grid: test grid"
+        class="ouiPagination"
       >
-        <span
-          aria-hidden="true"
-          class="ouiButtonIcon__icon"
-          color="inherit"
-          data-ouiicon-type="arrowRight"
-        />
-      </button>
-    </nav>
+        <a
+          aria-controls="generated-id"
+          aria-label="Previous page, 1"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+          data-test-subj="pagination-button-previous"
+          href="#generated-id"
+          rel="noreferrer"
+        >
+          <span
+            aria-hidden="true"
+            class="ouiButtonIcon__icon"
+            color="inherit"
+            data-ouiicon-type="arrowLeft"
+          />
+        </a>
+        <ul
+          aria-label="Pagination for preceding grid: test grid"
+          class="ouiPagination__list"
+        >
+          <li
+            class="ouiPagination__item"
+          >
+            <a
+              aria-controls="generated-id"
+              aria-label="Page 1 of 2"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiPaginationButton ouiPaginationButton--hideOnMobile"
+              data-test-subj="pagination-button-0"
+              href="#generated-id"
+              rel="noreferrer"
+            >
+              <span
+                class="ouiButtonContent ouiButtonEmpty__content"
+              >
+                <span
+                  class="ouiButtonEmpty__text"
+                >
+                  1
+                </span>
+              </span>
+            </a>
+          </li>
+          <li
+            class="ouiPagination__item"
+          >
+            <button
+              aria-controls="generated-id"
+              aria-current="true"
+              aria-label="Page 2 of 2"
+              class="ouiButtonEmpty ouiButtonEmpty--text ouiButtonEmpty--small ouiButtonEmpty-isDisabled ouiPaginationButton ouiPaginationButton-isActive ouiPaginationButton--hideOnMobile"
+              data-test-subj="pagination-button-1"
+              disabled=""
+              type="button"
+            >
+              <span
+                class="ouiButtonContent ouiButtonEmpty__content"
+              >
+                <span
+                  class="ouiButtonEmpty__text"
+                >
+                  2
+                </span>
+              </span>
+            </button>
+          </li>
+        </ul>
+        <button
+          aria-label="Next page"
+          class="ouiButtonIcon ouiButtonIcon--text ouiButtonIcon--empty ouiButtonIcon--xSmall"
+          data-test-subj="pagination-button-next"
+          disabled=""
+          type="button"
+        >
+          <span
+            aria-hidden="true"
+            class="ouiButtonIcon__icon"
+            color="inherit"
+            data-ouiicon-type="arrowRight"
+          />
+        </button>
+      </nav>
+    </div>
   </div>
 </div>
 `;
 
 exports[`OuiDataGrid render column actions renders various column actions configurations 1`] = `
 <ul
-  className="ouiListGroup ouiListGroup-maxWidthDefault"
+  class="ouiListGroup ouiListGroup-maxWidthDefault"
   data-test-subj="dataGridHeaderCellActionGroup-B"
 >
-  <OuiListGroupItem
-    color="text"
-    iconType="eyeClosed"
-    key="title-0"
-    label={
-      <OuiI18n
-        default="Hide column"
-        token="ouiColumnActions.hideColumn"
-      />
-    }
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
   >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
     >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
-      >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="eyeClosed"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="eyeClosed"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="Hide column"
-        >
-          <OuiI18n
-            default="Hide column"
-            token="ouiColumnActions.hideColumn"
-          >
-            Hide column
-          </OuiI18n>
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    className=""
-    color="text"
-    iconType="sortUp"
-    isDisabled={false}
-    key="title-1"
-    label={
-      <OuiI18n
-        default="Sort {schemaLabel}"
-        token="ouiColumnActions.sort"
-        values={
-          Object {
-            "schemaLabel": <OuiI18n
-              default="A-Z"
-              token="ouiColumnSortingDraggable.defaultSortAsc"
-            />,
-          }
-        }
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="eyeClosed"
       />
-    }
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
-  >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
-    >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__label"
+        title="Hide column"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortUp"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortUp"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="Sort A-Z"
-        >
-          <OuiI18n
-            default="Sort {schemaLabel}"
-            token="ouiColumnActions.sort"
-            values={
-              Object {
-                "schemaLabel": <OuiI18n
-                  default="A-Z"
-                  token="ouiColumnSortingDraggable.defaultSortAsc"
-                />,
-              }
-            }
-          >
-            <Component
-              schemaLabel={
-                <OuiI18n
-                  default="A-Z"
-                  token="ouiColumnSortingDraggable.defaultSortAsc"
-                />
-              }
-            >
-              Sort 
-              <OuiI18n
-                default="A-Z"
-                key="1"
-                token="ouiColumnSortingDraggable.defaultSortAsc"
-              >
-                A-Z
-              </OuiI18n>
-            </Component>
-          </OuiI18n>
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    className=""
-    color="text"
-    iconType="sortDown"
-    isDisabled={false}
-    key="title-2"
-    label={
-      <OuiI18n
-        default="Sort {schemaLabel}"
-        token="ouiColumnActions.sort"
-        values={
-          Object {
-            "schemaLabel": <OuiI18n
-              default="Z-A"
-              token="ouiColumnSortingDraggable.defaultSortDesc"
-            />,
-          }
-        }
+        Hide column
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+  >
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
+    >
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortUp"
       />
-    }
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
-  >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
-    >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__label"
+        title="Sort A-Z"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortDown"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortDown"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="Sort Z-A"
-        >
-          <OuiI18n
-            default="Sort {schemaLabel}"
-            token="ouiColumnActions.sort"
-            values={
-              Object {
-                "schemaLabel": <OuiI18n
-                  default="Z-A"
-                  token="ouiColumnSortingDraggable.defaultSortDesc"
-                />,
-              }
-            }
-          >
-            <Component
-              schemaLabel={
-                <OuiI18n
-                  default="Z-A"
-                  token="ouiColumnSortingDraggable.defaultSortDesc"
-                />
-              }
-            >
-              Sort 
-              <OuiI18n
-                default="Z-A"
-                key="1"
-                token="ouiColumnSortingDraggable.defaultSortDesc"
-              >
-                Z-A
-              </OuiI18n>
-            </Component>
-          </OuiI18n>
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    color="text"
-    iconType="sortLeft"
-    isDisabled={false}
-    key="title-3"
-    label={
-      <OuiI18n
-        default="Move left"
-        token="ouiColumnActions.moveLeft"
+        Sort 
+        A-Z
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+  >
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
+    >
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortDown"
       />
-    }
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
-  >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
-    >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__label"
+        title="Sort Z-A"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortLeft"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortLeft"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="Move left"
-        >
-          <OuiI18n
-            default="Move left"
-            token="ouiColumnActions.moveLeft"
-          >
-            Move left
-          </OuiI18n>
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    color="text"
-    iconType="sortRight"
-    isDisabled={false}
-    key="title-4"
-    label={
-      <OuiI18n
-        default="Move right"
-        token="ouiColumnActions.moveRight"
+        Sort 
+        Z-A
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+  >
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
+    >
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortLeft"
       />
-    }
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
-  >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
-    >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__label"
+        title="Move left"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortRight"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortRight"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="Move right"
-        >
-          <OuiI18n
-            default="Move right"
-            token="ouiColumnActions.moveRight"
-          >
-            Move right
-          </OuiI18n>
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
+        Move left
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+  >
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
+    >
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortRight"
+      />
+      <span
+        class="ouiListGroupItem__label"
+        title="Move right"
+      >
+        Move right
+      </span>
+    </button>
+  </li>
 </ul>
 `;
 
 exports[`OuiDataGrid render column actions renders various column actions configurations 2`] = `
 <ul
-  className="ouiListGroup ouiListGroup-maxWidthDefault"
+  class="ouiListGroup ouiListGroup-maxWidthDefault"
   data-test-subj="dataGridHeaderCellActionGroup-C"
 >
-  <OuiListGroupItem
-    key="title-0"
-    label="test"
-    onClick={[Function]}
-    showToolTip={false}
-    wrapText={false}
+  <li
+    class="ouiListGroupItem ouiListGroupItem--medium ouiListGroupItem-isClickable"
   >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--medium ouiListGroupItem-isClickable"
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
     >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__label"
+        title="test"
       >
-        <span
-          className="ouiListGroupItem__label"
-          title="test"
-        >
-          test
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
+        test
+      </span>
+    </button>
+  </li>
 </ul>
 `;
 
 exports[`OuiDataGrid render column actions renders various column actions configurations 3`] = `
 <ul
-  className="ouiListGroup ouiListGroup-maxWidthDefault"
+  class="ouiListGroup ouiListGroup-maxWidthDefault"
   data-test-subj="dataGridHeaderCellActionGroup-D"
 >
-  <OuiListGroupItem
-    className=""
-    color="text"
-    iconType="sortUp"
-    isDisabled={false}
-    key="title-0"
-    label={
-      <OuiI18n
-        default="Sort {schemaLabel}"
-        token="ouiColumnActions.sort"
-        values={
-          Object {
-            "schemaLabel": <OuiI18n
-              default="A-Z"
-              token="ouiColumnSortingDraggable.defaultSortAsc"
-            />,
-          }
-        }
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+  >
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
+    >
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortUp"
       />
-    }
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
-  >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
-    >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__label"
+        title="Sort A-Z"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortUp"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortUp"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="Sort A-Z"
-        >
-          <OuiI18n
-            default="Sort {schemaLabel}"
-            token="ouiColumnActions.sort"
-            values={
-              Object {
-                "schemaLabel": <OuiI18n
-                  default="A-Z"
-                  token="ouiColumnSortingDraggable.defaultSortAsc"
-                />,
-              }
-            }
-          >
-            <Component
-              schemaLabel={
-                <OuiI18n
-                  default="A-Z"
-                  token="ouiColumnSortingDraggable.defaultSortAsc"
-                />
-              }
-            >
-              Sort 
-              <OuiI18n
-                default="A-Z"
-                key="1"
-                token="ouiColumnSortingDraggable.defaultSortAsc"
-              >
-                A-Z
-              </OuiI18n>
-            </Component>
-          </OuiI18n>
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    className=""
-    color="text"
-    iconType="sortDown"
-    isDisabled={false}
-    key="title-1"
-    label={
-      <OuiI18n
-        default="Sort {schemaLabel}"
-        token="ouiColumnActions.sort"
-        values={
-          Object {
-            "schemaLabel": <OuiI18n
-              default="Z-A"
-              token="ouiColumnSortingDraggable.defaultSortDesc"
-            />,
-          }
-        }
+        Sort 
+        A-Z
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+  >
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
+    >
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortDown"
       />
-    }
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
-  >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
-    >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__label"
+        title="Sort Z-A"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortDown"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortDown"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="Sort Z-A"
-        >
-          <OuiI18n
-            default="Sort {schemaLabel}"
-            token="ouiColumnActions.sort"
-            values={
-              Object {
-                "schemaLabel": <OuiI18n
-                  default="Z-A"
-                  token="ouiColumnSortingDraggable.defaultSortDesc"
-                />,
-              }
-            }
-          >
-            <Component
-              schemaLabel={
-                <OuiI18n
-                  default="Z-A"
-                  token="ouiColumnSortingDraggable.defaultSortDesc"
-                />
-              }
-            >
-              Sort 
-              <OuiI18n
-                default="Z-A"
-                key="1"
-                token="ouiColumnSortingDraggable.defaultSortDesc"
-              >
-                Z-A
-              </OuiI18n>
-            </Component>
-          </OuiI18n>
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    key="title-2"
-    label="test"
-    onClick={[Function]}
-    showToolTip={false}
-    wrapText={false}
+        Sort 
+        Z-A
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--medium ouiListGroupItem-isClickable"
   >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--medium ouiListGroupItem-isClickable"
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
     >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__label"
+        title="test"
       >
-        <span
-          className="ouiListGroupItem__label"
-          title="test"
-        >
-          test
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
+        test
+      </span>
+    </button>
+  </li>
 </ul>
 `;
 
 exports[`OuiDataGrid render column actions renders various column actions configurations 4`] = `
 <ul
-  className="ouiListGroup ouiListGroup-maxWidthDefault"
+  class="ouiListGroup ouiListGroup-maxWidthDefault"
   data-test-subj="dataGridHeaderCellActionGroup-E"
 >
-  <OuiListGroupItem
-    color="text"
-    iconType="eyeClosed"
-    key="title-0"
-    label="1"
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
   >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
     >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="eyeClosed"
+      />
+      <span
+        class="ouiListGroupItem__label"
+        title="1"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="eyeClosed"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="eyeClosed"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="1"
-        >
-          1
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    className=""
-    color="text"
-    iconType="sortUp"
-    isDisabled={false}
-    key="title-1"
-    label="2"
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
+        1
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
   >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
     >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortUp"
+      />
+      <span
+        class="ouiListGroupItem__label"
+        title="2"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortUp"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortUp"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="2"
-        >
-          2
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    className=""
-    color="text"
-    iconType="sortDown"
-    isDisabled={false}
-    key="title-2"
-    label="3"
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
+        2
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
   >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
     >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortDown"
+      />
+      <span
+        class="ouiListGroupItem__label"
+        title="3"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortDown"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortDown"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="3"
-        >
-          3
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    color="text"
-    iconType="sortLeft"
-    isDisabled={false}
-    key="title-3"
-    label="4"
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
+        3
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
   >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isClickable"
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
     >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortLeft"
+      />
+      <span
+        class="ouiListGroupItem__label"
+        title="4"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortLeft"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortLeft"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="4"
-        >
-          4
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    color="text"
-    iconType="sortRight"
-    isDisabled={true}
-    key="title-4"
-    label="5"
-    onClick={[Function]}
-    showToolTip={false}
-    size="xs"
-    wrapText={false}
+        4
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isDisabled ouiListGroupItem-isClickable"
   >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--xSmall ouiListGroupItem--text ouiListGroupItem-isDisabled ouiListGroupItem-isClickable"
+    <button
+      class="ouiListGroupItem__button"
+      disabled=""
+      type="button"
     >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={true}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__icon"
+        color="inherit"
+        data-ouiicon-type="sortRight"
+      />
+      <span
+        class="ouiListGroupItem__label"
+        title="5"
       >
-        <OuiIcon
-          className="ouiListGroupItem__icon"
-          color="inherit"
-          type="sortRight"
-        >
-          <span
-            className="ouiListGroupItem__icon"
-            color="inherit"
-            data-ouiicon-type="sortRight"
-          />
-        </OuiIcon>
-        <span
-          className="ouiListGroupItem__label"
-          title="5"
-        >
-          5
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
-  <OuiListGroupItem
-    key="title-5"
-    label="test"
-    onClick={[Function]}
-    showToolTip={false}
-    wrapText={false}
+        5
+      </span>
+    </button>
+  </li>
+  <li
+    class="ouiListGroupItem ouiListGroupItem--medium ouiListGroupItem-isClickable"
   >
-    <li
-      className="ouiListGroupItem ouiListGroupItem--medium ouiListGroupItem-isClickable"
+    <button
+      class="ouiListGroupItem__button"
+      type="button"
     >
-      <button
-        className="ouiListGroupItem__button"
-        disabled={false}
-        onClick={[Function]}
-        type="button"
+      <span
+        class="ouiListGroupItem__label"
+        title="test"
       >
-        <span
-          className="ouiListGroupItem__label"
-          title="test"
-        >
-          test
-        </span>
-      </button>
-    </li>
-  </OuiListGroupItem>
+        test
+      </span>
+    </button>
+  </li>
 </ul>
 `;
 
 exports[`OuiDataGrid rendering renders additional toolbar controls 1`] = `
-Array [
+<div>
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
+  />
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
+  />
   <div
     class="ouiDataGrid__focusWrap"
     data-focus-lock-disabled="disabled"
@@ -1037,14 +576,14 @@ Array [
             tabindex="0"
           >
             <div
-              style="width:100%;height:100%;overflow:hidden"
+              style="width: 100%; height: 100%; overflow: hidden;"
             >
               <div
                 class="ouiDataGrid__virtualized"
-                style="position:relative;height:9007199254740991px;width:9007199254740991px;overflow:auto;-webkit-overflow-scrolling:touch;will-change:transform;direction:ltr"
+                style="position: relative; height: 9007199254740991px; width: 9007199254740991px; overflow: auto; will-change: transform; direction: ltr;"
               >
                 <div
-                  style="height:102px;width:200px"
+                  style="height: 202px; width: 200px;"
                 >
                   <div
                     class="ouiDataGridHeader"
@@ -1055,13 +594,13 @@ Array [
                       class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-A"
                       role="columnheader"
-                      style="width:100px"
+                      style="width: 100px;"
                       tabindex="-1"
                     >
                       <div
                         class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
+                        style="margin-right: 0px;"
                       />
                       <div
                         class="ouiPopover ouiPopover--anchorDownCenter"
@@ -1093,13 +632,13 @@ Array [
                       class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-B"
                       role="columnheader"
-                      style="width:100px"
+                      style="width: 100px;"
                       tabindex="-1"
                     >
                       <div
                         class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
+                        style="margin-right: 0px;"
                       />
                       <div
                         class="ouiPopover ouiPopover--anchorDownCenter"
@@ -1132,7 +671,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:0px;height:34px;width:100px"
+                    style="position: absolute; left: 0px; top: 100px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1145,7 +684,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 1, Column: 1:
+                          Row
+                          : 
+                          1
+                          , 
+                          Column
+                          : 
+                          1
+                          :
                         </p>
                       </div>
                     </div>
@@ -1154,7 +700,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:100px;top:0px;height:34px;width:100px"
+                    style="position: absolute; left: 100px; top: 100px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1167,7 +713,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 1, Column: 2:
+                          Row
+                          : 
+                          1
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -1176,7 +729,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:34px;height:34px;width:100px"
+                    style="position: absolute; left: 0px; top: 134px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1189,7 +742,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 2, Column: 1:
+                          Row
+                          : 
+                          2
+                          , 
+                          Column
+                          : 
+                          1
+                          :
                         </p>
                       </div>
                     </div>
@@ -1198,7 +758,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:100px;top:34px;height:34px;width:100px"
+                    style="position: absolute; left: 100px; top: 134px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1211,7 +771,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 2, Column: 2:
+                          Row
+                          : 
+                          2
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -1220,7 +787,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:68px;height:34px;width:100px"
+                    style="position: absolute; left: 0px; top: 168px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1233,7 +800,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 3, Column: 1:
+                          Row
+                          : 
+                          3
+                          , 
+                          Column
+                          : 
+                          1
+                          :
                         </p>
                       </div>
                     </div>
@@ -1242,7 +816,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:100px;top:68px;height:34px;width:100px"
+                    style="position: absolute; left: 100px; top: 168px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1255,7 +829,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 3, Column: 2:
+                          Row
+                          : 
+                          3
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -1273,27 +854,27 @@ Array [
         Cell contains interactive content.
       </p>
     </div>
-  </div>,
+  </div>
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
-]
+  />
+</div>
 `;
 
 exports[`OuiDataGrid rendering renders control columns 1`] = `
-Array [
+<div>
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
+  />
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
+  />
   <div
     class="ouiDataGrid__focusWrap"
     data-focus-lock-disabled="disabled"
@@ -1403,14 +984,14 @@ Array [
             tabindex="0"
           >
             <div
-              style="width:100%;height:100%;overflow:hidden"
+              style="width: 100%; height: 100%; overflow: hidden;"
             >
               <div
                 class="ouiDataGrid__virtualized"
-                style="position:relative;height:9007199254740991px;width:9007199254740991px;overflow:auto;-webkit-overflow-scrolling:touch;will-change:transform;direction:ltr"
+                style="position: relative; height: 9007199254740991px; width: 9007199254740991px; overflow: auto; will-change: transform; direction: ltr;"
               >
                 <div
-                  style="height:102px;width:300px"
+                  style="height: 202px; width: 300px;"
                 >
                   <div
                     class="ouiDataGridHeader"
@@ -1421,7 +1002,7 @@ Array [
                       class="ouiDataGridHeaderCell ouiDataGridHeaderCell--controlColumn"
                       data-test-subj="dataGridHeaderCell-leading"
                       role="columnheader"
-                      style="width:50px"
+                      style="width: 50px;"
                       tabindex="-1"
                     >
                       <div
@@ -1436,13 +1017,13 @@ Array [
                       class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-A"
                       role="columnheader"
-                      style="width:100px"
+                      style="width: 100px;"
                       tabindex="-1"
                     >
                       <div
                         class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
+                        style="margin-right: 0px;"
                       />
                       <div
                         class="ouiPopover ouiPopover--anchorDownCenter"
@@ -1474,13 +1055,13 @@ Array [
                       class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-B"
                       role="columnheader"
-                      style="width:100px"
+                      style="width: 100px;"
                       tabindex="-1"
                     >
                       <div
                         class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
+                        style="margin-right: 0px;"
                       />
                       <div
                         class="ouiPopover ouiPopover--anchorDownCenter"
@@ -1512,7 +1093,7 @@ Array [
                       class="ouiDataGridHeaderCell ouiDataGridHeaderCell--controlColumn"
                       data-test-subj="dataGridHeaderCell-trailing"
                       role="columnheader"
-                      style="width:50px"
+                      style="width: 50px;"
                       tabindex="-1"
                     >
                       <div
@@ -1528,17 +1109,17 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:0px;height:34px;width:50px"
+                    style="position: absolute; left: 0px; top: 100px; height: 34px; width: 50px;"
                     tabindex="-1"
                   >
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
@@ -1557,7 +1138,14 @@ Array [
                             <p
                               class="ouiScreenReaderOnly"
                             >
-                              Row: 1, Column: 1:
+                              Row
+                              : 
+                              1
+                              , 
+                              Column
+                              : 
+                              1
+                              :
                             </p>
                           </div>
                         </div>
@@ -1565,7 +1153,7 @@ Array [
                     </div>
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                   </div>
@@ -1573,7 +1161,7 @@ Array [
                     class="ouiDataGridRowCell"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:50px;top:0px;height:34px;width:100px"
+                    style="position: absolute; left: 50px; top: 100px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1586,7 +1174,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 1, Column: 2:
+                          Row
+                          : 
+                          1
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -1595,7 +1190,7 @@ Array [
                     class="ouiDataGridRowCell"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:150px;top:0px;height:34px;width:100px"
+                    style="position: absolute; left: 150px; top: 100px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1608,7 +1203,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 1, Column: 3:
+                          Row
+                          : 
+                          1
+                          , 
+                          Column
+                          : 
+                          3
+                          :
                         </p>
                       </div>
                     </div>
@@ -1617,17 +1219,17 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:250px;top:0px;height:34px;width:50px"
+                    style="position: absolute; left: 250px; top: 100px; height: 34px; width: 50px;"
                     tabindex="-1"
                   >
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
@@ -1646,7 +1248,14 @@ Array [
                             <p
                               class="ouiScreenReaderOnly"
                             >
-                              Row: 1, Column: 4:
+                              Row
+                              : 
+                              1
+                              , 
+                              Column
+                              : 
+                              4
+                              :
                             </p>
                           </div>
                         </div>
@@ -1654,7 +1263,7 @@ Array [
                     </div>
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                   </div>
@@ -1662,17 +1271,17 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--firstColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:34px;height:34px;width:50px"
+                    style="position: absolute; left: 0px; top: 134px; height: 34px; width: 50px;"
                     tabindex="-1"
                   >
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
@@ -1691,7 +1300,14 @@ Array [
                             <p
                               class="ouiScreenReaderOnly"
                             >
-                              Row: 2, Column: 1:
+                              Row
+                              : 
+                              2
+                              , 
+                              Column
+                              : 
+                              1
+                              :
                             </p>
                           </div>
                         </div>
@@ -1699,7 +1315,7 @@ Array [
                     </div>
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                   </div>
@@ -1707,7 +1323,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:50px;top:34px;height:34px;width:100px"
+                    style="position: absolute; left: 50px; top: 134px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1720,7 +1336,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 2, Column: 2:
+                          Row
+                          : 
+                          2
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -1729,7 +1352,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:150px;top:34px;height:34px;width:100px"
+                    style="position: absolute; left: 150px; top: 134px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1742,7 +1365,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 2, Column: 3:
+                          Row
+                          : 
+                          2
+                          , 
+                          Column
+                          : 
+                          3
+                          :
                         </p>
                       </div>
                     </div>
@@ -1751,17 +1381,17 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--lastColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:250px;top:34px;height:34px;width:50px"
+                    style="position: absolute; left: 250px; top: 134px; height: 34px; width: 50px;"
                     tabindex="-1"
                   >
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
@@ -1780,7 +1410,14 @@ Array [
                             <p
                               class="ouiScreenReaderOnly"
                             >
-                              Row: 2, Column: 4:
+                              Row
+                              : 
+                              2
+                              , 
+                              Column
+                              : 
+                              4
+                              :
                             </p>
                           </div>
                         </div>
@@ -1788,7 +1425,7 @@ Array [
                     </div>
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                   </div>
@@ -1796,17 +1433,17 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:68px;height:34px;width:50px"
+                    style="position: absolute; left: 0px; top: 168px; height: 34px; width: 50px;"
                     tabindex="-1"
                   >
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
@@ -1825,7 +1462,14 @@ Array [
                             <p
                               class="ouiScreenReaderOnly"
                             >
-                              Row: 3, Column: 1:
+                              Row
+                              : 
+                              3
+                              , 
+                              Column
+                              : 
+                              1
+                              :
                             </p>
                           </div>
                         </div>
@@ -1833,7 +1477,7 @@ Array [
                     </div>
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                   </div>
@@ -1841,7 +1485,7 @@ Array [
                     class="ouiDataGridRowCell"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:50px;top:68px;height:34px;width:100px"
+                    style="position: absolute; left: 50px; top: 168px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1854,7 +1498,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 3, Column: 2:
+                          Row
+                          : 
+                          3
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -1863,7 +1514,7 @@ Array [
                     class="ouiDataGridRowCell"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:150px;top:68px;height:34px;width:100px"
+                    style="position: absolute; left: 150px; top: 168px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -1876,7 +1527,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 3, Column: 3:
+                          Row
+                          : 
+                          3
+                          , 
+                          Column
+                          : 
+                          3
+                          :
                         </p>
                       </div>
                     </div>
@@ -1885,17 +1543,17 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn ouiDataGridRowCell--controlColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:250px;top:68px;height:34px;width:50px"
+                    style="position: absolute; left: 250px; top: 168px; height: 34px; width: 50px;"
                     tabindex="-1"
                   >
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                     <div
@@ -1914,7 +1572,14 @@ Array [
                             <p
                               class="ouiScreenReaderOnly"
                             >
-                              Row: 3, Column: 4:
+                              Row
+                              : 
+                              3
+                              , 
+                              Column
+                              : 
+                              4
+                              :
                             </p>
                           </div>
                         </div>
@@ -1922,7 +1587,7 @@ Array [
                     </div>
                     <div
                       data-focus-guard="true"
-                      style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+                      style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
                       tabindex="-1"
                     />
                   </div>
@@ -1939,27 +1604,27 @@ Array [
         Cell contains interactive content.
       </p>
     </div>
-  </div>,
+  </div>
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
-]
+  />
+</div>
 `;
 
 exports[`OuiDataGrid rendering renders custom column headers 1`] = `
-Array [
+<div>
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
+  />
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
+  />
   <div
     class="ouiDataGrid__focusWrap"
     data-focus-lock-disabled="disabled"
@@ -2066,14 +1731,14 @@ Array [
             tabindex="0"
           >
             <div
-              style="width:100%;height:100%;overflow:hidden"
+              style="width: 100%; height: 100%; overflow: hidden;"
             >
               <div
                 class="ouiDataGrid__virtualized"
-                style="position:relative;height:9007199254740991px;width:9007199254740991px;overflow:auto;-webkit-overflow-scrolling:touch;will-change:transform;direction:ltr"
+                style="position: relative; height: 9007199254740991px; width: 9007199254740991px; overflow: auto; will-change: transform; direction: ltr;"
               >
                 <div
-                  style="height:102px;width:200px"
+                  style="height: 202px; width: 200px;"
                 >
                   <div
                     class="ouiDataGridHeader"
@@ -2084,13 +1749,13 @@ Array [
                       class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-A"
                       role="columnheader"
-                      style="width:100px"
+                      style="width: 100px;"
                       tabindex="-1"
                     >
                       <div
                         class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
+                        style="margin-right: 0px;"
                       />
                       <div
                         class="ouiPopover ouiPopover--anchorDownCenter"
@@ -2122,13 +1787,13 @@ Array [
                       class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-B"
                       role="columnheader"
-                      style="width:100px"
+                      style="width: 100px;"
                       tabindex="-1"
                     >
                       <div
                         class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
+                        style="margin-right: 0px;"
                       />
                       <div
                         class="ouiPopover ouiPopover--anchorDownCenter"
@@ -2163,7 +1828,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:0px;height:34px;width:100px"
+                    style="position: absolute; left: 0px; top: 100px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2176,7 +1841,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 1, Column: 1:
+                          Row
+                          : 
+                          1
+                          , 
+                          Column
+                          : 
+                          1
+                          :
                         </p>
                       </div>
                     </div>
@@ -2185,7 +1857,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:100px;top:0px;height:34px;width:100px"
+                    style="position: absolute; left: 100px; top: 100px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2198,7 +1870,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 1, Column: 2:
+                          Row
+                          : 
+                          1
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -2207,7 +1886,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:34px;height:34px;width:100px"
+                    style="position: absolute; left: 0px; top: 134px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2220,7 +1899,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 2, Column: 1:
+                          Row
+                          : 
+                          2
+                          , 
+                          Column
+                          : 
+                          1
+                          :
                         </p>
                       </div>
                     </div>
@@ -2229,7 +1915,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:100px;top:34px;height:34px;width:100px"
+                    style="position: absolute; left: 100px; top: 134px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2242,7 +1928,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 2, Column: 2:
+                          Row
+                          : 
+                          2
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -2251,7 +1944,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:68px;height:34px;width:100px"
+                    style="position: absolute; left: 0px; top: 168px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2264,7 +1957,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 3, Column: 1:
+                          Row
+                          : 
+                          3
+                          , 
+                          Column
+                          : 
+                          1
+                          :
                         </p>
                       </div>
                     </div>
@@ -2273,7 +1973,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:100px;top:68px;height:34px;width:100px"
+                    style="position: absolute; left: 100px; top: 168px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2286,7 +1986,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 3, Column: 2:
+                          Row
+                          : 
+                          3
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -2304,27 +2011,27 @@ Array [
         Cell contains interactive content.
       </p>
     </div>
-  </div>,
+  </div>
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
-]
+  />
+</div>
 `;
 
 exports[`OuiDataGrid rendering renders with common and div attributes 1`] = `
-Array [
+<div>
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
+  />
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
+  />
   <div
     class="ouiDataGrid__focusWrap"
     data-focus-lock-disabled="disabled"
@@ -2431,14 +2138,14 @@ Array [
             tabindex="0"
           >
             <div
-              style="width:100%;height:100%;overflow:hidden"
+              style="width: 100%; height: 100%; overflow: hidden;"
             >
               <div
                 class="ouiDataGrid__virtualized"
-                style="position:relative;height:9007199254740991px;width:9007199254740991px;overflow:auto;-webkit-overflow-scrolling:touch;will-change:transform;direction:ltr"
+                style="position: relative; height: 9007199254740991px; width: 9007199254740991px; overflow: auto; will-change: transform; direction: ltr;"
               >
                 <div
-                  style="height:102px;width:200px"
+                  style="height: 202px; width: 200px;"
                 >
                   <div
                     class="ouiDataGridHeader"
@@ -2449,13 +2156,13 @@ Array [
                       class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-A"
                       role="columnheader"
-                      style="width:100px"
+                      style="width: 100px;"
                       tabindex="-1"
                     >
                       <div
                         class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
+                        style="margin-right: 0px;"
                       />
                       <div
                         class="ouiPopover ouiPopover--anchorDownCenter"
@@ -2487,13 +2194,13 @@ Array [
                       class="ouiDataGridHeaderCell"
                       data-test-subj="dataGridHeaderCell-B"
                       role="columnheader"
-                      style="width:100px"
+                      style="width: 100px;"
                       tabindex="-1"
                     >
                       <div
                         class="ouiDataGridColumnResizer"
                         data-test-subj="dataGridColumnResizer"
-                        style="margin-right:0px"
+                        style="margin-right: 0px;"
                       />
                       <div
                         class="ouiPopover ouiPopover--anchorDownCenter"
@@ -2526,7 +2233,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:0px;height:34px;width:100px"
+                    style="position: absolute; left: 0px; top: 100px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2539,7 +2246,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 1, Column: 1:
+                          Row
+                          : 
+                          1
+                          , 
+                          Column
+                          : 
+                          1
+                          :
                         </p>
                       </div>
                     </div>
@@ -2548,7 +2262,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:100px;top:0px;height:34px;width:100px"
+                    style="position: absolute; left: 100px; top: 100px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2561,7 +2275,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 1, Column: 2:
+                          Row
+                          : 
+                          1
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -2570,7 +2291,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:34px;height:34px;width:100px"
+                    style="position: absolute; left: 0px; top: 134px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2583,7 +2304,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 2, Column: 1:
+                          Row
+                          : 
+                          2
+                          , 
+                          Column
+                          : 
+                          1
+                          :
                         </p>
                       </div>
                     </div>
@@ -2592,7 +2320,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--stripe ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:100px;top:34px;height:34px;width:100px"
+                    style="position: absolute; left: 100px; top: 134px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2605,7 +2333,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 2, Column: 2:
+                          Row
+                          : 
+                          2
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -2614,7 +2349,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--firstColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:0;top:68px;height:34px;width:100px"
+                    style="position: absolute; left: 0px; top: 168px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2627,7 +2362,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 3, Column: 1:
+                          Row
+                          : 
+                          3
+                          , 
+                          Column
+                          : 
+                          1
+                          :
                         </p>
                       </div>
                     </div>
@@ -2636,7 +2378,7 @@ Array [
                     class="ouiDataGridRowCell ouiDataGridRowCell--lastColumn"
                     data-test-subj="dataGridRowCell"
                     role="gridcell"
-                    style="position:absolute;left:100px;top:68px;height:34px;width:100px"
+                    style="position: absolute; left: 100px; top: 168px; height: 34px; width: 100px;"
                     tabindex="-1"
                   >
                     <div
@@ -2649,7 +2391,14 @@ Array [
                         <p
                           class="ouiScreenReaderOnly"
                         >
-                          Row: 3, Column: 2:
+                          Row
+                          : 
+                          3
+                          , 
+                          Column
+                          : 
+                          2
+                          :
                         </p>
                       </div>
                     </div>
@@ -2667,11 +2416,11 @@ Array [
         Cell contains interactive content.
       </p>
     </div>
-  </div>,
+  </div>
   <div
     data-focus-guard="true"
-    style="width:1px;height:0px;padding:0;overflow:hidden;position:fixed;top:1px;left:1px"
+    style="width: 1px; height: 0px; padding: 0px; overflow: hidden; position: fixed; top: 1px; left: 1px;"
     tabindex="-1"
-  />,
-]
+  />
+</div>
 `;

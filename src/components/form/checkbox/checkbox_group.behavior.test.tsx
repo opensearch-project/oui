@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 
 import { OuiCheckboxGroup } from './checkbox_group';
 
@@ -39,7 +39,7 @@ import { OuiCheckboxGroup } from './checkbox_group';
 describe('OuiCheckboxGroup behavior', () => {
   test('id is bound to onChange', () => {
     const onChangeHandler = jest.fn();
-    const component = mount(
+    const { container } = render(
       <OuiCheckboxGroup
         options={[{ id: '1', label: 'kibana', disabled: false }]}
         idToSelectedMap={{
@@ -49,8 +49,12 @@ describe('OuiCheckboxGroup behavior', () => {
       />
     );
 
-    component.find('input[type="checkbox"]').simulate('change');
-    expect(onChangeHandler).toBeCalledTimes(1);
+    const checkbox = container.querySelector(
+      'input[type="checkbox"]'
+    ) as HTMLInputElement;
+    fireEvent.click(checkbox);
+
+    expect(onChangeHandler).toHaveBeenCalledTimes(1);
     expect(onChangeHandler.mock.calls[0][0]).toBe('1');
   });
 });

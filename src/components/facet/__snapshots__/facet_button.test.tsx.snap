@@ -1,120 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiFacetButton is rendered 1`] = `
-<button
-  aria-label="aria-label"
-  class="ouiFacetButton ouiFacetButton--unSelected testClass1 testClass2"
-  data-test-subj="test subject string"
-  title="aria-label"
-  type="button"
->
-  <span
-    class="ouiFacetButton__content"
+<div>
+  <button
+    aria-label="aria-label"
+    class="ouiFacetButton ouiFacetButton--unSelected testClass1 testClass2"
+    data-test-subj="test subject string"
+    title="aria-label"
+    type="button"
   >
     <span
-      class="ouiFacetButton__text"
+      class="ouiFacetButton__content"
     >
-      Content
+      <span
+        class="ouiFacetButton__text"
+        data-text="Content"
+      >
+        Content
+      </span>
     </span>
-  </span>
-</button>
+  </button>
+</div>
 `;
 
 exports[`OuiFacetButton props icon is rendered 1`] = `
-<button
-  class="ouiFacetButton ouiFacetButton--unSelected"
-  type="button"
->
-  <span
-    class="ouiFacetButton__content"
+<div>
+  <button
+    class="ouiFacetButton ouiFacetButton--unSelected"
+    title="Content"
+    type="button"
   >
     <span
-      class="ouiFacetButton__icon"
-      data-ouiicon-type="dot"
-    />
-    <span
-      class="ouiFacetButton__text"
+      class="ouiFacetButton__content"
     >
-      Content
+      <span
+        class="ouiFacetButton__icon"
+        data-ouiicon-type="dot"
+      />
+      <span
+        class="ouiFacetButton__text"
+        data-text="Content"
+      >
+        Content
+      </span>
     </span>
-  </span>
-</button>
+  </button>
+</div>
 `;
 
 exports[`OuiFacetButton props isDisabled is rendered 1`] = `
-<button
-  class="ouiFacetButton ouiFacetButton--unSelected"
-  disabled=""
-  type="button"
->
-  <span
-    class="ouiFacetButton__content"
+<div>
+  <button
+    class="ouiFacetButton ouiFacetButton--unSelected"
+    disabled=""
+    title="Content"
+    type="button"
   >
     <span
-      class="ouiFacetButton__text"
+      class="ouiFacetButton__content"
     >
-      Content
+      <span
+        class="ouiFacetButton__text"
+        data-text="Content"
+      >
+        Content
+      </span>
     </span>
-  </span>
-</button>
+  </button>
+</div>
 `;
 
 exports[`OuiFacetButton props isLoading is rendered 1`] = `
-<button
-  class="ouiFacetButton ouiFacetButton--unSelected"
-  disabled=""
-  type="button"
->
-  <span
-    class="ouiFacetButton__content"
+<div>
+  <button
+    class="ouiFacetButton ouiFacetButton--unSelected"
+    disabled=""
+    title="Content"
+    type="button"
   >
     <span
-      class="ouiFacetButton__text"
+      class="ouiFacetButton__content"
     >
-      Content
+      <span
+        class="ouiFacetButton__text"
+        data-text="Content"
+      >
+        Content
+      </span>
+      <span
+        class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiFacetButton__spinner"
+      />
     </span>
-    <span
-      class="ouiLoadingSpinner ouiLoadingSpinner--medium ouiFacetButton__spinner"
-    />
-  </span>
-</button>
+  </button>
+</div>
 `;
 
 exports[`OuiFacetButton props isSelected is rendered 1`] = `
-<button
-  class="ouiFacetButton ouiFacetButton--isSelected"
-  type="button"
->
-  <span
-    class="ouiFacetButton__content"
+<div>
+  <button
+    class="ouiFacetButton ouiFacetButton--isSelected"
+    title="Content"
+    type="button"
   >
     <span
-      class="ouiFacetButton__text"
+      class="ouiFacetButton__content"
     >
-      Content
+      <span
+        class="ouiFacetButton__text"
+        data-text="Content"
+      >
+        Content
+      </span>
     </span>
-  </span>
-</button>
+  </button>
+</div>
 `;
 
 exports[`OuiFacetButton props quantity is rendered 1`] = `
-<button
-  class="ouiFacetButton ouiFacetButton--unSelected"
-  type="button"
->
-  <span
-    class="ouiFacetButton__content"
+<div>
+  <button
+    class="ouiFacetButton ouiFacetButton--unSelected"
+    title="Content"
+    type="button"
   >
     <span
-      class="ouiFacetButton__text"
+      class="ouiFacetButton__content"
     >
-      Content
+      <span
+        class="ouiFacetButton__text"
+        data-text="Content"
+      >
+        Content
+      </span>
+      <span
+        class="ouiNotificationBadge ouiNotificationBadge--medium ouiNotificationBadge--subdued ouiFacetButton__quantity"
+      >
+        60
+      </span>
     </span>
-    <span
-      class="ouiNotificationBadge ouiNotificationBadge--medium ouiNotificationBadge--subdued ouiFacetButton__quantity"
-    >
-      60
-    </span>
-  </span>
-</button>
+  </button>
+</div>
 `;

@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { mount, shallow } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import { requiredProps } from '../../test';
 
 import { OuiInMemoryTable, OuiInMemoryTableProps } from './in_memory_table';
@@ -66,9 +66,9 @@ describe('OuiInMemoryTable', () => {
         },
       ],
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with message', () => {
@@ -84,9 +84,9 @@ describe('OuiInMemoryTable', () => {
       ],
       message: 'where my items at?',
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with message and loading', () => {
@@ -103,9 +103,9 @@ describe('OuiInMemoryTable', () => {
       message: 'Loading items....',
       loading: true,
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with executeQueryOptions', () => {
@@ -123,9 +123,9 @@ describe('OuiInMemoryTable', () => {
         defaultFields: ['name'],
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with items', () => {
@@ -144,9 +144,9 @@ describe('OuiInMemoryTable', () => {
         },
       ],
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with items and expanded item', () => {
@@ -169,9 +169,9 @@ describe('OuiInMemoryTable', () => {
         '1': <div>expanded row content</div>,
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with items and message - expecting to show the items', () => {
@@ -191,9 +191,9 @@ describe('OuiInMemoryTable', () => {
         },
       ],
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination', () => {
@@ -215,9 +215,9 @@ describe('OuiInMemoryTable', () => {
         pageSizeOptions: [2, 4, 6],
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination and default page size and index', () => {
@@ -241,9 +241,9 @@ describe('OuiInMemoryTable', () => {
         pageSizeOptions: [1, 2, 3],
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination, default page size and error', () => {
@@ -263,9 +263,9 @@ describe('OuiInMemoryTable', () => {
         pageSizeOptions: [2, 4, 6],
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination, hiding the per page options', () => {
@@ -287,9 +287,9 @@ describe('OuiInMemoryTable', () => {
         hidePerPageOptions: true,
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('sorting', () => {
@@ -311,13 +311,13 @@ describe('OuiInMemoryTable', () => {
         ],
         sorting: true,
       };
-      const component = mount(<OuiInMemoryTable {...props} />);
+      const { container } = render(<OuiInMemoryTable {...props} />);
 
-      expect(
-        component
-          .find('tbody .ouiTableCellContent__text')
-          .map((cell) => cell.text())
-      ).toEqual(['name3', 'name1', 'name2']);
+      const cellTexts = Array.from(
+        container.querySelectorAll('tbody .ouiTableCellContent__text')
+      ).map((cell) => cell.textContent);
+
+      expect(cellTexts).toEqual(['name3', 'name1', 'name2']);
     });
 
     test('with field sorting (on by default)', () => {
@@ -343,13 +343,13 @@ describe('OuiInMemoryTable', () => {
           },
         },
       };
-      const component = mount(<OuiInMemoryTable {...props} />);
+      const { container } = render(<OuiInMemoryTable {...props} />);
 
-      expect(
-        component
-          .find('tbody .ouiTableCellContent__text')
-          .map((cell) => cell.text())
-      ).toEqual(['name1', 'name2', 'name3']);
+      const cellTexts = Array.from(
+        container.querySelectorAll('tbody .ouiTableCellContent__text')
+      ).map((cell) => cell.textContent);
+
+      expect(cellTexts).toEqual(['name1', 'name2', 'name3']);
     });
 
     test('with name sorting', () => {
@@ -375,13 +375,13 @@ describe('OuiInMemoryTable', () => {
           },
         },
       };
-      const component = mount(<OuiInMemoryTable {...props} />);
+      const { container } = render(<OuiInMemoryTable {...props} />);
 
-      expect(
-        component
-          .find('tbody .ouiTableCellContent__text')
-          .map((cell) => cell.text())
-      ).toEqual(['name3', 'name2', 'name1']);
+      const cellTexts = Array.from(
+        container.querySelectorAll('tbody .ouiTableCellContent__text')
+      ).map((cell) => cell.textContent);
+
+      expect(cellTexts).toEqual(['name3', 'name2', 'name1']);
     });
 
     test('verify field sorting precedes name sorting', () => {
@@ -413,14 +413,14 @@ describe('OuiInMemoryTable', () => {
           },
         },
       };
-      const component = mount(<OuiInMemoryTable {...props} />);
+      const { container } = render(<OuiInMemoryTable {...props} />);
 
       // name TDs should be sorted desc, id TDs should be asc,
-      expect(
-        component
-          .find('tbody .ouiTableCellContent__text')
-          .map((cell) => cell.text())
-      ).toEqual(['name3', '1', 'name2', '2', 'name1', '3']);
+      const cellTexts = Array.from(
+        container.querySelectorAll('tbody .ouiTableCellContent__text')
+      ).map((cell) => cell.textContent);
+
+      expect(cellTexts).toEqual(['name3', '1', 'name2', '2', 'name1', '3']);
     });
 
     test('verify an invalid sort field does not blow everything up', () => {
@@ -447,7 +447,7 @@ describe('OuiInMemoryTable', () => {
         },
       };
       expect(() => {
-        mount(<OuiInMemoryTable {...props} />);
+        render(<OuiInMemoryTable {...props} />);
       }).not.toThrow();
     });
   });
@@ -480,9 +480,9 @@ describe('OuiInMemoryTable', () => {
         },
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
     expect(itemsProp).toEqual(items);
   });
 
@@ -507,9 +507,9 @@ describe('OuiInMemoryTable', () => {
         initialSelected: [{ id: '1', name: 'name1' }],
       },
     };
-    const component = mount(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination and selection', () => {
@@ -533,9 +533,9 @@ describe('OuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination, selection and sorting', () => {
@@ -561,9 +561,9 @@ describe('OuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting and column renderer', () => {
@@ -592,9 +592,9 @@ describe('OuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting and a single record action', () => {
@@ -630,9 +630,9 @@ describe('OuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting  and simple search', () => {
@@ -669,9 +669,9 @@ describe('OuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with search and component between search and table', () => {
@@ -704,9 +704,9 @@ describe('OuiInMemoryTable', () => {
       search: true,
       childrenBetween: <div>Children Between</div>,
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test('with pagination, selection, sorting and configured search', () => {
@@ -758,13 +758,13 @@ describe('OuiInMemoryTable', () => {
         onSelectionChange: () => undefined,
       },
     };
-    const component = shallow(<OuiInMemoryTable {...props} />);
+    const { container } = render(<OuiInMemoryTable {...props} />);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('search interaction & functionality', () => {
-    it('updates the results as based on the entered query', () => {
+    it('updates the results as based on the entered query', async () => {
       const props: OuiInMemoryTableProps<StateItem> = {
         items: [
           {
@@ -796,34 +796,40 @@ describe('OuiInMemoryTable', () => {
         className: 'testTable',
       };
 
-      const component = mount(<OuiInMemoryTable {...props} />);
+      const { container } = render(<OuiInMemoryTable {...props} />);
 
       // should render with all three results visible
-      expect(component.find('.testTable OuiTableRow').length).toBe(3);
+      expect(container.querySelectorAll('.testTable .ouiTableRow').length).toBe(
+        3
+      );
 
-      const searchField = component.find('OuiFieldSearch input[type="search"]');
+      const searchField = container.querySelector(
+        'input[type="search"]'
+      ) as HTMLInputElement;
 
-      searchField.simulate('keyUp', {
+      fireEvent.keyUp(searchField, {
         target: {
           value: 'is:active',
         },
         key: keys.ENTER,
       });
-      component.update();
 
       // should render with the two active results
-      expect(component.find('.testTable OuiTableRow').length).toBe(2);
+      expect(container.querySelectorAll('.testTable .ouiTableRow').length).toBe(
+        2
+      );
 
-      searchField.simulate('keyUp', {
+      fireEvent.keyUp(searchField, {
         target: {
           value: 'active:false',
         },
         key: keys.ENTER,
       });
-      component.update();
 
       // should render with the one inactive result
-      expect(component.find('.testTable OuiTableRow').length).toBe(1);
+      expect(container.querySelectorAll('.testTable .ouiTableRow').length).toBe(
+        1
+      );
     });
 
     it('passes down the executeQueryOptions properly', () => {
@@ -866,9 +872,13 @@ describe('OuiInMemoryTable', () => {
         message: <span className="customMessage">No items found!</span>,
       };
 
-      const noDefaultFieldsComponent = mount(<OuiInMemoryTable {...props} />);
+      const { container: noDefaultFieldsContainer } = render(
+        <OuiInMemoryTable {...props} />
+      );
       // should render with the no items found text
-      expect(noDefaultFieldsComponent.find('.customMessage').length).toBe(1);
+      expect(
+        noDefaultFieldsContainer.querySelectorAll('.customMessage').length
+      ).toBe(1);
 
       // With defaultFields and a search query, we should only see one
       const props2: OuiInMemoryTableProps<ComplexItem> = {
@@ -910,10 +920,12 @@ describe('OuiInMemoryTable', () => {
         message: <span className="customMessage">No items found!</span>,
       };
 
-      const defaultFieldComponent = mount(<OuiInMemoryTable {...props2} />);
-      expect(defaultFieldComponent.find('.testTable OuiTableRow').length).toBe(
-        1
+      const { container: defaultFieldContainer } = render(
+        <OuiInMemoryTable {...props2} />
       );
+      expect(
+        defaultFieldContainer.querySelectorAll('.testTable .ouiTableRow').length
+      ).toBe(1);
     });
   });
 
@@ -941,13 +953,14 @@ describe('OuiInMemoryTable', () => {
           },
         },
       };
-      const component = mount(<OuiInMemoryTable {...props} />);
+      const { container } = render(<OuiInMemoryTable {...props} />);
 
-      expect((component.find('OuiBasicTable').props() as any).items).toEqual([
-        { id: 3, name: 'Betty' },
-        { id: 5, name: 'Charlie' },
-        { id: 7, name: 'Alfred' },
-      ]);
+      // Check that the items are sorted by id (3, 5, 7) rather than by name
+      const cellTexts = Array.from(
+        container.querySelectorAll('tbody .ouiTableCellContent__text')
+      ).map((cell) => cell.textContent);
+
+      expect(cellTexts).toEqual(['Betty', 'Charlie', 'Alfred']);
     });
   });
 
@@ -972,17 +985,18 @@ describe('OuiInMemoryTable', () => {
           pageSizeOptions: [2, 4, 6],
         },
       };
-      const component = mount(<OuiInMemoryTable {...props} />);
+      const { container, rerender } = render(<OuiInMemoryTable {...props} />);
 
-      component
-        .find('OuiButtonEmpty[data-test-subj="pagination-button-1"]')
-        .simulate('click');
+      const paginationButton = container.querySelector(
+        '[data-test-subj="pagination-button-1"]'
+      ) as HTMLButtonElement;
+      fireEvent.click(paginationButton);
 
       // forces OuiInMemoryTable's getDerivedStateFromProps to re-execute
       // this is specifically testing regression against https://github.com/elastic/eui/issues/1007
-      component.setProps({});
+      rerender(<OuiInMemoryTable {...props} />);
 
-      expect(component).toMatchSnapshot();
+      expect(container).toMatchSnapshot();
     });
 
     test('pagination with actions column and sorting set to true', async () => {
@@ -1005,11 +1019,12 @@ describe('OuiInMemoryTable', () => {
           pageSizeOptions: [2, 4, 6],
         },
       };
-      const component = mount(<OuiInMemoryTable {...props} />);
+      const { container } = render(<OuiInMemoryTable {...props} />);
 
-      component
-        .find('OuiButtonEmpty[data-test-subj="pagination-button-1"]')
-        .simulate('click');
+      const paginationButton = container.querySelector(
+        '[data-test-subj="pagination-button-1"]'
+      ) as HTMLButtonElement;
+      fireEvent.click(paginationButton);
     });
 
     test('onTableChange callback', () => {
@@ -1036,12 +1051,15 @@ describe('OuiInMemoryTable', () => {
         onTableChange: jest.fn(),
       };
 
-      const component = mount(<OuiInMemoryTable {...props} />);
+      const { container } = render(<OuiInMemoryTable {...props} />);
 
       expect(props.onTableChange).toHaveBeenCalledTimes(0);
-      component
-        .find('OuiButtonEmpty[data-test-subj="pagination-button-1"]')
-        .simulate('click');
+
+      const paginationButton = container.querySelector(
+        '[data-test-subj="pagination-button-1"]'
+      ) as HTMLButtonElement;
+      fireEvent.click(paginationButton);
+
       expect(props.onTableChange).toHaveBeenCalledTimes(1);
       expect(props.onTableChange).toHaveBeenCalledWith({
         sort: {},
@@ -1052,11 +1070,12 @@ describe('OuiInMemoryTable', () => {
       });
 
       (props.onTableChange as jest.Mock).mockClear();
-      component
-        .find(
-          '[data-test-subj*="tableHeaderCell_name_0"] [data-test-subj="tableHeaderSortButton"]'
-        )
-        .simulate('click');
+
+      const sortButton = container.querySelector(
+        '[data-test-subj*="tableHeaderCell_name_0"] [data-test-subj="tableHeaderSortButton"]'
+      ) as HTMLButtonElement;
+      fireEvent.click(sortButton);
+
       expect(props.onTableChange).toHaveBeenCalledTimes(1);
       expect(props.onTableChange).toHaveBeenCalledWith({
         sort: {
@@ -1093,7 +1112,7 @@ describe('OuiInMemoryTable', () => {
         },
       ];
       const onTableChange = jest.fn();
-      const component = mount(
+      const { container, rerender } = render(
         <OuiInMemoryTable
           items={items}
           columns={columns}
@@ -1104,16 +1123,20 @@ describe('OuiInMemoryTable', () => {
 
       // ensure table is on 2nd page (pageIndex=1)
       expect(
-        component.find('button[data-test-subj="pagination-button-1"][disabled]')
-          .length
+        container.querySelectorAll(
+          'button[data-test-subj="pagination-button-1"][disabled]'
+        ).length
       ).toBe(1);
-      expect(component.find('td').at(0).text()).toBe('Index2');
-      expect(component.find('td').at(1).text()).toBe('Index3');
+      const tableCells = container.querySelectorAll('td');
+      expect(tableCells[0].textContent).toBe('Index2');
+      expect(tableCells[1].textContent).toBe('Index3');
 
       // click the first pagination button
-      component
-        .find('OuiButtonEmpty[data-test-subj="pagination-button-0"]')
-        .simulate('click');
+      const firstPageButton = container.querySelector(
+        '[data-test-subj="pagination-button-0"]'
+      ) as HTMLButtonElement;
+      fireEvent.click(firstPageButton);
+
       expect(onTableChange).toHaveBeenCalledTimes(1);
       expect(onTableChange).toHaveBeenCalledWith({
         sort: {},
@@ -1125,23 +1148,34 @@ describe('OuiInMemoryTable', () => {
 
       // ensure table is still on the 2nd page (pageIndex=1)
       expect(
-        component.find('button[data-test-subj="pagination-button-1"][disabled]')
-          .length
+        container.querySelectorAll(
+          'button[data-test-subj="pagination-button-1"][disabled]'
+        ).length
       ).toBe(1);
-      expect(component.find('td').at(0).text()).toBe('Index2');
-      expect(component.find('td').at(1).text()).toBe('Index3');
+      const tableCellsAfterClick = container.querySelectorAll('td');
+      expect(tableCellsAfterClick[0].textContent).toBe('Index2');
+      expect(tableCellsAfterClick[1].textContent).toBe('Index3');
 
       // re-render with an updated `pageIndex` value
       pagination.pageIndex = 2;
-      component.setProps({ pagination });
+      rerender(
+        <OuiInMemoryTable
+          items={items}
+          columns={columns}
+          pagination={pagination}
+          onTableChange={onTableChange}
+        />
+      );
 
       // ensure table is on 3rd page (pageIndex=2)
       expect(
-        component.find('button[data-test-subj="pagination-button-2"][disabled]')
-          .length
+        container.querySelectorAll(
+          'button[data-test-subj="pagination-button-2"][disabled]'
+        ).length
       ).toBe(1);
-      expect(component.find('td').at(0).text()).toBe('Index4');
-      expect(component.find('td').at(1).text()).toBe('Index5');
+      const tableCellsAfterRerender = container.querySelectorAll('td');
+      expect(tableCellsAfterRerender[0].textContent).toBe('Index4');
+      expect(tableCellsAfterRerender[1].textContent).toBe('Index5');
     });
 
     it('respects pageSize', () => {
@@ -1165,7 +1199,7 @@ describe('OuiInMemoryTable', () => {
         },
       ];
       const onTableChange = jest.fn();
-      const component = mount(
+      const { container, rerender } = render(
         <OuiInMemoryTable
           items={items}
           columns={columns}
@@ -1175,18 +1209,21 @@ describe('OuiInMemoryTable', () => {
       );
 
       // check that the first 2 items rendered
-      expect(component.find('td').length).toBe(2);
-      expect(component.find('td').at(0).text()).toBe('Index0');
-      expect(component.find('td').at(1).text()).toBe('Index1');
+      expect(container.querySelectorAll('td').length).toBe(2);
+      const initialCells = container.querySelectorAll('td');
+      expect(initialCells[0].textContent).toBe('Index0');
+      expect(initialCells[1].textContent).toBe('Index1');
 
       // change the page size
-      component
-        .find('button[data-test-subj="tablePaginationPopoverButton"]')
-        .simulate('click');
-      component.update();
-      component
-        .find('button[data-test-subj="tablePagination-4-rows"]')
-        .simulate('click');
+      const paginationButton = container.querySelector(
+        'button[data-test-subj="tablePaginationPopoverButton"]'
+      ) as HTMLButtonElement;
+      fireEvent.click(paginationButton);
+
+      const pageSizeButton = document.body.querySelector(
+        'button[data-test-subj="tablePagination-4-rows"]'
+      ) as HTMLButtonElement;
+      fireEvent.click(pageSizeButton);
 
       // check callback
       expect(onTableChange).toHaveBeenCalledTimes(1);
@@ -1199,20 +1236,29 @@ describe('OuiInMemoryTable', () => {
       });
 
       // verify still only rendering the first 2 rows
-      expect(component.find('td').length).toBe(2);
-      expect(component.find('td').at(0).text()).toBe('Index0');
-      expect(component.find('td').at(1).text()).toBe('Index1');
+      expect(container.querySelectorAll('td').length).toBe(2);
+      const cellsAfterSizeChange = container.querySelectorAll('td');
+      expect(cellsAfterSizeChange[0].textContent).toBe('Index0');
+      expect(cellsAfterSizeChange[1].textContent).toBe('Index1');
 
       // update the controlled page size
       pagination.pageSize = 4;
-      component.setProps({ pagination });
+      rerender(
+        <OuiInMemoryTable
+          items={items}
+          columns={columns}
+          pagination={pagination}
+          onTableChange={onTableChange}
+        />
+      );
 
       // verify it now renders 4 rows
-      expect(component.find('td').length).toBe(4);
-      expect(component.find('td').at(0).text()).toBe('Index0');
-      expect(component.find('td').at(1).text()).toBe('Index1');
-      expect(component.find('td').at(2).text()).toBe('Index2');
-      expect(component.find('td').at(3).text()).toBe('Index3');
+      expect(container.querySelectorAll('td').length).toBe(4);
+      const finalCells = container.querySelectorAll('td');
+      expect(finalCells[0].textContent).toBe('Index0');
+      expect(finalCells[1].textContent).toBe('Index1');
+      expect(finalCells[2].textContent).toBe('Index2');
+      expect(finalCells[3].textContent).toBe('Index3');
     });
   });
 });

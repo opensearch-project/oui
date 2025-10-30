@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`OuiBottomBar is rendered 1`] = `
-Array [
+<div>
   <section
     aria-label="aria-label"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium testClass1 testClass2"
@@ -13,18 +13,18 @@ Array [
       Page level controls
     </h2>
     Content
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props affordForDisplacement can be false 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
@@ -34,31 +34,39 @@ Array [
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props bodyClassName is rendered 1`] = `
-<section
-  aria-label="Page level controls"
-  class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
->
-  <h2
+<div>
+  <section
+    aria-label="Page level controls"
+    class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
+  >
+    <h2
+      class="ouiScreenReaderOnly"
+    >
+      Page level controls
+    </h2>
+  </section>
+  <p
+    aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
-    Page level controls
-  </h2>
-</section>
+    There is a new region landmark with page level controls at the end of the document.
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props landmarkHeading 1`] = `
-Array [
+<div>
   <section
     aria-label="This should have been label"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
@@ -68,18 +76,18 @@ Array [
     >
       This should have been label
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark called This should have been label with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props paddingSize l is rendered 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingLarge"
@@ -89,18 +97,18 @@ Array [
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props paddingSize m is rendered 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
@@ -110,18 +118,18 @@ Array [
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props paddingSize none is rendered 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed"
@@ -131,18 +139,18 @@ Array [
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props paddingSize s is rendered 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingSmall"
@@ -152,18 +160,18 @@ Array [
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props position fixed is rendered 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
@@ -173,40 +181,40 @@ Array [
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props position props are altered 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
-    style="left:30px;right:30px;bottom:30px;top:30px"
+    style="left: 30px; right: 30px; bottom: 30px; top: 30px;"
   >
     <h2
       class="ouiScreenReaderOnly"
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props position static is rendered 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--static ouiBottomBar--paddingMedium"
@@ -216,18 +224,18 @@ Array [
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props position sticky is rendered 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--sticky ouiBottomBar--paddingMedium"
@@ -237,40 +245,40 @@ Array [
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props style is customized 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
-    style="left:12px"
+    style="left: 12px;"
   >
     <h2
       class="ouiScreenReaderOnly"
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;
 
 exports[`OuiBottomBar props usePortal can be false 1`] = `
-Array [
+<div>
   <section
     aria-label="Page level controls"
     class="ouiBottomBar ouiBottomBar--fixed ouiBottomBar--paddingMedium"
@@ -280,12 +288,12 @@ Array [
     >
       Page level controls
     </h2>
-  </section>,
+  </section>
   <p
     aria-live="assertive"
     class="ouiScreenReaderOnly"
   >
     There is a new region landmark with page level controls at the end of the document.
-  </p>,
-]
+  </p>
+</div>
 `;

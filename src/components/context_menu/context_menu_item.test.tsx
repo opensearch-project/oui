@@ -29,62 +29,62 @@
  */
 
 import React from 'react';
-import { render, shallow, mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiContextMenuItem, SIZES } from './context_menu_item';
 
 describe('OuiContextMenuItem', () => {
   test('is rendered', () => {
-    const component = render(
+    const { container } = render(
       <OuiContextMenuItem {...requiredProps}>Hello</OuiContextMenuItem>
     );
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   describe('props', () => {
     describe('icon', () => {
       test('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiContextMenuItem icon={<span className="ouiIcon fa-user" />} />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('disabled', () => {
       test('is rendered', () => {
-        const component = render(<OuiContextMenuItem disabled />);
+        const { container } = render(<OuiContextMenuItem disabled />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('size', () => {
       SIZES.forEach((size) => {
         it(`${size} is rendered`, () => {
-          const component = render(<OuiContextMenuItem size={size} />);
+          const { container } = render(<OuiContextMenuItem size={size} />);
 
-          expect(component).toMatchSnapshot();
+          expect(container).toMatchSnapshot();
         });
       });
     });
 
     describe('onClick', () => {
       test('renders a button', () => {
-        const component = render(
+        const { container } = render(
           <OuiContextMenuItem {...requiredProps} onClick={() => {}} />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
 
       test("isn't called upon instantiation", () => {
         const onClickHandler = jest.fn();
 
-        shallow(<OuiContextMenuItem onClick={onClickHandler} />);
+        render(<OuiContextMenuItem onClick={onClickHandler} />);
 
         expect(onClickHandler).not.toHaveBeenCalled();
       });
@@ -92,11 +92,12 @@ describe('OuiContextMenuItem', () => {
       test('is called when the item is clicked', () => {
         const onClickHandler = jest.fn();
 
-        const component = shallow(
+        const { container } = render(
           <OuiContextMenuItem onClick={onClickHandler} />
         );
 
-        component.simulate('click');
+        const button = container.querySelector('button');
+        fireEvent.click(button!);
 
         expect(onClickHandler).toHaveBeenCalledTimes(1);
       });
@@ -104,11 +105,12 @@ describe('OuiContextMenuItem', () => {
       test('is not called when the item is clicked but set to disabled', () => {
         const onClickHandler = jest.fn();
 
-        const component = mount(
+        const { container } = render(
           <OuiContextMenuItem disabled onClick={onClickHandler} />
         );
 
-        component.simulate('click');
+        const button = container.querySelector('button');
+        fireEvent.click(button!);
 
         expect(onClickHandler).not.toHaveBeenCalled();
       });
@@ -116,39 +118,39 @@ describe('OuiContextMenuItem', () => {
 
     describe('href', () => {
       test('renders a link', () => {
-        const component = render(
+        const { container } = render(
           <OuiContextMenuItem {...requiredProps} href="url" />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('rel', () => {
       test('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiContextMenuItem {...requiredProps} href="url" rel="help" />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('target', () => {
       test('is rendered', () => {
-        const component = render(
+        const { container } = render(
           <OuiContextMenuItem {...requiredProps} href="url" target="_blank" />
         );
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
 
     describe('hasPanel', () => {
       test('is rendered', () => {
-        const component = render(<OuiContextMenuItem hasPanel />);
+        const { container } = render(<OuiContextMenuItem hasPanel />);
 
-        expect(component).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
       });
     });
   });

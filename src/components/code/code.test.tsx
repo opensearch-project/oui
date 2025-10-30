@@ -29,7 +29,7 @@
  */
 
 import React from 'react';
-import { render } from 'enzyme';
+import { render } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import { OuiCode } from './code';
@@ -39,8 +39,8 @@ console.log(some);`;
 
 describe('OuiCode', () => {
   test('renders a code snippet', () => {
-    const component = render(<OuiCode {...requiredProps}>{code}</OuiCode>);
+    const { container } = render(<OuiCode {...requiredProps}>{code}</OuiCode>);
 
-    expect(component).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });
