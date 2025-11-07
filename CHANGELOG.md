@@ -7,13 +7,14 @@
 
 ### 🛡 Security
 
+- Upgrade webpack to v5 ([#1601](https://github.com/opensearch-project/oui/pull/1601))
 
 ### 📈 Features/Enhancements
-- Update CodeBlock Colors ([#1615](https://github.com/opensearch-project/oui/pull/1615))
 
 
 ### 🐛 Bug Fixes
 
+- Fix DataGrid numeric cell content shifting on hover ([#1644](https://github.com/opensearch-project/oui/pull/1644)) 
 
 ### 🚞 Infrastructure
 
@@ -23,11 +24,19 @@
 
 ### 🛠 Maintenance
 
+- Update code base to work in react 16 and 18 ([#1628](https://github.com/opensearch-project/oui/pull/1628))
+- Setup devserver and tests to run in react 18 ([#1630](https://github.com/opensearch-project/oui/pull/1630)) 
+- Update tests failing against react 18 to react-testing-library ([#1632](https://github.com/opensearch-project/oui/pull/1632))
 
 ### 🪛 Refactoring
 
 
 ### 🔩 Tests
+
+## [`1.21.0`](https://github.com/opensearch-project/oui/tree/1.21)
+
+### 📈 Features/Enhancements
+- Update CodeBlock Colors ([#1615](https://github.com/opensearch-project/oui/pull/1615))
 
 ## [`1.20.0`](https://github.com/opensearch-project/oui/tree/1.20)
 
