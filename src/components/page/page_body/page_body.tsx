@@ -36,6 +36,7 @@ import {
   setPropsForRestrictedPageWidth,
 } from '../_restrict_width';
 import { OuiPanel, OuiPanelProps } from '../../panel';
+import { useDeprecatedPropWarning } from '../../../utils/deprecated';
 
 const paddingSizeToClassNameMap = {
   none: null,
@@ -61,6 +62,7 @@ export type OuiPageBodyProps<T extends ComponentTypes = 'main'> = CommonProps &
     panelled?: boolean;
     /**
      * Extends any extra OuiPanel props if `panelled=true`
+     * **panelled prop is deprecated in version 2.0.0
      */
     panelProps?: Omit<OuiPanelProps, 'paddingSize'>;
     /**
@@ -86,6 +88,7 @@ export const OuiPageBody = <T extends ComponentTypes>({
     style
   );
 
+  useDeprecatedPropWarning({ props: { panelled }, version: '2.0.0' });
   const nonBreakingDefaultPadding = panelled ? 'l' : 'none';
   paddingSize = paddingSize || nonBreakingDefaultPadding;
 

@@ -243,6 +243,8 @@
 
 ### Deprecations
 
+- Added useDeprecatedPropWarning for panelled prop ([#843](https://github.com/opensearch-project/oui/pull/1142))
+
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
