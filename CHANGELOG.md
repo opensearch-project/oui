@@ -10,6 +10,7 @@
 ### 📈 Features/Enhancements
 
 ### 🐛 Bug Fixes
+- Update Popover to capture click event outside to dismiss Popover
 
 ### 🚞 Infrastructure
 
@@ -17,7 +18,7 @@
 
 ### 🛠 Maintenance
 - Update code base to work in react 16 and 18 ([#1628](https://github.com/opensearch-project/oui/pull/1628))
-- Setup devserver and tests to run in react 18 ([#1630](https://github.com/opensearch-project/oui/pull/1630)) 
+- Setup devserver and tests to run in react 18 ([#1630](https://github.com/opensearch-project/oui/pull/1630))
 - Update tests failing against react 18 to react-testing-library ([#1632](https://github.com/opensearch-project/oui/pull/1632))
 
 ### 🪛 Refactoring
@@ -56,8 +57,8 @@
 ### 🐛 Bug Fixes
 - fix button line-height inherit causes text cut off ([#1490](https://github.com/opensearch-project/oui/pull/1490))
 - Add OpenSearch logo to page title ([#1532](https://github.com/opensearch-project/oui/pull/1532))
-- Fix dev server configuration after webpack-dev-server upgrade in 1.19 ([#1567](https://github.com/opensearch-project/oui/pull/1567)) 
-- Fix DataGrid numeric cell content shifting on hover ([#1644](https://github.com/opensearch-project/oui/pull/1644)) 
+- Fix dev server configuration after webpack-dev-server upgrade in 1.19 ([#1567](https://github.com/opensearch-project/oui/pull/1567))
+- Fix DataGrid numeric cell content shifting on hover ([#1644](https://github.com/opensearch-project/oui/pull/1644))
 
 ### 🚞 Infrastructure
 - update actions/upload-artifact and actions/download-artifact to v4([#1491](https://github.com/opensearch-project/oui/pull/1491))
