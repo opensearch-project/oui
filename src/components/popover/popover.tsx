@@ -372,6 +372,7 @@ export class OuiPopover extends Component<Props, State> {
   private button: HTMLElement | null = null;
   private panel: HTMLElement | null = null;
   private hasSetInitialFocus: boolean = false;
+  private handleDocumentClick: ((event: MouseEvent) => void) | null = null;
 
   constructor(props: Props) {
     super(props);
@@ -411,11 +412,77 @@ export class OuiPopover extends Component<Props, State> {
     }
   };
 
+  handleOutsideClickAndFocus = (clickTarget: HTMLElement) => {
+    this.closePopover();
+
+    // After popover closes, restore focus to the clicked element
+    // This ensures clicks on focusable elements (like editors) work properly
+    // even when a focus trap was active
+    requestAnimationFrame(() => {
+      if (clickTarget && typeof clickTarget.focus === 'function') {
+        // Check if the target is focusable
+        const isFocusable =
+          clickTarget.tabIndex >= 0 ||
+          clickTarget.isContentEditable ||
+          ['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON', 'A'].includes(
+            clickTarget.tagName
+          );
+
+        if (isFocusable) {
+          clickTarget.focus();
+        } else {
+          // Try to find a focusable parent
+          let parent = clickTarget.parentElement;
+          while (parent) {
+            if (
+              typeof parent.focus === 'function' &&
+              (parent.tabIndex >= 0 || parent.isContentEditable)
+            ) {
+              parent.focus();
+              break;
+            }
+            parent = parent.parentElement;
+          }
+        }
+      }
+    });
+  };
+
   onClickOutside = (event: Event) => {
     // only close the popover if the event source isn't the anchor button
     // otherwise, it is up to the anchor to toggle the popover's open status
     if (this.button && this.button.contains(event.target as Node) === false) {
-      this.closePopover();
+      this.handleOutsideClickAndFocus(event.target as HTMLElement);
+    }
+  };
+
+  // Backup click detection for when react-focus-on fails to detect outside clicks
+  // This can happen with certain DOM structures or complex components like Monaco editor
+  setupBackupClickDetection = () => {
+    if (this.handleDocumentClick) {
+      return; // Already set up
+    }
+
+    this.handleDocumentClick = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+
+      // Check if click is outside both button and panel
+      const isOutsideButton = this.button && !this.button.contains(target);
+      const isOutsidePanel = this.panel && !this.panel.contains(target);
+
+      if (isOutsideButton && isOutsidePanel && this.props.isOpen) {
+        this.handleOutsideClickAndFocus(target);
+      }
+    };
+
+    // Use capture phase to catch the event before focus trap can interfere
+    document.addEventListener('mousedown', this.handleDocumentClick, true);
+  };
+
+  removeBackupClickDetection = () => {
+    if (this.handleDocumentClick) {
+      document.removeEventListener('mousedown', this.handleDocumentClick, true);
+      this.handleDocumentClick = null;
     }
   };
 
@@ -528,6 +595,11 @@ export class OuiPopover extends Component<Props, State> {
       // eslint-disable-next-line react/no-did-mount-set-state
       this.setState({ suppressingPopover: false, isOpening: true }, () => {
         this.onOpenPopover();
+
+        // Set up backup click detection for focus trap
+        if (this.props.ownFocus) {
+          this.setupBackupClickDetection();
+        }
       });
     }
 
@@ -540,6 +612,12 @@ export class OuiPopover extends Component<Props, State> {
     // The popover is being opened.
     if (!prevProps.isOpen && this.props.isOpen) {
       this.onOpenPopover();
+
+      // Set up backup click detection when using focus trap
+      // This ensures outside clicks work even if react-focus-on fails to detect them
+      if (this.props.ownFocus) {
+        this.setupBackupClickDetection();
+      }
     }
 
     // update scroll listener
@@ -553,6 +631,9 @@ export class OuiPopover extends Component<Props, State> {
 
     // The popover is being closed.
     if (prevProps.isOpen && !this.props.isOpen) {
+      // Remove backup click detection
+      this.removeBackupClickDetection();
+
       // If the user has just closed the popover, queue up the removal of the content after the
       // transition is complete.
       this.closingTransitionTimeout = window.setTimeout(() => {
@@ -566,6 +647,7 @@ export class OuiPopover extends Component<Props, State> {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.positionPopoverFixed);
+    this.removeBackupClickDetection();
     clearTimeout(this.respositionTimeout);
     clearTimeout(this.closingTransitionTimeout);
     cancelAnimationFrame(this.closingTransitionAnimationFrame!);
