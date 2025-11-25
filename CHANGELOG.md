@@ -6,6 +6,7 @@
 
 ### 🛡 Security
 - Upgrade webpack to v5 ([#1601](https://github.com/opensearch-project/oui/pull/1601))
+- [CVE-2025-59343] Bump tar-fs from 3.0.6 to 3.1.1
 
 ### 📈 Features/Enhancements
 
