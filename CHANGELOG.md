@@ -8,6 +8,7 @@
 ### 🛡 Security
 
 - Upgrade webpack to v5 ([#1601](https://github.com/opensearch-project/oui/pull/1601))
+- [CVE-2025-59343] Bump tar-fs from 3.0.6 to 3.1.1
 
 ### 📈 Features/Enhancements
 
@@ -15,6 +16,7 @@
 ### 🐛 Bug Fixes
 
 - Fix DataGrid numeric cell content shifting on hover ([#1644](https://github.com/opensearch-project/oui/pull/1644)) 
+- Update Popover to capture click event outside to dismiss Popover
 
 ### 🚞 Infrastructure
 
