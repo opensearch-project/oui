@@ -405,6 +405,292 @@ describe('OuiPopover', () => {
     });
   });
 
+  describe('backup click detection', () => {
+    it('sets up mousedown listener when popover opens with ownFocus', () => {
+      const addEventListenerSpy = jest.spyOn(document, 'addEventListener');
+      const closePopoverHandler = jest.fn();
+
+      const { rerender } = render(
+        <OuiPopover
+          id={getId()}
+          button={<button />}
+          closePopover={closePopoverHandler}
+          isOpen={false}
+          ownFocus={true}
+        />
+      );
+
+      // Open the popover
+      rerender(
+        <OuiPopover
+          id={getId()}
+          button={<button />}
+          closePopover={closePopoverHandler}
+          isOpen={true}
+          ownFocus={true}
+        />
+      );
+
+      // Verify mousedown listener was added
+      expect(addEventListenerSpy).toHaveBeenCalledWith(
+        'mousedown',
+        expect.any(Function),
+        true
+      );
+
+      addEventListenerSpy.mockRestore();
+    });
+
+    it('closes popover when clicking outside via backup detection', () => {
+      const closePopoverHandler = jest.fn();
+
+      const { container } = render(
+        <div>
+          <button id="outside-button">Outside Button</button>
+          <OuiPopover
+            id={getId()}
+            button={<button id="popover-button">Popover Button</button>}
+            closePopover={closePopoverHandler}
+            isOpen={true}
+            ownFocus={true}
+          />
+        </div>
+      );
+
+      const outsideButton = container.querySelector(
+        '#outside-button'
+      ) as HTMLElement;
+
+      // Simulate mousedown on outside element
+      fireEvent.mouseDown(outsideButton);
+
+      expect(closePopoverHandler).toHaveBeenCalledTimes(1);
+    });
+
+    it('does not close popover when clicking on button', () => {
+      const closePopoverHandler = jest.fn();
+
+      const { container } = render(
+        <div>
+          <OuiPopover
+            id={getId()}
+            button={<button id="popover-button">Popover Button</button>}
+            closePopover={closePopoverHandler}
+            isOpen={true}
+            ownFocus={true}
+          />
+        </div>
+      );
+
+      const button = container.querySelector('#popover-button') as HTMLElement;
+
+      // Simulate mousedown on button
+      fireEvent.mouseDown(button);
+
+      expect(closePopoverHandler).not.toHaveBeenCalled();
+    });
+
+    it('does not set up backup detection when ownFocus is false', () => {
+      const addEventListenerSpy = jest.spyOn(document, 'addEventListener');
+
+      render(
+        <OuiPopover
+          id={getId()}
+          button={<button />}
+          closePopover={() => {}}
+          isOpen={true}
+          ownFocus={false}
+        />
+      );
+
+      // Should not add mousedown listener for backup detection
+      const mousedownCalls = addEventListenerSpy.mock.calls.filter(
+        (call) => call[0] === 'mousedown'
+      );
+      expect(mousedownCalls.length).toBe(0);
+
+      addEventListenerSpy.mockRestore();
+    });
+
+    it('removes mousedown listener when popover closes', () => {
+      const removeEventListenerSpy = jest.spyOn(
+        document,
+        'removeEventListener'
+      );
+      const closePopoverHandler = jest.fn();
+
+      const { rerender } = render(
+        <OuiPopover
+          id={getId()}
+          button={<button />}
+          closePopover={closePopoverHandler}
+          isOpen={true}
+          ownFocus={true}
+        />
+      );
+
+      // Close the popover
+      rerender(
+        <OuiPopover
+          id={getId()}
+          button={<button />}
+          closePopover={closePopoverHandler}
+          isOpen={false}
+          ownFocus={true}
+        />
+      );
+
+      // Verify mousedown listener was removed
+      expect(removeEventListenerSpy).toHaveBeenCalledWith(
+        'mousedown',
+        expect.any(Function),
+        true
+      );
+
+      removeEventListenerSpy.mockRestore();
+    });
+  });
+
+  describe('focus restoration', () => {
+    it('restores focus to focusable element after outside click', async () => {
+      const closePopoverHandler = jest.fn();
+      const focusSpy = jest.fn();
+
+      const { container } = render(
+        <div>
+          <input
+            id="outside-input"
+            onFocus={focusSpy}
+            data-testid="outside-input"
+          />
+          <OuiPopover
+            id={getId()}
+            button={<button>Popover Button</button>}
+            closePopover={closePopoverHandler}
+            isOpen={true}
+            ownFocus={true}
+          />
+        </div>
+      );
+
+      const outsideInput = container.querySelector(
+        '#outside-input'
+      ) as HTMLInputElement;
+
+      // Simulate mousedown on outside input
+      fireEvent.mouseDown(outsideInput);
+
+      // Wait for requestAnimationFrame
+      await act(async () => {
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+      });
+
+      expect(focusSpy).toHaveBeenCalled();
+    });
+
+    it('restores focus to button elements after outside click', async () => {
+      const closePopoverHandler = jest.fn();
+      const focusSpy = jest.fn();
+
+      const { container } = render(
+        <div>
+          <button id="outside-button" onFocus={focusSpy}>
+            Outside Button
+          </button>
+          <OuiPopover
+            id={getId()}
+            button={<button>Popover Button</button>}
+            closePopover={closePopoverHandler}
+            isOpen={true}
+            ownFocus={true}
+          />
+        </div>
+      );
+
+      const outsideButton = container.querySelector(
+        '#outside-button'
+      ) as HTMLButtonElement;
+
+      // Simulate mousedown on outside button
+      fireEvent.mouseDown(outsideButton);
+
+      // Wait for requestAnimationFrame
+      await act(async () => {
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+      });
+
+      expect(focusSpy).toHaveBeenCalled();
+    });
+
+    it('finds focusable parent when clicking non-focusable element', async () => {
+      const closePopoverHandler = jest.fn();
+      const focusSpy = jest.fn();
+
+      const { container } = render(
+        <div>
+          <button id="parent-button" onFocus={focusSpy}>
+            <span id="child-span">Child Span</span>
+          </button>
+          <OuiPopover
+            id={getId()}
+            button={<button>Popover Button</button>}
+            closePopover={closePopoverHandler}
+            isOpen={true}
+            ownFocus={true}
+          />
+        </div>
+      );
+
+      const childSpan = container.querySelector(
+        '#child-span'
+      ) as HTMLSpanElement;
+
+      // Simulate mousedown on child span
+      fireEvent.mouseDown(childSpan);
+
+      // Wait for requestAnimationFrame
+      await act(async () => {
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+      });
+
+      expect(focusSpy).toHaveBeenCalled();
+    });
+
+    it('handles elements with tabIndex', async () => {
+      const closePopoverHandler = jest.fn();
+      const focusSpy = jest.fn();
+
+      const { container } = render(
+        <div>
+          <div id="focusable-div" tabIndex={0} onFocus={focusSpy}>
+            Focusable content
+          </div>
+          <OuiPopover
+            id={getId()}
+            button={<button>Popover Button</button>}
+            closePopover={closePopoverHandler}
+            isOpen={true}
+            ownFocus={true}
+          />
+        </div>
+      );
+
+      const focusableDiv = container.querySelector(
+        '#focusable-div'
+      ) as HTMLDivElement;
+
+      // Simulate mousedown on focusable element
+      fireEvent.mouseDown(focusableDiv);
+
+      // Wait for requestAnimationFrame
+      await act(async () => {
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+      });
+
+      expect(focusSpy).toHaveBeenCalled();
+    });
+  });
+
   describe('listener cleanup', () => {
     let _raf: typeof window['requestAnimationFrame'];
     let _caf: typeof window['cancelAnimationFrame'];
@@ -470,6 +756,34 @@ describe('OuiPopover', () => {
       act(() => {
         jest.advanceTimersByTime(10);
       });
+    });
+
+    it('removes mousedown listener on unmount', () => {
+      const removeEventListenerSpy = jest.spyOn(
+        document,
+        'removeEventListener'
+      );
+
+      const { unmount } = render(
+        <OuiPopover
+          id={getId()}
+          button={<button />}
+          closePopover={() => {}}
+          isOpen={true}
+          ownFocus={true}
+        />
+      );
+
+      unmount();
+
+      // Verify mousedown listener was removed during cleanup
+      expect(removeEventListenerSpy).toHaveBeenCalledWith(
+        'mousedown',
+        expect.any(Function),
+        true
+      );
+
+      removeEventListenerSpy.mockRestore();
     });
   });
 });
