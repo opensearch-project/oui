@@ -1,39 +1,22 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
-
-### Deprecations
-
+## [`1.22`](https://github.com/opensearch-project/oui/tree/1.22)
 
 ### 🛡 Security
 
 - Upgrade webpack to v5 ([#1601](https://github.com/opensearch-project/oui/pull/1601))
-- [CVE-2025-59343] Bump tar-fs from 3.0.6 to 3.1.1
-
-### 📈 Features/Enhancements
-
+- [CVE-2025-59343] Bump tar-fs from 3.0.6 to 3.1.1 ([#1648](https://github.com/opensearch-project/oui/pull/1648))
 
 ### 🐛 Bug Fixes
 
-- Fix DataGrid numeric cell content shifting on hover ([#1644](https://github.com/opensearch-project/oui/pull/1644)) 
-- Update Popover to capture click event outside to dismiss Popover
-
-### 🚞 Infrastructure
-
-
-### 📝 Documentation
-
+- Fix DataGrid numeric cell content shifting on hover ([#1644](https://github.com/opensearch-project/oui/pull/1644))
+- Update Popover to capture click event outside to dismiss Popover ([#1647](https://github.com/opensearch-project/oui/pull/1647))
 
 ### 🛠 Maintenance
 
 - Update code base to work in react 16 and 18 ([#1628](https://github.com/opensearch-project/oui/pull/1628))
-- Setup devserver and tests to run in react 18 ([#1630](https://github.com/opensearch-project/oui/pull/1630)) 
+- Setup devserver and tests to run in react 18 ([#1630](https://github.com/opensearch-project/oui/pull/1630))
 - Update tests failing against react 18 to react-testing-library ([#1632](https://github.com/opensearch-project/oui/pull/1632))
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
 
 ## [`1.21.0`](https://github.com/opensearch-project/oui/tree/1.21)
 
