@@ -1,33 +1,10 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
-
-### Deprecations
-
-
-### 🛡 Security
-
-
-### 📈 Features/Enhancements
-
+## [`1.22.1`](https://github.com/opensearch-project/oui/tree/1.22.1)
 
 ### 🐛 Bug Fixes
 
 - Prevent popover close when a click event fired from a portaled component in popover([#1658](https://github.com/opensearch-project/oui/pull/1658))
-
-### 🚞 Infrastructure
-
-
-### 📝 Documentation
-
-
-### 🛠 Maintenance
-
-
-### 🪛 Refactoring
-
-
-### 🔩 Tests
 
 ## [`1.22.0`](https://github.com/opensearch-project/oui/tree/1.22)
 
