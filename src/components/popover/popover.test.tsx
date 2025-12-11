@@ -431,11 +431,11 @@ describe('OuiPopover', () => {
         />
       );
 
-      // Verify mousedown listener was added
+      // Verify mousedown listener was added in bubble phase
       expect(addEventListenerSpy).toHaveBeenCalledWith(
         'mousedown',
         expect.any(Function),
-        true
+        false
       );
 
       addEventListenerSpy.mockRestore();
@@ -491,25 +491,31 @@ describe('OuiPopover', () => {
     });
 
     it('does not set up backup detection when ownFocus is false', () => {
-      const addEventListenerSpy = jest.spyOn(document, 'addEventListener');
+      const closePopoverHandler = jest.fn();
 
-      render(
-        <OuiPopover
-          id={getId()}
-          button={<button />}
-          closePopover={() => {}}
-          isOpen={true}
-          ownFocus={false}
-        />
+      const { container } = render(
+        <div>
+          <button id="outside-button">Outside Button</button>
+          <OuiPopover
+            id={getId()}
+            button={<button id="popover-button">Popover Button</button>}
+            closePopover={closePopoverHandler}
+            isOpen={true}
+            ownFocus={false}
+          />
+        </div>
       );
 
-      // Should not add mousedown listener for backup detection
-      const mousedownCalls = addEventListenerSpy.mock.calls.filter(
-        (call) => call[0] === 'mousedown'
-      );
-      expect(mousedownCalls.length).toBe(0);
+      const outsideButton = container.querySelector(
+        '#outside-button'
+      ) as HTMLElement;
 
-      addEventListenerSpy.mockRestore();
+      // Click outside - with ownFocus=false, OuiOutsideClickDetector handles it, not backup detection
+      // The popover should still close, but through OuiOutsideClickDetector, not our backup mechanism
+      fireEvent.mouseDown(outsideButton);
+      fireEvent.mouseUp(outsideButton); // OuiOutsideClickDetector uses mouseup
+
+      expect(closePopoverHandler).toHaveBeenCalledTimes(1);
     });
 
     it('removes mousedown listener when popover closes', () => {
@@ -544,10 +550,40 @@ describe('OuiPopover', () => {
       expect(removeEventListenerSpy).toHaveBeenCalledWith(
         'mousedown',
         expect.any(Function),
-        true
+        false
       );
 
       removeEventListenerSpy.mockRestore();
+    });
+
+    it('does not close popover when clicking on child element inside popover', () => {
+      const closePopoverHandler = jest.fn();
+
+      const { container } = render(
+        <div>
+          <button id="outside-button">Outside Button</button>
+          <OuiPopover
+            id={getId()}
+            button={<button id="popover-button">Popover Button</button>}
+            closePopover={closePopoverHandler}
+            isOpen={true}
+            ownFocus={true}>
+            <div id="popover-content">
+              <button id="inside-button">Inside Button</button>
+            </div>
+          </OuiPopover>
+        </div>
+      );
+
+      const insideButton = container.querySelector(
+        '#inside-button'
+      ) as HTMLElement;
+
+      // Simulate mousedown on element inside popover
+      fireEvent.mouseDown(insideButton);
+
+      // Popover should NOT close because the click came from inside
+      expect(closePopoverHandler).not.toHaveBeenCalled();
     });
   });
 
@@ -780,7 +816,7 @@ describe('OuiPopover', () => {
       expect(removeEventListenerSpy).toHaveBeenCalledWith(
         'mousedown',
         expect.any(Function),
-        true
+        false
       );
 
       removeEventListenerSpy.mockRestore();
