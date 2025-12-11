@@ -67,7 +67,7 @@ import {
 } from '../../services/popover';
 
 import { OuiI18n } from '../i18n';
-import { OuiOutsideClickDetector } from '../outside_click_detector';
+import { OuiOutsideClickDetector, OuiEvent } from '../outside_click_detector';
 
 export type PopoverAnchorPosition =
   | 'upCenter'
@@ -373,6 +373,7 @@ export class OuiPopover extends Component<Props, State> {
   private panel: HTMLElement | null = null;
   private hasSetInitialFocus: boolean = false;
   private handleDocumentClick: ((event: MouseEvent) => void) | null = null;
+  private popoverId: string = generateId();
 
   constructor(props: Props) {
     super(props);
@@ -456,6 +457,52 @@ export class OuiPopover extends Component<Props, State> {
     }
   };
 
+  // Event stamping for portal detection:
+  //
+  // React synthetic events (onMouseDown) fire BEFORE native bubble-phase listeners,
+  // so this stamps the event before our backup detection runs. This works even for
+  // portaled children because React guarantees virtual DOM bubbling.
+  //
+  // Fallback: If stamping doesn't work, isElementInPopoverTree() uses ARIA relationships
+  // to detect portaled elements (generic approach for any accessible component).
+
+  onChildMouseDown = (event: React.MouseEvent) => {
+    const ouiEvent = (event.nativeEvent as unknown) as OuiEvent;
+    if (ouiEvent.hasOwnProperty('ouiGeneratedBy')) {
+      ouiEvent.ouiGeneratedBy.push(this.popoverId);
+    } else {
+      ouiEvent.ouiGeneratedBy = [this.popoverId];
+    }
+  };
+
+  // Helper to check if an element is part of a portaled component from this popover
+  // This uses ARIA relationships to detect portaled elements that logically belong to the popover
+  isElementInPopoverTree = (element: HTMLElement): boolean => {
+    if (!this.panel) {
+      return false;
+    }
+
+    let current: HTMLElement | null = element;
+
+    while (current) {
+      // Check if current element is controlled by something inside the popover
+      // This works for any accessible component that uses aria-controls (ComboBox, Select, etc.)
+      const currentId = current.getAttribute('id');
+      if (currentId) {
+        const controller = this.panel.querySelector(
+          `[aria-controls="${currentId}"]`
+        );
+        if (controller) {
+          return true;
+        }
+      }
+
+      current = current.parentElement;
+    }
+
+    return false;
+  };
+
   // Backup click detection for when react-focus-on fails to detect outside clicks
   // This can happen with certain DOM structures or complex components like Monaco editor
   setupBackupClickDetection = () => {
@@ -465,23 +512,42 @@ export class OuiPopover extends Component<Props, State> {
 
     this.handleDocumentClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement;
+      const ouiEvent = (event as unknown) as OuiEvent;
 
       // Check if click is outside both button and panel
       const isOutsideButton = this.button && !this.button.contains(target);
       const isOutsidePanel = this.panel && !this.panel.contains(target);
 
-      if (isOutsideButton && isOutsidePanel && this.props.isOpen) {
+      // Check if the click came from a portaled child element (like a dropdown inside the popover)
+      // We need to check this because portaled elements are rendered outside the panel DOM
+      // but are logically children of components inside the popover
+      const isFromPopoverChild =
+        (ouiEvent.ouiGeneratedBy &&
+          ouiEvent.ouiGeneratedBy.includes(this.popoverId)) ||
+        this.isElementInPopoverTree(target);
+
+      if (
+        isOutsideButton &&
+        isOutsidePanel &&
+        !isFromPopoverChild &&
+        this.props.isOpen
+      ) {
         this.handleOutsideClickAndFocus(target);
       }
     };
 
-    // Use capture phase to catch the event before focus trap can interfere
-    document.addEventListener('mousedown', this.handleDocumentClick, true);
+    // Use bubble phase - React synthetic events fire first and stamp the event,
+    // then our native listener sees the stamp. Simple and effective!
+    document.addEventListener('mousedown', this.handleDocumentClick, false);
   };
 
   removeBackupClickDetection = () => {
     if (this.handleDocumentClick) {
-      document.removeEventListener('mousedown', this.handleDocumentClick, true);
+      document.removeEventListener(
+        'mousedown',
+        this.handleDocumentClick,
+        false
+      );
       this.handleDocumentClick = null;
     }
   };
@@ -909,7 +975,11 @@ export class OuiPopover extends Component<Props, State> {
                   subtree: true, // watch all child elements
                 }}
                 onMutation={this.onMutation}>
-                {(mutationRef) => <div ref={mutationRef}>{children}</div>}
+                {(mutationRef) => (
+                  <div ref={mutationRef} onMouseDown={this.onChildMouseDown}>
+                    {children}
+                  </div>
+                )}
               </OuiMutationObserver>
             </OuiPanel>
           </OuiFocusTrap>

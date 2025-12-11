@@ -31,4 +31,5 @@
 export {
   OuiOutsideClickDetector,
   OuiOutsideClickDetectorProps,
+  OuiEvent,
 } from './outside_click_detector';

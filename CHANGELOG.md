@@ -10,6 +10,8 @@
 
 ### 🐛 Bug Fixes
 
+- Prevent popover close when a click event fired from a portaled component in popover([#1658](https://github.com/opensearch-project/oui/pull/1658))
+
 ### 🚞 Infrastructure
 
 ### 📝 Documentation
