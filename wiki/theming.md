@@ -1,49 +1,158 @@
+# Theming
+
 ## How OUI theming works
 
-OUI can be easily themed by overwriting the [global styling](https://github.com/opensearch-project/oui/tree/main/src/global_styling)
-variables. Currently we maintain the following themes:
+OUI uses CSS custom properties (CSS variables) for theming, allowing for dynamic theme switching and easy customization. The library supports both light and dark themes out of the box.
 
-* theme_light (the default OUI theme)
-* theme_dark (the same theme in dark)
-* theme_next_light (the next iteration of the OUI light theme)
-* theme_next_dark (the next iteration of the OUI dark theme)
+## Available Themes
 
-Each of these themes include variables,
-mixins, functions and other overwrites that adjust colors and sizing to fit the
-needs of that theme.
+- **Light theme** (default) - Clean, accessible light theme
+- **Dark theme** - Dark mode variant with proper contrast ratios
 
-## How to create and test a theme
+## Theme Implementation
 
-### Set up your Sass
+### CSS Custom Properties
 
-1. Create a `src/themes/my_theme_name/` directory.
-2. Add any `.scss` files you need for your theme in this folder (Ex: `src/themes/my_theme_name/my_theme_color.scss`).
-3. Duplicate `src/theme_light.scss` and call it `src/my_theme_name.scss`.
-4. Import your variables into the top of this file, making sure the global_variables and
-components load after it.
+The theme system uses CSS custom properties defined in the `:root` and `.dark` selectors:
 
-```scss
-// These are variable overwrites used only for this theme.
-@import 'themes/my_theme_name/my_theme_name_sizes';
-@import 'themes/my_theme_name/my_theme_name_colors';
+```css
+:root {
+  --oui-severity-low: 120 100% 25%;
+  --oui-severity-med: 45 100% 50%;
+  --oui-severity-high: 15 100% 55%;
+  --oui-severity-critical: 0 85% 60%;
+  /* Additional theme variables... */
+}
 
-// Global styling
-@import 'global_styling/index';
-
-// Components
-@import 'components/index';
+.dark {
+  --oui-severity-low: 120 50% 40%;
+  --oui-severity-med: 45 80% 60%;
+  --oui-severity-high: 15 90% 65%;
+  --oui-severity-critical: 0 75% 65%;
+  /* Dark theme overrides... */
+}
 ```
 
-### Make your theme available in the docs
+### Theme Switching
 
-Lastly, make sure to include your theme in the `/src-docs/index.js` file so that it's available
-through the theme selector.
+The dark theme is activated by adding the `dark` class to a parent element (typically `<html>` or `<body>`):
 
-## Theming tips
+```html
+<html class="dark">
+  <!-- Dark theme active for entire page -->
+</html>
+```
 
-Touch the least amount of variables possible. By nature OUI is very rigid. You shouldn't need
-much to make drastic changes to color. Most themes are less then a dozen variable overwrites in total.
+Or for specific sections:
 
-* In general you should only overwrite variables contained in the `src/global_styling` folder.
-* Do not overwrite individual component variables or classnames. Although this is certainly possible
-components are much more prone to change and you'll risk breaking your theme.
+```jsx
+<div className="dark">
+  {/* Dark theme active for this section */}
+  <Button>Dark themed button</Button>
+</div>
+```
+
+## Creating Custom Themes
+
+### 1. Override CSS Custom Properties
+
+Create your custom theme by overriding the CSS variables:
+
+```css
+/* custom-theme.css */
+:root {
+  --oui-severity-low: 200 100% 30%;    /* Custom blue-green */
+  --oui-severity-high: 280 100% 50%;   /* Custom purple */
+  /* Override other variables as needed */
+}
+
+/* Custom dark theme variant */
+.dark {
+  --oui-severity-low: 200 80% 40%;
+  --oui-severity-high: 280 80% 60%;
+}
+```
+
+### 2. Extend Tailwind Configuration
+
+If you're using Tailwind CSS in your project, extend your configuration:
+
+```js
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        // Map OUI variables to Tailwind classes
+        'severity-low': 'hsl(var(--oui-severity-low))',
+        'severity-med': 'hsl(var(--oui-severity-med))',
+        'severity-high': 'hsl(var(--oui-severity-high))',
+        'severity-critical': 'hsl(var(--oui-severity-critical))',
+        // Add your custom colors
+        'brand-primary': 'hsl(var(--oui-brand-primary))',
+      }
+    }
+  }
+}
+```
+
+### 3. Component-Level Theming
+
+You can also apply themes to specific components using CSS-in-JS or CSS modules:
+
+```tsx
+const ThemedComponent = () => {
+  return (
+    <div
+      style={{
+        '--oui-severity-high': '300 100% 50%', // Override for this component
+      }}
+    >
+      <Button variant="destructive">Custom themed button</Button>
+    </div>
+  )
+}
+```
+
+## Theming Best Practices
+
+1. **Use semantic color names** - Define colors by purpose, not appearance
+2. **Test both themes** - Ensure your customizations work in light and dark modes
+3. **Maintain contrast ratios** - Follow WCAG guidelines for accessibility
+4. **Leverage existing variables** - Override only what you need to change
+5. **HSL color format** - Use HSL values (without `hsl()` wrapper) for better manipulation
+
+## Dynamic Theme Switching
+
+For runtime theme switching, you can use a theme provider or simple class toggling:
+
+```tsx
+const ThemeProvider = ({ children }) => {
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    document.documentElement.classList.toggle('dark', isDark)
+  }, [isDark])
+
+  return (
+    <div>
+      <button onClick={() => setIsDark(!isDark)}>
+        Toggle {isDark ? 'Light' : 'Dark'} Mode
+      </button>
+      {children}
+    </div>
+  )
+}
+```
+
+## Migration from SCSS Themes
+
+If you're migrating from the previous SCSS-based theming:
+
+1. **Extract color values** from your SCSS variables
+2. **Convert to HSL format** (preferred for CSS custom properties)
+3. **Define in CSS custom properties** instead of SCSS variables
+4. **Update component usage** to reference the new variable names
+5. **Test thoroughly** in both light and dark modes
+
+The new system provides more flexibility and better performance than the previous SCSS approach.

@@ -28,11 +28,18 @@
  * under the License.
  */
 
-import rule from './forward_ref_display_name.js';
+const rule = require('./forward_ref_display_name.js');
 const RuleTester = require('eslint').RuleTester;
 
 const ruleTester = new RuleTester({
-  parser: 'babel-eslint',
+  parser: require.resolve('@typescript-eslint/parser'),
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
 });
 
 const valid = [

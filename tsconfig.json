@@ -1,16 +1,17 @@
 {
+  "extends": ["@tsconfig/node20"],
   "compilerOptions": {
     "baseUrl": ".",
-    "rootDir": ".",
-
-    // emit files to the `types` dir, these are ignored by everything but TS needs _somewhere_ to emit
-    "outDir": "types",
+    "rootDir": "src",
+    "outDir": "./dist",
+    "sourceMap": true,
 
     // generate declaration files
     "declaration": true,
+    "declarationMap": true,
 
     // re-use info from previous runs to improve performance
-    "incremental": true,
+    //"incremental": true,
 
     // don't allow un-used variables
     "noUnusedLocals": true,
@@ -28,7 +29,7 @@
     "allowSyntheticDefaultImports": true,
 
     // Support .tsx files and transform JSX into calls to React.createElement
-    "jsx": "react",
+    "jsx": "react-jsx",
 
     // Emits __importStar and __importDefault helpers for runtime babel ecosystem compatibility.
     "esModuleInterop": true,
@@ -40,20 +41,30 @@
     // Disallow inconsistently-cased references to the same file.
     "forceConsistentCasingInFileNames": true,
 
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
     // enables "core language features"
     "lib": [
       // ESNext auto includes previous versions all the way back to es5
       "esnext",
       // includes support for browser APIs
       "dom"
-    ],
-
-    // Specifies where to find library definitions. When this is explicitly set,
-    // it has to include the default location i.e. node_modules/@types
-    "typeRoots": ["node_modules/@types", "src/custom_typings"],
+    ]
   },
-  "include": [
-    "./src/**/*",
-    "./src-docs/**/*"
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.stories.ts",
+    "**/*.stories.tsx",
+    ".storybook/**/*",
+    "stories/**/*"
   ]
 }

@@ -2,9 +2,7 @@
 
 ## Requirements and dependencies
 
-OUI expects that you polyfill ES2015 features, e.g. [`babel-polyfill`](https://babeljs.io/docs/usage/polyfill/). Without an ES2015 polyfill your app might throw errors on certain browsers.
-
-OUI also has `moment` as a dependency itself. This is already loaded in most OpenSearch repos, but make sure to install it if you are starting from scratch.
+This shadcn-based version of OUI requires React 16.12 or later and modern browser support. The library is built with TypeScript and uses CSS custom properties for theming.
 
 ## What's available
 
@@ -14,13 +12,13 @@ OUI is published through [NPM](https://www.npmjs.com/package/@opensearch-project
 
 ### Components
 
-You can import React components from the top-level OUI module.
+You can import React components from the top-level OUI module. Components follow shadcn/ui patterns and are built on Radix UI primitives.
 
 ```js
 import {
-  OuiButton,
-  OuiCallOut,
-  OuiPanel,
+  Button,
+  Alert,
+  Card,
 } from '@opensearch-project/oui';
 ```
 
@@ -45,110 +43,84 @@ import { findTestSubject } from '@opensearch-project/oui/lib/test';
 
 You can consume OUI in standalone projects, such as plugins and prototypes.
 
-### Importing compiled CSS
+### Importing styles
 
-Most of the time, you just need the compiled CSS, which provides the styling for the React components.
+Import the compiled CSS that provides Tailwind-based styling for all components:
 
 ```js
-import '@opensearch-project/oui/dist/oui_theme_light.css';
+import '@opensearch-project/oui/style.css';
 ```
 
-Other compiled themes include:
+For scoped styles to avoid conflicts with other design systems, use the scoped version and wrap your components with `.oui2` and `.oui2-end` classes:
+
 ```js
-import '@opensearch-project/oui/dist/oui_theme_dark.css';
+import '@opensearch-project/oui/style.scoped.css';
 ```
+
+```jsx
+<div className="oui2">
+  {/* Your OUI components here */}
+  <Button>Click me</Button>
+<div className="oui2-end"></div>
+</div>
+```
+
+The library supports both light and dark themes through CSS custom properties and the `dark` class.
+
+### Customizing with CSS custom properties
+
+OUI uses CSS custom properties (CSS variables) for theming. You can customize the theme by overriding these variables in your CSS:
+
+```css
+:root {
+  --oui-severity-low: 120 100% 25%;
+  --oui-severity-med: 45 100% 50%;
+  --oui-severity-high: 15 100% 55%;
+  --oui-severity-critical: 0 85% 60%;
+}
+
+.dark {
+  --oui-severity-low: 120 50% 40%;
+  --oui-severity-med: 45 80% 60%;
+  /* ... other dark theme overrides */
+}
+```
+
+### Using with Tailwind CSS
+
+If your project uses Tailwind CSS, you can extend your configuration to use OUI's design tokens:
+
 ```js
-import '@opensearch-project/oui/dist/oui_theme_next_light.css';
-```
-```js
-import '@opensearch-project/oui/dist/oui_theme_next_dark.css';
-```
-
-### Using our Sass variables on top of compiled CSS
-
-If you want to build **on top** of the OUI theme by accessing the Sass variables, functions, and mixins, you'll need to import the Sass globals in addition to the compiled CSS mentioned above. This will require `style`, `css`, `postcss`, and `sass` loaders.
-
-First import the correct colors file, followed by the globals file.
-
-```scss
-@import '@opensearch-project/oui/src/themes/oui/oui_colors_light.scss';
-@import '@opensearch-project/oui/src/themes/oui/oui_globals.scss';
-```
-
-For the dark theme, swap the first import for the dark colors file.
-
-```scss
-@import '@opensearch-project/oui/src/themes/oui/oui_colors_dark.scss';
-@import '@opensearch-project/oui/src/themes/oui/oui_globals.scss';
-```
-
-If you want to use the new, but in progress Next theme, you can import it similarly.
-
-```scss
-@import '@opensearch-project/oui/src/themes/oui-next/oui_next_colors_light.scss';
-@import '@opensearch-project/oui/src/themes/oui-next/oui_next_globals.scss';
-```
-
-### Using Sass to customize OUI
-
-OUI's Sass themes are token based, which can be altered to suit your theming needs like changing the primary color. Simply declare your token overrides before importing the whole OUI theme. This will re-compile **all of the OUI components** with your colors.
-
-*Do not use in conjunction with the compiled CSS.*
-
-Here is an example setup.
-
-```scss
-// mytheme.scss
-$ouiColorPrimary: #7B61FF;
-
-@import '@opensearch-project/oui/src/theme_light.scss';
+// tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      colors: {
+        'severity-low': 'hsl(var(--oui-severity-low))',
+        'severity-med': 'hsl(var(--oui-severity-med))',
+        'severity-high': 'hsl(var(--oui-severity-high))',
+        'severity-critical': 'hsl(var(--oui-severity-critical))'
+      }
+    }
+  }
+}
 ```
 
 ### Fonts
 
-By default, OUI ships with a font stack that includes some external open source fonts. If your system is connected to the internet, you can include these by adding the following imports to your SCSS/CSS files, otherwise you'll need to bundle the physical fonts in your build. OUI will drop to System Fonts (which you may prefer) in their absence.
+OUI uses system fonts by default for better performance. If you want to customize the font stack, you can override the CSS custom properties or use your own font imports in your CSS.
 
-The default theme uses the [Inter UI](https://github.com/rsms/inter) and [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) fonts:
-```scss
-// index.scss
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700,700i');
-@import url('https://rsms.me/inter/inter-ui.css');
-```
+### Using design tokens in CSS-in-JS
 
-The Next theme uses the [Source Sans 3](https://github.com/adobe-fonts/source-sans) and [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) fonts:
-
-```scss
-// index.scss
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
-```
-
-// TODO update weights
-The v9 theme uses the [Rubik](https://fonts.google.com/specimen/Rubik) and [Source Code Pro](https://github.com/adobe-fonts/source-code-pro) fonts:
- ```scss
-// index.scss
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-```
-
-### Reusing the variables in JavaScript
-
-The Sass variables are also made available for consumption as json files. This enables reuse of values in css-in-js systems like [styled-components](https://www.styled-components.com). As the following example shows, it can also make the downstream components theme-aware without much extra effort:
+You can access OUI's design tokens through CSS custom properties in your styled-components or other CSS-in-JS solutions:
 
 ```js
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import styled, { ThemeProvider } from 'styled-components';
-import * as ouiVars from '@opensearch-project/oui/dist/oui_theme_light.json';
+import styled from 'styled-components';
 
 const CustomComponent = styled.div`
-  color: ${props => props.theme.ouiColorPrimary};
-  border: ${props => props.theme.ouiBorderThin};
+  color: hsl(var(--oui-severity-high));
+  /* or use Tailwind utility classes */
 `;
-
-ReactDOM.render(
-  <ThemeProvider theme={ouiVars}>
-    <CustomComponent>content</CustomComponent>
-  </ThemeProvider>
-, document.querySelector('#renderTarget'));
 ```
 
 ### "Module build failed" or "Module parse failed: Unexpected token" error
@@ -174,14 +146,19 @@ appendIconComponentCache({
 
 ## Customizing with `className`
 
-We do not recommend customizing OUI components by applying styles directly to OUI classes, eg. `.ouiButton`. All components allow you to pass a custom `className` prop directly to the component which will then append this to the class list. Utilizing the cascade feature of CSS, you can then customize by overriding styles so long as your styles are imported **after** the OUI import.
+All components accept a `className` prop that gets merged with the component's internal classes using `cn()` (a tailwind-merge utility). You can use Tailwind utility classes or custom CSS classes:
 
-```html
-<OuiButton className="myCustomClass__button" />
+```jsx
+<Button className="bg-blue-500 hover:bg-blue-600" />
 
-// Renders as:
+// Or with custom CSS
+<Button className="my-custom-button" />
+```
 
-<button class="ouiButton myCustomClass__button" />
+The library uses `class-variance-authority` for component variants, so you can also pass variant props where available:
+
+```jsx
+<Button variant="outline" size="sm" />
 ```
 
 ## Using the `test-env` build

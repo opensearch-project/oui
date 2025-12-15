@@ -1,114 +1,226 @@
 # Testing
 
-## Naming your test files
+## Testing Framework
 
-Create test files with the name pattern of `{component name}.test.js` in the same directory which
-contains `{component name}.js`.
+OUI uses **Vitest** for testing with **@testing-library** for component testing. All tests are written in **Storybook stories** to combine documentation and interaction testing.
 
-## Updating snapshots
+## Writing Tests in Storybook
 
-When you change a component in a way that affects the markup, you will need to update the snapshot in order for the tests to succeed. To do so, run `yarn run test-unit -u`. This will update all snapshots in the repo. You can also add any string to the end of the command to run the tests only on directories that contain that string. For example, `yarn run test-unit -u button` will only update the tests for directories that **contain** `button`.
+### Basic Story Structure
 
-## Test helpers
+Create tests as Storybook stories in the `stories/` directory:
 
-The [`src/test`](../src/test) module exports some functions and constants to help you write better tests:
+```tsx
+// stories/Button.stories.tsx
+import type { Meta, StoryObj } from '@storybook/react'
+import { expect, fn, userEvent, within } from '@storybook/test'
+import { Button } from '../src/components/ui/button'
 
-* `findTestSubject` helps you find DOM nodes in mounted components.
-* `requiredProps` is a list of all props almost all components should support.
-* `takeMountedSnapshot` generates a snapshot of a mounted component.
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
+  component: Button,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  args: {
+    onClick: fn(),
+  },
+}
 
-## Test design
+export default meta
+type Story = StoryObj<typeof meta>
 
-### Do's and don'ts
+export const Default: Story = {
+  args: {
+    children: 'Button',
+  },
+}
 
-* DO use the `data-test-subj` attribute to mark parts of a component you want to `find` later.
-* DON'T depend upon class names or other implementation details for `find`ing nodes, if possible.
-* DO use snapshots as much as possible.
-* DON'T assert for the presence of nodes if you can use a snapshot instead.
+export const WithInteraction: Story = {
+  args: {
+    children: 'Click me',
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
 
-### Anatomy of a test
-
-A good test will document:
-
-* The default state of the component.
-* The inputs for each prop, and the associated outputs.
-* Errors.
-* Special behavior, e.g. keyboard navigation, async behavior, DOM manipulation under the hood.
-
-```jsx
-describe('YourComponent', () => {
-  test('is rendered', () => {
-    const component = render(
-      <YourComponent {...requiredProps}>
-        Hello
-      </YourComponent>
-    );
-
-    expect(component)
-      .toMatchSnapshot();
-  });
-
-  describe('props', () => {
-    describe('color', () => {
-      test('is rendered', () => {
-        const component = render(
-          <YourComponent color="blue" />
-        );
-
-        expect(component)
-          .toMatchSnapshot();
-      });
-    });
-
-    describe('onClick', () => {
-      test(`isn't called upon instantiation`, () => {
-        const onClickHandler = sinon.stub();
-
-        mount(
-          <YourComponent onClick={onClickHandler} />
-        );
-
-        sinon.assert.notCalled(onClickHandler);
-      });
-
-      test('is called when the button is clicked', () => {
-        const onClickHandler = sinon.stub();
-
-        const component = mount(
-          <YourComponent onClick={onClickHandler} />
-        );
-
-        // NOTE: This is the only way to find this button.
-        component.find('button').simulate('click');
-
-        sinon.assert.calledOnce(onClickHandler);
-      });
-    });
-  });
-
-  describe('behavior', () => {
-    it('button is automatically focused', () => {
-      const component = mount(
-        <YourComponent />
-      );
-
-      expect(findTestSubject(component, 'button').getDOMNode()).toBe(document.activeElement);
-    });
-  });
-});
-
+    await userEvent.click(button)
+    await expect(args.onClick).toHaveBeenCalled()
+  },
+}
 ```
 
-## Writing mock component files
+### Interaction Testing
 
-A component file can be mocked for snapshot simplification or to mitigate nondeterministic rendering in test environments. See [`src/components/icon`](../src/components/icon) for a example.
+Use the `play` function for interaction testing:
 
-_Although mock component files are currently only used as part of consuming project test environments, the concept will soon be applied to OUI's own testing environment._
+```tsx
+export const FormInteraction: Story = {
+  render: () => (
+    <form>
+      <input data-testid="name-input" />
+      <Button type="submit">Submit</Button>
+    </form>
+  ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
 
-### Using the mock namespace
+    const input = canvas.getByTestId('name-input')
+    const submit = canvas.getByRole('button')
 
-Component mocking relies on using the `[name].testenv.*` namespace for identification. The mocked module will replace the standard import in the `test-env` build. Both `index` files and individual component files can mocked.
+    await userEvent.type(input, 'John Doe')
+    await userEvent.click(submit)
 
-### Mapping all module exports
+    await expect(input).toHaveValue('John Doe')
+  },
+}
+```
 
-The rendered output of a mocked component is at the author's discretion, however, all public exports from a module must be preserved in the mock file. Note that this does not apply to exported TypeScript types and interfaces, which will always be derived from the original component file.
+## Running Tests
+
+### Test Commands
+
+```bash
+# Run all tests
+yarn test
+
+# Run tests in watch mode
+yarn test:storybook:watch
+
+# Run Storybook (for visual component review)
+yarn start
+```
+
+### Test Structure
+
+Tests are organized as:
+- **Unit tests**: Component behavior and props
+- **Interaction tests**: User interactions via Storybook play functions
+- **Accessibility tests**: Built into Storybook with addon-a11y
+
+## Testing Guidelines
+
+### Test Naming
+
+Use descriptive story names that indicate what is being tested:
+
+```tsx
+export const Default: Story = { /* basic rendering */ }
+export const WithVariants: Story = { /* different variants */ }
+export const WithUserInteraction: Story = { /* user interactions */ }
+export const WithAccessibilityFeatures: Story = { /* a11y testing */ }
+```
+
+### Test Data
+
+Use `data-testid` attributes for reliable element selection:
+
+```tsx
+<Button data-testid="submit-button">Submit</Button>
+
+// In test
+const button = canvas.getByTestId('submit-button')
+```
+
+### Component Props Testing
+
+Test all component variants and props:
+
+```tsx
+export const AllVariants: Story = {
+  render: () => (
+    <div className="space-y-4">
+      <Button variant="default">Default</Button>
+      <Button variant="destructive">Destructive</Button>
+      <Button variant="outline">Outline</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="link">Link</Button>
+    </div>
+  ),
+}
+
+export const AllSizes: Story = {
+  render: () => (
+    <div className="space-x-4">
+      <Button size="sm">Small</Button>
+      <Button size="default">Default</Button>
+      <Button size="lg">Large</Button>
+    </div>
+  ),
+}
+```
+
+### Error States
+
+Test error conditions and edge cases:
+
+```tsx
+export const WithError: Story = {
+  args: {
+    disabled: true,
+    children: 'Disabled Button',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement)
+    const button = canvas.getByRole('button')
+
+    await expect(button).toBeDisabled()
+  },
+}
+```
+
+## Testing Best Practices
+
+### Do's
+
+- **Use semantic queries**: `getByRole`, `getByLabelText`, `getByText`
+- **Test user interactions**: Click, type, hover, focus
+- **Test accessibility**: Screen reader compatibility, keyboard navigation
+- **Test all variants**: All component props and states
+- **Use descriptive test names**: Clear, specific story names
+
+### Don'ts
+
+- **Don't test implementation details**: Avoid testing internal state or methods
+- **Don't use brittle selectors**: Avoid CSS classes or complex selectors
+- **Don't skip edge cases**: Test loading, error, and empty states
+- **Don't forget accessibility**: Always consider screen readers and keyboard users
+
+## Accessibility Testing
+
+Storybook automatically runs accessibility tests with `@storybook/addon-a11y`:
+
+```tsx
+export const AccessibilityExample: Story = {
+  args: {
+    children: 'Accessible Button',
+    'aria-label': 'Close dialog',
+  },
+  parameters: {
+    a11y: {
+      config: {
+        rules: [
+          {
+            // Custom accessibility rules
+            id: 'color-contrast',
+            enabled: true,
+          },
+        ],
+      },
+    },
+  },
+}
+```
+
+## Migration from Jest
+
+If migrating from Jest-based tests:
+
+1. **Move tests to Storybook stories**
+2. **Replace Jest matchers** with Vitest equivalents
+3. **Use @testing-library/user-event** instead of Enzyme
+4. **Update test commands** in package.json
+
+The new approach provides better integration between documentation and testing.

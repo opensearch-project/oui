@@ -6,6 +6,7 @@ This guide applies to all development within the OpenSearch Dashboards project a
 - [Running locally](#running-locally)
   - [Node](#node)
   - [Start documentation server](#start-documentation-server)
+- [Documentation](#documentation)
 - [Maintenance and contributing](#maintenance-and-contributing)
 
 ## Running locally
@@ -37,10 +38,15 @@ yarn node --version
 
 ### Start documentation server
 
-You can run the documentation locally at [http://localhost:8030/](http://localhost:8030/) by running the following.
+Make sure dependencies are installed with:
 
 ```
 yarn
+```
+
+You can run the documentation locally at [http://localhost:8030/](http://localhost:8030/) by running the following.
+
+```
 yarn start
 ```
 
@@ -49,18 +55,32 @@ If another process is already listening on port 8030, the next free port will be
 ```
 yarn start --port 9000
 ```
+
+## Documentation
+
+### Component Development
+* [Component development](wiki/component-development.md) - Complete guide for adding and developing components
+  * [Creating components manually](wiki/creating-components-manually.md) - Step-by-step component creation
+  * [Creating components with Yeoman](wiki/creating-components-yeoman.md) - Legacy Yeoman approach (deprecated)
+* [Component design](wiki/component-design.md) - Design principles and patterns
+* [Testing](wiki/testing.md) - Component testing with Storybook
+
+### Storybook & Documentation
+* [Storybook naming conventions](wiki/storybook-naming-conventions.md) - File naming and organization
+* [Storybook template pattern](wiki/storybook-template-pattern.md) - Story structure and examples
+* [Documentation guidelines](wiki/documentation-guidelines.md) - Writing and organizing documentation
+
+### Styling & Theming
+* [Theming](wiki/theming.md) - CSS custom properties and theme system
+* [Naming conventions reference](wiki/naming-conventions-reference.md) - Component and class naming
+
+### Other Guides
+* [Creating icons](wiki/creating-icons.md) - Adding and designing icons
+* [Consuming OUI](wiki/consuming.md) - How to use OUI in your projects
+* [Releasing versions](wiki/releasing-versions.md) - Release management process
+* [Automated accessibility testing](wiki/automated-accessibility-testing.md) - A11y testing setup
+* [Validating with OpenSearch Dashboards](wiki/validating-with-opensearch-dashboards.md) - Integration testing
+
 ## Maintenance and contributing
 
 [CONTRIBUTING.md](CONTRIBUTING.md)
-
-* [Component design](wiki/component-design.md)
-* [Component development](wiki/component-development.md)
-  * [Creating components manually](wiki/creating-components-manually.md)
-  * [Creating components with Yeoman](wiki/creating-components-yeoman.md)
-* [Creating icons](wiki/creating-icons.md)
-* [Theming](wiki/theming.md)
-* [Testing](wiki/testing.md)
-  * [Accessibility Testing](wiki/automated-accessibility-testing.md)
-  * [Validating with OpenSearch Dashboards](wiki/validating-with-opensearch-dashboards.md)
-* [Documentation](wiki/documentation-guidelines.md)
-* [Releasing versions](wiki/releasing-versions.md)

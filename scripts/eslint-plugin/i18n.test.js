@@ -13,7 +13,14 @@ const rule = require('./i18n');
 const RuleTester = require('eslint').RuleTester;
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('babel-eslint'),
+  parser: require.resolve('@typescript-eslint/parser'),
+  parserOptions: {
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
 });
 
 const valid = [
@@ -60,8 +67,7 @@ const invalid = [
   /** OuiI18n **/
   // token doesn't match file name
   {
-    code:
-      '<OuiI18n token="ouiFooeyBar.tokenName" default="Some default value"/>',
+    code: '<OuiI18n token="ouiFooeyBar.tokenName" default="Some default value"/>',
     errors: [
       {
         messageId: 'invalidToken',
@@ -95,8 +101,7 @@ const invalid = [
 
   // invalid tokens
   {
-    code:
-      "<OuiI18n tokens={['ouiFooBar.token1', 'token2']} defaults={['value1', 'value 2']}/>",
+    code: "<OuiI18n tokens={['ouiFooBar.token1', 'token2']} defaults={['value1', 'value 2']}/>",
     errors: [
       {
         messageId: 'invalidToken',
@@ -105,8 +110,7 @@ const invalid = [
     ],
   },
   {
-    code:
-      "<OuiI18n tokens={['ouiFooeyBar.token1', 'ouiFooBar.token2']} defaults={['value1', 'value 2']}/>",
+    code: "<OuiI18n tokens={['ouiFooeyBar.token1', 'ouiFooBar.token2']} defaults={['value1', 'value 2']}/>",
     errors: [
       {
         messageId: 'invalidToken',
@@ -115,8 +119,7 @@ const invalid = [
     ],
   },
   {
-    code:
-      "<OuiI18n tokens={['ouiFooBar.token1']} defaults={['value1', 'value 2']}/>",
+    code: "<OuiI18n tokens={['ouiFooBar.token1']} defaults={['value1', 'value 2']}/>",
     errors: [
       {
         messageId: 'mismatchedTokensAndDefaults',
@@ -127,8 +130,7 @@ const invalid = [
 
   // values not in agreement with default string
   {
-    code:
-      '<OuiI18n token="ouiFooBar.tokenName" default="{value}, {value2}" values={{ valuee: \'Hello\', value2: \'World\' }}/>',
+    code: '<OuiI18n token="ouiFooBar.tokenName" default="{value}, {value2}" values={{ valuee: \'Hello\', value2: \'World\' }}/>',
     errors: [
       {
         messageId: 'mismatchedValues',
@@ -140,8 +142,7 @@ const invalid = [
     ],
   },
   {
-    code:
-      '<OuiI18n token="ouiFooBar.tokenName" default="{valuee}, {value2}" values={{ value: \'Hello\', value2: \'World\' }}/>',
+    code: '<OuiI18n token="ouiFooBar.tokenName" default="{valuee}, {value2}" values={{ value: \'Hello\', value2: \'World\' }}/>',
     errors: [
       {
         messageId: 'mismatchedValues',
@@ -187,8 +188,7 @@ const invalid = [
 
   // default callback params don't match values
   {
-    code:
-      '<OuiI18n token="ouiFooBar.token" values={{ nare: \'John\' }} default={({ name }) => name}/>',
+    code: '<OuiI18n token="ouiFooBar.token" values={{ nare: \'John\' }} default={({ name }) => name}/>',
     errors: [
       {
         messageId: 'mismatchedValues',
@@ -285,8 +285,7 @@ const invalid = [
     ],
   },
   {
-    code:
-      "useOuiI18n(['ouiFooeyBar.token1', 'ouiFooBar.token2'], ['value1', 'value 2'])",
+    code: "useOuiI18n(['ouiFooeyBar.token1', 'ouiFooBar.token2'], ['value1', 'value 2'])",
     errors: [
       {
         messageId: 'invalidToken',
@@ -306,8 +305,7 @@ const invalid = [
 
   // values not in agreement with default string
   {
-    code:
-      "useOuiI18n('ouiFooBar.tokenName', '{value}, {value2}', { valuee: 'Hello', value2: 'World' })",
+    code: "useOuiI18n('ouiFooBar.tokenName', '{value}, {value2}', { valuee: 'Hello', value2: 'World' })",
     errors: [
       {
         messageId: 'mismatchedValues',
@@ -319,8 +317,7 @@ const invalid = [
     ],
   },
   {
-    code:
-      "useOuiI18n('ouiFooBar.tokenName', '{valuee}, {value2}', { value: 'Hello', value2: 'World' })",
+    code: "useOuiI18n('ouiFooBar.tokenName', '{valuee}, {value2}', { value: 'Hello', value2: 'World' })",
     errors: [
       {
         messageId: 'mismatchedValues',

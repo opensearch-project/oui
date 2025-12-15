@@ -1,0 +1,31 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // Override to not emit files, just type check
+    "noEmit": true,
+    // Set rootDir to project root to allow files outside src/
+    "rootDir": ".",
+    // Include JSX support for stories
+    "jsx": "react-jsx",
+    // Allow importing from node_modules for test files
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    // Include libs needed for testing and storybook
+    "lib": [
+      "esnext",
+      "dom",
+      "dom.iterable"
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "stories/**/*",
+    "test/**/*",
+    ".storybook/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ]
+}

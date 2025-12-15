@@ -1,0 +1,52 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    // React 16 compatible JSX transform
+    "jsx": "react",
+
+    // Better compatibility with older environments
+    "target": "es5",
+    "lib": ["dom", "es6", "es2017.object"],
+
+    // Ensure declarations are generated for distribution
+    "declaration": true,
+    "declarationMap": true,
+
+    // Override output directory from parent config
+    "outDir": "./dist",
+    "rootDir": "src",
+
+    // Module resolution
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // Strict settings for better compatibility
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Skip lib check to avoid type conflicts with different React versions
+    "skipLibCheck": true,
+
+    // Preserve imports for better tree-shaking
+    "verbatimModuleSyntax": false
+  },
+
+  // Include source files
+  "include": ["src/**/*"],
+
+  // Exclude test files and build outputs
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.stories.ts",
+    "**/*.stories.tsx",
+    ".storybook/**/*",
+    "stories/**/*"
+  ]
+}
