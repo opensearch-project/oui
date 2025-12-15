@@ -20,6 +20,8 @@
 
 ### 🪛 Refactoring
 
+- Support reset styles being overridden by layers ([#1664](https://github.com/opensearch-project/oui/pull/1664))
+
 ### 🔩 Tests
 
 
