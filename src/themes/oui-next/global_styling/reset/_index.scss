@@ -9,6 +9,8 @@
  * GitHub history for details.
  */
 
-@import 'reset';
-@import 'hacks';
-@import 'scrollbar';
+@layer theme {
+  @import 'reset';
+  @import 'hacks';
+  @import 'scrollbar';
+}
