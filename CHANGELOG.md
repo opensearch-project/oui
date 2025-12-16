@@ -13,7 +13,6 @@
 
 ### 🐛 Bug Fixes
 
-- Prevent popover close when a click event fired from a portaled component in popover([#1658](https://github.com/opensearch-project/oui/pull/1658))
 
 ### 🚞 Infrastructure
 
@@ -26,8 +25,17 @@
 
 ### 🪛 Refactoring
 
+- Support reset styles being overridden by layers ([#1664](https://github.com/opensearch-project/oui/pull/1664))
+
 
 ### 🔩 Tests
+
+## [`1.22.1`](https://github.com/opensearch-project/oui/tree/1.22.1)
+
+### 🐛 Bug Fixes
+
+- Prevent popover close when a click event fired from a portaled component in popover([#1658](https://github.com/opensearch-project/oui/pull/1658))
+
 
 ## [`1.22.0`](https://github.com/opensearch-project/oui/tree/1.22)
 
