@@ -1,34 +1,11 @@
 # OUI
 
-## [Unreleased `1.x`](https://github.com/opensearch-project/oui/tree/1.x)
-
-### Deprecations
-
-
-### 🛡 Security
-
-
-### 📈 Features/Enhancements
-
-
-### 🐛 Bug Fixes
-
-
-### 🚞 Infrastructure
-
-
-### 📝 Documentation
-
-
-### 🛠 Maintenance
-
+## [`1.23.0`](https://github.com/opensearch-project/oui/tree/1.23)
 
 ### 🪛 Refactoring
 
 - Support reset styles being overridden by layers ([#1664](https://github.com/opensearch-project/oui/pull/1664))
 
-
-### 🔩 Tests
 
 ## [`1.22.1`](https://github.com/opensearch-project/oui/tree/1.22.1)
 
