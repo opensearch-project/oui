@@ -10,7 +10,7 @@
 - [ ] New functionality has been documented.
 - [ ] All tests pass
   - [ ] `yarn lint`
-  - [ ] `yarn test-unit`
+  - [ ] `yarn test`
 - [ ] Update [CHANGELOG.md](./../CHANGELOG.md)
 - [ ] Commits are signed per the DCO using --signoff
 

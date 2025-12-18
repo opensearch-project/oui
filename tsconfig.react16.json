@@ -1,0 +1,28 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    // Don't emit files, just type check
+    "noEmit": true,
+
+    // Skip lib checks to avoid conflicts
+    "skipLibCheck": true,
+
+    // Allow importing test files
+    "allowJs": true,
+
+    // Remove rootDir restriction to allow stories/ and test/ directories
+    "rootDir": "."
+  },
+
+  "include": [
+    "src/**/*"
+  ],
+
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "stories/**/*",
+    "test/**/*"
+  ]
+}

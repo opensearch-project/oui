@@ -16,11 +16,9 @@ We use [semver](https://semver.org/) for versioning and use that to denote break
 
 Traditionally releases are made weekly against whatever is in main and you can upgrade from NPM as you see fit.
 
-## How do you handle Typescript, Sass and theming?
+## How do you handle Theming?
 
-OUI started as a JS and Sass library that outputs separate CSS and JS bundles. Over time we introduced TypeScript and started adding types, writing new components in TS, and migrating old components over. The goal is to actively convert everything over into a full TS system while retaining our build targets of ES5+commonjs, ES5+ES Modules, and a consolidated bundle file.
-
-For styling we use Sass and generate a final CSS blob for the entire library, with some JSON theming files extracted from the Sass. You can find more information in [consuming OUI](wiki/consuming.md) and [theming](wiki/theming.md).
+OUI 2.0 will ship with themes that match behavior in OUI 1.0, but going forward, all new themes must be defined by consumers using just exposed CSS Variables.
 
 ## Can I contribute to OUI
 

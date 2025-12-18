@@ -97,12 +97,11 @@ module.exports = {
     },
   },
   extends: [
-    '@elastic/eslint-config-kibana',
+    'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     // Prettier options need to come last, in order to override other style
     // rules.
-    'prettier/react',
-    'prettier/standard',
+    'prettier',
     'plugin:prettier/recommended',
   ],
   plugins: ['jsx-a11y', 'prettier', 'local', 'react-hooks'],
@@ -192,8 +191,20 @@ module.exports = {
       },
     },
     {
+      // Disable formatting rules for shadcn ui components directory
+      files: ['src/components/ui/**/*.{ts,tsx}'],
+      rules: {
+        'prettier/prettier': 'off',
+        'quotes': 'off',
+        'jsx-a11y/anchor-has-content': 'off', // shadcn components handle content via props
+      },
+    },
+    {
       // Currently suppressing the following rules for files in the scripts directory
       files: ['scripts/**/*.{ts,tsx,js}'],
+      env: {
+        node: true,
+      },
       rules: {
         '@typescript-eslint/no-var-requires': 'off', // not enforcing ES6-style import statements
       },

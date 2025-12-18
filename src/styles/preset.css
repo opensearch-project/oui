@@ -1,0 +1,177 @@
+@import "tailwindcss" prefix(oui);
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Light theme variables */
+  --oui-background: theme(colors.white);
+  --oui-foreground: theme(colors.slate.950);
+  --oui-card: theme(colors.white);
+  --oui-card-foreground: theme(colors.slate.950);
+  --oui-popover: theme(colors.white);
+  --oui-popover-foreground: theme(colors.slate.950);
+  --oui-primary: theme(colors.violet.700);
+  --oui-primary-foreground: theme(colors.slate.50);
+  --oui-secondary: theme(colors.purple.100);
+  --oui-secondary-foreground: theme(colors.neutral.900);
+  --oui-muted: theme(colors.slate.100);
+  --oui-muted-foreground: theme(colors.slate.500);
+  --oui-accent: theme(colors.slate.100);
+  --oui-accent-foreground: theme(colors.slate.900);
+  --oui-destructive: theme(colors.red.600);
+  --oui-destructive-foreground: theme(colors.red.50);
+  --oui-border: theme(colors.slate.200);
+  --oui-input: theme(colors.slate.200);
+  --oui-ring: theme(colors.slate.400);
+  --oui-chart-1: theme(colors.orange.600);
+  --oui-chart-2: theme(colors.teal.600);
+  --oui-chart-3: theme(colors.cyan.900);
+  --oui-chart-4: theme(colors.amber.400);
+  --oui-chart-5: theme(colors.amber.500);
+  --oui-radius: 0.625rem;
+  --oui-sidebar: theme(colors.slate.50);
+  --oui-sidebar-foreground: theme(colors.slate.950);
+  --oui-sidebar-primary: theme(colors.slate.900);
+  --oui-sidebar-primary-foreground: theme(colors.slate.50);
+  --oui-sidebar-accent: theme(colors.slate.100);
+  --oui-sidebar-accent-foreground: theme(colors.slate.900);
+  --oui-sidebar-border: theme(colors.slate.200);
+  --oui-sidebar-ring: theme(colors.slate.400);
+  --oui-severity-low: theme(colors.amber.400);
+  --oui-severity-med: theme(colors.amber.600);
+  --oui-severity-high: theme(colors.orange.700);
+  --oui-severity-critical: theme(colors.red.800);
+}
+
+.dark {
+  /* Dark theme variables */
+  --oui-background: theme(colors.slate.950);
+  --oui-foreground: theme(colors.slate.50);
+  --oui-card: theme(colors.slate.900);
+  --oui-card-foreground: theme(colors.slate.50);
+  --oui-popover: theme(colors.slate.800);
+  --oui-popover-foreground: theme(colors.slate.50);
+  --oui-primary: theme(colors.violet.500);
+  --oui-primary-foreground: theme(colors.slate.50);
+  --oui-secondary: theme(colors.violet.800);
+  --oui-secondary-foreground: theme(colors.slate.50);
+  --oui-muted: theme(colors.slate.800);
+  --oui-muted-foreground: theme(colors.slate.400);
+  --oui-accent: theme(colors.slate.700);
+  --oui-accent-foreground: theme(colors.slate.50);
+  --oui-destructive: theme(colors.red.400);
+  --oui-destructive-foreground: theme(colors.red.50);
+  --oui-border: theme(colors.white / 10%);
+  --oui-input: theme(colors.white / 15%);
+  --oui-ring: theme(colors.slate.500);
+  --oui-chart-1: theme(colors.blue.700);
+  --oui-chart-2: theme(colors.emerald.500);
+  --oui-chart-3: theme(colors.amber.500);
+  --oui-chart-4: theme(colors.purple.500);
+  --oui-chart-5: theme(colors.rose.500);
+  --oui-sidebar: theme(colors.slate.950);
+  --oui-sidebar-foreground: theme(colors.slate.50);
+  --oui-sidebar-primary: theme(colors.blue.700);
+  --oui-sidebar-primary-foreground: theme(colors.slate.50);
+  --oui-sidebar-accent: theme(colors.slate.800);
+  --oui-sidebar-accent-foreground: theme(colors.slate.50);
+  --oui-sidebar-border: theme(colors.white / 10%);
+  --oui-sidebar-ring: theme(colors.slate.600);
+  --oui-severity-low: theme(colors.amber.400);
+  --oui-severity-med: theme(colors.amber.600);
+  --oui-severity-high: theme(colors.orange.700);
+  --oui-severity-critical: theme(colors.red.800);
+}
+
+@theme inline {
+  --color-background: var(--oui-background);
+  --color-foreground: var(--oui-foreground);
+  --color-card: var(--oui-card);
+  --color-card-foreground: var(--oui-card-foreground);
+  --color-popover: var(--oui-popover);
+  --color-popover-foreground: var(--oui-popover-foreground);
+  --color-primary: var(--oui-primary);
+  --color-primary-foreground: var(--oui-primary-foreground);
+  --color-secondary: var(--oui-secondary);
+  --color-secondary-foreground: var(--oui-secondary-foreground);
+  --color-muted: var(--oui-muted);
+  --color-muted-foreground: var(--oui-muted-foreground);
+  --color-accent: var(--oui-accent);
+  --color-accent-foreground: var(--oui-accent-foreground);
+  --color-destructive: var(--oui-destructive);
+  --color-destructive-foreground: var(--oui-destructive-foreground);
+  --color-border: var(--oui-border);
+  --color-input: var(--oui-input);
+  --color-ring: var(--oui-ring);
+  --color-chart-1: var(--oui-chart-1);
+  --color-chart-2: var(--oui-chart-2);
+  --color-chart-3: var(--oui-chart-3);
+  --color-chart-4: var(--oui-chart-4);
+  --color-chart-5: var(--oui-chart-5);
+  --radius-sm: calc(var(--oui-radius) - 4px);
+  --radius-md: calc(var(--oui-radius) - 2px);
+  --radius-lg: var(--oui-radius);
+  --radius-xl: calc(var(--oui-radius) + 4px);
+  --color-sidebar: var(--oui-sidebar);
+  --color-sidebar-foreground: var(--oui-sidebar-foreground);
+  --color-sidebar-primary: var(--oui-sidebar-primary);
+  --color-sidebar-primary-foreground: var(--oui-sidebar-primary-foreground);
+  --color-sidebar-accent: var(--oui-sidebar-accent);
+  --color-sidebar-accent-foreground: var(--oui-sidebar-accent-foreground);
+  --color-sidebar-border: var(--oui-sidebar-border);
+  --color-sidebar-ring: var(--oui-sidebar-ring);
+  --color-severity-low: var(--oui-severity-low);
+  --color-severity-med: var(--oui-severity-med);
+  --color-severity-high: var(--oui-severity-high);
+  --color-severity-critical: var(--oui-severity-critical);
+}
+
+@layer base {
+  * {
+    @apply oui:border-border oui:outline-ring/50;
+  }
+
+  body {
+    @apply oui:bg-background oui:text-foreground;
+  }
+}
+
+/* Sonner Toast Styling */
+[data-sonner-toaster] [data-description],
+[data-sonner-toaster] .sonner-description,
+.sonner-description {
+  color: var(--oui-muted-foreground) !important;
+  opacity: 1 !important;
+}
+
+[data-sonner-toaster] [data-title],
+[data-sonner-toaster] .sonner-title,
+.sonner-title {
+  color: var(--oui-popover-foreground) !important;
+}
+
+/* Toast layout improvements */
+[data-sonner-toaster] [data-toast] {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  gap: 16px !important;
+}
+
+/* Ensure the content area takes up available space */
+[data-sonner-toaster] [data-toast]>div:first-child {
+  flex: 1 !important;
+  min-width: 0 !important;
+}
+
+/* Align action button properly */
+[data-sonner-toaster] [data-toast]>*:last-child {
+  flex-shrink: 0 !important;
+  align-self: center !important;
+}
+
+/* Automatically align all buttons to the right in toasts */
+[data-sonner-toaster] button {
+  margin-left: auto !important;
+}

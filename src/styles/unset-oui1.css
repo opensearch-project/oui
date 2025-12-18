@@ -1,0 +1,107 @@
+/**
+ * OUI1 Reset CSS Unset
+ * This file unsets CSS reset styles from the original OUI library
+ * to prevent conflicts when using OUI2 components alongside OUI1.
+ *
+ * In @layer theme so applied before shadcn reset css in @layer base
+ */
+
+@layer base {
+  /* Unset box-sizing reset */
+  *, *:before, *:after {
+    box-sizing: unset;
+  }
+
+  /* Unset element resets - restore browser defaults */
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: unset;
+    padding: unset;
+    border: unset;
+    vertical-align: unset;
+  }
+
+  /* Unset html styles */
+  html {
+    height: unset;
+  }
+
+  /* Unset body styles */
+  body {
+    line-height: unset;
+  }
+
+  /* Restore focus outlines */
+  *:focus {
+    outline: unset;
+  }
+
+  /* Restore link decoration */
+  a {
+    text-decoration: unset;
+  }
+
+  /* Unset cursor styles */
+  a:hover, button, [role='button'] {
+    cursor: unset;
+  }
+
+  /* Unset input styles */
+  input {
+    margin: unset;
+    padding: unset;
+  }
+
+  input:disabled {
+    opacity: unset;
+  }
+
+  /* Unset button styles */
+  button {
+    background: unset;
+    border: unset;
+    padding: unset;
+    margin: unset;
+    outline: unset;
+    font-size: unset;
+    color: unset;
+    border-radius: unset;
+  }
+
+  /* Restore list styles */
+  ol, ul {
+    list-style: unset;
+  }
+
+  /* Restore quote styles */
+  blockquote, q {
+    quotes: unset;
+  }
+
+  /* Unset table styles */
+  table {
+    border-collapse: unset;
+    border-spacing: unset;
+  }
+
+  /* Unset hr styles */
+  hr {
+    margin: unset;
+  }
+
+  /* Unset fieldset styles */
+  fieldset {
+    min-inline-size: unset;
+  }
+}

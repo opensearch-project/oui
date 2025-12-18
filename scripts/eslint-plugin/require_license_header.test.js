@@ -33,9 +33,10 @@ const rule = require('./require_license_header');
 const dedent = require('dedent');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('babel-eslint'),
+  parser: require.resolve('@typescript-eslint/parser'),
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 2020,
+    sourceType: 'module',
   },
 });
 
@@ -48,7 +49,7 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `,
 
-      options: [{ license: '/* license */' }],
+      options: [{ licenses: ['/* license */'] }],
     },
     {
       code: dedent`
@@ -57,7 +58,7 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `,
 
-      options: [{ license: '// license' }],
+      options: [{ licenses: ['// license'] }],
     },
   ],
 
@@ -71,7 +72,7 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
       options: [],
       errors: [
         {
-          message: '"license" option is required',
+          message: '"licenses" option is required',
         },
       ],
     },
@@ -82,12 +83,17 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `,
 
-      options: [{ license: '/* one *//* two */' }],
+      options: [{ licenses: ['/* one *//* two */'] }],
       errors: [
         {
-          message: '"license" option must only include a single comment',
+          message: 'File must start with a license header',
         },
       ],
+      output: dedent`
+        /* one *//* two */
+
+        console.log('foo')
+      `,
     },
 
     // content cannot contain multiple line comments
@@ -96,12 +102,18 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `,
 
-      options: [{ license: '// one\n// two' }],
+      options: [{ licenses: ['// one\n// two'] }],
       errors: [
         {
-          message: '"license" option must only include a single comment',
+          message: 'File must start with a license header',
         },
       ],
+      output: dedent`
+        // one
+        // two
+
+        console.log('foo')
+      `,
     },
 
     // content cannot contain expressions
@@ -112,17 +124,23 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
 
       options: [
         {
-          license: dedent`
+          licenses: [dedent`
             /* license */
             console.log('hello world');
-          `,
+          `],
         },
       ],
       errors: [
         {
-          message: '"license" option must only include a single comment',
+          message: 'File must start with a license header',
         },
       ],
+      output: dedent`
+        /* license */
+        console.log('hello world');
+
+        console.log('foo')
+      `,
     },
 
     // content is not a single comment
@@ -131,12 +149,17 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `,
 
-      options: [{ license: "console.log('hello world');" }],
+      options: [{ licenses: ["console.log('hello world');"] }],
       errors: [
         {
-          message: '"license" option must only include a single comment',
+          message: 'File must start with a license header',
         },
       ],
+      output: dedent`
+        console.log('hello world');
+
+        console.log('foo')
+      `,
     },
 
     // missing license header
@@ -145,7 +168,7 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `,
 
-      options: [{ license: '/* license */' }],
+      options: [{ licenses: ['/* license */'] }],
       errors: [
         {
           message: 'File must start with a license header',
@@ -167,7 +190,7 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `}`,
 
-      options: [{ license: '/* license */' }],
+      options: [{ licenses: ['/* license */'] }],
       errors: [
         {
           message: 'License header must be at the very beginning of the file',
@@ -189,7 +212,7 @@ ruleTester.run('@kbn/eslint/require-license-header', rule, {
         console.log('foo')
       `,
 
-      options: [{ license: '/* license */' }],
+      options: [{ licenses: ['/* license */'] }],
       errors: [
         {
           message: 'License header must be at the very beginning of the file',

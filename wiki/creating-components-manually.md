@@ -1,31 +1,183 @@
-# Creating components manually
+# Creating Components
 
-## Create component SCSS files
+This guide covers how to create new components in the shadcn-based OUI library.
 
-1. Create a directory for your component in `src/components`.
-2. In this directory, create `_{component name}.scss`.
-3. _Optional:_ Create any other components that should be [logically-grouped][docs-logical-group] in this directory.
-4. Create an `_index.scss` file in this directory that import all of the new component SCSS files you created.
-5. Import the `_index.scss` file into `src/components/index.scss`.
+## Component Structure
 
-This makes your styles available to your project and to the [OUI documentation][docs].
+Components are organized into two directories:
 
-## Create the React component
+- `src/components/ui/` - Core shadcn/ui components (built on Radix UI primitives)
+- `src/components/custom/` - Custom components and extensions
 
-1. Create the React component(s) (preferably as TypeScript) in the same directory as the related SCSS file(s).
-2. Export these components from an `index.ts` file.
-3. Re-export these components from `src/components/index.js`.
+## Creating a New Component
 
-This makes your React component available for import into your project.
+### 1. Choose the Right Location
 
-## Document the component with examples
+- **Use `ui/` for**: Standard shadcn/ui components that are direct ports or close adaptations
+- **Use `custom/` for**: OpenSearch-specific components, complex compositions, or heavily customized versions
 
-1. Create a directory for your example in `src-docs/src/views`. Name it the name of the component.
-2. Create a `{component name}_example.js` file inside the directory. You'll use this file to define the different examples for your component.
-3. Add the route to this file in `src-docs/src/services/routes/routes.js`.
-4. In the `{component name}_example.js` file you created, define examples which demonstrate the component and describe its role from a UI perspective.
+### 2. Create the Component File
 
-### 👉 Refer to the [Documentation Guidelines](documentation-guidelines.md) for more instruction on writing docs.
+Create `{component-name}.tsx` in the appropriate directory:
 
-[docs]: https://oui.opensearch.org
-[docs-logical-group]: component-development.md#logically-grouped-components
+```tsx
+// src/components/ui/my-component.tsx
+import * as React from 'react'
+import { cn } from '@/lib/utils'
+import { cva, type VariantProps } from 'class-variance-authority'
+
+const myComponentVariants = cva(
+  'base-classes-here',
+  {
+    variants: {
+      variant: {
+        default: 'default-styles',
+        secondary: 'secondary-styles',
+      },
+      size: {
+        sm: 'small-styles',
+        md: 'medium-styles',
+        lg: 'large-styles',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'md',
+    },
+  }
+)
+
+export interface MyComponentProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof myComponentVariants> {
+  // Add custom props here
+}
+
+const MyComponent = React.forwardRef<HTMLDivElement, MyComponentProps>(
+  ({ className, variant, size, ...props }, ref) => {
+    return (
+      <div
+        className={cn(myComponentVariants({ variant, size, className }))}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+
+MyComponent.displayName = 'MyComponent'
+
+export { MyComponent, myComponentVariants }
+```
+
+### 3. Export the Component
+
+Add the export to `src/components/index.ts`:
+
+```ts
+export * from './ui/my-component';
+// or
+export * from './custom/my-component';
+```
+
+### 4. Run the Shadcn Fix Script
+
+After adding a new component (especially if importing from shadcn/ui), run the fix script to ensure proper CSS variable prefixing and import optimization:
+
+```bash
+yarn fix:shadcn
+```
+
+This script will:
+- Prefix any unprefixed CSS variables with `--oui-`
+- Update imports from `@/components/ui/ComponentName` to `@/components` for components that have custom versions
+
+### 5. Create Storybook Documentation
+
+Create a story file in the `stories/` directory:
+
+```tsx
+// stories/MyComponent.stories.tsx
+import type { Meta, StoryObj } from '@storybook/react'
+import { MyComponent } from '../src/components'
+
+const meta: Meta<typeof MyComponent> = {
+  title: 'Components/MyComponent',
+  component: MyComponent,
+  parameters: {
+    layout: 'centered',
+  },
+  tags: ['autodocs'],
+  argTypes: {
+    variant: {
+      control: { type: 'select' },
+      options: ['default', 'secondary'],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['sm', 'md', 'lg'],
+    },
+  },
+}
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {
+  args: {
+    children: 'MyComponent',
+  },
+}
+
+export const Secondary: Story = {
+  args: {
+    variant: 'secondary',
+    children: 'MyComponent',
+  },
+}
+```
+
+## Component Guidelines
+
+### TypeScript
+
+- Always use TypeScript
+- Extend appropriate HTML element interfaces
+- Use `React.forwardRef` for component refs
+- Set `displayName` for better debugging
+
+### Styling
+
+- Use Tailwind CSS classes
+- Leverage `class-variance-authority` for variants
+- Use the `cn()` utility to merge classes
+- Follow the existing design system patterns
+
+### Props
+
+- Extend HTML element props where appropriate
+- Support common props like `className`, `children`
+- Use descriptive prop names and include JSDoc comments
+
+### Testing
+
+Tests should be written in Storybook stories using the `@storybook/test` package for interaction testing and visual regression testing.
+
+## Adding Icons
+
+If you need icons, use `lucide-react`:
+
+```tsx
+import { ChevronDown } from 'lucide-react'
+
+// Use in component
+<ChevronDown className="h-4 w-4" />
+```
+
+## Best Practices
+
+1. **Keep components focused** - Each component should have a single responsibility
+2. **Use composition** - Build complex components by composing simpler ones
+3. **Follow naming conventions** - Use PascalCase for components, kebab-case for files
+4. **Document props** - Use JSDoc comments for complex props
+5. **Test in Storybook** - Include comprehensive stories and interaction tests

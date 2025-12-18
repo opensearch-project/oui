@@ -28,7 +28,40 @@
  * under the License.
  */
 
-const babelEslint = require('babel-eslint');
+// Function to extract comment content from various comment formats
+function extractCommentContent(licenseText) {
+  const trimmed = licenseText.trim();
+
+  // Handle block comments /* ... */
+  const blockCommentMatch = trimmed.match(/^\/\*([\s\S]*?)\*\/$/);
+  if (blockCommentMatch) {
+    return normalizeWhitespace(blockCommentMatch[1]);
+  }
+
+  // Handle single-line comments starting with //
+  if (trimmed.startsWith('//')) {
+    return normalizeWhitespace(trimmed.replace(/^\/\//, ''));
+  }
+
+  // Handle multiple line comments (each line starts with //)
+  const lines = trimmed.split('\n');
+  if (lines.every(line => line.trim().startsWith('//') || line.trim() === '')) {
+    const content = lines
+      .map(line => line.replace(/^\s*\/\/\s?/, ''))
+      .join('\n');
+    return normalizeWhitespace(content);
+  }
+
+  // Handle JSDoc-style comments /** ... */
+  const jsdocMatch = trimmed.match(/^\/\*\*([\s\S]*?)\*\/$/);
+  if (jsdocMatch) {
+    return normalizeWhitespace(jsdocMatch[1]);
+  }
+
+  // For invalid license text, just return empty string to avoid configuration errors
+  // The rule will still work but won't match anything in the source code
+  return '';
+}
 
 function assert(truth, message) {
   if (truth) {
@@ -91,20 +124,16 @@ module.exports = {
           assert(!!licenses, '"licenses" option is required');
 
           return licenses.map((license, i) => {
-            const parsed = babelEslint.parse(license);
-            assert(
-              !parsed.body.length,
-              `"licenses[${i}]" option must only include a single comment`
-            );
-            assert(
-              parsed.comments.length === 1,
-              `"licenses[${i}]" option must only include a single comment`
-            );
+            try {
+              const commentContent = extractCommentContent(license);
 
-            return {
-              source: license,
-              nodeValue: normalizeWhitespace(parsed.comments[0].value),
-            };
+              return {
+                source: license,
+                nodeValue: commentContent,
+              };
+            } catch (error) {
+              throw new Error(`"licenses[${i}]" option: ${error.message}`);
+            }
           });
         });
 

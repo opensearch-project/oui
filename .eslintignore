@@ -10,3 +10,4 @@ oui.d.ts
 package.json
 src-docs/src/views/icon/icon_example.js
 packages/react-datepicker/examples
+scripts/eslint-plugin/

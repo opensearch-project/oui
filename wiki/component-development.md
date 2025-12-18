@@ -1,104 +1,156 @@
 # Component Development
 
-For information on how to design components, see the [component design docs][component-design].
+This guide covers how to add new components to the OUI package, following our established patterns and best practices.
 
-Before working with OUI components or creating new ones, you may want to run a local server for the [documentation site][docs]. This is where we demonstrate how the components in our design system work.
+For information on component design principles and patterns, see the [component design docs][component-design].
 
-## Launching the Documentation Server
+## Component Architecture
 
-To view interactive documentation, start the development server using the command below.
+Our component library follows a two-tier architecture:
+
+- **`src/components/ui/`** - Base components from shadcn/ui with minimal modifications
+- **`src/components/custom/`** - Enhanced components with OUI-specific styling and functionality
+
+## Development Environment Setup
+
+### Launching Storybook
+
+To view component documentation and examples, start Storybook:
 
 ```shell
 yarn
 yarn start
 ```
 
-Once the server boots up, you can visit it on your browser at: [http://localhost:8030/](http://localhost:8030/). The development server watches for changes to the source code files and will automatically recompile the components for you when you make changes.
+This will launch Storybook at [http://localhost:8030/](http://localhost:8030/). The development server watches for changes to source files and automatically recompiles components and updates documentation when you make changes.
 
-## Creating Components
+## Adding a New Component
 
-There are four steps to creating a new component:
+### Step 1: Add Base Component with shadcn CLI
 
-1. Create the SCSS for the component in `src/components`
-2. Create the React portion of the component
-3. Write tests
-4. Document it with examples in `src-docs`
-
-You can do this using Yeoman, or you can do it manually if you prefer.
-
-- [Yeoman component creation guide][docs-yeoman]
-- [Manual component creation guide][docs-manual]
-
-## Testing the component
-
-`yarn run test-unit` runs the Jest unit tests once.
-
-`yarn run test-unit button` will run tests with "button" in the spec name. You can pass other
-[Jest CLI arguments](https://facebook.github.io/jest/docs/en/cli.html) by just adding them to the
-end of the command like this:
-
-`yarn run test-unit -- -u` will update your snapshots. To pass flags or other options you'll need
-to follow the format of `yarn run test-unit -- [arguments]`.
-Note: if you are experiencing failed builds in Jenkins related to snapshots, then try clearing the cache first `yarn run test-unit -- --clearCache`.
-
-`yarn run test-unit -- --watch` watches for changes and runs the tests as you code.
-
-`yarn run test-unit -- --coverage` generates a code coverage report showing you how
-fully-tested the code is, located at `reports/jest-coverage`.
-
-Refer to the [testing guide](testing.md) for guidelines on writing and designing your tests.
-
-Refer to the [automated accessibility testing guide](automated-accessibility-testing.md) for info more info on those.
-
-### Testing the component with OpenSearch Dashboards
-
-Note that `yarn link` currently does not work with OpenSearch Dashboards. You'll need to manually pack and insert it into OpenSearch Dashboards to test locally.
-
-#### In OUI run:
+Use the shadcn CLI to add the base component to `src/components/ui/`:
 
 ```bash
-yarn build && npm pack
+npx shadcn@latest add [component-name]
 ```
 
-This will create a `.tgz` file with the changes in your OUI directory. At this point you can move it anywhere.
+This will:
+- Install the base component in `src/components/ui/`
+- Add any required dependencies to `package.json`
+- Update your `components.json` configuration
 
-#### In OpenSearch Dashboards:
+**Example:**
+```bash
+npx shadcn@latest add button
+npx shadcn@latest add dialog
+npx shadcn@latest add select
+```
 
-Point the `package.json` file in OpenSearch Dashboards to that file: `"@opensearch-project/oui": "/path/to/opensearch-project-oui-xx.x.x.tgz"`. Then run the following commands at OpenSearch Dashboards root folder:
+### Step 2: Create Custom Wrapper (If Needed)
+
+If you need OUI-specific styling, behavior, or additional props, create a wrapper component in `src/components/custom/`:
+
+```typescript
+// src/components/custom/button.tsx
+import * as React from "react"
+import { Button as BaseButton, buttonVariants } from "../ui/button"
+import { cn } from "@/lib/utils"
+import { Spinner } from "./spinner"
+
+function Button({
+  className,
+  loading = false,
+  children,
+  ...props
+}: React.ComponentProps<typeof BaseButton> & {
+  loading?: boolean
+}) {
+  return (
+    <BaseButton
+      className={cn("custom-button-styles", className)}
+      disabled={loading || props.disabled}
+      {...props}
+    >
+      {loading && <Spinner className="mr-2 size-4" />}
+      {children}
+    </BaseButton>
+  )
+}
+
+export { Button, buttonVariants }
+```
+
+### Step 3: Export Components
+
+Add exports to `src/components/index.ts`:
+
+```typescript
+// For UI components (base shadcn components)
+export * from './ui/accordion';
+export * from './ui/alert-dialog';
+
+// For custom components (OUI-enhanced wrappers)
+export * from './custom/button';
+export * from './custom/badge';
+```
+
+**Export Priority:**
+- If both `ui/` and `custom/` versions exist, export the `custom/` version
+- This ensures consumers get the enhanced OUI version by default
+
+### Step 4: Run the Shadcn Fix Script
+
+After adding a new component (especially if importing from shadcn/ui), run the fix script to ensure proper CSS variable prefixing and import optimization:
 
 ```bash
-yarn osd bootstrap --no-validate && cd packages/osd-ui-shared-deps/ && yarn osd:bootstrap && cd ../../ && FORCE_DLL_CREATION=true node scripts/osd --dev
+yarn fix:shadcn
 ```
 
-* The `--no-validate` flag is required when bootstrapping with a `.tgz`.
-  * Change the name of the `.tgz` after subsequent `yarn build` and `npm pack` steps (e.g., `opensearch-project-oui-xx.x.x-1.tgz`, `opensearch-project-oui-xx.x.x-2.tgz`). This is required for `yarn` to recognize new changes to the package.
-* Running `yarn osd:bootstrap` inside of `OpenSearch-Dashboards/packages/osd-ui-shared-deps/` rebuilds OpenSearch Dashboards shared-ui-deps.
-* Running OpenSearch Dashboards with `FORCE_DLL_CREATION=true node scripts/osd --dev` ensures it doesn't use a previously cached version of OUI.
+This script will:
+- Prefix any unprefixed CSS variables with `--oui-`
+- Update imports from `@/components/ui/ComponentName` to `@/components` for components that have custom versions
 
+### Step 5: Create Storybook Story
 
-## Principles
+Create a story file for your component following our established patterns. See the complete Storybook documentation:
+
+- **[Storybook Template Pattern](./storybook-template-pattern.md)** - Complete story structure and examples
+- **[Storybook Naming Conventions](./storybook-naming-conventions.md)** - File naming and story organization
+
+## Component Guidelines
+
+### UI Components (`src/components/ui/`)
+- Keep minimal modifications to shadcn base components
+- Only modify for critical bug fixes or compatibility
+- Preserve original API and behavior
+
+### Custom Components (`src/components/custom/`)
+- Add OUI-specific styling and branding
+- Extend functionality (loading states, additional props)
+- Maintain backward compatibility
+- Follow existing patterns (data-slot attributes, consistent naming)
+
+### Styling Components
+
+Components use **Tailwind CSS** with **class-variance-authority** for styling:
+
+- Use Tailwind utility classes for styling
+- Leverage `cn()` utility for class merging
+- Define variants using `cva()` for different component states
+- Use CSS custom properties for theme values
+- Follow existing design patterns in the codebase
 
 ### Logically-grouped components
 
-If a component has subcomponents (`<OuiToolBar>` and `<OuiToolBarSearch>`), tightly-coupled components (`<OuiButton>` and `<OuiButtonGroup>`), or you just want to group some related components together (`<OuiTextInput>`, `<OuiTextArea>`, and `<OuiCheckBox>`), then they belong in the same logical grouping. In this case, you can create additional SCSS files for these components in the same component directory.
+When components are related (like `<Toolbar>` and `<ToolbarSearch>`) or tightly-coupled (like `<Button>` and `<ButtonGroup>`), group them in the same directory. Create separate TypeScript files for each component but export them all from the same index file for easy importing.
 
-### Writing CSS
-
-Refer to the [SASS page][sass] of our documentation site for a guide to writing styles.
-
-[component-design]: component-design.md
-[docs]: https://oui.opensearch.org/
-[docs-yeoman]: creating-components-yeoman.md
-[docs-manual]: creating-components-manually.md
-[sass]: https://oui.opensearch.org/#/guidelines/sass
-
-## TypeScript definitions
+## TypeScript Patterns
 
 ### Pass-through props
 
-Many of our components use `rest parameters` and the `spread` operator to pass props through to an underlying DOM element. In those instances the component's TypeScript definition needs to properly include the target DOM element's props.
+Many components use `rest parameters` and the `spread` operator to pass props through to an underlying DOM element. The component's TypeScript definition needs to properly include the target DOM element's props.
 
-A `Foo` component that passes `...rest` through to a `button` element would have the props interface
+A `Foo` component that passes `...rest` through to a `button` element would have the props interface:
 
 ```ts
 // passes extra props to a button
@@ -107,7 +159,7 @@ interface FooProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 ```
 
-Some DOM elements (e.g. `div`, `span`) do not have attributes beyond the basic ones provided by all HTML elements. In these cases there isn't a specific `*HTMLAttributes<T>` interface, and you should use `HTMLAttributes<HTMLDivElement>`.
+Some DOM elements (e.g. `div`, `span`) do not have attributes beyond the basic ones provided by all HTML elements. In these cases use `HTMLAttributes<HTMLDivElement>`:
 
 ```ts
 // passes extra props to a div
@@ -116,7 +168,7 @@ interface FooProps extends HTMLAttributes<HTMLDivElement> {
 }
 ```
 
-If your component forwards a `ref` through to an underlying element, the interface needs to be further extended with `DetailedHTMLProps`
+If your component forwards a `ref` through to an underlying element, the interface needs to be further extended with `DetailedHTMLProps`:
 
 ```ts
 // passes extra props and forwards the ref to a button
@@ -129,8 +181,8 @@ interface FooProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElem
 
 React's `forwardRef` should be used to provide access to the component's outermost element. We impose two additional requirements when using `forwardRef`:
 
-1. use `forwardRef` instead of `React.forwardRef`, otherwise [react-docgen-typescript](https://www.npmjs.com/package/react-docgen-typescript) does not understand it and the component's props will not be rendered in our documentation
-2. the resulting component must have a `displayName`, this is useful when the component is included in a snapshot or when inspected in devtools. There is an eslint rule which checks for this.  
+1. use `forwardRef` instead of `React.forwardRef`, otherwise [react-docgen-typescript](https://www.npmjs.com/package/react-docgen-typescript) does not understand it
+2. the resulting component must have a `displayName`, this is useful when the component is included in a snapshot or when inspected in devtools
 
 #### Simple forward/pass-through
 
@@ -160,7 +212,7 @@ MyComponent.displayName = 'MyComponent';
 
 #### Combining with additional refs
 
-Sometimes an element needs to have 2+ refs passed to it, for example a component interacts with the same element the forwarded ref needs to be given to. For this OUI provides a `useCombinedRefs` hook:
+Sometimes an element needs to have 2+ refs passed to it. For this OUI provides a `useCombinedRefs` hook:
 
 ```ts
 import React, { forwardRef, createRef } from 'react';
@@ -169,8 +221,8 @@ import { useCombinedRefs } from '../../services';
 interface MyComponentProps {...}
 
 export const MyComponent = forwardRef<
-  HTMLDivElement, // type of element or component the ref will be passed to
-  MyComponentProps // what properties apart from `ref` the component accepts
+  HTMLDivElement,
+  MyComponentProps
 >(
   (
     { destructure, props, here, ...rest },
@@ -189,28 +241,236 @@ export const MyComponent = forwardRef<
 MyComponent.displayName = 'MyComponent';
 ```
 
-#### Providing custom or additional data 
+#### Providing custom or additional data
 
-Rarely, a component's ref needs to be something other than a DOM element, or provide additional information. In these cases, React's `useImperativeHandle` can be used to provide a custom object as the ref's value. For example, **OuiMarkdownEditor**'s ref includes both its textarea element and the `replaceNode` method to interact with the abstract syntax tree. https://github.com/opensearch-project/oui/blob/main/src/components/markdown_editor/markdown_editor.tsx#L342
+Rarely, a component's ref needs to be something other than a DOM element, or provide additional information. In these cases, React's `useImperativeHandle` can be used to provide a custom object as the ref's value:
 
 ```ts
 import React, { useImperativeHandle } from 'react';
 
-export const OuiMarkdownEditor = forwardRef<
-  OuiMarkdownEditorRef,
-  OuiMarkdownEditorProps
+export const MyEditor = forwardRef<
+  MyEditorRef,
+  MyEditorProps
   >(
   (props, ref) => {
     ...
 
-    // combines the textarea element & `replaceNode` into a single object, which is then passed back to the forwarded `ref`
+    // combines the textarea element & custom methods into a single object
     useImperativeHandle(
       ref,
-      () => ({ textarea: textareaRef.current, replaceNode }),
-      [replaceNode]
+      () => ({ textarea: textareaRef.current, customMethod }),
+      [customMethod]
     );
 
     ...
   }
 );
 ```
+
+## Testing Components
+
+Testing is integrated into Storybook stories using Vitest and @testing-library:
+
+```bash
+# Run all tests
+yarn test
+
+# Run tests in watch mode
+yarn test:storybook:watch
+```
+
+Tests are written as Storybook stories with `play` functions for interaction testing. This approach combines documentation and behavioral testing in one place.
+
+Refer to the [testing guide](testing.md) for complete guidelines on writing tests in Storybook.
+
+### Testing with Consuming Applications
+
+To test your component changes in a consuming application:
+
+#### Build and Package
+
+```bash
+yarn build && npm pack
+```
+
+This creates a `.tgz` file in the OUI directory.
+
+#### In Your Application
+
+Update your `package.json` to point to the packed file:
+
+```json
+{
+  "dependencies": {
+    "@opensearch-project/oui": "/path/to/virajsanghvi-oui-x.x.x.tgz"
+  }
+}
+```
+
+Then install:
+
+```bash
+yarn install --check-files
+```
+
+**Note**: Update the `.tgz` filename after each rebuild to ensure package managers recognize the changes.
+
+## Best Practices
+
+### Component Design
+- Keep components focused and single-purpose
+- Provide sensible defaults
+- Make customization easy but not required
+- Follow established naming conventions
+
+### Efficient Wrapping Patterns
+
+When creating custom wrappers, follow these optimization patterns:
+
+#### When not to wrap
+
+If you are just updating an existing variant, and making no other changes, just update the component in the `src/components/ui` directory as CVA does not have a mechanism to extend `cva()` responses.
+
+#### Re-export Unchanged Components
+If a component needs no customization, re-export it directly instead of wrapping:
+
+```typescript
+// ❌ Unnecessary wrapper
+function CustomImage({ className, ...props }) {
+  return <BaseImage className={className} {...props} />
+}
+
+// ✅ Direct re-export
+export { Image } from "../ui/image"
+```
+
+#### Share Variant Definitions
+When multiple components use the same variants, define them once:
+
+```typescript
+// ✅ Shared variants
+const shapeVariants = cva("", {
+  variants: {
+    variant: {
+      circular: "rounded-full",
+      squared: "rounded-lg",
+    },
+  },
+  defaultVariants: { variant: "circular" },
+})
+
+// Both components use the same variants
+function Avatar({ variant, ...props }) {
+  return <BaseAvatar className={cn(shapeVariants({ variant }))} {...props} />
+}
+
+function AvatarFallback({ variant, ...props }) {
+  return <BaseAvatarFallback className={cn(shapeVariants({ variant }))} {...props} />
+}
+```
+
+#### Mixed Export Pattern
+Combine direct re-exports with custom wrappers in the same file:
+
+```typescript
+// Custom components with variants
+export { Avatar, AvatarFallback }
+// Direct re-export for unchanged component
+export { AvatarImage } from "../ui/avatar"
+```
+
+### Documentation
+- Write clear prop descriptions in argTypes
+- Use realistic examples in stories
+- Document any breaking changes or migration notes
+- Include usage examples for complex components
+
+### Performance
+- Avoid unnecessary re-renders
+- Use React.memo() for expensive components
+- Keep bundle size impact minimal
+- Lazy load heavy dependencies when possible
+
+## Common Patterns
+
+### Loading States
+```typescript
+// Add loading prop to custom components
+loading?: boolean
+
+// Show spinner when loading
+{loading && <Spinner className="mr-2 size-4" />}
+```
+
+### Variant Systems
+```typescript
+// Use class-variance-authority for variants
+const componentVariants = cva(
+  "base-classes",
+  {
+    variants: {
+      variant: {
+        default: "default-classes",
+        secondary: "secondary-classes",
+      },
+      size: {
+        sm: "small-classes",
+        lg: "large-classes",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
+```
+
+### Forwarding Refs
+```typescript
+const Component = React.forwardRef<
+  HTMLButtonElement,
+  ComponentProps
+>(({ className, ...props }, ref) => {
+  return (
+    <button
+      ref={ref}
+      className={cn("base-classes", className)}
+      {...props}
+    />
+  )
+})
+```
+
+## Troubleshooting
+
+### Common Issues
+
+**shadcn component not installing:**
+- Check your `components.json` configuration
+- Ensure you're in the project root directory
+- Verify network connectivity for downloading components
+
+**TypeScript errors:**
+- Check that all required dependencies are installed
+- Verify import paths are correct
+- Ensure component props extend the correct base types
+
+**Storybook not showing component:**
+- Verify the story file is in the `stories/` directory
+- Check that the component is properly exported
+- Ensure the story follows the correct naming convention
+
+**Styling not applying:**
+- Check Tailwind CSS configuration
+- Verify class names are correct
+- Ensure CSS is being built and imported properly
+
+### Getting Help
+
+- Check existing components for patterns and examples
+- Review the [Storybook documentation](./storybook-template-pattern.md)
+- Test changes in Storybook before committing
+- Follow the established code review process
+
+[component-design]: component-design.md
