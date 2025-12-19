@@ -50,8 +50,26 @@ function scopeCSS(): void {
     htmlResetStyles = htmlResetMatch[1].trim();
   }
 
-  // Remove the first @layer base section from the original CSS
-  const cssWithoutFirstLayerBase = css.replace(layerBaseRegex, '');
+  // Process scoped styles in-place by replacing marker pairs with @scope blocks
+  let processedCSS = css;
+
+  // Find all scoped styles marker pairs and process them
+  const scopeMarkerRegex =
+    /\.__oui-scoped-styles-start\s*\{[^}]*\}([\s\S]*?)\.__oui-scoped-styles-end\s*\{[^}]*\}/g;
+
+  processedCSS = processedCSS.replace(scopeMarkerRegex, (match, content) => {
+    // Extract the content between markers and wrap it in @scope
+    const trimmedContent = content.trim();
+    if (trimmedContent) {
+      return `@scope (.oui2) to (.oui2-end) {
+${trimmedContent.replace(/^/gm, '  ')}
+}`;
+    }
+    return '';
+  });
+
+  // Remove the first @layer base section from the processed CSS
+  const cssWithoutFirstLayerBase = processedCSS.replace(layerBaseRegex, '');
 
   // Create scoped CSS
   const scopedCSS = `/* OUI2 Library - Scoped CSS */

@@ -127,6 +127,9 @@
   --color-severity-critical: var(--oui-severity-critical);
 }
 
+/* This allows scope-css.ts to scope these styles without tailwind stripping during build */
+.__oui-scoped-styles-start { display: none; }
+
 @layer base {
   * {
     @apply oui:border-border oui:outline-ring/50;
@@ -134,6 +137,11 @@
 
   body {
     @apply oui:bg-background oui:text-foreground;
+  }
+
+  /* Apply on .oui2 hierarchies as body style won't get picked up */
+  .oui2 {
+    @apply oui:text-foreground;
   }
 }
 
@@ -175,3 +183,5 @@
 [data-sonner-toaster] button {
   margin-left: auto !important;
 }
+
+.__oui-scoped-styles-end { display: none; }

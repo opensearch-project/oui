@@ -1,15 +1,15 @@
 # OUI
 
-## [`2.0.0-alpha.1`](https://github.com/opensearch-project/oui/tree/main)
+## [`2.0.0-alpha.2`](https://github.com/opensearch-project/oui/tree/main)
 
 ### Deprecations
 
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
-- Initial 2.x shadcn-based alpha-release ([#1666](https://github.com/opensearch-project/oui/pull/1666))
 
 ### 🐛 Bug Fixes
+- Scope preset.css custom css to avoid conflicts ([#1673](https://github.com/opensearch-project/oui/pull/1673))
 
 ### 🚞 Infrastructure
 
@@ -20,6 +20,12 @@
 ### 🪛 Refactoring
 
 ### 🔩 Tests
+
+
+## [`2.0.0-alpha.1`](https://github.com/opensearch-project/oui/tree/main)
+
+### 📈 Features/Enhancements
+- Initial 2.x shadcn-based alpha-release ([#1666](https://github.com/opensearch-project/oui/pull/1666))
 
 
 ## [`1.22.1`](https://github.com/opensearch-project/oui/tree/1.22.1)
