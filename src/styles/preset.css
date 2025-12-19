@@ -143,6 +143,11 @@
   .oui2 {
     @apply oui:text-foreground;
   }
+
+  /* Utility class to get oui background as otherwise only on body */
+  .oui2-body {
+    @apply oui:bg-background;
+  }
 }
 
 /* Sonner Toast Styling */

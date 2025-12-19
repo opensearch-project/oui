@@ -65,6 +65,22 @@ import '@opensearch-project/oui/style.scoped.css';
 </div>
 ```
 
+#### Important considerations for scoped styles
+
+When using scoped styles, there are some important limitations to be aware of:
+
+**HTML and body styles**: Some expected styles that would normally apply to `html` and `body` elements may not be presented when using scoped styles. This happens because if `.oui2` is used on a descendant element, the scoped styles cannot affect parent elements like `html` or `body`. For the most consistent behavior, consider placing `.oui2` as high up in your DOM tree as possible.
+
+**Background colors**: Since `body` styles are scoped and won't apply unless `.oui2` is placed directly on the `<body>` element, you should use the `.oui2-body` class on your root container to get the expected background color:
+
+```jsx
+<div className="oui2 oui2-body">
+  {/* Your OUI components here */}
+  <Button>Click me</Button>
+<div className="oui2-end"></div>
+</div>
+```
+
 The library supports both light and dark themes through CSS custom properties and the `dark` class.
 
 ### Customizing with CSS custom properties

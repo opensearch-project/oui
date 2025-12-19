@@ -6,7 +6,7 @@
  * In @layer theme so applied before shadcn reset css in @layer base
  */
 
-@layer base {
+@layer theme {
   /* Unset box-sizing reset */
   *, *:before, *:after {
     box-sizing: unset;
