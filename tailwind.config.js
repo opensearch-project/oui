@@ -11,5 +11,5 @@ export default {
         'severity-critical': 'hsl(var(--oui-severity-critical))'
       }
     }
-  },
+  }
 }

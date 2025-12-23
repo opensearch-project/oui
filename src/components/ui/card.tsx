@@ -13,7 +13,7 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
     <div
       data-slot="card"
       className={cn(
-        "oui:bg-card oui:text-card-foreground oui:flex oui:flex-col oui:gap-6 oui:rounded-xl oui:border oui:py-6 oui:shadow-sm",
+        "oui:bg-card oui:text-card-foreground oui:flex oui:flex-col oui:gap-3 oui:rounded-xl oui:border oui:py-4 oui:shadow-sm",
         className
       )}
       {...props}
@@ -22,11 +22,14 @@ function Card({ className, ...props }: React.ComponentProps<"div">) {
 }
 
 function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
+  const hasBorder = className?.includes('border-b');
+  
   return (
     <div
       data-slot="card-header"
       className={cn(
-        "oui:@container/card-header oui:grid oui:auto-rows-min oui:grid-rows-[auto_auto] oui:items-start oui:gap-2 oui:px-6 oui:has-data-[slot=card-action]:grid-cols-[1fr_auto] oui:[.border-b]:pb-6",
+        "oui:@container/card-header oui:grid oui:auto-rows-min oui:grid-rows-[auto_auto] oui:items-start oui:gap-2 oui:px-4 oui:has-data-[slot=card-action]:grid-cols-[1fr_auto]",
+        hasBorder && "oui:pb-6",
         className
       )}
       {...props}
@@ -71,17 +74,23 @@ function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
       data-slot="card-content"
-      className={cn("oui:px-6", className)}
+      className={cn("oui:px-4", className)}
       {...props}
     />
   )
 }
 
 function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
+  const hasBorder = className?.includes('border-t');
+  
   return (
     <div
       data-slot="card-footer"
-      className={cn("oui:flex oui:items-center oui:px-6 oui:[.border-t]:pt-6", className)}
+      className={cn(
+        "oui:flex oui:items-center oui:px-4",
+        hasBorder && "oui:pt-6",
+        className
+      )}
       {...props}
     />
   )

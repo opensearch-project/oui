@@ -1,43 +1,47 @@
 @import "tailwindcss" prefix(oui);
 @import "tw-animate-css";
 
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
   /* Light theme variables */
   --oui-background: theme(colors.white);
-  --oui-foreground: theme(colors.slate.950);
+  --oui-foreground: theme(colors.neutral.950);
   --oui-card: theme(colors.white);
-  --oui-card-foreground: theme(colors.slate.950);
+  --oui-card-foreground: theme(colors.neutral.950);
   --oui-popover: theme(colors.white);
-  --oui-popover-foreground: theme(colors.slate.950);
-  --oui-primary: theme(colors.violet.700);
-  --oui-primary-foreground: theme(colors.slate.50);
-  --oui-secondary: theme(colors.purple.100);
+  --oui-popover-foreground: theme(colors.neutral.950);
+  --oui-primary: theme(colors.sky.700);
+  --oui-primary-foreground: theme(colors.neutral.50);
+  --oui-secondary: theme(colors.neutral.100);
   --oui-secondary-foreground: theme(colors.neutral.900);
-  --oui-muted: theme(colors.slate.100);
-  --oui-muted-foreground: theme(colors.slate.500);
-  --oui-accent: theme(colors.slate.100);
-  --oui-accent-foreground: theme(colors.slate.900);
+  --oui-muted: theme(colors.neutral.100);
+  --oui-muted-foreground: theme(colors.neutral.500);
+  --oui-accent: theme(colors.neutral.100);
+  --oui-accent-foreground: theme(colors.neutral.900);
   --oui-destructive: theme(colors.red.600);
   --oui-destructive-foreground: theme(colors.red.50);
-  --oui-border: theme(colors.slate.200);
-  --oui-input: theme(colors.slate.200);
-  --oui-ring: theme(colors.slate.400);
+  --oui-border: theme(colors.neutral.200);
+  --oui-input: theme(colors.neutral.200);
+  --oui-ring: theme(colors.sky.700);
   --oui-chart-1: theme(colors.orange.600);
   --oui-chart-2: theme(colors.teal.600);
   --oui-chart-3: theme(colors.cyan.900);
   --oui-chart-4: theme(colors.amber.400);
   --oui-chart-5: theme(colors.amber.500);
   --oui-radius: 0.625rem;
-  --oui-sidebar: theme(colors.slate.50);
-  --oui-sidebar-foreground: theme(colors.slate.950);
-  --oui-sidebar-primary: theme(colors.slate.900);
-  --oui-sidebar-primary-foreground: theme(colors.slate.50);
-  --oui-sidebar-accent: theme(colors.slate.100);
-  --oui-sidebar-accent-foreground: theme(colors.slate.900);
-  --oui-sidebar-border: theme(colors.slate.200);
-  --oui-sidebar-ring: theme(colors.slate.400);
+  --oui-sidebar: theme(colors.neutral.50);
+  --oui-sidebar-foreground: theme(colors.neutral.950);
+  --oui-sidebar-primary: theme(colors.neutral.900);
+  --oui-sidebar-primary-foreground: theme(colors.neutral.50);
+  --oui-sidebar-accent: theme(colors.neutral.100);
+  --oui-sidebar-accent-foreground: theme(colors.neutral.900);
+  --oui-sidebar-border: theme(colors.neutral.200);
+  --oui-sidebar-ring: theme(colors.neutral.400);
   --oui-severity-low: theme(colors.amber.400);
   --oui-severity-med: theme(colors.amber.600);
   --oui-severity-high: theme(colors.orange.700);
@@ -46,38 +50,38 @@
 
 .dark {
   /* Dark theme variables */
-  --oui-background: theme(colors.slate.950);
-  --oui-foreground: theme(colors.slate.50);
-  --oui-card: theme(colors.slate.900);
-  --oui-card-foreground: theme(colors.slate.50);
-  --oui-popover: theme(colors.slate.800);
-  --oui-popover-foreground: theme(colors.slate.50);
-  --oui-primary: theme(colors.violet.500);
-  --oui-primary-foreground: theme(colors.slate.50);
-  --oui-secondary: theme(colors.violet.800);
-  --oui-secondary-foreground: theme(colors.slate.50);
-  --oui-muted: theme(colors.slate.800);
-  --oui-muted-foreground: theme(colors.slate.400);
-  --oui-accent: theme(colors.slate.700);
-  --oui-accent-foreground: theme(colors.slate.50);
+  --oui-background: theme(colors.neutral.950);
+  --oui-foreground: theme(colors.neutral.50);
+  --oui-card: theme(colors.neutral.900);
+  --oui-card-foreground: theme(colors.neutral.50);
+  --oui-popover: theme(colors.neutral.800);
+  --oui-popover-foreground: theme(colors.neutral.50);
+  --oui-primary: theme(colors.sky.500);
+  --oui-primary-foreground: theme(colors.neutral.50);
+  --oui-secondary: theme(colors.sky.800);
+  --oui-secondary-foreground: theme(colors.neutral.50);
+  --oui-muted: theme(colors.neutral.800);
+  --oui-muted-foreground: theme(colors.neutral.400);
+  --oui-accent: theme(colors.neutral.700);
+  --oui-accent-foreground: theme(colors.neutral.50);
   --oui-destructive: theme(colors.red.400);
   --oui-destructive-foreground: theme(colors.red.50);
   --oui-border: theme(colors.white / 10%);
   --oui-input: theme(colors.white / 15%);
-  --oui-ring: theme(colors.slate.500);
+  --oui-ring: theme(colors.sky.500);
   --oui-chart-1: theme(colors.blue.700);
   --oui-chart-2: theme(colors.emerald.500);
   --oui-chart-3: theme(colors.amber.500);
   --oui-chart-4: theme(colors.purple.500);
   --oui-chart-5: theme(colors.rose.500);
-  --oui-sidebar: theme(colors.slate.950);
-  --oui-sidebar-foreground: theme(colors.slate.50);
+  --oui-sidebar: theme(colors.neutral.950);
+  --oui-sidebar-foreground: theme(colors.neutral.50);
   --oui-sidebar-primary: theme(colors.blue.700);
-  --oui-sidebar-primary-foreground: theme(colors.slate.50);
-  --oui-sidebar-accent: theme(colors.slate.800);
-  --oui-sidebar-accent-foreground: theme(colors.slate.50);
+  --oui-sidebar-primary-foreground: theme(colors.neutral.50);
+  --oui-sidebar-accent: theme(colors.neutral.800);
+  --oui-sidebar-accent-foreground: theme(colors.neutral.50);
   --oui-sidebar-border: theme(colors.white / 10%);
-  --oui-sidebar-ring: theme(colors.slate.600);
+  --oui-sidebar-ring: theme(colors.neutral.600);
   --oui-severity-low: theme(colors.amber.400);
   --oui-severity-med: theme(colors.amber.600);
   --oui-severity-high: theme(colors.orange.700);
@@ -85,6 +89,7 @@
 }
 
 @theme inline {
+  /* Colors */
   --color-background: var(--oui-background);
   --color-foreground: var(--oui-foreground);
   --color-card: var(--oui-card);
@@ -109,10 +114,6 @@
   --color-chart-3: var(--oui-chart-3);
   --color-chart-4: var(--oui-chart-4);
   --color-chart-5: var(--oui-chart-5);
-  --radius-sm: calc(var(--oui-radius) - 4px);
-  --radius-md: calc(var(--oui-radius) - 2px);
-  --radius-lg: var(--oui-radius);
-  --radius-xl: calc(var(--oui-radius) + 4px);
   --color-sidebar: var(--oui-sidebar);
   --color-sidebar-foreground: var(--oui-sidebar-foreground);
   --color-sidebar-primary: var(--oui-sidebar-primary);
@@ -125,6 +126,81 @@
   --color-severity-med: var(--oui-severity-med);
   --color-severity-high: var(--oui-severity-high);
   --color-severity-critical: var(--oui-severity-critical);
+
+  /* Border Radius */
+  --radius-sm: calc(var(--oui-radius) - 4px);
+  --radius-md: calc(var(--oui-radius) - 2px);
+  --radius-lg: var(--oui-radius);
+  --radius-xl: calc(var(--oui-radius) + 4px);
+
+  /* Font Family */
+  --font-sans: Rubik, ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Source Code Pro', ui-monospace, monospace;
+
+  /* Font Sizes with line heights */
+  --text-xs: 12px;                /* 12px */
+  --text-xs--line-height: 16px;   /* 16px */
+  --text-sm: 14px;                /* 14px */
+  --text-sm--line-height: 20px;   /* 20px */
+  --text-base: 14px;              /* 16px */
+  --text-base--line-height: 20px; /* 24px */
+  --text-lg: 18px;                /* 18px */
+  --text-lg--line-height: 28px;   /* 28px */
+  --text-xl: 20px;                /* 20px */
+  --text-xl--line-height: 28px;   /* 28px */
+  --text-2xl: 24px;               /* 24px */
+  --text-2xl--line-height: 32px;  /* 32px */
+  --text-3xl: 30px;
+  --text-3xl--line-height: 36px;
+  --text-4xl: 36px;
+  --text-4xl--line-height: 40px;
+  --text-5xl: 48px;
+  --text-5xl--line-height: 1;
+  --text-6xl: 60px;
+  --text-6xl--line-height: 1;
+  --text-7xl: 72px;
+  --text-7xl--line-height: 1;
+  --text-8xl: 96px;
+  --text-8xl--line-height: 1;
+  --text-9xl: 128px;
+  --text-9xl--line-height: 1;
+
+  /* Spacing Scale */
+  --spacing-0: 0;              /* 0 */
+  --spacing-px: 1px;           /* 1 */
+  --spacing-0\.5: 2px;         /* 2 */
+  --spacing-1: 4px;            /* 4 */
+  --spacing-1\.5: 6px;         /* 6 */
+  --spacing-2: 8px;            /* 8 */
+  --spacing-2\.5: 10px;        /* 10 */
+  --spacing-3: 12px;           /* 12 */
+  --spacing-3\.5: 14px;        /* 14 */
+  --spacing-4: 16px;           /* 16 */
+  --spacing-5: 20px;           /* 20 */
+  --spacing-6: 24px;           /* 24 */
+  --spacing-7: 28px;           /* 28 */
+  --spacing-8: 32px;           /* 32 */
+  --spacing-9: 36px;           /* 36 */
+  --spacing-10: 40px;          /* 40 */
+  --spacing-11: 44px;          /* 44 */
+  --spacing-12: 48px;
+  --spacing-14: 56px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-28: 112px;
+  --spacing-32: 128px;
+  --spacing-36: 144px;
+  --spacing-40: 160px;
+  --spacing-44: 176px;
+  --spacing-48: 192px;
+  --spacing-52: 208px;
+  --spacing-56: 224px;
+  --spacing-60: 240px;
+  --spacing-64: 256px;
+  --spacing-72: 288px;
+  --spacing-80: 320px;
+  --spacing-96: 384px;
 }
 
 /* This allows scope-css.ts to scope these styles without tailwind stripping during build */
@@ -136,12 +212,12 @@
   }
 
   body {
-    @apply oui:bg-background oui:text-foreground;
+    @apply oui:bg-background oui:text-foreground oui:text-base;
   }
 
   /* Apply on .oui2 hierarchies as body style won't get picked up */
   .oui2 {
-    @apply oui:text-foreground;
+    @apply oui:text-foreground oui:text-base;
   }
 
   /* Utility class to get oui background as otherwise only on body */
