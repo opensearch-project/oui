@@ -9,6 +9,7 @@ const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   resolve: {
+    dedupe: ["react", "react-dom"],
     alias: {
       '@': path.resolve(dirname, './src'),
     },
