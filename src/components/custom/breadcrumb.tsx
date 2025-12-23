@@ -4,7 +4,7 @@
  */
 
 import * as React from 'react';
-import { Slash } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { BreadcrumbSeparator as BaseBreadcrumbSeparator } from '../ui/breadcrumb';
 
 // Custom BreadcrumbSeparator with Slash icon instead of ChevronRight
@@ -15,7 +15,7 @@ function BreadcrumbSeparator({
 }: React.ComponentProps<'li'>) {
   return (
     <BaseBreadcrumbSeparator className={className} {...props}>
-      {children ?? <Slash />}
+      {children ?? <ChevronRight />}
     </BaseBreadcrumbSeparator>
   );
 }
