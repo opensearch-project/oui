@@ -15,6 +15,7 @@
 ### 🚞 Infrastructure
 
 ### 📝 Documentation
+- Update documentation for 2.x ([#1676](https://github.com/opensearch-project/oui/pull/1676))
 
 ### 🛠 Maintenance
 
