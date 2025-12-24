@@ -5,6 +5,7 @@
 ### Deprecations
 
 ### 🛡 Security
+- Upgrade storybook to 9.1.17 for CVE ([#1678](https://github.com/opensearch-project/oui/pull/1678))
 
 ### 📈 Features/Enhancements
 
