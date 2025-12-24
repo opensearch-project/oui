@@ -1,5 +1,4 @@
 import type { Preview } from "@storybook/react-vite";
-import { useEffect } from "react";
 
 import "../src/styles/preset.css";
 
@@ -16,16 +15,14 @@ const preview: Preview = {
   decorators: [
     (Story, context) => {
       const { backgrounds } = context.globals;
+      const isDark = backgrounds?.value === "dark";
 
-      useEffect(() => {
-        const isDark = backgrounds?.value === "dark";
-
-        if (isDark) {
-          document.body.classList.add("dark");
-        } else {
-          document.body.classList.remove("dark");
-        }
-      }, [backgrounds]);
+      // Apply dark mode class directly without React hooks to avoid version conflicts
+      if (isDark) {
+        document.body.classList.add("dark");
+      } else {
+        document.body.classList.remove("dark");
+      }
 
       return <Story />;
     },

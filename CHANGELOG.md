@@ -11,6 +11,7 @@
 ### 🐛 Bug Fixes
 - Scope preset.css custom css to avoid conflicts ([#1673](https://github.com/opensearch-project/oui/pull/1673))
 - Use theme layer for unset css + provide .oui2-body utility ([#1674](https://github.com/opensearch-project/oui/pull/1674))
+- Build lib with react 18, react 19 elsewhere, and use react/jsx-runtime ([#1677](https://github.com/opensearch-project/oui/pull/1677))
 
 ### 🚞 Infrastructure
 
