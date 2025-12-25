@@ -42,33 +42,47 @@ const buttonVariants = cva(
   }
 );
 
-function Button({
-  className,
-  variant = 'default',
-  size,
-  asChild = false,
-  loading = false,
-  children,
-  ...props
-}: React.ComponentProps<typeof BaseButton> &
-  VariantProps<typeof buttonVariants> & {
-    loading?: boolean;
-  }) {
-  const spinnerSize =
-    size === 'sm' ? 'oui:size-3' : size === 'lg' ? 'oui:size-4' : 'oui:size-4';
+const Button = React.forwardRef<
+  HTMLButtonElement,
+  React.ComponentProps<typeof BaseButton> &
+    VariantProps<typeof buttonVariants> & {
+      loading?: boolean;
+    }
+>(
+  (
+    {
+      className,
+      variant = 'default',
+      size,
+      asChild = false,
+      loading = false,
+      children,
+      ...props
+    },
+    ref
+  ) => {
+    const spinnerSize =
+      size === 'sm'
+        ? 'oui:size-3'
+        : size === 'lg'
+          ? 'oui:size-4'
+          : 'oui:size-4';
 
-  return (
-    <BaseButton
-      className={cn(buttonVariants({ variant, size }), className)}
-      variant={variant}
-      size={size}
-      asChild={asChild}
-      disabled={loading || props.disabled}
-      {...props}>
-      {loading && <Spinner className={cn('oui:mr-2', spinnerSize)} />}
-      {children}
-    </BaseButton>
-  );
-}
+    return (
+      <BaseButton
+        ref={ref}
+        className={cn(buttonVariants({ variant, size }), className)}
+        variant={variant}
+        size={size}
+        asChild={asChild}
+        disabled={loading || props.disabled}
+        {...props}>
+        {loading && <Spinner className={cn('oui:mr-2', spinnerSize)} />}
+        {children}
+      </BaseButton>
+    );
+  }
+);
+Button.displayName = 'Button';
 
 export { Button, buttonVariants };
