@@ -37,20 +37,17 @@
     "build-docs": "yarn run build:storybook",
     "clean": "rm -rf build node_modules dist lib docs",
     "fix:shadcn": "npx tsx scripts/fix-shadcn-components.ts",
-    "lint": "yarn run lint:ts && yarn run lint:ts:react16 && yarn run lint:es",
+    "lint": "yarn run lint:ts && yarn run lint:es",
     "lint:es": "eslint --cache \"{src,scripts}/**/*.{ts,tsx,js}\" --max-warnings 0",
     "lint:es:fix": "yarn run lint:es --fix",
     "lint:ts": "tsc --project tsconfig.typecheck.json --noEmit",
     "lint:ts:watch": "tsc --project tsconfig.typecheck.json --noEmit --watch",
-    "lint:ts:react16": "tsc --project tsconfig.react16.json --noEmit",
-    "lint:ts:react16:watch": "tsc --project tsconfig.react16.json --noEmit --watch",
     "prebuild": "mkdir -p dist",
     "prepublishOnly": "yarn run build",
     "start": "storybook dev -p 8030 --no-open",
-    "test": "yarn run test:react16 && yarn run test:react18 && yarn run test:eslint",
+    "test": "yarn run test:storybook && yarn run test:eslint",
     "test:eslint": "node scripts/eslint-plugin/require_license_header.test.js && node scripts/eslint-plugin/i18n.test.js && node scripts/eslint-plugin/rel.test.js && node scripts/eslint-plugin/forward_ref_display_name.test.js",
-    "test:react16": "REACT_VERSION=16 vitest --project=storybook --run",
-    "test:react18": "REACT_VERSION=18 vitest --project=storybook --run"
+    "test:storybook": "vitest --project=storybook --run"
   },
   "repository": {
     "type": "git",
@@ -130,8 +127,8 @@
     "@types/node": "^24.10.1",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
-    "@types/react-16": "npm:@types/react@^16.14.0",
-    "@types/react-dom-16": "npm:@types/react-dom@^16.9.0",
+    "@types/react-18": "npm:@types/react@^18.3.17",
+    "@types/react-dom-18": "npm:@types/react-dom@^18.3.5",
     "@vitest/browser": "^3.0.0",
     "@vitest/coverage-v8": "^3.0.0",
     "@vitest/ui": "^3.0.0",
@@ -153,6 +150,8 @@
     "prettier": "^3.4.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-18": "npm:react@^18.3.1",
+    "react-dom-18": "npm:react-dom@^18.3.1",
     "storybook": "^9.1.16",
     "tailwindcss": "^4.1.13",
     "tsc-alias": "^1.8.16",
@@ -163,8 +162,8 @@
   "peerDependencies": {
     "@types/react": "*",
     "@types/react-dom": "*",
-    "react": "^16.12 || ^17.0 || ^18.0 || ^19.0",
-    "react-dom": "^16.12 || ^17.0 || ^18.0 || ^19.0"
+    "react": "^16.14 || ^17.0 || ^18.0 || ^19.0",
+    "react-dom": "^16.14 || ^17.0 || ^18.0 || ^19.0"
   },
   "peerDependenciesMeta": {
     "@types/react": {

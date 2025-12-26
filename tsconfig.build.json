@@ -1,12 +1,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    // React 16 compatible JSX transform
-    "jsx": "react",
+    // React 18 compatible JSX transform
+    "jsx": "react-jsx",
 
-    // Better compatibility with older environments
-    "target": "es5",
-    "lib": ["dom", "es6", "es2017.object"],
+    // Better compatibility while supporting modern features
+    "target": "es2017",
+    "lib": ["dom", "es2017", "es2017.object"],
 
     // Ensure declarations are generated for distribution
     "declaration": true,
@@ -29,7 +29,18 @@
     "skipLibCheck": true,
 
     // Preserve imports for better tree-shaking
-    "verbatimModuleSyntax": false
+    "verbatimModuleSyntax": false,
+
+    // Path mapping to use React 18 for build
+    "paths": {
+      "@/*": ["./src/*"],
+      "react": ["./node_modules/react-18"],
+      "react-dom": ["./node_modules/react-dom-18"],
+      "react/jsx-runtime": ["./node_modules/react-18/jsx-runtime"],
+      "react/jsx-dev-runtime": ["./node_modules/react-18/jsx-dev-runtime"],
+      "@types/react": ["./node_modules/@types/react-18"],
+      "@types/react-dom": ["./node_modules/@types/react-dom-18"]
+    }
   },
 
   // Include source files
