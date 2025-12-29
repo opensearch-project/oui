@@ -19,6 +19,7 @@
 - Add portal element selectors to @scope ([#1681](https://github.com/opensearch-project/oui/pull/1681))
 - Match OUI1 V9 fonts and font sizes ([#1682](https://github.com/opensearch-project/oui/pull/1682))
 - Match OUI1 V9 colors ([#1682](https://github.com/opensearch-project/oui/pull/1682))
+- Use small rounded corners on buttons ([#1682](https://github.com/opensearch-project/oui/pull/1682))
 
 ### 🚞 Infrastructure
 
