@@ -173,6 +173,42 @@ export const WithError: Story = {
 
 ## Testing Best Practices
 
+### Test ID Strategy
+
+#### Use `data-test-subj` Attributes
+Use descriptive and stable test IDs for reliable testing:
+
+```typescript
+// ✅ Good - Descriptive and stable
+<Button data-test-subj="workspace-save-button">Save</Button>
+
+// ❌ Avoid - Generic or implementation-dependent
+<Button data-test-subj="btn-1">Save</Button>
+```
+
+### Component Testing Approach
+
+#### Test Behavior, Not Implementation
+Focus on what the component does, not how it does it:
+
+```typescript
+// ✅ Good - Test behavior
+test('saves workspace when save button is clicked', () => {
+  render(<WorkspaceForm />);
+
+  fireEvent.click(screen.getByTestId('workspace-save-button'));
+
+  expect(mockSaveWorkspace).toHaveBeenCalled();
+});
+
+// ❌ Avoid - Testing internal state
+test('button has correct className', () => {
+  render(<Button variant="primary">Save</Button>);
+
+  expect(screen.getByRole('button')).toHaveClass('btn-primary');
+});
+```
+
 ### Do's
 
 - **Use semantic queries**: `getByRole`, `getByLabelText`, `getByText`
@@ -180,6 +216,7 @@ export const WithError: Story = {
 - **Test accessibility**: Screen reader compatibility, keyboard navigation
 - **Test all variants**: All component props and states
 - **Use descriptive test names**: Clear, specific story names
+- **Test behavior**: Focus on user outcomes, not implementation details
 
 ### Don'ts
 

@@ -59,10 +59,10 @@ yarn start --port 9000
 ## Documentation
 
 ### Component Development
+* [Design System Governance](wiki/design-system-governance.md) - Component standards and governance framework
 * [Component development](wiki/component-development.md) - Complete guide for adding and developing components
   * [Creating components manually](wiki/creating-components-manually.md) - Step-by-step component creation
   * [Creating components with Yeoman](wiki/creating-components-yeoman.md) - Legacy Yeoman approach (deprecated)
-* [Component design](wiki/component-design.md) - Design principles and patterns
 * [Testing](wiki/testing.md) - Component testing with Storybook
 
 ### Storybook & Documentation
@@ -74,9 +74,14 @@ yarn start --port 9000
 * [Theming](wiki/theming.md) - CSS custom properties and theme system
 * [Naming conventions reference](wiki/naming-conventions-reference.md) - Component and class naming
 
+### OUI 1.x to 2.x Migration
+* [Migration Guide](wiki/design-system-migration-guide.md) - Guide to migrating from OUI 1.x to 2.x
+* [AI Assistant Migration Guide](wiki/agents/ai-assistant-migration-guide.md) - Migration guide for AI Assistants
+* [1.x to 2.x Component Mapping](wiki/oui-1.x-2.x-component-mapping-reference.md) - Component mapping for migration
+
 ### Other Guides
-* [Creating icons](wiki/creating-icons.md) - Adding and designing icons
 * [Consuming OUI](wiki/consuming.md) - How to use OUI in your projects
+* [Creating icons](wiki/creating-icons.md) - Adding and designing icons
 * [Releasing versions](wiki/releasing-versions.md) - Release management process
 * [Automated accessibility testing](wiki/automated-accessibility-testing.md) - A11y testing setup
 * [Validating with OpenSearch Dashboards](wiki/validating-with-opensearch-dashboards.md) - Integration testing
