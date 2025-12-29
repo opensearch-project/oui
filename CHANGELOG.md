@@ -5,6 +5,7 @@
 ### Deprecations
 
 ### 🛡 Security
+- Upgrade storybook to 9.1.17 for CVE ([#1681](https://github.com/opensearch-project/oui/pull/1681))
 
 ### 📈 Features/Enhancements
 
@@ -12,6 +13,10 @@
 - Scope preset.css custom css to avoid conflicts ([#1673](https://github.com/opensearch-project/oui/pull/1673))
 - Use theme layer for unset css + provide .oui2-body utility ([#1674](https://github.com/opensearch-project/oui/pull/1674))
 - Build lib with react 18, react 19 elsewhere, and use react/jsx-runtime ([#1677](https://github.com/opensearch-project/oui/pull/1677))
+- Forward ref on buttons to be compatible with radix react 19 implementation ([#1681](https://github.com/opensearch-project/oui/pull/1681))
+- Revert to just using react 19 for everything ([#1681](https://github.com/opensearch-project/oui/pull/1681))
+- Add portal element selectors to @scope ([#1681](https://github.com/opensearch-project/oui/pull/1681))
+
 
 ### 🚞 Infrastructure
 

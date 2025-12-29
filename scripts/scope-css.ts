@@ -13,6 +13,11 @@ import * as path from 'path';
  * while keeping the rest of the CSS unscoped
  */
 function scopeCSS(): void {
+  // Scope selectors - update in one place
+  const SCOPE_START =
+    '.oui2, body > [data-slot], body > [data-vaul-drawer], body > [data-radix-popper-content-wrapper]';
+  const SCOPE_END = '.oui2-end';
+
   const cssPath = path.join(__dirname, '../dist/style.css');
   const resetPath = path.join(__dirname, '../src/styles/unset-oui1.css');
   const scopedPath = path.join(__dirname, '../dist/style.scoped.css');
@@ -61,7 +66,7 @@ function scopeCSS(): void {
     // Extract the content between markers and wrap it in @scope
     const trimmedContent = content.trim();
     if (trimmedContent) {
-      return `@scope (.oui2) to (.oui2-end) {
+      return `@scope (${SCOPE_START}) to (${SCOPE_END}) {
 ${trimmedContent.replace(/^/gm, '  ')}
 }`;
     }
@@ -73,15 +78,15 @@ ${trimmedContent.replace(/^/gm, '  ')}
 
   // Create scoped CSS
   const scopedCSS = `/* OUI2 Library - Scoped CSS */
-/* Uses CSS @scope to limit reset styles from .oui2 to .oui2-end */
+/* Uses CSS @scope to limit reset styles from ${SCOPE_START} to ${SCOPE_END} */
 
-@scope (.oui2) to (.oui2-end) {
+@scope (${SCOPE_START}) to (${SCOPE_END}) {
   /* Include OUI1 reset unsets to prevent conflicts */
 ${resetCSS.replace(/^/gm, '  ')}
 
   /* Tailwind Reset CSS */
   ${tailwindResetCSS.replace(/^/gm, '  ')}
-  
+
   /* Apply HTML reset styles to .oui2 root container */
   @layer base {
     :scope {
