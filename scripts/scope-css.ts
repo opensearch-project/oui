@@ -91,7 +91,7 @@ ${resetCSS.replace(/^/gm, '  ')}
   @layer base {
     :scope {
       ${htmlResetStyles ? htmlResetStyles.replace(/^/gm, '    ') : '    /* No HTML reset styles found */'}
-      font-size: 16px; /* to override OUI */
+      font-size: 14px; /* to override OUI 1 v9 theme */
     }
   }
 }

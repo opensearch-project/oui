@@ -8,7 +8,7 @@
 - Upgrade storybook to 9.1.17 for CVE ([#1681](https://github.com/opensearch-project/oui/pull/1681))
 
 ### 📈 Features/Enhancements
-- Recompile css in storybook ([#1682](https://github.com/opensearch-project/oui/pull/1682))
+- Recompile css in storybook dev server ([#1682](https://github.com/opensearch-project/oui/pull/1682))
 
 ### 🐛 Bug Fixes
 - Scope preset.css custom css to avoid conflicts ([#1673](https://github.com/opensearch-project/oui/pull/1673))
@@ -17,7 +17,7 @@
 - Forward ref on buttons to be compatible with radix react 19 implementation ([#1681](https://github.com/opensearch-project/oui/pull/1681))
 - Revert to just using react 19 for everything ([#1681](https://github.com/opensearch-project/oui/pull/1681))
 - Add portal element selectors to @scope ([#1681](https://github.com/opensearch-project/oui/pull/1681))
-
+- Match OUI1 V9 fonts and font sizes ([#1682](https://github.com/opensearch-project/oui/pull/1682))
 
 ### 🚞 Infrastructure
 
