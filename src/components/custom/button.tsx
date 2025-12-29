@@ -12,7 +12,7 @@ import { Spinner } from '@/components';
 
 // Combined button variants that merge base variants with custom overrides
 const buttonVariants = cva(
-  "oui:inline-flex oui:items-center oui:justify-center oui:gap-2 oui:whitespace-nowrap oui:text-sm oui:font-medium oui:transition-all oui:disabled:pointer-events-none oui:disabled:opacity-50 oui:[&_svg]:pointer-events-none oui:[&_svg:not([class*='size-'])]:size-4 oui:shrink-0 oui:[&_svg]:shrink-0 oui:outline-none oui:focus-visible:border-ring oui:focus-visible:ring-ring/50 oui:focus-visible:ring-[3px] oui:aria-invalid:ring-destructive/20 oui:dark:aria-invalid:ring-destructive/40 oui:aria-invalid:border-destructive oui:rounded-full oui:active:opacity-60 oui:active:scale-[0.98]",
+  "oui:inline-flex oui:items-center oui:justify-center oui:gap-2 oui:whitespace-nowrap oui:text-sm oui:font-medium oui:transition-all oui:disabled:pointer-events-none oui:disabled:opacity-50 oui:[&_svg]:pointer-events-none oui:[&_svg:not([class*='size-'])]:size-4 oui:shrink-0 oui:[&_svg]:shrink-0 oui:outline-none oui:focus-visible:border-ring oui:focus-visible:ring-ring/50 oui:focus-visible:ring-[3px] oui:aria-invalid:ring-destructive/20 oui:dark:aria-invalid:ring-destructive/40 oui:aria-invalid:border-destructive oui:rounded-sm oui:active:opacity-60 oui:active:scale-[0.98]",
   {
     variants: {
       variant: {
