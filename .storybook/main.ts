@@ -198,6 +198,12 @@ const config: StorybookConfig = {
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
     };
 
+    // Enable CSS processing with PostCSS (including Tailwind)
+    config.css = {
+      ...config.css,
+      postcss: resolve(__dirname, "../postcss.config.js"),
+    };
+
     return config;
   }
 };

@@ -8,6 +8,7 @@
 - Upgrade storybook to 9.1.17 for CVE ([#1681](https://github.com/opensearch-project/oui/pull/1681))
 
 ### 📈 Features/Enhancements
+- Recompile css in storybook ([#1682](https://github.com/opensearch-project/oui/pull/1682))
 
 ### 🐛 Bug Fixes
 - Scope preset.css custom css to avoid conflicts ([#1673](https://github.com/opensearch-project/oui/pull/1673))
