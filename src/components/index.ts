@@ -26,6 +26,7 @@ export * from './ui/drawer';
 export * from './ui/dropdown-menu';
 export * from './ui/form';
 export * from './ui/hover-card';
+export * from './custom/icons';
 export * from './ui/input-otp';
 export * from './ui/input';
 export * from './ui/label';

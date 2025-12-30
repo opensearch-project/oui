@@ -9,7 +9,7 @@ import {
   SelectLabel,
   SelectSeparator,
 } from '@/components';
-import { LineChart, BarChart3, PieChart } from 'lucide-react';
+import { LineChartIcon, BarChart3Icon, PieChartIcon } from '@/components';
 
 const meta: Meta<typeof Select> = {
   title: 'UI/Select',
@@ -121,19 +121,19 @@ export const WithIcon: Story = {
       <SelectContent>
         <SelectItem value="line">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <LineChart className="oui:size-3 oui:text-muted-foreground" />
+            <LineChartIcon className="oui:size-3 oui:text-muted-foreground" />
             Line
           </div>
         </SelectItem>
         <SelectItem value="bar">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <BarChart3 className="oui:size-3 oui:text-muted-foreground" />
+            <BarChart3Icon className="oui:size-3 oui:text-muted-foreground" />
             Bar
           </div>
         </SelectItem>
         <SelectItem value="pie">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <PieChart className="oui:size-3 oui:text-muted-foreground" />
+            <PieChartIcon className="oui:size-3 oui:text-muted-foreground" />
             Pie
           </div>
         </SelectItem>
@@ -152,19 +152,19 @@ export const WithIconSelected: Story = {
       <SelectContent>
         <SelectItem value="line">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <LineChart className="oui:size-3 oui:text-muted-foreground" />
+            <LineChartIcon className="oui:size-3 oui:text-muted-foreground" />
             Line
           </div>
         </SelectItem>
         <SelectItem value="bar">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <BarChart3 className="oui:size-3 oui:text-muted-foreground" />
+            <BarChart3Icon className="oui:size-3 oui:text-muted-foreground" />
             Bar
           </div>
         </SelectItem>
         <SelectItem value="pie">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <PieChart className="oui:size-3 oui:text-muted-foreground" />
+            <PieChartIcon className="oui:size-3 oui:text-muted-foreground" />
             Pie
           </div>
         </SelectItem>

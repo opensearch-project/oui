@@ -1,8 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
-import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from '@/components';
-import { Button } from '@/components';
-import { Heart, Bookmark, Share, Check, Trash2 } from 'lucide-react';
+import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText, Button, HeartIcon, BookmarkIcon, ShareIcon, CheckIcon, Trash2Icon } from '@/components';
 
 const meta: Meta<typeof ButtonGroup> = {
   title: 'UI/ButtonGroup',
@@ -140,15 +138,15 @@ export const WithIcons: Story = {
   render: () => (
     <ButtonGroup>
       <Button variant="outline">
-        <Heart />
+        <HeartIcon />
         Like
       </Button>
       <Button variant="outline">
-        <Bookmark />
+        <BookmarkIcon />
         Bookmark
       </Button>
       <Button variant="outline">
-        <Share />
+        <ShareIcon />
         Share
       </Button>
     </ButtonGroup>
@@ -236,10 +234,10 @@ export const ToolbarExample: Story = {
       <ButtonGroup>
         <ButtonGroupText>Edit:</ButtonGroupText>
         <Button variant="outline" size="sm">
-          <Check />
+          <CheckIcon />
         </Button>
         <Button variant="outline" size="sm">
-          <Trash2 />
+          <Trash2Icon />
         </Button>
         <ButtonGroupSeparator />
         <Button variant="outline" size="sm">Copy</Button>

@@ -1,8 +1,27 @@
 # OUI
 
-## [`2.0.0-alpha.2`](https://github.com/opensearch-project/oui/tree/main)
+## [`2.0.0-alpha.3`](https://github.com/opensearch-project/oui/tree/main)
 
 ### Deprecations
+
+### 🛡 Security
+
+### 📈 Features/Enhancements
+
+### 🐛 Bug Fixes
+
+### 🚞 Infrastructure
+
+### 📝 Documentation
+
+### 🛠 Maintenance
+
+### 🪛 Refactoring
+- Centralize icons and enable custom icons ([#1684](https://github.com/opensearch-project/oui/pull/1684))
+
+### 🔩 Tests
+
+## [`2.0.0-alpha.2`](https://github.com/opensearch-project/oui/tree/main)
 
 ### 🛡 Security
 - Upgrade storybook to 9.1.17 for CVE ([#1681](https://github.com/opensearch-project/oui/pull/1681))
@@ -21,16 +40,8 @@
 - Match OUI1 V9 colors ([#1682](https://github.com/opensearch-project/oui/pull/1682))
 - Use small rounded corners on buttons ([#1682](https://github.com/opensearch-project/oui/pull/1682))
 
-### 🚞 Infrastructure
-
 ### 📝 Documentation
 - Update documentation for 2.x ([#1676](https://github.com/opensearch-project/oui/pull/1676))
-
-### 🛠 Maintenance
-
-### 🪛 Refactoring
-
-### 🔩 Tests
 
 
 ## [`2.0.0-alpha.1`](https://github.com/opensearch-project/oui/tree/main)

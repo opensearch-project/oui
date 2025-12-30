@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { Minus, Plus } from 'lucide-react';
+import { MinusIcon, PlusIcon } from '@/components';
 import {
   Drawer,
   DrawerClose,
@@ -105,7 +105,7 @@ export const WithCounter: Story = {
                   onClick={() => onClick(-10)}
                   disabled={goal <= 200}
                 >
-                  <Minus className="oui:h-4 oui:w-4" />
+                  <MinusIcon className="oui:h-4 oui:w-4" />
                   <span className="oui:sr-only">Decrease</span>
                 </Button>
                 <div className="oui:flex-1 oui:text-center">
@@ -123,7 +123,7 @@ export const WithCounter: Story = {
                   onClick={() => onClick(10)}
                   disabled={goal >= 400}
                 >
-                  <Plus className="oui:h-4 oui:w-4" />
+                  <PlusIcon className="oui:h-4 oui:w-4" />
                   <span className="oui:sr-only">Increase</span>
                 </Button>
               </div>

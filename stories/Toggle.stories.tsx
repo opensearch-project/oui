@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight } from 'lucide-react';
+import { BoldIcon, ItalicIcon, UnderlineIcon, AlignLeftIcon, AlignCenterIcon, AlignRightIcon } from '@/components';
 import { Toggle } from '@/components';
 
 
@@ -56,7 +56,7 @@ export const Default: Story = {
         aria-label="Toggle bold"
         {...args}
       >
-        <Bold className="oui:h-4 oui:w-4" />
+        <BoldIcon className="oui:h-4 oui:w-4" />
       </Toggle>
     );
   },
@@ -73,8 +73,8 @@ export const WithText: Story = {
         aria-label="Toggle bold"
         {...args}
       >
-        <Bold className="oui:h-4 oui:w-4" />
-        Bold
+        <BoldIcon className="oui:h-4 oui:w-4" />
+        BoldIcon
       </Toggle>
     );
   },
@@ -101,7 +101,7 @@ export const Outline: Story = {
         aria-label="Toggle italic"
         {...args}
       >
-        <Italic className="oui:h-4 oui:w-4" />
+        <ItalicIcon className="oui:h-4 oui:w-4" />
       </Toggle>
     );
   },
@@ -129,7 +129,7 @@ export const Sizes: Story = {
           aria-label="Small toggle"
           {...args}
         >
-          <Bold className="oui:h-3 oui:w-3" />
+          <BoldIcon className="oui:h-3 oui:w-3" />
         </Toggle>
         <Toggle
           size="default"
@@ -138,7 +138,7 @@ export const Sizes: Story = {
           aria-label="Default toggle"
           {...args}
         >
-          <Bold className="oui:h-4 oui:w-4" />
+          <BoldIcon className="oui:h-4 oui:w-4" />
         </Toggle>
         <Toggle
           size="lg"
@@ -147,7 +147,7 @@ export const Sizes: Story = {
           aria-label="Large toggle"
           {...args}
         >
-          <Bold className="oui:h-5 oui:w-5" />
+          <BoldIcon className="oui:h-5 oui:w-5" />
         </Toggle>
       </div>
     );
@@ -163,35 +163,35 @@ export const Sizes: Story = {
 
 export const TextFormatting: Story = {
   render: (args) => {
-    const [bold, setBold] = useState(false);
-    const [italic, setItalic] = useState(false);
-    const [underline, setUnderline] = useState(false);
+    const [bold, setBoldIcon] = useState(false);
+    const [italic, setItalicIcon] = useState(false);
+    const [underline, setUnderlineIcon] = useState(false);
 
     return (
       <div className="oui:flex oui:items-center oui:space-x-1">
         <Toggle
           pressed={bold}
-          onPressedChange={setBold}
+          onPressedChange={setBoldIcon}
           aria-label="Toggle bold"
           {...args}
         >
-          <Bold className="oui:h-4 oui:w-4" />
+          <BoldIcon className="oui:h-4 oui:w-4" />
         </Toggle>
         <Toggle
           pressed={italic}
-          onPressedChange={setItalic}
+          onPressedChange={setItalicIcon}
           aria-label="Toggle italic"
           {...args}
         >
-          <Italic className="oui:h-4 oui:w-4" />
+          <ItalicIcon className="oui:h-4 oui:w-4" />
         </Toggle>
         <Toggle
           pressed={underline}
-          onPressedChange={setUnderline}
+          onPressedChange={setUnderlineIcon}
           aria-label="Toggle underline"
           {...args}
         >
-          <Underline className="oui:h-4 oui:w-4" />
+          <UnderlineIcon className="oui:h-4 oui:w-4" />
         </Toggle>
       </div>
     );
@@ -217,7 +217,7 @@ export const TextAlignment: Story = {
           aria-label="Align left"
           {...args}
         >
-          <AlignLeft className="oui:h-4 oui:w-4" />
+          <AlignLeftIcon className="oui:h-4 oui:w-4" />
         </Toggle>
         <Toggle
           pressed={alignment === 'center'}
@@ -225,7 +225,7 @@ export const TextAlignment: Story = {
           aria-label="Align center"
           {...args}
         >
-          <AlignCenter className="oui:h-4 oui:w-4" />
+          <AlignCenterIcon className="oui:h-4 oui:w-4" />
         </Toggle>
         <Toggle
           pressed={alignment === 'right'}
@@ -233,7 +233,7 @@ export const TextAlignment: Story = {
           aria-label="Align right"
           {...args}
         >
-          <AlignRight className="oui:h-4 oui:w-4" />
+          <AlignRightIcon className="oui:h-4 oui:w-4" />
         </Toggle>
       </div>
     );
@@ -254,7 +254,7 @@ export const Disabled: Story = {
   },
   render: (args) => (
     <Toggle aria-label="Disabled toggle" {...args}>
-      <Bold className="oui:h-4 oui:w-4" />
+      <BoldIcon className="oui:h-4 oui:w-4" />
     </Toggle>
   ),
   parameters: {
@@ -286,14 +286,14 @@ export const Showcase: Story = {
             <div>
               <p className="oui:text-sm oui:font-medium oui:mb-4">Basic Toggles</p>
               <div className="oui:flex oui:items-center oui:space-x-2">
-                <Toggle aria-label="Bold">
-                  <Bold className="oui:h-4 oui:w-4" />
+                <Toggle aria-label="BoldIcon">
+                  <BoldIcon className="oui:h-4 oui:w-4" />
                 </Toggle>
-                <Toggle variant="outline" aria-label="Italic">
-                  <Italic className="oui:h-4 oui:w-4" />
+                <Toggle variant="outline" aria-label="ItalicIcon">
+                  <ItalicIcon className="oui:h-4 oui:w-4" />
                 </Toggle>
-                <Toggle aria-label="Underline">
-                  <Underline className="oui:h-4 oui:w-4" />
+                <Toggle aria-label="UnderlineIcon">
+                  <UnderlineIcon className="oui:h-4 oui:w-4" />
                 </Toggle>
               </div>
             </div>
@@ -304,18 +304,18 @@ export const Showcase: Story = {
                 <Toggle
                   pressed={formatting.bold}
                   onPressedChange={() => toggleFormatting('bold')}
-                  aria-label="Bold"
+                  aria-label="BoldIcon"
                 >
-                  <Bold className="oui:h-4 oui:w-4" />
-                  Bold
+                  <BoldIcon className="oui:h-4 oui:w-4" />
+                  BoldIcon
                 </Toggle>
                 <Toggle
                   pressed={formatting.italic}
                   onPressedChange={() => toggleFormatting('italic')}
-                  aria-label="Italic"
+                  aria-label="ItalicIcon"
                 >
-                  <Italic className="oui:h-4 oui:w-4" />
-                  Italic
+                  <ItalicIcon className="oui:h-4 oui:w-4" />
+                  ItalicIcon
                 </Toggle>
               </div>
             </div>
@@ -324,13 +324,13 @@ export const Showcase: Story = {
               <p className="oui:text-sm oui:font-medium oui:mb-4">Sizes</p>
               <div className="oui:flex oui:items-center oui:space-x-2">
                 <Toggle size="sm" aria-label="Small">
-                  <Bold className="oui:h-3 oui:w-3" />
+                  <BoldIcon className="oui:h-3 oui:w-3" />
                 </Toggle>
                 <Toggle size="default" aria-label="Default">
-                  <Bold className="oui:h-4 oui:w-4" />
+                  <BoldIcon className="oui:h-4 oui:w-4" />
                 </Toggle>
                 <Toggle size="lg" aria-label="Large">
-                  <Bold className="oui:h-5 oui:w-5" />
+                  <BoldIcon className="oui:h-5 oui:w-5" />
                 </Toggle>
               </div>
             </div>

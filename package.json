@@ -1,7 +1,7 @@
 {
   "name": "@opensearch-project/oui",
   "description": "OpenSearch UI Component Library",
-  "version": "2.0.0-alpha.2",
+  "version": "2.0.0-alpha.3",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -32,7 +32,10 @@
   ],
   "scripts": {
     "build": "yarn run build:lib && yarn run build:storybook",
-    "build:lib": "tsc --project tsconfig.build.json && tsc-alias && npx @tailwindcss/cli -i src/styles/preset.css -o dist/style.css && npx tsx scripts/scope-css.ts",
+    "build:icons": "npx tsx scripts/generate-icons.ts",
+    "build:ts": "tsc --project tsconfig.build.json && tsc-alias",
+    "build:css": "npx @tailwindcss/cli -i src/styles/preset.css -o dist/style.css && npx tsx scripts/scope-css.ts",
+    "build:lib": "yarn run build:icons && yarn run build:ts && yarn run build:css",
     "build:storybook": "storybook build -o ./docs",
     "build-docs": "yarn run build:storybook",
     "clean": "rm -rf build node_modules dist lib docs",

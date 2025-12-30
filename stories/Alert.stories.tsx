@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Alert, AlertTitle, AlertDescription } from '@/components';
-import { AlertCircle, CheckCircle, Info, AlertTriangle } from 'lucide-react';
+import { Alert, AlertTitle, AlertDescription, AlertCircleIcon, CheckCircleIcon, InfoIcon, AlertTriangleIcon } from '@/components';
 
 const meta: Meta<typeof Alert> = {
     title: 'UI/Alert',
@@ -28,7 +27,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     render: (args) => (
         <Alert {...args}>
-            <Info />
+            <InfoIcon />
             <AlertTitle>Information</AlertTitle>
             <AlertDescription>
                 Your account has been successfully updated. Changes will take effect within 24 hours.
@@ -41,7 +40,7 @@ export const Default: Story = {
 export const Destructive: Story = {
     render: (args) => (
         <Alert {...args} variant="destructive">
-            <AlertCircle />
+            <AlertCircleIcon />
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>
                 Unable to save changes. Please check your internet connection and try again.
@@ -66,7 +65,7 @@ export const WithoutIcon: Story = {
 export const DescriptionOnly: Story = {
     render: (args) => (
         <Alert {...args}>
-            <Info />
+            <InfoIcon />
             <AlertDescription>
                 New features are now available in your dashboard. Explore the updated interface to discover enhanced functionality.
             </AlertDescription>
@@ -78,7 +77,7 @@ export const DescriptionOnly: Story = {
 export const Success: Story = {
     render: (args) => (
         <Alert {...args}>
-            <CheckCircle />
+            <CheckCircleIcon />
             <AlertTitle>Success</AlertTitle>
             <AlertDescription>
                 Your payment has been processed successfully. A confirmation email has been sent to your registered email address.
@@ -91,7 +90,7 @@ export const Success: Story = {
 export const Warning: Story = {
     render: (args) => (
         <Alert {...args}>
-            <AlertTriangle />
+            <AlertTriangleIcon />
             <AlertTitle>Warning</AlertTitle>
             <AlertDescription>
                 Your subscription expires in 3 days. Renew now to avoid service interruption.
@@ -105,7 +104,7 @@ export const AllVariants: Story = {
     render: () => (
         <div className="oui:space-y-4 oui:w-full oui:max-w-md">
             <Alert variant="default">
-                <Info />
+                <InfoIcon />
                 <AlertTitle>Information</AlertTitle>
                 <AlertDescription>
                     Your account settings have been updated successfully.
@@ -113,7 +112,7 @@ export const AllVariants: Story = {
             </Alert>
 
             <Alert variant="destructive">
-                <AlertCircle />
+                <AlertCircleIcon />
                 <AlertTitle>Error</AlertTitle>
                 <AlertDescription>
                     Unable to process your request. Please try again later.
@@ -134,7 +133,7 @@ export const AlertTypes: Story = {
     render: () => (
         <div className="oui:space-y-4 oui:w-full oui:max-w-md">
             <Alert>
-                <CheckCircle />
+                <CheckCircleIcon />
                 <AlertTitle>Success</AlertTitle>
                 <AlertDescription>
                     Your changes have been saved successfully.
@@ -142,7 +141,7 @@ export const AlertTypes: Story = {
             </Alert>
 
             <Alert>
-                <Info />
+                <InfoIcon />
                 <AlertTitle>Information</AlertTitle>
                 <AlertDescription>
                     New features are available in your dashboard.
@@ -150,7 +149,7 @@ export const AlertTypes: Story = {
             </Alert>
 
             <Alert>
-                <AlertTriangle />
+                <AlertTriangleIcon />
                 <AlertTitle>Warning</AlertTitle>
                 <AlertDescription>
                     Your session will expire in 5 minutes.
@@ -158,7 +157,7 @@ export const AlertTypes: Story = {
             </Alert>
 
             <Alert variant="destructive">
-                <AlertCircle />
+                <AlertCircleIcon />
                 <AlertTitle>Error</AlertTitle>
                 <AlertDescription>
                     Failed to connect to the server. Check your connection.
@@ -179,7 +178,7 @@ export const AlertStructures: Story = {
     render: () => (
         <div className="oui:space-y-4 oui:w-full oui:max-w-md">
             <Alert>
-                <Info />
+                <InfoIcon />
                 <AlertTitle>With Title and Description</AlertTitle>
                 <AlertDescription>
                     This alert includes both a title and detailed description for comprehensive messaging.
@@ -191,7 +190,7 @@ export const AlertStructures: Story = {
             </Alert>
 
             <Alert>
-                <Info />
+                <InfoIcon />
                 <AlertDescription>
                     Description only alert without a title, useful for simple notifications.
                 </AlertDescription>

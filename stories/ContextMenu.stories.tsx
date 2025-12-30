@@ -14,36 +14,36 @@ import {
     ContextMenuSubContent,
     ContextMenuSubTrigger,
 } from '@/components';
-import { 
-    Copy, 
-    Scissors, 
-    ClipboardPaste, 
-    Edit, 
-    Trash2, 
-    Download, 
-    Share, 
-    Star, 
-    Archive,
-    MoreHorizontal,
-    FileText,
-    Video,
-    Music,
-    Settings,
-    User,
-    Mail,
-    Phone,
-    Calendar,
-    Clock,
-    Bookmark,
-    Tag,
-    Filter,
-    ArrowUpAZ,
-    ArrowDownAZ,
-    Grid3X3,
-    List,
-    Eye,
-    EyeOff
-} from 'lucide-react';
+import {
+    CopyIcon,
+    ScissorsIcon,
+    ClipboardPasteIcon,
+    EditIcon,
+    Trash2Icon,
+    DownloadIcon,
+    ShareIcon,
+    StarIcon,
+    ArchiveIcon,
+    MoreHorizontalIcon,
+    FileTextIcon,
+    VideoIcon,
+    MusicIcon,
+    SettingsIcon,
+    UserIcon,
+    MailIcon,
+    PhoneIcon,
+    CalendarIcon,
+    ClockIcon,
+    BookmarkIcon,
+    TagIcon,
+    FilterIcon,
+    ArrowUpAZIcon,
+    ArrowDownAZIcon,
+    Grid3X3Icon,
+    ListIcon,
+    EyeIcon,
+    EyeOffIcon
+} from '@/components';
 
 const meta: Meta<typeof ContextMenu> = {
     title: 'UI/ContextMenu',
@@ -82,17 +82,17 @@ export const Default: Story = {
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <CopyIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Copy
                         <ContextMenuShortcut>⌘C</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Scissors className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ScissorsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Cut
                         <ContextMenuShortcut>⌘X</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <ClipboardPaste className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ClipboardPasteIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Paste
                         <ContextMenuShortcut>⌘V</ContextMenuShortcut>
                     </ContextMenuItem>
@@ -118,31 +118,31 @@ export const WithSeparators: Story = {
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <EditIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Edit
                         <ContextMenuShortcut>⌘E</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <CopyIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Duplicate
                         <ContextMenuShortcut>⌘D</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Download className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <DownloadIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Download
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ShareIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Archive className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ArchiveIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Archive
                     </ContextMenuItem>
                     <ContextMenuItem variant="destructive">
-                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <Trash2Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Delete
                         <ContextMenuShortcut>⌘⌫</ContextMenuShortcut>
                     </ContextMenuItem>
@@ -170,24 +170,24 @@ export const WithCheckboxItems: Story = {
                     <ContextMenuLabel>View Options</ContextMenuLabel>
                     <ContextMenuSeparator />
                     <ContextMenuCheckboxItem checked>
-                        <Eye className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <EyeIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Show Preview
                     </ContextMenuCheckboxItem>
                     <ContextMenuCheckboxItem>
-                        <Grid3X3 className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <Grid3X3Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Grid View
                     </ContextMenuCheckboxItem>
                     <ContextMenuCheckboxItem checked>
-                        <List className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ListIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         List View
                     </ContextMenuCheckboxItem>
                     <ContextMenuSeparator />
                     <ContextMenuCheckboxItem>
-                        <Bookmark className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <BookmarkIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Show Bookmarks
                     </ContextMenuCheckboxItem>
                     <ContextMenuCheckboxItem checked>
-                        <Tag className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <TagIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Show Tags
                     </ContextMenuCheckboxItem>
                 </ContextMenuContent>
@@ -215,30 +215,30 @@ export const WithRadioGroup: Story = {
                     <ContextMenuSeparator />
                     <ContextMenuRadioGroup value="name">
                         <ContextMenuRadioItem value="name">
-                            <FileText className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <FileTextIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Name
                         </ContextMenuRadioItem>
                         <ContextMenuRadioItem value="date">
-                            <Calendar className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <CalendarIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Date Modified
                         </ContextMenuRadioItem>
                         <ContextMenuRadioItem value="size">
-                            <Archive className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <ArchiveIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             File Size
                         </ContextMenuRadioItem>
                         <ContextMenuRadioItem value="type">
-                            <Filter className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <FilterIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             File Type
                         </ContextMenuRadioItem>
                     </ContextMenuRadioGroup>
                     <ContextMenuSeparator />
                     <ContextMenuRadioGroup value="asc">
                         <ContextMenuRadioItem value="asc">
-                            <ArrowUpAZ className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <ArrowUpAZIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Ascending
                         </ContextMenuRadioItem>
                         <ContextMenuRadioItem value="desc">
-                            <ArrowDownAZ className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <ArrowDownAZIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Descending
                         </ContextMenuRadioItem>
                     </ContextMenuRadioGroup>
@@ -264,52 +264,52 @@ export const WithSubmenus: Story = {
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <EditIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Edit
                     </ContextMenuItem>
                     <ContextMenuSub>
                         <ContextMenuSubTrigger>
-                            <Share className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <ShareIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Share
                         </ContextMenuSubTrigger>
                         <ContextMenuSubContent>
                             <ContextMenuItem>
-                                <Mail className="oui:mr-2 oui:h-4 oui:w-4" />
+                                <MailIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Email
                             </ContextMenuItem>
                             <ContextMenuItem>
-                                <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
+                                <CopyIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Copy Link
                             </ContextMenuItem>
                             <ContextMenuItem>
-                                <Download className="oui:mr-2 oui:h-4 oui:w-4" />
+                                <DownloadIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Export
                             </ContextMenuItem>
                         </ContextMenuSubContent>
                     </ContextMenuSub>
                     <ContextMenuSub>
                         <ContextMenuSubTrigger>
-                            <MoreHorizontal className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <MoreHorizontalIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             More Actions
                         </ContextMenuSubTrigger>
                         <ContextMenuSubContent>
                             <ContextMenuItem>
-                                <Star className="oui:mr-2 oui:h-4 oui:w-4" />
+                                <StarIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Add to Favorites
                             </ContextMenuItem>
                             <ContextMenuItem>
-                                <Archive className="oui:mr-2 oui:h-4 oui:w-4" />
+                                <ArchiveIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Archive
                             </ContextMenuItem>
                             <ContextMenuItem>
-                                <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+                                <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Properties
                             </ContextMenuItem>
                         </ContextMenuSubContent>
                     </ContextMenuSub>
                     <ContextMenuSeparator />
                     <ContextMenuItem variant="destructive">
-                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <Trash2Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Delete
                     </ContextMenuItem>
                 </ContextMenuContent>
@@ -334,56 +334,56 @@ export const FileExplorer: Story = {
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <FileText className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <FileTextIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Open
                         <ContextMenuShortcut>⌘O</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <EditIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Open With...
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <CopyIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Copy
                         <ContextMenuShortcut>⌘C</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Scissors className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ScissorsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Cut
                         <ContextMenuShortcut>⌘X</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <CopyIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Duplicate
                         <ContextMenuShortcut>⌘D</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Download className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <DownloadIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Download
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ShareIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Star className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <StarIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Add to Favorites
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Archive className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ArchiveIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Move to Archive
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Properties
                         <ContextMenuShortcut>⌘I</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem variant="destructive">
-                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <Trash2Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Move to Trash
                         <ContextMenuShortcut>⌘⌫</ContextMenuShortcut>
                     </ContextMenuItem>
@@ -409,19 +409,19 @@ export const MediaPlayer: Story = {
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Music className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <MusicIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Play
                         <ContextMenuShortcut>Space</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Clock className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ClockIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Pause
                         <ContextMenuShortcut>Space</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuSub>
                         <ContextMenuSubTrigger>
-                            <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Playback Speed
                         </ContextMenuSubTrigger>
                         <ContextMenuSubContent>
@@ -437,7 +437,7 @@ export const MediaPlayer: Story = {
                     </ContextMenuSub>
                     <ContextMenuSub>
                         <ContextMenuSubTrigger>
-                            <Video className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <VideoIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Quality
                         </ContextMenuSubTrigger>
                         <ContextMenuSubContent>
@@ -451,20 +451,20 @@ export const MediaPlayer: Story = {
                     </ContextMenuSub>
                     <ContextMenuSeparator />
                     <ContextMenuCheckboxItem checked>
-                        <Eye className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <EyeIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Show Controls
                     </ContextMenuCheckboxItem>
                     <ContextMenuCheckboxItem>
-                        <EyeOff className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <EyeOffIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Picture in Picture
                     </ContextMenuCheckboxItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Download className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <DownloadIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Download
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ShareIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share
                     </ContextMenuItem>
                 </ContextMenuContent>
@@ -489,42 +489,42 @@ export const ContactCard: Story = {
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <User className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         View Profile
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <EditIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Edit Contact
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Mail className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <MailIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Send Email
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Phone className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <PhoneIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Call
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Calendar className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <CalendarIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Schedule Meeting
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Star className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <StarIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Add to Favorites
                     </ContextMenuItem>
                     <ContextMenuItem>
-                        <Tag className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <TagIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Add Tag
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ShareIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share Contact
                     </ContextMenuItem>
                     <ContextMenuItem variant="destructive">
-                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <Trash2Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Delete Contact
                     </ContextMenuItem>
                 </ContextMenuContent>
@@ -549,32 +549,32 @@ export const DisabledItems: Story = {
                 </ContextMenuTrigger>
                 <ContextMenuContent>
                     <ContextMenuItem>
-                        <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <CopyIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Copy
                         <ContextMenuShortcut>⌘C</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem disabled>
-                        <Scissors className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ScissorsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Cut
                         <ContextMenuShortcut>⌘X</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuItem disabled>
-                        <ClipboardPaste className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ClipboardPasteIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Paste
                         <ContextMenuShortcut>⌘V</ContextMenuShortcut>
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem>
-                        <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <EditIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Edit
                     </ContextMenuItem>
                     <ContextMenuItem disabled>
-                        <Share className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <ShareIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Share
                     </ContextMenuItem>
                     <ContextMenuSeparator />
                     <ContextMenuItem variant="destructive" disabled>
-                        <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
+                        <Trash2Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                         Delete
                     </ContextMenuItem>
                 </ContextMenuContent>
@@ -600,15 +600,15 @@ export const Showcase: Story = {
                     </ContextMenuTrigger>
                     <ContextMenuContent>
                         <ContextMenuItem>
-                            <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <CopyIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Copy
                         </ContextMenuItem>
                         <ContextMenuItem>
-                            <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <EditIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Edit
                         </ContextMenuItem>
                         <ContextMenuItem variant="destructive">
-                            <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <Trash2Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Delete
                         </ContextMenuItem>
                     </ContextMenuContent>
@@ -622,17 +622,17 @@ export const Showcase: Story = {
                     </ContextMenuTrigger>
                     <ContextMenuContent>
                         <ContextMenuItem>
-                            <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <EditIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Edit
                         </ContextMenuItem>
                         <ContextMenuSeparator />
                         <ContextMenuItem>
-                            <Share className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <ShareIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Share
                         </ContextMenuItem>
                         <ContextMenuSeparator />
                         <ContextMenuItem variant="destructive">
-                            <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <Trash2Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Delete
                         </ContextMenuItem>
                     </ContextMenuContent>
@@ -646,15 +646,15 @@ export const Showcase: Story = {
                     </ContextMenuTrigger>
                     <ContextMenuContent>
                         <ContextMenuCheckboxItem checked>
-                            <Eye className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <EyeIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Show Preview
                         </ContextMenuCheckboxItem>
                         <ContextMenuCheckboxItem>
-                            <Grid3X3 className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <Grid3X3Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Grid View
                         </ContextMenuCheckboxItem>
                         <ContextMenuCheckboxItem checked>
-                            <List className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <ListIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             List View
                         </ContextMenuCheckboxItem>
                     </ContextMenuContent>
@@ -668,27 +668,27 @@ export const Showcase: Story = {
                     </ContextMenuTrigger>
                     <ContextMenuContent>
                         <ContextMenuItem>
-                            <Edit className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <EditIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Edit
                         </ContextMenuItem>
                         <ContextMenuSub>
                             <ContextMenuSubTrigger>
-                                <Share className="oui:mr-2 oui:h-4 oui:w-4" />
+                                <ShareIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                                 Share
                             </ContextMenuSubTrigger>
                             <ContextMenuSubContent>
                                 <ContextMenuItem>
-                                    <Mail className="oui:mr-2 oui:h-4 oui:w-4" />
+                                    <MailIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                                     Email
                                 </ContextMenuItem>
                                 <ContextMenuItem>
-                                    <Copy className="oui:mr-2 oui:h-4 oui:w-4" />
+                                    <CopyIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                                     Copy Link
                                 </ContextMenuItem>
                             </ContextMenuSubContent>
                         </ContextMenuSub>
                         <ContextMenuItem variant="destructive">
-                            <Trash2 className="oui:mr-2 oui:h-4 oui:w-4" />
+                            <Trash2Icon className="oui:mr-2 oui:h-4 oui:w-4" />
                             Delete
                         </ContextMenuItem>
                     </ContextMenuContent>

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { Settings, User, CreditCard, LogOut, Plus } from 'lucide-react';
+import { SettingsIcon, UserIcon, CreditCardIcon, LogOutIcon, PlusIcon } from '@/components';
 import {
   Popover,
   PopoverContent,
@@ -120,21 +120,21 @@ export const UserMenu: Story = {
         <Separator className="oui:my-2" />
         <div className="oui:space-y-1">
           <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
-            <User className="oui:mr-2 oui:h-4 oui:w-4" />
+            <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
             Profile
           </Button>
           <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
-            <CreditCard className="oui:mr-2 oui:h-4 oui:w-4" />
+            <CreditCardIcon className="oui:mr-2 oui:h-4 oui:w-4" />
             Billing
           </Button>
           <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
-            <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+            <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
             Settings
           </Button>
         </div>
         <Separator className="oui:my-2" />
         <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
-          <LogOut className="oui:mr-2 oui:h-4 oui:w-4" />
+          <LogOutIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           Log out
         </Button>
       </PopoverContent>
@@ -248,7 +248,7 @@ export const AddItem: Story = {
         <Popover open={open} onOpenChange={setOpen} {...args}>
           <PopoverTrigger asChild>
             <Button variant="outline" size="sm">
-              <Plus className="oui:mr-2 oui:h-4 oui:w-4" />
+              <PlusIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               Add Item
             </Button>
           </PopoverTrigger>
@@ -354,16 +354,16 @@ export const Showcase: Story = {
             <PopoverContent className="oui:w-56">
               <div className="oui:space-y-1">
                 <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
-                  <User className="oui:mr-2 oui:h-4 oui:w-4" />
+                  <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                   Profile
                 </Button>
                 <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
-                  <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+                  <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                   Settings
                 </Button>
                 <Separator className="oui:my-1" />
                 <Button variant="ghost" className="oui:w-full oui:justify-start" size="sm">
-                  <LogOut className="oui:mr-2 oui:h-4 oui:w-4" />
+                  <LogOutIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                   Log out
                 </Button>
               </div>

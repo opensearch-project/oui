@@ -14,7 +14,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDownIcon } from '@/components';
 
 const meta: Meta<typeof Breadcrumb> = {
   title: 'UI/Breadcrumb',
@@ -124,7 +124,7 @@ export const WithDropdown: Story = {
           <DropdownMenu>
             <DropdownMenuTrigger className="oui:flex oui:items-center oui:gap-1 oui:hover:text-foreground oui:transition-colors">
               Components
-              <ChevronDown className="oui:h-4 oui:w-4" />
+              <ChevronDownIcon className="oui:h-4 oui:w-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="start">
               <DropdownMenuItem>
