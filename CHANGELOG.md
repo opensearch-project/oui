@@ -11,6 +11,7 @@
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
+- Enable OSD builds with OUI 2.x in github build workflow ([#1685](https://github.com/opensearch-project/oui/pull/1685))
 
 ### 📝 Documentation
 
