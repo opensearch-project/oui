@@ -7,6 +7,7 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
+- Add DataTable component ([#1687](https://github.com/opensearch-project/oui/pull/1687))
 
 ### 🐛 Bug Fixes
 
