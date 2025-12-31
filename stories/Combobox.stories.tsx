@@ -3,14 +3,14 @@ import { expect, userEvent, within } from '@storybook/test';
 import { Combobox, ComboboxOption } from '@/components';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components';
 import { useState } from 'react';
-import { 
-  Building2, 
-  GraduationCap,
-  Code,
-  Globe,
-  Plus,
-  ChevronsUpDown
-} from 'lucide-react';
+import {
+  Building2Icon,
+  GraduationCapIcon,
+  CodeIcon,
+  GlobeIcon,
+  PlusIcon,
+  ChevronsUpDownIcon
+} from '@/components';
 
 const meta: Meta<typeof Combobox> = {
   title: 'UI/Combobox',
@@ -464,7 +464,7 @@ export const UseCases: Story = {
       <div className="oui:grid oui:grid-cols-2 oui:gap-6 oui:w-[500px]">
         <div className="oui:space-y-2">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <Code className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
+            <CodeIcon className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
             <label className="oui:text-sm oui:font-medium">Framework</label>
           </div>
           <Combobox
@@ -478,7 +478,7 @@ export const UseCases: Story = {
         
         <div className="oui:space-y-2">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <Globe className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
+            <GlobeIcon className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
             <label className="oui:text-sm oui:font-medium">Country</label>
           </div>
           <Combobox
@@ -492,7 +492,7 @@ export const UseCases: Story = {
         
         <div className="oui:space-y-2">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <GraduationCap className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
+            <GraduationCapIcon className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
             <label className="oui:text-sm oui:font-medium">Skill</label>
           </div>
           <Combobox
@@ -506,7 +506,7 @@ export const UseCases: Story = {
         
         <div className="oui:space-y-2">
           <div className="oui:flex oui:items-center oui:gap-2">
-            <Building2 className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
+            <Building2Icon className="oui:h-4 oui:w-4 oui:text-muted-foreground" />
             <label className="oui:text-sm oui:font-medium">Department</label>
           </div>
           <Combobox
@@ -581,7 +581,7 @@ export const UserSelection: StoryObj = {
         content: (
           <div className="oui:flex oui:items-center oui:gap-2">
             <div className="oui:flex oui:h-6 oui:w-6 oui:items-center oui:justify-center oui:rounded-full oui:border oui:border-dashed oui:border-muted-foreground">
-              <Plus className="oui:h-3 oui:w-3" />
+              <PlusIcon className="oui:h-3 oui:w-3" />
             </div>
             <span>Create user</span>
           </div>
@@ -621,7 +621,7 @@ export const UserSelection: StoryObj = {
                 ) : (
                   <span className="oui:text-muted-foreground">Search user...</span>
                 )}
-                <ChevronsUpDown className="oui:ml-2 oui:h-4 oui:w-4 oui:shrink-0 oui:opacity-50" />
+                <ChevronsUpDownIcon className="oui:ml-2 oui:h-4 oui:w-4 oui:shrink-0 oui:opacity-50" />
               </button>
             );
           }}

@@ -20,7 +20,7 @@ This document serves as the definitive mapping guide for migrating from OUI 1.x 
 
 | Category | OUI 1.x Component | OUI 2.x Component | Status | Key Prop Changes | Migration Phase | Migration Notes |
 |----------|-------------------|-------------------|--------|------------------|----------------|-----------------|
-| Actions | **EuiButton** | `Button` | ⬜ Phase 1 | `color="primary"` → `variant="default"`<br/>`color="danger"` → `variant="destructive"`<br/>`fill={true}` → `variant="default"`<br/>`fill={false}` → `variant="outline"`<br/>`size="s"` → `size="sm"` | Phase 1 | Icon handling changed: `iconType="add"` → `<PlusIcon className="h-4 w-4" />` |
+| Actions | **EuiButton** | `Button` | ⬜ Phase 1 | `color="primary"` → `variant="default"`<br/>`color="danger"` → `variant="destructive"`<br/>`fill={true}` → `variant="default"`<br/>`fill={false}` → `variant="outline"`<br/>`size="s"` → `size="sm"` | Phase 1 | Icon handling changed: `iconType="add"` → `import { PlusIcon } from '@opensearch-project/oui'; <PlusIcon className="h-4 w-4" />` |
 | Actions | **EuiButtonEmpty** | `Button` | ⬜ Phase 1 | Equivalent to `variant="ghost"` | Phase 1 | Use ghost variant for similar appearance |
 | Actions | **EuiButtonIcon** | `Button` + Icon | 📋 Unknown | `iconType="name"` → `<NameIcon />` component | Unknown | Requires icon mapping and sizing |
 | Actions | **EuiLink** | `Link` or `<a>` | 📋 Unknown | Similar props expected | Unknown | External vs internal link handling TBD |
@@ -70,7 +70,7 @@ This document serves as the definitive mapping guide for migrating from OUI 1.x 
 | Overlays | **EuiToolTip** | `Tooltip` | 📋 Unknown | `content` → children of tooltip | Unknown | Positioning and delay configuration |
 | Feedback | **EuiProgress** | `Progress` | 📋 Unknown | `value`, `max` props similar | Unknown | Indeterminate state and animations |
 | Feedback | **EuiLoadingSpinner** | `Spinner` or CSS | 📋 Unknown | Size variants mapping | Unknown | Animation performance and accessibility |
-| Media | **EuiIcon** | Lucide React icons | ⬜ Phase 1 | `type="add"` → `<PlusIcon />` | Phase 1 | See icon mapping table below |
+| Media | **EuiIcon** | OUI 2.x Icon System | ✅ Ready | `type="add"` → `<PlusIcon />` from OUI package | Phase 1 | Uses Lucide React icons + custom OUI icons - see icon mapping below |
 | Media | **EuiImage** | `<img>` + utilities | 📋 Unknown | Similar src, alt props | Unknown | Lazy loading and responsive image patterns |
 | Media | **EuiAvatar** | `Avatar` | 📋 Unknown | `name`, `src` props similar | Unknown | Fallback patterns and size variants |
 | Display | **EuiBadge** | `Badge` | 📋 Unknown | `color` → `variant`<br/>`iconType` → icon component | Unknown | Color mapping and icon handling |
@@ -168,21 +168,30 @@ This document serves as the definitive mapping guide for migrating from OUI 1.x 
 
 ## Icon Mapping Table
 
+**Import Pattern**: All icons should be imported from the OUI package:
+```typescript
+import { PlusIcon, SearchIcon, UserIcon, DiscoverIcon } from '@opensearch-project/oui';
+```
+
+OUI 2.x provides two types of icons:
+1. **Lucide React Icons**: 118+ curated icons from lucide-react, all with "Icon" suffix
+2. **Custom OUI Icons**: SVG-based icons specific to OpenSearch, generated as React components
+
 ### Core Action Icons
-| OUI 1.x Icon | Category | Lucide React Icon | Status | Migration Notes |
-|--------------|----------|-------------------|--------|-----------------|
-| `type="add"` | Actions | `<PlusIcon />` | ✅ Direct | Direct replacement |
-| `type="addDataApp"` | Actions | `<PlusIcon /> + <DatabaseIcon />` | ❓ Composite | Combine plus with database icon |
-| `type="apps"` | Actions | `<GridIcon />` | ✅ Direct | Application launcher |
-| `type="arrowDown"` | Actions | `<ChevronDownIcon />` | ✅ Direct | Use for dropdowns |
-| `type="arrowLeft"` | Actions | `<ChevronLeftIcon />` | ✅ Direct | Navigation back |
-| `type="arrowRight"` | Actions | `<ChevronRightIcon />` | ✅ Direct | Navigation forward |
-| `type="arrowUp"` | Actions | `<ChevronUpIcon />` | ✅ Direct | Collapse/minimize |
-| `type="bell"` | Actions | `<BellIcon />` | ✅ Direct | Notifications |
-| `type="bellSlash"` | Actions | `<BellOffIcon />` | ✅ Direct | Muted notifications |
-| `type="bolt"` | Actions | `<ZapIcon />` | ✅ Direct | Quick actions/power |
-| `type="bookmark"` | Actions | `<BookmarkIcon />` | ✅ Direct | Save for later |
-| `type="broom"` | Actions | `<BroomIcon />` | ⚠️ No Match | Cleaning/clearing actions |
+| OUI 1.x Icon | Category | OUI 2.x Icon | Lucide Source | Status | Migration Notes |
+|--------------|----------|--------------|---------------|--------|-----------------|
+| `type="add"` | Actions | `<PlusIcon />` | ✅ Lucide | ✅ Direct | Direct replacement |
+| `type="addDataApp"` | Actions | `<PlusIcon /> + <DatabaseIcon />` | ✅ Lucide | ❓ Composite | Combine plus with database icon |
+| `type="apps"` | Actions | `<MenuIcon />` | ✅ Lucide | ✅ Direct | Application launcher menu |
+| `type="arrowDown"` | Actions | `<ChevronDownIcon />` | ✅ Lucide | ✅ Direct | Use for dropdowns |
+| `type="arrowLeft"` | Actions | `<ChevronLeftIcon />` | ✅ Lucide | ✅ Direct | Navigation back |
+| `type="arrowRight"` | Actions | `<ChevronRightIcon />` | ✅ Lucide | ✅ Direct | Navigation forward |
+| `type="arrowUp"` | Actions | `<ChevronUpIcon />` | ✅ Lucide | ✅ Direct | Collapse/minimize |
+| `type="bell"` | Actions | `<BellIcon />` | ✅ Lucide | ✅ Direct | Notifications |
+| `type="bellSlash"` | Actions | `<BellOffIcon />` | ✅ Lucide | ✅ Direct | Muted notifications |
+| `type="bolt"` | Actions | `<ZapIcon />` | ✅ Lucide | ✅ Direct | Quick actions/power |
+| `type="bookmark"` | Actions | `<BookmarkIcon />` | ✅ Lucide | ✅ Direct | Save for later |
+| `type="broom"` | Actions | Custom SVG needed | ⚠️ No Match | ⚠️ No Match | Cleaning/clearing actions |
 | `type="brush"` | Actions | `<PaintbrushIcon />` | ✅ Direct | Formatting/styling |
 | `type="bullseye"` | Actions | `<TargetIcon />` | ✅ Direct | Focus/target |
 | `type="calendar"` | Actions | `<CalendarIcon />` | ✅ Direct | Date/time selection |

@@ -209,5 +209,12 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'off', // not enforcing ES6-style import statements
       },
     },
+    {
+      // Disable formatting rules for generated custom icon files
+      files: ['src/components/custom/icons/custom/*.{ts,tsx}', '!src/components/custom/icons/custom/index.ts'],
+      rules: {
+        'prettier/prettier': 'off', // Generated files don't need to follow prettier formatting
+      },
+    },
   ],
 };

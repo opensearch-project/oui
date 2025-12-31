@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { CalendarDays } from 'lucide-react';
+import { CalendarDaysIcon } from '@/components';
 import {
   HoverCard,
   HoverCardContent,
@@ -54,7 +54,7 @@ export const Default: Story = {
               The React Framework – created and maintained by @vercel.
             </p>
             <div className="oui:flex oui:items-center oui:pt-2">
-              <CalendarDays className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />{' '}
+              <CalendarDaysIcon className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />{' '}
               <span className="oui:text-xs oui:text-muted-foreground">
                 Joined December 2021
               </span>
@@ -93,7 +93,7 @@ export const UserProfile: Story = {
                     Senior Frontend Developer at Acme Corp. Passionate about React and TypeScript.
                   </p>
                   <div className="oui:flex oui:items-center oui:pt-2">
-                    <CalendarDays className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />
+                    <CalendarDaysIcon className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />
                     <span className="oui:text-xs oui:text-muted-foreground">
                       Joined March 2020
                     </span>
@@ -125,7 +125,7 @@ export const UserProfile: Story = {
                     UX Designer with 8+ years of experience. Loves creating intuitive user experiences.
                   </p>
                   <div className="oui:flex oui:items-center oui:pt-2">
-                    <CalendarDays className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />
+                    <CalendarDaysIcon className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />
                     <span className="oui:text-xs oui:text-muted-foreground">
                       Joined January 2019
                     </span>
@@ -248,7 +248,7 @@ export const Showcase: Story = {
                       The React Framework – created and maintained by @vercel.
                     </p>
                     <div className="oui:flex oui:items-center oui:pt-2">
-                      <CalendarDays className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />
+                      <CalendarDaysIcon className="oui:mr-2 oui:h-4 oui:w-4 oui:opacity-70" />
                       <span className="oui:text-xs oui:text-muted-foreground">
                         Joined December 2021
                       </span>

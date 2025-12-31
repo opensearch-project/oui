@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Badge } from '@/components';
-import { BadgeCheck, Star, AlertTriangle, Shield, Zap } from 'lucide-react';
+import { Badge, BadgeCheckIcon, StarIcon, AlertTriangleIcon, ShieldIcon, ZapIcon } from '@/components';
 
 const meta: Meta<typeof Badge> = {
   title: 'UI/Badge',
@@ -62,7 +61,7 @@ export const Verified: Story = {
     variant: 'verified',
     children: (
       <>
-        <BadgeCheck size={12} />
+        <BadgeCheckIcon size={12} />
         Verified
       </>
     ),
@@ -103,23 +102,23 @@ export const WithIcons: Story = {
   render: () => (
     <div className="oui:flex oui:flex-wrap oui:gap-4">
       <Badge variant="default">
-        <Star size={12} />
+        <StarIcon size={12} />
         Featured
       </Badge>
       <Badge variant="verified">
-        <BadgeCheck size={12} />
+        <BadgeCheckIcon size={12} />
         Verified
       </Badge>
       <Badge variant="destructive">
-        <AlertTriangle size={12} />
+        <AlertTriangleIcon size={12} />
         Error
       </Badge>
       <Badge variant="secondary">
-        <Shield size={12} />
+        <ShieldIcon size={12} />
         Protected
       </Badge>
       <Badge variant="severity-high">
-        <Zap size={12} />
+        <ZapIcon size={12} />
         Urgent
       </Badge>
     </div>
@@ -142,7 +141,7 @@ export const AllVariants: Story = {
       <Badge variant="destructive">Urgent</Badge>
       <Badge variant="outline">Optional</Badge>
       <Badge variant="verified">
-        <BadgeCheck size={12} />
+        <BadgeCheckIcon size={12} />
         Verified
       </Badge>
       <Badge variant="severity-low">Low</Badge>
@@ -168,7 +167,7 @@ export const StatusBadges: Story = {
       <Badge variant="outline">Inactive</Badge>
       <Badge variant="destructive">Failed</Badge>
       <Badge variant="verified">
-        <BadgeCheck size={12} />
+        <BadgeCheckIcon size={12} />
         Completed
       </Badge>
     </div>
@@ -189,7 +188,7 @@ export const PriorityBadges: Story = {
       <Badge variant="severity-med">Medium Priority</Badge>
       <Badge variant="severity-high">High Priority</Badge>
       <Badge variant="severity-critical">
-        <AlertTriangle size={12} />
+        <AlertTriangleIcon size={12} />
         Critical
       </Badge>
     </div>

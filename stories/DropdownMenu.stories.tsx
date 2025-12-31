@@ -1,21 +1,21 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 import {
-  Cloud,
-  CreditCard,
-  Github,
-  Keyboard,
-  LifeBuoy,
-  LogOut,
-  Mail,
-  MessageSquare,
-  Plus,
-  PlusCircle,
-  Settings,
-  User,
-  UserPlus,
-  Users,
-} from 'lucide-react';
+  CloudIcon,
+  CreditCardIcon,
+  GithubIcon,
+  KeyboardIcon,
+  LifeBuoyIcon,
+  LogOutIcon,
+  MailIcon,
+  MessageSquareIcon,
+  PlusIcon,
+  PlusCircleIcon,
+  SettingsIcon,
+  UserIcon,
+  UserPlusIcon,
+  UsersIcon,
+} from '@/components';
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -73,22 +73,22 @@ export const Default: Story = {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <User className="oui:mr-2 oui:h-4 oui:w-4" />
+            <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Profile</span>
             <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <CreditCard className="oui:mr-2 oui:h-4 oui:w-4" />
+            <CreditCardIcon className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Billing</span>
             <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+            <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Settings</span>
             <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <Keyboard className="oui:mr-2 oui:h-4 oui:w-4" />
+            <KeyboardIcon className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Keyboard shortcuts</span>
             <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
           </DropdownMenuItem>
@@ -96,54 +96,54 @@ export const Default: Story = {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <Users className="oui:mr-2 oui:h-4 oui:w-4" />
+            <UsersIcon className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>Team</span>
           </DropdownMenuItem>
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>
-              <UserPlus className="oui:mr-2 oui:h-4 oui:w-4" />
+              <UserPlusIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Invite users</span>
             </DropdownMenuSubTrigger>
             <DropdownMenuPortal>
               <DropdownMenuSubContent>
                 <DropdownMenuItem>
-                  <Mail className="oui:mr-2 oui:h-4 oui:w-4" />
+                  <MailIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                   <span>Email</span>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <MessageSquare className="oui:mr-2 oui:h-4 oui:w-4" />
+                  <MessageSquareIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                   <span>Message</span>
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>
-                  <PlusCircle className="oui:mr-2 oui:h-4 oui:w-4" />
+                  <PlusCircleIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                   <span>More...</span>
                 </DropdownMenuItem>
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
           <DropdownMenuItem>
-            <Plus className="oui:mr-2 oui:h-4 oui:w-4" />
+            <PlusIcon className="oui:mr-2 oui:h-4 oui:w-4" />
             <span>New Team</span>
             <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Github className="oui:mr-2 oui:h-4 oui:w-4" />
+          <GithubIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>GitHub</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <LifeBuoy className="oui:mr-2 oui:h-4 oui:w-4" />
+          <LifeBuoyIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>Support</span>
         </DropdownMenuItem>
         <DropdownMenuItem disabled>
-          <Cloud className="oui:mr-2 oui:h-4 oui:w-4" />
+          <CloudIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>API</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <LogOut className="oui:mr-2 oui:h-4 oui:w-4" />
+          <LogOutIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>Log out</span>
           <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
         </DropdownMenuItem>
@@ -299,11 +299,11 @@ export const Destructive: Story = {
         <DropdownMenuLabel>Actions</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+          <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>Edit</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <User className="oui:mr-2 oui:h-4 oui:w-4" />
+          <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           <span>Duplicate</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
@@ -347,16 +347,16 @@ export const Showcase: Story = {
             </DropdownMenuTrigger>
             <DropdownMenuContent className="oui:w-56">
               <DropdownMenuItem>
-                <User className="oui:mr-2 oui:h-4 oui:w-4" />
+                <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Profile</span>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+                <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Settings</span>
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem>
-                <LogOut className="oui:mr-2 oui:h-4 oui:w-4" />
+                <LogOutIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Logout</span>
               </DropdownMenuItem>
             </DropdownMenuContent>

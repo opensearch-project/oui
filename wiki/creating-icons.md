@@ -1,12 +1,23 @@
 # Creating icons
 
-OUI provides an ever-growing set of [icons][icons], but our set can be incomplete. If you find you need an icon that does not exist, create a new issue and tag it with the *icons* label. A designer from the OUI team will respond to discuss your needs.
+OUI 2.x provides a comprehensive icon system combining curated Lucide React icons with custom OUI icons. If you need an icon that doesn't exist in our collection, create a new issue and tag it with the *icons* label. A designer from the OUI team will respond to discuss your needs.
 
-If you are willing and able to design the icon yourself, this document describes the guidelines for designing a new icon, cleaning up the SVG, and getting it added to OUI. While designers on the OUI team are available to assist, we greatly appreciate your contributions and pull requests.
+If you are willing and able to design the icon yourself, this document describes the guidelines for designing a new custom icon, cleaning up the SVG, and getting it added to OUI. While designers on the OUI team are available to assist, we greatly appreciate your contributions and pull requests.
 
 If you read through these guidelines or begin designing your icon and realize you're in too deep, then create an issue in this repo and request assistance. An OUI team member will reply and discuss options.
 
-_**Note**: The `OuiIcon` component accepts external references to icon files, so you have the option to maintain the icon in your consuming application._
+## Icon System Overview
+
+OUI 2.x provides two types of icons:
+
+1. **Lucide React Icons**: A curated collection of 118+ icons from the lucide-react package, all following consistent naming with "Icon" suffix
+2. **Custom OUI Icons**: SVG-based icons specific to OpenSearch/OUI use cases, automatically generated as React components
+
+All icons are imported from a single source:
+
+```typescript
+import { SearchIcon, UserIcon, DiscoverIcon } from '@opensearch-project/oui';
+```
 
 ## Design the icon
 
@@ -21,6 +32,8 @@ Finding and sharing reference icons is a great way to get moving if you're uncer
 Lastly, we reserve the right to reject any icons that do not fit the OUI style or may be deemed inappropriate.
 
 ### Style
+
+<!-- TODO: update with new Icon style guidelines: https://lucide.dev/guide/design/icon-design-guide -->
 
 This is where things get more opinionated. To maintain a cohesive, high quality icon set, we require that all new glpyhs adhere to the following guidelines:
 
@@ -40,9 +53,18 @@ _As a reference, you can download and view the `icons.sketch` file via the **Ske
 #### _For non-Sketch users_
 _While we use Sketch to maintain our internal design library, you can use any design tool to produce the SVG file._
 
-## Add the icon to the OUI repo
+## Before Adding a Custom Icon
 
-Once you've designed your new icon, the last step is adding it to the OUI repo.
+First, check if a suitable icon already exists in our Lucide React collection:
+1. Browse available icons at `http://localhost:6006/?path=/story/ui-icons--default` when running Storybook locally
+2. Search through our curated collection of 118+ Lucide icons organized by category
+3. If a Lucide icon meets your needs, use it instead of creating a custom one
+
+If no suitable Lucide icon exists, proceed with creating a custom icon.
+
+## Add a Custom Icon to OUI
+
+Once you've designed your new icon, follow these steps to add it to the OUI repo.
 
 ### Clean the SVG
 
@@ -59,34 +81,41 @@ _**Note**: Sketch users can use the [SVGO plugin][sketch-SVGO-plugin] to remove 
 
 Create a new feature branch against this repo and make the following changes:
 
-_1. Add your glyph to the `OuiIcon` component_
-- Add your SVG file to the `/src/components/icon/assets` folder
-- Add a reference in the `/src/components/icon/icon.tsx` file (in alphabetical order)
+_1. Add your SVG to the custom icons directory_
+- Add your cleaned SVG file to `/src/components/custom/icons/custom/` folder
+- Use kebab-case naming (e.g., `my-new-icon.svg`)
+- The build system will automatically generate a PascalCase component name with "Icon" suffix (e.g., `MyNewIconIcon`)
 
-_2. Display the icon in the docs_
-- Add the icon name to `/src-docs/src/views/icon/icons.js` *
+_2. Generate the React component_
+- Run `yarn build:icons` to generate the React component from your SVG
+- This creates a TypeScript component in the same directory following OUI patterns
+- The component automatically includes proper TypeScript types and forwardRef implementation
 
 _3. Compile and test_
-- Run `yarn compile-icons`
-- Preview your icon locally at `http://localhost:8030/#/display/icons` **
-- Switch the docs to dark mode and verify that the icon is visible (all paths should be filled with the reverse color)
-- Run `yarn run test-unit icon -u` to create/update the jest snapshots
+- Run `yarn build` to build the complete package
+- Add your icon to the Icons story
+- Preview your icon in Storybook at `http://localhost:6006/?path=/story/ui-icons--default`
+- Your icon will appear in the "Custom OUI Icons" section
+- Switch between light and dark themes to verify visibility
+- Run `yarn test` to ensure all tests pass
 
 If everything looks good, then commit your changes, push up your branch, and open a PR! :raised_hands:
 
 Opening a PR will notify the OUI team that your work is ready for review. Please include a screenshot in the description and reference the issue that your PR fixes.
 
 ### Ship it
-Once your PR is approved, you will be able to merge it and give yourself a well-deserved pat on the back. Finally, stay tuned for the next release of OUI at which point your icon will become available to the masses and appear on the OUI docs site.
+Once your PR is approved, you will be able to merge it and give yourself a well-deserved pat on the back. Finally, stay tuned for the next release of OUI at which point your icon will become available to the masses and appear on the OUI Storybook site.
 
-:trophy: _**Welcome to the Official OUI Icon Design Club**_ :beers:
+## Usage
 
----
+After your icon is published, consumers can use it like any other OUI icon:
 
-_\* The Icons page actually contains several sections. In most cases, you will be adding your icon to the base set. However, if your icon should appear in a different set, then add it to the appropriate section file in `/src-docs/src/views/icon`._
+```typescript
+import { MyNewIcon } from '@opensearch-project/oui';
 
-_\** Run `yarn && yarn start` to view the OUI docs site locally._
-
+// Use with all standard icon props
+<MyNewIcon size={24} className="text-blue-500" strokeWidth={2} />
+```
 
 [icons]: https://oui.opensearch.org/#/display/icons
 [docs]: https://oui.opensearch.org

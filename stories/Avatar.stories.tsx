@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { expect, within } from '@storybook/test';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components';
-import { User, UserCheck, Crown, Shield } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback, UserIcon, UserCheckIcon, CrownIcon, ShieldIcon } from '@/components';
 
 const meta: Meta<typeof Avatar> = {
   title: 'UI/Avatar',
@@ -110,7 +109,7 @@ export const WithIconFallback: Story = {
   render: () => (
     <Avatar>
       <AvatarFallback>
-        <User className="oui:size-4" />
+        <UserIcon className="oui:size-4" />
       </AvatarFallback>
     </Avatar>
   ),
@@ -205,7 +204,7 @@ export const UserProfiles: Story = {
       </Avatar>
       <Avatar>
         <AvatarFallback>
-          <User className="oui:size-4" />
+          <UserIcon className="oui:size-4" />
         </AvatarFallback>
       </Avatar>
     </div>
@@ -263,7 +262,7 @@ export const TeamMembers: Story = {
           <AvatarFallback>TL</AvatarFallback>
         </Avatar>
         <div className="oui:absolute oui:-top-1 oui:-right-1 oui:size-4 oui:bg-yellow-500 oui:rounded-full oui:flex oui:items-center oui:justify-center">
-          <Crown className="oui:size-2.5 oui:text-white" />
+          <CrownIcon className="oui:size-2.5 oui:text-white" />
         </div>
       </div>
       <div className="oui:relative">
@@ -271,7 +270,7 @@ export const TeamMembers: Story = {
           <AvatarFallback>AD</AvatarFallback>
         </Avatar>
         <div className="oui:absolute oui:-top-1 oui:-right-1 oui:size-4 oui:bg-blue-500 oui:rounded-full oui:flex oui:items-center oui:justify-center">
-          <Shield className="oui:size-2.5 oui:text-white" />
+          <ShieldIcon className="oui:size-2.5 oui:text-white" />
         </div>
       </div>
       <Avatar>
@@ -280,7 +279,7 @@ export const TeamMembers: Story = {
       <Avatar>
         <AvatarImage src="https://github.com/vercel.png" alt="Developer" />
         <AvatarFallback>
-          <UserCheck className="oui:size-4" />
+          <UserCheckIcon className="oui:size-4" />
         </AvatarFallback>
       </Avatar>
     </div>
@@ -525,7 +524,7 @@ export const FallbackVariations: Story = {
       <div className="oui:text-center">
         <Avatar>
           <AvatarFallback>
-            <User className="oui:size-4" />
+            <UserIcon className="oui:size-4" />
           </AvatarFallback>
         </Avatar>
         <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">User Icon</p>
@@ -533,7 +532,7 @@ export const FallbackVariations: Story = {
       <div className="oui:text-center">
         <Avatar>
           <AvatarFallback>
-            <UserCheck className="oui:size-4" />
+            <UserCheckIcon className="oui:size-4" />
           </AvatarFallback>
         </Avatar>
         <p className="oui:text-xs oui:mt-2 oui:text-muted-foreground">Verified Icon</p>

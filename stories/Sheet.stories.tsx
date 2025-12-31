@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { Menu, Settings, User, Bell, Search } from 'lucide-react';
+import { MenuIcon, SettingsIcon, UserIcon, BellIcon, SearchIcon } from '@/components';
 import {
   Sheet,
   SheetClose,
@@ -86,7 +86,7 @@ export const FromLeft: Story = {
     <Sheet {...args}>
       <SheetTrigger asChild>
         <Button variant="outline">
-          <Menu className="oui:mr-2 oui:h-4 oui:w-4" />
+          <MenuIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           Menu
         </Button>
       </SheetTrigger>
@@ -100,15 +100,15 @@ export const FromLeft: Story = {
         <div className="oui:py-4">
           <nav className="oui:space-y-2">
             <Button variant="ghost" className="oui:w-full oui:justify-start">
-              <User className="oui:mr-2 oui:h-4 oui:w-4" />
+              <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               Profile
             </Button>
             <Button variant="ghost" className="oui:w-full oui:justify-start">
-              <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+              <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               Settings
             </Button>
             <Button variant="ghost" className="oui:w-full oui:justify-start">
-              <Bell className="oui:mr-2 oui:h-4 oui:w-4" />
+              <BellIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               Notifications
             </Button>
             <Separator className="oui:my-2" />
@@ -137,7 +137,7 @@ export const FromTop: Story = {
     <Sheet {...args}>
       <SheetTrigger asChild>
         <Button variant="outline">
-          <Search className="oui:mr-2 oui:h-4 oui:w-4" />
+          <SearchIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           Search
         </Button>
       </SheetTrigger>
@@ -187,7 +187,7 @@ export const FromBottom: Story = {
     <Sheet {...args}>
       <SheetTrigger asChild>
         <Button variant="outline">
-          <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+          <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
           Quick Settings
         </Button>
       </SheetTrigger>

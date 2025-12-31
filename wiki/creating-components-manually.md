@@ -165,13 +165,13 @@ Tests should be written in Storybook stories using the `@storybook/test` package
 
 ## Adding Icons
 
-If you need icons, use `lucide-react`:
+If you need icons, you can import Lucide or custom icons from `@opensearch-project/oui` (with Icon suffix):
 
 ```tsx
-import { ChevronDown } from 'lucide-react'
+import { ChevronDownIcon } from '@opensearch-project/oui'
 
 // Use in component
-<ChevronDown className="h-4 w-4" />
+<ChevronDownIcon className="h-4 w-4" />
 ```
 
 ## Best Practices

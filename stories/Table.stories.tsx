@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
-import { MoreHorizontal, ArrowUpDown } from 'lucide-react';
+import { MoreHorizontalIcon, ArrowUpDownIcon } from '@/components';
 import {
   Table,
   TableBody,
@@ -252,7 +252,7 @@ export const WithActions: Story = {
                     <DropdownMenuTrigger asChild>
                       <Button variant="ghost" className="oui:h-8 oui:w-8 oui:p-0">
                         <span className="oui:sr-only">Open menu</span>
-                        <MoreHorizontal className="oui:h-4 oui:w-4" />
+                        <MoreHorizontalIcon className="oui:h-4 oui:w-4" />
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
@@ -314,7 +314,7 @@ export const Sortable: Story = {
         className="oui:h-auto oui:p-0 oui:font-medium oui:hover:bg-transparent"
       >
         {children}
-        <ArrowUpDown className="oui:ml-2 oui:h-4 oui:w-4" />
+        <ArrowUpDownIcon className="oui:ml-2 oui:h-4 oui:w-4" />
       </Button>
     );
 

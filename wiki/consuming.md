@@ -182,22 +182,52 @@ If you get an error when importing a React component, you might need to configur
 
 ### Icons
 
-OUI 2.x uses Lucide React icons instead of the legacy icon system. Icons are imported directly from the `lucide-react` package:
+OUI 2.x provides a comprehensive icon system that combines curated Lucide React icons with custom OpenSearch icons. All icons should be imported from the OUI package:
 
 ```javascript
-import { ArrowDown, ArrowLeft, Settings } from 'lucide-react';
+import {
+  ChevronDownIcon,
+  ChevronLeftIcon,
+  SettingsIcon,
+  SearchIcon,
+  UserIcon,
+  DiscoverIcon  // Custom OUI icon
+} from '@opensearch-project/oui';
 
 function MyComponent() {
   return (
     <Button>
-      <ArrowDown className="h-4 w-4" />
+      <ChevronDownIcon className="h-4 w-4" />
       Click me
     </Button>
   );
 }
 ```
 
-If you need the legacy icon handling for compatibility, the old approach with `appendIconComponentCache` may still be available but is not recommended for new implementations.
+**Icon System Features:**
+- **118+ curated Lucide icons** - All with consistent "Icon" suffix naming
+- **Custom OUI icons** - OpenSearch-specific icons like `DiscoverIcon`
+- **Unified API** - All icons support size, color, strokeWidth, and standard SVG props
+- **Tree-shakable** - Import only the icons you use
+
+**Important**: Don't import icons directly from `lucide-react`. Always use the OUI package to ensure consistency and access to custom OpenSearch icons.
+
+**Example Usage:**
+```javascript
+// Size variants
+<SearchIcon size={16} />
+<SearchIcon size={24} />  // default
+<SearchIcon size={32} />
+
+// Color and styling
+<HeartIcon className="text-red-500" />
+<StarIcon color="#fbbf24" />
+<CheckCircleIcon className="text-green-600" />
+
+// Stroke width
+<CircleIcon strokeWidth={1} />  // thin
+<CircleIcon strokeWidth={3} />  // bold
+```
 
 ## Customizing with `className`
 

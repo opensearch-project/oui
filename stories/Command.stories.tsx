@@ -2,17 +2,17 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { expect, userEvent, within } from '@storybook/test';
 import { useState } from 'react';
 import {
-  Calculator,
-  Calendar,
-  CreditCard,
-  Settings,
-  Smile,
-  User,
-  FileText,
-  Search,
-  Home,
-  Mail,
-} from 'lucide-react';
+  CalculatorIcon,
+  CalendarIcon,
+  CreditCardIcon,
+  SettingsIcon,
+  SmileIcon,
+  UserIcon,
+  FileTextIcon,
+  SearchIcon,
+  HomeIcon,
+  MailIcon,
+} from '@/components';
 import {
   Command,
   CommandDialog,
@@ -55,32 +55,32 @@ export const Default: Story = {
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="Suggestions">
             <CommandItem>
-              <Calendar className="oui:mr-2 oui:h-4 oui:w-4" />
+              <CalendarIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Calendar</span>
             </CommandItem>
             <CommandItem>
-              <Smile className="oui:mr-2 oui:h-4 oui:w-4" />
+              <SmileIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Search Emoji</span>
             </CommandItem>
             <CommandItem>
-              <Calculator className="oui:mr-2 oui:h-4 oui:w-4" />
+              <CalculatorIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Calculator</span>
             </CommandItem>
           </CommandGroup>
           <CommandSeparator />
           <CommandGroup heading="Settings">
             <CommandItem>
-              <User className="oui:mr-2 oui:h-4 oui:w-4" />
+              <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Profile</span>
               <CommandShortcut>⌘P</CommandShortcut>
             </CommandItem>
             <CommandItem>
-              <CreditCard className="oui:mr-2 oui:h-4 oui:w-4" />
+              <CreditCardIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Billing</span>
               <CommandShortcut>⌘B</CommandShortcut>
             </CommandItem>
             <CommandItem>
-              <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+              <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Settings</span>
               <CommandShortcut>⌘S</CommandShortcut>
             </CommandItem>
@@ -142,17 +142,17 @@ export const Dialog: Story = {
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup heading="Quick Actions">
               <CommandItem onSelect={() => setOpen(false)}>
-                <FileText className="oui:mr-2 oui:h-4 oui:w-4" />
+                <FileTextIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>New Document</span>
                 <CommandShortcut>⌘N</CommandShortcut>
               </CommandItem>
               <CommandItem onSelect={() => setOpen(false)}>
-                <Search className="oui:mr-2 oui:h-4 oui:w-4" />
+                <SearchIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Search Files</span>
                 <CommandShortcut>⌘F</CommandShortcut>
               </CommandItem>
               <CommandItem onSelect={() => setOpen(false)}>
-                <Home className="oui:mr-2 oui:h-4 oui:w-4" />
+                <HomeIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Go to Dashboard</span>
                 <CommandShortcut>⌘D</CommandShortcut>
               </CommandItem>
@@ -160,17 +160,17 @@ export const Dialog: Story = {
             <CommandSeparator />
             <CommandGroup heading="Navigation">
               <CommandItem onSelect={() => setOpen(false)}>
-                <User className="oui:mr-2 oui:h-4 oui:w-4" />
+                <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Profile</span>
                 <CommandShortcut>⌘P</CommandShortcut>
               </CommandItem>
               <CommandItem onSelect={() => setOpen(false)}>
-                <Mail className="oui:mr-2 oui:h-4 oui:w-4" />
+                <MailIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Messages</span>
                 <CommandShortcut>⌘M</CommandShortcut>
               </CommandItem>
               <CommandItem onSelect={() => setOpen(false)}>
-                <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+                <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                 <span>Settings</span>
                 <CommandShortcut>⌘,</CommandShortcut>
               </CommandItem>
@@ -202,7 +202,7 @@ export const SearchableList: Story = {
             <CommandGroup heading="Team Members">
               {items.map((item) => (
                 <CommandItem key={item.email} value={`${item.name} ${item.email} ${item.role}`}>
-                  <User className="oui:mr-2 oui:h-4 oui:w-4" />
+                  <UserIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                   <div className="oui:flex oui:flex-col">
                     <span className="oui:font-medium">{item.name}</span>
                     <span className="oui:text-sm oui:text-muted-foreground">{item.email}</span>
@@ -238,17 +238,17 @@ export const MultipleGroups: Story = {
           <CommandEmpty>No results found.</CommandEmpty>
           <CommandGroup heading="File">
             <CommandItem>
-              <FileText className="oui:mr-2 oui:h-4 oui:w-4" />
+              <FileTextIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>New File</span>
               <CommandShortcut>⌘N</CommandShortcut>
             </CommandItem>
             <CommandItem>
-              <FileText className="oui:mr-2 oui:h-4 oui:w-4" />
+              <FileTextIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Open File</span>
               <CommandShortcut>⌘O</CommandShortcut>
             </CommandItem>
             <CommandItem>
-              <FileText className="oui:mr-2 oui:h-4 oui:w-4" />
+              <FileTextIcon className="oui:mr-2 oui:h-4 oui:w-4" />
               <span>Save File</span>
               <CommandShortcut>⌘S</CommandShortcut>
             </CommandItem>
@@ -313,11 +313,11 @@ export const Showcase: Story = {
                   <CommandEmpty>No results found.</CommandEmpty>
                   <CommandGroup heading="Actions">
                     <CommandItem>
-                      <Home className="oui:mr-2 oui:h-4 oui:w-4" />
+                      <HomeIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                       <span>Home</span>
                     </CommandItem>
                     <CommandItem>
-                      <Settings className="oui:mr-2 oui:h-4 oui:w-4" />
+                      <SettingsIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                       <span>Settings</span>
                     </CommandItem>
                   </CommandGroup>
@@ -340,12 +340,12 @@ export const Showcase: Story = {
                   <CommandEmpty>No results found.</CommandEmpty>
                   <CommandGroup heading="Quick Actions">
                     <CommandItem onSelect={() => setDialogOpen(false)}>
-                      <FileText className="oui:mr-2 oui:h-4 oui:w-4" />
+                      <FileTextIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                       <span>New Document</span>
                       <CommandShortcut>⌘N</CommandShortcut>
                     </CommandItem>
                     <CommandItem onSelect={() => setDialogOpen(false)}>
-                      <Search className="oui:mr-2 oui:h-4 oui:w-4" />
+                      <SearchIcon className="oui:mr-2 oui:h-4 oui:w-4" />
                       <span>Search</span>
                       <CommandShortcut>⌘K</CommandShortcut>
                     </CommandItem>

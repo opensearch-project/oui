@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState, useEffect } from 'react';
-import { ChevronsUpDown } from 'lucide-react';
+import { ChevronsUpDownIcon } from '@/components';
 import {
     Collapsible,
     CollapsibleContent,
@@ -62,7 +62,7 @@ export const Default: Story = {
                         </h4>
                         <CollapsibleTrigger asChild>
                             <Button variant="ghost" size="sm" className="oui:w-9 oui:p-0">
-                                <ChevronsUpDown className="oui:h-4 oui:w-4 oui:text-foreground" />
+                                <ChevronsUpDownIcon className="oui:h-4 oui:w-4 oui:text-foreground" />
                                 <span className="oui:sr-only">Toggle</span>
                             </Button>
                         </CollapsibleTrigger>
@@ -132,7 +132,7 @@ export const Navigation: Story = {
                         >
                             <CollapsibleTrigger className="oui:flex oui:items-center oui:justify-between oui:w-full oui:p-2 oui:text-left oui:hover:bg-accent oui:rounded-md">
                                 <span className="oui:font-medium">{section.title}</span>
-                                <ChevronsUpDown className="oui:h-4 oui:w-4 oui:text-foreground" />
+                                <ChevronsUpDownIcon className="oui:h-4 oui:w-4 oui:text-foreground" />
                             </CollapsibleTrigger>
                             <CollapsibleContent className="oui:ml-4 oui:mt-1">
                                 <div className="oui:space-y-1">

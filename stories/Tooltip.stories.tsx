@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components';
 import { Button } from '@/components';
-import { HelpCircle, Trash2, Edit, Copy, AlertTriangle } from 'lucide-react';
+import { HelpCircleIcon, Trash2Icon, EditIcon, CopyIcon, AlertTriangleIcon } from '@/components';
 
 const meta: Meta<typeof Tooltip> = {
   title: 'UI/Tooltip',
@@ -132,10 +132,10 @@ export const WithKeyboardShortcut: Story = {
   render: () => (
     <Tooltip>
       <TooltipTrigger asChild>
-        <Button variant="outline">Copy</Button>
+        <Button variant="outline">CopyIcon</Button>
       </TooltipTrigger>
       <TooltipContent>
-        <p>Copy to clipboard</p>
+        <p>CopyIcon to clipboard</p>
         <p className="oui:text-xs oui:opacity-70 oui:mt-1">⌘+C</p>
       </TooltipContent>
     </Tooltip>
@@ -148,7 +148,7 @@ export const WithIconButton: Story = {
     <Tooltip>
       <TooltipTrigger asChild>
         <Button size="icon" variant="outline">
-          <HelpCircle className="oui:h-4 oui:w-4" />
+          <HelpCircleIcon className="oui:h-4 oui:w-4" />
         </Button>
       </TooltipTrigger>
       <TooltipContent>
@@ -271,7 +271,7 @@ export const CommonUseCases: Story = {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button size="icon" variant="outline">
-            <Trash2 className="oui:h-4 oui:w-4" />
+            <Trash2Icon className="oui:h-4 oui:w-4" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>
@@ -283,11 +283,11 @@ export const CommonUseCases: Story = {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button size="icon" variant="outline">
-            <Edit className="oui:h-4 oui:w-4" />
+            <EditIcon className="oui:h-4 oui:w-4" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>
-          <p>Edit item</p>
+          <p>EditIcon item</p>
           <p className="oui:text-xs oui:opacity-70 oui:mt-1">⌘+E</p>
         </TooltipContent>
       </Tooltip>
@@ -295,11 +295,11 @@ export const CommonUseCases: Story = {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button size="icon" variant="outline">
-            <Copy className="oui:h-4 oui:w-4" />
+            <CopyIcon className="oui:h-4 oui:w-4" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>
-          <p>Copy to clipboard</p>
+          <p>CopyIcon to clipboard</p>
           <p className="oui:text-xs oui:opacity-70 oui:mt-1">⌘+C</p>
         </TooltipContent>
       </Tooltip>
@@ -307,7 +307,7 @@ export const CommonUseCases: Story = {
       <Tooltip>
         <TooltipTrigger asChild>
           <Button size="icon" variant="outline">
-            <AlertTriangle className="oui:h-4 oui:w-4" />
+            <AlertTriangleIcon className="oui:h-4 oui:w-4" />
           </Button>
         </TooltipTrigger>
         <TooltipContent>
