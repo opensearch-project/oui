@@ -7,6 +7,7 @@
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
+- Add DataTable component ([#1687](https://github.com/opensearch-project/oui/pull/1687))
 - Add theme picker to storybook dev server ([#1686](https://github.com/opensearch-project/oui/pull/1686))
 
 ### 🐛 Bug Fixes

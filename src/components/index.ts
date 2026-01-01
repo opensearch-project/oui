@@ -48,6 +48,19 @@ export * from './ui/sonner';
 export * from './ui/spinner';
 export * from './custom/switch';
 export * from './ui/table';
+export { DataTable } from './custom/data-table';
+export type {
+  DataTableProps,
+  DataTableToolbarProps,
+  DataTableRowActionsProps,
+  DataTablePaginationProps,
+  DataTableColumnHeaderProps,
+} from './custom/data-table';
+export { DataTableColumnHeader, DataTableSimpleColumnHeader } from './custom/data-table-column-header';
+export { DataTableToolbar, DataTableSimpleToolbar } from './custom/data-table-toolbar';
+export { DataTablePagination } from './custom/data-table-pagination';
+export { DataTableRowActions, DataTableSimpleRowActions } from './custom/data-table-row-actions';
+export { DataTableViewOptions } from './custom/data-table-view-options';
 export * from './custom/tabs';
 export * from './ui/textarea';
 export * from './ui/toggle-group';
