@@ -1,5 +1,6 @@
 import * as React from 'react';
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from '@storybook/test';
 import { 
   Card, 
   CardHeader, 
@@ -50,6 +51,22 @@ export const Default: Story = {
       </CardFooter>
     </Card>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const title = canvas.getByText('User Profile');
+    const description = canvas.getByText('Manage your account settings and preferences');
+    const content = canvas.getByText(/Update your personal information/);
+    const button = canvas.getByRole('button', { name: 'Edit Profile' });
+
+    await expect(title).toBeInTheDocument();
+    await expect(description).toBeInTheDocument();
+    await expect(content).toBeInTheDocument();
+    await expect(button).toBeInTheDocument();
+
+    await userEvent.click(button);
+    await expect(button).toHaveFocus();
+  },
 };
 
 // Card with action button in header

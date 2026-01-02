@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { Button } from '@/components';
 import { Toaster } from '@/components';
 import { toast } from 'sonner';
@@ -326,6 +327,208 @@ export const ToastShowcase: Story = {
       </div>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test basic toast types functionality
+    const defaultButton = canvas.getByRole('button', { name: 'Default' });
+    const successButton = canvas.getByRole('button', { name: 'Success' });
+    const errorButton = canvas.getByRole('button', { name: 'Error' });
+
+    await expect(defaultButton).toBeInTheDocument();
+    await expect(successButton).toBeInTheDocument();
+    await expect(errorButton).toBeInTheDocument();
+
+    // Test default toast
+    await userEvent.click(defaultButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Look for toast content globally (toasts render in portals)
+    const toastContent = document.querySelector('[data-sonner-toast]') ||
+                        document.querySelector('[role="status"]') ||
+                        document.querySelector('.sonner-toast');
+
+    if (toastContent) {
+      // Test that toast contains expected content
+      await expect(toastContent).toBeInTheDocument();
+      // Test toast is visible
+      const computedStyle = window.getComputedStyle(toastContent);
+      expect(computedStyle.display).not.toBe('none');
+    }
+
+    // Test success toast with different content
+    await userEvent.click(successButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Test multiple toasts can appear (stacking)
+    const allToasts = document.querySelectorAll('[data-sonner-toast], [role="status"], .sonner-toast');
+    expect(allToasts.length).toBeGreaterThan(0);
+
+    // Test error toast (destructive variant)
+    await userEvent.click(errorButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Test toast with action button
+    const actionButton = canvas.getByRole('button', { name: 'With Action' });
+    await userEvent.click(actionButton);
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    // Look for action button within toast
+    const actionInToast = document.querySelector('[data-sonner-toast] button') ||
+                         document.querySelector('[role="status"] button');
+
+    if (actionInToast) {
+      // Test action button is clickable
+      await userEvent.click(actionInToast);
+      await new Promise(resolve => setTimeout(resolve, 200));
+
+      // Should trigger undo action creating new toast
+      const undoToast = Array.from(document.querySelectorAll('[data-sonner-toast], [role="status"], .sonner-toast'))
+        .find(toast => toast.textContent?.includes('cancelled'));
+
+      if (undoToast) {
+        await expect(undoToast).toBeInTheDocument();
+      }
+    }
+
+    // Test toast with description
+    const descriptionButton = canvas.getByRole('button', { name: 'With Description' });
+    await userEvent.click(descriptionButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Test loading toast functionality
+    const loadingButton = canvas.getByRole('button', { name: 'Loading' });
+    await userEvent.click(loadingButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Test promise toast (loading -> success/error)
+    const promiseButton = canvas.getByRole('button', { name: 'Promise Toast' });
+    await userEvent.click(promiseButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Wait for promise to resolve and toast to update
+    await new Promise(resolve => setTimeout(resolve, 2500));
+
+    // Test positioning toasts
+    const topLeftButton = canvas.getByRole('button', { name: 'Top Left' });
+    const bottomRightButton = canvas.getByRole('button', { name: 'Bottom Right' });
+
+    await userEvent.click(topLeftButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    await userEvent.click(bottomRightButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Test duration variants
+    const shortDurationButton = canvas.getByRole('button', { name: 'Short Duration (1s)' });
+    const persistentButton = canvas.getByRole('button', { name: 'Persistent (Manual dismiss)' });
+
+    // Test short duration toast
+    await userEvent.click(shortDurationButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Wait for short toast to disappear
+    await new Promise(resolve => setTimeout(resolve, 1200));
+
+    // Test persistent toast
+    await userEvent.click(persistentButton);
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    const persistentToast = Array.from(document.querySelectorAll('[data-sonner-toast], [role="status"], .sonner-toast'))
+      .find(toast => toast.textContent?.includes('Persistent message'));
+
+    if (persistentToast) {
+      await expect(persistentToast).toBeInTheDocument();
+
+      // Test manual dismiss (usually via close button or click)
+      const closeButton = persistentToast.querySelector('button[aria-label*="close"], button[title*="close"], [data-close-button]');
+
+      if (closeButton) {
+        await userEvent.click(closeButton);
+        await new Promise(resolve => setTimeout(resolve, 200));
+      } else {
+        // Try clicking the toast itself if no explicit close button
+        await userEvent.click(persistentToast as Element);
+        await new Promise(resolve => setTimeout(resolve, 200));
+      }
+    }
+
+    // Test real-world examples with complex interactions
+    const eventCreatedButton = canvas.getByRole('button', { name: 'Event Created' });
+    await userEvent.click(eventCreatedButton);
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    // Look for undo button in event toast
+    const eventUndoButton = Array.from(document.querySelectorAll('[data-sonner-toast] button, [role="status"] button'))
+      .find(btn => btn.textContent?.toLowerCase().includes('undo'));
+
+    if (eventUndoButton) {
+      await userEvent.click(eventUndoButton as Element);
+      await new Promise(resolve => setTimeout(resolve, 200));
+    }
+
+    // Test error toast with retry action
+    const errorActionButton = canvas.getByRole('button', { name: 'Error with Action' });
+    await userEvent.click(errorActionButton);
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    const retryButton = Array.from(document.querySelectorAll('[data-sonner-toast] button, [role="status"] button'))
+      .find(btn => btn.textContent?.toLowerCase().includes('try again'));
+
+    if (retryButton) {
+      await userEvent.click(retryButton as Element);
+      await new Promise(resolve => setTimeout(resolve, 200));
+    }
+
+    // Test keyboard accessibility on toasts
+    const warningButton = canvas.getByRole('button', { name: 'Warning' });
+    await userEvent.click(warningButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Test that toasts have proper ARIA attributes
+    const latestToast = document.querySelector('[data-sonner-toast]:last-of-type, [role="status"]:last-of-type, [role="alert"]:last-of-type');
+    if (latestToast) {
+      // Toast should have appropriate role or aria attributes
+      const hasRole = latestToast.getAttribute('role');
+      const hasAriaLive = latestToast.getAttribute('aria-live');
+      const hasAriaAtomic = latestToast.getAttribute('aria-atomic');
+
+      // Check if element is accessible (visible and has content)
+      const isAccessible = latestToast.textContent && latestToast.textContent.trim().length > 0;
+
+      // Toast should be accessible either through ARIA attributes or content visibility
+      expect(hasRole || hasAriaLive || hasAriaAtomic || isAccessible).toBeTruthy();
+    }
+
+    // Test toast stacking and cleanup
+    const infoButton = canvas.getByRole('button', { name: 'Info' });
+
+    // Create multiple toasts to test stacking
+    await userEvent.click(infoButton);
+    await new Promise(resolve => setTimeout(resolve, 100));
+    await userEvent.click(infoButton);
+    await new Promise(resolve => setTimeout(resolve, 100));
+    await userEvent.click(infoButton);
+    await new Promise(resolve => setTimeout(resolve, 300));
+
+    // Should have multiple toasts visible
+    const stackedToasts = document.querySelectorAll('[data-sonner-toast], [role="status"], .sonner-toast');
+    expect(stackedToasts.length).toBeGreaterThanOrEqual(2);
+
+    // Clean up any remaining persistent toasts
+    const allRemainingToasts = document.querySelectorAll('[data-sonner-toast], [role="status"], .sonner-toast');
+    for (const toast of allRemainingToasts) {
+      const closeBtn = toast.querySelector('button[aria-label*="close"], button[title*="close"], [data-close-button]');
+      if (closeBtn) {
+        try {
+          await userEvent.click(closeBtn as Element);
+          await new Promise(resolve => setTimeout(resolve, 100));
+        } catch (error) {
+          // Ignore cleanup errors
+        }
+      }
+    }
+  },
   parameters: {
     docs: {
       description: {

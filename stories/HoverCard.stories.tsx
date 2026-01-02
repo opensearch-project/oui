@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { CalendarDaysIcon } from '@/components';
 import {
   HoverCard,
@@ -64,6 +65,28 @@ export const Default: Story = {
       </HoverCardContent>
     </HoverCard>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const trigger = canvas.getByRole('button', { name: '@nextjs' });
+    await expect(trigger).toBeInTheDocument();
+
+    await expect(canvas.queryByText('The React Framework')).not.toBeInTheDocument();
+
+    await userEvent.hover(trigger);
+    await new Promise(resolve => setTimeout(resolve, 800));
+
+    const content = canvas.getByText('The React Framework – created and maintained by @vercel.');
+    await expect(content).toBeInTheDocument();
+
+    const joinDate = canvas.getByText('Joined December 2021');
+    await expect(joinDate).toBeInTheDocument();
+
+    await userEvent.unhover(trigger);
+    await new Promise(resolve => setTimeout(resolve, 400));
+
+    await expect(canvas.queryByText('The React Framework')).not.toBeInTheDocument();
+  },
 };
 
 export const UserProfile: Story = {

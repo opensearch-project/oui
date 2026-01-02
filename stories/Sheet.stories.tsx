@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
+import { expect, userEvent, within } from '@storybook/test';
 import { MenuIcon, SettingsIcon, UserIcon, BellIcon, SearchIcon } from '@/components';
 import {
   Sheet,
@@ -79,6 +80,34 @@ export const Default: Story = {
       </SheetContent>
     </Sheet>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const openButton = canvas.getByRole('button', { name: 'Open Sheet' });
+    await expect(openButton).toBeInTheDocument();
+
+    await expect(canvas.queryByText('Edit Profile')).not.toBeInTheDocument();
+
+    await userEvent.click(openButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    const title = canvas.getByText('Edit Profile');
+    await expect(title).toBeInTheDocument();
+
+    const nameInput = canvas.getByLabelText('Name');
+    const usernameInput = canvas.getByLabelText('Username');
+
+    await expect(nameInput).toHaveValue('Pedro Duarte');
+    await expect(usernameInput).toHaveValue('@peduarte');
+
+    const saveButton = canvas.getByRole('button', { name: 'Save changes' });
+    await expect(saveButton).toBeInTheDocument();
+
+    await userEvent.click(saveButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    await expect(canvas.queryByText('Edit Profile')).not.toBeInTheDocument();
+  },
 };
 
 export const FromLeft: Story = {

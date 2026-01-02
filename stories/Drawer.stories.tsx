@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
+import { expect, userEvent, within } from '@storybook/test';
 import { MinusIcon, PlusIcon } from '@/components';
 import {
   Drawer,
@@ -74,6 +75,77 @@ export const Default: Story = {
       </DrawerContent>
     </Drawer>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test drawer trigger
+    const openButton = canvas.getByRole('button', { name: 'Open Drawer' });
+    await expect(openButton).toBeInTheDocument();
+
+    // Test initial state - drawer closed
+    await expect(canvas.queryByText('Edit Profile')).not.toBeInTheDocument();
+
+    // Test opening drawer
+    await userEvent.click(openButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Test drawer content visibility
+    const title = canvas.getByText('Edit Profile');
+    const description = canvas.getByText(/Make changes to your profile/);
+    await expect(title).toBeInTheDocument();
+    await expect(description).toBeInTheDocument();
+
+    // Test form fields
+    const nameInput = canvas.getByLabelText('Name');
+    const emailInput = canvas.getByLabelText('Email');
+    await expect(nameInput).toBeInTheDocument();
+    await expect(emailInput).toBeInTheDocument();
+
+    // Test focus management - first focusable element
+    await expect(nameInput).toHaveFocus();
+
+    // Test form interactions
+    await userEvent.type(nameInput, 'John Doe');
+    await expect(nameInput).toHaveValue('John Doe');
+
+    await userEvent.keyboard('{Tab}');
+    await expect(emailInput).toHaveFocus();
+
+    await userEvent.type(emailInput, 'john@example.com');
+    await expect(emailInput).toHaveValue('john@example.com');
+
+    // Test drawer buttons
+    const saveButton = canvas.getByRole('button', { name: 'Save Changes' });
+    const cancelButton = canvas.getByRole('button', { name: 'Cancel' });
+
+    await expect(saveButton).toBeInTheDocument();
+    await expect(cancelButton).toBeInTheDocument();
+
+    // Test keyboard navigation to buttons
+    await userEvent.keyboard('{Tab}');
+    await expect(saveButton).toHaveFocus();
+
+    await userEvent.keyboard('{Tab}');
+    await expect(cancelButton).toHaveFocus();
+
+    // Test Escape key closes drawer
+    await userEvent.keyboard('{Escape}');
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Test drawer closed
+    await expect(canvas.queryByText('Edit Profile')).not.toBeInTheDocument();
+    await expect(openButton).toHaveFocus();
+
+    // Test Cancel button closes drawer
+    await userEvent.click(openButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    const cancelBtn = canvas.getByRole('button', { name: 'Cancel' });
+    await userEvent.click(cancelBtn);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    await expect(canvas.queryByText('Edit Profile')).not.toBeInTheDocument();
+  },
 };
 
 export const WithCounter: Story = {

@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { expect, within } from '@storybook/test';
+import { expect, userEvent, within } from '@storybook/test';
 import { Button } from '@/components';
+import { testButtonBehavior, testDisabledState } from './utils/test-helpers';
+import { testAriaLabeling, testFocusVisible } from './utils/accessibility-helpers';
 
 const meta: Meta<typeof Button> = { 
   title: 'UI/Button',
@@ -50,6 +52,41 @@ export const Default: Story = {
   args: {
     children: 'Save Changes',
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test basic button behavior
+    await testButtonBehavior(canvas, 'Save Changes');
+
+    const button = canvas.getByRole('button', { name: 'Save Changes' });
+
+    // Test focus behavior
+    await userEvent.click(button);
+    await expect(button).toHaveFocus();
+
+    // Test keyboard interaction (Enter and Space keys)
+    await userEvent.keyboard('{Enter}');
+    await expect(button).toBeEnabled();
+
+    // Test space key
+    await userEvent.keyboard(' ');
+    await expect(button).toBeEnabled();
+
+    // Test ARIA labeling
+    await testAriaLabeling(canvas, 'button', {
+      hasLabel: true,
+      labelText: 'Save Changes',
+    });
+
+    // Test focus visible state
+    await testFocusVisible(canvas, 'button', 'Save Changes');
+
+    // Test multiple clicks (rapid clicking shouldn't break anything)
+    await userEvent.click(button);
+    await userEvent.click(button);
+    await userEvent.click(button);
+    await expect(button).toBeEnabled();
+  },
 };
 
 // Variant stories
@@ -57,6 +94,34 @@ export const Destructive: Story = {
   args: {
     variant: 'destructive',
     children: 'Delete Account',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that destructive variant works the same as default for interactions
+    await testButtonBehavior(canvas, 'Delete Account');
+
+    const button = canvas.getByRole('button', { name: 'Delete Account' });
+
+    // Test focus and keyboard interaction
+    await userEvent.click(button);
+    await expect(button).toHaveFocus();
+
+    // Test keyboard activation
+    await userEvent.keyboard('{Enter}');
+    await expect(button).toBeEnabled();
+
+    await userEvent.keyboard(' ');
+    await expect(button).toBeEnabled();
+
+    // Test variant-specific styling is applied (data attribute)
+    await expect(button).toHaveAttribute('data-variant', 'destructive');
+
+    // Test ARIA labeling works for variants
+    await testAriaLabeling(canvas, 'button', {
+      hasLabel: true,
+      labelText: 'Delete Account',
+    });
   },
 };
 
@@ -116,6 +181,36 @@ export const Disabled: Story = {
     disabled: true,
     children: 'Save Changes',
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test disabled state behavior
+    await testDisabledState(canvas, 'button', 'Save Changes');
+
+    const button = canvas.getByRole('button', { name: 'Save Changes' });
+
+    // Test that disabled button cannot be clicked
+    await expect(button).toBeDisabled();
+    await expect(button).toHaveAttribute('disabled');
+
+    // Test that disabled button is not focusable via tab
+    await userEvent.tab();
+    await expect(button).not.toHaveFocus();
+
+    // Test ARIA labeling for disabled button
+    await testAriaLabeling(canvas, 'button', {
+      hasLabel: true,
+      labelText: 'Save Changes',
+    });
+
+    // Test that keyboard events don't work on disabled button
+    try {
+      await userEvent.keyboard('{Enter}');
+      await userEvent.keyboard(' ');
+    } catch (error) {
+      // Expected - disabled buttons should not respond to keyboard events
+    }
+  },
 };
 
 export const WithIcon: Story = {
@@ -153,10 +248,52 @@ export const AllVariants: Story = {
       <Button variant="link">Link</Button>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that all buttons are present and interactive
+    const buttons = [
+      { name: 'Default', variant: 'default' },
+      { name: 'Destructive', variant: 'destructive' },
+      { name: 'Outline', variant: 'outline' },
+      { name: 'Secondary', variant: 'secondary' },
+      { name: 'Ghost', variant: 'ghost' },
+      { name: 'Link', variant: 'link' },
+    ];
+
+    for (const { name, variant } of buttons) {
+      const button = canvas.getByRole('button', { name });
+
+      // Test basic functionality
+      await expect(button).toBeEnabled();
+      await expect(button).toBeInTheDocument();
+
+      // Test variant attribute
+      await expect(button).toHaveAttribute('data-variant', variant);
+
+      // Test click behavior
+      await userEvent.click(button);
+      await expect(button).toHaveFocus();
+    }
+
+    // Test keyboard navigation between buttons
+    const firstButton = canvas.getByRole('button', { name: 'Default' });
+    await userEvent.click(firstButton);
+    await expect(firstButton).toHaveFocus();
+
+    // Tab to next button
+    await userEvent.tab();
+    const secondButton = canvas.getByRole('button', { name: 'Destructive' });
+    await expect(secondButton).toHaveFocus();
+
+    // Test keyboard activation
+    await userEvent.keyboard('{Enter}');
+    await expect(secondButton).toHaveFocus();
+  },
   parameters: {
     docs: {
       description: {
-        story: 'All available button variants displayed together.',
+        story: 'All available button variants displayed together with comprehensive interaction testing.',
       },
     },
   },

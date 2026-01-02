@@ -22,6 +22,7 @@
 - Centralize icons and enable custom icons ([#1684](https://github.com/opensearch-project/oui/pull/1684))
 
 ### 🔩 Tests
+- Backfilling component tests ([#1688](https://github.com/opensearch-project/oui/pull/1688))
 
 ## [`2.0.0-alpha.2`](https://github.com/opensearch-project/oui/tree/main)
 
