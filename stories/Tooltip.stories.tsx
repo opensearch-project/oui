@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components';
 import { Button } from '@/components';
 import { HelpCircleIcon, Trash2Icon, EditIcon, CopyIcon, AlertTriangleIcon } from '@/components';
@@ -46,6 +47,45 @@ export const Default: Story = {
       </TooltipContent>
     </Tooltip>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test tooltip trigger
+    const triggerButton = canvas.getByRole('button', { name: 'Hover for help' });
+    await expect(triggerButton).toBeInTheDocument();
+
+    // Test initial state - tooltip hidden
+    await expect(canvas.queryByText('This is a helpful tooltip message')).not.toBeInTheDocument();
+
+    // Test hover shows tooltip
+    await userEvent.hover(triggerButton);
+    await new Promise(resolve => setTimeout(resolve, 800)); // Wait for delay
+
+    // Test tooltip content visible
+    const tooltipMessage = canvas.getByText('This is a helpful tooltip message');
+    await expect(tooltipMessage).toBeInTheDocument();
+
+    // Test unhover hides tooltip
+    await userEvent.unhover(triggerButton);
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Tooltip should be hidden
+    await expect(canvas.queryByText('This is a helpful tooltip message')).not.toBeInTheDocument();
+
+    // Test focus shows tooltip
+    await userEvent.click(triggerButton);
+    await triggerButton.focus();
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    // Should show tooltip on focus
+    await expect(canvas.getByText('This is a helpful tooltip message')).toBeInTheDocument();
+
+    // Test Escape hides tooltip
+    await userEvent.keyboard('{Escape}');
+    await new Promise(resolve => setTimeout(resolve, 200));
+
+    await expect(canvas.queryByText('This is a helpful tooltip message')).not.toBeInTheDocument();
+  },
 };
 
 // Different positioning

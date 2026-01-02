@@ -1,6 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from '@storybook/test';
 import { Textarea } from '@/components';
 import { useState } from 'react';
+import {
+  testDisabledState,
+  testReadOnlyState,
+  testRequiredField,
+  testValidationSuccess
+} from './utils/test-helpers';
+import {
+  testErrorAnnouncement
+} from './utils/accessibility-helpers';
 
 const meta: Meta<typeof Textarea> = {
   title: 'UI/Textarea',
@@ -75,6 +85,35 @@ export const Default: Story = {
     placeholder: 'Enter your message here...',
     rows: 4,
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test basic textarea behavior
+    const textarea = canvas.getByRole('textbox');
+
+    // Test initial state
+    await expect(textarea).toBeInTheDocument();
+    await expect(textarea).toHaveValue('');
+    await expect(textarea).toHaveAttribute('placeholder', 'Enter your message here...');
+    await expect(textarea).toHaveAttribute('rows', '4');
+
+    // Test focus behavior
+    await userEvent.click(textarea);
+    await expect(textarea).toHaveFocus();
+
+    // Test multi-line text input
+    const multilineText = 'This is line one\nThis is line two\nThis is line three';
+    await userEvent.type(textarea, multilineText);
+    await expect(textarea).toHaveValue(multilineText);
+
+    // Test clearing
+    await userEvent.clear(textarea);
+    await expect(textarea).toHaveValue('');
+
+    // Test blur behavior
+    await userEvent.tab();
+    await expect(textarea).not.toHaveFocus();
+  },
 };
 
 // Different sizes
@@ -107,6 +146,25 @@ export const Disabled: Story = {
     value: 'This content cannot be edited because the textarea is disabled.',
     rows: 3,
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test disabled state
+    await testDisabledState(canvas, 'textbox');
+
+    const textarea = canvas.getByRole('textbox');
+
+    // Test that value is preserved but not editable
+    await expect(textarea).toHaveValue('This content cannot be edited because the textarea is disabled.');
+
+    // Attempt to type - should not work
+    await userEvent.type(textarea, 'should not change');
+    await expect(textarea).toHaveValue('This content cannot be edited because the textarea is disabled.');
+
+    // Test that textarea is not focusable through tab
+    await userEvent.tab();
+    await expect(textarea).not.toHaveFocus();
+  },
 };
 
 export const ReadOnly: Story = {
@@ -115,6 +173,26 @@ export const ReadOnly: Story = {
     value: 'This is read-only content that provides information but cannot be modified by the user.',
     rows: 3,
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test readonly state
+    await testReadOnlyState(canvas, 'This is read-only content that provides information but cannot be modified by the user.');
+
+    const textarea = canvas.getByRole('textbox');
+
+    // Test that textarea can be focused but not edited
+    await userEvent.click(textarea);
+    await expect(textarea).toHaveFocus();
+
+    // Test that readonly attribute is present
+    await expect(textarea).toHaveAttribute('readonly');
+
+    // Test that text selection works (user should be able to select and copy)
+    await userEvent.keyboard('{Control>}a{/Control}');
+    // Note: We can't easily test selection in jsdom, but focus should remain
+    await expect(textarea).toHaveFocus();
+  },
 };
 
 export const Required: Story = {
@@ -122,6 +200,23 @@ export const Required: Story = {
     placeholder: 'This field is required',
     required: true,
     rows: 4,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test required field behavior
+    await testRequiredField(canvas);
+
+    const textarea = canvas.getByRole('textbox');
+
+    // Test form validation behavior
+    await userEvent.clear(textarea);
+    await userEvent.tab(); // Blur to trigger validation
+
+    // Test typing required content
+    await userEvent.click(textarea);
+    await userEvent.type(textarea, 'This is the required message content that meets the validation requirements.');
+    await expect(textarea).toHaveValue('This is the required message content that meets the validation requirements.');
   },
 };
 
@@ -188,7 +283,7 @@ export const WithCharacterCount: Story = {
     const [value, setValue] = useState('');
     const maxLength = 200;
     const remaining = maxLength - value.length;
-    
+
     return (
       <div className="oui:space-y-2 oui:w-full oui:max-w-md">
         <label htmlFor="char-count-textarea" className="oui:text-sm oui:font-medium">
@@ -213,6 +308,43 @@ export const WithCharacterCount: Story = {
         </div>
       </div>
     );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test label association
+    const textarea = canvas.getByRole('textbox', { name: 'Product Review' });
+    const label = canvas.getByText('Product Review');
+
+    // Test that clicking label focuses textarea
+    await userEvent.click(label);
+    await expect(textarea).toHaveFocus();
+
+    // Test character counting functionality
+    const shortText = 'Great product!';
+    await userEvent.type(textarea, shortText);
+    await expect(textarea).toHaveValue(shortText);
+
+    // Check character count display updates (count might vary by 1 due to initial content)
+    const remaining1 = canvas.getByText(/18[6-7] characters remaining/);
+    await expect(remaining1).toBeInTheDocument();
+
+    // Test approaching character limit
+    const longText = 'This product is absolutely fantastic! I have been using it for several months now and it has exceeded all my expectations. The quality is outstanding and the customer service is top-notch.';
+    await userEvent.clear(textarea);
+    await userEvent.type(textarea, longText);
+
+    // Should show remaining count in red when under 20 characters
+    const remainingWarning = canvas.getByText(/characters remaining/);
+    await expect(remainingWarning).toBeInTheDocument();
+
+    // Test maxLength enforcement (try to exceed the limit)
+    const extraText = ' Additional text that should be truncated';
+    await userEvent.type(textarea, extraText);
+
+    // Value should not exceed maxLength
+    const finalValue = (textarea as HTMLTextAreaElement).value;
+    expect(finalValue.length).toBeLessThanOrEqual(200);
   },
   parameters: {
     docs: {
@@ -339,6 +471,31 @@ export const WithValidationError: Story = {
       </p>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test error announcement and ARIA relationships
+    await testErrorAnnouncement(canvas, 'Comments must be at least 20 characters long');
+
+    const textarea = canvas.getByRole('textbox', { name: 'Comments' });
+    const errorMessage = canvas.getByText('Comments must be at least 20 characters long');
+
+    // Test that error message is connected to textarea
+    await expect(errorMessage).toHaveAttribute('id', 'comment-error');
+    await expect(textarea).toHaveAttribute('aria-describedby', 'comment-error');
+
+    // Test that textarea has accessible description
+    await expect(textarea).toHaveAccessibleDescription('Comments must be at least 20 characters long');
+
+    // Test that textarea has initial error value
+    await expect(textarea).toHaveValue('Too short');
+
+    // Test that textarea is read-only (has value prop without onChange)
+    // The component will maintain its initial value
+    await userEvent.clear(textarea);
+    await userEvent.type(textarea, 'This is a much longer comment that meets the minimum character requirement and provides valuable feedback.');
+    await expect(textarea).toHaveValue('Too short'); // Still shows original value
+  },
   parameters: {
     docs: {
       description: {
@@ -366,6 +523,42 @@ export const WithSuccessState: Story = {
       </p>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const textarea = canvas.getByRole('textbox', { name: 'Product Review' });
+    const successMessage = canvas.getByText('Thank you for your detailed review!');
+
+    // Test success state validation
+    await testValidationSuccess(canvas, 'textbox', 'Thank you for your detailed review!');
+
+    // Test that textarea has valid content
+    const expectedValue = "This product exceeded my expectations! The quality is outstanding and it arrived exactly as described. I would definitely recommend it to others looking for a reliable solution.";
+    await expect(textarea).toHaveValue(expectedValue);
+
+    // Test that success message is connected via aria-describedby
+    await expect(textarea).toHaveAttribute('aria-describedby', 'review-success');
+    await expect(successMessage).toHaveAttribute('id', 'review-success');
+
+    // Test that textarea has accessible description
+    await expect(textarea).toHaveAccessibleDescription('Thank you for your detailed review!');
+
+    // Test that aria-invalid is false or not present (success state)
+    const ariaInvalid = textarea.getAttribute('aria-invalid');
+    if (ariaInvalid !== null) {
+      await expect(textarea).toHaveAttribute('aria-invalid', 'false');
+    }
+
+    // Test that user can still edit the field
+    await userEvent.click(textarea);
+    await expect(textarea).toHaveFocus();
+
+    // Test that textarea is read-only (has value prop without onChange)
+    // The component will maintain its initial value
+    await userEvent.keyboard('{End}');
+    await userEvent.type(textarea, ' Additional feedback: Great customer service too!');
+    await expect(textarea).toHaveValue(expectedValue); // Still shows original value
+  },
   parameters: {
     docs: {
       description: {

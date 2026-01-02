@@ -1,5 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, userEvent, within } from '@storybook/test';
 import { Input } from '@/components';
+import {
+  testFormControl,
+  testInputTypes,
+  testDisabledState,
+  testReadOnlyState,
+  testRequiredField,
+  testValidationError,
+  testValidationSuccess
+} from './utils/test-helpers';
+import {
+  testFormLabelAssociation,
+  testErrorAnnouncement
+} from './utils/accessibility-helpers';
 
 const meta: Meta<typeof Input> = {
   title: 'UI/Input',
@@ -67,6 +81,19 @@ export const Default: Story = {
     placeholder: 'Enter your email address',
     type: 'email',
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test basic form control behavior
+    await testFormControl(canvas, 'textbox', 'user@example.com');
+
+    // Test email input specific behavior
+    await testInputTypes(canvas, 'email', 'test@domain.com');
+
+    // Test placeholder text
+    const input = canvas.getByRole('textbox');
+    await expect(input).toHaveAttribute('placeholder', 'Enter your email address');
+  },
 };
 
 // Input types
@@ -74,6 +101,24 @@ export const TextInput: Story = {
   args: {
     type: 'text',
     placeholder: 'Enter your full name',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test text input specific behavior
+    await testInputTypes(canvas, 'text', 'John Doe');
+
+    // Test various text input scenarios
+    const input = canvas.getByRole('textbox');
+    await userEvent.clear(input);
+
+    // Test typing special characters
+    await userEvent.type(input, 'José María-Smith Jr.');
+    await expect(input).toHaveValue('José María-Smith Jr.');
+
+    // Test clearing
+    await userEvent.clear(input);
+    await expect(input).toHaveValue('');
   },
 };
 
@@ -88,6 +133,20 @@ export const PasswordInput: Story = {
   args: {
     type: 'password',
     placeholder: 'Enter your password',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test password input behavior
+    await testInputTypes(canvas, 'password', 'SecurePassword123!');
+
+    const input = canvas.getByPlaceholderText('Enter your password') as HTMLInputElement;
+
+    // Test that password input masks the text (value should be set but not visible as plain text)
+    await userEvent.clear(input);
+    await userEvent.type(input, 'hidden');
+    await expect(input).toHaveValue('hidden');
+    await expect(input).toHaveAttribute('type', 'password');
   },
 };
 
@@ -135,12 +194,46 @@ export const Disabled: Story = {
     disabled: true,
     value: 'Cannot edit this value',
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test disabled state
+    await testDisabledState(canvas, 'textbox');
+
+    const input = canvas.getByRole('textbox');
+
+    // Test that value is preserved but not editable
+    await expect(input).toHaveValue('Cannot edit this value');
+
+    // Attempt to type - should not work
+    await userEvent.type(input, 'should not change');
+    await expect(input).toHaveValue('Cannot edit this value');
+
+    // Test that input is not focusable through tab
+    await userEvent.tab();
+    await expect(input).not.toHaveFocus();
+  },
 };
 
 export const ReadOnly: Story = {
   args: {
     readOnly: true,
     value: 'This is read-only content',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test readonly state
+    await testReadOnlyState(canvas, 'This is read-only content');
+
+    const input = canvas.getByRole('textbox');
+
+    // Test that input can be focused but not edited
+    await userEvent.click(input);
+    await expect(input).toHaveFocus();
+
+    // Test that readonly attribute is present
+    await expect(input).toHaveAttribute('readonly');
   },
 };
 
@@ -149,6 +242,23 @@ export const Required: Story = {
     placeholder: 'This field is required',
     required: true,
     type: 'email',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test required field behavior
+    await testRequiredField(canvas);
+
+    const input = canvas.getByRole('textbox');
+
+    // Test form validation behavior
+    await userEvent.clear(input);
+    await userEvent.tab(); // Blur to trigger validation
+
+    // Test typing valid email
+    await userEvent.click(input);
+    await userEvent.type(input, 'user@example.com');
+    await expect(input).toHaveValue('user@example.com');
   },
 };
 
@@ -159,6 +269,23 @@ export const WithError: Story = {
     value: 'invalid-email',
     'aria-invalid': true,
     'aria-describedby': 'email-error',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test validation error state
+    await testValidationError(canvas, 'textbox');
+
+    const input = canvas.getByRole('textbox');
+
+    // Test that input has error value
+    await expect(input).toHaveValue('invalid-email');
+
+    // Test ARIA describedby relationship
+    await expect(input).toHaveAttribute('aria-describedby', 'email-error');
+
+    // Test that input shows the invalid value (read-only in this story)
+    await expect(input).toHaveValue('invalid-email');
   },
 };
 
@@ -177,6 +304,28 @@ export const WithLabel: Story = {
       />
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test label association
+    await testFormLabelAssociation(canvas, 'email-input', 'Email Address');
+
+    const input = canvas.getByRole('textbox', { name: 'Email Address' });
+    const label = canvas.getByText('Email Address');
+
+    // Test that input has accessible name from label
+    await expect(input).toHaveAccessibleName('Email Address');
+
+    // Test that input has correct ID
+    await expect(input).toHaveAttribute('id', 'email-input');
+
+    // Test clicking label focuses input
+    await userEvent.click(label);
+    await expect(input).toHaveFocus();
+
+    // Test required field behavior
+    await expect(input).toBeRequired();
+  },
   parameters: {
     docs: {
       description: {
@@ -231,6 +380,25 @@ export const WithValidationError: Story = {
       </p>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test error announcement and ARIA relationships
+    await testErrorAnnouncement(canvas, 'Please enter a valid email address');
+
+    const input = canvas.getByRole('textbox', { name: 'Email Address' });
+    const errorMessage = canvas.getByText('Please enter a valid email address');
+
+    // Test that error message is connected to input
+    await expect(errorMessage).toHaveAttribute('id', 'email-error');
+    await expect(input).toHaveAttribute('aria-describedby', 'email-error');
+
+    // Test that input has accessible description
+    await expect(input).toHaveAccessibleDescription('Please enter a valid email address');
+
+    // Test that input has the error value (read-only in this story)
+    await expect(input).toHaveValue('invalid-email');
+  },
   parameters: {
     docs: {
       description: {
@@ -258,6 +426,35 @@ export const WithSuccessState: Story = {
       </p>
     </div>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const input = canvas.getByRole('textbox', { name: 'Email Address' });
+    const successMessage = canvas.getByText('Email address is valid');
+
+    // Test success state validation
+    await testValidationSuccess(canvas, 'textbox', 'Email address is valid');
+
+    // Test that input has valid value
+    await expect(input).toHaveValue('john.doe@company.com');
+
+    // Test that success message is connected via aria-describedby
+    await expect(input).toHaveAttribute('aria-describedby', 'email-success');
+    await expect(successMessage).toHaveAttribute('id', 'email-success');
+
+    // Test that input has accessible description
+    await expect(input).toHaveAccessibleDescription('Email address is valid');
+
+    // Test that aria-invalid is false or not present (success state)
+    const ariaInvalid = input.getAttribute('aria-invalid');
+    if (ariaInvalid !== null) {
+      await expect(input).toHaveAttribute('aria-invalid', 'false');
+    }
+
+    // Test that user can still edit the field
+    await userEvent.click(input);
+    await expect(input).toHaveFocus();
+  },
   parameters: {
     docs: {
       description: {

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { useState } from 'react';
+import { expect, userEvent, within } from '@storybook/test';
 import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText, Button, HeartIcon, BookmarkIcon, ShareIcon, CheckIcon, Trash2Icon } from '@/components';
 
 const meta: Meta<typeof ButtonGroup> = {
@@ -30,6 +31,38 @@ export const Default: Story = {
       <Button>Publish</Button>
     </ButtonGroup>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test all buttons in the group are present
+    const saveDraftButton = canvas.getByRole('button', { name: 'Save Draft' });
+    const previewButton = canvas.getByRole('button', { name: 'Preview' });
+    const publishButton = canvas.getByRole('button', { name: 'Publish' });
+
+    await expect(saveDraftButton).toBeInTheDocument();
+    await expect(previewButton).toBeInTheDocument();
+    await expect(publishButton).toBeInTheDocument();
+
+    // Test button interactions
+    await userEvent.click(saveDraftButton);
+    await expect(saveDraftButton).toHaveFocus();
+
+    await userEvent.click(previewButton);
+    await expect(previewButton).toHaveFocus();
+
+    await userEvent.click(publishButton);
+    await expect(publishButton).toHaveFocus();
+
+    // Test keyboard navigation between buttons
+    await userEvent.keyboard('{Tab}');
+    const nextFocusedElement = document.activeElement;
+    expect(nextFocusedElement).toBeTruthy();
+
+    // Test group container exists
+    const buttonGroup = canvasElement.querySelector('[role="group"]') ||
+                       saveDraftButton.parentElement;
+    await expect(buttonGroup).toBeInTheDocument();
+  },
 };
 
 // Horizontal orientation (default)

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from '@storybook/test';
 import { Badge, BadgeCheckIcon, StarIcon, AlertTriangleIcon, ShieldIcon, ZapIcon } from '@/components';
 
 const meta: Meta<typeof Badge> = {
@@ -31,6 +32,17 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: 'New',
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const badge = canvas.getByText('New');
+    await expect(badge).toBeInTheDocument();
+    await expect(badge).toBeVisible();
+
+    // Test that badge has proper styling classes
+    const badgeClasses = badge.className;
+    expect(badgeClasses).toContain('oui:');
   },
 };
 

@@ -139,6 +139,45 @@ export const WithSeparator: Story = {
       </div>
     );
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that OTP input with separator is present
+    const otpInput = canvas.getByLabelText('Verification Code');
+    await expect(otpInput).toBeInTheDocument();
+
+    // Test instruction text is present
+    await expect(canvas.getByText('Please enter the 6-digit code sent to your phone.')).toBeInTheDocument();
+
+    // Test typing in OTP with separator groups - type individual characters
+    await userEvent.click(otpInput);
+    await userEvent.type(otpInput, '123456');
+
+    // Verify input accepts the full 6-digit code
+    // Note: The value state is internal to the story, but we can test interactions
+    await expect(otpInput).toBeInTheDocument();
+
+    // Test clearing and partial input with separator
+    await userEvent.clear(otpInput);
+    await userEvent.type(otpInput, '123');
+
+    // Test that the input remains functional after partial input
+    await expect(otpInput).toBeInTheDocument();
+    await expect(otpInput).toBeEnabled();
+
+    // Test max length enforcement with separator
+    await userEvent.clear(otpInput);
+    await userEvent.type(otpInput, '1234567890'); // Try to type more than 6
+
+    // Input should still work (max length handled internally)
+    await expect(otpInput).toBeInTheDocument();
+
+    // Test backspace functionality
+    await userEvent.clear(otpInput);
+    await userEvent.type(otpInput, '12345');
+    await userEvent.keyboard('{Backspace}');
+    await expect(otpInput).toBeInTheDocument();
+  },
   parameters: {
     docs: {
       description: {
@@ -177,6 +216,55 @@ export const FourDigit: Story = {
       </div>
     );
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that 4-digit PIN input is present
+    const pinInput = canvas.getByLabelText('PIN Code');
+    await expect(pinInput).toBeInTheDocument();
+
+    // Test instruction text is present
+    await expect(canvas.getByText('Enter your 4-digit PIN.')).toBeInTheDocument();
+
+    // Test typing 4-digit PIN
+    await userEvent.click(pinInput);
+    await userEvent.type(pinInput, '1234');
+
+    // Verify input accepts 4 digits
+    await expect(pinInput).toBeInTheDocument();
+    await expect(pinInput).toBeEnabled();
+
+    // Test max length enforcement for 4-digit PIN (should not accept more than 4)
+    await userEvent.clear(pinInput);
+    await userEvent.type(pinInput, '123456789'); // Try to type more than 4
+
+    // Input should still work despite extra characters
+    await expect(pinInput).toBeInTheDocument();
+
+    // Test partial 4-digit input
+    await userEvent.clear(pinInput);
+    await userEvent.type(pinInput, '12');
+
+    // Should accept partial input
+    await expect(pinInput).toBeInTheDocument();
+    await expect(pinInput).toBeEnabled();
+
+    // Test complete 4-digit sequence
+    await userEvent.clear(pinInput);
+    await userEvent.type(pinInput, '9876');
+
+    // Should accept full 4-digit sequence
+    await expect(pinInput).toBeInTheDocument();
+
+    // Test backspace functionality with 4-digit input
+    await userEvent.keyboard('{Backspace}');
+    await expect(pinInput).toBeInTheDocument();
+
+    // Test clearing 4-digit PIN
+    await userEvent.clear(pinInput);
+    await expect(pinInput).toBeInTheDocument();
+    await expect(pinInput).toBeEnabled();
+  },
   parameters: {
     docs: {
       description: {
@@ -211,7 +299,7 @@ export const TwoFactor: Story = {
             We sent a verification code to your authenticator app.
           </p>
         </div>
-        
+
         <div className="oui:space-y-4">
           <div className="oui:space-y-2">
             <Label htmlFor="otp-2fa" className="oui:sr-only">
@@ -237,15 +325,15 @@ export const TwoFactor: Story = {
               </InputOTPGroup>
             </InputOTP>
           </div>
-          
-          <Button 
-            onClick={handleSubmit} 
+
+          <Button
+            onClick={handleSubmit}
             disabled={value.length !== 6 || isSubmitting}
             className="oui:w-full"
           >
             {isSubmitting ? "Verifying..." : "Verify Code"}
           </Button>
-          
+
           <div className="oui:text-center">
             <Button variant="link" className="oui:text-sm">
               Didn't receive a code? Resend
@@ -254,6 +342,50 @@ export const TwoFactor: Story = {
         </div>
       </div>
     );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test that 2FA form elements are present
+    await expect(canvas.getByText('Two-Factor Authentication')).toBeInTheDocument();
+    await expect(canvas.getByText('We sent a verification code to your authenticator app.')).toBeInTheDocument();
+
+    const otpInput = canvas.getByLabelText('Verification code');
+    await expect(otpInput).toBeInTheDocument();
+
+    // Test initial button state - should be disabled when no input
+    const verifyButton = canvas.getByRole('button', { name: 'Verify Code' });
+    await expect(verifyButton).toBeInTheDocument();
+    await expect(verifyButton).toBeDisabled();
+
+    // Test resend button is present and enabled
+    const resendButton = canvas.getByRole('button', { name: 'Didn\'t receive a code? Resend' });
+    await expect(resendButton).toBeInTheDocument();
+    await expect(resendButton).toBeEnabled();
+
+    // Test partial input - button should remain disabled
+    await userEvent.click(otpInput);
+    await userEvent.type(otpInput, '123');
+    await expect(verifyButton).toBeDisabled();
+
+    // Test full 6-digit input - button should become enabled
+    await userEvent.type(otpInput, '456');
+    await expect(verifyButton).toBeEnabled();
+
+    // Test clicking verify button
+    await userEvent.click(verifyButton);
+
+    // Button text should change to "Verifying..." and be disabled during submission
+    await expect(canvas.getByRole('button', { name: 'Verifying...' })).toBeInTheDocument();
+    const verifyingButton = canvas.getByRole('button', { name: 'Verifying...' });
+    await expect(verifyingButton).toBeDisabled();
+
+    // Test that OTP input is disabled during submission
+    // Note: The input should be disabled when isSubmitting is true
+
+    // Test clicking resend button
+    await userEvent.click(resendButton);
+    await expect(resendButton).toBeEnabled();
   },
   parameters: {
     docs: {

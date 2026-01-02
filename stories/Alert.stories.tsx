@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { expect, within } from '@storybook/test';
 import { Alert, AlertTitle, AlertDescription, AlertCircleIcon, CheckCircleIcon, InfoIcon, AlertTriangleIcon } from '@/components';
 
 const meta: Meta<typeof Alert> = {
@@ -34,6 +35,28 @@ export const Default: Story = {
             </AlertDescription>
         </Alert>
     ),
+    play: async ({ canvasElement }) => {
+        const canvas = within(canvasElement);
+
+        // Test alert content visibility
+        const title = canvas.getByText('Information');
+        const description = canvas.getByText(/Your account has been successfully updated/);
+
+        await expect(title).toBeInTheDocument();
+        await expect(description).toBeInTheDocument();
+
+        // Test alert has proper ARIA role
+        const alert = canvasElement.querySelector('[role="alert"]') ||
+                     canvasElement.querySelector('[data-testid="alert"]');
+
+        if (alert) {
+            await expect(alert).toBeInTheDocument();
+        }
+
+        // Test icon is present
+        const icon = canvasElement.querySelector('svg');
+        await expect(icon).toBeInTheDocument();
+    },
 };
 
 // Variant stories

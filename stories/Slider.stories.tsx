@@ -1,9 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { expect, userEvent, within } from '@storybook/test';
 import { useState } from 'react';
 import { Slider } from '@/components';
 import { Label } from '@/components';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components';
 import { createDocsWithWarning } from './utils/warning-banner';
+import { testDisabledState } from './utils/test-helpers';
+import { testFocusVisible } from './utils/accessibility-helpers';
 
 const meta: Meta<typeof Slider> = {
   title: 'UI/Slider',
@@ -65,6 +68,53 @@ export const Default: Story = {
       </div>
     );
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Find the slider element - it should have role="slider"
+    const slider = canvas.getByRole('slider');
+    await expect(slider).toBeInTheDocument();
+
+    // Test initial value
+    await expect(slider).toHaveAttribute('aria-valuenow', '50');
+    await expect(slider).toHaveAttribute('aria-valuemin', '0');
+    await expect(slider).toHaveAttribute('aria-valuemax', '100');
+
+    // Test label association
+    const label = canvas.getByText('Volume: 50');
+    await expect(label).toBeInTheDocument();
+
+    // Test focus behavior
+    await testFocusVisible(canvas, 'slider');
+
+    // Test keyboard navigation
+    await userEvent.click(slider);
+    await expect(slider).toHaveFocus();
+
+    // Test arrow key navigation
+    await userEvent.keyboard('{ArrowRight}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '51');
+
+    await userEvent.keyboard('{ArrowLeft}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '50');
+
+    // Test Home and End keys
+    await userEvent.keyboard('{Home}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '0');
+
+    await userEvent.keyboard('{End}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '100');
+
+    // Test Page Up/Down for larger increments
+    await userEvent.keyboard('{Home}'); // Reset to 0
+    await userEvent.keyboard('{PageUp}');
+    const pageUpValue = slider.getAttribute('aria-valuenow');
+    expect(parseInt(pageUpValue || '0')).toBeGreaterThan(0);
+
+    await userEvent.keyboard('{PageDown}');
+    const pageDownValue = slider.getAttribute('aria-valuenow');
+    expect(parseInt(pageDownValue || '0')).toBeLessThan(parseInt(pageUpValue || '0'));
+  },
 };
 
 export const Range: Story = {
@@ -83,6 +133,64 @@ export const Range: Story = {
         </div>
       </div>
     );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Range sliders should have multiple slider elements (one for each thumb)
+    const sliders = canvas.getAllByRole('slider');
+    await expect(sliders).toHaveLength(2);
+
+    // Test initial values for both thumbs
+    await expect(sliders[0]).toHaveAttribute('aria-valuenow', '20');
+    await expect(sliders[1]).toHaveAttribute('aria-valuenow', '80');
+
+    // Both should have same min/max
+    await expect(sliders[0]).toHaveAttribute('aria-valuemin', '0');
+    await expect(sliders[0]).toHaveAttribute('aria-valuemax', '100');
+    await expect(sliders[1]).toHaveAttribute('aria-valuemin', '0');
+    await expect(sliders[1]).toHaveAttribute('aria-valuemax', '100');
+
+    // Test label update
+    const label = canvas.getByText('Price Range: $20 - $80');
+    await expect(label).toBeInTheDocument();
+
+    // Test first thumb (lower value) keyboard navigation
+    await userEvent.click(sliders[0]);
+    await expect(sliders[0]).toHaveFocus();
+
+    await userEvent.keyboard('{ArrowRight}');
+    await expect(sliders[0]).toHaveAttribute('aria-valuenow', '21');
+
+    await userEvent.keyboard('{ArrowLeft}');
+    await expect(sliders[0]).toHaveAttribute('aria-valuenow', '20');
+
+    // Test second thumb (upper value) keyboard navigation
+    await userEvent.click(sliders[1]);
+    await expect(sliders[1]).toHaveFocus();
+
+    await userEvent.keyboard('{ArrowLeft}');
+    await expect(sliders[1]).toHaveAttribute('aria-valuenow', '79');
+
+    await userEvent.keyboard('{ArrowRight}');
+    await expect(sliders[1]).toHaveAttribute('aria-valuenow', '80');
+
+    // Test Home/End on first thumb
+    await userEvent.click(sliders[0]);
+    await userEvent.keyboard('{Home}');
+    await expect(sliders[0]).toHaveAttribute('aria-valuenow', '0');
+
+    // Test End on second thumb
+    await userEvent.click(sliders[1]);
+    await userEvent.keyboard('{End}');
+    await expect(sliders[1]).toHaveAttribute('aria-valuenow', '100');
+
+    // Test that thumbs don't cross over (thumb 1 shouldn't go above thumb 2)
+    await userEvent.click(sliders[0]);
+    await userEvent.keyboard('{End}'); // Try to move first thumb to end
+    const thumb1Value = parseInt(sliders[0].getAttribute('aria-valuenow') || '0');
+    const thumb2Value = parseInt(sliders[1].getAttribute('aria-valuenow') || '0');
+    expect(thumb1Value).toBeLessThanOrEqual(thumb2Value);
   },
   parameters: {
     docs: {
@@ -113,6 +221,54 @@ export const WithSteps: Story = {
       </div>
     );
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const slider = canvas.getByRole('slider');
+    await expect(slider).toBeInTheDocument();
+
+    // Test initial value and step attribute
+    await expect(slider).toHaveAttribute('aria-valuenow', '50');
+    await expect(slider).toHaveAttribute('aria-valuemin', '0');
+    await expect(slider).toHaveAttribute('aria-valuemax', '100');
+
+    // Test step increment with arrow keys
+    await userEvent.click(slider);
+    await expect(slider).toHaveFocus();
+
+    // Arrow right should increment by step (10)
+    await userEvent.keyboard('{ArrowRight}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '60');
+
+    // Arrow left should decrement by step (10)
+    await userEvent.keyboard('{ArrowLeft}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '50');
+
+    // Multiple steps
+    await userEvent.keyboard('{ArrowRight}');
+    await userEvent.keyboard('{ArrowRight}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '70');
+
+    // Test boundary conditions - stepping beyond max
+    await userEvent.keyboard('{End}'); // Go to max (100)
+    await expect(slider).toHaveAttribute('aria-valuenow', '100');
+    await userEvent.keyboard('{ArrowRight}'); // Should not exceed max
+    await expect(slider).toHaveAttribute('aria-valuenow', '100');
+
+    // Test boundary conditions - stepping below min
+    await userEvent.keyboard('{Home}'); // Go to min (0)
+    await expect(slider).toHaveAttribute('aria-valuenow', '0');
+    await userEvent.keyboard('{ArrowLeft}'); // Should not go below min
+    await expect(slider).toHaveAttribute('aria-valuenow', '0');
+
+    // Test that values align with step increments
+    await userEvent.keyboard('{ArrowRight}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '10'); // Should be step-aligned
+
+    // Test label updates with stepped values
+    const label = canvas.getByText(/Value: \d+ \(Step: 10\)/);
+    await expect(label).toBeInTheDocument();
+  },
   parameters: {
     docs: {
       description: {
@@ -140,6 +296,62 @@ export const Vertical: Story = {
         <span className="oui:text-sm oui:font-medium">{value[0]}</span>
       </div>
     );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const slider = canvas.getByRole('slider');
+    await expect(slider).toBeInTheDocument();
+
+    // Test initial value and orientation
+    await expect(slider).toHaveAttribute('aria-valuenow', '50');
+    await expect(slider).toHaveAttribute('aria-orientation', 'vertical');
+
+    // Test focus behavior
+    await userEvent.click(slider);
+    await expect(slider).toHaveFocus();
+
+    // For vertical sliders, arrow keys work differently:
+    // Arrow Up increases value, Arrow Down decreases value
+    await userEvent.keyboard('{ArrowUp}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '51');
+
+    await userEvent.keyboard('{ArrowDown}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '50');
+
+    // Test multiple increments
+    await userEvent.keyboard('{ArrowUp}');
+    await userEvent.keyboard('{ArrowUp}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '52');
+
+    // Test Home and End still work
+    await userEvent.keyboard('{Home}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '0');
+
+    await userEvent.keyboard('{End}');
+    await expect(slider).toHaveAttribute('aria-valuenow', '100');
+
+    // Test Page Up/Down
+    await userEvent.keyboard('{Home}'); // Reset to 0
+    await userEvent.keyboard('{PageUp}');
+    const pageUpValue = slider.getAttribute('aria-valuenow');
+    expect(parseInt(pageUpValue || '0')).toBeGreaterThan(0);
+
+    await userEvent.keyboard('{PageDown}');
+    const pageDownValue = slider.getAttribute('aria-valuenow');
+    expect(parseInt(pageDownValue || '0')).toBeLessThan(parseInt(pageUpValue || '0'));
+
+    // Test that horizontal arrow keys might not work (or work differently)
+    const currentValue = slider.getAttribute('aria-valuenow');
+    await userEvent.keyboard('{ArrowRight}');
+    // Value should either stay the same or behave like ArrowUp
+    const afterRightValue = slider.getAttribute('aria-valuenow');
+    expect(parseInt(afterRightValue || '0')).toBeGreaterThanOrEqual(parseInt(currentValue || '0'));
+
+    // Test labels and display
+    await expect(canvas.getByText('Volume')).toBeInTheDocument();
+    const valueDisplay = canvas.getByText(/\d+/);
+    await expect(valueDisplay).toBeInTheDocument();
   },
   parameters: {
     docs: {
@@ -311,6 +523,44 @@ export const Disabled: Story = {
         </div>
       </div>
     );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Test disabled state using helper function
+    await testDisabledState(canvas, 'slider');
+
+    const slider = canvas.getByRole('slider');
+
+    // Test that disabled slider has correct attributes
+    // Component uses data-disabled instead of aria-disabled
+    await expect(slider).toHaveAttribute('data-disabled');
+    await expect(slider).toHaveAttribute('aria-valuenow', '40');
+
+    // Test that value doesn't change with keyboard interaction
+    const initialValue = slider.getAttribute('aria-valuenow');
+
+    // Try clicking (should not focus)
+    await userEvent.click(slider);
+
+    // Try keyboard interactions (should not work)
+    await userEvent.keyboard('{ArrowRight}');
+    await expect(slider).toHaveAttribute('aria-valuenow', initialValue || '40');
+
+    await userEvent.keyboard('{ArrowLeft}');
+    await expect(slider).toHaveAttribute('aria-valuenow', initialValue || '40');
+
+    await userEvent.keyboard('{Home}');
+    await expect(slider).toHaveAttribute('aria-valuenow', initialValue || '40');
+
+    await userEvent.keyboard('{End}');
+    await expect(slider).toHaveAttribute('aria-valuenow', initialValue || '40');
+
+    // Test that slider is not focusable
+    await expect(slider).not.toHaveFocus();
+
+    // Test label is still visible
+    await expect(canvas.getByText('Disabled Slider: 40')).toBeInTheDocument();
   },
   parameters: {
     docs: {
