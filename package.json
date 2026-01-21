@@ -259,7 +259,7 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.2.1",
-    "yeoman-generator": "^5.8.0",
+    "yeoman-generator": "^7.0.0",
     "yo": "^4.3.1"
   },
   "peerDependencies": {
