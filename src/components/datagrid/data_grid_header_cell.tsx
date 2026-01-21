@@ -167,7 +167,6 @@ export const OuiDataGridHeaderCell: FunctionComponent<OuiDataGridHeaderCellProps
       for (let i = 0; i < tababbles.length; i++) {
         const element = tababbles[i];
         element.setAttribute('data-ouigrid-tab-managed', 'true');
-        element.setAttribute('tabIndex', '-1');
       }
     }
   }, []);
