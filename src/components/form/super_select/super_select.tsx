@@ -94,6 +94,11 @@ export type OuiSuperSelectProps<T extends string> = CommonProps &
     popoverClassName?: string;
 
     /**
+     * Applied to the listbox (popover)
+     */
+    listboxClassName?: string;
+
+    /**
      * Controls whether the options are shown. Default: false
      */
     isOpen?: boolean;
@@ -259,6 +264,7 @@ export class OuiSuperSelect<T extends string> extends Component<
       itemLayoutAlign,
       fullWidth,
       popoverClassName,
+      listboxClassName,
       compressed,
       ...rest
     } = this.props;
@@ -278,6 +284,11 @@ export class OuiSuperSelect<T extends string> extends Component<
         'ouiSuperSelect__item--hasDividers': hasDividers,
       },
       itemClassName
+    );
+
+    const listboxClasses = classNames(
+      'ouiSuperSelect__listbox',
+      listboxClassName
     );
 
     const button = (
@@ -336,7 +347,7 @@ export class OuiSuperSelect<T extends string> extends Component<
           </p>
         </OuiScreenReaderOnly>
         <div
-          className="ouiSuperSelect__listbox"
+          className={listboxClasses}
           role="listbox"
           aria-activedescendant={valueOfSelected}
           tabIndex={0}>
