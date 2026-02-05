@@ -29,6 +29,8 @@
   display: flex;
   align-items: stretch;
   padding: 1px; /* 1 */
+  border-radius: $ouiFormControlBorderRadius;
+  overflow: hidden; // Clip children to border radius
 
   // Force the stretch of any children so they expand the full height of the control
   > *,
@@ -46,12 +48,41 @@
     overflow: hidden; /* 2 */
   }
 
+  // All direct children should have no border radius by default
+  > * {
+    border-radius: 0;
+  }
+
+  // First child gets left border radius
+  > *:first-child {
+    border-radius: $ouiFormControlBorderRadius 0 0 $ouiFormControlBorderRadius;
+    
+    // If it's a nested layout, add overflow hidden to clip its children
+    &.ouiFormControlLayout {
+      overflow: hidden;
+    }
+  }
+
+  // Last child gets right border radius
+  > *:last-child {
+    border-radius: 0 $ouiFormControlBorderRadius $ouiFormControlBorderRadius 0;
+    
+    // If it's a nested layout, add overflow hidden to clip its children
+    &.ouiFormControlLayout {
+      overflow: hidden;
+    }
+  }
+
+  // If there's only one child, it gets full border radius
+  > *:first-child:last-child {
+    border-radius: $ouiFormControlBorderRadius;
+  }
+
   .ouiFormControlLayout__prepend,
   .ouiFormControlLayout__append {
     @include ouiTextTruncate;
     flex-shrink: 0;
     height: 100%;
-    border-radius: 0;
 
     // ICONS
 
@@ -76,6 +107,30 @@
         padding: 0;
         width: $ouiSize;
       }
+    }
+  }
+
+  // Apply border radius directly to prepend inputs/selects
+  .ouiFormControlLayout__prepend {
+    border-radius: $ouiFormControlBorderRadius 0 0 $ouiFormControlBorderRadius;
+
+    // Keep icons and buttons square
+    &.ouiIcon,
+    &.ouiButtonIcon,
+    &.ouiButtonEmpty {
+      border-radius: 0;
+    }
+  }
+
+  // Apply border radius directly to append inputs/selects
+  .ouiFormControlLayout__append {
+    border-radius: 0 $ouiFormControlBorderRadius $ouiFormControlBorderRadius 0;
+
+    // Keep icons and buttons square
+    &.ouiIcon,
+    &.ouiButtonIcon,
+    &.ouiButtonEmpty {
+      border-radius: 0;
     }
   }
 
@@ -180,6 +235,60 @@
     @include ouiFormControlDefaultShadow($borderOnly: true);
     border-radius: $ouiFormControlCompressedBorderRadius;
     overflow: hidden; // Keeps backgrounds inside border radius
+
+    // All direct children should have no border radius by default
+    > * {
+      border-radius: 0;
+    }
+
+    // First child gets left border radius
+    > *:first-child {
+      border-radius: $ouiFormControlCompressedBorderRadius 0 0 $ouiFormControlCompressedBorderRadius;
+      
+      // If it's a nested layout, add overflow hidden to clip its children
+      &.ouiFormControlLayout {
+        overflow: hidden;
+      }
+    }
+
+    // Last child gets right border radius
+    > *:last-child {
+      border-radius: 0 $ouiFormControlCompressedBorderRadius $ouiFormControlCompressedBorderRadius 0;
+      
+      // If it's a nested layout, add overflow hidden to clip its children
+      &.ouiFormControlLayout {
+        overflow: hidden;
+      }
+    }
+
+    // If there's only one child, it gets full border radius
+    > *:first-child:last-child {
+      border-radius: $ouiFormControlCompressedBorderRadius;
+    }
+
+    // Apply border radius directly to prepend inputs/selects (compressed)
+    .ouiFormControlLayout__prepend {
+      border-radius: $ouiFormControlCompressedBorderRadius 0 0 $ouiFormControlCompressedBorderRadius;
+
+      // Keep icons and buttons square
+      &.ouiIcon,
+      &.ouiButtonIcon,
+      &.ouiButtonEmpty {
+        border-radius: 0;
+      }
+    }
+
+    // Apply border radius directly to append inputs/selects (compressed)
+    .ouiFormControlLayout__append {
+      border-radius: 0 $ouiFormControlCompressedBorderRadius $ouiFormControlCompressedBorderRadius 0;
+
+      // Keep icons and buttons square
+      &.ouiIcon,
+      &.ouiButtonIcon,
+      &.ouiButtonEmpty {
+        border-radius: 0;
+      }
+    }
 
     // Padding
     .ouiFormLabel,

@@ -12,6 +12,29 @@
 // Value not currently consumed by Side nav component
 $ouiSideNavBackgroundColor: $ouiPageBackgroundColor !default;
 
+// Spacing - Default values maintain backward compatibility
+$ouiSideNavItemPadding: calc($ouiSizeXS / 2) 0 !default;      // Original padding
+$ouiSideNavItemBorderRadius: 0 !default;                      // No border radius by default
+$ouiSideNavItemSpacing: $ouiSizeS !default;                   // Original spacing
+
+// Selection - Default to no background (maintains underline behavior)
+$ouiSideNavSelectedBackground: transparent !default;
+$ouiSideNavSelectedAccentWidth: 0 !default;
+$ouiSideNavSelectedAccentHeight: 0 !default;
+
+// Hover states - Default to no background
+$ouiSideNavHoverBackground: transparent !default;
+$ouiSideNavActiveBackground: transparent !default;
+
+// Transitions - Default to none
+$ouiSideNavTransition: none !default;
+
+// Branch indicators - Original styling
+$ouiSideNavBranchLineWidth: 1px !default;
+$ouiSideNavBranchLineColor: $ouiBorderColor !default;
+$ouiSideNavBranchTickWidth: $ouiSizeXS !default;
+$ouiSideNavBranchTickHeight: 1px !default;
+
 $ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorLightShade, .7) !default;
 
 // Simulates the transparent backround on top of the page background to get an opaque color
@@ -31,6 +54,19 @@ $ouiSideNavDisabledTextcolor: ouiSideNavEmphasizedContrast($ouiButtonColorDisabl
 
 /* OUI -> EUI Aliases */
 $euiSideNavBackgroundColor: $ouiSideNavBackgroundColor;
+$euiSideNavItemPadding: $ouiSideNavItemPadding;
+$euiSideNavItemBorderRadius: $ouiSideNavItemBorderRadius;
+$euiSideNavItemSpacing: $ouiSideNavItemSpacing;
+$euiSideNavSelectedBackground: $ouiSideNavSelectedBackground;
+$euiSideNavSelectedAccentWidth: $ouiSideNavSelectedAccentWidth;
+$euiSideNavSelectedAccentHeight: $ouiSideNavSelectedAccentHeight;
+$euiSideNavHoverBackground: $ouiSideNavHoverBackground;
+$euiSideNavActiveBackground: $ouiSideNavActiveBackground;
+$euiSideNavTransition: $ouiSideNavTransition;
+$euiSideNavBranchLineWidth: $ouiSideNavBranchLineWidth;
+$euiSideNavBranchLineColor: $ouiSideNavBranchLineColor;
+$euiSideNavBranchTickWidth: $ouiSideNavBranchTickWidth;
+$euiSideNavBranchTickHeight: $ouiSideNavBranchTickHeight;
 $euiSideNavEmphasizedBackgroundColor: $ouiSideNavEmphasizedBackgroundColor;
 $euiSideNavRootTextcolor: $ouiSideNavRootTextcolor;
 $euiSideNavBranchTextcolor: $ouiSideNavBranchTextcolor;

@@ -15,28 +15,28 @@
 $ouiColorGhost: #E3E5E9;
 $ouiColorInk: #02020E;
 
-// Core
-$ouiColorPrimary: #0097D1;
-$ouiColorSecondary: #129079;
-$ouiColorAccent: #AA63C4;
+// Core - Brighter, more vibrant for dark mode
+$ouiColorPrimary: #3B82F6;      // Brighter blue (Tailwind blue-500)
+$ouiColorSecondary: #10B981;    // Vibrant green (Tailwind emerald-500)
+$ouiColorAccent: #A78BFA;       // Softer purple (Tailwind violet-400)
 
-// Status
-$ouiColorSuccess: $ouiColorSecondary;
-$ouiColorWarning: #F4AE27;
-$ouiColorDanger: #CD5D56;
+// Status - Higher contrast for dark backgrounds
+$ouiColorSuccess: #10B981;      // Modern green (Tailwind emerald-500)
+$ouiColorWarning: #FBBF24;      // Brighter amber (Tailwind amber-400)
+$ouiColorDanger: #F87171;       // Softer red (Tailwind red-400)
 
-// Grays
-$ouiColorEmptyShade: #0F171F;
-$ouiColorLightestShade: #19222B;
-$ouiColorLightShade: #2A3540;
-$ouiColorMediumShade: #5C666F;
-$ouiColorDarkShade: #959BA2;
-$ouiColorDarkestShade: #E3E5E9;
-$ouiColorFullShade: #FCFEFF;
+// Grays - Refined slate tones
+$ouiColorEmptyShade: #020617;   // Slate-950
+$ouiColorLightestShade: #0F172A; // Slate-900
+$ouiColorLightShade: #1E293B;   // Slate-800
+$ouiColorMediumShade: #64748B;  // Slate-500
+$ouiColorDarkShade: #94A3B8;    // Slate-400
+$ouiColorDarkestShade: #E2E8F0; // Slate-200
+$ouiColorFullShade: #F8FAFC;    // Slate-50
 
 // Backgrounds
-$ouiPageBackgroundColor: #02020E;
-$ouiColorHighlight: #3D2C0D;
+$ouiPageBackgroundColor: #020617; // Deep slate (Slate-950)
+$ouiColorHighlight: #422006;    // Warmer highlight (Tailwind amber-950)
 
 // CodeBlock
 $ouiCodeBlockCommentShade: #838B93;
@@ -47,12 +47,12 @@ $ouiCodeBlockKeywordShade: #B174FC;
 $ouiCodeBlockTypeShade: #6AB0F1;
 $ouiCodeBlockTitleShade: #DD8232;
 
-// Variations from core
-$ouiTextColor: $ouiColorDarkShade;
-$ouiTitleColor: #C6C9CE;
+// Variations from core - Better contrast
+$ouiTextColor: #CBD5E1;         // Slate-300 (improved contrast)
+$ouiTitleColor: #F1F5F9;        // Slate-100 (clearer hierarchy)
 // Ensure contrast between subdued text and the page background
 // Should not be shaded as much as $ouiColorDisabled
-$ouiTextSubduedColor: #798189;
+$ouiTextSubduedColor: #94A3B8;  // Slate-400 (better readability)
 $ouiColorDisabled: $ouiColorLightestShade !default;
 
 // Contrasty text variants
@@ -75,6 +75,9 @@ $ouiCodeBlockBackgroundColor: $ouiColorLightestShade;
 // Shadows
 $ouiShadowColor: #000;
 $ouiShadowColorLarge: $ouiShadowColor;
+
+// Refined border color for modern aesthetic - More subtle
+$ouiBorderColor: transparentize(#334155, 0.5); // Slate-700 with 50% transparency
 
 //CodeBlock Colors
 $ouiCodeBlockCommentColor: $ouiCodeBlockCommentShade;
@@ -127,4 +130,5 @@ $euiColorChartBand: $ouiColorChartBand;
 $euiCodeBlockBackgroundColor: $ouiCodeBlockBackgroundColor;
 $euiShadowColor: $ouiShadowColor;
 $euiShadowColorLarge: $ouiShadowColorLarge;
+$euiBorderColor: $ouiBorderColor;
 /* End of Aliases */
