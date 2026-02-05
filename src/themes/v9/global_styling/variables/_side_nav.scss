@@ -14,6 +14,29 @@ $ouiSideNavBackgroundColor: $ouiColorEmptyShade !default; // sass-lint:disable-l
 
 $ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorPrimary, .8) !default;
 
+// Spacing - original v9 values
+$ouiSideNavItemPadding: calc($ouiSizeXS / 2) !default;        // 4px padding (original)
+$ouiSideNavItemBorderRadius: 0 !default;                      // No border radius (original)
+$ouiSideNavItemSpacing: $ouiSizeS !default;                   // 8px between items (original)
+
+// Selection - original v9 emphasized background
+$ouiSideNavSelectedBackground: $ouiSideNavEmphasizedBackgroundColor !default;
+$ouiSideNavSelectedAccentWidth: 0 !default;                   // No accent bar (original)
+$ouiSideNavSelectedAccentHeight: 0 !default;                  // No accent bar (original)
+
+// Hover states - original v9 (no special hover background)
+$ouiSideNavHoverBackground: transparent !default;
+$ouiSideNavActiveBackground: transparent !default;
+
+// Transitions - basic transition for v9
+$ouiSideNavTransition: none !default;
+
+// Branch indicators - original v9 styling
+$ouiSideNavBranchLineWidth: 1px !default;                     // Original thin line
+$ouiSideNavBranchLineColor: $ouiBorderColor !default;         // Original color
+$ouiSideNavBranchTickWidth: $ouiSizeXS !default;              // Original tick width
+$ouiSideNavBranchTickHeight: 1px !default;                    // Original thin tick
+
 // Simulates the transparent backround on top of the page background to get an opaque color
 // in order to get the right contrast for text
 @function ouiSideNavEmphasizedContrast($textColor, $ratio: $ouiContrastRatioText) {
@@ -31,6 +54,19 @@ $ouiSideNavDisabledTextcolor: ouiSideNavEmphasizedContrast($ouiButtonColorDisabl
 
 /* OUI -> EUI Aliases */
 $euiSideNavBackgroundColor: $ouiSideNavBackgroundColor;
+$euiSideNavItemPadding: $ouiSideNavItemPadding;
+$euiSideNavItemBorderRadius: $ouiSideNavItemBorderRadius;
+$euiSideNavItemSpacing: $ouiSideNavItemSpacing;
+$euiSideNavSelectedBackground: $ouiSideNavSelectedBackground;
+$euiSideNavSelectedAccentWidth: $ouiSideNavSelectedAccentWidth;
+$euiSideNavSelectedAccentHeight: $ouiSideNavSelectedAccentHeight;
+$euiSideNavHoverBackground: $ouiSideNavHoverBackground;
+$euiSideNavActiveBackground: $ouiSideNavActiveBackground;
+$euiSideNavTransition: $ouiSideNavTransition;
+$euiSideNavBranchLineWidth: $ouiSideNavBranchLineWidth;
+$euiSideNavBranchLineColor: $ouiSideNavBranchLineColor;
+$euiSideNavBranchTickWidth: $ouiSideNavBranchTickWidth;
+$euiSideNavBranchTickHeight: $ouiSideNavBranchTickHeight;
 $euiSideNavEmphasizedBackgroundColor: $ouiSideNavEmphasizedBackgroundColor;
 $euiSideNavRootTextcolor: $ouiSideNavRootTextcolor;
 $euiSideNavBranchTextcolor: $ouiSideNavBranchTextcolor;

@@ -1,0 +1,182 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// sass-lint:disable no-vendor-prefixes
+// sass-lint:disable no-important
+
+// Our base fonts
+
+@mixin ouiFont {
+  font-family: var(--oui-font-family);
+  font-weight: $ouiFontWeightRegular;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+@mixin ouiCodeFont {
+  font-family: var(--oui-code-font-family);
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+@mixin ouiText {
+  color: $ouiTextColor;
+  font-weight: $ouiFontWeightRegular;
+}
+
+@mixin ouiTitle($size: 'm') {
+  color: $ouiTitleColor;
+
+  @if (map-has-key($ouiTitles, $size)) {
+    @each $property, $value in map-get($ouiTitles, $size) {
+      @if ($property == 'font-size') {
+        @include fontSize($value);
+      } @else {
+        #{$property}: $value;
+      }
+    }
+  } @else {
+    @include fontSize($size);
+    @include lineHeightFromBaseline(3);
+  }
+}
+
+// Font sizing extends, using rem mixin
+
+@mixin ouiFontSizeXS {
+  @include fontSize($ouiFontSizeXS);
+  line-height: $ouiLineHeight;
+}
+
+@mixin ouiFontSizeS {
+  @include fontSize($ouiFontSizeS);
+  line-height: $ouiLineHeight;
+}
+
+@mixin ouiFontSize {
+  @include fontSize($ouiFontSize);
+  line-height: $ouiLineHeight;
+}
+
+@mixin ouiFontSizeM {
+  @include fontSize($ouiFontSizeM);
+  line-height: $ouiLineHeight;
+}
+
+@mixin ouiFontSizeL {
+  @include fontSize($ouiFontSizeL);
+  line-height: $ouiLineHeight;
+}
+
+@mixin ouiFontSizeXL {
+  @each $property, $value in map-get($ouiTitles, 'm') {
+    @if ($property == 'font-size') {
+      @include fontSize($value);
+    } @else {
+      #{$property}: $value;
+    }
+  }
+  line-height: 1.111111;
+}
+
+@mixin ouiFontSizeXXL {
+  @each $property, $value in map-get($ouiTitles, 'l') {
+    @if ($property == 'font-size') {
+      @include fontSize($value);
+    } @else {
+      #{$property}: $value;
+    }
+  }
+  line-height: 1.111111;
+}
+
+@mixin ouiTextBreakWord {
+  // https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+  overflow-wrap: break-word !important; // makes sure the long string will wrap and not bust out of the container
+  word-wrap: break-word !important; // spec says, they are literally just alternate names for each other but some browsers support one and not the other
+  word-break: break-word; // IE doesn't understand but that's ok
+}
+
+// Text truncation
+//
+// Prevent text from wrapping onto multiple lines, and truncate with an
+// ellipsis.
+//
+// 1. Ensure that the node has a maximum width after which truncation can
+//    occur.
+// 2. Fix for IE 8/9 if `word-wrap: break-word` is in effect on ancestor
+//    nodes.
+
+@mixin ouiTextTruncate {
+  // sass-lint:disable-block no-important
+  max-width: 100%; // 1
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  word-wrap: normal !important; // 2
+}
+
+@mixin ouiNumberFormat {
+  font-feature-settings: $ouiFontFeatureSettings, 'tnum' 1; // Fixed-width numbers for tabular data
+}
+
+
+// Text weight shifting
+//
+// When changing the font-weight based the state of the component
+// this mixin will ensure that the sizing is dependent on the boldest
+// weight so it doesn't shifter sibling content.
+
+@mixin ouiTextShift($fontWeight: $ouiFontWeightBold, $attr: 'data-text') {
+  &::after {
+    display: block;
+    content: attr(#{$attr});
+    font-weight: $fontWeight;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+// Lowest max-width
+//
+// Legibility research specific to digital text has shown that line length can affect reading
+// speed. If lines are too long it is difficult for the reader to quickly return to the start
+// of the next line, whereas if lines are too short more scrolling or paging will be required.
+//
+// This mixin will choose the lesser of the magic $ouiLegibilityMaxWidth number and the
+// supplied $maxWidth to allow controlling the max-width without needing media-queries.
+
+@mixin ouiLegibilityMaxWidth($maxWidth) {
+  max-width: min($ouiLegibilityMaxWidth, $maxWidth);
+}
+
+
+
+/* OUI -> EUI Aliases */
+@mixin euiFont { @include ouiFont; }
+@mixin euiCodeFont { @include ouiCodeFont; }
+@mixin euiText { @include ouiText; }
+@mixin euiTitle($size: 'm') { @include ouiTitle($size); }
+@mixin euiFontSizeXS { @include ouiFontSizeXS; }
+@mixin euiFontSizeS { @include ouiFontSizeS; }
+@mixin euiFontSize { @include ouiFontSize; }
+@mixin euiFontSizeM { @include ouiFontSizeM; }
+@mixin euiFontSizeL { @include ouiFontSizeL; }
+@mixin euiFontSizeXL { @include ouiFontSizeXL; }
+@mixin euiFontSizeXXL { @include ouiFontSizeXXL; }
+@mixin euiTextBreakWord { @include ouiTextBreakWord; }
+@mixin euiTextTruncate { @include ouiTextTruncate; }
+@mixin euiNumberFormat { @include ouiNumberFormat; }
+@mixin euiTextShift($fontWeight: $ouiFontWeightBold, $attr: 'data-text') { @include ouiTextShift($fontWeight, $attr); }
+@mixin euiLegibilityMaxWidth($maxWidth) { @include ouiLegibilityMaxWidth($maxWidth); }
+/* End of Aliases */
