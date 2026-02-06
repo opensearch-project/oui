@@ -15,6 +15,11 @@
   align-items: stretch;
   overflow: hidden;
   height: 100%;
+
+  // V9 theme modernization - apply border radius to entire grid container
+  @if variable-exists(ouiDataGridBorderRadius) {
+    border-radius: $ouiDataGridBorderRadius;
+  }
 }
 
 .ouiDataGrid--fullScreen {
@@ -45,6 +50,13 @@
   width: 100%;
   z-index: 2; // Sits above the pagination below it, but below the controls above it
   background: $ouiColorEmptyShade;
+
+  // V9 theme modernization
+  @if variable-exists(ouiDataGridBorderRadius) {
+    box-shadow: $ouiDataGridShadow;
+    // border-radius: 0 0 $ouiDataGridBorderRadius $ouiDataGridBorderRadius; // Bottom corners
+    // overflow: hidden; // Clip children to border radius
+  }
 }
 
 .ouiDataGrid__controls {
@@ -55,6 +67,11 @@
   padding: $ouiSizeXS;
   flex-grow: 0;
 
+  @if variable-exists(ouiDataGridBorderRadius) {
+    background: $ouiDataGridControlsBackground;
+    border-radius: $ouiDataGridBorderRadius $ouiDataGridBorderRadius 0 0;
+  }
+
   > * {
     margin-left: calc($ouiSizeXS / 2);
   }
@@ -63,8 +80,21 @@
 .ouiDataGrid__controlBtn {
   border-radius: $ouiBorderRadius;
 
+  // V9 theme modernization
+  @if variable-exists(ouiDataGridBorderRadius) {
+    transition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+                border-color $ouiAnimSpeedFast $ouiAnimEaseInOut;
+  }
+
   &:focus {
     background: shadeOrTint($ouiColorLightestShade, 10%, 10%);
+  }
+
+  // V9 theme modernization - hover state
+  @if variable-exists(ouiDataGridBorderRadius) {
+    &:hover {
+      background: shadeOrTint($ouiColorLightestShade, 5%, 5%);
+    }
   }
 }
 
@@ -100,12 +130,26 @@
   flex-grow: 1;
   overflow-y: hidden;
   height: 100%;
+
+  // V9 theme modernization - ensure bottom corners are clipped
+  @if variable-exists(ouiDataGridBorderRadius) {
+    border-radius: 0 0 $ouiDataGridBorderRadius $ouiDataGridBorderRadius;
+    overflow: hidden; // Clip children to border radius
+    position: relative; // Create positioning context for absolutely positioned cells
+  }
 }
 
 .ouiDataGrid__overflow {
   overflow-y: hidden;
   height: 100%;
   background: $ouiColorEmptyShade;
+
+  // V9 theme modernization - clip to parent border radius
+  @if variable-exists(ouiDataGridBorderRadius) {
+    border-radius: 0 0 $ouiDataGridBorderRadius $ouiDataGridBorderRadius;
+    overflow: hidden; // Clip children to border radius
+    position: relative; // Create positioning context for absolutely positioned cells
+  }
 }
 
 // This is used to remove extra scrollbars on the body when fullscreen is enabled

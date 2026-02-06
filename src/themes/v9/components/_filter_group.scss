@@ -1,0 +1,22 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// V9 Theme-specific FilterGroup modernization overrides
+
+.ouiFilterGroup {
+  border-radius: $ouiFilterGroupBorderRadius; // 8px on outer edges
+  box-shadow: 0 1px 3px 0 transparentize($ouiShadowColor, .9), 0 1px 2px 0 transparentize($ouiShadowColor, .9); // Modern layered shadow
+
+  // Dark theme adjustments
+  @if (lightness($ouiPageBackgroundColor) < 50) {
+    box-shadow: 0 1px 3px 0 transparentize($ouiShadowColor, .7), 0 1px 2px 0 transparentize($ouiShadowColor, .7);
+  }
+}

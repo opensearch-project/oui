@@ -9,10 +9,8 @@
  * GitHub history for details.
  */
 
-// V9 Theme-specific component overrides
-@import 'call_out';
-@import 'filter_group';
-@import 'filter_button';
-@import 'data_grid';
-@import 'link';
-@import 'list_group';
+// V9 theme: Use regular font-weight (400) for xSmall and small list group items
+.ouiListGroupItem--xSmall,
+.ouiListGroupItem--small {
+  font-weight: $ouiFontWeightRegular; // 400
+}
