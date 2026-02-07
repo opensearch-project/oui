@@ -47,7 +47,7 @@
     &:focus,
     &:focus-within {
       background-color: transparentize($ouiColorPrimary, .9);
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 

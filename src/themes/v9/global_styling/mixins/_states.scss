@@ -29,7 +29,7 @@
 
 @mixin ouiHoverState {
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 @mixin ouiFocusState($color: $ouiColorPrimary) {
