@@ -22,9 +22,9 @@ $ouiSideNavSelectedBackground: transparentize($ouiColorPrimary, 0.92) !default;
 $ouiSideNavSelectedAccentWidth: 2px !default;
 $ouiSideNavSelectedAccentHeight: 100% !default;
 
-// Hover states
-$ouiSideNavHoverBackground: transparentize($ouiColorLightShade, 0.6) !default;
-$ouiSideNavActiveBackground: transparentize($ouiColorLightShade, 0.3) !default;
+// Hover states — more visible against dark backgrounds
+$ouiSideNavHoverBackground: transparentize($ouiColorLightShade, 0.35) !default;
+$ouiSideNavActiveBackground: transparentize($ouiColorLightShade, 0.15) !default;
 
 // Transitions
 $ouiSideNavTransition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
