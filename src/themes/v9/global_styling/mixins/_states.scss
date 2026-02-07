@@ -30,6 +30,7 @@
 @mixin ouiHoverState {
   cursor: pointer;
   text-decoration: none;
+  background-color: transparentize($ouiColorLightShade, .7);
 }
 
 @mixin ouiFocusState($color: $ouiColorPrimary) {

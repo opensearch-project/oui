@@ -92,6 +92,8 @@
         // inner child specificity so it inherits underline color from text color
         text-decoration: none;
       }
+
+      background-color: transparentize($ouiColorLightShade, .7);
     }
   }
 

@@ -52,6 +52,8 @@
   // focus & hover state
   &:focus:not(.ouiStepHorizontal-isDisabled),
   &:hover:not(.ouiStepHorizontal-isDisabled) {
+    background-color: transparentize($ouiColorLightShade, .7);
+
     .ouiStepHorizontal__title {
       text-decoration: none;
     }

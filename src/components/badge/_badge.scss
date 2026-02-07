@@ -126,10 +126,12 @@
       text-decoration: none;
       transform: translateY(-1px);
       box-shadow: 0 2px 4px rgba($ouiShadowColor, 0.1);
+      background-color: transparentize($ouiColorLightShade, .7);
     }
 
     &:focus {
       text-decoration: none;
+      background-color: transparentize($ouiColorLightShade, .7);
     }
 
     &:active {

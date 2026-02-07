@@ -59,6 +59,7 @@
   &:enabled:hover,
   &:enabled:focus {
     text-decoration: none;
+    background-color: transparentize($ouiColorLightShade, .7);
   }
 
   &--small {

@@ -29,6 +29,10 @@
     }
   }
 
+  &:hover:not(:disabled) {
+    background-color: transparentize($ouiColorLightShade, .7);
+  }
+
   &:focus {
     background-color: $ouiFocusBackgroundColor;
     // use box-shadow as a "faux outline" to apply left/right padding only

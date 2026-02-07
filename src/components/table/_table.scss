@@ -72,6 +72,8 @@
       color: $ouiColorPrimary;
     }
 
+    background-color: transparentize($ouiColorLightShade, .85);
+
     .ouiTableSortIcon {
       fill: $ouiColorPrimary;
     }

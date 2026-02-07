@@ -159,6 +159,7 @@
   &:focus {
     text-decoration: none;
     cursor: pointer;
+    background-color: transparentize($ouiControlBarText, .9);
   }
 
   &.ouiControlBar__tab--active {

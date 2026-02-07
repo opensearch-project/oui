@@ -30,6 +30,7 @@
   &:focus:not(:disabled) {
     // Remove underline from whole button so notifications don't get the underline
     text-decoration: none;
+    background-color: transparentize($ouiColorLightShade, .7);
 
     .ouiFilterButton__textShift {
       // Subtle hover indication without underline
