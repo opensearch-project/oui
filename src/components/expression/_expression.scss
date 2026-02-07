@@ -90,7 +90,7 @@
       .ouiExpression__description,
       .ouiExpression__value {
         // inner child specificity so it inherits underline color from text color
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }

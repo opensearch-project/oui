@@ -32,8 +32,8 @@
     text-decoration: none;
 
     .ouiFilterButton__textShift {
-      // Add put it only on the actual text part
-      text-decoration: underline;
+      // Subtle hover indication without underline
+      text-decoration: none;
     }
   }
 }

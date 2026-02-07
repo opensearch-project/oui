@@ -68,7 +68,7 @@
   &:hover,
   &:focus {
     .ouiTableCellContent__text {
-      text-decoration: underline;
+      text-decoration: none;
       color: $ouiColorPrimary;
     }
 

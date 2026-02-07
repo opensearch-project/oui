@@ -53,7 +53,7 @@
   &:focus:not(.ouiStepHorizontal-isDisabled),
   &:hover:not(.ouiStepHorizontal-isDisabled) {
     .ouiStepHorizontal__title {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 

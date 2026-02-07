@@ -75,7 +75,7 @@
     &:not(:disabled) {
       &:hover,
       &:focus {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
@@ -123,13 +123,13 @@
 .ouiBadge-isClickable {
   &:not(:disabled) {
     &:hover {
-      text-decoration: underline;
+      text-decoration: none;
       transform: translateY(-1px);
       box-shadow: 0 2px 4px rgba($ouiShadowColor, 0.1);
     }
 
     &:focus {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     &:active {

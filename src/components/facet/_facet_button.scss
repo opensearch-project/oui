@@ -25,7 +25,7 @@
   &:hover,
   &:focus {
     &:not(:disabled) .ouiFacetButton__text {
-      text-decoration: underline; /* 1 */
+      text-decoration: none; /* 1 */
     }
   }
 
