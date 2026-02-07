@@ -90,6 +90,13 @@ export { useColorPickerState, useColorStopsState } from './color_picker';
 
 export { copyToClipboard } from './copy_to_clipboard';
 
+export { OuiElevationProvider, useElevation } from './elevation';
+export type {
+  ElevationContextValue,
+  UseElevationOptions,
+  UseElevationReturn,
+} from './elevation';
+
 export {
   formatAuto,
   formatBoolean,

@@ -75,9 +75,14 @@ $ouiCodeBlockBackgroundColor: $ouiColorLightestShade;
 // Shadows
 $ouiShadowColor: #000;
 $ouiShadowColorLarge: $ouiShadowColor;
+$ouiShadowOpacity: 0.80;
 
 // Refined border color for modern aesthetic - More subtle
 $ouiBorderColor: transparentize(#334155, 0.5); // Slate-700 with 50% transparency
+
+// Elevated surface overrides for dark theme
+$ouiBackgroundElevated: $ouiColorLightShade; // Slate-800
+$ouiBorderElevated: transparentize(#475569, 0.5); // Slate-600 at 50%
 
 //CodeBlock Colors
 $ouiCodeBlockCommentColor: $ouiCodeBlockCommentShade;
