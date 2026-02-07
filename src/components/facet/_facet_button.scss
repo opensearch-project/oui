@@ -31,6 +31,7 @@
 
   &:hover:not(:disabled) {
     background-color: transparentize($ouiColorLightShade, .7);
+    border-radius: $ouiBorderRadius;
   }
 
   &:focus {

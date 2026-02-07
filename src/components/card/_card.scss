@@ -74,6 +74,7 @@
         }
 
         background-color: transparentize($ouiColorLightShade, .85);
+        border-radius: $ouiBorderRadius;
       }
     }
   }

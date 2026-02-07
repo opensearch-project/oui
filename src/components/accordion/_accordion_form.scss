@@ -28,6 +28,7 @@
   &:hover {
     text-decoration: none;
     background-color: transparentize($ouiColorLightShade, .7);
+    border-radius: $ouiBorderRadius;
 
     .ouiAccordionForm__title {
       text-decoration: none;

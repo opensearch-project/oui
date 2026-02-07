@@ -73,6 +73,7 @@
     }
 
     background-color: transparentize($ouiColorLightShade, .85);
+    border-radius: $ouiBorderRadius;
 
     .ouiTableSortIcon {
       fill: $ouiColorPrimary;

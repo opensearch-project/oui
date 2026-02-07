@@ -27,6 +27,7 @@
     text-decoration: none;
     cursor: pointer;
     background-color: transparentize($ouiColorLightShade, .7);
+    border-radius: $ouiBorderRadius;
   }
 
   &:focus {
