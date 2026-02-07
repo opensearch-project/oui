@@ -51,9 +51,12 @@
   }
 
   &:focus {
-    background-color: $ouiFocusBackgroundColor;
     text-decoration: none;
     outline-offset: -$ouiFocusRingSize;
+  }
+
+  &:focus-visible {
+    background-color: $ouiFocusBackgroundColor;
 
     &::before {
       background-color: $ouiColorLightShade;
@@ -109,7 +112,7 @@
     font-weight: $ouiFontWeightSemiBold;
     padding: $ouiSizeS $ouiSizeXS;
 
-    &:focus {
+    &:focus-visible {
       background-color: $ouiFocusBackgroundColor;
 
       &::before {
