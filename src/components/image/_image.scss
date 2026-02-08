@@ -57,7 +57,7 @@
 
   &.ouiImage--allowFullScreen {
     &:hover .ouiImage__caption {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     &:not(.ouiImage--hasShadow) .ouiImage__button:hover,
@@ -170,7 +170,7 @@
     }
 
     .ouiImage__caption {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 

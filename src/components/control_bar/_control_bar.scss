@@ -157,8 +157,10 @@
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
+    background-color: transparentize($ouiControlBarText, .9);
+    border-radius: $ouiBorderRadius;
   }
 
   &.ouiControlBar__tab--active {

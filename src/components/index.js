@@ -37,6 +37,7 @@ export {
   OuiSmallButtonEmpty,
   OuiSmallButtonIcon,
   OuiSmallButtonGroup,
+  OuiXSmallButton,
 } from './button';
 
 export { OuiCallOut } from './call_out';

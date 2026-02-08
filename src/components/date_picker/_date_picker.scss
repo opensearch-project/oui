@@ -350,7 +350,7 @@
           &:hover,
           &:focus {
             cursor: pointer;
-            text-decoration: underline;
+            text-decoration: none;
           }
           &--selected {
             background-color: $ouiColorPrimary;
@@ -418,7 +418,7 @@
   transition: transform $ouiAnimSpeedExtraFast ease-in-out;
 
   &:hover:not(&--disabled) {
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: $ouiFontWeightBold;
     transform: scale(1.2);
   }
@@ -648,7 +648,7 @@
 
 .react-datepicker__month-read-view:focus,
 .react-datepicker__year-read-view:focus {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .react-datepicker__month--accessible:focus {
