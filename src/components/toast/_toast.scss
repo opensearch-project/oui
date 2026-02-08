@@ -10,19 +10,46 @@
  */
 
 .ouiToast {
-  border: $ouiBorderThin;
-  // This overwrites some of the border above
-  // sass-lint:disable-block mixins-before-declarations
-  @include ouiBottomShadowLarge($adjustBorders: true);
+  @if (variable-exists(ouiToastBorderRadius)) {
+    // Modern v9 styling
+    border: $ouiToastBorder;
+    border-radius: $ouiToastBorderRadius;
+    box-shadow: $ouiToastShadow;
+    overflow: hidden; // Clip accent bar to border radius
+    position: relative;
+    padding: $ouiSize;
+    background-color: $ouiColorEmptyShade;
+    width: 100%;
 
-  position: relative;
-  padding: $ouiSize;
-  background-color: $ouiColorEmptyShade;
-  width: 100%;
+    // Left accent bar using ::before pseudo-element
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: $ouiToastAccentWidth;
+      background-color: transparent; // Set by color modifiers
+      border-radius: $ouiToastAccentBorderRadius;
+    }
 
-  &:hover .ouiToast__closeButton,
-  &:focus .ouiToast__closeButton {
-    opacity: 1;
+    // No opacity changes needed - close button is always visible in v9
+  } @else {
+    // Legacy styling
+    border: $ouiBorderThin;
+    // This overwrites some of the border above
+    // sass-lint:disable-block mixins-before-declarations
+    @include ouiBottomShadowLarge($adjustBorders: true);
+
+    position: relative;
+    padding: $ouiSize;
+    background-color: $ouiColorEmptyShade;
+    width: 100%;
+
+    &:hover .ouiToast__closeButton,
+    &:focus .ouiToast__closeButton {
+      opacity: 1;
+    }
   }
 }
 
@@ -35,26 +62,54 @@
   right: $ouiSize;
   line-height: 0; /* 1 */
   appearance: none;
-  opacity: 0;
-  transition: opacity $ouiAnimSpeedFast $ouiAnimSlightResistance;
+
+  @if (variable-exists(ouiToastCloseButtonOpacity)) {
+    // Modern v9 styling - always visible with hover effect
+    opacity: $ouiToastCloseButtonOpacity;
+    transition: $ouiToastCloseButtonTransition;
+    border-radius: $ouiBorderRadiusSmall;
+    padding: $ouiSizeXS;
+
+    &:hover {
+      background-color: $ouiToastCloseButtonHoverBackground;
+
+      svg {
+        fill: $ouiTitleColor;
+      }
+    }
+
+    &:focus {
+      background-color: $ouiFocusBackgroundColor;
+      outline: 2px solid $ouiFocusRingColor;
+      outline-offset: 2px;
+
+      svg {
+        fill: $ouiColorPrimary;
+      }
+    }
+  } @else {
+    // Legacy styling - hidden by default
+    opacity: 0;
+    transition: opacity $ouiAnimSpeedFast $ouiAnimSlightResistance;
+
+    &:hover {
+      svg {
+        fill: $ouiTitleColor;
+      }
+    }
+
+    &:focus {
+      background-color: $ouiFocusBackgroundColor;
+      opacity: 1;
+
+      svg {
+        fill: $ouiColorPrimary;
+      }
+    }
+  }
 
   svg {
     fill: tintOrShade($ouiTitleColor, 50%, 70%);
-  }
-
-  &:hover {
-    svg {
-      fill: $ouiTitleColor;
-    }
-  }
-
-  &:focus {
-    background-color: $ouiFocusBackgroundColor;
-    opacity: 1;
-
-    svg {
-      fill: $ouiColorPrimary;
-    }
   }
 }
 
@@ -69,7 +124,15 @@ $ouiToastTypes: (
 // Create button modifiers based upon the map.
 @each $name, $color in $ouiToastTypes {
   .ouiToast--#{$name} {
-    border-top: 2px solid $color;
+    @if (variable-exists(ouiToastBorderRadius)) {
+      // Modern v9 styling - use ::before for accent bar
+      &::before {
+        background-color: $color;
+      }
+    } @else {
+      // Legacy styling - use border-top
+      border-top: 2px solid $color;
+    }
   }
 }
 
@@ -100,7 +163,14 @@ $ouiToastTypes: (
 .ouiToastHeader__title {
   @include ouiTitle('xs');
   @include ouiTextBreakWord;
-  font-weight: $ouiFontWeightLight;
+
+  @if (variable-exists(ouiToastTitleFontWeight)) {
+    // Modern v9 styling - semibold weight
+    font-weight: $ouiToastTitleFontWeight;
+  } @else {
+    // Legacy styling - light weight
+    font-weight: $ouiFontWeightLight;
+  }
 }
 
 .ouiToastHeader--withBody {

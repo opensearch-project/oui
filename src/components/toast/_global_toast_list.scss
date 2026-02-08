@@ -55,7 +55,15 @@
 
 .ouiGlobalToastListItem {
   margin-bottom: $ouiSize;
-  animation: $ouiAnimSpeedNormal ouiShowToast $ouiAnimSlightResistance;
+
+  @if (variable-exists(ouiToastAnimationDuration)) {
+    // Modern v9 styling - faster animation with scale
+    animation: $ouiToastAnimationDuration ouiShowToast $ouiToastAnimationEasing;
+  } @else {
+    // Legacy styling
+    animation: $ouiAnimSpeedNormal ouiShowToast $ouiAnimSlightResistance;
+  }
+
   opacity: 1;
 
   /**
@@ -71,20 +79,58 @@
   }
 
   &.ouiGlobalToastListItem-isDismissed {
-    transition: opacity $ouiAnimSpeedNormal;
-    opacity: 0;
+    @if (variable-exists(ouiToastAnimationDuration)) {
+      // Modern v9 styling - include scale-down effect
+      transition: opacity $ouiToastAnimationDuration, transform $ouiToastAnimationDuration;
+      opacity: 0;
+      transform: scale(.95);
+    } @else {
+      // Legacy styling
+      transition: opacity $ouiAnimSpeedNormal;
+      opacity: 0;
+    }
   }
 }
 
 @keyframes ouiShowToast {
   from {
-    transform: translateY($ouiSizeL) scale(.9);
+    @if (variable-exists(ouiToastAnimationDuration)) {
+      // Modern v9 styling - scale from 0.95
+      transform: translateY($ouiSizeL) scale(.95);
+    } @else {
+      // Legacy styling - scale from 0.9
+      transform: translateY($ouiSizeL) scale(.9);
+    }
     opacity: 0;
   }
 
   to {
     transform: translateY(0) scale(1);
     opacity: 1;
+  }
+}
+
+// Respect reduced motion preference
+@media (prefers-reduced-motion: reduce) {
+  .ouiGlobalToastListItem {
+    animation-duration: .01ms;
+
+    &.ouiGlobalToastListItem-isDismissed {
+      transition-duration: .01ms;
+      transform: none;
+    }
+  }
+
+  @keyframes ouiShowToast {
+    from {
+      transform: none;
+      opacity: 0;
+    }
+
+    to {
+      transform: none;
+      opacity: 1;
+    }
   }
 }
 
