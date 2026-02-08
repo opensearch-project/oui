@@ -75,7 +75,7 @@ export class GuidePageChrome extends Component {
       ) {
         root = root.parentNode;
       }
-      root.scrollIntoView();
+      root.scrollIntoView({ block: 'nearest' });
     }
   };
 

@@ -47,11 +47,37 @@ body {
 .guideSideNav {
   @include ouiSideNavEmbellish;
   min-width: $guideSideNavWidth;
+  border-right: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, $ouiColorLightShade 15%, $ouiColorLightShade 85%, transparent 100%);
+  }
 }
 
 .guideSideNav__content {
   @include ouiYScroll;
   padding: 0 $ouiSizeL $ouiSizeL;
+  // Hide scrollbar but keep scrolling
+  // sass-lint:disable no-misspelled-properties, no-vendor-prefixes, no-color-keywords, no-color-literals, declarations-before-nesting
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE/Edge
+  // Fade-out gradient at bottom to hint more content below
+  mask-image: linear-gradient(to bottom, #000000 0%, #000000 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000000 0%, #000000 85%, transparent 100%);
+  // sass-lint:enable no-misspelled-properties, no-vendor-prefixes, no-color-keywords, no-color-literals, declarations-before-nesting
+
+  // sass-lint:disable no-vendor-prefixes
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari
+  }
+  // sass-lint:enable no-vendor-prefixes
 }
 
 .guideSideNav__search {
