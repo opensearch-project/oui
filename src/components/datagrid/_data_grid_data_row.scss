@@ -25,6 +25,14 @@
   align-items: center;
   display: flex;
 
+  // V9 theme modernization
+  @if variable-exists(ouiDataGridCellPadding) {
+    padding: $ouiDataGridCellPadding;
+    border-right: $ouiDataGridCellBorder;
+    border-bottom: $ouiDataGridCellBorder;
+    transition: $ouiDataGridCellTransition;
+  }
+
   // Hack to allow for all the focus guard stuff
   > * {
     max-width: 100%;
@@ -42,6 +50,14 @@
   &:focus {
     @include ouiDataGridCellFocus;
     margin-top: -1px;
+
+    // V9 theme modernization - focus state
+    @if variable-exists(ouiDataGridCellPadding) {
+      border: $ouiDataGridCellFocusBorder;
+      box-shadow: $ouiDataGridCellFocusShadow;
+      border-radius: $ouiDataGridCellFocusBorderRadius;
+      margin-top: 0; // Reset margin since we're using a thicker border
+    }
   }
 
   // Only add the transition effect on hover, so that it is instantaneous on focus
@@ -238,6 +254,12 @@
       // sass-lint:disable-block no-important
       // Needed to overtake striping
       background-color: $ouiColorHighlight !important;
+
+      // V9 theme modernization
+      @if variable-exists(ouiDataGridCellPadding) {
+        background-color: $ouiDataGridCellHoverBackground !important;
+        transition: $ouiDataGridCellTransition;
+      }
     }
   }
 }
@@ -247,6 +269,11 @@
   @include ouiDataGridRowCell {
     &.ouiDataGridRowCell--stripe {
       background: $ouiColorLightestShade;
+
+      // V9 theme modernization
+      @if variable-exists(ouiDataGridCellPadding) {
+        background: $ouiDataGridStripeBackground;
+      }
     }
   }
 }
@@ -327,5 +354,22 @@
   to {
     margin-left: $ouiDataGridCellPaddingM;
     width: $ouiSizeM;
+  }
+}
+
+// V9 theme modernization - Reduced motion support
+@if variable-exists(ouiDataGridCellPadding) {
+  @media (prefers-reduced-motion: reduce) {
+    @include ouiDataGridRowCell {
+      transition: none;
+    }
+
+    @include ouiDataGridStyles(rowHoverHighlight) {
+      .ouiDataGridRow:hover {
+        @include ouiDataGridRowCell {
+          transition: none;
+        }
+      }
+    }
   }
 }
