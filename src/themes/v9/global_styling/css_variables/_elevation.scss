@@ -1,0 +1,14 @@
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+// Elevated surface SASS variables — overridden per theme color file.
+// Light theme defaults produce no visual effect.
+$ouiBackgroundElevated: transparent !default;
+$ouiBorderElevated: transparent !default;
+
+:root {
+  --oui-background-elevated: #{$ouiBackgroundElevated};
+  --oui-border-elevated: #{$ouiBorderElevated};
+}
