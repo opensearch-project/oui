@@ -9,6 +9,7 @@
  * GitHub history for details.
  */
 
+// sass-lint:disable hex-length
 // This extra import allows any variables that are created via functions to work when loaded into JS
 @import '../functions/index';
 
@@ -16,28 +17,28 @@
 $ouiColorGhost: #FCFEFF !default;
 $ouiColorInk: #02020E !default;
 
-// Core
-$ouiColorPrimary: #0268BC !default;
-$ouiColorSecondary: #0F7B68 !default;
-$ouiColorAccent: #9C47BF !default;
+// Core - Modernized for contemporary aesthetic
+$ouiColorPrimary: #2563EB !default;      // Modern blue (Tailwind blue-600)
+$ouiColorSecondary: #059669 !default;    // Fresh green (Tailwind emerald-600)
+$ouiColorAccent: #7C3AED !default;       // Vibrant purple (Tailwind violet-600)
 
-// Status
-$ouiColorSuccess: $ouiColorSecondary !default;
-$ouiColorWarning: #E0A130 !default;
-$ouiColorDanger: #C43D35 !default;
+// Status - Muted, sophisticated
+$ouiColorSuccess: #10B981 !default;      // Modern green (Tailwind emerald-500)
+$ouiColorWarning: #F59E0B !default;      // Warm amber (Tailwind amber-500)
+$ouiColorDanger: #EF4444 !default;       // Clean red (Tailwind red-500)
 
-// Grays
-$ouiColorEmptyShade: #FCFEFF !default;
-$ouiColorLightestShade: #E3E5E8 !default;
-$ouiColorLightShade: #D6D9DD !default;
-$ouiColorMediumShade: #ADB4BA !default;
-$ouiColorDarkShade: #5A6875 !default;
-$ouiColorDarkestShade: #2A3947 !default;
-$ouiColorFullShade: #0A1219 !default;
+// Grays - Warmer, softer (Slate-inspired)
+$ouiColorEmptyShade: #FFFFFF !default;   // Pure white
+$ouiColorLightestShade: #F8FAFC !default; // Slate-50
+$ouiColorLightShade: #E2E8F0 !default;   // Slate-200
+$ouiColorMediumShade: #94A3B8 !default;  // Slate-400
+$ouiColorDarkShade: #475569 !default;    // Slate-600
+$ouiColorDarkestShade: #1E293B !default; // Slate-800
+$ouiColorFullShade: #0F172A !default;    // Slate-950
 
-// Backgrounds
-$ouiPageBackgroundColor: #F0F2F4 !default;
-$ouiColorHighlight: #FFE1B0 !default;
+// Backgrounds - Softer, more refined
+$ouiPageBackgroundColor: #F8FAFC !default; // Subtle off-white (Slate-50)
+$ouiColorHighlight: #FEF3C7 !default;    // Softer yellow (Tailwind amber-100)
 
 // Every color below must be based mathematically on the set above and in a particular order.
 $ouiTextColor: $ouiColorDarkestShade !default;

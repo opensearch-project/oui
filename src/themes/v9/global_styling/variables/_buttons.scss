@@ -21,6 +21,13 @@ $ouiButtonColorGhostDisabled: lightOrDarkTheme($ouiColorDarkShade, $ouiColorLigh
 
 $ouiButtonBorderRadius: $ouiBorderRadius !default;
 
+// Add transition support
+// sass-lint:disable indentation
+$ouiButtonTransition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+  border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+  box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+// sass-lint:enable indentation
+
 // Modifier naming and colors.
 $ouiButtonTypes: (
   primary: $ouiColorPrimary,
@@ -43,5 +50,6 @@ $euiButtonColorDisabled: $ouiButtonColorDisabled;
 $euiButtonColorDisabledText: $ouiButtonColorDisabledText;
 $euiButtonColorGhostDisabled: $ouiButtonColorGhostDisabled;
 $euiButtonBorderRadius: $ouiButtonBorderRadius;
+$euiButtonTransition: $ouiButtonTransition;
 $euiButtonTypes: $ouiButtonTypes;
 /* End of Aliases */

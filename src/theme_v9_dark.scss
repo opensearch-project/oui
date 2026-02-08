@@ -18,5 +18,8 @@
 // Components
 @import 'components/index';
 
+// V9 Theme-specific component overrides
+@import 'themes/v9/components/index';
+
 // Packages
 @import '../packages/index';

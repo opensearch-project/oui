@@ -1,0 +1,116 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// sass-lint:disable no-important
+// V9 Theme-specific FilterButton modernization overrides
+
+// Only apply border-radius to direct children of .ouiFilterGroup
+.ouiFilterGroup {
+  // First direct child button gets left border radius
+  > .ouiFilterButton:first-child,
+  > .ouiPopover:first-child .ouiFilterButton {
+    border-radius: $ouiFilterGroupBorderRadius 0 0 $ouiFilterGroupBorderRadius;
+  }
+
+  // Last direct child button gets right border radius
+  > .ouiFilterButton:last-child,
+  > .ouiPopover:last-child .ouiFilterButton {
+    border-radius: 0 $ouiFilterGroupBorderRadius $ouiFilterGroupBorderRadius 0;
+  }
+
+  // Only child button gets full border radius (must come after first/last to override)
+  > .ouiFilterButton:only-child,
+  > .ouiPopover:only-child .ouiFilterButton {
+    border-radius: $ouiFilterGroupBorderRadius;
+  }
+
+  // Middle buttons have no border radius
+  > .ouiFilterButton {
+    border-radius: 0;
+  }
+
+  // Overlap borders to prevent double-width borders between buttons
+  > .ouiFilterButton:not(:first-child),
+  > .ouiPopover:not(:first-child) {
+    margin-left: -1px;
+  }
+}
+
+.ouiFilterButton {
+  transition: $ouiFilterButtonTransition;
+  position: relative; // Needed for z-index to work
+  border-right: 1px solid transparent; // Always have right border, but transparent by default
+
+  &:hover:not(:disabled),
+  &:focus:not(:disabled) {
+    background-color: $ouiColorLightestShade;
+    border-color: $ouiColorMediumShade;
+    border-right-color: $ouiColorMediumShade; // Make right border visible on hover
+    box-shadow: 0 2px 4px 0 transparentize($ouiShadowColor, .9);
+    z-index: 1; // Bring to front on hover/focus
+  }
+}
+
+// Active filters (not selected) - distinct styling
+.ouiFilterButton-hasActiveFilters:not(.ouiFilterButton-isSelected) {
+  font-weight: $ouiFontWeightSemiBold; // 600
+  border-color: $ouiColorPrimary !important; // Primary border - use !important to override focus/active states
+  border-right: 1px solid $ouiColorPrimary !important; // Restore right border with primary color
+  border-left: 1px solid $ouiColorPrimary !important; // Restore left border with primary color
+  z-index: 2; // Bring to front to show all borders
+
+  .ouiFilterButton__notification {
+    background-color: $ouiColorPrimary;
+    color: $ouiColorEmptyShade;
+  }
+}
+
+// Remove --withNext border adjustments (no longer needed)
+.ouiFilterButton--withNext + .ouiFilterButton {
+  margin-left: 0; // Override base negative margin
+  border-left: 1px solid $ouiFormBorderColor; // Restore border
+}
+
+.ouiFilterButton-isSelected {
+  background-color: $ouiFilterButtonSelectedBackground;
+  color: $ouiFilterButtonSelectedColor;
+  border-color: $ouiFilterButtonSelectedBorder;
+  font-weight: $ouiFontWeightSemiBold;
+  z-index: 2; // Bring to front to show all borders
+
+  &:hover:not(:disabled) {
+    background-color: darken($ouiFilterButtonSelectedBackground, 5%);
+    border-color: darken($ouiFilterButtonSelectedBorder, 5%);
+    z-index: 3; // Even higher on hover
+  }
+
+  // Invert notification badge colors for selected state
+  .ouiFilterButton__notification {
+    background-color: $ouiColorEmptyShade;
+    color: $ouiColorPrimary;
+  }
+}
+
+.ouiFilterButton__notification {
+  border-radius: $ouiBorderRadiusSmall; // 6px (not pill shape)
+  transition: all $ouiAnimSpeedFast $ouiAnimEaseInOut;
+}
+
+// Respect reduced motion preferences
+@media (prefers-reduced-motion: reduce) {
+  .ouiFilterButton {
+    transition: none;
+  }
+
+  .ouiFilterButton__notification {
+    transition: none;
+  }
+}
