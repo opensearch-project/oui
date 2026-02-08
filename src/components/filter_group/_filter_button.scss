@@ -31,7 +31,6 @@
     // Remove underline from whole button so notifications don't get the underline
     text-decoration: none;
     background-color: transparentize($ouiColorLightShade, .7);
-    border-radius: $ouiBorderRadius;
 
     .ouiFilterButton__textShift {
       // Subtle hover indication without underline
