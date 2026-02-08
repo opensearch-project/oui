@@ -67,10 +67,13 @@
 
       &:focus,
       &:hover {
+        background-color: transparentize($ouiColorLightShade, .85);
+        border-radius: $ouiBorderRadius;
+
         .ouiCard__title,
         .ouiCard__titleAnchor,
         .ouiCard__titleButton {
-          text-decoration: underline;
+          text-decoration: none;
         }
       }
     }
@@ -217,7 +220,7 @@
     letter-spacing: inherit;
 
     &:focus {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 

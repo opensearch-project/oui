@@ -195,9 +195,7 @@
   .ouiFilePicker__input:focus {
     + .ouiFilePicker__prompt {
       .ouiFilePicker__promptText {
-        // Adding the underline to the prompt text ensures the underline
-        // color is the same as the current text color
-        text-decoration: underline;
+        text-decoration: none;
       }
 
       .ouiFilePicker__icon {
@@ -209,7 +207,7 @@
   // While dragging files over the dropzone
   &.ouiFilePicker__showDrop .ouiFilePicker__prompt {
     .ouiFilePicker__promptText {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     .ouiFilePicker__icon {

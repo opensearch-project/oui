@@ -18,7 +18,7 @@
   &[class*='-isFocused']:not([aria-disabled='true']),
   &:hover:not([aria-disabled='true']) {
     .ouiSelectableTemplateSitewide__listItemTitle {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }

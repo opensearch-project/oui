@@ -41,7 +41,7 @@
   &.ouiListGroupItem-isClickable:hover .ouiListGroupItem__button,
   .ouiListGroupItem__button:hover,
   .ouiListGroupItem__button:focus {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   // Style all disabled list items whether or not they are links or buttons

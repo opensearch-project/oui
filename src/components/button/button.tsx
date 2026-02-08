@@ -66,7 +66,7 @@ export type ButtonColor =
   | 'ghost'
   | 'text';
 
-export type ButtonSize = 's' | 'm';
+export type ButtonSize = 'xs' | 's' | 'm';
 
 export const colorToClassNameMap: { [color in ButtonColor]: string } = {
   primary: '--primary',
@@ -82,6 +82,7 @@ export const colorToClassNameMap: { [color in ButtonColor]: string } = {
 export const COLORS = keysOf(colorToClassNameMap);
 
 export const sizeToClassNameMap: { [size in ButtonSize]: string | null } = {
+  xs: '--xSmall',
   s: '--small',
   m: null,
 };
@@ -327,4 +328,15 @@ type SmallProps = ExclusiveUnion<
 
 export const OuiSmallButton: FunctionComponent<SmallProps> = (props) => (
   <OuiButton {...props} size="s" />
+);
+
+export type OuiXSmallButtonProps = Omit<OuiButtonProps, 'size'>;
+
+type XSmallProps = ExclusiveUnion<
+  Omit<OuiButtonPropsForAnchor, 'size'>,
+  Omit<OuiButtonPropsForButton, 'size'>
+>;
+
+export const OuiXSmallButton: FunctionComponent<XSmallProps> = (props) => (
+  <OuiButton {...props} size="xs" />
 );

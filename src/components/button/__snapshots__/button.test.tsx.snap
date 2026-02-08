@@ -536,6 +536,23 @@ exports[`OuiButton props size s is rendered 1`] = `
 </div>
 `;
 
+exports[`OuiButton props size xs is rendered 1`] = `
+<div>
+  <button
+    class="ouiButton ouiButton--primary ouiButton--xSmall"
+    type="button"
+  >
+    <span
+      class="ouiButtonContent ouiButton__content"
+    >
+      <span
+        class="ouiButton__text"
+      />
+    </span>
+  </button>
+</div>
+`;
+
 exports[`OuiButton props textProps is rendered 1`] = `
 <div>
   <button

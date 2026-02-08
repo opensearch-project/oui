@@ -41,6 +41,18 @@ export default () => (
           Small and filled
         </OuiButton>
       </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton size="xs" onClick={() => {}}>
+          Extra small
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton size="xs" fill onClick={() => {}}>
+          XS filled
+        </OuiButton>
+      </OuiFlexItem>
     </OuiFlexGroup>
 
     <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
@@ -65,6 +77,18 @@ export default () => (
       <OuiFlexItem grow={false}>
         <OuiButton color="success" size="s" fill onClick={() => {}}>
           Small and filled
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="success" size="xs" onClick={() => {}}>
+          Extra small
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="success" size="xs" fill onClick={() => {}}>
+          XS filled
         </OuiButton>
       </OuiFlexItem>
     </OuiFlexGroup>
@@ -93,6 +117,18 @@ export default () => (
           Small and filled
         </OuiButton>
       </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="warning" size="xs" onClick={() => {}}>
+          Extra small
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="warning" size="xs" fill onClick={() => {}}>
+          XS filled
+        </OuiButton>
+      </OuiFlexItem>
     </OuiFlexGroup>
 
     <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
@@ -117,6 +153,18 @@ export default () => (
       <OuiFlexItem grow={false}>
         <OuiButton color="danger" size="s" fill onClick={() => {}}>
           Small and filled
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="danger" size="xs" onClick={() => {}}>
+          Extra small
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="danger" size="xs" fill onClick={() => {}}>
+          XS filled
         </OuiButton>
       </OuiFlexItem>
     </OuiFlexGroup>
@@ -145,6 +193,18 @@ export default () => (
           Small and filled
         </OuiButton>
       </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="text" size="xs" onClick={() => {}}>
+          Extra small
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton color="text" size="xs" fill onClick={() => {}}>
+          XS filled
+        </OuiButton>
+      </OuiFlexItem>
     </OuiFlexGroup>
 
     <OuiFlexGroup gutterSize="s" alignItems="center" responsive={false} wrap>
@@ -169,6 +229,18 @@ export default () => (
       <OuiFlexItem grow={false}>
         <OuiButton isDisabled size="s" fill onClick={() => {}}>
           Small and filled
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton isDisabled size="xs" onClick={() => {}}>
+          Extra small
+        </OuiButton>
+      </OuiFlexItem>
+
+      <OuiFlexItem grow={false}>
+        <OuiButton isDisabled size="xs" fill onClick={() => {}}>
+          XS filled
         </OuiButton>
       </OuiFlexItem>
     </OuiFlexGroup>
