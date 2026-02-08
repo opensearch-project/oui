@@ -23,7 +23,11 @@ $ouiCheckBoxSize: $ouiSize !default;
 $ouiCheckboxBorderRadius: $ouiBorderRadiusSmall !default;
 
 // Add transition support
-$ouiFormControlTransition: border-color $ouiAnimSpeedFast $ouiAnimEaseInOut, box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut, background-color $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+// sass-lint:disable indentation
+$ouiFormControlTransition: border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+  box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut,
+  background-color $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+// sass-lint:enable indentation
 
 // Switch
 $ouiSwitchHeight: $ouiSize * 1.25 !default;

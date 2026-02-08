@@ -20,11 +20,12 @@ $ouiAnimSpeedNormal: 200ms !default;
 $ouiAnimSpeedSlow: 300ms !default;
 $ouiAnimSpeedExtraSlow: 400ms !default;
 
+// sass-lint:disable leading-zero, no-trailing-whitespace, no-trailing-zero
 // Transition easing functions
-$ouiAnimEaseInOut: cubic-bezier(.4, 0, .2, 1) !default;     // Standard
-$ouiAnimEaseOut: cubic-bezier(0, 0, .2, 1) !default;       // Enter animations
-$ouiAnimEaseIn: cubic-bezier(.4, 0, 1, 1) !default;          // Exit animations
-$ouiAnimEaseElastic: cubic-bezier(.68, -.55, .265, 1.55) !default;  // Playful
+$ouiAnimEaseInOut: cubic-bezier(0.4, 0, 0.2, 1) !default;     // Standard
+$ouiAnimEaseOut: cubic-bezier(0.0, 0, 0.2, 1) !default;       // Enter animations
+$ouiAnimEaseIn: cubic-bezier(0.4, 0, 1, 1) !default;          // Exit animations
+$ouiAnimEaseElastic: cubic-bezier(0.68, -0.55, 0.265, 1.55) !default;  // Playful
 
 // Common transition properties
 $ouiTransition: all $ouiAnimSpeedNormal $ouiAnimEaseInOut !default;
@@ -36,7 +37,7 @@ $ouiTransitionSlow: all $ouiAnimSpeedSlow $ouiAnimEaseInOut !default;
   transition: $property $duration $easing;
 
   @media (prefers-reduced-motion: reduce) {
-    transition-duration: .01ms;
+    transition-duration: 0.01ms;
   }
 }
 
