@@ -22,6 +22,7 @@
 - Cross-theme hover/focus UX improvements + button XS size ([#1699](https://github.com/opensearch-project/oui/pull/1699))
 - Add v9 elevation system — shadow tokens, CSS vars, mixins, useElevation hook, and docs ([#1698](https://github.com/opensearch-project/oui/pull/1698))
 - Add v9 component variables and style overrides ([#1700](https://github.com/opensearch-project/oui/pull/1700))
+- Component SCSS enhancements for v9 theme support ([#1701](https://github.com/opensearch-project/oui/pull/1701))
 
 ### 🐛 Bug Fixes
 
