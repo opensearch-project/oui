@@ -14,6 +14,8 @@
 
 ### 📝 Documentation
 
+- Add design system documentation pages — Principles, Foundations ([#1702](https://github.com/opensearch-project/oui/pull/1702))
+
 ### 🛠 Maintenance
 
 ### 🪛 Refactoring
