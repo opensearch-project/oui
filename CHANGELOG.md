@@ -8,6 +8,8 @@
 
 ### 📈 Features/Enhancements
 
+- Add cross-theme variable defaults for badge, filter_group, side_nav, animations, typography ([#1697](https://github.com/opensearch-project/oui/pull/1697))
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
