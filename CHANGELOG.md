@@ -8,6 +8,8 @@
 
 ### 📈 Features/Enhancements
 
+- Add v9 component variables and style overrides ([#1700](https://github.com/opensearch-project/oui/pull/1700))
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
