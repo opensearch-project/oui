@@ -2,7 +2,7 @@ name: Deploy Docs to GitHub Pages
 
 on:
   push:
-    branches: [v9-dark-theme-refinements, v9-theme-font-update, main]
+    branches: [v9-dark-theme-refinements, v9-theme-font-update, v9-theme-colors-buttons, theme-update, main]
   workflow_dispatch:
 
 env:
