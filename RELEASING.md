@@ -35,6 +35,7 @@ The release process is standard across repositories in this org and is run by a 
 
 1. Create a tag, e.g. v2.1.0, and push it to the GitHub repo.
 1. The [release-drafter.yml](.github/workflows/release-drafter.yml) will be automatically kicked off and a draft release will be created.
-1. This draft release triggers the [jenkins release workflow](https://build.ci.opensearch.org/job/oui-release/) as a result of which OUI is released on [npmjs](https://www.npmjs.com/package/@opensearch-project/oui).
-1. Once the above release workflow is successful, the drafted release on GitHub is published automatically.
+1. Before creating a release, this workflow creates a GitHub issue asking for approval from the [maintainers](MAINTAINERS.md). See sample [issue](https://github.com/gaiksaya/opensearch-js/issues/1). The maintainers need to approve in order to continue the workflow run.
+1. Since the repo is already added as part of NPM trusted publisher, `npm publish` with npm version v11.5.1 or above will directly authenticate the workflow and publish to NPM.
+1. Once the above release workflow is successful, the release on GitHub is published automatically.
 1. Increment "version" in package.json to the next patch release, e.g. v2.1.1. See [example](https://github.com/opensearch-project/opensearch-js/pull/318)
