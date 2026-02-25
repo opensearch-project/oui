@@ -210,7 +210,7 @@
     "findup": "^0.1.5",
     "fork-ts-checker-webpack-plugin": "^6.5.3",
     "get-port": "^5.1.1",
-    "glob": "^8.1.0",
+    "glob": "^9.0.0",
     "html": "^1.0.0",
     "html-format": "^1.0.2",
     "html-webpack-plugin": "^5.6.3",
