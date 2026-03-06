@@ -130,6 +130,30 @@
 }
 
 
+// Elevation system mixins
+// These mixins are part of the v9 elevation system and provide structured
+// shadow application, local stacking contexts, and elevated surface styling.
+
+@mixin ouiElevation($level) {
+  @if $level == 1 { box-shadow: $ouiShadow1; }
+  @else if $level == 2 { box-shadow: $ouiShadow2; }
+  @else if $level == 3 { box-shadow: $ouiShadow3; }
+  @else if $level == 4 { box-shadow: $ouiShadow4; }
+  @else if $level == 5 { box-shadow: $ouiShadow5; }
+  @else if $level == 6 { box-shadow: $ouiShadow6; }
+  @else { @warn "ouiElevation() expects level 1-6 but got '#{$level}'"; }
+}
+
+@mixin ouiLocalElevation {
+  isolation: isolate;
+}
+
+@mixin ouiElevatedSurface {
+  background-color: var(--oui-background-elevated);
+  border-color: var(--oui-border-elevated);
+}
+
+
 /* OUI -> EUI Aliases */
 @mixin euiSlightShadow($color: $ouiShadowColor, $opacity: .3) { @include ouiSlightShadow($color, $opacity); }
 @mixin euiBottomShadowSmall($color: $ouiShadowColor, $opacity: .3) { @include ouiBottomShadowSmall($color, $opacity); }

@@ -29,6 +29,8 @@ import { IsColorDarkExample } from './views/is_color_dark/is_color_dark_example'
 
 import { PrettyDurationExample } from './views/pretty_duration/pretty_duration_example';
 
+import { ElevationExample } from './views/elevation/elevation_example';
+
 import { UtilityClassesExample } from './views/utility_classes/utility_classes_example';
 
 // Component examples
@@ -447,6 +449,7 @@ const navigation = [
       CopyExample,
       UtilityClassesExample,
       DelayRenderExample,
+      ElevationExample,
       ErrorBoundaryExample,
       FocusTrapExample,
       HighlightAndMarkExample,

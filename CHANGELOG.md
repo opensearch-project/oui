@@ -8,6 +8,8 @@
 
 ### 📈 Features/Enhancements
 
+- Add v9 elevation system — shadow tokens, CSS vars, mixins, useElevation hook, and docs ([#1698](https://github.com/opensearch-project/oui/pull/1698))
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
