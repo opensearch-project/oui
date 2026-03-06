@@ -21,6 +21,9 @@ $ouiButtonColorGhostDisabled: lightOrDarkTheme($ouiColorDarkShade, $ouiColorLigh
 
 $ouiButtonBorderRadius: $ouiBorderRadius !default;
 
+// Add transition support
+$ouiButtonTransition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut, border-color $ouiAnimSpeedFast $ouiAnimEaseInOut, box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+
 // Modifier naming and colors.
 $ouiButtonTypes: (
   primary: $ouiColorPrimary,
@@ -43,5 +46,6 @@ $euiButtonColorDisabled: $ouiButtonColorDisabled;
 $euiButtonColorDisabledText: $ouiButtonColorDisabledText;
 $euiButtonColorGhostDisabled: $ouiButtonColorGhostDisabled;
 $euiButtonBorderRadius: $ouiButtonBorderRadius;
+$euiButtonTransition: $ouiButtonTransition;
 $euiButtonTypes: $ouiButtonTypes;
 /* End of Aliases */
