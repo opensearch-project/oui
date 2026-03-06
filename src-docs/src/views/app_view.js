@@ -35,7 +35,17 @@ import favicon96Dev from '../images/favicon/dev/favicon-96x96.png';
 export class AppView extends Component {
   componentDidUpdate(prevProps) {
     if (prevProps.currentRoute.path !== this.props.currentRoute.path) {
+      // Save the sidebar scroll position before scrolling the page,
+      // then restore it so the nav pane doesn't jump on navigation.
+      const sideNav = document.querySelector('.guideSideNav__content');
+      const savedScrollTop = sideNav ? sideNav.scrollTop : 0;
       window.scrollTo(0, 0);
+      if (sideNav) {
+        // Restore after the browser repaints
+        requestAnimationFrame(() => {
+          sideNav.scrollTop = savedScrollTop;
+        });
+      }
     }
   }
 
@@ -97,7 +107,7 @@ export class AppView extends Component {
             />
           </OuiErrorBoundary>
 
-          <OuiPageBody>
+          <OuiPageBody panelled={false} style={{ paddingTop: 24 }}>
             <OuiContext i18n={i18n}>
               <ThemeContext.Consumer>
                 {(context) => {

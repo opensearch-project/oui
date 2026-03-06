@@ -1,0 +1,42 @@
+// Toast component variables for v9 theme modernization
+
+// Border and shape
+$ouiToastBorderRadius: $ouiBorderRadius !default; // 8px
+$ouiToastBorder: 1px solid transparentize($ouiBorderColor, 0.5) !default;
+
+// Shadow
+$ouiToastShadow: 0 4px 6px -1px rgba($ouiShadowColor, 0.1),
+                 0 2px 4px -1px rgba($ouiShadowColor, 0.06) !default;
+
+// Spacing
+$ouiToastPadding: $ouiSize !default; // 16px
+
+// Left accent bar
+$ouiToastAccentWidth: 3px !default;
+$ouiToastAccentBorderRadius: $ouiBorderRadius 0 0 $ouiBorderRadius !default;
+
+// Typography
+$ouiToastTitleFontWeight: $ouiFontWeightSemiBold !default; // 600
+
+// Close button
+$ouiToastCloseButtonOpacity: 1 !default; // Always visible
+$ouiToastCloseButtonHoverBackground: transparentize($ouiColorLightShade, 0.5) !default;
+$ouiToastCloseButtonTransition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+
+// Animations
+$ouiToastAnimationDuration: $ouiAnimSpeedFast !default; // 150ms
+$ouiToastAnimationEasing: $ouiAnimEaseOut !default;
+
+// EUI Aliases for backward compatibility
+$euiToastBorderRadius: $ouiToastBorderRadius;
+$euiToastBorder: $ouiToastBorder;
+$euiToastShadow: $ouiToastShadow;
+$euiToastPadding: $ouiToastPadding;
+$euiToastAccentWidth: $ouiToastAccentWidth;
+$euiToastAccentBorderRadius: $ouiToastAccentBorderRadius;
+$euiToastTitleFontWeight: $ouiToastTitleFontWeight;
+$euiToastCloseButtonOpacity: $ouiToastCloseButtonOpacity;
+$euiToastCloseButtonHoverBackground: $ouiToastCloseButtonHoverBackground;
+$euiToastCloseButtonTransition: $ouiToastCloseButtonTransition;
+$euiToastAnimationDuration: $ouiToastAnimationDuration;
+$euiToastAnimationEasing: $ouiToastAnimationEasing;

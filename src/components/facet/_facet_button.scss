@@ -25,8 +25,13 @@
   &:hover,
   &:focus {
     &:not(:disabled) .ouiFacetButton__text {
-      text-decoration: underline; /* 1 */
+      text-decoration: none; /* 1 */
     }
+  }
+
+  &:hover:not(:disabled) {
+    background-color: transparentize($ouiColorLightShade, .7);
+    border-radius: $ouiBorderRadius;
   }
 
   &:focus {

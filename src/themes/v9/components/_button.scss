@@ -1,0 +1,130 @@
+/*!
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+// V9 Button overrides — flat, modern aesthetic inspired by shadcn/ui
+// Unfilled buttons get a subtle neutral border + light shadow (like shadcn outline).
+// Filled buttons stay flat with bg-only hover shifts.
+
+.ouiButton {
+  border-radius: $ouiBorderRadiusSmall;
+  transition: $ouiButtonTransition;
+
+  // Unfilled default: subtle neutral border + tiny shadow
+  border-color: $ouiBorderColor;
+  @include ouiSlightShadow($ouiShadowColor, .04);
+
+  &:hover,
+  &:active {
+    @include ouiSlightShadow($ouiShadowColor, .06);
+  }
+
+  &:not([class*='isDisabled']) {
+    &:hover,
+    &:focus,
+    &:focus-within {
+      background-color: transparentize($ouiColorDarkestShade, .95);
+    }
+  }
+
+  &.ouiButton-isDisabled {
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:focus-within {
+      box-shadow: none;
+    }
+  }
+}
+
+// Override per-color variant: unfilled gets neutral border, filled stays flat
+@each $name, $color in $ouiButtonTypes {
+  .ouiButton--#{$name} {
+    // Unfilled: neutral border, text in variant color, no colored border
+    @if ($name != 'ghost') {
+      border-color: $ouiBorderColor;
+    }
+
+    &:not([class*='isDisabled']) {
+      @include ouiSlightShadow($ouiShadowColor, .04);
+
+      &:hover,
+      &:focus,
+      &:focus-within {
+        @include ouiSlightShadow($ouiShadowColor, .06);
+        border-color: $ouiBorderColor;
+        background-color: transparentize($ouiColorDarkestShade, .95);
+      }
+
+      &:active {
+        @include ouiSlightShadow($ouiShadowColor, .08);
+        background-color: transparentize($ouiColorDarkestShade, .92);
+      }
+
+      // Filled: flat, no shadow, bg-only hover
+      &.ouiButton--fill {
+        box-shadow: none;
+        border-color: $color;
+
+        &:hover,
+        &:focus,
+        &:focus-within {
+          box-shadow: none;
+          background-color: darken($color, 5%);
+          border-color: darken($color, 5%);
+        }
+
+        &:active {
+          box-shadow: none;
+          background-color: darken($color, 10%);
+          border-color: darken($color, 10%);
+        }
+      }
+    }
+  }
+}
+
+// Ghost disabled
+.ouiButton.ouiButton-isDisabled.ouiButton--ghost {
+  box-shadow: none;
+
+  &:hover,
+  &:focus,
+  &:focus-within {
+    box-shadow: none;
+  }
+}
+
+// Button icon — same treatment
+.ouiButtonIcon {
+  border-radius: $ouiBorderRadiusSmall;
+
+  &:not([class*='isDisabled']) {
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:active {
+      box-shadow: none;
+    }
+  }
+
+  &.ouiButtonIcon-isDisabled {
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+// Empty button
+.ouiButtonEmpty {
+  border-radius: $ouiBorderRadiusSmall;
+}

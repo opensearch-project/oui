@@ -47,11 +47,32 @@ body {
 .guideSideNav {
   @include ouiSideNavEmbellish;
   min-width: $guideSideNavWidth;
+  border-right: none;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent 0%, $ouiColorLightShade 15%, $ouiColorLightShade 85%, transparent 100%);
+  }
 }
 
 .guideSideNav__content {
   @include ouiYScroll;
   padding: 0 $ouiSizeL $ouiSizeL;
+  // Hide scrollbar but keep scrolling
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE/Edge
+  &::-webkit-scrollbar {
+    display: none; // Chrome/Safari
+  }
+  // Fade-out gradient at bottom to hint more content below
+  mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 85%, transparent 100%);
 }
 
 .guideSideNav__search {

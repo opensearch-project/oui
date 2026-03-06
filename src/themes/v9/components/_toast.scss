@@ -1,0 +1,36 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Dark theme adjustments for Toast component
+@if (lightness($ouiPageBackgroundColor) < 50) {
+  // Override variables for dark theme
+  $ouiToastBorder: 1px solid transparentize($ouiBorderColor, 0.3) !global; // More visible border
+  $ouiToastShadow: 0 4px 6px -1px rgba($ouiShadowColor, 0.2),
+                   0 2px 4px -1px rgba($ouiShadowColor, 0.15) !global; // Stronger shadow
+  $ouiToastCloseButtonHoverBackground: transparentize($ouiColorLightShade, 0.3) !global; // Lighter hover
+  
+  // Accent bar color adjustments - lighten by 5% for better visibility
+  .ouiToast--primary::before {
+    background-color: lighten($ouiColorPrimary, 5%);
+  }
+  
+  .ouiToast--success::before {
+    background-color: lighten($ouiColorSecondary, 5%);
+  }
+  
+  .ouiToast--warning::before {
+    background-color: lighten($ouiColorWarning, 5%);
+  }
+  
+  .ouiToast--danger::before {
+    background-color: lighten($ouiColorDanger, 5%);
+  }
+}

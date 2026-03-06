@@ -68,9 +68,12 @@
   &:hover,
   &:focus {
     .ouiTableCellContent__text {
-      text-decoration: underline;
+      text-decoration: none;
       color: $ouiColorPrimary;
     }
+
+    background-color: transparentize($ouiColorLightShade, .85);
+    border-radius: $ouiBorderRadius;
 
     .ouiTableSortIcon {
       fill: $ouiColorPrimary;

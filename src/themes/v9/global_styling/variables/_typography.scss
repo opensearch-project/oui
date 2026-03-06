@@ -39,8 +39,8 @@
 }
 
 // sass-lint:disable quotes
-$ouiFontFamily: #{"'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"} !default;
-$ouiCodeFontFamily: #{"'Source Code Pro', Consolas, Menlo, Courier, monospace"} !default;
+$ouiFontFamily: #{"'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"} !default;
+$ouiCodeFontFamily: #{"'Roboto Mono', Consolas, Menlo, Courier, monospace"} !default;
 // sass-lint:enable quotes
 
 // Careful using ligatures. Code editors like ACE will often error because of width calculations
@@ -61,57 +61,63 @@ $ouiFontSizeXXL:    $ouiFontSize * nth($ouiTextScale, 1) !default; // 28px
 $ouiLegibilityMaxWidth: 80ch !default;
 
 // Line height
-$ouiLineHeight:     1.5 !default;
+$ouiLineHeight:     1.6 !default;
 $ouiBodyLineHeight: 1 !default;
+$ouiHeadingLineHeight: 1.3 !default;
 
 // Font weights
-$ouiFontWeightLight:        400 !default;
+$ouiFontWeightLight:        300 !default;
 $ouiFontWeightRegular:      400 !default;
 $ouiFontWeightMedium:       500 !default;
-$ouiFontWeightSemiBold:     500 !default;
-$ouiFontWeightBold:         500 !default;
+$ouiFontWeightSemiBold:     600 !default;
+$ouiFontWeightBold:         700 !default;
 $ouiCodeFontWeightRegular:  400 !default;
 $ouiCodeFontWeightBold:     700 !default;
+
+// Letter spacing
+$ouiLetterSpacingTight:     -0.01em !default;
+$ouiLetterSpacingNormal:    0 !default;
+$ouiLetterSpacingWide:      0.02em !default;
 
 // Titles map
 // Lists all the properties per OuiTitle size that then gets looped through to create the selectors.
 // The map allows for tokenization and easier customization per theme, otherwise you'd have to override the selectors themselves
 $ouiTitles: (
-  // h6: 14px / 17px / 500
+  // h6: 14px / semibold
   'xxxs': (
     'font-size': $ouiFontSizeS,
-    'line-height': lineHeightFromBaseline(2.4286),
-    'font-weight': $ouiFontWeightMedium,
+    'line-height': $ouiHeadingLineHeight,
+    'font-weight': $ouiFontWeightSemiBold,
   ),
-  // h5: 14px / 17px / 500
+  // h5: 14px / semibold
   'xxs': (
     'font-size': $ouiFontSizeS,
-    'line-height': lineHeightFromBaseline(2.4286),
-    'font-weight': $ouiFontWeightMedium,
+    'line-height': $ouiHeadingLineHeight,
+    'font-weight': $ouiFontWeightSemiBold,
   ),
-  // h4: 16px / 19px / 500
+  // h4: 16px / semibold
   'xs': (
     'font-size': $ouiFontSizeM,
-    'line-height': lineHeightFromBaseline(2.7143),
-    'font-weight': $ouiFontWeightMedium,
+    'line-height': $ouiHeadingLineHeight,
+    'font-weight': $ouiFontWeightSemiBold,
   ),
-  // h3: 18px / 22px / 500
+  // h3: 18px / semibold
   's': (
     'font-size': $ouiFontSizeL,
-    'line-height': lineHeightFromBaseline(3.1429),
-    'font-weight': $ouiFontWeightMedium,
+    'line-height': $ouiHeadingLineHeight,
+    'font-weight': $ouiFontWeightSemiBold,
   ),
-  // h2: 24px / 29px / 400
+  // h2: 24px / medium
   'm': (
     'font-size': $ouiFontSizeXL,
-    'line-height': lineHeightFromBaseline(4.1429),
-    'font-weight': $ouiFontWeightRegular,
+    'line-height': $ouiHeadingLineHeight,
+    'font-weight': $ouiFontWeightMedium,
   ),
-  // h1: 28px / 34px / 400
+  // h1: 28px / medium
   'l': (
     'font-size': $ouiFontSizeXXL,
-    'line-height': lineHeightFromBaseline(4.857),
-    'font-weight': $ouiFontWeightRegular,
+    'line-height': $ouiHeadingLineHeight,
+    'font-weight': $ouiFontWeightMedium,
   ),
 ) !default;
 
@@ -131,6 +137,7 @@ $euiFontSizeXXL: $ouiFontSizeXXL;
 $euiLegibilityMaxWidth: $ouiLegibilityMaxWidth;
 $euiLineHeight: $ouiLineHeight;
 $euiBodyLineHeight: $ouiBodyLineHeight;
+$euiHeadingLineHeight: $ouiHeadingLineHeight;
 $euiFontWeightLight: $ouiFontWeightLight;
 $euiFontWeightRegular: $ouiFontWeightRegular;
 $euiFontWeightMedium: $ouiFontWeightMedium;
@@ -138,5 +145,8 @@ $euiFontWeightSemiBold: $ouiFontWeightSemiBold;
 $euiFontWeightBold: $ouiFontWeightBold;
 $euiCodeFontWeightRegular: $ouiCodeFontWeightRegular;
 $euiCodeFontWeightBold: $ouiCodeFontWeightBold;
+$euiLetterSpacingTight: $ouiLetterSpacingTight;
+$euiLetterSpacingNormal: $ouiLetterSpacingNormal;
+$euiLetterSpacingWide: $ouiLetterSpacingWide;
 $euiTitles: $ouiTitles;
 /* End of Aliases */

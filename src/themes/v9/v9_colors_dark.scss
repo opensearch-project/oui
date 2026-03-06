@@ -15,28 +15,28 @@
 $ouiColorGhost: #E3E5E9;
 $ouiColorInk: #02020E;
 
-// Core
-$ouiColorPrimary: #0097D1;
-$ouiColorSecondary: #129079;
-$ouiColorAccent: #AA63C4;
+// Core - Brighter, more vibrant for dark mode
+$ouiColorPrimary: #3B82F6;      // Brighter blue (Tailwind blue-500)
+$ouiColorSecondary: #10B981;    // Vibrant green (Tailwind emerald-500)
+$ouiColorAccent: #A78BFA;       // Softer purple (Tailwind violet-400)
 
-// Status
-$ouiColorSuccess: $ouiColorSecondary;
-$ouiColorWarning: #F4AE27;
-$ouiColorDanger: #CD5D56;
+// Status - Higher contrast for dark backgrounds
+$ouiColorSuccess: #10B981;      // Modern green (Tailwind emerald-500)
+$ouiColorWarning: #FBBF24;      // Brighter amber (Tailwind amber-400)
+$ouiColorDanger: #F87171;       // Softer red (Tailwind red-400)
 
-// Grays
-$ouiColorEmptyShade: #0F171F;
-$ouiColorLightestShade: #19222B;
-$ouiColorLightShade: #2A3540;
-$ouiColorMediumShade: #5C666F;
-$ouiColorDarkShade: #959BA2;
-$ouiColorDarkestShade: #E3E5E9;
-$ouiColorFullShade: #FCFEFF;
+// Grays - Neutral slate tones (no blue cast)
+$ouiColorEmptyShade: #141418;   // Neutral dark — card/panel surfaces
+$ouiColorLightestShade: #1C1C22; // Neutral — subtle backgrounds, code blocks
+$ouiColorLightShade: #2E2E36;   // Neutral — borders, dividers
+$ouiColorMediumShade: #71717A;  // Zinc-500 — muted UI elements
+$ouiColorDarkShade: #A1A1AA;    // Zinc-400 — secondary text
+$ouiColorDarkestShade: #E4E4E7; // Zinc-200 — high-contrast foreground
+$ouiColorFullShade: #FAFAFA;    // Zinc-50  — brightest foreground
 
-// Backgrounds
-$ouiPageBackgroundColor: #02020E;
-$ouiColorHighlight: #3D2C0D;
+// Backgrounds — page sits one step darker than cards for layered depth
+$ouiPageBackgroundColor: #09090B; // Zinc-950 — deepest layer
+$ouiColorHighlight: #422006;    // Warmer highlight (Tailwind amber-950)
 
 // CodeBlock
 $ouiCodeBlockCommentShade: #838B93;
@@ -47,12 +47,12 @@ $ouiCodeBlockKeywordShade: #B174FC;
 $ouiCodeBlockTypeShade: #6AB0F1;
 $ouiCodeBlockTitleShade: #DD8232;
 
-// Variations from core
-$ouiTextColor: $ouiColorDarkShade;
-$ouiTitleColor: #C6C9CE;
+// Variations from core - Better contrast
+$ouiTextColor: #D4D4D8;         // Zinc-300 (neutral, no blue)
+$ouiTitleColor: #F4F4F5;        // Zinc-100 (clearer hierarchy)
 // Ensure contrast between subdued text and the page background
 // Should not be shaded as much as $ouiColorDisabled
-$ouiTextSubduedColor: #798189;
+$ouiTextSubduedColor: #A1A1AA;  // Zinc-400 (better readability)
 $ouiColorDisabled: $ouiColorLightestShade !default;
 
 // Contrasty text variants
@@ -72,9 +72,30 @@ $ouiColorChartBand: tint($ouiColorLightestShade, 2.5%);
 // Code
 $ouiCodeBlockBackgroundColor: $ouiColorLightestShade;
 
-// Shadows
+// Shadows — dark theme needs stronger, more spread shadows plus a subtle
+// light ring so elevation is perceptible against dark backgrounds.
 $ouiShadowColor: #000;
 $ouiShadowColorLarge: $ouiShadowColor;
+$ouiShadowOpacity: 0.90;
+
+// Light-ring glow that outlines elevated surfaces (simulates ambient light)
+$ouiShadowGlow: rgba(161, 161, 170, 0.08); // Zinc-400 at 8%
+
+// Override shadow levels for dark theme — wider spread + glow ring
+$ouiShadowBase: 0 0 1px rgba(161, 161, 170, 0.12), 0 0 0 1px rgba(161, 161, 170, 0.06);
+$ouiShadow1: $ouiShadowBase, 0 1px 4px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow2: $ouiShadowBase, 0 2px 8px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow3: $ouiShadowBase, 0 4px 16px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow4: $ouiShadowBase, 0 6px 24px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow5: $ouiShadowBase, 0 8px 32px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow6: $ouiShadowBase, 0 12px 48px rgba(0, 0, 0, $ouiShadowOpacity);
+
+// Border color — subtle but visible against dark surfaces
+$ouiBorderColor: rgba(46, 46, 54, 0.8); // Neutral gray at 80%
+
+// Elevated surfaces (menus, popovers, flyouts) — one step above cards
+$ouiBackgroundElevated: #1C1C22; // Neutral — distinct from card bg
+$ouiBorderElevated: rgba(63, 63, 70, 0.6); // Zinc-700 at 60% — visible ring on floating surfaces
 
 //CodeBlock Colors
 $ouiCodeBlockCommentColor: $ouiCodeBlockCommentShade;
@@ -127,4 +148,6 @@ $euiColorChartBand: $ouiColorChartBand;
 $euiCodeBlockBackgroundColor: $ouiCodeBlockBackgroundColor;
 $euiShadowColor: $ouiShadowColor;
 $euiShadowColorLarge: $ouiShadowColorLarge;
+$euiBorderColor: $ouiBorderColor;
+$euiShadowOpacity: $ouiShadowOpacity;
 /* End of Aliases */

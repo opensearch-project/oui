@@ -45,16 +45,6 @@ export default () => (
               small
             </OuiButtonEmpty>
           </OuiFlexItem>
-
-          <OuiFlexItem grow={false}>
-            <OuiButtonEmpty
-              isDisabled={value === 'disabled' ? true : false}
-              color={value !== 'disabled' ? value : 'primary'}
-              size="xs"
-              onClick={() => {}}>
-              extra small
-            </OuiButtonEmpty>
-          </OuiFlexItem>
         </OuiFlexGroup>
       </React.Fragment>
     ))}
@@ -71,8 +61,8 @@ export default () => (
           onClick={() => {}}
           iconType="arrowDown"
           iconSide="right"
-          size="xs">
-          Extra small with icon right
+          size="s">
+          Small with icon right
         </OuiButtonEmpty>
       </OuiFlexItem>
     </OuiFlexGroup>
@@ -90,8 +80,8 @@ export default () => (
           onClick={() => {}}
           iconType="dashboardApp"
           iconSide="right"
-          size="xs">
-          Extra small with app icon right
+          size="s">
+          Small with app icon right
         </OuiButtonEmpty>
       </OuiFlexItem>
     </OuiFlexGroup>

@@ -1,0 +1,50 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// DataGrid dark theme adjustments
+@if (lightness($ouiPageBackgroundColor) < 50) {
+  // Override variables for dark theme
+  // Note: Header and controls backgrounds remain clean (no override needed)
+  $ouiDataGridCellBorder: 1px solid transparentize($ouiBorderColor, 0.3) !global;
+  $ouiDataGridShadow: 0 2px 4px 0 rgba($ouiShadowColor, 0.2),
+                      0 1px 2px 0 rgba($ouiShadowColor, 0.15) !global;
+  $ouiDataGridCellHoverBackground: transparentize($ouiColorHighlight, 0.2) !global;
+  $ouiDataGridStripeBackground: transparentize($ouiColorLightShade, 0.8) !global;
+}
+
+// Override headerShade style to keep headers clean in v9 theme
+@include ouiDataGridStyles(headerShade) {
+  @include ouiDataGridHeaderCell {
+    background: $ouiDataGridHeaderBackground; // Use clean background
+  }
+}
+
+// Apply modern font size to cells
+@include ouiDataGridRowCell {
+  @if variable-exists(ouiDataGridCellFontSize) {
+    font-size: $ouiDataGridCellFontSize;
+  }
+}
+
+// V9 theme modernization - Bottom corner border radius
+// Since DataGrid is virtualized, we apply border-radius to corner cells
+// This will clip cell backgrounds to match the container's rounded corners
+@if variable-exists(ouiDataGridBorderRadius) {
+  // Target bottom-left corner cell (last firstColumn cell)
+  .ouiDataGridRowCell.ouiDataGridRowCell--firstColumn:nth-last-child(1 of .ouiDataGridRowCell--firstColumn) {
+    border-bottom-left-radius: $ouiDataGridBorderRadius;
+  }
+
+  // Target bottom-right corner cell (last lastColumn cell)
+  .ouiDataGridRowCell.ouiDataGridRowCell--lastColumn:nth-last-child(1 of .ouiDataGridRowCell--lastColumn) {
+    border-bottom-right-radius: $ouiDataGridBorderRadius;
+  }
+}
