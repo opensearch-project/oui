@@ -8,6 +8,8 @@
 
 ### 📈 Features/Enhancements
 
+- Component SCSS enhancements for v9 theme support ([#1701](https://github.com/opensearch-project/oui/pull/1701))
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
