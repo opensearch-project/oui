@@ -9,10 +9,30 @@
  * GitHub history for details.
  */
 
+// sass-lint:disable leading-zero
 // Shadows
 // Transparency only affects the use of variable this outside of the shadow mixins (borders)
 $ouiShadowColor: $ouiColorMediumShade !default;
 $ouiShadowColorLarge: shade(saturate($ouiColorMediumShade, 25%), 50%) !default;
+
+// Shadow opacity — overridden per theme
+$ouiShadowOpacity: 0.32 !default;
+
+// Base shadow layer (always present)
+$ouiShadowBase: 0 0 1px rgba(0, 0, 0, 0.1);
+
+// Shadow level definitions
+$ouiShadow1: $ouiShadowBase, 0 1px 2px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow2: $ouiShadowBase, 0 1px 4px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow3: $ouiShadowBase, 0 2px 8px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow4: $ouiShadowBase, 0 3px 12px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow5: $ouiShadowBase, 0 4px 16px rgba(0, 0, 0, $ouiShadowOpacity);
+$ouiShadow6: $ouiShadowBase, 0 5px 24px rgba(0, 0, 0, $ouiShadowOpacity);
+
+// Local elevation z-index values
+$ouiLocalZIndex1: 1;
+$ouiLocalZIndex2: 2;
+$ouiLocalZIndex3: 3;
 
 
 /* OUI -> EUI Aliases */

@@ -15,12 +15,19 @@ $ouiFormControlHeight: $ouiSizeXXL !default;
 $ouiFormControlCompressedHeight: $ouiSizeXL !default;
 $ouiFormControlPadding: $ouiSizeM !default;
 $ouiFormControlCompressedPadding: $ouiSizeS !default;
-$ouiFormControlBorderRadius: 0 !default;
-$ouiFormControlCompressedBorderRadius: 2px !default;
+$ouiFormControlBorderRadius: $ouiBorderRadiusSmall !default;
+$ouiFormControlCompressedBorderRadius: $ouiBorderRadiusSmall !default;
 
 $ouiRadioSize: $ouiSize !default;
 $ouiCheckBoxSize: $ouiSize !default;
-$ouiCheckboxBorderRadius: $ouiBorderRadius !default;
+$ouiCheckboxBorderRadius: $ouiBorderRadiusSmall !default;
+
+// Add transition support
+// sass-lint:disable indentation
+$ouiFormControlTransition: border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+  box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut,
+  background-color $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+// sass-lint:enable indentation
 
 // Switch
 $ouiSwitchHeight: $ouiSize * 1.25 !default;
@@ -101,6 +108,7 @@ $euiFormControlCompressedBorderRadius: $ouiFormControlCompressedBorderRadius;
 $euiRadioSize: $ouiRadioSize;
 $euiCheckBoxSize: $ouiCheckBoxSize;
 $euiCheckboxBorderRadius: $ouiCheckboxBorderRadius;
+$euiFormControlTransition: $ouiFormControlTransition;
 $euiSwitchHeight: $ouiSwitchHeight;
 $euiSwitchWidth: $ouiSwitchWidth;
 $euiSwitchThumbSize: $ouiSwitchThumbSize;

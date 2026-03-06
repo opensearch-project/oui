@@ -1,0 +1,53 @@
+// sass-lint:disable leading-zero
+// DataGrid modernization variables
+
+// Container
+$ouiDataGridBorderRadius: $ouiBorderRadius !default;                                    // 8px
+$ouiDataGridBorder: 1px solid $ouiBorderColor !default;
+// sass-lint:disable indentation
+$ouiDataGridShadow: 0 1px 3px 0 rgba($ouiShadowColor, 0.1),
+  0 1px 2px 0 rgba($ouiShadowColor, 0.06) !default;
+// sass-lint:enable indentation
+$ouiDataGridControlsBackground: $ouiColorEmptyShade !default;                           // Clean, no tint
+
+// Header
+$ouiDataGridHeaderBackground: $ouiColorEmptyShade !default;                              // Clean, no tint
+$ouiDataGridHeaderBorderBottom: 2px solid $ouiBorderColor !default;
+$ouiDataGridHeaderFontWeight: $ouiFontWeightMedium !default;                            // 500
+$ouiDataGridHeaderPadding: $ouiSizeS $ouiSizeM !default;                                // 8px 12px
+$ouiDataGridHeaderHoverBackground: transparentize($ouiColorLightShade, 0.3) !default;
+
+// Cells
+$ouiDataGridCellPadding: $ouiSizeS $ouiSizeM !default;                                  // 8px 12px
+$ouiDataGridCellBorder: 1px solid transparentize($ouiBorderColor, 0.5) !default;
+$ouiDataGridCellHoverBackground: transparentize($ouiColorHighlight, 0.3) !default;
+$ouiDataGridCellTransition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+$ouiDataGridCellFontSize: 0.9rem !default;                                                // Slightly smaller for better density
+
+// Striping
+$ouiDataGridStripeBackground: transparentize($ouiColorLightShade, 0.7) !default;
+
+// Focus state
+$ouiDataGridCellFocusBorder: 2px solid $ouiColorPrimary !default;
+$ouiDataGridCellFocusShadow: 0 0 0 2px transparentize($ouiColorPrimary, 0.8) !default;
+$ouiDataGridCellFocusBorderRadius: 2px !default;
+
+// EUI Aliases for backward compatibility
+$euiDataGridBorderRadius: $ouiDataGridBorderRadius;
+$euiDataGridBorder: $ouiDataGridBorder;
+$euiDataGridShadow: $ouiDataGridShadow;
+$euiDataGridControlsBackground: $ouiDataGridControlsBackground;
+$euiDataGridHeaderBackground: $ouiDataGridHeaderBackground;
+$euiDataGridHeaderBorderBottom: $ouiDataGridHeaderBorderBottom;
+$euiDataGridHeaderFontWeight: $ouiDataGridHeaderFontWeight;
+$euiDataGridHeaderPadding: $ouiDataGridHeaderPadding;
+$euiDataGridHeaderHoverBackground: $ouiDataGridHeaderHoverBackground;
+$euiDataGridCellPadding: $ouiDataGridCellPadding;
+$euiDataGridCellBorder: $ouiDataGridCellBorder;
+$euiDataGridCellHoverBackground: $ouiDataGridCellHoverBackground;
+$euiDataGridCellTransition: $ouiDataGridCellTransition;
+$euiDataGridCellFontSize: $ouiDataGridCellFontSize;
+$euiDataGridStripeBackground: $ouiDataGridStripeBackground;
+$euiDataGridCellFocusBorder: $ouiDataGridCellFocusBorder;
+$euiDataGridCellFocusShadow: $ouiDataGridCellFocusShadow;
+$euiDataGridCellFocusBorderRadius: $ouiDataGridCellFocusBorderRadius;

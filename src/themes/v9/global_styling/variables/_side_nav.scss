@@ -9,10 +9,39 @@
  * GitHub history for details.
  */
 
+// sass-lint:disable leading-zero
 // Value not currently consumed by Side nav component
 $ouiSideNavBackgroundColor: $ouiColorEmptyShade !default; // sass-lint:disable-line no-color-literals
 
-$ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorPrimary, .8) !default;
+// Spacing
+$ouiSideNavItemPadding: $ouiSizeXS !default;                   // 8px padding
+$ouiSideNavItemBorderRadius: 0 $ouiBorderRadiusSmall $ouiBorderRadiusSmall 0 !default;  // 6px rounded
+$ouiSideNavItemSpacing: $ouiSizeM !default;                   // 12px between items
+
+// Selection - Subtle background with accent bar
+$ouiSideNavSelectedBackground: transparentize($ouiColorPrimary, 0.92) !default;
+$ouiSideNavSelectedAccentWidth: 2px !default;
+$ouiSideNavSelectedAccentHeight: 100% !default;
+
+// Hover states — more visible against dark backgrounds
+$ouiSideNavHoverBackground: transparentize($ouiColorLightShade, 0.35) !default;
+$ouiSideNavActiveBackground: transparentize($ouiColorLightShade, 0.15) !default;
+
+// Transitions
+// sass-lint:disable indentation
+$ouiSideNavTransition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+  color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+  transform $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+// sass-lint:enable indentation
+
+// Branch indicators - Modern styling
+$ouiSideNavBranchLineWidth: 2px !default;                     // Thicker line
+$ouiSideNavBranchLineColor: transparentize($ouiBorderColor, 0.5) !default;
+$ouiSideNavBranchTickWidth: $ouiSizeS !default;               // Longer tick
+$ouiSideNavBranchTickHeight: 2px !default;                    // Thicker tick
+
+// Update emphasized background to be more subtle
+$ouiSideNavEmphasizedBackgroundColor: transparentize($ouiColorPrimary, 0.95) !default; // was .8
 
 // Simulates the transparent backround on top of the page background to get an opaque color
 // in order to get the right contrast for text
@@ -31,6 +60,19 @@ $ouiSideNavDisabledTextcolor: ouiSideNavEmphasizedContrast($ouiButtonColorDisabl
 
 /* OUI -> EUI Aliases */
 $euiSideNavBackgroundColor: $ouiSideNavBackgroundColor;
+$euiSideNavItemPadding: $ouiSideNavItemPadding;
+$euiSideNavItemBorderRadius: $ouiSideNavItemBorderRadius;
+$euiSideNavItemSpacing: $ouiSideNavItemSpacing;
+$euiSideNavSelectedBackground: $ouiSideNavSelectedBackground;
+$euiSideNavSelectedAccentWidth: $ouiSideNavSelectedAccentWidth;
+$euiSideNavSelectedAccentHeight: $ouiSideNavSelectedAccentHeight;
+$euiSideNavHoverBackground: $ouiSideNavHoverBackground;
+$euiSideNavActiveBackground: $ouiSideNavActiveBackground;
+$euiSideNavTransition: $ouiSideNavTransition;
+$euiSideNavBranchLineWidth: $ouiSideNavBranchLineWidth;
+$euiSideNavBranchLineColor: $ouiSideNavBranchLineColor;
+$euiSideNavBranchTickWidth: $ouiSideNavBranchTickWidth;
+$euiSideNavBranchTickHeight: $ouiSideNavBranchTickHeight;
 $euiSideNavEmphasizedBackgroundColor: $ouiSideNavEmphasizedBackgroundColor;
 $euiSideNavRootTextcolor: $ouiSideNavRootTextcolor;
 $euiSideNavBranchTextcolor: $ouiSideNavBranchTextcolor;
