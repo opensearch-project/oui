@@ -73,6 +73,11 @@ $ouiFontWeightBold:         500 !default;
 $ouiCodeFontWeightRegular:  400 !default;
 $ouiCodeFontWeightBold:     700 !default;
 
+// Letter spacing - original v9 values (no letter spacing)
+$ouiLetterSpacingTight:     0 !default;
+$ouiLetterSpacingNormal:    0 !default;
+$ouiLetterSpacingWide:      0 !default;
+
 // Titles map
 // Lists all the properties per OuiTitle size that then gets looped through to create the selectors.
 // The map allows for tokenization and easier customization per theme, otherwise you'd have to override the selectors themselves
@@ -138,5 +143,8 @@ $euiFontWeightSemiBold: $ouiFontWeightSemiBold;
 $euiFontWeightBold: $ouiFontWeightBold;
 $euiCodeFontWeightRegular: $ouiCodeFontWeightRegular;
 $euiCodeFontWeightBold: $ouiCodeFontWeightBold;
+$euiLetterSpacingTight: $ouiLetterSpacingTight;
+$euiLetterSpacingNormal: $ouiLetterSpacingNormal;
+$euiLetterSpacingWide: $ouiLetterSpacingWide;
 $euiTitles: $ouiTitles;
 /* End of Aliases */

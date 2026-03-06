@@ -86,25 +86,25 @@ const ouiNextFontFamily =
 
 // @ts-ignore typescript doesn't understand the babel preprocessor
 import {
-  ouiColorChartBand as ouiV9ColorChartBand,
-  ouiColorChartLines as ouiV9ColorChartLines,
-  ouiColorDarkShade as ouiV9ColorDarkShade,
-  ouiColorDarkestShade as ouiV9ColorDarkestShade,
-  ouiColorEmptyShade as ouiV9ColorEmptyShade,
+  ouiColorChartBand as ouiV10ColorChartBand,
+  ouiColorChartLines as ouiV10ColorChartLines,
+  ouiColorDarkShade as ouiV10ColorDarkShade,
+  ouiColorDarkestShade as ouiV10ColorDarkestShade,
+  ouiColorEmptyShade as ouiV10ColorEmptyShade,
   // @ts-ignore typescript doesn't understand the babel preprocessor
-} from '!!variables-from-scss!!../v9/global_styling/variables/_colors.scss';
+} from '!!variables-from-scss!!../v10/global_styling/variables/_colors.scss';
 
 // @ts-ignore typescript doesn't understand the babel preprocessor
 import {
-  ouiColorChartBand as ouiV9ColorChartBandDark,
-  ouiColorChartLines as ouiV9ColorChartLinesDark,
-  ouiColorDarkShade as ouiV9ColorDarkShadeDark,
-  ouiColorDarkestShade as ouiV9ColorDarkestShadeDark,
-  ouiColorEmptyShade as ouiV9ColorEmptyShadeDark,
+  ouiColorChartBand as ouiV10ColorChartBandDark,
+  ouiColorChartLines as ouiV10ColorChartLinesDark,
+  ouiColorDarkShade as ouiV10ColorDarkShadeDark,
+  ouiColorDarkestShade as ouiV10ColorDarkestShadeDark,
+  ouiColorEmptyShade as ouiV10ColorEmptyShadeDark,
   // @ts-ignore typescript doesn't understand the babel preprocessor
-} from '!!variables-from-scss!!../v9/v9_colors_dark.scss';
+} from '!!variables-from-scss!!../v10/v10_colors_dark.scss';
 
-const ouiV9FontFamily =
+const ouiV10FontFamily =
   "'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'";
 
 export interface OuiChartThemeType {
@@ -292,21 +292,21 @@ export const OUI_CHARTS_NEXT_THEME_DARK: OuiChartThemeType = createTheme({
   ouiColorEmptyShade: ouiNextColorEmptyShadeDark,
   ouiFontFamily: ouiNextFontFamily,
 });
-export const OUI_CHARTS_V9_THEME_LIGHT: OuiChartThemeType = createTheme({
-  ouiColorChartBand: ouiV9ColorChartBand,
-  ouiColorChartLines: ouiV9ColorChartLines,
-  ouiColorDarkShade: ouiV9ColorDarkShade,
-  ouiColorDarkestShade: ouiV9ColorDarkestShade,
-  ouiColorEmptyShade: ouiV9ColorEmptyShade,
-  ouiFontFamily: ouiV9FontFamily,
+export const OUI_CHARTS_V10_THEME_LIGHT: OuiChartThemeType = createTheme({
+  ouiColorChartBand: ouiV10ColorChartBand,
+  ouiColorChartLines: ouiV10ColorChartLines,
+  ouiColorDarkShade: ouiV10ColorDarkShade,
+  ouiColorDarkestShade: ouiV10ColorDarkestShade,
+  ouiColorEmptyShade: ouiV10ColorEmptyShade,
+  ouiFontFamily: ouiV10FontFamily,
 });
-export const OUI_CHARTS_V9_THEME_DARK: OuiChartThemeType = createTheme({
-  ouiColorChartBand: ouiV9ColorChartBandDark,
-  ouiColorChartLines: ouiV9ColorChartLinesDark,
-  ouiColorDarkShade: ouiV9ColorDarkShadeDark,
-  ouiColorDarkestShade: ouiV9ColorDarkestShadeDark,
-  ouiColorEmptyShade: ouiV9ColorEmptyShadeDark,
-  ouiFontFamily: ouiV9FontFamily,
+export const OUI_CHARTS_V10_THEME_DARK: OuiChartThemeType = createTheme({
+  ouiColorChartBand: ouiV10ColorChartBandDark,
+  ouiColorChartLines: ouiV10ColorChartLinesDark,
+  ouiColorDarkShade: ouiV10ColorDarkShadeDark,
+  ouiColorDarkestShade: ouiV10ColorDarkestShadeDark,
+  ouiColorEmptyShade: ouiV10ColorEmptyShadeDark,
+  ouiFontFamily: ouiV10FontFamily,
 });
 
 export const OUI_SPARKLINE_THEME_PARTIAL: PartialTheme = {
@@ -332,7 +332,7 @@ export const EUI_CHARTS_THEME_LIGHT = OUI_CHARTS_THEME_LIGHT;
 export const EUI_CHARTS_THEME_DARK = OUI_CHARTS_THEME_DARK;
 export const EUI_CHARTS_NEXT_THEME_LIGHT = OUI_CHARTS_NEXT_THEME_LIGHT;
 export const EUI_CHARTS_NEXT_THEME_DARK = OUI_CHARTS_NEXT_THEME_DARK;
-export const EUI_CHARTS_V9_THEME_LIGHT = OUI_CHARTS_V9_THEME_LIGHT;
-export const EUI_CHARTS_V9_THEME_DARK = OUI_CHARTS_V9_THEME_DARK;
+export const EUI_CHARTS_V10_THEME_LIGHT = OUI_CHARTS_V10_THEME_LIGHT;
+export const EUI_CHARTS_V10_THEME_DARK = OUI_CHARTS_V10_THEME_DARK;
 export const EUI_SPARKLINE_THEME_PARTIAL = OUI_SPARKLINE_THEME_PARTIAL;
 /* End of Aliases */

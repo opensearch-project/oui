@@ -1,0 +1,161 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// This file utilizes !importants on purpose
+// sass-lint:disable no-important
+
+// Vertical alignment
+.oui-alignBaseline { vertical-align: baseline !important; }
+.oui-alignBottom { vertical-align: bottom !important; }
+.oui-alignMiddle { vertical-align: middle !important; }
+.oui-alignTop { vertical-align: top !important; }
+
+// Display
+.oui-displayBlock {display: block !important;}
+.oui-displayInline {display: inline !important;}
+.oui-displayInlineBlock {display: inline-block !important;}
+.oui-displayNone {display: none !important;}
+
+.oui-fullWidth {
+  display: block !important;
+  width: 100% !important;
+}
+
+// Text
+.oui-textCenter {text-align: center !important;}
+.oui-textLeft {text-align: left !important;}
+.oui-textRight {text-align: right !important;}
+.oui-textNoWrap {white-space: nowrap !important;}
+.oui-textInheritColor {color: inherit !important;}
+
+.oui-textBreakWord {
+  @include ouiTextBreakWord;
+}
+
+.oui-textBreakAll {
+  overflow-wrap: break-word !important; // Fixes FF when dashes are involved #2288
+  word-break: break-all !important;
+}
+
+.oui-textBreakNormal {
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
+  word-break: normal !important;
+}
+
+// TODO: 7/23 DEPRECATE in favor of .oui-textBreakWord now that it's working as intended
+.oui-textOverflowWrap {
+  @include internetExplorerOnly {
+    word-break: break-all !important;
+  }
+  overflow-wrap: break-word !important;
+}
+
+.oui-textTruncate {
+  @include ouiTextTruncate;
+}
+
+/**
+ *  Responsive
+ *
+ *  1. Be sure to hide the element initially
+ */
+
+[class*='oui-showFor'] {
+  display: none !important; /* 1 */
+}
+
+@each $size in $ouiBreakpointKeys {
+  .oui-hideFor--#{$size} {
+    @include ouiBreakpoint($size) { display: none !important; }
+  }
+
+  .oui-showFor--#{$size} {
+    @include  ouiBreakpoint($size) { display: inline !important; }
+  }
+
+  .oui-showFor--#{$size}--block {
+    @include  ouiBreakpoint($size) { display: block !important; }
+  }
+
+  .oui-showFor--#{$size}--inlineBlock {
+    @include  ouiBreakpoint($size) { display: inline-block !important; }
+  }
+
+  .oui-showFor--#{$size}--flex {
+    @include  ouiBreakpoint($size) { display: flex !important; }
+  }
+}
+
+/**
+  * IE doesn't properly wrap groups if it is within a flex-item of a flex-group.
+  * Adding the following styles to the flex-item that contains the wrapping group, will fix IE.
+  * https://github.com/philipwalton/flexbugs/issues/104
+  */
+.ouiIEFlexWrapFix {
+  @include internetExplorerOnly {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+  }
+}
+
+/**
+  * Overflow scrolling
+  */
+.oui-yScroll {
+  @include ouiYScroll;
+}
+
+.oui-xScroll {
+  @include ouiXScroll;
+}
+
+/**
+  * Overflow scrolling with shadows
+  */
+.oui-yScrollWithShadows {
+  @include ouiYScrollWithShadows;
+}
+
+.oui-xScrollWithShadows {
+  @include ouiXScrollWithShadows;
+}
+
+// TODO: 10/22 DEPRECATE in favor of the correctly formatted class .oui-yScrollWithShadows
+.ouiYScrollWithShadows {
+  @include ouiYScrollWithShadows;
+}
+
+/**
+  * Forcing focus ring on non-OUI elements
+  */
+.oui-isFocusable:focus {
+  @include ouiFocusRing('large');
+}
+
+/**
+ * For quickly applying a full-height element whether using flex or not
+ */
+@mixin ouiFullHeight {
+  height: 100%;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.oui-fullHeight {
+  @include ouiFullHeight;
+}
+
+
+/* OUI -> EUI Aliases */
+@mixin euiFullHeight { @include ouiFullHeight; }
+/* End of Aliases */

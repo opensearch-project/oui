@@ -1,0 +1,134 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+@import 'global_styling/functions/index';
+
+// These colors stay the same no matter the theme
+$ouiColorGhost: #E3E5E9;
+$ouiColorInk: #02020E;
+
+// Core - Brighter, more vibrant for dark mode
+$ouiColorPrimary: #3B82F6;      // Brighter blue (Tailwind blue-500)
+$ouiColorSecondary: #10B981;    // Vibrant green (Tailwind emerald-500)
+$ouiColorAccent: #A78BFA;       // Softer purple (Tailwind violet-400)
+
+// Status - Higher contrast for dark backgrounds
+$ouiColorSuccess: #10B981;      // Modern green (Tailwind emerald-500)
+$ouiColorWarning: #FBBF24;      // Brighter amber (Tailwind amber-400)
+$ouiColorDanger: #F87171;       // Softer red (Tailwind red-400)
+
+// Grays - Refined slate tones
+$ouiColorEmptyShade: #020617;   // Slate-950
+$ouiColorLightestShade: #0F172A; // Slate-900
+$ouiColorLightShade: #1E293B;   // Slate-800
+$ouiColorMediumShade: #64748B;  // Slate-500
+$ouiColorDarkShade: #94A3B8;    // Slate-400
+$ouiColorDarkestShade: #E2E8F0; // Slate-200
+$ouiColorFullShade: #F8FAFC;    // Slate-50
+
+// Backgrounds
+$ouiPageBackgroundColor: #020617; // Deep slate (Slate-950)
+$ouiColorHighlight: #422006;    // Warmer highlight (Tailwind amber-950)
+
+// CodeBlock
+$ouiCodeBlockCommentShade: #838B93;
+$ouiCodeBlockStringShade: #D0809B;
+$ouiCodeBlockNameShade: #6AB0F1;
+$ouiCodeBlockNumberShade: #10B688;
+$ouiCodeBlockKeywordShade: #B174FC;
+$ouiCodeBlockTypeShade: #6AB0F1;
+$ouiCodeBlockTitleShade: #DD8232;
+
+// Variations from core - Better contrast
+$ouiTextColor: #CBD5E1;         // Slate-300 (improved contrast)
+$ouiTitleColor: #F1F5F9;        // Slate-100 (clearer hierarchy)
+// Ensure contrast between subdued text and the page background
+// Should not be shaded as much as $ouiColorDisabled
+$ouiTextSubduedColor: #94A3B8;  // Slate-400 (better readability)
+$ouiColorDisabled: $ouiColorLightestShade !default;
+
+// Contrasty text variants
+$ouiColorPrimaryText: makeHighContrastColor($ouiColorPrimary) !default;
+$ouiColorSecondaryText: makeHighContrastColor($ouiColorSecondary) !default;
+$ouiColorAccentText: makeHighContrastColor($ouiColorAccent) !default;
+$ouiColorWarningText: makeHighContrastColor($ouiColorWarning) !default;
+$ouiColorDangerText: makeHighContrastColor($ouiColorDanger) !default;
+$ouiColorDisabledText: #798189 !default;
+$ouiColorSuccessText: $ouiColorSecondaryText !default;
+$ouiLinkColor: $ouiColorPrimaryText !default;
+
+// Charts
+$ouiColorChartLines: $ouiColorLightShade;
+$ouiColorChartBand: tint($ouiColorLightestShade, 2.5%);
+
+// Code
+$ouiCodeBlockBackgroundColor: $ouiColorLightestShade;
+
+// Shadows
+$ouiShadowColor: #000;
+$ouiShadowColorLarge: $ouiShadowColor;
+
+// Refined border color for modern aesthetic - More subtle
+$ouiBorderColor: transparentize(#334155, 0.5); // Slate-700 with 50% transparency
+
+//CodeBlock Colors
+$ouiCodeBlockCommentColor: $ouiCodeBlockCommentShade;
+$ouiCodeBlockStringColor: $ouiCodeBlockStringShade;
+$ouiCodeBlockNameColor: $ouiCodeBlockNameShade;
+$ouiCodeBlockNumberColor: $ouiCodeBlockNumberShade;
+$ouiCodeBlockKeywordColor: $ouiCodeBlockKeywordShade;
+$ouiCodeBlockTypeColor: $ouiCodeBlockTypeShade;
+$ouiCodeBlockTitleColor: $ouiCodeBlockTitleShade;
+
+/* OUI -> EUI Aliases */
+$euiCodeBlockCommentColor: $ouiCodeBlockCommentColor;
+$euiCodeBlockStringColor: $ouiCodeBlockStringColor;
+$euiCodeBlockNameColor: $ouiCodeBlockNameColor;
+$euiCodeBlockNumberColor: $ouiCodeBlockNumberColor;
+$euiCodeBlockKeywordColor: $ouiCodeBlockKeywordColor;
+$euiCodeBlockTypeColor: $ouiCodeBlockTypeColor;
+$euiCodeBlockTitleColor: $ouiCodeBlockTitleColor;
+$euiColorGhost: $ouiColorGhost;
+$euiColorInk: $ouiColorInk;
+$euiColorPrimary: $ouiColorPrimary;
+$euiColorSecondary: $ouiColorSecondary;
+$euiColorAccent: $ouiColorAccent;
+$euiColorSuccess: $ouiColorSuccess;
+$euiColorWarning: $ouiColorWarning;
+$euiColorDanger: $ouiColorDanger;
+$euiColorEmptyShade: $ouiColorEmptyShade;
+$euiColorLightestShade: $ouiColorLightestShade;
+$euiColorLightShade: $ouiColorLightShade;
+$euiColorMediumShade: $ouiColorMediumShade;
+$euiColorDarkShade: $ouiColorDarkShade;
+$euiColorDarkestShade: $ouiColorDarkestShade;
+$euiColorFullShade: $ouiColorFullShade;
+$euiPageBackgroundColor: $ouiPageBackgroundColor;
+$euiColorHighlight: $ouiColorHighlight;
+$euiTextColor: $ouiTextColor;
+$euiTitleColor: $ouiTitleColor;
+$euiTextSubduedColor: $ouiTextSubduedColor;
+$euiColorDisabled: $ouiColorDisabled;
+$euiColorPrimaryText: $ouiColorPrimaryText;
+$euiColorSecondaryText: $ouiColorSecondaryText;
+$euiColorAccentText: $ouiColorAccentText;
+$euiColorWarningText: $ouiColorWarningText;
+$euiColorDangerText: $ouiColorDangerText;
+$euiColorDisabledText: $ouiColorDisabledText;
+$euiColorSuccessText: $ouiColorSuccessText;
+$euiLinkColor: $ouiLinkColor;
+$euiColorChartLines: $ouiColorChartLines;
+$euiColorChartBand: $ouiColorChartBand;
+$euiCodeBlockBackgroundColor: $ouiCodeBlockBackgroundColor;
+$euiShadowColor: $ouiShadowColor;
+$euiShadowColorLarge: $ouiShadowColorLarge;
+$euiBorderColor: $ouiBorderColor;
+/* End of Aliases */
