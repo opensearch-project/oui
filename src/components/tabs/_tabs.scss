@@ -46,13 +46,17 @@
   transition: color $ouiAnimSpeedNormal $ouiAnimSlightResistance, background-color $ouiAnimSpeedNormal $ouiAnimSlightResistance;
 
   &:hover:not(.ouiTab-isSelected) {
-    text-decoration: underline;
+    text-decoration: none;
+    background-color: transparentize($ouiTextColor, .95);
   }
 
   &:focus {
-    background-color: $ouiFocusBackgroundColor;
-    text-decoration: underline;
+    text-decoration: none;
     outline-offset: -$ouiFocusRingSize;
+  }
+
+  &:focus-visible {
+    background-color: $ouiFocusBackgroundColor;
 
     &::before {
       background-color: $ouiColorLightShade;
@@ -108,7 +112,7 @@
     font-weight: $ouiFontWeightSemiBold;
     padding: $ouiSizeS $ouiSizeXS;
 
-    &:focus {
+    &:focus-visible {
       background-color: $ouiFocusBackgroundColor;
 
       &::before {

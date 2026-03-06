@@ -8,6 +8,8 @@
 
 ### 📈 Features/Enhancements
 
+- Cross-theme hover/focus UX improvements + button XS size ([#1699](https://github.com/opensearch-project/oui/pull/1699))
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
