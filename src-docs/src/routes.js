@@ -21,6 +21,24 @@ import ColorGuidelines from './views/guidelines/colors';
 
 import { SassGuidelines } from './views/guidelines/sass';
 
+// Principles
+
+import AboutOui from './views/design_system_principles/about_oui';
+
+import DesignPhilosophy from './views/design_system_principles/design_philosophy';
+
+// Foundations
+
+import FoundationsColor from './views/design_system_foundations/foundations_color';
+
+import FoundationsTypography from './views/design_system_foundations/foundations_typography';
+
+import FoundationsSpacing from './views/design_system_foundations/foundations_spacing';
+
+import FoundationsElevation from './views/design_system_foundations/foundations_elevation';
+
+import FoundationsIcons from './views/design_system_foundations/foundations_icons';
+
 // Services
 
 import { ColorPaletteExample } from './views/color_palette/color_palette_example';
@@ -311,6 +329,29 @@ const createExample = (example, customTitle) => {
 // };
 
 const navigation = [
+  {
+    name: 'Principles',
+    items: [
+      {
+        name: 'About OUI',
+        component: AboutOui,
+      },
+      {
+        name: 'Design Philosophy',
+        component: DesignPhilosophy,
+      },
+    ],
+  },
+  {
+    name: 'Foundations',
+    items: [
+      { name: 'Color', component: FoundationsColor },
+      { name: 'Typography', component: FoundationsTypography },
+      { name: 'Spacing & Layout', component: FoundationsSpacing },
+      { name: 'Elevation', component: FoundationsElevation },
+      { name: 'Icons', component: FoundationsIcons },
+    ],
+  },
   {
     name: 'Guidelines',
     items: [
