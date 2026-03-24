@@ -10815,10 +10815,10 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
-locutus@^2.0.11:
-  version "2.0.16"
-  resolved "https://registry.yarnpkg.com/locutus/-/locutus-2.0.16.tgz#1da15532f1d735712a27e35a1caf0ccb7041f6b3"
-  integrity sha512-pGfl6Hb/1mXLzrX5kl5lH7gz25ey0vwQssZp8Qo2CEF59di6KrAgdFm+0pW8ghLnvNzzJGj5tlWhhv2QbK3jeQ==
+locutus@>=3.0.14, locutus@^2.0.11:
+  version "3.0.24"
+  resolved "https://registry.yarnpkg.com/locutus/-/locutus-3.0.24.tgz#a6e50547b576e316a0dbd27acf005b246efe8071"
+  integrity sha512-ErfAZ82Q2RNuk3NPDliKG7f5kc3E/hHh/vz17TAGCyctqao2xoFkNKrkyfHYMFXG1mNQt14kJJ1yPDKm6p3SkQ==
 
 lodash.capitalize@^4.1.0:
   version "4.2.1"
