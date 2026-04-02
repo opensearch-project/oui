@@ -27,6 +27,9 @@
 
 - Support reset styles being overridden by layers ([#1664](https://github.com/opensearch-project/oui/pull/1664))
 
+### 🚞 Infrastructure
+
+- - Bump node to v22.22.0 ([#1721](https://github.com/opensearch-project/oui/pull/1721))
 
 ## [`1.22.1`](https://github.com/opensearch-project/oui/tree/1.22.1)
 
