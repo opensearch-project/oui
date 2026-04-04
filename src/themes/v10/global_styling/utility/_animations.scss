@@ -1,0 +1,66 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Animations as utility so they don't get duplicated in compiled CSS
+
+@keyframes ouiAnimFadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ouiGrow {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes focusRingAnimate {
+  0% {
+    box-shadow: 0 0 0 $ouiFocusRingAnimStartSize $ouiFocusRingAnimStartColor;
+  }
+
+  100% {
+    box-shadow: 0 0 0 $ouiFocusRingSize $ouiFocusRingColor;
+  }
+}
+
+@keyframes focusRingAnimateLarge {
+  0% {
+    box-shadow: 0 0 0 $ouiFocusRingAnimStartSizeLarge $ouiFocusRingAnimStartColor;
+  }
+
+  100% {
+    box-shadow: 0 0 0 $ouiFocusRingSizeLarge $ouiFocusRingColor;
+  }
+}
+
+// Component specific
+
+@keyframes ouiButtonActive {
+  50% {
+    transform: translateY(1px);
+  }
+}

@@ -1,0 +1,52 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// Badge variables for v9 theme (original values)
+
+// Border radius - using original v9 style (half of border radius)
+$ouiBadgeBorderRadius: calc($ouiBorderRadius / 2) !default; // 2px in original v9
+
+// Padding - original v9 values
+$ouiBadgePaddingHorizontal: $ouiSizeS !default; // 8px
+$ouiBadgePaddingVertical: 0 !default;
+
+// Sizing - original v9 values
+$ouiBadgeMinHeight: $ouiSize + 2px !default; // 18px (accounts for border)
+
+// Typography - original v9 values
+$ouiBadgeFontSize: $ouiFontSizeXS !default; // 12px
+$ouiBadgeFontWeight: $ouiFontWeightMedium !default; // 500
+$ouiBadgeLineHeight: $ouiSize + 2px !default; // 18px (accounts for border)
+
+// Transitions - basic transition for v9
+$ouiBadgeTransition: background-color 150ms ease-in,
+                     border-color 150ms ease-in,
+                     color 150ms ease-in !default;
+
+// Border colors - original v9 style
+$ouiBadgeHollowBorderColor: $ouiBorderColor !default;
+
+// Icon spacing - original v9 value
+$ouiBadgeIconSpacing: $ouiSizeXS !default; // 4px
+
+
+/* OUI -> EUI Aliases */
+$euiBadgeBorderRadius: $ouiBadgeBorderRadius;
+$euiBadgePaddingHorizontal: $ouiBadgePaddingHorizontal;
+$euiBadgePaddingVertical: $ouiBadgePaddingVertical;
+$euiBadgeMinHeight: $ouiBadgeMinHeight;
+$euiBadgeFontSize: $ouiBadgeFontSize;
+$euiBadgeFontWeight: $ouiBadgeFontWeight;
+$euiBadgeLineHeight: $ouiBadgeLineHeight;
+$euiBadgeTransition: $ouiBadgeTransition;
+$euiBadgeHollowBorderColor: $ouiBadgeHollowBorderColor;
+$euiBadgeIconSpacing: $ouiBadgeIconSpacing;
+/* End of Aliases */
