@@ -17,6 +17,8 @@
 
 ### 📈 Features/Enhancements
 
+- Allow to add class to super select listbox ([#1692](https://github.com/opensearch-project/oui/pull/1692))
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
