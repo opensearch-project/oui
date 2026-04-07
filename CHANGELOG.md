@@ -6,9 +6,19 @@
 
 ### 🛡 Security
 
+- [CVE-2026-32304] Bump locutus to 3.0.34  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2025-7783] Bump form-data to 4.05  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2026-24842] Bump tar to 7.5.13  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2025-12816] Bump node-forge to 1.4.0  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2025-64756] Bump glob to 10.5.0 ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2025-58754] Bump axios to 1.14.0 ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2026-33228, CVE-2026-32141] Bump flatted to 3.4.2 ([#1544](https://github.com/opensearch-project/oui/issues/1544), [#1543](https://github.com/opensearch-project/oui/issues/1543))
+- [CVE-2026-4867] Bump path-to-regexp to 0.1.13 ([#1624](https://github.com/opensearch-project/oui/issues/1624))
+
 ### 📈 Features/Enhancements
 
 - Add cross-theme variable defaults for badge, filter_group, side_nav, animations, typography ([#1697](https://github.com/opensearch-project/oui/pull/1697))
+- Add v9 theme scaffolding — base tokens, typography, colors, and global styling ([#1696](https://github.com/opensearch-project/oui/pull/1696))
 
 ### 🐛 Bug Fixes
 
@@ -29,6 +39,9 @@
 
 - Support reset styles being overridden by layers ([#1664](https://github.com/opensearch-project/oui/pull/1664))
 
+### 🚞 Infrastructure
+
+- - Bump node to v22.22.0 ([#1721](https://github.com/opensearch-project/oui/pull/1721))
 
 ## [`1.22.1`](https://github.com/opensearch-project/oui/tree/1.22.1)
 
@@ -43,7 +56,6 @@
 
 - Upgrade webpack to v5 ([#1601](https://github.com/opensearch-project/oui/pull/1601))
 - [CVE-2025-59343] Bump tar-fs from 3.0.6 to 3.1.1 ([#1648](https://github.com/opensearch-project/oui/pull/1648))
-
 ### 🐛 Bug Fixes
 
 - Fix DataGrid numeric cell content shifting on hover ([#1644](https://github.com/opensearch-project/oui/pull/1644))

@@ -180,7 +180,7 @@ function traverseFile(filepath) {
 }
 
 const files = glob
-  .sync('**/*.@(js|ts|tsx)', { cwd: srcDir, realpath: true })
+  .sync('**/*.@(js|ts|tsx)', { cwd: srcDir, absolute: true })
   .filter((filepath) => {
     if (filepath.endsWith('.d.ts')) return false;
     if (filepath.endsWith('test.ts')) return false;

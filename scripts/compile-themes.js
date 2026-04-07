@@ -10,9 +10,8 @@
  */
 
 const path = require('path');
-const util = require('util');
 const { writeFile, mkdir } = require('fs/promises');
-const globModule = require('glob');
+const { glob } = require('glob');
 
 const chalk = require('chalk');
 const postcss = require('postcss');
@@ -21,8 +20,6 @@ const { compileWithVariables } = require('./lib/compile-scss-with-variables');
 const { deriveSassVariableTypes } = require('./lib/derive-sass-variable-types');
 
 const postcssConfiguration = require('../postcss.config.js');
-
-const glob = util.promisify(globModule);
 
 const postcssConfigurationWithMinification = {
   ...postcssConfiguration,

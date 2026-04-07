@@ -14,11 +14,31 @@
 $ouiAnimSlightBounce: cubic-bezier(.34, 1.61, .7, 1) !default;
 $ouiAnimSlightResistance: cubic-bezier(.694, .0482, .335, 1) !default;
 
-$ouiAnimSpeedExtraFast: 90ms !default;
-$ouiAnimSpeedFast: 150ms !default;
-$ouiAnimSpeedNormal: 250ms !default;
-$ouiAnimSpeedSlow: 350ms !default;
-$ouiAnimSpeedExtraSlow: 500ms !default;
+$ouiAnimSpeedExtraFast: 50ms !default;
+$ouiAnimSpeedFast: 100ms !default;
+$ouiAnimSpeedNormal: 200ms !default;
+$ouiAnimSpeedSlow: 300ms !default;
+$ouiAnimSpeedExtraSlow: 400ms !default;
+
+// Transition easing functions
+$ouiAnimEaseInOut: cubic-bezier(.4, 0, .2, 1) !default;     // Standard
+$ouiAnimEaseOut: cubic-bezier(0, 0, .2, 1) !default;       // Enter animations
+$ouiAnimEaseIn: cubic-bezier(.4, 0, 1, 1) !default;          // Exit animations
+$ouiAnimEaseElastic: cubic-bezier(.68, -.55, .265, 1.55) !default;  // Playful
+
+// Common transition properties
+$ouiTransition: all $ouiAnimSpeedNormal $ouiAnimEaseInOut !default;
+$ouiTransitionFast: all $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+$ouiTransitionSlow: all $ouiAnimSpeedSlow $ouiAnimEaseInOut !default;
+
+// Respect user preferences
+@mixin ouiRespectMotion($property: all, $duration: $ouiAnimSpeedNormal, $easing: $ouiAnimEaseInOut) {
+  transition: $property $duration $easing;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: .01ms;
+  }
+}
 
 // Keyframe animation declarations can be found in
 // utility/animations.scss
@@ -32,4 +52,14 @@ $euiAnimSpeedFast: $ouiAnimSpeedFast;
 $euiAnimSpeedNormal: $ouiAnimSpeedNormal;
 $euiAnimSpeedSlow: $ouiAnimSpeedSlow;
 $euiAnimSpeedExtraSlow: $ouiAnimSpeedExtraSlow;
+$euiAnimEaseInOut: $ouiAnimEaseInOut;
+$euiAnimEaseOut: $ouiAnimEaseOut;
+$euiAnimEaseIn: $ouiAnimEaseIn;
+$euiAnimEaseElastic: $ouiAnimEaseElastic;
+$euiTransition: $ouiTransition;
+$euiTransitionFast: $ouiTransitionFast;
+$euiTransitionSlow: $ouiTransitionSlow;
+@mixin euiRespectMotion($property: all, $duration: $ouiAnimSpeedNormal, $easing: $ouiAnimEaseInOut) {
+  @include ouiRespectMotion($property, $duration, $easing);
+}
 /* End of Aliases */
