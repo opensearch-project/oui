@@ -17,6 +17,8 @@
 
 ### 📈 Features/Enhancements
 
+- Add v9 theme scaffolding — base tokens, typography, colors, and global styling ([#1696](https://github.com/opensearch-project/oui/pull/1696))
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
