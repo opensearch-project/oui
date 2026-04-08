@@ -1,0 +1,95 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// V9 badge overrides — tighter spacing, refined typography, gap-based icon layout
+
+.ouiBadge {
+  font-size: $ouiFontSizeXS;
+  font-weight: $ouiFontWeightSemiBold;
+  line-height: 1.5;
+  padding: 2px 10px;
+  min-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: $ouiBorderRadiusSmall;
+  transition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+              border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+              color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+              box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut;
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+
+  .ouiBadge__content {
+    // sass-lint:disable-block no-misspelled-properties
+    gap: $ouiSizeXS;
+  }
+
+  .ouiBadge__childButton {
+    &:not(:disabled) {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .ouiBadge__icon {
+    // Use gap on parent instead of margins
+    &:not(:only-child) {
+      margin-left: 0;
+    }
+  }
+
+  &.ouiBadge--iconLeft {
+    .ouiBadge__iconButton,
+    .ouiBadge__icon:not(:only-child) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.ouiBadge-isClickable {
+  &:not(:disabled) {
+    &:hover {
+      text-decoration: none;
+      transform: translateY(-1px);
+      // sass-lint:disable-block no-color-literals, leading-zero
+      box-shadow: 0 2px 4px rgba($ouiShadowColor, 0.1);
+      background-color: transparentize($ouiColorLightShade, .7);
+    }
+
+    &:focus {
+      text-decoration: none;
+      background-color: transparentize($ouiColorLightShade, .7);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &:not(:disabled) {
+      &:hover,
+      &:active {
+        transform: none;
+      }
+    }
+  }
+}
+
+.ouiBadge--hollow {
+  border-color: transparentize($ouiBorderColor, .3);
+}

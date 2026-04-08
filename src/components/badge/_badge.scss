@@ -13,29 +13,22 @@
  * 1. Accounts for the border
  */
 .ouiBadge {
-  font-size: $ouiBadgeFontSize;
-  font-weight: $ouiBadgeFontWeight;
-  line-height: $ouiBadgeLineHeight;
-  padding: $ouiBadgePaddingVertical $ouiBadgePaddingHorizontal;
-  min-height: $ouiBadgeMinHeight;
-  display: inline-flex;
-  align-items: center;
+  font-size: $ouiFontSizeXS;
+  font-weight: $ouiFontWeightMedium;
+  line-height: $ouiSize + 2px; /* 1 */
+  padding: 0 $ouiSizeS;
+  display: inline-block;
   text-decoration: none;
-  border-radius: $ouiBadgeBorderRadius;
+  border-radius: $ouiBorderRadius / 2;
   border: solid 1px transparent;
   background-color: transparent;
   white-space: nowrap;
   vertical-align: middle;
   cursor: default;
   max-width: 100%;
-  transition: $ouiBadgeTransition;
   // The badge will only ever be as wide as its content
   // So, make the text left aligned to ensure all badges line up the same
   text-align: left;
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
 
   &.ouiBadge-isDisabled {
     // sass-lint:disable-block no-important
@@ -56,8 +49,6 @@
     min-height: $ouiSize + ($ouiBorderWidthThin * 2); // Ensure proper height in case of just displaying an icon
     display: flex;
     align-items: center;
-    // sass-lint:disable-block no-misspelled-properties
-    gap: $ouiBadgeIconSpacing;
     overflow: hidden;
   }
 
@@ -76,7 +67,7 @@
     &:not(:disabled) {
       &:hover,
       &:focus {
-        text-decoration: none;
+        text-decoration: underline;
       }
     }
   }
@@ -110,44 +101,30 @@
 
   .ouiBadge__icon {
     flex: 0 0 auto;
-    // Margin removed - using gap on parent instead
+
+    &:not(:only-child) {
+      margin-left: $ouiSizeXS;
+    }
   }
 
   &.ouiBadge--iconLeft {
     .ouiBadge__content {
       flex-direction: row-reverse;
     }
-    // Margins removed - using gap on parent instead
+
+    .ouiBadge__iconButton,
+    .ouiBadge__icon:not(:only-child) {
+      margin-right: $ouiSizeXS;
+      margin-left: 0;
+    }
   }
 }
 
 .ouiBadge-isClickable {
   &:not(:disabled) {
-    &:hover {
-      text-decoration: none;
-      transform: translateY(-1px);
-      // sass-lint:disable-block no-color-literals, leading-zero
-      box-shadow: 0 2px 4px rgba($ouiShadowColor, 0.1);
-      background-color: transparentize($ouiColorLightShade, .7);
-    }
-
+    &:hover,
     &:focus {
-      text-decoration: none;
-      background-color: transparentize($ouiColorLightShade, .7);
-    }
-
-    &:active {
-      transform: translateY(0);
-      box-shadow: none;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    &:not(:disabled) {
-      &:hover,
-      &:active {
-        transform: none;
-      }
+      text-decoration: underline;
     }
   }
 
@@ -167,6 +144,6 @@
 // Hollow has a border and is mostly used for autocompleters.
 .ouiBadge--hollow {
   background-color: $ouiColorEmptyShade;
-  border-color: $ouiBadgeHollowBorderColor;
+  border-color: lightOrDarkTheme($ouiBorderColor, tint($ouiBorderColor, 15%));
   color: $ouiTextColor;
 }

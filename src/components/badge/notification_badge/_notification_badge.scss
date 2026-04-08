@@ -12,9 +12,9 @@
 .ouiNotificationBadge {
   flex-shrink: 0; // Ensures it never scales down below its intended size
   display: inline-block;
-  border-radius: $ouiBorderRadiusSmall;
+  border-radius: $ouiBorderRadius;
   font-size: $ouiFontSizeXS;
-  font-weight: $ouiFontWeightSemiBold;
+  font-weight: $ouiFontWeightMedium;
   line-height: $ouiSize;
   height: $ouiSize;
   min-width: $ouiSize;
@@ -22,12 +22,8 @@
   padding-right: $ouiSizeXS;
   vertical-align: middle;
   text-align: center;
-  transition: $ouiBadgeTransition;
+  transition: all $ouiAnimSpeedFast ease-in;
   cursor: default;
-
-  @media (prefers-reduced-motion: reduce) {
-    transition: none;
-  }
 
   $backgroundColor: $ouiColorAccentText;
   background: $backgroundColor;
