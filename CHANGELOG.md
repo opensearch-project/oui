@@ -17,6 +17,7 @@
 
 ### 📈 Features/Enhancements
 
+- Add cross-theme variable defaults for badge, filter_group, side_nav, animations, typography ([#1697](https://github.com/opensearch-project/oui/pull/1697))
 - Add v9 theme scaffolding — base tokens, typography, colors, and global styling ([#1696](https://github.com/opensearch-project/oui/pull/1696))
 
 ### 🐛 Bug Fixes
