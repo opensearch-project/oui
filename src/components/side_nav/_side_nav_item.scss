@@ -22,105 +22,34 @@
   text-align: left; /* 1 */
   display: block;
   width: 100%;
-  padding: $ouiSideNavItemPadding;
+  padding: calc($ouiSizeXS / 2) 0;
   color: inherit; /* 2 */
 
-  @if $ouiSideNavItemBorderRadius != 0 {
-    border-radius: $ouiSideNavItemBorderRadius;
-  }
-
-  @if $ouiSideNavTransition != none {
-    transition: $ouiSideNavTransition;
-  }
-
   &.ouiSideNavItemButton--isClickable:not(:disabled) {
-    // sass-lint:disable-block nesting-depth
     &:hover {
       cursor: pointer;
+    }
 
-      @if $ouiSideNavHoverBackground != transparent {
-        background-color: $ouiSideNavHoverBackground;
-      }
-
+    &:hover,
+    &:focus {
       .ouiSideNavItemButton__label {
-        @if $ouiSideNavHoverBackground != transparent {
-          text-decoration: none;
-        } @else {
-          // A lingering focus will stay underlined even if it doesn't get the `isSelected` prop
-          text-decoration: underline; /* 4 */
-        }
-      }
-    }
-
-    @if $ouiSideNavHoverBackground == transparent {
-      &:focus {
-        .ouiSideNavItemButton__label {
-          text-decoration: underline; /* 4 */
-        }
-      }
-    }
-
-    @if $ouiSideNavActiveBackground != transparent {
-      &:active {
-        background-color: $ouiSideNavActiveBackground;
-        // sass-lint:disable-block leading-zero
-        transform: scale(0.98);
-      }
-    }
-
-    @if $ouiSideNavHoverBackground != transparent {
-      &:focus-visible {
-        outline: 2px solid $ouiFocusRingColor;
-        outline-offset: 2px;
-        background-color: $ouiSideNavHoverBackground;
-      }
-    }
-  }
-
-  &.ouiSideNavItemButton-isSelected {
-    @if $ouiSideNavSelectedBackground != transparent {
-      background-color: $ouiSideNavSelectedBackground;
-      color: $ouiColorPrimary;
-      font-weight: $ouiFontWeightSemiBold;
-      position: relative;
-
-      // Left accent bar
-      @if $ouiSideNavSelectedAccentWidth != 0 {
-        &::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 50%;
-          transform: translateY(-50%);
-          width: $ouiSideNavSelectedAccentWidth;
-          height: $ouiSideNavSelectedAccentHeight;
-          background-color: $ouiColorPrimary;
-          border-radius: 2px;
-        }
-      }
-
-      .ouiSideNavItemButton__label {
-        text-decoration: none;
-      }
-    } @else {
-      color: $ouiSideNavSelectedTextcolor;
-      font-weight: $ouiFontWeightBold;
-
-      .ouiSideNavItemButton__label {
+        // A lingering focus will stay underlined even if it doesn't get the `isSelected` prop
         text-decoration: underline; /* 4 */
       }
     }
   }
 
-  &:disabled {
-    @include ouiDisabledState($ouiSideNavDisabledTextcolor);
+  &.ouiSideNavItemButton-isSelected {
+    color: $ouiSideNavSelectedTextcolor;
+    font-weight: $ouiFontWeightBold;
+
+    .ouiSideNavItemButton__label {
+      text-decoration: underline; /* 4 */
+    }
   }
 
-  @if $ouiSideNavTransition != none {
-    // Respect reduced motion
-    @media (prefers-reduced-motion: reduce) {
-      transition: none;
-    }
+  &:disabled {
+    @include ouiDisabledState($ouiSideNavDisabledTextcolor);
   }
 }
 
@@ -154,12 +83,8 @@
    * 1. Create padding around focus area without indenting the item itself.
    */
   & > .ouiSideNavItemButton {
-    margin-bottom: $ouiSideNavItemSpacing;
-    @if $ouiSideNavItemPadding != calc($ouiSizeXS / 2) 0 {
-      padding: $ouiSideNavItemPadding;
-    } @else {
-      padding: 0;
-    }
+    margin-bottom: $ouiSizeS;
+    padding: 0;
     padding-left: $ouiSizeS; /* 1 */
     padding-right: $ouiSizeS; /* 1 */
     margin-left: -$ouiSizeS; /* 1 */
@@ -168,11 +93,6 @@
     .ouiSideNavItemButton__label {
       @include ouiTitle('xs');
       color: inherit;
-
-      @if $ouiSideNavItemPadding != calc($ouiSizeXS / 2) 0 {
-        font-weight: $ouiFontWeightSemiBold;
-        letter-spacing: $ouiLetterSpacingTight;
-      }
     }
   }
 
@@ -186,11 +106,7 @@
   }
 
   & + & {
-    @if $ouiSideNavItemSpacing != $ouiSizeS {
-      margin-top: $ouiSizeXXL;
-    } @else {
-      margin-top: $ouiSizeXL;
-    }
+    margin-top: $ouiSizeXL;
   }
 }
 
@@ -225,27 +141,14 @@
     content: '';
     top: 0;
     bottom: 0;
-    width: $ouiSideNavBranchLineWidth;
-    background: $ouiSideNavBranchLineColor;
+    width: 1px;
+    background: $ouiBorderColor;
     left: 0;
-
-    @if $ouiSideNavBranchLineWidth != 1px {
-      border-radius: 1px;
-    }
   }
 
   // If this is actually the last item, we don't want the vertical line to stretch all the way down
   &:last-of-type::after {
     height: $ouiSizeM;
-
-    @if $ouiSideNavBranchLineWidth != 1px {
-      // Add gradient fade-out for last branch item
-      background: linear-gradient(
-        to bottom,
-        $ouiSideNavBranchLineColor,
-        transparent
-      );
-    }
   }
 
   /**
@@ -259,20 +162,11 @@
     &:after {
       position: absolute; /* 2 */
       content: '';
-      @if $ouiSideNavBranchTickHeight != 1px {
-        top: 50%;
-        transform: translateY(-50%);
-      } @else {
-        top: $ouiSizeM;
-      }
+      top: $ouiSizeM;
       left: 0;
-      width: $ouiSideNavBranchTickWidth;
-      height: $ouiSideNavBranchTickHeight;
-      background: $ouiSideNavBranchLineColor;
-
-      @if $ouiSideNavBranchTickHeight != 1px {
-        border-radius: 1px;
-      }
+      width: $ouiSizeXS;
+      height: 1px;
+      background: $ouiBorderColor;
     }
   }
 
@@ -284,17 +178,8 @@
 .ouiSideNavItem--emphasized {
   background: $ouiSideNavEmphasizedBackgroundColor;
   color: $ouiSideNavRootTextcolor;
-
-  @if $ouiSideNavItemBorderRadius != 0 {
-    // sass-lint:disable-block mixins-before-declarations
-    border-radius: $ouiBorderRadius;
-    padding: $ouiSizeS;
-    margin: 0 (-$ouiSizeS);
-    @include ouiBottomShadowSmall;
-  } @else {
-    // The large y values allow the shadow to stretch beyond the side nav bounds to it's parents container
-    box-shadow: 100px 0 0 0 $ouiSideNavEmphasizedBackgroundColor, -100px 0 0 0 $ouiSideNavEmphasizedBackgroundColor;
-  }
+  // The large y values allow the shadow to stretch beyond the side nav bounds to it's parents container
+  box-shadow: 100px 0 0 0 $ouiSideNavEmphasizedBackgroundColor, -100px 0 0 0 $ouiSideNavEmphasizedBackgroundColor;
 
   > .ouiSideNavItemButton {
     font-weight: $ouiFontWeightBold;

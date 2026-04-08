@@ -12,10 +12,11 @@
 // V9 beta badge overrides
 
 .ouiBetaBadge {
-  transition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
-              border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
-              color $ouiAnimSpeedFast $ouiAnimEaseInOut,
-              box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut;
+  transition:
+    background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+    border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+    color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+    box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut;
 
   @media (prefers-reduced-motion: reduce) {
     transition: none;

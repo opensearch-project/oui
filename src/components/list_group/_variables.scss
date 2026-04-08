@@ -9,8 +9,8 @@
  * GitHub history for details.
  */
 
-$ouiListGroupItemHoverBackground: transparentize($ouiColorLightShade, .5);
-$ouiListGroupItemHoverBackgroundGhost: transparentize($ouiColorGhost, .85);
+$ouiListGroupItemHoverBackground: transparentize($ouiColorLightShade, .75);
+$ouiListGroupItemHoverBackgroundGhost: transparentize($ouiColorGhost, .9);
 
 $ouiListGroupGutterTypes: (
   gutterSmall: $ouiSizeS,

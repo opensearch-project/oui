@@ -15,11 +15,6 @@
   background: $ouiColorEmptyShade;
   position: sticky; // In IE11 this does not work, but doesn't cause a break.
   top: 0;
-
-  // V9 theme modernization
-  @if variable-exists(ouiDataGridHeaderBackground) {
-    background: $ouiDataGridHeaderBackground;
-  }
 }
 
 @include ouiDataGridHeaderCell {
@@ -31,13 +26,6 @@
   position: relative;
   align-items: center;
   display: flex;
-
-  // V9 theme modernization
-  @if variable-exists(ouiDataGridHeaderBackground) {
-    font-weight: $ouiDataGridHeaderFontWeight;
-    padding: $ouiDataGridHeaderPadding;
-    border-bottom: $ouiDataGridHeaderBorderBottom;
-  }
 
   > * {
     max-width: 100%;
@@ -80,19 +68,6 @@
       width: 100%;
       font-weight: $ouiFontWeightBold;
       outline: none;
-
-      // V9 theme modernization - hover effect and font weight
-      @if variable-exists(ouiDataGridHeaderBackground) {
-        font-weight: $ouiDataGridHeaderFontWeight; // Use modern font weight (500)
-        transition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut;
-        border-radius: $ouiBorderRadiusSmall;
-        padding: $ouiSizeXS;
-        margin: -$ouiSizeXS; // Offset padding to maintain alignment
-
-        &:hover {
-          background: $ouiDataGridHeaderHoverBackground;
-        }
-      }
 
       .ouiDataGridHeaderCell__sortingArrow {
         flex-grow: 0;

@@ -20,10 +20,11 @@
   display: inline-flex;
   align-items: center;
   border-radius: $ouiBorderRadiusSmall;
-  transition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
-              border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
-              color $ouiAnimSpeedFast $ouiAnimEaseInOut,
-              box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut;
+  transition:
+    background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+    border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+    color $ouiAnimSpeedFast $ouiAnimEaseInOut,
+    box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut;
 
   @media (prefers-reduced-motion: reduce) {
     transition: none;
