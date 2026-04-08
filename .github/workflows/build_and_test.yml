@@ -223,7 +223,13 @@ jobs:
 
       - name: Patch OSD module count for extra OUI themes
         run: |
-          sed -i 's/\bgetModuleCount()).toBe(\s*14/getModuleCount()).toBe(34/' packages/osd-optimizer/src/integration_tests/basic_optimization.test.ts || true
+          FILE=packages/osd-optimizer/src/integration_tests/basic_optimization.test.ts
+          # The assertion spans multiple lines:
+          #   expect(bar.cache.getModuleCount()).toBe(
+          #     // code + styles + style/css-loader runtimes + public path updater
+          #     14
+          # Use awk to find the pattern line then replace 14→34 two lines later.
+          awk '/getModuleCount\(\)\)\.toBe\(/{found=1; count=0} found{count++; if(count==3) gsub(/14/, "34")} {print}' "$FILE" > "$FILE.tmp" && mv "$FILE.tmp" "$FILE" || true
 
       - name: Run Integration Tests
         run: yarn test:jest_integration:ci
