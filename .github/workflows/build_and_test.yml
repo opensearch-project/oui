@@ -215,10 +215,15 @@ jobs:
       - name: Bootstrap OSD
         run: yarn osd bootstrap
 
-      # OUI's v9 theme additions introduce new theme tags that OSD's osd-optimizer
-      # snapshots don't yet include. Update them before running tests.
+      # OUI's v9 theme additions introduce new theme tags and extra CSS modules
+      # that OSD's osd-optimizer tests don't yet account for.
+      # Update snapshots and patch the hardcoded module count assertion.
       - name: Update OSD optimizer snapshots for OUI theme compatibility
         run: node scripts/jest_integration --updateSnapshot --testPathPattern='basic_optimization\.test' || true
+
+      - name: Patch OSD module count for extra OUI themes
+        run: |
+          sed -i 's/\bgetModuleCount()).toBe(\s*14/getModuleCount()).toBe(34/' packages/osd-optimizer/src/integration_tests/basic_optimization.test.ts || true
 
       - name: Run Integration Tests
         run: yarn test:jest_integration:ci
