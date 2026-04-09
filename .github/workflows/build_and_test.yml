@@ -161,7 +161,7 @@ jobs:
       # that OSD's osd-optimizer snapshots don't yet include. Update them before running tests
       # so that expected theme-config changes don't mask real regressions.
       - name: Update OSD optimizer snapshots for OUI theme compatibility
-        run: node scripts/jest --updateSnapshot --testPathPattern='cache_keys\.test|basic_optimization\.test' || true
+        run: node scripts/jest --updateSnapshot --testPathPattern='cache_keys\.test|basic_optimization\.test|data_source_filter_group\.test' || true
 
       - name: Run Jest Tests
         run: yarn test:jest:ci --ci-group=${{ matrix.group }}
