@@ -47,7 +47,7 @@
 
   &:hover:not([class*='isDisabled']),
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 

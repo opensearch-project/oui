@@ -36,6 +36,17 @@
     line-height: $ouiButtonHeightSmall; // prevents descenders from getting cut off
   }
 
+  &.ouiButton--xSmall {
+    height: $ouiButtonHeightXSmall;
+    line-height: $ouiButtonHeightXSmall;
+    font-size: $ouiFontSizeXS;
+    min-width: 0;
+
+    .ouiButton__content {
+      padding: 0 $ouiSizeS;
+    }
+  }
+
   &:hover,
   &:active {
     @include ouiSlightShadowHover;

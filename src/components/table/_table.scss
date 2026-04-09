@@ -67,8 +67,11 @@
 
   &:hover,
   &:focus {
+    background-color: transparentize($ouiColorLightShade, .85);
+    border-radius: $ouiBorderRadius;
+
     .ouiTableCellContent__text {
-      text-decoration: underline;
+      text-decoration: none;
       color: $ouiColorPrimary;
     }
 
