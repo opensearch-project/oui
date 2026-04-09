@@ -20,11 +20,13 @@
   display: inline-flex;
   align-items: center;
   border-radius: $ouiBorderRadiusSmall;
+  // sass-lint:disable indentation
   transition:
     background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
     border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
     color $ouiAnimSpeedFast $ouiAnimEaseInOut,
     box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut;
+  // sass-lint:enable indentation
 
   @media (prefers-reduced-motion: reduce) {
     transition: none;
