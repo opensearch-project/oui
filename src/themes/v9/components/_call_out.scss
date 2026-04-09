@@ -1,0 +1,149 @@
+/*!
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * The OpenSearch Contributors require contributions made to
+ * this file be licensed under the Apache-2.0 license or a
+ * compatible open source license.
+ *
+ * Modifications Copyright OpenSearch Contributors. See
+ * GitHub history for details.
+ */
+
+// sass-lint:disable no-color-literals, leading-zero
+// V9 Theme-specific CallOut modernization overrides
+
+.ouiCallOut {
+  padding: calc($ouiSize * 1.25); // 20px for better breathing room
+  border: 1px solid transparent; // All-around border instead of just left
+  border-radius: 8px; // Rounded on right side only (per user request)
+  box-shadow: 0 1px 2px 0 rgba($ouiShadowColor, 0.05); // Subtle elevation for light theme
+  // border-left-width: 3px; // Thicker left border for accent
+
+  &.ouiCallOut--small {
+    padding: $ouiSize; // 16px (was 12px)
+  }
+
+  .ouiCallOutHeader__icon {
+    transform: translateY(1px); // Adjusted from 2px
+    opacity: 0.9; // Subtle appearance
+  }
+
+  .ouiCallOut__closeIcon {
+    right: $ouiSizeS; // 8px (was calc($ouiSizeS / 2))
+    top: $ouiSizeS; // 8px (was 0)
+    opacity: 0.7; // Subtle appearance
+    transition: opacity $ouiAnimSpeedFast $ouiAnimEaseInOut;
+
+    &:hover {
+      opacity: 1; // Full opacity on hover
+    }
+  }
+
+  // Respect reduced motion preference
+  @media (prefers-reduced-motion: reduce) {
+    .ouiCallOut__closeIcon {
+      transition: none;
+    }
+  }
+}
+
+// Update color modifiers for v9 theme
+@each $name, $color in $ouiCallOutTypes {
+  .ouiCallOut--#{$name} {
+    // Modern border with subtle opacity
+    @if (lightness($ouiPageBackgroundColor) < 50) {
+      // Dark theme: higher opacity for visibility
+      border-color: rgba($color, 0.3);
+      background-color: rgba($color, 0.12);
+      box-shadow: 0 1px 2px 0 rgba($ouiShadowColor, 0.2);
+    } @else {
+      // Light theme: lower opacity for subtlety
+      border-color: rgba($color, 0.2);
+      background-color: rgba($color, 0.05);
+    }
+
+    // Left border accent (thicker)
+    // border-left-color: $color;
+
+    .ouiCallOutHeader__icon {
+      // Use modern foreground colors
+      @if (lightness($ouiPageBackgroundColor) < 50) {
+        // Dark theme: lighter colors for better contrast
+        @if ($name == 'primary') {
+          fill: #93C5FD; // Blue-300
+        } @else if ($name == 'success') {
+          fill: #6EE7B7; // Green-300
+        } @else if ($name == 'warning') {
+          fill: #FCD34D; // Amber-300
+        } @else if ($name == 'danger') {
+          fill: #FCA5A5; // Red-300
+        }
+      } @else {
+        // Light theme: darker colors for better contrast
+        @if ($name == 'primary') {
+          fill: #1E40AF; // Blue-800
+        } @else if ($name == 'success') {
+          fill: #047857; // Green-700
+        } @else if ($name == 'warning') {
+          fill: #B45309; // Amber-700
+        } @else if ($name == 'danger') {
+          fill: #B91C1C; // Red-700
+        }
+      }
+    }
+
+    .ouiCallOutHeader__title {
+      // Use modern foreground colors
+      @if (lightness($ouiPageBackgroundColor) < 50) {
+        // Dark theme: lighter colors for better contrast
+        @if ($name == 'primary') {
+          color: #93C5FD; // Blue-300
+        } @else if ($name == 'success') {
+          color: #6EE7B7; // Green-300
+        } @else if ($name == 'warning') {
+          color: #FCD34D; // Amber-300
+        } @else if ($name == 'danger') {
+          color: #FCA5A5; // Red-300
+        }
+      } @else {
+        // Light theme: darker colors for better contrast
+        @if ($name == 'primary') {
+          color: #1E40AF; // Blue-800
+        } @else if ($name == 'success') {
+          color: #047857; // Green-700
+        } @else if ($name == 'warning') {
+          color: #B45309; // Amber-700
+        } @else if ($name == 'danger') {
+          color: #B91C1C; // Red-700
+        }
+      }
+    }
+
+    .ouiCallOut__closeIcon {
+      // Use modern foreground colors
+      @if (lightness($ouiPageBackgroundColor) < 50) {
+        // Dark theme: lighter colors for better contrast
+        @if ($name == 'primary') {
+          fill: #93C5FD; // Blue-300
+        } @else if ($name == 'success') {
+          fill: #6EE7B7; // Green-300
+        } @else if ($name == 'warning') {
+          fill: #FCD34D; // Amber-300
+        } @else if ($name == 'danger') {
+          fill: #FCA5A5; // Red-300
+        }
+      } @else {
+        // Light theme: darker colors for better contrast
+        @if ($name == 'primary') {
+          fill: #1E40AF; // Blue-800
+        } @else if ($name == 'success') {
+          fill: #047857; // Green-700
+        } @else if ($name == 'warning') {
+          fill: #B45309; // Amber-700
+        } @else if ($name == 'danger') {
+          fill: #B91C1C; // Red-700
+        }
+      }
+    }
+  }
+}

@@ -9,6 +9,7 @@
  * GitHub history for details.
  */
 
+// sass-lint:disable leading-zero, no-trailing-zero
 @import 'global_styling/functions/index';
 
 // These colors stay the same no matter the theme
@@ -72,16 +73,17 @@ $ouiColorChartBand: tint($ouiColorLightestShade, 2.5%);
 // Code
 $ouiCodeBlockBackgroundColor: $ouiColorLightestShade;
 
-// Shadows
+// Shadows — dark theme needs stronger, more spread shadows plus a subtle
+// light ring so elevation is perceptible against dark backgrounds.
 $ouiShadowColor: #000;
 $ouiShadowColorLarge: $ouiShadowColor;
-$ouiShadowOpacity: .9;
+$ouiShadowOpacity: 0.90;
 
 // Light-ring glow that outlines elevated surfaces (simulates ambient light)
-$ouiShadowGlow: rgba(161, 161, 170, .08); // Zinc-400 at 8%
+$ouiShadowGlow: rgba(161, 161, 170, 0.08); // Zinc-400 at 8%
 
 // Override shadow levels for dark theme — wider spread + glow ring
-$ouiShadowBase: 0 0 1px rgba(161, 161, 170, .12), 0 0 0 1px rgba(161, 161, 170, .06);
+$ouiShadowBase: 0 0 1px rgba(161, 161, 170, 0.12), 0 0 0 1px rgba(161, 161, 170, 0.06);
 $ouiShadow1: $ouiShadowBase, 0 1px 4px rgba(0, 0, 0, $ouiShadowOpacity);
 $ouiShadow2: $ouiShadowBase, 0 2px 8px rgba(0, 0, 0, $ouiShadowOpacity);
 $ouiShadow3: $ouiShadowBase, 0 4px 16px rgba(0, 0, 0, $ouiShadowOpacity);
@@ -90,11 +92,11 @@ $ouiShadow5: $ouiShadowBase, 0 8px 32px rgba(0, 0, 0, $ouiShadowOpacity);
 $ouiShadow6: $ouiShadowBase, 0 12px 48px rgba(0, 0, 0, $ouiShadowOpacity);
 
 // Border color — subtle but visible against dark surfaces
-$ouiBorderColor: rgba(46, 46, 54, .8); // Neutral gray at 80%
+$ouiBorderColor: rgba(46, 46, 54, 0.8); // Neutral gray at 80%
 
 // Elevated surfaces (menus, popovers, flyouts) — one step above cards
 $ouiBackgroundElevated: #1C1C22; // Neutral — distinct from card bg
-$ouiBorderElevated: rgba(63, 63, 70, .6); // Zinc-700 at 60% — visible ring on floating surfaces
+$ouiBorderElevated: rgba(63, 63, 70, 0.6); // Zinc-700 at 60% — visible ring on floating surfaces
 
 //CodeBlock Colors
 $ouiCodeBlockCommentColor: $ouiCodeBlockCommentShade;

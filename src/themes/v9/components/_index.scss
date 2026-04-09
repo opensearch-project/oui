@@ -9,17 +9,14 @@
  * GitHub history for details.
  */
 
-// This is the default theme.
-@import 'themes/v9/v9_colors_light';
-
-// Global styling
-@import 'themes/v9/global_styling/index';
-
-// Components
-@import 'components/index';
-
 // V9 Theme-specific component overrides
-@import 'themes/v9/components/index';
+@import 'call_out';
+@import 'filter_group';
+@import 'filter_button';
+@import 'data_grid';
+@import 'link';
+@import 'list_group';
+@import 'toast';
+@import 'selectable';
+@import 'breadcrumbs';
 
-// Packages
-@import '../packages/index';
