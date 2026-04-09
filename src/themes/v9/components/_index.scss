@@ -10,6 +10,9 @@
  */
 
 // V9 Theme-specific component overrides
+@import 'badge';
+@import 'beta_badge';
+@import 'notification_badge';
 @import 'call_out';
 @import 'filter_group';
 @import 'filter_button';
@@ -19,4 +22,3 @@
 @import 'toast';
 @import 'selectable';
 @import 'breadcrumbs';
-
