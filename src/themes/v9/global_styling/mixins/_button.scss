@@ -36,14 +36,11 @@
   @include ouiButtonBase;
   @include ouiFont;
   @include ouiFontSizeS;
+  @include ouiButtonFocus;
 
   text-decoration: none;
   border: solid 1px transparent;
   font-weight: 400;
-
-  // sass-lint:disable mixins-before-declarations
-  // focus states should come after all default styles
-  @include ouiButtonFocus;
 
   &:hover:not([class*='isDisabled']),
   &:focus {

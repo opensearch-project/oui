@@ -23,6 +23,7 @@
 - Add v9 elevation system — shadow tokens, CSS vars, mixins, useElevation hook, and docs ([#1698](https://github.com/opensearch-project/oui/pull/1698))
 - Add v9 component variables and style overrides ([#1700](https://github.com/opensearch-project/oui/pull/1700))
 - Component SCSS enhancements for v9 theme support ([#1701](https://github.com/opensearch-project/oui/pull/1701))
+- Dense flat buttons, observability visualization palette, and tighter border radii for v9 theme ([#1706](https://github.com/opensearch-project/oui/pull/1706))
 
 ### 🐛 Bug Fixes
 

@@ -9,8 +9,10 @@
  * GitHub history for details.
  */
 
-$ouiButtonHeight: $ouiSizeXXL !default;
-$ouiButtonHeightSmall: $ouiSizeXL !default;
+// Dense button sizing: shift all sizes down one step
+// Default → Small (32px), Small → XSmall (24px), XSmall removed (matches Small)
+$ouiButtonHeight: $ouiSizeXL !default;
+$ouiButtonHeightSmall: $ouiSizeL !default;
 $ouiButtonHeightXSmall: $ouiSizeL !default;
 
 
@@ -21,11 +23,11 @@ $ouiButtonColorGhostDisabled: lightOrDarkTheme($ouiColorDarkShade, $ouiColorLigh
 
 $ouiButtonBorderRadius: $ouiBorderRadius !default;
 
-// Add transition support
+// Snappy transitions — near-instant feedback on hover/press
 // sass-lint:disable indentation
-$ouiButtonTransition: background-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
-  border-color $ouiAnimSpeedFast $ouiAnimEaseInOut,
-  box-shadow $ouiAnimSpeedFast $ouiAnimEaseInOut !default;
+$ouiButtonTransition: background-color $ouiAnimSpeedExtraFast ease-out,
+  border-color $ouiAnimSpeedExtraFast ease-out,
+  box-shadow $ouiAnimSpeedExtraFast ease-out !default;
 // sass-lint:enable indentation
 
 // Modifier naming and colors.
