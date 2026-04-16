@@ -93,7 +93,8 @@
     "webpack/terser-webpack-plugin/serialize-javascript": "^3.1.0",
     "yo/**/find-versions": "^4.0.0",
     "yo/**/got": "^11.8.5",
-    "yo/meow": "^9.0.0"
+    "yo/meow": "^9.0.0",
+    "refractor/prismjs": "^1.30.0"
   },
   "pre-commit": [
     "lint"
