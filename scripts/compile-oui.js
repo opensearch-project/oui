@@ -32,7 +32,7 @@ const { execSync } = require('child_process');
 const chalk = require('chalk');
 const shell = require('shelljs');
 const path = require('path');
-const glob = require('glob');
+const { glob } = require('glob');
 const fs = require('fs');
 const dtsGenerator = require('dts-generator').default;
 
@@ -253,13 +253,12 @@ function compileLib() {
       },
     }
   );
-  glob('./test-env/**/*.testenv.js', undefined, (error, files) => {
-    files.forEach((file) => {
-      const dir = path.dirname(file);
-      const fileName = path.basename(file, '.js');
-      const targetName = fileName.replace('.testenv', '');
-      fs.renameSync(file, path.join(dir, `${targetName}.js`));
-    });
+  const testEnvFiles = glob.sync('./test-env/**/*.testenv.js');
+  testEnvFiles.forEach((file) => {
+    const dir = path.dirname(file);
+    const fileName = path.basename(file, '.js');
+    const targetName = fileName.replace('.testenv', '');
+    fs.renameSync(file, path.join(dir, `${targetName}.js`));
   });
 
   console.log(chalk.green('✔ Finished compiling src/'));
@@ -280,15 +279,13 @@ function compileLib() {
   // all kinds of things we don't want into the lib folder.
   shell.mkdir('-p', 'lib/components/icon/assets');
 
-  glob('./src/components/**/*.svg', undefined, (error, files) => {
-    files.forEach((file) => {
-      const splitPath = file.split('/');
-      const basePath = splitPath.slice(2, splitPath.length).join('/');
-      shell.cp('-f', `${file}`, `lib/${basePath}`);
-    });
-
-    console.log(chalk.green('✔ Finished copying SVGs'));
+  const svgFiles = glob.sync('./src/components/**/*.svg');
+  svgFiles.forEach((file) => {
+    const basePath = path.relative('src', file);
+    shell.cp('-f', `${file}`, `lib/${basePath}`);
   });
+
+  console.log(chalk.green('✔ Finished copying SVGs'));
 }
 
 function compileBundle() {

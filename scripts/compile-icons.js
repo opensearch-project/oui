@@ -27,7 +27,7 @@ function pascalCase(x) {
   );
 }
 
-const iconFiles = glob.sync('**/*.svg', { cwd: iconsDir, realpath: true });
+const iconFiles = glob.sync('**/*.svg', { cwd: iconsDir, absolute: true });
 
 iconFiles.forEach(async (filePath) => {
   const svgSourceBuffer = fs.readFileSync(filePath);
