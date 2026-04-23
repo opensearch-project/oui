@@ -11,7 +11,7 @@
 
 /**
  * 1. We don't want any of the animations that come inherited from the mixin.
- *    These should act like normal links instead.
+ * These should act like normal links instead.
  * 2. Change the easing, quickness to not bounce so lighter backgrounds don't flash
  */
 .ouiButtonEmpty {
@@ -34,6 +34,7 @@
     display: flex;
     text-overflow: ellipsis;
     overflow: hidden;
+    padding: 1px 0; /* Fix for issue #1486 */
   }
 
   &.ouiButtonEmpty--small {
