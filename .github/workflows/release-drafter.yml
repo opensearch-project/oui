@@ -1,4 +1,4 @@
-name: Draft a release
+name: Release Workflow
 
 on:
   push:
@@ -6,53 +6,44 @@ on:
       - "*"
 
 jobs:
-  draft_release:
+  release-to-npm:
+    environment: release-approval
     runs-on: ubuntu-latest
     permissions:
       id-token: write  # Required for OIDC
       contents: write
-      issues: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-      - id: get_data
-        run: |
-          echo "approvers=$(cat .github/CODEOWNERS | grep @ | tr -d '* ' | sed 's/@/,/g' | sed 's/,//1')" >> $GITHUB_OUTPUT
-          echo "version=$(cat package.json | grep '"version": "[^ ]\+"' | cut -c15- | cut -d'"' -f1)" >> $GITHUB_OUTPUT
-      - uses: trstringer/manual-approval@v1
-        with:
-          secret: ${{ github.TOKEN }}
-          approvers: ${{ steps.get_data.outputs.approvers }}
-          minimum-approvals: 2
-          issue-title: 'Release OUI: ${{ steps.get_data.outputs.version }}'
-          issue-body: "Please approve or deny the release of OUI. **VERSION**: ${{ steps.get_data.outputs.version }} **TAG**: ${{ github.ref_name }}  **COMMIT**: ${{ github.sha }}"
-          exclude-workflow-initiator-as-approver: true
+        uses: actions/checkout@v6
+
       - name: Setup Node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+
       - name: Setup Yarn
         run: |
           npm uninstall -g yarn
           npm i -g yarn@1.22.10
           yarn install --frozen-lockfile
-      - name: Generate build
-        run: |
-          yarn build
-          yarn pack --filename oui.tar.gz
-          mkdir oui && mv oui.tar.gz oui/oui.tar.gz
-          tar -cvf artifacts.tar.gz oui
-      - uses: actions/setup-node@v4
+
+      - name: Build
+        run: yarn build
+
+      - uses: actions/setup-node@v6
         with:
           node-version: '24'
           registry-url: 'https://registry.npmjs.org'
+          package-manager-cache: false
+
       - run: npm ci
+
       - run: npm publish
-      - name: Release
-        uses: softprops/action-gh-release@v1
+
+      - name: Release on Github
+        uses: softprops/action-gh-release@v2
         with:
           draft: false
           generate_release_notes: true
-          files: |
-            artifacts.tar.gz
