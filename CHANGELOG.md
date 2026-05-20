@@ -6,7 +6,16 @@
 
 
 ### 🛡 Security
-
+- [CVE-2026-32304] Bump locutus to 3.0.34  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2025-7783] Bump form-data to 4.05  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2026-24842] Bump tar to 7.5.13  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2025-12816] Bump node-forge to 1.4.0  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2025-64756] Bump glob to 10.5.0 ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2025-58754] Bump axios to 1.14.0 ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- [CVE-2026-33228, CVE-2026-32141] Bump flatted to 3.4.2 ([#1544](https://github.com/opensearch-project/oui/issues/1544), [#1543](https://github.com/opensearch-project/oui/issues/1543))
+- [CVE-2026-4867] Bump path-to-regexp to 0.1.13 ([#1624](https://github.com/opensearch-project/oui/issues/1624))
+- [CVE-2026-27699] Bump basic-ftp to 5.2.0 ([#1709](https://github.com/opensearch-project/oui/pull/1709))
+- Bump axios from 1.14.0 to 1.15.1 ([#1741](https://github.com/opensearch-project/oui/pull/1741))
 
 ### 📈 Features/Enhancements
 
@@ -15,7 +24,7 @@
 
 
 ### 🚞 Infrastructure
-
+- Bump node to v22.22.0 ([#1721](https://github.com/opensearch-project/oui/pull/1721))
 
 ### 📝 Documentation
 
