@@ -668,7 +668,6 @@ export const OuiDataGridBody: FunctionComponent<OuiDataGridBodyProps> = (
           element.getAttribute('role') !== 'gridcell' &&
           !element.dataset['ouigrid-tab-managed']
         ) {
-          element.setAttribute('tabIndex', '-1');
           element.setAttribute('data-datagrid-interactable', 'true');
         }
       }
