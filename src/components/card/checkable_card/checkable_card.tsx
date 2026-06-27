@@ -108,7 +108,12 @@ export const OuiCheckableCard: FunctionComponent<OuiCheckableCardProps> = ({
     'ouiCheckableCard__label-isDisabled': disabled,
   });
 
-  const onChangeAffordance = () => {
+  const onChangeAffordance = (e: React.MouseEvent<HTMLDivElement>) => {
+    // Avoid double-firing onChange when clicking the input directly:
+    // the native input already fires onChange, so only trigger the label
+    // click when the event comes from something other than the input.
+    const target = e.target as HTMLElement;
+    if (target.tagName === 'INPUT') return;
     if (labelEl.current) {
       labelEl.current.click();
     }
