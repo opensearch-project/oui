@@ -138,6 +138,7 @@ export const OuiButtonEmpty: FunctionComponent<OuiButtonEmptyProps> = ({
   iconType,
   iconGap = 'm',
   iconSide = 'left',
+  iconSize: _iconSize,
   color = 'primary',
   size,
   flush,
@@ -182,7 +183,7 @@ export const OuiButtonEmpty: FunctionComponent<OuiButtonEmptyProps> = ({
     textProps && textProps.className
   );
 
-  const iconSize = size === 'xs' ? 's' : 'm';
+  const iconSize = _iconSize ?? (size === 'xs' ? 's' : 'm');
 
   const innerNode = (
     <OuiButtonContent
