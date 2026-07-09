@@ -50,8 +50,8 @@
     background: transparent;
   }
 
-  &:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 $ouiTextColor;
-  }
+  // Removed legacy :-moz-focusring hack that set color: transparent
+  // with a text-shadow workaround. This caused Firefox to not update
+  // the displayed selection text. Modern Firefox handles focus rings
+  // natively and no longer needs this override.
 }
