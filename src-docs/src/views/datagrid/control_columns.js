@@ -112,7 +112,7 @@ const SelectionButton = () => {
           {selectedRows.size} {selectedRows.size > 1 ? 'items' : 'item'}
         </OuiPopoverTitle>
         <div style={{ width: 150 }}>
-          <button onClick={() => {}} component="span">
+          <button onClick={() => {}}>
             <OuiFlexGroup
               responsive={false}
               alignItems="center"
@@ -287,7 +287,7 @@ const trailingControlColumns = [
             closePopover={() => setIsPopoverOpen(false)}>
             <OuiPopoverTitle>Actions</OuiPopoverTitle>
             <div style={{ width: 150 }}>
-              <button onClick={() => {}} component="span">
+              <button onClick={() => {}}>
                 <OuiFlexGroup
                   alignItems="center"
                   component="span"
