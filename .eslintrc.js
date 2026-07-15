@@ -184,6 +184,14 @@ module.exports = {
   },
   overrides: [
     {
+      // TypeScript already validates named imports; this rule can't resolve
+      // type-only exports from .d.ts files (e.g. react-window, react-beautiful-dnd)
+      files: ['*.ts', '*.tsx'],
+      rules: {
+        'import/named': 'off',
+      },
+    },
+    {
       files: ['*.d.ts'],
       rules: {
         'react/no-multi-comp': 'off',
