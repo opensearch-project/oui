@@ -111,7 +111,6 @@ module.exports = {
     'local/i18n': 'error',
     'local/href-with-rel': 'error',
     'local/forward-ref': 'error',
-    'import/named': 'off',
     'local/require-license-header': [
       'error',
       {
