@@ -224,33 +224,8 @@ jobs:
           FILE=packages/osd-optimizer/src/integration_tests/basic_optimization.test.ts
           awk '/getModuleCount\(\)\)\.toBe\(/{found=1; count=0} found{count++; if(count==3) gsub(/14/, "34")} {print}' "$FILE" > "$FILE.tmp" && mv "$FILE.tmp" "$FILE" || true
 
-      - name: Patch OSD optimizer snapshot for extra OUI themes
-        run: |
-          node <<'NODE'
-          const fs = require('fs');
-
-          const file = 'packages/osd-optimizer/src/integration_tests/basic_optimization.test.ts';
-          let source = fs.readFileSync(file, 'utf8');
-          const anchor =
-            '      "<absolute path>/packages/osd-optimizer/src/__fixtures__/__tmp__/mock_repo/src/core/public/core_app/styles/_globals_v8light.scss",';
-          const beforeAnchor = [
-            '      "<absolute path>/packages/osd-optimizer/src/__fixtures__/__tmp__/mock_repo/src/core/public/core_app/styles/_globals_v7dark.scss",',
-            '      "<absolute path>/packages/osd-optimizer/src/__fixtures__/__tmp__/mock_repo/src/core/public/core_app/styles/_globals_v7light.scss",',
-            '      "<absolute path>/packages/osd-optimizer/src/__fixtures__/__tmp__/mock_repo/src/core/public/core_app/styles/_globals_v8dark.scss",',
-          ];
-          const afterAnchor = [
-            '      "<absolute path>/packages/osd-optimizer/src/__fixtures__/__tmp__/mock_repo/src/core/public/core_app/styles/_globals_v9dark.scss",',
-            '      "<absolute path>/packages/osd-optimizer/src/__fixtures__/__tmp__/mock_repo/src/core/public/core_app/styles/_globals_v9light.scss",',
-          ];
-
-          if (!source.includes('_globals_v7dark.scss')) {
-            source = source.replace(
-              anchor,
-              `${beforeAnchor.join('\n')}\n${anchor}\n${afterAnchor.join('\n')}`
-            );
-            fs.writeFileSync(file, source);
-          }
-          NODE
+      - name: Update OSD optimizer snapshots for OUI theme compatibility
+        run: node scripts/jest_integration --updateSnapshot --testPathPattern='basic_optimization\.test' || true
 
       - name: Run Integration Tests
         run: yarn test:jest_integration:ci

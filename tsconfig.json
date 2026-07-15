@@ -51,9 +51,6 @@
     // Specifies where to find library definitions. When this is explicitly set,
     // it has to include the default location i.e. node_modules/@types
     "typeRoots": ["node_modules/@types", "src/custom_typings"],
-    "paths": {
-      "uuid": ["src/custom_typings/uuid"]
-    },
   },
   "include": [
     "./src/**/*",
