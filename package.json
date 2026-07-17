@@ -189,7 +189,7 @@
     "@types/url-parse": "^1.4.8",
     "@types/uuid": "^9.0.1",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/parser": "^6.0.0",
     "assert": "^2.1.0",
     "autoprefixer": "^10.0.0",
     "babel-eslint": "^10.1.0",
