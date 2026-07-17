@@ -10,11 +10,11 @@
  */
 
 import React, { useState } from 'react';
-
+import { OnCreateOption as comboBoxOnCreateOption } from './combo_box_icon'; // Rename the import to avoid naming conflicts
 import { OuiComboBox } from '../../../../src/components';
 
 export default () => {
-  const [options, updateOptions] = useState([
+  const [options] = useState([
     {
       label: 'Titan',
       'data-test-subj': 'titanOption',
@@ -56,27 +56,8 @@ export default () => {
   };
 
   const onCreateOption = (searchValue, flattenedOptions) => {
-    const normalizedSearchValue = searchValue.trim().toLowerCase();
-
-    if (!normalizedSearchValue) {
-      return;
-    }
-
-    const newOption = {
-      label: searchValue,
-    };
-
-    // Create the option if it doesn't exist.
-    if (
-      flattenedOptions.findIndex(
-        (option) => option.label.trim().toLowerCase() === normalizedSearchValue
-      ) === -1
-    ) {
-      updateOptions([...options, newOption]);
-    }
-
-    // Select the option.
-    setSelected((prevSelected) => [...prevSelected, newOption]);
+    // Call the OnCreateOption function from combo_box_icon.js
+    comboBoxOnCreateOption(searchValue, flattenedOptions, options, setSelected);
   };
 
   return (
