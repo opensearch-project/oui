@@ -16,9 +16,13 @@ const rule = require('./href_or_on_click');
 const dedent = require('dedent');
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('babel-eslint'),
+  parser: require.resolve('@typescript-eslint/parser'),
   parserOptions: {
     ecmaVersion: 2018,
+    ecmaFeatures: {
+      jsx: true,
+    },
+    sourceType: 'module',
   },
 });
 
