@@ -6,6 +6,7 @@
 
 ### 🛡 Security
 
+- Consolidate security dependency bumps for prismjs, lodash, puppeteer, uuid, Babel, ESLint, webpack-dev-server, rimraf, Yo, fork-ts-checker-webpack-plugin, and related transitive packages ([#1772](https://github.com/opensearch-project/oui/pull/1772))
 - [CVE-2026-32304] Bump locutus to 3.0.34  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
 - [CVE-2025-7783] Bump form-data to 4.05  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
 - [CVE-2026-24842] Bump tar to 7.5.13  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
