@@ -12,8 +12,12 @@
 .ouiOverlayMask {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  // Respect any docked panel (e.g. a chat sidecar) that a consumer
+  // application has reserved space for by setting these custom properties.
+  // Shrinking the mask (rather than only shifting its content) keeps the
+  // mask's own flex-centering correct within the remaining viewport.
+  left: var(--oui-overlay-offset-left, 0px);
+  right: var(--oui-overlay-offset-right, 0px);
   bottom: 0;
   display: flex;
   align-items: center;
