@@ -38,6 +38,8 @@
 
 ### 🛠 Maintenance
 
+- Add Suzhou as maintainer ([#1771](https://github.com/opensearch-project/oui/pull/1771))
+
 ### 🪛 Refactoring
 
 ### 🔩 Tests
