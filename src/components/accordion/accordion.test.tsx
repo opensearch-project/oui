@@ -205,6 +205,9 @@ describe('OuiAccordion', () => {
       await act(async () => {
         await user.click(screen.getByRole('button'));
       });
+      await act(async () => {
+        await new Promise((resolve) => requestAnimationFrame(resolve));
+      });
 
       expect(container).toMatchSnapshot();
     });

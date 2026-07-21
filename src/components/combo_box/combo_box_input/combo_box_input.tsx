@@ -134,9 +134,9 @@ export class OuiComboBoxInput<T> extends Component<
   }
 
   inputOnChange: ChangeEventHandler<HTMLInputElement> = (event) => {
-    const { onChange, searchValue } = this.props;
+    const { onChange } = this.props;
     if (onChange) {
-      onChange(event.target.value as typeof searchValue);
+      onChange(event.target.value as OuiComboBoxInputProps<T>['searchValue']);
     }
   };
 

@@ -11,11 +11,11 @@
     "**/semver": "^7.5.3"
   },
   "peerDependencies": {
-    "eslint": ">=5, <7"
+    "eslint": ">=5, <11"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.4.0"
+    "eslint": "^10.0.0"
   }
 }

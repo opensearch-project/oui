@@ -33,6 +33,13 @@ jest.mock('./../../../src/components/icon', () => {
   return { OuiIcon };
 });
 
+jest.mock('uuid', () => {
+  let uuidCounter = 0;
+  return {
+    v1: jest.fn(() => `uuid-${uuidCounter++}`),
+  };
+});
+
 jest.mock('./../../../src/services/accessibility', () => {
   const a11y = jest.requireActual('./../../../src/services/accessibility');
   const {

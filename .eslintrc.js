@@ -162,8 +162,13 @@ module.exports = {
     '@typescript-eslint/no-triple-slash-reference': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { argsIgnorePattern: '^_', ignoreRestSiblings: true },
+      { argsIgnorePattern: '^_', caughtErrors: 'none', ignoreRestSiblings: true },
     ],
+    '@typescript-eslint/no-require-imports': 'off',
+    '@typescript-eslint/no-empty-object-type': 'off',
+    '@typescript-eslint/no-unsafe-function-type': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
+    '@typescript-eslint/no-wrapper-object-types': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     // It"s all very well saying that some types are trivially inferrable,
@@ -194,6 +199,7 @@ module.exports = {
     {
       files: ['*.d.ts'],
       rules: {
+        '@typescript-eslint/no-unused-vars': 'off',
         'react/no-multi-comp': 'off',
         'react/prefer-es6-class': 'off',
         'react/prefer-stateless-function': 'off',
