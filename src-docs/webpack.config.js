@@ -61,6 +61,7 @@ const webpackConfig = {
       fs: false,
       path: require.resolve('path-browserify'),
       assert: require.resolve('assert/'),
+      buffer: require.resolve('buffer/'),
       os: require.resolve('os-browserify/browser'),
       process: require.resolve('process/browser'),
     },
