@@ -225,14 +225,13 @@ export const OuiButtonIcon: FunctionComponent<Props> = ({
     );
   }
 
-  let buttonType: ButtonHTMLAttributes<HTMLButtonElement>['type'];
   return (
     <button
       tabIndex={isAriaHidden ? -1 : undefined}
       disabled={isDisabled}
       className={classes}
       aria-pressed={isSelected}
-      type={type as typeof buttonType}
+      type={type as ButtonHTMLAttributes<HTMLButtonElement>['type']}
       ref={buttonRef as Ref<HTMLButtonElement>}
       {...(rest as ButtonHTMLAttributes<HTMLButtonElement>)}>
       {buttonIcon}
