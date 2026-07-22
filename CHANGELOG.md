@@ -6,6 +6,7 @@
 
 ### 🛡 Security
 
+- patch transitive packages to address CVEs ([#1790](https://github.com/opensearch-project/oui/pull/1790))
 - Consolidate CVE dependency updates for uuid, ESLint, @typescript-eslint, tar, postcss, @tootallnate/once, websocket-driver, and related lockfile entries ([#1787](https://github.com/opensearch-project/oui/pull/1787))
 - Consolidate security dependency bumps for prismjs, lodash, puppeteer, uuid, Babel, ESLint, webpack-dev-server, rimraf, Yo, fork-ts-checker-webpack-plugin, and related transitive packages ([#1772](https://github.com/opensearch-project/oui/pull/1772))
 - [CVE-2026-32304] Bump locutus to 3.0.34  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
