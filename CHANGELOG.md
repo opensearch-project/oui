@@ -6,6 +6,9 @@
 
 
 ### 🛡 Security
+- patch transitive packages to address CVEs ([#1790](https://github.com/opensearch-project/oui/pull/1790))
+- Consolidate CVE dependency updates for uuid, ESLint, @typescript-eslint, tar, postcss, @tootallnate/once, websocket-driver, and related lockfile entries ([#1787](https://github.com/opensearch-project/oui/pull/1787))
+- Consolidate security dependency bumps for prismjs, lodash, puppeteer, uuid, Babel, ESLint, webpack-dev-server, rimraf, Yo, fork-ts-checker-webpack-plugin, and related transitive packages ([#1772](https://github.com/opensearch-project/oui/pull/1772))
 - [CVE-2026-32304] Bump locutus to 3.0.34  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
 - [CVE-2025-7783] Bump form-data to 4.05  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
 - [CVE-2026-24842] Bump tar to 7.5.13  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
@@ -18,7 +21,8 @@
 - Bump axios from 1.14.0 to 1.15.1 ([#1741](https://github.com/opensearch-project/oui/pull/1741))
 
 ### 📈 Features/Enhancements
-
+- Add overlay offset CSS custom properties to EuiFlyout, EuiGlobalToastList, and EuiBottomBar ([#1769](https://github.com/opensearch-project/oui/pull/1769))
+- Extend overlay offset CSS custom properties to OuiOverlayMask ([#1769](https://github.com/opensearch-project/oui/pull/1769))
 
 ### 🐛 Bug Fixes
 
