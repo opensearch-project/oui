@@ -52,7 +52,9 @@ async function deriveSassVariableTypes(
       ts.createSourceFile(extractedVarTypesFilename, '', ts.ScriptTarget.Latest)
     );
 
-  const prettierOptions = await prettier.resolveConfig(extractedVarTypesFilename);
+  const prettierOptions = await prettier.resolveConfig(
+    extractedVarTypesFilename
+  );
   const prettifiedModuleSource = prettier.format(moduleSource, prettierOptions);
 
   return prettifiedModuleSource;
@@ -66,7 +68,7 @@ function deriveValueType(extractedValue) {
       }
 
       return ts.createTypeLiteralNode(
-        Object.keys(extractedValue).map(key =>
+        Object.keys(extractedValue).map((key) =>
           ts.createPropertySignature(
             undefined,
             ts.createStringLiteral(key),

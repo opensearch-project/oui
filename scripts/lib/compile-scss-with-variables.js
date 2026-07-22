@@ -1,3 +1,8 @@
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 const sass = require('sass-embedded');
 const { pathToFileURL } = require('url');
 const path = require('path');
@@ -12,7 +17,10 @@ const path = require('path');
 const varListMarker = ':֍෴֍߷';
 const arrayMarker = '෴';
 const objectMarker = '߷';
-const forbiddenKeyNames = [...Object.getOwnPropertyNames(Object.prototype), 'prototype'];
+const forbiddenKeyNames = [
+  ...Object.getOwnPropertyNames(Object.prototype),
+  'prototype',
+];
 
 /* This loads the entry file as a module to be able to employ sass:meta for extracting
  * the local variables to the module which are in fact our global variables. It then
@@ -71,7 +79,7 @@ ${varListMarker} {
  * ToDo: For backward compatibility, arrays are flattened into strings which makes their consumption
  *  challenging. Remove all of the "bwc" logic for OUI 2.
  */
-const extractVars = renderedVariables => {
+const extractVars = (renderedVariables) => {
   if (!renderedVariables) return;
 
   const result = {};
@@ -87,16 +95,28 @@ const extractVars = renderedVariables => {
     if (forbiddenKeyNames.includes(key)) return;
     if (rest.length === 0) {
       if (type) {
-        throw new Error(`Unexpected type ${type} for ${key} was found on ${originalKey}`);
+        throw new Error(
+          `Unexpected type ${type} for ${key} was found on ${originalKey}`
+        );
       }
       // For bwc, 0px -> 0
-      o[key] = isFinite(value) ? parseFloat(value) : (value === '0px' ? 0 : value);
+      if (isFinite(value)) {
+        o[key] = parseFloat(value);
+      } else if (value === '0px') {
+        o[key] = 0;
+      } else {
+        o[key] = value;
+      }
     } else {
       switch (type) {
         case arrayMarker:
           if (key in o) {
             if (!Array.isArray(o[key]))
-              throw new Error(`${key} of ${originalKey} was found to be ${Object.prototype.toString.call(o[key])}`);
+              throw new Error(
+                `${key} of ${originalKey} was found to be ${Object.prototype.toString.call(
+                  o[key]
+                )}`
+              );
           } else {
             o[key] = [];
             // Inserting to the beginning to make sure the inner references appear before the outer ones.
@@ -108,7 +128,11 @@ const extractVars = renderedVariables => {
         case objectMarker:
           if (key in o) {
             if (Object.prototype.toString.call(o[key]) !== '[object Object]')
-              throw new Error(`${key} of ${originalKey} was found to be ${Object.prototype.toString.call(o[key])}`);
+              throw new Error(
+                `${key} of ${originalKey} was found to be ${Object.prototype.toString.call(
+                  o[key]
+                )}`
+              );
           } else {
             o[key] = {};
             knownKeys.add(key);
@@ -131,7 +155,7 @@ const extractVars = renderedVariables => {
   for (const { node, key } of foundArrays) {
     // For bwc, arrays that point to variable names are comma-seperated and others are space-seperated
     if (knownKeys.has(node[key][0])) {
-      node[key] = node[key].map(value => `'${value}'`).join(', ');
+      node[key] = node[key].map((value) => `'${value}'`).join(', ');
     } else {
       node[key] = node[key].join(' ');
     }
@@ -148,8 +172,9 @@ const extractVars = renderedVariables => {
   return result;
 };
 
-const parseResult = compileResult => {
-  const [renderedCss, renderedVariables] = compileResult.css?.split(varListMarker) || [];
+const parseResult = (compileResult) => {
+  const [renderedCss, renderedVariables] =
+    compileResult.css?.split(varListMarker) || [];
   const extractedVars = extractVars(renderedVariables);
 
   return {
@@ -158,30 +183,43 @@ const parseResult = compileResult => {
   };
 };
 
-const parseOptions = file => {
+const parseOptions = (file) => {
   const { name, dir } = path.parse(file);
   // Adding the trailing path separator to indicate that the destination is a directory
   const rootURL = pathToFileURL(dir + path.sep);
   return {
     // Sass uses the filename, after stripping starting underscores, as the module name
-    moduleName: name.replace(/\.scss$/, '').replace(/^_/, '').replace(/["';]/g, ''),
+    moduleName: name
+      .replace(/\.scss$/, '')
+      .replace(/^_/, '')
+      .replace(/["';]/g, ''),
     compileOptions: {
       importer: {
-        findFileUrl: (url) => new URL(url + '.scss', rootURL)
-      }
-    }
+        findFileUrl: (url) => new URL(`${url}.scss`, rootURL),
+      },
+    },
   };
 };
 
 module.exports = {
   compileWithVariables: async (file) => {
     const { moduleName, compileOptions } = parseOptions(file);
-    return parseResult(await sass.compileStringAsync(compileTemplate.replace(/#MODULE_NAME#/g, moduleName), compileOptions));
+    return parseResult(
+      await sass.compileStringAsync(
+        compileTemplate.replace(/#MODULE_NAME#/g, moduleName),
+        compileOptions
+      )
+    );
   },
 
   compileWithVariablesSync: (file) => {
     const { moduleName, compileOptions } = parseOptions(file);
 
-    return parseResult(sass.compileString(compileTemplate.replace(/#MODULE_NAME#/g, moduleName), compileOptions));
-  }
+    return parseResult(
+      sass.compileString(
+        compileTemplate.replace(/#MODULE_NAME#/g, moduleName),
+        compileOptions
+      )
+    );
+  },
 };

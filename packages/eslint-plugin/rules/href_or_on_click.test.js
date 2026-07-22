@@ -11,16 +11,24 @@
 
 /* eslint-disable @typescript-eslint/no-var-requires */
 
+const { deserialize, serialize } = require('v8');
 const { RuleTester } = require('eslint');
 const rule = require('./href_or_on_click');
 const dedent = require('dedent');
+const parser = require('@typescript-eslint/parser');
+
+if (typeof global.structuredClone !== 'function') {
+  global.structuredClone = (value) => deserialize(serialize(value));
+}
 
 const ruleTester = new RuleTester({
-  parser: require.resolve('@typescript-eslint/parser'),
-  parserOptions: {
+  languageOptions: {
+    parser,
     ecmaVersion: 2018,
-    ecmaFeatures: {
-      jsx: true,
+    parserOptions: {
+      ecmaFeatures: {
+        jsx: true,
+      },
     },
     sourceType: 'module',
   },

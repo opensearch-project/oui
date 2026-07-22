@@ -86,7 +86,7 @@ export type _OuiSplitPanelOuterProps = HTMLAttributes<HTMLDivElement> & {
  * Consumed via `OuiSplitPanel.Outer`.
  * Extends most `OuiPanelProps`.
  */
-export const _OuiSplitPanelOuter: FunctionComponent<_OuiSplitPanelOuterProps> = ({
+const OuiSplitPanelOuter: FunctionComponent<_OuiSplitPanelOuterProps> = ({
   children,
   className,
   direction = 'column',
@@ -117,6 +117,8 @@ export const _OuiSplitPanelOuter: FunctionComponent<_OuiSplitPanelOuterProps> = 
     </OuiPanel>
   );
 };
+
+export const _OuiSplitPanelOuter = OuiSplitPanelOuter;
 
 export const OuiSplitPanel = {
   Outer: _OuiSplitPanelOuter,
