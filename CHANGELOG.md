@@ -1,18 +1,30 @@
 # OUI
 
 ## [Unreleased](https://github.com/opensearch-project/oui/tree/main)
-  
+
 ### Deprecations
 
 ### 🛡 Security
 
 ### 📈 Features/Enhancements
 
+- Add overlay offset CSS custom properties to EuiFlyout, EuiGlobalToastList, and EuiBottomBar ([#1769](https://github.com/opensearch-project/oui/pull/1769))
+- Extend overlay offset CSS custom properties to OuiOverlayMask ([#1769](https://github.com/opensearch-project/oui/pull/1769))
+- Add cross-theme variable defaults for badge, filter_group, side_nav, animations, typography ([#1697](https://github.com/opensearch-project/oui/pull/1697))
+- Add v9 theme scaffolding — base tokens, typography, colors, and global styling ([#1696](https://github.com/opensearch-project/oui/pull/1696))
+- Cross-theme hover/focus UX improvements + button XS size ([#1699](https://github.com/opensearch-project/oui/pull/1699))
+- Add v9 elevation system — shadow tokens, CSS vars, mixins, useElevation hook, and docs ([#1698](https://github.com/opensearch-project/oui/pull/1698))
+- Add v9 component variables and style overrides ([#1700](https://github.com/opensearch-project/oui/pull/1700))
+- Component SCSS enhancements for v9 theme support ([#1701](https://github.com/opensearch-project/oui/pull/1701))
+- Dense flat buttons, observability visualization palette, and tighter border radii for v9 theme ([#1706](https://github.com/opensearch-project/oui/pull/1706))
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
 
 ### 📝 Documentation
+
+- Add design system documentation pages — Principles, Foundations ([#1702](https://github.com/opensearch-project/oui/pull/1702))
 
 ### 🛠 Maintenance
 
@@ -28,30 +40,23 @@
 - patch transitive packages to address CVEs ([#1790](https://github.com/opensearch-project/oui/pull/1790))
 - Consolidate CVE dependency updates for uuid, ESLint, @typescript-eslint, tar, postcss, @tootallnate/once, websocket-driver, and related lockfile entries ([#1787](https://github.com/opensearch-project/oui/pull/1787))
 - Consolidate security dependency bumps for prismjs, lodash, puppeteer, uuid, Babel, ESLint, webpack-dev-server, rimraf, Yo, fork-ts-checker-webpack-plugin, and related transitive packages ([#1772](https://github.com/opensearch-project/oui/pull/1772))
+- [CVE-2026-27699] Bump basic-ftp to 5.2.0 ([#1709](https://github.com/opensearch-project/oui/pull/1709))
 - [CVE-2026-32304] Bump locutus to 3.0.34  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
 - [CVE-2025-7783] Bump form-data to 4.05  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
 - [CVE-2026-24842] Bump tar to 7.5.13  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
 - [CVE-2025-12816] Bump node-forge to 1.4.0  ([#1720](https://github.com/opensearch-project/oui/pull/1720))
 - [CVE-2025-64756] Bump glob to 10.5.0 ([#1720](https://github.com/opensearch-project/oui/pull/1720))
 - [CVE-2025-58754] Bump axios to 1.14.0 ([#1720](https://github.com/opensearch-project/oui/pull/1720))
+- Bump axios from 1.14.0 to 1.15.1 ([#1741](https://github.com/opensearch-project/oui/pull/1741))
 - [CVE-2026-33228, CVE-2026-32141] Bump flatted to 3.4.2 ([#1544](https://github.com/opensearch-project/oui/issues/1544), [#1543](https://github.com/opensearch-project/oui/issues/1543))
 - [CVE-2026-4867] Bump path-to-regexp to 0.1.13 ([#1624](https://github.com/opensearch-project/oui/issues/1624))
 
-### 📈 Features/Enhancements
+### 🚞 Infrastructure
 
-- Add overlay offset CSS custom properties to EuiFlyout, EuiGlobalToastList, and EuiBottomBar ([#1769](https://github.com/opensearch-project/oui/pull/1769))
-- Extend overlay offset CSS custom properties to OuiOverlayMask ([#1769](https://github.com/opensearch-project/oui/pull/1769))
-- Add cross-theme variable defaults for badge, filter_group, side_nav, animations, typography ([#1697](https://github.com/opensearch-project/oui/pull/1697))
-- Add v9 theme scaffolding — base tokens, typography, colors, and global styling ([#1696](https://github.com/opensearch-project/oui/pull/1696))
-- Cross-theme hover/focus UX improvements + button XS size ([#1699](https://github.com/opensearch-project/oui/pull/1699))
-- Add v9 elevation system — shadow tokens, CSS vars, mixins, useElevation hook, and docs ([#1698](https://github.com/opensearch-project/oui/pull/1698))
-- Add v9 component variables and style overrides ([#1700](https://github.com/opensearch-project/oui/pull/1700))
-- Component SCSS enhancements for v9 theme support ([#1701](https://github.com/opensearch-project/oui/pull/1701))
-- Dense flat buttons, observability visualization palette, and tighter border radii for v9 theme ([#1706](https://github.com/opensearch-project/oui/pull/1706))
-
-### 📝 Documentation
-
-- Add design system documentation pages — Principles, Foundations ([#1702](https://github.com/opensearch-project/oui/pull/1702))
+- Bump node to v22.22.0 ([#1721](https://github.com/opensearch-project/oui/pull/1721))
+- Add GitHub environment to release workflow ([#1753](https://github.com/opensearch-project/oui/pull/1753))
+- Pin GitHub Actions to commit SHAs ([#1755](https://github.com/opensearch-project/oui/pull/1755))
+- Onboard new backport-pr re-usable github workflow ([#1766](https://github.com/opensearch-project/oui/pull/1766))
 
 ### 🛠 Maintenance
 
@@ -59,14 +64,10 @@
 
 
 ## [`1.23.0`](https://github.com/opensearch-project/oui/tree/1.23.0)
- 
+
 ### 🪛 Refactoring
 
 - Support reset styles being overridden by layers ([#1664](https://github.com/opensearch-project/oui/pull/1664))
-
-### 🚞 Infrastructure
-
-- - Bump node to v22.22.0 ([#1721](https://github.com/opensearch-project/oui/pull/1721))
 
 ## [`1.22.1`](https://github.com/opensearch-project/oui/tree/1.22.1)
 
