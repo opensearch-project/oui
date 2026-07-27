@@ -49,6 +49,7 @@
 ### 📈 Features/Enhancements
 
 - Add overlay offset CSS custom properties to EuiFlyout, EuiGlobalToastList, and EuiBottomBar ([#1769](https://github.com/opensearch-project/oui/pull/1769))
+- Extend overlay offset CSS custom properties to OuiOverlayMask ([#1769](https://github.com/opensearch-project/oui/pull/1769))
 
 ### 🛠 Maintenance
 
