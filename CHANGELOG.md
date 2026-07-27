@@ -46,6 +46,10 @@
 - Pin GitHub Actions to commit SHAs ([#1755](https://github.com/opensearch-project/oui/pull/1755))
 - Onboard new backport-pr re-usable github workflow ([#1766](https://github.com/opensearch-project/oui/pull/1766))
 
+### 📈 Features/Enhancements
+
+- Add overlay offset CSS custom properties to EuiFlyout, EuiGlobalToastList, and EuiBottomBar ([#1769](https://github.com/opensearch-project/oui/pull/1769))
+
 ### 🛠 Maintenance
 
 - Add Suzhou as maintainer ([#1771](https://github.com/opensearch-project/oui/pull/1771))
