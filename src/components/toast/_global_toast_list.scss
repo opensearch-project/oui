@@ -44,12 +44,14 @@
 }
 
 .ouiGlobalToastList--right:not(:empty) {
-  right: 0;
+  // Respect any docked panel (e.g. a chat sidecar) that a consumer
+  // application has reserved space for by setting these custom properties.
+  right: var(--oui-overlay-offset-right, 0px);
   padding-left: $ouiSize * 4; /* 2 */
 }
 
 .ouiGlobalToastList--left:not(:empty) {
-  left: 0;
+  left: var(--oui-overlay-offset-left, 0px);
   padding-right: $ouiSize * 4; /* 2 */
 }
 

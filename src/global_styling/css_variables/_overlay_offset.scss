@@ -1,0 +1,19 @@
+/*!
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+// Consumer applications (e.g. OpenSearch Dashboards) can dock a persistent
+// side panel (a "sidecar", such as an AI chat window) next to the app body.
+// That panel lives outside OUI's own component tree, so OUI has no built-in
+// awareness of it. Components that position themselves against the raw
+// viewport edge -- EuiFlyout, EuiGlobalToastList, EuiBottomBar -- would
+// otherwise render underneath/behind the sidecar instead of respecting it.
+//
+// A consumer application sets these custom properties to report how much
+// space is reserved on each side of the viewport. OUI components then read
+// the values here instead of assuming a bare 0 offset.
+:root {
+  --oui-overlay-offset-right: 0px;
+  --oui-overlay-offset-left: 0px;
+}

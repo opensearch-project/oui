@@ -169,7 +169,7 @@ $flyoutSizes: (
   border-right: $ouiFlyoutBorder;
   border-left: none;
   right: auto;
-  left: 0;
+  left: var(--oui-overlay-offset-left, 0px);
   clip-path: polygon(0 0, 150% 0, 150% 100%, 0 100%);
   animation-name: ouiFlyoutLeft;
 }

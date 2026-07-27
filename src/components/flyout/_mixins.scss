@@ -18,7 +18,10 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
+  // Respect any docked panel (e.g. a chat sidecar) that a consumer
+  // application has reserved space for by setting these custom properties.
+  // Defaults to 0 when no offset has been set.
+  right: var(--oui-overlay-offset-right, 0px);
   height: 100%;
   z-index: $ouiZFlyout;
   background: $ouiColorEmptyShade;
