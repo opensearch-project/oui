@@ -10,6 +10,7 @@ jobs:
     environment: release-approval
     runs-on: ubuntu-latest
     permissions:
+      id-token: write  # Required for OIDC
       contents: write
     steps:
       - name: Checkout
@@ -42,5 +43,5 @@ jobs:
       - name: Release on Github
         uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2
         with:
-          draft: true
+          draft: false
           generate_release_notes: true
