@@ -14,7 +14,9 @@ packages/eslint-plugin
 types/
 
 # ignore everything in `scripts` except postinstall.js and preinstall.js
-scripts/!(postinstall.js|preinstall.js)
+scripts/*
+!scripts/postinstall.js
+!scripts/preinstall.js
 
 src/**/*.!(scss)
 

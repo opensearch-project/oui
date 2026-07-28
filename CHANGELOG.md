@@ -20,6 +20,8 @@
 
 ### 🐛 Bug Fixes
 
+- Fix npm pack inclusion for lifecycle scripts with newer npm versions ([#1807](https://github.com/opensearch-project/oui/pull/1807))
+
 ### 🚞 Infrastructure
 
 ### 📝 Documentation
