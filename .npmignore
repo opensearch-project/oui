@@ -14,7 +14,12 @@ packages/eslint-plugin
 types/
 
 # ignore everything in `scripts` except postinstall.js and preinstall.js
-scripts/!(postinstall.js|preinstall.js)
+# NOTE: use gitignore-style negation rather than an extglob such as
+# `scripts/!(postinstall.js|preinstall.js)`. npm's packer ignores extglob
+# negation and drops the whole directory, which breaks the install hooks.
+scripts/*
+!scripts/preinstall.js
+!scripts/postinstall.js
 
 src/**/*.!(scss)
 

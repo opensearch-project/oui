@@ -22,6 +22,8 @@
 
 ### 🚞 Infrastructure
 
+- Ship `scripts/preinstall.js` and `scripts/postinstall.js` by replacing the extglob negation in `.npmignore`, which npm's packer ignores ([#1809](https://github.com/opensearch-project/oui/pull/1809))
+
 ### 📝 Documentation
 
 - Add design system documentation pages — Principles, Foundations ([#1702](https://github.com/opensearch-project/oui/pull/1702))
