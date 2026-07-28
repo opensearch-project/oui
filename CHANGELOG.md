@@ -12,8 +12,6 @@
 
 ### 🚞 Infrastructure
 
-- Ship `scripts/preinstall.js` and `scripts/postinstall.js` by replacing the extglob negation in `.npmignore`, which npm's packer ignores ([#1810](https://github.com/opensearch-project/oui/pull/1810))
-
 ### 📝 Documentation
 
 ### 🛠 Maintenance
@@ -21,6 +19,13 @@
 ### 🪛 Refactoring
 
 ### 🔩 Tests
+
+
+## [`1.24.1`](https://github.com/opensearch-project/oui/tree/1.24.1)
+
+### 🚞 Infrastructure
+
+- Ship `scripts/preinstall.js` and `scripts/postinstall.js` by replacing the extglob negation in `.npmignore`, which npm's packer ignores ([#1810](https://github.com/opensearch-project/oui/pull/1810))
 
 
 ## [`1.24.0`](https://github.com/opensearch-project/oui/tree/1.24.0)
