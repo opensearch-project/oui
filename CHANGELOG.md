@@ -6,6 +6,8 @@
 
 ### 🛡 Security
 
+- Patch transitive `js-yaml`, `diff`, and `cookie` to address CVE-2026-59869, CVE-2026-24001, and CVE-2024-47764, and remove redundant Yarn resolutions
+
 ### 📈 Features/Enhancements
 
 - Add overlay offset CSS custom properties to EuiFlyout, EuiGlobalToastList, and EuiBottomBar ([#1769](https://github.com/opensearch-project/oui/pull/1769))
