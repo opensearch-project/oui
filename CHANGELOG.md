@@ -22,6 +22,8 @@
 
 ### 🐛 Bug Fixes
 
+
+- Scope overlay offset CSS custom properties to below-header masks only, keeping above-header masks (modals, fullscreen views) at full viewport width ([#1824](https://github.com/opensearch-project/oui/pull/1824))
 ### 🚞 Infrastructure
 
 - Ship `scripts/preinstall.js` and `scripts/postinstall.js` by replacing the extglob negation in `.npmignore`, which npm's packer ignores ([#1809](https://github.com/opensearch-project/oui/pull/1809))
