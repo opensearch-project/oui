@@ -45,7 +45,7 @@ export const GuideVersionSelector: FunctionComponent<GuideVersionSelectorProps> 
 
       closePopover();
       setSelectedOption(value);
-      window.location.href = `/${value}`;
+      window.location.href = `/${value}/`;
     },
     []
   );
@@ -57,14 +57,17 @@ export const GuideVersionSelector: FunctionComponent<GuideVersionSelectorProps> 
 
     fetch('/versions.json')
       .then((response) => {
-        if (!response.ok) {
-          return Promise.reject(response.text());
-        }
+        return new Promise((resolve, reject) => {
+          if (!response.ok) {
+            response.text().then(reject);
+            return;
+          }
 
-        return response.json();
+          response.json().then(resolve);
+        });
       })
-      .then((branches: string[]) => {
-        setOptions(branches);
+      .then((branches) => {
+        setOptions(branches as string[]);
       })
       .catch(console.error);
   }, [isLocalDev]);
@@ -75,7 +78,7 @@ export const GuideVersionSelector: FunctionComponent<GuideVersionSelectorProps> 
         <OuiContextMenuItem
           key={option}
           icon={option === selectedOption ? 'check' : 'empty'}
-          href={`/${option}`}
+          href={`/${option}/`}
           onClick={onChange(option)}>
           <OuiFlexGroup direction="row" wrap={false}>
             <OuiFlexItem>v{option}</OuiFlexItem>
