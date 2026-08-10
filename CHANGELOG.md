@@ -10,8 +10,6 @@
 
 ### 🐛 Bug Fixes
 
-
-- Scope overlay offset CSS custom properties to below-header masks only, keeping above-header masks (modals, fullscreen views) at full viewport width ([#1824](https://github.com/opensearch-project/oui/pull/1824))
 ### 🚞 Infrastructure
 
 ### 📝 Documentation
@@ -22,6 +20,11 @@
 
 ### 🔩 Tests
 
+## [`1.24.2`](https://github.com/opensearch-project/oui/tree/1.24.2)
+
+### 🐛 Bug Fixes
+
+- Scope overlay offset CSS custom properties to below-header masks only, keeping above-header masks (modals, fullscreen views) at full viewport width ([#1824](https://github.com/opensearch-project/oui/pull/1824))
 
 ## [`1.24.1`](https://github.com/opensearch-project/oui/tree/1.24.1)
 
