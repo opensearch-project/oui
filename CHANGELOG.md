@@ -10,6 +10,8 @@
 
 ### 🐛 Bug Fixes
 
+
+- Scope overlay offset CSS custom properties to below-header masks only, keeping above-header masks (modals, fullscreen views) at full viewport width ([#1824](https://github.com/opensearch-project/oui/pull/1824))
 ### 🚞 Infrastructure
 
 ### 📝 Documentation
