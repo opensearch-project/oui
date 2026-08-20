@@ -670,7 +670,7 @@ export class OuiPopover extends Component<Props, State> {
     }
 
     if (this.props.repositionOnScroll) {
-      window.addEventListener('scroll', this.positionPopoverFixed);
+      window.addEventListener('scroll', this.positionPopoverFixed, true);
     }
   }
 
@@ -689,9 +689,9 @@ export class OuiPopover extends Component<Props, State> {
     // update scroll listener
     if (prevProps.repositionOnScroll !== this.props.repositionOnScroll) {
       if (this.props.repositionOnScroll) {
-        window.addEventListener('scroll', this.positionPopoverFixed);
+        window.addEventListener('scroll', this.positionPopoverFixed, true);
       } else {
-        window.removeEventListener('scroll', this.positionPopoverFixed);
+        window.removeEventListener('scroll', this.positionPopoverFixed, true);
       }
     }
 
@@ -712,7 +712,7 @@ export class OuiPopover extends Component<Props, State> {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.positionPopoverFixed);
+    window.removeEventListener('scroll', this.positionPopoverFixed, true);
     this.removeBackupClickDetection();
     clearTimeout(this.respositionTimeout);
     clearTimeout(this.closingTransitionTimeout);
