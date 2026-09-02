@@ -134,7 +134,7 @@
     "@elastic/charts": "^30.2.0",
     "@elastic/eslint-config-kibana": "^0.15.0",
     "@eslint/compat": "^2.1.0",
-    "@faker-js/faker": "^8.0.1",
+    "@faker-js/faker": "^10.5.0",
     "@opensearch/datemath": "file:./packages/opensearch-datemath",
     "@svgr/core": "^8.0.0",
     "@svgr/plugin-jsx": "^8.0.1",
