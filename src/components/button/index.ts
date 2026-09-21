@@ -36,6 +36,8 @@ export {
   OuiButtonProps,
   OuiSmallButton,
   OuiSmallButtonProps,
+  OuiXSmallButton,
+  OuiXSmallButtonProps,
 } from './button';
 
 export {

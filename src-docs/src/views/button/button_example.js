@@ -42,6 +42,10 @@ const buttonSnippet = [
 `,
   `<OuiButton size="s" fill><!-- Small and filled button --></OuiButton>
 `,
+  `<OuiButton size="xs"><!-- Extra-small button --></OuiButton>
+`,
+  `<OuiButton size="xs" fill><!-- Extra-small and filled button --></OuiButton>
+`,
 ];
 
 import ButtonWithIcon from './button_with_icon';

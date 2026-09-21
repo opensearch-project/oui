@@ -8,6 +8,8 @@
 
 ### 📈 Features/Enhancements
 
+- Add an extra-small `xs` size to `OuiButton` for dense layouts
+
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
