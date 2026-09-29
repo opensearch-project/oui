@@ -136,6 +136,29 @@ describe('OuiSelectable', () => {
     });
   });
 
+  describe('IME composition', () => {
+    test('ignores an Enter that belongs to an IME composition', () => {
+      const onChange = jest.fn();
+      const component = mount(
+        <OuiSelectable options={options} onChange={onChange}>
+          {(list) => list}
+        </OuiSelectable>
+      );
+      const container = component.find('div.ouiSelectable').first();
+
+      container.simulate('keydown', { key: 'ArrowDown' });
+      container.simulate('keydown', {
+        key: 'Enter',
+        keyCode: 229,
+        nativeEvent: { isComposing: true },
+      });
+      expect(onChange).not.toHaveBeenCalled();
+
+      container.simulate('keydown', { key: 'Enter' });
+      expect(onChange).toHaveBeenCalledTimes(1);
+    });
+  });
+
   describe('custom options', () => {
     test('optional properties', () => {
       type OptionalOption = OuiSelectableOption<{ value?: string }>;

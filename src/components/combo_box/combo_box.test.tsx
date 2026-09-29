@@ -327,6 +327,66 @@ describe('behavior', () => {
       expect(onCreateOptionHandler).toHaveBeenNthCalledWith(1, 'foo', options);
     });
 
+    test("doesn't call onCreateOption on an Enter that belongs to an IME composition", () => {
+      const onCreateOptionHandler = jest.fn();
+
+      const { container } = render(
+        <OuiComboBox
+          options={options}
+          selectedOptions={[options[2]]}
+          onCreateOption={onCreateOptionHandler}
+        />
+      );
+
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+
+      fireEvent.change(searchInput, { target: { value: '지표' } });
+      fireEvent.focus(searchInput);
+      fireEvent.keyDown(searchInput, {
+        key: comboBoxKeys.ENTER,
+        keyCode: 229,
+        isComposing: true,
+      });
+      expect(onCreateOptionHandler).not.toHaveBeenCalled();
+      expect(searchInput.value).toBe('지표');
+
+      fireEvent.keyDown(searchInput, { key: comboBoxKeys.ENTER });
+      expect(onCreateOptionHandler).toHaveBeenCalledTimes(1);
+      expect(onCreateOptionHandler).toHaveBeenNthCalledWith(1, '지표', options);
+    });
+
+    test('forwards only the keys it does not handle itself while composing', () => {
+      const onKeyDownHandler = jest.fn();
+
+      const { container } = render(
+        <OuiComboBox
+          options={options}
+          onCreateOption={jest.fn()}
+          onKeyDown={onKeyDownHandler}
+        />
+      );
+
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+
+      fireEvent.keyDown(searchInput, {
+        key: comboBoxKeys.ENTER,
+        keyCode: 229,
+        isComposing: true,
+      });
+      expect(onKeyDownHandler).not.toHaveBeenCalled();
+
+      fireEvent.keyDown(searchInput, {
+        key: 'a',
+        keyCode: 229,
+        isComposing: true,
+      });
+      expect(onKeyDownHandler).toHaveBeenCalledTimes(1);
+    });
+
     test("doesn't the onCreateOption callback when there is no input", () => {
       const onCreateOptionHandler = jest.fn();
 
