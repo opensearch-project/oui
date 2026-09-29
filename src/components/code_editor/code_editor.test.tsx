@@ -162,6 +162,30 @@ describe('OuiCodeEditor', () => {
         // For now, just verify the hint element exists
         expect(hint).toBeDefined();
       });
+
+      test('escape keydown on the ace textbox is ignored while IME composing', () => {
+        const { container } = render(<OuiCodeEditor />);
+        const textbox = container.querySelector(
+          'textarea.ace_text-input'
+        ) as HTMLTextAreaElement;
+
+        const composingEscape = new KeyboardEvent('keydown', {
+          key: keys.ESCAPE,
+          isComposing: true,
+          bubbles: true,
+          cancelable: true,
+        });
+        textbox.dispatchEvent(composingEscape);
+        expect(composingEscape.defaultPrevented).toBe(false);
+
+        const plainEscape = new KeyboardEvent('keydown', {
+          key: keys.ESCAPE,
+          bubbles: true,
+          cancelable: true,
+        });
+        textbox.dispatchEvent(plainEscape);
+        expect(plainEscape.defaultPrevented).toBe(true);
+      });
     });
   });
 });

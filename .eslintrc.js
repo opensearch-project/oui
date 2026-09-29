@@ -111,6 +111,7 @@ module.exports = {
     'local/i18n': 'error',
     'local/href-with-rel': 'error',
     'local/forward-ref': 'error',
+    'local/ime-composition-guard': 'warn',
     'local/require-license-header': [
       'error',
       {
@@ -162,7 +163,11 @@ module.exports = {
     '@typescript-eslint/no-triple-slash-reference': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { argsIgnorePattern: '^_', caughtErrors: 'none', ignoreRestSiblings: true },
+      {
+        argsIgnorePattern: '^_',
+        caughtErrors: 'none',
+        ignoreRestSiblings: true,
+      },
     ],
     '@typescript-eslint/no-require-imports': 'off',
     '@typescript-eslint/no-empty-object-type': 'off',

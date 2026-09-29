@@ -66,6 +66,7 @@ export class OuiComboBoxOption<T> extends Component<OuiComboBoxOptionProps<T>> {
   };
 
   onKeyDown: KeyboardEventHandler<HTMLButtonElement> = (event) => {
+    // eslint-disable-next-line local/ime-composition-guard -- the option is a button; typing happens in the combo box input, which checks composition
     if (event.key === keys.ENTER || event.key === keys.SPACE) {
       event.preventDefault();
       event.stopPropagation();

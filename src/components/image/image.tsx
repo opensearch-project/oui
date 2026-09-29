@@ -153,6 +153,7 @@ export const OuiImage: FunctionComponent<OuiImageProps> = ({
   const [isFullScreenActive, setIsFullScreenActive] = useState(false);
 
   const onKeyDown = (event: React.KeyboardEvent) => {
+    // eslint-disable-next-line local/ime-composition-guard -- full screen image has no text entry inside
     if (event.key === keys.ESCAPE) {
       event.preventDefault();
       event.stopPropagation();

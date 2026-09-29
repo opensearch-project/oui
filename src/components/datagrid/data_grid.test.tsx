@@ -2429,6 +2429,34 @@ describe('OuiDataGrid', () => {
   });
 
   describe('keyboard controls', () => {
+    it('ignores Escape during IME composition when exiting full screen', () => {
+      const { container } = render(
+        <OuiDataGrid
+          {...requiredProps}
+          columns={[{ id: 'A' }]}
+          columnVisibility={{
+            visibleColumns: ['A'],
+            setVisibleColumns: () => {},
+          }}
+          rowCount={1}
+          renderCellValue={() => 'x'}
+        />
+      );
+      const grid = container.querySelector('.ouiDataGrid') as HTMLElement;
+      const fullScreenButton = container.querySelector(
+        '[data-test-subj="dataGridFullScrenButton"]'
+      ) as HTMLElement;
+
+      fireEvent.click(fullScreenButton);
+      expect(grid).toHaveClass('ouiDataGrid--fullScreen');
+
+      fireEvent.keyDown(grid, { key: keys.ESCAPE, isComposing: true });
+      expect(grid).toHaveClass('ouiDataGrid--fullScreen');
+
+      fireEvent.keyDown(grid, { key: keys.ESCAPE });
+      expect(grid).not.toHaveClass('ouiDataGrid--fullScreen');
+    });
+
     // Note: mounting to document because activeElement requires being part of document
     let container: HTMLDivElement | null;
 

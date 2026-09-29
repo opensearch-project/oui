@@ -29,7 +29,7 @@
  */
 
 import React, { ReactNode } from 'react';
-import { render, fireEvent, act } from '@testing-library/react';
+import { render, fireEvent, act, waitFor } from '@testing-library/react';
 import { requiredProps } from '../../test/required_props';
 
 import {
@@ -122,6 +122,58 @@ describe('OuiPopover', () => {
           key: keys.ESCAPE,
         });
         expect(closePopoverHandler).toBeCalledTimes(1);
+      });
+
+      describe('IME composition', () => {
+        it('ignores a composing ESC on the popover element and closes on a plain ESC', () => {
+          const closePopoverHandler = jest.fn();
+
+          const { container } = render(
+            <OuiPopover
+              ownFocus={false}
+              id="imeCompositionPopover1"
+              button={<button />}
+              closePopover={closePopoverHandler}
+              isOpen
+            />
+          );
+          const popover = container.querySelector('.ouiPopover')!;
+
+          fireEvent.keyDown(popover, { key: keys.ESCAPE, isComposing: true });
+          expect(closePopoverHandler).not.toBeCalled();
+
+          fireEvent.keyDown(popover, { key: keys.ESCAPE });
+          expect(closePopoverHandler).toBeCalledTimes(1);
+        });
+
+        it('ignores a composing ESC caught by the focus trap and closes on a plain ESC', async () => {
+          const closePopoverHandler = jest.fn();
+
+          render(
+            <OuiPopover
+              ownFocus
+              id="imeCompositionPopover2"
+              button={<button />}
+              closePopover={closePopoverHandler}
+              isOpen
+            />
+          );
+
+          // react-focus-on only listens (on the document) once its trap has
+          // activated. A plain ESC is retried until it lands, so the composing
+          // ESC below is sent against an active trap.
+          await waitFor(() => {
+            fireEvent.keyDown(document, { key: keys.ESCAPE });
+            expect(closePopoverHandler).toBeCalledTimes(1);
+          });
+          closePopoverHandler.mockClear();
+
+          fireEvent.keyDown(document, { key: keys.ESCAPE, isComposing: true });
+          expect(closePopoverHandler).not.toBeCalled();
+
+          fireEvent.keyDown(document, { key: keys.ESCAPE });
+          expect(closePopoverHandler).toBeCalledTimes(1);
+        });
       });
 
       it('is not called when ESC key is hit and the popover is closed', () => {

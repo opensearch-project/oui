@@ -269,6 +269,7 @@ export const OuiCodeBlockImpl: FunctionComponent<OuiCodeBlockImplProps> = ({
   useEffect(doesOverflow, [width, height, wrapperRef]);
 
   const onKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+    // eslint-disable-next-line local/ime-composition-guard -- full screen code block has no text entry inside
     if (event.key === keys.ESCAPE) {
       event.preventDefault();
       event.stopPropagation();

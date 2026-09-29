@@ -55,6 +55,21 @@ describe('OuiFlyout', () => {
     ).toMatchSnapshot();
   });
 
+  test('does not close on an Escape keydown that is confirming IME composition', () => {
+    const onClose = jest.fn();
+    const component = mount(<OuiFlyout onClose={onClose} />);
+
+    window.dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'Escape', isComposing: true })
+    );
+    expect(onClose).not.toHaveBeenCalled();
+
+    window.dispatchEvent(new KeyboardEvent('keydown', { key: 'Escape' }));
+    expect(onClose).toHaveBeenCalledTimes(1);
+
+    component.unmount();
+  });
+
   describe('props', () => {
     test('role can be removed', () => {
       const component = mount(<OuiFlyout onClose={() => {}} role={null} />);

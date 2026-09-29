@@ -35,6 +35,7 @@ import AceEditor, { IAceEditorProps } from 'react-ace';
 import { keysOf } from '../common';
 import { htmlIdGenerator, keys } from '../../services';
 import { OuiI18n } from '../i18n';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 
 const DEFAULT_MODE = 'text';
 const DEFAULT_THEME = 'textmate';
@@ -133,7 +134,7 @@ export class OuiCodeEditor extends Component<
   };
 
   onKeydownAce = (event: KeyboardEvent) => {
-    if (event.key === keys.ESCAPE) {
+    if (event.key === keys.ESCAPE && !isComposingKeyboardEvent(event)) {
       event.preventDefault();
       event.stopPropagation();
       // Handles exiting edit mode when `isReadOnly` is set.

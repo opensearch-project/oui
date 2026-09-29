@@ -91,6 +91,7 @@ import {
 } from './data_grid_context';
 import { useDataGridColumnSorting } from './column_sorting';
 import { RowHeightUtils } from './row_height_utils';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 
 // Used to short-circuit some async browser behaviour that is difficult to account for in tests
 const IS_JEST_ENVIRONMENT = global.hasOwnProperty('_isJest');
@@ -793,7 +794,7 @@ export const OuiDataGrid: FunctionComponent<OuiDataGridProps> = (props) => {
   const handleGridKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
     switch (event.key) {
       case keys.ESCAPE:
-        if (isFullScreen) {
+        if (isFullScreen && !isComposingKeyboardEvent(event)) {
           event.preventDefault();
           handleFullScreenChange(false);
         }

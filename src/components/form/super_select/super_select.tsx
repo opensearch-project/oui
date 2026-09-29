@@ -190,6 +190,7 @@ export class OuiSuperSelect<T extends string> extends Component<
 
   onItemKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
     switch (event.key) {
+      // eslint-disable-next-line local/ime-composition-guard -- the option item is a button; composition cannot be active on it
       case keys.ESCAPE:
         // close the popover and prevent ancestors from handling
         event.preventDefault();

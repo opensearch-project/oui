@@ -33,6 +33,22 @@ describe('isComposingKeyboardEvent', () => {
     ).toBe(false);
   });
 
+  test('reads a native keydown passed directly', () => {
+    expect(
+      isComposingKeyboardEvent(
+        new window.KeyboardEvent('keydown', {
+          key: 'Escape',
+          isComposing: true,
+        })
+      )
+    ).toBe(true);
+    expect(
+      isComposingKeyboardEvent(
+        new window.KeyboardEvent('keydown', { key: 'Escape' })
+      )
+    ).toBe(false);
+  });
+
   test('is false when the event has no native event', () => {
     expect(isComposingKeyboardEvent(({} as unknown) as KeyboardEvent)).toBe(
       false

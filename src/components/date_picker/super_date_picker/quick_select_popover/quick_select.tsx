@@ -120,6 +120,7 @@ export class OuiQuickSelect extends Component<
   };
 
   handleKeyDown: KeyboardEventHandler<HTMLElement> = ({ key }) => {
+    // eslint-disable-next-line local/ime-composition-guard -- number input; IME composition does not apply
     if (key === 'Enter') {
       this.applyQuickSelect();
     }
