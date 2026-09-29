@@ -23,7 +23,7 @@
 ### 🐛 Bug Fixes
 
 
-- Ignore keys pressed during an IME composition in `OuiComboBox`, `OuiSelectable` and `OuiColorPicker`, so the Enter that commits Korean, Japanese or Chinese text no longer creates or selects an option, or toggles the color picker, with half-composed text
+- Ignore keys pressed during an IME composition in `OuiComboBox`, `OuiSelectable` and `OuiColorPicker`, so the Enter that commits Korean, Japanese or Chinese text no longer creates or selects an option, or toggles the color picker, with half-composed text ([#1836](https://github.com/opensearch-project/oui/pull/1836))
 - Scope overlay offset CSS custom properties to below-header masks only, keeping above-header masks (modals, fullscreen views) at full viewport width ([#1824](https://github.com/opensearch-project/oui/pull/1824))
 ### 🚞 Infrastructure
 
