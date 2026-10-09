@@ -12,7 +12,10 @@
 import React, { useState } from 'react';
 import { OuiButton } from '../../../../src/components';
 
-import { OuiWindowEvent } from '../../../../src/services';
+import {
+  OuiWindowEvent,
+  isComposingKeyboardEvent,
+} from '../../../../src/services';
 
 export const ModalExample = (props) => {
   const [open, setOpen] = useState(false);
@@ -27,8 +30,9 @@ export const ModalExample = (props) => {
     }
   };
 
-  const closeOnEscape = ({ key }) => {
-    if (key === 'Escape') {
+  const closeOnEscape = (event) => {
+    // An Escape pressed while an IME composition is active only cancels the composition
+    if (event.key === 'Escape' && !isComposingKeyboardEvent(event)) {
       close();
     }
   };

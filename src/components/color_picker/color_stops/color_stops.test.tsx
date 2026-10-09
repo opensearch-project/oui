@@ -564,6 +564,41 @@ test('add new thumb via keyboard', () => {
   );
 });
 
+test('Enter during IME composition does not add a thumb', () => {
+  const { container } = render(
+    <OuiColorStops
+      label="Test"
+      onChange={onChange}
+      colorStops={colorStopsArray}
+      min={0}
+      max={100}
+      {...requiredProps}
+    />
+  );
+
+  const wrapper = container.querySelector(
+    '[data-test-subj="ouiColorStops"]'
+  ) as HTMLElement;
+
+  act(() => {
+    wrapper.focus();
+  });
+
+  onChange.mockClear();
+
+  act(() => {
+    fireEvent.keyDown(wrapper, { key: keys.ENTER, isComposing: true });
+  });
+
+  expect(onChange).not.toBeCalled();
+
+  act(() => {
+    fireEvent.keyDown(wrapper, { key: keys.ENTER });
+  });
+
+  expect(onChange).toBeCalledTimes(1);
+});
+
 test('add new thumb via click', () => {
   const { container } = render(
     <OuiColorStops

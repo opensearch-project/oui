@@ -19,7 +19,7 @@ import {
   OuiFieldText,
   OuiSpacer,
 } from '../../../../src/components';
-import { keys } from '../../../../src/services';
+import { keys, isComposingKeyboardEvent } from '../../../../src/services';
 
 import { ModalExample } from './modal_example_container';
 
@@ -30,7 +30,7 @@ const ConflictModal = (props) => {
     setInputValue(e.target.value);
   };
   const clearInputValueOnEscape = (event) => {
-    if (event.key === keys.ESCAPE) {
+    if (event.key === keys.ESCAPE && !isComposingKeyboardEvent(event)) {
       setInputValue('');
       event.stopPropagation();
     }

@@ -38,6 +38,7 @@ import { OuiButtonIcon } from '../button';
 import { OuiFocusTrap } from '../focus_trap';
 import { OuiOverlayMask } from '../overlay_mask';
 import { OuiI18n } from '../i18n';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 
 export interface OuiModalProps extends HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -75,7 +76,7 @@ export const OuiModal: FunctionComponent<OuiModalProps> = ({
   ...rest
 }) => {
   const onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === keys.ESCAPE) {
+    if (event.key === keys.ESCAPE && !isComposingKeyboardEvent(event)) {
       event.preventDefault();
       event.stopPropagation();
       onClose(event);

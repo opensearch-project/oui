@@ -45,6 +45,7 @@ import { OuiLoadingSpinner } from '../loading';
 import { OuiSpacer } from '../spacer';
 import { getMatchingOptions } from './matching_options';
 import { keys, htmlIdGenerator } from '../../services';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 import { OuiI18n } from '../i18n';
 import { OuiSelectableOption } from './selectable_option';
 import { OuiSelectableOptionsListProps } from './selectable_list/selectable_list';
@@ -256,6 +257,8 @@ export class OuiSelectable<T = {}> extends Component<
   };
 
   onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    if (isComposingKeyboardEvent(event)) return;
+
     const optionsList = this.optionsListRef.current;
 
     switch (event.key) {

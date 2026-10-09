@@ -58,6 +58,7 @@ import { OuiI18n } from '../i18n';
 import { useResizeObserver } from '../observer/resize_observer';
 import { OuiOutsideClickDetector } from '../outside_click_detector';
 import { OuiPortal } from '../portal';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 
 const typeToClassNameMap = {
   push: 'ouiFlyout--push',
@@ -300,7 +301,11 @@ const OuiFlyout = forwardRef(
      * ESC key closes flyout (always?)
      */
     const onKeyDown = (event: KeyboardEvent) => {
-      if (!isPushed && event.key === keys.ESCAPE) {
+      if (
+        !isPushed &&
+        event.key === keys.ESCAPE &&
+        !isComposingKeyboardEvent(event)
+      ) {
         event.preventDefault();
         onClose();
       }
