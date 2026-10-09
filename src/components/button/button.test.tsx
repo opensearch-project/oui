@@ -119,6 +119,12 @@ describe('OuiButton', () => {
     });
 
     describe('size', () => {
+      test('xs renders an extra-small button', () => {
+        render(<OuiButton size="xs" />);
+
+        expect(screen.getByRole('button')).toHaveClass('ouiButton--xSmall');
+      });
+
       SIZES.forEach((size) => {
         test(`${size} is rendered`, () => {
           const { container } = render(<OuiButton size={size} />);
