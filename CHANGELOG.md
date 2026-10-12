@@ -8,8 +8,6 @@
 
 ### 📈 Features/Enhancements
 
-- Add an extra-small `xs` size to `OuiButton` for dense layouts
-
 ### 🐛 Bug Fixes
 
 ### 🚞 Infrastructure
@@ -21,6 +19,16 @@
 ### 🪛 Refactoring
 
 ### 🔩 Tests
+
+## [`1.25`](https://github.com/opensearch-project/oui/tree/1.25)
+
+### 🛡 Security
+
+- Bump dependencies version for CVE: #1861, #1862, #1863, #1864, #1865, #1866, #1871, #1870, #1872
+
+### 📈 Features/Enhancements
+
+- Add an extra-small `xs` size to `OuiButton` for dense layouts ([#1833](https://github.com/opensearch-project/oui/pull/1833))
 
 ## [`1.24.2`](https://github.com/opensearch-project/oui/tree/1.24.2)
 
