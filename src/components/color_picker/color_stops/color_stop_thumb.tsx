@@ -217,6 +217,7 @@ export const OuiColorStopThumb: FunctionComponent<OuiColorStopThumbProps> = ({
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
     switch (event.key) {
+      // eslint-disable-next-line local/ime-composition-guard -- the thumb is a button; composition cannot be active on it
       case keys.ENTER:
         event.preventDefault();
         openPopover();

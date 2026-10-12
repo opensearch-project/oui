@@ -57,6 +57,7 @@ import { keys } from '../../services';
 import { OuiDataGridCellButtons } from './data_grid_cell_buttons';
 import { OuiDataGridCellPopover } from './data_grid_cell_popover';
 import { getStylesForCell } from './row_height_utils';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 
 export interface OuiDataGridCellValueElementProps {
   /**
@@ -437,6 +438,8 @@ export class OuiDataGridCell extends Component<
     cellProps.style = { ...style, width, ...cellProps.style };
 
     const handleCellKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+      // Enter/F2/Escape pressed while composing in a cell's input belong to the IME
+      if (isComposingKeyboardEvent(event)) return;
       if (isExpandable) {
         if (this.state.popoverIsOpen) {
           return;

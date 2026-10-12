@@ -214,6 +214,28 @@ test('popover color selector is shown when the input is clicked', () => {
   expect(colorSelector).not.toBeNull();
 });
 
+test('popover color selector ignores an ENTER that belongs to an IME composition', () => {
+  const { container } = render(
+    <OuiColorPicker onChange={onChange} color="#ffeedd" {...requiredProps} />
+  );
+
+  const input = container.querySelector(
+    '[data-test-subj^="ouiColorPickerAnchor"]'
+  ) as HTMLElement;
+  const colorSelector = () =>
+    document.body.querySelector('[data-test-subj="ouiColorPickerPopover"]');
+
+  fireEvent.keyDown(input, {
+    key: keys.ENTER,
+    keyCode: 229,
+    isComposing: true,
+  });
+  expect(colorSelector()).toBeNull();
+
+  fireEvent.keyDown(input, { key: keys.ENTER });
+  expect(colorSelector()).not.toBeNull();
+});
+
 test('popover color selector is hidden when the ESC key pressed', () => {
   const onBlurHandler = jest.fn();
   const { container } = render(

@@ -75,6 +75,7 @@ export class OuiKeyboardAccessible extends Component<Props> {
 
   onKeyUp = (event: KeyboardEvent<any>) => {
     // Support keyboard accessibility by emulating mouse click on ENTER or SPACE keypress.
+    // eslint-disable-next-line local/ime-composition-guard -- activation keys on a role=button element; focus is never in a text field
     if (event.key === keys.ENTER || event.key === keys.SPACE) {
       // Delegate to the click handler on the element.
       this.props.children.props.onClick(event);

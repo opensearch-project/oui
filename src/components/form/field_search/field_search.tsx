@@ -221,7 +221,9 @@ export class OuiFieldSearch extends Component<
 
     if (
       onSearch &&
+      // eslint-disable-next-line local/ime-composition-guard -- keyup, not keydown: the Enter keyup arrives once, after the composition ends
       ((event.key !== keys.ENTER && incremental) ||
+        // eslint-disable-next-line local/ime-composition-guard -- keyup, not keydown: the Enter keyup arrives once, after the composition ends
         (event.key === keys.ENTER && !isSearchSupported))
     ) {
       onSearch((event.target as HTMLInputElement).value);

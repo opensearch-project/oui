@@ -31,6 +31,7 @@
 // Export all keys under a `keys` named variable
 import * as keys from './keys';
 export { keys };
+export { isComposingKeyboardEvent } from './is_composing';
 
 export {
   accessibleClickKeys,

@@ -18,6 +18,7 @@
     "\\.(css|less|scss)$": "<rootDir>/scripts/jest/mocks/style_mock.js",
     "^react$": "react-18",
     "^react-dom$": "react-dom-18",
+    "^react-dom/test-utils$": "react-dom-18/test-utils",
     "^react-dom/client$": "react-dom-18/client",
     "./react-dom-client": "react-dom-18/client",
     "^@testing-library/react$": "@testing-library/react-18"

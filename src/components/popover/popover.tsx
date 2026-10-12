@@ -68,6 +68,7 @@ import {
 
 import { OuiI18n } from '../i18n';
 import { OuiOutsideClickDetector, OuiEvent } from '../outside_click_detector';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 
 export type PopoverAnchorPosition =
   | 'upCenter'
@@ -400,7 +401,8 @@ export class OuiPopover extends Component<Props, State> {
   };
 
   onEscapeKey = (event: Event) => {
-    if (this.props.isOpen) {
+    // Covers both paths here: react-focus-on's escape callback and onKeyDown below
+    if (this.props.isOpen && !isComposingKeyboardEvent(event)) {
       event.preventDefault();
       event.stopPropagation();
       this.closePopover();
@@ -408,6 +410,7 @@ export class OuiPopover extends Component<Props, State> {
   };
 
   onKeyDown = (event: KeyboardEvent) => {
+    // eslint-disable-next-line local/ime-composition-guard -- delegates to onEscapeKey, which checks composition
     if (event.key === cascadingMenuKeys.ESCAPE) {
       this.onEscapeKey((event as unknown) as Event);
     }
