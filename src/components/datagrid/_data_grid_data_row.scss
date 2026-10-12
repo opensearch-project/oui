@@ -160,6 +160,7 @@
 .ouiDataGridRowCell__contentByHeight {
   flex-grow: 1;
   height: 100%;
+  overflow: hidden;
 }
 
 .ouiDataGridRowCell__alignBaseLine {
