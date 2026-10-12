@@ -192,6 +192,7 @@ export const OuiSplitButton = ({
   };
 
   const onItemKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>) => {
+    // eslint-disable-next-line local/ime-composition-guard -- the menu item is a button; composition cannot be active on it
     if (event.key === keys.ESCAPE) {
       // close the popover and prevent ancestors from handling
       event.preventDefault();

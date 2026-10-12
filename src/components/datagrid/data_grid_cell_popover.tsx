@@ -39,6 +39,7 @@ import { keys } from '../../services';
 import { OuiFlexGroup, OuiFlexItem } from '../flex';
 import { OuiButtonEmpty, OuiButtonEmptyProps } from '../button/button_empty';
 import { OuiDataGridCellValueElementProps } from './data_grid_cell';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 
 interface OuiDataGridCellPopoverProps {
   anchorContent: NonNullable<ReactNode>;
@@ -83,7 +84,10 @@ export function OuiDataGridCellPopover({
       display="block"
       closePopover={closePopover}
       onKeyDown={(event) => {
-        if (event.key === keys.F2 || event.key === keys.ESCAPE) {
+        if (
+          (event.key === keys.F2 || event.key === keys.ESCAPE) &&
+          !isComposingKeyboardEvent(event)
+        ) {
           event.preventDefault();
           event.stopPropagation();
           closePopover();

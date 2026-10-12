@@ -70,6 +70,7 @@ import AutosizeInput from 'react-input-autosize';
 import { CommonProps } from '../common';
 import { OuiFormControlLayoutProps } from '../form';
 import { getElementZIndex } from '../../services/popover';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 import { IconType } from '../icon';
 
 type DrillProps<T> = Pick<
@@ -206,6 +207,16 @@ interface OuiComboBoxState<T> {
 }
 
 const initialSearchValue = '';
+
+// Keys handled by OuiComboBox itself; onKeyDown forwards every other key to the consumer.
+const COMBO_BOX_OWN_KEYS: string[] = [
+  keys.ARROW_UP,
+  keys.ARROW_DOWN,
+  keys.BACKSPACE,
+  keys.ESCAPE,
+  keys.ENTER,
+  keys.TAB,
+];
 
 export class OuiComboBox<T> extends Component<
   _OuiComboBoxProps<T>,
@@ -624,6 +635,15 @@ export class OuiComboBox<T> extends Component<
   };
 
   onKeyDown: KeyboardEventHandler<HTMLDivElement> = (event) => {
+    if (isComposingKeyboardEvent(event)) {
+      // The combo box's own keys do nothing while composing. Other keys still reach the
+      // consumer, as they do outside a composition.
+      if (!COMBO_BOX_OWN_KEYS.includes(event.key) && this.props.onKeyDown) {
+        this.props.onKeyDown(event);
+      }
+      return;
+    }
+
     switch (event.key) {
       case keys.ARROW_UP:
         event.preventDefault();
