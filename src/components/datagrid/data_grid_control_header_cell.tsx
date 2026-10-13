@@ -148,11 +148,13 @@ export const OuiDataGridControlHeaderCell: FunctionComponent<OuiDataGridControlH
 
       function onKeyUp(event: KeyboardEvent) {
         switch (event.key) {
+          // eslint-disable-next-line local/ime-composition-guard -- header cell focus; no text field inside
           case keys.ENTER: {
             event.preventDefault();
             setIsCellEntered(true);
             break;
           }
+          // eslint-disable-next-line local/ime-composition-guard -- header cell focus; no text field inside
           case keys.ESCAPE: {
             event.preventDefault();
             // move focus to cell

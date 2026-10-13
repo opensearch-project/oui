@@ -61,6 +61,7 @@ import { OuiRangeHighlight } from '../../form/range/range_highlight';
 import { OuiRangeTrack } from '../../form/range/range_track';
 import { OuiRangeWrapper } from '../../form/range/range_wrapper';
 import { OuiFieldNumberProps } from '../../form/field_number';
+import { isComposingKeyboardEvent } from '../../../services/is_composing';
 
 export interface OuiColorStopsProps extends CommonProps {
   addColor?: ColorStop['color'];
@@ -341,7 +342,7 @@ export const OuiColorStops: FunctionComponent<OuiColorStopsProps> = ({
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (disabled) return;
+    if (disabled || isComposingKeyboardEvent(event)) return;
     switch (event.key) {
       case keys.ESCAPE:
         onFocusWrapper();

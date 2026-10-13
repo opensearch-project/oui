@@ -58,6 +58,7 @@ import { OuiI18n } from '../i18n';
 import { OuiPopover } from '../popover';
 import { OuiSpacer } from '../spacer';
 import { VISUALIZATION_COLORS, keys } from '../../services';
+import { isComposingKeyboardEvent } from '../../services/is_composing';
 
 import { OuiHue } from './hue';
 import { OuiSaturation } from './saturation';
@@ -343,7 +344,7 @@ export const OuiColorPicker: FunctionComponent<OuiColorPickerProps> = ({
   };
 
   const handleOnKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-    if (event.key === keys.ENTER) {
+    if (event.key === keys.ENTER && !isComposingKeyboardEvent(event)) {
       if (isColorSelectorShown) {
         handleFinalSelection();
       } else {
@@ -358,7 +359,7 @@ export const OuiColorPicker: FunctionComponent<OuiColorPickerProps> = ({
       | React.MouseEvent<HTMLInputElement>
   ) => {
     if (isKeyboardEvent(event)) {
-      if (event.key === keys.ENTER) {
+      if (event.key === keys.ENTER && !isComposingKeyboardEvent(event)) {
         event.preventDefault();
         handleToggle();
       }

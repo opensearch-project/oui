@@ -30,6 +30,7 @@
 
 import React from 'react';
 import { mount } from 'enzyme';
+import { fireEvent, render } from '@testing-library/react';
 import { requiredProps, takeMountedSnapshot } from '../../test';
 
 import { OuiModal } from './modal';
@@ -44,4 +45,20 @@ test('renders OuiModal', () => {
   expect(
     takeMountedSnapshot(mount(component), { hasArrayOutput: true })
   ).toMatchSnapshot();
+});
+
+test('ignores Escape during IME composition and closes on a plain Escape', () => {
+  const onClose = jest.fn();
+  render(
+    <OuiModal onClose={onClose} {...requiredProps}>
+      children
+    </OuiModal>
+  );
+  const modal = document.querySelector('.ouiModal')!;
+
+  fireEvent.keyDown(modal, { key: 'Escape', keyCode: 229, isComposing: true });
+  expect(onClose).not.toHaveBeenCalled();
+
+  fireEvent.keyDown(modal, { key: 'Escape' });
+  expect(onClose).toHaveBeenCalledTimes(1);
 });

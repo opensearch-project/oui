@@ -10,6 +10,8 @@
 
 ### 🐛 Bug Fixes
 
+- Ignore keys pressed during an IME composition in `OuiComboBox`, `OuiSelectable`, `OuiColorPicker`, `OuiColorStops`, `OuiModal`, `OuiFlyout`, `OuiPopover`, `OuiDataGrid` and `OuiCodeEditor`, so the Enter or Escape that commits or cancels Korean, Japanese or Chinese text no longer selects an option, closes an overlay or leaves full screen; export the `isComposingKeyboardEvent` helper and add a lint rule that requires it in Enter and Escape handlers ([#1836](https://github.com/opensearch-project/oui/pull/1836))
+
 ### 🚞 Infrastructure
 
 ### 📝 Documentation
