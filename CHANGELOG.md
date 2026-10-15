@@ -23,6 +23,7 @@
 ### 🐛 Bug Fixes
 
 
+- Fix `OuiSelectable` dropping the first click on the option at index 0 when another option is selected lower in a long, scrollable list; the `onFocus` guard now treats index 0 as a set active option (`!= null`) rather than a falsy value, so it no longer scrolls to the selected option and unmounts the index-0 row mid-click ([#1876](https://github.com/opensearch-project/oui/pull/1876))
 - Ignore keys pressed during an IME composition in `OuiComboBox`, `OuiSelectable`, `OuiColorPicker`, `OuiColorStops`, `OuiModal`, `OuiFlyout`, `OuiPopover`, `OuiDataGrid` and `OuiCodeEditor`, so the Enter or Escape that commits or cancels Korean, Japanese or Chinese text no longer selects an option, closes an overlay or leaves full screen; export the `isComposingKeyboardEvent` helper and add a lint rule that requires it in Enter and Escape handlers ([#1836](https://github.com/opensearch-project/oui/pull/1836))
 - Scope overlay offset CSS custom properties to below-header masks only, keeping above-header masks (modals, fullscreen views) at full viewport width ([#1824](https://github.com/opensearch-project/oui/pull/1824))
 ### 🚞 Infrastructure
