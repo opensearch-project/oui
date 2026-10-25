@@ -10,7 +10,6 @@
  */
 
 import React, { useState } from 'react';
-
 import { OuiComboBox } from '../../../../src/components';
 
 const staticOptions = [
@@ -49,38 +48,40 @@ const staticOptions = [
   },
 ];
 
-export default () => {
+const OnCreateOption = (searchValue, flattenedOptions = []) => {
   const [options, setOptions] = useState(staticOptions);
+  const normalizedSearchValue = searchValue.trim().toLowerCase();
+  const [setSelected] = useState([options[2], options[4]]);
+
+  if (!normalizedSearchValue) {
+    return;
+  }
+
+  const newOption = {
+    label: searchValue,
+  };
+
+  // Create the option if it doesn't exist.
+  if (
+    flattenedOptions.findIndex(
+      (option) => option.label.trim().toLowerCase() === normalizedSearchValue
+    ) === -1
+  ) {
+    setOptions([...options, newOption]);
+  }
+
+  // Select the option.
+  // Use the previousState parameter (prevSelected) from the setState
+  // instance (setSelected) to ensure looped calls do not override each other
+  setSelected((prevSelected) => [...prevSelected, newOption]);
+};
+
+const ComboBoxWithOption = () => {
+  const [options] = useState(staticOptions);
   const [selectedOptions, setSelected] = useState([options[2], options[4]]);
 
   const onChange = (selectedOptions) => {
     setSelected(selectedOptions);
-  };
-
-  const onCreateOption = (searchValue, flattenedOptions = []) => {
-    const normalizedSearchValue = searchValue.trim().toLowerCase();
-
-    if (!normalizedSearchValue) {
-      return;
-    }
-
-    const newOption = {
-      label: searchValue,
-    };
-
-    // Create the option if it doesn't exist.
-    if (
-      flattenedOptions.findIndex(
-        (option) => option.label.trim().toLowerCase() === normalizedSearchValue
-      ) === -1
-    ) {
-      setOptions([...options, newOption]);
-    }
-
-    // Select the option.
-    // Use the previousState parameter (prevSelected) from the setState
-    // instance (setSelected) to ensure looped calls do not override each other
-    setSelected((prevSelected) => [...prevSelected, newOption]);
   };
 
   return (
@@ -90,7 +91,9 @@ export default () => {
       icon={true}
       selectedOptions={selectedOptions}
       onChange={onChange}
-      onCreateOption={onCreateOption}
+      onCreateOption={OnCreateOption}
     />
   );
 };
+
+export { ComboBoxWithOption, OnCreateOption };
