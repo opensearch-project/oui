@@ -21,16 +21,27 @@ describe('isComposingKeyboardEvent', () => {
     ).toBe(true);
   });
 
-  test('is false for a plain Enter', () => {
+  test('is true for a composing keydown that carries the real keyCode', () => {
+    expect(
+      isComposingKeyboardEvent(
+        keyDown({ key: 'Enter', keyCode: 13, isComposing: true })
+      )
+    ).toBe(true);
+  });
+
+  test('is false for a plain Enter, including the one that follows a Korean commit', () => {
     expect(
       isComposingKeyboardEvent(keyDown({ key: 'Enter', keyCode: 13 }))
     ).toBe(false);
   });
 
-  test('is false for a keyCode 229 Enter that arrives after the composition ended', () => {
+  test("is true for Safari's commit Enter and cancel Escape after compositionend", () => {
     expect(
       isComposingKeyboardEvent(keyDown({ key: 'Enter', keyCode: 229 }))
-    ).toBe(false);
+    ).toBe(true);
+    expect(
+      isComposingKeyboardEvent(keyDown({ key: 'Escape', keyCode: 229 }))
+    ).toBe(true);
   });
 
   test('reads a native keydown passed directly', () => {
