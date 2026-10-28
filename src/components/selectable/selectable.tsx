@@ -236,7 +236,10 @@ export class OuiSelectable<T = {}> extends Component<
   };
 
   onFocus = () => {
-    if (!this.state.visibleOptions.length || this.state.activeOptionIndex) {
+    if (
+      !this.state.visibleOptions.length ||
+      this.state.activeOptionIndex != null
+    ) {
       return;
     }
 
