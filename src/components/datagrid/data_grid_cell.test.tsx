@@ -24,8 +24,16 @@ const getCell = (container: HTMLElement) =>
 const isPopoverOpen = () =>
   document.querySelector('.ouiDataGridRowCell__popover') !== null;
 
-const openPopover = (container: HTMLElement) => {
+// OuiPopover sets its opening state in a requestAnimationFrame. Run that frame
+// inside act so the update cannot land outside it on a slow runner.
+const flushAnimationFrame = () =>
+  act(async () => {
+    await new Promise((resolve) => requestAnimationFrame(resolve));
+  });
+
+const openPopover = async (container: HTMLElement) => {
   fireEvent.keyDown(getCell(container), { key: 'Enter' });
+  await flushAnimationFrame();
   expect(isPopoverOpen()).toBe(true);
 };
 
@@ -39,13 +47,13 @@ describe('OuiDataGridCell IME composition', () => {
     expect(isPopoverOpen()).toBe(false);
 
     fireEvent.keyDown(cell, { key: 'Enter' });
-    await act(async () => {});
+    await flushAnimationFrame();
     expect(isPopoverOpen()).toBe(true);
   });
 
   it('keeps the expansion popover open on Escape while composing', async () => {
     const { container } = renderGrid();
-    openPopover(container);
+    await openPopover(container);
     const panel = document.querySelector(
       '.ouiDataGridRowCell__popover'
     ) as HTMLElement;
