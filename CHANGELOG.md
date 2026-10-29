@@ -23,6 +23,8 @@
 
 ### 🔩 Tests
 
+- Wait for the `OuiPopover` opening frame inside `act` in the `OuiDataGridCell` IME composition tests, which failed intermittently on Windows under React 18 ([#1882](https://github.com/opensearch-project/oui/pull/1882))
+
 ## [`1.25`](https://github.com/opensearch-project/oui/tree/1.25)
 
 ### 🛡 Security
