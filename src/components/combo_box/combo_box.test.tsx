@@ -357,6 +357,33 @@ describe('behavior', () => {
       expect(onCreateOptionHandler).toHaveBeenNthCalledWith(1, '지표', options);
     });
 
+    test("doesn't call onCreateOption on Safari's commit Enter after compositionend", () => {
+      const onCreateOptionHandler = jest.fn();
+
+      const { container } = render(
+        <OuiComboBox
+          options={options}
+          selectedOptions={[options[2]]}
+          onCreateOption={onCreateOptionHandler}
+        />
+      );
+
+      const searchInput = container.querySelector(
+        '[data-test-subj="comboBoxSearchInput"]'
+      ) as HTMLInputElement;
+
+      fireEvent.change(searchInput, { target: { value: '日本' } });
+      fireEvent.focus(searchInput);
+      // Safari ends a Japanese or Chinese composition before this keydown, so only keyCode 229
+      // marks it as the IME's.
+      fireEvent.keyDown(searchInput, { key: comboBoxKeys.ENTER, keyCode: 229 });
+      expect(onCreateOptionHandler).not.toHaveBeenCalled();
+
+      fireEvent.keyDown(searchInput, { key: comboBoxKeys.ENTER, keyCode: 13 });
+      expect(onCreateOptionHandler).toHaveBeenCalledTimes(1);
+      expect(onCreateOptionHandler).toHaveBeenNthCalledWith(1, '日本', options);
+    });
+
     test('forwards only the keys it does not handle itself while composing', () => {
       const onKeyDownHandler = jest.fn();
 
